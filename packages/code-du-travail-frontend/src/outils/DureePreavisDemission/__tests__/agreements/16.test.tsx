@@ -40,12 +40,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe II, article 13/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.catégorie professionnelle = 61| Ingénieurs et Cadres", () => {
@@ -60,12 +61,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV, Article 15/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.catégorie professionnelle = 4| Ouvriers", () => {
@@ -91,12 +93,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 semaines")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 semaines/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Accord du 18 avril 2002, article 30/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.personnel de conduite = 2| Non", () => {
@@ -122,12 +125,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 semaines")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 semaines/)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
       describe("criteria.personnels des entreprises de transport routier de marchandises = 1| Non", () => {
@@ -142,12 +145,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 semaine")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 semaine/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe I, chapitre Ier, article 5/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -179,12 +183,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe III, article 17/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.groupe = 30| 6 à 8", () => {
@@ -199,12 +204,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe III, article 17/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         

@@ -68,12 +68,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("Aucun préavis")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/Aucun préavis/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe II, article 13/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 30| 1 mois à moins de 2 ans", () => {
@@ -88,12 +89,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe II, article 13/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
@@ -108,12 +110,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe II, article 13/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -131,12 +134,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV, Article 15/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.catégorie professionnelle = 4| Ouvriers", () => {
@@ -162,12 +166,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 semaine")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 semaine/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe I, chapitre Ier, article 5/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
@@ -182,12 +187,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe I, chapitre Ier, article 5/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
@@ -202,12 +208,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe I, chapitre Ier, article 5/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -247,12 +254,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("Aucun préavis")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/Aucun préavis/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe III, article 17/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 30| 1 mois à moins de 2 ans", () => {
@@ -267,12 +275,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe III, article 17/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
@@ -287,12 +296,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe III, article 17/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -310,12 +320,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe III, article 17/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         

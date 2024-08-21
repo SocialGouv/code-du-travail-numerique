@@ -57,12 +57,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 19.1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.catégorie professionnelle = 16| Employés", () => {
@@ -88,12 +89,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 19.1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
@@ -108,12 +110,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 19.1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -131,12 +134,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 19.1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
           

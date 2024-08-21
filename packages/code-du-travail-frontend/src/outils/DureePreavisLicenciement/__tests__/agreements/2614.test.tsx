@@ -68,12 +68,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 8.1 de la convention collective/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
@@ -88,12 +89,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 8.1 de la convention collective/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -122,12 +124,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 8.1 de la convention collective/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 49| Moins de 15 ans d'ancienneté", () => {
@@ -142,12 +145,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 8.1 de la convention collective/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         

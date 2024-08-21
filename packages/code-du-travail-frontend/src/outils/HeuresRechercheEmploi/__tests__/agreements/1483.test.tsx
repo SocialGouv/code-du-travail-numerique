@@ -62,16 +62,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées sur décision prise d'un commun accord entre l'employeur et le salarié. Dès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées sur décision prise d'un commun accord entre l'employeur et le salarié. Dès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 10/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.durée du travail = 2| Temps partiel", () => {
@@ -86,16 +85,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour ouvré proportionnellement au temps de travail contractuel du salarié")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées sur décision prise d'un commun accord entre l'employeur et le salarié. Dès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour ouvré proportionnellement au temps de travail contractuel du salarié/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées sur décision prise d'un commun accord entre l'employeur et le salarié. Dès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 10/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -124,16 +122,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour ouvré, proportionnellement au temps de travail contractuel du salarié, dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées, sur décision prise d'un commun accord entre l'employeur et le salarié. Dès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour ouvré, proportionnellement au temps de travail contractuel du salarié, dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées, sur décision prise d'un commun accord entre l'employeur et le salarié. Dès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 16/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.durée du travail = 1| Temps complet", () => {
@@ -148,16 +145,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées, sur décision prise d'un commun accord entre l'employeur et le salarié. Dès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées, sur décision prise d'un commun accord entre l'employeur et le salarié. Dès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 16/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -200,16 +196,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour ouvré")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées sur décision prise d'un commun accord entre l'employeur et le salarié. Dès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour ouvré/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées sur décision prise d'un commun accord entre l'employeur et le salarié. Dès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 10/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.durée du travail = 2| Temps partiel", () => {
@@ -224,16 +219,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour ouvré proportionnellement au temps de travail contractuel du salarié")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Si le contrat est rompu par l'employeur au cours du renouvellement de la période d'essai, le personnel d'encadrement est autorisé à s'absenter pendant le délai de prévenance (s'il est effectué), chaque jour ouvré pendant 2 heures, afin de rechercher un nouvel emploi jusqu'au moment où celui-ci aura été trouvé, dans la limite de 40 heures. Les heures d'absence sont fixées d'un commun accord entre les parties ou, à défaut, un jour par l'employeur et le suivant par le salarié.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour ouvré proportionnellement au temps de travail contractuel du salarié/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Si le contrat est rompu par l'employeur au cours du renouvellement de la période d'essai, le personnel d'encadrement est autorisé à s'absenter pendant le délai de prévenance \(s'il est effectué\), chaque jour ouvré pendant 2 heures, afin de rechercher un nouvel emploi jusqu'au moment où celui-ci aura été trouvé, dans la limite de 40 heures. Les heures d'absence sont fixées d'un commun accord entre les parties ou, à défaut, un jour par l'employeur et le suivant par le salarié./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 10/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -262,16 +256,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées, sur décision prise d'un commun accord entre l'employeur et le salarié. Dès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées, sur décision prise d'un commun accord entre l'employeur et le salarié. Dès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 16/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.durée du travail = 2| Temps partiel", () => {
@@ -286,16 +279,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées, sur décision prise d'un commun accord entre l'employeur et le salarié. Dès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées, sur décision prise d'un commun accord entre l'employeur et le salarié. Dès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 16/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -338,14 +330,14 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 3/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.durée du travail = 2| Temps partiel", () => {
@@ -360,14 +352,14 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour proportionnellement au temps de travail contractuel du salarié")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Si le contrat est rompu par l'employeur au cours du renouvellement de la période d'essai, le personnel d'encadrement est autorisé à s'absenter pendant le délai de prévenance (s'il est effectué), chaque jour ouvré pendant 2 heures, afin de rechercher un nouvel emploi jusqu'au moment où celui-ci aura été trouvé, dans la limite de 40 heures. Les heures d'absence sont fixées d'un commun accord entre les parties ou, à défaut, un jour par l'employeur et le suivant par le salarié.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour proportionnellement au temps de travail contractuel du salarié/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Si le contrat est rompu par l'employeur au cours du renouvellement de la période d'essai, le personnel d'encadrement est autorisé à s'absenter pendant le délai de prévenance \(s'il est effectué\), chaque jour ouvré pendant 2 heures, afin de rechercher un nouvel emploi jusqu'au moment où celui-ci aura été trouvé, dans la limite de 40 heures. Les heures d'absence sont fixées d'un commun accord entre les parties ou, à défaut, un jour par l'employeur et le suivant par le salarié./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 3/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -385,12 +377,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 16/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         

@@ -51,12 +51,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Avenant 2, article 20/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.coefficient = 14| Supérieur à 275 (inclus)", () => {
@@ -71,12 +72,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Avenant 2, article 20/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -94,12 +96,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Avenant n°3 article 4/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.catégorie professionnelle = 14| Ouvriers et collaborateurs", () => {
@@ -125,12 +128,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("15 jours")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/15 jours/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Avenant n°1 article 27/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.coefficient = 2| Entre 160 (inclus) et 175", () => {
@@ -145,12 +149,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Avenant n°1 article 27/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.coefficient = 8| 190 et plus", () => {
@@ -165,12 +170,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Avenant n°1 article 27/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         

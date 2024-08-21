@@ -51,12 +51,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 semaine (de date à date)")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 semaine \(de date à date\)/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Titre IV, Article 27/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
@@ -71,12 +72,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois (de date à date)")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois \(de date à date\)/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Titre IV, Article 27/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
@@ -91,12 +93,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois (de date à date)")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois \(de date à date\)/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Titre IV, Article 27/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -125,12 +128,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois (de date à date)")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois \(de date à date\)/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Titre IV, Article 27/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
@@ -145,12 +149,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois (de date à date)")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois \(de date à date\)/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Titre IV, Article 27/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -179,12 +184,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois (de date à date)")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois \(de date à date\)/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Titre IV, Article 27/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
@@ -199,12 +205,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("4 mois (de date à date)")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/4 mois \(de date à date\)/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Titre IV, Article 27/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         

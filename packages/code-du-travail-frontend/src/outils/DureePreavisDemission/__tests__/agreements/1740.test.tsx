@@ -40,12 +40,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 jours")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 jours/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/article 1.1.9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 13| Plus de 3 mois", () => {
@@ -60,12 +61,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 semaines")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 semaines/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/article 1.1.9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
           

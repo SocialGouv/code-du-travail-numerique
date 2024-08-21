@@ -40,12 +40,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 8.3/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("typeRupture = 3| Licenciement", () => {
@@ -60,16 +61,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("5 journées ou 10 demi-journées")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les autorisations d'absence seront fixées moitié par le salarié, et moitié par l'employeur. Chacun devra en informer l'autre partie. L'employeur ne verse pas d'indemnité au salarié s'il n'utilise ces heures d'absence autorisée.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/5 journées ou 10 demi-journées/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les autorisations d'absence seront fixées moitié par le salarié, et moitié par l'employeur. Chacun devra en informer l'autre partie. L'employeur ne verse pas d'indemnité au salarié s'il n'utilise ces heures d'absence autorisée./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 8.3/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("typeRupture = 7| Rupture de la période d'essai", () => {
@@ -84,16 +84,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("5 journées ou 10 demi-journées")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les autorisations d'absence seront fixées moitié par le salarié, et moitié par l'employeur. Chacun devra en informer l'autre partie. L'employeur ne verse pas d'indemnité au salarié s'il n'utilise ces heures d'absence autorisée.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/5 journées ou 10 demi-journées/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les autorisations d'absence seront fixées moitié par le salarié, et moitié par l'employeur. Chacun devra en informer l'autre partie. L'employeur ne verse pas d'indemnité au salarié s'il n'utilise ces heures d'absence autorisée./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 2.3/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
           

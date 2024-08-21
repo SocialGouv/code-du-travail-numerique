@@ -40,16 +40,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("6 jours ouvrés par mois")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire n'est pas maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures de recherche d'emploi sont prises chaque mois en une ou plusieurs fois, en principe par demi-journée. Elles sont fixées pour moitié par l'employeur et pour moitié par le salarié. Chacun en informe l'autre partie.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/6 jours ouvrés par mois/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures de recherche d'emploi sont prises chaque mois en une ou plusieurs fois, en principe par demi-journée. Elles sont fixées pour moitié par l'employeur et pour moitié par le salarié. Chacun en informe l'autre partie./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 4.3/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("typeRupture = 7| Rupture de la période d'essai", () => {
@@ -75,14 +74,14 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 3.4/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.initiative de la rupture de la période d'essai = 2| Le salarié", () => {
@@ -97,14 +96,14 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire n'est pas maintenu.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 3.4/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -122,16 +121,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("6 jours ouvrés par mois")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures de recherche d'emploi sont prises chaque mois en une ou plusieurs fois, en principe par demi-journée. Elles sont fixées pour moitié par l''employeur et pour moitié par le salarié. Chacun en informe l'autre partie.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/6 jours ouvrés par mois/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures de recherche d'emploi sont prises chaque mois en une ou plusieurs fois, en principe par demi-journée. Elles sont fixées pour moitié par l''employeur et pour moitié par le salarié. Chacun en informe l'autre partie./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 4.3/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
           

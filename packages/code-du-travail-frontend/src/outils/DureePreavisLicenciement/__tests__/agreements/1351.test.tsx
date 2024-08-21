@@ -79,12 +79,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("Aucun préavis")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/Aucun préavis/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 2| 15 jours à 1 mois", () => {
@@ -99,12 +100,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 jour ouvré")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 jour ouvré/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 8| Plus de 1 mois à 2 mois", () => {
@@ -119,12 +121,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 jours ouvrés")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 jours ouvrés/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 18| Plus de 2 mois à 6 mois", () => {
@@ -139,12 +142,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("7 jours calendaires")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/7 jours calendaires/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
@@ -159,12 +163,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
@@ -179,12 +184,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -213,12 +219,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("Aucun préavis")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/Aucun préavis/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 2| 15 jours à 1 mois", () => {
@@ -233,12 +240,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 jour ouvré")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 jour ouvré/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 8| Plus de 1 mois à 2 mois", () => {
@@ -253,12 +261,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 jours ouvrés")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 jours ouvrés/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 18| Plus de 2 mois à 6 mois", () => {
@@ -273,12 +282,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("7 jours calendaires")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/7 jours calendaires/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
@@ -293,12 +303,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
@@ -313,12 +324,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -347,12 +359,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("Aucun préavis")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/Aucun préavis/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 2| 15 jours à 1 mois", () => {
@@ -367,12 +380,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 jour ouvré")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 jour ouvré/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 8| Plus de 1 mois à 2 mois", () => {
@@ -387,12 +401,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 jours ouvrés")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 jours ouvrés/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 18| Plus de 2 mois à 6 mois", () => {
@@ -407,12 +422,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("7 jours calendaires")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/7 jours calendaires/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
@@ -427,12 +443,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
@@ -447,12 +464,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -481,12 +499,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("Aucun préavis")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/Aucun préavis/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 2| 15 jours à 1 mois", () => {
@@ -501,12 +520,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 jour ouvré")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 jour ouvré/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 8| Plus de 1 mois à 2 mois", () => {
@@ -521,12 +541,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 jours ouvrés")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 jours ouvrés/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 18| Plus de 2 mois à 6 mois", () => {
@@ -541,12 +562,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("14 jours calendaires")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/14 jours calendaires/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
@@ -561,12 +583,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
@@ -581,12 +604,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -615,12 +639,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("Aucun préavis")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/Aucun préavis/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 2| 15 jours à 1 mois", () => {
@@ -635,12 +660,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 jour ouvré")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 jour ouvré/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 8| Plus de 1 mois à 2 mois", () => {
@@ -655,12 +681,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 jours ouvrés")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 jours ouvrés/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 18| Plus de 2 mois à 6 mois", () => {
@@ -675,12 +702,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("14 jours calendaires")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/14 jours calendaires/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
@@ -695,12 +723,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
@@ -715,12 +744,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -763,12 +793,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("Aucun préavis")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/Aucun préavis/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 7| 15 jours à 2 mois", () => {
@@ -783,12 +814,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 semaine")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 semaine/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 12| Plus de 2 mois à 3 mois", () => {
@@ -803,12 +835,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 semaine")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 semaine/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 20| Plus de 3 mois à 6 mois", () => {
@@ -823,12 +856,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 semaines")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 semaines/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
@@ -843,12 +877,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
@@ -863,12 +898,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -897,12 +933,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("Aucun préavis")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/Aucun préavis/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 7| 15 jours à 2 mois", () => {
@@ -917,12 +954,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 semaine")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 semaine/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 12| Plus de 2 mois à 3 mois", () => {
@@ -937,12 +975,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 semaine")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 semaine/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 20| Plus de 3 mois à 6 mois", () => {
@@ -957,12 +996,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 semaines")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 semaines/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
@@ -977,12 +1017,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
@@ -997,12 +1038,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -1031,12 +1073,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("Aucun préavis")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/Aucun préavis/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 7| 15 jours à 2 mois", () => {
@@ -1051,12 +1094,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 semaine")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 semaine/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 12| Plus de 2 mois à 3 mois", () => {
@@ -1071,12 +1115,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 semaine")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 semaine/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 20| Plus de 3 mois à 6 mois", () => {
@@ -1091,12 +1136,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 semaines")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 semaines/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
@@ -1111,12 +1157,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
@@ -1131,12 +1178,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -1165,12 +1213,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("Aucun préavis")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/Aucun préavis/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 7| 15 jours à 2 mois", () => {
@@ -1185,12 +1234,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 semaine")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 semaine/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 12| Plus de 2 mois à 3 mois", () => {
@@ -1205,12 +1255,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 semaines")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 semaines/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 20| Plus de 3 mois à 6 mois", () => {
@@ -1225,12 +1276,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 semaines")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 semaines/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
@@ -1245,12 +1297,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
@@ -1265,12 +1318,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -1299,12 +1353,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("Aucun préavis")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/Aucun préavis/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 7| 15 jours à 2 mois", () => {
@@ -1319,12 +1374,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 semaine")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 semaine/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 12| Plus de 2 mois à 3 mois", () => {
@@ -1339,12 +1395,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 semaines")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 semaines/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 20| Plus de 3 mois à 6 mois", () => {
@@ -1359,12 +1416,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 semaines")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 semaines/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
@@ -1379,12 +1437,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
@@ -1399,12 +1458,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -1436,12 +1496,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("Aucun préavis")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/Aucun préavis/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 2| 15 jours à 1 mois", () => {
@@ -1456,12 +1517,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("7 jours calendaires")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/7 jours calendaires/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 11| Plus de 1 mois à 3 mois", () => {
@@ -1476,12 +1538,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("14 jours calendaires")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/14 jours calendaires/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 20| Plus de 3 mois à 6 mois", () => {
@@ -1496,12 +1559,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 26| Plus de 6 mois à 1 an", () => {
@@ -1516,12 +1580,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 27| Plus de 1 an", () => {
@@ -1536,12 +1601,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         

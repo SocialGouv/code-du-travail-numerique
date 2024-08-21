@@ -51,16 +51,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour dans la limite d'un mois")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour dans la limite d'un mois/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Accord du 27 février 1951 relatif aux employés Annexe II, Article13/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.catégorie professionnelle = 60| Ingénieurs, Cadres", () => {
@@ -75,16 +74,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour dans la limite de 2 mois")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour dans la limite de 2 mois/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Accord du 30 octobre 1951 relatif aux ingénieurs et cadres - Annexe IV article 15/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.catégorie professionnelle = 4| Ouvriers", () => {
@@ -99,16 +97,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu sur la base du salaire effectif du salarié et jusqu'à 12 heures d'absence au maximum.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu sur la base du salaire effectif du salarié et jusqu'à 12 heures d'absence au maximum./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Accord du 16 juin 1961 relatifs aux ouvriers - annexe I, article 5/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.catégorie professionnelle = 27| Techniciens et agents de maîtrise (TAM)", () => {
@@ -134,16 +131,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour dans la limite d'un mois")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour dans la limite d'un mois/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Accord du 30 mars 1951 relatif aux techniciens et agents de maîtrise Annexe IIII, article 17/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.groupe = 30| 6 à 8", () => {
@@ -158,16 +154,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour dans la limite de 2 mois")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour dans la limite de 2 mois/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Accord du 30 mars 1951 relatif aux techniciens et agents de maîtrise Annexe IIII, article 17/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -199,16 +194,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour dans la limite d'un mois")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour dans la limite d'un mois/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Accord du 27 février 1951 relatif aux employés Annexe II, Article13/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.catégorie professionnelle = 60| Ingénieurs, Cadres", () => {
@@ -223,16 +217,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour dans la limite de 2 mois")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour dans la limite de 2 mois/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Accord du 30 octobre 1951 relatif aux ingénieurs et cadres - Annexe IV article 15/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.catégorie professionnelle = 4| Ouvriers", () => {
@@ -258,16 +251,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("12 heures")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu sur la base du salaire effectif du salarié.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Ces heures sont fixées d'un commun accord par l'employeur et le salarié. En l'absence d'accord, 6 heures sont fixées par l’employeur et 6 heures par le salarié.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/12 heures/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu sur la base du salaire effectif du salarié./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Ces heures sont fixées d'un commun accord par l'employeur et le salarié. En l'absence d'accord, 6 heures sont fixées par l’employeur et 6 heures par le salarié./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Accord du 16 juin 1961 relatifs aux ouvriers - annexe I, article 5/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.personnels des entreprises de transport routier de marchandises = 1| Non", () => {
@@ -282,16 +274,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu sur la base du salaire effectif du salarié et jusqu'à 12 heures d'absence au maximum.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu sur la base du salaire effectif du salarié et jusqu'à 12 heures d'absence au maximum./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Accord du 16 juin 1961 relatifs aux ouvriers - annexe I, article 5/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -320,16 +311,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour dans la limite d'un mois")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour dans la limite d'un mois/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Accord du 30 mars 1951 relatif aux techniciens et agents de maîtrise Annexe IIII, article 17/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.groupe = 30| 6 à 8", () => {
@@ -344,16 +334,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour dans la limite de 2 mois")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour dans la limite de 2 mois/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Accord du 30 mars 1951 relatif aux techniciens et agents de maîtrise Annexe IIII, article 17/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -374,12 +363,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Accord du 30 octobre 1951 relatif aux ingénieurs et cadres - Annexe IV article 15/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
           

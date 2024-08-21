@@ -51,12 +51,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 semaine")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 semaine/)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
       describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
@@ -71,12 +71,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 semaines")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 semaines/)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
       describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
@@ -91,12 +91,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
         
@@ -125,10 +125,11 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-          });
+    it("should display expected answer", () => {
+      
         
+    });
+  
       });
     
       describe("criteria.ancienneté = 106| Enfant accueilli de 3 mois à moins d'un an", () => {
@@ -143,12 +144,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("15 jours calendaires")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/15 jours calendaires/)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
       describe("criteria.ancienneté = 107| Enfant accueilli depuis 1 an et plus", () => {
@@ -163,12 +164,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
         

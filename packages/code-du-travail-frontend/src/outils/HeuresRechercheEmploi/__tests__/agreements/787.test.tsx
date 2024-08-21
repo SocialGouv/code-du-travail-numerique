@@ -51,16 +51,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par journée d'ouverture du cabinet")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, ces absences sont fixées un jour par l'employeur et le salarié. Le salarié qui a retrouvé un emploi ne peut plus utiliser ces heures.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par journée d'ouverture du cabinet/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, ces absences sont fixées un jour par l'employeur et le salarié. Le salarié qui a retrouvé un emploi ne peut plus utiliser ces heures./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 6.2.2/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 46| Moins de 5 ans", () => {
@@ -75,16 +74,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par journée d'ouverture du cabinet")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire n'est pas maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, ces absences sont fixées un jour par l'employeur et le salarié. Le salarié qui a retrouvé un emploi ne peut plus utiliser ces heures.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par journée d'ouverture du cabinet/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, ces absences sont fixées un jour par l'employeur et le salarié. Le salarié qui a retrouvé un emploi ne peut plus utiliser ces heures./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 6.2.2/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -102,16 +100,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par journée d'ouverture du cabinet")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, ces absences sont fixées un jour par l'employeur et le salarié. Le salarié qui a retrouvé un emploi ne peut plus utiliser ces heures.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par journée d'ouverture du cabinet/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, ces absences sont fixées un jour par l'employeur et le salarié. Le salarié qui a retrouvé un emploi ne peut plus utiliser ces heures./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 6.2.2/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("typeRupture = 7| Rupture de la période d'essai", () => {
@@ -126,12 +123,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 6.2.2/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
           

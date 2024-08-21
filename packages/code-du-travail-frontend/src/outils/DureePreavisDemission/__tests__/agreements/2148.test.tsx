@@ -51,12 +51,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 4.4.1.1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
@@ -71,12 +72,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 4.4.1.1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -94,12 +96,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 4.4.1.1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.groupe = 22| E, F et G", () => {
@@ -114,12 +117,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 4.4.1.1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.groupe = 23| Hors classification", () => {
@@ -134,12 +138,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("Pour les salariés hors classification, la durée du préavis est fixée par le contrat de travail dans la limite de 3 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/Pour les salariés hors classification, la durée du préavis est fixée par le contrat de travail dans la limite de 3 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 4.4.1.1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
           

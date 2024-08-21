@@ -90,12 +90,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
       describe("criteria.ancienneté = 48| 5 ans ou plus", () => {
@@ -110,12 +110,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
         
@@ -158,12 +158,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
       describe("criteria.ancienneté = 48| 5 ans ou plus", () => {
@@ -178,12 +178,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
         
@@ -215,12 +215,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 75.2.1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 48| 5 ans ou plus", () => {
@@ -235,12 +236,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 75.2.1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -294,12 +296,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("4 mois")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/4 mois/)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
       describe("criteria.ancienneté = 48| 5 ans ou plus", () => {
@@ -314,12 +316,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("6 mois")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/6 mois/)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
         
@@ -362,12 +364,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("4 mois")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/4 mois/)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
       describe("criteria.ancienneté = 48| 5 ans ou plus", () => {
@@ -382,12 +384,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("6 mois")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/6 mois/)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
         
@@ -419,12 +421,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("4 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/4 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 75.2.1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 48| 5 ans ou plus", () => {
@@ -439,12 +442,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("6 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/6 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 75.2.1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -498,12 +502,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("6 mois")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/6 mois/)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
       describe("criteria.ancienneté = 48| 5 ans ou plus", () => {
@@ -518,12 +522,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("6 mois")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/6 mois/)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
         
@@ -566,12 +570,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("6 mois")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/6 mois/)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
       describe("criteria.ancienneté = 48| 5 ans ou plus", () => {
@@ -586,12 +590,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("6 mois")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/6 mois/)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
         
@@ -623,12 +627,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("6 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/6 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 75.2.1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.ancienneté = 48| 5 ans ou plus", () => {
@@ -643,12 +648,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("6 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/6 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 75.2.1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         

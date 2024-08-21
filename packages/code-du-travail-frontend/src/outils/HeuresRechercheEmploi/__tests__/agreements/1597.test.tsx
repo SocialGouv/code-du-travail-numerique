@@ -51,14 +51,14 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 10.2/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.durée du préavis = 6| 2 semaines", () => {
@@ -73,14 +73,14 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("12 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/12 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 10.2/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.durée du préavis = 7| Plus de 2 semaines", () => {
@@ -95,14 +95,14 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 10.2/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -131,14 +131,14 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 10.2/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.durée du préavis = 6| 2 semaines", () => {
@@ -153,14 +153,14 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("12 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/12 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 10.2/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.durée du préavis = 7| Plus de 2 semaines", () => {
@@ -175,14 +175,14 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 10.2/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -200,12 +200,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 2.3/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
           

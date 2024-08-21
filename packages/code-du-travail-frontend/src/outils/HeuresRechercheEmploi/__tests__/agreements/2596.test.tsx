@@ -40,16 +40,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire n'est pas maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("L'employeur et le salarié peuvent décider que les 2 heures journalières pourront être bloquées à des horaires fixes ou qu'elles seront regroupées. En l'absence d'accord, les heures seront fixées un jour par l'employeur et le suivant par le salarié.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/L'employeur et le salarié peuvent décider que les 2 heures journalières pourront être bloquées à des horaires fixes ou qu'elles seront regroupées. En l'absence d'accord, les heures seront fixées un jour par l'employeur et le suivant par le salarié./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 7.4.4/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("typeRupture = 3| Licenciement", () => {
@@ -64,16 +63,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("L'employeur et le salarié peuvent décider que les 2 heures journalières pourront être bloquées à des horaires fixes ou qu'elles seront regroupées. En l'absence d'accord, les heures seront fixées un jour par l'employeur et le suivant par le salarié.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/L'employeur et le salarié peuvent décider que les 2 heures journalières pourront être bloquées à des horaires fixes ou qu'elles seront regroupées. En l'absence d'accord, les heures seront fixées un jour par l'employeur et le suivant par le salarié./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 7.4.4/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("typeRupture = 7| Rupture de la période d'essai", () => {
@@ -88,12 +86,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 7.3/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
           

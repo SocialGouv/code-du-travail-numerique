@@ -40,14 +40,14 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 journée ou 2 demi-journées par semaine ou un nombre d'heures équivalent. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les absences doivent être fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, l'employeur et le salarié décident à tour de rôle et pour chaque semaine les conditions de ces absences.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 journée ou 2 demi-journées par semaine ou un nombre d'heures équivalent. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les absences doivent être fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, l'employeur et le salarié décident à tour de rôle et pour chaque semaine les conditions de ces absences./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 9.1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("typeRupture = 3| Licenciement", () => {
@@ -62,14 +62,14 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 journée ou 2 demi-journées par semaine ou un nombre d'heures équivalent. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les absences doivent être fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, l'employeur et le salarié décident à tour de rôle et pour chaque semaine les conditions de ces absences.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 journée ou 2 demi-journées par semaine ou un nombre d'heures équivalent. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les absences doivent être fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, l'employeur et le salarié décident à tour de rôle et pour chaque semaine les conditions de ces absences./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 9.2.1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("typeRupture = 7| Rupture de la période d'essai", () => {
@@ -84,12 +84,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 6/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
           

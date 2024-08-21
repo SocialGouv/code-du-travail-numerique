@@ -40,12 +40,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Chapitre VI, Article 1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.niveau = 3| II", () => {
@@ -60,12 +61,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Chapitre VI, Article 1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.niveau = 4| III", () => {
@@ -80,12 +82,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Chapitre VI, Article 1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.niveau = 5| IV", () => {
@@ -100,12 +103,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Chapitre VI, Article 1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.niveau = 7| V", () => {
@@ -120,12 +124,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("1 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Chapitre VI, Article 1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.niveau = 8| VI", () => {
@@ -140,12 +145,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Chapitre VI, Article 1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.niveau = 9| VII", () => {
@@ -160,12 +166,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Chapitre VI, Article 1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.niveau = 11| VIII", () => {
@@ -180,12 +187,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Chapitre VI, Article 1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.niveau = 12| IX", () => {
@@ -200,12 +208,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Chapitre VI, Article 1/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
           

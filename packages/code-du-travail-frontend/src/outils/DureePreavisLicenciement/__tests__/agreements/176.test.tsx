@@ -68,12 +68,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 35, 2°/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.groupe = 15| 4", () => {
@@ -88,12 +89,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 35, 2°/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.groupe = 29| 5 et suivants", () => {
@@ -108,12 +110,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 35, 2°/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         
@@ -142,12 +145,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 35, 2°/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.groupe = 28| 4 à 6 ", () => {
@@ -162,12 +166,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("3 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 35, 2°/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("criteria.groupe = 31| 6 et suivants ", () => {
@@ -182,12 +187,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("4 mois")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/4 mois/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 35, 2°/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
         

@@ -40,16 +40,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("le temps et dans les conditions décidées par l'employeur, qui lui accordent des facilités d'absence")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire n'est pas maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Les heures d'absence autorisée sont accordées au salarié qui n'a pas encore retrouvé un emploi. L'employeur en définit les modalités et la rémunération.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/le temps et dans les conditions décidées par l'employeur, qui lui accordent des facilités d'absence/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures d'absence autorisée sont accordées au salarié qui n'a pas encore retrouvé un emploi. L'employeur en définit les modalités et la rémunération./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 91 b\)/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("typeRupture = 3| Licenciement", () => {
@@ -64,16 +63,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("50 heures par mois maximum")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Ces heures peuvent être groupées en tout ou en partie, avec l'accord de l'employeur. Cette autorisation d'absence prend fin lorsque le salarié a retrouvé un emploi.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/50 heures par mois maximum/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Ces heures peuvent être groupées en tout ou en partie, avec l'accord de l'employeur. Cette autorisation d'absence prend fin lorsque le salarié a retrouvé un emploi./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 91 b\)/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("typeRupture = 7| Rupture de la période d'essai", () => {
@@ -88,12 +86,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 74/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
           

@@ -51,12 +51,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
       describe("criteria.catégorie professionnelle = 100| Salariés du particulier employeur", () => {
@@ -93,12 +93,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
       describe("criteria.ancienneté = 43| 2 ans ou plus", () => {
@@ -113,12 +113,12 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
         
@@ -147,14 +147,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour pendant 6 jours ouvrables")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu. A défaut d'accord entre l'employeur et le salarié, les périodes de deux heures sont prises alternativement, un jour au choix du ou des particuliers employeurs et un jour au choix du salarié.")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour pendant 6 jours ouvrables/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu. A défaut d'accord entre l'employeur et le salarié, les périodes de deux heures sont prises alternativement, un jour au choix du ou des particuliers employeurs et un jour au choix du salarié./)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
       describe("criteria.ancienneté = 44| 2 ans ou plus", () => {
@@ -169,14 +168,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("2 heures par jour pendant 10 jours ouvrables")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu. A défaut d'accord entre l'employeur et le salarié, les périodes de deux heures sont prises alternativement, un jour au choix du ou des particuliers employeurs et un jour au choix du salarié.")[0]).toBeInTheDocument();
-            
-          });
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/2 heures par jour pendant 10 jours ouvrables/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu. A défaut d'accord entre l'employeur et le salarié, les périodes de deux heures sont prises alternativement, un jour au choix du ou des particuliers employeurs et un jour au choix du salarié./)[0]).toBeInTheDocument();
+          
         
+    });
+  
       });
     
         

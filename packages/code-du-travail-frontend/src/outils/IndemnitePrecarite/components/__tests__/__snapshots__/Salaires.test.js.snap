@@ -34,6 +34,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
       >
         <input
           class="sc-dBmzty eccLNx"
+          data-testid="currency"
           id="5"
           name="salaires[0].salaire"
           type="number"
@@ -166,6 +167,7 @@ exports[`<Salaires /> should render 1`] = `
       >
         <input
           class="sc-dBmzty eccLNx"
+          data-testid="currency"
           id="1"
           name="salaires[0].salaire"
           type="number"

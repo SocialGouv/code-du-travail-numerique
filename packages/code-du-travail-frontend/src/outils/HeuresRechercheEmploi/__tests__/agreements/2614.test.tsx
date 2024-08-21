@@ -40,12 +40,13 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 8.3/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("typeRupture = 3| Licenciement", () => {
@@ -60,16 +61,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("5 journées ou 10 demi-journées par mois de préavis")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salarié peut s'absenter pendant le préavis pour rechercher un emploi, s'il le demande. Les heures de recherche d'emploi peuvent être prises en une ou plusieurs fois. Les autorisations d'absence seront fixées pour moitié par le salarié, pour moitié par l'employeur. Chacun en informe l'autre partie. Si le salarié n'utilise pas toutes ses heures d'absence autorisée, l'employeur ne devra pas lui verser d'indemnité.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/5 journées ou 10 demi-journées par mois de préavis/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salarié peut s'absenter pendant le préavis pour rechercher un emploi, s'il le demande. Les heures de recherche d'emploi peuvent être prises en une ou plusieurs fois. Les autorisations d'absence seront fixées pour moitié par le salarié, pour moitié par l'employeur. Chacun en informe l'autre partie. Si le salarié n'utilise pas toutes ses heures d'absence autorisée, l'employeur ne devra pas lui verser d'indemnité./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 8.3/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
       describe("typeRupture = 7| Rupture de la période d'essai", () => {
@@ -84,16 +84,15 @@
         });
         
         
-          it("should display expected answer", () => {
-            
-              expect(screen.queryAllByText("5 journées ou 10 demi-journées par mois de préavis")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salaire est maintenu.")[0]).toBeInTheDocument();
-            
-              expect(screen.queryAllByText("Le salarié peut s'absenter pendant le préavis pour rechercher un emploi, s'il le demande. Les heures de recherche d'emploi peuvent être prises en une ou plusieurs fois. Les autorisations d'absence seront fixées pour moitié par le salarié, pour moitié par l'employeur. Chacun en informe l'autre partie. Si le salarié n'utilise pas toutes ses heures d'absence autorisée, l'employeur ne devra pas lui verser d'indemnité.")[0]).toBeInTheDocument();
-            
-          });
-        
+    it("should display expected answer", () => {
+      expect(screen.queryAllByText(/5 journées ou 10 demi-journées par mois de préavis/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salarié peut s'absenter pendant le préavis pour rechercher un emploi, s'il le demande. Les heures de recherche d'emploi peuvent être prises en une ou plusieurs fois. Les autorisations d'absence seront fixées pour moitié par le salarié, pour moitié par l'employeur. Chacun en informe l'autre partie. Si le salarié n'utilise pas toutes ses heures d'absence autorisée, l'employeur ne devra pas lui verser d'indemnité./)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Article 2.3/)[0]).toBeInTheDocument();
+          
+    });
+  
       });
     
           

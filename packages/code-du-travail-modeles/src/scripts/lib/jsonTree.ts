@@ -1,60 +1,64 @@
+import type { Criteria } from "../../simulators/types";
 import type {
-  Question,
-  Situation,
-  SituationHeuresRechercheEmploi,
-} from "../../simulators/types";
-import type { CriteriaContainer, CriteriaItem, TreeQuestion } from "./type";
+  CriteriaContainer,
+  CriteriaItem,
+  OptionResult,
+  TreeQuestion,
+  TreeQuestionType,
+} from "./type";
 
-type GenerateTreeProps = {
-  situations: (Situation | SituationHeuresRechercheEmploi)[];
-  questions: Question[];
-  prependCriteria?: (
-    situation: Situation | SituationHeuresRechercheEmploi
-  ) => CriteriaItem[];
-  appendCriteria?: (
-    situation: Situation | SituationHeuresRechercheEmploi
-  ) => CriteriaItem[];
-  getResult: (situation: Situation | SituationHeuresRechercheEmploi) => any;
+type GenerateTreeProps<T> = {
+  situations: T[];
+  questions: TreeQuestionType[];
+  getCriterias?: (situation: T) => Criteria | undefined;
+  getResult: (
+    situation: T,
+    arr: CriteriaContainer[],
+    criterias: CriteriaItem[]
+  ) => OptionResult;
 };
 
 function criteriaToArray(
-  questions: Question[],
-  situation: Situation | SituationHeuresRechercheEmploi
+  questions: TreeQuestionType[],
+  criteria: Criteria
 ): CriteriaItem[] {
-  return questions.reduce<CriteriaItem[]>((arr, { question, name, note }) => {
-    if (situation.criteria[name]) {
-      const option = situation.criteria[name] ?? "";
-      arr.push({
-        name: `criteria.${name}`,
-        note,
-        option,
-        question,
-        type: "select",
-      });
-    }
-
-    return arr;
-  }, []);
+  return questions.reduce<CriteriaItem[]>(
+    (arr, { question, name, note, type, key }) => {
+      if (criteria[name]) {
+        const option = criteria[name] ?? "";
+        arr.push({
+          name,
+          note,
+          option,
+          question,
+          type: type ?? "select",
+          key,
+        });
+      }
+      return arr;
+    },
+    []
+  );
 }
 
 function populateNode({ result, criterias }: CriteriaContainer): TreeQuestion {
-  const { question, option, note, name, type } = criterias.shift()!;
+  const { question, option, note, name, type, key } = criterias.shift()!;
   return {
     name,
     note: note,
+    type,
+    key,
     options: criterias.length
       ? [
           {
             nextQuestion: populateNode({ criterias, result }),
             text: option,
-            type,
           },
         ]
       : [
           {
             result,
             text: option,
-            type,
           },
         ],
     text: question,
@@ -82,26 +86,22 @@ function mergeNodes(
   return question1;
 }
 
-export function generateTree({
+export function generateTree<T>({
   situations,
   questions,
-  prependCriteria = () => [],
-  appendCriteria = () => [],
+  getCriterias = () => ({}),
   getResult,
-}: GenerateTreeProps) {
+}: GenerateTreeProps<T>) {
   const questionArray = situations.reduce<CriteriaContainer[]>(
     (arr, situation) => {
-      const criteriaArray = criteriaToArray(questions, situation);
-      const prependCriterias = prependCriteria(situation);
-      const appendCriterias = appendCriteria(situation);
-      const criterias = [
-        ...prependCriterias,
-        ...criteriaArray,
-        ...appendCriterias,
-      ];
+      const criteria = getCriterias(situation);
+      if (!criteria) {
+        return arr;
+      }
+      const criterias = criteriaToArray(questions, criteria);
       arr.push({
         criterias: criterias,
-        result: getResult(situation),
+        result: getResult(situation, arr, criterias),
       });
       return arr;
     },

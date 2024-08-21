@@ -1,8 +1,12 @@
 import fs from "fs";
 
-import type { TreeOption, TreeQuestion } from "./type";
+import type { OptionResult, TreeOption, TreeQuestion } from "./type";
 
-function generateAction(questionName: string, { text, type }: TreeOption) {
+function generateAction(
+  questionName: string,
+  type: string,
+  { text }: TreeOption
+) {
   switch (type) {
     case "select":
       return `
@@ -13,7 +17,7 @@ function generateAction(questionName: string, { text, type }: TreeOption) {
       `;
     case "radio":
       return `
-        fireEvent.click(screen.getByTestId("${questionName}-${text}"));
+        fireEvent.click(screen.getByTestId("${questionName}-${text.toLocaleLowerCase()}"));
         fireEvent.click(ui.next.get());
       `;
     case "agreement":
@@ -23,8 +27,33 @@ function generateAction(questionName: string, { text, type }: TreeOption) {
   }
 }
 
+function formatTestText(text: string) {
+  return text.replace("(", "\\(").replace(")", "\\)").replace("  ", " ").trim();
+}
+
+export function generateTestResult(result: OptionResult): string {
+  return `
+    it("should display expected answer", () => {
+      ${result.texts
+        .map((text) => {
+          if (!text) return "";
+          const formattedText = formatTestText(text);
+          return `expect(screen.queryAllByText(/${formattedText}/)[0]).toBeInTheDocument();
+          `;
+        })
+        .join("")}
+        ${result.refs.map((ref) => {
+          const refLabel = formatTestText(ref.label).replace(/[\n\r]+/g, " ");
+          return `expect(screen.queryAllByText(/${refLabel}/)[0]).toBeInTheDocument();
+          `;
+        })}
+    });
+  `;
+}
+
 export function generateTestOption(
   questionName: string,
+  type: string,
   option: TreeOption
 ): string {
   const { text, nextQuestion, result } = option;
@@ -32,49 +61,42 @@ export function generateTestOption(
       describe("${questionName} = ${text}", () => {
         
         beforeEach(() => {
-          ${generateAction(questionName, option)}
+          ${generateAction(questionName, type, option)}
         });
         ${
           nextQuestion
             ? nextQuestion.options
-                .map((option) => generateTestOption(nextQuestion.name, option))
+                .map((option) =>
+                  generateTestOption(
+                    nextQuestion.key ?? nextQuestion.name,
+                    nextQuestion.type,
+                    option
+                  )
+                )
                 .join("")
             : ""
         }
-        ${
-          result
-            ? `
-          it("should display expected answer", () => {
-            ${result.texts
-              .map((text) =>
-                text
-                  ? `
-              expect(screen.queryAllByText("${text}")[0]).toBeInTheDocument();
-            `
-                  : ""
-              )
-              .join("")}
-          });
-        `
-            : ""
-        }
+        ${result ? generateTestResult(result) : ""}
       });
     `;
 }
 
-function generateActionsUntilIdcc({ name, options }: TreeQuestion): string {
+function generateActionsUntilIdcc(
+  { name, options, type }: TreeQuestion,
+  idcc: string
+): string {
   const firstOption = options[0];
   return `
-    ${generateAction(name, firstOption)}
+    ${generateAction(name, type, firstOption)}
     ${
-      name !== "agreementSearch" && firstOption.nextQuestion
-        ? generateActionsUntilIdcc(firstOption.nextQuestion)
+      type !== "agreement" && firstOption.nextQuestion
+        ? generateActionsUntilIdcc(firstOption.nextQuestion, idcc)
         : ""
     }`;
 }
 
 function getIdccQuestion(question: TreeQuestion): TreeQuestion | null {
-  if (question.name === "agreementSearch") {
+  if (question.type === "agreement") {
     return question;
   }
   return question.options.reduce<TreeQuestion | null>((result, option) => {
@@ -93,6 +115,8 @@ function generateTest(
   componentName: string
 ): { filename: string; content: string }[] {
   const idccQuestion = getIdccQuestion(question);
+  // console.log("question", question);
+  // console.log("idccQuestion", JSON.stringify(idccQuestion));
   if (!idccQuestion) {
     return [];
   }
@@ -122,34 +146,22 @@ function generateTest(
           beforeEach(() => {
             render(<${componentName} icon={""} title={""} displayTitle={""} />);
                 fireEvent.click(ui.introduction.startButton.get());
-                ${generateActionsUntilIdcc(question)}
+                ${generateActionsUntilIdcc(question, text)}
           });
           ${
             nextQuestion
               ? nextQuestion.options
                   .map((option) =>
-                    generateTestOption(nextQuestion.name, option)
+                    generateTestOption(
+                      nextQuestion.key ?? nextQuestion.name,
+                      nextQuestion.type,
+                      option
+                    )
                   )
                   .join("")
               : ""
           }
-          ${
-            result
-              ? `
-          it("should display expected answer", () => {
-            ${result.texts
-              .map((text) =>
-                text
-                  ? `
-            expect(screen.queryAllByText("${text}")[0]).toBeInTheDocument();
-            `
-                  : ""
-              )
-              .join("")}
-          });
-        `
-              : ""
-          }
+          ${result ? generateTestResult(result) : ""}
         });
       `,
       filename: `${text}.test.tsx`,
