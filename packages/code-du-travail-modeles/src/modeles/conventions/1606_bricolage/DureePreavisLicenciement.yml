@@ -1,0 +1,13 @@
+
+contrat salarié . convention collective . bricolage . DureePreavisLicenciement . catégorie professionnelle:
+  titre: catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      
+      Employés,
+      Ingénieurs et Cadres,
+      Ouvriers,
+      Techniciens et agents de maîtrise (TAM)
+      
