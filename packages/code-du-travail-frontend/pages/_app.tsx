@@ -9,12 +9,7 @@ import React, { useEffect } from "react";
 
 import { getSourceUrlFromPath } from "../src/lib";
 import { useRouter } from "next/router";
-import {
-  DSFR_READY_PATHS,
-  PIWIK_SITE_ID,
-  PIWIK_URL,
-  SITE_URL,
-} from "../src/config";
+import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL } from "../src/config";
 
 if (typeof window !== "undefined") {
   import("../src/web-components/tooltip")
@@ -61,29 +56,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       excludeUrlsPatterns: [WIDGETS_PATH],
     });
   }, []);
-
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      const currentPath = router.pathname;
-      const newAndCurrentPathAreDsfr =
-        DSFR_READY_PATHS.includes(url) &&
-        DSFR_READY_PATHS.includes(currentPath);
-      const newAndCurrentPathAreNotDsfr =
-        !DSFR_READY_PATHS.includes(url) &&
-        !DSFR_READY_PATHS.includes(currentPath);
-      const needToReload =
-        newAndCurrentPathAreDsfr || !newAndCurrentPathAreNotDsfr;
-      if (needToReload) {
-        window.location.reload();
-      }
-    };
-
-    router.events.on("routeChangeComplete", handleRouteChange);
-
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events, router.pathname]);
 
   return (
     <React.StrictMode>

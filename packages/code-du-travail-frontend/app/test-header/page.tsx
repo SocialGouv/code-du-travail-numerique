@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { withDsfrWrapper } from "../../src/dsfr/AppDsfr";
 
 function Index() {
   return (
@@ -338,4 +335,4 @@ function Index() {
   );
 }
 
-export default withDsfrWrapper(Index);
+export default Index;
