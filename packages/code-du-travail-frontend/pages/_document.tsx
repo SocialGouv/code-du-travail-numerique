@@ -2,6 +2,10 @@ import * as Sentry from "@sentry/nextjs";
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import React from "react";
 import { ServerStyleSheet } from "styled-components";
+import { dsfrDocumentApi } from "../src/dsfr/AppDsfr";
+
+const { getColorSchemeHtmlAttributes, augmentDocumentForDsfr } =
+  dsfrDocumentApi;
 
 process.on("unhandledRejection", (err) => {
   Sentry.captureException(err);
@@ -10,6 +14,7 @@ process.on("unhandledRejection", (err) => {
 process.on("uncaughtException", (err) => {
   Sentry.captureException(err);
 });
+
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
@@ -39,7 +44,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="fr" prefix="og: http://ogp.me/ns#">
+      <Html {...getColorSchemeHtmlAttributes(this.props)}>
         <Head>
           <link
             key="rel-stylesheet"
@@ -60,3 +65,5 @@ export default class MyDocument extends Document {
     );
   }
 }
+
+augmentDocumentForDsfr(MyDocument);

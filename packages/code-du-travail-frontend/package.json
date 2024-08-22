@@ -7,13 +7,14 @@
   "keywords": [],
   "main": "src/index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "yarn predev && next dev",
+    "predev": "only-include-used-icons",
     "lint:js": "next lint --quiet",
     "lint:css": "stylelint './{src,pages}/**/*.{js,ts,tsx,jsx,css}' --quiet",
     "lint": "yarn lint:css && next lint",
     "precommit": "lint-staged",
     "start": "next start",
-    "prebuild": "node -r @swc-node/register scripts/prebuild.ts",
+    "prebuild": "node -r @swc-node/register scripts/prebuild.ts && only-include-used-icons",
     "build": "yarn prebuild && next build",
     "build:analyze": "yarn prebuild && ANALYZE=true next build",
     "pretest:api": "NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn_test NEXT_PUBLIC_APP_ENV=test NODE_ENV=test node -r @swc-node/register scripts/generate-data.ts",
@@ -30,6 +31,7 @@
     "type-check:watch": "npm run type-check -- --watch"
   },
   "dependencies": {
+    "@codegouvfr/react-dsfr": "^1.11.4",
     "@elastic/elasticsearch": "^8.13.1",
     "@matejmazur/react-katex": "^3.1.3",
     "@opentelemetry/instrumentation-generic-pool": "^0.37.0",

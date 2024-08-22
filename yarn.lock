@@ -1865,6 +1865,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cdt/frontend@workspace:packages/code-du-travail-frontend"
   dependencies:
+    "@codegouvfr/react-dsfr": ^1.11.4
     "@elastic/elasticsearch": ^8.13.1
     "@matejmazur/react-katex": ^3.1.3
     "@opentelemetry/instrumentation-generic-pool": ^0.37.0
@@ -1946,6 +1947,20 @@ __metadata:
     zustand: ^4.3.6
   languageName: unknown
   linkType: soft
+
+"@codegouvfr/react-dsfr@npm:^1.11.4":
+  version: 1.11.4
+  resolution: "@codegouvfr/react-dsfr@npm:1.11.4"
+  dependencies:
+    tsafe: ^1.7.2
+    yargs-parser: ^21.1.1
+  bin:
+    copy-dsfr-to-public: bin/copy-dsfr-to-public.js
+    only-include-used-icons: bin/only-include-used-icons.js
+    react-dsfr: bin/react-dsfr.js
+  checksum: 00aac8d3b548a84b58ce55264f517e06d35862ab1b7ad8d3a76c772c9b6efd88d993480c35ad35e73f3ae1f9e4794280c79e2018df3b0cf131e4462a1a19f851
+  languageName: node
+  linkType: hard
 
 "@colors/colors@npm:1.5.0":
   version: 1.5.0
@@ -23229,6 +23244,13 @@ __metadata:
   version: 2.2.0
   resolution: "ts-dedent@npm:2.2.0"
   checksum: 93ed8f7878b6d5ed3c08d99b740010eede6bccfe64bce61c5a4da06a2c17d6ddbb80a8c49c2d15251de7594a4f93ffa21dd10e7be75ef66a4dc9951b4a94e2af
+  languageName: node
+  linkType: hard
+
+"tsafe@npm:^1.7.2":
+  version: 1.7.2
+  resolution: "tsafe@npm:1.7.2"
+  checksum: a02da1bb81fed3c35b1ce1ea5f6118a632c436d41536ca7a8a399d5890add53a0352da6f48b5fbb66d9f80c66c71de45de6071f696781fa03e738058d112ee80
   languageName: node
   linkType: hard
 
