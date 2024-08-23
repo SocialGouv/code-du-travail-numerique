@@ -40,7 +40,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="fr" prefix="og: http://ogp.me/ns#">
         <Head>
           <link
             key="rel-stylesheet"

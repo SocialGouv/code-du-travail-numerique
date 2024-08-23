@@ -1,9 +1,7 @@
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { render } from "@testing-library/react";
-import Router from "next/router";
-import React from "react";
-
 import Answer from "../Answer";
+import React from "react";
 
 function renderAnswer(props) {
   return render(
