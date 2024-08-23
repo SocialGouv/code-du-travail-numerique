@@ -3,10 +3,61 @@
 exports[`<FicheMT /> should render 1`] = `
 <div>
   <div
-    class="sc-dBFDNq kRdwHU"
+    aria-live="polite"
+    class="sc-cWSHoV bKtA-De"
+    role="status"
+    tabindex="-1"
+  />
+  <div
+    class="sc-cfxfcM sc-dBFDNq kMmTaI kqVDHz"
+  >
+    <nav
+      aria-label="liens d'évitements"
+    >
+      <ul
+        class="sc-ggqIjW djpvzE"
+      >
+        <li
+          class="sc-djVXDX dKsjBO"
+        >
+          <a
+            class="sc-epRvzc bJIXdU"
+            href="#content"
+            tabindex="1"
+          >
+            Aller au contenu
+          </a>
+        </li>
+        <li
+          class="sc-djVXDX dKsjBO"
+        >
+          <a
+            class="sc-epRvzc bJIXdU"
+            href="#navigation"
+            tabindex="1"
+          >
+            Aller à la navigation
+          </a>
+        </li>
+        <li
+          class="sc-djVXDX dKsjBO"
+        >
+          <a
+            class="sc-epRvzc bJIXdU"
+            href="#search"
+            tabindex="1"
+          >
+            Aller à la recherche
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div
+    class="sc-btwKTd iEJIrp"
   >
     <div
-      class="sc-ggqIjW jSgwCj"
+      class="sc-gFnajm eQICHH"
     />
     <header
       class="sc-lfYzqA ehigDg"
@@ -168,7 +219,7 @@ exports[`<FicheMT /> should render 1`] = `
       </div>
     </header>
     <main
-      class="sc-djVXDX UkFZV"
+      class="sc-dISpDn bnSxCd"
       id="content"
       tabindex="-1"
     >
@@ -231,7 +282,7 @@ exports[`<FicheMT /> should render 1`] = `
         class="sc-aXZVg sc-fulCBj gZgZQL dnfESq"
       >
         <div
-          class="sc-kMribo kbmJZQ sc-btwKTd kdmiLC"
+          class="sc-kMribo kbmJZQ sc-bStcSt kDOOmR"
         >
           <div
             class="sc-aXZVg gZgZQL"
@@ -376,7 +427,7 @@ exports[`<FicheMT /> should render 1`] = `
                               class="sc-bXCLTC fcbJdD"
                             >
                               <div
-                                class="sc-fUBkdm sc-epRvzc YxtJM"
+                                class="sc-fUBkdm sc-eONNys jEaVaQ"
                               >
                                 <p>
                                   Depuis le 1er janvier 2017, la 
@@ -804,6 +855,80 @@ exports[`<FicheMT /> should render 1`] = `
                 />
               </svg>
             </button>
+          </div>
+        </div>
+        <div
+          class="sc-gEvEer eEOWTk"
+        >
+          <div
+            class="sc-aXZVg gZgZQL"
+          >
+            <div
+              class="sc-kzqdkY fJPfZZ"
+            >
+              <p
+                class="sc-dSIIpw crsCQS"
+              >
+                <span
+                  class="sc-gsFSXq ljkohw"
+                />
+                Sites associés
+              </p>
+            </div>
+            <div
+              class="sc-jdUcAg iWSRtN"
+            >
+              <a
+                class="sc-bddgXz foLbjR no-after"
+                href="https://service-public.fr"
+                title="aller sur le site service-public.fr"
+              >
+                <img
+                  alt="service-public.fr, le site officiel de l'administration française"
+                  data-nimg="1"
+                  decoding="async"
+                  height="40"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                  srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                  style="color: transparent;"
+                  width="40"
+                />
+              </a>
+              <a
+                class="sc-bddgXz foLbjR no-after"
+                href="https://travail-emploi.gouv.fr"
+                title="aller sur le site travail-emploi.gouv.fr"
+              >
+                <img
+                  alt="le site du ministere du travail, de l'emploi et de l'insertion"
+                  data-nimg="1"
+                  decoding="async"
+                  height="200"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+                  srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+                  style="color: transparent;"
+                  width="200"
+                />
+              </a>
+              <a
+                class="sc-bddgXz foLbjR no-after"
+                href="https://legifrance.gouv.fr"
+                title="aller sur le site legifrance"
+              >
+                <img
+                  alt="legifrance.gouv.fr - le service public de la diffusion du droit"
+                  data-nimg="1"
+                  decoding="async"
+                  height="62"
+                  loading="lazy"
+                  src="/static/assets/img/legifrance.svg"
+                  style="color: transparent;"
+                  width="236"
+                />
+              </a>
+            </div>
           </div>
         </div>
         <div

@@ -4,16 +4,13 @@ import { Header as HeaderDsfr } from "@codegouvfr/react-dsfr/Header";
 import { headerFooterDisplayItem } from "@codegouvfr/react-dsfr/Display";
 import { usePathname, useRouter } from "next/navigation";
 import { SearchInput } from "./SearchInput";
-import { useState } from "react";
 
 export const Header = () => {
   const currentPath = usePathname();
   const router = useRouter();
 
-  const [search, onSearchChange] = useState("");
-
-  const onSearchSubmit = () => {
-    router.push(`/recherche?q=${encodeURIComponent(search)}`);
+  const onSearchSubmit = (text: string) => {
+    router.push(`/recherche?q=${encodeURIComponent(text)}`);
   };
 
   return (
@@ -75,11 +72,10 @@ export const Header = () => {
           id={id}
           placeholder={placeholder}
           type={type}
-          search={search}
-          onSearchChange={onSearchChange}
           onSearchSubmit={onSearchSubmit}
         />
       )}
+      onSearchButtonClick={onSearchSubmit}
     />
   );
 };

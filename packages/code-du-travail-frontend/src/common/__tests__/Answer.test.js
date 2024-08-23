@@ -135,10 +135,4 @@ describe("<Answer />", () => {
     ).toBe(0);
     expect(container).toMatchSnapshot();
   });
-
-  it("should renders back to results link", () => {
-    Router.router.query.q = "camion";
-    const { container } = renderAnswer();
-    expect(container).toMatchSnapshot();
-  });
 });

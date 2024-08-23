@@ -23,3 +23,5 @@ export const REVALIDATE_TIME = 1800; // 30 minutes
 export const REVALIDATE_TIME_DAY = 86400; // 1 day
 export const DEBOUNCE_TIME_MS = 300;
 export const API_GEO_MAX_SEARCH_RESULTS = 10;
+export const SUGGEST_DEBOUNCE_DELAY = 200;
+export const SUGGEST_MAX_RESULTS = 5;

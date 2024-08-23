@@ -15,7 +15,6 @@ import styled from "styled-components";
 import Metas from "../src/common/Metas";
 import { ConventionModal } from "../src/conventions/SearchModal";
 import { Layout } from "../src/layout/Layout";
-import { fetchSearchResults } from "../src/search/search.service";
 import SearchBar from "../src/search/SearchBar";
 import { SearchResults } from "../src/search/SearchResults";
 import { useRouter } from "next/router";
