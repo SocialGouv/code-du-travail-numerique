@@ -1,0 +1,903 @@
+
+contrat salarié . convention collective . prevention secu ent . catégorie professionnelle:
+  titre: catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Agents d'exploitation, employés administratifs et techniciens: "'Agents d'exploitation, employés administratifs et techniciens'"
+      Agents de maîtrise: "'Agents de maîtrise'"
+      Cadres: "'Cadres'"
+      
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens:
+  applicable si: catégorie professionnelle = "'Agents d'exploitation, employés administratifs et techniciens'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . niveau:
+  titre: niveau
+  question: Quel est le niveau du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      I: "'I'"
+      II: "'II'"
+      III: "'III'"
+      IV: "'IV'"
+      V: "'V'"
+      
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . I:
+  applicable si: niveau = "'I'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . I . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 15 jours: "'Moins de 15 jours'"
+      15 jours à 1 mois: "'15 jours à 1 mois'"
+      Plus de 1 mois à 2 mois: "'Plus de 1 mois à 2 mois'"
+      Plus de 2 mois à 6 mois: "'Plus de 2 mois à 6 mois'"
+      Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . I . Moins de 15 jours:
+  applicable si: ancienneté = "'Moins de 15 jours'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . I . Moins de 15 jours . résultat conventionnel:
+  valeur: 0
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . I . 15 jours à 1 mois:
+  applicable si: ancienneté = "'15 jours à 1 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . I . 15 jours à 1 mois . résultat conventionnel:
+  valeur: 1 jour ouvré
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . I . Plus de 1 mois à 2 mois:
+  applicable si: ancienneté = "'Plus de 1 mois à 2 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . I . Plus de 1 mois à 2 mois . résultat conventionnel:
+  valeur: 2 jours ouvrés
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . I . Plus de 2 mois à 6 mois:
+  applicable si: ancienneté = "'Plus de 2 mois à 6 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . I . Plus de 2 mois à 6 mois . résultat conventionnel:
+  valeur: 7 jours calendaires
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . I . Plus de 6 mois à 2 ans:
+  applicable si: ancienneté = "'Plus de 6 mois à 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . I . Plus de 6 mois à 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . I . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . I . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . II:
+  applicable si: niveau = "'II'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . II . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 15 jours: "'Moins de 15 jours'"
+      15 jours à 1 mois: "'15 jours à 1 mois'"
+      Plus de 1 mois à 2 mois: "'Plus de 1 mois à 2 mois'"
+      Plus de 2 mois à 6 mois: "'Plus de 2 mois à 6 mois'"
+      Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . II . Moins de 15 jours:
+  applicable si: ancienneté = "'Moins de 15 jours'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . II . Moins de 15 jours . résultat conventionnel:
+  valeur: 0
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . II . 15 jours à 1 mois:
+  applicable si: ancienneté = "'15 jours à 1 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . II . 15 jours à 1 mois . résultat conventionnel:
+  valeur: 1 jour ouvré
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . II . Plus de 1 mois à 2 mois:
+  applicable si: ancienneté = "'Plus de 1 mois à 2 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . II . Plus de 1 mois à 2 mois . résultat conventionnel:
+  valeur: 2 jours ouvrés
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . II . Plus de 2 mois à 6 mois:
+  applicable si: ancienneté = "'Plus de 2 mois à 6 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . II . Plus de 2 mois à 6 mois . résultat conventionnel:
+  valeur: 7 jours calendaires
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . II . Plus de 6 mois à 2 ans:
+  applicable si: ancienneté = "'Plus de 6 mois à 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . II . Plus de 6 mois à 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . II . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . II . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . III:
+  applicable si: niveau = "'III'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . III . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 15 jours: "'Moins de 15 jours'"
+      15 jours à 1 mois: "'15 jours à 1 mois'"
+      Plus de 1 mois à 2 mois: "'Plus de 1 mois à 2 mois'"
+      Plus de 2 mois à 6 mois: "'Plus de 2 mois à 6 mois'"
+      Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . III . Moins de 15 jours:
+  applicable si: ancienneté = "'Moins de 15 jours'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . III . Moins de 15 jours . résultat conventionnel:
+  valeur: 0
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . III . 15 jours à 1 mois:
+  applicable si: ancienneté = "'15 jours à 1 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . III . 15 jours à 1 mois . résultat conventionnel:
+  valeur: 1 jour ouvré
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . III . Plus de 1 mois à 2 mois:
+  applicable si: ancienneté = "'Plus de 1 mois à 2 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . III . Plus de 1 mois à 2 mois . résultat conventionnel:
+  valeur: 2 jours ouvrés
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . III . Plus de 2 mois à 6 mois:
+  applicable si: ancienneté = "'Plus de 2 mois à 6 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . III . Plus de 2 mois à 6 mois . résultat conventionnel:
+  valeur: 7 jours calendaires
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . III . Plus de 6 mois à 2 ans:
+  applicable si: ancienneté = "'Plus de 6 mois à 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . III . Plus de 6 mois à 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . III . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . III . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . IV:
+  applicable si: niveau = "'IV'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . IV . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 15 jours: "'Moins de 15 jours'"
+      15 jours à 1 mois: "'15 jours à 1 mois'"
+      Plus de 1 mois à 2 mois: "'Plus de 1 mois à 2 mois'"
+      Plus de 2 mois à 6 mois: "'Plus de 2 mois à 6 mois'"
+      Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . IV . Moins de 15 jours:
+  applicable si: ancienneté = "'Moins de 15 jours'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . IV . Moins de 15 jours . résultat conventionnel:
+  valeur: 0
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . IV . 15 jours à 1 mois:
+  applicable si: ancienneté = "'15 jours à 1 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . IV . 15 jours à 1 mois . résultat conventionnel:
+  valeur: 1 jour ouvré
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . IV . Plus de 1 mois à 2 mois:
+  applicable si: ancienneté = "'Plus de 1 mois à 2 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . IV . Plus de 1 mois à 2 mois . résultat conventionnel:
+  valeur: 2 jours ouvrés
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . IV . Plus de 2 mois à 6 mois:
+  applicable si: ancienneté = "'Plus de 2 mois à 6 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . IV . Plus de 2 mois à 6 mois . résultat conventionnel:
+  valeur: 14 jours calendaires
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . IV . Plus de 6 mois à 2 ans:
+  applicable si: ancienneté = "'Plus de 6 mois à 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . IV . Plus de 6 mois à 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . IV . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . IV . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . V:
+  applicable si: niveau = "'V'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . V . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 15 jours: "'Moins de 15 jours'"
+      15 jours à 1 mois: "'15 jours à 1 mois'"
+      Plus de 1 mois à 2 mois: "'Plus de 1 mois à 2 mois'"
+      Plus de 2 mois à 6 mois: "'Plus de 2 mois à 6 mois'"
+      Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . V . Moins de 15 jours:
+  applicable si: ancienneté = "'Moins de 15 jours'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . V . Moins de 15 jours . résultat conventionnel:
+  valeur: 0
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . V . 15 jours à 1 mois:
+  applicable si: ancienneté = "'15 jours à 1 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . V . 15 jours à 1 mois . résultat conventionnel:
+  valeur: 1 jour ouvré
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . V . Plus de 1 mois à 2 mois:
+  applicable si: ancienneté = "'Plus de 1 mois à 2 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . V . Plus de 1 mois à 2 mois . résultat conventionnel:
+  valeur: 2 jours ouvrés
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . V . Plus de 2 mois à 6 mois:
+  applicable si: ancienneté = "'Plus de 2 mois à 6 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . V . Plus de 2 mois à 6 mois . résultat conventionnel:
+  valeur: 14 jours calendaires
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . V . Plus de 6 mois à 2 ans:
+  applicable si: ancienneté = "'Plus de 6 mois à 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . V . Plus de 6 mois à 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . V . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents d'exploitation, employés administratifs et techniciens . V . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise:
+  applicable si: catégorie professionnelle = "'Agents de maîtrise'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . niveau:
+  titre: niveau
+  question: Quel est le niveau du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      I: "'I'"
+      II: "'II'"
+      III: "'III'"
+      IV: "'IV'"
+      V: "'V'"
+      
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . I:
+  applicable si: niveau = "'I'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . I . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 15 jours: "'Moins de 15 jours'"
+      15 jours à 2 mois: "'15 jours à 2 mois'"
+      Plus de 2 mois à 3 mois: "'Plus de 2 mois à 3 mois'"
+      Plus de 3 mois à 6 mois: "'Plus de 3 mois à 6 mois'"
+      Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . I . Moins de 15 jours:
+  applicable si: ancienneté = "'Moins de 15 jours'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . I . Moins de 15 jours . résultat conventionnel:
+  valeur: 0
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . I . 15 jours à 2 mois:
+  applicable si: ancienneté = "'15 jours à 2 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . I . 15 jours à 2 mois . résultat conventionnel:
+  valeur: 1 semaine
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . I . Plus de 2 mois à 3 mois:
+  applicable si: ancienneté = "'Plus de 2 mois à 3 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . I . Plus de 2 mois à 3 mois . résultat conventionnel:
+  valeur: 1 semaine
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . I . Plus de 3 mois à 6 mois:
+  applicable si: ancienneté = "'Plus de 3 mois à 6 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . I . Plus de 3 mois à 6 mois . résultat conventionnel:
+  valeur: 2 semaines
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . I . Plus de 6 mois à 2 ans:
+  applicable si: ancienneté = "'Plus de 6 mois à 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . I . Plus de 6 mois à 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . I . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . I . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . II:
+  applicable si: niveau = "'II'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . II . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 15 jours: "'Moins de 15 jours'"
+      15 jours à 2 mois: "'15 jours à 2 mois'"
+      Plus de 2 mois à 3 mois: "'Plus de 2 mois à 3 mois'"
+      Plus de 3 mois à 6 mois: "'Plus de 3 mois à 6 mois'"
+      Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . II . Moins de 15 jours:
+  applicable si: ancienneté = "'Moins de 15 jours'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . II . Moins de 15 jours . résultat conventionnel:
+  valeur: 0
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . II . 15 jours à 2 mois:
+  applicable si: ancienneté = "'15 jours à 2 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . II . 15 jours à 2 mois . résultat conventionnel:
+  valeur: 1 semaine
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . II . Plus de 2 mois à 3 mois:
+  applicable si: ancienneté = "'Plus de 2 mois à 3 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . II . Plus de 2 mois à 3 mois . résultat conventionnel:
+  valeur: 1 semaine
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . II . Plus de 3 mois à 6 mois:
+  applicable si: ancienneté = "'Plus de 3 mois à 6 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . II . Plus de 3 mois à 6 mois . résultat conventionnel:
+  valeur: 2 semaines
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . II . Plus de 6 mois à 2 ans:
+  applicable si: ancienneté = "'Plus de 6 mois à 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . II . Plus de 6 mois à 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . II . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . II . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . III:
+  applicable si: niveau = "'III'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . III . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 15 jours: "'Moins de 15 jours'"
+      15 jours à 2 mois: "'15 jours à 2 mois'"
+      Plus de 2 mois à 3 mois: "'Plus de 2 mois à 3 mois'"
+      Plus de 3 mois à 6 mois: "'Plus de 3 mois à 6 mois'"
+      Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . III . Moins de 15 jours:
+  applicable si: ancienneté = "'Moins de 15 jours'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . III . Moins de 15 jours . résultat conventionnel:
+  valeur: 0
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . III . 15 jours à 2 mois:
+  applicable si: ancienneté = "'15 jours à 2 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . III . 15 jours à 2 mois . résultat conventionnel:
+  valeur: 1 semaine
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . III . Plus de 2 mois à 3 mois:
+  applicable si: ancienneté = "'Plus de 2 mois à 3 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . III . Plus de 2 mois à 3 mois . résultat conventionnel:
+  valeur: 1 semaine
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . III . Plus de 3 mois à 6 mois:
+  applicable si: ancienneté = "'Plus de 3 mois à 6 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . III . Plus de 3 mois à 6 mois . résultat conventionnel:
+  valeur: 2 semaines
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . III . Plus de 6 mois à 2 ans:
+  applicable si: ancienneté = "'Plus de 6 mois à 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . III . Plus de 6 mois à 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . III . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . III . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . IV:
+  applicable si: niveau = "'IV'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . IV . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 15 jours: "'Moins de 15 jours'"
+      15 jours à 2 mois: "'15 jours à 2 mois'"
+      Plus de 2 mois à 3 mois: "'Plus de 2 mois à 3 mois'"
+      Plus de 3 mois à 6 mois: "'Plus de 3 mois à 6 mois'"
+      Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . IV . Moins de 15 jours:
+  applicable si: ancienneté = "'Moins de 15 jours'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . IV . Moins de 15 jours . résultat conventionnel:
+  valeur: 0
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . IV . 15 jours à 2 mois:
+  applicable si: ancienneté = "'15 jours à 2 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . IV . 15 jours à 2 mois . résultat conventionnel:
+  valeur: 1 semaine
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . IV . Plus de 2 mois à 3 mois:
+  applicable si: ancienneté = "'Plus de 2 mois à 3 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . IV . Plus de 2 mois à 3 mois . résultat conventionnel:
+  valeur: 2 semaines
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . IV . Plus de 3 mois à 6 mois:
+  applicable si: ancienneté = "'Plus de 3 mois à 6 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . IV . Plus de 3 mois à 6 mois . résultat conventionnel:
+  valeur: 2 semaines
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . IV . Plus de 6 mois à 2 ans:
+  applicable si: ancienneté = "'Plus de 6 mois à 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . IV . Plus de 6 mois à 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . IV . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . IV . Plus de 2 ans . résultat conventionnel:
+  valeur: 3 mois
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . V:
+  applicable si: niveau = "'V'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . V . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 15 jours: "'Moins de 15 jours'"
+      15 jours à 2 mois: "'15 jours à 2 mois'"
+      Plus de 2 mois à 3 mois: "'Plus de 2 mois à 3 mois'"
+      Plus de 3 mois à 6 mois: "'Plus de 3 mois à 6 mois'"
+      Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . V . Moins de 15 jours:
+  applicable si: ancienneté = "'Moins de 15 jours'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . V . Moins de 15 jours . résultat conventionnel:
+  valeur: 0
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . V . 15 jours à 2 mois:
+  applicable si: ancienneté = "'15 jours à 2 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . V . 15 jours à 2 mois . résultat conventionnel:
+  valeur: 1 semaine
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . V . Plus de 2 mois à 3 mois:
+  applicable si: ancienneté = "'Plus de 2 mois à 3 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . V . Plus de 2 mois à 3 mois . résultat conventionnel:
+  valeur: 2 semaines
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . V . Plus de 3 mois à 6 mois:
+  applicable si: ancienneté = "'Plus de 3 mois à 6 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . V . Plus de 3 mois à 6 mois . résultat conventionnel:
+  valeur: 2 semaines
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . V . Plus de 6 mois à 2 ans:
+  applicable si: ancienneté = "'Plus de 6 mois à 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . V . Plus de 6 mois à 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . V . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Agents de maîtrise . V . Plus de 2 ans . résultat conventionnel:
+  valeur: 3 mois
+  références:
+    Annexe V: Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Cadres:
+  applicable si: catégorie professionnelle = "'Cadres'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Cadres . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 15 jours: "'Moins de 15 jours'"
+      15 jours à 1 mois: "'15 jours à 1 mois'"
+      Plus de 1 mois à 3 mois: "'Plus de 1 mois à 3 mois'"
+      Plus de 3 mois à 6 mois: "'Plus de 3 mois à 6 mois'"
+      Plus de 6 mois à 1 an: "'Plus de 6 mois à 1 an'"
+      Plus de 1 an: "'Plus de 1 an'"
+      
+          
+contrat salarié . convention collective . prevention secu ent . Cadres . Moins de 15 jours:
+  applicable si: ancienneté = "'Moins de 15 jours'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Cadres . Moins de 15 jours . résultat conventionnel:
+  valeur: 0
+  références:
+    Annexe VI: Cadres, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Cadres . 15 jours à 1 mois:
+  applicable si: ancienneté = "'15 jours à 1 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Cadres . 15 jours à 1 mois . résultat conventionnel:
+  valeur: 7 jours calendaires
+  références:
+    Annexe VI: Cadres, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Cadres . Plus de 1 mois à 3 mois:
+  applicable si: ancienneté = "'Plus de 1 mois à 3 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Cadres . Plus de 1 mois à 3 mois . résultat conventionnel:
+  valeur: 14 jours calendaires
+  références:
+    Annexe VI: Cadres, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Cadres . Plus de 3 mois à 6 mois:
+  applicable si: ancienneté = "'Plus de 3 mois à 6 mois'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Cadres . Plus de 3 mois à 6 mois . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Annexe VI: Cadres, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Cadres . Plus de 6 mois à 1 an:
+  applicable si: ancienneté = "'Plus de 6 mois à 1 an'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Cadres . Plus de 6 mois à 1 an . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Annexe VI: Cadres, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . prevention secu ent . Cadres . Plus de 1 an:
+  applicable si: ancienneté = "'Plus de 1 an'"
+  
+          
+contrat salarié . convention collective . prevention secu ent . Cadres . Plus de 1 an . résultat conventionnel:
+  valeur: 3 mois
+  références:
+    Annexe VI: Cadres, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id
+  

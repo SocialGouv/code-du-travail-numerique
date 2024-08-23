@@ -1,0 +1,100 @@
+
+contrat salarié . convention collective . particuliers employeurs domicile . catégorie professionnelle:
+  titre: catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Salariés du particulier employeur: "'Salariés du particulier employeur'"
+      Assistants maternels du particulier employeur: "'Assistants maternels du particulier employeur'"
+      
+          
+contrat salarié . convention collective . particuliers employeurs domicile . Salariés du particulier employeur:
+  applicable si: catégorie professionnelle = "'Salariés du particulier employeur'"
+  
+          
+contrat salarié . convention collective . particuliers employeurs domicile . Salariés du particulier employeur . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 6 mois: "'Moins de 6 mois'"
+      6 mois à 2 ans: "'6 mois à 2 ans'"
+      2 ans ou plus: "'2 ans ou plus'"
+      
+          
+contrat salarié . convention collective . particuliers employeurs domicile . Salariés du particulier employeur . Moins de 6 mois:
+  applicable si: ancienneté = "'Moins de 6 mois'"
+  
+          
+contrat salarié . convention collective . particuliers employeurs domicile . Salariés du particulier employeur . Moins de 6 mois . résultat conventionnel:
+  valeur: 1 semaine
+  références:
+    
+  
+          
+contrat salarié . convention collective . particuliers employeurs domicile . Salariés du particulier employeur . 6 mois à 2 ans:
+  applicable si: ancienneté = "'6 mois à 2 ans'"
+  
+          
+contrat salarié . convention collective . particuliers employeurs domicile . Salariés du particulier employeur . 6 mois à 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    
+  
+          
+contrat salarié . convention collective . particuliers employeurs domicile . Salariés du particulier employeur . 2 ans ou plus:
+  applicable si: ancienneté = "'2 ans ou plus'"
+  
+          
+contrat salarié . convention collective . particuliers employeurs domicile . Salariés du particulier employeur . 2 ans ou plus . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    
+  
+          
+contrat salarié . convention collective . particuliers employeurs domicile . Assistants maternels du particulier employeur:
+  applicable si: catégorie professionnelle = "'Assistants maternels du particulier employeur'"
+  
+          
+contrat salarié . convention collective . particuliers employeurs domicile . Assistants maternels du particulier employeur . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Enfant accueilli depuis moins de 3 mois: "'Enfant accueilli depuis moins de 3 mois'"
+      Enfant accueilli de 3 mois à moins d'un an: "'Enfant accueilli de 3 mois à moins d'un an'"
+      Enfant accueilli depuis 1 an et plus: "'Enfant accueilli depuis 1 an et plus'"
+      
+          
+contrat salarié . convention collective . particuliers employeurs domicile . Assistants maternels du particulier employeur . Enfant accueilli depuis moins de 3 mois:
+  applicable si: ancienneté = "'Enfant accueilli depuis moins de 3 mois'"
+  
+          
+contrat salarié . convention collective . particuliers employeurs domicile . Assistants maternels du particulier employeur . Enfant accueilli depuis moins de 3 mois . résultat conventionnel:
+  valeur: 8 jours
+  références:
+    
+  
+          
+contrat salarié . convention collective . particuliers employeurs domicile . Assistants maternels du particulier employeur . Enfant accueilli de 3 mois à moins d'un an:
+  applicable si: ancienneté = "'Enfant accueilli de 3 mois à moins d'un an'"
+  
+          
+contrat salarié . convention collective . particuliers employeurs domicile . Assistants maternels du particulier employeur . Enfant accueilli de 3 mois à moins d'un an . résultat conventionnel:
+  valeur: 15 jours
+  références:
+    
+  
+          
+contrat salarié . convention collective . particuliers employeurs domicile . Assistants maternels du particulier employeur . Enfant accueilli depuis 1 an et plus:
+  applicable si: ancienneté = "'Enfant accueilli depuis 1 an et plus'"
+  
+          
+contrat salarié . convention collective . particuliers employeurs domicile . Assistants maternels du particulier employeur . Enfant accueilli depuis 1 an et plus . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    
+  

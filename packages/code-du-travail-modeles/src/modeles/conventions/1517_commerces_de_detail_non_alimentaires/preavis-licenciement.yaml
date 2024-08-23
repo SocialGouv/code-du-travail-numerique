@@ -1,0 +1,323 @@
+
+contrat salarié . convention collective . commerces de detail non alimentaires . niveau:
+  titre: niveau
+  question: Quel est le niveau du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      I: "'I'"
+      II: "'II'"
+      III: "'III'"
+      IV: "'IV'"
+      V: "'V'"
+      VI: "'VI'"
+      VII: "'VII'"
+      VIII: "'VIII'"
+      IX: "'IX'"
+      
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . I:
+  applicable si: niveau = "'I'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . I . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 2 ans: "'Moins de 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . I . Moins de 2 ans:
+  applicable si: ancienneté = "'Moins de 2 ans'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . I . Moins de 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . I . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . I . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . II:
+  applicable si: niveau = "'II'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . II . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 2 ans: "'Moins de 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . II . Moins de 2 ans:
+  applicable si: ancienneté = "'Moins de 2 ans'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . II . Moins de 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . II . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . II . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . III:
+  applicable si: niveau = "'III'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . III . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Plus de 2 ans: "'Plus de 2 ans'"
+      Moins de 2 ans: "'Moins de 2 ans'"
+      
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . III . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . III . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . III . Moins de 2 ans:
+  applicable si: ancienneté = "'Moins de 2 ans'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . III . Moins de 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . IV:
+  applicable si: niveau = "'IV'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . IV . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 2 ans: "'Moins de 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . IV . Moins de 2 ans:
+  applicable si: ancienneté = "'Moins de 2 ans'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . IV . Moins de 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . IV . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . IV . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . V:
+  applicable si: niveau = "'V'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . V . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 2 ans: "'Moins de 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . V . Moins de 2 ans:
+  applicable si: ancienneté = "'Moins de 2 ans'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . V . Moins de 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . V . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . V . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . VI:
+  applicable si: niveau = "'VI'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . VI . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 2 ans: "'Moins de 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . VI . Moins de 2 ans:
+  applicable si: ancienneté = "'Moins de 2 ans'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . VI . Moins de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . VI . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . VI . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . VII:
+  applicable si: niveau = "'VII'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . VII . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 2 ans: "'Moins de 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . VII . Moins de 2 ans:
+  applicable si: ancienneté = "'Moins de 2 ans'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . VII . Moins de 2 ans . résultat conventionnel:
+  valeur: 3 mois
+  références:
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . VII . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . VII . Plus de 2 ans . résultat conventionnel:
+  valeur: 3 mois
+  références:
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . VIII:
+  applicable si: niveau = "'VIII'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . VIII . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 2 ans: "'Moins de 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . VIII . Moins de 2 ans:
+  applicable si: ancienneté = "'Moins de 2 ans'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . VIII . Moins de 2 ans . résultat conventionnel:
+  valeur: 3 mois
+  références:
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . VIII . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . VIII . Plus de 2 ans . résultat conventionnel:
+  valeur: 3 mois
+  références:
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . IX:
+  applicable si: niveau = "'IX'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . IX . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 2 ans: "'Moins de 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . IX . Moins de 2 ans:
+  applicable si: ancienneté = "'Moins de 2 ans'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . IX . Moins de 2 ans . résultat conventionnel:
+  valeur: 3 mois
+  références:
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . IX . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . commerces de detail non alimentaires . IX . Plus de 2 ans . résultat conventionnel:
+  valeur: 3 mois
+  références:
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+  

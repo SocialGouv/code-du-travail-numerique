@@ -1,0 +1,168 @@
+
+contrat salarié . convention collective . coiffure . catégorie professionnelle:
+  titre: catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Agents de maîtrise: "'Agents de maîtrise'"
+      Cadres: "'Cadres'"
+      Salariés occupant un emploi de l'esthétique-cosmétique: "'Salariés occupant un emploi de l'esthétique-cosmétique'"
+      Salariés occupant un emploi non-technique de la coiffure: "'Salariés occupant un emploi non-technique de la coiffure'"
+      Salariés occupant un emploi technique de la coiffure: "'Salariés occupant un emploi technique de la coiffure'"
+      
+          
+contrat salarié . convention collective . coiffure . Agents de maîtrise:
+  applicable si: catégorie professionnelle = "'Agents de maîtrise'"
+  
+          
+contrat salarié . convention collective . coiffure . Agents de maîtrise . résultat conventionnel:
+  valeur: 3 mois
+  références:
+    article 7.4.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+  
+          
+contrat salarié . convention collective . coiffure . Cadres:
+  applicable si: catégorie professionnelle = "'Cadres'"
+  
+          
+contrat salarié . convention collective . coiffure . Cadres . résultat conventionnel:
+  valeur: 3 mois
+  références:
+    article 7.4.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi de l'esthétique-cosmétique:
+  applicable si: catégorie professionnelle = "'Salariés occupant un emploi de l'esthétique-cosmétique'"
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi de l'esthétique-cosmétique . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      6 mois ou moins: "'6 mois ou moins'"
+      6 mois à 2 ans: "'6 mois à 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi de l'esthétique-cosmétique . 6 mois ou moins:
+  applicable si: ancienneté = "'6 mois ou moins'"
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi de l'esthétique-cosmétique . 6 mois ou moins . résultat conventionnel:
+  valeur: 1 semaine
+  références:
+    article 7.4.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi de l'esthétique-cosmétique . 6 mois à 2 ans:
+  applicable si: ancienneté = "'6 mois à 2 ans'"
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi de l'esthétique-cosmétique . 6 mois à 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    article 7.4.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi de l'esthétique-cosmétique . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi de l'esthétique-cosmétique . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    article 7.4.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi non-technique de la coiffure:
+  applicable si: catégorie professionnelle = "'Salariés occupant un emploi non-technique de la coiffure'"
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi non-technique de la coiffure . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      6 mois ou moins: "'6 mois ou moins'"
+      6 mois à 2 ans: "'6 mois à 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi non-technique de la coiffure . 6 mois ou moins:
+  applicable si: ancienneté = "'6 mois ou moins'"
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi non-technique de la coiffure . 6 mois ou moins . résultat conventionnel:
+  valeur: 1 semaine
+  références:
+    article 7.4.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi non-technique de la coiffure . 6 mois à 2 ans:
+  applicable si: ancienneté = "'6 mois à 2 ans'"
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi non-technique de la coiffure . 6 mois à 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    article 7.4.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi non-technique de la coiffure . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi non-technique de la coiffure . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    article 7.4.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi technique de la coiffure:
+  applicable si: catégorie professionnelle = "'Salariés occupant un emploi technique de la coiffure'"
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi technique de la coiffure . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      6 mois ou moins: "'6 mois ou moins'"
+      6 mois à 2 ans: "'6 mois à 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi technique de la coiffure . 6 mois ou moins:
+  applicable si: ancienneté = "'6 mois ou moins'"
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi technique de la coiffure . 6 mois ou moins . résultat conventionnel:
+  valeur: 1 semaine
+  références:
+    article 7.4.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi technique de la coiffure . 6 mois à 2 ans:
+  applicable si: ancienneté = "'6 mois à 2 ans'"
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi technique de la coiffure . 6 mois à 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    article 7.4.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi technique de la coiffure . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . coiffure . Salariés occupant un emploi technique de la coiffure . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    article 7.4.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+  

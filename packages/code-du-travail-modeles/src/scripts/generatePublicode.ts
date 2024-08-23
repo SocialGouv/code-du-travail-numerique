@@ -6,7 +6,13 @@ import { generatePreavisLicenciementTree } from "./generatePreavisLicenciementTr
 async function main() {
   const dpl = generatePreavisLicenciementTree();
   // console.log("dpl", dpl);
-  await generatePublicodeFiles(dpl, "DureePreavisLicenciement");
+  await generatePublicodeFiles(dpl, "preavis-licenciement", (texts) => {
+    const [value] = texts;
+    const [number] = value.split(" ");
+    const isNan = isNaN(parseInt(number));
+    if (isNan) return "0";
+    return value;
+  });
 }
 
 main();

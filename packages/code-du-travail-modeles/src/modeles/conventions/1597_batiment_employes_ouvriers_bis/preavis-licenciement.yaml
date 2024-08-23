@@ -1,0 +1,52 @@
+
+contrat salarié . convention collective . batiment employes ouvriers bis . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Au delà de la période d'essai et jusqu'à 3 mois: "'Au delà de la période d'essai et jusqu'à 3 mois'"
+      De 3 à 6 mois: "'De 3 à 6 mois'"
+      6 mois à 2 ans: "'6 mois à 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . batiment employes ouvriers bis . Au delà de la période d'essai et jusqu'à 3 mois:
+  applicable si: ancienneté = "'Au delà de la période d'essai et jusqu'à 3 mois'"
+  
+          
+contrat salarié . convention collective . batiment employes ouvriers bis . Au delà de la période d'essai et jusqu'à 3 mois . résultat conventionnel:
+  valeur: 2 jours
+  références:
+    Article 10.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=6B7211A48E0474D6942B62196D8E9DEE.tplgfr37s_2?idArticle=KALIARTI000005776855&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . batiment employes ouvriers bis . De 3 à 6 mois:
+  applicable si: ancienneté = "'De 3 à 6 mois'"
+  
+          
+contrat salarié . convention collective . batiment employes ouvriers bis . De 3 à 6 mois . résultat conventionnel:
+  valeur: 2 semaines
+  références:
+    Article 10.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=6B7211A48E0474D6942B62196D8E9DEE.tplgfr37s_2?idArticle=KALIARTI000005776855&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . batiment employes ouvriers bis . 6 mois à 2 ans:
+  applicable si: ancienneté = "'6 mois à 2 ans'"
+  
+          
+contrat salarié . convention collective . batiment employes ouvriers bis . 6 mois à 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Article 10.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=6B7211A48E0474D6942B62196D8E9DEE.tplgfr37s_2?idArticle=KALIARTI000005776855&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . batiment employes ouvriers bis . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . batiment employes ouvriers bis . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Article 10.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=6B7211A48E0474D6942B62196D8E9DEE.tplgfr37s_2?idArticle=KALIARTI000005776855&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id
+  

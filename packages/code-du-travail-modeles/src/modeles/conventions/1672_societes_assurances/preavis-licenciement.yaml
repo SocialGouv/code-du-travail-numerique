@@ -1,0 +1,207 @@
+
+contrat salarié . convention collective . societes assurances . catégorie professionnelle:
+  titre: catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Cadres: "'Cadres'"
+      Non-cadres: "'Non-cadres'"
+      
+          
+contrat salarié . convention collective . societes assurances . Cadres:
+  applicable si: catégorie professionnelle = "'Cadres'"
+  
+          
+contrat salarié . convention collective . societes assurances . Cadres . classe:
+  titre: classe
+  question: Quelle est la classe du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      5: "'5'"
+      6: "'6'"
+      7: "'7'"
+      
+          
+contrat salarié . convention collective . societes assurances . Cadres . 5:
+  applicable si: classe = "'5'"
+  
+          
+contrat salarié . convention collective . societes assurances . Cadres . 5 . résultat conventionnel:
+  valeur: 3 mois
+  références:
+    Accord relative aux dispositions particulières " Cadres ", article II. 6: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3586CF13469976784B743EB6B765BDF5.tplgfr44s_1?idArticle=KALIARTI000026688804&cidTexte=KALITEXT000005654666&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . societes assurances . Cadres . 6:
+  applicable si: classe = "'6'"
+  
+          
+contrat salarié . convention collective . societes assurances . Cadres . 6 . résultat conventionnel:
+  valeur: 3 mois
+  références:
+    Accord relative aux dispositions particulières " Cadres ", article II. 6: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3586CF13469976784B743EB6B765BDF5.tplgfr44s_1?idArticle=KALIARTI000026688804&cidTexte=KALITEXT000005654666&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . societes assurances . Cadres . 7:
+  applicable si: classe = "'7'"
+  
+          
+contrat salarié . convention collective . societes assurances . Cadres . 7 . résultat conventionnel:
+  valeur: 3 mois
+  références:
+    Accord relative aux dispositions particulières " Cadres ", article II. 6: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3586CF13469976784B743EB6B765BDF5.tplgfr44s_1?idArticle=KALIARTI000026688804&cidTexte=KALITEXT000005654666&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres:
+  applicable si: catégorie professionnelle = "'Non-cadres'"
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . classe:
+  titre: classe
+  question: Quelle est la classe du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      1: "'1'"
+      2: "'2'"
+      3: "'3'"
+      4: "'4'"
+      
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 1:
+  applicable si: classe = "'1'"
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 1 . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 2 ans: "'Moins de 2 ans'"
+      2 ans ou plus: "'2 ans ou plus'"
+      
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 1 . Moins de 2 ans:
+  applicable si: ancienneté = "'Moins de 2 ans'"
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 1 . Moins de 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 1 . 2 ans ou plus:
+  applicable si: ancienneté = "'2 ans ou plus'"
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 1 . 2 ans ou plus . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 2:
+  applicable si: classe = "'2'"
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 2 . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 2 ans: "'Moins de 2 ans'"
+      2 ans ou plus: "'2 ans ou plus'"
+      
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 2 . Moins de 2 ans:
+  applicable si: ancienneté = "'Moins de 2 ans'"
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 2 . Moins de 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 2 . 2 ans ou plus:
+  applicable si: ancienneté = "'2 ans ou plus'"
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 2 . 2 ans ou plus . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 3:
+  applicable si: classe = "'3'"
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 3 . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 2 ans: "'Moins de 2 ans'"
+      2 ans ou plus: "'2 ans ou plus'"
+      
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 3 . Moins de 2 ans:
+  applicable si: ancienneté = "'Moins de 2 ans'"
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 3 . Moins de 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 3 . 2 ans ou plus:
+  applicable si: ancienneté = "'2 ans ou plus'"
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 3 . 2 ans ou plus . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 4:
+  applicable si: classe = "'4'"
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 4 . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 2 ans: "'Moins de 2 ans'"
+      2 ans ou plus: "'2 ans ou plus'"
+      
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 4 . Moins de 2 ans:
+  applicable si: ancienneté = "'Moins de 2 ans'"
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 4 . Moins de 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 4 . 2 ans ou plus:
+  applicable si: ancienneté = "'2 ans ou plus'"
+  
+          
+contrat salarié . convention collective . societes assurances . Non-cadres . 4 . 2 ans ou plus . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
+  

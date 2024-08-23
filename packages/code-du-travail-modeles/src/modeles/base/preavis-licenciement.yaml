@@ -1,0 +1,17 @@
+contrat salarié . convention collective . légal . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 6 mois: "'Moins de 6 mois'"
+      6 mois à moins de 2 ans: "'6 mois à moins de 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+
+contrat salarié . convention collective . résultat légal:
+  variations:
+    - si: légal . ancienneté = "'Plus de 2 ans'"
+      alors: 2 mois
+    - si: légal . ancienneté = "'6 mois à moins de 2 ans'"
+      alors: 1 mois
+    - sinon: 0

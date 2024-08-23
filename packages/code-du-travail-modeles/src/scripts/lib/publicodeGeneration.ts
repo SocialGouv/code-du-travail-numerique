@@ -2,6 +2,8 @@ import fs from "fs";
 
 import { OptionResult, TreeQuestion } from "./type";
 
+type ParseResult = (texts: string[]) => string;
+
 function cleanValue(value: string) {
   const [, newValue] = value.split("|");
   return newValue.trim();
@@ -18,11 +20,20 @@ contrat salarié . convention collective . ${namespace.join(" . ")}:
   `;
 }
 
-function generateResult(result: OptionResult, namespace: string[]): string {
+function generateResult(
+  result: OptionResult,
+  namespace: string[],
+  parseResult: ParseResult,
+  isLegal = false
+): string {
   const namespaceLine = namespace.join(" . ");
   const refLines = result.refs.map(({ url, label }) => `${label}: ${url}`);
+
   const content = `
-contrat salarié . convention collective . ${namespaceLine} . résultat conventionnel:
+contrat salarié . convention collective . ${namespaceLine} . ${
+    isLegal ? "résultat légal" : "résultat conventionnel"
+  }:
+  valeur: ${parseResult(result.texts)}
   références:
     ${refLines.join(`
     `)}
@@ -32,7 +43,8 @@ contrat salarié . convention collective . ${namespaceLine} . résultat conventi
 
 function generateQuestions(
   question: TreeQuestion,
-  namespace: string[]
+  namespace: string[],
+  parseResult: ParseResult
 ): string {
   let content = "";
   const namespaceLine = namespace.join(" . ");
@@ -62,11 +74,17 @@ contrat salarié . convention collective . ${namespaceLine} . ${question.name}:
       );
       if (nextQuestion) {
         arr.push(
-          generateQuestions(nextQuestion, [...namespace, cleanValue(text)])
+          generateQuestions(
+            nextQuestion,
+            [...namespace, cleanValue(text)],
+            parseResult
+          )
         );
       }
       if (result) {
-        arr.push(generateResult(result, [...namespace, cleanValue(text)]));
+        arr.push(
+          generateResult(result, [...namespace, cleanValue(text)], parseResult)
+        );
       }
       return arr;
     },
@@ -94,7 +112,8 @@ function getIdccQuestion(question: TreeQuestion): TreeQuestion | null {
 
 function generatePublicode(
   question: TreeQuestion,
-  componentName: string
+  componentName: string,
+  parseResult: ParseResult
 ): { filename: string; content: string }[] {
   const idccQuestion = getIdccQuestion(question);
   if (!idccQuestion) {
@@ -103,7 +122,7 @@ function generatePublicode(
   const pathDir = "src/modeles/conventions";
   const folders = fs.readdirSync(pathDir);
   return idccQuestion.options
-    .filter(({ text }) => text === "16")
+    .filter(({ text }) => text !== "0")
     .reduce<{ filename: string; content: string }[]>(
       (arr, { text, nextQuestion }) => {
         const foldername = folders.find((folder) =>
@@ -115,9 +134,9 @@ function generatePublicode(
         if (!foldername) return arr;
         arr.push({
           content: nextQuestion
-            ? generateQuestions(nextQuestion, [ccName, componentName])
+            ? generateQuestions(nextQuestion, [ccName], parseResult)
             : "",
-          filename: `${pathDir}/${foldername}/${componentName}.yml`,
+          filename: `${pathDir}/${foldername}/${componentName}.yaml`,
         });
         return arr;
       },
@@ -127,13 +146,14 @@ function generatePublicode(
 
 export async function generatePublicodeFiles(
   question: TreeQuestion,
-  componentName: string
+  componentName: string,
+  parseResult: ParseResult
 ) {
   const idccQuestion = getIdccQuestion(question);
   if (!idccQuestion) {
     return [];
   }
-  const publicodes = generatePublicode(question, componentName);
+  const publicodes = generatePublicode(question, componentName, parseResult);
   await Promise.all(
     publicodes.map(({ filename, content }) => {
       fs.writeFile(`${filename}`, content, function (err) {

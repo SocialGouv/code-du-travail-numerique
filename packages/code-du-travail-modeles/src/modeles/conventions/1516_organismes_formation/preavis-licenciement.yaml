@@ -1,0 +1,65 @@
+
+contrat salarié . convention collective . organismes formation . catégorie professionnelle:
+  titre: catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Cadres: "'Cadres'"
+      Employés: "'Employés'"
+      Agents de maîtrise ou techniciens: "'Agents de maîtrise ou techniciens'"
+      
+          
+contrat salarié . convention collective . organismes formation . Cadres:
+  applicable si: catégorie professionnelle = "'Cadres'"
+  
+          
+contrat salarié . convention collective . organismes formation . Cadres . résultat conventionnel:
+  valeur: 3 mois
+  références:
+    Article 9.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=89093E1309DF68E5F62690396DFAA9A2.tplgfr44s_1?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . organismes formation . Employés:
+  applicable si: catégorie professionnelle = "'Employés'"
+  
+          
+contrat salarié . convention collective . organismes formation . Employés . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      2 ans ou moins: "'2 ans ou moins'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . organismes formation . Employés . 2 ans ou moins:
+  applicable si: ancienneté = "'2 ans ou moins'"
+  
+          
+contrat salarié . convention collective . organismes formation . Employés . 2 ans ou moins . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Article 9.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=89093E1309DF68E5F62690396DFAA9A2.tplgfr44s_1?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . organismes formation . Employés . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . organismes formation . Employés . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Article 9.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=89093E1309DF68E5F62690396DFAA9A2.tplgfr44s_1?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . organismes formation . Agents de maîtrise ou techniciens:
+  applicable si: catégorie professionnelle = "'Agents de maîtrise ou techniciens'"
+  
+          
+contrat salarié . convention collective . organismes formation . Agents de maîtrise ou techniciens . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Article 9.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=89093E1309DF68E5F62690396DFAA9A2.tplgfr44s_1?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id
+  

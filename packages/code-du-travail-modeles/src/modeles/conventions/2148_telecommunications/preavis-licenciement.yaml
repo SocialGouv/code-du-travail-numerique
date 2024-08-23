@@ -1,0 +1,76 @@
+
+contrat salarié . convention collective . telecommunications . groupe:
+  titre: groupe
+  question: Quel est le groupe professionnel du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      A et B: "'A et B'"
+      C et D: "'C et D'"
+      E, F et G: "'E, F et G'"
+      Hors classification: "'Hors classification'"
+      
+          
+contrat salarié . convention collective . telecommunications . A et B:
+  applicable si: groupe = "'A et B'"
+  
+          
+contrat salarié . convention collective . telecommunications . A et B . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      2 ans ou moins: "'2 ans ou moins'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+      
+          
+contrat salarié . convention collective . telecommunications . A et B . 2 ans ou moins:
+  applicable si: ancienneté = "'2 ans ou moins'"
+  
+          
+contrat salarié . convention collective . telecommunications . A et B . 2 ans ou moins . résultat conventionnel:
+  valeur: 1 mois
+  références:
+    Article 4.4.1.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000022416125&cidTexte=KALITEXT000005677399&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . telecommunications . A et B . Plus de 2 ans:
+  applicable si: ancienneté = "'Plus de 2 ans'"
+  
+          
+contrat salarié . convention collective . telecommunications . A et B . Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Article 4.4.1.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000022416125&cidTexte=KALITEXT000005677399&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . telecommunications . C et D:
+  applicable si: groupe = "'C et D'"
+  
+          
+contrat salarié . convention collective . telecommunications . C et D . résultat conventionnel:
+  valeur: 2 mois
+  références:
+    Article 4.4.1.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000022416125&cidTexte=KALITEXT000005677399&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . telecommunications . E, F et G:
+  applicable si: groupe = "'E, F et G'"
+  
+          
+contrat salarié . convention collective . telecommunications . E, F et G . résultat conventionnel:
+  valeur: 3 mois
+  références:
+    Article 4.4.1.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000022416125&cidTexte=KALITEXT000005677399&dateTexte=29990101&categorieLien=id
+  
+          
+contrat salarié . convention collective . telecommunications . Hors classification:
+  applicable si: groupe = "'Hors classification'"
+  
+          
+contrat salarié . convention collective . telecommunications . Hors classification . résultat conventionnel:
+  valeur: 0
+  références:
+    Article 4.4.1.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000022416125&cidTexte=KALITEXT000005677399&dateTexte=29990101&categorieLien=id
+  
