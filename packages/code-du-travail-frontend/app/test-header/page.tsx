@@ -19,8 +19,6 @@ function Index() {
         >
           Accueil with router
         </button>
-        <br />
-        <a href="/">Accueil without router</a>
       </section>
       <section>
         example icon :<i className={fr.cx("fr-icon-account-pin-circle-line")} />
