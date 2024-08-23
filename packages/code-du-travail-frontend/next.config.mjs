@@ -51,7 +51,6 @@ const nextConfig = {
   staticPageGenerationTimeout: 60 * 5, // 5 minutes
   experimental: {
     instrumentationHook: true,
-    missingSuspenseWithCSRBailout: false,
   },
   webpack: (config) => {
     config.module.rules.push({
