@@ -1,10 +1,11 @@
 "use client";
 
 import { Header as HeaderDsfr } from "@codegouvfr/react-dsfr/Header";
-import { headerFooterDisplayItem } from "@codegouvfr/react-dsfr/Display";
 import { usePathname, useRouter } from "next/navigation";
 import { SearchInput } from "./SearchInput";
 import { Suspense } from "react";
+import { BrandTop } from "./BrandTop";
+import { homeLinksProps } from "./common";
 
 export const Header = () => {
   const currentPath = usePathname();
@@ -19,17 +20,8 @@ export const Header = () => {
       <HeaderDsfr
         serviceTitle="Code du travail numérique"
         serviceTagline="Toutes les réponses à vos questions sur le droit du travail"
-        brandTop={
-          <>
-            RÉPUBLIQUE
-            <br />
-            FRANÇAISE
-          </>
-        }
-        homeLinkProps={{
-          href: "/",
-          title: "Accueil - Code du travail numérique, Ministère du Travail",
-        }}
+        brandTop={<BrandTop />}
+        homeLinkProps={homeLinksProps}
         navigation={[
           {
             text: "Boîte à outils",
@@ -67,7 +59,6 @@ export const Header = () => {
             isActive: currentPath === "/themes",
           },
         ]}
-        quickAccessItems={[headerFooterDisplayItem]}
         renderSearchInput={({ className, id, placeholder, type }) => (
           <SearchInput
             className={className}
