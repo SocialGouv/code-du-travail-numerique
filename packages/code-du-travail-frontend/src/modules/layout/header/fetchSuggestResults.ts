@@ -1,5 +1,5 @@
 import pDebounce from "p-debounce";
-import { SITE_URL, SUGGEST_DEBOUNCE_DELAY } from "../../config";
+import { SITE_URL, SUGGEST_DEBOUNCE_DELAY } from "../../../config";
 
 const fetchSuggestResultsWithoutDebounce = async (query) => {
   const url = `${SITE_URL}/api/suggest?q=${query}`;
