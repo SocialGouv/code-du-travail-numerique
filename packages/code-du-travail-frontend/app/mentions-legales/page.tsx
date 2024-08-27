@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import { DsfrLayout } from "../../src/dsfr/layout";
-import { MentionsLegales } from "../../src/dsfr/mentions-legales";
+import { DsfrLayout } from "../../src/modules/layout";
+import { MentionsLegales } from "../../src/modules/mentions-legales";
 
 export const metadata: Metadata = {
   title: "Mentions légales",

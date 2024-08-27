@@ -3,8 +3,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { useCombobox } from "downshift";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { fetchSuggestResults } from "./fetchSuggestResults";
-import { SUGGEST_MAX_RESULTS } from "../../config";
-import { useSearchParams } from "next/navigation";
+import { SUGGEST_MAX_RESULTS } from "../../../config";
 import styled from "styled-components";
 
 type Props = {
@@ -16,9 +15,7 @@ type Props = {
 };
 
 export const SearchInput = (props: Props) => {
-  const searchParams = useSearchParams();
-  const defaultQueryParam = searchParams?.get("q") ?? "";
-  const [query, setQuery] = useState(defaultQueryParam);
+  const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
 
   const {

@@ -2,8 +2,8 @@ import { DsfrHead } from "@codegouvfr/react-dsfr/next-appdir/DsfrHead";
 import { DsfrProvider } from "@codegouvfr/react-dsfr/next-appdir/DsfrProvider";
 import { getHtmlAttributes } from "@codegouvfr/react-dsfr/next-appdir/getHtmlAttributes";
 import Link from "next/link";
-import { defaultColorScheme } from "../src/dsfr/config/defaultColorScheme";
-import { StartDsfr } from "../src/dsfr/config/StartDsfr";
+import { defaultColorScheme } from "../src/modules/config/defaultColorScheme";
+import { StartDsfr } from "../src/modules/config/StartDsfr";
 
 export const metadata = {
   title: "Code du travail numérique - Ministère du Travail",

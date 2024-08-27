@@ -1,5 +1,5 @@
 import { Footer } from "./Footer";
-import { Header } from "./Header";
+import { Header } from "./header";
 import { NeedMoreInfo } from "./NeedMoreInfo";
 
 export const DsfrLayout = ({ children }: { children: React.ReactNode }) => {
