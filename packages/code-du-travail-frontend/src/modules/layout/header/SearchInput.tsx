@@ -16,7 +16,7 @@ type Props = {
 
 export const SearchInput = (props: Props) => {
   const [query, setQuery] = useState("");
-  const [suggestions, setSuggestions] = useState([]);
+  const [suggestions, setSuggestions] = useState<string[]>([]);
 
   const {
     isOpen,

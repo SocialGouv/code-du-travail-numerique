@@ -3,61 +3,10 @@
 exports[`<DroitDuTravail /> should render 1`] = `
 <div>
   <div
-    aria-live="polite"
-    class="sc-cWSHoV bKtA-De"
-    role="status"
-    tabindex="-1"
-  />
-  <div
-    class="sc-cfxfcM sc-cspYLC kMmTaI upasO"
-  >
-    <nav
-      aria-label="liens d'évitements"
-    >
-      <ul
-        class="sc-dwalKd hUyNZQ"
-      >
-        <li
-          class="sc-BQMaI fWmymo"
-        >
-          <a
-            class="sc-epqpcT bhCFmX"
-            href="#content"
-            tabindex="1"
-          >
-            Aller au contenu
-          </a>
-        </li>
-        <li
-          class="sc-BQMaI fWmymo"
-        >
-          <a
-            class="sc-epqpcT bhCFmX"
-            href="#navigation"
-            tabindex="1"
-          >
-            Aller à la navigation
-          </a>
-        </li>
-        <li
-          class="sc-BQMaI fWmymo"
-        >
-          <a
-            class="sc-epqpcT bhCFmX"
-            href="#search"
-            tabindex="1"
-          >
-            Aller à la recherche
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <div
-    class="sc-bvgPty erOqxR"
+    class="sc-cspYLC bfRidZ"
   >
     <div
-      class="sc-cyRcrZ YBNMx"
+      class="sc-dwalKd dVYudr"
     />
     <header
       class="sc-fFlnrN leQqcf"
@@ -219,7 +168,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
       </div>
     </header>
     <main
-      class="sc-kUdmhA iUKMOz"
+      class="sc-BQMaI VjSqX"
       id="content"
       tabindex="-1"
     >
@@ -245,7 +194,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             >
               Retrouvez la définition du droit du travail, les textes qui en sont à l’origine 
               <br
-                class="sc-hgRRfv dVLpKL"
+                class="sc-epqpcT kZxqwb"
               />
               ainsi que leur articulation.
             </p>

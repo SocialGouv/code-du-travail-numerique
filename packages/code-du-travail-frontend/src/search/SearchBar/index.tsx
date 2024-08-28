@@ -3,7 +3,7 @@ import { push as matopush } from "@socialgouv/matomo-next";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { fetchSuggestResults } from "../../modules/layout/fetchSuggestResults";
+import { fetchSuggestResults } from "../../modules/layout/header/fetchSuggestResults";
 import { useCombobox } from "downshift";
 const { Search: SearchIcon } = icons;
 

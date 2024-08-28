@@ -1,3 +1,4 @@
+import variables from "./Footer.module.scss";
 import { Footer as FooterDsfr } from "@codegouvfr/react-dsfr/Footer";
 import { PACKAGE_VERSION } from "../../config";
 import { headerFooterDisplayItem } from "@codegouvfr/react-dsfr/Display";
@@ -189,6 +190,9 @@ export const Footer = () => {
         },
         headerFooterDisplayItem,
       ]}
+      classes={{
+        logo: variables["footer-logo"],
+      }}
     />
   );
 };
