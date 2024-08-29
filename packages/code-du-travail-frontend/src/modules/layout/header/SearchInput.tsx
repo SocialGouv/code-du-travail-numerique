@@ -4,6 +4,7 @@ import { push as matopush } from "@socialgouv/matomo-next";
 import { fetchSuggestResults } from "./fetchSuggestResults";
 import { SUGGEST_MAX_RESULTS } from "../../../config";
 import variables from "./SearchInput.module.scss";
+import { fr } from "@codegouvfr/react-dsfr";
 
 type Props = {
   id: string;
@@ -73,7 +74,7 @@ export const SearchInput = (props: Props) => {
                 index,
                 className: `${variables.suggestion} ${
                   highlightedIndex === index ? variables["is-highlighted"] : ""
-                }`,
+                } ${fr.cx("fr-p-1v")}`,
               })}
               key={`${item}${index}`}
             >

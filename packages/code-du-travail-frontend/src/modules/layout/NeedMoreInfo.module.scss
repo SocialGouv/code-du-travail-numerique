@@ -5,15 +5,14 @@
 .title {
   color: var(--text-action-high-blue-france);
   font-weight: 700;
+  text-align: center;
 }
 
 .paragraph {
   color: var(--text-action-high-blue-france);
 }
 
-.center-container {
+.button-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 690px;
+  justify-content: center;
 }
