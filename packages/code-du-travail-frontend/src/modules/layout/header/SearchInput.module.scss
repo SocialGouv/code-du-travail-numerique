@@ -1,0 +1,26 @@
+.list {
+  position: absolute;
+  top: 2.5rem;
+  width: 100%;
+  z-index: 100;
+  background: var(--background-default-grey);
+}
+
+.suggestion {
+  cursor: pointer;
+  line-height: 2rem;
+  list-style-type: none;
+  text-align: left;
+  padding: 4px;
+  background: var(--background-default-grey);
+  &:nth-child(2n + 1) {
+    background: var(--background-default-grey-hover);
+  }
+}
+
+.is-highlighted {
+  background: var(--background-default-grey-active);
+  &:nth-child(2n + 1) {
+    background: var(--background-default-grey-active);
+  }
+}

@@ -4,6 +4,7 @@
 
 .title {
   color: var(--text-action-high-blue-france);
+  font-weight: 700;
 }
 
 .paragraph {
@@ -14,4 +15,5 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 690px;
 }

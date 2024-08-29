@@ -24,7 +24,7 @@ const SearchBar = ({
   const [query, setQuery] = useState(
     typeof router.query.q === "string" ? router.query.q : ""
   );
-  const [suggestions, setSuggestions] = useState([]);
+  const [suggestions, setSuggestions] = useState<string[]>([]);
 
   const {
     isOpen,
