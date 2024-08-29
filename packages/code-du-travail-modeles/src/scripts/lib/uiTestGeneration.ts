@@ -43,7 +43,7 @@ export function generateTestResult(result: OptionResult): string {
         })
         .join("")}
         ${result.refs.map((ref) => {
-          const refLabel = formatTestText(ref.label).replace(/[\n\r]+/g, " ");
+          const [refLabel] = formatTestText(ref.label).split(/[\n\r]+/g);
           return `expect(screen.queryAllByText(/${refLabel}/)[0]).toBeInTheDocument();
           `;
         })}
@@ -168,7 +168,7 @@ function generateTest(
     }));
 }
 
-export async function generateTestFiles(
+export async function generateUITestFiles(
   question: TreeQuestion,
   componentName: string,
   path: string

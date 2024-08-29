@@ -1,8 +1,8 @@
-import { generateTestFiles } from "./lib";
+import { generateUITestFiles } from "./lib";
 import { generateHeureRechercheEmploiTree } from "./generateHeureRechercheEmploiTree";
 import { generatePreavisDemissionTree } from "./generatePreavisDemissionTree";
 import { generatePreavisLicenciementTree } from "./generatePreavisLicenciementTree";
-// import { generateIndemnitePrecariteTree } from "./generateIndemnitePrecarite";
+import { generateIndemnitePrecariteTree } from "./generateIndemnitePrecarite";
 
 async function main() {
   if (process.argv.length < 3) {
@@ -10,32 +10,32 @@ async function main() {
   }
   const path = process.argv[2];
   const hre = generateHeureRechercheEmploiTree();
-  await generateTestFiles(
+  await generateUITestFiles(
     hre,
     "HeuresRechercheEmploi",
     `${path}/src/outils/HeuresRechercheEmploi/__tests__/agreements`
   );
 
   const dpd = generatePreavisDemissionTree();
-  await generateTestFiles(
+  await generateUITestFiles(
     dpd,
     "DureePreavisDemission",
     `${path}/src/outils/DureePreavisDemission/__tests__/agreements`
   );
 
   const dpl = generatePreavisLicenciementTree();
-  await generateTestFiles(
+  await generateUITestFiles(
     dpl,
     "DureePreavisLicenciement",
     `${path}/src/outils/DureePreavisLicenciement/__tests__/agreements`
   );
 
-  // const ip = generateIndemnitePrecariteTree();
-  // await generateTestFiles(
-  //   ip,
-  //   "SimulateurIndemnitePrecarite",
-  //   `${path}/src/outils/IndemnitePrecarite/__tests__/agreements`
-  // );
+  const ip = generateIndemnitePrecariteTree();
+  await generateUITestFiles(
+    ip,
+    "SimulateurIndemnitePrecarite",
+    `${path}/src/outils/IndemnitePrecarite/__tests__/agreements`
+  );
 }
 
 main();

@@ -1,13 +1,9 @@
 import fs from "fs";
 
 import { OptionResult, TreeQuestion } from "./type";
+import { cleanValue } from "./common";
 
-type ParseResult = (texts: string[]) => string;
-
-function cleanValue(value: string) {
-  const [, newValue] = value.split("|");
-  return newValue.trim();
-}
+type ParseResult = (texts: string[]) => { value: string; notification: string };
 
 function generateNamespace(
   namespace: string[],
@@ -16,24 +12,26 @@ function generateNamespace(
 ): string {
   return `
 contrat salarié . convention collective . ${namespace.join(" . ")}:
-  applicable si: ${questionName} = "'${option}'"
+  applicable si: ${questionName} = '${option}'
   `;
 }
 
 function generateResult(
   result: OptionResult,
   namespace: string[],
-  parseResult: ParseResult,
-  isLegal = false
+  parseResult: ParseResult
 ): string {
   const namespaceLine = namespace.join(" . ");
-  const refLines = result.refs.map(({ url, label }) => `${label}: ${url}`);
+  const refLines = result.refs.map(
+    ({ url, label }) => `${label.replace(":", "").trim()}: ${url}`
+  );
 
+  const { value, notification } = parseResult(result.texts);
   const content = `
-contrat salarié . convention collective . ${namespaceLine} . ${
-    isLegal ? "résultat légal" : "résultat conventionnel"
-  }:
-  valeur: ${parseResult(result.texts)}
+contrat salarié . convention collective . ${namespaceLine} . résultat conventionnel:
+  valeur: ${value}
+  ${notification ? "notification: " + notification : ""}
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     ${refLines.join(`
     `)}
@@ -51,7 +49,9 @@ function generateQuestions(
   switch (question.type) {
     case "select":
       content = `
-contrat salarié . convention collective . ${namespaceLine} . ${question.name}:
+contrat salarié . convention collective . ${namespaceLine} . ${cleanValue(
+        question.name
+      )}:
   titre: ${question.name}
   question: ${question.text}
   cdtn:
@@ -67,8 +67,8 @@ contrat salarié . convention collective . ${namespaceLine} . ${question.name}:
     (arr, { text, nextQuestion, result }) => {
       arr.push(
         generateNamespace(
-          [...namespace, cleanValue(text)],
-          question.name,
+          [...namespace, `${question.name} ${cleanValue(text)}`],
+          cleanValue(question.name),
           cleanValue(text)
         )
       );
@@ -76,14 +76,18 @@ contrat salarié . convention collective . ${namespaceLine} . ${question.name}:
         arr.push(
           generateQuestions(
             nextQuestion,
-            [...namespace, cleanValue(text)],
+            [...namespace, `${cleanValue(question.name)} ${cleanValue(text)}`],
             parseResult
           )
         );
       }
       if (result) {
         arr.push(
-          generateResult(result, [...namespace, cleanValue(text)], parseResult)
+          generateResult(
+            result,
+            [...namespace, `${question.name} ${cleanValue(text)}`],
+            parseResult
+          )
         );
       }
       return arr;

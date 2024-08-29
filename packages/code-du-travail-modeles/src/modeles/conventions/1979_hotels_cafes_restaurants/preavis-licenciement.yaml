@@ -10,11 +10,11 @@ contrat salarié . convention collective . hotels cafes restaurants . catégorie
       Maîtrises: "'Maîtrises'"
       
           
-contrat salarié . convention collective . hotels cafes restaurants . Cadres:
-  applicable si: catégorie professionnelle = "'Cadres'"
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Cadres . ancienneté:
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Cadres . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -25,41 +25,47 @@ contrat salarié . convention collective . hotels cafes restaurants . Cadres . a
       Plus de 2 ans: "'Plus de 2 ans'"
       
           
-contrat salarié . convention collective . hotels cafes restaurants . Cadres . Moins de 6 mois:
-  applicable si: ancienneté = "'Moins de 6 mois'"
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Cadres . ancienneté Moins de 6 mois:
+  applicable si: ancienneté = 'Moins de 6 mois'
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Cadres . Moins de 6 mois . résultat conventionnel:
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Cadres . ancienneté Moins de 6 mois . résultat conventionnel:
   valeur: 1 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 30.2: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AD49B0A01E6E5BBD82AB4F37A6387DAF.tplgfr25s_3?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Cadres . 6 mois à moins de 2 ans:
-  applicable si: ancienneté = "'6 mois à moins de 2 ans'"
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Cadres . ancienneté 6 mois à moins de 2 ans:
+  applicable si: ancienneté = '6 mois à moins de 2 ans'
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Cadres . 6 mois à moins de 2 ans . résultat conventionnel:
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Cadres . ancienneté 6 mois à moins de 2 ans . résultat conventionnel:
   valeur: 3 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 30.2: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AD49B0A01E6E5BBD82AB4F37A6387DAF.tplgfr25s_3?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Cadres . Plus de 2 ans:
-  applicable si: ancienneté = "'Plus de 2 ans'"
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Cadres . ancienneté Plus de 2 ans:
+  applicable si: ancienneté = 'Plus de 2 ans'
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Cadres . Plus de 2 ans . résultat conventionnel:
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Cadres . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 3 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 30.2: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AD49B0A01E6E5BBD82AB4F37A6387DAF.tplgfr25s_3?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Employés:
-  applicable si: catégorie professionnelle = "'Employés'"
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Employés:
+  applicable si: catégorie professionnelle = 'Employés'
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Employés . ancienneté:
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Employés . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -70,41 +76,47 @@ contrat salarié . convention collective . hotels cafes restaurants . Employés 
       Plus de 2 ans: "'Plus de 2 ans'"
       
           
-contrat salarié . convention collective . hotels cafes restaurants . Employés . Moins de 6 mois:
-  applicable si: ancienneté = "'Moins de 6 mois'"
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Employés . ancienneté Moins de 6 mois:
+  applicable si: ancienneté = 'Moins de 6 mois'
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Employés . Moins de 6 mois . résultat conventionnel:
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Employés . ancienneté Moins de 6 mois . résultat conventionnel:
   valeur: 8 jours
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 30.2: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AD49B0A01E6E5BBD82AB4F37A6387DAF.tplgfr25s_3?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Employés . 6 mois à moins de 2 ans:
-  applicable si: ancienneté = "'6 mois à moins de 2 ans'"
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Employés . ancienneté 6 mois à moins de 2 ans:
+  applicable si: ancienneté = '6 mois à moins de 2 ans'
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Employés . 6 mois à moins de 2 ans . résultat conventionnel:
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Employés . ancienneté 6 mois à moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 30.2: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AD49B0A01E6E5BBD82AB4F37A6387DAF.tplgfr25s_3?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Employés . Plus de 2 ans:
-  applicable si: ancienneté = "'Plus de 2 ans'"
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Employés . ancienneté Plus de 2 ans:
+  applicable si: ancienneté = 'Plus de 2 ans'
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Employés . Plus de 2 ans . résultat conventionnel:
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Employés . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 30.2: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AD49B0A01E6E5BBD82AB4F37A6387DAF.tplgfr25s_3?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Maîtrises:
-  applicable si: catégorie professionnelle = "'Maîtrises'"
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Maîtrises:
+  applicable si: catégorie professionnelle = 'Maîtrises'
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Maîtrises . ancienneté:
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Maîtrises . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -115,32 +127,38 @@ contrat salarié . convention collective . hotels cafes restaurants . Maîtrises
       Plus de 2 ans: "'Plus de 2 ans'"
       
           
-contrat salarié . convention collective . hotels cafes restaurants . Maîtrises . Moins de 6 mois:
-  applicable si: ancienneté = "'Moins de 6 mois'"
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Maîtrises . ancienneté Moins de 6 mois:
+  applicable si: ancienneté = 'Moins de 6 mois'
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Maîtrises . Moins de 6 mois . résultat conventionnel:
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Maîtrises . ancienneté Moins de 6 mois . résultat conventionnel:
   valeur: 15 jours
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 30.2: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AD49B0A01E6E5BBD82AB4F37A6387DAF.tplgfr25s_3?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Maîtrises . 6 mois à moins de 2 ans:
-  applicable si: ancienneté = "'6 mois à moins de 2 ans'"
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Maîtrises . ancienneté 6 mois à moins de 2 ans:
+  applicable si: ancienneté = '6 mois à moins de 2 ans'
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Maîtrises . 6 mois à moins de 2 ans . résultat conventionnel:
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Maîtrises . ancienneté 6 mois à moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 30.2: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AD49B0A01E6E5BBD82AB4F37A6387DAF.tplgfr25s_3?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Maîtrises . Plus de 2 ans:
-  applicable si: ancienneté = "'Plus de 2 ans'"
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Maîtrises . ancienneté Plus de 2 ans:
+  applicable si: ancienneté = 'Plus de 2 ans'
   
           
-contrat salarié . convention collective . hotels cafes restaurants . Maîtrises . Plus de 2 ans . résultat conventionnel:
+contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Maîtrises . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 30.2: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AD49B0A01E6E5BBD82AB4F37A6387DAF.tplgfr25s_3?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id
   

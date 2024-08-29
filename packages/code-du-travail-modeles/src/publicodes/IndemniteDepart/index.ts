@@ -1,4 +1,4 @@
 export * from "./Agreement";
 export * from "./Legal";
-export * from "./ResultBuilder";
+export * from "../common/ResultBuilder";
 export * from "./types";

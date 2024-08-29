@@ -11,11 +11,11 @@ contrat salarié . convention collective . education loisirs . catégorie profes
       Ouvriers, Employés: "'Ouvriers, Employés'"
       
           
-contrat salarié . convention collective . education loisirs . Agents de maîtrise et Techniciens:
-  applicable si: catégorie professionnelle = "'Agents de maîtrise et Techniciens'"
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Agents de maîtrise et Techniciens:
+  applicable si: catégorie professionnelle = 'Agents de maîtrise et Techniciens'
   
           
-contrat salarié . convention collective . education loisirs . Agents de maîtrise et Techniciens . groupe:
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe:
   titre: groupe
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
@@ -26,41 +26,47 @@ contrat salarié . convention collective . education loisirs . Agents de maîtri
       6: "'6'"
       
           
-contrat salarié . convention collective . education loisirs . Agents de maîtrise et Techniciens . 4:
-  applicable si: groupe = "'4'"
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 4:
+  applicable si: groupe = '4'
   
           
-contrat salarié . convention collective . education loisirs . Agents de maîtrise et Techniciens . 4 . résultat conventionnel:
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 4 . résultat conventionnel:
   valeur: 2 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
   
           
-contrat salarié . convention collective . education loisirs . Agents de maîtrise et Techniciens . 5:
-  applicable si: groupe = "'5'"
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 5:
+  applicable si: groupe = '5'
   
           
-contrat salarié . convention collective . education loisirs . Agents de maîtrise et Techniciens . 5 . résultat conventionnel:
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 5 . résultat conventionnel:
   valeur: 2 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
   
           
-contrat salarié . convention collective . education loisirs . Agents de maîtrise et Techniciens . 6:
-  applicable si: groupe = "'6'"
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 6:
+  applicable si: groupe = '6'
   
           
-contrat salarié . convention collective . education loisirs . Agents de maîtrise et Techniciens . 6 . résultat conventionnel:
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 6 . résultat conventionnel:
   valeur: 2 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
   
           
-contrat salarié . convention collective . education loisirs . Animateurs, techniciens et professeurs:
-  applicable si: catégorie professionnelle = "'Animateurs, techniciens et professeurs'"
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Animateurs, techniciens et professeurs:
+  applicable si: catégorie professionnelle = 'Animateurs, techniciens et professeurs'
   
           
-contrat salarié . convention collective . education loisirs . Animateurs, techniciens et professeurs . niveau:
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau:
   titre: niveau
   question: Quel est le niveau du salarié ?
   cdtn:
@@ -70,31 +76,35 @@ contrat salarié . convention collective . education loisirs . Animateurs, techn
       B: "'B'"
       
           
-contrat salarié . convention collective . education loisirs . Animateurs, techniciens et professeurs . A:
-  applicable si: niveau = "'A'"
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau A:
+  applicable si: niveau = 'A'
   
           
-contrat salarié . convention collective . education loisirs . Animateurs, techniciens et professeurs . A . résultat conventionnel:
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau A . résultat conventionnel:
   valeur: 2 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
   
           
-contrat salarié . convention collective . education loisirs . Animateurs, techniciens et professeurs . B:
-  applicable si: niveau = "'B'"
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau B:
+  applicable si: niveau = 'B'
   
           
-contrat salarié . convention collective . education loisirs . Animateurs, techniciens et professeurs . B . résultat conventionnel:
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau B . résultat conventionnel:
   valeur: 2 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
   
           
-contrat salarié . convention collective . education loisirs . Cadres:
-  applicable si: catégorie professionnelle = "'Cadres'"
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
   
           
-contrat salarié . convention collective . education loisirs . Cadres . groupe:
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Cadres . groupe:
   titre: groupe
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
@@ -104,31 +114,35 @@ contrat salarié . convention collective . education loisirs . Cadres . groupe:
       8: "'8'"
       
           
-contrat salarié . convention collective . education loisirs . Cadres . 7:
-  applicable si: groupe = "'7'"
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Cadres . groupe 7:
+  applicable si: groupe = '7'
   
           
-contrat salarié . convention collective . education loisirs . Cadres . 7 . résultat conventionnel:
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Cadres . groupe 7 . résultat conventionnel:
   valeur: 3 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
   
           
-contrat salarié . convention collective . education loisirs . Cadres . 8:
-  applicable si: groupe = "'8'"
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Cadres . groupe 8:
+  applicable si: groupe = '8'
   
           
-contrat salarié . convention collective . education loisirs . Cadres . 8 . résultat conventionnel:
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Cadres . groupe 8 . résultat conventionnel:
   valeur: 3 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
   
           
-contrat salarié . convention collective . education loisirs . Ouvriers, Employés:
-  applicable si: catégorie professionnelle = "'Ouvriers, Employés'"
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Ouvriers, Employés:
+  applicable si: catégorie professionnelle = 'Ouvriers, Employés'
   
           
-contrat salarié . convention collective . education loisirs . Ouvriers, Employés . groupe:
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Ouvriers, Employés . groupe:
   titre: groupe
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
@@ -138,11 +152,11 @@ contrat salarié . convention collective . education loisirs . Ouvriers, Employ�
       3: "'3'"
       
           
-contrat salarié . convention collective . education loisirs . Ouvriers, Employés . 2:
-  applicable si: groupe = "'2'"
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Ouvriers, Employés . groupe 2:
+  applicable si: groupe = '2'
   
           
-contrat salarié . convention collective . education loisirs . Ouvriers, Employés . 2 . ancienneté:
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Ouvriers, Employés . groupe 2 . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -152,31 +166,35 @@ contrat salarié . convention collective . education loisirs . Ouvriers, Employ�
       Plus de 2 ans: "'Plus de 2 ans'"
       
           
-contrat salarié . convention collective . education loisirs . Ouvriers, Employés . 2 . 2 ans ou moins:
-  applicable si: ancienneté = "'2 ans ou moins'"
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Ouvriers, Employés . groupe 2 . ancienneté 2 ans ou moins:
+  applicable si: ancienneté = '2 ans ou moins'
   
           
-contrat salarié . convention collective . education loisirs . Ouvriers, Employés . 2 . 2 ans ou moins . résultat conventionnel:
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Ouvriers, Employés . groupe 2 . ancienneté 2 ans ou moins . résultat conventionnel:
   valeur: 1 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
   
           
-contrat salarié . convention collective . education loisirs . Ouvriers, Employés . 2 . Plus de 2 ans:
-  applicable si: ancienneté = "'Plus de 2 ans'"
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Ouvriers, Employés . groupe 2 . ancienneté Plus de 2 ans:
+  applicable si: ancienneté = 'Plus de 2 ans'
   
           
-contrat salarié . convention collective . education loisirs . Ouvriers, Employés . 2 . Plus de 2 ans . résultat conventionnel:
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Ouvriers, Employés . groupe 2 . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
   
           
-contrat salarié . convention collective . education loisirs . Ouvriers, Employés . 3:
-  applicable si: groupe = "'3'"
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Ouvriers, Employés . groupe 3:
+  applicable si: groupe = '3'
   
           
-contrat salarié . convention collective . education loisirs . Ouvriers, Employés . 3 . ancienneté:
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Ouvriers, Employés . groupe 3 . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -186,22 +204,26 @@ contrat salarié . convention collective . education loisirs . Ouvriers, Employ�
       Plus de 2 ans: "'Plus de 2 ans'"
       
           
-contrat salarié . convention collective . education loisirs . Ouvriers, Employés . 3 . 2 ans ou moins:
-  applicable si: ancienneté = "'2 ans ou moins'"
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Ouvriers, Employés . groupe 3 . ancienneté 2 ans ou moins:
+  applicable si: ancienneté = '2 ans ou moins'
   
           
-contrat salarié . convention collective . education loisirs . Ouvriers, Employés . 3 . 2 ans ou moins . résultat conventionnel:
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Ouvriers, Employés . groupe 3 . ancienneté 2 ans ou moins . résultat conventionnel:
   valeur: 1 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
   
           
-contrat salarié . convention collective . education loisirs . Ouvriers, Employés . 3 . Plus de 2 ans:
-  applicable si: ancienneté = "'Plus de 2 ans'"
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Ouvriers, Employés . groupe 3 . ancienneté Plus de 2 ans:
+  applicable si: ancienneté = 'Plus de 2 ans'
   
           
-contrat salarié . convention collective . education loisirs . Ouvriers, Employés . 3 . Plus de 2 ans . résultat conventionnel:
+contrat salarié . convention collective . education loisirs . catégorie professionnelle Ouvriers, Employés . groupe 3 . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
   

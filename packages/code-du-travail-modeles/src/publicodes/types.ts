@@ -149,7 +149,7 @@ export const PublicodesDefaultRules = {
   [PublicodesSimulator.RUPTURE_CONVENTIONNELLE]:
     "contrat salarié . indemnité de licenciement . résultat légal",
   [PublicodesSimulator.PREAVIS_LICENCIEMENT]:
-    "contrat salarié . convention collective . DureePreavisLicenciement . résultat légal",
+    "contrat salarié . résultat légal",
 };
 
 export enum PublicodesConvertedUnit {
@@ -168,9 +168,8 @@ export type PublicodesPreavisRetraiteResult = {
 };
 
 export type PublicodesPreavisLicenciementResult = {
-  value: number;
-  unit: PublicodesConvertedUnit;
-  valueInDays: number;
+  value: Evaluation<number>;
+  unit?: Unit;
 };
 
 export type PublicodesIndemniteLicenciementResult = {

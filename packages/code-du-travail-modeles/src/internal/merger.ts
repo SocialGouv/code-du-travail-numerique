@@ -17,7 +17,7 @@ export function mergePreavisRetraiteModels(): any {
 }
 
 export function mergePreavisLicenciementModels(): any {
-  return mergeModels([commonFile, preavisLicenciementFile]);
+  return mergeModelsWithKeys([commonFile, preavisLicenciementFile]);
 }
 
 export function mergeIndemniteLicenciementModels(): any {

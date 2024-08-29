@@ -9,11 +9,11 @@ contrat salarié . convention collective . batiment etam . âge:
       Plus de 55 ans: "'Plus de 55 ans'"
       
           
-contrat salarié . convention collective . batiment etam . Moins de 55 ans:
-  applicable si: âge = "'Moins de 55 ans'"
+contrat salarié . convention collective . batiment etam . âge Moins de 55 ans:
+  applicable si: âge = 'Moins de 55 ans'
   
           
-contrat salarié . convention collective . batiment etam . Moins de 55 ans . ancienneté:
+contrat salarié . convention collective . batiment etam . âge Moins de 55 ans . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -23,31 +23,35 @@ contrat salarié . convention collective . batiment etam . Moins de 55 ans . anc
       2 ans ou plus: "'2 ans ou plus'"
       
           
-contrat salarié . convention collective . batiment etam . Moins de 55 ans . Moins de 2 ans:
-  applicable si: ancienneté = "'Moins de 2 ans'"
+contrat salarié . convention collective . batiment etam . âge Moins de 55 ans . ancienneté Moins de 2 ans:
+  applicable si: ancienneté = 'Moins de 2 ans'
   
           
-contrat salarié . convention collective . batiment etam . Moins de 55 ans . Moins de 2 ans . résultat conventionnel:
+contrat salarié . convention collective . batiment etam . âge Moins de 55 ans . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 8.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7C6D5292CB5A9AA0DB357C8DEC36C6EB.tplgfr36s_2?idArticle=KALIARTI000018773769&cidTexte=KALITEXT000018773681&dateTexte=29990101&categorieLien=id
   
           
-contrat salarié . convention collective . batiment etam . Moins de 55 ans . 2 ans ou plus:
-  applicable si: ancienneté = "'2 ans ou plus'"
+contrat salarié . convention collective . batiment etam . âge Moins de 55 ans . ancienneté 2 ans ou plus:
+  applicable si: ancienneté = '2 ans ou plus'
   
           
-contrat salarié . convention collective . batiment etam . Moins de 55 ans . 2 ans ou plus . résultat conventionnel:
+contrat salarié . convention collective . batiment etam . âge Moins de 55 ans . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 8.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7C6D5292CB5A9AA0DB357C8DEC36C6EB.tplgfr36s_2?idArticle=KALIARTI000018773769&cidTexte=KALITEXT000018773681&dateTexte=29990101&categorieLien=id
   
           
-contrat salarié . convention collective . batiment etam . Plus de 55 ans:
-  applicable si: âge = "'Plus de 55 ans'"
+contrat salarié . convention collective . batiment etam . âge Plus de 55 ans:
+  applicable si: âge = 'Plus de 55 ans'
   
           
-contrat salarié . convention collective . batiment etam . Plus de 55 ans . ancienneté:
+contrat salarié . convention collective . batiment etam . âge Plus de 55 ans . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -57,22 +61,26 @@ contrat salarié . convention collective . batiment etam . Plus de 55 ans . anci
       Moins de 15 ans d'ancienneté: "'Moins de 15 ans d'ancienneté'"
       
           
-contrat salarié . convention collective . batiment etam . Plus de 55 ans . Au moins 15 ans d'ancienneté:
-  applicable si: ancienneté = "'Au moins 15 ans d'ancienneté'"
+contrat salarié . convention collective . batiment etam . âge Plus de 55 ans . ancienneté Au moins 15 ans d'ancienneté:
+  applicable si: ancienneté = 'Au moins 15 ans d'ancienneté'
   
           
-contrat salarié . convention collective . batiment etam . Plus de 55 ans . Au moins 15 ans d'ancienneté . résultat conventionnel:
+contrat salarié . convention collective . batiment etam . âge Plus de 55 ans . ancienneté Au moins 15 ans d'ancienneté . résultat conventionnel:
   valeur: 3 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 8.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7C6D5292CB5A9AA0DB357C8DEC36C6EB.tplgfr36s_2?idArticle=KALIARTI000018773769&cidTexte=KALITEXT000018773681&dateTexte=29990101&categorieLien=id
   
           
-contrat salarié . convention collective . batiment etam . Plus de 55 ans . Moins de 15 ans d'ancienneté:
-  applicable si: ancienneté = "'Moins de 15 ans d'ancienneté'"
+contrat salarié . convention collective . batiment etam . âge Plus de 55 ans . ancienneté Moins de 15 ans d'ancienneté:
+  applicable si: ancienneté = 'Moins de 15 ans d'ancienneté'
   
           
-contrat salarié . convention collective . batiment etam . Plus de 55 ans . Moins de 15 ans d'ancienneté . résultat conventionnel:
+contrat salarié . convention collective . batiment etam . âge Plus de 55 ans . ancienneté Moins de 15 ans d'ancienneté . résultat conventionnel:
   valeur: 2 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 8.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7C6D5292CB5A9AA0DB357C8DEC36C6EB.tplgfr36s_2?idArticle=KALIARTI000018773769&cidTexte=KALITEXT000018773681&dateTexte=29990101&categorieLien=id
   

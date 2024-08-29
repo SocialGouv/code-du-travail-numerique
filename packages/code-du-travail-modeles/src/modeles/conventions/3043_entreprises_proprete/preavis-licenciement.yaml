@@ -8,14 +8,14 @@ contrat salarié . convention collective . entreprises proprete . catégorie pro
       Agents de propreté: "'Agents de propreté'"
       Cadres: "'Cadres'"
       Employés: "'Employés'"
-      Techniciens et agents de maîtrise (TAM): "'Techniciens et agents de maîtrise (TAM)'"
+      Techniciens et agents de maîtrise TAM: "'Techniciens et agents de maîtrise TAM'"
       
           
-contrat salarié . convention collective . entreprises proprete . Agents de propreté:
-  applicable si: catégorie professionnelle = "'Agents de propreté'"
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Agents de propreté:
+  applicable si: catégorie professionnelle = 'Agents de propreté'
   
           
-contrat salarié . convention collective . entreprises proprete . Agents de propreté . ancienneté:
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Agents de propreté . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -27,61 +27,71 @@ contrat salarié . convention collective . entreprises proprete . Agents de prop
       Plus de 2 ans: "'Plus de 2 ans'"
       
           
-contrat salarié . convention collective . entreprises proprete . Agents de propreté . Moins de 1 mois:
-  applicable si: ancienneté = "'Moins de 1 mois'"
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Agents de propreté . ancienneté Moins de 1 mois:
+  applicable si: ancienneté = 'Moins de 1 mois'
   
           
-contrat salarié . convention collective . entreprises proprete . Agents de propreté . Moins de 1 mois . résultat conventionnel:
-  valeur: 0
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Agents de propreté . ancienneté Moins de 1 mois . résultat conventionnel:
+  valeur: 0 mois
+  notification: Aucun préavis
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.11.2: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340
   
           
-contrat salarié . convention collective . entreprises proprete . Agents de propreté . 1 mois à moins de 6 mois:
-  applicable si: ancienneté = "'1 mois à moins de 6 mois'"
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Agents de propreté . ancienneté 1 mois à moins de 6 mois:
+  applicable si: ancienneté = '1 mois à moins de 6 mois'
   
           
-contrat salarié . convention collective . entreprises proprete . Agents de propreté . 1 mois à moins de 6 mois . résultat conventionnel:
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Agents de propreté . ancienneté 1 mois à moins de 6 mois . résultat conventionnel:
   valeur: 1 semaine
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.11.2: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340
   
           
-contrat salarié . convention collective . entreprises proprete . Agents de propreté . 6 mois à 2 ans:
-  applicable si: ancienneté = "'6 mois à 2 ans'"
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Agents de propreté . ancienneté 6 mois à 2 ans:
+  applicable si: ancienneté = '6 mois à 2 ans'
   
           
-contrat salarié . convention collective . entreprises proprete . Agents de propreté . 6 mois à 2 ans . résultat conventionnel:
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Agents de propreté . ancienneté 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.11.2: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340
   
           
-contrat salarié . convention collective . entreprises proprete . Agents de propreté . Plus de 2 ans:
-  applicable si: ancienneté = "'Plus de 2 ans'"
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Agents de propreté . ancienneté Plus de 2 ans:
+  applicable si: ancienneté = 'Plus de 2 ans'
   
           
-contrat salarié . convention collective . entreprises proprete . Agents de propreté . Plus de 2 ans . résultat conventionnel:
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Agents de propreté . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.11.2: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340
   
           
-contrat salarié . convention collective . entreprises proprete . Cadres:
-  applicable si: catégorie professionnelle = "'Cadres'"
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
   
           
-contrat salarié . convention collective . entreprises proprete . Cadres . résultat conventionnel:
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Cadres . résultat conventionnel:
   valeur: 3 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.11.2: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340
   
           
-contrat salarié . convention collective . entreprises proprete . Employés:
-  applicable si: catégorie professionnelle = "'Employés'"
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Employés:
+  applicable si: catégorie professionnelle = 'Employés'
   
           
-contrat salarié . convention collective . entreprises proprete . Employés . ancienneté:
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Employés . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -92,41 +102,47 @@ contrat salarié . convention collective . entreprises proprete . Employés . an
       Plus de 2 ans: "'Plus de 2 ans'"
       
           
-contrat salarié . convention collective . entreprises proprete . Employés . Moins de 1 mois:
-  applicable si: ancienneté = "'Moins de 1 mois'"
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Employés . ancienneté Moins de 1 mois:
+  applicable si: ancienneté = 'Moins de 1 mois'
   
           
-contrat salarié . convention collective . entreprises proprete . Employés . Moins de 1 mois . résultat conventionnel:
-  valeur: 0
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Employés . ancienneté Moins de 1 mois . résultat conventionnel:
+  valeur: 0 mois
+  notification: Aucun préavis
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.11.2: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340
   
           
-contrat salarié . convention collective . entreprises proprete . Employés . 1 mois à 2 ans:
-  applicable si: ancienneté = "'1 mois à 2 ans'"
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Employés . ancienneté 1 mois à 2 ans:
+  applicable si: ancienneté = '1 mois à 2 ans'
   
           
-contrat salarié . convention collective . entreprises proprete . Employés . 1 mois à 2 ans . résultat conventionnel:
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Employés . ancienneté 1 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.11.2: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340
   
           
-contrat salarié . convention collective . entreprises proprete . Employés . Plus de 2 ans:
-  applicable si: ancienneté = "'Plus de 2 ans'"
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Employés . ancienneté Plus de 2 ans:
+  applicable si: ancienneté = 'Plus de 2 ans'
   
           
-contrat salarié . convention collective . entreprises proprete . Employés . Plus de 2 ans . résultat conventionnel:
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Employés . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.11.2: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340
   
           
-contrat salarié . convention collective . entreprises proprete . Techniciens et agents de maîtrise (TAM):
-  applicable si: catégorie professionnelle = "'Techniciens et agents de maîtrise (TAM)'"
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Techniciens et agents de maîtrise TAM:
+  applicable si: catégorie professionnelle = 'Techniciens et agents de maîtrise TAM'
   
           
-contrat salarié . convention collective . entreprises proprete . Techniciens et agents de maîtrise (TAM) . ancienneté:
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -136,22 +152,26 @@ contrat salarié . convention collective . entreprises proprete . Techniciens et
       Plus de 2 ans: "'Plus de 2 ans'"
       
           
-contrat salarié . convention collective . entreprises proprete . Techniciens et agents de maîtrise (TAM) . 2 mois à 2 ans:
-  applicable si: ancienneté = "'2 mois à 2 ans'"
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté 2 mois à 2 ans:
+  applicable si: ancienneté = '2 mois à 2 ans'
   
           
-contrat salarié . convention collective . entreprises proprete . Techniciens et agents de maîtrise (TAM) . 2 mois à 2 ans . résultat conventionnel:
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté 2 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.11.2: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340
   
           
-contrat salarié . convention collective . entreprises proprete . Techniciens et agents de maîtrise (TAM) . Plus de 2 ans:
-  applicable si: ancienneté = "'Plus de 2 ans'"
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté Plus de 2 ans:
+  applicable si: ancienneté = 'Plus de 2 ans'
   
           
-contrat salarié . convention collective . entreprises proprete . Techniciens et agents de maîtrise (TAM) . Plus de 2 ans . résultat conventionnel:
+contrat salarié . convention collective . entreprises proprete . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
+  
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 4.11.2: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340
   

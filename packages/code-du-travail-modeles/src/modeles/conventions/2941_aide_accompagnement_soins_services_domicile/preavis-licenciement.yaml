@@ -6,15 +6,15 @@ contrat salarié . convention collective . aide accompagnement soins services do
     type: liste
     valeurs:
       Employé: "'Employé'"
-      Technicien-agent de maîtrise: "'Technicien-agent de maîtrise'"
+      Technicienagent de maîtrise: "'Technicienagent de maîtrise'"
       Cadre: "'Cadre'"
       
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Employé:
-  applicable si: catégorie professionnelle = "'Employé'"
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Employé:
+  applicable si: catégorie professionnelle = 'Employé'
   
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Employé . ancienneté:
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Employé . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -25,41 +25,47 @@ contrat salarié . convention collective . aide accompagnement soins services do
       Plus de 2 ans: "'Plus de 2 ans'"
       
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Employé . Moins de 6 mois:
-  applicable si: ancienneté = "'Moins de 6 mois'"
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Employé . ancienneté Moins de 6 mois:
+  applicable si: ancienneté = 'Moins de 6 mois'
   
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Employé . Moins de 6 mois . résultat conventionnel:
-  valeur: 1 semaine (de date à date)
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Employé . ancienneté Moins de 6 mois . résultat conventionnel:
+  valeur: 1 semaine
+  notification: de date à date
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Titre IV, Article 26.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
   
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Employé . 6 mois à 2 ans:
-  applicable si: ancienneté = "'6 mois à 2 ans'"
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Employé . ancienneté 6 mois à 2 ans:
+  applicable si: ancienneté = '6 mois à 2 ans'
   
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Employé . 6 mois à 2 ans . résultat conventionnel:
-  valeur: 1 mois (de date à date)
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Employé . ancienneté 6 mois à 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  notification: de date à date
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Titre IV, Article 26.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
   
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Employé . Plus de 2 ans:
-  applicable si: ancienneté = "'Plus de 2 ans'"
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Employé . ancienneté Plus de 2 ans:
+  applicable si: ancienneté = 'Plus de 2 ans'
   
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Employé . Plus de 2 ans . résultat conventionnel:
-  valeur: 2 mois (de date à date)
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Employé . ancienneté Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  notification: de date à date
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Titre IV, Article 26.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
   
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Technicien-agent de maîtrise:
-  applicable si: catégorie professionnelle = "'Technicien-agent de maîtrise'"
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Technicienagent de maîtrise:
+  applicable si: catégorie professionnelle = 'Technicienagent de maîtrise'
   
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Technicien-agent de maîtrise . ancienneté:
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Technicienagent de maîtrise . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -69,31 +75,35 @@ contrat salarié . convention collective . aide accompagnement soins services do
       Plus de 2 ans: "'Plus de 2 ans'"
       
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Technicien-agent de maîtrise . Moins de 2 ans:
-  applicable si: ancienneté = "'Moins de 2 ans'"
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Technicienagent de maîtrise . ancienneté Moins de 2 ans:
+  applicable si: ancienneté = 'Moins de 2 ans'
   
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Technicien-agent de maîtrise . Moins de 2 ans . résultat conventionnel:
-  valeur: 1 mois (de date à date)
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Technicienagent de maîtrise . ancienneté Moins de 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  notification: de date à date
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Titre IV, Article 26.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
   
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Technicien-agent de maîtrise . Plus de 2 ans:
-  applicable si: ancienneté = "'Plus de 2 ans'"
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Technicienagent de maîtrise . ancienneté Plus de 2 ans:
+  applicable si: ancienneté = 'Plus de 2 ans'
   
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Technicien-agent de maîtrise . Plus de 2 ans . résultat conventionnel:
-  valeur: 2 mois (de date à date)
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Technicienagent de maîtrise . ancienneté Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  notification: de date à date
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Titre IV, Article 26.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
   
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Cadre:
-  applicable si: catégorie professionnelle = "'Cadre'"
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Cadre:
+  applicable si: catégorie professionnelle = 'Cadre'
   
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Cadre . ancienneté:
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Cadre . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -103,22 +113,26 @@ contrat salarié . convention collective . aide accompagnement soins services do
       Plus de 2 ans: "'Plus de 2 ans'"
       
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Cadre . Moins de 2 ans:
-  applicable si: ancienneté = "'Moins de 2 ans'"
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Cadre . ancienneté Moins de 2 ans:
+  applicable si: ancienneté = 'Moins de 2 ans'
   
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Cadre . Moins de 2 ans . résultat conventionnel:
-  valeur: 2 mois (de date à date)
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Cadre . ancienneté Moins de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  notification: de date à date
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Titre IV, Article 26.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
   
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Cadre . Plus de 2 ans:
-  applicable si: ancienneté = "'Plus de 2 ans'"
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Cadre . ancienneté Plus de 2 ans:
+  applicable si: ancienneté = 'Plus de 2 ans'
   
           
-contrat salarié . convention collective . aide accompagnement soins services domicile . Cadre . Plus de 2 ans . résultat conventionnel:
-  valeur: 4 mois (de date à date)
+contrat salarié . convention collective . aide accompagnement soins services domicile . catégorie professionnelle Cadre . ancienneté Plus de 2 ans . résultat conventionnel:
+  valeur: 4 mois
+  notification: de date à date
+  remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Titre IV, Article 26.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
   

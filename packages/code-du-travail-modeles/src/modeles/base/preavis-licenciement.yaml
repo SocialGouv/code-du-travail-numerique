@@ -1,4 +1,4 @@
-contrat salarié . convention collective . légal . ancienneté:
+contrat salarié . convention collective . ancienneté légal:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -8,10 +8,14 @@ contrat salarié . convention collective . légal . ancienneté:
       6 mois à moins de 2 ans: "'6 mois à moins de 2 ans'"
       Plus de 2 ans: "'Plus de 2 ans'"
 
-contrat salarié . convention collective . résultat légal:
+contrat salarié . résultat légal:
   variations:
-    - si: légal . ancienneté = "'Plus de 2 ans'"
+    - si: contrat salarié . convention collective . ancienneté légal = 'Plus de 2 ans'
       alors: 2 mois
-    - si: légal . ancienneté = "'6 mois à moins de 2 ans'"
+    - si: contrat salarié . convention collective . ancienneté légal = '6 mois à moins de 2 ans'
       alors: 1 mois
-    - sinon: 0
+    - sinon: 0 mois
+
+contrat salarié . convention collective . résultat conventionnel:
+  valeur: 0 mois
+  unité: mois

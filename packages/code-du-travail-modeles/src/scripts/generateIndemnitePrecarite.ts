@@ -81,6 +81,12 @@ export function generateIndemnitePrecariteTree() {
       type: "select",
     },
     {
+      name: "criteria.hasCdiProposal",
+      question:
+        "À la fin du CDD, le salarié a-t-il reçu une proposition de CDI ?",
+      type: "select",
+    },
+    {
       name: "typeRemuneration",
       question:
         "Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?",
@@ -135,6 +141,14 @@ export function generateIndemnitePrecariteTree() {
       ) {
         appendCriteria = {
           "criteria.hasEquivalentCdiRenewal": "non",
+        };
+      } else if (
+        situation.contractType === "CDD" &&
+        situation.criteria["cddType"] ===
+          "Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès"
+      ) {
+        appendCriteria = {
+          "criteria.hasCdiProposal": "non",
         };
       }
       const criterias = {

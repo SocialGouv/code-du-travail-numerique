@@ -5,7 +5,7 @@ import {
   getSupportedAgreementHorsAni,
 } from "../../modeles";
 import type { ExplanationAgreementResult } from "../types";
-import { ExplanationBuilder } from "./ExplanationBuilder";
+import { ExplanationBuilder } from "../common/ExplanationBuilder";
 
 export class ExplanationBuilderRuptureCo extends ExplanationBuilder {
   getAgreementExplanation = (
