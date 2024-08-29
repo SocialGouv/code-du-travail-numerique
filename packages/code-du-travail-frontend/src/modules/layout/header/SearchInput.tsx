@@ -72,9 +72,9 @@ export const SearchInput = (props: Props) => {
               {...getItemProps({
                 item,
                 index,
-                className: `${variables.suggestion} ${
+                className: `${fr.cx("fr-p-1v")} ${variables.suggestion} ${
                   highlightedIndex === index ? variables["is-highlighted"] : ""
-                } ${fr.cx("fr-p-1v")}`,
+                }`,
               })}
               key={`${item}${index}`}
             >
