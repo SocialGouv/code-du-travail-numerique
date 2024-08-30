@@ -103,7 +103,7 @@ const SearchPage = ({
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const q = (context.query.q as string) ?? "";
-  const items = await searchWithQuery(q, true, undefined);
+  const items = await searchWithQuery(q, false, undefined);
   return { props: { items } };
 };
 
