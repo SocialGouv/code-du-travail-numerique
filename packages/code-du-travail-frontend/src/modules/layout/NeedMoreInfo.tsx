@@ -41,7 +41,7 @@ const mainContainer = css({
 });
 
 const title = css({
-  color: "var(--text-action-high-blue-france)",
+  color: "var(--text-action-high-blue-france) !important",
   fontWeight: 700,
   textAlign: "center",
 });
