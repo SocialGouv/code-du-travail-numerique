@@ -1,10 +1,10 @@
-import variables from "./NeedMoreInfo.module.scss";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
+import { css } from "../../../styled-system/css";
 
 export const NeedMoreInfo = () => {
   return (
-    <div className={`${variables["main-container"]}`}>
+    <div className={mainContainer}>
       <div className={fr.cx("fr-container")}>
         <div className={fr.cx("fr-grid-row")}>
           <div
@@ -14,15 +14,13 @@ export const NeedMoreInfo = () => {
               "fr-py-6w"
             )}`}
           >
-            <h2 className={variables.title}>
-              Besoin de plus d&apos;informations ?
-            </h2>
-            <p className={variables.paragraph}>
+            <h2 className={title}>Besoin de plus d&apos;informations ?</h2>
+            <p className={paragraph}>
               Les services du ministère du Travail en région informent,
               conseillent et orientent les salariés et les employeurs du secteur
               privé sur leurs questions en droit du travail.
             </p>
-            <div className={variables["button-container"]}>
+            <div className={buttonContainer}>
               <Button
                 iconId="fr-icon-chat-3-line"
                 iconPosition="right"
@@ -37,3 +35,22 @@ export const NeedMoreInfo = () => {
     </div>
   );
 };
+
+const mainContainer = css({
+  background: "var(--background-alt-blue-france)",
+});
+
+const title = css({
+  color: "var(--text-action-high-blue-france)",
+  fontWeight: 700,
+  textAlign: "center",
+});
+
+const paragraph = css({
+  color: "var(--text-action-high-blue-france)",
+});
+
+const buttonContainer = css({
+  display: "flex",
+  justifyContent: "center",
+});
