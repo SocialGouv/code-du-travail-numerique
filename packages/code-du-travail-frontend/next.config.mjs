@@ -1,5 +1,8 @@
 import { withSentryConfig } from "@sentry/nextjs";
 import MappingReplacement from "./redirects.json" assert { type: "json" };
+import { createVanillaExtractPlugin } from "@vanilla-extract/next-plugin";
+
+const withVanillaExtract = createVanillaExtractPlugin();
 
 const ContentSecurityPolicy = `
 img-src 'self' https://travail-emploi.gouv.fr https://www.service-public.fr https://cdtn-prod-public.s3.gra.io.cloud.ovh.net https://matomo.fabrique.social.gouv.fr data:;
@@ -36,7 +39,7 @@ const sentryConfig = {
   widenClientFileUpload: true,
 };
 
-const nextConfig = {
+const nextConfig = withVanillaExtract({
   poweredByHeader: false,
   compiler: {
     reactRemoveProperties:
@@ -59,7 +62,7 @@ const nextConfig = {
     });
     return config;
   },
-};
+});
 
 const moduleExports = {
   ...nextConfig,

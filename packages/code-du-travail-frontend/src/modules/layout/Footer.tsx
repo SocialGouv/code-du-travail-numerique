@@ -3,7 +3,7 @@ import { PACKAGE_VERSION } from "../../config";
 import { headerFooterDisplayItem } from "@codegouvfr/react-dsfr/Display";
 import { BrandTop } from "./BrandTop";
 import { homeLinksProps } from "./common";
-import { css } from "../../../styled-system/css";
+import { footerLogo } from "./Footer.css";
 
 export const Footer = () => {
   return (
@@ -196,7 +196,3 @@ export const Footer = () => {
     />
   );
 };
-
-const footerLogo = css({
-  boxShadow: "none !important",
-});

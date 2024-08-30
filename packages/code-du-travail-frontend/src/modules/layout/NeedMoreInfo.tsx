@@ -1,6 +1,11 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { css } from "../../../styled-system/css";
+import {
+  mainContainer,
+  title,
+  paragraph,
+  buttonContainer,
+} from "./NeedMoreInfo.css";
 
 export const NeedMoreInfo = () => {
   return (
@@ -35,22 +40,3 @@ export const NeedMoreInfo = () => {
     </div>
   );
 };
-
-const mainContainer = css({
-  background: "var(--background-alt-blue-france)",
-});
-
-const title = css({
-  color: "var(--text-action-high-blue-france) !important",
-  fontWeight: 700,
-  textAlign: "center",
-});
-
-const paragraph = css({
-  color: "var(--text-action-high-blue-france)",
-});
-
-const buttonContainer = css({
-  display: "flex",
-  justifyContent: "center",
-});

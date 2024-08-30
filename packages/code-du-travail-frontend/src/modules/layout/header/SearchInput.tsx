@@ -4,7 +4,7 @@ import { push as matopush } from "@socialgouv/matomo-next";
 import { fetchSuggestResults } from "./fetchSuggestResults";
 import { SUGGEST_MAX_RESULTS } from "../../../config";
 import { fr } from "@codegouvfr/react-dsfr";
-import { css } from "../../../../styled-system/css";
+import { isHighlighted, list, suggestion } from "./SearchInput.css";
 
 type Props = {
   id: string;
@@ -85,29 +85,3 @@ export const SearchInput = (props: Props) => {
     </>
   );
 };
-
-const list = css({
-  position: "absolute",
-  top: "2.5rem",
-  width: "100%",
-  zIndex: 100,
-  background: "var(--background-default-grey)",
-});
-
-const suggestion = css({
-  cursor: "pointer",
-  lineHeight: "2rem",
-  listStyleType: "none",
-  textAlign: "left",
-  background: "var(--background-default-grey)",
-  "&:nth-child(2n + 1)": {
-    background: "var(--background-default-grey-hover)",
-  },
-});
-
-const isHighlighted = css({
-  background: "var(--background-default-grey-active)",
-  "&:nth-child(2n + 1)": {
-    background: "var(--background-default-grey-active)",
-  },
-});
