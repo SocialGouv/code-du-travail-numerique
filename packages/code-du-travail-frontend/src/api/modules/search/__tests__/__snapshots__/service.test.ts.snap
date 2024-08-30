@@ -4,7 +4,7 @@ exports[`Search searchWithQuery 1`] = `
 {
   "articles": [
     {
-      "_score": undefined,
+      "_score": null,
       "algo": "pre-qualified",
       "breadcrumbs": [],
       "cdtnId": "6638a02755",
@@ -14,7 +14,7 @@ exports[`Search searchWithQuery 1`] = `
       "title": "L1231-1",
     },
     {
-      "_score": undefined,
+      "_score": null,
       "algo": "pre-qualified",
       "breadcrumbs": [],
       "cdtnId": "ea03713a82",
@@ -24,7 +24,7 @@ exports[`Search searchWithQuery 1`] = `
       "title": "L1237-1",
     },
     {
-      "_score": undefined,
+      "_score": null,
       "algo": "pre-qualified",
       "breadcrumbs": [],
       "cdtnId": "4c53e81904",
@@ -45,7 +45,7 @@ exports[`Search searchWithQuery 1`] = `
   ],
   "documents": [
     {
-      "_score": undefined,
+      "_score": null,
       "algo": "pre-qualified",
       "breadcrumbs": [
         {
@@ -66,7 +66,7 @@ exports[`Search searchWithQuery 1`] = `
       "title": "Démission d'un salarié",
     },
     {
-      "_score": undefined,
+      "_score": null,
       "algo": "pre-qualified",
       "breadcrumbs": [
         {
@@ -87,7 +87,7 @@ exports[`Search searchWithQuery 1`] = `
       "title": "La démission",
     },
     {
-      "_score": undefined,
+      "_score": null,
       "algo": "pre-qualified",
       "breadcrumbs": [
         {
@@ -108,7 +108,7 @@ exports[`Search searchWithQuery 1`] = `
       "title": "Un salarié peut-il percevoir l'allocation chômage en cas de démission ?",
     },
     {
-      "_score": undefined,
+      "_score": null,
       "algo": "pre-qualified",
       "breadcrumbs": [
         {
@@ -134,7 +134,7 @@ exports[`Search searchWithQuery 1`] = `
       "title": "Peut-on démissionner pendant ses congés payés ?",
     },
     {
-      "_score": undefined,
+      "_score": null,
       "algo": "pre-qualified",
       "breadcrumbs": [
         {
@@ -155,7 +155,7 @@ exports[`Search searchWithQuery 1`] = `
       "title": "Peut-on démissionner pendant un arrêt maladie ?",
     },
     {
-      "_score": undefined,
+      "_score": null,
       "algo": "pre-qualified",
       "breadcrumbs": [
         {
@@ -176,7 +176,7 @@ exports[`Search searchWithQuery 1`] = `
       "title": "Peut-on démissionner pendant un congé maternité ?",
     },
     {
-      "_score": undefined,
+      "_score": null,
       "algo": "pre-qualified",
       "breadcrumbs": [
         {
@@ -197,7 +197,7 @@ exports[`Search searchWithQuery 1`] = `
       "title": "Peut-on démissionner pendant un congé parental ?",
     },
     {
-      "_score": undefined,
+      "_score": null,
       "algo": "pre-qualified",
       "breadcrumbs": [
         {
@@ -218,7 +218,7 @@ exports[`Search searchWithQuery 1`] = `
       "title": "Démission du salarié à domicile employé par un particulier",
     },
     {
-      "_score": undefined,
+      "_score": null,
       "algo": "pre-qualified",
       "breadcrumbs": [
         {
