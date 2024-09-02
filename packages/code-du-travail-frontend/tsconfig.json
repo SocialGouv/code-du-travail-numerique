@@ -18,9 +18,6 @@
     "plugins": [
       {
         "name": "next"
-      },
-      {
-        "name": "typescript-plugin-css-modules"
       }
     ]
   },

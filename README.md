@@ -38,14 +38,6 @@ cp packages/code-du-travail-frontend/.env.sample packages/code-du-travail-fronte
 yarn dev:frontend
 ```
 
-Pour le `sass`, il faut ajouter à votre configuration vscode dans les user settings :
-
-```json
-{
-  "typescript.tsserver.pluginPaths": ["typescript-plugin-css-modules"]
-}
-```
-
 Notre bibliothèque de composants UI est disponible en démo [ici](https://socialgouv.github.io/code-du-travail-numerique/).
 
 ### Testing
