@@ -1,9 +1,9 @@
-import variables from "./Footer.module.scss";
 import { Footer as FooterDsfr } from "@codegouvfr/react-dsfr/Footer";
 import { PACKAGE_VERSION } from "../../config";
 import { headerFooterDisplayItem } from "@codegouvfr/react-dsfr/Display";
 import { BrandTop } from "./BrandTop";
 import { homeLinksProps } from "./common";
+import { css } from "../../../styled-system/css";
 
 export const Footer = () => {
   return (
@@ -191,8 +191,12 @@ export const Footer = () => {
         headerFooterDisplayItem,
       ]}
       classes={{
-        logo: variables["footer-logo"],
+        logo: footerLogo,
       }}
     />
   );
 };
+
+const footerLogo = css({
+  boxShadow: "none !important",
+});

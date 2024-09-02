@@ -1,4 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
+import { css } from "../../../styled-system/css";
 
 export const MentionsLegales = () => (
   <div className={fr.cx("fr-grid-row")}>
