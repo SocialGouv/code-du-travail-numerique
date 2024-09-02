@@ -6,14 +6,8 @@ export const NeedMoreInfo = () => {
   return (
     <div className={mainContainer}>
       <div className={fr.cx("fr-container")}>
-        <div className={fr.cx("fr-grid-row")}>
-          <div
-            className={`${fr.cx(
-              "fr-col-md-6",
-              "fr-col-offset-md-3",
-              "fr-py-6w"
-            )}`}
-          >
+        <div className={fr.cx("fr-grid-row", "fr-grid-row--center")}>
+          <div className={`${fr.cx("fr-col-md-6", "fr-py-6w")}`}>
             <h2 className={title}>Besoin de plus d&apos;informations ?</h2>
             <p className={paragraph}>
               Les services du ministère du Travail en région informent,

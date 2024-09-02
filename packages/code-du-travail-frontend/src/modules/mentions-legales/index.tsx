@@ -1,16 +1,9 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import { css } from "../../../styled-system/css";
 
 export const MentionsLegales = () => (
-  <div className={fr.cx("fr-grid-row")}>
+  <div className={fr.cx("fr-grid-row", "fr-grid-row--center")}>
     <div
-      className={fr.cx(
-        "fr-my-4w",
-        "fr-col-12",
-        "fr-my-md-12w",
-        "fr-col-md-6",
-        "fr-col-offset-md-3"
-      )}
+      className={fr.cx("fr-my-4w", "fr-col-12", "fr-my-md-12w", "fr-col-md-6")}
     >
       <h1 id="mentions-legales" className={fr.cx("fr-mt-0")}>
         Mentions légales
