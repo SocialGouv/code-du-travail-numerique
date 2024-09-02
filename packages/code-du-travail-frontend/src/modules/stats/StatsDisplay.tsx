@@ -9,19 +9,20 @@ type StatsProps = {
 
 export const StatsDisplay = (props: StatsProps) => (
   <div className={fr.cx("fr-col-12", "fr-col-md-3")}>
-    <div className={`${fr.cx("fr-callout")} ${callOut}`}>
-      <p className={`${metric} ${fr.cx("fr-mt-4v", "fr-display--xs")}`}>
+    <CallOut className={`${callOut}`}>
+      <span className={`${metric} ${fr.cx("fr-mt-4v", "fr-display--xs")}`}>
         {props.metric}
-      </p>
-      <p className={`${title} ${fr.cx("fr-text--bold", "fr-text--xl")}`}>
+      </span>
+      <span className={`${title} ${fr.cx("fr-text--bold", "fr-text--xl")}`}>
         {props.title}
-      </p>
-    </div>
+      </span>
+    </CallOut>
   </div>
 );
 
 const metric = css({
   textAlign: "right",
+  display: "block",
 });
 
 const title = css({
