@@ -6,12 +6,6 @@ import Link from "next/link";
 import { defaultColorScheme } from "../src/modules/config/defaultColorScheme";
 import { StartDsfr } from "../src/modules/config/StartDsfr";
 
-export const metadata = {
-  title: "Code du travail numérique - Ministère du Travail",
-  description:
-    "Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités).",
-};
-
 export default function RootLayout({
   children,
 }: {
