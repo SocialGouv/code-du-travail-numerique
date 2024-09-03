@@ -55,11 +55,12 @@ export const SearchInput = (props: Props) => {
   return (
     <>
       <input
-        {...getInputProps()}
-        className={props.className}
-        id={props.id}
-        placeholder={props.placeholder}
-        type={props.type}
+        {...getInputProps({
+          className: props.className,
+          id: props.id,
+          placeholder: props.placeholder,
+          type: props.type,
+        })}
       />
       <ul
         {...getMenuProps({

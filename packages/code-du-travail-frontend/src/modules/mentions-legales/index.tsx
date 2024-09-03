@@ -39,16 +39,15 @@ export const MentionsLegales = () => (
           2 rue Kellermann <br />
           56100 Roubaix <br />
           France
+          <strong>
+            Le code du logiciel est libre, et peut donc être vérifié et amélioré
+            par toutes et tous à l’adresse suivante:{" "}
+            <a href="https://github.com/SocialGouv/code-du-travail-numerique">
+              https://github.com/SocialGouv/code-du-travail-numerique
+            </a>
+            .
+          </strong>
         </p>
-
-        <strong>
-          Le code du logiciel est libre, et peut donc être vérifié et amélioré
-          par toutes et tous à l’adresse suivante:{" "}
-          <a href="https://github.com/SocialGouv/code-du-travail-numerique">
-            https://github.com/SocialGouv/code-du-travail-numerique
-          </a>
-          .
-        </strong>
       </div>
 
       <h2>Accessibilité</h2>

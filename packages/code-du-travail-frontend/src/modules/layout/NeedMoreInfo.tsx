@@ -18,7 +18,7 @@ export const NeedMoreInfo = () => {
               <Button
                 iconId="fr-icon-chat-3-line"
                 iconPosition="right"
-                priority="tertiary"
+                priority="secondary"
               >
                 Trouver les services près de chez moi
               </Button>
@@ -36,7 +36,6 @@ const mainContainer = css({
 
 const title = css({
   color: "var(--text-action-high-blue-france) !important",
-  fontWeight: 700,
   textAlign: "center",
 });
 

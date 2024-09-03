@@ -10,7 +10,7 @@ export const dynamic = "force-static";
 export const revalidate = REVALIDATE_TIME_DAY;
 
 export const metadata: Metadata = {
-  title: "Statistiques",
+  title: "Statistiques - Code du travail numérique",
   description: "Statistiques d’utilisation du Code du travail numérique",
 };
 
