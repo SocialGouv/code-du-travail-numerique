@@ -16,7 +16,7 @@ export const MentionsLegales = () => (
           <a href="https://www.fabrique.social.gouv.fr/">
             fabrique des Ministères sociaux
           </a>{" "}
-          située :
+          située&nbsp;:
         </p>
         <address>
           Tour Mirabeau
