@@ -1,0 +1,155 @@
+import { Table } from "@codegouvfr/react-dsfr/Table";
+import { fr } from "@codegouvfr/react-dsfr";
+
+export const PrivacyPolicy = () => (
+  <div className={fr.cx("fr-grid-row", "fr-grid-row--center")}>
+    <div
+      className={fr.cx("fr-my-4w", "fr-col-12", "fr-my-md-12w", "fr-col-md-6")}
+    >
+      <h1 id="politique-confidentialite" className={fr.cx("fr-mt-0")}>
+        Politique de confidentialité
+      </h1>
+
+      <h2 className={fr.cx("fr-h3")}>
+        Traitement des données à caractère personnel
+      </h2>
+      <p>
+        Le Code du travail numérique ne vous demande ni ne stocke d’information
+        nominative.
+      </p>
+      <p>
+        Pour autant, nous enregistrons les informations saisies dans la barre de
+        recherche. Elles sont conservées pendant deux années pour analyser les
+        usages, améliorer la précision des réponses apportées et améliorer le
+        service et ainsi réaliser la mission d’intérêt public telle que
+        présentée dans la page{" "}
+        <a target="_blank" href="/a-propos">
+          à propos
+        </a>
+        .
+      </p>
+      <p>Nous nous engageons à ne jamais céder ces informations à des tiers.</p>
+      <p>
+        Vous avez un droit d’accès, de rectification et de suppression de vos
+        données. Pour l’exercer, faites-nous parvenir une demande en précisant
+        la date et l’heure précise de la requête et tout élément permettant
+        d’attester que vous êtes bien l’auteur du message - ces éléments sont
+        indispensables pour nous permettre de retrouver votre recherche - par
+        voie électronique à l’adresse suivante&nbsp;:{" "}
+        <a
+          title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
+          href="mailto:codedutravailnumerique@travail.gouv.fr"
+        >
+          codedutravailnumerique@travail.gouv.fr
+        </a>
+        .
+      </p>
+      <p>ou par voie postale&nbsp;:</p>
+      <p>
+        <address>
+          Direction des systèmes d’information
+          <br />
+          Ministère des affaires sociales et de la santé
+          <br />
+          39-43 Quai André Citroën
+          <br />
+          75015 PARIS
+        </address>
+      </p>
+      <p>
+        Vous êtes également en droit de saisir la Commission Nationale de
+        l’Informatique et des Libertés pour toute réclamation à{" "}
+        <a
+          title="Adresser une réclamation (plainte) à la CNIL"
+          target="_blank"
+          href="https://www.cnil.fr/fr/cnil-direct/question/844"
+        >
+          l’adresse suivante
+        </a>
+        .
+      </p>
+      <h2 className={fr.cx("fr-h3")}>Hébergement</h2>
+      <p>
+        <ul>
+          <li>Partenaire: OVH</li>
+          <li>Pays destinataire: France</li>
+          <li>Traitement réalisé: Hébergement</li>
+          <li>
+            Garantie:{" "}
+            <a
+              href="https://us.ovhcloud.com/legal/data-processing-agreement"
+              target="_blank"
+            >
+              https://us.ovhcloud.com/legal/data-processing-agreement
+            </a>
+          </li>
+        </ul>
+      </p>
+      <h2 className={fr.cx("fr-h3")}>Cookies</h2>
+      <p>
+        Un cookie est un fichier déposé sur votre terminal lors de la visite
+        d’un site. Il a pour but de collecter des informations relatives à votre
+        navigation et de vous adresser des services adaptés à votre terminal
+        (ordinateur, mobile ou tablette).
+      </p>
+      <p>
+        Nous collectons donc des données par l’intermédiaire de dispositifs
+        appelés “cookies” permettant d’établir des mesures statistiques.
+      </p>
+      <p>
+        <ul>
+          <li>Catégorie de cookie: Mesure d’audience anonymisée</li>
+          <li>Nom du cookie: Matomo</li>
+          <li>Délai de conservation: 13 mois</li>
+          <li>Finalités: Mesure d’audience</li>
+          <li>Éditeur: Matomo & Fabrique numérique</li>
+          <li>Destination: France</li>
+        </ul>
+      </p>
+      <p>
+        L’accès aux informations contenues dans les cookies est limité aux
+        seules personnes autorisées au sein de la Fabrique numérique. En outre,
+        l’éditeur peut utiliser certaines données pour des finalités qui lui
+        sont propres.
+      </p>
+      <p>
+        À tout moment, vous pouvez refuser l’utilisation des cookies et
+        désactiver le dépôt sur votre ordinateur en utilisant la fonction dédiée
+        de votre navigateur (fonction disponible notamment sur Microsoft
+        Internet Explorer 11, Google Chrome, Mozilla Firefox, Apple Safari et
+        Opera).
+      </p>
+      <p>
+        Pour l’outil Matomo, vous pouvez décider de ne jamais être suivi, y
+        compris anonymement&nbsp;:
+      </p>
+      <iframe
+        title="matomo optout"
+        style={{ border: 0, width: "100%" }}
+        src="https://matomo.fabrique.social.gouv.fr/index.php?module=CoreAdminHome&action=optOut&language=fr&backgroundColor=&fontColor=2f3b6c&fontSize=16px&fontFamily=sans-serif"
+      />
+      <p>
+        Pour aller plus loin, vous pouvez consulter les fiches proposées par la
+        Commission Nationale de l’Informatique et des Libertés (CNIL)&nbsp;:
+      </p>
+      <ul>
+        <li>
+          <a
+            target="_blank"
+            href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi"
+          >
+            Cookies et traceurs : que dit la loi ?
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser"
+          >
+            Cookies : les outils pour les maîtriser
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+);
