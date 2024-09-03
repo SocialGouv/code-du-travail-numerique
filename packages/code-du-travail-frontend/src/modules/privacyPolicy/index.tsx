@@ -1,4 +1,3 @@
-import { Table } from "@codegouvfr/react-dsfr/Table";
 import { fr } from "@codegouvfr/react-dsfr";
 
 export const PrivacyPolicy = () => (
