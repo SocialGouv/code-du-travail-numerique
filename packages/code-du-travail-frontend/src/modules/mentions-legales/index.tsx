@@ -13,7 +13,7 @@ export const MentionsLegales = () => (
       <div className={fr.cx("fr-mb-3w")}>
         <p className={fr.cx("fr-mb-0")}>
           Le site est édité par la{" "}
-          <a href="https://www.fabrique.social.gouv.fr/">
+          <a target="_blank" href="https://www.fabrique.social.gouv.fr/">
             fabrique des Ministères sociaux
           </a>{" "}
           située&nbsp;:
