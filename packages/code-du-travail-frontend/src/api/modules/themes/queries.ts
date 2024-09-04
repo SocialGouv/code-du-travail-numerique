@@ -1,8 +1,7 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
 
-export function getAllThemesQuery() {
+export function getRootThemesQuery() {
   return {
-    _source: ["icon", "children", "title", "slug", "position"],
     query: {
       bool: {
         filter: [
@@ -42,7 +41,6 @@ export function getThemeBySlugQuery(slug: string) {
 
 export function getThemeBySlugsQuery(slugs: string[]) {
   return {
-    _source: ["title", "slug"],
     query: {
       bool: {
         filter: [

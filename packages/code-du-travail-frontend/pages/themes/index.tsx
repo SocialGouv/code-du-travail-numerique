@@ -15,7 +15,7 @@ import Metas from "../../src/common/Metas";
 import { REVALIDATE_TIME } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
 import { LinkedTile } from "../../src/common/tiles/LinkedTile";
-import { getAllThemes } from "../../src/api";
+import { getRootThemes } from "../../src/api";
 
 const SubThemes = ({ children = [] }) => {
   return (
@@ -73,8 +73,14 @@ const ThemesPage = ({ children = [] }) => (
 
 export async function getStaticProps() {
   try {
-    const data = await getAllThemes();
-    return { props: { children: data.children }, revalidate: REVALIDATE_TIME };
+    const data = await getRootThemes([
+      "icon",
+      "children",
+      "title",
+      "slug",
+      "position",
+    ]);
+    return { props: { children: data }, revalidate: REVALIDATE_TIME };
   } catch (error) {
     console.error(error);
     return {

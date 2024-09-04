@@ -1,65 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Themes getAllThemes 1`] = `
-{
-  "children": [
-    {
-      "children": [
-        {
-          "label": "Embauche",
-          "slug": "embauche",
-        },
-        {
-          "label": "Contrat de travail",
-          "slug": "contrat-de-travail",
-        },
-      ],
-      "icon": "Contract",
-      "position": 1,
-      "slug": "embauche-et-contrat-de-travail",
-      "title": "Embauche et contrat de travail",
-    },
-    {
-      "children": [
-        {
-          "label": "Documents à remettre au salarié",
-          "slug": "documents-a-remettre-au-salarie",
-        },
-        {
-          "label": "Démission",
-          "slug": "demission",
-        },
-        {
-          "label": "Fin d’un CDD - CTT",
-          "slug": "fin-dun-cdd-ctt",
-        },
-        {
-          "label": "Rupture conventionnelle",
-          "slug": "rupture-conventionnelle",
-        },
-        {
-          "label": "Licenciement : droits des salariés et procédures",
-          "slug": "licenciement-droits-des-salaries-et-procedures",
-        },
-        {
-          "label": "Retraite",
-          "slug": "retraite",
-        },
-        {
-          "label": "Autres départs",
-          "slug": "autres-departs",
-        },
-      ],
-      "icon": "Depart",
-      "position": 8,
-      "slug": "depart-de-lentreprise",
-      "title": "Départ de l’entreprise",
-    },
-  ],
-}
-`;
-
-exports[`Themes getAllThemesAndSubThemes 1`] = `
 [
   {
     "children": [
@@ -72,8 +13,6 @@ exports[`Themes getAllThemesAndSubThemes 1`] = `
         "slug": "contrat-de-travail",
       },
     ],
-    "icon": "Contract",
-    "position": 1,
     "slug": "embauche-et-contrat-de-travail",
     "title": "Embauche et contrat de travail",
   },
@@ -86,7 +25,6 @@ exports[`Themes getAllThemesAndSubThemes 1`] = `
       {
         "label": "Démission",
         "slug": "demission",
-        "title": "Démission",
       },
       {
         "label": "Fin d’un CDD - CTT",
@@ -109,8 +47,6 @@ exports[`Themes getAllThemesAndSubThemes 1`] = `
         "slug": "autres-departs",
       },
     ],
-    "icon": "Depart",
-    "position": 8,
     "slug": "depart-de-lentreprise",
     "title": "Départ de l’entreprise",
   },

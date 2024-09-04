@@ -9,7 +9,14 @@ import {
 
 describe("Modeles", () => {
   it("getAllModeles", async () => {
-    const result = await getAllModeles();
+    const result = await getAllModeles([
+      "title",
+      "slug",
+      "description",
+      "source",
+      "breadcrumbs",
+      "cdtnId",
+    ]);
     expect(result).toMatchSnapshot();
   });
   it("getBySlugsModeles", async () => {
