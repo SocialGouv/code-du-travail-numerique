@@ -34,30 +34,51 @@ export const ConventionLink = ({
     small,
   };
 
-  return onClick ? (
-    <StyledLink as={Button} variant="navLink" {...commonProps}>
-      {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
-      {highlight && highlight.searchInfo && (
-        <Paragraph variant="altText" noMargin>
-          {highlight.searchInfo}
-        </Paragraph>
+  return (
+    <>
+      {convention.num === 9999 ? (
+        <StyledLinkedDisabled {...commonProps}>
+          {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
+          {highlight && highlight.searchInfo && (
+            <StyledDisabledParagraph variant="altText" noMargin>
+              {highlight.searchInfo}
+            </StyledDisabledParagraph>
+          )}
+          <StyledDisabledParagraph variant="altText" noMargin>
+            Cette convention collective déclarée par l’entreprise n’est pas
+            reconnue par notre site
+          </StyledDisabledParagraph>
+        </StyledLinkedDisabled>
+      ) : (
+        <>
+          {onClick ? (
+            <StyledLink as={Button} variant="navLink" {...commonProps}>
+              {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
+              {highlight && highlight.searchInfo && (
+                <Paragraph variant="altText" noMargin>
+                  {highlight.searchInfo}
+                </Paragraph>
+              )}
+            </StyledLink>
+          ) : (
+            <Link
+              href={`/convention-collective/${convention.slug}`}
+              passHref
+              legacyBehavior
+            >
+              <StyledLink {...commonProps}>
+                {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
+                {highlight && highlight.searchInfo && (
+                  <Paragraph variant="altText" noMargin>
+                    {highlight.searchInfo}
+                  </Paragraph>
+                )}
+              </StyledLink>
+            </Link>
+          )}
+        </>
       )}
-    </StyledLink>
-  ) : (
-    <Link
-      href={`/convention-collective/${convention.slug}`}
-      passHref
-      legacyBehavior
-    >
-      <StyledLink {...commonProps}>
-        {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
-        {highlight && highlight.searchInfo && (
-          <Paragraph variant="altText" noMargin>
-            {highlight.searchInfo}
-          </Paragraph>
-        )}
-      </StyledLink>
-    </Link>
+    </>
   );
 };
 
@@ -71,6 +92,16 @@ const StyledLink = styled.a`
   font-weight: 600;
   text-align: left;
   text-decoration: none;
+`;
+
+const StyledLinkedDisabled = styled(StyledLink)`
+  color: ${({ theme }) => theme.placeholder};
+  pointer-events: none;
+  cursor: default;
+`;
+
+const StyledDisabledParagraph = styled(Paragraph)`
+  color: ${({ theme }) => theme.placeholder};
 `;
 
 const IDCC = styled.span`

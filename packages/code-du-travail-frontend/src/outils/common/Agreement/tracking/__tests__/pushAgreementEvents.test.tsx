@@ -192,4 +192,52 @@ describe("Push agreement events on click next", () => {
       ]);
     });
   });
+
+  describe("not tracking", () => {
+    it("should not send matomo events if agreement is 9999", () => {
+      const agreement9999: EnterpriseAgreement = {
+        id: "AGREEMENT_ID",
+        num: 9999,
+        shortTitle: "?",
+        slug: "/convention/9999",
+        title: "?",
+        contributions: false,
+      };
+      const pageTitle = "Blabla";
+      pushAgreementEvents(
+        pageTitle,
+        {
+          enterprise: {
+            activitePrincipale:
+              "Commerce de détail en magasin non spécialisé à prédominance alimentaire",
+            conventions: [agreement9999],
+            etablissements: 335,
+            highlightLabel:
+              "<b><u>MONOPRIX</u></b> EXPLOITATION, PAR ABREVIATION MPX",
+            label: "MONOPRIX EXPLOITATION, PAR ABREVIATION MPX",
+            matching: 272,
+            simpleLabel: "MONOPRIX EXPLOITATION",
+            siren: "552083297",
+          },
+          route: "enterprise",
+          selected: agreement9999,
+        },
+        false,
+        false
+      );
+      expect(matopush).toHaveBeenCalledTimes(2);
+      expect(matopush).toHaveBeenNthCalledWith(1, [
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
+        "click_p2",
+        pageTitle,
+      ]);
+      expect(matopush).toHaveBeenNthCalledWith(2, [
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoSearchAgreementCategory.ENTERPRISE_SELECT,
+        pageTitle,
+        JSON.stringify({ label: enterprise.label, siren: enterprise.siren }),
+      ]);
+    });
+  });
 });
