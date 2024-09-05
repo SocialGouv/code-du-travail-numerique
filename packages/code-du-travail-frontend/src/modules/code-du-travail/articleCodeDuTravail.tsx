@@ -27,13 +27,7 @@ function ArticleCodeDuTravail({
   notaHtml,
 }: Props) {
   return (
-    <div
-      className={fr.cx(
-        "fr-grid-row",
-        "fr-my-4w",
-        "fr-my-md-12w"
-      )}
-    >
+    <div className={fr.cx("fr-grid-row", "fr-my-4w", "fr-my-md-12w")}>
       <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
         <Tag className={fr.cx("fr-mb-6w")}>{suptitle}</Tag>
         <h1 className={fr.cx("fr-mb-6w")}>{title}</h1>
@@ -46,9 +40,11 @@ function ArticleCodeDuTravail({
           - Mise à jour le: {date}
         </p>
 
-        <Html>{html}</Html>
+        <div className="fr-mb-5w">
+          <Html>{html}</Html>
+        </div>
         {notaHtml && (
-          <div className="fr-highlight fr-my-2w">
+          <div className="fr-highlight fr-mb-5w">
             <p>
               <strong>NOTA</strong>
             </p>
