@@ -29,6 +29,10 @@ jobs:
       - name: Build code
         run: |
           yarn build
+        env:
+          NEXT_PUBLIC_ES_INDEX_PREFIX: ${{ secrets.NEXT_PUBLIC_ES_INDEX_PREFIX }}
+          ELASTICSEARCH_TOKEN_API: ${{ secrets.ELASTICSEARCH_TOKEN_API }}
+          ELASTICSEARCH_URL: ${{ secrets.ELASTICSEARCH_URL }}
       - name: Cache build
         uses: actions/cache@v4
         with:
