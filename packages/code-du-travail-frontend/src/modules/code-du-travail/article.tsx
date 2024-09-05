@@ -30,7 +30,7 @@ function Article({
     <div
       className={fr.cx(
         "fr-grid-row",
-        "fr-my-4w", // est-ce qu'on devrait faire un composant exprès pour avoir toujours la même margin ou même l'ajouter au header et footer ?
+        "fr-my-4w",
         "fr-my-md-12w"
       )}
     >
