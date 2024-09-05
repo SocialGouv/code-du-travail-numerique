@@ -20,7 +20,7 @@ const matoSelectRelated = (reco, selection) => {
 export const RelatedItems = ({
   items = [],
 }: {
-  items: { slug: string; source; title: string; reco; url: string }[];
+  items: { slug?: string; source; title: string; reco; url?: string }[];
 }) => {
   const isArticleSource = (source) =>
     ![SOURCES.EXTERNALS, SOURCES.LETTERS, SOURCES.TOOLS].includes(source);
@@ -48,10 +48,9 @@ export const RelatedItems = ({
                 {items.map(({ slug, source, title, reco, url }) => {
                   // if source is external we use url otherwise we assemble the route
                   const href =
-                    source != SOURCES.EXTERNALS
-                      ? `/${getRouteBySource(source)}/${slug}`
-                      : url;
-
+                    source === SOURCES.EXTERNALS
+                      ? url
+                      : `/${getRouteBySource(source)}/${slug}`;
                   return (
                     <li key={href} className="fr-pb-2w">
                       <i
@@ -65,7 +64,7 @@ export const RelatedItems = ({
                           matoSelectRelated(
                             reco,
                             // legacy : we do not include the leading '/' in the selection
-                            source != SOURCES.EXTERNALS ? href.slice(1) : href
+                            source != SOURCES.EXTERNALS ? href!.slice(1) : href
                           )
                         }
                       >
