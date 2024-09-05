@@ -45,9 +45,7 @@ function ArticleCodeDuTravail({
         </div>
         {notaHtml && (
           <div className="fr-highlight fr-mb-5w">
-            <p>
-              <strong>NOTA</strong>
-            </p>
+            <p>NOTA</p>
             <Html>{notaHtml}</Html>
           </div>
         )}
