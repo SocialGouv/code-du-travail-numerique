@@ -1,5 +1,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { TrackApproval } from "./trackApproval";
+import Link from "next/link";
 
 export const PrivacyPolicy = () => {
   return (
@@ -28,11 +29,7 @@ export const PrivacyPolicy = () => {
           de recherche. Elles sont conservées pendant deux années pour analyser
           les usages, améliorer la précision des réponses apportées et améliorer
           le service et ainsi réaliser la mission d’intérêt public telle que
-          présentée dans la page{" "}
-          <a target="_blank" href="/a-propos">
-            à propos
-          </a>
-          .
+          présentée dans la page <Link href="/a-propos">à propos</Link>.
         </p>
         <p>
           Nous nous engageons à ne jamais céder ces informations à des tiers.
