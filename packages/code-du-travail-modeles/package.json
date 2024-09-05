@@ -35,6 +35,7 @@
     "precommit": "lint-staged",
     "prebuild": "tsc -p tsconfig.build.json",
     "test": "jest --silent=true",
+    "vitest": "echo 'no tests'",
     "lint": "eslint \"./src/**/*.{js,ts}\"",
     "dev": "nodemon --exec 'npm run build:dev' --watch 'src/**' --ext 'ts,yaml'",
     "test:watch": "nodemon --exec 'jest' --watch 'src/**' --ext 'ts,yaml'",

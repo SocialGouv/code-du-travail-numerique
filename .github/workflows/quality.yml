@@ -134,6 +134,11 @@ jobs:
           yarn workspace ${{ matrix.repositories }} test
         env:
           ELASTICSEARCH_URL: http://localhost:9200
+      - name: Test with vitest ${{ matrix.repositories }}
+        run: |
+          yarn workspace ${{ matrix.repositories }} vitest
+        env:
+          ELASTICSEARCH_URL: http://localhost:9200
 
   docker:
     name: Lint Dockerfile
