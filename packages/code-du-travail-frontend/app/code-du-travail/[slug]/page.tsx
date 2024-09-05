@@ -3,24 +3,11 @@ import { LaborCodeArticle } from "@socialgouv/cdtn-types";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import React from "react";
-
-import Metas from "../../../src/common/Metas";
 import { replaceArticlesRefs } from "../../../src/lib/replaceArticlesRefs";
 import { getBySourceAndSlugItems } from "../../../src/api";
 import { DsfrLayout } from "../../../src/modules/layout";
 import { notFound } from "next/navigation";
 import Article from "../../../src/modules/code-du-travail/article";
-
-interface Props {
-  dateDebut: string;
-  description: string;
-  title: string;
-  url: string;
-  html;
-  notaHtml;
-  referencedTexts;
-  relatedItems: Array<any>;
-}
 
 async function Fiche({ params }: { params: { slug: string } }) {
   const { title, description, dateDebut, html, url, notaHtml, relatedItems } =
@@ -44,16 +31,12 @@ async function Fiche({ params }: { params: { slug: string } }) {
         source={{ name: "Code du travail", url }}
         notaHtml={notaHtml}
         metaDescription={description}
-      >
-
-      </Article>
+      ></Article>
     </DsfrLayout>
   );
 }
 
-const getArticle = async (
-  slug: string
-): Promise<Props> => {
+const getArticle = async (slug: string): Promise<any> => {
   const data = await getBySourceAndSlugItems<LaborCodeArticle>(
     "code_du_travail",
     slug
@@ -61,7 +44,7 @@ const getArticle = async (
   if (!data?._source) {
     return notFound();
   }
-  // @ts-ignore
+
   return { relatedItems: data.relatedItems, ...data._source };
 };
 
