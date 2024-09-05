@@ -1,12 +1,7 @@
-"use client";
 import { fr } from "@codegouvfr/react-dsfr";
-import { useIsDark } from "@codegouvfr/react-dsfr/useIsDark";
+import { TrackApproval } from "./trackApproval";
 
 export const PrivacyPolicy = () => {
-  const { isDark } = useIsDark();
-  const iframeParams = isDark
-    ? "module=CoreAdminHome&action=optOut&language=fr&backgroundColor=161616&fontColor=cecece&fontSize=16px&fontFamily=sans-serif"
-    : "module=CoreAdminHome&action=optOut&language=fr&backgroundColor=&fontColor=3a3a3a&fontSize=16px&fontFamily=sans-serif";
   return (
     <div className={fr.cx("fr-grid-row", "fr-grid-row--center")}>
       <div
@@ -130,11 +125,7 @@ export const PrivacyPolicy = () => {
           Pour l’outil Matomo, vous pouvez décider de ne jamais être suivi, y
           compris anonymement&nbsp;:
         </p>
-        <iframe
-          title="matomo optout"
-          style={{ border: 0, width: "100%" }}
-          src={`https://matomo.fabrique.social.gouv.fr/index.php?${iframeParams}`}
-        />
+        <TrackApproval />
         <p>
           Pour aller plus loin, vous pouvez consulter les fiches proposées par
           la Commission Nationale de l’Informatique et des Libertés
