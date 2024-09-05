@@ -2,8 +2,6 @@ const nextJest = require("next/jest");
 
 const createJestConfig = nextJest();
 
-const esModules = ["@codegouvfr/react-dsfr"].join("|");
-
 const customJestConfig = {
   testEnvironment: "jest-environment-jsdom",
   setupFilesAfterEnv: ["<rootDir>/test/jest.setup.js"],
@@ -16,11 +14,6 @@ const customJestConfig = {
   testTimeout: 20000,
   moduleNameMapper: {
     "^@sentry/nextjs$": "<rootDir>/test/mockSentry.js",
-  },
-  preset: "ts-jest/presets/js-with-ts-esm",
-  transformIgnorePatterns: [`<rootDir>/node_modules/(?!(${esModules})/)`],
-  transform: {
-    "^.+\\.(js|jsx|ts|tsx)$": ["ts-jest"],
   },
 };
 

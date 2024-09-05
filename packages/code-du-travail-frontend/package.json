@@ -18,9 +18,10 @@
     "build": "yarn prebuild && next build",
     "build:analyze": "yarn prebuild && ANALYZE=true next build",
     "pretest:api": "NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn_test NEXT_PUBLIC_APP_ENV=test NODE_ENV=test node -r @swc-node/register scripts/generate-data.ts",
-    "test": "yarn pretest:api && NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn_test NEXT_PUBLIC_APP_ENV=test NODE_ENV=test jest --silent",
+    "test": "yarn pretest:api && NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn_test NEXT_PUBLIC_APP_ENV=test NODE_ENV=test jest --silent --testPathIgnorePatterns=src/modules",
     "test:watch": "npm run test -- --watch",
-    "test:frontend": "NEXT_PUBLIC_APP_ENV=test NODE_ENV=test jest --silent --testPathIgnorePatterns=src/api",
+    "test:frontend": "NEXT_PUBLIC_APP_ENV=test NODE_ENV=test jest --silent --testPathIgnorePatterns=src/api --testPathIgnorePatterns=src/modules",
+    "vitest": "vitest",
     "test:frontend:update": "npm run test:frontend -- --updateSnapshot",
     "test:api": "npm run test -- --testPathPattern=src/api",
     "test:api:update": "npm run test:api -- --updateSnapshot",
@@ -62,7 +63,7 @@
     "lit": "2.6.1",
     "lodash.deburr": "^4.1.0",
     "memoizee": "^0.4.15",
-    "next": "14.2.5",
+    "next": "14.2.8",
     "p-debounce": "^2.1.0",
     "prop-types": "^15.8.1",
     "publicodes": "1.0.0-beta.60",
@@ -93,6 +94,7 @@
     "@types/debounce-promise": "^3.1.4",
     "@types/jest": "^29.5.12",
     "@types/xml2js": "^0.4.14",
+    "@vitejs/plugin-react": "^4.3.1",
     "cypress": "^13.13.2",
     "cypress-html-validate": "^6.1.0",
     "cypress-iframe": "^1.0.1",
@@ -115,6 +117,7 @@
     "supertest": "^6.3.3",
     "testing-library-selector": "0.3.1",
     "typescript": "^5.0.4",
+    "vitest": "^2.0.5",
     "xml2js": "^0.6.2"
   }
 }
