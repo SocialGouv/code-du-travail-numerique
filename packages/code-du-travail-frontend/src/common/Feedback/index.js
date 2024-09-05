@@ -203,12 +203,6 @@ export { Feedback };
 
 const { breakpoints, spacings } = theme;
 
-const StyledSection = styled(Section)`
-  @media print {
-    display: none;
-  }
-`;
-
 const Fieldset = styled.fieldset`
   border: none;
   padding: 0;

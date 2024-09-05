@@ -5,6 +5,7 @@ import { getStatsService } from "../../src/api";
 import { cache } from "react";
 import { REVALIDATE_TIME_DAY } from "../../src/config";
 
+// utilisé ou ?
 export const dynamic = "force-static";
 
 export const revalidate = REVALIDATE_TIME_DAY;
