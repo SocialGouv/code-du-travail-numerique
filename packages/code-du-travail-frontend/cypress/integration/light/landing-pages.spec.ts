@@ -1,7 +1,7 @@
 describe("Landing pages", () => {
   it("je vois une page article code du travail", () => {
     cy.visit("/code-du-travail/l2312-1");
-    cy.get("h1").should("have.text", "L2312-1");
+    cy.findByRole("heading", { level: 1 }).should("have.text", "L2312-1");
     cy.get("body").should("contain", "Source: Code du travail");
     cy.get("body").should(
       "contain",
@@ -24,9 +24,16 @@ describe("Landing pages", () => {
   });
 
   it("je vois une page fiche ministère du travail avec un accordéon ouvert", () => {
-    cy.visit("/fiche-ministere-travail/la-demission#Quelle-est-la-situation-du-salarie-a-la-fin-du-contrat");
+    cy.visit(
+      "/fiche-ministere-travail/la-demission#Quelle-est-la-situation-du-salarie-a-la-fin-du-contrat"
+    );
     cy.get("h1").should("have.text", "La démission");
-    cy.get('[aria-expanded="true"]', { timeout: 10000 }).find("h2").should("contain", "Quelle est la situation du salarié à la fin du contrat");
+    cy.get('[aria-expanded="true"]', { timeout: 10000 })
+      .find("h2")
+      .should(
+        "contain",
+        "Quelle est la situation du salarié à la fin du contrat"
+      );
   });
 
   it("je vois une page fiche service public", () => {

@@ -7,7 +7,7 @@ import { replaceArticlesRefs } from "../../../src/lib/replaceArticlesRefs";
 import { getBySourceAndSlugItems } from "../../../src/api";
 import { DsfrLayout } from "../../../src/modules/layout";
 import { notFound } from "next/navigation";
-import Article from "../../../src/modules/code-du-travail/article";
+import ArticleCodeDuTravail from "../../../src/modules/code-du-travail/articleCodeDuTravail";
 
 async function Fiche({ params }: { params: { slug: string } }) {
   const { title, description, dateDebut, html, url, notaHtml, relatedItems } =
@@ -17,7 +17,7 @@ async function Fiche({ params }: { params: { slug: string } }) {
   return (
     <DsfrLayout>
       {/*<Metas title={title} description={description} />*/}
-      <Article
+      <ArticleCodeDuTravail
         suptitle={getLabelBySource(SOURCES.CDT)}
         title={title}
         relatedItems={relatedItems}
@@ -31,7 +31,7 @@ async function Fiche({ params }: { params: { slug: string } }) {
         source={{ name: "Code du travail", url }}
         notaHtml={notaHtml}
         metaDescription={description}
-      ></Article>
+      ></ArticleCodeDuTravail>
     </DsfrLayout>
   );
 }

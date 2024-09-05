@@ -16,7 +16,7 @@ type Props = {
   title: string;
 };
 
-function Article({
+function ArticleCodeDuTravail({
   metaDescription,
   date,
   html,
@@ -35,8 +35,8 @@ function Article({
       )}
     >
       <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
-        <Tag className={fr.cx("fr-mb-5w")}>{suptitle}</Tag>
-        <h1 className={fr.cx("fr-mb-5w")}>{title}</h1>
+        <Tag className={fr.cx("fr-mb-6w")}>{suptitle}</Tag>
+        <h1 className={fr.cx("fr-mb-6w")}>{title}</h1>
 
         <p>
           Source:{" "}
@@ -70,4 +70,4 @@ function Article({
   );
 }
 
-export default Article;
+export default ArticleCodeDuTravail;

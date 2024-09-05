@@ -1778,6 +1778,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.14.6":
+  version: 7.25.6
+  resolution: "@babel/runtime@npm:7.25.6"
+  dependencies:
+    regenerator-runtime: ^0.14.0
+  checksum: ee1a69d3ac7802803f5ee6a96e652b78b8addc28c6a38c725a4ad7d61a059d9e6cb9f6550ed2f63cce67a1bd82e0b1ef66a1079d895be6bfb536a5cfbd9ccc32
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.18.10, @babel/template@npm:^7.20.7, @babel/template@npm:^7.21.9, @babel/template@npm:^7.24.7, @babel/template@npm:^7.3.3":
   version: 7.24.7
   resolution: "@babel/template@npm:7.24.7"
@@ -1884,6 +1893,7 @@ __metadata:
     "@socialgouv/reference-article": ^1.0.1
     "@swc-node/register": ^1.6.5
     "@swc/core": ^1.3.60
+    "@testing-library/cypress": ^10.0.2
     "@testing-library/dom": ^8.11.3
     "@testing-library/jest-dom": ^5.16.5
     "@testing-library/react": ^12.1.2
@@ -7527,6 +7537,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@testing-library/cypress@npm:^10.0.2":
+  version: 10.0.2
+  resolution: "@testing-library/cypress@npm:10.0.2"
+  dependencies:
+    "@babel/runtime": ^7.14.6
+    "@testing-library/dom": ^10.1.0
+  peerDependencies:
+    cypress: ^12.0.0 || ^13.0.0
+  checksum: 90145ad5a544a3d725ec8d0bae386b81c12d14b28bb7d8de9936561e61325cb16c34c39ad709e2221d7ded1b75a160dcf7b8a4fa339a86bf59922a760d6a1e31
+  languageName: node
+  linkType: hard
+
+"@testing-library/dom@npm:^10.1.0":
+  version: 10.4.0
+  resolution: "@testing-library/dom@npm:10.4.0"
+  dependencies:
+    "@babel/code-frame": ^7.10.4
+    "@babel/runtime": ^7.12.5
+    "@types/aria-query": ^5.0.1
+    aria-query: 5.3.0
+    chalk: ^4.1.0
+    dom-accessibility-api: ^0.5.9
+    lz-string: ^1.5.0
+    pretty-format: ^27.0.2
+  checksum: bb128b90be0c8cd78c5f5e67aa45f53de614cc048a2b50b230e736ec710805ac6c73375af354b83c74d710b3928d52b83a273a4cb89de4eb3efe49e91e706837
+  languageName: node
+  linkType: hard
+
 "@testing-library/dom@npm:^8.0.0, @testing-library/dom@npm:^8.11.3":
   version: 8.20.0
   resolution: "@testing-library/dom@npm:8.20.0"
@@ -8996,7 +9034,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aria-query@npm:^5.0.0, aria-query@npm:^5.3.0":
+"aria-query@npm:5.3.0, aria-query@npm:^5.0.0, aria-query@npm:^5.3.0":
   version: 5.3.0
   resolution: "aria-query@npm:5.3.0"
   dependencies:
@@ -17982,7 +18020,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lz-string@npm:^1.4.4":
+"lz-string@npm:^1.4.4, lz-string@npm:^1.5.0":
   version: 1.5.0
   resolution: "lz-string@npm:1.5.0"
   bin:
