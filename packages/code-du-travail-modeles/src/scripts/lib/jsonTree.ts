@@ -52,13 +52,13 @@ function populateNode({ result, criterias }: CriteriaContainer): TreeQuestion {
       ? [
           {
             nextQuestion: populateNode({ criterias, result }),
-            text: option.replace(/’/, "'"),
+            text: option,
           },
         ]
       : [
           {
             result,
-            text: option.replace(/’/, "'"),
+            text: option,
           },
         ],
     text: question,

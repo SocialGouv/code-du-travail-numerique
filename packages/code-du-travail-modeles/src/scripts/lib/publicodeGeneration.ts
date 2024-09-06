@@ -34,8 +34,12 @@ contrat salarié . convention collective . ${namespaceLine} . résultat conventi
   valeur: ${value}${notificationLine}
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    ${refLines.join(`
-    `)}`;
+    ${refLines
+      .join(
+        `
+    `
+      )
+      .replace(/’/, "'")}`;
   return content;
 }
 
@@ -45,7 +49,7 @@ function generateQuestions(
   parseResult: ParseResult
 ): string {
   let content = "";
-  const namespaceLine = namespace.join(" . ");
+  const namespaceLine = namespace.join(" . ").replace(/’/, "'");
   switch (question.type) {
     case "select":
       content = `
@@ -57,10 +61,12 @@ contrat salarié . convention collective . ${namespaceLine} . ${cleanValue(
   cdtn:
     type: liste
     valeurs:
-      ${question.options.map(
-        ({ text }) => `${cleanValue(text)}: "'${cleanValue(text)}'"`
-      ).join(`
-      `)}`;
+      ${question.options
+        .map(({ text }) => `${cleanValue(text)}: "'${cleanValue(text)}'"`)
+        .join(
+          `
+      `
+        )}`;
   }
   const otherOptions = question.options.reduce<string[]>(
     (arr, { text, nextQuestion, result }) => {

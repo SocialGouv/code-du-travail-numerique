@@ -133,7 +133,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
           4,
           "0"
         )}'",
-        ${insertSituation()}
+        ${insertSituation().replace(/’/, "'")}
         ...situation,
       });
       expect(result).toResultBeEqual(expectedResult.expectedValue, expectedResult.unit);
