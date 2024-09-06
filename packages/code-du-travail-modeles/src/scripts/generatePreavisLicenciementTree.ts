@@ -1,5 +1,5 @@
 import { Situation, preavisLicenciementData } from "../simulators";
-import { generateTree } from "./lib";
+import { cleanRefLabel, generateTree } from "./lib";
 import { CriteriaItem, TreeQuestionType } from "./lib/type";
 
 export function getPrependPreavisLicenciementCriteria(
@@ -83,7 +83,7 @@ export function generatePreavisLicenciementTree() {
     getResult: (situation) => {
       const { answer, answer3, ref, refUrl } = situation as Situation;
       return {
-        refs: ref && refUrl ? [{ label: ref, url: refUrl }] : [],
+        refs: ref && refUrl ? [{ label: cleanRefLabel(ref), url: refUrl }] : [],
         texts: answer
           ? [
               answer3 !== "0"

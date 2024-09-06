@@ -1,7 +1,7 @@
 import fs from "fs";
 
-import type { TreeQuestion } from "./type";
-import { cleanValue } from "./common";
+import type { OptionResult, TreeQuestion } from "./type";
+import { cleanValue, getCCName } from "./common";
 
 type Situation = {
   [template: string]: string;
@@ -10,11 +10,14 @@ type Situation = {
 type SituationResult = {
   situation: Situation;
   expectedResult: {
-    expectedValue: number;
+    expectedValue?: number | string;
     unit?: string;
   };
   expectedReferences: { article: string; url: string }[];
+  expectedNotifications: string[];
 };
+
+type FormatResultOutput = Omit<SituationResult, "situation">;
 
 function capitalizeFirstLetter(text: string) {
   return text.charAt(0).toUpperCase() + text.slice(1);
@@ -23,6 +26,7 @@ function capitalizeFirstLetter(text: string) {
 function getSituation(
   question: TreeQuestion,
   templates: string[],
+  formatResult: (result: OptionResult) => FormatResultOutput,
   currentSituation: Situation = {}
 ): SituationResult[] {
   return question.options.reduce<SituationResult[]>(
@@ -32,35 +36,18 @@ function getSituation(
         ...currentSituation,
         [template]: `'${cleanValue(text)}'`,
       };
-
       if (result) {
-        const [value, unit] = result.texts[0].split(" ");
-        const expectedValue = parseInt(value);
-        if (isNaN(expectedValue)) {
-          arr.push({
-            situation,
-            expectedResult: { expectedValue: 0, unit: "mois" },
-            expectedReferences: result.refs.map(({ label, url }) => ({
-              article: label,
-              url,
-            })),
-          });
-        } else {
-          arr.push({
-            situation,
-            expectedResult: { expectedValue, unit },
-            expectedReferences: result.refs.map(({ label, url }) => ({
-              article: label,
-              url,
-            })),
-          });
-        }
+        arr.push({
+          ...formatResult(result),
+          situation,
+        });
       }
       if (nextQuestion) {
         arr = arr.concat(
           getSituation(
             nextQuestion,
             [...templates, `${question.name} ${cleanValue(text)}`],
+            formatResult,
             situation
           )
         );
@@ -88,7 +75,9 @@ function getIdccQuestion(question: TreeQuestion): TreeQuestion | null {
 
 function generateTest(
   question: TreeQuestion,
-  componentName: string
+  componentName: string,
+  formatResult: (result: OptionResult) => FormatResultOutput,
+  insertSituation: () => string
 ): { filename: string; content: string }[] {
   const idccQuestion = getIdccQuestion(question);
   if (!idccQuestion) {
@@ -106,15 +95,13 @@ function generateTest(
         if (foldername === undefined) {
           return arr;
         }
-        const foldernameSplit = foldername.split("_");
-        const ccName =
-          foldernameSplit?.slice(1, foldernameSplit.length).join(" ") ?? "";
+        const ccName = getCCName(`${pathDir}/${foldername}`);
         const situationLine = nextQuestion
-          ? getSituation(nextQuestion, [
-              "contrat salarié",
-              "convention collective",
-              ccName,
-            ]).map((situation) => {
+          ? getSituation(
+              nextQuestion,
+              ["contrat salarié", "convention collective", ccName],
+              formatResult
+            ).map((situation) => {
               return JSON.stringify(situation);
             }).join(`,
             `)
@@ -139,18 +126,19 @@ const engine = new ${capitalizeFirstLetter(
       
 describe("Test de la fonctionnalité 'calculate'", () => {
   test.each([${situationLine}])(
-    "Vérifier que le calculate donne le bon résultat pour la situation donnée",
-    ({situation, expectedResult, expectedReferences}) => {
+    "%#) Vérifier que le calculate donne le bon résultat pour la situation donnée",
+    ({situation, expectedResult, expectedReferences, expectedNotifications}) => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC${text.padStart(
           4,
           "0"
         )}'",
-        "contrat salarié . convention collective . ancienneté légal": "'Moins de 6 mois'",
+        ${insertSituation()}
         ...situation,
       });
       expect(result).toResultBeEqual(expectedResult.expectedValue, expectedResult.unit);
       expect(result).toHaveReferencesBeEqual(expectedReferences);
+      expect(result).toContainNotifications(expectedNotifications);
   });
 });`,
           filename: `${folderPath}/calculate.spec.ts`,
@@ -163,9 +151,16 @@ describe("Test de la fonctionnalité 'calculate'", () => {
 
 export async function generateModeleTestFiles(
   question: TreeQuestion,
-  componentName: string
+  componentName: string,
+  formatResult: (result: OptionResult) => FormatResultOutput,
+  insertSituation: () => string = () => ""
 ) {
-  const tests = generateTest(question, componentName);
+  const tests = generateTest(
+    question,
+    componentName,
+    formatResult,
+    insertSituation
+  );
   console.log(`Generating files for ${componentName}:`);
   await Promise.all(
     tests.map(({ filename, content }) => {

@@ -1,0 +1,41 @@
+
+contrat salarié . convention collective . télécommunications . typeRupture:
+  titre: typeRupture
+  question: Pour quelle raison le contrat de travail a-t-il été rompu ?
+  cdtn:
+    type: liste
+    valeurs:
+      Démission: "'Démission'"
+      Licenciement: "'Licenciement'"
+      Rupture de la période d'essai: "'Rupture de la période d'essai'"
+          
+contrat salarié . convention collective . télécommunications . typeRupture Démission:
+  applicable si: typeRupture = "Démission"
+          
+contrat salarié . convention collective . télécommunications . typeRupture Démission . résultat conventionnel:
+  valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 4.4.1.1: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000022416125&cidTexte=KALITEXT000005677399&dateTexte=29990101&categorieLien=id
+          
+contrat salarié . convention collective . télécommunications . typeRupture Licenciement:
+  applicable si: typeRupture = "Licenciement"
+          
+contrat salarié . convention collective . télécommunications . typeRupture Licenciement . résultat conventionnel:
+  valeur: "'2 heures par jour'"
+  type: notification
+  description:  
+    - Le salaire est maintenu.
+    - Ces heures sont fixées en accord avec l'employeur. En l'absence d'accord, les heures sont fixées un jour par le salarié et le suivant par l'employeur. L'employeur peut autoriser par écrit le salarié à cumuler ces heures de recherche d'emploi en fin de période de préavis, si les nécessités du service le permettent et dans la limite de la durée effectuée du préavis
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 4.4.1.1: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000022416125&cidTexte=KALITEXT000005677399&dateTexte=29990101&categorieLien=id
+          
+contrat salarié . convention collective . télécommunications . typeRupture Rupture de la période d'essai:
+  applicable si: typeRupture = "Rupture de la période d'essai"
+          
+contrat salarié . convention collective . télécommunications . typeRupture Rupture de la période d'essai . résultat conventionnel:
+  valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 4.2.3: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=26A7FB6F5D2CA4C5CB2E074D4254C88D.tplgfr36s_2?idArticle=KALIARTI000022416110&cidTexte=KALITEXT000005677399&dateTexte=29990101&categorieLien=id

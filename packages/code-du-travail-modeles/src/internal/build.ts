@@ -7,6 +7,7 @@ import Engine from "publicodes";
 import { extractSupportedCc } from "./extractSupportedCc";
 import {
   mergeCommonModels,
+  mergeHeuresRechercheEmploiModels,
   mergeIndemniteLicenciementModels,
   mergePreavisLicenciementModels,
   mergePreavisRetraiteModels,
@@ -78,4 +79,8 @@ writeJsonModel({
 writeJsonModel({
   merger: () => mergeRuptureConventionnelle(),
   outputName: "modeles-rupture-conventionnelle",
+});
+writeJsonModel({
+  merger: mergeHeuresRechercheEmploiModels,
+  outputName: "modeles-heures-recherche-emploi",
 });

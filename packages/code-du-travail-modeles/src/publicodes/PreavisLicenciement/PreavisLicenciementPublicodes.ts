@@ -32,7 +32,6 @@ export class PreavisLicenciementPublicodes extends PublicodesBase<PublicodesCalc
       situation,
       "contrat salarié . convention collective . résultat conventionnel"
     );
-    console.log("calculateAgreement", result);
     if (result.missingArgs.length > 0) {
       return {
         missingArgs: result.missingArgs,
@@ -95,22 +94,6 @@ export class PreavisLicenciementPublicodes extends PublicodesBase<PublicodesCalc
     ) {
       return legalResult;
     }
-
-    // if (legalResult && !this.agreementInstance) {
-    //   return {
-    //     ...legalResult,
-    //     detail: {
-    //       agreementExplanation:
-    //         this.explanationInstance.getAgreementExplanation(),
-    //       chosenResult: "LEGAL",
-    //       legalResult: legalResult.result,
-    //     },
-    //     explanation: this.explanationInstance.getMainExplanation(
-    //       legalResult.result.value
-    //     ),
-    //     situation: this.data.situation,
-    //   };
-    // }
 
     return this.builder.buildResult(
       this.data.situation,

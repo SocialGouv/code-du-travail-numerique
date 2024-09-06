@@ -20,6 +20,7 @@ import type {
   PreavisRetraitePublicodes,
   RuptureConventionnellePublicodes,
 } from ".";
+import { PreavisLicenciementPublicodes } from "./PreavisLicenciement";
 
 export type OldReference = {
   ref: string | null;
@@ -139,6 +140,7 @@ export enum PublicodesSimulator {
   PREAVIS_RETRAITE = "PREAVIS_RETRAITE",
   RUPTURE_CONVENTIONNELLE = "RUPTURE_CONVENTIONNELLE",
   PREAVIS_LICENCIEMENT = "PREAVIS_LICENCIEMENT",
+  HEURES_RECHERCHE_EMPLOI = "HEURES_RECHERCHE_EMPLOI",
 }
 
 export const PublicodesDefaultRules = {
@@ -149,6 +151,8 @@ export const PublicodesDefaultRules = {
   [PublicodesSimulator.RUPTURE_CONVENTIONNELLE]:
     "contrat salarié . indemnité de licenciement . résultat légal",
   [PublicodesSimulator.PREAVIS_LICENCIEMENT]:
+    "contrat salarié . résultat légal",
+  [PublicodesSimulator.HEURES_RECHERCHE_EMPLOI]:
     "contrat salarié . résultat légal",
 };
 
@@ -185,6 +189,8 @@ export type PublicodesInstance<T extends PublicodesSimulator> =
     ? IndemniteLicenciementPublicodes
     : T extends PublicodesSimulator.RUPTURE_CONVENTIONNELLE
     ? RuptureConventionnellePublicodes
+    : T extends PublicodesSimulator.PREAVIS_LICENCIEMENT
+    ? PreavisLicenciementPublicodes
     : never;
 
 export interface IndemniteDepartInstance {

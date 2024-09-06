@@ -5,8 +5,8 @@ import type {
   PublicodesResult,
 } from "../types";
 
-export type PublicodesCalculateResult = {
-  value: Evaluation<number>;
+export type PublicodesCalculateResult<T extends string | number = number> = {
+  value: Evaluation<T>;
   unit?: Unit;
   ineligibility?: string;
 };

@@ -1,7 +1,7 @@
 import fs from "fs";
 
 import { OptionResult, TreeQuestion } from "./type";
-import { cleanValue } from "./common";
+import { cleanValue, getCCName } from "./common";
 
 type ParseResult = (texts: string[]) => { value: string; notification: string };
 
@@ -12,8 +12,7 @@ function generateNamespace(
 ): string {
   return `
 contrat salarié . convention collective . ${namespace.join(" . ")}:
-  applicable si: ${questionName} = '${option}'
-  `;
+  applicable si: ${questionName} = "${option}"`;
 }
 
 function generateResult(
@@ -22,20 +21,21 @@ function generateResult(
   parseResult: ParseResult
 ): string {
   const namespaceLine = namespace.join(" . ");
-  const refLines = result.refs.map(
-    ({ url, label }) => `${label.replace(":", "").trim()}: ${url}`
-  );
+  const refLines = result.refs.map(({ url, label }) => `${label}: ${url}`);
 
   const { value, notification } = parseResult(result.texts);
+  const notificationLine = notification
+    ? `
+  type: notification
+  description:  ${notification}`
+    : "";
   const content = `
 contrat salarié . convention collective . ${namespaceLine} . résultat conventionnel:
-  valeur: ${value}
-  ${notification ? "notification: " + notification : ""}
+  valeur: ${value}${notificationLine}
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     ${refLines.join(`
-    `)}
-  `;
+    `)}`;
   return content;
 }
 
@@ -60,8 +60,7 @@ contrat salarié . convention collective . ${namespaceLine} . ${cleanValue(
       ${question.options.map(
         ({ text }) => `${cleanValue(text)}: "'${cleanValue(text)}'"`
       ).join(`
-      `)}
-      `;
+      `)}`;
   }
   const otherOptions = question.options.reduce<string[]>(
     (arr, { text, nextQuestion, result }) => {
@@ -132,9 +131,10 @@ function generatePublicode(
         const foldername = folders.find((folder) =>
           folder.startsWith(`${text}_`)
         );
-        const foldernameSplit = foldername?.split("_");
-        const ccName =
-          foldernameSplit?.slice(1, foldernameSplit.length).join(" ") ?? "";
+        if (foldername === undefined) {
+          return arr;
+        }
+        const ccName = getCCName(`${pathDir}/${foldername}`);
         if (!foldername) return arr;
         arr.push({
           content: nextQuestion

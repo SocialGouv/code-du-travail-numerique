@@ -10,11 +10,9 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
       Ingénieurs, Cadres: "'Ingénieurs, Cadres'"
       Ouvriers: "'Ouvriers'"
       Techniciens: "'Techniciens'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise:
-  applicable si: catégorie professionnelle = 'Agents de maîtrise'
-  
+  applicable si: catégorie professionnelle = "Agents de maîtrise"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise . groupe:
   titre: groupe
@@ -23,11 +21,9 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     type: liste
     valeurs:
       IV: "'IV'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise . groupe IV:
-  applicable si: groupe = 'IV'
-  
+  applicable si: groupe = "IV"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise . groupe IV . coefficient:
   titre: coefficient
@@ -37,35 +33,27 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Inférieur à 275: "'Inférieur à 275'"
       Supérieur à 275 inclus: "'Supérieur à 275 inclus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise . groupe IV . coefficient Inférieur à 275:
-  applicable si: coefficient = 'Inférieur à 275'
-  
+  applicable si: coefficient = "Inférieur à 275"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise . groupe IV . coefficient Inférieur à 275 . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant 2, article 20: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9658082762B1C494A3C7AB50DDDEB53B.tpdjo14v_2?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795&dateTexte=20120612
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise . groupe IV . coefficient Supérieur à 275 inclus:
-  applicable si: coefficient = 'Supérieur à 275 inclus'
-  
+  applicable si: coefficient = "Supérieur à 275 inclus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise . groupe IV . coefficient Supérieur à 275 inclus . résultat conventionnel:
   valeur: 3 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant 2, article 20: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9658082762B1C494A3C7AB50DDDEB53B.tpdjo14v_2?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795&dateTexte=20120612
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés:
-  applicable si: catégorie professionnelle = 'Employés'
-  
+  applicable si: catégorie professionnelle = "Employés"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe:
   titre: groupe
@@ -76,11 +64,9 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
       I: "'I'"
       II: "'II'"
       III: "'III'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I:
-  applicable si: groupe = 'I'
-  
+  applicable si: groupe = "I"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient:
   titre: coefficient
@@ -90,11 +76,9 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Inférieur à 190: "'Inférieur à 190'"
       190 et plus: "'190 et plus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient Inférieur à 190:
-  applicable si: coefficient = 'Inférieur à 190'
-  
+  applicable si: coefficient = "Inférieur à 190"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient Inférieur à 190 . ancienneté:
   titre: ancienneté
@@ -104,47 +88,36 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Moins de 2 ans: "'Moins de 2 ans'"
       2 ans ou plus: "'2 ans ou plus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient Inférieur à 190 . ancienneté Moins de 2 ans:
-  applicable si: ancienneté = 'Moins de 2 ans'
-  
+  applicable si: ancienneté = "Moins de 2 ans"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient Inférieur à 190 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient Inférieur à 190 . ancienneté 2 ans ou plus:
-  applicable si: ancienneté = '2 ans ou plus'
-  
+  applicable si: ancienneté = "2 ans ou plus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient Inférieur à 190 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient 190 et plus:
-  applicable si: coefficient = '190 et plus'
-  
+  applicable si: coefficient = "190 et plus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient 190 et plus . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II:
-  applicable si: groupe = 'II'
-  
+  applicable si: groupe = "II"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient:
   titre: coefficient
@@ -154,11 +127,9 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Inférieur à 190: "'Inférieur à 190'"
       190 et plus: "'190 et plus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient Inférieur à 190:
-  applicable si: coefficient = 'Inférieur à 190'
-  
+  applicable si: coefficient = "Inférieur à 190"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient Inférieur à 190 . ancienneté:
   titre: ancienneté
@@ -168,47 +139,36 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Moins de 2 ans: "'Moins de 2 ans'"
       2 ans ou plus: "'2 ans ou plus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient Inférieur à 190 . ancienneté Moins de 2 ans:
-  applicable si: ancienneté = 'Moins de 2 ans'
-  
+  applicable si: ancienneté = "Moins de 2 ans"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient Inférieur à 190 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient Inférieur à 190 . ancienneté 2 ans ou plus:
-  applicable si: ancienneté = '2 ans ou plus'
-  
+  applicable si: ancienneté = "2 ans ou plus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient Inférieur à 190 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient 190 et plus:
-  applicable si: coefficient = '190 et plus'
-  
+  applicable si: coefficient = "190 et plus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient 190 et plus . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III:
-  applicable si: groupe = 'III'
-  
+  applicable si: groupe = "III"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient:
   titre: coefficient
@@ -218,11 +178,9 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Inférieur à 190: "'Inférieur à 190'"
       190 et plus: "'190 et plus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient Inférieur à 190:
-  applicable si: coefficient = 'Inférieur à 190'
-  
+  applicable si: coefficient = "Inférieur à 190"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient Inférieur à 190 . ancienneté:
   titre: ancienneté
@@ -232,47 +190,36 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Moins de 2 ans: "'Moins de 2 ans'"
       2 ans ou plus: "'2 ans ou plus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient Inférieur à 190 . ancienneté Moins de 2 ans:
-  applicable si: ancienneté = 'Moins de 2 ans'
-  
+  applicable si: ancienneté = "Moins de 2 ans"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient Inférieur à 190 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient Inférieur à 190 . ancienneté 2 ans ou plus:
-  applicable si: ancienneté = '2 ans ou plus'
-  
+  applicable si: ancienneté = "2 ans ou plus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient Inférieur à 190 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient 190 et plus:
-  applicable si: coefficient = '190 et plus'
-  
+  applicable si: coefficient = "190 et plus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient 190 et plus . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ingénieurs, Cadres:
-  applicable si: catégorie professionnelle = 'Ingénieurs, Cadres'
-  
+  applicable si: catégorie professionnelle = "Ingénieurs, Cadres"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ingénieurs, Cadres . groupe:
   titre: groupe
@@ -281,23 +228,18 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     type: liste
     valeurs:
       V: "'V'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ingénieurs, Cadres . groupe V:
-  applicable si: groupe = 'V'
-  
+  applicable si: groupe = "V"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ingénieurs, Cadres . groupe V . résultat conventionnel:
   valeur: 3 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°3 article 4: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846301&cidTexte=KALITEXT000005677770&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers:
-  applicable si: catégorie professionnelle = 'Ouvriers'
-  
+  applicable si: catégorie professionnelle = "Ouvriers"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe:
   titre: groupe
@@ -308,11 +250,9 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
       I: "'I'"
       II: "'II'"
       III: "'III'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I:
-  applicable si: groupe = 'I'
-  
+  applicable si: groupe = "I"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient:
   titre: coefficient
@@ -322,11 +262,9 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Inférieur à 190: "'Inférieur à 190'"
       190 et plus: "'190 et plus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient Inférieur à 190:
-  applicable si: coefficient = 'Inférieur à 190'
-  
+  applicable si: coefficient = "Inférieur à 190"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient Inférieur à 190 . ancienneté:
   titre: ancienneté
@@ -336,47 +274,36 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Moins de 2 ans: "'Moins de 2 ans'"
       2 ans ou plus: "'2 ans ou plus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient Inférieur à 190 . ancienneté Moins de 2 ans:
-  applicable si: ancienneté = 'Moins de 2 ans'
-  
+  applicable si: ancienneté = "Moins de 2 ans"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient Inférieur à 190 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient Inférieur à 190 . ancienneté 2 ans ou plus:
-  applicable si: ancienneté = '2 ans ou plus'
-  
+  applicable si: ancienneté = "2 ans ou plus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient Inférieur à 190 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient 190 et plus:
-  applicable si: coefficient = '190 et plus'
-  
+  applicable si: coefficient = "190 et plus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient 190 et plus . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II:
-  applicable si: groupe = 'II'
-  
+  applicable si: groupe = "II"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient:
   titre: coefficient
@@ -386,11 +313,9 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Inférieur à 190: "'Inférieur à 190'"
       190 et plus: "'190 et plus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient Inférieur à 190:
-  applicable si: coefficient = 'Inférieur à 190'
-  
+  applicable si: coefficient = "Inférieur à 190"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient Inférieur à 190 . ancienneté:
   titre: ancienneté
@@ -400,47 +325,36 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Moins de 2 ans: "'Moins de 2 ans'"
       2 ans ou plus: "'2 ans ou plus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient Inférieur à 190 . ancienneté Moins de 2 ans:
-  applicable si: ancienneté = 'Moins de 2 ans'
-  
+  applicable si: ancienneté = "Moins de 2 ans"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient Inférieur à 190 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient Inférieur à 190 . ancienneté 2 ans ou plus:
-  applicable si: ancienneté = '2 ans ou plus'
-  
+  applicable si: ancienneté = "2 ans ou plus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient Inférieur à 190 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient 190 et plus:
-  applicable si: coefficient = '190 et plus'
-  
+  applicable si: coefficient = "190 et plus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient 190 et plus . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III:
-  applicable si: groupe = 'III'
-  
+  applicable si: groupe = "III"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient:
   titre: coefficient
@@ -450,11 +364,9 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Inférieur à 190: "'Inférieur à 190'"
       190 et plus: "'190 et plus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient Inférieur à 190:
-  applicable si: coefficient = 'Inférieur à 190'
-  
+  applicable si: coefficient = "Inférieur à 190"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient Inférieur à 190 . ancienneté:
   titre: ancienneté
@@ -464,47 +376,36 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Moins de 2 ans: "'Moins de 2 ans'"
       2 ans ou plus: "'2 ans ou plus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient Inférieur à 190 . ancienneté Moins de 2 ans:
-  applicable si: ancienneté = 'Moins de 2 ans'
-  
+  applicable si: ancienneté = "Moins de 2 ans"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient Inférieur à 190 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient Inférieur à 190 . ancienneté 2 ans ou plus:
-  applicable si: ancienneté = '2 ans ou plus'
-  
+  applicable si: ancienneté = "2 ans ou plus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient Inférieur à 190 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient 190 et plus:
-  applicable si: coefficient = '190 et plus'
-  
+  applicable si: coefficient = "190 et plus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient 190 et plus . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens:
-  applicable si: catégorie professionnelle = 'Techniciens'
-  
+  applicable si: catégorie professionnelle = "Techniciens"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe:
   titre: groupe
@@ -516,11 +417,9 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
       II: "'II'"
       III: "'III'"
       IV: "'IV'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I:
-  applicable si: groupe = 'I'
-  
+  applicable si: groupe = "I"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient:
   titre: coefficient
@@ -530,11 +429,9 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Inférieur à 190: "'Inférieur à 190'"
       190 et plus: "'190 et plus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient Inférieur à 190:
-  applicable si: coefficient = 'Inférieur à 190'
-  
+  applicable si: coefficient = "Inférieur à 190"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient Inférieur à 190 . ancienneté:
   titre: ancienneté
@@ -544,47 +441,36 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Moins de 2 ans: "'Moins de 2 ans'"
       2 ans ou plus: "'2 ans ou plus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient Inférieur à 190 . ancienneté Moins de 2 ans:
-  applicable si: ancienneté = 'Moins de 2 ans'
-  
+  applicable si: ancienneté = "Moins de 2 ans"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient Inférieur à 190 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient Inférieur à 190 . ancienneté 2 ans ou plus:
-  applicable si: ancienneté = '2 ans ou plus'
-  
+  applicable si: ancienneté = "2 ans ou plus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient Inférieur à 190 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient 190 et plus:
-  applicable si: coefficient = '190 et plus'
-  
+  applicable si: coefficient = "190 et plus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient 190 et plus . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II:
-  applicable si: groupe = 'II'
-  
+  applicable si: groupe = "II"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient:
   titre: coefficient
@@ -594,11 +480,9 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Inférieur à 190: "'Inférieur à 190'"
       190 et plus: "'190 et plus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient Inférieur à 190:
-  applicable si: coefficient = 'Inférieur à 190'
-  
+  applicable si: coefficient = "Inférieur à 190"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient Inférieur à 190 . ancienneté:
   titre: ancienneté
@@ -608,47 +492,36 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Moins de 2 ans: "'Moins de 2 ans'"
       2 ans ou plus: "'2 ans ou plus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient Inférieur à 190 . ancienneté Moins de 2 ans:
-  applicable si: ancienneté = 'Moins de 2 ans'
-  
+  applicable si: ancienneté = "Moins de 2 ans"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient Inférieur à 190 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient Inférieur à 190 . ancienneté 2 ans ou plus:
-  applicable si: ancienneté = '2 ans ou plus'
-  
+  applicable si: ancienneté = "2 ans ou plus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient Inférieur à 190 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient 190 et plus:
-  applicable si: coefficient = '190 et plus'
-  
+  applicable si: coefficient = "190 et plus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient 190 et plus . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III:
-  applicable si: groupe = 'III'
-  
+  applicable si: groupe = "III"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient:
   titre: coefficient
@@ -658,11 +531,9 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Inférieur à 190: "'Inférieur à 190'"
       190 et plus: "'190 et plus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient Inférieur à 190:
-  applicable si: coefficient = 'Inférieur à 190'
-  
+  applicable si: coefficient = "Inférieur à 190"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient Inférieur à 190 . ancienneté:
   titre: ancienneté
@@ -672,47 +543,36 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Moins de 2 ans: "'Moins de 2 ans'"
       2 ans ou plus: "'2 ans ou plus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient Inférieur à 190 . ancienneté Moins de 2 ans:
-  applicable si: ancienneté = 'Moins de 2 ans'
-  
+  applicable si: ancienneté = "Moins de 2 ans"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient Inférieur à 190 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient Inférieur à 190 . ancienneté 2 ans ou plus:
-  applicable si: ancienneté = '2 ans ou plus'
-  
+  applicable si: ancienneté = "2 ans ou plus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient Inférieur à 190 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient 190 et plus:
-  applicable si: coefficient = '190 et plus'
-  
+  applicable si: coefficient = "190 et plus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient 190 et plus . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe IV:
-  applicable si: groupe = 'IV'
-  
+  applicable si: groupe = "IV"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe IV . coefficient:
   titre: coefficient
@@ -722,28 +582,21 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
     valeurs:
       Inférieur à 275: "'Inférieur à 275'"
       Supérieur à 275 inclus: "'Supérieur à 275 inclus'"
-      
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe IV . coefficient Inférieur à 275:
-  applicable si: coefficient = 'Inférieur à 275'
-  
+  applicable si: coefficient = "Inférieur à 275"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe IV . coefficient Inférieur à 275 . résultat conventionnel:
   valeur: 2 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant 2, article 20: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9658082762B1C494A3C7AB50DDDEB53B.tpdjo14v_2?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795&dateTexte=20120612
-  
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe IV . coefficient Supérieur à 275 inclus:
-  applicable si: coefficient = 'Supérieur à 275 inclus'
-  
+  applicable si: coefficient = "Supérieur à 275 inclus"
           
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe IV . coefficient Supérieur à 275 inclus . résultat conventionnel:
   valeur: 3 mois
-  
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Avenant 2, article 20: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9658082762B1C494A3C7AB50DDDEB53B.tpdjo14v_2?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795&dateTexte=20120612
-  

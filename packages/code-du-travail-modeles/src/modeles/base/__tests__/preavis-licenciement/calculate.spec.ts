@@ -1,4 +1,4 @@
-import PreavisLicenciementPublicodes from "../../../../publicodes/PreavisLicenciement/PreavisLicenciementPublicodes";
+import { PreavisLicenciementPublicodes } from "../../../../publicodes/PreavisLicenciement";
 
 const engine = new PreavisLicenciementPublicodes(modelsPreavisLicenciement);
 

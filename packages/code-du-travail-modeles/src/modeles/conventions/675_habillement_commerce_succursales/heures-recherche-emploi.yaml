@@ -1,0 +1,49 @@
+
+contrat salarié . convention collective . habillement commerce succursales . typeRupture:
+  titre: typeRupture
+  question: Pour quelle raison le contrat de travail a-t-il été rompu ?
+  cdtn:
+    type: liste
+    valeurs:
+      Démission: "'Démission'"
+      Licenciement: "'Licenciement'"
+      Rupture de la période d'essai: "'Rupture de la période d'essai'"
+          
+contrat salarié . convention collective . habillement commerce succursales . typeRupture Démission:
+  applicable si: typeRupture = "Démission"
+          
+contrat salarié . convention collective . habillement commerce succursales . typeRupture Démission . résultat conventionnel:
+  valeur: "'2 heures par jour'"
+  type: notification
+  description:  
+    - Le salaire est maintenu.
+    - Les heures absences sont fixées d'un commun accord entre l'employeur et le salarié, et peuvent être groupées. A défaut d'accord, ces heures absences sont fixées un jour par l'employeur et le suivant par le salarié.
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 39: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AF6CA15C9F4A85C0EE9D4210D1FFD9A4.tplgfr41s_1?idArticle=KALIARTI000005851079&cidTexte=KALITEXT000005679762&dateTexte=29990101&categorieLien=id
+          
+contrat salarié . convention collective . habillement commerce succursales . typeRupture Licenciement:
+  applicable si: typeRupture = "Licenciement"
+          
+contrat salarié . convention collective . habillement commerce succursales . typeRupture Licenciement . résultat conventionnel:
+  valeur: "'2 heures par jour'"
+  type: notification
+  description:  
+    - Le salaire est maintenu.
+    - Les heures absences sont fixées d'un commun accord entre l'employeur et le salarié, et peuvent être groupées. A défaut d'accord, ces heures absences sont fixées un jour par l'employeur et le suivant par le salarié.
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 39: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AF6CA15C9F4A85C0EE9D4210D1FFD9A4.tplgfr41s_1?idArticle=KALIARTI000005851079&cidTexte=KALITEXT000005679762&dateTexte=29990101&categorieLien=id
+          
+contrat salarié . convention collective . habillement commerce succursales . typeRupture Rupture de la période d'essai:
+  applicable si: typeRupture = "Rupture de la période d'essai"
+          
+contrat salarié . convention collective . habillement commerce succursales . typeRupture Rupture de la période d'essai . résultat conventionnel:
+  valeur: "'2 heures par jour après un mois d'essai'"
+  type: notification
+  description:  
+    - Le salaire est maintenu.
+    - Les heures absences sont fixées d'un commun accord entre l'employeur et le salarié, et peuvent être groupées. A défaut d'accord, ces heures absences sont fixées: un jour par l'employeur, et le suivant par le salarié.
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 39: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AF6CA15C9F4A85C0EE9D4210D1FFD9A4.tplgfr41s_1?idArticle=KALIARTI000005851079&cidTexte=KALITEXT000005679762&dateTexte=29990101&categorieLien=id

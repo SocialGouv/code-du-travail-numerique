@@ -1,0 +1,107 @@
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture:
+  titre: typeRupture
+  question: Pour quelle raison le contrat de travail a-t-il été rompu ?
+  cdtn:
+    type: liste
+    valeurs:
+      Licenciement: "'Licenciement'"
+          
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement:
+  applicable si: typeRupture = "Licenciement"
+          
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle:
+  titre: catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Assistants maternels du particulier employeur: "'Assistants maternels du particulier employeur'"
+      Salariés du particulier employeur: "'Salariés du particulier employeur'"
+          
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Assistants maternels du particulier employeur:
+  applicable si: catégorie professionnelle = "Assistants maternels du particulier employeur"
+          
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Assistants maternels du particulier employeur . résultat conventionnel:
+  valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    
+          
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur:
+  applicable si: catégorie professionnelle = "Salariés du particulier employeur"
+          
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail:
+  titre: durée du travail
+  question: Quelle est la durée du travail du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 40 heures par semaine: "'Moins de 40 heures par semaine'"
+      40 heures ou plus par semaine: "'40 heures ou plus par semaine'"
+          
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail Moins de 40 heures par semaine:
+  applicable si: durée du travail = "Moins de 40 heures par semaine"
+          
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail Moins de 40 heures par semaine . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 2 ans: "'Moins de 2 ans'"
+      2 ans ou plus: "'2 ans ou plus'"
+          
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail Moins de 40 heures par semaine . ancienneté Moins de 2 ans:
+  applicable si: ancienneté = "Moins de 2 ans"
+          
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail Moins de 40 heures par semaine . ancienneté Moins de 2 ans . résultat conventionnel:
+  valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    
+          
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail Moins de 40 heures par semaine . ancienneté 2 ans ou plus:
+  applicable si: ancienneté = "2 ans ou plus"
+          
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail Moins de 40 heures par semaine . ancienneté 2 ans ou plus . résultat conventionnel:
+  valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    
+          
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail 40 heures ou plus par semaine:
+  applicable si: durée du travail = "40 heures ou plus par semaine"
+          
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail 40 heures ou plus par semaine . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 2 ans: "'Moins de 2 ans'"
+      2 ans ou plus: "'2 ans ou plus'"
+          
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail 40 heures ou plus par semaine . ancienneté Moins de 2 ans:
+  applicable si: ancienneté = "Moins de 2 ans"
+          
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail 40 heures ou plus par semaine . ancienneté Moins de 2 ans . résultat conventionnel:
+  valeur: "'2 heures par jour pendant 6 jours ouvrables'"
+  type: notification
+  description:  
+    - Le salaire est maintenu. A défaut d'accord entre l'employeur et le salarié, les périodes de deux heures sont prises alternativement, un jour au choix du ou des particuliers employeurs et un jour au choix du salarié.
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    
+          
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail 40 heures ou plus par semaine . ancienneté 2 ans ou plus:
+  applicable si: ancienneté = "2 ans ou plus"
+          
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail 40 heures ou plus par semaine . ancienneté 2 ans ou plus . résultat conventionnel:
+  valeur: "'2 heures par jour pendant 10 jours ouvrables'"
+  type: notification
+  description:  
+    - Le salaire est maintenu. A défaut d'accord entre l'employeur et le salarié, les périodes de deux heures sont prises alternativement, un jour au choix du ou des particuliers employeurs et un jour au choix du salarié.
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    

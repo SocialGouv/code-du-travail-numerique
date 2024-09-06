@@ -2,7 +2,7 @@ import {
   SituationHeuresRechercheEmploi,
   heuresRechercheEmploiData,
 } from "../simulators";
-import { generateTree } from "./lib";
+import { cleanRefLabel, generateTree } from "./lib";
 import { TreeQuestionType } from "./lib/type";
 
 export function generateHeureRechercheEmploiTree() {
@@ -26,6 +26,25 @@ export function generateHeureRechercheEmploiTree() {
       key: `criteria.${question.name}`,
     })),
   ];
+  function formatRefs(inputLabel: string, inputUrl: string) {
+    const arr: { label: string; url: string }[] = [];
+    const urls = inputUrl.split("\n");
+    const labels = inputLabel.split("\n");
+    if (urls.length > 1 && labels.length > 1 && urls.length === labels.length) {
+      labels.forEach((label, index) => {
+        arr.push({
+          label: cleanRefLabel(label),
+          url: cleanRefLabel(urls[index]),
+        });
+      });
+    } else {
+      arr.push({
+        url: cleanRefLabel(inputUrl),
+        label: cleanRefLabel(inputLabel),
+      });
+    }
+    return arr;
+  }
   return generateTree<SituationHeuresRechercheEmploi>({
     getCriterias: (situation) => {
       return {
@@ -35,15 +54,27 @@ export function generateHeureRechercheEmploiTree() {
       };
     },
     getResult: ({ answer, answer2, answer3, ref, refUrl }) => ({
-      refs: ref && refUrl ? [{ label: ref, url: refUrl }] : [],
+      refs: ref && refUrl ? formatRefs(ref, refUrl) : [],
       texts: answer
         ? [
-            answer.replace(/\n/g, " ").replace(/ {2}/g, " ").trim(),
-            answer2?.replace(/\n/g, " ").replace(/ {2}/g, " ").trim() ?? "",
-            answer3?.replace(/\n/g, " ").replace(/ {2}/g, " ").trim() ?? "",
+            answer
+              .replace(/\n/g, " ")
+              .replace(/ {2}/g, " ")
+              .replace(/'/g, "'")
+              .trim(),
+            answer2
+              ?.replace(/\n/g, " ")
+              .replace(/ {2}/g, " ")
+              .replace(/'/g, "'")
+              .trim() ?? "",
+            answer3
+              ?.replace(/\n/g, " ")
+              .replace(/ {2}/g, " ")
+              .replace(/'/g, "'")
+              .trim() ?? "",
           ]
         : [
-            "D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.",
+            "D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.",
           ],
     }),
     questions,
