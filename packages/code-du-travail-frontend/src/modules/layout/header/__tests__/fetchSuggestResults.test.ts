@@ -1,8 +1,7 @@
 import { fetchSuggestResults } from "../fetchSuggestResults";
-import { vi } from "vitest";
 
-vi.useFakeTimers();
-global.fetch = vi.fn();
+jest.useFakeTimers();
+global.fetch = jest.fn();
 
 (fetch as any).mockResolvedValue({
   json: () => Promise.resolve(results),
@@ -21,7 +20,7 @@ describe("suggest service", () => {
   });
   it("should make a request unless debounce time is ellapsed", () => {
     fetchSuggestResults(query);
-    vi.runAllTimers();
+    jest.runAllTimers();
     expect(fetch).toHaveBeenCalledTimes(1);
     expect((fetch as any).mock.calls[0][0]).toMatch(
       "api.url/api/suggest?q=foo"

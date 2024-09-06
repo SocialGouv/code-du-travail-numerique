@@ -1,6 +1,6 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Footer /> > should match snapshot 1`] = `
+exports[`<Footer /> should match snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -399,7 +399,7 @@ exports[`<Footer /> > should match snapshot 1`] = `
               >
                 <a
                   class="fr-footer__bottom-link"
-                  href="https://github.com/SocialGouv/code-du-travail-numerique/tree/v4.151.1"
+                  href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vvX.Y.Z"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -844,7 +844,7 @@ exports[`<Footer /> > should match snapshot 1`] = `
             >
               <a
                 class="fr-footer__bottom-link"
-                href="https://github.com/SocialGouv/code-du-travail-numerique/tree/v4.151.1"
+                href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vvX.Y.Z"
                 rel="noopener noreferrer"
                 target="_blank"
               >
