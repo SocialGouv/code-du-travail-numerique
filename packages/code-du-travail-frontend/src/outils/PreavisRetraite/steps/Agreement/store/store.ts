@@ -18,6 +18,11 @@ import { validateStep } from "./validator";
 import { InformationsStoreSlice } from "../../Informations/store";
 import { captureException } from "@sentry/nextjs";
 import { OriginDepartStoreSlice } from "../../OriginStep/store";
+import {
+  getAgreementFromLocalStorage,
+  removeAgreementFromLocalStorage,
+  saveAgreementToLocalStorage,
+} from "../../../../../lib/useLocalStorage";
 
 const initialState: Omit<AgreementStoreData, "publicodes"> = {
   input: {
@@ -42,9 +47,8 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
   agreementFunction: {
     onInitAgreementPage: () => {
       try {
-        const data = window?.localStorage?.getItem(STORAGE_KEY_AGREEMENT);
-        if (data) {
-          const parsedData: Agreement = JSON.parse(data);
+        const parsedData = getAgreementFromLocalStorage();
+        if (parsedData) {
           if (parsedData?.num !== get().agreementData.input.agreement?.num) {
             applyGenericValidation(get, set, "agreement", parsedData);
             applyGenericValidation(
@@ -76,9 +80,7 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
     onRouteChange: (value) => {
       if (value === "not-selected") {
         try {
-          if (window?.localStorage) {
-            window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
-          }
+          removeAgreementFromLocalStorage();
           get().informationsFunction.generatePublicodesQuestions();
           set(
             produce((state: AgreementStoreSlice) => {
@@ -104,16 +106,8 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
     },
     onAgreementChange: (agreement, enterprise) => {
       applyGenericValidation(get, set, "agreement", agreement);
+      saveAgreementToLocalStorage(agreement);
       try {
-        if (agreement) {
-          window?.localStorage?.setItem(
-            STORAGE_KEY_AGREEMENT,
-            JSON.stringify(agreement)
-          );
-        } else {
-          window?.localStorage?.removeItem(STORAGE_KEY_AGREEMENT);
-        }
-
         applyGenericValidation(get, set, "enterprise", enterprise);
         const idcc = agreement?.num?.toString();
         get().informationsFunction.generatePublicodesQuestions();
