@@ -2098,6 +2098,7 @@ __metadata:
     memoizee: ^0.4.15
     mockdate: ^3.0.5
     next: 14.2.8
+    next-router-mock: ^0.9.13
     nextjs-http-supertest: ^1.0.6
     p-debounce: ^2.1.0
     postcss: ^8.4.44
@@ -19338,6 +19339,16 @@ __metadata:
   version: 2.6.2
   resolution: "neo-async@npm:2.6.2"
   checksum: deac9f8d00eda7b2e5cd1b2549e26e10a0faa70adaa6fdadca701cc55f49ee9018e427f424bac0c790b7c7e2d3068db97f3093f1093975f2acb8f8818b936ed9
+  languageName: node
+  linkType: hard
+
+"next-router-mock@npm:^0.9.13":
+  version: 0.9.13
+  resolution: "next-router-mock@npm:0.9.13"
+  peerDependencies:
+    next: ">=10.0.0"
+    react: ">=17.0.0"
+  checksum: e6f9bae52cdd4905f628addc14abd1fe9aac7e8a3dbc50d438e82c9c0472cba850a7a624fbd94e68c00b61fd07803a2754587db2ec0fffbd3c45a896c6193bf2
   languageName: node
   linkType: hard
 

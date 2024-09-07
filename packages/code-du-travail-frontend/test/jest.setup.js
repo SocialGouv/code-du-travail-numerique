@@ -2,6 +2,20 @@ import "@testing-library/jest-dom";
 
 import MockDate from "mockdate";
 
+import * as mockRouter from "next-router-mock";
+
+const useRouter = mockRouter.useRouter;
+
+jest.mock("next/navigation", () => ({
+  ...mockRouter,
+  useSearchParams: () => {
+    const router = useRouter();
+    const path = router.query;
+    return new URLSearchParams(path);
+  },
+  usePathname: jest.fn(),
+}));
+
 MockDate.set("2020-1-4");
 
 if (typeof window !== "undefined") {
