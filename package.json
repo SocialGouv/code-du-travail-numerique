@@ -22,7 +22,6 @@
     "storybook:deploy": "lerna run deploy-storybook --scope=@socialgouv/cdtn-ui",
     "svg": "lerna run svg --scope=@socialgouv/cdtn-ui --stream",
     "test": "npm run test:frontend && npm run test:modeles && npm run test:ui && npm run test:utils",
-    "vitest": "lerna run vitest --scope=@cdt/frontend --stream",
     "test:modeles": "lerna run test --scope=@socialgouv/modeles-social --stream",
     "test:frontend": "lerna run test:frontend --scope=@cdt/frontend --stream",
     "test:ui": "lerna run test --scope=@socialgouv/cdtn-ui --stream",

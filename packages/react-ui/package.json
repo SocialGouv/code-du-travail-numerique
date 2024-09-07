@@ -25,8 +25,7 @@
     "deploy-storybook": "npm run build-storybook && touch .out/.nojekyll && gh-pages -d .out -u \"github-actions-bot <support+actions@github.com>\" -t true",
     "watch": "yarn build --watch",
     "test": "jest --silent",
-    "test:update": "jest --silent -u",
-    "vitest": "echo 'no tests'"
+    "test:update": "jest --silent -u"
   },
   "dependencies": {
     "@reach/dialog": "0.15.3",
