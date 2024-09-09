@@ -22,6 +22,11 @@ export const RelatedItems = ({
 }: {
   items: { slug?: string; source; title: string; reco; url?: string }[];
 }) => {
+
+  if (items.length === 0) {
+    return <></>;
+  }
+
   const isArticleSource = (source) =>
     ![SOURCES.EXTERNALS, SOURCES.LETTERS, SOURCES.TOOLS].includes(source);
 
@@ -36,6 +41,8 @@ export const RelatedItems = ({
     { items: relatedOtherItems, title: "Modèles et outils liés" },
     { items: relatedArticleItems, title: "Articles liés" },
   ];
+
+
 
   return (
     <div className={fr.cx("fr-mb-5w")}>
@@ -80,7 +87,3 @@ export const RelatedItems = ({
     </div>
   );
 };
-
-const mainContainer = css({
-  background: "var(--background-alt-blue-france)",
-});

@@ -58,6 +58,10 @@ const items = [
 ];
 
 describe("<RelatedItems />", () => {
+  test("if no items", () => {
+    const { container } = render(<RelatedItems items={[]} />);
+    expect(container).toMatchInlineSnapshot();
+  });
   test("should render", () => {
     const { container } = render(<RelatedItems items={items} />);
     expect(container).toMatchSnapshot();
