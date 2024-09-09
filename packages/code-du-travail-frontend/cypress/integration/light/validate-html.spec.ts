@@ -1,5 +1,5 @@
 import "cypress-html-validate/commands";
-import { localConfig } from "../heavy/validate-html.spec";
+import { localConfig } from "../html-validation/validate-html.spec";
 
 describe("Validation de l'html d'un échantillon de pages", () => {
   [
