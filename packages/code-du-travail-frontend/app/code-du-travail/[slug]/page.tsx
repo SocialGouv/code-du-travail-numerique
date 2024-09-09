@@ -27,7 +27,6 @@ async function Fiche({ params }) {
   const fixedHtml = replaceArticlesRefs("https://legifrance.gouv.fr", html);
   return (
     <DsfrLayout>
-      {/*<Metas title={title} description={description} />*/}
       <ArticleCodeDuTravail
         suptitle={getLabelBySource(SOURCES.CDT)}
         title={title}
