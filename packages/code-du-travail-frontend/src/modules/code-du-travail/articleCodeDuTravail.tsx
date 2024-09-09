@@ -1,7 +1,7 @@
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
-import Html from "../common/Html";
 import { Tag } from "@codegouvfr/react-dsfr/Tag";
+import Html from "../common/Html";
 import { Share } from "../common/Share";
 import { RelatedItems } from "../common/RelatedItems";
 

@@ -8,8 +8,19 @@ import { getBySourceAndSlugItems } from "../../../src/api";
 import { DsfrLayout } from "../../../src/modules/layout";
 import { notFound } from "next/navigation";
 import ArticleCodeDuTravail from "../../../src/modules/code-du-travail/articleCodeDuTravail";
+import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 
-async function Fiche({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params }) {
+  const { title, description } = await getArticle(params.slug);
+
+  return generateDefaultMetadata({
+    title: title,
+    description: description,
+    path: `/code-du-travail/${params.slug}`,
+  });
+}
+
+async function Fiche({ params }) {
   const { title, description, dateDebut, html, url, notaHtml, relatedItems } =
     await getArticle(params.slug);
 
