@@ -48,4 +48,4 @@ jobs:
         with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
           TEXT: |-
-            Tests e2e en échec @max @victorz @carolinebda @martial :scream:
+            Tests e2e (heavy + light) en échec
