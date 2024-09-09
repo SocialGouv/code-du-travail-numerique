@@ -4,6 +4,7 @@ import { NeedMoreInfo } from "../NeedMoreInfo";
 
 describe("<NeedMoreInfo />", () => {
   it("should match snapshot", () => {
-    expect(render(<NeedMoreInfo />)).toMatchSnapshot();
+    const { container } = render(<NeedMoreInfo />);
+    expect(container).toMatchSnapshot();
   });
 });

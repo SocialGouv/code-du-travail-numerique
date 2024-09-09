@@ -4,15 +4,14 @@ import { Stats } from "..";
 
 describe("<Stats />", () => {
   it("should match snapshot", () => {
-    expect(
-      render(
-        <Stats
-          nbDocuments={100}
-          nbPageViews={200}
-          nbSearches={300}
-          nbVisits={400}
-        />
-      )
-    ).toMatchSnapshot();
+    const { container } = render(
+      <Stats
+        nbDocuments={100}
+        nbPageViews={200}
+        nbSearches={300}
+        nbVisits={400}
+      />
+    );
+    expect(container).toMatchSnapshot();
   });
 });

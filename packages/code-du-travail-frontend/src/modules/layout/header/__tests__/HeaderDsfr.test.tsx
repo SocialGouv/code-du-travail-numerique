@@ -5,6 +5,7 @@ import { Header } from "..";
 
 describe("<Header />", () => {
   it("should match snapshot", () => {
-    expect(render(<Header />)).toMatchSnapshot();
+    const { container } = render(<Header />);
+    expect(container).toMatchSnapshot();
   });
 });

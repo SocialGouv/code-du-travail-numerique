@@ -4,16 +4,15 @@ import { SearchInput } from "../SearchInput";
 
 describe("<SearchInput />", () => {
   it("should match snapshot", () => {
-    expect(
-      render(
-        <SearchInput
-          className="my-class"
-          id="my-id"
-          placeholder="my-placeholder"
-          type="search"
-          onSearchSubmit={() => {}}
-        />
-      )
-    ).toMatchSnapshot();
+    const { container } = render(
+      <SearchInput
+        className="my-class"
+        id="my-id"
+        placeholder="my-placeholder"
+        type="search"
+        onSearchSubmit={() => {}}
+      />
+    );
+    expect(container).toMatchSnapshot();
   });
 });

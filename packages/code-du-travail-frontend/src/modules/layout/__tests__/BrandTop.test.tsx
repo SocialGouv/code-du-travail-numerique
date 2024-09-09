@@ -4,6 +4,7 @@ import { BrandTop } from "../BrandTop";
 
 describe("<BrandTop />", () => {
   it("should match snapshot", () => {
-    expect(render(<BrandTop />)).toMatchSnapshot();
+    const { container } = render(<BrandTop />);
+    expect(container).toMatchSnapshot();
   });
 });

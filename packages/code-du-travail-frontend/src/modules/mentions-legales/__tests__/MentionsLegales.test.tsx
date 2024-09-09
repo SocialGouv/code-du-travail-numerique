@@ -4,6 +4,7 @@ import { MentionsLegales } from "..";
 
 describe("<MentionsLegales />", () => {
   it("should match snapshot", () => {
-    expect(render(<MentionsLegales />)).toMatchSnapshot();
+    const { container } = render(<MentionsLegales />);
+    expect(container).toMatchSnapshot();
   });
 });

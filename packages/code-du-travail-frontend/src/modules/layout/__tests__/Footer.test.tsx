@@ -4,6 +4,7 @@ import { Footer } from "../Footer";
 
 describe("<Footer />", () => {
   it("should match snapshot", () => {
-    expect(render(<Footer />)).toMatchSnapshot();
+    const { container } = render(<Footer />);
+    expect(container).toMatchSnapshot();
   });
 });
