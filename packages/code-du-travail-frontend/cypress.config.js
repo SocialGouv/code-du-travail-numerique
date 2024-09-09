@@ -9,9 +9,15 @@ module.exports = defineConfig({
   defaultCommandTimeout: 20000, // 20s
   e2e: {
     baseUrl: process.env.TEST_BASEURL ?? "http://localhost:3000",
-    specPattern: process.env.ALL_TEST
-      ? "cypress/integration/**/*.spec.{js,jsx,ts,tsx}"
-      : "cypress/integration/light/**/*.spec.{js,jsx,ts,tsx}",
+    specPattern: process.env.HEAVY_TEST
+      ? "cypress/integration/heavy/**/*.spec.{js,jsx,ts,tsx}"
+      : process.env.LIGHT_TEST
+      ? "cypress/integration/light/**/*.spec.{js,jsx,ts,tsx}"
+      : process.env.HTML_VALIDATION_TEST
+      ? "cypress/integration/html-validation/**/*.spec.{js,jsx,ts,tsx}"
+      : process.env.HEAVY_AND_LIGHT_TEST
+      ? "cypress/integration/{light,heavy}/**/*.spec.{js,jsx,ts,tsx}"
+      : "cypress/integration/**/*.spec.{js,jsx,ts,tsx}",
     supportFile: "cypress/support/index.ts",
     viewportHeight: 1000,
     viewportWidth: 1280,
@@ -19,7 +25,7 @@ module.exports = defineConfig({
     setupNodeEvents(on) {
       htmlvalidate.install(on);
       on("before:run", async () => {
-        if (process.env.ALL_TEST) {
+        if (process.env.HTML_VALIDATION_TEST) {
           await downloadAllUrlsToValidate();
         }
       });
