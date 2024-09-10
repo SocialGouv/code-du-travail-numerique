@@ -1,8 +1,8 @@
-name: Tests e2e (heavy + light)
+name: Tests e2e (HTML validation)
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 22 * * 0" # each sunday at 22:00
 
 concurrency:
   cancel-in-progress: true
@@ -27,10 +27,10 @@ jobs:
           yarn install --immutable
       - name: Run test e2e
         run: |
-          TEST_BASEURL=https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr ALL_TEST=true yarn test:e2e
+          TEST_BASEURL=https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr TEST_MODE=html-validation yarn test:e2e
       - name: Archive generated screenshots
         if: failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: e2e-screenshots
           path: |
@@ -48,4 +48,4 @@ jobs:
         with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
           TEXT: |-
-            Tests e2e en échec @max @victorz @carolinebda @martial :scream:
+            Tests e2e (HTML validation) en échec

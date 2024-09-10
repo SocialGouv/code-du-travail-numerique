@@ -3,18 +3,18 @@
 exports[`<Convention /> renders 1`] = `
 <div>
   <div
-    class="sc-kzqdkY dZUDIh"
+    class="sc-e32628d4-0 cwDqXq"
   >
     <h2
-      class="sc-dSIIpw otPXl"
+      class="sc-d6e72754-0 gUBAuw"
     >
       <span
-        class="sc-gsFSXq ljkohw"
+        class="sc-a4d7a179-0 gGBEJx"
       />
       Questions-réponses fréquentes
     </h2>
     <p
-      class="sc-bDpDS dovLJR"
+      class="sc-ea8c0a81-0 dHtsEU"
     >
       Description de la CC
     </p>
@@ -25,7 +25,7 @@ exports[`<Convention /> renders 1`] = `
   >
     <div>
       <div
-        class="sc-jXbUNg heDTFL"
+        class="sc-1571bed7-0"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -36,7 +36,7 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-raa-0"
             aria-disabled="false"
             aria-expanded="false"
-            class="sc-kpDqfm heoudo"
+            class="sc-1571bed7-2 gNtlHI"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-raa-0"
             role="button"
@@ -44,7 +44,7 @@ exports[`<Convention /> renders 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-imWYAI gTeNha"
+              class="sc-93c68677-0 fWneNg"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -60,10 +60,10 @@ exports[`<Convention /> renders 1`] = `
               />
             </svg>
             <div
-              class="sc-dAlyuH eyjExg"
+              class="sc-1571bed7-3 figaQV"
             >
               <h3
-                class="sc-kAyceB dvmaTz"
+                class="sc-b879fc2d-0 hyiHle"
                 style="margin: 0px;"
               >
                 Congés et repos
@@ -73,18 +73,18 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB hlTUsz"
+          class="sc-1571bed7-1 hamHiw"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-0"
         >
           <div
-            class="sc-bXCLTC fcbJdD"
+            class="sc-32c7807-0 iMDCLs"
           >
             <ul>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
                 >
                   Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
@@ -92,7 +92,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-quelle-est-la-duree-du-conge-de-maternite"
                 >
                   Quelle est la durée du congé de maternité ?
@@ -100,7 +100,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-si-le-salarie-est-malade-pendant-ses-conges-quelles-en-sont-les-consequences"
                 >
                   Si le salarié est malade pendant ses congés, quelles en sont les conséquences ?
@@ -108,7 +108,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-les-conges-pour-evenements-familiaux"
                 >
                   Les congés pour événements familiaux
@@ -116,7 +116,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-jours-feries-et-ponts-dans-le-secteur-prive"
                 >
                   Jours fériés et ponts dans le secteur privé
@@ -124,7 +124,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-travail-du-dimanche-quelle-contrepartie"
                 >
                   Travail du dimanche : quelle contrepartie ?
@@ -137,7 +137,7 @@ exports[`<Convention /> renders 1`] = `
     </div>
     <div>
       <div
-        class="sc-jXbUNg crDDWD"
+        class="sc-1571bed7-0 dpEeGj"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -148,7 +148,7 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-raa-1"
             aria-disabled="false"
             aria-expanded="false"
-            class="sc-kpDqfm heoudo"
+            class="sc-1571bed7-2 gNtlHI"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-raa-1"
             role="button"
@@ -156,7 +156,7 @@ exports[`<Convention /> renders 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-imWYAI gTeNha"
+              class="sc-93c68677-0 fWneNg"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -172,10 +172,10 @@ exports[`<Convention /> renders 1`] = `
               />
             </svg>
             <div
-              class="sc-dAlyuH eyjExg"
+              class="sc-1571bed7-3 figaQV"
             >
               <h3
-                class="sc-kAyceB dvmaTz"
+                class="sc-b879fc2d-0 hyiHle"
                 style="margin: 0px;"
               >
                 Départ de l’entreprise
@@ -185,18 +185,18 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB hlTUsz"
+          class="sc-1571bed7-1 hamHiw"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-1"
         >
           <div
-            class="sc-bXCLTC fcbJdD"
+            class="sc-32c7807-0 iMDCLs"
           >
             <ul>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-faut-il-respecter-un-delai-de-carence-entre-deux-cdd-si-oui-quelle-est-sa-duree"
                 >
                   Faut-il respecter un délai de carence entre deux CDD ? Si oui, quelle est sa durée ?
@@ -204,7 +204,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-dans-le-cadre-dun-cdd-quel-est-le-montant-de-lindemnite-de-fin-de-contrat"
                 >
                   Dans le cadre d’un CDD, quel est le montant de l’indemnité de fin de contrat ? 
@@ -212,7 +212,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-faut-il-respecter-un-delai-de-carence-entre-deux-contrats-de-mission-interim"
                 >
                   Faut-il respecter un délai de carence entre deux contrats de mission (intérim) ? 
@@ -220,7 +220,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-dans-le-cadre-dun-contrat-de-mission-interim-quel-est-le-montant-de-lindemnite-de-fin-de-contrat"
                 >
                   Dans le cadre d’un contrat de mission (intérim), quel est le montant de l’indemnité de fin de contrat ? 
@@ -228,7 +228,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-quelle-est-la-duree-du-preavis-en-cas-de-demission"
                 >
                   Quelle est la durée du préavis en cas de démission ?
@@ -236,7 +236,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
                 >
                   Quelle est la durée de préavis en cas de licenciement ?
@@ -244,7 +244,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
                 >
                   Quelle est la durée de préavis en cas de départ à la retraite ?
@@ -252,7 +252,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
                 >
                   Quelle est la durée de préavis en cas de mise à la retraite ?
@@ -260,7 +260,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-le-preavis-de-licenciement-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi"
                 >
                   Le préavis de licenciement doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?
@@ -268,7 +268,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-le-preavis-de-demission-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi"
                 >
                   Le préavis de démission doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?
@@ -276,7 +276,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
                 >
                   Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?
@@ -284,7 +284,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-arret-maladie-pendant-le-preavis-quelles-consequences"
                 >
                   Arrêt maladie pendant le préavis : quelles conséquences ?
@@ -292,7 +292,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail"
                 >
                   Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?
@@ -300,7 +300,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-a-quelles-indemnites-peut-pretendre-un-salarie-qui-part-a-la-retraite"
                 >
                   À quelles indemnités peut prétendre un salarié qui part à la retraite ?
@@ -313,7 +313,7 @@ exports[`<Convention /> renders 1`] = `
     </div>
     <div>
       <div
-        class="sc-jXbUNg crDDWD"
+        class="sc-1571bed7-0 dpEeGj"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -324,7 +324,7 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-raa-2"
             aria-disabled="false"
             aria-expanded="false"
-            class="sc-kpDqfm heoudo"
+            class="sc-1571bed7-2 gNtlHI"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-raa-2"
             role="button"
@@ -332,7 +332,7 @@ exports[`<Convention /> renders 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-imWYAI gTeNha"
+              class="sc-93c68677-0 fWneNg"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -348,10 +348,10 @@ exports[`<Convention /> renders 1`] = `
               />
             </svg>
             <div
-              class="sc-dAlyuH eyjExg"
+              class="sc-1571bed7-3 figaQV"
             >
               <h3
-                class="sc-kAyceB dvmaTz"
+                class="sc-b879fc2d-0 hyiHle"
                 style="margin: 0px;"
               >
                 Embauche et contrat de travail
@@ -361,18 +361,18 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB hlTUsz"
+          class="sc-1571bed7-1 hamHiw"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-2"
         >
           <div
-            class="sc-bXCLTC fcbJdD"
+            class="sc-32c7807-0 iMDCLs"
           >
             <ul>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-si-un-poste-se-libere-ou-est-cree-dans-lentreprise-lemployeur-doit-il-en-informer-les-salaries-ou-le-leur-proposer-en-priorite"
                 >
                   Si un poste se libère ou est créé dans l’entreprise, l’employeur doit-il en informer les salariés ? Ou le leur proposer en priorité ?
@@ -380,7 +380,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
                 >
                   Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?
@@ -388,7 +388,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-la-periode-dessai-peut-elle-etre-renouvelee"
                 >
                   La période d’essai peut-elle être renouvelée ?
@@ -396,7 +396,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-arret-maladie-pendant-la-periode-dessai-quelles-sont-les-regles"
                 >
                   Arrêt maladie pendant la période d'essai : quelles sont les règles ?
@@ -404,7 +404,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
                 >
                   Est-il obligatoire d'avoir un contrat de travail écrit et signé ?
@@ -412,7 +412,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
                 >
                   Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?
@@ -420,7 +420,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-lentreprise-peut-elle-embaucher-dans-le-cadre-dun-cdi-de-chantier-ou-doperation"
                 >
                   L'entreprise peut-elle embaucher dans le cadre d'un CDI de chantier ou d’opération ? 
@@ -428,7 +428,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-quelles-sont-les-conditions-de-la-clause-de-non-concurrence"
                 >
                   Quelles sont les conditions de la clause de non-concurrence ?
@@ -436,7 +436,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-combien-de-fois-le-contrat-de-travail-peut-il-etre-renouvele"
                 >
                   Combien de fois le contrat de travail peut-il être renouvelé ?
@@ -444,7 +444,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-quelle-peut-etre-la-duree-maximale-dun-cdd"
                 >
                   Quelle peut être la durée maximale d'un CDD ?
@@ -452,7 +452,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-embauche-en-contrat-dextra-cdd-dusage"
                 >
                   Embauche en contrat d'extra (CDD d'usage)
@@ -460,7 +460,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-quelle-est-la-duree-maximale-du-contrat-de-mission-interim"
                 >
                   Quelle est la durée maximale du contrat de mission (intérim) ?
@@ -468,7 +468,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-en-cas-de-perte-de-marche-par-lemployeur-quelles-sont-les-conditions-dun-transfert-des-contrats-de-travail"
                 >
                   En cas de perte de marché par l’employeur, quelles sont les conditions d'un transfert des contrats de travail ? 
@@ -481,7 +481,7 @@ exports[`<Convention /> renders 1`] = `
     </div>
     <div>
       <div
-        class="sc-jXbUNg crDDWD"
+        class="sc-1571bed7-0 dpEeGj"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -492,7 +492,7 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-raa-3"
             aria-disabled="false"
             aria-expanded="false"
-            class="sc-kpDqfm heoudo"
+            class="sc-1571bed7-2 gNtlHI"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-raa-3"
             role="button"
@@ -500,7 +500,7 @@ exports[`<Convention /> renders 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-imWYAI gTeNha"
+              class="sc-93c68677-0 fWneNg"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -516,10 +516,10 @@ exports[`<Convention /> renders 1`] = `
               />
             </svg>
             <div
-              class="sc-dAlyuH eyjExg"
+              class="sc-1571bed7-3 figaQV"
             >
               <h3
-                class="sc-kAyceB dvmaTz"
+                class="sc-b879fc2d-0 hyiHle"
                 style="margin: 0px;"
               >
                 Salaire et Rémunération
@@ -529,18 +529,18 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB hlTUsz"
+          class="sc-1571bed7-1 hamHiw"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-3"
         >
           <div
-            class="sc-bXCLTC fcbJdD"
+            class="sc-32c7807-0 iMDCLs"
           >
             <ul>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-comment-determiner-lanciennete-du-salarie"
                 >
                   Comment déterminer l'ancienneté du salarié ?
@@ -548,7 +548,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
                 >
                   Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?
@@ -556,7 +556,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
                 >
                   Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?
@@ -564,7 +564,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-quelles-sont-les-primes-prevues-par-la-convention-collective"
                 >
                   Quelles sont les primes prévues par la convention collective ?
@@ -577,7 +577,7 @@ exports[`<Convention /> renders 1`] = `
     </div>
     <div>
       <div
-        class="sc-jXbUNg crDDWD"
+        class="sc-1571bed7-0 dpEeGj"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -588,7 +588,7 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-raa-4"
             aria-disabled="false"
             aria-expanded="false"
-            class="sc-kpDqfm heoudo"
+            class="sc-1571bed7-2 gNtlHI"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-raa-4"
             role="button"
@@ -596,7 +596,7 @@ exports[`<Convention /> renders 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-imWYAI gTeNha"
+              class="sc-93c68677-0 fWneNg"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -612,10 +612,10 @@ exports[`<Convention /> renders 1`] = `
               />
             </svg>
             <div
-              class="sc-dAlyuH eyjExg"
+              class="sc-1571bed7-3 figaQV"
             >
               <h3
-                class="sc-kAyceB dvmaTz"
+                class="sc-b879fc2d-0 hyiHle"
                 style="margin: 0px;"
               >
                 Santé, sécurité et conditions de travail
@@ -625,18 +625,18 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB hlTUsz"
+          class="sc-1571bed7-1 hamHiw"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-4"
         >
           <div
-            class="sc-bXCLTC fcbJdD"
+            class="sc-32c7807-0 iMDCLs"
           >
             <ul>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                 >
                   En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?
@@ -644,7 +644,7 @@ exports[`<Convention /> renders 1`] = `
               </li>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
                 >
                   En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?
@@ -657,7 +657,7 @@ exports[`<Convention /> renders 1`] = `
     </div>
     <div>
       <div
-        class="sc-jXbUNg crDDWD"
+        class="sc-1571bed7-0 dpEeGj"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -668,7 +668,7 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-raa-5"
             aria-disabled="false"
             aria-expanded="false"
-            class="sc-kpDqfm heoudo"
+            class="sc-1571bed7-2 gNtlHI"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-raa-5"
             role="button"
@@ -676,7 +676,7 @@ exports[`<Convention /> renders 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-imWYAI gTeNha"
+              class="sc-93c68677-0 fWneNg"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -692,10 +692,10 @@ exports[`<Convention /> renders 1`] = `
               />
             </svg>
             <div
-              class="sc-dAlyuH eyjExg"
+              class="sc-1571bed7-3 figaQV"
             >
               <h3
-                class="sc-kAyceB dvmaTz"
+                class="sc-b879fc2d-0 hyiHle"
                 style="margin: 0px;"
               >
                 Temps de travail
@@ -705,18 +705,18 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB hlTUsz"
+          class="sc-1571bed7-1 hamHiw"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-5"
         >
           <div
-            class="sc-bXCLTC fcbJdD"
+            class="sc-32c7807-0 iMDCLs"
           >
             <ul>
               <li>
                 <a
-                  class="sc-YysOf fAlElC"
+                  class="sc-f9eac082-0 YYaHd"
                   href="/contribution/2941-quelles-sont-les-conditions-de-cumul-demplois"
                 >
                   Quelles sont les conditions de cumul d'emplois ?
@@ -729,24 +729,24 @@ exports[`<Convention /> renders 1`] = `
     </div>
   </div>
   <div
-    class="sc-kzqdkY dZUDIh"
+    class="sc-e32628d4-0 cwDqXq"
   >
     <h2
-      class="sc-dSIIpw otPXl"
+      class="sc-d6e72754-0 gUBAuw"
     >
       <span
-        class="sc-gsFSXq ljkohw"
+        class="sc-a4d7a179-0 gGBEJx"
       />
       Articles de la convention collective
     </h2>
     <p
-      class="sc-bDpDS dovLJR"
+      class="sc-ea8c0a81-0 dHtsEU"
     >
       Consultez les articles de la convention collective qui s’appliquent à votre situation dans les thèmes sélectionnés ci-dessous.
     </p>
   </div>
   <div
-    class="sc-fxwrCY gwaFzF"
+    class="sc-9845d97e-0 jdstGa"
     data-accordion-component="Accordion"
   >
     <div
@@ -761,7 +761,7 @@ exports[`<Convention /> renders 1`] = `
           aria-controls="accordion__panel-raa-6"
           aria-disabled="false"
           aria-expanded="false"
-          class="sc-hIUJlX fucbFP"
+          class="sc-9845d97e-1 jffOUe"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-raa-6"
           role="button"
@@ -769,7 +769,7 @@ exports[`<Convention /> renders 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="sc-jnOGJG edPXtC"
+            class="sc-9845d97e-2 kPPRyj"
             fill="none"
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
@@ -782,20 +782,20 @@ exports[`<Convention /> renders 1`] = `
             />
           </svg>
           <div
-            class="sc-dZoequ bcPqgL"
+            class="sc-9845d97e-3 biBldq"
           >
             En savoir plus
           </div>
         </div>
       </div>
       <div
-        class="sc-ggpjZQ fponfT"
+        class="sc-9845d97e-5 kPgcSs"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-raa-6"
       >
         <div
-          class="sc-eZkCL HkMzx"
+          class="sc-9845d97e-4 dcRMRW"
         >
           <p>
             Les thèmes sélectionnés par le ministère du Travail sont les thèmes pour lesquels la convention collective s’applique à votre situation. Cela signifique que même s’il existe un accord d’entreprise sur ces thèmes, celui-ci ne peut prévoir de règles différentes de celles prévues par la convention collective.
@@ -837,7 +837,7 @@ exports[`<Convention /> renders 1`] = `
   >
     <div>
       <div
-        class="sc-jXbUNg heDTFL"
+        class="sc-1571bed7-0"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -848,7 +848,7 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-raa-7"
             aria-disabled="false"
             aria-expanded="false"
-            class="sc-kpDqfm heoudo"
+            class="sc-1571bed7-2 gNtlHI"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-raa-7"
             role="button"
@@ -856,7 +856,7 @@ exports[`<Convention /> renders 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-imWYAI gTeNha"
+              class="sc-93c68677-0 fWneNg"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -872,10 +872,10 @@ exports[`<Convention /> renders 1`] = `
               />
             </svg>
             <div
-              class="sc-dAlyuH eyjExg"
+              class="sc-1571bed7-3 figaQV"
             >
               <h3
-                class="sc-kAyceB dvmaTz"
+                class="sc-b879fc2d-0 hyiHle"
                 style="margin: 0px;"
               >
                 Salaires minima hiérarchiques
@@ -885,31 +885,31 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB hlTUsz"
+          class="sc-1571bed7-1 hamHiw"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-7"
         >
           <div
-            class="sc-bXCLTC fcbJdD"
+            class="sc-32c7807-0 iMDCLs"
           >
             <div
-              class="sc-gFAWRd euznOP"
+              class="sc-2496d0f8-0 dvplyw"
             >
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000047011451/?idConteneur=2941"
@@ -921,26 +921,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     Avenant n° 51-2022 du 23 mars 2022 relatif aux salaires
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000047011462/?idConteneur=2941"
@@ -952,7 +952,7 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     Avenant n° 52-2022 du 23 mars 2022 relatif aux salaires
                   </div>
@@ -965,7 +965,7 @@ exports[`<Convention /> renders 1`] = `
     </div>
     <div>
       <div
-        class="sc-jXbUNg crDDWD"
+        class="sc-1571bed7-0 dpEeGj"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -976,7 +976,7 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-raa-8"
             aria-disabled="false"
             aria-expanded="false"
-            class="sc-kpDqfm heoudo"
+            class="sc-1571bed7-2 gNtlHI"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-raa-8"
             role="button"
@@ -984,7 +984,7 @@ exports[`<Convention /> renders 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-imWYAI gTeNha"
+              class="sc-93c68677-0 fWneNg"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -1000,10 +1000,10 @@ exports[`<Convention /> renders 1`] = `
               />
             </svg>
             <div
-              class="sc-dAlyuH eyjExg"
+              class="sc-1571bed7-3 figaQV"
             >
               <h3
-                class="sc-kAyceB dvmaTz"
+                class="sc-b879fc2d-0 hyiHle"
                 style="margin: 0px;"
               >
                 Durée du travail, répartition et aménagement des horaires
@@ -1013,31 +1013,31 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB hlTUsz"
+          class="sc-1571bed7-1 hamHiw"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-8"
         >
           <div
-            class="sc-bXCLTC fcbJdD"
+            class="sc-32c7807-0 iMDCLs"
           >
             <div
-              class="sc-gFAWRd euznOP"
+              class="sc-2496d0f8-0 dvplyw"
             >
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805638/?idConteneur=2941"
@@ -1049,26 +1049,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805639/?idConteneur=2941"
@@ -1080,26 +1080,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000033116260/?idConteneur=2941"
@@ -1111,26 +1111,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805641/?idConteneur=2941"
@@ -1142,26 +1142,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805642/?idConteneur=2941"
@@ -1173,26 +1173,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805643/?idConteneur=2941"
@@ -1204,26 +1204,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805644/?idConteneur=2941"
@@ -1235,26 +1235,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805645/?idConteneur=2941"
@@ -1266,26 +1266,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805646/?idConteneur=2941"
@@ -1297,26 +1297,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805647/?idConteneur=2941"
@@ -1328,26 +1328,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805648/?idConteneur=2941"
@@ -1359,26 +1359,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000033116262/?idConteneur=2941"
@@ -1390,26 +1390,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805650/?idConteneur=2941"
@@ -1421,26 +1421,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805652/?idConteneur=2941"
@@ -1452,26 +1452,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Principes généraux sur la durée du travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805653/?idConteneur=2941"
@@ -1483,26 +1483,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     B. – Travail du dimanche et des jours fériés
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805654/?idConteneur=2941"
@@ -1514,26 +1514,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     B. – Travail du dimanche et des jours fériés
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805656/?idConteneur=2941"
@@ -1545,26 +1545,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     B. – Travail du dimanche et des jours fériés
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805657/?idConteneur=2941"
@@ -1576,26 +1576,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     B. – Travail du dimanche et des jours fériés
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805660/?idConteneur=2941"
@@ -1607,26 +1607,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     C. – Temps d'astreinte
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805659/?idConteneur=2941"
@@ -1638,26 +1638,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     C. – Temps d'astreinte
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805658/?idConteneur=2941"
@@ -1669,26 +1669,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     C. – Temps d'astreinte
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805669/?idConteneur=2941"
@@ -1700,26 +1700,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Travailleurs de nuit
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805667/?idConteneur=2941"
@@ -1731,26 +1731,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Travailleurs de nuit
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805666/?idConteneur=2941"
@@ -1762,26 +1762,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Travailleurs de nuit
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805665/?idConteneur=2941"
@@ -1793,26 +1793,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Travailleurs de nuit
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805664/?idConteneur=2941"
@@ -1824,26 +1824,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Travailleurs de nuit
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805671/?idConteneur=2941"
@@ -1855,26 +1855,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     B. – Salariés travaillant occasionnellement la nuit
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805672/?idConteneur=2941"
@@ -1886,26 +1886,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     B. – Salariés travaillant occasionnellement la nuit
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805673/?idConteneur=2941"
@@ -1917,26 +1917,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     B. – Salariés travaillant occasionnellement la nuit
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805662/?idConteneur=2941"
@@ -1948,26 +1948,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     Chapitre II Travail de nuit
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805675/?idConteneur=2941"
@@ -1979,26 +1979,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Dispositions communes aux différents modes d'aménagement du temps de travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805676/?idConteneur=2941"
@@ -2010,26 +2010,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     A. – Dispositions communes aux différents modes d'aménagement du temps de travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000033116268/?idConteneur=2941"
@@ -2041,26 +2041,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     B. – Modes d'aménagement du temps de travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000033116266/?idConteneur=2941"
@@ -2072,26 +2072,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     B. – Modes d'aménagement du temps de travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805679/?idConteneur=2941"
@@ -2103,26 +2103,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     B. – Modes d'aménagement du temps de travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805678/?idConteneur=2941"
@@ -2134,26 +2134,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     B. – Modes d'aménagement du temps de travail
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805677/?idConteneur=2941"
@@ -2165,7 +2165,7 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     B. – Modes d'aménagement du temps de travail
                   </div>
@@ -2178,7 +2178,7 @@ exports[`<Convention /> renders 1`] = `
     </div>
     <div>
       <div
-        class="sc-jXbUNg crDDWD"
+        class="sc-1571bed7-0 dpEeGj"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -2189,7 +2189,7 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-raa-9"
             aria-disabled="false"
             aria-expanded="false"
-            class="sc-kpDqfm heoudo"
+            class="sc-1571bed7-2 gNtlHI"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-raa-9"
             role="button"
@@ -2197,7 +2197,7 @@ exports[`<Convention /> renders 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-imWYAI gTeNha"
+              class="sc-93c68677-0 fWneNg"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -2213,10 +2213,10 @@ exports[`<Convention /> renders 1`] = `
               />
             </svg>
             <div
-              class="sc-dAlyuH eyjExg"
+              class="sc-1571bed7-3 figaQV"
             >
               <h3
-                class="sc-kAyceB dvmaTz"
+                class="sc-b879fc2d-0 hyiHle"
                 style="margin: 0px;"
               >
                 Emploi des travailleurs handicapés
@@ -2226,41 +2226,41 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-dhKdcB hlTUsz"
+          class="sc-1571bed7-1 hamHiw"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-9"
         >
           <div
-            class="sc-bXCLTC fcbJdD"
+            class="sc-32c7807-0 iMDCLs"
           >
             <p
-              class="sc-gdyeKB jXhxaU"
+              class="sc-bdaf45c8-0 nMxaE"
             >
               Important
             </p>
             <p
-              class="sc-ktPPKK JUXiO"
+              class="sc-7b1e2e34-0 igMhfx"
             >
               Pour que ce thème s’applique à votre situation, il doit être indiqué dans l’article en question qu’un accord d’entreprise ne peut pas déroger à la convention collective; à moins que l’accord d’entreprise ne prévoie des garanties au moins équivalentes.
             </p>
             <div
-              class="sc-gFAWRd euznOP"
+              class="sc-2496d0f8-0 dvplyw"
             >
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805517/?idConteneur=2941"
@@ -2272,26 +2272,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     Titre IX Emploi des travailleurs handicapés
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805515/?idConteneur=2941"
@@ -2303,26 +2303,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     Titre IX Emploi des travailleurs handicapés
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805514/?idConteneur=2941"
@@ -2334,26 +2334,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     Titre IX Emploi des travailleurs handicapés
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805513/?idConteneur=2941"
@@ -2365,26 +2365,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     Titre IX Emploi des travailleurs handicapés
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805512/?idConteneur=2941"
@@ -2396,26 +2396,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     Titre IX Emploi des travailleurs handicapés
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805511/?idConteneur=2941"
@@ -2427,26 +2427,26 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     Titre IX Emploi des travailleurs handicapés
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gmPhUn cRQifg"
+                class="sc-28aac820-0 oopOP"
               >
                 <div
-                  class="sc-ibQAlb fuLYQY no-after"
+                  class="sc-d47d8018-0 cDsGtD no-after"
                 >
                   <div
-                    class="sc-guJBdh jBpgpS"
+                    class="sc-d47d8018-2 eBZhiP"
                   >
                     <div
-                      class="sc-hZDyAQ tqlOz"
+                      class="sc-d47d8018-3 cAXyng"
                     >
                       <p
-                        class="sc-jaXxmE sc-fTFjTM kgvDSh bVFyjF"
+                        class="sc-9261d202-0 sc-d47d8018-4 iTbcuX llhzYx"
                       >
                         <a
                           href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000025805509/?idConteneur=2941"
@@ -2458,7 +2458,7 @@ exports[`<Convention /> renders 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-gmgFlS ikhbYa"
+                    class="sc-d47d8018-6 ipSAXR"
                   >
                     Titre IX Emploi des travailleurs handicapés
                   </div>
@@ -2471,37 +2471,37 @@ exports[`<Convention /> renders 1`] = `
     </div>
   </div>
   <div
-    class="sc-kzqdkY dZUDIh"
+    class="sc-e32628d4-0 cwDqXq"
   >
     <h2
-      class="sc-dSIIpw otPXl"
+      class="sc-d6e72754-0 gUBAuw"
     >
       <span
-        class="sc-gsFSXq ljkohw"
+        class="sc-a4d7a179-0 gGBEJx"
       />
       Recherche dans la convention collective
     </h2>
     <p
-      class="sc-bDpDS dovLJR"
+      class="sc-ea8c0a81-0 dHtsEU"
     >
       Recherchez par mots clés dans le texte de la convention collective sur le site Légifrance.
     </p>
   </div>
   <form
     action="https://legifrance.gouv.fr/search/kali#kali"
-    class="sc-dPZUQH kRwqtK"
+    class="sc-4bdafa31-3 dxTscc"
     target="_blank"
   >
     <div
-      class="sc-cVzyXs ldkmtD"
+      class="sc-4bdafa31-0 jpKYqL"
     >
       <div
-        class="sc-sLsrZ kGdGKi sc-ePDLzJ hVyPHU"
+        class="sc-669fe731-0 amSvQ sc-4bdafa31-1 hgHvZj"
       >
         <input
           aria-label="Recherchez dans la collection collective"
           autocomplete="off"
-          class="sc-dBmzty djgFPK"
+          class="sc-669fe731-1 bBYNqO"
           id="search-agreement"
           name="rawQuery"
           placeholder="Congés exceptionnels, prime"
@@ -2540,14 +2540,14 @@ exports[`<Convention /> renders 1`] = `
       />
       <button
         aria-label="Recherchez dans la collection collective"
-        class="sc-kOPcWz kyVwqT sc-bVVIoq jRINtt"
+        class="sc-95bd4344-0 dxXsic sc-4bdafa31-2 XkEJn"
         title="Lancer une recherche"
         type="submit"
       >
         <svg
           aria-hidden="true"
           aria-label="rechercher (nouvelle fenêtre)"
-          class="sc-eBHhsj blcEOJ"
+          class="sc-4bdafa31-4 AbUwa"
           fill="none"
           viewBox="0 0 32 32"
           xmlns="http://www.w3.org/2000/svg"
@@ -2561,10 +2561,10 @@ exports[`<Convention /> renders 1`] = `
     </div>
   </form>
   <div
-    class="sc-hRJfrW fHhwIY"
+    class="sc-66a696c4-0 MNJNF"
   >
     <div
-      class="sc-iHbSHJ dqcYtl"
+      class="sc-66a696c4-1 dvlKxa"
     >
       <svg
         aria-hidden="true"
@@ -2584,7 +2584,7 @@ exports[`<Convention /> renders 1`] = `
       </svg>
     </div>
     <div
-      class="sc-klVQfs giEiHo"
+      class="sc-66a696c4-2 eRMOZl"
     >
       Selon le thème, un accord collectif d’entreprise peut prévoir des règles différentes par rapport à la convention collective.
        

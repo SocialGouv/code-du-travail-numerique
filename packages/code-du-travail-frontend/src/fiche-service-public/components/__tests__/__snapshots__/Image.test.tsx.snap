@@ -4,7 +4,7 @@ exports[`Image should display image and caption 1`] = `
 <div>
   <figure
     aria-label="Comment calculer un délai quand il y a un jour férié ?"
-    class="sc-bVVIoq kewZOe"
+    class="sc-6c336c92-0 fZSumh"
     role="group"
   >
     <img
@@ -12,7 +12,7 @@ exports[`Image should display image and caption 1`] = `
       src="https://www.service-public.fr/webapp/images/vdd/extralarge/I4596.jpg"
     />
     <figcaption
-      class="sc-dPZUQH cnPGFO"
+      class="sc-6c336c92-1 gbntbh"
     >
       <span>
         Crédits : 
@@ -21,7 +21,7 @@ exports[`Image should display image and caption 1`] = `
     </figcaption>
   </figure>
   <div
-    class="sc-fxwrCY gwaFzF"
+    class="sc-9845d97e-0 jdstGa"
     data-accordion-component="Accordion"
   >
     <div
@@ -36,7 +36,7 @@ exports[`Image should display image and caption 1`] = `
           aria-controls="accordion__panel-raa-0"
           aria-disabled="false"
           aria-expanded="false"
-          class="sc-hIUJlX fucbFP"
+          class="sc-9845d97e-1 jffOUe"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-raa-0"
           role="button"
@@ -44,7 +44,7 @@ exports[`Image should display image and caption 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="sc-jnOGJG edPXtC"
+            class="sc-9845d97e-2 kPPRyj"
             fill="none"
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
@@ -57,23 +57,23 @@ exports[`Image should display image and caption 1`] = `
             />
           </svg>
           <div
-            class="sc-dZoequ bcPqgL"
+            class="sc-9845d97e-3 biBldq"
           >
             Voir en détail
           </div>
         </div>
       </div>
       <div
-        class="sc-ggpjZQ bUcNVB"
+        class="sc-9845d97e-5 mALye"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-raa-0"
       >
         <div
-          class="sc-eZkCL HkMzx"
+          class="sc-9845d97e-4 dcRMRW"
         >
           <div
-            class="sc-iGgWBj cWzIZL"
+            class="sc-2a0a4b0a-0 dLOZmV"
           >
             <p>
               Comment calculer un délai quand il y a un jour férié ?
