@@ -27,7 +27,7 @@ jobs:
           yarn install --immutable
       - name: Run test e2e
         run: |
-          TEST_BASEURL=https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr HEAVY_AND_LIGHT_TEST=true yarn test:e2e
+          TEST_BASEURL=https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr TEST_MODE=heavy-and-light yarn test:e2e
       - name: Archive generated screenshots
         if: failure()
         uses: actions/upload-artifact@v3
