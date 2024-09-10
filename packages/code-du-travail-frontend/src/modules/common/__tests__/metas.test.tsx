@@ -1,43 +1,40 @@
 import { generateDefaultMetadata } from "../metas";
 
 describe("generateDefaultMetadata", () => {
-  it("returns metadata", async () => {
-    const metadatas = await generateDefaultMetadata({
+  it("returns metadata", () => {
+    const metadata = generateDefaultMetadata({
       title: "title",
       description: "description",
       path: "/hello",
     });
 
-    expect(metadatas).toMatchInlineSnapshot(`
+    expect(metadata).toMatchInlineSnapshot(`
       {
         "alternates": {
           "canonical": "/hello",
         },
         "description": "description",
-        "locale": "fr_FR",
-        "metadataBase": "http://api.url/",
         "openGraph": {
           "description": "description",
-          "images": "http://api.url/static/assets/img/social-preview.png",
+          "images": "/static/assets/img/social-preview.png",
+          "locale": "fr_FR",
+          "siteName": "Code du travail numérique",
           "title": "title",
-          "type": "article",
+          "type": "website",
         },
-        "siteName": "Code du travail numérique",
-        "title": "title - Code du travail numérique",
-        "twitter": {
-          "card": "summary",
-        },
+        "title": "title",
       }
     `);
   });
-  it("override canonical if provided", async () => {
-    const metadatas = await generateDefaultMetadata({
+
+  it("override canonical if provided", () => {
+    const metadata = generateDefaultMetadata({
       title: "title",
       description: "description",
       path: "/hello",
-      overrideCanonical: "/my-canonical"
+      overrideCanonical: "/my-canonical",
     });
 
-    expect(metadatas.alternates.canonical).toBe("/my-canonical");
+    expect(metadata.alternates?.canonical).toBe("/my-canonical");
   });
 });
