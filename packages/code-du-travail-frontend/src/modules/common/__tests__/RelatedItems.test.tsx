@@ -76,7 +76,7 @@ describe("<RelatedItems />", () => {
     expect(matopush).toHaveBeenCalledWith([
       "trackEvent",
       "selectRelated",
-      '{"selection":"fiche-service-public/fiche.sp.url"}',
+      '{"reco":"search","selection":"fiche-service-public/fiche.sp.url"}',
     ]);
   });
 });
