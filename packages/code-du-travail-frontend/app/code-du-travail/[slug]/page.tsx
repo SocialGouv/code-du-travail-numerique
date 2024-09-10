@@ -31,12 +31,9 @@ async function Fiche({ params }) {
         suptitle={getLabelBySource(SOURCES.CDT)}
         title={title}
         relatedItems={relatedItems}
-        date={
-          dateDebut &&
-          format(new Date(dateDebut), "dd/MM/yyyy", {
-            locale: frLocale,
-          })
-        }
+        date={format(new Date(dateDebut), "dd/MM/yyyy", {
+          locale: frLocale,
+        })}
         html={fixedHtml}
         source={{ name: "Code du travail", url }}
         notaHtml={notaHtml}
