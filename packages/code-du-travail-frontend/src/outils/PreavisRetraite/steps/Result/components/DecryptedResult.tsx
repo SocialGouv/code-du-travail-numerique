@@ -5,6 +5,7 @@ import { SectionTitle } from "../../../../common/stepStyles";
 import { getDescription } from "../utils/getDescription";
 import { DepartOuMiseRetraite } from "../../OriginStep/store";
 import { NoticeUsed } from "../utils/types";
+import { AgreementRoute } from "../../../../common/type/WizardType";
 
 type Props = {
   legalResult?: PublicodesPreavisRetraiteResult;
@@ -16,6 +17,7 @@ type Props = {
   isSeniorityLessThan6Months: boolean;
   hasAgreement: boolean;
   isAgreementSupported: boolean;
+  agreementRoute?: AgreementRoute;
 };
 
 const DecryptedResult: React.FC<Props> = ({
@@ -28,6 +30,7 @@ const DecryptedResult: React.FC<Props> = ({
   hasAgreement,
   isAgreementSupported,
   agreementResult,
+  agreementRoute,
 }) => {
   const description = getDescription(
     typeDeDepart,
@@ -54,6 +57,7 @@ const DecryptedResult: React.FC<Props> = ({
           result={agreementResult}
           isAgreementSupported={isAgreementSupported}
           agreementMaximumResult={agreementMaximumResult}
+          agreementRoute={agreementRoute}
         />
       </Paragraph>
       {description && (
@@ -102,17 +106,19 @@ const ShowResult: React.FC<ShowResultProps> = ({
 
 type ShowResultAgreementProps = ShowResultProps & {
   isAgreementSupported?: boolean;
+  agreementRoute?: AgreementRoute;
 };
 
 const ShowResultAgreement: React.FC<ShowResultAgreementProps> = ({
   result,
   isAgreementSupported,
   agreementMaximumResult,
+  agreementRoute,
 }) => {
-  if (!result) {
+  if (agreementRoute === "not-selected") {
     return <strong>convention collective non renseignée</strong>;
   }
-  if (result?.value > 0 && agreementMaximumResult) {
+  if (result && result.value > 0 && agreementMaximumResult) {
     return (
       <ShowResult
         result={result}
