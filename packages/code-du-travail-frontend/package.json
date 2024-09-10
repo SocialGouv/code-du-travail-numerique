@@ -7,7 +7,6 @@
   "keywords": [],
   "main": "src/index.js",
   "scripts": {
-    "prepare": "panda codegen",
     "dev": "yarn predev && next dev",
     "predev": "react-dsfr update-icons && panda codegen",
     "lint:js": "next lint --quiet",
@@ -103,6 +102,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^13.0.0",
     "mockdate": "^3.0.5",
+    "next-router-mock": "^0.9.13",
     "nextjs-http-supertest": "^1.0.6",
     "postcss": "^8.4.44",
     "sass": "^1.77.8",
