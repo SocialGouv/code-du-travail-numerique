@@ -43,7 +43,8 @@ app:
       name: next
   initContainers:
     - name: copy-next
-      image: "{{ .Values.global.registry }}/{{ .Values.global.projectName }}/{{
+      image:
+        "{{ .Values.global.registry }}/{{ .Values.global.projectName }}/{{
         .Values.global.imageRepository }}/app:{{ .Values.global.imageTag }}"
       command: ["/bin/sh", "-c"]
       args:
@@ -51,3 +52,17 @@ app:
       volumeMounts:
         - name: next
           mountPath: /mnt/next
+  tolerations:
+    - key: startup
+      operator: Equal
+      value: cdtn
+      effect: NoSchedule
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: nodepool
+                operator: In
+                values:
+                  - cdtn-worker-nodepool

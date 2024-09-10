@@ -2,6 +2,20 @@ import "@testing-library/jest-dom";
 
 import MockDate from "mockdate";
 
+import * as mockRouter from "next-router-mock";
+
+const useRouter = mockRouter.useRouter;
+
+jest.mock("next/navigation", () => ({
+  ...mockRouter,
+  useSearchParams: () => {
+    const router = useRouter();
+    const path = router.query;
+    return new URLSearchParams(path);
+  },
+  usePathname: jest.fn(),
+}));
+
 MockDate.set("2020-1-4");
 
 if (typeof window !== "undefined") {
@@ -25,25 +39,4 @@ jest.mock("../src/config", () => ({
   API_GEO_URL: "https://api-geo",
   SUGGEST_DEBOUNCE_DELAY: 300,
   SUGGEST_MAX_RESULTS: 5,
-}));
-
-jest.mock("next/router", () => ({
-  useRouter: jest.fn().mockReturnValue({
-    route: "/",
-    pathname: "/",
-    query: {},
-    asPath: "/",
-    push: jest.fn(),
-    replace: jest.fn(),
-    reload: jest.fn(),
-    back: jest.fn(),
-    prefetch: jest.fn(),
-    beforePopState: jest.fn(),
-    events: {
-      on: jest.fn(),
-      off: jest.fn(),
-      emit: jest.fn(),
-    },
-    isFallback: false,
-  }),
 }));
