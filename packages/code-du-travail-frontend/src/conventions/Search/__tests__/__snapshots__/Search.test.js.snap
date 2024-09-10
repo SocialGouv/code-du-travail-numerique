@@ -3,16 +3,16 @@
 exports[`<Search /> should render 1`] = `
 <div>
   <label
-    class="sc-9b1edd7b-0 erCyth"
+    class="sc-75bae102-0 jzkYDa"
     for="convention-search"
   >
     Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <div
-    class="sc-46a9700d-0 eEbjpm sc-7029e335-0 btjXXy"
+    class="sc-669fe731-0 amSvQ sc-7029e335-0 btjXXy"
   >
     <input
-      class="sc-46a9700d-1 dZpFqX"
+      class="sc-669fe731-1 bBYNqO"
       id="convention-search"
       name="q"
       placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -28,9 +28,9 @@ exports[`<Search /> should render 1`] = `
       class="sc-7029e335-2 emEtHs"
     >
       Consultez
-       
+
       <button
-        class="sc-b0ebfae6-0 iBhawp sc-7029e335-3 enfoOw"
+        class="sc-95bd4344-0 ksRRNY sc-7029e335-3 enfoOw"
         type="button"
       >
         notre aide
@@ -44,16 +44,16 @@ exports[`<Search /> should render 1`] = `
 exports[`<Search /> should show no results when no result 1`] = `
 <div>
   <label
-    class="sc-9b1edd7b-0 erCyth"
+    class="sc-75bae102-0 jzkYDa"
     for="convention-search"
   >
     Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <div
-    class="sc-46a9700d-0 eEbjpm sc-7029e335-0 btjXXy"
+    class="sc-669fe731-0 amSvQ sc-7029e335-0 btjXXy"
   >
     <input
-      class="sc-46a9700d-1 dZpFqX"
+      class="sc-669fe731-1 bBYNqO"
       id="convention-search"
       name="q"
       placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -65,7 +65,7 @@ exports[`<Search /> should show no results when no result 1`] = `
     class="sc-7029e335-4 iyEKsr"
   >
     <p
-      class="sc-a4406a0f-1 rjoOw"
+      class="sc-3633cc97-1 bjxtLv"
     >
       Aucun résultat n’a été trouvé.
     </p>
@@ -78,9 +78,9 @@ exports[`<Search /> should show no results when no result 1`] = `
       class="sc-7029e335-2 emEtHs"
     >
       Consultez
-       
+
       <button
-        class="sc-b0ebfae6-0 iBhawp sc-7029e335-3 enfoOw"
+        class="sc-95bd4344-0 ksRRNY sc-7029e335-3 enfoOw"
         type="button"
       >
         notre aide
@@ -94,16 +94,16 @@ exports[`<Search /> should show no results when no result 1`] = `
 exports[`<Search /> should show spinner when loading 1`] = `
 <div>
   <label
-    class="sc-9b1edd7b-0 erCyth"
+    class="sc-75bae102-0 jzkYDa"
     for="convention-search"
   >
     Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <div
-    class="sc-46a9700d-0 eEbjpm sc-7029e335-0 btjXXy"
+    class="sc-669fe731-0 amSvQ sc-7029e335-0 btjXXy"
   >
     <input
-      class="sc-46a9700d-1 dZpFqX"
+      class="sc-669fe731-1 bBYNqO"
       id="convention-search"
       name="q"
       placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -115,7 +115,7 @@ exports[`<Search /> should show spinner when loading 1`] = `
     class="sc-7029e335-4 iyEKsr"
   >
     <p
-      class="sc-a4406a0f-1 rjoOw"
+      class="sc-3633cc97-1 bjxtLv"
     >
       <svg
         aria-labelledby="title desc"
@@ -137,7 +137,7 @@ exports[`<Search /> should show spinner when loading 1`] = `
           Image of a partial circle indicating "loading."
         </desc>
         <style>
-          
+
       .__react-svg-spinner_circle{
           transition-property: transform;
           animation-name: __react-svg-spinner_infinite-spin;
@@ -148,7 +148,7 @@ exports[`<Search /> should show spinner when loading 1`] = `
           from {transform: rotate(0deg)}
           to {transform: rotate(360deg)}
       }
-    
+
         </style>
         <circle
           cx="16"
@@ -173,9 +173,9 @@ exports[`<Search /> should show spinner when loading 1`] = `
       class="sc-7029e335-2 emEtHs"
     >
       Consultez
-       
+
       <button
-        class="sc-b0ebfae6-0 iBhawp sc-7029e335-3 enfoOw"
+        class="sc-95bd4344-0 ksRRNY sc-7029e335-3 enfoOw"
         type="button"
       >
         notre aide
@@ -189,16 +189,16 @@ exports[`<Search /> should show spinner when loading 1`] = `
 exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 <div>
   <label
-    class="sc-9b1edd7b-0 erCyth"
+    class="sc-75bae102-0 jzkYDa"
     for="convention-search"
   >
     Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <div
-    class="sc-46a9700d-0 eEbjpm sc-7029e335-0 btjXXy"
+    class="sc-669fe731-0 amSvQ sc-7029e335-0 btjXXy"
   >
     <input
-      class="sc-46a9700d-1 dZpFqX"
+      class="sc-669fe731-1 bBYNqO"
       id="convention-search"
       name="q"
       placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -210,17 +210,17 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
     class="sc-7029e335-4 iyEKsr"
   >
     <div
-      class="sc-13323d30-0 sc-f1b633f2-0 gtmVnh hVjMsy"
+      class="sc-2a0a4b0a-0 sc-f1b633f2-0 hPfzrL hVjMsy"
     >
       <h3
-        class="sc-a53a0f9a-0 bIsTsN"
+        class="sc-b879fc2d-0 hyiHle"
       >
         CONVENTIONS COLLECTIVES (2
          
         résultats)
       </h3>
       <ul
-        class="sc-78dd7a00-0 fVqAjV"
+        class="sc-ab356c14-0 bpNHPl"
       >
         <li
           class="sc-f1b633f2-1 fOEIjw"
@@ -230,11 +230,11 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
             href="/convention-collective/275-small-titre"
           >
             small titre
-             
+
             <span
               class="sc-b0ba5588-1 gLArfB"
             >
-              (IDCC 
+              (IDCC
               0275
               )
             </span>
@@ -248,11 +248,11 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
             href="/convention-collective/276-smaller-convention-2"
           >
             smaller convention 2
-             
+
             <span
               class="sc-b0ba5588-1 gLArfB"
             >
-              (IDCC 
+              (IDCC
               0276
               )
             </span>
@@ -269,9 +269,9 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
       class="sc-7029e335-2 emEtHs"
     >
       Consultez
-       
+
       <button
-        class="sc-b0ebfae6-0 iBhawp sc-7029e335-3 enfoOw"
+        class="sc-95bd4344-0 ksRRNY sc-7029e335-3 enfoOw"
         type="button"
       >
         notre aide
@@ -285,16 +285,16 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 exports[`<Search /> when input is a valid IDCC, should show only the perfect match 1`] = `
 <div>
   <label
-    class="sc-9b1edd7b-0 erCyth"
+    class="sc-75bae102-0 jzkYDa"
     for="convention-search"
   >
     Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <div
-    class="sc-46a9700d-0 eEbjpm sc-7029e335-0 btjXXy"
+    class="sc-669fe731-0 amSvQ sc-7029e335-0 btjXXy"
   >
     <input
-      class="sc-46a9700d-1 dZpFqX"
+      class="sc-669fe731-1 bBYNqO"
       id="convention-search"
       name="q"
       placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -306,17 +306,17 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
     class="sc-7029e335-4 iyEKsr"
   >
     <div
-      class="sc-13323d30-0 sc-f1b633f2-0 gtmVnh hVjMsy"
+      class="sc-2a0a4b0a-0 sc-f1b633f2-0 hPfzrL hVjMsy"
     >
       <h3
-        class="sc-a53a0f9a-0 bIsTsN"
+        class="sc-b879fc2d-0 hyiHle"
       >
         CONVENTIONS COLLECTIVES (1
          
         résultat)
       </h3>
       <ul
-        class="sc-78dd7a00-0 fVqAjV"
+        class="sc-ab356c14-0 bpNHPl"
       >
         <li
           class="sc-f1b633f2-1 fOEIjw"
@@ -326,11 +326,11 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
             href="/convention-collective/4567-smaller-convention-2"
           >
             smaller convention 2
-             
+
             <span
               class="sc-b0ba5588-1 gLArfB"
             >
-              (IDCC 
+              (IDCC
               4567
               )
             </span>
@@ -347,9 +347,9 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
       class="sc-7029e335-2 emEtHs"
     >
       Consultez
-       
+
       <button
-        class="sc-b0ebfae6-0 iBhawp sc-7029e335-3 enfoOw"
+        class="sc-95bd4344-0 ksRRNY sc-7029e335-3 enfoOw"
         type="button"
       >
         notre aide
@@ -363,16 +363,16 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 exports[`<Search /> when searching by text, should use enterprise API 1`] = `
 <div>
   <label
-    class="sc-9b1edd7b-0 erCyth"
+    class="sc-75bae102-0 jzkYDa"
     for="convention-search"
   >
     Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <div
-    class="sc-46a9700d-0 eEbjpm sc-7029e335-0 btjXXy"
+    class="sc-669fe731-0 amSvQ sc-7029e335-0 btjXXy"
   >
     <input
-      class="sc-46a9700d-1 dZpFqX"
+      class="sc-669fe731-1 bBYNqO"
       id="convention-search"
       name="q"
       placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -384,7 +384,7 @@ exports[`<Search /> when searching by text, should use enterprise API 1`] = `
     class="sc-7029e335-4 iyEKsr"
   >
     <p
-      class="sc-a4406a0f-1 rjoOw"
+      class="sc-3633cc97-1 bjxtLv"
     >
       Le service de recherche est indisponible.
     </p>
@@ -397,9 +397,9 @@ exports[`<Search /> when searching by text, should use enterprise API 1`] = `
       class="sc-7029e335-2 emEtHs"
     >
       Consultez
-       
+
       <button
-        class="sc-b0ebfae6-0 iBhawp sc-7029e335-3 enfoOw"
+        class="sc-95bd4344-0 ksRRNY sc-7029e335-3 enfoOw"
         type="button"
       >
         notre aide
