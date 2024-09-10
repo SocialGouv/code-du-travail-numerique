@@ -1,4 +1,4 @@
-import { SITE_URL } from "../../config";
+import { Metadata } from "next/types";
 
 type Props = {
   title: string;
@@ -8,30 +8,25 @@ type Props = {
   noTitleAdd?: boolean;
 };
 
-export async function generateDefaultMetadata({
+export function generateDefaultMetadata({
   title,
   description,
   overrideCanonical,
   path,
-  noTitleAdd,
-}: Props) {
+}: Props): Metadata {
   return {
-    siteName: "Code du travail numérique",
-    title: `${title}${noTitleAdd ? "" : " - Code du travail numérique"}`,
+    title: title,
     description: description,
-    metadataBase: new URL(SITE_URL),
     alternates: {
       canonical: overrideCanonical ?? path,
     },
-    locale: "fr_FR",
     openGraph: {
+      siteName: "Code du travail numérique",
       title: title,
       description: description,
-      type: "article",
-      images: `${SITE_URL}/static/assets/img/social-preview.png`,
-    },
-    twitter: {
-      card: "summary",
+      type: "website",
+      images: `/static/assets/img/social-preview.png`,
+      locale: "fr_FR",
     },
   };
 }
