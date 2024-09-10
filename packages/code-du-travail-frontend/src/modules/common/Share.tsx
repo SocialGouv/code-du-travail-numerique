@@ -6,6 +6,7 @@ import Button from "@codegouvfr/react-dsfr/Button";
 import { usePathname } from "next/navigation";
 import { SITE_URL } from "../../config";
 import { fr } from "@codegouvfr/react-dsfr";
+import { css } from "../../../styled-system/css";
 
 const POPUP_OPTIONS =
   "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600";
@@ -136,7 +137,17 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
         </li>
         <li>
           {isUrlCopied ? (
-            "Lien copié !"
+            <p className="fr-mt-1w">
+              <span
+                className={`${fr.cx("ri-check-line")} ${css({
+                  color: "var(--text-default-success)",
+                })}`}
+                aria-hidden="true"
+              />
+              Lien copié
+            </p>
+
+
           ) : (
             <Button
               priority="tertiary"

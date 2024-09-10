@@ -22,7 +22,6 @@ export const RelatedItems = ({
 }: {
   items: { slug?: string; source; title: string; reco; url?: string }[];
 }) => {
-
   if (items.length === 0) {
     return <></>;
   }
@@ -42,8 +41,6 @@ export const RelatedItems = ({
     { items: relatedArticleItems, title: "Articles liés" },
   ];
 
-
-
   return (
     <div className={fr.cx("fr-mb-5w")}>
       {relatedGroups.map(
@@ -60,7 +57,7 @@ export const RelatedItems = ({
                       : `/${getRouteBySource(source)}/${slug}`;
                   return (
                     <li key={href} className="fr-pb-2w">
-                      <i
+                      <span
                         className={`${fr.cx("ri-arrow-right-line")} ${css({
                           color: "var(--artwork-minor-blue-cumulus)",
                         })}`}
