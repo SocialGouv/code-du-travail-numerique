@@ -3,132 +3,80 @@
 exports[`<RelatedItems /> should render 1`] = `
 <div>
   <div
-    class="sc-aXZVg gZgZQL"
+    class="fr-mb-5w"
   >
-    <div
-      aria-level="2"
-      class="sc-kAyceB dvmaTz"
-      role="heading"
-    >
-      Modèles et outils liés
-       :
-    </div>
-    <ul
-      class="sc-cfxfcM kMmTaI"
-    >
-      <li
-        class="sc-fMMURN fUjtLa"
+    <div>
+      <p
+        class="fr-text--lead"
       >
-        <a
-          class="sc-bmzYkS eyKmWS"
+        Modèles et outils liés
+         :
+      </p>
+      <ul
+        class="list-style-none"
+      >
+        <li
+          class="fr-pb-2w"
         >
-          <svg
-            aria-hidden="true"
-            class="sc-dtBdUo hpIOmX"
-            fill="none"
-            viewBox="0 0 28 15"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-              fill="currentColor"
-            />
-          </svg>
-          <span
-            class="sc-iHGNWf hQSWKy"
+          <i
+            class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
+          />
+          <a
+            href="external.tools"
           >
             externalTool
-          </span>
-        </a>
-      </li>
-      <li
-        class="sc-fMMURN fUjtLa"
-      >
-        <a
-          class="sc-bmzYkS eyKmWS"
+          </a>
+        </li>
+        <li
+          class="fr-pb-2w"
         >
-          <svg
-            aria-hidden="true"
-            class="sc-dtBdUo hpIOmX"
-            fill="none"
-            viewBox="0 0 28 15"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-              fill="currentColor"
-            />
-          </svg>
-          <span
-            class="sc-iHGNWf hQSWKy"
+          <i
+            class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
+          />
+          <a
+            href="/modeles-de-courriers/modele.url"
           >
             modele de courrier
-          </span>
-        </a>
-      </li>
-    </ul>
-    <div
-      aria-level="2"
-      class="sc-kAyceB dvmaTz"
-      role="heading"
-    >
-      Articles liés
-       :
+          </a>
+        </li>
+      </ul>
     </div>
-    <ul
-      class="sc-cfxfcM kMmTaI"
-    >
-      <li
-        class="sc-fMMURN fUjtLa"
+    <div>
+      <p
+        class="fr-text--lead"
       >
-        <a
-          class="sc-bmzYkS eyKmWS"
+        Articles liés
+         :
+      </p>
+      <ul
+        class="list-style-none"
+      >
+        <li
+          class="fr-pb-2w"
         >
-          <svg
-            aria-hidden="true"
-            class="sc-dtBdUo hpIOmX"
-            fill="none"
-            viewBox="0 0 28 15"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-              fill="currentColor"
-            />
-          </svg>
-          <span
-            class="sc-iHGNWf hQSWKy"
+          <i
+            class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
+          />
+          <a
+            href="/fiche-service-public/fiche.sp.url"
           >
             fiche sp
-          </span>
-        </a>
-      </li>
-      <li
-        class="sc-fMMURN fUjtLa"
-      >
-        <a
-          class="sc-bmzYkS eyKmWS"
+          </a>
+        </li>
+        <li
+          class="fr-pb-2w"
         >
-          <svg
-            aria-hidden="true"
-            class="sc-dtBdUo hpIOmX"
-            fill="none"
-            viewBox="0 0 28 15"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
-              fill="currentColor"
-            />
-          </svg>
-          <span
-            class="sc-iHGNWf hQSWKy"
+          <i
+            class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
+          />
+          <a
+            href="/contribution/contrib.url"
           >
             contrib
-          </span>
-        </a>
-      </li>
-    </ul>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 `;
