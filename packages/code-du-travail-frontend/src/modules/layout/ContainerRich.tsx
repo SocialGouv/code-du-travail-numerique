@@ -2,7 +2,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { RelatedItems } from "../common/RelatedItems";
 import { Share } from "../common/Share";
 
-export const Container2Columns = ({
+export const ContainerRich = ({
   children,
   relatedItems,
   title,

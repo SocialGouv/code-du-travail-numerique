@@ -2,7 +2,7 @@ import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Tag } from "@codegouvfr/react-dsfr/Tag";
 import Html from "../common/Html";
-import { Container2Columns } from "../layout/Container-2-columns";
+import { ContainerRich } from "../layout/ContainerRich";
 
 type Props = {
   metaDescription: string;
@@ -26,7 +26,7 @@ function ArticleCodeDuTravail({
   notaHtml,
 }: Props) {
   return (
-    <Container2Columns
+    <ContainerRich
       relatedItems={relatedItems}
       title={title}
       description={metaDescription}
@@ -51,7 +51,7 @@ function ArticleCodeDuTravail({
           <Html>{notaHtml}</Html>
         </div>
       )}
-    </Container2Columns>
+    </ContainerRich>
   );
 }
 
