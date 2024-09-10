@@ -1,0 +1,79 @@
+
+contrat salarié . convention collective . automobiles . catégorie professionnelle:
+  titre: catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Agents de maîtrise: "'Agents de maîtrise'"
+      Cadres: "'Cadres'"
+      Ouvriers, Employés: "'Ouvriers, Employés'"
+          
+contrat salarié . convention collective . automobiles . catégorie professionnelle Agents de maîtrise:
+  applicable si: catégorie professionnelle = 'Agents de maîtrise'
+          
+contrat salarié . convention collective . automobiles . catégorie professionnelle Agents de maîtrise . échelon:
+  titre: échelon
+  question: Quel est l'échelon du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      De 17 à 19: "'De 17 à 19'"
+      De 20 à 25: "'De 20 à 25'"
+          
+contrat salarié . convention collective . automobiles . catégorie professionnelle Agents de maîtrise . échelon De 17 à 19:
+  applicable si: échelon = 'De 17 à 19'
+          
+contrat salarié . convention collective . automobiles . catégorie professionnelle Agents de maîtrise . échelon De 17 à 19 . résultat conventionnel:
+  valeur: 2 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 4.10 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid
+          
+contrat salarié . convention collective . automobiles . catégorie professionnelle Agents de maîtrise . échelon De 20 à 25:
+  applicable si: échelon = 'De 20 à 25'
+          
+contrat salarié . convention collective . automobiles . catégorie professionnelle Agents de maîtrise . échelon De 20 à 25 . résultat conventionnel:
+  valeur: 3 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 4.10 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid
+          
+contrat salarié . convention collective . automobiles . catégorie professionnelle Cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
+          
+contrat salarié . convention collective . automobiles . catégorie professionnelle Cadres . résultat conventionnel:
+  valeur: 3 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 4.10 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid
+          
+contrat salarié . convention collective . automobiles . catégorie professionnelle Ouvriers, Employés:
+  applicable si: catégorie professionnelle = 'Ouvriers, Employés'
+          
+contrat salarié . convention collective . automobiles . catégorie professionnelle Ouvriers, Employés . échelon:
+  titre: échelon
+  question: Quel est l'échelon du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      1 et 2: "'1 et 2'"
+      De 3 à 12: "'De 3 à 12'"
+          
+contrat salarié . convention collective . automobiles . catégorie professionnelle Ouvriers, Employés . échelon 1 et 2:
+  applicable si: échelon = '1 et 2'
+          
+contrat salarié . convention collective . automobiles . catégorie professionnelle Ouvriers, Employés . échelon 1 et 2 . résultat conventionnel:
+  valeur: 2 semaines
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 2.12 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid
+          
+contrat salarié . convention collective . automobiles . catégorie professionnelle Ouvriers, Employés . échelon De 3 à 12:
+  applicable si: échelon = 'De 3 à 12'
+          
+contrat salarié . convention collective . automobiles . catégorie professionnelle Ouvriers, Employés . échelon De 3 à 12 . résultat conventionnel:
+  valeur: 1 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 2.12 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid

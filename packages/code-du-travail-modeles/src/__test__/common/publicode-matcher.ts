@@ -3,6 +3,7 @@ import type { Rule } from "publicodes";
 import {
   mergeHeuresRechercheEmploiModels,
   mergeIndemniteLicenciementModels,
+  mergePreavisDemissionModels,
   mergePreavisLicenciementModels,
   mergePreavisRetraiteModels,
   mergeRuptureConventionnelle,
@@ -13,12 +14,12 @@ import type {
   MissingArgs,
   PublicodesOutput,
 } from "../../publicodes";
-import { copy } from "fs-extra";
 
 declare global {
   const modelsIndemniteLicenciement: Record<string, any>;
   const modelsPreavisRetraite: Record<string, any>;
   const modelsPreavisLicenciement: Record<string, any>;
+  const modelsPreavisDemission: Record<string, any>;
   const modelsRuptureConventionnel: Record<string, any>;
   const modelsHeuresRechercheEmploi: Record<string, any>;
   namespace jest {
@@ -223,6 +224,8 @@ expect.extend({
         pass: false,
       };
     }
+    const pass =
+      JSON.stringify(references) === JSON.stringify(result.references);
     return {
       message: () =>
         `Expected to receive ${references.length} references but received ${
@@ -232,7 +235,7 @@ Expected:
 ${JSON.stringify(references)}
 Received:
 ${JSON.stringify(result.references)}`,
-      pass: JSON.stringify(references) === JSON.stringify(result.references),
+      pass,
     };
   },
   toIneligibilityBeEqual(
@@ -418,22 +421,23 @@ ${JSON.stringify(result.references)}`,
         pass: false,
       };
     }
+    const pass =
+      !notifications.length ||
+      notifications.some((notification) =>
+        result.notifications.some(({ description }) => {
+          const replaceSpace = (text: string) =>
+            text.replace(/(?:\r\n|\r|\n|\\n\\n)/g, "");
+          return Array.isArray(description)
+            ? description.some(
+                (d) => replaceSpace(d) === replaceSpace(notification)
+              )
+            : description === notification;
+        })
+      );
     return {
       message: () =>
         `Expected amount to be "${notifications.join()}" but not found"`,
-      pass:
-        !notifications.length ||
-        notifications.some((notification) =>
-          result.notifications.some(({ description }) => {
-            const replaceSpace = (text: string) =>
-              text.replace(/(?:\r\n|\r|\n|\\n\\n)/g, "");
-            return Array.isArray(description)
-              ? description.some(
-                  (d) => replaceSpace(d) === replaceSpace(notification)
-                )
-              : description === notification;
-          })
-        ),
+      pass,
     };
   },
 });
@@ -446,6 +450,7 @@ const replaceAll = (string: string, search: string, replace: string) => {
   mergeIndemniteLicenciementModels();
 (global as any).modelsPreavisRetraite = mergePreavisRetraiteModels();
 (global as any).modelsPreavisLicenciement = mergePreavisLicenciementModels();
+(global as any).modelsPreavisDemission = mergePreavisDemissionModels();
 (global as any).modelsRuptureConventionnel = mergeRuptureConventionnelle();
 (global as any).modelsHeuresRechercheEmploi =
   mergeHeuresRechercheEmploiModels();

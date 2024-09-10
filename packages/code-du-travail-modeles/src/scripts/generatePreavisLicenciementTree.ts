@@ -87,10 +87,10 @@ export function generatePreavisLicenciementTree() {
         texts: answer
           ? [
               answer3 !== "0"
-                ? answer?.replace(/\n/g, " ").replace(/ {2}/g, " ").trim()
+                ? answer.replace(/\n/g, " ").replace(/ {2}/g, " ").trim()
                 : "Aucun préavis",
             ]
-          : [],
+          : ["Aucun préavis"],
       };
     },
     questions,

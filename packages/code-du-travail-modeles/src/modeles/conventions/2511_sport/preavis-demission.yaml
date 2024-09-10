@@ -1,0 +1,37 @@
+
+contrat salarié . convention collective . sport . catégorie professionnelle:
+  titre: catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Cadres: "'Cadres'"
+      Ouvriers, Employés: "'Ouvriers, Employés'"
+      Techniciens et agents de maîtrise TAM: "'Techniciens et agents de maîtrise TAM'"
+          
+contrat salarié . convention collective . sport . catégorie professionnelle Cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
+          
+contrat salarié . convention collective . sport . catégorie professionnelle Cadres . résultat conventionnel:
+  valeur: 3 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 4.4.1. de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411
+          
+contrat salarié . convention collective . sport . catégorie professionnelle Ouvriers, Employés:
+  applicable si: catégorie professionnelle = 'Ouvriers, Employés'
+          
+contrat salarié . convention collective . sport . catégorie professionnelle Ouvriers, Employés . résultat conventionnel:
+  valeur: 1 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 4.4.1. de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411
+          
+contrat salarié . convention collective . sport . catégorie professionnelle Techniciens et agents de maîtrise TAM:
+  applicable si: catégorie professionnelle = 'Techniciens et agents de maîtrise TAM'
+          
+contrat salarié . convention collective . sport . catégorie professionnelle Techniciens et agents de maîtrise TAM . résultat conventionnel:
+  valeur: 2 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 4.4.1. de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411

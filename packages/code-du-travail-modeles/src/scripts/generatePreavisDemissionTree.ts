@@ -1,5 +1,5 @@
 import { Situation, preavisDemissionData } from "../simulators";
-import { generateTree } from "./lib";
+import { generateTree, cleanRefLabel, cleanValue } from "./lib";
 import { TreeQuestionType } from "./lib/type";
 
 export function generatePreavisDemissionTree() {
@@ -25,12 +25,32 @@ export function generatePreavisDemissionTree() {
         agreementSearch: situation.idcc.toString(),
       };
     },
-    getResult: ({ answer, ref, refUrl }) => ({
-      refs: ref && refUrl ? [{ label: ref, url: refUrl }] : [],
-      texts: answer
-        ? [answer?.replace(/\n/g, " ").replace(/ {2}/g, " ").trim()]
-        : [],
-    }),
+    getResult: ({ answer, answer2, ref, refUrl, refs, note }) => {
+      const [number, unit] = (answer ?? "").split(" ");
+      const regExp = /\(([^)]+)\)/;
+      const regExpValue = regExp.exec(answer ?? "");
+      const isNan = isNaN(parseInt(number));
+      const result = {
+        refs:
+          refs?.map(({ ref, refUrl }) => ({
+            label: cleanRefLabel(ref),
+            url: refUrl,
+          })) ??
+          (ref && refUrl ? [{ label: cleanRefLabel(ref), url: refUrl }] : []),
+        texts: [
+          ...(answer && !isNan ? [`${number} ${unit}`] : ["0"]),
+          ...(answer2
+            ? answer2
+                .split("\n")
+                .filter((text) => !!text)
+                .map((text) => text.replace("-", "").trim())
+            : []),
+          ...(note ? [...(Array.isArray(note) ? note : [note])] : []),
+          ...(regExpValue?.[1] ? [regExpValue[1]] : []),
+        ],
+      };
+      return result;
+    },
     questions,
     situations,
   });

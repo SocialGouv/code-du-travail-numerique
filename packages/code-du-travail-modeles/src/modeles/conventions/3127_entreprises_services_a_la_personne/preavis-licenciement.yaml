@@ -9,7 +9,7 @@ contrat salarié . convention collective . entreprises de services à la personn
       2 ans ou plus: "'2 ans ou plus'"
           
 contrat salarié . convention collective . entreprises de services à la personne . ancienneté 6 mois à moins de 2 ans:
-  applicable si: ancienneté = "6 mois à moins de 2 ans"
+  applicable si: ancienneté = '6 mois à moins de 2 ans'
           
 contrat salarié . convention collective . entreprises de services à la personne . ancienneté 6 mois à moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -18,7 +18,7 @@ contrat salarié . convention collective . entreprises de services à la personn
     Article 1. 1 de la section 1 du Chapitre 4 de la Partie II de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E154C093E99FDBC15E7328F16C01CDA4.tplgfr37s_1?idArticle=KALIARTI000027034201&cidTexte=KALITEXT000026943196&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . entreprises de services à la personne . ancienneté 2 ans ou plus:
-  applicable si: ancienneté = "2 ans ou plus"
+  applicable si: ancienneté = '2 ans ou plus'
           
 contrat salarié . convention collective . entreprises de services à la personne . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois

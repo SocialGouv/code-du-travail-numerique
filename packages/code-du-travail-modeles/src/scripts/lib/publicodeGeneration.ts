@@ -3,7 +3,10 @@ import fs from "fs";
 import { OptionResult, TreeQuestion } from "./type";
 import { cleanValue, getCCName } from "./common";
 
-type ParseResult = (texts: string[]) => { value: string; notification: string };
+type ParseResult = (texts: string[]) => {
+  value: string;
+  notification: string | string[];
+};
 
 function generateNamespace(
   namespace: string[],
@@ -12,7 +15,18 @@ function generateNamespace(
 ): string {
   return `
 contrat salarié . convention collective . ${namespace.join(" . ")}:
-  applicable si: ${questionName} = "${option}"`;
+  applicable si: ${questionName} = '${option}'`;
+}
+
+function generateNotification(notification: string | string[]) {
+  if (Array.isArray(notification)) {
+    const notificationList = notification.map(
+      (notif) => `
+    - ${notif}`
+    );
+    return notificationList;
+  }
+  return notification;
 }
 
 function generateResult(
@@ -24,10 +38,10 @@ function generateResult(
   const refLines = result.refs.map(({ url, label }) => `${label}: ${url}`);
 
   const { value, notification } = parseResult(result.texts);
-  const notificationLine = notification
+  const notificationLine = notification?.length
     ? `
   type: notification
-  description:  ${notification}`
+  description: ${generateNotification(notification)}`
     : "";
   const content = `
 contrat salarié . convention collective . ${namespaceLine} . résultat conventionnel:
@@ -133,7 +147,7 @@ function generatePublicode(
   return idccQuestion.options
     .filter(({ text }) => text !== "0")
     .reduce<{ filename: string; content: string }[]>(
-      (arr, { text, nextQuestion }) => {
+      (arr, { text, nextQuestion, result }) => {
         const foldername = folders.find((folder) =>
           folder.startsWith(`${text}_`)
         );
@@ -145,6 +159,8 @@ function generatePublicode(
         arr.push({
           content: nextQuestion
             ? generateQuestions(nextQuestion, [ccName], parseResult)
+            : result
+            ? generateResult(result, [ccName], parseResult)
             : "",
           filename: `${pathDir}/${foldername}/${componentName}.yaml`,
         });

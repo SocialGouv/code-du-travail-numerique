@@ -1,0 +1,37 @@
+
+contrat salarié . convention collective . publicité française . catégorie professionnelle:
+  titre: catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Agents de maîtrise et Techniciens: "'Agents de maîtrise et Techniciens'"
+      Cadres: "'Cadres'"
+      Employés: "'Employés'"
+          
+contrat salarié . convention collective . publicité française . catégorie professionnelle Agents de maîtrise et Techniciens:
+  applicable si: catégorie professionnelle = 'Agents de maîtrise et Techniciens'
+          
+contrat salarié . convention collective . publicité française . catégorie professionnelle Agents de maîtrise et Techniciens . résultat conventionnel:
+  valeur: 2 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 48: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005857333&cidTexte=KALITEXT000005682357
+          
+contrat salarié . convention collective . publicité française . catégorie professionnelle Cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
+          
+contrat salarié . convention collective . publicité française . catégorie professionnelle Cadres . résultat conventionnel:
+  valeur: 3 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 67: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005857359&cidTexte=KALITEXT000005682357&dateTexte=19740607
+          
+contrat salarié . convention collective . publicité française . catégorie professionnelle Employés:
+  applicable si: catégorie professionnelle = 'Employés'
+          
+contrat salarié . convention collective . publicité française . catégorie professionnelle Employés . résultat conventionnel:
+  valeur: 1 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 29: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000005857303&cidTexte=KALITEXT000005682357&dateTexte=29990101&categorieLien=id

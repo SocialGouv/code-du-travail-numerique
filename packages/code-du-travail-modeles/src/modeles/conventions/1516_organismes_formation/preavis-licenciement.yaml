@@ -10,7 +10,7 @@ contrat salarié . convention collective . organismes de formation . catégorie 
       Agents de maîtrise ou techniciens: "'Agents de maîtrise ou techniciens'"
           
 contrat salarié . convention collective . organismes de formation . catégorie professionnelle Cadres:
-  applicable si: catégorie professionnelle = "Cadres"
+  applicable si: catégorie professionnelle = 'Cadres'
           
 contrat salarié . convention collective . organismes de formation . catégorie professionnelle Cadres . résultat conventionnel:
   valeur: 3 mois
@@ -19,7 +19,7 @@ contrat salarié . convention collective . organismes de formation . catégorie 
     Article 9.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=89093E1309DF68E5F62690396DFAA9A2.tplgfr44s_1?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . organismes de formation . catégorie professionnelle Employés:
-  applicable si: catégorie professionnelle = "Employés"
+  applicable si: catégorie professionnelle = 'Employés'
           
 contrat salarié . convention collective . organismes de formation . catégorie professionnelle Employés . ancienneté:
   titre: ancienneté
@@ -31,7 +31,7 @@ contrat salarié . convention collective . organismes de formation . catégorie 
       Plus de 2 ans: "'Plus de 2 ans'"
           
 contrat salarié . convention collective . organismes de formation . catégorie professionnelle Employés . ancienneté 2 ans ou moins:
-  applicable si: ancienneté = "2 ans ou moins"
+  applicable si: ancienneté = '2 ans ou moins'
           
 contrat salarié . convention collective . organismes de formation . catégorie professionnelle Employés . ancienneté 2 ans ou moins . résultat conventionnel:
   valeur: 1 mois
@@ -40,7 +40,7 @@ contrat salarié . convention collective . organismes de formation . catégorie 
     Article 9.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=89093E1309DF68E5F62690396DFAA9A2.tplgfr44s_1?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . organismes de formation . catégorie professionnelle Employés . ancienneté Plus de 2 ans:
-  applicable si: ancienneté = "Plus de 2 ans"
+  applicable si: ancienneté = 'Plus de 2 ans'
           
 contrat salarié . convention collective . organismes de formation . catégorie professionnelle Employés . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -49,7 +49,7 @@ contrat salarié . convention collective . organismes de formation . catégorie 
     Article 9.1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=89093E1309DF68E5F62690396DFAA9A2.tplgfr44s_1?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . organismes de formation . catégorie professionnelle Agents de maîtrise ou techniciens:
-  applicable si: catégorie professionnelle = "Agents de maîtrise ou techniciens"
+  applicable si: catégorie professionnelle = 'Agents de maîtrise ou techniciens'
           
 contrat salarié . convention collective . organismes de formation . catégorie professionnelle Agents de maîtrise ou techniciens . résultat conventionnel:
   valeur: 2 mois

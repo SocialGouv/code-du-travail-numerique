@@ -9,7 +9,7 @@ contrat salarié . convention collective . gardien concierge . catégorie profes
       B: "'B'"
           
 contrat salarié . convention collective . gardien concierge . catégorie professionnelle A:
-  applicable si: catégorie professionnelle = "A"
+  applicable si: catégorie professionnelle = 'A'
           
 contrat salarié . convention collective . gardien concierge . catégorie professionnelle A . ancienneté:
   titre: ancienneté
@@ -21,7 +21,7 @@ contrat salarié . convention collective . gardien concierge . catégorie profes
       Plus de 2 ans: "'Plus de 2 ans'"
           
 contrat salarié . convention collective . gardien concierge . catégorie professionnelle A . ancienneté Moins de 2 ans:
-  applicable si: ancienneté = "Moins de 2 ans"
+  applicable si: ancienneté = 'Moins de 2 ans'
           
 contrat salarié . convention collective . gardien concierge . catégorie professionnelle A . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -30,7 +30,7 @@ contrat salarié . convention collective . gardien concierge . catégorie profes
     Article 14: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9BE634B39A56D325EB33F7F23B8EC784.tplgfr36s_3?idArticle=KALIARTI000034978399&cidTexte=KALITEXT000021180979&dateTexte=29981231&categorieLien=id
           
 contrat salarié . convention collective . gardien concierge . catégorie professionnelle A . ancienneté Plus de 2 ans:
-  applicable si: ancienneté = "Plus de 2 ans"
+  applicable si: ancienneté = 'Plus de 2 ans'
           
 contrat salarié . convention collective . gardien concierge . catégorie professionnelle A . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -39,7 +39,7 @@ contrat salarié . convention collective . gardien concierge . catégorie profes
     Article 14: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9BE634B39A56D325EB33F7F23B8EC784.tplgfr36s_3?idArticle=KALIARTI000034978399&cidTexte=KALITEXT000021180979&dateTexte=29981231&categorieLien=id
           
 contrat salarié . convention collective . gardien concierge . catégorie professionnelle B:
-  applicable si: catégorie professionnelle = "B"
+  applicable si: catégorie professionnelle = 'B'
           
 contrat salarié . convention collective . gardien concierge . catégorie professionnelle B . résultat conventionnel:
   valeur: 3 mois

@@ -1,0 +1,89 @@
+
+contrat salarié . convention collective . industries chimiques . catégorie professionnelle:
+  titre: catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Agents de maîtrise et Techniciens: "'Agents de maîtrise et Techniciens'"
+      Ingénieurs, Cadres: "'Ingénieurs, Cadres'"
+      Ouvriers et collaborateurs: "'Ouvriers et collaborateurs'"
+          
+contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise et Techniciens:
+  applicable si: catégorie professionnelle = 'Agents de maîtrise et Techniciens'
+          
+contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise et Techniciens . coefficient:
+  titre: coefficient
+  question: Quel est le coefficient hiérarchique du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Inférieur à 275: "'Inférieur à 275'"
+      Supérieur à 275 inclus: "'Supérieur à 275 inclus'"
+          
+contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise et Techniciens . coefficient Inférieur à 275:
+  applicable si: coefficient = 'Inférieur à 275'
+          
+contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise et Techniciens . coefficient Inférieur à 275 . résultat conventionnel:
+  valeur: 2 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Avenant 2, article 20: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9658082762B1C494A3C7AB50DDDEB53B.tpdjo14v_2?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795&dateTexte=20120612
+          
+contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise et Techniciens . coefficient Supérieur à 275 inclus:
+  applicable si: coefficient = 'Supérieur à 275 inclus'
+          
+contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise et Techniciens . coefficient Supérieur à 275 inclus . résultat conventionnel:
+  valeur: 3 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Avenant 2, article 20: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9658082762B1C494A3C7AB50DDDEB53B.tpdjo14v_2?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795&dateTexte=20120612
+          
+contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ingénieurs, Cadres:
+  applicable si: catégorie professionnelle = 'Ingénieurs, Cadres'
+          
+contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ingénieurs, Cadres . résultat conventionnel:
+  valeur: 3 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Avenant n°3 article 4: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846301&cidTexte=KALITEXT000005677770&dateTexte=20190829
+          
+contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers et collaborateurs:
+  applicable si: catégorie professionnelle = 'Ouvriers et collaborateurs'
+          
+contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers et collaborateurs . coefficient:
+  titre: coefficient
+  question: Quel est le coefficient hiérarchique du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Inférieur à 160: "'Inférieur à 160'"
+      Entre 160 inclus et 175: "'Entre 160 inclus et 175'"
+      190 et plus: "'190 et plus'"
+          
+contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers et collaborateurs . coefficient Inférieur à 160:
+  applicable si: coefficient = 'Inférieur à 160'
+          
+contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers et collaborateurs . coefficient Inférieur à 160 . résultat conventionnel:
+  valeur: 15 jours
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
+          
+contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers et collaborateurs . coefficient Entre 160 inclus et 175:
+  applicable si: coefficient = 'Entre 160 inclus et 175'
+          
+contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers et collaborateurs . coefficient Entre 160 inclus et 175 . résultat conventionnel:
+  valeur: 1 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829
+          
+contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers et collaborateurs . coefficient 190 et plus:
+  applicable si: coefficient = '190 et plus'
+          
+contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers et collaborateurs . coefficient 190 et plus . résultat conventionnel:
+  valeur: 2 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Avenant n°1 article 27: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829

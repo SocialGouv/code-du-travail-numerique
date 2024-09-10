@@ -9,7 +9,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
       Noncadres: "'Noncadres'"
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres:
-  applicable si: catégorie professionnelle = "Cadres"
+  applicable si: catégorie professionnelle = 'Cadres'
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres . classe:
   titre: classe
@@ -22,7 +22,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
       7: "'7'"
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres . classe 5:
-  applicable si: classe = "5"
+  applicable si: classe = '5'
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres . classe 5 . résultat conventionnel:
   valeur: 3 mois
@@ -31,7 +31,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
     Accord relative aux dispositions particulières " Cadres ", article II. 6: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3586CF13469976784B743EB6B765BDF5.tplgfr44s_1?idArticle=KALIARTI000026688804&cidTexte=KALITEXT000005654666&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres . classe 6:
-  applicable si: classe = "6"
+  applicable si: classe = '6'
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres . classe 6 . résultat conventionnel:
   valeur: 3 mois
@@ -40,7 +40,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
     Accord relative aux dispositions particulières " Cadres ", article II. 6: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3586CF13469976784B743EB6B765BDF5.tplgfr44s_1?idArticle=KALIARTI000026688804&cidTexte=KALITEXT000005654666&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres . classe 7:
-  applicable si: classe = "7"
+  applicable si: classe = '7'
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres . classe 7 . résultat conventionnel:
   valeur: 3 mois
@@ -49,7 +49,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
     Accord relative aux dispositions particulières " Cadres ", article II. 6: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3586CF13469976784B743EB6B765BDF5.tplgfr44s_1?idArticle=KALIARTI000026688804&cidTexte=KALITEXT000005654666&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres:
-  applicable si: catégorie professionnelle = "Noncadres"
+  applicable si: catégorie professionnelle = 'Noncadres'
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe:
   titre: classe
@@ -63,7 +63,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
       4: "'4'"
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 1:
-  applicable si: classe = "1"
+  applicable si: classe = '1'
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 1 . ancienneté:
   titre: ancienneté
@@ -75,7 +75,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
       2 ans ou plus: "'2 ans ou plus'"
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 1 . ancienneté Moins de 2 ans:
-  applicable si: ancienneté = "Moins de 2 ans"
+  applicable si: ancienneté = 'Moins de 2 ans'
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 1 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -84,7 +84,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
     Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 1 . ancienneté 2 ans ou plus:
-  applicable si: ancienneté = "2 ans ou plus"
+  applicable si: ancienneté = '2 ans ou plus'
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 1 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -93,7 +93,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
     Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 2:
-  applicable si: classe = "2"
+  applicable si: classe = '2'
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 2 . ancienneté:
   titre: ancienneté
@@ -105,7 +105,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
       2 ans ou plus: "'2 ans ou plus'"
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 2 . ancienneté Moins de 2 ans:
-  applicable si: ancienneté = "Moins de 2 ans"
+  applicable si: ancienneté = 'Moins de 2 ans'
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 2 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -114,7 +114,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
     Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 2 . ancienneté 2 ans ou plus:
-  applicable si: ancienneté = "2 ans ou plus"
+  applicable si: ancienneté = '2 ans ou plus'
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 2 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -123,7 +123,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
     Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 3:
-  applicable si: classe = "3"
+  applicable si: classe = '3'
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 3 . ancienneté:
   titre: ancienneté
@@ -135,7 +135,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
       2 ans ou plus: "'2 ans ou plus'"
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 3 . ancienneté Moins de 2 ans:
-  applicable si: ancienneté = "Moins de 2 ans"
+  applicable si: ancienneté = 'Moins de 2 ans'
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 3 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -144,7 +144,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
     Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 3 . ancienneté 2 ans ou plus:
-  applicable si: ancienneté = "2 ans ou plus"
+  applicable si: ancienneté = '2 ans ou plus'
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 3 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -153,7 +153,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
     Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 4:
-  applicable si: classe = "4"
+  applicable si: classe = '4'
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 4 . ancienneté:
   titre: ancienneté
@@ -165,7 +165,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
       2 ans ou plus: "'2 ans ou plus'"
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 4 . ancienneté Moins de 2 ans:
-  applicable si: ancienneté = "Moins de 2 ans"
+  applicable si: ancienneté = 'Moins de 2 ans'
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 4 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -174,7 +174,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
     Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 4 . ancienneté 2 ans ou plus:
-  applicable si: ancienneté = "2 ans ou plus"
+  applicable si: ancienneté = '2 ans ou plus'
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 4 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois

@@ -1,0 +1,141 @@
+
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle:
+  titre: catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Agents de maîtrise et Techniciens: "'Agents de maîtrise et Techniciens'"
+      Animateurs, techniciens et professeurs: "'Animateurs, techniciens et professeurs'"
+      Cadres: "'Cadres'"
+      Ouvriers, Employés: "'Ouvriers, Employés'"
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens:
+  applicable si: catégorie professionnelle = 'Agents de maîtrise et Techniciens'
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe:
+  titre: groupe
+  question: Quel est le groupe professionnel du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      4: "'4'"
+      5: "'5'"
+      6: "'6'"
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 4:
+  applicable si: groupe = '4'
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 4 . résultat conventionnel:
+  valeur: 2 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 5:
+  applicable si: groupe = '5'
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 5 . résultat conventionnel:
+  valeur: 2 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 6:
+  applicable si: groupe = '6'
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 6 . résultat conventionnel:
+  valeur: 2 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Animateurs, techniciens et professeurs:
+  applicable si: catégorie professionnelle = 'Animateurs, techniciens et professeurs'
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau:
+  titre: niveau
+  question: Quel est le niveau du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      A: "'A'"
+      B: "'B'"
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau A:
+  applicable si: niveau = 'A'
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau A . résultat conventionnel:
+  valeur: 2 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau B:
+  applicable si: niveau = 'B'
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau B . résultat conventionnel:
+  valeur: 2 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Cadres . groupe:
+  titre: groupe
+  question: Quel est le groupe professionnel du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      7: "'7'"
+      8: "'8'"
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Cadres . groupe 7:
+  applicable si: groupe = '7'
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Cadres . groupe 7 . résultat conventionnel:
+  valeur: 3 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Cadres . groupe 8:
+  applicable si: groupe = '8'
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Cadres . groupe 8 . résultat conventionnel:
+  valeur: 3 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés:
+  applicable si: catégorie professionnelle = 'Ouvriers, Employés'
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe:
+  titre: groupe
+  question: Quel est le groupe professionnel du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      2: "'2'"
+      3: "'3'"
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 2:
+  applicable si: groupe = '2'
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 2 . résultat conventionnel:
+  valeur: 1 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 3:
+  applicable si: groupe = '3'
+          
+contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 3 . résultat conventionnel:
+  valeur: 1 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 4.4: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id

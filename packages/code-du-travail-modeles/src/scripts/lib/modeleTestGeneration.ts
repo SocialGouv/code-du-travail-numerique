@@ -88,7 +88,7 @@ function generateTest(
   return idccQuestion.options
     .filter(({ text }) => text !== "0")
     .reduce<{ filename: string; content: string }[]>(
-      (arr, { text, nextQuestion }) => {
+      (arr, { text, nextQuestion, result }) => {
         const foldername = folders.find((folder) =>
           folder.startsWith(`${text}_`)
         );
@@ -105,7 +105,10 @@ function generateTest(
               return JSON.stringify(situation);
             }).join(`,
             `)
-          : "";
+          : JSON.stringify({
+              situation: {},
+              ...(result ? formatResult(result) : {}),
+            });
         const folderPath = `${pathDir}/${foldername}/__tests__/${componentName}`;
         if (!fs.existsSync(folderPath)) {
           fs.mkdirSync(folderPath);

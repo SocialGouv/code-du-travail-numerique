@@ -1,0 +1,99 @@
+
+contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle:
+  titre: catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Cadres: "'Cadres'"
+      Cadres dirigeants: "'Cadres dirigeants'"
+      Cadres supérieurs: "'Cadres supérieurs'"
+      Employés: "'Employés'"
+      Techniciens et agents de maîtrise TAM: "'Techniciens et agents de maîtrise TAM'"
+          
+contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
+          
+contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Cadres . résultat conventionnel:
+  valeur: 3 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 45: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801971&cidTexte=KALITEXT000005658770&dateTexte=20191017
+          
+contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Cadres dirigeants:
+  applicable si: catégorie professionnelle = 'Cadres dirigeants'
+          
+contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Cadres dirigeants . résultat conventionnel:
+  valeur: 6 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 45: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801971&cidTexte=KALITEXT000005658770&dateTexte=20191017
+          
+contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Cadres supérieurs:
+  applicable si: catégorie professionnelle = 'Cadres supérieurs'
+          
+contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Cadres supérieurs . résultat conventionnel:
+  valeur: 6 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 45: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801971&cidTexte=KALITEXT000005658770&dateTexte=20191017
+          
+contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Employés:
+  applicable si: catégorie professionnelle = 'Employés'
+          
+contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Employés . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      6 mois ou moins: "'6 mois ou moins'"
+      Plus de 6 mois: "'Plus de 6 mois'"
+          
+contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Employés . ancienneté 6 mois ou moins:
+  applicable si: ancienneté = '6 mois ou moins'
+          
+contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Employés . ancienneté 6 mois ou moins . résultat conventionnel:
+  valeur: 15 jours
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 45: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801971&cidTexte=KALITEXT000005658770&dateTexte=20191017
+          
+contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Employés . ancienneté Plus de 6 mois:
+  applicable si: ancienneté = 'Plus de 6 mois'
+          
+contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Employés . ancienneté Plus de 6 mois . résultat conventionnel:
+  valeur: 1 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 45: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801971&cidTexte=KALITEXT000005658770&dateTexte=20191017
+          
+contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Techniciens et agents de maîtrise TAM:
+  applicable si: catégorie professionnelle = 'Techniciens et agents de maîtrise TAM'
+          
+contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 2 ans: "'Moins de 2 ans'"
+      2 ans ou plus: "'2 ans ou plus'"
+          
+contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté Moins de 2 ans:
+  applicable si: ancienneté = 'Moins de 2 ans'
+          
+contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté Moins de 2 ans . résultat conventionnel:
+  valeur: 1 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 45: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801971&cidTexte=KALITEXT000005658770&dateTexte=20191017
+          
+contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté 2 ans ou plus:
+  applicable si: ancienneté = '2 ans ou plus'
+          
+contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté 2 ans ou plus . résultat conventionnel:
+  valeur: 2 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 45: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801971&cidTexte=KALITEXT000005658770&dateTexte=20191017

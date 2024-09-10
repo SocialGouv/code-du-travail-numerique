@@ -1,0 +1,48 @@
+
+contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle:
+  titre: catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Cadres: "'Cadres'"
+      Personnel de fabrication, personnel de vente et personnel de services: "'Personnel de fabrication, personnel de vente et personnel de services'"
+          
+contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
+          
+contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Cadres . résultat conventionnel:
+  valeur: 2 mois
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 6 de l'annexe  Statut du personnel d'encadrement: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000038678849&cidTexte=KALITEXT000005688564&dateTexte=20190827
+          
+contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services:
+  applicable si: catégorie professionnelle = 'Personnel de fabrication, personnel de vente et personnel de services'
+          
+contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services . ancienneté:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 6 mois: "'Moins de 6 mois'"
+      Plus de 6 mois: "'Plus de 6 mois'"
+          
+contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services . ancienneté Moins de 6 mois:
+  applicable si: ancienneté = 'Moins de 6 mois'
+          
+contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services . ancienneté Moins de 6 mois . résultat conventionnel:
+  valeur: 1 semaine
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 32 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005873153&cidTexte=KALITEXT000005688564&dateTexte=29990101&categorieLien=id
+          
+contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services . ancienneté Plus de 6 mois:
+  applicable si: ancienneté = 'Plus de 6 mois'
+          
+contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services . ancienneté Plus de 6 mois . résultat conventionnel:
+  valeur: 2 semaines
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article 32 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005873153&cidTexte=KALITEXT000005688564&dateTexte=29990101&categorieLien=id

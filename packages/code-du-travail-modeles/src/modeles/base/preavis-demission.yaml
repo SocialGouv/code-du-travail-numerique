@@ -1,0 +1,9 @@
+contrat salarié . résultat légal:
+  valeur: 0
+  type: notification
+  description: Le code du travail ne prévoit pas une durée précise du préavis de Démission. Il prévoit qu'un texte du niveau légal conventionnel, un accord d'entreprise voire un usage en prévoit les durées et modalités.
+  références:
+    Article L 1237-1: https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901174&cidTexte=LEGITEXT000006072050&dateTexte=20080501
+
+contrat salarié . convention collective . résultat conventionnel:
+  valeur: 0
