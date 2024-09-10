@@ -2,12 +2,14 @@
 import fs from "fs";
 import { parseString } from "xml2js";
 
+const PRODUCTION_DOMAIN = "https://code.travail.gouv.fr";
+const PREPROD_DOMAIN =
+  "https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr";
+
 export const downloadAllUrlsToValidate = async () => {
   console.log("Download all URLs to validate HTML...");
   try {
-    const response = await fetch(
-      "https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr/sitemap.xml"
-    );
+    const response = await fetch(`${PREPROD_DOMAIN}/sitemap.xml`);
     const data = await response.text();
     const parseUrls: Promise<string[]> = new Promise((resolve, reject) => {
       parseString(data, (err, result) => {
@@ -20,7 +22,9 @@ export const downloadAllUrlsToValidate = async () => {
       });
     });
 
-    const urls = await parseUrls;
+    const urls = (await parseUrls).map((url: string) => {
+      return url.replace(PRODUCTION_DOMAIN, PREPROD_DOMAIN);
+    });
 
     fs.writeFileSync(
       "./cypress/support/urls-to-validate.json",
