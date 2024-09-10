@@ -50,18 +50,24 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans .
           
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position A, B, C ou D . anciennement cadre Oui . ancienneté Entre 3 ans et moins de 5 ans . résultat conventionnel:
   valeur: 3 mois
+  type: notification
+  description: Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    
+    Article 75.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530
+    Article 68: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224
           
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position A, B, C ou D . anciennement cadre Oui . ancienneté 5 ans ou plus:
   applicable si: ancienneté = '5 ans ou plus'
           
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position A, B, C ou D . anciennement cadre Oui . ancienneté 5 ans ou plus . résultat conventionnel:
   valeur: 3 mois
+  type: notification
+  description: Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    
+    Article 75.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530
+    Article 68: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224
           
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position E:
   applicable si: position = 'E'
@@ -91,18 +97,24 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans .
           
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position E . anciennement cadre Oui . ancienneté Entre 3 ans et moins de 5 ans . résultat conventionnel:
   valeur: 3 mois
+  type: notification
+  description: Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    
+    Article 75.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530
+    Article 68: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224
           
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position E . anciennement cadre Oui . ancienneté 5 ans ou plus:
   applicable si: ancienneté = '5 ans ou plus'
           
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position E . anciennement cadre Oui . ancienneté 5 ans ou plus . résultat conventionnel:
   valeur: 3 mois
+  type: notification
+  description: Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    
+    Article 75.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530
+    Article 68: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224
           
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position F, G, H ou I:
   applicable si: position = 'F, G, H ou I'
@@ -121,6 +133,8 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans .
           
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position F, G, H ou I . ancienneté Entre 3 ans et moins de 5 ans . résultat conventionnel:
   valeur: 3 mois
+  type: notification
+  description: Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 75.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530
@@ -130,6 +144,8 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans .
           
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position F, G, H ou I . ancienneté 5 ans ou plus . résultat conventionnel:
   valeur: 3 mois
+  type: notification
+  description: Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 75.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530
@@ -175,18 +191,24 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans 
           
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position A, B, C ou D . anciennement cadre Oui . ancienneté Entre 3 ans et moins de 5 ans . résultat conventionnel:
   valeur: 4 mois
+  type: notification
+  description: Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    
+    Article 75.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530
+    Article 68: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224
           
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position A, B, C ou D . anciennement cadre Oui . ancienneté 5 ans ou plus:
   applicable si: ancienneté = '5 ans ou plus'
           
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position A, B, C ou D . anciennement cadre Oui . ancienneté 5 ans ou plus . résultat conventionnel:
   valeur: 6 mois
+  type: notification
+  description: Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    
+    Article 75.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530
+    Article 68: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224
           
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position E:
   applicable si: position = 'E'
@@ -216,18 +238,24 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans 
           
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position E . anciennement cadre Oui . ancienneté Entre 3 ans et moins de 5 ans . résultat conventionnel:
   valeur: 4 mois
+  type: notification
+  description: Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    
+    Article 75.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530
+    Article 68: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224
           
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position E . anciennement cadre Oui . ancienneté 5 ans ou plus:
   applicable si: ancienneté = '5 ans ou plus'
           
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position E . anciennement cadre Oui . ancienneté 5 ans ou plus . résultat conventionnel:
   valeur: 6 mois
+  type: notification
+  description: Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    
+    Article 75.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530
+    Article 68: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224
           
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position F, G, H ou I:
   applicable si: position = 'F, G, H ou I'
@@ -246,6 +274,8 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans 
           
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position F, G, H ou I . ancienneté Entre 3 ans et moins de 5 ans . résultat conventionnel:
   valeur: 4 mois
+  type: notification
+  description: Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 75.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530
@@ -255,6 +285,8 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans 
           
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position F, G, H ou I . ancienneté 5 ans ou plus . résultat conventionnel:
   valeur: 6 mois
+  type: notification
+  description: Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 75.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530
@@ -300,18 +332,24 @@ contrat salarié . convention collective . métallurgie . âge 55 ans et plus . 
           
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position A, B, C ou D . anciennement cadre Oui . ancienneté Entre 3 ans et moins de 5 ans . résultat conventionnel:
   valeur: 6 mois
+  type: notification
+  description: Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    
+    Article 75.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530
+    Article 68: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224
           
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position A, B, C ou D . anciennement cadre Oui . ancienneté 5 ans ou plus:
   applicable si: ancienneté = '5 ans ou plus'
           
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position A, B, C ou D . anciennement cadre Oui . ancienneté 5 ans ou plus . résultat conventionnel:
   valeur: 6 mois
+  type: notification
+  description: Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    
+    Article 75.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530
+    Article 68: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224
           
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position E:
   applicable si: position = 'E'
@@ -341,18 +379,24 @@ contrat salarié . convention collective . métallurgie . âge 55 ans et plus . 
           
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position E . anciennement cadre Oui . ancienneté Entre 3 ans et moins de 5 ans . résultat conventionnel:
   valeur: 6 mois
+  type: notification
+  description: Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    
+    Article 75.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530
+    Article 68: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224
           
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position E . anciennement cadre Oui . ancienneté 5 ans ou plus:
   applicable si: ancienneté = '5 ans ou plus'
           
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position E . anciennement cadre Oui . ancienneté 5 ans ou plus . résultat conventionnel:
   valeur: 6 mois
+  type: notification
+  description: Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    
+    Article 75.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530
+    Article 68: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224
           
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position F, G, H ou I:
   applicable si: position = 'F, G, H ou I'
@@ -371,6 +415,8 @@ contrat salarié . convention collective . métallurgie . âge 55 ans et plus . 
           
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position F, G, H ou I . ancienneté Entre 3 ans et moins de 5 ans . résultat conventionnel:
   valeur: 6 mois
+  type: notification
+  description: Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 75.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530
@@ -380,6 +426,8 @@ contrat salarié . convention collective . métallurgie . âge 55 ans et plus . 
           
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position F, G, H ou I . ancienneté 5 ans ou plus . résultat conventionnel:
   valeur: 6 mois
+  type: notification
+  description: Si la lettre de licenciement a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Article 75.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314530?idConteneur=KALICONT000046993250#KALIARTI000046314530

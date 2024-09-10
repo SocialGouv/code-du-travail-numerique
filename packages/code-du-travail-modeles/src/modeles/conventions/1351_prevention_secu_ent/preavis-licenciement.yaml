@@ -44,9 +44,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   applicable si: ancienneté = 'Moins de 15 jours'
           
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Moins de 15 jours . résultat conventionnel:
-  valeur: 0 mois
-  type: notification
-  description: Aucun préavis
+  valeur: 0
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Annexe IV Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -116,9 +114,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   applicable si: ancienneté = 'Moins de 15 jours'
           
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Moins de 15 jours . résultat conventionnel:
-  valeur: 0 mois
-  type: notification
-  description: Aucun préavis
+  valeur: 0
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Annexe IV Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -188,9 +184,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   applicable si: ancienneté = 'Moins de 15 jours'
           
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Moins de 15 jours . résultat conventionnel:
-  valeur: 0 mois
-  type: notification
-  description: Aucun préavis
+  valeur: 0
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Annexe IV Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -260,9 +254,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   applicable si: ancienneté = 'Moins de 15 jours'
           
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Moins de 15 jours . résultat conventionnel:
-  valeur: 0 mois
-  type: notification
-  description: Aucun préavis
+  valeur: 0
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Annexe IV Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -332,9 +324,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   applicable si: ancienneté = 'Moins de 15 jours'
           
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Moins de 15 jours . résultat conventionnel:
-  valeur: 0 mois
-  type: notification
-  description: Aucun préavis
+  valeur: 0
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Annexe IV Agents d'exploitation, employés administratifs et techniciens, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -419,9 +409,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   applicable si: ancienneté = 'Moins de 15 jours'
           
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté Moins de 15 jours . résultat conventionnel:
-  valeur: 0 mois
-  type: notification
-  description: Aucun préavis
+  valeur: 0
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Annexe V Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
@@ -491,9 +479,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   applicable si: ancienneté = 'Moins de 15 jours'
           
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté Moins de 15 jours . résultat conventionnel:
-  valeur: 0 mois
-  type: notification
-  description: Aucun préavis
+  valeur: 0
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Annexe V Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
@@ -563,9 +549,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   applicable si: ancienneté = 'Moins de 15 jours'
           
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté Moins de 15 jours . résultat conventionnel:
-  valeur: 0 mois
-  type: notification
-  description: Aucun préavis
+  valeur: 0
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Annexe V Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
@@ -635,9 +619,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   applicable si: ancienneté = 'Moins de 15 jours'
           
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté Moins de 15 jours . résultat conventionnel:
-  valeur: 0 mois
-  type: notification
-  description: Aucun préavis
+  valeur: 0
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Annexe V Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
@@ -707,9 +689,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   applicable si: ancienneté = 'Moins de 15 jours'
           
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté Moins de 15 jours . résultat conventionnel:
-  valeur: 0 mois
-  type: notification
-  description: Aucun préavis
+  valeur: 0
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Annexe V Agents de maîtrise, article 8: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
@@ -779,9 +759,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   applicable si: ancienneté = 'Moins de 15 jours'
           
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Moins de 15 jours . résultat conventionnel:
-  valeur: 0 mois
-  type: notification
-  description: Aucun préavis
+  valeur: 0
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     Annexe VI Cadres, article 9: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id
