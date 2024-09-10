@@ -115,7 +115,7 @@ const ShowResultAgreement: React.FC<ShowResultAgreementProps> = ({
   agreementMaximumResult,
   agreementRoute,
 }) => {
-  if (!result || agreementRoute === "not-selected") {
+  if (agreementRoute === "not-selected") {
     return <strong>convention collective non renseignée</strong>;
   }
   if (result?.value > 0 && agreementMaximumResult) {
