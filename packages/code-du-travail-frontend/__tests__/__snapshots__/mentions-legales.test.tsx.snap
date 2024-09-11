@@ -174,7 +174,7 @@ exports[`<MentionLegales /> should render 1`] = `
         class="sc-bddgXz koXLlw"
       >
         <span
-          class="sc-jdUcAg jEULqB"
+          class="sc-jdUcAg jKgGxC"
         >
           <svg
             class="sc-eIcdZJ ffrCUe"
@@ -206,12 +206,17 @@ exports[`<MentionLegales /> should render 1`] = `
               y2="16"
             />
           </svg>
-          Votre avis compte ! Aidez-nous à nous améliorer.
+          Aidez-nous à améliorer le Code du travail numérique.
           <a
+            class="no-after"
             href="https://tally.so/r/3jLRW1"
             target="_blank"
           >
-            Répondre
+            <button
+              class="sc-kOPcWz jBdtLF"
+            >
+              Je donne mon avis
+            </button>
           </a>
         </span>
         <button
