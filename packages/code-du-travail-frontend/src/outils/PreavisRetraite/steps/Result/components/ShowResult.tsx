@@ -51,21 +51,26 @@ const ShowResult: React.FC<Props> = ({
               {result.unit}&nbsp;et&nbsp;
               {agreementMaximumResult?.value}&nbsp;
               {agreementMaximumResult?.unit}
+              <NoticeNote
+                numberOfElements={1 + notifications.length}
+                currentElement={1}
+                isList
+              />
             </>
           ) : result.value > 0 ? (
             <>
               {result.value}
               &nbsp;
               {result.unit}
+              <NoticeNote
+                numberOfElements={1 + notifications.length}
+                currentElement={1}
+                isList
+              />
             </>
           ) : (
             <>il n’y a pas de préavis à effectuer</>
           )}
-          <NoticeNote
-            numberOfElements={1 + notifications.length}
-            currentElement={1}
-            isList
-          />
         </HighlightResult>
       </p>
       {result.value !== 0 && (
