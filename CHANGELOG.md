@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.153.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.152.0...v4.153.0) (2024-09-11)
+
+### Bug Fixes
+
+- **cypress:** modification des conditions des tests ([#6105](https://github.com/SocialGouv/code-du-travail-numerique/issues/6105)) ([fe44cbd](https://github.com/SocialGouv/code-du-travail-numerique/commit/fe44cbd50f17321dcb1ab3d3577188b80672c8bb))
+- dedicated nodepool ([#6106](https://github.com/SocialGouv/code-du-travail-numerique/issues/6106)) ([4e09b21](https://github.com/SocialGouv/code-du-travail-numerique/commit/4e09b2126bc95db7bf8ff27f481704869ab1bf50))
+- **preavis-retraite:** correction de petits bugs sur le resultat ([#6098](https://github.com/SocialGouv/code-du-travail-numerique/issues/6098)) ([d6eee29](https://github.com/SocialGouv/code-du-travail-numerique/commit/d6eee293ce46c76e968e48fe4202e21f0607f840))
+- **rupture-co:** changement du nom de l'event a l'étape `result` ([#6103](https://github.com/SocialGouv/code-du-travail-numerique/issues/6103)) ([8cbca28](https://github.com/SocialGouv/code-du-travail-numerique/commit/8cbca28ac4c64adf1b6f49a6d0aab79d865676ba))
+
+### Features
+
+- amélioration du bandeau pour le questionnaire ([#6117](https://github.com/SocialGouv/code-du-travail-numerique/issues/6117)) ([34830c0](https://github.com/SocialGouv/code-du-travail-numerique/commit/34830c04e40aef2ffac7ecc52019777190a27bf2))
+
 # [4.152.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.151.1...v4.152.0) (2024-09-04)
 
 ### Bug Fixes
