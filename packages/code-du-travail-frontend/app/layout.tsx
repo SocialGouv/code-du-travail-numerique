@@ -28,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const lang = "fr";
-  const nonce = headers().get("x-nonce") ?? undefined;
-  console.log("Nonce", nonce);
+  const nonce = headers().get("X-nonce") ?? undefined;
+  console.log("Nonce", nonce, headers());
   return (
     <html
       {...getHtmlAttributes({ defaultColorScheme, lang })}
