@@ -2,10 +2,6 @@ import { push as matopush } from "@socialgouv/matomo-next";
 import { render } from "@testing-library/react";
 import { RelatedItems } from "../RelatedItems";
 
-jest.mock("next/link", () => {
-  return ({ children }) => children;
-});
-
 jest.mock("@socialgouv/matomo-next", () => {
   return {
     push: jest.fn(),

@@ -8,9 +8,6 @@ import { SITE_URL } from "../../config";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "../../../styled-system/css";
 
-const POPUP_OPTIONS =
-  "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600";
-
 type Props = {
   title: string;
   metaDescription: string;
@@ -21,7 +18,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
 
   const currentPageUrl = (SITE_URL + usePathname()) as string;
   const copylink = () => {
-    navigator.clipboard.writeText(currentPageUrl);
+    navigator?.clipboard?.writeText(currentPageUrl);
   };
   return (
     <div className="fr-follow__social">
@@ -150,7 +147,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
                 setUrlCopied(true);
               }}
             >
-              Lien
+              Lien de copie
             </Button>
           )}
         </li>

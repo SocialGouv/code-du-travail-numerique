@@ -14,7 +14,7 @@ exports[`<Share /> renders 1`] = `
       <li>
         <a
           class="fr-btn fr-btn--tertiary fr-btn--facebook"
-          href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fapi.urlundefined&quote=HELLO"
+          href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fapi.urlhttps%3A%2F%2Fhello.com%2Fmy-page&quote=HELLO"
           rel="noopener noreferrer"
           target="_blank"
           title="Partager sur Facebook"
@@ -25,7 +25,7 @@ exports[`<Share /> renders 1`] = `
       <li>
         <a
           class="fr-btn fr-btn--tertiary fr-btn--twitter-x"
-          href="https://x.com/intent/post?text=HELLO%20%3A%20http%3A%2F%2Fapi.urlundefined"
+          href="https://x.com/intent/post?text=HELLO%20%3A%20http%3A%2F%2Fapi.urlhttps%3A%2F%2Fhello.com%2Fmy-page"
           rel="noopener noreferrer"
           target="_blank"
           title="Partager sur X (anciennement Twitter)"
@@ -36,7 +36,7 @@ exports[`<Share /> renders 1`] = `
       <li>
         <a
           class="fr-btn fr-btn--tertiary fr-btn--linkedin"
-          href="https://www.linkedin.com/shareArticle?mini=true&title=HELLO&url=http%3A%2F%2Fapi.urlundefined"
+          href="https://www.linkedin.com/shareArticle?mini=true&title=HELLO&url=http%3A%2F%2Fapi.urlhttps%3A%2F%2Fhello.com%2Fmy-page"
           rel="noopener noreferrer"
           target="_blank"
           title="Partager sur LinkedIn"
@@ -47,7 +47,7 @@ exports[`<Share /> renders 1`] = `
       <li>
         <a
           class="fr-btn fr-btn--tertiary ri-mail-line"
-          href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20HELLO&body=Ceci%20est%20ma%20page%0A%0Ahttp%3A%2F%2Fapi.urlundefined"
+          href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20HELLO&body=Ceci%20est%20ma%20page%0A%0Ahttp%3A%2F%2Fapi.urlhttps%3A%2F%2Fhello.com%2Fmy-page"
           rel="noopener external"
           title="Envoyer par email"
         >
@@ -57,7 +57,7 @@ exports[`<Share /> renders 1`] = `
       <li>
         <a
           class="fr-btn fr-btn--tertiary ri-whatsapp-line"
-          href="https://wa.me/?text=HELLO%20%3A%20http%3A%2F%2Fapi.urlundefined"
+          href="https://wa.me/?text=HELLO%20%3A%20http%3A%2F%2Fapi.urlhttps%3A%2F%2Fhello.com%2Fmy-page"
           rel="noopener noreferrer"
           target="_blank"
           title="Envoyer par Whatsapp"

@@ -9,35 +9,41 @@ exports[`<RelatedItems /> should render 1`] = `
       <p
         class="fr-text--lead"
       >
-        Modèles et outils liés
-         :
+        <strong>
+          Modèles et outils liés
+           :
+        </strong>
       </p>
       <ul
-        class="list-style-none"
+        class="fr-pl-0 li-s_none!"
       >
         <li
-          class="fr-pb-2w"
+          class="fr-pb-2w d_flex cg_.5rem"
         >
           <span
             class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
           />
-          <a
-            href="external.tools"
-          >
-            externalTool
-          </a>
+          <span>
+            <a
+              href="external.tools"
+            >
+              externalTool
+            </a>
+          </span>
         </li>
         <li
-          class="fr-pb-2w"
+          class="fr-pb-2w d_flex cg_.5rem"
         >
           <span
             class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
           />
-          <a
-            href="/modeles-de-courriers/modele.url"
-          >
-            modele de courrier
-          </a>
+          <span>
+            <a
+              href="/modeles-de-courriers/modele.url"
+            >
+              modele de courrier
+            </a>
+          </span>
         </li>
       </ul>
     </div>
@@ -45,35 +51,41 @@ exports[`<RelatedItems /> should render 1`] = `
       <p
         class="fr-text--lead"
       >
-        Articles liés
-         :
+        <strong>
+          Articles liés
+           :
+        </strong>
       </p>
       <ul
-        class="list-style-none"
+        class="fr-pl-0 li-s_none!"
       >
         <li
-          class="fr-pb-2w"
+          class="fr-pb-2w d_flex cg_.5rem"
         >
           <span
             class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
           />
-          <a
-            href="/fiche-service-public/fiche.sp.url"
-          >
-            fiche sp
-          </a>
+          <span>
+            <a
+              href="/fiche-service-public/fiche.sp.url"
+            >
+              fiche sp
+            </a>
+          </span>
         </li>
         <li
-          class="fr-pb-2w"
+          class="fr-pb-2w d_flex cg_.5rem"
         >
           <span
             class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
           />
-          <a
-            href="/contribution/contrib.url"
-          >
-            contrib
-          </a>
+          <span>
+            <a
+              href="/contribution/contrib.url"
+            >
+              contrib
+            </a>
+          </span>
         </li>
       </ul>
     </div>
