@@ -3,14 +3,15 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { Tag } from "@codegouvfr/react-dsfr/Tag";
 import Html from "../common/Html";
 import { ContainerRich } from "../layout/ContainerRich";
+import { RelatedItem } from "../../api/modules/related-items/type";
 
 type Props = {
   metaDescription: string;
   date: string;
   html: string;
   notaHtml?: string;
-  relatedItems?: any[];
-  source: any;
+  relatedItems: RelatedItem[];
+  url: string;
   suptitle: string;
   title: string;
 };
@@ -19,8 +20,8 @@ function ArticleCodeDuTravail({
   metaDescription,
   date,
   html,
-  relatedItems = [],
-  source,
+  relatedItems,
+  url,
   suptitle,
   title,
   notaHtml,
@@ -36,8 +37,8 @@ function ArticleCodeDuTravail({
 
       <p>
         Source:{" "}
-        <a href={source.url} target="_blank" rel="noopener noreferrer">
-          {source.name}
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          Code du travail
         </a>{" "}
         - Mise à jour le: {date}
       </p>
