@@ -61,18 +61,29 @@ async function main() {
     ip,
     "indemnitePrecarite",
     (result: OptionResult) => {
+      const texts =
+        result.texts.length > 1 ? result.texts : ["300", result.texts[0]];
       const expectedResult = {
-        expectedValue: parseInt(result.texts[0]),
+        expectedValue: parseInt(texts.shift() ?? "300"),
         unit: "€",
       };
       const expectedReferences = result.refs.map(({ label, url }) => ({
         article: label,
         url: url.trim(),
       }));
+      const rate = parseInt(texts[0]);
+      const isNan = isNaN(rate);
+      const expectedFormula = {
+        formula: isNan
+          ? "1/10 * Sref"
+          : `${rate === 10 ? "1/10" : `${rate}/100`} * Sref`,
+        explanations: ["Sref : Salaire de référence (3000 €)"],
+      };
       return {
         expectedResult,
         expectedReferences,
         expectedNotifications: [],
+        expectedFormula,
       };
     },
     () => `"contrat salarié . salaire de référence": "3000",`

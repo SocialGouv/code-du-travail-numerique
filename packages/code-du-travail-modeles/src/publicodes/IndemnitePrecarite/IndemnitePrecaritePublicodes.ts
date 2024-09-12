@@ -36,10 +36,7 @@ export class IndemnitePrecaritePublicodes extends PublicodesBase<PublicodesCalcu
     }
     const references = this.getReferences("résultat conventionnel");
     return {
-      formula: {
-        explanations: [],
-        formula: "",
-      },
+      formula: this.getFormuleAgreement(),
       notifications: this.getNotifications(),
       references,
       result: result.result,
@@ -62,10 +59,7 @@ export class IndemnitePrecaritePublicodes extends PublicodesBase<PublicodesCalcu
     }
     const references = this.getReferences("résultat légal");
     return {
-      formula: {
-        explanations: [],
-        formula: "",
-      },
+      formula: this.getFormuleLegal(),
       notifications: this.getNotifications(),
       references,
       result: result.result,

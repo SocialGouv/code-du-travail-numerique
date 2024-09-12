@@ -4,15 +4,16 @@ import { IndemnitePrecaritePublicodes } from "../../../../../publicodes/Indemnit
 const engine = new IndemnitePrecaritePublicodes(modelsIndemnitePrecarite, "2511");
       
 describe("Test de la fonctionnalité 'calculate'", () => {
-  test.each([{"expectedResult":{"expectedValue":300,"unit":"€"},"expectedReferences":[{"article":"article 4.7 de la convention collective (point 4.7.2.","url":"https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AC096B3D0CD017996E22DEE5D3C1ABFF.tplgfr41s_1?idArticle=KALIARTI000021063900&cidTexte=KALITEXT000017577657&dateTexte=20160726&categorieLien=id"}],"expectedNotifications":[],"situation":{"contrat salarié . type de cdd":"'CDD d'usage appelé contrat d'intervention'","contrat salarié . embauché en cdi":"'non'"}},
-            {"expectedResult":{"expectedValue":300,"unit":"€"},"expectedReferences":[{"article":"Article L1243-8 du code du travail","url":"https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"},{"article":"Article L1243-9 du code du travail","url":"https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="}],"expectedNotifications":[],"situation":{"contrat salarié . type de cdd":"'Autres'"}}])(
+  test.each([{"expectedResult":{"expectedValue":300,"unit":"€"},"expectedReferences":[{"article":"article 4.7 de la convention collective (point 4.7.2.","url":"https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AC096B3D0CD017996E22DEE5D3C1ABFF.tplgfr41s_1?idArticle=KALIARTI000021063900&cidTexte=KALITEXT000017577657&dateTexte=20160726&categorieLien=id"}],"expectedNotifications":[],"expectedFormula":{"formula":"1/10 * Sref","explanations":["Sref : Salaire de référence (3000 €)"]},"situation":{"contrat salarié . type de cdd":"'CDD d'usage appelé contrat d'intervention'","contrat salarié . embauché en cdi":"'non'"}},
+          {"expectedResult":{"expectedValue":300,"unit":"€"},"expectedReferences":[{"article":"Article L1243-8 du code du travail","url":"https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"},{"article":"Article L1243-9 du code du travail","url":"https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="}],"expectedNotifications":[],"expectedFormula":{"formula":"1/10 * Sref","explanations":["Sref : Salaire de référence (3000 €)"]},"situation":{"contrat salarié . type de cdd":"'Autres'"}}])(
     "%#) Vérifier que le calculate donne le bon résultat pour la situation donnée",
-    ({situation, expectedResult, expectedReferences, expectedNotifications}) => {
+    ({situation, expectedResult, expectedReferences, expectedNotifications, expectedFormula}) => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC2511'",
         "contrat salarié . salaire de référence": "3000",
         ...situation,
       });
+        expect(result).toFormulaBeEqual(expectedFormula.formula, expectedFormula.explanations);
       expect(result).toResultBeEqual(expectedResult.expectedValue, expectedResult.unit);
       expect(result).toHaveReferencesBeEqual(expectedReferences);
       expect(result).toContainNotifications(expectedNotifications);

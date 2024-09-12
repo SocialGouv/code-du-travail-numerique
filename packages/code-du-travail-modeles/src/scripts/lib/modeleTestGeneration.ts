@@ -15,6 +15,10 @@ type SituationResult = {
   };
   expectedReferences: { article: string; url: string }[];
   expectedNotifications: string[];
+  expectedFormula?: {
+    formula: string;
+    explanations: string[];
+  };
 };
 
 type FormatResultOutput = Omit<SituationResult, "situation">;
@@ -107,23 +111,35 @@ function generateTest(
           return arr;
         }
         const ccName = getCCName(`${pathDir}/${foldername}`);
-        const situationLine = nextQuestion
-          ? getSituation(
-              nextQuestion,
-              ["contrat salarié", "convention collective", ccName],
-              formatResult
-            ).map((situation) => {
-              return JSON.stringify(situation);
-            }).join(`,
-            `)
-          : JSON.stringify({
-              situation: {},
-              ...(result ? formatResult(result) : {}),
-            });
+        let situationLine: string;
+        let situation: SituationResult[] = [];
+        if (nextQuestion) {
+          situation = getSituation(
+            nextQuestion,
+            ["contrat salarié", "convention collective", ccName],
+            formatResult
+          );
+          situationLine = situation.map((s) => {
+            return JSON.stringify(s);
+          }).join(`,
+          `);
+        } else {
+          situationLine = JSON.stringify({
+            situation: {},
+            ...(result ? formatResult(result) : {}),
+          });
+        }
         const folderPath = `${pathDir}/${foldername}/__tests__/${componentName}`;
         if (!fs.existsSync(folderPath)) {
           fs.mkdirSync(folderPath);
         }
+        const { expectedFormula } =
+          situation.find((s) => s.expectedFormula?.formula) ?? {};
+        const paramFormula = expectedFormula ? ", expectedFormula" : "";
+        const expectFormula = expectedFormula
+          ? `
+        expect(result).toFormulaBeEqual(expectedFormula.formula, expectedFormula.explanations);`
+          : "";
         arr.push({
           content: `
 import { ${capitalizeFirstLetter(
@@ -141,7 +157,7 @@ const engine = new ${capitalizeFirstLetter(
 describe("Test de la fonctionnalité 'calculate'", () => {
   test.each([${situationLine}])(
     "%#) Vérifier que le calculate donne le bon résultat pour la situation donnée",
-    ({situation, expectedResult, expectedReferences, expectedNotifications}) => {
+    ({situation, expectedResult, expectedReferences, expectedNotifications${paramFormula}}) => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC${text.padStart(
           4,
@@ -149,7 +165,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         )}'",
         ${insertSituation().replace(/’/, "'")}
         ...situation,
-      });
+      });${expectFormula}
       expect(result).toResultBeEqual(expectedResult.expectedValue, expectedResult.unit);
       expect(result).toHaveReferencesBeEqual(expectedReferences);
       expect(result).toContainNotifications(expectedNotifications);
