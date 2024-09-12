@@ -38,7 +38,7 @@ async function Fiche({ params }) {
         source={{ name: "Code du travail", url }}
         notaHtml={notaHtml}
         metaDescription={description}
-      ></ArticleCodeDuTravail>
+      />
     </DsfrLayout>
   );
 }
