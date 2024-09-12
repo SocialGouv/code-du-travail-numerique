@@ -18,7 +18,7 @@ exports[`<RelatedItems /> should render 1`] = `
         <li
           class="fr-pb-2w"
         >
-          <i
+          <span
             class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
           />
           <a
@@ -30,7 +30,7 @@ exports[`<RelatedItems /> should render 1`] = `
         <li
           class="fr-pb-2w"
         >
-          <i
+          <span
             class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
           />
           <a
@@ -54,7 +54,7 @@ exports[`<RelatedItems /> should render 1`] = `
         <li
           class="fr-pb-2w"
         >
-          <i
+          <span
             class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
           />
           <a
@@ -66,7 +66,7 @@ exports[`<RelatedItems /> should render 1`] = `
         <li
           class="fr-pb-2w"
         >
-          <i
+          <span
             class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
           />
           <a

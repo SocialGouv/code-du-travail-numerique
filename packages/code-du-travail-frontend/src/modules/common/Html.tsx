@@ -1,5 +1,5 @@
 import React from "react";
-import {xssWrapper} from "../../lib";
+import { xssWrapper } from "../../lib";
 
 type Props = {
   children: string;
