@@ -99,7 +99,6 @@ export const FeedbackContent = (props: Props) => {
         />
       )}
       <Input
-        hintText="Une idée, une suggestion"
         label="Faire une suggestion pour améliorer cette page"
         textArea={true}
         nativeTextAreaProps={{
