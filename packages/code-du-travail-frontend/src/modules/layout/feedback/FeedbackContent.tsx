@@ -2,9 +2,8 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { Checkbox } from "@codegouvfr/react-dsfr/Checkbox";
 import { Input } from "@codegouvfr/react-dsfr/Input";
-import { Notice } from "@codegouvfr/react-dsfr/Notice";
 import { css } from "../../../../styled-system/css";
-import { MatomoFeedbackEventCategory } from "../../tracking";
+import { MatomoFeedbackEventCategory } from "./tracking";
 import { useState } from "react";
 
 type Props = {

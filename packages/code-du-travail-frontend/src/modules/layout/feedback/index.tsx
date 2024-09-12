@@ -6,7 +6,7 @@ import { useState } from "react";
 import { FeedbackDefault } from "./FeedbackDefault";
 import { FeedbackContent, FeedbackDataSent } from "./FeedbackContent";
 import { FeedbackAnswered } from "./FeedbackAnswered";
-import { useFeedbackEvents } from "../../tracking";
+import { useFeedbackEvents } from "./tracking";
 import { usePathname } from "next/navigation";
 import { getBaseUrl } from "../../utils";
 
