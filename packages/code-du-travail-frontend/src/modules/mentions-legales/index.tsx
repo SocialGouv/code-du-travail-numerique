@@ -76,8 +76,12 @@ export const MentionsLegales = () => (
 
       <h3>En savoir plus</h3>
       <p>
-        Pour en savoir plus sur la politique d’accessibilité numérique de l’État&nbsp;:{" "}
-        <a href="http://references.modernisation.gouv.fr/accessibilite-numerique" target="_blank">
+        Pour en savoir plus sur la politique d’accessibilité numérique de
+        l’État&nbsp;:{" "}
+        <a
+          href="http://references.modernisation.gouv.fr/accessibilite-numerique"
+          target="_blank"
+        >
           http://references.modernisation.gouv.fr/accessibilite-numerique
         </a>
       </p>
