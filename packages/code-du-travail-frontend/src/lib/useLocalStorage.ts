@@ -43,7 +43,7 @@ export function useLocalStorageForAgreement(
 export const saveAgreementToLocalStorage = (agreement?: Agreement | null) => {
   try {
     if (window?.localStorage) {
-      if (agreement && agreement.num !== 9999) {
+      if (agreement) {
         window.localStorage.setItem(
           STORAGE_KEY_AGREEMENT,
           JSON.stringify(agreement)

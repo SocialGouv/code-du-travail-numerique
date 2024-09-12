@@ -31,6 +31,7 @@ const StepResult = (): JSX.Element => {
     moreThanXYears,
     errorPublicodes,
     result,
+    agreementRoute,
   } = usePreavisRetraiteStore(store, (state) => ({
     originDepart: state.originDepartData.input.originDepart,
     agreement: state.agreementData.input.agreement,
@@ -50,6 +51,7 @@ const StepResult = (): JSX.Element => {
     moreThanXYears: state.seniorityData.input.moreThanXYears,
     errorPublicodes: state.resultData.error.errorPublicodes,
     result: state.resultData.input.result,
+    agreementRoute: state.agreementData.input.route,
   }));
 
   useEffect(() => {
@@ -89,6 +91,7 @@ const StepResult = (): JSX.Element => {
           noticeUsed={noticeUsed!}
           typeDeDepart={originDepart!}
           isSeniorityLessThan6Months={!!isSeniorityLessThan6Months}
+          agreementRoute={agreementRoute}
         />
         <PubliReferences references={resultReferences ?? []} />
       </ShowDetails>

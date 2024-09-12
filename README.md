@@ -43,8 +43,9 @@ Notre bibliothèque de composants UI est disponible en démo [ici](https://socia
 ### Testing
 
 ```sh
-yarn test:e2e # To run e2e test without any UI
-yarn test:e2e:ui # To run e2e test with Cypress UI
+TEST_MODE=heavy-and-light yarn test:e2e # To run e2e test without any UI
+TEST_MODE=heavy-and-light yarn test:e2e:ui # To run e2e test with Cypress UI
+# TEST_MODE can be light, heavy, heavy-and-light or html-validation
 ```
 
 ## License

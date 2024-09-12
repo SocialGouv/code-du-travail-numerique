@@ -49,12 +49,7 @@ const pushAgreementEvents = (
       }),
     ]);
   }
-  if (
-    values.selected &&
-    agreementSelect &&
-    values.selected.num &&
-    values.selected.num !== 9999
-  ) {
+  if (values.selected && agreementSelect) {
     matopush([
       MatomoBaseEvent.TRACK_EVENT,
       agreementSelect,

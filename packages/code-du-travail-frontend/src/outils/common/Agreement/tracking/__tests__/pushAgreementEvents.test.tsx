@@ -225,7 +225,7 @@ describe("Push agreement events on click next", () => {
         false,
         false
       );
-      expect(matopush).toHaveBeenCalledTimes(2);
+      expect(matopush).toHaveBeenCalledTimes(4);
       expect(matopush).toHaveBeenNthCalledWith(1, [
         MatomoBaseEvent.TRACK_EVENT,
         MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
@@ -237,6 +237,18 @@ describe("Push agreement events on click next", () => {
         MatomoSearchAgreementCategory.ENTERPRISE_SELECT,
         pageTitle,
         JSON.stringify({ label: enterprise.label, siren: enterprise.siren }),
+      ]);
+      expect(matopush).toHaveBeenNthCalledWith(3, [
+        "trackEvent",
+        "cc_select_p2",
+        "Blabla",
+        "idcc9999",
+      ]);
+      expect(matopush).toHaveBeenNthCalledWith(4, [
+        "trackEvent",
+        "outil",
+        "cc_select_non_traitée",
+        9999,
       ]);
     });
   });
