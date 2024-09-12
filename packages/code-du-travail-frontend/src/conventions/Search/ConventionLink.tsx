@@ -14,17 +14,87 @@ type Props = {
   small?: boolean;
 };
 
+const ConventionContent = ({
+  convention,
+  highlight,
+}: {
+  convention: Agreement;
+  highlight: any;
+}) => (
+  <>
+    {convention.shortTitle} <IDCC>(IDCC {formatIdcc(convention.num)})</IDCC>
+    {highlight && highlight.searchInfo && (
+      <Paragraph variant="altText" noMargin>
+        {highlight.searchInfo}
+      </Paragraph>
+    )}
+  </>
+);
+
+const DisabledConvention = ({
+  convention,
+  commonProps,
+}: {
+  convention: Agreement;
+  commonProps: any;
+}) => (
+  <StyledLinkedDisabled {...commonProps}>
+    <ConventionContent
+      convention={convention}
+      highlight={convention.highlight}
+    />
+    <StyledDisabledParagraph variant="altText" noMargin>
+      Cette convention collective déclarée par l’entreprise n’est pas reconnue
+      par notre site
+    </StyledDisabledParagraph>
+  </StyledLinkedDisabled>
+);
+
+const EnabledConvention = ({
+  convention,
+  commonProps,
+  onClick,
+}: {
+  convention: Agreement;
+  commonProps: any;
+  onClick?: (agreement: Agreement) => void;
+}) => (
+  <>
+    {onClick ? (
+      <StyledLink as={Button} variant="navLink" {...commonProps}>
+        <ConventionContent
+          convention={convention}
+          highlight={convention.highlight}
+        />
+      </StyledLink>
+    ) : (
+      <Link
+        href={`/convention-collective/${convention.slug}`}
+        passHref
+        legacyBehavior
+      >
+        <StyledLink {...commonProps}>
+          <ConventionContent
+            convention={convention}
+            highlight={convention.highlight}
+          />
+        </StyledLink>
+      </Link>
+    )}
+  </>
+);
+
 export const ConventionLink = ({
   convention,
   isFirst,
   onClick,
   small = false,
 }: Props): JSX.Element => {
-  const { num, shortTitle, highlight } = convention;
+  const { num } = convention;
   const router = useRouter();
 
   const clickHandler = () => {
-    matopush(["trackEvent", "cc_select", router.asPath, shortTitle]);
+    matopush(["trackEvent", "cc_select", router.asPath, convention.shortTitle]);
     onClick && onClick(convention);
   };
 
@@ -36,47 +106,14 @@ export const ConventionLink = ({
 
   return (
     <>
-      {convention.num === 9999 ? (
-        <StyledLinkedDisabled {...commonProps}>
-          {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
-          {highlight && highlight.searchInfo && (
-            <StyledDisabledParagraph variant="altText" noMargin>
-              {highlight.searchInfo}
-            </StyledDisabledParagraph>
-          )}
-          <StyledDisabledParagraph variant="altText" noMargin>
-            Cette convention collective déclarée par l’entreprise n’est pas
-            reconnue par notre site
-          </StyledDisabledParagraph>
-        </StyledLinkedDisabled>
+      {num === 9999 ? (
+        <DisabledConvention convention={convention} commonProps={commonProps} />
       ) : (
-        <>
-          {onClick ? (
-            <StyledLink as={Button} variant="navLink" {...commonProps}>
-              {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
-              {highlight && highlight.searchInfo && (
-                <Paragraph variant="altText" noMargin>
-                  {highlight.searchInfo}
-                </Paragraph>
-              )}
-            </StyledLink>
-          ) : (
-            <Link
-              href={`/convention-collective/${convention.slug}`}
-              passHref
-              legacyBehavior
-            >
-              <StyledLink {...commonProps}>
-                {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
-                {highlight && highlight.searchInfo && (
-                  <Paragraph variant="altText" noMargin>
-                    {highlight.searchInfo}
-                  </Paragraph>
-                )}
-              </StyledLink>
-            </Link>
-          )}
-        </>
+        <EnabledConvention
+          convention={convention}
+          commonProps={commonProps}
+          onClick={onClick}
+        />
       )}
     </>
   );
