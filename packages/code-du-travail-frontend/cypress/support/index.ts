@@ -17,6 +17,7 @@
 
 import "./commands";
 import "./errors";
+import "cypress-real-events";
 
 // in cypress/support/index.ts
 // load type definitions that come with Cypress module

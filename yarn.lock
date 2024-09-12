@@ -1906,6 +1906,7 @@ __metadata:
     cypress: ^13.13.2
     cypress-html-validate: ^6.1.0
     cypress-iframe: ^1.0.1
+    cypress-real-events: ^1.13.0
     date-fns: ^2.22.1
     debounce-promise: ^3.1.2
     downshift: ^9.0.6
@@ -11502,6 +11503,15 @@ __metadata:
   peerDependencies:
     "@types/cypress": ^1.1.0
   checksum: 98f3322c49949234e86c7915bbcac413e50a804c6e0b630b1273ebdacf4146f231f03a54e34fae5adf6387b086fb9c6d0d1a2347ac7da5981376ee5553f31ec0
+  languageName: node
+  linkType: hard
+
+"cypress-real-events@npm:^1.13.0":
+  version: 1.13.0
+  resolution: "cypress-real-events@npm:1.13.0"
+  peerDependencies:
+    cypress: ^4.x || ^5.x || ^6.x || ^7.x || ^8.x || ^9.x || ^10.x || ^11.x || ^12.x || ^13.x
+  checksum: 9da229ab8a6eea9ebea511dbecbe421592360ea7bcb7e7f1e9cec41d7309a5f3d5404e5c2db8be13c7d6746b8e118b93ff221fabf22d5c5330996510592aed2d
   languageName: node
   linkType: hard
 
