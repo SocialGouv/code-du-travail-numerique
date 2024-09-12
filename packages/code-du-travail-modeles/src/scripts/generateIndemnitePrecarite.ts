@@ -1,5 +1,5 @@
 import { PrecariteSituation, primePrecariteData } from "../simulators";
-import { generateTree } from "./lib";
+import { cleanRefLabel, generateTree } from "./lib";
 import { TreeQuestionType } from "./lib/type";
 
 export function generateIndemnitePrecariteTree() {
@@ -19,6 +19,7 @@ export function generateIndemnitePrecariteTree() {
       name: "criteria.cddType",
       question: "Quel est le type de CDD ?",
       type: "select",
+      commonNamespace: "type de cdd",
     },
     {
       name: "finContratPeriodeDessai",
@@ -73,18 +74,21 @@ export function generateIndemnitePrecariteTree() {
       question:
         "À la fin du CDD, le salarié a-t-il été immédiatement embauché en CDI ?",
       type: "select",
+      commonNamespace: "embauché en cdi",
     },
     {
       name: "criteria.hasEquivalentCdiRenewal",
       question:
         "À la fin du CDD, le salarié a-t-il été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?",
       type: "select",
+      commonNamespace: "embauché en cdi sans interruption",
     },
     {
       name: "criteria.hasCdiProposal",
       question:
         "À la fin du CDD, le salarié a-t-il reçu une proposition de CDI ?",
       type: "select",
+      commonNamespace: "avec proposition cdi",
     },
     {
       name: "typeRemuneration",
@@ -96,7 +100,7 @@ export function generateIndemnitePrecariteTree() {
       name: "currency",
       question:
         "Quelle est la rémunération totale brute perçue durant le contrat de travail ?",
-      type: "select",
+      type: "input",
     },
   ];
   const baseSalary = 3000;
@@ -181,14 +185,15 @@ export function generateIndemnitePrecariteTree() {
       }
       const [rateNumber] = rate.split("%");
       const result = ((parseInt(rateNumber) * baseSalary) / 100).toString();
+      const refUrls = refUrl?.split("\n") ?? [];
+      const refs =
+        refLabel?.split("\n").map((label, index) => ({
+          label: cleanRefLabel(label),
+          url: refUrls[index],
+        })) ?? [];
       return {
-        refs: [
-          {
-            label: refLabel ?? "",
-            url: refUrl ?? "",
-          },
-        ],
-        texts: [result],
+        refs,
+        texts: [result, rateNumber],
       };
     },
   });

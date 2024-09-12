@@ -10,12 +10,12 @@ contrat salarié . convention collective . coiffure . typeRupture:
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
           
 contrat salarié . convention collective . coiffure . typeRupture Démission:
-  applicable si: typeRupture = "Démission"
+  applicable si: typeRupture = 'Démission'
           
 contrat salarié . convention collective . coiffure . typeRupture Démission . résultat conventionnel:
   valeur: "'2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail'"
   type: notification
-  description:  
+  description: 
     - Le salaire n'est pas maintenu.
     - L'employeur et le salarié peuvent décider que les 2 heures journalières pourront être bloquées à des horaires fixes ou qu'elles seront regroupées. En l'absence d'accord, les heures seront fixées un jour par l'employeur et le suivant par le salarié.
   remplace: contrat salarié . convention collective . résultat conventionnel
@@ -23,12 +23,12 @@ contrat salarié . convention collective . coiffure . typeRupture Démission . r
     Article 7.4.4: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=66A29F5D26CA9B3AB9D6CF5888110E5B.tplgfr30s_3?idArticle=KALIARTI000018563850&cidTexte=KALITEXT000018563760&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . coiffure . typeRupture Licenciement:
-  applicable si: typeRupture = "Licenciement"
+  applicable si: typeRupture = 'Licenciement'
           
 contrat salarié . convention collective . coiffure . typeRupture Licenciement . résultat conventionnel:
   valeur: "'2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail'"
   type: notification
-  description:  
+  description: 
     - Le salaire est maintenu.
     - L'employeur et le salarié peuvent décider que les 2 heures journalières pourront être bloquées à des horaires fixes ou qu'elles seront regroupées. En l'absence d'accord, les heures seront fixées un jour par l'employeur et le suivant par le salarié.
   remplace: contrat salarié . convention collective . résultat conventionnel
@@ -36,7 +36,7 @@ contrat salarié . convention collective . coiffure . typeRupture Licenciement .
     Article 7.4.4: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=66A29F5D26CA9B3AB9D6CF5888110E5B.tplgfr30s_3?idArticle=KALIARTI000018563850&cidTexte=KALITEXT000018563760&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . coiffure . typeRupture Rupture de la période d'essai:
-  applicable si: typeRupture = "Rupture de la période d'essai"
+  applicable si: typeRupture = 'Rupture de la période d'essai'
           
 contrat salarié . convention collective . coiffure . typeRupture Rupture de la période d'essai . résultat conventionnel:
   valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"

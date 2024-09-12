@@ -10,7 +10,7 @@ contrat salarié . convention collective . restauration rapide . typeRupture:
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
           
 contrat salarié . convention collective . restauration rapide . typeRupture Démission:
-  applicable si: typeRupture = "Démission"
+  applicable si: typeRupture = 'Démission'
           
 contrat salarié . convention collective . restauration rapide . typeRupture Démission . résultat conventionnel:
   valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
@@ -19,12 +19,12 @@ contrat salarié . convention collective . restauration rapide . typeRupture Dé
     Article 12: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8F09B67FB742D16900AC784E4D4F4079.tplgfr27s_1?idArticle=KALIARTI000005833465&cidTexte=KALITEXT000005672325&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . restauration rapide . typeRupture Licenciement:
-  applicable si: typeRupture = "Licenciement"
+  applicable si: typeRupture = 'Licenciement'
           
 contrat salarié . convention collective . restauration rapide . typeRupture Licenciement . résultat conventionnel:
   valeur: "'2 heures par jour travaillé'"
   type: notification
-  description:  
+  description: 
     - Le salaire est maintenu.
     - Les heures de recherche d'emploi sont prises par accord entre l'employeur et le salarié. Ils peuvent également décider de bloquer tout ou partie de ces heures avant la fin du préavis.
   remplace: contrat salarié . convention collective . résultat conventionnel
@@ -32,7 +32,7 @@ contrat salarié . convention collective . restauration rapide . typeRupture Lic
     Article 12: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8F09B67FB742D16900AC784E4D4F4079.tplgfr27s_1?idArticle=KALIARTI000005833465&cidTexte=KALITEXT000005672325&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . restauration rapide . typeRupture Rupture de la période d'essai:
-  applicable si: typeRupture = "Rupture de la période d'essai"
+  applicable si: typeRupture = 'Rupture de la période d'essai'
           
 contrat salarié . convention collective . restauration rapide . typeRupture Rupture de la période d'essai . résultat conventionnel:
   valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"

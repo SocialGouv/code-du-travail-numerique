@@ -9,12 +9,8 @@ export class HeuresRechercheEmploiPublicodes extends PublicodesBase<
   PublicodesCalculateResult<string>
 > {
   constructor(rules: { [key: string]: any }, idcc?: string) {
-    let agreementRules: any = {};
-    if (idcc && rules[idcc]) {
-      agreementRules = rules[idcc];
-    }
     super(
-      { ...agreementRules, ...rules.base },
+      { ...(idcc && rules[idcc] ? rules[idcc] : {}), ...rules.base },
       PublicodesDefaultRules[PublicodesSimulator.HEURES_RECHERCHE_EMPLOI]
     );
   }

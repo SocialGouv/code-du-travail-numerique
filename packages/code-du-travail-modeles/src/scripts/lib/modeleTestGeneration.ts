@@ -29,12 +29,21 @@ function getSituation(
   formatResult: (result: OptionResult) => FormatResultOutput,
   currentSituation: Situation = {}
 ): SituationResult[] {
+  const questionName = question.commonNamespace
+    ? question.commonNamespace
+    : cleanValue(question.name);
   return question.options.reduce<SituationResult[]>(
     (arr, { text, nextQuestion, result }) => {
       const template = [...templates, question.name].join(" . ");
       const situation: Situation = {
         ...currentSituation,
-        [template]: `'${cleanValue(text)}'`,
+        ...(question.type === "select"
+          ? {
+              [question.commonNamespace
+                ? `contrat salarié . ${question.commonNamespace}`
+                : template]: `'${cleanValue(text)}'`,
+            }
+          : {}),
       };
       if (result) {
         arr.push({
@@ -46,7 +55,9 @@ function getSituation(
         arr = arr.concat(
           getSituation(
             nextQuestion,
-            [...templates, `${question.name} ${cleanValue(text)}`],
+            question.type === "select"
+              ? [...templates, `${questionName} ${cleanValue(text)}`]
+              : templates,
             formatResult,
             situation
           )

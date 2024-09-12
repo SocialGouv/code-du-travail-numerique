@@ -144,6 +144,7 @@ export enum PublicodesSimulator {
   PREAVIS_LICENCIEMENT = "PREAVIS_LICENCIEMENT",
   PREAVIS_DEMISSION = "PREAVIS_DEMISSION",
   HEURES_RECHERCHE_EMPLOI = "HEURES_RECHERCHE_EMPLOI",
+  INDEMNITE_PRECARITE = "INDEMNITE_PRECARITE",
 }
 
 export const PublicodesDefaultRules = {
@@ -158,6 +159,7 @@ export const PublicodesDefaultRules = {
   [PublicodesSimulator.PREAVIS_DEMISSION]: "contrat salarié . résultat légal",
   [PublicodesSimulator.HEURES_RECHERCHE_EMPLOI]:
     "contrat salarié . résultat légal",
+  [PublicodesSimulator.INDEMNITE_PRECARITE]: "contrat salarié . résultat légal",
 };
 
 export enum PublicodesConvertedUnit {

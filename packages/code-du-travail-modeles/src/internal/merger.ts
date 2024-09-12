@@ -10,6 +10,7 @@ import {
   preavisLicenciementFile,
   heuresRechercheEmploiFile,
   preavisDemissionFile,
+  indemnitePrecariteFile,
 } from "./constants";
 
 export const publicodesDir = path.resolve(__dirname, "../../src/modeles");
@@ -28,6 +29,10 @@ export function mergePreavisDemissionModels(): any {
 
 export function mergeHeuresRechercheEmploiModels(): any {
   return mergeModelsWithKeys([commonFile, heuresRechercheEmploiFile]);
+}
+
+export function mergeIndemnitePrecariteModels(): any {
+  return mergeModelsWithKeys([commonFile, indemnitePrecariteFile]);
 }
 
 export function mergeIndemniteLicenciementModels(): any {

@@ -10,7 +10,7 @@ contrat salarié . convention collective . travaux publics . typeRupture:
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
           
 contrat salarié . convention collective . travaux publics . typeRupture Démission:
-  applicable si: typeRupture = "Démission"
+  applicable si: typeRupture = 'Démission'
           
 contrat salarié . convention collective . travaux publics . typeRupture Démission . résultat conventionnel:
   valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
@@ -19,12 +19,12 @@ contrat salarié . convention collective . travaux publics . typeRupture Démiss
     Article 8.3: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8DA312A2CD26D5839EA964715E620EBA.tplgfr30s_2?idArticle=KALIARTI000018926306&cidTexte=KALITEXT000018926214&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . travaux publics . typeRupture Licenciement:
-  applicable si: typeRupture = "Licenciement"
+  applicable si: typeRupture = 'Licenciement'
           
 contrat salarié . convention collective . travaux publics . typeRupture Licenciement . résultat conventionnel:
   valeur: "'5 journées ou 10 demi-journées par mois de préavis'"
   type: notification
-  description:  
+  description: 
     - Le salaire est maintenu.
     - Le salarié peut s'absenter pendant le préavis pour rechercher un emploi, s'il le demande. Les heures de recherche d'emploi peuvent être prises en une ou plusieurs fois. Les autorisations d'absence seront fixées pour moitié par le salarié, pour moitié par l'employeur. Chacun en informe l'autre partie. Si le salarié n'utilise pas toutes ses heures d'absence autorisée, l'employeur ne devra pas lui verser d'indemnité.
   remplace: contrat salarié . convention collective . résultat conventionnel
@@ -32,12 +32,12 @@ contrat salarié . convention collective . travaux publics . typeRupture Licenci
     Article 8.3: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8DA312A2CD26D5839EA964715E620EBA.tplgfr30s_2?idArticle=KALIARTI000018926306&cidTexte=KALITEXT000018926214&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . travaux publics . typeRupture Rupture de la période d'essai:
-  applicable si: typeRupture = "Rupture de la période d'essai"
+  applicable si: typeRupture = 'Rupture de la période d'essai'
           
 contrat salarié . convention collective . travaux publics . typeRupture Rupture de la période d'essai . résultat conventionnel:
   valeur: "'5 journées ou 10 demi-journées par mois de préavis'"
   type: notification
-  description:  
+  description: 
     - Le salaire est maintenu.
     - Le salarié peut s'absenter pendant le préavis pour rechercher un emploi, s'il le demande. Les heures de recherche d'emploi peuvent être prises en une ou plusieurs fois. Les autorisations d'absence seront fixées pour moitié par le salarié, pour moitié par l'employeur. Chacun en informe l'autre partie. Si le salarié n'utilise pas toutes ses heures d'absence autorisée, l'employeur ne devra pas lui verser d'indemnité.
   remplace: contrat salarié . convention collective . résultat conventionnel

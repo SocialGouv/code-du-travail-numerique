@@ -23,7 +23,7 @@ function criteriaToArray(
   criteria: Criteria
 ): CriteriaItem[] {
   return questions.reduce<CriteriaItem[]>(
-    (arr, { question, name, note, type, key }) => {
+    (arr, { question, name, note, type, key, commonNamespace }) => {
       if (criteria[name]) {
         const option = criteria[name] ?? "";
         arr.push({
@@ -33,6 +33,7 @@ function criteriaToArray(
           question,
           type: type ?? "select",
           key,
+          commonNamespace,
         });
       }
       return arr;
@@ -42,7 +43,8 @@ function criteriaToArray(
 }
 
 function populateNode({ result, criterias }: CriteriaContainer): TreeQuestion {
-  const { question, option, note, name, type, key } = criterias.shift()!;
+  const { question, option, note, name, type, key, commonNamespace } =
+    criterias.shift()!;
   return {
     name,
     note: note,
@@ -62,6 +64,7 @@ function populateNode({ result, criterias }: CriteriaContainer): TreeQuestion {
           },
         ],
     text: question,
+    commonNamespace,
   };
 }
 

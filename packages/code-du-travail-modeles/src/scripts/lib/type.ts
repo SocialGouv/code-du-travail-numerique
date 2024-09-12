@@ -5,8 +5,11 @@ export type CriteriaContainer = {
   result: OptionResult;
 };
 
+export type QuestionType = "agreement" | "radio" | "select" | "input";
+
 export type TreeQuestionType = Question & {
-  type: "agreement" | "radio" | "select";
+  type: QuestionType;
+  commonNamespace?: string;
 };
 
 export type CriteriaItem = {
@@ -15,7 +18,8 @@ export type CriteriaItem = {
   option: string;
   note?: string;
   key?: string;
-  type: "agreement" | "radio" | "select";
+  type: QuestionType;
+  commonNamespace?: string;
 };
 
 export type OptionResult = {
@@ -38,7 +42,8 @@ export type TreeQuestion = {
   note?: string;
   options: TreeOption[];
   key?: string;
-  type: "agreement" | "radio" | "select";
+  type: QuestionType;
+  commonNamespace?: string;
 };
 
 export type TreeReference = {

@@ -10,12 +10,12 @@ contrat salarié . convention collective . entreprises de propreté . typeRuptur
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
           
 contrat salarié . convention collective . entreprises de propreté . typeRupture Démission:
-  applicable si: typeRupture = "Démission"
+  applicable si: typeRupture = 'Démission'
           
 contrat salarié . convention collective . entreprises de propreté . typeRupture Démission . résultat conventionnel:
   valeur: "'2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail'"
   type: notification
-  description:  
+  description: 
     - Le salaire n'est pas maintenu.
     - Les heures peuvent être groupées en fin de préavis par accord entre l'employeur et le salarié, ou prises chaque jour une fois au choix du salarié, une fois au choix de l'employeur.
   remplace: contrat salarié . convention collective . résultat conventionnel
@@ -23,12 +23,12 @@ contrat salarié . convention collective . entreprises de propreté . typeRuptur
     Article 4.11.1: https//www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340&dateTexte=20151026
           
 contrat salarié . convention collective . entreprises de propreté . typeRupture Licenciement:
-  applicable si: typeRupture = "Licenciement"
+  applicable si: typeRupture = 'Licenciement'
           
 contrat salarié . convention collective . entreprises de propreté . typeRupture Licenciement . résultat conventionnel:
   valeur: "'2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail'"
   type: notification
-  description:  
+  description: 
     - Le salaire est maintenu.
     - Les heures peuvent être groupées en fin de préavis par accord entre l'employeur et le salarié, ou prises chaque jour une fois au choix du salarié, une fois au choix de l'employeur.
   remplace: contrat salarié . convention collective . résultat conventionnel
@@ -36,7 +36,7 @@ contrat salarié . convention collective . entreprises de propreté . typeRuptur
     Article 4.11.1: https//www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340&dateTexte=20151026
           
 contrat salarié . convention collective . entreprises de propreté . typeRupture Rupture de la période d'essai:
-  applicable si: typeRupture = "Rupture de la période d'essai"
+  applicable si: typeRupture = 'Rupture de la période d'essai'
           
 contrat salarié . convention collective . entreprises de propreté . typeRupture Rupture de la période d'essai . résultat conventionnel:
   valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"

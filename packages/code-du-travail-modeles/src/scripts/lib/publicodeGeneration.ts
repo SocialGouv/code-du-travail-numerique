@@ -64,12 +64,13 @@ function generateQuestions(
 ): string {
   let content = "";
   const namespaceLine = namespace.join(" . ").replace(/’/, "'");
-  switch (question.type) {
-    case "select":
-      content = `
+  if (!question.commonNamespace) {
+    switch (question.type) {
+      case "select":
+        content = `
 contrat salarié . convention collective . ${namespaceLine} . ${cleanValue(
-        question.name
-      )}:
+          question.name
+        )}:
   titre: ${question.name}
   question: ${question.text}
   cdtn:
@@ -81,21 +82,30 @@ contrat salarié . convention collective . ${namespaceLine} . ${cleanValue(
           `
       `
         )}`;
+    }
   }
   const otherOptions = question.options.reduce<string[]>(
     (arr, { text, nextQuestion, result }) => {
-      arr.push(
-        generateNamespace(
-          [...namespace, `${question.name} ${cleanValue(text)}`],
-          cleanValue(question.name),
-          cleanValue(text)
-        )
-      );
+      const questionName = question.commonNamespace
+        ? question.commonNamespace
+        : cleanValue(question.name);
+      const namespaceItem = `${questionName} ${cleanValue(text)}`;
+      if (content || question.commonNamespace) {
+        arr.push(
+          generateNamespace(
+            [...namespace, namespaceItem],
+            questionName,
+            cleanValue(text)
+          )
+        );
+      }
       if (nextQuestion) {
         arr.push(
           generateQuestions(
             nextQuestion,
-            [...namespace, `${cleanValue(question.name)} ${cleanValue(text)}`],
+            content || question.commonNamespace
+              ? [...namespace, namespaceItem]
+              : namespace,
             parseResult
           )
         );
@@ -104,7 +114,9 @@ contrat salarié . convention collective . ${namespaceLine} . ${cleanValue(
         arr.push(
           generateResult(
             result,
-            [...namespace, `${question.name} ${cleanValue(text)}`],
+            content || question.commonNamespace
+              ? [...namespace, namespaceItem]
+              : namespace,
             parseResult
           )
         );

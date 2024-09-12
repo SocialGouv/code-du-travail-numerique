@@ -7,6 +7,7 @@ export function cleanValue(value: string) {
     .replace(")", "")
     .replace("-", "")
     .replace(/’/, "'")
+    .replace(/(«|»)/g, "")
     .trim();
 }
 

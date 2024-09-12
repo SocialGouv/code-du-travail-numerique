@@ -13,12 +13,8 @@ export class PreavisDemissionPublicodes extends PublicodesBase<PublicodesCalcula
   private readonly builder: ResultBuilder;
 
   constructor(rules: { [key: string]: any }, idcc?: string) {
-    let agreementRules: any = {};
-    if (idcc && rules[idcc]) {
-      agreementRules = rules[idcc];
-    }
     super(
-      { ...agreementRules, ...rules.base },
+      { ...(idcc && rules[idcc] ? rules[idcc] : {}), ...rules.base },
       PublicodesDefaultRules[PublicodesSimulator.PREAVIS_DEMISSION]
     );
     this.explanationInstance = new ExplanationBuilder(idcc);
@@ -79,7 +75,6 @@ export class PreavisDemissionPublicodes extends PublicodesBase<PublicodesCalcula
     args: Record<string, string | undefined>
   ): PublicodesOutput<PublicodesCalculateResult> {
     const agreementResult = this.calculateAgreement(args);
-    console.log(agreementResult);
 
     if (
       agreementResult.type === "ineligibility" ||

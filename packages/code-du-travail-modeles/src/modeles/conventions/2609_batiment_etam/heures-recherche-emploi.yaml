@@ -10,7 +10,7 @@ contrat salarié . convention collective . batiment etam . typeRupture:
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
           
 contrat salarié . convention collective . batiment etam . typeRupture Démission:
-  applicable si: typeRupture = "Démission"
+  applicable si: typeRupture = 'Démission'
           
 contrat salarié . convention collective . batiment etam . typeRupture Démission . résultat conventionnel:
   valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
@@ -19,12 +19,12 @@ contrat salarié . convention collective . batiment etam . typeRupture Démissio
     Article 8.3: https//www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018773771&cidTexte=KALITEXT000018773681&dateTexte=20060712
           
 contrat salarié . convention collective . batiment etam . typeRupture Licenciement:
-  applicable si: typeRupture = "Licenciement"
+  applicable si: typeRupture = 'Licenciement'
           
 contrat salarié . convention collective . batiment etam . typeRupture Licenciement . résultat conventionnel:
   valeur: "'5 journées ou 10 demi-journées'"
   type: notification
-  description:  
+  description: 
     - Le salaire est maintenu.
     - Les autorisations d'absence seront fixées moitié par le salarié, et moitié par l'employeur. Chacun devra en informer l'autre partie. L'employeur ne verse pas d'indemnité au salarié s'il n'utilise ces heures d'absence autorisée.
   remplace: contrat salarié . convention collective . résultat conventionnel
@@ -32,12 +32,12 @@ contrat salarié . convention collective . batiment etam . typeRupture Licenciem
     Article 8.3: https//www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018773771&cidTexte=KALITEXT000018773681&dateTexte=20060712
           
 contrat salarié . convention collective . batiment etam . typeRupture Rupture de la période d'essai:
-  applicable si: typeRupture = "Rupture de la période d'essai"
+  applicable si: typeRupture = 'Rupture de la période d'essai'
           
 contrat salarié . convention collective . batiment etam . typeRupture Rupture de la période d'essai . résultat conventionnel:
   valeur: "'5 journées ou 10 demi-journées'"
   type: notification
-  description:  
+  description: 
     - Le salaire est maintenu.
     - Les autorisations d'absence seront fixées moitié par le salarié, et moitié par l'employeur. Chacun devra en informer l'autre partie. L'employeur ne verse pas d'indemnité au salarié s'il n'utilise ces heures d'absence autorisée.
   remplace: contrat salarié . convention collective . résultat conventionnel

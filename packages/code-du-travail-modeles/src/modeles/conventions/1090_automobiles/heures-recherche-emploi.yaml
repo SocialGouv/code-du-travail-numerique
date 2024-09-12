@@ -10,7 +10,7 @@ contrat salarié . convention collective . automobiles . typeRupture:
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
           
 contrat salarié . convention collective . automobiles . typeRupture Démission:
-  applicable si: typeRupture = "Démission"
+  applicable si: typeRupture = 'Démission'
           
 contrat salarié . convention collective . automobiles . typeRupture Démission . catégorie professionnelle:
   titre: catégorie professionnelle
@@ -22,12 +22,12 @@ contrat salarié . convention collective . automobiles . typeRupture Démission 
       Ouvriers, Employés: "'Ouvriers, Employés'"
           
 contrat salarié . convention collective . automobiles . typeRupture Démission . catégorie professionnelle Agents de maîtrise et Cadres:
-  applicable si: catégorie professionnelle = "Agents de maîtrise et Cadres"
+  applicable si: catégorie professionnelle = 'Agents de maîtrise et Cadres'
           
 contrat salarié . convention collective . automobiles . typeRupture Démission . catégorie professionnelle Agents de maîtrise et Cadres . résultat conventionnel:
   valeur: "'50 heures par mois'"
   type: notification
-  description:  
+  description: 
     - Le salaire n'est pas maintenu.
     - Le salarié peut s'absenter pendant 50 heures par mois, en une ou plusieurs fois en accord avec l'employeur.
   remplace: contrat salarié . convention collective . résultat conventionnel
@@ -35,7 +35,7 @@ contrat salarié . convention collective . automobiles . typeRupture Démission 
     Article 4.10: https//www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid
           
 contrat salarié . convention collective . automobiles . typeRupture Démission . catégorie professionnelle Ouvriers, Employés:
-  applicable si: catégorie professionnelle = "Ouvriers, Employés"
+  applicable si: catégorie professionnelle = 'Ouvriers, Employés'
           
 contrat salarié . convention collective . automobiles . typeRupture Démission . catégorie professionnelle Ouvriers, Employés . durée du travail:
   titre: durée du travail
@@ -47,7 +47,7 @@ contrat salarié . convention collective . automobiles . typeRupture Démission 
       Temps partiel: "'Temps partiel'"
           
 contrat salarié . convention collective . automobiles . typeRupture Démission . catégorie professionnelle Ouvriers, Employés . durée du travail Temps complet:
-  applicable si: durée du travail = "Temps complet"
+  applicable si: durée du travail = 'Temps complet'
           
 contrat salarié . convention collective . automobiles . typeRupture Démission . catégorie professionnelle Ouvriers, Employés . durée du travail Temps complet . durée du préavis:
   titre: durée du préavis
@@ -59,12 +59,12 @@ contrat salarié . convention collective . automobiles . typeRupture Démission 
       Plus de 2 semaines: "'Plus de 2 semaines'"
           
 contrat salarié . convention collective . automobiles . typeRupture Démission . catégorie professionnelle Ouvriers, Employés . durée du travail Temps complet . durée du préavis 2 semaines:
-  applicable si: durée du préavis = "2 semaines"
+  applicable si: durée du préavis = '2 semaines'
           
 contrat salarié . convention collective . automobiles . typeRupture Démission . catégorie professionnelle Ouvriers, Employés . durée du travail Temps complet . durée du préavis 2 semaines . résultat conventionnel:
   valeur: "'24 heures'"
   type: notification
-  description:  
+  description: 
     - Le salaire n'est pas maintenu.
     - Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis.
   remplace: contrat salarié . convention collective . résultat conventionnel
@@ -72,12 +72,12 @@ contrat salarié . convention collective . automobiles . typeRupture Démission 
     Article 2.12: https//www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid
           
 contrat salarié . convention collective . automobiles . typeRupture Démission . catégorie professionnelle Ouvriers, Employés . durée du travail Temps complet . durée du préavis Plus de 2 semaines:
-  applicable si: durée du préavis = "Plus de 2 semaines"
+  applicable si: durée du préavis = 'Plus de 2 semaines'
           
 contrat salarié . convention collective . automobiles . typeRupture Démission . catégorie professionnelle Ouvriers, Employés . durée du travail Temps complet . durée du préavis Plus de 2 semaines . résultat conventionnel:
   valeur: "'50 heures par mois'"
   type: notification
-  description:  
+  description: 
     - Le salaire n'est pas maintenu.
     - Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis.
   remplace: contrat salarié . convention collective . résultat conventionnel
@@ -85,12 +85,12 @@ contrat salarié . convention collective . automobiles . typeRupture Démission 
     Article 2.12: https//www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid
           
 contrat salarié . convention collective . automobiles . typeRupture Démission . catégorie professionnelle Ouvriers, Employés . durée du travail Temps partiel:
-  applicable si: durée du travail = "Temps partiel"
+  applicable si: durée du travail = 'Temps partiel'
           
 contrat salarié . convention collective . automobiles . typeRupture Démission . catégorie professionnelle Ouvriers, Employés . durée du travail Temps partiel . résultat conventionnel:
   valeur: "'l'équivalent de 30% de l'horaire hebdomadaire inscrit au contrat de travail'"
   type: notification
-  description:  
+  description: 
     - Le salaire n'est pas maintenu.
     - Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis.
   remplace: contrat salarié . convention collective . résultat conventionnel
@@ -98,7 +98,7 @@ contrat salarié . convention collective . automobiles . typeRupture Démission 
     Article 2.12: https//www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid
           
 contrat salarié . convention collective . automobiles . typeRupture Licenciement:
-  applicable si: typeRupture = "Licenciement"
+  applicable si: typeRupture = 'Licenciement'
           
 contrat salarié . convention collective . automobiles . typeRupture Licenciement . catégorie professionnelle:
   titre: catégorie professionnelle
@@ -110,12 +110,12 @@ contrat salarié . convention collective . automobiles . typeRupture Licenciemen
       Ouvriers, Employés: "'Ouvriers, Employés'"
           
 contrat salarié . convention collective . automobiles . typeRupture Licenciement . catégorie professionnelle Agents de maîtrise et Cadres:
-  applicable si: catégorie professionnelle = "Agents de maîtrise et Cadres"
+  applicable si: catégorie professionnelle = 'Agents de maîtrise et Cadres'
           
 contrat salarié . convention collective . automobiles . typeRupture Licenciement . catégorie professionnelle Agents de maîtrise et Cadres . résultat conventionnel:
   valeur: "'50 heures par mois'"
   type: notification
-  description:  
+  description: 
     - Le salaire est maintenu.
     - Le salarié peut s'absenter pendant 50 heures par mois, en une ou plusieurs fois en accord avec l'employeur.
   remplace: contrat salarié . convention collective . résultat conventionnel
@@ -123,7 +123,7 @@ contrat salarié . convention collective . automobiles . typeRupture Licenciemen
     Article 4.10: https//www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid
           
 contrat salarié . convention collective . automobiles . typeRupture Licenciement . catégorie professionnelle Ouvriers, Employés:
-  applicable si: catégorie professionnelle = "Ouvriers, Employés"
+  applicable si: catégorie professionnelle = 'Ouvriers, Employés'
           
 contrat salarié . convention collective . automobiles . typeRupture Licenciement . catégorie professionnelle Ouvriers, Employés . durée du travail:
   titre: durée du travail
@@ -135,7 +135,7 @@ contrat salarié . convention collective . automobiles . typeRupture Licenciemen
       Temps partiel: "'Temps partiel'"
           
 contrat salarié . convention collective . automobiles . typeRupture Licenciement . catégorie professionnelle Ouvriers, Employés . durée du travail Temps complet:
-  applicable si: durée du travail = "Temps complet"
+  applicable si: durée du travail = 'Temps complet'
           
 contrat salarié . convention collective . automobiles . typeRupture Licenciement . catégorie professionnelle Ouvriers, Employés . durée du travail Temps complet . durée du préavis:
   titre: durée du préavis
@@ -147,12 +147,12 @@ contrat salarié . convention collective . automobiles . typeRupture Licenciemen
       Plus de 2 semaines: "'Plus de 2 semaines'"
           
 contrat salarié . convention collective . automobiles . typeRupture Licenciement . catégorie professionnelle Ouvriers, Employés . durée du travail Temps complet . durée du préavis 2 semaines:
-  applicable si: durée du préavis = "2 semaines"
+  applicable si: durée du préavis = '2 semaines'
           
 contrat salarié . convention collective . automobiles . typeRupture Licenciement . catégorie professionnelle Ouvriers, Employés . durée du travail Temps complet . durée du préavis 2 semaines . résultat conventionnel:
   valeur: "'24 heures'"
   type: notification
-  description:  
+  description: 
     - Le salaire est maintenu.
     - Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis.
   remplace: contrat salarié . convention collective . résultat conventionnel
@@ -160,12 +160,12 @@ contrat salarié . convention collective . automobiles . typeRupture Licenciemen
     Article 2.12: https//www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid
           
 contrat salarié . convention collective . automobiles . typeRupture Licenciement . catégorie professionnelle Ouvriers, Employés . durée du travail Temps complet . durée du préavis Plus de 2 semaines:
-  applicable si: durée du préavis = "Plus de 2 semaines"
+  applicable si: durée du préavis = 'Plus de 2 semaines'
           
 contrat salarié . convention collective . automobiles . typeRupture Licenciement . catégorie professionnelle Ouvriers, Employés . durée du travail Temps complet . durée du préavis Plus de 2 semaines . résultat conventionnel:
   valeur: "'50 heures par mois'"
   type: notification
-  description:  
+  description: 
     - Le salaire est maintenu.
     - Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis.
   remplace: contrat salarié . convention collective . résultat conventionnel
@@ -173,12 +173,12 @@ contrat salarié . convention collective . automobiles . typeRupture Licenciemen
     Article 2.12: https//www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid
           
 contrat salarié . convention collective . automobiles . typeRupture Licenciement . catégorie professionnelle Ouvriers, Employés . durée du travail Temps partiel:
-  applicable si: durée du travail = "Temps partiel"
+  applicable si: durée du travail = 'Temps partiel'
           
 contrat salarié . convention collective . automobiles . typeRupture Licenciement . catégorie professionnelle Ouvriers, Employés . durée du travail Temps partiel . résultat conventionnel:
   valeur: "'l'équivalent de 30% de l'horaire hebdomadaire inscrit au contrat de travail'"
   type: notification
-  description:  
+  description: 
     - Le salaire est maintenu.
     - Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis.
   remplace: contrat salarié . convention collective . résultat conventionnel
@@ -186,7 +186,7 @@ contrat salarié . convention collective . automobiles . typeRupture Licenciemen
     Article 2.12: https//www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid
           
 contrat salarié . convention collective . automobiles . typeRupture Rupture de la période d'essai:
-  applicable si: typeRupture = "Rupture de la période d'essai"
+  applicable si: typeRupture = 'Rupture de la période d'essai'
           
 contrat salarié . convention collective . automobiles . typeRupture Rupture de la période d'essai . résultat conventionnel:
   valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"

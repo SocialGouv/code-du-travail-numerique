@@ -3,6 +3,7 @@ import type { Rule } from "publicodes";
 import {
   mergeHeuresRechercheEmploiModels,
   mergeIndemniteLicenciementModels,
+  mergeIndemnitePrecariteModels,
   mergePreavisDemissionModels,
   mergePreavisLicenciementModels,
   mergePreavisRetraiteModels,
@@ -20,6 +21,7 @@ declare global {
   const modelsPreavisRetraite: Record<string, any>;
   const modelsPreavisLicenciement: Record<string, any>;
   const modelsPreavisDemission: Record<string, any>;
+  const modelsIndemnitePrecarite: Record<string, any>;
   const modelsRuptureConventionnel: Record<string, any>;
   const modelsHeuresRechercheEmploi: Record<string, any>;
   namespace jest {
@@ -451,6 +453,7 @@ const replaceAll = (string: string, search: string, replace: string) => {
 (global as any).modelsPreavisRetraite = mergePreavisRetraiteModels();
 (global as any).modelsPreavisLicenciement = mergePreavisLicenciementModels();
 (global as any).modelsPreavisDemission = mergePreavisDemissionModels();
+(global as any).modelsIndemnitePrecarite = mergeIndemnitePrecariteModels();
 (global as any).modelsRuptureConventionnel = mergeRuptureConventionnelle();
 (global as any).modelsHeuresRechercheEmploi =
   mergeHeuresRechercheEmploiModels();

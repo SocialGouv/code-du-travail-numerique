@@ -10,7 +10,7 @@ contrat salarié . convention collective . cabinets médicaux . typeRupture:
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
           
 contrat salarié . convention collective . cabinets médicaux . typeRupture Démission:
-  applicable si: typeRupture = "Démission"
+  applicable si: typeRupture = 'Démission'
           
 contrat salarié . convention collective . cabinets médicaux . typeRupture Démission . résultat conventionnel:
   valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
@@ -19,12 +19,12 @@ contrat salarié . convention collective . cabinets médicaux . typeRupture Dém
     Article 26: https//www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856091&cidTexte=KALITEXT000005681857&dateTexte=20190707
           
 contrat salarié . convention collective . cabinets médicaux . typeRupture Licenciement:
-  applicable si: typeRupture = "Licenciement"
+  applicable si: typeRupture = 'Licenciement'
           
 contrat salarié . convention collective . cabinets médicaux . typeRupture Licenciement . résultat conventionnel:
   valeur: "'2 heures par jour'"
   type: notification
-  description:  
+  description: 
     - Le salaire est maintenu.
     - L'employeur et le salarié peuvent décider ensemble que ces heures seront cumulées en une seule journée de 8 heures tous les 4 jours.
   remplace: contrat salarié . convention collective . résultat conventionnel
@@ -32,7 +32,7 @@ contrat salarié . convention collective . cabinets médicaux . typeRupture Lice
     Article 26: https//www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856091&cidTexte=KALITEXT000005681857&dateTexte=20190707
           
 contrat salarié . convention collective . cabinets médicaux . typeRupture Rupture de la période d'essai:
-  applicable si: typeRupture = "Rupture de la période d'essai"
+  applicable si: typeRupture = 'Rupture de la période d'essai'
           
 contrat salarié . convention collective . cabinets médicaux . typeRupture Rupture de la période d'essai . résultat conventionnel:
   valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"

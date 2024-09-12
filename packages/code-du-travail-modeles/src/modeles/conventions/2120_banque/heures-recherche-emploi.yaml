@@ -10,7 +10,7 @@ contrat salarié . convention collective . banque . typeRupture:
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
           
 contrat salarié . convention collective . banque . typeRupture Démission:
-  applicable si: typeRupture = "Démission"
+  applicable si: typeRupture = 'Démission'
           
 contrat salarié . convention collective . banque . typeRupture Démission . résultat conventionnel:
   valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
@@ -19,12 +19,12 @@ contrat salarié . convention collective . banque . typeRupture Démission . ré
     Article 30: https//www.legifrance.gouv.fr/affichIDCC.do;jsessionid=E5B5B8F059E9188492430B0C2B630256.tplgfr29s_3?idSectionTA=KALISCTA000005758006&cidTexte=KALITEXT000005678018&idConvention=KALICONT000005635780&dateTexte=29990101
           
 contrat salarié . convention collective . banque . typeRupture Licenciement:
-  applicable si: typeRupture = "Licenciement"
+  applicable si: typeRupture = 'Licenciement'
           
 contrat salarié . convention collective . banque . typeRupture Licenciement . résultat conventionnel:
   valeur: "'2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail'"
   type: notification
-  description:  
+  description: 
     - Le salaire est maintenu.
     - Les heures d'absence sont fixées par accord entre l'employeur et le salarié. En cas de désaccord, elles sont fixées un jour par l'employeur, un jour par le salarié. Avec l'accord de l'employeur, elles peuvent être regroupées en fin de préavis.
   remplace: contrat salarié . convention collective . résultat conventionnel
@@ -32,7 +32,7 @@ contrat salarié . convention collective . banque . typeRupture Licenciement . r
     Article 30: https//www.legifrance.gouv.fr/affichIDCC.do;jsessionid=E5B5B8F059E9188492430B0C2B630256.tplgfr29s_3?idSectionTA=KALISCTA000005758006&cidTexte=KALITEXT000005678018&idConvention=KALICONT000005635780&dateTexte=29990101
           
 contrat salarié . convention collective . banque . typeRupture Rupture de la période d'essai:
-  applicable si: typeRupture = "Rupture de la période d'essai"
+  applicable si: typeRupture = 'Rupture de la période d'essai'
           
 contrat salarié . convention collective . banque . typeRupture Rupture de la période d'essai . résultat conventionnel:
   valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"

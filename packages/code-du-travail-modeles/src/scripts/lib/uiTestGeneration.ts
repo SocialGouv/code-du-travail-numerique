@@ -115,8 +115,6 @@ function generateTest(
   componentName: string
 ): { filename: string; content: string }[] {
   const idccQuestion = getIdccQuestion(question);
-  // console.log("question", question);
-  // console.log("idccQuestion", JSON.stringify(idccQuestion));
   if (!idccQuestion) {
     return [];
   }

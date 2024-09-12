@@ -1,0 +1,75 @@
+
+          
+          
+contrat salarié . convention collective . bureaux études techniques . type de cdd Enquêteurs vacataires:
+  applicable si: type de cdd = 'Enquêteurs vacataires'
+          
+          
+          
+contrat salarié . convention collective . bureaux études techniques . type de cdd Enquêteurs vacataires . résultat conventionnel:
+  valeur: 
+    produit:
+      assiette: contrat salarié . salaire de référence
+      facteur: 0.04
+  arrondi: 2 décimales
+  unité: €
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . salaire de référence
+      formula: 4/100 * Sref
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    article 53 de l'annexe relative aux enquêteurs - Accord du 16 décembre 1991: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7625C278F6496D100BB4EC20B6D7BAA7.tplgfr25s_3?idArticle=KALIARTI000005851356&cidTexte=KALITEXT000005679885&dateTexte=29990101&categorieLien=id
+          
+contrat salarié . convention collective . bureaux études techniques . type de cdd Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès:
+  applicable si: type de cdd = 'Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès'
+          
+          
+contrat salarié . convention collective . bureaux études techniques . type de cdd Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès . avec proposition cdi non:
+  applicable si: avec proposition cdi = 'non'
+          
+          
+          
+contrat salarié . convention collective . bureaux études techniques . type de cdd Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès . avec proposition cdi non . résultat conventionnel:
+  valeur: 
+    produit:
+      assiette: contrat salarié . salaire de référence
+      facteur: 0.06
+  arrondi: 2 décimales
+  unité: €
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . salaire de référence
+      formula: 6/100 * Sref
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Chapitre III  Contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005851689&cidTexte=KALITEXT000005679946&dateTexte=20190918
+          
+contrat salarié . convention collective . bureaux études techniques . type de cdd Autres:
+  applicable si: type de cdd = 'Autres'
+          
+          
+          
+          
+          
+          
+          
+          
+contrat salarié . convention collective . bureaux études techniques . type de cdd Autres . résultat conventionnel:
+  valeur: 
+    produit:
+      assiette: contrat salarié . salaire de référence
+      facteur: 0.1
+  arrondi: 2 décimales
+  unité: €
+  cdtn:
+    formule:
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . salaire de référence
+      formula: 1/10 * Sref
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    Article L1243-8 du code du travail: https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501
+    Article L1243-9 du code du travail: https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech=

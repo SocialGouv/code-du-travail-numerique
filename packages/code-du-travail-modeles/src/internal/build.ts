@@ -9,6 +9,7 @@ import {
   mergeCommonModels,
   mergeHeuresRechercheEmploiModels,
   mergeIndemniteLicenciementModels,
+  mergeIndemnitePrecariteModels,
   mergePreavisDemissionModels,
   mergePreavisLicenciementModels,
   mergePreavisRetraiteModels,
@@ -88,4 +89,8 @@ writeJsonModel({
 writeJsonModel({
   merger: mergeHeuresRechercheEmploiModels,
   outputName: "modeles-heures-recherche-emploi",
+});
+writeJsonModel({
+  merger: () => mergeIndemnitePrecariteModels(),
+  outputName: "modeles-indemnite-precarite",
 });
