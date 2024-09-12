@@ -42,11 +42,11 @@ function ArticleCodeDuTravail({
         - Mise à jour le&nbsp;: {date}
       </p>
 
-      <div className="fr-mb-5w">
+      <div className={fr.cx("fr-mb-5w")}>
         <Html>{html}</Html>
       </div>
       {notaHtml && (
-        <div className="fr-highlight fr-mb-5w">
+        <div className={fr.cx("fr-highlight","fr-mb-5w")}>
           <p>NOTA</p>
           <Html>{notaHtml}</Html>
         </div>

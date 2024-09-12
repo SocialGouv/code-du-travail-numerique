@@ -21,9 +21,9 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
     navigator?.clipboard?.writeText(currentPageUrl);
   };
   return (
-    <div className="fr-follow__social">
+    <div className={fr.cx("fr-follow__social")}>
       <p>Partager la page</p>
-      <ul className="fr-btns-group">
+      <ul className={fr.cx("fr-btns-group")}>
         <li>
           <a
             className={fr.cx("fr-btn", "fr-btn--tertiary", "fr-btn--facebook")}
@@ -122,7 +122,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
         </li>
         <li>
           {isUrlCopied ? (
-            <p className="fr-mt-1w">
+            <p className={fr.cx("fr-mt-1w")}>
               <span
                 className={`${fr.cx("ri-check-line")} ${css({
                   color: "var(--text-default-success)",

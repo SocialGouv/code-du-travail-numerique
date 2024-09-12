@@ -46,7 +46,7 @@ export const RelatedItems = ({
         ({ title, items }) =>
           items.length > 0 && (
             <div key={title}>
-              <p className="fr-text--lead">
+              <p className={fr.cx("fr-text--lead")}>
                 <strong>{title}&nbsp;:</strong>
               </p>
               <ListWithArrow
