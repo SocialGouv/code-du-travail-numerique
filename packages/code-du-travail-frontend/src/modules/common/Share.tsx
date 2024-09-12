@@ -28,10 +28,14 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
       <p>Partager la page</p>
       <ul className="fr-btns-group">
         <li>
-          <Button
-            className="fr-btn--facebook"
-            priority="tertiary"
+          <a
+            className={fr.cx("fr-btn", "fr-btn--tertiary", "fr-btn--facebook")}
             title="Partager sur Facebook"
+            href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+              currentPageUrl
+            )}&quote=${encodeURIComponent(title)}`}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => {
               matopush([
                 "trackEvent",
@@ -39,42 +43,36 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
                 currentPageUrl,
                 "facebook",
               ]);
-              window.open(
-                `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                  currentPageUrl
-                )}&quote=${encodeURIComponent(title)}`,
-                "facebook_popup",
-                POPUP_OPTIONS
-              );
             }}
           >
             Facebook
-          </Button>
+          </a>
         </li>
         <li>
-          <Button
-            className="fr-btn--twitter-x"
-            priority="tertiary"
+          <a
+            className={fr.cx("fr-btn", "fr-btn--tertiary", "fr-btn--twitter-x")}
             title="Partager sur X (anciennement Twitter)"
+            href={`https://x.com/intent/post?text=${encodeURIComponent(
+              `${title} : ${currentPageUrl}`
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => {
               matopush(["trackEvent", "clic_share", currentPageUrl, "twitter"]);
-              window.open(
-                `https://x.com/intent/post?text=${encodeURIComponent(
-                  `${title} : ${currentPageUrl}`
-                )}`,
-                "twitter_popup",
-                POPUP_OPTIONS
-              );
             }}
           >
             X (anciennement Twitter)
-          </Button>
+          </a>
         </li>
         <li>
-          <Button
-            className="fr-btn--linkedin"
-            priority="tertiary"
+          <a
+            className={fr.cx("fr-btn", "fr-btn--tertiary", "fr-btn--linkedin")}
             title="Partager sur LinkedIn"
+            href={`https://www.linkedin.com/shareArticle?mini=true&title=${encodeURIComponent(
+              title
+            )}&url=${encodeURIComponent(currentPageUrl)}`}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => {
               matopush([
                 "trackEvent",
@@ -82,17 +80,10 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
                 currentPageUrl,
                 "linkedin",
               ]);
-              window.open(
-                `https://www.linkedin.com/shareArticle?mini=true&title=${encodeURIComponent(
-                  title
-                )}&url=${encodeURIComponent(currentPageUrl)}`,
-                "linkedin_popup",
-                POPUP_OPTIONS
-              );
             }}
           >
             Linkedin
-          </Button>
+          </a>
         </li>
         <li>
           <a
@@ -112,10 +103,14 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
           </a>
         </li>
         <li>
-          <Button
-            priority="tertiary"
-            iconId="ri-whatsapp-line"
+          <a
+            className={fr.cx("fr-btn", "fr-btn--tertiary", "ri-whatsapp-line")}
             title="Envoyer par Whatsapp"
+            href={`https://wa.me/?text=${encodeURIComponent(
+              `${title} : ${currentPageUrl}`
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => {
               matopush([
                 "trackEvent",
@@ -123,17 +118,10 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
                 currentPageUrl,
                 "whatsapp",
               ]);
-              window.open(
-                `https://wa.me/?text=${encodeURIComponent(
-                  `${title} : ${currentPageUrl}`
-                )}`,
-                "whatsapp_popup",
-                POPUP_OPTIONS
-              );
             }}
           >
             Whatsapp
-          </Button>
+          </a>
         </li>
         <li>
           {isUrlCopied ? (
@@ -146,8 +134,6 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
               />
               Lien copié
             </p>
-
-
           ) : (
             <Button
               priority="tertiary"

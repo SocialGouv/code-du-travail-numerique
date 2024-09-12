@@ -12,31 +12,37 @@ exports[`<Share /> renders 1`] = `
       class="fr-btns-group"
     >
       <li>
-        <button
+        <a
           class="fr-btn fr-btn--tertiary fr-btn--facebook"
-          id="fr-button-:r0:"
+          href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fapi.urlundefined&quote=HELLO"
+          rel="noopener noreferrer"
+          target="_blank"
           title="Partager sur Facebook"
         >
           Facebook
-        </button>
+        </a>
       </li>
       <li>
-        <button
+        <a
           class="fr-btn fr-btn--tertiary fr-btn--twitter-x"
-          id="fr-button-:r1:"
+          href="https://x.com/intent/post?text=HELLO%20%3A%20http%3A%2F%2Fapi.urlundefined"
+          rel="noopener noreferrer"
+          target="_blank"
           title="Partager sur X (anciennement Twitter)"
         >
           X (anciennement Twitter)
-        </button>
+        </a>
       </li>
       <li>
-        <button
+        <a
           class="fr-btn fr-btn--tertiary fr-btn--linkedin"
-          id="fr-button-:r2:"
+          href="https://www.linkedin.com/shareArticle?mini=true&title=HELLO&url=http%3A%2F%2Fapi.urlundefined"
+          rel="noopener noreferrer"
+          target="_blank"
           title="Partager sur LinkedIn"
         >
           Linkedin
-        </button>
+        </a>
       </li>
       <li>
         <a
@@ -49,18 +55,20 @@ exports[`<Share /> renders 1`] = `
         </a>
       </li>
       <li>
-        <button
-          class="fr-btn fr-btn--tertiary ri-whatsapp-line fr-btn--icon-left"
-          id="fr-button-:r3:"
+        <a
+          class="fr-btn fr-btn--tertiary ri-whatsapp-line"
+          href="https://wa.me/?text=HELLO%20%3A%20http%3A%2F%2Fapi.urlundefined"
+          rel="noopener noreferrer"
+          target="_blank"
           title="Envoyer par Whatsapp"
         >
           Whatsapp
-        </button>
+        </a>
       </li>
       <li>
         <button
           class="fr-btn fr-btn--tertiary ri-links-line fr-btn--icon-left"
-          id="fr-button-:r4:"
+          id="fr-button-:r0:"
           title="Copier le lien"
         >
           Lien
