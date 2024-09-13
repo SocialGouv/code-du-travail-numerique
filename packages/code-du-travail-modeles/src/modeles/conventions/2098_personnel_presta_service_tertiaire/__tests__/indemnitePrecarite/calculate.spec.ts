@@ -13,6 +13,16 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC2098'",
         "contrat salarié . salaire de référence": "3000",
+        "contrat salarié . contractType": "'CDD'",
+        "contrat salarié . finContratPeriodeDessai": "non",
+        "contrat salarié . propositionCDIFindeContrat": "non",
+        "contrat salarié . refusCDIFindeContrat": "non",
+        "contrat salarié . interruptionFauteGrave": "non",
+        "contrat salarié . refusRenouvellementAuto": "non",
+        "contrat salarié . cttFormation": "non",
+        "contrat salarié . ruptureContratFauteGrave": "non",
+        "contrat salarié . propositionCDIFinContrat": "non",
+        "contrat salarié . refusSouplesse": "non",
         ...situation,
       });
         expect(result).toFormulaBeEqual(expectedFormula.formula, expectedFormula.explanations);

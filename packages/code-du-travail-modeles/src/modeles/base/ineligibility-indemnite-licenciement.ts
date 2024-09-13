@@ -1,9 +1,12 @@
-import type { IInegibility } from "../common/types/ineligibility";
+import type { IIndemniteDepartIneligibility } from "../common/types/ineligibility";
 
-export class IneligibilityLegalIndemniteLicenciement implements IInegibility {
+export class IneligibilityLegalIndemniteLicenciement
+  implements IIndemniteDepartIneligibility
+{
   getContractIneligibility(
     args: Record<string, string | undefined>
   ): string | undefined {
+    console.log("TOTO");
     if (args.typeContratTravail && args.typeContratTravail === "cdd") {
       return `
         <p>

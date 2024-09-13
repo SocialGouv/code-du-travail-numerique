@@ -1,16 +1,16 @@
 
           
           
-contrat salarié . convention collective . entreprises de services à la personne . type de cdd CDD dit de  mission ponctuelle ou occasionnelle:
-  applicable si: type de cdd = 'CDD dit de  mission ponctuelle ou occasionnelle'
+contrat salarié . convention collective . entreprises de services à la personne . type de cdd CDD dit de mission ponctuelle ou occasionnelle:
+  applicable si: type de cdd = 'CDD dit de mission ponctuelle ou occasionnelle'
           
           
-contrat salarié . convention collective . entreprises de services à la personne . type de cdd CDD dit de  mission ponctuelle ou occasionnelle . embauché en cdi sans interruption non:
+contrat salarié . convention collective . entreprises de services à la personne . type de cdd CDD dit de mission ponctuelle ou occasionnelle . embauché en cdi sans interruption non:
   applicable si: embauché en cdi sans interruption = 'non'
           
           
           
-contrat salarié . convention collective . entreprises de services à la personne . type de cdd CDD dit de  mission ponctuelle ou occasionnelle . embauché en cdi sans interruption non . résultat conventionnel:
+contrat salarié . convention collective . entreprises de services à la personne . type de cdd CDD dit de mission ponctuelle ou occasionnelle . embauché en cdi sans interruption non . résultat conventionnel:
   valeur: 
     produit:
       assiette: contrat salarié . salaire de référence

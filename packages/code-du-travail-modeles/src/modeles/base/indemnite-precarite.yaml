@@ -1,3 +1,20 @@
+contrat salarié . contractType:
+  titre: Quel est le type de CDD ?
+  cdtn:
+    type: liste
+    valeurs:
+      Autres: "'CDD'"
+      Enquêteurs vacataires: "'CTT'"
+contrat salarié . finContratPeriodeDessai: non
+contrat salarié . propositionCDIFindeContrat: non
+contrat salarié . refusCDIFindeContrat: non
+contrat salarié . interruptionFauteGrave: non
+contrat salarié . refusRenouvellementAuto: non
+contrat salarié . cttFormation: non
+contrat salarié . ruptureContratFauteGrave: non
+contrat salarié . propositionCDIFinContrat: non
+contrat salarié . refusSouplesse: non
+
 contrat salarié . salaire de référence:
   unité: €
 

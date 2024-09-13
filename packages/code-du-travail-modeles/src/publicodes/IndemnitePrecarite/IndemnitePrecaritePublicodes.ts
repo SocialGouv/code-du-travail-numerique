@@ -7,15 +7,25 @@ import { ExplanationBuilder } from "../common/ExplanationBuilder";
 import { ResultBuilder } from "./ResultBuilder";
 import { CalculateOutput, PublicodesCalculateResult } from "../common/type";
 
+import { mapIneligibility } from "../common/mapper";
+import {
+  IneligibilityIndemnitePrecariteFactory,
+  SupportedCc,
+} from "../../modeles";
+import { IIneligibility } from "../../modeles/common/types/ineligibility";
+
 export class IndemnitePrecaritePublicodes extends PublicodesBase<PublicodesCalculateResult> {
   protected explanationInstance: ExplanationBuilder;
-
+  public readonly ineligibility: IIneligibility;
   private readonly builder: ResultBuilder;
 
   constructor(rules: { [key: string]: any }, idcc?: string) {
     super(
       { ...(idcc && rules[idcc] ? rules[idcc] : {}), ...rules.base },
       PublicodesDefaultRules[PublicodesSimulator.INDEMNITE_PRECARITE]
+    );
+    this.ineligibility = new IneligibilityIndemnitePrecariteFactory().create(
+      idcc ? (idcc as SupportedCc) : SupportedCc.default
     );
     this.explanationInstance = new ExplanationBuilder(idcc);
     this.builder = new ResultBuilder(this.explanationInstance);
@@ -68,19 +78,22 @@ export class IndemnitePrecaritePublicodes extends PublicodesBase<PublicodesCalcu
   }
 
   public calculate(
-    args: Record<string, string | undefined>
+    situation: Record<string, string | undefined>
   ): PublicodesOutput<PublicodesCalculateResult> {
-    const legalResult = this.calculateLegal(args);
-    const agreementResult = this.calculateAgreement(args);
+    const ineligibility = this.ineligibility.getIneligibility(situation);
+    if (ineligibility) {
+      return mapIneligibility(ineligibility);
+    }
+    const agreementResult = this.calculateAgreement(situation);
 
     if (
-      args["contrat salarié . convention collective"] &&
-      (agreementResult.type === "ineligibility" ||
-        agreementResult.type === "missing-args")
+      agreementResult.type === "ineligibility" ||
+      agreementResult.type === "missing-args"
     ) {
       return agreementResult;
     }
 
+    const legalResult = this.calculateLegal(situation);
     if (
       legalResult.type === "ineligibility" ||
       legalResult.type === "missing-args"
