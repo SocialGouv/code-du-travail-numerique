@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SkipLinks /> should match snapshot 1`] = `
+<div>
+  <div
+    class="fr-skiplinks"
+    id="fr-skiplinks-:r0:"
+  >
+    <nav
+      aria-label="Accès rapide"
+      class="fr-container"
+      role="navigation"
+    >
+      <ul
+        class="fr-skiplinks__list"
+      >
+        <li>
+          <a
+            class="fr-link"
+            href="#main"
+          >
+            Contenu
+          </a>
+        </li>
+        <li>
+          <a
+            class="fr-link"
+            href="#fr-header-main-navigation"
+          >
+            Menu
+          </a>
+        </li>
+        <li>
+          <a
+            class="fr-link"
+            href="#fr-header-search-input"
+          >
+            Recherche
+          </a>
+        </li>
+        <li>
+          <a
+            class="fr-link"
+            href="#more-info"
+          >
+            Pied de page
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
