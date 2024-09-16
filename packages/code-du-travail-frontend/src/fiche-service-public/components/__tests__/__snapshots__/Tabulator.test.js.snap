@@ -3,21 +3,21 @@
 exports[`<Tabulator /> should have two different levels of headings 1`] = `
 <div>
   <div
-    class="sc-ac4a133f-0 fvNPWb"
+    class="sc-d69a28e-0 ctBffQ"
     data-rttabs="true"
   >
     <div
-      class="sc-ac4a133f-1 fxZtdi"
+      class="sc-d69a28e-1 gogiul"
     >
       <ul
-        class="sc-ac4a133f-2 fHCeXh"
+        class="sc-d69a28e-2 dDhiAS"
         role="tablist"
       >
         <li
           aria-controls="react-tabs-1"
           aria-disabled="false"
           aria-selected="true"
-          class="sc-ac4a133f-3 faZqNG react-tabs__tab--selected"
+          class="sc-d69a28e-3 djLETL react-tabs__tab--selected"
           data-rttab="true"
           id="react-tabs-0"
           role="tab"
@@ -29,7 +29,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
           aria-controls="react-tabs-3"
           aria-disabled="false"
           aria-selected="false"
-          class="sc-ac4a133f-3 faZqNG"
+          class="sc-d69a28e-3 djLETL"
           data-rttab="true"
           id="react-tabs-2"
           role="tab"
@@ -40,24 +40,24 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
     </div>
     <div
       aria-labelledby="react-tabs-0"
-      class="sc-ac4a133f-4 haGXHZ react-tabs__tab-panel--selected"
+      class="sc-d69a28e-4 hsuUYW react-tabs__tab-panel--selected"
       id="react-tabs-1"
       role="tabpanel"
     >
       <div
-        class="sc-8dcb2faa-0 gxfPDw"
+        class="sc-f92038f6-0 llOtbb"
       >
         <h2
-          class="sc-b879fc2d-0 hyiHle"
+          class="sc-a53a0f9a-0 bIsTsN"
         >
           CDI
         </h2>
       </div>
       <div
-        class="sc-ac4a133f-5 yflIk"
+        class="sc-d69a28e-5 fjXncv"
       >
         <h3
-          class="sc-b879fc2d-0 hyiHle"
+          class="sc-a53a0f9a-0 bIsTsN"
         >
           titre 1
         </h3>
@@ -68,7 +68,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
     </div>
     <div
       aria-labelledby="react-tabs-2"
-      class="sc-ac4a133f-4 haGXHZ"
+      class="sc-d69a28e-4 hsuUYW"
       id="react-tabs-3"
       role="tabpanel"
     />
@@ -79,21 +79,21 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
 <div>
   <div
-    class="sc-ac4a133f-0 fvNPWb"
+    class="sc-d69a28e-0 ctBffQ"
     data-rttabs="true"
   >
     <div
-      class="sc-ac4a133f-1 fxZtdi"
+      class="sc-d69a28e-1 gogiul"
     >
       <ul
-        class="sc-ac4a133f-2 fHCeXh"
+        class="sc-d69a28e-2 dDhiAS"
         role="tablist"
       >
         <li
           aria-controls="react-tabs-5"
           aria-disabled="false"
           aria-selected="true"
-          class="sc-ac4a133f-3 faZqNG react-tabs__tab--selected"
+          class="sc-d69a28e-3 djLETL react-tabs__tab--selected"
           data-rttab="true"
           id="react-tabs-4"
           role="tab"
@@ -105,7 +105,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
           aria-controls="react-tabs-7"
           aria-disabled="false"
           aria-selected="false"
-          class="sc-ac4a133f-3 faZqNG"
+          class="sc-d69a28e-3 djLETL"
           data-rttab="true"
           id="react-tabs-6"
           role="tab"
@@ -116,24 +116,24 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
     </div>
     <div
       aria-labelledby="react-tabs-4"
-      class="sc-ac4a133f-4 haGXHZ react-tabs__tab-panel--selected"
+      class="sc-d69a28e-4 hsuUYW react-tabs__tab-panel--selected"
       id="react-tabs-5"
       role="tabpanel"
     >
       <div
-        class="sc-8dcb2faa-0 gxfPDw"
+        class="sc-f92038f6-0 llOtbb"
       >
         <h3
-          class="sc-b879fc2d-0 hyiHle"
+          class="sc-a53a0f9a-0 bIsTsN"
         >
           CDI
         </h3>
       </div>
       <div
-        class="sc-ac4a133f-5 yflIk"
+        class="sc-d69a28e-5 fjXncv"
       >
         <h4
-          class="sc-b879fc2d-0 hyiHle"
+          class="sc-a53a0f9a-0 bIsTsN"
         >
           titre 1
         </h4>
@@ -144,7 +144,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
     </div>
     <div
       aria-labelledby="react-tabs-6"
-      class="sc-ac4a133f-4 haGXHZ"
+      class="sc-d69a28e-4 hsuUYW"
       id="react-tabs-7"
       role="tabpanel"
     />
@@ -155,21 +155,21 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
 exports[`<Tabulator /> should render 1`] = `
 <div>
   <div
-    class="sc-ac4a133f-0 fvNPWb"
+    class="sc-d69a28e-0 ctBffQ"
     data-rttabs="true"
   >
     <div
-      class="sc-ac4a133f-1 fxZtdi"
+      class="sc-d69a28e-1 gogiul"
     >
       <ul
-        class="sc-ac4a133f-2 fHCeXh"
+        class="sc-d69a28e-2 dDhiAS"
         role="tablist"
       >
         <li
           aria-controls="react-tabs-9"
           aria-disabled="false"
           aria-selected="true"
-          class="sc-ac4a133f-3 faZqNG react-tabs__tab--selected"
+          class="sc-d69a28e-3 djLETL react-tabs__tab--selected"
           data-rttab="true"
           id="react-tabs-8"
           role="tab"
@@ -181,7 +181,7 @@ exports[`<Tabulator /> should render 1`] = `
           aria-controls="react-tabs-11"
           aria-disabled="false"
           aria-selected="false"
-          class="sc-ac4a133f-3 faZqNG"
+          class="sc-d69a28e-3 djLETL"
           data-rttab="true"
           id="react-tabs-10"
           role="tab"
@@ -192,24 +192,24 @@ exports[`<Tabulator /> should render 1`] = `
     </div>
     <div
       aria-labelledby="react-tabs-8"
-      class="sc-ac4a133f-4 haGXHZ react-tabs__tab-panel--selected"
+      class="sc-d69a28e-4 hsuUYW react-tabs__tab-panel--selected"
       id="react-tabs-9"
       role="tabpanel"
     >
       <div
-        class="sc-8dcb2faa-0 gxfPDw"
+        class="sc-f92038f6-0 llOtbb"
       >
         <h4
-          class="sc-b879fc2d-0 hyiHle"
+          class="sc-a53a0f9a-0 bIsTsN"
         >
           CDI
         </h4>
       </div>
       <div
-        class="sc-ac4a133f-5 yflIk"
+        class="sc-d69a28e-5 fjXncv"
       >
         <h5
-          class="sc-b879fc2d-0 hyiHle"
+          class="sc-a53a0f9a-0 bIsTsN"
         >
           titre 1
         </h5>
@@ -220,7 +220,7 @@ exports[`<Tabulator /> should render 1`] = `
     </div>
     <div
       aria-labelledby="react-tabs-10"
-      class="sc-ac4a133f-4 haGXHZ"
+      class="sc-d69a28e-4 hsuUYW"
       id="react-tabs-11"
       role="tabpanel"
     />

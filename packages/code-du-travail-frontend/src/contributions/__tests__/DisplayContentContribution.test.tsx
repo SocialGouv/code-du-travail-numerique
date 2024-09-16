@@ -18,12 +18,12 @@ describe("DisplayContentContribution", () => {
             class="sc-525da103-0 clIhqj"
           >
             <h2
-              class="sc-b879fc2d-0 hyiHle"
+              class="sc-a53a0f9a-0 bIsTsN"
             >
               Mon titre
             </h2>
             <h3
-              class="sc-b879fc2d-0 hyiHle"
+              class="sc-a53a0f9a-0 bIsTsN"
             >
               Mon sous titre
             </h3>
@@ -45,12 +45,12 @@ describe("DisplayContentContribution", () => {
             class="sc-525da103-0 clIhqj"
           >
             <h4
-              class="sc-b879fc2d-0 hyiHle"
+              class="sc-a53a0f9a-0 bIsTsN"
             >
               Mon title
             </h4>
             <h5
-              class="sc-b879fc2d-0 hyiHle"
+              class="sc-a53a0f9a-0 bIsTsN"
             >
               Mon title
             </h5>
@@ -72,7 +72,7 @@ describe("DisplayContentContribution", () => {
             class="sc-525da103-0 clIhqj"
           >
             <h6
-              class="sc-b879fc2d-0 hyiHle"
+              class="sc-a53a0f9a-0 bIsTsN"
             >
               Mon title
             </h6>
@@ -328,7 +328,7 @@ describe("DisplayContentContribution", () => {
           class="sc-525da103-0 clIhqj"
         >
           <table
-            class="sc-4e3ba411-0 kKVapO"
+            class="sc-6d9f376d-0 iugiNe"
           >
             <thead>
               <tr>

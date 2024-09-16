@@ -41,17 +41,17 @@ describe("ReferencesJuridiques", () => {
 
     expect(asFragment().firstChild).toMatchInlineSnapshot(`
       <div
-        class="sc-2a0a4b0a-0 hPfzrL"
+        class="sc-13323d30-0 gtmVnh"
       >
         <div>
           <button
             aria-expanded="false"
-            class="sc-95bd4344-0 kEXnui sc-da0440cf-1 fwhlXZ"
+            class="sc-b0ebfae6-0 cVUzbD sc-a45f48bd-1 fdaxUP"
             type="button"
           >
             <svg
               aria-hidden="true"
-              class="sc-93c68677-0 fWneNg"
+              class="sc-efc7f1fd-0 cFvIxv"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -67,27 +67,27 @@ describe("ReferencesJuridiques", () => {
               />
             </svg>
             <span
-              class="sc-da0440cf-2 cdlSfE"
+              class="sc-a45f48bd-2 dzrMBi"
             >
               Références
             </span>
           </button>
           <div
-            class="sc-da0440cf-0 kQbZar"
+            class="sc-a45f48bd-0 dnXrPP"
           >
             <ul
-              class="sc-ab356c14-0 sc-ab4aba5d-1 bpNHPl dDdmoO"
+              class="sc-78dd7a00-0 sc-ab4aba5d-1 fVqAjV dDdmoO"
             >
               <li>
                 <a
                   aria-label="Titre 2 (Nouvelle fenêtre)"
-                  class="sc-60a7e89-0 haggkt sc-ab4aba5d-0 gOxGeu no-after"
+                  class="sc-c95f41ec-0 edttdJ sc-ab4aba5d-0 gOxGeu no-after"
                   href="http://lien2"
                   target="_blank"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-60a7e89-2 bJDpVh"
+                    class="sc-c95f41ec-2 iFvcod"
                     fill="none"
                     viewBox="0 0 28 15"
                     xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +98,7 @@ describe("ReferencesJuridiques", () => {
                     />
                   </svg>
                   <span
-                    class="sc-60a7e89-1 eSlLWj"
+                    class="sc-c95f41ec-1 juvzjJ"
                   >
                     Titre 2
                   </span>
@@ -107,13 +107,13 @@ describe("ReferencesJuridiques", () => {
               <li>
                 <a
                   aria-label="Titre 5 (Nouvelle fenêtre)"
-                  class="sc-60a7e89-0 haggkt sc-ab4aba5d-0 gOxGeu no-after"
+                  class="sc-c95f41ec-0 edttdJ sc-ab4aba5d-0 gOxGeu no-after"
                   href="http://lien4"
                   target="_blank"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-60a7e89-2 bJDpVh"
+                    class="sc-c95f41ec-2 iFvcod"
                     fill="none"
                     viewBox="0 0 28 15"
                     xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +124,7 @@ describe("ReferencesJuridiques", () => {
                     />
                   </svg>
                   <span
-                    class="sc-60a7e89-1 eSlLWj"
+                    class="sc-c95f41ec-1 juvzjJ"
                   >
                     Titre 5
                   </span>

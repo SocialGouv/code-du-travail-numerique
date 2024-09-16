@@ -1,32 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Contributions getAllContributions 1`] = `
-[
-  {
-    "agreements": [],
-    "generic": {
-      "idcc": "0000",
-      "slug": "les-conges-pour-evenements-familiaux",
-      "title": "Les congés pour événements familiaux",
-    },
-  },
-  {
-    "agreements": [
-      {
-        "idcc": "0044",
-        "slug": "44-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
-        "title": "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
-      },
-    ],
-    "generic": {
-      "idcc": "0000",
-      "slug": "quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
-      "title": "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
-    },
-  },
-]
-`;
-
 exports[`Contributions getByIdsContributions 1`] = `
 [
   {

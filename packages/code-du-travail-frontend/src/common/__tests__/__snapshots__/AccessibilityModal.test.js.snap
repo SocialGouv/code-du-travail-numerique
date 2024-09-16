@@ -6,7 +6,7 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
     aria-hidden="true"
   >
     <button
-      class="sc-95bd4344-0 dqVtzj"
+      class="sc-b0ebfae6-0 hPQAhy"
     >
       texte dans le bouton
     </button>
@@ -22,40 +22,40 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
     >
       <div>
         <div
-          class="sc-19478701-0 jZYVgz"
+          class="sc-f4126b8e-0 dWonlk"
           data-reach-dialog-overlay=""
         >
           <div
             aria-label="Accessibilité"
             aria-modal="true"
-            class="sc-19478701-1 hQHZiT"
+            class="sc-f4126b8e-1 kQHvXg"
             data-reach-dialog-content=""
             role="dialog"
             tabindex="-1"
           >
             <div
-              class="sc-e32628d4-0 byJqQj"
+              class="sc-238bfc37-0 bFbuAZ"
             >
               <h1
-                class="sc-d6e72754-0 gvSeXc"
+                class="sc-3c1fa745-0 fqYbSi"
               >
                 <span
-                  class="sc-a4d7a179-0 jRxkkJ"
+                  class="sc-f4f767e-0 jZdFSO"
                 />
                 Accessibilité
               </h1>
             </div>
             <h2
-              class="sc-b879fc2d-0 hyiHle"
+              class="sc-a53a0f9a-0 bIsTsN"
             >
               Couleurs
             </h2>
             <label
-              class="sc-839d90a8-0 gMVMHp"
+              class="sc-2aed4ca4-0 hCUNwT"
               for="blackAndWhiteTheme"
             >
               <input
-                class="sc-839d90a8-1 eqiyso"
+                class="sc-2aed4ca4-1 xIQyG"
                 id="blackAndWhiteTheme"
                 name="blackAndWhiteTheme"
                 type="checkbox"
@@ -63,11 +63,11 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
               Passer le site en noir et blanc
             </label>
             <button
-              class="sc-95bd4344-0 dxXsic sc-19478701-2 fGtwND"
+              class="sc-b0ebfae6-0 dGXoMZ sc-f4126b8e-2 irTzHW"
               title="fermer la modale"
             >
               <div
-                class="sc-8dcb2faa-0 gxfPDw"
+                class="sc-f92038f6-0 llOtbb"
               >
                 fermer la modale
               </div>

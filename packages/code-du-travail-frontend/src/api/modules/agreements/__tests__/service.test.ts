@@ -9,7 +9,10 @@ import {
 
 describe("Agreements", () => {
   it("getAllAgreements", async () => {
-    const result = await getAllAgreements();
+    const result = await getAllAgreements(
+      ["title", "shortTitle", "description", "url", "slug", "source", "num"],
+      "shortTitle"
+    );
     expect(result).toMatchSnapshot();
   });
   it("getBySlugsAgreements", async () => {

@@ -10,7 +10,7 @@ import {
 
 describe("Tools", () => {
   it("getAllTools", async () => {
-    const result = await getAllTools();
+    const result = await getAllTools(["slug", "title", "displayTool"]);
     expect(result).toMatchSnapshot();
   });
   it("getToolsBySlugs", async () => {

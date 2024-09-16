@@ -1,6 +1,6 @@
 import {
   DocumentElasticWithSource,
-  MailTemplate,
+  MailTemplateDoc,
 } from "@socialgouv/cdtn-types";
 import { ElasticSearchItem } from "../../types";
 import {
@@ -15,17 +15,24 @@ import {
   getModelesBySlugs,
 } from "./queries";
 
-export const getAllModeles = async () => {
+export const getAllModeles = async <
+  K extends keyof DocumentElasticWithSource<MailTemplateDoc>
+>(
+  fields: K[]
+): Promise<Pick<DocumentElasticWithSource<MailTemplateDoc>, K>[]> => {
   const body = getModeles();
   const response = await elasticsearchClient.search<
-    DocumentElasticWithSource<MailTemplate>
+    DocumentElasticWithSource<
+      Pick<DocumentElasticWithSource<MailTemplateDoc>, K>
+    >
   >({
-    body,
+    ...body,
+    _source: fields,
     index: elasticDocumentsIndex,
   });
-  return response.hits.hits.length > 0
-    ? response.hits.hits.map(({ _source }) => _source)
-    : [];
+  return response.hits.hits
+    .map(({ _source }) => _source)
+    .filter((source) => source !== undefined);
 };
 
 export const getBySlugsModeles = async (

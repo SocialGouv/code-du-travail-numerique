@@ -1,0 +1,269 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SiteMap /> should match snapshot 1`] = `
+<div>
+  <div
+    class="fr-grid-row fr-grid-row--center"
+  >
+    <div
+      class="fr-my-4w fr-col-12 fr-my-md-12w fr-col-md-6"
+    >
+      <h1
+        class="fr-mt-0 fr-mb-3w"
+        id="plan-du-site"
+      >
+        Plan du site
+      </h1>
+      <div
+        class="fr-mb-4w"
+      >
+        <a
+          href="/"
+        >
+          <span
+            class="fr-text--lead fr-text--bold"
+          >
+            Page d'accueil
+          </span>
+        </a>
+      </div>
+      <div
+        class="fr-mb-4w"
+      >
+        <a
+          href="/outils"
+        >
+          <span
+            class="fr-text--lead fr-text--bold"
+          >
+            Boîte à outils
+          </span>
+        </a>
+        <ul
+          class="fr-mt-3w"
+        >
+          <li>
+            <a
+              href="/outils/slug-test"
+            >
+              Test title
+            </a>
+            <ul>
+              <li>
+                <a
+                  href="/outils/content-1"
+                >
+                  Content 1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/outils/content-2"
+                >
+                  Content 2
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="fr-mb-4w"
+      >
+        <a
+          href="/modeles-de-courriers"
+        >
+          <span
+            class="fr-text--lead fr-text--bold"
+          >
+            Modèles de documents
+          </span>
+        </a>
+        <ul
+          class="fr-mt-3w"
+        >
+          <li>
+            <a
+              href="/modeles-de-courriers/slug-test"
+            >
+              Test title
+            </a>
+            <ul>
+              <li>
+                <a
+                  href="/modeles-de-courriers/content-1"
+                >
+                  Content 1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/modeles-de-courriers/content-2"
+                >
+                  Content 2
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="fr-mb-4w"
+      >
+        <span
+          class="fr-text--lead fr-text--bold fr-mb-3w"
+        >
+          Contenus éditoriaux
+        </span>
+        <ul
+          class="fr-mt-3w"
+        >
+          <li>
+            <a
+              href="/information/slug-test"
+            >
+              Test title
+            </a>
+            <ul>
+              <li>
+                <a
+                  href="/information/content-1"
+                >
+                  Content 1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/information/content-2"
+                >
+                  Content 2
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="fr-mb-4w"
+      >
+        <a
+          href="/contribution"
+        >
+          <span
+            class="fr-text--lead fr-text--bold"
+          >
+            Vos fiches pratiques
+          </span>
+        </a>
+        <ul
+          class="fr-mt-3w"
+        >
+          <li>
+            <a
+              href="/contribution/slug-test"
+            >
+              Test title
+            </a>
+            <ul>
+              <li>
+                <a
+                  href="/contribution/content-1"
+                >
+                  Content 1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contribution/content-2"
+                >
+                  Content 2
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="fr-mb-4w"
+      >
+        <a
+          href="/convention-collective"
+        >
+          <span
+            class="fr-text--lead fr-text--bold"
+          >
+            Votre convention collective
+          </span>
+        </a>
+        <ul
+          class="fr-mt-3w"
+        >
+          <li>
+            <a
+              href="/convention-collective/slug-test"
+            >
+              Test title
+            </a>
+            <ul>
+              <li>
+                <a
+                  href="/convention-collective/content-1"
+                >
+                  Content 1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/convention-collective/content-2"
+                >
+                  Content 2
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="fr-mb-4w"
+      >
+        <a
+          href="/themes"
+        >
+          <span
+            class="fr-text--lead fr-text--bold"
+          >
+            Thèmes
+          </span>
+        </a>
+        <ul
+          class="fr-mt-3w"
+        >
+          <li>
+            <a
+              href="/themes/slug-test"
+            >
+              Test title
+            </a>
+            <ul>
+              <li>
+                <a
+                  href="/themes/content-1"
+                >
+                  Content 1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/themes/content-2"
+                >
+                  Content 2
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
