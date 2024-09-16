@@ -35,7 +35,7 @@ describe("Contributions", () => {
     cy.get("body").should("contain", "Que dit le code du travail");
     cy.get("body").should(
       "contain",
-      "La convention ou l’accord de branche étendu prévoit le renouvellement de la période d’essai"
+      "La convention collective ou l’accord de branche étendu prévoit le renouvellement de la période d’essai"
     );
     cy.get("body").should("contain", "Références");
     cy.get("body").should("contain", "L1221-21");
