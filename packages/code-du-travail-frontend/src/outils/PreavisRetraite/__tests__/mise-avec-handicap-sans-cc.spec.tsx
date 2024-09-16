@@ -36,7 +36,7 @@ test(`Mise à la retraite sans sélection de CC avec handicap
   expect(ui.result.noticeHandicap2.get()).toBeInTheDocument();
   expect(ui.result.resultatLegal.get()).toHaveTextContent("3 mois");
   expect(ui.result.resultatAgreement.get()).toHaveTextContent(
-    "convention collective non traitée"
+    "convention collective non renseignée"
   );
   expect(ui.result.decryptedDescription.get()).toHaveTextContent(
     "La convention collective n’ayant pas été renseignée, la durée de préavis affichée correspond à la durée légale."

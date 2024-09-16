@@ -41,10 +41,10 @@ jobs:
           echo "SITE_URL=https://${{ steps.env.outputs.subdomain }}.ovh.fabrique.social.gouv.fr" >> $GITHUB_ENV
       - name: Run test e2e
         run: |
-          TEST_BASEURL=${{ env.SITE_URL }} yarn test:e2e
+          TEST_BASEURL=${{ env.SITE_URL }} TEST_MODE=light yarn test:e2e
       - name: Archive generated screenshots
         if: failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: e2e-screenshots
           path: |

@@ -35,18 +35,18 @@ function ArticleCodeDuTravail({
       <h1 className={fr.cx("fr-mb-6w")}>{title}</h1>
 
       <p>
-        Source:{" "}
+        Source&nbsp;:{" "}
         <a href={source.url} target="_blank" rel="noopener noreferrer">
           {source.name}
         </a>{" "}
-        - Mise à jour le: {date}
+        - Mise à jour le&nbsp;: {date}
       </p>
 
-      <div className="fr-mb-5w">
+      <div className={fr.cx("fr-mb-5w")}>
         <Html>{html}</Html>
       </div>
       {notaHtml && (
-        <div className="fr-highlight fr-mb-5w">
+        <div className={fr.cx("fr-highlight","fr-mb-5w")}>
           <p>NOTA</p>
           <Html>{notaHtml}</Html>
         </div>
