@@ -10,7 +10,7 @@ export const sources = [
   SOURCES.EXTERNALS,
 ] as const;
 
-export type RelatedItem = Pick<DocumentElastic, "slug" | "title"> & {
+export type RelatedItem = Pick<DocumentElastic, "title"> & {
   source: (typeof sources)[number];
-  url: string | null;
+  url: string;
 };

@@ -5,7 +5,7 @@ export const getLegalArticle = (slug: string) => {
     query: {
       bool: {
         filter: [
-          { term: { source: SOURCES.LABOUR_LAW } },
+          { term: { source: SOURCES.CDT } },
           { term: { slug } },
           { term: { isPublished: true } },
         ],

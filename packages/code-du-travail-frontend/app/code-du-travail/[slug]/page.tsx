@@ -8,7 +8,6 @@ import { notFound } from "next/navigation";
 import ArticleCodeDuTravail from "../../../src/modules/code-du-travail/articleCodeDuTravail";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import { getLegalArticleBySlug } from "../../../src/api/modules/legal-articles";
-import { RelatedItemSettings } from "../../../src/api";
 import { getRelatedItems } from "../../../src/api/modules/related-items/service";
 
 export async function generateMetadata({ params }) {
@@ -22,9 +21,9 @@ export async function generateMetadata({ params }) {
 }
 
 async function Fiche({ params }) {
-  const { _id, title, description, dateDebut, html, url, notaHtml } =
+  const { title, description, dateDebut, html, url, notaHtml } =
     await getArticle(params.slug);
-  const relatedItems = await getArticleRelatedItems({ _id }, params.slug);
+  const relatedItems = await getRelatedItems(title , params.slug);
 
   const fixedHtml = replaceArticlesRefs("https://legifrance.gouv.fr", html);
   return (
@@ -54,18 +53,11 @@ const getArticle = async (slug: string) => {
     "url",
     "notaHtml",
   ]);
+
   if (!article) {
     return notFound();
   }
   return article;
-};
-
-const getArticleRelatedItems = async (
-  settings: RelatedItemSettings,
-  slug: string
-) => {
-  const relatedItems = await getRelatedItems(settings, slug);
-  return relatedItems;
 };
 
 export default Fiche;

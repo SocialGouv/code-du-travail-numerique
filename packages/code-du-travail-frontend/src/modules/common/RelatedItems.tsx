@@ -1,7 +1,7 @@
 "use client";
 
 import { fr } from "@codegouvfr/react-dsfr";
-import { getRouteBySource, SourceKeys, SOURCES } from "@socialgouv/cdtn-utils";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { push as matopush } from "@socialgouv/matomo-next";
 import React from "react";
 import { css } from "../../../styled-system/css";
@@ -26,7 +26,7 @@ export const RelatedItems = ({ items }: Props) => {
     return <></>;
   }
 
-  const isArticleSource = (source: string) =>
+  const isArticleSource = (source) =>
     ![SOURCES.EXTERNALS, SOURCES.LETTERS, SOURCES.TOOLS].includes(source);
 
   const relatedOtherItems = items
@@ -49,26 +49,21 @@ export const RelatedItems = ({ items }: Props) => {
             <div key={title}>
               <p className="fr-text--lead">{title}&nbsp;:</p>
               <ul className="list-style-none">
-                {items.map(({ slug, source, title, url }) => {
-                  // if source is external we use url otherwise we assemble the route
-                  const href =
-                    source === SOURCES.EXTERNALS
-                      ? url!! // There is always an url on an external content
-                      : `/${getRouteBySource(source)}/${slug}`;
+                {items.map(({ source, title, url }) => {
                   return (
-                    <li key={href} className="fr-pb-2w">
+                    <li key={url} className="fr-pb-2w">
                       <span
                         className={`${fr.cx("ri-arrow-right-line")} ${css({
                           color: "var(--artwork-minor-blue-cumulus)",
                         })}`}
                       />
                       <a
-                        href={href}
+                        href={url}
                         onClick={() =>
                           matoSelectRelated(
                             "search",
                             // legacy : we do not include the leading '/' in the selection
-                            source != SOURCES.EXTERNALS ? href!.slice(1) : href
+                            source != SOURCES.EXTERNALS ? url!.slice(1) : url
                           )
                         }
                       >
