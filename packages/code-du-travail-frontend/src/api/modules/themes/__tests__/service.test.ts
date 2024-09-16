@@ -1,19 +1,13 @@
 /** @jest-environment node */
 
 import {
-  getAllThemes,
-  getAllThemesAndSubThemes,
+  getRootThemes,
   getBySlugThemes,
 } from "../service";
 
 describe("Themes", () => {
   it("getAllThemes", async () => {
-    const result = await getAllThemes();
-    expect(result).toMatchSnapshot();
-  });
-
-  it("getAllThemesAndSubThemes", async () => {
-    const result = await getAllThemesAndSubThemes();
+    const result = await getRootThemes(["title", "slug", "children"]);
     expect(result).toMatchSnapshot();
   });
 

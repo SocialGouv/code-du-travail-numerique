@@ -1,18 +1,29 @@
+import { EditorialContentElasticDocument } from "@socialgouv/cdtn-types";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import { fetchInformations } from "./queries";
+import { orderByAlpha } from "../../utils/sort";
 
-export const getAllInformations = async () => {
+export const getAllInformations = async <
+  K extends keyof EditorialContentElasticDocument
+>(
+  fields: K[],
+  sortBy?: K
+): Promise<Pick<EditorialContentElasticDocument, K>[]> => {
   const body = fetchInformations();
 
-  const response = await elasticsearchClient.search<any>({
-    body,
+  const response = await elasticsearchClient.search<
+    Pick<EditorialContentElasticDocument, K>
+  >({
+    ...body,
+    _source: fields,
     index: elasticDocumentsIndex,
   });
-  return response.hits.hits
+
+  const data = response.hits.hits
     .map(({ _source }) => _source)
-    .sort((infoA, infoB) => {
-      return infoA.title.localeCompare(infoB.title, "fr", {
-        ignorePunctuation: true,
-      });
-    });
+    .filter((source) => source !== undefined);
+  if (sortBy) {
+    return data.sort((a, b) => orderByAlpha(a, b, sortBy));
+  }
+  return data;
 };
