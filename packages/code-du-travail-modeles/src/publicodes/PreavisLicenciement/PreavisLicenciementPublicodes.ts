@@ -75,7 +75,6 @@ export class PreavisLicenciementPublicodes extends PublicodesBase<PublicodesCalc
     args: Record<string, string | undefined>
   ): PublicodesOutput<PublicodesCalculateResult> {
     const agreementResult = this.calculateAgreement(args);
-
     if (
       agreementResult.type === "ineligibility" ||
       agreementResult.type === "missing-args"
@@ -89,6 +88,20 @@ export class PreavisLicenciementPublicodes extends PublicodesBase<PublicodesCalc
       legalResult.type === "missing-args"
     ) {
       return legalResult;
+    }
+    const isDisabledWorker =
+      args["contrat salarié . travailleur handicapé"] === "oui";
+    if (isDisabledWorker) {
+      const durationHandicappedMax = 90;
+      const agreementValue = legalResult?.result?.value ?? 0;
+      const legalValue = agreementResult?.result?.value ?? 0;
+      const durationMax = Math.max(legalValue, agreementValue);
+      let durationHandicapped = 1;
+      if (durationMax < durationHandicappedMax) {
+        durationHandicapped = Math.min(durationHandicappedMax / durationMax, 2);
+      }
+      legalResult.result.value = legalValue * durationHandicapped;
+      agreementResult.result.value = agreementValue * durationHandicapped;
     }
 
     return this.builder.buildResult(
