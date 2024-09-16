@@ -1,32 +1,31 @@
 "use client";
 
 import { fr } from "@codegouvfr/react-dsfr";
-import { getRouteBySource, SourceKeys, SOURCES } from "@socialgouv/cdtn-utils";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { push as matopush } from "@socialgouv/matomo-next";
 import React from "react";
-import { css } from "../../../styled-system/css";
-import { RelatedItem } from "../../api/modules/related-items/type";
+import { ListWithArrow } from "./ListWithArrow";
 
-const matoSelectRelated = (reco, selection) => {
+const matoSelectRelated = (selection) => {
   matopush([
     "trackEvent",
     "selectRelated",
     JSON.stringify({
-      reco,
       selection,
     }),
   ]);
 };
 
-type Props = {
-  items: RelatedItem[];
-};
-export const RelatedItems = ({ items }: Props) => {
+export const RelatedItems = ({
+  items = [],
+}: {
+  items: { slug?: string; source; title: string; url?: string }[];
+}) => {
   if (items.length === 0) {
     return <></>;
   }
 
-  const isArticleSource = (source: string) =>
+  const isArticleSource = (source) =>
     ![SOURCES.EXTERNALS, SOURCES.LETTERS, SOURCES.TOOLS].includes(source);
 
   const relatedOtherItems = items
@@ -47,37 +46,32 @@ export const RelatedItems = ({ items }: Props) => {
         ({ title, items }) =>
           items.length > 0 && (
             <div key={title}>
-              <p className="fr-text--lead">{title}&nbsp;:</p>
-              <ul className="list-style-none">
-                {items.map(({ slug, source, title, url }) => {
+              <p className={fr.cx("fr-text--lead")}>
+                <strong>{title}&nbsp;:</strong>
+              </p>
+              <ListWithArrow
+                items={items.map(({ slug, source, title, url }) => {
                   // if source is external we use url otherwise we assemble the route
                   const href =
                     source === SOURCES.EXTERNALS
-                      ? url!! // There is always an url on an external content
+                      ? url
                       : `/${getRouteBySource(source)}/${slug}`;
                   return (
-                    <li key={href} className="fr-pb-2w">
-                      <span
-                        className={`${fr.cx("ri-arrow-right-line")} ${css({
-                          color: "var(--artwork-minor-blue-cumulus)",
-                        })}`}
-                      />
-                      <a
-                        href={href}
-                        onClick={() =>
-                          matoSelectRelated(
-                            "search",
-                            // legacy : we do not include the leading '/' in the selection
-                            source != SOURCES.EXTERNALS ? href!.slice(1) : href
-                          )
-                        }
-                      >
-                        {title}
-                      </a>
-                    </li>
+                    <a
+                      key={href}
+                      href={href}
+                      onClick={() =>
+                        matoSelectRelated(
+                          // legacy : we do not include the leading '/' in the selection
+                          source != SOURCES.EXTERNALS ? href!.slice(1) : href
+                        )
+                      }
+                    >
+                      {title}
+                    </a>
                   );
                 })}
-              </ul>
+              />
             </div>
           )
       )}

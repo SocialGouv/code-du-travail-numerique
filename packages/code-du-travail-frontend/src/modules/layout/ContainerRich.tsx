@@ -17,14 +17,7 @@ export const ContainerRich = ({
   description,
 }: Props) => {
   return (
-    <div
-      className={fr.cx(
-        "fr-grid-row",
-        "fr-grid-row--gutters",
-        "fr-my-4w",
-        "fr-my-md-12w"
-      )}
-    >
+    <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-my-4w", "fr-my-md-12w")}>
       <div className={fr.cx("fr-col-12", "fr-col-md-7")}>
         {children}
         {/*<Feedback url={router.asPath} />*/}
