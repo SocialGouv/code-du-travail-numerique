@@ -14,7 +14,7 @@ import type {
   References,
   SupportedCc,
 } from "../modeles";
-import type { IInegibility } from "../modeles/common/types/ineligibility";
+import type { IIneligibility } from "../modeles/common/types/ineligibility";
 import type {
   IndemniteLicenciementPublicodes,
   PreavisDemissionPublicodes,
@@ -209,7 +209,7 @@ export type PublicodesInstance<T extends PublicodesSimulator> =
     : never;
 
 export interface IndemniteDepartInstance {
-  ineligibility: IInegibility;
+  ineligibility: IIneligibility;
 
   seniority: ISeniority<SupportedCc>;
 
