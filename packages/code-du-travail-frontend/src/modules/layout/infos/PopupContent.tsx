@@ -4,7 +4,7 @@ import { Input } from "@codegouvfr/react-dsfr/Input";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useNeedMoreInfoEvents } from "./tracking";
-import servicesDeRenseignement from "../../../data/services-de-renseignement.json" assert { type: "json" };
+import servicesDeRenseignement from "../../../data/services-de-renseignement.json";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { usePathname } from "next/navigation";
 import { fr } from "@codegouvfr/react-dsfr";
