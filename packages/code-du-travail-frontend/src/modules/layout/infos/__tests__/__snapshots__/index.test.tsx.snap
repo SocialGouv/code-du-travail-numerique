@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NeedMoreInfo /> should match snapshot 1`] = `
+<div>
+  <div
+    class="bg_var(--background-alt-blue-france)"
+  >
+    <div
+      class="fr-container"
+    >
+      <div
+        class="fr-grid-row fr-grid-row--center"
+      >
+        <div
+          class="fr-col-md-6 fr-py-6w"
+        >
+          <h2
+            class="c_var(--text-action-high-blue-france)! ta_center"
+          >
+            Besoin de plus d'informations ?
+          </h2>
+          <p
+            class="c_var(--text-action-high-blue-france)"
+          >
+            Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+          </p>
+          <div
+            class="d_flex jc_center"
+          >
+            <button
+              aria-controls="more-info-modal"
+              class="fr-btn fr-btn--secondary fr-icon-chat-3-line fr-btn--icon-right"
+              data-fr-opened="true"
+              id="more-info-modal-control-button"
+            >
+              Trouver les services près de chez moi
+            </button>
+            <button
+              aria-controls="more-info-modal"
+              aria-hidden="true"
+              class="fr-btn fr-hidden"
+              data-fr-opened="true"
+              id="more-info-modal-hidden-control-button"
+              tabindex="-1"
+              type="button"
+            >
+               
+            </button>
+            <dialog
+              aria-labelledby="fr-modal-title-more-info-modal"
+              class="fr-modal"
+              data-fr-concealing-backdrop="true"
+              id="more-info-modal"
+              role="dialog"
+            >
+              <div
+                class="fr-container fr-container--fluid fr-container-md"
+              >
+                <div
+                  class="fr-grid-row fr-grid-row--center"
+                >
+                  <div
+                    class="fr-col-12 fr-col-md-8 fr-col-lg-6"
+                  >
+                    <div
+                      class="fr-modal__body"
+                    >
+                      <div
+                        class="fr-modal__header"
+                      >
+                        <button
+                          aria-controls="more-info-modal"
+                          class="fr-btn--close fr-btn"
+                          title="Fermer"
+                          type="button"
+                        >
+                          Fermer
+                        </button>
+                      </div>
+                      <div
+                        class="fr-modal__content"
+                      >
+                        <h1
+                          class="fr-modal__title"
+                          id="fr-modal-title-more-info-modal"
+                        >
+                          Les services du ministère du Travail
+                        </h1>
+                        <h2
+                          class="fr-text--xl"
+                        >
+                          Contact téléphonique
+                        </h2>
+                        <a
+                          href="tel:+33806000126"
+                        >
+                          <img
+                            alt="Contactez les services de renseignements au droit du travail au 0800 026 080"
+                            data-nimg="1"
+                            decoding="async"
+                            height="100"
+                            loading="lazy"
+                            src="/static/assets/img/srdt.svg"
+                            style="color: transparent;"
+                            width="350"
+                          />
+                        </a>
+                        <h2
+                          class="fr-text--xl fr-mt-3w"
+                        >
+                          Contact par email et prise de rendez-vous
+                        </h2>
+                        <div
+                          class="fr-input-group"
+                        >
+                          <label
+                            class="fr-label"
+                            for="input-:r2:"
+                          >
+                            Saisissez le numéro de votre département
+                          </label>
+                          <div
+                            class="fr-input-wrap fr-input-wrap--addon"
+                          >
+                            <input
+                              aria-describedby="input-:r2:-desc-error"
+                              class="fr-input max-w_280px"
+                              id="input-:r2:"
+                              maxlength="3"
+                              type="text"
+                            />
+                            <button
+                              class="fr-btn fr-icon-search-line"
+                              id="fr-button-:r3:"
+                              title="Lancer la recherche par numéro de département"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="fr-mt-3w"
+                        >
+                          <p
+                            class="fr-text--sm fr-mb-0"
+                          >
+                            Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
+                          </p>
+                          <ul>
+                            <li
+                              class="fr-text--sm fr-mb-0"
+                            >
+                              les demandes d'intervention en entreprise
+                            </li>
+                            <li
+                              class="fr-text--sm fr-mb-0"
+                            >
+                              la constitution des dossiers prud’homaux
+                            </li>
+                            <li
+                              class="fr-text--sm fr-mb-0"
+                            >
+                              les calculs de droit au chômage
+                            </li>
+                            <li
+                              class="fr-text--sm fr-mb-0"
+                            >
+                              vous renseigner sur les cotisations sociales
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dialog>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

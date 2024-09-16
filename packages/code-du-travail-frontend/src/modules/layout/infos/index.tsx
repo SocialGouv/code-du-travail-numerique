@@ -1,6 +1,13 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { css } from "../../../styled-system/css";
+import { css } from "../../../../styled-system/css";
+import { createModal } from "@codegouvfr/react-dsfr/Modal";
+import { PopupContent } from "./PopupContent";
+
+export const needMoreInfoModal = createModal({
+  id: "more-info-modal",
+  isOpenedByDefault: true,
+});
 
 export const NeedMoreInfo = () => {
   return (
@@ -19,9 +26,13 @@ export const NeedMoreInfo = () => {
                 iconId="fr-icon-chat-3-line"
                 iconPosition="right"
                 priority="secondary"
+                nativeButtonProps={needMoreInfoModal.buttonProps}
               >
                 Trouver les services près de chez moi
               </Button>
+              <needMoreInfoModal.Component title="Les services du ministère du Travail">
+                <PopupContent />
+              </needMoreInfoModal.Component>
             </div>
           </div>
         </div>
