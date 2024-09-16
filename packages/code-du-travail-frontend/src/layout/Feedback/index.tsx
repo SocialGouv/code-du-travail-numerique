@@ -65,12 +65,12 @@ export const Feedback = (): React.ReactNode => {
             href="https://tally.so/r/3jLRW1"
             passHref
             legacyBehavior
-            target="_blank"
           >
             <Button
               small
               variant="primary"
               as="a"
+              target="_blank"
               onClick={onClick}
               className="no-after"
             >

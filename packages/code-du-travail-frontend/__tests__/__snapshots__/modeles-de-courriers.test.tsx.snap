@@ -210,6 +210,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           <a
             class="sc-kOPcWz jBdtLF no-after"
             href="https://tally.so/r/3jLRW1"
+            target="_blank"
           >
             Je donne mon avis
           </a>
