@@ -3,13 +3,13 @@
 exports[`<CallToActionTile /> should render 1`] = `
 <div>
   <div
-    class="sc-e72909eb-0 eVuCTM sc-98e66f5e-1 fCudut"
+    class="sc-d47d8018-0 ezEIGw sc-98e66f5e-1 fCudut"
   >
     <div
-      class="sc-e72909eb-2 bNzKqg"
+      class="sc-d47d8018-2 eBZhiP"
     >
       <div
-        class="sc-e72909eb-1 gzHMAu"
+        class="sc-d47d8018-1 xAHKj"
       >
         <svg
           aria-hidden="true"
@@ -36,10 +36,10 @@ exports[`<CallToActionTile /> should render 1`] = `
         </svg>
       </div>
       <div
-        class="sc-e72909eb-3 hASMbR"
+        class="sc-d47d8018-3 cAXyng"
       >
         <p
-          class="sc-e72909eb-5 cdJafA"
+          class="sc-d47d8018-5 jNRMjT"
         >
           <a
             href="/test"
@@ -50,7 +50,7 @@ exports[`<CallToActionTile /> should render 1`] = `
       </div>
     </div>
     <div
-      class="sc-e72909eb-6 dOdFhK"
+      class="sc-d47d8018-6 ipSAXR"
     >
       <div
         class="sc-98e66f5e-0 bQDuAS"
@@ -62,7 +62,7 @@ exports[`<CallToActionTile /> should render 1`] = `
           class="sc-98e66f5e-2 cDPdrN"
         >
           <p
-            class="sc-a4406a0f-1 bNZtsp"
+            class="sc-3633cc97-1 gDIqvu"
           >
             Bonjour
              

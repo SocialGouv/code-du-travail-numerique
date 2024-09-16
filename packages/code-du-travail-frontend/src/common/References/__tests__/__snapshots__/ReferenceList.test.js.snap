@@ -3,16 +3,16 @@
 exports[`<ReferenceList /> should render 1`] = `
 <div>
   <ul
-    class="sc-78dd7a00-0 sc-ab4aba5d-1 fVqAjV dDdmoO"
+    class="sc-ab356c14-0 sc-ab4aba5d-1 bpNHPl dDdmoO"
   >
     <li>
       <a
-        class="sc-c95f41ec-0 edttdJ sc-ab4aba5d-0 gOxGeu"
+        class="sc-60a7e89-0 haggkt sc-ab4aba5d-0 gOxGeu"
         href="/code-du-travail/l2323-4"
       >
         <svg
           aria-hidden="true"
-          class="sc-c95f41ec-2 iFvcod"
+          class="sc-60a7e89-2 bJDpVh"
           fill="none"
           viewBox="0 0 28 15"
           xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ exports[`<ReferenceList /> should render 1`] = `
           />
         </svg>
         <span
-          class="sc-c95f41ec-1 juvzjJ"
+          class="sc-60a7e89-1 eSlLWj"
         >
           Article L2323-4 du Code du travail
         </span>
@@ -32,13 +32,13 @@ exports[`<ReferenceList /> should render 1`] = `
     <li>
       <a
         aria-label="Article yyy du JO (Nouvelle fenêtre)"
-        class="sc-c95f41ec-0 edttdJ sc-ab4aba5d-0 gOxGeu no-after"
+        class="sc-60a7e89-0 haggkt sc-ab4aba5d-0 gOxGeu no-after"
         href="https://article.jo/yyy"
         target="_blank"
       >
         <svg
           aria-hidden="true"
-          class="sc-c95f41ec-2 iFvcod"
+          class="sc-60a7e89-2 bJDpVh"
           fill="none"
           viewBox="0 0 28 15"
           xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ exports[`<ReferenceList /> should render 1`] = `
           />
         </svg>
         <span
-          class="sc-c95f41ec-1 juvzjJ"
+          class="sc-60a7e89-1 eSlLWj"
         >
           Article yyy du JO
         </span>
@@ -58,13 +58,13 @@ exports[`<ReferenceList /> should render 1`] = `
     <li>
       <a
         aria-label="CCN metallurgie (Nouvelle fenêtre)"
-        class="sc-c95f41ec-0 edttdJ sc-ab4aba5d-0 gOxGeu no-after"
+        class="sc-60a7e89-0 haggkt sc-ab4aba5d-0 gOxGeu no-after"
         href="https://legifrance/ccn-metallurgie"
         target="_blank"
       >
         <svg
           aria-hidden="true"
-          class="sc-c95f41ec-2 iFvcod"
+          class="sc-60a7e89-2 bJDpVh"
           fill="none"
           viewBox="0 0 28 15"
           xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ exports[`<ReferenceList /> should render 1`] = `
           />
         </svg>
         <span
-          class="sc-c95f41ec-1 juvzjJ"
+          class="sc-60a7e89-1 eSlLWj"
         >
           CCN metallurgie
         </span>
@@ -83,12 +83,12 @@ exports[`<ReferenceList /> should render 1`] = `
     </li>
     <li>
       <a
-        class="sc-c95f41ec-0 edttdJ sc-ab4aba5d-0 gOxGeu"
+        class="sc-60a7e89-0 haggkt sc-ab4aba5d-0 gOxGeu"
         href="/convention-collective/123-automobile"
       >
         <svg
           aria-hidden="true"
-          class="sc-c95f41ec-2 iFvcod"
+          class="sc-60a7e89-2 bJDpVh"
           fill="none"
           viewBox="0 0 28 15"
           xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +99,7 @@ exports[`<ReferenceList /> should render 1`] = `
           />
         </svg>
         <span
-          class="sc-c95f41ec-1 juvzjJ"
+          class="sc-60a7e89-1 eSlLWj"
         >
           Convention collective: automobile
         </span>
@@ -107,12 +107,12 @@ exports[`<ReferenceList /> should render 1`] = `
     </li>
     <li>
       <a
-        class="sc-c95f41ec-0 edttdJ sc-ab4aba5d-0 gOxGeu"
+        class="sc-60a7e89-0 haggkt sc-ab4aba5d-0 gOxGeu"
         href="/code-du-travail/l1234-3"
       >
         <svg
           aria-hidden="true"
-          class="sc-c95f41ec-2 iFvcod"
+          class="sc-60a7e89-2 bJDpVh"
           fill="none"
           viewBox="0 0 28 15"
           xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +123,7 @@ exports[`<ReferenceList /> should render 1`] = `
           />
         </svg>
         <span
-          class="sc-c95f41ec-1 juvzjJ"
+          class="sc-60a7e89-1 eSlLWj"
         >
           Article L1234-3 du Code du travail
         </span>
