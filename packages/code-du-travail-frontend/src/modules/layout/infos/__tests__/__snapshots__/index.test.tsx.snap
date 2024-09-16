@@ -4,6 +4,7 @@ exports[`<NeedMoreInfo /> should match snapshot 1`] = `
 <div>
   <div
     class="bg_var(--background-alt-blue-france)"
+    id="more-info"
   >
     <div
       class="fr-container"

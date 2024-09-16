@@ -1,16 +1,19 @@
 import { Tool } from "@socialgouv/cdtn-types";
 import {
-  elasticsearchClient,
   elasticDocumentsIndex,
+  elasticsearchClient,
   NotFoundError,
 } from "../../utils";
-import { getTools, getAllToolsQuery } from "./queries";
+import { getAllToolsQuery, getTools } from "./queries";
 import { SearchHit } from "@elastic/elasticsearch/lib/api/types";
 
-export const getAllTools = async (): Promise<Tool[]> => {
+export const getAllTools = async <K extends keyof Tool>(
+  fields: K[]
+): Promise<Pick<Tool, K>[]> => {
   const body: any = getAllToolsQuery();
-  const response = await elasticsearchClient.search<any>({
-    body,
+  const response = await elasticsearchClient.search<Pick<Tool, K>>({
+    ...body,
+    _source: fields,
     index: elasticDocumentsIndex,
   });
   if (response.hits.hits.length === 0) {
@@ -21,8 +24,8 @@ export const getAllTools = async (): Promise<Tool[]> => {
     });
   }
   return response.hits.hits
-    .map(({ _id, _source }) => ({ ..._source, _id }))
-    .filter((tool) => tool.displayTool);
+    .map(({ _source }) => _source)
+    .filter((source) => source !== undefined);
 };
 
 export const getToolsByIdsAndSlugs = async (

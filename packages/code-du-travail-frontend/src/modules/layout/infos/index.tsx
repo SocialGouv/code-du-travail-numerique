@@ -11,7 +11,7 @@ export const needMoreInfoModal = createModal({
 
 export const NeedMoreInfo = () => {
   return (
-    <div className={mainContainer}>
+    <div className={mainContainer} id="more-info">
       <div className={fr.cx("fr-container")}>
         <div className={fr.cx("fr-grid-row", "fr-grid-row--center")}>
           <div className={`${fr.cx("fr-col-md-6", "fr-py-6w")}`}>

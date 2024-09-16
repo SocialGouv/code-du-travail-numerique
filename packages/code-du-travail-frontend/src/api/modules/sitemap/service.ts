@@ -1,47 +1,116 @@
 import {
-  Tool,
-  EditorialContent,
+  ContributionElasticDocument,
   ElasticAgreement,
-  MailTemplate,
-  DocumentElasticWithSource,
 } from "@socialgouv/cdtn-types";
 import { getAllAgreements } from "../agreements";
-import { getAllContributionsGroupByQuestion } from "../contributions";
 import { getAllModeles } from "../modeles";
-import { getAllThemesAndSubThemes } from "../themes";
+import { getRootThemes } from "../themes";
 import { getAllTools } from "../tools";
 import { getAllInformations } from "../informations";
-import { ElasticSearchItem } from "../../types";
+import { fetchAllContributions } from "../contributions/fetch";
+import { orderByAlpha } from "../../utils/sort";
 
-type Information = Pick<EditorialContent, "slug" | "title">;
+export type Document = {
+  root: DocumentInfo;
+  children?: DocumentInfo[];
+};
+export type DocumentInfo = {
+  slug: string;
+  title: string;
+};
 
 export type GetSitemapPage = {
-  themes: any;
-  tools: Tool[];
-  modeles: (DocumentElasticWithSource<MailTemplate> | undefined)[];
-  contributions: {
-    generic: ElasticSearchItem;
-    agreements: ElasticSearchItem[];
-  }[];
-  agreements: ElasticAgreement[];
-  informations: Information[];
+  themes: Document[];
+  tools: Document[];
+  modeles: Document[];
+  contributions: Document[];
+  agreements: Document[];
+  informations: Document[];
 };
 
 export const getSitemapData = async () => {
   const themes = await getAllThemesAndSubThemes();
-  const tools = await getAllTools();
-  const modeles = await getAllModeles();
-  const agreements = await getAllAgreements();
-  const informations = await getAllInformations();
+  const tools = await getAllTools(["slug", "title"]);
+  const modeles = await getAllModeles(["slug", "title"]);
+  const agreements = await getAllAgreements(
+    ["slug", "shortTitle", "num"],
+    "shortTitle"
+  );
+  const informations = await getAllInformations(["slug", "title"], "title");
   const contributions = await getAllContributionsGroupByQuestion(agreements);
   const response: GetSitemapPage = {
     themes,
-    tools,
-    modeles,
+    tools: tools.map((root) => ({
+      root,
+    })),
+    modeles: modeles.map((root) => ({
+      root,
+    })),
     contributions,
-    agreements,
-    informations,
+    agreements: agreements.map((agg) => ({
+      root: { title: agg.shortTitle, slug: agg.slug },
+    })),
+    informations: informations.map((root) => ({
+      root,
+    })),
   };
 
   return response;
+};
+
+const getAllContributionsGroupByQuestion = async (
+  agreements: Pick<ElasticAgreement, "shortTitle" | "num">[]
+) => {
+  const all = await fetchAllContributions(["idcc", "title", "slug"]);
+  const allGenerics = all
+    .filter(isGeneric)
+    .sort((a, b) => orderByAlpha(a, b, "title"));
+
+  return allGenerics.map((generic) => {
+    return {
+      root: {
+        title: generic.title,
+        slug: generic.slug,
+      },
+      children: all
+        .filter(
+          (contrib) =>
+            !isGeneric(contrib) && contrib.slug.includes(generic.slug)
+        )
+        .map((contrib) => ({
+          slug: contrib.slug,
+          title: getTitle(agreements, contrib),
+        }))
+        .sort((a, b) => orderByAlpha(a, b, "title")),
+    };
+  });
+};
+
+const isGeneric = (contrib: { idcc: string }) => contrib.idcc === "0000";
+
+const getTitle = (
+  agreements: Pick<ElasticAgreement, "num" | "shortTitle">[],
+  contrib: Pick<ContributionElasticDocument, "idcc" | "title" | "slug">
+): string => {
+  const agreement = agreements.find((a) => a.num === parseInt(contrib.idcc));
+  return agreement
+    ? `${contrib.title} - ${agreement.shortTitle}`
+    : contrib.title;
+};
+
+export const getAllThemesAndSubThemes = async (): Promise<Document[]> => {
+  const themes = await getRootThemes(["title", "children", "slug"]);
+
+  return themes.map(({ slug, title, children }) => {
+    return {
+      root: {
+        slug,
+        title,
+      },
+      children: children.map((child) => ({
+        title: child.label,
+        slug: child.slug,
+      })),
+    };
+  });
 };

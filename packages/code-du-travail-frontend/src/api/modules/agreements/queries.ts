@@ -1,16 +1,7 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
 
-export const getAllAgreementsWithContributions = () => {
+export const getAllAgreementsQuery = () => {
   return {
-    _source: [
-      "title",
-      "shortTitle",
-      "description",
-      "url",
-      "slug",
-      "source",
-      "num",
-    ],
     query: {
       bool: {
         filter: [

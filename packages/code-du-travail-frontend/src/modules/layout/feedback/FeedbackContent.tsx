@@ -56,7 +56,7 @@ export const FeedbackContent = (props: Props) => {
   };
 
   return (
-    <div className={container}>
+    <>
       <h2 className={fr.cx("fr-h5")}>Merci pour votre réponse.</h2>
       {props.type === "negative" && (
         <Checkbox
@@ -112,12 +112,6 @@ export const FeedbackContent = (props: Props) => {
       <Button type="button" priority="secondary" onClick={onLocalSubmit}>
         Envoyer
       </Button>
-    </div>
+    </>
   );
 };
-
-const container = css({
-  display: "flex",
-  flexDirection: "column",
-  width: "100%",
-});
