@@ -3,32 +3,32 @@
 exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 <div>
   <legend
-    class="sc-323a1d51-0 jxTawz sc-fb2bdc6b-0 cWKeit"
+    class="sc-7b4bcbaf-0 iaxPSC sc-fb2bdc6b-0 cWKeit"
     data-testid="question-label"
   >
     <span
-      class="sc-a4406a0f-0 bniLbk"
+      class="sc-3633cc97-0 eiVtrx"
     >
       Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
       <span
-        class="sc-a4406a0f-0 fsogbD"
+        class="sc-3633cc97-0 hpZWjW"
       >
          (obligatoire)
       </span>
     </span>
   </legend>
   <div
-    class="sc-3a87ec1e-1 eAvcwx"
+    class="sc-f2c30c13-1 cRwNeF"
   >
     <input
-      class="sc-3a87ec1e-2 foFPOF"
+      class="sc-f2c30c13-2 bKCzpJ"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
       value="total"
     />
     <label
-      class="sc-3a87ec1e-0 jaibCk"
+      class="sc-f2c30c13-0 ebobyG"
       for="typeRemuneration-amount"
     >
       <span>
@@ -41,18 +41,18 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </label>
   </div>
   <div
-    class="sc-3a87ec1e-1 eAvcwx"
+    class="sc-f2c30c13-1 cRwNeF"
   >
     <input
       checked=""
-      class="sc-3a87ec1e-2 foFPOF"
+      class="sc-f2c30c13-2 bKCzpJ"
       id="typeRemuneration-pay"
       name="typeRemuneration"
       type="radio"
       value="mensuel"
     />
     <label
-      class="sc-3a87ec1e-0 jaibCk"
+      class="sc-f2c30c13-0 ebobyG"
       for="typeRemuneration-pay"
     >
       <span>
@@ -65,15 +65,15 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </label>
   </div>
   <legend
-    class="sc-323a1d51-0 jxTawz sc-fb2bdc6b-0 cWKeit"
+    class="sc-7b4bcbaf-0 iaxPSC sc-fb2bdc6b-0 cWKeit"
     data-testid="question-label"
   >
     <span
-      class="sc-a4406a0f-0 bniLbk"
+      class="sc-3633cc97-0 eiVtrx"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
       <span
-        class="sc-a4406a0f-0 fsogbD"
+        class="sc-3633cc97-0 hpZWjW"
       >
          (obligatoire)
       </span>
@@ -92,17 +92,17 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       class="sc-d7c10f93-0 kgLXdV"
     >
       <div
-        class="sc-46a9700d-0 eEbjpm"
+        class="sc-669fe731-0 amSvQ"
       >
         <input
-          class="sc-46a9700d-1 fimDMY"
+          class="sc-669fe731-1 htKjGt"
           id="2"
           name="salaires[0].salaire"
           type="number"
           value="2000"
         />
         <div
-          class="sc-46a9700d-2 jsyFGT"
+          class="sc-669fe731-2 kODRkJ"
         >
           <span>
             €
@@ -111,7 +111,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </div>
     </div>
     <button
-      class="sc-b0ebfae6-0 dGXoMZ sc-a2eff38b-1 cannHC"
+      class="sc-95bd4344-0 dxXsic sc-a2eff38b-1 cannHC"
       type="button"
     >
       Supprimer
@@ -144,17 +144,17 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       class="sc-d7c10f93-0 kgLXdV"
     >
       <div
-        class="sc-46a9700d-0 eEbjpm"
+        class="sc-669fe731-0 amSvQ"
       >
         <input
-          class="sc-46a9700d-1 fimDMY"
+          class="sc-669fe731-1 htKjGt"
           id="4"
           name="salaires[1].salaire"
           type="number"
           value="1500"
         />
         <div
-          class="sc-46a9700d-2 jsyFGT"
+          class="sc-669fe731-2 kODRkJ"
         >
           <span>
             €
@@ -163,7 +163,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </div>
     </div>
     <button
-      class="sc-b0ebfae6-0 dGXoMZ sc-a2eff38b-1 cannHC"
+      class="sc-95bd4344-0 dxXsic sc-a2eff38b-1 cannHC"
       type="button"
     >
       Supprimer
@@ -184,7 +184,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </button>
   </div>
   <button
-    class="sc-b0ebfae6-0 dGXoMZ sc-88652f35-0 jXCgfW"
+    class="sc-95bd4344-0 dxXsic sc-88652f35-0 jXCgfW"
     type="button"
   >
     <svg
@@ -214,33 +214,33 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 exports[`<StepRemuneration /> should render one input 1`] = `
 <div>
   <legend
-    class="sc-323a1d51-0 jxTawz sc-fb2bdc6b-0 cWKeit"
+    class="sc-7b4bcbaf-0 iaxPSC sc-fb2bdc6b-0 cWKeit"
     data-testid="question-label"
   >
     <span
-      class="sc-a4406a0f-0 bniLbk"
+      class="sc-3633cc97-0 eiVtrx"
     >
       Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
       <span
-        class="sc-a4406a0f-0 fsogbD"
+        class="sc-3633cc97-0 hpZWjW"
       >
          (obligatoire)
       </span>
     </span>
   </legend>
   <div
-    class="sc-3a87ec1e-1 eAvcwx"
+    class="sc-f2c30c13-1 cRwNeF"
   >
     <input
       checked=""
-      class="sc-3a87ec1e-2 foFPOF"
+      class="sc-f2c30c13-2 bKCzpJ"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
       value="total"
     />
     <label
-      class="sc-3a87ec1e-0 jaibCk"
+      class="sc-f2c30c13-0 ebobyG"
       for="typeRemuneration-amount"
     >
       <span>
@@ -253,17 +253,17 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </label>
   </div>
   <div
-    class="sc-3a87ec1e-1 eAvcwx"
+    class="sc-f2c30c13-1 cRwNeF"
   >
     <input
-      class="sc-3a87ec1e-2 foFPOF"
+      class="sc-f2c30c13-2 bKCzpJ"
       id="typeRemuneration-pay"
       name="typeRemuneration"
       type="radio"
       value="mensuel"
     />
     <label
-      class="sc-3a87ec1e-0 jaibCk"
+      class="sc-f2c30c13-0 ebobyG"
       for="typeRemuneration-pay"
     >
       <span>
@@ -276,16 +276,16 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </label>
   </div>
   <legend
-    class="sc-323a1d51-0 jxTawz sc-fb2bdc6b-0 cWKeit"
+    class="sc-7b4bcbaf-0 iaxPSC sc-fb2bdc6b-0 cWKeit"
     data-testid="question-label"
     for="currency-1"
   >
     <span
-      class="sc-a4406a0f-0 bniLbk"
+      class="sc-3633cc97-0 eiVtrx"
     >
       Quelle est la rémunération totale brute perçue durant le contrat de travail ?
       <span
-        class="sc-a4406a0f-0 fsogbD"
+        class="sc-3633cc97-0 hpZWjW"
       >
          (obligatoire)
       </span>
@@ -295,17 +295,17 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     class="sc-d7c10f93-0 kgLXdV"
   >
     <div
-      class="sc-46a9700d-0 eEbjpm"
+      class="sc-669fe731-0 amSvQ"
     >
       <input
-        class="sc-46a9700d-1 fimDMY"
+        class="sc-669fe731-1 htKjGt"
         id="currency-1"
         name="salaire"
         type="number"
         value="3000"
       />
       <div
-        class="sc-46a9700d-2 jsyFGT"
+        class="sc-669fe731-2 kODRkJ"
       >
         <span>
           €
