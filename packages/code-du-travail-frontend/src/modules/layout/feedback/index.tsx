@@ -44,7 +44,7 @@ export const Feedback = () => {
       className={`${fr.cx(
         "fr-highlight",
         "fr-p-2w",
-        "fr-m-3w"
+        "fr-m-0"
       )} ${highlightContainer}`}
     >
       {viewFeedback === "default" && (
@@ -64,4 +64,5 @@ export const Feedback = () => {
 const highlightContainer = css({
   display: "flex",
   alignItems: "center",
+  justifyContent: "space-between",
 });

@@ -12,11 +12,11 @@ export const FeedbackDefault = (props: Props) => {
       <h2 className={fr.cx("fr-h5", "fr-mb-0")}>
         Avez-vous trouvé la réponse à votre question ?
       </h2>
-      <div className={fr.cx("fr-ml-3w")}>
+      <div>
         <Button
           type="button"
           priority="secondary"
-          className={fr.cx("fr-mr-3w")}
+          className={fr.cx("fr-mr-2w")}
           onClick={props.onClickNo}
         >
           Non

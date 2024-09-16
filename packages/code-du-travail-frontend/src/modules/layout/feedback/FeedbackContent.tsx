@@ -117,7 +117,5 @@ export const FeedbackContent = (props: Props) => {
 };
 
 const container = css({
-  display: "flex",
-  flexDirection: "column",
   width: "100%",
 });
