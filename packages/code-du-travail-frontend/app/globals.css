@@ -1,5 +1,1 @@
 @layer reset, base, tokens, recipes, utilities;
-
-ul.list-style-none {
-  list-style: none;
-}

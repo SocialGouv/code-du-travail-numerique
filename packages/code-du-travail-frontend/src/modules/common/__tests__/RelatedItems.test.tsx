@@ -2,10 +2,6 @@ import { push as matopush } from "@socialgouv/matomo-next";
 import { render } from "@testing-library/react";
 import { RelatedItems } from "../RelatedItems";
 
-jest.mock("next/link", () => {
-  return ({ children }) => children;
-});
-
 jest.mock("@socialgouv/matomo-next", () => {
   return {
     push: jest.fn(),
@@ -17,7 +13,6 @@ const items = [
     slug: "fiche.sp.url",
     source: "fiches_service_public",
     title: "fiche sp",
-    reco: "search",
   },
   {
     action: "voir",
@@ -25,13 +20,11 @@ const items = [
     source: "external",
     title: "externalTool",
     url: "external.tools",
-    reco: "search",
   },
   {
     slug: "modele.url",
     source: "modeles_de_courriers",
     title: "modele de courrier",
-    reco: "search",
   },
   {
     action: "simuler",
@@ -39,13 +32,11 @@ const items = [
     slug: "outils.url",
     source: "outils",
     title: "Simulateur",
-    reco: "search",
   },
   {
     slug: "contrib.url",
     source: "contributions",
     title: "contrib",
-    reco: "search",
   },
   {
     action: "tester",
@@ -53,7 +44,6 @@ const items = [
     slug: "outil-2.slug",
     source: "outils",
     title: "fiche sp",
-    reco: "search",
   },
 ];
 
@@ -76,7 +66,7 @@ describe("<RelatedItems />", () => {
     expect(matopush).toHaveBeenCalledWith([
       "trackEvent",
       "selectRelated",
-      '{"reco":"search","selection":"fiche-service-public/fiche.sp.url"}',
+      '{"selection":"fiche-service-public/fiche.sp.url"}',
     ]);
   });
 });
