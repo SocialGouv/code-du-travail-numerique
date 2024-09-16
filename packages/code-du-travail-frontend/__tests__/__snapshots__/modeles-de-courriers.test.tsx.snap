@@ -270,7 +270,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             </p>
           </header>
           <div
-            class="sc-b8970624-0 fGqAMG sc-f36c6fc-2 cQpmLT"
+            class="sc-b8970624-0 fGqAMG sc-496f89b6-2 RBhuQ"
           >
             <select
               class="sc-b8970624-2 cwLeaN"
@@ -323,15 +323,15 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             </div>
           </div>
           <ul
-            class="sc-78dd7a00-0 sc-f36c6fc-0 fVqAjV dRUUmx"
+            class="sc-78dd7a00-0 sc-496f89b6-0 fVqAjV eaxYjO"
           >
             <h2
-              class="sc-f36c6fc-3 gWQLPi sc-a53a0f9a-0 bIsTsN"
+              class="sc-496f89b6-3 ognPt sc-a53a0f9a-0 bIsTsN"
             >
               Embauche et contrat de travail
             </h2>
             <li
-              class="sc-f36c6fc-1 kJkExl"
+              class="sc-496f89b6-1 iHMoBq"
             >
               <div
                 class="sc-e72909eb-0 btTdnX"
@@ -388,12 +388,12 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               </div>
             </li>
             <h2
-              class="sc-f36c6fc-3 gWQLPi sc-a53a0f9a-0 bIsTsN"
+              class="sc-496f89b6-3 ognPt sc-a53a0f9a-0 bIsTsN"
             >
               Départ de l'entreprise
             </h2>
             <li
-              class="sc-f36c6fc-1 kJkExl"
+              class="sc-496f89b6-1 iHMoBq"
             >
               <div
                 class="sc-e72909eb-0 btTdnX"
