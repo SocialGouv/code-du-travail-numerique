@@ -1,4 +1,4 @@
-describe("Pages informations", () => {
+describe("Pages Politique confidentialité", () => {
   it("je vois une page info classique", () => {
     cy.visit("/politique-confidentialite");
     cy.findByRole("heading", { level: 1 }).should(
