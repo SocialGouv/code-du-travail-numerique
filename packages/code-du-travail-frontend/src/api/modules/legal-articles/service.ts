@@ -1,14 +1,14 @@
 import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import { getLegalArticle } from "./queries";
-import { DocumentElasticResult, ElasticLaborCodeArticle } from "./type";
+import { ElasticLaborCodeArticle } from "./type";
 import { nonNullable } from "@socialgouv/modeles-social";
 
 // TODO bouger dans un fichier common ??
 export const getItemBySlug = async <V>(
   fields: string[],
   body: any
-): Promise<DocumentElasticResult<V> | undefined> => {
-  const response = await elasticsearchClient.search<DocumentElasticResult<V>>({
+): Promise<V | undefined> => {
+  const response = await elasticsearchClient.search<V>({
     ...body,
     _source: fields,
     index: elasticDocumentsIndex,
@@ -26,7 +26,7 @@ export const getLegalArticleBySlug = async <
 >(
   slug: string,
   fields: K[]
-): Promise<DocumentElasticResult<ElasticLaborCodeArticle> | undefined> => {
+): Promise<ElasticLaborCodeArticle | undefined> => {
   const body = getLegalArticle(slug);
   return await getItemBySlug<ElasticLaborCodeArticle>(fields, body);
 };
