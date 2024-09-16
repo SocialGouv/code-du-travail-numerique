@@ -1,5 +1,5 @@
 import { Situation, preavisDemissionData } from "../simulators";
-import { generateTree, cleanRefLabel, cleanValue } from "./lib";
+import { generateTree, cleanRefLabel } from "./lib";
 import { TreeQuestionType } from "./lib/type";
 
 export function generatePreavisDemissionTree() {
