@@ -3,10 +3,10 @@
 exports[`<MentionsLegales /> should match snapshot 1`] = `
 <div>
   <div
-    class="fr-grid-row fr-grid-row--center"
+    class="fr-grid-row fr-grid-row--gutters fr-grid-row--center fr-my-4w fr-my-md-12w"
   >
     <div
-      class="fr-my-4w fr-col-12 fr-my-md-12w fr-col-md-6"
+      class="fr-col-12 fr-col-md-6"
     >
       <h1
         class="fr-mt-0"
