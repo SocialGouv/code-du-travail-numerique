@@ -82,7 +82,7 @@ describe("Outil - Préavis de retraite", () => {
     cy.contains("2 mois");
     cy.contains("Durée prévue par le code du travail (durée légale) : 2 mois");
     cy.contains(
-      "Durée prévue par la convention collective (durée conventionnelle) : convention collective non traitée"
+      "Durée prévue par la convention collective (durée conventionnelle) : convention collective non renseignée"
     );
     cy.contains(
       "La convention collective n’ayant pas été renseignée, la durée de préavis affichée correspond à la durée légale."
