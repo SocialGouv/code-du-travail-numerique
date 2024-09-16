@@ -1,7 +1,6 @@
 "use client";
 
 import { fr } from "@codegouvfr/react-dsfr";
-import { css } from "../../../../styled-system/css";
 import { useState } from "react";
 import { FeedbackDefault } from "./FeedbackDefault";
 import { FeedbackContent, FeedbackDataSent } from "./FeedbackContent";
@@ -40,13 +39,7 @@ export const Feedback = () => {
   };
 
   return (
-    <div
-      className={`${fr.cx(
-        "fr-highlight",
-        "fr-p-2w",
-        "fr-m-0"
-      )} ${highlightContainer}`}
-    >
+    <div className={fr.cx("fr-highlight", "fr-p-2w", "fr-m-0")}>
       {viewFeedback === "default" && (
         <FeedbackDefault onClickNo={onClickNo} onClickYes={onClickYes} />
       )}
@@ -60,9 +53,3 @@ export const Feedback = () => {
     </div>
   );
 };
-
-const highlightContainer = css({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-});
