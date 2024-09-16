@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RelatedItems /> should render 1`] = `
+<div>
+  <div
+    class="fr-mb-5w"
+  >
+    <div>
+      <p
+        class="fr-text--lead"
+      >
+        <strong>
+          Modèles et outils liés
+           :
+        </strong>
+      </p>
+      <ul
+        class="fr-pl-0 li-s_none!"
+      >
+        <li
+          class="fr-pb-2w d_flex cg_.5rem"
+        >
+          <span
+            class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
+          />
+          <span>
+            <a
+              href="external.tools"
+            >
+              externalTool
+            </a>
+          </span>
+        </li>
+        <li
+          class="fr-pb-2w d_flex cg_.5rem"
+        >
+          <span
+            class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
+          />
+          <span>
+            <a
+              href="/modeles-de-courriers/modele.url"
+            >
+              modele de courrier
+            </a>
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <p
+        class="fr-text--lead"
+      >
+        <strong>
+          Articles liés
+           :
+        </strong>
+      </p>
+      <ul
+        class="fr-pl-0 li-s_none!"
+      >
+        <li
+          class="fr-pb-2w d_flex cg_.5rem"
+        >
+          <span
+            class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
+          />
+          <span>
+            <a
+              href="/fiche-service-public/fiche.sp.url"
+            >
+              fiche sp
+            </a>
+          </span>
+        </li>
+        <li
+          class="fr-pb-2w d_flex cg_.5rem"
+        >
+          <span
+            class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
+          />
+          <span>
+            <a
+              href="/contribution/contrib.url"
+            >
+              contrib
+            </a>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

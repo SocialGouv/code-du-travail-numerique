@@ -37,7 +37,7 @@ test(`Départ à la retraite sans sélection de CC
   expect(ui.result.travailleurHandicape.get()).toHaveTextContent("Non");
   expect(ui.result.resultatLegal.get()).toHaveTextContent("2 mois");
   expect(ui.result.resultatAgreement.get()).toHaveTextContent(
-    "convention collective non traitée"
+    "convention collective non renseignée"
   );
   expect(ui.result.decryptedDescription.get()).toHaveTextContent(
     "La convention collective n’ayant pas été renseignée, la durée de préavis affichée correspond à la durée légale."

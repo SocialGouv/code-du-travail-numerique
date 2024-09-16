@@ -52,6 +52,7 @@ const nextConfig = {
     });
     return config;
   },
+  transpilePackages: ["@codegouvfr/react-dsfr"],
 };
 
 const moduleExports = {

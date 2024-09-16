@@ -3,28 +3,28 @@
 exports[`<RelatedItems /> should render 1`] = `
 <div>
   <div
-    class="sc-aXZVg gZgZQL"
+    class="sc-d8f596bd-0 jtWYDW"
   >
     <div
       aria-level="2"
-      class="sc-kAyceB dvmaTz"
+      class="sc-b879fc2d-0 hyiHle"
       role="heading"
     >
       Modèles et outils liés
        :
     </div>
     <ul
-      class="sc-cfxfcM kMmTaI"
+      class="sc-ab356c14-0 bpNHPl"
     >
       <li
-        class="sc-fMMURN fUjtLa"
+        class="sc-98ab2f81-0 eJqLXV"
       >
         <a
-          class="sc-bmzYkS eyKmWS"
+          class="sc-60a7e89-0 haggkt"
         >
           <svg
             aria-hidden="true"
-            class="sc-dtBdUo hpIOmX"
+            class="sc-60a7e89-2 bJDpVh"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"
@@ -35,21 +35,21 @@ exports[`<RelatedItems /> should render 1`] = `
             />
           </svg>
           <span
-            class="sc-iHGNWf hQSWKy"
+            class="sc-60a7e89-1 eSlLWj"
           >
             externalTool
           </span>
         </a>
       </li>
       <li
-        class="sc-fMMURN fUjtLa"
+        class="sc-98ab2f81-0 eJqLXV"
       >
         <a
-          class="sc-bmzYkS eyKmWS"
+          class="sc-60a7e89-0 haggkt"
         >
           <svg
             aria-hidden="true"
-            class="sc-dtBdUo hpIOmX"
+            class="sc-60a7e89-2 bJDpVh"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ exports[`<RelatedItems /> should render 1`] = `
             />
           </svg>
           <span
-            class="sc-iHGNWf hQSWKy"
+            class="sc-60a7e89-1 eSlLWj"
           >
             modele de courrier
           </span>
@@ -69,24 +69,24 @@ exports[`<RelatedItems /> should render 1`] = `
     </ul>
     <div
       aria-level="2"
-      class="sc-kAyceB dvmaTz"
+      class="sc-b879fc2d-0 hyiHle"
       role="heading"
     >
       Articles liés
        :
     </div>
     <ul
-      class="sc-cfxfcM kMmTaI"
+      class="sc-ab356c14-0 bpNHPl"
     >
       <li
-        class="sc-fMMURN fUjtLa"
+        class="sc-98ab2f81-0 eJqLXV"
       >
         <a
-          class="sc-bmzYkS eyKmWS"
+          class="sc-60a7e89-0 haggkt"
         >
           <svg
             aria-hidden="true"
-            class="sc-dtBdUo hpIOmX"
+            class="sc-60a7e89-2 bJDpVh"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"
@@ -97,21 +97,21 @@ exports[`<RelatedItems /> should render 1`] = `
             />
           </svg>
           <span
-            class="sc-iHGNWf hQSWKy"
+            class="sc-60a7e89-1 eSlLWj"
           >
             fiche sp
           </span>
         </a>
       </li>
       <li
-        class="sc-fMMURN fUjtLa"
+        class="sc-98ab2f81-0 eJqLXV"
       >
         <a
-          class="sc-bmzYkS eyKmWS"
+          class="sc-60a7e89-0 haggkt"
         >
           <svg
             aria-hidden="true"
-            class="sc-dtBdUo hpIOmX"
+            class="sc-60a7e89-2 bJDpVh"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +122,7 @@ exports[`<RelatedItems /> should render 1`] = `
             />
           </svg>
           <span
-            class="sc-iHGNWf hQSWKy"
+            class="sc-60a7e89-1 eSlLWj"
           >
             contrib
           </span>
