@@ -3,7 +3,7 @@ import { DsfrLayout } from "../../src/modules/layout";
 import { PrivacyPolicy } from "../../src/modules/privacyPolicy";
 
 export const metadata: Metadata = {
-  title: "Politique de confidentialité - Code du travail numérique",
+  title: "Politique de confidentialité",
   description: "Politique de confidentialité du Code du travail numérique",
 };
 

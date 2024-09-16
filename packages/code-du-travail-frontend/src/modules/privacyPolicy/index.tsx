@@ -73,11 +73,11 @@ export const PrivacyPolicy = () => {
         </p>
         <h2 className={fr.cx("fr-h3")}>Hébergement</h2>
         <ul className={fr.cx("fr-mb-6v")}>
-          <li>Partenaire: OVH</li>
-          <li>Pays destinataire: France</li>
-          <li>Traitement réalisé: Hébergement</li>
+          <li>Partenaire&nbsp;: OVH</li>
+          <li>Pays destinataire&nbsp;: France</li>
+          <li>Traitement réalisé&nbsp;: Hébergement</li>
           <li>
-            Garantie:{" "}
+            Garantie&nbsp;:{" "}
             <a
               href="https://us.ovhcloud.com/legal/data-processing-agreement"
               target="_blank"
@@ -98,12 +98,12 @@ export const PrivacyPolicy = () => {
           appelés “cookies” permettant d’établir des mesures statistiques.
         </p>
         <ul className={fr.cx("fr-mb-6v")}>
-          <li>Catégorie de cookie: Mesure d’audience anonymisée</li>
-          <li>Nom du cookie: Matomo</li>
-          <li>Délai de conservation: 13 mois</li>
-          <li>Finalités: Mesure d’audience</li>
-          <li>Éditeur: Matomo & Fabrique numérique</li>
-          <li>Destination: France</li>
+          <li>Catégorie de cookie&nbsp;: Mesure d’audience anonymisée</li>
+          <li>Nom du cookie&nbsp;: Matomo</li>
+          <li>Délai de conservation&nbsp;: 13 mois</li>
+          <li>Finalités&nbsp;: Mesure d’audience</li>
+          <li>Éditeur&nbsp;: Matomo & Fabrique numérique</li>
+          <li>Destination&nbsp;: France</li>
         </ul>
         <p>
           L’accès aux informations contenues dans les cookies est limité aux
