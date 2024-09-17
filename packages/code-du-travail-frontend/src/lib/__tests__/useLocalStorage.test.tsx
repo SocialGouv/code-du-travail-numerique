@@ -1,11 +1,11 @@
 import { act, render } from "@testing-library/react";
 import React from "react";
 
-import { useLocalStorage } from "../useLocalStorage";
+import { useLocalStorageForAgreement } from "../useLocalStorage";
 
-function renderApp(key, initialValue) {
+function renderApp(initialValue) {
   function App() {
-    const [value, setValue] = useLocalStorage(key, initialValue);
+    const [value, setValue] = useLocalStorageForAgreement(initialValue);
     return (
       <div data-testid="container">
         <p data-testid="value">{value}</p>
@@ -19,14 +19,14 @@ function renderApp(key, initialValue) {
   return render(<App />);
 }
 
-describe("useLocalStorage", () => {
+describe("useLocalStorageForAgreement", () => {
   it("initializes value", () => {
-    const { getByTestId } = renderApp("foo", "hello cdtn");
+    const { getByTestId } = renderApp("hello cdtn");
     const valueElement = getByTestId("value");
     expect(valueElement.innerHTML).toBe("hello cdtn");
   });
   it("updates value", () => {
-    const { getByTestId } = renderApp("foo", "bar");
+    const { getByTestId } = renderApp("bar");
     act(() => {
       getByTestId("button").click();
     });

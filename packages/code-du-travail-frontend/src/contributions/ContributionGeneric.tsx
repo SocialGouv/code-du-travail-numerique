@@ -2,7 +2,7 @@ import { ElasticSearchContributionGeneric } from "@socialgouv/cdtn-types";
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { push as matopush } from "@socialgouv/matomo-next";
-import { useLocalStorageOnPageLoad } from "../lib/useLocalStorage";
+import { useLocalStorageForAgreementOnPageLoad } from "../lib/useLocalStorage";
 import { RadioQuestion } from "../outils/Components";
 import { AgreementRoute } from "../outils/common/type/WizardType";
 import router from "next/router";
@@ -57,8 +57,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
   const [hasNoEnterpriseSelected, setHasNoEnterpriseSelected] = useState(false);
   const [entreprise, setEnterprise] = useState<Enterprise | undefined>();
 
-  const [convention, setConvention] =
-    useLocalStorageOnPageLoad<Agreement>("convention");
+  const [convention, setConvention] = useLocalStorageForAgreementOnPageLoad();
 
   const [selectedRoute, setSelectedRoute] = useState<
     AgreementRoute | undefined

@@ -3,13 +3,13 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 
 import Html from "../../common/Html";
-import { useLocalStorage } from "../../lib/useLocalStorage";
+import { useLocalStorageForAgreement } from "../../lib/useLocalStorage";
 import { Articles } from "./Articles";
 import { Contributions } from "./Contributions";
 import { TextSearch } from "./TextSearch";
 
 const Convention = ({ convention }) => {
-  const [, setCcInfo] = useLocalStorage("convention");
+  const [, setCcInfo] = useLocalStorageForAgreement();
 
   useEffect(() => {
     const { slug, id, num, shortTitle } = convention;
