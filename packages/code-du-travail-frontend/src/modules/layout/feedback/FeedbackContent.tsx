@@ -3,7 +3,7 @@ import { Button } from "@codegouvfr/react-dsfr/Button";
 import { Checkbox } from "@codegouvfr/react-dsfr/Checkbox";
 import { Input } from "@codegouvfr/react-dsfr/Input";
 import { css } from "../../../../styled-system/css";
-import { MatomoFeedbackEventCategory } from "./tracking";
+import { FeedbackActionChoiceValue } from "./tracking";
 import { useState } from "react";
 
 type Props = {
@@ -13,21 +13,19 @@ type Props = {
 
 export type FeedbackDataSent = {
   suggestion?: string;
-  categories?: MatomoFeedbackEventCategory[];
+  categories?: FeedbackActionChoiceValue[];
 };
 
 const MAX_LENGTH = 150;
 
 export const FeedbackContent = (props: Props) => {
-  const [categories, setCategories] = useState<MatomoFeedbackEventCategory[]>(
-    []
-  );
+  const [categories, setCategories] = useState<FeedbackActionChoiceValue[]>([]);
   const [suggestion, setSuggestion] = useState<string | undefined>(undefined);
 
   const onChangeCategories = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCategories((prev) => {
       if (e.target.checked) {
-        return [...prev, e.target.value as MatomoFeedbackEventCategory];
+        return [...prev, e.target.value as FeedbackActionChoiceValue];
       }
       return prev.filter((category) => category !== e.target.value);
     });
@@ -65,8 +63,8 @@ export const FeedbackContent = (props: Props) => {
             {
               label: "Les informations ne sont pas claires",
               nativeInputProps: {
-                name: "checkboxes-1",
-                value: "unclear" as MatomoFeedbackEventCategory,
+                name: "unclear",
+                value: "unclear" as FeedbackActionChoiceValue,
                 onChange: onChangeCategories,
               },
             },
@@ -74,24 +72,24 @@ export const FeedbackContent = (props: Props) => {
               label:
                 "Cette page ne correspond pas à ma recherche ou à ma situation.",
               nativeInputProps: {
-                name: "checkboxes-2",
-                value: "unrelated" as MatomoFeedbackEventCategory,
+                name: "unrelated",
+                value: "unrelated" as FeedbackActionChoiceValue,
                 onChange: onChangeCategories,
               },
             },
             {
               label: "Je ne suis pas satisfait de cette réglementation.",
               nativeInputProps: {
-                name: "checkboxes-3",
-                value: "unsatisfied" as MatomoFeedbackEventCategory,
+                name: "unsatisfied",
+                value: "unsatisfied" as FeedbackActionChoiceValue,
                 onChange: onChangeCategories,
               },
             },
             {
               label: "Les informations me semblent fausses.",
               nativeInputProps: {
-                name: "checkboxes-4",
-                value: "wrong" as MatomoFeedbackEventCategory,
+                name: "wrong",
+                value: "wrong" as FeedbackActionChoiceValue,
                 onChange: onChangeCategories,
               },
             },
@@ -100,7 +98,7 @@ export const FeedbackContent = (props: Props) => {
       )}
       <Input
         label="Faire une suggestion pour améliorer cette page"
-        textArea={true}
+        textArea
         nativeTextAreaProps={{
           onChange: (e) => onChangeSuggestion(e.target.value),
           value: suggestion,

@@ -6,34 +6,32 @@ import { FeedbackDefault } from "./FeedbackDefault";
 import { FeedbackContent, FeedbackDataSent } from "./FeedbackContent";
 import { FeedbackAnswered } from "./FeedbackAnswered";
 import { useFeedbackEvents } from "./tracking";
-import { usePathname } from "next/navigation";
-import { getBaseUrl } from "../../utils";
 
 export const Feedback = () => {
   const [viewFeedback, setViewFeedback] = useState<
     "yes" | "no" | "default" | "answered"
   >("default");
-  const currentPath = usePathname();
-  const { emitFeedback, emitFeedbackCategory, emitFeedbackSuggestion } =
-    useFeedbackEvents();
+  const {
+    emitNegativeFeedback,
+    emitPositiveFeedback,
+    emitFeedbackCategory,
+    emitFeedbackSuggestion,
+  } = useFeedbackEvents();
 
   const onClickNo = () => {
     setViewFeedback("no");
-    if (currentPath) emitFeedback(false, getBaseUrl(currentPath));
+    emitNegativeFeedback();
   };
 
   const onClickYes = () => {
     setViewFeedback("yes");
-    if (currentPath) emitFeedback(true, getBaseUrl(currentPath));
+    emitPositiveFeedback();
   };
 
   const onSubmit = (data: FeedbackDataSent) => {
-    if (currentPath && data.suggestion)
-      emitFeedbackSuggestion(data.suggestion, getBaseUrl(currentPath));
-    if (data.categories && currentPath) {
-      data.categories.forEach((category) =>
-        emitFeedbackCategory(category, getBaseUrl(currentPath))
-      );
+    if (data.suggestion) emitFeedbackSuggestion(data.suggestion);
+    if (data.categories) {
+      data.categories.forEach((category) => emitFeedbackCategory(category));
     }
     setViewFeedback("answered");
   };
