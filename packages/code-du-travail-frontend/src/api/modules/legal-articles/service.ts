@@ -7,7 +7,7 @@ export const getItemBySlug = async <V>(
   fields: string[],
   body: any
 ): Promise<DocumentElasticResult<V> | undefined> => {
-  const response = await elasticsearchClient.search<DocumentElasticResult<V>>({
+  const response = await elasticsearchClient.search<V>({
     ...body,
     _source: fields,
     index: elasticDocumentsIndex,
@@ -16,7 +16,7 @@ export const getItemBySlug = async <V>(
     return;
   }
   const item = response.hits.hits[0];
-  return { ...item._source, _id: item._id };
+  return { ...item._source, _id: item._id } as DocumentElasticResult<V>;
 };
 
 export const getLegalArticleBySlug = async <
