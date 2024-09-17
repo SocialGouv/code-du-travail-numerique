@@ -12,6 +12,9 @@ type Props = {
 };
 
 export function sendEvent(props: Props) {
+  if (props.value && !props.name) {
+    throw new Error("value should be used with name");
+  }
   if (props.name && props.value) {
     push([
       MatomoBaseEvent.TRACK_EVENT,
