@@ -126,8 +126,11 @@
         
         
     it("should display expected answer", () => {
-      
-        
+      expect(screen.queryAllByText(/8 jours/)[0]).toBeInTheDocument();
+          
+        expect(screen.queryAllByText(/Art. L. 423-26 du Code de l’action sociale et des familles/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Art. 120 de la convention collective/)[0]).toBeInTheDocument();
+          
     });
   
       });
@@ -145,9 +148,11 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/15 jours calendaires/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/5 jours/)[0]).toBeInTheDocument();
           
-        
+        expect(screen.queryAllByText(/Art. L. 423-26 du Code de l’action sociale et des familles/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Art. 120 de la convention collective/)[0]).toBeInTheDocument();
+          
     });
   
       });
@@ -167,7 +172,9 @@
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
           
-        
+        expect(screen.queryAllByText(/Art. L. 423-26 du Code de l’action sociale et des familles/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Art. 120 de la convention collective/)[0]).toBeInTheDocument();
+          
     });
   
       });

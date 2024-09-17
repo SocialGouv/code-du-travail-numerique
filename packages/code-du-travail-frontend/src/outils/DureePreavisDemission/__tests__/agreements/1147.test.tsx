@@ -73,7 +73,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/15 jours/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/5 jours/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 25 de la convention collective/)[0]).toBeInTheDocument();
           

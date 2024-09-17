@@ -58,7 +58,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/3 mois \(sauf stipulation contractuelle différente\)/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 13/)[0]).toBeInTheDocument();
           

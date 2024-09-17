@@ -69,7 +69,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 mois et demi/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe : Statut du personnel d'encadrement, article 6/)[0]).toBeInTheDocument();
           

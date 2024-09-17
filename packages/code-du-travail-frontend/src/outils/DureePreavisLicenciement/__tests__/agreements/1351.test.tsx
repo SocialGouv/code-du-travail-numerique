@@ -101,7 +101,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 jour ouvré/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 jour/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
           
@@ -122,7 +122,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 jours ouvrés/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 jours/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
           
@@ -143,7 +143,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/7 jours calendaires/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/7 jours/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
           
@@ -241,7 +241,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 jour ouvré/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 jour/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
           
@@ -262,7 +262,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 jours ouvrés/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 jours/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
           
@@ -283,7 +283,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/7 jours calendaires/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/7 jours/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
           
@@ -381,7 +381,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 jour ouvré/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 jour/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
           
@@ -402,7 +402,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 jours ouvrés/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 jours/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
           
@@ -423,7 +423,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/7 jours calendaires/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/7 jours/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
           
@@ -521,7 +521,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 jour ouvré/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 jour/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
           
@@ -542,7 +542,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 jours ouvrés/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 jours/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
           
@@ -563,7 +563,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/14 jours calendaires/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/14 jours/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
           
@@ -661,7 +661,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 jour ouvré/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 jour/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
           
@@ -682,7 +682,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 jours ouvrés/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 jours/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
           
@@ -703,7 +703,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/14 jours calendaires/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/14 jours/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/)[0]).toBeInTheDocument();
           
@@ -1518,7 +1518,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/7 jours calendaires/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/7 jours/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]).toBeInTheDocument();
           
@@ -1539,7 +1539,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/14 jours calendaires/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/14 jours/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]).toBeInTheDocument();
           

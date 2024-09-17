@@ -15,7 +15,7 @@ contrat salarié . convention collective . cabinets médicaux . catégorie profe
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    article 25 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B78C466DDE1AAC805D24C90B1D6C1B59.tplgfr38s_2?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id
+    "article 25 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B78C466DDE1AAC805D24C90B1D6C1B59.tplgfr38s_2?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id
           
 contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle Noncadres:
   applicable si: catégorie professionnelle = 'Noncadres'
@@ -37,7 +37,7 @@ contrat salarié . convention collective . cabinets médicaux . catégorie profe
   valeur: 15 jours
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    article 25 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B78C466DDE1AAC805D24C90B1D6C1B59.tplgfr38s_2?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id
+    "article 25 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B78C466DDE1AAC805D24C90B1D6C1B59.tplgfr38s_2?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id
           
 contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle Noncadres . ancienneté 6 mois à 2 ans:
   applicable si: ancienneté = '6 mois à 2 ans'
@@ -46,7 +46,7 @@ contrat salarié . convention collective . cabinets médicaux . catégorie profe
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    article 25 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B78C466DDE1AAC805D24C90B1D6C1B59.tplgfr38s_2?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id
+    "article 25 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B78C466DDE1AAC805D24C90B1D6C1B59.tplgfr38s_2?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id
           
 contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle Noncadres . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
@@ -55,4 +55,4 @@ contrat salarié . convention collective . cabinets médicaux . catégorie profe
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    article 25 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B78C466DDE1AAC805D24C90B1D6C1B59.tplgfr38s_2?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id
+    "article 25 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B78C466DDE1AAC805D24C90B1D6C1B59.tplgfr38s_2?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id

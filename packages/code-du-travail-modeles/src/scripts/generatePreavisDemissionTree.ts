@@ -26,7 +26,9 @@ export function generatePreavisDemissionTree() {
       };
     },
     getResult: ({ answer, answer2, ref, refUrl, refs, note }) => {
-      const [number, unit] = (answer ?? "").split(" ");
+      const regExpMatchMonth = /[0-9] (mois|jour|semaine)(s){0,1}/;
+      const [matchedNumber] = regExpMatchMonth.exec(answer ?? "") ?? [];
+      const [number, unit] = (matchedNumber ?? answer ?? "").split(" ");
       const regExp = /\(([^)]+)\)/;
       const regExpValue = regExp.exec(answer ?? "");
       const isNan = isNaN(parseInt(number));

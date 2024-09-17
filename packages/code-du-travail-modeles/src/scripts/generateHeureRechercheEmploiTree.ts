@@ -74,7 +74,7 @@ export function generateHeureRechercheEmploiTree() {
               .trim() ?? "",
           ]
         : [
-            "D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.",
+            "D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.",
           ],
     }),
     questions,

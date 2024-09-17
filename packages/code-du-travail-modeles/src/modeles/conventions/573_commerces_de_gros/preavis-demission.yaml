@@ -16,7 +16,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 35: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026802012&cidTexte=KALITEXT000005673619&dateTexte=20120228
+    "Article 35": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026802012&cidTexte=KALITEXT000005673619&dateTexte=20120228
           
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Ouvriers, Employés:
   applicable si: catégorie professionnelle = 'Ouvriers, Employés'
@@ -25,7 +25,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 35: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026802012&cidTexte=KALITEXT000005673619&dateTexte=20120228
+    "Article 35": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026802012&cidTexte=KALITEXT000005673619&dateTexte=20120228
           
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Techniciens et agents de maîtrise TAM:
   applicable si: catégorie professionnelle = 'Techniciens et agents de maîtrise TAM'
@@ -36,4 +36,4 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
   description: Cette durée s'applique aux techniciens et agents de maîtrise ou assimilés
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 35: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026802012&cidTexte=KALITEXT000005673619&dateTexte=20120228
+    "Article 35": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026802012&cidTexte=KALITEXT000005673619&dateTexte=20120228

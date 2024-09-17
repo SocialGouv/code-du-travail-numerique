@@ -20,7 +20,7 @@ contrat salarié . convention collective . industrie pharmaceutique . typeRuptur
     - Les heures sont fixées un jour par le salarié, un jour par l'employeur. Si le salarié demande que ces heures se cumulent en fin de préavis, l'employeur devra accepter.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 35: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=6E001A9C1CB6E3CA6403A26757E06D12.tplgfr24s_2?idArticle=KALIARTI000039117109&cidTexte=KALITEXT000039116990&dateTexte=29990101&categorieLien=id
+    "Article 35": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=6E001A9C1CB6E3CA6403A26757E06D12.tplgfr24s_2?idArticle=KALIARTI000039117109&cidTexte=KALITEXT000039116990&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . industrie pharmaceutique . typeRupture Licenciement:
   applicable si: typeRupture = 'Licenciement'
@@ -33,13 +33,13 @@ contrat salarié . convention collective . industrie pharmaceutique . typeRuptur
     - Les heures sont fixées un jour par le salarié, un jour par l'employeur. Si le salarié demande que ces heures se cumulent en fin de préavis, l'employeur devra accepter.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 35: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=6E001A9C1CB6E3CA6403A26757E06D12.tplgfr24s_2?idArticle=KALIARTI000039117109&cidTexte=KALITEXT000039116990&dateTexte=29990101&categorieLien=id
+    "Article 35": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=6E001A9C1CB6E3CA6403A26757E06D12.tplgfr24s_2?idArticle=KALIARTI000039117109&cidTexte=KALITEXT000039116990&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . industrie pharmaceutique . typeRupture Rupture de la période d'essai:
   applicable si: typeRupture = 'Rupture de la période d'essai'
           
 contrat salarié . convention collective . industrie pharmaceutique . typeRupture Rupture de la période d'essai . résultat conventionnel:
-  valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
+  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 32: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0C62DECC245C15CC0C1B7D257B3A84A3.tplgfr24s_2?idArticle=KALIARTI000039117098&cidTexte=KALITEXT000039116990&dateTexte=29990101&categorieLien=id
+    "Article 32": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0C62DECC245C15CC0C1B7D257B3A84A3.tplgfr24s_2?idArticle=KALIARTI000039117098&cidTexte=KALITEXT000039116990&dateTexte=29990101&categorieLien=id

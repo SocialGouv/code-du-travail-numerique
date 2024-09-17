@@ -20,7 +20,7 @@ contrat salarié . convention collective . bureaux études techniques . typeRupt
     - Les heures de recherche d'emploi sont prises chaque mois en une ou plusieurs fois, en principe par demi-journée. Elles sont fixées pour moitié par l'employeur et pour moitié par le salarié. Chacun en informe l'autre partie.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 4.3: https//www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513835#KALIARTI000047513835
+    "Article 4.3": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513835#KALIARTI000047513835
           
 contrat salarié . convention collective . bureaux études techniques . typeRupture Rupture de la période d'essai:
   applicable si: typeRupture = 'Rupture de la période d'essai'
@@ -44,7 +44,7 @@ contrat salarié . convention collective . bureaux études techniques . typeRupt
     - Le salaire est maintenu.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 3.4: https//www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513825#KALIARTI000047513825
+    "Article 3.4": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513825#KALIARTI000047513825
           
 contrat salarié . convention collective . bureaux études techniques . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai Le salarié:
   applicable si: initiative de la rupture de la période d'essai = 'Le salarié'
@@ -56,7 +56,7 @@ contrat salarié . convention collective . bureaux études techniques . typeRupt
     - Le salaire n'est pas maintenu.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 3.4: https//www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513825#KALIARTI000047513825
+    "Article 3.4": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513825#KALIARTI000047513825
           
 contrat salarié . convention collective . bureaux études techniques . typeRupture Licenciement:
   applicable si: typeRupture = 'Licenciement'
@@ -69,4 +69,4 @@ contrat salarié . convention collective . bureaux études techniques . typeRupt
     - Les heures de recherche d'emploi sont prises chaque mois en une ou plusieurs fois, en principe par demi-journée. Elles sont fixées pour moitié par l''employeur et pour moitié par le salarié. Chacun en informe l'autre partie.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 4.3: https//www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513835#KALIARTI000047513835
+    "Article 4.3": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513835#KALIARTI000047513835

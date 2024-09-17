@@ -20,21 +20,26 @@ async function main() {
   await generateUITestFiles(
     dpd,
     "DureePreavisDemission",
-    `${path}/src/outils/DureePreavisDemission/__tests__/agreements`
+    `${path}/src/outils/DureePreavisDemission/__tests__/agreements`,
+    (texts) => [
+      texts[0] === "0" ? "il n’y a pas de préavis à effectuer" : texts[0],
+    ]
   );
 
   const dpl = generatePreavisLicenciementTree();
   await generateUITestFiles(
     dpl,
     "DureePreavisLicenciement",
-    `${path}/src/outils/DureePreavisLicenciement/__tests__/agreements`
+    `${path}/src/outils/DureePreavisLicenciement/__tests__/agreements`,
+    (texts) => [texts[0] === "0" ? "Aucun préavis" : texts[0]]
   );
 
   const ip = generateIndemnitePrecariteTree();
   await generateUITestFiles(
     ip,
     "SimulateurIndemnitePrecarite",
-    `${path}/src/outils/IndemnitePrecarite/__tests__/agreements`
+    `${path}/src/outils/IndemnitePrecarite/__tests__/agreements`,
+    (texts) => [texts[0]]
   );
 }
 

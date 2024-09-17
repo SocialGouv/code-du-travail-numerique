@@ -90,6 +90,7 @@
       expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 4.1.2/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Article 4.11.1/)[0]).toBeInTheDocument();
           
     });
   

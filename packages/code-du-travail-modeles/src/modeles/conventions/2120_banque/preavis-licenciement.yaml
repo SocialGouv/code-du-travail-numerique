@@ -15,7 +15,7 @@ contrat salarié . convention collective . banque . catégorie professionnelle C
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 30 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005784453&cidTexte=KALITEXT000005678018
+    "Article 30 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005784453&cidTexte=KALITEXT000005678018
           
 contrat salarié . convention collective . banque . catégorie professionnelle Techniciens:
   applicable si: catégorie professionnelle = 'Techniciens'
@@ -36,7 +36,7 @@ contrat salarié . convention collective . banque . catégorie professionnelle T
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 30 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005784453&cidTexte=KALITEXT000005678018
+    "Article 30 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005784453&cidTexte=KALITEXT000005678018
           
 contrat salarié . convention collective . banque . catégorie professionnelle Techniciens . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
@@ -45,4 +45,4 @@ contrat salarié . convention collective . banque . catégorie professionnelle T
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 30 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005784453&cidTexte=KALITEXT000005678018
+    "Article 30 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005784453&cidTexte=KALITEXT000005678018

@@ -30,7 +30,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 11, Annexe II: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A669A8D4959C60AC9D8FC2BCE24A3F9E.tplgfr43s_1?idArticle=KALIARTI000005872146&cidTexte=KALITEXT000005688169&dateTexte=29990101&categorieLien=id
+    "Article 11, Annexe II": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A669A8D4959C60AC9D8FC2BCE24A3F9E.tplgfr43s_1?idArticle=KALIARTI000005872146&cidTexte=KALITEXT000005688169&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Agents de maîtrise . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
@@ -39,7 +39,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 11, Annexe II: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A669A8D4959C60AC9D8FC2BCE24A3F9E.tplgfr43s_1?idArticle=KALIARTI000005872146&cidTexte=KALITEXT000005688169&dateTexte=29990101&categorieLien=id
+    "Article 11, Annexe II": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A669A8D4959C60AC9D8FC2BCE24A3F9E.tplgfr43s_1?idArticle=KALIARTI000005872146&cidTexte=KALITEXT000005688169&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Techniciens:
   applicable si: catégorie professionnelle = 'Techniciens'
@@ -60,7 +60,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 11, Annexe II: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A669A8D4959C60AC9D8FC2BCE24A3F9E.tplgfr43s_1?idArticle=KALIARTI000005872146&cidTexte=KALITEXT000005688169&dateTexte=29990101&categorieLien=id
+    "Article 11, Annexe II": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A669A8D4959C60AC9D8FC2BCE24A3F9E.tplgfr43s_1?idArticle=KALIARTI000005872146&cidTexte=KALITEXT000005688169&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Techniciens . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
@@ -69,7 +69,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 11, Annexe II: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A669A8D4959C60AC9D8FC2BCE24A3F9E.tplgfr43s_1?idArticle=KALIARTI000005872146&cidTexte=KALITEXT000005688169&dateTexte=29990101&categorieLien=id
+    "Article 11, Annexe II": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A669A8D4959C60AC9D8FC2BCE24A3F9E.tplgfr43s_1?idArticle=KALIARTI000005872146&cidTexte=KALITEXT000005688169&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
@@ -78,7 +78,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 10, Annexe I: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8F0A015EC69AE0F899489E29A88831C7.tplgfr27s_1?idArticle=KALIARTI000005872089&cidTexte=KALITEXT000005688165&dateTexte=29990101&categorieLien=id
+    "Article 10, Annexe I": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8F0A015EC69AE0F899489E29A88831C7.tplgfr27s_1?idArticle=KALIARTI000005872089&cidTexte=KALITEXT000005688165&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Ouvriers:
   applicable si: catégorie professionnelle = 'Ouvriers'
@@ -99,7 +99,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 15, Annexe III: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0802D655AF540CB544CBBB1A9BD8895B.tplgfr24s_1?idArticle=KALIARTI000005872211&cidTexte=KALITEXT000005688175&dateTexte=29990101&categorieLien=id
+    "Article 15, Annexe III": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0802D655AF540CB544CBBB1A9BD8895B.tplgfr24s_1?idArticle=KALIARTI000005872211&cidTexte=KALITEXT000005688175&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Ouvriers . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
@@ -108,7 +108,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 15, Annexe III: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0802D655AF540CB544CBBB1A9BD8895B.tplgfr24s_1?idArticle=KALIARTI000005872211&cidTexte=KALITEXT000005688175&dateTexte=29990101&categorieLien=id
+    "Article 15, Annexe III": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0802D655AF540CB544CBBB1A9BD8895B.tplgfr24s_1?idArticle=KALIARTI000005872211&cidTexte=KALITEXT000005688175&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Employés:
   applicable si: catégorie professionnelle = 'Employés'
@@ -129,7 +129,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 15, Annexe III: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0802D655AF540CB544CBBB1A9BD8895B.tplgfr24s_1?idArticle=KALIARTI000005872211&cidTexte=KALITEXT000005688175&dateTexte=29990101&categorieLien=id
+    "Article 15, Annexe III": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0802D655AF540CB544CBBB1A9BD8895B.tplgfr24s_1?idArticle=KALIARTI000005872211&cidTexte=KALITEXT000005688175&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Employés . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
@@ -138,4 +138,4 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 15, Annexe III: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0802D655AF540CB544CBBB1A9BD8895B.tplgfr24s_1?idArticle=KALIARTI000005872211&cidTexte=KALITEXT000005688175&dateTexte=29990101&categorieLien=id
+    "Article 15, Annexe III": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0802D655AF540CB544CBBB1A9BD8895B.tplgfr24s_1?idArticle=KALIARTI000005872211&cidTexte=KALITEXT000005688175&dateTexte=29990101&categorieLien=id

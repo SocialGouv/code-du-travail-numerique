@@ -35,7 +35,9 @@ function generateResult(
   parseResult: ParseResult
 ): string {
   const namespaceLine = namespace.join(" . ");
-  const refLines = result.refs.map(({ url, label }) => `${label}: ${url}`);
+  const refLines = result.refs.map(
+    ({ url, label }) => `"${label.replace(/"/g, '\\"')}": ${url}`
+  );
 
   const { value, notification } = parseResult(result.texts);
   const notificationLine = notification?.length
@@ -48,12 +50,10 @@ contrat salarié . convention collective . ${namespaceLine} . résultat conventi
   valeur: ${value}${notificationLine}
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    ${refLines
-      .join(
-        `
+    ${refLines.join(
+      `
     `
-      )
-      .replace(/’/, "'")}`;
+    )}`;
   return content;
 }
 

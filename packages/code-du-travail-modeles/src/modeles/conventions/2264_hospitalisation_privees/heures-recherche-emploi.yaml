@@ -37,10 +37,10 @@ contrat salarié . convention collective . hospitalisation privées . typeRuptur
   applicable si: ancienneté = '3 mois ou moins'
           
 contrat salarié . convention collective . hospitalisation privées . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai L'employeur . ancienneté 3 mois ou moins . résultat conventionnel:
-  valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
+  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 43.2: https//www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000020981959&cidTexte=KALITEXT000005658770&dateTexte=20200207
+    "Article 43.2": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000020981959&cidTexte=KALITEXT000005658770&dateTexte=20200207
           
 contrat salarié . convention collective . hospitalisation privées . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai L'employeur . ancienneté Plus de 3 mois:
   applicable si: ancienneté = 'Plus de 3 mois'
@@ -53,25 +53,25 @@ contrat salarié . convention collective . hospitalisation privées . typeRuptur
     - Chaque jour d'absence correspond à la durée habituelle de travail du salarié.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 43.2: https//www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000020981959&cidTexte=KALITEXT000005658770&dateTexte=20200207
+    "Article 43.2": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000020981959&cidTexte=KALITEXT000005658770&dateTexte=20200207
           
 contrat salarié . convention collective . hospitalisation privées . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai Le salarié:
   applicable si: initiative de la rupture de la période d'essai = 'Le salarié'
           
 contrat salarié . convention collective . hospitalisation privées . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai Le salarié . résultat conventionnel:
-  valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
+  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 43.2: https//www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000020981959&cidTexte=KALITEXT000005658770&dateTexte=20200207
+    "Article 43.2": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000020981959&cidTexte=KALITEXT000005658770&dateTexte=20200207
           
 contrat salarié . convention collective . hospitalisation privées . typeRupture Démission:
   applicable si: typeRupture = 'Démission'
           
 contrat salarié . convention collective . hospitalisation privées . typeRupture Démission . résultat conventionnel:
-  valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
+  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 46: https//www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801981&cidTexte=KALITEXT000005658770
+    "Article 46": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801981&cidTexte=KALITEXT000005658770
           
 contrat salarié . convention collective . hospitalisation privées . typeRupture Licenciement:
   applicable si: typeRupture = 'Licenciement'
@@ -96,7 +96,7 @@ contrat salarié . convention collective . hospitalisation privées . typeRuptur
     - Ces heures pourront être prises par demi-journée ou journée entière, dans les conditions fixées d'un commun accord par l'employeur et le salarié.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 46: https//www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801981&cidTexte=KALITEXT000005658770
+    "Article 46": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801981&cidTexte=KALITEXT000005658770
           
 contrat salarié . convention collective . hospitalisation privées . typeRupture Licenciement . durée du travail Temps partiel:
   applicable si: durée du travail = 'Temps partiel'
@@ -109,4 +109,4 @@ contrat salarié . convention collective . hospitalisation privées . typeRuptur
     - Ces heures pourront être prises par demi-journée ou journée entière, dans les conditions fixées d'un commun accord par l'employeur et le salarié.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 46: https//www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801981&cidTexte=KALITEXT000005658770
+    "Article 46": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801981&cidTexte=KALITEXT000005658770

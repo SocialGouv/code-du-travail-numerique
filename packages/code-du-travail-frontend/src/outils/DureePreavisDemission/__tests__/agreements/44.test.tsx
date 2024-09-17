@@ -129,7 +129,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/15 jours/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/5 jours/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Avenant n°1 article 27/)[0]).toBeInTheDocument();
           

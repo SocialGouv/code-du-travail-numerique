@@ -17,7 +17,7 @@ contrat salarié . convention collective . cabinets médicaux . catégorie profe
   description: Attention, pour les personnels en CDD entre 1 et 6 mois de présence, le préavis est de 8 jours.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 25 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F4547682D53DBCC86360428C5C1B153D.tplgfr36s_3?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id
+    "Article 25 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F4547682D53DBCC86360428C5C1B153D.tplgfr36s_3?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id
           
 contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle Noncadres:
   applicable si: catégorie professionnelle = 'Noncadres'
@@ -35,10 +35,10 @@ contrat salarié . convention collective . cabinets médicaux . catégorie profe
   applicable si: ancienneté = 'Moins de 6 mois'
           
 contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle Noncadres . ancienneté Moins de 6 mois . résultat conventionnel:
-  valeur: 15 jours
+  valeur: 5 jours
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 25 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F4547682D53DBCC86360428C5C1B153D.tplgfr36s_3?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id
+    "Article 25 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F4547682D53DBCC86360428C5C1B153D.tplgfr36s_3?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id
           
 contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle Noncadres . ancienneté 6 mois et plus:
   applicable si: ancienneté = '6 mois et plus'
@@ -47,4 +47,4 @@ contrat salarié . convention collective . cabinets médicaux . catégorie profe
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 25 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F4547682D53DBCC86360428C5C1B153D.tplgfr36s_3?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id
+    "Article 25 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F4547682D53DBCC86360428C5C1B153D.tplgfr36s_3?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id

@@ -28,7 +28,7 @@ contrat salarié . convention collective . automobiles . catégorie professionne
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 4.10 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid
+    "Article 4.10 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid
           
 contrat salarié . convention collective . automobiles . catégorie professionnelle Agents de maîtrise . échelon De 20 à 25:
   applicable si: échelon = 'De 20 à 25'
@@ -37,7 +37,7 @@ contrat salarié . convention collective . automobiles . catégorie professionne
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 4.10 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid
+    "Article 4.10 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid
           
 contrat salarié . convention collective . automobiles . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
@@ -46,7 +46,7 @@ contrat salarié . convention collective . automobiles . catégorie professionne
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 4.10 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid
+    "Article 4.10 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid
           
 contrat salarié . convention collective . automobiles . catégorie professionnelle Ouvriers, Employés:
   applicable si: catégorie professionnelle = 'Ouvriers, Employés'
@@ -67,7 +67,7 @@ contrat salarié . convention collective . automobiles . catégorie professionne
   valeur: 2 semaines
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 2.12 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid
+    "Article 2.12 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid
           
 contrat salarié . convention collective . automobiles . catégorie professionnelle Ouvriers, Employés . échelon De 3 à 12:
   applicable si: échelon = 'De 3 à 12'
@@ -76,4 +76,4 @@ contrat salarié . convention collective . automobiles . catégorie professionne
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 2.12 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid
+    "Article 2.12 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid

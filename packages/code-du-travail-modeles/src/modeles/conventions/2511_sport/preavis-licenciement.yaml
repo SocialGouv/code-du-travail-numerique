@@ -15,7 +15,7 @@ contrat salarié . convention collective . sport . catégorie professionnelle Ca
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    article 4.4.3.2 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657
+    "article 4.4.3.2 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657
           
 contrat salarié . convention collective . sport . catégorie professionnelle Noncadres:
   applicable si: catégorie professionnelle = 'Noncadres'
@@ -36,7 +36,7 @@ contrat salarié . convention collective . sport . catégorie professionnelle No
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    article 4.4.3.2 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657
+    "article 4.4.3.2 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657
           
 contrat salarié . convention collective . sport . catégorie professionnelle Noncadres . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
@@ -45,4 +45,4 @@ contrat salarié . convention collective . sport . catégorie professionnelle No
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    article 4.4.3.2 de la convention collective: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657
+    "article 4.4.3.2 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657

@@ -20,13 +20,13 @@ contrat salarié . convention collective . sport . typeRupture Licenciement . r�
     - Les salariés pourront prendre leurs heures en une seule fois avec l'accord de l'employeur.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 4.4.3.5: https//www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411
+    "Article 4.4.3.5": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411
           
 contrat salarié . convention collective . sport . typeRupture Démission:
   applicable si: typeRupture = 'Démission'
           
 contrat salarié . convention collective . sport . typeRupture Démission . résultat conventionnel:
-  valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
+  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     
@@ -35,7 +35,7 @@ contrat salarié . convention collective . sport . typeRupture Rupture de la pé
   applicable si: typeRupture = 'Rupture de la période d'essai'
           
 contrat salarié . convention collective . sport . typeRupture Rupture de la période d'essai . résultat conventionnel:
-  valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
+  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 4.4.3.5: https//www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411
+    "Article 4.4.3.5": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411

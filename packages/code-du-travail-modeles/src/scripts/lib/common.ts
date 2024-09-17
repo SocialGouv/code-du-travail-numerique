@@ -23,5 +23,5 @@ export function getCCName(folderPath: string): string {
 }
 
 export function cleanRefLabel(refLabel: string) {
-  return refLabel.replace(":", "").replace(/’/, "'").replace(")", "").trim();
+  return refLabel.trim();
 }

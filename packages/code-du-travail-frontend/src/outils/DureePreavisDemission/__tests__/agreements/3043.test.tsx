@@ -52,7 +52,8 @@
         
         
     it("should display expected answer", () => {
-      
+      expect(screen.queryAllByText(/il n’y a pas de préavis à effectuer/)[0]).toBeInTheDocument();
+          
         expect(screen.queryAllByText(/Article 4.11.2 de la convention collective/)[0]).toBeInTheDocument();
           
     });

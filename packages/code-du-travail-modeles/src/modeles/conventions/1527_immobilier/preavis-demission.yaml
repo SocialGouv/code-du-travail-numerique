@@ -31,7 +31,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 32: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
+    "Article 32": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . immobilier . catégorie professionnelle Agents de maîtrise . ancienneté Au moins 1 an:
   applicable si: ancienneté = 'Au moins 1 an'
@@ -40,7 +40,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 32: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
+    "Article 32": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . immobilier . catégorie professionnelle Cadres nonVRP:
   applicable si: catégorie professionnelle = 'Cadres nonVRP'
@@ -49,7 +49,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 32: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
+    "Article 32": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . immobilier . catégorie professionnelle Cadres VRP:
   applicable si: catégorie professionnelle = 'Cadres VRP'
@@ -70,7 +70,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 32: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
+    "Article 32": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . immobilier . catégorie professionnelle Cadres VRP . ancienneté Au moins 1 an:
   applicable si: ancienneté = 'Au moins 1 an'
@@ -79,7 +79,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 32: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
+    "Article 32": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur non VRP:
   applicable si: catégorie professionnelle = 'Négociateur non VRP'
@@ -100,7 +100,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 32: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
+    "Article 32": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur non VRP . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
@@ -109,7 +109,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 32: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
+    "Article 32": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur VRP:
   applicable si: catégorie professionnelle = 'Négociateur VRP'
@@ -131,7 +131,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 32: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
+    "Article 32": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur VRP . ancienneté 1 an à moins de 2 ans:
   applicable si: ancienneté = '1 an à moins de 2 ans'
@@ -140,7 +140,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 32: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
+    "Article 32": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur VRP . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
@@ -149,7 +149,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 32: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
+    "Article 32": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . immobilier . catégorie professionnelle Ouvriers, Employés:
   applicable si: catégorie professionnelle = 'Ouvriers, Employés'
@@ -170,7 +170,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 32: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
+    "Article 32": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . immobilier . catégorie professionnelle Ouvriers, Employés . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
@@ -179,4 +179,4 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 32: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id
+    "Article 32": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id

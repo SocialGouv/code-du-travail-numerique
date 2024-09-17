@@ -13,10 +13,10 @@ contrat salarié . convention collective . prevention sécurité entreprise . ty
   applicable si: typeRupture = 'Démission'
           
 contrat salarié . convention collective . prevention sécurité entreprise . typeRupture Démission . résultat conventionnel:
-  valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
+  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 6.13: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=456DF000CBCD95E4D28EEF8B7E60CE88.tplgfr24s_1?idArticle=KALIARTI000021994236&cidTexte=KALITEXT000005680914&dateTexte=29990101&categorieLien=id
+    "Article 6.13": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=456DF000CBCD95E4D28EEF8B7E60CE88.tplgfr24s_1?idArticle=KALIARTI000021994236&cidTexte=KALITEXT000005680914&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . prevention sécurité entreprise . typeRupture Licenciement:
   applicable si: typeRupture = 'Licenciement'
@@ -29,13 +29,13 @@ contrat salarié . convention collective . prevention sécurité entreprise . ty
     - Les 2 heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider, par écrit, de les regrouper. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié. Le salarié qui a trouvé un emploi ne peut plus utiliser ces heures.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 6.13: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=456DF000CBCD95E4D28EEF8B7E60CE88.tplgfr24s_1?idArticle=KALIARTI000021994236&cidTexte=KALITEXT000005680914&dateTexte=29990101&categorieLien=id
+    "Article 6.13": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=456DF000CBCD95E4D28EEF8B7E60CE88.tplgfr24s_1?idArticle=KALIARTI000021994236&cidTexte=KALITEXT000005680914&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . prevention sécurité entreprise . typeRupture Rupture de la période d'essai:
   applicable si: typeRupture = 'Rupture de la période d'essai'
           
 contrat salarié . convention collective . prevention sécurité entreprise . typeRupture Rupture de la période d'essai . résultat conventionnel:
-  valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
+  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 6.13: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=456DF000CBCD95E4D28EEF8B7E60CE88.tplgfr24s_1?idArticle=KALIARTI000021994236&cidTexte=KALITEXT000005680914&dateTexte=29990101&categorieLien=id
+    "Article 6.13": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=456DF000CBCD95E4D28EEF8B7E60CE88.tplgfr24s_1?idArticle=KALIARTI000021994236&cidTexte=KALITEXT000005680914&dateTexte=29990101&categorieLien=id

@@ -23,7 +23,7 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
   applicable si: catégorie professionnelle = 'Assistants maternels du particulier employeur'
           
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Assistants maternels du particulier employeur . résultat conventionnel:
-  valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
+  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     
@@ -56,7 +56,7 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
   applicable si: ancienneté = 'Moins de 2 ans'
           
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail Moins de 40 heures par semaine . ancienneté Moins de 2 ans . résultat conventionnel:
-  valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
+  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     
@@ -65,7 +65,7 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
   applicable si: ancienneté = '2 ans ou plus'
           
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail Moins de 40 heures par semaine . ancienneté 2 ans ou plus . résultat conventionnel:
-  valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
+  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     

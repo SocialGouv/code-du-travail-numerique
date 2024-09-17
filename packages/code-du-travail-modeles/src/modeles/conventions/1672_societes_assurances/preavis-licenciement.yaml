@@ -28,7 +28,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Accord relative aux dispositions particulières " Cadres ", article II. 6: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3586CF13469976784B743EB6B765BDF5.tplgfr44s_1?idArticle=KALIARTI000026688804&cidTexte=KALITEXT000005654666&dateTexte=29990101&categorieLien=id
+    "Accord relative aux dispositions particulières \" Cadres \", article II. 6": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3586CF13469976784B743EB6B765BDF5.tplgfr44s_1?idArticle=KALIARTI000026688804&cidTexte=KALITEXT000005654666&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres . classe 6:
   applicable si: classe = '6'
@@ -37,7 +37,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Accord relative aux dispositions particulières " Cadres ", article II. 6: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3586CF13469976784B743EB6B765BDF5.tplgfr44s_1?idArticle=KALIARTI000026688804&cidTexte=KALITEXT000005654666&dateTexte=29990101&categorieLien=id
+    "Accord relative aux dispositions particulières \" Cadres \", article II. 6": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3586CF13469976784B743EB6B765BDF5.tplgfr44s_1?idArticle=KALIARTI000026688804&cidTexte=KALITEXT000005654666&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres . classe 7:
   applicable si: classe = '7'
@@ -46,7 +46,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Accord relative aux dispositions particulières " Cadres ", article II. 6: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3586CF13469976784B743EB6B765BDF5.tplgfr44s_1?idArticle=KALIARTI000026688804&cidTexte=KALITEXT000005654666&dateTexte=29990101&categorieLien=id
+    "Accord relative aux dispositions particulières \" Cadres \", article II. 6": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3586CF13469976784B743EB6B765BDF5.tplgfr44s_1?idArticle=KALIARTI000026688804&cidTexte=KALITEXT000005654666&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres:
   applicable si: catégorie professionnelle = 'Noncadres'
@@ -81,7 +81,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
+    "Article 91a": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 1 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
@@ -90,7 +90,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
+    "Article 91a": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 2:
   applicable si: classe = '2'
@@ -111,7 +111,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
+    "Article 91a": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 2 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
@@ -120,7 +120,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
+    "Article 91a": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 3:
   applicable si: classe = '3'
@@ -141,7 +141,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
+    "Article 91a": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 3 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
@@ -150,7 +150,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
+    "Article 91a": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 4:
   applicable si: classe = '4'
@@ -171,7 +171,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
+    "Article 91a": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
           
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 4 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
@@ -180,4 +180,4 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 91a: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id
+    "Article 91a": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5B58FC26FD1460117AC96E23B92112B.tplgfr30s_2?idArticle=KALIARTI000005792102&cidTexte=KALITEXT000005654646&dateTexte=29990101&categorieLien=id

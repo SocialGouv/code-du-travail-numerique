@@ -179,6 +179,7 @@
       expect(screen.queryAllByText(/300/)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article L1243-8 du code du travail/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Article L1243-9 du code du travail/)[0]).toBeInTheDocument();
           
     });
   

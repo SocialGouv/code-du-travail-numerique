@@ -32,7 +32,7 @@ contrat salarié . convention collective . comptables . typeRupture Démission .
     - Les heures sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, ces absences sont fixées un jour par l'employeur et le salarié. Le salarié qui a retrouvé un emploi ne peut plus utiliser ces heures.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 6.2.2: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=182066BF8498AFCDBA859500C460D147.tplgfr41s_1?idArticle=KALIARTI000029786918&cidTexte=KALITEXT000005674852&dateTexte=29981231&categorieLien=id
+    "Article 6.2.2": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=182066BF8498AFCDBA859500C460D147.tplgfr41s_1?idArticle=KALIARTI000029786918&cidTexte=KALITEXT000005674852&dateTexte=29981231&categorieLien=id
           
 contrat salarié . convention collective . comptables . typeRupture Démission . ancienneté Moins de 5 ans:
   applicable si: ancienneté = 'Moins de 5 ans'
@@ -45,7 +45,7 @@ contrat salarié . convention collective . comptables . typeRupture Démission .
     - Les heures sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, ces absences sont fixées un jour par l'employeur et le salarié. Le salarié qui a retrouvé un emploi ne peut plus utiliser ces heures.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 6.2.2: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=182066BF8498AFCDBA859500C460D147.tplgfr41s_1?idArticle=KALIARTI000029786918&cidTexte=KALITEXT000005674852&dateTexte=29981231&categorieLien=id
+    "Article 6.2.2": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=182066BF8498AFCDBA859500C460D147.tplgfr41s_1?idArticle=KALIARTI000029786918&cidTexte=KALITEXT000005674852&dateTexte=29981231&categorieLien=id
           
 contrat salarié . convention collective . comptables . typeRupture Licenciement:
   applicable si: typeRupture = 'Licenciement'
@@ -58,13 +58,13 @@ contrat salarié . convention collective . comptables . typeRupture Licenciement
     - Les heures sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, ces absences sont fixées un jour par l'employeur et le salarié. Le salarié qui a retrouvé un emploi ne peut plus utiliser ces heures.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 6.2.2: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=182066BF8498AFCDBA859500C460D147.tplgfr41s_1?idArticle=KALIARTI000029786918&cidTexte=KALITEXT000005674852&dateTexte=29981231&categorieLien=id
+    "Article 6.2.2": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=182066BF8498AFCDBA859500C460D147.tplgfr41s_1?idArticle=KALIARTI000029786918&cidTexte=KALITEXT000005674852&dateTexte=29981231&categorieLien=id
           
 contrat salarié . convention collective . comptables . typeRupture Rupture de la période d'essai:
   applicable si: typeRupture = 'Rupture de la période d'essai'
           
 contrat salarié . convention collective . comptables . typeRupture Rupture de la période d'essai . résultat conventionnel:
-  valeur: "'D'après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d'heures d'absence autorisée pour rechercher un emploi.'"
+  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    Article 6.2.2: https//www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=182066BF8498AFCDBA859500C460D147.tplgfr41s_1?idArticle=KALIARTI000029786918&cidTexte=KALITEXT000005674852&dateTexte=29981231&categorieLien=id
+    "Article 6.2.2": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=182066BF8498AFCDBA859500C460D147.tplgfr41s_1?idArticle=KALIARTI000029786918&cidTexte=KALITEXT000005674852&dateTexte=29981231&categorieLien=id

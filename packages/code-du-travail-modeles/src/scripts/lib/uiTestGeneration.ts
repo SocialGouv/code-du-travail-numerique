@@ -9,6 +9,7 @@ function generateAction(
 ) {
   switch (type) {
     case "select":
+    case "input":
       return `
         fireEvent.change(screen.getByTestId("${questionName}"), {
           target: { value: "${text}" },
@@ -28,13 +29,21 @@ function generateAction(
 }
 
 function formatTestText(text: string) {
-  return text.replace("(", "\\(").replace(")", "\\)").replace("  ", " ").trim();
+  return text
+    .replace("(", "\\(")
+    .replace(")", "\\)")
+    .replace("  ", " ")
+    .replace(/\//g, "\\/")
+    .trim();
 }
 
-export function generateTestResult(result: OptionResult): string {
+export function generateTestResult(
+  result: OptionResult,
+  filterTexts: (texts: string[]) => string[]
+): string {
   return `
     it("should display expected answer", () => {
-      ${result.texts
+      ${filterTexts(result.texts)
         .map((text) => {
           if (!text) return "";
           const formattedText = formatTestText(text);
@@ -42,11 +51,13 @@ export function generateTestResult(result: OptionResult): string {
           `;
         })
         .join("")}
-        ${result.refs.map((ref) => {
-          const [refLabel] = formatTestText(ref.label).split(/[\n\r]+/g);
-          return `expect(screen.queryAllByText(/${refLabel}/)[0]).toBeInTheDocument();
+        ${result.refs
+          .map((ref) => {
+            const [refLabel] = formatTestText(ref.label).split(/[\n\r]+/g);
+            return `expect(screen.queryAllByText(/${refLabel}/)[0]).toBeInTheDocument();
           `;
-        })}
+          })
+          .join("")}
     });
   `;
 }
@@ -54,7 +65,8 @@ export function generateTestResult(result: OptionResult): string {
 export function generateTestOption(
   questionName: string,
   type: string,
-  option: TreeOption
+  option: TreeOption,
+  filterTexts: (texts: string[]) => string[]
 ): string {
   const { text, nextQuestion, result } = option;
   return `
@@ -70,13 +82,14 @@ export function generateTestOption(
                   generateTestOption(
                     nextQuestion.key ?? nextQuestion.name,
                     nextQuestion.type,
-                    option
+                    option,
+                    filterTexts
                   )
                 )
                 .join("")
             : ""
         }
-        ${result ? generateTestResult(result) : ""}
+        ${result ? generateTestResult(result, filterTexts) : ""}
       });
     `;
 }
@@ -112,7 +125,8 @@ function getIdccQuestion(question: TreeQuestion): TreeQuestion | null {
 
 function generateTest(
   question: TreeQuestion,
-  componentName: string
+  componentName: string,
+  filterTexts: (texts: string[]) => string[]
 ): { filename: string; content: string }[] {
   const idccQuestion = getIdccQuestion(question);
   if (!idccQuestion) {
@@ -153,13 +167,14 @@ function generateTest(
                     generateTestOption(
                       nextQuestion.key ?? nextQuestion.name,
                       nextQuestion.type,
-                      option
+                      option,
+                      filterTexts
                     )
                   )
                   .join("")
               : ""
           }
-          ${result ? generateTestResult(result) : ""}
+          ${result ? generateTestResult(result, filterTexts) : ""}
         });
       `,
       filename: `${text}.test.tsx`,
@@ -169,9 +184,10 @@ function generateTest(
 export async function generateUITestFiles(
   question: TreeQuestion,
   componentName: string,
-  path: string
+  path: string,
+  filterTexts: (texts: string[]) => string[] = (texts) => texts
 ) {
-  const tests = generateTest(question, componentName);
+  const tests = generateTest(question, componentName, filterTexts);
   console.log(`Generating files for ${componentName}:`);
   if (!fs.existsSync(path)) {
     fs.mkdirSync(path);

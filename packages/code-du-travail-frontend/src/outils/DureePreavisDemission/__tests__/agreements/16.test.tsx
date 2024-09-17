@@ -128,7 +128,9 @@
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/2 semaines/)[0]).toBeInTheDocument();
           
-        
+        expect(screen.queryAllByText(/Annexe I, chapitre Ier, article 5/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Accord du 3 février 2022, article 3/)[0]).toBeInTheDocument();
+          
     });
   
       });
