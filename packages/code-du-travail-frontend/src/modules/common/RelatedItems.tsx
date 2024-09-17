@@ -5,6 +5,7 @@ import { SOURCES } from "@socialgouv/cdtn-utils";
 import { push as matopush } from "@socialgouv/matomo-next";
 import React from "react";
 import { ListWithArrow } from "./ListWithArrow";
+import { RelatedItem } from "../../api/modules/related-items/type";
 
 const matoSelectRelated = (selection) => {
   matopush([
@@ -17,32 +18,17 @@ const matoSelectRelated = (selection) => {
 };
 
 export const RelatedItems = ({
-  items = [],
+  relatedItems = [],
 }: {
-  items: { slug?: string; source; title: string; url?: string }[];
+  relatedItems: { items: RelatedItem[]; title: string }[];
 }) => {
-  if (items.length === 0) {
+  if (relatedItems.length === 0) {
     return <></>;
   }
 
-  const isArticleSource = (source) =>
-    ![SOURCES.EXTERNALS, SOURCES.LETTERS, SOURCES.TOOLS].includes(source);
-
-  const relatedOtherItems = items
-    .filter(({ source }) => !isArticleSource(source))
-    .slice(0, 2);
-  const relatedArticleItems = items
-    .filter(({ source }) => isArticleSource(source))
-    .slice(0, 6);
-
-  const relatedGroups = [
-    { items: relatedOtherItems, title: "Modèles et outils liés" },
-    { items: relatedArticleItems, title: "Articles liés" },
-  ];
-
   return (
     <div className={fr.cx("fr-mb-5w")}>
-      {relatedGroups.map(
+      {relatedItems.map(
         ({ title, items }) =>
           items.length > 0 && (
             <div key={title}>

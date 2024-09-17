@@ -4,7 +4,7 @@ import { Share } from "../common/Share";
 import { RelatedItem } from "../../api/modules/related-items/type";
 
 type Props = {
-  relatedItems: RelatedItem[];
+  relatedItems: { items: RelatedItem[]; title: string }[];
   title: string;
   description: string;
   children: React.ReactNode;
@@ -24,7 +24,7 @@ export const ContainerRich = ({
       </div>
 
       <div className={fr.cx("fr-col-12", "fr-col-offset-md-1", "fr-col-md-4")}>
-        <RelatedItems items={relatedItems} />
+        <RelatedItems relatedItems={relatedItems} />
         <Share title={title} metaDescription={description} />
       </div>
     </div>

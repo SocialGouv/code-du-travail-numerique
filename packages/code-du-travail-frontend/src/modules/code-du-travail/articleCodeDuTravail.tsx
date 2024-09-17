@@ -10,7 +10,7 @@ type Props = {
   date: string;
   html: string;
   notaHtml?: string;
-  relatedItems: RelatedItem[];
+  relatedItems: { items: RelatedItem[]; title: string }[];
   url: string;
   suptitle: string;
   title: string;

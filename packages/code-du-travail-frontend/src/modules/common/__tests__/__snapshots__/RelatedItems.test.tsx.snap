@@ -25,9 +25,9 @@ exports[`<RelatedItems /> should render 1`] = `
           />
           <span>
             <a
-              href="external.tools"
+              href="/outils/heures-recherche-emploi"
             >
-              externalTool
+              Heures d'absence pour rechercher un emploi
             </a>
           </span>
         </li>
@@ -39,9 +39,9 @@ exports[`<RelatedItems /> should render 1`] = `
           />
           <span>
             <a
-              href="/modeles-de-courriers/modele.url"
+              href="/outils/preavis-demission"
             >
-              modele de courrier
+              Préavis de démission
             </a>
           </span>
         </li>
@@ -67,9 +67,9 @@ exports[`<RelatedItems /> should render 1`] = `
           />
           <span>
             <a
-              href="/fiche-service-public/fiche.sp.url"
+              href="https://www.service-public.fr/particuliers/vosdroits/F33164"
             >
-              fiche sp
+              Démission d'une assistante maternelle
             </a>
           </span>
         </li>
@@ -81,9 +81,23 @@ exports[`<RelatedItems /> should render 1`] = `
           />
           <span>
             <a
-              href="/contribution/contrib.url"
+              href="https://www.service-public.fr/particuliers/vosdroits/F87"
             >
-              contrib
+              Certificat de travail
+            </a>
+          </span>
+        </li>
+        <li
+          class="fr-pb-2w d_flex cg_.5rem"
+        >
+          <span
+            class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
+          />
+          <span>
+            <a
+              href="/contribution/les-conges-pour-evenements-familiaux"
+            >
+              Les congés pour événements familiaux
             </a>
           </span>
         </li>

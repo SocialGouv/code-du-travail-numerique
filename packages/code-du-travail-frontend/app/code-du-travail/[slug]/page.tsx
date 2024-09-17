@@ -45,14 +45,7 @@ async function Fiche({ params }) {
 }
 
 const getArticle = async (slug: string) => {
-  const article = await getLegalArticleBySlug(slug, [
-    "description",
-    "title",
-    "dateDebut",
-    "html",
-    "url",
-    "notaHtml",
-  ]);
+  const article = await getLegalArticleBySlug(slug);
 
   if (!article) {
     return notFound();
