@@ -1,6 +1,6 @@
 {
   "name": "@cdt/frontend",
-  "version": "4.152.0",
+  "version": "4.153.0",
   "description": "Code du travail frontend",
   "private": true,
   "homepage": "https://code-du-travail.beta.gouv.fr/",
@@ -40,7 +40,7 @@
     "@sentry/nextjs": "^8.24.0",
     "@socialgouv/cdtn-elasticsearch": "^2.44.2",
     "@socialgouv/cdtn-logger": "^2.0.0",
-    "@socialgouv/cdtn-types": "^2.48.1",
+    "@socialgouv/cdtn-types": "^2.49.1",
     "@socialgouv/cdtn-ui": "workspace:^",
     "@socialgouv/cdtn-utils": "workspace:^",
     "@socialgouv/fiches-travail-data": "^4.241.0",
@@ -96,6 +96,7 @@
     "cypress": "^13.13.2",
     "cypress-html-validate": "^6.1.0",
     "cypress-iframe": "^1.0.1",
+    "cypress-real-events": "^1.13.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "eslint-plugin-cypress": "^3.4.0",
@@ -115,7 +116,7 @@
     "stylelint-processor-styled-components": "^1.10.0",
     "supertest": "^6.3.3",
     "testing-library-selector": "0.3.1",
-    "typescript": "^5.0.4",
+    "typescript": "^5.5.4",
     "xml2js": "^0.6.2"
   }
 }

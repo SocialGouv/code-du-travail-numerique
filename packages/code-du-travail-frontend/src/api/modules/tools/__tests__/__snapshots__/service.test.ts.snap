@@ -3,19 +3,16 @@
 exports[`Tools getAllTools 1`] = `
 [
   {
-    "_id": "14",
     "displayTool": true,
     "slug": "indemnite-licenciement",
     "title": "Indemnité de licenciement",
   },
   {
-    "_id": "13",
     "displayTool": true,
     "slug": "preavis-demission",
     "title": "Préavis de démission",
   },
   {
-    "_id": "27",
     "displayTool": true,
     "slug": "heures-recherche-emploi",
     "title": "Heures d'absence pour rechercher un emploi",

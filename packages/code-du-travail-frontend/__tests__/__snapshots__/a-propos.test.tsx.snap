@@ -168,16 +168,16 @@ exports[`<About /> should render 1`] = `
       </div>
     </header>
     <div
-      class="sc-944e5bc7-0 cMXoRn"
+      class="sc-dece9658-0 fJJKoB"
     >
       <div
-        class="sc-944e5bc7-3 eEPoOo"
+        class="sc-dece9658-3 feGjCu"
       >
         <span
-          class="sc-944e5bc7-2 bhOxdP"
+          class="sc-dece9658-2 bmqpko"
         >
           <svg
-            class="sc-944e5bc7-1 jrARsm"
+            class="sc-dece9658-1 gksCEM"
             fill="none"
             height="24"
             stroke="currentColor"
@@ -206,17 +206,22 @@ exports[`<About /> should render 1`] = `
               y2="16"
             />
           </svg>
-          Votre avis compte ! Aidez-nous à nous améliorer.
+          Aidez-nous à améliorer le Code du travail numérique.
           <a
+            class="no-after"
             href="https://tally.so/r/3jLRW1"
             target="_blank"
           >
-            Répondre
+            <button
+              class="sc-95bd4344-0 dAheum"
+            >
+              Je donne mon avis
+            </button>
           </a>
         </span>
         <button
           aria-label="fermer le bandeau"
-          class="sc-95bd4344-0 dxXsic sc-944e5bc7-4 bWaIMq"
+          class="sc-95bd4344-0 dxXsic sc-dece9658-4 ikxDpw"
           title="fermer la bandeau"
         >
           <svg
