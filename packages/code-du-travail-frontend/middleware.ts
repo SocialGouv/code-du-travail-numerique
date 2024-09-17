@@ -6,7 +6,7 @@ const unsafeInDevMode =
 const replaceNewlinesAndSpace = (header) =>
   header.replace(/\s{2,}/g, " ").trim();
 
-export function cspMiddleware(request: NextRequest) {
+export function middleware(request: NextRequest) {
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
   const cspHeader = `
     connect-src 'self' https://geo.api.gouv.fr https://sentry.fabrique.social.gouv.fr https://matomo.fabrique.social.gouv.fr;
