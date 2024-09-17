@@ -6,9 +6,13 @@ import { getRouteBySource } from "@socialgouv/cdtn-utils";
 
 const MAX_RESULTS = 4;
 
+export type RelatedItemSettings = {
+  _id: string;
+};
+
 // use search based on item title : More Like This & Semantic
-export const getSearchBasedItems = async (searchString: string) => {
-  const relatedItemBody = getRelatedItemsBody(searchString);
+export const getSearchBasedItems = async (settings: RelatedItemSettings) => {
+  const relatedItemBody = getRelatedItemsBody([settings]);
   const { hits } = await elasticsearchClient.search<
     RelatedItem & { slug: string }
   >({
@@ -21,10 +25,10 @@ export const getSearchBasedItems = async (searchString: string) => {
 };
 
 export const getRelatedItems = async (
-  searchString: string,
+  settings: RelatedItemSettings,
   excludedSlug: string
 ): Promise<RelatedItem[]> => {
-  const searchBasedItems = await getSearchBasedItems(searchString);
+  const searchBasedItems = await getSearchBasedItems(settings);
 
   const filteredItems = searchBasedItems
     // avoid elements already visible within the item as fragments

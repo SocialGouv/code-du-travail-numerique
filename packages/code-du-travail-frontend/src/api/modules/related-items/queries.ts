@@ -1,7 +1,8 @@
+import { RelatedItemSettings } from "./service";
 import { sources } from "./type";
 
 export const getRelatedItemsBody = (
-  searchString: string,
+  settings: RelatedItemSettings[],
   size: number | undefined = 10
 ): any => {
   return {
@@ -19,7 +20,7 @@ export const getRelatedItemsBody = (
         must: {
           more_like_this: {
             fields: ["title", "text"],
-            like: searchString,
+            like: settings,
             max_query_terms: 12,
             min_term_freq: 1,
           },

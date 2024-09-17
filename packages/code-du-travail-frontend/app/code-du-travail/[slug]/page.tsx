@@ -1,10 +1,8 @@
 import { getLabelBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { LaborCodeArticle } from "@socialgouv/cdtn-types";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import React from "react";
 import { replaceArticlesRefs } from "../../../src/lib/replaceArticlesRefs";
-import { getBySourceAndSlugItems } from "../../../src/api";
 import { DsfrLayout } from "../../../src/modules/layout";
 import { notFound } from "next/navigation";
 import ArticleCodeDuTravail from "../../../src/modules/code-du-travail/articleCodeDuTravail";
@@ -23,9 +21,9 @@ export async function generateMetadata({ params }) {
 }
 
 async function Fiche({ params }) {
-  const { title, description, dateDebut, html, url, notaHtml } =
+  const { _id, title, description, dateDebut, html, url, notaHtml } =
     await getArticle(params.slug);
-  const relatedItems = await getRelatedItems(title , params.slug);
+  const relatedItems = await getRelatedItems({ _id }, params.slug);
 
   const fixedHtml = replaceArticlesRefs("https://legifrance.gouv.fr", html);
   return (
