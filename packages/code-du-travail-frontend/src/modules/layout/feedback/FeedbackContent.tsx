@@ -2,7 +2,6 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { Checkbox } from "@codegouvfr/react-dsfr/Checkbox";
 import { Input } from "@codegouvfr/react-dsfr/Input";
-import { css } from "../../../../styled-system/css";
 import { FeedbackActionChoiceValue } from "./tracking";
 import { useState } from "react";
 
