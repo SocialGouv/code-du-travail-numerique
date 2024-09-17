@@ -208,15 +208,11 @@ exports[`<Theme /> should render 1`] = `
           </svg>
           Aidez-nous à améliorer le Code du travail numérique.
           <a
-            class="no-after"
+            class="sc-kOPcWz jBdtLF no-after"
             href="https://tally.so/r/3jLRW1"
             target="_blank"
           >
-            <button
-              class="sc-kOPcWz jBdtLF"
-            >
-              Je donne mon avis
-            </button>
+            Je donne mon avis
           </a>
         </span>
         <button

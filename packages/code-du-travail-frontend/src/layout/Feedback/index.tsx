@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { AlertCircle } from "react-feather";
 import { MatomoBaseEvent } from "../../lib";
 import { push as matopush } from "@socialgouv/matomo-next";
+import Link from "next/link";
 
 export const Feedback = (): React.ReactNode => {
   const key = "questionnaire_dsfr_new";
@@ -60,16 +61,22 @@ export const Feedback = (): React.ReactNode => {
         <Content>
           <AlertIcon />
           Aidez-nous à améliorer le Code du travail numérique.
-          <a
-            onClick={onClick}
+          <Link
             href="https://tally.so/r/3jLRW1"
-            target="_blank"
-            className="no-after"
+            passHref
+            legacyBehavior
           >
-            <Button small variant="primary">
+            <Button
+              small
+              variant="primary"
+              as="a"
+              target="_blank"
+              onClick={onClick}
+              className="no-after"
+            >
               Je donne mon avis
             </Button>
-          </a>
+          </Link>
         </Content>
         {closeButton}
       </IntroContainer>
