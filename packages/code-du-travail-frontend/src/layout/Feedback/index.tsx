@@ -1,124 +1,74 @@
 import styled from "styled-components";
-import { Button, icons, theme } from "@socialgouv/cdtn-ui";
-import React, { useState } from "react";
-import { AlertCircle } from "react-feather";
-import { MatomoBaseEvent } from "../../lib";
-import { push as matopush } from "@socialgouv/matomo-next";
-import Link from "next/link";
+import React from "react";
+import Script from "next/script";
 
 export const Feedback = (): React.ReactNode => {
-  const key = "questionnaire_dsfr_new";
-
-  const onClose = () => {
-    matopush([
-      MatomoBaseEvent.TRACK_EVENT,
-      MatomoBaseEvent.HEADER,
-      "close_bandeau",
-    ]);
-    try {
-      if (window) {
-        window.localStorage?.setItem(key, "true");
-      }
-    } catch (e) {
-      console.error("Failed to save state to local storage");
-    } finally {
-      setClosed(true);
-    }
-  };
-
-  const onClick = () => {
-    matopush([
-      MatomoBaseEvent.TRACK_EVENT,
-      MatomoBaseEvent.HEADER,
-      "click_bandeau",
-    ]);
-  };
-
-  const getLocalStorageClose = () => {
-    try {
-      return window.localStorage?.getItem(key) === "true";
-    } catch (e) {
-      return false;
-    }
-  };
-
-  const [closed, setClosed] = useState(getLocalStorageClose());
-  const closeButton = (
-    <CloseButton
-      variant="naked"
-      small
-      narrow
-      title="fermer la bandeau"
-      aria-label="fermer le bandeau"
-      onClick={onClose}
-    >
-      <icons.Close onClick={() => onClose} title="Fermer le bandeau" />
-    </CloseButton>
-  );
-  return !closed ? (
-    <Div>
-      <IntroContainer variant="main">
-        <Content>
-          <AlertIcon />
-          Aidez-nous à améliorer le Code du travail numérique.
-          <Link
-            href="https://tally.so/r/3jLRW1"
-            passHref
-            legacyBehavior
-          >
-            <Button
-              small
-              variant="primary"
-              as="a"
-              target="_blank"
-              onClick={onClick}
-              className="no-after"
-            >
-              Je donne mon avis
-            </Button>
-          </Link>
-        </Content>
-        {closeButton}
-      </IntroContainer>
-    </Div>
-  ) : (
-    <></>
+  return (
+    <>
+      <Script id="tally-js" src="https://tally.so/widgets/embed.js"></Script>
+      <ButtonSuggestion
+        data-tally-open="3jLRW1"
+        data-tally-width="500"
+        data-tally-overlay="1"
+      >
+        <ImgSuggestion
+          alt="Suggestion"
+          src="/static/assets/img/emoj-wave.png"
+          aria-hidden="true"
+        />
+      </ButtonSuggestion>
+    </>
   );
 };
 
-const { colors, box, fonts, spacings } = theme;
-
-const Div = styled.div`
-  max-width: 1200px;
-  margin: auto;
+const ButtonSuggestion = styled.button`
+  position: fixed;
+  top: 22.5rem;
+  right: 0px;
+  width: 5.8rem;
+  height: 5.8rem;
+  background-color: hsl(220deg, calc(100% - 34%), 33%);
+  border-radius: 3rem 0px 0px 3rem;
+  font-size: 2rem;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 2px;
+  z-index: 5;
+  cursor: pointer;
 `;
 
-const AlertIcon = styled(AlertCircle)`
-  width: 24px;
-`;
-
-const Content = styled.span`
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-  gap: ${spacings.medium};
-  font-size: 1.6rem;
-  justify-content: center;
-`;
-
-const IntroContainer = styled.div`
-  border: 1px solid ${colors.secondary};
-  border-radius: ${box.borderRadius};
-  background-color: ${theme.colors.white};
-  padding: ${spacings.small};
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: ${fonts.sizes.small};
-`;
-
-const CloseButton = styled(Button)`
-  width: 24px;
-  color: ${({ theme }) => theme.secondary};
-  margin-left: auto;
+const ImgSuggestion = styled.img`
+  height: 1.4em;
+  width: 1.4em;
+  margin: 0px 0.05em 0px 0.1em;
+  vertical-align: -0.1em;
+  &:hover {
+    animation: 2.5s ease 0s infinite normal none running wiggle;
+    transform-origin: 70% 70%;
+  }
+  @keyframes wiggle {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    }
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-8deg);
+    }
+    50% {
+      transform: rotate(14deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
 `;
