@@ -291,6 +291,7 @@ exports[`<Header /> should match snapshot 1`] = `
             class="fr-header__tools"
           >
             <div
+              aria-labelledby="fr-header-search-bar-button"
               class="fr-header__search fr-modal"
               id="fr-header-search-modal"
             >

@@ -1,10 +1,10 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import { NeedMoreInfo } from "../NeedMoreInfo";
+import { PopupContent } from "../PopupContent";
 
-describe("<NeedMoreInfo />", () => {
+describe("<PopupContent />", () => {
   it("should match snapshot", () => {
-    const { container } = render(<NeedMoreInfo />);
+    const { container } = render(<PopupContent />);
     expect(container).toMatchSnapshot();
   });
 });
