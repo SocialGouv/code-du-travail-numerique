@@ -1,56 +1,82 @@
 import { useCallback, useEffect, useState } from "react";
-import { Agreement } from "../outils/types";
+import { Agreement, STORAGE_KEY_AGREEMENT } from "../outils/types";
+import { captureException } from "@sentry/nextjs";
 
-const initialValue = (key, defaultValue) => {
-  try {
-    const data = window.localStorage?.getItem(key);
-    return data !== null ? JSON.parse(data) : defaultValue;
-  } catch (error) {
-    return defaultValue;
-  }
-};
-
-const updateValueCallback = (key, setValue) => (value) => {
-  setValue(value);
-
-  try {
-    window.localStorage?.setItem(key, JSON.stringify(value));
-  } catch (error) {
-    return;
-  }
-};
-
-export function useLocalStorageOnPageLoad<T>(
-  key: string,
-  defaultValue?: Agreement
-): [T | any, (a?: any) => void] {
+export function useLocalStorageForAgreementOnPageLoad(): [
+  Agreement | any,
+  (a?: any) => void
+] {
   const [value, setValue] = useState(null);
 
   useEffect(() => {
-    updateValue(initialValue(key, defaultValue));
+    updateValue(getAgreementFromLocalStorage());
   }, []);
 
   const updateValue = useCallback(
-    (value) => updateValueCallback(key, setValue)(value),
-    [key, JSON.stringify(value)]
+    (value) => {
+      setValue(value);
+      saveAgreementToLocalStorage(value);
+    },
+    [JSON.stringify(value)]
   );
 
   return [value, updateValue];
 }
 
-export function useLocalStorage<T>(
-  key: string,
+export function useLocalStorageForAgreement(
   defaultValue?: Agreement
-): [T | any, (a?: any) => void] {
-  const [value, setValue] = useState(initialValue(key, defaultValue));
+): [Agreement | any, (a?: any) => void] {
+  const [value, setValue] = useState(
+    getAgreementFromLocalStorage() ?? defaultValue
+  );
   const updateValue = useCallback(
-    (value) => updateValueCallback(key, setValue)(value),
-
-    // INFO(@lionelb): we use the result of JSON.stringify as
-    // dependency so IE11 doesn't loop endlessly
-    // eslint-disable-next-line
-    [key, JSON.stringify(value)]
+    (value) => {
+      setValue(value);
+      saveAgreementToLocalStorage(value);
+    },
+    [JSON.stringify(value)]
   );
 
   return [value, updateValue];
 }
+
+export const saveAgreementToLocalStorage = (agreement?: Agreement | null) => {
+  try {
+    if (window?.localStorage) {
+      if (agreement) {
+        window.localStorage.setItem(
+          STORAGE_KEY_AGREEMENT,
+          JSON.stringify(agreement)
+        );
+      } else {
+        window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
+      }
+    }
+  } catch (e) {
+    console.error(e);
+    captureException(e);
+  }
+};
+
+export const getAgreementFromLocalStorage = (): Agreement | undefined => {
+  try {
+    if (window?.localStorage) {
+      const data = window.localStorage.getItem(STORAGE_KEY_AGREEMENT);
+      return data ? JSON.parse(data) : undefined;
+    }
+  } catch (e) {
+    console.error(e);
+    captureException(e);
+  }
+};
+
+export const removeAgreementFromLocalStorage = () => {
+  try {
+    if (window?.localStorage) {
+      window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
+    }
+  } catch (e) {
+    console.error(e);
+    captureException(e);
+  }
+};

@@ -168,16 +168,16 @@ exports[`<Glossaire /> should render 1`] = `
       </div>
     </header>
     <div
-      class="sc-dece9658-0 fJJKoB"
+      class="sc-cd1f80f7-0 ciFnIN"
     >
       <div
-        class="sc-dece9658-3 feGjCu"
+        class="sc-cd1f80f7-3 ddNwQq"
       >
         <span
-          class="sc-dece9658-2 bmqpko"
+          class="sc-cd1f80f7-2 iSZaIc"
         >
           <svg
-            class="sc-dece9658-1 gksCEM"
+            class="sc-cd1f80f7-1 eUdlFw"
             fill="none"
             height="24"
             stroke="currentColor"
@@ -208,20 +208,16 @@ exports[`<Glossaire /> should render 1`] = `
           </svg>
           Aidez-nous à améliorer le Code du travail numérique.
           <a
-            class="no-after"
+            class="sc-95bd4344-0 dAheum no-after"
             href="https://tally.so/r/3jLRW1"
             target="_blank"
           >
-            <button
-              class="sc-95bd4344-0 dAheum"
-            >
-              Je donne mon avis
-            </button>
+            Je donne mon avis
           </a>
         </span>
         <button
           aria-label="fermer le bandeau"
-          class="sc-95bd4344-0 dxXsic sc-dece9658-4 ikxDpw"
+          class="sc-95bd4344-0 dxXsic sc-cd1f80f7-4 eVEshs"
           title="fermer la bandeau"
         >
           <svg
