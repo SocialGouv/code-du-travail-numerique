@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.154.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.153.0...v4.154.0) (2024-09-19)
+
+### Bug Fixes
+
+- **deps:** update dependency next to v14.2.10 [security] ([05bf2b0](https://github.com/SocialGouv/code-du-travail-numerique/commit/05bf2b039244748a47097215b087f957299cc3ad))
+- **e2e:** mis à jour de la contribution ([#6115](https://github.com/SocialGouv/code-du-travail-numerique/issues/6115)) ([536e4c8](https://github.com/SocialGouv/code-du-travail-numerique/commit/536e4c82d843ab2e89737af39c766bc9014ec3e0))
+- **html:** modification du bouton sur le bandeau pour avoir un html valide ([#6133](https://github.com/SocialGouv/code-du-travail-numerique/issues/6133)) ([b3d7c73](https://github.com/SocialGouv/code-du-travail-numerique/commit/b3d7c7306da4f56b8d4e8ac4e7568a25b0a2d906))
+
+### Features
+
+- **conventions-collectives:** désactiver le click sur les CCs 9999 + ignorer les events matomos sur celles-ci ([#6095](https://github.com/SocialGouv/code-du-travail-numerique/issues/6095)) ([837559b](https://github.com/SocialGouv/code-du-travail-numerique/commit/837559becfdb02bd975c405f5caed0d787610ce5))
+- implement feedback hand wave ([#6145](https://github.com/SocialGouv/code-du-travail-numerique/issues/6145)) ([bf88fa0](https://github.com/SocialGouv/code-du-travail-numerique/commit/bf88fa05824af9eaf226cb806f7143dbd12b1cde))
+
 # [4.153.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.152.0...v4.153.0) (2024-09-11)
 
 ### Bug Fixes
