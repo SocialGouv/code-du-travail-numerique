@@ -31,7 +31,7 @@ exports[`<NeedMoreInfo /> should match snapshot 1`] = `
             <button
               aria-controls="more-info-modal"
               class="fr-btn fr-btn--secondary fr-icon-chat-3-line fr-btn--icon-right"
-              data-fr-opened="true"
+              data-fr-opened="false"
               id="more-info-modal-control-button"
             >
               Trouver les services près de chez moi
@@ -40,7 +40,7 @@ exports[`<NeedMoreInfo /> should match snapshot 1`] = `
               aria-controls="more-info-modal"
               aria-hidden="true"
               class="fr-btn fr-hidden"
-              data-fr-opened="true"
+              data-fr-opened="false"
               id="more-info-modal-hidden-control-button"
               tabindex="-1"
               type="button"
@@ -88,7 +88,7 @@ exports[`<NeedMoreInfo /> should match snapshot 1`] = `
                           Les services du ministère du Travail
                         </h1>
                         <h2
-                          class="fr-text--xl"
+                          class="fr-h5"
                         >
                           Contact téléphonique
                         </h2>
@@ -107,7 +107,7 @@ exports[`<NeedMoreInfo /> should match snapshot 1`] = `
                           />
                         </a>
                         <h2
-                          class="fr-text--xl fr-mt-3w"
+                          class="fr-h5 fr-mt-3w"
                         >
                           Contact par email et prise de rendez-vous
                         </h2>

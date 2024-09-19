@@ -3,7 +3,7 @@
 exports[`<PopupContent /> should match snapshot 1`] = `
 <div>
   <h2
-    class="fr-text--xl"
+    class="fr-h5"
   >
     Contact téléphonique
   </h2>
@@ -22,7 +22,7 @@ exports[`<PopupContent /> should match snapshot 1`] = `
     />
   </a>
   <h2
-    class="fr-text--xl fr-mt-3w"
+    class="fr-h5 fr-mt-3w"
   >
     Contact par email et prise de rendez-vous
   </h2>
