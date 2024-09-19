@@ -1,8 +1,17 @@
 import styled from "styled-components";
 import React from "react";
 import Script from "next/script";
+import { push as matopush } from "@socialgouv/matomo-next";
+import { MatomoBaseEvent } from "../../lib";
 
 export const Feedback = (): React.ReactNode => {
+  const onClick = () => {
+    matopush([
+      MatomoBaseEvent.TRACK_EVENT,
+      MatomoBaseEvent.HEADER,
+      "click_bandeau",
+    ]);
+  };
   return (
     <>
       <Script id="tally-js" src="https://tally.so/widgets/embed.js"></Script>
@@ -13,6 +22,7 @@ export const Feedback = (): React.ReactNode => {
         aria-label="Donner votre avis"
         aria-haspopup="dialog"
         aria-expanded="false"
+        onClick={onClick}
       >
         <ImgSuggestion
           alt="Suggestion"
