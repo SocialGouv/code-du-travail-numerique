@@ -48,6 +48,13 @@ export const Feedback = () => {
         <FeedbackContent onSubmit={onSubmit} type="positive" />
       )}
       {viewFeedback === "answered" && <FeedbackAnswered />}
+      <button
+        onClick={() => {
+          throw new Error("hello");
+        }}
+      >
+        THROW ERROR
+      </button>
     </div>
   );
 };

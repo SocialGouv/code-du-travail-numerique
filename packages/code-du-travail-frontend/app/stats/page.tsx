@@ -19,7 +19,6 @@ const getStats = cache(async () => {
 });
 
 async function Index() {
-  throw new Error("hello");
   const data = await getStats();
 
   return (
