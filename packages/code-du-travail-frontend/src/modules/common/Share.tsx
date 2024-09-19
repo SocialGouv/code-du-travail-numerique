@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { push as matopush } from "@socialgouv/matomo-next";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { usePathname } from "next/navigation";
 import { SITE_URL } from "../../config";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "../../../styled-system/css";
+import { useCommonTracking } from "./tracking";
 
 type Props = {
   title: string;
@@ -15,11 +15,13 @@ type Props = {
 
 export const Share = ({ title, metaDescription }: Props): JSX.Element => {
   const [isUrlCopied, setUrlCopied] = useState(false);
+  const { emitClickShare } = useCommonTracking();
 
   const currentPageUrl = (SITE_URL + usePathname()) as string;
   const copylink = () => {
     navigator?.clipboard?.writeText(currentPageUrl);
   };
+
   return (
     <div className={fr.cx("fr-follow__social")}>
       <p>Partager la page</p>
@@ -34,12 +36,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {
-              matopush([
-                "trackEvent",
-                "clic_share",
-                currentPageUrl,
-                "facebook",
-              ]);
+              emitClickShare("facebook");
             }}
           >
             Facebook
@@ -55,7 +52,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {
-              matopush(["trackEvent", "clic_share", currentPageUrl, "twitter"]);
+              emitClickShare("twitter");
             }}
           >
             X (anciennement Twitter)
@@ -71,12 +68,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {
-              matopush([
-                "trackEvent",
-                "clic_share",
-                currentPageUrl,
-                "linkedin",
-              ]);
+              emitClickShare("linkedin");
             }}
           >
             Linkedin
@@ -93,7 +85,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
               `${metaDescription}\n\n${currentPageUrl}`
             )}`}`}
             onClick={() => {
-              matopush(["trackEvent", "clic_share", currentPageUrl, "email"]);
+              emitClickShare("email");
             }}
           >
             Courriel
@@ -109,12 +101,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {
-              matopush([
-                "trackEvent",
-                "clic_share",
-                currentPageUrl,
-                "whatsapp",
-              ]);
+              emitClickShare("whatsapp");
             }}
           >
             Whatsapp
@@ -137,12 +124,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
               iconId="ri-links-line"
               title="Copier le lien"
               onClick={() => {
-                matopush([
-                  "trackEvent",
-                  "clic_share",
-                  currentPageUrl,
-                  "copier",
-                ]);
+                emitClickShare("copier");
                 copylink();
                 setUrlCopied(true);
               }}

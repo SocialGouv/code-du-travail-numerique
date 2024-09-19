@@ -6,7 +6,7 @@ import { PopupContent } from "./PopupContent";
 
 export const needMoreInfoModal = createModal({
   id: "more-info-modal",
-  isOpenedByDefault: true,
+  isOpenedByDefault: false,
 });
 
 export const NeedMoreInfo = () => {

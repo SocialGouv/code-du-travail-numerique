@@ -20,6 +20,11 @@ const MAX_LENGTH = 150;
 export const FeedbackContent = (props: Props) => {
   const [categories, setCategories] = useState<FeedbackActionChoiceValue[]>([]);
   const [suggestion, setSuggestion] = useState<string | undefined>(undefined);
+  const [hasCheckBoxError, setHasCheckBoxError] = useState<boolean>(false);
+  const [hasSuggestionError, setHasSuggestionError] = useState<boolean>(false);
+  const [errorMessageCheckbox, setErrorMessageCheckbox] = useState<string>("");
+  const [errorMessageSuggestion, setErrorMessageSuggestion] =
+    useState<string>("");
 
   const onChangeCategories = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCategories((prev) => {
@@ -43,13 +48,26 @@ export const FeedbackContent = (props: Props) => {
       (!suggestion || suggestion.trim().length <= 0) &&
       categories.length === 0
     ) {
-      alert("Veuillez renseigner au minimum un champ");
-      return;
+      setHasCheckBoxError(true);
+      setHasSuggestionError(true);
+      setErrorMessageCheckbox(
+        "Veuillez sélectionner au moins une option ou faire une suggestion"
+      );
+      setErrorMessageSuggestion(
+        props.type === "negative"
+          ? "Veuillez renseigner au minimum ce champ ou sélectionner une option"
+          : "Veuillez renseigner ce champ"
+      );
+    } else {
+      setHasCheckBoxError(false);
+      setHasSuggestionError(false);
+      setErrorMessageCheckbox("");
+      setErrorMessageSuggestion("");
+      props.onSubmit({
+        categories,
+        suggestion,
+      });
     }
-    props.onSubmit({
-      categories,
-      suggestion,
-    });
   };
 
   return (
@@ -93,6 +111,8 @@ export const FeedbackContent = (props: Props) => {
               },
             },
           ]}
+          state={hasCheckBoxError ? "error" : "default"}
+          stateRelatedMessage={errorMessageCheckbox}
         />
       )}
       <Input
@@ -102,6 +122,8 @@ export const FeedbackContent = (props: Props) => {
           onChange: (e) => onChangeSuggestion(e.target.value),
           value: suggestion,
         }}
+        state={hasSuggestionError ? "error" : "default"}
+        stateRelatedMessage={errorMessageSuggestion}
       />
       <p className={fr.cx("fr-info-text", "fr-mt-0", "fr-mb-3w")}>
         {`${MAX_LENGTH} caractères maximum`}

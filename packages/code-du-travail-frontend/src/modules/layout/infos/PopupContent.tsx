@@ -18,6 +18,7 @@ type ServiceRenseignement = {
 export function PopupContent() {
   const currentPathName = usePathname();
   const [department, setDepartment] = useState<string>("");
+  const [hasSearched, setHasSearched] = useState<boolean>(false);
   const [result, setResult] = useState<undefined | ServiceRenseignement>(
     undefined
   );
@@ -27,6 +28,7 @@ export function PopupContent() {
     const departmentNum = (department.replace(/^0+/, "") || "").toLowerCase();
     const departmentData = servicesDeRenseignement[departmentNum];
     setResult(departmentData);
+    setHasSearched(true);
   };
 
   const onClickLinkPhoneNumber = () => {
@@ -39,7 +41,7 @@ export function PopupContent() {
 
   return (
     <>
-      <h2 className={fr.cx("fr-text--xl")}>Contact téléphonique</h2>
+      <h2 className={fr.cx("fr-h5")}>Contact téléphonique</h2>
       <a href="tel:+33806000126" onClick={onClickLinkPhoneNumber}>
         <Image
           src="/static/assets/img/srdt.svg"
@@ -48,7 +50,7 @@ export function PopupContent() {
           height={100}
         />
       </a>
-      <h2 className={fr.cx("fr-text--xl", "fr-mt-3w")}>
+      <h2 className={fr.cx("fr-h5", "fr-mt-3w")}>
         Contact par email et prise de rendez-vous
       </h2>
       <Input
@@ -74,9 +76,15 @@ export function PopupContent() {
         }}
       />
       {result && (
-        <a href={result.url} target="_blank">
+        <a className={fr.cx("fr-link")} href={result.url} target="_blank">
           {result.url}
         </a>
+      )}
+      {hasSearched && !result && (
+        <p className={fr.cx("fr-error-text", "fr-text--md")}>
+          Aucun service de renseignement n&apos;a été trouvé pour ce
+          département.
+        </p>
       )}
       <div className={fr.cx("fr-mt-3w")}>
         <p className={fr.cx("fr-text--sm", "fr-mb-0")}>

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { DsfrLayout } from "../../src/modules/layout";
-import { PrivacyPolicy } from "../../src/modules/privacyPolicy";
+import { PrivacyPolicy } from "../../src/modules/privacy-policy";
 
 export const metadata: Metadata = {
   title: "Politique de confidentialité",

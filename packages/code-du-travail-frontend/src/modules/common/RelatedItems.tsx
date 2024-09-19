@@ -2,25 +2,16 @@
 
 import { fr } from "@codegouvfr/react-dsfr";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { push as matopush } from "@socialgouv/matomo-next";
 import React from "react";
 import { ListWithArrow } from "./ListWithArrow";
-
-const matoSelectRelated = (selection) => {
-  matopush([
-    "trackEvent",
-    "selectRelated",
-    JSON.stringify({
-      selection,
-    }),
-  ]);
-};
+import { useCommonTracking } from "./tracking";
 
 export const RelatedItems = ({
   items = [],
 }: {
   items: { slug?: string; source; title: string; url?: string }[];
 }) => {
+  const { emitSelectRelated } = useCommonTracking();
   if (items.length === 0) {
     return <></>;
   }
@@ -61,7 +52,7 @@ export const RelatedItems = ({
                       key={href}
                       href={href}
                       onClick={() =>
-                        matoSelectRelated(
+                        emitSelectRelated(
                           // legacy : we do not include the leading '/' in the selection
                           source != SOURCES.EXTERNALS ? href!.slice(1) : href
                         )

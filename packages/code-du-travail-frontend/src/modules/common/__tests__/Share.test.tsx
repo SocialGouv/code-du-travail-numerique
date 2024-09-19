@@ -22,27 +22,30 @@ describe("<Share />", () => {
   });
 
   it.each`
-    linkText          | event
-    ${"Facebook"}     | ${"facebook"}
+    linkText                      | event
+    ${"Facebook"}                 | ${"facebook"}
     ${"X (anciennement Twitter)"} | ${"twitter"}
-    ${"Linkedin"}    | ${"linkedin"}
-    ${"Courriel"}  | ${"email"}
-    ${"Whatsapp"}  | ${"whatsapp"}
-    ${"Lien de copie"}  | ${"copier"}
-  `("should track when click on link $linkText", async ({linkText, event}) => {
-    jest.resetAllMocks();
+    ${"Linkedin"}                 | ${"linkedin"}
+    ${"Courriel"}                 | ${"email"}
+    ${"Whatsapp"}                 | ${"whatsapp"}
+    ${"Lien de copie"}            | ${"copier"}
+  `(
+    "should track when click on link $linkText",
+    async ({ linkText, event }) => {
+      jest.resetAllMocks();
 
-    const { getByText } = render(
-      <Share title="HELLO" metaDescription="Ceci est ma page" />
-    );
-    const link = getByText(linkText);
-    link.click();
+      const { getByText } = render(
+        <Share title="HELLO" metaDescription="Ceci est ma page" />
+      );
+      const link = getByText(linkText);
+      link.click();
 
-    expect(matopush).toHaveBeenCalledWith([
-      "trackEvent",
-      "clic_share",
-      "http://api.url/my-page",
-      event,
-    ]);
-  });
+      expect(matopush).toHaveBeenCalledWith([
+        "trackEvent",
+        "clic_share",
+        "http://api.url/my-page",
+        event,
+      ]);
+    }
+  );
 });
