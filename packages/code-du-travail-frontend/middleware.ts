@@ -10,7 +10,7 @@ export function middleware(request: NextRequest) {
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
   const cspHeader = `
     connect-src 'self' https://geo.api.gouv.fr https://sentry.fabrique.social.gouv.fr https://matomo.fabrique.social.gouv.fr;
-    script-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr ${unsafeInDevMode} 'nonce-${nonce}' 'strict-dynamic';
+    script-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr ${unsafeInDevMode} 'nonce-${nonce}';
     img-src 'self' https://travail-emploi.gouv.fr https://www.service-public.fr https://cdtn-prod-public.s3.gra.io.cloud.ovh.net https://matomo.fabrique.social.gouv.fr data:;
     frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr *.dailymotion.com;
     worker-src 'self' blob:;
