@@ -4,6 +4,7 @@ import { Tag } from "@codegouvfr/react-dsfr/Tag";
 import Html from "../common/Html";
 import { ContainerRich } from "../layout/ContainerRich";
 import { RelatedItem } from "../../api/modules/related-items/type";
+import { Feedback } from "../layout/feedback";
 
 type Props = {
   metaDescription: string;
@@ -47,11 +48,12 @@ function ArticleCodeDuTravail({
         <Html>{html}</Html>
       </div>
       {notaHtml && (
-        <div className={fr.cx("fr-highlight","fr-mb-5w")}>
+        <div className={fr.cx("fr-highlight", "fr-mb-5w")}>
           <p>NOTA</p>
           <Html>{notaHtml}</Html>
         </div>
       )}
+      <Feedback />
     </ContainerRich>
   );
 }

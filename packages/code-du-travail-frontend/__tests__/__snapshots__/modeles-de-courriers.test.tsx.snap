@@ -168,16 +168,16 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
       </div>
     </header>
     <div
-      class="sc-944e5bc7-0 cMXoRn"
+      class="sc-cd1f80f7-0 ciFnIN"
     >
       <div
-        class="sc-944e5bc7-3 eEPoOo"
+        class="sc-cd1f80f7-3 ddNwQq"
       >
         <span
-          class="sc-944e5bc7-2 bhOxdP"
+          class="sc-cd1f80f7-2 iSZaIc"
         >
           <svg
-            class="sc-944e5bc7-1 jrARsm"
+            class="sc-cd1f80f7-1 eUdlFw"
             fill="none"
             height="24"
             stroke="currentColor"
@@ -206,17 +206,18 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               y2="16"
             />
           </svg>
-          Votre avis compte ! Aidez-nous à nous améliorer.
+          Aidez-nous à améliorer le Code du travail numérique.
           <a
+            class="sc-95bd4344-0 dAheum no-after"
             href="https://tally.so/r/3jLRW1"
             target="_blank"
           >
-            Répondre
+            Je donne mon avis
           </a>
         </span>
         <button
           aria-label="fermer le bandeau"
-          class="sc-95bd4344-0 dxXsic sc-944e5bc7-4 bWaIMq"
+          class="sc-95bd4344-0 dxXsic sc-cd1f80f7-4 eVEshs"
           title="fermer la bandeau"
         >
           <svg
@@ -265,7 +266,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             </p>
           </header>
           <div
-            class="sc-5a2c6b8f-0 yOEut sc-f36c6fc-2 cQpmLT"
+            class="sc-5a2c6b8f-0 yOEut sc-496f89b6-2 RBhuQ"
           >
             <select
               class="sc-5a2c6b8f-2 leEqvE"
@@ -318,15 +319,15 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             </div>
           </div>
           <ul
-            class="sc-ab356c14-0 sc-f36c6fc-0 bpNHPl dRUUmx"
+            class="sc-ab356c14-0 sc-496f89b6-0 bpNHPl eaxYjO"
           >
             <h2
-              class="sc-f36c6fc-3 gWQLPi sc-b879fc2d-0 hyiHle"
+              class="sc-496f89b6-3 ognPt sc-b879fc2d-0 hyiHle"
             >
               Embauche et contrat de travail
             </h2>
             <li
-              class="sc-f36c6fc-1 kJkExl"
+              class="sc-496f89b6-1 iHMoBq"
             >
               <div
                 class="sc-d47d8018-0 cDsGtD"
@@ -383,12 +384,12 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               </div>
             </li>
             <h2
-              class="sc-f36c6fc-3 gWQLPi sc-b879fc2d-0 hyiHle"
+              class="sc-496f89b6-3 ognPt sc-b879fc2d-0 hyiHle"
             >
               Départ de l'entreprise
             </h2>
             <li
-              class="sc-f36c6fc-1 kJkExl"
+              class="sc-496f89b6-1 iHMoBq"
             >
               <div
                 class="sc-d47d8018-0 cDsGtD"

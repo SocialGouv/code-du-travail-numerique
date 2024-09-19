@@ -1,3 +1,4 @@
+import { SearchRequest } from "@elastic/elasticsearch/lib/api/types";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import { getLegalArticle } from "./queries";
 import { DocumentElasticResult, ElasticLaborCodeArticle } from "./type";
@@ -8,12 +9,12 @@ export const getItemBySlug = async <
   K extends keyof DocumentElasticResult<V>
 >(
   fields: K[],
-  body: any
+  body: SearchRequest
 ): Promise<DocumentElasticResult<V> | undefined> => {
   const response = await elasticsearchClient.search<V>({
-    ...body,
     _source: fields,
     index: elasticDocumentsIndex,
+    ...body,
   });
   if (response.hits.hits.length === 0) {
     return;

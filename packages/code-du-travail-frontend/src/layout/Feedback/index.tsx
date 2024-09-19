@@ -2,12 +2,19 @@ import styled from "styled-components";
 import { Button, icons, theme } from "@socialgouv/cdtn-ui";
 import React, { useState } from "react";
 import { AlertCircle } from "react-feather";
+import { MatomoBaseEvent } from "../../lib";
+import { push as matopush } from "@socialgouv/matomo-next";
 import Link from "next/link";
 
 export const Feedback = (): React.ReactNode => {
-  const key = "questionnaire_dsfr";
+  const key = "questionnaire_dsfr_new";
 
   const onClose = () => {
+    matopush([
+      MatomoBaseEvent.TRACK_EVENT,
+      MatomoBaseEvent.HEADER,
+      "close_bandeau",
+    ]);
     try {
       if (window) {
         window.localStorage?.setItem(key, "true");
@@ -17,6 +24,14 @@ export const Feedback = (): React.ReactNode => {
     } finally {
       setClosed(true);
     }
+  };
+
+  const onClick = () => {
+    matopush([
+      MatomoBaseEvent.TRACK_EVENT,
+      MatomoBaseEvent.HEADER,
+      "click_bandeau",
+    ]);
   };
 
   const getLocalStorageClose = () => {
@@ -37,10 +52,7 @@ export const Feedback = (): React.ReactNode => {
       aria-label="fermer le bandeau"
       onClick={onClose}
     >
-      <icons.Close
-        onClick={() => onClose}
-        title="Fermer le bandeau"
-      />
+      <icons.Close onClick={() => onClose} title="Fermer le bandeau" />
     </CloseButton>
   );
   return !closed ? (
@@ -48,9 +60,22 @@ export const Feedback = (): React.ReactNode => {
       <IntroContainer variant="main">
         <Content>
           <AlertIcon />
-          Votre avis compte ! Aidez-nous à nous améliorer.
-          <Link passHref href="https://tally.so/r/3jLRW1" target="_blank">
-            Répondre
+          Aidez-nous à améliorer le Code du travail numérique.
+          <Link
+            href="https://tally.so/r/3jLRW1"
+            passHref
+            legacyBehavior
+          >
+            <Button
+              small
+              variant="primary"
+              as="a"
+              target="_blank"
+              onClick={onClick}
+              className="no-after"
+            >
+              Je donne mon avis
+            </Button>
           </Link>
         </Content>
         {closeButton}
@@ -77,6 +102,7 @@ const Content = styled.span`
   align-items: center;
   flex-grow: 1;
   gap: ${spacings.medium};
+  font-size: 1.6rem;
   justify-content: center;
 `;
 

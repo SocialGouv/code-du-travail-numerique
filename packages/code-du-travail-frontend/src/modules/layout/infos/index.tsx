@@ -1,10 +1,17 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { css } from "../../../styled-system/css";
+import { css } from "../../../../styled-system/css";
+import { createModal } from "@codegouvfr/react-dsfr/Modal";
+import { PopupContent } from "./PopupContent";
+
+export const needMoreInfoModal = createModal({
+  id: "more-info-modal",
+  isOpenedByDefault: false,
+});
 
 export const NeedMoreInfo = () => {
   return (
-    <div className={mainContainer}>
+    <div className={mainContainer} id="more-info">
       <div className={fr.cx("fr-container")}>
         <div className={fr.cx("fr-grid-row", "fr-grid-row--center")}>
           <div className={`${fr.cx("fr-col-md-6", "fr-py-6w")}`}>
@@ -19,9 +26,13 @@ export const NeedMoreInfo = () => {
                 iconId="fr-icon-chat-3-line"
                 iconPosition="right"
                 priority="secondary"
+                nativeButtonProps={needMoreInfoModal.buttonProps}
               >
                 Trouver les services près de chez moi
               </Button>
+              <needMoreInfoModal.Component title="Les services du ministère du Travail">
+                <PopupContent />
+              </needMoreInfoModal.Component>
             </div>
           </div>
         </div>

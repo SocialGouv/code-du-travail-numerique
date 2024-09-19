@@ -75,6 +75,7 @@ export const Header = () => {
         />
       )}
       onSearchButtonClick={onSearchSubmit}
+
     />
   );
 };

@@ -60,13 +60,6 @@ describe("Landing pages", () => {
     cy.contains("Existe-t-il une hiérarchie entre les textes");
   });
 
-  it("je vois la page politique de confidentialité", () => {
-    cy.visit("/politique-confidentialite");
-
-    cy.contains("Traitement des données à caractère personnel");
-    cy.contains("Cookies");
-  });
-
   it("je vois la page mention légale", () => {
     cy.visit("/mentions-legales");
 

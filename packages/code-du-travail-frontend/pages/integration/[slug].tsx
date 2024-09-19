@@ -48,12 +48,12 @@ const IntegrationPage = (props): JSX.Element => {
 const keys = Object.keys(integrationData);
 
 const getModelesList = async () => {
-  const modeles = await getAllModeles();
+  const modeles = await getAllModeles(["title", "cdtnId"]);
   return modeles
     .map((item) => {
       return {
-        label: item?.title ?? "",
-        value: item?.cdtnId ?? "",
+        label: item.title,
+        value: item.cdtnId,
       };
     })
     ?.sort((a, b) => a.label.localeCompare(b.label));
@@ -67,10 +67,7 @@ export const getServerSideProps = async ({ query, req }) => {
     };
   }
   const { isModele } = integrationData[slug];
-  let selectOptions;
-  if (isModele) {
-    selectOptions = await getModelesList();
-  }
+  const selectOptions = isModele ? await getModelesList() : null;
 
   const hostname: string = req.headers.host;
   const [protocol] = req.headers["x-forwarded-proto"]

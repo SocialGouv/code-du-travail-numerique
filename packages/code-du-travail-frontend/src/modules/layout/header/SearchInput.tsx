@@ -1,10 +1,10 @@
 import { HTMLInputTypeAttribute, useState } from "react";
 import { useCombobox } from "downshift";
-import { push as matopush } from "@socialgouv/matomo-next";
 import { fetchSuggestResults } from "./fetchSuggestResults";
 import { SUGGEST_MAX_RESULTS } from "../../../config";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "../../../../styled-system/css";
+import { useLayoutTracking } from "../tracking";
 
 type Props = {
   id: string;
@@ -17,6 +17,7 @@ type Props = {
 export const SearchInput = (props: Props) => {
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState<string[]>([]);
+  const { emitSuggestionEvent } = useLayoutTracking();
 
   const {
     isOpen,
@@ -40,12 +41,7 @@ export const SearchInput = (props: Props) => {
     onSelectedItemChange(changes) {
       const suggestion = changes.selectedItem;
       if (suggestion) {
-        matopush(["trackEvent", "selectedSuggestion", query, suggestion]);
-        matopush([
-          "trackEvent",
-          "candidateSuggestions",
-          suggestions.join("###"),
-        ]);
+        emitSuggestionEvent(query, suggestion, suggestions);
         props.onSearchSubmit(suggestion);
       }
     },

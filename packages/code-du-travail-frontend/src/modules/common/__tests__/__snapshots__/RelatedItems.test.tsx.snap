@@ -67,23 +67,9 @@ exports[`<RelatedItems /> should render 1`] = `
           />
           <span>
             <a
-              href="https://www.service-public.fr/particuliers/vosdroits/F33164"
+              href="/fiche-service-public/le-salarie-peut-il-prendre-des-conges-payes-pendant-son-preavis"
             >
-              Démission d'une assistante maternelle
-            </a>
-          </span>
-        </li>
-        <li
-          class="fr-pb-2w d_flex cg_.5rem"
-        >
-          <span
-            class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
-          />
-          <span>
-            <a
-              href="https://www.service-public.fr/particuliers/vosdroits/F87"
-            >
-              Certificat de travail
+              Le salarié peut-il prendre des congés payés pendant son préavis ?
             </a>
           </span>
         </li>
@@ -98,6 +84,20 @@ exports[`<RelatedItems /> should render 1`] = `
               href="/contribution/les-conges-pour-evenements-familiaux"
             >
               Les congés pour événements familiaux
+            </a>
+          </span>
+        </li>
+        <li
+          class="fr-pb-2w d_flex cg_.5rem"
+        >
+          <span
+            class="ri-arrow-right-line c_var(--artwork-minor-blue-cumulus)"
+          />
+          <span>
+            <a
+              href="https://www.moncompteformation.gouv.fr"
+            >
+              Mon compte formation
             </a>
           </span>
         </li>
