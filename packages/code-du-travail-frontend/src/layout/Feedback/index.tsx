@@ -10,6 +10,9 @@ export const Feedback = (): React.ReactNode => {
         data-tally-open="3jLRW1"
         data-tally-width="500"
         data-tally-overlay="1"
+        aria-label="Donner votre avis"
+        aria-haspopup="dialog"
+        aria-expanded="false"
       >
         <ImgSuggestion
           alt="Suggestion"
