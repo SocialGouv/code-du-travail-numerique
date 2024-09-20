@@ -59,6 +59,7 @@
     "katex": "^0.16.10",
     "lit": "2.6.1",
     "lodash.deburr": "^4.1.0",
+    "matomo-tracker": "^2.2.4",
     "memoizee": "^0.4.15",
     "next": "14.2.10",
     "p-debounce": "^2.1.0",

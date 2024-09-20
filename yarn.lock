@@ -1913,6 +1913,7 @@ __metadata:
     lint-staged: ^13.0.0
     lit: 2.6.1
     lodash.deburr: ^4.1.0
+    matomo-tracker: ^2.2.4
     memoizee: ^0.4.15
     mockdate: ^3.0.5
     next: 14.2.10
@@ -17108,6 +17109,13 @@ __metadata:
   version: 2.1.3
   resolution: "mathml-tag-names@npm:2.1.3"
   checksum: 1201a25a137d6b9e328facd67912058b8b45b19a6c4cc62641c9476195da28a275ca6e0eca070af5378b905c2b11abc1114676ba703411db0b9ce007de921ad0
+  languageName: node
+  linkType: hard
+
+"matomo-tracker@npm:^2.2.4":
+  version: 2.2.4
+  resolution: "matomo-tracker@npm:2.2.4"
+  checksum: 46082b5f8d50ddfe52ca8f35e54692c8a858bc807f7949044ef04a74de95e348ec4737a7e39c9120d172988fe278f8889ea553df450bc417fd2aa7c9c20a0d36
   languageName: node
   linkType: hard
 
