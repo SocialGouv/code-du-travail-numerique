@@ -1,6 +1,7 @@
 import React from "react";
 import { IconError } from "./IconError";
 import { fr } from "@codegouvfr/react-dsfr";
+import Link from "next/link";
 
 export const NotFound: React.FC = () => {
   return (
@@ -35,9 +36,9 @@ export const NotFound: React.FC = () => {
         </p>
         <ul className={fr.cx("fr-btns-group", "fr-btns-group--inline-md")}>
           <li>
-            <a className={fr.cx("fr-btn")} href="/">
+            <Link className={fr.cx("fr-btn")} href="/">
               Page d&apos;accueil
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
