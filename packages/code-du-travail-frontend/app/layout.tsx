@@ -7,7 +7,7 @@ import { defaultColorScheme } from "../src/modules/config/defaultColorScheme";
 import { StartDsfr } from "../src/modules/config/StartDsfr";
 import { Metadata } from "next/types";
 import { SITE_URL } from "../src/config";
-import { MatomoAnalytics } from "../src/modules/utils/matomo";
+import { MatomoAnalytics } from "../src/modules/config/MatomoAnalytics";
 
 export const metadata: Metadata = {
   title: {
