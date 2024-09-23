@@ -211,13 +211,13 @@ exports[`<MentionLegales /> should render 1`] = `
           >
             <p>
               Le site est édité par la
-
+               
               <a
                 href="https://www.fabrique.social.gouv.fr/"
               >
                 fabrique des Ministères sociaux
               </a>
-
+               
               située :
             </p>
             <address
@@ -276,7 +276,7 @@ exports[`<MentionLegales /> should render 1`] = `
             >
               <p>
                 Le code du logiciel est libre, et peut donc être vérifié et amélioré par toutes et tous à l’adresse suivante:
-
+                 
                 <a
                   href="https://github.com/SocialGouv/code-du-travail-numerique"
                 >
@@ -307,7 +307,7 @@ exports[`<MentionLegales /> should render 1`] = `
             </h3>
             <p>
               Si vous rencontrez un défaut d’accessibilité vous empêchant d’accéder à un contenu ou une fonctionnalité du site,
-
+               
               <a
                 href="mailto:codedutravailnumerique@travail.gouv.fr"
                 title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
@@ -325,7 +325,7 @@ exports[`<MentionLegales /> should render 1`] = `
             </h3>
             <p>
               Pour en savoir plus sur la politique d’accessibilité numérique de l’État :
-
+               
               <a
                 href="https://accessibilite.numerique.gouv.fr/"
               >
