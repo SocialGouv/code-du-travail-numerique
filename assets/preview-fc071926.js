@@ -94,8 +94,8 @@ import{$ as s,j as t,L as g}from"./styled-components.browser.esm-525a869c.js";im
     text-decoration-color: ${({theme:e})=>e.secondary};
   }
   a[target="_blank"]:not(.no-after):after,
-  a[href^="http://"]:not(.no-after):not([href*="social.gouv.fr"]):after,
-  a[href^="https://"]:not(.no-after):not([href*="social.gouv.fr"]):after{
+  a[href^="http://"]:not(.no-after):not([href*="code.travail.gouv.fr"]):after,
+  a[href^="https://"]:not(.no-after):not([href*="code.travail.gouv.fr"]):after{
     position: relative;
     top: 2px;
     width: 16px;
@@ -184,4 +184,4 @@ import{$ as s,j as t,L as g}from"./styled-components.browser.esm-525a869c.js";im
       `,"")};
   }
 `,l=()=>t.jsxs(t.Fragment,{children:[t.jsx(p,{}),t.jsx(x,{}),t.jsx($,{}),t.jsx(b,{}),t.jsx(u,{}),t.jsx(z,{}),t.jsx(y,{}),t.jsx(w,{})]});l.__docgenInfo={description:"",methods:[],displayName:"GlobalStyles"};const C={colors:{name:"Color toggle",description:"Change Color theme",defaultValue:n,toolbar:{icon:"circlehollow",items:[{value:n,title:"Default"},{value:c,title:"High contrast"}]}}},F={actions:{argTypesRegex:"^on[A-Z].*"},controls:{matchers:{color:/(background|color)$/i,date:/Date$/}}},H=[e=>t.jsxs(g,{theme:n,children:[t.jsx(l,{}),t.jsx(f,{children:t.jsx(e,{})})]})];export{H as decorators,C as globalTypes,F as parameters};
-//# sourceMappingURL=preview-25c5b45c.js.map
+//# sourceMappingURL=preview-fc071926.js.map
