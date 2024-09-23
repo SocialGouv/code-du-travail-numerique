@@ -1,3 +1,5 @@
+/** @jest-environment node */
+
 import { getSheetsMtService } from "../service";
 
 describe("Sheets MT", () => {

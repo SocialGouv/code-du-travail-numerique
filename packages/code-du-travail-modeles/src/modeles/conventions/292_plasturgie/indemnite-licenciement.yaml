@@ -3,7 +3,6 @@ contrat salarié . convention collective . plasturgie . indemnité de licencieme
   valeur: oui
 
 contrat salarié . convention collective . plasturgie . indemnité de licenciement . catégorie professionnelle:
-
   titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
@@ -12,7 +11,6 @@ contrat salarié . convention collective . plasturgie . indemnité de licencieme
     valeurs:
       Cadres (Coefficient 900 et plus): "'Cadres (Coefficient 900 et plus)'"
       Non cadres (Coefficient 700 à 830): "'Non cadres (Coefficient 700 à 830)'"
-
 
 ## Périodes
 contrat salarié . convention collective . plasturgie . indemnité de licenciement . jusqu'à dix ans:
@@ -91,7 +89,7 @@ contrat salarié . convention collective . plasturgie . indemnité de licencieme
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 3 an
   valeur:
     produit:
@@ -131,7 +129,6 @@ contrat salarié . convention collective . plasturgie . indemnité de licencieme
         - "A3 : Années d'ancienneté au-delà de la 13ème année d'ancienneté": contrat salarié . convention collective . plasturgie . indemnité de licenciement . au delà de 13 ans
       formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3]
 
-
 contrat salarié . convention collective . plasturgie . indemnité de licenciement . cadres . formule conventionnel plafond:
   applicable si: indemnité de licenciement . résultat conventionnel = indemnité de licenciement . salaire de référence conventionnel * 15
   valeur: oui
@@ -148,7 +145,7 @@ contrat salarié . convention collective . plasturgie . indemnité de licencieme
 
 contrat salarié . convention collective . plasturgie . indemnité de licenciement . non cadres . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
   somme:
     - un quart du salaire de référence pour moins de 10 ans
     - un tier du salaire de référence pour plus de 10 ans
@@ -161,6 +158,6 @@ contrat salarié . convention collective . plasturgie . indemnité de licencieme
     formule:
       explanations:
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-        - "A1 : Ancienneté de 8 mois à 10 ans": contrat salarié . convention collective . plasturgie . indemnité de licenciement . jusqu'à dix ans
+        - "A1 : Ancienneté de 10 ans ou moins": contrat salarié . convention collective . plasturgie . indemnité de licenciement . jusqu'à dix ans
         - "A2 : Ancienneté pour les années au-delà de 10 ans": contrat salarié . convention collective . plasturgie . indemnité de licenciement . au delà de dix ans
       formula: 1 / 4 * Sref * A1[ + 1 / 3 * Sref * A2]

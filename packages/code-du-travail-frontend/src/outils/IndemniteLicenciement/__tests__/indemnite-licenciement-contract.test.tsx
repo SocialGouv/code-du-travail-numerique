@@ -1,7 +1,8 @@
-import { CalculateurIndemnite } from "../../../../src/outils";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
+import { UserAction } from "../../../common";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 
-import { render, fireEvent } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
 test(`
   - Vérifier l'affichage de l'intro
@@ -9,11 +10,14 @@ test(`
   - Vérifier l'affichage de la question faute grave
   - Vérifier l'affichage de la question inaptitude
 `, async () => {
-  await render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
+  await render(
+    <CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />
+  );
+  const userAction = new UserAction();
 
   // Vérifier l'affichage de l'intro
   expect(ui.introduction.startButton.query()).toBeInTheDocument();
-  fireEvent.click(ui.introduction.startButton.get());
+  userAction.click(ui.introduction.startButton.get());
 
   // Vérifier l'affichage de la question type contrat
   expect(ui.contract.type.question.query()).toBeInTheDocument();
@@ -25,7 +29,7 @@ test(`
   expect(ui.contract.inaptitude.question.query()).not.toBeInTheDocument();
   expect(ui.contract.inaptitude.oui.query()).not.toBeInTheDocument();
   expect(ui.contract.inaptitude.non.query()).not.toBeInTheDocument();
-  fireEvent.click(ui.contract.type.cdi.get());
+  userAction.click(ui.contract.type.cdi.get());
 
   // Vérifier l'affichage de la question faute grave
   expect(ui.contract.fauteGrave.question.query()).toBeInTheDocument();
@@ -34,7 +38,7 @@ test(`
   expect(ui.contract.inaptitude.question.query()).not.toBeInTheDocument();
   expect(ui.contract.inaptitude.oui.query()).not.toBeInTheDocument();
   expect(ui.contract.inaptitude.non.query()).not.toBeInTheDocument();
-  fireEvent.click(ui.contract.fauteGrave.non.get());
+  userAction.click(ui.contract.fauteGrave.non.get());
 
   // Vérifier l'affichage de la question inaptitude
   expect(ui.contract.inaptitude.question.query()).toBeInTheDocument();

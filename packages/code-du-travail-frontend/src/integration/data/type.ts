@@ -2,13 +2,10 @@ export type WidgetMessage = {
   [action: string]: {
     name: string;
     description: string;
+    extra?: {
+      [key: string]: string;
+    };
   }[];
-};
-
-export type WidgetSelect = {
-  url: string;
-  labelPath: string;
-  valuePath: string;
 };
 
 export type Widget = {
@@ -21,7 +18,7 @@ export type Widget = {
   url: string;
   id: string;
   messages?: WidgetMessage;
-  select?: WidgetSelect;
+  isModele?: boolean;
 };
 
 export type Integration = {

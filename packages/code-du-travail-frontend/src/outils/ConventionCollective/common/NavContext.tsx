@@ -1,6 +1,7 @@
 import React, { createContext, useContext } from "react";
 
 import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
+import { SearchParams } from "../../common/Agreement/EnterpriseSearch/EntrepriseSearchInput/SearchEnterpriseInput";
 
 export enum ScreenType {
   intro = "introduction",
@@ -8,11 +9,6 @@ export enum ScreenType {
   enterprise = "entreprise",
   agreementSelection = "selection",
 }
-
-export type SearchParams = {
-  query: string;
-  address: string;
-};
 
 type NavContext = {
   enterprise: Enterprise | null;
@@ -23,7 +19,7 @@ type NavContext = {
 
 export const navContext = createContext<NavContext>({
   enterprise: null,
-  searchParams: { address: "", query: "" },
+  searchParams: { query: "" },
   setEnterprise: () => {
     /* nothing to do */
   },

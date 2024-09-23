@@ -54,16 +54,15 @@ const pushAgreementEvents = (
       MatomoBaseEvent.TRACK_EVENT,
       agreementSelect,
       simulatorTitle,
-      `idcc${values.selected.num?.toString()}`,
+      `idcc${values.selected.num}`,
     ]);
-    const idcc = values.selected.num;
     matopush([
       MatomoBaseEvent.TRACK_EVENT,
       MatomoBaseEvent.OUTIL,
       isAgreementTreated
         ? MatomoAgreementEvent.CC_TREATED
         : MatomoAgreementEvent.CC_UNTREATED,
-      idcc,
+      values.selected.num,
     ]);
   }
   if (hasNoEnterpriseSelected) {

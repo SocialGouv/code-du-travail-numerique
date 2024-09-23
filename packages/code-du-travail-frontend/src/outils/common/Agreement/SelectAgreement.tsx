@@ -2,7 +2,7 @@ import { FormApi } from "final-form";
 import React, { useCallback, useEffect, useState } from "react";
 
 import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
-import { useLocalStorage } from "../../../lib/useLocalStorage";
+import { useLocalStorageForAgreement } from "../../../lib/useLocalStorage";
 import { OnUserAction } from "../../ConventionCollective/types";
 import { AgreementRoute, FormContent } from "../type/WizardType";
 import { AgreementSearch } from "./AgreementSearch";
@@ -13,10 +13,10 @@ import { handleTrackEvent } from "./tracking";
 import { AgreementSupportInfo, OnSelectAgreementFn } from "./types";
 import { SmallText } from "../stepStyles";
 import { ErrorField } from "../ErrorField";
-import { STORAGE_KEY_AGREEMENT } from "../../types";
-import { NoEnterprise } from "../../CommonSteps/Agreement/components";
 import { getCc3239Informations } from "../../api";
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "../../../outils/types";
+import { Simulator } from "../NoticeExample";
+import { NoEnterprise } from "../../Components/Agreements";
 
 export type Props = {
   title: string;
@@ -27,6 +27,7 @@ export type Props = {
   required?: boolean;
   note?: string;
   alertAgreementNotSupported?: (string) => JSX.Element;
+  simulator: Simulator;
 };
 
 const SelectAgreement = ({
@@ -38,9 +39,9 @@ const SelectAgreement = ({
   required = false,
   note,
   alertAgreementNotSupported,
+  simulator,
 }: Props): JSX.Element => {
-  const [storedConvention, setConvention] = useLocalStorage(
-    STORAGE_KEY_AGREEMENT,
+  const [storedConvention, setConvention] = useLocalStorageForAgreement(
     defaultSelectedAgreement
   );
   const [hasSelectedEnterprise, setHasSelectedEnterprise] = useState(false);
@@ -134,6 +135,7 @@ const SelectAgreement = ({
             setHasSelectedEnterprise={(hasSelectedEnterprise) => {
               setHasSelectedEnterprise(hasSelectedEnterprise);
             }}
+            simulator={simulator}
           />
           {!hasSelectedEnterprise && !enterprise && (
             <NoEnterprise
@@ -156,6 +158,12 @@ const SelectAgreement = ({
         name="agreementMissing"
         errorText={
           "La simulation ne peut pas se poursuivre avec cette convention collective"
+        }
+      />
+      <ErrorField
+        name="noAgreementSelected"
+        errorText={
+          "La simulation ne peut pas se poursuivre si aucune convention collective n'est sélectionnée"
         }
       />
     </>

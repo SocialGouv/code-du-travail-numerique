@@ -7,21 +7,33 @@ import { Heading } from "../Titles/Heading";
 import * as variants from "./components/variants/index.js";
 import { VerticalArrow as AccordionArrow } from "./components/VerticalArrow";
 
-export const Accordion = ({
-  items,
-  disableStyles,
-  variant,
-  titleLevel,
-  ...props
-}) => {
+export const Accordion = ({ items, variant, titleLevel, ...props }) => {
   /* eslint-disable import/namespace */
   const AccordionVariant = variants[variant].Accordion;
   const AccordionItem = variants[variant].Item;
   const AccordionItemButton = variants[variant].ItemButton;
   const AccordionItemPanel = variants[variant].ItemPanel;
   /* eslint-enable */
+
+  React.useEffect(() => {
+    if (props?.preExpanded?.length && props.preExpanded[0]?.length) {
+      try {
+        const anchor = document?.querySelector(`#${props.preExpanded[0]}`);
+        if (anchor) {
+          anchor.scrollIntoView();
+        }
+      } catch (_) {
+        props.preExpanded = [];
+      }
+    }
+  }, [props.preExpanded]);
   return (
-    <AccordionVariant allowZeroExpanded allowMultipleExpanded {...props}>
+    <AccordionVariant
+      {...props}
+      allowZeroExpanded
+      allowMultipleExpanded
+      preExpanded={props.preExpanded ?? []}
+    >
       {items.map(({ body, icon, id, title }, index) => (
         <div id={id} key={`${id}-${index}`}>
           <AccordionItem
@@ -34,14 +46,17 @@ export const Accordion = ({
                 icon={icon}
                 index={index}
                 isLast={index === items.length - 1}
-                disableStyles={disableStyles}
               >
-                {titleLevel ? (
+                {titleLevel && titleLevel <= 6 ? (
                   <Heading
                     as={"h" + titleLevel}
                     stripe="none"
                     style={{ margin: 0 }}
-                    dataTestid={`${props["data-testid"]}-${index}`}
+                    dataTestid={
+                      props["data-testid"]
+                        ? `${props["data-testid"]}-${index}`
+                        : undefined
+                    }
                   >
                     {title}
                   </Heading>
@@ -62,7 +77,6 @@ export const Accordion = ({
 
 Accordion.propTypes = {
   "data-testid": PropTypes.string,
-  disableStyles: PropTypes.bool,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       body: PropTypes.node.isRequired,
@@ -82,6 +96,7 @@ Accordion.defaultProps = {
 };
 
 const AccordionItemPanelContent = styled.div`
+  & > div:first-child > *:first-child,
   & > *:first-child {
     margin-top: 0;
   }

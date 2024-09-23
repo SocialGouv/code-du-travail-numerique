@@ -103,8 +103,8 @@ const SimulatorDecorator = <FormValues,>({
                 showNext={navigation.showNext && !hasErrorPublicodes}
               />
               {options?.annotations && <p>{options.annotations}</p>}
-              {process.env.NODE_ENV !== "production" &&
-                process.env.NODE_ENV !== "test" &&
+              {process.env.NEXT_PUBLIC_APP_ENV !== "production" &&
+                process.env.NEXT_PUBLIC_APP_ENV !== "test" &&
                 options?.debug}
             </StyledForm>
           );

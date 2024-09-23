@@ -3,33 +3,35 @@ import {
   elasticDocumentsIndex,
   NotFoundError,
 } from "../../utils";
-import { getAllThemesQuery, getThemeBySlugQuery } from "./queries";
+import {
+  getAllThemesQuery,
+  getThemeBySlugQuery,
+  getThemeBySlugsQuery,
+} from "./queries";
 
 export const getAllThemes = async () => {
-  const body = getAllThemesQuery();
-  const response = await elasticsearchClient.search({
+  const body: any = getAllThemesQuery();
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });
   return {
-    children: response.body.hits.hits.map((t) => t._source),
+    children: response.hits.hits.map((t) => t._source),
   };
 };
 
 export const getAllThemesAndSubThemes = async () => {
-  const body = getAllThemesQuery();
-  const response = await elasticsearchClient.search({
+  const body: any = getAllThemesQuery();
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });
-  const themes = response.body.hits.hits.map((t) => t._source);
+  const themes = response.hits.hits.map((t) => t._source);
   // for each theme of themes, we need to get slug of children
   const childrenSlugs = themes.flatMap((theme) =>
     theme.children.map((child) => child.slug)
   );
-  const data = await Promise.all(
-    childrenSlugs.map((slug) => getBySlugThemes(slug))
-  ).catch(() => {
+  const data = await getBySlugsThemes(childrenSlugs).catch(() => {
     return [];
   });
   const themesWithChildren = themes.map((theme) => {
@@ -49,24 +51,41 @@ export const getAllThemesAndSubThemes = async () => {
 };
 
 export const getBySlugThemes = async (slug: string) => {
-  const body = getThemeBySlugQuery(slug);
+  const body: any = getThemeBySlugQuery(slug);
 
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });
 
-  if (response.body.hits.hits.length === 0) {
+  if (response.hits.hits.length === 0) {
+    return;
+  }
+
+  const theme = response.hits.hits[0];
+
+  return {
+    ...theme._source,
+  };
+};
+
+export const getBySlugsThemes = async (slugs: string[]) => {
+  const body: any = getThemeBySlugsQuery(slugs);
+
+  const response = await elasticsearchClient.search<any>({
+    body,
+    index: elasticDocumentsIndex,
+  });
+
+  if (response.hits.hits.length === 0) {
     throw new NotFoundError({
-      message: `There is no theme that match ${slug}`,
+      message: `There is no theme that match ${slugs.join(",")}`,
       name: "THEME_NOT_FOUND",
       cause: null,
     });
   }
 
-  const theme = response.body.hits.hits[0];
+  const themes = response.hits.hits.map(({ _source }) => _source);
 
-  return {
-    ...theme._source,
-  };
+  return themes;
 };

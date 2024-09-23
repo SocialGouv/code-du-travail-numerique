@@ -3,37 +3,49 @@ jobs:
     build-app:
       with:
         buildArgs:
-          NEXT_PUBLIC_SENTRY_DSN: https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
+          NEXT_PUBLIC_SENTRY_DSN: https://81b6e3d265cf736588f894040d265705@sentry.fabrique.social.gouv.fr/107
+          NEXT_PUBLIC_SENTRY_PUBLIC_KEY: 81b6e3d265cf736588f894040d265705
+          NEXT_PUBLIC_SENTRY_PROJECT_ID: 107
+          NEXT_PUBLIC_SENTRY_BASE_URL: https://sentry.fabrique.social.gouv.fr
           NEXT_PUBLIC_SENTRY_ENV: production
           NEXT_PUBLIC_SENTRY_RELEASE: "{{.Values.global.imageTag}}"
           NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT: "true"
-          NEXT_PUBLIC_AZURE_BASE_URL: https://cdtnadminprod.blob.core.windows.net
-          NEXT_PUBLIC_AZURE_CONTAINER: cdtn
+          NEXT_PUBLIC_BUCKET_DEFAULT_FOLDER: "default"
+          NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER: "sitemap"
+          NEXT_PUBLIC_BUCKET_URL: https://cdtn-prod-public.s3.gra.io.cloud.ovh.net/published
           NEXT_PUBLIC_PIWIK_SITE_ID: "4"
           NEXT_PUBLIC_PIWIK_URL: https://matomo.fabrique.social.gouv.fr
           NEXT_PUBLIC_COMMIT: "{{.Values.global.sha}}"
           NEXT_PUBLIC_SITE_URL: https://code.travail.gouv.fr
           NEXT_PUBLIC_SENTRY_ORG: "incubateur"
-          NEXT_PUBLIC_SENTRY_PROJECT: "code-du-travail-numerique"
-          NEXT_PUBLIC_SENTRY_URL: "https://sentry.fabrique.social.gouv.fr/"
+          NEXT_PUBLIC_SENTRY_PROJECT: "code-du-travail-numerique-v2"
+          NEXT_PUBLIC_SENTRY_URL: "https://sentry.fabrique.social.gouv.fr"
+          NEXT_PUBLIC_ES_INDEX_PREFIX: "cdtn-prod"
         secrets:
-          sentry_auth_token: 
+          sentry_auth_token:
             secretName: www-secret
             secretKey: SENTRY_AUTH_TOKEN
+          elasticsearch_token_api:
+            secretName: www-secret
+            secretKey: ELASTICSEARCH_TOKEN_API
+          elasticsearch_url:
+            secretName: www-secret
+            secretKey: ELASTICSEARCH_URL
 
 app:
   host: code.travail.gouv.fr
   redirectFrom:
     - www.code.travail.gouv.fr
     - code.travail.fabrique.social.gouv.fr
-  autoscale:
-    minReplicas: 2
-    maxReplicas: 10
-    enabled: true
   resources:
     limits:
-      cpu: 500m
-      memory: 1Gi
+      cpu: 900m
+      memory: 1536Mi
     requests:
-      cpu: 250m
-      memory: 768Mi
+      cpu: 800m
+      memory: 1280Mi
+    annotations:
+      oblik.socialgouv.io/min-request-cpu: 800m
+      oblik.socialgouv.io/min-request-memory: 1280Mi
+      oblik.socialgouv.io/min-limit-cpu: 900m
+      oblik.socialgouv.io/min-limit-memory: 1536Mi

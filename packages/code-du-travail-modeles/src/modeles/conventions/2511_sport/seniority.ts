@@ -4,17 +4,17 @@ import type {
   Motif,
   SeniorityProps,
   SeniorityResult,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { MotifKeys } from "../../common/motif-keys";
 import { SeniorityDefault } from "../../common/seniority";
 
-export class Seniority2511 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC2511> {
+export class Seniority2511 extends SeniorityDefault<SupportedCc.IDCC2511> {
   computeSeniority({
     dateEntree,
     dateSortie,
     absencePeriods = [],
-  }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC2511>): SeniorityResult {
+  }: SeniorityProps<SupportedCc.IDCC2511>): SeniorityResult {
     return {
       ...this.compute(dateEntree, dateSortie, absencePeriods),
       extraInfos: this.getExtraInfoAbsence(absencePeriods),

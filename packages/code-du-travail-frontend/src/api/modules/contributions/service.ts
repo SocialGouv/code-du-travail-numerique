@@ -1,85 +1,71 @@
-import { ElasticSearchItem } from "@socialgouv/cdtn-utils";
-import {
-  elasticsearchClient,
-  elasticDocumentsIndex,
-  NotFoundError,
-} from "../../utils";
-import {
-  getAllGenericsContributions,
-  getContributionsBySlugs,
-  getAllContributionBySlug,
-  getContributionsByIds,
-} from "./queries";
+import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
+import { getAllGenericsContributions, getContributionsByIds } from "./queries";
+import { fetchAllContributions } from "./fetch";
+import { ElasticSearchItem } from "../../types";
+import { ElasticAgreement } from "@socialgouv/cdtn-types";
 
-export const getGenericContributions = async () => {
+export const getGenericContributionsGroupByThemes = async () => {
   const body = getAllGenericsContributions();
 
   const response = await elasticsearchClient.search({
     body,
     index: elasticDocumentsIndex,
   });
-  return response.body.hits.hits
+  return response.hits.hits
     .map(({ _source }) => _source)
-    .map((contrib) => {
+    .map((contrib: any) => {
       contrib.theme = contrib.breadcrumbs[0].label;
       return contrib;
     })
     .reduce(groupByThemes, {});
 };
 
-export const getAllContributions = async () => {
-  const body = getAllGenericsContributions();
+const isGeneric = (contrib) => contrib.idcc === "0000";
 
-  const response = await elasticsearchClient.search({
-    body,
-    index: elasticDocumentsIndex,
-  });
-  return response.body.hits.hits.map(({ _source }) => _source);
-};
+function getTitle(agreements: ElasticAgreement[], contrib) {
+  const idcc = contrib.idcc ?? contrib.slug.split("-")[0];
+  const agreement = agreements.find((a) => a.num === parseInt(idcc));
+  return agreement
+    ? `${contrib.title} - ${agreement.shortTitle}`
+    : contrib.title;
+}
 
-export const getBySlugsContributions = async (
-  slugs: string[]
-): Promise<ElasticSearchItem[]> => {
-  const body = getContributionsBySlugs(slugs);
-  const response = await elasticsearchClient.search({
-    body,
-    index: elasticDocumentsIndex,
+export const getAllContributionsGroupByQuestion = async (
+  agreements: ElasticAgreement[]
+) => {
+  const response = await fetchAllContributions();
+  const all = response.hits.hits.map(({ _source }) => _source);
+  const allGenerics = all
+    .filter(isGeneric)
+    .sort((a, b) => a.title.localeCompare(b.title));
+
+  return allGenerics.map((generic) => {
+    return {
+      generic: generic,
+      agreements: all
+        .filter((contrib) => {
+          return !isGeneric(contrib) && contrib.slug.includes(generic.slug);
+        })
+        .map((contrib) => {
+          contrib.title = getTitle(agreements, contrib);
+          return contrib;
+        })
+        .sort((a, b) => a.title.localeCompare(b.title)),
+    };
   });
-  return response.body.hits.total.value > 0
-    ? response.body.hits.hits.map(({ _source }) => _source)
-    : [];
 };
 
 export const getByIdsContributions = async (
   ids: string[]
 ): Promise<ElasticSearchItem[]> => {
   const body = getContributionsByIds(ids);
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });
-  return response.body.hits.total.value > 0
-    ? response.body.hits.hits.map(({ _source }) => _source)
+  return response.hits.hits.length > 0
+    ? response.hits.hits.map(({ _source }) => _source)
     : [];
-};
-
-export const getBySlugContributions = async (slug: string) => {
-  const body = getAllContributionBySlug(slug);
-
-  const response = await elasticsearchClient.search({
-    body,
-    index: elasticDocumentsIndex,
-  });
-
-  if (response.body.hits.hits.length === 0) {
-    throw new NotFoundError({
-      message: `There is no contribution that match ${slug}`,
-      name: "CONTRIB_NOT_FOUND",
-      cause: null,
-    });
-  }
-
-  return response.body.hits.hits[0]._source.refs;
 };
 
 const groupByThemes = (acc, item) => {

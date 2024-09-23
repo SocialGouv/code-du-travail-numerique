@@ -11,12 +11,12 @@ import React from "react";
 
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
-import { handleError } from "../../src/lib/fetch-error";
 import { ListLink } from "../../src/search/SearchResults/Results";
 import styled from "styled-components";
 import Link from "next/link";
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { SITE_URL } from "../../src/config";
+import { REVALIDATE_TIME } from "../../src/config";
+import { getAllAgreements } from "../../src/api";
 
 function Page({ ccs }) {
   return (
@@ -49,8 +49,12 @@ function Page({ ccs }) {
           </Toast>
           <p>
             Vous ne connaissez pas votre convention collective ?{" "}
-            <Link href={`/outils/convention-collective`} passHref>
-              <Button as="a" variant="link" hasText>
+            <Link
+              href={`/outils/convention-collective`}
+              passHref
+              legacyBehavior
+            >
+              <Button as="a" variant="link">
                 Trouvez la
               </Button>
             </Link>
@@ -59,7 +63,11 @@ function Page({ ccs }) {
           <FlatList>
             {ccs.map((item) => (
               <ListItem key={`${item.source}-${item.slug}`}>
-                <ListLink item={item} showTheme={true} titleTagType="h2" />
+                <ListLink
+                  item={{ ...item, title: item.shortTitle }}
+                  showTheme={true}
+                  titleTagType="h2"
+                />
               </ListItem>
             ))}
           </FlatList>
@@ -71,14 +79,16 @@ function Page({ ccs }) {
 
 export default Page;
 
-export const getServerSideProps = async () => {
-  const response = await fetch(`${SITE_URL}/api/agreements`);
-  if (!response.ok) {
-    return handleError(response);
+export async function getStaticProps() {
+  try {
+    let data = await getAllAgreements();
+    return { props: { ccs: data }, revalidate: REVALIDATE_TIME };
+  } catch (error) {
+    console.error(error);
+    return { props: { ccs: [] }, revalidate: REVALIDATE_TIME };
   }
-  const ccs = await response.json();
-  return { props: { ccs } };
-};
+}
+
 const ListItem = styled.li`
   margin-top: ${theme.spacings.medium};
 `;

@@ -3,6 +3,296 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.155.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.154.0...v4.155.0) (2024-09-19)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.154.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.153.0...v4.154.0) (2024-09-19)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.153.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.152.0...v4.153.0) (2024-09-11)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.152.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.151.1...v4.152.0) (2024-09-04)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.151.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.151.0...v4.151.1) (2024-08-30)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.151.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.150.0...v4.151.0) (2024-08-19)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.150.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.149.1...v4.150.0) (2024-08-13)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.149.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.149.0...v4.149.1) (2024-08-07)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.149.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.148.0...v4.149.0) (2024-08-05)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.148.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.147.0...v4.148.0) (2024-07-24)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.147.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.4...v4.147.0) (2024-07-17)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.146.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.3...v4.146.4) (2024-07-15)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.146.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.2...v4.146.3) (2024-07-05)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.146.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.1...v4.146.2) (2024-07-05)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.146.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.146.0...v4.146.1) (2024-07-04)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.146.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.145.1...v4.146.0) (2024-07-04)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.145.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.145.0...v4.145.1) (2024-06-27)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.145.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.144.1...v4.145.0) (2024-06-27)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.144.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.144.0...v4.144.1) (2024-06-24)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.144.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.143.2...v4.144.0) (2024-06-24)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.143.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.143.1...v4.143.2) (2024-06-18)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.143.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.143.0...v4.143.1) (2024-06-17)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.143.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.142.0...v4.143.0) (2024-06-17)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.142.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.141.0...v4.142.0) (2024-06-13)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.141.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.140.0...v4.141.0) (2024-06-05)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.140.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.139.0...v4.140.0) (2024-06-04)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.139.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.138.0...v4.139.0) (2024-05-31)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.138.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.137.1...v4.138.0) (2024-05-28)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.137.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.137.0...v4.137.1) (2024-05-23)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.137.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.136.1...v4.137.0) (2024-05-14)
+
+### Features
+
+- **types:** synchronisation des types au niveau de l'admin ([#5826](https://github.com/SocialGouv/code-du-travail-numerique/issues/5826)) ([f878be3](https://github.com/SocialGouv/code-du-travail-numerique/commit/f878be338415f4cd86489dd7a57a0ecaf1140de6))
+
+## [4.136.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.136.0...v4.136.1) (2024-05-07)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.136.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.135.0...v4.136.0) (2024-05-06)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.135.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.134.2...v4.135.0) (2024-05-03)
+
+### Features
+
+- **indemnite-licenciement:** ajout de l'outil de rupture conventionnelle ([#5703](https://github.com/SocialGouv/code-du-travail-numerique/issues/5703)) ([27962be](https://github.com/SocialGouv/code-du-travail-numerique/commit/27962be5c0267ce7c0eda5959bab2ef755f4f80b)), closes [#5717](https://github.com/SocialGouv/code-du-travail-numerique/issues/5717)
+
+## [4.134.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.134.1...v4.134.2) (2024-04-16)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.134.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.134.0...v4.134.1) (2024-04-16)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.134.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.133.0...v4.134.0) (2024-04-16)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.133.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.132.0...v4.133.0) (2024-04-09)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.132.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.131.1...v4.132.0) (2024-03-26)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.131.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.131.0...v4.131.1) (2024-03-25)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.131.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.130.0...v4.131.0) (2024-03-25)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.130.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.3...v4.130.0) (2024-03-19)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.129.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.2...v4.129.3) (2024-03-14)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.129.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.1...v4.129.2) (2024-03-14)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.129.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.129.0...v4.129.1) (2024-03-13)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.129.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.128.0...v4.129.0) (2024-03-13)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.128.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.127.0...v4.128.0) (2024-03-11)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.127.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.126.0...v4.127.0) (2024-03-04)
+
+### Features
+
+- cas specifique des CC non etendues - message d'alerte ([#5637](https://github.com/SocialGouv/code-du-travail-numerique/issues/5637)) ([656bc3f](https://github.com/SocialGouv/code-du-travail-numerique/commit/656bc3fee8929fc17dd72a2ca3592615cc333a75))
+
+# [4.126.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.125.1...v4.126.0) (2024-03-04)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.125.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.125.0...v4.125.1) (2024-02-27)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.125.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.124.0...v4.125.0) (2024-02-27)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.124.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.123.2...v4.124.0) (2024-02-23)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.123.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.123.1...v4.123.2) (2024-02-22)
+
+### Bug Fixes
+
+- **error:** pas de fails si pas de description ([#5643](https://github.com/SocialGouv/code-du-travail-numerique/issues/5643)) ([b3804d6](https://github.com/SocialGouv/code-du-travail-numerique/commit/b3804d65032f02fea07360001af16e124dfc1745))
+
+## [4.123.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.123.0...v4.123.1) (2024-02-22)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.123.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.122.0...v4.123.0) (2024-02-19)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.122.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.121.1...v4.122.0) (2024-02-06)
+
+### Bug Fixes
+
+- **utils:** ajout du type glossaire pour la mapping ([#5603](https://github.com/SocialGouv/code-du-travail-numerique/issues/5603)) ([3aed439](https://github.com/SocialGouv/code-du-travail-numerique/commit/3aed43929bbf7fc445e4a54c3a9efc75751eb343))
+
+## [4.121.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.121.0...v4.121.1) (2024-01-30)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.121.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.120.1...v4.121.0) (2024-01-30)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.120.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.120.0...v4.120.1) (2024-01-29)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.120.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.119.1...v4.120.0) (2024-01-25)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+## [4.119.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.119.0...v4.119.1) (2024-01-11)
+
+### Bug Fixes
+
+- **contribution:** nettoyage de la fonctionnalité spécifique au CC personalisé sans contenu quand la générique n'a pas de CDT. ([#5560](https://github.com/SocialGouv/code-du-travail-numerique/issues/5560)) ([0b596bb](https://github.com/SocialGouv/code-du-travail-numerique/commit/0b596bbe72bedb29c987a4bb191588296129e30a))
+
+# [4.119.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.118.0...v4.119.0) (2024-01-11)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+# [4.118.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.117.0...v4.118.0) (2023-12-28)
+
+### Features
+
+- gestion des contrib où le CDT ne prévoit rien ([#5479](https://github.com/SocialGouv/code-du-travail-numerique/issues/5479)) ([7421167](https://github.com/SocialGouv/code-du-travail-numerique/commit/742116778687e962d2665b418fc2cdc7852a6aec))
+- **next:** use `getStaticProps` instead of `getServerSideProps` ([#5515](https://github.com/SocialGouv/code-du-travail-numerique/issues/5515)) ([6e6c936](https://github.com/SocialGouv/code-du-travail-numerique/commit/6e6c936b2e20b725f0a94dfb7c60ba591e58f033))
+
+# [4.117.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.116.0...v4.117.0) (2023-12-21)
+
+### Features
+
+- placer les références sans url à la fin de la liste ([#5506](https://github.com/SocialGouv/code-du-travail-numerique/issues/5506)) ([923b7b2](https://github.com/SocialGouv/code-du-travail-numerique/commit/923b7b257e9996610dab77e712394adc1e64796c))
+
+# [4.116.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.115.0...v4.116.0) (2023-12-18)
+
+### Bug Fixes
+
+- **informations:** les références peuvent être `null` ([#5458](https://github.com/SocialGouv/code-du-travail-numerique/issues/5458)) ([15a8d5f](https://github.com/SocialGouv/code-du-travail-numerique/commit/15a8d5fa4a32cc2e74bcbddcb476f1a928c119b5))
+
+### Features
+
+- **contribution:** un message block peut être vide ([#5486](https://github.com/SocialGouv/code-du-travail-numerique/issues/5486)) ([916cdbc](https://github.com/SocialGouv/code-du-travail-numerique/commit/916cdbccf8d0dfeaf2037c133314253fd5ac74fe))
+- **conventions-collectives:** ajout des nouvelles conventions collectives ([#5450](https://github.com/SocialGouv/code-du-travail-numerique/issues/5450)) ([d2391ad](https://github.com/SocialGouv/code-du-travail-numerique/commit/d2391ad85514d31dde008574700c24a547c33e35)), closes [#5445](https://github.com/SocialGouv/code-du-travail-numerique/issues/5445) [#5466](https://github.com/SocialGouv/code-du-travail-numerique/issues/5466)
+
+# [4.115.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.114.0...v4.115.0) (2023-12-07)
+
+### Bug Fixes
+
+- **seo:** "Contributions" renomé en "Fiches pratiques" + disallow /recherche in robots.txt ([#5451](https://github.com/SocialGouv/code-du-travail-numerique/issues/5451)) ([49268f2](https://github.com/SocialGouv/code-du-travail-numerique/commit/49268f25150193c5a01040112c8af03c7760a9df))
+
+### Features
+
+- **contribution:** handle new contrib display ([#5441](https://github.com/SocialGouv/code-du-travail-numerique/issues/5441)) ([0db0c23](https://github.com/SocialGouv/code-du-travail-numerique/commit/0db0c235a987f08a61132863465a636e183f39be)), closes [#5445](https://github.com/SocialGouv/code-du-travail-numerique/issues/5445)
+
 # [4.114.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.113.0...v4.114.0) (2023-11-21)
 
 **Note:** Version bump only for package @socialgouv/cdtn-utils

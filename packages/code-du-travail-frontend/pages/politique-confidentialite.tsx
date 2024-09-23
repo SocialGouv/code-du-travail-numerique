@@ -6,10 +6,9 @@ import {
   theme,
   Title,
   Wrapper,
-  Button,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
-import React, { useCallback } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import Metas from "../src/common/Metas";
@@ -18,22 +17,6 @@ import { Layout } from "../src/layout/Layout";
 const { spacings } = theme;
 
 const CookiePolicy = (): JSX.Element => {
-  const openTarteAuCitron = useCallback(() => {
-    // @ts-ignore
-    if (window && window.tarteaucitron) {
-      // @ts-ignore
-      window.tarteaucitron.userInterface.openPanel();
-    }
-  }, []);
-
-  const hasTarteAuCitron = useCallback(() => {
-    // @ts-ignore
-    return (
-      typeof document !== "undefined" &&
-      !!document.getElementById("tarteaucitronClosePanel")
-    );
-  }, []);
-
   return (
     <Layout>
       <Metas
@@ -114,17 +97,17 @@ const CookiePolicy = (): JSX.Element => {
               </thead>
               <tbody>
                 <tr>
-                  <td>Microsoft Azure</td>
+                  <td>OVH</td>
                   <td>France</td>
                   <td>Hébergement</td>
                   <td>
                     <a
-                      title="Déclaration de confidentialité Microsoft"
+                      title="Data Processing Agreement - OVH"
                       target="_blank"
                       rel="nofollow, noopener, noreferrer"
-                      href="https://privacy.microsoft.com/fr-fr/privacystatement"
+                      href="https://us.ovhcloud.com/legal/data-processing-agreement/"
                     >
-                      Déclaration de confidentialité Microsoft
+                      https://us.ovhcloud.com/legal/data-processing-agreement/
                     </a>
                   </td>
                 </tr>
@@ -164,14 +147,6 @@ const CookiePolicy = (): JSX.Element => {
                   <td>Matomo & Fabrique numérique</td>
                   <td>France</td>
                 </tr>
-                <tr>
-                  <td>Mesure d’audience</td>
-                  <td>Adform</td>
-                  <td>13 mois</td>
-                  <td>Mesure d’audience et analyse comportementale</td>
-                  <td>Adform</td>
-                  <td>Etats-Unis</td>
-                </tr>
               </tbody>
             </Table>
             <p>
@@ -187,15 +162,6 @@ const CookiePolicy = (): JSX.Element => {
               Microsoft Internet Explorer 11, Google Chrome, Mozilla Firefox,
               Apple Safari et Opera).
             </p>
-            {hasTarteAuCitron() ? (
-              <Button onClick={openTarteAuCitron}>Modifier les réglages</Button>
-            ) : (
-              <p>
-                Seules certaines pages du site sont concernées par la mesure
-                d’audience et l’analyse comportementale avec Adform et vous
-                n’avez visité aucune de ces pages.
-              </p>
-            )}
             <p>
               Pour l’outil Matomo, vous pouvez décider de ne jamais être suivi,
               y compris anonymement&nbsp;:
@@ -213,7 +179,6 @@ const CookiePolicy = (): JSX.Element => {
             <ul>
               <li>
                 <a
-                  title="Déclaration de confidentialité Microsoft"
                   target="_blank"
                   href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi"
                 >
@@ -222,7 +187,6 @@ const CookiePolicy = (): JSX.Element => {
               </li>
               <li>
                 <a
-                  title="Déclaration de confidentialité Microsoft"
                   target="_blank"
                   href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser"
                 >

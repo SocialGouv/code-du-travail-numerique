@@ -4,34 +4,39 @@ import { Text } from "@socialgouv/cdtn-ui";
 import { format, parseISO } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import React from "react";
+import { ElasticAgreement } from "@socialgouv/cdtn-types";
 
 import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import Convention from "../../src/conventions/Convention";
 import { Layout } from "../../src/layout/Layout";
-import { handleError } from "../../src/lib/fetch-error";
-import { SITE_URL } from "../../src/config";
 import { apiIdcc } from "../../src/conventions/Search/api/agreement.service";
-import EventTracker from "../../src/lib/tracking/EventTracker";
+import { addPrefixAgreementTitle } from "../../src/conventions/utils";
+import Head from "next/head";
+import { getBySlugAgreements } from "../../src/api";
 
 interface Props {
-  convention;
+  convention: ElasticAgreement;
 }
 
 function ConventionCollective(props: Props): JSX.Element {
   const { convention } = props;
-  const { shortTitle, longTitle } = convention;
+  const { shortTitle, title, url } = convention;
+
   return (
     <Layout>
-      <Metas
-        title={`Convention collective ${shortTitle}`}
-        description={longTitle}
-      />
+      {!url && (
+        <Head>
+          <meta key="robots" name="robots" content="noindex, nofollow" />
+        </Head>
+      )}
+      <Metas title={addPrefixAgreementTitle(shortTitle)} description={title} />
       <Answer
         breadcrumbs={[
           {
             label: "Conventions collectives",
             slug: `/outils/${getRouteBySource(SOURCES.CCN)}`,
+            position: 0,
           },
         ]}
         date={
@@ -63,14 +68,14 @@ function ConventionCollective(props: Props): JSX.Element {
           },
         ]}
         source={
-          convention.url && {
+          url && {
             name: "Légifrance",
-            url: convention.url,
+            url,
           }
         }
         subtitle={
           <Text fontSize="small">
-            {convention.title} (IDCC {formatIdcc(convention.num)})
+            {title} (IDCC {formatIdcc(convention.num)})
           </Text>
         }
         suptitle="CONVENTION COLLECTIVE"
@@ -78,7 +83,6 @@ function ConventionCollective(props: Props): JSX.Element {
       >
         <Convention convention={convention} />
       </Answer>
-      <EventTracker />
     </Layout>
   );
 }
@@ -88,15 +92,18 @@ export const getServerSideProps = async ({ query }) => {
   if (IDCC_ONLY.test(query.slug)) {
     const conventions = await apiIdcc(query.slug.padStart(4, "0"));
     if (!conventions.length) {
-      return { notFound: true };
+      return {
+        notFound: true,
+      };
     }
     return { redirect: { destination: conventions[0].slug, permanent: true } };
   }
-  const res = await fetch(`${SITE_URL}/api/agreements/${query.slug}`);
-  if (!res.ok) {
-    return handleError(res);
+  const convention = await getBySlugAgreements(query.slug);
+  if (!convention) {
+    return {
+      notFound: true,
+    };
   }
-  const convention = await res.json();
   return { props: { convention } };
 };
 

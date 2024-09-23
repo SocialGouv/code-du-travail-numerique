@@ -7,7 +7,7 @@ import type {
   SeniorityProps,
   SeniorityRequiredProps,
   SeniorityResult,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { parseDate } from "../../common";
 import { MotifKeys } from "../../common/motif-keys";
@@ -43,12 +43,12 @@ const MOTIFS_3239: Motif[] = [
 
 const DAYS_IN_MONTH = 30.4375;
 
-export class Seniority3239 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC3239> {
+export class Seniority3239 extends SeniorityDefault<SupportedCc.IDCC3239> {
   computeSeniority({
     dateEntree,
     dateSortie,
     absencePeriods = [],
-  }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC3239>): SeniorityResult {
+  }: SeniorityProps<SupportedCc.IDCC3239>): SeniorityResult {
     return this.compute(dateEntree, dateSortie, absencePeriods);
   }
 
@@ -56,7 +56,7 @@ export class Seniority3239 extends SeniorityDefault<SupportedCcIndemniteLicencie
     dateEntree,
     dateNotification,
     absencePeriods = [],
-  }: SeniorityRequiredProps): RequiredSeniorityResult {
+  }: SeniorityRequiredProps<SupportedCc.default>): RequiredSeniorityResult {
     return this.compute(dateEntree, dateNotification, absencePeriods);
   }
 

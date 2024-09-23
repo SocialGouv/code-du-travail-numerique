@@ -11,9 +11,9 @@ import React from "react";
 import styled from "styled-components";
 
 import Metas from "../../src/common/Metas";
-import { SITE_URL } from "../../src/config";
+import { REVALIDATE_TIME } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
-import { handleError } from "../../src/lib/fetch-error";
+import { getGlossary } from "../../src/api";
 
 const subtitle =
   "Les définitions de ce glossaire, disponibles en surbrillance dans les textes des réponses, ont pour objectif d’améliorer la compréhension des termes juridiques. Elles ne se substituent pas à la définition juridique exacte de ces termes.";
@@ -39,15 +39,15 @@ function Glossaire({ glossary }) {
   );
 }
 
-export const getServerSideProps = async () => {
-  const response = await fetch(`${SITE_URL}/api/glossary`);
-  if (!response.ok) {
-    return handleError(response);
+export async function getStaticProps() {
+  try {
+    const data = await getGlossary();
+    return { props: { glossary: data }, revalidate: REVALIDATE_TIME };
+  } catch (error) {
+    console.error(error);
+    return { props: { glossary: [] }, revalidate: REVALIDATE_TIME };
   }
-
-  const glossary = await response.json();
-  return { props: { glossary } };
-};
+}
 
 export default Glossaire;
 

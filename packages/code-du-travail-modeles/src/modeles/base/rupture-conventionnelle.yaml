@@ -1,0 +1,29 @@
+contrat salarié . indemnité de licenciement . rupture conventionnelle:
+  valeur: oui
+
+contrat salarié . indemnité de licenciement . rupture conventionnelle . minimum ancienneté requise en année:
+  remplace: contrat salarié . paramètre . minimum ancienneté requise en année
+  valeur: 0 mois
+
+contrat salarié . indemnité de licenciement . rupture conventionnelle . minimum ancienneté conventionnelle requise en année:
+  remplace: contrat salarié . paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 0 mois
+
+contrat salarié . indemnité de licenciement . rupture conventionnelle . ancienneté requise en année:
+  remplace: contrat salarié . indemnité de licenciement . ancienneté requise en année
+  valeur: 0 mois
+
+contrat salarié . indemnité de licenciement . rupture conventionnelle . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: contrat salarié . indemnité de licenciement . résultat conventionnel
+  unité: €
+
+contrat salarié . indemnité de licenciement . rupture conventionnelle . hors ANI:
+  valeur: non
+
+contrat salarié . indemnité de licenciement . rupture conventionnelle . résultat conventionnel . hors ani:
+  applicable si: contrat salarié . indemnité de licenciement . rupture conventionnelle . hors ANI
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  rend non applicable: contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal
+  valeur: 0
+  unité: €

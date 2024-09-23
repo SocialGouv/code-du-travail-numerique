@@ -47,11 +47,11 @@ const EntrepriseSearchResults = ({
     );
   }
 
-  if (state.isError) {
+  if (state.error) {
     if (typeof state.error === "string") {
       return <Error>{state.error}</Error>;
     }
-    return <Section>{state.error}</Section>;
+    return <Section>{JSON.stringify(state.error)}</Section>;
   }
   if (!state.data) {
     return <></>;
@@ -61,7 +61,7 @@ const EntrepriseSearchResults = ({
       <ScreenReaderOnly role="status">
         {state.data.length} résultats
       </ScreenReaderOnly>
-      <ResultList query={`${params.query}-${params.address}`}>
+      <ResultList query={`${params.query}-${params.apiGeoResult?.nom}`}>
         {state.data.map((item, index) => {
           return (
             <ListItem key={item.siren}>

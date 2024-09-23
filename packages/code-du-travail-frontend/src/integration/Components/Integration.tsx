@@ -1,13 +1,13 @@
 import {
   CodeSnippet,
   Container,
+  Heading,
   PageTitle,
-  Wrapper,
   Select,
+  Wrapper,
 } from "@socialgouv/cdtn-ui";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Title from "../../fiche-service-public/components/Title";
 import { Widget } from "../data";
 
 type SelectItem = {
@@ -122,30 +122,31 @@ const IntegrationContainer = ({
         ) : (
           <></>
         )}
-        <p>
-          Comment faire ? Voici la méthode pour intégrer ce module à votre site
-          :
-        </p>
-        <Title>Javascript</Title>
-        <p>
-          L’installation se passe en deux temps.
-          <br />
-          Premièrement, ajoutez le code suivant dans la balise{" "}
-          <code>&lt;body&gt;</code> de votre page&nbsp;:
-        </p>
-        <CodeSnippet>
-          {`<script src="https://code.travail.gouv.fr/widget.js" defer></script>`}
-        </CodeSnippet>
-        <p>
-          Ensuite, intégrez le code suivant à l’endroit où vous souhaitez voir
-          le module s’afficher&nbsp;:
-        </p>
+        <Heading as="h2">Intégrez ce module à votre site</Heading>
+        <p>L’installation se passe en deux temps :</p>
+        <ol>
+          <li>
+            <p>
+              ajoutez le code suivant dans la balise <code>&lt;body&gt;</code>{" "}
+              de votre page&nbsp;:
+            </p>
 
-        <CodeSnippet>{`<a href="https://code.travail.gouv.fr${parsedUrl}">${shortTitle}</a>`}</CodeSnippet>
+            <CodeSnippet>
+              {`<script src="https://code.travail.gouv.fr/widget.js" defer></script>`}
+            </CodeSnippet>
+          </li>
+          <li>
+            <p>
+              intégrez le code suivant à l’endroit où vous souhaitez voir le
+              module s’afficher&nbsp;:
+            </p>
+            <CodeSnippet>{`<a href="https://code.travail.gouv.fr${parsedUrl}">${shortTitle}</a>`}</CodeSnippet>
+          </li>
+        </ol>
 
         {messages && (
           <>
-            <Title>Messages</Title>
+            <Heading as="h3">Messages</Heading>
             <p>
               Il est possible d&apos;effectuer du tracking sur nos liens et
               boutons en interceptant les messages envoyés par le widget avec le
@@ -158,13 +159,19 @@ const IntegrationContainer = ({
     const iframe = document.getElementById('cdtn-iframe-${id}');
     if (
       source === iframe.contentWindow
-      && data.kind === "click"
+      ${Object.keys(messages).map((key) => `&& data.kind === "${key}"`)}
     ) {
-      ${messages.click.map(
-        ({ name, description }) => `
-      data.name === '${name}' // ${description}`
+      ${Object.keys(messages).map((key) =>
+        messages[key].map(({ name, description, extra }) => {
+          let extraString = "";
+          if (extra) {
+            extraString = Object.entries(extra)
+              .map(([key, value]) => `\n\tdata.extra.${key} // ${value}`)
+              .join();
+          }
+          return `\tdata.name === '${name}' // ${description}${extraString}`;
+        })
       )}
-
     }
   }
 );`}

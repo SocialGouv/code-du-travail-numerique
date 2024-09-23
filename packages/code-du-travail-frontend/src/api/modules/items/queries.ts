@@ -1,5 +1,3 @@
-import { ItemFilterType, ItemSortType } from "./types";
-
 export const getSearchBySourceSlugBody = ({
   source,
   slug,
@@ -16,7 +14,8 @@ export const getSearchBySourceSlugBody = ({
       "dateDebut", // code-du-travail
       "description", // modele de courrier,
       "filesize", // modele de courrier, informations
-      "fileUrl", // modele de courrier, informations
+      "fileUrl", // informations
+      "filename", // modele de courrier
       "imgUrl",
       "intro",
       "html",
@@ -32,7 +31,6 @@ export const getSearchBySourceSlugBody = ({
       "slug", // outils
       "tags", // code-du-travail
       "title",
-      "title_vector", // otherwise we can search for related items ?
       "url",
       "idcc",
       "date_publi", // convention-collective
@@ -42,13 +40,22 @@ export const getSearchBySourceSlugBody = ({
       "contents", // editorial_content
       "folder", // editorial_content
       "cdtnId",
-      "covisits",
       "source",
       "highlight", // convention-collective,
       "sectionDisplayMode",
       "dismissalProcess",
       "meta_title",
       "type",
+      "content", // pour les contributions génériques et conventionnelles
+      "ccSupported", // pour les contributions génériques et conventionnelles
+      "ccUnextended", // pour les contributions génériques et conventionnelles
+      "messageBlockGenericNoCDT", // pour les contributions génériques et conventionnelles
+      "messageBlockGenericNoCDTUnextendedCC", // pour les contributions génériques et conventionnelles
+      "ccnSlug", // pour une contribution conventionnelle
+      "ccnShortTitle", // pour une contribution conventionnelle
+      "linkedContent", // pour les contributions
+      "messageBlock", // pour les contributions
+      "metas", // pour les contributions
     ],
     query: {
       bool: {
@@ -123,34 +130,5 @@ export const getRelatedItemsBody = ({
       },
     },
     size,
-  };
-};
-
-export const getDocumentBody = (
-  { url, source, ids }: ItemFilterType,
-  sortParam?: ItemSortType
-) => {
-  const filter: any[] = [{ term: { isPublished: true } }];
-  const sort: any[] = [];
-  if (sortParam) {
-    sort.push({ [sortParam.fieldName]: sortParam.orderDirection });
-  }
-  if (url) {
-    filter.push({ term: { url } });
-  }
-  if (source) {
-    filter.push({ term: { source } });
-  }
-  if (ids) {
-    filter.push({ ids: { values: ids } });
-  }
-  return {
-    query: {
-      bool: {
-        filter,
-      },
-    },
-    size: 200,
-    sort,
   };
 };

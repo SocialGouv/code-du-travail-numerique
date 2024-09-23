@@ -13,12 +13,14 @@ import { useRouter } from "next/router";
 type EnterpriseSearchStepProps = {
   onBackClick: () => void;
   isWidgetMode?: boolean;
+  noRedirect?: boolean;
 } & TrackingProps;
 
 const AgreementSelectionStep = ({
   onBackClick,
   onUserAction,
   isWidgetMode,
+  noRedirect,
 }: EnterpriseSearchStepProps): JSX.Element => {
   const { enterprise } = useNavContext();
   const router = useRouter();
@@ -33,15 +35,15 @@ const AgreementSelectionStep = ({
     <>
       <SectionTitle>Convention collective</SectionTitle>
       <Paragraph variant="primary">
-        {(enterprise.conventions.length ?? 0) > 1
-          ? `${enterprise.conventions.length} conventions collectives trouvées pour `
-          : `${
-              enterprise.conventions.length ?? 0
-            } convention collective trouvée pour `}
+        {enterprise.conventions.length === 0
+          ? `Aucune convention collective n'a été déclarée pour l'entreprise `
+          : enterprise.conventions.length === 1
+          ? `1 convention collective trouvée pour `
+          : `${enterprise.conventions.length} conventions collectives trouvées pour `}
         <strong>
-          « {enterprise.simpleLabel}
+          « {enterprise.label}
           {enterprise.address &&
-            ` , ${enterprise.firstMatchingEtablissement?.address}`}{" "}
+            `, ${enterprise.firstMatchingEtablissement?.address}`}{" "}
           »
         </strong>
       </Paragraph>
@@ -54,6 +56,7 @@ const AgreementSelectionStep = ({
                   onUserAction={onUserAction}
                   agreement={agreement}
                   isWidgetMode={isWidgetMode}
+                  noRedirect={noRedirect}
                 />
               ) : (
                 <Tile

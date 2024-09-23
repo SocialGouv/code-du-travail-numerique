@@ -1,4 +1,4 @@
-import type { Motif, SupportedCcIndemniteLicenciement } from "../common";
+import type { Motif, SupportedCc } from "../common";
 import { MotifKeys } from "../common/motif-keys";
 import { SeniorityDefault } from "../common/seniority";
 
@@ -29,7 +29,7 @@ export const LEGAL_MOTIFS: Motif[] = [
   { key: MotifKeys.miseAPied, label: "Mise à pied", value: 1 },
 ];
 
-export class SeniorityLegal extends SeniorityDefault<SupportedCcIndemniteLicenciement.default> {
+export class SeniorityLegal extends SeniorityDefault<SupportedCc.default> {
   getMotifs(): Motif[] {
     return LEGAL_MOTIFS;
   }

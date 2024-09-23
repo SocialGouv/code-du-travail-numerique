@@ -3,18 +3,14 @@ import { Badge } from "@socialgouv/cdtn-ui";
 
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
-import { handleError } from "../../src/lib/fetch-error";
-import { SITE_URL } from "../../src/config";
 import { LetterModel, LetterModelProps, getTitle } from "../../src/modeles";
 import Answer from "../../src/common/Answer";
-import EventTracker from "../../src/lib/tracking/EventTracker";
-
-const fetchCourrier = ({ slug }) =>
-  fetch(`${SITE_URL}/api/items/modeles_de_courriers/${slug}`);
+import { getBySourceAndSlugItems } from "../../src/api";
+import { MailTemplate } from "@socialgouv/cdtn-types";
 
 function ModeleCourrier(props: LetterModelProps): JSX.Element {
   const {
-    description = "",
+    intro = "",
     metaDescription,
     title,
     meta_title,
@@ -31,16 +27,13 @@ function ModeleCourrier(props: LetterModelProps): JSX.Element {
     <Layout>
       <Metas
         title={`${category} :  ${meta_title ?? title}`}
-        description={
-          metaDescription ||
-          description.slice(0, description.indexOf(" ", 150)) + "…"
-        }
+        description={metaDescription}
       />
       <Answer
         title={getTitle(slug, title)}
         relatedItems={relatedItems}
         emptyMessage="Modèle de document introuvable"
-        intro={description}
+        intro={intro}
         metaDescription={metaDescription}
         date={date}
         breadcrumbs={breadcrumbs}
@@ -48,18 +41,20 @@ function ModeleCourrier(props: LetterModelProps): JSX.Element {
         <Badge />
         <LetterModel {...props}></LetterModel>
       </Answer>
-      <EventTracker />
     </Layout>
   );
 }
 
 export const getServerSideProps = async ({ query }) => {
-  const response = await fetchCourrier(query);
-  if (!response.ok) {
-    return handleError(response);
+  const data = await getBySourceAndSlugItems<MailTemplate>(
+    "modeles_de_courriers",
+    query.slug
+  );
+  if (!data?._source) {
+    return {
+      notFound: true,
+    };
   }
-
-  const data = await response.json();
   return {
     props: {
       relatedItems: data.relatedItems,

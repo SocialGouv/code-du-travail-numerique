@@ -1,67 +1,83 @@
-import { Input, Label, Text, theme } from "@socialgouv/cdtn-ui";
+import { Label, Text, theme } from "@socialgouv/cdtn-ui";
 import React, { useState } from "react";
 import styled from "styled-components";
-import Autosuggest from "react-autosuggest";
 import { formatIdcc } from "@socialgouv/modeles-social";
-import { suggesterTheme } from "../../../../../search/SearchBar/DocumentSuggesterTheme";
 import { InfoBulle } from "../../../InfoBulle";
-import { createSuggesterHook } from "../../components/Suggester";
 import { searchAgreements } from "../../../../../conventions/Search/api/agreements.service";
 import {
   TrackingProps,
   UserAction,
 } from "../../../../ConventionCollective/types";
 import { AgreementNoResult } from "../AgreementNoResult";
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "../../../../../outils/types";
+import { useCombobox } from "downshift";
+import {
+  StyledSuggestion,
+  StyledList,
+  StyledInput,
+} from "../../../../../search/SearchBar";
 
 type Props = {
   onSelectAgreement: (agreement: Agreement) => void;
+  searchResultOverride?: (query: string, results: Agreement[]) => Agreement[];
 } & TrackingProps;
 
 export const SearchAgreementInput = ({
   onUserAction,
   onSelectAgreement,
+  searchResultOverride,
 }: Props): JSX.Element => {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState<null | string>(null);
+  const [suggestions, setSuggestions] = useState<Agreement[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  const useAgreementSuggester = createSuggesterHook(
-    searchAgreements,
-    (query) => {
-      onUserAction(UserAction.SearchAgreement, { query });
-    }
-  );
+  const {
+    isOpen,
+    getMenuProps,
+    getInputProps,
+    getLabelProps,
+    highlightedIndex,
+    getItemProps,
+  } = useCombobox({
+    items: suggestions,
+    onInputValueChange: async ({ inputValue }) => {
+      setIsLoading(true);
+      setQuery(inputValue);
+      try {
+        const results = await searchAgreements(inputValue);
+        if (inputValue) {
+          onUserAction(UserAction.SearchAgreement, { query: inputValue });
+        }
+        if (searchResultOverride) {
+          setSuggestions(searchResultOverride(inputValue, results));
+        } else {
+          setSuggestions(results);
+        }
+      } catch (error) {
+        setError(error);
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    onSelectedItemChange(changes) {
+      const suggestion: Agreement = changes.selectedItem;
+      if (suggestion) {
+        onSelectAgreement(suggestion);
+      }
+    },
+    itemToString(item) {
+      return item ? item.shortTitle : "";
+    },
+  });
 
-  const state = useAgreementSuggester(query);
-
-  const onChange = () => {};
-
-  const onClear = () => {
-    setQuery("");
-  };
-
-  const onSearch = async ({ value }) => {
-    setQuery(value);
-  };
-
-  const onSelect = async (event, data) => {
-    event.preventDefault();
-    onSelectAgreement(data.suggestion);
-  };
-  const inputProps: any = {
-    "aria-label": "agreement-search-label",
-    id: "agreement-search",
-    name: "agreement-search",
-    onChange: onChange,
-    placeholder: "Ex : Transports routiers ou 1486",
-    title: "Nom de la convention collective",
-    type: "search",
-    value: query,
-    "data-testid": "agreement-search-input",
-    autoFocus: true,
-  };
   return (
     <>
-      <InlineLabel htmlFor="agreement-search" id="agreement-search-label">
+      <InlineLabel
+        {...getLabelProps()}
+        htmlFor="agreement-search"
+        id="agreement-search-label"
+      >
         Nom de la convention collective ou son numéro d’identification{" "}
         <abbr title="Identifiant de la Convention Collective">IDCC</abbr>{" "}
         <Text fontWeight="400" fontSize="small">
@@ -83,53 +99,54 @@ export const SearchAgreementInput = ({
         </p>
       </InfoBulle>
 
-      <Autosuggest
-        theme={suggesterTheme}
-        suggestions={state.data ?? []}
-        alwaysRenderSuggestions={false}
-        onSuggestionSelected={onSelect}
-        onSuggestionsFetchRequested={onSearch}
-        shouldRenderSuggestions={(value, reason) => {
-          if (reason === "escape-pressed") {
-            onClear();
-          }
-          return true;
-        }}
-        getSuggestionValue={(suggestion) => suggestion}
-        renderSuggestion={renderSuggestion}
-        renderSuggestionsContainer={renderSuggestionsContainer}
-        renderInputComponent={renderInputComponent}
-        inputProps={inputProps}
-        focusInputOnSuggestionClick={false}
+      <StyledSearch
+        {...getInputProps()}
+        data-testid="agreement-search-input"
+        id="agreement-search"
+        placeholder={"Ex : Transports routiers ou 1486"}
+        type="search"
       />
-      <AgreementNoResult onUserAction={onUserAction} state={state} />
+
+      <StyledUl
+        {...getMenuProps()}
+        hideBorder={suggestions.length === 0 || !isOpen}
+      >
+        {isOpen &&
+          suggestions.map((item: Agreement, index) => (
+            <StyledSuggestion
+              {...getItemProps({
+                item,
+                index,
+              })}
+              key={`${item}${index}`}
+              isHighlighted={highlightedIndex === index}
+            >
+              {item.shortTitle} (IDCC {formatIdcc(item.num)})
+            </StyledSuggestion>
+          ))}
+      </StyledUl>
+      {query !== null && query !== "" && (
+        <AgreementNoResult
+          data={suggestions}
+          isLoading={isLoading}
+          error={error}
+          onUserAction={onUserAction}
+        />
+      )}
     </>
   );
 };
 
-const renderInputComponent = (inputProps) => <BlockInput {...inputProps} />;
-
-const SuggestionsContainer = styled.div`
-  li[role="option"]:nth-child(2n + 1) {
-    background: ${theme.colors.bgSecondary};
-  }
+const StyledSearch = styled(StyledInput)`
+  margin-top: ${theme.spacings.small};
+  padding-right: 1.6rem;
 `;
 
-const renderSuggestion = (suggestion) => (
-  <div>
-    {suggestion.shortTitle} <IDCC>(IDCC {formatIdcc(suggestion.num)})</IDCC>
-  </div>
-);
-const IDCC = styled.span`
-  font-weight: normal;
-`;
-const renderSuggestionsContainer = ({ containerProps, children }) => (
-  <SuggestionsContainer {...containerProps}>{children}</SuggestionsContainer>
-);
-
-const BlockInput = styled(Input)`
-  padding-top: ${theme.spacings.small};
-  width: 100%;
+const StyledUl = styled(StyledList)`
+  position: initial;
+  border: ${({ hideBorder }) =>
+    hideBorder ? "0px" : `1px solid ${theme.colors.border}`};
+  box-shadow: initial;
 `;
 
 const InlineLabel = styled(Label)`

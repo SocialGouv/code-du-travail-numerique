@@ -1,6 +1,11 @@
-import { theme, Tabs, Accordion, Heading, Section } from "@socialgouv/cdtn-ui";
+import { Heading, Section, Tabs, theme } from "@socialgouv/cdtn-ui";
+import { AccordionWithAnchor as Accordion } from "../../../src/common/AccordionWithAnchor";
+
 import styled from "styled-components";
-import { Content, SectionDisplayMode } from "@socialgouv/cdtn-utils";
+import {
+  EditorialContentBaseContentPart,
+  EditorialSectionDisplayMode,
+} from "@socialgouv/cdtn-types";
 
 import { BlockList } from "./BlockList";
 
@@ -10,9 +15,9 @@ import References from "../../common/References";
 const { breakpoints, spacings } = theme;
 
 type ContentsParameters = {
-  contents?: Content[];
+  contents?: EditorialContentBaseContentPart[];
   dismissalProcess: boolean;
-  sectionDisplayMode?: SectionDisplayMode;
+  sectionDisplayMode?: EditorialSectionDisplayMode;
   anchor: string;
 };
 
@@ -26,21 +31,22 @@ export const Contents = ({
     return (
       <>
         <BlockList key={name} name={name} blocks={blocks}></BlockList>
-        {references.map(
-          ({ label, links }, index) =>
-            links.length > 0 && (
-              <Section key={`section-${index}`}>
-                <References
-                  label={label}
-                  accordionDisplay={1}
-                  references={links.map((reference, index) => ({
-                    ...reference,
-                    id: reference.id || `${name}-${index}`,
-                  }))}
-                />
-              </Section>
-            )
-        )}
+        {references &&
+          references.map(
+            ({ label, links }, index) =>
+              links.length > 0 && (
+                <Section key={`section-${index}`}>
+                  <References
+                    label={label}
+                    accordionDisplay={1}
+                    references={links.map((reference, index) => ({
+                      ...reference,
+                      id: reference.id || `${name}-${index}`,
+                    }))}
+                  />
+                </Section>
+              )
+          )}
       </>
     );
   });
@@ -74,15 +80,13 @@ export const Contents = ({
         />
       );
   }
-  let sectionTitleStyleWrapper =
-    sectionDisplayMode === "tab" ? (
-      <TabStylesWrapper data-testid="tabs">{contentWrapper}</TabStylesWrapper>
-    ) : (
-      <GlobalStylesWrapper data-testid="accordion">
-        {contentWrapper}
-      </GlobalStylesWrapper>
-    );
-  return sectionTitleStyleWrapper;
+  return sectionDisplayMode === "tab" ? (
+    <TabStylesWrapper data-testid="tabs">{contentWrapper}</TabStylesWrapper>
+  ) : (
+    <GlobalStylesWrapper data-testid="accordion">
+      {contentWrapper}
+    </GlobalStylesWrapper>
+  );
 };
 
 const TabStylesWrapper = styled.div`

@@ -1,8 +1,8 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemnite } from "../../../../src/outils";
-import { ui } from "./ui";
-import userEvent from "@testing-library/user-event";
+import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
+import { UserAction } from "../../../common";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -21,38 +21,36 @@ Storage.prototype.getItem = jest.fn(
 );
 
 describe("Indemnité licenciement - CC 86", () => {
+  let userAction: UserAction;
   beforeEach(() => {
-    render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
+    render(
+      <CalculateurIndemniteLicenciement
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
+    );
+    userAction = new UserAction();
   });
 
   test(`Vérification du fait que le salaire de reference est bien celui issu de la formule de calcul de l'indemnité`, () => {
-    userEvent.click(ui.introduction.startButton.get());
-    userEvent.click(ui.contract.type.cdi.get());
-    userEvent.click(ui.contract.fauteGrave.non.get());
-    userEvent.click(ui.contract.inaptitude.non.get());
-    userEvent.click(ui.contract.arretTravail.non.get());
-    userEvent.click(ui.next.get());
-    userEvent.click(ui.next.get());
-    fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/01/2000" },
-    });
-    fireEvent.change(ui.seniority.notificationDate.get(), {
-      target: { value: "01/01/2022" },
-    });
-    fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "01/03/2022" },
-    });
-    userEvent.click(ui.seniority.hasAbsence.non.get());
-    userEvent.click(ui.next.get());
-    userEvent.click(ui.salary.hasPartialTime.non.get());
-    userEvent.click(ui.salary.hasSameSalary.non.get());
-    fireEvent.change(ui.salary.salaries.getAll()[0], {
-      target: { value: "2500" },
-    });
-    fireEvent.change(ui.salary.salaries.getAll()[0], {
-      target: { value: "25000" },
-    });
-    userEvent.click(ui.next.get());
+    userAction.click(ui.introduction.startButton.get());
+    userAction.click(ui.contract.type.cdi.get());
+    userAction.click(ui.contract.fauteGrave.non.get());
+    userAction.click(ui.contract.inaptitude.non.get());
+    userAction.click(ui.contract.arretTravail.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.next.get());
+    userAction.setInput(ui.seniority.startDate.get(), "01/01/2000");
+    userAction.setInput(ui.seniority.notificationDate.get(), "01/01/2022");
+    userAction.setInput(ui.seniority.endDate.get(), "01/03/2022");
+    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.salary.hasPartialTime.non.get());
+    userAction.click(ui.salary.hasSameSalary.non.get());
+    userAction.setInput(ui.salary.salaries.getAll()[0], "2500");
+    userAction.setInput(ui.salary.salaries.getAll()[0], "25000");
+    userAction.click(ui.next.get());
     expect(ui.result.formula.get()).toHaveTextContent("Formule");
     expect(ui.result.formula.get()).toHaveTextContent(
       "Sref : Salaire de référence (25000 €)"

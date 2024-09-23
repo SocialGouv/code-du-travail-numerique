@@ -1,5 +1,4 @@
 import type {
-  MissingArgs,
   PublicodesData,
   PublicodesIndemniteLicenciementResult,
 } from "../../../../../publicodes";
@@ -12,7 +11,7 @@ const engine = new IndemniteLicenciementPublicodes(
 
 describe("CC 16", () => {
   describe("Affiche les questions", () => {
-    // eslint-disable-next-line @typescript-eslint/init-declarations
+     
     let result: PublicodesData<PublicodesIndemniteLicenciementResult>;
 
     beforeEach(() => {
@@ -25,7 +24,7 @@ describe("CC 16", () => {
     });
 
     it("doit demander en premier la catégorie", () => {
-      expect(getFirstMissing(result.missingArgs)).toEqual(
+      expect(result.missingArgs).toHaveNextMissingRule(
         "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle"
       );
     });
@@ -43,7 +42,7 @@ describe("CC 16", () => {
       });
 
       it("doit demander si il a été TAM ou employés avant", () => {
-        expect(getFirstMissing(result.missingArgs)).toEqual(
+        expect(result.missingArgs).toHaveNextMissingRule(
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien"
         );
       });
@@ -63,7 +62,7 @@ describe("CC 16", () => {
         });
 
         it("doit demander la date du changement de status", () => {
-          expect(getFirstMissing(result.missingArgs)).toEqual(
+          expect(result.missingArgs).toHaveNextMissingRule(
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . date du statut cadre"
           );
         });
@@ -85,8 +84,11 @@ describe("CC 16", () => {
           });
 
           it("doit demander son age", () => {
-            expect(getFirstMissing(result.missingArgs)).toEqual(
+            expect(result.missingArgs).toHaveNextMissingRule(
               "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . age"
+            );
+            expect(result.missingArgs).toHaveNextMissingQuestion(
+              "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
             );
           });
         });
@@ -110,7 +112,7 @@ describe("CC 16", () => {
           });
 
           it("doit demander si il a le droit à la retraite", () => {
-            expect(getFirstMissing(result.missingArgs)).toEqual(
+            expect(result.missingArgs).toHaveNextMissingRule(
               "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . droit à la retraite au titre du régime en vigueur dans l'entreprise"
             );
           });
@@ -135,7 +137,7 @@ describe("CC 16", () => {
           });
 
           it("ne doit pas demander d'autres questions", () => {
-            expect(getFirstMissing(result.missingArgs)).toBeNull();
+            expect(result.missingArgs).toHaveNextMissingRule(null);
           });
         });
       });
@@ -155,8 +157,11 @@ describe("CC 16", () => {
         });
 
         it("doit demander son age", () => {
-          expect(getFirstMissing(result.missingArgs)).toEqual(
+          expect(result.missingArgs).toHaveNextMissingRule(
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . age"
+          );
+          expect(result.missingArgs).toHaveNextMissingQuestion(
+            "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
           );
         });
 
@@ -177,7 +182,7 @@ describe("CC 16", () => {
           });
 
           it("doit demander si il a le droit à la retraite", () => {
-            expect(getFirstMissing(result.missingArgs)).toEqual(
+            expect(result.missingArgs).toHaveNextMissingRule(
               "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . droit à la retraite au titre du régime en vigueur dans l'entreprise"
             );
           });
@@ -200,24 +205,56 @@ describe("CC 16", () => {
           });
 
           it("ne doit pas demander d'autres questions", () => {
-            expect(getFirstMissing(result.missingArgs)).toBeNull();
+            expect(result.missingArgs).toHaveNextMissingRule(null);
           });
         });
       });
     });
+
+    describe("Pour un ouvrier", () => {
+      beforeEach(() => {
+        result = engine.setSituation(
+          {
+            "contrat salarié . convention collective": "'IDCC0016'",
+            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
+              "'Ouvriers'",
+            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite":
+              "'Non'",
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
+      });
+
+      it("doit demander son age", () => {
+        expect(result.missingArgs).toHaveNextMissingRule(
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . age"
+        );
+        expect(result.missingArgs).toHaveNextMissingQuestion(
+          "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
+        );
+      });
+    });
+
+    describe("Pour un employé ou TAM", () => {
+      beforeEach(() => {
+        result = engine.setSituation(
+          {
+            "contrat salarié . convention collective": "'IDCC0016'",
+            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
+              "'Employés'",
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
+      });
+
+      it("doit demander son age", () => {
+        expect(result.missingArgs).toHaveNextMissingRule(
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age"
+        );
+        expect(result.missingArgs).toHaveNextMissingQuestion(
+          "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
+        );
+      });
+    });
   });
 });
-
-const getFirstMissing = (missingVariables: MissingArgs[]): string | null => {
-  const missingVars = missingVariables
-    .filter((arg) => arg.rawNode.cdtn !== undefined)
-    .sort((a, b) => b.indice - a.indice);
-  if (missingVars.length === 0) {
-    return null;
-  }
-  return replaceAll(missingVars[0].name, " - ", " . ");
-};
-
-const replaceAll = (string: string, search: string, replace: string) => {
-  return string.split(search).join(replace);
-};

@@ -15,7 +15,7 @@ concurrency:
 jobs:
   socialgouv:
     name: "🇫🇷 SocialGouv"
-    uses: socialgouv/workflows/.github/workflows/use-ks-gh-review-auto.yaml@v1
+    uses: socialgouv/workflows/.github/workflows/use-ks-gh-with-env-review-auto.yaml@v1
     secrets: inherit
 
   e2e:
@@ -38,13 +38,13 @@ jobs:
         uses: socialgouv/kontinuous/.github/actions/env@v1
       - name: Set env
         run: |
-          echo "SITE_URL=https://${{ steps.env.outputs.subdomain }}.dev.fabrique.social.gouv.fr" >> $GITHUB_ENV
+          echo "SITE_URL=https://${{ steps.env.outputs.subdomain }}.ovh.fabrique.social.gouv.fr" >> $GITHUB_ENV
       - name: Run test e2e
         run: |
-          TEST_BASEURL=${{ env.SITE_URL }} yarn test:e2e
+          TEST_BASEURL=${{ env.SITE_URL }} TEST_MODE=light yarn test:e2e
       - name: Archive generated screenshots
         if: failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: e2e-screenshots
           path: |

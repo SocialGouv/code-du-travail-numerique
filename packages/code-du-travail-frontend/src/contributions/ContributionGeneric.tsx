@@ -1,22 +1,12 @@
-import { Agreement, getLabelBySource } from "@socialgouv/cdtn-utils";
+import { ElasticSearchContributionGeneric } from "@socialgouv/cdtn-types";
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { push as matopush } from "@socialgouv/matomo-next";
-
-import Mdx from "../../src/common/Mdx";
-import { A11yLink } from "../common/A11yLink";
-import { useLocalStorageOnPageLoad } from "../lib/useLocalStorage";
-import rehypeToReact from "./rehypeToReact";
-import ReferencesJuridiques, { filteredRefs } from "./References";
+import { useLocalStorageForAgreementOnPageLoad } from "../lib/useLocalStorage";
 import { RadioQuestion } from "../outils/Components";
 import { AgreementRoute } from "../outils/common/type/WizardType";
 import router from "next/router";
-import {
-  EnterpriseSearch,
-  NoEnterprise,
-} from "../outils/CommonSteps/Agreement/components";
 import { AgreementSupportInfo } from "../outils/common/Agreement/types";
-import AgreementSearch from "../outils/CommonSteps/Agreement/components/AgreementSearch";
 import { pushAgreementEvents } from "../outils/common";
 import { OnUserAction } from "../outils/ConventionCollective/types";
 import { handleTrackEvent } from "../outils/common/Agreement/tracking";
@@ -24,35 +14,50 @@ import { MatomoBaseEvent } from "../lib";
 import { getCc3239Informations } from "../outils";
 import { Enterprise } from "../conventions/Search/api/enterprises.service";
 import {
-  Alert,
-  ArrowLink,
   Badge,
   Button,
-  Heading,
   icons,
   Paragraph,
   Section,
   theme,
   Title,
   Wrapper,
+  Alert as UiAlert,
 } from "@socialgouv/cdtn-ui";
+import { ReferencesJuridiques } from "./References";
+import { LinkedContent } from "./LinkedContent";
+import { ContributionContent } from "./ContributionContent";
+import { ContributionMessageBlock } from "./ContributionMessageBlock";
+import {
+  AlertAgreementNotSupportedNoContent,
+  AlertAgreementSupported,
+  AlertAgreementUnextended,
+} from "./AlertAgreementNotSupportedNoContent";
+import { Alert } from "../common/Alert";
+import { Agreement } from "../outils/types";
+import { SupportedTypes } from "@socialgouv/modeles-social";
+import EnterpriseSearch from "../outils/Components/Agreements/EnterpriseSearch";
+import { NoEnterprise } from "../outils/Components/Agreements/NoEnterprise";
+import AgreementSearch from "../outils/Components/Agreements/AgreementSearch";
 
 const { DirectionRight } = icons;
 
-const ContributionGeneric = ({ answers, content, slug }) => {
+type Props = {
+  contribution: ElasticSearchContributionGeneric;
+};
+
+const ContributionGeneric = ({ contribution }: Props) => {
   const titleRef = useRef<HTMLDivElement>(null);
   const onUserAction: OnUserAction = (action, extra) => {
     handleTrackEvent(getTitle(), action, extra);
   };
   const getTitle = () => router.asPath;
 
-  const hasConventionAnswers =
-    answers.conventions && answers.conventions.length > 0;
+  const [showAnswer, setShowAnswer] = useState(false);
   const [hasNoEnterpriseSelected, setHasNoEnterpriseSelected] = useState(false);
   const [entreprise, setEnterprise] = useState<Enterprise | undefined>();
 
-  const [convention, setConvention] =
-    useLocalStorageOnPageLoad<Agreement>("convention");
+  const [convention, setConvention] = useLocalStorageForAgreementOnPageLoad();
 
   const [selectedRoute, setSelectedRoute] = useState<
     AgreementRoute | undefined
@@ -61,17 +66,32 @@ const ContributionGeneric = ({ answers, content, slug }) => {
   if (convention && !selectedRoute) {
     setSelectedRoute("agreement");
   }
-  const supportedAgreements: AgreementSupportInfo[] = answers.conventions.map(
-    (c) => {
+
+  const ccUnextended =
+    (contribution.ccUnextended ?? []).map((cc) => parseInt(cc, 10)) ?? [];
+  const supportedAgreements: AgreementSupportInfo[] = contribution.ccSupported
+    .map((c) => {
       return {
-        idcc: parseInt(c.idcc, 10),
-        fullySupported: true,
+        idcc: parseInt(c, 10),
+        fullySupported: SupportedTypes.FULLY_SUPPORTED,
       };
-    }
-  );
+    })
+    .filter(({ idcc }) => !ccUnextended || !ccUnextended.includes(idcc));
+
+  const isSupportedInList = (agreements, agreement) =>
+    agreement && !!agreements.find((item) => item.idcc === agreement.num);
   const isSupported = (agreement) =>
-    agreement &&
-    !!supportedAgreements.find((item) => item.idcc == agreement.num);
+    isSupportedInList(supportedAgreements, agreement);
+  const isUnextended = (agreement) =>
+    contribution.ccUnextended &&
+    contribution.ccUnextended.includes(agreement?.id);
+
+  const isNoCDT = () => contribution && contribution.type === "generic-no-cdt";
+  const showButtonToDisplayCDTContent = () =>
+    !isNoCDT() &&
+    (!showAnswer || convention || entreprise?.conventions.length === 0);
+  const showGeneralInformationButton = () =>
+    !isNoCDT() && !showAnswer && !convention;
 
   const onSelectAgreement = (
     agreement: Agreement | null,
@@ -96,16 +116,26 @@ const ContributionGeneric = ({ answers, content, slug }) => {
 
     setConvention(agreement);
     setEnterprise(enterprise);
+    if (agreementTreated) {
+      setShowAnswer(false);
+    }
   };
 
-  const CC_NOT_SUPPORTED = (
-    <>
-      <Paragraph variant="primary" fontSize="default" fontWeight="700" noMargin>
-        Nous n’avons pas de réponse pour cette convention collective
-      </Paragraph>
-      <p>Vous pouvez consulter les informations générales ci-dessous.</p>
-    </>
-  );
+  const alertAgreementNotSupported = (url: string) => {
+    if (isUnextended(convention)) {
+      return <AlertAgreementUnextended url={url} />;
+    } else if (contribution.type === "generic-no-cdt") {
+      contribution.messageBlock;
+      return (
+        <AlertAgreementNotSupportedNoContent
+          url={url}
+          message={contribution.messageBlockGenericNoCDT}
+        />
+      );
+    } else {
+      return <AlertAgreementSupported showAnswer={showAnswer} />;
+    }
+  };
 
   const scrollToTitle = () => {
     setTimeout(() => {
@@ -117,193 +147,220 @@ const ContributionGeneric = ({ answers, content, slug }) => {
 
   return (
     <>
-      {hasConventionAnswers && (
-        <>
-          <Badge />
-          <SectionNoPadding>
-            <p>
-              La réponse dépend de la convention collective à laquelle votre
-              entreprise est rattachée. Veuillez renseigner votre situation afin
-              d’obtenir une réponse adaptée :
-            </p>
-            <Wrapper variant="light">
-              <Title shift={spacings.xmedium} variant="primary">
-                Votre situation
-              </Title>
+      <Badge />
+      <SectionNoPadding>
+        {isNoCDT() ? (
+          <p>
+            La convention collective est nécessaire pour obtenir une réponse car
+            le code du travail ne prévoit rien sur ce sujet :
+          </p>
+        ) : (
+          <p>
+            La réponse dépend de la convention collective à laquelle votre
+            entreprise est rattachée. Veuillez renseigner votre situation afin
+            d’obtenir une réponse adaptée :
+          </p>
+        )}
 
-              <RadioQuestion
-                questions={[
-                  {
-                    label:
-                      "Je sais quelle est ma convention collective (je la saisis)",
-                    value: "agreement" as AgreementRoute,
-                    id: "route-agreement",
-                  },
-                  {
-                    label:
-                      "Je ne sais pas quelle est ma convention collective (je la recherche)",
-                    value: "enterprise" as AgreementRoute,
-                    id: "route-enterprise",
-                  },
-                ]}
-                name="route"
-                label="Quel est le nom de la convention collective applicable&nbsp;?"
-                selectedOption={selectedRoute}
-                onChangeSelectedOption={(value: AgreementRoute) => {
-                  setConvention();
-                  setHasNoEnterpriseSelected(false);
-                  setSelectedRoute(value);
-                }}
-                tooltip={{
-                  content: (
-                    <p>
-                      Vous pouvez trouver le nom de votre convention collective
-                      sur votre <strong>bulletin de paie</strong>.
-                    </p>
-                  ),
-                }}
-              />
-              {selectedRoute === "agreement" && (
-                <AgreementSearch
-                  supportedAgreements={supportedAgreements}
-                  selectedAgreement={convention}
-                  onSelectAgreement={onSelectAgreement}
-                  onUserAction={onUserAction}
-                  alertAgreementNotSupported={() => CC_NOT_SUPPORTED}
-                  simulator="QUESTIONNAIRE"
-                />
+        <Wrapper variant="light">
+          <Title size="small" as="p" shift={spacings.xmedium} variant="primary">
+            Votre situation
+          </Title>
+
+          <RadioQuestion
+            questions={[
+              {
+                label:
+                  "Je sais quelle est ma convention collective (je la saisis)",
+                value: "agreement" as AgreementRoute,
+                id: "route-agreement",
+              },
+              {
+                label:
+                  "Je ne sais pas quelle est ma convention collective (je la recherche)",
+                value: "enterprise" as AgreementRoute,
+                id: "route-enterprise",
+              },
+            ]}
+            name="route"
+            label="Quel est le nom de la convention collective applicable&nbsp;?"
+            selectedOption={selectedRoute}
+            onChangeSelectedOption={(value: AgreementRoute) => {
+              setConvention();
+              setHasNoEnterpriseSelected(false);
+              setSelectedRoute(value);
+            }}
+            tooltip={{
+              content: (
+                <p>
+                  Vous pouvez trouver le nom de votre convention collective sur
+                  votre <strong>bulletin de paie</strong>.
+                </p>
+              ),
+            }}
+          />
+          {selectedRoute === "agreement" && (
+            <AgreementSearch
+              supportedAgreements={supportedAgreements}
+              selectedAgreement={convention}
+              onSelectAgreement={onSelectAgreement}
+              onUserAction={onUserAction}
+              alertAgreementNotSupported={alertAgreementNotSupported}
+              simulator="QUESTIONNAIRE"
+            />
+          )}
+          {selectedRoute === "enterprise" && (
+            <>
+              {!hasNoEnterpriseSelected && (
+                <form onSubmit={(event) => event.preventDefault()}>
+                  <EnterpriseSearch
+                    supportedAgreements={supportedAgreements}
+                    selectedAgreement={convention}
+                    onSelectAgreement={onSelectAgreement}
+                    onUserAction={onUserAction}
+                    alertAgreementNotSupported={alertAgreementNotSupported}
+                    simulator="QUESTIONNAIRE"
+                    noAgreementFoundComponent={
+                      isNoCDT() ? (
+                        <Alert
+                          title={`Aucune convention collective n'a été déclarée pour l'entreprise ${entreprise?.simpleLabel}.`}
+                          message="Or, la convention collective est nécessaire pour obtenir une réponse car le code du travail ne prévoit rien sur ce sujet."
+                        />
+                      ) : undefined
+                    }
+                  />
+                </form>
               )}
-              {selectedRoute === "enterprise" && (
+              {!entreprise && (
                 <>
-                  {!hasNoEnterpriseSelected && (
-                    <form onSubmit={(event) => event.preventDefault()}>
-                      <EnterpriseSearch
-                        supportedAgreements={supportedAgreements}
-                        selectedAgreement={convention}
-                        onSelectAgreement={onSelectAgreement}
-                        onUserAction={onUserAction}
-                        alertAgreementNotSupported={() => CC_NOT_SUPPORTED}
-                        simulator="QUESTIONNAIRE"
-                      />
-                    </form>
-                  )}
-                  {!entreprise && (
-                    <NoEnterprise
-                      isCheckboxChecked={hasNoEnterpriseSelected}
-                      setIsCheckboxChecked={setHasNoEnterpriseSelected}
-                      onCheckboxChange={async (isCheckboxChecked) => {
-                        const cc3239 = isCheckboxChecked
-                          ? await getCc3239Informations()
-                          : null;
-                        onSelectAgreement(cc3239, undefined, isCheckboxChecked);
-                      }}
-                      isQuestionnaire
-                    />
+                  <NoEnterprise
+                    isCheckboxChecked={hasNoEnterpriseSelected}
+                    setIsCheckboxChecked={setHasNoEnterpriseSelected}
+                    onCheckboxChange={async (isCheckboxChecked) => {
+                      const cc3239 = isCheckboxChecked
+                        ? await getCc3239Informations()
+                        : null;
+                      onSelectAgreement(cc3239, undefined, isCheckboxChecked);
+                    }}
+                    isQuestionnaire
+                  />
+                  {convention && !isSupported(convention) && (
+                    <Div>
+                      <UiAlert variant="primary">
+                        {alertAgreementNotSupported(convention.url)}
+                      </UiAlert>
+                    </Div>
                   )}
                 </>
               )}
+            </>
+          )}
 
-              <Div>
-                {isSupported(convention) && (
+          <DivCentered>
+            {isSupported(convention) ? (
+              <Button
+                variant="primary"
+                onClick={() => {
+                  matopush([
+                    MatomoBaseEvent.TRACK_EVENT,
+                    "contribution",
+                    "click_afficher_les_informations_CC",
+                    getTitle(),
+                  ]);
+                  router.push(
+                    `/contribution/${convention.num}-${contribution.slug}`
+                  );
+                }}
+              >
+                Afficher les informations
+                <StyledDirectionRightIcon />
+              </Button>
+            ) : (
+              <>
+                {showButtonToDisplayCDTContent() && (
                   <Button
                     variant="primary"
                     onClick={() => {
                       matopush([
                         MatomoBaseEvent.TRACK_EVENT,
                         "contribution",
-                        "click_afficher_les_informations_CC",
+                        convention
+                          ? "click_afficher_les_informations_générales"
+                          : "click_afficher_les_informations_sans_CC",
                         getTitle(),
                       ]);
-                      router.push(`/contribution/${convention.num}-${slug}`);
+                      setShowAnswer(true);
+                      scrollToTitle();
                     }}
                   >
-                    Afficher les informations
-                    <StyledDirectionRightIcon />
+                    Afficher les informations {convention && " générales"}
                   </Button>
                 )}
-              </Div>
-            </Wrapper>
-          </SectionNoPadding>
-        </>
-      )}
-      <SectionHidden show={answers.generic}>
-        <Title stripe="left" ref={titleRef}>
+              </>
+            )}
+          </DivCentered>
+        </Wrapper>
+
+        {showGeneralInformationButton() && (
+          <StyledButton
+            variant="link"
+            onClick={() => {
+              pushAgreementEvents(
+                getTitle(),
+                { route: "not-selected" },
+                false,
+                false
+              );
+              setShowAnswer(true);
+              scrollToTitle();
+            }}
+          >
+            Accéder aux informations générales sans renseigner ma convention
+            collective
+          </StyledButton>
+        )}
+      </SectionNoPadding>
+      <SectionHidden show={showAnswer}>
+        <Title variant="secondary" stripe="none" size="small" ref={titleRef}>
           Que dit le code du travail&nbsp;?
         </Title>
-        {content && (
-          <Meta>
-            {content.url && (
-              <span>
-                Source&nbsp;:{" "}
-                <A11yLink
-                  href={content.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {`Fiche: ${getLabelBySource(content.source)}`}
-                </A11yLink>
-              </span>
-            )}
-            {content.url && content.date && (
-              <HideOnMobile aria-hidden="true">&nbsp;-&nbsp;</HideOnMobile>
-            )}
-            {content.date && <span>Mis à jour le&nbsp;: {content.date}</span>}
-          </Meta>
+        {convention && !isSupported(convention) && (
+          <Paragraph italic>
+            Cette réponse correspond à ce que prévoit le code du travail, elle
+            ne tient pas compte des spécificités de la convention collective{" "}
+            {convention.shortTitle}
+          </Paragraph>
         )}
 
-        <Mdx
-          markdown={answers.generic.markdown}
-          components={rehypeToReact(content)}
-        />
-        <Alert>
-          <Heading as="p">Texte applicable</Heading>
-          <p>
-            Une convention collective de branche ou un accord collectif
-            d’entreprise peut prévoir des durées plus longues. Si les durées
-            fixées sont plus courtes que celles prévues par le code du travail,
-            le salarié a droit aux congés prévus par le code du travail.
-          </p>
-
-          <p>
-            Une convention collective de branche ou un accord collectif
-            d’entreprise peut aussi prévoir des congés pour d’autres événements
-            familiaux.
-          </p>
-
-          <p>
-            Le contrat de travail peut toujours prévoir des mesures plus
-            favorables, qui s’appliqueront.
-          </p>
-        </Alert>
-        <ReferencesJuridiques
-          references={filteredRefs(answers.generic.references, content.url)}
-        />
+        <ContributionContent contribution={contribution} titleLevel={3} />
+        <ReferencesJuridiques references={contribution.references} />
+        <ContributionMessageBlock message={contribution.messageBlock} />
+        <LinkedContent linkedContent={contribution.linkedContent} />
       </SectionHidden>
     </>
   );
 };
 
-const { breakpoints, fonts, spacings } = theme;
+const { spacings } = theme;
 
-const Meta = styled.div`
-  display: flex;
-  margin-bottom: ${spacings.medium};
-  font-size: ${fonts.sizes.small};
-  @media (max-width: ${breakpoints.mobile}) {
-    flex-direction: column;
-  }
-`;
-const HideOnMobile = styled.span`
-  @media (max-width: ${breakpoints.mobile}) {
-    display: none;
-  }
-`;
 const SectionHidden = styled(Section)`
-  display: block;
+  display: ${({ show }) => (show ? "block" : "none")};
 `;
-const Div = styled.div`
+const DivCentered = styled.div`
   text-align: center;
   margin-top: ${spacings.large};
+`;
+
+const Div = styled.div`
+  margin-top: ${spacings.base};
+`;
+
+const StyledButton = styled(Button)`
+  margin-top: ${spacings.base};
+
+  :not(:hover) {
+    color: ${theme.colors.paragraph};
+  }
 `;
 
 const StyledDirectionRightIcon = styled(DirectionRight)`
@@ -311,7 +368,7 @@ const StyledDirectionRightIcon = styled(DirectionRight)`
   margin-left: ${spacings.base};
 `;
 const SectionNoPadding = styled(Section)`
-  padding: 0;
+  padding: 0 !important;
 `;
 
 export default ContributionGeneric;

@@ -1,7 +1,8 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import { Feedback } from "..";
 import { ui } from "./ui";
 import { push as matopush } from "@socialgouv/matomo-next";
+import { EVENT_CATEGORY } from "../tracking";
 
 jest.mock("@socialgouv/matomo-next", () => {
   return {
@@ -11,7 +12,7 @@ jest.mock("@socialgouv/matomo-next", () => {
 
 describe("Etant donné un composant Feedback", () => {
   beforeEach(() => {
-    render(<Feedback />);
+    render(<Feedback category={EVENT_CATEGORY.indemniteLicenciement} />);
   });
   test("Vérification que l'introduction s'affiche", () => {
     expect(ui.introduction.title.query()).toBeInTheDocument();

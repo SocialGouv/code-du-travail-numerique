@@ -3,7 +3,7 @@
 exports[`<StepResult /> should render no results 1`] = `
 <div>
   <h2
-    class="sc-iapWAC fknnbp"
+    class="sc-ePDLzJ eKYbCt"
   >
     Nombre d’heures d’absence autorisée pour rechercher un emploi
   </h2>
@@ -35,8 +35,6 @@ exports[`<StepResult /> should render no results 1`] = `
       </svg>
       <span
         class="sc-fBWQRz lqUBb"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
       </span>
@@ -45,7 +43,7 @@ exports[`<StepResult /> should render no results 1`] = `
       class="sc-fjvvzt gtrYRc"
     >
       <h2
-        class="sc-iapWAC fknnbp"
+        class="sc-ePDLzJ eKYbCt"
       >
         Éléments saisis
       </h2>
@@ -80,12 +78,16 @@ exports[`<StepResult /> should render no results 1`] = `
         </li>
       </ul>
       <h2
-        class="sc-iapWAC fknnbp"
+        class="sc-ePDLzJ eKYbCt"
       >
         Sources
       </h2>
-      <ul>
-        <li>
+      <ul
+        data-testid="sources"
+      >
+        <li
+          data-testid="source-0"
+        >
           <a
             aria-label="Article 33 (nouvelle fenêtre)"
             href="https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005753582&cidTexte=KALITEXT000005682357&idConvention=KALICONT000005635630&dateTexte=29990101"
@@ -99,13 +101,13 @@ exports[`<StepResult /> should render no results 1`] = `
     </div>
   </div>
   <div
-    class="sc-jsJBEP sc-iXzfSG ftwa-dj bdsVWO"
+    class="sc-jsJBEP sc-fMMURN ftwa-dj gWJAcM"
   >
     <div
-      class="sc-bypJrT cRnKsM"
+      class="sc-hRJfrW fHhwIY"
     >
       <div
-        class="sc-ddjGPC bYORpp"
+        class="sc-iHbSHJ dqcYtl"
       >
         <svg
           aria-hidden="true"
@@ -125,10 +127,10 @@ exports[`<StepResult /> should render no results 1`] = `
         </svg>
       </div>
       <div
-        class="sc-dSCufp gAzXIi"
+        class="sc-klVQfs giEiHo"
       >
         <p
-          class="sc-jGKxIK iOBtQr sc-lnPyaJ dsXzGD"
+          class="sc-krNlru kcuIcb sc-ktPPKK iuuGs"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -144,23 +146,28 @@ exports[`<StepResult /> should render no results 1`] = `
 exports[`<StepResult /> should render with duration 1`] = `
 <div>
   <h2
-    class="sc-iapWAC fknnbp"
+    class="sc-ePDLzJ eKYbCt"
   >
     Nombre d’heures d’absence autorisée pour rechercher un emploi
   </h2>
   <p>
     D’après les éléments saisis, durant son préavis, le salarié peut s’absenter pour rechercher un emploi pendant
-     : 
+     :
+    <br />
     <strong
-      class="sc-kqGoIF eBNOvs"
+      class="sc-bVVIoq cTIGFs"
       role="alert"
     >
       2 heures par jour
     </strong>
+     
+    <sup
+      class="sc-eBHhsj hwyzbG"
+    />
     .
   </p>
   <h2
-    class="sc-iapWAC fknnbp"
+    class="sc-ePDLzJ eKYbCt"
   >
     Rémunération pendant les heures d’absence autorisée
   </h2>
@@ -168,7 +175,7 @@ exports[`<StepResult /> should render with duration 1`] = `
     Le salaire est maintenu.
   </p>
   <h2
-    class="sc-iapWAC fknnbp"
+    class="sc-ePDLzJ eKYbCt"
   >
     Conditions d’utilisation
   </h2>
@@ -200,8 +207,6 @@ exports[`<StepResult /> should render with duration 1`] = `
       </svg>
       <span
         class="sc-fBWQRz lqUBb"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
       </span>
@@ -210,7 +215,7 @@ exports[`<StepResult /> should render with duration 1`] = `
       class="sc-fjvvzt gtrYRc"
     >
       <h2
-        class="sc-iapWAC fknnbp"
+        class="sc-ePDLzJ eKYbCt"
       >
         Éléments saisis
       </h2>
@@ -238,12 +243,16 @@ exports[`<StepResult /> should render with duration 1`] = `
         </li>
       </ul>
       <h2
-        class="sc-iapWAC fknnbp"
+        class="sc-ePDLzJ eKYbCt"
       >
         Sources
       </h2>
-      <ul>
-        <li>
+      <ul
+        data-testid="sources"
+      >
+        <li
+          data-testid="source-0"
+        >
           <a
             aria-label="Article 29 (nouvelle fenêtre)"
             href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005857303&cidTexte=KALITEXT000005682357&dateTexte=19740607"
@@ -257,13 +266,13 @@ exports[`<StepResult /> should render with duration 1`] = `
     </div>
   </div>
   <div
-    class="sc-jsJBEP sc-iXzfSG ftwa-dj bdsVWO"
+    class="sc-jsJBEP sc-fMMURN ftwa-dj gWJAcM"
   >
     <div
-      class="sc-bypJrT cRnKsM"
+      class="sc-hRJfrW fHhwIY"
     >
       <div
-        class="sc-ddjGPC bYORpp"
+        class="sc-iHbSHJ dqcYtl"
       >
         <svg
           aria-hidden="true"
@@ -283,10 +292,10 @@ exports[`<StepResult /> should render with duration 1`] = `
         </svg>
       </div>
       <div
-        class="sc-dSCufp gAzXIi"
+        class="sc-klVQfs giEiHo"
       >
         <p
-          class="sc-jGKxIK iOBtQr sc-lnPyaJ dsXzGD"
+          class="sc-krNlru kcuIcb sc-ktPPKK iuuGs"
         >
           Attention il peut exister une durée plus favorable
         </p>

@@ -1,128 +1,66 @@
-import { extractMdxContentUrl } from "@socialgouv/modeles-social";
 import React from "react";
-
 import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
-import Contribution from "../../src/contributions/Contribution";
 import { Layout } from "../../src/layout/Layout";
-import { Breadcrumb } from "@socialgouv/cdtn-utils";
-import { handleError } from "../../src/lib/fetch-error";
-import { SITE_URL } from "../../src/config";
+import {
+  ContributionElasticDocument,
+  ElasticSearchContribution,
+  ElasticSearchContributionConventionnelle,
+  ElasticSearchContributionGeneric,
+} from "@socialgouv/cdtn-types";
 import ContributionGeneric from "../../src/contributions/ContributionGeneric";
 import ContributionCC from "../../src/contributions/ContributionCC";
-import showNewContribPage from "../../src/contributions/slugFilter";
-import EventTracker from "../../src/lib/tracking/EventTracker";
+import { getBySourceAndSlugItems } from "../../src/api";
 
-const fetchQuestion = ({ slug }) =>
-  fetch(`${SITE_URL}/api/items/contributions/${slug}`);
-
-interface Props {
-  breadcrumbs: Breadcrumb[];
-  description: string;
-  title: string;
-  slug: string;
-  content;
-  answers;
-  relatedItems: Array<any>;
-}
-
-const buildTitleAndDescription = (
-  breadcrumbs,
-  conventionAnswer,
-  title,
-  description
-) => {
-  if (breadcrumbs && breadcrumbs.length > 0 && conventionAnswer) {
-    const titleWithThemeAndCC =
-      breadcrumbs[breadcrumbs.length - 1].label +
-      " - " +
-      conventionAnswer.shortName;
-    return {
-      description: title + " " + description,
-      title: titleWithThemeAndCC,
-    };
-  }
-  return {
-    description,
-    title,
-  };
+type Props = {
+  contribution: ElasticSearchContribution;
 };
-const SLUG_FOR_POC_GENERIC = ["les-conges-pour-evenements-familiaux"];
 
 function PageContribution(props: Props): React.ReactElement {
-  const {
-    breadcrumbs,
-    title,
-    answers,
-    description,
-    relatedItems,
-    content,
-    slug,
-  } = props;
-
-  const metas = buildTitleAndDescription(
-    breadcrumbs,
-    answers.conventionAnswer,
-    title,
-    description
-  );
   return (
     <Layout>
-      <Metas title={metas.title} description={metas.description} />
+      <Metas
+        title={props.contribution.metas.title}
+        description={props.contribution.metas.description}
+      />
       <Answer
-        title={title}
-        relatedItems={relatedItems}
-        breadcrumbs={breadcrumbs}
+        title={props.contribution.title}
+        breadcrumbs={props.contribution.breadcrumbs}
+        date={props.contribution.date}
       >
-        {SLUG_FOR_POC_GENERIC.indexOf(slug) >= 0 ? (
+        {props.contribution.idcc === "0000" ? (
           <ContributionGeneric
-            answers={answers}
-            slug={slug}
-            content={(content && content._source) || {}}
+            contribution={
+              props.contribution as ElasticSearchContributionGeneric
+            }
           />
         ) : (
-          <>
-            {showNewContribPage(slug) ? (
-              <ContributionCC
-                answers={answers}
-                slug={slug}
-                content={(content && content._source) || {}}
-              />
-            ) : (
-              <Contribution
-                answers={answers}
-                content={(content && content._source) || {}}
-              />
-            )}
-          </>
+          <ContributionCC
+            contribution={
+              props.contribution as ElasticSearchContributionConventionnelle
+            }
+          />
         )}
       </Answer>
-      <EventTracker />
     </Layout>
   );
 }
 
 export const getServerSideProps = async ({ query }) => {
-  const response = await fetchQuestion(query);
-  if (!response.ok) {
-    return handleError(response);
-  }
-  const data = await response.json();
-
-  // Check Content tag exist on markdown
-  const markdown =
-    ((((data || {})._source || {}).answers || {}).generic || {}).markdown || "";
-
-  const contentUrl = extractMdxContentUrl(markdown);
-  if (contentUrl) {
-    const fetchContent = await fetch(`${SITE_URL}/api/items?url=${contentUrl}`);
-    const [content] = await fetchContent.json();
+  const data = await getBySourceAndSlugItems<ContributionElasticDocument>(
+    "contributions",
+    query.slug
+  );
+  if (!data?._source) {
     return {
-      props: { relatedItems: data.relatedItems, ...data._source, content },
+      notFound: true,
     };
   }
-
-  return { props: { relatedItems: data.relatedItems, ...data._source } };
+  return {
+    props: {
+      contribution: data._source,
+    },
+  };
 };
 
 export default PageContribution;

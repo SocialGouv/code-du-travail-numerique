@@ -16,7 +16,7 @@ export const SOURCES = {
   THEMES: "themes",
   TOOLS: "outils",
   VERSIONS: "versions",
-};
+} as const;
 
 export const routeBySource = {
   [SOURCES.CCN]: "convention-collective",
@@ -35,12 +35,12 @@ export const routeBySource = {
   [SOURCES.TOOLS]: "outils",
   [SOURCES.HIGHLIGHTS]: "highlights",
   [SOURCES.PREQUALIFIED]: "prequalified",
-};
+} as const;
 
 export const labelBySource = {
   [SOURCES.CCN]: "Conventions collectives",
   [SOURCES.CDT]: "Code du travail",
-  [SOURCES.CONTRIBUTIONS]: "Contributions",
+  [SOURCES.CONTRIBUTIONS]: "Fiches pratiques",
   [SOURCES.EDITORIAL_CONTENT]: "Information",
   [SOURCES.EXTERNALS]: "Outils externes",
   [SOURCES.LABOUR_LAW]: "Le droit du travail",
@@ -53,11 +53,14 @@ export const labelBySource = {
   [SOURCES.TOOLS]: "Outils",
   [SOURCES.HIGHLIGHTS]: "À la une",
   [SOURCES.PREQUALIFIED]: "Requêtes préqualifiées",
-};
+  [SOURCES.GLOSSARY]: "Glossaire",
+} as const;
 
-export const getLabelBySource = (src: string) => labelBySource[src];
+export const getLabelBySource = (src: keyof typeof labelBySource) =>
+  labelBySource[src];
 
-export const getRouteBySource = (src: string) => routeBySource[src];
+export const getRouteBySource = (src: keyof typeof routeBySource) =>
+  routeBySource[src];
 
 export const getSourceByRoute = (slug: string) => {
   const routes = Object.entries(routeBySource);
@@ -66,3 +69,11 @@ export const getSourceByRoute = (slug: string) => {
   );
   return src;
 };
+
+export type Sources = typeof routeBySource;
+export type SourceKeys = keyof Sources;
+export type SourceValues = (typeof labelBySource)[SourceKeys];
+export type Routes = typeof routeBySource;
+export type RouteKeys = keyof Routes;
+export type RouteValues = Routes[SourceKeys];
+export type SourceRoute = Exclude<SourceValues, "versions">;

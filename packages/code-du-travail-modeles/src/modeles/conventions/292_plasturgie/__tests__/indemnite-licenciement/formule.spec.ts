@@ -46,10 +46,10 @@ describe("Formule pour l'indemnité conventionnel de licenciement pour la CC 292
     test.each`
       seniority | expectedFormula                            | expectedExplanations
       ${7 / 12} | ${""}                                      | ${[]}
-      ${8 / 12} | ${"1 / 4 * Sref * A1"}                     | ${["A1 : Ancienneté de 8 mois à 10 ans (≈ 0.67 an : valeur arrondie)", "Sref : Salaire de référence (2000 €)"]}
-      ${5}      | ${"1 / 4 * Sref * A1"}                     | ${["A1 : Ancienneté de 8 mois à 10 ans (5 ans)", "Sref : Salaire de référence (2000 €)"]}
-      ${15}     | ${"1 / 4 * Sref * A1 + 1 / 3 * Sref * A2"} | ${["A1 : Ancienneté de 8 mois à 10 ans (10 ans)", "A2 : Ancienneté pour les années au-delà de 10 ans (5 ans)", "Sref : Salaire de référence (2000 €)"]}
-      ${20}     | ${"1 / 4 * Sref * A1 + 1 / 3 * Sref * A2"} | ${["A1 : Ancienneté de 8 mois à 10 ans (10 ans)", "A2 : Ancienneté pour les années au-delà de 10 ans (10 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${8 / 12} | ${"1 / 4 * Sref * A1"}                     | ${["A1 : Ancienneté de 10 ans ou moins (≈ 0.67 an : valeur arrondie)", "Sref : Salaire de référence (2000 €)"]}
+      ${5}      | ${"1 / 4 * Sref * A1"}                     | ${["A1 : Ancienneté de 10 ans ou moins (5 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${15}     | ${"1 / 4 * Sref * A1 + 1 / 3 * Sref * A2"} | ${["A1 : Ancienneté de 10 ans ou moins (10 ans)", "A2 : Ancienneté pour les années au-delà de 10 ans (5 ans)", "Sref : Salaire de référence (2000 €)"]}
+      ${20}     | ${"1 / 4 * Sref * A1 + 1 / 3 * Sref * A2"} | ${["A1 : Ancienneté de 10 ans ou moins (10 ans)", "A2 : Ancienneté pour les années au-delà de 10 ans (10 ans)", "Sref : Salaire de référence (2000 €)"]}
     `(
       "Avec $seniority ans => $expectedFormula",
       ({ seniority, expectedFormula, expectedExplanations }) => {

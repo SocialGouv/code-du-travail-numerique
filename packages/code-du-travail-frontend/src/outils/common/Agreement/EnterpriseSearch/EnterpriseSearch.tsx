@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Field } from "react-final-form";
 import { Paragraph, Section as SectionUi } from "@socialgouv/cdtn-ui";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
-import { Agreement } from "@socialgouv/cdtn-utils";
-import { SearchParams } from "../../../ConventionCollective/common/NavContext";
 import { TrackingProps } from "../../../ConventionCollective/types";
 import { ErrorField } from "../../ErrorField";
 import { required } from "../../validators";
@@ -12,9 +10,14 @@ import { AgreementSupportInfo, OnSelectAgreementFn } from "../types";
 import SelectedEnterprise from "./SelectedEnterprise";
 import ShowAgreement from "./ShowAgreement";
 import ShowAgreements from "./ShowAgreements";
-import { SearchEnterpriseInput } from "./EntrepriseSearchInput/SearchEnterpriseInput";
+import {
+  SearchEnterpriseInput,
+  SearchParams,
+} from "./EntrepriseSearchInput/SearchEnterpriseInput";
 import styled from "styled-components";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
+import { Simulator } from "../../NoticeExample";
+import { Agreement } from "../../../types";
 
 export type Props = {
   supportedAgreements: AgreementSupportInfo[];
@@ -24,6 +27,7 @@ export type Props = {
   alertAgreementNotSupported?: (string) => JSX.Element;
   isDisabled?: boolean;
   setHasSelectedEnterprise?: (hasSelectedEnterprise: boolean) => void;
+  simulator: Simulator;
 } & TrackingProps;
 
 const EnterpriseSearch = ({
@@ -34,12 +38,12 @@ const EnterpriseSearch = ({
   alertAgreementNotSupported,
   isDisabled,
   setHasSelectedEnterprise,
+  simulator,
 }: Props): JSX.Element => {
   const [enterprise, setEnterprise] = useState<Enterprise | undefined>(
     selectedEnterprise
   );
   const [searchParams, setSearchParams] = useState<SearchParams>({
-    address: "",
     query: "",
   });
 
@@ -69,6 +73,7 @@ const EnterpriseSearch = ({
             }}
             supportedAgreements={supportedAgreements}
             alertAgreementNotSupported={alertAgreementNotSupported}
+            simulator={simulator}
           />
         )}
       </>

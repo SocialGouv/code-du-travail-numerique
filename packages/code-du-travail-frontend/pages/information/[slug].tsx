@@ -6,12 +6,22 @@ import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
-import { EditorialContentDataWrapper } from "@socialgouv/cdtn-utils";
-import { getInformationBySlug } from "../../src/information";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { Contents } from "../../src/information";
 import { QuestionnaireWrapper } from "../../src/questionnaire";
 import { useRouter } from "next/router";
-import EventTracker from "../../src/lib/tracking/EventTracker";
+import {
+  EditorialContentBaseContentPart,
+  EditorialContentElasticDocument,
+} from "@socialgouv/cdtn-types";
+import { getBySourceAndSlugItems } from "../../src/api";
+
+export type EditorialContentDataWrapper = {
+  information: {
+    _source: Partial<EditorialContentElasticDocument>;
+    relatedItems?: string[];
+  };
+};
 
 const Information = ({
   information: {
@@ -57,8 +67,8 @@ const Information = ({
           anchor={anchor}
           sectionDisplayMode={sectionDisplayMode}
           dismissalProcess={dismissalProcess}
-          contents={contents}
-        ></Contents>
+          contents={contents as EditorialContentBaseContentPart[] | undefined}
+        />
         {references.map(
           ({ label, links }, index) =>
             links.length > 0 && (
@@ -75,7 +85,6 @@ const Information = ({
             )
         )}
       </Answer>
-      <EventTracker />
     </Layout>
   );
 };
@@ -83,9 +92,15 @@ const Information = ({
 export default Information;
 
 export const getServerSideProps = async ({ query }) => {
-  const information = await getInformationBySlug(query.slug);
+  const information =
+    await getBySourceAndSlugItems<EditorialContentElasticDocument>(
+      SOURCES.EDITORIAL_CONTENT,
+      query.slug
+    );
   if (!information) {
-    return { notFound: true };
+    return {
+      notFound: true,
+    };
   }
 
   return { props: { information, slug: query.slug } };

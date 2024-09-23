@@ -1,8 +1,4 @@
-import {
-  MotifKeys,
-  SeniorityFactory,
-  SupportedCcIndemniteLicenciement,
-} from "../../../common";
+import { MotifKeys, SeniorityFactory, SupportedCc } from "../../../common";
 
 describe("Indemnité légale de licenciement avec une ancienneté spécifiée", () => {
   test.each`
@@ -24,9 +20,7 @@ describe("Indemnité légale de licenciement avec une ancienneté spécifiée", 
   `(
     "$# Calcul de l'ancienneté pour le droit avec $entryDate et $exitDate en attendant $expectedAnciennete an",
     ({ absences, entryDate, exitDate, expectedAnciennete }) => {
-      const seniority = new SeniorityFactory().create(
-        SupportedCcIndemniteLicenciement.default
-      );
+      const seniority = new SeniorityFactory().create(SupportedCc.default);
 
       const result = seniority.computeRequiredSeniority({
         absencePeriods: absences,
@@ -56,9 +50,7 @@ describe("Indemnité légale de licenciement avec une ancienneté spécifiée", 
   `(
     "$# Calcul de l'ancienneté pour le calcul avec $entryDate et $exitDate en attendant $expectedAnciennete an",
     ({ absences, entryDate, exitDate, expectedAnciennete }) => {
-      const seniority = new SeniorityFactory().create(
-        SupportedCcIndemniteLicenciement.default
-      );
+      const seniority = new SeniorityFactory().create(SupportedCc.default);
 
       const result = seniority.computeSeniority({
         absencePeriods: absences,

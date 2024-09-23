@@ -3,28 +3,35 @@ import { GetServerSideProps } from "next";
 import React from "react";
 import styled from "styled-components";
 import { useIframeResizer } from "../../src/common/hooks";
+import { useRouter } from "next/router";
+
 import { Footer } from "../../src/widgets";
 
 import {
-  DureePreavisLicenciement,
-  DureePreavisRetraite,
-  DismissalProcess,
-  CalculateurIndemnite,
-  fetchTool,
-  SimulateurIndemnitePrecarite,
   AgreementSearch,
+  CalculateurIndemniteLicenciement,
+  CalculateurRuptureConventionnelle,
+  DismissalProcess,
+  DureePreavisDemission,
+  DureePreavisLicenciement,
+  SimulateurIndemnitePrecarite,
+  CalculateurPreavisRetraite,
 } from "../../src/outils";
 import Metas from "../../src/common/Metas";
 import { SITE_URL } from "../../src/config";
+import { getBySlugTools } from "../../src/api";
 
 const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
-  "preavis-retraite": DureePreavisRetraite,
+  "preavis-retraite": CalculateurPreavisRetraite,
   "procedure-licenciement": DismissalProcess,
-  "indemnite-licenciement": CalculateurIndemnite,
+  "indemnite-licenciement": CalculateurIndemniteLicenciement,
+  "indemnite-rupture-conventionnelle": CalculateurRuptureConventionnelle,
   "indemnite-precarite": SimulateurIndemnitePrecarite,
   "convention-collective": AgreementSearch,
+  "preavis-demission": DureePreavisDemission,
 };
+const allowedSlugs = Object.keys(toolsBySlug);
 
 interface Props {
   icon: string;
@@ -45,6 +52,7 @@ function Widgets({
 }: Props): JSX.Element {
   useIframeResizer();
   const Tool = toolsBySlug[slug];
+  const router = useRouter();
 
   return (
     <>
@@ -60,6 +68,7 @@ function Widgets({
           displayTitle={displayTitle}
           slug={slug}
           widgetMode
+          {...router.query}
         />
         <Footer />
       </StyledContainer>
@@ -73,7 +82,14 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
   const slug = query.slug as string;
-  const tool = await fetchTool(slug);
+
+  if (!allowedSlugs.includes(slug)) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const tool = await getBySlugTools(slug);
   if (!tool) {
     return {
       notFound: true,
@@ -96,6 +112,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
 
 const StyledContainer = styled(Container)`
   padding: 0;
+
   & > div:before {
     box-shadow: none;
   }

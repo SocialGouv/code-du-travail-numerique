@@ -4,19 +4,22 @@ import { QuestionnaireText } from "./QuestionnaireText";
 import styled from "styled-components";
 import { useState } from "react";
 import {
+  EVENT_ACTION,
+  EVENT_CATEGORY,
+  FEEDBACK_RESULT,
   trackFeedback,
   trackFeedbackText,
-  FEEDBACK_RESULT,
-  EVENT_ACTION,
 } from "./tracking";
 import { useRouter } from "next/router";
 
 type QuestionnaireAdvancedProps = {
   onClick: () => void;
+  category: EVENT_CATEGORY;
 };
 
 export const QuestionnaireAdvanced = ({
   onClick,
+  category,
 }: QuestionnaireAdvancedProps): React.ReactElement => {
   const router = useRouter();
   const [statusSimulator, setStatusSimulator] = useState<FEEDBACK_RESULT>();
@@ -76,16 +79,24 @@ export const QuestionnaireAdvanced = ({
         variant="primary"
         onClick={() => {
           if (statusSimulator) {
-            trackFeedback(EVENT_ACTION.EASINESS, statusSimulator);
+            trackFeedback(EVENT_ACTION.EASINESS, statusSimulator, category);
           }
           if (statusQuestion) {
-            trackFeedback(EVENT_ACTION.QUESTION_CLARITY, statusQuestion);
+            trackFeedback(
+              EVENT_ACTION.QUESTION_CLARITY,
+              statusQuestion,
+              category
+            );
           }
           if (statusExplanation) {
-            trackFeedback(EVENT_ACTION.RESULT_CLARITY, statusExplanation);
+            trackFeedback(
+              EVENT_ACTION.RESULT_CLARITY,
+              statusExplanation,
+              category
+            );
           }
           if (feedbackText) {
-            trackFeedbackText(feedbackText, router.asPath);
+            trackFeedbackText(feedbackText, router.asPath, category);
           }
           onClick();
         }}

@@ -4,32 +4,48 @@ import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
   Absence,
   DefaultSeniorityProps,
-  ISeniority,
   Motif,
   RequiredSeniorityResult,
   SeniorityProps,
   SeniorityRequiredProps,
   SeniorityResult,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
   YearDetail,
 } from "../../common";
 import { accumulateAbsenceByYear, MotifKeys } from "../../common";
+import { SeniorityDefault } from "../../common/seniority";
 
 export type CC1672SeniorityProps = DefaultSeniorityProps & {
-  isExecutive: boolean;
+  isExecutive?: boolean;
   becameExecutiveAt?: string;
 };
 
-export class Seniority1672
-  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC1672>
-{
+export class Seniority1672 extends SeniorityDefault<SupportedCc.IDCC1672> {
+  mapSituation(
+    args: Record<string, string | undefined>
+  ): SeniorityProps<SupportedCc.IDCC1672> {
+    const professionalCategory =
+      args[
+        "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle"
+      ];
+    const becameExecutiveAt =
+      args[
+        "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . date du statut cadre"
+      ];
+    return {
+      ...super.mapSituation(args),
+      becameExecutiveAt,
+      isExecutive: professionalCategory === "'Cadres (Classes 5 à 7)'",
+    };
+  }
+
   computeSeniority({
     dateEntree,
     dateSortie,
     absencePeriods = [],
     isExecutive,
     becameExecutiveAt,
-  }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC0016>): SeniorityResult {
+  }: SeniorityProps<SupportedCc.IDCC0016>): SeniorityResult {
     const dEntree = parse(dateEntree, "dd/MM/yyyy", new Date());
     const dSortie = parse(dateSortie, "dd/MM/yyyy", new Date());
 
@@ -101,7 +117,7 @@ export class Seniority1672
     dateEntree,
     dateNotification,
     absencePeriods = [],
-  }: SeniorityRequiredProps): RequiredSeniorityResult {
+  }: SeniorityRequiredProps<SupportedCc.default>): RequiredSeniorityResult {
     const dEntree = parse(dateEntree, "dd/MM/yyyy", new Date());
     const dSortie = parse(dateNotification, "dd/MM/yyyy", new Date());
     const totalAbsence = this.removeFirstYearOfCongesParentalEducation(

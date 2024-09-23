@@ -11,11 +11,11 @@ import React, { useCallback, useState } from "react";
 
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
-import { handleError } from "../../src/lib/fetch-error";
 import styled from "styled-components";
 import { ListLink } from "../../src/search/SearchResults/Results";
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { SITE_URL } from "../../src/config";
+import { REVALIDATE_TIME } from "../../src/config";
+import { getGenericContributionsGroupByThemes } from "../../src/api";
 
 const ALL = "all";
 
@@ -50,7 +50,11 @@ function Page({ contribs }) {
           >
             Vos fiches pratiques
           </PageTitle>
-          <LargeSelect value={selectedTheme} onChange={selectThemeHandler}>
+          <LargeSelect
+            value={selectedTheme}
+            onChange={selectThemeHandler}
+            aria-label="Choississez un thème"
+          >
             {Object.keys(contribs) &&
               [
                 <option key={ALL} value={ALL}>
@@ -64,8 +68,8 @@ function Page({ contribs }) {
                 ))
               )}
           </LargeSelect>
-          {Object.keys(documents).map((theme) => (
-            <>
+          {Object.keys(documents).map((theme, index) => (
+            <div key={index.toString()}>
               <Heading as={HeadingBlue}>{theme}</Heading>
               <FlatList>
                 {contribs[theme].map((item) => (
@@ -74,7 +78,7 @@ function Page({ contribs }) {
                   </ListItem>
                 ))}
               </FlatList>
-            </>
+            </div>
           ))}
         </Container>
       </Section>
@@ -84,14 +88,16 @@ function Page({ contribs }) {
 
 export default Page;
 
-export const getServerSideProps = async () => {
-  const response = await fetch(`${SITE_URL}/api/contributions`);
-  if (!response.ok) {
-    return handleError(response);
+export async function getStaticProps() {
+  try {
+    const data = await getGenericContributionsGroupByThemes();
+    return { props: { contribs: data }, revalidate: REVALIDATE_TIME };
+  } catch (error) {
+    console.error(error);
+    return { props: { contribs: {} }, revalidate: REVALIDATE_TIME };
   }
-  const contribs = await response.json();
-  return { props: { contribs } };
-};
+}
+
 const ListItem = styled.li`
   margin-top: ${theme.spacings.medium};
 `;

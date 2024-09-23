@@ -1,19 +1,11 @@
-import { Agreement, SearchResponse, SOURCES } from "@socialgouv/cdtn-utils";
-
-type SearchAgreementsBody = {
-  _source: string[];
-  from: number;
-  query: unknown;
-  size: number;
-};
+import { SOURCES } from "@socialgouv/cdtn-utils";
+import { Agreement } from "../../../outils/types";
 
 export type AgreementResponse = Agreement & {
   contributions?: boolean;
 };
 
-export type SearchAgreementsResponse = SearchResponse<AgreementResponse>;
-
-export const getAgreements = (idccList: number[]): SearchAgreementsBody => {
+export const getAgreements = (idccList: number[]) => {
   return {
     _source: [
       "id",

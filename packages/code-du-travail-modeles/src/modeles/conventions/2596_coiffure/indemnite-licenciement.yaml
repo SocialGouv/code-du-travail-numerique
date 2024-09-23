@@ -83,7 +83,7 @@ contrat salarié . convention collective . coiffure . indemnité de licenciement
 
 contrat salarié . convention collective . coiffure . indemnité de licenciement . non cadre . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
   somme:
     - plus de dix ans
     - dix ans ou moins

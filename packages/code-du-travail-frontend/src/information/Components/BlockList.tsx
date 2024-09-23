@@ -1,33 +1,36 @@
-import { Content, ContentType } from "@socialgouv/cdtn-utils";
+import {
+  EditorialContentBaseContentPart,
+  EditorialContentType,
+} from "@socialgouv/cdtn-types";
 import React from "react";
 import styled from "styled-components";
-import { BlockMarkdown } from "./BlockMarkdown";
 import { BlockGraphic } from "./BlockGraphic";
 import { ContentList } from "../../content";
+import Html from "../../common/Html";
 
 export const BlockList = ({
   blocks,
-}: Omit<Content, "title" | "references">) => {
+}: Omit<EditorialContentBaseContentPart, "title" | "references">) => {
   return (
     <>
       {blocks.map((block, index: number) => {
         let comp;
 
         switch (block.type) {
-          case ContentType.graphic:
+          case EditorialContentType.graphic:
             comp = <BlockGraphic block={block}></BlockGraphic>;
             break;
-          case ContentType.content:
+          case EditorialContentType.content:
             const { title } = block;
             comp = (
               <>
                 {title && <BlockContentTitle>{title}</BlockContentTitle>}
-                <ContentList block={block} key={index}></ContentList>
+                <ContentList block={block} uniquKey={index}></ContentList>
               </>
             );
             break;
-          case ContentType.markdown:
-            comp = <BlockMarkdown block={block}></BlockMarkdown>;
+          case EditorialContentType.markdown:
+            comp = <Html>{block.html}</Html>;
             break;
         }
         return (

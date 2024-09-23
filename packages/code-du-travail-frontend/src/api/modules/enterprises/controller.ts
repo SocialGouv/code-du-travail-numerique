@@ -2,6 +2,8 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { InvalidQueryError } from "../../utils";
 import { fetchEnterprises, populateAgreements } from "./service";
 import { ApiEnterpriseData } from "./types";
+import { ErrorResponse } from "../../types";
+import { captureException } from "@sentry/nextjs";
 
 export class EnterprisesController {
   private req: NextApiRequest;
@@ -15,27 +17,30 @@ export class EnterprisesController {
   public async get() {
     try {
       const query = this.req.query.q;
-      const address = this.req.query.a;
+      const postCode = this.req.query.cp;
 
       if (
         !query ||
         typeof query !== "string" ||
-        (address && typeof address !== "string")
+        (postCode && typeof postCode !== "string")
       ) {
         throw new InvalidQueryError({
           message: "Invalid query",
           name: "INVALID_QUERY",
-          cause: { query, address },
+          cause: { query, postCode },
         });
       }
 
-      const jsonResponse = await fetchEnterprises(query, address);
+      const postCodeArray = postCode ? postCode.split(",") : [];
+
+      const jsonResponse = await fetchEnterprises(query, postCodeArray);
 
       const response = await populateAgreements(jsonResponse);
-
       this.res.status(200).json(response);
     } catch (error) {
-      this.res.status(404).json({ message: "Not found" });
+      console.error(error);
+      captureException(error);
+      this.res.status(500).json({ message: error.toString() })
     }
   }
 }

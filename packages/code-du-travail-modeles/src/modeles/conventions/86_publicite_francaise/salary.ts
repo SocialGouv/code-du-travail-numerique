@@ -1,12 +1,12 @@
 import type {
   IReferenceSalary,
   ReferenceSalaryProps,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { nonNullable, rankByMonthArrayDescFrench } from "../../common";
 
 export class ReferenceSalary86
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0086>
+  implements IReferenceSalary<SupportedCc.IDCC0086>
 {
   /**
    * - S
@@ -14,7 +14,7 @@ export class ReferenceSalary86
    */
   computeReferenceSalary({
     salaires = [],
-  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0086>): number {
+  }: ReferenceSalaryProps<SupportedCc.IDCC0086>): number {
     const rankedSalaires = rankByMonthArrayDescFrench(salaires);
     const salaryValues = rankedSalaires.map((a) => a.value).filter(nonNullable);
     return salaryValues[0] ?? 0;

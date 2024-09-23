@@ -2,12 +2,12 @@ import { Input, InputDate, theme } from "@socialgouv/cdtn-ui";
 import React, { FunctionComponent, useEffect, useState } from "react";
 
 import styled from "styled-components";
-import xss from "xss";
 import Html from "../../common/Html";
 import { Error } from "../common/ErrorField";
 import { Question, Tooltip } from "../common/Question";
 import { SmallText } from "../common/stepStyles";
 import { SubLabel } from "./SelectQuestion";
+import { xssWrapper } from "../../lib";
 
 type Props = {
   onChange: (value: string) => void;
@@ -85,9 +85,9 @@ export default function TextQuestion({
       </QuestionWrapper>
       {error && (
         <Error>
-          <div
+          <span
             dangerouslySetInnerHTML={{
-              __html: xss(error),
+              __html: xssWrapper(error),
             }}
           />
         </Error>

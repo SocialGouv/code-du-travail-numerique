@@ -54,8 +54,7 @@ export const StyledButton = styled.button`
         svg {
           width: 2.6rem;
           height: 1.4rem;
-          margin: ${({ hasText }) =>
-            hasText ? `0 ${spacings.tiny} 0 ${spacings.small}` : "0"};
+          margin: 0 ${spacings.small};
           transition: transform ${animations.transitionTiming} linear;
           /* stylelint-disable-next-line */
           fill: ${theme.primary};
@@ -207,9 +206,7 @@ export const Button = React.forwardRef(
     return (
       <StyledButton {...props} ref={ref}>
         {children}
-        {props.variant === "link" && (
-          <StyledCustomIcon hasText={Boolean(children)} />
-        )}
+        {props.variant === "link" && <StyledCustomIcon />}
       </StyledButton>
     );
   }
@@ -218,7 +215,6 @@ Button.displayName = "Button";
 
 Button.propTypes = {
   children: PropTypes.node,
-  hasText: PropTypes.bool,
   icon: PropTypes.elementType,
   narrow: PropTypes.bool,
   onClick: PropTypes.func,

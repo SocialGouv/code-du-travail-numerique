@@ -13,10 +13,6 @@
 
 ## Développement
 
-### Architecture
-
-![schema](./schema.png)
-
 ### Installation
 
 ```sh
@@ -38,7 +34,8 @@ yarn build
 Pour lancer l'application en se basant sur l'API de pre-production :
 
 ```sh
-yarn dev:frontend:preprod-api
+cp packages/code-du-travail-frontend/.env.sample packages/code-du-travail-frontend/.env # Puis setter les bonnes variables
+yarn dev:frontend
 ```
 
 Notre bibliothèque de composants UI est disponible en démo [ici](https://socialgouv.github.io/code-du-travail-numerique/).
@@ -46,8 +43,9 @@ Notre bibliothèque de composants UI est disponible en démo [ici](https://socia
 ### Testing
 
 ```sh
-yarn test:e2e # To run e2e test without any UI
-yarn test:e2e:ui # To run e2e test with Cypress UI
+TEST_MODE=heavy-and-light yarn test:e2e # To run e2e test without any UI
+TEST_MODE=heavy-and-light yarn test:e2e:ui # To run e2e test with Cypress UI
+# TEST_MODE can be light, heavy, heavy-and-light or html-validation
 ```
 
 ## License

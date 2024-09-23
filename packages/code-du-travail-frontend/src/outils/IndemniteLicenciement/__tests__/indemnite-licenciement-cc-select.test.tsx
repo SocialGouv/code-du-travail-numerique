@@ -1,5 +1,5 @@
-import { CalculateurIndemnite } from "../index";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../index";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 
 import { fireEvent, render, waitFor } from "@testing-library/react";
 import { UserAction } from "../../../common";
@@ -9,7 +9,13 @@ jest.mock("../../../conventions/Search/api/enterprises.service");
 
 describe("Indemnité licenciement - Sélection de CC", () => {
   beforeEach(() => {
-    render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
+    render(
+      <CalculateurIndemniteLicenciement
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
+    );
     fireEvent.click(ui.introduction.startButton.get());
     fireEvent.click(ui.contract.type.cdi.get());
     fireEvent.click(ui.contract.fauteGrave.non.get());
@@ -23,7 +29,7 @@ describe("Indemnité licenciement - Sélection de CC", () => {
     userAction
       .click(ui.agreement.agreement.get())
       .setInput(ui.agreement.agreementInput.get(), "16")
-      .click(await waitFor(() => ui.agreement.searchItem.agreement16.get()))
+      .click(await waitFor(() => ui.agreement.ccChoice.transport.get()))
       .click(ui.next.get());
 
     fireEvent.click(ui.previous.get());

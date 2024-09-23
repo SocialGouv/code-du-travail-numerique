@@ -14,22 +14,20 @@ concurrency:
 jobs:
   live:
     name: Check if the site is live
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - run: |
           curl -sSfL https://code.travail.gouv.fr/ | grep -q "Code du travail numérique"
-      - name: Create the Mattermost Message
-        if: failure()
-        run: |
-          echo "{\"text\":\"Le site n'est pas accessible : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\"}" > mattermost.json
       - uses: mattermost/action-mattermost-notify@master
         if: failure()
-        env:
+        with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
+          TEXT: |-
+            Le site n'est pas accessible 😱😱😱😱😱😱😱😱 ([logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})) (cc: @max @victorz @carolinebda @martial).
 
   robots:
     name: Check robots.txt
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - run: |
           curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "User-agent: *"
@@ -39,11 +37,13 @@ jobs:
           curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "Disallow: /images/"
       - run: |
           curl -sSfL https://code.travail.gouv.fr/robots.txt | grep -q "Sitemap: https://code.travail.gouv.fr/sitemap.xml"
-      - name: Create the Mattermost Message
-        if: failure()
-        run: |
-          echo "{\"text\":\"Erreur sur le robots.txt 😱😱😱😱😱😱😱😱 ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\"}" > mattermost.json
+      - run: |
+          curl -sSfL https://code.travail.gouv.fr/sitemap.xml -o sitemap.xml && grep -q "https://code.travail.gouv.fr/" sitemap.xml
+      - run: |
+          curl -sSfLI https://code.travail.gouv.fr/sitemap.xml | grep -q "content-type: text/xml"
       - uses: mattermost/action-mattermost-notify@master
         if: failure()
-        env:
+        with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
+          TEXT: |-
+            Erreur sur le robots.txt ou sitemap.xml 😱😱😱😱😱😱😱😱 ([logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})) (cc: @max @victorz @carolinebda @martial).

@@ -6,12 +6,8 @@ import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
-import { Breadcrumb } from "@socialgouv/cdtn-utils";
-import { handleError } from "../../src/lib/fetch-error";
-import { SITE_URL } from "../../src/config";
-
-const fetchFiche = ({ slug }) =>
-  fetch(`${SITE_URL}/api/items/fiches_service_public/${slug}`);
+import { Breadcrumb, FicheServicePublicDoc } from "@socialgouv/cdtn-types";
+import { getBySourceAndSlugItems } from "../../src/api";
 
 interface Props {
   breadcrumbs: Breadcrumb[];
@@ -64,12 +60,15 @@ function Fiche(props: Props): JSX.Element {
 }
 
 export const getServerSideProps = async ({ query }) => {
-  const response = await fetchFiche(query);
-  if (!response.ok) {
-    return handleError(response);
+  const data = await getBySourceAndSlugItems<FicheServicePublicDoc>(
+    "fiches_service_public",
+    query.slug
+  );
+  if (!data?._source) {
+    return {
+      notFound: true,
+    };
   }
-
-  const data = await response.json();
   if (data._source.raw) {
     data._source.raw = JSON.parse(data._source.raw);
   }

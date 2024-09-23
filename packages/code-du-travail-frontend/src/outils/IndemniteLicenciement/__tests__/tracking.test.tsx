@@ -1,9 +1,8 @@
-import { fireEvent, render, waitFor } from "@testing-library/react";
+import { render, waitFor } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemnite } from "../../../../src/outils";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../index";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 import { push } from "@socialgouv/matomo-next";
-import userEvent from "@testing-library/user-event";
 import { UserAction } from "../../../common";
 
 jest.mock("@socialgouv/matomo-next", () => ({
@@ -15,7 +14,7 @@ jest.mock("../../../conventions/Search/api/enterprises.service");
 describe("Indemnité licenciement - Tracking", () => {
   beforeEach(() => {
     render(
-      <CalculateurIndemnite
+      <CalculateurIndemniteLicenciement
         icon={""}
         title={"Indemnité de licenciement"}
         displayTitle={"Indemnité de licenciement"}
@@ -30,107 +29,100 @@ describe("Indemnité licenciement - Tracking", () => {
       () =>
         `{"num":16,"shortTitle":"Transports routiers et activités auxiliaires du transport"}`
     );
-    fireEvent.click(ui.introduction.startButton.get());
+    userAction.click(ui.introduction.startButton.get());
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "outil",
       `view_step_Indemnité de licenciement`,
       "contrat_travail",
     ]);
-    fireEvent.click(ui.contract.type.cdi.get());
-    fireEvent.click(ui.contract.fauteGrave.non.get());
-    fireEvent.click(ui.contract.inaptitude.non.get());
-    fireEvent.click(ui.contract.arretTravail.non.get());
-    fireEvent.click(ui.next.get());
+    userAction.click(ui.contract.type.cdi.get());
+    userAction.click(ui.contract.fauteGrave.non.get());
+    userAction.click(ui.contract.inaptitude.non.get());
+    userAction.click(ui.contract.arretTravail.non.get());
+    userAction.click(ui.next.get());
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "outil",
       `view_step_Indemnité de licenciement`,
       "info_cc",
     ]);
-    fireEvent.click(ui.next.get());
+    userAction.click(ui.next.get());
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "outil",
       `view_step_Indemnité de licenciement`,
       "infos",
     ]);
-    userEvent.selectOptions(
+    userAction.changeInputList(
       ui.information.agreement16.proCategory.get(),
       "Ingénieurs et cadres"
     );
-    fireEvent.click(ui.information.agreement16.proCategoryHasChanged.oui.get());
-    fireEvent.change(ui.information.agreement16.dateProCategoryChanged.get(), {
-      target: { value: "01/01/2010" },
-    });
-    fireEvent.change(ui.information.agreement16.engineerAge.get(), {
-      target: { value: "38" },
-    });
-    fireEvent.click(ui.next.get());
+    userAction.click(
+      ui.information.agreement16.proCategoryHasChanged.oui.get()
+    );
+    userAction.setInput(
+      ui.information.agreement16.dateProCategoryChanged.get(),
+      "01/01/2010"
+    );
+    userAction.setInput(ui.information.agreement16.engineerAge.get(), "38");
+    userAction.click(ui.next.get());
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "outil",
       `view_step_Indemnité de licenciement`,
       "anciennete",
     ]);
-    fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/01/2022" },
-    });
-    fireEvent.change(ui.seniority.notificationDate.get(), {
-      target: { value: "15/12/2022" },
-    });
-    fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "15/12/2022" },
-    });
-    fireEvent.click(ui.seniority.hasAbsence.non.get());
-    fireEvent.click(ui.next.get());
+    userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
+    userAction.setInput(ui.seniority.notificationDate.get(), "15/12/2022");
+    userAction.setInput(ui.seniority.endDate.get(), "15/12/2022");
+    userAction.click(ui.seniority.hasAbsence.non.get());
+    userAction.click(ui.next.get());
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "outil",
       `view_step_Indemnité de licenciement`,
       "salaires",
     ]);
-    fireEvent.click(ui.salary.hasPartialTime.non.get());
-    fireEvent.click(ui.salary.hasSameSalary.oui.get());
-    fireEvent.change(ui.salary.sameSalaryValue.get(), {
-      target: { value: "3000" },
-    });
-    fireEvent.click(ui.next.get());
+    userAction.click(ui.salary.hasPartialTime.non.get());
+    userAction.click(ui.salary.hasSameSalary.oui.get());
+    userAction.setInput(ui.salary.sameSalaryValue.get(), "3000");
+    userAction.click(ui.next.get());
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "outil",
       `view_step_Indemnité de licenciement`,
       "results",
     ]);
-    fireEvent.click(ui.previous.get());
+    userAction.click(ui.previous.get());
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "outil",
       `click_previous_Indemnité de licenciement`,
       "salaires",
     ]);
-    fireEvent.click(ui.previous.get());
+    userAction.click(ui.previous.get());
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "outil",
       `click_previous_Indemnité de licenciement`,
       "anciennete",
     ]);
-    fireEvent.click(ui.previous.get());
+    userAction.click(ui.previous.get());
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "outil",
       `click_previous_Indemnité de licenciement`,
       "infos",
     ]);
-    fireEvent.click(ui.previous.get());
+    userAction.click(ui.previous.get());
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "outil",
       `click_previous_Indemnité de licenciement`,
       "info_cc",
     ]);
-    fireEvent.click(ui.previous.get());
+    userAction.click(ui.previous.get());
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "outil",
@@ -140,25 +132,23 @@ describe("Indemnité licenciement - Tracking", () => {
   });
 
   test("vérifier le tracking sur la recherche entreprise", async () => {
-    fireEvent.click(ui.introduction.startButton.get());
-    fireEvent.click(ui.contract.type.cdi.get());
-    fireEvent.click(ui.contract.fauteGrave.non.get());
-    fireEvent.click(ui.contract.inaptitude.non.get());
-    fireEvent.click(ui.contract.arretTravail.non.get());
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.agreement.unknownAgreement.get());
-    fireEvent.change(ui.agreement.agreementCompanyInput.get(), {
-      target: { value: "carrefour" },
-    });
-    fireEvent.click(ui.agreement.agreementCompanySearchButton.get());
+    userAction.click(ui.introduction.startButton.get());
+    userAction.click(ui.contract.type.cdi.get());
+    userAction.click(ui.contract.fauteGrave.non.get());
+    userAction.click(ui.contract.inaptitude.non.get());
+    userAction.click(ui.contract.arretTravail.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.agreement.unknownAgreement.get());
+    userAction.setInput(ui.agreement.agreementCompanyInput.get(), "carrefour");
+    userAction.click(ui.agreement.agreementCompanySearchButton.get());
     await waitFor(() => {
-      fireEvent.click(ui.agreement.searchItem.carrefour.get());
+      userAction.click(ui.agreement.searchItem.carrefour.get());
     });
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "enterprise_search",
       "Indemnité de licenciement",
-      JSON.stringify({ address: "", query: "carrefour" }),
+      JSON.stringify({ query: "carrefour" }),
     ]);
   });
 
@@ -173,7 +163,7 @@ describe("Indemnité licenciement - Tracking", () => {
       .click(ui.agreement.noAgreement.get())
       .click(ui.agreement.agreement.get())
       .setInput(ui.agreement.agreementInput.get(), "16")
-      .click(await waitFor(() => ui.agreement.searchItem.agreement16.get()));
+      .click(await waitFor(() => ui.agreement.ccChoice.transport.get()));
 
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
@@ -194,7 +184,7 @@ describe("Indemnité licenciement - Tracking", () => {
       .click(ui.agreement.noAgreement.get())
       .click(ui.agreement.agreement.get())
       .setInput(ui.agreement.agreementInput.get(), "16")
-      .click(await waitFor(() => ui.agreement.searchItem.agreement16.get()))
+      .click(await waitFor(() => ui.agreement.ccChoice.transport.get()))
       .click(ui.next.get());
 
     expect(push).toHaveBeenCalledWith([
@@ -209,17 +199,15 @@ describe("Indemnité licenciement - Tracking", () => {
       "Indemnité de licenciement",
       "idcc16",
     ]);
-    fireEvent.click(ui.previous.get());
-    fireEvent.click(ui.agreement.unknownAgreement.get());
-    fireEvent.change(ui.agreement.agreementCompanyInput.get(), {
-      target: { value: "carrefour" },
-    });
-    fireEvent.click(ui.agreement.agreementCompanySearchButton.get());
+    userAction.click(ui.previous.get());
+    userAction.click(ui.agreement.unknownAgreement.get());
+    userAction.setInput(ui.agreement.agreementCompanyInput.get(), "carrefour");
+    userAction.click(ui.agreement.agreementCompanySearchButton.get());
     await waitFor(() => {
-      fireEvent.click(ui.agreement.searchItem.carrefour.get());
+      userAction.click(ui.agreement.searchItem.carrefour.get());
     });
-    fireEvent.click(ui.agreement.ccChoice.commerce.get());
-    fireEvent.click(ui.next.get());
+    userAction.click(ui.agreement.ccChoice.commerce.get());
+    userAction.click(ui.next.get());
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "cc_search_type_of_users",
@@ -232,9 +220,9 @@ describe("Indemnité licenciement - Tracking", () => {
       "Indemnité de licenciement",
       "idcc2216",
     ]);
-    fireEvent.click(ui.previous.get());
-    fireEvent.click(ui.agreement.noAgreement.get());
-    fireEvent.click(ui.next.get());
+    userAction.click(ui.previous.get());
+    userAction.click(ui.agreement.noAgreement.get());
+    userAction.click(ui.next.get());
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "cc_search_type_of_users",
@@ -249,13 +237,13 @@ describe("Indemnité licenciement - Tracking", () => {
       () =>
         `{"num":16,"shortTitle":"Transports routiers et activités auxiliaires du transport"}`
     );
-    fireEvent.click(ui.introduction.startButton.get());
-    fireEvent.click(ui.contract.type.cdi.get());
-    fireEvent.click(ui.contract.fauteGrave.non.get());
-    fireEvent.click(ui.contract.inaptitude.non.get());
-    fireEvent.click(ui.contract.arretTravail.non.get());
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.next.get());
+    userAction.click(ui.introduction.startButton.get());
+    userAction.click(ui.contract.type.cdi.get());
+    userAction.click(ui.contract.fauteGrave.non.get());
+    userAction.click(ui.contract.inaptitude.non.get());
+    userAction.click(ui.contract.arretTravail.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.next.get());
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "outil",
@@ -270,13 +258,13 @@ describe("Indemnité licenciement - Tracking", () => {
       () =>
         `{"num":1261,"shortTitle":"Acteurs du lien social et familial (centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local)"}`
     );
-    fireEvent.click(ui.introduction.startButton.get());
-    fireEvent.click(ui.contract.type.cdi.get());
-    fireEvent.click(ui.contract.fauteGrave.non.get());
-    fireEvent.click(ui.contract.inaptitude.non.get());
-    fireEvent.click(ui.contract.arretTravail.non.get());
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.next.get());
+    userAction.click(ui.introduction.startButton.get());
+    userAction.click(ui.contract.type.cdi.get());
+    userAction.click(ui.contract.fauteGrave.non.get());
+    userAction.click(ui.contract.inaptitude.non.get());
+    userAction.click(ui.contract.arretTravail.non.get());
+    userAction.click(ui.next.get());
+    userAction.click(ui.next.get());
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "outil",
@@ -286,9 +274,9 @@ describe("Indemnité licenciement - Tracking", () => {
   });
 
   test("vérifier qu'on a un event ineligible sur la recherche entreprise", async () => {
-    fireEvent.click(ui.introduction.startButton.get());
-    fireEvent.click(ui.contract.type.cdd.get());
-    fireEvent.click(ui.next.get());
+    userAction.click(ui.introduction.startButton.get());
+    userAction.click(ui.contract.type.cdd.get());
+    userAction.click(ui.next.get());
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "outil",

@@ -1,90 +1,70 @@
+import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import {
-  SearchResponse,
-  ElasticSearchItem,
-  Agreement,
-} from "@socialgouv/cdtn-utils";
-import {
-  elasticsearchClient,
-  elasticDocumentsIndex,
-  NotFoundError,
-} from "../../utils";
-import {
-  getAllAgreementsWithContributions,
-  getAgreementsBySlugs,
-  getAgreementBySlugBody,
+  getAgreementBySlug,
   getAgreementsByIds,
+  getAgreementsBySlugs,
+  getAllAgreementsWithContributions,
 } from "./queries";
+import { ElasticSearchItem } from "../../types";
+import { AgreementDoc, ElasticAgreement } from "@socialgouv/cdtn-types";
+import { nonNullable } from "@socialgouv/modeles-social";
 
-export const getAllAgreements = async (): Promise<Agreement[]> => {
+export const getAllAgreements = async (): Promise<ElasticAgreement[]> => {
   const body = getAllAgreementsWithContributions();
 
-  const response = await elasticsearchClient.search<SearchResponse<Agreement>>({
+  const response = await elasticsearchClient.search<ElasticAgreement>({
     body,
     index: elasticDocumentsIndex,
   });
 
-  return response.body.hits.hits
+  return response.hits.hits
     .map(({ _source }) => _source)
-    .sort(orderByAlphaAndMetalurgieLast);
+    .filter(nonNullable)
+    .sort(orderByAlpha);
 };
 
 export const getBySlugsAgreements = async (
   slugs: string[]
 ): Promise<ElasticSearchItem[]> => {
   const body = getAgreementsBySlugs(slugs);
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });
-  return response.body.hits.total.value > 0
-    ? response.body.hits.hits.map(({ _source }) => _source)
+  return response.hits.hits.length > 0
+    ? response.hits.hits.map(({ _source }) => _source)
     : [];
 };
 
 export const getByIdsAgreements = async (
   ids: string[]
-): Promise<ElasticSearchItem[]> => {
+): Promise<ElasticSearchItem<{ shortTitle: string }>[]> => {
   const body = getAgreementsByIds(ids);
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<any>({
     body,
     index: elasticDocumentsIndex,
   });
-  return response.body.hits.total.value > 0
-    ? response.body.hits.hits.map(({ _source }) => _source)
+  return response.hits.hits.length > 0
+    ? response.hits.hits.map(({ _source }) => _source)
     : [];
 };
 
 export const getBySlugAgreements = async (slug: string) => {
-  const body = await getAgreementBySlugBody(slug);
+  const body = await getAgreementBySlug(slug);
 
-  const response = await elasticsearchClient.search({
+  const response = await elasticsearchClient.search<AgreementDoc[]>({
     body,
     index: elasticDocumentsIndex,
   });
-  if (response.body.hits.total.value === 0) {
-    throw new NotFoundError({
-      message: `Agreement not found, no agreement match ${slug}y`,
-      name: "AGREEMENT_NOT_FOUND",
-      cause: null,
-    });
+  if (response.hits.hits.length === 0) {
+    return;
   }
 
-  return { ...response.body.hits.hits[0]._source };
+  return { ...response.hits.hits[0]._source };
 };
 
-const orderByAlphaAndMetalurgieLast = (a, b) => {
-  if (a.url && !b.url) {
-    return -1;
-  }
-  if (!a.url && b.url) {
-    return 1;
-  }
-  if (a.title < b.title) {
-    return -1;
-  }
-  if (a.title > b.title) {
-    return 1;
-  }
-
-  return 0;
+const orderByAlpha = (a, b) => {
+  return a.shortTitle.localeCompare(b.shortTitle, "fr", {
+    ignorePunctuation: true,
+  });
 };

@@ -6,26 +6,26 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
     class="sc-iGgWBj biWgIW"
   >
     <form
-      class="sc-czkgLR fthxDL"
+      class="sc-ERObt kpWsGC"
     >
       <div
-        class="sc-ERObt ktumJQ"
+        class="sc-eulNck dMhJop"
       >
         <div
-          class="sc-fulCBj QUZrm"
+          class="sc-iapWAC hrVAPv"
         >
           <h1
-            class="sc-dNsVcS bvjznk"
+            class="sc-dExYaf eXWENA"
           >
             Heures pour recherche d'emploi
           </h1>
         </div>
         <div
-          class="sc-bdOgaJ inYENn"
+          class="sc-dxcDKg bBiLxp"
         >
           <svg
             aria-hidden="true"
-            class="sc-fThUAz gbAMVF"
+            class="sc-kRRyDe iCRqCC"
             fill="none"
             viewBox="0 0 52 52"
             xmlns="http://www.w3.org/2000/svg"
@@ -64,26 +64,26 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
             </defs>
           </svg>
           <span
-            class="sc-empnci kQpLoh"
+            class="sc-gvZAcH czFZQA"
           >
             2 à 5 min
           </span>
         </div>
       </div>
       <div
-        class="sc-iGgWBj sc-iapWAC cWzIZL kajMU"
+        class="sc-iGgWBj sc-ePDLzJ cWzIZL fVUnkE"
       >
         <span
-          class="sc-kqGoIF hohPkr"
+          class="sc-bVVIoq lTBGX"
         >
           Étape
           <span
-            class="sc-dxcDKg jBrRpy"
+            class="sc-dPZUQH ldNvXD"
           >
             s
           </span>
           <span
-            class="sc-gvZAcH gvpUEM"
+            class="sc-eBHhsj fQWqbT"
           >
              
             1/5
@@ -94,51 +94,51 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
         >
           <li
             aria-live="polite"
-            class="sc-kRRyDe eIaigD"
+            class="sc-iXzfSG gKinch"
             title="onglet actif"
           >
             <span
-              class="sc-knuQbY iMNMba"
+              class="sc-lnPyaJ iEBnCU"
             >
               1
             </span>
             Introduction
           </li>
           <li
-            class="sc-kRRyDe dEMfAZ"
+            class="sc-iXzfSG dLCZmb"
           >
             <span
-              class="sc-knuQbY hpfSPp"
+              class="sc-lnPyaJ hRwIIr"
             >
               2
             </span>
             Convention collective
           </li>
           <li
-            class="sc-kRRyDe dEMfAZ"
+            class="sc-iXzfSG dLCZmb"
           >
             <span
-              class="sc-knuQbY hpfSPp"
+              class="sc-lnPyaJ hRwIIr"
             >
               3
             </span>
             Type de rupture
           </li>
           <li
-            class="sc-kRRyDe dEMfAZ"
+            class="sc-iXzfSG dLCZmb"
           >
             <span
-              class="sc-knuQbY hpfSPp"
+              class="sc-lnPyaJ hRwIIr"
             >
               4
             </span>
             Informations
           </li>
           <li
-            class="sc-kRRyDe dEMfAZ"
+            class="sc-iXzfSG dLCZmb"
           >
             <span
-              class="sc-knuQbY hpfSPp"
+              class="sc-lnPyaJ hRwIIr"
             >
               5
             </span>
@@ -163,15 +163,15 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
         .
       </p>
       <div
-        class="sc-lnPyaJ cjInwL"
+        class="sc-ktPPKK fovbo"
       >
         <button
-          class="sc-kOPcWz cefBoA sc-iXzfSG sc-eulNck jrhUSB kfCQDo"
+          class="sc-kOPcWz cefBoA sc-fMMURN sc-YysOf cMdyCT dIpKoA"
         >
           Commencer
           <svg
             aria-hidden="true"
-            class="sc-dExYaf cVwuim"
+            class="sc-cVzyXs kxnwsU"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"

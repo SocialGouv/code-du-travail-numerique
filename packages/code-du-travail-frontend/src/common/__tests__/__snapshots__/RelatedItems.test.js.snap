@@ -8,7 +8,6 @@ exports[`<RelatedItems /> should render 1`] = `
     <div
       aria-level="2"
       class="sc-kAyceB dvmaTz"
-      data-testid="heading"
       role="heading"
     >
       Modèles et outils liés
@@ -18,10 +17,10 @@ exports[`<RelatedItems /> should render 1`] = `
       class="sc-cfxfcM kMmTaI"
     >
       <li
-        class="sc-iXzfSG jAUdMA"
+        class="sc-fMMURN fUjtLa"
       >
         <a
-          class="sc-bmzYkS hFAanY"
+          class="sc-bmzYkS eyKmWS"
         >
           <svg
             aria-hidden="true"
@@ -35,18 +34,18 @@ exports[`<RelatedItems /> should render 1`] = `
               fill="currentColor"
             />
           </svg>
-          <p
+          <span
             class="sc-iHGNWf hQSWKy"
           >
             externalTool
-          </p>
+          </span>
         </a>
       </li>
       <li
-        class="sc-iXzfSG jAUdMA"
+        class="sc-fMMURN fUjtLa"
       >
         <a
-          class="sc-bmzYkS hFAanY"
+          class="sc-bmzYkS eyKmWS"
         >
           <svg
             aria-hidden="true"
@@ -60,18 +59,17 @@ exports[`<RelatedItems /> should render 1`] = `
               fill="currentColor"
             />
           </svg>
-          <p
+          <span
             class="sc-iHGNWf hQSWKy"
           >
             modele de courrier
-          </p>
+          </span>
         </a>
       </li>
     </ul>
     <div
       aria-level="2"
       class="sc-kAyceB dvmaTz"
-      data-testid="heading"
       role="heading"
     >
       Articles liés
@@ -81,10 +79,10 @@ exports[`<RelatedItems /> should render 1`] = `
       class="sc-cfxfcM kMmTaI"
     >
       <li
-        class="sc-iXzfSG jAUdMA"
+        class="sc-fMMURN fUjtLa"
       >
         <a
-          class="sc-bmzYkS hFAanY"
+          class="sc-bmzYkS eyKmWS"
         >
           <svg
             aria-hidden="true"
@@ -98,18 +96,18 @@ exports[`<RelatedItems /> should render 1`] = `
               fill="currentColor"
             />
           </svg>
-          <p
+          <span
             class="sc-iHGNWf hQSWKy"
           >
             fiche sp
-          </p>
+          </span>
         </a>
       </li>
       <li
-        class="sc-iXzfSG jAUdMA"
+        class="sc-fMMURN fUjtLa"
       >
         <a
-          class="sc-bmzYkS hFAanY"
+          class="sc-bmzYkS eyKmWS"
         >
           <svg
             aria-hidden="true"
@@ -123,11 +121,11 @@ exports[`<RelatedItems /> should render 1`] = `
               fill="currentColor"
             />
           </svg>
-          <p
+          <span
             class="sc-iHGNWf hQSWKy"
           >
             contrib
-          </p>
+          </span>
         </a>
       </li>
     </ul>

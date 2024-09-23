@@ -1,23 +1,19 @@
 import { render, RenderResult } from "@testing-library/react";
 import React from "react";
 
-import InformationPage from "../pages/information/[slug]";
-import {
+import InformationPage, {
   EditorialContentDataWrapper,
-  SectionDisplayMode,
-} from "@socialgouv/cdtn-utils";
+} from "../pages/information/[slug]";
+import { EditorialSectionDisplayMode } from "@socialgouv/cdtn-types";
 
 const mockedProps: EditorialContentDataWrapper = {
   information: {
     _source: {
       breadcrumbs: [],
-      contents: [],
       slug: "",
     },
   },
 };
-
-jest.mock("../src/information/htmlProcess.service");
 
 describe("Information Page", () => {
   let renderResult: RenderResult;
@@ -28,7 +24,8 @@ describe("Information Page", () => {
   describe("Given a parameter sectionDisplayMode = 'tab'", () => {
     beforeAll(() => {
       props = { ...mockedProps };
-      props.information._source.sectionDisplayMode = SectionDisplayMode.tab;
+      props.information._source.sectionDisplayMode =
+        EditorialSectionDisplayMode.tab;
     });
     it("should contain tabs", () => {
       const tabs = renderResult.queryByTestId("tabs");
@@ -39,7 +36,7 @@ describe("Information Page", () => {
     beforeAll(() => {
       props = { ...mockedProps };
       props.information._source.sectionDisplayMode =
-        SectionDisplayMode.accordion;
+        EditorialSectionDisplayMode.accordion;
     });
     it("should contain accordions", () => {
       const accordions = renderResult.queryByTestId("accordion");

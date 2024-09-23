@@ -15,11 +15,11 @@ import styled from "styled-components";
 import Metas from "../src/common/Metas";
 import { ConventionModal } from "../src/conventions/SearchModal";
 import { Layout } from "../src/layout/Layout";
-import { fetchSearchResults } from "../src/search/search.service";
 import SearchBar from "../src/search/SearchBar";
 import { SearchResults } from "../src/search/SearchResults";
 import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
+import { searchWithQuery } from "../src/api";
 
 const SEARCH_ID = "search-input";
 
@@ -103,7 +103,7 @@ const SearchPage = ({
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const q = (context.query.q as string) ?? "";
-  const items = await fetchSearchResults(q);
+  const items = await searchWithQuery(q, false, undefined);
   return { props: { items } };
 };
 

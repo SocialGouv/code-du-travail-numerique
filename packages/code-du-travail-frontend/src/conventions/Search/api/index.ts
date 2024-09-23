@@ -3,7 +3,7 @@ import { parseIdcc } from "@socialgouv/modeles-social";
 import { searchAgreement } from "./agreement.service";
 import getQueryType, { QueryType } from "./getQueryType";
 import { Enterprise, searchEnterprises } from "./enterprises.service";
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "../../../outils/types";
 
 export type ResultType = {
   conventions: Agreement[];
@@ -21,7 +21,7 @@ export const getResults = async (query: string): Promise<ResultType | null> => {
     case QueryType.TEXT:
       [conventions, entreprises] = await Promise.all([
         searchAgreement(trimmedQuery),
-        searchEnterprises(trimmedQuery).then((entreprises) =>
+        searchEnterprises({ query: trimmedQuery }).then((entreprises) =>
           entreprises.filter(
             (entreprise) =>
               entreprise.conventions && entreprise.conventions.length

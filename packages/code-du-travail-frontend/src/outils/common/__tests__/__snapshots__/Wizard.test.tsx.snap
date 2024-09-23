@@ -6,35 +6,35 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
     class="sc-iGgWBj biWgIW"
   >
     <form
-      class="sc-kbdlSk CXQkJ"
+      class="sc-fFlnrN guAbeS"
     >
       <div
-        class="sc-hYmls jKkoYJ"
+        class="sc-hBtRBD hoRcHt"
       >
         <div
-          class="sc-eXsaLi bdWhoM"
+          class="sc-bOQTJJ enQbXO"
         >
           <h1
-            class="sc-bOQTJJ hoVrPf"
+            class="sc-hYmls fxMBUA"
           >
             test H1
           </h1>
         </div>
       </div>
       <div
-        class="sc-iGgWBj sc-fKWMtX cWzIZL bcBkxu"
+        class="sc-iGgWBj sc-eifrsQ cWzIZL kbgGSr"
       >
         <span
-          class="sc-kgOKUu bjvUoK"
+          class="sc-fKWMtX dwODUN"
         >
           Étape
           <span
-            class="sc-bfhvDw kYFtQY"
+            class="sc-kgOKUu lRoEZ"
           >
             s
           </span>
           <span
-            class="sc-cMa-dbN gAIJdP"
+            class="sc-bfhvDw cRllDc"
           >
              
             1/2
@@ -45,21 +45,21 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
         >
           <li
             aria-live="polite"
-            class="sc-fUBkdm kTxRgT"
+            class="sc-cMa-dbN dVEDhW"
             title="onglet actif"
           >
             <span
-              class="sc-hBtRBD bUvebq"
+              class="sc-fUBkdm gKleHP"
             >
               1
             </span>
             First Step
           </li>
           <li
-            class="sc-fUBkdm jQjOBp"
+            class="sc-cMa-dbN kjfnCY"
           >
             <span
-              class="sc-hBtRBD zIbRN"
+              class="sc-fUBkdm fvEnYs"
             >
               2
             </span>
@@ -71,15 +71,15 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
         Premiere Etape
       </p>
       <div
-        class="sc-iLsKjm eOFMyx"
+        class="sc-epALIP gMUQhG"
       >
         <button
-          class="sc-kOPcWz cefBoA sc-epALIP sc-lbJcrp dyTjwR innUxH"
+          class="sc-kOPcWz cefBoA sc-dJiZtA sc-iLsKjm kAtcjM gdEPCY"
         >
           Commencer
           <svg
             aria-hidden="true"
-            class="sc-eifrsQ dsvLPn"
+            class="sc-lbJcrp bPOrps"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"
@@ -102,35 +102,35 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
     class="sc-iGgWBj biWgIW"
   >
     <form
-      class="sc-kbdlSk CXQkJ"
+      class="sc-fFlnrN guAbeS"
     >
       <div
-        class="sc-hYmls jKkoYJ"
+        class="sc-hBtRBD hoRcHt"
       >
         <div
-          class="sc-eXsaLi bdWhoM"
+          class="sc-bOQTJJ enQbXO"
         >
           <h1
-            class="sc-bOQTJJ hoVrPf"
+            class="sc-hYmls fxMBUA"
           >
             test H1
           </h1>
         </div>
       </div>
       <div
-        class="sc-iGgWBj sc-fKWMtX cWzIZL bcBkxu"
+        class="sc-iGgWBj sc-eifrsQ cWzIZL kbgGSr"
       >
         <span
-          class="sc-kgOKUu bjvUoK"
+          class="sc-fKWMtX dwODUN"
         >
           Étape
           <span
-            class="sc-bfhvDw kYFtQY"
+            class="sc-kgOKUu lRoEZ"
           >
             s
           </span>
           <span
-            class="sc-cMa-dbN gAIJdP"
+            class="sc-bfhvDw cRllDc"
           >
              
             2/2
@@ -140,10 +140,10 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
           class="sc-cfxfcM kMmTaI"
         >
           <li
-            class="sc-fUBkdm jQjOBp"
+            class="sc-cMa-dbN kjfnCY"
           >
             <span
-              class="sc-hBtRBD zIbRN"
+              class="sc-fUBkdm fvEnYs"
             >
               1
             </span>
@@ -151,11 +151,11 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
           </li>
           <li
             aria-live="polite"
-            class="sc-fUBkdm kTxRgT"
+            class="sc-cMa-dbN dVEDhW"
             title="onglet actif"
           >
             <span
-              class="sc-hBtRBD bUvebq"
+              class="sc-fUBkdm gKleHP"
             >
               2
             </span>
@@ -178,16 +178,16 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
         />
       </label>
       <div
-        class="sc-iLsKjm eOFMyx"
+        class="sc-epALIP gMUQhG"
       >
         <button
-          class="sc-kOPcWz dSQWfG sc-epALIP dyTjwR"
+          class="sc-kOPcWz dSQWfG sc-dJiZtA kAtcjM"
           type="button"
         >
           Précédent
         </button>
         <button
-          class="sc-kOPcWz gWtlVM sc-epALIP dyTjwR"
+          class="sc-kOPcWz gWtlVM sc-dJiZtA kAtcjM"
           type="button"
         >
           Imprimer le résultat
@@ -204,35 +204,35 @@ exports[`<Wizard /> should handle initialValues 1`] = `
     class="sc-iGgWBj biWgIW"
   >
     <form
-      class="sc-kbdlSk CXQkJ"
+      class="sc-fFlnrN guAbeS"
     >
       <div
-        class="sc-hYmls jKkoYJ"
+        class="sc-hBtRBD hoRcHt"
       >
         <div
-          class="sc-eXsaLi bdWhoM"
+          class="sc-bOQTJJ enQbXO"
         >
           <h1
-            class="sc-bOQTJJ hoVrPf"
+            class="sc-hYmls fxMBUA"
           >
             test H1
           </h1>
         </div>
       </div>
       <div
-        class="sc-iGgWBj sc-fKWMtX cWzIZL bcBkxu"
+        class="sc-iGgWBj sc-eifrsQ cWzIZL kbgGSr"
       >
         <span
-          class="sc-kgOKUu bjvUoK"
+          class="sc-fKWMtX dwODUN"
         >
           Étape
           <span
-            class="sc-bfhvDw kYFtQY"
+            class="sc-kgOKUu lRoEZ"
           >
             s
           </span>
           <span
-            class="sc-cMa-dbN gAIJdP"
+            class="sc-bfhvDw cRllDc"
           >
              
             1/3
@@ -243,31 +243,31 @@ exports[`<Wizard /> should handle initialValues 1`] = `
         >
           <li
             aria-live="polite"
-            class="sc-fUBkdm kTxRgT"
+            class="sc-cMa-dbN dVEDhW"
             title="onglet actif"
           >
             <span
-              class="sc-hBtRBD bUvebq"
+              class="sc-fUBkdm gKleHP"
             >
               1
             </span>
             First Step
           </li>
           <li
-            class="sc-fUBkdm jQjOBp"
+            class="sc-cMa-dbN kjfnCY"
           >
             <span
-              class="sc-hBtRBD zIbRN"
+              class="sc-fUBkdm fvEnYs"
             >
               2
             </span>
             Second Step
           </li>
           <li
-            class="sc-fUBkdm jQjOBp"
+            class="sc-cMa-dbN kjfnCY"
           >
             <span
-              class="sc-hBtRBD zIbRN"
+              class="sc-fUBkdm fvEnYs"
             >
               3
             </span>
@@ -279,15 +279,15 @@ exports[`<Wizard /> should handle initialValues 1`] = `
         Premiere Etape
       </p>
       <div
-        class="sc-iLsKjm eOFMyx"
+        class="sc-epALIP gMUQhG"
       >
         <button
-          class="sc-kOPcWz cefBoA sc-epALIP sc-lbJcrp dyTjwR innUxH"
+          class="sc-kOPcWz cefBoA sc-dJiZtA sc-iLsKjm kAtcjM gdEPCY"
         >
           Commencer
           <svg
             aria-hidden="true"
-            class="sc-eifrsQ dsvLPn"
+            class="sc-lbJcrp bPOrps"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"
@@ -310,35 +310,35 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
     class="sc-iGgWBj biWgIW"
   >
     <form
-      class="sc-kbdlSk CXQkJ"
+      class="sc-fFlnrN guAbeS"
     >
       <div
-        class="sc-hYmls jKkoYJ"
+        class="sc-hBtRBD hoRcHt"
       >
         <div
-          class="sc-eXsaLi bdWhoM"
+          class="sc-bOQTJJ enQbXO"
         >
           <h1
-            class="sc-bOQTJJ hoVrPf"
+            class="sc-hYmls fxMBUA"
           >
             test H1
           </h1>
         </div>
       </div>
       <div
-        class="sc-iGgWBj sc-fKWMtX cWzIZL bcBkxu"
+        class="sc-iGgWBj sc-eifrsQ cWzIZL kbgGSr"
       >
         <span
-          class="sc-kgOKUu bjvUoK"
+          class="sc-fKWMtX dwODUN"
         >
           Étape
           <span
-            class="sc-bfhvDw kYFtQY"
+            class="sc-kgOKUu lRoEZ"
           >
             s
           </span>
           <span
-            class="sc-cMa-dbN gAIJdP"
+            class="sc-bfhvDw cRllDc"
           >
              
             2/2
@@ -348,10 +348,10 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
           class="sc-cfxfcM kMmTaI"
         >
           <li
-            class="sc-fUBkdm jQjOBp"
+            class="sc-cMa-dbN kjfnCY"
           >
             <span
-              class="sc-hBtRBD zIbRN"
+              class="sc-fUBkdm fvEnYs"
             >
               1
             </span>
@@ -359,11 +359,11 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
           </li>
           <li
             aria-live="polite"
-            class="sc-fUBkdm kTxRgT"
+            class="sc-cMa-dbN dVEDhW"
             title="onglet actif"
           >
             <span
-              class="sc-hBtRBD bUvebq"
+              class="sc-fUBkdm gKleHP"
             >
               2
             </span>
@@ -386,16 +386,16 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
         />
       </label>
       <div
-        class="sc-iLsKjm eOFMyx"
+        class="sc-epALIP gMUQhG"
       >
         <button
-          class="sc-kOPcWz dSQWfG sc-epALIP dyTjwR"
+          class="sc-kOPcWz dSQWfG sc-dJiZtA kAtcjM"
           type="button"
         >
           Précédent
         </button>
         <button
-          class="sc-kOPcWz gWtlVM sc-epALIP dyTjwR"
+          class="sc-kOPcWz gWtlVM sc-dJiZtA kAtcjM"
           type="button"
         >
           Imprimer le résultat
@@ -412,35 +412,35 @@ exports[`<Wizard /> should render a step 1`] = `
     class="sc-iGgWBj biWgIW"
   >
     <form
-      class="sc-kbdlSk CXQkJ"
+      class="sc-fFlnrN guAbeS"
     >
       <div
-        class="sc-hYmls jKkoYJ"
+        class="sc-hBtRBD hoRcHt"
       >
         <div
-          class="sc-eXsaLi bdWhoM"
+          class="sc-bOQTJJ enQbXO"
         >
           <h1
-            class="sc-bOQTJJ hoVrPf"
+            class="sc-hYmls fxMBUA"
           >
             test H1
           </h1>
         </div>
       </div>
       <div
-        class="sc-iGgWBj sc-fKWMtX cWzIZL bcBkxu"
+        class="sc-iGgWBj sc-eifrsQ cWzIZL kbgGSr"
       >
         <span
-          class="sc-kgOKUu bjvUoK"
+          class="sc-fKWMtX dwODUN"
         >
           Étape
           <span
-            class="sc-bfhvDw kYFtQY"
+            class="sc-kgOKUu lRoEZ"
           >
             s
           </span>
           <span
-            class="sc-cMa-dbN gAIJdP"
+            class="sc-bfhvDw cRllDc"
           >
              
             1/2
@@ -451,21 +451,21 @@ exports[`<Wizard /> should render a step 1`] = `
         >
           <li
             aria-live="polite"
-            class="sc-fUBkdm kTxRgT"
+            class="sc-cMa-dbN dVEDhW"
             title="onglet actif"
           >
             <span
-              class="sc-hBtRBD bUvebq"
+              class="sc-fUBkdm gKleHP"
             >
               1
             </span>
             First Step
           </li>
           <li
-            class="sc-fUBkdm jQjOBp"
+            class="sc-cMa-dbN kjfnCY"
           >
             <span
-              class="sc-hBtRBD zIbRN"
+              class="sc-fUBkdm fvEnYs"
             >
               2
             </span>
@@ -477,15 +477,15 @@ exports[`<Wizard /> should render a step 1`] = `
         Premiere Etape
       </p>
       <div
-        class="sc-iLsKjm eOFMyx"
+        class="sc-epALIP gMUQhG"
       >
         <button
-          class="sc-kOPcWz cefBoA sc-epALIP sc-lbJcrp dyTjwR innUxH"
+          class="sc-kOPcWz cefBoA sc-dJiZtA sc-iLsKjm kAtcjM gdEPCY"
         >
           Commencer
           <svg
             aria-hidden="true"
-            class="sc-eifrsQ dsvLPn"
+            class="sc-lbJcrp bPOrps"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"

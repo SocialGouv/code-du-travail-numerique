@@ -1,9 +1,9 @@
 import { LEGAL_MOTIFS } from "../../base/seniority";
-import type { Motif, SupportedCcIndemniteLicenciement } from "../../common";
+import type { Motif, SupportedCc } from "../../common";
 import { MotifKeys } from "../../common/motif-keys";
 import { SeniorityDefault } from "../../common/seniority";
 
-export class Seniority0292 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC0292> {
+export class Seniority0292 extends SeniorityDefault<SupportedCc.IDCC0292> {
   getMotifs(): Motif[] {
     return MOTIFS_0292;
   }

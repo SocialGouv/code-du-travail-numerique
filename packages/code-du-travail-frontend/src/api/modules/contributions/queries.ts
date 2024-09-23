@@ -1,5 +1,20 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
 
+export const getAllContributions = () => {
+  return {
+    _source: ["title", "shortTitle", "slug", "idcc"],
+    query: {
+      bool: {
+        filter: [
+          { term: { source: SOURCES.CONTRIBUTIONS } },
+          { term: { isPublished: true } },
+        ],
+      },
+    },
+    size: 3000,
+  };
+};
+
 export const getAllGenericsContributions = () => {
   return {
     _source: [
@@ -16,42 +31,13 @@ export const getAllGenericsContributions = () => {
         filter: [
           { term: { source: SOURCES.CONTRIBUTIONS } },
           { term: { isPublished: true } },
+          { term: { idcc: "0000" } },
         ],
-        must_not: {
-          exists: {
-            field: "split",
-          },
-        },
       },
     },
     size: 200,
   };
 };
-
-export function getContributionsBySlugs(slugs: string[]) {
-  return {
-    _source: [
-      "title",
-      "shortTitle",
-      "description",
-      "url",
-      "slug",
-      "breadcrumbs",
-      "source",
-      "cdtnId",
-    ],
-    query: {
-      bool: {
-        filter: [
-          { term: { source: SOURCES.CONTRIBUTIONS } },
-          { term: { isPublished: true } },
-          { terms: { slug: slugs } },
-        ],
-      },
-    },
-    size: 100,
-  };
-}
 
 export function getContributionsByIds(ids: string[]) {
   return {
@@ -77,18 +63,3 @@ export function getContributionsByIds(ids: string[]) {
     size: 100,
   };
 }
-
-export const getAllContributionBySlug = (slug: string) => {
-  return {
-    query: {
-      bool: {
-        filter: [
-          { term: { slug } },
-          { term: { source: SOURCES.CONTRIBUTIONS } },
-          { term: { isPublished: true } },
-        ],
-      },
-    },
-    size: 1,
-  };
-};

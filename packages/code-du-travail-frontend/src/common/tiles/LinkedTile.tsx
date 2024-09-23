@@ -15,23 +15,26 @@ export type Props = {
   centerTitle?: boolean;
   wide?: boolean;
   custom?: boolean;
+  noRedirect?: boolean;
   onClick?: () => void;
 };
 
 export const LinkedTile = React.forwardRef<HTMLAnchorElement, Props>(
-  function _LinkedTile(
-    { children, onClick, href, ...props }: Props,
+  function useLnkedTile(
+    { children, onClick, href, noRedirect, ...props }: Props,
     ref: ForwardedRef<any>
   ): JSX.Element {
     const router = useRouter();
     const handleClick = async (e) => {
       if (onClick) onClick();
       e.preventDefault();
-      if (props.target === "_blank") {
-        window.open(href, "_blank");
-        return false;
+      if (!noRedirect) {
+        if (props.target === "_blank") {
+          window.open(href, "_blank");
+          return false;
+        }
+        router.push(href);
       }
-      router.push(href);
       return false;
     };
     return (

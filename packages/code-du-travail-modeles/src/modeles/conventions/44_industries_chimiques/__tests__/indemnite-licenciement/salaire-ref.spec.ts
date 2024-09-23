@@ -1,12 +1,9 @@
-import {
-  ReferenceSalaryFactory,
-  SupportedCcIndemniteLicenciement,
-} from "../../../../common";
+import { ReferenceSalaryFactory, SupportedCc } from "../../../../common";
 import { CategoryPro44 } from "../../salary";
 
 describe("Calcul du salaire pour la CC 44", () => {
   const factory = new ReferenceSalaryFactory();
-  const sref = factory.create(SupportedCcIndemniteLicenciement.IDCC0044);
+  const sref = factory.create(SupportedCc.IDCC0044);
   describe("Ouvrier avec salaire variable", () => {
     test.each`
       salaries                                                                                                                                                                                                                                                                                                                                                                                                                                  | expectedResult

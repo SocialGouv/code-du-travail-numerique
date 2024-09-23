@@ -12,8 +12,11 @@ import {
 } from "../../../../ConventionCollective/types";
 import { InfoBulle } from "../../../InfoBulle";
 import { EntrepriseSearchResults } from "../EntrepriseSearchResult";
-
-const { Search: SearchIcon } = icons;
+import {
+  ApiGeoResultWithSelectedPostCode,
+  LocationSearchInput,
+} from "../Location/Search";
+import { Error } from "../../../ErrorField";
 
 type Props = {
   searchParams?: SearchParams;
@@ -25,12 +28,14 @@ type Props = {
     params?: SearchParams
   ) => void;
 } & TrackingProps;
+
 export type SearchParams = {
-  address: string;
   query: string;
+  apiGeoResult?: ApiGeoResultWithSelectedPostCode;
 };
+
 export const SearchEnterpriseInput = ({
-  searchParams = { address: "", query: "" },
+  searchParams = { query: "" },
   onUserAction,
   onSearchParamsChange,
   isDisabled,
@@ -38,18 +43,24 @@ export const SearchEnterpriseInput = ({
 }: Props): JSX.Element => {
   const useEnterpriseSuggester = createSuggesterHook(
     searchEnterprises,
-    (query, address) => {
-      onUserAction(UserAction.SearchEnterprise, { address, query });
+    (searchParams) => {
+      onUserAction(UserAction.SearchEnterprise, searchParams);
     }
   );
-  const state = useEnterpriseSuggester(
-    searchParams.query,
-    searchParams.address
-  );
+  const state = useEnterpriseSuggester(searchParams);
   const [query, setQuery] = useState(searchParams.query);
-  const [address, setAddress] = useState(searchParams.address);
-  const searchInputHandler = () => {
-    onSearchParamsChange({ ...searchParams, query: query, address: address });
+  const [hasLocationSearchError, setHasLocationSearchError] = useState(false);
+  const [selectedApiGeoResult, setSelectedApiGeoResult] = useState<
+    ApiGeoResultWithSelectedPostCode | undefined
+  >(searchParams.apiGeoResult);
+
+  const searchInputHandler = (e) => {
+    e.preventDefault();
+    onSearchParamsChange({
+      ...searchParams,
+      query,
+      apiGeoResult: selectedApiGeoResult,
+    });
   };
 
   return (
@@ -57,17 +68,21 @@ export const SearchEnterpriseInput = ({
       <Flex>
         <Box>
           <InlineLabel htmlFor="enterprise-search" disabled={isDisabled}>
-            Nom de votre entreprise ou numéro Siret
+            Nom de votre entreprise ou numéro Siren/Siret
           </InlineLabel>
           <InfoBulle
-            title={"Qu’est ce qu’un n°siret ?"}
+            title={"Qu’est ce qu’un n° Siret ou Siren  ?"}
             isDisabled={isDisabled}
           >
             <p>
+              Le numéro Siren est un{" "}
+              <strong>numéro unique de 9 chiffres</strong> attribué à chaque
+              entreprise (ex : 401237780).
+              <br />
               Le numéro Siret est un <strong>numéro de 14 chiffres</strong>{" "}
-              unique pour chaque entreprise. Il est présent sur la{" "}
-              <strong>fiche de paie du salarié</strong>.<br />
-              Ex : 40123778000127
+              unique pour chaque établissement de l&apos;entreprise. Il est
+              présent sur la <strong>fiche de paie du salarié</strong> (ex :
+              40123778000127).
             </p>
           </InfoBulle>
 
@@ -84,44 +99,21 @@ export const SearchEnterpriseInput = ({
           />
         </Box>
         <Box>
-          <InlineLabel
-            htmlFor="enterprise-search-address"
-            disabled={isDisabled}
-          >
-            Code postal ou ville
-          </InlineLabel>{" "}
-          <InlineText fontWeight="400" fontSize="small" disabled={isDisabled}>
-            (facultatif)
-          </InlineText>
-          <InputWithButton>
-            <BlockInputRight
-              placeholder="Ex : 31000 ou Toulouse"
-              value={address}
-              type="text"
-              name="address"
-              id="enterprise-search-address"
-              onChange={(e) => setAddress(e.target.value)}
-              autoComplete="off"
-              data-testid="agreement-postal-code-search-input"
-              disabled={isDisabled}
-            />
-            <SubmitIcon
-              type="submit"
-              title="Lancer ma recherche"
-              aria-label="Lancer ma recherche"
-              onClick={searchInputHandler}
-              small
-              narrow
-              variant="secondary"
-              data-testid="agreement-company-search-button"
-              disabled={isDisabled}
-            >
-              <MobileOnly>Rechercher</MobileOnly>
-              <StyledSearchIcon />
-            </SubmitIcon>
-          </InputWithButton>
+          <LocationSearchInput
+            searchInputHandler={searchInputHandler}
+            setSelectedApiGeoResult={setSelectedApiGeoResult}
+            setHasLocationSearchError={setHasLocationSearchError}
+            selectedApiGeoResult={selectedApiGeoResult}
+            isDisabled={isDisabled}
+          />
         </Box>
       </Flex>
+      {hasLocationSearchError && (
+        <Error>
+          Une erreur est survenue lors de la recherche par ville, veuillez
+          réessayer plus tard.
+        </Error>
+      )}
       <EntrepriseSearchResults
         handleEnterpriseSelection={handleEnterpriseSelection}
         onUserAction={onUserAction}
@@ -132,11 +124,6 @@ export const SearchEnterpriseInput = ({
   );
 };
 
-const InlineText = styled(Text)`
-  color: ${({ theme, disabled }) =>
-    disabled ? theme.placeholder : theme.paragraph};
-`;
-
 const BlockInput = styled(Input)`
   width: 100%;
 `;
@@ -146,14 +133,6 @@ const BlockInputLeft = styled(BlockInput)`
     input {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
-    }
-  }
-`;
-const BlockInputRight = styled(BlockInput)`
-  @media (min-width: ${theme.breakpoints.tablet}) {
-    input {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
     }
   }
 `;
@@ -180,47 +159,10 @@ const Box = styled.div`
 
   & + & {
     @media (min-width: ${theme.breakpoints.mobile}) {
-      flex: 0 1 26rem;
+      flex: 0 1 32rem;
     }
     @media (max-width: ${theme.breakpoints.mobile}) {
       padding-top: ${theme.spacings.xmedium};
     }
-  }
-`;
-
-const InputWithButton = styled.div`
-  position: relative;
-`;
-const SubmitIcon = styled(Button)`
-  @media (min-width: ${theme.breakpoints.mobile}) {
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    width: 2.5rem;
-  }
-  @media (max-width: ${theme.breakpoints.mobile}) {
-    width: 100%;
-    margin-top: ${theme.spacings.xmedium};
-    box-sizing: inherit;
-  }
-  color: ${({ theme }) => theme.white};
-  background-color: ${({ theme, disabled }) =>
-    disabled ? theme.placeholder : theme.secondary};
-  border-color: ${({ theme, disabled }) =>
-    disabled ? theme.placeholder : theme.secondary};
-`;
-
-const StyledSearchIcon = styled(SearchIcon)`
-  @media (max-width: ${theme.breakpoints.mobile}) {
-    display: none;
-  }
-  color: ${({ theme }) => theme.white};
-  height: 25px;
-  width: 25px;
-`;
-
-const MobileOnly = styled.span`
-  @media (min-width: ${theme.breakpoints.mobile}) {
-    display: none;
   }
 `;

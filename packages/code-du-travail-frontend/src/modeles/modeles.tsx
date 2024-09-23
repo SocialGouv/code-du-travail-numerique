@@ -1,29 +1,28 @@
 import {
   Button,
-  OverflowWrapper,
+  icons,
   ScreenReaderOnly,
   Section,
   theme,
   Wrapper,
-  icons,
 } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
-import { Breadcrumb } from "@socialgouv/cdtn-utils";
+import { Breadcrumb } from "@socialgouv/cdtn-types";
 
 import Html from "../../src/common/Html";
-import { toUrl } from "../../src/lib";
+import { toUrl } from "../lib";
 import { getDisclaimer } from "./helpers";
 
 export interface LetterModelProps {
   breadcrumbs: Breadcrumb[];
   date: string;
-  description: string;
+  intro: string;
   title: string;
   relatedItems: Array<any>;
   metaDescription: string;
   filesize: any;
-  fileUrl: any;
+  filename: string;
   html: any;
   meta_title: string;
   type: any;
@@ -31,13 +30,12 @@ export interface LetterModelProps {
 }
 
 export const LetterModel = ({
-  fileUrl,
+  filename,
   filesize,
   html,
   slug,
 }: LetterModelProps) => {
   const filesizeFormated = Math.round((filesize / 1000) * 100) / 100;
-  const [filename] = fileUrl.match(/[^/]+$/);
   const [, extension] = filename.split(/\.([a-z]{2,4})$/);
   return (
     <>
@@ -47,7 +45,7 @@ export const LetterModel = ({
             <Button
               as="a"
               className="no-after"
-              href={toUrl(fileUrl)}
+              href={toUrl(filename)}
               narrow
               variant="primary"
             >
@@ -57,9 +55,7 @@ export const LetterModel = ({
               </ScreenReaderOnly>
             </Button>
           </FloatWrapper>
-          <OverflowWrapper>
-            <Html>{html}</Html>
-          </OverflowWrapper>
+          <Html>{html}</Html>
         </LightWrapper>
       </Section>
       <Notice>
@@ -73,7 +69,7 @@ export const LetterModel = ({
         <Button
           as="a"
           className="no-after"
-          href={toUrl(fileUrl)}
+          href={toUrl(filename)}
           variant="primary"
         >
           Télécharger le modèle ({extension} - {filesizeFormated}Ko) &nbsp;

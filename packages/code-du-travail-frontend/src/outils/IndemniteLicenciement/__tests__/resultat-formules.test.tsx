@@ -1,14 +1,15 @@
-import { fireEvent, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import React from "react";
-import { CalculateurIndemnite } from "../../../../src/outils";
-import { ui } from "./ui";
-import userEvent from "@testing-library/user-event";
+import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 import { byTestId } from "testing-library-selector";
+import { UserAction } from "../../../common";
 
 jest.mock("../../../conventions/Search/api/agreements.service");
 jest.mock("../../../conventions/Search/api/enterprises.service");
 
 describe("Page résultat: vérification de la formule affichée", () => {
+  let userAction: UserAction;
   describe.each([
     {
       inaptitude: false,
@@ -31,12 +32,11 @@ describe("Page résultat: vérification de la formule affichée", () => {
       startDate: "01/01/2000",
       notifDate: "01/03/2022",
       endDate: "01/03/2022",
-      ccNum: 29,
-      ccTitle:
-        " : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP)",
+      ccNum: 2596,
+      ccTitle: "Coiffure",
       select:
-        "infos.contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle",
-      selectOption: "Autres salariés",
+        "infos.contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle",
+      selectOption: "Cadres",
       expectedA1: "A1 : Ancienneté de 10 ans ou moins (10 ans)",
       expectedA2:
         "A2 : Ancienneté au-delà de 10 ans (≈ 12.17 ans : valeur arrondie)",
@@ -48,12 +48,11 @@ describe("Page résultat: vérification de la formule affichée", () => {
       startDate: "01/01/2022",
       notifDate: "31/12/2022",
       endDate: "31/12/2022",
-      ccNum: 29,
-      ccTitle:
-        " : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP)",
+      ccNum: 2596,
+      ccTitle: "Coiffure",
       select:
-        "infos.contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle",
-      selectOption: "Autres salariés",
+        "infos.contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle",
+      selectOption: "Cadres",
       expectedA1: "A : Ancienneté totale (1 an)",
       expectedA2: "A : Ancienneté totale (1 an)",
       expectedFormula: "14×Sref×A",
@@ -63,12 +62,11 @@ describe("Page résultat: vérification de la formule affichée", () => {
       startDate: "01/11/2021",
       notifDate: "01/01/2022",
       endDate: "01/01/2022",
-      ccNum: 29,
-      ccTitle:
-        " : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP)",
+      ccNum: 2596,
+      ccTitle: "Coiffure",
       select:
-        "infos.contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle",
-      selectOption: "Autres salariés",
+        "infos.contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle",
+      selectOption: "Cadres",
       expectedA1: "A : Ancienneté totale (≈ 0.17 an : valeur arrondie)",
       expectedA2: "A : Ancienneté totale (≈ 0.17 an : valeur arrondie)",
       expectedFormula: "(14×Sref×A)×2",
@@ -94,37 +92,36 @@ describe("Page résultat: vérification de la formule affichée", () => {
           () => `{"num":${ccNum},"shortTitle":"${ccTitle}"}`
         );
 
-        render(<CalculateurIndemnite icon={""} title={""} displayTitle={""} />);
-        userEvent.click(ui.introduction.startButton.get());
-        userEvent.click(ui.contract.type.cdi.get());
-        userEvent.click(ui.contract.fauteGrave.non.get());
-        userEvent.click(
+        render(
+          <CalculateurIndemniteLicenciement
+            icon={""}
+            title={""}
+            displayTitle={""}
+          />
+        );
+        userAction = new UserAction();
+        userAction.click(ui.introduction.startButton.get());
+        userAction.click(ui.contract.type.cdi.get());
+        userAction.click(ui.contract.fauteGrave.non.get());
+        userAction.click(
           ui.contract.inaptitude[inaptitude ? "oui" : "non"].get()
         );
-        !inaptitude && userEvent.click(ui.contract.arretTravail.non.get());
-        userEvent.click(ui.next.get());
-        userEvent.click(ui.next.get());
+        !inaptitude && userAction.click(ui.contract.arretTravail.non.get());
+        userAction.click(ui.next.get());
+        userAction.click(ui.next.get());
 
-        userEvent.selectOptions(byTestId(select).get(), selectOption);
-        userEvent.click(ui.next.get());
-        fireEvent.change(ui.seniority.startDate.get(), {
-          target: { value: startDate },
-        });
-        fireEvent.change(ui.seniority.notificationDate.get(), {
-          target: { value: notifDate },
-        });
-        fireEvent.change(ui.seniority.endDate.get(), {
-          target: { value: endDate },
-        });
+        userAction.changeInputList(byTestId(select).get(), selectOption);
+        userAction.click(ui.next.get());
+        userAction.setInput(ui.seniority.startDate.get(), startDate);
+        userAction.setInput(ui.seniority.notificationDate.get(), notifDate);
+        userAction.setInput(ui.seniority.endDate.get(), endDate);
 
-        userEvent.click(ui.seniority.hasAbsence.non.get());
-        userEvent.click(ui.next.get());
-        userEvent.click(ui.salary.hasPartialTime.non.get());
-        userEvent.click(ui.salary.hasSameSalary.oui.get());
-        fireEvent.change(ui.salary.sameSalaryValue.get(), {
-          target: { value: "2500" },
-        });
-        userEvent.click(ui.next.get());
+        userAction.click(ui.seniority.hasAbsence.non.get());
+        userAction.click(ui.next.get());
+        userAction.click(ui.salary.hasPartialTime.non.get());
+        userAction.click(ui.salary.hasSameSalary.oui.get());
+        userAction.setInput(ui.salary.sameSalaryValue.get(), "2500");
+        userAction.click(ui.next.get());
 
         // Validation que l'on est bien sur l'étape résultat
         expect(ui.activeStep.query()).toHaveTextContent("Indemnité");

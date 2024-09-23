@@ -12,6 +12,8 @@ app:
   imagePackage: app
   imageProject: cdtn
   probesPath: /api/health
+  containerSecurityContext:
+    readOnlyRootFilesystem: true
   envFrom:
     - configMapRef:
         name: www-configmap
@@ -19,8 +21,48 @@ app:
         name: www-secret
   resources:
     limits:
-      cpu: 250m
-      memory: 512Mi
+      cpu: 400m
+      memory: 1024Mi
     requests:
-      cpu: 50m
-      memory: 256Mi
+      cpu: 400m
+      memory: 512Mi
+  annotations:
+    oblik.socialgouv.io/min-request-cpu: 400m
+    oblik.socialgouv.io/min-request-memory: 512Mi
+    oblik.socialgouv.io/min-limit-cpu: 400m
+    oblik.socialgouv.io/min-limit-memory: 1024Mi
+  volumes:
+    - name: tmp
+      emptyDir: {}
+    - name: next
+      emptyDir: {}
+  volumeMounts:
+    - mountPath: /tmp
+      name: tmp
+    - mountPath: /app/packages/code-du-travail-frontend/.next
+      name: next
+  initContainers:
+    - name: copy-next
+      image:
+        "{{ .Values.global.registry }}/{{ .Values.global.projectName }}/{{
+        .Values.global.imageRepository }}/app:{{ .Values.global.imageTag }}"
+      command: ["/bin/sh", "-c"]
+      args:
+        - cp -r /app/packages/code-du-travail-frontend/.next/* /mnt/next;
+      volumeMounts:
+        - name: next
+          mountPath: /mnt/next
+  tolerations:
+    - key: startup
+      operator: Equal
+      value: cdtn
+      effect: NoSchedule
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: nodepool
+                operator: In
+                values:
+                  - cdtn-worker-nodepool

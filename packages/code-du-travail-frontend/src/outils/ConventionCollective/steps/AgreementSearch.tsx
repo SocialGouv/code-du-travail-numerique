@@ -1,4 +1,5 @@
-import { Agreement, SOURCES } from "@socialgouv/cdtn-utils";
+import { SOURCES } from "@socialgouv/cdtn-utils";
+import { Agreement } from "../../types";
 import { Button, Section as SectionUi } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";

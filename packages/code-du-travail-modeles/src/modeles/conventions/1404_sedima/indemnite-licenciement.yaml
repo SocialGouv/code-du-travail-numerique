@@ -27,7 +27,7 @@ contrat salarié . convention collective . sedima . cdi classique . ancienneté 
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
   valeur: indemnité
   unité: €
@@ -82,6 +82,10 @@ contrat salarié . convention collective . sedima . cdi opération:
   applicable si: question cdi opération = 'Oui'
   valeur: oui
 
+contrat salarié . convention collective . sedima . cdi opération . résultat légal doit être calculé:
+  remplace: contrat salarié . indemnité de licenciement . résultat légal doit être ignoré
+  valeur: oui
+
 contrat salarié . convention collective . sedima . cdi opération . question mission impossible:
   titre: Licenciement car la mission ne peut pas se réaliser ou un obstacle empêche sa poursuite
   question: Le salarié est-il licencié car la mission prévue ne peut pas se réaliser ou car un obstacle empêche la poursuite de la mission&nbsp;?
@@ -108,10 +112,14 @@ contrat salarié . convention collective . sedima . cdi opération . plus de 6 m
   cdtn:
     type: montant
 
+contrat salarié . convention collective . sedima . cdi opération . minimum ancienneté conventionnelle requise en année:
+  remplace: paramètre . minimum ancienneté conventionnelle requise en année
+  valeur: 6 mois
+
 contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . résultat conventionnelle ancienneté moins de 1 an:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 6 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 1 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: (8 / 100) * salaires 1e année
@@ -140,7 +148,7 @@ contrat salarié . convention collective . sedima . cdi opération . plus de 6 m
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 1 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 2 an
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 6 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: (8 / 100) * salaires 1e année + (6 / 100) * salaires 2e année
   unité: €
@@ -165,10 +173,10 @@ contrat salarié . convention collective . sedima . cdi opération . plus de 6 m
     type: montant
 
 contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . résultat conventionnelle ancienneté au-delà de 2 ans:
-  applicable si: 
+  applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 2 an
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 6 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: (8 / 100) * salaires 1e année + (6 / 100) * salaires 2e année + (4 / 100) * salaires 3e année et plus
   unité: €

@@ -1,36 +1,21 @@
-import { slugify, SOURCES } from "@socialgouv/cdtn-utils";
+import { SOURCES } from "@socialgouv/cdtn-utils";
+import { ElasticSearchContribution } from "@socialgouv/cdtn-types";
 import React from "react";
 import References from "../common/References";
 
-export const filteredRefs = (references, currentUrl) =>
-  references?.filter(({ category, url }) => {
-    if (category !== null) return true;
-    return url !== currentUrl;
-  });
+type Props = {
+  references: ElasticSearchContribution["references"];
+};
 
-const ReferencesJuridiques = ({ references = [] }) => {
-  if (references.length === 0) {
+export const ReferencesJuridiques = (props: Props) => {
+  if (!props.references || props.references.length === 0) {
     return null;
   }
-  const refs = references.flatMap(({ category, title, url }) => {
-    if (category === "labor_code") {
-      return {
-        slug: slugify(title),
-        title,
-        type: SOURCES.CDT,
-      };
-    }
-    if (category === "agreement") {
-      return {
-        title: `${title} de la convention collective`,
-        type: SOURCES.EXTERNALS,
-        url,
-      };
-    }
-    return { title, type: SOURCES.EXTERNALS, url };
-  });
+  const refs = props.references
+    .map(({ title, url }) => {
+      return { title, type: SOURCES.EXTERNALS, url };
+    })
+    .sort((a, b) => (a.url && !b.url ? -1 : !a.url && b.url ? 1 : 0));
 
   return <References label="Références" references={refs} accordionList="3" />;
 };
-
-export default ReferencesJuridiques;

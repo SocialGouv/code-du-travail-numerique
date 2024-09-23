@@ -1,8 +1,8 @@
 import { render, RenderResult } from "@testing-library/react";
 import { UserAction } from "../../../common";
 import React from "react";
-import { CalculateurIndemnite } from "../../../../src/outils";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -24,7 +24,11 @@ describe("Indemnité licenciement - CC 16", () => {
     let userAction: UserAction;
     beforeEach(() => {
       rendering = render(
-        <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
+        <CalculateurIndemniteLicenciement
+          icon={""}
+          title={""}
+          displayTitle={""}
+        />
       );
       userAction = new UserAction();
       userAction
@@ -47,12 +51,24 @@ describe("Indemnité licenciement - CC 16", () => {
         .setInput(ui.information.agreement16.engineerAge.get(), "38")
         .click(ui.next.get())
         .setInput(ui.seniority.startDate.get(), "01/01/2000")
-        .setInput(ui.seniority.notificationDate.get(), "01/01/2022")
-        .setInput(ui.seniority.endDate.get(), "01/03/2022")
+        .setInput(ui.seniority.notificationDate.get(), "01/01/2024")
+        .setInput(ui.seniority.endDate.get(), "01/03/2024")
         .click(ui.seniority.hasAbsence.non.get())
         .click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté
       expect(ui.activeStep.query()).toHaveTextContent("Salaires");
+    });
+
+    test("Validation d'un cas avec calculs spécifiques", () => {
+      userAction
+        .click(ui.salary.hasPartialTime.non.get())
+        .click(ui.salary.hasSameSalary.oui.get())
+        .setInput(ui.salary.sameSalaryValue.get(), "2500")
+        .click(ui.next.get());
+
+      expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+      expect(ui.result.resultat.get()).toHaveTextContent("21 666,67");
+      expect(ui.result.resultatAgreement.get()).toHaveTextContent("21 666,67");
     });
 
     test(`

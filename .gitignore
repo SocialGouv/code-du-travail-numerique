@@ -2,6 +2,7 @@ node_modules
 coverage
 dist
 /.env
+.env
 docker-compose.override.yml
 __pycache__
 package-lock.json
@@ -12,8 +13,6 @@ lerna-debug.log
 .vscode
 .DS_Store
 *.tsbuildinfo
-packages/code-du-travail-modeles/src/modeles/modeles-preavis-retraite.json
-packages/code-du-travail-modeles/src/modeles/modeles-indemnite-licenciement.json
 .pnp.*
 .yarn/*
 # !.yarn/cache

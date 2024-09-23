@@ -3,67 +3,61 @@
 exports[`<Tabs /> renders 1`] = `
 <div>
   <div
-    class="sc-fqkvVR fnBjsq"
+    class="sc-gEvEer koVpTm"
     data-rttabs="true"
   >
     <div
-      class="sc-aXZVg iuhBAh sc-dcJsrY jhpMIs"
+      class="sc-eqUAAy iyzsrM"
     >
-      <div
-        class="sc-gEvEer jOaSPk"
+      <ul
+        class="sc-fqkvVR cGoVTS"
+        role="tablist"
       >
-        <ul
-          class="sc-iGgWBj lbTpJm"
-          role="tablist"
+        <li
+          aria-controls="react-tabs-1"
+          aria-disabled="false"
+          aria-selected="true"
+          class="sc-dcJsrY gsYDpR react-tabs__tab--selected"
+          data-rttab="true"
+          id="react-tabs-0"
+          role="tab"
+          tabindex="0"
         >
-          <li
-            aria-controls="react-tabs-1"
-            aria-disabled="false"
-            aria-selected="true"
-            class="sc-gsFSXq hIWlvg react-tabs__tab--selected"
-            data-rttab="true"
-            data-testid="undefined-0"
-            id="react-tabs-0"
-            role="tab"
-            tabindex="0"
-          >
-            Tab 1
-          </li>
-          <li
-            aria-controls="react-tabs-3"
-            aria-disabled="false"
-            aria-selected="false"
-            class="sc-gsFSXq hIWlvg"
-            data-rttab="true"
-            data-testid="undefined-1"
-            id="react-tabs-2"
-            role="tab"
-          >
-            Tab 2
-          </li>
-        </ul>
-      </div>
+          Tab 1
+        </li>
+        <li
+          aria-controls="react-tabs-3"
+          aria-disabled="false"
+          aria-selected="false"
+          class="sc-dcJsrY gsYDpR"
+          data-rttab="true"
+          id="react-tabs-2"
+          role="tab"
+        >
+          Tab 2
+        </li>
+      </ul>
     </div>
     <div
       aria-labelledby="react-tabs-0"
-      class="sc-kAyceB SoTBh react-tabs__tab-panel--selected"
+      class="sc-iGgWBj hQEPYA react-tabs__tab-panel--selected"
       id="react-tabs-1"
       role="tabpanel"
     >
       <div
-        class="sc-eqUAAy khphyw"
+        class="sc-aXZVg EbkpG"
       >
         Tab 1
       </div>
       <div
-        class="sc-imWYAI jMRrPU"
+        class="sc-gsFSXq hbDqXe"
       >
         This panel can contain nodes
       </div>
     </div>
     <div
       aria-labelledby="react-tabs-2"
-      class="sc-kAyceB SoTBh"
+      class="sc-iGgWBj hQEPYA"
       id="react-tabs-3"
       role="tabpanel"
     />

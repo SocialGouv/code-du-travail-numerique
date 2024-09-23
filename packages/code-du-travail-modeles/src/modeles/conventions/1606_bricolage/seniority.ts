@@ -3,16 +3,16 @@ import type {
   Motif,
   RequiredSeniorityResult,
   SeniorityRequiredProps,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import { SeniorityDefault } from "../../common/seniority";
 
-export class Seniority1606 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC1606> {
+export class Seniority1606 extends SeniorityDefault<SupportedCc.IDCC1606> {
   computeRequiredSeniority({
     dateEntree,
     dateSortie,
     absencePeriods = [],
-  }: SeniorityRequiredProps): RequiredSeniorityResult {
+  }: SeniorityRequiredProps<SupportedCc.default>): RequiredSeniorityResult {
     return this.compute(dateEntree, dateSortie, absencePeriods);
   }
 

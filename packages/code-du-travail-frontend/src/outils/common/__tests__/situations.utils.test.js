@@ -1,4 +1,5 @@
 import { primePrecariteData as data } from "@socialgouv/modeles-social";
+import { SupportedTypes } from "@socialgouv/modeles-social";
 
 import {
   filterSituations,
@@ -11,6 +12,7 @@ import {
   recapSituation,
   skipInformations,
   validateUnsupportedAgreement,
+  detectNoAgreementInEnterprise,
 } from "../situations.utils";
 
 const criteriaOrder = ["bar", "foo", "baz", "yolo"];
@@ -40,32 +42,36 @@ const ccList = [
   },
 ];
 
-jest.mock("@socialgouv/modeles-social", () => ({
-  primePrecariteData: [
-    { criteria: { bar: "baz", foo: "1| foo" }, idcc: 10 },
-    { criteria: { bar: "bar", foo: "1| foo" }, idcc: 10 },
-    { criteria: { bar: "baz", foo: "2| baz" }, idcc: 10 },
-    { criteria: { bar: "bar", foo: "2| baz" }, idcc: 10 },
-    {
-      allowBonus: false,
-      criteria: { foo: "3| bar" },
-      endMessage: "nope",
-      hasConventionalProvision: true,
-      idcc: 20,
-    },
-    {
-      allowBonus: true,
-      criteria: { foo: "4| baz" },
-      hasConventionalProvision: true,
-      idcc: 20,
-    },
-    {
-      criteria: {},
-      hasConventionalProvision: null,
-      idcc: 30,
-    },
-  ],
-}));
+jest.mock("@socialgouv/modeles-social", () => {
+  const original = jest.requireActual("@socialgouv/modeles-social");
+  return {
+    ...original,
+    primePrecariteData: [
+      { criteria: { bar: "baz", foo: "1| foo" }, idcc: 10 },
+      { criteria: { bar: "bar", foo: "1| foo" }, idcc: 10 },
+      { criteria: { bar: "baz", foo: "2| baz" }, idcc: 10 },
+      { criteria: { bar: "bar", foo: "2| baz" }, idcc: 10 },
+      {
+        allowBonus: false,
+        criteria: { foo: "3| bar" },
+        endMessage: "nope",
+        hasConventionalProvision: true,
+        idcc: 20,
+      },
+      {
+        allowBonus: true,
+        criteria: { foo: "4| baz" },
+        hasConventionalProvision: true,
+        idcc: 20,
+      },
+      {
+        criteria: {},
+        hasConventionalProvision: null,
+        idcc: 30,
+      },
+    ],
+  };
+});
 
 describe("situations", () => {
   describe("getInitialSituations", () => {
@@ -83,13 +89,18 @@ describe("situations", () => {
     it("should return all situations", () => {
       expect(filterSituations(data).length).toEqual(data.length);
     });
-    it("should return no situation", () => {
-      expect(filterSituations(data, { foo: "no" }).length).toBe(0);
+    it("should return no criteria case", () => {
+      expect(filterSituations(data, { foo: "no" }).length).toBe(1);
     });
     it("should render only situation that match foo", () => {
       expect(filterSituations(data, { foo: "1| foo" })).toEqual([
         { criteria: { bar: "baz", foo: "1| foo" }, idcc: 10 },
         { criteria: { bar: "bar", foo: "1| foo" }, idcc: 10 },
+        {
+          criteria: {},
+          hasConventionalProvision: null,
+          idcc: 30,
+        },
       ]);
     });
   });
@@ -204,33 +215,81 @@ describe("situations", () => {
         undefined
       );
       expect(supportedCCResult.find((item) => item.idcc === 30)).toStrictEqual({
-        fullySupported: true,
+        fullySupported: SupportedTypes.FULLY_SUPPORTED,
         idcc: 30,
         withoutLegal: false,
       });
       expect(supportedCCResult.find((item) => item.idcc === 20)).toStrictEqual({
-        fullySupported: true,
+        fullySupported: SupportedTypes.FULLY_SUPPORTED,
         withoutLegal: false,
         idcc: 20,
       });
     });
   });
   describe("validateUnsupportedAgreement", () => {
-    const validate = validateUnsupportedAgreement(ccList);
-
     it("should return no error if no agreement", () => {
-      expect(validate({})).toStrictEqual({});
+      expect(validateUnsupportedAgreement(ccList, {})).toStrictEqual({});
     });
 
     it("should return no error if agreement is supported", () => {
-      expect(validate({ ccn: { selected: { num: 20 } } })).toStrictEqual({});
+      expect(
+        validateUnsupportedAgreement(ccList, { selected: { num: 20 } })
+      ).toStrictEqual({});
     });
 
     it("should return one error if agreement is not supported", () => {
       expect(
-        validate({ ccn: { selected: { num: "unsupported" } } })
+        validateUnsupportedAgreement(ccList, {
+          selected: { num: "unsupported" },
+        })
       ).toStrictEqual({
         agreementMissing: true,
+      });
+    });
+  });
+
+  describe("detectNoAgreementInEnterprise", () => {
+    it("should return an empty object when ccn is undefined", () => {
+      const result = detectNoAgreementInEnterprise(undefined);
+      expect(result).toEqual({});
+    });
+
+    it("should return an empty object when ccn is not of type 'enterprise'", () => {
+      const ccn = {
+        route: "other",
+        selected: true,
+      };
+      const result = detectNoAgreementInEnterprise(ccn);
+      expect(result).toEqual({});
+    });
+
+    it("should return an empty object when ccn has other properties in addition to 'route' and 'selected'", () => {
+      const ccn = {
+        route: "enterprise",
+        selected: true,
+        otherProperty: "value",
+      };
+      const result = detectNoAgreementInEnterprise(ccn);
+      expect(result).toEqual({});
+    });
+
+    it("should return an empty object when ccn is selected", () => {
+      const ccn = {
+        route: "enterprise",
+        selected: true,
+      };
+      const result = detectNoAgreementInEnterprise(ccn);
+      expect(result).toEqual({});
+    });
+
+    it("should return an object with 'noAgreementSelected' set to true when ccn is not selected", () => {
+      const ccn = {
+        route: "enterprise",
+        selected: false,
+      };
+      const result = detectNoAgreementInEnterprise(ccn);
+      expect(result).toEqual({
+        noAgreementSelected: true,
       });
     });
   });

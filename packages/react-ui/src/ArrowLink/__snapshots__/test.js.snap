@@ -3,13 +3,13 @@
 exports[`<ArrowLink /> renders an arrow on the left 1`] = `
 <div>
   <a
-    class="sc-aXZVg yBGrC"
+    class="sc-aXZVg izdwOQ"
   >
-    <p
+    <span
       class="sc-gEvEer bmpmGx"
     >
       Lorem Ipsum
-    </p>
+    </span>
     <svg
       aria-hidden="true"
       class="sc-eqUAAy cNwWgy"
@@ -29,13 +29,13 @@ exports[`<ArrowLink /> renders an arrow on the left 1`] = `
 exports[`<ArrowLink /> renders an arrow on the right 1`] = `
 <div>
   <a
-    class="sc-aXZVg yBGrC"
+    class="sc-aXZVg izdwOQ"
   >
-    <p
+    <span
       class="sc-gEvEer bmpmGx"
     >
       Lorem Ipsum
-    </p>
+    </span>
     <svg
       aria-hidden="true"
       class="sc-eqUAAy cNwWgy"

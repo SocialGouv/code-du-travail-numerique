@@ -1,8 +1,8 @@
 import { render, RenderResult } from "@testing-library/react";
 import { UserAction } from "../../../common";
 import React from "react";
-import { CalculateurIndemnite } from "../../../../src/outils";
-import { ui } from "./ui";
+import { CalculateurIndemniteLicenciement } from "../../../../src/outils";
+import { ui } from "../../CommonIndemniteDepart/__tests__/ui";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -24,7 +24,11 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
     let userAction: UserAction;
     beforeEach(() => {
       rendering = render(
-        <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
+        <CalculateurIndemniteLicenciement
+          icon={""}
+          title={""}
+          displayTitle={""}
+        />
       );
       userAction = new UserAction();
       userAction
@@ -71,6 +75,18 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       expect(
         rendering.queryAllByText("Veuillez saisir cette date")
       ).toHaveLength(3);
+
+      userAction.setInput(ui.seniority.startDate.get(), "01/01/0020");
+
+      expect(
+        rendering.queryByText("La date de début de contrat est invalide")
+      ).toBeInTheDocument();
+
+      userAction.setInput(ui.seniority.startDate.get(), "01/01/272024");
+
+      expect(
+        rendering.queryByText("La date de début de contrat est invalide")
+      ).toBeInTheDocument();
 
       // validation de l'erreur quand cela fait plus de 18 mois que l'on a quitté l'entreprise
       userAction
@@ -170,7 +186,11 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
     let userAction: UserAction;
     beforeEach(() => {
       rendering = render(
-        <CalculateurIndemnite icon={""} title={""} displayTitle={""} />
+        <CalculateurIndemniteLicenciement
+          icon={""}
+          title={""}
+          displayTitle={""}
+        />
       );
       userAction = new UserAction();
       userAction

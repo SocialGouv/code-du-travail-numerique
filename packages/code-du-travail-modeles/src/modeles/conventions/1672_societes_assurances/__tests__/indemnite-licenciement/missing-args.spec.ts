@@ -11,7 +11,7 @@ const engine = new IndemniteLicenciementPublicodes(
 
 describe("Validation de l'ordre des questions : CC 1672", () => {
   describe("Affiche les questions", () => {
-    // eslint-disable-next-line @typescript-eslint/init-declarations
+     
     let result: PublicodesData<PublicodesIndemniteLicenciementResult>;
 
     beforeEach(() => {
@@ -87,6 +87,9 @@ describe("Validation de l'ordre des questions : CC 1672", () => {
             expect(result.missingArgs).toHaveNextMissingRule(
               "contrat salarié . convention collective . sociétés d'assurances . age"
             );
+            expect(result.missingArgs).toHaveNextMissingQuestion(
+              "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
+            );
           });
         });
 
@@ -131,6 +134,9 @@ describe("Validation de l'ordre des questions : CC 1672", () => {
         it("doit demander son age", () => {
           expect(result.missingArgs).toHaveNextMissingRule(
             "contrat salarié . convention collective . sociétés d'assurances . age"
+          );
+          expect(result.missingArgs).toHaveNextMissingQuestion(
+            "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
           );
         });
 

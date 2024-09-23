@@ -48,16 +48,15 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
 
   const [situation] = possibleSituations;
 
-  const refs: OldReference[] = [
-    {
-      ref: situation.ref,
-      refUrl: situation.refUrl,
-    },
-    {
-      ref: situation.ref2 ?? null,
-      refUrl: situation.ref2Url ?? null,
-    },
-  ];
+  const refs: OldReference[] =
+    situation.ref && situation.refUrl
+      ? [
+          {
+            ref: situation.ref,
+            refUrl: situation.refUrl,
+          },
+        ]
+      : situation.refs ?? [];
   if (!situation.disableLegal) {
     refs.unshift(refLegal);
   }
@@ -103,6 +102,7 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
         <NoticeExample
           simulator={Simulator.PREAVIS_DEMISSION}
           period={situation.answer}
+          idccNumber={ccn?.selected?.num}
           note={
             <NoticeNote
               numberOfElements={calculateNumberOfElements(
@@ -129,7 +129,7 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
       <ShowDetails>
         <SectionTitle>Éléments saisis</SectionTitle>
         {recapSituation({
-          "Convention collective": `${ccn?.selected?.title} (${idcc})`,
+          "Convention collective": `${ccn?.selected?.shortTitle} (${idcc})`,
           ...situation.criteria,
         })}
         <PubliReferences references={formatRefs(refs)} />

@@ -55,7 +55,6 @@ const StyledSelect = styled.select`
   width: 100%;
   height: ${INPUT_HEIGHT};
   padding: 0 ${spacings.medium} 0;
-  padding-right: 5rem;
   color: ${({ theme }) => theme.paragraph};
   font-size: ${fonts.sizes.default};
   font-family: "Open Sans", sans-serif;

@@ -6,23 +6,20 @@ import styled from "styled-components";
 
 import { Enterprise } from "../../conventions/Search/api/enterprises.service";
 import { Title } from "../Components/SimulatorDecorator/Components";
-import {
-  NavProvider,
-  ScreenType,
-  SearchParams,
-  useNavContext,
-} from "./common/NavContext";
+import { NavProvider, ScreenType, useNavContext } from "./common/NavContext";
 import { TrackingProvider, useTrackingContext } from "./common/TrackingContext";
 import Steps from "./steps";
 import handleTrackEvent from "./tracking/HandleTrackEvent";
 import { OnUserAction, UserAction } from "./types";
 import { MatomoSearchAgreementCategory } from "../../lib";
+import { SearchParams } from "../common/Agreement/EnterpriseSearch/EntrepriseSearchInput/SearchEnterpriseInput";
 
 interface Props {
   icon: string;
   title: string;
   displayTitle: string;
   widgetMode?: boolean;
+  noRedirect?: string;
 }
 
 function AgreementSearchTool({
@@ -30,6 +27,7 @@ function AgreementSearchTool({
   title,
   displayTitle,
   widgetMode,
+  noRedirect,
 }: Props): JSX.Element {
   const router = useRouter();
 
@@ -86,7 +84,9 @@ function AgreementSearchTool({
 
     setScreen(null);
     setEnterprise(null);
-    setSearchParams({ address: "", query: "" });
+    setSearchParams({
+      query: "",
+    });
   }
 
   function handleEnterpriseSelection(
@@ -98,9 +98,12 @@ function AgreementSearchTool({
     if (widgetMode) {
       setScreen(ScreenType.agreementSelection);
     } else {
-      router.push(
-        `/${SOURCES.TOOLS}/convention-collective/${ScreenType.agreementSelection}`
-      );
+      router.push({
+        pathname: `/${SOURCES.TOOLS}/convention-collective/${ScreenType.agreementSelection}`,
+        query: {
+          noRedirect,
+        },
+      });
     }
   }
 
@@ -169,6 +172,7 @@ function AgreementSearchTool({
           onBackClick={clearSelection}
           onUserAction={onUserAction}
           isWidgetMode={widgetMode}
+          noRedirect={noRedirect === "true"}
         />
       );
       break;
@@ -186,7 +190,6 @@ function AgreementSearchTool({
 const AgreementSearchUI = (props: Props): JSX.Element => {
   const [enterprise, setEnterprise] = useState<Enterprise | null>(null);
   const [searchParams, setSearchParams] = useState<SearchParams>({
-    address: "",
     query: "",
   });
 

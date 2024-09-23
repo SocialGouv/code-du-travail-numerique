@@ -3,11 +3,11 @@
 exports[`<ReferenceList /> should render 1`] = `
 <div>
   <ul
-    class="sc-cfxfcM sc-lnPyaJ kMmTaI iUscuO"
+    class="sc-cfxfcM sc-ktPPKK kMmTaI oLIMV"
   >
     <li>
       <a
-        class="sc-bmzYkS hFAanY sc-iXzfSG dyqFrk"
+        class="sc-bmzYkS eyKmWS sc-fMMURN hDRMbe"
         href="/code-du-travail/l2323-4"
       >
         <svg
@@ -22,17 +22,17 @@ exports[`<ReferenceList /> should render 1`] = `
             fill="currentColor"
           />
         </svg>
-        <p
+        <span
           class="sc-iHGNWf hQSWKy"
         >
           Article L2323-4 du Code du travail
-        </p>
+        </span>
       </a>
     </li>
     <li>
       <a
         aria-label="Article yyy du JO (Nouvelle fenêtre)"
-        class="sc-bmzYkS hFAanY sc-iXzfSG dyqFrk no-after"
+        class="sc-bmzYkS eyKmWS sc-fMMURN hDRMbe no-after"
         href="https://article.jo/yyy"
         target="_blank"
       >
@@ -48,17 +48,17 @@ exports[`<ReferenceList /> should render 1`] = `
             fill="currentColor"
           />
         </svg>
-        <p
+        <span
           class="sc-iHGNWf hQSWKy"
         >
           Article yyy du JO
-        </p>
+        </span>
       </a>
     </li>
     <li>
       <a
         aria-label="CCN metallurgie (Nouvelle fenêtre)"
-        class="sc-bmzYkS hFAanY sc-iXzfSG dyqFrk no-after"
+        class="sc-bmzYkS eyKmWS sc-fMMURN hDRMbe no-after"
         href="https://legifrance/ccn-metallurgie"
         target="_blank"
       >
@@ -74,16 +74,16 @@ exports[`<ReferenceList /> should render 1`] = `
             fill="currentColor"
           />
         </svg>
-        <p
+        <span
           class="sc-iHGNWf hQSWKy"
         >
           CCN metallurgie
-        </p>
+        </span>
       </a>
     </li>
     <li>
       <a
-        class="sc-bmzYkS hFAanY sc-iXzfSG dyqFrk"
+        class="sc-bmzYkS eyKmWS sc-fMMURN hDRMbe"
         href="/convention-collective/123-automobile"
       >
         <svg
@@ -98,16 +98,16 @@ exports[`<ReferenceList /> should render 1`] = `
             fill="currentColor"
           />
         </svg>
-        <p
+        <span
           class="sc-iHGNWf hQSWKy"
         >
           Convention collective: automobile
-        </p>
+        </span>
       </a>
     </li>
     <li>
       <a
-        class="sc-bmzYkS hFAanY sc-iXzfSG dyqFrk"
+        class="sc-bmzYkS eyKmWS sc-fMMURN hDRMbe"
         href="/code-du-travail/l1234-3"
       >
         <svg
@@ -122,11 +122,11 @@ exports[`<ReferenceList /> should render 1`] = `
             fill="currentColor"
           />
         </svg>
-        <p
+        <span
           class="sc-iHGNWf hQSWKy"
         >
           Article L1234-3 du Code du travail
-        </p>
+        </span>
       </a>
     </li>
   </ul>

@@ -3,13 +3,12 @@ import { addDays, differenceInMonths } from "date-fns";
 import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
   Absence,
-  ISeniority,
   Motif,
   RequiredSeniorityResult,
   SeniorityProps,
   SeniorityRequiredProps,
   SeniorityResult,
-  SupportedCcIndemniteLicenciement,
+  SupportedCc,
 } from "../../common";
 import {
   accumulateAbsenceByYear,
@@ -17,6 +16,7 @@ import {
   splitBySeniorityCalendarYear,
 } from "../../common";
 import { MotifKeys } from "../../common/motif-keys";
+import { SeniorityDefault } from "../../common/seniority";
 
 const getTotalAbsenceNonPro = (
   dEntree: Date,
@@ -31,18 +31,19 @@ const getTotalAbsenceNonPro = (
   const absencesBySeniorityYear = accumulateAbsenceByYear(absences, years);
 
   return absencesBySeniorityYear.reduce((total, item) => {
-    return total + Math.max(item.totalAbsenceInMonth - 6, 0);
+    if (item.totalAbsenceInMonth <= 6) {
+      return total;
+    }
+    return total + item.totalAbsenceInMonth;
   }, 0);
 };
 
-export class Seniority176
-  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC0176>
-{
+export class Seniority176 extends SeniorityDefault<SupportedCc.IDCC0176> {
   computeSeniority({
     dateEntree,
     dateSortie,
     absencePeriods = [],
-  }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC0176>): SeniorityResult {
+  }: SeniorityProps<SupportedCc.IDCC0176>): SeniorityResult {
     return this.compute(dateEntree, dateSortie, absencePeriods);
   }
 
@@ -50,7 +51,7 @@ export class Seniority176
     dateEntree,
     dateNotification,
     absencePeriods = [],
-  }: SeniorityRequiredProps): RequiredSeniorityResult {
+  }: SeniorityRequiredProps<SupportedCc.default>): RequiredSeniorityResult {
     return this.compute(dateEntree, dateNotification, absencePeriods);
   }
 
@@ -66,7 +67,7 @@ export class Seniority176
     });
   }
 
-  private compute(
+  protected compute(
     from: string,
     to: string,
     absences: Absence[]

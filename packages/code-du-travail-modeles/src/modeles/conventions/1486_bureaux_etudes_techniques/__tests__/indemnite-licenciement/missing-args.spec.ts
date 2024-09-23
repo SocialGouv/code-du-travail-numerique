@@ -11,7 +11,7 @@ const engine = new IndemniteLicenciementPublicodes(
 
 describe("Validation de l'ordre des questions : CC 1486", () => {
   describe("Affiche les questions", () => {
-    // eslint-disable-next-line @typescript-eslint/init-declarations
+     
     let result: PublicodesData<PublicodesIndemniteLicenciementResult>;
 
     beforeEach(() => {

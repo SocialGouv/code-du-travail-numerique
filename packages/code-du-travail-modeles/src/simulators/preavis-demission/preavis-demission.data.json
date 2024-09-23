@@ -173,10 +173,16 @@
       "answer": "2 semaines",
       "answer2": null,
       "answer3": "14",
-      "ref": "Annexe I, chapitre Ier, article 5",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849372&cidTexte=KALITEXT000005678895&dateTexte=29990101&categorieLien=id",
-      "ref2": "Accord du 3 février 2022, article 3",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000045953114#KALIARTI000045953114"
+      "refs": [
+        {
+          "ref": "Annexe I, chapitre Ier, article 5",
+          "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849372&cidTexte=KALITEXT000005678895&dateTexte=29990101&categorieLien=id"
+        },
+        {
+          "ref": "Accord du 3 février 2022, article 3",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000045953114#KALIARTI000045953114"
+        }
+      ]
     },
     {
       "criteria": {
@@ -220,288 +226,6 @@
       "answer3": "60",
       "ref": "Annexe III, article 17",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849262&cidTexte=KALITEXT000005678889&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "75| Autres cadres"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "64| Biologistes",
-        "ancienneté": "45| Plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "64| Biologistes",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "62| Cadres administratifs et de gestion",
-        "coefficient": "26| 715 et supérieur",
-        "ancienneté": "45| Plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "62| Cadres administratifs et de gestion",
-        "coefficient": "25| Inférieur à 715",
-        "ancienneté": "45| Plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "62| Cadres administratifs et de gestion",
-        "coefficient": "26| 715 et supérieur",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "62| Cadres administratifs et de gestion",
-        "coefficient": "25| Inférieur à 715",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "73| Directeurs",
-        "ancienneté": "45| Plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "73| Directeurs",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "74| Directeurs généraux",
-        "ancienneté": "45| Plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "74| Directeurs généraux",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "69| Directeurs-adjoints",
-        "ancienneté": "45| Plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "69| Directeurs-adjoints",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "67| Gestionnaires",
-        "ancienneté": "45| Plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "67| Gestionnaires",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "66| Médecins",
-        "ancienneté": "45| Plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "66| Médecins",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "38| Non-cadres"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "65| Pharmaciens",
-        "ancienneté": "45| Plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "65| Pharmaciens",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 29,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 15.02.2.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {
@@ -633,11 +357,11 @@
       "type": "préavis de Démission",
       "idcc": 176,
       "typeRupture": null,
-      "answer": "1 mois",
+      "answer": "2 mois",
       "answer2": null,
-      "answer3": "30",
-      "ref": "Article 32, 2°",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
+      "answer3": "60",
+      "ref": "Article 35, 2°",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109"
     },
     {
       "criteria": {
@@ -650,8 +374,8 @@
       "answer": "2 mois",
       "answer2": null,
       "answer3": "60",
-      "ref": "Article 32, 2°",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 35, 2°",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109"
     },
     {
       "criteria": {
@@ -664,8 +388,8 @@
       "answer": "3 mois",
       "answer2": null,
       "answer3": "90",
-      "ref": "Article 32, 2°",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 35, 2°",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109"
     },
     {
       "criteria": {
@@ -678,8 +402,8 @@
       "answer": "2 mois",
       "answer2": null,
       "answer3": "60",
-      "ref": "Article 32, 2°",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 35, 2°",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109"
     },
     {
       "criteria": {
@@ -689,11 +413,11 @@
       "type": "préavis de Démission",
       "idcc": 176,
       "typeRupture": null,
-      "answer": "3 mois (si les salariés bénéficient pas des dispositions de l'article 4 de la convention collective nationale de retraite et de prévoyance des cadres du 14/3/1947 )",
+      "answer": "3 mois",
       "answer2": null,
       "answer3": "90",
-      "ref": "Article 32, 2°",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 35, 2°",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109"
     },
     {
       "criteria": {
@@ -703,11 +427,11 @@
       "type": "préavis de Démission",
       "idcc": 176,
       "typeRupture": null,
-      "answer": "4 mois (si les salariés bénéficient pas des dispositions de l'article 4 de la convention collective nationale de retraite et de prévoyance des cadres du 14/3/1947 )",
+      "answer": "4 mois",
       "answer2": null,
       "answer3": "120",
-      "ref": "Article 32, 2°",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
+      "ref": "Article 35, 2°",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109"
     },
     {
       "criteria": {
@@ -817,144 +541,6 @@
     },
     {
       "criteria": {
-        "catégorie professionnelle": "75| Autres cadres"
-      },
-      "type": "préavis de Démission",
-      "idcc": 413,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
-      "answer3": "60",
-      "ref": "Article 9, de l'annexe 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "71| Directeurs d'établissement",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 413,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
-      "answer3": "90",
-      "ref": "Article 9, de l'annexe 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "71| Directeurs d'établissement",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 413,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
-      "answer3": "60",
-      "ref": "Article 9, de l'annexe 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "72| Directeurs de centre de formation en travail social",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 413,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
-      "answer3": "90",
-      "ref": "Article 9, de l'annexe 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "72| Directeurs de centre de formation en travail social",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 413,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
-      "answer3": "60",
-      "ref": "Article 9, de l'annexe 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "70| Directeurs de service",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 413,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
-      "answer3": "90",
-      "ref": "Article 9, de l'annexe 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "70| Directeurs de service",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 413,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
-      "answer3": "60",
-      "ref": "Article 9, de l'annexe 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "74| Directeurs généraux",
-        "ancienneté": "43| Plus de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 413,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
-      "answer3": "90",
-      "ref": "Article 9, de l'annexe 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "74| Directeurs généraux",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 413,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
-      "answer3": "60",
-      "ref": "Article 9, de l'annexe 6",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "catégorie professionnelle": "38| Non-cadres"
-      },
-      "type": "préavis de Démission",
-      "idcc": 413,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
-      "answer3": "30",
-      "ref": "Article 16",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=6B7F66290E5A27E516CA3A19F104D2C7.tplgfr24s_3?idArticle=KALIARTI000005863125&cidTexte=KALITEXT000022192697&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
         "catégorie professionnelle": "48| Cadres"
       },
       "type": "préavis de Démission",
@@ -991,60 +577,6 @@
       "answer3": "60",
       "ref": "Article 35",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026802012&cidTexte=KALITEXT000005673619&dateTexte=20120228"
-    },
-    {
-      "criteria": {
-        "groupe": "1| I",
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 650,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=2FEC0821CB0BEF0711D0E80CBDC0EAD7.tplgfr33s_1?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "groupe": "1| I",
-        "ancienneté": "42| 2 ans ou plus"
-      },
-      "type": "préavis de Démission",
-      "idcc": 650,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=2FEC0821CB0BEF0711D0E80CBDC0EAD7.tplgfr33s_1?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "groupe": "4| II"
-      },
-      "type": "préavis de Démission",
-      "idcc": 650,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=2FEC0821CB0BEF0711D0E80CBDC0EAD7.tplgfr33s_1?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "groupe": "5| III"
-      },
-      "type": "préavis de Démission",
-      "idcc": 650,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=2FEC0821CB0BEF0711D0E80CBDC0EAD7.tplgfr33s_1?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {
@@ -3588,10 +3120,16 @@
       "answer": null,
       "answer2": null,
       "answer3": "8",
-      "ref": "Art. L. 423-26 du Code de l'action sociale et des familles",
-      "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054",
-      "ref2": "Art. 120 de la convention collective",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318",
+      "refs": [
+        {
+          "ref": "Art. L. 423-26 du Code de l’action sociale et des familles",
+          "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054"
+        },
+        {
+          "ref": "Art. 120 de la convention collective",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318"
+        }
+      ],
       "note": "Il s’agit de la durée la plus favorable entre celle prévue par le Code de l’action sociale et des familles et celle prévue par la convention collective.",
       "disableLegal": true
     },
@@ -3606,10 +3144,16 @@
       "answer": "15 jours calendaires",
       "answer2": null,
       "answer3": "15",
-      "ref": "Art. L. 423-26 du Code de l'action sociale et des familles",
-      "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054",
-      "ref2": "Art. 120 de la convention collective",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318",
+      "refs": [
+        {
+          "ref": "Art. L. 423-26 du Code de l’action sociale et des familles",
+          "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054"
+        },
+        {
+          "ref": "Art. 120 de la convention collective",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318"
+        }
+      ],
       "disableLegal": true
     },
     {
@@ -3623,10 +3167,16 @@
       "answer": "1 mois",
       "answer2": null,
       "answer3": "30",
-      "ref": "Art. L. 423-26 du Code de l'action sociale et des familles",
-      "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054",
-      "ref2": "Art. 120 de la convention collective",
-      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318",
+      "refs": [
+        {
+          "ref": "Art. L. 423-26 du Code de l’action sociale et des familles",
+          "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054"
+        },
+        {
+          "ref": "Art. 120 de la convention collective",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318"
+        }
+      ],
       "disableLegal": true
     },
     {
@@ -3855,32 +3405,6 @@
       "answer3": "60",
       "ref": "Article 45",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801971&cidTexte=KALITEXT000005658770&dateTexte=20191017"
-    },
-    {
-      "criteria": {
-        "ancienneté": "38| Moins de 2 ans"
-      },
-      "type": "préavis de Démission",
-      "idcc": 2420,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 7.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=769BBFA5FB460F19FA8D80BC0ADF3AA7.tplgfr25s_1?idArticle=KALIARTI000017941893&cidTexte=KALITEXT000017941844&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "ancienneté": "42| 2 ans ou plus"
-      },
-      "type": "préavis de Démission",
-      "idcc": 2420,
-      "typeRupture": null,
-      "answer": "3 mois",
-      "answer2": null,
-      "answer3": "90",
-      "ref": "Article 7.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=769BBFA5FB460F19FA8D80BC0ADF3AA7.tplgfr25s_1?idArticle=KALIARTI000017941893&cidTexte=KALITEXT000017941844&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {
@@ -4302,6 +3826,98 @@
       "answer3": "60",
       "ref": "Article 2 de la section 1 du Chapitre 4 de la Partie II de la convention collective",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=3429E84F009E9522894D791FC4F0085E.tplgfr25s_1?idSectionTA=KALISCTA000027029046&cidTexte=KALITEXT000026943196&idConvention=KALICONT000027084096&dateTexte=29990101"
+    },
+    {
+      "criteria": {
+        "groupe": "1| A ou B"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3248,
+      "typeRupture": null,
+      "answer": "2 semaines",
+      "answer2": null,
+      "answer3": "14",
+      "refs": [
+        {
+          "ref": "Article 74.2.1",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525"
+        },
+        {
+          "ref": "Article 68",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224"
+        },
+        {
+          "ref": "Cour de cassation, civile, Chambre sociale, 31 mars 2021, 19-20.883, Inédit",
+          "refUrl": "https://www.legifrance.gouv.fr/juri/id/JURITEXT000043352346"
+        }
+      ],
+      "note": "Si la lettre de démission a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
+    },
+    {
+      "criteria": {
+        "groupe": "2| C"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3248,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "refs": [
+        {
+          "ref": "Article 74.2.1",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525"
+        },
+        {
+          "ref": "Article 68",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224"
+        },
+        {
+          "ref": "Cour de cassation, civile, Chambre sociale, 31 mars 2021, 19-20.883, Inédit",
+          "refUrl": "https://www.legifrance.gouv.fr/juri/id/JURITEXT000043352346"
+        }
+      ],
+      "note": "Si la lettre de démission a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
+    },
+    {
+      "criteria": {
+        "groupe": "3| D ou E"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3248,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "refs": [
+        {
+          "ref": "Article 74.2.1",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525"
+        },
+        {
+          "ref": "Article 68",
+          "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224"
+        },
+        {
+          "ref": "Cour de cassation, civile, Chambre sociale, 31 mars 2021, 19-20.883, Inédit",
+          "refUrl": "https://www.legifrance.gouv.fr/juri/id/JURITEXT000043352346"
+        }
+      ],
+      "note": "Si la lettre de démission a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
+    },
+    {
+      "criteria": {
+        "groupe": "4| F, G, H ou I"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3248,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 74.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525",
+      "note": "Si la lettre de démission a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024."
     }
   ]
 }

@@ -1,7 +1,10 @@
+/** @jest-environment node */
+
 import {
   getAllTools,
   getBySlugTools,
   getToolsByIds,
+  getToolsByIdsAndSlugs,
   getToolsBySlugs,
 } from "../service";
 
@@ -22,6 +25,10 @@ describe("Tools", () => {
 
   it("getBySlugTools", async () => {
     const result = await getBySlugTools("indemnite-licenciement");
+    expect(result).toMatchSnapshot();
+  });
+  it("getToolsByIdsAndSlugs", async () => {
+    const result = await getToolsByIdsAndSlugs();
     expect(result).toMatchSnapshot();
   });
 });

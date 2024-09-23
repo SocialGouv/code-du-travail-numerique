@@ -8,6 +8,8 @@ const SLUG_LETTERS = [
   "rupture-dun-contrat-dapprentissage-dun-commun-accord",
   "promesse-dembauche",
   "affichage-obligatoire-relatif-au-harcelement-sexuel",
+  "contrat-de-travail-a-duree-determinee-cdd",
+  "contrat-de-travail-a-duree-indeterminee",
 ];
 
 export const getTitle = (slug: string, title: string) => {

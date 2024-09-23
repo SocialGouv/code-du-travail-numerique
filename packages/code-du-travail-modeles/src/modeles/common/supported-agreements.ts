@@ -1,5 +1,5 @@
 /* eslint @typescript-eslint/naming-convention: 0 */
-export enum SupportedCcIndemniteLicenciement {
+export enum SupportedCc {
   IDCC0292 = "292",
   IDCC1505 = "1505",
   IDCC1516 = "1516",
@@ -11,7 +11,6 @@ export enum SupportedCcIndemniteLicenciement {
   IDCC1996 = "1996",
   IDCC3043 = "3043",
   IDCC1090 = "1090",
-  IDCC413 = "413",
   IDCC3127 = "3127",
   IDCC1351 = "1351",
   IDCC2941 = "2941",
@@ -24,7 +23,6 @@ export enum SupportedCcIndemniteLicenciement {
   IDCC0573 = "573",
   IDCC1596 = "1596",
   IDCC1702 = "1702",
-  IDCC0029 = "29",
   IDCC0044 = "44",
   IDCC1517 = "1517",
   IDCC2098 = "2098",
@@ -48,22 +46,32 @@ export enum SupportedCcIndemniteLicenciement {
   IDCC1740 = "1740",
   IDCC0176 = "176",
   IDCC2120 = "2120",
+  IDCC3248 = "3248",
   default = "default",
 }
 
-export const INDEMNITE_LICENCIEMENT_PRODUCTION_READY_CC: number[] = [
-  16, 29, 44, 413, 573, 650, 1090, 1351, 1486, 1501, 1518, 1527, 1596, 1597,
-  1979, 2216, 2264, 2941, 3043, 3127, 3239, 1517, 2098, 2511, 2609, 787, 843,
-  675, 1996, 1505, 1147, 1702, 1266, 1672, 275, 86, 2614, 2596, 1043, 1483,
-  1516, 1606, 2148, 1404, 292, 2120,
-];
-
-export const getSupportedAgreement = (
-  idcc: number
-): SupportedCcIndemniteLicenciement | null => {
-  for (const value of Object.values(SupportedCcIndemniteLicenciement)) {
+export const getSupportedAgreement = (idcc: number): SupportedCc | null => {
+  for (const value of Object.values(SupportedCc)) {
     if (value === idcc.toString()) {
-      return value as SupportedCcIndemniteLicenciement;
+      return value;
+    }
+  }
+  return null;
+};
+
+export enum SupportedAgreementHorsAni {
+  IDCC1043 = "1043",
+  IDCC1518 = "1518",
+  IDCC2511 = "2511",
+  IDCC2941 = "2941",
+}
+
+export const getSupportedAgreementHorsAni = (
+  idcc: number
+): SupportedAgreementHorsAni | null => {
+  for (const value of Object.values(SupportedAgreementHorsAni)) {
+    if (value === idcc.toString()) {
+      return value;
     }
   }
   return null;

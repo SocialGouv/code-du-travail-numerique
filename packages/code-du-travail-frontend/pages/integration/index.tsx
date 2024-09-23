@@ -4,7 +4,7 @@ import React from "react";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import CallToActionWidget from "../../src/common/tiles/CallToActionWidget";
-import { integrationData, IntegrationContainer } from "../../src/integration";
+import { integrationData } from "../../src/integration";
 
 const FindAnswerPage = (): JSX.Element => {
   const keys = Object.keys(integrationData);

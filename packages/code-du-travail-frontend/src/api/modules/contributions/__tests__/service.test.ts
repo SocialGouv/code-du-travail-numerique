@@ -1,19 +1,15 @@
+/** @jest-environment node */
+
 import {
-  getGenericContributions,
-  getBySlugsContributions,
+  getAllContributionsGroupByQuestion,
   getByIdsContributions,
-  getAllContributions,
+  getGenericContributionsGroupByThemes,
 } from "../service";
+import { getAllAgreements } from "../../agreements";
 
 describe("Contributions", () => {
   it("getGenericContributions", async () => {
-    const result = await getGenericContributions();
-    expect(result).toMatchSnapshot();
-  });
-  it("getBySlugsContributions", async () => {
-    const result = await getBySlugsContributions([
-      "les-conges-pour-evenements-familiaux",
-    ]);
+    const result = await getGenericContributionsGroupByThemes();
     expect(result).toMatchSnapshot();
   });
 
@@ -23,7 +19,8 @@ describe("Contributions", () => {
   });
 
   it("getAllContributions", async () => {
-    const result = await getAllContributions();
+    const agreements = await getAllAgreements();
+    const result = await getAllContributionsGroupByQuestion(agreements);
     expect(result).toMatchSnapshot();
   });
 });

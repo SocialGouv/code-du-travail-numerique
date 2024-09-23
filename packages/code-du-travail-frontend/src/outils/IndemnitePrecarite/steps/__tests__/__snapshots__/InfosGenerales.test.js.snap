@@ -4,49 +4,49 @@ exports[`<StepInfosGenerales /> should render 1`] = `
 <div>
   <form>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
+      class="sc-ejfMa-d ibZxvo sc-ktPPKK ejXCAU"
       data-testid="question-label"
     >
       <span
-        class="sc-ibQAlb iRaavs"
+        class="sc-iMTnTL kgzsrX"
       >
         Quel est le type du contrat de travail ?
         <span
-          class="sc-ibQAlb TTAtT"
+          class="sc-iMTnTL gvHveA"
         >
            (obligatoire)
         </span>
       </span>
     </legend>
     <div
-      class="sc-bDpDS cvgaoL"
+      class="sc-EgOXT hwZLfP"
     >
       <input
-        class="sc-bVHCgj drRyYL"
+        class="sc-eZYNyq dHHdZ"
         id="contractType-cdd"
         name="contractType"
         type="radio"
         value="CDD"
       />
       <label
-        class="sc-kzqdkY dcQpmU"
+        class="sc-iEXKAA fJPAEp"
         for="contractType-cdd"
       >
         Contrat à durée déterminée (CDD)
       </label>
     </div>
     <div
-      class="sc-bDpDS cvgaoL"
+      class="sc-EgOXT hwZLfP"
     >
       <input
-        class="sc-bVHCgj drRyYL"
+        class="sc-eZYNyq dHHdZ"
         id="contractType-ci"
         name="contractType"
         type="radio"
         value="CTT"
       />
       <label
-        class="sc-kzqdkY dcQpmU"
+        class="sc-iEXKAA fJPAEp"
         for="contractType-ci"
       >
         Contrat de travail temporaire (Contrat d’intérim)
@@ -65,79 +65,79 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
 <div>
   <form>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
+      class="sc-ejfMa-d ibZxvo sc-ktPPKK ejXCAU"
       data-testid="question-label"
     >
       <span
-        class="sc-ibQAlb iRaavs"
+        class="sc-iMTnTL kgzsrX"
       >
         Quel est le type du contrat de travail ?
         <span
-          class="sc-ibQAlb TTAtT"
+          class="sc-iMTnTL gvHveA"
         >
            (obligatoire)
         </span>
       </span>
     </legend>
     <div
-      class="sc-bDpDS cvgaoL"
+      class="sc-EgOXT hwZLfP"
     >
       <input
         checked=""
-        class="sc-bVHCgj drRyYL"
+        class="sc-eZYNyq dHHdZ"
         id="contractType-cdd"
         name="contractType"
         type="radio"
         value="CDD"
       />
       <label
-        class="sc-kzqdkY dcQpmU"
+        class="sc-iEXKAA fJPAEp"
         for="contractType-cdd"
       >
         Contrat à durée déterminée (CDD)
       </label>
     </div>
     <div
-      class="sc-bDpDS cvgaoL"
+      class="sc-EgOXT hwZLfP"
     >
       <input
-        class="sc-bVHCgj drRyYL"
+        class="sc-eZYNyq dHHdZ"
         id="contractType-ci"
         name="contractType"
         type="radio"
         value="CTT"
       />
       <label
-        class="sc-kzqdkY dcQpmU"
+        class="sc-iEXKAA fJPAEp"
         for="contractType-ci"
       >
         Contrat de travail temporaire (Contrat d’intérim)
       </label>
     </div>
     <div
-      class="sc-iapWAC huEEnQ"
+      class="sc-ePDLzJ eidZVY"
     >
       <legend
-        class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
+        class="sc-ejfMa-d ibZxvo sc-ktPPKK ejXCAU"
         data-testid="question-label"
         for="input-criteria.cddType"
       >
         <span
-          class="sc-ibQAlb iRaavs"
+          class="sc-iMTnTL kgzsrX"
         >
           Quel est le type de CDD ?
           <span
-            class="sc-ibQAlb TTAtT"
+            class="sc-iMTnTL gvHveA"
           >
              (obligatoire)
           </span>
         </span>
       </legend>
       <div
-        class="sc-dSIIpw gHcpgz sc-dExYaf jqKTZg"
+        class="sc-dlWCHZ ejmZlt sc-cVzyXs fHTQfe"
       >
         <select
-          class="sc-ktPPKK euGWnN"
+          class="sc-kWtpeL ejsegf"
           data-testid="criteria.cddType"
           id="input-criteria.cddType"
           name="criteria.cddType"
@@ -199,7 +199,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
         </select>
         <div
           aria-hidden="true"
-          class="sc-fMMURN fvlNzV"
+          class="sc-hHOBiw cYUewx"
         >
           <svg
             aria-hidden="true"
@@ -242,79 +242,79 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
 <div>
   <form>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
+      class="sc-ejfMa-d ibZxvo sc-ktPPKK ejXCAU"
       data-testid="question-label"
     >
       <span
-        class="sc-ibQAlb iRaavs"
+        class="sc-iMTnTL kgzsrX"
       >
         Quel est le type du contrat de travail ?
         <span
-          class="sc-ibQAlb TTAtT"
+          class="sc-iMTnTL gvHveA"
         >
            (obligatoire)
         </span>
       </span>
     </legend>
     <div
-      class="sc-bDpDS cvgaoL"
+      class="sc-EgOXT hwZLfP"
     >
       <input
         checked=""
-        class="sc-bVHCgj drRyYL"
+        class="sc-eZYNyq dHHdZ"
         id="contractType-cdd"
         name="contractType"
         type="radio"
         value="CDD"
       />
       <label
-        class="sc-kzqdkY dcQpmU"
+        class="sc-iEXKAA fJPAEp"
         for="contractType-cdd"
       >
         Contrat à durée déterminée (CDD)
       </label>
     </div>
     <div
-      class="sc-bDpDS cvgaoL"
+      class="sc-EgOXT hwZLfP"
     >
       <input
-        class="sc-bVHCgj drRyYL"
+        class="sc-eZYNyq dHHdZ"
         id="contractType-ci"
         name="contractType"
         type="radio"
         value="CTT"
       />
       <label
-        class="sc-kzqdkY dcQpmU"
+        class="sc-iEXKAA fJPAEp"
         for="contractType-ci"
       >
         Contrat de travail temporaire (Contrat d’intérim)
       </label>
     </div>
     <div
-      class="sc-iapWAC huEEnQ"
+      class="sc-ePDLzJ eidZVY"
     >
       <legend
-        class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
+        class="sc-ejfMa-d ibZxvo sc-ktPPKK ejXCAU"
         data-testid="question-label"
         for="input-criteria.cddType"
       >
         <span
-          class="sc-ibQAlb iRaavs"
+          class="sc-iMTnTL kgzsrX"
         >
           Quel est le type de CDD ?
           <span
-            class="sc-ibQAlb TTAtT"
+            class="sc-iMTnTL gvHveA"
           >
              (obligatoire)
           </span>
         </span>
       </legend>
       <div
-        class="sc-dSIIpw gHcpgz sc-dExYaf jqKTZg"
+        class="sc-dlWCHZ ejmZlt sc-cVzyXs fHTQfe"
       >
         <select
-          class="sc-ktPPKK euGWnN"
+          class="sc-kWtpeL ejsegf"
           data-testid="criteria.cddType"
           id="input-criteria.cddType"
           name="criteria.cddType"
@@ -376,7 +376,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
         </select>
         <div
           aria-hidden="true"
-          class="sc-fMMURN fvlNzV"
+          class="sc-hHOBiw cYUewx"
         >
           <svg
             aria-hidden="true"
@@ -419,79 +419,79 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
 <div>
   <form>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
+      class="sc-ejfMa-d ibZxvo sc-ktPPKK ejXCAU"
       data-testid="question-label"
     >
       <span
-        class="sc-ibQAlb iRaavs"
+        class="sc-iMTnTL kgzsrX"
       >
         Quel est le type du contrat de travail ?
         <span
-          class="sc-ibQAlb TTAtT"
+          class="sc-iMTnTL gvHveA"
         >
            (obligatoire)
         </span>
       </span>
     </legend>
     <div
-      class="sc-bDpDS cvgaoL"
+      class="sc-EgOXT hwZLfP"
     >
       <input
-        class="sc-bVHCgj drRyYL"
+        class="sc-eZYNyq dHHdZ"
         id="contractType-cdd"
         name="contractType"
         type="radio"
         value="CDD"
       />
       <label
-        class="sc-kzqdkY dcQpmU"
+        class="sc-iEXKAA fJPAEp"
         for="contractType-cdd"
       >
         Contrat à durée déterminée (CDD)
       </label>
     </div>
     <div
-      class="sc-bDpDS cvgaoL"
+      class="sc-EgOXT hwZLfP"
     >
       <input
         checked=""
-        class="sc-bVHCgj drRyYL"
+        class="sc-eZYNyq dHHdZ"
         id="contractType-ci"
         name="contractType"
         type="radio"
         value="CTT"
       />
       <label
-        class="sc-kzqdkY dcQpmU"
+        class="sc-iEXKAA fJPAEp"
         for="contractType-ci"
       >
         Contrat de travail temporaire (Contrat d’intérim)
       </label>
     </div>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
+      class="sc-ejfMa-d ibZxvo sc-ktPPKK ejXCAU"
       data-testid="question-label"
     >
       <span
-        class="sc-ibQAlb iRaavs"
+        class="sc-iMTnTL kgzsrX"
       >
         S’agit-il d’un contrat de mission-formation ?
         <span
-          class="sc-ibQAlb TTAtT"
+          class="sc-iMTnTL gvHveA"
         >
            (obligatoire)
         </span>
       </span>
     </legend>
     <div
-      class="sc-dxcDKg bVRwPN"
+      class="sc-dPZUQH lcbAQM"
       data-testid="cttFormation"
     >
       <div
-        class="sc-bDpDS cvgaoL"
+        class="sc-EgOXT hwZLfP"
       >
         <input
-          class="sc-bVHCgj drRyYL"
+          class="sc-eZYNyq dHHdZ"
           data-testid="cttFormation-oui"
           id="cttFormation-oui"
           name="cttFormation"
@@ -499,17 +499,17 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="true"
         />
         <label
-          class="sc-kzqdkY dcQpmU"
+          class="sc-iEXKAA fJPAEp"
           for="cttFormation-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-bDpDS cvgaoL"
+        class="sc-EgOXT hwZLfP"
       >
         <input
-          class="sc-bVHCgj drRyYL"
+          class="sc-eZYNyq dHHdZ"
           data-testid="cttFormation-non"
           id="cttFormation-non"
           name="cttFormation"
@@ -517,7 +517,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="false"
         />
         <label
-          class="sc-kzqdkY dcQpmU"
+          class="sc-iEXKAA fJPAEp"
           for="cttFormation-non"
         >
           Non
@@ -525,29 +525,29 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </div>
     </div>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
+      class="sc-ejfMa-d ibZxvo sc-ktPPKK ejXCAU"
       data-testid="question-label"
     >
       <span
-        class="sc-ibQAlb iRaavs"
+        class="sc-iMTnTL kgzsrX"
       >
         Le contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave du salarié, cas de force majeure ?
         <span
-          class="sc-ibQAlb TTAtT"
+          class="sc-iMTnTL gvHveA"
         >
            (obligatoire)
         </span>
       </span>
     </legend>
     <div
-      class="sc-dxcDKg bVRwPN"
+      class="sc-dPZUQH lcbAQM"
       data-testid="ruptureContratFauteGrave"
     >
       <div
-        class="sc-bDpDS cvgaoL"
+        class="sc-EgOXT hwZLfP"
       >
         <input
-          class="sc-bVHCgj drRyYL"
+          class="sc-eZYNyq dHHdZ"
           data-testid="ruptureContratFauteGrave-oui"
           id="ruptureContratFauteGrave-oui"
           name="ruptureContratFauteGrave"
@@ -555,17 +555,17 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="true"
         />
         <label
-          class="sc-kzqdkY dcQpmU"
+          class="sc-iEXKAA fJPAEp"
           for="ruptureContratFauteGrave-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-bDpDS cvgaoL"
+        class="sc-EgOXT hwZLfP"
       >
         <input
-          class="sc-bVHCgj drRyYL"
+          class="sc-eZYNyq dHHdZ"
           data-testid="ruptureContratFauteGrave-non"
           id="ruptureContratFauteGrave-non"
           name="ruptureContratFauteGrave"
@@ -573,7 +573,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="false"
         />
         <label
-          class="sc-kzqdkY dcQpmU"
+          class="sc-iEXKAA fJPAEp"
           for="ruptureContratFauteGrave-non"
         >
           Non
@@ -581,29 +581,29 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </div>
     </div>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
+      class="sc-ejfMa-d ibZxvo sc-ktPPKK ejXCAU"
       data-testid="question-label"
     >
       <span
-        class="sc-ibQAlb iRaavs"
+        class="sc-iMTnTL kgzsrX"
       >
         À la fin du contrat d'intérim, le salarié a-t-il été immédiatement embauché en CDI au sein de l'entreprise dans laquelle il effectuait sa mission ?
         <span
-          class="sc-ibQAlb TTAtT"
+          class="sc-iMTnTL gvHveA"
         >
            (obligatoire)
         </span>
       </span>
     </legend>
     <div
-      class="sc-dxcDKg bVRwPN"
+      class="sc-dPZUQH lcbAQM"
       data-testid="propositionCDIFinContrat"
     >
       <div
-        class="sc-bDpDS cvgaoL"
+        class="sc-EgOXT hwZLfP"
       >
         <input
-          class="sc-bVHCgj drRyYL"
+          class="sc-eZYNyq dHHdZ"
           data-testid="propositionCDIFinContrat-oui"
           id="propositionCDIFinContrat-oui"
           name="propositionCDIFinContrat"
@@ -611,17 +611,17 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="true"
         />
         <label
-          class="sc-kzqdkY dcQpmU"
+          class="sc-iEXKAA fJPAEp"
           for="propositionCDIFinContrat-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-bDpDS cvgaoL"
+        class="sc-EgOXT hwZLfP"
       >
         <input
-          class="sc-bVHCgj drRyYL"
+          class="sc-eZYNyq dHHdZ"
           data-testid="propositionCDIFinContrat-non"
           id="propositionCDIFinContrat-non"
           name="propositionCDIFinContrat"
@@ -629,7 +629,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="false"
         />
         <label
-          class="sc-kzqdkY dcQpmU"
+          class="sc-iEXKAA fJPAEp"
           for="propositionCDIFinContrat-non"
         >
           Non
@@ -637,29 +637,29 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </div>
     </div>
     <legend
-      class="sc-gdyeKB TWbCy sc-lnPyaJ hbIKxD"
+      class="sc-ejfMa-d ibZxvo sc-ktPPKK ejXCAU"
       data-testid="question-label"
     >
       <span
-        class="sc-ibQAlb iRaavs"
+        class="sc-iMTnTL kgzsrX"
       >
         Le salarié a-t-il refusé la mise en œuvre de la souplesse prévue dans le contrat d’intérim ?
         <span
-          class="sc-ibQAlb TTAtT"
+          class="sc-iMTnTL gvHveA"
         >
            (obligatoire)
         </span>
       </span>
     </legend>
     <div
-      class="sc-dxcDKg bVRwPN"
+      class="sc-dPZUQH lcbAQM"
       data-testid="refusSouplesse"
     >
       <div
-        class="sc-bDpDS cvgaoL"
+        class="sc-EgOXT hwZLfP"
       >
         <input
-          class="sc-bVHCgj drRyYL"
+          class="sc-eZYNyq dHHdZ"
           data-testid="refusSouplesse-oui"
           id="refusSouplesse-oui"
           name="refusSouplesse"
@@ -667,17 +667,17 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="true"
         />
         <label
-          class="sc-kzqdkY dcQpmU"
+          class="sc-iEXKAA fJPAEp"
           for="refusSouplesse-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-bDpDS cvgaoL"
+        class="sc-EgOXT hwZLfP"
       >
         <input
-          class="sc-bVHCgj drRyYL"
+          class="sc-eZYNyq dHHdZ"
           data-testid="refusSouplesse-non"
           id="refusSouplesse-non"
           name="refusSouplesse"
@@ -685,7 +685,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
           value="false"
         />
         <label
-          class="sc-kzqdkY dcQpmU"
+          class="sc-iEXKAA fJPAEp"
           for="refusSouplesse-non"
         >
           Non

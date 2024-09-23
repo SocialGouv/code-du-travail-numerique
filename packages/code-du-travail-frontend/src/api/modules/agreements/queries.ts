@@ -2,7 +2,15 @@ import { SOURCES } from "@socialgouv/cdtn-utils";
 
 export const getAllAgreementsWithContributions = () => {
   return {
-    _source: ["title", "shortTitle", "description", "url", "slug", "source"],
+    _source: [
+      "title",
+      "shortTitle",
+      "description",
+      "url",
+      "slug",
+      "source",
+      "num",
+    ],
     query: {
       bool: {
         filter: [
@@ -12,7 +20,7 @@ export const getAllAgreementsWithContributions = () => {
         ],
       },
     },
-    size: 200,
+    size: 100,
   };
 };
 
@@ -66,15 +74,32 @@ export function getAgreementsByIds(ids: string[]) {
   };
 }
 
-export const getAgreementBySlugBody = (slug: string) => {
+export const getAgreementBySlug = (slug: string) => {
   return {
+    _source: [
+      "title",
+      "shortTitle",
+      "description",
+      "url",
+      "slug",
+      "breadcrumbs",
+      "source",
+      "cdtnId",
+      "articlesByTheme",
+      "source",
+      "description",
+      "answers",
+      "contributions",
+      "metaDescription",
+      "num",
+      "date_publi",
+      "effectif",
+      "id",
+      "text"
+    ],
     query: {
       bool: {
-        filter: [
-          { term: { slug } },
-          { term: { source: SOURCES.CCN } },
-          { term: { isPublished: true } },
-        ],
+        filter: [{ term: { slug } }, { term: { source: SOURCES.CCN } }],
       },
     },
     size: 1,

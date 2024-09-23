@@ -112,7 +112,7 @@ describe("Vérification juridique pour la CC 1505", () => {
             "contrat salarié . ancienneté": seniority,
             "contrat salarié . convention collective": "'IDCC1505'",
             "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . départ à la retraite": "oui",
+            "contrat salarié . mise à la retraite": "non",
             "contrat salarié . travailleur handicapé": "non",
           });
           const result = engine.getNotifications();
@@ -135,7 +135,7 @@ describe("Vérification juridique pour la CC 1505", () => {
             "contrat salarié . ancienneté": seniority,
             "contrat salarié . convention collective": "'IDCC1505'",
             "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . départ à la retraite": "oui",
+            "contrat salarié . mise à la retraite": "non",
             "contrat salarié . travailleur handicapé": "non",
           });
           const result = engine.getNotifications();

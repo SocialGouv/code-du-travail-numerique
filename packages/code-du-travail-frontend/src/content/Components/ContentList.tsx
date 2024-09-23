@@ -1,17 +1,19 @@
 import { Grid, icons } from "@socialgouv/cdtn-ui";
-import { BlockDisplayMode } from "@socialgouv/cdtn-utils";
+import { EditorialContentBlockDisplayMode } from "@socialgouv/cdtn-types";
 
 import React from "react";
 import { ListLink } from "../../search/SearchResults/Results";
 import styled from "styled-components";
 
-export const ContentList = ({ block, key }) => {
+export const ContentList = ({ block, uniquKey }) => {
   const { blockDisplayMode, contents } = block;
   return (
     <>
       <ContentItemList
-        columns={blockDisplayMode === BlockDisplayMode.square ? 2 : 1}
-        square={blockDisplayMode === BlockDisplayMode.square}
+        columns={
+          blockDisplayMode === EditorialContentBlockDisplayMode.square ? 2 : 1
+        }
+        square={blockDisplayMode === EditorialContentBlockDisplayMode.square}
       >
         {contents?.map((item, ContentIndex) => (
           <ListLink
@@ -19,9 +21,11 @@ export const ContentList = ({ block, key }) => {
               ...item,
               icon: icons[item?.icon],
             }}
-            key={`${key}-${ContentIndex}`}
+            key={`${uniquKey}-${ContentIndex}`}
             disableAnalytics
-            centerTitle={blockDisplayMode === BlockDisplayMode.square}
+            centerTitle={
+              blockDisplayMode === EditorialContentBlockDisplayMode.square
+            }
           ></ListLink>
         ))}
       </ContentItemList>

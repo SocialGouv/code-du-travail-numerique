@@ -1,4 +1,5 @@
-import { Agreement, SOURCES } from "@socialgouv/cdtn-utils";
+import { SOURCES } from "@socialgouv/cdtn-utils";
+import { Agreement } from "../../../../outils/types";
 import {
   AlertWithIcon,
   Button,
@@ -12,22 +13,30 @@ import Link from "next/link";
 import React from "react";
 import Spinner from "react-svg-spinner";
 import styled from "styled-components";
-import { FetchReducerState } from "../components/Suggester";
+
 import { TrackingProps, UserAction } from "../../../ConventionCollective/types";
 import { Error } from "../../ErrorField";
 import { HelpModal } from "../components/Modal";
 
 type Props = {
-  state: FetchReducerState<Agreement[]>;
+  isLoading: boolean;
+  error?: any;
+  data?: Agreement[];
+  onUserAction: (action: UserAction) => void;
 } & TrackingProps;
 
-const AgreementNoResult = ({ onUserAction, state }: Props): JSX.Element => {
+const AgreementNoResult = ({
+  isLoading,
+  error,
+  data,
+  onUserAction,
+}: Props): JSX.Element => {
   function openModalHandler(openModal: () => void) {
     onUserAction(UserAction.OpenAgreementHelp);
     openModal();
   }
 
-  if (state.isLoading) {
+  if (isLoading) {
     return (
       <Section>
         <Spinner aria-hidden="true" />{" "}
@@ -35,14 +44,14 @@ const AgreementNoResult = ({ onUserAction, state }: Props): JSX.Element => {
       </Section>
     );
   }
-  if (state.error && state.isError) {
-    if (typeof state.error === "string") {
-      return <Error>{state.error}</Error>;
+  if (error) {
+    if (typeof error === "string") {
+      return <Error>{error}</Error>;
     }
-    return <Section> {state.error}</Section>;
+    return <Section> {error}</Section>;
   }
 
-  if (state.data && !state.data.length) {
+  if (data && !data.length) {
     return (
       <Section>
         <ScreenReaderOnly role="status">0 résultat</ScreenReaderOnly>

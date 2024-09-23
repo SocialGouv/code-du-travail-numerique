@@ -2,9 +2,10 @@ import { render } from "@testing-library/react";
 import React from "react";
 
 import { EmbeddedForm } from "../../../../../test/TestForm";
-import { Agreement } from "@socialgouv/cdtn-utils";
+import { Agreement } from "../../../../outils/types";
 import { AgreementSearch } from "../AgreementSearch";
 import type { Props } from "../AgreementSearch/AgreementSearch";
+import { SupportedTypes } from "@socialgouv/modeles-social";
 
 const callback: (agreement: Agreement | null) => void = () => {
   /* nothing to do */
@@ -55,7 +56,7 @@ const dataWithSelectedAgreementNotFullySupported: Props = {
   selectedAgreement,
   supportedAgreements: [
     {
-      fullySupported: false,
+      fullySupported: SupportedTypes.SOON_SUPPORTED,
       idcc: selectedAgreement.num,
     },
   ],
@@ -66,7 +67,7 @@ const dataWithSelectedAgreementSupported: Props = {
   selectedAgreement,
   supportedAgreements: [
     {
-      fullySupported: true,
+      fullySupported: SupportedTypes.FULLY_SUPPORTED,
       idcc: selectedAgreement.num,
     },
   ],
