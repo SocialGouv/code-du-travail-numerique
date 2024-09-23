@@ -3,7 +3,6 @@ import { PACKAGE_VERSION } from "../../config";
 import { headerFooterDisplayItem } from "@codegouvfr/react-dsfr/Display";
 import { BrandTop } from "./BrandTop";
 import { homeLinksProps } from "./common";
-import { css } from "../../../styled-system/css";
 
 export const Footer = () => {
   return (
@@ -147,20 +146,6 @@ export const Footer = () => {
         "legifrance.gouv.fr",
         "data.gouv.fr",
       ]}
-      partnersLogos={{
-        sub: [
-          {
-            alt: "service-public.fr, le site officiel de l'administration française",
-            href: "https://www.service-public.fr/",
-            imgUrl: "/static/assets/img/logo_sp_hd_rvb.png",
-          },
-          {
-            alt: "legifrance.gouv.fr - le service public de la diffusion du droit",
-            href: "https://www.legifrance.gouv.fr/",
-            imgUrl: "/static/assets/img/legifrance.svg",
-          },
-        ],
-      }}
       bottomItems={[
         {
           linkProps: {
@@ -190,13 +175,6 @@ export const Footer = () => {
         },
         headerFooterDisplayItem,
       ]}
-      classes={{
-        logo: footerLogo,
-      }}
     />
   );
 };
-
-const footerLogo = css({
-  boxShadow: "none !important",
-});
