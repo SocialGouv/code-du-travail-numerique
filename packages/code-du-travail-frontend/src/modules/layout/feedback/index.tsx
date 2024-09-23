@@ -6,6 +6,16 @@ import { FeedbackDefault } from "./FeedbackDefault";
 import { FeedbackContent, FeedbackDataSent } from "./FeedbackContent";
 import { FeedbackAnswered } from "./FeedbackAnswered";
 import { useFeedbackEvents } from "./tracking";
+import { SITE_URL } from "../../../config";
+
+// TODO NOT MERGING THIS
+const callServeur = async () => {
+  const url = `${SITE_URL}/api/idcc`;
+
+  return fetch(url).then(async () => {
+    console.log("DONE");
+  });
+};
 
 export const Feedback = () => {
   const [viewFeedback, setViewFeedback] = useState<
@@ -35,9 +45,19 @@ export const Feedback = () => {
     }
     setViewFeedback("answered");
   };
+  const throwError = async () => {
+    throw new Error();
+  };
 
   return (
     <div className={fr.cx("fr-highlight", "fr-p-2w", "fr-m-0")}>
+      <button className="fr-btn" onClick={throwError}>
+        Erreur côté client
+      </button>
+      <button className="fr-btn" onClick={callServeur}>
+        Erreur côté serveur
+      </button>
+
       {viewFeedback === "default" && (
         <FeedbackDefault onClickNo={onClickNo} onClickYes={onClickYes} />
       )}
