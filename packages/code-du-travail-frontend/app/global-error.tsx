@@ -1,18 +1,29 @@
-"use client"; // Error boundaries must be Client Components
+"use client";
+
+import { useEffect } from "react";
+import { UnexpectedError } from "../src/modules/error/UnexpectedError";
+import * as Sentry from "@sentry/nextjs";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Erreur",
+  description: "Erreur inattendue s'est produite",
+};
 
 export default function GlobalError({
   error,
-  reset,
 }: {
   error: Error & { digest?: string };
-  reset: () => void;
 }) {
+  useEffect(() => {
+    console.error(error);
+    Sentry.captureException(error);
+  }, [error]);
+
   return (
-    // global-error must include html and body tags
     <html>
       <body>
-        <h2>Something went wrong!</h2>
-        <button onClick={() => reset()}>Try again</button>
+        <UnexpectedError />
       </body>
     </html>
   );

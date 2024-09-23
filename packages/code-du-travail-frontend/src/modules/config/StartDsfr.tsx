@@ -13,6 +13,5 @@ declare module "@codegouvfr/react-dsfr/next-appdir" {
 startReactDsfr({ defaultColorScheme, Link, doCheckNonce: true });
 
 export function StartDsfr() {
-  throw new Error()
   return null;
 }

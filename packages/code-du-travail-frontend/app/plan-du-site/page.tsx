@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 };
 
 const getSiteMap = async () => {
-  throw new Error("Boom");
   return getSitemapData();
 };
 
