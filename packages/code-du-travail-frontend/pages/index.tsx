@@ -103,7 +103,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      themes: data?.themes.children ?? [],
+      themes: data?.themes ?? [],
       highlights: data?.highlights ?? [],
       tools: data?.tools.map(({ _id, _source }) => ({ ..._source, _id })) ?? [],
       contributions: data?.contributions ?? [],
