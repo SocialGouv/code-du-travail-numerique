@@ -52,17 +52,3 @@ app:
       volumeMounts:
         - name: next
           mountPath: /mnt/next
-  tolerations:
-    - key: startup
-      operator: Equal
-      value: cdtn
-      effect: NoSchedule
-  affinity:
-    nodeAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution:
-        nodeSelectorTerms:
-          - matchExpressions:
-              - key: nodepool
-                operator: In
-                values:
-                  - cdtn-worker-nodepool
