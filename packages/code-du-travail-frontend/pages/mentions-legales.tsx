@@ -88,8 +88,8 @@ const LegalPage = () => {
             <p>
               Pour en savoir plus sur la politique d’accessibilité numérique de
               l’État :{" "}
-              <a href="http://references.modernisation.gouv.fr/accessibilite-numerique">
-                http://references.modernisation.gouv.fr/accessibilite-numerique
+              <a href="https://accessibilite.numerique.gouv.fr/">
+                https://accessibilite.numerique.gouv.fr/
               </a>
             </p>
             <Title shift={spacings.larger}>Sécurité</Title>
