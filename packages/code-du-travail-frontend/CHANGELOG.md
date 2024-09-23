@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.155.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.155.0...v4.155.1) (2024-09-23)
+
+### Bug Fixes
+
+- **url accéssibilté:** mise à jour du lien vers le site https://accessibilite.numerique.gouv.fr/ ([#6160](https://github.com/SocialGouv/code-du-travail-numerique/issues/6160)) ([901ab7f](https://github.com/SocialGouv/code-du-travail-numerique/commit/901ab7fc69ac6dfce4b80440d3ae4f157ca8202e))
+
 # [4.155.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.154.0...v4.155.0) (2024-09-19)
 
 ### Features
