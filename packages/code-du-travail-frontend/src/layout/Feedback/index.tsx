@@ -3,6 +3,7 @@ import React from "react";
 import Script from "next/script";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent } from "../../lib";
+import { theme } from "@socialgouv/cdtn-ui";
 
 export const Feedback = (): React.ReactNode => {
   const onClick = () => {
@@ -12,6 +13,7 @@ export const Feedback = (): React.ReactNode => {
       "click_bandeau",
     ]);
   };
+
   return (
     <>
       <Script id="tally-js" src="https://tally.so/widgets/embed.js"></Script>
@@ -29,6 +31,7 @@ export const Feedback = (): React.ReactNode => {
           src="/static/assets/img/emoj-wave.png"
           aria-hidden="true"
         />
+        <span>Donnez votre avis</span>
       </ButtonSuggestion>
     </>
   );
@@ -37,27 +40,54 @@ export const Feedback = (): React.ReactNode => {
 const ButtonSuggestion = styled.button`
   position: fixed;
   top: 22.5rem;
-  right: 0px;
-  width: 5.8rem;
+  right: -7.2rem;
+  width: 12rem;
   height: 5.8rem;
   background-color: hsl(220deg, calc(100% - 34%), 33%);
   border-radius: 3rem 0px 0px 3rem;
-  font-size: 2rem;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 2px;
   z-index: 5;
   cursor: pointer;
+  display: flex;
+  padding-top: 10px;
+  @media (min-width: ${theme.breakpoints.mobile}) {
+    animation: moveLeftAndRight 30s ease-in-out infinite 5s;
+  }
+
+  span {
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  @keyframes moveLeftAndRight {
+    0% {
+      right: -7.2rem;
+    }
+    6.66% {
+      right: 0;
+    }
+    23.33% {
+      right: 0;
+    }
+    30% {
+      right: -7.2rem;
+    }
+    100% {
+      right: -7.2rem;
+    }
+  }
 `;
 
 const ImgSuggestion = styled.img`
   height: 1.4em;
   width: 1.4em;
-  margin: 0px 0.05em 0px 0.1em;
-  vertical-align: -0.1em;
-  &:hover {
-    animation: 2.5s ease 0s infinite normal none running wiggle;
-    transform-origin: 70% 70%;
-  }
+  margin: 10px 0 0 10px;
+
+  animation: wiggle 2.5s ease 7.5s 1;
+  transform-origin: 70% 70%;
+
   @keyframes wiggle {
     0% {
       transform: rotate(0deg);
