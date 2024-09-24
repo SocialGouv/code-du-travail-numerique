@@ -12,6 +12,7 @@ export const Feedback = (): React.ReactNode => {
       "click_bandeau",
     ]);
   };
+
   return (
     <>
       <Script id="tally-js" src="https://tally.so/widgets/embed.js"></Script>
@@ -29,6 +30,7 @@ export const Feedback = (): React.ReactNode => {
           src="/static/assets/img/emoj-wave.png"
           aria-hidden="true"
         />
+        <span>Donnez votre avis</span>
       </ButtonSuggestion>
     </>
   );
@@ -37,26 +39,56 @@ export const Feedback = (): React.ReactNode => {
 const ButtonSuggestion = styled.button`
   position: fixed;
   top: 22.5rem;
-  right: 0px;
-  width: 5.8rem;
+  right: -7.2rem;
+  width: 12.7rem;
   height: 5.8rem;
   background-color: hsl(220deg, calc(100% - 34%), 33%);
   border-radius: 3rem 0px 0px 3rem;
-  font-size: 2rem;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 2px;
   z-index: 5;
   cursor: pointer;
+  display: flex;
+  padding-top: 10px;
+
+  animation: moveLeftAndRight 30s ease-in-out infinite 5s;
+
+  span {
+    color: white;
+    font-size: 14px;
+    padding-left: 5px;
+  }
+
+  @keyframes moveLeftAndRight {
+    0% {
+      right: -7.2rem;
+    }
+    6.66% {
+      right: 0;
+    }
+    23.33% {
+      right: 0;
+    }
+    30% {
+      right: -7.2rem;
+    }
+    100% {
+      right: -7.2rem;
+    }
+  }
 `;
 
 const ImgSuggestion = styled.img`
-  height: 1.4em;
-  width: 1.4em;
-  margin: 0px 0.05em 0px 0.1em;
-  vertical-align: -0.1em;
+  height: 28px;
+  width: 28px;
+  margin-top: 5px;
+  margin-left: 12px;
+
+  animation: wiggle 2.5s ease 7.5s 1;
+  //transform-origin: 70% 70%;
   &:hover {
     animation: 2.5s ease 0s infinite normal none running wiggle;
-    transform-origin: 70% 70%;
+    //transform-origin: 70% 70%;
   }
   @keyframes wiggle {
     0% {
