@@ -3,7 +3,6 @@ import React from "react";
 import Script from "next/script";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent } from "../../lib";
-import { theme } from "@socialgouv/cdtn-ui";
 
 export const Feedback = (): React.ReactNode => {
   const onClick = () => {
@@ -41,7 +40,7 @@ const ButtonSuggestion = styled.button`
   position: fixed;
   top: 22.5rem;
   right: -7.2rem;
-  width: 12rem;
+  width: 12.7rem;
   height: 5.8rem;
   background-color: hsl(220deg, calc(100% - 34%), 33%);
   border-radius: 3rem 0px 0px 3rem;
@@ -51,14 +50,13 @@ const ButtonSuggestion = styled.button`
   cursor: pointer;
   display: flex;
   padding-top: 10px;
-  @media (min-width: ${theme.breakpoints.mobile}) {
-    animation: moveLeftAndRight 30s ease-in-out infinite 5s;
-  }
+
+  animation: moveLeftAndRight 30s ease-in-out infinite 5s;
 
   span {
     color: white;
     font-size: 14px;
-    margin-left: 10px;
+    padding-left: 5px;
   }
 
   @keyframes moveLeftAndRight {
@@ -81,13 +79,17 @@ const ButtonSuggestion = styled.button`
 `;
 
 const ImgSuggestion = styled.img`
-  height: 1.4em;
-  width: 1.4em;
-  margin: 10px 0 0 10px;
+  height: 28px;
+  width: 28px;
+  margin-top: 5px;
+  margin-left: 12px;
 
   animation: wiggle 2.5s ease 7.5s 1;
-  transform-origin: 70% 70%;
-
+  //transform-origin: 70% 70%;
+  &:hover {
+    animation: 2.5s ease 0s infinite normal none running wiggle;
+    //transform-origin: 70% 70%;
+  }
   @keyframes wiggle {
     0% {
       transform: rotate(0deg);
