@@ -171,7 +171,7 @@ exports[`<Theme /> should render 1`] = `
       aria-expanded="false"
       aria-haspopup="dialog"
       aria-label="Donner votre avis"
-      class="sc-jdkBTo fpshfY"
+      class="sc-jdkBTo eGFQZu"
       data-tally-open="3jLRW1"
       data-tally-overlay="1"
       data-tally-width="500"
@@ -179,9 +179,12 @@ exports[`<Theme /> should render 1`] = `
       <img
         alt="Suggestion"
         aria-hidden="true"
-        class="sc-fmzyuX doHQkQ"
+        class="sc-fmzyuX clDwFy"
         src="/static/assets/img/emoj-wave.png"
       />
+      <span>
+        Donnez votre avis
+      </span>
     </button>
     <main
       class="sc-BQMaI VjSqX"
