@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.155.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.155.1...v4.155.2) (2024-09-25)
+
+### Bug Fixes
+
+- **typo:** typo dans le titre de rupture conventionnelle + update de l'animation sur le bouton du questionnaire ([#6164](https://github.com/SocialGouv/code-du-travail-numerique/issues/6164)) ([99ace13](https://github.com/SocialGouv/code-du-travail-numerique/commit/99ace132f58c1af5d5f261c98498b030840a3baa))
+
 ## [4.155.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.155.0...v4.155.1) (2024-09-23)
 
 ### Bug Fixes
