@@ -1,1 +1,1 @@
-export const MAX_LENGTH_SUGGESTION = 1500;
+export const MAX_LENGTH_SUGGESTION = 500;
