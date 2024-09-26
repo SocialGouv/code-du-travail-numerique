@@ -8,13 +8,13 @@ exports[`<FeedbackContent /> should match snapshot for negative 1`] = `
     Merci pour votre réponse.
   </h2>
   <fieldset
-    aria-labelledby="fr-fieldset-checkbox-:r0:-legend fr-fieldset-checkbox-:r0:-messages"
+    aria-labelledby="fr-fieldset-checkbox-:r2:-legend fr-fieldset-checkbox-:r2:-messages"
     class="fr-fieldset"
-    id="fr-fieldset-checkbox-:r0:"
+    id="fr-fieldset-checkbox-:r2:"
   >
     <legend
       class="fr-fieldset__legend fr-text--regular"
-      id="fr-fieldset-checkbox-:r0:-legend"
+      id="fr-fieldset-checkbox-:r2:-legend"
     >
       Pouvez-vous nous en dire plus ?
     </legend>
@@ -25,14 +25,14 @@ exports[`<FeedbackContent /> should match snapshot for negative 1`] = `
         class="fr-checkbox-group"
       >
         <input
-          id="fr-fieldset-checkbox-:r0:-0"
+          id="fr-fieldset-checkbox-:r2:-0"
           name="unclear"
           type="checkbox"
           value="unclear"
         />
         <label
           class="fr-label"
-          for="fr-fieldset-checkbox-:r0:-0"
+          for="fr-fieldset-checkbox-:r2:-0"
         >
           Les informations ne sont pas claires
         </label>
@@ -41,14 +41,14 @@ exports[`<FeedbackContent /> should match snapshot for negative 1`] = `
         class="fr-checkbox-group"
       >
         <input
-          id="fr-fieldset-checkbox-:r0:-1"
+          id="fr-fieldset-checkbox-:r2:-1"
           name="unrelated"
           type="checkbox"
           value="unrelated"
         />
         <label
           class="fr-label"
-          for="fr-fieldset-checkbox-:r0:-1"
+          for="fr-fieldset-checkbox-:r2:-1"
         >
           Cette page ne correspond pas à ma recherche ou à ma situation.
         </label>
@@ -57,14 +57,14 @@ exports[`<FeedbackContent /> should match snapshot for negative 1`] = `
         class="fr-checkbox-group"
       >
         <input
-          id="fr-fieldset-checkbox-:r0:-2"
+          id="fr-fieldset-checkbox-:r2:-2"
           name="unsatisfied"
           type="checkbox"
           value="unsatisfied"
         />
         <label
           class="fr-label"
-          for="fr-fieldset-checkbox-:r0:-2"
+          for="fr-fieldset-checkbox-:r2:-2"
         >
           Je ne suis pas satisfait de cette réglementation.
         </label>
@@ -73,14 +73,14 @@ exports[`<FeedbackContent /> should match snapshot for negative 1`] = `
         class="fr-checkbox-group"
       >
         <input
-          id="fr-fieldset-checkbox-:r0:-3"
+          id="fr-fieldset-checkbox-:r2:-3"
           name="wrong"
           type="checkbox"
           value="wrong"
         />
         <label
           class="fr-label"
-          for="fr-fieldset-checkbox-:r0:-3"
+          for="fr-fieldset-checkbox-:r2:-3"
         >
           Les informations me semblent fausses.
         </label>
@@ -89,7 +89,7 @@ exports[`<FeedbackContent /> should match snapshot for negative 1`] = `
     <div
       aria-live="assertive"
       class="fr-messages-group"
-      id="fr-fieldset-checkbox-:r0:-messages"
+      id="fr-fieldset-checkbox-:r2:-messages"
     >
       <p
         class="fr-message"
@@ -101,14 +101,14 @@ exports[`<FeedbackContent /> should match snapshot for negative 1`] = `
   >
     <label
       class="fr-label"
-      for="input-:r2:"
+      for="input-:r4:"
     >
       Faire une suggestion pour améliorer cette page
     </label>
     <textarea
-      aria-describedby="input-:r2:-desc-error"
+      aria-describedby="input-:r4:-desc-error"
       class="fr-input"
-      id="input-:r2:"
+      id="input-:r4:"
     />
   </div>
   <p
@@ -118,7 +118,7 @@ exports[`<FeedbackContent /> should match snapshot for negative 1`] = `
   </p>
   <button
     class="fr-btn fr-btn--secondary"
-    id="fr-button-:r3:"
+    id="fr-button-:r5:"
     type="button"
   >
     Envoyer

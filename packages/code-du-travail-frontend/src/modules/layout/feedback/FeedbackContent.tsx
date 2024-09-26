@@ -4,7 +4,8 @@ import { Checkbox } from "@codegouvfr/react-dsfr/Checkbox";
 import { Input } from "@codegouvfr/react-dsfr/Input";
 import { FeedbackActionChoiceValue } from "./tracking";
 import { useState } from "react";
-import { MAX_LENGTH_SUGGESTION } from "./constants";
+
+const MAX_LENGTH_SUGGESTION = 500;
 
 type Props = {
   onSubmit: (data: FeedbackDataSent) => void;
