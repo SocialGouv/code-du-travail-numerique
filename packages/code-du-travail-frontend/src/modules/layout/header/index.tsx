@@ -5,7 +5,6 @@ import { usePathname, useRouter } from "next/navigation";
 import { SearchInput } from "./SearchInput";
 import { BrandTop } from "../BrandTop";
 import { homeLinksProps } from "../common";
-import Image from "next/image";
 
 export const Header = () => {
   const currentPath = usePathname();
@@ -17,14 +16,11 @@ export const Header = () => {
 
   return (
     <HeaderDsfr
-      serviceTitle={
-        <Image
-          src="/static/assets/img/logo.svg"
-          alt="Code du travail numérique"
-          width={200}
-          height={60}
-        />
-      }
+      operatorLogo={{
+        alt: "Code du travail numérique",
+        imgUrl: "/static/assets/img/logo.svg",
+        orientation: "horizontal",
+      }}
       serviceTagline=""
       brandTop={<BrandTop />}
       homeLinkProps={homeLinksProps}
@@ -75,7 +71,6 @@ export const Header = () => {
         />
       )}
       onSearchButtonClick={onSearchSubmit}
-
     />
   );
 };
