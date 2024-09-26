@@ -18,7 +18,7 @@ exports[`<Term /> should render 1`] = `
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-c707bea3-0 sc-1bce5a92-4 fLyNGe jMVRmt"
+        class="sc-d8f596bd-0 sc-1bce5a92-4 jtWYDW jMVRmt"
       >
         <a
           class="sc-1bce5a92-5 dGVXOB"
@@ -66,7 +66,7 @@ exports[`<Term /> should render 1`] = `
             role="search"
           >
             <div
-              class="sc-f92038f6-0 llOtbb"
+              class="sc-8dcb2faa-0 gxfPDw"
             >
               <label
                 for="floating-search"
@@ -97,7 +97,7 @@ exports[`<Term /> should render 1`] = `
             />
             <button
               aria-label="Lancer ma recherche"
-              class="sc-b0ebfae6-0 dGXoMZ sc-90ac636b-4 WWTkl"
+              class="sc-95bd4344-0 dxXsic sc-90ac636b-4 WWTkl"
               title="Lancer ma recherche"
               type="submit"
             >
@@ -141,18 +141,18 @@ exports[`<Term /> should render 1`] = `
           class="sc-1bce5a92-8 jegxDE"
         >
           <button
-            class="sc-b0ebfae6-0 iBhawp sc-464069b8-0 sc-1bce5a92-3 iHEjlX hcjICj"
+            class="sc-95bd4344-0 ksRRNY sc-7ce33c9e-0 sc-1bce5a92-3 dfFPma hcjICj"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-b0ebfae6-0 hnMdUW sc-e95c929f-1 edZCax sc-c4241839-0 kVABEP"
+          class="sc-95bd4344-0 jfFcPD sc-826d929a-1 gOztMa sc-c4241839-0 kVABEP"
         >
           <svg
             aria-hidden="true"
-            class="sc-e95c929f-2 lblybl"
+            class="sc-826d929a-2 iVKgwY"
             fill="none"
             viewBox="0 0 32 32"
             xmlns="http://www.w3.org/2000/svg"
@@ -189,28 +189,28 @@ exports[`<Term /> should render 1`] = `
       tabindex="-1"
     >
       <div
-        class="sc-6e8ce629-0 KibPI"
+        class="sc-a384ed57-0 iEQrzr"
       >
         <div
-          class="sc-c707bea3-0 cgPrTf"
+          class="sc-d8f596bd-0 hCPxfF"
         >
           <header
-            class="sc-238bfc37-0 bnxcHY"
+            class="sc-e32628d4-0 cXUuvO"
           >
             <h1
-              class="sc-efa69b03-0 cNAUpX"
+              class="sc-5f05e99b-0 dQbgIy"
             >
               <span
-                class="sc-f4f767e-0 jZdFSO"
+                class="sc-a4d7a179-0 jRxkkJ"
               />
               Accord d'entreprise
             </h1>
           </header>
           <div
-            class="sc-13323d30-0 eYPJba"
+            class="sc-2a0a4b0a-0 hpYuum"
           >
             <table
-              class="sc-6d9f376d-0 iugiNe"
+              class="sc-4e3ba411-0 kKVapO"
             >
               <tbody>
                 <tr>
@@ -243,34 +243,34 @@ exports[`<Term /> should render 1`] = `
         class="sc-4d9a65c1-2 unPdz"
       >
         <div
-          class="sc-6e8ce629-0 KibPI sc-4d9a65c1-3 fraWRV"
+          class="sc-a384ed57-0 iEQrzr sc-4d9a65c1-3 fraWRV"
         >
           <div
-            class="sc-c707bea3-0 fLyNGe"
+            class="sc-d8f596bd-0 jtWYDW"
           >
             <div
               aria-level="2"
-              class="sc-238bfc37-0 ffFWxY"
+              class="sc-e32628d4-0 fQeCjG"
               role="heading"
             >
               <p
-                class="sc-3c1fa745-0 fqYbSi"
+                class="sc-d6e72754-0 gvSeXc"
               >
                 <span
-                  class="sc-f4f767e-0 jZdFSO"
+                  class="sc-a4d7a179-0 jRxkkJ"
                 />
                 Besoin de plus d’informations ?
               </p>
             </div>
             <div
-              class="sc-c707bea3-0 sc-4d9a65c1-4 drFLyc eDGGKO"
+              class="sc-d8f596bd-0 sc-4d9a65c1-4 jMrYSO eDGGKO"
             >
               <p>
                 Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
               </p>
             </div>
             <button
-              class="sc-b0ebfae6-0 hPQAhy"
+              class="sc-95bd4344-0 dqVtzj"
             >
               Contacter nos services en région
               <svg
@@ -289,10 +289,10 @@ exports[`<Term /> should render 1`] = `
           </div>
         </div>
         <div
-          class="sc-6e8ce629-0 KibPI sc-4d9a65c1-6 eNwCQl"
+          class="sc-a384ed57-0 iEQrzr sc-4d9a65c1-6 eNwCQl"
         >
           <div
-            class="sc-c707bea3-0 sc-4d9a65c1-7 fLyNGe ceMaPg"
+            class="sc-d8f596bd-0 sc-4d9a65c1-7 jtWYDW ceMaPg"
           >
             <div
               class="sc-4d9a65c1-0 wpgHP"
@@ -300,13 +300,13 @@ exports[`<Term /> should render 1`] = `
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-4d9a65c1-9 gkFfZG sc-a53a0f9a-0 vctiQ"
+                  class="sc-4d9a65c1-9 gkFfZG sc-b879fc2d-0 dSFUuf"
                   role="heading"
                 >
                   Code du travail numérique
                 </strong>
                 <ul
-                  class="sc-78dd7a00-0 sc-4d9a65c1-8 fVqAjV iNIrtI"
+                  class="sc-ab356c14-0 sc-4d9a65c1-8 bpNHPl iNIrtI"
                 >
                   <li>
                     <a
@@ -357,13 +357,13 @@ exports[`<Term /> should render 1`] = `
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-4d9a65c1-9 gkFfZG sc-a53a0f9a-0 vctiQ"
+                  class="sc-4d9a65c1-9 gkFfZG sc-b879fc2d-0 dSFUuf"
                   role="heading"
                 >
                   Outils populaires
                 </strong>
                 <ul
-                  class="sc-78dd7a00-0 sc-4d9a65c1-8 fVqAjV iNIrtI"
+                  class="sc-ab356c14-0 sc-4d9a65c1-8 bpNHPl iNIrtI"
                 >
                   <li>
                     <a
@@ -394,13 +394,13 @@ exports[`<Term /> should render 1`] = `
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-4d9a65c1-9 gkFfZG sc-a53a0f9a-0 vctiQ"
+                  class="sc-4d9a65c1-9 gkFfZG sc-b879fc2d-0 dSFUuf"
                   role="heading"
                 >
                   Modèles populaires
                 </strong>
                 <ul
-                  class="sc-78dd7a00-0 sc-4d9a65c1-8 fVqAjV iNIrtI"
+                  class="sc-ab356c14-0 sc-4d9a65c1-8 bpNHPl iNIrtI"
                 >
                   <li>
                     <a
@@ -435,13 +435,13 @@ exports[`<Term /> should render 1`] = `
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-4d9a65c1-9 gkFfZG sc-a53a0f9a-0 vctiQ"
+                  class="sc-4d9a65c1-9 gkFfZG sc-b879fc2d-0 dSFUuf"
                   role="heading"
                 >
                   Fiches pratiques populaires
                 </strong>
                 <ul
-                  class="sc-78dd7a00-0 sc-4d9a65c1-8 fVqAjV iNIrtI"
+                  class="sc-ab356c14-0 sc-4d9a65c1-8 bpNHPl iNIrtI"
                 >
                   <li>
                     <a
@@ -472,13 +472,13 @@ exports[`<Term /> should render 1`] = `
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-4d9a65c1-9 gkFfZG sc-a53a0f9a-0 vctiQ"
+                  class="sc-4d9a65c1-9 gkFfZG sc-b879fc2d-0 dSFUuf"
                   role="heading"
                 >
                   Conventions collectives populaires
                 </strong>
                 <ul
-                  class="sc-78dd7a00-0 sc-4d9a65c1-8 fVqAjV iNIrtI"
+                  class="sc-ab356c14-0 sc-4d9a65c1-8 bpNHPl iNIrtI"
                 >
                   <li>
                     <a
@@ -510,7 +510,7 @@ exports[`<Term /> should render 1`] = `
           </div>
         </div>
         <div
-          class="sc-c707bea3-0 sc-d2f8e86a-0 fLyNGe gLHwsT"
+          class="sc-d8f596bd-0 sc-d2f8e86a-0 jtWYDW gLHwsT"
         >
           <div
             class="sc-d2f8e86a-1 ipUnWt"

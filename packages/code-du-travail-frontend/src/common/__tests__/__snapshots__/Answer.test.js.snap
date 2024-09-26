@@ -3,16 +3,16 @@
 exports[`<Answer /> should renders 1`] = `
 <div>
   <div
-    class="sc-c707bea3-0 sc-b551711e-0 fLyNGe dPgTeI"
+    class="sc-d8f596bd-0 sc-b551711e-0 jtWYDW dPgTeI"
   >
     <div
       class="sc-b551711e-1 fIhGar"
     >
       <div
-        class="sc-c707bea3-0 fLyNGe"
+        class="sc-d8f596bd-0 jtWYDW"
       >
         <div
-          class="sc-13323d30-0 eYPJba"
+          class="sc-2a0a4b0a-0 hpYuum"
         >
           <div
             class="sc-f2a41fcc-1 fNkZjj"
@@ -22,13 +22,13 @@ exports[`<Answer /> should renders 1`] = `
                 class="sc-f2a41fcc-0 hQZrlv"
               >
                 <header
-                  class="sc-238bfc37-0 exhNAB sc-f2a41fcc-4 cqLxSJ"
+                  class="sc-e32628d4-0 ktMpnf sc-f2a41fcc-4 cqLxSJ"
                 >
                   <h1
-                    class="sc-efa69b03-0 jXMLJR"
+                    class="sc-5f05e99b-0 cWsbaq"
                   >
                     <span
-                      class="sc-f4f767e-0 hiuRaG"
+                      class="sc-a4d7a179-0 gGBEJx"
                     />
                     Article du code
                   </h1>
@@ -37,7 +37,7 @@ exports[`<Answer /> should renders 1`] = `
                   class="sc-f2a41fcc-5 tnWPU"
                 >
                   <p
-                    class="sc-a4406a0f-1 dvtaRl"
+                    class="sc-3633cc97-1 ksBhgq"
                   >
                     <span
                       class="sc-f2a41fcc-8 ObhLq"
@@ -65,10 +65,10 @@ exports[`<Answer /> should renders 1`] = `
                 class="sc-f2a41fcc-6 vLCby"
               >
                 <div
-                  class="sc-13323d30-0 sc-c6a0a198-1 exlNfj bMPGyZ"
+                  class="sc-2a0a4b0a-0 sc-c6a0a198-1 dLOZmV bMPGyZ"
                 >
                   <p
-                    class="sc-a4406a0f-1 rjoOw"
+                    class="sc-3633cc97-1 bjxtLv"
                   >
                     intro de l'article
                   </p>
@@ -182,7 +182,7 @@ exports[`<Answer /> should renders 1`] = `
                   </span>
                 </button>
                 <div
-                  class="sc-26bde2b2-0 jUExxE"
+                  class="sc-95cc8fb1-0 iHYHyU"
                 >
                   <button
                     class="sc-ef7c173-1 eNIxDW spacing-left"
@@ -228,10 +228,10 @@ exports[`<Answer /> should renders 1`] = `
         </div>
       </div>
       <div
-        class="sc-c707bea3-0 sc-c6a0a198-2 fLyNGe ceCYyW"
+        class="sc-d8f596bd-0 sc-c6a0a198-2 jtWYDW ceCYyW"
       >
         <p
-          class="sc-a4406a0f-1 rjoOw"
+          class="sc-3633cc97-1 bjxtLv"
         >
           Partager ce contenu : 
         </p>
@@ -327,7 +327,7 @@ exports[`<Answer /> should renders 1`] = `
             </span>
           </button>
           <div
-            class="sc-26bde2b2-0 jUExxE"
+            class="sc-95cc8fb1-0 iHYHyU"
           >
             <button
               class="sc-ef7c173-1 eNIxDW spacing-left"
@@ -371,22 +371,22 @@ exports[`<Answer /> should renders 1`] = `
         </div>
       </div>
       <div
-        class="sc-6e8ce629-0 KibPI sc-3f9d0357-0 fZXZfe"
+        class="sc-a384ed57-0 iEQrzr sc-3f9d0357-0 fZXZfe"
       >
         <div
-          class="sc-c707bea3-0 fLyNGe"
+          class="sc-d8f596bd-0 jtWYDW"
         >
           <div
-            class="sc-13323d30-0 gtmVnh"
+            class="sc-2a0a4b0a-0 hPfzrL"
           >
             <div
               class="sc-66a51d8b-3 iitVHg"
             >
               <h2
-                class="sc-66a51d8b-4 ihsodu sc-a53a0f9a-0 hXUEeL"
+                class="sc-66a51d8b-4 ihsodu sc-b879fc2d-0 ddMxZe"
               >
                 <span
-                  class="sc-f4f767e-0 cxMIVi"
+                  class="sc-a4d7a179-0 jSVvrt"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -394,12 +394,12 @@ exports[`<Answer /> should renders 1`] = `
                 class="sc-66a51d8b-5 eRJUhM"
               >
                 <button
-                  class="sc-b0ebfae6-0 ffxSnV sc-66a51d8b-6 xfnpJ"
+                  class="sc-95bd4344-0 iLunBo sc-66a51d8b-6 xfnpJ"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-b0ebfae6-0 ffxSnV sc-66a51d8b-6 xfnpJ"
+                  class="sc-95bd4344-0 iLunBo sc-66a51d8b-6 xfnpJ"
                 >
                   Oui
                 </button>
@@ -420,7 +420,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
     class="sc-4acc650d-0 iZmHLs"
   >
     <ol
-      class="sc-c707bea3-0 sc-4acc650d-1 fLyNGe fiOSiq"
+      class="sc-d8f596bd-0 sc-4acc650d-1 jtWYDW fiOSiq"
     >
       <li
         class="sc-4acc650d-2 fEtKOP"
@@ -494,16 +494,16 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
     </ol>
   </nav>
   <div
-    class="sc-c707bea3-0 sc-b551711e-0 fLyNGe dPgTeI"
+    class="sc-d8f596bd-0 sc-b551711e-0 jtWYDW dPgTeI"
   >
     <div
       class="sc-b551711e-1 fIhGar"
     >
       <div
-        class="sc-c707bea3-0 fLyNGe"
+        class="sc-d8f596bd-0 jtWYDW"
       >
         <div
-          class="sc-13323d30-0 eYPJba"
+          class="sc-2a0a4b0a-0 hpYuum"
         >
           <div
             class="sc-f2a41fcc-1 fNkZjj"
@@ -513,18 +513,18 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 class="sc-f2a41fcc-0 hQZrlv"
               >
                 <p
-                  class="sc-9ce1a7bf-0 sc-f2a41fcc-3 bORIyL jigJXx"
+                  class="sc-9261d202-0 sc-f2a41fcc-3 iTbcuX jigJXx"
                 >
                   tag2
                 </p>
                 <header
-                  class="sc-238bfc37-0 exhNAB sc-f2a41fcc-4 cqLxSJ"
+                  class="sc-e32628d4-0 ktMpnf sc-f2a41fcc-4 cqLxSJ"
                 >
                   <h1
-                    class="sc-efa69b03-0 jXMLJR"
+                    class="sc-5f05e99b-0 cWsbaq"
                   >
                     <span
-                      class="sc-f4f767e-0 hiuRaG"
+                      class="sc-a4d7a179-0 gGBEJx"
                     />
                     Article du code
                   </h1>
@@ -533,7 +533,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                   class="sc-f2a41fcc-5 tnWPU"
                 >
                   <p
-                    class="sc-a4406a0f-1 dvtaRl"
+                    class="sc-3633cc97-1 ksBhgq"
                   >
                     <span
                       class="sc-f2a41fcc-8 ObhLq"
@@ -561,10 +561,10 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 class="sc-f2a41fcc-6 vLCby"
               >
                 <div
-                  class="sc-13323d30-0 sc-c6a0a198-1 exlNfj bMPGyZ"
+                  class="sc-2a0a4b0a-0 sc-c6a0a198-1 dLOZmV bMPGyZ"
                 >
                   <p
-                    class="sc-a4406a0f-1 rjoOw"
+                    class="sc-3633cc97-1 bjxtLv"
                   >
                     intro de l'article
                   </p>
@@ -678,7 +678,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                   </span>
                 </button>
                 <div
-                  class="sc-26bde2b2-0 jUExxE"
+                  class="sc-95cc8fb1-0 iHYHyU"
                 >
                   <button
                     class="sc-ef7c173-1 eNIxDW spacing-left"
@@ -724,10 +724,10 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
         </div>
       </div>
       <div
-        class="sc-c707bea3-0 sc-c6a0a198-2 fLyNGe ceCYyW"
+        class="sc-d8f596bd-0 sc-c6a0a198-2 jtWYDW ceCYyW"
       >
         <p
-          class="sc-a4406a0f-1 rjoOw"
+          class="sc-3633cc97-1 bjxtLv"
         >
           Partager ce contenu : 
         </p>
@@ -823,7 +823,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             </span>
           </button>
           <div
-            class="sc-26bde2b2-0 jUExxE"
+            class="sc-95cc8fb1-0 iHYHyU"
           >
             <button
               class="sc-ef7c173-1 eNIxDW spacing-left"
@@ -867,22 +867,22 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
         </div>
       </div>
       <div
-        class="sc-6e8ce629-0 KibPI sc-3f9d0357-0 fZXZfe"
+        class="sc-a384ed57-0 iEQrzr sc-3f9d0357-0 fZXZfe"
       >
         <div
-          class="sc-c707bea3-0 fLyNGe"
+          class="sc-d8f596bd-0 jtWYDW"
         >
           <div
-            class="sc-13323d30-0 gtmVnh"
+            class="sc-2a0a4b0a-0 hPfzrL"
           >
             <div
               class="sc-66a51d8b-3 iitVHg"
             >
               <h2
-                class="sc-66a51d8b-4 ihsodu sc-a53a0f9a-0 hXUEeL"
+                class="sc-66a51d8b-4 ihsodu sc-b879fc2d-0 ddMxZe"
               >
                 <span
-                  class="sc-f4f767e-0 cxMIVi"
+                  class="sc-a4d7a179-0 jSVvrt"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -890,12 +890,12 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 class="sc-66a51d8b-5 eRJUhM"
               >
                 <button
-                  class="sc-b0ebfae6-0 ffxSnV sc-66a51d8b-6 xfnpJ"
+                  class="sc-95bd4344-0 iLunBo sc-66a51d8b-6 xfnpJ"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-b0ebfae6-0 ffxSnV sc-66a51d8b-6 xfnpJ"
+                  class="sc-95bd4344-0 iLunBo sc-66a51d8b-6 xfnpJ"
                 >
                   Oui
                 </button>
@@ -912,16 +912,16 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 exports[`<Answer /> should renders related content 1`] = `
 <div>
   <div
-    class="sc-c707bea3-0 sc-b551711e-0 fLyNGe dPgTeI"
+    class="sc-d8f596bd-0 sc-b551711e-0 jtWYDW dPgTeI"
   >
     <div
       class="sc-b551711e-1 giiHfQ"
     >
       <div
-        class="sc-c707bea3-0 fLyNGe"
+        class="sc-d8f596bd-0 jtWYDW"
       >
         <div
-          class="sc-13323d30-0 eYPJba"
+          class="sc-2a0a4b0a-0 hpYuum"
         >
           <div
             class="sc-f2a41fcc-1 fNkZjj"
@@ -931,13 +931,13 @@ exports[`<Answer /> should renders related content 1`] = `
                 class="sc-f2a41fcc-0 hQZrlv"
               >
                 <header
-                  class="sc-238bfc37-0 exhNAB sc-f2a41fcc-4 cqLxSJ"
+                  class="sc-e32628d4-0 ktMpnf sc-f2a41fcc-4 cqLxSJ"
                 >
                   <h1
-                    class="sc-efa69b03-0 jXMLJR"
+                    class="sc-5f05e99b-0 cWsbaq"
                   >
                     <span
-                      class="sc-f4f767e-0 hiuRaG"
+                      class="sc-a4d7a179-0 gGBEJx"
                     />
                     Article du code
                   </h1>
@@ -946,7 +946,7 @@ exports[`<Answer /> should renders related content 1`] = `
                   class="sc-f2a41fcc-5 tnWPU"
                 >
                   <p
-                    class="sc-a4406a0f-1 dvtaRl"
+                    class="sc-3633cc97-1 ksBhgq"
                   >
                     <span
                       class="sc-f2a41fcc-8 ObhLq"
@@ -974,10 +974,10 @@ exports[`<Answer /> should renders related content 1`] = `
                 class="sc-f2a41fcc-6 vLCby"
               >
                 <div
-                  class="sc-13323d30-0 sc-c6a0a198-1 exlNfj bMPGyZ"
+                  class="sc-2a0a4b0a-0 sc-c6a0a198-1 dLOZmV bMPGyZ"
                 >
                   <p
-                    class="sc-a4406a0f-1 rjoOw"
+                    class="sc-3633cc97-1 bjxtLv"
                   >
                     intro de l'article
                   </p>
@@ -1088,7 +1088,7 @@ exports[`<Answer /> should renders related content 1`] = `
                   </span>
                 </button>
                 <div
-                  class="sc-26bde2b2-0 jUExxE"
+                  class="sc-95cc8fb1-0 iHYHyU"
                 >
                   <button
                     class="sc-ef7c173-1 eNIxDW spacing-left"
@@ -1134,10 +1134,10 @@ exports[`<Answer /> should renders related content 1`] = `
         </div>
       </div>
       <div
-        class="sc-c707bea3-0 sc-c6a0a198-2 fLyNGe ceCYyW"
+        class="sc-d8f596bd-0 sc-c6a0a198-2 jtWYDW ceCYyW"
       >
         <p
-          class="sc-a4406a0f-1 rjoOw"
+          class="sc-3633cc97-1 bjxtLv"
         >
           Partager ce contenu : 
         </p>
@@ -1233,7 +1233,7 @@ exports[`<Answer /> should renders related content 1`] = `
             </span>
           </button>
           <div
-            class="sc-26bde2b2-0 jUExxE"
+            class="sc-95cc8fb1-0 iHYHyU"
           >
             <button
               class="sc-ef7c173-1 eNIxDW spacing-left"
@@ -1277,22 +1277,22 @@ exports[`<Answer /> should renders related content 1`] = `
         </div>
       </div>
       <div
-        class="sc-6e8ce629-0 KibPI sc-3f9d0357-0 fZXZfe"
+        class="sc-a384ed57-0 iEQrzr sc-3f9d0357-0 fZXZfe"
       >
         <div
-          class="sc-c707bea3-0 fLyNGe"
+          class="sc-d8f596bd-0 jtWYDW"
         >
           <div
-            class="sc-13323d30-0 gtmVnh"
+            class="sc-2a0a4b0a-0 hPfzrL"
           >
             <div
               class="sc-66a51d8b-3 iitVHg"
             >
               <h2
-                class="sc-66a51d8b-4 ihsodu sc-a53a0f9a-0 hXUEeL"
+                class="sc-66a51d8b-4 ihsodu sc-b879fc2d-0 ddMxZe"
               >
                 <span
-                  class="sc-f4f767e-0 cxMIVi"
+                  class="sc-a4d7a179-0 jSVvrt"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -1300,12 +1300,12 @@ exports[`<Answer /> should renders related content 1`] = `
                 class="sc-66a51d8b-5 eRJUhM"
               >
                 <button
-                  class="sc-b0ebfae6-0 ffxSnV sc-66a51d8b-6 xfnpJ"
+                  class="sc-95bd4344-0 iLunBo sc-66a51d8b-6 xfnpJ"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-b0ebfae6-0 ffxSnV sc-66a51d8b-6 xfnpJ"
+                  class="sc-95bd4344-0 iLunBo sc-66a51d8b-6 xfnpJ"
                 >
                   Oui
                 </button>
@@ -1316,32 +1316,32 @@ exports[`<Answer /> should renders related content 1`] = `
       </div>
     </div>
     <div
-      class="sc-6e8ce629-0 KibPI sc-b551711e-2 rtxPE"
+      class="sc-a384ed57-0 iEQrzr sc-b551711e-2 rtxPE"
     >
       <div
-        class="sc-c707bea3-0 fLyNGe"
+        class="sc-d8f596bd-0 jtWYDW"
       >
         <div
           aria-level="2"
-          class="sc-a53a0f9a-0 bIsTsN"
+          class="sc-b879fc2d-0 hyiHle"
           role="heading"
         >
           Modèles et outils liés
            :
         </div>
         <ul
-          class="sc-78dd7a00-0 fVqAjV"
+          class="sc-ab356c14-0 bpNHPl"
         >
           <li
             class="sc-98ab2f81-0 eJqLXV"
           >
             <a
-              class="sc-c95f41ec-0 edttdJ"
+              class="sc-60a7e89-0 haggkt"
               href="url.extrenal/tool"
             >
               <svg
                 aria-hidden="true"
-                class="sc-c95f41ec-2 iFvcod"
+                class="sc-60a7e89-2 bJDpVh"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1352,7 +1352,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 />
               </svg>
               <span
-                class="sc-c95f41ec-1 juvzjJ"
+                class="sc-60a7e89-1 eSlLWj"
               >
                 related external title 1
               </span>
@@ -1362,12 +1362,12 @@ exports[`<Answer /> should renders related content 1`] = `
             class="sc-98ab2f81-0 eJqLXV"
           >
             <a
-              class="sc-c95f41ec-0 edttdJ"
+              class="sc-60a7e89-0 haggkt"
               href="/outils/TOOL_1"
             >
               <svg
                 aria-hidden="true"
-                class="sc-c95f41ec-2 iFvcod"
+                class="sc-60a7e89-2 bJDpVh"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1378,7 +1378,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 />
               </svg>
               <span
-                class="sc-c95f41ec-1 juvzjJ"
+                class="sc-60a7e89-1 eSlLWj"
               >
                 related tool title 1
               </span>
@@ -1387,25 +1387,25 @@ exports[`<Answer /> should renders related content 1`] = `
         </ul>
         <div
           aria-level="2"
-          class="sc-a53a0f9a-0 bIsTsN"
+          class="sc-b879fc2d-0 hyiHle"
           role="heading"
         >
           Articles liés
            :
         </div>
         <ul
-          class="sc-78dd7a00-0 fVqAjV"
+          class="sc-ab356c14-0 bpNHPl"
         >
           <li
             class="sc-98ab2f81-0 eJqLXV"
           >
             <a
-              class="sc-c95f41ec-0 edttdJ"
+              class="sc-60a7e89-0 haggkt"
               href="/fiche-service-public/LINK_1"
             >
               <svg
                 aria-hidden="true"
-                class="sc-c95f41ec-2 iFvcod"
+                class="sc-60a7e89-2 bJDpVh"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1416,7 +1416,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 />
               </svg>
               <span
-                class="sc-c95f41ec-1 juvzjJ"
+                class="sc-60a7e89-1 eSlLWj"
               >
                 related sheet sp title 1
               </span>
@@ -1426,12 +1426,12 @@ exports[`<Answer /> should renders related content 1`] = `
             class="sc-98ab2f81-0 eJqLXV"
           >
             <a
-              class="sc-c95f41ec-0 edttdJ"
+              class="sc-60a7e89-0 haggkt"
               href="/fiche-ministere-travail/LINK_2"
             >
               <svg
                 aria-hidden="true"
-                class="sc-c95f41ec-2 iFvcod"
+                class="sc-60a7e89-2 bJDpVh"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1442,7 +1442,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 />
               </svg>
               <span
-                class="sc-c95f41ec-1 juvzjJ"
+                class="sc-60a7e89-1 eSlLWj"
               >
                 related sheet mt title 1
               </span>
@@ -1452,12 +1452,12 @@ exports[`<Answer /> should renders related content 1`] = `
             class="sc-98ab2f81-0 eJqLXV"
           >
             <a
-              class="sc-c95f41ec-0 edttdJ"
+              class="sc-60a7e89-0 haggkt"
               href="/fiche-service-public/LINK_4"
             >
               <svg
                 aria-hidden="true"
-                class="sc-c95f41ec-2 iFvcod"
+                class="sc-60a7e89-2 bJDpVh"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1468,7 +1468,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 />
               </svg>
               <span
-                class="sc-c95f41ec-1 juvzjJ"
+                class="sc-60a7e89-1 eSlLWj"
               >
                 related sheet sp title 2
               </span>
@@ -1484,16 +1484,16 @@ exports[`<Answer /> should renders related content 1`] = `
 exports[`<Answer /> should renders tooltip 1`] = `
 <div>
   <div
-    class="sc-c707bea3-0 sc-b551711e-0 fLyNGe dPgTeI"
+    class="sc-d8f596bd-0 sc-b551711e-0 jtWYDW dPgTeI"
   >
     <div
       class="sc-b551711e-1 fIhGar"
     >
       <div
-        class="sc-c707bea3-0 fLyNGe"
+        class="sc-d8f596bd-0 jtWYDW"
       >
         <div
-          class="sc-13323d30-0 eYPJba"
+          class="sc-2a0a4b0a-0 hpYuum"
         >
           <div
             class="sc-f2a41fcc-1 fNkZjj"
@@ -1503,13 +1503,13 @@ exports[`<Answer /> should renders tooltip 1`] = `
                 class="sc-f2a41fcc-0 hQZrlv"
               >
                 <header
-                  class="sc-238bfc37-0 exhNAB sc-f2a41fcc-4 cqLxSJ"
+                  class="sc-e32628d4-0 ktMpnf sc-f2a41fcc-4 cqLxSJ"
                 >
                   <h1
-                    class="sc-efa69b03-0 jXMLJR"
+                    class="sc-5f05e99b-0 cWsbaq"
                   >
                     <span
-                      class="sc-f4f767e-0 hiuRaG"
+                      class="sc-a4d7a179-0 gGBEJx"
                     />
                     Article du code
                   </h1>
@@ -1518,7 +1518,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   class="sc-f2a41fcc-5 tnWPU"
                 >
                   <p
-                    class="sc-a4406a0f-1 dvtaRl"
+                    class="sc-3633cc97-1 ksBhgq"
                   >
                     <span
                       class="sc-f2a41fcc-8 ObhLq"
@@ -1546,10 +1546,10 @@ exports[`<Answer /> should renders tooltip 1`] = `
                 class="sc-f2a41fcc-6 vLCby"
               >
                 <div
-                  class="sc-13323d30-0 sc-c6a0a198-1 exlNfj bMPGyZ"
+                  class="sc-2a0a4b0a-0 sc-c6a0a198-1 dLOZmV bMPGyZ"
                 >
                   <p
-                    class="sc-a4406a0f-1 rjoOw"
+                    class="sc-3633cc97-1 bjxtLv"
                   >
                     intro de l'article
                   </p>
@@ -1664,7 +1664,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   </span>
                 </button>
                 <div
-                  class="sc-26bde2b2-0 jUExxE"
+                  class="sc-95cc8fb1-0 iHYHyU"
                 >
                   <button
                     class="sc-ef7c173-1 eNIxDW spacing-left"
@@ -1710,10 +1710,10 @@ exports[`<Answer /> should renders tooltip 1`] = `
         </div>
       </div>
       <div
-        class="sc-c707bea3-0 sc-c6a0a198-2 fLyNGe ceCYyW"
+        class="sc-d8f596bd-0 sc-c6a0a198-2 jtWYDW ceCYyW"
       >
         <p
-          class="sc-a4406a0f-1 rjoOw"
+          class="sc-3633cc97-1 bjxtLv"
         >
           Partager ce contenu : 
         </p>
@@ -1809,7 +1809,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
             </span>
           </button>
           <div
-            class="sc-26bde2b2-0 jUExxE"
+            class="sc-95cc8fb1-0 iHYHyU"
           >
             <button
               class="sc-ef7c173-1 eNIxDW spacing-left"
@@ -1853,22 +1853,22 @@ exports[`<Answer /> should renders tooltip 1`] = `
         </div>
       </div>
       <div
-        class="sc-6e8ce629-0 KibPI sc-3f9d0357-0 fZXZfe"
+        class="sc-a384ed57-0 iEQrzr sc-3f9d0357-0 fZXZfe"
       >
         <div
-          class="sc-c707bea3-0 fLyNGe"
+          class="sc-d8f596bd-0 jtWYDW"
         >
           <div
-            class="sc-13323d30-0 gtmVnh"
+            class="sc-2a0a4b0a-0 hPfzrL"
           >
             <div
               class="sc-66a51d8b-3 iitVHg"
             >
               <h2
-                class="sc-66a51d8b-4 ihsodu sc-a53a0f9a-0 hXUEeL"
+                class="sc-66a51d8b-4 ihsodu sc-b879fc2d-0 ddMxZe"
               >
                 <span
-                  class="sc-f4f767e-0 cxMIVi"
+                  class="sc-a4d7a179-0 jSVvrt"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -1876,12 +1876,12 @@ exports[`<Answer /> should renders tooltip 1`] = `
                 class="sc-66a51d8b-5 eRJUhM"
               >
                 <button
-                  class="sc-b0ebfae6-0 ffxSnV sc-66a51d8b-6 xfnpJ"
+                  class="sc-95bd4344-0 iLunBo sc-66a51d8b-6 xfnpJ"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-b0ebfae6-0 ffxSnV sc-66a51d8b-6 xfnpJ"
+                  class="sc-95bd4344-0 iLunBo sc-66a51d8b-6 xfnpJ"
                 >
                   Oui
                 </button>
@@ -1898,16 +1898,16 @@ exports[`<Answer /> should renders tooltip 1`] = `
 exports[`<Answer /> should renders tooltip for words with diacritics without breaking html 1`] = `
 <div>
   <div
-    class="sc-c707bea3-0 sc-b551711e-0 fLyNGe dPgTeI"
+    class="sc-d8f596bd-0 sc-b551711e-0 jtWYDW dPgTeI"
   >
     <div
       class="sc-b551711e-1 fIhGar"
     >
       <div
-        class="sc-c707bea3-0 fLyNGe"
+        class="sc-d8f596bd-0 jtWYDW"
       >
         <div
-          class="sc-13323d30-0 eYPJba"
+          class="sc-2a0a4b0a-0 hpYuum"
         >
           <div
             class="sc-f2a41fcc-1 fNkZjj"
@@ -1917,13 +1917,13 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                 class="sc-f2a41fcc-0 hQZrlv"
               >
                 <header
-                  class="sc-238bfc37-0 exhNAB sc-f2a41fcc-4 cqLxSJ"
+                  class="sc-e32628d4-0 ktMpnf sc-f2a41fcc-4 cqLxSJ"
                 >
                   <h1
-                    class="sc-efa69b03-0 jXMLJR"
+                    class="sc-5f05e99b-0 cWsbaq"
                   >
                     <span
-                      class="sc-f4f767e-0 hiuRaG"
+                      class="sc-a4d7a179-0 gGBEJx"
                     />
                     Article du code
                   </h1>
@@ -1932,7 +1932,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                   class="sc-f2a41fcc-5 tnWPU"
                 >
                   <p
-                    class="sc-a4406a0f-1 dvtaRl"
+                    class="sc-3633cc97-1 ksBhgq"
                   >
                     <span
                       class="sc-f2a41fcc-8 ObhLq"
@@ -1960,10 +1960,10 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                 class="sc-f2a41fcc-6 vLCby"
               >
                 <div
-                  class="sc-13323d30-0 sc-c6a0a198-1 exlNfj bMPGyZ"
+                  class="sc-2a0a4b0a-0 sc-c6a0a198-1 dLOZmV bMPGyZ"
                 >
                   <p
-                    class="sc-a4406a0f-1 rjoOw"
+                    class="sc-3633cc97-1 bjxtLv"
                   >
                     intro de l'article
                   </p>
@@ -2078,7 +2078,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                   </span>
                 </button>
                 <div
-                  class="sc-26bde2b2-0 jUExxE"
+                  class="sc-95cc8fb1-0 iHYHyU"
                 >
                   <button
                     class="sc-ef7c173-1 eNIxDW spacing-left"
@@ -2124,10 +2124,10 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
         </div>
       </div>
       <div
-        class="sc-c707bea3-0 sc-c6a0a198-2 fLyNGe ceCYyW"
+        class="sc-d8f596bd-0 sc-c6a0a198-2 jtWYDW ceCYyW"
       >
         <p
-          class="sc-a4406a0f-1 rjoOw"
+          class="sc-3633cc97-1 bjxtLv"
         >
           Partager ce contenu : 
         </p>
@@ -2223,7 +2223,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             </span>
           </button>
           <div
-            class="sc-26bde2b2-0 jUExxE"
+            class="sc-95cc8fb1-0 iHYHyU"
           >
             <button
               class="sc-ef7c173-1 eNIxDW spacing-left"
@@ -2267,22 +2267,22 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
         </div>
       </div>
       <div
-        class="sc-6e8ce629-0 KibPI sc-3f9d0357-0 fZXZfe"
+        class="sc-a384ed57-0 iEQrzr sc-3f9d0357-0 fZXZfe"
       >
         <div
-          class="sc-c707bea3-0 fLyNGe"
+          class="sc-d8f596bd-0 jtWYDW"
         >
           <div
-            class="sc-13323d30-0 gtmVnh"
+            class="sc-2a0a4b0a-0 hPfzrL"
           >
             <div
               class="sc-66a51d8b-3 iitVHg"
             >
               <h2
-                class="sc-66a51d8b-4 ihsodu sc-a53a0f9a-0 hXUEeL"
+                class="sc-66a51d8b-4 ihsodu sc-b879fc2d-0 ddMxZe"
               >
                 <span
-                  class="sc-f4f767e-0 cxMIVi"
+                  class="sc-a4d7a179-0 jSVvrt"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -2290,12 +2290,12 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                 class="sc-66a51d8b-5 eRJUhM"
               >
                 <button
-                  class="sc-b0ebfae6-0 ffxSnV sc-66a51d8b-6 xfnpJ"
+                  class="sc-95bd4344-0 iLunBo sc-66a51d8b-6 xfnpJ"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-b0ebfae6-0 ffxSnV sc-66a51d8b-6 xfnpJ"
+                  class="sc-95bd4344-0 iLunBo sc-66a51d8b-6 xfnpJ"
                 >
                   Oui
                 </button>
@@ -2312,16 +2312,16 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 <div>
   <div
-    class="sc-c707bea3-0 sc-b551711e-0 fLyNGe dPgTeI"
+    class="sc-d8f596bd-0 sc-b551711e-0 jtWYDW dPgTeI"
   >
     <div
       class="sc-b551711e-1 fIhGar"
     >
       <div
-        class="sc-c707bea3-0 fLyNGe"
+        class="sc-d8f596bd-0 jtWYDW"
       >
         <div
-          class="sc-13323d30-0 eYPJba"
+          class="sc-2a0a4b0a-0 hpYuum"
         >
           <div
             class="sc-f2a41fcc-1 fNkZjj"
@@ -2331,13 +2331,13 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                 class="sc-f2a41fcc-0 hQZrlv"
               >
                 <header
-                  class="sc-238bfc37-0 exhNAB sc-f2a41fcc-4 cqLxSJ"
+                  class="sc-e32628d4-0 ktMpnf sc-f2a41fcc-4 cqLxSJ"
                 >
                   <h1
-                    class="sc-efa69b03-0 jXMLJR"
+                    class="sc-5f05e99b-0 cWsbaq"
                   >
                     <span
-                      class="sc-f4f767e-0 hiuRaG"
+                      class="sc-a4d7a179-0 gGBEJx"
                     />
                     Article du code
                   </h1>
@@ -2346,7 +2346,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                   class="sc-f2a41fcc-5 tnWPU"
                 >
                   <p
-                    class="sc-a4406a0f-1 dvtaRl"
+                    class="sc-3633cc97-1 ksBhgq"
                   >
                     <span
                       class="sc-f2a41fcc-8 ObhLq"
@@ -2374,10 +2374,10 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                 class="sc-f2a41fcc-6 vLCby"
               >
                 <div
-                  class="sc-13323d30-0 sc-c6a0a198-1 exlNfj bMPGyZ"
+                  class="sc-2a0a4b0a-0 sc-c6a0a198-1 dLOZmV bMPGyZ"
                 >
                   <p
-                    class="sc-a4406a0f-1 rjoOw"
+                    class="sc-3633cc97-1 bjxtLv"
                   >
                     intro de l'article
                   </p>
@@ -2493,7 +2493,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                   </span>
                 </button>
                 <div
-                  class="sc-26bde2b2-0 jUExxE"
+                  class="sc-95cc8fb1-0 iHYHyU"
                 >
                   <button
                     class="sc-ef7c173-1 eNIxDW spacing-left"
@@ -2539,10 +2539,10 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
         </div>
       </div>
       <div
-        class="sc-c707bea3-0 sc-c6a0a198-2 fLyNGe ceCYyW"
+        class="sc-d8f596bd-0 sc-c6a0a198-2 jtWYDW ceCYyW"
       >
         <p
-          class="sc-a4406a0f-1 rjoOw"
+          class="sc-3633cc97-1 bjxtLv"
         >
           Partager ce contenu : 
         </p>
@@ -2638,7 +2638,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             </span>
           </button>
           <div
-            class="sc-26bde2b2-0 jUExxE"
+            class="sc-95cc8fb1-0 iHYHyU"
           >
             <button
               class="sc-ef7c173-1 eNIxDW spacing-left"
@@ -2682,22 +2682,22 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
         </div>
       </div>
       <div
-        class="sc-6e8ce629-0 KibPI sc-3f9d0357-0 fZXZfe"
+        class="sc-a384ed57-0 iEQrzr sc-3f9d0357-0 fZXZfe"
       >
         <div
-          class="sc-c707bea3-0 fLyNGe"
+          class="sc-d8f596bd-0 jtWYDW"
         >
           <div
-            class="sc-13323d30-0 gtmVnh"
+            class="sc-2a0a4b0a-0 hPfzrL"
           >
             <div
               class="sc-66a51d8b-3 iitVHg"
             >
               <h2
-                class="sc-66a51d8b-4 ihsodu sc-a53a0f9a-0 hXUEeL"
+                class="sc-66a51d8b-4 ihsodu sc-b879fc2d-0 ddMxZe"
               >
                 <span
-                  class="sc-f4f767e-0 cxMIVi"
+                  class="sc-a4d7a179-0 jSVvrt"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -2705,12 +2705,12 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                 class="sc-66a51d8b-5 eRJUhM"
               >
                 <button
-                  class="sc-b0ebfae6-0 ffxSnV sc-66a51d8b-6 xfnpJ"
+                  class="sc-95bd4344-0 iLunBo sc-66a51d8b-6 xfnpJ"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-b0ebfae6-0 ffxSnV sc-66a51d8b-6 xfnpJ"
+                  class="sc-95bd4344-0 iLunBo sc-66a51d8b-6 xfnpJ"
                 >
                   Oui
                 </button>
@@ -2727,16 +2727,16 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 exports[`<Answer /> should renders tooltip without breaking previous word 1`] = `
 <div>
   <div
-    class="sc-c707bea3-0 sc-b551711e-0 fLyNGe dPgTeI"
+    class="sc-d8f596bd-0 sc-b551711e-0 jtWYDW dPgTeI"
   >
     <div
       class="sc-b551711e-1 fIhGar"
     >
       <div
-        class="sc-c707bea3-0 fLyNGe"
+        class="sc-d8f596bd-0 jtWYDW"
       >
         <div
-          class="sc-13323d30-0 eYPJba"
+          class="sc-2a0a4b0a-0 hpYuum"
         >
           <div
             class="sc-f2a41fcc-1 fNkZjj"
@@ -2746,13 +2746,13 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                 class="sc-f2a41fcc-0 hQZrlv"
               >
                 <header
-                  class="sc-238bfc37-0 exhNAB sc-f2a41fcc-4 cqLxSJ"
+                  class="sc-e32628d4-0 ktMpnf sc-f2a41fcc-4 cqLxSJ"
                 >
                   <h1
-                    class="sc-efa69b03-0 jXMLJR"
+                    class="sc-5f05e99b-0 cWsbaq"
                   >
                     <span
-                      class="sc-f4f767e-0 hiuRaG"
+                      class="sc-a4d7a179-0 gGBEJx"
                     />
                     Article du code
                   </h1>
@@ -2761,7 +2761,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                   class="sc-f2a41fcc-5 tnWPU"
                 >
                   <p
-                    class="sc-a4406a0f-1 dvtaRl"
+                    class="sc-3633cc97-1 ksBhgq"
                   >
                     <span
                       class="sc-f2a41fcc-8 ObhLq"
@@ -2789,10 +2789,10 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                 class="sc-f2a41fcc-6 vLCby"
               >
                 <div
-                  class="sc-13323d30-0 sc-c6a0a198-1 exlNfj bMPGyZ"
+                  class="sc-2a0a4b0a-0 sc-c6a0a198-1 dLOZmV bMPGyZ"
                 >
                   <p
-                    class="sc-a4406a0f-1 rjoOw"
+                    class="sc-3633cc97-1 bjxtLv"
                   >
                     intro de l'article
                   </p>
@@ -2903,7 +2903,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                   </span>
                 </button>
                 <div
-                  class="sc-26bde2b2-0 jUExxE"
+                  class="sc-95cc8fb1-0 iHYHyU"
                 >
                   <button
                     class="sc-ef7c173-1 eNIxDW spacing-left"
@@ -2949,10 +2949,10 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
         </div>
       </div>
       <div
-        class="sc-c707bea3-0 sc-c6a0a198-2 fLyNGe ceCYyW"
+        class="sc-d8f596bd-0 sc-c6a0a198-2 jtWYDW ceCYyW"
       >
         <p
-          class="sc-a4406a0f-1 rjoOw"
+          class="sc-3633cc97-1 bjxtLv"
         >
           Partager ce contenu : 
         </p>
@@ -3048,7 +3048,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             </span>
           </button>
           <div
-            class="sc-26bde2b2-0 jUExxE"
+            class="sc-95cc8fb1-0 iHYHyU"
           >
             <button
               class="sc-ef7c173-1 eNIxDW spacing-left"
@@ -3092,22 +3092,22 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
         </div>
       </div>
       <div
-        class="sc-6e8ce629-0 KibPI sc-3f9d0357-0 fZXZfe"
+        class="sc-a384ed57-0 iEQrzr sc-3f9d0357-0 fZXZfe"
       >
         <div
-          class="sc-c707bea3-0 fLyNGe"
+          class="sc-d8f596bd-0 jtWYDW"
         >
           <div
-            class="sc-13323d30-0 gtmVnh"
+            class="sc-2a0a4b0a-0 hPfzrL"
           >
             <div
               class="sc-66a51d8b-3 iitVHg"
             >
               <h2
-                class="sc-66a51d8b-4 ihsodu sc-a53a0f9a-0 hXUEeL"
+                class="sc-66a51d8b-4 ihsodu sc-b879fc2d-0 ddMxZe"
               >
                 <span
-                  class="sc-f4f767e-0 cxMIVi"
+                  class="sc-a4d7a179-0 jSVvrt"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -3115,12 +3115,12 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                 class="sc-66a51d8b-5 eRJUhM"
               >
                 <button
-                  class="sc-b0ebfae6-0 ffxSnV sc-66a51d8b-6 xfnpJ"
+                  class="sc-95bd4344-0 iLunBo sc-66a51d8b-6 xfnpJ"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-b0ebfae6-0 ffxSnV sc-66a51d8b-6 xfnpJ"
+                  class="sc-95bd4344-0 iLunBo sc-66a51d8b-6 xfnpJ"
                 >
                   Oui
                 </button>
