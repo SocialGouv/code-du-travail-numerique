@@ -5,6 +5,8 @@ import { Input } from "@codegouvfr/react-dsfr/Input";
 import { FeedbackActionChoiceValue } from "./tracking";
 import { useState } from "react";
 
+const MAX_LENGTH_SUGGESTION = 500;
+
 type Props = {
   onSubmit: (data: FeedbackDataSent) => void;
   type: "positive" | "negative";
@@ -15,8 +17,6 @@ export type FeedbackDataSent = {
   categories?: FeedbackActionChoiceValue[];
 };
 
-const MAX_LENGTH = 150;
-
 export const FeedbackContent = (props: Props) => {
   const [categories, setCategories] = useState<FeedbackActionChoiceValue[]>([]);
   const [suggestion, setSuggestion] = useState<string | undefined>(undefined);
@@ -25,6 +25,19 @@ export const FeedbackContent = (props: Props) => {
   const [errorMessageCheckbox, setErrorMessageCheckbox] = useState<string>("");
   const [errorMessageSuggestion, setErrorMessageSuggestion] =
     useState<string>("");
+  const [remainingCharacters, setRemainingCharacters] = useState<number>(
+    MAX_LENGTH_SUGGESTION
+  );
+
+  const onInputSuggestion = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const value = e.target.value;
+    if (value.trim().length > MAX_LENGTH_SUGGESTION) {
+      return;
+    } else {
+      setSuggestion(value);
+      setRemainingCharacters(MAX_LENGTH_SUGGESTION - value.length);
+    }
+  };
 
   const onChangeCategories = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCategories((prev) => {
@@ -34,15 +47,6 @@ export const FeedbackContent = (props: Props) => {
       return prev.filter((category) => category !== e.target.value);
     });
   };
-
-  const onChangeSuggestion = (value: string) => {
-    if (value.trim().length > MAX_LENGTH) {
-      return;
-    } else {
-      setSuggestion(value);
-    }
-  };
-
   const onLocalSubmit = () => {
     if (
       (!suggestion || suggestion.trim().length <= 0) &&
@@ -119,14 +123,22 @@ export const FeedbackContent = (props: Props) => {
         label="Faire une suggestion pour améliorer cette page"
         textArea
         nativeTextAreaProps={{
-          onChange: (e) => onChangeSuggestion(e.target.value),
+          onChange: onInputSuggestion,
           value: suggestion,
         }}
         state={hasSuggestionError ? "error" : "default"}
         stateRelatedMessage={errorMessageSuggestion}
       />
-      <p className={fr.cx("fr-info-text", "fr-mt-0", "fr-mb-3w")}>
-        {`${MAX_LENGTH} caractères maximum`}
+      <p
+        className={fr.cx(
+          remainingCharacters === 0 ? "fr-error-text" : "fr-info-text",
+          "fr-mt-0",
+          "fr-mb-3w"
+        )}
+      >
+        {`${remainingCharacters} caractère${
+          remainingCharacters > 1 ? "s" : ""
+        } restant${remainingCharacters > 1 ? "s" : ""}`}
       </p>
       <Button type="button" priority="secondary" onClick={onLocalSubmit}>
         Envoyer
