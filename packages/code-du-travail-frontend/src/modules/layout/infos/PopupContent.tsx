@@ -2,11 +2,10 @@
 
 import { Input } from "@codegouvfr/react-dsfr/Input";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNeedMoreInfoEvents } from "./tracking";
 import servicesDeRenseignement from "../../../data/services-de-renseignement.json";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { usePathname } from "next/navigation";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "../../../../styled-system/css";
 
@@ -16,13 +15,12 @@ type ServiceRenseignement = {
 };
 
 export function PopupContent() {
-  const currentPathName = usePathname();
   const [department, setDepartment] = useState<string>("");
   const [hasSearched, setHasSearched] = useState<boolean>(false);
   const [result, setResult] = useState<undefined | ServiceRenseignement>(
     undefined
   );
-  const { emitModalIsOpened, emitTrackNumber } = useNeedMoreInfoEvents();
+  const { emitTrackNumber } = useNeedMoreInfoEvents();
 
   const onSearchInput = () => {
     const departmentNum = (department.replace(/^0+/, "") || "").toLowerCase();
@@ -34,10 +32,6 @@ export function PopupContent() {
   const onClickLinkPhoneNumber = () => {
     emitTrackNumber();
   };
-
-  useEffect(() => {
-    if (currentPathName) emitModalIsOpened(currentPathName);
-  }, [currentPathName, emitModalIsOpened]);
 
   return (
     <>
