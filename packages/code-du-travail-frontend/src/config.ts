@@ -26,3 +26,4 @@ export const DEBOUNCE_TIME_MS = 300;
 export const API_GEO_MAX_SEARCH_RESULTS = 10;
 export const SUGGEST_DEBOUNCE_DELAY = 200;
 export const SUGGEST_MAX_RESULTS = 5;
+export const WIDGETS_PATH = /\/widgets\/.*/;

@@ -1,8 +1,13 @@
+"use client";
+
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "../../../../styled-system/css";
 import { createModal } from "@codegouvfr/react-dsfr/Modal";
 import { PopupContent } from "./PopupContent";
+import { useIsModalOpen } from "@codegouvfr/react-dsfr/Modal/useIsModalOpen";
+import { useNeedMoreInfoEvents } from "./tracking";
+import { useEffect } from "react";
 
 export const needMoreInfoModal = createModal({
   id: "more-info-modal",
@@ -10,6 +15,13 @@ export const needMoreInfoModal = createModal({
 });
 
 export const NeedMoreInfo = () => {
+  const isOpen = useIsModalOpen(needMoreInfoModal);
+  const { emitModalIsOpened } = useNeedMoreInfoEvents();
+
+  useEffect(() => {
+    if (isOpen) emitModalIsOpened();
+  }, [isOpen, emitModalIsOpened]);
+
   return (
     <div className={mainContainer} id="more-info">
       <div className={fr.cx("fr-container")}>
