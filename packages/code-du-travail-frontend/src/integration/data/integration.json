@@ -50,14 +50,14 @@
     "id": "indemnite-licenciement"
   },
   "indemnite-rupture-conventionnelle": {
-    "metaTitle": "Intégrer l’outil de calcul de l'indemnité de rupture conventionnel du Code du travail numérique",
-    "metaDescription": "Intégrer l’outil d'indemnité de rupture conventionnel du Code du travail numérique sur votre site grâce à un module (widget).",
-    "title": "Intégrer l’outil de calcul de l'indemnité de rupture conventionnel du Code du travail numérique",
+    "metaTitle": "Intégrer l’outil de calcul de l'indemnité de rupture conventionnelle du Code du travail numérique",
+    "metaDescription": "Intégrer l’outil d'indemnité de rupture conventionnelle du Code du travail numérique sur votre site grâce à un module (widget).",
+    "title": "Intégrer l’outil de calcul de l'indemnité de rupture conventionnelle du Code du travail numérique",
     "description": [
-      "Vous pouvez intégrer l’outil de calcul de l'indemnité de rupture conventionnel du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de calculer le montant de l'indemnité à verser au salarié en cas de licenciement. Afin de personnaliser le résultat, l’utilisateur pourra, s’il le souhaite, renseigner ou rechercher (à partir du nom de l’entreprise) sa convention collective."
+      "Vous pouvez intégrer l’outil de calcul de l'indemnité de rupture conventionnelle du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de calculer le montant de l'indemnité à verser au salarié en cas de licenciement. Afin de personnaliser le résultat, l’utilisateur pourra, s’il le souhaite, renseigner ou rechercher (à partir du nom de l’entreprise) sa convention collective."
     ],
-    "shortTitle": "Indemnité de rupture conventionnel",
-    "shortDescription": "Estimez le montant de l’indemnité à verser au salarié en cas de rupture conventionnel",
+    "shortTitle": "Indemnité de rupture conventionnelle",
+    "shortDescription": "Estimez le montant de l’indemnité à verser au salarié en cas de rupture conventionnelle",
     "url": "/widgets/indemnite-rupture-conventionnelle",
     "id": "indemnite-rupture-conventionnelle"
   },
