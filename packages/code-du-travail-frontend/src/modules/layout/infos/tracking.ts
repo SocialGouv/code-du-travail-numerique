@@ -1,5 +1,6 @@
 import { push as matopush } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent } from "../../../lib";
+import { usePathname } from "next/navigation";
 
 export enum MatomoNeedMoreInfoEventSecondary {
   CONTACT = "contact",
@@ -11,6 +12,8 @@ export enum MatomoNeedMoreInfoEventTertiary {
 }
 
 export const useNeedMoreInfoEvents = () => {
+  const currentPathName = usePathname();
+
   const emitTrackNumber = () => {
     matopush([
       MatomoBaseEvent.TRACK_EVENT,
@@ -19,12 +22,12 @@ export const useNeedMoreInfoEvents = () => {
     ]);
   };
 
-  const emitModalIsOpened = (baseUrl: string) => {
+  const emitModalIsOpened = () => {
     matopush([
       MatomoBaseEvent.TRACK_EVENT,
       MatomoNeedMoreInfoEventSecondary.CONTACT,
       MatomoNeedMoreInfoEventTertiary.CLICK_CONTACT_MODAL,
-      baseUrl,
+      currentPathName,
     ]);
   };
 
