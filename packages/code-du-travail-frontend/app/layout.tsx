@@ -7,6 +7,7 @@ import { defaultColorScheme } from "../src/modules/config/defaultColorScheme";
 import { StartDsfr } from "../src/modules/config/StartDsfr";
 import { Metadata } from "next/types";
 import { SITE_URL } from "../src/config";
+import { headers } from "next/headers";
 import { MatomoAnalytics } from "../src/modules/config/MatomoAnalytics";
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const lang = "fr";
+  const nonce = headers().get("x-nonce") ?? undefined;
 
   return (
     <html {...getHtmlAttributes({ defaultColorScheme, lang })}>
@@ -47,6 +49,7 @@ export default function RootLayout({
             //"Spectral-Regular",
             //"Spectral-ExtraBold"
           ]}
+          nonce={nonce}
         />
       </head>
       <body>
