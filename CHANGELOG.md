@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.155.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.155.1...v4.155.2) (2024-09-25)
+
+### Bug Fixes
+
+- **typo:** typo dans le titre de rupture conventionnelle + update de l'animation sur le bouton du questionnaire ([#6164](https://github.com/SocialGouv/code-du-travail-numerique/issues/6164)) ([99ace13](https://github.com/SocialGouv/code-du-travail-numerique/commit/99ace132f58c1af5d5f261c98498b030840a3baa))
+
+## [4.155.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.155.0...v4.155.1) (2024-09-23)
+
+### Bug Fixes
+
+- back to main nodepool ([#6162](https://github.com/SocialGouv/code-du-travail-numerique/issues/6162)) ([002e3c7](https://github.com/SocialGouv/code-du-travail-numerique/commit/002e3c7ae1f479a541ee42b0ca338b78b3f53c69))
+- **link:** ne pas afficher l'icon lien externe sur `code.travail.gouv.fr` ([#6155](https://github.com/SocialGouv/code-du-travail-numerique/issues/6155)) ([2f3b7f2](https://github.com/SocialGouv/code-du-travail-numerique/commit/2f3b7f29b7473ecfb415494668657074e8e1b86b))
+- **url accéssibilté:** mise à jour du lien vers le site https://accessibilite.numerique.gouv.fr/ ([#6160](https://github.com/SocialGouv/code-du-travail-numerique/issues/6160)) ([901ab7f](https://github.com/SocialGouv/code-du-travail-numerique/commit/901ab7fc69ac6dfce4b80440d3ae4f157ca8202e))
+
 # [4.155.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.154.0...v4.155.0) (2024-09-19)
 
 ### Features
