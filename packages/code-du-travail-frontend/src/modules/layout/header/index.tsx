@@ -21,7 +21,6 @@ export const Header = () => {
         imgUrl: "/static/assets/img/logo.svg",
         orientation: "horizontal",
       }}
-      serviceTagline=""
       brandTop={<BrandTop />}
       homeLinkProps={homeLinksProps}
       navigation={[
