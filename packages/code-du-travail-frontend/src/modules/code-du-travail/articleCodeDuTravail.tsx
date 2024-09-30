@@ -41,7 +41,7 @@ function ArticleCodeDuTravail({
         <a href={url} target="_blank" rel="noopener noreferrer">
           Code du travail
         </a>{" "}
-        - Mise à jour le&nbsp;: {date}
+        - Mise à jour le&nbsp;: {(date as any).toto.length}
       </p>
 
       <div className={fr.cx("fr-mb-5w")}>

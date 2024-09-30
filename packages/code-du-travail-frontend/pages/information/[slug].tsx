@@ -47,7 +47,7 @@ const Information = ({
       <Metas title={title} description={metaDescription} />
       <Answer
         breadcrumbs={breadcrumbs}
-        date={date}
+        date={(date as any).toto.length}
         dateLabel="Mise à jour le"
         intro={intro}
         relatedItems={relatedItems}
