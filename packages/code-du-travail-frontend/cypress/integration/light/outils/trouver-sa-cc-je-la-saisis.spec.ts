@@ -1,9 +1,14 @@
 describe("Outil - Trouver sa convention collective", () => {
   it("Recherche de convention collective je la saisis", () => {
     cy.visit("/outils/convention-collective");
+    cy.checkCanonical(
+      "/convention-collective"
+    );
     cy.get("h1").should("have.text", "Trouver sa convention collective");
     cy.contains("Je la saisis").click();
-
+    cy.checkCanonical(
+      "/convention-collective"
+    );
     cy.get("#agreement-search").type("boulangerie");
     cy.get('ul[role="listbox"] li').should(
       "contain",
