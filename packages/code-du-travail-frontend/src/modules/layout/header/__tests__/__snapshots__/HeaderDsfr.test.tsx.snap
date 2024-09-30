@@ -228,13 +228,28 @@ exports[`<Header /> should match snapshot 1`] = `
               <div
                 class="fr-header__logo"
               >
-                <p
-                  class="fr-logo"
+                <a
+                  href="/"
+                  title="Accueil - Code du travail numérique, Ministère du Travail"
                 >
-                  RÉPUBLIQUE
-                  <br />
-                  FRANÇAISE
-                </p>
+                  <p
+                    class="fr-logo"
+                  >
+                    RÉPUBLIQUE
+                    <br />
+                    FRANÇAISE
+                  </p>
+                </a>
+              </div>
+              <div
+                class="fr-header__operator"
+              >
+                <img
+                  alt="Code du travail numérique"
+                  class="fr-responsive-img"
+                  src="/static/assets/img/logo.svg"
+                  style="max-width: 9.0625rem;"
+                />
               </div>
               <div
                 class="fr-header__navbar"
@@ -259,32 +274,6 @@ exports[`<Header /> should match snapshot 1`] = `
                   Menu
                 </button>
               </div>
-            </div>
-            <div
-              class="fr-header__service"
-            >
-              <a
-                href="/"
-                title="Accueil - Code du travail numérique, Ministère du Travail"
-              >
-                <p
-                  class="fr-header__service-title"
-                >
-                  <img
-                    alt="Code du travail numérique"
-                    data-nimg="1"
-                    decoding="async"
-                    height="60"
-                    loading="lazy"
-                    src="/static/assets/img/logo.svg"
-                    style="color: transparent;"
-                    width="200"
-                  />
-                </p>
-              </a>
-              <p
-                class="fr-header__service-tagline"
-              />
             </div>
           </div>
           <div

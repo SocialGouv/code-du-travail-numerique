@@ -234,7 +234,7 @@ exports[`<Footer /> should match snapshot 1`] = `
             title="Accueil - Code du travail numérique, Ministère du Travail"
           >
             <p
-              class="fr-logo bx-sh_none!"
+              class="fr-logo"
             >
               RÉPUBLIQUE
               <br />
@@ -309,51 +309,6 @@ exports[`<Footer /> should match snapshot 1`] = `
               </a>
             </li>
           </ul>
-        </div>
-      </div>
-      <div
-        class="fr-footer__partners"
-      >
-        <h4
-          class="fr-footer__partners-title"
-        >
-          Nos partenaires
-        </h4>
-        <div
-          class="fr-footer__partners-logos"
-        >
-          <div
-            class="fr-footer__partners-sub"
-          >
-            <ul>
-              <li>
-                <a
-                  class="fr-footer__partners-link fr-raw-link"
-                  href="https://www.service-public.fr/"
-                >
-                  <img
-                    alt="service-public.fr, le site officiel de l'administration française"
-                    class="fr-footer__logo bx-sh_none!"
-                    src="/static/assets/img/logo_sp_hd_rvb.png"
-                    style="height: 5.625rem;"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  class="fr-footer__partners-link fr-raw-link"
-                  href="https://www.legifrance.gouv.fr/"
-                >
-                  <img
-                    alt="legifrance.gouv.fr - le service public de la diffusion du droit"
-                    class="fr-footer__logo bx-sh_none!"
-                    src="/static/assets/img/legifrance.svg"
-                    style="height: 5.625rem;"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
       <div
