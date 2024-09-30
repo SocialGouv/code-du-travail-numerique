@@ -4,7 +4,7 @@ describe("Outil - Trouver sa convention collective", () => {
     cy.get("h1").should("have.text", "Trouver sa convention collective");
     cy.contains("Je la recherche").click();
     cy.checkCanonical(
-      "/convention-collective"
+      "/outils/convention-collective"
     );
     cy.get("#enterprise-search").type("82129756100010", { delay: 0 });
     cy.get("#enterprise-search-address").type("7501");
