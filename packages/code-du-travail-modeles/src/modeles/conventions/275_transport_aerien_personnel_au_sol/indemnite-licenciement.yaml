@@ -179,10 +179,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
       formula: (1/4 * Sref * A1)[ + (1/4 * Sref * A2)][ + (3/5 * Sref * A3)][ + (4/5 * Sref * A4)][ + (1 * Sref * A5)]
 
 contrat salarié . convention collective . transport aérien personnel au sol . non cadres . résultat conventionnel avec plafond:
-  applicable si:
-    une de ces conditions:
-      - résultat conventionnel avant 1er fevrier 2024 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
-      - résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  applicable si: indemnité de licenciement . résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
   valeur: oui
   cdtn:
     formule:
