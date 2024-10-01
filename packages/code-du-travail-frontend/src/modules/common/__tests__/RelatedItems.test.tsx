@@ -1,7 +1,7 @@
 import { push as matopush } from "@socialgouv/matomo-next";
 import { render } from "@testing-library/react";
 import { RelatedItems } from "../RelatedItems";
-import { RelatedItem } from "../../../api/modules/related-items/type";
+import { RelatedItem } from "../../documents";
 
 jest.mock("@socialgouv/matomo-next", () => {
   return {

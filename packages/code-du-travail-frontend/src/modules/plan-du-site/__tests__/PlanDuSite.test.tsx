@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import React from "react";
 import { SiteMap } from "..";
-import type { Document } from "../../../api";
+import type { Document } from "../";
 
 describe("<SiteMap />", () => {
   it("should match snapshot", () => {

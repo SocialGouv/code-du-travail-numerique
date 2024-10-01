@@ -3,8 +3,8 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { Tag } from "@codegouvfr/react-dsfr/Tag";
 import Html from "../common/Html";
 import { ContainerRich } from "../layout/ContainerRich";
-import { RelatedItem } from "../../api/modules/related-items/type";
 import { Feedback } from "../layout/feedback";
+import { RelatedItem } from "../documents";
 
 type Props = {
   metaDescription: string;
@@ -17,7 +17,7 @@ type Props = {
   title: string;
 };
 
-function ArticleCodeDuTravail({
+export function ArticleCodeDuTravail({
   metaDescription,
   date,
   html,
@@ -57,5 +57,3 @@ function ArticleCodeDuTravail({
     </ContainerRich>
   );
 }
-
-export default ArticleCodeDuTravail;

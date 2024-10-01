@@ -2,6 +2,14 @@ import { SOURCES } from "@socialgouv/cdtn-utils";
 
 export function getModeles() {
   return {
+    _source: [
+      "title",
+      "slug",
+      "description",
+      "source",
+      "breadcrumbs",
+      "cdtnId",
+    ],
     query: {
       bool: {
         filter: [

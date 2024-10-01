@@ -3,7 +3,7 @@ import { getByIdsAgreements } from "../agreements";
 import { getByIdsContributions } from "../contributions";
 import { getBySlugHighlights } from "../highlights";
 import { getByIdsModeles } from "../modeles";
-import { getRootThemes } from "../themes";
+import { getAllThemes } from "../themes";
 import { getToolsByIds } from "../tools";
 
 export type GetHomePage = {
@@ -16,13 +16,7 @@ export type GetHomePage = {
 };
 
 export const getHomeData = async (): Promise<GetHomePage> => {
-  const themes = await getRootThemes([
-    "icon",
-    "children",
-    "title",
-    "slug",
-    "position",
-  ]);
+  const themes = await getAllThemes();
   const highlights = await getBySlugHighlights("homepage");
   const tools = await getToolsByIds([
     "d7ad36850a", // simulateur-embauche

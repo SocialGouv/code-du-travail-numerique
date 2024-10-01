@@ -1,7 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { RelatedItems } from "../common/RelatedItems";
 import { Share } from "../common/Share";
-import { RelatedItem } from "../../api/modules/related-items/type";
+import {RelatedItem} from "../documents";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];

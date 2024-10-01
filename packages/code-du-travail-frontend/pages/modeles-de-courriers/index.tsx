@@ -105,14 +105,7 @@ function Modeles(props) {
 
 export async function getStaticProps() {
   try {
-    const data = await getAllModeles([
-      "title",
-      "slug",
-      "description",
-      "source",
-      "breadcrumbs",
-      "cdtnId",
-    ]);
+    const data = await getAllModeles();
     return { props: { data }, revalidate: REVALIDATE_TIME };
   } catch (error) {
     console.error(error);

@@ -2,6 +2,7 @@ import { SOURCES } from "@socialgouv/cdtn-utils";
 
 export const getAllContributions = () => {
   return {
+    _source: ["title", "shortTitle", "slug", "idcc"],
     query: {
       bool: {
         filter: [

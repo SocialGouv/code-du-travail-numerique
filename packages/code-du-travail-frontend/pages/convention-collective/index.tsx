@@ -81,15 +81,7 @@ export default Page;
 
 export async function getStaticProps() {
   try {
-    let data = await getAllAgreements([
-      "title",
-      "shortTitle",
-      "description",
-      "url",
-      "slug",
-      "source",
-      "num",
-    ]);
+    let data = await getAllAgreements();
     return { props: { ccs: data }, revalidate: REVALIDATE_TIME };
   } catch (error) {
     console.error(error);

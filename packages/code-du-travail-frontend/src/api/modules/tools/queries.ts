@@ -1,34 +1,18 @@
-import { Tool } from "@socialgouv/cdtn-types";
-
 export const getAllToolsQuery = () => {
   return {
+    _source: ["slug", "title", "displayTool"],
     query: {
       bool: {
         must: [
-          {
-            term: {
-              isPublished: true,
-            },
-          },
-          {
-            term: {
-              source: "outils",
-            },
-          },
-          {
-            term: {
-              displayTool: true,
-            },
-          },
+          { term: { isPublished: true } },
+          { term: { source: "outils" } },
         ],
       },
     },
     size: 50,
     sort: [
       {
-        order: {
-          order: "asc",
-        },
+        order: "asc",
       },
     ],
   };
