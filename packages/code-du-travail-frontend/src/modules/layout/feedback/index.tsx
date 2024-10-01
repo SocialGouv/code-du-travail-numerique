@@ -6,7 +6,6 @@ import { FeedbackDefault } from "./FeedbackDefault";
 import { FeedbackContent, FeedbackDataSent } from "./FeedbackContent";
 import { FeedbackAnswered } from "./FeedbackAnswered";
 import { useFeedbackEvents } from "./tracking";
-import { SITE_URL } from "../../../config";
 
 export const Feedback = () => {
   const [viewFeedback, setViewFeedback] = useState<
@@ -36,11 +35,6 @@ export const Feedback = () => {
     }
     setViewFeedback("answered");
   };
-
-
-  const [testError, setTestError] = useState(false);
-
-  if (testError) throw new Error('test error.tsx');
 
   return (
     <div className={fr.cx("fr-highlight", "fr-p-2w", "fr-m-0")}>

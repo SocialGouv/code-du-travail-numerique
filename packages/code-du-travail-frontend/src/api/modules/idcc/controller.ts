@@ -1,8 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import {DEFAULT_ERROR_500_MESSAGE} from "../../utils";
+import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
+import { getIdccByQuery } from "./service";
 
-
-// TODO NOT MERGING THIS !
 export class IdccController {
   private req: NextApiRequest;
   private res: NextApiResponse;
@@ -13,10 +12,18 @@ export class IdccController {
   }
 
   public async get() {
-    console.error("I'm server side !");
-    this.res.status(500).json({
-      message: DEFAULT_ERROR_500_MESSAGE,
-    });
-    throw Error;
+    try {
+      const { q } = this.req.query;
+      const response = await getIdccByQuery(q as string);
+      this.res.status(200).json(response);
+    } catch (error) {
+      if (error instanceof NotFoundError) {
+        this.res.status(404).json({ message: error.message });
+      } else {
+        this.res.status(500).json({
+          message: DEFAULT_ERROR_500_MESSAGE,
+        });
+      }
+    }
   }
 }
