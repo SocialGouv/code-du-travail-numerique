@@ -12,6 +12,16 @@ app:
   imagePackage: app
   imageProject: cdtn
   probesPath: /api/health
+  livenessProbe:
+    failureThreshold: 15
+    httpGet:
+      path: /healthz/
+      port: http
+      scheme: HTTP
+    initialDelaySeconds: 30  # Délai avant la première vérification après le démarrage du pod
+    periodSeconds: 10         # Fréquence des vérifications
+    successThreshold: 1
+    timeoutSeconds: 10         # Temps maximum pour que l'endpoint réponde
   containerSecurityContext:
     readOnlyRootFilesystem: true
   envFrom:
@@ -51,4 +61,4 @@ app:
         - cp -r /app/packages/code-du-travail-frontend/.next/* /mnt/next;
       volumeMounts:
         - name: next
-          mountPath: /mnt/next
+          mountPath: /mnt/next 
