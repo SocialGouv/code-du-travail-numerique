@@ -61,4 +61,4 @@ app:
         - cp -r /app/packages/code-du-travail-frontend/.next/* /mnt/next;
       volumeMounts:
         - name: next
-          mountPath: /mnt/next 
+          mountPath: /mnt/next
