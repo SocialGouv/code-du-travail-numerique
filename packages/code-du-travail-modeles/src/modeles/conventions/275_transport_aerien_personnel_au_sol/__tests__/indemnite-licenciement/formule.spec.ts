@@ -16,18 +16,18 @@ describe("Formule indemnité licenciement - CC 275", () => {
         },
         {
           expectedExplanations: [
-            "A : Ancienneté totale (≈ 1.08 an : valeur arrondie)",
+            "A1 : Ancienneté jusqu'à 5 ans (≈ 1.08 an : valeur arrondie)",
             "Sref : Salaire de référence (5000 €)",
           ],
-          expectedFormula: "1/5 * Sref * A",
+          expectedFormula: "(1/5 * Sref * A1)",
           seniority: 13 / 12,
         },
         {
           expectedExplanations: [
-            "A : Ancienneté totale (5 ans)",
+            "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
             "Sref : Salaire de référence (5000 €)",
           ],
-          expectedFormula: "1/5 * Sref * A",
+          expectedFormula: "(1/5 * Sref * A1)",
           seniority: 5,
         },
         {
@@ -114,19 +114,19 @@ describe("Formule indemnité licenciement - CC 275", () => {
         {
           age: 45,
           expectedExplanations: [
-            "A : Ancienneté totale (≈ 1.08 an : valeur arrondie)",
+            "A1 : Ancienneté jusqu'à 5 ans (≈ 1.08 an : valeur arrondie)",
             "Sref : Salaire de référence (5000 €)",
           ],
-          expectedFormula: "1/5 * Sref * A",
+          expectedFormula: "(1/5 * Sref * A1)",
           seniority: 13 / 12,
         },
         {
           age: 45,
           expectedExplanations: [
-            "A : Ancienneté totale (5 ans)",
+            "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
             "Sref : Salaire de référence (5000 €)",
           ],
-          expectedFormula: "1/5 * Sref * A",
+          expectedFormula: "(1/5 * Sref * A1)",
           seniority: 5,
         },
         {
@@ -288,18 +288,18 @@ describe("Formule indemnité licenciement - CC 275", () => {
         },
         {
           expectedExplanations: [
-            "A : Ancienneté totale (≈ 1.08 an : valeur arrondie)",
+            "A1 : Ancienneté jusqu'à 5 ans (≈ 1.08 an : valeur arrondie)",
             "Sref : Salaire de référence (5000 €)",
           ],
-          expectedFormula: "1/4 * Sref * A",
+          expectedFormula: "(1/4 * Sref * A1)",
           seniority: 13 / 12,
         },
         {
           expectedExplanations: [
-            "A : Ancienneté totale (5 ans)",
+            "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
             "Sref : Salaire de référence (5000 €)",
           ],
-          expectedFormula: "1/4 * Sref * A",
+          expectedFormula: "(1/4 * Sref * A1)",
           seniority: 5,
         },
         {
@@ -386,19 +386,19 @@ describe("Formule indemnité licenciement - CC 275", () => {
         {
           age: 45,
           expectedExplanations: [
-            "A : Ancienneté totale (≈ 1.08 an : valeur arrondie)",
+            "A1 : Ancienneté jusqu'à 5 ans (≈ 1.08 an : valeur arrondie)",
             "Sref : Salaire de référence (5000 €)",
           ],
-          expectedFormula: "1/4 * Sref * A",
+          expectedFormula: "(1/4 * Sref * A1)",
           seniority: 13 / 12,
         },
         {
           age: 45,
           expectedExplanations: [
-            "A : Ancienneté totale (5 ans)",
+            "A1 : Ancienneté jusqu'à 5 ans (5 ans)",
             "Sref : Salaire de référence (5000 €)",
           ],
-          expectedFormula: "1/4 * Sref * A",
+          expectedFormula: "(1/4 * Sref * A1)",
           seniority: 5,
         },
         {
