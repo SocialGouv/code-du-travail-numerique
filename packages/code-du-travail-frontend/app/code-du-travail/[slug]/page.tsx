@@ -1,4 +1,3 @@
-import { getLabelBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import React from "react";
@@ -31,7 +30,6 @@ async function Fiche({ params }) {
   return (
     <DsfrLayout>
       <ArticleCodeDuTravail
-        suptitle={getLabelBySource(SOURCES.CDT)}
         title={title}
         relatedItems={relatedItems}
         date={format(new Date(dateDebut), "dd/MM/yyyy", {

@@ -13,7 +13,6 @@ type Props = {
   notaHtml?: string;
   relatedItems: { items: RelatedItem[]; title: string }[];
   url: string;
-  suptitle: string;
   title: string;
 };
 
@@ -23,7 +22,6 @@ export function ArticleCodeDuTravail({
   html,
   relatedItems,
   url,
-  suptitle,
   title,
   notaHtml,
 }: Props) {
@@ -33,7 +31,6 @@ export function ArticleCodeDuTravail({
       title={title}
       description={metaDescription}
     >
-      <Tag className={fr.cx("fr-mb-6w")}>{suptitle}</Tag>
       <h1 className={fr.cx("fr-mb-6w")}>{title}</h1>
 
       <p>
