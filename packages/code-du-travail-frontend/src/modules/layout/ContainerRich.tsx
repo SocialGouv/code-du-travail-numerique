@@ -4,7 +4,7 @@ import { Share } from "../common/Share";
 import { RelatedItem } from "../documents";
 import { Feedback } from "./feedback";
 
-type Props = {
+export type ContainerRichProps = {
   relatedItems: { items: RelatedItem[]; title: string }[];
   title: string;
   description: string;
@@ -16,7 +16,7 @@ export const ContainerRich = ({
   relatedItems,
   title,
   description,
-}: Props) => {
+}: ContainerRichProps) => {
   return (
     <div
       className={fr.cx(
