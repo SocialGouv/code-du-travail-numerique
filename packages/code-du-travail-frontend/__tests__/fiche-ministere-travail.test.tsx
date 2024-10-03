@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
-import FicheMT from "../pages/fiche-ministere-travail/[slug]";
+import FicheMT from "../pages/fiche-ministere-travail-old/[slug]";
 
 describe("<FicheMT />", () => {
   it("should render", () => {
