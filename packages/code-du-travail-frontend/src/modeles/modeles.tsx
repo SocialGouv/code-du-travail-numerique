@@ -6,13 +6,14 @@ import {
   theme,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 import styled from "styled-components";
 import { Breadcrumb } from "@socialgouv/cdtn-types";
 
 import Html from "../../src/common/Html";
-import { toUrl } from "../lib";
+import { MatomoActionEvent, MatomoBaseEvent, toUrl } from "../lib";
 import { getDisclaimer } from "./helpers";
+import { push as matopush } from "@socialgouv/matomo-next";
 
 export interface LetterModelProps {
   breadcrumbs: Breadcrumb[];
@@ -35,6 +36,25 @@ export const LetterModel = ({
   html,
   slug,
 }: LetterModelProps) => {
+  const handleKeyPress = useCallback((event) => {
+    if (event.ctrlKey === true && event.key === "c") {
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoBaseEvent.PAGE_MODELS,
+        MatomoActionEvent.TYPE_CTRL_C,
+        slug,
+      ]);
+    }
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyPress);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+  }, [handleKeyPress]);
+
   const filesizeFormated = Math.round((filesize / 1000) * 100) / 100;
   const [, extension] = filename.split(/\.([a-z]{2,4})$/);
   return (
