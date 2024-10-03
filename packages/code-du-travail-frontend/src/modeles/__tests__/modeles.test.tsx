@@ -13,7 +13,7 @@ afterEach(() => {
 });
 
 describe("<LetterModel />", () => {
-  it("should send matomo event when typing CTRL + C", () => {
+  it("should send matomo event when firing copy event", () => {
     const { container } = render(
       <LetterModel
         title="Mon modele"
@@ -30,33 +30,8 @@ describe("<LetterModel />", () => {
         type={undefined}
       />
     );
-    fireEvent.keyDown(container, { key: "c", ctrlKey: true });
-    expect(matopush).toHaveBeenCalledWith([
-      "trackEvent",
-      "page_modeles_de_documents",
-      "type_CTRL_C",
-      "mon-modele",
-    ]);
-  });
 
-  it("should send matomo event when typing CMD + C (Mac os)", () => {
-    const { container } = render(
-      <LetterModel
-        title="Mon modele"
-        slug={"mon-modele"}
-        breadcrumbs={[]}
-        date={""}
-        intro={""}
-        relatedItems={[]}
-        metaDescription={""}
-        filesize={undefined}
-        filename={""}
-        html={undefined}
-        meta_title={""}
-        type={undefined}
-      />
-    );
-    fireEvent.keyDown(container, { key: "c", metaKey: true });
+    fireEvent.copy(container);
     expect(matopush).toHaveBeenCalledWith([
       "trackEvent",
       "page_modeles_de_documents",

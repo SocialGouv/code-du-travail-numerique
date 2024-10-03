@@ -36,22 +36,18 @@ export const LetterModel = ({
   html,
   slug,
 }: LetterModelProps) => {
-  const trackCopy = useCallback((event) => {
-    if ((event.ctrlKey || event.metaKey) && event.key === "c") {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoBaseEvent.PAGE_MODELS,
-        MatomoActionEvent.TYPE_CTRL_C,
-        slug,
-      ]);
-    }
+  const trackCopy = useCallback(() => {
+    matopush([
+      MatomoBaseEvent.TRACK_EVENT,
+      MatomoBaseEvent.PAGE_MODELS,
+      MatomoActionEvent.TYPE_CTRL_C,
+      slug,
+    ]);
   }, []);
 
   useEffect(() => {
-    document.addEventListener("keydown", trackCopy);
-    document.addEventListener('copy', trackCopy);
+    document.addEventListener("copy", trackCopy);
     return () => {
-      document.removeEventListener("keydown", trackCopy);
       document.removeEventListener("copy", trackCopy);
     };
   }, [trackCopy]);
