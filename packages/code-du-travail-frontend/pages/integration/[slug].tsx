@@ -48,12 +48,12 @@ const IntegrationPage = (props): JSX.Element => {
 const keys = Object.keys(integrationData);
 
 const getModelesList = async () => {
-  const modeles = await getAllModeles(["title", "cdtnId"]);
+  const modeles = await getAllModeles();
   return modeles
     .map((item) => {
       return {
-        label: item.title,
-        value: item.cdtnId,
+        label: item?.title ?? "",
+        value: item?.cdtnId ?? "",
       };
     })
     ?.sort((a, b) => a.label.localeCompare(b.label));

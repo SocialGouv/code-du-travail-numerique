@@ -3,31 +3,24 @@ import {
   getAgreementBySlug,
   getAgreementsByIds,
   getAgreementsBySlugs,
-  getAllAgreementsQuery,
+  getAllAgreementsWithContributions,
 } from "./queries";
 import { ElasticSearchItem } from "../../types";
 import { AgreementDoc, ElasticAgreement } from "@socialgouv/cdtn-types";
-import {orderByAlpha} from "../../utils/sort";
+import { nonNullable } from "@socialgouv/modeles-social";
 
-export const getAllAgreements = async <K extends keyof ElasticAgreement>(
-  fields: K[],
-  sortBy?: K
-): Promise<Pick<ElasticAgreement, K>[]> => {
-  const body = getAllAgreementsQuery();
+export const getAllAgreements = async (): Promise<ElasticAgreement[]> => {
+  const body = getAllAgreementsWithContributions();
 
-  const response = await elasticsearchClient.search<Pick<ElasticAgreement, K>>({
-    ...body,
-    _source: fields,
+  const response = await elasticsearchClient.search<ElasticAgreement>({
+    body,
     index: elasticDocumentsIndex,
   });
 
-  const data = response.hits.hits
+  return response.hits.hits
     .map(({ _source }) => _source)
-    .filter((item) => item !== undefined);
-  if (sortBy) {
-    data.sort((a, b) => orderByAlpha(a, b, sortBy));
-  }
-  return data;
+    .filter(nonNullable)
+    .sort(orderByAlpha);
 };
 
 export const getBySlugsAgreements = async (
@@ -68,4 +61,10 @@ export const getBySlugAgreements = async (slug: string) => {
   }
 
   return { ...response.hits.hits[0]._source };
+};
+
+const orderByAlpha = (a, b) => {
+  return a.shortTitle.localeCompare(b.shortTitle, "fr", {
+    ignorePunctuation: true,
+  });
 };

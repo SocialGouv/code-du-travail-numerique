@@ -5,10 +5,12 @@ import React from "react";
 import { replaceArticlesRefs } from "../../../src/lib/replaceArticlesRefs";
 import { DsfrLayout } from "../../../src/modules/layout";
 import { notFound } from "next/navigation";
-import ArticleCodeDuTravail from "../../../src/modules/code-du-travail/articleCodeDuTravail";
+import {
+  ArticleCodeDuTravail,
+  fetchLegalArticle,
+} from "../../../src/modules/code-du-travail";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
-import { getLegalArticleBySlug } from "../../../src/api/modules/legal-articles";
-import { getRelatedItems } from "../../../src/api/modules/related-items/service";
+import { fetchRelatedItems } from "../../../src/modules/documents";
 
 export async function generateMetadata({ params }) {
   const { title, description } = await getArticle(params.slug);
@@ -23,7 +25,7 @@ export async function generateMetadata({ params }) {
 async function Fiche({ params }) {
   const { _id, title, description, dateDebut, html, url, notaHtml } =
     await getArticle(params.slug);
-  const relatedItems = await getRelatedItems({ _id }, params.slug);
+  const relatedItems = await fetchRelatedItems({ _id }, params.slug);
 
   const fixedHtml = replaceArticlesRefs("https://legifrance.gouv.fr", html);
   return (
@@ -45,7 +47,7 @@ async function Fiche({ params }) {
 }
 
 const getArticle = async (slug: string) => {
-  const article = await getLegalArticleBySlug(slug);
+  const article = await fetchLegalArticle(slug);
 
   if (!article) {
     return notFound();

@@ -5,7 +5,7 @@ import { SOURCES } from "@socialgouv/cdtn-utils";
 import React from "react";
 import { ListWithArrow } from "./ListWithArrow";
 import { useCommonTracking } from "./tracking";
-import { RelatedItem } from "../../api/modules/related-items/type";
+import { RelatedItem } from "../documents";
 
 export const RelatedItems = ({
   relatedItems = [],

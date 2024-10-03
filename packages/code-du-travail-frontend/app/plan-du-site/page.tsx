@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { DsfrLayout } from "../../src/modules/layout";
-import { getSitemapData } from "../../src/api";
-import { SiteMap } from "../../src/modules/plan-du-site";
+import { fetchSitemapData, SiteMap } from "../../src/modules/plan-du-site";
 
 export const metadata: Metadata = {
   title: "Plan du site",
@@ -9,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const getSiteMap = async () => {
-  return getSitemapData();
+  return fetchSitemapData();
 };
 
 async function Index() {
