@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UnexpectedError /> should match snapshot 1`] = `
+<div>
+  <div
+    class="fr-my-7w fr-mt-md-12w fr-mb-md-10w fr-grid-row fr-grid-row--gutters fr-grid-row--middle fr-grid-row--center"
+  >
+    <div
+      class="fr-py-0 fr-col-12 fr-col-md-6"
+    >
+      <h1>
+        Erreur inattendue
+      </h1>
+      <p
+        class="fr-text--sm fr-mb-3w"
+      >
+        Erreur 500
+      </p>
+      <p
+        class="fr-text--sm fr-mb-5w"
+      >
+        Désolé, le service rencontre un problème, nous travaillons pour le résoudre le plus rapidement possible.
+      </p>
+      <p
+        class="fr-text--lead fr-mb-3w"
+      >
+        Essayez de rafraîchir la page ou bien ressayez plus tard.
+      </p>
+    </div>
+    <div
+      class="fr-col-12 fr-col-md-3 fr-col-offset-md-1 fr-px-6w fr-px-md-0 fr-py-0"
+    >
+      <svg
+        aria-hidden="true"
+        class="fr-responsive-img fr-artwork"
+        height="200"
+        viewBox="0 0 160 200"
+        width="160"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          class="fr-artwork-motif"
+          href="/static/assets/img/ovoid.svg#artwork-motif"
+        />
+        <use
+          class="fr-artwork-background"
+          href="/static/assets/img/ovoid.svg#artwork-background"
+        />
+        <g
+          transform="translate(40, 60)"
+        >
+          <use
+            class="fr-artwork-decorative"
+            href="/static/assets/img/technical-error.svg#artwork-decorative"
+          />
+          <use
+            class="fr-artwork-minor"
+            href="/static/assets/img/technical-error.svg#artwork-minor"
+          />
+          <use
+            class="fr-artwork-major"
+            href="/static/assets/img/technical-error.svg#artwork-major"
+          />
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+`;
