@@ -36,8 +36,8 @@ export const LetterModel = ({
   html,
   slug,
 }: LetterModelProps) => {
-  const handleKeyPress = useCallback((event) => {
-    if (event.ctrlKey === true && event.key === "c") {
+  const trackCopy = useCallback((event) => {
+    if ((event.ctrlKey || event.metaKey) && event.key === "c") {
       matopush([
         MatomoBaseEvent.TRACK_EVENT,
         MatomoBaseEvent.PAGE_MODELS,
@@ -48,12 +48,13 @@ export const LetterModel = ({
   }, []);
 
   useEffect(() => {
-    document.addEventListener("keydown", handleKeyPress);
-
+    document.addEventListener("keydown", trackCopy);
+    document.addEventListener('copy', trackCopy);
     return () => {
-      document.removeEventListener("keydown", handleKeyPress);
+      document.removeEventListener("keydown", trackCopy);
+      document.removeEventListener("copy", trackCopy);
     };
-  }, [handleKeyPress]);
+  }, [trackCopy]);
 
   const filesizeFormated = Math.round((filesize / 1000) * 100) / 100;
   const [, extension] = filename.split(/\.([a-z]{2,4})$/);
