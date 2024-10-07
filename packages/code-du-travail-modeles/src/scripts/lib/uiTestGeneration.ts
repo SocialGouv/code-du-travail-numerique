@@ -47,7 +47,7 @@ export function generateTestResult(
         .map((text) => {
           if (!text) return "";
           const formattedText = formatTestText(text);
-          return `expect(screen.queryAllByText(/${formattedText}/)[0]).toBeInTheDocument();
+          return `expect(screen.queryAllByText(/${formattedText}/g)[0]).toBeInTheDocument();
           `;
         })
         .join("")}

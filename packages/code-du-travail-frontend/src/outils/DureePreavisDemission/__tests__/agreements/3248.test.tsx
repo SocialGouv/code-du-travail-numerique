@@ -41,7 +41,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 semaines/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 74.2.1/)[0]).toBeInTheDocument();
           expect(screen.queryAllByText(/Article 68/)[0]).toBeInTheDocument();
@@ -64,7 +64,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 74.2.1/)[0]).toBeInTheDocument();
           expect(screen.queryAllByText(/Article 68/)[0]).toBeInTheDocument();
@@ -87,7 +87,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 74.2.1/)[0]).toBeInTheDocument();
           expect(screen.queryAllByText(/Article 68/)[0]).toBeInTheDocument();
@@ -110,7 +110,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 74.2.1/)[0]).toBeInTheDocument();
           

@@ -26,7 +26,7 @@ export function generatePreavisDemissionTree() {
       };
     },
     getResult: ({ answer, answer2, ref, refUrl, refs, note }) => {
-      const regExpMatchMonth = /[0-9] (mois|jour|semaine)(s){0,1}/;
+      const regExpMatchMonth = /[0-9]{1,} (mois|jour|semaine)(s){0,1}/;
       const [matchedNumber] = regExpMatchMonth.exec(answer ?? "") ?? [];
       const [number, unit] = (matchedNumber ?? answer ?? "").split(" ");
       const regExp = /\(([^)]+)\)/;

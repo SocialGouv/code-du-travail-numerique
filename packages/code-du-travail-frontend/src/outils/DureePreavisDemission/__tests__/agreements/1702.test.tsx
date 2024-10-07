@@ -52,7 +52,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 jours/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 jours/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 10.1.1/)[0]).toBeInTheDocument();
           
@@ -73,7 +73,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 semaines/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 10.1.1/)[0]).toBeInTheDocument();
           

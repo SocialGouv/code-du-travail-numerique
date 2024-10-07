@@ -1,7 +1,7 @@
 import { generateUITestFiles } from "./lib";
 // import { generateHeureRechercheEmploiTree } from "./generateHeureRechercheEmploiTree";
 import { generatePreavisDemissionTree } from "./generatePreavisDemissionTree";
-// import { generatePreavisLicenciementTree } from "./generatePreavisLicenciementTree";
+import { generatePreavisLicenciementTree } from "./generatePreavisLicenciementTree";
 // import { generateIndemnitePrecariteTree } from "./generateIndemnitePrecarite";
 
 async function main() {
@@ -27,13 +27,13 @@ async function main() {
     ]
   );
 
-  // const dpl = generatePreavisLicenciementTree();
-  // await generateUITestFiles(
-  //   dpl,
-  //   "DureePreavisLicenciement",
-  //   `${path}/src/outils/DureePreavisLicenciement/__tests__/agreements`,
-  //   (texts) => [texts[0] === "0" ? "Aucun préavis" : texts[0]]
-  // );
+  const dpl = generatePreavisLicenciementTree();
+  await generateUITestFiles(
+    dpl,
+    "DureePreavisLicenciement",
+    `${path}/src/outils/DureePreavisLicenciement/__tests__/agreements`,
+    (texts) => [texts[0] === "0" ? "Aucun préavis" : texts[0]]
+  );
 
   // const ip = generateIndemnitePrecariteTree();
   // await generateUITestFiles(

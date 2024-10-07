@@ -41,7 +41,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 6 de l'annexe : Statut du personnel d'encadrement/)[0]).toBeInTheDocument();
           
@@ -73,7 +73,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 semaine/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 32 de la convention collective/)[0]).toBeInTheDocument();
           
@@ -94,7 +94,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 semaines/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 32 de la convention collective/)[0]).toBeInTheDocument();
           

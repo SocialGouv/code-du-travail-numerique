@@ -58,7 +58,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 1. 1 de la section 1 du Chapitre 4 de la Partie II de la convention collective/)[0]).toBeInTheDocument();
           
@@ -79,7 +79,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 1. 1 de la section 1 du Chapitre 4 de la Partie II de la convention collective/)[0]).toBeInTheDocument();
           

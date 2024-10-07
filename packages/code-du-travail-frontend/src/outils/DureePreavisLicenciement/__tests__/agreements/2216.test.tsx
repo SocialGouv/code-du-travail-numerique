@@ -58,7 +58,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/article 5 de l'annexe II/)[0]).toBeInTheDocument();
           
@@ -79,7 +79,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/article 7 de l'annexe III/)[0]).toBeInTheDocument();
           
@@ -111,7 +111,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/Aucun préavis/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/Aucun préavis/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/article 3 de l'annexe I/)[0]).toBeInTheDocument();
           
@@ -132,7 +132,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/article 3 de l'annexe I/)[0]).toBeInTheDocument();
           
@@ -153,7 +153,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/article 3 de l'annexe I/)[0]).toBeInTheDocument();
           
@@ -177,7 +177,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/article 5 de l'annexe II/)[0]).toBeInTheDocument();
           

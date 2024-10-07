@@ -69,7 +69,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/Aucun préavis/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/Aucun préavis/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe II, article 13/)[0]).toBeInTheDocument();
           
@@ -90,7 +90,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe II, article 13/)[0]).toBeInTheDocument();
           
@@ -111,7 +111,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe II, article 13/)[0]).toBeInTheDocument();
           
@@ -135,7 +135,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe IV, Article 15/)[0]).toBeInTheDocument();
           
@@ -167,7 +167,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 semaine/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe I, chapitre Ier, article 5/)[0]).toBeInTheDocument();
           
@@ -188,7 +188,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe I, chapitre Ier, article 5/)[0]).toBeInTheDocument();
           
@@ -209,7 +209,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe I, chapitre Ier, article 5/)[0]).toBeInTheDocument();
           
@@ -255,7 +255,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/Aucun préavis/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/Aucun préavis/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe III, article 17/)[0]).toBeInTheDocument();
           
@@ -276,7 +276,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe III, article 17/)[0]).toBeInTheDocument();
           
@@ -297,7 +297,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe III, article 17/)[0]).toBeInTheDocument();
           
@@ -321,7 +321,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe III, article 17/)[0]).toBeInTheDocument();
           

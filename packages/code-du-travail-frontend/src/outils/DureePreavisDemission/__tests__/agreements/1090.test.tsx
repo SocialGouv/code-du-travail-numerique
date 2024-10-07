@@ -52,7 +52,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 4.10 de la convention collective/)[0]).toBeInTheDocument();
           
@@ -73,7 +73,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 4.10 de la convention collective/)[0]).toBeInTheDocument();
           
@@ -97,7 +97,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 4.10 de la convention collective/)[0]).toBeInTheDocument();
           
@@ -129,7 +129,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 semaines/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 2.12 de la convention collective/)[0]).toBeInTheDocument();
           
@@ -150,7 +150,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 2.12 de la convention collective/)[0]).toBeInTheDocument();
           
