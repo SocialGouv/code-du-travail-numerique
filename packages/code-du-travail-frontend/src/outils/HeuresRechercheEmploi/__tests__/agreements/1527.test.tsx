@@ -41,9 +41,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées à tour de rôle par l'employeur et le salarié. L'employeur peut autoriser par écrit le salarié à cumuler ses heures pour recherche d'emploi en fin de période de préavis, si les nécessités du service le permettent./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées à tour de rôle par l'employeur et le salarié. L'employeur peut autoriser par écrit le salarié à cumuler ses heures pour recherche d'emploi en fin de période de préavis, si les nécessités du service le permettent./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 32/)[0]).toBeInTheDocument();
           
@@ -64,9 +64,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées à tour de rôle par l'employeur et le salarié. L'employeur peut autoriser par écrit le salarié à cumuler ses heures pour recherche d'emploi en fin de période de préavis, si les nécessités du service le permettent./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées à tour de rôle par l'employeur et le salarié. L'employeur peut autoriser par écrit le salarié à cumuler ses heures pour recherche d'emploi en fin de période de préavis, si les nécessités du service le permettent./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 32/)[0]).toBeInTheDocument();
           
@@ -87,7 +87,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 13/)[0]).toBeInTheDocument();
           

@@ -41,9 +41,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures par jour en cas de démission légitime donnant droit à l'allocation chômage/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures sont fixées un jour par le salarié, un jour par l'employeur. Si le salarié demande que ces heures se cumulent en fin de préavis, l'employeur devra accepter./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 heures par jour en cas de démission légitime donnant droit à l'allocation chômage/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées un jour par le salarié, un jour par l'employeur. Si le salarié demande que ces heures se cumulent en fin de préavis, l'employeur devra accepter./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 35/)[0]).toBeInTheDocument();
           
@@ -64,9 +64,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures par jour/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures sont fixées un jour par le salarié, un jour par l'employeur. Si le salarié demande que ces heures se cumulent en fin de préavis, l'employeur devra accepter./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 heures par jour/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées un jour par le salarié, un jour par l'employeur. Si le salarié demande que ces heures se cumulent en fin de préavis, l'employeur devra accepter./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 35/)[0]).toBeInTheDocument();
           
@@ -87,7 +87,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 32/)[0]).toBeInTheDocument();
           

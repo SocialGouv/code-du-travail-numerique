@@ -52,9 +52,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures par jour, dans la limite de 50 heures au total/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 heures par jour, dans la limite de 50 heures au total/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe 2 Article 11/)[0]).toBeInTheDocument();
           
@@ -75,9 +75,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures par jour, dans la limite de 50 heures au total/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 heures par jour, dans la limite de 50 heures au total/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe 2 Article 11/)[0]).toBeInTheDocument();
           
@@ -98,9 +98,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/50 heures par mois/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures d'absences peuvent être prises en une ou plusieurs fois en accord avec l'employeur./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/50 heures par mois/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures d'absences peuvent être prises en une ou plusieurs fois en accord avec l'employeur./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe 1, Article 10/)[0]).toBeInTheDocument();
           
@@ -121,9 +121,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures par jour, dans la limite de 50 heures au total/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 heures par jour, dans la limite de 50 heures au total/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe 3, Article 15/)[0]).toBeInTheDocument();
           
@@ -144,9 +144,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures par jour, dans la limite de 50 heures au total/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 heures par jour, dans la limite de 50 heures au total/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe 3, Article 15/)[0]).toBeInTheDocument();
           
@@ -181,9 +181,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures par jour, dans la limite de 50 heures au total/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 heures par jour, dans la limite de 50 heures au total/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe 2 Article 11/)[0]).toBeInTheDocument();
           
@@ -204,9 +204,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures par jour, dans la limite de 50 heures au total/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 heures par jour, dans la limite de 50 heures au total/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe 2 Article 11/)[0]).toBeInTheDocument();
           
@@ -227,9 +227,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/50 heures par mois/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures d'absences peuvent être prises en une ou plusieurs fois en accord avec l'employeur./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/50 heures par mois/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures d'absences peuvent être prises en une ou plusieurs fois en accord avec l'employeur./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe 1, Article 10/)[0]).toBeInTheDocument();
           
@@ -250,9 +250,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures par jour, dans la limite de 50 heures au total/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 heures par jour, dans la limite de 50 heures au total/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe 3, Article 15/)[0]).toBeInTheDocument();
           
@@ -273,9 +273,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures par jour, dans la limite de 50 heures au total/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 heures par jour, dans la limite de 50 heures au total/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Annexe 3, Article 15/)[0]).toBeInTheDocument();
           
@@ -299,7 +299,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./g)[0]).toBeInTheDocument();
           
         
     });

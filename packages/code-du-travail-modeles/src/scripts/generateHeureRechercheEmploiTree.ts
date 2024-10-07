@@ -53,30 +53,43 @@ export function generateHeureRechercheEmploiTree() {
         agreementSearch: situation.idcc.toString(),
       };
     },
-    getResult: ({ answer, answer2, answer3, ref, refUrl }) => ({
-      refs: ref && refUrl ? formatRefs(ref, refUrl) : [],
-      texts: answer
-        ? [
-            answer
-              .replace(/\n/g, " ")
-              .replace(/ {2}/g, " ")
-              .replace(/'/g, "'")
-              .trim(),
-            answer2
-              ?.replace(/\n/g, " ")
-              .replace(/ {2}/g, " ")
-              .replace(/'/g, "'")
-              .trim() ?? "",
-            answer3
-              ?.replace(/\n/g, " ")
-              .replace(/ {2}/g, " ")
-              .replace(/'/g, "'")
-              .trim() ?? "",
-          ]
-        : [
-            "D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.",
-          ],
-    }),
+    getResult: ({ answer, answer2, answer3, ref, refs, refUrl, note }) => {
+      const refUrls = refUrl?.split("\n") ?? [];
+      const mergedRefs =
+        ref?.split("\n").map((label, index) => ({
+          label: cleanRefLabel(label),
+          url: refUrls[index],
+        })) ?? [];
+      return {
+        refs:
+          refs?.map(({ ref, refUrl }) => ({
+            label: cleanRefLabel(ref),
+            url: refUrl,
+          })) ?? mergedRefs,
+        texts: answer
+          ? [
+              answer
+                .replace(/\n/g, " ")
+                .replace(/ {2}/g, " ")
+                .replace(/'/g, "'")
+                .trim(),
+              answer2
+                ?.replace(/\n/g, " ")
+                .replace(/ {2}/g, " ")
+                .replace(/'/g, "'")
+                .trim() ?? "",
+              answer3
+                ?.replace(/\n/g, " ")
+                .replace(/ {2}/g, " ")
+                .replace(/'/g, "'")
+                .trim() ?? "",
+              ...(note ? (Array.isArray(note) ? note : [note]) : []),
+            ]
+          : [
+              "D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.",
+            ],
+      };
+    },
     questions,
     situations,
   });

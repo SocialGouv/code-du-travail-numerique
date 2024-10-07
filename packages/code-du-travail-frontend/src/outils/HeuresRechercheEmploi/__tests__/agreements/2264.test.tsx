@@ -63,7 +63,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 43.2/)[0]).toBeInTheDocument();
           
@@ -84,9 +84,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 jours, si le préavis \(aussi appelé délai de prévenance\) est executé/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Chaque jour d'absence correspond à la durée habituelle de travail du salarié./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 jours, si le préavis \(aussi appelé délai de prévenance\) est executé/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Chaque jour d'absence correspond à la durée habituelle de travail du salarié./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 43.2/)[0]).toBeInTheDocument();
           
@@ -110,7 +110,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 43.2/)[0]).toBeInTheDocument();
           
@@ -134,7 +134,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 46/)[0]).toBeInTheDocument();
           
@@ -166,9 +166,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/un nombre d'heures égal, par mois de préavis, à la durée hebdomadaire de travail dans l'entreprise/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Ces heures pourront être prises par demi-journée ou journée entière, dans les conditions fixées d'un commun accord par l'employeur et le salarié./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/un nombre d'heures égal, par mois de préavis, à la durée hebdomadaire de travail dans l'entreprise/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Ces heures pourront être prises par demi-journée ou journée entière, dans les conditions fixées d'un commun accord par l'employeur et le salarié./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 46/)[0]).toBeInTheDocument();
           
@@ -189,9 +189,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/un nombre d'heures égal, par mois de préavis, à la durée hebdomadaire de travail prévue par le contrat de travail/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Ces heures pourront être prises par demi-journée ou journée entière, dans les conditions fixées d'un commun accord par l'employeur et le salarié./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/un nombre d'heures égal, par mois de préavis, à la durée hebdomadaire de travail prévue par le contrat de travail/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Ces heures pourront être prises par demi-journée ou journée entière, dans les conditions fixées d'un commun accord par l'employeur et le salarié./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 46/)[0]).toBeInTheDocument();
           

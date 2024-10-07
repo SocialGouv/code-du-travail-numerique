@@ -41,7 +41,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 6.13/)[0]).toBeInTheDocument();
           
@@ -62,9 +62,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures par jour ouvré/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les 2 heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider, par écrit, de les regrouper. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié. Le salarié qui a trouvé un emploi ne peut plus utiliser ces heures./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 heures par jour ouvré/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les 2 heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider, par écrit, de les regrouper. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié. Le salarié qui a trouvé un emploi ne peut plus utiliser ces heures./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 6.13/)[0]).toBeInTheDocument();
           
@@ -85,7 +85,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 6.13/)[0]).toBeInTheDocument();
           

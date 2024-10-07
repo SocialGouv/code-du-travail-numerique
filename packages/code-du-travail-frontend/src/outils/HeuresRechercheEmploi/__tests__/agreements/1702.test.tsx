@@ -52,9 +52,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 10.2/)[0]).toBeInTheDocument();
           
@@ -75,9 +75,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/12 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/12 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 10.2/)[0]).toBeInTheDocument();
           
@@ -98,9 +98,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 10.2/)[0]).toBeInTheDocument();
           
@@ -135,9 +135,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis. Aucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis. Aucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 10.2/)[0]).toBeInTheDocument();
           
@@ -158,9 +158,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/12 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis. Aucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/12 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis. Aucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 10.2/)[0]).toBeInTheDocument();
           
@@ -181,9 +181,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis. Aucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis. Aucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 10.2/)[0]).toBeInTheDocument();
           
@@ -207,7 +207,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 10.2/)[0]).toBeInTheDocument();
           

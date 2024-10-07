@@ -41,7 +41,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 4.4.1.1/)[0]).toBeInTheDocument();
           
@@ -62,9 +62,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures par jour/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Ces heures sont fixées en accord avec l'employeur. En l'absence d'accord, les heures sont fixées un jour par le salarié et le suivant par l'employeur. L'employeur peut autoriser par écrit le salarié à cumuler ces heures de recherche d'emploi en fin de période de préavis, si les nécessités du service le permettent et dans la limite de la durée effectuée du préavis/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 heures par jour/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Ces heures sont fixées en accord avec l'employeur. En l'absence d'accord, les heures sont fixées un jour par le salarié et le suivant par l'employeur. L'employeur peut autoriser par écrit le salarié à cumuler ces heures de recherche d'emploi en fin de période de préavis, si les nécessités du service le permettent et dans la limite de la durée effectuée du préavis/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 4.4.1.1/)[0]).toBeInTheDocument();
           
@@ -85,7 +85,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 4.2.3/)[0]).toBeInTheDocument();
           

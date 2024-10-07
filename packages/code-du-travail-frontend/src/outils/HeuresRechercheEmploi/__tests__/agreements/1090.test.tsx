@@ -52,9 +52,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/50 heures par mois/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salarié peut s'absenter pendant 50 heures par mois, en une ou plusieurs fois en accord avec l'employeur./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/50 heures par mois/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salarié peut s'absenter pendant 50 heures par mois, en une ou plusieurs fois en accord avec l'employeur./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 4.10/)[0]).toBeInTheDocument();
           
@@ -97,9 +97,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/24 heures/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/24 heures/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 2.12/)[0]).toBeInTheDocument();
           
@@ -120,9 +120,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/50 heures par mois/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/50 heures par mois/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 2.12/)[0]).toBeInTheDocument();
           
@@ -146,9 +146,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/l'équivalent de 30% de l'horaire hebdomadaire inscrit au contrat de travail/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/l'équivalent de 30% de l'horaire hebdomadaire inscrit au contrat de travail/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 2.12/)[0]).toBeInTheDocument();
           
@@ -186,9 +186,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/50 heures par mois/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salarié peut s'absenter pendant 50 heures par mois, en une ou plusieurs fois en accord avec l'employeur./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/50 heures par mois/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salarié peut s'absenter pendant 50 heures par mois, en une ou plusieurs fois en accord avec l'employeur./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 4.10/)[0]).toBeInTheDocument();
           
@@ -231,9 +231,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/24 heures/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/24 heures/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 2.12/)[0]).toBeInTheDocument();
           
@@ -254,9 +254,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/50 heures par mois/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/50 heures par mois/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 2.12/)[0]).toBeInTheDocument();
           
@@ -280,9 +280,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/l'équivalent de 30% de l'horaire hebdomadaire inscrit au contrat de travail/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/l'équivalent de 30% de l'horaire hebdomadaire inscrit au contrat de travail/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 2.12/)[0]).toBeInTheDocument();
           
@@ -309,7 +309,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 4.10/)[0]).toBeInTheDocument();
           

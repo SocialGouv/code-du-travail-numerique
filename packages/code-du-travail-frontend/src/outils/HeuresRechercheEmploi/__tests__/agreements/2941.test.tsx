@@ -41,8 +41,8 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures par jour travaillé ou 1 journée par semaine de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail et est égale au minimum à 1 heure par semaine/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 heures par jour travaillé ou 1 journée par semaine de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail et est égale au minimum à 1 heure par semaine/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 27/)[0]).toBeInTheDocument();
           
@@ -63,8 +63,8 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures par jour travaillé ou 1 journée par semaine de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail et est égale au minimum à 1 heure par semaine/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu, sauf en cas de licenciement pour faute grave ou faute lourde./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 heures par jour travaillé ou 1 journée par semaine de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail et est égale au minimum à 1 heure par semaine/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu, sauf en cas de licenciement pour faute grave ou faute lourde./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 26.1/)[0]).toBeInTheDocument();
           
@@ -85,7 +85,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 16/)[0]).toBeInTheDocument();
           

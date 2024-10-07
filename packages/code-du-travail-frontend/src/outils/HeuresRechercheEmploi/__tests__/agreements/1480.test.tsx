@@ -41,9 +41,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures par jour ouvrable, dans la limite de 50 heures/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Ces heures sont fixées alternativement par l'employeur et le journaliste. Toutefois, ce dernier peut, avec l'accord de l'employeur, bloquer tout ou partie de ces heures avant la fin du préavis. Le journaliste professionnel qui a trouvé un emploi ne peut plus utiliser les heures d'absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 heures par jour ouvrable, dans la limite de 50 heures/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Ces heures sont fixées alternativement par l'employeur et le journaliste. Toutefois, ce dernier peut, avec l'accord de l'employeur, bloquer tout ou partie de ces heures avant la fin du préavis. Le journaliste professionnel qui a trouvé un emploi ne peut plus utiliser les heures d'absence autorisée pour rechercher un emploi./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 46/)[0]).toBeInTheDocument();
           
@@ -64,9 +64,9 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures par jour ouvrable, dans la limite de 50 heures/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Ces heures sont fixées alternativement par l'employeur et le journaliste. Toutefois, ce dernier peut, avec l'accord de l'employeur, bloquer tout ou partie de ces heures avant la fin du préavis. Le journaliste professionnel qui a trouvé un emploi ne peut plus utiliser les heures d'absence autorisée pour rechercher un emploi./)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 heures par jour ouvrable, dans la limite de 50 heures/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Ces heures sont fixées alternativement par l'employeur et le journaliste. Toutefois, ce dernier peut, avec l'accord de l'employeur, bloquer tout ou partie de ces heures avant la fin du préavis. Le journaliste professionnel qui a trouvé un emploi ne peut plus utiliser les heures d'absence autorisée pour rechercher un emploi./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 46/)[0]).toBeInTheDocument();
           

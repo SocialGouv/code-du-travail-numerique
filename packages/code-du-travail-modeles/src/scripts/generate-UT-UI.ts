@@ -1,21 +1,18 @@
 import { generateUITestFiles } from "./lib";
-// import { generateHeureRechercheEmploiTree } from "./generateHeureRechercheEmploiTree";
+import { generateHeureRechercheEmploiTree } from "./generateHeureRechercheEmploiTree";
 import { generatePreavisDemissionTree } from "./generatePreavisDemissionTree";
 import { generatePreavisLicenciementTree } from "./generatePreavisLicenciementTree";
 // import { generateIndemnitePrecariteTree } from "./generateIndemnitePrecarite";
 
 async function main() {
   const path = "../code-du-travail-frontend/";
-  // if (process.argv.length < 3) {
-  //   throw new Error("missing argument 'path'");
-  // }
-  // const path = process.argv[2];
-  // const hre = generateHeureRechercheEmploiTree();
-  // await generateUITestFiles(
-  //   hre,
-  //   "HeuresRechercheEmploi",
-  //   `${path}/src/outils/HeuresRechercheEmploi/__tests__/agreements`
-  // );
+
+  const hre = generateHeureRechercheEmploiTree();
+  await generateUITestFiles(
+    hre,
+    "HeuresRechercheEmploi",
+    `${path}/src/outils/HeuresRechercheEmploi/__tests__/agreements`
+  );
 
   const dpd = generatePreavisDemissionTree();
   await generateUITestFiles(
