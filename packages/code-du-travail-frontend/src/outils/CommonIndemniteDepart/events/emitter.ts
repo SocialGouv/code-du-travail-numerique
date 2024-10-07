@@ -8,7 +8,7 @@ export const eventEmitter: {
   ): void;
   subscribe<T extends EventType>(
     eventType: T,
-    callback: CallbackEventType[T],
+    callback: CallbackEventType[T]
   ): void;
   unsubscribe<T extends EventType>(eventType: T): void;
   unsubscribeAll(): void;
@@ -21,7 +21,7 @@ export const eventEmitter: {
   ) {
     if (!this.events[event]) return;
     this.events[event].forEach((callback: any) =>
-      callback(...(values as Parameters<CallbackEventType[T]>)),
+      callback(...(values as Parameters<CallbackEventType[T]>))
     );
   },
 

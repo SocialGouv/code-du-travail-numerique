@@ -34,7 +34,7 @@ export const fetchSitemapData = async () => {
   const modeles = await fetchAllModels(["slug", "title"]);
   const agreements = await fetchAllAgreements(
     ["slug", "shortTitle", "num"],
-    "shortTitle",
+    "shortTitle"
   );
   const informations = await fetchAllInformations(["slug", "title"], "title");
   const contributions = await getAllContributionsGroupByQuestion(agreements);
@@ -59,7 +59,7 @@ export const fetchSitemapData = async () => {
 };
 
 const getAllContributionsGroupByQuestion = async (
-  agreements: Pick<ElasticAgreement, "shortTitle" | "num">[],
+  agreements: Pick<ElasticAgreement, "shortTitle" | "num">[]
 ) => {
   const all = await fetchAllContributions(["idcc", "title", "slug"]);
   const allGenerics = all
@@ -75,7 +75,7 @@ const getAllContributionsGroupByQuestion = async (
       children: all
         .filter(
           (contrib) =>
-            !isGeneric(contrib) && contrib.slug.includes(generic.slug),
+            !isGeneric(contrib) && contrib.slug.includes(generic.slug)
         )
         .map((contrib) => ({
           slug: contrib.slug,
@@ -90,7 +90,7 @@ const isGeneric = (contrib: { idcc: string }) => contrib.idcc === "0000";
 
 const getTitle = (
   agreements: Pick<ElasticAgreement, "num" | "shortTitle">[],
-  contrib: Pick<ContributionElasticDocument, "idcc" | "title" | "slug">,
+  contrib: Pick<ContributionElasticDocument, "idcc" | "title" | "slug">
 ): string => {
   const agreement = agreements.find((a) => a.num === parseInt(contrib.idcc));
   return agreement

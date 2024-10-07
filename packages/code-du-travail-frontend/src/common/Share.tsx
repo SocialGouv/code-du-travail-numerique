@@ -37,10 +37,10 @@ export const Share = ({
           matopush(["trackEvent", "clic_share", currentPageUrl, "facebook"]);
           window.open(
             `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-              currentPageUrl,
+              currentPageUrl
             )}&quote=${encodeURIComponent(title)}`,
             "facebook_popup",
-            POPUP_OPTIONS,
+            POPUP_OPTIONS
           );
         }}
         tabIndex={tabIndex}
@@ -52,10 +52,8 @@ export const Share = ({
       </StyledButton>
       <StyledLink
         href={`mailto:?subject=${encodeURIComponent(
-          `A lire sur le Code du travail numérique : ${title}`,
-        )}&body=${`${encodeURIComponent(
-          `${metaDescription}\n\n${currentPageUrl}`,
-        )}`}`}
+          `A lire sur le Code du travail numérique : ${title}`
+        )}&body=${`${encodeURIComponent(`${metaDescription}\n\n${currentPageUrl}`)}`}`}
         className="spacing-left"
         title="Envoyer par email"
         onClick={() => {
@@ -76,10 +74,10 @@ export const Share = ({
           matopush(["trackEvent", "clic_share", currentPageUrl, "linkedin"]);
           window.open(
             `https://www.linkedin.com/shareArticle?mini=true&title=${encodeURIComponent(
-              title,
+              title
             )}&url=${encodeURIComponent(currentPageUrl)}`,
             "linkedin_popup",
-            POPUP_OPTIONS,
+            POPUP_OPTIONS
           );
         }}
         tabIndex={tabIndex}
@@ -133,11 +131,9 @@ export const Share = ({
           onClick={() => {
             matopush(["trackEvent", "clic_share", currentPageUrl, "twitter"]);
             window.open(
-              `https://twitter.com/intent/tweet/?text=${encodeURIComponent(
-                `${title} : ${currentPageUrl}`,
-              )}`,
+              `https://twitter.com/intent/tweet/?text=${encodeURIComponent(`${title} : ${currentPageUrl}`)}`,
               "twitter_popup",
-              POPUP_OPTIONS,
+              POPUP_OPTIONS
             );
           }}
         >
@@ -181,11 +177,9 @@ export const Share = ({
           onClick={() => {
             matopush(["trackEvent", "clic_share", currentPageUrl, "whatsapp"]);
             window.open(
-              `https://wa.me/?text=${encodeURIComponent(
-                `${title} : ${currentPageUrl}`,
-              )}`,
+              `https://wa.me/?text=${encodeURIComponent(`${title} : ${currentPageUrl}`)}`,
               "whatsapp_popup",
-              POPUP_OPTIONS,
+              POPUP_OPTIONS
             );
           }}
         >

@@ -12,7 +12,7 @@ describe(`Tests d'éligibilité`, () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />,
+      />
     );
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
@@ -23,10 +23,10 @@ describe(`Tests d'éligibilité`, () => {
     userAction.click(ui.next.get());
     expect(ui.result.legalError.cddRupture.query()).toBeInTheDocument();
     expect(
-      ui.result.infoWarning.eligibleInfoWarningblock.query(),
+      ui.result.infoWarning.eligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
     expect(
-      ui.result.infoWarning.ineligibleInfoWarningblock.query(),
+      ui.result.infoWarning.ineligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
   });
   test("Vérifier l'affichage de l'erreur sur le type de contrat CDD même si on clique sur CDI avant", () => {
@@ -35,10 +35,10 @@ describe(`Tests d'éligibilité`, () => {
     userAction.click(ui.next.get());
     expect(ui.result.legalError.cddRupture.query()).toBeInTheDocument();
     expect(
-      ui.result.infoWarning.eligibleInfoWarningblock.query(),
+      ui.result.infoWarning.eligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
     expect(
-      ui.result.infoWarning.ineligibleInfoWarningblock.query(),
+      ui.result.infoWarning.ineligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
   });
 });

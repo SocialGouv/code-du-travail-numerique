@@ -27,7 +27,7 @@ export const A11yLink = React.forwardRef<HTMLAnchorElement, Props>(
         </a>
       </Link>
     );
-  },
+  }
 );
 
 A11yLink.propTypes = {

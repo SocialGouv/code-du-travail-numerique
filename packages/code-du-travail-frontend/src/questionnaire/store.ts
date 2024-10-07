@@ -48,7 +48,7 @@ const createStore = (name: string) =>
         if (!slugResponsesOld && !questionTreeOld && !currentQuestionOld) {
           const dismissalProcessQuestionnaire = getQuestionnaire(name);
           const slugResponses = slugSummaryRecursive(
-            dismissalProcessQuestionnaire,
+            dismissalProcessQuestionnaire
           );
           const questionTree = dismissalProcessQuestionnaire;
           const currentQuestion = dismissalProcessQuestionnaire;
@@ -84,7 +84,7 @@ const createStore = (name: string) =>
         const previousResponses = previousResponsesOld.slice(0, index);
         const { currentQuestion, lastResponse } = getCurrentQuestion(
           data,
-          previousResponses,
+          previousResponses
         );
         if (currentQuestion) {
           trackViewQuestion(currentQuestion.trackingName);
@@ -119,7 +119,7 @@ const createStore = (name: string) =>
   });
 
 const DossierLicenciementContext = createContext<StoreApi<Store>>(
-  {} as StoreApi<Store>,
+  {} as StoreApi<Store>
 );
 
 const { Provider } = DossierLicenciementContext;

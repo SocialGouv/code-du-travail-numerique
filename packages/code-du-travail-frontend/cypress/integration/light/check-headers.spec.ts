@@ -7,7 +7,7 @@ describe("Check security headers", () => {
       expect(response.status).to.equal(200);
 
       expect(response.headers["x-robots-tag"]).to.equal(
-        "noindex, nofollow, nosnippet",
+        "noindex, nofollow, nosnippet"
       );
 
       expect(response.headers["x-content-type-options"]).to.equal("nosniff");
@@ -23,7 +23,7 @@ describe("Check security headers", () => {
       expect(response.status).to.equal(200);
 
       expect(response.headers["x-robots-tag"]).to.equal(
-        "noindex, nofollow, nosnippet",
+        "noindex, nofollow, nosnippet"
       );
 
       expect(response.headers["x-content-type-options"]).to.equal("nosniff");
@@ -36,7 +36,7 @@ describe("Check security headers", () => {
       expect(response.status).to.equal(200);
 
       expect(response.headers["x-robots-tag"]).to.equal(
-        "noindex, nofollow, nosnippet",
+        "noindex, nofollow, nosnippet"
       );
       expect(response.headers["x-content-type-options"]).to.equal("nosniff");
       expect(response.headers["x-frame-options"]).to.be.undefined;

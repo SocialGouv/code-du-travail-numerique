@@ -20,9 +20,7 @@ function ModeleCourrier(props: LetterModelProps): JSX.Element {
     breadcrumbs,
     slug,
   } = props;
-  const category = `Modèle ${
-    type !== "fichier" ? `de ${type}` : "à télécharger"
-  }`;
+  const category = `Modèle ${type !== "fichier" ? `de ${type}` : "à télécharger"}`;
   return (
     <Layout>
       <Metas
@@ -48,7 +46,7 @@ function ModeleCourrier(props: LetterModelProps): JSX.Element {
 export const getServerSideProps = async ({ query }) => {
   const data = await getBySourceAndSlugItems<MailTemplate>(
     "modeles_de_courriers",
-    query.slug,
+    query.slug
   );
   if (!data?._source) {
     return {

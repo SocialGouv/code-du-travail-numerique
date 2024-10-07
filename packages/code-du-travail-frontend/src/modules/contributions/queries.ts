@@ -5,7 +5,7 @@ import { SOURCES } from "@socialgouv/cdtn-utils";
 export const fetchAllContributions = async <
   K extends keyof ContributionElasticDocument,
 >(
-  fields: K[],
+  fields: K[]
 ): Promise<Pick<ContributionElasticDocument, K>[]> => {
   const result = await elasticsearchClient.search<
     Pick<ContributionElasticDocument, K>

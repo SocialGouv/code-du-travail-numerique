@@ -22,7 +22,7 @@ export type Props = {
 export const LinkedTile = React.forwardRef<HTMLAnchorElement, Props>(
   function useLnkedTile(
     { children, onClick, href, noRedirect, ...props }: Props,
-    ref: ForwardedRef<any>,
+    ref: ForwardedRef<any>
   ): JSX.Element {
     const router = useRouter();
     const handleClick = async (e) => {
@@ -42,5 +42,5 @@ export const LinkedTile = React.forwardRef<HTMLAnchorElement, Props>(
         {children}
       </Tile>
     );
-  },
+  }
 );

@@ -37,16 +37,14 @@ const apiIdcc = function createFetcher(query) {
   let url = `${SITE_URL}/api/idcc?q=${encodeURIComponent(query)}`;
 
   if (/^\d+$/.test(query.replace(/\W/g, ""))) {
-    url = `${SITE_URL}/api/idcc?q=${encodeURIComponent(
-      parseInt(query.replace(/\W/g, "")),
-    )}`;
+    url = `${SITE_URL}/api/idcc?q=${encodeURIComponent(parseInt(query.replace(/\W/g, "")))}`;
   }
   return fetch(url)
     .then(async (response) => {
       if (response.ok) {
         let result = await response.json().then((results) => {
           return results.hits.hits.map(({ _source }) =>
-            formatCCn(_source),
+            formatCCn(_source)
           ) as Agreement[];
         });
         return result;

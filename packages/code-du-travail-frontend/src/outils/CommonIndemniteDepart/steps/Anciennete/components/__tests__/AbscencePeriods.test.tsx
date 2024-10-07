@@ -15,8 +15,8 @@ describe("<AbsencePeriods />", () => {
           error={undefined}
           informationData={{}}
           messageMotifExample="Ceci est un exemple"
-        />,
-      ),
+        />
+      )
     ).toBeTruthy();
   });
 
@@ -29,7 +29,7 @@ describe("<AbsencePeriods />", () => {
         error={undefined}
         informationData={{}}
         messageMotifExample="Ceci est un exemple"
-      />,
+      />
     );
     expect(getAllByRole("option").length).toBe(2);
     userEvent.click(getByText("Ajouter une absence"));
@@ -50,21 +50,21 @@ describe("<AbsencePeriods />", () => {
         error={undefined}
         informationData={{}}
         messageMotifExample="Ceci est un exemple"
-      />,
+      />
     );
     expect(
       (
         getByRole("option", {
           name: "Motif 1",
         }) as HTMLOptionElement
-      ).selected,
+      ).selected
     ).toBe(true);
     expect(
       (
         getByRole("option", {
           name: "Motif 2",
         }) as HTMLOptionElement
-      ).selected,
+      ).selected
     ).toBe(false);
     const input = getByLabelText(/\.duration/) as HTMLInputElement;
     expect(input.value).toBe("3");
@@ -79,7 +79,7 @@ describe("<AbsencePeriods />", () => {
         error={{ absences: [{ errorDuration: "Ceci est une erreur" }] }}
         informationData={{}}
         messageMotifExample="Ceci est un exemple"
-      />,
+      />
     );
 
     expect(getByText(/Ceci est une erreur/)).toBeInTheDocument();

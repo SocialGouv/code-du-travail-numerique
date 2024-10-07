@@ -16,7 +16,7 @@ describe("Indemnité licenciement - Step salaire", () => {
           icon={""}
           title={""}
           displayTitle={""}
-        />,
+        />
       );
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
@@ -52,7 +52,7 @@ describe("Indemnité licenciement - Step salaire", () => {
       // vérification que l'on affiche une erreur si on ne répond pas à la première question
       userAction.click(ui.next.get());
       expect(
-        screen.queryByText("Vous devez répondre à cette question"),
+        screen.queryByText("Vous devez répondre à cette question")
       ).toBeInTheDocument();
 
       // vérification que l'on affiche un message à noter quand on a des périodes d'alternances
@@ -60,8 +60,8 @@ describe("Indemnité licenciement - Step salaire", () => {
       expect(screen.queryByText("À noter")).toBeInTheDocument();
       expect(
         screen.queryByText(
-          "Le calcul de l’indemnité de licenciement dans le cas d’une alternance de temps plein et de temps partiel est actuellement en cours de développement.",
-        ),
+          "Le calcul de l’indemnité de licenciement dans le cas d’une alternance de temps plein et de temps partiel est actuellement en cours de développement."
+        )
       ).toBeInTheDocument();
 
       // vérification que le message disparait quand on n'a pas de périodes d'alternances
@@ -71,8 +71,8 @@ describe("Indemnité licenciement - Step salaire", () => {
       // vérification que l'on demande si le salaire a été le même sur les 12 derniers mois
       expect(
         screen.queryByText(
-          "Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement ?",
-        ),
+          "Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement ?"
+        )
       ).toBeInTheDocument();
 
       // vérification que l'on affiche un champ pour saisir son salaire s'il a été identique
@@ -82,7 +82,7 @@ describe("Indemnité licenciement - Step salaire", () => {
       // vérification que l'on affiche un message d'erreur si l'on a pas saisi le salaire
       userAction.click(ui.next.get());
       expect(
-        screen.queryByText("Vous devez répondre à cette question"),
+        screen.queryByText("Vous devez répondre à cette question")
       ).toBeInTheDocument();
 
       // vérification que l'on affiche 12 champs pour saisir son salaire avec 3 champs prime s'il n'a pas été identique
@@ -93,7 +93,7 @@ describe("Indemnité licenciement - Step salaire", () => {
       // vérification que l'on affiche un message d'erreur si l'on n'a pas saisi les salaires
       userAction.click(ui.next.get());
       expect(
-        screen.queryByText("Vous devez compléter l'ensemble des champs"),
+        screen.queryByText("Vous devez compléter l'ensemble des champs")
       ).toBeInTheDocument();
 
       // vérification que les primes ne sont pas obligatoires
@@ -102,12 +102,12 @@ describe("Indemnité licenciement - Step salaire", () => {
       });
       userAction.click(ui.next.get());
       expect(
-        screen.queryByText("Vous devez compléter l'ensemble des champs"),
+        screen.queryByText("Vous devez compléter l'ensemble des champs")
       ).not.toBeInTheDocument();
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
       expect(ui.result.salaryTableRows.getAll().length).toBe(12);
       expect(ui.result.salaryTableRows.getAll()[0]).toHaveTextContent(
-        "décembre 20211 000,00 €",
+        "décembre 20211 000,00 €"
       );
 
       // vérification que si on indique une prime, les autres ne sont pas obligatoires
@@ -117,10 +117,10 @@ describe("Indemnité licenciement - Step salaire", () => {
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
       expect(ui.result.salaryTableRows.getAll().length).toBe(12);
       expect(ui.result.salaryTableRows.getAll()[0]).toHaveTextContent(
-        "décembre 20211 000,00 €",
+        "décembre 20211 000,00 €"
       );
       expect(ui.result.salaryTableRows.getAll()[1]).toHaveTextContent(
-        "novembre 20211 000,00 €100,00 €",
+        "novembre 20211 000,00 €100,00 €"
       );
       // vérification que si l'on change un montant et supprime la prime, on ne bloque pas l'utilisateur
       userAction.click(ui.previous.get());
@@ -138,7 +138,7 @@ describe("Indemnité licenciement - Step salaire", () => {
       });
       userAction.click(ui.next.get());
       expect(
-        screen.queryByText("Vous devez saisir un montant supérieur à zéro"),
+        screen.queryByText("Vous devez saisir un montant supérieur à zéro")
       ).toBeInTheDocument();
       // Avec les bonnes valeurs
       ui.salary.salaries.getAll().forEach((input) => {
@@ -154,7 +154,7 @@ describe("Indemnité licenciement - Step salaire", () => {
       userAction.setInput(ui.salary.sameSalaryValue.get(), "0");
       userAction.click(ui.next.get());
       expect(
-        screen.queryByText("Vous devez saisir un montant supérieur à zéro"),
+        screen.queryByText("Vous devez saisir un montant supérieur à zéro")
       ).toBeInTheDocument();
       // Avec les bonnes valeurs
       userAction.setInput(ui.salary.sameSalaryValue.get(), "1000");

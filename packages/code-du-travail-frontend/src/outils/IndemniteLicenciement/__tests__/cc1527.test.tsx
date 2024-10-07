@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
   "slug": "1527-immobilier-administrateurs-de-biens-societes-immobilieres-agents-immobi",
   "title": "Convention collective nationale de l'immobilier, administrateurs de biens, sociétés immobilières, agents immobiliers, etc. (anciennement cabinets d'administrateurs de biens et des sociétés immobilières), du 9 septembre 1988. Etendue par arrêté du 24 février 1989 JORF 3 mars 1989. Mise à jour par avenant  n° 47 du 23 novembre 2010, JORF 18 juillet 2012 "
 }
-`,
+`
 );
 
 describe("Indemnité licenciement - CC 1527", () => {
@@ -26,7 +26,7 @@ describe("Indemnité licenciement - CC 1527", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />,
+      />
     );
     userAction = new UserAction();
 

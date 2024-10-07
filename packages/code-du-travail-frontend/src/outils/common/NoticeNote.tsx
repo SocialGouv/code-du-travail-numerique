@@ -10,7 +10,7 @@ export type NoticeNoteProps = {
 export const NoticeNote = (props: NoticeNoteProps) => {
   const isUniq = React.useMemo(
     () => props.numberOfElements === 1,
-    [props.numberOfElements],
+    [props.numberOfElements]
   );
   return (
     <>

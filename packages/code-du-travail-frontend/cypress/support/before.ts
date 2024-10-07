@@ -32,18 +32,18 @@ export const downloadAllUrlsToValidate = async () => {
         urls.filter(
           (url) =>
             url.includes("/information/") ||
-            url.includes("/convention-collective/"),
-        ),
-      ),
+            url.includes("/convention-collective/")
+        )
+      )
     );
 
     const urlsContributions: string[] = urls.filter((url) =>
-      url.includes("/contribution/"),
+      url.includes("/contribution/")
     );
 
     fs.writeFileSync(
       "./cypress/support/urls-contributions-to-validate.json",
-      JSON.stringify(urlsContributions),
+      JSON.stringify(urlsContributions)
     );
     console.log("All URLs to validate HTML downloaded");
   } catch (error) {

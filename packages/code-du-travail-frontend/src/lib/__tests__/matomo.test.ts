@@ -37,7 +37,7 @@ describe("Matomo", () => {
         trackQuestion(title, MatomoActionEvent.PREAVIS_RETRAITE, false);
         expect(matopush).toHaveBeenCalledTimes(isTreated);
         if (params) expect(matopush).toHaveBeenCalledWith(params);
-      },
+      }
     );
   });
   describe("Bouton d'aide sur les étapes dynamiques", () => {
@@ -58,7 +58,7 @@ describe("Matomo", () => {
         trackQuestion(title, MatomoActionEvent.PREAVIS_RETRAITE);
         expect(matopush).toHaveBeenCalledTimes(isTreated);
         if (params) expect(matopush).toHaveBeenCalledWith(params);
-      },
+      }
     );
   });
 });

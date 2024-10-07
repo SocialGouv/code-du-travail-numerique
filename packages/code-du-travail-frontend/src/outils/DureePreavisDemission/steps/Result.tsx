@@ -73,7 +73,7 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
             isList
             numberOfElements={calculateNumberOfElements(
               situation.answer,
-              situation.note,
+              situation.note
             )}
           />
           .
@@ -86,7 +86,7 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
             isList
             numberOfElements={calculateNumberOfElements(
               situation.answer,
-              situation.note,
+              situation.note
             )}
           />
           .
@@ -107,7 +107,7 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
             <NoticeNote
               numberOfElements={calculateNumberOfElements(
                 situation.answer,
-                situation.note,
+                situation.note
               )}
               currentElement={1}
             />
@@ -119,7 +119,7 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
           <NoticeNote
             numberOfElements={calculateNumberOfElements(
               situation.answer,
-              situation.note,
+              situation.note
             )}
             currentElement={calculateNumberOfElements(situation.answer) + 1}
           />

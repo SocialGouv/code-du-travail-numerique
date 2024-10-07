@@ -6,7 +6,7 @@ import { FeedbackDefault } from "../FeedbackDefault";
 describe("<FeedbackDefault />", () => {
   it("should match snapshot", () => {
     const { container } = render(
-      <FeedbackDefault onClickNo={jest.fn} onClickYes={jest.fn()} />,
+      <FeedbackDefault onClickNo={jest.fn} onClickYes={jest.fn()} />
     );
     expect(container).toMatchSnapshot();
   });

@@ -43,7 +43,7 @@ export const convertDate = (
   date: Date,
   value: number,
   unit: Unit,
-  isCalendar = false,
+  isCalendar = false
 ): Date => {
   let localDate = new Date(date);
   switch (unit) {

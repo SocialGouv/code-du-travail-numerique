@@ -23,7 +23,7 @@ if (typeof window !== "undefined") {
     .then((module) => {
       customElements.define(
         "webcomponent-tooltip",
-        module.WebComponentsTooltip,
+        module.WebComponentsTooltip
       );
     })
     .catch((err) => {
@@ -33,7 +33,7 @@ if (typeof window !== "undefined") {
     .then((module) => {
       customElements.define(
         "webcomponent-tooltip-cc",
-        module.WebComponentsTooltipCC,
+        module.WebComponentsTooltipCC
       );
     })
     .catch((err) => {

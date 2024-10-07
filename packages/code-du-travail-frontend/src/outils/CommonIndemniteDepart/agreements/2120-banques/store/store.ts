@@ -33,7 +33,7 @@ export const createAgreement2120StoreSalaires: StoreSlice<
           .informationsData.input.publicodesInformations.find(
             (v) =>
               v.question.rule.nom ===
-              "contrat salarié . convention collective . banque . licenciement disciplinaire",
+              "contrat salarié . convention collective . banque . licenciement disciplinaire"
           )
           ?.info?.slice(1, -1) === "Oui";
 
@@ -41,7 +41,7 @@ export const createAgreement2120StoreSalaires: StoreSlice<
         produce((state: Agreement2120StoreSlice) => {
           state.agreement2120Data.input.isLicenciementDisciplinaire =
             isLicenciementDisciplinaire;
-        }),
+        })
       );
     },
     onChangeSalariesVariablePart: (value: string) => {
@@ -49,7 +49,7 @@ export const createAgreement2120StoreSalaires: StoreSlice<
       const valueNumber = isNaN(number) ? undefined : number;
       get().situationFunction.setSituation(
         "salariesVariablePart",
-        valueNumber ? valueNumber.toString() : "",
+        valueNumber ? valueNumber.toString() : ""
       );
       applyGenericValidation(get, set, "salariesVariablePart", valueNumber);
     },
@@ -60,14 +60,14 @@ const applyGenericValidation = (
   get: GetState<Agreement2120StoreSlice & SalairesStoreSlice>,
   set: SetState<Agreement2120StoreSlice & SalairesStoreSlice>,
   paramName: keyof Agreement2120StoreInput,
-  value: any,
+  value: any
 ) => {
   if (get().agreement2120Data.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
       draft.agreement2120Data.input[paramName] = value;
     });
     const { isValid, errorState } = validateStep(
-      nextState.agreement2120Data.input,
+      nextState.agreement2120Data.input
     );
 
     set(
@@ -75,14 +75,14 @@ const applyGenericValidation = (
         state.agreement2120Data.error = errorState;
         state.agreement2120Data.isStepValid = isValid;
         state.agreement2120Data.input[paramName] = value;
-      }),
+      })
     );
     get().salairesFunction.onNextStep();
   } else {
     set(
       produce((state: Agreement2120StoreSlice) => {
         state.agreement2120Data.input[paramName] = value;
-      }),
+      })
     );
   }
 };

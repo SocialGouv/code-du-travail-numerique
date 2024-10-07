@@ -32,7 +32,7 @@ export const InfoBulle = ({
       }
       onVisibilityChange={() => {
         setIsLocalToolTipOpen(
-          isTooltipOpen === undefined ? !isLocalTooltipOpen : isTooltipOpen,
+          isTooltipOpen === undefined ? !isLocalTooltipOpen : isTooltipOpen
         );
         onVisibilityChange?.();
       }}

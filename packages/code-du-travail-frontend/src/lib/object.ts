@@ -1,6 +1,6 @@
 export const deepEqualObject = (
   a: Record<string, any>,
-  b: Record<string, any>,
+  b: Record<string, any>
 ) => {
   const aKeys = Object.keys(a);
   const bKeys = Object.keys(b);

@@ -17,7 +17,7 @@ type EnterpriseSearchStepProps = {
   onBackClick?: () => void;
   handleEnterpriseSelection: (
     enterprise: Enterprise,
-    params: SearchParams,
+    params: SearchParams
   ) => void;
   searchParams?: SearchParams;
   onSearchParamsChange: (params: SearchParams) => void;

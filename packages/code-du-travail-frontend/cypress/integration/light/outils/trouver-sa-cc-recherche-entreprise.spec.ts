@@ -15,7 +15,7 @@ describe("Outil - Trouver sa convention collective", () => {
 
     cy.get("p").should(
       "contain",
-      "1 convention collective trouvée pour « BOUILLON PIGALLE, 22 BOULEVARD DE CLICHY 75018 PARIS »",
+      "1 convention collective trouvée pour « BOUILLON PIGALLE, 22 BOULEVARD DE CLICHY 75018 PARIS »"
     );
 
     cy.contains("Précédent").click();
@@ -42,13 +42,13 @@ describe("Outil - Trouver sa convention collective", () => {
     cy.contains("CARREFOUR BANQUE").click();
     cy.get("p").should(
       "contain",
-      "2 conventions collectives trouvées pour « CARREFOUR BANQUE, 37 AVENUE D'ESSOMES 02400 CHATEAU-THIERRY »",
+      "2 conventions collectives trouvées pour « CARREFOUR BANQUE, 37 AVENUE D'ESSOMES 02400 CHATEAU-THIERRY »"
     );
     cy.contains("Banque IDCC2120")
       .should("have.prop", "href")
       .and(
         "equal",
-        `${Cypress.config().baseUrl}/convention-collective/2120-banque`,
+        `${Cypress.config().baseUrl}/convention-collective/2120-banque`
       );
   });
 });

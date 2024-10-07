@@ -4,7 +4,7 @@ describe("Not found", () => {
     cy.get("main").should("contain", "Erreur 404");
     cy.findByRole("heading", { level: 1 }).should(
       "have.text",
-      "Page non trouvée",
+      "Page non trouvée"
     );
 
     cy.contains("Page d'accueil")

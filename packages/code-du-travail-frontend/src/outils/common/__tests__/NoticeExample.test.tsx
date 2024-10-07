@@ -13,10 +13,10 @@ describe("<NoticeExample />", () => {
     "should render a precision for simulator $simulator",
     ({ simulator, expected }) => {
       const { queryByText } = render(
-        <NoticeExample simulator={simulator} period={"1 mois"} />,
+        <NoticeExample simulator={simulator} period={"1 mois"} />
       );
       expect(queryByText(expected)).toBeInTheDocument();
-    },
+    }
   );
 
   it.each`
@@ -25,7 +25,7 @@ describe("<NoticeExample />", () => {
     ${Simulator.PREAVIS_LICENCIEMENT}
   `("should render an example for simulator $simulator", ({ simulator }) => {
     const { queryByText } = render(
-      <NoticeExample simulator={simulator} period={"1 mois"} />,
+      <NoticeExample simulator={simulator} period={"1 mois"} />
     );
     expect(queryByText(/Exemple/)).toBeInTheDocument();
   });
@@ -38,10 +38,10 @@ describe("<NoticeExample />", () => {
     "should not render an example for simulator $simulator",
     ({ simulator }) => {
       const { queryByText } = render(
-        <NoticeExample simulator={simulator} period={"1 mois"} />,
+        <NoticeExample simulator={simulator} period={"1 mois"} />
       );
       expect(queryByText(/Exemple/)).toBeNull();
-    },
+    }
   );
 
   it.each`
@@ -62,7 +62,7 @@ describe("<NoticeExample />", () => {
         simulator={Simulator.PREAVIS_LICENCIEMENT}
         period={period}
         fromDate={new Date("2022-04-22")}
-      />,
+      />
     );
     expect(queryByText(expected)).toBeInTheDocument();
   });
@@ -82,7 +82,7 @@ describe("<NoticeExample />", () => {
         simulator={Simulator.PREAVIS_DEMISSION}
         period={period}
         fromDate={new Date("2022-04-22")}
-      />,
+      />
     );
     expect(queryByText(/Exemple/)).toBeNull();
   });
@@ -98,7 +98,7 @@ describe("<NoticeExample />", () => {
         simulator={Simulator.PREAVIS_DEMISSION}
         period={period}
         fromDate={new Date("2022-04-22")}
-      />,
+      />
     );
     expect(queryByText(expected)).toBeInTheDocument();
   });
@@ -118,7 +118,7 @@ describe("<NoticeExample />", () => {
         simulator={Simulator.PREAVIS_DEMISSION}
         period={period}
         fromDate={new Date("2022-04-22")}
-      />,
+      />
     );
     expect(queryByText(/On en compte 5 par semaine/)).toBeNull();
     expect(queryByText(/du 1er janvier au 31 décembre/)).toBeNull();
@@ -129,7 +129,7 @@ describe("<NoticeExample />", () => {
       <NoticeExample
         simulator={Simulator.PREAVIS_DEMISSION}
         period={"1 mois"}
-      />,
+      />
     );
     expect(queryByText(/précédent/)).toBeInTheDocument();
   });
@@ -139,7 +139,7 @@ describe("<NoticeExample />", () => {
       <NoticeExample
         simulator={Simulator.PREAVIS_DEMISSION}
         period={"1 jour"}
-      />,
+      />
     );
     expect(queryByText(/précédent/)).toBeNull();
   });
@@ -150,7 +150,7 @@ describe("<NoticeExample />", () => {
         simulator={Simulator.PREAVIS_DEMISSION}
         period={"1 mois"}
         idccNumber={573}
-      />,
+      />
     );
     expect(queryByText(/lendemain/)).toBeInTheDocument();
   });
@@ -161,7 +161,7 @@ describe("<NoticeExample />", () => {
         simulator={Simulator.PREAVIS_DEMISSION}
         period={"1 mois"}
         idccNumber={5678}
-      />,
+      />
     );
     expect(queryByText(/lendemain/)).toBeNull();
   });

@@ -31,7 +31,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
             className={fr.cx("fr-btn", "fr-btn--tertiary", "fr-btn--facebook")}
             title="Partager sur Facebook"
             href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-              currentPageUrl,
+              currentPageUrl
             )}&quote=${encodeURIComponent(title)}`}
             target="_blank"
             rel="noopener noreferrer"
@@ -46,9 +46,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
           <a
             className={fr.cx("fr-btn", "fr-btn--tertiary", "fr-btn--twitter-x")}
             title="Partager sur X (anciennement Twitter)"
-            href={`https://x.com/intent/post?text=${encodeURIComponent(
-              `${title} : ${currentPageUrl}`,
-            )}`}
+            href={`https://x.com/intent/post?text=${encodeURIComponent(`${title} : ${currentPageUrl}`)}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {
@@ -63,7 +61,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
             className={fr.cx("fr-btn", "fr-btn--tertiary", "fr-btn--linkedin")}
             title="Partager sur LinkedIn"
             href={`https://www.linkedin.com/shareArticle?mini=true&title=${encodeURIComponent(
-              title,
+              title
             )}&url=${encodeURIComponent(currentPageUrl)}`}
             target="_blank"
             rel="noopener noreferrer"
@@ -80,10 +78,8 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
             title="Envoyer par email"
             rel="noopener external"
             href={`mailto:?subject=${encodeURIComponent(
-              `A lire sur le Code du travail numérique : ${title}`,
-            )}&body=${`${encodeURIComponent(
-              `${metaDescription}\n\n${currentPageUrl}`,
-            )}`}`}
+              `A lire sur le Code du travail numérique : ${title}`
+            )}&body=${`${encodeURIComponent(`${metaDescription}\n\n${currentPageUrl}`)}`}`}
             onClick={() => {
               emitClickShare("email");
             }}
@@ -95,9 +91,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
           <a
             className={fr.cx("fr-btn", "fr-btn--tertiary", "ri-whatsapp-line")}
             title="Envoyer par Whatsapp"
-            href={`https://wa.me/?text=${encodeURIComponent(
-              `${title} : ${currentPageUrl}`,
-            )}`}
+            href={`https://wa.me/?text=${encodeURIComponent(`${title} : ${currentPageUrl}`)}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {

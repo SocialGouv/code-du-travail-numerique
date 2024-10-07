@@ -55,11 +55,11 @@ export const SalaireTempsPlein = ({
     let newLocalSalaries: SalaryPeriods[];
     if (isFirstEdit) {
       newLocalSalaries = salaryPeriods.map((p, i) =>
-        i >= index ? { ...p, value: salary } : p,
+        i >= index ? { ...p, value: salary } : p
       );
     } else {
       newLocalSalaries = salaryPeriods.map((p, i) =>
-        i === index ? { ...p, value: salary } : p,
+        i === index ? { ...p, value: salary } : p
       );
     }
     onSalariesChange(newLocalSalaries);
@@ -84,7 +84,7 @@ export const SalaireTempsPlein = ({
         ? prime
           ? { ...p, prime }
           : { month: p.month, value: p.value }
-        : p,
+        : p
     );
     onSalariesChange(newLocalSalaries);
   };
@@ -137,9 +137,7 @@ export const SalaireTempsPlein = ({
                 {index < 3 && !noPrime && (
                   <>
                     <Input
-                      title={`Renseignez la prime exceptionnelle pour le mois ${
-                        index + 1
-                      } ici`}
+                      title={`Renseignez la prime exceptionnelle pour le mois ${index + 1} ici`}
                       id={`prime.${index}`}
                       name={`prime.${index}`}
                       type="number"

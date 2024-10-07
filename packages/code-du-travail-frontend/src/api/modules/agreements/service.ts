@@ -24,7 +24,7 @@ export const getAllAgreements = async (): Promise<ElasticAgreement[]> => {
 };
 
 export const getBySlugsAgreements = async (
-  slugs: string[],
+  slugs: string[]
 ): Promise<ElasticSearchItem[]> => {
   const body = getAgreementsBySlugs(slugs);
   const response = await elasticsearchClient.search<any>({
@@ -37,7 +37,7 @@ export const getBySlugsAgreements = async (
 };
 
 export const getByIdsAgreements = async (
-  ids: string[],
+  ids: string[]
 ): Promise<ElasticSearchItem<{ shortTitle: string }>[]> => {
   const body = getAgreementsByIds(ids);
   const response = await elasticsearchClient.search<any>({

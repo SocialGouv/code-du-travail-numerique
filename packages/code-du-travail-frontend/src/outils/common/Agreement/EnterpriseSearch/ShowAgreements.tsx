@@ -83,7 +83,7 @@ const ShowAgreements = ({
         <OnChange name={AGREEMENT_ID_NAME}>
           {(values) => {
             const agreementChanged = enterprise?.conventions?.find(
-              (agreement) => agreement.id.toString() === values.toString(),
+              (agreement) => agreement.id.toString() === values.toString()
             );
             setAgreement(agreementChanged);
             onChange(enterprise, agreementChanged ?? null);

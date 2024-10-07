@@ -18,7 +18,7 @@ Storage.prototype.getItem = jest.fn(
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635780",
     "slug": "2120-banque"
 }
-`,
+`
 );
 
 describe("Rupture Co - CC 2120", () => {
@@ -29,7 +29,7 @@ describe("Rupture Co - CC 2120", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />,
+      />
     );
     userAction = new UserAction();
 
@@ -89,7 +89,7 @@ describe("Rupture Co - CC 2120", () => {
     expect(ui.result.dismissalType.discipline.query()).not.toBeInTheDocument();
     expect(ui.result.notifications.queryAll()).toHaveLength(2);
     expect(ui.result.notification(1).get()).toHaveTextContent(
-      "(2) Si lors de l’absence pour maladie non professionnelle le salarié a bénéficié d’une indemnisation complémentaire versée par l'employeur (maintien de salaire), en plus des indemnités journalières de la sécurité sociale, le montant de l’indemnité prévu par la convention collective pourrait être plus élevé. En effet, dans ce cas, la période d’absence est intégrée dans l’ancienneté du salarié. Par soucis de simplification, ce simulateur déduit toutes les absences pour maladie non professionnelle sans distinguer, pour calculer l’ancienneté du salarié, selon qu’elles ont été indemnisées ou pas.",
+      "(2) Si lors de l’absence pour maladie non professionnelle le salarié a bénéficié d’une indemnisation complémentaire versée par l'employeur (maintien de salaire), en plus des indemnités journalières de la sécurité sociale, le montant de l’indemnité prévu par la convention collective pourrait être plus élevé. En effet, dans ce cas, la période d’absence est intégrée dans l’ancienneté du salarié. Par soucis de simplification, ce simulateur déduit toutes les absences pour maladie non professionnelle sans distinguer, pour calculer l’ancienneté du salarié, selon qu’elles ont été indemnisées ou pas."
     );
   });
 });

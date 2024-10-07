@@ -101,7 +101,7 @@ const StepResult = (): JSX.Element => {
           originDepart,
           agreement?.num,
           result?.value,
-          isAgreementSupported,
+          isAgreementSupported
         )}
       />
     </>

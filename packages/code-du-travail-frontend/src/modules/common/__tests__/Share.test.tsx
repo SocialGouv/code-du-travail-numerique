@@ -16,7 +16,7 @@ jest.mock("next/navigation", () => ({
 describe("<Share />", () => {
   it("renders", () => {
     const { container } = render(
-      <Share title="HELLO" metaDescription="Ceci est ma page" />,
+      <Share title="HELLO" metaDescription="Ceci est ma page" />
     );
     expect(container).toMatchSnapshot();
   });
@@ -35,7 +35,7 @@ describe("<Share />", () => {
       jest.resetAllMocks();
 
       const { getByText } = render(
-        <Share title="HELLO" metaDescription="Ceci est ma page" />,
+        <Share title="HELLO" metaDescription="Ceci est ma page" />
       );
       const link = getByText(linkText);
       link.click();
@@ -46,6 +46,6 @@ describe("<Share />", () => {
         "http://api.url/my-page",
         event,
       ]);
-    },
+    }
   );
 });

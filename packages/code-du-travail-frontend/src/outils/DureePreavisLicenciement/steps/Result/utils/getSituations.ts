@@ -9,14 +9,14 @@ export const getSituations = (
   allSituations: Situation[],
   legalCriteria: Criteria,
   agreementCriteria: Criteria,
-  idcc: number,
+  idcc: number
 ): Situations => {
   // Agreement situation
   const initialAgreementSituations =
     idcc > 0 ? getSituationsFor(allSituations, { idcc }) : [];
   const possibleAgreementSituations = filterSituations(
     initialAgreementSituations,
-    agreementCriteria,
+    agreementCriteria
   );
 
   const agreementSituation =
@@ -44,7 +44,7 @@ export const getSituations = (
   });
   const possibleLegalSituations = filterSituations(
     initialLegalSituations,
-    legalCriteria,
+    legalCriteria
   );
 
   const legalSituation =

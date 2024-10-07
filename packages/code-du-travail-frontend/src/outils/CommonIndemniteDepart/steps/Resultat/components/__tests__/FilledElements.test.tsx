@@ -51,8 +51,8 @@ describe("<FilledElement />", () => {
           hasSameSalary={true}
           salary={"1000"}
           isStepSalaryHidden={false}
-        />,
-      ),
+        />
+      )
     ).toBeTruthy();
   });
 });

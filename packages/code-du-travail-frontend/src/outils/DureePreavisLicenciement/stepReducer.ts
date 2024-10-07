@@ -34,13 +34,13 @@ export const initialState = {
       name: "info_cc",
       onStepDone: (title: string, values: FormContent): void => {
         const isTreated = getSupportedCC(data.situations).find(
-          (agreement) => agreement.idcc === values.ccn?.selected?.num,
+          (agreement) => agreement.idcc === values.ccn?.selected?.num
         );
         pushAgreementEvents(
           title,
           values.ccn,
           !!isTreated,
-          values.hasNoEnterpriseSelected ? true : false,
+          values.hasNoEnterpriseSelected ? true : false
         );
       },
     },

@@ -32,7 +32,7 @@ export const validateStep = (state: CommonInformationsStoreInput) => {
 
 export const isValidField = (
   value: string | undefined | null,
-  type: RuleType | undefined,
+  type: RuleType | undefined
 ): string | undefined => {
   if (value === undefined || value === null || value === "") {
     return "Vous devez répondre à cette question";

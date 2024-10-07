@@ -13,7 +13,7 @@ export const asciiMathToTex = (ascii) => {
   while (tex.includes("/")) {
     tex = tex.replace(
       new RegExp(`${fullMatcher}\\s?\\/\\s?${fullMatcher}`, "gm"),
-      `\\frac{$1$2}{$3$4}`,
+      `\\frac{$1$2}{$3$4}`
     );
   }
   tex = tex.replace(new RegExp(`\%`, "gm"), `\\%`);

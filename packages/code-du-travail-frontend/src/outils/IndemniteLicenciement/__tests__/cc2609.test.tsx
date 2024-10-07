@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
   "slug": "2609-batiment-etam",
   "title": "Bâtiment ETAM"
 }
-`,
+`
 );
 
 describe("Indemnité licenciement - CC 2609", () => {
@@ -28,7 +28,7 @@ describe("Indemnité licenciement - CC 2609", () => {
           icon={""}
           title={""}
           displayTitle={""}
-        />,
+        />
       );
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
@@ -67,8 +67,8 @@ describe("Indemnité licenciement - CC 2609", () => {
 
       expect(
         rendering.queryByText(
-          "Les salaires indiqués comportent-ils une partie variable ?",
-        ),
+          "Les salaires indiqués comportent-ils une partie variable ?"
+        )
       ).not.toBeInTheDocument();
 
       // vérification que l'on n'affiche pas la partie variable sur le résultat
@@ -78,8 +78,8 @@ describe("Indemnité licenciement - CC 2609", () => {
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
       expect(
         rendering.queryByText(
-          /Les salaires indiqués comportent une partie variable/,
-        ),
+          /Les salaires indiqués comportent une partie variable/
+        )
       ).not.toBeInTheDocument();
 
       // vérification que l'on demande si le salaire comporte une partie de variable si salaires différents
@@ -88,8 +88,8 @@ describe("Indemnité licenciement - CC 2609", () => {
 
       expect(
         rendering.queryByText(
-          "Les salaires indiqués comportent-ils une partie variable ?",
-        ),
+          "Les salaires indiqués comportent-ils une partie variable ?"
+        )
       ).toBeInTheDocument();
 
       // vérification que l'on affiche la réponse du salaire variable sur l'étape de résultat
@@ -100,8 +100,8 @@ describe("Indemnité licenciement - CC 2609", () => {
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
       expect(
         rendering.queryByText(
-          /Les salaires indiqués comportent une partie variable/,
-        ),
+          /Les salaires indiqués comportent une partie variable/
+        )
       ).toBeInTheDocument();
     });
   });

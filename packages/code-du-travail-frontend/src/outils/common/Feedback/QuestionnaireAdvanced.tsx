@@ -85,14 +85,14 @@ export const QuestionnaireAdvanced = ({
             trackFeedback(
               EVENT_ACTION.QUESTION_CLARITY,
               statusQuestion,
-              category,
+              category
             );
           }
           if (statusExplanation) {
             trackFeedback(
               EVENT_ACTION.RESULT_CLARITY,
               statusExplanation,
-              category,
+              category
             );
           }
           if (feedbackText) {

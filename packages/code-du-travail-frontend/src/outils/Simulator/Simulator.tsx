@@ -40,7 +40,7 @@ const SimulatorContent = <FormState, StepName extends string>({
   const store = useContext(SimulatorContext);
   const { currentStepIndex, previousStep, nextStep } = useSimulatorStepStore(
     store,
-    (state) => state,
+    (state) => state
   );
 
   const currentStep = steps[currentStepIndex];
@@ -53,7 +53,7 @@ const SimulatorContent = <FormState, StepName extends string>({
         label,
         name,
       })),
-    [steps],
+    [steps]
   );
 
   useEffect(() => {
@@ -149,7 +149,7 @@ const SimulatorContent = <FormState, StepName extends string>({
 };
 
 const Simulator = <FormState, StepName extends string>(
-  props: Props<FormState, StepName>,
+  props: Props<FormState, StepName>
 ): JSX.Element => {
   const store = useRef(createSimulatorStore()).current;
   return (

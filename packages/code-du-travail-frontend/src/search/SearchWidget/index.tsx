@@ -35,7 +35,7 @@ export const SearchWidget = () => {
           ]);
           window.parent?.postMessage(
             { name: "button-search", kind: "click" },
-            "*",
+            "*"
           );
         }}
       >

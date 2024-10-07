@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
   "slug": "1702-travaux-publics-tome-ii-ouvriers",
   "title": "Travaux publics (Tome II : Ouvriers)"
 }
-`,
+`
 );
 
 describe("Indemnité licenciement - CC 3127", () => {
@@ -26,7 +26,7 @@ describe("Indemnité licenciement - CC 3127", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />,
+      />
     );
     userAction = new UserAction();
 
@@ -56,13 +56,13 @@ describe("Indemnité licenciement - CC 3127", () => {
 
     expect(
       screen.queryByText(
-        /Depuis le 11 mars 2023 les périodes d’absence pour congé paternité ne sont plus retirées/,
-      ),
+        /Depuis le 11 mars 2023 les périodes d’absence pour congé paternité ne sont plus retirées/
+      )
     ).toBeInTheDocument();
 
     expect(ui.result.notifications.queryAll()).toHaveLength(1);
     expect(ui.result.notification(0).get()).toHaveTextContent(
-      "Ce montant est exonéré d’impôt sur le revenu et de cotisations sociales sous certaines conditions",
+      "Ce montant est exonéré d’impôt sur le revenu et de cotisations sociales sous certaines conditions"
     );
   });
 });

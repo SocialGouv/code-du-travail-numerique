@@ -15,7 +15,7 @@ describe("<TypeContrat />", () => {
             <TypeContrat name="contrat" />
           </>
         )}
-      />,
+      />
     );
     expect(container).toMatchSnapshot();
   });

@@ -11,7 +11,7 @@ test(`
   - Vérifier l'affichage de la question inaptitude
 `, async () => {
   await render(
-    <CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />,
+    <CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />
   );
   const userAction = new UserAction();
 

@@ -47,12 +47,12 @@ export const Question = ({
               tooltip.trackableFn?.(
                 isTooltipOpen === undefined
                   ? !isLocalTooltipOpen
-                  : isTooltipOpen,
+                  : isTooltipOpen
               );
               setIsLocalToolTipOpen(
                 isTooltipOpen === undefined
                   ? !isLocalTooltipOpen
-                  : isTooltipOpen,
+                  : isTooltipOpen
               );
               onSwitchTooltip?.();
             }}

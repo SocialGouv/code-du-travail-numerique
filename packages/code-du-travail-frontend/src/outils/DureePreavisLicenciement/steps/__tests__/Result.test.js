@@ -119,8 +119,8 @@ describe("<StepResult />", () => {
       expect(getByText(/8 jours/)).toBeInTheDocument();
       expect(
         queryByText(
-          /Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective/,
-        ),
+          /Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective/
+        )
       ).not.toBeInTheDocument();
     });
   });

@@ -21,7 +21,7 @@ const createValuesMatcher = (values: Criteria) => (item: Situation) => {
 
 export function filterSituations(
   situations: Situation[],
-  criteria: Criteria = {},
+  criteria: Criteria = {}
 ): Situation[] {
   const matchValues = createValuesMatcher(criteria);
   return situations.filter(matchValues);
@@ -30,11 +30,11 @@ export function filterSituations(
 export function getNextQuestionKey(
   possibleSituations: Situation[],
   criteriaOrder: string[],
-  values = {},
+  values = {}
 ) {
   const [criterion] = criteriaOrder
     .filter((criterion) =>
-      possibleSituations.some((situation) => situation.criteria[criterion]),
+      possibleSituations.some((situation) => situation.criteria[criterion])
     )
     .filter((criterion) => !values[criterion]);
   return criterion;
@@ -42,10 +42,10 @@ export function getNextQuestionKey(
 
 export function getOptions(
   possibleSituations: Situation[],
-  nextQuestionKey: string,
+  nextQuestionKey: string
 ): string[][] {
   const dupValues = possibleSituations.map(
-    ({ criteria }) => criteria[nextQuestionKey],
+    ({ criteria }) => criteria[nextQuestionKey]
   );
   return [...new Set(dupValues)]
     .filter(Boolean)
@@ -66,7 +66,7 @@ export function formatOption(a: string): [string, string] {
 export function getPastQuestions(
   initialSituations: Situation[],
   criteriaOrder: string[],
-  criteria = {},
+  criteria = {}
 ): [string, string[][]][] {
   const questions = {};
   const answers: [string, string[][]][] = [];
@@ -74,7 +74,7 @@ export function getPastQuestions(
   let questionKey = getNextQuestionKey(
     initialSituations,
     criteriaOrder,
-    questions,
+    questions
   );
 
   while (Object.prototype.hasOwnProperty.call(criteria, questionKey)) {
@@ -85,7 +85,7 @@ export function getPastQuestions(
     questionKey = getNextQuestionKey(
       initialSituations,
       criteriaOrder,
-      questions,
+      questions
     );
   }
   return answers;
@@ -93,10 +93,10 @@ export function getPastQuestions(
 
 export function getSituationsFor<T extends Situation>(
   data: T[],
-  obj: Record<string, string | number | undefined | null>,
+  obj: Record<string, string | number | undefined | null>
 ): T[] {
   return data.filter((situation) =>
-    Object.entries(obj).every(([key, value]) => situation[key] === value),
+    Object.entries(obj).every(([key, value]) => situation[key] === value)
   );
 }
 
@@ -104,7 +104,7 @@ const isNotEmpty = (obj: Criteria) => Object.keys(obj).length > 0;
 
 const situationsForAgreement = (
   data: Situation[],
-  idcc: number | undefined | null,
+  idcc: number | undefined | null
 ) => {
   if (!idcc) return [];
 
@@ -113,20 +113,20 @@ const situationsForAgreement = (
 
 export const isAgreementSupported = (
   data: Situation[],
-  idcc: number | undefined,
+  idcc: number | undefined
 ): boolean => situationsForAgreement(data, idcc).length > 0;
 
 export const hasCriteria = (
   data: Situation[],
-  idcc: number | undefined,
+  idcc: number | undefined
 ): boolean =>
   situationsForAgreement(data, idcc).filter((situation) =>
-    isNotEmpty(situation.criteria),
+    isNotEmpty(situation.criteria)
   ).length > 0;
 
 export const skipInformations = (
   data: Situation[],
-  idcc: number | undefined,
+  idcc: number | undefined
 ): boolean => !isAgreementSupported(data, idcc) || !hasCriteria(data, idcc);
 
 export function recapSituation(criteria: Criteria) {
@@ -152,7 +152,7 @@ export const getFormProps = ({ key, criteria, pastQuestions }) =>
       // list keys that need to be reseted
       pastQuestions
         .slice(pastQuestions.findIndex(([k]) => k === key) + 1)
-        .map(([key]) => key),
+        .map(([key]) => key)
     );
 
 export const getSupportedCC = (data: Situation[]): AgreementSupportInfo[] => {
@@ -171,12 +171,12 @@ export const getSupportedCC = (data: Situation[]): AgreementSupportInfo[] => {
 
 export const validateUnsupportedAgreement = (
   situations: Situation[],
-  ccn?: ConventionCollective,
+  ccn?: ConventionCollective
 ) => {
   const supportedAgreement = getSupportedCC(situations);
   if (ccn && ccn.selected) {
     const idccInfo = supportedAgreement.find(
-      (item) => item.idcc === ccn.selected!.num,
+      (item) => item.idcc === ccn.selected!.num
     );
     if (!idccInfo) {
       return {

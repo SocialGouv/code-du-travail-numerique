@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
   "slug": "2098-personnel presta service tertiaire",
   "title": "Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004."
 }
-`,
+`
 );
 
 describe("Indemnité licenciement- CC 2098", () => {
@@ -26,7 +26,7 @@ describe("Indemnité licenciement- CC 2098", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />,
+      />
     );
     userAction = new UserAction();
 

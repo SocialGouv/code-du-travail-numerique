@@ -10,7 +10,7 @@ export const PrivacyPolicy = () => {
           "fr-my-4w",
           "fr-col-12",
           "fr-my-md-12w",
-          "fr-col-md-6",
+          "fr-col-md-6"
         )}
       >
         <h1 id="politique-confidentialite" className={fr.cx("fr-mt-0")}>

@@ -13,7 +13,7 @@ Storage.prototype.getItem = jest.fn(
     "shortTitle":"Entreprises de la maintenance, distribution et location de matériels agricoles, de travaux publics, de bâtiment, de manutention, de motoculture de plaisance et activités connexes, dite SDLM",
     "slug":"1404-entreprises-de-la-maintenance-distribution-et-location-de-materiels-agrico",
     "title":"Entreprises de la maintenance, distribution et location de matériels agricoles, de travaux publics, de bâtiment, de manutention, de motoculture de plaisance et activités connexes, dite SDLM"
-}`,
+}`
 );
 
 describe("Indemnité licenciement - CC 1404", () => {
@@ -24,7 +24,7 @@ describe("Indemnité licenciement - CC 1404", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />,
+      />
     );
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
@@ -52,11 +52,11 @@ describe("Indemnité licenciement - CC 1404", () => {
   });
   describe("Etant donné un CDI opération", () => {
     beforeEach(() =>
-      userAction.click(ui.information.agreement1404.cdiOperation.oui.get()),
+      userAction.click(ui.information.agreement1404.cdiOperation.oui.get())
     );
     describe("Etant donné une ancienneté < 6 mois", () => {
       beforeEach(() =>
-        userAction.setInput(ui.information.agreement1404.duree.get(), "5"),
+        userAction.setInput(ui.information.agreement1404.duree.get(), "5")
       );
       test("Vérifier que le licenciement avant fin de la période d'essai amène au résultat", () => {
         userAction.click(ui.information.agreement1404.trial.oui.get());
@@ -72,7 +72,7 @@ describe("Indemnité licenciement - CC 1404", () => {
         userAction.click(ui.information.agreement1404.trial.non.get());
         userAction.setInput(
           ui.information.agreement1404.salaryTotal.get(),
-          "50000",
+          "50000"
         );
         userAction.click(ui.next.get());
         userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");

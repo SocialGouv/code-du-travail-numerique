@@ -62,7 +62,7 @@ function Fiche(props: Props): JSX.Element {
 export const getServerSideProps = async ({ query }) => {
   const data = await getBySourceAndSlugItems<FicheServicePublicDoc>(
     "fiches_service_public",
-    query.slug,
+    query.slug
   );
   if (!data?._source) {
     return {

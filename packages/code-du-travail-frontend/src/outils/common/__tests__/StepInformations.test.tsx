@@ -19,7 +19,7 @@ describe("<StepInformations />", () => {
             form={form}
           />
         )}
-      </Form>,
+      </Form>
     );
     expect(container).toMatchSnapshot();
   });
@@ -34,38 +34,37 @@ describe("<StepInformations />", () => {
         props={{
           actionEvent: MatomoActionEvent.PREAVIS_DEMISSION,
         }}
-      />,
+      />
     );
 
     expect(getByText(/Statut du salarié/)).toBeInTheDocument();
     expect(
-      getByText(/Quelle est la catégorie professionnelle du salarié \?/),
+      getByText(/Quelle est la catégorie professionnelle du salarié \?/)
     ).toBeInTheDocument();
     expect(getAllByRole("option").length).toBe(4);
     expect(
-      (getByRole("option", { name: "..." }) as HTMLOptionElement).selected,
+      (getByRole("option", { name: "..." }) as HTMLOptionElement).selected
     ).toBeTruthy();
     expect(getByRole("option", { name: "Employés" })).toBeInTheDocument();
     expect(
-      getByRole("option", { name: "Agents de maîtrise" }),
+      getByRole("option", { name: "Agents de maîtrise" })
     ).toBeInTheDocument();
     expect(getByRole("option", { name: "Cadres" })).toBeInTheDocument();
     userEvent.selectOptions(
       // Find the select element
       getByRole("combobox"),
       // Find and select the Ireland option
-      getByRole("option", { name: "Employés" }),
+      getByRole("option", { name: "Employés" })
     );
     expect(
-      getByText(/Quelle est l'ancienneté du salarié \?/),
+      getByText(/Quelle est l'ancienneté du salarié \?/)
     ).toBeInTheDocument();
     expect(getAllByRole("option").length).toBe(7);
     expect(
-      (getAllByRole("option", { name: "..." })[1] as HTMLOptionElement)
-        .selected,
+      (getAllByRole("option", { name: "..." })[1] as HTMLOptionElement).selected
     ).toBeTruthy();
     expect(
-      getByRole("option", { name: "Moins de 6 mois" }),
+      getByRole("option", { name: "Moins de 6 mois" })
     ).toBeInTheDocument();
     expect(getByRole("option", { name: "Plus de 6 mois" })).toBeInTheDocument();
   });
@@ -80,17 +79,17 @@ describe("<StepInformations />", () => {
         props={{
           actionEvent: MatomoActionEvent.HEURE_RECHERCHE_EMPLOI,
         }}
-      />,
+      />
     );
 
     expect(getByText(/Statut du salarié/)).toBeInTheDocument();
     expect(
-      getByText(/Quelle est la catégorie professionnelle du salarié \?/),
+      getByText(/Quelle est la catégorie professionnelle du salarié \?/)
     ).toBeInTheDocument();
     expect(getAllByRole("option").length).toBe(5);
     userEvent.selectOptions(
       getByRole("combobox"),
-      getByRole("option", { name: "Ingénieurs, Cadres" }),
+      getByRole("option", { name: "Ingénieurs, Cadres" })
     );
 
     expect(getAllByRole("option").length).toBe(5);

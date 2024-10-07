@@ -16,7 +16,7 @@ Storage.prototype.getItem = jest.fn(
   "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
   "slug": "16-transports-routiers-et-activites-auxiliaires-du-transport"
 }
-`,
+`
 );
 
 describe(`Tests des erreurs d'éligibilité`, () => {
@@ -27,7 +27,7 @@ describe(`Tests des erreurs d'éligibilité`, () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />,
+      />
     );
     userAction.click(ui.introduction.startButton.get());
   });
@@ -40,10 +40,10 @@ describe(`Tests des erreurs d'éligibilité`, () => {
       .click(ui.next.get());
     expect(ui.result.legalError.cddLicenciement.query()).toBeInTheDocument();
     expect(
-      ui.result.infoWarning.eligibleInfoWarningblock.query(),
+      ui.result.infoWarning.eligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
     expect(
-      ui.result.infoWarning.ineligibleInfoWarningblock.query(),
+      ui.result.infoWarning.ineligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
   });
 
@@ -55,7 +55,7 @@ describe(`Tests des erreurs d'éligibilité`, () => {
       .click(ui.contract.fauteGrave.oui.get())
       .click(ui.next.get());
     expect(
-      ui.result.infoWarning.eligibleInfoWarningblock.query(),
+      ui.result.infoWarning.eligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
     expect(ui.result.infoWarning.title.ineligible.query()).toBeInTheDocument();
     expect(ui.result.legalError.fauteGrave.query()).toBeInTheDocument();
@@ -72,12 +72,12 @@ describe(`Tests des erreurs d'éligibilité`, () => {
       .click(ui.next.get())
       .changeInputList(
         ui.information.agreement16.proCategory.get(),
-        "Ingénieurs et cadres",
+        "Ingénieurs et cadres"
       )
       .click(ui.information.agreement16.proCategoryHasChanged.oui.get())
       .setInput(
         ui.information.agreement16.dateProCategoryChanged.get(),
-        "01/01/2010",
+        "01/01/2010"
       )
       .setInput(ui.information.agreement16.engineerAge.get(), "38")
       .click(ui.next.get())
@@ -87,12 +87,12 @@ describe(`Tests des erreurs d'éligibilité`, () => {
       .setInput(ui.seniority.endDate.get(), "01/01/2022")
       .click(ui.next.get());
     expect(
-      ui.result.infoWarning.eligibleInfoWarningblock.query(),
+      ui.result.infoWarning.eligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
     expect(ui.result.infoWarning.title.ineligible.query()).toBeInTheDocument();
     expect(ui.result.legalError.seniorityToLow.query()).toBeInTheDocument();
     expect(
-      ui.result.infoWarning.message.maybeFirmAgreement.query(),
+      ui.result.infoWarning.message.maybeFirmAgreement.query()
     ).toBeInTheDocument();
   });
 
@@ -106,7 +106,7 @@ describe(`Tests des erreurs d'éligibilité`, () => {
       .click(ui.next.get())
       .changeInputList(
         ui.information.agreement16.proCategory.get(),
-        "Ingénieurs et cadres",
+        "Ingénieurs et cadres"
       )
       .click(ui.information.agreement16.proCategoryHasChanged.non.get())
       .setInput(ui.information.agreement16.engineerAge.get(), "38")
@@ -127,12 +127,12 @@ describe(`Tests des erreurs d'éligibilité`, () => {
       .setInput(ui.seniority.notificationDate.get(), "01/08/2024")
       .click(ui.next.get());
     expect(
-      ui.result.infoWarning.eligibleInfoWarningblock.query(),
+      ui.result.infoWarning.eligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
     expect(ui.result.infoWarning.title.ineligible.query()).toBeInTheDocument();
     expect(ui.result.legalError.seniorityToLow.query()).toBeInTheDocument();
     expect(
-      ui.result.infoWarning.message.maybeFirmAgreement.query(),
+      ui.result.infoWarning.message.maybeFirmAgreement.query()
     ).toBeInTheDocument();
   });
 });

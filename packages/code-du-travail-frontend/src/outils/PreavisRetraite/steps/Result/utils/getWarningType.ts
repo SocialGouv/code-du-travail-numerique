@@ -5,7 +5,7 @@ export const getWarningType = (
   type?: DepartOuMiseRetraite,
   ccNumber?: number,
   resultInDays?: number,
-  isAgreementSupported?: boolean,
+  isAgreementSupported?: boolean
 ): WarningType | undefined => {
   switch (true) {
     case ccNumber === 3239 && type === "depart-retraite":

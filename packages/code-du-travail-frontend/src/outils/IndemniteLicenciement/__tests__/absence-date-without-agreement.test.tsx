@@ -17,7 +17,7 @@ describe("Indemnité licenciement - Validation du comportement avec l'absence de
           icon={""}
           title={""}
           displayTitle={""}
-        />,
+        />
       );
       userAction = new UserAction();
       userAction
@@ -44,13 +44,13 @@ describe("Indemnité licenciement - Validation du comportement avec l'absence de
         .click(ui.seniority.hasAbsence.oui.get());
 
       expect(
-        rendering.queryByText("Date de début de l'absence"),
+        rendering.queryByText("Date de début de l'absence")
       ).not.toBeInTheDocument();
 
       userAction
         .changeInputList(
           ui.seniority.absences.motif(0).get(),
-          "Congés sans solde",
+          "Congés sans solde"
         )
         .setInput(ui.seniority.absences.duration(0).get(), "6")
         .click(ui.next.get());

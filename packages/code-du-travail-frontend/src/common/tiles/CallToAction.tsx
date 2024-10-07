@@ -13,7 +13,7 @@ export const CallToActionTile = React.forwardRef<
   CallToActionTileProps
 >(function _CallToActionTile(
   { action = "", children, centerTitle, ...props }: CallToActionTileProps,
-  ref: ForwardedRef<any>,
+  ref: ForwardedRef<any>
 ): JSX.Element {
   return (
     <StyledTile centerTitle={centerTitle} {...props} ref={ref}>

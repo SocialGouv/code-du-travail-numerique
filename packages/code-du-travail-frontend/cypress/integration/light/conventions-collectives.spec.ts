@@ -7,13 +7,13 @@ describe("Conventions collectives", () => {
     cy.get("h1").should("have.text", "Votre convention collective");
     cy.get("body").should(
       "contain",
-      "Retrouvez les questions/réponses fréquentes organisées par thème",
+      "Retrouvez les questions/réponses fréquentes organisées par thème"
     );
     cy.get("#content li").should("have.length", 49);
     cy.get("#content li").first().click();
     cy.url().should(
       "include",
-      "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad",
+      "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
     );
     cy.get('[data-accordion-component="Accordion"]')
       .eq(0)
@@ -33,7 +33,7 @@ describe("Conventions collectives", () => {
       .find('[data-accordion-component="AccordionItem"] a')
       .first()
       .contains(
-        "Quelles sont les conditions d’indemnisation pendant le congé de maternité",
+        "Quelles sont les conditions d’indemnisation pendant le congé de maternité"
       );
 
     cy.get('[data-accordion-component="Accordion"]')
@@ -68,7 +68,7 @@ describe("Conventions collectives", () => {
     cy.get('[data-accordion-component="AccordionItem"] a').first().click();
     cy.url().should(
       "include",
-      "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad",
+      "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
     );
   });
 
@@ -76,7 +76,7 @@ describe("Conventions collectives", () => {
     cy.visit("/convention-collective/0029");
     cy.url().should(
       "include",
-      "/convention-collective/29-hospitalisation-privee-etablissements-prives-dhospitalisation-de-soins-d",
+      "/convention-collective/29-hospitalisation-privee-etablissements-prives-dhospitalisation-de-soins-d"
     );
   });
 

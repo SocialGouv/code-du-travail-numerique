@@ -19,7 +19,7 @@ export function TextSearch({ containerId, convention }) {
     (e) => {
       setQuery(`"${e.target.value}"`);
     },
-    [setQuery],
+    [setQuery]
   );
   const trackSearch = useCallback(() => {
     matopush(["trackEvent", "pagecc_searchcc", convention.shortTitle, query]);

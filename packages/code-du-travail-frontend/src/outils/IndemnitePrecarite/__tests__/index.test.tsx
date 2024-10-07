@@ -9,7 +9,7 @@ describe("<SimulateurIndemnitePrecarite />", () => {
         title="Indemnité de précarité"
         displayTitle="Calculer l'indemnité de précarité"
         icon=""
-      />,
+      />
     );
     expect(container).toMatchSnapshot();
   });

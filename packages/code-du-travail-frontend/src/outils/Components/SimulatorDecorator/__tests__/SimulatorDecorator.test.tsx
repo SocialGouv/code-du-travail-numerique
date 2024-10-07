@@ -29,7 +29,7 @@ describe("SimulatorDecorator", () => {
           options={{
             annotations: <>Rendu des annotations</>,
           }}
-        />,
+        />
       );
       expect(getByText(/Nom: John/)).toBeInTheDocument();
       expect(getByText(/Rendu des annotations/)).toBeInTheDocument();

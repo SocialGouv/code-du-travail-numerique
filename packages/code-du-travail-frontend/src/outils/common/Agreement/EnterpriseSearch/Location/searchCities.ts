@@ -16,7 +16,7 @@ export type ApiGeoResult = {
 };
 
 const apiGeoSearchCommunes = async (
-  search: string,
+  search: string
 ): Promise<ApiGeoResult[]> => {
   const fields = "nom,codesPostaux,population,codeDepartement";
   const response = await Promise.all([
@@ -24,7 +24,7 @@ const apiGeoSearchCommunes = async (
     fetch(`${API_GEO_URL}/communes?codePostal=${search}&fields=${fields}`),
   ]);
   const apiResults = await Promise.all(
-    response.map((r) => r.json() as any as ApiGeoResult[]),
+    response.map((r) => r.json() as any as ApiGeoResult[])
   );
   const results = [
     ...apiResults[0].slice(0, API_GEO_MAX_SEARCH_RESULTS),

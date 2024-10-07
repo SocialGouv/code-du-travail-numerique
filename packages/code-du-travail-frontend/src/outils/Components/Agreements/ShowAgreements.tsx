@@ -31,7 +31,7 @@ const ShowAgreements = ({
 }: Props): JSX.Element => {
   const onAgreementChange = (idcc: string) => {
     const agreement = enterprise.conventions.find(
-      (agreement) => agreement.num === Number(idcc),
+      (agreement) => agreement.num === Number(idcc)
     );
     onChange(enterprise, agreement ?? null);
   };
@@ -40,9 +40,7 @@ const ShowAgreements = ({
       {enterprise.conventions.length > 0 ? (
         <RadioQuestion
           questions={enterprise.conventions.map((agreement) => ({
-            label: `${agreement.shortTitle} (IDCC ${formatIdcc(
-              agreement.num,
-            )})`,
+            label: `${agreement.shortTitle} (IDCC ${formatIdcc(agreement.num)})`,
             value: `${agreement.num}`,
             id: `enterprise-agreement-${agreement.num}`,
           }))}

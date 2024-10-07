@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
   "slug": "1486-bureaux-detudes-techniques-cabinets-dingenieurs-conseils-et-societes-de",
   "title": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. "
 }
-`,
+`
 );
 
 describe("Indemnité licenciement - CC 1486", () => {
@@ -26,7 +26,7 @@ describe("Indemnité licenciement - CC 1486", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />,
+      />
     );
     userAction = new UserAction();
 
@@ -43,7 +43,7 @@ describe("Indemnité licenciement - CC 1486", () => {
     userAction
       .changeInputList(
         ui.information.agreement1486.proCategory.get(),
-        "Chargés d'enquête intermittents",
+        "Chargés d'enquête intermittents"
       )
       .click(ui.information.agreement1486.refus.non.get())
       .click(ui.next.get())
@@ -54,7 +54,7 @@ describe("Indemnité licenciement - CC 1486", () => {
       .click(ui.seniority.hasAbsence.oui.get())
       .changeInputList(
         ui.seniority.absences.motif(0).get(),
-        "Absence pour maladie non professionnelle",
+        "Absence pour maladie non professionnelle"
       )
       .setInput(ui.seniority.absences.duration(0).get(), "3")
       .click(ui.next.get())

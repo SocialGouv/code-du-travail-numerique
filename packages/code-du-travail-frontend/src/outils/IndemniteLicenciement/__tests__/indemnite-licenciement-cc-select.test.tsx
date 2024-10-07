@@ -14,7 +14,7 @@ describe("Indemnité licenciement - Sélection de CC", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />,
+      />
     );
     fireEvent.click(ui.introduction.startButton.get());
     fireEvent.click(ui.contract.type.cdi.get());
@@ -49,7 +49,7 @@ describe("Indemnité licenciement - Sélection de CC", () => {
       fireEvent.click(ui.agreement.searchItem.carrefour.get());
     });
     expect(
-      ui.agreement.agreementCompanyInputConfirm.query(),
+      ui.agreement.agreementCompanyInputConfirm.query()
     ).toBeInTheDocument();
     expect(ui.agreement.ccChoice.commerce.query()).toBeInTheDocument();
     expect(ui.agreement.ccChoice.bureau.query()).toBeInTheDocument();
@@ -57,7 +57,7 @@ describe("Indemnité licenciement - Sélection de CC", () => {
     fireEvent.click(ui.next.get());
     fireEvent.click(ui.previous.get());
     expect(
-      ui.agreement.agreementCompanyInputConfirm.query(),
+      ui.agreement.agreementCompanyInputConfirm.query()
     ).toBeInTheDocument();
     expect(ui.agreement.searchItem.carrefour.query()).toBeInTheDocument();
   });

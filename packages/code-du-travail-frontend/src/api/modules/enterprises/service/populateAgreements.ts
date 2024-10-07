@@ -9,7 +9,7 @@ function conventionsToIdcc(conventions) {
       return IDCC_SPLIT[idcc];
     }
     const mergedIdcc = Object.entries(IDCC_MERGE).find(([_, values]) =>
-      values.some((value) => value === idcc),
+      values.some((value) => value === idcc)
     );
     if (mergedIdcc?.[0]) {
       return [parseInt(mergedIdcc[0])];
@@ -19,7 +19,7 @@ function conventionsToIdcc(conventions) {
 }
 
 export const populateAgreements = async (
-  enterpriseApiResponse: EnterpriseApiResponse,
+  enterpriseApiResponse: EnterpriseApiResponse
 ): Promise<ApiEnterpriseData> => {
   const idccs = enterpriseApiResponse.entreprises?.reduce<number[]>(
     (arr, entreprise) => {
@@ -27,7 +27,7 @@ export const populateAgreements = async (
       const result = arr.concat(idccList);
       return result.filter((item, pos) => result.indexOf(item) === pos);
     },
-    [],
+    []
   );
   if (!idccs) {
     return { ...enterpriseApiResponse.entreprises, entreprises: [] };
@@ -39,7 +39,7 @@ export const populateAgreements = async (
 
       const conventionsWithDuplicates = idccList.map((num: number) => {
         const foundHandledIdcc = body.hits.hits.find(
-          ({ _source }) => _source?.num === num,
+          ({ _source }) => _source?.num === num
         );
         if (foundHandledIdcc && foundHandledIdcc._source) {
           const agreement = foundHandledIdcc._source;
@@ -54,7 +54,7 @@ export const populateAgreements = async (
           };
         }
         const convention = entreprise.conventions.find(
-          (convention: Convention) => convention.idcc === num,
+          (convention: Convention) => convention.idcc === num
         );
         return {
           id: convention?.id ?? convention?.idcc.toString() ?? num.toString(),
@@ -69,10 +69,10 @@ export const populateAgreements = async (
       const conventions = conventionsWithDuplicates.filter(
         ({ num }, index) =>
           conventionsWithDuplicates.findIndex((item) => item.num === num) ===
-          index,
+          index
       );
       return { ...entreprise, conventions };
-    },
+    }
   );
   const entreprises = entreprisePromises
     ? await Promise.all(entreprisePromises)

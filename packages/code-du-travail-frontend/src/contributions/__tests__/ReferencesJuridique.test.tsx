@@ -5,7 +5,7 @@ import { ReferencesJuridiques } from "../References";
 describe("ReferencesJuridiques", () => {
   it(`doit retourner null si pas de références`, () => {
     const { asFragment } = render(
-      <ReferencesJuridiques references={[]}></ReferencesJuridiques>,
+      <ReferencesJuridiques references={[]}></ReferencesJuridiques>
     );
 
     expect(asFragment().firstChild).toBeNull();
@@ -36,7 +36,7 @@ describe("ReferencesJuridiques", () => {
             },
           ] as any
         }
-      ></ReferencesJuridiques>,
+      ></ReferencesJuridiques>
     );
 
     expect(asFragment().firstChild).toMatchInlineSnapshot(`

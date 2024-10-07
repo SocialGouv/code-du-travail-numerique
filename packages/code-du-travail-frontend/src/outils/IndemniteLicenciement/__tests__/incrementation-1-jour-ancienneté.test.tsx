@@ -14,7 +14,7 @@ describe("Page salaire: vérification l'affichage des salaires mensuels", () => 
         icon={""}
         title={""}
         displayTitle={""}
-      />,
+      />
     );
     const userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
@@ -34,7 +34,7 @@ describe("Page salaire: vérification l'affichage des salaires mensuels", () => 
     userAction.click(ui.salary.hasPartialTime.non.get());
     userAction.click(ui.salary.hasSameSalary.non.get());
     expect(
-      getByText(/Salaires mensuels bruts des 12 derniers mois/),
+      getByText(/Salaires mensuels bruts des 12 derniers mois/)
     ).toBeInTheDocument();
     expect(getByText(/décembre 2022/)).toBeInTheDocument();
   });

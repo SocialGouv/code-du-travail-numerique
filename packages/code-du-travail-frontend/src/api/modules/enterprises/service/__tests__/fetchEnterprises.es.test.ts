@@ -20,7 +20,7 @@ describe("Test enterprise endpoint", () => {
     expect(response).toEqual({ entreprises: [] });
 
     expect(fetch).toHaveBeenCalledWith(
-      "https://api-entreprise/search?q=query&page=1&per_page=25&etat_administratif=A&sort_by_size=true&mtm_campaign=cdtn",
+      "https://api-entreprise/search?q=query&page=1&per_page=25&etat_administratif=A&sort_by_size=true&mtm_campaign=cdtn"
     );
   });
 
@@ -68,7 +68,7 @@ describe("Test enterprise endpoint", () => {
     });
 
     expect(fetch).toHaveBeenCalledWith(
-      "https://api-entreprise/search?q=query&page=1&per_page=25&etat_administratif=A&sort_by_size=true&mtm_campaign=cdtn",
+      "https://api-entreprise/search?q=query&page=1&per_page=25&etat_administratif=A&sort_by_size=true&mtm_campaign=cdtn"
     );
   });
 
@@ -118,7 +118,7 @@ describe("Test enterprise endpoint", () => {
     });
 
     expect(fetch).toHaveBeenCalledWith(
-      "https://api-entreprise/search?q=query&page=1&per_page=25&etat_administratif=A&sort_by_size=true&code_postal=75018&mtm_campaign=cdtn",
+      "https://api-entreprise/search?q=query&page=1&per_page=25&etat_administratif=A&sort_by_size=true&code_postal=75018&mtm_campaign=cdtn"
     );
   });
 
@@ -174,7 +174,7 @@ describe("Test enterprise endpoint", () => {
     });
 
     expect(fetch).toHaveBeenCalledWith(
-      "https://api-entreprise/search?q=query&page=1&per_page=25&etat_administratif=A&sort_by_size=true&code_postal=75001,75002,75003,75004,75005,75006,75007,75008,75009,75010,75011,75012,75013,75014,75015,75016,75017,75018,75019,75020&mtm_campaign=cdtn",
+      "https://api-entreprise/search?q=query&page=1&per_page=25&etat_administratif=A&sort_by_size=true&code_postal=75001,75002,75003,75004,75005,75006,75007,75008,75009,75010,75011,75012,75013,75014,75015,75016,75017,75018,75019,75020&mtm_campaign=cdtn"
     );
   });
 
@@ -227,7 +227,7 @@ describe("Test enterprise endpoint", () => {
     });
 
     expect(fetch).toHaveBeenCalledWith(
-      "https://api-entreprise/search?q=22760540900019&page=1&per_page=25&etat_administratif=A&sort_by_size=true&mtm_campaign=cdtn",
+      "https://api-entreprise/search?q=22760540900019&page=1&per_page=25&etat_administratif=A&sort_by_size=true&mtm_campaign=cdtn"
     );
   });
 
@@ -241,7 +241,7 @@ describe("Test enterprise endpoint", () => {
     await expect(async () => {
       await fetchEnterprises("22760540900019", []);
     }).rejects.toThrowErrorMatchingInlineSnapshot(
-      '"Erreur lors de la récupération des entreprises depuis annuaire-entreprise, code : 500 (Mon erreur)"',
+      '"Erreur lors de la récupération des entreprises depuis annuaire-entreprise, code : 500 (Mon erreur)"'
     );
   });
 });

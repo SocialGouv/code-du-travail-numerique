@@ -11,7 +11,7 @@ describe("utils - indemnite de licenciement", () => {
             fullySupported: SupportedTypes.FULLY_SUPPORTED,
             idcc: 2264,
           }),
-        ]),
+        ])
       );
     });
   });

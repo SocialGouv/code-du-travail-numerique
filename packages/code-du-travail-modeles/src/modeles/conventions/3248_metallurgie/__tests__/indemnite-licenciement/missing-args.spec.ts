@@ -15,7 +15,6 @@ const defaultSituation = {
 
 describe("Ordre des questions pour la CC 3248", () => {
   describe("Affiche les questions", () => {
-     
     let result: PublicodesData<PublicodesIndemniteLicenciementResult>;
 
     beforeEach(() => {

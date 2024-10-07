@@ -3,11 +3,11 @@ describe("Pages Politique confidentialité", () => {
     cy.visit("/politique-confidentialite");
     cy.findByRole("heading", { level: 1 }).should(
       "have.text",
-      "Politique de confidentialité",
+      "Politique de confidentialité"
     );
     cy.get("body").should(
       "contain",
-      "Le Code du travail numérique ne vous demande ni ne stocke d’information nominative.",
+      "Le Code du travail numérique ne vous demande ni ne stocke d’information nominative."
     );
   });
 });

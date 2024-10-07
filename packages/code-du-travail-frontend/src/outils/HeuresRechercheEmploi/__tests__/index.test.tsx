@@ -10,7 +10,7 @@ describe("<HeuresRechercheEmploi />", () => {
         title="Heures d'absence pour rechercher un emploi"
         displayTitle="Heures pour recherche d'emploi"
         icon=""
-      />,
+      />
     );
     expect(container).toMatchSnapshot();
   });

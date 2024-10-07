@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
   "slug": "1486-bureaux-detudes-techniques-cabinets-dingenieurs-conseils-et-societes-de",
   "title": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. "
 }
-`,
+`
 );
 jest.mock("../../../conventions/Search/api/enterprises.service");
 
@@ -28,7 +28,7 @@ describe("Indemnité licenciement", () => {
           icon={""}
           title={""}
           displayTitle={""}
-        />,
+        />
       );
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
@@ -41,7 +41,7 @@ describe("Indemnité licenciement", () => {
       userAction
         .changeInputList(
           ui.information.agreement1486.proCategory.get(),
-          "Chargés d'enquête intermittents",
+          "Chargés d'enquête intermittents"
         )
         .click(ui.information.agreement1486.refus.non.get())
         .click(ui.next.get())
@@ -52,7 +52,7 @@ describe("Indemnité licenciement", () => {
         .click(ui.seniority.hasAbsence.oui.get())
         .changeInputList(
           ui.seniority.absences.motif(0).get(),
-          "Absence pour maladie non professionnelle",
+          "Absence pour maladie non professionnelle"
         )
         .setInput(ui.seniority.absences.duration(0).get(), "3")
         .click(ui.next.get())
@@ -71,8 +71,8 @@ describe("Indemnité licenciement", () => {
       // vérification que le montant affiché pour la convention collective est "la convention collective ne prévoit pas d'indemnité dans ce cas"
       expect(
         screen.queryByText(
-          "La convention collective ne prévoit pas d'indemnité dans ce cas",
-        ),
+          "La convention collective ne prévoit pas d'indemnité dans ce cas"
+        )
       ).toBeInTheDocument();
 
       // vérification que le montant pour la convention collective est bien affiché quand il y en a un
@@ -84,8 +84,8 @@ describe("Indemnité licenciement", () => {
 
       expect(
         screen.queryByText(
-          "La convention collective ne prévoit pas d'indemnité dans ce cas",
-        ),
+          "La convention collective ne prévoit pas d'indemnité dans ce cas"
+        )
       ).not.toBeInTheDocument();
     });
   });
@@ -95,7 +95,7 @@ describe("Indemnité licenciement", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />,
+      />
     );
     userAction = new UserAction();
     userAction

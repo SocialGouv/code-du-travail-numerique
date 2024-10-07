@@ -41,7 +41,7 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
   agreementData: {
     ...initialState,
     publicodes: loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
-      PublicodesSimulator.PREAVIS_RETRAITE,
+      PublicodesSimulator.PREAVIS_RETRAITE
     ),
   },
   agreementFunction: {
@@ -55,7 +55,7 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
               get,
               set,
               "route",
-              "agreement" as AgreementRoute,
+              "agreement" as AgreementRoute
             );
             const idcc = parsedData?.num?.toString();
             if (idcc) {
@@ -65,9 +65,9 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
                   state.agreementData.publicodes =
                     loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
                       PublicodesSimulator.PREAVIS_RETRAITE,
-                      idcc,
+                      idcc
                     );
-                }),
+                })
               );
             }
           }
@@ -86,9 +86,9 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
             produce((state: AgreementStoreSlice) => {
               state.agreementData.publicodes =
                 loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
-                  PublicodesSimulator.PREAVIS_RETRAITE,
+                  PublicodesSimulator.PREAVIS_RETRAITE
                 );
-            }),
+            })
           );
         } catch (e) {
           console.error(e);
@@ -100,7 +100,7 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
           state.agreementData.input.enterprise = undefined;
           state.agreementData.input.agreement = undefined;
           state.agreementData.input.hasNoEnterpriseSelected = false;
-        }),
+        })
       );
       applyGenericValidation(get, set, "route", value);
     },
@@ -116,9 +116,9 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
             state.agreementData.publicodes =
               loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
                 PublicodesSimulator.PREAVIS_RETRAITE,
-                idcc,
+                idcc
               );
-          }),
+          })
         );
       } catch (e) {
         console.error(e);
@@ -130,7 +130,7 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
         get,
         set,
         "hasNoEnterpriseSelected",
-        value ? value : false,
+        value ? value : false
       );
     },
     onNextStep: () => {
@@ -140,7 +140,7 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
       if (isValid && route) {
         const isTreated = !!supportedCcn.find(
           ({ preavisRetraite, idcc }) =>
-            preavisRetraite && idcc === agreement?.num,
+            preavisRetraite && idcc === agreement?.num
         );
         pushAgreementEvents(
           PublicodesSimulator.PREAVIS_RETRAITE,
@@ -150,7 +150,7 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
             enterprise,
           },
           isTreated,
-          input.hasNoEnterpriseSelected,
+          input.hasNoEnterpriseSelected
         );
       }
       set(
@@ -158,7 +158,7 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
           state.agreementData.hasBeenSubmit = !isValid;
           state.agreementData.isStepValid = isValid;
           state.agreementData.error = errorState;
-        }),
+        })
       );
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
     },
@@ -185,7 +185,7 @@ const applyGenericValidation = (
   get: StoreApi<AgreementStoreSlice>["getState"],
   set: StoreApi<AgreementStoreSlice>["setState"],
   paramName: any,
-  value: any,
+  value: any
 ) => {
   if (get().agreementData.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
@@ -197,13 +197,13 @@ const applyGenericValidation = (
         state.agreementData.error = errorState;
         state.agreementData.isStepValid = isValid;
         state.agreementData.input[paramName] = value;
-      }),
+      })
     );
   } else {
     set(
       produce((state: AgreementStoreSlice) => {
         state.agreementData.input[paramName] = value;
-      }),
+      })
     );
   }
 };

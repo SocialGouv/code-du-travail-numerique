@@ -8,7 +8,7 @@ export default function Agreement2614Informations() {
     (state) => ({
       hasSameSalary: state.salairesData.input.hasSameSalary,
       hasVariablePay: state.agreement2614Data.input.hasVariablePay,
-    }),
+    })
   );
 
   return (

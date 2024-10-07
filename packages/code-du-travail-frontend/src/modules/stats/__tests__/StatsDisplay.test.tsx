@@ -5,7 +5,7 @@ import { StatsDisplay } from "../StatsDisplay";
 describe("<StatsDisplay />", () => {
   it("should match snapshot", () => {
     const { container } = render(
-      <StatsDisplay metric={100} title="Contenus référencés" />,
+      <StatsDisplay metric={100} title="Contenus référencés" />
     );
     expect(container).toMatchSnapshot();
   });

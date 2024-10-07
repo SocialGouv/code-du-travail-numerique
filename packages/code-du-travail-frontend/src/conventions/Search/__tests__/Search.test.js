@@ -17,7 +17,7 @@ function renderSearchForm({
   onSelectConvention = jest.fn(),
 } = {}) {
   return render(
-    <Search title={title} onSelectConvention={onSelectConvention} />,
+    <Search title={title} onSelectConvention={onSelectConvention} />
   );
 }
 
@@ -49,9 +49,11 @@ describe("<Search />", () => {
     });
     fireEvent.change(
       getByPlaceholderText(
-        "Nom de la convention collective, de l’entreprise ou son SIRET",
+        "Nom de la convention collective, de l’entreprise ou son SIRET"
       ),
-      { target: { value: "8888" } },
+      {
+        target: { value: "8888" },
+      }
     );
     expect(container).toMatchSnapshot();
   });
@@ -88,9 +90,11 @@ describe("<Search />", () => {
     });
     fireEvent.change(
       getByPlaceholderText(
-        "Nom de la convention collective, de l’entreprise ou son SIRET",
+        "Nom de la convention collective, de l’entreprise ou son SIRET"
       ),
-      { target: { value: "1234" } },
+      {
+        target: { value: "1234" },
+      }
     );
     jest.runAllTimers();
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
@@ -130,9 +134,11 @@ describe("<Search />", () => {
     });
     fireEvent.change(
       getByPlaceholderText(
-        "Nom de la convention collective, de l’entreprise ou son SIRET",
+        "Nom de la convention collective, de l’entreprise ou son SIRET"
       ),
-      { target: { value: "4567" } },
+      {
+        target: { value: "4567" },
+      }
     );
     jest.runAllTimers();
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
@@ -153,9 +159,11 @@ describe("<Search />", () => {
     });
     fireEvent.change(
       getByPlaceholderText(
-        "Nom de la convention collective, de l’entreprise ou son SIRET",
+        "Nom de la convention collective, de l’entreprise ou son SIRET"
       ),
-      { target: { value: "9999" } },
+      {
+        target: { value: "9999" },
+      }
     );
     jest.runAllTimers();
     await waitFor(() => findByText(/Aucun résultat/i), { container });
@@ -197,9 +205,11 @@ describe("<Search />", () => {
     });
     fireEvent.change(
       getByPlaceholderText(
-        "Nom de la convention collective, de l’entreprise ou son SIRET",
+        "Nom de la convention collective, de l’entreprise ou son SIRET"
       ),
-      { target: { value: "42" } },
+      {
+        target: { value: "42" },
+      }
     );
     jest.runAllTimers();
     await waitFor(() => expect(onSelectConvention).toHaveBeenCalledTimes(0));
@@ -236,9 +246,11 @@ describe("<Search />", () => {
     });
     fireEvent.change(
       getByPlaceholderText(
-        "Nom de la convention collective, de l’entreprise ou son SIRET",
+        "Nom de la convention collective, de l’entreprise ou son SIRET"
       ),
-      { target: { value: "hello" } },
+      {
+        target: { value: "hello" },
+      }
     );
     jest.runOnlyPendingTimers(); // run debounce timer
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));

@@ -53,7 +53,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
                   </Paragraph>
                 </CallToActionTile>
               );
-            },
+            }
           )}
           {externalTools.map(
             ({ id, action, description, icon, title, url }) => (
@@ -72,7 +72,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
               >
                 <Paragraph noMargin>{description}</Paragraph>
               </CallToActionTile>
-            ),
+            )
           )}
         </Grid>
       </Container>
@@ -88,14 +88,14 @@ export async function getStaticProps() {
       .filter((tool) =>
         process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
           ? tool.displayTool
-          : true,
+          : true
       );
 
     return {
       props: {
         cdtnSimulators: tools.filter((tool) => tool.source === SOURCES.TOOLS),
         externalTools: tools.filter(
-          (tool) => tool.source === SOURCES.EXTERNALS,
+          (tool) => tool.source === SOURCES.EXTERNALS
         ),
       },
       revalidate: REVALIDATE_TIME,

@@ -5,7 +5,7 @@ export const mapToPublicodesSituationForCalculationPreavisRetraite = (
   departOuMiseRetraite: DepartOuMiseRetraite,
   seniority: string,
   ccn?: number,
-  moreInfos?: Record<string, string>,
+  moreInfos?: Record<string, string>
 ): Record<string, string | undefined> => {
   const moreInfosPimped = moreInfos?.["contrat salarié . travailleur handicapé"]
     ? {

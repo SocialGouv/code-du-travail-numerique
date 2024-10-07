@@ -12,7 +12,7 @@ function getDateArret(stateContratTravail: ContratTravailStoreInput) {
 
 export const getDateArretTravailErrors = (
   state: AncienneteStoreInput,
-  stateContratTravail: ContratTravailStoreInput,
+  stateContratTravail: ContratTravailStoreInput
 ): Partial<AncienneteStoreError> => {
   const dEntree = parse(state.dateEntree);
   const dSortie = parse(state.dateSortie);

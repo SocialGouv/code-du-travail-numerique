@@ -25,14 +25,14 @@ describe("StepList", () => {
   describe("Show multiple steps with first active", () => {
     it("should show the count of steps", () => {
       const { getByText } = render(
-        <StepList activeIndex={0} steps={steps} width={"28rem"} />,
+        <StepList activeIndex={0} steps={steps} width={"28rem"} />
       );
       expect(getByText(/1\/4/)).toBeInTheDocument();
     });
 
     it("should show all steps", () => {
       const { getByText, getAllByRole } = render(
-        <StepList activeIndex={0} steps={steps} width={"28rem"} />,
+        <StepList activeIndex={0} steps={steps} width={"28rem"} />
       );
       const li = getAllByRole("listitem");
       expect(li).toHaveLength(steps.length);
@@ -43,7 +43,7 @@ describe("StepList", () => {
 
     it("should have the first item active", () => {
       const { getByRole } = render(
-        <StepList activeIndex={0} steps={steps} width={"28rem"} />,
+        <StepList activeIndex={0} steps={steps} width={"28rem"} />
       );
       const li = getByRole("listitem", { name: "onglet actif" });
       expect(li).toBeInTheDocument();
@@ -54,7 +54,7 @@ describe("StepList", () => {
   describe("Show multiple steps with third step active", () => {
     it("should have the third item active", () => {
       const { getByRole } = render(
-        <StepList activeIndex={2} steps={steps} width={"28rem"} />,
+        <StepList activeIndex={2} steps={steps} width={"28rem"} />
       );
       const li = getByRole("listitem", { name: "onglet actif" });
       expect(li).toBeInTheDocument();

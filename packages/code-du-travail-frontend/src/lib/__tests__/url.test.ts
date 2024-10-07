@@ -22,7 +22,7 @@ describe("removeQueryParameters", () => {
     "should transform $input to this canonical url: $input",
     ({ input, expected }) => {
       expect(removeQueryParameters(input)).toBe(expected);
-    },
+    }
   );
 });
 

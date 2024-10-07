@@ -4,7 +4,7 @@ import { getRelatedItems } from "./utils";
 
 export const getBySourceAndSlugItems = async <Type>(
   source: string,
-  slug: string,
+  slug: string
 ) => {
   const body = getSearchBySourceSlugBody({ slug, source });
   const response = await elasticsearchClient.search<Type>({

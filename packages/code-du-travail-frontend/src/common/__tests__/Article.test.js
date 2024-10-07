@@ -13,7 +13,7 @@ const articleProps = {
 describe("<Article />", () => {
   test("should render", () => {
     const { container } = render(
-      <Article {...articleProps}>this is an Article</Article>,
+      <Article {...articleProps}>this is an Article</Article>
     );
     expect(container).toMatchSnapshot();
   });

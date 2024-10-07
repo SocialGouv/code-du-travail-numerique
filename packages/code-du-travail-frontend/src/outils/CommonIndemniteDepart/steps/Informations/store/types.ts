@@ -43,7 +43,7 @@ export type CommonInformationsStoreFn = {
   onInformationsChange: (
     questionKey: string,
     value: string,
-    type: RuleType | undefined,
+    type: RuleType | undefined
   ) => void;
   generatePublicodesQuestions: () => boolean;
   onNextStep: () => ValidationResponse;

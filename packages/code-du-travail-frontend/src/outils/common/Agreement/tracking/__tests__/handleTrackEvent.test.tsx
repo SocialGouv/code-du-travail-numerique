@@ -58,7 +58,7 @@ describe("Handle event on user action", () => {
       UserAction.OpenEnterpriseHelp,
     ];
     const values = Object.values(UserAction).filter(
-      (action) => !excludedEvent.includes(action),
+      (action) => !excludedEvent.includes(action)
     );
     values.forEach((value) => {
       it(`should not send matomo event for user action ${value}`, () => {

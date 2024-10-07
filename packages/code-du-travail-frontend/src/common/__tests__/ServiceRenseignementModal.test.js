@@ -17,7 +17,7 @@ describe("<ServiceRenseignementModal />", () => {
         {(openModal) => (
           <Button onClick={openModal}>texte dans le bouton</Button>
         )}
-      </ServiceRenseignementModal>,
+      </ServiceRenseignementModal>
     );
     const button = getByText(/texte dans le bouton/i);
     expect(button).toBeTruthy();
@@ -29,7 +29,7 @@ describe("<ServiceRenseignementModal />", () => {
         {(openModal) => (
           <Button onClick={openModal}>texte dans le bouton</Button>
         )}
-      </ServiceRenseignementModal>,
+      </ServiceRenseignementModal>
     );
     const button = getByText(/texte dans le bouton/i);
     button.click();
@@ -44,14 +44,14 @@ describe("<ServiceRenseignementModal />", () => {
         {(openModal) => (
           <Button onClick={openModal}>texte dans le bouton</Button>
         )}
-      </ServiceRenseignementModal>,
+      </ServiceRenseignementModal>
     );
     const button = getByText(/texte dans le bouton/i);
     button.click();
     const el = getByTitle("fermer la modale");
     el.click();
     expect(
-      queryByLabelText(/saisissez votre numéro de département/i),
+      queryByLabelText(/saisissez votre numéro de département/i)
     ).toBeNull();
   });
 });

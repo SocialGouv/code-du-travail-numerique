@@ -47,9 +47,11 @@ const createSalairesStore: StoreSlice<
       const dateNotification = add(
         parse(
           contratTravailInput.dateArretTravail ??
-            ancienneteInput.dateNotification!,
+            ancienneteInput.dateNotification!
         ),
-        { days: 1 },
+        {
+          days: 1,
+        }
       );
       const periods = computeSalaryPeriods({
         dateEntree: ancienneteInput.dateEntree!,
@@ -62,12 +64,12 @@ const createSalairesStore: StoreSlice<
       let salaryPeriods = deepMergeArray(
         p,
         get().salairesData.input.salaryPeriods,
-        "month",
+        "month"
       );
       set(
         produce((state: SalairesStoreSlice) => {
           state.salairesData.input.salaryPeriods = salaryPeriods;
-        }),
+        })
       );
     },
     initShowHasTempsPartiel: () => {
@@ -79,7 +81,7 @@ const createSalairesStore: StoreSlice<
           state.salairesData.input.hasTempsPartiel = showPartialTime
             ? state.salairesData.input.hasTempsPartiel
             : "non";
-        }),
+        })
       );
     },
     onChangeHasTempsPartiel: (value) => {
@@ -116,7 +118,7 @@ const createSalairesStore: StoreSlice<
           set(
             produce((state: SalairesStoreSlice) => {
               state.salairesData.input.salaryPeriods = salaries;
-            }),
+            })
           );
         }
       }
@@ -132,7 +134,7 @@ const createSalairesStore: StoreSlice<
           getSupportedAgreement(agreement.num),
           IndemniteDepartStepName.Salaires,
           get,
-          set,
+          set
         );
       }
 
@@ -143,7 +145,7 @@ const createSalairesStore: StoreSlice<
           state.salairesData.hasBeenSubmit = !isStepValid;
           state.salairesData.isStepValid = isStepValid;
           state.salairesData.error = errorState;
-        }),
+        })
       );
       return isStepValid
         ? ValidationResponse.Valid
@@ -162,7 +164,7 @@ const applyGenericValidation = (
       CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT>
   >["setState"],
   paramName: keyof SalairesStoreInput,
-  value: any,
+  value: any
 ) => {
   if (get().salairesData.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
@@ -179,7 +181,7 @@ const applyGenericValidation = (
         getSupportedAgreement(agreement.num),
         IndemniteDepartStepName.Salaires,
         get,
-        set,
+        set
       );
     }
     const isStepValid = isValid && isAgreementValid;
@@ -188,13 +190,13 @@ const applyGenericValidation = (
         state.salairesData.error = errorState;
         state.salairesData.isStepValid = isStepValid;
         state.salairesData.input[paramName as string] = value;
-      }),
+      })
     );
   } else {
     set(
       produce((state: SalairesStoreSlice) => {
         state.salairesData.input[paramName as string] = value;
-      }),
+      })
     );
   }
 };

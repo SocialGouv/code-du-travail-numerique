@@ -7,7 +7,7 @@ export const fetchDocument = async <
   K extends keyof DocumentElasticResult<V>,
 >(
   fields: K[],
-  body: SearchRequest,
+  body: SearchRequest
 ): Promise<DocumentElasticResult<V> | undefined> => {
   const response = await elasticsearchClient.search<V>({
     _source: fields,

@@ -5,12 +5,12 @@ import NotSupportedAgreementDisclaimer from "../component/NotSupportedAgreementD
 describe("Unsupported CC Disclaimer component should render disclaimer", () => {
   it("should not show the link if agreement is not available on legifrance", () => {
     const { getByText, queryByText } = render(
-      <NotSupportedAgreementDisclaimer />,
+      <NotSupportedAgreementDisclaimer />
     );
     expect(
       getByText(
-        /Nous vous invitons à consulter votre convention collective pour obtenir votre durée de préavis./,
-      ),
+        /Nous vous invitons à consulter votre convention collective pour obtenir votre durée de préavis./
+      )
     ).toBeInTheDocument();
     expect(queryByText(/Vous pouvez consulter/)).not.toBeInTheDocument();
   });
@@ -19,18 +19,18 @@ describe("Unsupported CC Disclaimer component should render disclaimer", () => {
     const { getByText } = render(
       <NotSupportedAgreementDisclaimer
         agreementUrl={"https://legifrance.url"}
-      />,
+      />
     );
     expect(
       getByText(
-        /Nous vous invitons à consulter votre convention collective pour obtenir votre durée de préavis./,
-      ),
+        /Nous vous invitons à consulter votre convention collective pour obtenir votre durée de préavis./
+      )
     ).toBeInTheDocument();
     expect(
-      getByText(/Vous pouvez consulter votre convention collective/),
+      getByText(/Vous pouvez consulter votre convention collective/)
     ).toBeInTheDocument();
     expect(getByText(/ici/).getAttribute("href")).toEqual(
-      "https://legifrance.url",
+      "https://legifrance.url"
     );
   });
 });

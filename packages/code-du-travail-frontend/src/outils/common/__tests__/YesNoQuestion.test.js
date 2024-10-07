@@ -11,7 +11,7 @@ describe("<YesNoQuestion />", () => {
       <Form
         onSubmit={onSubmit}
         render={() => <YesNoQuestion name="test" label="lorem ipsum ?" />}
-      />,
+      />
     );
     expect(container).toMatchSnapshot();
   });
@@ -31,7 +31,7 @@ describe("<YesNoQuestion />", () => {
             />
           </>
         )}
-      />,
+      />
     );
     const oui = getByLabelText(/oui/i);
     oui.click();
@@ -48,7 +48,7 @@ describe("<YesNoQuestion />", () => {
             <button data-testid="next">suivant</button>
           </form>
         )}
-      </Form>,
+      </Form>
     );
     const bt = getByTestId("next");
     bt.click();
@@ -70,7 +70,7 @@ describe("<YesNoQuestion />", () => {
             <button data-testid="next">suivant</button>
           </form>
         )}
-      </Form>,
+      </Form>
     );
     const non = getByLabelText(/non/i);
     fireEvent.click(non);

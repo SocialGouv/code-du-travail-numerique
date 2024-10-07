@@ -14,7 +14,7 @@ function renderForm(data) {
         ...data,
       }}
       render={({ form }) => <StepRemuneration form={form} />}
-    />,
+    />
   );
 }
 

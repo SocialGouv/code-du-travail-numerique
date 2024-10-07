@@ -52,7 +52,7 @@ const StepAnciennete = () => {
     errorAbsencePeriods: state.ancienneteData.error.errorAbsencePeriods,
     agreement: state.agreementData.input.agreement,
     informationData: informationToSituation(
-      state.informationsData.input.publicodesInformations,
+      state.informationsData.input.publicodesInformations
     ),
   }));
 
@@ -62,7 +62,7 @@ const StepAnciennete = () => {
 
   const messageMotifsExample = React.useMemo(
     () => getMessageMotifExample(informationData),
-    [informationData],
+    [informationData]
   );
 
   return (

@@ -40,7 +40,7 @@ describe("ListLink", () => {
     const { getByText } = render(
       <ListLink item={item} query="demission">
         {item.title}
-      </ListLink>,
+      </ListLink>
     );
 
     const link = getByText(/Mer il est fou!/);

@@ -8,7 +8,7 @@ import { UserAction } from "../../../ConventionCollective/types";
 const handleTrackEvent = (
   title: string,
   action: UserAction,
-  extra?: unknown,
+  extra?: unknown
 ): void => {
   switch (action) {
     case UserAction.OpenAgreementHelp:

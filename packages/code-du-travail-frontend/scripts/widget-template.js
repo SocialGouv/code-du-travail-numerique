@@ -23,7 +23,7 @@ function addWidget({ target, id, url }) {
       const iframePosition = iframe.getBoundingClientRect();
       window.scrollTo(
         0,
-        iframePosition.top - bodyPosition.top - HEADER_MENU_HEIGHT,
+        iframePosition.top - bodyPosition.top - HEADER_MENU_HEIGHT
       );
     }
   });

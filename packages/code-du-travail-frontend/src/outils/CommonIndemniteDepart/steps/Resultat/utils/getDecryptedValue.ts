@@ -5,7 +5,7 @@ import {
 
 export const getDecryptedValueAgreement = (
   value?: ExplanationAgreementResult,
-  agreementResult?: string,
+  agreementResult?: string
 ): string => {
   const defaultResult = `${agreementResult} €`;
   if (!value) return defaultResult;
@@ -26,7 +26,7 @@ export const getDecryptedValueAgreement = (
 
 export const getDecryptedValue = (
   label: string,
-  value: ExplanationMainResult,
+  value: ExplanationMainResult
 ): string => {
   switch (value) {
     case "HAS_NOT_SELECTED_AGREEMENT":

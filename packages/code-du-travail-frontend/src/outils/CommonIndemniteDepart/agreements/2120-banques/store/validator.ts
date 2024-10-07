@@ -5,7 +5,7 @@ import { Agreement2120StoreInput, Agreement2120StoreSlice } from "./types";
 
 export const validateAgreement2120 = (
   get: GetState<MainStore>,
-  set: SetState<MainStore>,
+  set: SetState<MainStore>
 ) => {
   const { isValid, errorState } = validateStep(get().agreement2120Data.input);
   set(
@@ -13,7 +13,7 @@ export const validateAgreement2120 = (
       state.agreement2120Data.hasBeenSubmit = !isValid;
       state.agreement2120Data.isStepValid = isValid;
       state.agreement2120Data.error = errorState;
-    }),
+    })
   );
 
   return isValid;

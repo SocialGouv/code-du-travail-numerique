@@ -3,7 +3,7 @@ import { parse } from "../../../../../common/utils";
 import { AncienneteStoreError, AncienneteStoreInput } from "../types";
 
 export const getDateNotificationErrors = (
-  state: AncienneteStoreInput,
+  state: AncienneteStoreInput
 ): Partial<AncienneteStoreError> => {
   const dEntree = parse(state.dateEntree);
   const dSortie = parse(state.dateSortie);

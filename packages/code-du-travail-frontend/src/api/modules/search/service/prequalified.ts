@@ -56,7 +56,7 @@ async function _getPrequalified() {
       queries[title] = query;
       return queries;
     },
-    {},
+    {}
   );
 
   return {

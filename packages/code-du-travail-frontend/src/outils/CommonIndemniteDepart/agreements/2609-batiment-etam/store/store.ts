@@ -34,7 +34,7 @@ const applyGenericValidation = (
   get: GetState<Agreement2609StoreSlice & SalairesStoreSlice>,
   set: SetState<Agreement2609StoreSlice & SalairesStoreSlice>,
   paramName: keyof Agreement2609StoreInput,
-  value: any,
+  value: any
 ) => {
   if (get().agreement2609Data.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
@@ -42,21 +42,21 @@ const applyGenericValidation = (
     });
     const { isValid, errorState } = validateStep(
       nextState.agreement2609Data.input,
-      nextState.salairesData.input,
+      nextState.salairesData.input
     );
     set(
       produce((state: Agreement2609StoreSlice) => {
         state.agreement2609Data.error = errorState;
         state.agreement2609Data.isStepValid = isValid;
         state.agreement2609Data.input[paramName] = value;
-      }),
+      })
     );
     get().salairesFunction.onNextStep();
   } else {
     set(
       produce((state: Agreement2609StoreSlice) => {
         state.agreement2609Data.input[paramName] = value;
-      }),
+      })
     );
   }
 };

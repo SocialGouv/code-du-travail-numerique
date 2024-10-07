@@ -89,7 +89,7 @@ describe("Page résultat: vérification de la formule affichée", () => {
       beforeEach(async () => {
         jest.spyOn(Storage.prototype, "setItem");
         Storage.prototype.getItem = jest.fn(
-          () => `{"num":${ccNum},"shortTitle":"${ccTitle}"}`,
+          () => `{"num":${ccNum},"shortTitle":"${ccTitle}"}`
         );
 
         render(
@@ -97,14 +97,14 @@ describe("Page résultat: vérification de la formule affichée", () => {
             icon={""}
             title={""}
             displayTitle={""}
-          />,
+          />
         );
         userAction = new UserAction();
         userAction.click(ui.introduction.startButton.get());
         userAction.click(ui.contract.type.cdi.get());
         userAction.click(ui.contract.fauteGrave.non.get());
         userAction.click(
-          ui.contract.inaptitude[inaptitude ? "oui" : "non"].get(),
+          ui.contract.inaptitude[inaptitude ? "oui" : "non"].get()
         );
         !inaptitude && userAction.click(ui.contract.arretTravail.non.get());
         userAction.click(ui.next.get());
@@ -133,9 +133,9 @@ describe("Page résultat: vérification de la formule affichée", () => {
         expect(ui.result.formula.get()).toHaveTextContent(expectedA1);
         expect(ui.result.formula.get()).toHaveTextContent(expectedA2);
         expect(ui.result.formula.get()).toHaveTextContent(
-          "Sref : Salaire de référence (2500 €)",
+          "Sref : Salaire de référence (2500 €)"
         );
       });
-    },
+    }
   );
 });

@@ -14,7 +14,7 @@ describe("Arrêt de travail", () => {
           icon={""}
           title={""}
           displayTitle={""}
-        />,
+        />
       );
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
@@ -63,8 +63,8 @@ describe("Arrêt de travail", () => {
       userAction.click(ui.next.get());
       expect(
         byText(
-          "La date de début de contrat doit se situer avant la date d'arrêt de travail indiquée à l'étape n°2",
-        ).query(),
+          "La date de début de contrat doit se situer avant la date d'arrêt de travail indiquée à l'étape n°2"
+        ).query()
       ).toBeInTheDocument();
       userAction.click(ui.previous.get());
       userAction.click(ui.previous.get());
@@ -75,8 +75,8 @@ describe("Arrêt de travail", () => {
 
       expect(
         byText(
-          "La date de début de contrat doit se situer avant la date d'arrêt de travail indiquée à l'étape n°2",
-        ).query(),
+          "La date de début de contrat doit se situer avant la date d'arrêt de travail indiquée à l'étape n°2"
+        ).query()
       ).not.toBeInTheDocument();
     });
   });
@@ -88,7 +88,7 @@ describe("Arrêt de travail", () => {
           icon={""}
           title={""}
           displayTitle={""}
-        />,
+        />
       );
     });
 

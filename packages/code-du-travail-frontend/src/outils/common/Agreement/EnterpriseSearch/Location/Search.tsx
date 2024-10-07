@@ -12,7 +12,7 @@ const { Search: SearchIcon } = icons;
 type Props = {
   selectedApiGeoResult?: ApiGeoResultWithSelectedPostCode;
   setSelectedApiGeoResult: (
-    apiGeoResult?: ApiGeoResultWithSelectedPostCode,
+    apiGeoResult?: ApiGeoResultWithSelectedPostCode
   ) => void;
   isDisabled?: boolean;
   searchInputHandler: (e: React.FormEvent) => void;
@@ -29,7 +29,7 @@ export const LocationSearchInput = (props: Props) => {
     props.selectedApiGeoResult?.selectedPostCode &&
       props.selectedApiGeoResult.selectedPostCode.length > 1
       ? props.selectedApiGeoResult.codeDepartement
-      : props.selectedApiGeoResult?.selectedPostCode[0],
+      : props.selectedApiGeoResult?.selectedPostCode[0]
   );
   const {
     isOpen,
@@ -72,12 +72,7 @@ export const LocationSearchInput = (props: Props) => {
 
   function itemToString(item: ApiGeoResult | null) {
     return item
-      ? `${item.nom} (${
-          postalCode ??
-          (item.codesPostaux.length > 1
-            ? item.codeDepartement
-            : item.codesPostaux[0])
-        })`
+      ? `${item.nom} (${postalCode ?? (item.codesPostaux.length > 1 ? item.codeDepartement : item.codesPostaux[0])})`
       : "";
   }
 

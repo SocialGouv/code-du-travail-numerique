@@ -6,7 +6,7 @@ import { Agreement44StoreInput, Agreement44StoreSlice } from "./types";
 
 export const validateAgreement44 = (
   get: StoreApi<MainStore>["getState"],
-  set: StoreApi<MainStore>["setState"],
+  set: StoreApi<MainStore>["setState"]
 ) => {
   const { isValid, errorState } = validateStep(get().agreement44Data.input);
   set(
@@ -14,7 +14,7 @@ export const validateAgreement44 = (
       state.agreement44Data.hasBeenSubmit = !isValid;
       state.agreement44Data.isStepValid = isValid;
       state.agreement44Data.error = errorState;
-    }),
+    })
   );
 
   return isValid;

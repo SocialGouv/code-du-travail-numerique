@@ -49,7 +49,7 @@ const AbsencePeriod = ({
       ? absence.motif?.startAt && absence.motif?.startAt(informationData)
       : motifs.length > 0 &&
           motifs[0].startAt &&
-          motifs[0].startAt(informationData),
+          motifs[0].startAt(informationData)
   );
 
   const selectMotif = (key: string, value: string) => {

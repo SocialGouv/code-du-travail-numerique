@@ -35,7 +35,7 @@ export const createAgreement16StoreSalaires: StoreSlice<
         get().informationsData.input.publicodesInformations.find(
           (item) =>
             item.question.name ===
-            "contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle",
+            "contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle"
         )?.info;
       set(
         produce((state: Agreement16StoreSlice) => {
@@ -43,7 +43,7 @@ export const createAgreement16StoreSalaires: StoreSlice<
             get().salairesData.input.hasSameSalary === "non" &&
             (categoryPro === "'Ingénieurs et cadres'" ||
               categoryPro === "'TAM'");
-        }),
+        })
       );
     },
     onChangeHasVariablePay: (value) => {
@@ -57,28 +57,28 @@ const applyGenericValidation = (
   get: StoreApi<Agreement16StoreSlice & SalairesStoreSlice>["getState"],
   set: StoreApi<Agreement16StoreSlice & SalairesStoreSlice>["setState"],
   paramName: keyof Agreement16StoreInput,
-  value: any,
+  value: any
 ) => {
   if (get().agreement16Data.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
       draft.agreement16Data.input[paramName] = value;
     });
     const { isValid, errorState } = validateStep(
-      nextState.agreement16Data.input,
+      nextState.agreement16Data.input
     );
     set(
       produce((state: Agreement16StoreSlice) => {
         state.agreement16Data.error = errorState;
         state.agreement16Data.isStepValid = isValid;
         state.agreement16Data.input[paramName] = value;
-      }),
+      })
     );
     get().salairesFunction.onNextStep();
   } else {
     set(
       produce((state: Agreement16StoreSlice) => {
         state.agreement16Data.input[paramName] = value;
-      }),
+      })
     );
   }
 };

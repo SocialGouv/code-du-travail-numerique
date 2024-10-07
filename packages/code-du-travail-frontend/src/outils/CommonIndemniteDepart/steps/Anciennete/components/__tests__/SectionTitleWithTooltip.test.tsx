@@ -11,8 +11,8 @@ describe("<SectionTitleWithTooltip />", () => {
           tooltip={{
             content: <p>Ceci est un tooltip</p>,
           }}
-        />,
-      ),
+        />
+      )
     ).toBeTruthy();
   });
 });

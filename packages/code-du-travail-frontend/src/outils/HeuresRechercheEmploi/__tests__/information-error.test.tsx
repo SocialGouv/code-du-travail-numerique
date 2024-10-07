@@ -16,7 +16,7 @@ Storage.prototype.getItem = jest.fn(
   "slug": "3239-particuliers-employeurs-et-emploi-a-domicile",
   "title": "Particuliers employeurs et emploi à domicile"
 }
-`,
+`
 );
 
 test(`
@@ -40,7 +40,7 @@ test(`
   });
   fireEvent.click(ui.next.get());
   expect(
-    screen.queryByText(/vous devez répondre à cette question/i),
+    screen.queryByText(/vous devez répondre à cette question/i)
   ).toBeInTheDocument();
   fireEvent.change(ui.agreement3239.durationInput.get(), {
     target: {
@@ -53,7 +53,7 @@ test(`
     },
   });
   expect(
-    screen.queryByText(/vous devez répondre à cette question/i),
+    screen.queryByText(/vous devez répondre à cette question/i)
   ).not.toBeInTheDocument();
   fireEvent.click(ui.next.get());
   expect(ui.print.get()).toBeInTheDocument();

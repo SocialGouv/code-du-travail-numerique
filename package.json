@@ -32,7 +32,8 @@
     "test:update": "lerna run test:update --scope=@socialgouv/cdtn-ui --scope=@cdt/frontend --stream",
     "test:update:frontend": "lerna run test:update --scope=@cdt/frontend --stream",
     "test:update:api": "lerna run test:api:update --scope=@cdt/frontend --stream",
-    "prepare": "is-ci || husky install"
+    "prepare": "is-ci || husky install",
+    "format": "lerna run format --stream"
   },
   "repository": {
     "type": "git",

@@ -19,7 +19,7 @@ const CDT_ES = "cdt_es";
 export const searchWithQuery = async (
   query: string,
   skipPrequalifiedResults: boolean,
-  sizeParams?: number,
+  sizeParams?: number
 ) => {
   const sources = [
     SOURCES.SHEET_MT,
@@ -42,17 +42,17 @@ export const searchWithQuery = async (
 
   if (prequalifiedResults) {
     prequalifiedResults.forEach(
-      (item) => (item._source.algo = "pre-qualified"),
+      (item) => (item._source.algo = "pre-qualified")
     );
     documents = prequalifiedResults.filter(
       ({ _source: { source } }) =>
-        ![SOURCES.CDT, SOURCES.THEMES].includes(source),
+        ![SOURCES.CDT, SOURCES.THEMES].includes(source)
     );
     articles = prequalifiedResults.filter(
-      ({ _source: { source } }) => source === SOURCES.CDT,
+      ({ _source: { source } }) => source === SOURCES.CDT
     );
     themes = prequalifiedResults.filter(
-      ({ _source: { source } }) => source === SOURCES.THEMES,
+      ({ _source: { source } }) => source === SOURCES.THEMES
     );
   }
 
@@ -100,7 +100,7 @@ export const searchWithQuery = async (
     const fulltextHits = extractHits(results[THEMES_ES]);
     fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
     themes = removeDuplicate(
-      themes.concat(fulltextHits).slice(0, THEMES_RESULTS_NUMBER),
+      themes.concat(fulltextHits).slice(0, THEMES_RESULTS_NUMBER)
     );
   }
   if (shouldRequestCdt) {
@@ -158,11 +158,7 @@ async function msearch(searches) {
 
     if (resp.status !== 200) {
       console.error(
-        `Elastic search error : index ${index}, search key ${key} : ${JSON.stringify(
-          resp,
-          null,
-          2,
-        )}`,
+        `Elastic search error : index ${index}, search key ${key} : ${JSON.stringify(resp, null, 2)}`
       );
     }
 

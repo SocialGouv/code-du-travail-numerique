@@ -92,7 +92,7 @@ export type StoreOptions = {
 const createRootSlice = (
   set: StoreApi<MainStore>["setState"],
   get: StoreApi<MainStore>["getState"],
-  { simulatorName, toolName },
+  { simulatorName, toolName }
 ) => ({
   ...createContratTravailStore(set, get, { type: toolName }),
   ...createAncienneteStore(set, get, { type: toolName }),
@@ -111,7 +111,7 @@ const createStore = (type: IndemniteDepartType) =>
   create(
     (
       set: StoreApi<MainStore>["setState"],
-      get: StoreApi<MainStore>["getState"],
+      get: StoreApi<MainStore>["getState"]
     ) =>
       createRootSlice(set, get, {
         toolName: type,
@@ -119,11 +119,11 @@ const createStore = (type: IndemniteDepartType) =>
           type === IndemniteDepartType.RUPTURE_CONVENTIONNELLE
             ? PublicodesSimulator.RUPTURE_CONVENTIONNELLE
             : PublicodesSimulator.INDEMNITE_LICENCIEMENT,
-      }),
+      })
   );
 
 const IndemniteDepartContext = createContext<StoreApi<MainStore>>(
-  {} as StoreApi<MainStore>,
+  {} as StoreApi<MainStore>
 );
 
 const { Provider } = IndemniteDepartContext;

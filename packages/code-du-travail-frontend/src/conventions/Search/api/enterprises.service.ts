@@ -22,7 +22,7 @@ const siretNumberError =
   "Veuillez indiquer un numéro Siret (14 chiffres uniquement)";
 
 const apiEnterprises = function createFetcher(
-  searchParams: SearchParams,
+  searchParams: SearchParams
 ): Promise<Enterprise[]> {
   if (/^\d{2,8}$/.test(searchParams.query.replace(/\s/g, ""))) {
     return Promise.reject(siretSirenError);
@@ -37,13 +37,9 @@ const apiEnterprises = function createFetcher(
     return Promise.reject(siretNumberError);
   }
 
-  const url = `${SITE_URL}/api/enterprises?q=${encodeURIComponent(
-    searchParams.query,
-  )}${
+  const url = `${SITE_URL}/api/enterprises?q=${encodeURIComponent(searchParams.query)}${
     searchParams.apiGeoResult
-      ? `&cp=${encodeURIComponent(
-          searchParams.apiGeoResult.selectedPostCode.join(","),
-        )}`
+      ? `&cp=${encodeURIComponent(searchParams.apiGeoResult.selectedPostCode.join(","))}`
       : ""
   }`;
 

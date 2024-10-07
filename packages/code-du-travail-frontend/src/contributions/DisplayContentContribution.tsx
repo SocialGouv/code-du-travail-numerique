@@ -76,7 +76,7 @@ const theadMaxRowspan = (tr: Element) => {
   const maxRowspan = rowspans.reduce(
     (previousValue, currentValue) =>
       currentValue > previousValue ? currentValue : previousValue,
-    0,
+    0
   );
   return maxRowspan === -1 ? 1 : maxRowspan;
 };

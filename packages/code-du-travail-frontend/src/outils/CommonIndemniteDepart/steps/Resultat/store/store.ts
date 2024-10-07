@@ -90,7 +90,7 @@ const createResultStore: StoreSlice<
         produce((state: ResultStoreSlice) => {
           state.resultData.input.isEligible = isEligible;
           state.resultData.input.infoWarning = infoWarning;
-        }),
+        })
       );
       return { isEligible };
     },
@@ -132,7 +132,7 @@ const createResultStore: StoreSlice<
       let isParentalNoticeHidden = false;
 
       const infos = informationToSituation(
-        get().informationsData.input.publicodesInformations,
+        get().informationsData.input.publicodesInformations
       );
 
       const situation = {
@@ -144,7 +144,7 @@ const createResultStore: StoreSlice<
           get().ancienneteData.input.dateSortie!,
           get().contratTravailData.input.licenciementInaptitude === "oui",
           get().contratTravailData.input.arretTravail === "oui",
-          { ...infos },
+          { ...infos }
         ),
         absencePeriods:
           absencePeriods && absencePeriods.length
@@ -157,9 +157,7 @@ const createResultStore: StoreSlice<
         const result = publicodes.calculate(situation);
         if (result.type !== "result") {
           throw new Error(
-            `Le calcul sur l'écran de résultat retourne un ${
-              result.type
-            } (detail: ${JSON.stringify(result)})`,
+            `Le calcul sur l'écran de résultat retourne un ${result.type} (detail: ${JSON.stringify(result)})`
           );
         }
         publicodesSituation = result;
@@ -177,22 +175,16 @@ const createResultStore: StoreSlice<
         errorPublicodes = true;
         console.error(`La situation est ${JSON.stringify(situation)}`);
         console.error(
-          `Les informations de l'ancienneté sont ${JSON.stringify(
-            get().ancienneteData.input,
-          )}`,
+          `Les informations de l'ancienneté sont ${JSON.stringify(get().ancienneteData.input)}`
         );
         console.error(
-          `Les informations liées aux salaires sont ${JSON.stringify(
-            get().salairesData.input,
-          )}`,
+          `Les informations liées aux salaires sont ${JSON.stringify(get().salairesData.input)}`
         );
         console.error(
-          `Les informations liées au contrat de travail sont ${JSON.stringify(
-            get().contratTravailData.input,
-          )}`,
+          `Les informations liées au contrat de travail sont ${JSON.stringify(get().contratTravailData.input)}`
         );
         console.error(
-          `Les informations issues de publicodes sont ${JSON.stringify(infos)}`,
+          `Les informations issues de publicodes sont ${JSON.stringify(infos)}`
         );
         console.error(`L'erreur remontée est : ${JSON.stringify(e)}`);
         Sentry.captureException(e);
@@ -201,7 +193,7 @@ const createResultStore: StoreSlice<
       if (
         agreement &&
         getSupportedCc().some(
-          (item) => item.idcc === agreement.num && item.fullySupported,
+          (item) => item.idcc === agreement.num && item.fullySupported
         )
       ) {
         agreementReferences = publicodesSituation?.references ?? [];
@@ -224,7 +216,7 @@ const createResultStore: StoreSlice<
 
         isParentalNoticeHidden = isParentalNoticeHiddenForAgreement(
           isAgreementBetter,
-          agreement.num,
+          agreement.num
         );
       }
 
@@ -233,17 +225,17 @@ const createResultStore: StoreSlice<
           (item) =>
             item.show === "conventionnel" ||
             item.show === "légal et conventionnel" ||
-            item.show === "default",
+            item.show === "default"
         );
       } else if (isAgreementEqualToLegal) {
         notifications = agreementNotifications?.filter(
           (item) =>
-            item.show === "légal et conventionnel" || item.show === "default",
+            item.show === "légal et conventionnel" || item.show === "default"
         );
       } else {
         notifications = agreementNotifications?.filter(
           (item) =>
-            item.show === "légal" || item.show === "légal et conventionnel",
+            item.show === "légal" || item.show === "légal et conventionnel"
         );
       }
 
@@ -256,7 +248,9 @@ const createResultStore: StoreSlice<
           state.resultData.input.formula = formula;
           state.resultData.input.legalReferences = legalReferences;
           state.resultData.input.publicodesLegalResult = publicodesSituation
-            ?.detail?.legalResult ?? { value: 0 };
+            ?.detail?.legalResult ?? {
+            value: 0,
+          };
           state.resultData.input.publicodesAgreementResult =
             publicodesSituation?.detail?.agreementResult;
           state.resultData.input.agreementExplanation =
@@ -274,7 +268,7 @@ const createResultStore: StoreSlice<
             agreementHasNoBetterAllowance;
           state.resultData.input.isParentalNoticeHidden =
             isParentalNoticeHidden;
-        }),
+        })
       );
     },
   },

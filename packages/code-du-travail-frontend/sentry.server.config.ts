@@ -15,5 +15,5 @@ Sentry.init({
 Sentry.addOpenTelemetryInstrumentation(
   new GenericPoolInstrumentation(),
   new HttpInstrumentation(),
-  new NetInstrumentation(),
+  new NetInstrumentation()
 );

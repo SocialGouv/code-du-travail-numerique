@@ -143,7 +143,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
  */
 const filterRelatedItems = (
   slug: string,
-  relatedItems: RelatedItem[],
+  relatedItems: RelatedItem[]
 ): RelatedItem[] =>
   slug !== "indemnite-licenciement" &&
   slug !== "indemnite-rupture-conventionnelle"
@@ -151,7 +151,7 @@ const filterRelatedItems = (
     : relatedItems?.filter(
         (item) =>
           item.slug !== "indemnite-rupture-conventionnelle" &&
-          item.slug !== "indemnite-licenciement",
+          item.slug !== "indemnite-licenciement"
       );
 
 const { breakpoints, spacings } = theme;

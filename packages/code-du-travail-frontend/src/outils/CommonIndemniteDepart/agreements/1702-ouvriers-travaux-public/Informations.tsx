@@ -14,7 +14,7 @@ export default function Agreement1702Informations() {
       noticeSalaryPeriods:
         state.agreement1702Data.input.noticeSalaryPeriods ?? [],
       hasReceivedSalaries: state.agreement1702Data.input.hasReceivedSalaries,
-    }),
+    })
   );
 
   return (
@@ -23,7 +23,8 @@ export default function Agreement1702Informations() {
         <>
           <li>
             Connaissance du montant des salaires perçus pendant le préavis
-            &nbsp;:&nbsp;{hasReceivedSalaries === "oui" ? "Oui" : "Non"}
+            &nbsp;:&nbsp;
+            {hasReceivedSalaries === "oui" ? "Oui" : "Non"}
           </li>
 
           {hasReceivedSalaries === "oui" && (

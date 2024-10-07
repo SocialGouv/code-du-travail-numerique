@@ -8,7 +8,7 @@ export default function Agreement16Informations() {
     (state) => ({
       showVariablePay: state.agreement16Data.input.showVariablePay,
       hasVariablePay: state.agreement16Data.input.hasVariablePay,
-    }),
+    })
   );
 
   return (

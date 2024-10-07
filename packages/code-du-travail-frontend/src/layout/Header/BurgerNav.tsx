@@ -87,7 +87,7 @@ const HeaderBurgerNav = ({ currentPage }: Props): JSX.Element => {
                 isCurrent={currentPage === SOURCES.CCN}
                 onClick={() =>
                   onSendMatomoEvent(
-                    MatomoHeaderEvent.CLICK_CONVENTION_COLLECTIVE,
+                    MatomoHeaderEvent.CLICK_CONVENTION_COLLECTIVE
                   )
                 }
               >

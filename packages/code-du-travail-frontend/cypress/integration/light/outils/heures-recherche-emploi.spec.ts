@@ -3,7 +3,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
     cy.visit("/outils/heures-recherche-emploi");
     cy.get("h1").should(
       "have.text",
-      "Calculer le nombre d'heures d'absence pour rechercher un emploi",
+      "Calculer le nombre d'heures d'absence pour rechercher un emploi"
     );
     cy.contains("Commencer").click();
 
@@ -14,7 +14,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
     cy.contains("Convention collective non traitée");
     cy.get("button").contains("Suivant").click();
     cy.contains(
-      "La simulation ne peut pas se poursuivre avec cette convention collective",
+      "La simulation ne peut pas se poursuivre avec cette convention collective"
     );
   });
 
@@ -22,7 +22,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
     cy.visit("/outils/heures-recherche-emploi");
     cy.get("h1").should(
       "have.text",
-      "Calculer le nombre d'heures d'absence pour rechercher un emploi",
+      "Calculer le nombre d'heures d'absence pour rechercher un emploi"
     );
     cy.contains("Commencer").click();
 
@@ -37,21 +37,21 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
     cy.get("button").contains("Suivant").click();
 
     cy.contains(
-      "Nombre d’heures d’absence autorisée pour rechercher un emploi",
+      "Nombre d’heures d’absence autorisée pour rechercher un emploi"
     );
     cy.contains(
-      "Nombre d’heures d’absence autorisée pour rechercher un emploi",
+      "Nombre d’heures d’absence autorisée pour rechercher un emploi"
     );
     cy.contains(
-      "2 heures d'absence par jour pendant la dernière semaine du préavis",
+      "2 heures d'absence par jour pendant la dernière semaine du préavis"
     );
     cy.contains("Rémunération pendant les heures d’absence autorisée");
     cy.contains(
-      "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
+      "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération."
     );
     cy.contains("Conditions d’utilisation");
     cy.contains(
-      "Les heures sont fixées un jour par l' employeur et le suivant par le salarié. Ils peuvent décider de regrouper tout ou partie de ces heures.",
+      "Les heures sont fixées un jour par l' employeur et le suivant par le salarié. Ils peuvent décider de regrouper tout ou partie de ces heures."
     );
 
     cy.contains("Voir le détail du calcul").click();
@@ -63,7 +63,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
     cy.visit("/outils/heures-recherche-emploi");
     cy.get("h1").should(
       "have.text",
-      "Calculer le nombre d'heures d'absence pour rechercher un emploi",
+      "Calculer le nombre d'heures d'absence pour rechercher un emploi"
     );
     cy.contains("Commencer").click();
 
@@ -72,7 +72,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
     cy.get("#agreement-search").type("787");
     cy.get('ul[role="listbox"] li')
       .contains(
-        "Personnel des cabinets d'experts-comptables et de commissaires aux comptes",
+        "Personnel des cabinets d'experts-comptables et de commissaires aux comptes"
       )
       .click();
     cy.contains("Cliquez sur Suivant pour poursuivre la simulation.");
@@ -87,19 +87,19 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
     cy.get("button").contains("Suivant").click();
 
     cy.contains(
-      "Nombre d’heures d’absence autorisée pour rechercher un emploi",
+      "Nombre d’heures d’absence autorisée pour rechercher un emploi"
     );
     cy.contains("2 heures par journée d'ouverture du cabinet");
     cy.contains("Rémunération pendant les heures d’absence autorisée");
     cy.contains("Le salaire est maintenu.");
     cy.contains("Conditions d’utilisation");
     cy.contains(
-      "Les heures sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, ces absences sont fixées un jour par l'employeur et le salarié. Le salarié qui a retrouvé un emploi ne peut plus utiliser ces heures.",
+      "Les heures sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, ces absences sont fixées un jour par l'employeur et le salarié. Le salarié qui a retrouvé un emploi ne peut plus utiliser ces heures."
     );
 
     cy.contains("Voir le détail du calcul").click();
     cy.contains(
-      "Personnel des cabinets d'experts-comptables et de commissaires aux comptes",
+      "Personnel des cabinets d'experts-comptables et de commissaires aux comptes"
     );
     cy.contains("Démission");
     cy.contains("Au moins 5 ans");

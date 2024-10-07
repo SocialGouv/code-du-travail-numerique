@@ -44,7 +44,7 @@ const ContributionCC = ({ contribution }: Props) => {
             }
             onClick={() => {
               router.push(
-                `/contribution/${removeCCNumberFromSlug(contribution.slug)}`,
+                `/contribution/${removeCCNumberFromSlug(contribution.slug)}`
               );
             }}
           ></SummaryItem>

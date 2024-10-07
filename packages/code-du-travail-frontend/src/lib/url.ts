@@ -14,7 +14,7 @@ export const removeQueryParameters = (url: string): string => {
 
 export const getSourceUrlFromPath = (
   path: string | undefined,
-  paramName = "src_url",
+  paramName = "src_url"
 ): string | null => {
   if (!path) return null;
   const url = new URL(!path.startsWith("https://") ? "https://" + path : path);

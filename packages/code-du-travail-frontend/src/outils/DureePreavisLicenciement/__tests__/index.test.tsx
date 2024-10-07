@@ -9,7 +9,7 @@ describe("<DureePreavisLicenciement />", () => {
         title="Préavis de licenciement"
         displayTitle="Calculer le préavis de licenciement"
         icon=""
-      />,
+      />
     );
     expect(container).toMatchSnapshot();
   });

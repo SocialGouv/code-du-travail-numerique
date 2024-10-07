@@ -14,7 +14,7 @@ describe("<ConventionModal />", () => {
             voir les conventions
           </button>
         )}
-      </ConventionModal>,
+      </ConventionModal>
     );
     expect(container).toMatchSnapshot();
   });
@@ -27,12 +27,12 @@ describe("<ConventionModal />", () => {
             voir les conventions
           </button>
         )}
-      </ConventionModal>,
+      </ConventionModal>
     );
     const button = getByTestId("bt");
     button.click();
     const input = getByPlaceholderText(
-      /Nom de la convention collective, de l’entreprise ou son SIRET/i,
+      /Nom de la convention collective, de l’entreprise ou son SIRET/i
     );
     expect(input).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
@@ -46,7 +46,7 @@ describe("<ConventionModal />", () => {
             chercher votre convention
           </button>
         )}
-      </ConventionModal>,
+      </ConventionModal>
     );
     const button = getByTestId("bt");
     button.click();
@@ -55,8 +55,8 @@ describe("<ConventionModal />", () => {
     el.click();
     expect(
       queryByPlaceholderText(
-        /Nom de la convention collective, de l’entreprise ou son SIRET/i,
-      ),
+        /Nom de la convention collective, de l’entreprise ou son SIRET/i
+      )
     ).toBeNull();
   });
 });

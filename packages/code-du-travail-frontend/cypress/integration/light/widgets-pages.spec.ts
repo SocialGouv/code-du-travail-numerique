@@ -4,7 +4,7 @@ describe("Widgets", () => {
     cy.contains("Étapes");
     cy.contains("Calculer le préavis de départ à la retraite");
     cy.contains(
-      "permet de calculer la durée de préavis à respecter en cas de départ ou de mise à la retraite",
+      "permet de calculer la durée de préavis à respecter en cas de départ ou de mise à la retraite"
     );
 
     cy.get("button").contains("Commencer").click();
@@ -16,7 +16,7 @@ describe("Widgets", () => {
     cy.contains("Étapes");
     cy.contains("Calculer le préavis de licenciement");
     cy.contains(
-      "permet de calculer la durée du préavis accordée au salarié en cas de licenciement",
+      "permet de calculer la durée du préavis accordée au salarié en cas de licenciement"
     );
 
     cy.get("button").contains("Commencer").click();

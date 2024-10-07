@@ -14,7 +14,7 @@ describe("<Salaires />", () => {
         initialValues={{ salaires: [{ salaire: 3000 }] }}
         onSubmit={onSubmit}
         render={() => <Salaires name="salaires" />}
-      />,
+      />
     );
     expect(container).toMatchSnapshot();
   });
@@ -26,7 +26,7 @@ describe("<Salaires />", () => {
         mutators={{ ...arrayMutators }}
         onSubmit={onSubmit}
         render={() => <Salaires name="salaires" />}
-      />,
+      />
     );
     const deleteButton = getByText(/supprimer/i);
     deleteButton.click();
@@ -39,7 +39,7 @@ describe("<Salaires />", () => {
         mutators={{ ...arrayMutators }}
         onSubmit={onSubmit}
         render={() => <Salaires name="salaires" />}
-      />,
+      />
     );
     const addButton = getByText(/ajouter/i);
     addButton.click();

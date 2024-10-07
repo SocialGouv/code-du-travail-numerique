@@ -22,7 +22,7 @@ const SearchBar = ({
 }: Props) => {
   const router = useRouter();
   const [query, setQuery] = useState(
-    typeof router.query.q === "string" ? router.query.q : "",
+    typeof router.query.q === "string" ? router.query.q : ""
   );
   const [suggestions, setSuggestions] = useState<string[]>([]);
 
@@ -39,7 +39,7 @@ const SearchBar = ({
       setQuery(inputValue);
       try {
         const results = await fetchSuggestResults(inputValue).then((items) =>
-          items.slice(0, suggestMaxResults),
+          items.slice(0, suggestMaxResults)
         );
         setSuggestions(results);
       } catch (error) {
@@ -201,9 +201,7 @@ export const StyledInput = styled.input`
   margin: 0;
   padding: ${({ hasButton, hasSearchIcon }) =>
     hasButton
-      ? `2rem ${hasSearchIcon ? "9rem" : "18.5rem"} 2rem ${
-          hasSearchIcon ? spacings.xmedium : "6rem"
-        }`
+      ? `2rem ${hasSearchIcon ? "9rem" : "18.5rem"} 2rem ${hasSearchIcon ? spacings.xmedium : "6rem"}`
       : `1rem 5.5rem 1rem ${spacings.base}`};
   color: ${({ theme }) => theme.paragraph};
   font-weight: normal;

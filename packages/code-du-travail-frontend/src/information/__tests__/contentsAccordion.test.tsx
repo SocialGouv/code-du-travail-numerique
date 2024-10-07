@@ -61,7 +61,7 @@ describe("Information Contents", () => {
             references: [],
           },
         ]}
-      />,
+      />
     );
   });
   test("Vérifier l'affichage en mode accordéon", () => {

@@ -16,7 +16,7 @@ Storage.prototype.getItem = jest.fn(
     "title": "Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950",
     "contributions": true
   }   
-`,
+`
 );
 
 describe("Indemnité licenciement - CC 16", () => {
@@ -27,7 +27,7 @@ describe("Indemnité licenciement - CC 16", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />,
+      />
     );
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
@@ -40,18 +40,18 @@ describe("Indemnité licenciement - CC 16", () => {
   test(`Vérifier l'enchainement de question à l'étape information`, () => {
     userAction.changeInputList(
       ui.information.agreement16.proCategory.get(),
-      "'Ingénieurs et cadres'",
+      "'Ingénieurs et cadres'"
     );
     userAction.click(
-      ui.information.agreement16.proCategoryHasChanged.oui.get(),
+      ui.information.agreement16.proCategoryHasChanged.oui.get()
     );
     userAction.setInput(
       ui.information.agreement16.dateProCategoryChanged.get(),
-      "01/01/2010",
+      "01/01/2010"
     );
     userAction.setInput(
       ui.information.agreement16.ruptureEngineerAge.get(),
-      "48",
+      "48"
     );
     userAction.click(ui.next.get());
 

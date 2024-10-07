@@ -30,7 +30,7 @@ export type FetchReducerState<A> = {
 
 const dataFetchReducer = <A>(
   state: FetchReducerState<A>,
-  action: FecthActions<A>,
+  action: FecthActions<A>
 ): FetchReducerState<A> => {
   switch (action.type) {
     case Actions.init:
@@ -76,7 +76,7 @@ type Fetcher<Result> = (searchParams: SearchParams) => Promise<Result>;
  */
 export function createSuggesterHook<Result>(
   fetcher: Fetcher<Result>,
-  onResult: (searchParams: SearchParams) => void,
+  onResult: (searchParams: SearchParams) => void
 ) {
   return function (searchParams: SearchParams): FetchReducerState<Result> {
     const [state, dispatch] = useReducer<

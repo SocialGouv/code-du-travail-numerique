@@ -29,7 +29,7 @@ export const getAllThemesAndSubThemes = async () => {
   const themes = response.hits.hits.map((t) => t._source);
   // for each theme of themes, we need to get slug of children
   const childrenSlugs = themes.flatMap((theme) =>
-    theme.children.map((child) => child.slug),
+    theme.children.map((child) => child.slug)
   );
   const data = await getBySlugsThemes(childrenSlugs).catch(() => {
     return [];

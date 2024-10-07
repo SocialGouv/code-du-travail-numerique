@@ -9,11 +9,11 @@ describe("Outil - Préavis de licenciement", () => {
     cy.contains("Suivant").click();
 
     cy.contains(
-      "Dans le cas d’un licenciement pour faute grave ou lourde, il n’y pas d’obligation de respecter un préavis.",
+      "Dans le cas d’un licenciement pour faute grave ou lourde, il n’y pas d’obligation de respecter un préavis."
     );
     cy.get('label:contains("Non")').first().click();
     cy.contains(
-      "Le salarié concerné est-il reconnu en tant que travailleur handicapé",
+      "Le salarié concerné est-il reconnu en tant que travailleur handicapé"
     );
     cy.get('label:contains("Non")').eq(1).click();
     cy.contains("Quelle est l'ancienneté du salarié");
@@ -25,7 +25,7 @@ describe("Outil - Préavis de licenciement", () => {
     cy.contains("Vous devez répondre à cette question");
     cy.get("#not-selected").check();
     cy.contains(
-      "Vous pouvez passer cette étape et poursuivre la simulation qui vous fournira un résultat basé sur le code du travail.",
+      "Vous pouvez passer cette étape et poursuivre la simulation qui vous fournira un résultat basé sur le code du travail."
     );
     cy.get("button").contains("Suivant").click();
 
@@ -45,11 +45,11 @@ describe("Outil - Préavis de licenciement", () => {
     cy.contains("Suivant").click();
 
     cy.contains(
-      "Dans le cas d’un licenciement pour faute grave ou lourde, il n’y pas d’obligation de respecter un préavis.",
+      "Dans le cas d’un licenciement pour faute grave ou lourde, il n’y pas d’obligation de respecter un préavis."
     );
     cy.get('label:contains("Non")').first().click();
     cy.contains(
-      "Le salarié concerné est-il reconnu en tant que travailleur handicapé",
+      "Le salarié concerné est-il reconnu en tant que travailleur handicapé"
     );
     cy.get('label:contains("Non")').eq(1).click();
     cy.contains("Quelle est l'ancienneté du salarié");
@@ -66,7 +66,7 @@ describe("Outil - Préavis de licenciement", () => {
 
     cy.contains("Quelle est la catégorie professionnelle du salarié");
     cy.get('[id="input-criteria.catégorie professionnelle"]').select(
-      "Personnel de fabrication, personnel de vente et personnel de services",
+      "Personnel de fabrication, personnel de vente et personnel de services"
     );
     cy.contains("Quelle est l'ancienneté du salarié");
     cy.get('[id="input-criteria.ancienneté"]').select("Plus de 2 ans");
@@ -77,7 +77,7 @@ describe("Outil - Préavis de licenciement", () => {
     cy.contains("Voir le détail du calcul").click();
     cy.contains("Boulangerie-pâtisserie (entreprises artisanales)");
     cy.contains(
-      "Personnel de fabrication, personnel de vente et personnel de services",
+      "Personnel de fabrication, personnel de vente et personnel de services"
     );
     cy.contains("Plus de 2 ans");
   });

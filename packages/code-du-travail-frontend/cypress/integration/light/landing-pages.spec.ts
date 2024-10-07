@@ -10,14 +10,14 @@ describe("Landing pages", () => {
 
   it("je vois une page fiche ministère du travail avec un accordéon ouvert", () => {
     cy.visit(
-      "/fiche-ministere-travail/la-demission#Quelle-est-la-situation-du-salarie-a-la-fin-du-contrat",
+      "/fiche-ministere-travail/la-demission#Quelle-est-la-situation-du-salarie-a-la-fin-du-contrat"
     );
     cy.get("h1").should("have.text", "La démission");
     cy.get('[aria-expanded="true"]', { timeout: 10000 })
       .find("h2")
       .should(
         "contain",
-        "Quelle est la situation du salarié à la fin du contrat",
+        "Quelle est la situation du salarié à la fin du contrat"
       );
   });
 
@@ -36,11 +36,11 @@ describe("Landing pages", () => {
 
   it("je vois une page convention collective", () => {
     cy.visit(
-      "/convention-collective/1686-commerces-et-services-de-laudiovisuel-de-lelectronique-et-de-lequipemen",
+      "/convention-collective/1686-commerces-et-services-de-laudiovisuel-de-lelectronique-et-de-lequipemen"
     );
     cy.get("h1").should(
       "have.text",
-      "Commerces et services de l'audiovisuel, de l'électronique et de l'équipement ménager",
+      "Commerces et services de l'audiovisuel, de l'électronique et de l'équipement ménager"
     );
     cy.get("body").should("contain", "Source: Légifrance");
   });

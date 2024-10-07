@@ -82,7 +82,7 @@ const Information = ({
                   }))}
                 />
               </Section>
-            ),
+            )
         )}
       </Answer>
     </Layout>
@@ -95,7 +95,7 @@ export const getServerSideProps = async ({ query }) => {
   const information =
     await getBySourceAndSlugItems<EditorialContentElasticDocument>(
       SOURCES.EDITORIAL_CONTENT,
-      query.slug,
+      query.slug
     );
   if (!information) {
     return {

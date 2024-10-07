@@ -24,9 +24,9 @@ describe("StepResult", () => {
       expect(
         getByText(
           "L’existence ou la durée du préavis de démission peut être prévue par un accord d’entreprise ou à défaut, par un usage dans l’entreprise.",
-          { exact: false },
-        ),
+          { exact: false }
+        )
       ).toBeTruthy();
-    },
+    }
   );
 });

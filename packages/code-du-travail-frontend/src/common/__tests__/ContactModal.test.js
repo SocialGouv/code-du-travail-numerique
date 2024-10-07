@@ -11,7 +11,7 @@ describe("<ContactModal />", () => {
         {(openModal) => (
           <Button onClick={openModal}>texte dans le bouton</Button>
         )}
-      </ContactModal>,
+      </ContactModal>
     );
     const button = getByText(/texte dans le bouton/i);
     expect(button).toBeTruthy();
@@ -23,7 +23,7 @@ describe("<ContactModal />", () => {
         {(openModal) => (
           <Button onClick={openModal}>texte dans le bouton</Button>
         )}
-      </ContactModal>,
+      </ContactModal>
     );
     const button = getByText(/texte dans le bouton/i);
     button.click();
@@ -38,7 +38,7 @@ describe("<ContactModal />", () => {
         {(openModal) => (
           <Button onClick={openModal}>texte dans le bouton</Button>
         )}
-      </ContactModal>,
+      </ContactModal>
     );
     const button = getByText(/texte dans le bouton/i);
     button.click();

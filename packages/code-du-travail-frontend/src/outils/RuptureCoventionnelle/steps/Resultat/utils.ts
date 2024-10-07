@@ -1,7 +1,7 @@
 import { CatPro3239 } from "@socialgouv/modeles-social";
 
 export const getResultMessage = (
-  informations?: Record<string, any>,
+  informations?: Record<string, any>
 ): string => {
   let isAssMat = false;
   if (informations) {

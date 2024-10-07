@@ -27,7 +27,7 @@ export const getAllTools = async (): Promise<Tool[]> => {
 
 export const getToolsByIdsAndSlugs = async (
   ids?: string[],
-  slugs?: string[],
+  slugs?: string[]
 ): Promise<SearchHit<Tool>[]> => {
   const body: any = getTools(ids, slugs);
   const response = await elasticsearchClient.search<Tool>({
@@ -45,7 +45,7 @@ export const getToolsByIdsAndSlugs = async (
 };
 
 export const getToolsByIds = async (
-  cdtnIds: string[],
+  cdtnIds: string[]
 ): Promise<SearchHit<Tool>[]> => {
   const body: any = getTools(undefined, undefined, cdtnIds);
   const response = await elasticsearchClient.search<Tool>({
@@ -63,7 +63,7 @@ export const getToolsByIds = async (
 };
 
 export const getToolsBySlugs = async (
-  slugs: string[],
+  slugs: string[]
 ): Promise<SearchHit<Tool>[]> => {
   const body: any = getTools(undefined, slugs);
   const response = await elasticsearchClient.search<Tool>({
@@ -81,7 +81,7 @@ export const getToolsBySlugs = async (
 };
 
 export const getBySlugTools = async (
-  slug: string,
+  slug: string
 ): Promise<Tool | undefined> => {
   const body: any = getTools(undefined, [slug]);
   const response = await elasticsearchClient.search<Tool>({

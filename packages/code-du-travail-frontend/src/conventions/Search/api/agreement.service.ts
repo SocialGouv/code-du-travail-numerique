@@ -24,8 +24,8 @@ const apiIdcc = function createFetcher(query: string): Promise<Agreement[]> {
           .then(
             (results) =>
               results.hits.hits.map(({ _source }) =>
-                formatCCn(_source),
-              ) as Agreement[],
+                formatCCn(_source)
+              ) as Agreement[]
           );
       }
       throw new Error();

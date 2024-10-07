@@ -27,7 +27,7 @@ const PubliQuestion: React.FC<Props> = ({
 }) => {
   const [randomId] = React.useState(
     // to avoid collision with other components for YesNoQuestion
-    Math.random().toString(36).substring(2, 15),
+    Math.random().toString(36).substring(2, 15)
   );
   const { question, titre, cdtn, unité } = rule;
   const tooltip = rule.description

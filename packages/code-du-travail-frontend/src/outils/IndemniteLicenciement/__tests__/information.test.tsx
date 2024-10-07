@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
   "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
   "slug": "16-transports-routiers-et-activites-auxiliaires-du-transport"
 }
-`,
+`
 );
 
 global.fetch = jest.fn(() =>
@@ -48,7 +48,7 @@ global.fetch = jest.fn(() =>
           ],
         },
       }),
-  }),
+  })
 ) as jest.Mock;
 
 describe("Indemnité licenciement - Validation de la page information", () => {
@@ -61,7 +61,7 @@ describe("Indemnité licenciement - Validation de la page information", () => {
           icon={""}
           title={""}
           displayTitle={""}
-        />,
+        />
       );
       userAction = new UserAction();
       userAction
@@ -90,26 +90,26 @@ describe("Indemnité licenciement - Validation de la page information", () => {
       // validation que la première question est affichée
       expect(
         rendering.queryByText(
-          "Quelle est la catégorie professionnelle du salarié ?",
-        ),
+          "Quelle est la catégorie professionnelle du salarié ?"
+        )
       ).toBeInTheDocument();
 
       // validation des erreurs sur les champs vides
       userAction.click(ui.next.get());
       expect(
-        rendering.queryByText("Vous devez répondre à cette question"),
+        rendering.queryByText("Vous devez répondre à cette question")
       ).toBeInTheDocument();
       userAction.changeInputList(
         ui.information.agreement16.proCategory.get(),
-        "Ingénieurs et cadres",
+        "Ingénieurs et cadres"
       );
       expect(
         rendering.queryByText(
-          "Avant d'être cadre, le salarié a-t-il été employé, technicien ou agent de maîtrise dans l’entreprise ?",
-        ),
+          "Avant d'être cadre, le salarié a-t-il été employé, technicien ou agent de maîtrise dans l’entreprise ?"
+        )
       ).toBeInTheDocument();
       expect(
-        rendering.queryAllByText("Vous devez répondre à cette question"),
+        rendering.queryAllByText("Vous devez répondre à cette question")
       ).toHaveLength(1);
 
       // validation que les champs sont retirés quand on revient à une question précédente
@@ -117,32 +117,32 @@ describe("Indemnité licenciement - Validation de la page information", () => {
         .click(ui.information.agreement16.proCategoryHasChanged.oui.get())
         .setInput(
           ui.information.agreement16.dateProCategoryChanged.get(),
-          "01/01/2010",
+          "01/01/2010"
         )
         .setInput(ui.information.agreement16.engineerAge.get(), "38")
         .changeInputList(
           ui.information.agreement16.proCategory.get(),
-          "Ouvriers",
+          "Ouvriers"
         );
 
       expect(rendering.getAllByTestId("question-label")).toHaveLength(2);
       expect(
-        ui.information.agreement16.driveInability.oui.get(),
+        ui.information.agreement16.driveInability.oui.get()
       ).not.toBeChecked();
       expect(
-        ui.information.agreement16.driveInability.non.get(),
+        ui.information.agreement16.driveInability.non.get()
       ).not.toBeChecked();
 
       // validation qu'un champ présent avant soit réinitialisé
       userAction
         .changeInputList(
           ui.information.agreement16.proCategory.get(),
-          "Employés",
+          "Employés"
         )
         .setInput(ui.information.agreement16.employeeAge.get(), "55")
         .changeInputList(
           ui.information.agreement16.proCategory.get(),
-          "Technicien et agents de maîtrise (TAM)",
+          "Technicien et agents de maîtrise (TAM)"
         );
       expect(rendering.getAllByTestId("question-label")).toHaveLength(2);
       expect(ui.information.agreement16.agentAge.query()).toHaveValue(null);
@@ -151,20 +151,20 @@ describe("Indemnité licenciement - Validation de la page information", () => {
       userAction
         .changeInputList(
           ui.information.agreement16.proCategory.get(),
-          "Ingénieurs et cadres",
+          "Ingénieurs et cadres"
         )
         .click(ui.information.agreement16.proCategoryHasChanged.oui.get())
         .setInput(ui.information.agreement16.dateProCategoryChanged.get(), "1");
       expect(rendering.getAllByTestId("question-label")).toHaveLength(3);
       expect(
-        ui.information.agreement16.engineerAge.query(),
+        ui.information.agreement16.engineerAge.query()
       ).not.toBeInTheDocument();
 
       // validation que l'on peut valider la page quand tous les champs sont saisis
       userAction
         .setInput(
           ui.information.agreement16.dateProCategoryChanged.get(),
-          "01/01/2010",
+          "01/01/2010"
         )
         .setInput(ui.information.agreement16.engineerAge.get(), "38")
         .click(ui.next.get());
@@ -180,13 +180,13 @@ describe("Indemnité licenciement - Validation de la page information", () => {
 
       expect(rendering.getAllByTestId("question-label")).toHaveLength(4);
       expect(ui.information.agreement16.proCategory.get()).toHaveValue(
-        "'Ingénieurs et cadres'",
+        "'Ingénieurs et cadres'"
       );
       expect(
-        ui.information.agreement16.proCategoryHasChanged.oui.get(),
+        ui.information.agreement16.proCategoryHasChanged.oui.get()
       ).toBeChecked();
       expect(
-        ui.information.agreement16.dateProCategoryChanged.get(),
+        ui.information.agreement16.dateProCategoryChanged.get()
       ).toHaveValue("2010-01-01");
       expect(ui.information.agreement16.engineerAge.get()).toHaveValue(38);
 
@@ -199,9 +199,9 @@ describe("Indemnité licenciement - Validation de la page information", () => {
         .click(
           await waitFor(() =>
             rendering.getByText(
-              "Particuliers employeurs et emploi à domicile (IDCC 3239)",
-            ),
-          ),
+              "Particuliers employeurs et emploi à domicile (IDCC 3239)"
+            )
+          )
         )
         .click(ui.next.get());
 

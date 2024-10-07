@@ -6,7 +6,7 @@ export const mapToPublicodesSituationForCalculation = (
   endDate: string,
   salaryPeriods: SalaryPeriods[],
   inaptitude: boolean,
-  longTermDisability: boolean,
+  longTermDisability: boolean
 ): Record<string, string> => {
   return {
     salaryPeriods: JSON.stringify(salaryPeriods),
@@ -25,7 +25,7 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
   ccn: number,
   inaptitude: boolean,
   longTermDisability: boolean,
-  agreementParameters?: Record<string, any>,
+  agreementParameters?: Record<string, any>
 ): Record<string, string> => {
   return {
     ...agreementParameters,
@@ -48,7 +48,7 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithVa
     endDate: string,
     inaptitude: boolean,
     longTermDisability: boolean,
-    agreementParameters?: Record<string, any>,
+    agreementParameters?: Record<string, any>
   ): Record<string, string> => {
     return ccn
       ? mapToPublicodesSituationForIndemniteLicenciementConventionnel(
@@ -66,7 +66,7 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithVa
               "contrat salarié . indemnité de licenciement . date de sortie":
                 endDate,
             },
-          },
+          }
         )
       : mapToPublicodesSituationForCalculation(
           startDate,
@@ -74,7 +74,7 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithVa
           endDate,
           salaryPeriods,
           inaptitude,
-          longTermDisability,
+          longTermDisability
         );
   };
 

@@ -107,7 +107,7 @@ const RouteSelection = ({
           <OnChange name={ROUTE_NAME}>
             {(
               values: AgreementRoute | null | undefined,
-              _previous: AgreementRoute | null | undefined,
+              _previous: AgreementRoute | null | undefined
             ) => {
               if (values) {
                 onChange(values);

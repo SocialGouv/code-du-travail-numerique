@@ -55,7 +55,7 @@ function Modeles(props) {
         setDocuments({ [themeSlug]: modelesByTheme[themeSlug] });
       }
     },
-    [modelesByTheme, setDocuments, setSelectedTheme],
+    [modelesByTheme, setDocuments, setSelectedTheme]
   );
   return (
     <Layout currentPage={SOURCES.LETTERS}>
@@ -74,7 +74,7 @@ function Modeles(props) {
                   <option key={slug} value={slug}>
                     {label}
                   </option>
-                )),
+                ))
               )}
           </LargeSelect>
           <StyledList>

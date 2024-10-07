@@ -11,7 +11,7 @@ export const getResult = ({
 }): string => {
   const durationMax = Math.max(
     legalSituation?.duration ?? 0,
-    agreementSituation?.duration ?? 0,
+    agreementSituation?.duration ?? 0
   );
   if (durationMax === 0) {
     return "Aucun préavis";

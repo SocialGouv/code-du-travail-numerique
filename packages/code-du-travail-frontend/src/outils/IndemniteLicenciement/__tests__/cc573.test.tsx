@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
   "slug": "573-commerces-de-gros",
   "title": "Convention collective nationale de commerces de gros du 23 juin 1970. Etendue par arrêté du 15 juin 1972 JONC 29 août 1972. Mise à jour par accord du 27 septembre 1984 étendu par arrêté du 4 février 1985 JORF 16 février 1985."
 }
-`,
+`
 );
 
 describe("Indemnité licenciement - CC 573", () => {
@@ -27,7 +27,7 @@ describe("Indemnité licenciement - CC 573", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />,
+      />
     );
     userAction = new UserAction();
 
@@ -44,7 +44,7 @@ describe("Indemnité licenciement - CC 573", () => {
     userAction
       .changeInputList(
         ui.information.agreement573.proCategory.get(),
-        "Agents de maîtrise, techniciens et assimilés",
+        "Agents de maîtrise, techniciens et assimilés"
       )
       .click(ui.information.agreement573.eco.oui.get())
       .setInput(ui.information.agreement573.age.get(), "57")

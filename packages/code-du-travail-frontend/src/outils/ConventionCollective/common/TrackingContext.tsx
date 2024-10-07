@@ -6,7 +6,7 @@ export type TrackEventFn = (
   category: string,
   action: string,
   name?: string,
-  value?: string,
+  value?: string
 ) => void;
 
 export type TrackingContext = {

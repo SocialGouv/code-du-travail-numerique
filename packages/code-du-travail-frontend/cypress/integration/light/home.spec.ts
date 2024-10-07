@@ -3,7 +3,7 @@ describe("Page d'acceuil", () => {
     cy.visit("/");
     cy.get("h1").should(
       "have.text",
-      "Bienvenue sur le Code du travail numérique",
+      "Bienvenue sur le Code du travail numérique"
     );
     cy.contains("Recherchez par mots-clés");
     cy.contains("Rechercher");
@@ -17,21 +17,21 @@ describe("Page d'acceuil", () => {
     cy.contains("Voir tous les modèles de documents").should(
       "have.attr",
       "href",
-      "/modeles-de-courriers",
+      "/modeles-de-courriers"
     );
     cy.get("#home-modeles-de-courriers").find("a").should("have.length", 5);
 
     cy.contains("Voir toutes les fiches pratiques").should(
       "have.attr",
       "href",
-      "/contribution",
+      "/contribution"
     );
     cy.get("#home-fiches-pratiques").find("a").should("have.length", 5);
 
     cy.contains("Voir toutes les conventions collectives").should(
       "have.attr",
       "href",
-      "/convention-collective",
+      "/convention-collective"
     );
     cy.get("#home-convention-collective").find("a").should("have.length", 5);
 

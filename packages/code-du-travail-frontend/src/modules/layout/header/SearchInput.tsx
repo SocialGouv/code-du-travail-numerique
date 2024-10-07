@@ -31,7 +31,7 @@ export const SearchInput = (props: Props) => {
       setQuery(inputValue);
       try {
         const results = await fetchSuggestResults(inputValue).then((items) =>
-          items.slice(0, SUGGEST_MAX_RESULTS),
+          items.slice(0, SUGGEST_MAX_RESULTS)
         );
         setSuggestions(results);
       } catch (error) {
@@ -69,9 +69,7 @@ export const SearchInput = (props: Props) => {
               {...getItemProps({
                 item,
                 index,
-                className: `${fr.cx("fr-p-1v")} ${suggestion} ${
-                  highlightedIndex === index ? isHighlighted : ""
-                }`,
+                className: `${fr.cx("fr-p-1v")} ${suggestion} ${highlightedIndex === index ? isHighlighted : ""}`,
               })}
               key={`${item}${index}`}
             >

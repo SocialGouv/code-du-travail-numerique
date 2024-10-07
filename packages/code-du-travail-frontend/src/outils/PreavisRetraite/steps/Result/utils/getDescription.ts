@@ -7,7 +7,7 @@ export const getDescription = (
   isSeniorityLessThan6Months: boolean,
   hasAgreement: boolean,
   hasAgreementResult: boolean,
-  isAgreementSupported: boolean,
+  isAgreementSupported: boolean
 ): string | undefined => {
   if (isSeniorityLessThan6Months) {
     switch (true) {

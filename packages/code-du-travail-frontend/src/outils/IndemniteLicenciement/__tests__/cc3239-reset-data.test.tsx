@@ -16,7 +16,7 @@ Storage.prototype.getItem = jest.fn(
   "slug": "3239-particuliers-employeurs-et-emploi-a-domicile",
   "title": "Particuliers employeurs et emploi à domicile"
 }
-`,
+`
 );
 
 describe("Indemnité licenciement - CC 3239 - changement de convention collective", () => {
@@ -27,7 +27,7 @@ describe("Indemnité licenciement - CC 3239 - changement de convention collectiv
         icon={""}
         title={""}
         displayTitle={""}
-      />,
+      />
     );
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
@@ -39,7 +39,7 @@ describe("Indemnité licenciement - CC 3239 - changement de convention collectiv
     userAction.click(ui.next.get());
     userAction.setInput(
       ui.information.agreement3239.proCategory.get(),
-      "'Salarié du particulier employeur'",
+      "'Salarié du particulier employeur'"
     );
     userAction.click(ui.next.get());
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2020");
@@ -48,7 +48,7 @@ describe("Indemnité licenciement - CC 3239 - changement de convention collectiv
     userAction.click(ui.seniority.hasAbsence.oui.get());
     userEvent.selectOptions(
       ui.seniority.absences.motif(0).get(),
-      "Congé pour convenance personnelle",
+      "Congé pour convenance personnelle"
     );
     userAction.setInput(ui.seniority.absences.duration(0).get(), "6");
     userAction.click(ui.next.get());
@@ -56,7 +56,7 @@ describe("Indemnité licenciement - CC 3239 - changement de convention collectiv
     userAction.setInput(ui.salary.sameSalaryValue.get(), "3000");
     userAction.click(ui.next.get());
     expect(
-      screen.queryByText("Congé pour convenance personnelle"),
+      screen.queryByText("Congé pour convenance personnelle")
     ).toBeInTheDocument();
     userAction.click(ui.previous.get());
     userAction.click(ui.previous.get());
@@ -69,13 +69,13 @@ describe("Indemnité licenciement - CC 3239 - changement de convention collectiv
     expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
     expect(ui.seniority.absences.motifs.queryAll()).toHaveLength(1);
     expect(ui.seniority.absences.motif(0).get()).not.toHaveValue(
-      "Congé pour convenance personnelle",
+      "Congé pour convenance personnelle"
     );
     expect(ui.seniority.absences.duration(0).get()).toHaveValue(null);
 
     userAction.click(ui.next.get());
     expect(
-      screen.queryByText("Vous devez renseigner tous les champs"),
+      screen.queryByText("Vous devez renseigner tous les champs")
     ).toBeInTheDocument();
 
     userAction.setInput(ui.seniority.absences.duration(0).get(), "6");
@@ -87,10 +87,10 @@ describe("Indemnité licenciement - CC 3239 - changement de convention collectiv
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.absences.motif.queryAll()).toHaveLength(1);
     expect(ui.result.absences.motif.queryAll()[0]).not.toHaveTextContent(
-      "Congé pour convenance personnelle",
+      "Congé pour convenance personnelle"
     );
     expect(
-      screen.queryByText(/Alternance temps plein \/ temps partiel : Non/i),
+      screen.queryByText(/Alternance temps plein \/ temps partiel : Non/i)
     ).toBeInTheDocument();
   });
 });

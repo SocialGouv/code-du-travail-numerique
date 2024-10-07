@@ -54,7 +54,7 @@ export const Tools = (props: Props) => {
                   <Paragraph noMargin>{description}</Paragraph>
                 </CallToActionTile>
               );
-            },
+            }
           )}
         </Grid>
         <HomeButtonTrigger

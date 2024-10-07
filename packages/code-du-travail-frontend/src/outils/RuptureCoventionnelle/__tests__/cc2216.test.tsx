@@ -16,7 +16,7 @@ Storage.prototype.getItem = jest.fn(
     "title": "Convention collective nationale du commerce de détail et de gros à prédominance alimentaire du 12 juillet 2001.  Etendue par arrêté du 26 juillet 2002 JORF 6 août 2002.",
     "contributions": true
   }  
-`,
+`
 );
 
 describe("Indemnité licenciement - CC 2216", () => {
@@ -27,7 +27,7 @@ describe("Indemnité licenciement - CC 2216", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />,
+      />
     );
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
@@ -40,7 +40,7 @@ describe("Indemnité licenciement - CC 2216", () => {
   test(`Vérifier l'enchainement de question à l'étape information`, () => {
     userAction.changeInputList(
       ui.information.agreement2216.proCategory.get(),
-      "'Cadres'",
+      "'Cadres'"
     );
     userAction.setInput(ui.information.agreement2216.ruptureAge.get(), "65");
     userAction.click(ui.next.get());

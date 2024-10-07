@@ -40,7 +40,7 @@ const EnterpriseSearch = ({
   noAgreementFoundComponent,
 }: Props): JSX.Element => {
   const [enterprise, setEnterprise] = useState<Enterprise | undefined>(
-    selectedEnterprise,
+    selectedEnterprise
   );
   const [searchParams, setSearchParams] = useState<SearchParams>({
     query: "",

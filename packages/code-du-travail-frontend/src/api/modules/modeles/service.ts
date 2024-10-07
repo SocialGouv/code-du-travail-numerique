@@ -29,7 +29,7 @@ export const getAllModeles = async () => {
 };
 
 export const getBySlugsModeles = async (
-  slugs: string[],
+  slugs: string[]
 ): Promise<ElasticSearchItem[]> => {
   const body = getModelesBySlugs(slugs);
   const response = await elasticsearchClient.search<any>({
@@ -42,7 +42,7 @@ export const getBySlugsModeles = async (
 };
 
 export const getByIdsModeles = async (
-  ids: string[],
+  ids: string[]
 ): Promise<ElasticSearchItem[]> => {
   const body = getModelesByIds(ids);
   const response = await elasticsearchClient.search<any>({

@@ -25,7 +25,7 @@ type Props = {
   isDisabled?: boolean;
   handleEnterpriseSelection: (
     enterprise: Enterprise,
-    params?: SearchParams,
+    params?: SearchParams
   ) => void;
 } & TrackingProps;
 
@@ -45,7 +45,7 @@ export const SearchEnterpriseInput = ({
     searchEnterprises,
     (searchParams) => {
       onUserAction(UserAction.SearchEnterprise, searchParams);
-    },
+    }
   );
   const state = useEnterpriseSuggester(searchParams);
   const [query, setQuery] = useState(searchParams.query);

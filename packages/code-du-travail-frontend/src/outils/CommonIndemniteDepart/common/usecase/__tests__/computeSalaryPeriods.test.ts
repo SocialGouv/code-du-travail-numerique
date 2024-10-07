@@ -6,7 +6,7 @@ describe("computeSalaryPeriods", () => {
       computeSalaryPeriods({
         dateEntree: "01/02/2017",
         dateNotification: "01/04/2018",
-      }),
+      })
     ).toEqual([
       "mars 2018",
       "février 2018",
@@ -28,7 +28,7 @@ describe("computeSalaryPeriods", () => {
       computeSalaryPeriods({
         dateEntree: "01/02/2017",
         dateNotification: "01/07/2017",
-      }),
+      })
     ).toEqual([
       "juin 2017",
       "mai 2017",
@@ -43,7 +43,7 @@ describe("computeSalaryPeriods", () => {
       computeSalaryPeriods({
         dateEntree: "20/02/2015",
         dateNotification: "20/12/2020",
-      }),
+      })
     ).toEqual([
       "novembre 2020",
       "octobre 2020",

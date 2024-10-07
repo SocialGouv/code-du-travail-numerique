@@ -42,11 +42,11 @@ const SelectAgreement = ({
   simulator,
 }: Props): JSX.Element => {
   const [storedConvention, setConvention] = useLocalStorageForAgreement(
-    defaultSelectedAgreement,
+    defaultSelectedAgreement
   );
   const [hasSelectedEnterprise, setHasSelectedEnterprise] = useState(false);
   const [enterprise, setEnterprise] = useState<Enterprise | undefined>(
-    form.getState().values.ccn?.enterprise,
+    form.getState().values.ccn?.enterprise
   );
 
   const onSelectAgreement = useCallback<OnSelectAgreementFn>(
@@ -58,7 +58,7 @@ const SelectAgreement = ({
         onChange(storedConvention, agreement);
       }
     },
-    [storedConvention, setConvention, onChange],
+    [storedConvention, setConvention, onChange]
   );
 
   const onUserAction: OnUserAction = (action, extra) => {
@@ -143,7 +143,7 @@ const SelectAgreement = ({
               setIsCheckboxChecked={() => {
                 form.change(
                   "hasNoEnterpriseSelected",
-                  !values.hasNoEnterpriseSelected,
+                  !values.hasNoEnterpriseSelected
                 );
               }}
               onCheckboxChange={async (isCheckboxChecked) => {

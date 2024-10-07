@@ -24,7 +24,7 @@ test(`Questionnaire
       ],
       questionnaireSlug: "Slug12",
     },
-    true,
+    true
   );
   await render(
     <QuestionnaireWrapper
@@ -32,7 +32,7 @@ test(`Questionnaire
       title="Titre"
       personnalizedTitle="Titre personnalisé"
       slug="Slug12"
-    />,
+    />
   );
   expect(screen.queryByText("Titre personnalisé")).toBeInTheDocument();
   expect(ui.response1.statement.query()).toBeInTheDocument();

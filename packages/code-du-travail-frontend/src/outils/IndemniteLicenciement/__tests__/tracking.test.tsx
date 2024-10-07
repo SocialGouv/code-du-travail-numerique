@@ -18,7 +18,7 @@ describe("Indemnité licenciement - Tracking", () => {
         icon={""}
         title={"Indemnité de licenciement"}
         displayTitle={"Indemnité de licenciement"}
-      />,
+      />
     );
   });
   const userAction = new UserAction();
@@ -27,7 +27,7 @@ describe("Indemnité licenciement - Tracking", () => {
     jest.spyOn(Storage.prototype, "setItem");
     Storage.prototype.getItem = jest.fn(
       () =>
-        `{"num":16,"shortTitle":"Transports routiers et activités auxiliaires du transport"}`,
+        `{"num":16,"shortTitle":"Transports routiers et activités auxiliaires du transport"}`
     );
     userAction.click(ui.introduction.startButton.get());
     expect(push).toHaveBeenCalledWith([
@@ -56,14 +56,14 @@ describe("Indemnité licenciement - Tracking", () => {
     ]);
     userAction.changeInputList(
       ui.information.agreement16.proCategory.get(),
-      "Ingénieurs et cadres",
+      "Ingénieurs et cadres"
     );
     userAction.click(
-      ui.information.agreement16.proCategoryHasChanged.oui.get(),
+      ui.information.agreement16.proCategoryHasChanged.oui.get()
     );
     userAction.setInput(
       ui.information.agreement16.dateProCategoryChanged.get(),
-      "01/01/2010",
+      "01/01/2010"
     );
     userAction.setInput(ui.information.agreement16.engineerAge.get(), "38");
     userAction.click(ui.next.get());
@@ -235,7 +235,7 @@ describe("Indemnité licenciement - Tracking", () => {
     jest.spyOn(Storage.prototype, "setItem");
     Storage.prototype.getItem = jest.fn(
       () =>
-        `{"num":16,"shortTitle":"Transports routiers et activités auxiliaires du transport"}`,
+        `{"num":16,"shortTitle":"Transports routiers et activités auxiliaires du transport"}`
     );
     userAction.click(ui.introduction.startButton.get());
     userAction.click(ui.contract.type.cdi.get());
@@ -256,7 +256,7 @@ describe("Indemnité licenciement - Tracking", () => {
     jest.spyOn(Storage.prototype, "setItem");
     Storage.prototype.getItem = jest.fn(
       () =>
-        `{"num":1261,"shortTitle":"Acteurs du lien social et familial (centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local)"}`,
+        `{"num":1261,"shortTitle":"Acteurs du lien social et familial (centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local)"}`
     );
     userAction.click(ui.introduction.startButton.get());
     userAction.click(ui.contract.type.cdi.get());

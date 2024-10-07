@@ -18,7 +18,7 @@ export const getAllToolsQuery = () => {
 export const getTools = (
   ids?: string[],
   slugs?: string[],
-  cdtnIds?: string[],
+  cdtnIds?: string[]
 ) => {
   const filter: any[] = [
     {

@@ -19,7 +19,7 @@ export const ShowInfo = ({
   const store = useContext(DossierLicenciementContext);
   const setQuestionnaireSlug = useStore(
     store,
-    (state) => state.setQuestionnaireSlug,
+    (state) => state.setQuestionnaireSlug
   );
   return (
     <ButtonSection>

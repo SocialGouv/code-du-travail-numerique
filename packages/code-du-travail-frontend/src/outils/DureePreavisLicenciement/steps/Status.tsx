@@ -17,7 +17,7 @@ import { YesNoQuestion } from "../../common/YesNoQuestion";
 const { questions, situations: allSituations } = data;
 const questionsMap = questions.reduce(
   (state, v) => ({ ...state, [v.name]: v }),
-  {},
+  {}
 );
 
 type Validate = {
@@ -76,7 +76,7 @@ function StepStatus({ form }: WizardStepProps): JSX.Element {
                     if (visibility) {
                       trackQuestion(
                         questionsMap[seniorityKey].name,
-                        MatomoActionEvent.PREAVIS_LICENCIEMENT,
+                        MatomoActionEvent.PREAVIS_LICENCIEMENT
                       );
                     }
                   },
@@ -87,7 +87,7 @@ function StepStatus({ form }: WizardStepProps): JSX.Element {
             trackQuestion(
               questionsMap[seniorityKey].name,
               MatomoActionEvent.PREAVIS_LICENCIEMENT,
-              false,
+              false
             );
           }}
         />

@@ -3,7 +3,7 @@ import { StoreApi, useStore } from "zustand";
 import { SimulatorStore } from "./type";
 
 const SimulatorContext = createContext<StoreApi<SimulatorStore>>(
-  {} as StoreApi<SimulatorStore>,
+  {} as StoreApi<SimulatorStore>
 );
 
 const { Provider } = SimulatorContext;

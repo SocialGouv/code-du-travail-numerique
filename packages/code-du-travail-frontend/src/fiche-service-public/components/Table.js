@@ -13,10 +13,10 @@ class Table extends React.PureComponent {
 
     const title = data.children.find((child) => child.name === "Titre");
     const headingRows = data.children.filter(
-      (child) => child.name === "Rangée" && child.attributes.type === "header",
+      (child) => child.name === "Rangée" && child.attributes.type === "header"
     );
     const rows = data.children.filter(
-      (child) => child.name === "Rangée" && child.attributes.type === "normal",
+      (child) => child.name === "Rangée" && child.attributes.type === "normal"
     );
 
     const columns = data.children.filter((child) => child.name === "Colonne");

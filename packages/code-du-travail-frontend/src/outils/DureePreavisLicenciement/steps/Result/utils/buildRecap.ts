@@ -6,7 +6,7 @@ export const buildRecap = (
   seriousMisconduct: unknown,
   legalSituation?: LicenciementSituation,
   agreementSituation?: LicenciementSituation,
-  ccn?: ConventionCollective,
+  ccn?: ConventionCollective
 ) => {
   const defaultRecap = {
     "Licenciement pour faute grave": seriousMisconduct ? "Oui" : "Non",

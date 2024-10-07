@@ -6,7 +6,7 @@ describe("Navigation", () => {
   describe("On the first screen of the simulator", () => {
     it("should only render the button to start", () => {
       const { getByText, getAllByRole } = render(
-        <Navigation showNext={true} />,
+        <Navigation showNext={true} />
       );
       const buttons = getAllByRole("button");
       expect(buttons).toHaveLength(1);
@@ -17,7 +17,7 @@ describe("Navigation", () => {
   describe("On a step of the simulator", () => {
     it("should only render the previous and next button", () => {
       const { getByText, getAllByRole } = render(
-        <Navigation showNext={true} onPrevious={() => {}} />,
+        <Navigation showNext={true} onPrevious={() => {}} />
       );
       const buttons = getAllByRole("button");
       expect(buttons).toHaveLength(2);
@@ -29,11 +29,7 @@ describe("Navigation", () => {
   describe("On the last step of the simulator", () => {
     it("should only render the previous and print button", () => {
       const { getByText, getAllByRole } = render(
-        <Navigation
-          showNext={false}
-          onPrevious={() => {}}
-          onPrint={() => {}}
-        />,
+        <Navigation showNext={false} onPrevious={() => {}} onPrint={() => {}} />
       );
       const buttons = getAllByRole("button");
       expect(buttons).toHaveLength(2);

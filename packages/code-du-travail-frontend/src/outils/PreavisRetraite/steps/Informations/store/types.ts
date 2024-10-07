@@ -29,7 +29,7 @@ export type InformationsStoreFn = {
   onInformationsChange: (
     questionKey: string,
     value: string,
-    type: RuleType | undefined,
+    type: RuleType | undefined
   ) => void;
   generatePublicodesQuestions: () => boolean;
   onNextStep: () => ValidationResponse;

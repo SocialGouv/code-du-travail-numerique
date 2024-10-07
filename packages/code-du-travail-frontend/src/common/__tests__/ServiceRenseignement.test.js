@@ -10,7 +10,7 @@ jest.mock(
       url: "link.url",
     },
   }),
-  { virtual: true },
+  { virtual: true }
 );
 
 jest.mock("@socialgouv/matomo-next", () => {

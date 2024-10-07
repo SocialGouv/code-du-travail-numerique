@@ -26,7 +26,7 @@ describe("Modeles", () => {
 
   it("getBySlugModeles", async () => {
     const result = await getBySlugModeles(
-      "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
+      "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle"
     );
     expect(result).toMatchSnapshot();
   });

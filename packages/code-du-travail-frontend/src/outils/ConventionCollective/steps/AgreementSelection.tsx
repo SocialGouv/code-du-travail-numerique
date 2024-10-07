@@ -27,7 +27,7 @@ const AgreementSelectionStep = ({
 
   if (!enterprise) {
     router.push(
-      `/${SOURCES.TOOLS}/convention-collective/${ScreenType.enterprise}`,
+      `/${SOURCES.TOOLS}/convention-collective/${ScreenType.enterprise}`
     );
     return <></>;
   }

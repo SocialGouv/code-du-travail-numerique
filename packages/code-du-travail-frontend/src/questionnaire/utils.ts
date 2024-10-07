@@ -7,7 +7,7 @@ import {
 
 export const getCurrentQuestion = (
   questionTree: QuestionnaireQuestion,
-  previousResponses: PreviousResponse[],
+  previousResponses: PreviousResponse[]
 ): {
   currentQuestion: QuestionnaireQuestion;
   lastResponse?: QuestionnaireResponse;
@@ -22,19 +22,19 @@ export const getCurrentQuestion = (
         currentQuestionOld.responses[index].question ?? currentQuestionOld;
       return { currentQuestion, lastResponse };
     },
-    { currentQuestion: questionTree },
+    { currentQuestion: questionTree }
   );
 };
 
 export const slugSummaryRecursive = (
   questionTree: QuestionnaireQuestion,
-  previousResponses: PreviousResponse[] = [],
+  previousResponses: PreviousResponse[] = []
 ): SlugResponses => {
   return questionTree.responses.reduce(
     (
       acc: SlugResponses,
       { question, slug }: QuestionnaireResponse,
-      index: number,
+      index: number
     ) => {
       const {
         neutralStatement: text,
@@ -54,6 +54,6 @@ export const slugSummaryRecursive = (
       }
       return { ...acc, ...slugSummary };
     },
-    {},
+    {}
   );
 };

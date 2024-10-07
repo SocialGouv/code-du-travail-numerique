@@ -24,8 +24,8 @@ export const getResults = async (query: string): Promise<ResultType | null> => {
         searchEnterprises({ query: trimmedQuery }).then((entreprises) =>
           entreprises.filter(
             (entreprise) =>
-              entreprise.conventions && entreprise.conventions.length,
-          ),
+              entreprise.conventions && entreprise.conventions.length
+          )
         ),
       ]);
       break;
@@ -34,7 +34,7 @@ export const getResults = async (query: string): Promise<ResultType | null> => {
 
       if (matches && matches.length) {
         const perfectMatch = matches.find(
-          (match) => match.num === parseIdcc(trimmedQuery),
+          (match) => match.num === parseIdcc(trimmedQuery)
         );
         conventions = perfectMatch ? [perfectMatch] : matches.slice(0, 5);
       }

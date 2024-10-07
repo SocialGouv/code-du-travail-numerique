@@ -13,7 +13,7 @@ function renderForm() {
           <button data-testid="nextBt">suivant</button>
         </form>
       )}
-    </Form>,
+    </Form>
   );
 }
 
@@ -40,18 +40,18 @@ describe("<StepCDD />", () => {
       const validateButton = getByTestId("nextBt");
       validateButton.click();
       expect(getByText(/pas le droit à une prime/i)).toBeTruthy();
-    },
+    }
   );
   it("should ask for CDI refusal only if there is proposition", () => {
     const { getByText, getByTestId } = renderForm();
     const propositionCDI = getByTestId(
-      "propositionCDIFindeContrat",
+      "propositionCDIFindeContrat"
     ).querySelector(`input[value=false]`);
     fireEvent.click(propositionCDI);
     // blur is need to force validation in react-testing-lib
     fireEvent.blur(propositionCDI);
     const refusCDI = getByTestId("refusCDIFindeContrat").querySelector(
-      `input[value=true]`,
+      `input[value=true]`
     );
     fireEvent.click(refusCDI);
     // validate form

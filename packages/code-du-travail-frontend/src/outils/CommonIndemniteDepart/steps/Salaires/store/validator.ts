@@ -54,7 +54,7 @@ export const validateStep = (state: SalairesStoreInput) => {
 };
 
 const sumSalaryPeriods = (
-  salaryPeriods: SalairesStoreInput["salaryPeriods"],
+  salaryPeriods: SalairesStoreInput["salaryPeriods"]
 ) => {
   const sum = salaryPeriods.reduce((acc, curr) => {
     if (curr.value !== undefined) {

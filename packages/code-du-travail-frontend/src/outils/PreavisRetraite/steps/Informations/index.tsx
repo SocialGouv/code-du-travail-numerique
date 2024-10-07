@@ -26,7 +26,7 @@ const InformationsStep = (): JSX.Element => {
               onInformationsChange(
                 info.question.rule.nom,
                 v,
-                info.question.rule.cdtn?.type,
+                info.question.rule.cdtn?.type
               )
             }
             error={

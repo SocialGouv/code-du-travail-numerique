@@ -8,32 +8,32 @@ describe("RouteSelection: Skip the agreement selection", () => {
   describe("without data in form", () => {
     it("should render the mandatory question 'Je ne souhaite pas renseigner ma convention collective.'", () => {
       const { getByText } = render(
-        <EmbeddedInjectedForm Step={RouteSelection} />,
+        <EmbeddedInjectedForm Step={RouteSelection} />
       );
       expect(
-        getByText(/Je ne souhaite pas renseigner ma convention collective/),
+        getByText(/Je ne souhaite pas renseigner ma convention collective/)
       ).toBeInTheDocument();
       expect(getByText("(obligatoire)")).toBeInTheDocument();
     });
 
     it("should show all routes", () => {
       const { getByText } = render(
-        <EmbeddedInjectedForm Step={RouteSelection} />,
+        <EmbeddedInjectedForm Step={RouteSelection} />
       );
       expect(
-        getByText(/Je sais quelle est ma convention collective/),
+        getByText(/Je sais quelle est ma convention collective/)
       ).toBeInTheDocument();
       expect(
-        getByText(/Je ne sais pas quelle est ma convention collective/),
+        getByText(/Je ne sais pas quelle est ma convention collective/)
       ).toBeInTheDocument();
       expect(
-        getByText(/Je ne souhaite pas renseigner ma convention collective/),
+        getByText(/Je ne souhaite pas renseigner ma convention collective/)
       ).toBeInTheDocument();
     });
 
     it("should show an alert when submit without select an option", () => {
       const { getByText } = render(
-        <EmbeddedInjectedForm Step={RouteSelection} />,
+        <EmbeddedInjectedForm Step={RouteSelection} />
       );
       getByText("Submit").click();
       expect(getByText(/Vous devez répondre à cette question/)).toBeDefined();
@@ -46,16 +46,16 @@ describe("RouteSelection: Skip the agreement selection", () => {
           props={{
             onChange: () => {},
           }}
-        />,
+        />
       );
       getByText(
-        /Je ne souhaite pas renseigner ma convention collective/,
+        /Je ne souhaite pas renseigner ma convention collective/
       ).click();
 
       expect(
         getByText(
-          /Vous pouvez passer cette étape et poursuivre la simulation qui vous fournira un résultat basé sur le code du travail./,
-        ),
+          /Vous pouvez passer cette étape et poursuivre la simulation qui vous fournira un résultat basé sur le code du travail./
+        )
       ).toBeInTheDocument();
     });
 
@@ -66,7 +66,7 @@ describe("RouteSelection: Skip the agreement selection", () => {
           props={{
             onChange: () => {},
           }}
-        />,
+        />
       );
       getByText(/Je sais quelle est ma convention collective/).click();
 
@@ -80,7 +80,7 @@ describe("RouteSelection: Skip the agreement selection", () => {
           props={{
             onChange: () => {},
           }}
-        />,
+        />
       );
       getByText(/Je ne sais pas quelle est ma convention collective/).click();
 
@@ -94,19 +94,19 @@ describe("RouteSelection: Skip the agreement selection", () => {
         <EmbeddedInjectedForm
           Step={RouteSelection}
           formData={{ ccn: { route: "not-selected" } }}
-        />,
+        />
       );
 
       expect(
         getByRole("radio", {
           checked: true,
           name: /Je ne souhaite pas renseigner ma convention collective/,
-        }),
+        })
       ).toBeInTheDocument();
       expect(
         getByText(
-          /Vous pouvez passer cette étape et poursuivre la simulation qui vous fournira un résultat basé sur le code du travail./,
-        ),
+          /Vous pouvez passer cette étape et poursuivre la simulation qui vous fournira un résultat basé sur le code du travail./
+        )
       ).toBeInTheDocument();
     });
   });
@@ -116,14 +116,14 @@ describe("RouteSelection: Skip the agreement selection", () => {
       <EmbeddedInjectedForm
         Step={RouteSelection}
         formData={{ ccn: { route: "agreement" } }}
-      />,
+      />
     );
 
     expect(
       getByRole("radio", {
         checked: true,
         name: /Je sais quelle est ma convention collective/,
-      }),
+      })
     ).toBeInTheDocument();
     expect(queryByText(/À noter/)).not.toBeInTheDocument();
   });
@@ -134,12 +134,12 @@ describe("RouteSelection: Skip the agreement selection", () => {
         Step={RouteSelection}
         props={{ canBeSkip: false }}
         formData={{ ccn: { route: "agreement" } }}
-      />,
+      />
     );
 
     expect(getAllByRole("radio")).toHaveLength(2);
     expect(
-      queryByText(/Je ne souhaite pas renseigner/),
+      queryByText(/Je ne souhaite pas renseigner/)
     ).not.toBeInTheDocument();
   });
 });

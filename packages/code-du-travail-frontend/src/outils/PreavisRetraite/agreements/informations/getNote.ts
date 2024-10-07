@@ -3,13 +3,13 @@ import { DepartOuMiseRetraite } from "../../steps/OriginStep/store";
 
 export const getNote = (
   typeDepart: DepartOuMiseRetraite,
-  publicodesInformations: PublicodesInformation[],
+  publicodesInformations: PublicodesInformation[]
 ): string | undefined => {
   if (
     publicodesInformations.find(
       (info) =>
         info.question.name ===
-        "contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle",
+        "contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle"
     )?.info === "'Assistants maternels du particulier employeur'" &&
     typeDepart === "mise-retraite"
   ) {

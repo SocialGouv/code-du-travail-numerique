@@ -15,7 +15,7 @@ function renderAnswer(props) {
       {...props}
     >
       <div>Contenu supplémentaire</div>
-    </Answer>,
+    </Answer>
   );
 }
 describe("<Answer />", () => {
@@ -116,20 +116,20 @@ describe("<Answer />", () => {
     });
 
     expect(
-      container.querySelectorAll(`[href*="${SLUG_LINK_BASE}"]`).length,
+      container.querySelectorAll(`[href*="${SLUG_LINK_BASE}"]`).length
     ).toBe(3);
     expect(container.querySelectorAll(`[href*="${EXTERNAL_URL}"]`).length).toBe(
-      1,
+      1
     );
     expect(
       container.querySelectorAll(`[href*="${getRouteBySource(SOURCES.TOOLS)}"]`)
-        .length,
+        .length
     ).toBe(1);
     // only the first two tile items are picked
     expect(
       container.querySelectorAll(
-        `[href*="${getRouteBySource(SOURCES.LETTERS)}"]`,
-      ).length,
+        `[href*="${getRouteBySource(SOURCES.LETTERS)}"]`
+      ).length
     ).toBe(0);
     expect(container).toMatchSnapshot();
   });

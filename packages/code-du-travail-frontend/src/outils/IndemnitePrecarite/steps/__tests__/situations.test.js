@@ -54,7 +54,7 @@ describe("situations", () => {
     it("should not touch error message if multiple situations match", () => {
       const situations = getSituationsFor(data, { idcc: 20 });
       expect(
-        validateSituation(situations, {}, { criteria: { cddType: "yoyo" } }),
+        validateSituation(situations, {}, { criteria: { cddType: "yoyo" } })
       ).toEqual({
         criteria: { cddType: "yoyo" },
       });
@@ -65,8 +65,8 @@ describe("situations", () => {
         validateSituation(
           situations,
           { cddType: "4| baz" },
-          { criteria: { cddType: "yoyo" } },
-        ),
+          { criteria: { cddType: "yoyo" } }
+        )
       ).toEqual({
         criteria: { cddType: undefined },
       });
@@ -78,10 +78,10 @@ describe("situations", () => {
       const supportedCCResult = getSupportedCCWithoutConventionalProvision();
       expect(supportedCCResult).toHaveLength(2);
       expect(supportedCCResult.find((item) => item.idcc === 99999)).toBe(
-        undefined,
+        undefined
       );
       expect(supportedCCResult.find((item) => item.idcc === 30)).toBe(
-        undefined,
+        undefined
       );
       expect(supportedCCResult.find((item) => item.idcc === 20)).toStrictEqual({
         fullySupported: SupportedTypes.FULLY_SUPPORTED,

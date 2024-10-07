@@ -10,7 +10,7 @@ class OuSAdresser extends React.PureComponent {
   render() {
     const { data, headingLevel } = this.props;
     const label = getText(
-      data.children.find((child) => child.name === "Titre"),
+      data.children.find((child) => child.name === "Titre")
     );
     let content;
     if (data.children.find((child) => child.name === "RessourceWeb")) {

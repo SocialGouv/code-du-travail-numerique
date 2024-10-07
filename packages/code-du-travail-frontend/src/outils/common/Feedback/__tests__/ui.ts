@@ -24,7 +24,7 @@ export const ui = {
     },
     questionClarity: {
       title: byText(
-        /Les questions étaient-elles claires et compréhensibles \?/,
+        /Les questions étaient-elles claires et compréhensibles \?/
       ),
       bad: byTestId("questionClarity-bad"),
       average: byTestId("questionClarity-average"),
@@ -32,7 +32,7 @@ export const ui = {
     },
     resultClarity: {
       title: byText(
-        /Les explications du résultat obtenu étaient-elles claires et compréhensibles \?/,
+        /Les explications du résultat obtenu étaient-elles claires et compréhensibles \?/
       ),
       bad: byTestId("resultClarity-bad"),
       average: byTestId("resultClarity-average"),
@@ -47,7 +47,7 @@ export const ui = {
   questionnaireEnd: {
     title: byText(/Merci pour votre aide !/),
     description: byText(
-      /Votre évaluation sera étudiée au plus vite par nos équipes/,
+      /Votre évaluation sera étudiée au plus vite par nos équipes/
     ),
   },
 };

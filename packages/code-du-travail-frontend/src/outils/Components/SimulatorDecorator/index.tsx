@@ -23,7 +23,7 @@ type Props<FormValues> = {
   onFormStepSubmit: (values: FormValues, form: FormApi<FormValues>) => void;
   formOptions?: {
     validate?: (
-      values: FormValues,
+      values: FormValues
     ) => ValidationErrors | Promise<ValidationErrors>;
     decorators?: Array<Decorator<FormValues, Partial<FormValues>>>;
     mutators?: { [key: string]: Mutator<FormValues, Partial<FormValues>> };

@@ -14,7 +14,7 @@ describe("Rupture conventionnelle - Etape ancienneté", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />,
+      />
     );
     userAction = new UserAction();
     userAction
@@ -34,7 +34,7 @@ describe("Rupture conventionnelle - Etape ancienneté", () => {
 
     expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
     expect(
-      byText(/La date de fin de contrat doit se situer après le/).query(),
+      byText(/La date de fin de contrat doit se situer après le/).query()
     ).toBeInTheDocument();
 
     userAction

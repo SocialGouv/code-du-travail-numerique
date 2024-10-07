@@ -28,11 +28,11 @@ export function NoEnterprise(props: Props): JSX.Element {
     if (props.widgetMode) {
       window.open(
         `/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile`,
-        "_blank",
+        "_blank"
       );
     } else {
       router.push(
-        "/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile",
+        "/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile"
       );
     }
   };

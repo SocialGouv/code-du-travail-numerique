@@ -5,7 +5,7 @@ import { IndemniteDepartType, Agreement } from "../../types";
 export const generateSameSalaryQuestion = (
   type: IndemniteDepartType,
   arretTravail: OuiNon | undefined,
-  salaryPeriods: SalaryPeriods[],
+  salaryPeriods: SalaryPeriods[]
 ): string => {
   return `Le salaire mensuel brut a-t-il été le même ${
     salaryPeriods.length === 1
@@ -23,7 +23,7 @@ export const generateSameSalaryQuestion = (
 export const generateSalaireTempsPleinQuestion = (
   type: IndemniteDepartType,
   arretTravail: OuiNon | undefined,
-  salaryPeriods: SalaryPeriods[],
+  salaryPeriods: SalaryPeriods[]
 ): string => {
   return `${
     salaryPeriods.length === 1
@@ -45,7 +45,7 @@ export const generateSalaireTempsPleinQuestion = (
 export const generateResultSameSalary = (
   type: IndemniteDepartType,
   arretTravail: OuiNon | undefined,
-  salaryPeriods: SalaryPeriods[],
+  salaryPeriods: SalaryPeriods[]
 ): string => {
   return `Salaire mensuel brut identique${
     salaryPeriods.length === 1
@@ -63,7 +63,7 @@ export const generateResultSameSalary = (
 export const generateResultSalaireTempsPlein = (
   type: IndemniteDepartType,
   arretTravail: OuiNon | undefined,
-  salaryPeriods: SalaryPeriods[],
+  salaryPeriods: SalaryPeriods[]
 ): string => {
   return `${
     salaryPeriods.length === 1
@@ -79,7 +79,7 @@ export const generateResultSalaireTempsPlein = (
 };
 
 export const generateSmallText = (
-  agreement?: Agreement,
+  agreement?: Agreement
 ): string | undefined => {
   return agreement && agreement.num === 3239
     ? undefined

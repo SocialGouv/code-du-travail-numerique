@@ -6,14 +6,14 @@ import { FeedbackContent } from "../FeedbackContent";
 describe("<FeedbackContent />", () => {
   it("should match snapshot for positive", () => {
     const { container } = render(
-      <FeedbackContent onSubmit={jest.fn} type="positive" />,
+      <FeedbackContent onSubmit={jest.fn} type="positive" />
     );
     expect(container).toMatchSnapshot();
   });
 
   it("should match snapshot for negative", () => {
     const { container } = render(
-      <FeedbackContent onSubmit={jest.fn} type="negative" />,
+      <FeedbackContent onSubmit={jest.fn} type="negative" />
     );
     expect(container).toMatchSnapshot();
   });

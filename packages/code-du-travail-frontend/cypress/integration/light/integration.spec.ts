@@ -25,7 +25,7 @@ describe("Pages integration", () => {
       .find("label", { timeout: 10000 })
       .should(
         "have.text",
-        "Trouvez les réponses à vos questions en droit du travail",
+        "Trouvez les réponses à vos questions en droit du travail"
       );
     cy.get("@iframe").find("#button-search").click();
     cy.get("@postMessage")
@@ -40,7 +40,7 @@ describe("Pages integration", () => {
     cy.visit("/integration/modeles-de-courriers");
     // @ts-ignore
     cy.getIframe().contains(
-      "Affichage obligatoire relatif au harcèlement sexuel",
+      "Affichage obligatoire relatif au harcèlement sexuel"
     );
   });
 

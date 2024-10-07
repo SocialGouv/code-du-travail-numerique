@@ -15,7 +15,7 @@ describe("<TypeRemuneration />", () => {
             <TypeRemuneration name="typeRemuneration" />
           </>
         )}
-      />,
+      />
     );
     expect(container).toMatchSnapshot();
   });

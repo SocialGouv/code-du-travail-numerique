@@ -32,13 +32,13 @@ export const initialState = {
       name: "info_cc",
       onStepDone: (title: string, values: FormContent): void => {
         const isTreated = getSupportedCC(data.situations).find(
-          (agreement) => agreement.idcc === values.ccn?.selected?.num,
+          (agreement) => agreement.idcc === values.ccn?.selected?.num
         );
         pushAgreementEvents(
           title,
           values.ccn,
           !!isTreated,
-          values.hasNoEnterpriseSelected ? true : false,
+          values.hasNoEnterpriseSelected ? true : false
         );
       },
     },
@@ -79,7 +79,7 @@ function skipInformations(values: FormContent): boolean {
     data.situations.filter(
       ({ idcc, typeRupture }) =>
         typeRupture === values?.typeRupture &&
-        idcc === values?.ccn?.selected?.num,
+        idcc === values?.ccn?.selected?.num
     ).length <= 1
   );
 }

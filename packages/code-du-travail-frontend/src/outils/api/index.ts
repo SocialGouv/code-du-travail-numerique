@@ -8,7 +8,7 @@ import { Agreement } from "../../outils/types";
 
 export const loadPublicodes = <T extends PublicodesSimulator>(
   simulator: PublicodesSimulator,
-  idcc?: string,
+  idcc?: string
 ) => {
   return SingletonPublicodesHelper.getInstance<T>(simulator, idcc);
 };

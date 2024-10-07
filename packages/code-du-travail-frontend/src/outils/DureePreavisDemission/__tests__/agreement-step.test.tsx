@@ -18,7 +18,7 @@ describe("Vérification que l'étape recherche convention collective fonctionne 
       target: { value: "1351" },
     });
     await waitFor(() =>
-      expect(ui.agreement1351.searchResult.query()).toBeInTheDocument(),
+      expect(ui.agreement1351.searchResult.query()).toBeInTheDocument()
     );
     fireEvent.click(ui.agreement1351.searchResult.get());
     fireEvent.click(ui.next.get());

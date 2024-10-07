@@ -7,7 +7,7 @@ export const fetchAllInformations = async <
   K extends keyof EditorialContentElasticDocument,
 >(
   fields: K[],
-  sortBy?: K,
+  sortBy?: K
 ): Promise<Pick<EditorialContentElasticDocument, K>[]> => {
   const response = await elasticsearchClient.search<
     Pick<EditorialContentElasticDocument, K>

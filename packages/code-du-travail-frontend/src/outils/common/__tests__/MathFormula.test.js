@@ -50,7 +50,7 @@ describe("asciiMathToTex", () => {
 describe("<MathFormula />", () => {
   it("renders", () => {
     const { container } = render(
-      <MathFormula formula="1 / 4 * Sref * A * 2" />,
+      <MathFormula formula="1 / 4 * Sref * A * 2" />
     );
     expect(container).toMatchSnapshot();
   });

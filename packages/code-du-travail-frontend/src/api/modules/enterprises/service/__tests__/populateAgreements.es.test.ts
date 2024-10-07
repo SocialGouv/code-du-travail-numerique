@@ -15,11 +15,11 @@ describe("populateAgreements", () => {
 
   it("should populate agreements for each enterprise", async () => {
     (fetchAgreements as jest.Mock).mockResolvedValue(
-      populateAgreementsResponse,
+      populateAgreementsResponse
     );
 
     const result = await populateAgreements(
-      populateAgreementsEnterpriseResponse,
+      populateAgreementsEnterpriseResponse
     );
 
     expect(result).toEqual({
@@ -74,11 +74,11 @@ describe("populateAgreements", () => {
 
   it("should return the default name if no hits have been founds", async () => {
     (fetchAgreements as jest.Mock).mockResolvedValue(
-      populateAgreementsResponseWithNothing,
+      populateAgreementsResponseWithNothing
     );
 
     const result = await populateAgreements(
-      populateAgreementsEnterpriseResponse,
+      populateAgreementsEnterpriseResponse
     );
 
     expect(result).toEqual({

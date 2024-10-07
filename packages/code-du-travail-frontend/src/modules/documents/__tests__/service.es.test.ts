@@ -6,7 +6,7 @@ describe("RelatedItems", () => {
   it("getRelatedItems", async () => {
     const result = await fetchRelatedItems(
       { _id: "5" },
-      "quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
+      "quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail"
     );
     expect(result).toEqual([
       {

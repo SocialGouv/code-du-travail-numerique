@@ -43,7 +43,7 @@ export const createAgreement1702StoreSalaires: StoreSlice<
         return set(
           produce((state: Agreement1702StoreSlice) => {
             state.agreement1702Data.input.noticeSalaryPeriods = [];
-          }),
+          })
         );
       }
       const ancienneteInput = get().ancienneteData.input;
@@ -62,18 +62,18 @@ export const createAgreement1702StoreSalaires: StoreSlice<
       const noticeSalaryPeriods = deepMergeArray(
         period,
         agreementSalaryPeriod,
-        "month",
+        "month"
       );
 
       get().situationFunction.setSituation(
         "noticeSalaryPeriods",
-        JSON.stringify(noticeSalaryPeriods),
+        JSON.stringify(noticeSalaryPeriods)
       );
       set(
         produce((state: Agreement1702StoreSlice) => {
           state.agreement1702Data.input.noticeSalaryPeriods =
             noticeSalaryPeriods;
-        }),
+        })
       );
     },
     onChangeHasReceivedSalaries: (value) => {
@@ -83,7 +83,7 @@ export const createAgreement1702StoreSalaires: StoreSlice<
     onSalariesChange: (value) => {
       get().situationFunction.setSituation(
         "noticeSalaryPeriods",
-        JSON.stringify(value),
+        JSON.stringify(value)
       );
       applyGenericValidation(get, set, "noticeSalaryPeriods", value);
     },
@@ -94,28 +94,28 @@ const applyGenericValidation = (
   get: StoreApi<Agreement1702StoreSlice & SalairesStoreSlice>["getState"],
   set: StoreApi<Agreement1702StoreSlice & SalairesStoreSlice>["setState"],
   paramName: keyof Agreement1702StoreInput,
-  value: any,
+  value: any
 ) => {
   if (get().agreement1702Data.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
       draft.agreement1702Data.input[paramName] = value;
     });
     const { isValid, errorState } = validateStep(
-      nextState.agreement1702Data.input,
+      nextState.agreement1702Data.input
     );
     set(
       produce((state: Agreement1702StoreSlice) => {
         state.agreement1702Data.error = errorState;
         state.agreement1702Data.isStepValid = isValid;
         state.agreement1702Data.input[paramName] = value;
-      }),
+      })
     );
     get().salairesFunction.onNextStep();
   } else {
     set(
       produce((state: Agreement1702StoreSlice) => {
         state.agreement1702Data.input[paramName] = value;
-      }),
+      })
     );
   }
 };

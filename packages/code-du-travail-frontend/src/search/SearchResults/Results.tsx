@@ -126,9 +126,7 @@ export const ListLink = ({
         target="_blank"
         rel="noreferer noopener"
         className="no-after"
-        aria-label={`${subtitle} ${title} ${summarize(
-          description,
-        )} ${action} (nouvelle fenêtre)`}
+        aria-label={`${subtitle} ${title} ${summarize(description)} ${action} (nouvelle fenêtre)`}
         {...tileCommonProps}
         custom={false}
         titleTagType="h3"
@@ -158,9 +156,7 @@ export const ListLink = ({
     tileCommonProps.custom = true;
   }
 
-  const href = `/${getRouteBySource(source)}/${rootSlug}${
-    query ? `?q=${query}` : ""
-  }${anchor ? `#${anchor}` : ""}`;
+  const href = `/${getRouteBySource(source)}/${rootSlug}${query ? `?q=${query}` : ""}${anchor ? `#${anchor}` : ""}`;
   return <ResultTile {...tileCommonProps} href={href} />;
 };
 ListLink.propTypes = {
@@ -169,7 +165,7 @@ ListLink.propTypes = {
       PropTypes.shape({
         label: PropTypes.string,
         slug: PropTypes.string,
-      }),
+      })
     ),
     slug: PropTypes.string,
     source: PropTypes.string,
