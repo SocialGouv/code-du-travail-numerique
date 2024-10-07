@@ -6033,7 +6033,6 @@ __metadata:
   resolution: "@socialgouv/code-du-travail@workspace:."
   dependencies:
     husky: ^9.1.6
-    is-ci: ^3.0.0
     lerna: ^5.0.0
   languageName: unknown
   linkType: soft
@@ -16072,7 +16071,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-ci@npm:^3.0.0, is-ci@npm:^3.0.1":
+"is-ci@npm:^3.0.1":
   version: 3.0.1
   resolution: "is-ci@npm:3.0.1"
   dependencies:
