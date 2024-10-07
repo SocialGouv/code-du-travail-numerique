@@ -78,7 +78,7 @@ export default function FilledElements(props: Props) {
                     &nbsp;
                     {publicodesUnitTranslator(
                       info.value.replace(/'/g, ""),
-                      info.unit
+                      info.unit,
                     )}
                   </li>
                 ))}
@@ -134,7 +134,7 @@ export default function FilledElements(props: Props) {
                 {generateResultSameSalary(
                   props.type,
                   props.isArretTravail ? "oui" : "non",
-                  props.salaryPeriods
+                  props.salaryPeriods,
                 )}
                 &nbsp;:&nbsp;
                 {props.hasSameSalary ? "Oui" : "Non"}
@@ -155,7 +155,7 @@ export default function FilledElements(props: Props) {
                   {generateResultSalaireTempsPlein(
                     props.type,
                     props.isArretTravail ? "oui" : "non",
-                    props.salaryPeriods
+                    props.salaryPeriods,
                   )}
                   &nbsp;:&nbsp;
                   <StyledFilledElementTable>

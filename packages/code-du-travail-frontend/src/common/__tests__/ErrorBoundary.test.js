@@ -27,7 +27,7 @@ describe("Error Boundary", () => {
     const { container } = render(
       <ErrorBoundary>
         <Child />
-      </ErrorBoundary>
+      </ErrorBoundary>,
     );
     expect(container).toMatchInlineSnapshot(`
 <div>
@@ -46,7 +46,7 @@ describe("Error Boundary", () => {
     const { getByText } = render(
       <ErrorBoundary>
         <Child />
-      </ErrorBoundary>
+      </ErrorBoundary>,
     );
     expect(getByText(/Désolé, une erreur s’est produite/i)).toBeTruthy();
     expect(topLevelErrors.length).toBe(1);

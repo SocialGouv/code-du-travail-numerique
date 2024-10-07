@@ -10,7 +10,7 @@ describe("<Stats />", () => {
         nbPageViews={200}
         nbSearches={300}
         nbVisits={400}
-      />
+      />,
     );
     expect(container).toMatchSnapshot();
   });

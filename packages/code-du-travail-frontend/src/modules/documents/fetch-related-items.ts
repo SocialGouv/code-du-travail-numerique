@@ -26,7 +26,7 @@ const isArticleSource = (source) =>
 
 const getRelatedItemsBody = (
   settings: RelatedItemSettings[],
-  size: number | undefined = 10
+  size: number | undefined = 10,
 ): any => {
   return {
     query: {
@@ -56,7 +56,7 @@ const getRelatedItemsBody = (
 
 export const fetchRelatedItems = async (
   settings: RelatedItemSettings,
-  excludedSlug: string
+  excludedSlug: string,
 ): Promise<{ items: RelatedItem[]; title: string }[]> => {
   const searchBasedItems = await getSearchBasedItems(settings);
 
@@ -64,7 +64,7 @@ export const fetchRelatedItems = async (
     // avoid elements already visible within the item as fragments
     .filter(
       (item: { slug: string }) =>
-        !excludedSlug.startsWith(item.slug.split("#")[0])
+        !excludedSlug.startsWith(item.slug.split("#")[0]),
     )
     .reduce((acc, related) => {
       const key = related.source + related.slug;

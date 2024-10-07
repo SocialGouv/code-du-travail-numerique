@@ -39,7 +39,7 @@ References.propTypes = {
       title: PropTypes.string.isRequired,
       type: PropTypes.oneOf(Object.values(SOURCES)).isRequired,
       url: PropTypes.string,
-    })
+    }),
   ),
 };
 

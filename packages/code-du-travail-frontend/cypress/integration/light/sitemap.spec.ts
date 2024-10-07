@@ -7,7 +7,7 @@ describe("Sitemap", () => {
       expect(response.status).to.equal(200);
 
       expect(response.body).to.contains(
-        "<loc>https://code.travail.gouv.fr/</loc>"
+        "<loc>https://code.travail.gouv.fr/</loc>",
       );
     });
   });

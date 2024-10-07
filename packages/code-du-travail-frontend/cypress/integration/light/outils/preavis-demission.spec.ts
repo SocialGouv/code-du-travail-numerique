@@ -12,7 +12,7 @@ describe("Outil - Préavis de démission", () => {
     cy.contains("Convention collective non traitée");
     cy.contains("Suivant").click();
     cy.contains(
-      "La simulation ne peut pas se poursuivre avec cette convention collective"
+      "La simulation ne peut pas se poursuivre avec cette convention collective",
     );
   });
 
@@ -31,7 +31,7 @@ describe("Outil - Préavis de démission", () => {
 
     cy.contains("Quelle est la catégorie professionnelle du salarié");
     cy.get('[id="input-criteria.catégorie professionnelle"]').select(
-      "Personnel de fabrication, personnel de vente et personnel de services"
+      "Personnel de fabrication, personnel de vente et personnel de services",
     );
 
     cy.contains("Quelle est l'ancienneté du salarié");
@@ -43,7 +43,7 @@ describe("Outil - Préavis de démission", () => {
     cy.contains("Voir le détail du calcul").click();
     cy.contains("Boulangerie-pâtisserie (entreprises artisanales)");
     cy.contains(
-      "Personnel de fabrication, personnel de vente et personnel de services"
+      "Personnel de fabrication, personnel de vente et personnel de services",
     );
     cy.contains("Plus de 6 mois");
   });

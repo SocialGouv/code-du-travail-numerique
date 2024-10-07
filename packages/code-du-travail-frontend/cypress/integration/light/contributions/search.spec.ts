@@ -8,7 +8,7 @@ describe("Contributions", () => {
 
     cy.url().should(
       "include",
-      "/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd?q=dur%C3%A9e%20maximale%20CDD"
+      "/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd?q=dur%C3%A9e%20maximale%20CDD",
     );
   });
 });

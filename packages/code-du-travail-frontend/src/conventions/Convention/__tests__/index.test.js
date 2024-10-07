@@ -20,10 +20,10 @@ describe("<Convention />", () => {
           shortTitle:
             "Convention collective départementale des exploitations agricoles Guyane",
         }}
-      />
+      />,
     );
     expect(container).toHaveTextContent(
-      "Cette convention collective n'est pas traitée par nos services."
+      "Cette convention collective n'est pas traitée par nos services.",
     );
   });
 });

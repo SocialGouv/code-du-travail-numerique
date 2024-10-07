@@ -38,7 +38,7 @@ const DecryptedResult: React.FC<Props> = ({
     isSeniorityLessThan6Months,
     hasAgreement,
     agreementResult && agreementResult.value > 0 ? true : false,
-    isAgreementSupported
+    isAgreementSupported,
   );
   return (
     <>

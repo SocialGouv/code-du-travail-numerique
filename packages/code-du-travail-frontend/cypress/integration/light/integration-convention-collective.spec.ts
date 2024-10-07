@@ -39,7 +39,7 @@ describe("Pages integration convention collective", () => {
               "Convention collective nationale du commerce de détail et de gros à prédominance alimentaire du 12 juillet 2001.  Etendue par arrêté du 26 juillet 2002 JORF 6 août 2002.",
           },
         },
-        "*"
+        "*",
       );
   });
 });

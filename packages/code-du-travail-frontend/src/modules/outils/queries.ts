@@ -7,7 +7,7 @@ import { Tool } from "@socialgouv/cdtn-types";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 
 export const fetchAllTools = async <K extends keyof Tool>(
-  fields: K[]
+  fields: K[],
 ): Promise<Pick<Tool, K>[]> => {
   const response = await elasticsearchClient.search<Pick<Tool, K>>({
     query: {

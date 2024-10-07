@@ -12,7 +12,7 @@ describe("Information Contents", () => {
         dismissalProcess={false}
         sectionDisplayMode={EditorialSectionDisplayMode.tab}
         contents={mockedContents}
-      />
+      />,
     );
   });
   test("Vérifier l'affichage de l'onglet par défaut", () => {

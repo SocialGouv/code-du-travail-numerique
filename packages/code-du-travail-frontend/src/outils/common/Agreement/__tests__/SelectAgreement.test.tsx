@@ -28,25 +28,25 @@ describe("SelectAgreement", () => {
             title: "Outil",
             simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
           }}
-        />
+        />,
       );
       expect(
         getByRole("radio", {
           checked: false,
           name: /Je ne souhaite pas renseigner ma convention collective/,
-        })
+        }),
       ).toBeInTheDocument();
       expect(
         getByRole("radio", {
           checked: false,
           name: /Je sais quelle est ma convention collective/,
-        })
+        }),
       ).toBeInTheDocument();
       expect(
         getByRole("radio", {
           checked: false,
           name: /Je ne sais pas quelle est ma convention collective/,
-        })
+        }),
       ).toBeInTheDocument();
     });
     it("should not show skip option & show message if passed in param", () => {
@@ -60,22 +60,22 @@ describe("SelectAgreement", () => {
             note: "This is my note",
             simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
           }}
-        />
+        />,
       );
       expect(
-        queryByText(/Je ne souhaite pas renseigner ma convention collective/)
+        queryByText(/Je ne souhaite pas renseigner ma convention collective/),
       ).not.toBeInTheDocument();
       expect(
         getByRole("radio", {
           checked: false,
           name: /Je sais quelle est ma convention collective/,
-        })
+        }),
       ).toBeInTheDocument();
       expect(
         getByRole("radio", {
           checked: false,
           name: /Je ne sais pas quelle est ma convention collective/,
-        })
+        }),
       ).toBeInTheDocument();
       expect(getByText(/This is my note/)).toBeInTheDocument();
     });
@@ -92,16 +92,16 @@ describe("SelectAgreement", () => {
             title: "Outil",
             simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
           }}
-        />
+        />,
       );
       expect(
         getByRole("radio", {
           checked: true,
           name: /Je sais quelle est ma convention collective/,
-        })
+        }),
       ).toBeInTheDocument();
       expect(
-        getByText(/Particuliers employeurs et emploi à domicile/)
+        getByText(/Particuliers employeurs et emploi à domicile/),
       ).toBeInTheDocument();
     });
   });

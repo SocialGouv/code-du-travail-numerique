@@ -45,7 +45,7 @@ const IntegrationContainer = ({
   const [oldSelectValue, setOldSelectValue] = useState<string | undefined>();
   const [selectValue, setSelectValue] = useState(selectOptions?.[0].value);
   const [parsedUrl, setParsedUrl] = useState(
-    url.replace("[value]", selectValue ?? "")
+    url.replace("[value]", selectValue ?? ""),
   );
   const useScript = () => {
     useEffect(() => {
@@ -58,7 +58,7 @@ const IntegrationContainer = ({
             setMessage(data);
           }
         },
-        false
+        false,
       );
 
       script.src = "/widget.js";
@@ -67,7 +67,7 @@ const IntegrationContainer = ({
       document.body.appendChild(script);
 
       const iframe = document.getElementById(
-        `cdtn-iframe-${id}-${oldSelectValue}`
+        `cdtn-iframe-${id}-${oldSelectValue}`,
       ) as any;
       if (iframe) {
         const a = document.createElement("a");
@@ -170,7 +170,7 @@ const IntegrationContainer = ({
               .join();
           }
           return `\tdata.name === '${name}' // ${description}${extraString}`;
-        })
+        }),
       )}
     }
   }

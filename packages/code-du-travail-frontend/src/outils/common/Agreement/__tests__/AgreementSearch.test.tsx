@@ -80,10 +80,10 @@ describe("AgreementSearch", () => {
         <EmbeddedForm<Props>
           Step={AgreementSearch}
           props={dataWithoutSelectedAgreement}
-        />
+        />,
       );
       expect(
-        getByText(/Précisez et sélectionnez votre convention collective/)
+        getByText(/Précisez et sélectionnez votre convention collective/),
       ).toBeInTheDocument();
       expect(getByText("(champ obligatoire)")).toBeInTheDocument();
     });
@@ -93,10 +93,10 @@ describe("AgreementSearch", () => {
         <EmbeddedForm<Props>
           Step={AgreementSearch}
           props={dataWithoutSelectedAgreement}
-        />
+        />,
       );
       expect(
-        getByPlaceholderText("Ex : Transports routiers ou 1486")
+        getByPlaceholderText("Ex : Transports routiers ou 1486"),
       ).toBeInTheDocument();
     });
 
@@ -105,11 +105,11 @@ describe("AgreementSearch", () => {
         <EmbeddedForm<Props>
           Step={AgreementSearch}
           props={dataWithoutSelectedAgreement}
-        />
+        />,
       );
       getByText("Submit").click();
       expect(
-        getByText(/Vous devez sélectionner une convention collective/)
+        getByText(/Vous devez sélectionner une convention collective/),
       ).toBeDefined();
     });
   });
@@ -120,10 +120,10 @@ describe("AgreementSearch", () => {
         <EmbeddedForm<Props>
           Step={AgreementSearch}
           props={dataWithSelectedAgreement}
-        />
+        />,
       );
       expect(
-        getByText(/Vous avez sélectionné la convention collective/)
+        getByText(/Vous avez sélectionné la convention collective/),
       ).toBeInTheDocument();
     });
 
@@ -132,7 +132,7 @@ describe("AgreementSearch", () => {
         <EmbeddedForm<Props>
           Step={AgreementSearch}
           props={dataWithSelectedAgreement}
-        />
+        />,
       );
       expect(getByText(selectedAgreement.shortTitle)).toBeInTheDocument();
     });
@@ -142,7 +142,7 @@ describe("AgreementSearch", () => {
         <EmbeddedForm<Props>
           Step={AgreementSearch}
           props={dataWithSelectedAgreement}
-        />
+        />,
       );
       const button = getByRole("button", { name: "Fermer" });
       expect(button).toBeInTheDocument();
@@ -153,10 +153,10 @@ describe("AgreementSearch", () => {
         <EmbeddedForm<Props>
           Step={AgreementSearch}
           props={dataWithSelectedAgreement}
-        />
+        />,
       );
       expect(
-        getByText("Cliquez sur Suivant pour poursuivre la simulation.")
+        getByText("Cliquez sur Suivant pour poursuivre la simulation."),
       ).toBeInTheDocument();
     });
 
@@ -165,11 +165,11 @@ describe("AgreementSearch", () => {
         <EmbeddedForm<Props>
           Step={AgreementSearch}
           props={dataWithSelectedAgreement}
-        />
+        />,
       );
       getByText("Submit").click();
       expect(
-        queryByText(/Vous devez répondre à cette question/)
+        queryByText(/Vous devez répondre à cette question/),
       ).not.toBeInTheDocument();
     });
 
@@ -178,7 +178,7 @@ describe("AgreementSearch", () => {
         <EmbeddedForm<Props>
           Step={AgreementSearch}
           props={dataWithSelectedAgreement}
-        />
+        />,
       );
       const button = getByRole("button", { name: "Fermer" });
       button.click();
@@ -193,10 +193,10 @@ describe("AgreementSearch", () => {
         <EmbeddedForm<Props>
           Step={AgreementSearch}
           props={dataWithSelectedAgreementNotSupported}
-        />
+        />,
       );
       expect(
-        getByText(/Convention collective non traitée/)
+        getByText(/Convention collective non traitée/),
       ).toBeInTheDocument();
     });
     it("should render the alert with custom content provided", () => {
@@ -204,10 +204,10 @@ describe("AgreementSearch", () => {
         <EmbeddedForm<Props>
           Step={AgreementSearch}
           props={dataWithSelectedAgreementNotSupportedWithCustomText}
-        />
+        />,
       );
       expect(
-        getByText(/This is my custom text with the url: hello.com/)
+        getByText(/This is my custom text with the url: hello.com/),
       ).toBeInTheDocument();
     });
   });
@@ -218,7 +218,7 @@ describe("AgreementSearch", () => {
         <EmbeddedForm<Props>
           Step={AgreementSearch}
           props={dataWithSelectedAgreementNotFullySupported}
-        />
+        />,
       );
       expect(getByText(/Convention prochainement traitée/)).toBeInTheDocument();
     });
@@ -230,13 +230,13 @@ describe("AgreementSearch", () => {
         <EmbeddedForm<Props>
           Step={AgreementSearch}
           props={dataWithSelectedAgreementSupported}
-        />
+        />,
       );
       expect(
-        queryByText(/Convention collective non traitée/)
+        queryByText(/Convention collective non traitée/),
       ).not.toBeInTheDocument();
       expect(
-        queryByText(/Convention prochainement traitée/)
+        queryByText(/Convention prochainement traitée/),
       ).not.toBeInTheDocument();
     });
   });

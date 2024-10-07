@@ -12,7 +12,7 @@ import { SupportedTypes } from "@socialgouv/modeles-social";
 
 const callback: (
   agreement: Agreement | null,
-  enterprise?: Enterprise
+  enterprise?: Enterprise,
 ) => void = () => {
   /* nothing to do */
 };
@@ -80,10 +80,10 @@ describe("EnterpriseSearch", () => {
         <EmbeddedForm<Props>
           Step={EnterpriseSearch}
           props={dataWithoutSelectedEnterprise}
-        />
+        />,
       );
       expect(
-        getByText(/Nom de votre entreprise ou numéro Siren\/Siret/)
+        getByText(/Nom de votre entreprise ou numéro Siren\/Siret/),
       ).toBeInTheDocument();
       expect(getByText(/Code postal ou ville/)).toBeInTheDocument();
       expect(getByText(/\(facultatif\)/)).toBeInTheDocument();
@@ -94,13 +94,13 @@ describe("EnterpriseSearch", () => {
         <EmbeddedForm<Props>
           Step={EnterpriseSearch}
           props={dataWithoutSelectedEnterprise}
-        />
+        />,
       );
       expect(
-        getByPlaceholderText("Ex : Café de la gare ou 40123778000127")
+        getByPlaceholderText("Ex : Café de la gare ou 40123778000127"),
       ).toBeInTheDocument();
       expect(
-        getByPlaceholderText("Ex : 31000 ou Toulouse")
+        getByPlaceholderText("Ex : 31000 ou Toulouse"),
       ).toBeInTheDocument();
     });
 
@@ -109,11 +109,11 @@ describe("EnterpriseSearch", () => {
         <EmbeddedForm<Props>
           Step={EnterpriseSearch}
           props={dataWithoutSelectedEnterprise}
-        />
+        />,
       );
       getByText("Submit").click();
       expect(
-        queryByText(/Vous devez sélectionner une entreprise/)
+        queryByText(/Vous devez sélectionner une entreprise/),
       ).toBeInTheDocument();
     });
   });
@@ -132,12 +132,12 @@ describe("EnterpriseSearch", () => {
         <EmbeddedForm<Props>
           Step={EnterpriseSearch}
           props={dataWithSelectedEnterpriseWithOneAgreement}
-        />
+        />,
       );
       expect(
         getByText(
-          /Une convention collective a été trouvée pour cette entreprise/
-        )
+          /Une convention collective a été trouvée pour cette entreprise/,
+        ),
       ).toBeInTheDocument();
       expect(getByText(new RegExp(agreement1.shortTitle))).toBeInTheDocument();
     });
@@ -147,10 +147,10 @@ describe("EnterpriseSearch", () => {
         <EmbeddedForm<Props>
           Step={EnterpriseSearch}
           props={dataWithSelectedEnterpriseWithOneAgreement}
-        />
+        />,
       );
       expect(
-        getByText(new RegExp(selectedEnterpriseOneAgreement.simpleLabel))
+        getByText(new RegExp(selectedEnterpriseOneAgreement.simpleLabel)),
       ).toBeInTheDocument();
     });
 
@@ -159,7 +159,7 @@ describe("EnterpriseSearch", () => {
         <EmbeddedForm<Props>
           Step={EnterpriseSearch}
           props={dataWithSelectedEnterpriseWithOneAgreement}
-        />
+        />,
       );
       const button = getByRole("button", { name: "Fermer" });
       expect(button).toBeInTheDocument();
@@ -170,10 +170,10 @@ describe("EnterpriseSearch", () => {
         <EmbeddedForm<Props>
           Step={EnterpriseSearch}
           props={dataWithSelectedEnterpriseWithOneAgreement}
-        />
+        />,
       );
       expect(
-        getByText("Cliquez sur Suivant pour poursuivre la simulation.")
+        getByText("Cliquez sur Suivant pour poursuivre la simulation."),
       ).toBeInTheDocument();
     });
 
@@ -182,11 +182,11 @@ describe("EnterpriseSearch", () => {
         <EmbeddedForm<Props>
           Step={EnterpriseSearch}
           props={dataWithSelectedEnterpriseWithOneAgreement}
-        />
+        />,
       );
       getByText("Submit").click();
       expect(
-        queryByText(/Vous devez répondre à cette question/)
+        queryByText(/Vous devez répondre à cette question/),
       ).not.toBeInTheDocument();
     });
 
@@ -196,7 +196,7 @@ describe("EnterpriseSearch", () => {
         <EmbeddedForm<Props>
           Step={EnterpriseSearch}
           props={dataWithSelectedEnterpriseWithOneAgreement}
-        />
+        />,
       );
       const button = getByRole("button", { name: "Fermer" });
       button.click();
@@ -218,17 +218,17 @@ describe("EnterpriseSearch", () => {
         <EmbeddedForm<Props>
           Step={EnterpriseSearch}
           props={dataWithSelectedEnterpriseWithTwoAgreements}
-        />
+        />,
       );
       expect(
         getByText(
-          /2 conventions collectives ont été trouvées pour cette entreprise, sélectionnez la vôtre/
-        )
+          /2 conventions collectives ont été trouvées pour cette entreprise, sélectionnez la vôtre/,
+        ),
       ).toBeInTheDocument();
       expect(getByText(new RegExp(agreement1.shortTitle))).toBeInTheDocument();
       expect(getByText(new RegExp(agreement2.shortTitle))).toBeInTheDocument();
       expect(
-        queryByText(/Cliquez sur Suivant pour poursuivre la simulation/)
+        queryByText(/Cliquez sur Suivant pour poursuivre la simulation/),
       ).not.toBeInTheDocument();
     });
 
@@ -237,10 +237,10 @@ describe("EnterpriseSearch", () => {
         <EmbeddedForm<Props>
           Step={EnterpriseSearch}
           props={dataWithSelectedEnterpriseWithTwoAgreements}
-        />
+        />,
       );
       expect(
-        getByText(new RegExp(selectedEnterpriseOneAgreement.simpleLabel))
+        getByText(new RegExp(selectedEnterpriseOneAgreement.simpleLabel)),
       ).toBeInTheDocument();
     });
 
@@ -249,7 +249,7 @@ describe("EnterpriseSearch", () => {
         <EmbeddedForm<Props>
           Step={EnterpriseSearch}
           props={dataWithSelectedEnterpriseWithTwoAgreements}
-        />
+        />,
       );
       const button = getByRole("button", { name: "Fermer" });
       expect(button).toBeInTheDocument();
@@ -260,11 +260,11 @@ describe("EnterpriseSearch", () => {
         <EmbeddedForm<Props>
           Step={EnterpriseSearch}
           props={dataWithSelectedEnterpriseWithTwoAgreements}
-        />
+        />,
       );
       getByText("Submit").click();
       expect(
-        queryByText(/Vous devez répondre à cette question/)
+        queryByText(/Vous devez répondre à cette question/),
       ).toBeInTheDocument();
     });
 
@@ -274,7 +274,7 @@ describe("EnterpriseSearch", () => {
         <EmbeddedForm<Props>
           Step={EnterpriseSearch}
           props={dataWithSelectedEnterpriseWithTwoAgreements}
-        />
+        />,
       );
       const button = getByRole("button", { name: "Fermer" });
       button.click();
@@ -287,11 +287,11 @@ describe("EnterpriseSearch", () => {
         <EmbeddedForm<Props>
           Step={EnterpriseSearch}
           props={dataWithSelectedEnterpriseWithTwoAgreements}
-        />
+        />,
       );
       getByText(/Grands magasins et magasins populaires/).click();
       expect(
-        queryByText(/Cliquez sur Suivant pour poursuivre la simulation/)
+        queryByText(/Cliquez sur Suivant pour poursuivre la simulation/),
       ).toBeInTheDocument();
     });
   });
@@ -306,10 +306,10 @@ describe("EnterpriseSearch", () => {
         simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
       };
       const { getByText } = render(
-        <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />
+        <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />,
       );
       expect(
-        getByText(/Convention collective non traitée/)
+        getByText(/Convention collective non traitée/),
       ).toBeInTheDocument();
     });
 
@@ -322,11 +322,11 @@ describe("EnterpriseSearch", () => {
         simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
       };
       const { getByText } = render(
-        <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />
+        <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />,
       );
       getByText(/Grands magasins et magasins populaires/).click();
       expect(
-        getByText(/Convention collective non traitée/)
+        getByText(/Convention collective non traitée/),
       ).toBeInTheDocument();
     });
 
@@ -344,10 +344,10 @@ describe("EnterpriseSearch", () => {
         simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
       };
       const { queryByText } = render(
-        <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />
+        <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />,
       );
       expect(
-        queryByText(/Convention collective non traitée/)
+        queryByText(/Convention collective non traitée/),
       ).not.toBeInTheDocument();
     });
 
@@ -365,11 +365,11 @@ describe("EnterpriseSearch", () => {
         simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
       };
       const { getByText, queryByText } = render(
-        <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />
+        <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />,
       );
       getByText(/Grands magasins et magasins populaires/).click();
       expect(
-        queryByText(/Convention collective non traitée/)
+        queryByText(/Convention collective non traitée/),
       ).not.toBeInTheDocument();
     });
 
@@ -385,10 +385,10 @@ describe("EnterpriseSearch", () => {
         simulator: Simulator.HEURES_RECHERCHE_EMPLOI,
       };
       const { getByText } = render(
-        <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />
+        <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />,
       );
       expect(
-        getByText(/This is my custom text with the url: hello.com/)
+        getByText(/This is my custom text with the url: hello.com/),
       ).toBeInTheDocument();
     });
   });

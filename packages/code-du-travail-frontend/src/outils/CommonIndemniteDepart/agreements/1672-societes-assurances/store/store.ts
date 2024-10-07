@@ -41,12 +41,12 @@ export const createAgreement1672StoreSalaires: StoreSlice<
       if (dateArretTravail) {
         get().situationFunction.setSituation(
           "noticeSalaryPeriods",
-          JSON.stringify([])
+          JSON.stringify([]),
         );
         return set(
           produce((state: Agreement1672StoreSlice) => {
             state.agreement1672Data.input.noticeSalaryPeriods = [];
-          })
+          }),
         );
       }
       const ancienneteInput = get().ancienneteData.input;
@@ -65,18 +65,18 @@ export const createAgreement1672StoreSalaires: StoreSlice<
       const noticeSalaryPeriods = deepMergeArray(
         period,
         agreementSalaryPeriod,
-        "month"
+        "month",
       );
 
       get().situationFunction.setSituation(
         "noticeSalaryPeriods",
-        JSON.stringify(noticeSalaryPeriods)
+        JSON.stringify(noticeSalaryPeriods),
       );
       set(
         produce((state: Agreement1672StoreSlice) => {
           state.agreement1672Data.input.noticeSalaryPeriods =
             noticeSalaryPeriods;
-        })
+        }),
       );
     },
     onChangeHasReceivedSalaries: (value) => {
@@ -86,7 +86,7 @@ export const createAgreement1672StoreSalaires: StoreSlice<
     onSalariesChange: (value) => {
       get().situationFunction.setSituation(
         "noticeSalaryPeriods",
-        JSON.stringify(value)
+        JSON.stringify(value),
       );
       applyGenericValidation(get, set, "noticeSalaryPeriods", value);
     },
@@ -97,28 +97,28 @@ const applyGenericValidation = (
   get: StoreApi<Agreement1672StoreSlice & SalairesStoreSlice>["getState"],
   set: StoreApi<Agreement1672StoreSlice & SalairesStoreSlice>["setState"],
   paramName: keyof Agreement1672StoreInput,
-  value: any
+  value: any,
 ) => {
   if (get().agreement1672Data.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
       draft.agreement1672Data.input[paramName] = value;
     });
     const { isValid, errorState } = validateStep(
-      nextState.agreement1672Data.input
+      nextState.agreement1672Data.input,
     );
     set(
       produce((state: Agreement1672StoreSlice) => {
         state.agreement1672Data.error = errorState;
         state.agreement1672Data.isStepValid = isValid;
         state.agreement1672Data.input[paramName] = value;
-      })
+      }),
     );
     get().salairesFunction.onNextStep();
   } else {
     set(
       produce((state: Agreement1672StoreSlice) => {
         state.agreement1672Data.input[paramName] = value;
-      })
+      }),
     );
   }
 };

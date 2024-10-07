@@ -18,7 +18,7 @@ function renderForm(data) {
           <button data-testid="nextBt">suivant</button>
         </form>
       )}
-    </Form>
+    </Form>,
   );
 }
 

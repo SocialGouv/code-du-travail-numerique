@@ -9,5 +9,5 @@ export type AgreementSupportInfo = {
 
 export type OnSelectAgreementFn = (
   agreement: Agreement | null,
-  enterprise?: Enterprise
+  enterprise?: Enterprise,
 ) => void;

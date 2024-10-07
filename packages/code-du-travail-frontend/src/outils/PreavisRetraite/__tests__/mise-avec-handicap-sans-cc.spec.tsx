@@ -7,7 +7,7 @@ import { render } from "@testing-library/react";
 test(`Mise à la retraite sans sélection de CC avec handicap
 `, async () => {
   await render(
-    <CalculateurPreavisRetraite icon={""} title={""} displayTitle={""} />
+    <CalculateurPreavisRetraite icon={""} title={""} displayTitle={""} />,
   );
   const userAction = new UserAction();
 
@@ -36,10 +36,10 @@ test(`Mise à la retraite sans sélection de CC avec handicap
   expect(ui.result.noticeHandicap2.get()).toBeInTheDocument();
   expect(ui.result.resultatLegal.get()).toHaveTextContent("3 mois");
   expect(ui.result.resultatAgreement.get()).toHaveTextContent(
-    "convention collective non renseignée"
+    "convention collective non renseignée",
   );
   expect(ui.result.decryptedDescription.get()).toHaveTextContent(
-    "La convention collective n’ayant pas été renseignée, la durée de préavis affichée correspond à la durée légale."
+    "La convention collective n’ayant pas été renseignée, la durée de préavis affichée correspond à la durée légale.",
   );
   const sources = ui.result.sources.queryAll();
   expect(sources).toHaveLength(3);
@@ -47,9 +47,9 @@ test(`Mise à la retraite sans sélection de CC avec handicap
   expect(sources[1]).toHaveTextContent("Article L1234-1");
   expect(sources[2]).toHaveTextContent("Article L5213-9");
   expect(ui.result.noticeWarning.get()).toHaveTextContent(
-    "Attention il peut exister une durée plus favorable"
+    "Attention il peut exister une durée plus favorable",
   );
   expect(ui.result.noticeWarning.get()).toHaveTextContent(
-    "Une convention collective de branche, un accord collectif d’entreprise, le contrat de travail ou un usage peut prévoir une durée de préavis* ou une condition d’ancienneté* plus favorable pour le salarié. Dans ce cas, c’est cette durée ou cette ancienneté plus favorable qui s’applique au salarié."
+    "Une convention collective de branche, un accord collectif d’entreprise, le contrat de travail ou un usage peut prévoir une durée de préavis* ou une condition d’ancienneté* plus favorable pour le salarié. Dans ce cas, c’est cette durée ou cette ancienneté plus favorable qui s’applique au salarié.",
   );
 });

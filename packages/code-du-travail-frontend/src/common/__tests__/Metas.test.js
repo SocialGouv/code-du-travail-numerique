@@ -10,7 +10,7 @@ describe("<Metas />", () => {
     const description = "description";
     const image = "image.url";
     const { container } = render(
-      <Metas url={url} title={title} description={description} image={image} />
+      <Metas url={url} title={title} description={description} image={image} />,
     );
     expect(container).toMatchSnapshot();
   });

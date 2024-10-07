@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
   "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
   "slug": "16-transports-routiers-et-activites-auxiliaires-du-transport"
 }
-`
+`,
 );
 
 describe("Indemnité licenciement", () => {
@@ -24,7 +24,11 @@ describe("Indemnité licenciement", () => {
     let userAction: UserAction;
     beforeEach(() => {
       rendering = render(
-        <CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />
+        <CalculateurIndemniteLicenciement
+          icon={""}
+          title={""}
+          displayTitle={""}
+        />,
       );
       userAction = new UserAction();
       userAction
@@ -37,12 +41,12 @@ describe("Indemnité licenciement", () => {
         .click(ui.next.get())
         .changeInputList(
           ui.information.agreement16.proCategory.get(),
-          "Ingénieurs et cadres"
+          "Ingénieurs et cadres",
         )
         .click(ui.information.agreement16.proCategoryHasChanged.oui.get())
         .setInput(
           ui.information.agreement16.dateProCategoryChanged.get(),
-          "01/01/2010"
+          "01/01/2010",
         )
         .setInput(ui.information.agreement16.engineerAge.get(), "38")
         .click(ui.next.get());
@@ -63,7 +67,7 @@ describe("Indemnité licenciement", () => {
         .click(ui.seniority.hasAbsence.oui.get())
         .changeInputList(
           ui.seniority.absences.motif(0).get(),
-          "Congés sans solde"
+          "Congés sans solde",
         )
         .setInput(ui.seniority.absences.duration(0).get(), "6")
         .setInput(ui.seniority.absences.date(0).get(), "01/01/2015")
@@ -91,11 +95,11 @@ describe("Indemnité licenciement", () => {
       expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
       // Il ne doit plus y avoir la date de l'absence
       expect(
-        rendering.queryByText("Date de début de l'absence")
+        rendering.queryByText("Date de début de l'absence"),
       ).not.toBeInTheDocument();
       // On doit garder les anciennes informations saisies
       expect(ui.seniority.absences.motif(0).get()).toHaveValue(
-        "Congés sans solde"
+        "Congés sans solde",
       );
       expect(ui.seniority.absences.duration(0).get()).toHaveValue(6);
 

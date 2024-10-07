@@ -20,7 +20,7 @@ const validatorAgreement = (
   idcc: SupportedCc | null | undefined,
   step: IndemniteDepartStepName,
   get: StoreApi<any>["getState"],
-  set: StoreApi<MainStore>["setState"]
+  set: StoreApi<MainStore>["setState"],
 ): boolean => {
   switch (true) {
     case SupportedCc.IDCC1516 === idcc &&

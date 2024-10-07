@@ -5,7 +5,7 @@ import { MatomoActionEvent, MatomoBaseEvent, MatomoMapping } from ".";
 export const trackQuestion = (
   trackTitle: string | null,
   simulatorEvent?: MatomoActionEvent,
-  isTrackingHelp = true
+  isTrackingHelp = true,
 ): void => {
   if (!simulatorEvent) {
     return;

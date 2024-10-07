@@ -67,7 +67,7 @@ export const getRelatedItems = async ({
   const filteredItems = searchBasedItems
     // avoid elements already visible within the item as fragments
     .filter(
-      (item: { slug: string }) => !slug.startsWith(item.slug.split("#")[0])
+      (item: { slug: string }) => !slug.startsWith(item.slug.split("#")[0]),
     )
     // only return sources of interest
     .filter(({ source }) => sources.includes(source))

@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
   "slug": "2120-banque",
   "title": "Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004."
 }
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 2120", () => {
@@ -27,7 +27,7 @@ describe("Indemnité licenciement - CC 2120", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
     userAction = new UserAction();
 
@@ -44,7 +44,7 @@ describe("Indemnité licenciement - CC 2120", () => {
     userAction
       .changeInputList(
         ui.information.agreement2120.proCategory.get(),
-        "Non-cadres"
+        "Non-cadres",
       )
       .click(ui.information.agreement2120.eco.oui.get())
       .click(ui.next.get())

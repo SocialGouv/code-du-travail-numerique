@@ -26,7 +26,7 @@ export const FeedbackContent = (props: Props) => {
   const [errorMessageSuggestion, setErrorMessageSuggestion] =
     useState<string>("");
   const [remainingCharacters, setRemainingCharacters] = useState<number>(
-    MAX_LENGTH_SUGGESTION
+    MAX_LENGTH_SUGGESTION,
   );
 
   const onInputSuggestion = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -55,12 +55,12 @@ export const FeedbackContent = (props: Props) => {
       setHasCheckBoxError(true);
       setHasSuggestionError(true);
       setErrorMessageCheckbox(
-        "Veuillez sélectionner au moins une option ou faire une suggestion"
+        "Veuillez sélectionner au moins une option ou faire une suggestion",
       );
       setErrorMessageSuggestion(
         props.type === "negative"
           ? "Veuillez renseigner au minimum ce champ ou sélectionner une option"
-          : "Veuillez renseigner ce champ"
+          : "Veuillez renseigner ce champ",
       );
     } else {
       setHasCheckBoxError(false);
@@ -133,7 +133,7 @@ export const FeedbackContent = (props: Props) => {
         className={fr.cx(
           remainingCharacters === 0 ? "fr-error-text" : "fr-info-text",
           "fr-mt-0",
-          "fr-mb-3w"
+          "fr-mb-3w",
         )}
       >
         {`${remainingCharacters} caractère${

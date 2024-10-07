@@ -55,11 +55,11 @@ export const SalaireTempsPlein = ({
     let newLocalSalaries: SalaryPeriods[];
     if (isFirstEdit) {
       newLocalSalaries = salaryPeriods.map((p, i) =>
-        i >= index ? { ...p, value: salary } : p
+        i >= index ? { ...p, value: salary } : p,
       );
     } else {
       newLocalSalaries = salaryPeriods.map((p, i) =>
-        i === index ? { ...p, value: salary } : p
+        i === index ? { ...p, value: salary } : p,
       );
     }
     onSalariesChange(newLocalSalaries);
@@ -84,7 +84,7 @@ export const SalaireTempsPlein = ({
         ? prime
           ? { ...p, prime }
           : { month: p.month, value: p.value }
-        : p
+        : p,
     );
     onSalariesChange(newLocalSalaries);
   };

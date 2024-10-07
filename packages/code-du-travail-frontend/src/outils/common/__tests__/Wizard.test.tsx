@@ -53,7 +53,7 @@ describe("<Wizard />", () => {
         displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={initialState}
-      />
+      />,
     );
     expect(container).toMatchSnapshot();
   });
@@ -64,7 +64,7 @@ describe("<Wizard />", () => {
         displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={initialState}
-      />
+      />,
     );
     const button = getByText(/commencer/i);
     button.click();
@@ -83,7 +83,7 @@ describe("<Wizard />", () => {
         displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={initialState}
-      />
+      />,
     );
     const button = getByText(/Commencer/i);
     button.click();
@@ -97,7 +97,7 @@ describe("<Wizard />", () => {
         displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={state}
-      />
+      />,
     );
     expect(container).toMatchSnapshot();
   });
@@ -109,7 +109,7 @@ describe("<Wizard />", () => {
         displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={state}
-      />
+      />,
     );
     const button = getByText(/précédent/i);
     button.click();
@@ -130,7 +130,7 @@ describe("<Wizard />", () => {
         stepReducer={stepReducer}
         initialState={state}
         initialValues={{ firstName: "lionel" }}
-      />
+      />,
     );
     expect(container).toMatchSnapshot();
   });

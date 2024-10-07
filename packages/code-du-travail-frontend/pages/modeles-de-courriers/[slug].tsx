@@ -48,7 +48,7 @@ function ModeleCourrier(props: LetterModelProps): JSX.Element {
 export const getServerSideProps = async ({ query }) => {
   const data = await getBySourceAndSlugItems<MailTemplate>(
     "modeles_de_courriers",
-    query.slug
+    query.slug,
   );
   if (!data?._source) {
     return {

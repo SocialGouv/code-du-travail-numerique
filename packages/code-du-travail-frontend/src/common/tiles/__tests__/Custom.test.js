@@ -16,7 +16,7 @@ describe("<CallToActionTile />", () => {
     const { container } = render(
       <CallToActionTile {...tileProps}>
         <p>Cette tuile vous fera dire bonjour !</p>
-      </CallToActionTile>
+      </CallToActionTile>,
     );
     expect(container).toMatchSnapshot();
   });

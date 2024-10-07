@@ -15,7 +15,7 @@ describe("initialSteps", () => {
   });
   it("handles setIndex action", () => {
     expect(
-      stepReducer(initialState, { payload: 1, type: "setStepIndex" })
+      stepReducer(initialState, { payload: 1, type: "setStepIndex" }),
     ).toEqual({ stepIndex: 1, steps: initialState.steps });
   });
 });

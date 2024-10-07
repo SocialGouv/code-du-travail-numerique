@@ -16,7 +16,7 @@ Storage.prototype.getItem = jest.fn(
   "slug": "3239-particuliers-employeurs-et-emploi-a-domicile",
   "title": "Particuliers employeurs et emploi à domicile"
 }
-`
+`,
 );
 
 test(`
@@ -40,11 +40,11 @@ test(`
     },
   });
   expect(ui.agreement3239.categoryProInput.get()).toHaveValue(
-    "100| Salariés du particulier employeur"
+    "100| Salariés du particulier employeur",
   );
   fireEvent.click(ui.previous.get());
   fireEvent.click(ui.next.get());
   expect(ui.agreement3239.categoryProInput.get()).toHaveValue(
-    "100| Salariés du particulier employeur"
+    "100| Salariés du particulier employeur",
   );
 });

@@ -14,7 +14,7 @@ describe("Page ancienneté: vérification validation lorsque absence > anciennet
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
     const userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
@@ -32,8 +32,8 @@ describe("Page ancienneté: vérification validation lorsque absence > anciennet
     userAction.click(ui.next.get());
     expect(
       getByText(
-        /La durée totale des absences doit être inférieure ou égale à l'ancienneté/
-      )
+        /La durée totale des absences doit être inférieure ou égale à l'ancienneté/,
+      ),
     ).toBeInTheDocument();
   });
 });

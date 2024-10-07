@@ -32,7 +32,7 @@ function AgreementSearchTool({
   const router = useRouter();
 
   const [screen, setScreen] = useState<ScreenType | null>(
-    widgetMode ? ScreenType.enterprise : null
+    widgetMode ? ScreenType.enterprise : null,
   );
   const [isAgreementModalOpened, showAgreementModal] = useState(false);
 
@@ -42,10 +42,10 @@ function AgreementSearchTool({
       slug === "convention"
         ? ScreenType.agreement
         : slug === "entreprise" || widgetMode
-        ? ScreenType.enterprise
-        : slug === "selection"
-        ? ScreenType.agreementSelection
-        : ScreenType.intro
+          ? ScreenType.enterprise
+          : slug === "selection"
+            ? ScreenType.agreementSelection
+            : ScreenType.intro,
     );
   }, [router.query.slug]);
 
@@ -71,14 +71,14 @@ function AgreementSearchTool({
         "view_step_cc_search_p1",
         "back_step_cc_search_p1",
         title,
-        uuid
+        uuid,
       );
     } else {
       trackEvent(
         "view_step_cc_search_p2",
         "back_step_cc_search_p2",
         title,
-        uuid
+        uuid,
       );
     }
 
@@ -91,7 +91,7 @@ function AgreementSearchTool({
 
   function handleEnterpriseSelection(
     enterprise: Enterprise,
-    params: SearchParams
+    params: SearchParams,
   ) {
     setEnterprise(enterprise);
     setSearchParams(params);
@@ -120,7 +120,7 @@ function AgreementSearchTool({
                   MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1,
                   title,
                   `idcc${agreement.num.toString()}`,
-                  uuid
+                  uuid,
                 );
                 router.push(`/convention-collective/${agreement.slug}`);
               } else {

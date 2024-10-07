@@ -9,7 +9,7 @@ export const useLayoutTracking = () => {
   const emitSuggestionEvent = (
     query: string,
     suggestion: string,
-    suggestions: string[]
+    suggestions: string[],
   ) => {
     sendEvent({
       category: LayoutCategory.SELECTED_SUGGESTION,

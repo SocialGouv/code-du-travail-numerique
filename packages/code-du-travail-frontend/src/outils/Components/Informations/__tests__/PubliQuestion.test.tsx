@@ -25,8 +25,8 @@ describe("<PubliQuestion />", () => {
             titre: "Catégorie professionnelle",
           }}
           value="v"
-        />
-      )
+        />,
+      ),
     ).toBeTruthy();
   });
 
@@ -50,7 +50,7 @@ describe("<PubliQuestion />", () => {
           titre: "Catégorie professionnelle",
         }}
         value="v"
-      />
+      />,
     );
     expect(getByRole("combobox")).toBeTruthy();
   });
@@ -75,7 +75,7 @@ describe("<PubliQuestion />", () => {
           titre: "Catégorie professionnelle",
         }}
         value="v"
-      />
+      />,
     );
     expect(getAllByRole("radio")).toBeTruthy();
   });

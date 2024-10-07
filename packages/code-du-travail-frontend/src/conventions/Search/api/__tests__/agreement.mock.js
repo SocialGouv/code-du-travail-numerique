@@ -25,8 +25,7 @@ export const agreement = {
   effectif: 203690,
   date_publi: "2010-05-21T00:00:00.000Z",
   shortTitle: "Aide, accompagnement, soins et services à domicile (BAD)",
-  description:
-    "Description de la CC",
+  description: "Description de la CC",
   is_published: true,
   breadcrumbs: [],
   cdtnId: "75d77e831c",

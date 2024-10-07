@@ -15,7 +15,7 @@ test(`Questionnaire
       title="Titre"
       personnalizedTitle="Titre personnalisé"
       slug="Slug12"
-    />
+    />,
   );
   // Vérifier l'affichage du résumé en mode non personnalisé
   expect(ui.response12.neutralStatement.query()).toBeInTheDocument();
@@ -26,7 +26,7 @@ test(`Questionnaire
   expect(ui.response12.neutralStatementTooltipText.query()).toBeInTheDocument();
   fireEvent.click(ui.response12.neutralStatementTooltip.get());
   expect(
-    ui.response12.neutralStatementTooltipText.query()
+    ui.response12.neutralStatementTooltipText.query(),
   ).not.toBeInTheDocument();
   // Vérifier le non affichage des questions
   expect(ui.question1.text.query()).not.toBeInTheDocument();

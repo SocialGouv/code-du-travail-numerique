@@ -4,7 +4,7 @@ import { captureException } from "@sentry/nextjs";
 
 export function useLocalStorageForAgreementOnPageLoad(): [
   Agreement | any,
-  (a?: any) => void
+  (a?: any) => void,
 ] {
   const [value, setValue] = useState(null);
 
@@ -17,24 +17,24 @@ export function useLocalStorageForAgreementOnPageLoad(): [
       setValue(value);
       saveAgreementToLocalStorage(value);
     },
-    [JSON.stringify(value)]
+    [JSON.stringify(value)],
   );
 
   return [value, updateValue];
 }
 
 export function useLocalStorageForAgreement(
-  defaultValue?: Agreement
+  defaultValue?: Agreement,
 ): [Agreement | any, (a?: any) => void] {
   const [value, setValue] = useState(
-    getAgreementFromLocalStorage() ?? defaultValue
+    getAgreementFromLocalStorage() ?? defaultValue,
   );
   const updateValue = useCallback(
     (value) => {
       setValue(value);
       saveAgreementToLocalStorage(value);
     },
-    [JSON.stringify(value)]
+    [JSON.stringify(value)],
   );
 
   return [value, updateValue];
@@ -46,7 +46,7 @@ export const saveAgreementToLocalStorage = (agreement?: Agreement | null) => {
       if (agreement) {
         window.localStorage.setItem(
           STORAGE_KEY_AGREEMENT,
-          JSON.stringify(agreement)
+          JSON.stringify(agreement),
         );
       } else {
         window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);

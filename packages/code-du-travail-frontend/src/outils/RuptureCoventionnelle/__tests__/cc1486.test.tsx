@@ -16,7 +16,7 @@ Storage.prototype.getItem = jest.fn(
     "title": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. ",
     "contributions": true
   }  
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 1486", () => {
@@ -27,7 +27,7 @@ describe("Indemnité licenciement - CC 1486", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
@@ -40,7 +40,7 @@ describe("Indemnité licenciement - CC 1486", () => {
   test(`Vérifier l'enchainement de question à l'étape information`, () => {
     userAction.changeInputList(
       ui.information.agreement1486.proCategory.get(),
-      "'Ingénieurs et cadres'"
+      "'Ingénieurs et cadres'",
     );
     userAction.click(ui.next.get());
 

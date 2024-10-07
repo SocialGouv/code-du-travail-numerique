@@ -1,7 +1,7 @@
 import { CatPro3239 } from "@socialgouv/modeles-social";
 
 export const getMessageMotifExample = (
-  informations?: Record<string, any>
+  informations?: Record<string, any>,
 ): string => {
   let isAssMat = false;
   let isSalariePartEmployeur = false;
@@ -20,7 +20,7 @@ export const getMessageMotifExample = (
 };
 
 export const getSalairesTempsPleinSubtitle = (
-  agreementNumber?: number
+  agreementNumber?: number,
 ): string | undefined => {
   switch (agreementNumber) {
     case 3239:
@@ -34,7 +34,7 @@ export const getSalairesTempsPleinSubtitle = (
 
 export const isParentalNoticeHiddenForAgreement = (
   isAgreementBetter: boolean,
-  agreementNumber: number
+  agreementNumber: number,
 ): boolean => {
   if (agreementNumber === 3239) return true;
   return (

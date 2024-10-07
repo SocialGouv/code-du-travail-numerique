@@ -28,7 +28,7 @@ export const deepMergeArray = (
   array1: any[],
   array2: any[],
   key: string,
-  isRightMerge = false
+  isRightMerge = false,
 ) => {
   return array1.map((item) => {
     const index = array2.findIndex((item2) => item2[key] === item[key]);
@@ -43,7 +43,7 @@ export const deepMergeArray = (
 
 export const removeDuplicateObject = (
   originalArray: Array<Record<string, any>>,
-  key: string
+  key: string,
 ) => {
   const set = new Set();
   const filteredArr = originalArray.filter((el) => {

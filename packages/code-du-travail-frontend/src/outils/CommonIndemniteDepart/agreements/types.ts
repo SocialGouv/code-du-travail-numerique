@@ -124,7 +124,7 @@ export type AgreementStoreSlice = Agreement1516StoreSlice &
 export const createRootAgreementsStore = (
   set: StoreApi<MainStore>["setState"],
   get: StoreApi<MainStore>["getState"],
-  options: StoreOptions
+  options: StoreOptions,
 ) => ({
   ...createAgreement1516StoreSalaires(set, get, options),
   ...createAgreement1527StoreSalaires(set, get, options),

@@ -80,13 +80,13 @@ describe("<SearchResults/>", () => {
   });
   it("should render no results", () => {
     const { container } = render(
-      <SearchResults items={emptyItems} query="search test" />
+      <SearchResults items={emptyItems} query="search test" />,
     );
     expect(container).toMatchSnapshot();
   });
   it("should render results", () => {
     const { container } = render(
-      <SearchResults isSearch items={items} query="search test" />
+      <SearchResults isSearch items={items} query="search test" />,
     );
     expect(container).toMatchSnapshot();
   });

@@ -18,19 +18,19 @@ describe("initialSteps", () => {
           stepIndex: 1,
           steps: [],
         },
-        { type: ActionName.reset }
-      )
+        { type: ActionName.reset },
+      ),
     ).toEqual(initialState);
   });
   it("handles setIndex action", () => {
     expect(
-      stepReducer(initialState, { payload: 1, type: ActionName.setStepIndex })
+      stepReducer(initialState, { payload: 1, type: ActionName.setStepIndex }),
     ).toEqual({ stepIndex: 1, steps: initialState.steps });
   });
 
   describe("Skip the information steps", () => {
     const informationStep = initialState.steps.filter(
-      (step) => step.name == "infos"
+      (step) => step.name == "infos",
     )[0];
 
     it("should contains an information step", () => {
@@ -50,7 +50,7 @@ describe("initialSteps", () => {
             route: "agreement",
             selected: generateAgreement(16),
           },
-        })
+        }),
       ).toBeFalsy();
     });
 
@@ -61,7 +61,7 @@ describe("initialSteps", () => {
             route: "agreement",
             selected: generateAgreement(1480),
           },
-        })
+        }),
       ).toBeTruthy();
     });
 
@@ -72,7 +72,7 @@ describe("initialSteps", () => {
             route: "agreement",
             selected: generateAgreement(9999),
           },
-        })
+        }),
       ).toBeTruthy();
     });
 
@@ -82,7 +82,7 @@ describe("initialSteps", () => {
           ccn: {
             route: "not-selected",
           },
-        })
+        }),
       ).toBeTruthy();
     });
   });

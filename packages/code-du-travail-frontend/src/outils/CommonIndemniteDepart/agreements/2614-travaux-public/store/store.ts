@@ -34,7 +34,7 @@ const applyGenericValidation = (
   get: StoreApi<Agreement2614StoreSlice & SalairesStoreSlice>["getState"],
   set: StoreApi<Agreement2614StoreSlice & SalairesStoreSlice>["setState"],
   paramName: keyof Agreement2614StoreInput,
-  value: any
+  value: any,
 ) => {
   if (get().agreement2614Data.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
@@ -42,21 +42,21 @@ const applyGenericValidation = (
     });
     const { isValid, errorState } = validateStep(
       nextState.agreement2614Data.input,
-      nextState.salairesData.input
+      nextState.salairesData.input,
     );
     set(
       produce((state: Agreement2614StoreSlice) => {
         state.agreement2614Data.error = errorState;
         state.agreement2614Data.isStepValid = isValid;
         state.agreement2614Data.input[paramName] = value;
-      })
+      }),
     );
     get().salairesFunction.onNextStep();
   } else {
     set(
       produce((state: Agreement2614StoreSlice) => {
         state.agreement2614Data.input[paramName] = value;
-      })
+      }),
     );
   }
 };

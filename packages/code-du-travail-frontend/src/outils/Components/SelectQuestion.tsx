@@ -35,7 +35,7 @@ const SelectQuestion = ({
   autoFocus = false,
 }: Props): JSX.Element => {
   const [optionsArray, setOptionsArray] = React.useState<[string, string][]>(
-    []
+    [],
   );
   const [value, setValue] = React.useState(selectedOption ?? "");
   const onChange = (value: string) => {

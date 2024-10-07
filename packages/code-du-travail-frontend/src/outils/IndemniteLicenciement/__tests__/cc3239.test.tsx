@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
   "slug": "3239-particuliers-employeurs-et-emploi-a-domicile",
   "title": "Particuliers employeurs et emploi à domicile"
 }
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 3239", () => {
@@ -26,7 +26,7 @@ describe("Indemnité licenciement - CC 3239", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
@@ -40,24 +40,24 @@ describe("Indemnité licenciement - CC 3239", () => {
   test("vérifier l'ineligibilite des ass mat en cas de suspension", async () => {
     userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
-      "'Assistant maternel'"
+      "'Assistant maternel'",
     );
     userAction.click(ui.information.agreement3239.congeMatSuspension.oui.get());
     userAction.click(ui.next.get());
     expect(
-      ui.result.legalError.specific.agreement3239.suspendedNotEligible.get()
+      ui.result.legalError.specific.agreement3239.suspendedNotEligible.get(),
     ).toBeInTheDocument();
     expect(
-      ui.result.infoWarning.eligibleInfoWarningblock.query()
+      ui.result.infoWarning.eligibleInfoWarningblock.query(),
     ).not.toBeInTheDocument();
     expect(
-      ui.result.infoWarning.ineligibleInfoWarningblock.query()
+      ui.result.infoWarning.ineligibleInfoWarningblock.query(),
     ).not.toBeInTheDocument();
   });
   test("vérifier l'ineligibilite des ass mat pour ancienneté < 9mois", async () => {
     userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
-      "'Assistant maternel'"
+      "'Assistant maternel'",
     );
     userAction.click(ui.information.agreement3239.congeMatSuspension.non.get());
     userAction.setInput(ui.information.agreement3239.salaryInput.get(), "3000");
@@ -68,19 +68,19 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.click(ui.seniority.hasAbsence.non.get());
     userAction.click(ui.next.get());
     expect(
-      ui.result.legalError.specific.agreement3239.lessThan9month.get()
+      ui.result.legalError.specific.agreement3239.lessThan9month.get(),
     ).toBeInTheDocument();
     expect(
-      ui.result.infoWarning.eligibleInfoWarningblock.query()
+      ui.result.infoWarning.eligibleInfoWarningblock.query(),
     ).not.toBeInTheDocument();
     expect(
-      ui.result.infoWarning.ineligibleInfoWarningblock.query()
+      ui.result.infoWarning.ineligibleInfoWarningblock.query(),
     ).toBeInTheDocument();
   });
   test("vérifier l'eligibilite des autres salariés pour ancienneté compris entre 8 et 9 mois", async () => {
     userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
-      "'Salarié du particulier employeur'"
+      "'Salarié du particulier employeur'",
     );
     userAction.click(ui.next.get());
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
@@ -96,7 +96,7 @@ describe("Indemnité licenciement - CC 3239", () => {
   test("vérifier l'ineligibilite des autres salariés pour ancienneté < 8mois", async () => {
     userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
-      "'Salarié du particulier employeur'"
+      "'Salarié du particulier employeur'",
     );
     userAction.click(ui.next.get());
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
@@ -106,7 +106,7 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.click(ui.next.get());
     expect(ui.result.legalError.seniorityToLow.get()).toBeInTheDocument();
     expect(
-      ui.result.infoWarning.ineligibleInfoWarningblock.query()
+      ui.result.infoWarning.ineligibleInfoWarningblock.query(),
     ).toBeInTheDocument();
   });
   test("vérifier que la CC 3239 n'affecte pas les autres inéligibilités", async () => {
@@ -115,27 +115,27 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.click(ui.contract.type.cdd.get());
     userAction.click(ui.next.get());
     expect(
-      ui.result.infoWarning.eligibleInfoWarningblock.query()
+      ui.result.infoWarning.eligibleInfoWarningblock.query(),
     ).not.toBeInTheDocument();
     expect(
-      ui.result.infoWarning.ineligibleInfoWarningblock.query()
+      ui.result.infoWarning.ineligibleInfoWarningblock.query(),
     ).not.toBeInTheDocument();
     userAction.click(ui.previous.get());
     userAction.click(ui.contract.type.cdi.get());
     userAction.click(ui.contract.fauteGrave.oui.get());
     userAction.click(ui.next.get());
     expect(
-      ui.result.infoWarning.eligibleInfoWarningblock.query()
+      ui.result.infoWarning.eligibleInfoWarningblock.query(),
     ).not.toBeInTheDocument();
     expect(
-      ui.result.infoWarning.ineligibleInfoWarningblock.query()
+      ui.result.infoWarning.ineligibleInfoWarningblock.query(),
     ).toBeInTheDocument();
   });
 
   test("vérifier qu'on a pas la question sur le temps partiel en tant que salarié du particulier employeur", async () => {
     userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
-      "'Salarié du particulier employeur'"
+      "'Salarié du particulier employeur'",
     );
     userAction.click(ui.next.get());
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
@@ -145,15 +145,15 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.click(ui.next.get());
     expect(
       screen.queryByText(
-        "Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail ?"
-      )
+        "Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail ?",
+      ),
     ).not.toBeInTheDocument();
   });
 
   test("vérifier qu'on affiche pas la notif sur le congé parental", async () => {
     userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
-      "'Assistant maternel'"
+      "'Assistant maternel'",
     );
     userAction.click(ui.information.agreement3239.congeMatSuspension.non.get());
     userAction.setInput(ui.information.agreement3239.salaryInput.get(), "3000");
@@ -166,15 +166,15 @@ describe("Indemnité licenciement - CC 3239", () => {
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(
       screen.queryByText(
-        /Depuis le 11 mars 2023 les périodes d’absence pour congé paternité ne sont plus retirées/
-      )
+        /Depuis le 11 mars 2023 les périodes d’absence pour congé paternité ne sont plus retirées/,
+      ),
     ).not.toBeInTheDocument();
   });
 
   test("vérifier le calcul pour un salarié du particulier employeur", async () => {
     userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
-      "'Salarié du particulier employeur'"
+      "'Salarié du particulier employeur'",
     );
     userAction.click(ui.next.get());
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2012");
@@ -204,7 +204,7 @@ describe("Indemnité licenciement - CC 3239", () => {
   test("vérifier le calcul pour un assistant maternelle", async () => {
     userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
-      "'Assistant maternel'"
+      "'Assistant maternel'",
     );
     userAction.click(ui.information.agreement3239.congeMatSuspension.non.get());
     userAction.setInput(ui.information.agreement3239.salaryInput.get(), "5000");
@@ -229,7 +229,7 @@ describe("Indemnité licenciement - CC 3239", () => {
 
     expect(ui.result.notifications.queryAll()).toHaveLength(2);
     expect(ui.result.notification(1).get()).toHaveTextContent(
-      "Le retrait de l'enfant met fin au contrat de travail de l’assistant maternel"
+      "Le retrait de l'enfant met fin au contrat de travail de l’assistant maternel",
     );
   });
 });

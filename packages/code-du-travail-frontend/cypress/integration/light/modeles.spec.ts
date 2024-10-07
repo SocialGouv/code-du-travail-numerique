@@ -6,7 +6,7 @@ describe("Modèles de documents", () => {
 
     cy.url().should(
       "include",
-      "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"
+      "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie",
     );
   });
 
@@ -21,13 +21,13 @@ describe("Modèles de documents", () => {
 
     cy.url().should(
       "include",
-      "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"
+      "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie",
     );
   });
 
   it("télécharge un modèle", () => {
     cy.visit(
-      "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-a-linitiative-du-salarie"
+      "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-a-linitiative-du-salarie",
     );
 
     cy.contains("Objet : Rupture de la période d’essai");
@@ -46,7 +46,7 @@ describe("Modèles de documents", () => {
     cy.readFile("cypress/downloads/rupture_periode_d-essai_salarie.docx").then(
       (file) => {
         expect(file).to.exist;
-      }
+      },
     );
   });
 });

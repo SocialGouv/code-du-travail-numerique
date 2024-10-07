@@ -1,8 +1,5 @@
 import { useContext } from "react";
-import {
-  IndemniteDepartContext,
-  useIndemniteDepartStore,
-} from "../../store";
+import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
 
 export default function Agreement16Informations() {
   const store = useContext(IndemniteDepartContext);
@@ -11,7 +8,7 @@ export default function Agreement16Informations() {
     (state) => ({
       showVariablePay: state.agreement16Data.input.showVariablePay,
       hasVariablePay: state.agreement16Data.input.hasVariablePay,
-    })
+    }),
   );
 
   return (

@@ -54,7 +54,7 @@ export default Glossaire;
 function getGlossaryLetters(glossary) {
   const A = "A".charCodeAt(0);
   const alphabet = Array.from({ length: 26 }, (_, index) =>
-    String.fromCharCode(A + index)
+    String.fromCharCode(A + index),
   );
   return alphabet.map((letter) => ({
     letter,

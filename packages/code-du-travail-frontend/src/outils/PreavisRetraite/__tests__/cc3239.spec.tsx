@@ -15,12 +15,12 @@ Storage.prototype.getItem = jest.fn(
   "slug": "3239-particuliers-employeurs-et-emploi-a-domicile",
   "title": "Particuliers employeurs et emploi à domicile"
 }
-`
+`,
 );
 
 test(`Mise à la retraite pour la CC 3239 impossible`, async () => {
   await render(
-    <CalculateurPreavisRetraite icon={""} title={""} displayTitle={""} />
+    <CalculateurPreavisRetraite icon={""} title={""} displayTitle={""} />,
   );
   const userAction = new UserAction();
 
@@ -33,11 +33,11 @@ test(`Mise à la retraite pour la CC 3239 impossible`, async () => {
   userAction.click(ui.next.get());
   userAction.click(ui.next.get());
   expect(
-    ui.information.agreement3239.categoryQuestion.query()
+    ui.information.agreement3239.categoryQuestion.query(),
   ).toBeInTheDocument();
   userAction.changeInputList(
     ui.information.agreement3239.categoryAnswers.get(),
-    "Assistants maternels du particulier employeur"
+    "Assistants maternels du particulier employeur",
   );
   userAction.click(ui.information.handicap.answerNon.get());
   expect(ui.information.agreement3239.alert.query()).not.toBeInTheDocument();

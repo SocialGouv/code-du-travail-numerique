@@ -29,7 +29,7 @@ export const createCommonSituationStore: StoreSlice<
       set(
         produce((state: CommonSituationStoreSlice) => {
           state.situationData.situation[key] = value;
-        })
+        }),
       );
     },
   },

@@ -40,7 +40,7 @@ const createResultStore: StoreSliceWrapperPreavisRetraite<
       const publicodes = get().agreementData.publicodes;
       const isAgreementSupported = !!supportedCcn.find(
         ({ preavisRetraite, idcc }) =>
-          preavisRetraite && idcc === agreement?.num
+          preavisRetraite && idcc === agreement?.num,
       );
       if (!publicodes) {
         throw new Error("Publicodes is not defined");
@@ -53,7 +53,7 @@ const createResultStore: StoreSliceWrapperPreavisRetraite<
         get().informationsData.input.publicodesInformations.find(
           (v) =>
             v.question.name === "contrat salarié - travailleur handicapé" &&
-            v.info === "'Oui'"
+            v.info === "'Oui'",
         ) !== undefined;
 
       let errorPublicodes: boolean = false;
@@ -66,7 +66,7 @@ const createResultStore: StoreSliceWrapperPreavisRetraite<
       let noticeUsed = NoticeUsed.none;
 
       const infos = informationToSituation(
-        get().informationsData.input.publicodesInformations
+        get().informationsData.input.publicodesInformations,
       );
 
       const situation = mapToPublicodesSituationForCalculationPreavisRetraite(
@@ -74,10 +74,10 @@ const createResultStore: StoreSliceWrapperPreavisRetraite<
         getSeniorityInMonths(
           get().seniorityData.input.moreThanXYears,
           get().seniorityData.input.seniorityInMonths,
-          get().agreementData.input.agreement
+          get().agreementData.input.agreement,
         ),
         agreement?.num,
-        infos
+        infos,
       );
 
       const publicodesInformations = get()
@@ -102,15 +102,15 @@ const createResultStore: StoreSliceWrapperPreavisRetraite<
         resultReferences = publicodes.getReferences();
 
         legalResult = publicodes.execute(
-          "contrat salarié . préavis de retraite légale en jours"
+          "contrat salarié . préavis de retraite légale en jours",
         );
 
         agreementResult = publicodes.execute(
-          "contrat salarié . préavis de retraite collective en jours"
+          "contrat salarié . préavis de retraite collective en jours",
         );
 
         agreementMaximumResult = publicodes.execute(
-          "contrat salarié . préavis de retraite collective maximum en jours"
+          "contrat salarié . préavis de retraite collective maximum en jours",
         );
 
         if (
@@ -137,7 +137,7 @@ const createResultStore: StoreSliceWrapperPreavisRetraite<
         errorPublicodes = true;
         console.error(`La situation est ${JSON.stringify(situation)}`);
         console.error(
-          `Les informations issues de publicodes sont ${JSON.stringify(infos)}`
+          `Les informations issues de publicodes sont ${JSON.stringify(infos)}`,
         );
         console.error(`L'erreur remontée est : ${JSON.stringify(e)}`);
         Sentry.captureException(e);
@@ -160,7 +160,7 @@ const createResultStore: StoreSliceWrapperPreavisRetraite<
             publicodesInformations;
           state.resultData.error.errorPublicodes = errorPublicodes;
           state.resultData.input.result = result;
-        })
+        }),
       );
     },
   },

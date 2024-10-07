@@ -32,7 +32,7 @@ export const removeDuplicate = (arr, predicate = predicateFn) =>
 export const mergeDuplicate = (arr, predicate = predicateFn) => {
   return arr.flatMap((a, index) => {
     const prevItem = arr.find(
-      (item, i) => predicate(item) === predicate(a) && i < index
+      (item, i) => predicate(item) === predicate(a) && i < index,
     );
     if (prevItem) {
       prevItem._source.algo = "both";

@@ -22,14 +22,14 @@ describe("initialSteps", () => {
           stepIndex: 4,
           steps: [],
         },
-        { type: ActionName.reset }
-      )
+        { type: ActionName.reset },
+      ),
     ).toEqual(initialState);
   });
 
   it("handles setIndex action", () => {
     expect(
-      stepReducer(initialState, { payload: 1, type: ActionName.setStepIndex })
+      stepReducer(initialState, { payload: 1, type: ActionName.setStepIndex }),
     ).toEqual({ stepIndex: 1, steps: initialState.steps });
   });
 
@@ -42,7 +42,7 @@ describe("initialSteps", () => {
 
   describe("Skip the rupture steps", () => {
     const ruptureStep = initialState.steps.filter(
-      (step) => step.name == "rupture"
+      (step) => step.name == "rupture",
     )[0];
 
     it("should contains a rupture step", () => {
@@ -63,7 +63,7 @@ describe("initialSteps", () => {
               route: "agreement",
               selected: generateAgreement(idcc),
             },
-          })
+          }),
         ).toBeFalsy();
       });
     });
@@ -75,7 +75,7 @@ describe("initialSteps", () => {
             route: "agreement",
             selected: generateAgreement(9999),
           },
-        })
+        }),
       ).toBeTruthy();
     });
 
@@ -85,14 +85,14 @@ describe("initialSteps", () => {
           ccn: {
             route: "not-selected",
           },
-        })
+        }),
       ).toBeTruthy();
     });
   });
 
   describe("Skip the information steps", () => {
     const informationStep = initialState.steps.filter(
-      (step) => step.name == "infos"
+      (step) => step.name == "infos",
     )[0];
 
     it("should contains an information step", () => {
@@ -113,7 +113,7 @@ describe("initialSteps", () => {
             selected: generateAgreement(16),
           },
           typeRupture: "3| Licenciement",
-        })
+        }),
       ).toBeFalsy();
     });
 
@@ -125,7 +125,7 @@ describe("initialSteps", () => {
             selected: generateAgreement(29),
           },
           typeRupture: "7| Rupture de la période d'essai",
-        })
+        }),
       ).toBeTruthy();
     });
 
@@ -136,7 +136,7 @@ describe("initialSteps", () => {
             route: "agreement",
             selected: generateAgreement(9999),
           },
-        })
+        }),
       ).toBeTruthy();
     });
 
@@ -146,7 +146,7 @@ describe("initialSteps", () => {
           ccn: {
             route: "not-selected",
           },
-        })
+        }),
       ).toBeTruthy();
     });
   });

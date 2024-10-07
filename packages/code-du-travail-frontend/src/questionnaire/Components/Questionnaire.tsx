@@ -24,7 +24,7 @@ export const Questionnaire = ({
   const getSlugResponses = useStore(store, (state) => state.getSlugResponses);
   const isPersonnalizedMode = useStore(
     store,
-    (state) => state.isPersonnalizedMode
+    (state) => state.isPersonnalizedMode,
   );
   const toolSlug = useStore(store, (state) => state.toolSlug);
   const previousResponses = useStore(store, (state) => state.previousResponses);

@@ -56,7 +56,7 @@ describe("extractDates", () => {
       "should return $result for $period from $fromDate",
       ({ period, fromDate, result }) => {
         expect(convertPeriodToHumanDate(period, fromDate)).toBe(result);
-      }
+      },
     );
   });
 

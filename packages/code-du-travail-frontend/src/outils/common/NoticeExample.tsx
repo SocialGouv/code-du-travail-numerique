@@ -44,12 +44,12 @@ export const NoticeExample = ({
     : "Le préavis débute à la date de la première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.";
   const fromDateCalculated = React.useMemo(
     () => (isCcsWithOneMoreDay ? convertDate(fromDate, 1, Unit.DAY) : fromDate),
-    [fromDate, isCcsWithOneMoreDay]
+    [fromDate, isCcsWithOneMoreDay],
   );
 
   const periodCalculated = React.useMemo(
     () => convertPeriodToHumanDate(period, fromDateCalculated),
-    [period, fromDateCalculated]
+    [period, fromDateCalculated],
   );
   const extra = React.useMemo(() => getExtra(period), [period]);
 

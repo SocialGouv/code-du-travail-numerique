@@ -5,19 +5,18 @@ import {
   StyledFilledElementSpan,
   StyledFilledElementTable,
 } from "../../steps/Resultat/components/FilledElements";
-import {
-  IndemniteDepartContext,
-  useIndemniteDepartStore,
-} from "../../store";
+import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
 
 export default function Agreement1483Informations() {
   const store = useContext(IndemniteDepartContext);
-  const { noticeSalaryPeriods, hasReceivedSalaries } =
-    useIndemniteDepartStore(store, (state) => ({
+  const { noticeSalaryPeriods, hasReceivedSalaries } = useIndemniteDepartStore(
+    store,
+    (state) => ({
       noticeSalaryPeriods:
         state.agreement1483Data.input.noticeSalaryPeriods ?? [],
       hasReceivedSalaries: state.agreement1483Data.input.hasReceivedSalaries,
-    }));
+    }),
+  );
 
   return (
     <>

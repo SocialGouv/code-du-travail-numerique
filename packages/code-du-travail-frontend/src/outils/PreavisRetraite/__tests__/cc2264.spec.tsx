@@ -18,12 +18,12 @@ Storage.prototype.getItem = jest.fn(
     "title": "Convention collective nationale de l'hospitalisation privée du 18 avril 2002",
     "contributions": true
 }
-`
+`,
 );
 
 test(`5 ans minimum pour la question pour la CC 2264`, async () => {
   await render(
-    <CalculateurPreavisRetraite icon={""} title={""} displayTitle={""} />
+    <CalculateurPreavisRetraite icon={""} title={""} displayTitle={""} />,
   );
   const userAction = new UserAction();
 
@@ -36,17 +36,17 @@ test(`5 ans minimum pour la question pour la CC 2264`, async () => {
   userAction.click(ui.next.get());
   userAction.click(ui.next.get());
   expect(
-    ui.information.agreement2264.categoryQuestion.query()
+    ui.information.agreement2264.categoryQuestion.query(),
   ).toBeInTheDocument();
   userAction.changeInputList(
     ui.information.agreement2264.categoryAnswers.get(),
-    "Non-cadres"
+    "Non-cadres",
   );
   expect(ui.information.handicap.question.query()).toBeInTheDocument();
   userAction.click(ui.information.handicap.answerNon.get());
   userAction.click(ui.next.get());
   expect(
-    ui.seniority.moreThanXYears.questionAvec5ans.query()
+    ui.seniority.moreThanXYears.questionAvec5ans.query(),
   ).toBeInTheDocument();
   userAction.click(ui.seniority.moreThanXYears.answerOui.get());
   userAction.click(ui.next.get());
@@ -55,10 +55,10 @@ test(`5 ans minimum pour la question pour la CC 2264`, async () => {
   expect(ui.result.resultat.get()).toHaveTextContent("3 mois");
   expect(ui.result.noticeMiseRetraite.get()).toBeInTheDocument();
   expect(ui.result.categorieProfessionnelle.get()).toHaveTextContent(
-    "Non-cadres"
+    "Non-cadres",
   );
   expect(ui.result.conventionCollective.get()).toHaveTextContent(
-    "Hospitalisation privée"
+    "Hospitalisation privée",
   );
   expect(ui.result.originDepart.get()).toHaveTextContent("Mise à la retraite");
   expect(ui.result.seniority.get()).toHaveTextContent("Plus de 5 ans");
@@ -66,7 +66,7 @@ test(`5 ans minimum pour la question pour la CC 2264`, async () => {
   expect(ui.result.resultatLegal.get()).toHaveTextContent("2 mois");
   expect(ui.result.resultatAgreement.get()).toHaveTextContent("3 mois");
   expect(ui.result.decryptedDescription.get()).toHaveTextContent(
-    "La durée à appliquer pour le salarié est donc la durée prévue par la convention collective, celle-ci étant plus longue que la durée légale."
+    "La durée à appliquer pour le salarié est donc la durée prévue par la convention collective, celle-ci étant plus longue que la durée légale.",
   );
   const sources = ui.result.sources.queryAll();
   expect(sources).toHaveLength(3);
@@ -74,9 +74,9 @@ test(`5 ans minimum pour la question pour la CC 2264`, async () => {
   expect(sources[1]).toHaveTextContent("Article L1234-1");
   expect(sources[2]).toHaveTextContent("Article 50.3");
   expect(ui.result.noticeWarning.get()).toHaveTextContent(
-    "Attention il peut exister une durée plus favorable"
+    "Attention il peut exister une durée plus favorable",
   );
   expect(ui.result.noticeWarning.get()).toHaveTextContent(
-    "Un accord collectif d’entreprise, le contrat de travail ou un usage peut prévoir une durée de préavis* ou une condition d’ancienneté* plus favorable pour le salarié. Dans ce cas, c’est cette durée ou cette ancienneté plus favorable qui s’applique au salarié."
+    "Un accord collectif d’entreprise, le contrat de travail ou un usage peut prévoir une durée de préavis* ou une condition d’ancienneté* plus favorable pour le salarié. Dans ce cas, c’est cette durée ou cette ancienneté plus favorable qui s’applique au salarié.",
   );
 });

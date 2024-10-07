@@ -9,7 +9,7 @@ describe("DisplayContentContribution", () => {
           content={`<span class="title">Mon titre</span>
                     <span class="sub-title">Mon sous titre</span>`}
           titleLevel={2}
-        ></DisplayContentContribution>
+        ></DisplayContentContribution>,
       );
 
       expect(baseElement.firstChild).toMatchInlineSnapshot(`
@@ -36,7 +36,7 @@ describe("DisplayContentContribution", () => {
         <DisplayContentContribution
           content={`<span class="title">Mon title</span><span class="sub-title">Mon title</span>`}
           titleLevel={4}
-        ></DisplayContentContribution>
+        ></DisplayContentContribution>,
       );
 
       expect(baseElement.firstChild).toMatchInlineSnapshot(`
@@ -63,7 +63,7 @@ describe("DisplayContentContribution", () => {
         <DisplayContentContribution
           content={`<span class="title">Mon title</span><span class="sub-title">Mon title</span>`}
           titleLevel={6}
-        ></DisplayContentContribution>
+        ></DisplayContentContribution>,
       );
 
       expect(baseElement.firstChild).toMatchInlineSnapshot(`
@@ -93,7 +93,7 @@ describe("DisplayContentContribution", () => {
           </div>
         </details>`}
           titleLevel={6}
-        ></DisplayContentContribution>
+        ></DisplayContentContribution>,
       );
       expect(asFragment().firstChild).toMatchSnapshot();
     });
@@ -111,7 +111,7 @@ describe("DisplayContentContribution", () => {
           </div>
         </details>`}
           titleLevel={3}
-        ></DisplayContentContribution>
+        ></DisplayContentContribution>,
       );
 
       expect(asFragment().firstChild).toMatchSnapshot();
@@ -181,7 +181,7 @@ describe("DisplayContentContribution", () => {
     </div>
   </details>`}
           titleLevel={3}
-        ></DisplayContentContribution>
+        ></DisplayContentContribution>,
       );
 
       expect(baseElement.firstChild).toMatchSnapshot();
@@ -203,7 +203,7 @@ describe("DisplayContentContribution", () => {
           </div>
         </details>`}
           titleLevel={3}
-        ></DisplayContentContribution>
+        ></DisplayContentContribution>,
       );
 
       expect(baseElement).toMatchSnapshot();
@@ -223,7 +223,7 @@ describe("DisplayContentContribution", () => {
           </div>
         </details>`}
           titleLevel={3}
-        ></DisplayContentContribution>
+        ></DisplayContentContribution>,
       );
 
       expect(asFragment().firstChild).toMatchSnapshot();
@@ -239,11 +239,11 @@ describe("DisplayContentContribution", () => {
           </div>
         </details>`}
           titleLevel={3}
-        ></DisplayContentContribution>
+        ></DisplayContentContribution>,
       );
 
       expect(getByTestId("contrib-accordion-0").textContent).toEqual(
-        "Ceci est un titre HELLO"
+        "Ceci est un titre HELLO",
       );
     });
     it(`should start title level to 4 if heading 3 before`, () => {
@@ -261,11 +261,11 @@ describe("DisplayContentContribution", () => {
           </details>
         </div>`}
           titleLevel={3}
-        ></DisplayContentContribution>
+        ></DisplayContentContribution>,
       );
 
       expect(getByTestId("contrib-accordion-0").textContent).toEqual(
-        "Ceci est un titre"
+        "Ceci est un titre",
       );
       expect(getByTestId("contrib-accordion-0").tagName).toEqual("H4");
     });
@@ -288,16 +288,16 @@ describe("DisplayContentContribution", () => {
           </details>
         </div>`}
           titleLevel={4}
-        ></DisplayContentContribution>
+        ></DisplayContentContribution>,
       );
 
       expect(getByText("Ceci est un titre").tagName).toEqual("H4");
       expect(getByText("Ceci est un sous titre").tagName).toEqual("H5");
       expect(getByText("Ceci est un titre dans un accordion").tagName).toEqual(
-        "H6"
+        "H6",
       );
       expect(
-        getByText("Ceci est un sous-titre dans un accordion").tagName
+        getByText("Ceci est un sous-titre dans un accordion").tagName,
       ).toEqual("STRONG");
     });
   });
@@ -320,7 +320,7 @@ describe("DisplayContentContribution", () => {
         </tbody>
         </table>`}
           titleLevel={3}
-        ></DisplayContentContribution>
+        ></DisplayContentContribution>,
       );
 
       expect(asFragment().firstChild).toMatchInlineSnapshot(`
@@ -397,7 +397,7 @@ describe("DisplayContentContribution", () => {
         </tbody>
         </table>`}
           titleLevel={3}
-        ></DisplayContentContribution>
+        ></DisplayContentContribution>,
       );
 
       expect(asFragment().firstChild).toMatchInlineSnapshot(`
@@ -443,7 +443,7 @@ describe("DisplayContentContribution", () => {
         <DisplayContentContribution
           content={`<p>Ceci est un<strong> </strong>texte généré<strong> </strong>par <em>tiptap </em>avec des<em> </em>résidus<em> </em>de balise</p>`}
           titleLevel={3}
-        ></DisplayContentContribution>
+        ></DisplayContentContribution>,
       );
 
       expect(asFragment().firstChild).toMatchInlineSnapshot(`
@@ -522,7 +522,7 @@ describe("DisplayContentContribution", () => {
 </table>
 `}
           titleLevel={3}
-        ></DisplayContentContribution>
+        ></DisplayContentContribution>,
       );
 
       expect(baseElement.firstChild).toMatchSnapshot();
@@ -534,7 +534,7 @@ describe("DisplayContentContribution", () => {
       <DisplayContentContribution
         content={`<p>hello</p>`}
         titleLevel={3}
-      ></DisplayContentContribution>
+      ></DisplayContentContribution>,
     );
 
     expect(asFragment().firstChild).toMatchInlineSnapshot(`
@@ -552,7 +552,7 @@ describe("DisplayContentContribution", () => {
       <DisplayContentContribution
         content={`<p>Ceci est un<strong> </strong>texte généré<strong> </strong>par <em>tiptap </em>avec des<em> </em>résidus<em> </em>de balise</p>`}
         titleLevel={3}
-      ></DisplayContentContribution>
+      ></DisplayContentContribution>,
     );
 
     expect(asFragment().firstChild).toMatchInlineSnapshot(`
@@ -590,7 +590,7 @@ describe("DisplayContentContribution", () => {
       <DisplayContentContribution
         content={`<p><strong>À noter :</strong> <em>L'échelon professionnel du salarié est habituellement mentionné </em></p>`}
         titleLevel={3}
-      ></DisplayContentContribution>
+      ></DisplayContentContribution>,
     );
 
     expect(asFragment().firstChild).toMatchInlineSnapshot(`
@@ -617,7 +617,7 @@ describe("DisplayContentContribution", () => {
           content={`
         <div class="alert"><p><strong>Attention : </strong>En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.</p></div>`}
           titleLevel={3}
-        ></DisplayContentContribution>
+        ></DisplayContentContribution>,
       );
 
       expect(asFragment().firstChild).toMatchSnapshot();
@@ -629,7 +629,7 @@ describe("DisplayContentContribution", () => {
           content={`
         <div><p>Le contrat de mission (intérim) doit :</p><ul><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être<strong> écrit</strong> et <strong>rédigé</strong> en français (si conclu en France) ;</p></li><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être <strong>signé</strong>, dans un délai de <strong>2 jours</strong> suivant la mise à disposition du salarié auprès de l'entreprise ; si l’employeur transmet le CDD au salarié après le délai de 2 jours, il s'expose au paiement d'une indemnité égale à 1 mois de salaire maximum.</p></li><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être établi <strong>en plusieurs exemplaires</strong> ; c'est-à-dire autant d'exemplaires que de parties au contrat. Chaque partie au contrat aura un exemplaire.</p><p></p><div class="alert"><p><strong>Attention : </strong>En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.</p></div></li></ul></div>`}
           titleLevel={3}
-        ></DisplayContentContribution>
+        ></DisplayContentContribution>,
       );
 
       expect(asFragment().firstChild).toMatchSnapshot();

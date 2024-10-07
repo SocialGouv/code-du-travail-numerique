@@ -20,11 +20,11 @@ describe("<Result />", () => {
             show: "légal et conventionnel",
           },
         ]}
-      />
+      />,
     );
     expect(queryByText(/2 000/i)).toBeInTheDocument();
     expect(
-      queryByText(/Ce montant est exonéré d’impôt sur le revenu/)
+      queryByText(/Ce montant est exonéré d’impôt sur le revenu/),
     ).toBeInTheDocument();
   });
 });

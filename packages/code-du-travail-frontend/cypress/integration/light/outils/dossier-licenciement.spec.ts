@@ -12,7 +12,7 @@ describe("Outil - Dossier Licenciement", () => {
     cy.contains("Un licenciement pour motif personnel");
     cy.contains("Un licenciement pour motif économique");
     cy.contains(
-      "Un licenciement suite à un accord de performance collective (APC)"
+      "Un licenciement suite à un accord de performance collective (APC)",
     );
 
     cy.get('label:contains("Un licenciement pour motif personnel")').click();
@@ -20,11 +20,11 @@ describe("Outil - Dossier Licenciement", () => {
     cy.contains("Une faute qui vous est reprochée (motif disciplinaire)");
     cy.contains("Une inaptitude constatée par le médecin du travail");
     cy.contains(
-      "Vous n'êtes concerné par aucun de ces cas (motif non disciplinaire)"
+      "Vous n'êtes concerné par aucun de ces cas (motif non disciplinaire)",
     );
 
     cy.get(
-      'label:contains("Vous n\'êtes concerné par aucun de ces cas (motif non disciplinaire)")'
+      'label:contains("Vous n\'êtes concerné par aucun de ces cas (motif non disciplinaire)")',
     ).click();
 
     cy.contains("Afficher les informations personnalisées");
@@ -37,7 +37,7 @@ describe("Outil - Dossier Licenciement", () => {
       "equal",
       `${
         Cypress.config().baseUrl
-      }/information/licenciement-pour-motif-non-disciplinaire`
+      }/information/licenciement-pour-motif-non-disciplinaire`,
     );
   });
 });

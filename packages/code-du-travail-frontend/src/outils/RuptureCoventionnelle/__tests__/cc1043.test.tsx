@@ -18,7 +18,7 @@ Storage.prototype.getItem = jest.fn(
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635953",
     "slug": "1043-gardiens-concierges-et-employes-dimmeubles"
   }
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 1043", () => {
@@ -29,7 +29,7 @@ describe("Indemnité licenciement - CC 1043", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
     userAction = new UserAction();
 
@@ -55,7 +55,7 @@ describe("Indemnité licenciement - CC 1043", () => {
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.resultat.get()).toHaveTextContent("20 250,00 €");
     expect(ui.result.resultatAgreement.get()).toHaveTextContent(
-      "Non applicable dans votre situation"
+      "Non applicable dans votre situation",
     );
   });
 });

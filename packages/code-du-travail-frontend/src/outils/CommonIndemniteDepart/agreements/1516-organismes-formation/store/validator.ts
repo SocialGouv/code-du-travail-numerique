@@ -13,7 +13,7 @@ import {
 
 export const validateAgreement1516 = (
   get: StoreApi<MainStore>["getState"],
-  set: StoreApi<MainStore>["setState"]
+  set: StoreApi<MainStore>["setState"],
 ) => {
   const { isValid, errorState } = validateStep(get().agreement1516Data.input);
   set(
@@ -21,7 +21,7 @@ export const validateAgreement1516 = (
       state.agreement1516Data.hasBeenSubmit = isValid ? false : true;
       state.agreement1516Data.isStepValid = isValid;
       state.agreement1516Data.error = errorState;
-    })
+    }),
   );
 
   return isValid;

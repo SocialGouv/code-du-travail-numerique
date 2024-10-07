@@ -64,7 +64,9 @@ export const RelatedItems = ({ items = [] }) => {
                             matoSelectRelated(
                               reco,
                               // legacy : we do not include the leading '/' in the the selection
-                              source != SOURCES.EXTERNALS ? href.slice(1) : href
+                              source != SOURCES.EXTERNALS
+                                ? href.slice(1)
+                                : href,
                             )
                           }
                         >
@@ -76,7 +78,7 @@ export const RelatedItems = ({ items = [] }) => {
                 })}
               </FlatList>
             </React.Fragment>
-          )
+          ),
       )}
     </Container>
   );

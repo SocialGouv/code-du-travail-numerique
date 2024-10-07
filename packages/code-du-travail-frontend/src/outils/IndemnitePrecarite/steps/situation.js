@@ -36,7 +36,7 @@ export function validateSituation(initialSituations, criteria, errors) {
   const pastQuestions = getPastQuestions(
     initialSituations,
     criteriaOrder,
-    criteria
+    criteria,
   );
   const situations = filterSituations(initialSituations, criteria);
 
@@ -66,7 +66,7 @@ export const hasConventionalProvision = (data, idcc) => {
 
 export const getSupportedCCWithoutConventionalProvision = () => {
   const situations = data.filter(
-    (situation) => situation.hasConventionalProvision !== null
+    (situation) => situation.hasConventionalProvision !== null,
   );
   return getSupportedCC(situations);
 };

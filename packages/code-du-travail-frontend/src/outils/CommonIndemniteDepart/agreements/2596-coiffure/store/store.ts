@@ -40,7 +40,7 @@ export const createAgreement2596StoreSalaires: StoreSlice<
         get().informationsData.input.publicodesInformations.find(
           (item) =>
             item.question.name ===
-            "contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle"
+            "contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle",
         )?.info;
       const dateArretTravail = get().contratTravailData.input.dateArretTravail;
 
@@ -53,7 +53,7 @@ export const createAgreement2596StoreSalaires: StoreSlice<
         return set(
           produce((state: Agreement2596StoreSlice) => {
             state.agreement2596Data.input.noticeSalaryPeriods = [];
-          })
+          }),
         );
       }
       const ancienneteInput = get().ancienneteData.input;
@@ -72,18 +72,18 @@ export const createAgreement2596StoreSalaires: StoreSlice<
       const noticeSalaryPeriods = deepMergeArray(
         period,
         agreementSalaryPeriod,
-        "month"
+        "month",
       );
 
       get().situationFunction.setSituation(
         "noticeSalaryPeriods",
-        JSON.stringify(noticeSalaryPeriods)
+        JSON.stringify(noticeSalaryPeriods),
       );
       set(
         produce((state: Agreement2596StoreSlice) => {
           state.agreement2596Data.input.noticeSalaryPeriods =
             noticeSalaryPeriods;
-        })
+        }),
       );
     },
     onChangeHasReceivedSalaries: (value) => {
@@ -93,7 +93,7 @@ export const createAgreement2596StoreSalaires: StoreSlice<
     onSalariesChange: (value) => {
       get().situationFunction.setSituation(
         "noticeSalaryPeriods",
-        JSON.stringify(value)
+        JSON.stringify(value),
       );
       applyGenericValidation(get, set, "noticeSalaryPeriods", value);
     },
@@ -104,28 +104,28 @@ const applyGenericValidation = (
   get: StoreApi<Agreement2596StoreSlice & SalairesStoreSlice>["getState"],
   set: StoreApi<Agreement2596StoreSlice & SalairesStoreSlice>["setState"],
   paramName: keyof Agreement2596StoreInput,
-  value: any
+  value: any,
 ) => {
   if (get().agreement2596Data.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
       draft.agreement2596Data.input[paramName] = value;
     });
     const { isValid, errorState } = validateStep(
-      nextState.agreement2596Data.input
+      nextState.agreement2596Data.input,
     );
     set(
       produce((state: Agreement2596StoreSlice) => {
         state.agreement2596Data.error = errorState;
         state.agreement2596Data.isStepValid = isValid;
         state.agreement2596Data.input[paramName] = value;
-      })
+      }),
     );
     get().salairesFunction.onNextStep();
   } else {
     set(
       produce((state: Agreement2596StoreSlice) => {
         state.agreement2596Data.input[paramName] = value;
-      })
+      }),
     );
   }
 };

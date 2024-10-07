@@ -21,7 +21,7 @@ type Props = {
 export default function DecryptResult(props: Props) {
   const agreementResult = getDecryptedValueAgreement(
     props.agreementExplanation,
-    props.agreementResult
+    props.agreementResult,
   );
   return (
     <>

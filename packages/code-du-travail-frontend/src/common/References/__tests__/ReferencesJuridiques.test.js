@@ -35,7 +35,7 @@ const references = [
 describe("<ReferencesJuridiques />", () => {
   it("should render", () => {
     const { container } = render(
-      <ReferencesJuridiques references={references} />
+      <ReferencesJuridiques references={references} />,
     );
     expect(container).toMatchSnapshot();
   });

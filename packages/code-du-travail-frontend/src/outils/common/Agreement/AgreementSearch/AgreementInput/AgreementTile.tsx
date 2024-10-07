@@ -34,7 +34,7 @@ export function AgreementTile({
         kind: "select",
         extra: { idcc: agreement.num, title: agreement.title },
       },
-      "*"
+      "*",
     );
   };
   return (

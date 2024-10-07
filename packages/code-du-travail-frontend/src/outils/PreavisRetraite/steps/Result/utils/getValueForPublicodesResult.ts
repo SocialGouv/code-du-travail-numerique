@@ -2,7 +2,7 @@ import { RuleType } from "@socialgouv/modeles-social";
 import { PublicodesInformation } from "../../../../CommonIndemniteDepart/steps/Informations/store";
 
 const reverseValues = (
-  values: Record<string, string>
+  values: Record<string, string>,
 ): Record<string, string> =>
   Object.entries(values).reduce((state, [key, value]) => {
     state[value] = key;
@@ -10,7 +10,7 @@ const reverseValues = (
   }, {});
 
 export const getValueForPublicodesResult = (
-  info: PublicodesInformation
+  info: PublicodesInformation,
 ): string | undefined => {
   if (
     info.info &&

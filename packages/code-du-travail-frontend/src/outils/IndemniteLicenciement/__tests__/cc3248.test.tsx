@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
   "url": "https://www.legifrance.gouv.fr/conv_coll/id/KALICONT000046993250",
   "slug": "3248-metallurgie"
 }
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 3248", () => {
@@ -28,7 +28,7 @@ describe("Indemnité licenciement - CC 3248", () => {
           icon={""}
           title={""}
           displayTitle={""}
-        />
+        />,
       );
       userAction = new UserAction();
       userAction
@@ -46,13 +46,13 @@ describe("Indemnité licenciement - CC 3248", () => {
       userAction
         .changeInputList(
           ui.information.agreement3248.proCategory.get(),
-          "'A, B, C, D ou E'"
+          "'A, B, C, D ou E'",
         )
         .click(ui.information.agreement3248.dayContract.oui.get())
         .click(ui.information.agreement3248.alwaysDayContract.non.get())
         .setInput(
           ui.information.agreement3248.dateDayContract.get(),
-          "01/01/2010"
+          "01/01/2010",
         )
         .click(ui.information.agreement3248.hasBeenCadre.oui.get())
         .setInput(ui.information.agreement3248.age.get(), "61")
@@ -73,7 +73,7 @@ describe("Indemnité licenciement - CC 3248", () => {
       userAction
         .changeInputList(
           ui.information.agreement3248.proCategory.get(),
-          "'A, B, C, D ou E'"
+          "'A, B, C, D ou E'",
         )
         .click(ui.information.agreement3248.dayContract.oui.get())
         .click(ui.information.agreement3248.alwaysDayContract.oui.get())

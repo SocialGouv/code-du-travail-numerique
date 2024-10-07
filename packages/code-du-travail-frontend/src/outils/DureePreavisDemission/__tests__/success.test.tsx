@@ -15,9 +15,8 @@ Storage.prototype.getItem = jest.fn(
   "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT",
   "slug": "cc-1351"
 }
-`
+`,
 );
-
 
 test(`
   - Vérifier l'affichage de la cc 1351

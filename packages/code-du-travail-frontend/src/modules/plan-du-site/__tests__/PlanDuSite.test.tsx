@@ -31,7 +31,7 @@ describe("<SiteMap />", () => {
         modeles={sampleData}
         themes={sampleData}
         tools={sampleData}
-      />
+      />,
     );
     expect(container).toMatchSnapshot();
   });

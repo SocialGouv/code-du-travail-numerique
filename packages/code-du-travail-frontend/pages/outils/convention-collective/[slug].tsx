@@ -85,7 +85,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
   try {
     const data = await getBySourceAndSlugItems<Tool>(
       SOURCES.TOOLS,
-      "convention-collective"
+      "convention-collective",
     );
     if (!data) {
       return {

@@ -15,7 +15,7 @@ const makeArticlesLinks = (markdown) => {
     str2 = str2.replace(
       new RegExp(`[^[](${match[2]})`),
       (_, match2) =>
-        `${match[1]}[${match[2]}](/code-du-travail/${normalize(match2)})`
+        `${match[1]}[${match[2]}](/code-du-travail/${normalize(match2)})`,
     );
   }
   return str2;

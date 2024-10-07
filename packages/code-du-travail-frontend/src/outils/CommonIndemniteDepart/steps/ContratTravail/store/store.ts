@@ -89,13 +89,13 @@ const createContratTravailStore: StoreSlice<
           state.contratTravailData.isStepValid = isValid;
           state.contratTravailData.error = errorState;
           state.contratTravailData.error.errorEligibility = errorEligibility;
-        })
+        }),
       );
       return errorEligibility
         ? ValidationResponse.NotEligible
         : isValid
-        ? ValidationResponse.Valid
-        : ValidationResponse.NotValid;
+          ? ValidationResponse.Valid
+          : ValidationResponse.NotValid;
     },
   },
 });
@@ -106,27 +106,27 @@ const applyGenericValidation = (
   >["getState"],
   set: StoreApi<ContratTravailStoreSlice>["setState"],
   paramName: keyof ContratTravailStoreInput,
-  value: any
+  value: any,
 ) => {
   if (get().contratTravailData.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
       draft.contratTravailData.input[paramName] = value;
     });
     const { isValid, errorState } = validateStep(
-      nextState.contratTravailData.input
+      nextState.contratTravailData.input,
     );
     set(
       produce((state: ContratTravailStoreSlice) => {
         state.contratTravailData.error = errorState;
         state.contratTravailData.isStepValid = isValid;
         state.contratTravailData.input[paramName] = value;
-      })
+      }),
     );
   } else {
     set(
       produce((state: ContratTravailStoreSlice) => {
         state.contratTravailData.input[paramName] = value;
-      })
+      }),
     );
   }
 };

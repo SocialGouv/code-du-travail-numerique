@@ -16,7 +16,7 @@ Storage.prototype.getItem = jest.fn(
     "title": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956",
     "contributions": true
   }  
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 44", () => {
@@ -27,7 +27,7 @@ describe("Indemnité licenciement - CC 44", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
@@ -41,7 +41,7 @@ describe("Indemnité licenciement - CC 44", () => {
     userAction.setInput(ui.information.agreement44.ruptureAge.get(), "60");
     userAction.changeInputList(
       ui.information.agreement44.proCategory.get(),
-      "'Ouvriers et collaborateurs (Groupes I à III)'"
+      "'Ouvriers et collaborateurs (Groupes I à III)'",
     );
     userAction.click(ui.next.get());
 

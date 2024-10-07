@@ -16,7 +16,7 @@ Storage.prototype.getItem = jest.fn(
     "title": "Convention collective nationale de la restauration rapide du 18 mars 1988",
     "contributions": true
   }  
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 1501", () => {
@@ -27,7 +27,7 @@ describe("Indemnité licenciement - CC 1501", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
@@ -40,7 +40,7 @@ describe("Indemnité licenciement - CC 1501", () => {
   test(`Vérifier l'enchainement de question à l'étape information`, () => {
     userAction.changeInputList(
       ui.information.agreement1501.proCategory.get(),
-      "'Cadres'"
+      "'Cadres'",
     );
     userAction.setInput(ui.information.agreement1501.ruptureAge.get(), "55");
     userAction.click(ui.next.get());

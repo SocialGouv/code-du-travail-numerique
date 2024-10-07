@@ -17,7 +17,7 @@ Storage.prototype.getItem = jest.fn(
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635630",
     "slug": "86-entreprises-de-la-publicite-et-assimilees"
   }
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 86", () => {
@@ -28,7 +28,7 @@ describe("Indemnité licenciement - CC 86", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
     userAction = new UserAction();
   });
@@ -53,7 +53,7 @@ describe("Indemnité licenciement - CC 86", () => {
     userAction.click(ui.next.get());
     expect(ui.result.formula.get()).toHaveTextContent("Formule");
     expect(ui.result.formula.get()).toHaveTextContent(
-      "Sref : Salaire de référence (25000 €)"
+      "Sref : Salaire de référence (25000 €)",
     );
   });
 });

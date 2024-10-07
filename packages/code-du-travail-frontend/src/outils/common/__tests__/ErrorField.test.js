@@ -22,7 +22,7 @@ describe("<ErroField />", () => {
             <ErrorField name="test" />
           </>
         )}
-      />
+      />,
     );
     const input = getByTestId("test");
     fireEvent.change(input, { target: { value: "" } });

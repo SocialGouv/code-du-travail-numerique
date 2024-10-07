@@ -31,7 +31,7 @@ const generateUniqueKey = (): string => {
 
 const mapAbsences = (
   absences: Absence[],
-  defaultMotif: Motif
+  defaultMotif: Motif,
 ): AbsenceWithKey[] => {
   return absences.length > 0
     ? absences.map((absence) => ({ ...absence, key: generateUniqueKey() }))
@@ -53,7 +53,7 @@ const AbsencePeriods = ({
   messageMotifExample,
 }: Props) => {
   const [localAbsences, setLocalAbsences] = React.useState<AbsenceWithKey[]>(
-    mapAbsences(absences, motifs[0])
+    mapAbsences(absences, motifs[0]),
   );
 
   useEffect(() => {
@@ -99,7 +99,7 @@ const AbsencePeriods = ({
       });
     }
     const newAbsences = localAbsences.map((absence) =>
-      key === absence.key ? { ...absence, durationInMonth: duration } : absence
+      key === absence.key ? { ...absence, durationInMonth: duration } : absence,
     );
     setLocalAbsences(newAbsences);
     onChange(newAbsences);
@@ -107,7 +107,7 @@ const AbsencePeriods = ({
 
   const onSetAbsenceDate = (key: string, value: string) => {
     const newAbsences = localAbsences.map((absence) =>
-      key === absence.key ? { ...absence, startedAt: value } : absence
+      key === absence.key ? { ...absence, startedAt: value } : absence,
     );
     setLocalAbsences(newAbsences);
     onChange(newAbsences);
@@ -116,7 +116,7 @@ const AbsencePeriods = ({
   const onSelectMotif = (key: string, value: string) => {
     const motif = motifs.find((motif) => motif.label === value)!;
     const newAbsences = localAbsences.map((absence) =>
-      key === absence.key ? { ...absence, motif: motif } : absence
+      key === absence.key ? { ...absence, motif: motif } : absence,
     );
     setLocalAbsences(newAbsences);
     onChange(newAbsences);

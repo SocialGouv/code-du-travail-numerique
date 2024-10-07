@@ -60,15 +60,15 @@ const createCommonInformationsStore: StoreSlice<
             mapToPublicodesSituationForIndemniteLicenciementConventionnel(
               agreement.num,
               isLicenciementInaptitude,
-              false
-            )
+              false,
+            ),
           );
           let resultMissingArgs: MissingArgs[] = [];
           if (result.type === "missing-args") {
             resultMissingArgs = result.missingArgs;
           }
           const missingArgs = resultMissingArgs.filter(
-            (item) => item.rawNode.cdtn
+            (item) => item.rawNode.cdtn,
           );
           if (missingArgs.length > 0) {
             const question = missingArgs.map((arg) => ({
@@ -86,7 +86,7 @@ const createCommonInformationsStore: StoreSlice<
                   },
                 ];
                 state.informationsData.input.isStepHidden = false;
-              })
+              }),
             );
             return true;
           }
@@ -95,7 +95,7 @@ const createCommonInformationsStore: StoreSlice<
           produce((state: CommonInformationsStoreSlice) => {
             state.informationsData.input = initialState.input;
             state.informationsData.error = initialState.error;
-          })
+          }),
         );
         return true;
       } catch (e) {
@@ -104,7 +104,7 @@ const createCommonInformationsStore: StoreSlice<
         set(
           produce((state: CommonInformationsStoreSlice) => {
             state.informationsData.input.informationError = true;
-          })
+          }),
         );
         return false;
       }
@@ -118,7 +118,7 @@ const createCommonInformationsStore: StoreSlice<
       const isLicenciementInaptitude =
         get().contratTravailData.input.licenciementInaptitude === "oui";
       const questionAnswered = publicodesInformations.find(
-        (question) => question.question.rule.nom === key
+        (question) => question.question.rule.nom === key,
       );
       if (!questionAnswered) {
         throw new Error(`Question ${key} is not found`);
@@ -132,7 +132,7 @@ const createCommonInformationsStore: StoreSlice<
       const newPublicodesInformations = [
         currentInformations,
         ...publicodesInformations.filter(
-          (el) => el.order < questionAnswered.order
+          (el) => el.order < questionAnswered.order,
         ),
       ].sort((a, b) => a.order - b.order);
       if (isValidField(value, type) === undefined) {
@@ -147,8 +147,8 @@ const createCommonInformationsStore: StoreSlice<
               agreement.num,
               isLicenciementInaptitude,
               false,
-              rules
-            )
+              rules,
+            ),
           );
           let resultMissingArgs: MissingArgs[] = [];
           if (result.type === "missing-args") {
@@ -167,7 +167,7 @@ const createCommonInformationsStore: StoreSlice<
           produce((state: CommonInformationsStoreSlice) => {
             state.informationsData.input.blockingNotification =
               blockingNotification;
-          })
+          }),
         );
         const newQuestions = missingArgs
           .sort((a, b) => b.indice - a.indice)
@@ -183,14 +183,14 @@ const createCommonInformationsStore: StoreSlice<
         if (missingArgs.length === 0) {
           newPublicodesInformationsForNextQuestions =
             newPublicodesInformations.filter(
-              (el) => el.order <= questionAnswered.order
+              (el) => el.order <= questionAnswered.order,
             );
         } else {
           newPublicodesInformationsForNextQuestions = removeDuplicateObject(
             [newQuestions, ...newPublicodesInformations].sort(
-              (a, b) => a.order - b.order
+              (a, b) => a.order - b.order,
             ),
-            "order"
+            "order",
           ) as PublicodesInformation[];
         }
         hasNoMissingQuestions = missingArgs.length === 0;
@@ -201,13 +201,13 @@ const createCommonInformationsStore: StoreSlice<
         get,
         set,
         "publicodesInformations",
-        newPublicodesInformationsForNextQuestions
+        newPublicodesInformationsForNextQuestions,
       );
       applyGenericValidation(
         get,
         set,
         "hasNoMissingQuestions",
-        hasNoMissingQuestions
+        hasNoMissingQuestions,
       );
       applyGenericValidation(get, set, "informationError", informationError);
     },
@@ -222,18 +222,18 @@ const createCommonInformationsStore: StoreSlice<
           publicodesInformations.find(
             (v) =>
               v.question.rule.nom ===
-              "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle"
+              "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle",
           )?.info === CatPro3239.assistantMaternel &&
           publicodesInformations.find(
             (v) =>
               v.question.rule.nom ===
-              "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement"
+              "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement",
           )?.info === `'Non'`) ||
         (agreement.num === 1404 &&
           publicodesInformations.find(
             (v) =>
               v.question.rule.nom ===
-              "contrat salarié . convention collective . sedima . question cdi opération"
+              "contrat salarié . convention collective . sedima . question cdi opération",
           )?.info === `'Oui'`)
       ) {
         isStepHidden = true;
@@ -241,7 +241,7 @@ const createCommonInformationsStore: StoreSlice<
       set(
         produce((state: CommonInformationsStoreSlice) => {
           state.informationsData.input.isStepSalaryHidden = isStepHidden;
-        })
+        }),
       );
     },
     onNextStep: () => {
@@ -254,7 +254,7 @@ const createCommonInformationsStore: StoreSlice<
         const situation = {
           ...get().situationData.situation,
           ...informationToSituation(
-            get().informationsData.input.publicodesInformations
+            get().informationsData.input.publicodesInformations,
           ),
         };
         const result = publicodes.calculate(situation);
@@ -271,14 +271,14 @@ const createCommonInformationsStore: StoreSlice<
             isValid && get().informationsData.input.hasNoMissingQuestions;
           state.informationsData.error = errorState;
           state.informationsData.error.errorEligibility = errorEligibility;
-        })
+        }),
       );
       get().informationsFunction.onSetStepHidden();
       return errorEligibility
         ? ValidationResponse.NotEligible
         : isValid
-        ? ValidationResponse.Valid
-        : ValidationResponse.NotValid;
+          ? ValidationResponse.Valid
+          : ValidationResponse.NotValid;
     },
   },
 });
@@ -287,27 +287,27 @@ const applyGenericValidation = (
   get: StoreApi<CommonInformationsStoreSlice>["getState"],
   set: StoreApi<CommonInformationsStoreSlice>["setState"],
   paramName: string,
-  value: any
+  value: any,
 ) => {
   if (get().informationsData.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
       draft.informationsData.input[paramName] = value;
     });
     const { isValid, errorState } = validateStep(
-      nextState.informationsData.input
+      nextState.informationsData.input,
     );
     set(
       produce((state: CommonInformationsStoreSlice) => {
         state.informationsData.error = errorState;
         state.informationsData.isStepValid = isValid;
         state.informationsData.input[paramName] = value;
-      })
+      }),
     );
   } else {
     set(
       produce((state: CommonInformationsStoreSlice) => {
         state.informationsData.input[paramName] = value;
-      })
+      }),
     );
   }
 };

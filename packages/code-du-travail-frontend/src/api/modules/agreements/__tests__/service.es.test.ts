@@ -26,7 +26,7 @@ describe("Agreements", () => {
 
   it("getBySlugAgreements", async () => {
     const result = await getBySlugAgreements(
-      "843-boulangerie-patisserie-entreprises-artisanales"
+      "843-boulangerie-patisserie-entreprises-artisanales",
     );
     expect(result).toMatchSnapshot();
   });

@@ -6,9 +6,9 @@ import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 
 export const fetchAllModels = async <
-  K extends keyof DocumentElasticWithSource<MailTemplateDoc>
+  K extends keyof DocumentElasticWithSource<MailTemplateDoc>,
 >(
-  fields: K[]
+  fields: K[],
 ): Promise<Pick<DocumentElasticWithSource<MailTemplateDoc>, K>[]> => {
   const response = await elasticsearchClient.search<
     DocumentElasticWithSource<

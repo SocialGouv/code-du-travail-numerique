@@ -37,14 +37,14 @@ function StepInfosGenerales({ form }) {
   const pastQuestions = getPastQuestions(
     initialSituations,
     criteriaOrder,
-    values.criteria
+    values.criteria,
   );
 
   const situations = filterSituations(initialSituations, values.criteria);
   const nextQuestionKey = getNextQuestionKey(
     situations,
     criteriaOrder,
-    values.criteria
+    values.criteria,
   );
   let nextQuestionOptions = getOptions(situations, nextQuestionKey);
 
@@ -61,7 +61,7 @@ function StepInfosGenerales({ form }) {
 
   // update cddType in pastQuestions
   const cddTypeTuple = pastQuestions.find(
-    ([questionKey]) => questionKey === "cddType"
+    ([questionKey]) => questionKey === "cddType",
   );
   if (cddTypeTuple) {
     cddTypeTuple[1] = concatenateCddType(cddTypeTuple[1]);
@@ -116,20 +116,21 @@ function StepInfosGenerales({ form }) {
                             // list keys that no longer exist
                             const resetFormProps = Object.keys(values.criteria)
                               .filter(
-                                (k) => !pastQuestions.find(([key]) => k === key)
+                                (k) =>
+                                  !pastQuestions.find(([key]) => k === key),
                               )
                               .concat(
                                 // list keys that need to be reseted
                                 pastQuestions
                                   .slice(
                                     pastQuestions.findIndex(
-                                      ([k]) => k === key
-                                    ) + 1
+                                      ([k]) => k === key,
+                                    ) + 1,
                                   )
-                                  .map(([key]) => key)
+                                  .map(([key]) => key),
                               );
                             resetFormProps.forEach((key) =>
-                              form.change(`criteria.${key}`, undefined)
+                              form.change(`criteria.${key}`, undefined),
                             );
                           });
                         }}

@@ -32,7 +32,7 @@ function Page({ contribs }) {
         setDocuments({ [themeSlug]: contribs[themeSlug] });
       }
     },
-    [contribs, setDocuments, setSelectedTheme]
+    [contribs, setDocuments, setSelectedTheme],
   );
   return (
     <Layout currentPage={SOURCES.CONTRIBUTIONS}>
@@ -65,7 +65,7 @@ function Page({ contribs }) {
                   <option key={label} value={label}>
                     {label}
                   </option>
-                ))
+                )),
               )}
           </LargeSelect>
           {Object.keys(documents).map((theme, index) => (

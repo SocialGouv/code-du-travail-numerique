@@ -22,7 +22,7 @@ const SearchBar = ({
 }: Props) => {
   const router = useRouter();
   const [query, setQuery] = useState(
-    typeof router.query.q === "string" ? router.query.q : ""
+    typeof router.query.q === "string" ? router.query.q : "",
   );
   const [suggestions, setSuggestions] = useState<string[]>([]);
 
@@ -39,7 +39,7 @@ const SearchBar = ({
       setQuery(inputValue);
       try {
         const results = await fetchSuggestResults(inputValue).then((items) =>
-          items.slice(0, suggestMaxResults)
+          items.slice(0, suggestMaxResults),
         );
         setSuggestions(results);
       } catch (error) {

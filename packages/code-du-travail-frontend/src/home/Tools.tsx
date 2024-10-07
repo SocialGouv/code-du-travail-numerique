@@ -54,10 +54,14 @@ export const Tools = (props: Props) => {
                   <Paragraph noMargin>{description}</Paragraph>
                 </CallToActionTile>
               );
-            }
+            },
           )}
         </Grid>
-        <HomeButtonTrigger name="Voir tous les outils" link="/outils" onClick={props.triggerOnClick} />
+        <HomeButtonTrigger
+          name="Voir tous les outils"
+          link="/outils"
+          onClick={props.triggerOnClick}
+        />
       </Container>
     </Section>
   );

@@ -17,7 +17,7 @@ export const getServerSideProps = async ({ res }) => {
             props: {},
           });
         });
-      }
+      },
     );
 
     sitempaReq.on("error", (error) => {

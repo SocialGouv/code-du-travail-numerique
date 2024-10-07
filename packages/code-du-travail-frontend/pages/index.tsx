@@ -77,7 +77,7 @@ const Home = ({
         content={agreements as ListLinkItemProps[]}
         triggerOnClick={() =>
           onSendMatomoEvent(
-            MatomoHomeEvent.CLICK_VOIR_TOUTES_LES_CONVENTIONS_COLLECTIVES
+            MatomoHomeEvent.CLICK_VOIR_TOUTES_LES_CONVENTIONS_COLLECTIVES,
           )
         }
       />

@@ -14,14 +14,14 @@ export function middleware(request) {
   // Replace newline characters and spaces
   const contentSecurityPolicyHeaderValue = ContentSecurityPolicy.replace(
     /\s{2,}/g,
-    " "
+    " ",
   ).trim();
 
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-nonce", nonce);
   requestHeaders.set(
     "Content-Security-Policy",
-    contentSecurityPolicyHeaderValue
+    contentSecurityPolicyHeaderValue,
   );
 
   const response = NextResponse.next({
@@ -31,7 +31,7 @@ export function middleware(request) {
   });
   response.headers.set(
     "Content-Security-Policy",
-    contentSecurityPolicyHeaderValue
+    contentSecurityPolicyHeaderValue,
   );
 
   return response;

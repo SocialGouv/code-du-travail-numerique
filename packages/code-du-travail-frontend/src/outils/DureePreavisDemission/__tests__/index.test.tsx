@@ -10,7 +10,7 @@ describe("<DureePreavisDemission />", () => {
         title="Durée de préavis de démission"
         displayTitle="Simulateur de durée de préavis de démission"
         icon="mail"
-      />
+      />,
     );
     expect(container).toMatchSnapshot();
   });

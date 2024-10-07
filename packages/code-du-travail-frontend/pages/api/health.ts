@@ -4,7 +4,7 @@ import { runMiddleware } from "../../src/api";
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   await runMiddleware(req, res);
   res.status(200).json({

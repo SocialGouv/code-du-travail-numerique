@@ -38,9 +38,9 @@ describe("question.ts", () => {
       "should return the correct question",
       (type, arretTravail, salaryPeriods, expected) => {
         expect(
-          generateSameSalaryQuestion(type, arretTravail, salaryPeriods)
+          generateSameSalaryQuestion(type, arretTravail, salaryPeriods),
         ).toBe(expected);
-      }
+      },
     );
   });
 
@@ -74,9 +74,9 @@ describe("question.ts", () => {
       "should return the correct question",
       (type, arretTravail, salaryPeriods, expected) => {
         expect(
-          generateSalaireTempsPleinQuestion(type, arretTravail, salaryPeriods)
+          generateSalaireTempsPleinQuestion(type, arretTravail, salaryPeriods),
         ).toBe(expected);
-      }
+      },
     );
   });
 
@@ -110,9 +110,9 @@ describe("question.ts", () => {
       "should return the correct result",
       (type, arretTravail, salaryPeriods, expected) => {
         expect(
-          generateResultSameSalary(type, arretTravail, salaryPeriods)
+          generateResultSameSalary(type, arretTravail, salaryPeriods),
         ).toBe(expected);
-      }
+      },
     );
   });
 
@@ -146,9 +146,9 @@ describe("question.ts", () => {
       "should return the correct result",
       (type, arretTravail, salaryPeriods, expected) => {
         expect(
-          generateResultSalaireTempsPlein(type, arretTravail, salaryPeriods)
+          generateResultSalaireTempsPlein(type, arretTravail, salaryPeriods),
         ).toBe(expected);
-      }
+      },
     );
   });
 });

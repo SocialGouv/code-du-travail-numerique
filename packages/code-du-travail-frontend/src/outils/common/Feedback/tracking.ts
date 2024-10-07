@@ -31,7 +31,7 @@ export enum FEEDBACK_RESULT {
 export const trackFeedback = (
   event: EVENT_ACTION,
   feedback: FEEDBACK_RESULT,
-  category: EVENT_CATEGORY
+  category: EVENT_CATEGORY,
 ) => {
   matopush([MatomoBaseEvent.TRACK_EVENT, category, event, feedback]);
 };
@@ -39,7 +39,7 @@ export const trackFeedback = (
 export const trackFeedbackText = (
   text: string,
   url: string,
-  category: EVENT_CATEGORY
+  category: EVENT_CATEGORY,
 ) => {
   matopush([
     "trackEvent",

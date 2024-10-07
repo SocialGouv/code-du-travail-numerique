@@ -122,12 +122,12 @@ export const ListLink = ({
   if (source === SOURCES.EXTERNALS && url) {
     return (
       <CallToActionTile
-        action={hideAction ? undefined : action ?? "Consulter"}
+        action={hideAction ? undefined : (action ?? "Consulter")}
         target="_blank"
         rel="noreferer noopener"
         className="no-after"
         aria-label={`${subtitle} ${title} ${summarize(
-          description
+          description,
         )} ${action} (nouvelle fenêtre)`}
         {...tileCommonProps}
         custom={false}
@@ -151,7 +151,7 @@ export const ListLink = ({
   let ResultTile = LinkedTile;
   if (source === SOURCES.TOOLS || source === SOURCES.LETTERS) {
     ResultTile = CallToActionTile;
-    tileCommonProps.action = hideAction ? undefined : action ?? "Consulter";
+    tileCommonProps.action = hideAction ? undefined : (action ?? "Consulter");
     tileCommonProps.custom = true;
   }
   if (source === SOURCES.CONTRIBUTIONS) {
@@ -169,7 +169,7 @@ ListLink.propTypes = {
       PropTypes.shape({
         label: PropTypes.string,
         slug: PropTypes.string,
-      })
+      }),
     ),
     slug: PropTypes.string,
     source: PropTypes.string,

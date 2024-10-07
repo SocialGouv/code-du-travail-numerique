@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
   "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
   "slug": "16-transports-routiers-et-activites-auxiliaires-du-transport"
 }
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 16", () => {
@@ -28,7 +28,7 @@ describe("Indemnité licenciement - CC 16", () => {
           icon={""}
           title={""}
           displayTitle={""}
-        />
+        />,
       );
       userAction = new UserAction();
       userAction
@@ -41,12 +41,12 @@ describe("Indemnité licenciement - CC 16", () => {
         .click(ui.next.get())
         .changeInputList(
           ui.information.agreement16.proCategory.get(),
-          "Ingénieurs et cadres"
+          "Ingénieurs et cadres",
         )
         .click(ui.information.agreement16.proCategoryHasChanged.oui.get())
         .setInput(
           ui.information.agreement16.dateProCategoryChanged.get(),
-          "01/01/2010"
+          "01/01/2010",
         )
         .setInput(ui.information.agreement16.engineerAge.get(), "38")
         .click(ui.next.get())
@@ -84,14 +84,14 @@ describe("Indemnité licenciement - CC 16", () => {
 
       expect(
         rendering.queryByText(
-          "Les salaires indiqués comportent-ils une partie variable ?"
-        )
+          "Les salaires indiqués comportent-ils une partie variable ?",
+        ),
       ).not.toBeInTheDocument();
       userAction.click(ui.salary.hasSameSalary.non.get());
       expect(
         rendering.queryByText(
-          "Les salaires indiqués comportent-ils une partie variable ?"
-        )
+          "Les salaires indiqués comportent-ils une partie variable ?",
+        ),
       ).toBeInTheDocument();
       expect(ui.salary.variablePart.oui.query()).toBeInTheDocument();
       expect(ui.salary.variablePart.non.query()).toBeInTheDocument();
@@ -103,8 +103,8 @@ describe("Indemnité licenciement - CC 16", () => {
 
       expect(
         rendering.queryByText(
-          /Les salaires indiqués comportent une partie variable/
-        )
+          /Les salaires indiqués comportent une partie variable/,
+        ),
       ).toBeInTheDocument();
 
       // vérification que l'on demande si le salaire a eu des primes pour un TAM
@@ -114,7 +114,7 @@ describe("Indemnité licenciement - CC 16", () => {
         .click(ui.previous.get())
         .changeInputList(
           ui.information.agreement16.proCategory.get(),
-          "Technicien et agents de maîtrise (TAM)"
+          "Technicien et agents de maîtrise (TAM)",
         )
         .setInput(ui.information.agreement16.agentAge.get(), "36")
         .click(ui.next.get())
@@ -123,14 +123,14 @@ describe("Indemnité licenciement - CC 16", () => {
 
       expect(
         rendering.queryByText(
-          "Les salaires indiqués comportent-ils une partie variable ?"
-        )
+          "Les salaires indiqués comportent-ils une partie variable ?",
+        ),
       ).not.toBeInTheDocument();
       userAction.click(ui.salary.hasSameSalary.non.get());
       expect(
         rendering.queryByText(
-          "Les salaires indiqués comportent-ils une partie variable ?"
-        )
+          "Les salaires indiqués comportent-ils une partie variable ?",
+        ),
       ).toBeInTheDocument();
       expect(ui.salary.variablePart.oui.query()).toBeInTheDocument();
       expect(ui.salary.variablePart.non.query()).toBeInTheDocument();
@@ -142,8 +142,8 @@ describe("Indemnité licenciement - CC 16", () => {
 
       expect(
         rendering.queryByText(
-          /Les salaires indiqués comportent une partie variable/
-        )
+          /Les salaires indiqués comportent une partie variable/,
+        ),
       ).toBeInTheDocument();
 
       // vérification que l'on demande si le salaire a eu des primes pour un employé
@@ -153,7 +153,7 @@ describe("Indemnité licenciement - CC 16", () => {
         .click(ui.previous.get())
         .changeInputList(
           ui.information.agreement16.proCategory.get(),
-          "Employés"
+          "Employés",
         )
         .setInput(ui.information.agreement16.employeeAge.get(), "36")
         .click(ui.next.get())
@@ -162,14 +162,14 @@ describe("Indemnité licenciement - CC 16", () => {
 
       expect(
         rendering.queryByText(
-          "Les salaires indiqués comportent-ils une partie variable ?"
-        )
+          "Les salaires indiqués comportent-ils une partie variable ?",
+        ),
       ).not.toBeInTheDocument();
       userAction.click(ui.salary.hasSameSalary.non.get());
       expect(
         rendering.queryByText(
-          "Les salaires indiqués comportent-ils une partie variable ?"
-        )
+          "Les salaires indiqués comportent-ils une partie variable ?",
+        ),
       ).not.toBeInTheDocument();
       expect(ui.salary.variablePart.oui.query()).not.toBeInTheDocument();
       expect(ui.salary.variablePart.non.query()).not.toBeInTheDocument();
@@ -180,8 +180,8 @@ describe("Indemnité licenciement - CC 16", () => {
 
       expect(
         rendering.queryByText(
-          /Les salaires indiqués comportent une partie variable/
-        )
+          /Les salaires indiqués comportent une partie variable/,
+        ),
       ).not.toBeInTheDocument();
 
       // vérification que l'on demande si le salaire a eu des primes pour un ouvrier
@@ -191,7 +191,7 @@ describe("Indemnité licenciement - CC 16", () => {
         .click(ui.previous.get())
         .changeInputList(
           ui.information.agreement16.proCategory.get(),
-          "Ouvriers"
+          "Ouvriers",
         )
         .click(ui.information.agreement16.driveInability.non.get())
         .setInput(ui.information.agreement16.workerAge.get(), "36")
@@ -201,14 +201,14 @@ describe("Indemnité licenciement - CC 16", () => {
 
       expect(
         rendering.queryByText(
-          "Les salaires indiqués comportent-ils une partie variable ?"
-        )
+          "Les salaires indiqués comportent-ils une partie variable ?",
+        ),
       ).not.toBeInTheDocument();
       userAction.click(ui.salary.hasSameSalary.non.get());
       expect(
         rendering.queryByText(
-          "Les salaires indiqués comportent-ils une partie variable ?"
-        )
+          "Les salaires indiqués comportent-ils une partie variable ?",
+        ),
       ).not.toBeInTheDocument();
       expect(ui.salary.variablePart.oui.query()).not.toBeInTheDocument();
       expect(ui.salary.variablePart.non.query()).not.toBeInTheDocument();
@@ -219,8 +219,8 @@ describe("Indemnité licenciement - CC 16", () => {
 
       expect(
         rendering.queryByText(
-          /Les salaires indiqués comportent une partie variable/
-        )
+          /Les salaires indiqués comportent une partie variable/,
+        ),
       ).not.toBeInTheDocument();
     });
   });

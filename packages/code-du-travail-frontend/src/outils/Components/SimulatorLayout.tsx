@@ -59,13 +59,13 @@ const SimulatorContent = <StepName extends string>({
   const store = useContext(SimulatorContext);
   const { currentStepIndex, previousStep, nextStep } = useSimulatorStepStore(
     store,
-    (state) => state
+    (state) => state,
   );
 
   const visibleSteps = useMemo(
     () =>
       steps.filter((step) => !hiddenStep || !hiddenStep.includes(step.name)),
-    [steps, hiddenStep]
+    [steps, hiddenStep],
   );
 
   const Step = visibleSteps[currentStepIndex].Component;
@@ -77,7 +77,7 @@ const SimulatorContent = <StepName extends string>({
         label,
         name,
       })),
-    [visibleSteps]
+    [visibleSteps],
   );
 
   useEffect(() => {
@@ -115,7 +115,7 @@ const SimulatorContent = <StepName extends string>({
       const currentStepName = visibleSteps[currentStepIndex].name;
 
       const stepChange = onStepChange.find(
-        (validator) => validator.stepName === currentStepName
+        (validator) => validator.stepName === currentStepName,
       );
 
       let validationResponse = ValidationResponse.Valid;
@@ -141,7 +141,7 @@ const SimulatorContent = <StepName extends string>({
     const previousStepIndex = currentStepIndex - 1;
     const prevStepName = visibleSteps[previousStepIndex].name;
     const stepChange = onStepChange.find(
-      (validator) => validator.stepName === prevStepName
+      (validator) => validator.stepName === prevStepName,
     );
     if (stepChange?.onPrevStep) {
       stepChange.onPrevStep();
@@ -157,7 +157,7 @@ const SimulatorContent = <StepName extends string>({
   };
 
   const validator = onStepChange.find(
-    (validator) => validator.stepName === visibleSteps[currentStepIndex].name
+    (validator) => validator.stepName === visibleSteps[currentStepIndex].name,
   );
   return (
     <StyledWrapper variant="main">
@@ -208,7 +208,7 @@ const SimulatorContent = <StepName extends string>({
 };
 
 const SimulatorLayout = <StepName extends string>(
-  props: Props<StepName>
+  props: Props<StepName>,
 ): JSX.Element => {
   const store = useRef(createSimulatorStore()).current;
   return (

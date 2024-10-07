@@ -10,7 +10,7 @@ describe("Title", () => {
     });
     it("should show the duration", () => {
       const { getByText } = render(
-        <Title title="Simulateur titre" icon="" duration="5 min" />
+        <Title title="Simulateur titre" icon="" duration="5 min" />,
       );
       expect(getByText(/5 min/)).toBeInTheDocument();
     });

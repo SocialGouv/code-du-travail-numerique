@@ -23,7 +23,7 @@ const ShowAlert = ({
   simulator = PublicodesSimulator.PREAVIS_RETRAITE,
 }: Props): JSX.Element => {
   const idccInfo = supportedAgreements.find(
-    (item) => item.idcc == currentAgreement.num
+    (item) => item.idcc == currentAgreement.num,
   );
   if (!idccInfo || idccInfo.fullySupported === SupportedTypes.NEVER_SUPPORTED) {
     return (

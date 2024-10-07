@@ -10,7 +10,7 @@ export enum Extra {
 export const convertPeriodToHumanDate = (
   input: string,
   from: Date,
-  withDay = false
+  withDay = false,
 ): string | null => {
   let date: Date;
   let value = getValue(input);

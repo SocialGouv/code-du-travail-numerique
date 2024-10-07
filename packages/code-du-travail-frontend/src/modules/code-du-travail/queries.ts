@@ -3,7 +3,7 @@ import { ElasticLaborCodeArticle } from "./type";
 import { DocumentElasticResult, fetchDocument } from "../documents";
 
 export const fetchLegalArticle = async (
-  slug: string
+  slug: string,
 ): Promise<DocumentElasticResult<ElasticLaborCodeArticle> | undefined> => {
   return await fetchDocument<
     ElasticLaborCodeArticle,

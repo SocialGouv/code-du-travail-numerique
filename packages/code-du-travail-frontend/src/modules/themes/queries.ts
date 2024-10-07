@@ -3,7 +3,7 @@ import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 
 export const fetchRootThemes = async <K extends keyof ThemeElasticDocument>(
-  fields: K[]
+  fields: K[],
 ): Promise<Pick<ThemeElasticDocument, K>[]> => {
   const response = await elasticsearchClient.search<
     Pick<ThemeElasticDocument, K>

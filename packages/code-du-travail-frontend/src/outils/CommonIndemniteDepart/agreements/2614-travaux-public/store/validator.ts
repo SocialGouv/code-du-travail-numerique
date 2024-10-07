@@ -7,18 +7,18 @@ import { SalairesStoreInput } from "../../../steps/Salaires/store";
 
 export const validateAgreement2614 = (
   get: StoreApi<MainStore>["getState"],
-  set: StoreApi<MainStore>["setState"]
+  set: StoreApi<MainStore>["setState"],
 ) => {
   const { isValid, errorState } = validateStep(
     get().agreement2614Data.input,
-    get().salairesData.input
+    get().salairesData.input,
   );
   set(
     produce((state: Agreement2614StoreSlice) => {
       state.agreement2614Data.hasBeenSubmit = !isValid;
       state.agreement2614Data.isStepValid = isValid;
       state.agreement2614Data.error = errorState;
-    })
+    }),
   );
 
   return isValid;
@@ -26,7 +26,7 @@ export const validateAgreement2614 = (
 
 export const validateStep = (
   state: Agreement2614StoreInput,
-  salaryState: SalairesStoreInput
+  salaryState: SalairesStoreInput,
 ) => {
   const errorState = {
     errorHasVariablePay:

@@ -12,8 +12,8 @@ describe("<SalaireTempsPlein />", () => {
           onSalariesChange={jest.fn()}
           salaryPeriods={[]}
           error={undefined}
-        />
-      )
+        />,
+      ),
     ).toBeTruthy();
   });
 
@@ -29,7 +29,7 @@ describe("<SalaireTempsPlein />", () => {
             value: 2000,
           },
         ]}
-      />
+      />,
     );
     const item = queryByText("Indiquez le montant des salaires mensuels brut", {
       exact: false,
@@ -53,10 +53,10 @@ describe("<SalaireTempsPlein />", () => {
         subTitle="Wesh"
         onSalariesChange={onSalariesChange}
         salaryPeriods={initObject}
-      />
+      />,
     );
     const input1 = getByTitle(
-      /Salaire mensuel brut en € pour le mois/i
+      /Salaire mensuel brut en € pour le mois/i,
     ) as HTMLInputElement;
     fireEvent.change(input1, { target: { value: "1500" } });
     expect(initObject[0].value).toBe(1500);
@@ -79,10 +79,10 @@ describe("<SalaireTempsPlein />", () => {
         subTitle="Wesh"
         onSalariesChange={onSalariesChange}
         salaryPeriods={initObject}
-      />
+      />,
     );
     const input1 = getByTitle(
-      /Renseignez la prime exceptionnelle pour le mois 1 ici/i
+      /Renseignez la prime exceptionnelle pour le mois 1 ici/i,
     ) as HTMLInputElement;
     expect(input1).toBeTruthy();
     fireEvent.change(input1, { target: { value: "6000" } });
@@ -102,7 +102,7 @@ describe("<SalaireTempsPlein />", () => {
           },
         ]}
         error={"Ceci est une erreur"}
-      />
+      />,
     );
 
     expect(getByText(/Ceci est une erreur/)).toBeInTheDocument();

@@ -1,5 +1,5 @@
 export const getSeniorityMessageQuestion = (
-  agreementNumber?: number
+  agreementNumber?: number,
 ): string => {
   if (agreementNumber === 2264) {
     return "Le salarié a-t-il plus de 5 ans d'ancienneté dans l'entreprise (5 ans + 1 jour) ?";
@@ -8,7 +8,7 @@ export const getSeniorityMessageQuestion = (
 };
 
 export const getSenioritySituationMessage = (
-  agreementNumber?: number
+  agreementNumber?: number,
 ): string => {
   if (agreementNumber === 2264) {
     return "Plus de 5 ans";

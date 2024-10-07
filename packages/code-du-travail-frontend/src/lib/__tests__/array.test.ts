@@ -29,6 +29,6 @@ describe("detectNullOrUndefinedOrNaNInArray", () => {
     "should return $expected for $array1 and $array2 with key $key",
     ({ array1, array2, key, expected }) => {
       expect(deepMergeArray(array1, array2, key)).toEqual(expected);
-    }
+    },
   );
 });

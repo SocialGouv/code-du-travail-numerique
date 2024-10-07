@@ -43,7 +43,7 @@ export const convertDate = (
   date: Date,
   value: number,
   unit: Unit,
-  isCalendar = false
+  isCalendar = false,
 ): Date => {
   let localDate = new Date(date);
   switch (unit) {
@@ -77,4 +77,3 @@ export const dateToString = (date: Date, withDay = false): string => {
   const month = date.getMonth() + 1;
   return `${withDay ? `${days[day]} ` : ""}${num} ${Month[month].toString()}`;
 };
-

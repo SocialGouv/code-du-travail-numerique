@@ -45,7 +45,7 @@ export const Contents = ({
                     }))}
                   />
                 </Section>
-              )
+              ),
           )}
       </>
     );

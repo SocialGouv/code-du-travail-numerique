@@ -34,7 +34,11 @@ export const HomeSlice = (props: Props) => {
             />
           ))}
         </Grid>
-        <HomeButtonTrigger name={props.triggerName} link={props.triggerLink} onClick={props.triggerOnClick} />
+        <HomeButtonTrigger
+          name={props.triggerName}
+          link={props.triggerLink}
+          onClick={props.triggerOnClick}
+        />
       </Container>
     </Section>
   );

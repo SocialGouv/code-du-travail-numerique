@@ -1,7 +1,7 @@
 import { AncienneteStoreError, AncienneteStoreInput } from "../types";
 
 export const getAbsenceProlongeErrors = (
-  state: AncienneteStoreInput
+  state: AncienneteStoreInput,
 ): Partial<AncienneteStoreError> => {
   let errors: AncienneteStoreError = {};
 

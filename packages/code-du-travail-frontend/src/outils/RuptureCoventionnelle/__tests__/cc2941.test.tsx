@@ -18,7 +18,7 @@ Storage.prototype.getItem = jest.fn(
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000025805800",
     "slug": "2941-aide-accompagnement-soins-et-services-a-domicile-bad"
   }
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 2941", () => {
@@ -29,7 +29,7 @@ describe("Indemnité licenciement - CC 2941", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
     userAction = new UserAction();
 
@@ -55,7 +55,7 @@ describe("Indemnité licenciement - CC 2941", () => {
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.resultat.get()).toHaveTextContent("20 250,00 €");
     expect(ui.result.resultatAgreement.get()).toHaveTextContent(
-      "Non applicable dans votre situation"
+      "Non applicable dans votre situation",
     );
   });
 });

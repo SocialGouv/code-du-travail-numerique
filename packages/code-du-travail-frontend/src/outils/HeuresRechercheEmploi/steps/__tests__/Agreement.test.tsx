@@ -8,7 +8,7 @@ describe("<AgreementStep />", () => {
     expect(getAllByRole("radio").length).toBe(2);
     expect(queryByText(/Je ne souhaite pas renseigner/)).toBeNull();
     expect(
-      queryByText(/La convention collective est nécessaire pour obtenir/)
+      queryByText(/La convention collective est nécessaire pour obtenir/),
     ).toBeInTheDocument();
   });
 });

@@ -7,7 +7,7 @@ const handleTrackEvent = (
   uuid: string,
   title: string,
   action: UserAction,
-  extra?: unknown
+  extra?: unknown,
 ): void => {
   switch (action) {
     case UserAction.OpenAgreementHelp:
@@ -15,7 +15,7 @@ const handleTrackEvent = (
         MatomoSearchAgreementCategory.AGREEMENT_SEARCH_HELP,
         "click_cc_search_help_p1",
         title,
-        uuid
+        uuid,
       );
       break;
     case UserAction.OpenEnterpriseHelp:
@@ -23,7 +23,7 @@ const handleTrackEvent = (
         MatomoSearchAgreementCategory.AGREEMENT_SEARCH_HELP,
         "click_cc_search_help_p2",
         title,
-        uuid
+        uuid,
       );
       break;
     case UserAction.SelectEnterprise:
@@ -31,7 +31,7 @@ const handleTrackEvent = (
         MatomoSearchAgreementCategory.ENTERPRISE_SELECT,
         title,
         JSON.stringify(extra),
-        uuid
+        uuid,
       );
       break;
     case UserAction.SelectAgreement:
@@ -39,7 +39,7 @@ const handleTrackEvent = (
         MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
         title,
         extra as string,
-        uuid
+        uuid,
       );
       break;
     case UserAction.SearchEnterprise:
@@ -47,7 +47,7 @@ const handleTrackEvent = (
         MatomoSearchAgreementCategory.ENTERPRISE_SEARCH,
         title,
         JSON.stringify(extra),
-        uuid
+        uuid,
       );
       break;
     case UserAction.SearchAgreement:
@@ -55,7 +55,7 @@ const handleTrackEvent = (
         MatomoSearchAgreementCategory.AGREEMENT_SEARCH,
         title,
         JSON.stringify(extra),
-        uuid
+        uuid,
       );
       break;
     case UserAction.SelectAgreementRoute:
@@ -63,7 +63,7 @@ const handleTrackEvent = (
         MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
         "click_p1",
         title,
-        uuid
+        uuid,
       );
       break;
     case UserAction.SelectEnterpriseRoute:
@@ -71,7 +71,7 @@ const handleTrackEvent = (
         MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
         "click_p2",
         title,
-        uuid
+        uuid,
       );
       break;
   }

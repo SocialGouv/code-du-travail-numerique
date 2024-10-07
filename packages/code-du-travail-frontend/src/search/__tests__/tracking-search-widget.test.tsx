@@ -16,8 +16,8 @@ describe("Widget Search - Tracking", () => {
   test("clicks are tracked", () => {
     fireEvent.click(
       byTitle(
-        "Le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail."
-      ).get()
+        "Le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail.",
+      ).get(),
     );
     expect(push).toHaveBeenCalledWith([
       "trackEvent",

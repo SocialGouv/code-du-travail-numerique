@@ -31,7 +31,7 @@ const SelectQuestion = ({
 }: Props): JSX.Element => {
   const [uid] = React.useState(`input-${name}`);
   const [optionsArray, setOptionsArray] = React.useState<[string, string][]>(
-    []
+    [],
   );
 
   React.useEffect(() => {

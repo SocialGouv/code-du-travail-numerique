@@ -6,6 +6,6 @@ export function renderForm(Component, data) {
   return render(
     <Form initialValues={{ ...data }} onSubmit={jest.fn()}>
       {({ form }) => <Component form={form} />}
-    </Form>
+    </Form>,
   );
 }

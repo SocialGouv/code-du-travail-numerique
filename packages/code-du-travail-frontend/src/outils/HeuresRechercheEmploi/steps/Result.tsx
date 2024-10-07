@@ -36,7 +36,7 @@ function Duration({ situation }) {
   }
 
   const wording = /rupture en cours de période d'essai/i.test(
-    situation.typeRupture
+    situation.typeRupture,
   )
     ? "D’après les éléments saisis, durant son préavis (ou délai de prévenance), le salarié peut s’absenter pour rechercher un emploi pendant"
     : "D’après les éléments saisis, durant son préavis, le salarié peut s’absenter pour rechercher un emploi pendant";
@@ -198,7 +198,7 @@ export function StepResult({ form }: WizardStepProps): JSX.Element {
             refUrl: situation.refUrl,
           },
         ]
-      : situation.refs ?? [];
+      : (situation.refs ?? []);
 
   return (
     <>

@@ -15,10 +15,10 @@ import { createResultStore, ResultStoreSlice } from "./Result/store";
 
 export type StoreSliceWrapperPreavisRetraite<
   T extends object,
-  E extends object = T
+  E extends object = T,
 > = (
   set: StoreApi<E extends T ? E : E & T>["setState"],
-  get: StoreApi<E extends T ? E : E & T>["getState"]
+  get: StoreApi<E extends T ? E : E & T>["getState"],
 ) => T;
 
 export type MainStore = OriginDepartStoreSlice &
@@ -36,7 +36,7 @@ export type StepData<T, U> = {
 
 const createRootSlice = (
   set: StoreApi<MainStore>["setState"],
-  get: StoreApi<MainStore>["getState"]
+  get: StoreApi<MainStore>["getState"],
 ) => ({
   ...createOriginDepartStore(set, get),
   ...createAgreementStore(set, get),
@@ -49,12 +49,12 @@ const createStore = () =>
   create(
     (
       set: StoreApi<MainStore>["setState"],
-      get: StoreApi<MainStore>["getState"]
-    ) => createRootSlice(set, get)
+      get: StoreApi<MainStore>["getState"],
+    ) => createRootSlice(set, get),
   );
 
 const PreavisRetraiteContext = createContext<StoreApi<MainStore>>(
-  {} as StoreApi<MainStore>
+  {} as StoreApi<MainStore>,
 );
 
 const { Provider } = PreavisRetraiteContext;

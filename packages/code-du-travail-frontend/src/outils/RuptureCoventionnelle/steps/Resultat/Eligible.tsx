@@ -45,7 +45,7 @@ const Eligible = () => {
     result: state.resultData.input,
     isStepSalaryHidden: state.informationsData.input.isStepSalaryHidden,
     informationData: informationToSituation(
-      state.informationsData.input.publicodesInformations
+      state.informationsData.input.publicodesInformations,
     ),
     resultExplanation: state.resultData.input.resultExplanation,
     agreementExplanation: state.resultData.input.agreementExplanation,
@@ -98,7 +98,7 @@ const Eligible = () => {
                     value: contratTravail.dateArretTravail,
                   },
                 ]
-              : []
+              : [],
           )}
           showHasTempsPartiel={salary.showHasTempsPartiel}
           absencesPeriods={seniority.absencePeriods}
@@ -147,7 +147,7 @@ const Eligible = () => {
         <PubliReferences
           references={
             result.isAgreementBetter
-              ? result.agreementReferences ?? []
+              ? (result.agreementReferences ?? [])
               : result.legalReferences
           }
         />

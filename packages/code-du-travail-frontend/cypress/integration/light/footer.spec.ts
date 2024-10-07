@@ -12,7 +12,7 @@ describe("Footer", () => {
     cy.get("#search-service").type("{enter}");
 
     cy.get(
-      'a[href="https://idf.drieets.gouv.fr/Adresse-et-horaires-d-ouverture-de-l-unite-departementale-75"]'
+      'a[href="https://idf.drieets.gouv.fr/Adresse-et-horaires-d-ouverture-de-l-unite-departementale-75"]',
     ).should("have.attr", "target", "_blank");
 
     cy.get('button[title="fermer la modale"]').click();

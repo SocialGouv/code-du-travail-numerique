@@ -1,19 +1,21 @@
 import { useContext } from "react";
-import {
-  IndemniteDepartContext,
-  useIndemniteDepartStore,
-} from "../../store";
+import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
 
 export default function Agreement44Informations() {
   const store = useContext(IndemniteDepartContext);
-  const { hasVariablePay, knowingLastSalary, lastMonthSalary, showKnowingLastSalary, showLastMonthSalary } =
-    useIndemniteDepartStore(store, (state) => ({
-      hasVariablePay: state.agreement44Data.input.hasVariablePay,
-      lastMonthSalary: state.agreement44Data.input.lastMonthSalary,
-      knowingLastSalary: state.agreement44Data.input.knowingLastSalary,
-      showKnowingLastSalary: state.agreement44Data.input.showKnowingLastSalary,
-      showLastMonthSalary: state.agreement44Data.input.showLastMonthSalary,
-    }));
+  const {
+    hasVariablePay,
+    knowingLastSalary,
+    lastMonthSalary,
+    showKnowingLastSalary,
+    showLastMonthSalary,
+  } = useIndemniteDepartStore(store, (state) => ({
+    hasVariablePay: state.agreement44Data.input.hasVariablePay,
+    lastMonthSalary: state.agreement44Data.input.lastMonthSalary,
+    knowingLastSalary: state.agreement44Data.input.knowingLastSalary,
+    showKnowingLastSalary: state.agreement44Data.input.showKnowingLastSalary,
+    showLastMonthSalary: state.agreement44Data.input.showLastMonthSalary,
+  }));
 
   return (
     <>

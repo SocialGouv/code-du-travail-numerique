@@ -10,7 +10,7 @@ import { informationToSituation } from "../../../../../Components/Informations/u
 
 export const getAbsencePeriodsErrors = (
   state: AncienneteStoreInput,
-  information?: CommonInformationsStoreInput
+  information?: CommonInformationsStoreInput,
 ): Partial<AncienneteStoreError> => {
   const dEntree = parse(state.dateEntree);
   const dSortie = parse(state.dateSortie);
@@ -20,7 +20,7 @@ export const getAbsencePeriodsErrors = (
   if (!information) return errors;
 
   const informationData = informationToSituation(
-    information.publicodesInformations
+    information.publicodesInformations,
   );
 
   // Check all absences
@@ -72,7 +72,7 @@ export const getAbsencePeriodsErrors = (
     } else if (
       absenceErrors.filter(
         (item) =>
-          item.errorDuration !== undefined || item.errorDate !== undefined
+          item.errorDuration !== undefined || item.errorDate !== undefined,
       ).length > 0
     ) {
       errors.errorAbsencePeriods = {

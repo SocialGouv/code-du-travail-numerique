@@ -14,7 +14,7 @@ describe("Rupture conventionnelle - légale", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
     userAction = new UserAction();
     userAction
@@ -52,17 +52,19 @@ describe("Rupture conventionnelle - légale", () => {
     expect(ui.result.resultat.get()).toHaveTextContent("83,33 €");
     expect(ui.result.resultatLegal.get()).toHaveTextContent("83,33");
     expect(ui.result.resultatAgreement.get()).toHaveTextContent(
-      "Convention collective non renseignée"
+      "Convention collective non renseignée",
     );
     expect(ui.result.data.get()).not.toHaveTextContent(
-      "Licenciement dû à une faute grave"
+      "Licenciement dû à une faute grave",
     );
     expect(byText(/Type de contrat/).query()).toBeInTheDocument();
     expect(
-      byText(/Date de notification du licenciement/).query()
+      byText(/Date de notification du licenciement/).query(),
     ).not.toBeInTheDocument();
     expect(
-      byText(/Rupture conventionnelle dûe à une inaptitude d’origine professionnelle/).query()
+      byText(
+        /Rupture conventionnelle dûe à une inaptitude d’origine professionnelle/,
+      ).query(),
     ).not.toBeInTheDocument();
   });
 });

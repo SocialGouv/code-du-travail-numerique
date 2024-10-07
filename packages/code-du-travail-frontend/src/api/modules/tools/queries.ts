@@ -3,10 +3,7 @@ export const getAllToolsQuery = () => {
     _source: ["slug", "title", "displayTool"],
     query: {
       bool: {
-        must: [
-          { term: { isPublished: true } },
-          { term: { source: "outils" } },
-        ],
+        must: [{ term: { isPublished: true } }, { term: { source: "outils" } }],
       },
     },
     size: 50,
@@ -21,7 +18,7 @@ export const getAllToolsQuery = () => {
 export const getTools = (
   ids?: string[],
   slugs?: string[],
-  cdtnIds?: string[]
+  cdtnIds?: string[],
 ) => {
   const filter: any[] = [
     {

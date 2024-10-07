@@ -4,7 +4,7 @@ import { AncienneteStoreError, AncienneteStoreInput } from "../types";
 import frLocale from "date-fns/locale/fr";
 
 export const getDateSortieErrors = (
-  state: AncienneteStoreInput
+  state: AncienneteStoreInput,
 ): Partial<AncienneteStoreError> => {
   const dEntree = parse(state.dateEntree);
   const dSortie = parse(state.dateSortie);
@@ -24,7 +24,7 @@ export const getDateSortieErrors = (
       "dd MMMM yyyy",
       {
         locale: frLocale,
-      }
+      },
     )}</strong>`;
   } else {
     errors.errorDateSortie = undefined;

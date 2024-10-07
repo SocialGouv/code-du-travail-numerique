@@ -57,17 +57,17 @@ const createAncienneteStore: StoreSlice<
             state.ancienneteData.input.absencePeriods = cleanAbsence(
               get().ancienneteData.input.absencePeriods,
               get(),
-              idcc ?? undefined
+              idcc ?? undefined,
             );
             state.ancienneteData.input.motifs = motifs;
-          }
-        )
+          },
+        ),
       );
       applyGenericValidation(
         get,
         set,
         "dateEntree",
-        get().ancienneteData.input.dateEntree
+        get().ancienneteData.input.dateEntree,
       );
     },
     onChangeDateEntree: (value) => {
@@ -89,7 +89,7 @@ const createAncienneteStore: StoreSlice<
           produce((state: AncienneteStoreSlice) => {
             state.ancienneteData.input.absencePeriods =
               initialState.input.absencePeriods;
-          })
+          }),
         );
       } else {
         const selectedAgreementIdcc = get().agreementData.input.agreement?.num;
@@ -105,7 +105,7 @@ const createAncienneteStore: StoreSlice<
             state.ancienneteData.input.absencePeriods =
               get().ancienneteData.input.absencePeriods;
             state.ancienneteData.input.motifs = motifs;
-          })
+          }),
         );
       }
       applyGenericValidation(get, set, "hasAbsenceProlonge", value);
@@ -114,7 +114,7 @@ const createAncienneteStore: StoreSlice<
       const { isValid, errorState } = validateStep(
         get().ancienneteData.input,
         get().contratTravailData.input,
-        get().informationsData.input
+        get().informationsData.input,
       );
       let errorEligibility;
 
@@ -122,7 +122,7 @@ const createAncienneteStore: StoreSlice<
         try {
           const publicodes = get().agreementData.publicodes;
           const infos = informationToSituation(
-            get().informationsData.input.publicodesInformations
+            get().informationsData.input.publicodesInformations,
           );
           const { licenciementInaptitude, arretTravail } =
             get().contratTravailData.input;
@@ -164,13 +164,13 @@ const createAncienneteStore: StoreSlice<
           state.ancienneteData.isStepValid = isValid;
           state.ancienneteData.error = errorState;
           state.ancienneteData.error.errorEligibility = errorEligibility;
-        })
+        }),
       );
       return errorEligibility
         ? ValidationResponse.NotEligible
         : isValid
-        ? ValidationResponse.Valid
-        : ValidationResponse.NotValid;
+          ? ValidationResponse.Valid
+          : ValidationResponse.NotValid;
     },
   },
 });
@@ -189,7 +189,7 @@ const applyGenericValidation = (
       ContratTravailStoreSlice
   >["setState"],
   paramName: keyof AncienneteStoreInput,
-  value: any
+  value: any,
 ) => {
   if (get().ancienneteData.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
@@ -199,20 +199,20 @@ const applyGenericValidation = (
     const { isValid, errorState } = validateStep(
       nextState.ancienneteData.input,
       nextState.contratTravailData.input,
-      get().informationsData.input
+      get().informationsData.input,
     );
     set(
       produce((state: AncienneteStoreSlice) => {
         state.ancienneteData.error = errorState;
         state.ancienneteData.isStepValid = isValid;
         state.ancienneteData.input[paramName as string] = value;
-      })
+      }),
     );
   } else {
     set(
       produce((state: AncienneteStoreSlice) => {
         state.ancienneteData.input[paramName as string] = value;
-      })
+      }),
     );
   }
 };
@@ -220,21 +220,21 @@ const applyGenericValidation = (
 const cleanAbsence = (
   absencePeriods: Absence[],
   data: CommonInformationsStoreSlice,
-  idcc: SupportedCc | undefined = undefined
+  idcc: SupportedCc | undefined = undefined,
 ): Absence[] => {
   if (idcc) {
     // clean absence
     const motifs = new SeniorityFactory().create(idcc).getMotifs();
     absencePeriods = absencePeriods.filter((absence) =>
-      motifs.some((motif) => motif.key === absence.motif.key)
+      motifs.some((motif) => motif.key === absence.motif.key),
     );
   }
   return absencePeriods.map((absence) => {
     const dateRequired = absence.motif.startAt
       ? absence.motif.startAt(
           informationToSituation(
-            data.informationsData.input.publicodesInformations
-          )
+            data.informationsData.input.publicodesInformations,
+          ),
         )
       : false;
     return {

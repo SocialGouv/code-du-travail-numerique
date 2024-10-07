@@ -20,7 +20,7 @@ import { EnterpriseButton } from "./EntrepriseSearchInput/EnterpriseButton";
 type Props = {
   handleEnterpriseSelection: (
     enterprise: Enterprise,
-    params?: SearchParams
+    params?: SearchParams,
   ) => void;
   state: FetchReducerState<Enterprise[]>;
   params: SearchParams;

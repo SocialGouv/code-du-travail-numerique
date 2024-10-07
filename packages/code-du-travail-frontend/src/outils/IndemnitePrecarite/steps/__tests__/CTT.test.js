@@ -13,7 +13,7 @@ function renderForm() {
           <button data-testid="nextBt">suivant</button>
         </form>
       )}
-    </Form>
+    </Form>,
   );
 }
 
@@ -39,6 +39,6 @@ describe("<StepCTT />", () => {
       const validateButton = getByTestId("nextBt");
       validateButton.click();
       expect(getByText(/pas le droit à une prime/i)).toBeTruthy();
-    }
+    },
   );
 });

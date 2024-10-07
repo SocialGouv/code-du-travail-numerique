@@ -31,7 +31,7 @@ function getTitle(agreements: ElasticAgreement[], contrib) {
 }
 
 export const getAllContributionsGroupByQuestion = async (
-  agreements: ElasticAgreement[]
+  agreements: ElasticAgreement[],
 ) => {
   const response = await fetchAllContributions();
   const all = response.hits.hits.map(({ _source }) => _source);
@@ -56,7 +56,7 @@ export const getAllContributionsGroupByQuestion = async (
 };
 
 export const getByIdsContributions = async (
-  ids: string[]
+  ids: string[],
 ): Promise<ElasticSearchItem[]> => {
   const body = getContributionsByIds(ids);
   const response = await elasticsearchClient.search<any>({

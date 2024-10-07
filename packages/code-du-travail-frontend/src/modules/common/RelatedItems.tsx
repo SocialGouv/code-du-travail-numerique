@@ -35,7 +35,7 @@ export const RelatedItems = ({
                       onClick={() =>
                         emitSelectRelated(
                           // legacy : we do not include the leading '/' in the selection
-                          source != SOURCES.EXTERNALS ? url!.slice(1) : url
+                          source != SOURCES.EXTERNALS ? url!.slice(1) : url,
                         )
                       }
                     >
@@ -45,7 +45,7 @@ export const RelatedItems = ({
                 })}
               />
             </div>
-          )
+          ),
       )}
     </div>
   );

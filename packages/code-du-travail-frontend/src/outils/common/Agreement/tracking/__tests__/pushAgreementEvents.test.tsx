@@ -223,7 +223,7 @@ describe("Push agreement events on click next", () => {
           selected: agreement9999,
         },
         false,
-        false
+        false,
       );
       expect(matopush).toHaveBeenCalledTimes(4);
       expect(matopush).toHaveBeenNthCalledWith(1, [

@@ -11,7 +11,7 @@ describe("<SearchInput />", () => {
         placeholder="my-placeholder"
         type="search"
         onSearchSubmit={() => {}}
-      />
+      />,
     );
     expect(container).toMatchSnapshot();
   });

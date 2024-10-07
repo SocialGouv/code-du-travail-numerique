@@ -50,7 +50,7 @@ function ServiceRenseignement() {
         setDepartementData(undefined);
       }
     },
-    [setDepartementData]
+    [setDepartementData],
   );
   const trackTelClick = useCallback(() => {
     matopush(["trackEvent", "contact", "click_phone_number"]);

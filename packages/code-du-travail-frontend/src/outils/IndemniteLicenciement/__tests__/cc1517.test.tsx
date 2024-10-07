@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
     "slug":"1517-commerces-de-detail-non-alimentaires-antiquites-brocante-galeries-dart",
     "title":"Commerces de détail non alimentaires : antiquités, brocante, galeries d'art (œuvres d'art), arts de la table, coutellerie, droguerie, équipement du foyer, bazars, commerces ménagers, modélisme, jeux, jouets, puérinatalité, maroquinerie, presse et jeux de hasard ou pronostics, produits de la vape"
   }
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 1517", () => {
@@ -26,7 +26,7 @@ describe("Indemnité licenciement - CC 1517", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
 
     userAction = new UserAction();

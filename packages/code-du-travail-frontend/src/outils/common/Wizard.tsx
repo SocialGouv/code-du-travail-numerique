@@ -37,7 +37,7 @@ export const Wizard = ({
 }: Props): JSX.Element => {
   const [state, dispatch] = useReducer<Reducer<State, Action>>(
     stepReducer,
-    initialState
+    initialState,
   );
   const { stepIndex, steps } = state;
   const setStepIndex = (index) =>

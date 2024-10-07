@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
   "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
   "slug": "16-transports-routiers-et-activites-auxiliaires-du-transport"
 }
-`
+`,
 );
 
 describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienneté", () => {
@@ -28,7 +28,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
           icon={""}
           title={""}
           displayTitle={""}
-        />
+        />,
       );
       userAction = new UserAction();
       userAction
@@ -41,12 +41,12 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
         .click(ui.next.get())
         .changeInputList(
           ui.information.agreement16.proCategory.get(),
-          "Ingénieurs et cadres"
+          "Ingénieurs et cadres",
         )
         .click(ui.information.agreement16.proCategoryHasChanged.oui.get())
         .setInput(
           ui.information.agreement16.dateProCategoryChanged.get(),
-          "01/01/2010"
+          "01/01/2010",
         )
         .setInput(ui.information.agreement16.engineerAge.get(), "38")
         .click(ui.next.get());
@@ -73,19 +73,19 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       // validation des erreurs sur les champs vides
       userAction.click(ui.next.get());
       expect(
-        rendering.queryAllByText("Veuillez saisir cette date")
+        rendering.queryAllByText("Veuillez saisir cette date"),
       ).toHaveLength(3);
 
       userAction.setInput(ui.seniority.startDate.get(), "01/01/0020");
 
       expect(
-        rendering.queryByText("La date de début de contrat est invalide")
+        rendering.queryByText("La date de début de contrat est invalide"),
       ).toBeInTheDocument();
 
       userAction.setInput(ui.seniority.startDate.get(), "01/01/272024");
 
       expect(
-        rendering.queryByText("La date de début de contrat est invalide")
+        rendering.queryByText("La date de début de contrat est invalide"),
       ).toBeInTheDocument();
 
       // validation de l'erreur quand cela fait plus de 18 mois que l'on a quitté l'entreprise
@@ -95,8 +95,8 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
 
       expect(
         rendering.queryByText(
-          "La date de notification doit se situer dans les 18 derniers mois"
-        )
+          "La date de notification doit se situer dans les 18 derniers mois",
+        ),
       ).toBeInTheDocument();
 
       // validation de l'erreur quand on a saisi une date de notification avant la date de d'entrée
@@ -106,8 +106,8 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
 
       expect(
         rendering.queryByText(
-          "La date de notification doit se situer après la date de début de contrat"
-        )
+          "La date de notification doit se situer après la date de début de contrat",
+        ),
       ).toBeInTheDocument();
 
       // validation de l'erreur quand on a saisi une date de sortie avant la date de notification
@@ -117,8 +117,8 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
 
       expect(
         rendering.queryByText(
-          "La date de notification doit se situer avant la date de fin de contrat"
-        )
+          "La date de notification doit se situer avant la date de fin de contrat",
+        ),
       ).toBeInTheDocument();
 
       userAction
@@ -128,51 +128,51 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
 
       // validation de l'erreur quand on a pas répondu à présence de périodes d'absence
       expect(
-        rendering.queryByText("Vous devez répondre à cette question")
+        rendering.queryByText("Vous devez répondre à cette question"),
       ).toBeInTheDocument();
 
       // validation de l'erreur quand on a des périodes d'absence mais que l'on a pas saisi le motif de l'absence
       userAction.click(ui.seniority.hasAbsence.oui.get());
 
       expect(
-        rendering.queryByText("Vous devez renseigner tous les champs")
+        rendering.queryByText("Vous devez renseigner tous les champs"),
       ).toBeInTheDocument();
       expect(
-        rendering.queryByText("Date de début de l'absence")
+        rendering.queryByText("Date de début de l'absence"),
       ).toBeInTheDocument();
 
       // validation de l'erreur quand on a des périodes d'absence mais que l'on a pas saisi la durée et la date de l'absence
       userAction.changeInputList(
         ui.seniority.absences.motif(0).get(),
-        "Congés sans solde"
+        "Congés sans solde",
       );
 
       expect(
-        rendering.queryByText("Veuillez saisir la durée de l'absence")
+        rendering.queryByText("Veuillez saisir la durée de l'absence"),
       ).toBeInTheDocument();
       expect(
-        rendering.queryByText("Veuillez saisir la date de l'absence")
+        rendering.queryByText("Veuillez saisir la date de l'absence"),
       ).toBeInTheDocument();
 
       userAction.setInput(ui.seniority.absences.duration(0).get(), "6");
       expect(
-        rendering.queryByText("Veuillez saisir la durée de l'absence")
+        rendering.queryByText("Veuillez saisir la durée de l'absence"),
       ).not.toBeInTheDocument();
 
       // validation de l'erreur quand on a une date d'absence en dehors de la période de présence dans l'entreprise
       userAction.setInput(ui.seniority.absences.date(0).get(), "01/03/1999");
       expect(
         rendering.queryByText(
-          "La date de l'absence doit être comprise entre le 01/01/2022 et le 01/10/2022 (dates de début et de fin de contrat)"
-        )
+          "La date de l'absence doit être comprise entre le 01/01/2022 et le 01/10/2022 (dates de début et de fin de contrat)",
+        ),
       ).toBeInTheDocument();
 
       // validation de l'erreur quand on a une absence qui réduit la période de présence de l'entreprise à moins de 8 mois
       userAction.setInput(ui.seniority.absences.date(0).get(), "01/02/2022");
       expect(
         rendering.queryByText(
-          "La date de l'absence doit être comprise entre le 01/01/2022 et le 01/10/2022 (dates de début et de fin de contrat)"
-        )
+          "La date de l'absence doit être comprise entre le 01/01/2022 et le 01/10/2022 (dates de début et de fin de contrat)",
+        ),
       ).not.toBeInTheDocument();
 
       // validation de la disparition des erreurs quand on a tout renseigné
@@ -190,7 +190,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
           icon={""}
           title={""}
           displayTitle={""}
-        />
+        />,
       );
       userAction = new UserAction();
       userAction
@@ -222,8 +222,8 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
         .click(ui.next.get());
       expect(
         rendering.queryByText(
-          /L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois./
-        )
+          /L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois./,
+        ),
       ).toBeInTheDocument();
     });
   });

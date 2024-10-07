@@ -140,7 +140,7 @@ class WebComponentsTooltipCC extends LitElement {
       new CustomEvent("tooltip-cc-event", {
         bubbles: true,
         composed: true,
-      })
+      }),
     );
   }
 }

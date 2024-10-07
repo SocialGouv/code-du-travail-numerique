@@ -28,8 +28,8 @@ describe("<AbsencePeriod />", () => {
           onDeleteAbsence={() => {}}
           informationData={{}}
           absence={absence}
-        />
-      )
+        />,
+      ),
     ).toBeTruthy();
   });
 
@@ -45,7 +45,7 @@ describe("<AbsencePeriod />", () => {
         onDeleteAbsence={() => {}}
         informationData={{}}
         absence={absence}
-      />
+      />,
     );
     expect(getAllByRole("option").length).toBe(sampleMotifs.length);
     // Motif 1 doit être sélectionné par défaut
@@ -73,10 +73,10 @@ describe("<AbsencePeriod />", () => {
         onDeleteAbsence={() => {}}
         informationData={{}}
         absence={absence}
-      />
+      />,
     );
     expect(
-      queryByRole("button", { name: /supprimer/i })
+      queryByRole("button", { name: /supprimer/i }),
     ).not.toBeInTheDocument();
   });
 
@@ -92,7 +92,7 @@ describe("<AbsencePeriod />", () => {
         onDeleteAbsence={() => {}}
         informationData={{}}
         absence={absence}
-      />
+      />,
     );
     expect(getByRole("button", { name: /supprimer/i })).toBeInTheDocument();
   });
@@ -112,12 +112,12 @@ describe("<AbsencePeriod />", () => {
           ...absence,
           motif: motif1,
         }}
-      />
+      />,
     );
 
     userEvent.selectOptions(
       getByRole("combobox"),
-      getByRole("option", { name: "Motif 2" })
+      getByRole("option", { name: "Motif 2" }),
     );
     expect(getByTestId("absence-date-0")).toBeInTheDocument();
   });
@@ -139,14 +139,14 @@ describe("<AbsencePeriod />", () => {
           startedAt: "01/01/2021",
         }}
         informationData={{}}
-      />
+      />,
     );
     expect(
       (
         getByRole("option", {
           name: "Motif 2",
         }) as HTMLOptionElement
-      ).selected
+      ).selected,
     ).toBe(true);
     expect(getByTestId("absence-date-0")).toBeInTheDocument();
   });
@@ -167,11 +167,11 @@ describe("<AbsencePeriod />", () => {
         onDeleteAbsence={onDeleteAbsence}
         informationData={{}}
         absence={absence}
-      />
+      />,
     );
     userEvent.selectOptions(
       getByRole("combobox"),
-      getByRole("option", { name: "Motif 2" })
+      getByRole("option", { name: "Motif 2" }),
     );
     expect(onSelectModifMock.mock.calls.length).toBe(1);
     userEvent.type(getByRole("spinbutton", { name: `0.duration` }), "5");

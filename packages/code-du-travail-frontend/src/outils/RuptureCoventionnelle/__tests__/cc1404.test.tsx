@@ -17,7 +17,7 @@ Storage.prototype.getItem = jest.fn(
     "contributions": true
   }
   
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 1404", () => {
@@ -28,7 +28,7 @@ describe("Indemnité licenciement - CC 1404", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());

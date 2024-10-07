@@ -85,13 +85,13 @@ export function StepInformations({
     const pastQuestions = getPastQuestions(
       initialSituations,
       criteriaOrder,
-      criteria
+      criteria,
     );
     const possibleSituations = filterSituations(initialSituations, criteria);
     const nextQuestionKey = getNextQuestionKey(
       possibleSituations,
       criteriaOrder,
-      criteria
+      criteria,
     );
     const nextQuestionOptions = getOptions(possibleSituations, nextQuestionKey);
     return [...pastQuestions, [nextQuestionKey, nextQuestionOptions]];

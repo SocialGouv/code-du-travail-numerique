@@ -15,7 +15,7 @@ test(`Questionnaire:
       name="dismissalProcess"
       title="Quelle est votre situation ?"
       slug="procedure-licenciement"
-    />
+    />,
   );
   // Vérifier l'affichage initial
   expect(ui.situationTitle.query()).toBeInTheDocument();

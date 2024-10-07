@@ -13,10 +13,10 @@ describe("<NoticeNote />", () => {
     "should render a list for each number of elements $numberOfElements",
     ({ numberOfElements, expected }) => {
       const { getByText } = render(
-        <NoticeNote isList numberOfElements={numberOfElements} />
+        <NoticeNote isList numberOfElements={numberOfElements} />,
       );
       expect(getByText(expected)).toBeInTheDocument();
-    }
+    },
   );
 
   it.each`
@@ -31,10 +31,10 @@ describe("<NoticeNote />", () => {
         <NoticeNote
           currentElement={currentElement}
           numberOfElements={numberOfElements}
-        />
+        />,
       );
       expect(getByText(expected)).toBeInTheDocument();
-    }
+    },
   );
 
   it.each`
@@ -48,9 +48,9 @@ describe("<NoticeNote />", () => {
         <NoticeNote
           currentElement={currentElement}
           numberOfElements={numberOfElements}
-        />
+        />,
       );
       expect(() => getByText(expected)).toThrow("Unable to find an element");
-    }
+    },
   );
 });

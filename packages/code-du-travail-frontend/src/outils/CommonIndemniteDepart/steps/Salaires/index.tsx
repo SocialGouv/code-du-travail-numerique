@@ -114,7 +114,7 @@ const StepSalaires = ({ type }: Props) => {
             label={generateSameSalaryQuestion(
               type,
               arretTravail,
-              salaryPeriods
+              salaryPeriods,
             )}
             selectedOption={hasSameSalary}
             onChangeSelectedOption={onChangeHasSameSalary}
@@ -143,7 +143,7 @@ const StepSalaires = ({ type }: Props) => {
               title={generateSalaireTempsPleinQuestion(
                 type,
                 arretTravail,
-                salaryPeriods
+                salaryPeriods,
               )}
               subTitle={getSalairesTempsPleinSubtitle(agreement?.num)}
               tooltip={getTooltipSalairesMensuel(agreement?.num)}

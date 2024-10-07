@@ -16,9 +16,8 @@ Storage.prototype.getItem = jest.fn(
   "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT",
   "slug": "cc-1351"
 }
-`
+`,
 );
-
 
 test(`
   - Vérifier qu'on ne peut pas passer à l'étape suivante sans avoir sélectionné toutes les informations de la CC
@@ -45,7 +44,7 @@ test(`
   });
   fireEvent.click(ui.next.get());
   expect(
-    screen.queryByText(/vous devez répondre à cette question/i)
+    screen.queryByText(/vous devez répondre à cette question/i),
   ).toBeInTheDocument();
 
   fireEvent.change(ui.agreement1351.levelInput.get(), {
@@ -59,7 +58,7 @@ test(`
     },
   });
   expect(
-    screen.queryByText(/vous devez répondre à cette question/i)
+    screen.queryByText(/vous devez répondre à cette question/i),
   ).not.toBeInTheDocument();
   fireEvent.click(ui.next.get());
   expect(ui.print.get()).toBeInTheDocument();

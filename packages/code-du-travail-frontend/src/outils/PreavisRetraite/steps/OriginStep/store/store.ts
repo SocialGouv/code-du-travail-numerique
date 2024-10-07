@@ -38,7 +38,7 @@ const createOriginDepartStore: StoreSliceWrapperPreavisRetraite<
           state.originDepartData.hasBeenSubmit = !isValid;
           state.originDepartData.isStepValid = isValid;
           state.originDepartData.error = errorState;
-        })
+        }),
       );
 
       matopush([
@@ -58,27 +58,27 @@ const applyGenericValidation = (
   get: StoreApi<OriginDepartStoreSlice>["getState"],
   set: StoreApi<OriginDepartStoreSlice>["setState"],
   paramName: keyof OriginDepartStoreInput,
-  value: any
+  value: any,
 ) => {
   if (get().originDepartData.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
       draft.originDepartData.input[paramName] = value;
     });
     const { isValid, errorState } = validateStep(
-      nextState.originDepartData.input
+      nextState.originDepartData.input,
     );
     set(
       produce((state: OriginDepartStoreSlice) => {
         state.originDepartData.error = errorState;
         state.originDepartData.isStepValid = isValid;
         state.originDepartData.input[paramName] = value;
-      })
+      }),
     );
   } else {
     set(
       produce((state: OriginDepartStoreSlice) => {
         state.originDepartData.input[paramName] = value;
-      })
+      }),
     );
   }
 };

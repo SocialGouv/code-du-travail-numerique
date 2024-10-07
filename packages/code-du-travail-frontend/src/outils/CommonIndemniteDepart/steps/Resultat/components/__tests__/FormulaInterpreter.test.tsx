@@ -10,7 +10,7 @@ describe("<FormulaInterpreter />", () => {
           explanations: ["Ancienneté : 10 ans"],
           formula: "10 * 12",
         }}
-      />
+      />,
     );
     expect(queryByText(/Ancienneté : 10 ans/i)).toBeInTheDocument();
   });

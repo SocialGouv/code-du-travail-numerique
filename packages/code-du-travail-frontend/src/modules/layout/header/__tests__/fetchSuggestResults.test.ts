@@ -23,7 +23,7 @@ describe("suggest service", () => {
     jest.runAllTimers();
     expect(fetch).toHaveBeenCalledTimes(1);
     expect((fetch as any).mock.calls[0][0]).toMatch(
-      "api.url/api/suggest?q=foo"
+      "api.url/api/suggest?q=foo",
     );
     expect(results).toStrictEqual(results);
   });

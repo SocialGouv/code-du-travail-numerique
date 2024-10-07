@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
   "slug": "1702-travaux-publics-tome-ii-ouvriers",
   "title": "Travaux publics (Tome II : Ouvriers)"
 }
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 1702", () => {
@@ -27,7 +27,7 @@ describe("Indemnité licenciement - CC 1702", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
     userAction = new UserAction();
 
@@ -57,34 +57,34 @@ describe("Indemnité licenciement - CC 1702", () => {
     userAction.click(ui.salary.hasSameSalary.non.get());
     expect(
       rendering.queryByText(
-        "Indiquez le montant des salaires (en incluant l’indemnité de congés payés, les primes, dont la prime de vacances, et les avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)"
-      )
+        "Indiquez le montant des salaires (en incluant l’indemnité de congés payés, les primes, dont la prime de vacances, et les avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)",
+      ),
     ).toBeInTheDocument();
     userAction.click(ui.salary.hasSameSalary.oui.get());
     userAction.setInput(ui.salary.sameSalaryValue.get(), "2500");
 
     expect(
       rendering.queryByText(
-        "Connaissez-vous le montant du salaire perçu pendant le préavis ?"
-      )
+        "Connaissez-vous le montant du salaire perçu pendant le préavis ?",
+      ),
     ).not.toBeInTheDocument();
     userAction.click(ui.previous.get());
     userAction.setInput(ui.seniority.endDate.get(), "01/06/2022");
     userAction.click(ui.next.get());
     expect(
       rendering.queryByText(
-        "Connaissez-vous le montant des salaires perçus pendant le préavis ?"
-      )
+        "Connaissez-vous le montant des salaires perçus pendant le préavis ?",
+      ),
     ).toBeInTheDocument();
     userAction.click(
-      ui.salary.agreementWithNoticeSalary.knowingLastSalary.oui.get()
+      ui.salary.agreementWithNoticeSalary.knowingLastSalary.oui.get(),
     );
     expect(
-      rendering.queryByText("Salaires perçus pendant le préavis")
+      rendering.queryByText("Salaires perçus pendant le préavis"),
     ).toBeInTheDocument();
     userAction.setInput(
       ui.salary.agreementWithNoticeSalary.salaries.getAll()[0],
-      "3000"
+      "3000",
     );
 
     userAction.click(ui.next.get());
@@ -93,11 +93,11 @@ describe("Indemnité licenciement - CC 1702", () => {
     expect(ui.result.resultat.get()).toHaveTextContent("2 760,42 €");
     expect(ui.result.resultTableRows.getAll().length).toBe(5);
     expect(ui.result.resultTableRows.getAll()[0]).toHaveTextContent(
-      "mai 20223000 €"
+      "mai 20223000 €",
     );
     userAction.click(ui.previous.get());
     expect(
-      ui.salary.agreementWithNoticeSalary.salaries.getAll()[0]
+      ui.salary.agreementWithNoticeSalary.salaries.getAll()[0],
     ).toHaveValue(3000);
     userAction
       .click(ui.salary.agreementWithNoticeSalary.knowingLastSalary.non.get())
@@ -107,13 +107,13 @@ describe("Indemnité licenciement - CC 1702", () => {
     expect(ui.result.resultTableRows.queryAll().length).toBe(0);
     expect(
       rendering.queryByText(
-        "Le montant de l’indemnité doit être calculé sur la base des salaires (reconstitués) que la salarié aurait dû percevoir au cours des 3 derniers mois précédant la rupture du contrat s’il n’avait pas été en arrêt de travail. Pour simplifier l'utilisation de ce simulateur, la calcul se base ici sur les salaires perçus avant l'arrêt travail et non sur les salaires reconstitués. Le montant de l'indemnité pourrait donc être plus important que celui donné par le simulateur."
-      )
+        "Le montant de l’indemnité doit être calculé sur la base des salaires (reconstitués) que la salarié aurait dû percevoir au cours des 3 derniers mois précédant la rupture du contrat s’il n’avait pas été en arrêt de travail. Pour simplifier l'utilisation de ce simulateur, la calcul se base ici sur les salaires perçus avant l'arrêt travail et non sur les salaires reconstitués. Le montant de l'indemnité pourrait donc être plus important que celui donné par le simulateur.",
+      ),
     ).not.toBeInTheDocument();
     expect(
       rendering.queryByText(
-        /Ce résultat ne prend pas en compte le complément forfaitaire dont bénéficie le salarié en plus du montant de l'indemnité de licenciement/
-      )
+        /Ce résultat ne prend pas en compte le complément forfaitaire dont bénéficie le salarié en plus du montant de l'indemnité de licenciement/,
+      ),
     ).not.toBeInTheDocument();
   });
 
@@ -143,8 +143,8 @@ describe("Indemnité licenciement - CC 1702", () => {
     userAction.setInput(ui.salary.sameSalaryValue.get(), "2500");
     expect(
       rendering.queryByText(
-        "Connaissez-vous le montant des salaires perçus pendant le préavis ?"
-      )
+        "Connaissez-vous le montant des salaires perçus pendant le préavis ?",
+      ),
     ).not.toBeInTheDocument();
     userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
@@ -168,34 +168,34 @@ describe("Indemnité licenciement - CC 1702", () => {
     userAction.click(ui.salary.hasSameSalary.non.get());
     expect(
       rendering.queryByText(
-        "Indiquez le montant des salaires (en incluant l’indemnité de congés payés, les primes, dont la prime de vacances, et les avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)"
-      )
+        "Indiquez le montant des salaires (en incluant l’indemnité de congés payés, les primes, dont la prime de vacances, et les avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)",
+      ),
     ).toBeInTheDocument();
     userAction.click(ui.salary.hasSameSalary.oui.get());
     userAction.setInput(ui.salary.sameSalaryValue.get(), "2500");
 
     expect(
       rendering.queryByText(
-        "Connaissez-vous le montant du salaire perçu pendant le préavis ?"
-      )
+        "Connaissez-vous le montant du salaire perçu pendant le préavis ?",
+      ),
     ).not.toBeInTheDocument();
     userAction.click(ui.previous.get());
     userAction.setInput(ui.seniority.endDate.get(), "01/06/2022");
     userAction.click(ui.next.get());
     expect(
       rendering.queryByText(
-        "Connaissez-vous le montant des salaires perçus pendant le préavis ?"
-      )
+        "Connaissez-vous le montant des salaires perçus pendant le préavis ?",
+      ),
     ).toBeInTheDocument();
     userAction.click(
-      ui.salary.agreementWithNoticeSalary.knowingLastSalary.oui.get()
+      ui.salary.agreementWithNoticeSalary.knowingLastSalary.oui.get(),
     );
     expect(
-      rendering.queryByText("Salaires perçus pendant le préavis")
+      rendering.queryByText("Salaires perçus pendant le préavis"),
     ).toBeInTheDocument();
     userAction.setInput(
       ui.salary.agreementWithNoticeSalary.salaries.getAll()[0],
-      "3000"
+      "3000",
     );
 
     userAction.click(ui.next.get());
@@ -204,8 +204,8 @@ describe("Indemnité licenciement - CC 1702", () => {
     expect(ui.result.resultat.get()).toHaveTextContent("2 760,42 €");
     expect(
       rendering.queryByText(
-        /Ce résultat ne prend pas en compte le complément forfaitaire dont bénéficie le salarié en plus du montant de l'indemnité de licenciement/
-      )
+        /Ce résultat ne prend pas en compte le complément forfaitaire dont bénéficie le salarié en plus du montant de l'indemnité de licenciement/,
+      ),
     ).toBeInTheDocument();
   });
 });

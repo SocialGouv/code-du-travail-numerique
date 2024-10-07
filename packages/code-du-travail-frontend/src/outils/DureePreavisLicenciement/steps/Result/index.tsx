@@ -56,8 +56,8 @@ const StepResult = ({ form }: WizardStepProps): JSX.Element => {
             seriousMisconduct,
             situations.legal,
             situations.agreement,
-            ccn
-          )
+            ccn,
+          ),
         )}
         {situations.agreement && (
           <PubliReferences references={formatRefs(refs)} />

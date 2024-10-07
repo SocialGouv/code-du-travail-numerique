@@ -50,7 +50,7 @@ export const getStatsService = async () => {
   };
 
   const visitsPromises: Promise<VisitStat>[] = Array.from(
-    Array(numberLoop).keys()
+    Array(numberLoop).keys(),
   ).map((index) => {
     const url = generateUrlVisit(index);
     return fetch(url)
@@ -71,11 +71,11 @@ export const getStatsService = async () => {
         nbVisits: obj.nbVisits + (item?.value ?? 0),
       };
     },
-    { nbVisits: 0 }
+    { nbVisits: 0 },
   );
 
   const actionsPromises: Promise<ActionStat | undefined>[] = Array.from(
-    Array(numberLoop).keys()
+    Array(numberLoop).keys(),
   ).map((index) => {
     const url = generateUrlAction(index);
     return fetch(url)
@@ -97,7 +97,7 @@ export const getStatsService = async () => {
         nbSearches: obj.nbSearches + (item?.nb_searches ?? 0),
       };
     },
-    { nbPageViews: 0, nbSearches: 0 }
+    { nbPageViews: 0, nbSearches: 0 },
   );
 
   return {

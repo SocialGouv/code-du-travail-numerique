@@ -5,7 +5,7 @@ describe("Outil - Indemnité de Precarite", () => {
     cy.contains("Commencer").click();
 
     cy.contains(
-      "Je sais quelle est ma convention collective (je la saisis)"
+      "Je sais quelle est ma convention collective (je la saisis)",
     ).click();
     cy.get("#agreement-search").type("843");
     cy.contains("Boulangerie-pâtisserie (entreprises artisanales)").click();

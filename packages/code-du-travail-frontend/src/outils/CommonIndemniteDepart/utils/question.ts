@@ -5,7 +5,7 @@ import { IndemniteDepartType, Agreement } from "../../types";
 export const generateSameSalaryQuestion = (
   type: IndemniteDepartType,
   arretTravail: OuiNon | undefined,
-  salaryPeriods: SalaryPeriods[]
+  salaryPeriods: SalaryPeriods[],
 ): string => {
   return `Le salaire mensuel brut a-t-il été le même ${
     salaryPeriods.length === 1
@@ -15,15 +15,15 @@ export const generateSameSalaryQuestion = (
     arretTravail === "oui"
       ? `l'arrêt de travail`
       : type === IndemniteDepartType.LICENCIEMENT
-      ? "la notification du licenciement"
-      : "la fin du contrat"
+        ? "la notification du licenciement"
+        : "la fin du contrat"
   }&nbsp;?`;
 };
 
 export const generateSalaireTempsPleinQuestion = (
   type: IndemniteDepartType,
   arretTravail: OuiNon | undefined,
-  salaryPeriods: SalaryPeriods[]
+  salaryPeriods: SalaryPeriods[],
 ): string => {
   return `${
     salaryPeriods.length === 1
@@ -37,15 +37,15 @@ export const generateSalaireTempsPleinQuestion = (
     arretTravail === "oui"
       ? "l'arrêt de travail"
       : type === IndemniteDepartType.LICENCIEMENT
-      ? "la notification du licenciement"
-      : "la fin du contrat"
+        ? "la notification du licenciement"
+        : "la fin du contrat"
   }`;
 };
 
 export const generateResultSameSalary = (
   type: IndemniteDepartType,
   arretTravail: OuiNon | undefined,
-  salaryPeriods: SalaryPeriods[]
+  salaryPeriods: SalaryPeriods[],
 ): string => {
   return `Salaire mensuel brut identique${
     salaryPeriods.length === 1
@@ -55,15 +55,15 @@ export const generateResultSameSalary = (
     arretTravail === "oui"
       ? `l'arrêt de travail`
       : type === IndemniteDepartType.LICENCIEMENT
-      ? "la notification du licenciement"
-      : "la fin du contrat"
+        ? "la notification du licenciement"
+        : "la fin du contrat"
   }`;
 };
 
 export const generateResultSalaireTempsPlein = (
   type: IndemniteDepartType,
   arretTravail: OuiNon | undefined,
-  salaryPeriods: SalaryPeriods[]
+  salaryPeriods: SalaryPeriods[],
 ): string => {
   return `${
     salaryPeriods.length === 1
@@ -73,13 +73,13 @@ export const generateResultSalaireTempsPlein = (
     arretTravail === "oui"
       ? "l'arrêt de travail"
       : type === IndemniteDepartType.LICENCIEMENT
-      ? "la notification du licenciement"
-      : "la fin du contrat"
+        ? "la notification du licenciement"
+        : "la fin du contrat"
   }`;
 };
 
 export const generateSmallText = (
-  agreement?: Agreement
+  agreement?: Agreement,
 ): string | undefined => {
   return agreement && agreement.num === 3239
     ? undefined

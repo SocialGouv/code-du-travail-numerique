@@ -7,7 +7,7 @@ import { render } from "@testing-library/react";
 test(`Départ à la retraite sans sélection de CC
 `, async () => {
   await render(
-    <CalculateurPreavisRetraite icon={""} title={""} displayTitle={""} />
+    <CalculateurPreavisRetraite icon={""} title={""} displayTitle={""} />,
   );
   const userAction = new UserAction();
 
@@ -31,25 +31,25 @@ test(`Départ à la retraite sans sélection de CC
   expect(ui.result.resultat.get()).toHaveTextContent("2 mois");
   expect(ui.result.noticeDepartRetraite.get()).toBeInTheDocument();
   expect(ui.result.originDepart.get()).toHaveTextContent(
-    "Départ à la retraite"
+    "Départ à la retraite",
   );
   expect(ui.result.seniority.get()).toHaveTextContent("Plus de 2 ans");
   expect(ui.result.travailleurHandicape.get()).toHaveTextContent("Non");
   expect(ui.result.resultatLegal.get()).toHaveTextContent("2 mois");
   expect(ui.result.resultatAgreement.get()).toHaveTextContent(
-    "convention collective non renseignée"
+    "convention collective non renseignée",
   );
   expect(ui.result.decryptedDescription.get()).toHaveTextContent(
-    "La convention collective n’ayant pas été renseignée, la durée de préavis affichée correspond à la durée légale."
+    "La convention collective n’ayant pas été renseignée, la durée de préavis affichée correspond à la durée légale.",
   );
   const sources = ui.result.sources.queryAll();
   expect(sources).toHaveLength(2);
   expect(sources[0]).toHaveTextContent("Article L1237-10");
   expect(sources[1]).toHaveTextContent("Article L1234-1");
   expect(ui.result.noticeWarning.get()).toHaveTextContent(
-    "Attention il peut exister une durée plus favorable"
+    "Attention il peut exister une durée plus favorable",
   );
   expect(ui.result.noticeWarning.get()).toHaveTextContent(
-    "Une convention collective de branche, un accord collectif d’entreprise, le contrat de travail ou un usage peut prévoir une durée de préavis* ou une condition d’ancienneté* plus favorable pour le salarié. Dans ce cas, c’est cette durée ou cette ancienneté plus favorable qui s’applique au salarié."
+    "Une convention collective de branche, un accord collectif d’entreprise, le contrat de travail ou un usage peut prévoir une durée de préavis* ou une condition d’ancienneté* plus favorable pour le salarié. Dans ce cas, c’est cette durée ou cette ancienneté plus favorable qui s’applique au salarié.",
   );
 });

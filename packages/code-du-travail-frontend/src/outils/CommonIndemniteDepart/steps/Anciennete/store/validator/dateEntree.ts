@@ -7,7 +7,7 @@ const today = new Date();
 const END_IN_50_YEARS = today.setFullYear(today.getFullYear() + 50);
 
 export const getDateEntreeErrors = (
-  state: AncienneteStoreInput
+  state: AncienneteStoreInput,
 ): Partial<AncienneteStoreError> => {
   let errors: AncienneteStoreError = {};
 

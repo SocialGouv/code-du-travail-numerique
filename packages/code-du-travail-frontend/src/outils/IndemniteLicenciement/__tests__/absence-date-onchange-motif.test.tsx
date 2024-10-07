@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
   "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
   "slug": "16-transports-routiers-et-activites-auxiliaires-du-transport"
 }
-`
+`,
 );
 
 describe("Indemnité licenciement", () => {
@@ -24,7 +24,11 @@ describe("Indemnité licenciement", () => {
     let userAction: UserAction;
     beforeEach(() => {
       rendering = render(
-        <CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />
+        <CalculateurIndemniteLicenciement
+          icon={""}
+          title={""}
+          displayTitle={""}
+        />,
       );
       userAction = new UserAction();
       userAction
@@ -53,7 +57,7 @@ describe("Indemnité licenciement", () => {
         .click(ui.seniority.hasAbsence.oui.get())
         .changeInputList(
           ui.seniority.absences.motif(0).get(),
-          "Absence pour maladie non professionnelle"
+          "Absence pour maladie non professionnelle",
         );
 
       expect(ui.seniority.absences.date(0).query()).toBeInTheDocument();
@@ -71,7 +75,7 @@ describe("Indemnité licenciement", () => {
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
       expect(rendering.queryByText("Éléments saisis")).toBeInTheDocument();
       expect(
-        rendering.queryByText("Absence pour maladie non professionnelle")
+        rendering.queryByText("Absence pour maladie non professionnelle"),
       ).toBeInTheDocument();
       expect(rendering.queryByTestId("absence-date")).toBeInTheDocument();
       expect(rendering.queryByText("01/01/2015")).toBeInTheDocument();
@@ -82,16 +86,16 @@ describe("Indemnité licenciement", () => {
         .click(ui.previous.get())
         .changeInputList(
           ui.seniority.absences.motif(0).get(),
-          "Congés sans solde"
+          "Congés sans solde",
         );
 
       expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
       expect(
-        rendering.queryByText("Date de début de l'absence")
+        rendering.queryByText("Date de début de l'absence"),
       ).not.toBeInTheDocument();
       // On doit garder les anciennes informations saisies
       expect(ui.seniority.absences.motif(0).query()).toHaveValue(
-        "Congés sans solde"
+        "Congés sans solde",
       );
       expect(ui.seniority.absences.duration(0).query()).toHaveValue(6);
       expect(ui.seniority.absences.date(0).query()).not.toBeInTheDocument();

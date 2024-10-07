@@ -2,7 +2,7 @@ import pDebounce from "p-debounce";
 import { SITE_URL, SUGGEST_DEBOUNCE_DELAY } from "../../../config";
 
 const fetchSuggestResultsWithoutDebounce = async (
-  query
+  query,
 ): Promise<Array<string>> => {
   const url = `${SITE_URL}/api/suggest?q=${query}`;
   const response = await fetch(url);
@@ -15,5 +15,5 @@ const fetchSuggestResultsWithoutDebounce = async (
 
 export const fetchSuggestResults = pDebounce(
   fetchSuggestResultsWithoutDebounce,
-  SUGGEST_DEBOUNCE_DELAY
+  SUGGEST_DEBOUNCE_DELAY,
 );

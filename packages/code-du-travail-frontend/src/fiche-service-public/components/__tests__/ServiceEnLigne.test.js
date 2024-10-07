@@ -7,7 +7,7 @@ import serviceEnLigneDataMock from "./mocks/serviceEnLigneData.json";
 describe("<ServiceEnLigne />", () => {
   it("should render", () => {
     const { container } = render(
-      <ServiceEnLigne data={serviceEnLigneDataMock} />
+      <ServiceEnLigne data={serviceEnLigneDataMock} />,
     );
     expect(container).toMatchSnapshot();
 

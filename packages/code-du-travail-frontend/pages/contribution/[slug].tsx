@@ -49,7 +49,7 @@ function PageContribution(props: Props): React.ReactElement {
 export const getServerSideProps = async ({ query }) => {
   const data = await getBySourceAndSlugItems<ContributionElasticDocument>(
     "contributions",
-    query.slug
+    query.slug,
   );
   if (!data?._source) {
     return {

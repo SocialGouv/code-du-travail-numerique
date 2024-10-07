@@ -18,7 +18,7 @@ Storage.prototype.getItem = jest.fn(
     "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000017577652",
     "slug": "2511-sport"
   }
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 2511", () => {
@@ -29,7 +29,7 @@ describe("Indemnité licenciement - CC 2511", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
     userAction = new UserAction();
 
@@ -55,7 +55,7 @@ describe("Indemnité licenciement - CC 2511", () => {
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
     expect(ui.result.resultat.get()).toHaveTextContent("20 250,00 €");
     expect(ui.result.resultatAgreement.get()).toHaveTextContent(
-      "Non applicable dans votre situation"
+      "Non applicable dans votre situation",
     );
   });
 });

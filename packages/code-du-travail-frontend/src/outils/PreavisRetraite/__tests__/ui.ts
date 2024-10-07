@@ -8,38 +8,38 @@ export const ui = {
     originDepart: {
       question: byText("Qui est à l’origine du départ en retraite ?"),
       depart: byTestId(
-        "originDepart - Le salarié décide lui-même de partir à la retraite"
+        "originDepart - Le salarié décide lui-même de partir à la retraite",
       ),
       mise: byTestId(
-        "originDepart - L'employeur décide de mettre le salarié à la retraite"
+        "originDepart - L'employeur décide de mettre le salarié à la retraite",
       ),
     },
     alert: byTestId("warning-origin-depart"),
   },
   agreement: {
     noAgreement: byTestId(
-      "route - Je ne souhaite pas renseigner ma convention collective (je passe l'étape)"
+      "route - Je ne souhaite pas renseigner ma convention collective (je passe l'étape)",
     ),
     agreement: byTestId(
-      "route - Je sais quelle est ma convention collective (je la saisis)"
+      "route - Je sais quelle est ma convention collective (je la saisis)",
     ),
     unknownAgreement: byTestId(
-      "route - Je ne sais pas quelle est ma convention collective (je la recherche)"
+      "route - Je ne sais pas quelle est ma convention collective (je la recherche)",
     ),
     agreementInput: byTestId("agreement-search-input"),
     agreementInputConfirm: byText(
-      /Vous avez sélectionné la convention collective/
+      /Vous avez sélectionné la convention collective/,
     ),
     agreementCompanyInput: byTestId("agreement-company-search-input"),
     agreementCompanySearchButton: byTestId("agreement-company-search-button"),
     agreementCompanyInputAsk: byText(
-      "Précisez et sélectionnez votre entreprise"
+      "Précisez et sélectionnez votre entreprise",
     ),
     agreementCompanyInputConfirm: byText(/Vous avez sélectionné l'entreprise/),
     agreementPostalCodeInput: byTestId("agreement-postal-code-search-input"),
     searchItem: {
       agreement16: byText(
-        "Transports routiers et activités auxiliaires du transport"
+        "Transports routiers et activités auxiliaires du transport",
       ),
       agreement3239: byText("Particuliers employeurs et emploi à domicile"),
       carrefour: byText("CARREFOUR HYPERMARCHES"),
@@ -47,80 +47,80 @@ export const ui = {
     },
     ccChoice: {
       commerce: byText(
-        "Commerce de détail et de gros à prédominance alimentaire (IDCC 2216)"
+        "Commerce de détail et de gros à prédominance alimentaire (IDCC 2216)",
       ),
       transport: byText(
-        "Transports routiers et activités auxiliaires du transport (IDCC 0016)"
+        "Transports routiers et activités auxiliaires du transport (IDCC 0016)",
       ),
       bureau: byText(
-        "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils (IDCC 1486)"
+        "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils (IDCC 1486)",
       ),
     },
   },
   information: {
     agreement16: {
       categoryQuestion: byText(
-        "Quelle est la catégorie professionnelle du salarié ?"
+        "Quelle est la catégorie professionnelle du salarié ?",
       ),
       categoryAnswers: byTestId(
-        "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle"
+        "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle",
       ),
     },
     agreement1090: {
       categoryQuestion: byText(
-        "Quelle est la catégorie professionnelle du salarié ?"
+        "Quelle est la catégorie professionnelle du salarié ?",
       ),
       categoryAnswers: byTestId(
-        "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle"
+        "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle",
       ),
       echelonQuestion: byText("Quel est l'échelon du salarié ?"),
       echelonAnswers: byTestId(
-        "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle - ouvriers - échelon"
+        "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle - ouvriers - échelon",
       ),
     },
     agreement2264: {
       categoryQuestion: byText(
-        "Quelle est la catégorie professionnelle du salarié ?"
+        "Quelle est la catégorie professionnelle du salarié ?",
       ),
       categoryAnswers: byTestId(
-        "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
+        "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle",
       ),
     },
     agreement3239: {
       categoryQuestion: byText(
-        "Quelle est la catégorie professionnelle du salarié ?"
+        "Quelle est la catégorie professionnelle du salarié ?",
       ),
       categoryAnswers: byTestId(
-        "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle"
+        "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle",
       ),
       alert: byTestId("alert-3239-mise"),
     },
     handicap: {
       question: byText(
-        "Le salarié concerné est-il reconnu en tant que travailleur handicapé ?"
+        "Le salarié concerné est-il reconnu en tant que travailleur handicapé ?",
       ),
       answerNon: byTestId(
-        "infos.contrat salarié - travailleur handicapé - Non"
+        "infos.contrat salarié - travailleur handicapé - Non",
       ),
       answerOui: byTestId(
-        "infos.contrat salarié - travailleur handicapé - Oui"
+        "infos.contrat salarié - travailleur handicapé - Oui",
       ),
     },
   },
   seniority: {
     moreThanXYears: {
       question: byText(
-        "Le salarié a-t-il plus de 2 ans d'ancienneté dans l'entreprise (2 ans + 1 jour) ?"
+        "Le salarié a-t-il plus de 2 ans d'ancienneté dans l'entreprise (2 ans + 1 jour) ?",
       ),
       questionAvec5ans: byText(
-        "Le salarié a-t-il plus de 5 ans d'ancienneté dans l'entreprise (5 ans + 1 jour) ?"
+        "Le salarié a-t-il plus de 5 ans d'ancienneté dans l'entreprise (5 ans + 1 jour) ?",
       ),
       answerNon: byTestId("moreThanXYears - Non"),
       answerOui: byTestId("moreThanXYears - Oui"),
     },
     seniorityInMonths: {
       question: byText(
-        "Quelle est l'ancienneté du salarié dans l'entreprise en mois ?"
+        "Quelle est l'ancienneté du salarié dans l'entreprise en mois ?",
       ),
       input: byTestId("seniority-months"),
       error: byText(/Vous devez répondre à cette question/),

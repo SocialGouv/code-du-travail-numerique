@@ -16,7 +16,7 @@ Storage.prototype.getItem = jest.fn(
     "title": "Convention collective nationale des ouvriers des travaux publics du 15 décembre 1992",
     "contributions": true
   }  
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 1702", () => {
@@ -27,7 +27,7 @@ describe("Indemnité licenciement - CC 1702", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());

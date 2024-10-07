@@ -50,7 +50,7 @@ describe("<ContributionGeneric />", () => {
       target: { value: "1351" },
     });
     await waitFor(() =>
-      expect(ui.agreement1351.searchResult.query()).toBeInTheDocument()
+      expect(ui.agreement1351.searchResult.query()).toBeInTheDocument(),
     );
     fireEvent.click(ui.agreement1351.searchResult.get());
     expect(byText(/Afficher les informations/).get()).toBeInTheDocument();
@@ -98,11 +98,11 @@ describe("<ContributionGeneric />", () => {
     });
     await waitFor(() =>
       expect(
-        byText(/Particuliers employeurs et emploi à domicile/).query()
-      ).toBeInTheDocument()
+        byText(/Particuliers employeurs et emploi à domicile/).query(),
+      ).toBeInTheDocument(),
     );
     fireEvent.click(
-      byText(/Particuliers employeurs et emploi à domicile/).get()
+      byText(/Particuliers employeurs et emploi à domicile/).get(),
     );
     expect(byText(/Afficher les informations/).get()).toBeInTheDocument();
     expect(matopush).toHaveBeenCalledTimes(4);
@@ -152,12 +152,12 @@ describe("<ContributionGeneric />", () => {
       fireEvent.click(byText("CARREFOUR HYPERMARCHES").get());
     });
     expect(
-      ui.agreement.agreementCompanyInputConfirm.query()
+      ui.agreement.agreementCompanyInputConfirm.query(),
     ).toBeInTheDocument();
     fireEvent.click(
       byText(
-        "Commerce de détail et de gros à prédominance alimentaire (IDCC 2216)"
-      ).get()
+        "Commerce de détail et de gros à prédominance alimentaire (IDCC 2216)",
+      ).get(),
     );
     expect(matopush).toHaveBeenCalledTimes(5);
     // @ts-ignore
@@ -213,8 +213,8 @@ describe("<ContributionGeneric />", () => {
 
     fireEvent.click(
       byText(
-        "Accéder aux informations générales sans renseigner ma convention collective"
-      ).get()
+        "Accéder aux informations générales sans renseigner ma convention collective",
+      ).get(),
     );
 
     expect(matopush).toHaveBeenCalledTimes(1);

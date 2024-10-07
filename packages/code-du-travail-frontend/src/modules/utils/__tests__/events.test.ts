@@ -16,7 +16,7 @@ describe("sendEvent", () => {
         category: "testCategory",
         action: "testAction",
         value: "testValue",
-      })
+      }),
     ).toThrow("value should be used with name");
   });
 

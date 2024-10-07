@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
   "slug": "1516-formation-organismes",
   "title": "Formation Organismes"
 }
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 1516", () => {
@@ -27,7 +27,7 @@ describe("Indemnité licenciement - CC 1516", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
     userAction = new UserAction();
 
@@ -54,24 +54,24 @@ describe("Indemnité licenciement - CC 1516", () => {
 
     expect(
       rendering.queryByText(
-        "Connaissez-vous le montant des salaires perçus pendant le préavis ?"
-      )
+        "Connaissez-vous le montant des salaires perçus pendant le préavis ?",
+      ),
     ).toBeInTheDocument();
     fireEvent.click(
-      ui.salary.agreementWithNoticeSalary.knowingLastSalary.oui.get()
+      ui.salary.agreementWithNoticeSalary.knowingLastSalary.oui.get(),
     );
     expect(
       rendering.queryByText(
-        "Salaires perçus pendant les 3 derniers mois du préavis"
-      )
+        "Salaires perçus pendant les 3 derniers mois du préavis",
+      ),
     ).toBeInTheDocument();
     userAction.setInput(
       ui.salary.agreementWithNoticeSalary.salaries.getAll()[0],
-      "4000"
+      "4000",
     );
     userAction.setInput(
       ui.salary.agreementWithNoticeSalary.primes.getAll()[0],
-      "200"
+      "200",
     );
 
     fireEvent.click(ui.next.get());
@@ -80,15 +80,15 @@ describe("Indemnité licenciement - CC 1516", () => {
     expect(ui.result.resultat.get()).toHaveTextContent("3 548,06 €");
     expect(ui.result.resultTableRows.getAll().length).toBe(3);
     expect(ui.result.resultTableRows.getAll()[0]).toHaveTextContent(
-      "mai 20224000 €"
+      "mai 20224000 €",
     );
     userAction.click(ui.previous.get());
 
     expect(
-      ui.salary.agreementWithNoticeSalary.salaries.getAll()[0]
+      ui.salary.agreementWithNoticeSalary.salaries.getAll()[0],
     ).toHaveValue(4000);
     expect(ui.salary.agreementWithNoticeSalary.primes.getAll()[0]).toHaveValue(
-      200
+      200,
     );
 
     userAction
@@ -120,8 +120,8 @@ describe("Indemnité licenciement - CC 1516", () => {
     userAction.setInput(ui.salary.sameSalaryValue.get(), "2500");
     expect(
       rendering.queryByText(
-        "Connaissez-vous le montant des salaires perçus pendant le préavis ?"
-      )
+        "Connaissez-vous le montant des salaires perçus pendant le préavis ?",
+      ),
     ).not.toBeInTheDocument();
   });
 });

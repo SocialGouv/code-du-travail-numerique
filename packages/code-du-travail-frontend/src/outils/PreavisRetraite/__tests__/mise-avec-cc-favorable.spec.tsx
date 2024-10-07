@@ -15,13 +15,13 @@ Storage.prototype.getItem = jest.fn(
   "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
   "slug": "16-transports-routiers-et-activites-auxiliaires-du-transport"
 }
-`
+`,
 );
 
 test(`Mise à la retraite avec une CC plus favorable
 `, async () => {
   await render(
-    <CalculateurPreavisRetraite icon={""} title={""} displayTitle={""} />
+    <CalculateurPreavisRetraite icon={""} title={""} displayTitle={""} />,
   );
   const userAction = new UserAction();
 
@@ -34,11 +34,11 @@ test(`Mise à la retraite avec une CC plus favorable
   userAction.click(ui.next.get());
   userAction.click(ui.next.get());
   expect(
-    ui.information.agreement16.categoryQuestion.query()
+    ui.information.agreement16.categoryQuestion.query(),
   ).toBeInTheDocument();
   userAction.changeInputList(
     ui.information.agreement16.categoryAnswers.get(),
-    "Ouvriers"
+    "Ouvriers",
   );
   expect(ui.information.handicap.question.query()).toBeInTheDocument();
   userAction.click(ui.information.handicap.answerNon.get());
@@ -53,10 +53,10 @@ test(`Mise à la retraite avec une CC plus favorable
   expect(ui.result.resultat.get()).toHaveTextContent("1 semaine");
   expect(ui.result.noticeMiseRetraite.get()).toBeInTheDocument();
   expect(ui.result.categorieProfessionnelle.get()).toHaveTextContent(
-    "Ouvriers"
+    "Ouvriers",
   );
   expect(ui.result.conventionCollective.get()).toHaveTextContent(
-    "Transports routiers et activités auxiliaires du transport"
+    "Transports routiers et activités auxiliaires du transport",
   );
   expect(ui.result.originDepart.get()).toHaveTextContent("Mise à la retraite");
   expect(ui.result.seniority.get()).toHaveTextContent("5 mois");
@@ -64,19 +64,19 @@ test(`Mise à la retraite avec une CC plus favorable
   expect(ui.result.resultatLegal.get()).toHaveTextContent("pas de préavis");
   expect(ui.result.resultatAgreement.get()).toHaveTextContent("1 semaine");
   expect(ui.result.decryptedDescription.get()).toHaveTextContent(
-    "Le code du travail ne prévoit pas de durée de préavis pour une ancienneté inférieure à 6 mois. La durée à appliquer pour le salarié est donc la durée prévue par la convention collective."
+    "Le code du travail ne prévoit pas de durée de préavis pour une ancienneté inférieure à 6 mois. La durée à appliquer pour le salarié est donc la durée prévue par la convention collective.",
   );
   const sources = ui.result.sources.queryAll();
   expect(sources).toHaveLength(3);
   expect(sources[0]).toHaveTextContent("Article L1237-6");
   expect(sources[1]).toHaveTextContent("Article L1234-1");
   expect(sources[2]).toHaveTextContent(
-    "Accord du 16 juin 1961 relatifs aux ouvriers - annexe I, article 5"
+    "Accord du 16 juin 1961 relatifs aux ouvriers - annexe I, article 5",
   );
   expect(ui.result.noticeWarning.get()).toHaveTextContent(
-    "Attention il peut exister une durée plus favorable"
+    "Attention il peut exister une durée plus favorable",
   );
   expect(ui.result.noticeWarning.get()).toHaveTextContent(
-    "Un accord collectif d’entreprise, le contrat de travail ou un usage peut prévoir une durée de préavis* ou une condition d’ancienneté* plus favorable pour le salarié. Dans ce cas, c’est cette durée ou cette ancienneté plus favorable qui s’applique au salarié."
+    "Un accord collectif d’entreprise, le contrat de travail ou un usage peut prévoir une durée de préavis* ou une condition d’ancienneté* plus favorable pour le salarié. Dans ce cas, c’est cette durée ou cette ancienneté plus favorable qui s’applique au salarié.",
   );
 });

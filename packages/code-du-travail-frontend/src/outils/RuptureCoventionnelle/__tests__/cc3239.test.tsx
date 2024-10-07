@@ -16,7 +16,7 @@ Storage.prototype.getItem = jest.fn(
     "title": "Convention collective nationale des particuliers employeurs et de l'emploi à domicile du 15 mars 2021 - Étendue par arrêté du 6 octobre 2021 JORF 16 octobre 2021",
     "contributions": true
   }   
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 3239", () => {
@@ -27,7 +27,7 @@ describe("Indemnité licenciement - CC 3239", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
@@ -40,7 +40,7 @@ describe("Indemnité licenciement - CC 3239", () => {
   test(`Vérifier l'enchainement de question à l'étape information`, () => {
     userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
-      "'Salarié du particulier employeur'"
+      "'Salarié du particulier employeur'",
     );
     userAction.click(ui.next.get());
 
@@ -58,7 +58,7 @@ describe("Indemnité licenciement - CC 3239", () => {
   test(`Vérifier l'inéligibilité des assistant maternel`, () => {
     userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
-      "'Assistant maternel'"
+      "'Assistant maternel'",
     );
     userAction.click(ui.next.get());
 

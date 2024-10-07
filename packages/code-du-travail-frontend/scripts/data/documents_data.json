@@ -6249,15 +6249,13 @@
     "description": "Afin de faciliter la rédaction des contrats de travail, le ministère du Travail propose aux salariés et aux employeurs des exemples de contrats : CDI et CDD.",
     "dismissalProcess": false,
     "sectionDisplayMode": "accordion",
-    "breadcrumbs": [
-    ],
+    "breadcrumbs": [],
     "cdtnId": "16fc2b793b",
     "excludeFromSearch": false,
     "id": "0dfda666-dd70-4b19-be87-2366975f8a5c",
     "isPublished": true,
     "metaDescription": "Afin de faciliter la rédaction des contrats de travail, le ministère du Travail propose aux salariés et aux employeurs des exemples de contrats : CDI et CDD à télécharger en format Word.",
-    "refs": [
-    ],
+    "refs": [],
     "slug": "exemples-de-contrats-de-travail-cdi-et-cdd",
     "source": "information",
     "text": "Exemples de contrats de travail CDI et CDD",
@@ -6387,8 +6385,7 @@
     "id": "cffefc03-8590-4f00-b86e-f97b25c2c546",
     "isPublished": true,
     "metaDescription": "CDI : Rupture conventionnelle. Retrouvez le détail de chaque étape de la procédure et les délais.",
-    "refs": [
-    ],
+    "refs": [],
     "slug": "rupture-conventionnelle-individuelle-la-procedure-en-details",
     "source": "information",
     "text": "Rupture conventionnelle : les étapes de la procédure et les délais",

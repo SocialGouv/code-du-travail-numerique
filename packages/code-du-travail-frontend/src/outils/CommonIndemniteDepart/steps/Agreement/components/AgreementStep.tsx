@@ -122,7 +122,7 @@ export const CommonAgreementStep = ({
 
 const inject650IfDetected = (
   query: string,
-  results: Agreement[]
+  results: Agreement[],
 ): Agreement[] => {
   const lowerQuery = query.toLowerCase();
   const words = [

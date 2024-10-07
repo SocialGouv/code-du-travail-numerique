@@ -45,12 +45,12 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
             originDepart,
             getSeniorityInMonths(),
             agreement?.num,
-            undefined
-          )
+            undefined,
+          ),
         );
         let resultMissingArgs: MissingArgs[] = result.missingArgs;
         const missingArgs = resultMissingArgs.filter(
-          (item) => item.rawNode.cdtn
+          (item) => item.rawNode.cdtn,
         );
         if (missingArgs.length > 0) {
           const question = missingArgs.map((arg) => ({
@@ -67,7 +67,7 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
                   info: undefined,
                 },
               ];
-            })
+            }),
           );
           return true;
         }
@@ -75,7 +75,7 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
           produce((state: InformationsStoreSlice) => {
             state.informationsData.input = initialState.input;
             state.informationsData.error = initialState.error;
-          })
+          }),
         );
         return true;
       } catch (e) {
@@ -84,7 +84,7 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
         set(
           produce((state: InformationsStoreSlice) => {
             state.informationsData.input.informationError = true;
-          })
+          }),
         );
         return false;
       }
@@ -96,7 +96,7 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
       const publicodesInformations =
         get().informationsData.input.publicodesInformations;
       const questionAnswered = publicodesInformations.find(
-        (question) => question.question.rule.nom === key
+        (question) => question.question.rule.nom === key,
       );
       if (!questionAnswered) {
         throw new Error(`Question ${key} is not found`);
@@ -110,7 +110,7 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
       const newPublicodesInformations = [
         currentInformations,
         ...publicodesInformations.filter(
-          (el) => el.order < questionAnswered.order
+          (el) => el.order < questionAnswered.order,
         ),
       ].sort((a, b) => a.order - b.order);
       if (isValidField(value, type) === undefined) {
@@ -125,8 +125,8 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
               originDepart,
               getSeniorityInMonths(),
               agreement?.num,
-              rules
-            )
+              rules,
+            ),
           );
           let resultMissingArgs: MissingArgs[] = result.missingArgs;
           missingArgs = resultMissingArgs.filter((item) => item.rawNode.cdtn);
@@ -148,14 +148,14 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
         if (missingArgs.length === 0) {
           newPublicodesInformationsForNextQuestions =
             newPublicodesInformations.filter(
-              (el) => el.order <= questionAnswered.order
+              (el) => el.order <= questionAnswered.order,
             );
         } else {
           newPublicodesInformationsForNextQuestions = removeDuplicateObject(
             [newQuestions, ...newPublicodesInformations].sort(
-              (a, b) => a.order - b.order
+              (a, b) => a.order - b.order,
             ),
-            "order"
+            "order",
           ) as PublicodesInformation[];
         }
         hasNoMissingQuestions = missingArgs.length === 0;
@@ -166,13 +166,13 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
         get,
         set,
         "publicodesInformations",
-        newPublicodesInformationsForNextQuestions
+        newPublicodesInformationsForNextQuestions,
       );
       applyGenericValidation(
         get,
         set,
         "hasNoMissingQuestions",
-        hasNoMissingQuestions
+        hasNoMissingQuestions,
       );
       applyGenericValidation(get, set, "informationError", informationError);
     },
@@ -186,7 +186,7 @@ const createCommonInformationsStore: StoreSliceWrapperPreavisRetraite<
           state.informationsData.isStepValid =
             isValid && get().informationsData.input.hasNoMissingQuestions;
           state.informationsData.error = errorState;
-        })
+        }),
       );
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
     },
@@ -197,7 +197,7 @@ const applyGenericValidation = (
   get: StoreApi<InformationsStoreSlice & OriginDepartStoreSlice>["getState"],
   set: StoreApi<InformationsStoreSlice & OriginDepartStoreSlice>["setState"],
   paramName: string,
-  value: any
+  value: any,
 ) => {
   if (get().informationsData.hasBeenSubmit) {
     const originDepartState = get().originDepartData.input;
@@ -206,20 +206,20 @@ const applyGenericValidation = (
     });
     const { isValid, errorState } = validateStep(
       nextState.informationsData.input,
-      originDepartState
+      originDepartState,
     );
     set(
       produce((state: InformationsStoreSlice) => {
         state.informationsData.error = errorState;
         state.informationsData.isStepValid = isValid;
         state.informationsData.input[paramName] = value;
-      })
+      }),
     );
   } else {
     set(
       produce((state: InformationsStoreSlice) => {
         state.informationsData.input[paramName] = value;
-      })
+      }),
     );
   }
 };

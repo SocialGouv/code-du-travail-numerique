@@ -5,7 +5,7 @@ import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 
 export const fetchAllAgreements = async <K extends keyof ElasticAgreement>(
   fields: K[],
-  sortBy?: K
+  sortBy?: K,
 ): Promise<Pick<ElasticAgreement, K>[]> => {
   const response = await elasticsearchClient.search<Pick<ElasticAgreement, K>>({
     query: {

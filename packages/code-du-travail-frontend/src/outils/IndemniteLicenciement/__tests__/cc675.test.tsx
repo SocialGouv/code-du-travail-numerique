@@ -16,7 +16,7 @@ Storage.prototype.getItem = jest.fn(
     "title": "Convention collective nationale des maisons à succursales de vente au détail d'habillement du 30 juin 1972.  Etendue par arrêté du 8 décembre 1972 (JO du 7 janvier 1973).",
     "contributions": true
   }
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 675", () => {
@@ -27,7 +27,7 @@ describe("Indemnité licenciement - CC 675", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
@@ -41,7 +41,7 @@ describe("Indemnité licenciement - CC 675", () => {
     userAction.click(ui.next.get());
     userAction.changeInputList(
       ui.information.agreement675.proCategory.get(),
-      "'Employés'"
+      "'Employés'",
     );
     fireEvent.click(ui.next.get());
     userAction.setInput(ui.seniority.startDate.get(), "01/01/2021");

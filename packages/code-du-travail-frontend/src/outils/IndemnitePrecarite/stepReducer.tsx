@@ -26,13 +26,13 @@ export const initialState = {
       name: "info_cc",
       onStepDone: (title: string, data: FormContent): void => {
         const isTreated = getSupportedCCWithoutConventionalProvision().find(
-          (agreement) => agreement.idcc === data.ccn?.selected?.num
+          (agreement) => agreement.idcc === data.ccn?.selected?.num,
         );
         pushAgreementEvents(
           title,
           data.ccn,
           !!isTreated,
-          data.hasNoEnterpriseSelected ? true : false
+          data.hasNoEnterpriseSelected ? true : false,
         );
       },
     },

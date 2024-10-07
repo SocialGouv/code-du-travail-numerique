@@ -16,7 +16,7 @@ Storage.prototype.getItem = jest.fn(
     "title": "Convention collective nationale du personnel des prestataires de services dans le domaine du secteur tertiaire du 13 août 1999",
     "contributions": true
   }
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 2098", () => {
@@ -27,7 +27,7 @@ describe("Indemnité licenciement - CC 2098", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
@@ -40,7 +40,7 @@ describe("Indemnité licenciement - CC 2098", () => {
   test(`Vérifier l'enchainement de question à l'étape information`, () => {
     userAction.changeInputList(
       ui.information.agreement2098.proCategory.get(),
-      "'Cadres'"
+      "'Cadres'",
     );
     userAction.setInput(ui.information.agreement2098.age.get(), "55");
     userAction.click(ui.next.get());

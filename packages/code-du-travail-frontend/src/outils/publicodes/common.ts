@@ -1,7 +1,7 @@
 import { OldReference, References } from "@socialgouv/modeles-social";
 
 export const reverseValues = (
-  values: Record<string, string>
+  values: Record<string, string>,
 ): Record<string, string> =>
   Object.entries(values).reduce((state, [key, value]) => {
     state[value] = key;

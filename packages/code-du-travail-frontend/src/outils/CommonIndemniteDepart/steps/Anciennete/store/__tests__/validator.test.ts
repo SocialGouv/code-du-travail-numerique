@@ -28,7 +28,7 @@ describe("Ancienneté store", () => {
           isStepSalaryHidden: false,
           hasNoMissingQuestions: true,
           informationError: false,
-        }
+        },
       );
       expect(result.isValid).toBe(false);
       expect(result.errorState.errorAbsencePeriods?.absences).toStrictEqual([
@@ -66,7 +66,7 @@ describe("Ancienneté store", () => {
           isStepSalaryHidden: false,
           hasNoMissingQuestions: true,
           informationError: false,
-        }
+        },
       );
       expect(result.isValid).toBe(false);
       expect(result.errorState.errorAbsencePeriods?.absences).toStrictEqual([
@@ -105,7 +105,7 @@ describe("Ancienneté store", () => {
           isStepSalaryHidden: false,
           hasNoMissingQuestions: true,
           informationError: false,
-        }
+        },
       );
       expect(result.isValid).toBe(false);
       expect(result.errorState.errorAbsencePeriods?.absences).toStrictEqual([
@@ -144,7 +144,7 @@ describe("Ancienneté store", () => {
           isStepSalaryHidden: false,
           hasNoMissingQuestions: true,
           informationError: false,
-        }
+        },
       );
       expect(result.isValid).toBe(true);
       expect(result.errorState.errorAbsencePeriods?.absences).toBe(undefined);
@@ -183,11 +183,11 @@ describe("Ancienneté store", () => {
           isStepSalaryHidden: false,
           hasNoMissingQuestions: true,
           informationError: false,
-        }
+        },
       );
       expect(result.isValid).toBe(false);
       expect(result.errorState.errorDateEntree).toStrictEqual(
-        "La date de début de contrat doit se situer avant la date d'arrêt de travail indiquée à l'étape n°2"
+        "La date de début de contrat doit se situer avant la date d'arrêt de travail indiquée à l'étape n°2",
       );
     });
 
@@ -222,11 +222,11 @@ describe("Ancienneté store", () => {
           isStepSalaryHidden: false,
           hasNoMissingQuestions: true,
           informationError: false,
-        }
+        },
       );
       expect(result.isValid).toBe(false);
       expect(result.errorState.errorDateSortie).toStrictEqual(
-        "La date de fin de contrat doit se situer après la date d'arrêt de travail indiquée à l'étape n°2"
+        "La date de fin de contrat doit se situer après la date d'arrêt de travail indiquée à l'étape n°2",
       );
     });
     it("ne doit retourner d'erreur si la date d'arrêt de travail est après la date de fin de contrat mais que l'utilisateur à coché non sur à la question arrêt de travail", () => {
@@ -260,7 +260,7 @@ describe("Ancienneté store", () => {
           isStepSalaryHidden: false,
           hasNoMissingQuestions: true,
           informationError: false,
-        }
+        },
       );
       expect(result.isValid).toBe(true);
     });
@@ -294,10 +294,12 @@ describe("Ancienneté store", () => {
         isStepSalaryHidden: false,
         hasNoMissingQuestions: true,
         informationError: false,
-      }
+      },
     );
     expect(result.isValid).toBe(false);
-    expect(result.errorState.errorAbsencePeriods?.absences).toStrictEqual(undefined);
+    expect(result.errorState.errorAbsencePeriods?.absences).toStrictEqual(
+      undefined,
+    );
   });
 
   it("date de notification invalide", () => {
@@ -317,10 +319,11 @@ describe("Ancienneté store", () => {
         isStepSalaryHidden: false,
         hasNoMissingQuestions: true,
         informationError: false,
-      }
+      },
     );
     expect(result.isValid).toBe(false);
-    expect(result.errorState.errorDateNotification).toEqual("La date de notification est invalide");
+    expect(result.errorState.errorDateNotification).toEqual(
+      "La date de notification est invalide",
+    );
   });
-
 });

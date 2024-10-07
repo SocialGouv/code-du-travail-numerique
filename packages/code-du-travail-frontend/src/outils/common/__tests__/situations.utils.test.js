@@ -80,7 +80,7 @@ describe("situations", () => {
       const situations = getSituationsFor(data, { idcc });
       expect(situations.length).toBe(4);
       expect(situations.every((situation) => idcc === situation.idcc)).toBe(
-        true
+        true,
       );
     });
   });
@@ -115,7 +115,7 @@ describe("situations", () => {
       const idcc = 10;
       const situations = getSituationsFor(data, { idcc });
       expect(
-        getNextQuestionKey(situations, criteriaOrder, { foo: "1| foo" })
+        getNextQuestionKey(situations, criteriaOrder, { foo: "1| foo" }),
       ).toBe("bar");
     });
   });
@@ -148,7 +148,7 @@ describe("situations", () => {
     it("should return a tuple array of questions key and questions option for branch and bar", () => {
       const situations = getSituationsFor(data, { idcc: 10 });
       expect(
-        getPastQuestions(situations, criteriaOrder, { bar: "baz" })
+        getPastQuestions(situations, criteriaOrder, { bar: "baz" }),
       ).toEqual([
         [
           "bar",
@@ -194,7 +194,7 @@ describe("situations", () => {
       const pastQuestions = getPastQuestions(
         initialSituations,
         criteriaOrder,
-        criteria
+        criteria,
       );
 
       expect(
@@ -202,7 +202,7 @@ describe("situations", () => {
           criteria,
           key,
           pastQuestions,
-        })
+        }),
       ).toEqual(["foo"]);
     });
   });
@@ -212,7 +212,7 @@ describe("situations", () => {
       const supportedCCResult = getSupportedCC(ccList);
       expect(supportedCCResult).toHaveLength(3);
       expect(supportedCCResult.find((item) => item.idcc === 99999)).toBe(
-        undefined
+        undefined,
       );
       expect(supportedCCResult.find((item) => item.idcc === 30)).toStrictEqual({
         fullySupported: SupportedTypes.FULLY_SUPPORTED,
@@ -233,7 +233,7 @@ describe("situations", () => {
 
     it("should return no error if agreement is supported", () => {
       expect(
-        validateUnsupportedAgreement(ccList, { selected: { num: 20 } })
+        validateUnsupportedAgreement(ccList, { selected: { num: 20 } }),
       ).toStrictEqual({});
     });
 
@@ -241,7 +241,7 @@ describe("situations", () => {
       expect(
         validateUnsupportedAgreement(ccList, {
           selected: { num: "unsupported" },
-        })
+        }),
       ).toStrictEqual({
         agreementMissing: true,
       });

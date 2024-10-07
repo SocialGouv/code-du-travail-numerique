@@ -101,7 +101,7 @@ export default function Eligible() {
     arretTravail: state.contratTravailData.input.arretTravail,
     showHasTempsPartiel: state.salairesData.input.showHasTempsPartiel,
     informationData: informationToSituation(
-      state.informationsData.input.publicodesInformations
+      state.informationsData.input.publicodesInformations,
     ),
     isAgreementSupported:
       state.agreementData.input.isAgreementSupportedIndemniteLicenciement,
@@ -167,7 +167,7 @@ export default function Eligible() {
                     value: dateArretTravail,
                   },
                 ]
-              : []
+              : [],
           )}
           isArretTravail={arretTravail === "oui"}
           showHasTempsPartiel={showHasTempsPartiel}
@@ -215,7 +215,7 @@ export default function Eligible() {
         )}
         <PubliReferences
           references={
-            isAgreementBetter ? agreementReferences ?? [] : legalReferences
+            isAgreementBetter ? (agreementReferences ?? []) : legalReferences
           }
         />
       </ShowDetails>

@@ -3,7 +3,7 @@ describe("Glossaire", () => {
     cy.visit("/glossaire");
 
     cy.contains(
-      "Les définitions de ce glossaire, disponibles en surbrillance dans les textes des réponses"
+      "Les définitions de ce glossaire, disponibles en surbrillance dans les textes des réponses",
     );
 
     cy.contains("Abrogation").click();
@@ -14,7 +14,7 @@ describe("Glossaire", () => {
     cy.contains("Retour").click();
 
     cy.contains(
-      "Les définitions de ce glossaire, disponibles en surbrillance dans les textes des réponses"
+      "Les définitions de ce glossaire, disponibles en surbrillance dans les textes des réponses",
     );
   });
 });

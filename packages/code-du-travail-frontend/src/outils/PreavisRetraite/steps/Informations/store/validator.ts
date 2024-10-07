@@ -7,7 +7,7 @@ import { getNote } from "../../../agreements/informations/getNote";
 
 export const validateStep = (
   state: InformationsStoreInput,
-  originDepartState: OriginDepartStoreInput
+  originDepartState: OriginDepartStoreInput,
 ) => {
   const informations = state.publicodesInformations;
 
@@ -39,7 +39,7 @@ export const validateStep = (
 
 export const isValidField = (
   value: string | undefined | null,
-  type: RuleType | undefined
+  type: RuleType | undefined,
 ): string | undefined => {
   if (value === undefined || value === null || value === "") {
     return "Vous devez répondre à cette question";

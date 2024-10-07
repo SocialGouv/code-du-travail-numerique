@@ -13,7 +13,7 @@ Storage.prototype.getItem = jest.fn(
   "num":44,
   "shortTitle":"Industries chimiques et connexes",
   "slug":"44-industries-chimiques-et-connexes","title":"Industries chimiques et connexes"}
-`
+`,
 );
 
 describe("Indemnité licenciement - CC 44", () => {
@@ -25,7 +25,7 @@ describe("Indemnité licenciement - CC 44", () => {
           icon={""}
           title={""}
           displayTitle={""}
-        />
+        />,
       );
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
@@ -37,7 +37,7 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.click(ui.next.get());
       userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
-        "Ouvriers et collaborateurs (Groupes I à III)"
+        "Ouvriers et collaborateurs (Groupes I à III)",
       );
       userAction.setInput(ui.information.agreement44.age.get(), "38");
       userAction.click(ui.next.get());
@@ -60,14 +60,14 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.click(ui.salary.hasSameSalary.oui.get());
       expect(
         screen.queryByText(
-          "Les salaires indiqués comportent-ils une partie variable ?"
-        )
+          "Les salaires indiqués comportent-ils une partie variable ?",
+        ),
       ).not.toBeInTheDocument();
       userAction.click(ui.salary.hasSameSalary.non.get());
       expect(
         screen.queryByText(
-          "Les salaires indiqués comportent-ils une partie variable ?"
-        )
+          "Les salaires indiqués comportent-ils une partie variable ?",
+        ),
       ).toBeInTheDocument();
 
       // vérification que l'on demande si le salaire a eu des primes pour un Agents de maîtrise et techniciens (Groupe IV)
@@ -75,7 +75,7 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.click(ui.previous.get());
       userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
-        "Agents de maîtrise et techniciens (Groupe IV)"
+        "Agents de maîtrise et techniciens (Groupe IV)",
       );
       userAction.setInput(ui.information.agreement44.age.get(), "36");
       userAction.click(ui.next.get());
@@ -83,14 +83,14 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.click(ui.salary.hasSameSalary.oui.get());
       expect(
         screen.queryByText(
-          "Les salaires indiqués comportent-ils une partie variable ?"
-        )
+          "Les salaires indiqués comportent-ils une partie variable ?",
+        ),
       ).not.toBeInTheDocument();
       userAction.click(ui.salary.hasSameSalary.non.get());
       expect(
         screen.queryByText(
-          "Les salaires indiqués comportent-ils une partie variable ?"
-        )
+          "Les salaires indiqués comportent-ils une partie variable ?",
+        ),
       ).toBeInTheDocument();
 
       // vérification que l'on demande si le salaire a eu des primes pour un Ingénieurs et cadres (Groupe V)
@@ -98,7 +98,7 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.click(ui.previous.get());
       userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
-        "Ingénieurs et cadres (Groupe V)"
+        "Ingénieurs et cadres (Groupe V)",
       );
       userAction.setInput(ui.information.agreement44.age.get(), "36");
       userAction.click(ui.next.get());
@@ -107,14 +107,14 @@ describe("Indemnité licenciement - CC 44", () => {
 
       expect(
         screen.queryByText(
-          "Les salaires indiqués comportent-ils une partie variable ?"
-        )
+          "Les salaires indiqués comportent-ils une partie variable ?",
+        ),
       ).not.toBeInTheDocument();
       userAction.click(ui.salary.hasSameSalary.non.get());
       expect(
         screen.queryByText(
-          "Les salaires indiqués comportent-ils une partie variable ?"
-        )
+          "Les salaires indiqués comportent-ils une partie variable ?",
+        ),
       ).not.toBeInTheDocument();
     });
 
@@ -125,12 +125,12 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.click(ui.salary.variablePart.non.get());
       expect(
         screen.queryByText(
-          "Connaissez-vous le montant du dernier salaire perçu (préavis inclus) ?"
-        )
+          "Connaissez-vous le montant du dernier salaire perçu (préavis inclus) ?",
+        ),
       ).toBeInTheDocument();
       userAction.click(ui.salary.agreement44.knowingLastSalary.oui.get());
       expect(
-        screen.queryByText("Salaire et primes perçus au cours du dernier mois")
+        screen.queryByText("Salaire et primes perçus au cours du dernier mois"),
       ).toBeInTheDocument();
       userAction.setInput(ui.salary.agreement44.salaries.get(), "2500");
       userAction.setInput(ui.salary.agreement44.primes.get(), "500");
@@ -145,7 +145,7 @@ describe("Indemnité licenciement - CC 44", () => {
           icon={""}
           title={""}
           displayTitle={""}
-        />
+        />,
       );
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
@@ -157,7 +157,7 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.click(ui.next.get());
       userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
-        "Ouvriers et collaborateurs (Groupes I à III)"
+        "Ouvriers et collaborateurs (Groupes I à III)",
       );
       userAction.setInput(ui.information.agreement44.age.get(), "40");
       userAction.click(ui.next.get());
@@ -199,7 +199,7 @@ describe("Indemnité licenciement - CC 44", () => {
           icon={""}
           title={""}
           displayTitle={""}
-        />
+        />,
       );
       userAction = new UserAction();
     });
@@ -215,7 +215,7 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.click(ui.next.get());
       userAction.changeInputList(
         ui.information.agreement44.proCategory.get(),
-        "Ouvriers et collaborateurs (Groupes I à III)"
+        "Ouvriers et collaborateurs (Groupes I à III)",
       );
       userAction.setInput(ui.information.agreement44.age.get(), "38");
       userAction.click(ui.next.get());
@@ -229,8 +229,8 @@ describe("Indemnité licenciement - CC 44", () => {
       userAction.click(ui.salary.variablePart.non.get());
       expect(
         screen.queryByText(
-          "Connaissez-vous le montant du dernier salaire perçu (préavis inclus) ?"
-        )
+          "Connaissez-vous le montant du dernier salaire perçu (préavis inclus) ?",
+        ),
       ).not.toBeInTheDocument();
     });
   });
@@ -241,7 +241,7 @@ describe("Indemnité licenciement - CC 44", () => {
         icon={""}
         title={""}
         displayTitle={""}
-      />
+      />,
     );
     const userAction = new UserAction();
     userAction
@@ -254,7 +254,7 @@ describe("Indemnité licenciement - CC 44", () => {
       .click(ui.next.get())
       .changeInputList(
         ui.information.agreement44.proCategory.get(),
-        "Ouvriers et collaborateurs (Groupes I à III)"
+        "Ouvriers et collaborateurs (Groupes I à III)",
       )
       .setInput(ui.information.agreement44.age.get(), "57")
       .click(ui.next.get())

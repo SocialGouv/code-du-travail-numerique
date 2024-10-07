@@ -65,27 +65,27 @@ describe("Etant donné un composant Feedback", () => {
         expect(ui.questionnaire2.simulator.good.query()).toBeInTheDocument();
 
         expect(
-          ui.questionnaire2.questionClarity.title.query()
+          ui.questionnaire2.questionClarity.title.query(),
         ).toBeInTheDocument();
         expect(
-          ui.questionnaire2.questionClarity.bad.query()
+          ui.questionnaire2.questionClarity.bad.query(),
         ).toBeInTheDocument();
         expect(
-          ui.questionnaire2.questionClarity.average.query()
+          ui.questionnaire2.questionClarity.average.query(),
         ).toBeInTheDocument();
         expect(
-          ui.questionnaire2.questionClarity.good.query()
+          ui.questionnaire2.questionClarity.good.query(),
         ).toBeInTheDocument();
 
         expect(
-          ui.questionnaire2.resultClarity.title.query()
+          ui.questionnaire2.resultClarity.title.query(),
         ).toBeInTheDocument();
         expect(ui.questionnaire2.resultClarity.bad.query()).toBeInTheDocument();
         expect(
-          ui.questionnaire2.resultClarity.average.query()
+          ui.questionnaire2.resultClarity.average.query(),
         ).toBeInTheDocument();
         expect(
-          ui.questionnaire2.resultClarity.good.query()
+          ui.questionnaire2.resultClarity.good.query(),
         ).toBeInTheDocument();
 
         expect(ui.questionnaire2.more.title.query()).toBeInTheDocument();

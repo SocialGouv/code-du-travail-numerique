@@ -36,7 +36,7 @@ export type AgreementStoreFn = {
   onInitAgreementPage: () => void;
   onAgreementChange: (
     agreement: Agreement | null,
-    enterprise?: Enterprise
+    enterprise?: Enterprise,
   ) => void;
   onNextStep: () => ValidationResponse;
   onEnterpriseSearch: (value: AgreementSearchValue) => void;

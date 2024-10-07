@@ -17,7 +17,7 @@ export class SearchController {
       const response = await searchWithQuery(
         q as string,
         skipSavedResults === "" ? true : false,
-        size ? parseInt(size as string) : undefined
+        size ? parseInt(size as string) : undefined,
       );
       this.res.status(200).json(response);
     } catch (error) {

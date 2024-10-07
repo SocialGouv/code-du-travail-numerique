@@ -28,7 +28,8 @@
     "test:e2e": "cypress run",
     "test:e2e:ui": "cypress open",
     "type-check": "tsc --noEmit",
-    "type-check:watch": "npm run type-check -- --watch"
+    "type-check:watch": "npm run type-check -- --watch",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\""
   },
   "dependencies": {
     "@codegouvfr/react-dsfr": "^1.13.4",
@@ -64,6 +65,7 @@
     "memoizee": "^0.4.15",
     "next": "14.2.11",
     "p-debounce": "^2.1.0",
+    "prettier": "^3.3.3",
     "prop-types": "^15.8.1",
     "publicodes": "1.0.0-beta.60",
     "react": "^18.2.0",
@@ -102,7 +104,7 @@
     "eslint-plugin-cypress": "^3.4.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "lint-staged": "^13.0.0",
+    "lint-staged": "^15.2.10",
     "mockdate": "^3.0.5",
     "next-router-mock": "^0.9.13",
     "nextjs-http-supertest": "^1.0.6",

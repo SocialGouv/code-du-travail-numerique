@@ -96,7 +96,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
   const onSelectAgreement = (
     agreement: Agreement | null,
     enterprise?: Enterprise | undefined,
-    hasNoEntrepriseSelected?: boolean
+    hasNoEntrepriseSelected?: boolean,
   ) => {
     let agreementTreated;
     if (agreement) {
@@ -110,7 +110,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
           selected: agreement,
         },
         agreementTreated,
-        !!hasNoEntrepriseSelected
+        !!hasNoEntrepriseSelected,
       );
     }
 
@@ -268,7 +268,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
                     getTitle(),
                   ]);
                   router.push(
-                    `/contribution/${convention.num}-${contribution.slug}`
+                    `/contribution/${convention.num}-${contribution.slug}`,
                   );
                 }}
               >
@@ -309,7 +309,7 @@ const ContributionGeneric = ({ contribution }: Props) => {
                 getTitle(),
                 { route: "not-selected" },
                 false,
-                false
+                false,
               );
               setShowAnswer(true);
               scrollToTitle();

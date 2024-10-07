@@ -12,7 +12,7 @@ export const UnexpectedError: React.FC = () => {
         "fr-grid-row",
         "fr-grid-row--gutters",
         "fr-grid-row--middle",
-        "fr-grid-row--center"
+        "fr-grid-row--center",
       )}
     >
       <div className={fr.cx("fr-py-0", "fr-col-12", "fr-col-md-6")}>
@@ -33,7 +33,7 @@ export const UnexpectedError: React.FC = () => {
           "fr-col-offset-md-1",
           "fr-px-6w",
           "fr-px-md-0",
-          "fr-py-0"
+          "fr-py-0",
         )}
       >
         <IconError />

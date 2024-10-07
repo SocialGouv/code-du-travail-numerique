@@ -18,7 +18,7 @@ export function PopupContent() {
   const [department, setDepartment] = useState<string>("");
   const [hasSearched, setHasSearched] = useState<boolean>(false);
   const [result, setResult] = useState<undefined | ServiceRenseignement>(
-    undefined
+    undefined,
   );
   const { emitTrackNumber } = useNeedMoreInfoEvents();
 

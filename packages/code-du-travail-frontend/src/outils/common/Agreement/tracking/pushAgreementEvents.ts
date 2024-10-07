@@ -11,7 +11,7 @@ const pushAgreementEvents = (
   simulatorTitle: string,
   values: ConventionCollective | undefined,
   isAgreementTreated: boolean,
-  hasNoEnterpriseSelected: boolean
+  hasNoEnterpriseSelected: boolean,
 ): void => {
   if (!values) {
     // no agreement section, no event to send. Should never happen.

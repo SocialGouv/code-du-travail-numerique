@@ -42,7 +42,7 @@ const createSeniorityStore: StoreSliceWrapperPreavisRetraite<
           state.seniorityData.hasBeenSubmit = !isValid;
           state.seniorityData.isStepValid = isValid;
           state.seniorityData.error = errorState;
-        })
+        }),
       );
 
       matopush([
@@ -62,7 +62,7 @@ const applyGenericValidation = (
   get: StoreApi<SeniorityStoreSlice>["getState"],
   set: StoreApi<SeniorityStoreSlice>["setState"],
   paramName: keyof SeniorityStoreInput,
-  value: any
+  value: any,
 ) => {
   if (get().seniorityData.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
@@ -74,13 +74,13 @@ const applyGenericValidation = (
         state.seniorityData.error = errorState;
         state.seniorityData.isStepValid = isValid;
         state.seniorityData.input[paramName] = value;
-      })
+      }),
     );
   } else {
     set(
       produce((state: SeniorityStoreSlice) => {
         state.seniorityData.input[paramName] = value;
-      })
+      }),
     );
   }
 };

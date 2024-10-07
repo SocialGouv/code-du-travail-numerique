@@ -16,7 +16,7 @@ describe("<TextQuestion />", () => {
             <button data-testid="next">suivant</button>
           </form>
         )}
-      />
+      />,
     );
     const bt = getByTestId("next");
     bt.click();
