@@ -62,7 +62,7 @@ exports[`<About /> should render 1`] = `
         >
           <form
             action="/recherche"
-            class="sc-90ac636b-0 etzoiS"
+            class="sc-830662af-0 fdcWhS"
             role="search"
           >
             <div
@@ -82,7 +82,7 @@ exports[`<About /> should render 1`] = `
               aria-expanded="false"
               aria-labelledby="downshift-:r0:-label"
               autocomplete="off"
-              class="sc-90ac636b-5 jHCKbL"
+              class="sc-830662af-5 jDcVOD"
               id="floating-search"
               placeholder="Rechercher"
               role="combobox"
@@ -91,19 +91,19 @@ exports[`<About /> should render 1`] = `
             />
             <ul
               aria-labelledby="downshift-:r0:-label"
-              class="sc-90ac636b-6 cSRDPF"
+              class="sc-830662af-6 jvaqix"
               id="downshift-:r0:-menu"
               role="listbox"
             />
             <button
               aria-label="Lancer ma recherche"
-              class="sc-95bd4344-0 dxXsic sc-90ac636b-4 WWTkl"
+              class="sc-95bd4344-0 dxXsic sc-830662af-4 hWCjEV"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-90ac636b-1 eMUwwz"
+                class="sc-830662af-1 ieisKv"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +148,7 @@ exports[`<About /> should render 1`] = `
         </div>
         <button
           aria-label="menu principal"
-          class="sc-95bd4344-0 jfFcPD sc-826d929a-1 gOztMa sc-c4241839-0 kVABEP"
+          class="sc-95bd4344-0 jfFcPD sc-826d929a-1 gOztMa sc-46211e62-0 fntMFM"
         >
           <svg
             aria-hidden="true"

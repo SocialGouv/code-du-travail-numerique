@@ -19,7 +19,7 @@ exports[`<SearchResults/> should render results 1`] = `
       class="sc-ab356c14-0 bpNHPl"
     >
       <li
-        class="sc-309e108-0 ixiTFh"
+        class="sc-546484b7-0 fIRXSF"
       >
         <div
           class="sc-d47d8018-0 cDsGtD"
@@ -50,7 +50,7 @@ exports[`<SearchResults/> should render results 1`] = `
             class="sc-d47d8018-6 ipSAXR"
           >
             <div
-              class="sc-309e108-3 fZcRyu"
+              class="sc-546484b7-3 vErVC"
             >
               <p
                 class="sc-3633cc97-1 bjxtLv"
@@ -62,7 +62,7 @@ exports[`<SearchResults/> should render results 1`] = `
         </div>
       </li>
       <li
-        class="sc-309e108-0 ixiTFh"
+        class="sc-546484b7-0 fIRXSF"
       >
         <div
           class="sc-d47d8018-0 cDsGtD sc-98e66f5e-1 fCudut"
@@ -123,7 +123,7 @@ exports[`<SearchResults/> should render results 1`] = `
               class="sc-98e66f5e-0 bQDuAS"
             >
               <div
-                class="sc-309e108-3 fZcRyu"
+                class="sc-546484b7-3 vErVC"
               >
                 <p
                   class="sc-3633cc97-1 bjxtLv"
@@ -157,7 +157,7 @@ exports[`<SearchResults/> should render results 1`] = `
         </div>
       </li>
       <li
-        class="sc-309e108-0 ixiTFh"
+        class="sc-546484b7-0 fIRXSF"
       >
         <div
           aria-label="Outils externes telerc description undefined (nouvelle fenêtre)"
@@ -194,7 +194,7 @@ exports[`<SearchResults/> should render results 1`] = `
               class="sc-98e66f5e-0 bQDuAS"
             >
               <div
-                class="sc-309e108-3 fZcRyu"
+                class="sc-546484b7-3 vErVC"
               >
                 <p
                   class="sc-3633cc97-1 bjxtLv"
@@ -228,7 +228,7 @@ exports[`<SearchResults/> should render results 1`] = `
         </div>
       </li>
       <li
-        class="sc-309e108-0 ixiTFh"
+        class="sc-546484b7-0 fIRXSF"
       >
         <div
           class="sc-d47d8018-0 cDsGtD sc-98e66f5e-1 fCudut"
@@ -289,7 +289,7 @@ exports[`<SearchResults/> should render results 1`] = `
               class="sc-98e66f5e-0 bQDuAS"
             >
               <div
-                class="sc-309e108-3 fZcRyu"
+                class="sc-546484b7-3 vErVC"
               >
                 <p
                   class="sc-3633cc97-1 bjxtLv"
@@ -323,7 +323,7 @@ exports[`<SearchResults/> should render results 1`] = `
         </div>
       </li>
       <li
-        class="sc-309e108-0 ixiTFh"
+        class="sc-546484b7-0 fIRXSF"
       >
         <div
           class="sc-d47d8018-0 cDsGtD"
@@ -381,7 +381,7 @@ exports[`<SearchResults/> should render results 1`] = `
             class="sc-d47d8018-6 ipSAXR"
           >
             <div
-              class="sc-309e108-3 fZcRyu"
+              class="sc-546484b7-3 vErVC"
             >
               <p
                 class="sc-3633cc97-1 bjxtLv"
