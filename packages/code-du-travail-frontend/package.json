@@ -29,7 +29,8 @@
     "test:e2e:ui": "cypress open",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-    "format": "prettier --write \"**/*.{js,ts,tsx,jsx,json,md}\""
+    "format": "prettier --write \"**/*.{js,ts,tsx,jsx,json,md}\"",
+    "format:check": "yarn format --check"
   },
   "dependencies": {
     "@codegouvfr/react-dsfr": "^1.13.4",

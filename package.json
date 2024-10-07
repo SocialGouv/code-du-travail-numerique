@@ -34,6 +34,7 @@
     "test:update:frontend": "lerna run test:update --scope=@cdt/frontend --stream",
     "test:update:api": "lerna run test:api:update --scope=@cdt/frontend --stream",
     "format": "lerna run format --stream",
+    "format:check": "lerna run format:check --stream",
     "precommit": "lerna run precommit --stream"
   },
   "repository": {
