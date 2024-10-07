@@ -7,6 +7,7 @@ export enum MatomoBaseEvent {
   WIDGET_SEARCH = "widget_search",
   HEADER = "header",
   PAGE_HOME = "page_home",
+  PAGE_MODELS = "page_modeles_de_documents",
 }
 
 export enum MatomoBaseAction {
@@ -93,6 +94,7 @@ export enum MatomoActionEvent {
   RUPTURE_CONVENTIONNELLE = `view_step_${IndemniteDepartType.RUPTURE_CONVENTIONNELLE}`,
   VIEW_STEP = "view_step",
   CLICK_PREVIOUS = "click_previous",
+  TYPE_CTRL_C = "type_CTRL_C",
 }
 
 type Mapping = Array<{
