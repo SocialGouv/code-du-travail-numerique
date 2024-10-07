@@ -46,7 +46,7 @@
     "clean": "rimraf bin lib",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-    "format": "prettier --write \"./src/**/*.{js,ts}\""
+    "format": "prettier --write \"./src/**/*.{js,ts,yaml,yml,json}\""
   },
   "dependencies": {
     "date-fns": "^2.28.0",
@@ -56,7 +56,9 @@
   },
   "lint-staged": {
     "*.{ts,js}": [
-      "yarn lint --fix --quiet",
+      "yarn lint --fix --quiet"
+    ],
+    "*.{ts,js,yaml,yml,json}": [
       "yarn format"
     ]
   }
