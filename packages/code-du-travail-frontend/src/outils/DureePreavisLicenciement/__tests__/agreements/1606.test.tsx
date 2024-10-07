@@ -69,7 +69,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/annexe "agents de maîtrise" article 9/)[0]).toBeInTheDocument();
           
@@ -90,7 +90,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/annexe "agents de maîtrise" article 9/)[0]).toBeInTheDocument();
           
@@ -125,7 +125,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/annexe "cadres" article 9/)[0]).toBeInTheDocument();
           
@@ -146,7 +146,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/annexe "cadres" article 9/)[0]).toBeInTheDocument();
           
@@ -181,7 +181,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/Aucun préavis/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/Aucun préavis/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/article 9.2.1/)[0]).toBeInTheDocument();
           
@@ -202,7 +202,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/15 jours/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/15 jours/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/article 9.2.1/)[0]).toBeInTheDocument();
           
@@ -223,7 +223,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/article 9.2.1/)[0]).toBeInTheDocument();
           
@@ -244,7 +244,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/article 9.2.1/)[0]).toBeInTheDocument();
           

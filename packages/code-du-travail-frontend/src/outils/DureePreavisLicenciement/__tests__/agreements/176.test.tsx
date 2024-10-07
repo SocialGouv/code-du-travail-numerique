@@ -69,7 +69,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 35, 2°/)[0]).toBeInTheDocument();
           
@@ -90,7 +90,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 35, 2°/)[0]).toBeInTheDocument();
           
@@ -111,7 +111,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 35, 2°/)[0]).toBeInTheDocument();
           
@@ -146,7 +146,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 35, 2°/)[0]).toBeInTheDocument();
           
@@ -167,7 +167,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 35, 2°/)[0]).toBeInTheDocument();
           
@@ -188,7 +188,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/4 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/4 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 35, 2°/)[0]).toBeInTheDocument();
           
