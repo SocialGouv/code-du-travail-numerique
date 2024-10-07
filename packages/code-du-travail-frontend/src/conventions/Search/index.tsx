@@ -80,12 +80,15 @@ const Search = ({ onSelectConvention }: Props): JSX.Element => {
                   title="CONVENTIONS COLLECTIVES"
                   query={query}
                   items={conventions.map((convention, index) => (
+                    <>
+                    AAAAAA  {convention}
                     <ConventionLink
                       convention={convention}
                       isFirst={index === 0}
                       key={convention.slug}
                       onClick={onSelectConvention}
                     />
+                    </>
                   ))}
                 />
               )}

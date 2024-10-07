@@ -106,7 +106,7 @@ export const ConventionLink = ({
 
   return (
     <>
-      {num === 9999 ? (
+      {!convention.slug ? (
         <DisabledConvention convention={convention} commonProps={commonProps} />
       ) : (
         <EnabledConvention
