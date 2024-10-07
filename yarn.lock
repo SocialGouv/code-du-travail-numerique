@@ -6032,7 +6032,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@socialgouv/code-du-travail@workspace:."
   dependencies:
-    husky: ^9.0.0
+    husky: ^9.1.6
     is-ci: ^3.0.0
     lerna: ^5.0.0
   languageName: unknown
@@ -15601,12 +15601,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^9.0.0":
-  version: 9.0.11
-  resolution: "husky@npm:9.0.11"
+"husky@npm:^9.1.6":
+  version: 9.1.6
+  resolution: "husky@npm:9.1.6"
   bin:
-    husky: bin.mjs
-  checksum: 1aebc3334dc7ac6288ff5e1fb72cfb447cfa474e72cf7ba692e8c5698c573ab725c28c6a5088c9f8e6aca5f47d40fa7261beffbc07a4d307ca21656dc4571f07
+    husky: bin.js
+  checksum: 421ccd8850378231aaefd70dbe9e4f1549b84ffe3a6897f93a202242bbc04e48bd498169aef43849411105d9fcf7c192b757d42661e28d06b934a609a4eb8771
   languageName: node
   linkType: hard
 

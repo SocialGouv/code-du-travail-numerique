@@ -32,8 +32,9 @@
     "test:update": "lerna run test:update --scope=@socialgouv/cdtn-ui --scope=@cdt/frontend --stream",
     "test:update:frontend": "lerna run test:update --scope=@cdt/frontend --stream",
     "test:update:api": "lerna run test:api:update --scope=@cdt/frontend --stream",
-    "prepare": "is-ci || husky install",
-    "format": "lerna run format --stream"
+    "format": "lerna run format --stream",
+    "precommit": "lerna run precommit --stream",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -43,8 +44,7 @@
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "devDependencies": {
-    "husky": "^9.0.0",
-    "is-ci": "^3.0.0",
+    "husky": "^9.1.6",
     "lerna": "^5.0.0"
   },
   "workspaces": [
