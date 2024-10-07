@@ -52,7 +52,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 semaine/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Titre IV, Article 27/)[0]).toBeInTheDocument();
           
@@ -73,7 +73,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Titre IV, Article 27/)[0]).toBeInTheDocument();
           
@@ -94,7 +94,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Titre IV, Article 27/)[0]).toBeInTheDocument();
           
@@ -129,7 +129,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Titre IV, Article 27/)[0]).toBeInTheDocument();
           
@@ -150,7 +150,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Titre IV, Article 27/)[0]).toBeInTheDocument();
           
@@ -185,7 +185,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Titre IV, Article 27/)[0]).toBeInTheDocument();
           
@@ -206,7 +206,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/4 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/4 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Titre IV, Article 27/)[0]).toBeInTheDocument();
           

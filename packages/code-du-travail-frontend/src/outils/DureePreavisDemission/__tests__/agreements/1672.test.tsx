@@ -41,7 +41,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article II. 6 de l'accord relatif aux dispositions particulières " Cadres "/)[0]).toBeInTheDocument();
           
@@ -62,7 +62,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 91 a\) de la convention collective/)[0]).toBeInTheDocument();
           

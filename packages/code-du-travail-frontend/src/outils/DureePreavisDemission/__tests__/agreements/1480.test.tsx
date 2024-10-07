@@ -30,7 +30,7 @@
           
           
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 46/)[0]).toBeInTheDocument();
           

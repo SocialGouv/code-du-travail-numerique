@@ -52,7 +52,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/il n’y a pas de préavis à effectuer/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/il n’y a pas de préavis à effectuer/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 4.11.2 de la convention collective/)[0]).toBeInTheDocument();
           
@@ -73,7 +73,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 jours/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 jours/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 4.11.2 de la convention collective/)[0]).toBeInTheDocument();
           
@@ -94,7 +94,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 semaine/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 4.11.2 de la convention collective/)[0]).toBeInTheDocument();
           
@@ -118,7 +118,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/3 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 4.11.2 de la convention collective/)[0]).toBeInTheDocument();
           
@@ -139,7 +139,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 4.11.2 de la convention collective/)[0]).toBeInTheDocument();
           
@@ -171,7 +171,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/1 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 4.11.2 de la convention collective/)[0]).toBeInTheDocument();
           
@@ -192,7 +192,7 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 mois/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 4.11.2 de la convention collective/)[0]).toBeInTheDocument();
           
