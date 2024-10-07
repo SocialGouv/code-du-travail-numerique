@@ -46,7 +46,6 @@
           expect(screen.queryAllByText(/Les heures d'absence seront fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, l'employeur et le salarié les fixeront chacun leur tour. Ces heures pour recherche d'emploi peuvent être cumulées en fin de préavis, si l'employeur l'autorise par écrit./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 9.1/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(//)[0]).toBeInTheDocument();
           
     });
   
@@ -70,7 +69,6 @@
           expect(screen.queryAllByText(/Les heures d'absence seront fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, l'employeur et le salarié les fixeront chacun leur tour. Ces heures pour recherche d'emploi peuvent être cumulées en fin de préavis, si l'employeur l'autorise par écrit./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 9.1/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(//)[0]).toBeInTheDocument();
           
     });
   

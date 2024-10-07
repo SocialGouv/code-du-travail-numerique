@@ -68,7 +68,6 @@
           expect(screen.queryAllByText(/Elles sont fixées un jour par l'employeur et un jour par le salarié. L'employeur peut autoriser le regroupement de ces heures d'absence, si le salarié en fait la demande./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 6 des dispositions particulières pour les cadres/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(//)[0]).toBeInTheDocument();
           
     });
   
@@ -92,7 +91,6 @@
           expect(screen.queryAllByText(/Elles sont fixées un jour par l'employeur et un jour par le salarié. L'employeur peut autoriser le regroupement de ces heures d'absence, si le salarié en fait la demande./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 6 des dispositions particulières pour les cadres/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(//)[0]).toBeInTheDocument();
           
     });
   

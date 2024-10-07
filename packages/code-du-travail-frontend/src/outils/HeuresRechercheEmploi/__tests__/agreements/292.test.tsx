@@ -57,7 +57,6 @@
           expect(screen.queryAllByText(/Le salarié cadre peut s'absenter, en une ou plusieurs fois en accord avec l'employeur./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Avenant Cadres, Article 8/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(//)[0]).toBeInTheDocument();
           
     });
   
@@ -118,7 +117,6 @@
           expect(screen.queryAllByText(/Le salarié cadre peut s'absenter, en une ou plusieurs fois en accord avec l'employeur./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Avenant Cadres, Article 8/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(//)[0]).toBeInTheDocument();
           
     });
   
