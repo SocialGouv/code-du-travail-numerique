@@ -15,7 +15,7 @@ app:
   livenessProbe:
     failureThreshold: 15
     httpGet:
-      path: /health/
+      path: /api/health/
       port: http
       scheme: HTTP
     initialDelaySeconds: 30  # Délai avant la première vérification après le démarrage du pod
