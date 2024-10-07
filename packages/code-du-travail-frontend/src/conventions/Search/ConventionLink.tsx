@@ -90,7 +90,6 @@ export const ConventionLink = ({
   onClick,
   small = false,
 }: Props): JSX.Element => {
-  const { num } = convention;
   const router = useRouter();
 
   const clickHandler = () => {
