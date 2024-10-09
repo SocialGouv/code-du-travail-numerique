@@ -25,6 +25,7 @@ function TypeRemuneration({ name, onChange }) {
         {(props) => (
           <InputRadio
             id={`${name}-amount`}
+            data-testid={`${name}-amount`}
             label={
               <span>
                 En indiquant le

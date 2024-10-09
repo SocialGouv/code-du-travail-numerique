@@ -23,6 +23,7 @@ exports[`<StepInfosGenerales /> should render 1`] = `
     >
       <input
         class="sc-eZYNyq dHHdZ"
+        data-testid="contractType-cdd"
         id="contractType-cdd"
         name="contractType"
         type="radio"
@@ -85,6 +86,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
       <input
         checked=""
         class="sc-eZYNyq dHHdZ"
+        data-testid="contractType-cdd"
         id="contractType-cdd"
         name="contractType"
         type="radio"
@@ -262,6 +264,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
       <input
         checked=""
         class="sc-eZYNyq dHHdZ"
+        data-testid="contractType-cdd"
         id="contractType-cdd"
         name="contractType"
         type="radio"
@@ -438,6 +441,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     >
       <input
         class="sc-eZYNyq dHHdZ"
+        data-testid="contractType-cdd"
         id="contractType-cdd"
         name="contractType"
         type="radio"
