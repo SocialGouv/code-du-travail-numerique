@@ -45,7 +45,6 @@
           expect(screen.queryAllByText(/Les absences doivent être fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, l'employeur et le salarié décident à tour de rôle et pour chaque semaine les conditions de ces absences./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 9.1/)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(//)[0]).toBeInTheDocument();
           
     });
   
