@@ -961,6 +961,183 @@ exports[`DisplayContentContribution Headings should not add headings higher than
 </div>
 `;
 
+exports[`DisplayContentContribution Headings should not add headings higher than h6 for titles 1`] = `
+<div>
+  <div
+    class="sc-525da103-0 clIhqj"
+  >
+    <h6
+      class="sc-b879fc2d-0 hyiHle"
+    >
+      Mon title
+    </h6>
+    <strong>
+      Mon title
+    </strong>
+  </div>
+</div>
+`;
+
+exports[`DisplayContentContribution Headings should replace span with class "title" and "sub-titles" with heading 1`] = `
+<div>
+  <div
+    class="sc-525da103-0 clIhqj"
+  >
+    <h2
+      class="sc-b879fc2d-0 hyiHle"
+    >
+      Mon titre
+    </h2>
+    <h3
+      class="sc-b879fc2d-0 hyiHle"
+    >
+      Mon sous titre
+    </h3>
+  </div>
+</div>
+`;
+
+exports[`DisplayContentContribution Headings should replace span with with heading according to given title level 1`] = `
+<div>
+  <div
+    class="sc-525da103-0 clIhqj"
+  >
+    <h4
+      class="sc-b879fc2d-0 hyiHle"
+    >
+      Mon title
+    </h4>
+    <h5
+      class="sc-b879fc2d-0 hyiHle"
+    >
+      Mon title
+    </h5>
+  </div>
+</div>
+`;
+
+exports[`DisplayContentContribution Tables should add thead to table if not present and move table into a Table element 1`] = `
+<div
+  class="sc-525da103-0 clIhqj"
+>
+  <table
+    class="sc-4e3ba411-0 kKVapO"
+  >
+    <thead>
+      <tr>
+        <th
+          colspan="1"
+          rowspan="1"
+        />
+        <th
+          colspan="1"
+          rowspan="1"
+        >
+          <p>
+            Titre 1
+          </p>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          colspan="1"
+          rowspan="1"
+        >
+          <p>
+            Pour les 
+            <strong>
+              cadres
+            </strong>
+            , la prolongation ...
+          </p>
+        </td>
+        <td
+          colspan="1"
+          rowspan="1"
+        >
+          <ul>
+            <li>
+              <p>
+                L’employeur et le salarié donnent par écrit ou par mail.
+              </p>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`DisplayContentContribution Tables should keep whitespace in specific tag 1`] = `
+<div
+  class="sc-525da103-0 clIhqj"
+>
+  <p>
+    Ceci est un
+    <strong>
+       
+    </strong>
+    texte généré
+    <strong>
+       
+    </strong>
+    par 
+    <em>
+      tiptap 
+    </em>
+    avec des
+    <em>
+       
+    </em>
+    résidus
+    <em>
+       
+    </em>
+    de balise
+  </p>
+</div>
+`;
+
+exports[`DisplayContentContribution Tables should not change if thead is already present 1`] = `
+<div
+  class="sc-525da103-0 clIhqj"
+>
+  <table>
+    <tbody>
+      <tr>
+        <td
+          colspan="1"
+          rowspan="1"
+        >
+          <p>
+            Pour les 
+            <strong>
+              cadres
+            </strong>
+            , la prolongation ...
+          </p>
+        </td>
+        <td
+          colspan="1"
+          rowspan="1"
+        >
+          <ul>
+            <li>
+              <p>
+                L’employeur et le salarié donnent par écrit ou par mail.
+              </p>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
 exports[`DisplayContentContribution Tables should render correctly a table with multiple head lines 1`] = `
 <div>
   <div
@@ -1045,5 +1222,61 @@ exports[`DisplayContentContribution Tables should render correctly a table with 
       </tbody>
     </table>
   </div>
+</div>
+`;
+
+exports[`DisplayContentContribution should keep whitespace in specific tag 1`] = `
+<div
+  class="sc-525da103-0 clIhqj"
+>
+  <p>
+    Ceci est un
+    <strong>
+       
+    </strong>
+    texte généré
+    <strong>
+       
+    </strong>
+    par 
+    <em>
+      tiptap 
+    </em>
+    avec des
+    <em>
+       
+    </em>
+    résidus
+    <em>
+       
+    </em>
+    de balise
+  </p>
+</div>
+`;
+
+exports[`DisplayContentContribution should not remove space between strong and em tag in p tag 1`] = `
+<div
+  class="sc-525da103-0 clIhqj"
+>
+  <p>
+    <strong>
+      À noter :
+    </strong>
+     
+    <em>
+      L'échelon professionnel du salarié est habituellement mentionné 
+    </em>
+  </p>
+</div>
+`;
+
+exports[`DisplayContentContribution should return html 1`] = `
+<div
+  class="sc-525da103-0 clIhqj"
+>
+  <p>
+    hello
+  </p>
 </div>
 `;

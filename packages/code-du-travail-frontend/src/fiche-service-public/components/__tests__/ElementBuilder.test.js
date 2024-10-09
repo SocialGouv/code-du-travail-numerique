@@ -6,12 +6,7 @@ const tests = [
   {
     title: "renders when type is text",
     data: { type: "text", text: "moonshot" },
-    test: (container) =>
-      expect(container).toMatchInlineSnapshot(`
-        <div>
-          moonshot
-        </div>
-      `),
+    test: (container) => expect(container).toMatchSnapshot(),
   },
   {
     title: "renders when data is an array",
@@ -20,18 +15,12 @@ const tests = [
       { type: "text", text: "moonshot 0" },
       { type: "text", text: "moonshot 1" },
     ],
-    test: (container) =>
-      expect(container).toMatchInlineSnapshot(`
-        <div>
-          moonshot 0
-          moonshot 1
-        </div>
-      `),
+    test: (container) => expect(container).toMatchSnapshot(),
   },
   {
     title: "does not render anything when data is undefined",
     data: undefined,
-    test: (container) => expect(container).toMatchInlineSnapshot(`<div />`),
+    test: (container) => expect(container).toMatchSnapshot(),
   },
   {
     title: "does not render anything when element name is not recognized",
@@ -45,7 +34,7 @@ const tests = [
         { type: "text", text: "you shall not see this text in snapshot !" },
       ],
     },
-    test: (container) => expect(container).toMatchInlineSnapshot(`<div />`),
+    test: (container) => expect(container).toMatchSnapshot(),
   },
   {
     title: "does render stuff inside a styled block",
@@ -71,31 +60,7 @@ const tests = [
         children: [{ type: "text", text: "stuff 3" }],
       },
     ],
-    test: (container) =>
-      expect(container).toMatchInlineSnapshot(`
-        <div>
-          <div
-            class="sc-2a0a4b0a-0 sc-18dbc613-0 dLOZmV hGgpvs"
-          >
-            stuff 0
-          </div>
-          <div
-            class="sc-2a0a4b0a-0 sc-18dbc613-0 dLOZmV hGgpvs"
-          >
-            stuff 1
-          </div>
-          <div
-            class="sc-2a0a4b0a-0 sc-18dbc613-0 dLOZmV hGgpvs"
-          >
-            stuff 2
-          </div>
-          <div
-            class="sc-2a0a4b0a-0 sc-18dbc613-0 dLOZmV hGgpvs"
-          >
-            stuff 3
-          </div>
-        </div>
-      `),
+    test: (container) => expect(container).toMatchSnapshot(),
   },
   {
     title: "does render several elements",
@@ -146,30 +111,7 @@ const tests = [
         children: [{ type: "text", text: "LienInterne" }],
       },
     ],
-    test: (container) =>
-      expect(container).toMatchInlineSnapshot(`
-        <div>
-          Chapitre
-          SousChapitre
-          <i>
-            Expression (inside i)
-          </i>
-          <strong>
-            MiseEnEvidence (inside strong)
-          </strong>
-          <strong>
-            Valeur (inside strong)
-          </strong>
-          <p>
-            Paragraphe (inside p)
-          </p>
-          <sup>
-            Exposant (inside sup)
-          </sup>
-          LienIntra
-          LienInterne
-        </div>
-      `),
+    test: (container) => expect(container).toMatchSnapshot(),
   },
 ];
 

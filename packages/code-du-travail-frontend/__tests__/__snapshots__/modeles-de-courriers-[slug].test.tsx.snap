@@ -341,10 +341,10 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       class="sc-a384ed57-0 iEQrzr"
                     >
                       <div
-                        class="sc-2a0a4b0a-0 sc-b0f78d19-1 hPfzrL iOSTPf"
+                        class="sc-2a0a4b0a-0 sc-ac749cfa-1 hPfzrL bQBck"
                       >
                         <div
-                          class="sc-b0f78d19-0 irRqpc"
+                          class="sc-ac749cfa-0 OoRWv"
                         >
                           <a
                             class="sc-95bd4344-0 jFwEAm no-after"
@@ -352,7 +352,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                           >
                             <svg
                               aria-hidden="true"
-                              class="sc-b0f78d19-3 kWMtYX"
+                              class="sc-ac749cfa-3 sCxYQ"
                               fill="none"
                               viewBox="0 0 32 32"
                               xmlns="http://www.w3.org/2000/svg"
@@ -383,7 +383,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       </div>
                     </div>
                     <p
-                      class="sc-b0f78d19-4 fgvPWe"
+                      class="sc-ac749cfa-4 gHYJtZ"
                     >
                       Type: Modèle de document - Format: 
                       pdf
@@ -394,12 +394,12 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                        
                     </p>
                     <p
-                      class="sc-2a0a4b0a-0 sc-b0f78d19-2 dLOZmV Xqdkd"
+                      class="sc-2a0a4b0a-0 sc-ac749cfa-2 dLOZmV epwZhu"
                     >
                       Attention, chaque modèle de lettre proposé est à personnaliser selon votre situation et est susceptible d’évoluer suite à des changements de réglementation. Assurez-vous d’avoir la dernière version mise à jour avant toute utilisation.
                     </p>
                     <p
-                      class="sc-b0f78d19-5 fRuiFb"
+                      class="sc-ac749cfa-5 AcFrc"
                     >
                       <a
                         class="sc-95bd4344-0 jqYNvz no-after"
@@ -412,7 +412,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                         Ko)  
                         <svg
                           aria-hidden="true"
-                          class="sc-b0f78d19-3 kWMtYX"
+                          class="sc-ac749cfa-3 sCxYQ"
                           fill="none"
                           viewBox="0 0 32 32"
                           xmlns="http://www.w3.org/2000/svg"
