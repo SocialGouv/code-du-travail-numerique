@@ -17,7 +17,7 @@
     "test": "jest",
     "type-check": "tsc --noEmit",
     "format": "prettier --write \"./src/**/*.{js,ts}\"",
-    "format:check": "yarn format --check",
+    "format:check": "prettier --check \"./src/**/*.{js,ts}\"",
     "precommit": "lint-staged"
   },
   "devDependencies": {

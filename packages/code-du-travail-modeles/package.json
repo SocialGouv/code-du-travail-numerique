@@ -47,7 +47,7 @@
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
     "format": "prettier --write \"./src/**/*.{js,ts,yaml,yml,json}\"",
-    "format:check": "yarn format --check"
+    "format:check": "prettier --check \"./src/**/*.{js,ts,yaml,yml,json}\""
   },
   "dependencies": {
     "date-fns": "^2.28.0",

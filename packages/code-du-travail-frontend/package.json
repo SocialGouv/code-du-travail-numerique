@@ -30,7 +30,7 @@
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
     "format": "prettier --write \"**/*.{js,ts,tsx,jsx,json,md}\"",
-    "format:check": "yarn format --check"
+    "format:check": "prettier --check \"**/*.{js,ts,tsx,jsx,json,md}\""
   },
   "dependencies": {
     "@codegouvfr/react-dsfr": "^1.13.4",
