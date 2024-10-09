@@ -8,11 +8,11 @@
           () => `
         {
           "num": 1606,
-          "shortTitle": "Transports routiers et activités auxiliaires du transport",
-          "id": "KALICONT000005635624",
-          "title": "Transports routiers et activités auxiliaires du transport",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
-          "slug": "16-transports-routiers-et-activites-auxiliaires-du-transport"
+          "shortTitle": "shortTitle",
+          "id": "id",
+          "title": "title",
+          "url": "https://www.url.fr",
+          "slug": "1606"
         }
         `
         );
@@ -45,6 +45,7 @@
           expect(screen.queryAllByText(/Les absences doivent être fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, l'employeur et le salarié décident à tour de rôle et pour chaque semaine les conditions de ces absences./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 9.1/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(//)[0]).toBeInTheDocument();
           
     });
   

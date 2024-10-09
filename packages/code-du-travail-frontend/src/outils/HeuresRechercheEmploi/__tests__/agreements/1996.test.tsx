@@ -8,11 +8,11 @@
           () => `
         {
           "num": 1996,
-          "shortTitle": "Transports routiers et activités auxiliaires du transport",
-          "id": "KALICONT000005635624",
-          "title": "Transports routiers et activités auxiliaires du transport",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
-          "slug": "16-transports-routiers-et-activites-auxiliaires-du-transport"
+          "shortTitle": "shortTitle",
+          "id": "id",
+          "title": "title",
+          "url": "https://www.url.fr",
+          "slug": "1996"
         }
         `
         );
@@ -128,6 +128,7 @@
           expect(screen.queryAllByText(/Elles sont fixées un jour par l'employeur et un jour par le salarié. L'employeur peut autoriser le regroupement de ces heures d'absence, si le salarié en fait la demande/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 20/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(//)[0]).toBeInTheDocument();
           
     });
   
@@ -155,6 +156,7 @@
       expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 19/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(//)[0]).toBeInTheDocument();
           
     });
   
