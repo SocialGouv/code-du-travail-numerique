@@ -47,7 +47,11 @@ jobs:
       fail-fast: false
       matrix:
         repositories:
-          ["@socialgouv/cdtn-ui", "@cdt/frontend", "@socialgouv/modeles-social"]
+          [
+            "@cdt/frontend",
+            "@socialgouv/modeles-social",
+            "@socialgouv/cdtn-utils",
+          ]
     steps:
       - uses: actions/cache@v4
         name: Restore build
