@@ -8,11 +8,11 @@
           () => `
         {
           "num": 2098,
-          "shortTitle": "Transports routiers et activités auxiliaires du transport",
-          "id": "KALICONT000005635624",
-          "title": "Transports routiers et activités auxiliaires du transport",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
-          "slug": "16-transports-routiers-et-activites-auxiliaires-du-transport"
+          "shortTitle": "shortTitle",
+          "id": "id",
+          "title": "title",
+          "url": "https://www.url.fr",
+          "slug": "2098"
         }
         `
         );
@@ -70,7 +70,8 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/300/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/300/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/La prime de précarité/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 9 de l'accord du 10 mai 2010 relatif à l'activité d'optimisation de linéaires/)[0]).toBeInTheDocument();
           
@@ -117,7 +118,8 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/300/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/300/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/La prime de précarité/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 9 de l'accord du 13 février 2006 Activités de l'animation commerciale/)[0]).toBeInTheDocument();
           
@@ -164,7 +166,8 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/300/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/300/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/La prime de précarité/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article 4.1 de l'accord du 20 septembre 2002 \(1\) relatif aux dispositions spécifiques à l'accueil événementiel/)[0]).toBeInTheDocument();
           
@@ -256,7 +259,8 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/300/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/300/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/La prime de précarité/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article L1243-8 du code du travail/)[0]).toBeInTheDocument();
           expect(screen.queryAllByText(/Article L1243-9 du code du travail/)[0]).toBeInTheDocument();

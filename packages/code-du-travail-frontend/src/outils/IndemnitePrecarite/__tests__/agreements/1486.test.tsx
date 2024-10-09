@@ -8,11 +8,11 @@
           () => `
         {
           "num": 1486,
-          "shortTitle": "Transports routiers et activités auxiliaires du transport",
-          "id": "KALICONT000005635624",
-          "title": "Transports routiers et activités auxiliaires du transport",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
-          "slug": "16-transports-routiers-et-activites-auxiliaires-du-transport"
+          "shortTitle": "shortTitle",
+          "id": "id",
+          "title": "title",
+          "url": "https://www.url.fr",
+          "slug": "1486"
         }
         `
         );
@@ -70,7 +70,8 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/120/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/120/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/L'indemnité de fin de contrat/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/article 53 de l'annexe relative aux enquêteurs - Accord du 16 décembre 1991/)[0]).toBeInTheDocument();
           
@@ -128,7 +129,8 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/180/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/180/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/La prime d'intervention/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Chapitre III : Contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès/)[0]).toBeInTheDocument();
           
@@ -223,7 +225,8 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/300/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/300/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/La prime de précarité/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article L1243-8 du code du travail/)[0]).toBeInTheDocument();
           expect(screen.queryAllByText(/Article L1243-9 du code du travail/)[0]).toBeInTheDocument();

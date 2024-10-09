@@ -179,7 +179,7 @@ export function generateIndemnitePrecariteTree() {
         return isValid;
       });
 
-      const { refLabel, refUrl, rate } = situation;
+      const { refLabel, refUrl, rate, bonusLabel } = situation;
       if (!rate) {
         return legalSituation!.result;
       }
@@ -193,7 +193,7 @@ export function generateIndemnitePrecariteTree() {
         })) ?? [];
       return {
         refs,
-        texts: [result, rateNumber],
+        texts: [result, rateNumber, bonusLabel ?? "La prime de précarité"],
       };
     },
   });

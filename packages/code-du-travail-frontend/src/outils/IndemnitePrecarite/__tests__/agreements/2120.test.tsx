@@ -8,11 +8,11 @@
           () => `
         {
           "num": 2120,
-          "shortTitle": "Transports routiers et activités auxiliaires du transport",
-          "id": "KALICONT000005635624",
-          "title": "Transports routiers et activités auxiliaires du transport",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
-          "slug": "16-transports-routiers-et-activites-auxiliaires-du-transport"
+          "shortTitle": "shortTitle",
+          "id": "id",
+          "title": "title",
+          "url": "https://www.url.fr",
+          "slug": "2120"
         }
         `
         );
@@ -115,7 +115,8 @@
         
         
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/300/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/300/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/La prime de précarité/g)[0]).toBeInTheDocument();
           
         expect(screen.queryAllByText(/Article L1243-8 du code du travail/)[0]).toBeInTheDocument();
           expect(screen.queryAllByText(/Article L1243-9 du code du travail/)[0]).toBeInTheDocument();
