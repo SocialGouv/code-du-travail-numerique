@@ -8,11 +8,11 @@
           () => `
         {
           "num": 2120,
-          "shortTitle": "Transports routiers et activités auxiliaires du transport",
-          "id": "KALICONT000005635624",
-          "title": "Transports routiers et activités auxiliaires du transport",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
-          "slug": "16-transports-routiers-et-activites-auxiliaires-du-transport"
+          "shortTitle": "shortTitle",
+          "id": "id",
+          "title": "title",
+          "url": "https://www.url.fr",
+          "slug": "2120"
         }
         `
         );
