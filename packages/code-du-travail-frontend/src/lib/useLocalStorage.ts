@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
 import { Agreement, STORAGE_KEY_AGREEMENT } from "../outils/types";
-import { captureException } from "@sentry/nextjs";
 
 export function useLocalStorageForAgreementOnPageLoad(): [
   Agreement | any,
@@ -54,7 +53,6 @@ export const saveAgreementToLocalStorage = (agreement?: Agreement | null) => {
     }
   } catch (e) {
     console.error(e);
-    captureException(e);
   }
 };
 
@@ -66,7 +64,6 @@ export const getAgreementFromLocalStorage = (): Agreement | undefined => {
     }
   } catch (e) {
     console.error(e);
-    captureException(e);
   }
 };
 
@@ -77,6 +74,5 @@ export const removeAgreementFromLocalStorage = () => {
     }
   } catch (e) {
     console.error(e);
-    captureException(e);
   }
 };
