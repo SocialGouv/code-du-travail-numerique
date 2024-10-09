@@ -68,7 +68,7 @@ exports[`<Recherche /> should render 1`] = `
         </div>
         <button
           aria-label="menu principal"
-          class="sc-95bd4344-0 jfFcPD sc-826d929a-1 gOztMa sc-c4241839-0 kVABEP"
+          class="sc-95bd4344-0 jfFcPD sc-826d929a-1 gOztMa sc-46211e62-0 fntMFM"
         >
           <svg
             aria-hidden="true"
@@ -131,7 +131,7 @@ exports[`<Recherche /> should render 1`] = `
         >
           <form
             action="/recherche"
-            class="sc-90ac636b-0 etzoiS"
+            class="sc-830662af-0 fdcWhS"
             role="search"
           >
             <div
@@ -151,7 +151,7 @@ exports[`<Recherche /> should render 1`] = `
               aria-expanded="false"
               aria-labelledby="downshift-:r0:-label"
               autocomplete="off"
-              class="sc-90ac636b-5 fsmcqO"
+              class="sc-830662af-5 jllWmm"
               id="search-input"
               placeholder="congés payés, durée de préavis"
               role="combobox"
@@ -160,19 +160,19 @@ exports[`<Recherche /> should render 1`] = `
             />
             <ul
               aria-labelledby="downshift-:r0:-label"
-              class="sc-90ac636b-6 cmHOfx"
+              class="sc-830662af-6 dEapIx"
               id="downshift-:r0:-menu"
               role="listbox"
             />
             <button
               aria-label="Lancer ma recherche"
-              class="sc-95bd4344-0 jqYNvz sc-90ac636b-3 jUYkJP"
+              class="sc-95bd4344-0 jqYNvz sc-830662af-3 duukAP"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-90ac636b-1 eMUwwz"
+                class="sc-830662af-1 ieisKv"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"

@@ -76,7 +76,7 @@ export type StepData<
     | ResultStoreError
     | AgreementStoreError
     | CommonAgreementStoreError
-    | CommonInformationsStoreError
+    | CommonInformationsStoreError,
 > = {
   input: T;
   error: U;

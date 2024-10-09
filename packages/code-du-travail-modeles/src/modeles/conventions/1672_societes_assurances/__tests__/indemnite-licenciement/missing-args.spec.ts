@@ -11,7 +11,6 @@ const engine = new IndemniteLicenciementPublicodes(
 
 describe("Validation de l'ordre des questions : CC 1672", () => {
   describe("Affiche les questions", () => {
-     
     let result: PublicodesData<PublicodesIndemniteLicenciementResult>;
 
     beforeEach(() => {

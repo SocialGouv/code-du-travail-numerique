@@ -62,7 +62,7 @@ exports[`<FicheMT /> should render 1`] = `
         >
           <form
             action="/recherche"
-            class="sc-90ac636b-0 etzoiS"
+            class="sc-830662af-0 fdcWhS"
             role="search"
           >
             <div
@@ -82,7 +82,7 @@ exports[`<FicheMT /> should render 1`] = `
               aria-expanded="false"
               aria-labelledby="downshift-:r0:-label"
               autocomplete="off"
-              class="sc-90ac636b-5 jHCKbL"
+              class="sc-830662af-5 jDcVOD"
               id="floating-search"
               placeholder="Rechercher"
               role="combobox"
@@ -91,19 +91,19 @@ exports[`<FicheMT /> should render 1`] = `
             />
             <ul
               aria-labelledby="downshift-:r0:-label"
-              class="sc-90ac636b-6 cSRDPF"
+              class="sc-830662af-6 jvaqix"
               id="downshift-:r0:-menu"
               role="listbox"
             />
             <button
               aria-label="Lancer ma recherche"
-              class="sc-95bd4344-0 dxXsic sc-90ac636b-4 WWTkl"
+              class="sc-95bd4344-0 dxXsic sc-830662af-4 hWCjEV"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-90ac636b-1 eMUwwz"
+                class="sc-830662af-1 ieisKv"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +148,7 @@ exports[`<FicheMT /> should render 1`] = `
         </div>
         <button
           aria-label="menu principal"
-          class="sc-95bd4344-0 jfFcPD sc-826d929a-1 gOztMa sc-c4241839-0 kVABEP"
+          class="sc-95bd4344-0 jfFcPD sc-826d929a-1 gOztMa sc-46211e62-0 fntMFM"
         >
           <svg
             aria-hidden="true"
@@ -456,19 +456,19 @@ exports[`<FicheMT /> should render 1`] = `
                   class="sc-f2a41fcc-2 bdFsMG"
                 >
                   <div
-                    class="sc-ef7c173-0 dYghnF"
+                    class="sc-338a722f-0 jXRpaP"
                   >
                     <button
-                      class="sc-ef7c173-1 eNIxDW no-after spacing-left"
+                      class="sc-338a722f-1 kiGnTA no-after spacing-left"
                       title="Partager sur Facebook"
                       type="button"
                     >
                       <span
-                        class="sc-ef7c173-3 dTKkFC"
+                        class="sc-338a722f-3 hmrQFw"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-ef7c173-4 iQRswg"
+                          class="sc-338a722f-4 VgzwS"
                           fill="none"
                           viewBox="0 0 16 16"
                           xmlns="http://www.w3.org/2000/svg"
@@ -486,16 +486,16 @@ exports[`<FicheMT /> should render 1`] = `
                       </span>
                     </button>
                     <a
-                      class="sc-ef7c173-2 fyqTbA spacing-left"
+                      class="sc-338a722f-2 eMvIcS spacing-left"
                       href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Fiche%20MT%20test&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                       title="Envoyer par email"
                     >
                       <span
-                        class="sc-ef7c173-3 dTKkFC"
+                        class="sc-338a722f-3 hmrQFw"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-ef7c173-4 iQRswg"
+                          class="sc-338a722f-4 VgzwS"
                           fill="none"
                           viewBox="0 0 16 16"
                           xmlns="http://www.w3.org/2000/svg"
@@ -517,16 +517,16 @@ exports[`<FicheMT /> should render 1`] = `
                       </span>
                     </a>
                     <button
-                      class="sc-ef7c173-1 eNIxDW spacing-left"
+                      class="sc-338a722f-1 kiGnTA spacing-left"
                       title="Partager sur LinkedIn"
                       type="button"
                     >
                       <span
-                        class="sc-ef7c173-3 dTKkFC"
+                        class="sc-338a722f-3 hmrQFw"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-ef7c173-4 iQRswg"
+                          class="sc-338a722f-4 VgzwS"
                           fill="none"
                           viewBox="0 0 16 16"
                           xmlns="http://www.w3.org/2000/svg"
@@ -547,16 +547,16 @@ exports[`<FicheMT /> should render 1`] = `
                       class="sc-95cc8fb1-0 iHYHyU"
                     >
                       <button
-                        class="sc-ef7c173-1 eNIxDW spacing-left"
+                        class="sc-338a722f-1 kiGnTA spacing-left"
                         title="Plus d’options"
                         type="button"
                       >
                         <span
-                          class="sc-ef7c173-3 dTKkFC"
+                          class="sc-338a722f-3 hmrQFw"
                         >
                           <svg
                             aria-hidden="true"
-                            class="sc-ef7c173-4 iQRswg"
+                            class="sc-338a722f-4 VgzwS"
                             fill="none"
                             viewBox="0 0 16 16"
                             xmlns="http://www.w3.org/2000/svg"
@@ -598,20 +598,20 @@ exports[`<FicheMT /> should render 1`] = `
               Partager ce contenu : 
             </p>
             <div
-              class="sc-ef7c173-0 dYghnF"
+              class="sc-338a722f-0 jXRpaP"
             >
               <button
-                class="sc-ef7c173-1 eNIxDW no-after spacing-left"
+                class="sc-338a722f-1 kiGnTA no-after spacing-left"
                 tabindex="-1"
                 title="Partager sur Facebook"
                 type="button"
               >
                 <span
-                  class="sc-ef7c173-3 dTKkFC"
+                  class="sc-338a722f-3 hmrQFw"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-ef7c173-4 iQRswg"
+                    class="sc-338a722f-4 VgzwS"
                     fill="none"
                     viewBox="0 0 16 16"
                     xmlns="http://www.w3.org/2000/svg"
@@ -629,17 +629,17 @@ exports[`<FicheMT /> should render 1`] = `
                 </span>
               </button>
               <a
-                class="sc-ef7c173-2 fyqTbA spacing-left"
+                class="sc-338a722f-2 eMvIcS spacing-left"
                 href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Fiche%20MT%20test&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                 tabindex="-1"
                 title="Envoyer par email"
               >
                 <span
-                  class="sc-ef7c173-3 dTKkFC"
+                  class="sc-338a722f-3 hmrQFw"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-ef7c173-4 iQRswg"
+                    class="sc-338a722f-4 VgzwS"
                     fill="none"
                     viewBox="0 0 16 16"
                     xmlns="http://www.w3.org/2000/svg"
@@ -661,17 +661,17 @@ exports[`<FicheMT /> should render 1`] = `
                 </span>
               </a>
               <button
-                class="sc-ef7c173-1 eNIxDW spacing-left"
+                class="sc-338a722f-1 kiGnTA spacing-left"
                 tabindex="-1"
                 title="Partager sur LinkedIn"
                 type="button"
               >
                 <span
-                  class="sc-ef7c173-3 dTKkFC"
+                  class="sc-338a722f-3 hmrQFw"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-ef7c173-4 iQRswg"
+                    class="sc-338a722f-4 VgzwS"
                     fill="none"
                     viewBox="0 0 16 16"
                     xmlns="http://www.w3.org/2000/svg"
@@ -692,17 +692,17 @@ exports[`<FicheMT /> should render 1`] = `
                 class="sc-95cc8fb1-0 iHYHyU"
               >
                 <button
-                  class="sc-ef7c173-1 eNIxDW spacing-left"
+                  class="sc-338a722f-1 kiGnTA spacing-left"
                   tabindex="-1"
                   title="Plus d’options"
                   type="button"
                 >
                   <span
-                    class="sc-ef7c173-3 dTKkFC"
+                    class="sc-338a722f-3 hmrQFw"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-ef7c173-4 iQRswg"
+                      class="sc-338a722f-4 VgzwS"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"

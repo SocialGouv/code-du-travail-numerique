@@ -1,10 +1,10 @@
 import { DocumentElasticResult } from "./type";
 import { SearchRequest } from "@elastic/elasticsearch/lib/api/types";
-import {elasticDocumentsIndex, elasticsearchClient} from "../../api/utils";
+import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 
 export const fetchDocument = async <
   V,
-  K extends keyof DocumentElasticResult<V>
+  K extends keyof DocumentElasticResult<V>,
 >(
   fields: K[],
   body: SearchRequest

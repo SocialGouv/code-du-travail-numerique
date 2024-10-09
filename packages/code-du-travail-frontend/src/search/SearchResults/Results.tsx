@@ -122,13 +122,11 @@ export const ListLink = ({
   if (source === SOURCES.EXTERNALS && url) {
     return (
       <CallToActionTile
-        action={hideAction ? undefined : action ?? "Consulter"}
+        action={hideAction ? undefined : (action ?? "Consulter")}
         target="_blank"
         rel="noreferer noopener"
         className="no-after"
-        aria-label={`${subtitle} ${title} ${summarize(
-          description
-        )} ${action} (nouvelle fenêtre)`}
+        aria-label={`${subtitle} ${title} ${summarize(description)} ${action} (nouvelle fenêtre)`}
         {...tileCommonProps}
         custom={false}
         titleTagType="h3"
@@ -151,16 +149,14 @@ export const ListLink = ({
   let ResultTile = LinkedTile;
   if (source === SOURCES.TOOLS || source === SOURCES.LETTERS) {
     ResultTile = CallToActionTile;
-    tileCommonProps.action = hideAction ? undefined : action ?? "Consulter";
+    tileCommonProps.action = hideAction ? undefined : (action ?? "Consulter");
     tileCommonProps.custom = true;
   }
   if (source === SOURCES.CONTRIBUTIONS) {
     tileCommonProps.custom = true;
   }
 
-  const href = `/${getRouteBySource(source)}/${rootSlug}${
-    query ? `?q=${query}` : ""
-  }${anchor ? `#${anchor}` : ""}`;
+  const href = `/${getRouteBySource(source)}/${rootSlug}${query ? `?q=${query}` : ""}${anchor ? `#${anchor}` : ""}`;
   return <ResultTile {...tileCommonProps} href={href} />;
 };
 ListLink.propTypes = {

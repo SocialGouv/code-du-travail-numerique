@@ -37,13 +37,9 @@ const apiEnterprises = function createFetcher(
     return Promise.reject(siretNumberError);
   }
 
-  const url = `${SITE_URL}/api/enterprises?q=${encodeURIComponent(
-    searchParams.query
-  )}${
+  const url = `${SITE_URL}/api/enterprises?q=${encodeURIComponent(searchParams.query)}${
     searchParams.apiGeoResult
-      ? `&cp=${encodeURIComponent(
-          searchParams.apiGeoResult.selectedPostCode.join(",")
-        )}`
+      ? `&cp=${encodeURIComponent(searchParams.apiGeoResult.selectedPostCode.join(","))}`
       : ""
   }`;
 

@@ -15,9 +15,7 @@ export const Themes = ({ items, query }) => (
           title={title}
           striped
           key={slug}
-          href={`/${getRouteBySource(source)}/${slug}${
-            query ? `?q=${query}` : ""
-          }`}
+          href={`/${getRouteBySource(source)}/${slug}${query ? `?q=${query}` : ""}`}
         />
       ))}
     </Grid>

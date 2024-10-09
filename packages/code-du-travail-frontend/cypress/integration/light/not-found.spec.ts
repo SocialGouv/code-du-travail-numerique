@@ -2,7 +2,10 @@ describe("Not found", () => {
   it("page should show valid page to user", () => {
     cy.visit("/banane", { failOnStatusCode: false });
     cy.get("main").should("contain", "Erreur 404");
-    cy.findByRole("heading", { level: 1 }).should("have.text", "Page non trouvée");
+    cy.findByRole("heading", { level: 1 }).should(
+      "have.text",
+      "Page non trouvée"
+    );
 
     cy.contains("Page d'accueil")
       .should("have.prop", "href")

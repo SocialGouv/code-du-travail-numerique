@@ -198,7 +198,7 @@ export function StepResult({ form }: WizardStepProps): JSX.Element {
             refUrl: situation.refUrl,
           },
         ]
-      : situation.refs ?? [];
+      : (situation.refs ?? []);
 
   return (
     <>

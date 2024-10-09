@@ -4,7 +4,7 @@ import { captureException } from "@sentry/nextjs";
 
 export function useLocalStorageForAgreementOnPageLoad(): [
   Agreement | any,
-  (a?: any) => void
+  (a?: any) => void,
 ] {
   const [value, setValue] = useState(null);
 

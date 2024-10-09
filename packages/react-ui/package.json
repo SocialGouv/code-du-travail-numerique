@@ -17,8 +17,6 @@
     "build:dev": "swc ./src -d lib --strip-leading-paths",
     "type-check": "tsc --noEmit",
     "dev": "npm run build:dev -- --watch",
-    "lint": "stylelint 'src/**/*.js'",
-    "precommit": "lint-staged",
     "start": "storybook dev -p 6006",
     "svg": "svgo --config=src/icons/mono.config.js -f src/icons/src/monochrome && svgo --config=src/icons/bi.config.js -f src/icons/src/bicolor && svgr --config-file=src/icons/svgr.config.js -d src/icons/components src/icons/src",
     "build-storybook": "storybook build -c .storybook -o .out",
@@ -58,18 +56,11 @@
     "gh-pages": "^4.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "lint-staged": "^13.0.0",
     "prop-types": "^15.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "regenerator-runtime": "^0.14.0",
     "storybook": "^7.0.18",
-    "stylelint": "^14.16.0",
-    "stylelint-config-rational-order": "^0.1.2",
-    "stylelint-config-standard-scss": "^6.1.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-order": "^5.0.0",
-    "stylelint-processor-styled-components": "^1.10.0",
     "svgo": "^2.3.1",
     "typescript": "^5.5.4",
     "vite": "^4.3.9"
@@ -79,12 +70,6 @@
     "react",
     "ui"
   ],
-  "lint-staged": {
-    "src/**/*.{ts,js}": [
-      "yarn lint:css",
-      "yarn lint:js --fix --quiet"
-    ]
-  },
   "browserslist": [
     "last 2 version",
     "> 1% in FR",

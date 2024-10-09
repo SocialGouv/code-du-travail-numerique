@@ -80,19 +80,19 @@ describe("Indemnité licenciement - CC 1527", () => {
       .click(ui.salary.hasPartialTime.non.get())
       .click(ui.salary.hasSameSalary.non.get())
       .setInputs(ui.salary.salaries.getAll(), [
-      "2100",
-      "2100",
-      "2100",
-      "1900",
-      "2090",
-      "2500",
-      "2080",
-      "2000",
-      "1999",
-      "1995",
-      "1990",
-      "1990",
-    ])
+        "2100",
+        "2100",
+        "2100",
+        "1900",
+        "2090",
+        "2500",
+        "2080",
+        "2000",
+        "1999",
+        "1995",
+        "1990",
+        "1990",
+      ])
       .click(ui.salary.agreement1517.hasContractSalary.non.get())
       .click(ui.next.get());
 

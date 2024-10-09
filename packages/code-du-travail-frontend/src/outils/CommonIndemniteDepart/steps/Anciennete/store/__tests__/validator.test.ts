@@ -297,7 +297,9 @@ describe("Ancienneté store", () => {
       }
     );
     expect(result.isValid).toBe(false);
-    expect(result.errorState.errorAbsencePeriods?.absences).toStrictEqual(undefined);
+    expect(result.errorState.errorAbsencePeriods?.absences).toStrictEqual(
+      undefined
+    );
   });
 
   it("date de notification invalide", () => {
@@ -320,7 +322,8 @@ describe("Ancienneté store", () => {
       }
     );
     expect(result.isValid).toBe(false);
-    expect(result.errorState.errorDateNotification).toEqual("La date de notification est invalide");
+    expect(result.errorState.errorDateNotification).toEqual(
+      "La date de notification est invalide"
+    );
   });
-
 });

@@ -4,7 +4,7 @@ import { EditorialContentElasticDocument } from "@socialgouv/cdtn-types";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 
 export const fetchAllInformations = async <
-  K extends keyof EditorialContentElasticDocument
+  K extends keyof EditorialContentElasticDocument,
 >(
   fields: K[],
   sortBy?: K

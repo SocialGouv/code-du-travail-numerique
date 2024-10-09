@@ -49,8 +49,8 @@ const DroitDuTravail = () => {
               <p>
                 <strong>
                   Le droit du travail est l’ensemble des règles juridiques
-                  applicables aux relations entre employeurs privés et salariés, à
-                  l’occasion du travail.
+                  applicables aux relations entre employeurs privés et salariés,
+                  à l’occasion du travail.
                 </strong>
               </p>
               <p>
@@ -72,10 +72,11 @@ const DroitDuTravail = () => {
                     Le droit du travail, ce n’est pas…
                   </InsertTitle>
                   <Paragraph noMargin>
-                    Le droit du travail ne concerne pas les travailleurs qui sont
-                    soumis au droit public (par exemple, les fonctionnaires), les
-                    travailleurs indépendants (artisan, commerçant, professions
-                    libérales…), les bénévoles et les dirigeants d’entreprise.
+                    Le droit du travail ne concerne pas les travailleurs qui
+                    sont soumis au droit public (par exemple, les
+                    fonctionnaires), les travailleurs indépendants (artisan,
+                    commerçant, professions libérales…), les bénévoles et les
+                    dirigeants d’entreprise.
                   </Paragraph>
                 </IconStripe>
               </Wrapper>
@@ -86,9 +87,8 @@ const DroitDuTravail = () => {
         <Hierarchy hash={hash} />
       </Section>
     </Layout>
-  )
-}
-
+  );
+};
 
 export default DroitDuTravail;
 

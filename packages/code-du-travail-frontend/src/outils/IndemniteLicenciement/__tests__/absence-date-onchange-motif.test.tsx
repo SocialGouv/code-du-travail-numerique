@@ -24,7 +24,11 @@ describe("Indemnité licenciement", () => {
     let userAction: UserAction;
     beforeEach(() => {
       rendering = render(
-        <CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />
+        <CalculateurIndemniteLicenciement
+          icon={""}
+          title={""}
+          displayTitle={""}
+        />
       );
       userAction = new UserAction();
       userAction
