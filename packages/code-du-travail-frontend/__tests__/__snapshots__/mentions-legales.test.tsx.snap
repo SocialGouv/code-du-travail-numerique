@@ -171,7 +171,7 @@ exports[`<MentionLegales /> should render 1`] = `
       aria-expanded="false"
       aria-haspopup="dialog"
       aria-label="Donner votre avis"
-      class="sc-gweoQa cuLwRV"
+      class="sc-gweoQa hvzWpe"
       data-tally-open="3jLRW1"
       data-tally-overlay="1"
       data-tally-width="500"
@@ -179,7 +179,7 @@ exports[`<MentionLegales /> should render 1`] = `
       <img
         alt="Suggestion"
         aria-hidden="true"
-        class="sc-eIcdZJ eFBa-DC"
+        class="sc-eIcdZJ eIfsZK"
         src="/static/assets/img/emoj-wave.png"
       />
       <span>

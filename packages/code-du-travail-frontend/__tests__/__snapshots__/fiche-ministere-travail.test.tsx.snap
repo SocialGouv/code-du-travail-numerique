@@ -171,7 +171,7 @@ exports[`<FicheMT /> should render 1`] = `
       aria-expanded="false"
       aria-haspopup="dialog"
       aria-label="Donner votre avis"
-      class="sc-djVXDX eyMLIL"
+      class="sc-djVXDX dHeNbI"
       data-tally-open="3jLRW1"
       data-tally-overlay="1"
       data-tally-width="500"
@@ -179,7 +179,7 @@ exports[`<FicheMT /> should render 1`] = `
       <img
         alt="Suggestion"
         aria-hidden="true"
-        class="sc-epRvzc kmQRiJ"
+        class="sc-epRvzc deevlh"
         src="/static/assets/img/emoj-wave.png"
       />
       <span>
