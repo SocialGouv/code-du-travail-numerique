@@ -2,6 +2,17 @@ contrat salarié . convention collective . habillement commerce succursales . in
   applicable si: indemnité de licenciement
   valeur: oui
 
+contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle:
+  question: Quelle est la catégorie professionnelle du salarié ?
+  titre: Catégorie professionnelle
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  cdtn:
+    type: liste
+    valeurs:
+      Employés: "'Employés'"
+      Agents de maîtrise: "'Agents de maîtrise'"
+      Cadres: "'Cadres'"
+
 contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . salaire mensuel des 3 derniers mois:
   valeur: non
   unité: €

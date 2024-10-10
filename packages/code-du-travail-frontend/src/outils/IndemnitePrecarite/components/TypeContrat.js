@@ -28,6 +28,7 @@ function TypeContrat({ name, onChange }) {
         {(props) => (
           <InputRadio
             id={`${name}-cdd`}
+            data-testId={`${name}-cdd`}
             label="Contrat à durée déterminée (CDD)"
             {...props.input}
             onChange={(...changeProps) => {

@@ -22,6 +22,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   >
     <input
       class="sc-eZYNyq dHHdZ"
+      data-testid="typeRemuneration-amount"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
@@ -96,6 +97,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       >
         <input
           class="sc-dBmzty eccLNx"
+          data-testid="currency"
           id="2"
           name="salaires[0].salaire"
           type="number"
@@ -148,6 +150,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       >
         <input
           class="sc-dBmzty eccLNx"
+          data-testid="currency"
           id="4"
           name="salaires[1].salaire"
           type="number"
@@ -234,6 +237,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     <input
       checked=""
       class="sc-eZYNyq dHHdZ"
+      data-testid="typeRemuneration-amount"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
@@ -299,6 +303,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     >
       <input
         class="sc-dBmzty eccLNx"
+        data-testid="currency"
         id="currency-1"
         name="salaire"
         type="number"
