@@ -4,15 +4,24 @@ import { Header } from "./header";
 import { NeedMoreInfo } from "./infos";
 import { SkipLinks } from "./SkipLinks";
 
-export const DsfrLayout = ({ children }: { children: React.ReactNode }) => {
+type Props = {
+  children: React.ReactNode;
+  doNotWrapInContainer?: boolean;
+};
+
+export const DsfrLayout = (props: Props) => {
   return (
     <html>
       <body>
         <SkipLinks />
         <Header />
-        <main className={fr.cx("fr-container")} id="main">
-          {children}
-        </main>
+        {props.doNotWrapInContainer ? (
+          <main id="main">{props.children}</main>
+        ) : (
+          <main className={fr.cx("fr-container")} id="main">
+            {props.children}
+          </main>
+        )}
         <NeedMoreInfo />
         <Footer />
       </body>
