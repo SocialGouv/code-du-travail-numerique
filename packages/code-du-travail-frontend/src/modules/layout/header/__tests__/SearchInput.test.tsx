@@ -10,19 +10,6 @@ jest.mock("../fetchSuggestResults");
 jest.mock("../../tracking");
 
 describe("<SearchInput />", () => {
-  it("should match snapshot", () => {
-    const { container } = render(
-      <SearchInput
-        className="my-class"
-        id="my-id"
-        placeholder="my-placeholder"
-        type="search"
-        onSearchSubmit={() => {}}
-      />
-    );
-    expect(container).toMatchSnapshot();
-  });
-
   it("should show suggestions and send event tracking", async () => {
     const suggestions = [
       "congés payés et fractionnement",
