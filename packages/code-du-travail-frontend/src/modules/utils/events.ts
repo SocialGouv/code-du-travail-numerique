@@ -13,7 +13,7 @@ type Props = {
 
 export function sendEvent(props: Props) {
   if (props.value && !props.name) {
-    throw new Error("value should be used with name");
+    throw new Error("[Event Matomo] value should be used with name");
   }
   if (props.name && props.value) {
     push([
