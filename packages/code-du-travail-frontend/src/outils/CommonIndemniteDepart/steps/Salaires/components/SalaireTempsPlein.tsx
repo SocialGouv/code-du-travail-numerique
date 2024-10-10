@@ -137,9 +137,7 @@ export const SalaireTempsPlein = ({
                 {index < 3 && !noPrime && (
                   <>
                     <Input
-                      title={`Renseignez la prime exceptionnelle pour le mois ${
-                        index + 1
-                      } ici`}
+                      title={`Renseignez la prime exceptionnelle pour le mois ${index + 1} ici`}
                       id={`prime.${index}`}
                       name={`prime.${index}`}
                       type="number"

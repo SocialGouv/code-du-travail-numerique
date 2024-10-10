@@ -1,9 +1,7 @@
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { render } from "@testing-library/react";
-import Router from "next/router";
-import React from "react";
-
 import Answer from "../Answer";
+import React from "react";
 
 function renderAnswer(props) {
   return render(
@@ -133,12 +131,6 @@ describe("<Answer />", () => {
         `[href*="${getRouteBySource(SOURCES.LETTERS)}"]`
       ).length
     ).toBe(0);
-    expect(container).toMatchSnapshot();
-  });
-
-  it("should renders back to results link", () => {
-    Router.router.query.q = "camion";
-    const { container } = renderAnswer();
     expect(container).toMatchSnapshot();
   });
 });

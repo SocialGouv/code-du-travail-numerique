@@ -20,9 +20,7 @@ function ModeleCourrier(props: LetterModelProps): JSX.Element {
     breadcrumbs,
     slug,
   } = props;
-  const category = `Modèle ${
-    type !== "fichier" ? `de ${type}` : "à télécharger"
-  }`;
+  const category = `Modèle ${type !== "fichier" ? `de ${type}` : "à télécharger"}`;
   return (
     <Layout>
       <Metas

@@ -51,18 +51,18 @@ export interface ISeniority<T extends SupportedCc> {
 export type SeniorityRequiredProps<T> = T extends SupportedCc.IDCC3248
   ? CC3248SeniorityRequiredProps
   : T extends SupportedCc.IDCC650
-  ? CC650SeniorityRequiredProps
-  : DefaultSeniorityRequiredProps;
+    ? CC650SeniorityRequiredProps
+    : DefaultSeniorityRequiredProps;
 
 export type SeniorityProps<T> = T extends SupportedCc.IDCC0016
   ? CC0016SeniorityProps
   : T extends SupportedCc.IDCC1672
-  ? CC1672SeniorityProps
-  : T extends SupportedCc.IDCC3248
-  ? CC3248SeniorityProps
-  : T extends SupportedCc.IDCC650
-  ? CC650SeniorityProps
-  : DefaultSeniorityProps;
+    ? CC1672SeniorityProps
+    : T extends SupportedCc.IDCC3248
+      ? CC3248SeniorityProps
+      : T extends SupportedCc.IDCC650
+        ? CC650SeniorityProps
+        : DefaultSeniorityProps;
 
 export type SeniorityResult = {
   value: number;

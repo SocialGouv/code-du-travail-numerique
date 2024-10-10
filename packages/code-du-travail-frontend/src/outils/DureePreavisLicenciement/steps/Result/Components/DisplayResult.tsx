@@ -44,8 +44,8 @@ const DisplayResult = ({
                 ? agreementSituation.answer
                 : "Aucun préavis."
               : idcc === 0
-              ? "La convention collective n'a pas été renseignée."
-              : "La convention collective n'a pas été traitée par nos services."}
+                ? "La convention collective n'a pas été renseignée."
+                : "La convention collective n'a pas été traitée par nos services."}
           </strong>
         </li>
       </ul>

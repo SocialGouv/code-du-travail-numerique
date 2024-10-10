@@ -15,9 +15,7 @@ export const Law = ({ items, query }) => (
           title={title}
           onClick={() => reportSelectionToMatomo(source, slug, url, algo)}
           key={slug}
-          href={`/${getRouteBySource(source)}/${slug}${
-            query ? `?q=${query}` : ""
-          }`}
+          href={`/${getRouteBySource(source)}/${slug}${query ? `?q=${query}` : ""}`}
         >
           {summarize(description)}
         </LinkedTile>

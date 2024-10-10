@@ -1,25 +1,25 @@
 {
-  "type":"element",
-  "name":"Liste",
-  "attributes":{
-    "type":"puce"
+  "type": "element",
+  "name": "Liste",
+  "attributes": {
+    "type": "puce"
   },
-  "children":[
+  "children": [
     {
-      "type":"element",
-      "name":"Item",
-      "children":[
+      "type": "element",
+      "name": "Item",
+      "children": [
         {
-          "type":"element",
-          "name":"Titre",
-          "children":[
+          "type": "element",
+          "name": "Titre",
+          "children": [
             {
-              "type":"element",
-              "name":"Paragraphe",
-              "children":[
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
                 {
-                  "type":"text",
-                  "text":"title"
+                  "type": "text",
+                  "text": "title"
                 }
               ]
             }
@@ -28,16 +28,16 @@
       ]
     },
     {
-      "type":"element",
-      "name":"Item",
-      "children":[
+      "type": "element",
+      "name": "Item",
+      "children": [
         {
-          "type":"element",
-          "name":"Paragraphe",
-          "children":[
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
             {
-              "type":"text",
-              "text":"ok"
+              "type": "text",
+              "text": "ok"
             }
           ]
         }

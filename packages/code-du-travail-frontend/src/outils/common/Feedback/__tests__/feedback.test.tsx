@@ -105,6 +105,12 @@ describe("Etant donné un composant Feedback", () => {
           expect(matopush).toHaveBeenCalledWith([
             "trackEvent",
             "feedback_simulateurs",
+            "Comment_s_est_passée_la_simulation",
+            "moyen",
+          ]);
+          expect(matopush).toHaveBeenCalledWith([
+            "trackEvent",
+            "feedback_simulateurs",
             "Facilité_utilisation_simulateur",
             "pas_du_tout",
           ]);
@@ -113,18 +119,6 @@ describe("Etant donné un composant Feedback", () => {
             "feedback_simulateurs",
             "Clarté_questions",
             "moyen",
-          ]);
-          expect(matopush).toHaveBeenCalledWith([
-            "trackEvent",
-            "feedback_simulateurs",
-            "Clarté_résultat",
-            "oui",
-          ]);
-          expect(matopush).toHaveBeenCalledWith([
-            "trackEvent",
-            "feedback_suggestion",
-            "test",
-            "mock",
           ]);
           expect(ui.questionnaireEnd.title.query()).toBeInTheDocument();
           expect(ui.questionnaireEnd.description.query()).toBeInTheDocument();

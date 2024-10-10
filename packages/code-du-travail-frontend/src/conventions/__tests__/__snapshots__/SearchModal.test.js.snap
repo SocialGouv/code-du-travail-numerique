@@ -32,28 +32,28 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
     >
       <div>
         <div
-          class="sc-bypJrT nMTGe"
+          class="sc-19478701-0 jZYVgz"
           data-reach-dialog-overlay=""
         >
           <div
             aria-label="Rechercher votre convention collective"
             aria-modal="true"
-            class="sc-ddjGPC byKttK"
+            class="sc-19478701-1 hQHZiT"
             data-reach-dialog-content=""
             role="dialog"
             tabindex="-1"
           >
             <label
-              class="sc-dkmUuB iZQlLq"
+              class="sc-75bae102-0 jzkYDa"
               for="convention-search"
             >
               Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
             </label>
             <div
-              class="sc-sLsrZ kGdGKi sc-knuQbY eFoMEV"
+              class="sc-669fe731-0 amSvQ sc-7029e335-0 btjXXy"
             >
               <input
-                class="sc-dBmzty djgFPK"
+                class="sc-669fe731-1 bBYNqO"
                 id="convention-search"
                 name="q"
                 placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -62,16 +62,16 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               />
             </div>
             <p
-              class="sc-ERObt bQSJAW"
+              class="sc-7029e335-1 eQVARQ"
             >
               Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
               <span
-                class="sc-dNsVcS fiLSmW"
+                class="sc-7029e335-2 emEtHs"
               >
                 Consultez
                  
                 <button
-                  class="sc-kOPcWz cOwJar sc-fulCBj hbqSMY"
+                  class="sc-95bd4344-0 ksRRNY sc-7029e335-3 enfoOw"
                   type="button"
                 >
                   notre aide
@@ -80,11 +80,11 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               </span>
             </p>
             <button
-              class="sc-kOPcWz kyVwqT sc-dSCufp iCRrvW"
+              class="sc-95bd4344-0 dxXsic sc-19478701-2 fGtwND"
               title="fermer la modale"
             >
               <div
-                class="sc-cWSHoV bKtA-De"
+                class="sc-8dcb2faa-0 gxfPDw"
               >
                 fermer la modale
               </div>

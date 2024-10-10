@@ -157,9 +157,7 @@ const createResultStore: StoreSlice<
         const result = publicodes.calculate(situation);
         if (result.type !== "result") {
           throw new Error(
-            `Le calcul sur l'écran de résultat retourne un ${
-              result.type
-            } (detail: ${JSON.stringify(result)})`
+            `Le calcul sur l'écran de résultat retourne un ${result.type} (detail: ${JSON.stringify(result)})`
           );
         }
         publicodesSituation = result;
@@ -177,19 +175,13 @@ const createResultStore: StoreSlice<
         errorPublicodes = true;
         console.error(`La situation est ${JSON.stringify(situation)}`);
         console.error(
-          `Les informations de l'ancienneté sont ${JSON.stringify(
-            get().ancienneteData.input
-          )}`
+          `Les informations de l'ancienneté sont ${JSON.stringify(get().ancienneteData.input)}`
         );
         console.error(
-          `Les informations liées aux salaires sont ${JSON.stringify(
-            get().salairesData.input
-          )}`
+          `Les informations liées aux salaires sont ${JSON.stringify(get().salairesData.input)}`
         );
         console.error(
-          `Les informations liées au contrat de travail sont ${JSON.stringify(
-            get().contratTravailData.input
-          )}`
+          `Les informations liées au contrat de travail sont ${JSON.stringify(get().contratTravailData.input)}`
         );
         console.error(
           `Les informations issues de publicodes sont ${JSON.stringify(infos)}`
@@ -256,7 +248,9 @@ const createResultStore: StoreSlice<
           state.resultData.input.formula = formula;
           state.resultData.input.legalReferences = legalReferences;
           state.resultData.input.publicodesLegalResult = publicodesSituation
-            ?.detail?.legalResult ?? { value: 0 };
+            ?.detail?.legalResult ?? {
+            value: 0,
+          };
           state.resultData.input.publicodesAgreementResult =
             publicodesSituation?.detail?.agreementResult;
           state.resultData.input.agreementExplanation =

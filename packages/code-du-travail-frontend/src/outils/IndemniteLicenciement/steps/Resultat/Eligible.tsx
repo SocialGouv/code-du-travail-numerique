@@ -215,7 +215,7 @@ export default function Eligible() {
         )}
         <PubliReferences
           references={
-            isAgreementBetter ? agreementReferences ?? [] : legalReferences
+            isAgreementBetter ? (agreementReferences ?? []) : legalReferences
           }
         />
       </ShowDetails>

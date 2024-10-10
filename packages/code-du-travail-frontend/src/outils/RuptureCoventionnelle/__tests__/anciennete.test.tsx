@@ -22,7 +22,8 @@ describe("Rupture conventionnelle - Etape ancienneté", () => {
       .click(ui.contract.type.cdi.get())
       .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
-      .click(ui.agreement.noAgreement.get()).click(ui.next.get());
+      .click(ui.agreement.noAgreement.get())
+      .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
     userAction
@@ -32,13 +33,14 @@ describe("Rupture conventionnelle - Etape ancienneté", () => {
       .click(ui.next.get());
 
     expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
-    expect(byText(/La date de fin de contrat doit se situer après le/).query()).toBeInTheDocument();
+    expect(
+      byText(/La date de fin de contrat doit se situer après le/).query()
+    ).toBeInTheDocument();
 
     userAction
       .setInput(ui.seniority.startDate.get(), "01/01/2024")
       .setInput(ui.seniority.endDate.get(), "01/08/2024")
       .click(ui.next.get());
-
 
     expect(ui.activeStep.query()).toHaveTextContent("Salaires");
   });

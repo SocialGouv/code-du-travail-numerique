@@ -14,6 +14,14 @@ jest.mock("@socialgouv/matomo-next", () => {
   };
 });
 
+jest.mock("next/router", () => ({
+  useRouter() {
+    return {
+      push: jest.fn(),
+    };
+  },
+}));
+
 const item = {
   algo: "semantic",
   breadcrumbs: [

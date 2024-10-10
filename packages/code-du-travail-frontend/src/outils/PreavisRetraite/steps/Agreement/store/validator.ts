@@ -14,11 +14,11 @@ export const validateStep = (state: AgreementStoreInput) => {
       !(state.agreement && state.agreement.num === 3239)
         ? "Vous devez sélectionner une entreprise"
         : state.route === "enterprise" &&
-          state.enterprise &&
-          state.enterprise.conventions.length !== 0 &&
-          !state.agreement
-        ? "Vous devez sélectionner une convention collective"
-        : undefined,
+            state.enterprise &&
+            state.enterprise.conventions.length !== 0 &&
+            !state.agreement
+          ? "Vous devez sélectionner une convention collective"
+          : undefined,
     errorPublicodes: state.informationError
       ? "Une erreur liée au moteur de calcul nous empêche de continuer la simulation. Veuillez vérifier les informations saisies ou rafraîchir la page si le problème persiste."
       : undefined,

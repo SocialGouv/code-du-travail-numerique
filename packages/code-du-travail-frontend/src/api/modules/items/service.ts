@@ -1,8 +1,4 @@
-import {
-  elasticDocumentsIndex,
-  elasticsearchClient,
-  NotFoundError,
-} from "../../utils";
+import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import { getSearchBySourceSlugBody } from "./queries";
 import { getRelatedItems } from "./utils";
 

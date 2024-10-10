@@ -277,8 +277,8 @@ const createCommonInformationsStore: StoreSlice<
       return errorEligibility
         ? ValidationResponse.NotEligible
         : isValid
-        ? ValidationResponse.Valid
-        : ValidationResponse.NotValid;
+          ? ValidationResponse.Valid
+          : ValidationResponse.NotValid;
     },
   },
 });

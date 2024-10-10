@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ElementBuilder /> does not render anything when data is undefined 1`] = `<div />`;
+
+exports[`<ElementBuilder /> does not render anything when element name is not recognized 1`] = `<div />`;
+
+exports[`<ElementBuilder /> does render several elements 1`] = `
+<div>
+  Chapitre
+  SousChapitre
+  <i>
+    Expression (inside i)
+  </i>
+  <strong>
+    MiseEnEvidence (inside strong)
+  </strong>
+  <strong>
+    Valeur (inside strong)
+  </strong>
+  <p>
+    Paragraphe (inside p)
+  </p>
+  <sup>
+    Exposant (inside sup)
+  </sup>
+  LienIntra
+  LienInterne
+</div>
+`;
+
+exports[`<ElementBuilder /> does render stuff inside a styled block 1`] = `
+<div>
+  <div
+    class="sc-2a0a4b0a-0 sc-18dbc613-0 dLOZmV hGgpvs"
+  >
+    stuff 0
+  </div>
+  <div
+    class="sc-2a0a4b0a-0 sc-18dbc613-0 dLOZmV hGgpvs"
+  >
+    stuff 1
+  </div>
+  <div
+    class="sc-2a0a4b0a-0 sc-18dbc613-0 dLOZmV hGgpvs"
+  >
+    stuff 2
+  </div>
+  <div
+    class="sc-2a0a4b0a-0 sc-18dbc613-0 dLOZmV hGgpvs"
+  >
+    stuff 3
+  </div>
+</div>
+`;
+
+exports[`<ElementBuilder /> renders when data is an array 1`] = `
+<div>
+  moonshot 0
+  moonshot 1
+</div>
+`;
+
+exports[`<ElementBuilder /> renders when type is text 1`] = `
+<div>
+  moonshot
+</div>
+`;

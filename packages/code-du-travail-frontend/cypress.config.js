@@ -13,12 +13,12 @@ module.exports = defineConfig({
       process.env.TEST_MODE === "heavy"
         ? "cypress/integration/heavy/**/*.spec.{js,jsx,ts,tsx}"
         : process.env.TEST_MODE === "light"
-        ? "cypress/integration/light/**/*.spec.{js,jsx,ts,tsx}"
-        : process.env.TEST_MODE === "html-validation"
-        ? "cypress/integration/html-validation/**/*.spec.{js,jsx,ts,tsx}"
-        : process.env.TEST_MODE === "heavy-and-light"
-        ? "cypress/integration/{light,heavy}/**/*.spec.{js,jsx,ts,tsx}"
-        : "cypress/integration/**/*.spec.{js,jsx,ts,tsx}",
+          ? "cypress/integration/light/**/*.spec.{js,jsx,ts,tsx}"
+          : process.env.TEST_MODE === "html-validation"
+            ? "cypress/integration/html-validation/**/*.spec.{js,jsx,ts,tsx}"
+            : process.env.TEST_MODE === "heavy-and-light"
+              ? "cypress/integration/{light,heavy}/**/*.spec.{js,jsx,ts,tsx}"
+              : "cypress/integration/**/*.spec.{js,jsx,ts,tsx}",
     supportFile: "cypress/support/index.ts",
     viewportHeight: 1000,
     viewportWidth: 1280,

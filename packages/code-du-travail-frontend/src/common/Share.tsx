@@ -53,9 +53,7 @@ export const Share = ({
       <StyledLink
         href={`mailto:?subject=${encodeURIComponent(
           `A lire sur le Code du travail numérique : ${title}`
-        )}&body=${`${encodeURIComponent(
-          `${metaDescription}\n\n${currentPageUrl}`
-        )}`}`}
+        )}&body=${`${encodeURIComponent(`${metaDescription}\n\n${currentPageUrl}`)}`}`}
         className="spacing-left"
         title="Envoyer par email"
         onClick={() => {
@@ -133,9 +131,7 @@ export const Share = ({
           onClick={() => {
             matopush(["trackEvent", "clic_share", currentPageUrl, "twitter"]);
             window.open(
-              `https://twitter.com/intent/tweet/?text=${encodeURIComponent(
-                `${title} : ${currentPageUrl}`
-              )}`,
+              `https://twitter.com/intent/tweet/?text=${encodeURIComponent(`${title} : ${currentPageUrl}`)}`,
               "twitter_popup",
               POPUP_OPTIONS
             );
@@ -181,9 +177,7 @@ export const Share = ({
           onClick={() => {
             matopush(["trackEvent", "clic_share", currentPageUrl, "whatsapp"]);
             window.open(
-              `https://wa.me/?text=${encodeURIComponent(
-                `${title} : ${currentPageUrl}`
-              )}`,
+              `https://wa.me/?text=${encodeURIComponent(`${title} : ${currentPageUrl}`)}`,
               "whatsapp_popup",
               POPUP_OPTIONS
             );

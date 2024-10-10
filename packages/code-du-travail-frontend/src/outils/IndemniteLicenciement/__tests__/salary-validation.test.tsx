@@ -128,7 +128,6 @@ describe("Indemnité licenciement - Step salaire", () => {
       userAction.setInput(ui.salary.primes.getAll()[1], "");
       userAction.click(ui.next.get());
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-
     });
 
     test("Vérification qu'un salaire ne peut pas être inférieur à 0 dans le champ où on saisit plusieurs salaires pour chaque mois", () => {

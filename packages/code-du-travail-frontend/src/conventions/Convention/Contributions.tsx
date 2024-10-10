@@ -14,9 +14,7 @@ function Contributions({ contributions, convention }) {
           {group.answers.map((item) => (
             <li key={item.slug}>
               <StyledLink
-                href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${
-                  item.slug
-                }`}
+                href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${item.slug}`}
               >
                 {item.question}
               </StyledLink>

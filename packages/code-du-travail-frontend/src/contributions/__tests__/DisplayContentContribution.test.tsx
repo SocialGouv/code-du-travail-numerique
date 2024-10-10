@@ -12,24 +12,7 @@ describe("DisplayContentContribution", () => {
         ></DisplayContentContribution>
       );
 
-      expect(baseElement.firstChild).toMatchInlineSnapshot(`
-        <div>
-          <div
-            class="sc-eulNck hOEymR"
-          >
-            <h2
-              class="sc-kAyceB dvmaTz"
-            >
-              Mon titre
-            </h2>
-            <h3
-              class="sc-kAyceB dvmaTz"
-            >
-              Mon sous titre
-            </h3>
-          </div>
-        </div>
-      `);
+      expect(baseElement.firstChild).toMatchSnapshot();
     });
     it(`should replace span with with heading according to given title level`, () => {
       const { baseElement } = render(
@@ -39,24 +22,7 @@ describe("DisplayContentContribution", () => {
         ></DisplayContentContribution>
       );
 
-      expect(baseElement.firstChild).toMatchInlineSnapshot(`
-        <div>
-          <div
-            class="sc-eulNck hOEymR"
-          >
-            <h4
-              class="sc-kAyceB dvmaTz"
-            >
-              Mon title
-            </h4>
-            <h5
-              class="sc-kAyceB dvmaTz"
-            >
-              Mon title
-            </h5>
-          </div>
-        </div>
-      `);
+      expect(baseElement.firstChild).toMatchSnapshot();
     });
     it(`should not add headings higher than h6 for titles`, () => {
       const { baseElement } = render(
@@ -66,22 +32,7 @@ describe("DisplayContentContribution", () => {
         ></DisplayContentContribution>
       );
 
-      expect(baseElement.firstChild).toMatchInlineSnapshot(`
-        <div>
-          <div
-            class="sc-eulNck hOEymR"
-          >
-            <h6
-              class="sc-kAyceB dvmaTz"
-            >
-              Mon title
-            </h6>
-            <strong>
-              Mon title
-            </strong>
-          </div>
-        </div>
-      `);
+      expect(baseElement.firstChild).toMatchSnapshot();
     });
     it(`should not add headings higher than h6 for accordion`, () => {
       const { asFragment } = render(
@@ -323,60 +274,7 @@ describe("DisplayContentContribution", () => {
         ></DisplayContentContribution>
       );
 
-      expect(asFragment().firstChild).toMatchInlineSnapshot(`
-        <div
-          class="sc-eulNck hOEymR"
-        >
-          <table
-            class="sc-cmaqmh juENof"
-          >
-            <thead>
-              <tr>
-                <th
-                  colspan="1"
-                  rowspan="1"
-                />
-                <th
-                  colspan="1"
-                  rowspan="1"
-                >
-                  <p>
-                    Titre 1
-                  </p>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td
-                  colspan="1"
-                  rowspan="1"
-                >
-                  <p>
-                    Pour les 
-                    <strong>
-                      cadres
-                    </strong>
-                    , la prolongation ...
-                  </p>
-                </td>
-                <td
-                  colspan="1"
-                  rowspan="1"
-                >
-                  <ul>
-                    <li>
-                      <p>
-                        L’employeur et le salarié donnent par écrit ou par mail.
-                      </p>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      `);
+      expect(asFragment().firstChild).toMatchSnapshot();
     });
     it(`should not change if thead is already present`, () => {
       const { asFragment } = render(
@@ -400,42 +298,7 @@ describe("DisplayContentContribution", () => {
         ></DisplayContentContribution>
       );
 
-      expect(asFragment().firstChild).toMatchInlineSnapshot(`
-        <div
-          class="sc-eulNck hOEymR"
-        >
-          <table>
-            <tbody>
-              <tr>
-                <td
-                  colspan="1"
-                  rowspan="1"
-                >
-                  <p>
-                    Pour les 
-                    <strong>
-                      cadres
-                    </strong>
-                    , la prolongation ...
-                  </p>
-                </td>
-                <td
-                  colspan="1"
-                  rowspan="1"
-                >
-                  <ul>
-                    <li>
-                      <p>
-                        L’employeur et le salarié donnent par écrit ou par mail.
-                      </p>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      `);
+      expect(asFragment().firstChild).toMatchSnapshot();
     });
 
     it(`should keep whitespace in specific tag`, () => {
@@ -446,35 +309,7 @@ describe("DisplayContentContribution", () => {
         ></DisplayContentContribution>
       );
 
-      expect(asFragment().firstChild).toMatchInlineSnapshot(`
-        <div
-          class="sc-eulNck hOEymR"
-        >
-          <p>
-            Ceci est un
-            <strong>
-               
-            </strong>
-            texte généré
-            <strong>
-               
-            </strong>
-            par 
-            <em>
-              tiptap 
-            </em>
-            avec des
-            <em>
-               
-            </em>
-            résidus
-            <em>
-               
-            </em>
-            de balise
-          </p>
-        </div>
-      `);
+      expect(asFragment().firstChild).toMatchSnapshot();
     });
 
     it(`should render correctly a table with multiple head lines`, () => {
@@ -537,15 +372,7 @@ describe("DisplayContentContribution", () => {
       ></DisplayContentContribution>
     );
 
-    expect(asFragment().firstChild).toMatchInlineSnapshot(`
-      <div
-        class="sc-eulNck hOEymR"
-      >
-        <p>
-          hello
-        </p>
-      </div>
-    `);
+    expect(asFragment().firstChild).toMatchSnapshot();
   });
   it(`should keep whitespace in specific tag`, () => {
     const { asFragment } = render(
@@ -555,35 +382,7 @@ describe("DisplayContentContribution", () => {
       ></DisplayContentContribution>
     );
 
-    expect(asFragment().firstChild).toMatchInlineSnapshot(`
-      <div
-        class="sc-eulNck hOEymR"
-      >
-        <p>
-          Ceci est un
-          <strong>
-             
-          </strong>
-          texte généré
-          <strong>
-             
-          </strong>
-          par 
-          <em>
-            tiptap 
-          </em>
-          avec des
-          <em>
-             
-          </em>
-          résidus
-          <em>
-             
-          </em>
-          de balise
-        </p>
-      </div>
-    `);
+    expect(asFragment().firstChild).toMatchSnapshot();
   });
   it(`should not remove space between strong and em tag in p tag`, () => {
     const { asFragment } = render(
@@ -593,21 +392,7 @@ describe("DisplayContentContribution", () => {
       ></DisplayContentContribution>
     );
 
-    expect(asFragment().firstChild).toMatchInlineSnapshot(`
-      <div
-        class="sc-eulNck hOEymR"
-      >
-        <p>
-          <strong>
-            À noter :
-          </strong>
-           
-          <em>
-            L'échelon professionnel du salarié est habituellement mentionné 
-          </em>
-        </p>
-      </div>
-    `);
+    expect(asFragment().firstChild).toMatchSnapshot();
   });
 
   describe("Alerts", () => {

@@ -14,5 +14,5 @@ describe("<SectionTitleWithTooltip />", () => {
         />
       )
     ).toBeTruthy();
-  })
-})
+  });
+});

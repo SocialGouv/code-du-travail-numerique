@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StatsDisplay /> should match snapshot 1`] = `
+<div>
+  <div
+    class="fr-col-12 fr-col-md-3"
+  >
+    <div
+      class="fr-callout h_100%"
+      id="fr-callout-:r0:"
+    >
+      <p
+        class="fr-callout__text"
+      >
+         
+        <span
+          class="ta_right d_block fr-mt-4v fr-display--xs"
+        >
+          100
+        </span>
+        <span
+          class="ta_left fr-text--bold fr-text--xl"
+        >
+          Contenus référencés
+        </span>
+         
+      </p>
+    </div>
+  </div>
+</div>
+`;

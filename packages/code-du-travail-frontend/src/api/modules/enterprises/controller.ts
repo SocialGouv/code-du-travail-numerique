@@ -40,7 +40,7 @@ export class EnterprisesController {
     } catch (error) {
       console.error(error);
       captureException(error);
-      this.res.status(500).json({ message: error.toString() })
+      this.res.status(500).json({ message: error.toString() });
     }
   }
 }

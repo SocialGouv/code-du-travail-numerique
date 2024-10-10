@@ -7,7 +7,7 @@ import lienExterneDataMock from "./mocks/lienExterneData.json";
 describe("<LienExterneCommente />", () => {
   it("should render", () => {
     const { container } = render(
-      <LienExterneCommente data={lienExterneCommenteDataMock} />,
+      <LienExterneCommente data={lienExterneCommenteDataMock} />
     );
     expect(container).toMatchSnapshot();
   });

@@ -4,12 +4,11 @@ import { renderForm } from "../../../../test/renderForm";
 import { Condition } from "../Condition";
 
 //eslint-disable-next-line react/display-name
-const componentBuilder = (matchValue) => () =>
-  (
-    <Condition when="foo" is={matchValue}>
-      foo is bar
-    </Condition>
-  );
+const componentBuilder = (matchValue) => () => (
+  <Condition when="foo" is={matchValue}>
+    foo is bar
+  </Condition>
+);
 
 const component = componentBuilder("bar");
 const componentWithFunction = componentBuilder((value) => value === "bar");

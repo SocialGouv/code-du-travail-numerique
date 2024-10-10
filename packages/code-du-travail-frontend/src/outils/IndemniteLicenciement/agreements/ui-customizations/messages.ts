@@ -1,4 +1,4 @@
-import {CatPro3239} from "@socialgouv/modeles-social";
+import { CatPro3239 } from "@socialgouv/modeles-social";
 
 export const getForMoreInfoMessage = (
   isAgreementBetter: boolean,
@@ -18,7 +18,7 @@ export const getResultMessage = (
     const categoryPro3239 =
       informations[
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle"
-        ];
+      ];
     isAssMat = categoryPro3239 === CatPro3239.assistantMaternel;
   }
   if (isAssMat)

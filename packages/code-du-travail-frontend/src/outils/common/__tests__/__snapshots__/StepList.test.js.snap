@@ -3,34 +3,34 @@
 exports[`<StepList /> should render 1`] = `
 <div>
   <div
-    class="sc-iGgWBj sc-fMMURN cWzIZL bqwUUB"
+    class="sc-2a0a4b0a-0 sc-d8aa1285-0 dLOZmV fXgtLL"
   >
     <span
       aria-level="2"
-      class="sc-ktPPKK kpvBXh"
+      class="sc-d8aa1285-1 chWVII"
       role="heading"
     >
       Étape
       <span
-        class="sc-YysOf khzvAH"
+        class="sc-d8aa1285-2 igsihc"
       >
         s
       </span>
       <span
-        class="sc-cVzyXs dWiJhM"
+        class="sc-d8aa1285-3 liYAUH"
       >
          
         2/3
       </span>
     </span>
     <ol
-      class="sc-cfxfcM kMmTaI"
+      class="sc-ab356c14-0 bpNHPl"
     >
       <li
-        class="sc-ePDLzJ hiBQED"
+        class="sc-d8aa1285-4 kndAk"
       >
         <span
-          class="sc-bVVIoq bYzUJq"
+          class="sc-d8aa1285-5 iyybZh"
         >
           1
         </span>
@@ -38,21 +38,21 @@ exports[`<StepList /> should render 1`] = `
       </li>
       <li
         aria-live="polite"
-        class="sc-ePDLzJ beslFp"
+        class="sc-d8aa1285-4 gOmjO"
         title="onglet actif"
       >
         <span
-          class="sc-bVVIoq beXsyB"
+          class="sc-d8aa1285-5 bIdbrG"
         >
           2
         </span>
         Step Two
       </li>
       <li
-        class="sc-ePDLzJ hiBQED"
+        class="sc-d8aa1285-4 kndAk"
       >
         <span
-          class="sc-bVVIoq bYzUJq"
+          class="sc-d8aa1285-5 iyybZh"
         >
           3
         </span>

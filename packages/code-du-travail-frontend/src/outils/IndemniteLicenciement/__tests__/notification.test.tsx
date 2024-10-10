@@ -24,7 +24,11 @@ describe("Indemnité licenciement - Affichage de la notification si le légal et
   let userAction: UserAction;
   beforeEach(() => {
     rendering = render(
-      <CalculateurIndemniteLicenciement icon={""} title={""} displayTitle={""} />
+      <CalculateurIndemniteLicenciement
+        icon={""}
+        title={""}
+        displayTitle={""}
+      />
     );
   });
 

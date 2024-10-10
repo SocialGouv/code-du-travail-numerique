@@ -2,9 +2,7 @@ import { SOURCES } from "@socialgouv/cdtn-utils";
 
 export function getGlossaryBody() {
   return {
-    _source: [
-      "data",
-    ],
+    _source: ["data"],
     query: {
       bool: {
         filter: {

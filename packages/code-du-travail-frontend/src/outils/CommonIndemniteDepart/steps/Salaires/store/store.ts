@@ -49,7 +49,9 @@ const createSalairesStore: StoreSlice<
           contratTravailInput.dateArretTravail ??
             ancienneteInput.dateNotification!
         ),
-        { days: 1 }
+        {
+          days: 1,
+        }
       );
       const periods = computeSalaryPeriods({
         dateEntree: ancienneteInput.dateEntree!,

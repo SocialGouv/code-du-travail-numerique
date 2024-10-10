@@ -44,8 +44,8 @@ export class ReferenceSalary16
         driveInabilityDefinitive === "'Oui'"
           ? "definitive"
           : driveInabilityTemporary === "'Oui'"
-          ? "temporary"
-          : undefined;
+            ? "temporary"
+            : undefined;
     }
     return {
       category,

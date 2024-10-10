@@ -131,9 +131,7 @@ const IntegrationContainer = ({
               de votre page&nbsp;:
             </p>
 
-            <CodeSnippet>
-              {`<script src="https://code.travail.gouv.fr/widget.js" defer></script>`}
-            </CodeSnippet>
+            <CodeSnippet>{`<script src="https://code.travail.gouv.fr/widget.js" defer></script>`}</CodeSnippet>
           </li>
           <li>
             <p>

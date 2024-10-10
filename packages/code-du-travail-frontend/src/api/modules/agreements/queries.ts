@@ -95,7 +95,7 @@ export const getAgreementBySlug = (slug: string) => {
       "date_publi",
       "effectif",
       "id",
-      "text"
+      "text",
     ],
     query: {
       bool: {

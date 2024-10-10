@@ -77,4 +77,3 @@ export const dateToString = (date: Date, withDay = false): string => {
   const month = date.getMonth() + 1;
   return `${withDay ? `${days[day]} ` : ""}${num} ${Month[month].toString()}`;
 };
-

@@ -11,7 +11,6 @@ const engine = new IndemniteLicenciementPublicodes(
 
 describe("CC 16", () => {
   describe("Affiche les questions", () => {
-     
     let result: PublicodesData<PublicodesIndemniteLicenciementResult>;
 
     beforeEach(() => {

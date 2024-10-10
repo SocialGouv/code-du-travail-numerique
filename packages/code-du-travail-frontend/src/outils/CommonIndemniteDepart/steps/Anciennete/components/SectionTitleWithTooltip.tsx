@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "@socialgouv/cdtn-ui"
+import { theme } from "@socialgouv/cdtn-ui";
 import { Tooltip as TooltipProps } from "../../../../common/Question";
 import { InfoBulle } from "../../../../common/InfoBulle";
 import { SectionTitle } from "../../../../common/stepStyles";
@@ -8,7 +8,7 @@ import { SectionTitle } from "../../../../common/stepStyles";
 type Props = {
   name: string;
   tooltip?: TooltipProps;
-}
+};
 
 const SectionTitleWithTooltip = ({ tooltip, name }: Props) => {
   const [isLocalTooltipOpen, setIsLocalToolTipOpen] = React.useState(false);
@@ -20,19 +20,16 @@ const SectionTitleWithTooltip = ({ tooltip, name }: Props) => {
         <StyledInfoBulle
           title={tooltip.help ?? "Plus d'informations"}
           onVisibilityChange={() => {
-            tooltip.trackableFn?.(
-              !isLocalTooltipOpen
-            );
-            setIsLocalToolTipOpen(
-              !isLocalTooltipOpen
-            );
-          }}>
+            tooltip.trackableFn?.(!isLocalTooltipOpen);
+            setIsLocalToolTipOpen(!isLocalTooltipOpen);
+          }}
+        >
           {tooltip.content}
         </StyledInfoBulle>
       )}
     </StyledContainer>
-  )
-}
+  );
+};
 
 export default SectionTitleWithTooltip;
 
@@ -51,4 +48,4 @@ const StyledSectionTitle = styled(SectionTitle)`
 
 const StyledInfoBulle = styled(InfoBulle)`
   margin-left: ${spacings.xsmall};
-`
+`;

@@ -37,9 +37,7 @@ const apiIdcc = function createFetcher(query) {
   let url = `${SITE_URL}/api/idcc?q=${encodeURIComponent(query)}`;
 
   if (/^\d+$/.test(query.replace(/\W/g, ""))) {
-    url = `${SITE_URL}/api/idcc?q=${encodeURIComponent(
-      parseInt(query.replace(/\W/g, ""))
-    )}`;
+    url = `${SITE_URL}/api/idcc?q=${encodeURIComponent(parseInt(query.replace(/\W/g, "")))}`;
   }
   return fetch(url)
     .then(async (response) => {

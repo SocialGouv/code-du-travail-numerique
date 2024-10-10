@@ -19,7 +19,7 @@ tva:
 
 panier . montant . quantité avec TVA: 10 litre
 
-panier . montant . avec tva :
+panier . montant . avec tva:
   valeur: montant * tva / 100
   cdtn:
     formule:

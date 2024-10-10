@@ -147,7 +147,7 @@ const Eligible = () => {
         <PubliReferences
           references={
             result.isAgreementBetter
-              ? result.agreementReferences ?? []
+              ? (result.agreementReferences ?? [])
               : result.legalReferences
           }
         />

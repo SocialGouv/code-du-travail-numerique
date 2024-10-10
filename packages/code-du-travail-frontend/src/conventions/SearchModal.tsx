@@ -6,7 +6,7 @@ import ConventionSearch from "./Search";
 
 type Props = {
   children?: (openModal: (e: React.MouseEvent) => void) => React.ReactNode;
-  renderProp?: () => any
+  renderProp?: () => any;
 };
 
 export const ConventionModal = ({ children: renderProp }: Props) => {

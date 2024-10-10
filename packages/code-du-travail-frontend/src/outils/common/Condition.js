@@ -11,8 +11,8 @@ function Condition({ when, is, children }) {
             ? children
             : null
           : value === is
-          ? children
-          : null
+            ? children
+            : null
       }
     </Field>
   );

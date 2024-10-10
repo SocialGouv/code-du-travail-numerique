@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PopupContent /> should match snapshot 1`] = `
+<div>
+  <h2
+    class="fr-h5"
+  >
+    Contact téléphonique
+  </h2>
+  <a
+    href="tel:+33806000126"
+  >
+    <img
+      alt="Contactez les services de renseignements au droit du travail au 0800 026 080"
+      data-nimg="1"
+      decoding="async"
+      height="100"
+      loading="lazy"
+      src="/static/assets/img/srdt.svg"
+      style="color: transparent;"
+      width="350"
+    />
+  </a>
+  <h2
+    class="fr-h5 fr-mt-3w"
+  >
+    Contact par email et prise de rendez-vous
+  </h2>
+  <div
+    class="fr-input-group"
+  >
+    <label
+      class="fr-label"
+      for="input-:r0:"
+    >
+      Saisissez le numéro de votre département
+    </label>
+    <div
+      class="fr-input-wrap fr-input-wrap--addon"
+    >
+      <input
+        aria-describedby="input-:r0:-desc-error"
+        class="fr-input max-w_280px"
+        id="input-:r0:"
+        maxlength="3"
+        type="text"
+      />
+      <button
+        class="fr-btn fr-icon-search-line"
+        id="fr-button-:r1:"
+        title="Lancer la recherche par numéro de département"
+      />
+    </div>
+  </div>
+  <div
+    class="fr-mt-3w"
+  >
+    <p
+      class="fr-text--sm fr-mb-0"
+    >
+      Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
+    </p>
+    <ul>
+      <li
+        class="fr-text--sm fr-mb-0"
+      >
+        les demandes d'intervention en entreprise
+      </li>
+      <li
+        class="fr-text--sm fr-mb-0"
+      >
+        la constitution des dossiers prud’homaux
+      </li>
+      <li
+        class="fr-text--sm fr-mb-0"
+      >
+        les calculs de droit au chômage
+      </li>
+      <li
+        class="fr-text--sm fr-mb-0"
+      >
+        vous renseigner sur les cotisations sociales
+      </li>
+    </ul>
+  </div>
+</div>
+`;

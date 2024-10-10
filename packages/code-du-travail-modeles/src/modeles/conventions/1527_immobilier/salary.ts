@@ -38,7 +38,9 @@ export class ReferenceSalary1527
     hasCommission = false,
   }: ReferenceSalaryProps<SupportedCc.IDCC1527>): number {
     if (!hasCommission) {
-      return new ReferenceSalaryLegal().computeReferenceSalary({ salaires });
+      return new ReferenceSalaryLegal().computeReferenceSalary({
+        salaires,
+      });
     }
     const totalSalaries = salaires.reduce(
       (total, item) => total + (item.value ?? 0),

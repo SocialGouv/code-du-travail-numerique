@@ -2,7 +2,7 @@ import { withSentryConfig } from "@sentry/nextjs";
 import MappingReplacement from "./redirects.json" assert { type: "json" };
 
 const ContentSecurityPolicy = `
-img-src 'self' https://travail-emploi.gouv.fr https://www.service-public.fr https://cdtn-prod-public.s3.gra.io.cloud.ovh.net https://matomo.fabrique.social.gouv.fr;
+img-src 'self' https://travail-emploi.gouv.fr https://www.service-public.fr https://cdtn-prod-public.s3.gra.io.cloud.ovh.net https://matomo.fabrique.social.gouv.fr data:;
 script-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr https://tally.so ${
   process.env.NEXT_PUBLIC_APP_ENV !== "production" ? "'unsafe-eval'" : ""
 };
@@ -42,7 +42,17 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   staticPageGenerationTimeout: 60 * 5, // 5 minutes
-  experimental: { instrumentationHook: true },
+  experimental: {
+    instrumentationHook: true,
+  },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.woff2$/,
+      type: "asset/resource",
+    });
+    return config;
+  },
+  transpilePackages: ["@codegouvfr/react-dsfr"],
 };
 
 const moduleExports = {

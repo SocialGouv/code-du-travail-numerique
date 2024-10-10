@@ -1,8 +1,5 @@
 import { useContext } from "react";
-import {
-  IndemniteDepartContext,
-  useIndemniteDepartStore,
-} from "../../store";
+import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
 
 export default function Agreement16Informations() {
   const store = useContext(IndemniteDepartContext);

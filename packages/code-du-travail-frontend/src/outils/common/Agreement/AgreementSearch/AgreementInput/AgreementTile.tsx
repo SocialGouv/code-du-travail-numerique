@@ -43,9 +43,7 @@ export function AgreementTile({
       title={`${agreement.shortTitle} IDCC${formatIdcc(agreement.num)}`}
       subtitle={getLabelBySource(SOURCES.CCN)}
       onClick={clickHandler}
-      href={`${isWidgetMode ? SITE_URL : ""}/${getRouteBySource(SOURCES.CCN)}/${
-        agreement.slug
-      }`}
+      href={`${isWidgetMode ? SITE_URL : ""}/${getRouteBySource(SOURCES.CCN)}/${agreement.slug}`}
       target={isWidgetMode ? "_blank" : "_self"}
       noRedirect={noRedirect}
     >

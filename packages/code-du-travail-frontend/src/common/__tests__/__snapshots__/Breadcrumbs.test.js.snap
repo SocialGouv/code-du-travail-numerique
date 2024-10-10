@@ -4,22 +4,22 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
 <div>
   <nav
     aria-label="Fil d'ariane"
-    class="sc-fMMURN fjHxVG"
+    class="sc-4acc650d-0 iZmHLs"
   >
     <ol
-      class="sc-aXZVg sc-ktPPKK gZgZQL gqDoNV"
+      class="sc-d8f596bd-0 sc-4acc650d-1 jtWYDW fiOSiq"
     >
       <li
-        class="sc-YysOf elVbVY"
+        class="sc-4acc650d-2 fEtKOP"
       >
         <a
-          class="sc-cVzyXs lnrukB"
+          class="sc-4acc650d-3 iwBcqI"
           href="/"
           title="Retour à l'accueil"
         >
           <svg
             aria-hidden="true"
-            class="sc-ePDLzJ jnAQnD"
+            class="sc-4acc650d-4 jhEUEf"
             fill="none"
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
@@ -33,11 +33,11 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
         </a>
       </li>
       <li
-        class="sc-YysOf elVbVY"
+        class="sc-4acc650d-2 fEtKOP"
       >
         <svg
           aria-hidden="true"
-          class="sc-bVVIoq jZaWnE"
+          class="sc-4acc650d-5 doDLRb"
           fill="none"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
@@ -49,18 +49,18 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
         </svg>
          
         <a
-          class="sc-cVzyXs lnrukB"
+          class="sc-4acc650d-3 iwBcqI"
           href="/themes/item-1"
         >
           item 1
         </a>
       </li>
       <li
-        class="sc-YysOf elVbVY"
+        class="sc-4acc650d-2 fEtKOP"
       >
         <svg
           aria-hidden="true"
-          class="sc-bVVIoq jZaWnE"
+          class="sc-4acc650d-5 doDLRb"
           fill="none"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
         </svg>
          
         <a
-          class="sc-cVzyXs lnrukB"
+          class="sc-4acc650d-3 iwBcqI"
           href="/themes/item-2"
         >
           item 2

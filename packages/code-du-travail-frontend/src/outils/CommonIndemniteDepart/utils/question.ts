@@ -15,8 +15,8 @@ export const generateSameSalaryQuestion = (
     arretTravail === "oui"
       ? `l'arrêt de travail`
       : type === IndemniteDepartType.LICENCIEMENT
-      ? "la notification du licenciement"
-      : "la fin du contrat"
+        ? "la notification du licenciement"
+        : "la fin du contrat"
   }&nbsp;?`;
 };
 
@@ -37,8 +37,8 @@ export const generateSalaireTempsPleinQuestion = (
     arretTravail === "oui"
       ? "l'arrêt de travail"
       : type === IndemniteDepartType.LICENCIEMENT
-      ? "la notification du licenciement"
-      : "la fin du contrat"
+        ? "la notification du licenciement"
+        : "la fin du contrat"
   }`;
 };
 
@@ -55,8 +55,8 @@ export const generateResultSameSalary = (
     arretTravail === "oui"
       ? `l'arrêt de travail`
       : type === IndemniteDepartType.LICENCIEMENT
-      ? "la notification du licenciement"
-      : "la fin du contrat"
+        ? "la notification du licenciement"
+        : "la fin du contrat"
   }`;
 };
 
@@ -73,8 +73,8 @@ export const generateResultSalaireTempsPlein = (
     arretTravail === "oui"
       ? "l'arrêt de travail"
       : type === IndemniteDepartType.LICENCIEMENT
-      ? "la notification du licenciement"
-      : "la fin du contrat"
+        ? "la notification du licenciement"
+        : "la fin du contrat"
   }`;
 };
 

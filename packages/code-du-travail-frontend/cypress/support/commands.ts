@@ -1,3 +1,5 @@
+import "@testing-library/cypress/add-commands";
+
 Cypress.Commands.add("checkCanonical", (path) => {
   cy.get("head > link[rel='canonical']")
     .should("have.prop", "href")
