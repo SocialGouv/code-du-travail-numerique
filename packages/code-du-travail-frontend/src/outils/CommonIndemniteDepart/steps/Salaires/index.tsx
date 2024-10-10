@@ -15,6 +15,7 @@ import {
   generateSmallText,
 } from "../../utils/question";
 import { IndemniteDepartType } from "../../../types";
+import { InlineError } from "../../../common/ErrorField";
 
 type Props = {
   type: IndemniteDepartType;
@@ -41,6 +42,7 @@ const StepSalaires = ({ type }: Props) => {
     showHasTempsPartiel,
     initShowHasTempsPartiel,
     isAgreementSupported,
+    errorLengthSalaryPeriods,
   } = useIndemniteDepartStore(store, (state) => ({
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     onChangeHasTempsPartiel: state.salairesFunction.onChangeHasTempsPartiel,
@@ -61,6 +63,7 @@ const StepSalaires = ({ type }: Props) => {
     initShowHasTempsPartiel: state.salairesFunction.initShowHasTempsPartiel,
     isAgreementSupported:
       state.agreementData.input.isAgreementSupportedIndemniteLicenciement,
+    errorLengthSalaryPeriods: state.salairesData.error.errorLengthSalaryPeriods,
   }));
 
   React.useEffect(() => {
@@ -163,6 +166,9 @@ const StepSalaires = ({ type }: Props) => {
               />
             )}
         </>
+      )}
+      {errorLengthSalaryPeriods && (
+        <InlineError>{errorLengthSalaryPeriods}</InlineError>
       )}
     </>
   );
