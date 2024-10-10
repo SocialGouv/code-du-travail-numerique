@@ -70,7 +70,7 @@ export const SearchInput = (props: Props) => {
               {...getItemProps({
                 item,
                 index,
-                className: `${fr.cx("fr-p-1v")} ${suggestion} ${highlightedIndex === index ? isHighlighted : ""}`,
+                className: `${fr.cx("fr-py-2v")} ${fr.cx("fr-pl-3v")} ${suggestion} ${highlightedIndex === index ? isHighlighted : ""}`,
               })}
               key={`${item}${index}`}
             >
@@ -92,8 +92,6 @@ const list = css({
 
 const suggestion = css({
   cursor: "pointer",
-  lineHeight: "2rem",
-  listStyleType: "none",
   textAlign: "left",
   background: "var(--background-default-grey)",
   "&:nth-child(2n + 1)": {
