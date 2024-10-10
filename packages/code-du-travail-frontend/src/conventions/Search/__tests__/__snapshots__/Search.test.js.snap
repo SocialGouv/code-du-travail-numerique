@@ -226,13 +226,13 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
           class="sc-f1b633f2-1 fOEIjw"
         >
           <a
-            class="sc-9f338ae2-0 lYghT"
+            class="sc-464cd870-0 gvqnQU"
             href="/convention-collective/275-small-titre"
           >
             small titre
              
             <span
-              class="sc-9f338ae2-3 gWROZr"
+              class="sc-464cd870-3 cDwJRg"
             >
               (IDCC 
               0275
@@ -244,13 +244,13 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
           class="sc-f1b633f2-1 fOEIjw"
         >
           <a
-            class="sc-9f338ae2-0 FmmlJ"
+            class="sc-464cd870-0 xInLS"
             href="/convention-collective/276-smaller-convention-2"
           >
             smaller convention 2
              
             <span
-              class="sc-9f338ae2-3 gWROZr"
+              class="sc-464cd870-3 cDwJRg"
             >
               (IDCC 
               0276
@@ -322,13 +322,13 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
           class="sc-f1b633f2-1 fOEIjw"
         >
           <a
-            class="sc-9f338ae2-0 lYghT"
+            class="sc-464cd870-0 gvqnQU"
             href="/convention-collective/4567-smaller-convention-2"
           >
             smaller convention 2
              
             <span
-              class="sc-9f338ae2-3 gWROZr"
+              class="sc-464cd870-3 cDwJRg"
             >
               (IDCC 
               4567
