@@ -1148,5 +1148,15 @@
     "source": "/convention-collective/2785(?:-[a-z0-9-]+)?",
     "destination": "/convention-collective/3250-commissaires-de-justice-et-societes-de-ventes-volontaires",
     "permanent": true
+  },
+  {
+    "source": "/convention-collective/batiment-etam-ile-de-france-hors-seine-et-marne",
+    "destination": "/convention-collective/2707-batiment-etam-ile-de-france-hors-seine-et-marne",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
+    "destination": "/convention-collective/3251-bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
+    "permanent": true
   }
 ]
