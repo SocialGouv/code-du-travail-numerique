@@ -19,12 +19,7 @@ export const SearchInput = (props: Props) => {
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const { emitSuggestionEvent } = useLayoutTracking();
 
-  const {
-    isOpen,
-    getMenuProps,
-    getInputProps,
-    getItemProps,
-  } = useCombobox({
+  const { isOpen, getMenuProps, getInputProps, getItemProps } = useCombobox({
     items: suggestions,
     onInputValueChange: async ({ inputValue }) => {
       setQuery(inputValue);
@@ -93,5 +88,5 @@ const suggestion = css({
   cursor: "pointer",
   color: "var(--text-action-high-blue-france)",
   textAlign: "left",
-  _hover: { bg:  "var(--background-default-grey-hover)" }
+  _hover: { bg: "var(--background-default-grey-hover)" },
 });
