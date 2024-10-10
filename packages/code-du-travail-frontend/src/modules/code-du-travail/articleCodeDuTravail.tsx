@@ -1,9 +1,7 @@
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
-import { Tag } from "@codegouvfr/react-dsfr/Tag";
 import Html from "../common/Html";
 import { ContainerRich } from "../layout/ContainerRich";
-import { Feedback } from "../layout/feedback";
 import { RelatedItem } from "../documents";
 
 type Props = {
@@ -50,7 +48,6 @@ export function ArticleCodeDuTravail({
           <Html>{notaHtml}</Html>
         </div>
       )}
-      <Feedback />
     </ContainerRich>
   );
 }
