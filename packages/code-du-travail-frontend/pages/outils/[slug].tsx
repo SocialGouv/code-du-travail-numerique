@@ -38,7 +38,7 @@ const toolsBySlug = {
   "preavis-demission": DureePreavisDemission,
   "preavis-licenciement": DureePreavisLicenciement,
   "preavis-retraite": CalculateurPreavisRetraite,
-  "simulateur-embauche": SimulateurEmbauche,
+  // "simulateur-embauche": SimulateurEmbauche,
   "procedure-licenciement": DismissalProcess,
   "indemnite-rupture-conventionnelle": CalculateurRuptureConventionnelle,
 };

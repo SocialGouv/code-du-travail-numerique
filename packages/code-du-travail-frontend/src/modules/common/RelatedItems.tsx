@@ -9,8 +9,10 @@ import { RelatedItem } from "../documents";
 
 export const RelatedItems = ({
   relatedItems = [],
+  className = "",
 }: {
   relatedItems: { items: RelatedItem[]; title: string }[];
+  className?: string;
 }) => {
   const { emitSelectRelated } = useCommonTracking();
   if (relatedItems.length === 0) {
@@ -18,7 +20,7 @@ export const RelatedItems = ({
   }
 
   return (
-    <div className={fr.cx("fr-mb-5w")}>
+    <div className={`${className} ${fr.cx("fr-mb-5w")}`}>
       {relatedItems.map(
         ({ title, items }) =>
           items.length > 0 && (
