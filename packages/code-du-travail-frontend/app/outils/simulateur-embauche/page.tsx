@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "Réalisez vos conversions et calculs de salaire (brut en net, net en brut, net après impôt, heures supplémentaires et coût total employeur) avec notre simulateur.",
 };
 
-export async function Tools() {
+async function HiringSimulatorPage() {
   const _id = await fetchToolId("simulateur-embauche");
   const relatedItems = await fetchRelatedItems({ _id }, "simulateur-embauche");
   return (
@@ -20,4 +20,4 @@ export async function Tools() {
   );
 }
 
-export default Tools;
+export default HiringSimulatorPage;
