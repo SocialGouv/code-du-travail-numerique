@@ -90,6 +90,7 @@ export const ConventionLink = ({
   onClick,
   small = false,
 }: Props): JSX.Element => {
+  const { num } = convention;
   const router = useRouter();
 
   const clickHandler = () => {
@@ -105,7 +106,7 @@ export const ConventionLink = ({
 
   return (
     <>
-      {!convention.slug ? (
+      {num === 9999 ? (
         <DisabledConvention convention={convention} commonProps={commonProps} />
       ) : (
         <EnabledConvention

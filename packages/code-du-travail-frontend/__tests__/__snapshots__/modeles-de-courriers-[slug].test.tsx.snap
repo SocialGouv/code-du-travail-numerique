@@ -171,7 +171,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
       aria-expanded="false"
       aria-haspopup="dialog"
       aria-label="Donner votre avis"
-      class="sc-1a079d5a-0 dPrVcb"
+      class="sc-f4078397-0 hFwgVG"
       data-tally-open="3jLRW1"
       data-tally-overlay="1"
       data-tally-width="500"
@@ -179,7 +179,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
       <img
         alt="Suggestion"
         aria-hidden="true"
-        class="sc-1a079d5a-1 dcOJGP"
+        class="sc-f4078397-1 gbqaNR"
         src="/static/assets/img/emoj-wave.png"
       />
       <span>

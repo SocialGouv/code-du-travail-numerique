@@ -1951,7 +1951,7 @@ __metadata:
     stylelint-config-rational-order: ^0.1.2
     stylelint-config-standard-scss: ^6.1.0
     stylelint-config-styled-components: ^0.1.1
-    stylelint-order: ^6.0.0
+    stylelint-order: ^5.0.0
     stylelint-processor-styled-components: ^1.10.0
     supertest: ^6.3.3
     testing-library-selector: 0.3.1
@@ -6060,12 +6060,6 @@ __metadata:
     regenerator-runtime: ^0.14.0
     storybook: ^7.0.18
     styled-components: ^5.3.0
-    stylelint: ^14.16.0
-    stylelint-config-rational-order: ^0.1.2
-    stylelint-config-standard-scss: ^6.1.0
-    stylelint-config-styled-components: ^0.1.1
-    stylelint-order: ^6.0.0
-    stylelint-processor-styled-components: ^1.10.0
     svgo: ^2.3.1
     typescript: ^5.5.4
     use-onclickoutside: ^0.4.0
@@ -21398,12 +21392,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-sorting@npm:^8.0.2":
-  version: 8.0.2
-  resolution: "postcss-sorting@npm:8.0.2"
+"postcss-sorting@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "postcss-sorting@npm:7.0.1"
   peerDependencies:
-    postcss: ^8.4.20
-  checksum: ebb5cc6a2982a1f0bb8332669e425793ebc01c30fa83ea981c765d64d212e289bef5fdb1e627904c471cb75f1ad0727ed9e85c0d879e263590c8fc64eecf31c2
+    postcss: ^8.3.9
+  checksum: 79cca6703ef7c60ea913c3bfb91f85bd7adce35e60b834a40cadd1c7e18f37961d63f0e641387651ee3bf1df1996e952d8fe443f93a271aa2d23f239ea3145bc
   languageName: node
   linkType: hard
 
@@ -21473,9 +21467,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.19, postcss@npm:^8.4.27, postcss@npm:^8.4.32":
-  version: 8.4.47
-  resolution: "postcss@npm:8.4.47"
+"postcss@npm:^8.3.11, postcss@npm:^8.4.19, postcss@npm:^8.4.27":
+  version: 8.4.33
+  resolution: "postcss@npm:8.4.33"
   dependencies:
     nanoid: ^3.3.7
     picocolors: ^1.0.0
@@ -24446,15 +24440,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-order@npm:^6.0.0":
-  version: 6.0.4
-  resolution: "stylelint-order@npm:6.0.4"
+"stylelint-order@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "stylelint-order@npm:5.0.0"
   dependencies:
-    postcss: ^8.4.32
-    postcss-sorting: ^8.0.2
+    postcss: ^8.3.11
+    postcss-sorting: ^7.0.1
   peerDependencies:
-    stylelint: ^14.0.0 || ^15.0.0 || ^16.0.1
-  checksum: 66ed8a80b34b98994e38d75671766f102d47c73362495b77861f0648efcc75cf3ad6f30f988c3cf16c9747ac139087ef1ff71b3bea40f9c5e081a25ebeb34feb
+    stylelint: ^14.0.0
+  checksum: fa3ace3cc65486b9f94165603bd04983636fda5ac959cd29bf87847a95b32f366b16faf612bd49e3b9f96073f8fe28a22a5c5727cc08c8f9d7327c89084b3f30
   languageName: node
   linkType: hard
 
