@@ -14,8 +14,8 @@ type Props = {
 };
 
 export const HiringSimulator = ({ relatedItems }: Props) => {
-  const simRef = createRef();
-  const [, setState] = useState({
+  const simRef = createRef<HTMLDivElement>();
+  const [state, setState] = useState({
     error: "",
     simulator: "loading",
   });
@@ -27,7 +27,6 @@ export const HiringSimulator = ({ relatedItems }: Props) => {
     setState({ simulator: "success", error: "" });
     if (
       !simRef.current ||
-      // @ts-ignore
       !simRef.current.querySelector("#simulateurEmbauche")
     ) {
       setState({ error: "empty child", simulator: "error" });
@@ -46,19 +45,18 @@ export const HiringSimulator = ({ relatedItems }: Props) => {
       script.onerror = onError;
 
       if (simRef.current) {
-        // @ts-ignore
         simRef.current.appendChild(script);
       }
 
       return () => {
         if (simRef.current) {
-          // @ts-ignore
           simRef.current.removeChild(script);
         }
       };
     }, []);
   };
   useScript();
+  const { simulator } = state;
   return (
     <ContainerMiddle
       relatedItems={relatedItems}
@@ -77,8 +75,23 @@ export const HiringSimulator = ({ relatedItems }: Props) => {
         sur la situation d&apos;une personne célibataire sans enfants ni
         patrimoine.
       </Highlight>
-      {/* @ts-ignore */}
-      <div ref={simRef} className={fr.cx("fr-col-12")} />
+      {simulator === "loading" && <p>Chargement de l’outil</p>}
+      {simulator === "error" ? (
+        <p>
+          Le simulateur d’embauche n’est pas disponible actuellement.
+          <br />
+          Retrouvez les autres simulateurs autour du thème de l’entreprise, sur
+          le site:{" "}
+          <a
+            title="Voir les simulateurs"
+            href="https://mon-entreprise.urssaf.fr/"
+          >
+            https://mon-entreprise.urssaf.fr/
+          </a>
+        </p>
+      ) : (
+        <div ref={simRef} className={fr.cx("fr-col-12")} />
+      )}
       <Feedback className={fr.cx("fr-col-7", "fr-my-12v")} />
     </ContainerMiddle>
   );
