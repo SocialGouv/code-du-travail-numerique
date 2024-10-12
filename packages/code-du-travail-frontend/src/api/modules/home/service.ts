@@ -6,43 +6,45 @@ import { getByIdsModeles } from "../modeles";
 import { getAllThemes } from "../themes";
 import { getToolsByIds } from "../tools";
 
-type CardItem = {
+export type HomeCardItem = {
   description: string;
   link: string;
   theme: string;
   title: string;
 };
 
-type TileItem = {
-  imageUrl: string;
+export type HomeTileItem = {
+  iconName: string;
   link: string;
   title: string;
   description?: string;
 };
 
 export type GetHomePage = {
-  highlights: CardItem[];
-  tools: TileItem[];
-  modeles: CardItem[];
-  contributions: CardItem[];
-  agreements: CardItem[];
-  themes: TileItem[];
+  highlights: HomeCardItem[];
+  tools: HomeTileItem[];
+  modeles: HomeCardItem[];
+  contributions: HomeCardItem[];
+  agreements: HomeCardItem[];
+  themes: HomeTileItem[];
 };
 
 export const getHomeData = async (): Promise<GetHomePage> => {
   const themes = await getAllThemes();
   const parsedThemes = themes.children.map((theme: any) => ({
-    imageUrl: `/static/assets/themes/${theme.icon}.svg`,
+    iconName: theme.icon,
     link: `/${getRouteBySource(theme.source)}/${theme.slug}`,
     title: theme.title,
   }));
+
   const highlights = await getBySlugHighlights("homepage");
-  const parsedHighlights = highlights.map((highlight) => ({
+  const parsedHighlights = highlights.map((highlight: any) => ({
     description: highlight.description,
     link: `/${getRouteBySource(highlight.source)}/${highlight.slug}`,
     theme: getLabelBySource(highlight.source),
     title: highlight.title,
   }));
+
   const tools = await getToolsByIds([
     "d7ad36850a", // simulateur-embauche
     "d8a3605790", // indemnité-licenciement
@@ -50,11 +52,12 @@ export const getHomeData = async (): Promise<GetHomePage> => {
     "db8ffe3574", // convention-collective
   ]);
   const parsedTools = tools.map((tool: any) => ({
-    imageUrl: `/static/assets/tools/${tool._source.icon}.svg`,
+    iconName: tool._source.icon,
     link: `/${getRouteBySource(tool._source.source)}/${tool._source.slug}`,
     title: tool._source.title,
     description: tool._source.description,
   }));
+
   const modeles = await getByIdsModeles([
     "72bd2d0080", // rupture-du-contrat-en-periode-dessai-par-le-salarie
     "772cb955ce", // rupture-de-periode-dessai-par-lemployeur
@@ -67,6 +70,7 @@ export const getHomeData = async (): Promise<GetHomePage> => {
     theme: getLabelBySource(modele.source),
     title: modele.title,
   }));
+
   const contributions = await getByIdsContributions([
     "90c0113ee8", // en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire
     "db4f1fe3fb", // quelle-est-la-duree-du-preavis-en-cas-de-demission
@@ -79,6 +83,7 @@ export const getHomeData = async (): Promise<GetHomePage> => {
     theme: getLabelBySource(contribution.source),
     title: contribution.title,
   }));
+
   const agreements = await getByIdsAgreements([
     "39ac98db5d", // 573-commerces-de-gros
     "81c96604dc", // 2609-batiment-etam
@@ -91,6 +96,7 @@ export const getHomeData = async (): Promise<GetHomePage> => {
     theme: getLabelBySource(agreement.source),
     title: agreement.shortTitle,
   }));
+
   const response = {
     themes: parsedThemes,
     highlights: parsedHighlights,

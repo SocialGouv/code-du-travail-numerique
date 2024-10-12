@@ -10,6 +10,7 @@ import { GetHomePage } from "../../api";
 
 export const Home = (props: GetHomePage) => {
   const { emitHomeClickButtonEvent } = useHomeTracking();
+
   return (
     <div className={fr.cx("fr-grid-row")}>
       <div className={fr.cx("fr-col-12")}>

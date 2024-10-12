@@ -9,7 +9,7 @@ type Props = HomeWrapperWithButtonProps & {
 
 type HomeThemeItem = {
   title: string;
-  imageUrl: string;
+  iconName: string;
   link: string;
 };
 
@@ -35,7 +35,8 @@ export const HomeListTheme = (props: Props) => (
         <HomeTile
           key={`${index}${JSON.stringify(item)}`}
           link={item.link}
-          imageUrl={item.imageUrl}
+          iconName={item.iconName}
+          iconFolder="themes"
           title={item.title}
           isSmall
         />

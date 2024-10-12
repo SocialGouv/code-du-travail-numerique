@@ -1,10 +1,11 @@
-import { HomeTile, HomeTileProps } from "./HomeTile";
+import { HomeTileItem } from "../../api";
+import { HomeTile } from "./HomeTile";
 import { HomeWrapper } from "./HomeWrapper";
 
 type Props = {
   title: string;
   subtitle: string;
-  items: HomeTileProps[];
+  items: HomeTileItem[];
   buttonLink: string;
   buttonText: string;
   onButtonClick: () => void;
@@ -26,7 +27,8 @@ export const HomeSectionTile = (props: Props) => (
         title={item.title}
         description={item.description}
         link={item.link}
-        imageUrl={item.imageUrl}
+        iconName={item.iconName}
+        iconFolder="tools"
       />
     ))}
   </HomeWrapper>

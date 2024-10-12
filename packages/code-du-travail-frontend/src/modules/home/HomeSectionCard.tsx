@@ -1,8 +1,9 @@
-import { HomeCard, HomeCardProps } from "./HomeCard";
+import { HomeCardItem } from "../../api";
+import { HomeCard } from "./HomeCard";
 import { HomeWrapper, HomeWrapperProps } from "./HomeWrapper";
 
 type Props = HomeWrapperProps & {
-  items: HomeCardProps[];
+  items: HomeCardItem[];
   isSmallCard?: boolean;
 };
 
