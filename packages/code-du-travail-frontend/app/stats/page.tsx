@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import { DsfrLayout } from "../../src/modules/layout";
 import { Stats } from "../../src/modules/stats";
 import { getStatsService } from "../../src/api";
-import { cache } from "react";
 
 export const dynamic = "force-static";
 
@@ -13,12 +12,8 @@ export const metadata: Metadata = {
   description: "Statistiques d’utilisation du Code du travail numérique",
 };
 
-const getStats = cache(async () => {
-  return getStatsService();
-});
-
 async function Index() {
-  const data = await getStats();
+  const data = await getStatsService();
 
   return (
     <DsfrLayout>

@@ -31,7 +31,13 @@ export const HomeWrapper = (props: HomeWrapperProps) => (
     >
       <h2>{props.title}</h2>
       {props.subtitle && <p>{props.subtitle}</p>}
-      <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
+      <div
+        className={fr.cx(
+          "fr-grid-row",
+          "fr-grid-row--gutters",
+          "fr-grid-row--right"
+        )}
+      >
         {props.children}
       </div>
       {props.hasButton && (

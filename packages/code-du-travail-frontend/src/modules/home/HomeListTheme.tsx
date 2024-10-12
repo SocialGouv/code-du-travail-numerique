@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { HomeTile } from "./HomeTile";
 import { HomeWrapper, HomeWrapperWithButtonProps } from "./HomeWrapper";
-import { css } from "../../../styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
 
 type Props = HomeWrapperWithButtonProps & {
@@ -28,9 +27,9 @@ export const HomeListTheme = (props: Props) => (
       <Image
         src="/static/assets/img/illustration-home-theme.svg"
         alt="Illustration graphique sur les thèmes"
-        width="400"
-        height="400"
-        className={`${fr.cx("fr-col-4")}`}
+        width="350"
+        height="350"
+        className={`${fr.cx("fr-col-4", "fr-hidden", "fr-unhidden-lg")}`}
       />
       {props.items.map((item, index) => (
         <HomeTile
@@ -44,7 +43,3 @@ export const HomeListTheme = (props: Props) => (
     </>
   </HomeWrapper>
 );
-
-const imageStyle = css({
-  display: "inline",
-});
