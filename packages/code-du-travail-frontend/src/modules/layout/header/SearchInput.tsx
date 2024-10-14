@@ -57,6 +57,7 @@ export const SearchInput = (props: Props) => {
           placeholder: props.placeholder,
           type: props.type,
         })}
+        data-testid="search-input"
       />
       <ul
         {...getMenuProps({
