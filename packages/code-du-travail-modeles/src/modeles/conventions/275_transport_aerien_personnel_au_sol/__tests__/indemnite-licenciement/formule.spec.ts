@@ -550,7 +550,7 @@ describe("Formule indemnité licenciement - CC 275", () => {
     });
   });
 
-  describe("Après le 30/09/2024", () => {
+  describe("Après le 14/10/2024", () => {
     describe("Non-cadres", () => {
       test.each([
         {
