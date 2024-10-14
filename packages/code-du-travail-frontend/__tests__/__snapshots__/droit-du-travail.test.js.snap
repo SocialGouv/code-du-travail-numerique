@@ -171,7 +171,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
       aria-expanded="false"
       aria-haspopup="dialog"
       aria-label="Donner votre avis"
-      class="sc-cspYLC kcRZKx"
+      class="sc-cspYLC eByYtq"
       data-tally-open="3jLRW1"
       data-tally-overlay="1"
       data-tally-width="500"
@@ -179,7 +179,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
       <img
         alt="Suggestion"
         aria-hidden="true"
-        class="sc-dwalKd imtFMI"
+        class="sc-dwalKd bolvNU"
         src="/static/assets/img/emoj-wave.png"
       />
       <span>

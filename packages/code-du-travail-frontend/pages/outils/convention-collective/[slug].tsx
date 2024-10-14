@@ -18,6 +18,7 @@ import {
   RelatedItem,
 } from "../../../src/api";
 import { Tool } from "@socialgouv/cdtn-types";
+import { SITE_URL } from "../../../src/config";
 
 export interface Props {
   description: string;
@@ -41,7 +42,11 @@ function Outils({
   const router = useRouter();
   return (
     <Layout>
-      <Metas title={metaTitle} description={metaDescription} />
+      <Metas
+        title={metaTitle}
+        description={metaDescription}
+        overrideCanonical={`${SITE_URL}/outils/convention-collective`}
+      />
       <Container>
         <Flex>
           <AgreementSearch
