@@ -1,4 +1,10 @@
-import { defineConfig } from "@pandacss/dev";
+import { defineConfig, defineGlobalStyles } from "@pandacss/dev";
+
+const globalCss = defineGlobalStyles({
+  h1: {
+    marginBottom: "48px !important",
+  },
+});
 
 export default defineConfig({
   preflight: true,
@@ -9,4 +15,5 @@ export default defineConfig({
   },
   outdir: "styled-system",
   outExtension: "js",
+  globalCss,
 });

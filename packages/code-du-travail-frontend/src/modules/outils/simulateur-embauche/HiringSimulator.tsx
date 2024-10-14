@@ -2,9 +2,8 @@
 import { Highlight } from "@codegouvfr/react-dsfr/Highlight";
 import { fr } from "@codegouvfr/react-dsfr";
 import { useEffect, createRef, useState } from "react";
-import { ContainerMiddle } from "../layout/ContainerMiddle";
-import { RelatedItem } from "../documents";
-import { Feedback } from "../layout/feedback";
+import { ContainerSimulator } from "../../layout/ContainerSimulator";
+import { RelatedItem } from "../../documents";
 
 type Props = {
   relatedItems: {
@@ -58,19 +57,14 @@ export const HiringSimulator = ({ relatedItems }: Props) => {
   useScript();
   const { simulator } = state;
   return (
-    <ContainerMiddle
+    <ContainerSimulator
       relatedItems={relatedItems}
       title="Calculer le salaire brut/net"
       description="description"
       segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
     >
-      <h1
-        id="simulateur-embauche"
-        className={fr.cx("fr-mb-0", "fr-display--sm")}
-      >
-        Calculer le salaire brut/net
-      </h1>
-      <Highlight size="lg" className={fr.cx("fr-my-12v")}>
+      <h1 id="simulateur-embauche">Calculer le salaire brut/net</h1>
+      <Highlight size="lg" className={fr.cx("fr-mb-12v")}>
         Pour information, l&apos;estimation du salaire net après impôt est basée
         sur la situation d&apos;une personne célibataire sans enfants ni
         patrimoine.
@@ -92,7 +86,6 @@ export const HiringSimulator = ({ relatedItems }: Props) => {
       ) : (
         <div ref={simRef} className={fr.cx("fr-col-12")} />
       )}
-      <Feedback className={fr.cx("fr-col-7", "fr-my-12v")} />
-    </ContainerMiddle>
+    </ContainerSimulator>
   );
 };

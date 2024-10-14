@@ -11,14 +11,9 @@ import { useCommonTracking } from "./tracking";
 type Props = {
   title: string;
   metaDescription: string;
-  className?: string;
 };
 
-export const Share = ({
-  title,
-  metaDescription,
-  className = "",
-}: Props): JSX.Element => {
+export const Share = ({ title, metaDescription }: Props): JSX.Element => {
   const [isUrlCopied, setUrlCopied] = useState(false);
   const { emitClickShare } = useCommonTracking();
 
@@ -28,7 +23,7 @@ export const Share = ({
   };
 
   return (
-    <div className={`${className} ${fr.cx("fr-follow__social")}`}>
+    <div className={`${fr.cx("fr-follow__social")}`}>
       <p>Partager la page</p>
       <ul className={fr.cx("fr-btns-group")}>
         <li>

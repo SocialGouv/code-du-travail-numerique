@@ -71,7 +71,7 @@ export const SiteMap = ({
   themes,
 }: Props) => (
   <Container>
-    <h1 id="plan-du-site" className={fr.cx("fr-mt-0", "fr-mb-3w")}>
+    <h1 id="plan-du-site" className={fr.cx("fr-mt-0")}>
       Plan du site
     </h1>
     <SiteMapSection title={"Page d'accueil"} url={"/"} />
