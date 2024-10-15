@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Stats /> should match snapshot 1`] = `
+<div>
+  <div
+    class="fr-grid-row"
+  >
+    <div
+      class="fr-my-4w fr-col-12"
+    >
+      <h1
+        class="fr-mt-0"
+      >
+        Statistiques d'utilisation
+      </h1>
+      <div
+        class="fr-grid-row fr-grid-row--gutters"
+      >
+        <div
+          class="fr-col-12 fr-col-md-3"
+        >
+          <div
+            class="fr-callout h_100%"
+            id="fr-callout-:r0:"
+          >
+            <p
+              class="fr-callout__text"
+            >
+               
+              <span
+                class="ta_right d_block fr-mt-4v fr-display--xs"
+              >
+                100
+              </span>
+              <span
+                class="ta_left fr-text--bold fr-text--xl"
+              >
+                Contenus référencés
+              </span>
+               
+            </p>
+          </div>
+        </div>
+        <div
+          class="fr-col-12 fr-col-md-3"
+        >
+          <div
+            class="fr-callout h_100%"
+            id="fr-callout-:r1:"
+          >
+            <p
+              class="fr-callout__text"
+            >
+               
+              <span
+                class="ta_right d_block fr-mt-4v fr-display--xs"
+              >
+                400
+              </span>
+              <span
+                class="ta_left fr-text--bold fr-text--xl"
+              >
+                Visites
+              </span>
+               
+            </p>
+          </div>
+        </div>
+        <div
+          class="fr-col-12 fr-col-md-3"
+        >
+          <div
+            class="fr-callout h_100%"
+            id="fr-callout-:r2:"
+          >
+            <p
+              class="fr-callout__text"
+            >
+               
+              <span
+                class="ta_right d_block fr-mt-4v fr-display--xs"
+              >
+                300
+              </span>
+              <span
+                class="ta_left fr-text--bold fr-text--xl"
+              >
+                Recherches
+              </span>
+               
+            </p>
+          </div>
+        </div>
+        <div
+          class="fr-col-12 fr-col-md-3"
+        >
+          <div
+            class="fr-callout h_100%"
+            id="fr-callout-:r3:"
+          >
+            <p
+              class="fr-callout__text"
+            >
+               
+              <span
+                class="ta_right d_block fr-mt-4v fr-display--xs"
+              >
+                200
+              </span>
+              <span
+                class="ta_left fr-text--bold fr-text--xl"
+              >
+                Consultations
+              </span>
+               
+            </p>
+          </div>
+        </div>
+      </div>
+      <p
+        class="fr-mt-4v"
+      >
+        Statistiques d’utilisation depuis le 01/01/2020
+      </p>
+    </div>
+  </div>
+</div>
+`;

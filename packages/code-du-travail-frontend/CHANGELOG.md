@@ -3,6 +3,100 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.156.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.156.0...v4.156.1) (2024-10-14)
+
+**Note:** Version bump only for package @cdt/frontend
+
+# [4.156.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.155.2...v4.156.0) (2024-10-10)
+
+### Bug Fixes
+
+- **bouton questionnaire:** ne pas ouvrir avec l'animation si on est en mobile ([#6200](https://github.com/SocialGouv/code-du-travail-numerique/issues/6200)) ([c284244](https://github.com/SocialGouv/code-du-travail-numerique/commit/c2842445d5ed2804617dd02ec219fceba1b842d3))
+- **deps:** update dependency next to v14.2.11 [security] ([9d8bcb7](https://github.com/SocialGouv/code-du-travail-numerique/commit/9d8bcb7d7306afede239256cb56710f8551794b8))
+- **error logs:** retrait du log dans sentry des erreurs d'accès au localStorage ([#6181](https://github.com/SocialGouv/code-du-travail-numerique/issues/6181)) ([8e20206](https://github.com/SocialGouv/code-du-travail-numerique/commit/8e20206358baca515c75727f3a4af6ab487d4e52))
+- **idcc:** ajout des redirections pour les CC qui ont été supprimé ([#6187](https://github.com/SocialGouv/code-du-travail-numerique/issues/6187)) ([2a1752a](https://github.com/SocialGouv/code-du-travail-numerique/commit/2a1752acc9bd6f5eb0c7c3c4bb859ce7e7589070))
+- **idcc:** ne pas afficher le lien vers la CC si pas de slug ([#6193](https://github.com/SocialGouv/code-du-travail-numerique/issues/6193)) ([221338c](https://github.com/SocialGouv/code-du-travail-numerique/commit/221338c9670e69538e93ec2c2f15e16e1a9539bb))
+- **trouver sa cc:** update url canonique ([#6175](https://github.com/SocialGouv/code-du-travail-numerique/issues/6175)) ([eb77564](https://github.com/SocialGouv/code-du-travail-numerique/commit/eb77564180242664082a9e3bc6f374e6de53d7f7))
+
+### Features
+
+- **modèles de documents:** track des utilisateurs qui type CTRL + C sur la page ([#6186](https://github.com/SocialGouv/code-du-travail-numerique/issues/6186)) ([da37349](https://github.com/SocialGouv/code-du-travail-numerique/commit/da37349065200e3c5da9c2d0ab03b9ee3e83c4de))
+
+## [4.155.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.155.1...v4.155.2) (2024-09-25)
+
+### Bug Fixes
+
+- **typo:** typo dans le titre de rupture conventionnelle + update de l'animation sur le bouton du questionnaire ([#6164](https://github.com/SocialGouv/code-du-travail-numerique/issues/6164)) ([99ace13](https://github.com/SocialGouv/code-du-travail-numerique/commit/99ace132f58c1af5d5f261c98498b030840a3baa))
+
+## [4.155.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.155.0...v4.155.1) (2024-09-23)
+
+### Bug Fixes
+
+- **url accéssibilté:** mise à jour du lien vers le site https://accessibilite.numerique.gouv.fr/ ([#6160](https://github.com/SocialGouv/code-du-travail-numerique/issues/6160)) ([901ab7f](https://github.com/SocialGouv/code-du-travail-numerique/commit/901ab7fc69ac6dfce4b80440d3ae4f157ca8202e))
+
+# [4.155.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.154.0...v4.155.0) (2024-09-19)
+
+### Features
+
+- change feedback hand wave ([#6148](https://github.com/SocialGouv/code-du-travail-numerique/issues/6148)) ([2e9dff3](https://github.com/SocialGouv/code-du-travail-numerique/commit/2e9dff3d3e541764f1879d07c1ac5a45fe605fff))
+
+# [4.154.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.153.0...v4.154.0) (2024-09-19)
+
+### Bug Fixes
+
+- **deps:** update dependency next to v14.2.10 [security] ([05bf2b0](https://github.com/SocialGouv/code-du-travail-numerique/commit/05bf2b039244748a47097215b087f957299cc3ad))
+- **e2e:** mis à jour de la contribution ([#6115](https://github.com/SocialGouv/code-du-travail-numerique/issues/6115)) ([536e4c8](https://github.com/SocialGouv/code-du-travail-numerique/commit/536e4c82d843ab2e89737af39c766bc9014ec3e0))
+- **html:** modification du bouton sur le bandeau pour avoir un html valide ([#6133](https://github.com/SocialGouv/code-du-travail-numerique/issues/6133)) ([b3d7c73](https://github.com/SocialGouv/code-du-travail-numerique/commit/b3d7c7306da4f56b8d4e8ac4e7568a25b0a2d906))
+
+### Features
+
+- **conventions-collectives:** désactiver le click sur les CCs 9999 + ignorer les events matomos sur celles-ci ([#6095](https://github.com/SocialGouv/code-du-travail-numerique/issues/6095)) ([837559b](https://github.com/SocialGouv/code-du-travail-numerique/commit/837559becfdb02bd975c405f5caed0d787610ce5))
+- implement feedback hand wave ([#6145](https://github.com/SocialGouv/code-du-travail-numerique/issues/6145)) ([bf88fa0](https://github.com/SocialGouv/code-du-travail-numerique/commit/bf88fa05824af9eaf226cb806f7143dbd12b1cde))
+
+# [4.153.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.152.0...v4.153.0) (2024-09-11)
+
+### Bug Fixes
+
+- **cypress:** modification des conditions des tests ([#6105](https://github.com/SocialGouv/code-du-travail-numerique/issues/6105)) ([fe44cbd](https://github.com/SocialGouv/code-du-travail-numerique/commit/fe44cbd50f17321dcb1ab3d3577188b80672c8bb))
+- **preavis-retraite:** correction de petits bugs sur le resultat ([#6098](https://github.com/SocialGouv/code-du-travail-numerique/issues/6098)) ([d6eee29](https://github.com/SocialGouv/code-du-travail-numerique/commit/d6eee293ce46c76e968e48fe4202e21f0607f840))
+- **rupture-co:** changement du nom de l'event a l'étape `result` ([#6103](https://github.com/SocialGouv/code-du-travail-numerique/issues/6103)) ([8cbca28](https://github.com/SocialGouv/code-du-travail-numerique/commit/8cbca28ac4c64adf1b6f49a6d0aab79d865676ba))
+
+### Features
+
+- amélioration du bandeau pour le questionnaire ([#6117](https://github.com/SocialGouv/code-du-travail-numerique/issues/6117)) ([34830c0](https://github.com/SocialGouv/code-du-travail-numerique/commit/34830c04e40aef2ffac7ecc52019777190a27bf2))
+
+# [4.152.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.151.1...v4.152.0) (2024-09-04)
+
+### Bug Fixes
+
+- **csp:** remove reporting on sentry ([#6092](https://github.com/SocialGouv/code-du-travail-numerique/issues/6092)) ([a28634e](https://github.com/SocialGouv/code-du-travail-numerique/commit/a28634eddd7b55af23bc01c82c87bedaa1ae5771))
+
+### Features
+
+- ajout d'un questionnaire sur l'utilisation du site ([#6084](https://github.com/SocialGouv/code-du-travail-numerique/issues/6084)) ([5be1d4a](https://github.com/SocialGouv/code-du-travail-numerique/commit/5be1d4affee9d821b6f67914fc6e4b3ef45095b0))
+
+## [4.151.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.151.0...v4.151.1) (2024-08-30)
+
+### Bug Fixes
+
+- **recherche:** remonter les pré-qualifiés dans la recherche ([#6082](https://github.com/SocialGouv/code-du-travail-numerique/issues/6082)) ([f85f181](https://github.com/SocialGouv/code-du-travail-numerique/commit/f85f181bc90bce4a8fdbab57c1bda6cec21eb8e5))
+
+# [4.151.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.150.0...v4.151.0) (2024-08-19)
+
+### Features
+
+- **contribution:** ajout d'un titre pour le SEO ([#6071](https://github.com/SocialGouv/code-du-travail-numerique/issues/6071)) ([0ec1b1c](https://github.com/SocialGouv/code-du-travail-numerique/commit/0ec1b1c7e9752b956bdd16819b1daaaf6426bc12))
+
+# [4.150.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.149.1...v4.150.0) (2024-08-13)
+
+### Bug Fixes
+
+- **seo:** retrait d'un lien interne en nofollow ([#6069](https://github.com/SocialGouv/code-du-travail-numerique/issues/6069)) ([bce5781](https://github.com/SocialGouv/code-du-travail-numerique/commit/bce5781dc0153b283068c0387b9bbc57f9f74ec3))
+
+### Features
+
+- **seo:** amélioration du SEO pour la rupture co ([#6074](https://github.com/SocialGouv/code-du-travail-numerique/issues/6074)) ([9068330](https://github.com/SocialGouv/code-du-travail-numerique/commit/90683309c12f5676c468704d158358d92df2930d))
+
 ## [4.149.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.149.0...v4.149.1) (2024-08-07)
 
 ### Bug Fixes

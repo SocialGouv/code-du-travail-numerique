@@ -1,10 +1,13 @@
 describe("Not found", () => {
   it("page should show valid page to user", () => {
     cy.visit("/banane", { failOnStatusCode: false });
-    cy.get("main").should("contain", "ERREUR 404");
-    cy.get("h1").should("have.text", "Oups, nous ne trouvons pas cette page…");
+    cy.get("main").should("contain", "Erreur 404");
+    cy.findByRole("heading", { level: 1 }).should(
+      "have.text",
+      "Page non trouvée"
+    );
 
-    cy.contains("Revenir à la page d’accueil")
+    cy.contains("Page d'accueil")
       .should("have.prop", "href")
       .and("equal", `${Cypress.config().baseUrl}/`);
   });

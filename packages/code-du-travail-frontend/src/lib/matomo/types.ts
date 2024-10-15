@@ -1,3 +1,5 @@
+import { IndemniteDepartType } from "../../outils/types";
+
 export enum MatomoBaseEvent {
   TRACK_EVENT = "trackEvent",
   OUTIL = "outil",
@@ -5,6 +7,7 @@ export enum MatomoBaseEvent {
   WIDGET_SEARCH = "widget_search",
   HEADER = "header",
   PAGE_HOME = "page_home",
+  PAGE_MODELS = "page_modeles_de_documents",
 }
 
 export enum MatomoBaseAction {
@@ -87,10 +90,11 @@ export enum MatomoActionEvent {
   HEURE_RECHERCHE_EMPLOI = "view_step_Heures d'absence pour rechercher un emploi",
   PREAVIS_DEMISSION = "view_step_Préavis de démission",
   PREAVIS_LICENCIEMENT = "view_step_Préavis de licenciement",
-  INDEMNITE_LICENCIEMENT = "view_step_Indemnité de licenciement",
-  RUPTURE_CONVENTIONNELLE = "view_step_Rupture conventionnelle",
+  INDEMNITE_LICENCIEMENT = `view_step_${IndemniteDepartType.LICENCIEMENT}`,
+  RUPTURE_CONVENTIONNELLE = `view_step_${IndemniteDepartType.RUPTURE_CONVENTIONNELLE}`,
   VIEW_STEP = "view_step",
   CLICK_PREVIOUS = "click_previous",
+  TYPE_CTRL_C = "type_CTRL_C",
 }
 
 type Mapping = Array<{

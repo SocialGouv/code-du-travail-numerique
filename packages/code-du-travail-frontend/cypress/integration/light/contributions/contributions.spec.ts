@@ -26,8 +26,12 @@ describe("Contributions", () => {
       "La période d’essai peut-elle être renouvelée ?"
     );
 
-    cy.get("div > p > span").invoke('text').should("match", /Mis à jour le/);
-    cy.get("div > p > span").invoke('text').should("match", /\d\d\/\d\d\/\d\d\d\d/);
+    cy.get("div > p > span")
+      .invoke("text")
+      .should("match", /Mis à jour le/);
+    cy.get("div > p > span")
+      .invoke("text")
+      .should("match", /\d\d\/\d\d\/\d\d\d\d/);
 
     cy.contains(
       "Accéder aux informations générales sans renseigner ma convention collective"
@@ -35,7 +39,7 @@ describe("Contributions", () => {
     cy.get("body").should("contain", "Que dit le code du travail");
     cy.get("body").should(
       "contain",
-      "La convention ou l’accord de branche étendu prévoit le renouvellement de la période d’essai"
+      "La convention collective ou l’accord de branche étendu prévoit le renouvellement de la période d’essai"
     );
     cy.get("body").should("contain", "Références");
     cy.get("body").should("contain", "L1221-21");
@@ -75,8 +79,13 @@ describe("Contributions", () => {
   });
 
   it("je vois une contribution avec un accordéon ouvert", () => {
-    cy.visit("/contribution/3248-combien-de-fois-le-contrat-de-travail-peut-il-etre-renouvele#cdd");
-    cy.get("h1").should("have.text", "Combien de fois le contrat de travail peut-il être renouvelé ?");
+    cy.visit(
+      "/contribution/3248-combien-de-fois-le-contrat-de-travail-peut-il-etre-renouvele#cdd"
+    );
+    cy.get("h1").should(
+      "have.text",
+      "Combien de fois le contrat de travail peut-il être renouvelé ?"
+    );
     cy.get('[aria-expanded="true"]').find("h3").should("contain", "CDD");
   });
 });

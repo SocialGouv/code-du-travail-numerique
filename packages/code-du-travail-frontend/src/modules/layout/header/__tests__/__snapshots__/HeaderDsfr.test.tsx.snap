@@ -1,0 +1,436 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should match snapshot 1`] = `
+<div>
+  <button
+    aria-controls="fr-theme-modal"
+    aria-hidden="true"
+    class="fr-btn fr-hidden"
+    data-fr-opened="false"
+    id="fr-theme-modal-hidden-control-button"
+    tabindex="-1"
+    type="button"
+  >
+     
+  </button>
+  <dialog
+    aria-labelledby="fr-modal-title-fr-theme-modal"
+    class="fr-modal"
+    data-fr-concealing-backdrop="true"
+    id="fr-theme-modal"
+    role="dialog"
+  >
+    <div
+      class="fr-container fr-container--fluid fr-container-md"
+    >
+      <div
+        class="fr-grid-row fr-grid-row--center"
+      >
+        <div
+          class="fr-col-12 fr-col-md-6 fr-col-lg-4"
+        >
+          <div
+            class="fr-modal__body"
+          >
+            <div
+              class="fr-modal__header"
+            >
+              <button
+                aria-controls="fr-theme-modal"
+                class="fr-btn--close fr-btn"
+                title="Fermer"
+                type="button"
+              >
+                Fermer
+              </button>
+            </div>
+            <div
+              class="fr-modal__content"
+            >
+              <h1
+                class="fr-modal__title"
+                id="fr-modal-title-fr-theme-modal"
+              >
+                Paramètres d'affichage
+              </h1>
+              <div
+                class="fr-display"
+              >
+                <div
+                  class="fr-form-group"
+                >
+                  <fieldset
+                    class="fr-fieldset"
+                  >
+                    <legend
+                      class="fr-fieldset__legend fr-text--regular"
+                    >
+                      Choisissez un thème pour personnaliser l'apparence du site.
+                    </legend>
+                    <div
+                      class="fr-fieldset__content"
+                    >
+                      <div
+                        class="fr-radio-group fr-radio-rich"
+                      >
+                        <input
+                          id=":r0:-light"
+                          name="fr-radios-theme"
+                          type="radio"
+                          value="light"
+                        />
+                        <label
+                          class="fr-label"
+                          for=":r0:-light"
+                        >
+                          Thème clair
+                        </label>
+                        <div
+                          class="fr-radio-rich__img"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            height="80px"
+                            viewBox="0 0 80 80"
+                            width="80px"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <use
+                              class="fr-artwork-decorative"
+                              xlink:href="/img.jpg#artwork-decorative"
+                            />
+                            <use
+                              class="fr-artwork-minor"
+                              xlink:href="/img.jpg#artwork-minor"
+                            />
+                            <use
+                              class="fr-artwork-major"
+                              xlink:href="/img.jpg#artwork-major"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        class="fr-radio-group fr-radio-rich"
+                      >
+                        <input
+                          id=":r0:-dark"
+                          name="fr-radios-theme"
+                          type="radio"
+                          value="dark"
+                        />
+                        <label
+                          class="fr-label"
+                          for=":r0:-dark"
+                        >
+                          Thème sombre
+                        </label>
+                        <div
+                          class="fr-radio-rich__img"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            height="80px"
+                            viewBox="0 0 80 80"
+                            width="80px"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <use
+                              class="fr-artwork-decorative"
+                              xlink:href="/img.jpg#artwork-decorative"
+                            />
+                            <use
+                              class="fr-artwork-minor"
+                              xlink:href="/img.jpg#artwork-minor"
+                            />
+                            <use
+                              class="fr-artwork-major"
+                              xlink:href="/img.jpg#artwork-major"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        class="fr-radio-group fr-radio-rich"
+                      >
+                        <input
+                          id=":r0:-system"
+                          name="fr-radios-theme"
+                          type="radio"
+                          value="system"
+                        />
+                        <label
+                          class="fr-label"
+                          for=":r0:-system"
+                        >
+                          Système.
+                          <span
+                            class="fr-hint-text"
+                          >
+                            Utilise les paramètres système.
+                          </span>
+                        </label>
+                        <div
+                          class="fr-radio-rich__img"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            height="80px"
+                            viewBox="0 0 80 80"
+                            width="80px"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <use
+                              class="fr-artwork-decorative"
+                              xlink:href="/img.jpg#artwork-decorative"
+                            />
+                            <use
+                              class="fr-artwork-minor"
+                              xlink:href="/img.jpg#artwork-minor"
+                            />
+                            <use
+                              class="fr-artwork-major"
+                              xlink:href="/img.jpg#artwork-major"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+  <header
+    class="fr-header"
+    id="fr-header"
+    role="banner"
+  >
+    <div
+      class="fr-header__body"
+    >
+      <div
+        class="fr-container"
+      >
+        <div
+          class="fr-header__body-row"
+        >
+          <div
+            class="fr-header__brand fr-enlarge-link"
+          >
+            <div
+              class="fr-header__brand-top"
+            >
+              <div
+                class="fr-header__logo"
+              >
+                <a
+                  href="/"
+                  title="Accueil - Code du travail numérique, Ministère du Travail"
+                >
+                  <p
+                    class="fr-logo"
+                  >
+                    RÉPUBLIQUE
+                    <br />
+                    FRANÇAISE
+                  </p>
+                </a>
+              </div>
+              <div
+                class="fr-header__operator"
+              >
+                <img
+                  alt="Code du travail numérique"
+                  class="fr-responsive-img"
+                  src="/static/assets/img/logo.svg"
+                  style="max-width: 9.0625rem;"
+                />
+              </div>
+              <div
+                class="fr-header__navbar"
+              >
+                <button
+                  aria-controls="fr-header-search-modal"
+                  class="fr-btn--search fr-btn"
+                  data-fr-opened="false"
+                  id="fr-header-search-button"
+                  title="Rechercher"
+                >
+                  Rechercher
+                </button>
+                <button
+                  aria-controls="header-menu-modal-fr-header"
+                  aria-haspopup="menu"
+                  class="fr-btn--menu fr-btn"
+                  data-fr-opened="false"
+                  id="fr-header-menu-button"
+                  title="Menu"
+                >
+                  Menu
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="fr-header__tools"
+          >
+            <div
+              aria-labelledby="fr-header-search-bar-button"
+              class="fr-header__search fr-modal"
+              id="fr-header-search-modal"
+            >
+              <div
+                class="fr-container fr-container-lg--fluid"
+              >
+                <button
+                  aria-controls="fr-header-search-modal"
+                  class="fr-btn--close fr-btn"
+                  id="fr-header-search-button"
+                  title="Fermer"
+                >
+                  Fermer
+                </button>
+                <div
+                  class="fr-search-bar"
+                  role="search"
+                >
+                  <label
+                    class="fr-label"
+                    for="fr-header-search-input"
+                  >
+                    Rechercher
+                  </label>
+                  <input
+                    aria-activedescendant=""
+                    aria-autocomplete="list"
+                    aria-controls="downshift-:r2:-menu"
+                    aria-expanded="false"
+                    aria-labelledby="downshift-:r2:-label"
+                    autocomplete="off"
+                    class="fr-input"
+                    data-testid="search-input"
+                    id="fr-header-search-input"
+                    placeholder="Rechercher"
+                    role="combobox"
+                    type="search"
+                    value=""
+                  />
+                  <ul
+                    aria-labelledby="downshift-:r2:-label"
+                    class="pos_absolute top_2.5rem w_100% z_100 bg_var(--background-default-grey)"
+                    id="downshift-:r2:-menu"
+                    role="listbox"
+                  />
+                  <button
+                    class="fr-btn"
+                    id="fr-header-search-bar-button"
+                    title="Rechercher"
+                  >
+                    Rechercher
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-labelledby="fr-header-menu-button"
+      class="fr-header__menu fr-modal"
+      id="header-menu-modal-fr-header"
+    >
+      <div
+        class="fr-container"
+      >
+        <button
+          aria-controls="header-menu-modal-fr-header"
+          class="fr-btn--close fr-btn"
+          id="fr-header-mobile-overlay-button-close"
+          title="Fermer"
+        >
+          Fermer
+        </button>
+        <div
+          class="fr-header__menu-links"
+        >
+          <ul
+            class="fr-btns-group"
+          />
+        </div>
+        <nav
+          aria-label="Menu principal"
+          class="fr-nav"
+          id="fr-header-main-navigation"
+          role="navigation"
+        >
+          <ul
+            class="fr-nav__list"
+          >
+            <li
+              class="fr-nav__item"
+            >
+              <a
+                class="fr-nav__link"
+                href="/outils"
+                id="fr-header-main-navigation-link-0"
+              >
+                Boîte à outils
+              </a>
+            </li>
+            <li
+              class="fr-nav__item"
+            >
+              <a
+                class="fr-nav__link"
+                href="/modeles-de-courriers"
+                id="fr-header-main-navigation-link-1"
+              >
+                Modèles de documents
+              </a>
+            </li>
+            <li
+              class="fr-nav__item"
+            >
+              <a
+                class="fr-nav__link"
+                href="/contribution"
+                id="fr-header-main-navigation-link-2"
+              >
+                Vos fiches pratiques
+              </a>
+            </li>
+            <li
+              class="fr-nav__item"
+            >
+              <a
+                class="fr-nav__link"
+                href="/convention-collective"
+                id="fr-header-main-navigation-link-3"
+              >
+                Votre convention collective
+              </a>
+            </li>
+            <li
+              class="fr-nav__item"
+            >
+              <a
+                class="fr-nav__link"
+                href="/themes"
+                id="fr-header-main-navigation-link-4"
+              >
+                Thèmes
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+</div>
+`;

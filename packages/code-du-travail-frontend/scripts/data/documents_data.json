@@ -6167,6 +6167,232 @@
     "messageBlock": "<p>Ces informations sont issues de l’analyse des règles prévues par votre convention collective de branche étendue et par le Code du travail. Elles s’appliqueront sauf si une convention ou un accord d’entreprise (ou de groupe, ou d’établissement) existant dans votre entreprise prévoit également des règles sur le même sujet. En effet, dans ce cas, cette convention ou accord s’appliquera, qu’il soit plus ou moins favorable que la convention de branche, sous réserve d’être au moins aussi favorable que le Code du travail. Dans tous les cas, reportez-vous à votre contrat de travail car s’il contient des règles plus favorables, ce sont ces dernières qui s’appliqueront. </p><p>Attention, d’autres règles non étendues peuvent potentiellement vous être applicables.</p>"
   },
   {
+    "date": "29/05/2024",
+    "contents": [
+      {
+        "name": "contrat-de-travail-a-duree-indeterminee-cdi",
+        "title": "Contrat de travail à durée indéterminée (CDI)",
+        "blocks": [
+          {
+            "type": "markdown",
+            "html": "<p>Selon le Code du travail, la forme du contrat à durée indéterminée est libre : un écrit n’est pas nécessairement exigé s'il s'agit d'un CDI <em>à temps plein</em> sauf si votre <webcomponent-tooltip-cc>convention collective</webcomponent-tooltip-cc> le prévoit. Vous pouvez vérifier cette obligation <a href=\"https://code.travail.gouv.fr/contribution/est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe\">ici</a>.\nEn pratique, un contrat écrit est toujours préférable.</p>\n<p>Par exemple, pour qu’il y ait une période d’essai, celle-ci doit être expressément indiquée dans le contrat de travail. <a href=\"https://code.travail.gouv.fr/contribution/quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement\">Vérifiez ici la durée maximale prévue par votre convention collective</a>.</p>\n<p>Par ailleurs, elle ne peut être renouvelée que si la <webcomponent-tooltip-cc>convention collective</webcomponent-tooltip-cc> le prévoit. <a href=\"https://code.travail.gouv.fr/contribution/la-periode-dessai-peut-elle-etre-renouvelee\">Consultez la disposition de votre convention collective sur le renouvellement de la période d'essai</a>.</p>\n<p>Ce modèle de contrat de travail à durée indéterminée vous est donc proposé à titre d’exemple. <a href=\"https://code.travail.gouv.fr/modeles-de-courriers/contrat-de-travail-a-duree-indeterminee\">Consultez le modèle de CDI</a></p>\n<p>Il convient de l’adapter à votre situation et d’y faire figurer les clauses imposées par votre <webcomponent-tooltip-cc>convention collective</webcomponent-tooltip-cc> et les éventuelles clauses particulières librement négociées (clause de non-concurrence, clause de mobilité…).\nRetrouvez les <strong>mentions obligatoires</strong> prévues par votre <webcomponent-tooltip-cc>convention collective</webcomponent-tooltip-cc> <a href=\"https://code.travail.gouv.fr/contribution/quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement\">en cliquant ici</a>.</p>"
+          }
+        ],
+        "references": [
+          {
+            "label": "Liens utiles",
+            "links": [
+              {
+                "id": "140551c9-a782-4f0f-8652-778c7607eb17",
+                "url": "https://code.travail.gouv.fr/fiche-service-public/temps-partiel-dun-salarie-dans-le-secteur-prive?q=temps%20partiel",
+                "type": "external",
+                "order": 1,
+                "title": "Temps partiel d'un salarié dans le secteur privé "
+              },
+              {
+                "id": "d452ab8b-7dc1-4a7e-ae42-f1bd0828702f",
+                "url": "https://code.travail.gouv.fr/fiche-ministere-travail/les-conventions-de-forfait?q=forfait#Conventions-de-forfait-objet",
+                "type": "external",
+                "order": 2,
+                "title": "Les conventions de forfait "
+              },
+              {
+                "id": "80357d5d-42a0-4366-99be-bc27f2dbbda9",
+                "url": "https://code.travail.gouv.fr/outils/convention-collective",
+                "type": "external",
+                "order": 3,
+                "title": "Trouver sa convention collective"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "contrat-de-travail-a-duree-determinee-cdd",
+        "title": "Contrat de travail à durée déterminée (CDD)",
+        "blocks": [
+          {
+            "type": "markdown",
+            "html": "<p>Le contrat de travail à durée déterminée est nécessairement établi par écrit et comporte la définition précise du motif du recours au CDD.</p>\n<p>Il doit être transmis au salarié, au plus tard, dans les deux <webcomponent-tooltip content=\"Correspond%20%C3%A0%20tous%20les%20jours%20de%20la%20semaine%2C%20%C3%A0%20l%E2%80%99exception%20du%20jour%20de%20repos%20hebdomadaire%20(g%C3%A9n%C3%A9ralement%20le%20dimanche)%20et%20des%20jours%20f%C3%A9ri%C3%A9s%20habituellement%20non%20travaill%C3%A9s%20dans%20l%E2%80%99entreprise.\">jours ouvrables</webcomponent-tooltip> suivant l'embauche.</p>\n<p>Ce modèle, proposé à titre d’exemple, reprend <a href=\"https://code.travail.gouv.fr/contribution/quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement\">les mentions obligatoires qui doivent figurer dans le contrat</a>, précise les mentions spécifiques liées au motif du recours au CDD, et comporte des clauses particulières qui peuvent être retenues ou non selon les modalités d'exécution du travail prévues par les parties.</p>\n<p>En toutes hypothèses, il convient de vous assurer que vous êtes dans l’un des cas de recours autorisés par la loi et d’adapter ce contrat à votre situation. Vérifiez notamment la <a href=\"https://code.travail.gouv.fr/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd\">durée maximale prévue par la convention collective</a> ainsi que <a href=\"https://code.travail.gouv.fr/contribution/combien-de-fois-le-contrat-de-travail-peut-il-etre-renouvele\">les conditions de renouvellement du CDD</a>.</p>\n<p><a href=\"https://code.travail.gouv.fr/modeles-de-courriers/contrat-de-travail-a-duree-determinee-cdd\">Consultez le modèle de CDD</a></p>\n<p>Attention au cas particulier du CDD d'usage qui comporte de nombreuses spécificités.\n<a href=\"https://code.travail.gouv.fr/contribution/embauche-en-contrat-dextra-cdd-dusage\">Consultez votre convention collective sur le CDD d'usage</a></p>\n<p>Le CDD à objet défini fait également l’objet de règles particulières, présentées sur <a href=\"https://code.travail.gouv.fr/fiche-ministere-travail/le-contrat-a-duree-determinee-a-objet-defini\">cette fiche</a>.</p>\n<p>Pour finir, à la fin d'un CDD, le salarié touche dans certains cas une prime de précarité. Pour connaître le montant de cette prime, un <a href=\"https://code.travail.gouv.fr/outils/indemnite-precarite\">simulateur de l'indemnité est disponible ici</a>.</p>"
+          }
+        ],
+        "references": [
+          {
+            "label": "Liens utiles",
+            "links": [
+              {
+                "id": "641025df-8eb9-4f14-823f-c75a6c4cca14",
+                "url": "https://code.travail.gouv.fr/contribution/dans-le-cadre-dun-cdd-quel-est-le-montant-de-lindemnite-de-fin-de-contrat",
+                "type": "external",
+                "order": 1,
+                "title": "Dans le cadre d’un CDD, quel est le montant de l’indemnité de fin de contrat ?"
+              },
+              {
+                "id": "c3bf9ca6-d1bc-4c60-ac3a-9f77d39cba1a",
+                "url": "https://code.travail.gouv.fr/fiche-ministere-travail/le-contrat-a-duree-determinee-cdd?q=CDD",
+                "type": "external",
+                "order": 2,
+                "title": "Le contrat à durée déterminée (CDD)"
+              },
+              {
+                "id": "2d82e85c-cd89-4150-9844-b07905c3c1bc",
+                "url": "https://code.travail.gouv.fr/outils/convention-collective",
+                "type": "external",
+                "order": 3,
+                "title": "Trouver sa convention collective"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "description": "Afin de faciliter la rédaction des contrats de travail, le ministère du Travail propose aux salariés et aux employeurs des exemples de contrats : CDI et CDD.",
+    "dismissalProcess": false,
+    "sectionDisplayMode": "accordion",
+    "breadcrumbs": [],
+    "cdtnId": "16fc2b793b",
+    "excludeFromSearch": false,
+    "id": "0dfda666-dd70-4b19-be87-2366975f8a5c",
+    "isPublished": true,
+    "metaDescription": "Afin de faciliter la rédaction des contrats de travail, le ministère du Travail propose aux salariés et aux employeurs des exemples de contrats : CDI et CDD à télécharger en format Word.",
+    "refs": [],
+    "slug": "exemples-de-contrats-de-travail-cdi-et-cdd",
+    "source": "information",
+    "text": "Exemples de contrats de travail CDI et CDD",
+    "title": "Exemples de contrats de travail CDI et CDD",
+    "intro": "<p>Afin de faciliter la rédaction des contrats de travail, cette page propose deux exemples : un contrat de travail à durée indéterminée (CDI) et un contrat de travail à durée déterminée (CDD).</p>\n<p>Ils sont mis à <webcomponent-tooltip content=\"Phrase%20ou%20ensemble%20de%20phrases%20d%E2%80%99un%20accord%2C%20d%E2%80%99une%20convention%20collective%2C%20d%E2%80%99une%20loi.\">disposition</webcomponent-tooltip> pour téléchargement et doivent être complétés avant signature.</p>\n<p>La <webcomponent-tooltip-cc>convention collective</webcomponent-tooltip-cc> applicable au sein de l'entreprise peut définir des clauses de contrat spécifiques.</p>"
+  },
+  {
+    "date": "14/08/2024",
+    "contents": [
+      {
+        "name": "quelle-est-la-procedure-a-suivre",
+        "title": "Quelle est la procédure à suivre ?",
+        "blocks": [
+          {
+            "type": "markdown",
+            "html": "<h3>Un ou plusieurs entretien(s)</h3>\n<p>L'employeur et le salarié doivent se réunir à l'occasion d'au moins un entretien dont les conditions sont précisées à l’avance (date, heure, lieu). <a href=\"https://code.travail.gouv.fr/modeles-de-courriers/demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle\"> Voir le modèle de lettre « demande d’entretien pour une rupture conventionnelle »</a>.</p>\n<p>Au cours de cet entretien le salarié peut se faire assister (par un représentant du personnel ou par tout autre salarié ou, s’il n’y a pas de représentant du personnel dans l’entreprise, par un <webcomponent-tooltip content=\"Personne%20qui%20assiste%20le%20salari%C3%A9%20lors%20de%20l%E2%80%99entretien%20pr%C3%A9alable%20%C3%A0%20un%20licenciement%20ou%20%C3%A0%20une%20rupture%20conventionnelle%20lorsqu%E2%80%99il%20n%E2%80%99y%20a%20pas%20de%20repr%C3%A9sentants%20du%20personnels%20%C3%A9lus%20dans%20l%E2%80%99entreprise.\">conseiller du salarié</webcomponent-tooltip>). S’il décide de l’être, il doit en informer l'employeur avant l'entretien, l’employeur pouvant alors lui-même se faire assister.</p>\n<p>Une fois les conditions de la rupture définies dans le cadre de cet ou de ces entretiens, la convention de rupture peut être rédigée.</p>\n<h3>Rédaction et signature de la convention de rupture</h3>\n<p>La convention de rupture conventionnelle individuelle contient les informations relatives aux parties et fixe les conditions, librement définies par l'employeur et le salarié, de la rupture du contrat de travail (notamment la date de rupture du contrat et le montant de l’indemnité versée au salarié).\nLe salarié et l'employeur doivent signer la convention.</p>\n<p>L'employeur doit en remettre un exemplaire au salarié.</p>\n<h3>Délai de rétractation</h3>\n<p>À partir du lendemain de la signature de la convention de rupture, l'employeur et le salarié disposent d'un délai de 15 <webcomponent-tooltip content=\"Correspond%20%C3%A0%20la%20totalit%C3%A9%20des%20jours%20du%20calendrier%20de%20l%E2%80%99ann%C3%A9e%20civile%2C%20du%201er%20janvier%20au%2031%20d%C3%A9cembre%2C%20y%20compris%20les%20jours%20f%C3%A9ri%C3%A9s%20ou%20ch%C3%B4m%C3%A9s.\">jours calendaires</webcomponent-tooltip> pour exercer leur droit de rétractation (droit de revenir sur leur décision).</p>\n<p>Si ce délai expire un samedi, un dimanche ou un <webcomponent-tooltip content=\"Jours%20de%20f%C3%AAtes%20religieuses%2C%20la%C3%AFques%2C%20de%20comm%C3%A9moration%20ou%20f%C3%AAte%20nationale%20pr%C3%A9vus%20par%20la%20loi%20%3A%201er%20janvier%2C%20lundi%20de%20P%C3%A2ques%2C%201er%20mai%2C%208%20mai%2C%20Ascension%2C%20lundi%20de%20Pentec%C3%B4te%2C%2014%20juillet%2C%20Assomption%20(15%20ao%C3%BBt)%2C%20Toussaint%2C%2011%20novembre%2C%2025%20d%C3%A9cembre.%20Il%20existe%20%C3%A9galement%20des%20jours%20f%C3%A9ri%C3%A9s%20locaux.%20Les%20jours%20f%C3%A9ri%C3%A9s%20peuvent%20%C3%AAtre%20travaill%C3%A9s%20ou%20non.%20Seul%20le%201er%20mai%20est%20obligatoirement%20non%20travaill%C3%A9%20sauf%20exception.\">jour férié</webcomponent-tooltip> ou chômé, il est prorogé jusqu'au premier <webcomponent-tooltip content=\"Correspond%20%C3%A0%20tous%20les%20jours%20de%20la%20semaine%2C%20%C3%A0%20l%E2%80%99exception%20du%20jour%20de%20repos%20hebdomadaire%20(g%C3%A9n%C3%A9ralement%20le%20dimanche)%20et%20des%20jours%20f%C3%A9ri%C3%A9s%20habituellement%20non%20travaill%C3%A9s%20dans%20l%E2%80%99entreprise.\">jour ouvrable</webcomponent-tooltip> suivant.\nLa loi n'impose pas à la partie qui déciderait de se rétracter de motiver sa décision.</p>\n<h3>Demande d'homologation à l’administration</h3>\n<p>En l'absence de rétractation dans le délai de 15 jours prévu, un exemplaire de la convention de rupture doit être adressé à la DREETS afin d’obtenir sa validation.</p>\n<p>Cette demande de validation de la convention doit être effectuée via <a href=\"https://www.telerc.travail.gouv.fr/accueil\">le téléservice TéléRC.</a></p>\n<p><strong>À noter :</strong> la convention de rupture qui concerne un salarié protégé est soumise non pas à <webcomponent-tooltip content=\"Validation%20de%20la%20conformit%C3%A9%20d%E2%80%99un%20acte.\">homologation</webcomponent-tooltip>, mais à autorisation de l'inspecteur du travail. L'employeur doit remplir un formulaire spécifique, dans cette hypothèse.</p>\n<p>L’administration dispose alors d’un délai de 15 <webcomponent-tooltip content=\"Correspond%20%C3%A0%20tous%20les%20jours%20de%20la%20semaine%2C%20%C3%A0%20l%E2%80%99exception%20du%20jour%20de%20repos%20hebdomadaire%20(g%C3%A9n%C3%A9ralement%20le%20dimanche)%20et%20des%20jours%20f%C3%A9ri%C3%A9s%20habituellement%20non%20travaill%C3%A9s%20dans%20l%E2%80%99entreprise.\">jours ouvrables</webcomponent-tooltip>, à partir du lendemain du jour de la réception de la demande, pour vérifier la validité de la convention.</p>\n<p>Si le dernier jour de ce délai tombe un samedi, un dimanche ou un <webcomponent-tooltip content=\"Jours%20de%20f%C3%AAtes%20religieuses%2C%20la%C3%AFques%2C%20de%20comm%C3%A9moration%20ou%20f%C3%AAte%20nationale%20pr%C3%A9vus%20par%20la%20loi%20%3A%201er%20janvier%2C%20lundi%20de%20P%C3%A2ques%2C%201er%20mai%2C%208%20mai%2C%20Ascension%2C%20lundi%20de%20Pentec%C3%B4te%2C%2014%20juillet%2C%20Assomption%20(15%20ao%C3%BBt)%2C%20Toussaint%2C%2011%20novembre%2C%2025%20d%C3%A9cembre.%20Il%20existe%20%C3%A9galement%20des%20jours%20f%C3%A9ri%C3%A9s%20locaux.%20Les%20jours%20f%C3%A9ri%C3%A9s%20peuvent%20%C3%AAtre%20travaill%C3%A9s%20ou%20non.%20Seul%20le%201er%20mai%20est%20obligatoirement%20non%20travaill%C3%A9%20sauf%20exception.\">jour férié</webcomponent-tooltip> ou chômé, il est prolongé jusqu'au 1er <webcomponent-tooltip content=\"Correspond%20%C3%A0%20tous%20les%20jours%20de%20la%20semaine%2C%20%C3%A0%20l%E2%80%99exception%20du%20jour%20de%20repos%20hebdomadaire%20(g%C3%A9n%C3%A9ralement%20le%20dimanche)%20et%20des%20jours%20f%C3%A9ri%C3%A9s%20habituellement%20non%20travaill%C3%A9s%20dans%20l%E2%80%99entreprise.\">jour ouvrable</webcomponent-tooltip> suivant.</p>\n<h3>Réponse de l’administration et effet sur le contrat de travail</h3>\n<p>En cas d'acceptation de la demande, ou si la DREETS n'a pas répondu dans le délai de 15 jours, la convention est homologuée.</p>\n<p>Le contrat est rompu à la date prévue dans la convention de rupture.</p>\n<p>En cas de refus d'<webcomponent-tooltip content=\"Validation%20de%20la%20conformit%C3%A9%20d%E2%80%99un%20acte.\">homologation</webcomponent-tooltip>, la DREETS doit motiver sa décision (non-respect d'une étape de la procédure ou du montant minimum de l'<webcomponent-tooltip content=\"Sommes%20vers%C3%A9es%20en%20compensation%20ou%20en%20r%C3%A9paration%20de%20quelque%20chose.\">indemnité</webcomponent-tooltip> spécifique du rupture conventionnelle par exemple).</p>\n<p>Le contrat de travail n’est pas rompu et se poursuit donc dans les conditions habituelles.</p>"
+          }
+        ],
+        "references": [
+          {
+            "label": "Références juridiques",
+            "links": [
+              {
+                "id": "b253bc47-f25f-47fa-994e-1778a2f7a6ca",
+                "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000019071185",
+                "type": "external",
+                "order": 1,
+                "title": "Article L. 1237-12 du Code du travail"
+              },
+              {
+                "id": "f993bfe8-8007-4150-834c-b65add92e3e9",
+                "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000019071182",
+                "type": "external",
+                "order": 2,
+                "title": "Article L. 1237-13 du Code du travail"
+              },
+              {
+                "id": "ef289550-f492-4129-87cc-8c81a0fef215",
+                "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000019071180",
+                "type": "external",
+                "order": 3,
+                "title": "Article L. 1237-14 du Code du travail"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "quelle-est-la-procedure-a-suivre-infographie",
+        "title": "Quelle est la procédure à suivre ? [infographie]",
+        "blocks": [
+          {
+            "size": "4.72 MB",
+            "type": "graphic",
+            "imgUrl": "ruptureconventionnelle.svg",
+            "altText": "Cette infographie décrit les différentes étapes possibles en cas de rupture conventionnelle. Sa version textuelle est disponible en cliquant sur \"Voir en détail\" (plus bas, à gauche).",
+            "fileUrl": "ruptureconventionnelle.pdf",
+            "html": "<p><strong>Étape 1: Proposition de rupture conventionnelle :</strong></p>\n<p><strong>Qui ?</strong></p>\n<ul>\n<li>la proposition peut être à l’initiative du salarié ou de l’employeur</li>\n</ul>\n<p><strong>Comment ?</strong></p>\n<ul>\n<li>la proposition peut être faite à l’oral comme à l’écrit</li>\n</ul>\n<p><strong>Étape 2 : Entretien(s) :</strong></p>\n<p><strong>Pourquoi  ?</strong></p>\n<ul>\n<li>\n<p>pour se mettre d’accord sur l’utilisation d’une rupture conventionnelle dans le but de mettre fin au contrat de travail</p>\n</li>\n<li>\n<p>pour définir les conditions de cette rupture (date de départ, montant de l’indemnité versée au salarié)</p>\n</li>\n</ul>\n<p><strong>Quelles sont les modalités ?</strong></p>\n<p>L’employeur doit informer le salarié qu’il peut être assisté par un représentant du personnel ou par tout autre salarié ou, s’il n’y a pas de représentant du personnel dans l’entreprise, par un <webcomponent-tooltip content=\"Personne%20qui%20assiste%20le%20salari%C3%A9%20lors%20de%20l%E2%80%99entretien%20pr%C3%A9alable%20%C3%A0%20un%20licenciement%20ou%20%C3%A0%20une%20rupture%20conventionnelle%20lorsqu%E2%80%99il%20n%E2%80%99y%20a%20pas%20de%20repr%C3%A9sentants%20du%20personnels%20%C3%A9lus%20dans%20l%E2%80%99entreprise.\">conseiller du salarié</webcomponent-tooltip></p>\n<p><strong>Étape 3 : Signature de la convention :</strong></p>\n<p><strong>Quand ?</strong></p>\n<ul>\n<li>possible dès le jour même de l’entretien</li>\n</ul>\n<p><strong>Comment ?</strong></p>\n<ul>\n<li>\n<p>aller sur le site <a href=\"https://www.telerc.travail.gouv.fr/accueil\">TeleRC</a> et “Créer une nouvelle demande”</p>\n</li>\n<li>\n<p>remplir le formulaire en 3 exemplaires : 1 pour l’employeur, 1 pour le salarié, 1 pour l’administration (Dreets) pour l'<webcomponent-tooltip content=\"Validation%20de%20la%20conformit%C3%A9%20d%E2%80%99un%20acte.\">homologation</webcomponent-tooltip></p>\n</li>\n<li>\n<p>chaque exemplaire doit être daté et signé par l’employeur et le salarié</p>\n</li>\n<li>\n<p>même si ce formulaire suffit, une convention de rupture « annexe » peut également être signée pour fixer par exemple le maintien ou non d’une clause de non concurrence</p>\n</li>\n</ul>\n<p><strong>Délai de rétractation : 15 <webcomponent-tooltip content=\"Correspond%20%C3%A0%20la%20totalit%C3%A9%20des%20jours%20du%20calendrier%20de%20l%E2%80%99ann%C3%A9e%20civile%2C%20du%201er%20janvier%20au%2031%20d%C3%A9cembre%2C%20y%20compris%20les%20jours%20f%C3%A9ri%C3%A9s%20ou%20ch%C3%B4m%C3%A9s.\">jours calendaires</webcomponent-tooltip></strong> (1)(3)</p>\n<p>Le délai de rétractation :</p>\n<ul>\n<li>\n<p>il débute le lendemain de la signature de la convention et se termine 15 <webcomponent-tooltip content=\"Correspond%20%C3%A0%20la%20totalit%C3%A9%20des%20jours%20du%20calendrier%20de%20l%E2%80%99ann%C3%A9e%20civile%2C%20du%201er%20janvier%20au%2031%20d%C3%A9cembre%2C%20y%20compris%20les%20jours%20f%C3%A9ri%C3%A9s%20ou%20ch%C3%B4m%C3%A9s.\">jours calendaires</webcomponent-tooltip> (1) plus tard (le 15ème jour à minuit)</p>\n</li>\n<li>\n<p>pendant ce délai, le salarié ou l’employeur peut revenir sur sa décision et se rétracter par lettre recommandée avec demande d’avis de réception ou par lettre remise à l’autre partie en main propre contre décharge mentionnant la date de remise</p>\n</li>\n<li>\n<p>en cas de rétractation, aucune justification n’est nécessaire</p>\n</li>\n</ul>\n<p><strong>Étape 4 : Demande d’homologation :</strong></p>\n<p><strong>Quand ?</strong></p>\n<ul>\n<li>possible dès le lendemain de la fin du délai de rétractation</li>\n</ul>\n<p><strong>Comment ?</strong></p>\n<p>envoi dématérialisé du formulaire sur le site <a href=\"https://www.telerc.travail.gouv.fr/accueil\">TeleRC</a></p>\n<p><strong>Pourquoi ?</strong></p>\n<p>L’administration (la Dreets) va s’assurer du respect de la liberté de consentement des parties et des conditions prévues par le Code du travail : respect des règles relatives à l’assistance des parties, au droit de rétractation, au montant minimal de l’indemnité spécifique de rupture conventionnelle, etc.</p>\n<p><strong>Délai d’instruction : 15 <webcomponent-tooltip content=\"Correspond%20%C3%A0%20tous%20les%20jours%20de%20la%20semaine%2C%20%C3%A0%20l%E2%80%99exception%20du%20jour%20de%20repos%20hebdomadaire%20(g%C3%A9n%C3%A9ralement%20le%20dimanche)%20et%20des%20jours%20f%C3%A9ri%C3%A9s%20habituellement%20non%20travaill%C3%A9s%20dans%20l%E2%80%99entreprise.\">jours ouvrables</webcomponent-tooltip></strong> (2)(3)</p>\n<p>Le délai d’instruction :</p>\n<ul>\n<li>il débute le lendemain de la réception de la demande par la Dreets</li>\n<li>il se termine 15 <webcomponent-tooltip content=\"Correspond%20%C3%A0%20tous%20les%20jours%20de%20la%20semaine%2C%20%C3%A0%20l%E2%80%99exception%20du%20jour%20de%20repos%20hebdomadaire%20(g%C3%A9n%C3%A9ralement%20le%20dimanche)%20et%20des%20jours%20f%C3%A9ri%C3%A9s%20habituellement%20non%20travaill%C3%A9s%20dans%20l%E2%80%99entreprise.\">jours ouvrables</webcomponent-tooltip> (2) plus tard à minuit</li>\n</ul>\n<p><strong>Étape 5 : Décision d’homologation</strong></p>\n<p><strong>Quelles conséquences ?</strong></p>\n<ul>\n<li>Si la Dreets valide la rupture conventionnelle ou si elle ne répond pas dans le délai de 15 <webcomponent-tooltip content=\"Correspond%20%C3%A0%20tous%20les%20jours%20de%20la%20semaine%2C%20%C3%A0%20l%E2%80%99exception%20du%20jour%20de%20repos%20hebdomadaire%20(g%C3%A9n%C3%A9ralement%20le%20dimanche)%20et%20des%20jours%20f%C3%A9ri%C3%A9s%20habituellement%20non%20travaill%C3%A9s%20dans%20l%E2%80%99entreprise.\">jours ouvrables</webcomponent-tooltip> (2) le contrat peut être rompu à la date fixée dans la convention, au plus tôt le lendemain du jour de l'<webcomponent-tooltip content=\"Validation%20de%20la%20conformit%C3%A9%20d%E2%80%99un%20acte.\">homologation</webcomponent-tooltip></li>\n</ul>\n<p>Il n’y a pas de <webcomponent-tooltip content=\"D%C3%A9lai%20qui%20s%E2%80%99%C3%A9coule%20entre%20la%20notification%20de%20la%20rupture%20du%20contrat%20de%20travail%20(licenciement%2C%20d%C3%A9mission%2C%20etc.)%20et%20la%20date%20de%20fin%20du%20contrat%20de%20travail.%20Exemple%20%3A%20un%20salari%C3%A9%20qui%20donne%20sa%20d%C3%A9mission%20le%201er%20juillet%20et%20qui%20a%20un%20pr%C3%A9avis%20de%203%20mois%20%C3%A0%20effectuer%2C%20cela%20signifie%20que%20le%20salari%C3%A9%20ne%20quittera%20l%E2%80%99entreprise%20que%20le%2030%20septembre%20au%20soir.%20\">préavis</webcomponent-tooltip> lors d’une rupture conventionnelle</p>\n<ul>\n<li>Si la Dreets refuse la rupture conventionnelle (le refus doit être expliqué) le contrat de travail n’est pas rompu et continue de s’exécuter dans les conditions habituelles (une nouvelle demande de rupture conventionnelle peut être soumise en respectant toutes les étapes)</li>\n</ul>\n<p><strong>À noter :</strong> le contrat de travail continue de s’exécuter normalement pendant toute la durée de la procédure d’élaboration et d’homologation de la convention, et jusqu’à la date de rupture fixée. Le salarié peut prendre des congés payés entre la date de signature du formulaire et la date de rupture de son contrat. Il est rémunéré normalement pendant cette période.</p>\n<p>Cette procédure ne concerne pas la rupture conventionnelle des salariés protégés (délégués syndicaux, membres élus du <webcomponent-tooltip content=\"Instance%20unique%20charg%C3%A9e%20de%20repr%C3%A9senter%20le%20personnel%20dans%20une%20entreprise.%20Elle%20remplace%20les%20anciennes%20instances%20repr%C3%A9sentatives%20du%20personnel%20dans%20l%E2%80%99entreprise%20qui%20%C3%A9taient%20les%20d%C3%A9l%C3%A9gu%C3%A9s%20du%20personnel%2C%20le%20comit%C3%A9%20d%E2%80%99entreprise%20et%20le%20CHSCT.%20Sa%20mise%20en%20place%20est%20obligatoire%20dans%20les%20entreprises%20dont%20l%E2%80%99effectif%20atteint%2011%20salari%C3%A9s%20pendant%2012%20mois%20cons%C3%A9cutifs.%20Ses%20attributions%20%C3%A9voluent%20en%20fonction%20des%20effectifs%20de%20l%E2%80%99entreprise.%20\">comité social et économique</webcomponent-tooltip>, etc.) pour lesquels une procédure spécifique s' applique.</p>\n<p>L'employeur et l'assistante maternelle ne peuvent pas conclure de rupture conventionnelle.</p>\n<p>(1) Correspond à la totalité des jours de la <webcomponent-tooltip content=\"D%C3%A9bute%20le%20lundi%20%C3%A0%200%20heure%20et%20se%20termine%20le%20dimanche%20%C3%A0%2024%20heures%2C%20sauf%20si%20une%20convention%20ou%20un%20accord%20collectif%20fixe%20une%20autre%20p%C3%A9riode%20de%207%20jours%20cons%C3%A9cutifs.\">semaine</webcomponent-tooltip> du lundi au dimanche, y compris les <webcomponent-tooltip content=\"Jours%20de%20f%C3%AAtes%20religieuses%2C%20la%C3%AFques%2C%20de%20comm%C3%A9moration%20ou%20f%C3%AAte%20nationale%20pr%C3%A9vus%20par%20la%20loi%20%3A%201er%20janvier%2C%20lundi%20de%20P%C3%A2ques%2C%201er%20mai%2C%208%20mai%2C%20Ascension%2C%20lundi%20de%20Pentec%C3%B4te%2C%2014%20juillet%2C%20Assomption%20(15%20ao%C3%BBt)%2C%20Toussaint%2C%2011%20novembre%2C%2025%20d%C3%A9cembre.%20Il%20existe%20%C3%A9galement%20des%20jours%20f%C3%A9ri%C3%A9s%20locaux.%20Les%20jours%20f%C3%A9ri%C3%A9s%20peuvent%20%C3%AAtre%20travaill%C3%A9s%20ou%20non.%20Seul%20le%201er%20mai%20est%20obligatoirement%20non%20travaill%C3%A9%20sauf%20exception.\">jours fériés</webcomponent-tooltip> ou chômés.</p>\n<p>(2) Correspond à tous les jours de la <webcomponent-tooltip content=\"D%C3%A9bute%20le%20lundi%20%C3%A0%200%20heure%20et%20se%20termine%20le%20dimanche%20%C3%A0%2024%20heures%2C%20sauf%20si%20une%20convention%20ou%20un%20accord%20collectif%20fixe%20une%20autre%20p%C3%A9riode%20de%207%20jours%20cons%C3%A9cutifs.\">semaine</webcomponent-tooltip> à l'exception du jour de repos hebdomadaire (généralement le dimanche) et des <webcomponent-tooltip content=\"Jours%20de%20f%C3%AAtes%20religieuses%2C%20la%C3%AFques%2C%20de%20comm%C3%A9moration%20ou%20f%C3%AAte%20nationale%20pr%C3%A9vus%20par%20la%20loi%20%3A%201er%20janvier%2C%20lundi%20de%20P%C3%A2ques%2C%201er%20mai%2C%208%20mai%2C%20Ascension%2C%20lundi%20de%20Pentec%C3%B4te%2C%2014%20juillet%2C%20Assomption%20(15%20ao%C3%BBt)%2C%20Toussaint%2C%2011%20novembre%2C%2025%20d%C3%A9cembre.%20Il%20existe%20%C3%A9galement%20des%20jours%20f%C3%A9ri%C3%A9s%20locaux.%20Les%20jours%20f%C3%A9ri%C3%A9s%20peuvent%20%C3%AAtre%20travaill%C3%A9s%20ou%20non.%20Seul%20le%201er%20mai%20est%20obligatoirement%20non%20travaill%C3%A9%20sauf%20exception.\">jours fériés</webcomponent-tooltip> habituellement non travaillés dans l’entreprise.</p>\n<p>(3) Si le dernier jour du délai tombe un samedi, un dimanche, un <webcomponent-tooltip content=\"Jours%20de%20f%C3%AAtes%20religieuses%2C%20la%C3%AFques%2C%20de%20comm%C3%A9moration%20ou%20f%C3%AAte%20nationale%20pr%C3%A9vus%20par%20la%20loi%20%3A%201er%20janvier%2C%20lundi%20de%20P%C3%A2ques%2C%201er%20mai%2C%208%20mai%2C%20Ascension%2C%20lundi%20de%20Pentec%C3%B4te%2C%2014%20juillet%2C%20Assomption%20(15%20ao%C3%BBt)%2C%20Toussaint%2C%2011%20novembre%2C%2025%20d%C3%A9cembre.%20Il%20existe%20%C3%A9galement%20des%20jours%20f%C3%A9ri%C3%A9s%20locaux.%20Les%20jours%20f%C3%A9ri%C3%A9s%20peuvent%20%C3%AAtre%20travaill%C3%A9s%20ou%20non.%20Seul%20le%201er%20mai%20est%20obligatoirement%20non%20travaill%C3%A9%20sauf%20exception.\">jour férié</webcomponent-tooltip> ou chômé : le délai est prolongé jusqu’au premier <webcomponent-tooltip content=\"Correspond%20%C3%A0%20tous%20les%20jours%20de%20la%20semaine%2C%20%C3%A0%20l%E2%80%99exception%20du%20jour%20de%20repos%20hebdomadaire%20(g%C3%A9n%C3%A9ralement%20le%20dimanche)%20et%20des%20jours%20f%C3%A9ri%C3%A9s%20habituellement%20non%20travaill%C3%A9s%20dans%20l%E2%80%99entreprise.\">jour ouvrable</webcomponent-tooltip> (2) suivant.</p>"
+          }
+        ],
+        "references": [
+          {
+            "label": "Références juridiques",
+            "links": [
+              {
+                "id": "1272b22e-1d6e-4b9f-9678-75a77e5b84bb",
+                "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000019071185",
+                "type": "external",
+                "order": 1,
+                "title": "Article L. 1237-12 du Code du travail"
+              },
+              {
+                "id": "d9e93ce2-9628-40a0-9521-e9b2b2f44ed3",
+                "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000019071182",
+                "type": "external",
+                "order": 2,
+                "title": "Article L. 1237-13 du Code du travail"
+              },
+              {
+                "id": "5292164b-fcbb-49b4-8118-59a533848516",
+                "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000019071180",
+                "type": "external",
+                "order": 3,
+                "title": "Article L. 1237-14 du Code du travail"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "Liens utiles",
+        "links": [
+          {
+            "id": "3593ab18-2956-458b-a80e-852c068d0bdb",
+            "url": "https://code.travail.gouv.fr/outils/indemnite-rupture-conventionnelle",
+            "type": "external",
+            "order": 1,
+            "title": "Simulateur d’indemnité de rupture conventionnelle "
+          }
+        ]
+      }
+    ],
+    "description": "CDI : Rupture conventionnelle. Retrouvez le détail de chaque étape de la procédure et les délais.",
+    "dismissalProcess": false,
+    "sectionDisplayMode": "accordion",
+    "breadcrumbs": [
+      {
+        "label": "Départ de l’entreprise",
+        "position": 7,
+        "slug": "/themes/depart-de-lentreprise"
+      },
+      {
+        "label": "Rupture conventionnelle",
+        "position": 3,
+        "slug": "/themes/rupture-conventionnelle"
+      },
+      {
+        "label": "Rupture conventionnelle individuelle",
+        "position": 1,
+        "slug": "/themes/rupture-conventionnelle-individuelle"
+      }
+    ],
+    "cdtnId": "188a439a07",
+    "excludeFromSearch": false,
+    "id": "cffefc03-8590-4f00-b86e-f97b25c2c546",
+    "isPublished": true,
+    "metaDescription": "CDI : Rupture conventionnelle. Retrouvez le détail de chaque étape de la procédure et les délais.",
+    "refs": [],
+    "slug": "rupture-conventionnelle-individuelle-la-procedure-en-details",
+    "source": "information",
+    "text": "Rupture conventionnelle : les étapes de la procédure et les délais",
+    "title": "Rupture conventionnelle : les étapes de la procédure et les délais",
+    "intro": "<p>Lorsque l’employeur et le salarié conviennent de rompre le contrat de travail à durée indéterminée (CDI) qui les lie dans le cadre d’une rupture conventionnelle, la procédure spécifique suivante doit être respectée.</p>\n<p><strong>À noter :</strong>  Le code du travail numérique propose un <a href=\"https://code.travail.gouv.fr/outils/indemnite-rupture-conventionnelle\">simulateur d’indemnité de rupture conventionnelle</a></p>"
+  },
+  {
     "source": "versions",
     "data": {
       "@socialgouv/package-a": "^0.4.2"

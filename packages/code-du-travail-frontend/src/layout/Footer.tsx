@@ -105,11 +105,11 @@ const Footer = (): JSX.Element => {
                   <li>
                     <Link
                       passHref
-                      href="/outils/indemnite-licenciement"
+                      href="/outils/indemnite-rupture-conventionnelle"
                       legacyBehavior
                     >
                       <StyledLink>
-                        Calcul de l&apos;indemnité de licenciement
+                        Calcul de l&apos;indemnité de rupture conventionnelle
                       </StyledLink>
                     </Link>
                   </li>

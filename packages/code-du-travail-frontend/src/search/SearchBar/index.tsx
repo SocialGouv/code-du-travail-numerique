@@ -3,7 +3,7 @@ import { push as matopush } from "@socialgouv/matomo-next";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { fetchSuggestResults } from "../search.service";
+import { fetchSuggestResults } from "../../modules/layout/header/fetchSuggestResults";
 import { useCombobox } from "downshift";
 const { Search: SearchIcon } = icons;
 
@@ -24,7 +24,7 @@ const SearchBar = ({
   const [query, setQuery] = useState(
     typeof router.query.q === "string" ? router.query.q : ""
   );
-  const [suggestions, setSuggestions] = useState([]);
+  const [suggestions, setSuggestions] = useState<string[]>([]);
 
   const {
     isOpen,
@@ -201,9 +201,7 @@ export const StyledInput = styled.input`
   margin: 0;
   padding: ${({ hasButton, hasSearchIcon }) =>
     hasButton
-      ? `2rem ${hasSearchIcon ? "9rem" : "18.5rem"} 2rem ${
-          hasSearchIcon ? spacings.xmedium : "6rem"
-        }`
+      ? `2rem ${hasSearchIcon ? "9rem" : "18.5rem"} 2rem ${hasSearchIcon ? spacings.xmedium : "6rem"}`
       : `1rem 5.5rem 1rem ${spacings.base}`};
   color: ${({ theme }) => theme.paragraph};
   font-weight: normal;

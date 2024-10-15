@@ -197,16 +197,16 @@ export type PublicodesInstance<T extends PublicodesSimulator> =
   T extends PublicodesSimulator.PREAVIS_RETRAITE
     ? PreavisRetraitePublicodes
     : T extends PublicodesSimulator.INDEMNITE_LICENCIEMENT
-    ? IndemniteLicenciementPublicodes
-    : T extends PublicodesSimulator.RUPTURE_CONVENTIONNELLE
-    ? RuptureConventionnellePublicodes
-    : T extends PublicodesSimulator.PREAVIS_LICENCIEMENT
-    ? PreavisLicenciementPublicodes
-    : T extends PublicodesSimulator.HEURES_RECHERCHE_EMPLOI
-    ? HeuresRechercheEmploiPublicodes
-    : T extends PublicodesSimulator.PREAVIS_DEMISSION
-    ? PreavisDemissionPublicodes
-    : never;
+      ? IndemniteLicenciementPublicodes
+      : T extends PublicodesSimulator.RUPTURE_CONVENTIONNELLE
+        ? RuptureConventionnellePublicodes
+        : T extends PublicodesSimulator.PREAVIS_LICENCIEMENT
+          ? PreavisLicenciementPublicodes
+          : T extends PublicodesSimulator.HEURES_RECHERCHE_EMPLOI
+            ? HeuresRechercheEmploiPublicodes
+            : T extends PublicodesSimulator.PREAVIS_DEMISSION
+              ? PreavisDemissionPublicodes
+              : never;
 
 export interface IndemniteDepartInstance {
   ineligibility: IIneligibility;

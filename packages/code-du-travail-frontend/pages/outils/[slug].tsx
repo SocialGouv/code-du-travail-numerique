@@ -23,7 +23,11 @@ import {
   SimulateurIndemnitePrecarite,
   CalculateurPreavisRetraite,
 } from "../../src/outils";
-import { getBySlugTools, getBySourceAndSlugItems } from "../../src/api";
+import {
+  getBySlugTools,
+  getBySourceAndSlugItems,
+  RelatedItem,
+} from "../../src/api";
 import { Tool } from "@socialgouv/cdtn-types";
 
 const toolsBySlug = {
@@ -82,9 +86,10 @@ function Outils({
             </ShareContainer>
           </Flex>
           <RelatedItems items={relatedItems} />
-          {router.asPath !== "/outils/indemnite-licenciement" && (
-            <Feedback url={router.asPath} />
-          )}
+          {router.asPath !== "/outils/indemnite-licenciement" &&
+            router.asPath !== "/outils/indemnite-rupture-conventionnelle" && (
+              <Feedback url={router.asPath} />
+            )}
         </Container>
       </div>
     </Layout>
@@ -117,7 +122,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     metaDescription,
   } = tool;
   const data = await getBySourceAndSlugItems<Tool>(SOURCES.TOOLS, slug);
-  const relatedItems = data?.relatedItems ?? [];
+  const relatedItems = filterRelatedItems(slug, data?.relatedItems ?? []);
 
   return {
     props: {
@@ -132,6 +137,22 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     },
   };
 };
+
+/**
+ * Hack pour éviter que les deux outils ne se référencent pour améliorer la recherche sur Google
+ */
+const filterRelatedItems = (
+  slug: string,
+  relatedItems: RelatedItem[]
+): RelatedItem[] =>
+  slug !== "indemnite-licenciement" &&
+  slug !== "indemnite-rupture-conventionnelle"
+    ? relatedItems
+    : relatedItems?.filter(
+        (item) =>
+          item.slug !== "indemnite-rupture-conventionnelle" &&
+          item.slug !== "indemnite-licenciement"
+      );
 
 const { breakpoints, spacings } = theme;
 

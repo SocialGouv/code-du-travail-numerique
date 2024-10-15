@@ -2,16 +2,21 @@ import { render } from "@testing-library/react";
 import React from "react";
 
 import PageContribution from "../pages/contribution/[slug]";
+import { ElasticSearchContribution } from "@socialgouv/cdtn-types";
 
 const contribution = {
   source: "contributions",
   linkedContent: [],
   references: [],
   idcc: "",
-  ccnShortTitle: "Métallurgie",
+  metas: {
+    title: "SEO Title",
+    description: "SEO Description",
+  },
   title: "La période d’essai peut-elle être renouvelée ?",
   breadcrumbs: [],
-} as any;
+} as Partial<ElasticSearchContribution> as any;
+
 describe("<PageContribution />", () => {
   it("should render title with cc name in it", () => {
     const { getByRole } = render(
@@ -19,7 +24,7 @@ describe("<PageContribution />", () => {
     );
     const titreH1 = getByRole("heading", { level: 1 });
     expect(titreH1.textContent).toBe(
-      "La période d’essai peut-elle être renouvelée ? - Métallurgie"
+      "La période d’essai peut-elle être renouvelée ?"
     );
   });
   it("should render title with only question", () => {
@@ -38,7 +43,10 @@ describe("<PageContribution />", () => {
       linkedContent: [{ source: "", title: "My link", slug: "" }],
       references: [],
       idcc: "",
-      ccnShortTitle: "Métallurgie",
+      metas: {
+        title: "SEO Title",
+        description: "SEO Description",
+      },
       title: "La période d’essai peut-elle être renouvelée ?",
     } as any;
     const { getByRole } = render(

@@ -1,10 +1,8 @@
 import React from "react";
-
 import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import {
-  Breadcrumb,
   ContributionElasticDocument,
   ElasticSearchContribution,
   ElasticSearchContributionConventionnelle,
@@ -18,55 +16,15 @@ type Props = {
   contribution: ElasticSearchContribution;
 };
 
-const buildTitleAndDescription = (
-  breadcrumbs: Breadcrumb[],
-  conventionName: string | undefined,
-  title: string,
-  description: string
-) => {
-  if (breadcrumbs && breadcrumbs.length > 0 && conventionName) {
-    const titleWithThemeAndCC =
-      breadcrumbs[breadcrumbs.length - 1].label + " - " + conventionName;
-    return {
-      description: title + " " + description,
-      title: titleWithThemeAndCC,
-    };
-  }
-  return {
-    description,
-    title,
-  };
-};
-const getTitleFromNewContrib = (contribution) => {
-  if (
-    !contribution.ccnShortTitle ||
-    contribution.ccnShortTitle.length > 14 ||
-    contribution.title.length > 50
-  ) {
-    return contribution.title;
-  }
-
-  return `${contribution.title} - ${contribution.ccnShortTitle}`;
-};
-
 function PageContribution(props: Props): React.ReactElement {
-  let metas: any = {};
-
-  metas = buildTitleAndDescription(
-    props.contribution.breadcrumbs,
-    "ccnShortTitle" in props.contribution
-      ? props.contribution.ccnShortTitle
-      : undefined,
-    props.contribution.title,
-    props.contribution.description
-  );
-
-
   return (
     <Layout>
-      <Metas title={metas.title} description={metas.description} />
+      <Metas
+        title={props.contribution.metas.title}
+        description={props.contribution.metas.description}
+      />
       <Answer
-        title={getTitleFromNewContrib(props.contribution)}
+        title={props.contribution.title}
         breadcrumbs={props.contribution.breadcrumbs}
         date={props.contribution.date}
       >

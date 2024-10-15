@@ -7,3 +7,8 @@ cypress/videos
 cypress/screenshots
 cypress/downloads
 .env
+.env.*
+
+## Panda
+styled-system
+styled-system-studio

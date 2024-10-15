@@ -2,20 +2,13 @@ import { withSentryConfig } from "@sentry/nextjs";
 import MappingReplacement from "./redirects.json" assert { type: "json" };
 
 const ContentSecurityPolicy = `
-img-src 'self' https://travail-emploi.gouv.fr https://www.service-public.fr https://cdtn-prod-public.s3.gra.io.cloud.ovh.net https://matomo.fabrique.social.gouv.fr;
-script-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr ${
-  process.env.NEXT_PUBLIC_APP_ENV !== "production" && "'unsafe-eval'"
+img-src 'self' https://travail-emploi.gouv.fr https://www.service-public.fr https://cdtn-prod-public.s3.gra.io.cloud.ovh.net https://matomo.fabrique.social.gouv.fr data:;
+script-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr https://tally.so ${
+  process.env.NEXT_PUBLIC_APP_ENV !== "production" ? "'unsafe-eval'" : ""
 };
-frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr *.dailymotion.com;
-connect-src 'self' https://geo.api.gouv.fr https://sentry.fabrique.social.gouv.fr https://matomo.fabrique.social.gouv.fr;
+frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr *.dailymotion.com https://tally.so;
+connect-src 'self' https://geo.api.gouv.fr https://sentry.fabrique.social.gouv.fr https://matomo.fabrique.social.gouv.fr https://tally.so;
 worker-src 'self' blob:;
-report-uri ${process.env.NEXT_PUBLIC_SENTRY_BASE_URL}/api/${
-  process.env.NEXT_PUBLIC_SENTRY_PROJECT_ID
-}/security/?sentry_key=${
-  process.env.NEXT_PUBLIC_SENTRY_PUBLIC_KEY
-}&sentry_environment=${process.env.NEXT_PUBLIC_SENTRY_ENV}&sentry_release=${
-  process.env.NEXT_PUBLIC_SENTRY_RELEASE
-};
 `;
 
 const sentryConfig = {
@@ -49,7 +42,17 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   staticPageGenerationTimeout: 60 * 5, // 5 minutes
-  experimental: { instrumentationHook: true },
+  experimental: {
+    instrumentationHook: true,
+  },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.woff2$/,
+      type: "asset/resource",
+    });
+    return config;
+  },
+  transpilePackages: ["@codegouvfr/react-dsfr"],
 };
 
 const moduleExports = {

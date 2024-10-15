@@ -12,6 +12,16 @@ app:
   imagePackage: app
   imageProject: cdtn
   probesPath: /api/health
+  livenessProbe:
+    failureThreshold: 15
+    httpGet:
+      path: /api/health/
+      port: http
+      scheme: HTTP
+    initialDelaySeconds: 30  # Délai avant la première vérification après le démarrage du pod
+    periodSeconds: 10         # Fréquence des vérifications
+    successThreshold: 1
+    timeoutSeconds: 10         # Temps maximum pour que l'endpoint réponde
   containerSecurityContext:
     readOnlyRootFilesystem: true
   envFrom:
@@ -43,7 +53,8 @@ app:
       name: next
   initContainers:
     - name: copy-next
-      image: "{{ .Values.global.registry }}/{{ .Values.global.projectName }}/{{
+      image:
+        "{{ .Values.global.registry }}/{{ .Values.global.projectName }}/{{
         .Values.global.imageRepository }}/app:{{ .Values.global.imageTag }}"
       command: ["/bin/sh", "-c"]
       args:
