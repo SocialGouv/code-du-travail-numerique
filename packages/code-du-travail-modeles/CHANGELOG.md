@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.156.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.156.0...v4.156.1) (2024-10-14)
+
+### Bug Fixes
+
+- **indemnité de licenciement:** ajout de l'avenant pour la CC 275 ([#6174](https://github.com/SocialGouv/code-du-travail-numerique/issues/6174)) ([bf843e5](https://github.com/SocialGouv/code-du-travail-numerique/commit/bf843e54f6778bb7be2d937a412b578e02667997))
+- preavis demission ref manquante 3239 ([#6168](https://github.com/SocialGouv/code-du-travail-numerique/issues/6168)) ([1a85a22](https://github.com/SocialGouv/code-du-travail-numerique/commit/1a85a2279a74bd8d05d93865433da07d03e8aabc))
+
 # [4.156.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.155.2...v4.156.0) (2024-10-10)
 
 ### Bug Fixes
