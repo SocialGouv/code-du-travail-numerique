@@ -61,7 +61,7 @@ export const fetchModel = async (
         bool: {
           filter: [
             { term: { source: SOURCES.LETTERS } },
-            { term: filter},
+            { term: filter },
             { term: { isPublished: true } },
           ],
         },

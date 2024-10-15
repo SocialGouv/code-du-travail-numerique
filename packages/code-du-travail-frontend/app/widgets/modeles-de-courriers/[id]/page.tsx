@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
     title: `${category} : ${meta_title ?? title}`,
     description: metaDescription,
     overrideCanonical: `${SITE_URL}/modeles-de-courriers/${slug}`,
-    path: `${SITE_URL}/modeles-de-courriers/${slug}`
+    path: `${SITE_URL}/modeles-de-courriers/${slug}`,
   });
 }
 

@@ -6,9 +6,9 @@ export const DownloadTile = ({
   filesize,
   title,
 }: {
-  filename: string,
-  filesize: number,
-  title: string,
+  filename: string;
+  filesize: number;
+  title: string;
 }) => {
   const filesizeFormated = Math.round((filesize / 1000) * 100) / 100;
   const [, extension] = filename.split(/\.([a-z]{2,4})$/);
