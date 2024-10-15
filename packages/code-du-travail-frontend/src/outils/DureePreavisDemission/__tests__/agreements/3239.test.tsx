@@ -45,6 +45,10 @@ describe("DureePreavisDemission", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
+
+        expect(
+          screen.queryAllByText(/Article 162-6 de la convention collective/)[0]
+        ).toBeInTheDocument();
       });
     });
 
@@ -58,6 +62,10 @@ describe("DureePreavisDemission", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
+
+        expect(
+          screen.queryAllByText(/Article 162-6 de la convention collective/)[0]
+        ).toBeInTheDocument();
       });
     });
 
@@ -71,6 +79,10 @@ describe("DureePreavisDemission", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
+
+        expect(
+          screen.queryAllByText(/Article 162-6 de la convention collective/)[0]
+        ).toBeInTheDocument();
       });
     });
   });
@@ -119,7 +131,9 @@ describe("DureePreavisDemission", () => {
       });
 
       it("should display expected answer", () => {
-        expect(screen.queryAllByText(/15 jours/g)[0]).toBeInTheDocument();
+        expect(
+          screen.queryAllByText(/15 jours calendaires/g)[0]
+        ).toBeInTheDocument();
 
         expect(
           screen.queryAllByText(

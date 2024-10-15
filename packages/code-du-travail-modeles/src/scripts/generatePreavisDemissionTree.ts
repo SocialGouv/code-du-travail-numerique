@@ -25,13 +25,13 @@ export function generatePreavisDemissionTree() {
         agreementSearch: situation.idcc.toString(),
       };
     },
-    getResult: ({ answer, answer2, ref, refUrl, refs, note }) => {
-      const regExpMatchMonth = /[0-9]{1,} (mois|jour|semaine)(s){0,1}/;
-      const [matchedNumber] = regExpMatchMonth.exec(answer ?? "") ?? [];
-      const [number, unit] = (matchedNumber ?? answer ?? "").split(" ");
-      const regExp = /\(([^)]+)\)/;
-      const regExpValue = regExp.exec(answer ?? "");
-      const isNan = isNaN(parseInt(number));
+    getResult: ({ answer, answer2, answer3, ref, refUrl, refs, note }) => {
+      // const regExpMatchMonth = /[0-9]{1,} (mois|jour|semaine)(s){0,1}/;
+      // const [matchedNumber] = regExpMatchMonth.exec(answer ?? "") ?? [];
+      // const [number, unit] = (matchedNumber ?? answer ?? "").split(" ");
+      // const regExp = /\(([^)]+)\)/;
+      // const regExpValue = regExp.exec(answer ?? "");
+      // const isNan = isNaN(parseInt(number));
       const result = {
         refs:
           refs?.map(({ ref, refUrl }) => ({
@@ -40,7 +40,10 @@ export function generatePreavisDemissionTree() {
           })) ??
           (ref && refUrl ? [{ label: cleanRefLabel(ref), url: refUrl }] : []),
         texts: [
-          ...(answer && !isNan ? [`${number} ${unit}`] : ["0"]),
+          // ...(answer && !isNan ? [`${number} ${unit}`] : ["0"]),
+          !answer3 || answer3 === "0"
+            ? "il n’y a pas de préavis à effectuer"
+            : (answer ?? ""),
           ...(answer2
             ? answer2
                 .split("\n")
@@ -48,7 +51,7 @@ export function generatePreavisDemissionTree() {
                 .map((text) => text.replace("-", "").trim())
             : []),
           ...(note ? [...(Array.isArray(note) ? note : [note])] : []),
-          ...(regExpValue?.[1] ? [regExpValue[1]] : []),
+          // ...(regExpValue?.[1] ? [regExpValue[1]] : []),
         ],
       };
       return result;

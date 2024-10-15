@@ -102,7 +102,11 @@ describe("DureePreavisDemission", () => {
     });
 
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
+      expect(
+        screen.queryAllByText(
+          /Pour les salariés hors classification, la durée du préavis est fixée par le contrat de travail dans la limite de 3 mois/g
+        )[0]
+      ).toBeInTheDocument();
 
       expect(screen.queryAllByText(/Article 4.4.1.1/)[0]).toBeInTheDocument();
     });

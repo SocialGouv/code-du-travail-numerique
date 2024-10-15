@@ -76,7 +76,7 @@ describe("DureePreavisDemission", () => {
         });
 
         it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 jour/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/1 jour ouvré/g)[0]).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
@@ -95,7 +95,9 @@ describe("DureePreavisDemission", () => {
         });
 
         it("should display expected answer", () => {
-          expect(screen.queryAllByText(/2 jours/g)[0]).toBeInTheDocument();
+          expect(
+            screen.queryAllByText(/2 jours ouvrés/g)[0]
+          ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
@@ -114,7 +116,9 @@ describe("DureePreavisDemission", () => {
         });
 
         it("should display expected answer", () => {
-          expect(screen.queryAllByText(/7 jours/g)[0]).toBeInTheDocument();
+          expect(
+            screen.queryAllByText(/7 jours calendaires/g)[0]
+          ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
@@ -201,7 +205,7 @@ describe("DureePreavisDemission", () => {
         });
 
         it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 jour/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/1 jour ouvré/g)[0]).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
@@ -220,7 +224,9 @@ describe("DureePreavisDemission", () => {
         });
 
         it("should display expected answer", () => {
-          expect(screen.queryAllByText(/2 jours/g)[0]).toBeInTheDocument();
+          expect(
+            screen.queryAllByText(/2 jours ouvrés/g)[0]
+          ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
@@ -239,7 +245,9 @@ describe("DureePreavisDemission", () => {
         });
 
         it("should display expected answer", () => {
-          expect(screen.queryAllByText(/7 jours/g)[0]).toBeInTheDocument();
+          expect(
+            screen.queryAllByText(/7 jours calendaires/g)[0]
+          ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
@@ -326,7 +334,7 @@ describe("DureePreavisDemission", () => {
         });
 
         it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 jour/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/1 jour ouvré/g)[0]).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
@@ -345,7 +353,9 @@ describe("DureePreavisDemission", () => {
         });
 
         it("should display expected answer", () => {
-          expect(screen.queryAllByText(/2 jours/g)[0]).toBeInTheDocument();
+          expect(
+            screen.queryAllByText(/2 jours ouvrés/g)[0]
+          ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
@@ -364,7 +374,9 @@ describe("DureePreavisDemission", () => {
         });
 
         it("should display expected answer", () => {
-          expect(screen.queryAllByText(/7 jours/g)[0]).toBeInTheDocument();
+          expect(
+            screen.queryAllByText(/7 jours calendaires/g)[0]
+          ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
@@ -430,7 +442,7 @@ describe("DureePreavisDemission", () => {
         });
 
         it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 jour/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/1 jour ouvré/g)[0]).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
@@ -449,7 +461,9 @@ describe("DureePreavisDemission", () => {
         });
 
         it("should display expected answer", () => {
-          expect(screen.queryAllByText(/2 jours/g)[0]).toBeInTheDocument();
+          expect(
+            screen.queryAllByText(/2 jours ouvrés/g)[0]
+          ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
@@ -468,7 +482,9 @@ describe("DureePreavisDemission", () => {
         });
 
         it("should display expected answer", () => {
-          expect(screen.queryAllByText(/14 jours/g)[0]).toBeInTheDocument();
+          expect(
+            screen.queryAllByText(/14 jours calendaires/g)[0]
+          ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
@@ -534,7 +550,7 @@ describe("DureePreavisDemission", () => {
         });
 
         it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 jour/g)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/1 jour ouvré/g)[0]).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
@@ -553,7 +569,9 @@ describe("DureePreavisDemission", () => {
         });
 
         it("should display expected answer", () => {
-          expect(screen.queryAllByText(/2 jours/g)[0]).toBeInTheDocument();
+          expect(
+            screen.queryAllByText(/2 jours ouvrés/g)[0]
+          ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
@@ -572,7 +590,9 @@ describe("DureePreavisDemission", () => {
         });
 
         it("should display expected answer", () => {
-          expect(screen.queryAllByText(/14 jours/g)[0]).toBeInTheDocument();
+          expect(
+            screen.queryAllByText(/14 jours calendaires/g)[0]
+          ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
@@ -1124,7 +1144,9 @@ describe("DureePreavisDemission", () => {
       });
 
       it("should display expected answer", () => {
-        expect(screen.queryAllByText(/7 jours/g)[0]).toBeInTheDocument();
+        expect(
+          screen.queryAllByText(/7 jours calendaires/g)[0]
+        ).toBeInTheDocument();
 
         expect(
           screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]
@@ -1141,7 +1163,9 @@ describe("DureePreavisDemission", () => {
       });
 
       it("should display expected answer", () => {
-        expect(screen.queryAllByText(/14 jours/g)[0]).toBeInTheDocument();
+        expect(
+          screen.queryAllByText(/14 jours calendaires/g)[0]
+        ).toBeInTheDocument();
 
         expect(
           screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]
