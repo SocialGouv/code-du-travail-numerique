@@ -23,11 +23,9 @@ describe("<LetterModel />", () => {
         intro={""}
         relatedItems={[]}
         metaDescription={""}
-        filesize={undefined}
+        filesize={10}
         filename={""}
         html={undefined}
-        meta_title={""}
-        type={undefined}
       />
     );
 
@@ -50,11 +48,9 @@ describe("<LetterModel />", () => {
         intro={""}
         relatedItems={[]}
         metaDescription={""}
-        filesize={undefined}
+        filesize={10}
         filename={""}
         html={undefined}
-        meta_title={""}
-        type={undefined}
       />
     );
     fireEvent.keyDown(container, { key: "c" });
