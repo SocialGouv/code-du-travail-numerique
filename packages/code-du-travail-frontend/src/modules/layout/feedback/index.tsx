@@ -37,7 +37,7 @@ export const Feedback = () => {
   };
 
   return (
-    <div className={fr.cx("fr-highlight", "fr-p-2w", "fr-m-0")}>
+    <div className={`${fr.cx("fr-highlight", "fr-p-2w", "fr-m-0")}`}>
       {viewFeedback === "default" && (
         <FeedbackDefault onClickNo={onClickNo} onClickYes={onClickYes} />
       )}

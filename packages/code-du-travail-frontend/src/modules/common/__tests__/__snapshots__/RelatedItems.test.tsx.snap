@@ -3,7 +3,7 @@
 exports[`<RelatedItems /> should render 1`] = `
 <div>
   <div
-    class="fr-mb-5w"
+    class=" fr-mb-5w"
   >
     <div>
       <p

@@ -3,7 +3,6 @@ import React from "react";
 import Script from "next/script";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent } from "../../lib";
-import { theme } from "@socialgouv/cdtn-ui";
 
 export const Feedback = (): React.ReactNode => {
   const onClick = () => {
@@ -52,9 +51,7 @@ const ButtonSuggestion = styled.button`
   display: flex;
   padding-top: 10px;
 
-  @media (min-width: ${theme.breakpoints.desktop}) {
-    animation: moveLeftAndRight 30s ease-in-out infinite 5s;
-  }
+  animation: moveLeftAndRight 30s ease-in-out infinite 5s;
 
   span {
     color: white;
@@ -89,12 +86,10 @@ const ImgSuggestion = styled.img`
 
   animation: wiggle 2.5s ease 7.5s 1;
   //transform-origin: 70% 70%;
-
   &:hover {
     animation: 2.5s ease 0s infinite normal none running wiggle;
     //transform-origin: 70% 70%;
   }
-
   @keyframes wiggle {
     0% {
       transform: rotate(0deg);

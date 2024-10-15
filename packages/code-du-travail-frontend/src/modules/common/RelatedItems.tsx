@@ -18,7 +18,7 @@ export const RelatedItems = ({
   }
 
   return (
-    <div className={fr.cx("fr-mb-5w")}>
+    <div className={`${fr.cx("fr-mb-5w")}`}>
       {relatedItems.map(
         ({ title, items }) =>
           items.length > 0 && (

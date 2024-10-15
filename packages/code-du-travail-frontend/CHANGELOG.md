@@ -3,25 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [4.156.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.156.0...v4.156.1) (2024-10-14)
-
-**Note:** Version bump only for package @cdt/frontend
-
-# [4.156.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.155.2...v4.156.0) (2024-10-10)
-
-### Bug Fixes
-
-- **bouton questionnaire:** ne pas ouvrir avec l'animation si on est en mobile ([#6200](https://github.com/SocialGouv/code-du-travail-numerique/issues/6200)) ([c284244](https://github.com/SocialGouv/code-du-travail-numerique/commit/c2842445d5ed2804617dd02ec219fceba1b842d3))
-- **deps:** update dependency next to v14.2.11 [security] ([9d8bcb7](https://github.com/SocialGouv/code-du-travail-numerique/commit/9d8bcb7d7306afede239256cb56710f8551794b8))
-- **error logs:** retrait du log dans sentry des erreurs d'accès au localStorage ([#6181](https://github.com/SocialGouv/code-du-travail-numerique/issues/6181)) ([8e20206](https://github.com/SocialGouv/code-du-travail-numerique/commit/8e20206358baca515c75727f3a4af6ab487d4e52))
-- **idcc:** ajout des redirections pour les CC qui ont été supprimé ([#6187](https://github.com/SocialGouv/code-du-travail-numerique/issues/6187)) ([2a1752a](https://github.com/SocialGouv/code-du-travail-numerique/commit/2a1752acc9bd6f5eb0c7c3c4bb859ce7e7589070))
-- **idcc:** ne pas afficher le lien vers la CC si pas de slug ([#6193](https://github.com/SocialGouv/code-du-travail-numerique/issues/6193)) ([221338c](https://github.com/SocialGouv/code-du-travail-numerique/commit/221338c9670e69538e93ec2c2f15e16e1a9539bb))
-- **trouver sa cc:** update url canonique ([#6175](https://github.com/SocialGouv/code-du-travail-numerique/issues/6175)) ([eb77564](https://github.com/SocialGouv/code-du-travail-numerique/commit/eb77564180242664082a9e3bc6f374e6de53d7f7))
-
-### Features
-
-- **modèles de documents:** track des utilisateurs qui type CTRL + C sur la page ([#6186](https://github.com/SocialGouv/code-du-travail-numerique/issues/6186)) ([da37349](https://github.com/SocialGouv/code-du-travail-numerique/commit/da37349065200e3c5da9c2d0ab03b9ee3e83c4de))
-
 ## [4.155.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.155.1...v4.155.2) (2024-09-25)
 
 ### Bug Fixes

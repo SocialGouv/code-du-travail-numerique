@@ -67,18 +67,11 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
       facteur: 2 / 5
   unité: €
 
-contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté entre 5 et 10 ans . indemnité avant 14 octobre 2024:
-  valeur:
-    produit:
-      assiette: palier * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      facteur: 1 / 4
-  unité: €
-
 contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté entre 5 et 10 ans . indemnité:
   valeur:
     produit:
       assiette: palier * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      facteur: 2 / 5
+      facteur: 1 / 4
   unité: €
 
 ## ancienneté entre 10 et 15ans
@@ -144,7 +137,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   arrondi: 2 décimales
   références:
     Article 20: https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732500/?idConteneur=KALICONT000005635872
-    Article 35: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026343716?idConteneur=KALICONT000005635872
+    Article 35: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026343716?idConteneur=KALICONT000005635872&origin=list#KALIARTI000026343716
   cdtn:
     formule:
       explanations:
@@ -156,42 +149,12 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/5 * Sref * A1)[ + (2/5 * Sref * A2)][ + (3/5 * Sref * A3)][ + (4/5 * Sref * A4)][ + (1 * Sref * A5)]
 
-contrat salarié . convention collective . transport aérien personnel au sol . non cadres . résultat conventionnel avant le 14 octobre 2024:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si:
-    toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
-      - contrat salarié . indemnité de licenciement . date de notification >= 31/01/2024
-      - contrat salarié . indemnité de licenciement . date de notification < 14/10/2024
-  plafond: indemnité de licenciement . salaire de référence conventionnel * 18
-  somme:
-    - ancienneté jusqu'à 5 ans . indemnité
-    - ancienneté entre 5 et 10 ans . indemnité avant 14 octobre 2024
-    - ancienneté entre 10 et 15 ans . indemnité
-    - ancienneté entre 15 et 20 ans . indemnité
-    - ancienneté au dela de 20 ans . indemnité
-  unité: €
-  arrondi: 2 décimales
-  références:
-    Article 20: https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732500/?idConteneur=KALICONT000005635872
-    Article 35: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026343716?idConteneur=KALICONT000005635872
-  cdtn:
-    formule:
-      explanations:
-        - "A1 : Ancienneté jusqu'à 5 ans": contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté jusqu'à 5 ans . palier
-        - "A2 : Ancienneté entre 5 et 10 ans": contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté entre 5 et 10 ans . palier
-        - "A3 : Ancienneté entre 10 et 15 ans": contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté entre 10 et 15 ans . palier
-        - "A4 : Ancienneté entre 15 et 20 ans": contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté entre 15 et 20 ans . palier
-        - "A5 : Ancienneté au dela de 20 ans": contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté au dela de 20 ans . palier
-        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      formula: (1/4 * Sref * A1)[ + (1/4 * Sref * A2)][ + (3/5 * Sref * A3)][ + (4/5 * Sref * A4)][ + (1 * Sref * A5)]
-
 contrat salarié . convention collective . transport aérien personnel au sol . non cadres . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
-      - contrat salarié . indemnité de licenciement . date de notification >= 14/10/2024
+      - contrat salarié . indemnité de licenciement . date de notification >= 31/01/2024
   plafond: indemnité de licenciement . salaire de référence conventionnel * 18
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
@@ -202,8 +165,8 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   unité: €
   arrondi: 2 décimales
   références:
-    Article 20: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000050302351
-    Article 35: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026343716?idConteneur=KALICONT000005635872
+    Article 20: https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732500/?idConteneur=KALICONT000005635872
+    Article 35: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026343716?idConteneur=KALICONT000005635872&origin=list#KALIARTI000026343716
   cdtn:
     formule:
       explanations:
@@ -213,7 +176,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - "A4 : Ancienneté entre 15 et 20 ans": contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté entre 15 et 20 ans . palier
         - "A5 : Ancienneté au dela de 20 ans": contrat salarié . convention collective . transport aérien personnel au sol . non cadres . ancienneté au dela de 20 ans . palier
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      formula: (1/4 * Sref * A1)[ + (2/5 * Sref * A2)][ + (3/5 * Sref * A3)][ + (4/5 * Sref * A4)][ + (1 * Sref * A5)]
+      formula: (1/4 * Sref * A1)[ + (1/4 * Sref * A2)][ + (3/5 * Sref * A3)][ + (4/5 * Sref * A4)][ + (1 * Sref * A5)]
 
 contrat salarié . convention collective . transport aérien personnel au sol . non cadres . résultat conventionnel avec plafond:
   applicable si: indemnité de licenciement . résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
@@ -266,18 +229,11 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
       facteur: 2 / 5
   unité: €
 
-contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté entre 5 et 10 ans . indemnité avant 14 octobre 2024:
-  valeur:
-    produit:
-      assiette: palier * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      facteur: 1 / 4
-  unité: €
-
 contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté entre 5 et 10 ans . indemnité:
   valeur:
     produit:
       assiette: palier * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      facteur: 2 / 5
+      facteur: 1 / 4
   unité: €
 
 ## ancienneté entre 10 et 15ans
@@ -328,7 +284,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   plafond: plafond
   références:
     Article 20: https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732500/?idConteneur=KALICONT000005635872
-    Article 35: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026343716?idConteneur=KALICONT000005635872
+    Article 35: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026343716?idConteneur=KALICONT000005635872&origin=list#KALIARTI000026343716
   cdtn:
     formule:
       explanations:
@@ -339,43 +295,13 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/5 * Sref * A1)[ + (2/5 * Sref * A2)][ + (4/5 * Sref * A3)][ + (1 * Sref * A4)]
 
-# Entre le 1er Février et 1 Octobre 2024
-contrat salarié . convention collective . transport aérien personnel au sol . cadres . résultat conventionnel avant le 14 octobre 2024:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si:
-    toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
-      - contrat salarié . indemnité de licenciement . date de notification >= 31/01/2024
-      - contrat salarié . indemnité de licenciement . date de notification < 14/10/2024
-  plafond: plafond
-  somme:
-    - ancienneté jusqu'à 5 ans . indemnité
-    - ancienneté entre 5 et 10 ans . indemnité avant 14 octobre 2024
-    - ancienneté entre 10 et 15 ans . indemnité
-    - ancienneté au dela de 15 ans . indemnité
-    - majoration
-  unité: €
-  arrondi: 2 décimales
-  références:
-    Article 20: https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732500/?idConteneur=KALICONT000005635872
-    Article 35: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026343716?idConteneur=KALICONT000005635872
-  cdtn:
-    formule:
-      explanations:
-        - "A1 : Ancienneté jusqu'à 5 ans": contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté jusqu'à 5 ans . palier
-        - "A2 : Ancienneté entre 5 et 10 ans": contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté entre 5 et 10 ans . palier
-        - "A3 : Ancienneté entre 10 et 15 ans": contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté entre 10 et 15 ans . palier
-        - "A4 : Ancienneté au dela de 15 ans": contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté au dela de 15 ans . palier
-        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      formula: (1/4 * Sref * A1)[ + (1/4 * Sref * A2)][ + (4/5 * Sref * A3)][ + (1 * Sref * A4)]
-
-# Après le 14 octobre 2024
+# Après le 1er Février 2024
 contrat salarié . convention collective . transport aérien personnel au sol . cadres . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= paramètre . minimum ancienneté conventionnelle requise en année
-      - contrat salarié . indemnité de licenciement . date de notification >= 14/10/2024
+      - contrat salarié . indemnité de licenciement . date de notification >= 31/01/2024
   plafond: plafond
   somme:
     - ancienneté jusqu'à 5 ans . indemnité
@@ -386,8 +312,8 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   unité: €
   arrondi: 2 décimales
   références:
-    Article 20: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000050302351
-    Article 35: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026343716?idConteneur=KALICONT000005635872
+    Article 20: https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732500/?idConteneur=KALICONT000005635872
+    Article 35: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026343716?idConteneur=KALICONT000005635872&origin=list#KALIARTI000026343716
   cdtn:
     formule:
       explanations:
@@ -396,7 +322,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
         - "A3 : Ancienneté entre 10 et 15 ans": contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté entre 10 et 15 ans . palier
         - "A4 : Ancienneté au dela de 15 ans": contrat salarié . convention collective . transport aérien personnel au sol . cadres . ancienneté au dela de 15 ans . palier
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      formula: (1/4 * Sref * A1)[ + (2/5 * Sref * A2)][ + (4/5 * Sref * A3)][ + (1 * Sref * A4)]
+      formula: (1/4 * Sref * A1)[ + (1/4 * Sref * A2)][ + (4/5 * Sref * A3)][ + (1 * Sref * A4)]
 
 # majorations
 contrat salarié . convention collective . transport aérien personnel au sol . cadres . majoration:
