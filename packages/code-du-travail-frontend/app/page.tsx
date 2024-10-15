@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { DsfrLayout } from "../src/modules/layout";
-import { getHomeData } from "../src/api";
 import { Home } from "../src/modules/home";
+import { fetchHomeData } from "../src/modules/home/queries";
 
 export const dynamic = "force-static";
 
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 async function Index() {
-  const data = await getHomeData();
+  const data = await fetchHomeData();
 
   return (
     <DsfrLayout doNotWrapInContainer>

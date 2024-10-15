@@ -1,31 +1,20 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "../../../styled-system/css";
-import Link from "next/link";
 
-type BaseButtonProps = {
+type Props = {
+  sectionId: string;
   isTint?: boolean;
   title: string;
   subtitle?: string;
   children?: React.ReactNode;
+  footerNode?: React.ReactNode;
 };
 
-export type HomeWrapperWithButtonProps = BaseButtonProps & {
-  hasButton: true;
-  buttonLink: string;
-  buttonText: string;
-  onButtonClick: () => void;
-};
-
-export type HomeWrapperWithoutButtonProps = BaseButtonProps & {
-  hasButton?: false;
-};
-
-export type HomeWrapperProps =
-  | HomeWrapperWithButtonProps
-  | HomeWrapperWithoutButtonProps;
-
-export const HomeWrapper = (props: HomeWrapperProps) => (
-  <div className={props.isTint ? mainContainer : undefined}>
+export const HomeWrapper = (props: Props) => (
+  <div
+    id={props.sectionId}
+    className={props.isTint ? mainContainer : undefined}
+  >
     <div
       className={fr.cx("fr-my-8w", "fr-container", props.isTint && "fr-py-6w")}
     >
@@ -40,31 +29,11 @@ export const HomeWrapper = (props: HomeWrapperProps) => (
       >
         {props.children}
       </div>
-      {props.hasButton && (
-        <div className={`${fr.cx("fr-mt-3w")} ${buttonContainer}`}>
-          <Link
-            href={props.buttonLink}
-            className={fr.cx(
-              "fr-btn",
-              "fr-btn--secondary",
-              "fr-btn--icon-right",
-              "fr-icon-arrow-right-fill"
-            )}
-            onClick={props.onButtonClick}
-          >
-            {props.buttonText}
-          </Link>
-        </div>
-      )}
+      {props.footerNode}
     </div>
   </div>
 );
 
 const mainContainer = css({
   background: "var(--background-alt-blue-cumulus)",
-});
-
-const buttonContainer = css({
-  display: "flex",
-  justifyContent: "center",
 });

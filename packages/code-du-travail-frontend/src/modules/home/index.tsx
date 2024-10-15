@@ -6,17 +6,23 @@ import { HomeSectionTile } from "./HomeSectionTile";
 import { HomeListTheme } from "./HomeListTheme";
 import { HomeSectionSearch } from "./HomeSectionSearch";
 import { MatomoHomeEvent, useHomeTracking } from "./tracking";
-import { GetHomePage } from "../../api";
+import { HomeSectionCardWithButton } from "./HomeSectionCardWithButton";
+import { HomePageProps } from "./queries";
 
-export const Home = (props: GetHomePage) => {
+export const Home = (props: HomePageProps) => {
   const { emitHomeClickButtonEvent } = useHomeTracking();
 
   return (
     <div className={fr.cx("fr-grid-row")}>
       <div className={fr.cx("fr-col-12")}>
         <HomeSectionSearch />
-        <HomeSectionCard title="À la une" items={props.highlights} />
+        <HomeSectionCard
+          sectionId="home-highlights"
+          title="À la une"
+          items={props.highlights}
+        />
         <HomeSectionTile
+          sectionId="home-outils"
           title="Boîte à outils"
           subtitle="Trouvez des réponses personnalisées selon votre situation"
           buttonText="Voir tous les outils"
@@ -28,10 +34,10 @@ export const Home = (props: GetHomePage) => {
           }}
           items={props.tools}
         />
-        <HomeSectionCard
+        <HomeSectionCardWithButton
+          sectionId="home-modeles-de-courriers"
           title="Modèles de documents"
           subtitle="Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail"
-          hasButton
           buttonText="Voir tous les modèles de documents"
           buttonLink="/modeles-de-courriers"
           onButtonClick={() => {
@@ -41,10 +47,10 @@ export const Home = (props: GetHomePage) => {
           }}
           items={props.modeles}
         />
-        <HomeSectionCard
+        <HomeSectionCardWithButton
+          sectionId="home-fiches-pratiques"
           title="Vos fiches pratiques"
           subtitle="Obtenez une réponse personnalisée selon votre convention collective"
-          hasButton
           buttonText="Voir toutes les fiches pratiques"
           buttonLink="/contribution"
           onButtonClick={() => {
@@ -54,12 +60,12 @@ export const Home = (props: GetHomePage) => {
           }}
           items={props.contributions}
         />
-        <HomeSectionCard
+        <HomeSectionCardWithButton
+          sectionId="home-convention-collective"
           isSmallCard
           isTint
           title="Votre convention collective"
           subtitle="Retrouvez les questions-réponses fréquentes organisées par thème pour votre convention collective"
-          hasButton
           buttonText="Voir toutes les conventions collectives"
           buttonLink="/convention-collective"
           onButtonClick={() => {
@@ -70,9 +76,9 @@ export const Home = (props: GetHomePage) => {
           items={props.agreements}
         />
         <HomeListTheme
+          sectionId="home-themes"
           title="Thèmes"
           subtitle="Retrouvez tous nos contenus organisés par thèmes"
-          hasButton
           buttonText="Voir tous les thèmes"
           buttonLink="/themes"
           onButtonClick={() => {

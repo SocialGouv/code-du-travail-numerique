@@ -10,9 +10,10 @@ describe("Page d'acceuil", () => {
 
     cy.get("h2").should("contain", "À la une");
 
-    cy.get("#highlights-element").find("a").should("have.length", 4);
+    cy.get("#home-highlights").find("a").should("have.length", 4);
 
     cy.contains("Voir tous les outils").should("have.attr", "href", "/outils");
+    cy.get("#home-outils").find("a").should("have.length", 5);
 
     cy.contains("Voir tous les modèles de documents").should(
       "have.attr",

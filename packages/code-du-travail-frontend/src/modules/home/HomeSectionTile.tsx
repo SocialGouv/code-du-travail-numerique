@@ -1,8 +1,9 @@
-import { HomeTileItem } from "../../api";
+import { HomeTileItem } from "./queries";
 import { HomeTile } from "./HomeTile";
 import { HomeWrapper } from "./HomeWrapper";
 
 type Props = {
+  sectionId: string;
   title: string;
   subtitle: string;
   items: HomeTileItem[];
@@ -13,11 +14,8 @@ type Props = {
 
 export const HomeSectionTile = (props: Props) => (
   <HomeWrapper
+    sectionId={props.sectionId}
     isTint
-    hasButton
-    buttonLink={props.buttonLink}
-    buttonText={props.buttonText}
-    onButtonClick={props.onButtonClick}
     title={props.title}
     subtitle={props.subtitle}
   >

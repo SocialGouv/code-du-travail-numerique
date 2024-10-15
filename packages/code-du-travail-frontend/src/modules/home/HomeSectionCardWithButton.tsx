@@ -1,6 +1,7 @@
 import { HomeCardItem } from "./queries";
 import { HomeCard } from "./HomeCard";
 import { HomeWrapper } from "./HomeWrapper";
+import { HomeButton } from "./HomeButton";
 
 type Props = {
   sectionId: string;
@@ -10,14 +11,24 @@ type Props = {
   children?: React.ReactNode;
   items: HomeCardItem[];
   isSmallCard?: boolean;
+  buttonLink: string;
+  buttonText: string;
+  onButtonClick: () => void;
 };
 
-export const HomeSectionCard = (props: Props) => (
+export const HomeSectionCardWithButton = (props: Props) => (
   <HomeWrapper
     sectionId={props.sectionId}
     isTint={props.isTint}
     title={props.title}
     subtitle={props.subtitle}
+    footerNode={
+      <HomeButton
+        buttonLink={props.buttonLink}
+        buttonText={props.buttonText}
+        onButtonClick={props.onButtonClick}
+      />
+    }
   >
     {props.items.map((item, index) => (
       <HomeCard
