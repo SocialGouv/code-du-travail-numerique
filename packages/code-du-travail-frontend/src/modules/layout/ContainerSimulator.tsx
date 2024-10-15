@@ -1,4 +1,3 @@
-"use client";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Breadcrumb, BreadcrumbProps } from "@codegouvfr/react-dsfr/Breadcrumb";
 
