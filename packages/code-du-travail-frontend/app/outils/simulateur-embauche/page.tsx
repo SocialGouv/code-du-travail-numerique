@@ -17,7 +17,6 @@ export async function generateMetadata() {
 
 async function HiringSimulatorPage() {
   const tool = await getTool();
-  console.log("tool", tool);
   const relatedItems = await fetchRelatedItems(
     { _id: tool._id },
     "simulateur-embauche"

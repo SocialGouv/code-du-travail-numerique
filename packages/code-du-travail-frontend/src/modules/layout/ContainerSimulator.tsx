@@ -1,7 +1,6 @@
+"use client";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Breadcrumb, BreadcrumbProps } from "@codegouvfr/react-dsfr/Breadcrumb";
-import { useBreakpointsValuesPx } from "@codegouvfr/react-dsfr/useBreakpointsValuesPx";
-import { useWindowInnerSize } from "@codegouvfr/react-dsfr/tools/useWindowInnerSize";
 
 import { RelatedItems } from "../common/RelatedItems";
 import { Share } from "../common/Share";
@@ -22,9 +21,6 @@ export const ContainerSimulator = ({
   description,
   segments = [],
 }: Props) => {
-  const { breakpointsValues } = useBreakpointsValuesPx();
-  const { windowInnerWidth } = useWindowInnerSize();
-  const isMobile = windowInnerWidth < breakpointsValues.md;
   return (
     <div className={fr.cx("fr-grid-row")}>
       <Breadcrumb
@@ -37,16 +33,14 @@ export const ContainerSimulator = ({
       />
       <div>
         {children}
-        <div
-          className={fr.cx(isMobile ? "fr-col-12" : "fr-col-7", "fr-my-12v")}
-        >
+        <div className={fr.cx("fr-col-12", "fr-col-md-7", "fr-my-12v")}>
           <Feedback />
         </div>
       </div>
-      <div className={fr.cx(isMobile ? "fr-col-12" : "fr-col-8")}>
+      <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
         <RelatedItems relatedItems={relatedItems} />
       </div>
-      <div className={fr.cx(isMobile ? "fr-col-12" : "fr-col-4", "fr-mb-12v")}>
+      <div className={fr.cx("fr-col-12", "fr-col-md-4", "fr-mb-12v")}>
         <Share title={title} metaDescription={description} />
       </div>
     </div>
