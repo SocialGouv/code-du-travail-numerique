@@ -26,7 +26,7 @@ export const getCc3239Informations = async (): Promise<Agreement> => {
     const res = await searchAgreement("3239");
     defaultInformations = res[0];
   } catch (e) {
-    console.error(e)
+    console.error(e);
     Sentry.captureException(e);
   }
   return defaultInformations;

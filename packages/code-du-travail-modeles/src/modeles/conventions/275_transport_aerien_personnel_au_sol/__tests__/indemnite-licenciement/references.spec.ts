@@ -2,7 +2,7 @@ import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 
 const engine = new IndemniteLicenciementPublicodes(
   modelsIndemniteLicenciement,
-  "275",
+  "275"
 );
 
 describe("Vérification des références juridiques pour la CC 275", () => {
@@ -45,7 +45,7 @@ describe("Vérification des références juridiques pour la CC 275", () => {
 
           expect(result).toHaveLength(expectedReferences.length);
           expect(result).toEqual(expect.arrayContaining(expectedReferences));
-        },
+        }
       );
     });
 
@@ -86,7 +86,7 @@ describe("Vérification des références juridiques pour la CC 275", () => {
 
           expect(result).toHaveLength(expectedReferences.length);
           expect(result).toEqual(expect.arrayContaining(expectedReferences));
-        },
+        }
       );
     });
   });
@@ -130,7 +130,7 @@ describe("Vérification des références juridiques pour la CC 275", () => {
 
           expect(result).toHaveLength(expectedReferences.length);
           expect(result).toEqual(expect.arrayContaining(expectedReferences));
-        },
+        }
       );
     });
 
@@ -171,7 +171,7 @@ describe("Vérification des références juridiques pour la CC 275", () => {
 
           expect(result).toHaveLength(expectedReferences.length);
           expect(result).toEqual(expect.arrayContaining(expectedReferences));
-        },
+        }
       );
     });
   });
@@ -215,7 +215,7 @@ describe("Vérification des références juridiques pour la CC 275", () => {
 
           expect(result).toHaveLength(expectedReferences.length);
           expect(result).toEqual(expect.arrayContaining(expectedReferences));
-        },
+        }
       );
     });
 
@@ -256,7 +256,7 @@ describe("Vérification des références juridiques pour la CC 275", () => {
 
           expect(result).toHaveLength(expectedReferences.length);
           expect(result).toEqual(expect.arrayContaining(expectedReferences));
-        },
+        }
       );
     });
   });

@@ -19,7 +19,6 @@ Storage.prototype.getItem = jest.fn(
 `
 );
 
-
 test(`
   - Vérifier qu'on ne peut pas passer à l'étape suivante sans avoir sélectionné toutes les informations de la CC
 `, async () => {

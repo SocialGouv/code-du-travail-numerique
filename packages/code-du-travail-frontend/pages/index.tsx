@@ -108,7 +108,8 @@ export async function getStaticProps() {
       tools: data?.tools.map(({ _id, _source }) => ({ ..._source, _id })) ?? [],
       contributions: data?.contributions ?? [],
       modeles: data?.modeles ?? [],
-      agreements: data?.agreements.map((v) => ({ ...v, title: v.shortTitle })) ?? [],
+      agreements:
+        data?.agreements.map((v) => ({ ...v, title: v.shortTitle })) ?? [],
     },
     revalidate: REVALIDATE_TIME,
   };
