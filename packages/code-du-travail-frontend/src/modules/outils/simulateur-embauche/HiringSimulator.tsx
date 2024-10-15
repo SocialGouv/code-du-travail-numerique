@@ -31,30 +31,27 @@ export const HiringSimulator = ({ relatedItems }: Props) => {
       setState({ error: "empty child", simulator: "error" });
     }
   };
-  const useScript = () => {
-    useEffect(() => {
-      const script = document.createElement("script");
+  useEffect(() => {
+    const script = document.createElement("script");
 
-      script.src =
-        "https://mon-entreprise.urssaf.fr/simulateur-iframe-integration.js";
-      script.async = true;
-      script.dataset.couleur = "#2975D1";
-      script.id = "script-simulateur-embauche";
-      script.onload = onLoad;
-      script.onerror = onError;
+    script.src =
+      "https://mon-entreprise.urssaf.fr/simulateur-iframe-integration.js";
+    script.async = true;
+    script.dataset.couleur = "#2975D1";
+    script.id = "script-simulateur-embauche";
+    script.onload = onLoad;
+    script.onerror = onError;
 
+    if (simRef.current) {
+      simRef.current.appendChild(script);
+    }
+
+    return () => {
       if (simRef.current) {
-        simRef.current.appendChild(script);
+        simRef.current.removeChild(script);
       }
-
-      return () => {
-        if (simRef.current) {
-          simRef.current.removeChild(script);
-        }
-      };
-    }, []);
-  };
-  useScript();
+    };
+  }, []);
   const { simulator } = state;
   return (
     <ContainerSimulator
