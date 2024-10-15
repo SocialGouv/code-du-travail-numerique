@@ -28,8 +28,7 @@ export const LetterModelContent = ({
   date,
 }: LetterModelProps) => {
   return (
-    <div className={maxWidth}>
-      <h1 className={fr.cx("fr-mb-6w")}>{title}</h1>
+    <>
       <p className={fr.cx("fr-mb-6w")}>Mise à jour le&nbsp;: {date}</p>
       {intro && (
         <div className={`${fr.cx("fr-highlight", "fr-mb-6w")}`}>
@@ -70,7 +69,7 @@ export const LetterModelContent = ({
           title={title}
         ></DownloadTile>
       </div>
-    </div>
+    </>
   );
 };
 
@@ -78,8 +77,4 @@ const border = css({
   border: `1px solid`,
   borderRadius: "8px",
   borderColor: "var(--artwork-minor-blue-cumulus)",
-});
-const maxWidth = css({
-  maxWidth: "720px",
-  m: "auto"
 });
