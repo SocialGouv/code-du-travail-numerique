@@ -7,7 +7,7 @@ import { useNeedMoreInfoEvents } from "./tracking";
 import servicesDeRenseignement from "../../../data/services-de-renseignement.json";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
-import { css } from "styled-system/css";
+import { css } from "../../../../styled-system/css";
 
 type ServiceRenseignement = {
   name: string;
