@@ -6,7 +6,6 @@ import {
 import { Tool } from "@socialgouv/cdtn-types";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { DocumentElasticResult, fetchDocument } from "../documents";
-import { ElasticLaborCodeArticle } from "../code-du-travail";
 import { ElasticTool } from "./type";
 
 export const fetchAllTools = async <K extends keyof Tool>(
