@@ -17,7 +17,9 @@ describe("sendEvent", () => {
         action: "testAction",
         value: "testValue",
       })
-    ).toThrow("value should be used with name");
+    ).toThrow(
+      "[Event Matomo] property 'name' is missing on event with 'value'"
+    );
   });
 
   it("should call push with category, action, name, and value if all are provided", () => {

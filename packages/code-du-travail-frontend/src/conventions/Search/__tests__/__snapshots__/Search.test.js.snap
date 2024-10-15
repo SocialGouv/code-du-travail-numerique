@@ -226,13 +226,25 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
           class="sc-f1b633f2-1 fOEIjw"
         >
           <a
+<<<<<<< HEAD
             class="sc-9f338ae2-0 lYghT"
+||||||| 0636c5112
+            class="sc-fMMURN gbvVXw"
+=======
+            class="sc-464cd870-0 gvqnQU"
+>>>>>>> dev
             href="/convention-collective/275-small-titre"
           >
             small titre
              
             <span
+<<<<<<< HEAD
               class="sc-9f338ae2-3 gWROZr"
+||||||| 0636c5112
+              class="sc-cVzyXs kzPBIh"
+=======
+              class="sc-464cd870-3 cDwJRg"
+>>>>>>> dev
             >
               (IDCC 
               0275
@@ -244,13 +256,25 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
           class="sc-f1b633f2-1 fOEIjw"
         >
           <a
+<<<<<<< HEAD
             class="sc-9f338ae2-0 FmmlJ"
+||||||| 0636c5112
+            class="sc-fMMURN krEXxa"
+=======
+            class="sc-464cd870-0 xInLS"
+>>>>>>> dev
             href="/convention-collective/276-smaller-convention-2"
           >
             smaller convention 2
              
             <span
+<<<<<<< HEAD
               class="sc-9f338ae2-3 gWROZr"
+||||||| 0636c5112
+              class="sc-cVzyXs kzPBIh"
+=======
+              class="sc-464cd870-3 cDwJRg"
+>>>>>>> dev
             >
               (IDCC 
               0276
@@ -322,13 +346,25 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
           class="sc-f1b633f2-1 fOEIjw"
         >
           <a
+<<<<<<< HEAD
             class="sc-9f338ae2-0 lYghT"
+||||||| 0636c5112
+            class="sc-fMMURN gbvVXw"
+=======
+            class="sc-464cd870-0 gvqnQU"
+>>>>>>> dev
             href="/convention-collective/4567-smaller-convention-2"
           >
             smaller convention 2
              
             <span
+<<<<<<< HEAD
               class="sc-9f338ae2-3 gWROZr"
+||||||| 0636c5112
+              class="sc-cVzyXs kzPBIh"
+=======
+              class="sc-464cd870-3 cDwJRg"
+>>>>>>> dev
             >
               (IDCC 
               4567
