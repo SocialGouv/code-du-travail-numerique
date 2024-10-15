@@ -1,11 +1,10 @@
+import { HeuresRechercheEmploi } from "../../index";
+import { ui } from "../ui";
+import { fireEvent, render, screen } from "@testing-library/react";
 
-        import { HeuresRechercheEmploi } from "../../index";
-        import { ui } from "../ui";
-        import { fireEvent, render, screen } from "@testing-library/react";
-        
-        jest.spyOn(Storage.prototype, "setItem");
-        Storage.prototype.getItem = jest.fn(
-          () => `
+jest.spyOn(Storage.prototype, "setItem");
+Storage.prototype.getItem = jest.fn(
+  () => `
         {
           "num": 2098,
           "shortTitle": "shortTitle",
@@ -15,160 +14,166 @@
           "slug": "2098"
         }
         `
+);
+
+describe("HeuresRechercheEmploi", () => {
+  beforeEach(() => {
+    render(<HeuresRechercheEmploi icon={""} title={""} displayTitle={""} />);
+    fireEvent.click(ui.introduction.startButton.get());
+
+    fireEvent.click(ui.next.get());
+  });
+
+  describe("typeRupture = 7| Rupture de la période d'essai", () => {
+    beforeEach(() => {
+      fireEvent.change(screen.getByTestId("typeRupture"), {
+        target: { value: "7| Rupture de la période d'essai" },
+      });
+      fireEvent.click(ui.next.get());
+    });
+
+    describe("criteria.catégorie professionnelle = 48| Cadres", () => {
+      beforeEach(() => {
+        fireEvent.change(
+          screen.getByTestId("criteria.catégorie professionnelle"),
+          {
+            target: { value: "48| Cadres" },
+          }
         );
-    
-        describe("HeuresRechercheEmploi", () => {
-          beforeEach(() => {
-            render(<HeuresRechercheEmploi icon={""} title={""} displayTitle={""} />);
-                fireEvent.click(ui.introduction.startButton.get());
-                
-    
         fireEvent.click(ui.next.get());
-      
-    
-          });
-          
-      describe("typeRupture = 7| Rupture de la période d'essai", () => {
-        
-        beforeEach(() => {
-          
-        fireEvent.change(screen.getByTestId("typeRupture"), {
-          target: { value: "7| Rupture de la période d'essai" },
-        });
-        fireEvent.click(ui.next.get());
-      
-        });
-        
-      describe("criteria.catégorie professionnelle = 48| Cadres", () => {
-        
-        beforeEach(() => {
-          
-        fireEvent.change(screen.getByTestId("criteria.catégorie professionnelle"), {
-          target: { value: "48| Cadres" },
-        });
-        fireEvent.click(ui.next.get());
-      
-        });
-        
+      });
+
       describe("criteria.initiative de la rupture de la période d'essai = 1| L'employeur", () => {
-        
         beforeEach(() => {
-          
-        fireEvent.change(screen.getByTestId("criteria.initiative de la rupture de la période d'essai"), {
-          target: { value: "1| L'employeur" },
+          fireEvent.change(
+            screen.getByTestId(
+              "criteria.initiative de la rupture de la période d'essai"
+            ),
+            {
+              target: { value: "1| L'employeur" },
+            }
+          );
+          fireEvent.click(ui.next.get());
         });
-        fireEvent.click(ui.next.get());
-      
+
+        it("should display expected answer", () => {
+          expect(
+            screen.queryAllByText(/2 heures maximum par jour/g)[0]
+          ).toBeInTheDocument();
+          expect(
+            screen.queryAllByText(/Le salaire est maintenu./g)[0]
+          ).toBeInTheDocument();
+          expect(
+            screen.queryAllByText(
+              /Les absences sont fixées un jour par le salarié, un jour par l'employeur. Ces heures d'absences peuvent également être groupées sur demande du salarié, avec l'accord de l'employeur./g
+            )[0]
+          ).toBeInTheDocument();
+
+          expect(screen.queryAllByText(/Article 2.2/)[0]).toBeInTheDocument();
         });
-        
-        
-    it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures maximum par jour/g)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les absences sont fixées un jour par le salarié, un jour par l'employeur. Ces heures d'absences peuvent également être groupées sur demande du salarié, avec l'accord de l'employeur./g)[0]).toBeInTheDocument();
-          
-        expect(screen.queryAllByText(/Article 2.2/)[0]).toBeInTheDocument();
-          
-    });
-  
       });
-    
+
       describe("criteria.initiative de la rupture de la période d'essai = 2| Le salarié", () => {
-        
         beforeEach(() => {
-          
-        fireEvent.change(screen.getByTestId("criteria.initiative de la rupture de la période d'essai"), {
-          target: { value: "2| Le salarié" },
+          fireEvent.change(
+            screen.getByTestId(
+              "criteria.initiative de la rupture de la période d'essai"
+            ),
+            {
+              target: { value: "2| Le salarié" },
+            }
+          );
+          fireEvent.click(ui.next.get());
         });
-        fireEvent.click(ui.next.get());
-      
+
+        it("should display expected answer", () => {
+          expect(
+            screen.queryAllByText(/2 heures maximum par jour/g)[0]
+          ).toBeInTheDocument();
+          expect(
+            screen.queryAllByText(/Le salaire n'est pas maintenu./g)[0]
+          ).toBeInTheDocument();
+          expect(
+            screen.queryAllByText(
+              /Les absences sont fixées un jour par le salarié, un jour par l'employeur. Ces heures d'absences peuvent également être groupées sur demande du salarié, avec l'accord de l'employeur./g
+            )[0]
+          ).toBeInTheDocument();
+
+          expect(screen.queryAllByText(/Article 2.2/)[0]).toBeInTheDocument();
         });
-        
-        
-    it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures maximum par jour/g)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./g)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les absences sont fixées un jour par le salarié, un jour par l'employeur. Ces heures d'absences peuvent également être groupées sur demande du salarié, avec l'accord de l'employeur./g)[0]).toBeInTheDocument();
-          
-        expect(screen.queryAllByText(/Article 2.2/)[0]).toBeInTheDocument();
-          
+      });
     });
-  
-      });
-    
-        
-      });
-    
-      describe("criteria.catégorie professionnelle = 38| Non-cadres", () => {
-        
-        beforeEach(() => {
-          
-        fireEvent.change(screen.getByTestId("criteria.catégorie professionnelle"), {
-          target: { value: "38| Non-cadres" },
-        });
+
+    describe("criteria.catégorie professionnelle = 38| Non-cadres", () => {
+      beforeEach(() => {
+        fireEvent.change(
+          screen.getByTestId("criteria.catégorie professionnelle"),
+          {
+            target: { value: "38| Non-cadres" },
+          }
+        );
         fireEvent.click(ui.next.get());
-      
-        });
-        
-        
-    it("should display expected answer", () => {
-      expect(screen.queryAllByText(/D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./g)[0]).toBeInTheDocument();
-          
+      });
+
+      it("should display expected answer", () => {
+        expect(
+          screen.queryAllByText(
+            /D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./g
+          )[0]
+        ).toBeInTheDocument();
+
         expect(screen.queryAllByText(/Article 13.2/)[0]).toBeInTheDocument();
-          
+      });
     });
-  
+  });
+
+  describe("typeRupture = 1| Démission", () => {
+    beforeEach(() => {
+      fireEvent.change(screen.getByTestId("typeRupture"), {
+        target: { value: "1| Démission" },
       });
-    
-        
-      });
-    
-      describe("typeRupture = 1| Démission", () => {
-        
-        beforeEach(() => {
-          
-        fireEvent.change(screen.getByTestId("typeRupture"), {
-          target: { value: "1| Démission" },
-        });
-        fireEvent.click(ui.next.get());
-      
-        });
-        
-        
+      fireEvent.click(ui.next.get());
+    });
+
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures maximum par jour/g)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire n'est pas maintenu./g)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les absences sont fixées un jour par le salarié, un jour par l'employeur. Ces heures d'absences peuvent également être groupées sur demande du salarié, avec l'accord de l'employeur./g)[0]).toBeInTheDocument();
-          
-        expect(screen.queryAllByText(/Article 19/)[0]).toBeInTheDocument();
-          
+      expect(
+        screen.queryAllByText(/2 heures maximum par jour/g)[0]
+      ).toBeInTheDocument();
+      expect(
+        screen.queryAllByText(/Le salaire n'est pas maintenu./g)[0]
+      ).toBeInTheDocument();
+      expect(
+        screen.queryAllByText(
+          /Les absences sont fixées un jour par le salarié, un jour par l'employeur. Ces heures d'absences peuvent également être groupées sur demande du salarié, avec l'accord de l'employeur./g
+        )[0]
+      ).toBeInTheDocument();
+
+      expect(screen.queryAllByText(/Article 19/)[0]).toBeInTheDocument();
     });
-  
+  });
+
+  describe("typeRupture = 3| Licenciement", () => {
+    beforeEach(() => {
+      fireEvent.change(screen.getByTestId("typeRupture"), {
+        target: { value: "3| Licenciement" },
       });
-    
-      describe("typeRupture = 3| Licenciement", () => {
-        
-        beforeEach(() => {
-          
-        fireEvent.change(screen.getByTestId("typeRupture"), {
-          target: { value: "3| Licenciement" },
-        });
-        fireEvent.click(ui.next.get());
-      
-        });
-        
-        
+      fireEvent.click(ui.next.get());
+    });
+
     it("should display expected answer", () => {
-      expect(screen.queryAllByText(/2 heures maximum par jour/g)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Le salaire est maintenu./g)[0]).toBeInTheDocument();
-          expect(screen.queryAllByText(/Les absences sont fixées un jour par le salarié, un jour par l'employeur. Ces heures d'absences peuvent également être groupées sur demande du salarié, avec l'accord de l'employeur. Les heures non utilisées ne sont pas rémunérées./g)[0]).toBeInTheDocument();
-          
-        expect(screen.queryAllByText(/Article 19/)[0]).toBeInTheDocument();
-          
+      expect(
+        screen.queryAllByText(/2 heures maximum par jour/g)[0]
+      ).toBeInTheDocument();
+      expect(
+        screen.queryAllByText(/Le salaire est maintenu./g)[0]
+      ).toBeInTheDocument();
+      expect(
+        screen.queryAllByText(
+          /Les absences sont fixées un jour par le salarié, un jour par l'employeur. Ces heures d'absences peuvent également être groupées sur demande du salarié, avec l'accord de l'employeur. Les heures non utilisées ne sont pas rémunérées./g
+        )[0]
+      ).toBeInTheDocument();
+
+      expect(screen.queryAllByText(/Article 19/)[0]).toBeInTheDocument();
     });
-  
-      });
-    
-          
-        });
-      
+  });
+});
