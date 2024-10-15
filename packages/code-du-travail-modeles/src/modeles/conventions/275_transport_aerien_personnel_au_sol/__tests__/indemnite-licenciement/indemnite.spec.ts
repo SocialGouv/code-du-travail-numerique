@@ -5,9 +5,9 @@ const engine = new IndemniteLicenciementPublicodes(
   "275"
 );
 
-describe("CC 275", () => {
+describe("Calcul de l'indemnité de licenciement pour la CC 275", () => {
   describe("Avant le 31/01/2024", () => {
-    describe("Calcul de l'indemnité de licenciement pour Non-cadres", () => {
+    describe("Non Cadres", () => {
       test.each`
         seniorityRight | seniority | salaireRef | expectedCompensation
         ${0.91}        | ${0.91}   | ${2500}    | ${0}
@@ -43,7 +43,7 @@ describe("CC 275", () => {
       );
     });
 
-    describe("Calcul de l'indemnité de licenciement pour Cadres", () => {
+    describe("Cadres", () => {
       test.each`
         seniorityRight | seniority | salaireRef | expectedCompensation | age
         ${0.91}        | ${0.91}   | ${2500}    | ${0}                 | ${45}
@@ -102,8 +102,8 @@ describe("CC 275", () => {
     });
   });
 
-  describe("A partir du 31/01/2024", () => {
-    describe("Calcul de l'indemnité de licenciement pour Non-cadres", () => {
+  describe("Entre le 31/01/2024 et le 30/10/2024", () => {
+    describe("Non Cadre", () => {
       test.each`
         seniorityRight | seniority | salaireRef | expectedCompensation
         ${0.61}        | ${0.61}   | ${2500}    | ${0}
@@ -140,7 +140,7 @@ describe("CC 275", () => {
       );
     });
 
-    describe("Calcul de l'indemnité de licenciement pour Cadres", () => {
+    describe("Cadres", () => {
       test.each`
         seniorityRight | seniority | salaireRef | expectedCompensation | age
         ${0.61}        | ${0.61}   | ${2500}    | ${0}                 | ${45}

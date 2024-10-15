@@ -1065,47 +1065,47 @@
     "permanent": true
   },
   {
-    "source": "/convention-collective/(2075|2075(?:-[a-z0-9-]+)?)",
+    "source": "/convention-collective/2075(-[a-z0-9-]+)?",
     "destination": "/convention-collective/1747-activites-industrielles-de-boulangerie-et-patisserie",
     "permanent": true
   },
   {
-    "source": "/convention-collective/(7012|7012(?:-[a-z0-9-]+)?)",
+    "source": "/convention-collective/7012(-[a-z0-9-]+)?",
     "destination": "/convention-collective/7026-personnels-des-activites-hippiques",
     "permanent": true
   },
   {
-    "source": "/convention-collective/(7013|7013(?:-[a-z0-9-]+)?)",
+    "source": "/convention-collective/7013(-[a-z0-9-]+)?",
     "destination": "/convention-collective/7026-personnels-des-activites-hippiques",
     "permanent": true
   },
   {
-    "source": "/convention-collective/(7014|7014(?:-[a-z0-9-]+)?)",
+    "source": "/convention-collective/7014(-[a-z0-9-]+)?",
     "destination": "/convention-collective/7026-personnels-des-activites-hippiques",
     "permanent": true
   },
   {
-    "source": "/convention-collective/(1194|1194(?:-[a-z0-9-]+)?)",
+    "source": "/convention-collective/1194(-[a-z0-9-]+)?",
     "destination": "/convention-collective/2121-edition",
     "permanent": true
   },
   {
-    "source": "/convention-collective/(1016|1016(?:-[a-z0-9-]+)?)",
+    "source": "/convention-collective/1016(-[a-z0-9-]+)?",
     "destination": "/convention-collective/2121-edition",
     "permanent": true
   },
   {
-    "source": "/convention-collective/(2770|2770(?:-[a-z0-9-]+)?)",
+    "source": "/convention-collective/2770(-[a-z0-9-]+)?",
     "destination": "/convention-collective/2121-edition",
     "permanent": true
   },
   {
-    "source": "/convention-collective/(635|635(?:-[a-z0-9-]+)?)",
+    "source": "/convention-collective/(0635|635(?:-[a-z0-9-]+)?)",
     "destination": "/convention-collective/573-commerces-de-gros",
     "permanent": true
   },
   {
-    "source": "/convention-collective/(1734|1734(?:-[a-z0-9-]+)?)",
+    "source": "/convention-collective/1734(-[a-z0-9-]+)?",
     "destination": "/convention-collective/2642-production-audiovisuelle",
     "permanent": true
   },
@@ -1115,7 +1115,7 @@
     "permanent": true
   },
   {
-    "source": "/convention-collective/(2564|2564(?:-[a-z0-9-]+)?)",
+    "source": "/convention-collective/2564(-[a-z0-9-]+)?",
     "destination": "/convention-collective/1875-veterinaires-personnel-salarie-des-cabinets-et-cliniques-veterinaires",
     "permanent": true
   },
@@ -1125,8 +1125,38 @@
     "permanent": true
   },
   {
-    "source": "/convention-collective/(1383|1383(?:-[a-z0-9-]+)?)",
+    "source": "/convention-collective/1383(-[a-z0-9-]+)?",
     "destination": "/convention-collective/3243-quincaillerie-fournitures-industrielles-fers-metaux-et-equipement-de-la",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
+    "destination": "/convention-collective/3251-bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/1044(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/3251-bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(0567|567(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/3251-bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/2785(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/3250-commissaires-de-justice-et-societes-de-ventes-volontaires",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/batiment-etam-ile-de-france-hors-seine-et-marne",
+    "destination": "/convention-collective/2707-batiment-etam-ile-de-france-hors-seine-et-marne",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
+    "destination": "/convention-collective/3251-bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
     "permanent": true
   }
 ]

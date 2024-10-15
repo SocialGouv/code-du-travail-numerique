@@ -7,18 +7,17 @@ const engine = new IndemniteLicenciementPublicodes(
 
 describe("Vérification des références juridiques pour la CC 275", () => {
   describe("Avant le 31/01/2024", () => {
+    const references = [
+      {
+        article: "Article 20",
+        url: "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732500/?idConteneur=KALICONT000005635872",
+      },
+      {
+        article: "Article 35",
+        url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026343716?idConteneur=KALICONT000005635872",
+      },
+    ];
     describe("Non cadres", () => {
-      const references = [
-        {
-          article: "Article 20",
-          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732500/?idConteneur=KALICONT000005635872",
-        },
-        {
-          article: "Article 35",
-          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026343716?idConteneur=KALICONT000005635872&origin=list#KALIARTI000026343716",
-        },
-      ];
-
       test.each`
         seniority | expectedReferences
         ${5}      | ${references}
@@ -51,17 +50,6 @@ describe("Vérification des références juridiques pour la CC 275", () => {
     });
 
     describe("Cadres", () => {
-      const references = [
-        {
-          article: "Article 20",
-          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732500/?idConteneur=KALICONT000005635872",
-        },
-        {
-          article: "Article 35",
-          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026343716?idConteneur=KALICONT000005635872&origin=list#KALIARTI000026343716",
-        },
-      ];
-
       test.each`
         seniority | expectedReferences | age
         ${5}      | ${references}      | ${50}
@@ -103,19 +91,18 @@ describe("Vérification des références juridiques pour la CC 275", () => {
     });
   });
 
-  describe("A partir du 31/01/2024", () => {
+  describe("Entre le 31/01/2024 et le 30/09/2024", () => {
+    const references = [
+      {
+        article: "Article 20",
+        url: "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732500/?idConteneur=KALICONT000005635872",
+      },
+      {
+        article: "Article 35",
+        url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026343716?idConteneur=KALICONT000005635872",
+      },
+    ];
     describe("Non cadres", () => {
-      const references = [
-        {
-          article: "Article 20",
-          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732500/?idConteneur=KALICONT000005635872",
-        },
-        {
-          article: "Article 35",
-          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026343716?idConteneur=KALICONT000005635872&origin=list#KALIARTI000026343716",
-        },
-      ];
-
       test.each`
         seniority | expectedReferences
         ${5}      | ${references}
@@ -148,17 +135,6 @@ describe("Vérification des références juridiques pour la CC 275", () => {
     });
 
     describe("Cadres", () => {
-      const references = [
-        {
-          article: "Article 20",
-          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732500/?idConteneur=KALICONT000005635872",
-        },
-        {
-          article: "Article 35",
-          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026343716?idConteneur=KALICONT000005635872&origin=list#KALIARTI000026343716",
-        },
-      ];
-
       test.each`
         seniority | expectedReferences | age
         ${5}      | ${references}      | ${50}
