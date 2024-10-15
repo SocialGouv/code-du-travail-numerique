@@ -39,7 +39,7 @@ async function ModeleCourrier({ params }) {
 }
 
 const getModel = async (slug: string) => {
-  const model = await fetchModel(slug);
+  const model = await fetchModel({ slug });
 
   if (!model) {
     return notFound();

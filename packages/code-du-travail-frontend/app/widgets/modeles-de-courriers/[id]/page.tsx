@@ -1,5 +1,5 @@
 import {
-  fetchModelById,
+  fetchModel,
   getTitle,
 } from "../../../../src/modules/modeles-de-courriers";
 import { notFound } from "next/navigation";
@@ -9,15 +9,16 @@ import { WidgetWithIframeResizer } from "../../../../src/modules/widgets/WidgetW
 async function WidgetModel({ params }) {
   const { title, ...model } = await getModel(params.id);
 
+  const titleFormatted = getTitle(params.slug, title);
   return (
-    <WidgetWithIframeResizer>
-      <LetterModelContent title={getTitle(params.slug, title)} {...model} />
+    <WidgetWithIframeResizer title={titleFormatted}>
+      <LetterModelContent title={titleFormatted} {...model} />
     </WidgetWithIframeResizer>
   );
 }
 
 export const getModel = async (id: string) => {
-  const modele = await fetchModelById(id);
+  const modele = await fetchModel({ _id: id });
 
   if (!modele) {
     return notFound();

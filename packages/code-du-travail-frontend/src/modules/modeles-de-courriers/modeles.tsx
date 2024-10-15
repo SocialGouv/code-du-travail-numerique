@@ -62,6 +62,7 @@ export const LetterModel = ({
       )}
     >
       <div className={fr.cx("fr-col-12", "fr-col-md-7")}>
+        <h1 className={fr.cx("fr-mb-6w")}>{title}</h1>
         <LetterModelContent
           slug={slug}
           date={date}
