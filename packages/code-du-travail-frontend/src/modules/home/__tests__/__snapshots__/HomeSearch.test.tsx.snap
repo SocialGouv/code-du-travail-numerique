@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomeSearch /> should match snapshot 1`] = `
+<div>
+  <div
+    class="fr-grid-row fr-grid-row--gutters fr-grid-row--bottom"
+  >
+    <div
+      class="fr-col-12 fr-col-md-8"
+    >
+      <div
+        class="fr-input-group"
+      >
+        <label
+          class="fr-label"
+          for="downshift-:r0:-input"
+          id="downshift-:r0:-label"
+        >
+          Recherchez par mots-clés
+          <span
+            class="fr-hint-text"
+          >
+            par exemple : congés payés, durée de préavis
+          </span>
+        </label>
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          aria-controls="downshift-:r0:-menu"
+          aria-expanded="false"
+          aria-label="Champ de recherche par mots-clés"
+          autocomplete="off"
+          class="fr-input"
+          id="downshift-:r0:-input"
+          role="combobox"
+          value=""
+        />
+        <ul
+          aria-labelledby="downshift-:r0:-label"
+          class="pos_absolute w_100% z_100 bg_var(--background-default-grey) pl_0!"
+          id="downshift-:r0:-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+    <div
+      class="fr-col-12 fr-col-md-4"
+    >
+      <button
+        aria-label="Lancer la recherche"
+        class="fr-btn fr-icon-search-line fr-btn--icon-right mdDown:w_100%! mdDown:d_flex! mdDown:jc_center!"
+        id="fr-button-:r1:"
+      >
+        Rechercher
+      </button>
+    </div>
+  </div>
+</div>
+`;
