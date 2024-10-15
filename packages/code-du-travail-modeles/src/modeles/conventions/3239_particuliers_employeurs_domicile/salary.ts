@@ -46,7 +46,9 @@ export class ReferenceSalary3239
     catPro,
   }: ReferenceSalaryProps<SupportedCc.IDCC3239>): number {
     if (catPro === CatPro3239.salarieParticulierEmployeur) {
-      return new ReferenceSalaryLegal().computeReferenceSalary({ salaires });
+      return new ReferenceSalaryLegal().computeReferenceSalary({
+        salaires,
+      });
     }
     return 0;
   }

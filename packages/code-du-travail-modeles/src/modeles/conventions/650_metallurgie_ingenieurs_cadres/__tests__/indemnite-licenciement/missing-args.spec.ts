@@ -15,7 +15,6 @@ const defaultSituation = {
 
 describe("Ordre des questions pour la CC 650", () => {
   describe("Affiche les questions", () => {
-     
     let result: PublicodesData<PublicodesIndemniteLicenciementResult>;
 
     beforeEach(() => {

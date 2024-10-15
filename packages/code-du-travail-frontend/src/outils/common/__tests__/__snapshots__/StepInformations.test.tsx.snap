@@ -3,7 +3,7 @@
 exports[`<StepInformations /> should render 1`] = `
 <div>
   <h2
-    class="sc-iXzfSG chPUXZ"
+    class="sc-967f95b8-2 fsAvGZ"
   >
     Statut du salarié
   </h2>

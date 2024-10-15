@@ -5,19 +5,18 @@ import {
   StyledFilledElementSpan,
   StyledFilledElementTable,
 } from "../../steps/Resultat/components/FilledElements";
-import {
-  IndemniteDepartContext,
-  useIndemniteDepartStore,
-} from "../../store";
+import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
 
 export default function Agreement1740Informations() {
   const store = useContext(IndemniteDepartContext);
-  const { noticeSalaryPeriods, hasReceivedSalaries } =
-    useIndemniteDepartStore(store, (state) => ({
+  const { noticeSalaryPeriods, hasReceivedSalaries } = useIndemniteDepartStore(
+    store,
+    (state) => ({
       noticeSalaryPeriods:
         state.agreement1740Data.input.noticeSalaryPeriods ?? [],
       hasReceivedSalaries: state.agreement1740Data.input.hasReceivedSalaries,
-    }));
+    })
+  );
 
   return (
     <>
@@ -25,7 +24,8 @@ export default function Agreement1740Informations() {
         <>
           <li>
             Connaissance du montant des salaires perçus pendant le préavis
-            &nbsp;:&nbsp;{hasReceivedSalaries === "oui" ? "Oui" : "Non"}
+            &nbsp;:&nbsp;
+            {hasReceivedSalaries === "oui" ? "Oui" : "Non"}
           </li>
 
           {hasReceivedSalaries === "oui" && (

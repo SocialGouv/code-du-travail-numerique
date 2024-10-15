@@ -26,7 +26,10 @@ describe("initialSteps", () => {
   it("handles setIndex action", () => {
     expect(
       stepReducer(initialState, { payload: 1, type: ActionName.setStepIndex })
-    ).toEqual({ stepIndex: 1, steps: initialState.steps });
+    ).toEqual({
+      stepIndex: 1,
+      steps: initialState.steps,
+    });
   });
 
   describe("Skip the information steps", () => {

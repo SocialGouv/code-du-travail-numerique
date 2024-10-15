@@ -57,7 +57,11 @@ export const Tools = (props: Props) => {
             }
           )}
         </Grid>
-        <HomeButtonTrigger name="Voir tous les outils" link="/outils" onClick={props.triggerOnClick} />
+        <HomeButtonTrigger
+          name="Voir tous les outils"
+          link="/outils"
+          onClick={props.triggerOnClick}
+        />
       </Container>
     </Section>
   );

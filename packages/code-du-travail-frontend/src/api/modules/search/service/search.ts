@@ -158,11 +158,7 @@ async function msearch(searches) {
 
     if (resp.status !== 200) {
       console.error(
-        `Elastic search error : index ${index}, search key ${key} : ${JSON.stringify(
-          resp,
-          null,
-          2
-        )}`
+        `Elastic search error : index ${index}, search key ${key} : ${JSON.stringify(resp, null, 2)}`
       );
     }
 
