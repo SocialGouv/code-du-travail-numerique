@@ -8,7 +8,7 @@ export const getResultMessage = (
     const categoryPro3239 =
       informations[
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle"
-        ];
+      ];
     isAssMat = categoryPro3239 === CatPro3239.assistantMaternel;
   }
   if (isAssMat)

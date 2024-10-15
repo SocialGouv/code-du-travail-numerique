@@ -40,9 +40,7 @@ const ShowAgreements = ({
       {enterprise.conventions.length > 0 ? (
         <RadioQuestion
           questions={enterprise.conventions.map((agreement) => ({
-            label: `${agreement.shortTitle} (IDCC ${formatIdcc(
-              agreement.num
-            )})`,
+            label: `${agreement.shortTitle} (IDCC ${formatIdcc(agreement.num)})`,
             value: `${agreement.num}`,
             id: `enterprise-agreement-${agreement.num}`,
           }))}

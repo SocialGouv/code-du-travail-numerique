@@ -62,7 +62,9 @@ describe("Rupture conventionnelle - légale", () => {
       byText(/Date de notification du licenciement/).query()
     ).not.toBeInTheDocument();
     expect(
-      byText(/Rupture conventionnelle dûe à une inaptitude d’origine professionnelle/).query()
+      byText(
+        /Rupture conventionnelle dûe à une inaptitude d’origine professionnelle/
+      ).query()
     ).not.toBeInTheDocument();
   });
 });

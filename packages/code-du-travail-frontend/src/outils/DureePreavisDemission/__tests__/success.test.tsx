@@ -18,7 +18,6 @@ Storage.prototype.getItem = jest.fn(
 `
 );
 
-
 test(`
   - Vérifier l'affichage de la cc 1351
 `, async () => {

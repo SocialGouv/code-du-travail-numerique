@@ -15,7 +15,6 @@ const defaultSituation = {
 
 describe("CC 3248 - Ordre des questions pour la rupture conventionnelle", () => {
   describe("Affiche les questions", () => {
-     
     let result: PublicodesData<PublicodesIndemniteLicenciementResult>;
 
     beforeEach(() => {

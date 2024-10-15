@@ -67,10 +67,7 @@ export const getServerSideProps = async ({ query, req }) => {
     };
   }
   const { isModele } = integrationData[slug];
-  let selectOptions;
-  if (isModele) {
-    selectOptions = await getModelesList();
-  }
+  const selectOptions = isModele ? await getModelesList() : null;
 
   const hostname: string = req.headers.host;
   const [protocol] = req.headers["x-forwarded-proto"]

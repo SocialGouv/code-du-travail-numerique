@@ -2,10 +2,7 @@ import React, { useContext } from "react";
 
 import { RadioQuestion } from "../../../Components";
 import { SalaireTempsPlein } from "../../steps/Salaires/components";
-import {
-  IndemniteDepartContext,
-  useIndemniteDepartStore,
-} from "../../store";
+import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
 
 export default function Agreement2148() {
   const store = useContext(IndemniteDepartContext);
