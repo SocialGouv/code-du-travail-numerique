@@ -31,7 +31,7 @@ export function ArticleCodeDuTravail({
       title={title}
       description={metaDescription}
     >
-      <h1>{title}</h1>
+      <h1 className={fr.cx("fr-mb-6w")}>{title}</h1>
 
       <p>
         Source&nbsp;:{" "}
