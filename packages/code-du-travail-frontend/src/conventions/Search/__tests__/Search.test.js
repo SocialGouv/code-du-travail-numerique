@@ -43,7 +43,7 @@ describe("<Search />", () => {
   });
 
   it("should show spinner when loading", () => {
-    mockFetch({ "api.url/api/idcc": {} });
+    mockFetch({ "http://api.url/api/idcc": {} });
     const { container, getByPlaceholderText } = renderSearchForm({
       onSelectConvention: null,
     });
@@ -51,14 +51,16 @@ describe("<Search />", () => {
       getByPlaceholderText(
         "Nom de la convention collective, de l’entreprise ou son SIRET"
       ),
-      { target: { value: "8888" } }
+      {
+        target: { value: "8888" },
+      }
     );
     expect(container).toMatchSnapshot();
   });
 
   it("when input is IDCC, should search conventions", async () => {
     mockFetch({
-      "api.url/api/idcc": {
+      "http://api.url/api/idcc": {
         hits: {
           hits: [
             {
@@ -90,17 +92,19 @@ describe("<Search />", () => {
       getByPlaceholderText(
         "Nom de la convention collective, de l’entreprise ou son SIRET"
       ),
-      { target: { value: "1234" } }
+      {
+        target: { value: "1234" },
+      }
     );
     jest.runAllTimers();
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
-    expect(fetch).toHaveBeenCalledWith("api.url/api/idcc?q=1234");
+    expect(fetch).toHaveBeenCalledWith("http://api.url/api/idcc?q=1234");
     expect(container).toMatchSnapshot();
   });
 
   it("when input is a valid IDCC, should show only the perfect match", async () => {
     mockFetch({
-      "api.url/api/idcc": {
+      "http://api.url/api/idcc": {
         hits: {
           hits: [
             {
@@ -132,17 +136,19 @@ describe("<Search />", () => {
       getByPlaceholderText(
         "Nom de la convention collective, de l’entreprise ou son SIRET"
       ),
-      { target: { value: "4567" } }
+      {
+        target: { value: "4567" },
+      }
     );
     jest.runAllTimers();
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
-    expect(fetch).toHaveBeenCalledWith("api.url/api/idcc?q=4567");
+    expect(fetch).toHaveBeenCalledWith("http://api.url/api/idcc?q=4567");
     expect(container).toMatchSnapshot();
   });
 
   it("should show no results when no result", async () => {
     mockFetch({
-      "api.url/api/idcc": {
+      "http://api.url/api/idcc": {
         hits: {
           hits: [],
         },
@@ -155,18 +161,20 @@ describe("<Search />", () => {
       getByPlaceholderText(
         "Nom de la convention collective, de l’entreprise ou son SIRET"
       ),
-      { target: { value: "9999" } }
+      {
+        target: { value: "9999" },
+      }
     );
     jest.runAllTimers();
     await waitFor(() => findByText(/Aucun résultat/i), { container });
     expect(container).toMatchSnapshot();
     expect(fetch).toHaveBeenCalledTimes(1);
-    expect(fetch).toHaveBeenCalledWith("api.url/api/idcc?q=9999");
+    expect(fetch).toHaveBeenCalledWith("http://api.url/api/idcc?q=9999");
   });
 
   it("should use onSelectConvention callback when given", async () => {
     mockFetch({
-      "api.url/api/idcc": {
+      "http://api.url/api/idcc": {
         hits: {
           hits: [
             {
@@ -199,7 +207,9 @@ describe("<Search />", () => {
       getByPlaceholderText(
         "Nom de la convention collective, de l’entreprise ou son SIRET"
       ),
-      { target: { value: "42" } }
+      {
+        target: { value: "42" },
+      }
     );
     jest.runAllTimers();
     await waitFor(() => expect(onSelectConvention).toHaveBeenCalledTimes(0));
@@ -217,7 +227,7 @@ describe("<Search />", () => {
 
   it("when searching by text, should use enterprise API", async () => {
     mockFetch({
-      "api.url": {
+      "http://api.url": {
         etablissement: [
           {
             code_postal: 93100,
@@ -238,7 +248,9 @@ describe("<Search />", () => {
       getByPlaceholderText(
         "Nom de la convention collective, de l’entreprise ou son SIRET"
       ),
-      { target: { value: "hello" } }
+      {
+        target: { value: "hello" },
+      }
     );
     jest.runOnlyPendingTimers(); // run debounce timer
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));

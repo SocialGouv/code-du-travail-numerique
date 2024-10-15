@@ -1,17 +1,11 @@
 import { useContext } from "react";
-import {
-  IndemniteDepartContext,
-  useIndemniteDepartStore,
-} from "../../store";
+import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
 
 export default function Agreement2120Informations() {
   const store = useContext(IndemniteDepartContext);
-  const { salariesVariablePart } = useIndemniteDepartStore(
-    store,
-    (state) => ({
-      salariesVariablePart: state.agreement2120Data.input.salariesVariablePart,
-    })
-  );
+  const { salariesVariablePart } = useIndemniteDepartStore(store, (state) => ({
+    salariesVariablePart: state.agreement2120Data.input.salariesVariablePart,
+  }));
 
   if (salariesVariablePart === undefined) return <></>;
 

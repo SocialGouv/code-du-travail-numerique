@@ -38,8 +38,8 @@ const AgreementSelectionStep = ({
         {enterprise.conventions.length === 0
           ? `Aucune convention collective n'a été déclarée pour l'entreprise `
           : enterprise.conventions.length === 1
-          ? `1 convention collective trouvée pour `
-          : `${enterprise.conventions.length} conventions collectives trouvées pour `}
+            ? `1 convention collective trouvée pour `
+            : `${enterprise.conventions.length} conventions collectives trouvées pour `}
         <strong>
           « {enterprise.label}
           {enterprise.address &&

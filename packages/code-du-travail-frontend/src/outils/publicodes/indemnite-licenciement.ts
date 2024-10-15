@@ -50,23 +50,32 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithVa
     longTermDisability: boolean,
     agreementParameters?: Record<string, any>
   ): Record<string, string> => {
-    return ccn ? mapToPublicodesSituationForIndemniteLicenciementConventionnel(
-      ccn,
-      inaptitude,
-      longTermDisability,
-      {
-        ...agreementParameters,
-        ...{
-          salaryPeriods: JSON.stringify(salaryPeriods),
-          "contrat salarié . indemnité de licenciement . date de notification":
-            notificationDate,
-          "contrat salarié . indemnité de licenciement . date d'entrée":
+    return ccn
+      ? mapToPublicodesSituationForIndemniteLicenciementConventionnel(
+          ccn,
+          inaptitude,
+          longTermDisability,
+          {
+            ...agreementParameters,
+            ...{
+              salaryPeriods: JSON.stringify(salaryPeriods),
+              "contrat salarié . indemnité de licenciement . date de notification":
+                notificationDate,
+              "contrat salarié . indemnité de licenciement . date d'entrée":
+                startDate,
+              "contrat salarié . indemnité de licenciement . date de sortie":
+                endDate,
+            },
+          }
+        )
+      : mapToPublicodesSituationForCalculation(
           startDate,
-          "contrat salarié . indemnité de licenciement . date de sortie":
-            endDate,
-        },
-      }
-    ) : mapToPublicodesSituationForCalculation(startDate, notificationDate, endDate, salaryPeriods, inaptitude, longTermDisability);
+          notificationDate,
+          endDate,
+          salaryPeriods,
+          inaptitude,
+          longTermDisability
+        );
   };
 
 export const publicodesUnitTranslator = (value: string, unit?: string) => {

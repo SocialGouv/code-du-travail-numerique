@@ -42,10 +42,10 @@ function AgreementSearchTool({
       slug === "convention"
         ? ScreenType.agreement
         : slug === "entreprise" || widgetMode
-        ? ScreenType.enterprise
-        : slug === "selection"
-        ? ScreenType.agreementSelection
-        : ScreenType.intro
+          ? ScreenType.enterprise
+          : slug === "selection"
+            ? ScreenType.agreementSelection
+            : ScreenType.intro
     );
   }, [router.query.slug]);
 

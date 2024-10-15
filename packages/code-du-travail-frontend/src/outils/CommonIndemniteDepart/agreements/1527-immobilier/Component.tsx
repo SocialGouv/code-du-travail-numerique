@@ -1,9 +1,6 @@
 import React, { useContext } from "react";
 import { RadioQuestion } from "../../../Components";
-import {
-  IndemniteDepartContext,
-  useIndemniteDepartStore,
-} from "../../store";
+import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
 
 export default function Agreement1527() {
   const store = useContext(IndemniteDepartContext);

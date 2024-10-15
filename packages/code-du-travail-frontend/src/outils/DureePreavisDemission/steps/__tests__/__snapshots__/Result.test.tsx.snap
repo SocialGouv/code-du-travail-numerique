@@ -3,37 +3,37 @@
 exports[`<StepResult /> should render CC answer 1`] = `
 <div>
   <h2
-    class="sc-ePDLzJ eKYbCt"
+    class="sc-967f95b8-2 fsAvGZ"
   >
     Durée du préavis
   </h2>
   <p>
     À partir des éléments que vous avez saisis, la durée du préavis de démission est estimée à : 
     <strong
-      class="sc-bVVIoq cTIGFs"
+      class="sc-967f95b8-3 bZGDlr"
       role="alert"
     >
       2 mois
     </strong>
     <sup
-      class="sc-eBHhsj hwyzbG"
+      class="sc-47a094d6-0 gIlxPg"
     >
       *
     </sup>
     .
   </p>
   <p
-    class="sc-dPZUQH buUIDV"
+    class="sc-967f95b8-4 bNAzKG"
     data-testid="notice-preavis-demission"
   >
     <sup
-      class="sc-eBHhsj hwyzbG"
+      class="sc-47a094d6-0 gIlxPg"
     >
       *
     </sup>
     Le préavis débute le jour où le salarié remet sa lettre de démission en main propre ou à la date de première présentation de la lettre recommandée, peu importe le jour de son retrait par l’employeur.
     <i
-      class="sc-dPZUQH buUIDV"
+      class="sc-967f95b8-4 bNAzKG"
     >
        
       Exemple : si l’employeur reçoit le courrier recommandé le
@@ -43,7 +43,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
       4 juin
       .
       <span
-        class="sc-dPZUQH buUIDV"
+        class="sc-967f95b8-4 bNAzKG"
       >
          
         Si le 
@@ -52,7 +52,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
       </span>
     </i>
     <span
-      class="sc-dPZUQH buUIDV"
+      class="sc-967f95b8-4 bNAzKG"
       data-testid="notice-commun-accord"
     >
       <br />
@@ -62,12 +62,12 @@ exports[`<StepResult /> should render CC answer 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-kOPcWz ezOCpB sc-bbSZdi jpCDWv"
+      class="sc-95bd4344-0 kEXnui sc-da0440cf-1 fwhlXZ"
       type="button"
     >
       <svg
         aria-hidden="true"
-        class="sc-imWYAI gTeNha"
+        class="sc-93c68677-0 fWneNg"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -83,16 +83,16 @@ exports[`<StepResult /> should render CC answer 1`] = `
         />
       </svg>
       <span
-        class="sc-fBWQRz lqUBb"
+        class="sc-da0440cf-2 cdlSfE"
       >
         Voir le détail du calcul
       </span>
     </button>
     <div
-      class="sc-fjvvzt gtrYRc"
+      class="sc-da0440cf-0 kQbZar"
     >
       <h2
-        class="sc-ePDLzJ eKYbCt"
+        class="sc-967f95b8-2 fsAvGZ"
       >
         Éléments saisis
       </h2>
@@ -120,7 +120,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
         </li>
       </ul>
       <h2
-        class="sc-ePDLzJ eKYbCt"
+        class="sc-967f95b8-2 fsAvGZ"
       >
         Sources
       </h2>
@@ -155,13 +155,13 @@ exports[`<StepResult /> should render CC answer 1`] = `
     </div>
   </div>
   <div
-    class="sc-jsJBEP sc-fMMURN ftwa-dj gWJAcM"
+    class="sc-6c78813f-0 sc-add1a668-0 fnbVWG eTxwuf"
   >
     <div
-      class="sc-hRJfrW fHhwIY"
+      class="sc-66a696c4-0 MNJNF"
     >
       <div
-        class="sc-iHbSHJ dqcYtl"
+        class="sc-66a696c4-1 dvlKxa"
       >
         <svg
           aria-hidden="true"
@@ -181,10 +181,10 @@ exports[`<StepResult /> should render CC answer 1`] = `
         </svg>
       </div>
       <div
-        class="sc-klVQfs giEiHo"
+        class="sc-66a696c4-2 eRMOZl"
       >
         <p
-          class="sc-krNlru kcuIcb sc-ktPPKK iuuGs"
+          class="sc-3633cc97-1 bjSNvY sc-add1a668-1 dblvAa"
         >
           Attention il peut exister une autre durée de préavis
         </p>
