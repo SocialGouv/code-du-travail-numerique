@@ -1,4 +1,3 @@
-
 contrat salarié . convention collective . sedima . catégorie professionnelle:
   titre: catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
@@ -9,28 +8,28 @@ contrat salarié . convention collective . sedima . catégorie professionnelle:
       Cadres niveau VI et plus: "'Cadres niveau VI et plus'"
       Ouvriers, Employés niveau III: "'Ouvriers, Employés niveau III'"
       Ouvriers, Employés niveaux I et II: "'Ouvriers, Employés niveaux I et II'"
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Agents de maîtrise niveau IV et V:
   applicable si: catégorie professionnelle = 'Agents de maîtrise niveau IV et V'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Agents de maîtrise niveau IV et V . résultat conventionnel:
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 3.41.0 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AA399426F344A1C9D191D4546FE00E59.tplgfr41s_1?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Cadres niveau VI et plus:
   applicable si: catégorie professionnelle = 'Cadres niveau VI et plus'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Cadres niveau VI et plus . résultat conventionnel:
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 6.50 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AA399426F344A1C9D191D4546FE00E59.tplgfr41s_1?idArticle=KALIARTI000026356071&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveau III:
   applicable si: catégorie professionnelle = 'Ouvriers, Employés niveau III'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveau III . niveau:
   titre: niveau
   question: Quel est le niveau du salarié ?
@@ -38,19 +37,19 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
     type: liste
     valeurs:
       III: "'III'"
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveau III . niveau III:
   applicable si: niveau = 'III'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveau III . niveau III . résultat conventionnel:
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 3.41.0 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AA399426F344A1C9D191D4546FE00E59.tplgfr41s_1?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveaux I et II:
   applicable si: catégorie professionnelle = 'Ouvriers, Employés niveaux I et II'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveaux I et II . niveau:
   titre: niveau
   question: Quel est le niveau du salarié ?
@@ -58,10 +57,10 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
     type: liste
     valeurs:
       I à II: "'I à II'"
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveaux I et II . niveau I à II:
   applicable si: niveau = 'I à II'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveaux I et II . niveau I à II . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel

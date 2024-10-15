@@ -13,7 +13,7 @@ Storage.prototype.getItem = jest.fn(
           "url": "https://www.url.fr",
           "slug": "1516"
         }
-        `,
+        `
 );
 
 describe("DureePreavisLicenciement", () => {
@@ -41,7 +41,7 @@ describe("DureePreavisLicenciement", () => {
         screen.getByTestId("criteria.catégorie professionnelle"),
         {
           target: { value: "48| Cadres" },
-        },
+        }
       );
       fireEvent.click(ui.next.get());
     });
@@ -59,7 +59,7 @@ describe("DureePreavisLicenciement", () => {
         screen.getByTestId("criteria.catégorie professionnelle"),
         {
           target: { value: "16| Employés" },
-        },
+        }
       );
       fireEvent.click(ui.next.get());
     });
@@ -101,7 +101,7 @@ describe("DureePreavisLicenciement", () => {
         screen.getByTestId("criteria.catégorie professionnelle"),
         {
           target: { value: "28| Agents de maîtrise ou techniciens" },
-        },
+        }
       );
       fireEvent.click(ui.next.get());
     });

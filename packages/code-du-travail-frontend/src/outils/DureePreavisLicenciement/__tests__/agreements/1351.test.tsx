@@ -13,7 +13,7 @@ Storage.prototype.getItem = jest.fn(
           "url": "https://www.url.fr",
           "slug": "1351"
         }
-        `,
+        `
 );
 
 describe("DureePreavisLicenciement", () => {
@@ -44,7 +44,7 @@ describe("DureePreavisLicenciement", () => {
             value:
               "20| Agents d'exploitation, employés administratifs et techniciens",
           },
-        },
+        }
       );
       fireEvent.click(ui.next.get());
     });
@@ -67,13 +67,13 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/Aucun préavis/g)[0],
+            screen.queryAllByText(/Aucun préavis/g)[0]
           ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -91,8 +91,8 @@ describe("DureePreavisLicenciement", () => {
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -107,13 +107,13 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/2 jours ouvrés/g)[0],
+            screen.queryAllByText(/2 jours ouvrés/g)[0]
           ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -128,13 +128,13 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/7 jours calendaires/g)[0],
+            screen.queryAllByText(/7 jours calendaires/g)[0]
           ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -152,8 +152,8 @@ describe("DureePreavisLicenciement", () => {
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -171,8 +171,8 @@ describe("DureePreavisLicenciement", () => {
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -196,13 +196,13 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/Aucun préavis/g)[0],
+            screen.queryAllByText(/Aucun préavis/g)[0]
           ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -220,8 +220,8 @@ describe("DureePreavisLicenciement", () => {
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -236,13 +236,13 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/2 jours ouvrés/g)[0],
+            screen.queryAllByText(/2 jours ouvrés/g)[0]
           ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -257,13 +257,13 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/7 jours calendaires/g)[0],
+            screen.queryAllByText(/7 jours calendaires/g)[0]
           ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -281,8 +281,8 @@ describe("DureePreavisLicenciement", () => {
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -300,8 +300,8 @@ describe("DureePreavisLicenciement", () => {
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -325,13 +325,13 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/Aucun préavis/g)[0],
+            screen.queryAllByText(/Aucun préavis/g)[0]
           ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -349,8 +349,8 @@ describe("DureePreavisLicenciement", () => {
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -365,13 +365,13 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/2 jours ouvrés/g)[0],
+            screen.queryAllByText(/2 jours ouvrés/g)[0]
           ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -386,13 +386,13 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/7 jours calendaires/g)[0],
+            screen.queryAllByText(/7 jours calendaires/g)[0]
           ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -410,8 +410,8 @@ describe("DureePreavisLicenciement", () => {
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -429,8 +429,8 @@ describe("DureePreavisLicenciement", () => {
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -454,13 +454,13 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/Aucun préavis/g)[0],
+            screen.queryAllByText(/Aucun préavis/g)[0]
           ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -478,8 +478,8 @@ describe("DureePreavisLicenciement", () => {
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -494,13 +494,13 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/2 jours ouvrés/g)[0],
+            screen.queryAllByText(/2 jours ouvrés/g)[0]
           ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -515,13 +515,13 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/14 jours calendaires/g)[0],
+            screen.queryAllByText(/14 jours calendaires/g)[0]
           ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -539,8 +539,8 @@ describe("DureePreavisLicenciement", () => {
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -558,8 +558,8 @@ describe("DureePreavisLicenciement", () => {
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -583,13 +583,13 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/Aucun préavis/g)[0],
+            screen.queryAllByText(/Aucun préavis/g)[0]
           ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -607,8 +607,8 @@ describe("DureePreavisLicenciement", () => {
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -623,13 +623,13 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/2 jours ouvrés/g)[0],
+            screen.queryAllByText(/2 jours ouvrés/g)[0]
           ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -644,13 +644,13 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/14 jours calendaires/g)[0],
+            screen.queryAllByText(/14 jours calendaires/g)[0]
           ).toBeInTheDocument();
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -668,8 +668,8 @@ describe("DureePreavisLicenciement", () => {
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -687,8 +687,8 @@ describe("DureePreavisLicenciement", () => {
 
           expect(
             screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/,
-            )[0],
+              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
+            )[0]
           ).toBeInTheDocument();
         });
       });
@@ -701,7 +701,7 @@ describe("DureePreavisLicenciement", () => {
         screen.getByTestId("criteria.catégorie professionnelle"),
         {
           target: { value: "23| Agents de maîtrise" },
-        },
+        }
       );
       fireEvent.click(ui.next.get());
     });
@@ -724,11 +724,11 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/Aucun préavis/g)[0],
+            screen.queryAllByText(/Aucun préavis/g)[0]
           ).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -745,7 +745,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -762,7 +762,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -779,7 +779,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -796,7 +796,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -813,7 +813,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -837,11 +837,11 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/Aucun préavis/g)[0],
+            screen.queryAllByText(/Aucun préavis/g)[0]
           ).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -858,7 +858,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -875,7 +875,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -892,7 +892,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -909,7 +909,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -926,7 +926,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -950,11 +950,11 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/Aucun préavis/g)[0],
+            screen.queryAllByText(/Aucun préavis/g)[0]
           ).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -971,7 +971,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -988,7 +988,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -1005,7 +1005,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -1022,7 +1022,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -1039,7 +1039,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -1063,11 +1063,11 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/Aucun préavis/g)[0],
+            screen.queryAllByText(/Aucun préavis/g)[0]
           ).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -1084,7 +1084,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -1101,7 +1101,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -1118,7 +1118,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -1135,7 +1135,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -1152,7 +1152,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -1176,11 +1176,11 @@ describe("DureePreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(
-            screen.queryAllByText(/Aucun préavis/g)[0],
+            screen.queryAllByText(/Aucun préavis/g)[0]
           ).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -1197,7 +1197,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -1214,7 +1214,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -1231,7 +1231,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -1248,7 +1248,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -1265,7 +1265,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0],
+            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -1278,7 +1278,7 @@ describe("DureePreavisLicenciement", () => {
         screen.getByTestId("criteria.catégorie professionnelle"),
         {
           target: { value: "48| Cadres" },
-        },
+        }
       );
       fireEvent.click(ui.next.get());
     });
@@ -1295,7 +1295,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/Aucun préavis/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0],
+          screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -1310,11 +1310,11 @@ describe("DureePreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(
-          screen.queryAllByText(/7 jours calendaires/g)[0],
+          screen.queryAllByText(/7 jours calendaires/g)[0]
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0],
+          screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -1329,11 +1329,11 @@ describe("DureePreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(
-          screen.queryAllByText(/14 jours calendaires/g)[0],
+          screen.queryAllByText(/14 jours calendaires/g)[0]
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0],
+          screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -1350,7 +1350,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0],
+          screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -1367,7 +1367,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0],
+          screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -1384,7 +1384,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0],
+          screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]
         ).toBeInTheDocument();
       });
     });

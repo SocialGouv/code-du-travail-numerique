@@ -1,18 +1,8 @@
-
-          
-          
 contrat salarié . convention collective . transports routiers . type de cdd Autres:
   applicable si: type de cdd = 'Autres'
-          
-          
-          
-          
-          
-          
-          
-          
+
 contrat salarié . convention collective . transports routiers . type de cdd Autres . résultat conventionnel:
-  valeur: 
+  valeur:
     produit:
       assiette: contrat salarié . salaire de référence
       facteur: 0.1

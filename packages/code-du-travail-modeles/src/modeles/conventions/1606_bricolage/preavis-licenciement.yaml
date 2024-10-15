@@ -1,4 +1,3 @@
-
 contrat salarié . convention collective . bricolage . catégorie professionnelle:
   titre: catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
@@ -8,10 +7,10 @@ contrat salarié . convention collective . bricolage . catégorie professionnell
       Agents de maîtrise: "'Agents de maîtrise'"
       Cadres: "'Cadres'"
       Employés: "'Employés'"
-          
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Agents de maîtrise:
   applicable si: catégorie professionnelle = 'Agents de maîtrise'
-          
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Agents de maîtrise . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -20,28 +19,28 @@ contrat salarié . convention collective . bricolage . catégorie professionnell
     valeurs:
       Entre 2 et 6 mois: "'Entre 2 et 6 mois'"
       Plus de 6 mois: "'Plus de 6 mois'"
-          
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Agents de maîtrise . ancienneté Entre 2 et 6 mois:
   applicable si: ancienneté = 'Entre 2 et 6 mois'
-          
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Agents de maîtrise . ancienneté Entre 2 et 6 mois . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "annexe \"agents de maîtrise\" article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8FADC689945C3C0383FA1D95820D6E17.tplgfr44s_1?idArticle=KALIARTI000005870772&cidTexte=KALITEXT000005687528&dateTexte=29990101&categorieLien=id
-          
+    'annexe "agents de maîtrise" article 9': https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8FADC689945C3C0383FA1D95820D6E17.tplgfr44s_1?idArticle=KALIARTI000005870772&cidTexte=KALITEXT000005687528&dateTexte=29990101&categorieLien=id
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Agents de maîtrise . ancienneté Plus de 6 mois:
   applicable si: ancienneté = 'Plus de 6 mois'
-          
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Agents de maîtrise . ancienneté Plus de 6 mois . résultat conventionnel:
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "annexe \"agents de maîtrise\" article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8FADC689945C3C0383FA1D95820D6E17.tplgfr44s_1?idArticle=KALIARTI000005870772&cidTexte=KALITEXT000005687528&dateTexte=29990101&categorieLien=id
-          
+    'annexe "agents de maîtrise" article 9': https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8FADC689945C3C0383FA1D95820D6E17.tplgfr44s_1?idArticle=KALIARTI000005870772&cidTexte=KALITEXT000005687528&dateTexte=29990101&categorieLien=id
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
-          
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Cadres . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -50,28 +49,28 @@ contrat salarié . convention collective . bricolage . catégorie professionnell
     valeurs:
       De 3 à 6 mois: "'De 3 à 6 mois'"
       Plus de 6 mois: "'Plus de 6 mois'"
-          
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Cadres . ancienneté De 3 à 6 mois:
   applicable si: ancienneté = 'De 3 à 6 mois'
-          
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Cadres . ancienneté De 3 à 6 mois . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "annexe \"cadres\" article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8FADC689945C3C0383FA1D95820D6E17.tplgfr44s_1?idArticle=KALIARTI000005870787&cidTexte=KALITEXT000005687530&dateTexte=29990101&categorieLien=id
-          
+    'annexe "cadres" article 9': https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8FADC689945C3C0383FA1D95820D6E17.tplgfr44s_1?idArticle=KALIARTI000005870787&cidTexte=KALITEXT000005687530&dateTexte=29990101&categorieLien=id
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Cadres . ancienneté Plus de 6 mois:
   applicable si: ancienneté = 'Plus de 6 mois'
-          
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Cadres . ancienneté Plus de 6 mois . résultat conventionnel:
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "annexe \"cadres\" article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8FADC689945C3C0383FA1D95820D6E17.tplgfr44s_1?idArticle=KALIARTI000005870787&cidTexte=KALITEXT000005687530&dateTexte=29990101&categorieLien=id
-          
+    'annexe "cadres" article 9': https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8FADC689945C3C0383FA1D95820D6E17.tplgfr44s_1?idArticle=KALIARTI000005870787&cidTexte=KALITEXT000005687530&dateTexte=29990101&categorieLien=id
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés:
   applicable si: catégorie professionnelle = 'Employés'
-          
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -82,37 +81,37 @@ contrat salarié . convention collective . bricolage . catégorie professionnell
       1 mois à moins de 6 mois: "'1 mois à moins de 6 mois'"
       6 mois à 2 ans: "'6 mois à 2 ans'"
       Plus de 2 ans: "'Plus de 2 ans'"
-          
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés . ancienneté Moins de 1 mois:
   applicable si: ancienneté = 'Moins de 1 mois'
-          
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés . ancienneté Moins de 1 mois . résultat conventionnel:
   valeur: 0
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "article 9.2.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005870734&cidTexte=KALITEXT000005687520
-          
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés . ancienneté 1 mois à moins de 6 mois:
   applicable si: ancienneté = '1 mois à moins de 6 mois'
-          
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés . ancienneté 1 mois à moins de 6 mois . résultat conventionnel:
   valeur: 15 jours
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "article 9.2.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005870734&cidTexte=KALITEXT000005687520
-          
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés . ancienneté 6 mois à 2 ans:
   applicable si: ancienneté = '6 mois à 2 ans'
-          
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés . ancienneté 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "article 9.2.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005870734&cidTexte=KALITEXT000005687520
-          
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
-          
+
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel

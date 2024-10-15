@@ -1,4 +1,3 @@
-
 contrat salarié . convention collective . pharmacie . catégorie professionnelle:
   titre: catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
@@ -7,19 +6,19 @@ contrat salarié . convention collective . pharmacie . catégorie professionnell
     valeurs:
       Cadres: "'Cadres'"
       Noncadres: "'Noncadres'"
-          
+
 contrat salarié . convention collective . pharmacie . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
-          
+
 contrat salarié . convention collective . pharmacie . catégorie professionnelle Cadres . résultat conventionnel:
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "article 6 des dispositions particulières aux cadres": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1FBE77FACF3A20C70C10CCE69F359D7B.tplgfr23s_1?idArticle=KALIARTI000005829442&cidTexte=KALITEXT000005671154&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . pharmacie . catégorie professionnelle Noncadres:
   applicable si: catégorie professionnelle = 'Noncadres'
-          
+
 contrat salarié . convention collective . pharmacie . catégorie professionnelle Noncadres . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -28,19 +27,19 @@ contrat salarié . convention collective . pharmacie . catégorie professionnell
     valeurs:
       Moins de 2 ans: "'Moins de 2 ans'"
       2 ans ou plus: "'2 ans ou plus'"
-          
+
 contrat salarié . convention collective . pharmacie . catégorie professionnelle Noncadres . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
-          
+
 contrat salarié . convention collective . pharmacie . catégorie professionnelle Noncadres . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "article 20 de la convention collective": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005829411&cidTexte=KALITEXT000005671152
-          
+
 contrat salarié . convention collective . pharmacie . catégorie professionnelle Noncadres . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
-          
+
 contrat salarié . convention collective . pharmacie . catégorie professionnelle Noncadres . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel

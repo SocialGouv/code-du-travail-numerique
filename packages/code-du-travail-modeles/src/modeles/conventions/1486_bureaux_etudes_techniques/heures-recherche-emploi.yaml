@@ -1,4 +1,3 @@
-
 contrat salarié . convention collective . bureaux études techniques . typeRupture:
   titre: typeRupture
   question: Pour quelle raison le contrat de travail a-t-il été rompu ?
@@ -8,23 +7,23 @@ contrat salarié . convention collective . bureaux études techniques . typeRupt
       Démission: "'Démission'"
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
       Licenciement: "'Licenciement'"
-          
+
 contrat salarié . convention collective . bureaux études techniques . typeRupture Démission:
   applicable si: typeRupture = 'Démission'
-          
+
 contrat salarié . convention collective . bureaux études techniques . typeRupture Démission . résultat conventionnel:
   valeur: "'6 jours ouvrés par mois'"
   type: notification
-  description: 
+  description:
     - Le salaire n'est pas maintenu.
     - Les heures de recherche d'emploi sont prises chaque mois en une ou plusieurs fois, en principe par demi-journée. Elles sont fixées pour moitié par l'employeur et pour moitié par le salarié. Chacun en informe l'autre partie.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 4.3": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513835#KALIARTI000047513835
-          
+
 contrat salarié . convention collective . bureaux études techniques . typeRupture Rupture de la période d'essai:
   applicable si: typeRupture = 'Rupture de la période d'essai'
-          
+
 contrat salarié . convention collective . bureaux études techniques . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai:
   titre: initiative de la rupture de la période d'essai
   question: Qui a pris l'initiative de rompre la période d'essai ?
@@ -33,38 +32,38 @@ contrat salarié . convention collective . bureaux études techniques . typeRupt
     valeurs:
       L'employeur: "'L'employeur'"
       Le salarié: "'Le salarié'"
-          
+
 contrat salarié . convention collective . bureaux études techniques . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai L'employeur:
   applicable si: initiative de la rupture de la période d'essai = 'L'employeur'
-          
+
 contrat salarié . convention collective . bureaux études techniques . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai L'employeur . résultat conventionnel:
   valeur: "'2 heures par jour'"
   type: notification
-  description: 
+  description:
     - Le salaire est maintenu.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 3.4": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513825#KALIARTI000047513825
-          
+
 contrat salarié . convention collective . bureaux études techniques . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai Le salarié:
   applicable si: initiative de la rupture de la période d'essai = 'Le salarié'
-          
+
 contrat salarié . convention collective . bureaux études techniques . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai Le salarié . résultat conventionnel:
   valeur: "'2 heures par jour'"
   type: notification
-  description: 
+  description:
     - Le salaire n'est pas maintenu.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 3.4": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513825#KALIARTI000047513825
-          
+
 contrat salarié . convention collective . bureaux études techniques . typeRupture Licenciement:
   applicable si: typeRupture = 'Licenciement'
-          
+
 contrat salarié . convention collective . bureaux études techniques . typeRupture Licenciement . résultat conventionnel:
   valeur: "'6 jours ouvrés par mois'"
   type: notification
-  description: 
+  description:
     - Le salaire est maintenu.
     - Les heures de recherche d'emploi sont prises chaque mois en une ou plusieurs fois, en principe par demi-journée. Elles sont fixées pour moitié par l''employeur et pour moitié par le salarié. Chacun en informe l'autre partie.
   remplace: contrat salarié . convention collective . résultat conventionnel

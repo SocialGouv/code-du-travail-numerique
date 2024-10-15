@@ -1,4 +1,3 @@
-
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -7,19 +6,19 @@ contrat salarié . convention collective . ouvriers bâtiment région parisienne
     valeurs:
       Au delà de la période d'essai et jusqu'à 3 mois: "'Au delà de la période d'essai et jusqu'à 3 mois'"
       Plus de 3 mois: "'Plus de 3 mois'"
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . ancienneté Au delà de la période d'essai et jusqu'à 3 mois:
   applicable si: ancienneté = 'Au delà de la période d'essai et jusqu'à 3 mois'
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . ancienneté Au delà de la période d'essai et jusqu'à 3 mois . résultat conventionnel:
   valeur: 2 jours
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "article 1.1.9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000005800996&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . ancienneté Plus de 3 mois:
   applicable si: ancienneté = 'Plus de 3 mois'
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . ancienneté Plus de 3 mois . résultat conventionnel:
   valeur: 2 semaines
   remplace: contrat salarié . convention collective . résultat conventionnel

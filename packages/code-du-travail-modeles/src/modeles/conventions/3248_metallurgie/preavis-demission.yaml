@@ -1,4 +1,3 @@
-
 contrat salarié . convention collective . métallurgie . groupe:
   titre: groupe
   question: Quel est le groupe professionnel du salarié ?
@@ -9,10 +8,10 @@ contrat salarié . convention collective . métallurgie . groupe:
       C: "'C'"
       D ou E: "'D ou E'"
       F, G, H ou I: "'F, G, H ou I'"
-          
+
 contrat salarié . convention collective . métallurgie . groupe A ou B:
   applicable si: groupe = 'A ou B'
-          
+
 contrat salarié . convention collective . métallurgie . groupe A ou B . résultat conventionnel:
   valeur: 2 semaines
   type: notification
@@ -22,10 +21,10 @@ contrat salarié . convention collective . métallurgie . groupe A ou B . résul
     "Article 74.2.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525
     "Article 68": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224
     "Cour de cassation, civile, Chambre sociale, 31 mars 2021, 19-20.883, Inédit": https://www.legifrance.gouv.fr/juri/id/JURITEXT000043352346
-          
+
 contrat salarié . convention collective . métallurgie . groupe C:
   applicable si: groupe = 'C'
-          
+
 contrat salarié . convention collective . métallurgie . groupe C . résultat conventionnel:
   valeur: 1 mois
   type: notification
@@ -35,10 +34,10 @@ contrat salarié . convention collective . métallurgie . groupe C . résultat c
     "Article 74.2.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525
     "Article 68": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224
     "Cour de cassation, civile, Chambre sociale, 31 mars 2021, 19-20.883, Inédit": https://www.legifrance.gouv.fr/juri/id/JURITEXT000043352346
-          
+
 contrat salarié . convention collective . métallurgie . groupe D ou E:
   applicable si: groupe = 'D ou E'
-          
+
 contrat salarié . convention collective . métallurgie . groupe D ou E . résultat conventionnel:
   valeur: 2 mois
   type: notification
@@ -48,10 +47,10 @@ contrat salarié . convention collective . métallurgie . groupe D ou E . résul
     "Article 74.2.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525
     "Article 68": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046315224?idConteneur=KALICONT000046993250&origin=list#KALIARTI000046315224
     "Cour de cassation, civile, Chambre sociale, 31 mars 2021, 19-20.883, Inédit": https://www.legifrance.gouv.fr/juri/id/JURITEXT000043352346
-          
+
 contrat salarié . convention collective . métallurgie . groupe F, G, H ou I:
   applicable si: groupe = 'F, G, H ou I'
-          
+
 contrat salarié . convention collective . métallurgie . groupe F, G, H ou I . résultat conventionnel:
   valeur: 3 mois
   type: notification

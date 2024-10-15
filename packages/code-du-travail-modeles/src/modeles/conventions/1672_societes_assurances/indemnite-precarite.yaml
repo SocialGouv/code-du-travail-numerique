@@ -1,16 +1,6 @@
-
-          
-          
 contrat salarié . convention collective . sociétés d'assurances . type de cdd Autres:
   applicable si: type de cdd = 'Autres'
-          
-          
-          
-          
-          
-          
-          
-          
+
 contrat salarié . convention collective . sociétés d'assurances . type de cdd Autres . résultat conventionnel:
   valeur: 0
   remplace: contrat salarié . convention collective . résultat conventionnel

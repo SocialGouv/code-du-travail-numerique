@@ -1,4 +1,3 @@
-
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture:
   titre: typeRupture
   question: Pour quelle raison le contrat de travail a-t-il été rompu ?
@@ -8,10 +7,10 @@ contrat salarié . convention collective . ouvriers bâtiment région parisienne
       Démission: "'Démission'"
       Licenciement: "'Licenciement'"
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Démission:
   applicable si: typeRupture = 'Démission'
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Démission . durée du préavis:
   titre: durée du préavis
   question: Quelle est la durée du préavis du salarié ?
@@ -22,62 +21,62 @@ contrat salarié . convention collective . ouvriers bâtiment région parisienne
       2 mois: "'2 mois'"
       2 semaines: "'2 semaines'"
       Un mois: "'Un mois'"
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Démission . durée du préavis 2 jours:
   applicable si: durée du préavis = '2 jours'
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Démission . durée du préavis 2 jours . résultat conventionnel:
   valeur: "'4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail'"
   type: notification
-  description: 
+  description:
     - Le salaire n'est pas maintenu.
     - Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf si l'employeur donne son accord pour une répartition différente. L'employeur ne verse pas d'indemnité, si le salarié n'utilise pas les heures pour recherche d'emploi.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 1.1.9a": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800997&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Démission . durée du préavis 2 mois:
   applicable si: durée du préavis = '2 mois'
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Démission . durée du préavis 2 mois . résultat conventionnel:
   valeur: "'25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail'"
   type: notification
-  description: 
+  description:
     - Le salaire n'est pas maintenu.
     - Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf si l'employeur donne son accord pour une répartition différente. L'employeur ne verse pas d'indemnité, si le salarié n'utilise pas les heures pour recherche d'emploi.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 1.1.9a": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800997&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Démission . durée du préavis 2 semaines:
   applicable si: durée du préavis = '2 semaines'
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Démission . durée du préavis 2 semaines . résultat conventionnel:
   valeur: "'12 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail'"
   type: notification
-  description: 
+  description:
     - Le salaire n'est pas maintenu.
     - Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf si l'employeur donne son accord pour une répartition différente. L'employeur ne verse pas d'indemnité, si le salarié n'utilise pas les heures pour recherche d'emploi.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 1.1.9a": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800997&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Démission . durée du préavis Un mois:
   applicable si: durée du préavis = 'Un mois'
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Démission . durée du préavis Un mois . résultat conventionnel:
   valeur: "'25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail'"
   type: notification
-  description: 
+  description:
     - Le salaire n'est pas maintenu.
     - Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf si l'employeur donne son accord pour une répartition différente. L'employeur ne verse pas d'indemnité, si le salarié n'utilise pas les heures pour recherche d'emploi.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 1.1.9a": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800997&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Licenciement:
   applicable si: typeRupture = 'Licenciement'
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Licenciement . durée du préavis:
   titre: durée du préavis
   question: Quelle est la durée du préavis du salarié ?
@@ -88,62 +87,62 @@ contrat salarié . convention collective . ouvriers bâtiment région parisienne
       2 mois: "'2 mois'"
       2 semaines: "'2 semaines'"
       Un mois: "'Un mois'"
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Licenciement . durée du préavis 2 jours:
   applicable si: durée du préavis = '2 jours'
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Licenciement . durée du préavis 2 jours . résultat conventionnel:
   valeur: "'4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail'"
   type: notification
-  description: 
+  description:
     - Le salaire est maintenu.
     - Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf si l'employeur donne son accord pour une répartition différente. L'employeur ne verse pas d'indemnité, si le salarié n'utilise pas les heures pour recherche d'emploi.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 1.1.9a": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800996&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Licenciement . durée du préavis 2 mois:
   applicable si: durée du préavis = '2 mois'
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Licenciement . durée du préavis 2 mois . résultat conventionnel:
   valeur: "'25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail'"
   type: notification
-  description: 
+  description:
     - Le salaire est maintenu.
     - Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf si l'employeur donne son accord pour une répartition différente. L'employeur ne verse pas d'indemnité, si le salarié n'utilise pas les heures pour recherche d'emploi.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 1.1.9a": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800996&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Licenciement . durée du préavis 2 semaines:
   applicable si: durée du préavis = '2 semaines'
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Licenciement . durée du préavis 2 semaines . résultat conventionnel:
   valeur: "'12 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail'"
   type: notification
-  description: 
+  description:
     - Le salaire est maintenu.
     - Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf si l'employeur donne son accord pour une répartition différente. L'employeur ne verse pas d'indemnité, si le salarié n'utilise pas les heures pour recherche d'emploi.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 1.1.9a": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800996&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Licenciement . durée du préavis Un mois:
   applicable si: durée du préavis = 'Un mois'
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Licenciement . durée du préavis Un mois . résultat conventionnel:
   valeur: "'25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail'"
   type: notification
-  description: 
+  description:
     - Le salaire est maintenu.
     - Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf si l'employeur donne son accord pour une répartition différente. L'employeur ne verse pas d'indemnité, si le salarié n'utilise pas les heures pour recherche d'emploi.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 1.1.9a": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800996&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Rupture de la période d'essai:
   applicable si: typeRupture = 'Rupture de la période d'essai'
-          
+
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . typeRupture Rupture de la période d'essai . résultat conventionnel:
   valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
   remplace: contrat salarié . convention collective . résultat conventionnel

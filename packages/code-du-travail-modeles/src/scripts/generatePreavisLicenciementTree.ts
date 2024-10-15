@@ -3,7 +3,7 @@ import { cleanRefLabel, generateTree } from "./lib";
 import { CriteriaItem, TreeQuestionType } from "./lib/type";
 
 export function getPrependPreavisLicenciementCriteria(
-  situation: Situation,
+  situation: Situation
 ): CriteriaItem[] {
   const { idcc } = situation;
   return [

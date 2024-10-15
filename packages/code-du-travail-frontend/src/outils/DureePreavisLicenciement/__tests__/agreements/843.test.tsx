@@ -13,7 +13,7 @@ Storage.prototype.getItem = jest.fn(
           "url": "https://www.url.fr",
           "slug": "843"
         }
-        `,
+        `
 );
 
 describe("DureePreavisLicenciement", () => {
@@ -41,7 +41,7 @@ describe("DureePreavisLicenciement", () => {
         screen.getByTestId("criteria.catégorie professionnelle"),
         {
           target: { value: "48| Cadres" },
-        },
+        }
       );
       fireEvent.click(ui.next.get());
     });
@@ -59,8 +59,8 @@ describe("DureePreavisLicenciement", () => {
 
         expect(
           screen.queryAllByText(
-            /Annexe : Statut du personnel d'encadrement, article 6/,
-          )[0],
+            /Annexe : Statut du personnel d'encadrement, article 6/
+          )[0]
         ).toBeInTheDocument();
       });
     });
@@ -78,8 +78,8 @@ describe("DureePreavisLicenciement", () => {
 
         expect(
           screen.queryAllByText(
-            /Annexe : Statut du personnel d'encadrement, article 6/,
-          )[0],
+            /Annexe : Statut du personnel d'encadrement, article 6/
+          )[0]
         ).toBeInTheDocument();
       });
     });
@@ -94,7 +94,7 @@ describe("DureePreavisLicenciement", () => {
             value:
               "35| Personnel de fabrication, personnel de vente et personnel de services",
           },
-        },
+        }
       );
       fireEvent.click(ui.next.get());
     });

@@ -1,4 +1,3 @@
-
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle:
   titre: catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
@@ -8,10 +7,10 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
       Agents d'exploitation, employés administratifs et techniciens: "'Agents d'exploitation, employés administratifs et techniciens'"
       Agents de maîtrise: "'Agents de maîtrise'"
       Cadres: "'Cadres'"
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens:
   applicable si: catégorie professionnelle = 'Agents d'exploitation, employés administratifs et techniciens'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau:
   titre: niveau
   question: Quel est le niveau du salarié ?
@@ -23,10 +22,10 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
       III: "'III'"
       IV: "'IV'"
       V: "'V'"
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I:
   applicable si: niveau = 'I'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -39,64 +38,64 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
       Plus de 2 mois à 6 mois: "'Plus de 2 mois à 6 mois'"
       Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
       Plus de 2 ans: "'Plus de 2 ans'"
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Moins de 15 jours:
   applicable si: ancienneté = 'Moins de 15 jours'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Moins de 15 jours . résultat conventionnel:
   valeur: 0
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté 15 jours à 1 mois:
   applicable si: ancienneté = '15 jours à 1 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté 15 jours à 1 mois . résultat conventionnel:
   valeur: 1 jour
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Plus de 1 mois à 2 mois:
   applicable si: ancienneté = 'Plus de 1 mois à 2 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Plus de 1 mois à 2 mois . résultat conventionnel:
   valeur: 2 jours
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Plus de 2 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 6 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Plus de 2 mois à 6 mois . résultat conventionnel:
   valeur: 7 jours
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II:
   applicable si: niveau = 'II'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -109,64 +108,64 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
       Plus de 2 mois à 6 mois: "'Plus de 2 mois à 6 mois'"
       Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
       Plus de 2 ans: "'Plus de 2 ans'"
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Moins de 15 jours:
   applicable si: ancienneté = 'Moins de 15 jours'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Moins de 15 jours . résultat conventionnel:
   valeur: 0
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté 15 jours à 1 mois:
   applicable si: ancienneté = '15 jours à 1 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté 15 jours à 1 mois . résultat conventionnel:
   valeur: 1 jour
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Plus de 1 mois à 2 mois:
   applicable si: ancienneté = 'Plus de 1 mois à 2 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Plus de 1 mois à 2 mois . résultat conventionnel:
   valeur: 2 jours
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Plus de 2 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 6 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Plus de 2 mois à 6 mois . résultat conventionnel:
   valeur: 7 jours
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III:
   applicable si: niveau = 'III'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -179,64 +178,64 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
       Plus de 2 mois à 6 mois: "'Plus de 2 mois à 6 mois'"
       Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
       Plus de 2 ans: "'Plus de 2 ans'"
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Moins de 15 jours:
   applicable si: ancienneté = 'Moins de 15 jours'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Moins de 15 jours . résultat conventionnel:
   valeur: 0
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté 15 jours à 1 mois:
   applicable si: ancienneté = '15 jours à 1 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté 15 jours à 1 mois . résultat conventionnel:
   valeur: 1 jour
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Plus de 1 mois à 2 mois:
   applicable si: ancienneté = 'Plus de 1 mois à 2 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Plus de 1 mois à 2 mois . résultat conventionnel:
   valeur: 2 jours
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Plus de 2 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 6 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Plus de 2 mois à 6 mois . résultat conventionnel:
   valeur: 7 jours
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV:
   applicable si: niveau = 'IV'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -248,55 +247,55 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
       Plus de 2 mois à 6 mois: "'Plus de 2 mois à 6 mois'"
       Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
       Plus de 2 ans: "'Plus de 2 ans'"
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté 15 jours à 1 mois:
   applicable si: ancienneté = '15 jours à 1 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté 15 jours à 1 mois . résultat conventionnel:
   valeur: 1 jour
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Plus de 1 mois à 2 mois:
   applicable si: ancienneté = 'Plus de 1 mois à 2 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Plus de 1 mois à 2 mois . résultat conventionnel:
   valeur: 2 jours
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Plus de 2 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 6 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Plus de 2 mois à 6 mois . résultat conventionnel:
   valeur: 4 jours
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V:
   applicable si: niveau = 'V'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -308,55 +307,55 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
       Plus de 2 mois à 6 mois: "'Plus de 2 mois à 6 mois'"
       Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
       Plus de 2 ans: "'Plus de 2 ans'"
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté 15 jours à 1 mois:
   applicable si: ancienneté = '15 jours à 1 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté 15 jours à 1 mois . résultat conventionnel:
   valeur: 1 jour
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Plus de 1 mois à 2 mois:
   applicable si: ancienneté = 'Plus de 1 mois à 2 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Plus de 1 mois à 2 mois . résultat conventionnel:
   valeur: 2 jours
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Plus de 2 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 6 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Plus de 2 mois à 6 mois . résultat conventionnel:
   valeur: 4 jours
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise:
   applicable si: catégorie professionnelle = 'Agents de maîtrise'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau:
   titre: niveau
   question: Quel est le niveau du salarié ?
@@ -368,10 +367,10 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
       III: "'III'"
       IV: "'IV'"
       V: "'V'"
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I:
   applicable si: niveau = 'I'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -383,55 +382,55 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
       Plus de 3 mois à 6 mois: "'Plus de 3 mois à 6 mois'"
       Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
       Plus de 2 ans: "'Plus de 2 ans'"
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté 15 jours à 2 mois:
   applicable si: ancienneté = '15 jours à 2 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté 15 jours à 2 mois . résultat conventionnel:
   valeur: 1 semaine
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté Plus de 2 mois à 3 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 3 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté Plus de 2 mois à 3 mois . résultat conventionnel:
   valeur: 1 semaine
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté Plus de 3 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 3 mois à 6 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté Plus de 3 mois à 6 mois . résultat conventionnel:
   valeur: 2 semaines
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II:
   applicable si: niveau = 'II'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -443,55 +442,55 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
       Plus de 3 mois à 6 mois: "'Plus de 3 mois à 6 mois'"
       Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
       Plus de 2 ans: "'Plus de 2 ans'"
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté 15 jours à 2 mois:
   applicable si: ancienneté = '15 jours à 2 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté 15 jours à 2 mois . résultat conventionnel:
   valeur: 1 semaine
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté Plus de 2 mois à 3 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 3 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté Plus de 2 mois à 3 mois . résultat conventionnel:
   valeur: 1 semaine
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté Plus de 3 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 3 mois à 6 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté Plus de 3 mois à 6 mois . résultat conventionnel:
   valeur: 2 semaines
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III:
   applicable si: niveau = 'III'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -503,55 +502,55 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
       Plus de 3 mois à 6 mois: "'Plus de 3 mois à 6 mois'"
       Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
       Plus de 2 ans: "'Plus de 2 ans'"
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté 15 jours à 2 mois:
   applicable si: ancienneté = '15 jours à 2 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté 15 jours à 2 mois . résultat conventionnel:
   valeur: 1 semaine
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté Plus de 2 mois à 3 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 3 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté Plus de 2 mois à 3 mois . résultat conventionnel:
   valeur: 1 semaine
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté Plus de 3 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 3 mois à 6 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté Plus de 3 mois à 6 mois . résultat conventionnel:
   valeur: 2 semaines
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV:
   applicable si: niveau = 'IV'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -563,55 +562,55 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
       Plus de 3 mois à 6 mois: "'Plus de 3 mois à 6 mois'"
       Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
       Plus de 2 ans: "'Plus de 2 ans'"
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté 15 jours à 2 mois:
   applicable si: ancienneté = '15 jours à 2 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté 15 jours à 2 mois . résultat conventionnel:
   valeur: 1 semaine
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté Plus de 2 mois à 3 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 3 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté Plus de 2 mois à 3 mois . résultat conventionnel:
   valeur: 2 semaines
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté Plus de 3 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 3 mois à 6 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté Plus de 3 mois à 6 mois . résultat conventionnel:
   valeur: 2 semaines
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V:
   applicable si: niveau = 'V'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -623,55 +622,55 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
       Plus de 3 mois à 6 mois: "'Plus de 3 mois à 6 mois'"
       Plus de 6 mois à 2 ans: "'Plus de 6 mois à 2 ans'"
       Plus de 2 ans: "'Plus de 2 ans'"
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté 15 jours à 2 mois:
   applicable si: ancienneté = '15 jours à 2 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté 15 jours à 2 mois . résultat conventionnel:
   valeur: 1 semaine
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté Plus de 2 mois à 3 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 3 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté Plus de 2 mois à 3 mois . résultat conventionnel:
   valeur: 2 semaines
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté Plus de 3 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 3 mois à 6 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté Plus de 3 mois à 6 mois . résultat conventionnel:
   valeur: 2 semaines
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe V: Agents de maîtrise, article 8": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -683,46 +682,46 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
       Plus de 3 mois à 6 mois: "'Plus de 3 mois à 6 mois'"
       Plus de 6 mois à 1 an: "'Plus de 6 mois à 1 an'"
       Plus de 1 an: "'Plus de 1 an'"
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté 15 jours à 1 mois:
   applicable si: ancienneté = '15 jours à 1 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté 15 jours à 1 mois . résultat conventionnel:
   valeur: 7 jours
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe VI: Cadres, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Plus de 1 mois à 3 mois:
   applicable si: ancienneté = 'Plus de 1 mois à 3 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Plus de 1 mois à 3 mois . résultat conventionnel:
   valeur: 4 jours
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe VI: Cadres, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Plus de 3 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 3 mois à 6 mois'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Plus de 3 mois à 6 mois . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe VI: Cadres, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Plus de 6 mois à 1 an:
   applicable si: ancienneté = 'Plus de 6 mois à 1 an'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Plus de 6 mois à 1 an . résultat conventionnel:
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe VI: Cadres, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Plus de 1 an:
   applicable si: ancienneté = 'Plus de 1 an'
-          
+
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Plus de 1 an . résultat conventionnel:
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel

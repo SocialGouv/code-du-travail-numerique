@@ -1,17 +1,11 @@
-
-          
-          
 contrat salarié . convention collective . organismes de formation . type de cdd CDD d'usage:
   applicable si: type de cdd = 'CDD d'usage'
-          
-          
+
 contrat salarié . convention collective . organismes de formation . type de cdd CDD d'usage . embauché en cdi non:
   applicable si: embauché en cdi = 'non'
-          
-          
-          
+
 contrat salarié . convention collective . organismes de formation . type de cdd CDD d'usage . embauché en cdi non . résultat conventionnel:
-  valeur: 
+  valeur:
     produit:
       assiette: contrat salarié . salaire de référence
       facteur: 0.06
@@ -25,19 +19,12 @@ contrat salarié . convention collective . organismes de formation . type de cdd
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "article 5 de la convention collective (point 5.4.3.)": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D21CB91C1CA2006FC1F3B641A83D2560.tplgfr43s_2?idArticle=KALIARTI000026451298&cidTexte=KALITEXT000005644543&dateTexte=29981231&categorieLien=id
-          
+
 contrat salarié . convention collective . organismes de formation . type de cdd Autres:
   applicable si: type de cdd = 'Autres'
-          
-          
-          
-          
-          
-          
-          
-          
+
 contrat salarié . convention collective . organismes de formation . type de cdd Autres . résultat conventionnel:
-  valeur: 
+  valeur:
     produit:
       assiette: contrat salarié . salaire de référence
       facteur: 0.1

@@ -13,7 +13,7 @@ Storage.prototype.getItem = jest.fn(
           "url": "https://www.url.fr",
           "slug": "2941"
         }
-        `,
+        `
 );
 
 describe("DureePreavisLicenciement", () => {
@@ -41,7 +41,7 @@ describe("DureePreavisLicenciement", () => {
         screen.getByTestId("criteria.catégorie professionnelle"),
         {
           target: { value: "79| Employé" },
-        },
+        }
       );
       fireEvent.click(ui.next.get());
     });
@@ -56,11 +56,11 @@ describe("DureePreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(
-          screen.queryAllByText(/1 semaine \(de date à date\)/g)[0],
+          screen.queryAllByText(/1 semaine \(de date à date\)/g)[0]
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 26.1/)[0],
+          screen.queryAllByText(/Titre IV, Article 26.1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -75,11 +75,11 @@ describe("DureePreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(
-          screen.queryAllByText(/1 mois \(de date à date\)/g)[0],
+          screen.queryAllByText(/1 mois \(de date à date\)/g)[0]
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 26.1/)[0],
+          screen.queryAllByText(/Titre IV, Article 26.1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -94,11 +94,11 @@ describe("DureePreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(
-          screen.queryAllByText(/2 mois \(de date à date\)/g)[0],
+          screen.queryAllByText(/2 mois \(de date à date\)/g)[0]
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 26.1/)[0],
+          screen.queryAllByText(/Titre IV, Article 26.1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -110,7 +110,7 @@ describe("DureePreavisLicenciement", () => {
         screen.getByTestId("criteria.catégorie professionnelle"),
         {
           target: { value: "84| Technicien-agent de maîtrise" },
-        },
+        }
       );
       fireEvent.click(ui.next.get());
     });
@@ -125,11 +125,11 @@ describe("DureePreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(
-          screen.queryAllByText(/1 mois \(de date à date\)/g)[0],
+          screen.queryAllByText(/1 mois \(de date à date\)/g)[0]
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 26.1/)[0],
+          screen.queryAllByText(/Titre IV, Article 26.1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -144,11 +144,11 @@ describe("DureePreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(
-          screen.queryAllByText(/2 mois \(de date à date\)/g)[0],
+          screen.queryAllByText(/2 mois \(de date à date\)/g)[0]
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 26.1/)[0],
+          screen.queryAllByText(/Titre IV, Article 26.1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -160,7 +160,7 @@ describe("DureePreavisLicenciement", () => {
         screen.getByTestId("criteria.catégorie professionnelle"),
         {
           target: { value: "86| Cadre" },
-        },
+        }
       );
       fireEvent.click(ui.next.get());
     });
@@ -175,11 +175,11 @@ describe("DureePreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(
-          screen.queryAllByText(/2 mois \(de date à date\)/g)[0],
+          screen.queryAllByText(/2 mois \(de date à date\)/g)[0]
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 26.1/)[0],
+          screen.queryAllByText(/Titre IV, Article 26.1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -194,11 +194,11 @@ describe("DureePreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(
-          screen.queryAllByText(/4 mois \(de date à date\)/g)[0],
+          screen.queryAllByText(/4 mois \(de date à date\)/g)[0]
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 26.1/)[0],
+          screen.queryAllByText(/Titre IV, Article 26.1/)[0]
         ).toBeInTheDocument();
       });
     });

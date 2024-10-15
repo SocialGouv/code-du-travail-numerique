@@ -1,4 +1,3 @@
-
 contrat salarié . convention collective . bad . catégorie professionnelle:
   titre: catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
@@ -8,10 +7,10 @@ contrat salarié . convention collective . bad . catégorie professionnelle:
       Employé: "'Employé'"
       Technicienagent de maîtrise: "'Technicienagent de maîtrise'"
       Cadre: "'Cadre'"
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Employé:
   applicable si: catégorie professionnelle = 'Employé'
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -21,10 +20,10 @@ contrat salarié . convention collective . bad . catégorie professionnelle Empl
       Moins de 6 mois: "'Moins de 6 mois'"
       6 mois à 2 ans: "'6 mois à 2 ans'"
       Plus de 2 ans: "'Plus de 2 ans'"
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté Moins de 6 mois:
   applicable si: ancienneté = 'Moins de 6 mois'
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté Moins de 6 mois . résultat conventionnel:
   valeur: 1 semaine
   type: notification
@@ -32,10 +31,10 @@ contrat salarié . convention collective . bad . catégorie professionnelle Empl
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Titre IV, Article 27": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté 6 mois à 2 ans:
   applicable si: ancienneté = '6 mois à 2 ans'
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
   type: notification
@@ -43,10 +42,10 @@ contrat salarié . convention collective . bad . catégorie professionnelle Empl
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Titre IV, Article 27": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
   type: notification
@@ -54,10 +53,10 @@ contrat salarié . convention collective . bad . catégorie professionnelle Empl
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Titre IV, Article 27": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise:
   applicable si: catégorie professionnelle = 'Technicienagent de maîtrise'
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -66,10 +65,10 @@ contrat salarié . convention collective . bad . catégorie professionnelle Tech
     valeurs:
       Moins de 2 ans: "'Moins de 2 ans'"
       Plus de 2 ans: "'Plus de 2 ans'"
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
   type: notification
@@ -77,10 +76,10 @@ contrat salarié . convention collective . bad . catégorie professionnelle Tech
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Titre IV, Article 27": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
   type: notification
@@ -88,10 +87,10 @@ contrat salarié . convention collective . bad . catégorie professionnelle Tech
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Titre IV, Article 27": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre:
   applicable si: catégorie professionnelle = 'Cadre'
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -100,10 +99,10 @@ contrat salarié . convention collective . bad . catégorie professionnelle Cadr
     valeurs:
       Moins de 2 ans: "'Moins de 2 ans'"
       Plus de 2 ans: "'Plus de 2 ans'"
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 2 mois
   type: notification
@@ -111,10 +110,10 @@ contrat salarié . convention collective . bad . catégorie professionnelle Cadr
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Titre IV, Article 27": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
-          
+
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 4 mois
   type: notification

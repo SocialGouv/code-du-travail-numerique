@@ -1,4 +1,3 @@
-
 contrat salarié . convention collective . bad . typeRupture:
   titre: typeRupture
   question: Pour quelle raison le contrat de travail a-t-il été rompu ?
@@ -8,34 +7,34 @@ contrat salarié . convention collective . bad . typeRupture:
       Démission: "'Démission'"
       Licenciement: "'Licenciement'"
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
-          
+
 contrat salarié . convention collective . bad . typeRupture Démission:
   applicable si: typeRupture = 'Démission'
-          
+
 contrat salarié . convention collective . bad . typeRupture Démission . résultat conventionnel:
   valeur: "'2 heures par jour travaillé ou 1 journée par semaine de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail et est égale au minimum à 1 heure par semaine'"
   type: notification
-  description: 
+  description:
     - Le salaire n'est pas maintenu.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 27": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . bad . typeRupture Licenciement:
   applicable si: typeRupture = 'Licenciement'
-          
+
 contrat salarié . convention collective . bad . typeRupture Licenciement . résultat conventionnel:
   valeur: "'2 heures par jour travaillé ou 1 journée par semaine de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail et est égale au minimum à 1 heure par semaine'"
   type: notification
-  description: 
+  description:
     - Le salaire est maintenu, sauf en cas de licenciement pour faute grave ou faute lourde.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 26.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . bad . typeRupture Rupture de la période d'essai:
   applicable si: typeRupture = 'Rupture de la période d'essai'
-          
+
 contrat salarié . convention collective . bad . typeRupture Rupture de la période d'essai . résultat conventionnel:
   valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
   remplace: contrat salarié . convention collective . résultat conventionnel

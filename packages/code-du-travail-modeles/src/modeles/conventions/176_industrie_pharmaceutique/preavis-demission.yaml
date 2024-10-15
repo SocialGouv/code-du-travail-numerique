@@ -1,4 +1,3 @@
-
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail:
   titre: conclusion contrat travail
   question: Quelle est la date d'entrée du salarié dans l'entreprise?
@@ -7,10 +6,10 @@ contrat salarié . convention collective . industrie pharmaceutique . conclusion
     valeurs:
       Contrat de travail conclu avant le 1er juillet 2009: "'Contrat de travail conclu avant le 1er juillet 2009'"
       Contrat de travail conclu après le 1er juillet 2009: "'Contrat de travail conclu après le 1er juillet 2009'"
-          
+
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009:
   applicable si: conclusion contrat travail = 'Contrat de travail conclu avant le 1er juillet 2009'
-          
+
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 . groupe:
   titre: groupe
   question: Quel est le groupe professionnel du salarié ?
@@ -20,37 +19,37 @@ contrat salarié . convention collective . industrie pharmaceutique . conclusion
       1 à 3: "'1 à 3'"
       4: "'4'"
       5 et suivants: "'5 et suivants'"
-          
+
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 . groupe 1 à 3:
   applicable si: groupe = '1 à 3'
-          
+
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 . groupe 1 à 3 . résultat conventionnel:
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 35, 2°": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109
-          
+
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 . groupe 4:
   applicable si: groupe = '4'
-          
+
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 . groupe 4 . résultat conventionnel:
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 35, 2°": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109
-          
+
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 . groupe 5 et suivants:
   applicable si: groupe = '5 et suivants'
-          
+
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 . groupe 5 et suivants . résultat conventionnel:
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 35, 2°": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109
-          
+
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009:
   applicable si: conclusion contrat travail = 'Contrat de travail conclu après le 1er juillet 2009'
-          
+
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 . groupe:
   titre: groupe
   question: Quel est le groupe professionnel du salarié ?
@@ -60,28 +59,28 @@ contrat salarié . convention collective . industrie pharmaceutique . conclusion
       1 à 3: "'1 à 3'"
       4 à 5: "'4 à 5'"
       6 et suivants: "'6 et suivants'"
-          
+
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 . groupe 1 à 3:
   applicable si: groupe = '1 à 3'
-          
+
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 . groupe 1 à 3 . résultat conventionnel:
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 35, 2°": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109
-          
+
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 . groupe 4 à 5:
   applicable si: groupe = '4 à 5'
-          
+
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 . groupe 4 à 5 . résultat conventionnel:
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 35, 2°": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109
-          
+
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 . groupe 6 et suivants:
   applicable si: groupe = '6 et suivants'
-          
+
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 . groupe 6 et suivants . résultat conventionnel:
   valeur: 4 mois
   remplace: contrat salarié . convention collective . résultat conventionnel

@@ -1,4 +1,3 @@
-
 contrat salarié . convention collective . sedima . catégorie professionnelle:
   titre: catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
@@ -8,10 +7,10 @@ contrat salarié . convention collective . sedima . catégorie professionnelle:
       Cadres: "'Cadres'"
       Ouvriers, Employés: "'Ouvriers, Employés'"
       Techniciens et agents de maîtrise TAM: "'Techniciens et agents de maîtrise TAM'"
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Cadres . niveau:
   titre: niveau
   question: Quel est le niveau du salarié ?
@@ -19,19 +18,19 @@ contrat salarié . convention collective . sedima . catégorie professionnelle C
     type: liste
     valeurs:
       VII et plus: "'VII et plus'"
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Cadres . niveau VII et plus:
   applicable si: niveau = 'VII et plus'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Cadres . niveau VII et plus . résultat conventionnel:
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "article 6-50": https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idSectionTA=KALISCTA000026355935&cidTexte=KALITEXT000026355879&idConvention=KALICONT000005635653&dateTexte=29990101
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés:
   applicable si: catégorie professionnelle = 'Ouvriers, Employés'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau:
   titre: niveau
   question: Quel est le niveau du salarié ?
@@ -41,10 +40,10 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
       I: "'I'"
       II: "'II'"
       III: "'III'"
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau I:
   applicable si: niveau = 'I'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau I . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -53,28 +52,28 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
     valeurs:
       Moins de 2 ans: "'Moins de 2 ans'"
       2 ans ou plus: "'2 ans ou plus'"
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau I . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau I . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "article 3-41-0": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau I . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau I . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "article 3-41-0": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau II:
   applicable si: niveau = 'II'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau II . ancienneté:
   titre: ancienneté
   question: Quelle est l'ancienneté du salarié ?
@@ -83,37 +82,37 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
     valeurs:
       Moins de 2 ans: "'Moins de 2 ans'"
       2 ans ou plus: "'2 ans ou plus'"
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau II . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau II . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "article 3-41-0": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau II . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau II . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "article 3-41-0": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau III:
   applicable si: niveau = 'III'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau III . résultat conventionnel:
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "article 3-41-0": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Techniciens et agents de maîtrise TAM:
   applicable si: catégorie professionnelle = 'Techniciens et agents de maîtrise TAM'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Techniciens et agents de maîtrise TAM . niveau:
   titre: niveau
   question: Quel est le niveau du salarié ?
@@ -123,28 +122,28 @@ contrat salarié . convention collective . sedima . catégorie professionnelle T
       IV: "'IV'"
       V: "'V'"
       VI: "'VI'"
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Techniciens et agents de maîtrise TAM . niveau IV:
   applicable si: niveau = 'IV'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Techniciens et agents de maîtrise TAM . niveau IV . résultat conventionnel:
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "article 3-41-0": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Techniciens et agents de maîtrise TAM . niveau V:
   applicable si: niveau = 'V'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Techniciens et agents de maîtrise TAM . niveau V . résultat conventionnel:
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "article 3-41-0": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Techniciens et agents de maîtrise TAM . niveau VI:
   applicable si: niveau = 'VI'
-          
+
 contrat salarié . convention collective . sedima . catégorie professionnelle Techniciens et agents de maîtrise TAM . niveau VI . résultat conventionnel:
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel

@@ -1,4 +1,3 @@
-
 contrat salarié . convention collective . commerces de detail non alimentaires . typeRupture:
   titre: typeRupture
   question: Pour quelle raison le contrat de travail a-t-il été rompu ?
@@ -8,32 +7,32 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
       Démission: "'Démission'"
       Licenciement: "'Licenciement'"
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
-          
+
 contrat salarié . convention collective . commerces de detail non alimentaires . typeRupture Démission:
   applicable si: typeRupture = 'Démission'
-          
+
 contrat salarié . convention collective . commerces de detail non alimentaires . typeRupture Démission . résultat conventionnel:
   valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Chapitre VI, Article 1": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . commerces de detail non alimentaires . typeRupture Licenciement:
   applicable si: typeRupture = 'Licenciement'
-          
+
 contrat salarié . convention collective . commerces de detail non alimentaires . typeRupture Licenciement . résultat conventionnel:
   valeur: "'2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail'"
   type: notification
-  description: 
+  description:
     - Le salaire est maintenu.
     - Les heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. Ils peuvent décider, par écrit, de les grouper en une ou plusieurs fois. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Chapitre VI, Article 1": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
-          
+
 contrat salarié . convention collective . commerces de detail non alimentaires . typeRupture Rupture de la période d'essai:
   applicable si: typeRupture = 'Rupture de la période d'essai'
-          
+
 contrat salarié . convention collective . commerces de detail non alimentaires . typeRupture Rupture de la période d'essai . résultat conventionnel:
   valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
   remplace: contrat salarié . convention collective . résultat conventionnel

@@ -13,7 +13,7 @@ Storage.prototype.getItem = jest.fn(
           "url": "https://www.url.fr",
           "slug": "2148"
         }
-        `,
+        `
 );
 
 describe("DureePreavisLicenciement", () => {
@@ -115,8 +115,8 @@ describe("DureePreavisLicenciement", () => {
     it("should display expected answer", () => {
       expect(
         screen.queryAllByText(
-          /pour les salariés hors classification, la durée du préavis est fixée par le contrat de travail dans la limite de 3 mois/g,
-        )[0],
+          /pour les salariés hors classification, la durée du préavis est fixée par le contrat de travail dans la limite de 3 mois/g
+        )[0]
       ).toBeInTheDocument();
 
       expect(screen.queryAllByText(/Article 4.4.1.1/)[0]).toBeInTheDocument();
