@@ -21,7 +21,7 @@ exports[`Image should display image and caption 1`] = `
     </figcaption>
   </figure>
   <div
-    class="sc-9845d97e-0 jdstGa"
+    class="sc-d134eab-0 kWKofh"
     data-accordion-component="Accordion"
   >
     <div
@@ -36,7 +36,7 @@ exports[`Image should display image and caption 1`] = `
           aria-controls="accordion__panel-raa-0"
           aria-disabled="false"
           aria-expanded="false"
-          class="sc-9845d97e-1 jffOUe"
+          class="sc-d134eab-1 eOhzkV"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-raa-0"
           role="button"
@@ -44,7 +44,7 @@ exports[`Image should display image and caption 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="sc-9845d97e-2 kPPRyj"
+            class="sc-d134eab-2 gGXxaY"
             fill="none"
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
@@ -57,23 +57,23 @@ exports[`Image should display image and caption 1`] = `
             />
           </svg>
           <div
-            class="sc-9845d97e-3 biBldq"
+            class="sc-d134eab-3 gvRoex"
           >
             Voir en détail
           </div>
         </div>
       </div>
       <div
-        class="sc-9845d97e-5 mALye"
+        class="sc-d134eab-5 dytUgY"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-raa-0"
       >
         <div
-          class="sc-9845d97e-4 dcRMRW"
+          class="sc-d134eab-4 jJPysv"
         >
           <div
-            class="sc-2a0a4b0a-0 dLOZmV"
+            class="sc-13323d30-0 exlNfj"
           >
             <p>
               Comment calculer un délai quand il y a un jour férié ?

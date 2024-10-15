@@ -2,7 +2,7 @@
 
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { css } from "../../../../styled-system/css";
+import { css } from "styled-system/css";
 import { createModal } from "@codegouvfr/react-dsfr/Modal";
 import { PopupContent } from "./PopupContent";
 import { useIsModalOpen } from "@codegouvfr/react-dsfr/Modal/useIsModalOpen";

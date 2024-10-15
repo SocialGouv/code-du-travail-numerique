@@ -6,26 +6,26 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
     class="sc-bcc8e06a-2 jPdZuK"
   >
     <legend
-      class="sc-7b4bcbaf-0 iaxPSC sc-fb2bdc6b-0 cWKeit"
+      class="sc-323a1d51-0 jxTawz sc-fb2bdc6b-0 cWKeit"
       data-testid="question-label"
       for="input-foo"
     >
       <span
-        class="sc-3633cc97-0 eiVtrx"
+        class="sc-a4406a0f-0 bniLbk"
       >
         Une question ?
         <span
-          class="sc-3633cc97-0 hpZWjW"
+          class="sc-a4406a0f-0 fsogbD"
         >
            (obligatoire)
         </span>
       </span>
     </legend>
     <div
-      class="sc-5a2c6b8f-0 yOEut sc-bcc8e06a-1 lhvsEJ"
+      class="sc-b8970624-0 fGqAMG sc-bcc8e06a-1 lhvsEJ"
     >
       <select
-        class="sc-5a2c6b8f-2 leEqvE"
+        class="sc-b8970624-2 cwLeaN"
         data-testid="foo"
         id="input-foo"
         name="foo"
@@ -51,7 +51,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="sc-5a2c6b8f-1 dTDGVJ"
+        class="sc-b8970624-1 bmgmee"
       >
         <svg
           aria-hidden="true"
@@ -90,26 +90,26 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
     class="sc-bcc8e06a-2 jPdZuK"
   >
     <legend
-      class="sc-7b4bcbaf-0 iaxPSC sc-fb2bdc6b-0 cWKeit"
+      class="sc-323a1d51-0 jxTawz sc-fb2bdc6b-0 cWKeit"
       data-testid="question-label"
       for="input-foo"
     >
       <span
-        class="sc-3633cc97-0 eiVtrx"
+        class="sc-a4406a0f-0 bniLbk"
       >
         Une question ?
         <span
-          class="sc-3633cc97-0 hpZWjW"
+          class="sc-a4406a0f-0 fsogbD"
         >
            (obligatoire)
         </span>
       </span>
     </legend>
     <div
-      class="sc-5a2c6b8f-0 yOEut sc-bcc8e06a-1 lhvsEJ"
+      class="sc-b8970624-0 fGqAMG sc-bcc8e06a-1 lhvsEJ"
     >
       <select
-        class="sc-5a2c6b8f-2 leEqvE"
+        class="sc-b8970624-2 cwLeaN"
         data-testid="foo"
         id="input-foo"
         name="foo"
@@ -135,7 +135,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="sc-5a2c6b8f-1 dTDGVJ"
+        class="sc-b8970624-1 bmgmee"
       >
         <svg
           aria-hidden="true"

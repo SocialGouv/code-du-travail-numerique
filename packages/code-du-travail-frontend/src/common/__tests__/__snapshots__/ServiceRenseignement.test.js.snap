@@ -3,19 +3,19 @@
 exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 <div>
   <header
-    class="sc-e32628d4-0 cXUuvO"
+    class="sc-238bfc37-0 bnxcHY"
   >
     <h1
-      class="sc-5f05e99b-0 dQbgIy"
+      class="sc-efa69b03-0 cNAUpX"
     >
       <span
-        class="sc-a4d7a179-0 jRxkkJ"
+        class="sc-f4f767e-0 jZdFSO"
       />
       Les services du ministère du Travail
     </h1>
   </header>
   <h2
-    class="sc-b879fc2d-0 hyiHle"
+    class="sc-a53a0f9a-0 bIsTsN"
   >
     Contact téléphonique
   </h2>
@@ -38,7 +38,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     </em>
   </a>
   <h2
-    class="sc-b879fc2d-0 hyiHle"
+    class="sc-a53a0f9a-0 bIsTsN"
   >
     Contact par email et prise de rendez-vous
   </h2>
@@ -51,11 +51,11 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
       Saisissez votre numéro de département :
     </label>
     <div
-      class="sc-669fe731-0 amSvQ sc-56e7bccd-4 jcgfHv"
+      class="sc-46a9700d-0 eEbjpm sc-56e7bccd-4 jcgfHv"
     >
       <input
         autocomplete="off"
-        class="sc-669fe731-1 bBYNqO"
+        class="sc-46a9700d-1 dZpFqX"
         id="search-service"
         maxlength="3"
         name="departement"
@@ -66,7 +66,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     </div>
     <button
       aria-label="Recherchez le service"
-      class="sc-95bd4344-0 dxXsic sc-56e7bccd-5 ifcrZi"
+      class="sc-b0ebfae6-0 dGXoMZ sc-56e7bccd-5 ifcrZi"
       title="Lancer une recherche"
       type="submit"
     >
