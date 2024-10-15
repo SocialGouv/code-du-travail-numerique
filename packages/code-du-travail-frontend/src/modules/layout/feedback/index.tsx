@@ -7,9 +7,7 @@ import { FeedbackContent, FeedbackDataSent } from "./FeedbackContent";
 import { FeedbackAnswered } from "./FeedbackAnswered";
 import { useFeedbackEvents } from "./tracking";
 
-type FeedbackParams = { className?: string };
-
-export const Feedback = ({ className = "" }: FeedbackParams) => {
+export const Feedback = () => {
   const [viewFeedback, setViewFeedback] = useState<
     "yes" | "no" | "default" | "answered"
   >("default");
@@ -39,9 +37,7 @@ export const Feedback = ({ className = "" }: FeedbackParams) => {
   };
 
   return (
-    <div
-      className={`${className} ${fr.cx("fr-highlight", "fr-p-2w", "fr-m-0")}`}
-    >
+    <div className={fr.cx("fr-highlight", "fr-p-2w", "fr-m-0")}>
       {viewFeedback === "default" && (
         <FeedbackDefault onClickNo={onClickNo} onClickYes={onClickYes} />
       )}

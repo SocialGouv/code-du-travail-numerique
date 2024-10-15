@@ -313,6 +313,7 @@ exports[`<Header /> should match snapshot 1`] = `
                     aria-labelledby="downshift-:r2:-label"
                     autocomplete="off"
                     class="fr-input"
+                    data-testid="search-input"
                     id="fr-header-search-input"
                     placeholder="Rechercher"
                     role="combobox"
