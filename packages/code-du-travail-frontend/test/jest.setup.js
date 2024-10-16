@@ -39,4 +39,6 @@ jest.mock("../src/config", () => ({
   API_GEO_URL: "https://api-geo",
   SUGGEST_DEBOUNCE_DELAY: 300,
   SUGGEST_MAX_RESULTS: 5,
+  MAX_RELATED_ITEMS_MODELS_AND_TOOLS: 2,
+  MAX_RELATED_ITEMS_ARTICLES: 4,
 }));
