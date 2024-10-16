@@ -27,3 +27,5 @@ export const API_GEO_MAX_SEARCH_RESULTS = 10;
 export const SUGGEST_DEBOUNCE_DELAY = 200;
 export const SUGGEST_MAX_RESULTS = 5;
 export const WIDGETS_PATH = /\/widgets\/.*/;
+export const MAX_RELATED_ITEMS_MODELS_AND_TOOLS = 2;
+export const MAX_RELATED_ITEMS_ARTICLES = 4;
