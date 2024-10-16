@@ -78,6 +78,7 @@ export const HomeSearch = (props: Props) => {
               className: `${fr.cx("fr-input")}`,
               onKeyDown: handleKeyDown,
               "aria-label": "Champ de recherche par mots-clés",
+              "data-testid": "search-input",
             })}
           />
           <ul

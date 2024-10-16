@@ -33,7 +33,7 @@ exports[`<OuSAdresser /> should render a simple case 1`] = `
       Ou s'adresser ?
     </strong>
     <h2
-      class="sc-a53a0f9a-0 bIsTsN"
+      class="sc-b879fc2d-0 hyiHle"
     >
       Nom du centre
     </h2>

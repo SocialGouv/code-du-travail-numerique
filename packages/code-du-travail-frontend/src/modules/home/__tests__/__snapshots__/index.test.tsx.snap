@@ -65,6 +65,7 @@ exports[`<Home /> should match snapshot 1`] = `
                       aria-label="Champ de recherche par mots-clés"
                       autocomplete="off"
                       class="fr-input"
+                      data-testid="search-input"
                       id="downshift-:r0:-input"
                       role="combobox"
                       value=""
