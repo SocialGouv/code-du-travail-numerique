@@ -3,6 +3,10 @@ import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 
 import { nonNullable } from "@socialgouv/modeles-social";
 import { RelatedItem, sources } from "./type";
+import {
+  MAX_RELATED_ITEMS_ARTICLES,
+  MAX_RELATED_ITEMS_MODELS_AND_TOOLS,
+} from "../../config";
 
 type RelatedItemSettings = {
   _id: string;
@@ -81,10 +85,10 @@ export const fetchRelatedItems = async (
 
   const relatedOtherItems = formatted
     .filter(({ source }) => !isArticleSource(source))
-    .slice(0, 2);
+    .slice(0, MAX_RELATED_ITEMS_MODELS_AND_TOOLS);
   const relatedArticleItems = formatted
     .filter(({ source }) => isArticleSource(source))
-    .slice(0, 6);
+    .slice(0, MAX_RELATED_ITEMS_ARTICLES);
 
   return [
     { items: relatedOtherItems, title: "Modèles et outils liés" },
