@@ -9,6 +9,17 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.ref }}
 
 jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr/
+          uploadArtifacts: true
+          temporaryPublicStorage: true
   e2e:
     name: End-to-end testing
     runs-on: ubuntu-latest
