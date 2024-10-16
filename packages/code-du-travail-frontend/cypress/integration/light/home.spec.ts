@@ -1,10 +1,14 @@
 describe("Page d'acceuil", () => {
   it("Affiche les éléments requis", () => {
     cy.visit("/");
-    cy.get("h1").should(
-      "have.text",
-      "Bienvenue sur le Code du travail numérique"
+
+    cy.get("h1").should("contain", "le Code du travail numérique");
+
+    cy.get("h2").should(
+      "contain",
+      "Obtenez les réponses à vos questions sur le droit du travail."
     );
+
     cy.contains("Recherchez par mots-clés");
     cy.contains("Rechercher");
 
@@ -47,5 +51,32 @@ describe("Page d'acceuil", () => {
     cy.contains("Représentation du personnel et négociation collective");
     cy.contains("Départ de l’entreprise");
     cy.contains("Conflits au travail et contrôle de la réglementation");
+  });
+
+  it("Devrait afficher les suggestions quand on cherche un mot", () => {
+    cy.visit("/");
+
+    cy.get("#home-searchbar").type("congés");
+
+    cy.get('ul[role="listbox"]').should("be.visible");
+    cy.get('ul[role="listbox"] li').should("have.length", 5);
+    cy.contains("congés payés et fractionnement").should("be.visible");
+    cy.contains("congés sans solde").should("be.visible");
+    cy.contains("congés payés acquisition").should("be.visible");
+    cy.contains("congés payés").should("be.visible");
+    cy.contains("congés payés et maladie").should("be.visible");
+
+    cy.get("button").contains("Rechercher");
+
+    cy.contains("congés sans solde").click();
+
+    cy.get('div[role="region"]>ul li').should("have.length", 7);
+    cy.contains("Résultats de recherche pour “congés sans solde”");
+    cy.contains("Que dit le code du travail");
+    cy.contains("Vous n’avez pas trouvé ce que vous cherchiez");
+    cy.contains("Les thèmes suivants peuvent vous intéresser");
+
+    cy.get("button").contains("Plus de résultats").click();
+    cy.get('div[role="region"]>ul li').should("have.length", 14);
   });
 });

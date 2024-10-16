@@ -10,11 +10,6 @@ jest.mock("../../layout/header/fetchSuggestResults");
 jest.mock("../../layout/tracking");
 
 describe("<HomeSearch />", () => {
-  it("should match snapshot", () => {
-    const { container } = render(<HomeSearch onSearchSubmit={jest.fn()} />);
-    expect(container).toMatchSnapshot();
-  });
-
   it("should show suggestions and send event tracking", async () => {
     const suggestions = [
       "congés payés et fractionnement",

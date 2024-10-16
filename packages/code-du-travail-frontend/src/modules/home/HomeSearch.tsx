@@ -79,6 +79,7 @@ export const HomeSearch = (props: Props) => {
               onKeyDown: handleKeyDown,
               "aria-label": "Champ de recherche par mots-clés",
               "data-testid": "search-input",
+              id: "home-searchbar",
             })}
           />
           <ul

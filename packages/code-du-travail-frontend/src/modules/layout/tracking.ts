@@ -14,7 +14,7 @@ export const useLayoutTracking = () => {
     sendEvent({
       category: LayoutCategory.SELECTED_SUGGESTION,
       action: query,
-      value: suggestion,
+      name: suggestion,
     });
     sendEvent({
       category: LayoutCategory.CANDIDATE_SUGGESTIONS,

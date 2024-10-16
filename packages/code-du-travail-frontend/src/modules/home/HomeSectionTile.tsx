@@ -1,6 +1,7 @@
 import { HomeTileItem } from "./queries";
 import { HomeTile } from "./HomeTile";
 import { HomeWrapper } from "./HomeWrapper";
+import { HomeButton } from "./HomeButton";
 
 type Props = {
   sectionId: string;
@@ -18,6 +19,13 @@ export const HomeSectionTile = (props: Props) => (
     isTint
     title={props.title}
     subtitle={props.subtitle}
+    footerNode={
+      <HomeButton
+        buttonLink={props.buttonLink}
+        buttonText={props.buttonText}
+        onButtonClick={props.onButtonClick}
+      />
+    }
   >
     {props.items.map((item, index) => (
       <HomeTile
