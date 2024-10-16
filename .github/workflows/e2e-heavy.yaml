@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 22 * * *" # each day at 22:00
+  push:
 
 concurrency:
   cancel-in-progress: true
