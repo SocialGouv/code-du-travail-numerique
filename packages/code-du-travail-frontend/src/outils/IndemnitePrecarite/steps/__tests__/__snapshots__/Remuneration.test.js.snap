@@ -22,6 +22,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   >
     <input
       class="sc-f2c30c13-2 bKCzpJ"
+      data-testid="typeRemuneration-amount"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
@@ -89,13 +90,14 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       Montant :
     </label>
     <div
-      class="sc-d7c10f93-0 kgLXdV"
+      class="sc-543ce436-0 cIRCgl"
     >
       <div
         class="sc-669fe731-0 amSvQ"
       >
         <input
           class="sc-669fe731-1 htKjGt"
+          data-testid="currency"
           id="2"
           name="salaires[0].salaire"
           type="number"
@@ -141,13 +143,14 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       Montant :
     </label>
     <div
-      class="sc-d7c10f93-0 kgLXdV"
+      class="sc-543ce436-0 cIRCgl"
     >
       <div
         class="sc-669fe731-0 amSvQ"
       >
         <input
           class="sc-669fe731-1 htKjGt"
+          data-testid="currency"
           id="4"
           name="salaires[1].salaire"
           type="number"
@@ -234,6 +237,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     <input
       checked=""
       class="sc-f2c30c13-2 bKCzpJ"
+      data-testid="typeRemuneration-amount"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
@@ -292,13 +296,14 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </span>
   </legend>
   <div
-    class="sc-d7c10f93-0 kgLXdV"
+    class="sc-543ce436-0 cIRCgl"
   >
     <div
       class="sc-669fe731-0 amSvQ"
     >
       <input
         class="sc-669fe731-1 htKjGt"
+        data-testid="currency"
         id="currency-1"
         name="salaire"
         type="number"

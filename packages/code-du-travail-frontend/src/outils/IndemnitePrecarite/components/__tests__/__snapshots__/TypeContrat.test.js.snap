@@ -22,6 +22,7 @@ exports[`<TypeContrat /> should render 1`] = `
   >
     <input
       class="sc-f2c30c13-2 bKCzpJ"
+      data-testid="contrat-cdd"
       id="contrat-cdd"
       name="contrat"
       type="radio"
