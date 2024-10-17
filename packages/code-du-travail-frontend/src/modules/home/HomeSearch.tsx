@@ -93,7 +93,7 @@ export const HomeSearch = (props: Props) => {
                   {...getItemProps({
                     item,
                     index,
-                    className: `${fr.cx("fr-p-1v")} ${suggestion} ${highlightedIndex === index ? isHighlighted : ""}`,
+                    className: `${fr.cx("fr-p-3v")} ${suggestion} ${highlightedIndex === index ? isHighlighted : ""}`,
                   })}
                   key={`${item}${index}`}
                 >
@@ -128,27 +128,22 @@ const buttonStyle = css({
 });
 
 const list = css({
-  position: "absolute",
-  width: "100%",
+  pos: "absolute",
+  w: "100%",
   zIndex: 100,
-  background: "var(--background-default-grey)",
-  paddingLeft: "0 !important",
+  bg: "var(--background-default-grey)",
+  listStyleType: "none !important",
+  padding: "0 !important",
+  margin: "0 !important",
 });
 
 const suggestion = css({
   cursor: "pointer",
-  lineHeight: "2rem",
-  listStyleType: "none",
+  color: "var(--text-action-high-blue-france)",
   textAlign: "left",
-  background: "var(--background-default-grey)",
-  "&:nth-child(2n)": {
-    background: "var(--background-default-grey-hover)",
-  },
+  _hover: { bg: "var(--background-default-grey-hover)" },
 });
 
 const isHighlighted = css({
-  background: "var(--background-default-grey-active)",
-  "&:nth-child(2n)": {
-    background: "var(--background-default-grey-active)",
-  },
+  background: "var(--background-default-grey-hover)",
 });

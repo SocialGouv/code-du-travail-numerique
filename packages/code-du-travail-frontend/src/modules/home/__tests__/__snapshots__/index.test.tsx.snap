@@ -72,7 +72,7 @@ exports[`<Home /> should match snapshot 1`] = `
                     />
                     <ul
                       aria-labelledby="downshift-:r0:-label"
-                      class="pos_absolute w_100% z_100 bg_var(--background-default-grey) pl_0!"
+                      class="pos_absolute w_100% z_100 bg_var(--background-default-grey) li-t_none! p_0! m_0!"
                       id="downshift-:r0:-menu"
                       role="listbox"
                     />
