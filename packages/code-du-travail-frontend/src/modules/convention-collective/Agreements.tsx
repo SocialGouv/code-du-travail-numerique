@@ -5,7 +5,6 @@ import { ElasticAgreement } from "@socialgouv/cdtn-types";
 import Link from "next/link";
 import { css } from "../../../styled-system/css";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import Button from "@codegouvfr/react-dsfr/Button";
 import { ListWithArrow } from "../common/ListWithArrow";
 
 type Agreement = Pick<ElasticAgreement, "shortTitle" | "slug">;
@@ -67,22 +66,33 @@ export const Agreements = ({ agreements }: Props) => {
           </span>
         </Highlight>
         <div
-          className={fr.cx(
+          className={`${fr.cx(
             "fr-grid-row",
             "fr-grid-row--center",
+            "fr-px-4w",
             "fr-mt-2w",
             "fr-mb-3w"
-          )}
+          )}`}
         >
           <Link
             href="/outils/convention-collective/convention"
-            className={`${fr.cx("fr-icon-arrow-right-line", "fr-link--icon-right", "fr-col-3", "fr-mr-6w")}`}
+            className={`${fr.cx(
+              "fr-btn",
+              "fr-btn--icon-right",
+              "fr-icon-arrow-right-line",
+              "fr-px-9v",
+              "fr-col-12",
+              "fr-col-md-3",
+              "fr-mr-md-6w",
+              "fr-mb-md-0",
+              "fr-mb-2w"
+            )}`}
           >
             Je connais ma convention collective je la saisie
           </Link>
           <Link
             href="/outils/convention-collective/entreprise"
-            className={`${fr.cx("fr-icon-arrow-right-line", "fr-link--icon-right", "fr-col-3")}`}
+            className={`${fr.cx("fr-btn", "fr-btn--icon-right", "fr-icon-arrow-right-line", "fr-col-12", "fr-col-md-3", "fr-px-6v")}`}
           >
             Je cherche mon entreprise pour trouver ma convention collective
           </Link>
