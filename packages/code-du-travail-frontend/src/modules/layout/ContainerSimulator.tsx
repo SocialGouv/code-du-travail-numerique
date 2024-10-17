@@ -36,9 +36,12 @@ export const ContainerSimulator = ({
           <Feedback />
         </div>
       </div>
-      <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
-        <RelatedItems relatedItems={relatedItems} />
-      </div>
+
+      {relatedItems.length > 0 && (
+        <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
+          <RelatedItems relatedItems={relatedItems} />
+        </div>
+      )}
       <div className={fr.cx("fr-col-12", "fr-col-md-4", "fr-mb-12v")}>
         <Share title={title} metaDescription={description} />
       </div>
