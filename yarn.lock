@@ -1902,6 +1902,7 @@ __metadata:
     "@types/debounce-promise": ^3.1.4
     "@types/jest": ^29.5.12
     "@types/xml2js": ^0.4.14
+    adblock-detect-react: ^1.3.1
     cors: ^2.8.5
     cypress: ^13.13.2
     cypress-html-validate: ^6.1.0
@@ -8546,6 +8547,16 @@ __metadata:
   bin:
     acorn: bin/acorn
   checksum: 677880034aee5bdf7434cc2d25b641d7bedb0b5ef47868a78dadabedccf58e1c5457526d9d8249cd253f2df087e081c3fe7d903b448d8e19e5131a3065b83c07
+  languageName: node
+  linkType: hard
+
+"adblock-detect-react@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "adblock-detect-react@npm:1.3.1"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: cbedb878fa4e0b52a47325875fba171199b75a1ec8c13bcb81dbf0f02b1df895d55ce3b66fb6c111cdebc0ed341d247404e0bd799028d846c8c3631c3b3f0bf4
   languageName: node
   linkType: hard
 
