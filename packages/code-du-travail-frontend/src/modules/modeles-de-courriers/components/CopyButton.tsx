@@ -47,6 +47,7 @@ const w100 = css({
   w: "100%!",
   justifyContent: "center",
   textAlign: "center",
+
 });
 
 const fixHeight = css({

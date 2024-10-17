@@ -51,17 +51,16 @@ export const LetterModelContent = ({
       >
         <Html>{html}</Html>
       </div>
-      <div className={fr.cx("fr-col-12", "fr-col-md-10")}>
-        <Alert
-          className={fr.cx("fr-mb-6w")}
-          description={getDisclaimer(slug)}
-          closable={false}
-          severity="info"
-          small
-        />
+      <Alert
+        className={fr.cx("fr-mb-6w")}
+        description={getDisclaimer(slug)}
+        closable={false}
+        severity="info"
+        small
+      />
+      <div className={button}>
+        <CopyButton />
       </div>
-
-      <CopyButton />
       <div className={fr.cx("fr-mb-6w")}>
         <DownloadTile
           filename={filename}
@@ -77,4 +76,10 @@ const border = css({
   border: `1px solid`,
   borderRadius: "8px",
   borderColor: "var(--artwork-minor-blue-cumulus)",
+});
+
+const button = css({
+  "& > button": {
+    md: { w: "auto!" },
+  },
 });
