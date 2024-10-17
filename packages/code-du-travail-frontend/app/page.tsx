@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Code du travail numérique",
   description:
     "Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités).",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 async function Index() {
