@@ -18,6 +18,9 @@ jobs:
         uses: treosh/lighthouse-ci-action@v12
         with:
           configPath: ./lighthouserc.json
+          temporaryPublicStorage: true
+          uploadArtifacts: true
+          runs: 3 # Multiple runs to reduce variance
   e2e:
     name: End-to-end testing
     runs-on: ubuntu-latest
