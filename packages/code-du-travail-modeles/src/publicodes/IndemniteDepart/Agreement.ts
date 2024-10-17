@@ -4,7 +4,7 @@ import {
   SeniorityFactory,
   SupportedCc,
 } from "../../modeles";
-import type { IInegibility } from "../../modeles/common/types/ineligibility";
+import type { IIneligibility } from "../../modeles/common/types/ineligibility";
 import type { PublicodesBase } from "../PublicodesBase";
 import type { PublicodesIndemniteLicenciementResult } from "../types";
 import type { AgreementIndemniteCompute } from "./AgreementIndemniteCompute";
@@ -20,7 +20,7 @@ import {
 } from "./utils";
 
 export class Agreement implements AgreementIndemniteCompute {
-  public readonly ineligibility: IInegibility;
+  public readonly ineligibility: IIneligibility;
 
   public readonly seniority: ISeniority<SupportedCc>;
 
@@ -30,7 +30,7 @@ export class Agreement implements AgreementIndemniteCompute {
 
   public readonly idcc: SupportedCc;
 
-  constructor(idcc: SupportedCc, ineligibility: IInegibility) {
+  constructor(idcc: SupportedCc, ineligibility: IIneligibility) {
     this.ineligibility = ineligibility;
     this.seniority = new SeniorityFactory().create(idcc);
     this.legalSeniority = new SeniorityFactory().create(SupportedCc.default);
