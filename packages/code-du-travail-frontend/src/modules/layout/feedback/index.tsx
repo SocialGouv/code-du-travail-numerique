@@ -6,8 +6,8 @@ import { FeedbackDefault } from "./FeedbackDefault";
 import { FeedbackContent, FeedbackDataSent } from "./FeedbackContent";
 import { FeedbackAnswered } from "./FeedbackAnswered";
 import { useFeedbackEvents } from "./tracking";
-import { useDetectAdBlock } from "adblock-detect-react";
 import { FeedbackAdblock } from "./FeedbackAdblock";
+import { useDetectAdBlock } from "./useDetectAdBlock";
 
 export const Feedback = () => {
   const adBlockDetected = useDetectAdBlock();
