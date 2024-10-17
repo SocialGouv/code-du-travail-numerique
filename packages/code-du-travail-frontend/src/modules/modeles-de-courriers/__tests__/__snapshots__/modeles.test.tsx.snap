@@ -75,7 +75,7 @@ exports[`<LetterModel /> should render a model 1`] = `
           </div>
         </div>
         <button
-          class="fr-btn fr-btn--secondary fr-icon-clipboard-line fr-btn--icon-left w_100%! jc_center ta_center"
+          class="fr-btn fr-btn--secondary fr-icon-clipboard-line fr-btn--icon-left w_100%! jc_center"
           id="fr-button-:r1:"
         >
           Copier le modèle
@@ -106,7 +106,7 @@ exports[`<LetterModel /> should render a model 1`] = `
         class="[&_>_button]:md:w_auto!"
       >
         <button
-          class="fr-btn fr-btn--secondary fr-icon-clipboard-line fr-btn--icon-left w_100%! jc_center ta_center"
+          class="fr-btn fr-btn--secondary fr-icon-clipboard-line fr-btn--icon-left w_100%! jc_center"
           id="fr-button-:r3:"
         >
           Copier le modèle
@@ -246,7 +246,7 @@ exports[`<LetterModel /> should render a model 1`] = `
           </div>
         </div>
         <button
-          class="fr-btn fr-btn--secondary fr-icon-clipboard-line fr-btn--icon-left w_100%! jc_center ta_center"
+          class="fr-btn fr-btn--secondary fr-icon-clipboard-line fr-btn--icon-left w_100%! jc_center"
           id="fr-button-:r8:"
         >
           Copier le modèle

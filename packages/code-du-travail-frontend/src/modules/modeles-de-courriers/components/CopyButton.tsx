@@ -26,7 +26,7 @@ export const CopyButton = () => {
       </Button>
       <div className={`${fr.cx("fr-py-2v")} ${fixHeight}`}>
         {isCopied && (
-          <div className={w100}>
+          <div>
             <p>
               <span
                 className={`${fr.cx("ri-check-line")} ${css({
@@ -46,7 +46,6 @@ export const CopyButton = () => {
 const w100 = css({
   w: "100%!",
   justifyContent: "center",
-  textAlign: "center",
 });
 
 const fixHeight = css({

@@ -14,7 +14,13 @@ export function WidgetWithIframeResizer({
   useIframeResizer();
 
   return (
-    <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-grid-row--center")}>
+    <div
+      className={fr.cx(
+        "fr-grid-row",
+        "fr-grid-row--gutters",
+        "fr-grid-row--center"
+      )}
+    >
       <div className={fr.cx("fr-col-12", "fr-col-md-9")}>
         <h1>{title}</h1>
       </div>
@@ -29,9 +35,7 @@ export function WidgetWithIframeResizer({
           />
         </Link>
       </div>
-      <div className={fr.cx("fr-col-12", "fr-col-md-9")}>
-        {children}
-      </div>
+      <div className={fr.cx("fr-col-12", "fr-col-md-9")}>{children}</div>
     </div>
   );
 }
