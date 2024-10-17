@@ -38,7 +38,6 @@ export const HiringSimulator = ({ relatedItems, description }: Props) => {
     script.src =
       "https://mon-entreprise.urssaf.fr/simulateur-iframe-integration.js";
     script.async = true;
-    script.dataset.couleur = "#2975D1";
     script.id = "script-simulateur-embauche";
     script.onload = onLoad;
     script.onerror = onError;
