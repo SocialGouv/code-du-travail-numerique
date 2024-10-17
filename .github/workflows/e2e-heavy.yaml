@@ -11,6 +11,7 @@ concurrency:
 
 jobs:
   lighthouse:
+    name: Lighthouse audit
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
