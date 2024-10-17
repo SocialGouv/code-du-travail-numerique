@@ -10,9 +10,10 @@ type Props = {
     items: RelatedItem[];
     title: string;
   }[];
+  description: string;
 };
 
-export const HiringSimulator = ({ relatedItems }: Props) => {
+export const HiringSimulator = ({ relatedItems, description }: Props) => {
   const simRef = createRef<HTMLDivElement>();
   const [state, setState] = useState({
     error: "",
@@ -57,7 +58,7 @@ export const HiringSimulator = ({ relatedItems }: Props) => {
     <ContainerSimulator
       relatedItems={relatedItems}
       title="Calculer le salaire brut/net"
-      description="description"
+      description={description}
       segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
     >
       <h1 id="simulateur-embauche">Calculer le salaire brut/net</h1>
