@@ -6,6 +6,8 @@ import Link from "next/link";
 import { css } from "../../../styled-system/css";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { ListWithArrow } from "../common/ListWithArrow";
+import Image from "next/image";
+import RechercheCC from "./RechercheCC.svg";
 
 type Agreement = Pick<ElasticAgreement, "shortTitle" | "slug">;
 
@@ -41,7 +43,7 @@ export const Agreements = ({ agreements }: Props) => {
   return (
     <ContainerSimulator
       title="Votre convention collective"
-      description=""
+      description="Retrouvez les questions/réponses fréquentes organisées par thème pour votre convention collective"
       relatedItems={[]}
       segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
     >
@@ -49,7 +51,16 @@ export const Agreements = ({ agreements }: Props) => {
         Votre convention collective
       </h1>
       <div className={`${fr.cx("fr-p-3w", "fr-mb-6w")} ${block}`}>
-        <h2>Trouver sa convention collective</h2>
+        <h2>
+          <div className={fr.cx("fr-grid-row")}>
+            <Image
+              priority
+              src={RechercheCC}
+              alt="Trouver sa convention collective"
+            />
+            Trouver sa convention collective
+          </div>
+        </h2>
         <Highlight size="lg" className={fr.cx("fr-mb-12v")}>
           <span>
             La convention collective est un texte conclu au niveau d&apos;une
