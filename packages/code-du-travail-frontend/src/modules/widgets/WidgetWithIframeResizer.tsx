@@ -14,12 +14,12 @@ export function WidgetWithIframeResizer({
   useIframeResizer();
 
   return (
-    <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
+    <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-grid-row--center")}>
       <div className={fr.cx("fr-col-12", "fr-col-md-9")}>
         <h1>{title}</h1>
       </div>
 
-      <div className={fr.cx("fr-col-12", "fr-col-offset-md-1", "fr-col-md-2")}>
+      <div className={fr.cx("fr-col-4", "fr-col-offset-md-1", "fr-col-md-2")}>
         <Link title="Code du travail numérique, Ministère du Travail" href="/">
           <img
             className="fr-responsive-img"
@@ -29,7 +29,7 @@ export function WidgetWithIframeResizer({
           />
         </Link>
       </div>
-      <div className={fr.cx("fr-col-12", "fr-col-offset-md-2", "fr-col-md-8")}>
+      <div className={fr.cx("fr-col-12", "fr-col-md-9")}>
         {children}
       </div>
     </div>
