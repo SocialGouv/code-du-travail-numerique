@@ -2,8 +2,47 @@
 
 exports[`<LetterModel /> should render a model 1`] = `
 <div>
+  <nav
+    aria-label="vous êtes ici :"
+    class="fr-breadcrumb fr-mb-2w fr-mt-2w"
+    id="fr-breadcrumb-:r0:"
+    role="navigation"
+  >
+    <button
+      aria-controls="breadcrumb-:r1:"
+      aria-expanded="false"
+      class="fr-breadcrumb__button"
+    >
+      Voir le fil d’Ariane
+    </button>
+    <div
+      class="fr-collapse"
+      id="breadcrumb-:r1:"
+    >
+      <ol
+        class="fr-breadcrumb__list"
+      >
+        <li>
+          <a
+            class="fr-breadcrumb__link"
+            href="/"
+          >
+            Accueil
+          </a>
+        </li>
+        <li>
+          <a
+            aria-current="page"
+            class="fr-breadcrumb__link"
+          >
+            Mon modele
+          </a>
+        </li>
+      </ol>
+    </div>
+  </nav>
   <div
-    class="fr-grid-row fr-grid-row--gutters fr-my-4w fr-my-md-12w"
+    class="fr-grid-row fr-grid-row--gutters fr-mb-4w fr-mb-md-12w"
   >
     <div
       class="fr-col-12 fr-col-md-7"
@@ -34,7 +73,7 @@ exports[`<LetterModel /> should render a model 1`] = `
         >
           <div
             class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--download"
-            id="fr-tile-:r0:"
+            id="fr-tile-:r2:"
           >
             <div
               class="fr-tile__body"
@@ -76,7 +115,7 @@ exports[`<LetterModel /> should render a model 1`] = `
         </div>
         <button
           class="fr-btn fr-btn--secondary fr-icon-clipboard-line fr-btn--icon-left w_100%! jc_center"
-          id="fr-button-:r1:"
+          id="fr-button-:r3:"
         >
           Copier le modèle
         </button>
@@ -96,7 +135,7 @@ exports[`<LetterModel /> should render a model 1`] = `
       </div>
       <div
         class="fr-alert fr-alert--info fr-alert--sm fr-mb-6w"
-        id="fr-alert-:r2:"
+        id="fr-alert-:r4:"
       >
         <p>
           Attention, chaque modèle de lettre proposé est à personnaliser selon votre situation et est susceptible d’évoluer suite à des changements de réglementation. Assurez-vous d’avoir la dernière version mise à jour avant toute utilisation.
@@ -107,7 +146,7 @@ exports[`<LetterModel /> should render a model 1`] = `
       >
         <button
           class="fr-btn fr-btn--secondary fr-icon-clipboard-line fr-btn--icon-left w_100%! jc_center"
-          id="fr-button-:r3:"
+          id="fr-button-:r5:"
         >
           Copier le modèle
         </button>
@@ -120,7 +159,7 @@ exports[`<LetterModel /> should render a model 1`] = `
       >
         <div
           class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--download"
-          id="fr-tile-:r4:"
+          id="fr-tile-:r6:"
         >
           <div
             class="fr-tile__body"
@@ -178,14 +217,14 @@ exports[`<LetterModel /> should render a model 1`] = `
           <div>
             <button
               class="fr-btn fr-btn--secondary fr-mr-2w"
-              id="fr-button-:r5:"
+              id="fr-button-:r7:"
               type="button"
             >
               Non
             </button>
             <button
               class="fr-btn fr-btn--secondary"
-              id="fr-button-:r6:"
+              id="fr-button-:r8:"
               type="button"
             >
               Oui
@@ -205,7 +244,7 @@ exports[`<LetterModel /> should render a model 1`] = `
         >
           <div
             class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--download"
-            id="fr-tile-:r7:"
+            id="fr-tile-:r9:"
           >
             <div
               class="fr-tile__body"
@@ -247,7 +286,7 @@ exports[`<LetterModel /> should render a model 1`] = `
         </div>
         <button
           class="fr-btn fr-btn--secondary fr-icon-clipboard-line fr-btn--icon-left w_100%! jc_center"
-          id="fr-button-:r8:"
+          id="fr-button-:ra:"
         >
           Copier le modèle
         </button>
@@ -321,7 +360,7 @@ exports[`<LetterModel /> should render a model 1`] = `
           <li>
             <button
               class="fr-btn fr-btn--tertiary ri-links-line fr-btn--icon-left"
-              id="fr-button-:r9:"
+              id="fr-button-:rb:"
               title="Copier le lien"
             >
               Lien de copie
