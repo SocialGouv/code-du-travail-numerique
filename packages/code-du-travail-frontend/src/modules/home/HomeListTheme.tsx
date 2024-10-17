@@ -41,9 +41,9 @@ export const HomeListTheme = (props: Props) => (
       <Image
         src="/static/assets/img/illustration-home-theme.svg"
         alt="Illustration graphique sur les thèmes"
-        width="350"
-        height="350"
-        className={`${fr.cx("fr-col-4", "fr-hidden", "fr-unhidden-lg")}`}
+        width="300"
+        height="300"
+        className={`${fr.cx("fr-col-3", "fr-hidden", "fr-unhidden-lg")}`}
       />
       {props.items.map((item, index) => (
         <HomeTile

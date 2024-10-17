@@ -64,6 +64,7 @@ const title = css({
 
 const paragraph = css({
   color: "var(--text-action-high-blue-france)",
+  textAlign: "start",
 });
 
 const buttonContainer = css({

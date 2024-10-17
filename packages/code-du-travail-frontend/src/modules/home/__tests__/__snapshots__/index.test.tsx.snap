@@ -476,14 +476,14 @@ exports[`<Home /> should match snapshot 1`] = `
           >
             <img
               alt="Illustration graphique sur les thèmes"
-              class="fr-col-4 fr-hidden fr-unhidden-lg"
+              class="fr-col-3 fr-hidden fr-unhidden-lg"
               data-nimg="1"
               decoding="async"
-              height="350"
+              height="300"
               loading="lazy"
               src="/static/assets/img/illustration-home-theme.svg"
               style="color: transparent;"
-              width="350"
+              width="300"
             />
             <div
               class="fr-col-12 fr-col-sm-6 fr-col-md-4 fr-col-lg-2"

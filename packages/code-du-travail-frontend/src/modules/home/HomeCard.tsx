@@ -14,7 +14,7 @@ export const HomeCard = (props: HomeCardProps) => (
   <div
     className={fr.cx(
       "fr-col-12",
-      props.isSmall ? "fr-col-md-6" : "fr-col-md-6",
+      "fr-col-md-6",
       props.isSmall ? "fr-col-lg-3" : "fr-col-lg-6"
     )}
   >

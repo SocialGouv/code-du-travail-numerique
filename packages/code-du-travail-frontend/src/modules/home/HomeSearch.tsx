@@ -141,14 +141,14 @@ const suggestion = css({
   listStyleType: "none",
   textAlign: "left",
   background: "var(--background-default-grey)",
-  "&:nth-child(2n + 1)": {
+  "&:nth-child(2n)": {
     background: "var(--background-default-grey-hover)",
   },
 });
 
 const isHighlighted = css({
   background: "var(--background-default-grey-active)",
-  "&:nth-child(2n + 1)": {
+  "&:nth-child(2n)": {
     background: "var(--background-default-grey-active)",
   },
 });
