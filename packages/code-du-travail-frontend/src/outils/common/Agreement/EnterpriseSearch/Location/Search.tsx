@@ -72,12 +72,7 @@ export const LocationSearchInput = (props: Props) => {
 
   function itemToString(item: ApiGeoResult | null) {
     return item
-      ? `${item.nom} (${
-          postalCode ??
-          (item.codesPostaux.length > 1
-            ? item.codeDepartement
-            : item.codesPostaux[0])
-        })`
+      ? `${item.nom} (${postalCode ?? (item.codesPostaux.length > 1 ? item.codeDepartement : item.codesPostaux[0])})`
       : "";
   }
 

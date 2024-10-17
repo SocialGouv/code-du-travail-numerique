@@ -3,38 +3,38 @@
 exports[`<ModelesDeCourrier /> should render 1`] = `
 <div>
   <div
-    class="sc-jdUcAg kyffsp"
+    class="sc-bf4d7851-0 cScnsz"
   >
     <div
-      class="sc-bddgXz bOuyjN"
+      class="sc-bf4d7851-1 lbLhz"
     />
     <header
-      class="sc-fUBkdm cdIumq"
+      class="sc-1bce5a92-0 daRkfQ"
     >
       <div
-        class="sc-hBtRBD hhFrKi"
+        class="sc-1bce5a92-1 JFtdO"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-aXZVg sc-eXsaLi gZgZQL hTNWeq"
+        class="sc-d8f596bd-0 sc-1bce5a92-4 jtWYDW jMVRmt"
       >
         <a
-          class="sc-gEkIjz eZnYXg"
+          class="sc-1bce5a92-5 dGVXOB"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-hoLEA cAIauw"
+            class="sc-1bce5a92-6 kQixfe"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-bOhtcR fxvZkA"
+            class="sc-1bce5a92-7 bAgQJS"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,15 +58,15 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-camqpD jBVvSj"
+          class="sc-1bce5a92-10 gxLGWf"
         >
           <form
             action="/recherche"
-            class="sc-deXhhX dCERfw"
+            class="sc-830662af-0 fdcWhS"
             role="search"
           >
             <div
-              class="sc-cWSHoV bKtA-De"
+              class="sc-8dcb2faa-0 gxfPDw"
             >
               <label
                 for="floating-search"
@@ -82,7 +82,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               aria-expanded="false"
               aria-labelledby="downshift-:r0:-label"
               autocomplete="off"
-              class="sc-epALIP byJirg"
+              class="sc-830662af-5 jDcVOD"
               id="floating-search"
               placeholder="Rechercher"
               role="combobox"
@@ -91,19 +91,19 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             />
             <ul
               aria-labelledby="downshift-:r0:-label"
-              class="sc-iLsKjm jreAvU"
+              class="sc-830662af-6 jvaqix"
               id="downshift-:r0:-menu"
               role="listbox"
             />
             <button
               aria-label="Lancer ma recherche"
-              class="sc-kOPcWz kyVwqT sc-dJiZtA hVSvKc"
+              class="sc-95bd4344-0 dxXsic sc-830662af-4 hWCjEV"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="sc-dQEtJz gghWjv"
+                class="sc-830662af-1 ieisKv"
                 fill="none"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -117,11 +117,11 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </form>
         </div>
         <div
-          class="sc-hYmls jvwQAF"
+          class="sc-1bce5a92-2 hsrbqR"
         >
           <a
             aria-label="Lancer ma recherche"
-            class="sc-kbdlSk dVYOry"
+            class="sc-1bce5a92-9 jlEcyl"
             href="/recherche"
           >
             <svg
@@ -138,21 +138,21 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </a>
         </div>
         <div
-          class="sc-fFlnrN dIbHpx"
+          class="sc-1bce5a92-8 jegxDE"
         >
           <button
-            class="sc-kOPcWz cOwJar sc-tagGq sc-bOQTJJ bZXUzd diAojX"
+            class="sc-95bd4344-0 ksRRNY sc-7ce33c9e-0 sc-1bce5a92-3 dfFPma hcjICj"
           >
             Accessibilité
           </button>
         </div>
         <button
           aria-label="menu principal"
-          class="sc-kOPcWz ewnaBc sc-dCFHLb bBPSFM sc-eifrsQ hKKQkM"
+          class="sc-95bd4344-0 jfFcPD sc-826d929a-1 gOztMa sc-46211e62-0 fntMFM"
         >
           <svg
             aria-hidden="true"
-            class="sc-fhzFiK dToUrA"
+            class="sc-826d929a-2 iVKgwY"
             fill="none"
             viewBox="0 0 32 32"
             xmlns="http://www.w3.org/2000/svg"
@@ -171,7 +171,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
       aria-expanded="false"
       aria-haspopup="dialog"
       aria-label="Donner votre avis"
-      class="sc-gweoQa cuLwRV"
+      class="sc-1a079d5a-0 dPrVcb"
       data-tally-open="3jLRW1"
       data-tally-overlay="1"
       data-tally-width="500"
@@ -179,7 +179,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
       <img
         alt="Suggestion"
         aria-hidden="true"
-        class="sc-eIcdZJ eFBa-DC"
+        class="sc-1a079d5a-1 dcOJGP"
         src="/static/assets/img/emoj-wave.png"
       />
       <span>
@@ -187,28 +187,28 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
       </span>
     </button>
     <main
-      class="sc-fyVfxW hTofgF"
+      class="sc-bf4d7851-2 YjLpR"
       id="content"
       tabindex="-1"
     >
       <nav
         aria-label="Fil d'ariane"
-        class="sc-ijDOKB fxaKwA"
+        class="sc-4acc650d-0 iZmHLs"
       >
         <ol
-          class="sc-aXZVg sc-eBwKMn gZgZQL kuyUMK"
+          class="sc-d8f596bd-0 sc-4acc650d-1 jtWYDW fiOSiq"
         >
           <li
-            class="sc-bHnlcS isdGJq"
+            class="sc-4acc650d-2 fEtKOP"
           >
             <a
-              class="sc-cKXybt iPTeoj"
+              class="sc-4acc650d-3 iwBcqI"
               href="/"
               title="Retour à l'accueil"
             >
               <svg
                 aria-hidden="true"
-                class="sc-lgjHQU fVumzT"
+                class="sc-4acc650d-4 jhEUEf"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -222,11 +222,11 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             </a>
           </li>
           <li
-            class="sc-bHnlcS isdGJq"
+            class="sc-4acc650d-2 fEtKOP"
           >
             <svg
               aria-hidden="true"
-              class="sc-fatcLD kRShrR"
+              class="sc-4acc650d-5 doDLRb"
               fill="none"
               viewBox="0 0 16 16"
               xmlns="http://www.w3.org/2000/svg"
@@ -238,7 +238,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             </svg>
              
             <a
-              class="sc-cKXybt iPTeoj"
+              class="sc-4acc650d-3 iwBcqI"
               href="/themes/theme"
             >
               theme
@@ -247,49 +247,49 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
         </ol>
       </nav>
       <div
-        class="sc-aXZVg sc-fPrdXf gZgZQL bIshE"
+        class="sc-d8f596bd-0 sc-b551711e-0 jtWYDW dPgTeI"
       >
         <div
-          class="sc-hGMjit betJGJ"
+          class="sc-b551711e-1 fIhGar"
         >
           <div
-            class="sc-aXZVg gZgZQL"
+            class="sc-d8f596bd-0 jtWYDW"
           >
             <div
-              class="sc-iGgWBj biWgIW"
+              class="sc-2a0a4b0a-0 hpYuum"
             >
               <div
-                class="sc-gplwa-d hBVilT"
+                class="sc-f2a41fcc-1 fNkZjj"
               >
                 <div>
                   <div
-                    class="sc-jlGgGc eSJNIQ"
+                    class="sc-f2a41fcc-0 hQZrlv"
                   >
                     <p
-                      class="sc-jaXxmE sc-lmUcrn kgvDSh cBijEW"
+                      class="sc-9261d202-0 sc-f2a41fcc-3 iTbcuX jigJXx"
                     >
                       theme
                     </p>
                     <header
-                      class="sc-kzqdkY bFdwok sc-iowXnY kjCeyY"
+                      class="sc-e32628d4-0 ktMpnf sc-f2a41fcc-4 cqLxSJ"
                     >
                       <h1
-                        class="sc-bVHCgj jaeZrq"
+                        class="sc-5f05e99b-0 cWsbaq"
                       >
                         <span
-                          class="sc-gsFSXq ljkohw"
+                          class="sc-a4d7a179-0 gGBEJx"
                         />
                         Modèle de lettre - Courrier Epistolaire
                       </h1>
                     </header>
                     <div
-                      class="sc-fscmHZ mSZhP"
+                      class="sc-f2a41fcc-5 tnWPU"
                     >
                       <p
-                        class="sc-krNlru bWTKgF"
+                        class="sc-3633cc97-1 ksBhgq"
                       >
                         <span
-                          class="sc-lfYzqA wkkuU"
+                          class="sc-f2a41fcc-8 ObhLq"
                         >
                           Mis à jour le
                            : 
@@ -299,22 +299,22 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sc-bWJUgm efRaGR"
+                    class="sc-f2a41fcc-6 vLCby"
                   >
                     <div
-                      class="sc-iGgWBj sc-gVJvzJ cWzIZL brvAp"
+                      class="sc-2a0a4b0a-0 sc-c6a0a198-1 dLOZmV bMPGyZ"
                     >
                       <p
-                        class="sc-krNlru bpribs"
+                        class="sc-3633cc97-1 bjxtLv"
                       >
                         un description
                       </p>
                     </div>
                     <div
-                      class="sc-kOHTFB enIaVF"
+                      class="sc-9d3cf83b-0 gYcXmc"
                     >
                       <div
-                        class="sc-dtInlm krTdyM"
+                        class="sc-9d3cf83b-1 laYFae"
                       >
                         <svg
                           aria-hidden="true"
@@ -338,21 +338,21 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="sc-gEvEer hpVpdb"
+                      class="sc-a384ed57-0 iEQrzr"
                     >
                       <div
-                        class="sc-iGgWBj sc-fmzyuX cRLRjd uNJVX"
+                        class="sc-2a0a4b0a-0 sc-ac749cfa-1 hPfzrL bQBck"
                       >
                         <div
-                          class="sc-jdkBTo fjJtne"
+                          class="sc-ac749cfa-0 OoRWv"
                         >
                           <a
-                            class="sc-kOPcWz eRFCst no-after"
+                            class="sc-95bd4344-0 jFwEAm no-after"
                             href="bucket.url/default/filename.pdf"
                           >
                             <svg
                               aria-hidden="true"
-                              class="sc-dwalKd Mqvjn"
+                              class="sc-ac749cfa-3 sCxYQ"
                               fill="none"
                               viewBox="0 0 32 32"
                               xmlns="http://www.w3.org/2000/svg"
@@ -363,7 +363,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                               />
                             </svg>
                             <div
-                              class="sc-cWSHoV bKtA-De"
+                              class="sc-8dcb2faa-0 gxfPDw"
                             >
                               Télécharger le document (
                               pdf
@@ -374,7 +374,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                           </a>
                         </div>
                         <div
-                          class="sc-eHsDsR"
+                          class="sc-85c198dc-0"
                         >
                           <p>
                             youhou
@@ -383,7 +383,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       </div>
                     </div>
                     <p
-                      class="sc-BQMaI cVWybs"
+                      class="sc-ac749cfa-4 gHYJtZ"
                     >
                       Type: Modèle de document - Format: 
                       pdf
@@ -394,15 +394,15 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                        
                     </p>
                     <p
-                      class="sc-iGgWBj sc-cspYLC cWzIZL kVFxmp"
+                      class="sc-2a0a4b0a-0 sc-ac749cfa-2 dLOZmV epwZhu"
                     >
                       Attention, chaque modèle de lettre proposé est à personnaliser selon votre situation et est susceptible d’évoluer suite à des changements de réglementation. Assurez-vous d’avoir la dernière version mise à jour avant toute utilisation.
                     </p>
                     <p
-                      class="sc-epqpcT lnxizx"
+                      class="sc-ac749cfa-5 AcFrc"
                     >
                       <a
-                        class="sc-kOPcWz cefBoA no-after"
+                        class="sc-95bd4344-0 jqYNvz no-after"
                         href="bucket.url/default/filename.pdf"
                       >
                         Télécharger le modèle (
@@ -412,7 +412,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                         Ko)  
                         <svg
                           aria-hidden="true"
-                          class="sc-dwalKd Mqvjn"
+                          class="sc-ac749cfa-3 sCxYQ"
                           fill="none"
                           viewBox="0 0 32 32"
                           xmlns="http://www.w3.org/2000/svg"
@@ -427,22 +427,22 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="sc-cTTdyq beuJZO"
+                  class="sc-f2a41fcc-2 bdFsMG"
                 >
                   <div
-                    class="sc-boZgaH gZFWTX"
+                    class="sc-338a722f-0 jXRpaP"
                   >
                     <button
-                      class="sc-jwZKMi dVpJtt no-after spacing-left"
+                      class="sc-338a722f-1 kiGnTA no-after spacing-left"
                       title="Partager sur Facebook"
                       type="button"
                     >
                       <span
-                        class="sc-dChVcU gAYUcZ"
+                        class="sc-338a722f-3 hmrQFw"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-rPWID kyXFIL"
+                          class="sc-338a722f-4 VgzwS"
                           fill="none"
                           viewBox="0 0 16 16"
                           xmlns="http://www.w3.org/2000/svg"
@@ -460,16 +460,16 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       </span>
                     </button>
                     <a
-                      class="sc-gJCZQp dNbpiH spacing-left"
+                      class="sc-338a722f-2 eMvIcS spacing-left"
                       href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Mod%C3%A8le%20de%20lettre%20-%20Courrier%20Epistolaire&body=un%20description%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                       title="Envoyer par email"
                     >
                       <span
-                        class="sc-dChVcU gAYUcZ"
+                        class="sc-338a722f-3 hmrQFw"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-rPWID kyXFIL"
+                          class="sc-338a722f-4 VgzwS"
                           fill="none"
                           viewBox="0 0 16 16"
                           xmlns="http://www.w3.org/2000/svg"
@@ -491,16 +491,16 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       </span>
                     </a>
                     <button
-                      class="sc-jwZKMi dVpJtt spacing-left"
+                      class="sc-338a722f-1 kiGnTA spacing-left"
                       title="Partager sur LinkedIn"
                       type="button"
                     >
                       <span
-                        class="sc-dChVcU gAYUcZ"
+                        class="sc-338a722f-3 hmrQFw"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-rPWID kyXFIL"
+                          class="sc-338a722f-4 VgzwS"
                           fill="none"
                           viewBox="0 0 16 16"
                           xmlns="http://www.w3.org/2000/svg"
@@ -518,19 +518,19 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       </span>
                     </button>
                     <div
-                      class="sc-hCPjZK dlWASs"
+                      class="sc-95cc8fb1-0 iHYHyU"
                     >
                       <button
-                        class="sc-jwZKMi dVpJtt spacing-left"
+                        class="sc-338a722f-1 kiGnTA spacing-left"
                         title="Plus d’options"
                         type="button"
                       >
                         <span
-                          class="sc-dChVcU gAYUcZ"
+                          class="sc-338a722f-3 hmrQFw"
                         >
                           <svg
                             aria-hidden="true"
-                            class="sc-rPWID kyXFIL"
+                            class="sc-338a722f-4 VgzwS"
                             fill="none"
                             viewBox="0 0 16 16"
                             xmlns="http://www.w3.org/2000/svg"
@@ -564,28 +564,28 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             </div>
           </div>
           <div
-            class="sc-aXZVg sc-dOoqMo gZgZQL cLapgF"
+            class="sc-d8f596bd-0 sc-c6a0a198-2 jtWYDW ceCYyW"
           >
             <p
-              class="sc-krNlru bpribs"
+              class="sc-3633cc97-1 bjxtLv"
             >
               Partager ce contenu : 
             </p>
             <div
-              class="sc-boZgaH gZFWTX"
+              class="sc-338a722f-0 jXRpaP"
             >
               <button
-                class="sc-jwZKMi dVpJtt no-after spacing-left"
+                class="sc-338a722f-1 kiGnTA no-after spacing-left"
                 tabindex="-1"
                 title="Partager sur Facebook"
                 type="button"
               >
                 <span
-                  class="sc-dChVcU gAYUcZ"
+                  class="sc-338a722f-3 hmrQFw"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-rPWID kyXFIL"
+                    class="sc-338a722f-4 VgzwS"
                     fill="none"
                     viewBox="0 0 16 16"
                     xmlns="http://www.w3.org/2000/svg"
@@ -603,17 +603,17 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 </span>
               </button>
               <a
-                class="sc-gJCZQp dNbpiH spacing-left"
+                class="sc-338a722f-2 eMvIcS spacing-left"
                 href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Mod%C3%A8le%20de%20lettre%20-%20Courrier%20Epistolaire&body=un%20description%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                 tabindex="-1"
                 title="Envoyer par email"
               >
                 <span
-                  class="sc-dChVcU gAYUcZ"
+                  class="sc-338a722f-3 hmrQFw"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-rPWID kyXFIL"
+                    class="sc-338a722f-4 VgzwS"
                     fill="none"
                     viewBox="0 0 16 16"
                     xmlns="http://www.w3.org/2000/svg"
@@ -635,17 +635,17 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 </span>
               </a>
               <button
-                class="sc-jwZKMi dVpJtt spacing-left"
+                class="sc-338a722f-1 kiGnTA spacing-left"
                 tabindex="-1"
                 title="Partager sur LinkedIn"
                 type="button"
               >
                 <span
-                  class="sc-dChVcU gAYUcZ"
+                  class="sc-338a722f-3 hmrQFw"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-rPWID kyXFIL"
+                    class="sc-338a722f-4 VgzwS"
                     fill="none"
                     viewBox="0 0 16 16"
                     xmlns="http://www.w3.org/2000/svg"
@@ -663,20 +663,20 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 </span>
               </button>
               <div
-                class="sc-hCPjZK dlWASs"
+                class="sc-95cc8fb1-0 iHYHyU"
               >
                 <button
-                  class="sc-jwZKMi dVpJtt spacing-left"
+                  class="sc-338a722f-1 kiGnTA spacing-left"
                   tabindex="-1"
                   title="Plus d’options"
                   type="button"
                 >
                   <span
-                    class="sc-dChVcU gAYUcZ"
+                    class="sc-338a722f-3 hmrQFw"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-rPWID kyXFIL"
+                      class="sc-338a722f-4 VgzwS"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -707,35 +707,35 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             </div>
           </div>
           <div
-            class="sc-gEvEer hpVpdb sc-cgjDci EMCnO"
+            class="sc-a384ed57-0 iEQrzr sc-3f9d0357-0 fZXZfe"
           >
             <div
-              class="sc-aXZVg gZgZQL"
+              class="sc-d8f596bd-0 jtWYDW"
             >
               <div
-                class="sc-iGgWBj cRLRjd"
+                class="sc-2a0a4b0a-0 hPfzrL"
               >
                 <div
-                  class="sc-dBFDNq jvrHBY"
+                  class="sc-66a51d8b-3 iitVHg"
                 >
                   <h2
-                    class="sc-ggqIjW etShBr sc-kAyceB kDiAsV"
+                    class="sc-66a51d8b-4 ihsodu sc-b879fc2d-0 ddMxZe"
                   >
                     <span
-                      class="sc-gsFSXq cdZUuw"
+                      class="sc-a4d7a179-0 jSVvrt"
                     />
                     Avez-vous trouvé la réponse à votre question ?
                   </h2>
                   <p
-                    class="sc-djVXDX hryvpX"
+                    class="sc-66a51d8b-5 eRJUhM"
                   >
                     <button
-                      class="sc-kOPcWz cpQXMn sc-epRvzc dwDDcL"
+                      class="sc-95bd4344-0 iLunBo sc-66a51d8b-6 xfnpJ"
                     >
                       Non
                     </button>
                     <button
-                      class="sc-kOPcWz cpQXMn sc-epRvzc dwDDcL"
+                      class="sc-95bd4344-0 iLunBo sc-66a51d8b-6 xfnpJ"
                     >
                       Oui
                     </button>
@@ -748,45 +748,45 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
       </div>
     </main>
     <div
-      class="sc-jOnpCo hiGzNx"
+      class="sc-4d9a65c1-1 hWbmEj"
     >
       <footer
-        class="sc-kFWlue jIqemF"
+        class="sc-4d9a65c1-2 unPdz"
       >
         <div
-          class="sc-gEvEer hpVpdb sc-bkEOxz jYDFgL"
+          class="sc-a384ed57-0 iEQrzr sc-4d9a65c1-3 fraWRV"
         >
           <div
-            class="sc-aXZVg gZgZQL"
+            class="sc-d8f596bd-0 jtWYDW"
           >
             <div
               aria-level="2"
-              class="sc-kzqdkY iBScIh"
+              class="sc-e32628d4-0 fQeCjG"
               role="heading"
             >
               <p
-                class="sc-dSIIpw cxAOED"
+                class="sc-d6e72754-0 gvSeXc"
               >
                 <span
-                  class="sc-gsFSXq djREvw"
+                  class="sc-a4d7a179-0 jRxkkJ"
                 />
                 Besoin de plus d’informations ?
               </p>
             </div>
             <div
-              class="sc-aXZVg sc-dhFUGM dPpwpV iEDLPP"
+              class="sc-d8f596bd-0 sc-4d9a65c1-4 jMrYSO eDGGKO"
             >
               <p>
                 Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
               </p>
             </div>
             <button
-              class="sc-kOPcWz gWtlVM"
+              class="sc-95bd4344-0 dqVtzj"
             >
               Contacter nos services en région
               <svg
                 aria-hidden="true"
-                class="sc-fbKhjd fEcfGH"
+                class="sc-4d9a65c1-5 kPTlut"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -800,28 +800,28 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </div>
         </div>
         <div
-          class="sc-gEvEer hpVpdb sc-leSDtu ddTDCo"
+          class="sc-a384ed57-0 iEQrzr sc-4d9a65c1-6 eNwCQl"
         >
           <div
-            class="sc-aXZVg sc-bJBgwP gZgZQL kMFXol"
+            class="sc-d8f596bd-0 sc-4d9a65c1-7 jtWYDW ceMaPg"
           >
             <div
-              class="sc-fsvrbR bDgNXU"
+              class="sc-4d9a65c1-0 wpgHP"
             >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-fAGzit enIDcU sc-kAyceB jIzQpS"
+                  class="sc-4d9a65c1-9 gkFfZG sc-b879fc2d-0 dSFUuf"
                   role="heading"
                 >
                   Code du travail numérique
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-dGCmGc kMmTaI cMvdbh"
+                  class="sc-ab356c14-0 sc-4d9a65c1-8 bpNHPl iNIrtI"
                 >
                   <li>
                     <a
-                      class="sc-bkSUFG ccAGAe"
+                      class="sc-4d9a65c1-10 fOjoXJ"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
@@ -829,7 +829,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bkSUFG ccAGAe"
+                      class="sc-4d9a65c1-10 fOjoXJ"
                       href="/glossaire"
                     >
                       Glossaire
@@ -837,7 +837,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bkSUFG ccAGAe"
+                      class="sc-4d9a65c1-10 fOjoXJ"
                       href="/a-propos"
                     >
                       À propos
@@ -845,7 +845,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bkSUFG ccAGAe"
+                      class="sc-4d9a65c1-10 fOjoXJ"
                       href="/stats"
                     >
                       Statistiques d’utilisation
@@ -853,7 +853,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bkSUFG ccAGAe"
+                      class="sc-4d9a65c1-10 fOjoXJ"
                       href="/integration"
                     >
                       Intégrer les outils du Code du travail numérique
@@ -863,22 +863,22 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               </div>
             </div>
             <div
-              class="sc-fsvrbR bDgNXU"
+              class="sc-4d9a65c1-0 wpgHP"
             >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-fAGzit enIDcU sc-kAyceB jIzQpS"
+                  class="sc-4d9a65c1-9 gkFfZG sc-b879fc2d-0 dSFUuf"
                   role="heading"
                 >
                   Outils populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-dGCmGc kMmTaI cMvdbh"
+                  class="sc-ab356c14-0 sc-4d9a65c1-8 bpNHPl iNIrtI"
                 >
                   <li>
                     <a
-                      class="sc-bkSUFG ccAGAe"
+                      class="sc-4d9a65c1-10 fOjoXJ"
                       href="/outils/simulateur-embauche"
                     >
                       Calcul du salaire brut/net
@@ -886,7 +886,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bkSUFG ccAGAe"
+                      class="sc-4d9a65c1-10 fOjoXJ"
                       href="/outils/indemnite-rupture-conventionnelle"
                     >
                       Calcul de l'indemnité de rupture conventionnelle
@@ -894,7 +894,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bkSUFG ccAGAe"
+                      class="sc-4d9a65c1-10 fOjoXJ"
                       href="/outils/convention-collective"
                     >
                       Trouver sa convention collective
@@ -905,17 +905,17 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-fAGzit enIDcU sc-kAyceB jIzQpS"
+                  class="sc-4d9a65c1-9 gkFfZG sc-b879fc2d-0 dSFUuf"
                   role="heading"
                 >
                   Modèles populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-dGCmGc kMmTaI cMvdbh"
+                  class="sc-ab356c14-0 sc-4d9a65c1-8 bpNHPl iNIrtI"
                 >
                   <li>
                     <a
-                      class="sc-bkSUFG ccAGAe"
+                      class="sc-4d9a65c1-10 fOjoXJ"
                       href="/modeles-de-courriers/lettre-de-demission"
                     >
                       Lettre de démission
@@ -923,7 +923,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bkSUFG ccAGAe"
+                      class="sc-4d9a65c1-10 fOjoXJ"
                       href="/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"
                     >
                       Rupture du contrat en période d'essai par le salarié
@@ -931,7 +931,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bkSUFG ccAGAe"
+                      class="sc-4d9a65c1-10 fOjoXJ"
                       href="/modeles-de-courriers/convocation-a-un-entretien-prealable-au-licenciement-pour-motif-personnel"
                     >
                       Convocation à un entretien préalable au licenciement pour motif personnel
@@ -941,22 +941,22 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               </div>
             </div>
             <div
-              class="sc-fsvrbR bDgNXU"
+              class="sc-4d9a65c1-0 wpgHP"
             >
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-fAGzit enIDcU sc-kAyceB jIzQpS"
+                  class="sc-4d9a65c1-9 gkFfZG sc-b879fc2d-0 dSFUuf"
                   role="heading"
                 >
                   Fiches pratiques populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-dGCmGc kMmTaI cMvdbh"
+                  class="sc-ab356c14-0 sc-4d9a65c1-8 bpNHPl iNIrtI"
                 >
                   <li>
                     <a
-                      class="sc-bkSUFG ccAGAe"
+                      class="sc-4d9a65c1-10 fOjoXJ"
                       href="/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission"
                     >
                       Durée du préavis de démission
@@ -964,7 +964,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bkSUFG ccAGAe"
+                      class="sc-4d9a65c1-10 fOjoXJ"
                       href="/contribution/les-conges-pour-evenements-familiaux"
                     >
                       Congés pour événements familiaux
@@ -972,7 +972,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bkSUFG ccAGAe"
+                      class="sc-4d9a65c1-10 fOjoXJ"
                       href="/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                     >
                       Maintien du salaire en cas d'arrêt maladie
@@ -983,17 +983,17 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <div>
                 <strong
                   aria-level="2"
-                  class="sc-fAGzit enIDcU sc-kAyceB jIzQpS"
+                  class="sc-4d9a65c1-9 gkFfZG sc-b879fc2d-0 dSFUuf"
                   role="heading"
                 >
                   Conventions collectives populaires
                 </strong>
                 <ul
-                  class="sc-cfxfcM sc-dGCmGc kMmTaI cMvdbh"
+                  class="sc-ab356c14-0 sc-4d9a65c1-8 bpNHPl iNIrtI"
                 >
                   <li>
                     <a
-                      class="sc-bkSUFG ccAGAe"
+                      class="sc-4d9a65c1-10 fOjoXJ"
                       href="/convention-collective/1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle"
                     >
                       Services de l'automobile
@@ -1001,7 +1001,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bkSUFG ccAGAe"
+                      class="sc-4d9a65c1-10 fOjoXJ"
                       href="/convention-collective/3248-metallurgie"
                     >
                       Métallurgie
@@ -1009,7 +1009,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="sc-bkSUFG ccAGAe"
+                      class="sc-4d9a65c1-10 fOjoXJ"
                       href="/convention-collective/573-commerces-de-gros"
                     >
                       Commerce de gros
@@ -1021,10 +1021,10 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </div>
         </div>
         <div
-          class="sc-aXZVg sc-hTUWRQ gZgZQL iOQcAv"
+          class="sc-d8f596bd-0 sc-d2f8e86a-0 jtWYDW gLHwsT"
         >
           <div
-            class="sc-lizKOf jlNHQY"
+            class="sc-d2f8e86a-1 ipUnWt"
           >
             <img
               alt="le site du ministere du travail, de l'emploi et de l'insertion"
@@ -1037,7 +1037,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               width="170"
             />
             <ul
-              class="sc-eoVZPG dZZYot"
+              class="sc-d2f8e86a-2 gHNrXP"
             >
               <li>
                 <a
@@ -1077,13 +1077,13 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             </ul>
           </div>
           <div
-            class="sc-satoz iTaWXu"
+            class="sc-d2f8e86a-5 btMldF"
           />
           <div
-            class="sc-dWZqqJ bGxlNu"
+            class="sc-d2f8e86a-3 bKRwPr"
           >
             <ul
-              class="sc-eoVZPG sc-isRoRg dZZYot hYUXaZ"
+              class="sc-d2f8e86a-2 sc-d2f8e86a-4 gHNrXP eyROlo"
             >
               <li>
                 <a
@@ -1125,7 +1125,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <li>
                 <a
                   aria-label="Nous contacter"
-                  class="sc-eNSrOW fRbHNW"
+                  class="sc-d2f8e86a-6 ffdiGN"
                   role="link"
                 >
                   Nous contacter

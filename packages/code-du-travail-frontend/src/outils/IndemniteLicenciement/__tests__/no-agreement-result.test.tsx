@@ -56,7 +56,7 @@ describe("Indemnité licenciement", () => {
         )
         .setInput(ui.seniority.absences.duration(0).get(), "3")
         .click(ui.next.get())
-        .click(ui.salary.hasPartialTime.non.get())
+        .click(ui.salary.hasPartialTime.non.get());
       userAction.click(ui.salary.hasSameSalary.oui.get());
       userAction.setInput(ui.salary.sameSalaryValue.get(), "2000");
       userAction.click(ui.next.get());

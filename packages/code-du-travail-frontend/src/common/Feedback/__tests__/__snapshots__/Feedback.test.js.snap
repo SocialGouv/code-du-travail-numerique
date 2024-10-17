@@ -3,35 +3,35 @@
 exports[`<Feedback/> should render 1`] = `
 <div>
   <div
-    class="sc-gEvEer hpVpdb sc-iXzfSG iKsDZP"
+    class="sc-a384ed57-0 iEQrzr sc-3f9d0357-0 fZXZfe"
   >
     <div
-      class="sc-aXZVg gZgZQL"
+      class="sc-d8f596bd-0 jtWYDW"
     >
       <div
-        class="sc-iGgWBj cRLRjd"
+        class="sc-2a0a4b0a-0 hPfzrL"
       >
         <div
-          class="sc-iapWAC htQmqi"
+          class="sc-66a51d8b-3 iitVHg"
         >
           <h2
-            class="sc-kqGoIF hBlUrr sc-kAyceB kDiAsV"
+            class="sc-66a51d8b-4 ihsodu sc-b879fc2d-0 ddMxZe"
           >
             <span
-              class="sc-gsFSXq cdZUuw"
+              class="sc-a4d7a179-0 jSVvrt"
             />
             Avez-vous trouvé la réponse à votre question ?
           </h2>
           <p
-            class="sc-dxcDKg dKsgnI"
+            class="sc-66a51d8b-5 eRJUhM"
           >
             <button
-              class="sc-kOPcWz cpQXMn sc-gvZAcH bxRqxi"
+              class="sc-95bd4344-0 iLunBo sc-66a51d8b-6 xfnpJ"
             >
               Non
             </button>
             <button
-              class="sc-kOPcWz cpQXMn sc-gvZAcH bxRqxi"
+              class="sc-95bd4344-0 iLunBo sc-66a51d8b-6 xfnpJ"
             >
               Oui
             </button>
@@ -46,41 +46,41 @@ exports[`<Feedback/> should render 1`] = `
 exports[`<Feedback/> should render form once user answer no 1`] = `
 <div>
   <div
-    class="sc-gEvEer hpVpdb sc-iXzfSG iKsDZP"
+    class="sc-a384ed57-0 iEQrzr sc-3f9d0357-0 fZXZfe"
   >
     <div
-      class="sc-aXZVg gZgZQL"
+      class="sc-d8f596bd-0 jtWYDW"
     >
       <div
-        class="sc-iGgWBj cRLRjd"
+        class="sc-2a0a4b0a-0 hPfzrL"
       >
         <div
-          class="sc-iapWAC htQmqi"
+          class="sc-66a51d8b-3 iitVHg"
         >
           <h2
-            class="sc-kqGoIF hBlUrr sc-kAyceB kDiAsV"
+            class="sc-66a51d8b-4 ihsodu sc-b879fc2d-0 ddMxZe"
           >
             <span
-              class="sc-gsFSXq cdZUuw"
+              class="sc-a4d7a179-0 jSVvrt"
             />
             Merci pour votre réponse.
           </h2>
         </div>
         <form>
           <fieldset
-            class="sc-eulNck dcbEAr"
+            class="sc-66a51d8b-1 dklOQM"
           >
             <legend
-              class="sc-dExYaf gYIifE"
+              class="sc-66a51d8b-2 jpcSlV"
             >
               Pouvez-vous nous en dire plus ?
             </legend>
             <label
-              class="sc-eyvILC erxqfW"
+              class="sc-839d90a8-0 gMVMHp"
               for="unclear"
             >
               <input
-                class="sc-gfoqjT UMmfj"
+                class="sc-839d90a8-1 eqiyso"
                 id="unclear"
                 name="category"
                 type="checkbox"
@@ -89,11 +89,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               Les informations ne sont pas claires.
             </label>
             <label
-              class="sc-eyvILC erxqfW"
+              class="sc-839d90a8-0 gMVMHp"
               for="unrelated"
             >
               <input
-                class="sc-gfoqjT UMmfj"
+                class="sc-839d90a8-1 eqiyso"
                 id="unrelated"
                 name="category"
                 type="checkbox"
@@ -102,11 +102,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               Cette page ne correspond pas à ma recherche ou à ma situation.
             </label>
             <label
-              class="sc-eyvILC erxqfW"
+              class="sc-839d90a8-0 gMVMHp"
               for="unsatisfied"
             >
               <input
-                class="sc-gfoqjT UMmfj"
+                class="sc-839d90a8-1 eqiyso"
                 id="unsatisfied"
                 name="category"
                 type="checkbox"
@@ -115,11 +115,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               Je ne suis pas satisfait de cette réglementation.
             </label>
             <label
-              class="sc-eyvILC erxqfW"
+              class="sc-839d90a8-0 gMVMHp"
               for="wrong"
             >
               <input
-                class="sc-gfoqjT UMmfj"
+                class="sc-839d90a8-1 eqiyso"
                 id="wrong"
                 name="category"
                 type="checkbox"
@@ -129,13 +129,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             </label>
           </fieldset>
           <label
-            class="sc-ERObt blrUmt"
+            class="sc-66a51d8b-9 jiFyYA"
             for="suggestion"
           >
             Faire une suggestion pour améliorer cette page
           </label>
           <textarea
-            class="sc-ecPEgm foALIG sc-knuQbY iEIWKo"
+            class="sc-3dad25ce-0 gVEtdz sc-66a51d8b-8 hgLwfg"
             cols="50"
             id="suggestion"
             maxlength="150"
@@ -145,13 +145,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
           />
           <div>
             <span
-              class="sc-iMTnTL bCcoWP"
+              class="sc-3633cc97-0 cictDJ"
             >
               150
                caractères restants
             </span>
             <div
-              class="sc-cWSHoV bKtA-De"
+              class="sc-8dcb2faa-0 gxfPDw"
               role="status"
             >
               150
@@ -159,10 +159,10 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             </div>
           </div>
           <div
-            class="sc-dNsVcS lnwERS"
+            class="sc-66a51d8b-10 iVMFlu"
           >
             <button
-              class="sc-kOPcWz dSQWfG sc-gvZAcH bxRqxi"
+              class="sc-95bd4344-0 ddXsil sc-66a51d8b-6 xfnpJ"
             >
               Envoyer
             </button>
@@ -172,7 +172,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
           Pour obtenir une réponse à votre question de droit du travail, nous vous invitons à joindre
            
           <button
-            class="sc-kOPcWz gACNan"
+            class="sc-95bd4344-0 hgVQqQ"
             type="button"
           >
             les services du ministère du Travail en région
@@ -198,35 +198,35 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 exports[`<Feedback/> should render form once user answer yes 1`] = `
 <div>
   <div
-    class="sc-gEvEer hpVpdb sc-iXzfSG iKsDZP"
+    class="sc-a384ed57-0 iEQrzr sc-3f9d0357-0 fZXZfe"
   >
     <div
-      class="sc-aXZVg gZgZQL"
+      class="sc-d8f596bd-0 jtWYDW"
     >
       <div
-        class="sc-iGgWBj cRLRjd"
+        class="sc-2a0a4b0a-0 hPfzrL"
       >
         <div
-          class="sc-iapWAC htQmqi"
+          class="sc-66a51d8b-3 iitVHg"
         >
           <h2
-            class="sc-kqGoIF hBlUrr sc-kAyceB kDiAsV"
+            class="sc-66a51d8b-4 ihsodu sc-b879fc2d-0 ddMxZe"
           >
             <span
-              class="sc-gsFSXq cdZUuw"
+              class="sc-a4d7a179-0 jSVvrt"
             />
             Merci pour votre réponse.
           </h2>
         </div>
         <form>
           <label
-            class="sc-ERObt blrUmt"
+            class="sc-66a51d8b-9 jiFyYA"
             for="suggestion"
           >
             Faire une suggestion pour améliorer cette page
           </label>
           <textarea
-            class="sc-ecPEgm foALIG sc-knuQbY iEIWKo"
+            class="sc-3dad25ce-0 gVEtdz sc-66a51d8b-8 hgLwfg"
             cols="50"
             id="suggestion"
             maxlength="150"
@@ -236,13 +236,13 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
           />
           <div>
             <span
-              class="sc-iMTnTL bCcoWP"
+              class="sc-3633cc97-0 cictDJ"
             >
               150
                caractères restants
             </span>
             <div
-              class="sc-cWSHoV bKtA-De"
+              class="sc-8dcb2faa-0 gxfPDw"
               role="status"
             >
               150
@@ -250,10 +250,10 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
             </div>
           </div>
           <div
-            class="sc-dNsVcS lnwERS"
+            class="sc-66a51d8b-10 iVMFlu"
           >
             <button
-              class="sc-kOPcWz dSQWfG sc-gvZAcH bxRqxi"
+              class="sc-95bd4344-0 ddXsil sc-66a51d8b-6 xfnpJ"
             >
               Envoyer
             </button>

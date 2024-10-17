@@ -64,7 +64,9 @@ export class ReferenceSalary1486
     catPro,
   }: ReferenceSalaryProps<SupportedCc.IDCC1486>): number {
     if (typeLicenciement === TypeLicenciement1486.refus)
-      return new ReferenceSalaryLegal().computeReferenceSalary({ salaires });
+      return new ReferenceSalaryLegal().computeReferenceSalary({
+        salaires,
+      });
 
     const rankedSalaires = rankByMonthArrayDescFrench(salaires);
     const salaryValues = rankedSalaires.map((a) => a.value).filter(nonNullable);
