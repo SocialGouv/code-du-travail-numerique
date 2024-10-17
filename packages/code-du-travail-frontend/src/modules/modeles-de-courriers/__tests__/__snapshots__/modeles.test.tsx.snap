@@ -56,7 +56,7 @@ exports[`<LetterModel /> should render a model 1`] = `
                 <p
                   class="fr-tile__detail"
                 >
-                  txt - 0.01Ko
+                  format txt - 0.01Ko
                 </p>
               </div>
             </div>
@@ -85,7 +85,7 @@ exports[`<LetterModel /> should render a model 1`] = `
         />
       </div>
       <div
-        class="fr-p-2w fr-mb-6w bd_1px_solid bdr_8px bd-c_var(--artwork-minor-blue-cumulus)"
+        class="fr-p-2w fr-pt-4w fr-mb-6w bd_1px_solid bdr_8px bd-c_var(--artwork-minor-blue-cumulus)"
         id="content-to-copy"
       >
         <div>
@@ -142,7 +142,7 @@ exports[`<LetterModel /> should render a model 1`] = `
               <p
                 class="fr-tile__detail"
               >
-                txt - 0.01Ko
+                format txt - 0.01Ko
               </p>
             </div>
           </div>
@@ -227,7 +227,7 @@ exports[`<LetterModel /> should render a model 1`] = `
                 <p
                   class="fr-tile__detail"
                 >
-                  txt - 0.01Ko
+                  format txt - 0.01Ko
                 </p>
               </div>
             </div>

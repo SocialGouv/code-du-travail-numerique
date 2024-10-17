@@ -21,7 +21,7 @@ export const DownloadTile = ({
       imageUrl={`/static/assets/img/modeles-de-courriers-download.svg`}
       title={`Télécharger le ${title}`}
       titleAs="h2"
-      detail={`${extension} - ${filesizeFormated}Ko`}
+      detail={`format ${extension} - ${filesizeFormated}Ko`}
       linkProps={{
         href: toUrl(filename),
       }}

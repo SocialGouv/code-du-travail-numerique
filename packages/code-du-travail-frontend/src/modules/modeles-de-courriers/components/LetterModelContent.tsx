@@ -7,6 +7,7 @@ import { getDisclaimer } from "../helpers";
 import { Alert } from "@codegouvfr/react-dsfr/Alert";
 import { DownloadTile } from "./DownloadTile";
 import { CopyButton } from "./CopyButton";
+import "../../../../public/static/modeles.css";
 
 export interface LetterModelProps {
   date: string;
@@ -46,7 +47,7 @@ export const LetterModelContent = ({
         <CopyButton />
       </div>
       <div
-        className={`${fr.cx("fr-p-2w")} ${fr.cx("fr-mb-6w")} ${border}`}
+        className={`${fr.cx("fr-p-2w", "fr-pt-4w", "fr-mb-6w")} ${border}`}
         id="content-to-copy"
       >
         <Html>{html}</Html>

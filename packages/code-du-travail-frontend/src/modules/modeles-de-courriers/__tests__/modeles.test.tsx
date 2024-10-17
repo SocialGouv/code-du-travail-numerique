@@ -1,7 +1,6 @@
 import { push as matopush } from "@socialgouv/matomo-next";
 import { fireEvent, render } from "@testing-library/react";
 import { LetterModel } from "../modeles";
-import {FeedbackAnswered} from "../../layout/feedback/FeedbackAnswered";
 
 jest.mock("@socialgouv/matomo-next", () => {
   return {
@@ -15,23 +14,23 @@ afterEach(() => {
 
 describe("<LetterModel />", () => {
   it("should render a model", () => {
-
-    const { container, getAllByText } = render(      <LetterModel
-      title="Mon modele"
-      slug={"mon-modele"}
-      breadcrumbs={[]}
-      date={"12/02/2020"}
-      intro={"Ceci est mon intro"}
-      relatedItems={[]}
-      metaDescription={"ma méta description"}
-      filesize={10}
-      filename={"mon-fichier.txt"}
-      html="<p>Le modèle</p>"
-    />);
+    const { container, getAllByText } = render(
+      <LetterModel
+        title="Mon modele"
+        slug={"mon-modele"}
+        breadcrumbs={[]}
+        date={"12/02/2020"}
+        intro={"Ceci est mon intro"}
+        relatedItems={[]}
+        metaDescription={"ma méta description"}
+        filesize={10}
+        filename={"mon-fichier.txt"}
+        html="<p>Le modèle</p>"
+      />
+    );
     expect(
       getAllByText("Télécharger le Mon modele")[0].getAttribute("href")
     ).toEqual("bucket.url/default/mon-fichier.txt");
-
 
     expect(container).toMatchSnapshot();
   });
