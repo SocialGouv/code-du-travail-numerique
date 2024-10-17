@@ -16,7 +16,7 @@ exports[`<LetterModel /> should render a model 1`] = `
       <p
         class="fr-mb-6w"
       >
-        Mise à jour le : 
+        Mis à jour le : 
         12/02/2020
       </p>
       <div

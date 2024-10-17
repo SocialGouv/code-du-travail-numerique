@@ -30,7 +30,7 @@ export const LetterModelContent = ({
 }: LetterModelProps) => {
   return (
     <>
-      <p className={fr.cx("fr-mb-6w")}>Mise à jour le&nbsp;: {date}</p>
+      <p className={fr.cx("fr-mb-6w")}>Mis à jour le&nbsp;: {date}</p>
       {intro && (
         <div className={`${fr.cx("fr-highlight", "fr-mb-6w")}`}>
           <Html>{intro}</Html>
