@@ -110,6 +110,11 @@ exports[`<FeedbackContent /> should match snapshot for negative 1`] = `
       class="fr-input"
       id="input-:r4:"
     />
+    <div
+      aria-live="polite"
+      class="fr-messages-group"
+      id="input-:r4:-messages-group"
+    />
   </div>
   <p
     class="fr-info-text fr-mt-0 fr-mb-3w"
@@ -146,6 +151,11 @@ exports[`<FeedbackContent /> should match snapshot for positive 1`] = `
       aria-describedby="input-:r0:-desc-error"
       class="fr-input"
       id="input-:r0:"
+    />
+    <div
+      aria-live="polite"
+      class="fr-messages-group"
+      id="input-:r0:-messages-group"
     />
   </div>
   <p
