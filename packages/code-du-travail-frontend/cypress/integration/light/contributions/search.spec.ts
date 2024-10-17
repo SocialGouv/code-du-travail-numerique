@@ -1,7 +1,7 @@
 describe("Contributions", () => {
   it("rechercher et voir une contribution", () => {
     cy.visit("/");
-    cy.get("#searchbar").type("durée maximale CDD");
+    cy.get("#home-searchbar").type("durée maximale CDD");
     cy.get("#content").get("button").contains("Rechercher").click();
     cy.get("#content li").should("have.length", 7);
     cy.contains("Quelle peut être la durée maximale d'un CDD").click();
