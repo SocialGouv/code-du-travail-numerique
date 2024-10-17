@@ -5107,7 +5107,7 @@
       "type": "préavis de Licenciement",
       "idcc": 3239,
       "typeRupture": null,
-      "answer": "8 jours",
+      "answer": "8 jours calendaires",
       "answer2": null,
       "answer3": "8",
       "refs": [
@@ -5131,7 +5131,7 @@
       "type": "préavis de Licenciement",
       "idcc": 3239,
       "typeRupture": null,
-      "answer": "15 jours",
+      "answer": "15 jours calendaires",
       "answer2": null,
       "answer3": "15",
       "refs": [

@@ -56,6 +56,8 @@ describe("DureePreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
+
+        expect(screen.queryAllByText(/Article 162.4.1/)[0]).toBeInTheDocument();
       });
     });
 
@@ -69,6 +71,8 @@ describe("DureePreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
+
+        expect(screen.queryAllByText(/Article 162.4.1/)[0]).toBeInTheDocument();
       });
     });
 
@@ -82,6 +86,8 @@ describe("DureePreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
+
+        expect(screen.queryAllByText(/Article 162.4.1/)[0]).toBeInTheDocument();
       });
     });
   });
@@ -108,7 +114,9 @@ describe("DureePreavisLicenciement", () => {
       });
 
       it("should display expected answer", () => {
-        expect(screen.queryAllByText(/8 jours/g)[0]).toBeInTheDocument();
+        expect(
+          screen.queryAllByText(/8 jours calendaires/g)[0]
+        ).toBeInTheDocument();
 
         expect(
           screen.queryAllByText(
@@ -130,7 +138,9 @@ describe("DureePreavisLicenciement", () => {
       });
 
       it("should display expected answer", () => {
-        expect(screen.queryAllByText(/15 jours/g)[0]).toBeInTheDocument();
+        expect(
+          screen.queryAllByText(/15 jours calendaires/g)[0]
+        ).toBeInTheDocument();
 
         expect(
           screen.queryAllByText(
