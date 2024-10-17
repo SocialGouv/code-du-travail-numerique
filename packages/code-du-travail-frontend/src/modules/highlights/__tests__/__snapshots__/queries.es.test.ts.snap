@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Highlights getBySlugHighlights 1`] = `
+exports[`Highlights fetchHighLights 1`] = `
 [
   {
     "breadcrumbs": [],

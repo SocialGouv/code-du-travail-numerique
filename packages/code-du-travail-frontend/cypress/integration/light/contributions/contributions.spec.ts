@@ -1,7 +1,9 @@
 describe("Contributions", () => {
   it("je vois la liste de toutes les contributions par thèmes", () => {
     cy.visit("/");
-    cy.get("#navigation").contains("Vos fiches pratiques").click();
+    cy.get("#fr-header-main-navigation")
+      .contains("Vos fiches pratiques")
+      .click();
     cy.url().should("include", "/contribution");
     cy.get("h1").should("have.text", "Vos fiches pratiques");
     cy.get("body").should(

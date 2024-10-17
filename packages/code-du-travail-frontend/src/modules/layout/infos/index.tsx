@@ -54,7 +54,7 @@ export const NeedMoreInfo = () => {
 };
 
 const mainContainer = css({
-  background: "var(--background-alt-blue-france)",
+  background: "var(--background-alt-blue-cumulus)",
 });
 
 const title = css({
@@ -64,6 +64,7 @@ const title = css({
 
 const paragraph = css({
   color: "var(--text-action-high-blue-france)",
+  textAlign: "start",
 });
 
 const buttonContainer = css({

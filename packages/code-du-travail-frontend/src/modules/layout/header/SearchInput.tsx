@@ -19,7 +19,13 @@ export const SearchInput = (props: Props) => {
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const { emitSuggestionEvent } = useLayoutTracking();
 
-  const { isOpen, getMenuProps, getInputProps, getItemProps } = useCombobox({
+  const {
+    isOpen,
+    getMenuProps,
+    getInputProps,
+    getItemProps,
+    highlightedIndex,
+  } = useCombobox({
     items: suggestions,
     onInputValueChange: async ({ inputValue }) => {
       setQuery(inputValue);
@@ -64,7 +70,7 @@ export const SearchInput = (props: Props) => {
               {...getItemProps({
                 item,
                 index,
-                className: `${fr.cx("fr-p-3v")} ${suggestion}`,
+                className: `${fr.cx("fr-p-3v")} ${suggestion} ${highlightedIndex === index ? isHighlighted : ""}`,
               })}
               key={`${item}${index}`}
             >
@@ -89,4 +95,8 @@ const suggestion = css({
   color: "var(--text-action-high-blue-france)",
   textAlign: "left",
   _hover: { bg: "var(--background-default-grey-hover)" },
+});
+
+const isHighlighted = css({
+  background: "var(--background-default-grey-hover)",
 });

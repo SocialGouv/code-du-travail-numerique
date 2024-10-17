@@ -1,6 +1,6 @@
 import { elasticDocumentsIndex, elasticsearchClient } from "../../utils";
 import { getAllGenericsContributions, getContributionsByIds } from "./queries";
-import { fetchAllContributions } from "./fetch";
+import { fetchContributions } from "./fetch";
 import { ElasticSearchItem } from "../../types";
 import { ElasticAgreement } from "@socialgouv/cdtn-types";
 
@@ -33,7 +33,7 @@ function getTitle(agreements: ElasticAgreement[], contrib) {
 export const getAllContributionsGroupByQuestion = async (
   agreements: ElasticAgreement[]
 ) => {
-  const response = await fetchAllContributions();
+  const response = await fetchContributions();
   const all = response.hits.hits.map(({ _source }) => _source);
   const allGenerics = all
     .filter(isGeneric)
