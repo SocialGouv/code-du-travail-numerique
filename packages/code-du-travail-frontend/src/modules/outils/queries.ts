@@ -58,8 +58,8 @@ export const fetchAllTools = async <K extends keyof Tool>(
 
 export const fetchTool = async (
   slug: string
-): Promise<DocumentElasticResult<ElasticTool> | undefined> => {
-  return await fetchDocument<
+): Promise<DocumentElasticResult<ElasticTool>> => {
+  const result = await fetchDocument<
     ElasticTool,
     keyof DocumentElasticResult<ElasticTool>
   >(["description", "title"], {
@@ -74,4 +74,8 @@ export const fetchTool = async (
     },
     size: 1,
   });
+  if (!result || result) {
+    throw new Error("Outils non trouvé");
+  }
+  return result;
 };
