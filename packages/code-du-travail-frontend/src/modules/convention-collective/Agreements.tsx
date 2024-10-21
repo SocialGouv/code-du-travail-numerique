@@ -7,7 +7,7 @@ import { css } from "../../../styled-system/css";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { ListWithArrow } from "../common/ListWithArrow";
 import Image from "next/image";
-import RechercheCC from "./RechercheCC.svg";
+import AgreementSearch from "./AgreementSearch.svg";
 
 type Agreement = Pick<ElasticAgreement, "shortTitle" | "slug">;
 
@@ -55,7 +55,7 @@ export const Agreements = ({ agreements }: Props) => {
           <div className={fr.cx("fr-grid-row")}>
             <Image
               priority
-              src={RechercheCC}
+              src={AgreementSearch}
               alt="Trouver sa convention collective"
             />
             Trouver sa convention collective
