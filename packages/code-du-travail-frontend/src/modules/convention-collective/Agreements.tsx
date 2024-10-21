@@ -1,13 +1,9 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import { Highlight } from "@codegouvfr/react-dsfr/Highlight";
 import { ContainerSimulator } from "../layout/ContainerSimulator";
 import { ElasticAgreement } from "@socialgouv/cdtn-types";
-import Link from "next/link";
-import { css } from "../../../styled-system/css";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { ListWithArrow } from "../common/ListWithArrow";
-import Image from "next/image";
-import AgreementSearch from "./AgreementSearch.svg";
+import { AgreementsSection } from "./AgreementsSection";
+import { AgreementsGlossaire } from "./AgreementsGlossaire";
+import { AgreementsIntro } from "./AgreementsIntro";
 
 type Agreement = Pick<ElasticAgreement, "shortTitle" | "slug">;
 
@@ -50,119 +46,19 @@ export const Agreements = ({ agreements }: Props) => {
       <h1 id="convention-collective" className={fr.cx("fr-mt-0", "fr-mb-3w")}>
         Votre convention collective
       </h1>
-      <div className={`${fr.cx("fr-p-3w", "fr-mb-6w")} ${block}`}>
-        <h2>
-          <div className={fr.cx("fr-grid-row")}>
-            <Image
-              priority
-              src={AgreementSearch}
-              alt="Trouver sa convention collective"
-            />
-            Trouver sa convention collective
-          </div>
-        </h2>
-        <Highlight size="lg" className={fr.cx("fr-mb-12v")}>
-          <span>
-            La convention collective est un texte conclu au niveau d&apos;une
-            branche d&apos;actrivité (Ex: Transports routiers). Elle adapte les
-            règles du Code du travail sur des points précis, en fonction des
-            situations particulières de la branche (primes, congés, salaires
-            minima, préavis, prévoyance...)
-          </span>
-          <br />
-          <br />
-          <span className={fr.cx("fr-text--bold")}>
-            Vous pouvez retrouver le nom de votre convention collective sur
-            votre bulletin de paie ou sur votre contrat de travail.
-          </span>
-        </Highlight>
-        <div
-          className={`${fr.cx(
-            "fr-grid-row",
-            "fr-grid-row--center",
-            "fr-px-4w",
-            "fr-mt-2w",
-            "fr-mb-3w"
-          )}`}
-        >
-          <Link
-            href="/outils/convention-collective/convention"
-            className={`${fr.cx(
-              "fr-btn",
-              "fr-btn--icon-right",
-              "fr-icon-arrow-right-line",
-              "fr-px-9v",
-              "fr-col-12",
-              "fr-col-md-3",
-              "fr-mr-md-6w",
-              "fr-mb-md-0",
-              "fr-mb-2w"
-            )}`}
-          >
-            Je connais ma convention collective je la saisie
-          </Link>
-          <Link
-            href="/outils/convention-collective/entreprise"
-            className={`${fr.cx("fr-btn", "fr-btn--icon-right", "fr-icon-arrow-right-line", "fr-col-12", "fr-col-md-3", "fr-px-6v")}`}
-          >
-            Je cherche mon entreprise pour trouver ma convention collective
-          </Link>
-        </div>
-      </div>
+      <AgreementsIntro />
       <div className={fr.cx("fr-mb-6w")}>
-        <h2>Les conventions collectives traitées</h2>
-        <p className={fr.cx("fr-mb-6w")}>
-          Les conventions collectives présentées sont les plus représentatives
-          en terme de nombres de salariés.
-        </p>
-        <ul className={`${ul} ${fr.cx("fr-pl-0", "fr-m-0")}`}>
-          {Object.keys(firstLettersAgreements).map((letter, index) => (
-            <>
-              {index !== 0 ? (
-                <li className={fr.cx("fr-h3", "fr-px-1w", "fr-mb-0")}>-</li>
-              ) : (
-                <></>
-              )}
-              <li key={letter} className={"fr-mb-0"}>
-                <Link href={`#${letter}`} className={fr.cx("fr-h3")}>
-                  {letter}
-                </Link>
-              </li>
-            </>
-          ))}
-        </ul>
+        <AgreementsGlossaire letters={Object.keys(firstLettersAgreements)} />
       </div>
       <div>
         {Object.entries(firstLettersAgreements).map(([letter, agreements]) => (
-          <>
-            <div id={letter} className={fr.cx("fr-h3")}>
-              {letter}
-            </div>
-            <ListWithArrow
-              items={agreements.map(({ shortTitle, slug }) => {
-                return (
-                  <Link
-                    key={slug}
-                    href={`/${getRouteBySource(SOURCES.CCN)}/${slug}`}
-                  >
-                    {shortTitle}
-                  </Link>
-                );
-              })}
-            />
-          </>
+          <AgreementsSection
+            key={letter}
+            agreements={agreements}
+            letter={letter}
+          ></AgreementsSection>
         ))}
       </div>
     </ContainerSimulator>
   );
 };
-
-const block = css({
-  background: "var(--background-alt-blue-cumulus)",
-});
-
-const ul = css({
-  listStyle: "none!",
-  display: "flex",
-  flexDirection: "row",
-});
