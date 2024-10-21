@@ -74,7 +74,7 @@ export const fetchTool = async (
     },
     size: 1,
   });
-  if (!result || result) {
+  if (!result) {
     throw new Error("Outils non trouvé");
   }
   return result;
