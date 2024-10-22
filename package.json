@@ -5,6 +5,7 @@
   "description": "Code du travail",
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "scripts": {
+    "prepare": "husky",
     "build": "lerna run build --scope=@socialgouv/cdtn-utils --scope=@socialgouv/cdtn-ui --scope=@socialgouv/modeles-social --scope=@cdt/frontend --stream",
     "build:npm": "lerna run build --scope=@socialgouv/cdtn-utils --scope=@socialgouv/cdtn-ui --scope=@socialgouv/modeles-social --stream",
     "clean": "lerna clean",
@@ -33,7 +34,8 @@
     "test:update:frontend": "lerna run test:update --scope=@cdt/frontend --stream",
     "test:update:api": "lerna run test:api:update --scope=@cdt/frontend --stream",
     "format": "lerna run format --stream",
-    "format:check": "lerna run format:check --stream"
+    "format:check": "lerna run format:check --stream",
+    "precommit": "lerna run precommit --stream"
   },
   "repository": {
     "type": "git",
