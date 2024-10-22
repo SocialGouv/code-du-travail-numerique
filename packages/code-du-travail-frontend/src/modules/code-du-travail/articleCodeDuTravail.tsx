@@ -36,7 +36,7 @@ export function ArticleCodeDuTravail({
         <a href={url} target="_blank" rel="noopener noreferrer">
           Code du travail
         </a>{" "}
-        - Mise à jour le&nbsp;: {date}
+        - Mis à jour le&nbsp;: {date}
       </p>
 
       <div className={fr.cx("fr-mb-5w")}>
