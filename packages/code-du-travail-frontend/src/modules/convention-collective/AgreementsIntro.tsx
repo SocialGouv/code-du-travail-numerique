@@ -44,7 +44,7 @@ export const AgreementsIntro = () => {
             "fr-px-md-4w",
             "fr-px-1w",
             "fr-mt-2w",
-            "fr-mb-3w"
+            "fr-mb-0"
           )}`}
         >
           <Link
