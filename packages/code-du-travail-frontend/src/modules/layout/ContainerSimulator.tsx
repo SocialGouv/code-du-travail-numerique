@@ -30,11 +30,9 @@ export const ContainerSimulator = ({
         segments={segments}
         className={fr.cx("fr-mb-2v")}
       />
-      <div>
-        {children}
-        <div className={fr.cx("fr-col-12", "fr-col-md-7", "fr-my-12v")}>
-          <Feedback />
-        </div>
+      <div className={fr.cx("fr-col-12")}>{children}</div>
+      <div className={fr.cx("fr-col-12", "fr-col-md-7", "fr-my-12v")}>
+        <Feedback />
       </div>
 
       {relatedItems.length > 0 && (

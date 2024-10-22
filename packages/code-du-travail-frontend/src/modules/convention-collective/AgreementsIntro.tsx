@@ -16,6 +16,7 @@ export const AgreementsIntro = () => {
               priority
               src={AgreementSearch}
               alt="Trouver sa convention collective"
+              className={fr.cx("fr-unhidden-md", "fr-hidden")}
             />
             Trouver sa convention collective
           </div>
@@ -55,14 +56,15 @@ export const AgreementsIntro = () => {
               "fr-col-md-3",
               "fr-mr-md-6w",
               "fr-mb-md-0",
-              "fr-mb-2w"
+              "fr-mb-2w",
+              "fr-btns-group--center"
             )}`}
           >
             Je connais ma convention collective je la saisie
           </Link>
           <Link
             href="/outils/convention-collective/entreprise"
-            className={`${fr.cx("fr-btn", "fr-btn--icon-right", "fr-icon-arrow-right-line", "fr-col-12", "fr-col-md-3", "fr-px-6v")}`}
+            className={`${fr.cx("fr-btn", "fr-btn--icon-right", "fr-icon-arrow-right-line", "fr-col-12", "fr-col-md-3", "fr-px-6v", "fr-btns-group--center")}`}
           >
             Je cherche mon entreprise pour trouver ma convention collective
           </Link>
