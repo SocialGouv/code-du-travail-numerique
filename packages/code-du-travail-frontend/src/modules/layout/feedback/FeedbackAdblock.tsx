@@ -3,10 +3,12 @@ import { fr } from "@codegouvfr/react-dsfr";
 export const FeedbackAdblock = () => {
   return (
     <>
-      <h2 className={fr.cx("fr-h5")}>Un adblock a été détecté.</h2>
+      <h2 className={fr.cx("fr-h5")}>
+        Nous n&apos;avons pas pu envoyer votre réponse
+      </h2>
       <p>
-        Il n&apos;est pas possible de soumettre un feedback si un adblock est
-        détecté. Merci de désactiver votre adblock et de recharger la page.
+        Pour soumettre votre avis, merci de désactiver temporairement votre
+        bloqueur de publicité et recharger la page.
       </p>
     </>
   );
