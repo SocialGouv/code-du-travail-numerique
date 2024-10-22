@@ -32,53 +32,52 @@ describe("SimulateurIndemnitePrecarite", () => {
       fireEvent.click(ui.next.get());
     });
 
-    // TODO Fix bug
-    // describe("criteria.cddType = CDD d'usage", () => {
-    //   beforeEach(() => {
-    //     fireEvent.change(screen.getByTestId("criteria.cddType"), {
-    //       target: { value: "CDD d'usage" },
-    //     });
-    //     fireEvent.click(ui.next.get());
-    //   });
+    describe("criteria.cddType = CDD d'usage", () => {
+      beforeEach(() => {
+        fireEvent.change(screen.getByTestId("criteria.cddType"), {
+          target: { value: "CDD d'usage" },
+        });
+        fireEvent.click(ui.next.get());
+      });
 
-    //   describe("criteria.hasCdiRenewal = non", () => {
-    //     beforeEach(() => {
-    //       fireEvent.change(screen.getByTestId("criteria.hasCdiRenewal"), {
-    //         target: { value: "non" },
-    //       });
-    //       fireEvent.click(ui.next.get());
-    //     });
+      describe("criteria.hasCdiRenewal = non", () => {
+        beforeEach(() => {
+          fireEvent.change(screen.getByTestId("criteria.hasCdiRenewal"), {
+            target: { value: "non" },
+          });
+          fireEvent.click(ui.next.get());
+        });
 
-    //     describe("typeRemuneration = amount", () => {
-    //       beforeEach(() => {
-    //         fireEvent.click(screen.getByTestId("typeRemuneration-amount"));
-    //         fireEvent.click(ui.next.get());
-    //       });
+        describe("typeRemuneration = amount", () => {
+          beforeEach(() => {
+            fireEvent.click(screen.getByTestId("typeRemuneration-amount"));
+            fireEvent.click(ui.next.get());
+          });
 
-    //       describe("currency = 3000", () => {
-    //         beforeEach(() => {
-    //           fireEvent.change(screen.getByTestId("currency"), {
-    //             target: { value: "3000" },
-    //           });
-    //           fireEvent.click(ui.next.get());
-    //         });
+          describe("currency = 3000", () => {
+            beforeEach(() => {
+              fireEvent.change(screen.getByTestId("currency"), {
+                target: { value: "3000" },
+              });
+              fireEvent.click(ui.next.get());
+            });
 
-    //         it("should display expected answer", () => {
-    //           expect(screen.queryAllByText(/180/g)[0]).toBeInTheDocument();
-    //           expect(
-    //             screen.queryAllByText(/L'indemnité dite "d'usage"/g)[0]
-    //           ).toBeInTheDocument();
+            it("should display expected answer", () => {
+              expect(screen.queryAllByText(/180/g)[0]).toBeInTheDocument();
+              expect(
+                screen.queryAllByText(/L'indemnité dite "d'usage"/g)[0]
+              ).toBeInTheDocument();
 
-    //           expect(
-    //             screen.queryAllByText(
-    //               /article 5 de la convention collective \(point 5.4.3.\)/
-    //             )[0]
-    //           ).toBeInTheDocument();
-    //         });
-    //       });
-    //     });
-    //   });
-    // });
+              expect(
+                screen.queryAllByText(
+                  /article 5 de la convention collective \(point 5.4.3.\)/
+                )[0]
+              ).toBeInTheDocument();
+            });
+          });
+        });
+      });
+    });
 
     describe("criteria.cddType = Autres", () => {
       beforeEach(() => {

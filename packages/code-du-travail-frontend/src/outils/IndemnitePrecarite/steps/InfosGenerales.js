@@ -184,19 +184,19 @@ function validate(values) {
   // We need to performs these check before situation check
   // since situation Check can overwrite generals checks
   if (
-    (values.ccn.selected.num === 3127 &&
+    (values?.ccn?.selected?.num === 3127 &&
       values?.criteria?.cddType ===
         "CDD dit de « mission ponctuelle ou occasionnelle »" &&
       values?.criteria?.hasEquivalentCdiRenewal === "oui") ||
-    (values.ccn.selected.num === 1486 &&
+    (values?.ccn?.selected?.num === 1486 &&
       values?.criteria?.cddType ===
         "Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès" &&
       values?.criteria?.hasCdiProposal === "oui") ||
-    (values.ccn.selected.num === 2511 &&
+    (values?.ccn?.selected?.num === 2511 &&
       values?.criteria?.cddType ===
         "CDD d'usage appelé contrat «d'intervention»" &&
       values?.criteria?.hasCdiRenewal === "oui") ||
-    (values.ccn.selected.num === 1516 &&
+    (values?.ccn?.selected?.num === 1516 &&
       values?.criteria?.cddType === "CDD d'usage" &&
       values?.criteria?.hasCdiRenewal === "oui") ||
     (values.criteria && excludeContracts.includes(values.criteria.cddType))

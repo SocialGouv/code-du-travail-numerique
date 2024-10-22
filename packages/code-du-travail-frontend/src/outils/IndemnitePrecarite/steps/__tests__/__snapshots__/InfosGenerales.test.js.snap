@@ -157,12 +157,6 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
             CDD saisonnier
           </option>
           <option
-            data-testid="CDD d'usage"
-            value="CDD d'usage"
-          >
-            CDD d'usage
-          </option>
-          <option
             data-testid="CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires"
             value="CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires"
           >
@@ -333,12 +327,6 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
             value="CDD saisonnier"
           >
             CDD saisonnier
-          </option>
-          <option
-            data-testid="CDD d'usage"
-            value="CDD d'usage"
-          >
-            CDD d'usage
           </option>
           <option
             data-testid="CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires"
