@@ -55,9 +55,9 @@ export const PrivacyPolicy = () => {
           <br />
           Ministère des affaires sociales et de la santé
           <br />
-          39-43 Quai André Citroën
+          14 avenue Duquesne
           <br />
-          75015 PARIS
+          75007 PARIS
         </address>
         <p>
           Vous êtes également en droit de saisir la Commission Nationale de

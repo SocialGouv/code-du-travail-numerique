@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "husky": "^9.1.6",
-    "lerna": "^5.0.0"
+    "lerna": "8.1.8"
   },
   "workspaces": [
     "packages/*"
