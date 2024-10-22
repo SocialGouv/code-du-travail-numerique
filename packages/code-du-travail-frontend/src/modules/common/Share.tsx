@@ -28,7 +28,12 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
       <ul className={fr.cx("fr-btns-group")}>
         <li>
           <a
-            className={fr.cx("fr-btn", "fr-btn--tertiary", "fr-btn--facebook")}
+            className={fr.cx(
+              "fr-btn",
+              "fr-btn--tertiary",
+              "fr-btn--facebook",
+              "fr-quote--blue-cumulus"
+            )}
             title="Partager sur Facebook"
             href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
               currentPageUrl
@@ -44,7 +49,12 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
         </li>
         <li>
           <a
-            className={fr.cx("fr-btn", "fr-btn--tertiary", "fr-btn--twitter-x")}
+            className={fr.cx(
+              "fr-btn",
+              "fr-btn--tertiary",
+              "fr-btn--twitter-x",
+              "fr-quote--blue-cumulus"
+            )}
             title="Partager sur X (anciennement Twitter)"
             href={`https://x.com/intent/post?text=${encodeURIComponent(`${title} : ${currentPageUrl}`)}`}
             target="_blank"
@@ -58,7 +68,12 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
         </li>
         <li>
           <a
-            className={fr.cx("fr-btn", "fr-btn--tertiary", "fr-btn--linkedin")}
+            className={fr.cx(
+              "fr-btn",
+              "fr-btn--tertiary",
+              "fr-btn--linkedin",
+              "fr-quote--blue-cumulus"
+            )}
             title="Partager sur LinkedIn"
             href={`https://www.linkedin.com/shareArticle?mini=true&title=${encodeURIComponent(
               title
@@ -74,7 +89,12 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
         </li>
         <li>
           <a
-            className={fr.cx("fr-btn", "fr-btn--tertiary", "ri-mail-line")}
+            className={fr.cx(
+              "fr-btn",
+              "fr-btn--tertiary",
+              "ri-mail-line",
+              "fr-quote--blue-cumulus"
+            )}
             title="Envoyer par email"
             rel="noopener external"
             href={`mailto:?subject=${encodeURIComponent(
@@ -89,7 +109,12 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
         </li>
         <li>
           <a
-            className={fr.cx("fr-btn", "fr-btn--tertiary", "ri-whatsapp-line")}
+            className={fr.cx(
+              "fr-btn",
+              "fr-btn--tertiary",
+              "ri-whatsapp-line",
+              "fr-quote--blue-cumulus"
+            )}
             title="Envoyer par Whatsapp"
             href={`https://wa.me/?text=${encodeURIComponent(`${title} : ${currentPageUrl}`)}`}
             target="_blank"
@@ -114,6 +139,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
             </p>
           ) : (
             <Button
+              className={fr.cx("fr-quote--blue-cumulus")}
               priority="tertiary"
               iconId="ri-links-line"
               title="Copier le lien"
