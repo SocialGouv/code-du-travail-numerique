@@ -22,7 +22,6 @@ import {
 
 const excludeContracts = [
   "CDD saisonnier",
-  "CDD d'usage",
   "CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires",
   "CCD dans le cadre d’un congé de mobilité",
   "Contrat unique d’insertion (CUI) ou Parcours emploi compétences (PEC)",
@@ -184,7 +183,24 @@ function validate(values) {
   };
   // We need to performs these check before situation check
   // since situation Check can overwrite generals checks
-  if (values.criteria && excludeContracts.includes(values.criteria.cddType)) {
+  if (
+    (values?.ccn?.selected?.num === 3127 &&
+      values?.criteria?.cddType ===
+        "CDD dit de « mission ponctuelle ou occasionnelle »" &&
+      values?.criteria?.hasEquivalentCdiRenewal === "oui") ||
+    (values?.ccn?.selected?.num === 1486 &&
+      values?.criteria?.cddType ===
+        "Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès" &&
+      values?.criteria?.hasCdiProposal === "oui") ||
+    (values?.ccn?.selected?.num === 2511 &&
+      values?.criteria?.cddType ===
+        "CDD d'usage appelé contrat «d'intervention»" &&
+      values?.criteria?.hasCdiRenewal === "oui") ||
+    (values?.ccn?.selected?.num === 1516 &&
+      values?.criteria?.cddType === "CDD d'usage" &&
+      values?.criteria?.hasCdiRenewal === "oui") ||
+    (values.criteria && excludeContracts.includes(values.criteria.cddType))
+  ) {
     errors.criteria = {
       cddType:
         "Ce type de contrat ne permet pas au salarié d’avoir droit à une prime de précarité.",

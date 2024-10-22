@@ -27,13 +27,14 @@ exports[`<Salaires /> should add a salaire 1`] = `
       Montant :
     </label>
     <div
-      class="sc-d7c10f93-0 kgLXdV"
+      class="sc-543ce436-0 cIRCgl"
     >
       <div
         class="sc-669fe731-0 amSvQ"
       >
         <input
           class="sc-669fe731-1 htKjGt"
+          data-testid="currency"
           id="5"
           name="salaires[0].salaire"
           type="number"
@@ -159,13 +160,14 @@ exports[`<Salaires /> should render 1`] = `
       Montant :
     </label>
     <div
-      class="sc-d7c10f93-0 kgLXdV"
+      class="sc-543ce436-0 cIRCgl"
     >
       <div
         class="sc-669fe731-0 amSvQ"
       >
         <input
           class="sc-669fe731-1 htKjGt"
+          data-testid="currency"
           id="1"
           name="salaires[0].salaire"
           type="number"
