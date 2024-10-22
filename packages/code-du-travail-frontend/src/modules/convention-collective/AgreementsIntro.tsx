@@ -24,7 +24,7 @@ export const AgreementsIntro = () => {
         <Highlight size="lg" className={fr.cx("fr-mb-12v")}>
           <span>
             La convention collective est un texte conclu au niveau d&apos;une
-            branche d&apos;actrivité (Ex: Transports routiers). Elle adapte les
+            branche d&apos;activité (Ex: Transports routiers). Elle adapte les
             règles du Code du travail sur des points précis, en fonction des
             situations particulières de la branche (primes, congés, salaires
             minima, préavis, prévoyance...)
@@ -60,7 +60,7 @@ export const AgreementsIntro = () => {
               "fr-btns-group--center"
             )}`}
           >
-            Je connais ma convention collective je la saisie
+            Je connais ma convention collective je la saisis
           </Link>
           <Link
             href="/outils/convention-collective/entreprise"
