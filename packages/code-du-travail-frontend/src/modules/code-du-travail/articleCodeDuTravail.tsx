@@ -14,6 +14,10 @@ type Props = {
   title: string;
 };
 
+function addSpaceAfterClosingTags(htmlString) {
+  return htmlString.replace(/(<\/[^>]+>)/g, "$1 ");
+}
+
 export function ArticleCodeDuTravail({
   metaDescription,
   date,
@@ -40,7 +44,7 @@ export function ArticleCodeDuTravail({
       </p>
 
       <div className={fr.cx("fr-mb-5w")}>
-        <Html>{html}</Html>
+        <Html>{addSpaceAfterClosingTags(html)}</Html>
       </div>
       {notaHtml && (
         <div className={fr.cx("fr-highlight", "fr-mb-5w")}>
