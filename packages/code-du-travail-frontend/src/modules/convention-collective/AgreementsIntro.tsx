@@ -10,7 +10,7 @@ export const AgreementsIntro = () => {
   return (
     <>
       <div className={`${fr.cx("fr-p-3w", "fr-mb-6w")} ${block}`}>
-        <h2>
+        <h2 className={fr.cx("fr-mb-4v")}>
           <div className={fr.cx("fr-grid-row")}>
             <Image
               priority
@@ -21,7 +21,7 @@ export const AgreementsIntro = () => {
             Trouver sa convention collective
           </div>
         </h2>
-        <Highlight size="lg" className={fr.cx("fr-mb-12v")}>
+        <Highlight size="lg">
           <span>
             La convention collective est un texte conclu au niveau d&apos;une
             branche d&apos;activité (Ex: Transports routiers). Elle adapte les
@@ -40,7 +40,9 @@ export const AgreementsIntro = () => {
           className={`${fr.cx(
             "fr-grid-row",
             "fr-grid-row--center",
-            "fr-px-4w",
+            "fr-px-0",
+            "fr-px-md-4w",
+            "fr-px-1w",
             "fr-mt-2w",
             "fr-mb-3w"
           )}`}
