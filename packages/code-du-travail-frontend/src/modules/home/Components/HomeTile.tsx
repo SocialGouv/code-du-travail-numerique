@@ -20,7 +20,6 @@ export const HomeTile = (props: HomeTileProps) => (
     )}
   >
     <Tile
-      enlargeLinkOrButton
       imageSvg={false}
       imageUrl={`/static/assets/icons/${props.iconFolder}/${props.iconName}.svg`}
       linkProps={{
@@ -30,6 +29,9 @@ export const HomeTile = (props: HomeTileProps) => (
       title={props.title}
       desc={props.description}
       titleAs="h3"
+      classes={{
+        img: fr.cx("fr-mb-0"),
+      }}
     />
   </div>
 );

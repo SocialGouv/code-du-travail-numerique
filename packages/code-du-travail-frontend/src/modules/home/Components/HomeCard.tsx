@@ -10,26 +10,37 @@ export type HomeCardProps = {
   isSmall?: boolean;
 };
 
-export const HomeCard = (props: HomeCardProps) => (
+export const HomeCard = ({
+  theme,
+  title,
+  description,
+  link,
+  isSmall,
+}: HomeCardProps) => (
   <div
     className={fr.cx(
       "fr-col-12",
       "fr-col-md-6",
-      props.isSmall ? "fr-col-lg-3" : "fr-col-lg-6"
+      isSmall ? "fr-col-lg-3" : "fr-col-lg-6"
     )}
   >
     <Card
-      start={<Tag>{props.theme}</Tag>}
+      start={<Tag small>{theme}</Tag>}
       border
-      desc={props.description}
+      desc={description}
       horizontal
       linkProps={{
-        href: props.link,
+        href: link,
       }}
       size="medium"
-      title={props.title}
+      title={title}
       titleAs="h3"
       enlargeLink
+      end={<span>Consulter</span>}
+      classes={{
+        start: fr.cx("fr-mb-2w"),
+        end: fr.cx("fr-text--xs"),
+      }}
     />
   </div>
 );

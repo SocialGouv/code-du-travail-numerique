@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { css } from "../../../styled-system/css";
+import { css } from "../../../../styled-system/css";
 import { useCombobox } from "downshift";
-import { fetchSuggestResults } from "../layout/header/fetchSuggestResults";
-import { SUGGEST_MAX_RESULTS } from "../../config";
-import { useLayoutTracking } from "../layout/tracking";
+import { fetchSuggestResults } from "../../layout/header/fetchSuggestResults";
+import { SUGGEST_MAX_RESULTS } from "../../../config";
+import { useLayoutTracking } from "../../layout/tracking";
 
 type Props = {
   onSearchSubmit: (text: string) => void;

@@ -118,7 +118,7 @@ export const fetchHomeData = async (): Promise<HomePageProps> => {
     title: theme.title,
   }));
 
-  const response = {
+  return {
     themes: parsedThemes,
     highlights: parsedHighlights,
     tools: parsedTools,
@@ -126,6 +126,4 @@ export const fetchHomeData = async (): Promise<HomePageProps> => {
     contributions: parsedContributions,
     agreements: parsedAgreements,
   };
-
-  return response;
 };
