@@ -28,12 +28,11 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
       <ul className={fr.cx("fr-btns-group")}>
         <li>
           <a
-            className={fr.cx(
+            className={`${fr.cx(
               "fr-btn",
               "fr-btn--tertiary",
-              "fr-btn--facebook",
-              "fr-quote--blue-cumulus"
-            )}
+              "fr-btn--facebook"
+            )} ${blueCumulus}`}
             title="Partager sur Facebook"
             href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
               currentPageUrl
@@ -49,12 +48,11 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
         </li>
         <li>
           <a
-            className={fr.cx(
+            className={`${fr.cx(
               "fr-btn",
               "fr-btn--tertiary",
-              "fr-btn--twitter-x",
-              "fr-quote--blue-cumulus"
-            )}
+              "fr-btn--twitter-x"
+            )} ${blueCumulus}`}
             title="Partager sur X (anciennement Twitter)"
             href={`https://x.com/intent/post?text=${encodeURIComponent(`${title} : ${currentPageUrl}`)}`}
             target="_blank"
@@ -68,12 +66,11 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
         </li>
         <li>
           <a
-            className={fr.cx(
+            className={`${fr.cx(
               "fr-btn",
               "fr-btn--tertiary",
-              "fr-btn--linkedin",
-              "fr-quote--blue-cumulus"
-            )}
+              "fr-btn--linkedin"
+            )} ${blueCumulus}`}
             title="Partager sur LinkedIn"
             href={`https://www.linkedin.com/shareArticle?mini=true&title=${encodeURIComponent(
               title
@@ -89,12 +86,11 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
         </li>
         <li>
           <a
-            className={fr.cx(
+            className={`${fr.cx(
               "fr-btn",
               "fr-btn--tertiary",
-              "ri-mail-line",
-              "fr-quote--blue-cumulus"
-            )}
+              "ri-mail-line"
+            )} ${blueCumulus}`}
             title="Envoyer par email"
             rel="noopener external"
             href={`mailto:?subject=${encodeURIComponent(
@@ -109,12 +105,11 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
         </li>
         <li>
           <a
-            className={fr.cx(
+            className={`${fr.cx(
               "fr-btn",
               "fr-btn--tertiary",
-              "ri-whatsapp-line",
-              "fr-quote--blue-cumulus"
-            )}
+              "ri-whatsapp-line"
+            )} ${blueCumulus}`}
             title="Envoyer par Whatsapp"
             href={`https://wa.me/?text=${encodeURIComponent(`${title} : ${currentPageUrl}`)}`}
             target="_blank"
@@ -132,14 +127,14 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
               <span
                 className={`${fr.cx("ri-check-line")} ${css({
                   color: "var(--text-default-success)",
-                })}`}
+                })} ${blueCumulus}`}
                 aria-hidden="true"
               />
               Lien copié
             </p>
           ) : (
             <Button
-              className={fr.cx("fr-quote--blue-cumulus")}
+              className={blueCumulus}
               priority="tertiary"
               iconId="ri-links-line"
               title="Copier le lien"
@@ -157,3 +152,9 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
     </div>
   );
 };
+
+const blueCumulus = css({
+  _before: {
+    color: "var(--artwork-minor-blue-cumulus)",
+  },
+});
