@@ -55,7 +55,7 @@ describe("DureePreavisLicenciement", () => {
       });
 
       it("should display expected answer", () => {
-        expect(screen.queryAllByText(/1.5 mois/g)[0]).toBeInTheDocument();
+        expect(screen.queryAllByText(/1 mois et demi/g)[0]).toBeInTheDocument();
 
         expect(
           screen.queryAllByText(
