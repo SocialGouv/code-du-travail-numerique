@@ -58,6 +58,12 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
 
         expect(screen.queryAllByText(/Article 162.4.1/)[0]).toBeInTheDocument();
+
+        expect(
+          screen.queryByText(
+            /Le contrat de travail ou un usage peut prévoir une durée de préavis ou une condition d’ancienneté plus favorable pour le salarié. Dans ce cas, c’est cette durée ou cette ancienneté plus favorable qui s’applique au salarié/
+          )
+        ).toBeInTheDocument();
       });
     });
 
@@ -73,6 +79,12 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
 
         expect(screen.queryAllByText(/Article 162.4.1/)[0]).toBeInTheDocument();
+
+        expect(
+          screen.queryByText(
+            /Le contrat de travail ou un usage peut prévoir une durée de préavis ou une condition d’ancienneté plus favorable pour le salarié. Dans ce cas, c’est cette durée ou cette ancienneté plus favorable qui s’applique au salarié/
+          )
+        ).toBeInTheDocument();
       });
     });
 
@@ -88,6 +100,12 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
         expect(screen.queryAllByText(/Article 162.4.1/)[0]).toBeInTheDocument();
+
+        expect(
+          screen.queryByText(
+            /Le contrat de travail ou un usage peut prévoir une durée de préavis ou une condition d’ancienneté plus favorable pour le salarié. Dans ce cas, c’est cette durée ou cette ancienneté plus favorable qui s’applique au salarié/
+          )
+        ).toBeInTheDocument();
       });
     });
   });
@@ -126,6 +144,11 @@ describe("DureePreavisLicenciement", () => {
         expect(
           screen.queryAllByText(/Art. 120 de la convention collective/)[0]
         ).toBeInTheDocument();
+        expect(
+          screen.queryByText(
+            /Le contrat de travail ou un usage peut prévoir une durée de préavis ou une condition d’ancienneté plus favorable pour le salarié. Dans ce cas, c’est cette durée ou cette ancienneté plus favorable qui s’applique au salarié/
+          )
+        ).toBeInTheDocument();
       });
     });
 
@@ -150,6 +173,11 @@ describe("DureePreavisLicenciement", () => {
         expect(
           screen.queryAllByText(/Art. 120 de la convention collective/)[0]
         ).toBeInTheDocument();
+        expect(
+          screen.queryByText(
+            /Le contrat de travail ou un usage peut prévoir une durée de préavis ou une condition d’ancienneté plus favorable pour le salarié. Dans ce cas, c’est cette durée ou cette ancienneté plus favorable qui s’applique au salarié/
+          )
+        ).toBeInTheDocument();
       });
     });
 
@@ -171,6 +199,11 @@ describe("DureePreavisLicenciement", () => {
         ).toBeInTheDocument();
         expect(
           screen.queryAllByText(/Art. 120 de la convention collective/)[0]
+        ).toBeInTheDocument();
+        expect(
+          screen.queryByText(
+            /Le contrat de travail ou un usage peut prévoir une durée de préavis ou une condition d’ancienneté plus favorable pour le salarié. Dans ce cas, c’est cette durée ou cette ancienneté plus favorable qui s’applique au salarié/
+          )
         ).toBeInTheDocument();
       });
     });
