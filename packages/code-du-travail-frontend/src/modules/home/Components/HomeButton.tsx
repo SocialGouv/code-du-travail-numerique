@@ -1,6 +1,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import Link from "next/link";
-import { css } from "../../../styled-system/css";
+import { css } from "../../../../styled-system/css";
+import { Button } from "@codegouvfr/react-dsfr/Button";
 
 type Props = {
   buttonLink: string;
@@ -10,18 +10,18 @@ type Props = {
 
 export const HomeButton = (props: Props) => (
   <div className={`${fr.cx("fr-mt-3w")} ${buttonContainer}`}>
-    <Link
-      href={props.buttonLink}
-      className={fr.cx(
-        "fr-btn",
-        "fr-btn--secondary",
-        "fr-btn--icon-right",
-        "fr-icon-arrow-right-fill"
-      )}
-      onClick={props.onButtonClick}
+    <Button
+      linkProps={{
+        href: props.buttonLink,
+        onClick: props.onButtonClick,
+      }}
+      iconId="fr-icon-arrow-right-line"
+      iconPosition="right"
+      priority="secondary"
+      size="large"
     >
       {props.buttonText}
-    </Link>
+    </Button>
   </div>
 );
 

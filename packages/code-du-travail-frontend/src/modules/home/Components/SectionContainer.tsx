@@ -1,5 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import { css } from "../../../styled-system/css";
+import { css } from "../../../../styled-system/css";
 
 type Props = {
   sectionId: string;
@@ -10,7 +10,7 @@ type Props = {
   footerNode?: React.ReactNode;
 };
 
-export const HomeWrapper = (props: Props) => (
+export const SectionContainer = (props: Props) => (
   <div
     id={props.sectionId}
     className={props.isTint ? mainContainer : undefined}
@@ -19,7 +19,9 @@ export const HomeWrapper = (props: Props) => (
       className={fr.cx("fr-my-8w", "fr-container", props.isTint && "fr-py-6w")}
     >
       <h2>{props.title}</h2>
-      {props.subtitle && <p>{props.subtitle}</p>}
+      {props.subtitle && (
+        <p className={fr.cx("fr-text--xl")}>{props.subtitle}</p>
+      )}
       <div
         className={fr.cx(
           "fr-grid-row",

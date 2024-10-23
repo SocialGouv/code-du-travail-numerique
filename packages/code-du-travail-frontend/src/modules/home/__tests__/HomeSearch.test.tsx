@@ -1,4 +1,4 @@
-import { HomeSearch } from "../HomeSearch";
+import { HomeSearch } from "../Components";
 import { render, waitFor } from "@testing-library/react";
 import React from "react";
 import { byTestId } from "testing-library-selector";
