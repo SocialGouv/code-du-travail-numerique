@@ -30,17 +30,20 @@ export const ContainerSimulator = ({
         segments={segments}
         className={fr.cx("fr-mb-2v")}
       />
-      <div>
-        {children}
-        <div className={fr.cx("fr-col-12", "fr-col-md-7", "fr-my-12v")}>
-          <Feedback />
+      <div className={fr.cx("fr-col-12")}>{children}</div>
+      <div className={fr.cx("fr-col-12", "fr-col-md-7", "fr-my-12v")}>
+        <Feedback />
+      </div>
+
+      <div className={fr.cx("fr-grid-row", "fr-col-12")}>
+        {relatedItems.length > 0 && (
+          <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
+            <RelatedItems relatedItems={relatedItems} />
+          </div>
+        )}
+        <div className={fr.cx("fr-col-12", "fr-col-md-4", "fr-mb-12v")}>
+          <Share title={title} metaDescription={description} />
         </div>
-      </div>
-      <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
-        <RelatedItems relatedItems={relatedItems} />
-      </div>
-      <div className={fr.cx("fr-col-12", "fr-col-md-4", "fr-mb-12v")}>
-        <Share title={title} metaDescription={description} />
       </div>
     </div>
   );
