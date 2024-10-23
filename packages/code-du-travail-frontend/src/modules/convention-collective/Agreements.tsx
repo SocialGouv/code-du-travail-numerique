@@ -50,7 +50,7 @@ export const Agreements = ({ agreements }: Props) => {
       <div className={fr.cx("fr-mb-6w")}>
         <AgreementsGlossaire letters={Object.keys(firstLettersAgreements)} />
       </div>
-      <div>
+      <div id="content">
         {Object.entries(firstLettersAgreements).map(([letter, agreements]) => (
           <AgreementsSection
             key={letter}
