@@ -18,7 +18,9 @@ export const AgreementsIntro = () => {
               alt="Trouver sa convention collective"
               className={fr.cx("fr-unhidden-md", "fr-hidden")}
             />
-            Trouver sa convention collective
+            <span className={fr.cx("fr-mt-md-2v")}>
+              Trouver sa convention collective
+            </span>
           </div>
         </h2>
         <Highlight size="lg">

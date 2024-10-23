@@ -13,7 +13,7 @@ export const AgreementsGlossaire = ({ letters }: Props) => {
       <h2>Les conventions collectives traitées</h2>
       <p className={fr.cx("fr-mb-6w")}>
         Les conventions collectives présentées sont les plus représentatives en
-        terme de nombres de salariés.
+        termes de nombre de salariés.
       </p>
       <div>
         <ul className={`${fr.cx("fr-pl-0", "fr-m-0", "fr-grid-row")} ${ul}`}>

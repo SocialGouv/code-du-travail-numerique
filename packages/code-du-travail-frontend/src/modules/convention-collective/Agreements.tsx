@@ -43,7 +43,7 @@ export const Agreements = ({ agreements }: Props) => {
       relatedItems={[]}
       segments={[]}
     >
-      <h1 id="convention-collective" className={fr.cx("fr-mt-0", "fr-mb-3w")}>
+      <h1 id="convention-collective" className={fr.cx("fr-mt-0", "fr-mb-6w")}>
         Votre convention collective
       </h1>
       <AgreementsIntro />
