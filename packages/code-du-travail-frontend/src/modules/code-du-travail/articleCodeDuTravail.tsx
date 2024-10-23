@@ -3,6 +3,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Html from "../common/Html";
 import { ContainerRich } from "../layout/ContainerRich";
 import { RelatedItem } from "../documents";
+import { ContentParser } from "./ContentParser";
 
 type Props = {
   metaDescription: string;
@@ -13,10 +14,6 @@ type Props = {
   url: string;
   title: string;
 };
-
-function addSpaceAfterClosingTags(htmlString) {
-  return htmlString.replace(/(<\/[^>]+>)/g, "$1 ");
-}
 
 export function ArticleCodeDuTravail({
   metaDescription,
@@ -44,7 +41,7 @@ export function ArticleCodeDuTravail({
       </p>
 
       <div className={fr.cx("fr-mb-5w")}>
-        <Html>{addSpaceAfterClosingTags(html)}</Html>
+        <ContentParser>{html}</ContentParser>
       </div>
       {notaHtml && (
         <div className={fr.cx("fr-highlight", "fr-mb-5w")}>
