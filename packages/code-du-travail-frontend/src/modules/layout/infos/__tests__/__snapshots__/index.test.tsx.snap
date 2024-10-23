@@ -3,7 +3,7 @@
 exports[`<NeedMoreInfo /> should match snapshot 1`] = `
 <div>
   <div
-    class="bg_var(--background-alt-blue-france)"
+    class="bg_var(--background-alt-blue-cumulus)"
     id="more-info"
   >
     <div
@@ -21,7 +21,7 @@ exports[`<NeedMoreInfo /> should match snapshot 1`] = `
             Besoin de plus d'informations ?
           </h2>
           <p
-            class="c_var(--text-action-high-blue-france)"
+            class="c_var(--text-action-high-blue-france) ta_start"
           >
             Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
           </p>
@@ -113,6 +113,7 @@ exports[`<NeedMoreInfo /> should match snapshot 1`] = `
                         </h2>
                         <div
                           class="fr-input-group"
+                          id="search-service"
                         >
                           <label
                             class="fr-label"

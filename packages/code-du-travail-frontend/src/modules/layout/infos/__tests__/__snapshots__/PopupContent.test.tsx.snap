@@ -28,6 +28,7 @@ exports[`<PopupContent /> should match snapshot 1`] = `
   </h2>
   <div
     class="fr-input-group"
+    id="search-service"
   >
     <label
       class="fr-label"
