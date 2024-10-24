@@ -37,7 +37,7 @@ describe("SimulateurIndemnitePrecarite", () => {
     fireEvent.click(ui.next.get());
     expect(
       screen.queryByText(
-        /Ce type de contrat ne permet pas au salarié d’avoir droit à une prime de précarité/g
+        /Selon votre convention collective, le salarié en contrat d'intervention qui, à l'issue de son contrat, a reçu une proposition d'un CDI, n’a pas le droit à une prime d'intervention/g
       )
     ).toBeInTheDocument();
   });
