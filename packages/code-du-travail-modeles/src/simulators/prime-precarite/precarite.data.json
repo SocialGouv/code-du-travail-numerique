@@ -611,8 +611,8 @@
     "endMessage": null,
     "rate": "6%",
     "bonusLabel": "L'indemnité dite \"d'usage\"",
-    "refLabel": "article 5 de la convention collective (point 5.4.3.)",
-    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D21CB91C1CA2006FC1F3B641A83D2560.tplgfr43s_2?idArticle=KALIARTI000026451298&cidTexte=KALITEXT000005644543&dateTexte=29981231&categorieLien=id"
+    "refLabel": "Article 5 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047382739"
   },
   {
     "criteria": {
@@ -626,8 +626,8 @@
     "endMessage": "Selon votre convention collective, le salarié en contrat d'usage qui, à l'issu de son contrat, poursuit par un CDI, n’a pas le droit à une indemnité dite \" d'usage \".",
     "rate": null,
     "bonusLabel": "L'indemnité dite \"d'usage\"",
-    "refLabel": "article 5 de la convention collective (point 5.4.3.)",
-    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D21CB91C1CA2006FC1F3B641A83D2560.tplgfr43s_2?idArticle=KALIARTI000026451298&cidTexte=KALITEXT000005644543&dateTexte=29981231&categorieLien=id"
+    "refLabel": null,
+    "refUrl": null
   },
   {
     "criteria": {
@@ -1059,8 +1059,8 @@
     "endMessage": null,
     "rate": "10%",
     "bonusLabel": "La prime d'intervention",
-    "refLabel": "article 4.7 de la convention collective (point 4.7.2.)",
-    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AC096B3D0CD017996E22DEE5D3C1ABFF.tplgfr41s_1?idArticle=KALIARTI000021063900&cidTexte=KALITEXT000017577657&dateTexte=20160726&categorieLien=id"
+    "refLabel": "Article 4.7 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041494560"
   },
   {
     "criteria": {
@@ -1074,8 +1074,8 @@
     "endMessage": "Selon votre convention collective, lorsque le contrat d'intervention est transformé en CDI, le salarié n’a pas le droit à une prime d'intervention.",
     "rate": null,
     "bonusLabel": "La prime d'intervention",
-    "refLabel": "article 4.7 de la convention collective (point 4.7.2.)",
-    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AC096B3D0CD017996E22DEE5D3C1ABFF.tplgfr41s_1?idArticle=KALIARTI000021063900&cidTexte=KALITEXT000017577657&dateTexte=20160726&categorieLien=id"
+    "refLabel": null,
+    "refUrl": null
   },
   {
     "criteria": {
@@ -1187,8 +1187,8 @@
     "endMessage": null,
     "rate": "10%",
     "bonusLabel": "La prime de mission",
-    "refLabel": "article 2.5 de la section 1 de la Partie 1 du Chapitre II de la convention collective",
-    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C006837D6C1061AF47817DC0CD5FF05C.tplgfr43s_2?idArticle=KALIARTI000026943297&cidTexte=KALITEXT000026943196&dateTexte=29990101&categorieLien=id"
+    "refLabel": "Article 2.5 de la section 1 du Chapitre I de la Partie 2 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041895535"
   },
   {
     "criteria": {
@@ -1202,8 +1202,8 @@
     "endMessage": "Selon votre convention collective, lorsque le contrat de mission ponctuelle est transformé en CDI pour un poste et une durée équivalents, le salarié n’a pas le droit à une prime d'intervention.",
     "rate": null,
     "bonusLabel": "La prime de mission",
-    "refLabel": "article 2.5 de la section 1 de la Partie 1 du Chapitre II de la convention collective",
-    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C006837D6C1061AF47817DC0CD5FF05C.tplgfr43s_2?idArticle=KALIARTI000026943297&cidTexte=KALITEXT000026943196&dateTexte=29990101&categorieLien=id"
+    "refLabel": null,
+    "refUrl": null
   },
   {
     "criteria": {

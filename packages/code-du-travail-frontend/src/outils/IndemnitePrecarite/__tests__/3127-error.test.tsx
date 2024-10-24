@@ -36,7 +36,7 @@ describe("SimulateurIndemnitePrecarite", () => {
     fireEvent.click(ui.next.get());
     expect(
       screen.queryByText(
-        /Ce type de contrat ne permet pas au salarié d’avoir droit à une prime de précarité/g
+        /Selon votre convention collective, lorsque le contrat de mission ponctuelle est transformé en CDI pour un poste et une durée équivalents, le salarié n’a pas le droit à une prime d'intervention/g
       )
     ).toBeInTheDocument();
   });

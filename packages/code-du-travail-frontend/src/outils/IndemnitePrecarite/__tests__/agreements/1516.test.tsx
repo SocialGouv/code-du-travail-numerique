@@ -70,7 +70,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
               expect(
                 screen.queryAllByText(
-                  /article 5 de la convention collective \(point 5.4.3.\)/
+                  /Article 5 de la convention collective/
                 )[0]
               ).toBeInTheDocument();
             });
