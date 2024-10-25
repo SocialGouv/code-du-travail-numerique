@@ -4,7 +4,9 @@ import { fetchAllAgreements } from "../queries";
 
 describe("Conventions collectives", () => {
   it("Récupération de toutes les conventions collectives", async () => {
-    const result = await fetchAllAgreements(["slug", "title", "num"]);
+    const result = await fetchAllAgreements({
+      fields: ["slug", "title", "num"],
+    });
     expect(result).toEqual([
       {
         num: 843,

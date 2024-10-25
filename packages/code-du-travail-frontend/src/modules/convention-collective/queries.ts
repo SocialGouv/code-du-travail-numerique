@@ -3,13 +3,51 @@ import { orderByAlpha } from "../utils";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 
-export const fetchAllAgreements = async <K extends keyof ElasticAgreement>(
-  fields: K[],
-  sortBy?: K
-): Promise<Pick<ElasticAgreement, K>[]> => {
+type Props<K> = {
+  fields?: K[];
+  sortBy?: K;
+  filterTitle?: string;
+  size?: number;
+};
+
+export const fetchAllAgreements = async <K extends keyof ElasticAgreement>({
+  fields,
+  sortBy,
+  filterTitle,
+  size = 100,
+}: Props<K>): Promise<Pick<ElasticAgreement, K>[]> => {
   const response = await elasticsearchClient.search<Pick<ElasticAgreement, K>>({
     query: {
       bool: {
+        ...(filterTitle
+          ? {
+              should: [
+                {
+                  match: {
+                    "shortTitle.french": {
+                      boost: 0.9,
+                      fuzziness: "1",
+                      query: filterTitle,
+                    },
+                  },
+                },
+                {
+                  match_phrase_prefix: {
+                    "synonymes.french": {
+                      query: filterTitle,
+                    },
+                  },
+                },
+                {
+                  match_phrase_prefix: {
+                    "title.french": {
+                      query: filterTitle,
+                    },
+                  },
+                },
+              ],
+            }
+          : {}),
         filter: [
           { term: { source: SOURCES.CCN } },
           { term: { isPublished: true } },
@@ -17,8 +55,8 @@ export const fetchAllAgreements = async <K extends keyof ElasticAgreement>(
         ],
       },
     },
-    size: 100,
-    _source: fields,
+    size,
+    ...(fields ? { _source: fields } : {}),
     index: elasticDocumentsIndex,
   });
 

@@ -32,10 +32,10 @@ export const fetchSitemapData = async () => {
   const themes = await getAllThemesAndSubThemes();
   const tools = await fetchAllTools(["slug", "title"]);
   const modeles = await fetchAllModels(["slug", "title"]);
-  const agreements = await fetchAllAgreements(
-    ["slug", "shortTitle", "num"],
-    "shortTitle"
-  );
+  const agreements = await fetchAllAgreements({
+    fields: ["slug", "shortTitle", "num"],
+    sortBy: "shortTitle",
+  });
   const informations = await fetchAllInformations(["slug", "title"], "title");
   const contributions = await getAllContributionsGroupByQuestion(agreements);
   const response: GetSitemapPage = {
