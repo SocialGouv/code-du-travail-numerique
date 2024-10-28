@@ -75,7 +75,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
               expect(
                 screen.queryAllByText(
-                  /article 2.5 de la section 1 de la Partie 1 du Chapitre II de la convention collective/
+                  /Article 2.5 de la section 1 du Chapitre I de la Partie 2 de la convention collective/
                 )[0]
               ).toBeInTheDocument();
             });
