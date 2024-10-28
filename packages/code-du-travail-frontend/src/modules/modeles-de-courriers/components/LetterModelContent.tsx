@@ -38,11 +38,7 @@ export const LetterModelContent = ({
       )}
       <div className={fr.cx("fr-hidden-md")}>
         <div className={fr.cx("fr-mb-6w")}>
-          <DownloadTile
-            filename={filename}
-            filesize={filesize}
-            title={title}
-          ></DownloadTile>
+          <DownloadTile filename={filename} filesize={filesize} title={title} />
         </div>
         <CopyButton />
       </div>
@@ -63,11 +59,7 @@ export const LetterModelContent = ({
         <CopyButton />
       </div>
       <div className={fr.cx("fr-mb-6w")}>
-        <DownloadTile
-          filename={filename}
-          filesize={filesize}
-          title={title}
-        ></DownloadTile>
+        <DownloadTile filename={filename} filesize={filesize} title={title} />
       </div>
     </>
   );

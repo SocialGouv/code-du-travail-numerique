@@ -1,9 +1,7 @@
 "use client";
 
-import React, { useCallback, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Breadcrumb as BreadcrumbType } from "@socialgouv/cdtn-types";
-import { MatomoActionEvent, MatomoBaseEvent } from "../../lib";
-import { push as matopush } from "@socialgouv/matomo-next";
 import { Feedback } from "../layout/feedback";
 import { RelatedItems } from "../common/RelatedItems";
 import { Share } from "../common/Share";
@@ -12,6 +10,7 @@ import { DownloadTile } from "./components/DownloadTile";
 import { CopyButton } from "./components/CopyButton";
 import { LetterModelContent } from "./components/LetterModelContent";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
+import { useTrackCopy } from "./tracking";
 
 export interface LetterModelProps {
   breadcrumbs: BreadcrumbType[];
@@ -38,14 +37,7 @@ export const LetterModel = ({
   intro,
   date,
 }: LetterModelProps) => {
-  const trackCopy = useCallback(() => {
-    matopush([
-      MatomoBaseEvent.TRACK_EVENT,
-      MatomoBaseEvent.PAGE_MODELS,
-      MatomoActionEvent.TYPE_CTRL_C,
-      slug,
-    ]);
-  }, []);
+  const trackCopy = useTrackCopy(slug);
 
   useEffect(() => {
     document.addEventListener("copy", trackCopy);
@@ -98,7 +90,7 @@ export const LetterModel = ({
                 filename={filename}
                 filesize={filesize}
                 title={title}
-              ></DownloadTile>
+              />
             </div>
             <CopyButton />
           </div>
