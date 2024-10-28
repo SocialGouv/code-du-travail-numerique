@@ -3,10 +3,10 @@
 exports[`<ModelesDeCourrier /> should render 1`] = `
 <div>
   <div
-    class="sc-bf4d7851-0 cScnsz"
+    class="sc-454ca646-0 jYVKdr"
   >
     <div
-      class="sc-bf4d7851-1 lbLhz"
+      class="sc-454ca646-1 fiVDmP"
     />
     <header
       class="sc-1bce5a92-0 daRkfQ"
@@ -167,27 +167,8 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
         </button>
       </div>
     </header>
-    <button
-      aria-expanded="false"
-      aria-haspopup="dialog"
-      aria-label="Donner votre avis"
-      class="sc-1a079d5a-0 dPrVcb"
-      data-tally-open="3jLRW1"
-      data-tally-overlay="1"
-      data-tally-width="500"
-    >
-      <img
-        alt="Suggestion"
-        aria-hidden="true"
-        class="sc-1a079d5a-1 dcOJGP"
-        src="/static/assets/img/emoj-wave.png"
-      />
-      <span>
-        Donnez votre avis
-      </span>
-    </button>
     <main
-      class="sc-bf4d7851-2 YjLpR"
+      class="sc-454ca646-2 kMooQt"
       id="content"
       tabindex="-1"
     >
