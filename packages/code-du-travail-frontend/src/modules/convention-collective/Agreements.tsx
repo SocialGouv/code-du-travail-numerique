@@ -50,13 +50,13 @@ export const Agreements = ({ agreements }: Props) => {
       <div className={fr.cx("fr-mb-6w")}>
         <AgreementsGlossaire letters={Object.keys(firstLettersAgreements)} />
       </div>
-      <div id="content">
+      <div id="content" className={fr.cx("fr-col-12", "fr-col-md-7")}>
         {Object.entries(firstLettersAgreements).map(([letter, agreements]) => (
           <AgreementsSection
             key={letter}
             agreements={agreements}
             letter={letter}
-          ></AgreementsSection>
+          />
         ))}
       </div>
     </ContainerSimulator>
