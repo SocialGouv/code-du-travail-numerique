@@ -70,7 +70,9 @@ export const SearchInput = (props: Props) => {
               {...getItemProps({
                 item,
                 index,
-                className: `${fr.cx("fr-p-3v")} ${suggestion} ${highlightedIndex === index ? isHighlighted : ""}`,
+                className: `${fr.cx("fr-p-3v")} ${suggestion} ${
+                  highlightedIndex === index && suggestionHover
+                }`,
               })}
               key={`${item}${index}`}
             >
@@ -94,9 +96,8 @@ const suggestion = css({
   cursor: "pointer",
   color: "var(--text-action-high-blue-france)",
   textAlign: "left",
-  _hover: { bg: "var(--background-default-grey-hover)" },
 });
 
-const isHighlighted = css({
-  background: "var(--background-default-grey-hover)",
+const suggestionHover = css({
+  bg: "var(--background-default-grey-hover)",
 });

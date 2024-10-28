@@ -1,12 +1,12 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Tile } from "@codegouvfr/react-dsfr/Tile";
+import { css } from "../../../styled-system/css";
 
 type Props = {
   title: string;
   description?: string;
   iconName: string;
   link: string;
-  noIcon?: boolean;
 };
 
 export const ThemeTile = (props: Props) => (
@@ -20,10 +20,15 @@ export const ThemeTile = (props: Props) => (
     title={props.title}
     desc={props.description}
     titleAs="h3"
-    noIcon={props.noIcon}
+    noIcon
+    small
     classes={{
-      img: fr.cx("fr-mb-0"),
-      title: fr.cx("fr-text--md"),
+      img: `${fr.cx("fr-mb-0")}`,
+      link: link,
     }}
   />
 );
+
+const link = css({
+  color: "var(--text-default-grey)!",
+});

@@ -3,8 +3,8 @@ import { HomeButton, SectionContainer } from "./Components";
 import { fr } from "@codegouvfr/react-dsfr";
 import { MatomoHomeEvent, useHomeTracking } from "./tracking";
 import { HomeTileItem } from "./queries";
-import IllustrationTheme from "./themes.svg";
-import { ThemeTile } from "./Components/ThemeTile";
+import IllustrationTheme from "./picto/themes.svg";
+import { ThemeTile } from "../themes/ThemeTile";
 
 type Props = {
   items: HomeTileItem[];
@@ -48,7 +48,7 @@ export const Themes = (props: Props) => {
               "fr-col-lg-2"
             )}
           >
-            <ThemeTile {...item} noIcon />
+            <ThemeTile {...item} />
           </div>
         ))}
       </>

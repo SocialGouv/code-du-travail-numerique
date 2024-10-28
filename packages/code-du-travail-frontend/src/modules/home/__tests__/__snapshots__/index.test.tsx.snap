@@ -529,7 +529,7 @@ exports[`<Home /> should match snapshot 1`] = `
               class="fr-col-12 fr-col-sm-6 fr-col-md-4 fr-col-lg-2"
             >
               <div
-                class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--no-icon"
+                class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--no-icon fr-tile--sm"
                 id="fr-tile-:rf:"
               >
                 <div
@@ -543,7 +543,7 @@ exports[`<Home /> should match snapshot 1`] = `
                     >
                       <a
                         aria-disabled="false"
-                        class=""
+                        class="c_var(--text-default-grey)!"
                         href="https://example.com/theme"
                       >
                         Theme Title

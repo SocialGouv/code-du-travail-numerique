@@ -1,7 +1,8 @@
 import { HomeTileItem } from "./queries";
-import { HomeButton, HomeTile, SectionContainer } from "./Components";
+import { HomeButton, SectionContainer } from "./Components";
 import { MatomoHomeEvent, useHomeTracking } from "./tracking";
 import { fr } from "@codegouvfr/react-dsfr";
+import { ToolTile } from "../outils/ToolTile";
 
 type Props = {
   items: HomeTileItem[];
@@ -37,7 +38,7 @@ export const Tools = (props: Props) => {
             "fr-col-lg-3"
           )}
         >
-          <HomeTile iconFolder="tools" {...item} />
+          <ToolTile {...item} />
         </div>
       ))}
     </SectionContainer>

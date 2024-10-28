@@ -5,7 +5,7 @@ import { css } from "../../../styled-system/css";
 import Image from "next/image";
 import { HomeSearch } from "./Components";
 import { useRouter } from "next/navigation";
-import IllustrationHomePrincipal from "./IllustrationHomePrincipal.svg";
+import IllustrationHomePrincipal from "./picto/IllustrationHomePrincipal.svg";
 
 export const Search = () => {
   const router = useRouter();

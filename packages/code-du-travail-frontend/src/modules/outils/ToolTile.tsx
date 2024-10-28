@@ -5,15 +5,14 @@ export type HomeTileProps = {
   title: string;
   description?: string;
   iconName: string;
-  iconFolder: "themes" | "tools";
   link: string;
   noIcon?: boolean;
 };
 
-export const HomeTile = (props: HomeTileProps) => (
+export const ToolTile = (props: HomeTileProps) => (
   <Tile
     imageSvg={false}
-    imageUrl={`/static/assets/icons/${props.iconFolder}/${props.iconName}.svg`}
+    imageUrl={`/static/assets/icons/tools/${props.iconName}.svg`}
     linkProps={{
       href: props.link,
     }}
