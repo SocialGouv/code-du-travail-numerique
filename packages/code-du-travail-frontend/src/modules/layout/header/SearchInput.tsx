@@ -19,28 +19,29 @@ export const SearchInput = (props: Props) => {
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const { emitSuggestionEvent } = useLayoutTracking();
 
-  const { isOpen, getMenuProps, getInputProps, getItemProps } = useCombobox({
-    items: suggestions,
-    onInputValueChange: async ({ inputValue }) => {
-      setQuery(inputValue);
-      try {
-        const results = await fetchSuggestResults(inputValue).then((items) =>
-          items.slice(0, SUGGEST_MAX_RESULTS)
-        );
-        setSuggestions(results);
-      } catch (error) {
-        console.error("fetch error", error);
-      }
-    },
-    onSelectedItemChange(changes) {
-      const suggestion = changes.selectedItem;
-      if (suggestion) {
-        emitSuggestionEvent(query, suggestion, suggestions);
-        props.onSearchSubmit(suggestion);
-      }
-    },
-    initialInputValue: query,
-  });
+  const { isOpen, getMenuProps, getInputProps, getItemProps, highlightedIndex } =
+    useCombobox({
+      items: suggestions,
+      onInputValueChange: async ({ inputValue }) => {
+        setQuery(inputValue);
+        try {
+          const results = await fetchSuggestResults(inputValue).then((items) =>
+            items.slice(0, SUGGEST_MAX_RESULTS)
+          );
+          setSuggestions(results);
+        } catch (error) {
+          console.error("fetch error", error);
+        }
+      },
+      onSelectedItemChange(changes) {
+        const suggestion = changes.selectedItem;
+        if (suggestion) {
+          emitSuggestionEvent(query, suggestion, suggestions);
+          props.onSearchSubmit(suggestion);
+        }
+      },
+      initialInputValue: query,
+    });
 
   return (
     <>
@@ -64,7 +65,9 @@ export const SearchInput = (props: Props) => {
               {...getItemProps({
                 item,
                 index,
-                className: `${fr.cx("fr-p-3v")} ${suggestion}`,
+                className: `${fr.cx("fr-p-3v")} ${suggestion} ${
+                  highlightedIndex === index && suggestionHover
+                }`,
               })}
               key={`${item}${index}`}
             >
@@ -88,5 +91,8 @@ const suggestion = css({
   cursor: "pointer",
   color: "var(--text-action-high-blue-france)",
   textAlign: "left",
-  _hover: { bg: "var(--background-default-grey-hover)" },
+});
+
+const suggestionHover = css({
+  bg: "var(--background-default-grey-hover)"
 });
