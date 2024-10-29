@@ -1,9 +1,9 @@
-"use client";
 import { Highlight } from "@codegouvfr/react-dsfr/Highlight";
 import { fr } from "@codegouvfr/react-dsfr";
 import { createRef, useEffect, useState } from "react";
 import { ContainerSimulator } from "../../layout/ContainerSimulator";
 import { RelatedItem } from "../../documents";
+import { SimulateurEmbauche } from "./SimulateurEmbauche";
 
 type Props = {
   relatedItems: {
@@ -63,23 +63,9 @@ export const HiringSimulator = ({ relatedItems, description }: Props) => {
         sur la situation d&apos;une personne célibataire sans enfants ni
         patrimoine.
       </Highlight>
-      {simulator === "loading" && <p>Chargement de l’outil</p>}
-      {simulator === "error" ? (
-        <p>
-          Le simulateur d’embauche n’est pas disponible actuellement.
-          <br />
-          Retrouvez les autres simulateurs autour du thème de l’entreprise, sur
-          le site:{" "}
-          <a
-            title="Voir les simulateurs"
-            href="https://mon-entreprise.urssaf.fr/"
-          >
-            https://mon-entreprise.urssaf.fr/
-          </a>
-        </p>
-      ) : (
-        <div ref={simRef} className={fr.cx("fr-col-12")} />
-      )}
+      <div className={fr.cx("fr-col-12")}>
+        <SimulateurEmbauche></SimulateurEmbauche>
+      </div>
     </ContainerSimulator>
   );
 };
