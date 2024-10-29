@@ -3,10 +3,6 @@ import { Home } from "../src/modules/home";
 import { fetchHomeData } from "../src/modules/home/queries";
 import { generateDefaultMetadata } from "../src/modules/common/metas";
 
-export const dynamic = "force-static";
-
-export const revalidate = 86400;
-
 export const metadata = generateDefaultMetadata({
   title: "Code du travail numérique",
   description:
