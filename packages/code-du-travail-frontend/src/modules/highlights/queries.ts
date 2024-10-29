@@ -8,17 +8,19 @@ import { HighlightDocument } from "@socialgouv/cdtn-types";
 
 const SLUG_HOME = "homepage";
 
-export const fetchHighLights = async (): Promise<HighlightDocument[]> => {
-  const response = await elasticsearchClient.search<any>({
-    body: {
-      _source: ["refs"],
-      query: {
-        bool: {
-          filter: [
-            { term: { source: SOURCES.HIGHLIGHTS } },
-            { term: { slug: SLUG_HOME } },
-          ],
-        },
+export const fetchHighLights = async (): Promise<
+  HighlightDocument["refs"]
+> => {
+  const response = await elasticsearchClient.search<
+    Pick<HighlightDocument, "refs">
+  >({
+    _source: ["refs"],
+    query: {
+      bool: {
+        filter: [
+          { term: { source: SOURCES.HIGHLIGHTS } },
+          { term: { slug: SLUG_HOME } },
+        ],
       },
     },
     index: elasticDocumentsIndex,
@@ -32,5 +34,5 @@ export const fetchHighLights = async (): Promise<HighlightDocument[]> => {
     });
   }
 
-  return response.hits.hits[0]._source.refs;
+  return response.hits.hits[0]._source?.refs ?? [];
 };

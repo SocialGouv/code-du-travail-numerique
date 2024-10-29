@@ -17,7 +17,6 @@ exports[`Themes getAllThemes 1`] = `
       "icon": "Contract",
       "position": 1,
       "slug": "embauche-et-contrat-de-travail",
-      "source": "themes",
       "title": "Embauche et contrat de travail",
     },
     {
@@ -54,7 +53,6 @@ exports[`Themes getAllThemes 1`] = `
       "icon": "Depart",
       "position": 8,
       "slug": "depart-de-lentreprise",
-      "source": "themes",
       "title": "Départ de l’entreprise",
     },
   ],
@@ -77,7 +75,6 @@ exports[`Themes getAllThemesAndSubThemes 1`] = `
     "icon": "Contract",
     "position": 1,
     "slug": "embauche-et-contrat-de-travail",
-    "source": "themes",
     "title": "Embauche et contrat de travail",
   },
   {
@@ -115,7 +112,6 @@ exports[`Themes getAllThemesAndSubThemes 1`] = `
     "icon": "Depart",
     "position": 8,
     "slug": "depart-de-lentreprise",
-    "source": "themes",
     "title": "Départ de l’entreprise",
   },
 ]
