@@ -22,13 +22,14 @@ export const ThemeTile = (props: Props) => (
     titleAs="h3"
     noIcon
     small
+    imageWidth="56"
     classes={{
-      img: `${fr.cx("fr-mb-0")}`,
-      link: link,
+      img: `${fr.cx("fr-mb-0")} ${image}`,
     }}
   />
 );
 
-const link = css({
-  color: "var(--text-default-grey)!",
+const image = css({
+  w: "56px!",
+  h: "56px!",
 });

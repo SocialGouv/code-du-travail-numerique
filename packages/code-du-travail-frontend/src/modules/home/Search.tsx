@@ -21,7 +21,7 @@ export const Search = () => {
           className={fr.cx(
             "fr-grid-row",
             "fr-grid-row--gutters",
-            "fr-grid-row--top"
+            "fr-grid-row--middle"
           )}
         >
           <div className={fr.cx("fr-col-12", "fr-col-md-7")}>
@@ -44,14 +44,15 @@ export const Search = () => {
             </h2>
             <HomeSearch onSearchSubmit={onSearchSubmit} />
           </div>
-          <Image
-            priority={false}
-            src={IllustrationHomePrincipal}
-            alt="Illustration graphique du site montrant des personnes travaillant"
-            width="577"
-            height="393"
-            className={`${fr.cx("fr-col-md-5", "fr-col-12")}`}
-          />
+          <div className={`${fr.cx("fr-col-md-5", "fr-col-12")}`}>
+            <Image
+              priority={false}
+              src={IllustrationHomePrincipal}
+              alt="Illustration graphique du site montrant des personnes travaillant"
+              width="577"
+              height="393"
+            />
+          </div>
         </div>
       </div>
     </div>
