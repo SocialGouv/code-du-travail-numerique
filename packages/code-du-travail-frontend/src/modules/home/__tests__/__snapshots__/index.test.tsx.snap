@@ -15,7 +15,7 @@ exports[`<Home /> should match snapshot 1`] = `
           class="fr-container fr-py-6w"
         >
           <div
-            class="fr-grid-row fr-grid-row--gutters fr-grid-row--top"
+            class="fr-grid-row fr-grid-row--gutters fr-grid-row--middle"
           >
             <div
               class="fr-col-12 fr-col-md-7"
@@ -94,18 +94,21 @@ exports[`<Home /> should match snapshot 1`] = `
                 </div>
               </div>
             </div>
-            <img
-              alt="Illustration graphique du site montrant des personnes travaillant"
+            <div
               class="fr-col-md-5 fr-col-12"
-              data-nimg="1"
-              decoding="async"
-              height="393"
-              loading="lazy"
-              src="/_next/image?url=%2Fimg.jpg&w=1200&q=75"
-              srcset="/_next/image?url=%2Fimg.jpg&w=640&q=75 1x, /_next/image?url=%2Fimg.jpg&w=1200&q=75 2x"
-              style="color: transparent;"
-              width="577"
-            />
+            >
+              <img
+                alt="Illustration graphique du site montrant des personnes travaillant"
+                data-nimg="1"
+                decoding="async"
+                height="393"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=1200&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=640&q=75 1x, /_next/image?url=%2Fimg.jpg&w=1200&q=75 2x"
+                style="color: transparent;"
+                width="577"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -543,7 +546,7 @@ exports[`<Home /> should match snapshot 1`] = `
                     >
                       <a
                         aria-disabled="false"
-                        class="c_var(--text-default-grey)!"
+                        class=""
                         href="https://example.com/theme"
                       >
                         Theme Title
@@ -560,11 +563,12 @@ exports[`<Home /> should match snapshot 1`] = `
                   class="fr-tile__header"
                 >
                   <div
-                    class="fr-tile__img fr-mb-0"
+                    class="fr-tile__img fr-mb-0 w_56px! h_56px!"
                   >
                     <img
                       class="fr-responsive-img"
                       src="/static/assets/icons/themes/theme-icon.svg"
+                      width="56"
                     />
                   </div>
                 </div>

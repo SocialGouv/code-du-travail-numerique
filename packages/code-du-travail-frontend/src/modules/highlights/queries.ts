@@ -8,9 +8,7 @@ import { HighlightDocument } from "@socialgouv/cdtn-types";
 
 const SLUG_HOME = "homepage";
 
-export const fetchHighLights = async (): Promise<
-  HighlightDocument["refs"]
-> => {
+export const fetchHighLights = async (): Promise<HighlightDocument["refs"]> => {
   const response = await elasticsearchClient.search<
     Pick<HighlightDocument, "refs">
   >({
