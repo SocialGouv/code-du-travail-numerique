@@ -49,6 +49,7 @@ class SimulateurEmbauche extends React.PureComponent {
               sur le site:{" "}
               <a
                 title="Voir les simulateurs"
+                rel="noopener noreferrer"
                 href="https://mon-entreprise.urssaf.fr/"
               >
                 https://mon-entreprise.urssaf.fr/
