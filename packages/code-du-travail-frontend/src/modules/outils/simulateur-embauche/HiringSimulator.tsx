@@ -1,8 +1,8 @@
-"use client";
 import { Highlight } from "@codegouvfr/react-dsfr/Highlight";
 import { fr } from "@codegouvfr/react-dsfr";
 import { ContainerSimulator } from "../../layout/ContainerSimulator";
 import { RelatedItem } from "../../documents";
+import { SimulateurEmbauche } from "./SimulateurEmbauche";
 
 type Props = {
   relatedItems: {
@@ -26,13 +26,8 @@ export const HiringSimulator = ({ relatedItems, description }: Props) => {
         sur la situation d&apos;une personne célibataire sans enfants ni
         patrimoine.
       </Highlight>
-      <div className={fr.cx("fr-col-12")} suppressHydrationWarning>
-        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script
-          src="https://mon-entreprise.urssaf.fr/simulateur-iframe-integration.js"
-          data-couleur="#417DC4"
-          id="script-simulateur-embauche"
-        />
+      <div className={fr.cx("fr-col-12")}>
+        <SimulateurEmbauche></SimulateurEmbauche>
       </div>
     </ContainerSimulator>
   );
