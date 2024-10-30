@@ -7,7 +7,8 @@ import { fetchTool, FindAgreementLayout } from "../../../../src/modules/outils";
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../../src/modules/common/metas";
 import { ElasticTool } from "../../../../src/modules/outils/type";
-import { AgreementSearchByEnterprise } from "../../../../src/modules/convention-collective";
+import { AgreementSelection } from "../../../../src/modules/convention-collective";
+import { searchEnterprises } from "../../../../src/modules/Enterprise/enterprises.service";
 
 const SLUG = "convention-collective";
 
@@ -21,7 +22,10 @@ export async function generateMetadata() {
   });
 }
 
-async function FindAgreementByEnterprisePage() {
+async function AgreementSelectionPage({ params }) {
+  const [enterprise] = await searchEnterprises({
+    query: params.slug,
+  });
   const tool = await getTool();
   const relatedItems = await fetchRelatedItems({ _id: tool._id }, SLUG);
   return (
@@ -30,7 +34,10 @@ async function FindAgreementByEnterprisePage() {
         relatedItems={relatedItems}
         description={tool.description}
       >
-        <AgreementSearchByEnterprise />
+        <AgreementSelection
+          enterprise={enterprise}
+          navigationUrl="/widgets/convention-collective"
+        />
       </FindAgreementLayout>
     </DsfrLayout>
   );
@@ -45,4 +52,4 @@ const getTool = async () => {
   return tool;
 };
 
-export default FindAgreementByEnterprisePage;
+export default AgreementSelectionPage;

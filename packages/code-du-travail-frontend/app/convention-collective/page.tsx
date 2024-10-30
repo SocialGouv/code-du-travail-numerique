@@ -11,10 +11,10 @@ export const metadata = generateDefaultMetadata({
 });
 
 async function AgreementPage() {
-  const agreements = await fetchAllAgreements(
-    ["slug", "shortTitle"],
-    "shortTitle"
-  );
+  const agreements = await fetchAllAgreements({
+    fields: ["slug", "shortTitle"],
+    sortBy: "shortTitle",
+  });
   return (
     <DsfrLayout>
       <Agreements agreements={agreements} />

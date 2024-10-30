@@ -5,6 +5,7 @@ import { SUGGEST_MAX_RESULTS } from "../../../config";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "../../../../styled-system/css";
 import { useLayoutTracking } from "../tracking";
+import { StyledList, StyledSuggestion } from "../../../search/SearchBar";
 
 type Props = {
   id: string;

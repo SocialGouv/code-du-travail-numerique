@@ -6,7 +6,7 @@ import {
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../../src/modules/common/metas";
 import { ElasticTool } from "../../../../src/modules/outils/type";
-import { AgreementSearchByCompany } from "../../../../src/modules/convention-collective";
+import { AgreementSearchByEnterprise } from "../../../../src/modules/convention-collective";
 
 export async function generateMetadata() {
   const { title, description } = await getTool();
@@ -21,7 +21,7 @@ export async function generateMetadata() {
 async function FindAgreementByEnterprisePage() {
   return (
     <FindAgreementWidgetLayout>
-      <AgreementSearchByCompany navigationUrl="/widgets/convention-collective" />
+      <AgreementSearchByEnterprise navigationUrl="/widgets/convention-collective" />
     </FindAgreementWidgetLayout>
   );
 }

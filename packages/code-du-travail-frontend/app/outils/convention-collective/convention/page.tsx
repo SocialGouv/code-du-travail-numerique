@@ -4,7 +4,7 @@ import {
   fetchRelatedItems,
 } from "../../../../src/modules/documents";
 import { fetchTool, FindAgreementLayout } from "../../../../src/modules/outils";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { generateDefaultMetadata } from "../../../../src/modules/common/metas";
 import { ElasticTool } from "../../../../src/modules/outils/type";
 import { AgreementSearchByName } from "../../../../src/modules/convention-collective";

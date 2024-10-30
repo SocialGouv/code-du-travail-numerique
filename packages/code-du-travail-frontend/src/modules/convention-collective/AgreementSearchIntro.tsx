@@ -1,6 +1,8 @@
 import { fr } from "@codegouvfr/react-dsfr";
+import Button from "@codegouvfr/react-dsfr/Button";
 import Highlight from "@codegouvfr/react-dsfr/Highlight";
 import Link from "next/link";
+import { MatomoAgreementEvent, useAgreementSearchTracking } from "./tracking";
 
 type Props = {
   navigationUrl?: string;
@@ -9,6 +11,7 @@ type Props = {
 export const AgreementSearchIntro = ({
   navigationUrl = "/outils/convention-collective",
 }: Props) => {
+  const { emitSearchTypeSelectEvent } = useAgreementSearchTracking();
   return (
     <>
       <Highlight size="lg" className={`${fr.cx("fr-mt-2w")}`}>
@@ -37,12 +40,8 @@ export const AgreementSearchIntro = ({
           "fr-mb-0"
         )}`}
       >
-        <Link
-          href={`${navigationUrl}/convention`}
+        <Button
           className={`${fr.cx(
-            "fr-btn",
-            "fr-btn--icon-right",
-            "fr-icon-arrow-right-line",
             "fr-px-9v",
             "fr-col-12",
             "fr-col-md-3",
@@ -50,15 +49,32 @@ export const AgreementSearchIntro = ({
             "fr-mb-2w",
             "fr-btns-group--center"
           )}`}
+          iconPosition="right"
+          iconId="fr-icon-arrow-right-line"
+          linkProps={{ href: `${navigationUrl}/convention` }}
+          // onClick={() =>
+          //   emitSearchTypeSelectEvent(MatomoAgreementEvent.PARCOURS_1)
+          // }
         >
           Je connais ma convention collective je la saisis
-        </Link>
-        <Link
-          href={`${navigationUrl}/entreprise`}
-          className={`${fr.cx("fr-btn", "fr-btn--icon-right", "fr-icon-arrow-right-line", "fr-col-12", "fr-ml-md-6w", "fr-col-md-3", "fr-px-6v", "fr-btns-group--center")}`}
+        </Button>
+        <Button
+          className={`${fr.cx(
+            "fr-col-12",
+            "fr-ml-md-6w",
+            "fr-col-md-3",
+            "fr-px-6v",
+            "fr-btns-group--center"
+          )}`}
+          iconPosition="right"
+          iconId="fr-icon-arrow-right-line"
+          linkProps={{ href: `${navigationUrl}/entreprise` }}
+          // onClick={() =>
+          //   emitSearchTypeSelectEvent(MatomoAgreementEvent.PARCOURS_2)
+          // }
         >
           Je cherche mon entreprise pour trouver ma convention collective
-        </Link>
+        </Button>
       </div>
     </>
   );
