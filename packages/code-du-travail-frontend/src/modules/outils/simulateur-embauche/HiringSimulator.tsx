@@ -14,6 +14,7 @@ type Props = {
 };
 
 export const HiringSimulator = ({ relatedItems, description }: Props) => {
+  console.time("iframeLoading");
   const simRef = createRef<HTMLDivElement>();
   const [state, setState] = useState({
     error: "",
@@ -31,6 +32,7 @@ export const HiringSimulator = ({ relatedItems, description }: Props) => {
     ) {
       setState({ error: "empty child", simulator: "error" });
     }
+    console.timeEnd("iframeLoading");
   };
   useEffect(() => {
     const script = document.createElement("script");
