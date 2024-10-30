@@ -54,7 +54,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
         Résultat
       </h2>
       <p>
-        Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective :
+        La durée prévue par le code du travail est le même que celle prévue par la convention collective :
       </p>
       <ul>
         <li>
@@ -291,7 +291,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
         Résultat
       </h2>
       <p>
-        Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective :
+        La durée prévue par le code du travail est le même que celle prévue par la convention collective :
       </p>
       <ul>
         <li>
