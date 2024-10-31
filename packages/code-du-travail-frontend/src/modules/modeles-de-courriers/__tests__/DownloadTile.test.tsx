@@ -6,7 +6,8 @@ describe("<DownloadTile />", () => {
     const { getByText } = render(
       <DownloadTile
         title="Mon modele"
-        filesize={145800}
+        filesize={145.8}
+        extension={"docx"}
         filename={"mon-fichier.docx"}
       />
     );
