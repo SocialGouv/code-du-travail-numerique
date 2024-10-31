@@ -11,20 +11,18 @@ type Props = {
 
 export const DsfrLayout = (props: Props) => {
   return (
-    <html>
-      <body>
-        <SkipLinks />
-        <Header />
-        {props.doNotWrapInContainer ? (
-          <main id="main">{props.children}</main>
-        ) : (
-          <main className={fr.cx("fr-container")} id="main">
-            {props.children}
-          </main>
-        )}
-        <NeedMoreInfo />
-        <Footer />
-      </body>
-    </html>
+    <>
+      <SkipLinks />
+      <Header />
+      {props.doNotWrapInContainer ? (
+        <main id="main">{props.children}</main>
+      ) : (
+        <main className={fr.cx("fr-container")} id="main">
+          {props.children}
+        </main>
+      )}
+      <NeedMoreInfo />
+      <Footer />
+    </>
   );
 };

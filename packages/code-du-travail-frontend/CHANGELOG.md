@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.158.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.158.0...v4.158.1) (2024-10-30)
+
+
+### Bug Fixes
+
+* **simulateur embauche:** revert DSFR sur simulateur embauche ([#6245](https://github.com/SocialGouv/code-du-travail-numerique/issues/6245)) ([6a359dd](https://github.com/SocialGouv/code-du-travail-numerique/commit/6a359dded859d056e405c2b5432a7eed0ea0e138))
+
+
+
+
+
 # [4.158.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.157.0...v4.158.0) (2024-10-29)
 
 
