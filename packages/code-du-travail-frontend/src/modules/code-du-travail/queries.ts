@@ -17,6 +17,6 @@ export const fetchLegalArticle = async (
           { term: { isPublished: true } },
         ],
       },
-    }
+    },
   });
 };

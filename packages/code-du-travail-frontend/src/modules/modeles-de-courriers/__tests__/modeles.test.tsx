@@ -24,13 +24,13 @@ describe("<LetterModel />", () => {
       <LetterModel
         title="Mon modele"
         slug={"mon-modele"}
-        breadcrumbs={[]}
         date={"12/02/2020"}
         intro={"Ceci est mon intro"}
         relatedItems={[]}
         metaDescription={"ma méta description"}
         filesize={10}
         filename={"mon-fichier.txt"}
+        extension={"txt"}
         html="<p>Le modèle</p>"
       />
     );
@@ -44,7 +44,6 @@ describe("<LetterModel />", () => {
     const { container } = render(
       <LetterModel
         title="Mon modele"
-        breadcrumbs={[]}
         slug={"mon-modele"}
         date={""}
         intro={""}
@@ -53,6 +52,7 @@ describe("<LetterModel />", () => {
         filesize={10}
         filename={""}
         html={""}
+        extension={""}
       />
     );
 
@@ -68,7 +68,6 @@ describe("<LetterModel />", () => {
     const { container } = render(
       <LetterModel
         title="Mon modele"
-        breadcrumbs={[]}
         slug={"mon-modele"}
         date={""}
         intro={""}
@@ -94,7 +93,6 @@ describe("<LetterModel />", () => {
     const { getAllByTestId } = render(
       <LetterModel
         title="Mon modele"
-        breadcrumbs={[]}
         slug={"mon-modele"}
         date={""}
         intro={""}
@@ -122,7 +120,6 @@ describe("<LetterModel />", () => {
     const { container } = render(
       <LetterModel
         title="Mon modele"
-        breadcrumbs={[]}
         slug={"mon-modele"}
         date={""}
         intro={""}
