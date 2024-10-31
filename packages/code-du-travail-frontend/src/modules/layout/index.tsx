@@ -6,16 +6,14 @@ import { SkipLinks } from "./SkipLinks";
 
 export const DsfrLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html>
-      <body>
-        <SkipLinks />
-        <Header />
-        <main className={fr.cx("fr-container")} id="main">
-          {children}
-        </main>
-        <NeedMoreInfo />
-        <Footer />
-      </body>
-    </html>
+    <>
+      <SkipLinks />
+      <Header />
+      <main className={fr.cx("fr-container")} id="main">
+        {children}
+      </main>
+      <NeedMoreInfo />
+      <Footer />
+    </>
   );
 };

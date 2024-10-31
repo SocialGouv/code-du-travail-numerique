@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccordionWithAnchor /> with items 1`] = `
+<div>
+  <div
+    class="fr-accordions-group"
+    data-fr-group="false"
+  >
+    <section
+      class="fr-accordion"
+    >
+      <h3
+        class="fr-accordion__title"
+      >
+        <button
+          aria-controls="title-1-collapse"
+          aria-expanded="false"
+          class="fr-accordion__btn"
+          id="title-1__toggle-btn"
+          type="button"
+        >
+          Title 1
+        </button>
+      </h3>
+      <div
+        class="fr-collapse"
+        id="title-1-collapse"
+      >
+        <p>
+          Content 1
+        </p>
+      </div>
+    </section>
+    <section
+      class="fr-accordion"
+    >
+      <h3
+        class="fr-accordion__title"
+      >
+        <button
+          aria-controls="title-2-collapse"
+          aria-expanded="false"
+          class="fr-accordion__btn"
+          id="title-2__toggle-btn"
+          type="button"
+        >
+          Title 2
+        </button>
+      </h3>
+      <div
+        class="fr-collapse"
+        id="title-2-collapse"
+      >
+        <p>
+          Content 2
+        </p>
+      </div>
+    </section>
+  </div>
+</div>
+`;
