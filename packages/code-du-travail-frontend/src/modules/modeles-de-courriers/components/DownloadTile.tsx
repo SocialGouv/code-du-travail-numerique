@@ -4,15 +4,14 @@ import { toUrl } from "../../../lib";
 export const DownloadTile = ({
   filename,
   filesize,
+  extension,
   title,
 }: {
   filename: string;
   filesize: number;
+  extension: string;
   title: string;
 }) => {
-  const filesizeFormated = Math.round((filesize / 1000) * 100) / 100;
-  const [, extension] = filename.split(/\.([a-z]{2,4})$/);
-
   return (
     <Tile
       downloadButton
@@ -21,7 +20,7 @@ export const DownloadTile = ({
       imageUrl={`/static/assets/img/modeles-de-courriers-download.svg`}
       title={`Télécharger le ${title}`}
       titleAs="h2"
-      detail={`Format ${extension} - ${filesizeFormated}Ko`}
+      detail={`${extension} - ${filesize}Ko`}
       linkProps={{
         href: toUrl(filename),
       }}

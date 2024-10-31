@@ -32,12 +32,27 @@ export const fetchAllModels = async <
   return response.hits.hits.map(({ _source }) => _source).filter(nonNullable);
 };
 
-export const fetchModel = async (
-  filter: Record<string, string>
-): Promise<
-  DocumentElasticResult<DocumentElasticWithSource<MailTemplateDoc>> | undefined
+export const format = (model) => {
+  if (model) {
+    model.filesize = Math.round((model.filesize / 1000) * 100) / 100;
+    if (model.filename.indexOf(".") > 0) {
+      model.extension = model.filename.split(/\.([a-z]{2,4})$/)[1];
+    }
+  }
+
+  return model;
+};
+
+export const fetchModel = async (filter: {
+  slug?: string;
+  _id?: string;
+}): Promise<
+  | (DocumentElasticResult<DocumentElasticWithSource<MailTemplateDoc>> & {
+      extension: string;
+    })
+  | undefined
 > => {
-  return await fetchDocument<
+  const model = await fetchDocument<
     DocumentElasticWithSource<MailTemplateDoc>,
     keyof DocumentElasticResult<DocumentElasticWithSource<MailTemplateDoc>>
   >(
@@ -66,7 +81,8 @@ export const fetchModel = async (
           ],
         },
       },
-      size: 1,
     }
   );
+
+  return format(model);
 };

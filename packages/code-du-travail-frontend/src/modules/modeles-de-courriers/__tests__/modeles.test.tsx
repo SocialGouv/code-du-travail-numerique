@@ -76,6 +76,7 @@ describe("<LetterModel />", () => {
         metaDescription={""}
         filesize={10}
         filename={""}
+        extension={""}
         html={""}
       />
     );
@@ -101,6 +102,7 @@ describe("<LetterModel />", () => {
         metaDescription={""}
         filesize={10}
         filename={""}
+        extension={""}
         html="<p>Hello</p>"
       />
     );
@@ -128,6 +130,7 @@ describe("<LetterModel />", () => {
         metaDescription={""}
         filesize={10}
         filename={""}
+        extension={""}
         html={""}
       />
     );
