@@ -36,7 +36,7 @@ describe("SimulateurIndemnitePrecarite", () => {
     fireEvent.click(ui.next.get());
     expect(
       screen.queryByText(
-        /Ce type de contrat ne permet pas au salarié d’avoir droit à une prime de précarité/g
+        /Selon votre convention collective, le salarié en contrat d'usage qui, à l'issu de son contrat, poursuit par un CDI, n’a pas le droit à une indemnité dite "d'usage"/g
       )
     ).toBeInTheDocument();
   });
