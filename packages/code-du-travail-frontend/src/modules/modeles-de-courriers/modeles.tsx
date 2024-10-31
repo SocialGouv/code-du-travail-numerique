@@ -90,9 +90,9 @@ export const LetterModel = ({
                 filename={filename}
                 filesize={filesize}
                 title={title}
-              />
+              ></DownloadTile>
             </div>
-            <CopyButton />
+            <CopyButton slug={slug} />
           </div>
           <RelatedItems relatedItems={relatedItems} />
           <Share title={title} metaDescription={metaDescription} />

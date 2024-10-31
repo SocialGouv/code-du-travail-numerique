@@ -1,22 +1,27 @@
+"use client";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { useState } from "react";
 import { css } from "../../../../styled-system/css";
+import { useModeleEvents } from "../tracking";
 
-export const CopyButton = () => {
+export const CopyButton = ({ slug }: { slug: string }) => {
   const [isCopied, setCopied] = useState(false);
+  const trackCopy = useModeleEvents(slug);
 
   const copyContent = () => {
     const elementsByClassName = document?.getElementById("content-to-copy");
     if (elementsByClassName) {
       navigator?.clipboard?.writeText(elementsByClassName.innerText);
       setCopied(true);
+      trackCopy();
     }
   };
 
   return (
     <>
       <Button
+        data-testid="copy-button"
         className={w100}
         iconId="fr-icon-clipboard-line"
         onClick={copyContent}

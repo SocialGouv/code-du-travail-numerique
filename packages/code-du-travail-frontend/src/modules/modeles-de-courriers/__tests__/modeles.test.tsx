@@ -8,12 +8,18 @@ jest.mock("@socialgouv/matomo-next", () => {
   };
 });
 
+Object.assign(navigator, {
+  clipboard: {
+    writeText: jest.fn(),
+  },
+});
+
 afterEach(() => {
   jest.resetAllMocks();
 });
 
 describe("<LetterModel />", () => {
-  it("should render a model", () => {
+  it("affiche un modèle de document", () => {
     const { container, getAllByText } = render(
       <LetterModel
         title="Mon modele"
@@ -34,19 +40,43 @@ describe("<LetterModel />", () => {
 
     expect(container).toMatchSnapshot();
   });
-  it("should send matomo event when firing copy event", () => {
+  it("envoi un event quand on déclenche une copie", () => {
     const { container } = render(
       <LetterModel
         title="Mon modele"
-        slug={"mon-modele"}
         breadcrumbs={[]}
+        slug={"mon-modele"}
         date={""}
         intro={""}
         relatedItems={[]}
         metaDescription={""}
         filesize={10}
         filename={""}
-        html={undefined}
+        html={""}
+      />
+    );
+
+    fireEvent.copy(container);
+    expect(matopush).toHaveBeenCalledWith([
+      "trackEvent",
+      "page_modeles_de_documents",
+      "type_CTRL_C",
+      "mon-modele",
+    ]);
+  });
+  it("should send matomo event when firing copy event", () => {
+    const { container } = render(
+      <LetterModel
+        title="Mon modele"
+        breadcrumbs={[]}
+        slug={"mon-modele"}
+        date={""}
+        intro={""}
+        relatedItems={[]}
+        metaDescription={""}
+        filesize={10}
+        filename={""}
+        html={""}
       />
     );
 
@@ -59,19 +89,46 @@ describe("<LetterModel />", () => {
     ]);
   });
 
-  it("should send not send event when typing anything", () => {
-    const { container } = render(
+  it("doit envoyer un event et appeler la méthode writeText de clipboard", async () => {
+    const { getAllByTestId } = render(
       <LetterModel
         title="Mon modele"
-        slug={"mon-modele"}
         breadcrumbs={[]}
+        slug={"mon-modele"}
         date={""}
         intro={""}
         relatedItems={[]}
         metaDescription={""}
         filesize={10}
         filename={""}
-        html={undefined}
+        html="<p>Hello</p>"
+      />
+    );
+
+    getAllByTestId("copy-button")[0].click();
+
+    expect(matopush).toHaveBeenCalledWith([
+      "trackEvent",
+      "page_modeles_de_documents",
+      "type_CTRL_C",
+      "mon-modele",
+    ]);
+    expect(navigator.clipboard.writeText).toHaveBeenCalled();
+  });
+
+  it("n'envoi pas d'event si on tape d'autres touches", () => {
+    const { container } = render(
+      <LetterModel
+        title="Mon modele"
+        breadcrumbs={[]}
+        slug={"mon-modele"}
+        date={""}
+        intro={""}
+        relatedItems={[]}
+        metaDescription={""}
+        filesize={10}
+        filename={""}
+        html={""}
       />
     );
     fireEvent.keyDown(container, { key: "c" });
