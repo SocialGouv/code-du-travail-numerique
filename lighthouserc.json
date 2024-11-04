@@ -6,15 +6,13 @@
         "https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr/plan-du-site",
         "https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr/politique-confidentialite",
         "https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr/stats",
-        "https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr/code-du-travail/l1224-1"
+        "https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr/code-du-travail/l1224-1",
+        "https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr/fiche-ministere-travail/les-jours-feries-et-les-ponts"
       ]
     },
     "assert": {
       "assertions": {
-        "categories:performance": ["warn", { "minScore": 0.7 }],
-        "categories:accessibility": ["warn", { "minScore": 1 }],
-        "categories:best-practices": ["warn", { "minScore": 1 }],
-        "categories:seo": ["warn", { "minScore": 1 }]
+        "categories:accessibility": ["error", { "minScore": 1 }]
       }
     }
   }
