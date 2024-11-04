@@ -10,19 +10,17 @@ export const AgreementsIntro = () => {
   return (
     <>
       <div className={`${fr.cx("fr-p-3w", "fr-mb-6w")} ${block}`}>
-        <h2 className={fr.cx("fr-mb-4v")}>
-          <div className={fr.cx("fr-grid-row")}>
-            <Image
-              priority
-              src={AgreementSearch}
-              alt="Trouver sa convention collective"
-              className={fr.cx("fr-unhidden-md", "fr-hidden")}
-            />
-            <span className={fr.cx("fr-mt-md-2v")}>
-              Trouver sa convention collective
-            </span>
-          </div>
-        </h2>
+        <div className={fr.cx("fr-mb-4v", "fr-grid-row")}>
+          <Image
+            priority
+            src={AgreementSearch}
+            alt="Trouver sa convention collective"
+            className={`${fr.cx("fr-unhidden-md", "fr-hidden")} ${ImageContainer}`}
+          />
+          <h2 className={fr.cx("fr-mt-md-2v")}>
+            Trouver sa convention collective
+          </h2>
+        </div>
         <Highlight size="lg">
           <span>
             La convention collective est un texte conclu au niveau d&apos;une
@@ -80,4 +78,8 @@ export const AgreementsIntro = () => {
 
 const block = css({
   background: "var(--background-alt-blue-cumulus)",
+});
+
+const ImageContainer = css({
+  height: "52px",
 });
