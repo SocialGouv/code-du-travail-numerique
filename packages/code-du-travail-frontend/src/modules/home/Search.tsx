@@ -33,7 +33,7 @@ export const Search = () => {
                   "fr-mb-2w"
                 )} ${displayBlock}`}
               >
-                Bienvenue sur
+                Bienvenue sur&nbsp;
               </span>
               <span className={fr.cx("fr-unhidden")}>
                 le Code du travail numérique

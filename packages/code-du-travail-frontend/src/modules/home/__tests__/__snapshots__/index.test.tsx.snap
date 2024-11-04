@@ -26,7 +26,7 @@ exports[`<Home /> should match snapshot 1`] = `
                 <span
                   class="fr-text--lead fr-text--bold fr-mb-2w d_inline-block"
                 >
-                  Bienvenue sur
+                  Bienvenue sur 
                 </span>
                 <span
                   class="fr-unhidden"
