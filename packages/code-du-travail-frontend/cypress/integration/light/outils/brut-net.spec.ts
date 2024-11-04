@@ -5,7 +5,7 @@ describe("Outil - Salaire brut/net", () => {
     cy.visit("/outils/simulateur-embauche");
     cy.findByRole("heading", { level: 1 }).should(
       "have.text",
-      "Calculer le salaire brut/net"
+      "Salaire brut/net"
     );
     cy.findByRole("heading", { level: 1 }).click();
     cy.iframe("#simulateurEmbauche")

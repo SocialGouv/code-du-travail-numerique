@@ -13,7 +13,11 @@ type Props = {
   description: string;
 };
 
-export const HiringSimulator = ({ relatedItems, description, title }: Props) => {
+export const HiringSimulator = ({
+  relatedItems,
+  description,
+  title,
+}: Props) => {
   return (
     <ContainerSimulator
       relatedItems={relatedItems}
