@@ -13,9 +13,7 @@ class SimulateurEmbauche extends React.PureComponent {
 
   onLoad = () => {
     this.setState({ simulator: "success" });
-    if (
-      !this.simRef.current?.querySelector("#simulateurEmbauche")
-    ) {
+    if (!this.simRef.current?.querySelector("#simulateurEmbauche")) {
       this.setState({ error: "empty child", simulator: "error" });
     }
   };

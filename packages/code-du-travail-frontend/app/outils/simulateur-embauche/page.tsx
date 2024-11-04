@@ -10,7 +10,7 @@ import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import { ElasticTool } from "../../../src/modules/outils/type";
 
 export async function generateMetadata() {
-  const {  metaTitle, metaDescription } = await getTool();
+  const { metaTitle, metaDescription } = await getTool();
 
   return generateDefaultMetadata({
     title: metaTitle,
