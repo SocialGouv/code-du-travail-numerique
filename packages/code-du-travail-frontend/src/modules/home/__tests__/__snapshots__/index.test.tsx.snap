@@ -21,15 +21,12 @@ exports[`<Home /> should match snapshot 1`] = `
               class="fr-col-12 fr-col-md-7"
             >
               <h1
-                class="fr-mb-2w"
+                class="fr-mb-2w fr-text--lead fr-text--bold"
               >
+                Bienvenue sur 
+                <br />
                 <span
-                  class="fr-text--lead fr-text--bold fr-mb-2w d_inline-block"
-                >
-                  Bienvenue sur 
-                </span>
-                <span
-                  class="fr-unhidden"
+                  class="fr-mt-2w fr-mb-0 fr-h1 d_inline-block"
                 >
                   le Code du travail numérique
                 </span>

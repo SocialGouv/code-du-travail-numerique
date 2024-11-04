@@ -25,17 +25,11 @@ export const Search = () => {
           )}
         >
           <div className={fr.cx("fr-col-12", "fr-col-md-7")}>
-            <h1 className={fr.cx("fr-mb-2w")}>
+            <h1 className={fr.cx("fr-mb-2w", "fr-text--lead", "fr-text--bold")}>
+              Bienvenue sur <br />
               <span
-                className={`${fr.cx(
-                  "fr-text--lead",
-                  "fr-text--bold",
-                  "fr-mb-2w"
-                )} ${displayBlock}`}
+                className={`${fr.cx("fr-mt-2w", "fr-mb-0", "fr-h1")} ${displayBlock}`}
               >
-                Bienvenue sur&nbsp;
-              </span>
-              <span className={fr.cx("fr-unhidden")}>
                 le Code du travail numérique
               </span>
             </h1>
