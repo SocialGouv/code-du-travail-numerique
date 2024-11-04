@@ -14,7 +14,7 @@ const customJestConfig = {
     "<rootDir>/node_modules/",
     "<rootDir>/cypress/",
   ],
-  testTimeout: 20000,
+  testTimeout: 10000,
   moduleNameMapper: {
     "^@sentry/nextjs$": "<rootDir>/test/mockSentry.js",
   },
