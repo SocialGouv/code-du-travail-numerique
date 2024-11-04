@@ -62,7 +62,7 @@ export const fetchTool = async (
   const result = await fetchDocument<
     ElasticTool,
     keyof DocumentElasticResult<ElasticTool>
-  >(["description", "title"], {
+  >(["description", "title", "metaTitle", "metaDescription"], {
     query: {
       bool: {
         filter: [

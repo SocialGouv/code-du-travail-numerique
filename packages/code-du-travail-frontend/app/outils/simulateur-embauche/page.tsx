@@ -10,11 +10,11 @@ import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import { ElasticTool } from "../../../src/modules/outils/type";
 
 export async function generateMetadata() {
-  const { title, description } = await getTool();
+  const {  metaTitle, metaDescription } = await getTool();
 
   return generateDefaultMetadata({
-    title: `Simulateur - ${title}`,
-    description: description,
+    title: metaTitle,
+    description: metaDescription,
     path: `/outils/simulateur-embauche`,
   });
 }
@@ -29,6 +29,7 @@ async function HiringSimulatorPage() {
     <DsfrLayout>
       <HiringSimulator
         relatedItems={relatedItems}
+        title={tool.title}
         description={tool.description}
       />
     </DsfrLayout>

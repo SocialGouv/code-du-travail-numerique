@@ -1,6 +1,5 @@
 import { Highlight } from "@codegouvfr/react-dsfr/Highlight";
 import { fr } from "@codegouvfr/react-dsfr";
-import { createRef, useEffect, useState } from "react";
 import { ContainerSimulator } from "../../layout/ContainerSimulator";
 import { RelatedItem } from "../../documents";
 import { SimulateurEmbauche } from "./SimulateurEmbauche";
@@ -10,54 +9,19 @@ type Props = {
     items: RelatedItem[];
     title: string;
   }[];
+  title: string;
   description: string;
 };
 
-export const HiringSimulator = ({ relatedItems, description }: Props) => {
-  const simRef = createRef<HTMLDivElement>();
-  const [state, setState] = useState({
-    error: "",
-    simulator: "loading",
-  });
-  const onError = (error) => {
-    setState({ error, simulator: "error" });
-  };
-
-  const onLoad = () => {
-    setState({ simulator: "success", error: "" });
-    if (!simRef.current?.querySelector("#simulateurEmbauche")) {
-      setState({ error: "empty child", simulator: "error" });
-    }
-  };
-  useEffect(() => {
-    const script = document.createElement("script");
-
-    script.src =
-      "https://mon-entreprise.urssaf.fr/simulateur-iframe-integration.js";
-    script.async = true;
-    script.id = "script-simulateur-embauche";
-    script.onload = onLoad;
-    script.onerror = onError;
-
-    if (simRef.current) {
-      simRef.current.appendChild(script);
-    }
-
-    return () => {
-      if (simRef.current) {
-        simRef.current.removeChild(script);
-      }
-    };
-  }, []);
-  const { simulator } = state;
+export const HiringSimulator = ({ relatedItems, description, title }: Props) => {
   return (
     <ContainerSimulator
       relatedItems={relatedItems}
-      title="Calculer le salaire brut/net"
+      title={title}
       description={description}
       segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
     >
-      <h1 id="simulateur-embauche">Calculer le salaire brut/net</h1>
+      <h1 id="simulateur-embauche">{title}</h1>
       <Highlight size="lg" className={fr.cx("fr-mb-12v")}>
         Pour information, l&apos;estimation du salaire net après impôt est basée
         sur la situation d&apos;une personne célibataire sans enfants ni
