@@ -1,7 +1,7 @@
 "use client";
 import { Highlight } from "@codegouvfr/react-dsfr/Highlight";
 import { fr } from "@codegouvfr/react-dsfr";
-import { useEffect, createRef, useState } from "react";
+import { createRef, useEffect, useState } from "react";
 import { ContainerSimulator } from "../../layout/ContainerSimulator";
 import { RelatedItem } from "../../documents";
 
@@ -25,10 +25,7 @@ export const HiringSimulator = ({ relatedItems, description }: Props) => {
 
   const onLoad = () => {
     setState({ simulator: "success", error: "" });
-    if (
-      !simRef.current ||
-      !simRef.current.querySelector("#simulateurEmbauche")
-    ) {
+    if (!simRef.current?.querySelector("#simulateurEmbauche")) {
       setState({ error: "empty child", simulator: "error" });
     }
   };
