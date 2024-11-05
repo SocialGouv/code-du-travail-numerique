@@ -30,15 +30,15 @@ const HiringSimulator = memo(function HiringSimulator({
   const onError = (error) => {
     console.log(`Erreur durant le chargement de l'iframe brut/net ${error}`);
     setState({ error, simulator: "error" });
-    Sentry.captureMessage(
-      `Erreur durant le chargement de l'iframe brut/net`
-    );
+    Sentry.captureMessage(`Erreur durant le chargement de l'iframe brut/net`);
   };
 
   const onLoad = () => {
     setState({ simulator: "success", error: "" });
     if (!simRef.current?.querySelector("#simulateurEmbauche")) {
-      console.log(`Erreur durant le chargement de l'iframe brut/net, "empty child"`);
+      console.log(
+        `Erreur durant le chargement de l'iframe brut/net, "empty child"`
+      );
       setState({ error: "empty child", simulator: "error" });
       Sentry.captureMessage(
         `Erreur durant le chargement de l'iframe brut/net "empty child"`
