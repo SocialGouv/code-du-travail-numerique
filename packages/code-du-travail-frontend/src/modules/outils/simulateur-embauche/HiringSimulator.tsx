@@ -30,8 +30,8 @@ const HiringSimulator = memo(function HiringSimulator({
   const onError = (error) => {
     console.log(`Erreur durant le chargement de l'iframe brut/net ${error}`);
     setState({ error, simulator: "error" });
-    Sentry.captureException(
-      `Erreur durant le chargement de l'iframe brut/net ${error}`
+    Sentry.captureMessage(
+      `Erreur durant le chargement de l'iframe brut/net`
     );
   };
 
