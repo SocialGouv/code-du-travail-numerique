@@ -133,7 +133,7 @@ const list = css({
   zIndex: 100,
   bg: "var(--background-default-grey)",
   listStyleType: "none !important",
-  padding: "0 !important",
+  padding: "0!",
   margin: "0!",
 });
 
