@@ -1,4 +1,3 @@
-"use client";
 import { fr } from "@codegouvfr/react-dsfr";
 import Link from "next/link";
 import { css } from "../../../styled-system/css";
@@ -19,12 +18,15 @@ export const AgreementsGlossaire = ({ letters }: Props) => {
         <ul className={`${fr.cx("fr-pl-0", "fr-m-0", "fr-grid-row")} ${ul}`}>
           {letters.map((letter, index) => (
             <>
-              {index !== 0 ? (
+              {/* {index !== 0 ? (
                 <li className={fr.cx("fr-h3", "fr-px-1w", "fr-mb-0")}>-</li>
               ) : (
                 <></>
-              )}
-              <li key={letter} className={"fr-mb-0"}>
+              )} */}
+              <li
+                key={letter}
+                className={`${fr.cx("fr-mb-0", "fr-mx-1v")}${index !== 0 ? ` ${li}` : ""}`}
+              >
                 <Link href={`#${letter}`} className={fr.cx("fr-h3")}>
                   {letter}
                 </Link>
@@ -41,4 +43,12 @@ const ul = css({
   listStyle: "none!",
   display: "flex",
   flexDirection: "row",
+});
+
+const li = css({
+  _before: {
+    content: `"- "`,
+    fontSize: "28px",
+    fontWeight: "bold",
+  },
 });

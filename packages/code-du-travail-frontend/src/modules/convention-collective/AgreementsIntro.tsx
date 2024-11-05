@@ -1,4 +1,3 @@
-"use client";
 import { fr } from "@codegouvfr/react-dsfr";
 import Link from "next/link";
 import { css } from "../../../styled-system/css";
@@ -24,8 +23,8 @@ export const AgreementsIntro = () => {
         <Highlight size="lg">
           <span>
             La convention collective est un texte conclu au niveau d&apos;une
-            branche d&apos;activité (Ex: Transports routiers). Elle adapte les
-            règles du Code du travail sur des points précis, en fonction des
+            branche d&apos;activité (Ex&nbsp;: Transports routiers). Elle adapte
+            les règles du Code du travail sur des points précis, en fonction des
             situations particulières de la branche (primes, congés, salaires
             minima, préavis, prévoyance...)
           </span>

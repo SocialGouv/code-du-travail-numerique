@@ -7,35 +7,15 @@ import { AgreementsIntro } from "./AgreementsIntro";
 
 type Agreement = Pick<ElasticAgreement, "shortTitle" | "slug">;
 
-type Props = {
-  agreements: Agreement[];
-};
-
-type AgreementsPerLetter = {
+export type AgreementsPerLetter = {
   [letter: string]: Agreement[];
 };
 
-const removeAccents = (text: string) =>
-  text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+type Props = {
+  firstLettersAgreements: AgreementsPerLetter;
+};
 
-export const Agreements = ({ agreements }: Props) => {
-  const firstLettersAgreements = agreements.reduce<AgreementsPerLetter>(
-    (agreementPerletter, agreement) => {
-      const { shortTitle } = agreement;
-      const firstLetter = removeAccents(shortTitle[0]);
-      if (!agreementPerletter[firstLetter]) {
-        return {
-          ...agreementPerletter,
-          [firstLetter]: [agreement],
-        };
-      }
-      return {
-        ...agreementPerletter,
-        [firstLetter]: [...agreementPerletter[firstLetter], agreement],
-      };
-    },
-    {}
-  );
+export const Agreements = ({ firstLettersAgreements }: Props) => {
   return (
     <ContainerSimulator
       title="Votre convention collective"
