@@ -98,6 +98,7 @@ export const LetterModel = ({
                 filesize={filesize}
                 extension={extension}
                 title={title}
+                titleAs={"h3"}
               />
             </div>
             <CopyButton slug={slug} />

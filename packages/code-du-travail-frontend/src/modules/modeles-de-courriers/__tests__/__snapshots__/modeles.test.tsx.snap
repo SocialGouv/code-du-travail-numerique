@@ -170,7 +170,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
             <div
               class="fr-tile__content"
             >
-              <h3
+              <h2
                 class="fr-tile__title"
               >
                 <a
@@ -180,7 +180,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
                 >
                   Télécharger le Mon modele
                 </a>
-              </h3>
+              </h2>
               <p
                 class="fr-tile__detail"
               >
@@ -256,7 +256,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
               <div
                 class="fr-tile__content"
               >
-                <h2
+                <h3
                   class="fr-tile__title"
                 >
                   <a
@@ -266,7 +266,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
                   >
                     Télécharger le Mon modele
                   </a>
-                </h2>
+                </h3>
                 <p
                   class="fr-tile__detail"
                 >
