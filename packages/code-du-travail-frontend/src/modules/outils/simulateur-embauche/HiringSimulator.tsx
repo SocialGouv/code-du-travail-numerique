@@ -38,7 +38,11 @@ const HiringSimulator = memo(function HiringSimulator({
   const onLoad = () => {
     setState({ simulator: "success", error: "" });
     if (!simRef.current?.querySelector("#simulateurEmbauche")) {
+      console.log(`Erreur durant le chargement de l'iframe brut/net, "empty child"`);
       setState({ error: "empty child", simulator: "error" });
+      Sentry.captureMessage(
+        `Erreur durant le chargement de l'iframe brut/net "empty child"`
+      );
     }
   };
   useEffect(() => {
