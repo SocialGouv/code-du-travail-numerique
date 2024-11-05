@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import * as Sentry from "@sentry/nextjs";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "../../../../styled-system/css";
@@ -33,7 +34,8 @@ export const HomeSearch = (props: Props) => {
         );
         setSuggestions(results);
       } catch (error) {
-        console.error("fetch error", error);
+        console.error("Echec lors de la récupération des suggestions", error);
+        Sentry.captureMessage("Echec lors de la récupération des suggestions");
       }
     },
     onSelectedItemChange(changes) {
