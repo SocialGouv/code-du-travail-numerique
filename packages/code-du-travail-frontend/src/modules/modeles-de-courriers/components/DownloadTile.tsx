@@ -6,11 +6,13 @@ export const DownloadTile = ({
   filesize,
   extension,
   title,
+  titleAs = "h2",
 }: {
   filename: string;
   filesize: number;
   extension: string;
   title: string;
+  titleAs?: "h2" | "h3" | "h4" | "h5" | "h6";
 }) => {
   return (
     <Tile
@@ -19,8 +21,9 @@ export const DownloadTile = ({
       imageSvg={false}
       imageUrl={`/static/assets/img/modeles-de-courriers-download.svg`}
       title={`Télécharger le ${title}`}
-      titleAs="h2"
+      titleAs={titleAs}
       detail={`Format ${extension} - ${filesize}Ko`}
+      imageAlt={""}
       linkProps={{
         href: toUrl(filename),
       }}

@@ -66,6 +66,7 @@ export const LetterModelContent = ({
           filesize={filesize}
           title={title}
           extension={extension}
+          titleAs="h3"
         />
       </div>
     </>
