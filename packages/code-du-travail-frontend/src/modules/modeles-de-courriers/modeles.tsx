@@ -69,7 +69,7 @@ export const LetterModel = ({
           filename={filename}
           extension={extension}
           html={html}
-        ></LetterModelContent>
+        />
         <Feedback />
       </div>
 
@@ -81,7 +81,7 @@ export const LetterModel = ({
               filesize={filesize}
               extension={extension}
               title={title}
-            ></DownloadTile>
+            />
           </div>
           <CopyButton slug={slug} />
         </div>

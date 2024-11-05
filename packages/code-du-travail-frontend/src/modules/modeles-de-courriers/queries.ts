@@ -5,7 +5,6 @@ import {
 import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { DocumentElasticResult, fetchDocument } from "../documents";
-import { nonNullable } from "@socialgouv/modeles-social";
 
 export const fetchAllModels = async <
   K extends keyof DocumentElasticWithSource<MailTemplateDoc>,
@@ -29,7 +28,9 @@ export const fetchAllModels = async <
     _source: fields,
     index: elasticDocumentsIndex,
   });
-  return response.hits.hits.map(({ _source }) => _source).filter(nonNullable);
+  return response.hits.hits
+    .map(({ _source }) => _source)
+    .filter((model) => model !== undefined);
 };
 
 export const format = (model) => {
