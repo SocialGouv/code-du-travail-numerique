@@ -34,9 +34,9 @@ export const fetchAllModels = async <
 };
 
 export const format = (model) => {
-  if (model) {
+  if (model?.filesize) {
     model.filesize = Math.round((model.filesize / 1000) * 100) / 100;
-    if (model.filename.indexOf(".") > 0) {
+    if (model.filename?.indexOf(".") > 0) {
       model.extension = model.filename.split(/\.([a-z]{2,4})$/)[1];
     }
   }
@@ -44,10 +44,15 @@ export const format = (model) => {
   return model;
 };
 
-export const fetchModel = async (filter: {
-  slug?: string;
-  _id?: string;
-}): Promise<
+export const fetchModel = async <
+  K extends keyof DocumentElasticResult<DocumentElasticWithSource<MailTemplateDoc>>,
+>(
+  filter: {
+    slug?: string;
+    _id?: string;
+  },
+  fields: K[]
+): Promise<
   | (DocumentElasticResult<DocumentElasticWithSource<MailTemplateDoc>> & {
       extension: string;
     })
@@ -56,34 +61,17 @@ export const fetchModel = async (filter: {
   const model = await fetchDocument<
     DocumentElasticWithSource<MailTemplateDoc>,
     keyof DocumentElasticResult<DocumentElasticWithSource<MailTemplateDoc>>
-  >(
-    [
-      "breadcrumbs",
-      "title",
-      "meta_title",
-      "date",
-      "type",
-      "html",
-      "author",
-      "filename",
-      "filesize",
-      "intro",
-      "description",
-      "metaDescription",
-      "references",
-    ],
-    {
-      query: {
-        bool: {
-          filter: [
-            { term: { source: SOURCES.LETTERS } },
-            { term: filter },
-            { term: { isPublished: true } },
-          ],
-        },
+  >(fields, {
+    query: {
+      bool: {
+        filter: [
+          { term: { source: SOURCES.LETTERS } },
+          { term: filter },
+          { term: { isPublished: true } },
+        ],
       },
-    }
-  );
+    },
+  });
 
   return format(model);
 };

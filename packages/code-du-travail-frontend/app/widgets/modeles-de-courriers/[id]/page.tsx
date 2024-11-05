@@ -2,15 +2,16 @@ import {
   fetchModel,
   getTitle,
 } from "../../../../src/modules/modeles-de-courriers";
-import { notFound } from "next/navigation";
 import { LetterModelContent } from "../../../../src/modules/modeles-de-courriers/components/LetterModelContent";
 import { WidgetWithIframeResizer } from "../../../../src/modules/widgets/WidgetWithIframeResizer";
 import { generateDefaultMetadata } from "../../../../src/modules/common/metas";
 import { SITE_URL } from "../../../../src/config";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({ params }) {
   const { title, type, metaDescription, meta_title, slug } = await getModel(
-    params.id
+    params.id,
+    ["title", "meta_title", "type", "metaDescription"]
   );
   const category = `Modèle ${type !== "fichier" ? `de ${type}` : "à télécharger"}`;
 
@@ -23,7 +24,15 @@ export async function generateMetadata({ params }) {
 }
 
 async function WidgetModel({ params }) {
-  const { title, ...model } = await getModel(params.id);
+  const { title, ...model } = await getModel(params.id, [
+    "title",
+    "date",
+    "html",
+    "filename",
+    "filesize",
+    "intro",
+    "description",
+  ]);
 
   const titleFormatted = getTitle(params.slug, title);
   return (
@@ -33,13 +42,13 @@ async function WidgetModel({ params }) {
   );
 }
 
-const getModel = async (id: string) => {
-  const modele = await fetchModel({ _id: id });
+const getModel = async (id: string, fields) => {
+  const model = await fetchModel({ _id: id }, fields);
 
-  if (!modele) {
+  if (!model) {
     return notFound();
   }
-  return modele;
+  return model;
 };
 
 export default WidgetModel;

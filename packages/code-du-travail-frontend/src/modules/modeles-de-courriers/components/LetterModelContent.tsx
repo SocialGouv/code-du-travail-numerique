@@ -5,6 +5,7 @@ import { getDisclaimer } from "../helpers";
 import { Alert } from "@codegouvfr/react-dsfr/Alert";
 import { DownloadTile } from "./DownloadTile";
 import { CopyButton } from "./CopyButton";
+import "../../../../public/static/modeles.css";
 import { MailElasticDocument } from "@socialgouv/cdtn-types";
 
 export type LetterModelContentProps = Pick<
@@ -26,7 +27,7 @@ export const LetterModelContent = ({
 }: LetterModelContentProps) => {
   return (
     <>
-      <p className={fr.cx("fr-mb-6w")}>Mise à jour le&nbsp;: {date}</p>
+      <p className={fr.cx("fr-mb-6w")}>Mis à jour le&nbsp;: {date}</p>
       {intro && (
         <div className={`${fr.cx("fr-highlight", "fr-mb-6w")}`}>
           <Html>{intro}</Html>
@@ -44,28 +45,27 @@ export const LetterModelContent = ({
         <CopyButton slug={slug} />
       </div>
       <div
-        className={`${fr.cx("fr-p-2w")} ${fr.cx("fr-mb-6w")} ${border}`}
+        className={`${fr.cx("fr-p-2w", "fr-pt-4w", "fr-mb-6w")} ${border}`}
         id="content-to-copy"
       >
         <Html>{html}</Html>
       </div>
-      <div className={fr.cx("fr-col-12", "fr-col-md-10")}>
-        <Alert
-          className={fr.cx("fr-mb-6w")}
-          description={getDisclaimer(slug)}
-          closable={false}
-          severity="info"
-          small
-        />
+      <Alert
+        className={fr.cx("fr-mb-6w")}
+        description={getDisclaimer(slug)}
+        closable={false}
+        severity="info"
+        small
+      />
+      <div className={button}>
+        <CopyButton slug={slug} />
       </div>
-
-      <CopyButton slug={slug} />
       <div className={fr.cx("fr-mb-6w")}>
         <DownloadTile
           filename={filename}
           filesize={filesize}
-          extension={extension}
           title={title}
+          extension={extension}
         />
       </div>
     </>
@@ -76,4 +76,10 @@ const border = css({
   border: `1px solid`,
   borderRadius: "8px",
   borderColor: "var(--artwork-minor-blue-cumulus)",
+});
+
+const button = css({
+  "& > button": {
+    md: { w: "auto!" },
+  },
 });

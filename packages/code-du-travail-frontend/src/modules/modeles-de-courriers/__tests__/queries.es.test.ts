@@ -22,9 +22,25 @@ describe("Modèles de courrier", () => {
   });
 
   it("Récupération d'un modèle de courrier avec son slug", async () => {
-    const result = await fetchModel({
-      slug: "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
-    });
+    const result = await fetchModel(
+      {
+        slug: "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
+      },
+      [
+        "breadcrumbs",
+        "title",
+        "meta_title",
+        "date",
+        "type",
+        "html",
+        "author",
+        "filename",
+        "filesize",
+        "intro",
+        "description",
+        "metaDescription",
+      ]
+    );
     expect(result).toEqual({
       _id: "15",
       author: "Ministère du Travail",
@@ -64,7 +80,7 @@ describe("Modèles de courrier", () => {
   });
 
   it("Récupération d'un modèle de courrier avec son id", async () => {
-    const result = await fetchModel({ _id: "15" });
+    const result = await fetchModel({ _id: "15" }, ["title"]);
     expect(result?.title).toEqual(
       "Demande de rendez-vous en vue d’une rupture conventionnelle"
     );
