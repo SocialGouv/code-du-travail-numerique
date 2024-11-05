@@ -1,20 +1,16 @@
 import { DsfrLayout } from "../../../src/modules/layout";
-import {
-  DocumentElasticResult,
-  fetchRelatedItems,
-} from "../../../src/modules/documents";
+import { fetchRelatedItems } from "../../../src/modules/documents";
 import { fetchTool } from "../../../src/modules/outils";
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
-import { ElasticTool } from "../../../src/modules/outils/type";
 import HiringSimulator from "../../../src/modules/outils/simulateur-embauche/HiringSimulator";
 
 export async function generateMetadata() {
-  const { title, description } = await getTool();
+  const { metaTitle, metaDescription } = await getTool();
 
   return generateDefaultMetadata({
-    title: `Simulateur - ${title}`,
-    description: description,
+    title: metaTitle,
+    description: metaDescription,
     path: `/outils/simulateur-embauche`,
   });
 }
@@ -28,6 +24,8 @@ async function HiringSimulatorPage() {
   return (
     <DsfrLayout>
       <HiringSimulator
+        title={tool.displayTitle}
+        breadcrumbTitle={tool.title}
         relatedItems={relatedItems}
         description={tool.description}
       />
@@ -36,9 +34,7 @@ async function HiringSimulatorPage() {
 }
 
 const getTool = async () => {
-  const tool: DocumentElasticResult<ElasticTool> = await fetchTool(
-    "simulateur-embauche"
-  );
+  const tool = await fetchTool("simulateur-embauche");
 
   if (!tool) {
     return notFound();

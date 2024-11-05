@@ -4,18 +4,23 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { createRef, memo, useEffect, useState } from "react";
 import { ContainerSimulator } from "../../layout/ContainerSimulator";
 import { RelatedItem } from "../../documents";
+import * as Sentry from "@sentry/nextjs";
 
 type Props = {
   relatedItems: {
     items: RelatedItem[];
     title: string;
   }[];
+  title: string;
+  breadcrumbTitle: string;
   description: string;
 };
 
 const HiringSimulator = memo(function HiringSimulator({
   relatedItems,
   description,
+  title,
+  breadcrumbTitle,
 }: Props) {
   const simRef = createRef<HTMLDivElement>();
   const [state, setState] = useState({
@@ -23,7 +28,11 @@ const HiringSimulator = memo(function HiringSimulator({
     simulator: "loading",
   });
   const onError = (error) => {
+    console.log(`Erreur durant le chargement de l'iframe brut/net ${error}`);
     setState({ error, simulator: "error" });
+    Sentry.captureException(
+      `Erreur durant le chargement de l'iframe brut/net ${error}`
+    );
   };
 
   const onLoad = () => {
@@ -56,11 +65,11 @@ const HiringSimulator = memo(function HiringSimulator({
   return (
     <ContainerSimulator
       relatedItems={relatedItems}
-      title="Calculer le salaire brut/net"
+      title={breadcrumbTitle}
       description={description}
       segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
     >
-      <h1 id="simulateur-embauche">Calculer le salaire brut/net</h1>
+      <h1 id="simulateur-embauche">{title}</h1>
       <Highlight size="lg" className={fr.cx("fr-mb-12v")}>
         Pour information, l&apos;estimation du salaire net après impôt est basée
         sur la situation d&apos;une personne célibataire sans enfants ni
