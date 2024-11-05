@@ -134,7 +134,7 @@ const list = css({
   bg: "var(--background-default-grey)",
   listStyleType: "none !important",
   padding: "0 !important",
-  margin: "0 !important",
+  margin: "0!",
 });
 
 const suggestion = css({
