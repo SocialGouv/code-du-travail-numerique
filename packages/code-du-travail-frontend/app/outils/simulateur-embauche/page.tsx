@@ -1,5 +1,4 @@
 import { DsfrLayout } from "../../../src/modules/layout";
-import { HiringSimulator } from "../../../src/modules/outils/simulateur-embauche";
 import {
   DocumentElasticResult,
   fetchRelatedItems,
@@ -8,6 +7,7 @@ import { fetchTool } from "../../../src/modules/outils";
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import { ElasticTool } from "../../../src/modules/outils/type";
+import HiringSimulator from "../../../src/modules/outils/simulateur-embauche/HiringSimulator";
 
 export async function generateMetadata() {
   const { title, description } = await getTool();

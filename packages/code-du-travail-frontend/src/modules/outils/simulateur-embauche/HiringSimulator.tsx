@@ -1,7 +1,7 @@
 "use client";
 import { Highlight } from "@codegouvfr/react-dsfr/Highlight";
 import { fr } from "@codegouvfr/react-dsfr";
-import { createRef, useEffect, useState } from "react";
+import { createRef, memo, useEffect, useState } from "react";
 import { ContainerSimulator } from "../../layout/ContainerSimulator";
 import { RelatedItem } from "../../documents";
 
@@ -13,7 +13,10 @@ type Props = {
   description: string;
 };
 
-export const HiringSimulator = ({ relatedItems, description }: Props) => {
+const HiringSimulator = memo(function HiringSimulator({
+  relatedItems,
+  description,
+}: Props) {
   const simRef = createRef<HTMLDivElement>();
   const [state, setState] = useState({
     error: "",
@@ -82,4 +85,6 @@ export const HiringSimulator = ({ relatedItems, description }: Props) => {
       )}
     </ContainerSimulator>
   );
-};
+});
+
+export default HiringSimulator;
