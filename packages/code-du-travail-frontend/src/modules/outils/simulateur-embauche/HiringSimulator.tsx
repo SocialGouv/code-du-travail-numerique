@@ -50,7 +50,6 @@ const HiringSimulator = memo(function HiringSimulator({
 
     script.src =
       "https://mon-entreprise.urssaf.fr/simulateur-iframe-integration.js";
-    script.async = true;
     script.id = "script-simulateur-embauche";
     script.onload = onLoad;
     script.onerror = onError;
