@@ -14,7 +14,7 @@ async function Index() {
   const data = await fetchHomeData();
 
   return (
-    <DsfrLayout doNotWrapInContainer>
+    <DsfrLayout container="fr-container--fluid">
       <Home
         agreements={data.agreements}
         contributions={data.contributions}

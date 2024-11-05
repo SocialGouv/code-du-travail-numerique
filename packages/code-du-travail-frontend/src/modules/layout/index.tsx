@@ -1,4 +1,3 @@
-import { fr } from "@codegouvfr/react-dsfr";
 import { Footer } from "./Footer";
 import { Header } from "./header";
 import { NeedMoreInfo } from "./infos";
@@ -6,21 +5,17 @@ import { SkipLinks } from "./SkipLinks";
 
 type Props = {
   children: React.ReactNode;
-  doNotWrapInContainer?: boolean;
+  container?: "fr-container" | "fr-container--fluid";
 };
 
-export const DsfrLayout = (props: Props) => {
+export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
   return (
     <>
       <SkipLinks />
       <Header />
-      {props.doNotWrapInContainer ? (
-        <main id="main">{props.children}</main>
-      ) : (
-        <main className={fr.cx("fr-container")} id="main">
-          {props.children}
-        </main>
-      )}
+      <main className={container} id="main">
+        {children}
+      </main>
       <NeedMoreInfo />
       <Footer />
     </>
