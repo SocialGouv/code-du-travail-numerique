@@ -45,7 +45,9 @@ export const format = (model) => {
 };
 
 export const fetchModel = async <
-  K extends keyof DocumentElasticResult<DocumentElasticWithSource<MailTemplateDoc>>,
+  K extends keyof DocumentElasticResult<
+    DocumentElasticWithSource<MailTemplateDoc>
+  >,
 >(
   filter: {
     slug?: string;

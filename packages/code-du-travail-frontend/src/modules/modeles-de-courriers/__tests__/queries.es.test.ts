@@ -75,7 +75,7 @@ describe("Modèles de courrier", () => {
   });
 
   it("Récupération d'un modèle de courrier retourne undefined s'il n'existe pas", async () => {
-    const result = await fetchModel({ slug: "wrong" });
+    const result = await fetchModel({ slug: "wrong" }, []);
     expect(result).toEqual(undefined);
   });
 

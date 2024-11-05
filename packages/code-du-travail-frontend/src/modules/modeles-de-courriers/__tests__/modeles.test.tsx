@@ -22,6 +22,7 @@ describe("<LetterModel />", () => {
   it("affiche un modèle de document", () => {
     const { container, getAllByText } = render(
       <LetterModel
+        breadcrumbs={[]}
         title="Mon modele"
         slug={"mon-modele"}
         date={"12/02/2020"}
@@ -43,6 +44,7 @@ describe("<LetterModel />", () => {
   it("envoi un event quand on déclenche une copie", () => {
     const { container } = render(
       <LetterModel
+        breadcrumbs={[]}
         title="Mon modele"
         slug={"mon-modele"}
         date={""}
@@ -67,6 +69,7 @@ describe("<LetterModel />", () => {
   it("should send matomo event when firing copy event", () => {
     const { container } = render(
       <LetterModel
+        breadcrumbs={[]}
         title="Mon modele"
         slug={"mon-modele"}
         date={""}
@@ -92,6 +95,7 @@ describe("<LetterModel />", () => {
   it("doit envoyer un event et appeler la méthode writeText de clipboard", async () => {
     const { getAllByTestId } = render(
       <LetterModel
+        breadcrumbs={[]}
         title="Mon modele"
         slug={"mon-modele"}
         date={""}
@@ -119,6 +123,7 @@ describe("<LetterModel />", () => {
   it("n'envoi pas d'event si on tape d'autres touches", () => {
     const { container } = render(
       <LetterModel
+        breadcrumbs={[]}
         title="Mon modele"
         slug={"mon-modele"}
         date={""}
