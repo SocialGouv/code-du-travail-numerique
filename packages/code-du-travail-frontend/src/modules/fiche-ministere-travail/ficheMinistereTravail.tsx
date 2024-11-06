@@ -8,6 +8,7 @@ import { ContentParser } from "./ContentParser";
 import { ElasticFicheTravailEmploiSection } from "@socialgouv/cdtn-types";
 import { SourceData } from "../layout/SourceData";
 import Html from "../common/Html";
+import "../../../public/static/fiches-mt.css";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
