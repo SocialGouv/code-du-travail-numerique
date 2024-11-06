@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.160.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.159.0...v4.160.0) (2024-11-06)
+
+
+### Bug Fixes
+
+* **dsfr:** Correction d'erreur sur la structure HTML pour les fiches mt ([#6264](https://github.com/SocialGouv/code-du-travail-numerique/issues/6264)) ([4ebe479](https://github.com/SocialGouv/code-du-travail-numerique/commit/4ebe479d73de9aa091bd48b75b10dda36e829077))
+
+
+### Features
+
+* changer la couleur de bouton de partage ([#6238](https://github.com/SocialGouv/code-du-travail-numerique/issues/6238)) ([756399b](https://github.com/SocialGouv/code-du-travail-numerique/commit/756399be7a31cca46154a3ac3c8b463b0f3bdcc2))
+
+
+
+
+
 # [4.159.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.158.1...v4.159.0) (2024-10-31)
 
 
