@@ -6,6 +6,7 @@ node_modules
 cypress/videos
 cypress/screenshots
 cypress/downloads
+scripts/logs/*
 .env
 .env.*
 

@@ -1,14 +1,10 @@
 /** @jest-environment node */
 
-import { fetchAllContributions } from "../queries";
+import { fetchContributions } from "../queries";
 
 describe("Contributions", () => {
   it("Récupération de toutes les contributions", async () => {
-    const result = await fetchAllContributions([
-      "slug",
-      "title",
-      "contentType",
-    ]);
+    const result = await fetchContributions(["slug", "title", "contentType"]);
     expect(result).toEqual([
       {
         slug: "les-conges-pour-evenements-familiaux",

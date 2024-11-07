@@ -13,9 +13,9 @@ describe("Modèles de documents", () => {
   it("cherche un modèle", () => {
     cy.visit("/");
 
-    cy.get("#searchbar").type("modele rupture contrat periode d'essai");
+    cy.get("#home-searchbar").type("modele rupture contrat periode d'essai");
 
-    cy.get("#searchbar").type("{enter}");
+    cy.get("#home-searchbar").type("{enter}");
 
     cy.contains("Rupture du contrat en période d’essai par le salarié").click();
 
@@ -40,7 +40,7 @@ describe("Modèles de documents", () => {
             doc.location.reload();
           }, 3000);
         });
-        cy.contains("Télécharger le modèle").click();
+        cy.get("a:visible").contains("Télécharger le").first().click();
       });
 
     cy.readFile("cypress/downloads/rupture_periode_d-essai_salarie.docx").then(

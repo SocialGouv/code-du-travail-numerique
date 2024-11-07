@@ -5,14 +5,12 @@ import styled, { css } from "styled-components";
 import { ErrorBoundary } from "../common/ErrorBoundary";
 import Footer from "./Footer";
 import { Header, HEADER_HEIGHT, MOBILE_HEADER_HEIGHT } from "./Header";
-import { Feedback } from "./Feedback";
 
 const Layout = ({ children, currentPage = "" }) => {
   return (
     <BackgroundContainer>
       <BackgroundLayer currentPage={currentPage} />
       <Header currentPage={currentPage} />
-      <Feedback />
       <ErrorBoundary message="Une erreur est survenue">
         <StyledMain id="content" tabIndex="-1">
           {children}

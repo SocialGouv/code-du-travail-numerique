@@ -17,13 +17,11 @@ export const MentionsLegales = () => (
         située&nbsp;:
       </p>
       <address>
-        Tour Mirabeau
+        Tour High Line
         <br />
-        39-43 Quai André Citroën
+        8 Rue François Ory
         <br />
-        75015 PARIS
-        <br />
-        Tél. : 01 40 56 60 00
+        92120 Montrouge
       </address>
     </div>
 
@@ -37,6 +35,8 @@ export const MentionsLegales = () => (
         2 rue Kellermann <br />
         56100 Roubaix <br />
         France
+      </p>
+      <p>
         <strong>
           Le code du logiciel est libre, et peut donc être vérifié et amélioré
           par toutes et tous à l’adresse suivante:{" "}

@@ -1,4 +1,4 @@
-import { sendEvent } from "../utils/events";
+import { sendEvent } from "../utils";
 
 enum MatomoHomeCategory {
   PAGE_HOME = "page_home",

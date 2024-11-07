@@ -23,8 +23,8 @@ export const SearchInput = (props: Props) => {
     isOpen,
     getMenuProps,
     getInputProps,
-    highlightedIndex,
     getItemProps,
+    highlightedIndex,
   } = useCombobox({
     items: suggestions,
     onInputValueChange: async ({ inputValue }) => {
@@ -57,6 +57,7 @@ export const SearchInput = (props: Props) => {
           placeholder: props.placeholder,
           type: props.type,
         })}
+        data-testid="search-input"
       />
       <ul
         {...getMenuProps({
@@ -69,7 +70,9 @@ export const SearchInput = (props: Props) => {
               {...getItemProps({
                 item,
                 index,
-                className: `${fr.cx("fr-p-1v")} ${suggestion} ${highlightedIndex === index ? isHighlighted : ""}`,
+                className: `${fr.cx("fr-p-3v")} ${suggestion} ${
+                  highlightedIndex === index && suggestionHover
+                }`,
               })}
               key={`${item}${index}`}
             >
@@ -82,27 +85,19 @@ export const SearchInput = (props: Props) => {
 };
 
 const list = css({
-  position: "absolute",
+  pos: "absolute",
   top: "2.5rem",
-  width: "100%",
+  w: "100%",
   zIndex: 100,
-  background: "var(--background-default-grey)",
+  bg: "var(--background-default-grey)",
 });
 
 const suggestion = css({
   cursor: "pointer",
-  lineHeight: "2rem",
-  listStyleType: "none",
+  color: "var(--text-action-high-blue-france)",
   textAlign: "left",
-  background: "var(--background-default-grey)",
-  "&:nth-child(2n + 1)": {
-    background: "var(--background-default-grey-hover)",
-  },
 });
 
-const isHighlighted = css({
-  background: "var(--background-default-grey-active)",
-  "&:nth-child(2n + 1)": {
-    background: "var(--background-default-grey-active)",
-  },
+const suggestionHover = css({
+  bg: "var(--background-default-grey-hover)",
 });

@@ -10,16 +10,6 @@ describe("sendEvent", () => {
     jest.clearAllMocks();
   });
 
-  it("should throw an error if value is provided without name", () => {
-    expect(() =>
-      sendEvent({
-        category: "testCategory",
-        action: "testAction",
-        value: "testValue",
-      })
-    ).toThrow("value should be used with name");
-  });
-
   it("should call push with category, action, name, and value if all are provided", () => {
     sendEvent({
       category: "testCategory",

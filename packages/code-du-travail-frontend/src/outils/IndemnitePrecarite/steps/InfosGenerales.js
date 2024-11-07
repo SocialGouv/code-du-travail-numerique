@@ -22,7 +22,6 @@ import {
 
 const excludeContracts = [
   "CDD saisonnier",
-  "CDD d'usage",
   "CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires",
   "CCD dans le cadre d’un congé de mobilité",
   "Contrat unique d’insertion (CUI) ou Parcours emploi compétences (PEC)",
@@ -184,6 +183,48 @@ function validate(values) {
   };
   // We need to performs these check before situation check
   // since situation Check can overwrite generals checks
+  if (
+    values?.ccn?.selected?.num === 3127 &&
+    values?.criteria?.cddType ===
+      "CDD dit de « mission ponctuelle ou occasionnelle »" &&
+    values?.criteria?.hasEquivalentCdiRenewal === "oui"
+  ) {
+    errors.criteria = {
+      hasEquivalentCdiRenewal:
+        "Selon votre convention collective, lorsque le contrat de mission ponctuelle est transformé en CDI pour un poste et une durée équivalents, le salarié n’a pas le droit à une prime d'intervention.",
+    };
+  }
+  if (
+    values?.ccn?.selected?.num === 1486 &&
+    values?.criteria?.cddType ===
+      "Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès" &&
+    values?.criteria?.hasCdiProposal === "oui"
+  ) {
+    errors.criteria = {
+      hasCdiProposal:
+        "Selon votre convention collective, le salarié en contrat d'intervention qui, à l'issue de son contrat, a reçu une proposition d'un CDI, n’a pas le droit à une prime d'intervention.",
+    };
+  }
+  if (
+    values?.ccn?.selected?.num === 2511 &&
+    values?.criteria?.cddType ===
+      "CDD d'usage appelé contrat «d'intervention»" &&
+    values?.criteria?.hasCdiRenewal === "oui"
+  ) {
+    errors.criteria = {
+      hasCdiRenewal:
+        "Selon votre convention collective, lorsque le contrat d'intervention est transformé en CDI, le salarié n’a pas le droit à une prime d'intervention.",
+    };
+  }
+  if (
+    values?.ccn?.selected?.num === 1516 &&
+    values?.criteria?.cddType === "CDD d'usage" &&
+    values?.criteria?.hasCdiRenewal === "oui"
+  ) {
+    errors.criteria = {
+      hasCdiRenewal: `Selon votre convention collective, le salarié en contrat d'usage qui, à l'issu de son contrat, poursuit par un CDI, n’a pas le droit à une indemnité dite "d'usage".`,
+    };
+  }
   if (values.criteria && excludeContracts.includes(values.criteria.cddType)) {
     errors.criteria = {
       cddType:

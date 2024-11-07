@@ -48,6 +48,7 @@ export function PopupContent() {
         Contact par email et prise de rendez-vous
       </h2>
       <Input
+        id="search-service"
         label="Saisissez le numéro de votre département"
         nativeInputProps={{
           maxLength: 3,

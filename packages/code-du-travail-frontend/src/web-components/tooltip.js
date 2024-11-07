@@ -1,5 +1,7 @@
 import { utils } from "@socialgouv/cdtn-ui";
 import { css, html, LitElement } from "lit";
+import { push } from "@socialgouv/matomo-next";
+import { MatomoBaseEvent } from "../lib";
 
 const { throttledDisplayInViewport } = utils;
 
@@ -20,6 +22,7 @@ class WebComponentsTooltip extends LitElement {
     super.connectedCallback();
     window.addEventListener("copy", this._handleCopy);
   }
+
   disconnectedCallback() {
     window.removeEventListener("copy", this._handleCopy);
     super.disconnectedCallback();
@@ -113,10 +116,25 @@ class WebComponentsTooltip extends LitElement {
   show() {
     const target = this.shadowRoot.querySelector(".content");
     throttledDisplayInViewport(target, this);
+    // On mobile, the show method is called twice
+    if (!this.visible) {
+      this.tooltipTimeout = setTimeout(() => {
+        // Double check if the clearTimeout failed
+        if (this.visible) {
+          push([
+            MatomoBaseEvent.TRACK_EVENT,
+            "glossary",
+            "show",
+            this.textContent,
+          ]);
+        }
+      }, 1000);
+    }
     this.visible = true;
   }
 
   hide() {
+    clearTimeout(this.tooltipTimeout);
     this.visible = false;
     const target = this.shadowRoot.querySelector(".content");
     target.style.display = "none";

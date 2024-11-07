@@ -3,7 +3,7 @@
 exports[`<NeedMoreInfo /> should match snapshot 1`] = `
 <div>
   <div
-    class="bg_var(--background-alt-blue-france)"
+    class="bg_var(--background-alt-blue-cumulus)"
     id="more-info"
   >
     <div
@@ -113,6 +113,7 @@ exports[`<NeedMoreInfo /> should match snapshot 1`] = `
                         </h2>
                         <div
                           class="fr-input-group"
+                          id="search-service"
                         >
                           <label
                             class="fr-label"
@@ -136,6 +137,11 @@ exports[`<NeedMoreInfo /> should match snapshot 1`] = `
                               title="Lancer la recherche par numéro de département"
                             />
                           </div>
+                          <div
+                            aria-live="polite"
+                            class="fr-messages-group"
+                            id="input-:r2:-messages-group"
+                          />
                         </div>
                         <div
                           class="fr-mt-3w"

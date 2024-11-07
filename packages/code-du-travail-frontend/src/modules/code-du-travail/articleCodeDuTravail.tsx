@@ -1,10 +1,9 @@
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
-import { Tag } from "@codegouvfr/react-dsfr/Tag";
 import Html from "../common/Html";
 import { ContainerRich } from "../layout/ContainerRich";
-import { Feedback } from "../layout/feedback";
 import { RelatedItem } from "../documents";
+import { ContentParser } from "./ContentParser";
 
 type Props = {
   metaDescription: string;
@@ -38,11 +37,11 @@ export function ArticleCodeDuTravail({
         <a href={url} target="_blank" rel="noopener noreferrer">
           Code du travail
         </a>{" "}
-        - Mise à jour le&nbsp;: {date}
+        - Mis à jour le&nbsp;: {date}
       </p>
 
       <div className={fr.cx("fr-mb-5w")}>
-        <Html>{html}</Html>
+        <ContentParser>{html}</ContentParser>
       </div>
       {notaHtml && (
         <div className={fr.cx("fr-highlight", "fr-mb-5w")}>
@@ -50,7 +49,6 @@ export function ArticleCodeDuTravail({
           <Html>{notaHtml}</Html>
         </div>
       )}
-      <Feedback />
     </ContainerRich>
   );
 }
