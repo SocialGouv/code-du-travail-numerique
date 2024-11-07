@@ -37,7 +37,7 @@ export const format = (model) => {
   if (model?.filesize) {
     model.filesize = Math.round((model.filesize / 1000) * 100) / 100;
   }
-  if (model.filename) {
+  if (model?.filename) {
     if (model.filename.indexOf(".") > 0) {
       model.extension = model.filename.split(/\.([a-z]{2,4})$/)[1];
     } else {
