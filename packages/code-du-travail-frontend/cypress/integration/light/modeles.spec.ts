@@ -44,12 +44,12 @@ describe("Modèles de documents", () => {
       method: "GET",
       url: "https://cdtn-prod-public.s3.gra.io.cloud.ovh.net/preview/default/rupture_periode_d-essai_salarie.docx",
     }).then((response) => {
-      cy.readFile("cypress/downloads/rupture_periode_d-essai_salarie.docx").then(
-        (file) => {
-          expect(file).to.exist;
-          expect(file.length).to.equal(18813);
-        }
-      );
+      cy.readFile(
+        "cypress/downloads/rupture_periode_d-essai_salarie.docx"
+      ).then((file) => {
+        expect(file).to.exist;
+        expect(file.length).to.equal(18813);
+      });
     });
   });
 });
