@@ -82,10 +82,10 @@ describe("Page d’accueil", () => {
 
   it("Affiche la popup de recherche Besoin de plus d'information", () => {
     cy.visit("/");
-
     cy.contains("Besoin de plus d'informations ?");
 
     cy.contains("Trouver les services près de chez moi").click();
+    cy.get("h1").should("contain", "Les services du ministère du Travail");
 
     cy.get("#search-service").type("75");
     cy.get("#search-service").type("{enter}");
