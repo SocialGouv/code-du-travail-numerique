@@ -47,7 +47,7 @@ export const Share = ({
       >
         <Circle>
           <StyledIcon as={icons.ShareFacebook} />
-          <Span className="sr-only">Facebook</Span>
+          <Span>Facebook</Span>
         </Circle>
       </StyledButton>
       <StyledLink
@@ -63,7 +63,7 @@ export const Share = ({
       >
         <Circle>
           <StyledIcon as={icons.Mail} />
-          <Span className="sr-only">Courriel</Span>
+          <Span>Courriel</Span>
         </Circle>
       </StyledLink>
       <StyledButton
@@ -84,7 +84,7 @@ export const Share = ({
       >
         <Circle>
           <StyledIcon as={icons.ShareLinkedin} />
-          <Span className="sr-only">Linkedin</Span>
+          <Span>Linkedin</Span>
         </Circle>
       </StyledButton>
       <Dropdown
@@ -117,7 +117,7 @@ export const Share = ({
           >
             <Circle>
               <StyledIcon as={icons.Share} />
-              <Span className="sr-only">Partage</Span>
+              <Span>Partage</Span>
             </Circle>
           </StyledButton>
         )}
