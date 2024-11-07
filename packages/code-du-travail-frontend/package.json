@@ -1,6 +1,6 @@
 {
   "name": "@cdt/frontend",
-  "version": "4.159.0",
+  "version": "4.160.0",
   "description": "Code du travail frontend",
   "private": true,
   "homepage": "https://code-du-travail.beta.gouv.fr/",
@@ -30,7 +30,8 @@
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
     "format": "prettier --write \"**/*.{js,ts,tsx,jsx,json,md}\"",
-    "format:check": "prettier --check \"**/*.{js,ts,tsx,jsx,json,md}\""
+    "format:check": "prettier --check \"**/*.{js,ts,tsx,jsx,json,md}\"",
+    "clean:redirects": "node -r @swc-node/register scripts/clean-redirects.ts"
   },
   "dependencies": {
     "@codegouvfr/react-dsfr": "^1.13.4",

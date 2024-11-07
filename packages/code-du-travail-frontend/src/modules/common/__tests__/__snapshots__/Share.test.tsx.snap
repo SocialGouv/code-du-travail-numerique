@@ -13,7 +13,7 @@ exports[`<Share /> renders 1`] = `
     >
       <li>
         <a
-          class="fr-btn fr-btn--tertiary fr-btn--facebook"
+          class="fr-btn fr-btn--tertiary fr-btn--facebook before:c_var(--artwork-minor-blue-cumulus)"
           href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fapi.url%2Fmy-page&quote=HELLO"
           rel="noopener noreferrer"
           target="_blank"
@@ -24,7 +24,7 @@ exports[`<Share /> renders 1`] = `
       </li>
       <li>
         <a
-          class="fr-btn fr-btn--tertiary fr-btn--twitter-x"
+          class="fr-btn fr-btn--tertiary fr-btn--twitter-x before:c_var(--artwork-minor-blue-cumulus)"
           href="https://x.com/intent/post?text=HELLO%20%3A%20http%3A%2F%2Fapi.url%2Fmy-page"
           rel="noopener noreferrer"
           target="_blank"
@@ -35,7 +35,7 @@ exports[`<Share /> renders 1`] = `
       </li>
       <li>
         <a
-          class="fr-btn fr-btn--tertiary fr-btn--linkedin"
+          class="fr-btn fr-btn--tertiary fr-btn--linkedin before:c_var(--artwork-minor-blue-cumulus)"
           href="https://www.linkedin.com/shareArticle?mini=true&title=HELLO&url=http%3A%2F%2Fapi.url%2Fmy-page"
           rel="noopener noreferrer"
           target="_blank"
@@ -46,7 +46,7 @@ exports[`<Share /> renders 1`] = `
       </li>
       <li>
         <a
-          class="fr-btn fr-btn--tertiary ri-mail-line"
+          class="fr-btn fr-btn--tertiary ri-mail-line before:c_var(--artwork-minor-blue-cumulus)"
           href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20HELLO&body=Ceci%20est%20ma%20page%0A%0Ahttp%3A%2F%2Fapi.url%2Fmy-page"
           rel="noopener external"
           title="Envoyer par email"
@@ -56,7 +56,7 @@ exports[`<Share /> renders 1`] = `
       </li>
       <li>
         <a
-          class="fr-btn fr-btn--tertiary ri-whatsapp-line"
+          class="fr-btn fr-btn--tertiary ri-whatsapp-line before:c_var(--artwork-minor-blue-cumulus)"
           href="https://wa.me/?text=HELLO%20%3A%20http%3A%2F%2Fapi.url%2Fmy-page"
           rel="noopener noreferrer"
           target="_blank"
@@ -67,7 +67,7 @@ exports[`<Share /> renders 1`] = `
       </li>
       <li>
         <button
-          class="fr-btn fr-btn--tertiary ri-links-line fr-btn--icon-left"
+          class="fr-btn fr-btn--tertiary ri-links-line fr-btn--icon-left before:c_var(--artwork-minor-blue-cumulus)"
           id="fr-button-:r0:"
           title="Copier le lien"
         >
