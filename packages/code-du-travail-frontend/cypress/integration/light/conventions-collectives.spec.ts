@@ -6,17 +6,21 @@ describe("Conventions collectives", () => {
       .click();
     cy.url().should("include", "/convention-collective");
 
-    cy.get("h1").should("have.text", "Votre convention collective");
+    cy.findByRole("heading", { level: 1 }).should(
+      "have.text",
+      "Votre convention collective"
+    );
     cy.get("body").should(
       "contain",
       "Retrouvez les questions/réponses fréquentes organisées par thème"
     );
-    cy.get("#content li").should("have.length", 49);
-    cy.get("#content li").first().click();
+    cy.get("#content a").should("have.length", 49);
+    cy.get("#content a").first().click();
     cy.url().should(
       "include",
       "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
     );
+
     cy.get('[data-accordion-component="Accordion"]')
       .eq(0)
       .find('[data-accordion-component="AccordionItemButton"]')

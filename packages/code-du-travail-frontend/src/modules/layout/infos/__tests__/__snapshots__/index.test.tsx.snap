@@ -137,6 +137,11 @@ exports[`<NeedMoreInfo /> should match snapshot 1`] = `
                               title="Lancer la recherche par numéro de département"
                             />
                           </div>
+                          <div
+                            aria-live="polite"
+                            class="fr-messages-group"
+                            id="input-:r2:-messages-group"
+                          />
                         </div>
                         <div
                           class="fr-mt-3w"

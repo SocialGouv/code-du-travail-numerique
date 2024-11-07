@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.160.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.159.0...v4.160.0) (2024-11-06)
+
+
+### Bug Fixes
+
+* **dsfr:** Correction d'erreur sur la structure HTML pour les fiches mt ([#6264](https://github.com/SocialGouv/code-du-travail-numerique/issues/6264)) ([4ebe479](https://github.com/SocialGouv/code-du-travail-numerique/commit/4ebe479d73de9aa091bd48b75b10dda36e829077))
+* **lighthouse:** ne pas throw d'erreur si les valeurs visées ne sont pas les bonnes ([#6258](https://github.com/SocialGouv/code-du-travail-numerique/issues/6258)) ([92fb699](https://github.com/SocialGouv/code-du-travail-numerique/commit/92fb6998fde74151dd319e2135f1c1c960b50ddc))
+
+
+### Features
+
+* changer la couleur de bouton de partage ([#6238](https://github.com/SocialGouv/code-du-travail-numerique/issues/6238)) ([756399b](https://github.com/SocialGouv/code-du-travail-numerique/commit/756399be7a31cca46154a3ac3c8b463b0f3bdcc2))
+* **ci:** ajout de lighthouse sur les tests heavy pour les pages DSFR ([#6224](https://github.com/SocialGouv/code-du-travail-numerique/issues/6224)) ([34158c7](https://github.com/SocialGouv/code-du-travail-numerique/commit/34158c783a3f744d32c6f9870731426266818a0a))
+
+
+
+
+
+# [4.159.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.158.1...v4.159.0) (2024-10-31)
+
+
+### Bug Fixes
+
+* ajouter un espace après les liens fiche cdt ([#6237](https://github.com/SocialGouv/code-du-travail-numerique/issues/6237)) ([482396f](https://github.com/SocialGouv/code-du-travail-numerique/commit/482396f7fe1271571d001383e977ccb203546ecb))
+* **dsfr:** ne pas utiliser deux fois la balise HTML ([#6246](https://github.com/SocialGouv/code-du-travail-numerique/issues/6246)) ([3c179b1](https://github.com/SocialGouv/code-du-travail-numerique/commit/3c179b1eac21433c82ae8ba64a9e8fe8b8334332))
+* formulation lorsque le résultat légal et cc est identique ([#6250](https://github.com/SocialGouv/code-du-travail-numerique/issues/6250)) ([520afad](https://github.com/SocialGouv/code-du-travail-numerique/commit/520afad9ab708f4091b2da7042fd07151732cd77))
+
+
+### Features
+
+* ajout d'un event de tracking sur les glossaires ([#6248](https://github.com/SocialGouv/code-du-travail-numerique/issues/6248)) ([3120e3a](https://github.com/SocialGouv/code-du-travail-numerique/commit/3120e3a22d9fa0b8b524d712868eaecc2b1976da))
+* **dsfr:** ajout d'un detecteur d'adblock pour éviter qu'un usager partage un message dans le vide ([#6226](https://github.com/SocialGouv/code-du-travail-numerique/issues/6226)) ([833d144](https://github.com/SocialGouv/code-du-travail-numerique/commit/833d144fe8c0debf1e42942246123c5b294511ff)), closes [#6227](https://github.com/SocialGouv/code-du-travail-numerique/issues/6227)
+* migration des fiches MT en DSFR ([#6211](https://github.com/SocialGouv/code-du-travail-numerique/issues/6211)) ([ecd387b](https://github.com/SocialGouv/code-du-travail-numerique/commit/ecd387bf6d1d2659fb7a1d12bb1f6e3382a95aab))
+
+
+
+
+
 ## [4.158.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.158.0...v4.158.1) (2024-10-30)
 
 
