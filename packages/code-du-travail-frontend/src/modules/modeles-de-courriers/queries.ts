@@ -36,8 +36,14 @@ export const fetchAllModels = async <
 export const format = (model) => {
   if (model?.filesize) {
     model.filesize = Math.round((model.filesize / 1000) * 100) / 100;
-    if (model.filename?.indexOf(".") > 0) {
+  }
+  if (model.filename) {
+    if (model.filename.indexOf(".") > 0) {
       model.extension = model.filename.split(/\.([a-z]{2,4})$/)[1];
+    } else {
+      throw new Error(
+        `Missing extension from filename for model ${model?.title}`
+      );
     }
   }
 
