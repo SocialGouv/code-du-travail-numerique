@@ -84,7 +84,7 @@ describe("Page d’accueil", () => {
     cy.visit("/");
     cy.contains("Besoin de plus d'informations ?");
 
-    cy.contains("Trouver les services près de chez moi").click();
+    cy.contains("Trouver les services près de chez moi").dblclick();
     cy.get("h1").should("contain", "Les services du ministère du Travail");
 
     cy.get("#search-service").type("75");
