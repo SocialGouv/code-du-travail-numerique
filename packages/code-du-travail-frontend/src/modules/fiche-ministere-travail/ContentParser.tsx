@@ -4,7 +4,6 @@ import parse, {
   Element,
   HTMLReactParserOptions,
 } from "html-react-parser";
-import { CallOut } from "@codegouvfr/react-dsfr/CallOut";
 import { fr } from "@codegouvfr/react-dsfr";
 import xss, { escapeAttrValue, getDefaultWhiteList } from "xss";
 
@@ -59,9 +58,9 @@ const options = (): HTMLReactParserOptions => {
           domNode.attribs.class?.includes("fr-icon-")
         ) {
           return (
-            <CallOut className={fr.cx("fr-icon-information-line")}>
+            <div className={fr.cx("fr-callout", "fr-icon-information-line")}>
               {domToReact(domNode.children as DOMNode[], { trim: true })}
-            </CallOut>
+            </div>
           );
         }
       }

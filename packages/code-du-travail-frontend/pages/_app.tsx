@@ -1,6 +1,5 @@
 import "katex/dist/katex.min.css";
 import "react-image-lightbox/style.css";
-import "../public/static/modeles.css";
 
 import * as Sentry from "@sentry/nextjs";
 import { GlobalStyles, ThemeProvider } from "@socialgouv/cdtn-ui";

@@ -10,49 +10,9 @@
     "source": "/health"
   },
   {
-    "destination": "/contribution/3239-:slug",
-    "permanent": true,
-    "source": "/contribution/2111-:slug"
-  },
-  {
-    "destination": "/contribution/3239-:slug",
-    "permanent": true,
-    "source": "/contribution/2395-:slug"
-  },
-  {
     "destination": "/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile",
     "permanent": true,
     "source": "/convention-collective/2111-salaries-du-particulier-employeur"
-  },
-  {
-    "destination": "/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile",
-    "permanent": true,
-    "source": "/convention-collective/2395-assistants-maternels-du-particulier-employeur"
-  },
-  {
-    "destination": "/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile",
-    "permanent": true,
-    "source": "/convention-collective/3239-secteur-des-particuliers-employeurs-et-de-lemploi-a-domicile"
-  },
-  {
-    "destination": "/information/covid-19-pass-vaccinal-et-contrat-de-travail-infographie",
-    "permanent": true,
-    "source": "/information/pass-sanitaire-et-contrat-de-travail"
-  },
-  {
-    "destination": "/information/pass-vaccinal-les-dates-a-retenir-infographie",
-    "permanent": true,
-    "source": "/information/vaccination-et-pass-sanitaire-les-dates-a-retenir"
-  },
-  {
-    "destination": "/information/covid-19-le-regime-post-crise-sanitaire-a-compter-du-14-mars-2022",
-    "permanent": true,
-    "source": "/information/pass-vaccinal-les-dates-a-retenir-infographie"
-  },
-  {
-    "destination": "/information/covid-19-le-regime-post-crise-sanitaire-a-compter-du-14-mars-2022",
-    "permanent": true,
-    "source": "/information/covid-19-pass-vaccinal-et-contrat-de-travail-infographie"
   },
   {
     "destination": "/information/en-pratique-que-doivent-faire-les-entreprises-a-partir-du-14-mars-2022-dans-le-cadre-de-lallegement-des-mesures-de-prevention-des-risques-de-contamination-au-covid-19",
@@ -60,24 +20,9 @@
     "source": "/information/covid-19-les-mesures-de-protection-en-entreprise-protocole-national"
   },
   {
-    "destination": "/information/en-pratique-que-doivent-faire-les-entreprises-a-partir-du-14-mars-2022-dans-le-cadre-de-lallegement-des-mesures-de-prevention-des-risques-de-contamination-au-covid-19",
-    "permanent": true,
-    "source": "/information/covid-19-integrer-le-risque-sanitaire-dans-lentreprise-protocole-national"
-  },
-  {
-    "destination": "/information/en-pratique-que-doivent-faire-les-entreprises-a-partir-du-14-mars-2022-dans-le-cadre-de-lallegement-des-mesures-de-prevention-des-risques-de-contamination-au-covid-19",
-    "permanent": true,
-    "source": "/information/services-de-sante-au-travail-nouveautes-covid-19"
-  },
-  {
     "destination": "/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-infographies",
     "permanent": true,
     "source": "/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-protocole-national"
-  },
-  {
-    "destination": "/convention-collective/1505-commerce-de-detail-alimentaire-non-specialise",
-    "permanent": true,
-    "source": "/convention-collective/1505-commerce-de-detail-des-fruits-et-legumes-epicerie-et-produits-laitiers"
   },
   {
     "destination": "/modeles-de-courriers/rupture-dun-contrat-de-travail-a-duree-determinee-dun-commun-accord",
@@ -120,21 +65,6 @@
     "destination": "/contribution/:slug"
   },
   {
-    "source": "/convention-collective/1740(-[a-z0-9-]+)?",
-    "permanent": true,
-    "destination": "/outils/convention-collective"
-  },
-  {
-    "source": "/fiche-service-public/peut-on-percevoir-lallocation-chomage-en-cas-de-demission",
-    "permanent": true,
-    "destination": "/fiche-service-public/un-salarie-peut-il-toucher-lallocation-chomage-en-cas-de-demission"
-  },
-  {
-    "source": "/fiche-service-public/regles-de-licenciement-dans-une-entreprise-en-difficulte",
-    "permanent": true,
-    "destination": "/fiche-service-public/licenciement-dans-une-entreprise-en-difficulte-quelles-sont-les-regles"
-  },
-  {
     "destination": "/contribution/3248-:slug",
     "source": "/contribution/54-:slug",
     "permanent": true
@@ -146,82 +76,7 @@
   },
   {
     "destination": "/contribution/3248-:slug",
-    "source": "/contribution/714-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/822-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
     "source": "/contribution/827-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/828-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/829-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/836-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/860-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/863-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/878-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/887-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/898-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/899-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/911-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/914-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/920-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/923-:slug",
     "permanent": true
   },
   {
@@ -231,77 +86,7 @@
   },
   {
     "destination": "/contribution/3248-:slug",
-    "source": "/contribution/934-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/937-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/943-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/948-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/965-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/979-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/984-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
     "source": "/contribution/1007-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1059-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1159-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1164-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1274-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1315-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1353-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1365-:slug",
     "permanent": true
   },
   {
@@ -312,56 +97,6 @@
   {
     "destination": "/contribution/3248-:slug",
     "source": "/contribution/1387-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/3209-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1472-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1525-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1560-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1564-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1572-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1576-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1577-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1578-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1592-:slug",
     "permanent": true
   },
   {
@@ -381,22 +116,7 @@
   },
   {
     "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1628-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1634-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
     "source": "/contribution/1635-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1732-:slug",
     "permanent": true
   },
   {
@@ -411,27 +131,7 @@
   },
   {
     "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1867-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1885-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
     "source": "/contribution/1902-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1912-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1960-:slug",
     "permanent": true
   },
   {
@@ -441,32 +141,7 @@
   },
   {
     "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1967-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/2003-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
     "source": "/contribution/2126-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/2221-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/2266-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/2294-:slug",
     "permanent": true
   },
   {
@@ -481,31 +156,6 @@
   },
   {
     "destination": "/contribution/3248-:slug",
-    "source": "/contribution/2579-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/2615-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/2630-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/2700-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/2755-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
     "source": "/contribution/2980-:slug",
     "permanent": true
   },
@@ -516,17 +166,7 @@
   },
   {
     "destination": "/contribution/3248-:slug",
-    "source": "/contribution/3053-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
     "source": "/contribution/1375-:slug",
-    "permanent": true
-  },
-  {
-    "destination": "/contribution/3248-:slug",
-    "source": "/contribution/1809-:slug",
     "permanent": true
   },
   {
@@ -537,21 +177,6 @@
   {
     "destination": "/convention-collective/3248-metallurgie",
     "source": "/convention-collective/(0650|650(?:-[a-z0-9-]+)?)",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0714|714(?:-[a-z0-9-]+)?)",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0822|822(?:-[a-z0-9-]+)?)",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0827|827(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
@@ -576,47 +201,7 @@
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0863|863(?:-[a-z0-9-]+)?)",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0878|878(?:-[a-z0-9-]+)?)",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0887|887(?:-[a-z0-9-]+)?)",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0898|898(?:-[a-z0-9-]+)?)",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0899|899(?:-[a-z0-9-]+)?)",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0911|911(?:-[a-z0-9-]+)?)",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
     "source": "/convention-collective/(0914|914(?:-[a-z0-9-]+)?)",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0920|920(?:-[a-z0-9-]+)?)",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0923|923(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
@@ -626,32 +211,7 @@
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0934|934(?:-[a-z0-9-]+)?)",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
     "source": "/convention-collective/(0937|937(?:-[a-z0-9-]+)?)",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0943|943(?:-[a-z0-9-]+)?)",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0948|948(?:-[a-z0-9-]+)?)",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0965|965(?:-[a-z0-9-]+)?)",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/(0979|979(?:-[a-z0-9-]+)?)",
     "permanent": true
   },
   {
@@ -671,21 +231,6 @@
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1159(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1164(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1274(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
     "source": "/convention-collective/1315(-[a-z0-9-]+)?",
     "permanent": true
   },
@@ -696,27 +241,7 @@
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1365(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1369(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
     "source": "/convention-collective/1387(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/3209(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1472(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
@@ -726,27 +251,7 @@
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1560(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1564(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
     "source": "/convention-collective/1572(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1576(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1577(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
@@ -756,32 +261,7 @@
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1592(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
     "source": "/convention-collective/1604(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1626(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1627(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1628(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1634(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
@@ -791,42 +271,7 @@
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1732(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/3231(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1813(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
     "source": "/convention-collective/1867(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1885(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1902(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1912(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1960(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
@@ -837,11 +282,6 @@
   {
     "destination": "/convention-collective/3248-metallurgie",
     "source": "/convention-collective/1967(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2003(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
@@ -857,11 +297,6 @@
   {
     "destination": "/convention-collective/3248-metallurgie",
     "source": "/convention-collective/2266(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2294(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
@@ -891,27 +326,7 @@
   },
   {
     "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2700(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2755(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
     "source": "/convention-collective/2980(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2992(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/3053(-[a-z0-9-]+)?",
     "permanent": true
   },
   {
@@ -920,63 +335,13 @@
     "permanent": true
   },
   {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/1809(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/3248-metallurgie",
-    "source": "/convention-collective/2344(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
-    "destination": "/convention-collective/1586-industries-charcutieres-salaisons-charcuteries-conserves-de-viandes",
-    "source": "/convention-collective/1543(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
     "source": "/fiche-service-public/arret-maladie-et-conges-payes-annuels",
     "permanent": true,
     "destination": "/fiche-service-public/un-salarie-peut-il-reporter-des-jours-de-conges-payes-pour-cause-de-maladie"
   },
   {
-    "destination": "/convention-collective/275-transport-aerien-personnel-au-sol",
-    "source": "/convention-collective/1391(-[a-z0-9-]+)?",
-    "permanent": true
-  },
-  {
     "source": "/convention-collective/1710(-[a-z0-9-]+)?",
     "destination": "/convention-collective/3245-operateurs-de-voyages-et-guides",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/1492(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/3238-production-et-transformation-des-papiers-et-cartons",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/2411(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/3241-telediffusion",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/1761(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/573-commerces-de-gros",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/1974(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/3229-navigation-interieure",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/(0412|412(?:-[a-z0-9-]+)?)",
-    "destination": "/convention-collective/3245-operateurs-de-voyages-et-guides",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/1495(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/3238-production-et-transformation-des-papiers-et-cartons",
     "permanent": true
   },
   {
@@ -990,73 +355,13 @@
     "permanent": true
   },
   {
-    "source": "/convention-collective/2174(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/3229-navigation-interieure",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/(0707|707(?:-[a-z0-9-]+)?)",
-    "destination": "/convention-collective/3238-production-et-transformation-des-papiers-et-cartons",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/1624(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/573-commerces-de-gros",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/(0172|172(?:-[a-z0-9-]+)?)",
-    "destination": "/convention-collective/158-travail-mecanique-du-bois-des-scieries-du-negoce-et-de-limportation-des-b",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/(0207|207(?:-[a-z0-9-]+)?)",
-    "destination": "/convention-collective/2528-maroquinerie-articles-de-voyage-chasse-sellerie-gainerie-bracelets-en-c",
-    "permanent": true
-  },
-  {
     "source": "/convention-collective/(0673|673(?:-[a-z0-9-]+)?)",
     "destination": "/convention-collective/303-couture-parisienne",
     "permanent": true
   },
   {
-    "source": "/convention-collective/(0715|715(?:-[a-z0-9-]+)?)",
-    "destination": "/convention-collective/489-industries-du-cartonnage",
-    "permanent": true
-  },
-  {
     "source": "/convention-collective/1001(-[a-z0-9-]+)?",
     "destination": "/convention-collective/413-handicapes-etablissements-et-services-pour-les-personnes-inadaptees-et-han",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/1618(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/1557-commerce-des-articles-de-sport-et-equipements-de-loisirs",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/1942(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/18-industrie-textile",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/3160(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/787-personnel-des-cabinets-dexperts-comptables-et-de-commissaires-aux-comptes",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/1237(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/787-personnel-des-cabinets-dexperts-comptables-et-de-commissaires-aux-comptes",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/(0418|418(?:-[a-z0-9-]+)?)",
-    "destination": "/convention-collective/303-couture-parisienne",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/(0780|780(?:-[a-z0-9-]+)?)",
-    "destination": "/convention-collective/303-couture-parisienne",
     "permanent": true
   },
   {
@@ -1075,53 +380,13 @@
     "permanent": true
   },
   {
-    "source": "/convention-collective/7013(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/7026-personnels-des-activites-hippiques",
-    "permanent": true
-  },
-  {
     "source": "/convention-collective/7014(-[a-z0-9-]+)?",
     "destination": "/convention-collective/7026-personnels-des-activites-hippiques",
     "permanent": true
   },
   {
-    "source": "/convention-collective/1194(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/2121-edition",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/1016(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/2121-edition",
-    "permanent": true
-  },
-  {
     "source": "/convention-collective/2770(-[a-z0-9-]+)?",
     "destination": "/convention-collective/2121-edition",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/(0635|635(?:-[a-z0-9-]+)?)",
-    "destination": "/convention-collective/573-commerces-de-gros",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/1734(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/2642-production-audiovisuelle",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/personnels-des-activites-hippiques",
-    "destination": "/convention-collective/7026-personnels-des-activites-hippiques",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/2564(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/1875-veterinaires-personnel-salarie-des-cabinets-et-cliniques-veterinaires",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/(0731|731(?:-[a-z0-9-]+)?)",
-    "destination": "/convention-collective/3243-quincaillerie-fournitures-industrielles-fers-metaux-et-equipement-de-la",
     "permanent": true
   },
   {
@@ -1142,11 +407,6 @@
   {
     "source": "/convention-collective/(0567|567(?:-[a-z0-9-]+)?)",
     "destination": "/convention-collective/3251-bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
-    "permanent": true
-  },
-  {
-    "source": "/convention-collective/2785(-[a-z0-9-]+)?",
-    "destination": "/convention-collective/3250-commissaires-de-justice-et-societes-de-ventes-volontaires",
     "permanent": true
   },
   {

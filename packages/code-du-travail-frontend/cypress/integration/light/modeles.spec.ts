@@ -40,7 +40,7 @@ describe("Modèles de documents", () => {
             doc.location.reload();
           }, 3000);
         });
-        cy.contains("Télécharger le modèle").click();
+        cy.get("a:visible").contains("Télécharger le").first().click();
       });
 
     cy.readFile("cypress/downloads/rupture_periode_d-essai_salarie.docx").then(

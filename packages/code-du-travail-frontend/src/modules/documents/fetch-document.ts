@@ -13,6 +13,7 @@ export const fetchDocument = async <
     _source: fields,
     index: elasticDocumentsIndex,
     ...body,
+    size: 1,
   });
   if (response.hits.hits.length === 0) {
     return;

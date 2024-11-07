@@ -18,6 +18,5 @@ export const fetchLegalArticle = async (
         ],
       },
     },
-    size: 1,
   });
 };
