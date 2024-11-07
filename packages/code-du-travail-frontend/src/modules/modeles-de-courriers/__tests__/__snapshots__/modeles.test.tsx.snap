@@ -72,7 +72,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
           class="fr-mb-6w"
         >
           <div
-            class="fr-tile fr-enlarge-link fr-tile--vertical"
+            class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--download"
             id="fr-tile-:r2:"
           >
             <div
@@ -161,7 +161,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
         class="fr-mb-6w"
       >
         <div
-          class="fr-tile fr-enlarge-link fr-tile--vertical"
+          class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--download"
           id="fr-tile-:r6:"
         >
           <div
@@ -247,7 +247,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
           class="fr-mb-6w"
         >
           <div
-            class="fr-tile fr-enlarge-link fr-tile--vertical"
+            class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--download"
             id="fr-tile-:r9:"
           >
             <div

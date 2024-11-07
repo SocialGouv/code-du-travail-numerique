@@ -277,6 +277,6 @@ const HiddenInput = styled.input`
   border: 0;
   opacity: 0;
 `;
-const Span = styled.input`
+const Span = styled.span`
   display: none;
 `;
