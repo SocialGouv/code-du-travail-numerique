@@ -31,22 +31,25 @@ describe("Modèles de documents", () => {
     );
 
     cy.contains("Objet : Rupture de la période d’essai");
+    cy.get("a:visible")
+      .contains("Télécharger le")
+      .should("have.prop", "href")
+      .and(
+        "equal",
+        "https://cdtn-prod-public.s3.gra.io.cloud.ovh.net/preview/default/rupture_periode_d-essai_salarie.docx"
+      );
 
-    cy.window()
-      .document()
-      .then(function (doc) {
-        doc.addEventListener("click", () => {
-          setTimeout(function () {
-            doc.location.reload();
-          }, 3000);
-        });
-        cy.get("a:visible").contains("Télécharger le").first().click();
-      });
-
-    cy.readFile("cypress/downloads/rupture_periode_d-essai_salarie.docx").then(
-      (file) => {
-        expect(file).to.exist;
-      }
-    );
+    cy.request({
+      failOnStatusCode: false,
+      method: "GET",
+      url: "https://cdtn-prod-public.s3.gra.io.cloud.ovh.net/preview/default/rupture_periode_d-essai_salarie.docx",
+    }).then((response) => {
+      cy.readFile("cypress/downloads/rupture_periode_d-essai_salarie.docx").then(
+        (file) => {
+          expect(file).to.exist;
+          expect(file.length).to.equal(18813);
+        }
+      );
+    });
   });
 });
