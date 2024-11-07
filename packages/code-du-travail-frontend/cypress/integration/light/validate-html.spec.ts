@@ -3,7 +3,6 @@ import { localConfig } from "../html-validation/validate-html.spec";
 
 describe("Validation de l'html d'un échantillon de pages", () => {
   [
-    "/convention-collective",
     "/convention-collective/3248-metallurgie",
     "/contribution",
     "/contribution/les-conges-pour-evenements-familiaux",

@@ -1,0 +1,380 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LetterModel /> affiche un modèle de document 1`] = `
+<div>
+  <nav
+    aria-label="vous êtes ici :"
+    class="fr-breadcrumb fr-mb-2w fr-mt-2w"
+    id="fr-breadcrumb-:r0:"
+    role="navigation"
+  >
+    <button
+      aria-controls="breadcrumb-:r1:"
+      aria-expanded="false"
+      class="fr-breadcrumb__button"
+    >
+      Voir le fil d’Ariane
+    </button>
+    <div
+      class="fr-collapse"
+      id="breadcrumb-:r1:"
+    >
+      <ol
+        class="fr-breadcrumb__list"
+      >
+        <li>
+          <a
+            class="fr-breadcrumb__link"
+            href="/"
+          >
+            Accueil
+          </a>
+        </li>
+        <li>
+          <a
+            aria-current="page"
+            class="fr-breadcrumb__link"
+          >
+            Mon modele
+          </a>
+        </li>
+      </ol>
+    </div>
+  </nav>
+  <div
+    class="fr-grid-row fr-grid-row--gutters fr-mb-4w fr-mb-md-12w"
+  >
+    <div
+      class="fr-col-12 fr-col-md-7"
+    >
+      <h1
+        class="fr-mb-6w"
+      >
+        Mon modele
+      </h1>
+      <p
+        class="fr-mb-6w"
+      >
+        Mis à jour le : 
+        12/02/2020
+      </p>
+      <div
+        class="fr-highlight fr-mb-6w"
+      >
+        <div>
+          Ceci est mon intro
+        </div>
+      </div>
+      <div
+        class="fr-hidden-md"
+      >
+        <div
+          class="fr-mb-6w"
+        >
+          <div
+            class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--download"
+            id="fr-tile-:r2:"
+          >
+            <div
+              class="fr-tile__body"
+            >
+              <div
+                class="fr-tile__content"
+              >
+                <h2
+                  class="fr-tile__title"
+                >
+                  <a
+                    aria-disabled="false"
+                    class=""
+                    href="bucket.url/default/mon-fichier.txt"
+                  >
+                    Télécharger le Mon modele
+                  </a>
+                </h2>
+                <p
+                  class="fr-tile__detail"
+                >
+                  Format txt - 10Ko
+                </p>
+              </div>
+            </div>
+            <div
+              class="fr-tile__header"
+            >
+              <div
+                class="fr-tile__img"
+              >
+                <img
+                  alt=""
+                  class="fr-responsive-img"
+                  src="/static/assets/img/modeles-de-courriers-download.svg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="fr-btn fr-btn--secondary fr-icon-clipboard-line fr-btn--icon-left w_100%! jc_center"
+          data-testid="copy-button"
+          id="fr-button-:r3:"
+        >
+          Copier le modèle
+        </button>
+        <div
+          class="fr-py-2v h_48px"
+        />
+      </div>
+      <div
+        class="fr-p-2w fr-pt-4w fr-mb-6w bd_1px_solid bdr_8px bd-c_var(--artwork-minor-blue-cumulus)"
+        id="content-to-copy"
+      >
+        <div>
+          <p>
+            Le modèle
+          </p>
+        </div>
+      </div>
+      <div
+        class="fr-alert fr-alert--info fr-alert--sm fr-mb-6w"
+        id="fr-alert-:r4:"
+      >
+        <p>
+          Attention, chaque modèle de lettre proposé est à personnaliser selon votre situation et est susceptible d’évoluer suite à des changements de réglementation. Assurez-vous d’avoir la dernière version mise à jour avant toute utilisation.
+        </p>
+      </div>
+      <div
+        class="[&_>_button]:md:w_auto!"
+      >
+        <button
+          class="fr-btn fr-btn--secondary fr-icon-clipboard-line fr-btn--icon-left w_100%! jc_center"
+          data-testid="copy-button"
+          id="fr-button-:r5:"
+        >
+          Copier le modèle
+        </button>
+        <div
+          class="fr-py-2v h_48px"
+        />
+      </div>
+      <div
+        class="fr-mb-6w"
+      >
+        <div
+          class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--download"
+          id="fr-tile-:r6:"
+        >
+          <div
+            class="fr-tile__body"
+          >
+            <div
+              class="fr-tile__content"
+            >
+              <h2
+                class="fr-tile__title"
+              >
+                <a
+                  aria-disabled="false"
+                  class=""
+                  href="bucket.url/default/mon-fichier.txt"
+                >
+                  Télécharger le Mon modele
+                </a>
+              </h2>
+              <p
+                class="fr-tile__detail"
+              >
+                Format txt - 10Ko
+              </p>
+            </div>
+          </div>
+          <div
+            class="fr-tile__header"
+          >
+            <div
+              class="fr-tile__img"
+            >
+              <img
+                alt=""
+                class="fr-responsive-img"
+                src="/static/assets/img/modeles-de-courriers-download.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="fr-highlight fr-p-2w fr-m-0"
+      >
+        <div
+          class="fr-grid-row"
+        >
+          <div
+            class="fr-col-12 fr-col-md"
+          >
+            <h2
+              class="fr-h5 fr-mb-md-0"
+            >
+              Avez-vous trouvé la réponse à votre question ?
+            </h2>
+          </div>
+          <div>
+            <button
+              class="fr-btn fr-btn--secondary fr-mr-2w"
+              id="fr-button-:r7:"
+              type="button"
+            >
+              Non
+            </button>
+            <button
+              class="fr-btn fr-btn--secondary"
+              id="fr-button-:r8:"
+              type="button"
+            >
+              Oui
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="fr-col-12 fr-col-offset-md-1 fr-col-md-4"
+    >
+      <div
+        class="fr-hidden fr-unhidden-md"
+      >
+        <div
+          class="fr-mb-6w"
+        >
+          <div
+            class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--download"
+            id="fr-tile-:r9:"
+          >
+            <div
+              class="fr-tile__body"
+            >
+              <div
+                class="fr-tile__content"
+              >
+                <h3
+                  class="fr-tile__title"
+                >
+                  <a
+                    aria-disabled="false"
+                    class=""
+                    href="bucket.url/default/mon-fichier.txt"
+                  >
+                    Télécharger le Mon modele
+                  </a>
+                </h3>
+                <p
+                  class="fr-tile__detail"
+                >
+                  Format txt - 10Ko
+                </p>
+              </div>
+            </div>
+            <div
+              class="fr-tile__header"
+            >
+              <div
+                class="fr-tile__img"
+              >
+                <img
+                  alt=""
+                  class="fr-responsive-img"
+                  src="/static/assets/img/modeles-de-courriers-download.svg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="fr-btn fr-btn--secondary fr-icon-clipboard-line fr-btn--icon-left w_100%! jc_center"
+          data-testid="copy-button"
+          id="fr-button-:ra:"
+        >
+          Copier le modèle
+        </button>
+        <div
+          class="fr-py-2v h_48px"
+        />
+      </div>
+      <div
+        class="fr-follow__social"
+      >
+        <p>
+          Partager la page
+        </p>
+        <ul
+          class="fr-btns-group"
+        >
+          <li>
+            <a
+              class="fr-btn fr-btn--tertiary fr-btn--facebook before:c_var(--artwork-minor-blue-cumulus)"
+              href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fapi.urlundefined&quote=Mon%20modele"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Partager sur Facebook"
+            >
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a
+              class="fr-btn fr-btn--tertiary fr-btn--twitter-x before:c_var(--artwork-minor-blue-cumulus)"
+              href="https://x.com/intent/post?text=Mon%20modele%20%3A%20http%3A%2F%2Fapi.urlundefined"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Partager sur X (anciennement Twitter)"
+            >
+              X (anciennement Twitter)
+            </a>
+          </li>
+          <li>
+            <a
+              class="fr-btn fr-btn--tertiary fr-btn--linkedin before:c_var(--artwork-minor-blue-cumulus)"
+              href="https://www.linkedin.com/shareArticle?mini=true&title=Mon%20modele&url=http%3A%2F%2Fapi.urlundefined"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Partager sur LinkedIn"
+            >
+              Linkedin
+            </a>
+          </li>
+          <li>
+            <a
+              class="fr-btn fr-btn--tertiary ri-mail-line before:c_var(--artwork-minor-blue-cumulus)"
+              href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Mon%20modele&body=ma%20m%C3%A9ta%20description%0A%0Ahttp%3A%2F%2Fapi.urlundefined"
+              rel="noopener external"
+              title="Envoyer par email"
+            >
+              Courriel
+            </a>
+          </li>
+          <li>
+            <a
+              class="fr-btn fr-btn--tertiary ri-whatsapp-line before:c_var(--artwork-minor-blue-cumulus)"
+              href="https://wa.me/?text=Mon%20modele%20%3A%20http%3A%2F%2Fapi.urlundefined"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Envoyer par Whatsapp"
+            >
+              Whatsapp
+            </a>
+          </li>
+          <li>
+            <button
+              class="fr-btn fr-btn--tertiary ri-links-line fr-btn--icon-left before:c_var(--artwork-minor-blue-cumulus)"
+              id="fr-button-:rb:"
+              title="Copier le lien"
+            >
+              Lien de copie
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
