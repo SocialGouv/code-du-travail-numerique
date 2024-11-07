@@ -14,6 +14,8 @@ describe("Conventions collectives", () => {
     );
     cy.get("#content a").should("have.length", 49);
     cy.get("#content a").first().click();
+    // eslint-disable-next-line cypress/no-unnecessary-waiting
+    cy.wait(1000);
     cy.url().should(
       "include",
       "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
