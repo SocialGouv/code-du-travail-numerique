@@ -60,73 +60,82 @@ export const Autocomplete = <K,>({
   });
   return (
     <>
-      <Input
-        {...getInputProps({
-          id: "location-search",
-        })}
-        addon={
-          <>
-            {selectedResult && (
-              <Button
-                iconId="fr-icon-close-line"
-                className={`${fr.cx("fr-p-0")} ${buttonClose}`}
-                onClick={() => {
-                  setSelectedResult(undefined);
-                  if (onChange) onChange(undefined);
-                  setValue("");
-                  setSuggestions([]);
-                }}
-                priority="tertiary no outline"
-                title="Label button"
-              />
-            )}
-          </>
-        }
-        nativeInputProps={{ type: "search", value }}
-        className={`${fr.cx("fr-mb-0")} ${className}`}
-        hintText={hintText}
-        label={label}
-        state={state}
-        stateRelatedMessage={stateRelatedMessage}
-        classes={classes}
-      />
-      <ul
-        {...getMenuProps()}
-        className={`${fr.cx("fr-p-0")} ${autocompleteContainer}`}
-      >
-        {isOpen &&
-          suggestions.map((item, index) => (
+      <div className={`${autocompleteContainer} ${className}`}>
+        <Input
+          {...getInputProps({
+            id: "location-search",
+          })}
+          addon={
             <>
-              <li
-                {...getItemProps({
-                  item,
-                  index,
-                })}
-                className={`${fr.cx("fr-sidemenu__item", "fr-p-0", "fr-grid-row")} ${autocompleteContainer}${highlightedIndex === index ? ` ${buttonActive}` : ""}`}
-                key={`${displayLabel(item)}${index}`}
-              >
+              {selectedResult && (
                 <Button
-                  linkProps={{
-                    href: `#`,
+                  iconId="fr-icon-close-line"
+                  className={`${fr.cx("fr-p-0")} ${buttonClose}`}
+                  onClick={() => {
+                    setSelectedResult(undefined);
+                    if (onChange) onChange(undefined);
+                    setValue("");
+                    setSuggestions([]);
                   }}
                   priority="tertiary no outline"
-                  className={fr.cx("fr-col-12")}
-                >
-                  {displayLabel(item)}
-                </Button>
-              </li>
+                  title="Label button"
+                />
+              )}
             </>
-          ))}
-      </ul>
+          }
+          nativeInputProps={{ type: "search", value }}
+          className={`${fr.cx("fr-mb-0")}`}
+          hintText={hintText}
+          label={label}
+          state={state}
+          stateRelatedMessage={stateRelatedMessage}
+          classes={classes}
+        />
+        <ul
+          {...getMenuProps()}
+          className={`${fr.cx("fr-p-0")} ${autocompleteListContainer}`}
+        >
+          {isOpen &&
+            suggestions.map((item, index) => (
+              <>
+                <li
+                  {...getItemProps({
+                    item,
+                    index,
+                  })}
+                  className={`${fr.cx("fr-sidemenu__item", "fr-p-0", "fr-grid-row")} ${autocompleteContainer}${highlightedIndex === index ? ` ${buttonActive}` : ""} ${autocompleteItemContainer}`}
+                  key={`${displayLabel(item)}${index}`}
+                >
+                  <Button
+                    linkProps={{
+                      href: `#`,
+                    }}
+                    priority="tertiary no outline"
+                    className={fr.cx("fr-col-12")}
+                  >
+                    {displayLabel(item)}
+                  </Button>
+                </li>
+              </>
+            ))}
+        </ul>
+      </div>
     </>
   );
 };
 
 const autocompleteContainer = css({
-  background: "white",
-  position: "absolute",
-  zIndex: 2,
+  position: "relative",
 });
+
+const autocompleteListContainer = css({
+  position: "absolute",
+  w: "100%",
+  zIndex: 100,
+  bg: "var(--background-default-grey)",
+});
+
+const autocompleteItemContainer = css({});
 
 const buttonActive = css({
   backgroundColor: "rgb(246, 246, 246)",

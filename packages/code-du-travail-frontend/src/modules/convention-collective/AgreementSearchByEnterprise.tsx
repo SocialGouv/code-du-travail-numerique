@@ -4,8 +4,6 @@ import Button from "@codegouvfr/react-dsfr/Button";
 import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import { Card } from "@codegouvfr/react-dsfr/Card";
-import { Tile } from "@codegouvfr/react-dsfr/Tile";
-import Link from "next/link";
 import { useState } from "react";
 import { css } from "../../../styled-system/css";
 
@@ -14,6 +12,7 @@ import { searchEnterprises } from "../Enterprise/enterprises.service";
 import { Enterprise } from "../Enterprise/types";
 import { ApiGeoResult } from "../Location/searchCities";
 import Tooltip from "@codegouvfr/react-dsfr/Tooltip";
+import { CardTitleStyle, ButtonStyle } from "./style";
 
 type Props = {
   navigationUrl?: string;
@@ -95,7 +94,7 @@ export const AgreementSearchByEnterprise = ({
           type="submit"
           iconPosition="right"
           iconId="fr-icon-search-line"
-          className={`${fr.cx("fr-col-12", "fr-col-md-2", "fr-ml-md-3w", "fr-mt-2w", "fr-mt-md-7w")}`}
+          className={`${fr.cx("fr-ml-md-3w", "fr-mt-2w", "fr-mt-md-7w")} ${ButtonStyle}`}
         >
           Rechercher
         </Button>
@@ -161,7 +160,7 @@ export const AgreementSearchByEnterprise = ({
           }}
           desc="Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective"
           size="large"
-          title="particuliers employeurs et emploi à domicile"
+          title="Particuliers employeurs et emploi à domicile"
           classes={{
             title: `${fr.cx("fr-h5")} ${CardTitleStyle}`,
             content: fr.cx("fr-px-2w", "fr-pt-1w", "fr-pb-8w"),
@@ -170,11 +169,11 @@ export const AgreementSearchByEnterprise = ({
           }}
         />
       </div>
-      <div className={fr.cx("fr-grid-row", "fr-mt-2w")}>
+      <div className={fr.cx("fr-mt-2w")}>
         <Button
           linkProps={{ href: navigationUrl }}
           priority="secondary"
-          className={fr.cx("fr-col-12", "fr-col-md-2")}
+          className={ButtonStyle}
         >
           Précédent
         </Button>
@@ -182,11 +181,3 @@ export const AgreementSearchByEnterprise = ({
     </>
   );
 };
-
-const CardTitleStyle = css({
-  "& > a": {
-    _after: {
-      top: "3rem",
-    },
-  },
-});

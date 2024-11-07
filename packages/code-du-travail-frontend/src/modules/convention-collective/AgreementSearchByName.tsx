@@ -11,6 +11,7 @@ import { Autocomplete } from "../common/Autocomplete";
 import { Agreement } from "../../outils/types";
 import { searchAgreement } from "./agreement.service";
 import Button from "@codegouvfr/react-dsfr/Button";
+import { ButtonStyle } from "./style";
 
 type Props = {
   navigationUrl?: string;
@@ -102,11 +103,11 @@ export const AgreementSearchByName = ({
           />
         )}
       </div>
-      <div className={fr.cx("fr-grid-row", "fr-mt-2w")}>
+      <div className={fr.cx("fr-mt-2w")}>
         <Button
           linkProps={{ href: navigationUrl }}
           priority="secondary"
-          className={fr.cx("fr-col-12", "fr-col-md-2")}
+          className={ButtonStyle}
         >
           Précédent
         </Button>
@@ -114,7 +115,7 @@ export const AgreementSearchByName = ({
           <Button
             linkProps={{ href: `${navigationUrl}/entreprise` }}
             priority="secondary"
-            className={`${fr.cx("fr-col-12", "fr-col-md-3", "fr-ml-md-2w", "fr-mt-2w", "fr-mt-md-0")}`}
+            className={`${fr.cx("fr-ml-md-2w", "fr-mt-2w", "fr-mt-md-0")} ${ButtonStyle}`}
           >
             Rechercher par entreprise
           </Button>
@@ -123,11 +124,3 @@ export const AgreementSearchByName = ({
     </>
   );
 };
-
-const autocompleteContainer = css({
-  background: "white",
-});
-
-const buttonActive = css({
-  backgroundColor: "rgb(246, 246, 246)",
-});

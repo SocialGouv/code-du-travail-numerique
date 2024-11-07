@@ -2,10 +2,8 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Enterprise } from "../Enterprise/types";
 import Card from "@codegouvfr/react-dsfr/Card";
-import Tile from "@codegouvfr/react-dsfr/Tile";
-import { css } from "../../../styled-system/css";
-import Link from "next/link";
 import Button from "@codegouvfr/react-dsfr/Button";
+import { ButtonStyle, CardTitleStyle } from "./style";
 
 type Props = {
   enterprise: Enterprise;
@@ -69,11 +67,11 @@ export const AgreementSelection = ({
         );
       })}
 
-      <div className={fr.cx("fr-grid-row", "fr-mt-2w")}>
+      <div className={fr.cx("fr-mt-2w")}>
         <Button
           linkProps={{ href: `${navigationUrl}/entreprise` }}
           priority="secondary"
-          className={fr.cx("fr-col-12", "fr-col-md-2")}
+          className={`${fr.cx("fr-col-12", "fr-col-md-2")} ${ButtonStyle}`}
         >
           Précédent
         </Button>
@@ -81,11 +79,3 @@ export const AgreementSelection = ({
     </>
   );
 };
-
-const CardTitleStyle = css({
-  "& > a": {
-    _after: {
-      top: "3rem",
-    },
-  },
-});
