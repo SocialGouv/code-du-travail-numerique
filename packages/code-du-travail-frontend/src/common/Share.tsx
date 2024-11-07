@@ -47,7 +47,7 @@ export const Share = ({
       >
         <Circle>
           <StyledIcon as={icons.ShareFacebook} />
-          <span className="sr-only">Facebook</span>
+          <Span className="sr-only">Facebook</Span>
         </Circle>
       </StyledButton>
       <StyledLink
@@ -63,7 +63,7 @@ export const Share = ({
       >
         <Circle>
           <StyledIcon as={icons.Mail} />
-          <span className="sr-only">Courriel</span>
+          <Span className="sr-only">Courriel</Span>
         </Circle>
       </StyledLink>
       <StyledButton
@@ -84,7 +84,7 @@ export const Share = ({
       >
         <Circle>
           <StyledIcon as={icons.ShareLinkedin} />
-          <span className="sr-only">Linkedin</span>
+          <Span className="sr-only">Linkedin</Span>
         </Circle>
       </StyledButton>
       <Dropdown
@@ -117,7 +117,7 @@ export const Share = ({
           >
             <Circle>
               <StyledIcon as={icons.Share} />
-              <span className="sr-only">Partage</span>
+              <Span className="sr-only">Partage</Span>
             </Circle>
           </StyledButton>
         )}
@@ -276,4 +276,7 @@ const HiddenInput = styled.input`
   padding: 0;
   border: 0;
   opacity: 0;
+`;
+const Span = styled.input`
+  display: none;
 `;
