@@ -13,6 +13,7 @@ export const ToolTile = (props: HomeTileProps) => (
   <Tile
     imageSvg={false}
     imageUrl={`/static/assets/icons/tools/${props.iconName}.svg`}
+    imageAlt=""
     linkProps={{
       href: props.link,
     }}

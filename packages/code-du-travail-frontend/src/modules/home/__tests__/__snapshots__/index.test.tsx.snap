@@ -231,6 +231,7 @@ exports[`<Home /> should match snapshot 1`] = `
                     class="fr-tile__img fr-mb-0"
                   >
                     <img
+                      alt=""
                       class="fr-responsive-img"
                       src="/static/assets/icons/tools/tool-icon.svg"
                     />
@@ -563,6 +564,7 @@ exports[`<Home /> should match snapshot 1`] = `
                     class="fr-tile__img fr-mb-0 w_56px! h_56px!"
                   >
                     <img
+                      alt=""
                       class="fr-responsive-img"
                       src="/static/assets/icons/themes/theme-icon.svg"
                       width="56"

@@ -13,6 +13,7 @@ export const ThemeTile = (props: Props) => (
   <Tile
     imageSvg={false}
     imageUrl={`/static/assets/icons/themes/${props.iconName}.svg`}
+    imageAlt=""
     linkProps={{
       href: props.link,
     }}
