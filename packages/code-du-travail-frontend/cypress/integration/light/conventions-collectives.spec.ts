@@ -14,68 +14,70 @@ describe("Conventions collectives", () => {
     );
     cy.get("#content a").should("have.length", 49);
     cy.get("#content a").first().click();
-    // eslint-disable-next-line cypress/no-unnecessary-waiting
-    cy.wait(1000);
-    cy.url().should(
-      "include",
+    // cy.url().should(
+    //   "include",
+    //   "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
+    // );
+    cy.intercept(
       "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
-    );
+    ).as("aide");
+    cy.wait("@aide").then(() => {
+      cy.get('[data-accordion-component="Accordion"]')
+        .eq(0)
+        .find('[data-accordion-component="AccordionItemButton"]')
+        .should("have.length", 6);
+      cy.get('[data-accordion-component="Accordion"]')
+        .eq(0)
+        .find('[data-accordion-component="AccordionItemButton"]')
+        .first()
+        .should("have.text", "Congés et repos");
+      cy.get('[data-accordion-component="Accordion"]')
+        .eq(0)
+        .find('[data-accordion-component="AccordionItem"] a')
+        .should("have.length", 40);
+      cy.get('[data-accordion-component="Accordion"]')
+        .eq(0)
+        .find('[data-accordion-component="AccordionItem"] a')
+        .first()
+        .contains(
+          "Quelles sont les conditions d’indemnisation pendant le congé de maternité"
+        );
 
-    cy.get('[data-accordion-component="Accordion"]')
-      .eq(0)
-      .find('[data-accordion-component="AccordionItemButton"]')
-      .should("have.length", 6);
-    cy.get('[data-accordion-component="Accordion"]')
-      .eq(0)
-      .find('[data-accordion-component="AccordionItemButton"]')
-      .first()
-      .should("have.text", "Congés et repos");
-    cy.get('[data-accordion-component="Accordion"]')
-      .eq(0)
-      .find('[data-accordion-component="AccordionItem"] a')
-      .should("have.length", 40);
-    cy.get('[data-accordion-component="Accordion"]')
-      .eq(0)
-      .find('[data-accordion-component="AccordionItem"] a')
-      .first()
-      .contains(
-        "Quelles sont les conditions d’indemnisation pendant le congé de maternité"
+      cy.get('[data-accordion-component="Accordion"]')
+        .eq(1)
+        .find('[data-accordion-component="AccordionItemButton"]')
+        .should("have.length", 1);
+      cy.get('[data-accordion-component="Accordion"]')
+        .eq(1)
+        .find('[data-accordion-component="AccordionItemButton"]')
+        .first()
+        .should("have.text", "En savoir plus");
+
+      cy.get('[data-accordion-component="Accordion"]')
+        .eq(2)
+        .find('[data-accordion-component="AccordionItemButton"]')
+        .should("have.length", 3);
+      cy.get('[data-accordion-component="Accordion"]')
+        .eq(2)
+        .find('[data-accordion-component="AccordionItemButton"]')
+        .first()
+        .should("have.text", "Salaires minima hiérarchiques");
+      cy.get('[data-accordion-component="Accordion"]')
+        .eq(2)
+        .find('[data-accordion-component="AccordionItem"] a')
+        .should("have.length", 46);
+
+      cy.get('[data-accordion-component="Accordion"]')
+        .eq(0)
+        .find('[data-accordion-component="AccordionItemButton"]')
+        .first()
+        .click();
+      cy.get('[data-accordion-component="AccordionItem"] a').first().click();
+      cy.url().should(
+        "include",
+        "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
       );
-
-    cy.get('[data-accordion-component="Accordion"]')
-      .eq(1)
-      .find('[data-accordion-component="AccordionItemButton"]')
-      .should("have.length", 1);
-    cy.get('[data-accordion-component="Accordion"]')
-      .eq(1)
-      .find('[data-accordion-component="AccordionItemButton"]')
-      .first()
-      .should("have.text", "En savoir plus");
-
-    cy.get('[data-accordion-component="Accordion"]')
-      .eq(2)
-      .find('[data-accordion-component="AccordionItemButton"]')
-      .should("have.length", 3);
-    cy.get('[data-accordion-component="Accordion"]')
-      .eq(2)
-      .find('[data-accordion-component="AccordionItemButton"]')
-      .first()
-      .should("have.text", "Salaires minima hiérarchiques");
-    cy.get('[data-accordion-component="Accordion"]')
-      .eq(2)
-      .find('[data-accordion-component="AccordionItem"] a')
-      .should("have.length", 46);
-
-    cy.get('[data-accordion-component="Accordion"]')
-      .eq(0)
-      .find('[data-accordion-component="AccordionItemButton"]')
-      .first()
-      .click();
-    cy.get('[data-accordion-component="AccordionItem"] a').first().click();
-    cy.url().should(
-      "include",
-      "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
-    );
+    });
   });
 
   it("je suis redirigé vers la cc si je mets seulement l'idcc dans l'url", () => {
