@@ -31,6 +31,8 @@ export const AgreementSelection = ({
       </p>
       <p className={fr.cx("fr-mb-2w")}>{enterprise.address}</p>
       {enterprise.conventions?.map((agreement) => {
+        const disabled = true;
+        // !agreement.slug || !agreement.url || !agreement.contributions;
         let description;
         if (!agreement.slug) {
           description =
@@ -60,9 +62,6 @@ export const AgreementSelection = ({
               desc: fr.cx("fr-mt-1w", "fr-mr-6w"),
               end: fr.cx("fr-hidden"),
             }}
-            // disabled={
-            //   !agreement.slug || !agreement.url || !agreement.contributions
-            // }
           />
         );
       })}

@@ -13,6 +13,7 @@ import { Enterprise } from "../Enterprise/types";
 import { ApiGeoResult } from "../Location/searchCities";
 import Tooltip from "@codegouvfr/react-dsfr/Tooltip";
 import { CardTitleStyle, ButtonStyle } from "./style";
+import Alert from "@codegouvfr/react-dsfr/Alert";
 
 type Props = {
   navigationUrl?: string;
@@ -21,6 +22,7 @@ type Props = {
 export const AgreementSearchByEnterprise = ({
   navigationUrl = "/outils/convention-collective",
 }: Props) => {
+  const [inputState, setInputState] = useState<"error" | undefined>();
   const [search, setSearch] = useState<string>();
   const [searched, setSearched] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
@@ -41,6 +43,9 @@ export const AgreementSearchByEnterprise = ({
             query: search,
             apiGeoResult: location,
           });
+          setInputState(
+            search.length > 1 && !result.length ? "error" : undefined
+          );
           setLoading(false);
           setSearched(true);
           setEnterprises(result);
@@ -59,8 +64,13 @@ export const AgreementSearchByEnterprise = ({
               />
             </>
           }
-          state="default"
-          stateRelatedMessage="Text de validation / d'explication de l'erreur"
+          state={inputState}
+          stateRelatedMessage={
+            <>
+              Aucune entreprise n&apos;a été trouvée.
+              <br />- Vérifiez l’orthographe des termes de recherche
+            </>
+          }
           nativeInputProps={{
             onChange: (event) => {
               setSearch(event.target.value);
@@ -99,6 +109,7 @@ export const AgreementSearchByEnterprise = ({
           Rechercher
         </Button>
       </form>
+
       <div>
         <div className={fr.cx("fr-mt-2w")}>
           {!!enterprises?.length && !loading && (
@@ -107,20 +118,29 @@ export const AgreementSearchByEnterprise = ({
             </p>
           )}
           {loading && <p className={fr.cx("fr-h5")}>chargement en cours ...</p>}
-          {!enterprises?.length && searched && !loading && (
-            <>
-              <p className={fr.cx("fr-h5")}>
-                Aucune entreprise n’a été trouvée
-              </p>
-              Suggestions&nbsp;:
-              <ul>
-                <li>Vérifiez l’orthographe des termes de recherche</li>
-                <li>
-                  Utilisez la rubrique ci-dessous “Vous ne trouvez pas votre
-                  entreprise&nbsp;? Consultez notre aide”
-                </li>
-              </ul>
-            </>
+          {inputState === "error" && (
+            <Alert
+              title="Vous ne trouvez pas votre entreprise ?"
+              description={
+                <>
+                  <p>Il peut y avoir plusieurs explications à cela :</p>
+                  <ul>
+                    <li>
+                      Votre entreprise a été enregistrée sous un autre nom ou un
+                      autre code : si vous le pouvez, utilisez son numéro Siret.
+                      Ce dernier doit être présent sur votre bulletin de paie.
+                    </li>
+                    <li>
+                      Votre entreprise a un statut particulier : administration
+                      ou établissements publics, associations, secteur agricole,
+                      La Poste, La Croix Rouge etc. ;
+                    </li>
+                    <li>Votre entreprise n’a pas de convention collective.</li>
+                  </ul>
+                </>
+              }
+              severity="info"
+            />
           )}
         </div>
         {!!enterprises?.length &&
