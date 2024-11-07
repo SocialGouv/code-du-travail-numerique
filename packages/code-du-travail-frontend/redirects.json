@@ -1,12 +1,422 @@
 [
   {
+    "destination": "/themes/:slug",
+    "permanent": true,
+    "source": "/themes/(\\d{1,}-):slug"
+  },
+  {
     "destination": "/api/health",
     "permanent": true,
     "source": "/health"
   },
   {
+    "destination": "/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile",
+    "permanent": true,
+    "source": "/convention-collective/2111-salaries-du-particulier-employeur"
+  },
+  {
+    "destination": "/information/en-pratique-que-doivent-faire-les-entreprises-a-partir-du-14-mars-2022-dans-le-cadre-de-lallegement-des-mesures-de-prevention-des-risques-de-contamination-au-covid-19",
+    "permanent": true,
+    "source": "/information/covid-19-les-mesures-de-protection-en-entreprise-protocole-national"
+  },
+  {
+    "destination": "/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-infographies",
+    "permanent": true,
+    "source": "/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-protocole-national"
+  },
+  {
+    "destination": "/modeles-de-courriers/rupture-dun-contrat-de-travail-a-duree-determinee-dun-commun-accord",
+    "permanent": true,
+    "source": "/modeles-de-courriers/rupture-dun-commun-accord-dun-contrat-de-travail-a-duree-determinee"
+  },
+  {
+    "destination": "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie",
+    "permanent": true,
+    "source": "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-a-linitiative-du-salarie"
+  },
+  {
+    "destination": "/modeles-de-courriers/rupture-de-periode-dessai-par-lemployeur",
+    "permanent": true,
+    "source": "/modeles-de-courriers/rupture-de-periode-dessai-a-linitiative-de-lemployeur"
+  },
+  {
+    "destination": "/modeles-de-courriers/rupture-dun-contrat-dapprentissage-dun-commun-accord",
+    "permanent": true,
+    "source": "/modeles-de-courriers/rupture-dun-commun-accord-dun-contrat-dapprentissage"
+  },
+  {
+    "destination": "/information/covid-19-le-regime-post-crise-sanitaire-a-compter-du-14-mars-2022",
+    "permanent": true,
+    "source": "/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-infographies"
+  },
+  {
     "destination": "/widgets/search",
     "permanent": true,
     "source": "/widget.html"
+  },
+  {
+    "source": "/convention-collective/1518-animation",
+    "permanent": true,
+    "destination": "/convention-collective/1518-education-culture-loisirs-et-animation-au-service-des-territoires-eclat"
+  },
+  {
+    "source": "/contribution/1740-:slug",
+    "permanent": true,
+    "destination": "/contribution/:slug"
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/54-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/650-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/827-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/930-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1007-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1369-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1387-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1604-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1626-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1627-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1635-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/3231-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1813-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1902-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1966-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/2126-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/2489-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/2542-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/2980-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/2992-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/contribution/3248-:slug",
+    "source": "/contribution/1375-:slug",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/(0054|54(?:-[a-z0-9-]+)?)",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/(0650|650(?:-[a-z0-9-]+)?)",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/(0828|828(?:-[a-z0-9-]+)?)",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/(0829|829(?:-[a-z0-9-]+)?)",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/(0836|836(?:-[a-z0-9-]+)?)",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/(0860|860(?:-[a-z0-9-]+)?)",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/(0914|914(?:-[a-z0-9-]+)?)",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/(0930|930(?:-[a-z0-9-]+)?)",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/(0937|937(?:-[a-z0-9-]+)?)",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/(0984|984(?:-[a-z0-9-]+)?)",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/1007(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/1059(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/1315(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/1353(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/1387(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/1525(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/1572(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/1578(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/1604(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/1635(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/1867(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/1966(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/1967(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/2126(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/2221(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/2266(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/2489(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/2542(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/2579(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/2615(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/2630(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/2980(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "destination": "/convention-collective/3248-metallurgie",
+    "source": "/convention-collective/1375(-[a-z0-9-]+)?",
+    "permanent": true
+  },
+  {
+    "source": "/fiche-service-public/arret-maladie-et-conges-payes-annuels",
+    "permanent": true,
+    "destination": "/fiche-service-public/un-salarie-peut-il-reporter-des-jours-de-conges-payes-pour-cause-de-maladie"
+  },
+  {
+    "source": "/convention-collective/1710(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/3245-operateurs-de-voyages-et-guides",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(0700|700(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/3238-production-et-transformation-des-papiers-et-cartons",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/1423(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/3236-industrie-et-services-nautiques",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(0673|673(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/303-couture-parisienne",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/1001(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/413-handicapes-etablissements-et-services-pour-les-personnes-inadaptees-et-han",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(0706|706(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/1539-papeterie-commerce-de-detail-de-papeterie-fournitures-de-bureau-bureaut",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/2075(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/1747-activites-industrielles-de-boulangerie-et-patisserie",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/7012(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/7026-personnels-des-activites-hippiques",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/7014(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/7026-personnels-des-activites-hippiques",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/2770(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/2121-edition",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/1383(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/3243-quincaillerie-fournitures-industrielles-fers-metaux-et-equipement-de-la",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
+    "destination": "/convention-collective/3251-bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/1044(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/3251-bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(0567|567(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/3251-bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/batiment-etam-ile-de-france-hors-seine-et-marne",
+    "destination": "/convention-collective/2707-batiment-etam-ile-de-france-hors-seine-et-marne",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
+    "destination": "/convention-collective/3251-bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
+    "permanent": true
   }
 ]
