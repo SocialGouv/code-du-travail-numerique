@@ -34,7 +34,12 @@ export const AgreementSearchByEnterprise = ({
         Précisez votre entreprise
       </p>
       <form
-        className={fr.cx("fr-grid-row", "fr-mt-2w", "fr-mb-0")}
+        className={fr.cx(
+          "fr-grid-row",
+          "fr-grid-row--bottom",
+          "fr-mt-2w",
+          "fr-mb-0"
+        )}
         onSubmit={async (event) => {
           event.preventDefault();
           if (!search) return;
@@ -58,9 +63,20 @@ export const AgreementSearchByEnterprise = ({
             <>
               Nom de votre entreprise ou numéro Siren/Siret
               <Tooltip
-                className={fr.cx("fr-p-0")}
                 kind="click"
-                title="Le numéro Siren est un numéro unique de 9 chiffres attribué à chaque entreprise (ex : 401237780)."
+                title={
+                  <>
+                    Le numéro Siren est un{" "}
+                    <strong>numéro unique de 9 chiffres</strong> attribué à
+                    chaque entreprise (ex : 401237780).
+                    <br />
+                    Le numéro Siret est un{" "}
+                    <strong>numéro de 14 chiffres</strong> unique pour chaque
+                    établissement de l&apos;entreprise. Il est présent sur la{" "}
+                    <strong>fiche de paie du salarié</strong> (ex :
+                    40123778000127).
+                  </>
+                }
               />
             </>
           }
@@ -93,10 +109,10 @@ export const AgreementSearchByEnterprise = ({
           className={fr.cx(
             "fr-col-12",
             "fr-col-md-3",
-            "fr-mt-2w",
-            "fr-mt-md-0",
             "fr-ml-md-3w",
-            "fr-mb-0"
+            "fr-mb-0",
+            "fr-mt-2w",
+            "fr-mt-md-0"
           )}
         />
 
@@ -104,7 +120,7 @@ export const AgreementSearchByEnterprise = ({
           type="submit"
           iconPosition="right"
           iconId="fr-icon-search-line"
-          className={`${fr.cx("fr-ml-md-3w", "fr-mt-2w", "fr-mt-md-7w")} ${ButtonStyle}`}
+          className={`${fr.cx("fr-ml-md-3w", "fr-mt-2w", "fr-mt-md-0")} ${ButtonStyle}`}
         >
           Rechercher
         </Button>

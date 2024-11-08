@@ -36,7 +36,19 @@ export const AgreementSearchByName = ({
               d’identification IDCC (4 chiffres)
               <Tooltip
                 kind="click"
-                title="L’Identifiant de la Convention Collective (IDCC) est un numéro unique de 4 chiffres déterminant chaque convention collective (Ex : 1090 ou 1486)."
+                title={
+                  <>
+                    L’Identifiant de la Convention Collective (IDCC) est un
+                    numéro unique de <strong>4 chiffres</strong> déterminant
+                    chaque convention collective (Ex&nbsp; : 1090 ou 1486).
+                    <br />
+                    <strong>Attention à ne pas confondre</strong> avec les codes
+                    APE (Activité Principale Exercée) ou NAF (Nomenclature des
+                    Activités Françaises) qui sont des numéros composés de 4
+                    chiffres et d’une lettre dont l’objectif est d’identifier
+                    l’activité principale de l’entreprise (Ex : 4752A).
+                  </>
+                }
               />
             </>
           }

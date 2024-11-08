@@ -1,9 +1,10 @@
 "use client";
 import { fr } from "@codegouvfr/react-dsfr";
-import { Enterprise } from "../Enterprise/types";
 import Card from "@codegouvfr/react-dsfr/Card";
 import Button from "@codegouvfr/react-dsfr/Button";
+import { Enterprise } from "../Enterprise/types";
 import { ButtonStyle, CardTitleStyle } from "./style";
+import { css } from "../../../styled-system/css";
 
 type Props = {
   enterprise: Enterprise;
@@ -31,8 +32,8 @@ export const AgreementSelection = ({
       </p>
       <p className={fr.cx("fr-mb-2w")}>{enterprise.address}</p>
       {enterprise.conventions?.map((agreement) => {
-        const disabled = true;
-        // !agreement.slug || !agreement.url || !agreement.contributions;
+        const disabled =
+          !agreement.slug || !agreement.url || !agreement.contributions;
         let description;
         if (!agreement.slug) {
           description =
@@ -49,7 +50,11 @@ export const AgreementSelection = ({
             key={agreement.id}
             className={fr.cx("fr-mt-2w")}
             linkProps={{
-              href: `/convention-collective/${agreement.slug}`,
+              href: !disabled ? `/convention-collective/${agreement.slug}` : "",
+              "aria-disabled": disabled,
+              onClick: (ev) => {
+                if (disabled) ev.preventDefault();
+              },
             }}
             border
             enlargeLink
@@ -57,10 +62,11 @@ export const AgreementSelection = ({
             desc={description}
             title={agreement.shortTitle}
             classes={{
-              title: `${fr.cx("fr-h5")} ${CardTitleStyle}`,
+              title: `${fr.cx("fr-h5")} ${CardTitleStyle} ${disabled ? disabledTitle : ""}`,
               content: fr.cx("fr-px-2w", "fr-pt-1w", "fr-pb-7v"),
               desc: fr.cx("fr-mt-1w", "fr-mr-6w"),
               end: fr.cx("fr-hidden"),
+              root: `${disabled ? disabledRoot : ""}`,
             }}
           />
         );
@@ -78,3 +84,19 @@ export const AgreementSelection = ({
     </>
   );
 };
+
+const disabledRoot = css({
+  "&:hover": {
+    backgroundColor: "unset",
+  },
+  color: `${fr.colors.decisions.text.disabled.grey.default} !important`,
+});
+
+const disabledTitle = css({
+  "& a": {
+    color: `${fr.colors.decisions.text.disabled.grey.default} !important`,
+    _before: {
+      cursor: "not-allowed",
+    },
+  },
+});
