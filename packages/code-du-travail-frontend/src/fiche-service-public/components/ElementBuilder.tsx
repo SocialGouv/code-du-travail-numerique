@@ -1,39 +1,41 @@
-import { theme, Wrapper } from "@socialgouv/cdtn-ui";
-import PropTypes from "prop-types";
 import React from "react";
-import { useUIDSeed } from "react-uid";
-import styled from "styled-components";
+// import { useUIDSeed } from "react-uid";
+import { getText, ignoreParagraph } from "../utils"; // import { LienExterne, LienExterneCommente } from "./LienExterne.js";
+import { fr } from "@codegouvfr/react-dsfr";
+import { LienExterne, LienExterneCommente } from "./LienExterne";
+import List from "./List";
+import Accordion from "./Accordion";
+import Title from "./Title";
+import Avertissement from "./Avertissement"; // Beware, this one is recursive
 
-import { getText, ignoreParagraph } from "../utils.js";
-import Accordion from "./Accordion.js";
-import { LienExterne, LienExterneCommente } from "./LienExterne.js";
-import List from "./List.js";
-import OuSAdresser from "./OuSAdresser.js";
-import ServiceEnLigne from "./ServiceEnLigne.js";
-import Table from "./Table.js";
-import Tabulator from "./Tabulator.js";
-import Title from "./Title.js";
-import { Image as ImageElement } from "./Image";
-
-const { spacings } = theme;
+export type FicheSPDataText = { type: "text"; text: string };
+export type FicheSPDataElement = {
+  type: "element";
+  children: FicheSPData[];
+  name: string;
+};
+export type FicheSPData = {
+  name?: string;
+  attributes?: Record<string, string>;
+} & (FicheSPDataElement | FicheSPDataText);
 
 // Beware, this one is recursive
-// parentAttributes only purpose for now is to pass a date to the title element
-// from the parent level (Avertissement element), we might remove it later
-export function ElementBuilder({ data, headingLevel, parentAttributes }) {
-  const seedId = useUIDSeed();
+export const ElementBuilder = ({
+  data,
+  headingLevel = 0,
+}: {
+  data: FicheSPData | FicheSPData[];
+  headingLevel?: number;
+}) => {
+  // const seedId = useUIDSeed();
   // in cases where the parent's "$"/children is undefined while it should not
   // e.g. in a "Texte" element. It occurs sometimes.
-  if (!data) return null;
+  if (!data) return <></>;
   // In case we get children
+
   if (Array.isArray(data)) {
     return data.map((child) => (
-      <ElementBuilder
-        key={seedId(child)}
-        data={child}
-        headingLevel={headingLevel}
-        parentAttributes={parentAttributes}
-      />
+      <ElementBuilder key={"abc"} data={child} headingLevel={headingLevel} />
     ));
   }
   if (data.type === "text") {
@@ -41,21 +43,20 @@ export function ElementBuilder({ data, headingLevel, parentAttributes }) {
   }
 
   switch (data.name) {
-    // Complex elements, we don't immediately parse their children
     case "BlocCas":
-      if (data.attributes.affichage === "onglet") {
-        return <Tabulator data={data} headingLevel={headingLevel} />;
+      if (data.attributes?.affichage === "onglet") {
+        return "Tabulator"; // <Tabulator data={data} headingLevel={headingLevel} />;
       } else {
         return <Accordion data={data} headingLevel={headingLevel} />;
       }
     case "Image":
-      return <ImageElement data={data} />;
+      return "ImageElement"; //<ImageElement data={data} />;
     case "Introduction":
       if (ignoreParagraph(data)) {
         return (
-          <Introduction>
+          <p>
             <ElementBuilder data={ignoreParagraph(data)} />
-          </Introduction>
+          </p>
         );
       }
       break;
@@ -66,14 +67,14 @@ export function ElementBuilder({ data, headingLevel, parentAttributes }) {
     case "Liste":
       return <List data={data} headingLevel={headingLevel} />;
     case "ListeSituations":
-      return <Tabulator data={data} headingLevel={headingLevel} />;
+      return "ListeSituations"; // <Tabulator data={data} headingLevel={headingLevel} />;
     case "OuSAdresser":
-      return <OuSAdresser data={data} headingLevel={headingLevel} />;
+      return "OuSAdresser"; // <OuSAdresser data={data} headingLevel={headingLevel} />;
     case "ServiceEnLigne":
     case "PourEnSavoirPlus":
-      return <ServiceEnLigne data={data} />;
+      return "ServiceEnLigne"; // <ServiceEnLigne data={data} />;
     case "Tableau":
-      return <Table data={data} headingLevel={headingLevel} />;
+      return "Table"; // <Table data={data} headingLevel={headingLevel} />;
     case "Texte":
       if (data.children.find((child) => child.name === "Chapitre")) {
         return <Accordion data={data} headingLevel={headingLevel} />;
@@ -82,25 +83,18 @@ export function ElementBuilder({ data, headingLevel, parentAttributes }) {
         <ElementBuilder data={data.children} headingLevel={headingLevel} />
       );
     case "Titre":
-      return (
-        <Title level={headingLevel} date={parentAttributes.date}>
-          {getText(data)}
-        </Title>
-      );
+      return <Title level={headingLevel}>{getText(data)}</Title>;
     // "Simple" elements, we can immediately parse their children
+    case "Avertissement":
+      return <Avertissement data={data} headingLevel={headingLevel} />;
     case "ANoter":
     case "ASavoir":
     case "Attention":
-    case "Avertissement":
     case "Rappel":
       return (
-        <ANoter variant="dark">
-          <ElementBuilder
-            data={data.children}
-            headingLevel={headingLevel}
-            parentAttributes={data.attributes}
-          />
-        </ANoter>
+        <div className={fr.cx("fr-callout", "fr-p-4w")}>
+          <ElementBuilder data={data.children} headingLevel={headingLevel} />
+        </div>
       );
     case "Chapitre":
     case "Description":
@@ -128,13 +122,14 @@ export function ElementBuilder({ data, headingLevel, parentAttributes }) {
           <ElementBuilder data={data.children} headingLevel={headingLevel} />
         </p>
       );
+    // // TODO : check if exists These ones are still to be defined
+
     case "Exposant":
       return (
         <sup>
           <ElementBuilder data={data.children} headingLevel={headingLevel} />
         </sup>
       );
-    // These ones are still to be defined
     case "LienIntra":
     case "LienInterne":
       return (
@@ -144,23 +139,4 @@ export function ElementBuilder({ data, headingLevel, parentAttributes }) {
     default:
       return null;
   }
-}
-
-ElementBuilder.propTypes = {
-  data: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  headingLevel: PropTypes.number,
-  parentAttributes: PropTypes.object,
 };
-
-ElementBuilder.defaultProps = {
-  headingLevel: 0,
-  parentAttributes: {},
-};
-
-const ANoter = styled(Wrapper)`
-  margin-bottom: ${spacings.base};
-`;
-
-const Introduction = styled.p`
-  margin-bottom: ${spacings.large};
-`;

@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 
-import { getText, ignoreParagraph } from "../utils.js";
+import { getText, ignoreParagraph } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
 import { MoreContent, Wrapper } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";

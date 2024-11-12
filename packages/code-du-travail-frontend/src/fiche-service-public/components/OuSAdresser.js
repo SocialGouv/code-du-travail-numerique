@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { getText } from "../utils.js";
+import { getText } from "../utils";
 import { ElementBuilder } from "./ElementBuilder.js";
 
 class OuSAdresser extends React.PureComponent {

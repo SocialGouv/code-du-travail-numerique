@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import {ElementBuilder} from "./ElementBuilder";
 
-import { ElementBuilder } from "./ElementBuilder.js";
 
+// TODO :  delete
 export class FicheServicePublic extends React.PureComponent {
   render() {
     return (

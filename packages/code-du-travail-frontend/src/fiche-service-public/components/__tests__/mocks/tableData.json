@@ -8,7 +8,7 @@
       "children": [
         {
           "type": "text",
-          "text": "Conditions ouvrant droit à la retraite anticipée pour carrière longue"
+          "text": "Nombre de trimestres d'assurance exigé pour avoir droit à une retraite à taux plein"
         }
       ]
     },
@@ -16,15 +16,7 @@
       "type": "element",
       "name": "Colonne",
       "attributes": {
-        "largeur": "13",
-        "type": "header"
-      }
-    },
-    {
-      "type": "element",
-      "name": "Colonne",
-      "attributes": {
-        "largeur": "19",
+        "largeur": "22",
         "type": "normal"
       }
     },
@@ -32,7 +24,7 @@
       "type": "element",
       "name": "Colonne",
       "attributes": {
-        "largeur": "19",
+        "largeur": "10",
         "type": "normal"
       }
     },
@@ -40,15 +32,7 @@
       "type": "element",
       "name": "Colonne",
       "attributes": {
-        "largeur": "28",
-        "type": "normal"
-      }
-    },
-    {
-      "type": "element",
-      "name": "Colonne",
-      "attributes": {
-        "largeur": "28",
+        "largeur": "36",
         "type": "normal"
       }
     },
@@ -62,9 +46,6 @@
         {
           "type": "element",
           "name": "Cellule",
-          "attributes": {
-            "fusionVerticale": "2"
-          },
           "children": [
             {
               "type": "element",
@@ -72,89 +53,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Année de naissance"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "attributes": {
-            "fusionVerticale": "2"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Âge de départ à la retraite envisagé (à partir de)"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "attributes": {
-            "fusionVerticale": "2"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Durée d'assurance minimale cotisée (en trimestres)"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "attributes": {
-            "fusionHorizontale": "2"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Durée d'assurance minimale en début de carrière"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "element",
-      "name": "Rangée",
-      "attributes": {
-        "type": "header"
-      },
-      "children": [
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Si vous êtes né entre janvier et septembre"
+                  "text": "Vous êtes né :"
                 }
               ]
             }
@@ -170,35 +69,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Si vous êtes né entre octobre et décembre"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "element",
-      "name": "Rangée",
-      "attributes": {
-        "type": "normal"
-      },
-      "children": [
-        {
-          "type": "element",
-          "name": "Cellule",
-          "attributes": {
-            "fusionVerticale": "2"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "1959"
+                  "text": "Vous pouvez partir en retraite à partir de :"
                 }
               ]
             }
@@ -214,95 +85,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "57 ans et 8 mois"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "175"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "5"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "16 ans"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "4"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "16 ans"
-                    }
-                  ]
+                  "text": "Nombre de trimestres exigé pour avoir le taux plein"
                 }
               ]
             }
@@ -327,7 +110,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "60 ans"
+                  "text": "En 1956 ou 1957"
                 }
               ]
             }
@@ -343,107 +126,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "167"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "5"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "20 ans"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "4"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "20 ans"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "element",
-      "name": "Rangée",
-      "attributes": {
-        "type": "normal"
-      },
-      "children": [
-        {
-          "type": "element",
-          "name": "Cellule",
-          "attributes": {
-            "fusionVerticale": "2"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "1960"
+                  "text": "62 ans"
                 }
               ]
             }
@@ -459,95 +142,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "58 ans"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "175"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "5"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "16 ans"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "4"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "16 ans"
-                    }
-                  ]
+                  "text": "166 (41 ans 6 mois)"
                 }
               ]
             }
@@ -572,7 +167,21 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "60 ans"
+                  "text": "Entre le 1"
+                },
+                {
+                  "type": "element",
+                  "name": "Exposant",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "er"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " janvier 1958 et le 31 décembre 1960"
                 }
               ]
             }
@@ -588,107 +197,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "167"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "5"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "20 ans"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "4"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "20 ans"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "element",
-      "name": "Rangée",
-      "attributes": {
-        "type": "normal"
-      },
-      "children": [
-        {
-          "type": "element",
-          "name": "Cellule",
-          "attributes": {
-            "fusionVerticale": "2"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "1961, 1962 ou 1963"
+                  "text": "62 ans"
                 }
               ]
             }
@@ -704,95 +213,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "58 ans"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "176"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "5"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "16 ans"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "4"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "16 ans"
-                    }
-                  ]
+                  "text": "167 (41 ans 9 mois)"
                 }
               ]
             }
@@ -817,7 +238,21 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "60 ans"
+                  "text": "Entre le 1"
+                },
+                {
+                  "type": "element",
+                  "name": "Exposant",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "er"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " janvier 1961 et le 31 aout 1961"
                 }
               ]
             }
@@ -833,107 +268,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "168"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "5"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "20 ans"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "4"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "20 ans"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "element",
-      "name": "Rangée",
-      "attributes": {
-        "type": "normal"
-      },
-      "children": [
-        {
-          "type": "element",
-          "name": "Cellule",
-          "attributes": {
-            "fusionVerticale": "2"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "1964, 1965 ou 1966"
+                  "text": "62 ans"
                 }
               ]
             }
@@ -949,95 +284,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "58 ans"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "177"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "5"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "16 ans"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "4"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "16 ans"
-                    }
-                  ]
+                  "text": "168 (42 ans)"
                 }
               ]
             }
@@ -1062,7 +309,21 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "60 ans"
+                  "text": "Entre le 1"
+                },
+                {
+                  "type": "element",
+                  "name": "Exposant",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "er "
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "septembre 1961 et le 31 décembre 1961"
                 }
               ]
             }
@@ -1078,107 +339,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "169"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "5"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "20 ans"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "4"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "20 ans"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "element",
-      "name": "Rangée",
-      "attributes": {
-        "type": "normal"
-      },
-      "children": [
-        {
-          "type": "element",
-          "name": "Cellule",
-          "attributes": {
-            "fusionVerticale": "2"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "1967, 1968 ou 1969"
+                  "text": "62 ans et 3 mois"
                 }
               ]
             }
@@ -1194,95 +355,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "58 ans"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "178"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "5"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "16 ans"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "4"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "16 ans"
-                    }
-                  ]
+                  "text": "169 (42 ans 3 mois)"
                 }
               ]
             }
@@ -1307,7 +380,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "60 ans"
+                  "text": "1962"
                 }
               ]
             }
@@ -1323,107 +396,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "170"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "5"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "20 ans"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "4"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "20 ans"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "element",
-      "name": "Rangée",
-      "attributes": {
-        "type": "normal"
-      },
-      "children": [
-        {
-          "type": "element",
-          "name": "Cellule",
-          "attributes": {
-            "fusionVerticale": "2"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "1970, 1971 ou 1972"
+                  "text": "62 ans et 6 mois"
                 }
               ]
             }
@@ -1439,95 +412,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "58 ans"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "179"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "5"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "16 ans"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "4"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "16 ans"
-                    }
-                  ]
+                  "text": "169 (42 ans 3 mois)"
                 }
               ]
             }
@@ -1552,7 +437,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "60 ans"
+                  "text": "1963"
                 }
               ]
             }
@@ -1568,107 +453,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "171"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "5"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "20 ans"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "4"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "20 ans"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "element",
-      "name": "Rangée",
-      "attributes": {
-        "type": "normal"
-      },
-      "children": [
-        {
-          "type": "element",
-          "name": "Cellule",
-          "attributes": {
-            "fusionVerticale": "2"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "À partir de 1973"
+                  "text": "62 ans et 9 mois"
                 }
               ]
             }
@@ -1684,95 +469,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "58 ans"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "180"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "5"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "16 ans"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Cellule",
-          "children": [
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "4"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "16 ans"
-                    }
-                  ]
+                  "text": "170 (42 ans 6 mois)"
                 }
               ]
             }
@@ -1797,7 +494,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "60 ans"
+                  "text": "1964"
                 }
               ]
             }
@@ -1813,7 +510,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "172"
+                  "text": "63 ans"
                 }
               ]
             }
@@ -1828,28 +525,33 @@
               "name": "Paragraphe",
               "children": [
                 {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "5"
-                    }
-                  ]
-                },
+                  "type": "text",
+                  "text": "171 (42 ans 9 mois)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Rangée",
+      "attributes": {
+        "type": "normal"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "Cellule",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
                 {
                   "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "20 ans"
-                    }
-                  ]
+                  "text": "1965"
                 }
               ]
             }
@@ -1864,28 +566,209 @@
               "name": "Paragraphe",
               "children": [
                 {
+                  "type": "text",
+                  "text": "63 ans et 3 mois"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Cellule",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "172 (43 ans)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Rangée",
+      "attributes": {
+        "type": "normal"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "Cellule",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "1966"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Cellule",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "63 ans et 6 mois"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Cellule",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "172 (43 ans)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Rangée",
+      "attributes": {
+        "type": "normal"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "Cellule",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "1967"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Cellule",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "63 ans et 9 mois"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Cellule",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "172 (43 ans)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Rangée",
+      "attributes": {
+        "type": "normal"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "Cellule",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "À partir du 1"
+                },
+                {
                   "type": "element",
-                  "name": "MiseEnEvidence",
+                  "name": "Exposant",
                   "children": [
                     {
                       "type": "text",
-                      "text": "4"
+                      "text": "er"
                     }
                   ]
                 },
                 {
                   "type": "text",
-                  "text": " trimestres à la fin de l'année des "
-                },
+                  "text": " janvier 1968"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Cellule",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
                 {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "20 ans"
-                    }
-                  ]
+                  "type": "text",
+                  "text": "64 ans"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Cellule",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "172 (43 ans)"
                 }
               ]
             }

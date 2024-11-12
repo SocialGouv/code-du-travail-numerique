@@ -2,7 +2,7 @@ import { Table as UITable } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
 
-import { getText, ignoreParagraph } from "../utils.js";
+import { getText, ignoreParagraph } from "../utils";
 import { ElementBuilder } from "./ElementBuilder.js";
 
 const ROW_HEADER = "header";

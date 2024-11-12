@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReferenceList /> should render 1`] = `
+<div>
+  <ul>
+    <li>
+      <p>
+        <a
+          href="/code-du-travail/l2323-4"
+        >
+          Article L2323-4 du Code du travail
+        </a>
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="https://article.jo/yyy"
+        >
+          Convention collective: Article yyy du JO
+        </a>
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="https://legifrance/ccn-metallurgie"
+        >
+          Convention collective: CCN metallurgie
+        </a>
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/convention-collective/123-automobile"
+        >
+          Convention collective: automobile
+        </a>
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="/code-du-travail/l1234-3"
+        >
+          Article L1234-3 du Code du travail
+        </a>
+      </p>
+    </li>
+  </ul>
+</div>
+`;

@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Accordion /> should have two different levels of headings 1`] = `
+<div>
+  <div
+    class="fr-accordions-group"
+    data-fr-group="false"
+  >
+    <section
+      class="fr-accordion"
+    >
+      <h2
+        class="fr-accordion__title"
+      >
+        <button
+          aria-controls="titre-1-collapse"
+          aria-expanded="false"
+          class="fr-accordion__btn"
+          id="titre-1__toggle-btn"
+          type="button"
+        >
+          titre 1
+        </button>
+      </h2>
+      <div
+        class="fr-collapse"
+        id="titre-1-collapse"
+      >
+        <p>
+          paragraphe 1-1
+        </p>
+        <p>
+          paragraphe 1-2
+        </p>
+      </div>
+    </section>
+    <section
+      class="fr-accordion"
+    >
+      <h2
+        class="fr-accordion__title"
+      >
+        <button
+          aria-controls="titre-2-collapse"
+          aria-expanded="false"
+          class="fr-accordion__btn"
+          id="titre-2__toggle-btn"
+          type="button"
+        >
+          titre 2
+        </button>
+      </h2>
+      <div
+        class="fr-collapse"
+        id="titre-2-collapse"
+      >
+        <p>
+          paragraphe 2-1
+        </p>
+        <p>
+          paragraphe 2-2
+        </p>
+        <h3>
+          titre 2-1
+        </h3>
+      </div>
+    </section>
+    <section
+      class="fr-accordion"
+    >
+      <h2
+        class="fr-accordion__title"
+      >
+        <button
+          aria-controls="titre-3-collapse"
+          aria-expanded="false"
+          class="fr-accordion__btn"
+          id="titre-3__toggle-btn"
+          type="button"
+        >
+          titre 3
+        </button>
+      </h2>
+      <div
+        class="fr-collapse"
+        id="titre-3-collapse"
+      >
+        <p>
+          paragraphe 3-1
+        </p>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`<Accordion /> should render all, siblings included 1`] = `
+<div>
+  <div
+    class="fr-accordions-group"
+    data-fr-group="false"
+  >
+    <section
+      class="fr-accordion"
+    >
+      <h5
+        class="fr-accordion__title"
+      >
+        <button
+          aria-controls="titre-1-collapse"
+          aria-expanded="false"
+          class="fr-accordion__btn"
+          id="titre-1__toggle-btn"
+          type="button"
+        >
+          titre 1
+        </button>
+      </h5>
+      <div
+        class="fr-collapse"
+        id="titre-1-collapse"
+      >
+        <p>
+          paragraphe 1-1
+        </p>
+        <p>
+          paragraphe 1-2
+        </p>
+      </div>
+    </section>
+    <section
+      class="fr-accordion"
+    >
+      <h5
+        class="fr-accordion__title"
+      >
+        <button
+          aria-controls="titre-2-collapse"
+          aria-expanded="false"
+          class="fr-accordion__btn"
+          id="titre-2__toggle-btn"
+          type="button"
+        >
+          titre 2
+        </button>
+      </h5>
+      <div
+        class="fr-collapse"
+        id="titre-2-collapse"
+      >
+        <p>
+          paragraphe 2-1
+        </p>
+        <p>
+          paragraphe 2-2
+        </p>
+        <h6>
+          titre 2-1
+        </h6>
+      </div>
+    </section>
+    <section
+      class="fr-accordion"
+    >
+      <h5
+        class="fr-accordion__title"
+      >
+        <button
+          aria-controls="titre-3-collapse"
+          aria-expanded="false"
+          class="fr-accordion__btn"
+          id="titre-3__toggle-btn"
+          type="button"
+        >
+          titre 3
+        </button>
+      </h5>
+      <div
+        class="fr-collapse"
+        id="titre-3-collapse"
+      >
+        <p>
+          paragraphe 3-1
+        </p>
+      </div>
+    </section>
+  </div>
+</div>
+`;

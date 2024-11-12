@@ -1,5 +1,7 @@
 // beware, this one is recursive
-export function getText(element = { text: "" }, separator = " ") {
+import { FicheSPData } from "./components/ElementBuilder";
+
+export function getText(element: FicheSPData, separator = " "): string {
   if (element.type === "text") {
     return element.text.trim();
   }
@@ -24,3 +26,16 @@ export const ignoreParagraph = (element) =>
     }
     return child;
   });
+
+export const getTitleInChildren = (element: FicheSPData): string => {
+  const elementTitle = element.children.find(
+    (child: FicheSPData) => child.name === "Titre"
+  );
+  return getText(elementTitle!);
+}
+
+export const filterOutTitle = (element: FicheSPData) =>
+  element.children.filter(
+    (child) => child.name !== "Titre"
+  )
+

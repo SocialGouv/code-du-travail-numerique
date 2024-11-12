@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { ElementBuilder } from "../ElementBuilder";
+import {ElementBuilder, FicheSPData} from "../ElementBuilder";
 
 const tests = [
   {
@@ -118,7 +118,7 @@ const tests = [
 describe("<ElementBuilder />", () => {
   tests.forEach(({ title, data, test }) => {
     it(title, () => {
-      const { container } = render(<ElementBuilder data={data} />);
+      const { container } = render(<ElementBuilder data={data as FicheSPData} />);
       test(container);
     });
   });

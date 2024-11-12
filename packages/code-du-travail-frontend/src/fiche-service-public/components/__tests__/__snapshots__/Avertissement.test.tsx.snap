@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Avertissement /> affiche un avertissement 1`] = `
+<div>
+  <div
+    class="fr-alert fr-alert--info"
+  >
+    <h2>
+      Développement de l'apprentissage transfrontalier
+    </h2>
+    <p
+      class="fr-text--xs fr-pb-2w"
+    >
+      23 décembre 2022
+    </p>
+    <p>
+      Un apprenti peut désormais effectuer une partie de sa formation pratique ou théorique dans un pays frontalier de la France.
+    </p>
+    <p>
+      C'est ce que prévoit la 
+      <a
+        aria-label="loi n°2022-217 du 21 février 2022 (nouvelle fenêtre)"
+        href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000045197395/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        loi n°2022-217 du 21 février 2022
+      </a>
+      .
+    </p>
+    <p>
+      <a
+        aria-label="L'ordonnance n°2022-1067 du 22 décembre 2022 (nouvelle fenêtre)"
+        href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000046780040"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        L'ordonnance n°2022-1067 du 22 décembre 2022
+      </a>
+       définit les modalités d'organisation, de mise en œuvre et de financement de l'apprentissage transfrontalier.
+    </p>
+    <p>
+      Des décrets à paraitre doivent déterminer les conditions d'application de cette ordonnance.
+    </p>
+    <p>
+      Les informations contenues dans cette page restent d'actualité et seront modifiées dès l'entrée en vigueur du texte.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Avertissement /> should have two different levels of headings 1`] = `
+<div>
+  <div
+    class="fr-callout fr-p-4w"
+  >
+    <h2>
+      Développement de l'apprentissage transfrontalier
+    </h2>
+    <small>Publié le 19 juillet 2024</small>
+    <p>
+      Un apprenti peut désormais effectuer une partie de sa formation pratique ou théorique dans un pays frontalier de la France.
+    </p>
+    <p>
+      C'est ce que prévoit la
+      <a
+        aria-label="loi n°2022-217 du 21 février 2022 (nouvelle fenêtre)"
+        href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000045197395/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        loi n°2022-217 du 21 février 2022
+      </a>
+      .
+    </p>
+    <p>
+      <a
+        aria-label="L'ordonnance n°2022-1067 du 22 décembre 2022 (nouvelle fenêtre)"
+        href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000046780040"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        L'ordonnance n°2022-1067 du 22 décembre 2022
+      </a>
+       définit les modalités d'organisation, de mise en œuvre et de financement de l'apprentissage transfrontalier.
+    </p>
+    <p>
+      Des décrets à paraitre doivent déterminer les conditions d'application de cette ordonnance.
+    </p>
+    <p>
+      Les informations contenues dans cette page restent d'actualité et seront modifiées dès l'entrée en vigueur du texte.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Avertissement /> should render all, siblings included 1`] = `
+<div>
+  <div
+    class="fr-callout fr-p-4w"
+  >
+    <h5>
+      Développement de l'apprentissage transfrontalier
+    </h5>
+    <p>
+      Un apprenti peut désormais effectuer une partie de sa formation pratique ou théorique dans un pays frontalier de la France.
+    </p>
+    <p>
+      C'est ce que prévoit la
+      <a
+        aria-label="loi n°2022-217 du 21 février 2022 (nouvelle fenêtre)"
+        href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000045197395/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        loi n°2022-217 du 21 février 2022
+      </a>
+      .
+    </p>
+    <p>
+      <a
+        aria-label="L'ordonnance n°2022-1067 du 22 décembre 2022 (nouvelle fenêtre)"
+        href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000046780040"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        L'ordonnance n°2022-1067 du 22 décembre 2022
+      </a>
+       définit les modalités d'organisation, de mise en œuvre et de financement de l'apprentissage transfrontalier.
+    </p>
+    <p>
+      Des décrets à paraitre doivent déterminer les conditions d'application de cette ordonnance.
+    </p>
+    <p>
+      Les informations contenues dans cette page restent d'actualité et seront modifiées dès l'entrée en vigueur du texte.
+    </p>
+  </div>
+</div>
+`;
