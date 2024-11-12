@@ -3,8 +3,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { useIframeResizer } from "../../common/hooks";
 import Link from "next/link";
-import { useIsDark } from "@codegouvfr/react-dsfr/useIsDark";
-import { useEffect } from "react";
 
 export function WidgetWithIframeResizer({
   children,
@@ -13,12 +11,6 @@ export function WidgetWithIframeResizer({
   children: React.ReactNode;
   title: string;
 }) {
-  const { setIsDark } = useIsDark();
-
-  useEffect(() => {
-    setIsDark(false);
-  }, [setIsDark]);
-
   useIframeResizer();
 
   return (
