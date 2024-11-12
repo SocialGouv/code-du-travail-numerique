@@ -54,7 +54,7 @@ export const NeedMoreInfo = () => {
 };
 
 const mainContainer = css({
-  background: "var(--background-alt-blue-france)",
+  background: "var(--background-alt-blue-cumulus)",
 });
 
 const title = css({

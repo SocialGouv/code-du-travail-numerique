@@ -1,25 +1,20 @@
-import { Metadata } from "next";
 import { DsfrLayout } from "../../src/modules/layout";
 import { Stats } from "../../src/modules/stats";
 import { getStatsService } from "../../src/api";
-import { cache } from "react";
-import { REVALIDATE_TIME_DAY } from "../../src/config";
+import { generateDefaultMetadata } from "../../src/modules/common/metas";
 
 export const dynamic = "force-static";
 
-export const revalidate = REVALIDATE_TIME_DAY;
+export const revalidate = 86400;
 
-export const metadata: Metadata = {
+export const metadata = generateDefaultMetadata({
   title: "Statistiques",
   description: "Statistiques d’utilisation du Code du travail numérique",
-};
-
-const getStats = cache(async () => {
-  return getStatsService();
+  path: "/stats",
 });
 
 async function Index() {
-  const data = await getStats();
+  const data = await getStatsService();
 
   return (
     <DsfrLayout>

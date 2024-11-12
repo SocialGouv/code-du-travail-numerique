@@ -3,7 +3,7 @@ import {
   Agreements,
   AgreementsPerLetter,
 } from "../../src/modules/convention-collective/Agreements";
-import { fetchAllAgreements } from "../../src/modules/convention-collective";
+import { fetchAgreements } from "../../src/modules/convention-collective";
 import { generateDefaultMetadata } from "../../src/modules/common/metas";
 
 export const metadata = generateDefaultMetadata({
@@ -17,7 +17,7 @@ const removeAccents = (text: string) =>
   text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
 async function AgreementPage() {
-  const agreements = await fetchAllAgreements(
+  const agreements = await fetchAgreements(
     ["slug", "shortTitle"],
     "shortTitle"
   );

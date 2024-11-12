@@ -2,13 +2,13 @@ import {
   ContributionElasticDocument,
   ElasticAgreement,
 } from "@socialgouv/cdtn-types";
-import { fetchAllAgreements } from "../convention-collective/queries";
+import { fetchAgreements } from "../convention-collective/queries";
 import { orderByAlpha } from "../utils";
 import { fetchRootThemes } from "../themes";
-import { fetchAllTools } from "../outils";
-import { fetchAllModels } from "../modeles-de-courriers";
+import { fetchTools } from "../outils";
+import { fetchModels } from "../modeles-de-courriers";
 import { fetchAllInformations } from "../informations";
-import { fetchAllContributions } from "../contributions";
+import { fetchContributions } from "../contributions";
 
 export type Document = {
   root: DocumentInfo;
@@ -30,9 +30,9 @@ export type GetSitemapPage = {
 
 export const fetchSitemapData = async () => {
   const themes = await getAllThemesAndSubThemes();
-  const tools = await fetchAllTools(["slug", "title"]);
-  const modeles = await fetchAllModels(["slug", "title"]);
-  const agreements = await fetchAllAgreements(
+  const tools = await fetchTools(["slug", "title"]);
+  const modeles = await fetchModels(["slug", "title"]);
+  const agreements = await fetchAgreements(
     ["slug", "shortTitle", "num"],
     "shortTitle"
   );
@@ -61,7 +61,7 @@ export const fetchSitemapData = async () => {
 const getAllContributionsGroupByQuestion = async (
   agreements: Pick<ElasticAgreement, "shortTitle" | "num">[]
 ) => {
-  const all = await fetchAllContributions(["idcc", "title", "slug"]);
+  const all = await fetchContributions(["idcc", "title", "slug"]);
   const allGenerics = all
     .filter(isGeneric)
     .sort((a, b) => orderByAlpha(a, b, "title"));

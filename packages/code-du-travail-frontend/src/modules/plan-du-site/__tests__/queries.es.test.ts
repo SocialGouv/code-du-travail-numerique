@@ -3,7 +3,7 @@
 import { fetchSitemapData } from "../queries";
 
 jest.mock("../../contributions/queries", () => ({
-  fetchAllContributions: async () => {
+  fetchContributions: async () => {
     return Promise.resolve([
       {
         idcc: "0044",
