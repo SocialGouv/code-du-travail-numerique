@@ -13,6 +13,10 @@ describe("Modèles de documents", () => {
   it("cherche un modèle", () => {
     cy.visit("/");
 
+    cy.findByRole("heading", { level: 1 })
+      .should("have.text", "Bienvenue sur le Code du travail numérique")
+      .click();
+
     cy.get("#home-searchbar").type("modele rupture contrat periode d'essai");
 
     cy.get("#home-searchbar").type("{enter}");
@@ -30,7 +34,7 @@ describe("Modèles de documents", () => {
       "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-a-linitiative-du-salarie"
     );
 
-    cy.contains("Objet : Rupture de la période d’essai");
+    cy.contains("Objet : Rupture de la période d’essai").click();
 
     cy.window()
       .document()

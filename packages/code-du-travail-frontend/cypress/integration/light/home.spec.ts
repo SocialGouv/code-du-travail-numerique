@@ -57,6 +57,9 @@ describe("Page d’accueil", () => {
 
   it("Devrait afficher les suggestions quand on cherche un mot", () => {
     cy.visit("/");
+    cy.findByRole("heading", { level: 1 })
+      .should("have.text", "Bienvenue sur le Code du travail numérique")
+      .click();
 
     cy.get("#home-searchbar").type("congés");
 
