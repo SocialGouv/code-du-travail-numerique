@@ -6,15 +6,26 @@ describe("Page d’accueil", () => {
       .should("have.text", "Bienvenue sur le Code du travail numérique")
       .click();
 
-    cy.findByRole("heading", { level: 2 }).should(
-      "have.text",
-      "Obtenez les réponses à vos questions sur le droit du travail."
-    );
+    cy.findAllByRole("heading", {
+      level: 2,
+    })
+      .first()
+      .should(
+        "have.text",
+        "Obtenez les réponses à vos questions sur le droit du travail."
+      );
 
     cy.contains("Recherchez par mots-clés");
     cy.get("button[aria-label='Lancer la recherche']").contains("Rechercher");
 
-    cy.get("h2").should("contain", "À la une");
+    cy.findAllByRole("heading", {
+      level: 2,
+    })
+      .eq(1)
+      .should(
+        "have.text",
+        "À la une"
+      );
 
     cy.get("#home-highlights").find("a").should("have.length", 4);
 
