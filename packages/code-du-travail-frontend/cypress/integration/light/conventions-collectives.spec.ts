@@ -14,7 +14,7 @@ describe("Conventions collectives", () => {
       .click();
     cy.get("body").should(
       "contain",
-      "Retrouvez les questions/réponses fréquentes organisées par thème"
+      "Les conventions collectives présentées sont les plus représentatives en termes de nombre de salariés"
     );
     cy.get("#content a").should("have.length", 49);
     cy.get("#content a").first().click();
