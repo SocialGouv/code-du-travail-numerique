@@ -22,10 +22,7 @@ describe("Page d’accueil", () => {
       level: 2,
     })
       .eq(1)
-      .should(
-        "have.text",
-        "À la une"
-      );
+      .should("have.text", "À la une");
 
     cy.get("#home-highlights").find("a").should("have.length", 4);
 
