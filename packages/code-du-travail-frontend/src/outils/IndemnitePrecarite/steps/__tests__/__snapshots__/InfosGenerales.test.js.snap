@@ -23,6 +23,7 @@ exports[`<StepInfosGenerales /> should render 1`] = `
     >
       <input
         class="sc-f2c30c13-2 bKCzpJ"
+        data-testid="contractType-cdd"
         id="contractType-cdd"
         name="contractType"
         type="radio"
@@ -85,6 +86,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
       <input
         checked=""
         class="sc-f2c30c13-2 bKCzpJ"
+        data-testid="contractType-cdd"
         id="contractType-cdd"
         name="contractType"
         type="radio"
@@ -153,12 +155,6 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
             value="CDD saisonnier"
           >
             CDD saisonnier
-          </option>
-          <option
-            data-testid="CDD d'usage"
-            value="CDD d'usage"
-          >
-            CDD d'usage
           </option>
           <option
             data-testid="CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires"
@@ -262,6 +258,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
       <input
         checked=""
         class="sc-f2c30c13-2 bKCzpJ"
+        data-testid="contractType-cdd"
         id="contractType-cdd"
         name="contractType"
         type="radio"
@@ -330,12 +327,6 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
             value="CDD saisonnier"
           >
             CDD saisonnier
-          </option>
-          <option
-            data-testid="CDD d'usage"
-            value="CDD d'usage"
-          >
-            CDD d'usage
           </option>
           <option
             data-testid="CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires"
@@ -438,6 +429,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     >
       <input
         class="sc-f2c30c13-2 bKCzpJ"
+        data-testid="contractType-cdd"
         id="contractType-cdd"
         name="contractType"
         type="radio"

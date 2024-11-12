@@ -1,5 +1,8 @@
 import { DsfrLayout } from "../../src/modules/layout";
-import { Agreements } from "../../src/modules/convention-collective/Agreements";
+import {
+  Agreements,
+  AgreementsPerLetter,
+} from "../../src/modules/convention-collective/Agreements";
 import { fetchAllAgreements } from "../../src/modules/convention-collective";
 import { generateDefaultMetadata } from "../../src/modules/common/metas";
 
@@ -10,14 +13,34 @@ export const metadata = generateDefaultMetadata({
   path: "/convention-collective",
 });
 
+const removeAccents = (text: string) =>
+  text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
 async function AgreementPage() {
-  const agreements = await fetchAllAgreements({
-    fields: ["slug", "shortTitle"],
-    sortBy: "shortTitle",
-  });
+  const agreements = await fetchAllAgreements(
+    ["slug", "shortTitle"],
+    "shortTitle"
+  );
+  const firstLettersAgreements = agreements.reduce<AgreementsPerLetter>(
+    (agreementPerletter, agreement) => {
+      const { shortTitle } = agreement;
+      const firstLetter = removeAccents(shortTitle[0]);
+      if (!agreementPerletter[firstLetter]) {
+        return {
+          ...agreementPerletter,
+          [firstLetter]: [agreement],
+        };
+      }
+      return {
+        ...agreementPerletter,
+        [firstLetter]: [...agreementPerletter[firstLetter], agreement],
+      };
+    },
+    {}
+  );
   return (
     <DsfrLayout>
-      <Agreements agreements={agreements} />
+      <Agreements firstLettersAgreements={firstLettersAgreements} />
     </DsfrLayout>
   );
 }

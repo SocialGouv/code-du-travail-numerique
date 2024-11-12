@@ -4,7 +4,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "version": "4.157.0",
+  "version": "4.161.0",
   "description": "Composants ReactJS",
   "main": "lib/index.js",
   "files": [
@@ -16,7 +16,7 @@
     "build": "tsc",
     "build:dev": "swc ./src -d lib --strip-leading-paths",
     "type-check": "tsc --noEmit",
-    "dev": "npm run build:dev -- --watch",
+    "dev": "npm run build:dev",
     "start": "storybook dev -p 6006",
     "svg": "svgo --config=src/icons/mono.config.js -f src/icons/src/monochrome && svgo --config=src/icons/bi.config.js -f src/icons/src/bicolor && svgr --config-file=src/icons/svgr.config.js -d src/icons/components src/icons/src",
     "build-storybook": "storybook build -c .storybook -o .out",

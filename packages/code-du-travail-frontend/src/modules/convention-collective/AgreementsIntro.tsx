@@ -1,4 +1,3 @@
-"use client";
 import { fr } from "@codegouvfr/react-dsfr";
 import Link from "next/link";
 import { css } from "../../../styled-system/css";
@@ -10,22 +9,22 @@ export const AgreementsIntro = () => {
   return (
     <>
       <div className={`${fr.cx("fr-p-3w", "fr-mb-6w")} ${block}`}>
-        <h2 className={fr.cx("fr-mb-4v")}>
-          <div className={fr.cx("fr-grid-row")}>
-            <Image
-              priority
-              src={AgreementSearch}
-              alt="Trouver sa convention collective"
-              className={fr.cx("fr-unhidden-md", "fr-hidden")}
-            />
+        <div className={fr.cx("fr-mb-4v", "fr-grid-row")}>
+          <Image
+            priority
+            src={AgreementSearch}
+            alt="Trouver sa convention collective"
+            className={`${fr.cx("fr-unhidden-md", "fr-hidden")} ${ImageContainer}`}
+          />
+          <h2 className={fr.cx("fr-mt-md-2v")}>
             Trouver sa convention collective
-          </div>
-        </h2>
+          </h2>
+        </div>
         <Highlight size="lg">
           <span>
             La convention collective est un texte conclu au niveau d&apos;une
-            branche d&apos;activité (Ex: Transports routiers). Elle adapte les
-            règles du Code du travail sur des points précis, en fonction des
+            branche d&apos;activité (Ex&nbsp;: Transports routiers). Elle adapte
+            les règles du Code du travail sur des points précis, en fonction des
             situations particulières de la branche (primes, congés, salaires
             minima, préavis, prévoyance...)
           </span>
@@ -78,4 +77,8 @@ export const AgreementsIntro = () => {
 
 const block = css({
   background: "var(--background-alt-blue-cumulus)",
+});
+
+const ImageContainer = css({
+  height: "52px",
 });

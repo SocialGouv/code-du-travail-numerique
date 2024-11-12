@@ -7,35 +7,15 @@ import { AgreementsIntro } from "./AgreementsIntro";
 
 type Agreement = Pick<ElasticAgreement, "shortTitle" | "slug">;
 
-type Props = {
-  agreements: Agreement[];
-};
-
-type AgreementsPerLetter = {
+export type AgreementsPerLetter = {
   [letter: string]: Agreement[];
 };
 
-const removeAccents = (text: string) =>
-  text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+type Props = {
+  firstLettersAgreements: AgreementsPerLetter;
+};
 
-export const Agreements = ({ agreements }: Props) => {
-  const firstLettersAgreements = agreements.reduce<AgreementsPerLetter>(
-    (agreementPerletter, agreement) => {
-      const { shortTitle } = agreement;
-      const firstLetter = removeAccents(shortTitle[0]);
-      if (!agreementPerletter[firstLetter]) {
-        return {
-          ...agreementPerletter,
-          [firstLetter]: [agreement],
-        };
-      }
-      return {
-        ...agreementPerletter,
-        [firstLetter]: [...agreementPerletter[firstLetter], agreement],
-      };
-    },
-    {}
-  );
+export const Agreements = ({ firstLettersAgreements }: Props) => {
   return (
     <ContainerSimulator
       title="Votre convention collective"
@@ -43,20 +23,20 @@ export const Agreements = ({ agreements }: Props) => {
       relatedItems={[]}
       segments={[]}
     >
-      <h1 id="convention-collective" className={fr.cx("fr-mt-0", "fr-mb-3w")}>
+      <h1 id="convention-collective" className={fr.cx("fr-mt-0", "fr-mb-6w")}>
         Votre convention collective
       </h1>
       <AgreementsIntro />
       <div className={fr.cx("fr-mb-6w")}>
         <AgreementsGlossaire letters={Object.keys(firstLettersAgreements)} />
       </div>
-      <div>
+      <div id="content" className={fr.cx("fr-col-12", "fr-col-md-7")}>
         {Object.entries(firstLettersAgreements).map(([letter, agreements]) => (
           <AgreementsSection
             key={letter}
             agreements={agreements}
             letter={letter}
-          ></AgreementsSection>
+          />
         ))}
       </div>
     </ContainerSimulator>

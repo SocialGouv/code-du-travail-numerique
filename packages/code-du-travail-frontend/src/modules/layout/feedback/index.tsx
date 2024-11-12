@@ -6,10 +6,12 @@ import { FeedbackDefault } from "./FeedbackDefault";
 import { FeedbackContent, FeedbackDataSent } from "./FeedbackContent";
 import { FeedbackAnswered } from "./FeedbackAnswered";
 import { useFeedbackEvents } from "./tracking";
+import { FeedbackAdblock } from "./FeedbackAdblock";
+import { detectAdBlockCall } from "./AdBlockDetector";
 
 export const Feedback = () => {
   const [viewFeedback, setViewFeedback] = useState<
-    "yes" | "no" | "default" | "answered"
+    "yes" | "no" | "default" | "answered" | "adBlockDetected"
   >("default");
   const {
     emitNegativeFeedback,
@@ -18,13 +20,15 @@ export const Feedback = () => {
     emitFeedbackSuggestion,
   } = useFeedbackEvents();
 
-  const onClickNo = () => {
-    setViewFeedback("no");
+  const onClickNo = async () => {
+    const detectAddBlock = await detectAdBlockCall();
+    setViewFeedback(detectAddBlock ? "adBlockDetected" : "no");
     emitNegativeFeedback();
   };
 
-  const onClickYes = () => {
-    setViewFeedback("yes");
+  const onClickYes = async () => {
+    const detectAddBlock = await detectAdBlockCall();
+    setViewFeedback(detectAddBlock ? "adBlockDetected" : "yes");
     emitPositiveFeedback();
   };
 
@@ -48,6 +52,7 @@ export const Feedback = () => {
         <FeedbackContent onSubmit={onSubmit} type="positive" />
       )}
       {viewFeedback === "answered" && <FeedbackAnswered />}
+      {viewFeedback === "adBlockDetected" && <FeedbackAdblock />}
     </div>
   );
 };
