@@ -12,7 +12,6 @@ import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
 import { Layout } from "../../src/layout/Layout";
 import {
-  // AgreementSearch,
   CalculateurIndemniteLicenciement,
   CalculateurRuptureConventionnelle,
   DismissalProcess,
@@ -31,7 +30,6 @@ import {
 import { Tool } from "@socialgouv/cdtn-types";
 
 const toolsBySlug = {
-  // "convention-collective": AgreementSearch,
   "heures-recherche-emploi": HeuresRechercheEmploi,
   "indemnite-licenciement": CalculateurIndemniteLicenciement,
   "indemnite-precarite": SimulateurIndemnitePrecarite,

@@ -1,4 +1,3 @@
-"use client";
 import { useRef } from "react";
 
 const safeDocument: any = typeof document !== "undefined" ? document : {};
