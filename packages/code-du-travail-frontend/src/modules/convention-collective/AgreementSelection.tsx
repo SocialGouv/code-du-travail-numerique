@@ -7,7 +7,7 @@ import { ButtonStyle, CardTitleStyle } from "./style";
 import { css } from "../../../styled-system/css";
 
 type Props = {
-  enterprise: Enterprise;
+  enterprise: Omit<Enterprise, "complements">;
   navigationUrl?: string;
 };
 
@@ -89,12 +89,12 @@ const disabledRoot = css({
   "&:hover": {
     backgroundColor: "unset",
   },
-  color: `${fr.colors.decisions.text.disabled.grey.default} !important`,
+  color: `var(--text-disabled-grey) !important`,
 });
 
 const disabledTitle = css({
   "& a": {
-    color: `${fr.colors.decisions.text.disabled.grey.default} !important`,
+    color: `var(--text-disabled-grey) !important`,
     _before: {
       cursor: "not-allowed",
     },

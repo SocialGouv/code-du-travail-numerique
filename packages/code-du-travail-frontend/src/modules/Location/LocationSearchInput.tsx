@@ -26,6 +26,7 @@ export const LocationSearchInput = ({ className, onLocationChange }: Props) => {
         hintText="Ex: 75007"
         label="Code postal ou Ville (optionnel)"
         state="default"
+        dataTestId="locationSearchAutocomplete"
       ></Autocomplete>
     </>
   );

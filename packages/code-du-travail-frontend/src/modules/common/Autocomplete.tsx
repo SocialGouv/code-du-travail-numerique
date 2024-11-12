@@ -11,6 +11,8 @@ type Props<K> = InputProps & {
   onSearch?: (query: string, results: K[]) => void;
   displayLabel: (item: K | null) => string;
   search: (search: string) => Promise<K[]>;
+  dataTestId?: string;
+  lineAsLink?: (value: K) => string;
 };
 
 export const Autocomplete = <K,>({
@@ -18,12 +20,14 @@ export const Autocomplete = <K,>({
   onChange,
   onSearch,
   displayLabel,
+  lineAsLink,
   search,
   label,
   state,
   stateRelatedMessage,
   hintText,
   classes,
+  dataTestId,
 }: Props<K>) => {
   const [value, setValue] = useState<string>("");
   const [selectedResult, setSelectedResult] = useState<K | undefined>();
@@ -67,9 +71,10 @@ export const Autocomplete = <K,>({
           })}
           addon={
             <>
-              {selectedResult && (
+              {(selectedResult || value) && (
                 <Button
-                  iconId="fr-icon-close-line"
+                  data-testid={`${dataTestId ? dataTestId + "-" : ""}autocomplete-close`}
+                  iconId="fr-icon-close-circle-fill"
                   className={`${fr.cx("fr-p-0")} ${buttonClose}`}
                   onClick={() => {
                     setSelectedResult(undefined);
@@ -78,12 +83,17 @@ export const Autocomplete = <K,>({
                     setSuggestions([]);
                   }}
                   priority="tertiary no outline"
-                  title="Label button"
+                  title="Effacer la sélection"
                 />
               )}
             </>
           }
-          nativeInputProps={{ type: "search", value }}
+          nativeInputProps={{
+            type: "search",
+            value,
+            // @ts-ignore
+            "data-testid": dataTestId,
+          }}
           className={`${fr.cx("fr-mb-0")}`}
           hintText={hintText}
           label={label}
@@ -107,9 +117,15 @@ export const Autocomplete = <K,>({
                   key={`${displayLabel(item)}${index}`}
                 >
                   <Button
-                    linkProps={{
-                      href: `#`,
-                    }}
+                    {...(lineAsLink
+                      ? {
+                          linkProps: {
+                            href: lineAsLink(item),
+                          },
+                        }
+                      : {
+                          linkProps: undefined,
+                        })}
                     priority="tertiary no outline"
                     className={fr.cx("fr-col-12")}
                   >
@@ -147,5 +163,8 @@ const buttonClose = css({
   _before: {
     width: "18px !important",
     height: "18px !important",
+  },
+  _hover: {
+    backgroundColor: "unset !important",
   },
 });

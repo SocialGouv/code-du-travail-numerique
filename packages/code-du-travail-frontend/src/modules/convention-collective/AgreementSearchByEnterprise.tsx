@@ -11,7 +11,6 @@ import { LocationSearchInput } from "../Location/LocationSearchInput";
 import { searchEnterprises } from "../Enterprise/enterprises.service";
 import { Enterprise } from "../Enterprise/types";
 import { ApiGeoResult } from "../Location/searchCities";
-import Tooltip from "@codegouvfr/react-dsfr/Tooltip";
 import { CardTitleStyle, ButtonStyle } from "./style";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 
@@ -59,32 +58,13 @@ export const AgreementSearchByEnterprise = ({
         <Input
           className={fr.cx("fr-col-12", "fr-col-md-5", "fr-mb-0")}
           hintText="Ex : Café de la mairie ou 40123778000127"
-          label={
-            <>
-              Nom de votre entreprise ou numéro Siren/Siret
-              <Tooltip
-                kind="click"
-                title={
-                  <>
-                    Le numéro Siren est un{" "}
-                    <strong>numéro unique de 9 chiffres</strong> attribué à
-                    chaque entreprise (ex : 401237780).
-                    <br />
-                    Le numéro Siret est un{" "}
-                    <strong>numéro de 14 chiffres</strong> unique pour chaque
-                    établissement de l&apos;entreprise. Il est présent sur la{" "}
-                    <strong>fiche de paie du salarié</strong> (ex :
-                    40123778000127).
-                  </>
-                }
-              />
-            </>
-          }
+          label={<>Nom de votre entreprise ou numéro Siren/Siret</>}
           state={inputState}
           stateRelatedMessage={
             <>
               Aucune entreprise n&apos;a été trouvée.
-              <br />- Vérifiez l’orthographe des termes de recherche
+              <br />
+              Vérifiez l’orthographe des termes de recherche
             </>
           }
           nativeInputProps={{
@@ -110,7 +90,7 @@ export const AgreementSearchByEnterprise = ({
             "fr-col-12",
             "fr-col-md-3",
             "fr-ml-md-3w",
-            "fr-mb-0",
+            searched && !enterprises?.length ? "fr-mb-7w" : "fr-mb-0",
             "fr-mt-2w",
             "fr-mt-md-0"
           )}
@@ -120,7 +100,7 @@ export const AgreementSearchByEnterprise = ({
           type="submit"
           iconPosition="right"
           iconId="fr-icon-search-line"
-          className={`${fr.cx("fr-ml-md-3w", "fr-mt-2w", "fr-mt-md-0")} ${ButtonStyle}`}
+          className={`${fr.cx("fr-ml-md-3w", "fr-mt-2w", "fr-mt-md-0", searched && !enterprises?.length ? "fr-mb-7w" : "fr-mb-0")} ${ButtonStyle}`}
         >
           Rechercher
         </Button>
@@ -194,12 +174,12 @@ export const AgreementSearchByEnterprise = ({
           linkProps={{
             href: `/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile`,
           }}
-          desc="Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective"
-          size="large"
           title="Particuliers employeurs et emploi à domicile"
+          desc="Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective"
+          size="small"
           classes={{
-            title: `${fr.cx("fr-h5")} ${CardTitleStyle}`,
-            content: fr.cx("fr-px-2w", "fr-pt-1w", "fr-pb-8w"),
+            title: CardSmallTitleStyle,
+            content: fr.cx("fr-px-2w", "fr-pt-1w", "fr-pb-3w"),
             desc: fr.cx("fr-mt-1w", "fr-mr-6w"),
             end: fr.cx("fr-mt-0", "fr-pt-1w", "fr-pb-2w"),
           }}
@@ -217,3 +197,12 @@ export const AgreementSearchByEnterprise = ({
     </>
   );
 };
+
+export const CardSmallTitleStyle = css({
+  fontSize: "initial !important",
+  "& > a": {
+    _after: {
+      top: "calc(50% - 8px)",
+    },
+  },
+});

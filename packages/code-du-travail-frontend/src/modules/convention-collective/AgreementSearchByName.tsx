@@ -1,8 +1,6 @@
 "use client";
 import { fr } from "@codegouvfr/react-dsfr";
-import { redirect } from "next/navigation";
 import Alert from "@codegouvfr/react-dsfr/Alert";
-import { Tooltip } from "@codegouvfr/react-dsfr/Tooltip";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { useState } from "react";
 import { css } from "../../../styled-system/css";
@@ -20,7 +18,7 @@ type Props = {
 export const AgreementSearchByName = ({
   navigationUrl = "/outils/convention-collective",
 }: Props) => {
-  const [inputState, setInputState] = useState<"error" | undefined>();
+  const [inputState, setInputState] = useState<"error" | "info" | undefined>();
   return (
     <>
       <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
@@ -28,28 +26,13 @@ export const AgreementSearchByName = ({
       </p>
       <div className={fr.cx("fr-mt-2w")}>
         <Autocomplete<Agreement>
+          dataTestId="AgreementSearchAutocomplete"
           className={fr.cx("fr-col-12", "fr-mb-0")}
           hintText="Ex : transport routier ou 1486"
           label={
             <>
               Nom de la convention collective ou son numéro
               d’identification IDCC (4 chiffres)
-              <Tooltip
-                kind="click"
-                title={
-                  <>
-                    L’Identifiant de la Convention Collective (IDCC) est un
-                    numéro unique de <strong>4 chiffres</strong> déterminant
-                    chaque convention collective (Ex&nbsp; : 1090 ou 1486).
-                    <br />
-                    <strong>Attention à ne pas confondre</strong> avec les codes
-                    APE (Activité Principale Exercée) ou NAF (Nomenclature des
-                    Activités Françaises) qui sont des numéros composés de 4
-                    chiffres et d’une lettre dont l’objectif est d’identifier
-                    l’activité principale de l’entreprise (Ex : 4752A).
-                  </>
-                }
-              />
             </>
           }
           classes={{
@@ -65,25 +48,33 @@ export const AgreementSearchByName = ({
           }}
           state={inputState}
           stateRelatedMessage={
-            <>
-              Aucune convention collective n&apos;a été trouvée.
-              <br />- Vérifiez l’orthographe de votre recherche ou le chiffre
-              IDCC présent sur votre bulletin de paie
-            </>
+            inputState === "error" ? (
+              <>
+                Aucune convention collective n&apos;a été trouvée.
+                <br />
+                Vérifiez l’orthographe de votre recherche ou le chiffre IDCC
+                présent sur votre bulletin de paie
+              </>
+            ) : (
+              <>
+                Indiquez au moins 3 caractères afin d&apos;affiner votre
+                recherche
+              </>
+            )
           }
           displayLabel={(item) => {
             return item ? `${item.shortTitle} (IDCC ${item.num})` : "";
           }}
-          search={searchAgreement}
-          onChange={(agremeent) => {
-            if (agremeent?.slug) {
-              redirect(`/${getRouteBySource(SOURCES.CCN)}/${agremeent.slug}`);
-            }
+          lineAsLink={(item) => {
+            return `/${getRouteBySource(SOURCES.CCN)}/${item.slug}`;
           }}
+          search={searchAgreement}
           onSearch={(query, agreements) => {
-            setInputState(
-              query.length > 1 && !agreements.length ? "error" : undefined
-            );
+            if (agreements.length || query.length === 0)
+              setInputState(undefined);
+            else {
+              setInputState(query.length <= 2 ? "info" : "error");
+            }
           }}
         />
         {inputState === "error" && (
