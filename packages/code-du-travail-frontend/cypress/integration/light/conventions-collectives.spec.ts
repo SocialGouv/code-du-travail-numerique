@@ -4,10 +4,9 @@ describe("Conventions collectives", () => {
     cy.get("#navigation").contains("Votre convention collective").click();
     cy.url().should("include", "/convention-collective");
 
-    cy.findByRole("heading", { level: 1 }).should(
-      "have.text",
-      "Votre convention collective"
-    );
+    cy.findByRole("heading", { level: 1 })
+      .should("have.text", "Votre convention collective")
+      .click();
     cy.get("body").should(
       "contain",
       "Retrouvez les questions/réponses fréquentes organisées par thème"
@@ -18,7 +17,6 @@ describe("Conventions collectives", () => {
       "include",
       "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
     );
-
     cy.get('[data-accordion-component="Accordion"]')
       .eq(0)
       .find('[data-accordion-component="AccordionItemButton"]')
