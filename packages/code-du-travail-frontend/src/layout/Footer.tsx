@@ -13,7 +13,6 @@ import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
 import { ServiceRenseignementModal } from "../common/ServiceRenseignementModal";
-import { Partners } from "../home";
 import { GouvernementSection } from "./Footer/GovernmentSection";
 
 const { DirectionRight: DirectionRightIcon } = icons;
@@ -46,8 +45,6 @@ const Footer = (): JSX.Element => {
             </ServiceRenseignementModal>
           </Container>
         </ServiceSection>
-
-        {router.pathname === "/" && <Partners />}
 
         <NavSection>
           <Links>

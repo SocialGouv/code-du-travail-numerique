@@ -3,18 +3,27 @@ import { orderByAlpha } from "../utils";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 
-export const fetchAllAgreements = async <K extends keyof ElasticAgreement>(
+export const fetchAgreements = async <K extends keyof ElasticAgreement>(
   fields: K[],
-  sortBy?: K
+  sortBy?: K,
+  filters?: {
+    cdtnIds?: string[];
+  }
 ): Promise<Pick<ElasticAgreement, K>[]> => {
+  const baseFilters: Array<any> = [
+    { term: { source: SOURCES.CCN } },
+    { term: { isPublished: true } },
+    { term: { contributions: true } },
+  ];
+
+  if (filters?.cdtnIds) {
+    baseFilters.push({ terms: { cdtnId: filters.cdtnIds } });
+  }
+
   const response = await elasticsearchClient.search<Pick<ElasticAgreement, K>>({
     query: {
       bool: {
-        filter: [
-          { term: { source: SOURCES.CCN } },
-          { term: { isPublished: true } },
-          { term: { contributions: true } },
-        ],
+        filter: baseFilters,
       },
     },
     size: 100,

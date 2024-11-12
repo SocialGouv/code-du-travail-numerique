@@ -1,0 +1,593 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> should match snapshot 1`] = `
+<div>
+  <div
+    class="fr-grid-row"
+  >
+    <div
+      class="fr-col-12"
+    >
+      <div
+        class="bg_var(--blue-cumulus-925-125)"
+      >
+        <div
+          class="fr-container fr-py-6w"
+        >
+          <div
+            class="fr-grid-row fr-grid-row--gutters fr-grid-row--middle"
+          >
+            <div
+              class="fr-col-12 fr-col-md-7"
+            >
+              <h1
+                class="fr-mb-2w fr-text--lead fr-text--bold"
+              >
+                Bienvenue sur 
+                <br />
+                <span
+                  class="fr-mt-2w fr-mb-0 fr-h1 d_inline-block"
+                >
+                  le Code du travail numérique
+                </span>
+              </h1>
+              <h2
+                class="fr-text--lead fr-text--bold fr-mb-6w"
+              >
+                Obtenez les réponses à vos questions sur le droit du travail.
+              </h2>
+              <div
+                class="fr-grid-row fr-grid-row--gutters fr-grid-row--bottom"
+              >
+                <div
+                  class="fr-col-12 fr-col-md-8"
+                >
+                  <div
+                    class="fr-input-group"
+                  >
+                    <label
+                      class="fr-label"
+                      for="downshift-:r0:-input"
+                      id="downshift-:r0:-label"
+                    >
+                      Recherchez par mots-clés
+                      <span
+                        class="fr-hint-text"
+                      >
+                        par exemple : congés payés, durée de préavis
+                      </span>
+                    </label>
+                    <input
+                      aria-activedescendant=""
+                      aria-autocomplete="list"
+                      aria-controls="downshift-:r0:-menu"
+                      aria-expanded="false"
+                      aria-label="Champ de recherche par mots-clés"
+                      autocomplete="off"
+                      class="fr-input"
+                      data-testid="search-input"
+                      id="home-searchbar"
+                      role="combobox"
+                      value=""
+                    />
+                    <ul
+                      aria-labelledby="downshift-:r0:-label"
+                      class="pos_absolute w_100% z_100 bg_var(--background-default-grey) li-t_none! p_0! m_0!"
+                      id="downshift-:r0:-menu"
+                      role="listbox"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="fr-col-12 fr-col-md-4"
+                >
+                  <button
+                    aria-label="Lancer la recherche"
+                    class="fr-btn fr-icon-search-line fr-btn--icon-right mdDown:w_100%! mdDown:d_flex! mdDown:jc_center!"
+                    id="fr-button-:r1:"
+                  >
+                    Rechercher
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="fr-col-md-5 fr-col-12"
+            >
+              <img
+                alt="Illustration graphique du site montrant des personnes travaillant"
+                data-nimg="1"
+                decoding="async"
+                height="393"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=1200&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=640&q=75 1x, /_next/image?url=%2Fimg.jpg&w=1200&q=75 2x"
+                style="color: transparent;"
+                width="577"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="home-highlights"
+      >
+        <div
+          class="fr-my-8w fr-container"
+        >
+          <h2
+            class="fr-mb-3v"
+          >
+            À la une
+          </h2>
+          <div
+            class="fr-grid-row fr-grid-row--gutters fr-grid-row--right"
+          >
+            <div
+              class="fr-col-12 fr-col-md-6 fr-col-lg-6"
+            >
+              <div
+                class="fr-card fr-enlarge-link fr-card--horizontal"
+                id="fr-card-:r2:"
+              >
+                <div
+                  class="fr-card__body"
+                >
+                  <div
+                    class="fr-card__content"
+                  >
+                    <h3
+                      class="fr-card__title"
+                    >
+                      <a
+                        class=""
+                        href="https://example.com/highlight"
+                      >
+                        Highlight Title
+                      </a>
+                    </h3>
+                    <p
+                      class="fr-card__desc"
+                    >
+                      Highlight description
+                    </p>
+                    <div
+                      class="fr-card__start fr-mb-2w"
+                    >
+                      <span
+                        class="fr-tag fr-tag--sm"
+                        id="fr-tag-:r3:"
+                      >
+                        light
+                      </span>
+                    </div>
+                    <div
+                      class="fr-card__end fr-text--xs"
+                    >
+                      <span>
+                        Consulter
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg_var(--background-alt-blue-cumulus)"
+        id="home-outils"
+      >
+        <div
+          class="fr-my-8w fr-container fr-py-6w"
+        >
+          <h2>
+            Boîte à outils
+          </h2>
+          <p
+            class="fr-text--xl"
+          >
+            Trouvez des réponses personnalisées selon votre situation
+          </p>
+          <div
+            class="fr-grid-row fr-grid-row--gutters fr-grid-row--right"
+          >
+            <div
+              class="fr-col-12 fr-col-sm-6 fr-col-md-6 fr-col-lg-3"
+            >
+              <div
+                class="fr-tile fr-enlarge-link fr-tile--vertical"
+                id="fr-tile-:r4:"
+              >
+                <div
+                  class="fr-tile__body"
+                >
+                  <div
+                    class="fr-tile__content"
+                  >
+                    <h3
+                      class="fr-tile__title"
+                    >
+                      <a
+                        aria-disabled="false"
+                        class=""
+                        href="https://example.com/tool"
+                      >
+                        Tool Title
+                      </a>
+                    </h3>
+                    <p
+                      class="fr-tile__desc"
+                    >
+                      Tool description
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="fr-tile__header"
+                >
+                  <div
+                    class="fr-tile__img fr-mb-0"
+                  >
+                    <img
+                      alt=""
+                      class="fr-responsive-img"
+                      src="/static/assets/icons/tools/tool-icon.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="fr-mt-3w d_flex jc_center"
+          >
+            <a
+              class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
+              href="/outils"
+              id="fr-button-:r5:"
+            >
+              Voir tous les outils
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        id="home-modeles-de-courriers"
+      >
+        <div
+          class="fr-my-8w fr-container"
+        >
+          <h2>
+            Modèles de documents
+          </h2>
+          <p
+            class="fr-text--xl"
+          >
+            Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail
+          </p>
+          <div
+            class="fr-grid-row fr-grid-row--gutters fr-grid-row--right"
+          >
+            <div
+              class="fr-col-12 fr-col-md-6 fr-col-lg-6"
+            >
+              <div
+                class="fr-card fr-enlarge-link fr-card--horizontal"
+                id="fr-card-:r6:"
+              >
+                <div
+                  class="fr-card__body"
+                >
+                  <div
+                    class="fr-card__content"
+                  >
+                    <h3
+                      class="fr-card__title"
+                    >
+                      <a
+                        class=""
+                        href="https://example.com/model"
+                      >
+                        Model Title
+                      </a>
+                    </h3>
+                    <p
+                      class="fr-card__desc"
+                    >
+                      Model description
+                    </p>
+                    <div
+                      class="fr-card__start fr-mb-2w"
+                    >
+                      <span
+                        class="fr-tag fr-tag--sm"
+                        id="fr-tag-:r7:"
+                      >
+                        dark
+                      </span>
+                    </div>
+                    <div
+                      class="fr-card__end fr-text--xs"
+                    >
+                      <span>
+                        Consulter
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="fr-mt-3w d_flex jc_center"
+          >
+            <a
+              class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
+              href="/modeles-de-courriers"
+              id="fr-button-:r8:"
+            >
+              Voir tous les modèles de documents
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        id="home-fiches-pratiques"
+      >
+        <div
+          class="fr-my-8w fr-container"
+        >
+          <h2>
+            Vos fiches pratiques
+          </h2>
+          <p
+            class="fr-text--xl"
+          >
+            Obtenez une réponse personnalisée selon votre convention collective
+          </p>
+          <div
+            class="fr-grid-row fr-grid-row--gutters fr-grid-row--right"
+          >
+            <div
+              class="fr-col-12 fr-col-md-6 fr-col-lg-6"
+            >
+              <div
+                class="fr-card fr-enlarge-link fr-card--horizontal"
+                id="fr-card-:r9:"
+              >
+                <div
+                  class="fr-card__body"
+                >
+                  <div
+                    class="fr-card__content"
+                  >
+                    <h3
+                      class="fr-card__title"
+                    >
+                      <a
+                        class=""
+                        href="https://example.com/contribution"
+                      >
+                        Contribution Title
+                      </a>
+                    </h3>
+                    <p
+                      class="fr-card__desc"
+                    >
+                      Contribution description
+                    </p>
+                    <div
+                      class="fr-card__start fr-mb-2w"
+                    >
+                      <span
+                        class="fr-tag fr-tag--sm"
+                        id="fr-tag-:ra:"
+                      >
+                        light
+                      </span>
+                    </div>
+                    <div
+                      class="fr-card__end fr-text--xs"
+                    >
+                      <span>
+                        Consulter
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="fr-mt-3w d_flex jc_center"
+          >
+            <a
+              class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
+              href="/contribution"
+              id="fr-button-:rb:"
+            >
+              Voir toutes les fiches pratiques
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg_var(--background-alt-blue-cumulus)"
+        id="home-convention-collective"
+      >
+        <div
+          class="fr-my-8w fr-container fr-py-6w"
+        >
+          <h2>
+            Votre convention collective
+          </h2>
+          <p
+            class="fr-text--xl"
+          >
+            Retrouvez les questions-réponses fréquentes organisées par thème pour votre convention collective
+          </p>
+          <div
+            class="fr-grid-row fr-grid-row--gutters fr-grid-row--right"
+          >
+            <div
+              class="fr-col-12 fr-col-md-6 fr-col-lg-3"
+            >
+              <div
+                class="fr-card fr-enlarge-link fr-card--horizontal"
+                id="fr-card-:rc:"
+              >
+                <div
+                  class="fr-card__body"
+                >
+                  <div
+                    class="fr-card__content"
+                  >
+                    <h3
+                      class="fr-card__title"
+                    >
+                      <a
+                        class=""
+                        href="https://example.com/agreement"
+                      >
+                        Agreement Title
+                      </a>
+                    </h3>
+                    <p
+                      class="fr-card__desc"
+                    >
+                      Agreement description
+                    </p>
+                    <div
+                      class="fr-card__start fr-mb-2w"
+                    >
+                      <span
+                        class="fr-tag fr-tag--sm"
+                        id="fr-tag-:rd:"
+                      >
+                        dark
+                      </span>
+                    </div>
+                    <div
+                      class="fr-card__end fr-text--xs"
+                    >
+                      <span>
+                        Consulter
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="fr-mt-3w d_flex jc_center"
+          >
+            <a
+              class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
+              href="/convention-collective"
+              id="fr-button-:re:"
+            >
+              Voir toutes les conventions collectives
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        id="home-themes"
+      >
+        <div
+          class="fr-my-8w fr-container"
+        >
+          <h2>
+            Thèmes
+          </h2>
+          <p
+            class="fr-text--xl"
+          >
+            Retrouvez tous nos contenus organisés par thèmes
+          </p>
+          <div
+            class="fr-grid-row fr-grid-row--gutters fr-grid-row--right"
+          >
+            <div
+              class="fr-col-4 fr-hidden fr-unhidden-lg"
+            >
+              <img
+                alt="Illustration graphique sur les thèmes"
+                data-nimg="1"
+                decoding="async"
+                height="233"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=828&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=828&q=75 2x"
+                style="color: transparent;"
+                width="384"
+              />
+            </div>
+            <div
+              class="fr-col-12 fr-col-sm-6 fr-col-md-4 fr-col-lg-2"
+            >
+              <div
+                class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--no-icon fr-tile--sm"
+                id="fr-tile-:rf:"
+              >
+                <div
+                  class="fr-tile__body"
+                >
+                  <div
+                    class="fr-tile__content"
+                  >
+                    <h3
+                      class="fr-tile__title"
+                    >
+                      <a
+                        aria-disabled="false"
+                        class=""
+                        href="https://example.com/theme"
+                      >
+                        Theme Title
+                      </a>
+                    </h3>
+                    <p
+                      class="fr-tile__desc"
+                    >
+                      Theme description
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="fr-tile__header"
+                >
+                  <div
+                    class="fr-tile__img fr-mb-0 w_56px! h_56px!"
+                  >
+                    <img
+                      alt=""
+                      class="fr-responsive-img"
+                      src="/static/assets/icons/themes/theme-icon.svg"
+                      width="56"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="fr-mt-3w d_flex jc_center"
+          >
+            <a
+              class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
+              href="/themes"
+              id="fr-button-:rg:"
+            >
+              Voir tous les thèmes
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
