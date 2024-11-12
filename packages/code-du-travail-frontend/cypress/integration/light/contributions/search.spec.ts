@@ -1,6 +1,9 @@
 describe("Contributions", () => {
   it("rechercher et voir une contribution", () => {
     cy.visit("/");
+    cy.findByRole("heading", { level: 1 })
+      .should("have.text", "Bienvenue sur le Code du travail numérique")
+      .click();
     cy.get("#home-searchbar").type("durée maximale CDD");
     cy.get("button[aria-label='Lancer la recherche']")
       .contains("Rechercher")

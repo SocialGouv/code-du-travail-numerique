@@ -2,10 +2,12 @@ describe("Page d’accueil", () => {
   it("Affiche les éléments requis", () => {
     cy.visit("/");
 
-    cy.get("h1").should("contain", "le Code du travail numérique");
+    cy.findByRole("heading", { level: 1 })
+      .should("have.text", "Bienvenue sur le Code du travail numérique")
+      .click();
 
-    cy.get("h2").should(
-      "contain",
+    cy.findByRole("heading", { level: 2 }).should(
+      "have.text",
       "Obtenez les réponses à vos questions sur le droit du travail."
     );
 
@@ -82,9 +84,12 @@ describe("Page d’accueil", () => {
 
   it("Affiche la popup de recherche Besoin de plus d'information", () => {
     cy.visit("/");
+    cy.findByRole("heading", { level: 1 })
+      .should("have.text", "Bienvenue sur le Code du travail numérique")
+      .click();
+
     cy.contains("Besoin de plus d'informations ?");
 
-    cy.contains("Trouver les services près de chez moi").click();
     cy.contains("Trouver les services près de chez moi").click();
     cy.get("h1").should("contain", "Les services du ministère du Travail");
 
