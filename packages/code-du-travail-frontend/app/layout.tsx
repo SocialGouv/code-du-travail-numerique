@@ -9,6 +9,7 @@ import { Metadata } from "next/types";
 import { SITE_URL } from "../src/config";
 import { headers } from "next/headers";
 import { MatomoAnalytics } from "../src/modules/config/MatomoAnalytics";
+import { PolyfillComponent } from "../src/modules/utils";
 
 export const metadata: Metadata = {
   title: {
@@ -53,6 +54,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <PolyfillComponent />
         <DsfrProvider lang={lang}>{children}</DsfrProvider>
         <MatomoAnalytics />
       </body>
