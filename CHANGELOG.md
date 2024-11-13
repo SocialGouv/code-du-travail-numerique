@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.162.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.161.0...v4.162.0) (2024-11-13)
+
+
+### Bug Fixes
+
+* **dsfr:** modification du logo principal ([#6278](https://github.com/SocialGouv/code-du-travail-numerique/issues/6278)) ([2fced9b](https://github.com/SocialGouv/code-du-travail-numerique/commit/2fced9ba5df784355f7b5e74f14dcbff8098e033))
+
+
+### Features
+
+* **dsfr:** intégration de la page home ([#6219](https://github.com/SocialGouv/code-du-travail-numerique/issues/6219)) ([c296467](https://github.com/SocialGouv/code-du-travail-numerique/commit/c2964676e5d46db414c2565c7b6bde8f5e03ee8e)), closes [#6079](https://github.com/SocialGouv/code-du-travail-numerique/issues/6079) [#6085](https://github.com/SocialGouv/code-du-travail-numerique/issues/6085) [#6090](https://github.com/SocialGouv/code-du-travail-numerique/issues/6090) [#6082](https://github.com/SocialGouv/code-du-travail-numerique/issues/6082) [#6092](https://github.com/SocialGouv/code-du-travail-numerique/issues/6092) [#6096](https://github.com/SocialGouv/code-du-travail-numerique/issues/6096) [#6099](https://github.com/SocialGouv/code-du-travail-numerique/issues/6099) [#6094](https://github.com/SocialGouv/code-du-travail-numerique/issues/6094)
+* **DSFR:** salaire brut / net ([#6260](https://github.com/SocialGouv/code-du-travail-numerique/issues/6260)) ([43505f5](https://github.com/SocialGouv/code-du-travail-numerique/commit/43505f5a790c74f4ec951aa7f009b31f34ae5734)), closes [#6245](https://github.com/SocialGouv/code-du-travail-numerique/issues/6245)
+
+
+
+
+
 # [4.161.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.160.0...v4.161.0) (2024-11-12)
 
 
