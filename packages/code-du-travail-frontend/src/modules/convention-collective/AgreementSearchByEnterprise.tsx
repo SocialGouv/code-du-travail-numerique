@@ -15,12 +15,10 @@ import { CardTitleStyle, ButtonStyle } from "./style";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 
 type Props = {
-  navigationUrl?: string;
+  widgetMode?: boolean;
 };
 
-export const AgreementSearchByEnterprise = ({
-  navigationUrl = "/outils/convention-collective",
-}: Props) => {
+export const AgreementSearchByEnterprise = ({ widgetMode = false }: Props) => {
   const [inputState, setInputState] = useState<"error" | undefined>();
   const [search, setSearch] = useState<string>();
   const [searched, setSearched] = useState<boolean>(false);
@@ -148,7 +146,7 @@ export const AgreementSearchByEnterprise = ({
               border
               enlargeLink
               linkProps={{
-                href: `${navigationUrl}/selection/${enterprise.siren}`,
+                href: `/${widgetMode ? "widgets" : "outils"}/convention-collective/selection/${enterprise.siren}`,
               }}
               desc={`Activité : ${enterprise.activitePrincipale}`}
               end={<Badge>{`${enterprise.matching} établissements`}</Badge>}
@@ -173,6 +171,7 @@ export const AgreementSearchByEnterprise = ({
           enlargeLink
           linkProps={{
             href: `/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile`,
+            ...(widgetMode ? { target: "_blank" } : {}),
           }}
           title="Particuliers employeurs et emploi à domicile"
           desc="Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective"
@@ -185,15 +184,17 @@ export const AgreementSearchByEnterprise = ({
           }}
         />
       </div>
-      <div className={fr.cx("fr-mt-2w")}>
-        <Button
-          linkProps={{ href: navigationUrl }}
-          priority="secondary"
-          className={ButtonStyle}
-        >
-          Précédent
-        </Button>
-      </div>
+      {!widgetMode && (
+        <div className={fr.cx("fr-mt-2w")}>
+          <Button
+            linkProps={{ href: "/outils/convention-collective" }}
+            priority="secondary"
+            className={ButtonStyle}
+          >
+            Précédent
+          </Button>
+        </div>
+      )}
     </>
   );
 };

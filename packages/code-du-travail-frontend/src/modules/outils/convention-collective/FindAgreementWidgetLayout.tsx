@@ -9,5 +9,5 @@ type Props = {
 
 export const FindAgreementWidgetLayout = ({ children }: Props) => {
   useIframeResizer();
-  return <FindAgreementBlock>{children}</FindAgreementBlock>;
+  return <FindAgreementBlock noBackground>{children}</FindAgreementBlock>;
 };

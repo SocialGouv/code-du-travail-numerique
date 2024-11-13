@@ -11,13 +11,7 @@ import { searchAgreement } from "./agreement.service";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { ButtonStyle } from "./style";
 
-type Props = {
-  navigationUrl?: string;
-};
-
-export const AgreementSearchByName = ({
-  navigationUrl = "/outils/convention-collective",
-}: Props) => {
+export const AgreementSearchByName = () => {
   const [inputState, setInputState] = useState<"error" | "info" | undefined>();
   return (
     <>
@@ -108,7 +102,7 @@ export const AgreementSearchByName = ({
       </div>
       <div className={fr.cx("fr-mt-2w")}>
         <Button
-          linkProps={{ href: navigationUrl }}
+          linkProps={{ href: "/outils/convention-collective" }}
           priority="secondary"
           className={ButtonStyle}
         >
@@ -116,7 +110,7 @@ export const AgreementSearchByName = ({
         </Button>
         {inputState === "error" && (
           <Button
-            linkProps={{ href: `${navigationUrl}/entreprise` }}
+            linkProps={{ href: `/outils/convention-collective/entreprise` }}
             priority="secondary"
             className={`${fr.cx("fr-ml-md-2w", "fr-mt-2w", "fr-mt-md-0")} ${ButtonStyle}`}
           >
