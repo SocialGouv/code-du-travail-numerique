@@ -1,10 +1,10 @@
 /** @jest-environment node */
 
-import { fetchAllModels, fetchModel } from "../queries";
+import { fetchModels, fetchModel } from "../queries";
 
 describe("Modèles de courrier", () => {
   it("Récupération de tous les modèles de courrier", async () => {
-    const result = await fetchAllModels(["slug", "title", "type"]);
+    const result = await fetchModels(["slug", "title", "type"]);
     expect(result).toEqual([
       {
         slug: "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",

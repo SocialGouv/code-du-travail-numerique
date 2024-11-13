@@ -1,10 +1,10 @@
 /** @jest-environment node */
 
-import { fetchAllTools } from "../queries";
+import { fetchTools } from "../queries";
 
 describe("Outils", () => {
   it("Récupération de tous les outils", async () => {
-    const result = await fetchAllTools(["slug", "title", "icon"]);
+    const result = await fetchTools(["slug", "title", "icon"]);
     expect(result).toEqual([
       {
         icon: "Indemnity",

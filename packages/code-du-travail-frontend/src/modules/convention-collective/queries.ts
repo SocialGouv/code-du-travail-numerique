@@ -6,20 +6,23 @@ import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 type Props<K> = {
   fields?: K[];
   sortBy?: K;
-  filterTitle?: string;
+  filters?: {
+    cdtnIds?: string[];
+    title?: string;
+  };
   size?: number;
 };
 
-export const fetchAllAgreements = async <K extends keyof ElasticAgreement>({
+export const fetchAgreements = async <K extends keyof ElasticAgreement>({
   fields,
   sortBy,
-  filterTitle,
+  filters,
   size = 100,
 }: Props<K>): Promise<Pick<ElasticAgreement, K>[]> => {
   const response = await elasticsearchClient.search<Pick<ElasticAgreement, K>>({
     query: {
       bool: {
-        ...(filterTitle
+        ...(filters?.title
           ? {
               should: [
                 {
@@ -27,21 +30,21 @@ export const fetchAllAgreements = async <K extends keyof ElasticAgreement>({
                     "shortTitle.french": {
                       boost: 0.9,
                       fuzziness: "1",
-                      query: filterTitle,
+                      query: filters.title,
                     },
                   },
                 },
                 {
                   match_phrase_prefix: {
                     "synonymes.french": {
-                      query: filterTitle,
+                      query: filters.title,
                     },
                   },
                 },
                 {
                   match_phrase_prefix: {
                     "title.french": {
-                      query: filterTitle,
+                      query: filters.title,
                     },
                   },
                 },

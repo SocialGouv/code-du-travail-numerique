@@ -82,7 +82,7 @@ const StyledDiv = styled.div`
       height: 1.4rem;
       margin: 0 ${spacings.tiny} 0 ${spacings.small};
       transition: transform ${theme.animations.transitionTiming} linear;
-      fill: ${theme.primary};
+      fill: ${theme.colors.primary};
     }
   }
 `;
