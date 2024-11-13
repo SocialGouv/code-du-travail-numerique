@@ -21,9 +21,6 @@ export const ui = {
         }),
       },
     },
-    // cc16AutocompleteName: byText(
-    //   /Transports routiers et activités auxiliaires du transport \(IDCC 16\)/
-    // ),
     errorNotFound: {
       error: byText(/Aucune convention collective n'a été trouvée\./),
       info: byText(/Vous ne trouvez pas votre convention collective \?/),

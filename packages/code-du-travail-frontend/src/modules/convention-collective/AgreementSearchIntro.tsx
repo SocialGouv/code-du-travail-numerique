@@ -1,8 +1,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Highlight from "@codegouvfr/react-dsfr/Highlight";
-import Link from "next/link";
-import { MatomoAgreementEvent, useAgreementSearchTracking } from "./tracking";
 
 type Props = {
   navigationUrl?: string;
@@ -11,7 +9,6 @@ type Props = {
 export const AgreementSearchIntro = ({
   navigationUrl = "/outils/convention-collective",
 }: Props) => {
-  const { emitSearchTypeSelectEvent } = useAgreementSearchTracking();
   return (
     <>
       <Highlight size="lg" className={`${fr.cx("fr-mt-2w")}`}>
@@ -51,10 +48,9 @@ export const AgreementSearchIntro = ({
           )}`}
           iconPosition="right"
           iconId="fr-icon-arrow-right-line"
-          linkProps={{ href: `${navigationUrl}/convention` }}
-          // onClick={() =>
-          //   emitSearchTypeSelectEvent(MatomoAgreementEvent.PARCOURS_1)
-          // }
+          linkProps={{
+            href: `${navigationUrl}/convention`,
+          }}
         >
           Je connais ma convention collective je la saisis
         </Button>
@@ -68,10 +64,9 @@ export const AgreementSearchIntro = ({
           )}`}
           iconPosition="right"
           iconId="fr-icon-arrow-right-line"
-          linkProps={{ href: `${navigationUrl}/entreprise` }}
-          // onClick={() =>
-          //   emitSearchTypeSelectEvent(MatomoAgreementEvent.PARCOURS_2)
-          // }
+          linkProps={{
+            href: `${navigationUrl}/entreprise`,
+          }}
         >
           Je cherche mon entreprise pour trouver ma convention collective
         </Button>
