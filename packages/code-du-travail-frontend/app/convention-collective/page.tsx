@@ -17,10 +17,10 @@ const removeAccents = (text: string) =>
   text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
 async function AgreementPage() {
-  const agreements = await fetchAgreements(
-    ["slug", "shortTitle"],
-    "shortTitle"
-  );
+  const agreements = await fetchAgreements({
+    fields: ["slug", "shortTitle"],
+    sortBy: "shortTitle",
+  });
   const firstLettersAgreements = agreements.reduce<AgreementsPerLetter>(
     (agreementPerletter, agreement) => {
       const { shortTitle } = agreement;
