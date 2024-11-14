@@ -23,7 +23,7 @@ export async function generateMetadata() {
 
 async function FindAgreementPage() {
   const tool = await getTool();
-  const relatedItems = await fetchRelatedItems({ _id: tool._id }, SLUG);
+  const relatedItems = await fetchRelatedItems({ _id: "75d77e831c" }, SLUG);
   return (
     <DsfrLayout>
       <FindAgreementLayout
