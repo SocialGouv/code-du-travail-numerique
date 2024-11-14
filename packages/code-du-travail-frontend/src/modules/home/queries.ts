@@ -92,18 +92,17 @@ export const fetchHomeData = async (): Promise<HomePageProps> => {
     title: contribution.title,
   }));
 
-  const agreements = await fetchAgreements(
-    ["source", "slug", "shortTitle", "description"],
-    undefined,
-    {
+  const agreements = await fetchAgreements({
+    fields: ["source", "slug", "shortTitle", "description"],
+    filters: {
       cdtnIds: [
         "39ac98db5d", // 573-commerces-de-gros
         "81c96604dc", // 2609-batiment-etam
         "2f57b6af7c", // 3248-metallurgie
         "d825ef1df2", // 3239-particuliers-employeurs-et-emploi-a-domicile
       ],
-    }
-  );
+    },
+  });
   const parsedAgreements = agreements.map((agreement) => ({
     description: agreement.description,
     link: `/${getRouteBySource(agreement.source)}/${agreement.slug}`,
