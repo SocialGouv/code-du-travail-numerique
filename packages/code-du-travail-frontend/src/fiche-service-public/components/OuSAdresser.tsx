@@ -16,7 +16,7 @@ export const OuSAdresser = ({
   let content;
   const ressourceWeb = getInChildrenByName(data, "RessourceWeb");
   if (ressourceWeb) {
-    const url = (ressourceWeb as FicheSPDataElement).attributes.URL;
+    const url = ressourceWeb.attributes?.URL;
     content = (
       <a
         href={url}
