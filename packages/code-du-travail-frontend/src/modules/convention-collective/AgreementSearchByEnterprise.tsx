@@ -19,7 +19,12 @@ type Props = {
 };
 
 export const AgreementSearchByEnterprise = ({ widgetMode = false }: Props) => {
-  const [inputState, setInputState] = useState<"error" | undefined>();
+  const [searchState, setSearchState] = useState<
+    "noSearch" | "errorSearch" | "fullSearch"
+  >("noSearch");
+  const [inputState, setInputState] = useState<"error" | "info" | undefined>(
+    "info"
+  );
   const [search, setSearch] = useState<string>();
   const [searched, setSearched] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
@@ -33,20 +38,25 @@ export const AgreementSearchByEnterprise = ({ widgetMode = false }: Props) => {
       <form
         className={fr.cx(
           "fr-grid-row",
-          "fr-grid-row--bottom",
+          "fr-grid-row--top",
           "fr-mt-2w",
           "fr-mb-0"
         )}
         onSubmit={async (event) => {
           event.preventDefault();
-          if (!search) return;
+          if (!search) {
+            setSearchState("noSearch");
+            return;
+          }
           setLoading(true);
           const result = await searchEnterprises({
             query: search,
             apiGeoResult: location,
           });
-          setInputState(
-            search.length > 1 && !result.length ? "error" : undefined
+          setSearchState(!result.length ? "errorSearch" : "fullSearch");
+          setInputState(!result.length ? "error" : undefined);
+          setSearchState(
+            search.length > 1 && !result.length ? "errorSearch" : "noSearch"
           );
           setLoading(false);
           setSearched(true);
@@ -59,11 +69,22 @@ export const AgreementSearchByEnterprise = ({ widgetMode = false }: Props) => {
           label={<>Nom de votre entreprise ou numéro Siren/Siret</>}
           state={inputState}
           stateRelatedMessage={
-            <>
-              Aucune entreprise n&apos;a été trouvée.
-              <br />
-              Vérifiez l’orthographe des termes de recherche
-            </>
+            searchState === "errorSearch" ? (
+              <>
+                Aucune entreprise n&apos;a été trouvée.
+                <br />
+                Vérifiez l’orthographe des termes de recherche
+              </>
+            ) : (
+              <>
+                Le numéro Siren est un numéro unique de 9 chiffres attribué à
+                chaque entreprise (ex : 401237780).
+                <br />
+                Le numéro Siret est un numéro de 14 chiffres unique pour chaque
+                établissement de l&apos;entreprise. Il est présent sur la fiche
+                de paie du salarié (ex : 40123778000127).
+              </>
+            )
           }
           nativeInputProps={{
             onChange: (event) => {
@@ -98,7 +119,7 @@ export const AgreementSearchByEnterprise = ({ widgetMode = false }: Props) => {
           type="submit"
           iconPosition="right"
           iconId="fr-icon-search-line"
-          className={`${fr.cx("fr-ml-md-3w", "fr-mt-2w", "fr-mt-md-0", searched && !enterprises?.length ? "fr-mb-7w" : "fr-mb-0")} ${ButtonStyle}`}
+          className={`${fr.cx("fr-ml-md-3w", "fr-mt-2w", "fr-mt-md-7w", searched && !enterprises?.length ? "fr-mb-7w" : "fr-mb-0")} ${ButtonStyle}`}
         >
           Rechercher
         </Button>
@@ -112,7 +133,7 @@ export const AgreementSearchByEnterprise = ({ widgetMode = false }: Props) => {
             </p>
           )}
           {loading && <p className={fr.cx("fr-h5")}>chargement en cours ...</p>}
-          {inputState === "error" && (
+          {searchState === "errorSearch" && (
             <Alert
               title="Vous ne trouvez pas votre entreprise ?"
               description={

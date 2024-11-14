@@ -12,7 +12,44 @@ import Button from "@codegouvfr/react-dsfr/Button";
 import { ButtonStyle } from "./style";
 
 export const AgreementSearchByName = () => {
-  const [inputState, setInputState] = useState<"error" | "info" | undefined>();
+  const [searchState, setSearchState] = useState<
+    "noSearch" | "lowSearch" | "errorSearch" | "fullSearch"
+  >("noSearch");
+  const [inputState, setInputState] = useState<"error" | "info" | undefined>(
+    "info"
+  );
+  const getStateMessage = () => {
+    switch (searchState) {
+      case "noSearch":
+        return (
+          <>
+            L’Identifiant de la Convention Collective (IDCC) est un numéro
+            unique de 4 chiffres déterminant chaque convention collective
+            (Ex&nbsp; : 1090 ou 1486).
+            <br />
+            Attention à ne pas confondre avec les codes APE (Activité Principale
+            Exercée) ou NAF (Nomenclature des Activités Françaises) qui sont des
+            numéros composés de 4 chiffres et d’une lettre dont l’objectif est
+            d’identifier l’activité principale de l’entreprise (Ex : 4752A).
+          </>
+        );
+      case "lowSearch":
+        return (
+          <>
+            Indiquez au moins 3 caractères afin d&apos;affiner votre recherche
+          </>
+        );
+      case "errorSearch":
+        return (
+          <>
+            Aucune convention collective n&apos;a été trouvée.
+            <br />
+            Vérifiez l’orthographe de votre recherche ou le chiffre IDCC présent
+            sur votre bulletin de paie
+          </>
+        );
+    }
+  };
   return (
     <>
       <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
@@ -41,21 +78,7 @@ export const AgreementSearchByName = () => {
             }),
           }}
           state={inputState}
-          stateRelatedMessage={
-            inputState === "error" ? (
-              <>
-                Aucune convention collective n&apos;a été trouvée.
-                <br />
-                Vérifiez l’orthographe de votre recherche ou le chiffre IDCC
-                présent sur votre bulletin de paie
-              </>
-            ) : (
-              <>
-                Indiquez au moins 3 caractères afin d&apos;affiner votre
-                recherche
-              </>
-            )
-          }
+          stateRelatedMessage={getStateMessage()}
           displayLabel={(item) => {
             return item ? `${item.shortTitle} (IDCC ${item.num})` : "";
           }}
@@ -64,10 +87,18 @@ export const AgreementSearchByName = () => {
           }}
           search={searchAgreement}
           onSearch={(query, agreements) => {
-            if (agreements.length || query.length === 0)
+            if (!agreements.length && !query) {
+              setInputState("info");
+              setSearchState("noSearch");
+            } else if (!agreements.length && query.length <= 2) {
+              setInputState("info");
+              setSearchState("lowSearch");
+            } else if (!agreements.length && query.length > 2) {
+              setInputState("error");
+              setSearchState("errorSearch");
+            } else {
               setInputState(undefined);
-            else {
-              setInputState(query.length <= 2 ? "info" : "error");
+              setSearchState("fullSearch");
             }
           }}
         />
