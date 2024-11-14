@@ -54,6 +54,14 @@ export const AgreementSelection = ({
               "aria-disabled": disabled,
               onClick: (ev) => {
                 if (disabled) ev.preventDefault();
+                window.parent?.postMessage(
+                  {
+                    name: "agreement",
+                    kind: "select",
+                    extra: { idcc: agreement.num, title: agreement.title },
+                  },
+                  "*"
+                );
               },
               ...(widgetMode ? { target: "_blank" } : {}),
             }}

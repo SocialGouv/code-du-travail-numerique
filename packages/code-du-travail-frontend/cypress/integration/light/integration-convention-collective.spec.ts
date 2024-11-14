@@ -17,14 +17,23 @@ describe("Pages integration convention collective", () => {
     // @ts-ignore
     cy.getIframe().as("iframe");
 
-    cy.get("@iframe").contains("Trouver sa convention collective");
-    cy.get("@iframe").find("#enterprise-search").as("entreprise-search");
-    cy.get("@entreprise-search").type("carrefour");
+    cy.get("@iframe")
+      .findByRole("heading", { level: 1 })
+      .should("have.text", "Trouver sa convention collective");
+
+    cy.wait(1000);
+    cy.get("@iframe")
+      .findByLabel("Nom de votre entreprise ou numéro Siren/Siret")
+      .clear()
+      .type("carrefour");
+    cy.get("@iframe").find("button[type=submit]").as("button-submit");
     cy.get("@iframe").find("button[type=submit]").as("button-submit");
     cy.get("@button-submit").click();
     cy.get("@iframe").contains("CARREFOUR HYPERMARCHES").as("entreprise");
     cy.get("@entreprise").click();
-    cy.get("@iframe").contains("Conventions collectives").as("cc");
+    cy.get("@iframe")
+      .contains("Commerce de détail et de gros à prédominance alimentaire")
+      .as("cc");
     cy.get("@cc").click();
     cy.get("@postMessage")
       .should("have.been.calledOnce")

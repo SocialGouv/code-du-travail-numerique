@@ -4,6 +4,7 @@ declare global {
   namespace Cypress {
     interface Chainable {
       selectByLabel: Chainable<Element>;
+      findByLabel: Chainable<Element>;
     }
   }
 }
@@ -21,3 +22,22 @@ Cypress.Commands.add("selectByLabel", (labelText) => {
       cy.get(`#${CSS.escape(id)}`);
     });
 });
+
+Cypress.Commands.add(
+  "findByLabel",
+  {
+    prevSubject: true,
+  },
+  (subject, labelText) => {
+    if (subject) {
+      cy.wrap(subject)
+        .contains("label", labelText)
+        .invoke("attr", "for")
+        .then((id) => {
+          if (id) {
+            cy.wrap(subject).find(`#${CSS.escape(id)}`);
+          }
+        });
+    }
+  }
+);
