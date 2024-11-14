@@ -23,7 +23,10 @@ export async function generateMetadata() {
 
 async function FindAgreementPage() {
   const tool = await getTool();
-  const relatedItems = await fetchRelatedItems({ _id: "75d77e831c" }, SLUG);
+  const relatedItems = await fetchRelatedItems(
+    { _id: tool._id },
+    "2941-aide-accompagnement-soins-et-services-a-domicile-bad"
+  );
   return (
     <DsfrLayout>
       <FindAgreementLayout
