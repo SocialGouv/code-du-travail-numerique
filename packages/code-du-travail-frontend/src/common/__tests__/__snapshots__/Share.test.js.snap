@@ -3,19 +3,19 @@
 exports[`<Share /> renders 1`] = `
 <div>
   <div
-    class="sc-338a722f-0 jXRpaP"
+    class="sc-85592e61-0 cplVsi"
   >
     <button
-      class="sc-338a722f-1 kiGnTA no-after spacing-left"
+      class="sc-85592e61-1 bcotEV no-after spacing-left"
       title="Partager sur Facebook"
       type="button"
     >
       <span
-        class="sc-338a722f-3 hmrQFw"
+        class="sc-85592e61-3 gozFLh"
       >
         <svg
           aria-hidden="true"
-          class="sc-338a722f-4 VgzwS"
+          class="sc-85592e61-4 dkaZen"
           fill="none"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
@@ -26,23 +26,23 @@ exports[`<Share /> renders 1`] = `
           />
         </svg>
         <span
-          class="sr-only"
+          class="sc-85592e61-8 isnyR"
         >
           Facebook
         </span>
       </span>
     </button>
     <a
-      class="sc-338a722f-2 eMvIcS spacing-left"
+      class="sc-85592e61-2 bvQkcL spacing-left"
       href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20undefined&body=undefined%0A%0Ahttp%3A%2F%2Flocalhost%2F"
       title="Envoyer par email"
     >
       <span
-        class="sc-338a722f-3 hmrQFw"
+        class="sc-85592e61-3 gozFLh"
       >
         <svg
           aria-hidden="true"
-          class="sc-338a722f-4 VgzwS"
+          class="sc-85592e61-4 dkaZen"
           fill="none"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
@@ -57,23 +57,23 @@ exports[`<Share /> renders 1`] = `
           />
         </svg>
         <span
-          class="sr-only"
+          class="sc-85592e61-8 isnyR"
         >
           Courriel
         </span>
       </span>
     </a>
     <button
-      class="sc-338a722f-1 kiGnTA spacing-left"
+      class="sc-85592e61-1 bcotEV spacing-left"
       title="Partager sur LinkedIn"
       type="button"
     >
       <span
-        class="sc-338a722f-3 hmrQFw"
+        class="sc-85592e61-3 gozFLh"
       >
         <svg
           aria-hidden="true"
-          class="sc-338a722f-4 VgzwS"
+          class="sc-85592e61-4 dkaZen"
           fill="none"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +84,7 @@ exports[`<Share /> renders 1`] = `
           />
         </svg>
         <span
-          class="sr-only"
+          class="sc-85592e61-8 isnyR"
         >
           Linkedin
         </span>
@@ -94,16 +94,16 @@ exports[`<Share /> renders 1`] = `
       class="sc-95cc8fb1-0 iHYHyU"
     >
       <button
-        class="sc-338a722f-1 kiGnTA spacing-left"
+        class="sc-85592e61-1 bcotEV spacing-left"
         title="Plus d’options"
         type="button"
       >
         <span
-          class="sc-338a722f-3 hmrQFw"
+          class="sc-85592e61-3 gozFLh"
         >
           <svg
             aria-hidden="true"
-            class="sc-338a722f-4 VgzwS"
+            class="sc-85592e61-4 dkaZen"
             fill="none"
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +124,7 @@ exports[`<Share /> renders 1`] = `
             />
           </svg>
           <span
-            class="sr-only"
+            class="sc-85592e61-8 isnyR"
           >
             Partage
           </span>

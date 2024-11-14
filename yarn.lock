@@ -1902,6 +1902,7 @@ __metadata:
     "@types/debounce-promise": ^3.1.4
     "@types/jest": ^29.5.12
     "@types/xml2js": ^0.4.14
+    core-js: ^3.39.0
     cors: ^2.8.5
     cypress: ^13.13.2
     cypress-html-validate: ^6.1.0
@@ -10866,6 +10867,13 @@ __metadata:
   dependencies:
     browserslist: ^4.21.5
   checksum: 4c81d635559eebc2f81db60f5095a235f580a2f90698113c4124c72761393592b139e30974cce6095a9a6aad6bb3cd467b24b20c32e77ed24ca74eb5944d0638
+  languageName: node
+  linkType: hard
+
+"core-js@npm:^3.39.0":
+  version: 3.39.0
+  resolution: "core-js@npm:3.39.0"
+  checksum: 7a3670e9a2a89e0a049daa288d742d09f6e16d27a8945c5e2ef6fc45dc57e5c4bc5db589da05947486f54ae978d14cf27bd3fb1db0b9907000a611e8af37355b
   languageName: node
   linkType: hard
 

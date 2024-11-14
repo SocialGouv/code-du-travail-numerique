@@ -2,20 +2,29 @@ import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 import { ContributionElasticDocument } from "@socialgouv/cdtn-types";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 
-export const fetchAllContributions = async <
+export const fetchContributions = async <
   K extends keyof ContributionElasticDocument,
 >(
-  fields: K[]
+  fields: K[],
+  filters?: {
+    cdtnIds?: string[];
+  }
 ): Promise<Pick<ContributionElasticDocument, K>[]> => {
+  const baseFilters: Array<any> = [
+    { term: { source: SOURCES.CONTRIBUTIONS } },
+    { term: { isPublished: true } },
+  ];
+
+  if (filters?.cdtnIds) {
+    baseFilters.push({ terms: { cdtnId: filters.cdtnIds } });
+  }
+
   const result = await elasticsearchClient.search<
     Pick<ContributionElasticDocument, K>
   >({
     query: {
       bool: {
-        filter: [
-          { term: { source: SOURCES.CONTRIBUTIONS } },
-          { term: { isPublished: true } },
-        ],
+        filter: baseFilters,
       },
     },
     size: 3000,

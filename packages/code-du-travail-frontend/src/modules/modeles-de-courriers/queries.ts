@@ -6,11 +6,23 @@ import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { DocumentElasticResult, fetchDocument } from "../documents";
 
-export const fetchAllModels = async <
+export const fetchModels = async <
   K extends keyof DocumentElasticWithSource<MailTemplateDoc>,
 >(
-  fields: K[]
+  fields: K[],
+  filters?: {
+    cdtnIds?: string[];
+  }
 ): Promise<Pick<DocumentElasticWithSource<MailTemplateDoc>, K>[]> => {
+  const baseFilters: Array<any> = [
+    { term: { source: SOURCES.LETTERS } },
+    { term: { isPublished: true } },
+  ];
+
+  if (filters?.cdtnIds) {
+    baseFilters.push({ terms: { cdtnId: filters.cdtnIds } });
+  }
+
   const response = await elasticsearchClient.search<
     DocumentElasticWithSource<
       Pick<DocumentElasticWithSource<MailTemplateDoc>, K>
@@ -18,10 +30,7 @@ export const fetchAllModels = async <
   >({
     query: {
       bool: {
-        filter: [
-          { term: { source: SOURCES.LETTERS } },
-          { term: { isPublished: true } },
-        ],
+        filter: baseFilters,
       },
     },
     size: 1000,

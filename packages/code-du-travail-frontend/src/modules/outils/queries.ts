@@ -5,30 +5,41 @@ import {
 } from "../../api/utils";
 import { Tool } from "@socialgouv/cdtn-types";
 import { SOURCES } from "@socialgouv/cdtn-utils";
+import { DocumentElasticResult, fetchDocument } from "../documents";
+import { ElasticTool } from "./type";
 
-export const fetchAllTools = async <K extends keyof Tool>(
-  fields: K[]
+export const fetchTools = async <K extends keyof Tool>(
+  fields: K[],
+  filters?: {
+    cdtnIds?: string[];
+  }
 ): Promise<Pick<Tool, K>[]> => {
+  const baseFilters: Array<any> = [
+    {
+      term: {
+        isPublished: true,
+      },
+    },
+    {
+      term: {
+        source: SOURCES.TOOLS,
+      },
+    },
+    {
+      term: {
+        displayTool: true,
+      },
+    },
+  ];
+
+  if (filters?.cdtnIds) {
+    baseFilters.push({ terms: { cdtnId: filters.cdtnIds } });
+  }
+
   const response = await elasticsearchClient.search<Pick<Tool, K>>({
     query: {
       bool: {
-        must: [
-          {
-            term: {
-              isPublished: true,
-            },
-          },
-          {
-            term: {
-              source: SOURCES.TOOLS,
-            },
-          },
-          {
-            term: {
-              displayTool: true,
-            },
-          },
-        ],
+        must: baseFilters,
       },
     },
     size: 50,
@@ -52,4 +63,28 @@ export const fetchAllTools = async <K extends keyof Tool>(
   return response.hits.hits
     .map(({ _source }) => _source)
     .filter((source) => source !== undefined);
+};
+
+export const fetchTool = async (
+  slug: string
+): Promise<DocumentElasticResult<ElasticTool>> => {
+  const result = await fetchDocument<
+    ElasticTool,
+    keyof DocumentElasticResult<ElasticTool>
+  >(["description", "metaDescription", "metaTitle", "title", "displayTitle"], {
+    query: {
+      bool: {
+        filter: [
+          { term: { source: SOURCES.TOOLS } },
+          { term: { slug } },
+          { term: { isPublished: true } },
+        ],
+      },
+    },
+    size: 1,
+  });
+  if (!result) {
+    throw new Error("Outils non trouvé");
+  }
+  return result;
 };

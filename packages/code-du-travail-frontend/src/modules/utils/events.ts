@@ -4,20 +4,38 @@ enum MatomoBaseEvent {
   TRACK_EVENT = "trackEvent",
 }
 
-type Props = {
+type BaseProps = {
   category: string;
   action: string;
-  name?: string;
-  value?: string;
 };
 
+type PropsWithBaseElement = BaseProps & {
+  name?: never;
+  value?: never;
+};
+
+type PropsWithName = BaseProps & {
+  name: string;
+  value?: never;
+};
+
+type PropsWithValue = BaseProps & {
+  name: string;
+  value: string;
+};
+
+type Props = PropsWithBaseElement | PropsWithName | PropsWithValue;
+
+function isPropsWithName(props: Props): props is PropsWithName {
+  return (props as PropsWithName).name !== undefined;
+}
+
+function isPropsWithValue(props: Props): props is PropsWithValue {
+  return (props as PropsWithValue).value !== undefined;
+}
+
 export function sendEvent(props: Props) {
-  if (props.value && !props.name) {
-    throw new Error(
-      "[Event Matomo] property 'name' is missing on event with 'value'"
-    );
-  }
-  if (props.name && props.value) {
+  if (isPropsWithValue(props)) {
     push([
       MatomoBaseEvent.TRACK_EVENT,
       props.category,
@@ -25,7 +43,7 @@ export function sendEvent(props: Props) {
       props.name,
       props.value,
     ]);
-  } else if (props.name) {
+  } else if (isPropsWithName(props)) {
     push([
       MatomoBaseEvent.TRACK_EVENT,
       props.category,
