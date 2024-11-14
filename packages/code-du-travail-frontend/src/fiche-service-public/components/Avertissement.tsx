@@ -1,5 +1,5 @@
 import React from "react";
-import { ElementBuilder } from "./ElementBuilder";
+import {ElementBuilder, FicheSPDataElement} from "./ElementBuilder";
 import { fr } from "@codegouvfr/react-dsfr";
 import { format, parseISO } from "date-fns";
 import frLocale from "date-fns/locale/fr";
@@ -10,11 +10,11 @@ export const Avertissement = ({
   data,
   headingLevel,
 }: {
-  data: any;
+  data: FicheSPDataElement;
   headingLevel: number;
 }) => {
   const formatedDate =
-    (data.attributes.date &&
+    (data.attributes?.date &&
       format(parseISO(data.attributes.date), "dd MMMM yyyy", {
         locale: frLocale,
       })) ||

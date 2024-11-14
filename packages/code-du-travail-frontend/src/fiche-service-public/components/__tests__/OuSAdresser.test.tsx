@@ -11,8 +11,8 @@ describe("<OuSAdresser />", () => {
       <OuSAdresser data={classicData} headingLevel={1} />
     );
     expect(container).toMatchSnapshot();
-    const h2 = screen.getByRole("heading", { level: 2 });
-    expect(h2.textContent).toEqual("Nom du centre");
+    const h3 = screen.getByRole("heading", { level: 3 });
+    expect(h3.textContent).toEqual("Nom du centre");
   });
 
   it("should render a ressource web component", () => {

@@ -1,14 +1,13 @@
 import React from "react";
 
-import { getText } from "../utils";
+import { getInChildrenByName, getText } from "../utils";
+import { FicheSPDataElement } from "./ElementBuilder";
 
-export const LienExterneCommente = ({ data }) => {
-  const commentaire = data.children.find(
-    (child) => child.name === "Commentaire"
-  );
-  const lienExterne = data.children.find(
-    (child) => child.name === "LienExterne"
-  );
+export const LienExterneCommente = ({ data }: { data: FicheSPDataElement }) => {
+  const commentaire = getInChildrenByName(data, "Commentaire");
+  const lienExterne = getInChildrenByName(data, "LienExterne");
+
+  if (!lienExterne || !commentaire) return <></>;
   return (
     <>
       {getText(commentaire)}
@@ -18,7 +17,7 @@ export const LienExterneCommente = ({ data }) => {
     </>
   );
 };
-export const LienExterne = ({ data }) => {
+export const LienExterne = ({ data }: { data: any }) => {
   const url = data.attributes.URL;
   const label = getText(data);
   return (

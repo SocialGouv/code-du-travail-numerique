@@ -3,18 +3,12 @@
 exports[`<List /> should render and increment heading level of children by one 1`] = `
 <div>
   <ul>
-    <li
-      class="sc-5f052859-0 cWQbML"
-    >
-      <h3
-        class="sc-b879fc2d-0 hyiHle"
-      >
+    <li>
+      <h3>
         title
       </h3>
     </li>
-    <li
-      class="sc-5f052859-0 cWQbML"
-    >
+    <li>
       <p>
         ok
       </p>

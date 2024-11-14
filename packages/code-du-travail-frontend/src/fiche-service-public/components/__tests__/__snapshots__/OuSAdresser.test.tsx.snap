@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OuSAdresser /> should render a ressource web component 1`] = `
+<div>
+  <div
+    class="fr-callout"
+  >
+    <p>
+      Ou s'adresser ?
+    </p>
+    <h3>
+      Fonds d'indemnisation des victimes de l'amiante (Fiva)
+    </h3>
+    <div
+      class="fr-accordions-group"
+      data-fr-group="false"
+    >
+      <section
+        class="fr-accordion"
+      >
+        <h3
+          class="fr-accordion__title"
+        >
+          <button
+            aria-controls="par-telephone-collapse"
+            aria-expanded="false"
+            class="fr-accordion__btn"
+            id="par-telephone__toggle-btn"
+            type="button"
+          >
+            Par téléphone
+          </button>
+        </h3>
+        <div
+          class="fr-collapse"
+          id="par-telephone-collapse"
+        >
+          <p>
+            <strong>
+              081 90 24 94
+            </strong>
+          </p>
+          <p>
+            Numéro gratuit
+          </p>
+          <p>
+            Du lundi au vendredi de 9h30 à 18h (le samedi de 9h à 12h pour déposer un message et être rappelé le lundi matin)
+          </p>
+        </div>
+      </section>
+      <section
+        class="fr-accordion"
+      >
+        <h3
+          class="fr-accordion__title"
+        >
+          <button
+            aria-controls="sur-place-collapse"
+            aria-expanded="false"
+            class="fr-accordion__btn"
+            id="sur-place__toggle-btn"
+            type="button"
+          >
+            Sur place
+          </button>
+        </h3>
+        <div
+          class="fr-collapse"
+          id="sur-place-collapse"
+        >
+          <p>
+            Fiva
+          </p>
+          <p>
+            Tour Altaïs
+          </p>
+          <p>
+            1, place Aimé Césaire
+          </p>
+          <p>
+            93102 MONTREUIL CEDEX
+          </p>
+          <p>
+            <strong>
+              Attention :
+            </strong>
+             prendre obligatoirement rendez-vous par téléphone.
+          </p>
+        </div>
+      </section>
+      <section
+        class="fr-accordion"
+      >
+        <h3
+          class="fr-accordion__title"
+        >
+          <button
+            aria-controls="par-courrier-electronique-collapse"
+            aria-expanded="false"
+            class="fr-accordion__btn"
+            id="par-courrier-electronique__toggle-btn"
+            type="button"
+          >
+            Par courrier électronique
+          </button>
+        </h3>
+        <div
+          class="fr-collapse"
+          id="par-courrier-electronique-collapse"
+        >
+          <p>
+            <a
+              aria-label="contact@fiva.fr (nouvelle fenêtre)"
+              href="mailto:contact@fiva.fr"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              contact@fiva.fr
+            </a>
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<OuSAdresser /> should render a simple case 1`] = `
+<div>
+  <div
+    class="fr-callout"
+  >
+    <p>
+      Ou s'adresser ?
+    </p>
+    <h3>
+      Nom du centre
+    </h3>
+    <p>
+      Un paragraphe tout bête
+    </p>
+  </div>
+</div>
+`;

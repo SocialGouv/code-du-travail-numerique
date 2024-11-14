@@ -3,11 +3,12 @@ import { render } from "@testing-library/react";
 import { LienExterne, LienExterneCommente } from "../LienExterne";
 import lienExterneCommenteDataMock from "./mocks/lienExterneCommenteData.json";
 import lienExterneDataMock from "./mocks/lienExterneData.json";
+import {FicheSPDataElement} from "../ElementBuilder";
 
 describe("<LienExterneCommente />", () => {
   it("should render", () => {
     const { container } = render(
-      <LienExterneCommente data={lienExterneCommenteDataMock} />
+      <LienExterneCommente data={lienExterneCommenteDataMock as FicheSPDataElement} />
     );
     expect(container).toMatchSnapshot();
   });

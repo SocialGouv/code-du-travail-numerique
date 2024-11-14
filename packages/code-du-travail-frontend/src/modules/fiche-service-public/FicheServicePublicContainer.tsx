@@ -5,18 +5,21 @@ import { ElasticFicheServicePublic } from "./queries";
 import { ContainerRichWithBreadcrumbs } from "../layout/ContainerRichWithBreadcrumbs";
 import { SourceData } from "../layout/SourceData";
 import "../../../public/static/fiches-mt.css";
-import References from "../../common/References";
-import {FicheServicePublic} from "../../fiche-service-public";
-import {ElementBuilder} from "../../fiche-service-public/components/ElementBuilder";
-import {ReferenceList} from "../common/ReferencesList";
+import { ElementBuilder } from "../../fiche-service-public/components/ElementBuilder";
+import { ReferenceList } from "../common/ReferencesList";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
   raw: any;
 } & Pick<
-    ElasticFicheServicePublic,
-    "title" | "date" | "metaDescription" | "url" | "breadcrumbs" | "referencedTexts"
->;;
+  ElasticFicheServicePublic,
+  | "title"
+  | "date"
+  | "metaDescription"
+  | "url"
+  | "breadcrumbs"
+  | "referencedTexts"
+>;
 
 export function FicheServicePublicContainer({
   metaDescription,
@@ -44,20 +47,16 @@ export function FicheServicePublicContainer({
       />
 
       <div className={fr.cx("fr-mb-5w")}>
-        {
-          // Without the check, the prop children of the Answer will evaluate to true
-          // even if in the end, <FicheServicePublic /> returns null
-          raw && <ElementBuilder data={raw.children} />
-        }
-        <div className={fr.cx("fr-callout", "fr-p-4w")}>
-          <h2 className={fr.cx("fr-h5", "fr-pb-1w")}>
-            Références juridiques concernées :
-          </h2>
-          <ReferenceList references={referencedTexts}/>
+        <ElementBuilder data={raw.children} />
 
-        </div>
-
-
+        {referencedTexts?.length > 0 && (
+          <div className={fr.cx("fr-callout", "fr-p-4w")}>
+            <h2 className={fr.cx("fr-h5", "fr-pb-1w")}>
+              Références juridiques concernées :
+            </h2>
+            <ReferenceList references={referencedTexts} />
+          </div>
+        )}
       </div>
     </ContainerRichWithBreadcrumbs>
   );

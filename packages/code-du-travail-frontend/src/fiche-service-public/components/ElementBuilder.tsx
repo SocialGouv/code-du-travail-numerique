@@ -1,16 +1,23 @@
+"use client";
 import React from "react";
-// import { useUIDSeed } from "react-uid";
-import { getText, ignoreParagraph } from "../utils"; // import { LienExterne, LienExterneCommente } from "./LienExterne.js";
-import { fr } from "@codegouvfr/react-dsfr";
+import { useUIDSeed } from "react-uid";
+import { getInChildrenByName, getText, ignoreParagraph } from "../utils";
 import { LienExterne, LienExterneCommente } from "./LienExterne";
 import List from "./List";
 import Accordion from "./Accordion";
 import Title from "./Title";
-import Avertissement from "./Avertissement"; // Beware, this one is recursive
+import Avertissement from "./Avertissement";
+import Table from "./Table";
+import ANoter from "./ANoter";
+import ServiceEnLigne from "./ServiceEnLigne";
+import OuSAdresser from "./OuSAdresser";
+import Tabulator from "./Tabulator";
+import { ImageComponent as ImageElement } from "./ImageComponent";
 
 export type FicheSPDataText = { type: "text"; text: string };
 export type FicheSPDataElement = {
   type: "element";
+  attributes?: Record<string, string>;
   children: FicheSPData[];
   name: string;
 };
@@ -18,8 +25,6 @@ export type FicheSPData = {
   name?: string;
   attributes?: Record<string, string>;
 } & (FicheSPDataElement | FicheSPDataText);
-
-// Beware, this one is recursive
 export const ElementBuilder = ({
   data,
   headingLevel = 0,
@@ -27,15 +32,14 @@ export const ElementBuilder = ({
   data: FicheSPData | FicheSPData[];
   headingLevel?: number;
 }) => {
-  // const seedId = useUIDSeed();
+  const seedId = useUIDSeed();
   // in cases where the parent's "$"/children is undefined while it should not
-  // e.g. in a "Texte" element. It occurs sometimes.
+  // e.g. in a "Texte" element.
   if (!data) return <></>;
-  // In case we get children
 
   if (Array.isArray(data)) {
     return data.map((child) => (
-      <ElementBuilder key={"abc"} data={child} headingLevel={headingLevel} />
+      <ElementBuilder key={seedId(child)} data={child} headingLevel={headingLevel} />
     ));
   }
   if (data.type === "text") {
@@ -45,12 +49,12 @@ export const ElementBuilder = ({
   switch (data.name) {
     case "BlocCas":
       if (data.attributes?.affichage === "onglet") {
-        return "Tabulator"; // <Tabulator data={data} headingLevel={headingLevel} />;
+        return <Tabulator data={data} headingLevel={headingLevel} />;
       } else {
         return <Accordion data={data} headingLevel={headingLevel} />;
       }
     case "Image":
-      return "ImageElement"; //<ImageElement data={data} />;
+      return  <ImageElement data={data} headingLevel={headingLevel} />;
     case "Introduction":
       if (ignoreParagraph(data)) {
         return (
@@ -67,16 +71,16 @@ export const ElementBuilder = ({
     case "Liste":
       return <List data={data} headingLevel={headingLevel} />;
     case "ListeSituations":
-      return "ListeSituations"; // <Tabulator data={data} headingLevel={headingLevel} />;
+      return <Tabulator data={data} headingLevel={headingLevel} />;
     case "OuSAdresser":
-      return "OuSAdresser"; // <OuSAdresser data={data} headingLevel={headingLevel} />;
+      return <OuSAdresser data={data} headingLevel={headingLevel} />;
     case "ServiceEnLigne":
     case "PourEnSavoirPlus":
-      return "ServiceEnLigne"; // <ServiceEnLigne data={data} />;
+      return <ServiceEnLigne data={data} />;
     case "Tableau":
-      return "Table"; // <Table data={data} headingLevel={headingLevel} />;
+      return <Table data={data} headingLevel={headingLevel} />;
     case "Texte":
-      if (data.children.find((child) => child.name === "Chapitre")) {
+      if (getInChildrenByName(data, "Chapitre")) {
         return <Accordion data={data} headingLevel={headingLevel} />;
       }
       return (
@@ -84,18 +88,14 @@ export const ElementBuilder = ({
       );
     case "Titre":
       return <Title level={headingLevel}>{getText(data)}</Title>;
-    // "Simple" elements, we can immediately parse their children
     case "Avertissement":
       return <Avertissement data={data} headingLevel={headingLevel} />;
     case "ANoter":
     case "ASavoir":
     case "Attention":
     case "Rappel":
-      return (
-        <div className={fr.cx("fr-callout", "fr-p-4w")}>
-          <ElementBuilder data={data.children} headingLevel={headingLevel} />
-        </div>
-      );
+      return <ANoter data={data} headingLevel={headingLevel} />;
+
     case "Chapitre":
     case "Description":
     case "FragmentConditionne":
@@ -122,7 +122,6 @@ export const ElementBuilder = ({
           <ElementBuilder data={data.children} headingLevel={headingLevel} />
         </p>
       );
-    // // TODO : check if exists These ones are still to be defined
 
     case "Exposant":
       return (

@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tabulator /> should render 1`] = `
+<div>
+  <div
+    class="fr-tabs"
+    id="fr-tabs-:r0:"
+  >
+    <ul
+      class="fr-tabs__list"
+      role="tablist"
+    >
+      <li
+        role="presentation"
+      >
+        <button
+          aria-controls="tabpanel-:r1:-0-panel"
+          aria-selected="true"
+          class="fr-tabs__tab fr-tabs__tab--icon-left"
+          id="tabpanel-:r1:-0"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <h4>
+            CDI
+          </h4>
+        </button>
+      </li>
+      <li
+        role="presentation"
+      >
+        <button
+          aria-controls="tabpanel-:r1:-1-panel"
+          aria-selected="false"
+          class="fr-tabs__tab fr-tabs__tab--icon-left"
+          id="tabpanel-:r1:-1"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <h4>
+            CDD
+          </h4>
+        </button>
+      </li>
+    </ul>
+    <div
+      aria-labelledby="tabpanel-:r1:-0"
+      class="fr-tabs__panel fr-tabs__panel--selected"
+      id="tabpanel-:r1:-0-panel"
+      role="tabpanel"
+      tabindex="0"
+    >
+      <h5>
+        titre 1
+      </h5>
+      <p>
+        paragraphe 1
+      </p>
+    </div>
+    <div
+      aria-labelledby="tabpanel-:r1:-1"
+      class="fr-tabs__panel fr-tabs__panel"
+      id="tabpanel-:r1:-1-panel"
+      role="tabpanel"
+      tabindex="0"
+    >
+      <h5>
+        titre 2
+      </h5>
+      <p>
+        paragraphe 2-1
+      </p>
+      <p>
+        paragraphe 2-2
+      </p>
+    </div>
+  </div>
+</div>
+`;

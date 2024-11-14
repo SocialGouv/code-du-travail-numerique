@@ -2,12 +2,12 @@ import React from "react";
 
 import { filterOutTitle, getTitleInChildren } from "../utils";
 import { AccordionWithAnchor } from "../../modules/common/AccordionWithAnchor";
-import {ElementBuilder, FicheSPData, FicheSPDataElement} from "./ElementBuilder";
+import { ElementBuilder, FicheSPDataElement } from "./ElementBuilder";
+import { getTitleLevel } from "./Title";
 
-const isItemOfAccordion = (element: FicheSPDataElement ) =>
+const isItemOfAccordion = (element: FicheSPDataElement) =>
   (element.name === "Chapitre" || element.name === "Cas") &&
-  element.children &&
-  element.children.find((child) => child.name === "Titre");
+  getTitleInChildren(element);
 
 export const AccordionWrapper = ({
   data,
@@ -19,10 +19,10 @@ export const AccordionWrapper = ({
   const accordionItems = data.children
     .filter(isItemOfAccordion)
     .map((accordionItem) => {
-      const title = getTitleInChildren(accordionItem);
+      const title = getTitleInChildren(accordionItem as FicheSPDataElement);
       const content = (
         <ElementBuilder
-          data={filterOutTitle(accordionItem)}
+          data={filterOutTitle(accordionItem as FicheSPDataElement)}
           headingLevel={headingLevel + 1}
         />
       );
@@ -37,7 +37,7 @@ export const AccordionWrapper = ({
       {accordionItems.length > 0 && (
         <AccordionWithAnchor
           items={accordionItems}
-          titleAs={("h" + (headingLevel + 2)) as "h2" |"h3" |"h4" |"h5" |"h6"}
+          titleAs={getTitleLevel(headingLevel)}
         />
       )}
     </>
