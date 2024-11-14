@@ -13,11 +13,9 @@ import { ButtonStyle } from "./style";
 
 export const AgreementSearchByName = () => {
   const [searchState, setSearchState] = useState<
-    "noSearch" | "lowSearch" | "errorSearch" | "fullSearch"
+    "noSearch" | "lowSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
   >("noSearch");
-  const [inputState, setInputState] = useState<"error" | "info" | undefined>(
-    "info"
-  );
+  const [error, setError] = useState("");
   const getStateMessage = () => {
     switch (searchState) {
       case "noSearch":
@@ -39,7 +37,7 @@ export const AgreementSearchByName = () => {
             Indiquez au moins 3 caractères afin d&apos;affiner votre recherche
           </>
         );
-      case "errorSearch":
+      case "notFoundSearch":
         return (
           <>
             Aucune convention collective n&apos;a été trouvée.
@@ -48,6 +46,17 @@ export const AgreementSearchByName = () => {
             sur votre bulletin de paie
           </>
         );
+      case "errorSearch":
+        return <>{error}</>;
+    }
+  };
+  const getInputState = () => {
+    switch (searchState) {
+      case "errorSearch":
+      case "notFoundSearch":
+        return "error";
+      case "noSearch":
+        return "info";
     }
   };
   return (
@@ -77,7 +86,7 @@ export const AgreementSearchByName = () => {
               },
             }),
           }}
-          state={inputState}
+          state={getInputState()}
           stateRelatedMessage={getStateMessage()}
           displayLabel={(item) => {
             return item ? `${item.shortTitle} (IDCC ${item.num})` : "";
@@ -88,21 +97,21 @@ export const AgreementSearchByName = () => {
           search={searchAgreement}
           onSearch={(query, agreements) => {
             if (!agreements.length && !query) {
-              setInputState("info");
               setSearchState("noSearch");
             } else if (!agreements.length && query.length <= 2) {
-              setInputState("info");
               setSearchState("lowSearch");
             } else if (!agreements.length && query.length > 2) {
-              setInputState("error");
-              setSearchState("errorSearch");
+              setSearchState("notFoundSearch");
             } else {
-              setInputState(undefined);
               setSearchState("fullSearch");
             }
           }}
+          onError={(message) => {
+            setSearchState("errorSearch");
+            setError(message);
+          }}
         />
-        {inputState === "error" && (
+        {searchState === "notFoundSearch" && (
           <Alert
             className={fr.cx("fr-mt-2w")}
             title="Vous ne trouvez pas votre convention collective ?"
@@ -139,7 +148,7 @@ export const AgreementSearchByName = () => {
         >
           Précédent
         </Button>
-        {inputState === "error" && (
+        {searchState === "notFoundSearch" && (
           <Button
             linkProps={{ href: `/outils/convention-collective/entreprise` }}
             priority="secondary"

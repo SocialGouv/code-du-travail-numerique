@@ -8,6 +8,7 @@ import { css } from "../../../styled-system/css";
 
 type Props<K> = InputProps & {
   onChange?: (value: K | undefined) => void;
+  onError?: (value: string) => void;
   onSearch?: (query: string, results: K[]) => void;
   displayLabel: (item: K | null) => string;
   search: (search: string) => Promise<K[]>;
@@ -19,6 +20,7 @@ export const Autocomplete = <K,>({
   className,
   onChange,
   onSearch,
+  onError,
   displayLabel,
   lineAsLink,
   search,
@@ -51,7 +53,7 @@ export const Autocomplete = <K,>({
         if (onSearch) onSearch(inputValue, results);
         setSuggestions(results);
       } catch (error) {
-        console.error(error);
+        if (onError) onError(error);
         setSuggestions([]);
       }
     },

@@ -20,16 +20,48 @@ type Props = {
 
 export const AgreementSearchByEnterprise = ({ widgetMode = false }: Props) => {
   const [searchState, setSearchState] = useState<
-    "noSearch" | "errorSearch" | "fullSearch"
+    "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
   >("noSearch");
-  const [inputState, setInputState] = useState<"error" | "info" | undefined>(
-    "info"
-  );
   const [search, setSearch] = useState<string>();
   const [searched, setSearched] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
   const [location, setLocation] = useState<ApiGeoResult | undefined>();
   const [enterprises, setEnterprises] = useState<Enterprise[]>();
+  const [error, setError] = useState("");
+  const getStateMessage = () => {
+    switch (searchState) {
+      case "noSearch":
+        return (
+          <>
+            Le numéro Siren est un numéro unique de 9 chiffres attribué à chaque
+            entreprise (ex : 401237780).
+            <br />
+            Le numéro Siret est un numéro de 14 chiffres unique pour chaque
+            établissement de l&apos;entreprise. Il est présent sur la fiche de
+            paie du salarié (ex : 40123778000127).
+          </>
+        );
+      case "notFoundSearch":
+        return (
+          <>
+            Aucune entreprise n&apos;a été trouvée.
+            <br />
+            Vérifiez l’orthographe des termes de recherche
+          </>
+        );
+      case "errorSearch":
+        return <>{error}</>;
+    }
+  };
+  const getInputState = () => {
+    switch (searchState) {
+      case "errorSearch":
+      case "notFoundSearch":
+        return "error";
+      case "noSearch":
+        return "info";
+    }
+  };
   return (
     <>
       <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
@@ -49,43 +81,33 @@ export const AgreementSearchByEnterprise = ({ widgetMode = false }: Props) => {
             return;
           }
           setLoading(true);
-          const result = await searchEnterprises({
-            query: search,
-            apiGeoResult: location,
-          });
-          setSearchState(!result.length ? "errorSearch" : "fullSearch");
-          setInputState(!result.length ? "error" : undefined);
-          setSearchState(
-            search.length > 1 && !result.length ? "errorSearch" : "noSearch"
-          );
-          setLoading(false);
-          setSearched(true);
-          setEnterprises(result);
+          try {
+            const result = await searchEnterprises({
+              query: search,
+              apiGeoResult: location,
+            });
+            setSearchState(!result.length ? "errorSearch" : "fullSearch");
+            setSearchState(
+              search.length > 1 && !result.length
+                ? "notFoundSearch"
+                : "noSearch"
+            );
+            setEnterprises(result);
+          } catch (e) {
+            setSearchState("errorSearch");
+            setError(e);
+          } finally {
+            setLoading(false);
+            setSearched(true);
+          }
         }}
       >
         <Input
           className={fr.cx("fr-col-12", "fr-col-md-5", "fr-mb-0")}
           hintText="Ex : Café de la mairie ou 40123778000127"
           label={<>Nom de votre entreprise ou numéro Siren/Siret</>}
-          state={inputState}
-          stateRelatedMessage={
-            searchState === "errorSearch" ? (
-              <>
-                Aucune entreprise n&apos;a été trouvée.
-                <br />
-                Vérifiez l’orthographe des termes de recherche
-              </>
-            ) : (
-              <>
-                Le numéro Siren est un numéro unique de 9 chiffres attribué à
-                chaque entreprise (ex : 401237780).
-                <br />
-                Le numéro Siret est un numéro de 14 chiffres unique pour chaque
-                établissement de l&apos;entreprise. Il est présent sur la fiche
-                de paie du salarié (ex : 40123778000127).
-              </>
-            )
-          }
+          state={getInputState()}
+          stateRelatedMessage={getStateMessage()}
           nativeInputProps={{
             onChange: (event) => {
               setSearch(event.target.value);
