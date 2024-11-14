@@ -21,10 +21,7 @@ export async function generateMetadata() {
 async function FindAgreementByEnterprisePage() {
   return (
     <FindAgreementWidgetLayout>
-      <AgreementSearchByEnterprise
-        baseUrl="/widgets/convention-collective"
-        widgetMode
-      />
+      <AgreementSearchByEnterprise widgetMode />
     </FindAgreementWidgetLayout>
   );
 }
