@@ -19,6 +19,14 @@ export const fetchAgreements = async <K extends keyof ElasticAgreement>({
   filters,
   size = 100,
 }: Props<K>): Promise<Pick<ElasticAgreement, K>[]> => {
+  const baseFilters: Array<any> = [
+    { term: { source: SOURCES.CCN } },
+    { term: { isPublished: true } },
+    { term: { contributions: true } },
+  ];
+  if (filters?.cdtnIds) {
+    baseFilters.push({ terms: { cdtnId: filters.cdtnIds } });
+  }
   const response = await elasticsearchClient.search<Pick<ElasticAgreement, K>>({
     query: {
       bool: {
@@ -51,11 +59,7 @@ export const fetchAgreements = async <K extends keyof ElasticAgreement>({
               ],
             }
           : {}),
-        filter: [
-          { term: { source: SOURCES.CCN } },
-          { term: { isPublished: true } },
-          { term: { contributions: true } },
-        ],
+        filter: baseFilters,
       },
     },
     size,

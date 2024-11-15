@@ -1,6 +1,7 @@
 import debounce from "debounce-promise";
 import { SITE_URL } from "../../config";
 import { Agreement } from "../../outils/types";
+import { nafError } from "./error";
 
 const formatCCn = ({ num, id, slug, title, shortTitle, highlight, url }) => ({
   ...(highlight ? { highlight } : {}),
@@ -11,10 +12,21 @@ const formatCCn = ({ num, id, slug, title, shortTitle, highlight, url }) => ({
   slug,
   title,
 });
+export const onlyNumberError =
+  "Numéro d’indentification (IDCC) incorrect. Ce numéro est composé de 4 chiffres uniquement.";
 
 const apiIdcc = function createFetcher(query: string): Promise<Agreement[]> {
-  const url = `${SITE_URL}/api/idcc?q=${encodeURIComponent(query)}`;
+  if (/^\d{4}[A-Za-z]$/.test(query.replace(/\W/g, ""))) {
+    return Promise.reject(nafError);
+  }
+  if (/^\d{5,}$/.test(query.replace(/^(\s+)|(\s+)$/g, ""))) {
+    return Promise.reject(onlyNumberError);
+  }
+  let url = `${SITE_URL}/api/idcc?q=${encodeURIComponent(query)}`;
 
+  if (/^\d+$/.test(query.replace(/\W/g, ""))) {
+    url = `${SITE_URL}/api/idcc?q=${encodeURIComponent(parseInt(query.replace(/\W/g, "")))}`;
+  }
   return fetch(url)
     .then(async (response) => {
       if (response.ok) {

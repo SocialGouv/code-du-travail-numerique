@@ -8,12 +8,12 @@ import { css } from "../../../styled-system/css";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;
-  navigationUrl?: string;
+  widgetMode?: boolean;
 };
 
 export const AgreementSelection = ({
-  navigationUrl = "/outils/convention-collective",
   enterprise,
+  widgetMode = false,
 }: Props) => {
   return (
     <>
@@ -54,7 +54,16 @@ export const AgreementSelection = ({
               "aria-disabled": disabled,
               onClick: (ev) => {
                 if (disabled) ev.preventDefault();
+                window.parent?.postMessage(
+                  {
+                    name: "agreement",
+                    kind: "select",
+                    extra: { idcc: agreement.num, title: agreement.title },
+                  },
+                  "*"
+                );
               },
+              ...(widgetMode ? { target: "_blank" } : {}),
             }}
             border
             enlargeLink
@@ -74,7 +83,11 @@ export const AgreementSelection = ({
 
       <div className={fr.cx("fr-mt-2w")}>
         <Button
-          linkProps={{ href: `${navigationUrl}/entreprise` }}
+          linkProps={{
+            href: widgetMode
+              ? "/widgets/convention-collective"
+              : "/outils/convention-collective/entreprise",
+          }}
           priority="secondary"
           className={`${fr.cx("fr-col-12", "fr-col-md-2")} ${ButtonStyle}`}
         >

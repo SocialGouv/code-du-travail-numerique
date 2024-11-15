@@ -6,8 +6,9 @@ import { useCombobox } from "downshift";
 import { useState } from "react";
 import { css } from "../../../styled-system/css";
 
-type Props<K> = InputProps & {
+export type AutocompleteProps<K> = InputProps & {
   onChange?: (value: K | undefined) => void;
+  onError?: (value: string) => void;
   onSearch?: (query: string, results: K[]) => void;
   displayLabel: (item: K | null) => string;
   search: (search: string) => Promise<K[]>;
@@ -19,6 +20,7 @@ export const Autocomplete = <K,>({
   className,
   onChange,
   onSearch,
+  onError,
   displayLabel,
   lineAsLink,
   search,
@@ -28,7 +30,7 @@ export const Autocomplete = <K,>({
   hintText,
   classes,
   dataTestId,
-}: Props<K>) => {
+}: AutocompleteProps<K>) => {
   const [value, setValue] = useState<string>("");
   const [selectedResult, setSelectedResult] = useState<K | undefined>();
   const [suggestions, setSuggestions] = useState<K[]>([]);
@@ -51,7 +53,7 @@ export const Autocomplete = <K,>({
         if (onSearch) onSearch(inputValue, results);
         setSuggestions(results);
       } catch (error) {
-        console.error(error);
+        if (onError) onError(error);
         setSuggestions([]);
       }
     },
@@ -79,6 +81,7 @@ export const Autocomplete = <K,>({
                   onClick={() => {
                     setSelectedResult(undefined);
                     if (onChange) onChange(undefined);
+                    if (onSearch) onSearch("", []);
                     setValue("");
                     setSuggestions([]);
                   }}

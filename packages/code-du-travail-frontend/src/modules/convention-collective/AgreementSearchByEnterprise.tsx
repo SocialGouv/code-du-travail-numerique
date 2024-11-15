@@ -15,18 +15,40 @@ import { CardTitleStyle, ButtonStyle } from "./style";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 
 type Props = {
-  navigationUrl?: string;
+  widgetMode?: boolean;
 };
 
-export const AgreementSearchByEnterprise = ({
-  navigationUrl = "/outils/convention-collective",
-}: Props) => {
-  const [inputState, setInputState] = useState<"error" | undefined>();
+export const AgreementSearchByEnterprise = ({ widgetMode = false }: Props) => {
+  const [searchState, setSearchState] = useState<
+    "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
+  >("noSearch");
   const [search, setSearch] = useState<string>();
   const [searched, setSearched] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
   const [location, setLocation] = useState<ApiGeoResult | undefined>();
   const [enterprises, setEnterprises] = useState<Enterprise[]>();
+  const [error, setError] = useState("");
+  const getStateMessage = () => {
+    switch (searchState) {
+      case "notFoundSearch":
+        return (
+          <>
+            Aucune entreprise n&apos;a été trouvée.
+            <br />
+            Vérifiez l’orthographe des termes de recherche
+          </>
+        );
+      case "errorSearch":
+        return <>{error}</>;
+    }
+  };
+  const getInputState = () => {
+    switch (searchState) {
+      case "errorSearch":
+      case "notFoundSearch":
+        return "error";
+    }
+  };
   return (
     <>
       <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
@@ -35,38 +57,51 @@ export const AgreementSearchByEnterprise = ({
       <form
         className={fr.cx(
           "fr-grid-row",
-          "fr-grid-row--bottom",
+          "fr-grid-row--top",
           "fr-mt-2w",
           "fr-mb-0"
         )}
         onSubmit={async (event) => {
           event.preventDefault();
-          if (!search) return;
+          if (!search) {
+            setSearchState("noSearch");
+            return;
+          }
           setLoading(true);
-          const result = await searchEnterprises({
-            query: search,
-            apiGeoResult: location,
-          });
-          setInputState(
-            search.length > 1 && !result.length ? "error" : undefined
-          );
-          setLoading(false);
-          setSearched(true);
-          setEnterprises(result);
+          try {
+            const result = await searchEnterprises({
+              query: search,
+              apiGeoResult: location,
+            });
+            setSearchState(!result.length ? "errorSearch" : "fullSearch");
+            setSearchState(
+              search.length > 1 && !result.length
+                ? "notFoundSearch"
+                : "noSearch"
+            );
+            setEnterprises(result);
+          } catch (e) {
+            setSearchState("errorSearch");
+            setEnterprises(undefined);
+            setError(e);
+          } finally {
+            setLoading(false);
+            setSearched(true);
+          }
         }}
       >
         <Input
           className={fr.cx("fr-col-12", "fr-col-md-5", "fr-mb-0")}
-          hintText="Ex : Café de la mairie ou 40123778000127"
-          label={<>Nom de votre entreprise ou numéro Siren/Siret</>}
-          state={inputState}
-          stateRelatedMessage={
+          hintText={
             <>
-              Aucune entreprise n&apos;a été trouvée.
+              Ex : Café de la mairie ou 40123778000127
               <br />
-              Vérifiez l’orthographe des termes de recherche
+              (présent sur la fiche de paie du salarié)
             </>
           }
+          label={<>Nom de votre entreprise ou numéro Siren/Siret</>}
+          state={getInputState()}
+          stateRelatedMessage={getStateMessage()}
           nativeInputProps={{
             onChange: (event) => {
               setSearch(event.target.value);
@@ -94,13 +129,14 @@ export const AgreementSearchByEnterprise = ({
             "fr-mt-2w",
             "fr-mt-md-0"
           )}
+          classes={{ label: fr.cx("fr-mb-md-7v") }}
         />
 
         <Button
           type="submit"
           iconPosition="right"
           iconId="fr-icon-search-line"
-          className={`${fr.cx("fr-ml-md-3w", "fr-mt-2w", "fr-mt-md-0", searched && !enterprises?.length ? "fr-mb-7w" : "fr-mb-0")} ${ButtonStyle}`}
+          className={`${fr.cx("fr-ml-md-3w", "fr-mt-2w", "fr-mt-md-19v", searched && !enterprises?.length ? "fr-mb-7w" : "fr-mb-0")} ${ButtonStyle}`}
         >
           Rechercher
         </Button>
@@ -114,7 +150,7 @@ export const AgreementSearchByEnterprise = ({
             </p>
           )}
           {loading && <p className={fr.cx("fr-h5")}>chargement en cours ...</p>}
-          {inputState === "error" && (
+          {searchState === "notFoundSearch" && (
             <Alert
               title="Vous ne trouvez pas votre entreprise ?"
               description={
@@ -148,7 +184,7 @@ export const AgreementSearchByEnterprise = ({
               border
               enlargeLink
               linkProps={{
-                href: `${navigationUrl}/selection/${enterprise.siren}`,
+                href: `/${widgetMode ? "widgets" : "outils"}/convention-collective/selection/${enterprise.siren}`,
               }}
               desc={`Activité : ${enterprise.activitePrincipale}`}
               end={<Badge>{`${enterprise.matching} établissements`}</Badge>}
@@ -173,6 +209,7 @@ export const AgreementSearchByEnterprise = ({
           enlargeLink
           linkProps={{
             href: `/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile`,
+            ...(widgetMode ? { target: "_blank" } : {}),
           }}
           title="Particuliers employeurs et emploi à domicile"
           desc="Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective"
@@ -185,15 +222,17 @@ export const AgreementSearchByEnterprise = ({
           }}
         />
       </div>
-      <div className={fr.cx("fr-mt-2w")}>
-        <Button
-          linkProps={{ href: navigationUrl }}
-          priority="secondary"
-          className={ButtonStyle}
-        >
-          Précédent
-        </Button>
-      </div>
+      {!widgetMode && (
+        <div className={fr.cx("fr-mt-2w")}>
+          <Button
+            linkProps={{ href: "/outils/convention-collective" }}
+            priority="secondary"
+            className={ButtonStyle}
+          >
+            Précédent
+          </Button>
+        </div>
+      )}
     </>
   );
 };

@@ -12,6 +12,7 @@ export const sources = [
   SOURCES.LETTERS,
   SOURCES.CONTRIBUTIONS,
   SOURCES.EXTERNALS,
+  SOURCES.LABOUR_LAW,
 ] as const;
 
 export type RelatedItem = Pick<DocumentElastic, "title"> & {

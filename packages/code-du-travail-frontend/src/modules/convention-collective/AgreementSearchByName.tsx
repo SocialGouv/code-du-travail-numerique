@@ -11,14 +11,39 @@ import { searchAgreement } from "./agreement.service";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { ButtonStyle } from "./style";
 
-type Props = {
-  navigationUrl?: string;
-};
-
-export const AgreementSearchByName = ({
-  navigationUrl = "/outils/convention-collective",
-}: Props) => {
-  const [inputState, setInputState] = useState<"error" | "info" | undefined>();
+export const AgreementSearchByName = () => {
+  const [searchState, setSearchState] = useState<
+    "noSearch" | "lowSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
+  >("noSearch");
+  const [error, setError] = useState("");
+  const getStateMessage = () => {
+    switch (searchState) {
+      case "lowSearch":
+        return (
+          <>
+            Indiquez au moins 3 caractères afin d&apos;affiner votre recherche
+          </>
+        );
+      case "notFoundSearch":
+        return (
+          <>
+            Aucune convention collective n&apos;a été trouvée.
+            <br />
+            Vérifiez l’orthographe de votre recherche ou le chiffre IDCC présent
+            sur votre bulletin de paie
+          </>
+        );
+      case "errorSearch":
+        return <>{error}</>;
+    }
+  };
+  const getInputState = () => {
+    switch (searchState) {
+      case "errorSearch":
+      case "notFoundSearch":
+        return "error";
+    }
+  };
   return (
     <>
       <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
@@ -46,22 +71,8 @@ export const AgreementSearchByName = ({
               },
             }),
           }}
-          state={inputState}
-          stateRelatedMessage={
-            inputState === "error" ? (
-              <>
-                Aucune convention collective n&apos;a été trouvée.
-                <br />
-                Vérifiez l’orthographe de votre recherche ou le chiffre IDCC
-                présent sur votre bulletin de paie
-              </>
-            ) : (
-              <>
-                Indiquez au moins 3 caractères afin d&apos;affiner votre
-                recherche
-              </>
-            )
-          }
+          state={getInputState()}
+          stateRelatedMessage={getStateMessage()}
           displayLabel={(item) => {
             return item ? `${item.shortTitle} (IDCC ${item.num})` : "";
           }}
@@ -70,14 +81,22 @@ export const AgreementSearchByName = ({
           }}
           search={searchAgreement}
           onSearch={(query, agreements) => {
-            if (agreements.length || query.length === 0)
-              setInputState(undefined);
-            else {
-              setInputState(query.length <= 2 ? "info" : "error");
+            if (!query) {
+              setSearchState("noSearch");
+            } else if (!agreements.length && query.length <= 2) {
+              setSearchState("lowSearch");
+            } else if (!agreements.length && query.length > 2) {
+              setSearchState("notFoundSearch");
+            } else {
+              setSearchState("fullSearch");
             }
           }}
+          onError={(message) => {
+            setSearchState("errorSearch");
+            setError(message);
+          }}
         />
-        {inputState === "error" && (
+        {searchState === "notFoundSearch" && (
           <Alert
             className={fr.cx("fr-mt-2w")}
             title="Vous ne trouvez pas votre convention collective ?"
@@ -108,15 +127,15 @@ export const AgreementSearchByName = ({
       </div>
       <div className={fr.cx("fr-mt-2w")}>
         <Button
-          linkProps={{ href: navigationUrl }}
+          linkProps={{ href: "/outils/convention-collective" }}
           priority="secondary"
           className={ButtonStyle}
         >
           Précédent
         </Button>
-        {inputState === "error" && (
+        {searchState === "notFoundSearch" && (
           <Button
-            linkProps={{ href: `${navigationUrl}/entreprise` }}
+            linkProps={{ href: `/outils/convention-collective/entreprise` }}
             priority="secondary"
             className={`${fr.cx("fr-ml-md-2w", "fr-mt-2w", "fr-mt-md-0")} ${ButtonStyle}`}
           >

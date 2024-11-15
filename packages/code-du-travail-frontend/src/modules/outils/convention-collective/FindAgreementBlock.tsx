@@ -6,13 +6,17 @@ import { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
+  noBackground?: boolean;
 };
 
-export const FindAgreementBlock = ({ children }: Props) => {
+export const FindAgreementBlock = ({
+  children,
+  noBackground = false,
+}: Props) => {
   return (
     <div
       id="convention-collective"
-      className={`${fr.cx("fr-p-3w", "fr-mb-6w")} ${block}`}
+      className={`${fr.cx("fr-p-3w")} ${noBackground ? "" : block}`}
     >
       <div className={"fr-grid-row"}>
         <Image
