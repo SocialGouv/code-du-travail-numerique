@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../../src/modules/common/metas";
 import { ElasticTool } from "../../../../src/modules/outils/type";
 import { AgreementSearchByEnterprise } from "../../../../src/modules/convention-collective";
+import { agreementRelatedItems } from "../../../../src/modules/convention-collective/agreementRelatedItems";
 
 const SLUG = "convention-collective";
 
@@ -23,11 +24,10 @@ export async function generateMetadata() {
 
 async function FindAgreementByEnterprisePage() {
   const tool = await getTool();
-  const relatedItems = await fetchRelatedItems({ _id: tool._id }, SLUG);
   return (
     <DsfrLayout>
       <FindAgreementLayout
-        relatedItems={relatedItems}
+        relatedItems={agreementRelatedItems}
         description={tool.description}
       >
         <AgreementSearchByEnterprise />
