@@ -30,17 +30,6 @@ export const AgreementSearchByEnterprise = ({ widgetMode = false }: Props) => {
   const [error, setError] = useState("");
   const getStateMessage = () => {
     switch (searchState) {
-      case "noSearch":
-        return (
-          <>
-            Le numéro Siren est un numéro unique de 9 chiffres attribué à chaque
-            entreprise (ex : 401237780).
-            <br />
-            Le numéro Siret est un numéro de 14 chiffres unique pour chaque
-            établissement de l&apos;entreprise. Il est présent sur la fiche de
-            paie du salarié (ex : 40123778000127).
-          </>
-        );
       case "notFoundSearch":
         return (
           <>
@@ -58,8 +47,6 @@ export const AgreementSearchByEnterprise = ({ widgetMode = false }: Props) => {
       case "errorSearch":
       case "notFoundSearch":
         return "error";
-      case "noSearch":
-        return "info";
     }
   };
   return (
@@ -95,6 +82,7 @@ export const AgreementSearchByEnterprise = ({ widgetMode = false }: Props) => {
             setEnterprises(result);
           } catch (e) {
             setSearchState("errorSearch");
+            setEnterprises(undefined);
             setError(e);
           } finally {
             setLoading(false);
@@ -104,7 +92,13 @@ export const AgreementSearchByEnterprise = ({ widgetMode = false }: Props) => {
       >
         <Input
           className={fr.cx("fr-col-12", "fr-col-md-5", "fr-mb-0")}
-          hintText="Ex : Café de la mairie ou 40123778000127"
+          hintText={
+            <>
+              Ex : Café de la mairie ou 40123778000127
+              <br />
+              (présent sur la fiche de paie du salarié)
+            </>
+          }
           label={<>Nom de votre entreprise ou numéro Siren/Siret</>}
           state={getInputState()}
           stateRelatedMessage={getStateMessage()}
@@ -135,13 +129,14 @@ export const AgreementSearchByEnterprise = ({ widgetMode = false }: Props) => {
             "fr-mt-2w",
             "fr-mt-md-0"
           )}
+          classes={{ label: fr.cx("fr-mb-md-7v") }}
         />
 
         <Button
           type="submit"
           iconPosition="right"
           iconId="fr-icon-search-line"
-          className={`${fr.cx("fr-ml-md-3w", "fr-mt-2w", "fr-mt-md-7w", searched && !enterprises?.length ? "fr-mb-7w" : "fr-mb-0")} ${ButtonStyle}`}
+          className={`${fr.cx("fr-ml-md-3w", "fr-mt-2w", "fr-mt-md-19v", searched && !enterprises?.length ? "fr-mb-7w" : "fr-mb-0")} ${ButtonStyle}`}
         >
           Rechercher
         </Button>
@@ -155,7 +150,7 @@ export const AgreementSearchByEnterprise = ({ widgetMode = false }: Props) => {
             </p>
           )}
           {loading && <p className={fr.cx("fr-h5")}>chargement en cours ...</p>}
-          {searchState === "errorSearch" && (
+          {searchState === "notFoundSearch" && (
             <Alert
               title="Vous ne trouvez pas votre entreprise ?"
               description={

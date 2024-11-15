@@ -3,7 +3,6 @@ import { UserAction } from "../../../common";
 import React from "react";
 import { AgreementSearchByName } from "../AgreementSearchByName";
 import { ui } from "./ui";
-import { screen } from "@testing-library/react";
 import { wait } from "@testing-library/user-event/dist/utils";
 import { act } from "react-dom/test-utils";
 import { searchAgreement } from "../agreement.service";
@@ -60,6 +59,13 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
       await wait();
       expect(ui.searchByName.errorNotFound.error.query()).toBeInTheDocument();
       expect(ui.searchByName.errorNotFound.info.query()).toBeInTheDocument();
+      userAction.click(ui.searchByName.inputCloseBtn.get());
+      expect(
+        ui.searchByName.errorNotFound.error.query()
+      ).not.toBeInTheDocument();
+      expect(
+        ui.searchByName.errorNotFound.info.query()
+      ).not.toBeInTheDocument();
     });
     it("Vérifier l'affichage des infos si moins 2 caractères", () => {
       (searchAgreement as jest.Mock).mockImplementation(() =>
@@ -70,6 +76,8 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
         userAction.setInput(ui.searchByName.input.get(), "cc");
         await wait();
         expect(ui.searchByName.infoNotFound.query()).toBeInTheDocument();
+        userAction.click(ui.searchByName.inputCloseBtn.get());
+        expect(ui.searchByName.infoNotFound.query()).not.toBeInTheDocument();
       });
     });
   });

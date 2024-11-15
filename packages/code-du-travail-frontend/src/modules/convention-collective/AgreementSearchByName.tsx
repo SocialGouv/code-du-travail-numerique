@@ -18,19 +18,6 @@ export const AgreementSearchByName = () => {
   const [error, setError] = useState("");
   const getStateMessage = () => {
     switch (searchState) {
-      case "noSearch":
-        return (
-          <>
-            L’Identifiant de la Convention Collective (IDCC) est un numéro
-            unique de 4 chiffres déterminant chaque convention collective
-            (Ex&nbsp; : 1090 ou 1486).
-            <br />
-            Attention à ne pas confondre avec les codes APE (Activité Principale
-            Exercée) ou NAF (Nomenclature des Activités Françaises) qui sont des
-            numéros composés de 4 chiffres et d’une lettre dont l’objectif est
-            d’identifier l’activité principale de l’entreprise (Ex : 4752A).
-          </>
-        );
       case "lowSearch":
         return (
           <>
@@ -55,8 +42,6 @@ export const AgreementSearchByName = () => {
       case "errorSearch":
       case "notFoundSearch":
         return "error";
-      case "noSearch":
-        return "info";
     }
   };
   return (
@@ -96,7 +81,7 @@ export const AgreementSearchByName = () => {
           }}
           search={searchAgreement}
           onSearch={(query, agreements) => {
-            if (!agreements.length && !query) {
+            if (!query) {
               setSearchState("noSearch");
             } else if (!agreements.length && query.length <= 2) {
               setSearchState("lowSearch");
