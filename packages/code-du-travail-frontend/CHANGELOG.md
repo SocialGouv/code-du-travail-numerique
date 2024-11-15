@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.164.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.163.0...v4.164.0) (2024-11-15)
+
+
+### Features
+
+* ajout d'events pour suivre les clicks sur des aides ([#6303](https://github.com/SocialGouv/code-du-travail-numerique/issues/6303)) ([f077b10](https://github.com/SocialGouv/code-du-travail-numerique/commit/f077b1019ea3eec13716ffc196fa464f181842d7))
+
+
+
+
+
 # [4.163.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.162.0...v4.163.0) (2024-11-13)
 
 
