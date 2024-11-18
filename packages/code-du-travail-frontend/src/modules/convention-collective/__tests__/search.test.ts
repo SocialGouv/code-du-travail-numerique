@@ -1,6 +1,6 @@
 /** @jest-environment node */
 
-import { searchAgreement } from "../agreement.service";
+import { searchAgreement } from "../search";
 import { nafError } from "../error";
 
 describe("Test messages erreur api cc", () => {

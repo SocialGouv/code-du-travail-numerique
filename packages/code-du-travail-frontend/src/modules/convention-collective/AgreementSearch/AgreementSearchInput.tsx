@@ -3,15 +3,17 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { useState } from "react";
-import { css } from "../../../styled-system/css";
+import { css } from "../../../../styled-system/css";
 
-import { Autocomplete } from "../common/Autocomplete";
-import { Agreement } from "../../outils/types";
-import { searchAgreement } from "./agreement.service";
-import Button from "@codegouvfr/react-dsfr/Button";
-import { ButtonStyle } from "./style";
+import { Autocomplete } from "../../common/Autocomplete";
+import { Agreement } from "../../../outils/types";
+import { searchAgreement } from "../search";
 
-export const AgreementSearchByName = () => {
+type Props = {
+  onSearch?: (query: string, value?: Agreement[]) => void;
+};
+
+export const AgreementSearchInput = ({ onSearch }: Props) => {
   const [searchState, setSearchState] = useState<
     "noSearch" | "lowSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
   >("noSearch");
@@ -81,6 +83,7 @@ export const AgreementSearchByName = () => {
           }}
           search={searchAgreement}
           onSearch={(query, agreements) => {
+            if (onSearch) onSearch(query, agreements);
             if (!query) {
               setSearchState("noSearch");
             } else if (!agreements.length && query.length <= 2) {
@@ -123,24 +126,6 @@ export const AgreementSearchByName = () => {
             }
             severity="info"
           />
-        )}
-      </div>
-      <div className={fr.cx("fr-mt-2w")}>
-        <Button
-          linkProps={{ href: "/outils/convention-collective" }}
-          priority="secondary"
-          className={ButtonStyle}
-        >
-          Précédent
-        </Button>
-        {searchState === "notFoundSearch" && (
-          <Button
-            linkProps={{ href: `/outils/convention-collective/entreprise` }}
-            priority="secondary"
-            className={`${fr.cx("fr-ml-md-2w", "fr-mt-2w", "fr-mt-md-0")} ${ButtonStyle}`}
-          >
-            Rechercher par entreprise
-          </Button>
         )}
       </div>
     </>

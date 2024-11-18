@@ -1,7 +1,7 @@
 import debounce from "debounce-promise";
+import { nafError } from "./error";
 import { SITE_URL } from "../../config";
 import { Agreement } from "../../outils/types";
-import { nafError } from "./error";
 
 const formatCCn = ({ num, id, slug, title, shortTitle, highlight, url }) => ({
   ...(highlight ? { highlight } : {}),
@@ -12,6 +12,7 @@ const formatCCn = ({ num, id, slug, title, shortTitle, highlight, url }) => ({
   slug,
   title,
 });
+
 export const onlyNumberError =
   "Numéro d’indentification (IDCC) incorrect. Ce numéro est composé de 4 chiffres uniquement.";
 

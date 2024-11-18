@@ -1,12 +1,12 @@
 import { render, RenderResult } from "@testing-library/react";
-import { UserAction } from "../../../common";
+import { UserAction } from "../../../../common";
 import React from "react";
-import { AgreementSearchByEnterprise } from "../AgreementSearchByEnterprise";
+import { EnterpriseAgreementSearch } from "../EnterpriseAgreementSearch";
 import { ui } from "./ui";
 import { wait } from "@testing-library/user-event/dist/utils";
-import { searchEnterprises } from "../../Enterprise/enterprises.service";
+import { searchEnterprises } from "../../queries";
 
-jest.mock("../../Enterprise/enterprises.service", () => ({
+jest.mock("../../queries", () => ({
   searchEnterprises: jest.fn(),
 }));
 
@@ -16,7 +16,7 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
     let userAction: UserAction;
     beforeEach(() => {
       jest.resetAllMocks();
-      rendering = render(<AgreementSearchByEnterprise />);
+      rendering = render(<EnterpriseAgreementSearch />);
     });
     it("Vérifier l'affichage de la recherche", async () => {
       (searchEnterprises as jest.Mock).mockImplementation(() =>
@@ -52,14 +52,17 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
         ])
       );
       userAction = new UserAction();
-      userAction.setInput(ui.searchByEnterprise.input.get(), "carrefour");
-      userAction.click(ui.searchByEnterprise.submitButton.get());
+      userAction.setInput(
+        ui.enterpriseAgreementSearch.input.get(),
+        "carrefour"
+      );
+      userAction.click(ui.enterpriseAgreementSearch.submitButton.get());
       await wait();
       expect(
-        ui.searchByEnterprise.resultLines.carrefour.title.query()
+        ui.enterpriseAgreementSearch.resultLines.carrefour.title.query()
       ).toBeInTheDocument();
       expect(
-        ui.searchByEnterprise.resultLines.carrefour.link.query()
+        ui.enterpriseAgreementSearch.resultLines.carrefour.link.query()
       ).toHaveAttribute(
         "href",
         "/outils/convention-collective/selection/345130488"
@@ -71,14 +74,17 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
         Promise.resolve([])
       );
       userAction = new UserAction();
-      userAction.setInput(ui.searchByEnterprise.input.get(), "recherche");
-      userAction.click(ui.searchByEnterprise.submitButton.get());
+      userAction.setInput(
+        ui.enterpriseAgreementSearch.input.get(),
+        "recherche"
+      );
+      userAction.click(ui.enterpriseAgreementSearch.submitButton.get());
       await wait();
       expect(
-        ui.searchByEnterprise.errorNotFound.error.query()
+        ui.enterpriseAgreementSearch.errorNotFound.error.query()
       ).toBeInTheDocument();
       expect(
-        ui.searchByEnterprise.errorNotFound.info.query()
+        ui.enterpriseAgreementSearch.errorNotFound.info.query()
       ).toBeInTheDocument();
     });
   });

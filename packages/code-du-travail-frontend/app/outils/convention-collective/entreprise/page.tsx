@@ -1,13 +1,10 @@
 import { DsfrLayout } from "../../../../src/modules/layout";
-import {
-  DocumentElasticResult,
-  fetchRelatedItems,
-} from "../../../../src/modules/documents";
+import { DocumentElasticResult } from "../../../../src/modules/documents";
 import { fetchTool, FindAgreementLayout } from "../../../../src/modules/outils";
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../../src/modules/common/metas";
 import { ElasticTool } from "../../../../src/modules/outils/type";
-import { AgreementSearchByEnterprise } from "../../../../src/modules/convention-collective";
+import { EnterpriseAgreementSearch } from "../../../../src/modules/enterprise";
 import { agreementRelatedItems } from "../../../../src/modules/convention-collective/agreementRelatedItems";
 
 const SLUG = "convention-collective";
@@ -30,7 +27,7 @@ async function FindAgreementByEnterprisePage() {
         relatedItems={agreementRelatedItems}
         description={tool.description}
       >
-        <AgreementSearchByEnterprise />
+        <EnterpriseAgreementSearch />
       </FindAgreementLayout>
     </DsfrLayout>
   );

@@ -1,6 +1,6 @@
 /** @jest-environment node */
 
-import { searchEnterprises } from "../enterprises.service";
+import { searchEnterprises } from "../queries";
 
 describe("Test messages erreur api entreprise", () => {
   it("Vérifier l'affichage du message d'erreur siren/siret", async () => {

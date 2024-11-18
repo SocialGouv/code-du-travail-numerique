@@ -10,8 +10,8 @@ import {
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../../../src/modules/common/metas";
 import { ElasticTool } from "../../../../../src/modules/outils/type";
-import { AgreementSelection } from "../../../../../src/modules/convention-collective";
-import { searchEnterprises } from "../../../../../src/modules/Enterprise/enterprises.service";
+import { EnterpriseAgreementSelection } from "../../../../../src/modules/enterprise";
+import { searchEnterprises } from "../../../../../src/modules/enterprise/queries";
 import { agreementRelatedItems } from "../../../../../src/modules/convention-collective/agreementRelatedItems";
 
 const SLUG = "convention-collective";
@@ -37,7 +37,7 @@ async function AgreementSelectionPage({ params }) {
         relatedItems={agreementRelatedItems}
         description={tool.description}
       >
-        <AgreementSelection enterprise={enterprise} />
+        <EnterpriseAgreementSelection enterprise={enterprise} />
       </FindAgreementLayout>
     </DsfrLayout>
   );

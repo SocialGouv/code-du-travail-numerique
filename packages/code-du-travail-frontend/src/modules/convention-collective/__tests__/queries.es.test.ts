@@ -32,4 +32,14 @@ describe("Conventions collectives", () => {
       },
     ]);
   });
+
+  it("Récupération des cc filtrées", async () => {
+    const result = await fetchAgreements({
+      fields: ["slug"],
+      filters: {
+        cdtnIds: ["647c224c9b", "a25dfc974f", "98b9c85542"],
+      },
+    });
+    expect(result.length).toEqual(3);
+  });
 });
