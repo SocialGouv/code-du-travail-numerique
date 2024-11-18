@@ -5,20 +5,22 @@ import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import { Card } from "@codegouvfr/react-dsfr/Card";
 import { useState } from "react";
-import { css } from "../../../styled-system/css";
+import { css } from "../../../../styled-system/css";
 
-import { LocationSearchInput } from "../Location/LocationSearchInput";
-import { searchEnterprises } from "../Enterprise/enterprises.service";
-import { Enterprise } from "../Enterprise/types";
-import { ApiGeoResult } from "../Location/searchCities";
-import { CardTitleStyle, ButtonStyle } from "./style";
+import { LocationSearchInput } from "../../Location/LocationSearchInput";
+import { searchEnterprises } from "../queries";
+import { Enterprise } from "../types";
+import { ApiGeoResult } from "../../Location/searchCities";
+import { CardTitleStyle, ButtonStyle } from "../../convention-collective/style";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 
 type Props = {
   widgetMode?: boolean;
 };
 
-export const AgreementSearchByEnterprise = ({ widgetMode = false }: Props) => {
+export const EnterpriseAgreementSearchInput = ({
+  widgetMode = false,
+}: Props) => {
   const [searchState, setSearchState] = useState<
     "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
   >("noSearch");
@@ -222,22 +224,11 @@ export const AgreementSearchByEnterprise = ({ widgetMode = false }: Props) => {
           }}
         />
       </div>
-      {!widgetMode && (
-        <div className={fr.cx("fr-mt-2w")}>
-          <Button
-            linkProps={{ href: "/outils/convention-collective" }}
-            priority="secondary"
-            className={ButtonStyle}
-          >
-            Précédent
-          </Button>
-        </div>
-      )}
     </>
   );
 };
 
-export const CardSmallTitleStyle = css({
+const CardSmallTitleStyle = css({
   fontSize: "initial !important",
   "& > a": {
     _after: {

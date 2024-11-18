@@ -1,17 +1,16 @@
-"use client";
 import { fr } from "@codegouvfr/react-dsfr";
 import Card from "@codegouvfr/react-dsfr/Card";
 import Button from "@codegouvfr/react-dsfr/Button";
-import { Enterprise } from "../Enterprise/types";
-import { ButtonStyle, CardTitleStyle } from "./style";
-import { css } from "../../../styled-system/css";
+import { Enterprise } from "../types";
+import { ButtonStyle, CardTitleStyle } from "../../convention-collective/style";
+import { css } from "../../../../styled-system/css";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;
   widgetMode?: boolean;
 };
 
-export const AgreementSelection = ({
+export const EnterpriseAgreementSelection = ({
   enterprise,
   widgetMode = false,
 }: Props) => {
@@ -52,17 +51,24 @@ export const AgreementSelection = ({
             linkProps={{
               href: !disabled ? `/convention-collective/${agreement.slug}` : "",
               "aria-disabled": disabled,
-              onClick: (ev) => {
-                if (disabled) ev.preventDefault();
-                window.parent?.postMessage(
-                  {
-                    name: "agreement",
-                    kind: "select",
-                    extra: { idcc: agreement.num, title: agreement.title },
-                  },
-                  "*"
-                );
-              },
+              ...(widgetMode
+                ? {
+                    onClick: (ev) => {
+                      if (disabled) ev.preventDefault();
+                      window.parent?.postMessage(
+                        {
+                          name: "agreement",
+                          kind: "select",
+                          extra: {
+                            idcc: agreement.num,
+                            title: agreement.title,
+                          },
+                        },
+                        "*"
+                      );
+                    },
+                  }
+                : {}),
               ...(widgetMode ? { target: "_blank" } : {}),
             }}
             border

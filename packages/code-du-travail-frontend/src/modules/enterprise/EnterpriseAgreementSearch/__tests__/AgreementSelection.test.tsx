@@ -1,6 +1,6 @@
 import { render, RenderResult } from "@testing-library/react";
 import React from "react";
-import { AgreementSelection } from "../AgreementSelection";
+import { EnterpriseAgreementSelection } from "../EnterpriseAgreementSelection";
 import { ui } from "./ui";
 
 const defaultEnterprise = {
@@ -34,12 +34,24 @@ const defaultEnterprise = {
 describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
   let rendering: RenderResult;
   it("Vérifier l'affichage de la selection", async () => {
-    rendering = render(<AgreementSelection enterprise={defaultEnterprise} />);
-    expect(ui.selection.carrefour.title.query()).toBeInTheDocument();
-    expect(ui.selection.carrefour.activity.query()).toBeInTheDocument();
-    expect(ui.selection.carrefour.address.query()).toBeInTheDocument();
-    expect(ui.selection.agreement.IDCC2216.title.query()).toBeInTheDocument();
-    expect(ui.selection.agreement.IDCC2216.link.query()).toHaveAttribute(
+    rendering = render(
+      <EnterpriseAgreementSelection enterprise={defaultEnterprise} />
+    );
+    expect(
+      ui.enterpriseAgreementSelection.carrefour.title.query()
+    ).toBeInTheDocument();
+    expect(
+      ui.enterpriseAgreementSelection.carrefour.activity.query()
+    ).toBeInTheDocument();
+    expect(
+      ui.enterpriseAgreementSelection.carrefour.address.query()
+    ).toBeInTheDocument();
+    expect(
+      ui.enterpriseAgreementSelection.agreement.IDCC2216.title.query()
+    ).toBeInTheDocument();
+    expect(
+      ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
+    ).toHaveAttribute(
       "href",
       "/convention-collective/2216-commerce-de-detail-et-de-gros-a-predominance-alimentaire"
     );
@@ -47,7 +59,7 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
 
   it("Vérifier l'affichage de la selection avec une CC désactivée", async () => {
     rendering = render(
-      <AgreementSelection
+      <EnterpriseAgreementSelection
         enterprise={{
           ...defaultEnterprise,
           conventions: [
@@ -66,9 +78,8 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
         }}
       />
     );
-    expect(ui.selection.agreement.IDCC2216.link.query()).toHaveAttribute(
-      "href",
-      ""
-    );
+    expect(
+      ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
+    ).toHaveAttribute("href", "");
   });
 });

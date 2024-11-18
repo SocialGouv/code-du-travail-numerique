@@ -6,11 +6,14 @@ import { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
+  title?: string;
+  description?: string;
   noBackground?: boolean;
 };
 
 export const FindAgreementBlock = ({
   children,
+  title = "Trouver sa convention collective",
   noBackground = false,
 }: Props) => {
   return (
@@ -22,12 +25,10 @@ export const FindAgreementBlock = ({
         <Image
           priority
           src={AgreementSearch}
-          alt="Trouver sa convention collective"
+          alt={title}
           className={fr.cx("fr-unhidden-md", "fr-hidden")}
         />
-        <h1 className={fr.cx("fr-h3", "fr-mt-1w", "fr-mb-1w")}>
-          Trouver sa convention collective
-        </h1>
+        <h1 className={fr.cx("fr-h3", "fr-mt-1w", "fr-mb-1w")}>{title}</h1>
       </div>
       <div>{children}</div>
     </div>

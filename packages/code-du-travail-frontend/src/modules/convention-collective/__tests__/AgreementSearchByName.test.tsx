@@ -1,13 +1,13 @@
 import { render, RenderResult } from "@testing-library/react";
 import { UserAction } from "../../../common";
 import React from "react";
-import { AgreementSearchByName } from "../AgreementSearchByName";
+import { AgreementSearch } from "../AgreementSearch";
 import { ui } from "./ui";
 import { wait } from "@testing-library/user-event/dist/utils";
 import { act } from "react-dom/test-utils";
-import { searchAgreement } from "../agreement.service";
+import { searchAgreement } from "../search";
 
-jest.mock("../agreement.service", () => ({
+jest.mock("../search", () => ({
   searchAgreement: jest.fn(),
 }));
 
@@ -17,7 +17,7 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
     let userAction: UserAction;
     beforeEach(() => {
       jest.resetAllMocks();
-      rendering = render(<AgreementSearchByName />);
+      rendering = render(<AgreementSearch />);
     });
     it("Vérifier le déroulement de la liste & effacement", async () => {
       (searchAgreement as jest.Mock).mockImplementation(() =>
