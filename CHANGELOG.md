@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.164.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.164.0...v4.164.1) (2024-11-18)
+
+
+### Bug Fixes
+
+* **fiches-mt:** modication de la canonical ([#6306](https://github.com/SocialGouv/code-du-travail-numerique/issues/6306)) ([cf296a8](https://github.com/SocialGouv/code-du-travail-numerique/commit/cf296a8f382b875a148703837309118bf286c42e))
+
+
+
+
+
 # [4.164.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.163.0...v4.164.0) (2024-11-15)
 
 
