@@ -7,12 +7,12 @@ import { FicheMinistereTravail } from "../../../src/modules/fiche-ministere-trav
 import { fetchRelatedItems } from "../../../src/modules/documents";
 
 export async function generateMetadata({ params }) {
-  const { title, description } = await getFiche(params.slug);
+  const { title, description, url } = await getFiche(params.slug);
 
   return generateDefaultMetadata({
     title: title,
     description: description,
-    overrideCanonical: `${params.url}`,
+    overrideCanonical: url,
   });
 }
 
