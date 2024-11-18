@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
   return generateDefaultMetadata({
     title: title,
     description: description,
-    overrideCanonical: `https://travail-emploi.gouv.fr/${params.slug}`,
+    overrideCanonical: `${params.url}`,
   });
 }
 
