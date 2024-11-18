@@ -5,15 +5,14 @@ import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import { fetchFicheMT } from "../../../src/modules/fiche-ministere-travail/queries";
 import { FicheMinistereTravail } from "../../../src/modules/fiche-ministere-travail/ficheMinistereTravail";
 import { fetchRelatedItems } from "../../../src/modules/documents";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 
 export async function generateMetadata({ params }) {
-  const { title, description } = await getFiche(params.slug);
+  const { title, description, url } = await getFiche(params.slug);
 
   return generateDefaultMetadata({
     title: title,
     description: description,
-    path: `/${getRouteBySource(SOURCES.SHEET_MT)}/${params.slug}`,
+    overrideCanonical: url,
   });
 }
 
