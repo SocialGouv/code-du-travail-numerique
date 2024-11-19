@@ -2,7 +2,7 @@ export type FicheSPDataText = { type: "text"; text: string };
 
 export type FicheSPDataElementWithElementChildren =
   | FicheSPDataImage
-  | OuSAdresserType
+  | FicheSPDataOuSAdresser
   | FicheSPDataWithElementChildren
   | FicheSPDataLienExterneCommente
   | FicheSPDataCas
@@ -37,8 +37,8 @@ export type FicheSPData =
   | FicheSPDataParagraphe
   | FicheSPDataLienExterneCommente
   | FicheSPDataLienExterne
-  | RessourceWebType
-  | OuSAdresserType
+  | FicheSPDataRessourceWeb
+  | FicheSPDataOuSAdresser
   | FicheSPDataWithElementChildren
   | FicheSPDataTexteChapitre
   | FicheSPDataSituation
@@ -145,7 +145,7 @@ export type FicheSPDataList = {
   name: "Liste";
 };
 
-export type RessourceWebType = {
+export type FicheSPDataRessourceWeb = {
   type: "element";
   attributes: {
     URL: string;
@@ -154,9 +154,9 @@ export type RessourceWebType = {
   name: "RessourceWeb";
 };
 
-export type OuSAdresserType = {
+export type FicheSPDataOuSAdresser = {
   type: "element";
-  children: (RessourceWebType | FicheSPDataElement)[];
+  children: (FicheSPDataRessourceWeb | FicheSPDataElement)[];
   name: "OuSAdresser";
 };
 

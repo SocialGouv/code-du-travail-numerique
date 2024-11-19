@@ -5,13 +5,13 @@ import { ElementBuilder } from "./ElementBuilder";
 import Title from "./Title";
 import { fr } from "@codegouvfr/react-dsfr";
 import Link from "next/link";
-import { OuSAdresserType, RessourceWebType } from "../type";
+import { FicheSPDataOuSAdresser, FicheSPDataRessourceWeb } from "../type";
 
 export const OuSAdresser = ({
   data,
   headingLevel,
 }: {
-  data: OuSAdresserType;
+  data: FicheSPDataOuSAdresser;
   headingLevel: number;
 }) => {
   const label = getTitleInChildren(data);
@@ -19,7 +19,7 @@ export const OuSAdresser = ({
   const ressourceWeb = getInChildrenByName(
     data,
     "RessourceWeb"
-  ) as RessourceWebType;
+  ) as FicheSPDataRessourceWeb;
   if (ressourceWeb) {
     const url = ressourceWeb.attributes.URL;
     content = (
