@@ -11,7 +11,7 @@ export type MatchingEtablissement = {
 
 export type Enterprise = {
   activitePrincipale?: string;
-  conventions: ElasticAgreement[];
+  conventions: EnterpriseAgreement[];
   complements: {
     liste_idcc: string[];
   };
@@ -24,3 +24,8 @@ export type Enterprise = {
   address?: string;
   firstMatchingEtablissement?: MatchingEtablissement;
 };
+
+export type EnterpriseAgreement = Pick<
+  ElasticAgreement,
+  "id" | "contributions" | "num" | "shortTitle" | "title" | "url" | "slug"
+>;

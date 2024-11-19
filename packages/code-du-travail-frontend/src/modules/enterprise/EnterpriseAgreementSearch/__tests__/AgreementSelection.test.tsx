@@ -57,29 +57,25 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
     );
   });
 
-  it("Vérifier l'affichage de la selection avec une CC désactivée", async () => {
-    rendering = render(
-      <EnterpriseAgreementSelection
-        enterprise={{
-          ...defaultEnterprise,
-          conventions: [
-            {
-              id: "2216",
-              contributions: false,
-              num: 2216,
-              shortTitle:
-                "Commerce de détail et de gros à prédominance alimentaire",
-              title:
-                "Convention collective nationale du commerce de détail et de gros à prédominance alimentaire du 12 juillet 2001.  Etendue par arrêté du 26 juillet 2002 JORF 6 août 2002.",
-              url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635085",
-              slug: "2216-commerce-de-detail-et-de-gros-a-predominance-alimentaire",
-            },
-          ],
-        }}
-      />
-    );
-    expect(
-      ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
-    ).toHaveAttribute("href", "");
-  });
+  it.each(["url", "contributions", "slug"])(
+    "Vérifier l'affichage de la selection avec une CC sans %s",
+    async (field) => {
+      rendering = render(
+        <EnterpriseAgreementSelection
+          enterprise={{
+            ...defaultEnterprise,
+            conventions: [
+              {
+                ...defaultEnterprise.conventions[0],
+                [field]: undefined,
+              },
+            ],
+          }}
+        />
+      );
+      expect(
+        ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
+      ).toHaveAttribute("href", "");
+    }
+  );
 });
