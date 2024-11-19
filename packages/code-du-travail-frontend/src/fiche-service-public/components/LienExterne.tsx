@@ -18,7 +18,7 @@ export const LienExterneCommente = ({
   if (!lienExterne || !commentaire) return <></>;
   return (
     <>
-      {getText(commentaire)}
+      <p>{getText(commentaire)}</p>
       <p>
         <LienExterne data={lienExterne as FicheSPDataLienExterne} />
       </p>

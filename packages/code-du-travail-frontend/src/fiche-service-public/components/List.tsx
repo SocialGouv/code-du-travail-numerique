@@ -9,16 +9,19 @@ export const List = ({
   data: FicheSPDataList;
   headingLevel: number;
 }) => {
-  const items = data.children.map((item, index) => (
-    <li key={index}>
-      <ElementBuilder data={item.children} headingLevel={headingLevel + 1} />
-    </li>
-  ));
-
-  if (data.attributes.type === "puce") {
-    return <ul>{items}</ul>;
-  }
-  return <ol>{items}</ol>;
+  const UL = data.attributes.type === "puce" ? "ul" : "ol";
+  return (
+    <UL>
+      {data.children.map((item, index) => (
+        <li key={index}>
+          <ElementBuilder
+            data={item.children}
+            headingLevel={headingLevel + 1}
+          />
+        </li>
+      ))}
+    </UL>
+  );
 };
 
 export default List;

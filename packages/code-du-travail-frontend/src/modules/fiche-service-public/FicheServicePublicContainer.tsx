@@ -7,10 +7,11 @@ import { SourceData } from "../layout/SourceData";
 import "../../../public/static/fiches-mt.css";
 import { ElementBuilder } from "../../fiche-service-public/components/ElementBuilder";
 import { ReferenceList } from "../common/ReferencesList";
+import { FicheSPData } from "../../fiche-service-public/type";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
-  raw: any;
+  raw: { children: FicheSPData[] };
 } & Pick<
   ElasticFicheServicePublic,
   | "title"

@@ -29,7 +29,17 @@ export const fetchFicheSP = async (
       ElasticFicheServicePublic,
       keyof DocumentElasticResult<ElasticFicheServicePublic>
     >(
-      ["breadcrumbs", "date", "description", "slug", "title", "url", "cdtnId", "raw", "referencedTexts"],
+      [
+        "breadcrumbs",
+        "date",
+        "description",
+        "slug",
+        "title",
+        "url",
+        "cdtnId",
+        "raw",
+        "referencedTexts",
+      ],
       {
         query: {
           bool: {
