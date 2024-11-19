@@ -6,7 +6,7 @@ import {
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../../../src/modules/common/metas";
 import { ElasticTool } from "../../../../../src/modules/outils/type";
-import { AgreementSelection } from "../../../../../src/modules/convention-collective";
+import { EnterpriseAgreementSelection } from "../../../../../src/modules/enterprise";
 import { searchEnterprises } from "../../../../../src/modules/enterprise/queries";
 
 const SLUG = "convention-collective";
@@ -27,7 +27,7 @@ async function AgreementSelectionPage({ params }) {
   });
   return (
     <FindAgreementWidgetLayout>
-      <AgreementSelection enterprise={enterprise} widgetMode />
+      <EnterpriseAgreementSelection enterprise={enterprise} widgetMode />
     </FindAgreementWidgetLayout>
   );
 }
