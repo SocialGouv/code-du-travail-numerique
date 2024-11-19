@@ -11,9 +11,7 @@ type Props = {
 export const EnterpriseAgreementSearch = ({ widgetMode = false }: Props) => {
   return (
     <>
-      <EnterpriseAgreementSearchInput
-        widgetMode={widgetMode}
-      ></EnterpriseAgreementSearchInput>
+      <EnterpriseAgreementSearchInput widgetMode={widgetMode} />
       {!widgetMode && (
         <div className={fr.cx("fr-mt-2w")}>
           <Button

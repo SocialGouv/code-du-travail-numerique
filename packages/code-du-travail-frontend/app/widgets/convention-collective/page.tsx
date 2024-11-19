@@ -6,7 +6,8 @@ import {
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import { ElasticTool } from "../../../src/modules/outils/type";
-import { AgreementSearchByEnterprise } from "../../../src/modules/convention-collective";
+import { EnterpriseAgreementSearch } from "../../../src/modules/enterprise";
+import { SITE_URL } from "../../../src/config";
 
 export async function generateMetadata() {
   const { title, description } = await getTool();
@@ -14,14 +15,15 @@ export async function generateMetadata() {
   return generateDefaultMetadata({
     title: `Simulateur - ${title}`,
     description: description,
-    path: `/outils/convention-collective/entreprise`,
+    path: `${SITE_URL}/widgets/convention-collective`,
+    overrideCanonical: `${SITE_URL}/outils/convention-collective`,
   });
 }
 
 async function FindAgreementByEnterprisePage() {
   return (
     <FindAgreementWidgetLayout>
-      <AgreementSearchByEnterprise widgetMode />
+      <EnterpriseAgreementSearch widgetMode />
     </FindAgreementWidgetLayout>
   );
 }

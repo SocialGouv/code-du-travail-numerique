@@ -1,4 +1,4 @@
-import { Agreement } from "../../outils/types";
+import { ElasticAgreement } from "@socialgouv/cdtn-types";
 
 export type ApiEnterpriseData = {
   entreprises: Enterprise[] | undefined;
@@ -25,4 +25,7 @@ export type Enterprise = {
   firstMatchingEtablissement?: MatchingEtablissement;
 };
 
-export type EnterpriseAgreement = Agreement;
+export type EnterpriseAgreement = Pick<
+  ElasticAgreement,
+  "id" | "contributions" | "num" | "shortTitle" | "title" | "url" | "slug"
+>;

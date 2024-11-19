@@ -1,9 +1,11 @@
 "use client";
 import { fr } from "@codegouvfr/react-dsfr";
+import Image from "next/image";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Input, { InputProps } from "@codegouvfr/react-dsfr/Input";
 import { useCombobox } from "downshift";
 import { useState } from "react";
+import Spinner from "./Spinner.svg";
 import { css } from "../../../styled-system/css";
 
 export type AutocompleteProps<K> = InputProps & {
@@ -32,6 +34,7 @@ export const Autocomplete = <K,>({
   dataTestId,
 }: AutocompleteProps<K>) => {
   const [value, setValue] = useState<string>("");
+  const [loading, setLoading] = useState(false);
   const [selectedResult, setSelectedResult] = useState<K | undefined>();
   const [suggestions, setSuggestions] = useState<K[]>([]);
   const {
@@ -49,12 +52,15 @@ export const Autocomplete = <K,>({
         setSelectedResult(undefined);
       }
       try {
+        setLoading(true);
         const results = await search(inputValue);
         if (onSearch) onSearch(inputValue, results);
         setSuggestions(results);
       } catch (error) {
         if (onError) onError(error);
         setSuggestions([]);
+      } finally {
+        setLoading(false);
       }
     },
     selectedItem: selectedResult,
@@ -73,22 +79,32 @@ export const Autocomplete = <K,>({
           })}
           addon={
             <>
-              {(selectedResult || value) && (
-                <Button
-                  data-testid={`${dataTestId ? dataTestId + "-" : ""}autocomplete-close`}
-                  iconId="fr-icon-close-circle-fill"
-                  className={`${fr.cx("fr-p-0")} ${buttonClose}`}
-                  onClick={() => {
-                    setSelectedResult(undefined);
-                    if (onChange) onChange(undefined);
-                    if (onSearch) onSearch("", []);
-                    setValue("");
-                    setSuggestions([]);
-                  }}
-                  priority="tertiary no outline"
-                  title="Effacer la sélection"
-                />
-              )}
+              <div className={addonBlock}>
+                {!loading && (selectedResult || value) && (
+                  <Button
+                    data-testid={`${dataTestId ? dataTestId + "-" : ""}autocomplete-close`}
+                    iconId="fr-icon-close-circle-fill"
+                    className={`${fr.cx("fr-p-0")} ${buttonClose}`}
+                    onClick={() => {
+                      setSelectedResult(undefined);
+                      if (onChange) onChange(undefined);
+                      if (onSearch) onSearch("", []);
+                      setValue("");
+                      setSuggestions([]);
+                    }}
+                    priority="tertiary no outline"
+                    title="Effacer la sélection"
+                  />
+                )}
+                {loading && (
+                  <Image
+                    className={fr.cx("fr-mr-1v")}
+                    priority
+                    src={Spinner}
+                    alt="Chargement en cours"
+                  />
+                )}
+              </div>
             </>
           }
           nativeInputProps={{
@@ -160,9 +176,16 @@ const buttonActive = css({
   backgroundColor: "rgb(246, 246, 246)",
 });
 
-const buttonClose = css({
+const addonBlock = css({
   position: "absolute",
   right: 0,
+  height: "100%",
+  alignContent: "center",
+});
+
+const spinner = css({});
+
+const buttonClose = css({
   _before: {
     width: "18px !important",
     height: "18px !important",

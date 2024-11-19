@@ -46,6 +46,8 @@ export const AgreementSearchInput = ({
   };
   const getInputState = () => {
     switch (searchState) {
+      case "lowSearch":
+        return "info";
       case "errorSearch":
       case "notFoundSearch":
         return "error";

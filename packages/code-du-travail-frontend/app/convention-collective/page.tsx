@@ -3,22 +3,24 @@ import {
   Agreements,
   AgreementsPerLetter,
 } from "../../src/modules/convention-collective/Agreements";
-import { fetchAgreements } from "../../src/modules/convention-collective";
+import { fetchAllAgreements } from "../../src/modules/convention-collective";
 import { generateDefaultMetadata } from "../../src/modules/common/metas";
 import { notFound } from "next/navigation";
+import { SITE_URL } from "../../src/config";
 
 export const metadata = generateDefaultMetadata({
   title: "Votre convention collective",
   description:
     "Retrouvez les questions/réponses fréquentes organisées par thème pour votre convention collective",
   path: "/convention-collective",
+  overrideCanonical: `{${SITE_URL}/outils/convention-collective}`,
 });
 
 const removeAccents = (text: string) =>
   text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
 async function AgreementPage() {
-  const agreements = await fetchAgreements({
+  const agreements = await fetchAllAgreements({
     fields: ["slug", "shortTitle"],
     sortBy: "shortTitle",
   });

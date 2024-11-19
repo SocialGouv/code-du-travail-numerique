@@ -6,18 +6,18 @@ import {
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../../../src/modules/common/metas";
 import { ElasticTool } from "../../../../../src/modules/outils/type";
-import { AgreementSelection } from "../../../../../src/modules/convention-collective";
+import { EnterpriseAgreementSelection } from "../../../../../src/modules/enterprise";
 import { searchEnterprises } from "../../../../../src/modules/enterprise/queries";
+import { SITE_URL } from "../../../../../src/config";
 
-const SLUG = "convention-collective";
-
-export async function generateMetadata() {
+export async function generateMetadata({ params }) {
   const { title, description } = await getTool();
 
   return generateDefaultMetadata({
     title: `Simulateur - ${title}`,
     description: description,
-    path: `/outils/${SLUG}`,
+    path: `${SITE_URL}/widgets/convention-collective/selection/${params.slug}`,
+    overrideCanonical: `${SITE_URL}/outils/convention-collective`,
   });
 }
 
@@ -27,13 +27,15 @@ async function AgreementSelectionPage({ params }) {
   });
   return (
     <FindAgreementWidgetLayout>
-      <AgreementSelection enterprise={enterprise} widgetMode />
+      <EnterpriseAgreementSelection enterprise={enterprise} widgetMode />
     </FindAgreementWidgetLayout>
   );
 }
 
 const getTool = async () => {
-  const tool: DocumentElasticResult<ElasticTool> = await fetchTool(SLUG);
+  const tool: DocumentElasticResult<ElasticTool> = await fetchTool(
+    "convention-collective"
+  );
 
   if (!tool) {
     return notFound();
