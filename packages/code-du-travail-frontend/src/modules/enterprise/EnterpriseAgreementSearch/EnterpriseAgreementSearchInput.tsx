@@ -1,5 +1,6 @@
 "use client";
 import { fr } from "@codegouvfr/react-dsfr";
+import Image from "next/image";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
@@ -7,6 +8,7 @@ import { Card } from "@codegouvfr/react-dsfr/Card";
 import { useState } from "react";
 import { css } from "../../../../styled-system/css";
 
+import Spinner from "../../common/Spinner.svg";
 import { LocationSearchInput } from "../../Location/LocationSearchInput";
 import { searchEnterprises } from "../queries";
 import { Enterprise } from "../types";
@@ -151,7 +153,14 @@ export const EnterpriseAgreementSearchInput = ({
               {enterprises.length} entreprises trouvées
             </p>
           )}
-          {loading && <p>chargement en cours ...</p>}
+          {loading && (
+            <div className={fr.cx("fr-grid-row")}>
+              <p className={fr.cx("fr-h5", "fr-mb-0")}>Chargement en cours</p>
+              <div className={`${fr.cx("fr-ml-1w")} ${SpinnerBlock}`}>
+                <Image priority src={Spinner} alt="Chargement en cours" />
+              </div>
+            </div>
+          )}
           {searchState === "notFoundSearch" && (
             <Alert
               title="Vous ne trouvez pas votre entreprise ?"
@@ -202,7 +211,13 @@ export const EnterpriseAgreementSearchInput = ({
           ))}
       </div>
       <div>
-        <p className={fr.cx("fr-text--bold", "fr-mt-5w", "fr-mb-1w")}>
+        <p
+          className={fr.cx(
+            "fr-text--bold",
+            !loading ? "fr-mt-5w" : "fr-mt-2w",
+            "fr-mb-1w"
+          )}
+        >
           Votre recherche concerne les assistants maternels, employés de
           maison&nbsp;?
         </p>
@@ -235,4 +250,10 @@ const CardSmallTitleStyle = css({
       top: "calc(50% - 8px)",
     },
   },
+});
+
+const SpinnerBlock = css({
+  height: "100%",
+  alignContent: "center",
+  marginTop: "0.5rem",
 });

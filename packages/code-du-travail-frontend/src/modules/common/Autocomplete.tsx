@@ -5,7 +5,7 @@ import Button from "@codegouvfr/react-dsfr/Button";
 import Input, { InputProps } from "@codegouvfr/react-dsfr/Input";
 import { useCombobox } from "downshift";
 import { useState } from "react";
-import AutocompleteSpinner from "./AutocompleteSpinner.svg";
+import Spinner from "./Spinner.svg";
 import { css } from "../../../styled-system/css";
 
 export type AutocompleteProps<K> = InputProps & {
@@ -100,7 +100,7 @@ export const Autocomplete = <K,>({
                   <Image
                     className={fr.cx("fr-mr-1v")}
                     priority
-                    src={AutocompleteSpinner}
+                    src={Spinner}
                     alt="Chargement en cours"
                   />
                 )}
