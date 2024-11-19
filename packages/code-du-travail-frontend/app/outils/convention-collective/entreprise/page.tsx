@@ -6,6 +6,7 @@ import { generateDefaultMetadata } from "../../../../src/modules/common/metas";
 import { ElasticTool } from "../../../../src/modules/outils/type";
 import { EnterpriseAgreementSearch } from "../../../../src/modules/enterprise";
 import { agreementRelatedItems } from "../../../../src/modules/convention-collective/agreementRelatedItems";
+import { SITE_URL } from "../../../../src/config";
 
 const SLUG = "convention-collective";
 
@@ -15,7 +16,8 @@ export async function generateMetadata() {
   return generateDefaultMetadata({
     title: `Simulateur - ${title}`,
     description: description,
-    path: `/outils/${SLUG}`,
+    path: `${SITE_URL}/outils/convention-collective/entreprise`,
+    overrideCanonical: `${SITE_URL}/outils/convention-collective/entreprise`,
   });
 }
 

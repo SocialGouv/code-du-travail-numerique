@@ -9,8 +9,7 @@ import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import { ElasticTool } from "../../../src/modules/outils/type";
 import { AgreementSearchIntro } from "../../../src/modules/convention-collective";
 import { agreementRelatedItems } from "../../../src/modules/convention-collective/agreementRelatedItems";
-
-const SLUG = "convention-collective";
+import { SITE_URL } from "../../../src/config";
 
 export async function generateMetadata() {
   const { title, description } = await getTool();
@@ -18,7 +17,8 @@ export async function generateMetadata() {
   return generateDefaultMetadata({
     title: `Simulateur - ${title}`,
     description: description,
-    path: `/outils/${SLUG}`,
+    path: `/outils/convention-collective`,
+    overrideCanonical: `${SITE_URL}/outils/convention-collective`,
   });
 }
 
@@ -37,7 +37,9 @@ async function FindAgreementPage() {
 }
 
 const getTool = async () => {
-  const tool: DocumentElasticResult<ElasticTool> = await fetchTool(SLUG);
+  const tool: DocumentElasticResult<ElasticTool> = await fetchTool(
+    "convention-collective"
+  );
 
   if (!tool) {
     return notFound();
