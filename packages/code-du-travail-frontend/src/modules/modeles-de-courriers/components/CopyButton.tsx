@@ -3,7 +3,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { useState } from "react";
-import { css } from "../../../../styled-system/css";
+import { css } from "../../../styled-system/css";
 import { useModeleEvents } from "../tracking";
 
 export const CopyButton = ({ slug }: { slug: string }) => {

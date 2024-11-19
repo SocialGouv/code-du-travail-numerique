@@ -16,6 +16,6 @@ export default defineConfig({
       },
     },
   },
-  outdir: "styled-system",
+  outdir: "src/styled-system",
   outExtension: "js",
 });

@@ -5,7 +5,7 @@ import Button from "@codegouvfr/react-dsfr/Button";
 import { usePathname } from "next/navigation";
 import { SITE_URL } from "../../config";
 import { fr } from "@codegouvfr/react-dsfr";
-import { css } from "../../../styled-system/css";
+import { css } from "../../styled-system/css";
 import { useCommonTracking } from "./tracking";
 
 type Props = {

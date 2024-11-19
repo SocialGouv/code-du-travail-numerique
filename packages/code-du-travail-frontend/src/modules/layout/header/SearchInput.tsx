@@ -3,7 +3,7 @@ import { useCombobox } from "downshift";
 import { fetchSuggestResults } from "./fetchSuggestResults";
 import { SUGGEST_MAX_RESULTS } from "../../../config";
 import { fr } from "@codegouvfr/react-dsfr";
-import { css } from "../../../../styled-system/css";
+import { css } from "../../../styled-system/css";
 import { useLayoutTracking } from "../tracking";
 
 type Props = {

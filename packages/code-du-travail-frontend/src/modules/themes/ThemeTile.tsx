@@ -1,6 +1,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Tile } from "@codegouvfr/react-dsfr/Tile";
-import { css } from "../../../styled-system/css";
+import { css } from "../../styled-system/css";
 
 type Props = {
   title: string;
