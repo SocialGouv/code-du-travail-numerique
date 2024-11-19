@@ -51,7 +51,7 @@ export function FicheServicePublicContainer({
         <ElementBuilder data={raw.children} />
 
         {referencedTexts?.length > 0 && (
-          <div className={fr.cx("fr-callout", "fr-p-4w")}>
+          <div className={fr.cx("fr-callout", "fr-p-4w", "fr-mt-2w")}>
             <h2 className={fr.cx("fr-h5", "fr-pb-1w")}>
               Références juridiques concernées :
             </h2>

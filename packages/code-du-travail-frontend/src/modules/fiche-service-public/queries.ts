@@ -5,25 +5,33 @@ import {
   DocumentElasticWithSource,
   FicheServicePublicDoc,
 } from "@socialgouv/cdtn-types";
+import { FicheSPData } from "../../fiche-service-public/type";
 
 export type ElasticFicheServicePublic = DocumentElasticWithSource<
   FicheServicePublicDoc,
   typeof SOURCES.SHEET_SP
 >;
 
+export type ElasticFicheServicePublicWithData = DocumentElasticWithSource<
+  Omit<FicheServicePublicDoc, "raw">,
+  typeof SOURCES.SHEET_SP
+> & { raw: { children: FicheSPData[] } };
+
 const formatFiche = (
   fiche: DocumentElasticResult<ElasticFicheServicePublic> | undefined
-): DocumentElasticResult<ElasticFicheServicePublic> | undefined => {
+): DocumentElasticResult<ElasticFicheServicePublicWithData> | undefined => {
   if (!fiche) {
     return undefined;
   }
-  fiche.raw = JSON.parse(fiche.raw);
-  return fiche;
+  const raw: { children: FicheSPData[] } = JSON.parse(fiche.raw);
+  return { ...fiche, raw };
 };
 
 export const fetchFicheSP = async (
   slug: string
-): Promise<DocumentElasticResult<ElasticFicheServicePublic> | undefined> => {
+): Promise<
+  DocumentElasticResult<ElasticFicheServicePublicWithData> | undefined
+> => {
   return formatFiche(
     await fetchDocument<
       ElasticFicheServicePublic,
