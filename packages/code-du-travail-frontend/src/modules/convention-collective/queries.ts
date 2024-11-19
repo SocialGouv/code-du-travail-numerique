@@ -50,7 +50,6 @@ export const fetchAgreementsByCdtnIds = async <
   fields,
   sortBy,
   cdtnIds,
-  size = cdtnIds.length,
 }: FetchAgreementsByCdtnIdsProps<K>): Promise<Pick<ElasticAgreement, K>[]> => {
   const response = await elasticsearchClient.search<Pick<ElasticAgreement, K>>({
     query: {
@@ -58,7 +57,7 @@ export const fetchAgreementsByCdtnIds = async <
         filter: [...baseFilters, { terms: { cdtnId: cdtnIds } }],
       },
     },
-    size,
+    size: cdtnIds.length,
     _source: fields,
     index: elasticDocumentsIndex,
   });
