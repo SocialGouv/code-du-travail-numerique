@@ -1,7 +1,7 @@
 import React from "react";
 import { ElementBuilder } from "./ElementBuilder";
 import { fr } from "@codegouvfr/react-dsfr";
-import { filterOutTitle, getTitleInChildren } from "../utils";
+import { filterOutTitle, getInChildrenByName, getText } from "../utils";
 import { FicheSPDataElementWithElementChildren } from "../type";
 
 export const ANoter = ({
@@ -11,10 +11,10 @@ export const ANoter = ({
   data: FicheSPDataElementWithElementChildren;
   headingLevel: number;
 }) => {
-  const title = getTitleInChildren(data);
+  const title = getInChildrenByName(data, "Titre");
   return (
     <div className={fr.cx("fr-highlight")}>
-      {title && <p className={fr.cx("fr-text--bold")}>{title}</p>}
+      {title && <p className={fr.cx("fr-text--bold")}>{getText(title)}</p>}
       <ElementBuilder data={filterOutTitle(data)} headingLevel={headingLevel} />
     </div>
   );

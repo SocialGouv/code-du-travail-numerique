@@ -2,6 +2,18 @@
 
 exports[`<Table /> should render with th, td, colspan etc. 1`] = `
 <div>
+  <div
+    class="fr-table--sm fr-table fr-table"
+  >
+    <div
+      class="fr-table__wrapper"
+    >
+      <div
+        class="fr-table__container"
+      >
+        <div
+          class="fr-table__content"
+        >
           <table>
             <caption>
               Nombre de trimestres d'assurance exigé pour avoir droit à une retraite à taux plein
@@ -104,7 +116,7 @@ exports[`<Table /> should render with th, td, colspan etc. 1`] = `
                 >
                   Entre le 1
                   <sup>
-                    er
+                    er 
                   </sup>
                   septembre 1961 et le 31 décembre 1961
                 </td>

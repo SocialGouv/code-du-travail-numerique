@@ -1,7 +1,4 @@
-import {
-  FicheSPData,
-  FicheSPDataElementWithElementChildren,
-} from "./type";
+import { FicheSPData, FicheSPDataElementWithElementChildren } from "./type";
 
 export function getText(element: FicheSPData, separator = " "): string {
   if (element.type === "text") {

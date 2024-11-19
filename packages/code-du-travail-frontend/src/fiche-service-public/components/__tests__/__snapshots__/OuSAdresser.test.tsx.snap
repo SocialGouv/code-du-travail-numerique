@@ -5,8 +5,10 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
   <div
     class="fr-callout"
   >
-    <p>
-      Ou s'adresser ?
+    <p
+      class="fr-text--bold"
+    >
+      Où s'adresser ?
     </p>
     <h3>
       Fonds d'indemnisation des victimes de l'amiante (Fiva)
@@ -110,7 +112,6 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
         >
           <p>
             <a
-              aria-label="contact@fiva.fr (nouvelle fenêtre)"
               href="mailto:contact@fiva.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -130,8 +131,10 @@ exports[`<OuSAdresser /> should render a simple case 1`] = `
   <div
     class="fr-callout"
   >
-    <p>
-      Ou s'adresser ?
+    <p
+      class="fr-text--bold"
+    >
+      Où s'adresser ?
     </p>
     <h3>
       Nom du centre

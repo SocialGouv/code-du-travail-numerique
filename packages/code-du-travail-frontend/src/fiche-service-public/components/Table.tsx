@@ -1,7 +1,8 @@
 import React from "react";
 
-import { getTitleInChildren, ignoreParagraph } from "../utils";
+import { getInChildrenByName, getText, ignoreParagraph } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
+import { FicheSPDataTableau } from "../type";
 
 const ROW_HEADER = "header";
 
@@ -9,26 +10,20 @@ export const Table = ({
   data,
   headingLevel,
 }: {
-  data: any;
+  data: FicheSPDataTableau;
   headingLevel: number;
 }) => {
-  const title = getTitleInChildren(data);
+  const title = getInChildrenByName(data, "Titre");
   const headingRows = data.children.filter(
-    (child) =>
-      child.name === "Rangée" &&
-      child.type === "element" &&
-      child.attributes!.type === "header"
+    (child) => child.name === "Rangée" && child.attributes.type === "header"
   );
   const rows = data.children.filter(
-    (child) =>
-      child.name === "Rangée" &&
-      child.type === "element" &&
-      child.attributes!.type === "normal"
+    (child) => child.name === "Rangée" && child.attributes.type === "normal"
   );
 
   const columns = data.children.filter((child) => child.name === "Colonne");
   const isHeaderCell = (columnIndex) => {
-    return columns[columnIndex].attributes!.type === ROW_HEADER;
+    return columns[columnIndex].attributes.type === ROW_HEADER;
   };
 
   const handleSpan = (el) => {
@@ -50,7 +45,7 @@ export const Table = ({
         <div className="fr-table__container">
           <div className="fr-table__content">
             <table>
-              {title && <caption>{title}</caption>}
+              {title && <caption>{getText(title)}</caption>}
               {headingRows.length > 0 && (
                 <thead>
                   {headingRows.map((tr, rowIndex) => (

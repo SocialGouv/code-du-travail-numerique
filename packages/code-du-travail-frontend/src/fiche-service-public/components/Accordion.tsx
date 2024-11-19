@@ -1,6 +1,10 @@
 import React from "react";
 
-import { filterOutTitle, getTitleInChildren } from "../utils";
+import {
+  filterOutTitle,
+  getInChildrenByName,
+  getTitleInChildren,
+} from "../utils";
 import { AccordionWithAnchor } from "../../modules/common/AccordionWithAnchor";
 import { ElementBuilder } from "./ElementBuilder";
 import { getTitleLevel } from "./Title";
@@ -12,7 +16,7 @@ import {
 } from "../type";
 
 const isItemOfAccordion = (element: FicheSPDataChapitre | FicheSPDataCas) =>
-  !!getTitleInChildren(element);
+  !!getInChildrenByName(element, "Titre");
 
 export const AccordionWrapper = ({
   data,

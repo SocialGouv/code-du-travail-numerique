@@ -4,7 +4,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { format, parseISO } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import Title from "./Title";
-import { filterOutTitle, getTitleInChildren } from "../utils";
+import { filterOutTitle, getInChildrenByName, getText } from "../utils";
 import { FicheSPDataAvertissement } from "../type";
 
 export const Avertissement = ({
@@ -20,10 +20,10 @@ export const Avertissement = ({
         locale: frLocale,
       })) ||
     undefined;
-  const title = getTitleInChildren(data);
+  const title = getInChildrenByName(data, "Titre");
   return (
     <div className={fr.cx("fr-alert", "fr-alert--info")}>
-      {title && <Title level={headingLevel}>{title}</Title>}
+      {title && <Title level={headingLevel}>{getText(title)}</Title>}
       {formatedDate && (
         <p className={fr.cx("fr-text--xs", "fr-pb-2w")}>{formatedDate}</p>
       )}

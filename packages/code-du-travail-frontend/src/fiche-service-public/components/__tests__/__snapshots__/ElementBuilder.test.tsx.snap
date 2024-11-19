@@ -31,22 +31,22 @@ exports[`<ElementBuilder /> does render several elements 1`] = `
 exports[`<ElementBuilder /> does render stuff inside a styled block 1`] = `
 <div>
   <div
-    class="sc-2a0a4b0a-0 sc-18dbc613-0 dLOZmV hGgpvs"
+    class="fr-highlight"
   >
     stuff 0
   </div>
   <div
-    class="sc-2a0a4b0a-0 sc-18dbc613-0 dLOZmV hGgpvs"
+    class="fr-highlight"
   >
     stuff 1
   </div>
   <div
-    class="sc-2a0a4b0a-0 sc-18dbc613-0 dLOZmV hGgpvs"
+    class="fr-highlight"
   >
     stuff 2
   </div>
   <div
-    class="sc-2a0a4b0a-0 sc-18dbc613-0 dLOZmV hGgpvs"
+    class="fr-highlight"
   >
     stuff 3
   </div>
