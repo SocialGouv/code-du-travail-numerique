@@ -37,7 +37,7 @@ export const EnterpriseAgreementSelection = ({
         if (!agreement.slug) {
           description =
             "Nous n’avons pas d’informations concernant cette convention collective";
-        } else if (agreement.url || agreement.contributions) {
+        } else if (agreement.url || agreement.contributions || agreement.slug) {
           description =
             "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective";
         } else {

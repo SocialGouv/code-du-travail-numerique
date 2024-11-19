@@ -11,21 +11,19 @@ export const AgreementSearchIntro = ({
 }: Props) => {
   return (
     <>
-      <Highlight size="lg" className={`${fr.cx("fr-mt-2w")}`}>
-        <span>
+      <div className={`${fr.cx("fr-mt-2w", "fr-highlight")}`}>
+        <p>
           La convention collective est un texte conclu au niveau d&apos;une
           branche d&apos;activité (Ex: Transports routiers). Elle adapte les
           règles du Code du travail sur des points précis, en fonction des
           situations particulières de la branche (primes, congés, salaires
           minima, préavis, prévoyance...)
-        </span>
-        <br />
-        <br />
-        <span className={fr.cx("fr-text--bold")}>
+        </p>
+        <p className={fr.cx("fr-text--bold", "fr-mb-2w")}>
           Vous pouvez retrouver le nom de votre convention collective sur votre
           bulletin de paie ou sur votre contrat de travail.
-        </span>
-      </Highlight>
+        </p>
+      </div>
       <div
         className={`${fr.cx(
           "fr-grid-row",
@@ -33,7 +31,6 @@ export const AgreementSearchIntro = ({
           "fr-px-0",
           "fr-px-md-4w",
           "fr-px-1w",
-          "fr-mt-2w",
           "fr-mb-0"
         )}`}
       >

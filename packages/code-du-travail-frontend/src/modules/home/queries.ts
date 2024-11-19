@@ -4,7 +4,7 @@ import { fetchHighLights } from "../highlights";
 import { fetchTools } from "../outils";
 import { fetchModels } from "../modeles-de-courriers";
 import { fetchContributions } from "../contributions";
-import { fetchAgreements } from "../convention-collective";
+import { fetchAgreementsByCdtnIds } from "../convention-collective";
 
 export type HomeCardItem = {
   description: string;
@@ -92,16 +92,14 @@ export const fetchHomeData = async (): Promise<HomePageProps> => {
     title: contribution.title,
   }));
 
-  const agreements = await fetchAgreements({
+  const agreements = await fetchAgreementsByCdtnIds({
     fields: ["source", "slug", "shortTitle", "description"],
-    filters: {
-      cdtnIds: [
-        "39ac98db5d", // 573-commerces-de-gros
-        "81c96604dc", // 2609-batiment-etam
-        "2f57b6af7c", // 3248-metallurgie
-        "d825ef1df2", // 3239-particuliers-employeurs-et-emploi-a-domicile
-      ],
-    },
+    cdtnIds: [
+      "39ac98db5d", // 573-commerces-de-gros
+      "81c96604dc", // 2609-batiment-etam
+      "2f57b6af7c", // 3248-metallurgie
+      "d825ef1df2", // 3239-particuliers-employeurs-et-emploi-a-domicile
+    ],
   });
   const parsedAgreements = agreements.map((agreement) => ({
     description: agreement.description,

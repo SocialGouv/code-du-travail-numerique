@@ -151,7 +151,7 @@ export const EnterpriseAgreementSearchInput = ({
               {enterprises.length} entreprises trouvées
             </p>
           )}
-          {loading && <p className={fr.cx("fr-h5")}>chargement en cours ...</p>}
+          {loading && <p>chargement en cours ...</p>}
           {searchState === "notFoundSearch" && (
             <Alert
               title="Vous ne trouvez pas votre entreprise ?"
