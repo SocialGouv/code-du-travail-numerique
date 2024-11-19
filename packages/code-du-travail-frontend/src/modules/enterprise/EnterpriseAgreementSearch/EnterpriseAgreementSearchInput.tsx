@@ -9,17 +9,21 @@ import { css } from "../../../../styled-system/css";
 
 import { LocationSearchInput } from "../../Location/LocationSearchInput";
 import { searchEnterprises } from "../queries";
-import { Enterprise } from "../types";
+import { Enterprise, EnterpriseAgreement } from "../types";
 import { ApiGeoResult } from "../../Location/searchCities";
 import { CardTitleStyle, ButtonStyle } from "../../convention-collective/style";
 import Alert from "@codegouvfr/react-dsfr/Alert";
+import { EnterpriseAgreementSelection } from "./EnterpriseAgreementSelection";
+import { Agreement } from "@socialgouv/cdtn-types";
 
 type Props = {
   widgetMode?: boolean;
+  onAgreementSelect?: (agreement: EnterpriseAgreement) => void;
 };
 
 export const EnterpriseAgreementSearchInput = ({
   widgetMode = false,
+  onAgreementSelect,
 }: Props) => {
   const [searchState, setSearchState] = useState<
     "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
@@ -29,6 +33,9 @@ export const EnterpriseAgreementSearchInput = ({
   const [loading, setLoading] = useState<boolean>(false);
   const [location, setLocation] = useState<ApiGeoResult | undefined>();
   const [enterprises, setEnterprises] = useState<Enterprise[]>();
+  const [selectedEnterprise, setSelectedEnterprise] = useState<Enterprise>();
+  const [selectedAgreement, setSelectedAgreement] =
+    useState<EnterpriseAgreement>();
   const [error, setError] = useState("");
   const getStateMessage = () => {
     switch (searchState) {
@@ -51,6 +58,35 @@ export const EnterpriseAgreementSearchInput = ({
         return "error";
     }
   };
+  if (selectedAgreement) {
+    return (
+      <>
+        <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
+          Vous avez sélectionné la convention collective
+        </p>
+        <Card
+          title={selectedAgreement.shortTitle}
+          size="small"
+          className={fr.cx("fr-mt-2w")}
+          classes={{
+            content: fr.cx("fr-p-2w"),
+            start: fr.cx("fr-m-0"),
+            end: fr.cx("fr-p-0", "fr-m-0"),
+          }}
+        ></Card>
+      </>
+    );
+  } else if (selectedEnterprise) {
+    return (
+      <EnterpriseAgreementSelection
+        enterprise={selectedEnterprise}
+        onAgreementSelect={(agreement) => {
+          if (onAgreementSelect) onAgreementSelect(agreement);
+          setSelectedAgreement(agreement);
+        }}
+      />
+    );
+  }
   return (
     <>
       <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
@@ -185,9 +221,18 @@ export const EnterpriseAgreementSearchInput = ({
               className={fr.cx("fr-mt-2w")}
               border
               enlargeLink
-              linkProps={{
-                href: `/${widgetMode ? "widgets" : "outils"}/convention-collective/selection/${enterprise.siren}`,
-              }}
+              linkProps={
+                !onAgreementSelect
+                  ? {
+                      href: `/${widgetMode ? "widgets" : "outils"}/convention-collective/selection/${enterprise.siren}`,
+                    }
+                  : {
+                      href: "",
+                      onClick: () => {
+                        setSelectedEnterprise(enterprise);
+                      },
+                    }
+              }
               desc={`Activité : ${enterprise.activitePrincipale}`}
               end={<Badge>{`${enterprise.matching} établissements`}</Badge>}
               size="large"

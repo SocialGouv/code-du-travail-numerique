@@ -8,12 +8,17 @@ import { css } from "../../../../styled-system/css";
 import { Autocomplete } from "../../common/Autocomplete";
 import { Agreement } from "../../../outils/types";
 import { searchAgreement } from "../search";
+import { EnterpriseAgreement } from "../../enterprise";
 
 type Props = {
   onSearch?: (query: string, value?: Agreement[]) => void;
+  onAgreementSelect?: (agreement: EnterpriseAgreement) => void;
 };
 
-export const AgreementSearchInput = ({ onSearch }: Props) => {
+export const AgreementSearchInput = ({
+  onSearch,
+  onAgreementSelect,
+}: Props) => {
   const [searchState, setSearchState] = useState<
     "noSearch" | "lowSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
   >("noSearch");
@@ -75,12 +80,19 @@ export const AgreementSearchInput = ({ onSearch }: Props) => {
           }}
           state={getInputState()}
           stateRelatedMessage={getStateMessage()}
+          onChange={(agreement) => {
+            if (onAgreementSelect && agreement) onAgreementSelect(agreement);
+          }}
           displayLabel={(item) => {
             return item ? `${item.shortTitle} (IDCC ${item.num})` : "";
           }}
-          lineAsLink={(item) => {
-            return `/${getRouteBySource(SOURCES.CCN)}/${item.slug}`;
-          }}
+          lineAsLink={
+            !onAgreementSelect
+              ? (item) => {
+                  return `/${getRouteBySource(SOURCES.CCN)}/${item.slug}`;
+                }
+              : undefined
+          }
           search={searchAgreement}
           onSearch={(query, agreements) => {
             if (onSearch) onSearch(query, agreements);

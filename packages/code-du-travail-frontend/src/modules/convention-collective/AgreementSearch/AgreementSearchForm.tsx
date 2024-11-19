@@ -4,9 +4,16 @@ import Highlight from "@codegouvfr/react-dsfr/Highlight";
 import { RadioButtons } from "@codegouvfr/react-dsfr/RadioButtons";
 import { useState } from "react";
 import { AgreementSearchInput } from "./AgreementSearchInput";
-import { EnterpriseAgreementSearchInput } from "../../enterprise";
+import {
+  EnterpriseAgreement,
+  EnterpriseAgreementSearchInput,
+} from "../../enterprise";
 
-export const AgreementSearchForm = () => {
+type Props = {
+  onAgreementSelect?: (agreement: EnterpriseAgreement) => void;
+};
+
+export const AgreementSearchForm = ({ onAgreementSelect }: Props) => {
   const [mode, setMode] = useState<
     "agreementSearch" | "enterpriseSearch" | "noSearch" | undefined
   >("agreementSearch");
@@ -40,10 +47,14 @@ export const AgreementSearchForm = () => {
         ]}
       />
       {mode === "agreementSearch" && (
-        <AgreementSearchInput></AgreementSearchInput>
+        <AgreementSearchInput
+          onAgreementSelect={onAgreementSelect}
+        ></AgreementSearchInput>
       )}
       {mode === "enterpriseSearch" && (
-        <EnterpriseAgreementSearchInput></EnterpriseAgreementSearchInput>
+        <EnterpriseAgreementSearchInput
+          onAgreementSelect={onAgreementSelect}
+        ></EnterpriseAgreementSearchInput>
       )}
     </>
   );

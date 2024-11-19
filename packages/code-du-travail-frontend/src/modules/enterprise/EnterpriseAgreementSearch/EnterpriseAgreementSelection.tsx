@@ -1,18 +1,22 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Card from "@codegouvfr/react-dsfr/Card";
 import Button from "@codegouvfr/react-dsfr/Button";
-import { Enterprise } from "../types";
+import { Enterprise, EnterpriseAgreement } from "../types";
 import { ButtonStyle, CardTitleStyle } from "../../convention-collective/style";
 import { css } from "../../../../styled-system/css";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;
   widgetMode?: boolean;
+  noPrevious?: boolean;
+  onAgreementSelect?: (agreement: EnterpriseAgreement) => void;
 };
 
 export const EnterpriseAgreementSelection = ({
   enterprise,
   widgetMode = false,
+  noPrevious,
+  onAgreementSelect,
 }: Props) => {
   return (
     <>
@@ -48,29 +52,41 @@ export const EnterpriseAgreementSelection = ({
           <Card
             key={agreement.id}
             className={fr.cx("fr-mt-2w")}
-            linkProps={{
-              href: !disabled ? `/convention-collective/${agreement.slug}` : "",
-              "aria-disabled": disabled,
-              ...(widgetMode
+            linkProps={
+              !onAgreementSelect
                 ? {
+                    href: !disabled
+                      ? `/convention-collective/${agreement.slug}`
+                      : "",
+                    "aria-disabled": disabled,
+                    ...(widgetMode
+                      ? {
+                          onClick: (ev) => {
+                            if (disabled) ev.preventDefault();
+                            window.parent?.postMessage(
+                              {
+                                name: "agreement",
+                                kind: "select",
+                                extra: {
+                                  idcc: agreement.num,
+                                  title: agreement.title,
+                                },
+                              },
+                              "*"
+                            );
+                          },
+                        }
+                      : {}),
+                    ...(widgetMode ? { target: "_blank" } : {}),
+                  }
+                : {
+                    href: "",
                     onClick: (ev) => {
                       if (disabled) ev.preventDefault();
-                      window.parent?.postMessage(
-                        {
-                          name: "agreement",
-                          kind: "select",
-                          extra: {
-                            idcc: agreement.num,
-                            title: agreement.title,
-                          },
-                        },
-                        "*"
-                      );
+                      onAgreementSelect(agreement);
                     },
                   }
-                : {}),
-              ...(widgetMode ? { target: "_blank" } : {}),
-            }}
+            }
             border
             enlargeLink
             size="large"
@@ -87,19 +103,21 @@ export const EnterpriseAgreementSelection = ({
         );
       })}
 
-      <div className={fr.cx("fr-mt-2w")}>
-        <Button
-          linkProps={{
-            href: widgetMode
-              ? "/widgets/convention-collective"
-              : "/outils/convention-collective/entreprise",
-          }}
-          priority="secondary"
-          className={`${fr.cx("fr-col-12", "fr-col-md-2")} ${ButtonStyle}`}
-        >
-          Précédent
-        </Button>
-      </div>
+      {noPrevious && (
+        <div className={fr.cx("fr-mt-2w")}>
+          <Button
+            linkProps={{
+              href: widgetMode
+                ? "/widgets/convention-collective"
+                : "/outils/convention-collective/entreprise",
+            }}
+            priority="secondary"
+            className={`${fr.cx("fr-col-12", "fr-col-md-2")} ${ButtonStyle}`}
+          >
+            Précédent
+          </Button>
+        </div>
+      )}
     </>
   );
 };

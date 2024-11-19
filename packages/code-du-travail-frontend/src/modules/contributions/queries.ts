@@ -57,6 +57,7 @@ export const fetchContributionDocument = async (
       "questionName",
       "date",
       "contentType",
+      "contribution",
     ],
     {
       query: {

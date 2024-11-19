@@ -1,2 +1,2 @@
 export * from "./queries";
-export * from "./contributionLayout";
+export * from "./ContributionLayout";

@@ -30,7 +30,8 @@ async function Fiche({ params }) {
         metaDescription={metaDescription}
         relatedItems={relatedItems}
         date={date}
-      ></ContributionLayout>
+        slug={params.slug}
+      />
     </DsfrLayout>
   );
 }
