@@ -17,7 +17,7 @@
     "downlevelIteration": true,
     "plugins": [
       {
-        "name": "next"
+        "name": "nextt"
       }
     ]
   },
