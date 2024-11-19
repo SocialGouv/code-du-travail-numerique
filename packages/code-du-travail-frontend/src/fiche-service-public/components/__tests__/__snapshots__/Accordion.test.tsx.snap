@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Accordion /> should have two different levels of headings 1`] = `
+exports[`<Accordion /> should have different levels of headings & render both BlocCas & Chapitre 1`] = `
 <div>
   <div
     class="fr-accordions-group"
@@ -13,24 +13,21 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         class="fr-accordion__title"
       >
         <button
-          aria-controls="titre-1-collapse"
+          aria-controls="qui-peut-etre-indemnise-collapse"
           aria-expanded="false"
           class="fr-accordion__btn"
-          id="titre-1__toggle-btn"
+          id="qui-peut-etre-indemnise__toggle-btn"
           type="button"
         >
-          titre 1
+          Qui peut être indemnisé ?
         </button>
       </h2>
       <div
         class="fr-collapse"
-        id="titre-1-collapse"
+        id="qui-peut-etre-indemnise-collapse"
       >
         <p>
-          paragraphe 1-1
-        </p>
-        <p>
-          paragraphe 1-2
+          Vous pouvez être indemnisé par le Fiva si vous êtes dans l'une des 3 situations suivantes :
         </p>
       </div>
     </section>
@@ -41,147 +38,77 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         class="fr-accordion__title"
       >
         <button
-          aria-controls="titre-2-collapse"
+          aria-controls="comment-faire-la-demande-collapse"
           aria-expanded="false"
           class="fr-accordion__btn"
-          id="titre-2__toggle-btn"
+          id="comment-faire-la-demande__toggle-btn"
           type="button"
         >
-          titre 2
+          Comment faire la demande ?
         </button>
       </h2>
       <div
         class="fr-collapse"
-        id="titre-2-collapse"
+        id="comment-faire-la-demande-collapse"
       >
         <p>
-          paragraphe 2-1
+          Il y a une procédure pour la victime directe et une autre pour l'ayant-droit de victime.
         </p>
-        <p>
-          paragraphe 2-2
-        </p>
-        <h3>
-          titre 2-1
-        </h3>
-      </div>
-    </section>
-    <section
-      class="fr-accordion"
-    >
-      <h2
-        class="fr-accordion__title"
-      >
-        <button
-          aria-controls="titre-3-collapse"
-          aria-expanded="false"
-          class="fr-accordion__btn"
-          id="titre-3__toggle-btn"
-          type="button"
+        <div
+          class="fr-accordions-group"
+          data-fr-group="false"
         >
-          titre 3
-        </button>
-      </h2>
-      <div
-        class="fr-collapse"
-        id="titre-3-collapse"
-      >
-        <p>
-          paragraphe 3-1
-        </p>
-      </div>
-    </section>
-  </div>
-</div>
-`;
-
-exports[`<Accordion /> should render all, siblings included 1`] = `
-<div>
-  <div
-    class="fr-accordions-group"
-    data-fr-group="false"
-  >
-    <section
-      class="fr-accordion"
-    >
-      <h5
-        class="fr-accordion__title"
-      >
-        <button
-          aria-controls="titre-1-collapse"
-          aria-expanded="false"
-          class="fr-accordion__btn"
-          id="titre-1__toggle-btn"
-          type="button"
-        >
-          titre 1
-        </button>
-      </h5>
-      <div
-        class="fr-collapse"
-        id="titre-1-collapse"
-      >
-        <p>
-          paragraphe 1-1
-        </p>
-        <p>
-          paragraphe 1-2
-        </p>
-      </div>
-    </section>
-    <section
-      class="fr-accordion"
-    >
-      <h5
-        class="fr-accordion__title"
-      >
-        <button
-          aria-controls="titre-2-collapse"
-          aria-expanded="false"
-          class="fr-accordion__btn"
-          id="titre-2__toggle-btn"
-          type="button"
-        >
-          titre 2
-        </button>
-      </h5>
-      <div
-        class="fr-collapse"
-        id="titre-2-collapse"
-      >
-        <p>
-          paragraphe 2-1
-        </p>
-        <p>
-          paragraphe 2-2
-        </p>
-        <h6>
-          titre 2-1
-        </h6>
-      </div>
-    </section>
-    <section
-      class="fr-accordion"
-    >
-      <h5
-        class="fr-accordion__title"
-      >
-        <button
-          aria-controls="titre-3-collapse"
-          aria-expanded="false"
-          class="fr-accordion__btn"
-          id="titre-3__toggle-btn"
-          type="button"
-        >
-          titre 3
-        </button>
-      </h5>
-      <div
-        class="fr-collapse"
-        id="titre-3-collapse"
-      >
-        <p>
-          paragraphe 3-1
-        </p>
+          <section
+            class="fr-accordion"
+          >
+            <h3
+              class="fr-accordion__title"
+            >
+              <button
+                aria-controls="vous-etes-une-victime-directe-collapse"
+                aria-expanded="false"
+                class="fr-accordion__btn"
+                id="vous-etes-une-victime-directe__toggle-btn"
+                type="button"
+              >
+                Vous êtes une victime directe
+              </button>
+            </h3>
+            <div
+              class="fr-collapse"
+              id="vous-etes-une-victime-directe-collapse"
+            >
+              <p>
+                La démarche varie suivant que votre maladie a été reconnue comme maladie professionnelle ou non.
+              </p>
+            </div>
+          </section>
+          <section
+            class="fr-accordion"
+          >
+            <h3
+              class="fr-accordion__title"
+            >
+              <button
+                aria-controls="vous-etes-un-ayant-droit-de-victime-collapse"
+                aria-expanded="false"
+                class="fr-accordion__btn"
+                id="vous-etes-un-ayant-droit-de-victime__toggle-btn"
+                type="button"
+              >
+                Vous êtes un ayant-droit de victime
+              </button>
+            </h3>
+            <div
+              class="fr-collapse"
+              id="vous-etes-un-ayant-droit-de-victime-collapse"
+            >
+              <p>
+                La procédure varie suivant que la maladie de votre proche a été reconnue comme maladie professionnelle ou non.
+              </p>
+            </div>
+          </section>
+        </div>
       </div>
     </section>
   </div>

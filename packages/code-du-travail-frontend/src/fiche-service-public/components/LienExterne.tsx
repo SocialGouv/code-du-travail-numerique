@@ -1,9 +1,17 @@
 import React from "react";
 
 import { getInChildrenByName, getText } from "../utils";
-import { FicheSPDataElement } from "./ElementBuilder";
+import Link from "next/link";
+import {
+  FicheSPDataLienExterne,
+  FicheSPDataLienExterneCommente,
+} from "../type";
 
-export const LienExterneCommente = ({ data }: { data: FicheSPDataElement }) => {
+export const LienExterneCommente = ({
+  data,
+}: {
+  data: FicheSPDataLienExterneCommente;
+}) => {
   const commentaire = getInChildrenByName(data, "Commentaire");
   const lienExterne = getInChildrenByName(data, "LienExterne");
 
@@ -12,22 +20,17 @@ export const LienExterneCommente = ({ data }: { data: FicheSPDataElement }) => {
     <>
       {getText(commentaire)}
       <p>
-        <LienExterne data={lienExterne} />
+        <LienExterne data={lienExterne as FicheSPDataLienExterne} />
       </p>
     </>
   );
 };
-export const LienExterne = ({ data }: { data: any }) => {
+export const LienExterne = ({ data }: { data: FicheSPDataLienExterne }) => {
   const url = data.attributes.URL;
   const label = getText(data);
   return (
-    <a
-      href={url}
-      rel="noopener noreferrer"
-      target="_blank"
-      aria-label={`${label} (nouvelle fenêtre)`}
-    >
+    <Link href={url} rel="noopener noreferrer" target="_blank">
       {label}
-    </a>
+    </Link>
   );
 };

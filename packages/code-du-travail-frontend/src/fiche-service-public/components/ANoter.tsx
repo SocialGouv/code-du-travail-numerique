@@ -1,13 +1,14 @@
 import React from "react";
-import { ElementBuilder, FicheSPDataElement } from "./ElementBuilder";
+import { ElementBuilder } from "./ElementBuilder";
 import { fr } from "@codegouvfr/react-dsfr";
 import { filterOutTitle, getTitleInChildren } from "../utils";
+import { FicheSPDataElementWithElementChildren } from "../type";
 
 export const ANoter = ({
   data,
   headingLevel,
 }: {
-  data: FicheSPDataElement;
+  data: FicheSPDataElementWithElementChildren;
   headingLevel: number;
 }) => {
   const title = getTitleInChildren(data);

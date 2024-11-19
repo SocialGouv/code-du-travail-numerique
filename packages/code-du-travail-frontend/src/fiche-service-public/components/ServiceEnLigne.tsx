@@ -1,11 +1,15 @@
 import React from "react";
 
 import { getText } from "../utils";
-import { FicheSPDataElement } from "./ElementBuilder";
 import Link from "next/link";
 import { fr } from "@codegouvfr/react-dsfr";
+import { FicheSPDataServiceEnLigne } from "../type";
 
-export const ServiceEnLigne = ({ data }: { data: FicheSPDataElement }) => {
+export const ServiceEnLigne = ({
+  data,
+}: {
+  data: FicheSPDataServiceEnLigne;
+}) => {
   const url = data.attributes.URL;
   const title = getText(data.children[0]);
   return (

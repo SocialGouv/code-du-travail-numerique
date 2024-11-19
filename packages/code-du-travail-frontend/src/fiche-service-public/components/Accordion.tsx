@@ -2,27 +2,32 @@ import React from "react";
 
 import { filterOutTitle, getTitleInChildren } from "../utils";
 import { AccordionWithAnchor } from "../../modules/common/AccordionWithAnchor";
-import { ElementBuilder, FicheSPDataElement } from "./ElementBuilder";
+import { ElementBuilder } from "./ElementBuilder";
 import { getTitleLevel } from "./Title";
+import {
+  FicheSPDataBlocCas,
+  FicheSPDataCas,
+  FicheSPDataChapitre,
+  FicheSPDataTexteChapitre,
+} from "../type";
 
-const isItemOfAccordion = (element: FicheSPDataElement) =>
-  (element.name === "Chapitre" || element.name === "Cas") &&
-  getTitleInChildren(element);
+const isItemOfAccordion = (element: FicheSPDataChapitre | FicheSPDataCas) =>
+  !!getTitleInChildren(element);
 
 export const AccordionWrapper = ({
   data,
   headingLevel,
 }: {
-  data: FicheSPDataElement;
+  data: FicheSPDataBlocCas | FicheSPDataTexteChapitre;
   headingLevel: number;
 }) => {
   const accordionItems = data.children
     .filter(isItemOfAccordion)
-    .map((accordionItem) => {
-      const title = getTitleInChildren(accordionItem as FicheSPDataElement);
+    .map((accordionItem: FicheSPDataChapitre | FicheSPDataCas) => {
+      const title = getTitleInChildren(accordionItem);
       const content = (
         <ElementBuilder
-          data={filterOutTitle(accordionItem as FicheSPDataElement)}
+          data={filterOutTitle(accordionItem)}
           headingLevel={headingLevel + 1}
         />
       );

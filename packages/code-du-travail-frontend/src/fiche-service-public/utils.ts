@@ -1,5 +1,7 @@
-// beware, this one is recursive
-import { FicheSPData, FicheSPDataElement } from "./components/ElementBuilder";
+import {
+  FicheSPData,
+  FicheSPDataElementWithElementChildren,
+} from "./type";
 
 export function getText(element: FicheSPData, separator = " "): string {
   if (element.type === "text") {
@@ -28,14 +30,17 @@ export const ignoreParagraph = (element) =>
   });
 
 export const getInChildrenByName = (
-  element: FicheSPDataElement,
+  element: FicheSPDataElementWithElementChildren,
   name: string
 ): FicheSPData | undefined =>
-  element.children.find((child: FicheSPData) => child.name === name);
+  element.children.find((child) => child.name === name);
 
-export const getTitleInChildren = (element: FicheSPDataElement): string => {
+export const getTitleInChildren = (
+  element: FicheSPDataElementWithElementChildren
+): string => {
   return getText(getInChildrenByName(element, "Titre")!);
 };
 
-export const filterOutTitle = (element: FicheSPDataElement) =>
-  element.children.filter((child) => child.name !== "Titre");
+export const filterOutTitle = (
+  element: FicheSPDataElementWithElementChildren
+) => element.children.filter((child) => child.name !== "Titre");

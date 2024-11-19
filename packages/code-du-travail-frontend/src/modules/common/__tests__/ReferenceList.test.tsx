@@ -1,6 +1,7 @@
 import { render } from "@testing-library/react";
 import React from "react";
 import { ReferenceList } from "../ReferencesList";
+import { ServicePublicReference } from "@socialgouv/cdtn-types";
 
 const references = [
   {
@@ -32,7 +33,9 @@ const references = [
 
 describe("<ReferenceList />", () => {
   it("should render", () => {
-    const { container } = render(<ReferenceList references={references} />);
+    const { container } = render(
+      <ReferenceList references={references as ServicePublicReference[]} />
+    );
     expect(container).toMatchSnapshot();
   });
 });

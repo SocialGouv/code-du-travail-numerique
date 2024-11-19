@@ -4,11 +4,12 @@ import React from "react";
 import OuSAdresser from "../OuSAdresser";
 import classicData from "./mocks/ouSAdresserClassicData.json";
 import ressourceWebData from "./mocks/ouSAdresserWebData.json";
+import { OuSAdresserType } from "../../type";
 
 describe("<OuSAdresser />", () => {
   it("should render a simple case", () => {
     const { container } = render(
-      <OuSAdresser data={classicData} headingLevel={1} />
+      <OuSAdresser data={classicData as OuSAdresserType} headingLevel={1} />
     );
     expect(container).toMatchSnapshot();
     const h3 = screen.getByRole("heading", { level: 3 });
@@ -17,7 +18,10 @@ describe("<OuSAdresser />", () => {
 
   it("should render a ressource web component", () => {
     const { container } = render(
-      <OuSAdresser data={ressourceWebData} headingLevel={1} />
+      <OuSAdresser
+        data={ressourceWebData as OuSAdresserType}
+        headingLevel={1}
+      />
     );
     expect(container).toMatchSnapshot();
   });

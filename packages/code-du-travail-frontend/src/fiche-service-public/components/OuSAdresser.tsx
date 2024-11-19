@@ -1,40 +1,39 @@
 import React from "react";
 
 import { getInChildrenByName, getTitleInChildren } from "../utils";
-import {ElementBuilder, FicheSPDataElement} from "./ElementBuilder";
+import { ElementBuilder } from "./ElementBuilder";
 import Title from "./Title";
 import { fr } from "@codegouvfr/react-dsfr";
+import Link from "next/link";
+import { OuSAdresserType, RessourceWebType } from "../type";
 
 export const OuSAdresser = ({
   data,
   headingLevel,
 }: {
-  data: any;
+  data: OuSAdresserType;
   headingLevel: number;
 }) => {
   const label = getTitleInChildren(data);
   let content;
-  const ressourceWeb = getInChildrenByName(data, "RessourceWeb");
+  const ressourceWeb = getInChildrenByName(
+    data,
+    "RessourceWeb"
+  ) as RessourceWebType;
   if (ressourceWeb) {
-    const url = ressourceWeb.attributes?.URL;
+    const url = ressourceWeb.attributes.URL;
     content = (
-      <a
-        href={url}
-        rel="noopener noreferrer"
-        target="_blank"
-        aria-label={`${label} (nouvelle fenêtre)`}
-      >
+      <Link href={url} rel="noopener noreferrer" target="_blank">
         {label}
-      </a>
+      </Link>
     );
   } else {
+    const text = getInChildrenByName(data, "Texte")!;
+
     content = (
       <>
         <Title level={headingLevel}>{label}</Title>
-        <ElementBuilder
-          data={data.children.find((child) => child.name === "Texte")}
-          headingLevel={headingLevel}
-        />
+        <ElementBuilder data={text} headingLevel={headingLevel} />
       </>
     );
   }

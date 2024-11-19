@@ -4,7 +4,7 @@ import { useUIDSeed } from "react-uid";
 import { getInChildrenByName, getText, ignoreParagraph } from "../utils";
 import { LienExterne, LienExterneCommente } from "./LienExterne";
 import List from "./List";
-import Accordion from "./Accordion";
+
 import Title from "./Title";
 import Avertissement from "./Avertissement";
 import Table from "./Table";
@@ -13,18 +13,13 @@ import ServiceEnLigne from "./ServiceEnLigne";
 import OuSAdresser from "./OuSAdresser";
 import Tabulator from "./Tabulator";
 import { ImageComponent as ImageElement } from "./ImageComponent";
+import {
+  FicheSPData,
+  FicheSPDataTexteChapitre,
+  FicheSPDataWithElementChildren,
+} from "../type";
+import Accordion from "./Accordion";
 
-export type FicheSPDataText = { type: "text"; text: string };
-export type FicheSPDataElement = {
-  type: "element";
-  attributes?: Record<string, string>;
-  children: FicheSPData[];
-  name: string;
-};
-export type FicheSPData = {
-  name?: string;
-  attributes?: Record<string, string>;
-} & (FicheSPDataElement | FicheSPDataText);
 export const ElementBuilder = ({
   data,
   headingLevel = 0,
@@ -39,7 +34,11 @@ export const ElementBuilder = ({
 
   if (Array.isArray(data)) {
     return data.map((child) => (
-      <ElementBuilder key={seedId(child)} data={child} headingLevel={headingLevel} />
+      <ElementBuilder
+        key={seedId(child)}
+        data={child}
+        headingLevel={headingLevel}
+      />
     ));
   }
   if (data.type === "text") {
@@ -48,13 +47,13 @@ export const ElementBuilder = ({
 
   switch (data.name) {
     case "BlocCas":
-      if (data.attributes?.affichage === "onglet") {
+      if (data.attributes.affichage === "onglet") {
         return <Tabulator data={data} headingLevel={headingLevel} />;
       } else {
         return <Accordion data={data} headingLevel={headingLevel} />;
       }
     case "Image":
-      return  <ImageElement data={data} headingLevel={headingLevel} />;
+      return <ImageElement data={data} headingLevel={headingLevel} />;
     case "Introduction":
       if (ignoreParagraph(data)) {
         return (
@@ -80,8 +79,15 @@ export const ElementBuilder = ({
     case "Tableau":
       return <Table data={data} headingLevel={headingLevel} />;
     case "Texte":
-      if (getInChildrenByName(data, "Chapitre")) {
-        return <Accordion data={data} headingLevel={headingLevel} />;
+      if (
+        getInChildrenByName(data as FicheSPDataWithElementChildren, "Chapitre")
+      ) {
+        return (
+          <Accordion
+            data={data as FicheSPDataTexteChapitre}
+            headingLevel={headingLevel}
+          />
+        );
       }
       return (
         <ElementBuilder data={data.children} headingLevel={headingLevel} />
@@ -100,6 +106,8 @@ export const ElementBuilder = ({
     case "Description":
     case "FragmentConditionne":
     case "SousChapitre":
+    case "LienIntra":
+    case "LienInterne":
       return (
         <ElementBuilder data={data.children} headingLevel={headingLevel} />
       );
@@ -122,17 +130,11 @@ export const ElementBuilder = ({
           <ElementBuilder data={data.children} headingLevel={headingLevel} />
         </p>
       );
-
     case "Exposant":
       return (
         <sup>
           <ElementBuilder data={data.children} headingLevel={headingLevel} />
         </sup>
-      );
-    case "LienIntra":
-    case "LienInterne":
-      return (
-        <ElementBuilder data={data.children} headingLevel={headingLevel} />
       );
     // Otherwise we simply ignore the element
     default:

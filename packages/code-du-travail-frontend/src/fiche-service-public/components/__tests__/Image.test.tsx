@@ -1,12 +1,13 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import dataMock from "./mocks/image.json";
-import { ElementBuilder, FicheSPDataElement } from "../ElementBuilder";
+import dataMock from "./mocks/imageData.json";
+import { ImageComponent } from "../ImageComponent";
+import { FicheSPDataImage } from "../../type";
 
 describe("Image", () => {
   it("should display image and caption", () => {
     const { container } = render(
-      <ElementBuilder data={dataMock as FicheSPDataElement} headingLevel={2} />
+      <ImageComponent data={dataMock as FicheSPDataImage} headingLevel={2} />
     );
     expect(container).toMatchSnapshot();
   });

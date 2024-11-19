@@ -3,13 +3,13 @@ import React from "react";
 
 import Tabulator from "../Tabulator";
 import tabulatorDataMock from "./mocks/tabulatorData.json";
-import { FicheSPDataElement } from "../ElementBuilder";
+import { FicheSPDataListeSituations } from "../../type";
 
 describe("<Tabulator />", () => {
   it("should render", () => {
     const { container } = render(
       <Tabulator
-        data={tabulatorDataMock as FicheSPDataElement}
+        data={tabulatorDataMock as FicheSPDataListeSituations}
         headingLevel={2}
       />
     );
@@ -18,7 +18,7 @@ describe("<Tabulator />", () => {
   it("should have two different levels of headings", () => {
     const { getAllByRole } = render(
       <Tabulator
-        data={tabulatorDataMock as FicheSPDataElement}
+        data={tabulatorDataMock as FicheSPDataListeSituations}
         headingLevel={0}
       />
     );
@@ -33,7 +33,7 @@ describe("<Tabulator />", () => {
   it("should increase heading levels if not 0", () => {
     const { getAllByRole } = render(
       <Tabulator
-        data={tabulatorDataMock as FicheSPDataElement}
+        data={tabulatorDataMock as FicheSPDataListeSituations}
         headingLevel={1}
       />
     );

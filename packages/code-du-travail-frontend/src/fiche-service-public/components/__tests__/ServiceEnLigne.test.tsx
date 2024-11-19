@@ -3,12 +3,14 @@ import React from "react";
 
 import ServiceEnLigne from "../ServiceEnLigne";
 import serviceEnLigneDataMock from "./mocks/serviceEnLigneData.json";
-import { FicheSPDataElement } from "../ElementBuilder";
+import { FicheSPDataServiceEnLigne } from "../../type";
 
 describe("<ServiceEnLigne />", () => {
   it("should render", () => {
-    const { container } = render(
-      <ServiceEnLigne data={serviceEnLigneDataMock as FicheSPDataElement} />
+    render(
+      <ServiceEnLigne
+        data={serviceEnLigneDataMock as FicheSPDataServiceEnLigne}
+      />
     );
 
     const title = screen.getByText("Texte qui se retrouve dans le lien");

@@ -1,12 +1,12 @@
-import PropTypes from "prop-types";
 import React from "react";
 import { ElementBuilder } from "./ElementBuilder";
+import { FicheSPDataList } from "../type";
 
 export const List = ({
   data,
   headingLevel,
 }: {
-  data: any;
+  data: FicheSPDataList;
   headingLevel: number;
 }) => {
   const items = data.children.map((item, index) => (
@@ -19,11 +19,6 @@ export const List = ({
     return <ul>{items}</ul>;
   }
   return <ol>{items}</ol>;
-};
-
-List.propTypes = {
-  data: PropTypes.object.isRequired,
-  headingLevel: PropTypes.number.isRequired,
 };
 
 export default List;
