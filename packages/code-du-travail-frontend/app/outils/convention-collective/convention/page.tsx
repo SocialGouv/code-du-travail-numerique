@@ -17,7 +17,7 @@ export async function generateMetadata() {
     title: `Simulateur - ${title}`,
     description: description,
     path: `${SITE_URL}/outils/convention-collective/convention`,
-    overrideCanonical: `${SITE_URL}/outils/convention-collective/convention`,
+    overrideCanonical: `${SITE_URL}/outils/convention-collective`,
   });
 }
 
