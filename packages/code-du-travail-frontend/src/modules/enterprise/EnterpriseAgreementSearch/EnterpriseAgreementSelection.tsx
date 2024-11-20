@@ -1,3 +1,4 @@
+"use client";
 import { fr } from "@codegouvfr/react-dsfr";
 import Card from "@codegouvfr/react-dsfr/Card";
 import Button from "@codegouvfr/react-dsfr/Button";
@@ -53,6 +54,7 @@ export const EnterpriseAgreementSelection = ({
               "aria-disabled": disabled,
               ...(widgetMode
                 ? {
+                    target: "_blank",
                     onClick: (ev) => {
                       if (disabled) ev.preventDefault();
                       window.parent?.postMessage(
@@ -69,7 +71,6 @@ export const EnterpriseAgreementSelection = ({
                     },
                   }
                 : {}),
-              ...(widgetMode ? { target: "_blank" } : {}),
             }}
             border
             enlargeLink
