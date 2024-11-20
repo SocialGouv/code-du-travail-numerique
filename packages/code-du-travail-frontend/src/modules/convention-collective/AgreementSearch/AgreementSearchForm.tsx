@@ -2,7 +2,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Highlight from "@codegouvfr/react-dsfr/Highlight";
 import { RadioButtons } from "@codegouvfr/react-dsfr/RadioButtons";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { AgreementSearchInput } from "./AgreementSearchInput";
 import {
   EnterpriseAgreement,
@@ -10,10 +10,16 @@ import {
 } from "../../enterprise";
 
 type Props = {
-  onAgreementSelect?: (agreement: EnterpriseAgreement) => void;
+  onAgreementSelect?: (agreement?: EnterpriseAgreement) => void;
+  selectedAgreementAlert?: (
+    agreement?: EnterpriseAgreement
+  ) => NonNullable<ReactNode> | undefined;
 };
 
-export const AgreementSearchForm = ({ onAgreementSelect }: Props) => {
+export const AgreementSearchForm = ({
+  onAgreementSelect,
+  selectedAgreementAlert,
+}: Props) => {
   const [mode, setMode] = useState<
     "agreementSearch" | "enterpriseSearch" | "noSearch" | undefined
   >("agreementSearch");
@@ -49,11 +55,13 @@ export const AgreementSearchForm = ({ onAgreementSelect }: Props) => {
       {mode === "agreementSearch" && (
         <AgreementSearchInput
           onAgreementSelect={onAgreementSelect}
+          selectedAgreementAlert={selectedAgreementAlert}
         ></AgreementSearchInput>
       )}
       {mode === "enterpriseSearch" && (
         <EnterpriseAgreementSearchInput
           onAgreementSelect={onAgreementSelect}
+          selectedAgreementAlert={selectedAgreementAlert}
         ></EnterpriseAgreementSearchInput>
       )}
     </>

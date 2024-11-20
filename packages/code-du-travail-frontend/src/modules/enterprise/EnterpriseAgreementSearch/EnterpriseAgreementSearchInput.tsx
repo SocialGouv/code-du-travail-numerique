@@ -5,7 +5,7 @@ import Button from "@codegouvfr/react-dsfr/Button";
 import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import { Card } from "@codegouvfr/react-dsfr/Card";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { css } from "../../../../styled-system/css";
 
 import Spinner from "../../common/Spinner.svg";
@@ -16,16 +16,19 @@ import { ApiGeoResult } from "../../Location/searchCities";
 import { CardTitleStyle, ButtonStyle } from "../../convention-collective/style";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { EnterpriseAgreementSelection } from "./EnterpriseAgreementSelection";
-import { Agreement } from "@socialgouv/cdtn-types";
 
 type Props = {
   widgetMode?: boolean;
   onAgreementSelect?: (agreement: EnterpriseAgreement) => void;
+  selectedAgreementAlert?: (
+    agreement?: EnterpriseAgreement
+  ) => NonNullable<ReactNode> | undefined;
 };
 
 export const EnterpriseAgreementSearchInput = ({
   widgetMode = false,
   onAgreementSelect,
+  selectedAgreementAlert,
 }: Props) => {
   const [searchState, setSearchState] = useState<
     "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
@@ -76,6 +79,14 @@ export const EnterpriseAgreementSearchInput = ({
             end: fr.cx("fr-p-0", "fr-m-0"),
           }}
         ></Card>
+        {selectedAgreement && selectedAgreementAlert?.(selectedAgreement) && (
+          <Alert
+            className={fr.cx("fr-mt-2w")}
+            title="Nous n’avons pas de réponse pour cette convention collective"
+            description={selectedAgreementAlert(selectedAgreement)}
+            severity="warning"
+          />
+        )}
       </>
     );
   } else if (selectedEnterprise) {

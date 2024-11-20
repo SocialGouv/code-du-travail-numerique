@@ -1,7 +1,7 @@
 import debounce from "debounce-promise";
 import { nafError } from "./error";
 import { SITE_URL } from "../../config";
-import { Agreement } from "../../outils/types";
+import { ElasticAgreement } from "@socialgouv/cdtn-types";
 
 const formatCCn = ({ num, id, slug, title, shortTitle, highlight, url }) => ({
   ...(highlight ? { highlight } : {}),
@@ -37,7 +37,7 @@ const apiIdcc = function createFetcher(query: string): Promise<Agreement[]> {
             (results) =>
               results.hits.hits.map(({ _source }) =>
                 formatCCn(_source)
-              ) as Agreement[]
+              ) as ElasticAgreement[]
           );
       }
       throw new Error();

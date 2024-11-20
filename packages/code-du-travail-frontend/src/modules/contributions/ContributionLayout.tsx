@@ -14,7 +14,10 @@ import { AgreementSearchForm } from "../convention-collective/AgreementSearch/Ag
 import { EnterpriseAgreement } from "../enterprise";
 import Card from "@codegouvfr/react-dsfr/Card";
 import { removeCCNumberFromSlug } from "../common/utils";
-import { ElasticSearchContributionConventionnelle } from "@socialgouv/cdtn-types";
+import {
+  ElasticSearchContributionConventionnelle,
+  ElasticSearchContributionGeneric,
+} from "@socialgouv/cdtn-types";
 import { ContributionElasticDocument } from "./type";
 
 type Props = {
@@ -29,6 +32,50 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
   const [displayContent, setDisplayContent] = useState(false);
   const [selectedAgreement, setSelectedAgreement] =
     useState<EnterpriseAgreement>();
+  const isCCSupported = (
+    agreement: EnterpriseAgreement,
+    ccSupported: string[]
+  ) => {
+    return ccSupported.includes(agreement.id);
+  };
+  const isCCUnextended = (
+    agreement: EnterpriseAgreement,
+    ccUnextended: string[]
+  ) => {
+    return ccUnextended.includes(agreement?.id);
+  };
+  const isAgreementValid = (agreement?: EnterpriseAgreement) => {
+    if (!agreement) return false;
+    const { ccSupported, ccUnextended } =
+      contribution as ElasticSearchContributionGeneric;
+    const isSupported = isCCSupported(agreement, ccSupported);
+    const isUnextended = isCCUnextended(agreement, ccUnextended);
+    return !isUnextended && isSupported;
+  };
+  const selectedAgreementAlert = (agreement: EnterpriseAgreement) => {
+    const { ccSupported, ccUnextended } =
+      contribution as ElasticSearchContributionGeneric;
+    const isSupported = isCCSupported(agreement, ccSupported);
+    const isUnextended = isCCUnextended(agreement, ccUnextended);
+    if (isUnextended)
+      return (
+        <>
+          Les dispositions de cette convention n’ont pas été étendues. Cela
+          signifie qu&apos;elles ne s&apos;appliquent qu&apos;aux entreprises
+          adhérentes à l&apos;une des organisations signataires de
+          l&apos;accord. Dans ce contexte, nous ne sommes pas en mesure
+          d&apos;identifier si cette règle s&apos;applique ou non au sein de
+          votre entreprise. Vous pouvez toutefois consulter la convention
+          collective{" "}
+          <a target="_blank" href={agreement.url}>
+            ici
+          </a>{" "}
+          dans le cas où elle s&apos;applique à votre situation.
+        </>
+      );
+    if (!isSupported)
+      return <>Vous pouvez consulter les informations générales ci-dessous.</>;
+  };
   return (
     <div className={fr.cx("fr-grid-row--gutters", "fr-my-4w", "fr-my-md-12w")}>
       <h1 className={fr.cx("fr-mb-6w")}>{title}</h1>
@@ -49,7 +96,11 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
             </div>
             <div>
               <AgreementSearchForm
-                onAgreementSelect={setSelectedAgreement}
+                onAgreementSelect={(agreement) => {
+                  if (isAgreementValid(agreement))
+                    setSelectedAgreement(agreement);
+                }}
+                selectedAgreementAlert={selectedAgreementAlert}
               ></AgreementSearchForm>
               <Button
                 className={fr.cx("fr-mt-2w")}

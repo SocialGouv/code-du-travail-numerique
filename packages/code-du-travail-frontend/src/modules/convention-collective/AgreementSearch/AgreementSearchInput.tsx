@@ -2,7 +2,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { css } from "../../../../styled-system/css";
 
 import { Autocomplete } from "../../common/Autocomplete";
@@ -12,17 +12,23 @@ import { EnterpriseAgreement } from "../../enterprise";
 
 type Props = {
   onSearch?: (query: string, value?: Agreement[]) => void;
-  onAgreementSelect?: (agreement: EnterpriseAgreement) => void;
+  onAgreementSelect?: (agreement?: EnterpriseAgreement) => void;
+  selectedAgreementAlert?: (
+    agreement?: EnterpriseAgreement
+  ) => NonNullable<ReactNode> | undefined;
 };
 
 export const AgreementSearchInput = ({
   onSearch,
   onAgreementSelect,
+  selectedAgreementAlert,
 }: Props) => {
   const [searchState, setSearchState] = useState<
     "noSearch" | "lowSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
   >("noSearch");
   const [error, setError] = useState("");
+  const [selectedAgreement, setSelectedAgreement] =
+    useState<EnterpriseAgreement>();
   const getStateMessage = () => {
     switch (searchState) {
       case "lowSearch":
@@ -53,13 +59,14 @@ export const AgreementSearchInput = ({
         return "error";
     }
   };
+
   return (
     <>
       <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
         Précisez et sélectionnez votre convention collective
       </p>
       <div className={fr.cx("fr-mt-2w")}>
-        <Autocomplete<Agreement>
+        <Autocomplete<EnterpriseAgreement>
           dataTestId="AgreementSearchAutocomplete"
           className={fr.cx("fr-col-12", "fr-mb-0")}
           hintText="Ex : transport routier ou 1486"
@@ -83,7 +90,10 @@ export const AgreementSearchInput = ({
           state={getInputState()}
           stateRelatedMessage={getStateMessage()}
           onChange={(agreement) => {
-            if (onAgreementSelect && agreement) onAgreementSelect(agreement);
+            if (onAgreementSelect && agreement) {
+              onAgreementSelect(agreement);
+              setSelectedAgreement(agreement);
+            }
           }}
           displayLabel={(item) => {
             return item ? `${item.shortTitle} (IDCC ${item.num})` : "";
@@ -139,6 +149,14 @@ export const AgreementSearchInput = ({
               </>
             }
             severity="info"
+          />
+        )}
+        {selectedAgreement && selectedAgreementAlert?.(selectedAgreement) && (
+          <Alert
+            className={fr.cx("fr-mt-2w")}
+            title="Nous n’avons pas de réponse pour cette convention collective"
+            description={selectedAgreementAlert(selectedAgreement)}
+            severity="warning"
           />
         )}
       </div>
