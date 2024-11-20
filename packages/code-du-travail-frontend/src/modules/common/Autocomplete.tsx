@@ -46,23 +46,6 @@ export const Autocomplete = <K,>({
   } = useCombobox({
     items: suggestions,
     itemToString: displayLabel,
-    onInputValueChange: async ({ inputValue }) => {
-      setValue(inputValue);
-      if (!inputValue) {
-        setSelectedResult(undefined);
-      }
-      try {
-        setLoading(true);
-        const results = await search(inputValue);
-        if (onSearch) onSearch(inputValue, results);
-        setSuggestions(results);
-      } catch (error) {
-        if (onError) onError(error);
-        setSuggestions([]);
-      } finally {
-        setLoading(false);
-      }
-    },
     selectedItem: selectedResult,
     onSelectedItemChange: (changes) => {
       setSelectedResult(changes.selectedItem);
@@ -110,6 +93,27 @@ export const Autocomplete = <K,>({
           nativeInputProps={{
             type: "search",
             value,
+            onChange: async (ev) => {
+              const inputValue = ev.target.value;
+              setValue(inputValue);
+              if (!inputValue) {
+                setSelectedResult(undefined);
+              }
+              if (selectedResult) {
+                return;
+              }
+              try {
+                setLoading(true);
+                const results = await search(inputValue);
+                if (onSearch) onSearch(inputValue, results);
+                setSuggestions(results);
+              } catch (error) {
+                if (onError) onError(error);
+                setSuggestions([]);
+              } finally {
+                setLoading(false);
+              }
+            },
             // @ts-ignore
             "data-testid": dataTestId,
           }}
@@ -131,9 +135,9 @@ export const Autocomplete = <K,>({
                   {...getItemProps({
                     item,
                     index,
+                    key: `${displayLabel(item)}${index}`,
                   })}
                   className={`${fr.cx("fr-sidemenu__item", "fr-p-0", "fr-grid-row")} ${autocompleteContainer}${highlightedIndex === index ? ` ${buttonActive}` : ""} ${autocompleteItemContainer}`}
-                  key={`${displayLabel(item)}${index}`}
                 >
                   <Button
                     {...(lineAsLink
@@ -182,8 +186,6 @@ const addonBlock = css({
   height: "100%",
   alignContent: "center",
 });
-
-const spinner = css({});
 
 const buttonClose = css({
   _before: {
