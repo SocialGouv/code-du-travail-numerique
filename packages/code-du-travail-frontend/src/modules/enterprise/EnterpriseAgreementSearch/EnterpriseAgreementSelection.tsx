@@ -36,15 +36,15 @@ export const EnterpriseAgreementSelection = ({
       </p>
       <p className={fr.cx("fr-mb-2w")}>{enterprise.address}</p>
       {enterprise.conventions?.map((agreement) => {
-        const disabled =
-          !agreement.slug || !agreement.url || !agreement.contributions;
+        const { slug, url, contributions } = agreement;
+        const disabled = !(slug && (url || contributions));
         let description;
-        if (!agreement.slug) {
-          description =
-            "Nous n’avons pas d’informations concernant cette convention collective";
-        } else if (agreement.url || agreement.contributions || agreement.slug) {
+        if (!disabled) {
           description =
             "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective";
+        } else if (slug && !(url || contributions)) {
+          description =
+            "Nous n’avons pas d’informations concernant cette convention collective";
         } else {
           description =
             "Cette convention collective déclarée par l’entreprise n’est pas reconnue par notre site";
