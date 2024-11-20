@@ -27,7 +27,6 @@ describe("Pages integration convention collective", () => {
       .clear()
       .type("carrefour");
     cy.get("@iframe").find("button[type=submit]").as("button-submit");
-    cy.get("@iframe").find("button[type=submit]").as("button-submit");
     cy.get("@button-submit").click();
     cy.get("@iframe").contains("CARREFOUR HYPERMARCHES").as("entreprise");
     cy.get("@entreprise").click();
