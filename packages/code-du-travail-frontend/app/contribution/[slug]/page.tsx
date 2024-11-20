@@ -5,7 +5,7 @@ import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import { fetchRelatedItems } from "../../../src/modules/documents";
 import {
   ContributionLayout,
-  fetchContributionDocument,
+  fetchContributionBySlug,
 } from "../../../src/modules/contributions";
 
 export async function generateMetadata({ params }) {
@@ -19,25 +19,17 @@ export async function generateMetadata({ params }) {
 }
 
 async function Fiche({ params }) {
-  const { _id, title, metaDescription, date } = await getContribution(
-    params.slug
-  );
+  const { _id, ...source } = await getContribution(params.slug);
   const relatedItems = await fetchRelatedItems({ _id }, params.slug);
   return (
     <DsfrLayout>
-      <ContributionLayout
-        title={title}
-        metaDescription={metaDescription}
-        relatedItems={relatedItems}
-        date={date}
-        slug={params.slug}
-      />
+      <ContributionLayout contribution={source} relatedItems={relatedItems} />
     </DsfrLayout>
   );
 }
 
 const getContribution = async (slug: string) => {
-  const contribution = await fetchContributionDocument(slug);
+  const contribution = await fetchContributionBySlug(slug);
 
   if (!contribution) {
     return notFound();

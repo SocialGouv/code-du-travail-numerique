@@ -13,27 +13,19 @@ import AgreementSearch from "../convention-collective/AgreementSearch.svg";
 import { AgreementSearchForm } from "../convention-collective/AgreementSearch/AgreementSearchForm";
 import { EnterpriseAgreement } from "../enterprise";
 import Card from "@codegouvfr/react-dsfr/Card";
-import { ElasticAgreement } from "@socialgouv/cdtn-types";
+import { removeCCNumberFromSlug } from "../common/utils";
+import { ElasticSearchContributionConventionnelle } from "@socialgouv/cdtn-types";
+import { ContributionElasticDocument } from "./type";
 
 type Props = {
-  metaDescription: string;
-  date: string;
   relatedItems: { items: RelatedItem[]; title: string }[];
-  title: string;
-  slug: string;
-  agreement?: Pick<ElasticAgreement, "num" | "shortTitle">;
+  contribution: ContributionElasticDocument;
 };
 
-export function ContributionLayout({
-  metaDescription,
-  date,
-  relatedItems,
-  title,
-  slug,
-  agreement,
-}: Props) {
-  console.log("agreement", agreement);
-  const isGeneric = !agreement;
+export function ContributionLayout({ relatedItems, contribution }: Props) {
+  const { date, title, slug, idcc, metaDescription } = contribution;
+  const isGeneric = idcc === "0000";
+
   const [displayContent, setDisplayContent] = useState(false);
   const [selectedAgreement, setSelectedAgreement] =
     useState<EnterpriseAgreement>();
@@ -85,7 +77,10 @@ export function ContributionLayout({
               </h1>
             </div>
             <Card
-              title={agreement?.shortTitle}
+              title={
+                (contribution as ElasticSearchContributionConventionnelle)
+                  .ccnShortTitle
+              }
               size="small"
               className={fr.cx("fr-mt-2w")}
               classes={{
@@ -94,6 +89,15 @@ export function ContributionLayout({
                 end: fr.cx("fr-p-0", "fr-m-0"),
               }}
             ></Card>
+            <Button
+              className={fr.cx("fr-mt-2w")}
+              linkProps={{
+                href: `/contribution/${removeCCNumberFromSlug(slug)}`,
+              }}
+              priority="secondary"
+            >
+              Modifier
+            </Button>
           </>
         )}
       </div>
@@ -103,27 +107,35 @@ export function ContributionLayout({
             "fr-col-12",
             "fr-col-md-7",
             "fr-mb-6w",
-            "fr-mb-md-0"
+            "fr-mb-md-0",
+            "fr-mt-2w"
           )}
         >
-          <Button
-            className={
-              !displayContent ? fr.cx("fr-unhidden") : fr.cx("fr-hidden")
-            }
-            priority="tertiary no outline"
-            onClick={() => setDisplayContent(true)}
-          >
-            Afficher les informations sans sélectionner une convention
-            collective
-          </Button>
-          <div
-            className={
-              displayContent ? fr.cx("fr-unhidden") : fr.cx("fr-hidden")
-            }
-          >
-            MyContent
-          </div>
-          <Feedback></Feedback>
+          {isGeneric ? (
+            <>
+              <Button
+                className={fr.cx(
+                  !displayContent ? "fr-unhidden" : "fr-hidden",
+                  "fr-mb-2w"
+                )}
+                priority="tertiary no outline"
+                onClick={() => setDisplayContent(true)}
+              >
+                Afficher les informations sans sélectionner une convention
+                collective
+              </Button>
+              <div
+                className={fr.cx(displayContent ? "fr-unhidden" : "fr-hidden")}
+              >
+                MyContent
+              </div>
+              <Feedback></Feedback>
+            </>
+          ) : (
+            <>
+              <div>MyContent</div>
+            </>
+          )}
         </div>
 
         <div
