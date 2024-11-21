@@ -16,6 +16,7 @@ import { ApiGeoResult } from "../../Location/searchCities";
 import { CardTitleStyle, ButtonStyle } from "../../convention-collective/style";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { EnterpriseAgreementSelection } from "./EnterpriseAgreementSelection";
+import { useLocalStorageForAgreementOnPageLoad } from "../../common/useLocalStorage";
 
 type Props = {
   widgetMode?: boolean;
@@ -30,6 +31,7 @@ export const EnterpriseAgreementSearchInput = ({
   onAgreementSelect,
   selectedAgreementAlert,
 }: Props) => {
+  const [convention, setConvention] = useLocalStorageForAgreementOnPageLoad();
   const [searchState, setSearchState] = useState<
     "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
   >("noSearch");
@@ -40,7 +42,7 @@ export const EnterpriseAgreementSearchInput = ({
   const [enterprises, setEnterprises] = useState<Enterprise[]>();
   const [selectedEnterprise, setSelectedEnterprise] = useState<Enterprise>();
   const [selectedAgreement, setSelectedAgreement] =
-    useState<EnterpriseAgreement>();
+    useState<EnterpriseAgreement | null>(convention);
   const [error, setError] = useState("");
   const getStateMessage = () => {
     switch (searchState) {
@@ -95,6 +97,7 @@ export const EnterpriseAgreementSearchInput = ({
         enterprise={selectedEnterprise}
         onAgreementSelect={(agreement) => {
           if (onAgreementSelect) onAgreementSelect(agreement);
+          setConvention(agreement);
           setSelectedAgreement(agreement);
         }}
       />

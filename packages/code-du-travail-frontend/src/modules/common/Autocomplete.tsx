@@ -12,10 +12,11 @@ export type AutocompleteProps<K> = InputProps & {
   onChange?: (value: K | undefined) => void;
   onError?: (value: string) => void;
   onSearch?: (query: string, results: K[]) => void;
-  displayLabel: (item: K | null) => string;
+  displayLabel: (item: K | undefined) => string;
   search: (search: string) => Promise<K[]>;
   dataTestId?: string;
   lineAsLink?: (value: K) => string;
+  defaultValue?: K;
 };
 
 export const Autocomplete = <K,>({
@@ -32,10 +33,13 @@ export const Autocomplete = <K,>({
   hintText,
   classes,
   dataTestId,
+  defaultValue,
 }: AutocompleteProps<K>) => {
-  const [value, setValue] = useState<string>("");
+  const [value, setValue] = useState<string>(displayLabel(defaultValue));
   const [loading, setLoading] = useState(false);
-  const [selectedResult, setSelectedResult] = useState<K | undefined>();
+  const [selectedResult, setSelectedResult] = useState<K | undefined>(
+    defaultValue
+  );
   const [suggestions, setSuggestions] = useState<K[]>([]);
   const {
     isOpen,
@@ -44,6 +48,7 @@ export const Autocomplete = <K,>({
     highlightedIndex,
     getItemProps,
   } = useCombobox({
+    defaultInputValue: displayLabel(defaultValue),
     items: suggestions,
     itemToString: displayLabel,
     selectedItem: selectedResult,

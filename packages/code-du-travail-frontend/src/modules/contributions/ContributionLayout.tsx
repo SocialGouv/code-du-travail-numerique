@@ -28,6 +28,7 @@ type Props = {
 export function ContributionLayout({ relatedItems, contribution }: Props) {
   const { date, title, slug, idcc, metaDescription } = contribution;
   const isGeneric = idcc === "0000";
+  const isNoCDT = contribution?.type === "generic-no-cdt";
 
   const [displayContent, setDisplayContent] = useState(false);
   const [selectedAgreement, setSelectedAgreement] =
@@ -102,22 +103,24 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
                 }}
                 selectedAgreementAlert={selectedAgreementAlert}
               ></AgreementSearchForm>
-              <Button
-                className={fr.cx("fr-mt-2w")}
-                linkProps={{
-                  href: selectedAgreement
-                    ? `/contribution/${selectedAgreement?.num}-${slug}`
-                    : "",
-                  onClick: (ev) => {
-                    if (!selectedAgreement) {
-                      ev.preventDefault();
-                      setDisplayContent(true);
-                    }
-                  },
-                }}
-              >
-                Afficher les informations
-              </Button>
+              {(!isGeneric || !isNoCDT || selectedAgreement) && (
+                <Button
+                  className={fr.cx("fr-mt-2w")}
+                  linkProps={{
+                    href: selectedAgreement
+                      ? `/contribution/${selectedAgreement?.num}-${slug}`
+                      : "",
+                    onClick: (ev) => {
+                      if (!selectedAgreement) {
+                        ev.preventDefault();
+                        setDisplayContent(true);
+                      }
+                    },
+                  }}
+                >
+                  Afficher les informations
+                </Button>
+              )}
             </div>
           </>
         ) : (
@@ -153,41 +156,45 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
         )}
       </div>
       <div className={fr.cx("fr-grid-row")}>
-        <div
-          className={fr.cx(
-            "fr-col-12",
-            "fr-col-md-7",
-            "fr-mb-6w",
-            "fr-mb-md-0",
-            "fr-mt-2w"
-          )}
-        >
-          {isGeneric ? (
-            <>
-              <Button
-                className={fr.cx(
-                  !displayContent ? "fr-unhidden" : "fr-hidden",
-                  "fr-mb-2w"
-                )}
-                priority="tertiary no outline"
-                onClick={() => setDisplayContent(true)}
-              >
-                Afficher les informations sans sélectionner une convention
-                collective
-              </Button>
-              <div
-                className={fr.cx(displayContent ? "fr-unhidden" : "fr-hidden")}
-              >
-                MyContent
-              </div>
-              <Feedback></Feedback>
-            </>
-          ) : (
-            <>
-              <div>MyContent</div>
-            </>
-          )}
-        </div>
+        {!isNoCDT && (
+          <div
+            className={fr.cx(
+              "fr-col-12",
+              "fr-col-md-7",
+              "fr-mb-6w",
+              "fr-mb-md-0",
+              "fr-mt-2w"
+            )}
+          >
+            {isGeneric ? (
+              <>
+                <Button
+                  className={fr.cx(
+                    !displayContent ? "fr-unhidden" : "fr-hidden",
+                    "fr-mb-2w"
+                  )}
+                  priority="tertiary no outline"
+                  onClick={() => setDisplayContent(true)}
+                >
+                  Afficher les informations sans sélectionner une convention
+                  collective
+                </Button>
+                <div
+                  className={fr.cx(
+                    displayContent ? "fr-unhidden" : "fr-hidden"
+                  )}
+                >
+                  MyContent
+                </div>
+                <Feedback></Feedback>
+              </>
+            ) : (
+              <>
+                <div>MyContent</div>
+              </>
+            )}
+          </div>
+        )}
 
         <div
           className={fr.cx("fr-col-12", "fr-col-offset-md-1", "fr-col-md-4")}

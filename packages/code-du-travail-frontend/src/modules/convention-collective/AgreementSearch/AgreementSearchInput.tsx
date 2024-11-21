@@ -9,6 +9,7 @@ import { Autocomplete } from "../../common/Autocomplete";
 import { Agreement } from "../../../outils/types";
 import { searchAgreement } from "../search";
 import { EnterpriseAgreement } from "../../enterprise";
+import { useLocalStorageForAgreementOnPageLoad } from "../../common/useLocalStorage";
 
 type Props = {
   onSearch?: (query: string, value?: Agreement[]) => void;
@@ -23,12 +24,14 @@ export const AgreementSearchInput = ({
   onAgreementSelect,
   selectedAgreementAlert,
 }: Props) => {
+  const [convention, setConvention] = useLocalStorageForAgreementOnPageLoad();
   const [searchState, setSearchState] = useState<
     "noSearch" | "lowSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
   >("noSearch");
   const [error, setError] = useState("");
-  const [selectedAgreement, setSelectedAgreement] =
-    useState<EnterpriseAgreement>();
+  const [selectedAgreement, setSelectedAgreement] = useState<
+    EnterpriseAgreement | undefined
+  >(convention ?? undefined);
   const getStateMessage = () => {
     switch (searchState) {
       case "lowSearch":
@@ -67,6 +70,7 @@ export const AgreementSearchInput = ({
       </p>
       <div className={fr.cx("fr-mt-2w")}>
         <Autocomplete<EnterpriseAgreement>
+          defaultValue={selectedAgreement}
           dataTestId="AgreementSearchAutocomplete"
           className={fr.cx("fr-col-12", "fr-mb-0")}
           hintText="Ex : transport routier ou 1486"
@@ -92,6 +96,7 @@ export const AgreementSearchInput = ({
           onChange={(agreement) => {
             if (onAgreementSelect && agreement) {
               onAgreementSelect(agreement);
+              setConvention(agreement);
               setSelectedAgreement(agreement);
             }
           }}
