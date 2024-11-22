@@ -78,7 +78,7 @@ export const fetchRelatedItems = async (
     .values();
 
   const formatted: RelatedItem[] = Array.from(filteredItems).map((item) => ({
-    url: item.url ?? `/${getRouteBySource(item.source)}/${item.slug}`,
+    url: `/${getRouteBySource(item.source)}/${item.slug}`,
     source: item.source,
     title: item.title,
   }));
