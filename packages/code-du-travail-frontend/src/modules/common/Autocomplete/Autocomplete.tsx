@@ -163,7 +163,8 @@ export const Autocomplete = <K,>({
                     </li>
                   </>
                 ))
-              : displayNoResult && (
+              : displayNoResult &&
+                !selectedResult && (
                   <>
                     <li
                       className={`${fr.cx("fr-sidemenu__item", "fr-p-0", "fr-grid-row")} ${autocompleteContainer}`}
