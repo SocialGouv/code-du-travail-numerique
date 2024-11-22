@@ -55,9 +55,9 @@ export const EnterpriseAgreementSearchInput = ({
   };
   return (
     <>
-      <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
+      <h2 className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
         Précisez votre entreprise
-      </p>
+      </h2>
       <form
         className={fr.cx(
           "fr-grid-row",

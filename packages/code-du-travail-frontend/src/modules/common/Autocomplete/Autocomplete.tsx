@@ -5,8 +5,9 @@ import Button from "@codegouvfr/react-dsfr/Button";
 import Input, { InputProps } from "@codegouvfr/react-dsfr/Input";
 import { useCombobox } from "downshift";
 import { useState } from "react";
-import Spinner from "./Spinner.svg";
-import { css } from "../../../styled-system/css";
+import Spinner from "../Spinner.svg";
+import { css } from "../../../../styled-system/css";
+import { redirect } from "next/navigation";
 
 export type AutocompleteProps<K> = InputProps & {
   onChange?: (value: K | undefined) => void;
@@ -16,6 +17,7 @@ export type AutocompleteProps<K> = InputProps & {
   search: (search: string) => Promise<K[]>;
   dataTestId?: string;
   lineAsLink?: (value: K) => string;
+  displayNoResult?: boolean;
 };
 
 export const Autocomplete = <K,>({
@@ -32,6 +34,7 @@ export const Autocomplete = <K,>({
   hintText,
   classes,
   dataTestId,
+  displayNoResult,
 }: AutocompleteProps<K>) => {
   const [value, setValue] = useState<string>("");
   const [loading, setLoading] = useState(false);
@@ -51,6 +54,7 @@ export const Autocomplete = <K,>({
       setSelectedResult(changes.selectedItem);
       setValue(changes.inputValue ?? "");
       if (onChange) onChange(changes.selectedItem);
+      if (lineAsLink) redirect(lineAsLink(changes.selectedItem));
     },
   });
   return (
@@ -77,6 +81,7 @@ export const Autocomplete = <K,>({
                     }}
                     priority="tertiary no outline"
                     title="Effacer la sélection"
+                    type="button"
                   />
                 )}
                 {loading && (
@@ -126,37 +131,49 @@ export const Autocomplete = <K,>({
         />
         <ul
           {...getMenuProps()}
-          className={`${fr.cx("fr-p-0")} ${autocompleteListContainer}`}
+          className={`${fr.cx("fr-p-0", "fr-m-0")} ${autocompleteListContainer}`}
         >
-          {isOpen &&
-            suggestions.map((item, index) => (
-              <>
-                <li
-                  {...getItemProps({
-                    item,
-                    index,
-                    key: `${displayLabel(item)}${index}`,
-                  })}
-                  className={`${fr.cx("fr-sidemenu__item", "fr-p-0", "fr-grid-row")} ${autocompleteContainer}${highlightedIndex === index ? ` ${buttonActive}` : ""} ${autocompleteItemContainer}`}
-                >
-                  <Button
-                    {...(lineAsLink
-                      ? {
-                          linkProps: {
-                            href: lineAsLink(item),
-                          },
-                        }
-                      : {
-                          linkProps: undefined,
-                        })}
-                    priority="tertiary no outline"
-                    className={fr.cx("fr-col-12")}
-                  >
-                    {displayLabel(item)}
-                  </Button>
-                </li>
-              </>
-            ))}
+          {value.length > 1 &&
+            (isOpen && suggestions.length
+              ? suggestions.map((item, index) => (
+                  <>
+                    <li
+                      {...getItemProps({
+                        item,
+                        index,
+                        key: `${displayLabel(item)}${index}`,
+                      })}
+                      className={`${fr.cx("fr-sidemenu__item", "fr-p-0", "fr-grid-row")} ${autocompleteContainer}${highlightedIndex === index ? ` ${buttonActive}` : ""}`}
+                    >
+                      <Button
+                        {...(lineAsLink
+                          ? {
+                              linkProps: {
+                                href: lineAsLink(item),
+                              },
+                            }
+                          : {
+                              linkProps: undefined,
+                            })}
+                        priority="tertiary no outline"
+                        className={`${fr.cx("fr-col-12")} ${autocompleteButton}`}
+                      >
+                        {displayLabel(item)}
+                      </Button>
+                    </li>
+                  </>
+                ))
+              : displayNoResult && (
+                  <>
+                    <li
+                      className={`${fr.cx("fr-sidemenu__item", "fr-p-0", "fr-grid-row")} ${autocompleteContainer}`}
+                    >
+                      <span className={fr.cx("fr-py-1w", "fr-px-2w")}>
+                        Aucun résultat
+                      </span>
+                    </li>
+                  </>
+                ))}
         </ul>
       </div>
     </>
@@ -174,7 +191,9 @@ const autocompleteListContainer = css({
   bg: "var(--background-default-grey)",
 });
 
-const autocompleteItemContainer = css({});
+const autocompleteButton = css({
+  textAlign: "left",
+});
 
 const buttonActive = css({
   backgroundColor: "rgb(246, 246, 246)",

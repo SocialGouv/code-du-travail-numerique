@@ -5,7 +5,7 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { useState } from "react";
 import { css } from "../../../../styled-system/css";
 
-import { Autocomplete } from "../../common/Autocomplete";
+import { Autocomplete } from "../../common/Autocomplete/Autocomplete";
 import { Agreement } from "../../../outils/types";
 import { searchAgreement } from "../search";
 

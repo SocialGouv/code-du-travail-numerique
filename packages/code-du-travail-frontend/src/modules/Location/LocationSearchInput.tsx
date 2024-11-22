@@ -1,6 +1,9 @@
 "use client";
 import { ApiGeoResult, searchCities } from "./searchCities";
-import { Autocomplete, AutocompleteProps } from "../common/Autocomplete";
+import {
+  Autocomplete,
+  AutocompleteProps,
+} from "../common/Autocomplete/Autocomplete";
 
 type Props = Pick<AutocompleteProps<ApiGeoResult>, "classes"> & {
   className?: string;
@@ -32,6 +35,7 @@ export const LocationSearchInput = ({
         state={"default"}
         dataTestId={"locationSearchAutocomplete"}
         classes={classes}
+        displayNoResult
       ></Autocomplete>
     </>
   );

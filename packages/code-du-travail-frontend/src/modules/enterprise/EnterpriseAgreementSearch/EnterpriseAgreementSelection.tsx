@@ -17,13 +17,13 @@ export const EnterpriseAgreementSelection = ({
 }: Props) => {
   return (
     <>
-      <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
+      <h2 className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
         {enterprise.conventions.length === 0
           ? `Aucune convention collective n'a été déclarée pour l'entreprise`
           : enterprise.conventions.length === 1
             ? `1 convention collective trouvée pour :`
             : `${enterprise.conventions.length} conventions collectives trouvées pour :`}
-      </p>
+      </h2>
       <p className={fr.cx("fr-text--bold", "fr-m-0", "fr-mt-2w")}>
         {enterprise.label}
       </p>
