@@ -51,7 +51,6 @@ export const EnterpriseAgreementSelection = ({
             className={fr.cx("fr-mt-2w")}
             linkProps={{
               href: !disabled ? `/convention-collective/${agreement.slug}` : "",
-              "aria-disabled": disabled,
               ...(widgetMode
                 ? {
                     target: "_blank",

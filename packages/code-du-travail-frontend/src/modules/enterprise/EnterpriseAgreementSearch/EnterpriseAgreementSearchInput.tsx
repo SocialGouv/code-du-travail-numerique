@@ -24,7 +24,7 @@ export const EnterpriseAgreementSearchInput = ({
   widgetMode = false,
 }: Props) => {
   const [searchState, setSearchState] = useState<
-    "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
+    "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch" | "required"
   >("noSearch");
   const [search, setSearch] = useState<string>();
   const [searched, setSearched] = useState<boolean>(false);
@@ -42,6 +42,8 @@ export const EnterpriseAgreementSearchInput = ({
             Vérifiez l’orthographe des termes de recherche
           </>
         );
+      case "required":
+        return <>Le nom de l&apos;entreprise doit être renseigné</>;
       case "errorSearch":
         return <>{error}</>;
     }
@@ -50,6 +52,7 @@ export const EnterpriseAgreementSearchInput = ({
     switch (searchState) {
       case "errorSearch":
       case "notFoundSearch":
+      case "required":
         return "error";
     }
   };
@@ -68,7 +71,7 @@ export const EnterpriseAgreementSearchInput = ({
         onSubmit={async (event) => {
           event.preventDefault();
           if (!search) {
-            setSearchState("noSearch");
+            setSearchState("required");
             return;
           }
           setLoading(true);
@@ -150,7 +153,10 @@ export const EnterpriseAgreementSearchInput = ({
         <div className={fr.cx("fr-mt-2w")}>
           {!!enterprises?.length && !loading && (
             <p className={fr.cx("fr-h5")}>
-              {enterprises.length} entreprises trouvées
+              {enterprises.length}
+              {enterprises.length > 1
+                ? " entreprises trouvées"
+                : " entreprise trouvée"}
             </p>
           )}
           {loading && (
