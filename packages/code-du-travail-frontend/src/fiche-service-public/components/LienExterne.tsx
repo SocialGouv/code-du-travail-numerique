@@ -13,14 +13,17 @@ export const LienExterneCommente = ({
   data: FicheSPDataLienExterneCommente;
 }) => {
   const commentaire = getInChildrenByName(data, "Commentaire");
-  const lienExterne = getInChildrenByName(data, "LienExterne");
+  const lienExterne = getInChildrenByName(
+    data,
+    "LienExterne"
+  ) as FicheSPDataLienExterne;
 
   if (!lienExterne || !commentaire) return <></>;
   return (
     <>
       <p>{getText(commentaire)}</p>
       <p>
-        <LienExterne data={lienExterne as FicheSPDataLienExterne} />
+        <LienExterne data={lienExterne} />
       </p>
     </>
   );

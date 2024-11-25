@@ -4,7 +4,9 @@ exports[`<ReferenceList /> should render 1`] = `
 <div>
   <ul>
     <li>
-      <p>
+      <p
+        class="fr-mb-0"
+      >
         <a
           href="/code-du-travail/l2323-4"
         >
@@ -13,7 +15,9 @@ exports[`<ReferenceList /> should render 1`] = `
       </p>
     </li>
     <li>
-      <p>
+      <p
+        class="fr-mb-0"
+      >
         <a
           href="https://article.jo/yyy"
         >
@@ -22,7 +26,9 @@ exports[`<ReferenceList /> should render 1`] = `
       </p>
     </li>
     <li>
-      <p>
+      <p
+        class="fr-mb-0"
+      >
         <a
           href="https://legifrance/ccn-metallurgie"
         >
@@ -31,7 +37,9 @@ exports[`<ReferenceList /> should render 1`] = `
       </p>
     </li>
     <li>
-      <p>
+      <p
+        class="fr-mb-0"
+      >
         <a
           href="/convention-collective/123-automobile"
         >
@@ -40,7 +48,9 @@ exports[`<ReferenceList /> should render 1`] = `
       </p>
     </li>
     <li>
-      <p>
+      <p
+        class="fr-mb-0"
+      >
         <a
           href="/code-du-travail/l1234-3"
         >
