@@ -4,6 +4,7 @@ import Image from "next/image";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
+import Alert from "@codegouvfr/react-dsfr/Alert";
 import { Card } from "@codegouvfr/react-dsfr/Card";
 import { ReactNode, useState } from "react";
 import { css } from "../../../../styled-system/css";
@@ -14,7 +15,6 @@ import { searchEnterprises } from "../queries";
 import { Enterprise, EnterpriseAgreement } from "../types";
 import { ApiGeoResult } from "../../Location/searchCities";
 import { CardTitleStyle, ButtonStyle } from "../../convention-collective/style";
-import Alert from "@codegouvfr/react-dsfr/Alert";
 import { EnterpriseAgreementSelection } from "./EnterpriseAgreementSelection";
 import { useLocalStorageForAgreementOnPageLoad } from "../../common/useLocalStorage";
 
@@ -33,7 +33,7 @@ export const EnterpriseAgreementSearchInput = ({
 }: Props) => {
   const [convention, setConvention] = useLocalStorageForAgreementOnPageLoad();
   const [searchState, setSearchState] = useState<
-    "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
+    "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch" | "required"
   >("noSearch");
   const [search, setSearch] = useState<string>();
   const [searched, setSearched] = useState<boolean>(false);
@@ -54,6 +54,8 @@ export const EnterpriseAgreementSearchInput = ({
             Vérifiez l’orthographe des termes de recherche
           </>
         );
+      case "required":
+        return <>Le nom de l&apos;entreprise doit être renseigné</>;
       case "errorSearch":
         return <>{error}</>;
     }
@@ -62,6 +64,7 @@ export const EnterpriseAgreementSearchInput = ({
     switch (searchState) {
       case "errorSearch":
       case "notFoundSearch":
+      case "required":
         return "error";
     }
   };
@@ -105,9 +108,9 @@ export const EnterpriseAgreementSearchInput = ({
   }
   return (
     <>
-      <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
+      <h2 className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
         Précisez votre entreprise
-      </p>
+      </h2>
       <form
         className={fr.cx(
           "fr-grid-row",
@@ -118,7 +121,7 @@ export const EnterpriseAgreementSearchInput = ({
         onSubmit={async (event) => {
           event.preventDefault();
           if (!search) {
-            setSearchState("noSearch");
+            setSearchState("required");
             return;
           }
           setLoading(true);
@@ -200,7 +203,10 @@ export const EnterpriseAgreementSearchInput = ({
         <div className={fr.cx("fr-mt-2w")}>
           {!!enterprises?.length && !loading && (
             <p className={fr.cx("fr-h5")}>
-              {enterprises.length} entreprises trouvées
+              {enterprises.length}
+              {enterprises.length > 1
+                ? " entreprises trouvées"
+                : " entreprise trouvée"}
             </p>
           )}
           {loading && (
@@ -247,7 +253,9 @@ export const EnterpriseAgreementSearchInput = ({
               linkProps={
                 !onAgreementSelect
                   ? {
-                      href: `/${widgetMode ? "widgets" : "outils"}/convention-collective/selection/${enterprise.siren}`,
+                      href: widgetMode
+                        ? `/widgets/convention-collective/${enterprise.siren}`
+                        : `/outils/convention-collective/entreprise/${enterprise.siren}`,
                     }
                   : {
                       href: "",

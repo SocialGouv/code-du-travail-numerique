@@ -12,7 +12,7 @@ export const AgreementSearch = () => {
     <>
       <AgreementSearchInput
         onSearch={(query, result) => {
-          if (query.length && !result?.length) setNoResult(true);
+          setNoResult(query.length > 2 && !result?.length);
         }}
       />
       <div className={fr.cx("fr-mt-2w")}>

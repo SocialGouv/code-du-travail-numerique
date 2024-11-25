@@ -21,13 +21,13 @@ export const EnterpriseAgreementSelection = ({
 }: Props) => {
   return (
     <>
-      <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
+      <h2 className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
         {enterprise.conventions.length === 0
           ? `Aucune convention collective n'a été déclarée pour l'entreprise`
           : enterprise.conventions.length === 1
             ? `1 convention collective trouvée pour :`
             : `${enterprise.conventions.length} conventions collectives trouvées pour :`}
-      </p>
+      </h2>
       <p className={fr.cx("fr-text--bold", "fr-m-0", "fr-mt-2w")}>
         {enterprise.label}
       </p>
@@ -39,63 +39,102 @@ export const EnterpriseAgreementSelection = ({
         const { slug, url, contributions } = agreement;
         const disabled = !(slug && (url || contributions));
         let description;
-        if (!disabled) {
-          description =
-            "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective";
-        } else if (slug && !(url || contributions)) {
+        if (slug && !(url || contributions)) {
           description =
             "Nous n’avons pas d’informations concernant cette convention collective";
-        } else {
+        } else if (!slug) {
           description =
             "Cette convention collective déclarée par l’entreprise n’est pas reconnue par notre site";
+        } else {
+          description =
+            "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective";
         }
         return (
           <Card
             key={agreement.id}
             className={fr.cx("fr-mt-2w")}
-            linkProps={
-              !onAgreementSelect
-                ? {
-                    href: !disabled
-                      ? `/convention-collective/${agreement.slug}`
-                      : "",
-                    "aria-disabled": disabled,
-                    ...(widgetMode
-                      ? {
-                          target: "_blank",
-                          onClick: (ev) => {
+            linkProps={{
+              ...(!disabled
+                ? !onAgreementSelect
+                  ? {
+                      target: widgetMode ? "_blank" : "auto",
+                      href: `/convention-collective/${agreement.slug}`,
+                      onClick: widgetMode
+                        ? (ev) => {
                             if (disabled) ev.preventDefault();
-                            window.parent?.postMessage(
-                              {
-                                name: "agreement",
-                                kind: "select",
-                                extra: {
-                                  idcc: agreement.num,
-                                  title: agreement.title,
+                            else if (widgetMode) {
+                              window.parent?.postMessage(
+                                {
+                                  name: "agreement",
+                                  kind: "select",
+                                  extra: {
+                                    idcc: agreement.num,
+                                    title: agreement.title,
+                                  },
                                 },
-                              },
-                              "*"
-                            );
-                          },
-                        }
-                      : {}),
-                  }
+                                "*"
+                              );
+                            }
+                          }
+                        : undefined,
+                    }
+                  : {
+                      href: "#",
+                      onClick: (ev) => {
+                        if (disabled) ev.preventDefault();
+                        onAgreementSelect(agreement);
+                      },
+                    }
                 : {
-                    href: "",
+                    href: "#",
                     onClick: (ev) => {
-                      if (disabled) ev.preventDefault();
-                      onAgreementSelect(agreement);
+                      ev.preventDefault();
                     },
-                  }
-            }
+                  }),
+              // ...(widgetMode
+              //   ? {
+              //       href: !disabled
+              //         ? `/convention-collective/${agreement.slug}`
+              //         : "#",
+              //       ...(widgetMode
+              //         ? {
+              //             target: "_blank",
+              //             onClick: (ev) => {
+              //               if (disabled) ev.preventDefault();
+              //               window.parent?.postMessage(
+              //                 {
+              //                   name: "agreement",
+              //                   kind: "select",
+              //                   extra: {
+              //                     idcc: agreement.num,
+              //                     title: agreement.title,
+              //                   },
+              //                 },
+              //                 "*"
+              //               );
+              //             },
+              //           }
+              //         : {}),
+              //     }
+              //   : {
+              //       href: "",
+              //       onClick: (ev) => {
+              //         if (disabled) ev.preventDefault();
+              //         onAgreementSelect(agreement);
+              //       },
+            }}
             border
             enlargeLink
             size="large"
             desc={description}
-            title={agreement.shortTitle}
+            title={
+              agreement.slug
+                ? `${agreement.shortTitle} IDCC${agreement.id}`
+                : agreement.shortTitle
+            }
             classes={{
               title: `${fr.cx("fr-h5")} ${CardTitleStyle} ${disabled ? disabledTitle : ""}`,
-              content: fr.cx("fr-px-2w", "fr-pt-1w", "fr-pb-7v"),
+              content: `${fr.cx("fr-px-2w", "fr-pt-1w", "fr-pb-7v")} ${disabled ? disabledContent : ""}`,
               desc: fr.cx("fr-mt-1w", "fr-mr-6w"),
               end: fr.cx("fr-hidden"),
               root: `${disabled ? disabledRoot : ""}`,
@@ -131,10 +170,15 @@ const disabledRoot = css({
 });
 
 const disabledTitle = css({
-  "& a": {
+  "& a,button": {
     color: `var(--text-disabled-grey) !important`,
+    cursor: "not-allowed !important",
     _before: {
       cursor: "not-allowed",
     },
   },
+});
+
+const disabledContent = css({
+  cursor: "not-allowed",
 });

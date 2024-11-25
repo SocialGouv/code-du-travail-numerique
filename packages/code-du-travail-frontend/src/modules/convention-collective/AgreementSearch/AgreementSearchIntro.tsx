@@ -1,6 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Button from "@codegouvfr/react-dsfr/Button";
-import Highlight from "@codegouvfr/react-dsfr/Highlight";
 
 type Props = {
   navigationUrl?: string;
