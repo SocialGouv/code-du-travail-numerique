@@ -3,7 +3,7 @@ import { Metadata } from "next/types";
 type Props = {
   title: string;
   description: string;
-  path: string;
+  path?: string;
   overrideCanonical?: string;
   noTitleAdd?: boolean;
 };

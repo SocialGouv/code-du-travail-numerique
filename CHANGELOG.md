@@ -3,6 +3,72 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.164.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.164.1...v4.164.2) (2024-11-22)
+
+
+### Bug Fixes
+
+* contenu lié de type SP ne renvoient plus chez nous ([#6314](https://github.com/SocialGouv/code-du-travail-numerique/issues/6314)) ([91a41f9](https://github.com/SocialGouv/code-du-travail-numerique/commit/91a41f9824fa56871e9f9629bf0e80b0d50d6b3e))
+
+
+
+
+
+## [4.164.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.164.0...v4.164.1) (2024-11-18)
+
+
+### Bug Fixes
+
+* **fiches-mt:** modication de la canonical ([#6306](https://github.com/SocialGouv/code-du-travail-numerique/issues/6306)) ([cf296a8](https://github.com/SocialGouv/code-du-travail-numerique/commit/cf296a8f382b875a148703837309118bf286c42e))
+
+
+
+
+
+# [4.164.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.163.0...v4.164.0) (2024-11-15)
+
+
+### Features
+
+* ajout d'events pour suivre les clicks sur des aides ([#6303](https://github.com/SocialGouv/code-du-travail-numerique/issues/6303)) ([f077b10](https://github.com/SocialGouv/code-du-travail-numerique/commit/f077b1019ea3eec13716ffc196fa464f181842d7))
+
+
+
+
+
+# [4.163.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.162.0...v4.163.0) (2024-11-13)
+
+
+### Bug Fixes
+
+* erreur sur le replaceAll sur les anciens navigateurs ([#6287](https://github.com/SocialGouv/code-du-travail-numerique/issues/6287)) ([fc8b363](https://github.com/SocialGouv/code-du-travail-numerique/commit/fc8b36329dcb38a290431e411120b114c721df47))
+
+
+### Features
+
+* amélioration du message d'erreur sur le salaire brut/net ([#6280](https://github.com/SocialGouv/code-du-travail-numerique/issues/6280)) ([2bbf0ab](https://github.com/SocialGouv/code-du-travail-numerique/commit/2bbf0ab3f670deed7333579a17ab30804106eab2))
+
+
+
+
+
+# [4.162.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.161.0...v4.162.0) (2024-11-13)
+
+
+### Bug Fixes
+
+* **dsfr:** modification du logo principal ([#6278](https://github.com/SocialGouv/code-du-travail-numerique/issues/6278)) ([2fced9b](https://github.com/SocialGouv/code-du-travail-numerique/commit/2fced9ba5df784355f7b5e74f14dcbff8098e033))
+
+
+### Features
+
+* **dsfr:** intégration de la page home ([#6219](https://github.com/SocialGouv/code-du-travail-numerique/issues/6219)) ([c296467](https://github.com/SocialGouv/code-du-travail-numerique/commit/c2964676e5d46db414c2565c7b6bde8f5e03ee8e)), closes [#6079](https://github.com/SocialGouv/code-du-travail-numerique/issues/6079) [#6085](https://github.com/SocialGouv/code-du-travail-numerique/issues/6085) [#6090](https://github.com/SocialGouv/code-du-travail-numerique/issues/6090) [#6082](https://github.com/SocialGouv/code-du-travail-numerique/issues/6082) [#6092](https://github.com/SocialGouv/code-du-travail-numerique/issues/6092) [#6096](https://github.com/SocialGouv/code-du-travail-numerique/issues/6096) [#6099](https://github.com/SocialGouv/code-du-travail-numerique/issues/6099) [#6094](https://github.com/SocialGouv/code-du-travail-numerique/issues/6094)
+* **DSFR:** salaire brut / net ([#6260](https://github.com/SocialGouv/code-du-travail-numerique/issues/6260)) ([43505f5](https://github.com/SocialGouv/code-du-travail-numerique/commit/43505f5a790c74f4ec951aa7f009b31f34ae5734)), closes [#6245](https://github.com/SocialGouv/code-du-travail-numerique/issues/6245)
+
+
+
+
+
 # [4.161.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.160.0...v4.161.0) (2024-11-12)
 
 
