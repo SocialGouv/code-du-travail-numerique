@@ -35,15 +35,15 @@ export const EnterpriseAgreementSelection = ({
         const { slug, url, contributions } = agreement;
         const disabled = !(slug && (url || contributions));
         let description;
-        if (!disabled) {
-          description =
-            "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective";
-        } else if (slug && !(url || contributions)) {
+        if (slug && !(url || contributions)) {
           description =
             "Nous n’avons pas d’informations concernant cette convention collective";
-        } else {
+        } else if (!slug) {
           description =
             "Cette convention collective déclarée par l’entreprise n’est pas reconnue par notre site";
+        } else {
+          description =
+            "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective";
         }
         return (
           <Card
@@ -84,7 +84,11 @@ export const EnterpriseAgreementSelection = ({
             enlargeLink
             size="large"
             desc={description}
-            title={agreement.shortTitle}
+            title={
+              agreement.slug
+                ? `${agreement.shortTitle} IDCC${agreement.id}`
+                : agreement.shortTitle
+            }
             classes={{
               title: `${fr.cx("fr-h5")} ${CardTitleStyle} ${disabled ? disabledTitle : ""}`,
               content: `${fr.cx("fr-px-2w", "fr-pt-1w", "fr-pb-7v")} ${disabled ? disabledContent : ""}`,

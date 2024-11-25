@@ -201,7 +201,9 @@ export const EnterpriseAgreementSearchInput = ({
               border
               enlargeLink
               linkProps={{
-                href: `/${widgetMode ? "widgets" : "outils"}/convention-collective/entreprise/${enterprise.siren}`,
+                href: widgetMode
+                  ? `/widgets/convention-collective/${enterprise.siren}`
+                  : `/outils/convention-collective/entreprise/${enterprise.siren}`,
               }}
               desc={`Activité : ${enterprise.activitePrincipale}`}
               end={<Badge>{`${enterprise.matching} établissements`}</Badge>}
