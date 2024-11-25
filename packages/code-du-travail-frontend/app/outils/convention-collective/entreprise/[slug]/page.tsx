@@ -1,8 +1,5 @@
 import { DsfrLayout } from "../../../../../src/modules/layout";
-import {
-  DocumentElasticResult,
-  fetchRelatedItems,
-} from "../../../../../src/modules/documents";
+import { DocumentElasticResult } from "../../../../../src/modules/documents";
 import {
   fetchTool,
   FindAgreementLayout,
@@ -32,9 +29,13 @@ async function AgreementSelectionPage({ params }) {
   const [enterprise] = await searchEnterprises({
     query: params.slug,
   });
+  if (!enterprise) {
+    return notFound();
+  }
   const tool = await getTool();
   return (
     <DsfrLayout>
+      <meta name="robots" content="noindex,nofollow" />
       <FindAgreementLayout
         relatedItems={agreementRelatedItems}
         description={tool.description}

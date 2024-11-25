@@ -103,17 +103,18 @@ export const Autocomplete = <K,>({
               setValue(inputValue);
               if (!inputValue) {
                 setSelectedResult(undefined);
+                onSearch?.(inputValue, []);
               }
-              if (selectedResult) {
+              if (selectedResult || inputValue.length <= 1) {
                 return;
               }
               try {
                 setLoading(true);
                 const results = await search(inputValue);
-                if (onSearch) onSearch(inputValue, results);
+                onSearch?.(inputValue, results);
                 setSuggestions(results);
               } catch (error) {
-                if (onError) onError(error);
+                onError?.(error);
                 setSuggestions([]);
               } finally {
                 setLoading(false);

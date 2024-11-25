@@ -4,6 +4,7 @@ import Image from "next/image";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
+import Alert from "@codegouvfr/react-dsfr/Alert";
 import { Card } from "@codegouvfr/react-dsfr/Card";
 import { useState } from "react";
 import { css } from "../../../../styled-system/css";
@@ -14,7 +15,6 @@ import { searchEnterprises } from "../queries";
 import { Enterprise } from "../types";
 import { ApiGeoResult } from "../../Location/searchCities";
 import { CardTitleStyle, ButtonStyle } from "../../convention-collective/style";
-import Alert from "@codegouvfr/react-dsfr/Alert";
 
 type Props = {
   widgetMode?: boolean;
@@ -201,7 +201,7 @@ export const EnterpriseAgreementSearchInput = ({
               border
               enlargeLink
               linkProps={{
-                href: `/${widgetMode ? "widgets" : "outils"}/convention-collective/selection/${enterprise.siren}`,
+                href: `/${widgetMode ? "widgets" : "outils"}/convention-collective/entreprise/${enterprise.siren}`,
               }}
               desc={`Activité : ${enterprise.activitePrincipale}`}
               end={<Badge>{`${enterprise.matching} établissements`}</Badge>}
