@@ -13,31 +13,6 @@ exports[`<Accordion /> should have different levels of headings & render both Bl
         class="fr-accordion__title"
       >
         <button
-          aria-controls="qui-peut-etre-indemnise-collapse"
-          aria-expanded="false"
-          class="fr-accordion__btn"
-          id="qui-peut-etre-indemnise__toggle-btn"
-          type="button"
-        >
-          Qui peut être indemnisé ?
-        </button>
-      </h2>
-      <div
-        class="fr-collapse"
-        id="qui-peut-etre-indemnise-collapse"
-      >
-        <p>
-          Vous pouvez être indemnisé par le Fiva si vous êtes dans l'une des 3 situations suivantes :
-        </p>
-      </div>
-    </section>
-    <section
-      class="fr-accordion"
-    >
-      <h2
-        class="fr-accordion__title"
-      >
-        <button
           aria-controls="comment-faire-la-demande-collapse"
           aria-expanded="false"
           class="fr-accordion__btn"
@@ -83,6 +58,11 @@ exports[`<Accordion /> should have different levels of headings & render both Bl
               </p>
             </div>
           </section>
+        </div>
+        <div
+          class="fr-accordions-group"
+          data-fr-group="false"
+        >
           <section
             class="fr-accordion"
           >

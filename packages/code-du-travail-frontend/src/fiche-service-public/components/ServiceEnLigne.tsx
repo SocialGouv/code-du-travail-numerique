@@ -13,14 +13,16 @@ export const ServiceEnLigne = ({
   const url = data.attributes.URL;
   const title = getText(data.children[0]);
   return (
-    <Link
-      className={fr.cx("fr-btn", "fr-my-2w")}
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      {title}
-    </Link>
+    <div>
+      <Link
+        className={fr.cx("fr-btn", "fr-btn--secondary", "fr-mb-2w")}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {title}
+      </Link>
+    </div>
   );
 };
 

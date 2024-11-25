@@ -13,8 +13,7 @@ const getCredit = (data: FicheSPDataImage) => {
 };
 const getDescription = (data: FicheSPDataImage) => {
   const description = getInChildrenByName(data, "Description");
-  if (!description) return;
-  return <ElementBuilder data={description} />;
+  return description && <ElementBuilder data={description} />;
 };
 
 export const ImageComponent = ({
@@ -44,14 +43,12 @@ export const ImageComponent = ({
         </figcaption>
       </figure>
       {description && (
-        <div className={fr.cx("fr-accordions-group")}>
-          <Accordion
-            label={"Voir en détail"}
-            titleAs={getTitleLevel(headingLevel)}
-          >
-            {description}
-          </Accordion>
-        </div>
+        <Accordion
+          label={"Voir en détail"}
+          titleAs={getTitleLevel(headingLevel)}
+        >
+          {description}
+        </Accordion>
       )}
     </>
   );

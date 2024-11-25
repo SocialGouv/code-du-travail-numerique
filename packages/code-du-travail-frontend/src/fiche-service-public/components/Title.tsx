@@ -18,12 +18,14 @@ export const getTitleLevel = (level: number) => {
 export const Title = ({
   level,
   children,
+  className,
 }: {
   level: number;
   children: string;
+  className?: string;
 }) => {
   const Heading = getTitleLevel(level);
-  return <Heading>{children}</Heading>;
+  return <Heading className={className}>{children}</Heading>;
 };
 
 export default Title;

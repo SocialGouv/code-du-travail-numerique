@@ -19,61 +19,57 @@ exports[`Image should display image and caption 1`] = `
       </span>
     </figcaption>
   </figure>
-  <div
-    class="fr-accordions-group"
+  <section
+    class="fr-accordion"
   >
-    <section
-      class="fr-accordion"
+    <h4
+      class="fr-accordion__title"
     >
-      <h4
-        class="fr-accordion__title"
+      <button
+        aria-controls="fr-accordion-:r0:-collapse"
+        aria-expanded="false"
+        class="fr-accordion__btn"
+        id="fr-accordion-:r0:__toggle-btn"
+        type="button"
       >
-        <button
-          aria-controls="fr-accordion-:r0:-collapse"
-          aria-expanded="false"
-          class="fr-accordion__btn"
-          id="fr-accordion-:r0:__toggle-btn"
-          type="button"
-        >
-          Voir en détail
-        </button>
-      </h4>
-      <div
-        class="fr-collapse"
-        id="fr-accordion-:r0:-collapse"
-      >
-        <p>
-          Comment calculer un délai quand il y a un jour férié ?
-        </p>
-        <p>
-          Voici comment calculer un délai de 7 jours, selon que l'on parle de jours calendaires, francs, ouvrables ou ouvrés. Dans notre exemple, le délai commence un lundi et il y a un jour férié (le mercredi).
-        </p>
-        <p>
-          - Délai compté en jour calendaire : lundi + mardi + mercredi + jeudi + vendredi + samedi + dimanche
-        </p>
-        <p>
-          Chaque jour compte.
-        </p>
-        <p>
-          - Délai compté en jour franc : lundi + mardi + mercredi même si c'est un jour férié + jeudi + vendredi + samedi + lundi de la semaine suivante.
-        </p>
-        <p>
-          Report au jour suivant si le 7e jour tombe un samedi, un dimanche (comme c'est le cas dans notre exemple) ou un jour férié.
-        </p>
-        <p>
-          - Délai compté en jour ouvrable : lundi + mardi + jeudi + vendredi + samedi + lundi de la semaine suivante + mardi de la semaine suivante.
-        </p>
-        <p>
-          On ne compte pas le dimanche ni le jour férié.
-        </p>
-        <p>
-          - Délai compté en jour ouvré : lundi + mardi + jeudi + vendredi + lundi de la semaine suivante + mardi de la semaine suivante + mercredi de la semaine suivante.
-        </p>
-        <p>
-          On ne compte pas le jour férié (ici mercredi), le samedi ni le dimanche.
-        </p>
-      </div>
-    </section>
-  </div>
+        Voir en détail
+      </button>
+    </h4>
+    <div
+      class="fr-collapse"
+      id="fr-accordion-:r0:-collapse"
+    >
+      <p>
+        Comment calculer un délai quand il y a un jour férié ?
+      </p>
+      <p>
+        Voici comment calculer un délai de 7 jours, selon que l'on parle de jours calendaires, francs, ouvrables ou ouvrés. Dans notre exemple, le délai commence un lundi et il y a un jour férié (le mercredi).
+      </p>
+      <p>
+        - Délai compté en jour calendaire : lundi + mardi + mercredi + jeudi + vendredi + samedi + dimanche
+      </p>
+      <p>
+        Chaque jour compte.
+      </p>
+      <p>
+        - Délai compté en jour franc : lundi + mardi + mercredi même si c'est un jour férié + jeudi + vendredi + samedi + lundi de la semaine suivante.
+      </p>
+      <p>
+        Report au jour suivant si le 7e jour tombe un samedi, un dimanche (comme c'est le cas dans notre exemple) ou un jour férié.
+      </p>
+      <p>
+        - Délai compté en jour ouvrable : lundi + mardi + jeudi + vendredi + samedi + lundi de la semaine suivante + mardi de la semaine suivante.
+      </p>
+      <p>
+        On ne compte pas le dimanche ni le jour férié.
+      </p>
+      <p>
+        - Délai compté en jour ouvré : lundi + mardi + jeudi + vendredi + lundi de la semaine suivante + mardi de la semaine suivante + mercredi de la semaine suivante.
+      </p>
+      <p>
+        On ne compte pas le jour férié (ici mercredi), le samedi ni le dimanche.
+      </p>
+    </div>
+  </section>
 </div>
 `;

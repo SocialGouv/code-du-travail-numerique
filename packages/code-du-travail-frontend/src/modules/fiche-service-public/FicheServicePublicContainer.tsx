@@ -8,6 +8,7 @@ import "../../../public/static/fiches-mt.css";
 import { ElementBuilder } from "../../fiche-service-public/components/ElementBuilder";
 import { ReferenceList } from "../common/ReferencesList";
 import { FicheSPData } from "../../fiche-service-public/type";
+import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
@@ -51,12 +52,15 @@ export function FicheServicePublicContainer({
         <ElementBuilder data={raw.children} />
 
         {referencedTexts?.length > 0 && (
-          <div className={fr.cx("fr-callout", "fr-p-4w", "fr-mt-2w")}>
-            <h2 className={fr.cx("fr-h5", "fr-pb-1w")}>
-              Références juridiques concernées :
-            </h2>
-            <ReferenceList references={referencedTexts} />
-          </div>
+          <AccordionWithAnchor
+            items={[
+              {
+                title: "Références juridiques concernées",
+                content: <ReferenceList references={referencedTexts} />,
+              },
+            ]}
+            titleAs={"h2"}
+          />
         )}
       </div>
     </ContainerRichWithBreadcrumbs>

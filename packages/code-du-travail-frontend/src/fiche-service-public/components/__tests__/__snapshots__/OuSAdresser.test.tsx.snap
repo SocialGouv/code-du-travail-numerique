@@ -13,6 +13,9 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
     <h3>
       Fonds d'indemnisation des victimes de l'amiante (Fiva)
     </h3>
+    <p>
+      Pour une question concernant une demande d'indemnisation ou l'état d'avancement d'un dossier en cours d'instruction
+    </p>
     <div
       class="fr-accordions-group"
       data-fr-group="false"
@@ -50,6 +53,11 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
           </p>
         </div>
       </section>
+    </div>
+    <div
+      class="fr-accordions-group"
+      data-fr-group="false"
+    >
       <section
         class="fr-accordion"
       >
@@ -90,6 +98,11 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
           </p>
         </div>
       </section>
+    </div>
+    <div
+      class="fr-accordions-group"
+      data-fr-group="false"
+    >
       <section
         class="fr-accordion"
       >

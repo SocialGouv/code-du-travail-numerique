@@ -1,5 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<ANoter /> affiche un encart à noter (alert) 1`] = `
+<div>
+  <div
+    class="fr-alert fr-alert--info fr-mb-2w"
+  >
+    <p
+      class="fr-text--bold"
+    >
+      À savoir
+    </p>
+    <p>
+      le préavis commence à courir à compter de la notification à l'employeur de votre démission.
+    </p>
+  </div>
+</div>
+`;
+
 exports[`<ANoter /> affiche un encart à noter 1`] = `
 <div>
   <div

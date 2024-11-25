@@ -1,22 +1,21 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Accordion from "../Accordion";
 import accordionDataMock from "./mocks/accordionData.json";
-import { FicheSPDataTexteChapitre } from "../../type";
+import { FicheSPDataChapitre } from "../../type";
+import AccordionWrapper from "../Accordion";
 
 describe("<Accordion />", () => {
   it("should have different levels of headings & render both BlocCas & Chapitre", () => {
     const { container, getAllByRole } = render(
-      <Accordion
-        data={accordionDataMock as FicheSPDataTexteChapitre}
+      <AccordionWrapper
+        data={accordionDataMock as FicheSPDataChapitre}
         headingLevel={0}
       />
     );
     expect(container).toMatchSnapshot();
 
     const h2 = getAllByRole("heading", { level: 2 });
-    expect(h2[0].textContent).toEqual("Qui peut être indemnisé ?");
-    expect(h2[1].textContent).toEqual("Comment faire la demande ?");
+    expect(h2[0].textContent).toEqual("Comment faire la demande ?");
 
     const h3 = getAllByRole("heading", { level: 3 });
     expect(h3[0].textContent).toEqual("Vous êtes une victime directe");

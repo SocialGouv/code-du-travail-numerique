@@ -16,7 +16,11 @@ export const Tabulator = ({
     tabs={data.children.map((tab) => {
       const title = getTitleInChildren(tab);
       return {
-        label: <Title level={headingLevel}>{title}</Title>,
+        label: (
+          <Title className={"fr-text--md"} level={headingLevel}>
+            {title}
+          </Title>
+        ),
         content: (
           <ElementBuilder
             data={filterOutTitle(tab)}

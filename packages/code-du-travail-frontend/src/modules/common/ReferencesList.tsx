@@ -3,6 +3,7 @@
 import React from "react";
 import { ServicePublicReference } from "@socialgouv/cdtn-types";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
+import { fr } from "@codegouvfr/react-dsfr";
 
 export const ReferenceList = ({
   references,
@@ -41,7 +42,7 @@ export const ReferenceList = ({
       {formattedRefs.map((item) => {
         return (
           <li key={item.key}>
-            <p>{item}</p>
+            <p className={fr.cx("fr-mb-0")}>{item}</p>
           </li>
         );
       })}

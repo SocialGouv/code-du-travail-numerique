@@ -22,7 +22,7 @@ export const Avertissement = ({
     undefined;
   const title = getInChildrenByName(data, "Titre");
   return (
-    <div className={fr.cx("fr-alert", "fr-alert--info")}>
+    <div className={fr.cx("fr-alert", "fr-alert--warning", "fr-mb-2w")}>
       {title && <Title level={headingLevel}>{getText(title)}</Title>}
       {formatedDate && (
         <p className={fr.cx("fr-text--xs", "fr-pb-2w")}>{formatedDate}</p>

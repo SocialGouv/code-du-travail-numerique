@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useUIDSeed } from "react-uid";
-import { getInChildrenByName, getText, ignoreParagraph } from "../utils";
+import { getText, ignoreParagraph } from "../utils";
 import { LienExterne, LienExterneCommente } from "./LienExterne";
 import List from "./List";
 
@@ -13,12 +13,8 @@ import ServiceEnLigne from "./ServiceEnLigne";
 import OuSAdresser from "./OuSAdresser";
 import Tabulator from "./Tabulator";
 import { ImageComponent as ImageElement } from "./ImageComponent";
-import {
-  FicheSPData,
-  FicheSPDataTexteChapitre,
-  FicheSPDataWithElementChildren,
-} from "../type";
-import Accordion from "./Accordion";
+import { FicheSPData } from "../type";
+import AccordionWrapper from "./Accordion";
 
 export const ElementBuilder = ({
   data,
@@ -49,9 +45,11 @@ export const ElementBuilder = ({
     case "BlocCas":
       if (data.attributes.affichage === "onglet") {
         return <Tabulator data={data} headingLevel={headingLevel} />;
-      } else {
-        return <Accordion data={data} headingLevel={headingLevel} />;
       }
+      return (
+        <ElementBuilder data={data.children} headingLevel={headingLevel} />
+      );
+
     case "Image":
       return <ImageElement data={data} headingLevel={headingLevel} />;
     case "Introduction":
@@ -78,36 +76,24 @@ export const ElementBuilder = ({
       return <ServiceEnLigne data={data} />;
     case "Tableau":
       return <Table data={data} headingLevel={headingLevel} />;
-    case "Texte":
-      if (
-        getInChildrenByName(data as FicheSPDataWithElementChildren, "Chapitre")
-      ) {
-        return (
-          <Accordion
-            data={data as FicheSPDataTexteChapitre}
-            headingLevel={headingLevel}
-          />
-        );
-      }
-      return (
-        <ElementBuilder data={data.children} headingLevel={headingLevel} />
-      );
     case "Titre":
       return <Title level={headingLevel}>{getText(data)}</Title>;
     case "Avertissement":
+    case "Attention":
       return <Avertissement data={data} headingLevel={headingLevel} />;
     case "ANoter":
     case "ASavoir":
-    case "Attention":
     case "Rappel":
       return <ANoter data={data} headingLevel={headingLevel} />;
-
+    case "Cas":
     case "Chapitre":
+      return <AccordionWrapper data={data} headingLevel={headingLevel} />;
     case "Description":
     case "FragmentConditionne":
     case "SousChapitre":
     case "LienIntra":
     case "LienInterne":
+    case "Texte":
       return (
         <ElementBuilder data={data.children} headingLevel={headingLevel} />
       );

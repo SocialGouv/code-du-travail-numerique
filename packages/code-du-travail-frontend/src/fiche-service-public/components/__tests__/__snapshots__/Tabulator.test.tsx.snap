@@ -22,7 +22,9 @@ exports[`<Tabulator /> should render 1`] = `
           tabindex="0"
           type="button"
         >
-          <h4>
+          <h4
+            class="fr-text--md"
+          >
             CDI
           </h4>
         </button>
@@ -39,7 +41,9 @@ exports[`<Tabulator /> should render 1`] = `
           tabindex="-1"
           type="button"
         >
-          <h4>
+          <h4
+            class="fr-text--md"
+          >
             CDD
           </h4>
         </button>

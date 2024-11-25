@@ -1,55 +1,35 @@
 import React from "react";
 
-import {
-  filterOutTitle,
-  getInChildrenByName,
-  getTitleInChildren,
-} from "../utils";
+import { filterOutTitle, getInChildrenByName, getText } from "../utils";
 import { AccordionWithAnchor } from "../../modules/common/AccordionWithAnchor";
 import { ElementBuilder } from "./ElementBuilder";
 import { getTitleLevel } from "./Title";
-import {
-  FicheSPDataBlocCas,
-  FicheSPDataCas,
-  FicheSPDataChapitre,
-  FicheSPDataTexteChapitre,
-} from "../type";
-
-const isItemOfAccordion = (element: FicheSPDataChapitre | FicheSPDataCas) =>
-  !!getInChildrenByName(element, "Titre");
+import { FicheSPDataCas, FicheSPDataChapitre } from "../type";
 
 export const AccordionWrapper = ({
   data,
   headingLevel,
 }: {
-  data: FicheSPDataBlocCas | FicheSPDataTexteChapitre;
+  data: FicheSPDataChapitre | FicheSPDataCas;
   headingLevel: number;
 }) => {
-  const accordionItems = data.children
-    .filter(isItemOfAccordion)
-    .map((accordionItem: FicheSPDataChapitre | FicheSPDataCas) => {
-      const title = getTitleInChildren(accordionItem);
-      const content = (
-        <ElementBuilder
-          data={filterOutTitle(accordionItem)}
-          headingLevel={headingLevel + 1}
-        />
-      );
-      return {
-        content,
-        title,
-      };
-    });
-
+  const title = getInChildrenByName(data, "Titre");
+  if (!title) return <></>;
   return (
-    <>
-      {accordionItems.length > 0 && (
-        <AccordionWithAnchor
-          items={accordionItems}
-          titleAs={getTitleLevel(headingLevel)}
-        />
-      )}
-    </>
+    <AccordionWithAnchor
+      items={[
+        {
+          title: getText(title),
+          content: (
+            <ElementBuilder
+              data={filterOutTitle(data)}
+              headingLevel={headingLevel + 1}
+            />
+          ),
+        },
+      ]}
+      titleAs={getTitleLevel(headingLevel)}
+    />
   );
 };
 

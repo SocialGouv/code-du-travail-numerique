@@ -27,7 +27,8 @@ export type FicheSPDataElement = {
     | "Valeur"
     | "Exposant"
     | "LienIntra"
-    | "LienInterne";
+    | "LienInterne"
+    | "Texte";
 };
 
 export type FicheSPData =
@@ -40,7 +41,6 @@ export type FicheSPData =
   | FicheSPDataRessourceWeb
   | FicheSPDataOuSAdresser
   | FicheSPDataWithElementChildren
-  | FicheSPDataTexteChapitre
   | FicheSPDataSituation
   | FicheSPDataListeSituations
   | FicheSPDataImage
@@ -69,7 +69,7 @@ export type FicheSPDataParagraphe = {
 export type FicheSPDataWithElementChildren = {
   type: "element";
   children: FicheSPDataElement[];
-  name: "Texte" | "ANoter" | "ASavoir" | "Attention" | "Rappel";
+  name: "ANoter" | "ASavoir" | "Rappel";
 };
 export type FicheSPDataTableau = {
   type: "element";
@@ -94,16 +94,12 @@ export type FicheSPDataChapitre = {
   children: FicheSPDataElement[] | FicheSPDataParagraphe[];
   name: "Chapitre";
 };
-export type FicheSPDataTexteChapitre = {
-  type: "element";
-  children: FicheSPDataChapitre[];
-  name: "Texte";
-};
+
 export type FicheSPDataAvertissement = {
   type: "element";
   attributes?: { date: string };
   children: FicheSPDataElement[];
-  name: "Avertissement";
+  name: "Avertissement" | "Attention";
 };
 
 export type FicheSPDataImage = {

@@ -3,7 +3,7 @@
 exports[`<Avertissement /> affiche un avertissement 1`] = `
 <div>
   <div
-    class="fr-alert fr-alert--info"
+    class="fr-alert fr-alert--warning fr-mb-2w"
   >
     <h2>
       Développement de l'apprentissage transfrontalier

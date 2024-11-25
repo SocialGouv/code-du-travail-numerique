@@ -68,8 +68,8 @@ const tests = [
     data: [
       {
         type: "element",
-        name: "Chapitre",
-        children: [{ type: "text", text: "Chapitre" }],
+        name: "Texte",
+        children: [{ type: "text", text: "Texte" }],
       },
       {
         type: "element",
