@@ -50,7 +50,16 @@ export const EnterpriseAgreementSelection = ({
             key={agreement.id}
             className={fr.cx("fr-mt-2w")}
             linkProps={{
-              href: !disabled ? `/convention-collective/${agreement.slug}` : "",
+              ...(!disabled
+                ? {
+                    href: `/convention-collective/${agreement.slug}`,
+                  }
+                : {
+                    href: "#",
+                    onClick: (ev) => {
+                      ev.preventDefault();
+                    },
+                  }),
               ...(widgetMode
                 ? {
                     target: "_blank",
@@ -78,7 +87,7 @@ export const EnterpriseAgreementSelection = ({
             title={agreement.shortTitle}
             classes={{
               title: `${fr.cx("fr-h5")} ${CardTitleStyle} ${disabled ? disabledTitle : ""}`,
-              content: fr.cx("fr-px-2w", "fr-pt-1w", "fr-pb-7v"),
+              content: `${fr.cx("fr-px-2w", "fr-pt-1w", "fr-pb-7v")} ${disabled ? disabledContent : ""}`,
               desc: fr.cx("fr-mt-1w", "fr-mr-6w"),
               end: fr.cx("fr-hidden"),
               root: `${disabled ? disabledRoot : ""}`,
@@ -112,10 +121,15 @@ const disabledRoot = css({
 });
 
 const disabledTitle = css({
-  "& a": {
+  "& a,button": {
     color: `var(--text-disabled-grey) !important`,
+    cursor: "not-allowed !important",
     _before: {
       cursor: "not-allowed",
     },
   },
+});
+
+const disabledContent = css({
+  cursor: "not-allowed",
 });
