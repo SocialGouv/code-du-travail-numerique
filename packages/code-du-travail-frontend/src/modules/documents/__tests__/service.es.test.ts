@@ -29,12 +29,12 @@ describe("RelatedItems", () => {
           {
             source: "fiches_service_public",
             title: "Démission d'une assistante maternelle",
-            url: "https://www.service-public.fr/particuliers/vosdroits/F33164",
+            url: "/fiche-service-public/demission-dune-assistante-maternelle",
           },
           {
             source: "fiches_service_public",
             title: "Certificat de travail",
-            url: "https://www.service-public.fr/particuliers/vosdroits/F87",
+            url: "/fiche-service-public/certificat-de-travail",
           },
           {
             source: "contributions",

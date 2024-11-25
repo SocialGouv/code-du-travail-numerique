@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.164.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.164.1...v4.164.2) (2024-11-22)
+
+
+### Bug Fixes
+
+* contenu lié de type SP ne renvoient plus chez nous ([#6314](https://github.com/SocialGouv/code-du-travail-numerique/issues/6314)) ([91a41f9](https://github.com/SocialGouv/code-du-travail-numerique/commit/91a41f9824fa56871e9f9629bf0e80b0d50d6b3e))
+
+
+
+
+
 ## [4.164.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.164.0...v4.164.1) (2024-11-18)
 
 
