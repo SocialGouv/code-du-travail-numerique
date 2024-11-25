@@ -1,5 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Accordion /> do not display accordion after heading level 2 1`] = `
+<div>
+  <h4>
+    Comment faire la demande ?
+  </h4>
+  <p>
+    Il y a une procédure pour la victime directe et une autre pour l'ayant-droit de victime.
+  </p>
+  <h5>
+    Vous êtes une victime directe
+  </h5>
+  <p>
+    La démarche varie suivant que votre maladie a été reconnue comme maladie professionnelle ou non.
+  </p>
+  <h5>
+    Vous êtes un ayant-droit de victime
+  </h5>
+  <p>
+    La procédure varie suivant que la maladie de votre proche a été reconnue comme maladie professionnelle ou non.
+  </p>
+</div>
+`;
+
 exports[`<Accordion /> should have different levels of headings & render both BlocCas & Chapitre 1`] = `
 <div>
   <div
@@ -92,5 +115,28 @@ exports[`<Accordion /> should have different levels of headings & render both Bl
       </div>
     </section>
   </div>
+</div>
+`;
+
+exports[`<Accordion /> should not display accordion after heading level 2 1`] = `
+<div>
+  <h4>
+    Comment faire la demande ?
+  </h4>
+  <p>
+    Il y a une procédure pour la victime directe et une autre pour l'ayant-droit de victime.
+  </p>
+  <h5>
+    Vous êtes une victime directe
+  </h5>
+  <p>
+    La démarche varie suivant que votre maladie a été reconnue comme maladie professionnelle ou non.
+  </p>
+  <h5>
+    Vous êtes un ayant-droit de victime
+  </h5>
+  <p>
+    La procédure varie suivant que la maladie de votre proche a été reconnue comme maladie professionnelle ou non.
+  </p>
 </div>
 `;

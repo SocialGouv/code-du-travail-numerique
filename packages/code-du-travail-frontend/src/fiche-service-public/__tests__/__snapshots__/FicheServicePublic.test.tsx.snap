@@ -3,7 +3,7 @@
 exports[`<FicheServicePublic /> should render 1`] = `
 <div>
   <div
-    class="fr-alert fr-alert--info"
+    class="fr-alert fr-alert--warning fr-mb-2w"
   >
     <h2>
       Abandon de poste et démission
@@ -68,7 +68,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
           tabindex="0"
           type="button"
         >
-          <h2>
+          <h2
+            class="fr-text--md"
+          >
             CDI
           </h2>
         </button>
@@ -85,7 +87,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
           tabindex="-1"
           type="button"
         >
-          <h2>
+          <h2
+            class="fr-text--md"
+          >
             CDD
           </h2>
         </button>
@@ -102,7 +106,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
           tabindex="-1"
           type="button"
         >
-          <h2>
+          <h2
+            class="fr-text--md"
+          >
             Intérim
           </h2>
         </button>
@@ -184,6 +190,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </ul>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -233,6 +244,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -273,22 +289,22 @@ exports[`<FicheServicePublic /> should render 1`] = `
             <p>
               Un modèle de lettre de démission est disponible :
             </p>
-            <a
-              class="fr-btn fr-my-2w"
-              href="https://www.service-public.fr/simulateur/calcul/Demission"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Lettre de démission du salarié
-            </a>
-            <div
-              class="fr-highlight"
-            >
-              <p
-                class="fr-text--bold"
+            <div>
+              <a
+                class="fr-btn fr-btn--secondary fr-mb-2w"
+                href="https://www.service-public.fr/simulateur/calcul/Demission"
+                rel="noopener noreferrer"
+                target="_blank"
               >
+                Lettre de démission du salarié
+              </a>
+            </div>
+            <div
+              class="fr-alert fr-alert--warning fr-mb-2w"
+            >
+              <h4>
                 Attention
-              </p>
+              </h4>
               <p>
                 Des 
                 dispositions conventionnelles
@@ -299,6 +315,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </div>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -332,6 +353,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -352,281 +378,226 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-collapse"
             id="quelle-est-la-duree-de-votre-preavis-en-cas-de-demission-collapse"
           >
+            <h4>
+              Vous êtes journaliste
+            </h4>
+            <p>
+              Vous devez respecter un délai de préavis fixé en fonction de votre ancienneté dans l'entreprise, dans les conditions suivantes :
+            </p>
             <div
-              class="fr-accordions-group"
-              data-fr-group="false"
+              class="fr-table--sm fr-table fr-table"
             >
-              <section
-                class="fr-accordion"
+              <div
+                class="fr-table__wrapper"
               >
-                <h4
-                  class="fr-accordion__title"
-                >
-                  <button
-                    aria-controls="vous-etes-journaliste-collapse"
-                    aria-expanded="false"
-                    class="fr-accordion__btn"
-                    id="vous-etes-journaliste__toggle-btn"
-                    type="button"
-                  >
-                    Vous êtes journaliste
-                  </button>
-                </h4>
                 <div
-                  class="fr-collapse"
-                  id="vous-etes-journaliste-collapse"
+                  class="fr-table__container"
                 >
-                  <p>
-                    Vous devez respecter un délai de préavis fixé en fonction de votre ancienneté dans l'entreprise, dans les conditions suivantes :
-                  </p>
                   <div
-                    class="fr-table--sm fr-table fr-table"
+                    class="fr-table__content"
                   >
-                    <div
-                      class="fr-table__wrapper"
-                    >
-                      <div
-                        class="fr-table__container"
-                      >
-                        <div
-                          class="fr-table__content"
-                        >
-                          <table>
-                            <caption>
-                              Durée minimale du préavis en fonction de l'ancienneté du salarié
-                            </caption>
-                            <thead>
-                              <tr>
-                                <th
-                                  colspan="1"
-                                  rowspan="1"
-                                >
-                                  Ancienneté du salarié
-                                </th>
-                                <th
-                                  colspan="1"
-                                  rowspan="1"
-                                >
-                                  Durée minimale du préavis
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td
-                                  colspan="1"
-                                  rowspan="1"
-                                >
-                                  3 ans maximum
-                                </td>
-                                <td
-                                  colspan="1"
-                                  rowspan="1"
-                                >
-                                  1 mois
-                                </td>
-                              </tr>
-                              <tr>
-                                <td
-                                  colspan="1"
-                                  rowspan="1"
-                                >
-                                  Plus de 3 ans
-                                </td>
-                                <td
-                                  colspan="1"
-                                  rowspan="1"
-                                >
-                                  2 mois
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
+                    <table>
+                      <caption>
+                        Durée minimale du préavis en fonction de l'ancienneté du salarié
+                      </caption>
+                      <thead>
+                        <tr>
+                          <th
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            Ancienneté du salarié
+                          </th>
+                          <th
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            Durée minimale du préavis
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            3 ans maximum
+                          </td>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            1 mois
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            Plus de 3 ans
+                          </td>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            2 mois
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
-              </section>
-              <section
-                class="fr-accordion"
+              </div>
+            </div>
+            <h4>
+              Vous êtes VRP
+            </h4>
+            <p>
+              Vous devez respecter un délai de préavis fixé en fonction de votre ancienneté dans l'entreprise, dans les conditions suivantes :
+            </p>
+            <div
+              class="fr-table--sm fr-table fr-table"
+            >
+              <div
+                class="fr-table__wrapper"
               >
-                <h4
-                  class="fr-accordion__title"
-                >
-                  <button
-                    aria-controls="vous-etes-vrp-collapse"
-                    aria-expanded="false"
-                    class="fr-accordion__btn"
-                    id="vous-etes-vrp__toggle-btn"
-                    type="button"
-                  >
-                    Vous êtes VRP
-                  </button>
-                </h4>
                 <div
-                  class="fr-collapse"
-                  id="vous-etes-vrp-collapse"
+                  class="fr-table__container"
                 >
-                  <p>
-                    Vous devez respecter un délai de préavis fixé en fonction de votre ancienneté dans l'entreprise, dans les conditions suivantes :
-                  </p>
                   <div
-                    class="fr-table--sm fr-table fr-table"
+                    class="fr-table__content"
                   >
-                    <div
-                      class="fr-table__wrapper"
-                    >
-                      <div
-                        class="fr-table__container"
-                      >
-                        <div
-                          class="fr-table__content"
-                        >
-                          <table>
-                            <caption>
-                              Durée minimale du préavis en fonction de l'ancienneté du salarié
-                            </caption>
-                            <thead>
-                              <tr>
-                                <th
-                                  colspan="1"
-                                  rowspan="1"
-                                >
-                                  Ancienneté du salarié
-                                </th>
-                                <th
-                                  colspan="1"
-                                  rowspan="1"
-                                >
-                                  Durée minimale du préavis
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td
-                                  colspan="1"
-                                  rowspan="1"
-                                >
-                                  Moins de 1 an
-                                </td>
-                                <td
-                                  colspan="1"
-                                  rowspan="1"
-                                >
-                                  1 mois
-                                </td>
-                              </tr>
-                              <tr>
-                                <td
-                                  colspan="1"
-                                  rowspan="1"
-                                >
-                                  Entre 1 an et 2 ans
-                                </td>
-                                <td
-                                  colspan="1"
-                                  rowspan="1"
-                                >
-                                  2 mois
-                                </td>
-                              </tr>
-                              <tr>
-                                <td
-                                  colspan="1"
-                                  rowspan="1"
-                                >
-                                  Plus de 2 ans
-                                </td>
-                                <td
-                                  colspan="1"
-                                  rowspan="1"
-                                >
-                                  3 mois
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
+                    <table>
+                      <caption>
+                        Durée minimale du préavis en fonction de l'ancienneté du salarié
+                      </caption>
+                      <thead>
+                        <tr>
+                          <th
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            Ancienneté du salarié
+                          </th>
+                          <th
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            Durée minimale du préavis
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            Moins de 1 an
+                          </td>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            1 mois
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            Entre 1 an et 2 ans
+                          </td>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            2 mois
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            Plus de 2 ans
+                          </td>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            3 mois
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
-              </section>
-              <section
-                class="fr-accordion"
+              </div>
+            </div>
+            <h4>
+              Autre situation
+            </h4>
+            <p>
+              La durée du préavis de démission est fixée :
+            </p>
+            <ul>
+              <li>
+                <p>
+                  Soit par 
+                  convention collective
+                </p>
+              </li>
+              <li>
+                <p>
+                  Soit par les 
+                  usages
+                   pratiqués dans la localité et dans la profession
+                </p>
+              </li>
+              <li>
+                <p>
+                  Soit par le droit local (en Alsace-Moselle).
+                </p>
+              </li>
+            </ul>
+            <p>
+              Le contrat de travail peut prévoir un préavis de démission.
+            </p>
+            <p>
+              Le préavis s'applique si sa durée est plus courte que celle prévue par la convention collective.
+            </p>
+            <p>
+              Si vous travaillez à temps partiel, la durée du préavis de démission est la même que celle d'un salarié à temps plein.
+            </p>
+            <p>
+              Le préavis commence à partir de votre 
+              notification
+               à votre employeur de votre démission.
+            </p>
+            <p>
+              Un simulateur est disponible :
+            </p>
+            <div>
+              <a
+                class="fr-btn fr-btn--secondary fr-mb-2w"
+                href="https://code.travail.gouv.fr/outils/preavis-demission?src_url=https://service-public.fr/particuliers/vosdroits/F2883"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <h4
-                  class="fr-accordion__title"
-                >
-                  <button
-                    aria-controls="autre-situation-collapse"
-                    aria-expanded="false"
-                    class="fr-accordion__btn"
-                    id="autre-situation__toggle-btn"
-                    type="button"
-                  >
-                    Autre situation
-                  </button>
-                </h4>
-                <div
-                  class="fr-collapse"
-                  id="autre-situation-collapse"
-                >
-                  <p>
-                    La durée du préavis de démission est fixée :
-                  </p>
-                  <ul>
-                    <li>
-                      <p>
-                        Soit par 
-                        convention collective
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        Soit par les 
-                        usages
-                         pratiqués dans la localité et dans la profession
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        Soit par le droit local (en Alsace-Moselle).
-                      </p>
-                    </li>
-                  </ul>
-                  <p>
-                    Le contrat de travail peut prévoir un préavis de démission.
-                  </p>
-                  <p>
-                    Le préavis s'applique si sa durée est plus courte que celle prévue par la convention collective.
-                  </p>
-                  <p>
-                    Si vous travaillez à temps partiel, la durée du préavis de démission est la même que celle d'un salarié à temps plein.
-                  </p>
-                  <p>
-                    Le préavis commence à partir de votre 
-                    notification
-                     à votre employeur de votre démission.
-                  </p>
-                  <p>
-                    Un simulateur est disponible :
-                  </p>
-                  <a
-                    class="fr-btn fr-my-2w"
-                    href="https://code.travail.gouv.fr/outils/preavis-demission?src_url=https://service-public.fr/particuliers/vosdroits/F2883"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Calculer la durée du préavis de démission selon la convention collective
-                  </a>
-                </div>
-              </section>
+                Calculer la durée du préavis de démission selon la convention collective
+              </a>
             </div>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -667,137 +638,56 @@ exports[`<FicheServicePublic /> should render 1`] = `
             <p>
               En dehors de ces 2 cas, vous pouvez être dispensé d'effectuer un préavis, de votre propre initiative ou à la demande de votre employeur, dans les conditions suivantes :
             </p>
-            <div
-              class="fr-accordions-group"
-              data-fr-group="false"
-            >
-              <section
-                class="fr-accordion"
-              >
-                <h4
-                  class="fr-accordion__title"
-                >
-                  <button
-                    aria-controls="vous-demandez-une-dispense-de-preavis-collapse"
-                    aria-expanded="false"
-                    class="fr-accordion__btn"
-                    id="vous-demandez-une-dispense-de-preavis__toggle-btn"
-                    type="button"
-                  >
-                    Vous demandez une dispense de préavis
-                  </button>
-                </h4>
-                <div
-                  class="fr-collapse"
-                  id="vous-demandez-une-dispense-de-preavis-collapse"
-                >
-                  <p>
-                    Vous pouvez demander à votre employeur d'être dispensé d'effectuer un préavis (par écrit ou par oral).
-                  </p>
-                  <div
-                    class="fr-accordions-group"
-                    data-fr-group="false"
-                  >
-                    <section
-                      class="fr-accordion"
-                    >
-                      <h5
-                        class="fr-accordion__title"
-                      >
-                        <button
-                          aria-controls="accord-de-votre-employeur-collapse"
-                          aria-expanded="false"
-                          class="fr-accordion__btn"
-                          id="accord-de-votre-employeur__toggle-btn"
-                          type="button"
-                        >
-                          Accord de votre employeur
-                        </button>
-                      </h5>
-                      <div
-                        class="fr-collapse"
-                        id="accord-de-votre-employeur-collapse"
-                      >
-                        <p>
-                          Si votre employeur accepte votre demande, votre contrat de travail prend fin à la date convenue.
-                        </p>
-                        <p>
-                          Dans ce cas, votre employeur ne vous verse pas 
-                          d'indemnité compensatrice de préavis
-                          .
-                        </p>
-                      </div>
-                    </section>
-                    <section
-                      class="fr-accordion"
-                    >
-                      <h5
-                        class="fr-accordion__title"
-                      >
-                        <button
-                          aria-controls="refus-de-votre-employeur-collapse"
-                          aria-expanded="false"
-                          class="fr-accordion__btn"
-                          id="refus-de-votre-employeur__toggle-btn"
-                          type="button"
-                        >
-                          Refus de votre employeur
-                        </button>
-                      </h5>
-                      <div
-                        class="fr-collapse"
-                        id="refus-de-votre-employeur-collapse"
-                      >
-                        <p>
-                          Si votre employeur refuse votre demande de dispense, vous devez effectuer votre préavis.
-                        </p>
-                        <p>
-                          Si vous n'effectuez pas votre préavis, votre employeur peut vous demander de lui verser une indemnité.
-                        </p>
-                        <p>
-                          Cette indemnité est d'un montant égal à la rémunération brute que vous auriez perçu durant la période du préavis initialement prévu.
-                        </p>
-                      </div>
-                    </section>
-                  </div>
-                </div>
-              </section>
-              <section
-                class="fr-accordion"
-              >
-                <h4
-                  class="fr-accordion__title"
-                >
-                  <button
-                    aria-controls="votre-employeur-vous-dispense-de-preavis-collapse"
-                    aria-expanded="false"
-                    class="fr-accordion__btn"
-                    id="votre-employeur-vous-dispense-de-preavis__toggle-btn"
-                    type="button"
-                  >
-                    Votre employeur vous dispense de préavis
-                  </button>
-                </h4>
-                <div
-                  class="fr-collapse"
-                  id="votre-employeur-vous-dispense-de-preavis-collapse"
-                >
-                  <p>
-                    Votre employeur peut vous dispenser d'effectuer votre préavis.
-                  </p>
-                  <p>
-                    Dans ce cas, vous conservez les avantages que vous auriez perçus si vous aviez travaillé jusqu'à la fin de votre préavis non effectué.
-                  </p>
-                  <p>
-                    Vous percevez 
-                    l'indemnité compensatrice de préavis
-                    .
-                  </p>
-                </div>
-              </section>
-            </div>
+            <h4>
+              Vous demandez une dispense de préavis
+            </h4>
+            <p>
+              Vous pouvez demander à votre employeur d'être dispensé d'effectuer un préavis (par écrit ou par oral).
+            </p>
+            <h5>
+              Accord de votre employeur
+            </h5>
+            <p>
+              Si votre employeur accepte votre demande, votre contrat de travail prend fin à la date convenue.
+            </p>
+            <p>
+              Dans ce cas, votre employeur ne vous verse pas 
+              d'indemnité compensatrice de préavis
+              .
+            </p>
+            <h5>
+              Refus de votre employeur
+            </h5>
+            <p>
+              Si votre employeur refuse votre demande de dispense, vous devez effectuer votre préavis.
+            </p>
+            <p>
+              Si vous n'effectuez pas votre préavis, votre employeur peut vous demander de lui verser une indemnité.
+            </p>
+            <p>
+              Cette indemnité est d'un montant égal à la rémunération brute que vous auriez perçu durant la période du préavis initialement prévu.
+            </p>
+            <h4>
+              Votre employeur vous dispense de préavis
+            </h4>
+            <p>
+              Votre employeur peut vous dispenser d'effectuer votre préavis.
+            </p>
+            <p>
+              Dans ce cas, vous conservez les avantages que vous auriez perçus si vous aviez travaillé jusqu'à la fin de votre préavis non effectué.
+            </p>
+            <p>
+              Vous percevez 
+              l'indemnité compensatrice de préavis
+              .
+            </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -851,6 +741,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </ul>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -904,6 +799,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </ul>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -938,6 +838,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -971,6 +876,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -998,6 +908,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -1025,6 +940,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -1052,6 +972,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -1079,6 +1004,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -1208,7 +1138,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
               </li>
             </ul>
             <div
-              class="fr-highlight"
+              class="fr-alert fr-alert--info fr-mb-2w"
             >
               <p
                 class="fr-text--bold"
@@ -1223,6 +1153,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </div>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -1272,6 +1207,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -1312,22 +1252,22 @@ exports[`<FicheServicePublic /> should render 1`] = `
             <p>
               Un modèle de lettre de démission est disponible :
             </p>
-            <a
-              class="fr-btn fr-my-2w"
-              href="https://www.service-public.fr/simulateur/calcul/Demission"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Lettre de démission du salarié
-            </a>
-            <div
-              class="fr-highlight"
-            >
-              <p
-                class="fr-text--bold"
+            <div>
+              <a
+                class="fr-btn fr-btn--secondary fr-mb-2w"
+                href="https://www.service-public.fr/simulateur/calcul/Demission"
+                rel="noopener noreferrer"
+                target="_blank"
               >
+                Lettre de démission du salarié
+              </a>
+            </div>
+            <div
+              class="fr-alert fr-alert--warning fr-mb-2w"
+            >
+              <h4>
                 Attention
-              </p>
+              </h4>
               <p>
                 Des 
                 dispositions conventionnelles
@@ -1338,6 +1278,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </div>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -1371,6 +1316,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -1410,6 +1360,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </div>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -1450,137 +1405,56 @@ exports[`<FicheServicePublic /> should render 1`] = `
             <p>
               En dehors de ces 2 cas, vous pouvez être dispensé d'effectuer un préavis, de votre propre initiative ou à la demande de votre employeur, dans les conditions suivantes :
             </p>
-            <div
-              class="fr-accordions-group"
-              data-fr-group="false"
-            >
-              <section
-                class="fr-accordion"
-              >
-                <h4
-                  class="fr-accordion__title"
-                >
-                  <button
-                    aria-controls="vous-demandez-une-dispense-de-preavis-collapse"
-                    aria-expanded="false"
-                    class="fr-accordion__btn"
-                    id="vous-demandez-une-dispense-de-preavis__toggle-btn"
-                    type="button"
-                  >
-                    Vous demandez une dispense de préavis
-                  </button>
-                </h4>
-                <div
-                  class="fr-collapse"
-                  id="vous-demandez-une-dispense-de-preavis-collapse"
-                >
-                  <p>
-                    Vous pouvez demander à votre employeur d'être dispensé d'effectuer un préavis (par écrit ou par oral).
-                  </p>
-                  <div
-                    class="fr-accordions-group"
-                    data-fr-group="false"
-                  >
-                    <section
-                      class="fr-accordion"
-                    >
-                      <h5
-                        class="fr-accordion__title"
-                      >
-                        <button
-                          aria-controls="accord-de-votre-employeur-collapse"
-                          aria-expanded="false"
-                          class="fr-accordion__btn"
-                          id="accord-de-votre-employeur__toggle-btn"
-                          type="button"
-                        >
-                          Accord de votre employeur
-                        </button>
-                      </h5>
-                      <div
-                        class="fr-collapse"
-                        id="accord-de-votre-employeur-collapse"
-                      >
-                        <p>
-                          Si votre employeur accepte votre demande, votre contrat de travail prend fin à la date convenue.
-                        </p>
-                        <p>
-                          Dans ce cas, votre employeur ne vous verse pas 
-                          d'indemnité compensatrice de préavis
-                          .
-                        </p>
-                      </div>
-                    </section>
-                    <section
-                      class="fr-accordion"
-                    >
-                      <h5
-                        class="fr-accordion__title"
-                      >
-                        <button
-                          aria-controls="refus-de-votre-employeur-collapse"
-                          aria-expanded="false"
-                          class="fr-accordion__btn"
-                          id="refus-de-votre-employeur__toggle-btn"
-                          type="button"
-                        >
-                          Refus de votre employeur
-                        </button>
-                      </h5>
-                      <div
-                        class="fr-collapse"
-                        id="refus-de-votre-employeur-collapse"
-                      >
-                        <p>
-                          Si votre employeur refuse votre demande de dispense, vous devez effectuer votre préavis.
-                        </p>
-                        <p>
-                          Si vous n'effectuez pas votre préavis, votre employeur peut vous demander de lui verser une indemnité.
-                        </p>
-                        <p>
-                          Cette indemnité est d'un montant égal à la rémunération brute que vous auriez perçu durant la période du préavis initialement prévu.
-                        </p>
-                      </div>
-                    </section>
-                  </div>
-                </div>
-              </section>
-              <section
-                class="fr-accordion"
-              >
-                <h4
-                  class="fr-accordion__title"
-                >
-                  <button
-                    aria-controls="votre-employeur-vous-dispense-de-preavis-collapse"
-                    aria-expanded="false"
-                    class="fr-accordion__btn"
-                    id="votre-employeur-vous-dispense-de-preavis__toggle-btn"
-                    type="button"
-                  >
-                    Votre employeur vous dispense de préavis
-                  </button>
-                </h4>
-                <div
-                  class="fr-collapse"
-                  id="votre-employeur-vous-dispense-de-preavis-collapse"
-                >
-                  <p>
-                    Votre employeur peut vous dispenser d'effectuer votre préavis.
-                  </p>
-                  <p>
-                    Dans ce cas, vous conservez les avantages que vous auriez perçus si vous aviez travaillé jusqu'à la fin de votre préavis non effectué.
-                  </p>
-                  <p>
-                    Vous percevez 
-                    l'indemnité compensatrice de préavis
-                    .
-                  </p>
-                </div>
-              </section>
-            </div>
+            <h4>
+              Vous demandez une dispense de préavis
+            </h4>
+            <p>
+              Vous pouvez demander à votre employeur d'être dispensé d'effectuer un préavis (par écrit ou par oral).
+            </p>
+            <h5>
+              Accord de votre employeur
+            </h5>
+            <p>
+              Si votre employeur accepte votre demande, votre contrat de travail prend fin à la date convenue.
+            </p>
+            <p>
+              Dans ce cas, votre employeur ne vous verse pas 
+              d'indemnité compensatrice de préavis
+              .
+            </p>
+            <h5>
+              Refus de votre employeur
+            </h5>
+            <p>
+              Si votre employeur refuse votre demande de dispense, vous devez effectuer votre préavis.
+            </p>
+            <p>
+              Si vous n'effectuez pas votre préavis, votre employeur peut vous demander de lui verser une indemnité.
+            </p>
+            <p>
+              Cette indemnité est d'un montant égal à la rémunération brute que vous auriez perçu durant la période du préavis initialement prévu.
+            </p>
+            <h4>
+              Votre employeur vous dispense de préavis
+            </h4>
+            <p>
+              Votre employeur peut vous dispenser d'effectuer votre préavis.
+            </p>
+            <p>
+              Dans ce cas, vous conservez les avantages que vous auriez perçus si vous aviez travaillé jusqu'à la fin de votre préavis non effectué.
+            </p>
+            <p>
+              Vous percevez 
+              l'indemnité compensatrice de préavis
+              .
+            </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -1634,6 +1508,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </ul>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -1687,6 +1566,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </ul>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -1721,6 +1605,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -1754,6 +1643,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -1781,6 +1675,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -1808,6 +1707,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -1835,6 +1739,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -1862,6 +1771,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -1972,7 +1886,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
               </li>
             </ul>
             <div
-              class="fr-highlight"
+              class="fr-alert fr-alert--info fr-mb-2w"
             >
               <p
                 class="fr-text--bold"
@@ -1987,6 +1901,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </div>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -2036,6 +1955,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -2076,22 +2000,22 @@ exports[`<FicheServicePublic /> should render 1`] = `
             <p>
               Un modèle de lettre de démission est disponible :
             </p>
-            <a
-              class="fr-btn fr-my-2w"
-              href="https://www.service-public.fr/simulateur/calcul/Demission"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Lettre de démission du salarié
-            </a>
-            <div
-              class="fr-highlight"
-            >
-              <p
-                class="fr-text--bold"
+            <div>
+              <a
+                class="fr-btn fr-btn--secondary fr-mb-2w"
+                href="https://www.service-public.fr/simulateur/calcul/Demission"
+                rel="noopener noreferrer"
+                target="_blank"
               >
+                Lettre de démission du salarié
+              </a>
+            </div>
+            <div
+              class="fr-alert fr-alert--warning fr-mb-2w"
+            >
+              <h4>
                 Attention
-              </p>
+              </h4>
               <p>
                 Des 
                 dispositions conventionnelles
@@ -2102,6 +2026,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </div>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -2135,6 +2064,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -2187,6 +2121,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -2240,6 +2179,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </ul>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -2293,6 +2237,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </ul>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -2346,6 +2295,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </ul>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -2379,6 +2333,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -2406,6 +2365,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -2433,6 +2397,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -2460,6 +2429,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -2487,6 +2461,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
+      </div>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
         <section
           class="fr-accordion"
         >
@@ -2537,21 +2516,25 @@ exports[`<FicheServicePublic /> should render 1`] = `
       </div>
     </div>
   </div>
-  <a
-    class="fr-btn fr-my-2w"
-    href="https://www.service-public.fr/simulateur/calcul/Demission"
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    Lettre de démission du salarié
-  </a>
-  <a
-    class="fr-btn fr-my-2w"
-    href="https://code.travail.gouv.fr/outils/preavis-demission?src_url=https://service-public.fr/particuliers/vosdroits/F2883"
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    Calculer la durée du préavis de démission selon la convention collective
-  </a>
+  <div>
+    <a
+      class="fr-btn fr-btn--secondary fr-mb-2w"
+      href="https://www.service-public.fr/simulateur/calcul/Demission"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Lettre de démission du salarié
+    </a>
+  </div>
+  <div>
+    <a
+      class="fr-btn fr-btn--secondary fr-mb-2w"
+      href="https://code.travail.gouv.fr/outils/preavis-demission?src_url=https://service-public.fr/particuliers/vosdroits/F2883"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Calculer la durée du préavis de démission selon la convention collective
+    </a>
+  </div>
 </div>
 `;
