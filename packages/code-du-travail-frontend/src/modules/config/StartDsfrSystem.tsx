@@ -1,7 +1,6 @@
 "use client";
 
 import { startReactDsfr } from "@codegouvfr/react-dsfr/next-appdir";
-import { defaultColorScheme } from "./defaultColorScheme";
 import Link from "next/link";
 
 declare module "@codegouvfr/react-dsfr/next-appdir" {
@@ -10,8 +9,8 @@ declare module "@codegouvfr/react-dsfr/next-appdir" {
   }
 }
 
-startReactDsfr({ defaultColorScheme, Link, doCheckNonce: true });
+startReactDsfr({ defaultColorScheme: "system", Link, doCheckNonce: true });
 
-export function StartDsfr() {
+export function StartDsfrSystem() {
   return null;
 }
