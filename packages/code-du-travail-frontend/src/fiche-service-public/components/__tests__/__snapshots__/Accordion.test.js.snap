@@ -3,13 +3,13 @@
 exports[`<Accordion /> should have two different levels of headings 1`] = `
 <div>
   <div
-    class="sc-238bfc37-0 erxEOR"
+    class="sc-e32628d4-0 eFvDQP"
   >
     <h2
-      class="sc-3c1fa745-0 dgbBKP"
+      class="sc-d6e72754-0 egzXkL"
     >
       <span
-        class="sc-f4f767e-0 hiuRaG"
+        class="sc-a4d7a179-0 gGBEJx"
       />
       titre 0
     </h2>
@@ -25,7 +25,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
       id="titre-1"
     >
       <div
-        class="sc-6ba2e448-0 wqwqk"
+        class="sc-1571bed7-0"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -36,7 +36,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             aria-controls="accordion__panel-titre-1"
             aria-disabled="false"
             aria-expanded="false"
-            class="sc-6ba2e448-2 dhbWmA"
+            class="sc-1571bed7-2 gNtlHI"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-titre-1"
             role="button"
@@ -44,7 +44,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-efc7f1fd-0 cFvIxv"
+              class="sc-93c68677-0 fWneNg"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -60,10 +60,10 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
               />
             </svg>
             <div
-              class="sc-6ba2e448-3 dhjOwJ"
+              class="sc-1571bed7-3 figaQV"
             >
               <h2
-                class="sc-a53a0f9a-0 bIsTsN"
+                class="sc-b879fc2d-0 hyiHle"
                 style="margin: 0px;"
               >
                 titre 1
@@ -73,13 +73,13 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-6ba2e448-1 cDSlef"
+          class="sc-1571bed7-1 hamHiw"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-titre-1"
         >
           <div
-            class="sc-8fc9f174-0 glbEDc"
+            class="sc-32c7807-0 iMDCLs"
           >
             <p>
               paragraphe 1-1
@@ -95,7 +95,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
       id="titre-2"
     >
       <div
-        class="sc-6ba2e448-0 gAQMVA"
+        class="sc-1571bed7-0 dpEeGj"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -106,7 +106,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             aria-controls="accordion__panel-titre-2"
             aria-disabled="false"
             aria-expanded="false"
-            class="sc-6ba2e448-2 dhbWmA"
+            class="sc-1571bed7-2 gNtlHI"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-titre-2"
             role="button"
@@ -114,7 +114,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-efc7f1fd-0 cFvIxv"
+              class="sc-93c68677-0 fWneNg"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -130,10 +130,10 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
               />
             </svg>
             <div
-              class="sc-6ba2e448-3 dhjOwJ"
+              class="sc-1571bed7-3 figaQV"
             >
               <h2
-                class="sc-a53a0f9a-0 bIsTsN"
+                class="sc-b879fc2d-0 hyiHle"
                 style="margin: 0px;"
               >
                 titre 2
@@ -143,13 +143,13 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-6ba2e448-1 cDSlef"
+          class="sc-1571bed7-1 hamHiw"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-titre-2"
         >
           <div
-            class="sc-8fc9f174-0 glbEDc"
+            class="sc-32c7807-0 iMDCLs"
           >
             <p>
               paragraphe 2-1
@@ -158,7 +158,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
               paragraphe 2-2
             </p>
             <h3
-              class="sc-a53a0f9a-0 bIsTsN"
+              class="sc-b879fc2d-0 hyiHle"
             >
               titre 2-1
             </h3>
@@ -170,7 +170,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
       id="titre-3"
     >
       <div
-        class="sc-6ba2e448-0 gAQMVA"
+        class="sc-1571bed7-0 dpEeGj"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -181,7 +181,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             aria-controls="accordion__panel-titre-3"
             aria-disabled="false"
             aria-expanded="false"
-            class="sc-6ba2e448-2 dhbWmA"
+            class="sc-1571bed7-2 gNtlHI"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-titre-3"
             role="button"
@@ -189,7 +189,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-efc7f1fd-0 cFvIxv"
+              class="sc-93c68677-0 fWneNg"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -205,10 +205,10 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
               />
             </svg>
             <div
-              class="sc-6ba2e448-3 dhjOwJ"
+              class="sc-1571bed7-3 figaQV"
             >
               <h2
-                class="sc-a53a0f9a-0 bIsTsN"
+                class="sc-b879fc2d-0 hyiHle"
                 style="margin: 0px;"
               >
                 titre 3
@@ -218,13 +218,13 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-6ba2e448-1 cDSlef"
+          class="sc-1571bed7-1 hamHiw"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-titre-3"
         >
           <div
-            class="sc-8fc9f174-0 glbEDc"
+            class="sc-32c7807-0 iMDCLs"
           >
             <p>
               paragraphe 3-1
@@ -243,7 +243,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 exports[`<Accordion /> should render all, siblings included 1`] = `
 <div>
   <h5
-    class="sc-a53a0f9a-0 bIsTsN"
+    class="sc-b879fc2d-0 hyiHle"
   >
     titre 0
   </h5>
@@ -258,7 +258,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
       id="titre-1"
     >
       <div
-        class="sc-6ba2e448-0 wqwqk"
+        class="sc-1571bed7-0"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -269,7 +269,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             aria-controls="accordion__panel-titre-1"
             aria-disabled="false"
             aria-expanded="false"
-            class="sc-6ba2e448-2 dhbWmA"
+            class="sc-1571bed7-2 gNtlHI"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-titre-1"
             role="button"
@@ -277,7 +277,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-efc7f1fd-0 cFvIxv"
+              class="sc-93c68677-0 fWneNg"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -293,10 +293,10 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
               />
             </svg>
             <div
-              class="sc-6ba2e448-3 dhjOwJ"
+              class="sc-1571bed7-3 figaQV"
             >
               <h5
-                class="sc-a53a0f9a-0 bIsTsN"
+                class="sc-b879fc2d-0 hyiHle"
                 style="margin: 0px;"
               >
                 titre 1
@@ -306,13 +306,13 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-6ba2e448-1 cDSlef"
+          class="sc-1571bed7-1 hamHiw"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-titre-1"
         >
           <div
-            class="sc-8fc9f174-0 glbEDc"
+            class="sc-32c7807-0 iMDCLs"
           >
             <p>
               paragraphe 1-1
@@ -328,7 +328,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
       id="titre-2"
     >
       <div
-        class="sc-6ba2e448-0 gAQMVA"
+        class="sc-1571bed7-0 dpEeGj"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -339,7 +339,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             aria-controls="accordion__panel-titre-2"
             aria-disabled="false"
             aria-expanded="false"
-            class="sc-6ba2e448-2 dhbWmA"
+            class="sc-1571bed7-2 gNtlHI"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-titre-2"
             role="button"
@@ -347,7 +347,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-efc7f1fd-0 cFvIxv"
+              class="sc-93c68677-0 fWneNg"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -363,10 +363,10 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
               />
             </svg>
             <div
-              class="sc-6ba2e448-3 dhjOwJ"
+              class="sc-1571bed7-3 figaQV"
             >
               <h5
-                class="sc-a53a0f9a-0 bIsTsN"
+                class="sc-b879fc2d-0 hyiHle"
                 style="margin: 0px;"
               >
                 titre 2
@@ -376,13 +376,13 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-6ba2e448-1 cDSlef"
+          class="sc-1571bed7-1 hamHiw"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-titre-2"
         >
           <div
-            class="sc-8fc9f174-0 glbEDc"
+            class="sc-32c7807-0 iMDCLs"
           >
             <p>
               paragraphe 2-1
@@ -391,7 +391,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
               paragraphe 2-2
             </p>
             <h6
-              class="sc-a53a0f9a-0 bIsTsN"
+              class="sc-b879fc2d-0 hyiHle"
             >
               titre 2-1
             </h6>
@@ -403,7 +403,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
       id="titre-3"
     >
       <div
-        class="sc-6ba2e448-0 gAQMVA"
+        class="sc-1571bed7-0 dpEeGj"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -414,7 +414,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             aria-controls="accordion__panel-titre-3"
             aria-disabled="false"
             aria-expanded="false"
-            class="sc-6ba2e448-2 dhbWmA"
+            class="sc-1571bed7-2 gNtlHI"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-titre-3"
             role="button"
@@ -422,7 +422,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-efc7f1fd-0 cFvIxv"
+              class="sc-93c68677-0 fWneNg"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -438,10 +438,10 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
               />
             </svg>
             <div
-              class="sc-6ba2e448-3 dhjOwJ"
+              class="sc-1571bed7-3 figaQV"
             >
               <h5
-                class="sc-a53a0f9a-0 bIsTsN"
+                class="sc-b879fc2d-0 hyiHle"
                 style="margin: 0px;"
               >
                 titre 3
@@ -451,13 +451,13 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         </div>
         <div
           aria-hidden="true"
-          class="sc-6ba2e448-1 cDSlef"
+          class="sc-1571bed7-1 hamHiw"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-titre-3"
         >
           <div
-            class="sc-8fc9f174-0 glbEDc"
+            class="sc-32c7807-0 iMDCLs"
           >
             <p>
               paragraphe 3-1
