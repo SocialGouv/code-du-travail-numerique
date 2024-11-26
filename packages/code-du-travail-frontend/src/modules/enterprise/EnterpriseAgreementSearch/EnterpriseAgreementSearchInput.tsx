@@ -6,7 +6,7 @@ import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { Card } from "@codegouvfr/react-dsfr/Card";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { css } from "../../../../styled-system/css";
 
 import Spinner from "../../common/Spinner.svg";
@@ -18,18 +18,24 @@ import { CardTitleStyle, ButtonStyle } from "../../convention-collective/style";
 
 type Props = {
   widgetMode?: boolean;
+  defaultSearch?: string;
+  defaultLocation?: ApiGeoResult;
 };
 
 export const EnterpriseAgreementSearchInput = ({
   widgetMode = false,
+  defaultSearch,
+  defaultLocation,
 }: Props) => {
   const [searchState, setSearchState] = useState<
     "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch" | "required"
   >("noSearch");
-  const [search, setSearch] = useState<string>();
+  const [search, setSearch] = useState<string | undefined>(defaultSearch);
   const [searched, setSearched] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
-  const [location, setLocation] = useState<ApiGeoResult | undefined>();
+  const [location, setLocation] = useState<ApiGeoResult | undefined>(
+    defaultLocation
+  );
   const [enterprises, setEnterprises] = useState<Enterprise[]>();
   const [error, setError] = useState("");
   const getStateMessage = () => {
@@ -56,6 +62,45 @@ export const EnterpriseAgreementSearchInput = ({
         return "error";
     }
   };
+  const getQueries = () => {
+    const jsonString = JSON.stringify(location);
+    const base64String = btoa(jsonString);
+    return search
+      ? `?q=${encodeURIComponent(search)}${
+          jsonString ? `&cp=${base64String}` : ""
+        }`
+      : "";
+  };
+  const onSubmit = async () => {
+    if (!search) {
+      setSearchState("required");
+      return;
+    }
+    setLoading(true);
+    try {
+      const result = await searchEnterprises({
+        query: search,
+        codesPostaux: location?.codesPostaux,
+      });
+      setSearchState(!result.length ? "errorSearch" : "fullSearch");
+      setSearchState(
+        search.length > 1 && !result.length ? "notFoundSearch" : "noSearch"
+      );
+      setEnterprises(result);
+    } catch (e) {
+      setSearchState("errorSearch");
+      setEnterprises(undefined);
+      setError(e);
+    } finally {
+      setLoading(false);
+      setSearched(true);
+    }
+  };
+  useEffect(() => {
+    if (defaultSearch) {
+      onSubmit();
+    }
+  }, [defaultSearch]);
   return (
     <>
       <h2 className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
@@ -70,31 +115,7 @@ export const EnterpriseAgreementSearchInput = ({
         )}
         onSubmit={async (event) => {
           event.preventDefault();
-          if (!search) {
-            setSearchState("required");
-            return;
-          }
-          setLoading(true);
-          try {
-            const result = await searchEnterprises({
-              query: search,
-              apiGeoResult: location,
-            });
-            setSearchState(!result.length ? "errorSearch" : "fullSearch");
-            setSearchState(
-              search.length > 1 && !result.length
-                ? "notFoundSearch"
-                : "noSearch"
-            );
-            setEnterprises(result);
-          } catch (e) {
-            setSearchState("errorSearch");
-            setEnterprises(undefined);
-            setError(e);
-          } finally {
-            setLoading(false);
-            setSearched(true);
-          }
+          await onSubmit();
         }}
       >
         <Input
@@ -110,6 +131,7 @@ export const EnterpriseAgreementSearchInput = ({
           state={getInputState()}
           stateRelatedMessage={getStateMessage()}
           nativeInputProps={{
+            value: search,
             onChange: (event) => {
               setSearch(event.target.value);
             },
@@ -128,6 +150,7 @@ export const EnterpriseAgreementSearchInput = ({
         />
         <LocationSearchInput
           onLocationChange={setLocation}
+          defaultValue={location}
           className={fr.cx(
             "fr-col-12",
             "fr-col-md-3",
@@ -202,8 +225,8 @@ export const EnterpriseAgreementSearchInput = ({
               enlargeLink
               linkProps={{
                 href: widgetMode
-                  ? `/widgets/convention-collective/${enterprise.siren}`
-                  : `/outils/convention-collective/entreprise/${enterprise.siren}`,
+                  ? `/widgets/convention-collective/${enterprise.siren}${getQueries()}`
+                  : `/outils/convention-collective/entreprise/${enterprise.siren}${getQueries()}`,
               }}
               desc={`Activité : ${enterprise.activitePrincipale}`}
               end={<Badge>{`${enterprise.matching} établissements`}</Badge>}

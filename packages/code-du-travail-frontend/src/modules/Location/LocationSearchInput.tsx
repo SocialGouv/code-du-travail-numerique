@@ -8,12 +8,14 @@ import {
 type Props = Pick<AutocompleteProps<ApiGeoResult>, "classes"> & {
   className?: string;
   onLocationChange?: (location: ApiGeoResult | undefined) => void;
+  defaultValue?: ApiGeoResult;
 };
 
 export const LocationSearchInput = ({
   className,
   onLocationChange,
   classes,
+  defaultValue,
 }: Props) => {
   function itemToString(item: ApiGeoResult | null) {
     return item
@@ -36,6 +38,7 @@ export const LocationSearchInput = ({
         dataTestId={"locationSearchAutocomplete"}
         classes={classes}
         displayNoResult
+        defaultValue={defaultValue}
       ></Autocomplete>
     </>
   );

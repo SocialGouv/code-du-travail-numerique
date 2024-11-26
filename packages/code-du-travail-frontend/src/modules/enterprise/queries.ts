@@ -1,11 +1,10 @@
 import debounce from "debounce-promise";
 import { SITE_URL } from "../../config";
-import { ApiGeoResult } from "../Location/searchCities";
 import { Enterprise } from "./types";
 
 export type SearchParams = {
   query: string;
-  apiGeoResult?: ApiGeoResult;
+  codesPostaux?: string[];
 };
 
 export const messageFetchSearchCcOrEnterprise =
@@ -37,8 +36,8 @@ const apiEnterprises = function createFetcher(
   }
 
   const url = `${SITE_URL}/api/enterprises?q=${encodeURIComponent(searchParams.query)}${
-    searchParams.apiGeoResult
-      ? `&cp=${encodeURIComponent(searchParams.apiGeoResult.codesPostaux.join(","))}`
+    searchParams.codesPostaux
+      ? `&cp=${encodeURIComponent(searchParams.codesPostaux.join(","))}`
       : ""
   }`;
 

@@ -5,6 +5,7 @@ import Button from "@codegouvfr/react-dsfr/Button";
 import { Enterprise } from "../types";
 import { ButtonStyle, CardTitleStyle } from "../../convention-collective/style";
 import { css } from "../../../../styled-system/css";
+import { useSearchParams } from "next/navigation";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;
@@ -15,6 +16,7 @@ export const EnterpriseAgreementSelection = ({
   enterprise,
   widgetMode = false,
 }: Props) => {
+  const searchParams = useSearchParams();
   return (
     <>
       <h2 className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
@@ -104,8 +106,8 @@ export const EnterpriseAgreementSelection = ({
         <Button
           linkProps={{
             href: widgetMode
-              ? "/widgets/convention-collective"
-              : "/outils/convention-collective/entreprise",
+              ? `/widgets/convention-collective?${searchParams?.toString()}`
+              : `/outils/convention-collective/entreprise?${searchParams?.toString()}`,
           }}
           priority="secondary"
           className={`${fr.cx("fr-col-12", "fr-col-md-2")} ${ButtonStyle}`}

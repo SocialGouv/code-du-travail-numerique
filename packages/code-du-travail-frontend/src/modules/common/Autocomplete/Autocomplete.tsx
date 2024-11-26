@@ -18,6 +18,7 @@ export type AutocompleteProps<K> = InputProps & {
   dataTestId?: string;
   lineAsLink?: (value: K) => string;
   displayNoResult?: boolean;
+  defaultValue?: K;
 };
 
 export const Autocomplete = <K,>({
@@ -35,10 +36,15 @@ export const Autocomplete = <K,>({
   classes,
   dataTestId,
   displayNoResult,
+  defaultValue,
 }: AutocompleteProps<K>) => {
-  const [value, setValue] = useState<string>("");
+  const [value, setValue] = useState<string>(
+    displayLabel(defaultValue ?? null)
+  );
   const [loading, setLoading] = useState(false);
-  const [selectedResult, setSelectedResult] = useState<K | undefined>();
+  const [selectedResult, setSelectedResult] = useState<K | undefined>(
+    defaultValue
+  );
   const [suggestions, setSuggestions] = useState<K[]>([]);
   const {
     isOpen,
