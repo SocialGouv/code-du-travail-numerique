@@ -3,30 +3,24 @@ import React from "react";
 import { filterOutTitle, getInChildrenByName, getText } from "../utils";
 import { AccordionWithAnchor } from "../../modules/common/AccordionWithAnchor";
 import { ElementBuilder } from "./ElementBuilder";
-import Title, { getTitleLevel } from "./Title";
-import { FicheSPDataCas, FicheSPDataChapitre } from "../type";
+import { getTitleLevel } from "./Title";
+import { FicheSPDataChapitre } from "../type";
+import SectionWithTitle from "./SectionWithTitle";
 
 export const AccordionWrapper = ({
   data,
   headingLevel,
 }: {
-  data: FicheSPDataChapitre | FicheSPDataCas;
+  data: FicheSPDataChapitre;
   headingLevel: number;
 }) => {
+  if (headingLevel >= 2) {
+    return <SectionWithTitle data={data} headingLevel={headingLevel} />;
+  }
+
   const title = getInChildrenByName(data, "Titre");
   if (!title) return <></>;
 
-  if (headingLevel >= 2) {
-    return (
-      <>
-        <Title level={headingLevel}>{getText(title)}</Title>
-        <ElementBuilder
-          data={filterOutTitle(data)}
-          headingLevel={headingLevel + 1}
-        />
-      </>
-    );
-  }
   return (
     <AccordionWithAnchor
       items={[

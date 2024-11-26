@@ -1,7 +1,12 @@
 "use client";
 import React from "react";
 import { useUIDSeed } from "react-uid";
-import { getText, ignoreParagraph } from "../utils";
+import {
+  filterOutTitle,
+  getInChildrenByName,
+  getText,
+  ignoreParagraph,
+} from "../utils";
 import { LienExterne, LienExterneCommente } from "./LienExterne";
 import List from "./List";
 
@@ -15,6 +20,7 @@ import Tabulator from "./Tabulator";
 import { ImageComponent as ImageElement } from "./ImageComponent";
 import { FicheSPData } from "../type";
 import AccordionWrapper from "./Accordion";
+import SectionWithTitle from "./SectionWithTitle";
 
 export const ElementBuilder = ({
   data,
@@ -86,6 +92,7 @@ export const ElementBuilder = ({
     case "Rappel":
       return <ANoter data={data} headingLevel={headingLevel} />;
     case "Cas":
+      return <SectionWithTitle data={data} headingLevel={headingLevel} />;
     case "Chapitre":
       return <AccordionWrapper data={data} headingLevel={headingLevel} />;
     case "Description":

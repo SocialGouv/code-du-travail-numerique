@@ -5,7 +5,6 @@ export type FicheSPDataElementWithElementChildren =
   | FicheSPDataOuSAdresser
   | FicheSPDataWithElementChildren
   | FicheSPDataLienExterneCommente
-  | FicheSPDataCas
   | FicheSPDataBlocCas
   | FicheSPDataChapitre
   | FicheSPDataListeSituations
@@ -47,7 +46,6 @@ export type FicheSPData =
   | FicheSPDataAvertissement
   | FicheSPDataList
   | FicheSPDataServiceEnLigne
-  | FicheSPDataCas
   | FicheSPDataChapitre
   | FicheSPDataTableau
   | FicheSPDataTableauChildren;
@@ -57,7 +55,7 @@ export type FicheSPDataBlocCas = {
   attributes: {
     affichage: string;
   };
-  children: FicheSPDataCas[];
+  children: FicheSPDataWithElementChildren[];
   name: "BlocCas";
 };
 
@@ -69,7 +67,7 @@ export type FicheSPDataParagraphe = {
 export type FicheSPDataWithElementChildren = {
   type: "element";
   children: FicheSPDataElement[];
-  name: "ANoter" | "ASavoir" | "Rappel";
+  name: "ANoter" | "ASavoir" | "Rappel" | "Cas";
 };
 export type FicheSPDataTableau = {
   type: "element";
@@ -84,11 +82,7 @@ export type FicheSPDataTableauChildren = {
   children: FicheSPDataElement[];
   name: "Rangée" | "Colonne";
 };
-export type FicheSPDataCas = {
-  type: "element";
-  children: FicheSPDataElement[] | FicheSPDataParagraphe[];
-  name: "Cas";
-};
+
 export type FicheSPDataChapitre = {
   type: "element";
   children: FicheSPDataElement[] | FicheSPDataParagraphe[];

@@ -29,66 +29,18 @@ exports[`<Accordion /> should have different levels of headings & render both Bl
         <p>
           Il y a une procédure pour la victime directe et une autre pour l'ayant-droit de victime.
         </p>
-        <div
-          class="fr-accordions-group"
-          data-fr-group="false"
-        >
-          <section
-            class="fr-accordion"
-          >
-            <h3
-              class="fr-accordion__title"
-            >
-              <button
-                aria-controls="vous-etes-une-victime-directe-collapse"
-                aria-expanded="false"
-                class="fr-accordion__btn"
-                id="vous-etes-une-victime-directe__toggle-btn"
-                type="button"
-              >
-                Vous êtes une victime directe
-              </button>
-            </h3>
-            <div
-              class="fr-collapse"
-              id="vous-etes-une-victime-directe-collapse"
-            >
-              <p>
-                La démarche varie suivant que votre maladie a été reconnue comme maladie professionnelle ou non.
-              </p>
-            </div>
-          </section>
-        </div>
-        <div
-          class="fr-accordions-group"
-          data-fr-group="false"
-        >
-          <section
-            class="fr-accordion"
-          >
-            <h3
-              class="fr-accordion__title"
-            >
-              <button
-                aria-controls="vous-etes-un-ayant-droit-de-victime-collapse"
-                aria-expanded="false"
-                class="fr-accordion__btn"
-                id="vous-etes-un-ayant-droit-de-victime__toggle-btn"
-                type="button"
-              >
-                Vous êtes un ayant-droit de victime
-              </button>
-            </h3>
-            <div
-              class="fr-collapse"
-              id="vous-etes-un-ayant-droit-de-victime-collapse"
-            >
-              <p>
-                La procédure varie suivant que la maladie de votre proche a été reconnue comme maladie professionnelle ou non.
-              </p>
-            </div>
-          </section>
-        </div>
+        <h3>
+          Vous êtes une victime directe
+        </h3>
+        <p>
+          La démarche varie suivant que votre maladie a été reconnue comme maladie professionnelle ou non.
+        </p>
+        <h3>
+          Vous êtes un ayant-droit de victime
+        </h3>
+        <p>
+          La procédure varie suivant que la maladie de votre proche a été reconnue comme maladie professionnelle ou non.
+        </p>
       </div>
     </section>
   </div>
