@@ -24,22 +24,20 @@ export const LocationSearchInput = ({
   }
 
   return (
-    <>
-      <Autocomplete<ApiGeoResult>
-        className={className}
-        onChange={(value) => {
-          if (onLocationChange) onLocationChange(value);
-        }}
-        displayLabel={itemToString}
-        search={searchCities}
-        hintText={"Ex: 75007"}
-        label={<>Code&nbsp;postal&nbsp;ou&nbsp;Ville&nbsp;(optionnel)</>}
-        state={"default"}
-        dataTestId={"locationSearchAutocomplete"}
-        classes={classes}
-        displayNoResult
-        defaultValue={defaultValue}
-      ></Autocomplete>
-    </>
+    <Autocomplete<ApiGeoResult>
+      className={className}
+      onChange={(value) => {
+        if (onLocationChange) onLocationChange(value);
+      }}
+      displayLabel={itemToString}
+      search={searchCities}
+      hintText={"Ex: 75007"}
+      label={<>Code&nbsp;postal&nbsp;ou&nbsp;Ville&nbsp;(optionnel)</>}
+      state={"default"}
+      dataTestId={"locationSearchAutocomplete"}
+      classes={classes}
+      displayNoResult
+      defaultValue={defaultValue}
+    />
   );
 };
