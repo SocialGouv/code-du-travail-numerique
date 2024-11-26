@@ -83,6 +83,7 @@
     "styled-components": "^5.3.6",
     "uuid": "^9.0.0",
     "xss": "^1.0.10",
+    "zod": "^3.23.8",
     "zustand": "^4.3.6"
   },
   "devDependencies": {

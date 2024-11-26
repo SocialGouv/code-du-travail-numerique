@@ -1,0 +1,2040 @@
+{
+  "type": "element",
+  "name": "Publication",
+  "attributes": {
+    "xmlns:dc": "http://purl.org/dc/elements/1.1/",
+    "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "ID": "F33754",
+    "type": "Fiche Question-réponse conditionnée",
+    "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+    "dateDerniereModificationImportante": "2024-01-05T00:00:00",
+    "spUrl": "https://entreprendre.service-public.fr/vosdroits/F33754"
+  },
+  "children": [
+    {
+      "type": "element",
+      "name": "dc:title",
+      "children": [
+        {
+          "type": "text",
+          "text": "Quelle obligation pour l''employeur en matière de complémentaire santé ?"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "dc:creator",
+      "children": [
+        {
+          "type": "text",
+          "text": "Direction de l''information légale et administrative"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "dc:subject",
+      "children": [
+        {
+          "type": "text",
+          "text": "Ressources humaines"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "dc:description",
+      "children": [
+        {
+          "type": "text",
+          "text": "Tout employeur du secteur privé (entreprise et association) a l''obligation de proposer une couverture complémentaire santé collective à ses salariés, sauf exceptions. Cette couverture peut être assurée notamment par une mutuelle. Un particulier employant un salarié à domicile n''est pas concerné. Certains salariés en contrat court peuvent être dispensés d''adhérer à la complémentaire santé collective et bénéficier d''un versement santé par l''employeur. Nous vous présentons les règles à connaître."
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "dc:publisher",
+      "children": [
+        {
+          "type": "text",
+          "text": "Direction de l''information légale et administrative"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "dc:contributor",
+      "children": [
+        {
+          "type": "text",
+          "text": "Direction de l''information légale et administrative (Premier ministre)"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "dc:date",
+      "children": [
+        {
+          "type": "text",
+          "text": "modified 2024-01-05"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "dc:type",
+      "children": [
+        {
+          "type": "text",
+          "text": "Question-réponse"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "dc:format",
+      "children": [
+        {
+          "type": "text",
+          "text": "text/xml"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "dc:identifier",
+      "children": [
+        {
+          "type": "text",
+          "text": "F33754"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "dc:source",
+      "children": [
+        {
+          "type": "text",
+          "text": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006156295/, https://www.legifrance.gouv.fr/codes/id/LEGISCTA000029436177, https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006141959/, https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006186434, https://www.legifrance.gouv.fr/circulaire/id/44711, https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000048851702, https://boss.gouv.fr/portail/accueil/protection-sociale-complementair.html#titre-chapitre-4---caractere-obligatoi"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "dc:language",
+      "children": [
+        {
+          "type": "text",
+          "text": "Fr"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "dc:relation",
+      "children": [
+        {
+          "type": "text",
+          "text": "isPartOf N22781"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "dc:coverage",
+      "children": [
+        {
+          "type": "text",
+          "text": "France entière"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "dc:rights",
+      "children": [
+        {
+          "type": "text",
+          "text": "https://www.service-public.fr/a-propos/mentions-legales"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "SurTitre",
+      "children": [
+        {
+          "type": "text",
+          "text": "Question-réponse"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Audience",
+      "children": [
+        {
+          "type": "text",
+          "text": "Professionnels"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Canal",
+      "children": [
+        {
+          "type": "text",
+          "text": "www.service-public.fr"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Cible",
+      "children": [
+        {
+          "type": "text",
+          "text": "Tout professionnel"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "FilDAriane",
+      "children": [
+        {
+          "type": "element",
+          "name": "Niveau",
+          "attributes": {
+            "ID": "Professionnels"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": "Accueil professionnels"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Niveau",
+          "attributes": {
+            "ID": "N24267"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": "Ressources humaines"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Niveau",
+          "attributes": {
+            "ID": "N22781"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": "Recrutement"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Niveau",
+          "attributes": {
+            "ID": "F33754",
+            "type": "Fiche Question-réponse conditionnée"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": "Quelle obligation pour l''employeur en matière de complémentaire santé ?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Theme",
+      "attributes": {
+        "ID": "N24267"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "Titre",
+          "children": [
+            {
+              "type": "text",
+              "text": "Ressources humaines"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "SousThemePere",
+      "attributes": {
+        "ID": "N10778"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": "Recrutement - Aides à l''emploi"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "DossierPere",
+      "attributes": {
+        "ID": "N22781"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "Titre",
+          "children": [
+            {
+              "type": "text",
+              "text": "Recrutement"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Fiche",
+          "attributes": {
+            "ID": "F23107"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": "Procédure et formalités d''embauche d''un salarié du secteur privé"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Fiche",
+          "attributes": {
+            "ID": "F10403"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": "Offre de contrat de travail et promesse d''embauche unilatérale"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Fiche",
+          "attributes": {
+            "ID": "F1643"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": "Période d''essai pour un salarié"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Fiche",
+          "attributes": {
+            "ID": "F1784"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": "Registres obligatoires dans l''entreprise"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Fiche",
+          "attributes": {
+            "ID": "F1928"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": "Guichet unique du spectacle occasionnel (Guso)"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Fiche",
+          "attributes": {
+            "ID": "F33599"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": "Carte BTP : carte d''identification professionnelle d''un salarié du BTP"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Fiche",
+          "attributes": {
+            "ID": "F2733"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": "Autorisation de travail d''un Algérien salarié en France"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Introduction",
+      "children": [
+        {
+          "type": "element",
+          "name": "Texte",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Tout employeur du secteur privé (entreprise et association) a l''obligation de proposer une couverture complémentaire santé collective à ses salariés, sauf exceptions. Cette couverture peut être assurée notamment par une mutuelle. Un particulier employant un salarié à domicile n''est pas concerné. Certains salariés en contrat court peuvent être dispensés d''adhérer à la complémentaire santé collective et bénéficier d''un versement santé par l''employeur. Nous vous présentons les règles à connaître."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Texte",
+      "children": [
+        {
+          "type": "element",
+          "name": "Chapitre",
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "L''employeur est-il obligé de proposer une complémentaire santé à ses salariés ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "BlocCas",
+              "attributes": {
+                "affichage": "radio"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Cas",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Cas général"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "L''employeur doit faire bénéficier "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "tous ses salariés, "
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "quelle que soit leur ancienneté dans l''entreprise, d''une "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "complémentaire santé d''entreprise"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Cette couverture permet au salarié de compléter ses remboursements de frais de santé en plus de la partie remboursée par la Sécurité sociale."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "La couverture des ayants droit du salarié n''est pas obligatoire, mais l''employeur (ou les partenaires sociaux) peut décider de les couvrir aussi."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "ANoter",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Exemple"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Une personne peut demander à être dispensé d''adhérer au régime de frais de santé mis en place dans son entreprise si elle est déjà couverte y compris en tant qu''ayant droit. Cette couverture se fait par le biais d''un régime de santé collectif obligatoire (régime familial obligatoire pour lequel l''adhésion des membres de la famille, époux(se), pacsé(e), enfants, est obligatoire au même titre que celle du salarié)."
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Cas",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Salarié ayant plusieurs employeurs"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "En cas d''employeurs multiples, un salarié déjà couvert par un contrat collectif de l''un de ses employeurs peut refuser de souscrire aux autres contrats."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Il doit justifier de cette protection auprès des autres employeurs au moyen d''un justificatif annuel d''adhésion."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Cas",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Salarié dont le contrat est suspendu"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "BlocCas",
+                      "attributes": {
+                        "affichage": "radio"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le salarié est indemnisé par l''employeur ou la Sécurité sociale"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La couverture doit être maintenue lorsque le contrat de travail du salarié est suspendu qu''elle qu''en soit la cause."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ANoter",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Exemple"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Survenance d''une maladie, d''une maternité, d''un accident ou en cas d''activité partielle ou d''un congé d''adaption"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le salarié n''est pas indemnisé"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le salarié doit se rapprocher de son employeur pour savoir si la mutuelle est ou non maintenue."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Cas",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Salarié dont le contrat est rompu"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Les salariés dont le contrat est rompu pour un autre motif qu''une faute lourde bénéficient du "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F20744",
+                            "type": "Fiche Question-réponse conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "maintien de cette couverture"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " pendant une durée égale à la période d''indemnisation du chômage dans la limite de la durée du dernier contrat de travail."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Ce maintien des garanties ne peut pas excéder 12 mois."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Chapitre",
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Quelles conditions doit remplir la couverture collective obligatoire ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "La couverture collective obligatoire doit remplir les conditions suivantes :"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Liste",
+              "attributes": {
+                "type": "puce"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Item",
+                  "childre": [
+                    {
+                      "type": "text",
+                      "text": "Sauf cas de dispense, il devra donc être affilié au régime de prévoyance santé à la fin du 1"
+                    },
+                    {
+                      "type": "element",
+                      "name": "Exposant",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "er"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " CDD."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "D''autres "
+                },
+                {
+                  "type": "element",
+                  "name": "LienInterne",
+                  "attributes": {
+                    "LienPublication": "F20740",
+                    "type": "Fiche Question-réponse conditionnée",
+                    "audience": "Particuliers"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "salariés peuvent être dispensés"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", à leur demande, de l''obligation d''adhésion  :"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Liste",
+              "attributes": {
+                "type": "puce"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Item",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Salariés bénéficiaires d''une couverture individuelle lors de la mise en place du régime collectif obligatoire ou lors de leur embauche si elle est postérieure. La dispense s''applique jusqu''à la l''échéance du contrat individuel"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Item",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Salariés bénéficiaires de la "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F10027",
+                            "type": "Fiche d''information conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "complémentaire santé solidaire"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ". La dispense s''applique jusqu''à la date à laquelle le salarié cesse de bénéficier de la complémentaire santé solidaire"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Item",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Salariés, y compris en tant qu''ayants droit, bénéficiaires de prestations servies au titre d''un autre emploi de l''un de ces dispositifs : complémentaire santé collective obligatoire, régime local d''assurance maladie d''Alsace-Moselle, régime complémentaire d''assurance maladie des industries électriques et gazières (Camieg), mutuelle des agents de l’État et des collectivités territoriales, notamment."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "La contribution de l''employeur au titre du versement santé est calculée de façon différente selon la zone concernée :"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "BlocCas",
+              "attributes": {
+                "affichage": "onglet"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Cas",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Cas général"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Le versement santé est financé par l''employeur."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Le montant du versement santé correspond aux sommes que l''employeur aurait été obligé de verser si le salarié avait bénéficié d''une couverture collective."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "S''il est impossible de déterminer le montant qu''aurait dû verser l''employeur, le montant de référence est fixé à "
+                        },
+                        {
+                          "type": "element",
+                          "name": "Valeur",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "20,75 €"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " pour 2024."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Le coefficient appliqué au montant de référence est de :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "105 %"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " pour les salariés en CDI"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "125 %"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " pour les salariés en CDD ou en contrat de mission."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "ANoter",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Exemple"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "La contribution de l''employeur est forfaitaire et égale à "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "20 €"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Le salarié travaille 35 heures par semaine. Il est en CDD de moins de 3 mois. Le contrat collectif obligatoire ne lui garantit pas une couverture en complémentaire santé d''au moins 3 mois."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "numero"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Le salarié étant à temps plein, son coefficient de proratisation est de 1 (151,67/151,67)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Ce coefficient appliqué à la contribution forfaitaire ("
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Valeur",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "20 €"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "), le montant de référence reste de "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Valeur",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "20 €"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Le salarié étant en CDD, le coefficient de majoration est de "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Valeur",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "125 %"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Ainsi, le montant versé au salarié est de "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "25 €"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " ("
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "20 €"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "*"
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "125 %"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ")."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "L''employeur bénéficie d''une exonération de cotisations sociales sur ces versements."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Cependant, ces versements sont soumis en totalité à la "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F2971",
+                            "type": "Fiche d''information conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "CSG-CRDS"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " et au "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F31532",
+                            "type": "Fiche d''information conditionnée",
+                            "audience": "Professionnels"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "forfait social"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " dans les entreprises d''au moins 11 salariés."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Cas",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Alsace-Moselle"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Le versement santé est financé par l''employeur."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Le montant du versement santé correspond aux sommes que l''employeur aurait été tenu de verser si le salarié avait bénéficié d''une couverture collective"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "S''il est impossible de déterminer le montant qu''aurait dû verser l''employeur, le montant de référence est fixé à "
+                        },
+                        {
+                          "type": "element",
+                          "name": "Valeur",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "6,93  €"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "pour 2024."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Le coefficient appliqué au montant de référence est de :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "105 %"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " pour les salariés en CDI"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "125 %"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " pour les salariés en CDD ou en contrat de mission."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "ANoter",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Exemple"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Un employeur verse une contribution forfaitaire de "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "60 €"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " pour chacun de ses salariés d''une certaine catégorie."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Pour un salarié en CDI de cette catégorie, qui travaille 50 heures par mois., le montant de référence est calculé comme suit : 60 x (50/151,67) =19,78, auquel est appliqué le coefficient de "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "105 %"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ", le salarié étant en CDI."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Le montant mensuel à verser pour ce salarié est de "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "20,77 €"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " (19,78 x "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "105 %"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ")."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "L''employeur bénéficie d''une exonération de cotisations sociales sur ces versements, ."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Cependant, il n''y a pas d''exonération pour la "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F2971",
+                            "type": "Fiche d''information conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "CSG-CRDS"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " et le "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F31532",
+                            "type": "Fiche d''information conditionnée",
+                            "audience": "Professionnels"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "forfait social"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " dans les entreprises d''au moins 11 salariés."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Reference",
+      "attributes": {
+        "type": "Texte de référence",
+        "URL": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006156295/",
+        "ID": "R10554"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "Titre",
+          "children": [
+            {
+              "type": "text",
+              "text": "Code de la sécurité sociale : articles L911-1 à L911-8"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Complement",
+          "children": [
+            {
+              "type": "text",
+              "text": "Obligations de l''employeur"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Reference",
+      "attributes": {
+        "type": "Texte de référence",
+        "URL": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000029436177",
+        "ID": "R38428"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "Titre",
+          "children": [
+            {
+              "type": "text",
+              "text": "Code de la sécurité sociale : articles D911-1 à D911-8"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Complement",
+          "children": [
+            {
+              "type": "text",
+              "text": "Contenu de la mutuelle obligatoire"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Reference",
+      "attributes": {
+        "type": "Texte de référence",
+        "URL": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006141959/",
+        "ID": "R44339"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "Titre",
+          "children": [
+            {
+              "type": "text",
+              "text": "Code de la sécurité sociale : articles R871-1 et R871-2"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Complement",
+          "children": [
+            {
+              "type": "text",
+              "text": "Aide aux dispositifs d''assurance maladie complémentaire"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Reference",
+      "attributes": {
+        "type": "Texte de référence",
+        "URL": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006186434",
+        "ID": "R44350"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "Titre",
+          "children": [
+            {
+              "type": "text",
+              "text": "Code de la sécurité sociale : articles R242-1-1 à R242-4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Reference",
+      "attributes": {
+        "type": "Texte de référence",
+        "URL": "https://www.legifrance.gouv.fr/circulaire/id/44711",
+        "ID": "R49059"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "Titre",
+          "children": [
+            {
+              "type": "text",
+              "text": "Instruction DSS du 30 janvier 2015 sur les contrats d''assurance maladie complémentaire bénéficiant d''aides fiscales et sociales"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Reference",
+      "attributes": {
+        "type": "Texte de référence",
+        "URL": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000048851702",
+        "ID": "R50182"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "Titre",
+          "children": [
+            {
+              "type": "text",
+              "text": "Arrêté du 3 janvier 2024 fixant pour 2024 le montant de référence servant au calcul du versement santé"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Reference",
+      "attributes": {
+        "type": "Texte de référence",
+        "URL": "https://boss.gouv.fr/portail/accueil/protection-sociale-complementair.html#titre-chapitre-4---caractere-obligatoi",
+        "ID": "R63717"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "Titre",
+          "children": [
+            {
+              "type": "text",
+              "text": "Bulletin officiel de la Sécurité sociale - Protection sociale complémentaire"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Source",
+          "attributes": {
+            "ID": "R30662"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": "Ministère chargé de la santé"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Definition",
+      "attributes": {
+        "ID": "R59273"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "Titre",
+          "children": [
+            {
+              "type": "text",
+              "text": "Convention collective"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Texte",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Accord écrit négocié entre les représentants syndicaux de salariés et des groupements d''employeurs. Il complète et adapte la législation du travail dans un secteur d''activité donné, souvent de façon plus favorable pour les salariés."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Definition",
+      "attributes": {
+        "ID": "R57077"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "Titre",
+          "children": [
+            {
+              "type": "text",
+              "text": "Accord collectif d''entreprise"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Texte",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Résultat des négociations menées entre les partenaires sociaux (employeurs et salariés)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Definition",
+      "attributes": {
+        "ID": "R65388"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "Titre",
+          "children": [
+            {
+              "type": "text",
+              "text": "Décision unilatérale (droit du travail)"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Texte",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Document écrit par lequel l''employeur s''engage envers ses salariés dans le cadre de son pouvoir de direction"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Definition",
+      "attributes": {
+        "ID": "R2108"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "Titre",
+          "children": [
+            {
+              "type": "text",
+              "text": "Tarif conventionnel (Assurance maladie)"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Texte",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Tarif sur la base duquel s''effectue le calcul pour le remboursement d''un acte médical par l''Assurance maladie. Appelé aussi "
+                },
+                {
+                  "type": "element",
+                  "name": "Expression",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "tarif de responsabilité"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Reference",
+          "attributes": {
+            "type": "Texte de référence",
+            "URL": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006073189/LEGISCTA000031669984/",
+            "ID": "R32413"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Code de la sécurité sociale : articles L160-13 à L160-16"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Abreviation",
+      "attributes": {
+        "ID": "R42825",
+        "type": "Sigle"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "Titre",
+          "children": [
+            {
+              "type": "text",
+              "text": "SMR"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Texte",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Service médical rendu"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "QuestionReponse",
+      "attributes": {
+        "ID": "F20744",
+        "audience": "Particuliers"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": "Un salarié peut-il garder la complémentaire santé (mutuelle) employeur à la fin de son contrat ?"
+        }
+      ]
+    }
+  ]
+}", "url": "https://entreprendre.service-public.fr/vosdroits/F33754", "date": "05/01/2024", "description": "Tout employeur du secteur privé (entreprise et association) a l''obligation de proposer une couverture complémentaire santé collective à ses salariés, sauf exceptions. Cette couverture peut être assurée notamment par une mutuelle. Un particulier employant un salarié à domicile n''est pas concerné. Certains salariés en contrat court peuvent être dispensés d''adhérer à la complémentaire santé collective et bénéficier d''un versement santé par l''employeur. Nous vous présentons les règles à connaître.", "referencedTexts": [{"url": "https://www.legifrance.gouv.fr/circulaire/id/44711", "type": "external", "title": "Instruction DSS du 30 janvier 2015 sur les contrats d''assurance maladie complémentaire bénéficiant d''aides fiscales et sociales"}, {"url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000048851702", "type": "external", "title": "Arrêté du 3 janvier 2024 fixant pour 2024 le montant de référence servant au calcul du versement santé"}, {"url": "https://boss.gouv.fr/portail/accueil/protection-sociale-complementair.html#titre-chapitre-4---caractere-obligatoi", "type": "external", "title": "Bulletin officiel de la Sécurité sociale - Protection sociale complémentaire"}]
