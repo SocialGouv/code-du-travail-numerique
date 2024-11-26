@@ -14,10 +14,11 @@
     "lint": "yarn lint:css && next lint",
     "precommit": "lint-staged",
     "start": "next start",
-    "prebuild": "tsup scripts/prebuild.ts && react-dsfr update-icons && panda codegen",
+    "tsup": "tsup",
+    "prebuild": "yarn tsup && node dist/prebuild.js && react-dsfr update-icons && panda codegen",
     "build": "yarn prebuild && next build",
     "build:analyze": "yarn prebuild && ANALYZE=true next build",
-    "pretest:api": "ELASTICSEARCH_URL=http://localhost:9200 NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn_test NEXT_PUBLIC_APP_ENV=test NODE_ENV=test tsup scripts/generate-data.ts",
+    "pretest:api": "yarn tsup && ELASTICSEARCH_URL=http://localhost:9200 NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn_test NEXT_PUBLIC_APP_ENV=test NODE_ENV=test node dist/generate-data.js",
     "test": "yarn pretest:api && ELASTICSEARCH_URL=http://localhost:9200 NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn_test NEXT_PUBLIC_APP_ENV=test NODE_ENV=test jest --silent",
     "test:watch": "npm run test -- --watch",
     "test:frontend": "NEXT_PUBLIC_APP_ENV=test NODE_ENV=test jest --silent --testPathIgnorePatterns='.*\\.es\\.test\\.ts$'",
@@ -31,7 +32,7 @@
     "type-check:watch": "npm run type-check -- --watch",
     "format": "prettier --write \"**/*.{js,ts,tsx,jsx,json,md}\"",
     "format:check": "prettier --check \"**/*.{js,ts,tsx,jsx,json,md}\"",
-    "clean:redirects": "tsup scripts/clean-redirects.ts"
+    "clean:redirects": "yarn tsup && node dist/clean-redirects.js"
   },
   "dependencies": {
     "@codegouvfr/react-dsfr": "^1.13.9",
