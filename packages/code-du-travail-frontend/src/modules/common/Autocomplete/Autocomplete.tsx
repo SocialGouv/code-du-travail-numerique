@@ -84,7 +84,7 @@ export const Autocomplete = <K,>({
                     type="button"
                   />
                 )}
-                {loading && (
+                {(loading || (lineAsLink && selectedResult)) && (
                   <Image
                     className={fr.cx("fr-mr-1v")}
                     priority
