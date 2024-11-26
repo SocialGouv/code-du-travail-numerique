@@ -18,8 +18,12 @@ describe("Modèles de documents", () => {
       .click();
 
     cy.get("#home-searchbar").type("modele rupture contrat periode d'essai");
-
     cy.get("#home-searchbar").type("{enter}");
+
+    cy.url().should(
+      "include",
+      "/recherche?q=modele+rupture+contrat+periode+d%27essai"
+    );
 
     cy.contains("Rupture du contrat en période d’essai par le salarié").click();
 
