@@ -18,4 +18,5 @@ export default defineConfig({
   },
   outdir: "src/styled-system",
   outExtension: "js",
+  importMap: "@styled-system",
 });

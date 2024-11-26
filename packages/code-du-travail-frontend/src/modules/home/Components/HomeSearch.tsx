@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as Sentry from "@sentry/nextjs";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { css } from "../../../styled-system/css";
+import { css } from "@styled-system/css";
 import { useCombobox } from "downshift";
 import { fetchSuggestResults } from "../../layout/header/fetchSuggestResults";
 import { SUGGEST_MAX_RESULTS } from "../../../config";
