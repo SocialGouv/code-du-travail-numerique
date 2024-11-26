@@ -110,6 +110,8 @@ export const EnterpriseAgreementSearchInput = ({
         className={fr.cx(
           "fr-grid-row",
           "fr-grid-row--top",
+          "fr-grid-row--gutters",
+          "fr-grid-row--bottom",
           "fr-mt-2w",
           "fr-mb-0"
         )}
@@ -119,7 +121,12 @@ export const EnterpriseAgreementSearchInput = ({
         }}
       >
         <Input
-          className={fr.cx("fr-col-12", "fr-col-md-5", "fr-mb-0")}
+          className={fr.cx(
+            "fr-col-12",
+            "fr-col-xl-6",
+            "fr-col-md-7",
+            "fr-mb-0"
+          )}
           hintText={
             <>
               Ex : Café de la mairie ou 40123778000127
@@ -127,7 +134,11 @@ export const EnterpriseAgreementSearchInput = ({
               (présent sur la fiche de paie du salarié)
             </>
           }
-          label={<>Nom de votre entreprise ou numéro Siren/Siret</>}
+          label={
+            <>
+              Nom&nbsp;de&nbsp;votre&nbsp;entreprise&nbsp;ou&nbsp;numéro&nbsp;Siren/Siret
+            </>
+          }
           state={getInputState()}
           stateRelatedMessage={getStateMessage()}
           nativeInputProps={{
@@ -153,23 +164,31 @@ export const EnterpriseAgreementSearchInput = ({
           defaultValue={location}
           className={fr.cx(
             "fr-col-12",
-            "fr-col-md-3",
-            "fr-ml-md-3w",
-            searched && !enterprises?.length ? "fr-mb-7w" : "fr-mb-0",
+            "fr-col-xl-4",
+            "fr-col-md-5",
+            getInputState() === "error" ? "fr-mb-md-9v" : "fr-mb-md-0",
+            searched && !enterprises?.length ? "fr-mb-md-7w" : "fr-mb-md-0",
             "fr-mt-2w",
             "fr-mt-md-0"
           )}
           classes={{ label: fr.cx("fr-mb-md-7v") }}
         />
-
-        <Button
-          type="submit"
-          iconPosition="right"
-          iconId="fr-icon-search-line"
-          className={`${fr.cx("fr-ml-md-3w", "fr-mt-2w", "fr-mt-md-19v", searched && !enterprises?.length ? "fr-mb-7w" : "fr-mb-0")} ${ButtonStyle}`}
+        <div
+          className={fr.cx(
+            "fr-mt-2w",
+            "fr-col-xl-2",
+            getInputState() === "error" ? "fr-mb-9v" : "fr-mb-0"
+          )}
         >
-          Rechercher
-        </Button>
+          <Button
+            type="submit"
+            iconPosition="right"
+            iconId="fr-icon-search-line"
+            className={`${ButtonStyle}`}
+          >
+            Rechercher
+          </Button>
+        </div>
       </form>
 
       <div>
