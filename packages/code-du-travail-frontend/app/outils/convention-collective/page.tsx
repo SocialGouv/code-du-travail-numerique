@@ -1,8 +1,5 @@
 import { DsfrLayout } from "../../../src/modules/layout";
-import {
-  DocumentElasticResult,
-  fetchRelatedItems,
-} from "../../../src/modules/documents";
+import { DocumentElasticResult } from "../../../src/modules/documents";
 import { fetchTool, FindAgreementLayout } from "../../../src/modules/outils";
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";

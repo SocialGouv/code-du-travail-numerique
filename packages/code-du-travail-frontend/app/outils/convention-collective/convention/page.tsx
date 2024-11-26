@@ -8,8 +8,6 @@ import { AgreementSearch } from "../../../../src/modules/convention-collective";
 import { agreementRelatedItems } from "../../../../src/modules/convention-collective/agreementRelatedItems";
 import { SITE_URL } from "../../../../src/config";
 
-const SLUG = "convention-collective";
-
 export async function generateMetadata() {
   const { title, description } = await getTool();
 
@@ -36,7 +34,9 @@ async function FindAgreementByNamePage() {
 }
 
 const getTool = async () => {
-  const tool: DocumentElasticResult<ElasticTool> = await fetchTool(SLUG);
+  const tool: DocumentElasticResult<ElasticTool> = await fetchTool(
+    "convention-collective"
+  );
 
   if (!tool) {
     return notFound();

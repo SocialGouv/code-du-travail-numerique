@@ -12,8 +12,6 @@ import { searchEnterprises } from "../../../../../src/modules/enterprise/queries
 import { agreementRelatedItems } from "../../../../../src/modules/convention-collective/agreementRelatedItems";
 import { SITE_URL } from "../../../../../src/config";
 
-const SLUG = "convention-collective";
-
 export async function generateMetadata({ params }) {
   const { title, description } = await getTool();
 
@@ -47,7 +45,9 @@ async function AgreementSelectionPage({ params }) {
 }
 
 const getTool = async () => {
-  const tool: DocumentElasticResult<ElasticTool> = await fetchTool(SLUG);
+  const tool: DocumentElasticResult<ElasticTool> = await fetchTool(
+    "convention-collective"
+  );
 
   if (!tool) {
     return notFound();
