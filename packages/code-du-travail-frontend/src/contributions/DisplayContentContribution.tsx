@@ -102,12 +102,12 @@ const mapTbody = (tbody: Element) => {
         <thead>
           {theadChildren.map((child, index) => (
             <tr key={`tr-${index}`}>
-              {domToReact(child.children as DOMNode[], { trim: true })}
+              {domToReact(child.children as DOMNode[])}
             </tr>
           ))}
         </thead>
       )}
-      <tbody>{domToReact(tbody.children as DOMNode[], { trim: true })}</tbody>
+      <tbody>{domToReact(tbody.children as DOMNode[])}</tbody>
     </UITable>
   );
 };
