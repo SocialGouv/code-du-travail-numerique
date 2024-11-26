@@ -1,5 +1,5 @@
 node_modules/
 .next/
-.swc/
-styled-system/
+dist/
+src/styled-system/
 CHANGELOG.md
