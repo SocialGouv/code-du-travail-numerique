@@ -75,7 +75,7 @@ export const EnterpriseAgreementSearchInput = ({
           Vous avez sélectionné la convention collective
         </p>
         <Card
-          title={selectedAgreement.shortTitle}
+          title={`${selectedAgreement.shortTitle} IDCC${selectedAgreement.id}`}
           size="small"
           className={fr.cx("fr-mt-2w")}
           classes={{

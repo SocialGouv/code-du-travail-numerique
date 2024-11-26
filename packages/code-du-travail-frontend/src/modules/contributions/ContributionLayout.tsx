@@ -19,6 +19,7 @@ import {
   ElasticSearchContributionGeneric,
 } from "@socialgouv/cdtn-types";
 import { ContributionElasticDocument } from "./type";
+import { ContributionContent } from "../../contributions/ContributionContent";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
@@ -131,10 +132,7 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
               </h1>
             </div>
             <Card
-              title={
-                (contribution as ElasticSearchContributionConventionnelle)
-                  .ccnShortTitle
-              }
+              title={`${(contribution as ElasticSearchContributionConventionnelle).ccnShortTitle} IDCC${contribution.idcc}`}
               size="small"
               className={fr.cx("fr-mt-2w")}
               classes={{
@@ -184,18 +182,31 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
                     displayContent ? "fr-unhidden" : "fr-hidden"
                   )}
                 >
-                  MyContent
+                  <ContributionContent
+                    contribution={
+                      contribution as
+                        | ElasticSearchContributionGeneric
+                        | ElasticSearchContributionConventionnelle
+                    }
+                    titleLevel={3}
+                  ></ContributionContent>
                 </div>
                 <Feedback></Feedback>
               </>
             ) : (
               <>
-                <div>MyContent</div>
+                <ContributionContent
+                  contribution={
+                    contribution as
+                      | ElasticSearchContributionGeneric
+                      | ElasticSearchContributionConventionnelle
+                  }
+                  titleLevel={3}
+                ></ContributionContent>
               </>
             )}
           </div>
         )}
-
         <div
           className={fr.cx("fr-col-12", "fr-col-offset-md-1", "fr-col-md-4")}
         >
