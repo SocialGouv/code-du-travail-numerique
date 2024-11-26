@@ -1,4 +1,4 @@
-import { render, RenderResult } from "@testing-library/react";
+import { render, RenderResult, screen } from "@testing-library/react";
 import React from "react";
 import { EnterpriseAgreementSelection } from "../EnterpriseAgreementSelection";
 import { ui } from "./ui";
@@ -50,6 +50,9 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
       ui.enterpriseAgreementSelection.agreement.IDCC2216.title.query()
     ).toBeInTheDocument();
     expect(
+      ui.enterpriseAgreementSelection.description.known.query()
+    ).toBeInTheDocument();
+    expect(
       ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
     ).toHaveAttribute(
       "href",
@@ -57,7 +60,29 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
     );
   });
 
-  it.each(["url", "contributions", "slug"])(
+  it("Vérifier l'affichage de la selection avec une CC sans slug", async () => {
+    rendering = render(
+      <EnterpriseAgreementSelection
+        enterprise={{
+          ...defaultEnterprise,
+          conventions: [
+            {
+              ...defaultEnterprise.conventions[0],
+              slug: "",
+            },
+          ],
+        }}
+      />
+    );
+    expect(
+      ui.enterpriseAgreementSelection.description.unknown.query()
+    ).toBeInTheDocument();
+    expect(
+      ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
+    ).not.toBeInTheDocument();
+  });
+
+  it.each(["url", "contributions"])(
     "Vérifier l'affichage de la selection avec une CC sans %s",
     async (field) => {
       rendering = render(
@@ -74,8 +99,11 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
         />
       );
       expect(
+        ui.enterpriseAgreementSelection.description.notFound.query()
+      ).toBeInTheDocument();
+      expect(
         ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
-      ).toHaveAttribute("href", "");
+      ).not.toBeInTheDocument();
     }
   );
 });

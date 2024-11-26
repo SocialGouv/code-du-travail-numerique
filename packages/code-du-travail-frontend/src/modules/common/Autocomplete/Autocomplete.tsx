@@ -194,7 +194,7 @@ const autocompleteContainer = css({
 
 const autocompleteListContainer = css({
   position: "absolute",
-  w: "100%",
+  w: "calc(100% - 1rem)",
   zIndex: 100,
   bg: "var(--background-default-grey)",
 });

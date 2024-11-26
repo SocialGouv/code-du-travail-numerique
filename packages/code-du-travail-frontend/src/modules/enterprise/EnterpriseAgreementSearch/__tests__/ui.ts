@@ -1,9 +1,4 @@
-import {
-  byText,
-  byLabelText,
-  byTestId,
-  byRole,
-} from "testing-library-selector";
+import { byText, byLabelText, byRole } from "testing-library-selector";
 
 export const ui = {
   enterpriseAgreementSearch: {
@@ -31,13 +26,24 @@ export const ui = {
       ),
       address: byText("ZI ROUTE DE PARIS 14120 MONDEVILLE"),
     },
+    description: {
+      notFound: byText(
+        "Nous n’avons pas d’informations concernant cette convention collective"
+      ),
+      unknown: byText(
+        "Cette convention collective déclarée par l’entreprise n’est pas reconnue par notre site"
+      ),
+      known: byText(
+        "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective"
+      ),
+    },
     agreement: {
       IDCC2216: {
         title: byText(
-          "Commerce de détail et de gros à prédominance alimentaire"
+          "Commerce de détail et de gros à prédominance alimentaire IDCC2216"
         ),
         link: byRole("link", {
-          name: "Commerce de détail et de gros à prédominance alimentaire",
+          name: "Commerce de détail et de gros à prédominance alimentaire IDCC2216",
         }),
       },
     },

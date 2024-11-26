@@ -204,7 +204,9 @@ export const EnterpriseAgreementSearchInput = ({
           {loading && (
             <div className={fr.cx("fr-grid-row")}>
               <p className={fr.cx("fr-h5", "fr-mb-0")}>Chargement en cours</p>
-              <div className={`${fr.cx("fr-ml-1w")} ${SpinnerBlock}`}>
+              <div
+                className={`${fr.cx("fr-ml-1w", "fr-mt-1w")} ${SpinnerBlock}`}
+              >
                 <Image priority src={Spinner} alt="Chargement en cours" />
               </div>
             </div>
