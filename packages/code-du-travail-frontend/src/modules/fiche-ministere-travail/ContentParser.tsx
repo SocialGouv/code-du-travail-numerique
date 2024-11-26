@@ -7,6 +7,13 @@ import parse, {
 import { fr } from "@codegouvfr/react-dsfr";
 import xss, { escapeAttrValue, getDefaultWhiteList } from "xss";
 
+type DOMNodeAugmented = DOMNode & {
+  name: string;
+  next?: DOMNodeAugmented;
+  children?: DOMNodeAugmented[];
+  data?: string;
+};
+
 const xssWrapper = (text: string): string => {
   return xss(text, {
     stripIgnoreTag: true,
@@ -37,7 +44,7 @@ const xssWrapper = (text: string): string => {
 
 const options = (): HTMLReactParserOptions => {
   return {
-    replace(domNode) {
+    replace(domNode: DOMNodeAugmented) {
       if (domNode instanceof Element) {
         if (
           domNode.name === "div" &&
@@ -63,6 +70,21 @@ const options = (): HTMLReactParserOptions => {
             </div>
           );
         }
+        if (
+          domNode.name === "strong" &&
+          domNode.children &&
+          domNode.children.length > 0 &&
+          domNode.children[0].data &&
+          domNode.next?.next?.name === "a"
+        ) {
+          const text = ensureTrailingSpace(domNode.children[0].data);
+          domNode.children[0].data = text;
+          return (
+            <strong>
+              {domToReact(domNode.children as DOMNode[], { trim: true })}
+            </strong>
+          );
+        }
       }
     },
     trim: true,
@@ -78,3 +100,6 @@ export const ContentParser = ({
 }: Props): string | JSX.Element | JSX.Element[] => {
   return <>{parse(xssWrapper(children), options())}</>;
 };
+
+const ensureTrailingSpace = (text: string): string =>
+  text.endsWith(" ") ? text : text + " ";

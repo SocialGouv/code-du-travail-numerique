@@ -63,4 +63,12 @@ describe("Fiche MT content parser", () => {
       `<p class="fr-card__detail">Date de mise à jour le 9 octobre 2024</p>`
     );
   });
+
+  test("Should work with strong + link", () => {
+    const src = `<p>La qualification de « démission » est réservée à la rupture, à l’initiative du salarié, de son contrat de travail à durée indéterminée. <strong>Les salariés en CDD peuvent mettre fin par anticipation, à leur contrat de travail dans certaines situations</strong><a href="https://travail-emploi.gouv.fr/le-contrat-duree-determinee-cdd" title="Le contrat à durée déterminée (CDD)" target="_blank">limitativement énumérées</a>. </p>`;
+    const { container } = render(<ContentParser>{src}</ContentParser>);
+    expect(container.innerHTML).toBe(
+      `<p>La qualification de « démission » est réservée à la rupture, à l’initiative du salarié, de son contrat de travail à durée indéterminée. <strong>Les salariés en CDD peuvent mettre fin par anticipation, à leur contrat de travail dans certaines situations </strong><a href="https://travail-emploi.gouv.fr/le-contrat-duree-determinee-cdd" title="Le contrat à durée déterminée (CDD)" target="_blank">limitativement énumérées</a>. </p>`
+    );
+  });
 });
