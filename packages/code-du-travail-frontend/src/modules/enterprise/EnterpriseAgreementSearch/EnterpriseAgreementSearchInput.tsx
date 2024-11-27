@@ -54,6 +54,16 @@ export const EnterpriseAgreementSearchInput = ({
         return <>{error}</>;
     }
   };
+  const getStateMargin = () => {
+    switch (searchState) {
+      case "notFoundSearch":
+        return "fr-mb-14v";
+      case "errorSearch":
+      case "required":
+        return "fr-mb-9v";
+    }
+    return "fr-mb-0";
+  };
   const getInputState = () => {
     switch (searchState) {
       case "errorSearch":
@@ -166,20 +176,13 @@ export const EnterpriseAgreementSearchInput = ({
             "fr-col-12",
             "fr-col-xl-4",
             "fr-col-md-5",
-            getInputState() === "error" ? "fr-mb-md-9v" : "fr-mb-md-0",
-            searched && !enterprises?.length ? "fr-mb-md-7w" : "fr-mb-md-0",
+            getStateMargin(),
             "fr-mt-2w",
             "fr-mt-md-0"
           )}
           classes={{ label: fr.cx("fr-mb-md-7v") }}
         />
-        <div
-          className={fr.cx(
-            "fr-mt-2w",
-            "fr-col-xl-2",
-            getInputState() === "error" ? "fr-mb-9v" : "fr-mb-0"
-          )}
-        >
+        <div className={fr.cx("fr-mt-2w", "fr-col-xl-2", getStateMargin())}>
           <Button
             type="submit"
             iconPosition="right"
