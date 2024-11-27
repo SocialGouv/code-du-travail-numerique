@@ -88,11 +88,7 @@ export const EnterpriseAgreementSelection = ({
             enlargeLink
             size="large"
             desc={description}
-            title={
-              agreement.slug
-                ? `${agreement.shortTitle} IDCC ${agreement.id}`
-                : agreement.shortTitle
-            }
+            title={`${agreement.shortTitle} IDCC ${agreement.id}`}
             classes={{
               title: `${fr.cx("fr-h5")} ${CardTitleStyle} ${disabled ? disabledTitle : ""}`,
               content: `${fr.cx("fr-px-2w", "fr-pt-1w", "fr-pb-7v")} ${disabled ? disabledContent : ""}`,
