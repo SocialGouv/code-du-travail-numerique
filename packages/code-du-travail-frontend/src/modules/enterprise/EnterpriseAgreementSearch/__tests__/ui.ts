@@ -40,10 +40,10 @@ export const ui = {
     agreement: {
       IDCC2216: {
         title: byText(
-          "Commerce de détail et de gros à prédominance alimentaire IDCC2216"
+          "Commerce de détail et de gros à prédominance alimentaire IDCC 2216"
         ),
         link: byRole("link", {
-          name: "Commerce de détail et de gros à prédominance alimentaire IDCC2216",
+          name: "Commerce de détail et de gros à prédominance alimentaire IDCC 2216",
         }),
       },
     },

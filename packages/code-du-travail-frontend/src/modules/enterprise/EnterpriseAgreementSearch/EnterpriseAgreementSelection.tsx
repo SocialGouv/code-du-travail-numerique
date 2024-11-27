@@ -90,7 +90,7 @@ export const EnterpriseAgreementSelection = ({
             desc={description}
             title={
               agreement.slug
-                ? `${agreement.shortTitle} IDCC${agreement.id}`
+                ? `${agreement.shortTitle} IDCC ${agreement.id}`
                 : agreement.shortTitle
             }
             classes={{
