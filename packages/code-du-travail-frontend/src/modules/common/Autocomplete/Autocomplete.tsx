@@ -19,6 +19,7 @@ export type AutocompleteProps<K> = InputProps & {
   lineAsLink?: (value: K) => string;
   defaultValue?: K;
   displayNoResult?: boolean;
+  onInputValueChange?: (value: string) => void;
 };
 
 export const Autocomplete = <K,>({
@@ -26,6 +27,7 @@ export const Autocomplete = <K,>({
   onChange,
   onSearch,
   onError,
+  onInputValueChange,
   displayLabel,
   lineAsLink,
   search,
@@ -90,7 +92,7 @@ export const Autocomplete = <K,>({
                     type="button"
                   />
                 )}
-                {loading && (
+                {(loading || (lineAsLink && selectedResult)) && (
                   <Image
                     className={fr.cx("fr-mr-1v")}
                     priority
@@ -106,6 +108,7 @@ export const Autocomplete = <K,>({
             value,
             onChange: async (ev) => {
               const inputValue = ev.target.value;
+              onInputValueChange?.(inputValue);
               setValue(inputValue);
               if (!inputValue) {
                 setSelectedResult(undefined);
@@ -194,7 +197,7 @@ const autocompleteContainer = css({
 
 const autocompleteListContainer = css({
   position: "absolute",
-  w: "100%",
+  w: "calc(100% - 1rem)",
   zIndex: 100,
   bg: "var(--background-default-grey)",
 });

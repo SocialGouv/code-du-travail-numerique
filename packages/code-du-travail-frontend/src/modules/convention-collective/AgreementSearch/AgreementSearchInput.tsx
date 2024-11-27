@@ -80,17 +80,6 @@ export const AgreementSearchInput = ({
               d’identification IDCC (4 chiffres)
             </>
           }
-          classes={{
-            label: css({
-              "& > button": {
-                padding: "0!",
-                minHeight: "0!",
-                maxHeight: "24px!",
-                width: "24px!",
-                marginLeft: "3px!",
-              },
-            }),
-          }}
           state={getInputState()}
           stateRelatedMessage={getStateMessage()}
           onChange={(agreement) => {

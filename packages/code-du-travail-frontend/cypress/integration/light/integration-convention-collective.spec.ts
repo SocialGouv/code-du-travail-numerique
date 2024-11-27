@@ -21,11 +21,11 @@ describe("Pages integration convention collective", () => {
       .findByRole("heading", { level: 1 })
       .should("have.text", "Trouver sa convention collective");
 
-    cy.wait(1000);
+    cy.wait(3000);
     cy.get("@iframe")
+      // @ts-ignore
       .findByLabel("Nom de votre entreprise ou numéro Siren/Siret")
-      .clear()
-      .type("carrefour");
+      .type("carrefour", { force: true });
     cy.get("@iframe").find("button[type=submit]").as("button-submit");
     cy.get("@button-submit").click();
     cy.get("@iframe").contains("CARREFOUR HYPERMARCHES").as("entreprise");

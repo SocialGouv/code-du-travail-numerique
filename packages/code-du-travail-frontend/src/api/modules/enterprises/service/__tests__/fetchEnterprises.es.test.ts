@@ -208,8 +208,8 @@ describe("Test enterprise endpoint", () => {
             {
               id: "9999",
               idcc: 9999,
-              shortTitle: "Convention collective 9999",
-              title: "Convention collective 9999",
+              shortTitle: "___Sans convention collective___",
+              title: "___Sans convention collective___",
             },
           ],
           etablissements: 169,

@@ -5,6 +5,7 @@ import Button from "@codegouvfr/react-dsfr/Button";
 import { Enterprise, EnterpriseAgreement } from "../types";
 import { ButtonStyle, CardTitleStyle } from "../../convention-collective/style";
 import { css } from "../../../../styled-system/css";
+import { useSearchParams } from "next/navigation";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;
@@ -19,6 +20,7 @@ export const EnterpriseAgreementSelection = ({
   noPrevious,
   onAgreementSelect,
 }: Props) => {
+  const searchParams = useSearchParams();
   return (
     <>
       <h2 className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
@@ -37,14 +39,16 @@ export const EnterpriseAgreementSelection = ({
       <p className={fr.cx("fr-mb-2w")}>{enterprise.address}</p>
       {enterprise.conventions?.map((agreement) => {
         const { slug, url, contributions } = agreement;
-        const disabled = !(slug && (url || contributions));
+        let disabled = false;
         let description;
         if (slug && !(url || contributions)) {
           description =
             "Nous n’avons pas d’informations concernant cette convention collective";
+          disabled = true;
         } else if (!slug) {
           description =
             "Cette convention collective déclarée par l’entreprise n’est pas reconnue par notre site";
+          disabled = true;
         } else {
           description =
             "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective";
@@ -91,47 +95,12 @@ export const EnterpriseAgreementSelection = ({
                       ev.preventDefault();
                     },
                   }),
-              // ...(widgetMode
-              //   ? {
-              //       href: !disabled
-              //         ? `/convention-collective/${agreement.slug}`
-              //         : "#",
-              //       ...(widgetMode
-              //         ? {
-              //             target: "_blank",
-              //             onClick: (ev) => {
-              //               if (disabled) ev.preventDefault();
-              //               window.parent?.postMessage(
-              //                 {
-              //                   name: "agreement",
-              //                   kind: "select",
-              //                   extra: {
-              //                     idcc: agreement.num,
-              //                     title: agreement.title,
-              //                   },
-              //                 },
-              //                 "*"
-              //               );
-              //             },
-              //           }
-              //         : {}),
-              //     }
-              //   : {
-              //       href: "",
-              //       onClick: (ev) => {
-              //         if (disabled) ev.preventDefault();
-              //         onAgreementSelect(agreement);
-              //       },
             }}
             border
             enlargeLink
             size="large"
             desc={description}
-            title={
-              agreement.slug
-                ? `${agreement.shortTitle} IDCC${agreement.id}`
-                : agreement.shortTitle
-            }
+            title={`${agreement.shortTitle} IDCC ${agreement.id}`}
             classes={{
               title: `${fr.cx("fr-h5")} ${CardTitleStyle} ${disabled ? disabledTitle : ""}`,
               content: `${fr.cx("fr-px-2w", "fr-pt-1w", "fr-pb-7v")} ${disabled ? disabledContent : ""}`,
@@ -148,8 +117,8 @@ export const EnterpriseAgreementSelection = ({
           <Button
             linkProps={{
               href: widgetMode
-                ? "/widgets/convention-collective"
-                : "/outils/convention-collective/entreprise",
+                ? "/widgets/convention-collective?${searchParams?.toString()}"
+                : "/outils/convention-collective/entreprise?${searchParams?.toString()}",
             }}
             priority="secondary"
             className={`${fr.cx("fr-col-12", "fr-col-md-2")} ${ButtonStyle}`}

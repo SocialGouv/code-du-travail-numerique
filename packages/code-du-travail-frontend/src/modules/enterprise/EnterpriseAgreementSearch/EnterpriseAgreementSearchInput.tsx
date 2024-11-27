@@ -6,7 +6,7 @@ import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { Card } from "@codegouvfr/react-dsfr/Card";
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { css } from "../../../../styled-system/css";
 
 import Spinner from "../../common/Spinner.svg";
@@ -24,10 +24,14 @@ type Props = {
   selectedAgreementAlert?: (
     agreement?: EnterpriseAgreement
   ) => NonNullable<ReactNode> | undefined;
+  defaultSearch?: string;
+  defaultLocation?: ApiGeoResult;
 };
 
 export const EnterpriseAgreementSearchInput = ({
   widgetMode = false,
+  defaultSearch,
+  defaultLocation,
   onAgreementSelect,
   selectedAgreementAlert,
 }: Props) => {
@@ -35,10 +39,11 @@ export const EnterpriseAgreementSearchInput = ({
   const [searchState, setSearchState] = useState<
     "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch" | "required"
   >("noSearch");
-  const [search, setSearch] = useState<string>();
-  const [searched, setSearched] = useState<boolean>(false);
+  const [search, setSearch] = useState<string | undefined>(defaultSearch);
   const [loading, setLoading] = useState<boolean>(false);
-  const [location, setLocation] = useState<ApiGeoResult | undefined>();
+  const [location, setLocation] = useState<ApiGeoResult | undefined>(
+    defaultLocation
+  );
   const [enterprises, setEnterprises] = useState<Enterprise[]>();
   const [selectedEnterprise, setSelectedEnterprise] = useState<Enterprise>();
   const [selectedAgreement, setSelectedAgreement] =
@@ -60,6 +65,16 @@ export const EnterpriseAgreementSearchInput = ({
         return <>{error}</>;
     }
   };
+  const getStateMargin = () => {
+    switch (searchState) {
+      case "notFoundSearch":
+        return "fr-mb-14v";
+      case "errorSearch":
+      case "required":
+        return "fr-mb-9v";
+    }
+    return "fr-mb-0";
+  };
   const getInputState = () => {
     switch (searchState) {
       case "errorSearch":
@@ -68,6 +83,44 @@ export const EnterpriseAgreementSearchInput = ({
         return "error";
     }
   };
+  const getQueries = () => {
+    const jsonString = JSON.stringify(location);
+    const base64String = btoa(jsonString);
+    return search
+      ? `?q=${encodeURIComponent(search)}${
+          jsonString ? `&cp=${base64String}` : ""
+        }`
+      : "";
+  };
+  const onSubmit = async () => {
+    if (!search) {
+      setSearchState("required");
+      return;
+    }
+    setLoading(true);
+    try {
+      const result = await searchEnterprises({
+        query: search,
+        codesPostaux: location?.codesPostaux,
+      });
+      setSearchState(!result.length ? "errorSearch" : "fullSearch");
+      setSearchState(
+        search.length > 1 && !result.length ? "notFoundSearch" : "noSearch"
+      );
+      setEnterprises(result);
+    } catch (e) {
+      setSearchState("errorSearch");
+      setEnterprises(undefined);
+      setError(e);
+    } finally {
+      setLoading(false);
+    }
+  };
+  useEffect(() => {
+    if (defaultSearch) {
+      onSubmit();
+    }
+  }, [defaultSearch]);
   if (selectedAgreement) {
     return (
       <>
@@ -115,40 +168,23 @@ export const EnterpriseAgreementSearchInput = ({
         className={fr.cx(
           "fr-grid-row",
           "fr-grid-row--top",
+          "fr-grid-row--gutters",
+          "fr-grid-row--bottom",
           "fr-mt-2w",
           "fr-mb-0"
         )}
         onSubmit={async (event) => {
           event.preventDefault();
-          if (!search) {
-            setSearchState("required");
-            return;
-          }
-          setLoading(true);
-          try {
-            const result = await searchEnterprises({
-              query: search,
-              apiGeoResult: location,
-            });
-            setSearchState(!result.length ? "errorSearch" : "fullSearch");
-            setSearchState(
-              search.length > 1 && !result.length
-                ? "notFoundSearch"
-                : "noSearch"
-            );
-            setEnterprises(result);
-          } catch (e) {
-            setSearchState("errorSearch");
-            setEnterprises(undefined);
-            setError(e);
-          } finally {
-            setLoading(false);
-            setSearched(true);
-          }
+          await onSubmit();
         }}
       >
         <Input
-          className={fr.cx("fr-col-12", "fr-col-md-5", "fr-mb-0")}
+          className={fr.cx(
+            "fr-col-12",
+            "fr-col-xl-6",
+            "fr-col-md-7",
+            "fr-mb-0"
+          )}
           hintText={
             <>
               Ex : Café de la mairie ou 40123778000127
@@ -160,6 +196,7 @@ export const EnterpriseAgreementSearchInput = ({
           state={getInputState()}
           stateRelatedMessage={getStateMessage()}
           nativeInputProps={{
+            value: search,
             onChange: (event) => {
               setSearch(event.target.value);
             },
@@ -178,25 +215,27 @@ export const EnterpriseAgreementSearchInput = ({
         />
         <LocationSearchInput
           onLocationChange={setLocation}
+          defaultValue={location}
           className={fr.cx(
             "fr-col-12",
-            "fr-col-md-3",
-            "fr-ml-md-3w",
-            searched && !enterprises?.length ? "fr-mb-7w" : "fr-mb-0",
+            "fr-col-xl-4",
+            "fr-col-md-5",
+            getStateMargin(),
             "fr-mt-2w",
             "fr-mt-md-0"
           )}
           classes={{ label: fr.cx("fr-mb-md-7v") }}
         />
-
-        <Button
-          type="submit"
-          iconPosition="right"
-          iconId="fr-icon-search-line"
-          className={`${fr.cx("fr-ml-md-3w", "fr-mt-2w", "fr-mt-md-19v", searched && !enterprises?.length ? "fr-mb-7w" : "fr-mb-0")} ${ButtonStyle}`}
-        >
-          Rechercher
-        </Button>
+        <div className={fr.cx("fr-mt-2w", "fr-col-xl-2", getStateMargin())}>
+          <Button
+            type="submit"
+            iconPosition="right"
+            iconId="fr-icon-search-line"
+            className={`${ButtonStyle}`}
+          >
+            Rechercher
+          </Button>
+        </div>
       </form>
 
       <div>
@@ -212,7 +251,9 @@ export const EnterpriseAgreementSearchInput = ({
           {loading && (
             <div className={fr.cx("fr-grid-row")}>
               <p className={fr.cx("fr-h5", "fr-mb-0")}>Chargement en cours</p>
-              <div className={`${fr.cx("fr-ml-1w")} ${SpinnerBlock}`}>
+              <div
+                className={`${fr.cx("fr-ml-1w", "fr-mt-1w")} ${SpinnerBlock}`}
+              >
                 <Image priority src={Spinner} alt="Chargement en cours" />
               </div>
             </div>
@@ -254,8 +295,8 @@ export const EnterpriseAgreementSearchInput = ({
                 !onAgreementSelect
                   ? {
                       href: widgetMode
-                        ? `/widgets/convention-collective/${enterprise.siren}`
-                        : `/outils/convention-collective/entreprise/${enterprise.siren}`,
+                        ? `/widgets/convention-collective/${enterprise.siren}${getQueries()}`
+                        : `/outils/convention-collective/entreprise/${enterprise.siren}${getQueries()}`,
                     }
                   : {
                       href: "",
