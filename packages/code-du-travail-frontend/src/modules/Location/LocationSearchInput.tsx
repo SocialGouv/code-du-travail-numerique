@@ -4,11 +4,19 @@ import {
   Autocomplete,
   AutocompleteProps,
 } from "../common/Autocomplete/Autocomplete";
+import { useState } from "react";
 
 type Props = Pick<AutocompleteProps<ApiGeoResult>, "classes"> & {
   className?: string;
   onLocationChange?: (location: ApiGeoResult | undefined) => void;
   defaultValue?: ApiGeoResult;
+};
+
+const detectIfPostalCode = (postalCodeOrName: string): boolean => {
+  if (/^\d{5}$/.test(postalCodeOrName)) {
+    return true;
+  }
+  return false;
 };
 
 export const LocationSearchInput = ({
@@ -17,9 +25,10 @@ export const LocationSearchInput = ({
   classes,
   defaultValue,
 }: Props) => {
+  const [postalCode, setPostalCode] = useState<string | undefined>();
   function itemToString(item: ApiGeoResult | null) {
     return item
-      ? `${item.nom} (${item.codesPostaux.length > 1 ? item.codeDepartement : item.codesPostaux[0]})`
+      ? `${item.nom} (${postalCode ?? (item.codesPostaux.length > 1 ? item.codeDepartement : item.codesPostaux[0])})`
       : "";
   }
 
@@ -28,6 +37,10 @@ export const LocationSearchInput = ({
       className={className}
       onChange={(value) => {
         if (onLocationChange) onLocationChange(value);
+      }}
+      onInputValueChange={(value) => {
+        console.log("value", value);
+        setPostalCode(detectIfPostalCode(value) ? value : undefined);
       }}
       displayLabel={itemToString}
       search={searchCities}

@@ -19,6 +19,7 @@ export type AutocompleteProps<K> = InputProps & {
   lineAsLink?: (value: K) => string;
   displayNoResult?: boolean;
   defaultValue?: K;
+  onInputValueChange: (value: string) => void;
 };
 
 export const Autocomplete = <K,>({
@@ -26,6 +27,7 @@ export const Autocomplete = <K,>({
   onChange,
   onSearch,
   onError,
+  onInputValueChange,
   displayLabel,
   lineAsLink,
   search,
@@ -106,6 +108,7 @@ export const Autocomplete = <K,>({
             value,
             onChange: async (ev) => {
               const inputValue = ev.target.value;
+              onInputValueChange(inputValue);
               setValue(inputValue);
               if (!inputValue) {
                 setSelectedResult(undefined);
