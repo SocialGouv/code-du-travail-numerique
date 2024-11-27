@@ -82,28 +82,26 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
     ).not.toBeInTheDocument();
   });
 
-  it.each(["url", "contributions"])(
-    "Vérifier l'affichage de la selection avec une CC sans %s",
-    async (field) => {
-      rendering = render(
-        <EnterpriseAgreementSelection
-          enterprise={{
-            ...defaultEnterprise,
-            conventions: [
-              {
-                ...defaultEnterprise.conventions[0],
-                [field]: undefined,
-              },
-            ],
-          }}
-        />
-      );
-      expect(
-        ui.enterpriseAgreementSelection.description.notFound.query()
-      ).toBeInTheDocument();
-      expect(
-        ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
-      ).not.toBeInTheDocument();
-    }
-  );
+  it("Vérifier l'affichage de la selection avec une CC sans url et contribution", async () => {
+    rendering = render(
+      <EnterpriseAgreementSelection
+        enterprise={{
+          ...defaultEnterprise,
+          conventions: [
+            {
+              ...defaultEnterprise.conventions[0],
+              url: undefined,
+              contributions: false,
+            },
+          ],
+        }}
+      />
+    );
+    expect(
+      ui.enterpriseAgreementSelection.description.notFound.query()
+    ).toBeInTheDocument();
+    expect(
+      ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
+    ).not.toBeInTheDocument();
+  });
 });

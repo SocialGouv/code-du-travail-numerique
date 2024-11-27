@@ -37,7 +37,7 @@ export const EnterpriseAgreementSelection = ({
         const { slug, url, contributions } = agreement;
         let disabled = false;
         let description;
-        if (slug && (!url || !contributions)) {
+        if (slug && !(url || contributions)) {
           description =
             "Nous n’avons pas d’informations concernant cette convention collective";
           disabled = true;
