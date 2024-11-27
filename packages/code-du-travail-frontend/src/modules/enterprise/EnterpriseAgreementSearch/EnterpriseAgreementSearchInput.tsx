@@ -31,7 +31,6 @@ export const EnterpriseAgreementSearchInput = ({
     "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch" | "required"
   >("noSearch");
   const [search, setSearch] = useState<string | undefined>(defaultSearch);
-  const [searched, setSearched] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
   const [location, setLocation] = useState<ApiGeoResult | undefined>(
     defaultLocation
@@ -103,7 +102,6 @@ export const EnterpriseAgreementSearchInput = ({
       setError(e);
     } finally {
       setLoading(false);
-      setSearched(true);
     }
   };
   useEffect(() => {

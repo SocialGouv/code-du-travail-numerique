@@ -5,6 +5,12 @@ export const ui = {
     input: byLabelText(/Nom de votre entreprise ou numéro Siren\/Siret/),
     inputLocation: byLabelText("Code postal ou Ville (optionnel)"),
     submitButton: byText("Rechercher"),
+    childminder: {
+      title: byText("Particuliers employeurs et emploi à domicile"),
+      link: byRole("link", {
+        name: "Particuliers employeurs et emploi à domicile",
+      }),
+    },
     resultLines: {
       carrefour: {
         title: byText("CARREFOUR PROXIMITE FRANCE (SHOPI-8 A HUIT)"),

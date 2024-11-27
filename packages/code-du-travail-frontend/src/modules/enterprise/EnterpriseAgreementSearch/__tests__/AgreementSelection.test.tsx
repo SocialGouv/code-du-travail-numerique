@@ -58,6 +58,9 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
       "href",
       "/convention-collective/2216-commerce-de-detail-et-de-gros-a-predominance-alimentaire"
     );
+    expect(
+      ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
+    ).not.toHaveAttribute("target", "_blank");
   });
 
   it("Vérifier l'affichage de la selection avec une CC sans slug", async () => {
@@ -103,5 +106,20 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
     expect(
       ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
     ).not.toBeInTheDocument();
+  });
+
+  it("Vérifier l'affichage de la selection en widgetMode", async () => {
+    rendering = render(
+      <EnterpriseAgreementSelection enterprise={defaultEnterprise} widgetMode />
+    );
+    expect(
+      ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
+    ).toHaveAttribute(
+      "href",
+      "/convention-collective/2216-commerce-de-detail-et-de-gros-a-predominance-alimentaire"
+    );
+    expect(
+      ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
+    ).toHaveAttribute("target", "_blank");
   });
 });
