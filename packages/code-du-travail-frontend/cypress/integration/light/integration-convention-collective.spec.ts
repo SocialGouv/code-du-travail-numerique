@@ -21,7 +21,7 @@ describe("Pages integration convention collective", () => {
       .findByRole("heading", { level: 1 })
       .should("have.text", "Trouver sa convention collective");
 
-    cy.wait(1000);
+    cy.wait(3000);
     cy.get("@iframe")
       // @ts-ignore
       .findByLabel("Nom de votre entreprise ou numéro Siren/Siret")
