@@ -107,7 +107,7 @@ const mapTbody = (tbody: Element) => {
           ))}
         </thead>
       )}
-      <tbody>{domToReact(tbody.children as DOMNode[])}</tbody>
+      <tbody>{renderChildrenWithNoTrim(domNode)}</tbody>
     </UITable>
   );
 };
