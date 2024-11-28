@@ -8,12 +8,13 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { FicheServicePublicContainer } from "../../../src/modules/fiche-service-public/FicheServicePublicContainer";
 
 export async function generateMetadata({ params }) {
-  const { title, description } = await getFiche(params.slug);
+  const { title, description, url } = await getFiche(params.slug);
 
   return generateDefaultMetadata({
     title: title,
     description: description,
     path: `/${getRouteBySource(SOURCES.SHEET_SP)}/${params.slug}`,
+    overrideCanonical: url,
   });
 }
 
