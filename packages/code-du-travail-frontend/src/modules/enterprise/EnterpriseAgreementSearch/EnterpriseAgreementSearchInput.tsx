@@ -93,7 +93,7 @@ export const EnterpriseAgreementSearchInput = ({
       });
       setSearchState(!result.length ? "errorSearch" : "fullSearch");
       setSearchState(
-        search.length > 1 && !result.length ? "notFoundSearch" : "noSearch"
+        search.length > 0 && !result.length ? "notFoundSearch" : "noSearch"
       );
       setEnterprises(result);
     } catch (e) {
