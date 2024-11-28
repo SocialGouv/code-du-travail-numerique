@@ -21,7 +21,7 @@
     "pretest:api": "yarn tsup && ELASTICSEARCH_URL=http://localhost:9200 NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn_test NEXT_PUBLIC_APP_ENV=test NODE_ENV=test node dist/generate-data.js",
     "test": "yarn pretest:api && ELASTICSEARCH_URL=http://localhost:9200 NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn_test NEXT_PUBLIC_APP_ENV=test NODE_ENV=test jest --silent",
     "test:watch": "npm run test -- --watch",
-    "test:frontend": "NEXT_PUBLIC_APP_ENV=test NODE_ENV=test jest --silent --testPathIgnorePatterns='.*\\.es\\.test\\.ts$'",
+    "test:frontend": "NEXT_PUBLIC_APP_ENV=test NODE_ENV=test jest --silent --testPathIgnorePatterns='.*\\.es\\.test\\.ts$|.*\\.script\\.test\\.ts$'",
     "test:frontend:update": "npm run test:frontend -- --updateSnapshot",
     "test:api": "yarn pretest:api && ELASTICSEARCH_URL=http://localhost:9200 NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn_test NEXT_PUBLIC_APP_ENV=test NODE_ENV=test jest --silent --testPathPattern='.*\\.es\\.test\\.ts$'",
     "test:api:update": "npm run test:api -- --updateSnapshot",
