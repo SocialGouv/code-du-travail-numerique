@@ -3,7 +3,6 @@ import { Metadata } from "next/types";
 import { SITE_URL } from "../src/config";
 import { headers } from "next/headers";
 import DefaultLayout from "../src/modules/config/DefaultLayout";
-import { PolyfillComponent } from "../src/modules/utils";
 
 export const metadata: Metadata = {
   title: {
@@ -32,7 +31,6 @@ export default function RootLayout({
       nonce={nonce}
       defaultColorScheme={pathname.includes("/widgets") ? "light" : "system"}
     >
-      <PolyfillComponent />
       {children}
     </DefaultLayout>
   );

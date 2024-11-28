@@ -1,7 +1,7 @@
 "use client";
 
 import { fr } from "@codegouvfr/react-dsfr";
-import { css } from "../../../styled-system/css";
+import { css } from "@styled-system/css";
 import Image from "next/image";
 import { HomeSearch } from "./Components";
 import { useRouter } from "next/navigation";
