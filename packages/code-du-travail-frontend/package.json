@@ -111,7 +111,7 @@
     "nextjs-http-supertest": "^1.0.6",
     "postcss": "^8.4.44",
     "sass": "^1.77.8",
-    "stylelint": "^14.16.0",
+    "stylelint": "^16.0.0",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard-scss": "^6.1.0",
     "stylelint-config-styled-components": "^0.1.1",
