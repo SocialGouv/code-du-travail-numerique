@@ -7,7 +7,7 @@ import Badge from "@codegouvfr/react-dsfr/Badge";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { Card } from "@codegouvfr/react-dsfr/Card";
 import { useEffect, useState } from "react";
-import { css } from "../../../../styled-system/css";
+import { css } from "@styled-system/css";
 
 import Spinner from "../../common/Spinner.svg";
 import { LocationSearchInput } from "../../Location/LocationSearchInput";

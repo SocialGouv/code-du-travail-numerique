@@ -4,7 +4,7 @@ import Card from "@codegouvfr/react-dsfr/Card";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { Enterprise } from "../types";
 import { ButtonStyle, CardTitleStyle } from "../../convention-collective/style";
-import { css } from "../../../../styled-system/css";
+import { css } from "@styled-system/css";
 import { useSearchParams } from "next/navigation";
 
 type Props = {
