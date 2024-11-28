@@ -5522,6 +5522,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@socialgouv/code-du-travail@workspace:."
   dependencies:
+    cypress-iframe: ^1.0.1
     husky: ^9.1.6
     lerna: 8.1.8
   languageName: unknown
