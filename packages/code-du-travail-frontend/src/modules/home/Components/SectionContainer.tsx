@@ -1,5 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import { css } from "../../../../styled-system/css";
+import { css } from "@styled-system/css";
 
 type Props = {
   sectionId: string;

@@ -1,6 +1,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Html from "../../common/Html";
-import { css } from "../../../../styled-system/css";
+import { css } from "@styled-system/css";
 import { getDisclaimer } from "../helpers";
 import { Alert } from "@codegouvfr/react-dsfr/Alert";
 import { DownloadTile } from "./DownloadTile";

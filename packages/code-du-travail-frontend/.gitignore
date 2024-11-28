@@ -11,5 +11,5 @@ scripts/logs/*
 .env.*
 
 ## Panda
-styled-system
-styled-system-studio
+src/styled-system
+src/styled-system-studio

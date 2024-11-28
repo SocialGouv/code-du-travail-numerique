@@ -418,5 +418,65 @@
     "source": "/convention-collective/bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
     "destination": "/convention-collective/3251-bijouterie-joaillerie-orfevrerie-horlogerie-bjoh",
     "permanent": true
+  },
+  {
+    "source": "/convention-collective/7509(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/7520-convention-collective-nationale-de-lenseignement-agricole-prive-cneap",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/1850(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/1000-avocats-personnel-des-cabinets",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(0614|614(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/184-imprimeries-de-labeur-et-industries-graphiques",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(0925|925(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/3224-distribution-et-commerce-de-gros-des-papiers-cartons",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(0802|802(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/3224-distribution-et-commerce-de-gros-des-papiers-cartons",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/1561(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/2528-maroquinerie-articles-de-voyage-chasse-sellerie-gainerie-bracelets-en-c",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/1800(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/1558-industries-ceramiques-de-france",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/2104(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/2264-hospitalisation-privee",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/3227(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/3249-industries-carrieres-et-materiaux-de-construction",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(0087|87(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/3249-industries-carrieres-et-materiaux-de-construction",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(0211|211(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/3249-industries-carrieres-et-materiaux-de-construction",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/(0135|135(?:-[a-z0-9-]+)?)",
+    "destination": "/convention-collective/3249-industries-carrieres-et-materiaux-de-construction",
+    "permanent": true
   }
 ]
