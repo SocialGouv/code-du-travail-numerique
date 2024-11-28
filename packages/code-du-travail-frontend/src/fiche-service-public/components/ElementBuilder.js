@@ -82,6 +82,7 @@ export function ElementBuilder({ data, headingLevel, parentAttributes }) {
         <ElementBuilder data={data.children} headingLevel={headingLevel} />
       );
     case "Titre":
+    case "TitreFlottant":
       return (
         <Title level={headingLevel} date={parentAttributes.date}>
           {getText(data)}
@@ -89,6 +90,7 @@ export function ElementBuilder({ data, headingLevel, parentAttributes }) {
       );
     // "Simple" elements, we can immediately parse their children
     case "ANoter":
+    case "Exemple":
     case "ASavoir":
     case "Attention":
     case "Avertissement":
@@ -106,6 +108,7 @@ export function ElementBuilder({ data, headingLevel, parentAttributes }) {
     case "Description":
     case "FragmentConditionne":
     case "SousChapitre":
+    case "Complement":
       return (
         <ElementBuilder data={data.children} headingLevel={headingLevel} />
       );
