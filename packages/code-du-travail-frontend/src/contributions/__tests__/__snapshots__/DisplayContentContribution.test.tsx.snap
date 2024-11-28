@@ -3,10 +3,10 @@
 exports[`DisplayContentContribution Accordions should not fail if no summary tag 1`] = `
 <div>
   <div
-    class="sc-669ac6b8-0 hsgopF"
+    class="sc-bd01be9e-0 jtfGbS"
   >
     <div
-      class="sc-669ac6b8-1 buiHIi"
+      class="sc-bd01be9e-1 jxHijx"
       data-accordion-component="Accordion"
       data-testid="contrib-accordion"
     >
@@ -80,7 +80,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
       
                 </p>
                 <div
-                  class="sc-669ac6b8-1 buiHIi"
+                  class="sc-bd01be9e-1 jxHijx"
                   data-accordion-component="Accordion"
                   data-testid="contrib-accordion"
                 >
@@ -147,7 +147,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                         >
                           <div>
                             <div
-                              class="sc-669ac6b8-1 buiHIi"
+                              class="sc-bd01be9e-1 jxHijx"
                               data-accordion-component="Accordion"
                               data-testid="contrib-accordion"
                             >
@@ -397,10 +397,10 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
 
 exports[`DisplayContentContribution Accordions should replace details element by one accordion 1`] = `
 <div
-  class="sc-669ac6b8-0 hsgopF"
+  class="sc-bd01be9e-0 jtfGbS"
 >
   <div
-    class="sc-669ac6b8-1 buiHIi"
+    class="sc-bd01be9e-1 jxHijx"
     data-accordion-component="Accordion"
     data-testid="contrib-accordion"
   >
@@ -481,10 +481,10 @@ exports[`DisplayContentContribution Accordions should replace details element by
 
 exports[`DisplayContentContribution Accordions should replace details element within details element 1`] = `
 <div
-  class="sc-669ac6b8-0 hsgopF"
+  class="sc-bd01be9e-0 jtfGbS"
 >
   <div
-    class="sc-669ac6b8-1 buiHIi"
+    class="sc-bd01be9e-1 jxHijx"
     data-accordion-component="Accordion"
     data-testid="contrib-accordion"
   >
@@ -551,7 +551,7 @@ exports[`DisplayContentContribution Accordions should replace details element wi
           >
             <div>
               <div
-                class="sc-669ac6b8-1 buiHIi"
+                class="sc-bd01be9e-1 jxHijx"
                 data-accordion-component="Accordion"
                 data-testid="contrib-accordion"
               >
@@ -640,10 +640,10 @@ exports[`DisplayContentContribution Accordions should replace multiple details e
 <body>
   <div>
     <div
-      class="sc-669ac6b8-0 hsgopF"
+      class="sc-bd01be9e-0 jtfGbS"
     >
       <div
-        class="sc-669ac6b8-1 buiHIi"
+        class="sc-bd01be9e-1 jxHijx"
         data-accordion-component="Accordion"
         data-testid="contrib-accordion"
       >
@@ -797,7 +797,7 @@ exports[`DisplayContentContribution Accordions should replace multiple details e
 
 exports[`DisplayContentContribution Alerts should have space in table item for a strong and an other content 1`] = `
 <div
-  class="sc-669ac6b8-0 hsgopF"
+  class="sc-bd01be9e-0 jtfGbS"
 >
   <table
     class="sc-4e3ba411-0 kGLBMt"
@@ -877,7 +877,7 @@ exports[`DisplayContentContribution Alerts should have space in table item for a
 
 exports[`DisplayContentContribution Alerts should replace div with alert class in li component to Alert component 1`] = `
 <div
-  class="sc-669ac6b8-0 hsgopF"
+  class="sc-bd01be9e-0 jtfGbS"
 >
   <div>
     <p>
@@ -943,7 +943,7 @@ exports[`DisplayContentContribution Alerts should replace div with alert class i
 
 exports[`DisplayContentContribution Alerts should replace div with alert class to Alert component 1`] = `
 <div
-  class="sc-669ac6b8-0 hsgopF"
+  class="sc-bd01be9e-0 jtfGbS"
 >
   <div
     class="sc-6c78813f-0 fnbVWG"
@@ -960,10 +960,10 @@ exports[`DisplayContentContribution Alerts should replace div with alert class t
 
 exports[`DisplayContentContribution Headings should not add headings higher than h6 for accordion 1`] = `
 <div
-  class="sc-669ac6b8-0 hsgopF"
+  class="sc-bd01be9e-0 jtfGbS"
 >
   <div
-    class="sc-669ac6b8-1 buiHIi"
+    class="sc-bd01be9e-1 jxHijx"
     data-accordion-component="Accordion"
     data-testid="contrib-accordion"
   >
@@ -1044,7 +1044,7 @@ exports[`DisplayContentContribution Headings should not add headings higher than
 exports[`DisplayContentContribution Headings should not add headings higher than h6 for titles 1`] = `
 <div>
   <div
-    class="sc-669ac6b8-0 hsgopF"
+    class="sc-bd01be9e-0 jtfGbS"
   >
     <h6
       class="sc-b879fc2d-0 hyiHle"
@@ -1061,7 +1061,7 @@ exports[`DisplayContentContribution Headings should not add headings higher than
 exports[`DisplayContentContribution Headings should replace span with class "title" and "sub-titles" with heading 1`] = `
 <div>
   <div
-    class="sc-669ac6b8-0 hsgopF"
+    class="sc-bd01be9e-0 jtfGbS"
   >
     <h2
       class="sc-b879fc2d-0 hyiHle"
@@ -1080,7 +1080,7 @@ exports[`DisplayContentContribution Headings should replace span with class "tit
 exports[`DisplayContentContribution Headings should replace span with with heading according to given title level 1`] = `
 <div>
   <div
-    class="sc-669ac6b8-0 hsgopF"
+    class="sc-bd01be9e-0 jtfGbS"
   >
     <h4
       class="sc-b879fc2d-0 hyiHle"
@@ -1098,7 +1098,7 @@ exports[`DisplayContentContribution Headings should replace span with with headi
 
 exports[`DisplayContentContribution Tables should add thead to table if not present and move table into a Table element 1`] = `
 <div
-  class="sc-669ac6b8-0 hsgopF"
+  class="sc-bd01be9e-0 jtfGbS"
 >
   <table
     class="sc-4e3ba411-0 kKVapO"
@@ -1153,7 +1153,7 @@ exports[`DisplayContentContribution Tables should add thead to table if not pres
 
 exports[`DisplayContentContribution Tables should keep whitespace in specific tag 1`] = `
 <div
-  class="sc-669ac6b8-0 hsgopF"
+  class="sc-bd01be9e-0 jtfGbS"
 >
   <p>
     Ceci est un
@@ -1183,7 +1183,7 @@ exports[`DisplayContentContribution Tables should keep whitespace in specific ta
 
 exports[`DisplayContentContribution Tables should not change if thead is already present 1`] = `
 <div
-  class="sc-669ac6b8-0 hsgopF"
+  class="sc-bd01be9e-0 jtfGbS"
 >
   <table>
     <tbody>
@@ -1221,7 +1221,7 @@ exports[`DisplayContentContribution Tables should not change if thead is already
 exports[`DisplayContentContribution Tables should render correctly a table with multiple head lines 1`] = `
 <div>
   <div
-    class="sc-669ac6b8-0 hsgopF"
+    class="sc-bd01be9e-0 jtfGbS"
   >
     <table
       class="sc-4e3ba411-0 kKVapO"
@@ -1351,7 +1351,7 @@ exports[`DisplayContentContribution Tables should render correctly a table with 
 
 exports[`DisplayContentContribution should keep whitespace in specific tag 1`] = `
 <div
-  class="sc-669ac6b8-0 hsgopF"
+  class="sc-bd01be9e-0 jtfGbS"
 >
   <p>
     Ceci est un
@@ -1381,7 +1381,7 @@ exports[`DisplayContentContribution should keep whitespace in specific tag 1`] =
 
 exports[`DisplayContentContribution should not remove space between strong and em tag in p tag 1`] = `
 <div
-  class="sc-669ac6b8-0 hsgopF"
+  class="sc-bd01be9e-0 jtfGbS"
 >
   <p>
     <strong>
@@ -1397,7 +1397,7 @@ exports[`DisplayContentContribution should not remove space between strong and e
 
 exports[`DisplayContentContribution should return html 1`] = `
 <div
-  class="sc-669ac6b8-0 hsgopF"
+  class="sc-bd01be9e-0 jtfGbS"
 >
   <p>
     hello
