@@ -102,7 +102,7 @@ const mapTbody = (tbody: Element) => {
         <thead>
           {theadChildren.map((child, index) => (
             <tr key={`tr-${index}`}>
-              {domToReact(child.children as DOMNode[])}
+              {renderChildrenWithNoTrim(domNode)}
             </tr>
           ))}
         </thead>
