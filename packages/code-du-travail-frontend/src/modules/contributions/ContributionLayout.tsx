@@ -19,7 +19,7 @@ import {
   ElasticSearchContributionGeneric,
 } from "@socialgouv/cdtn-types";
 import { ContributionElasticDocument } from "./type";
-import { ContributionContent } from "../../contributions/ContributionContent";
+import { ContributionContent } from "./ContributionContent";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
