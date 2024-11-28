@@ -1,4 +1,3 @@
-import { captureException } from "@sentry/nextjs";
 import {
   API_GEO_MAX_SEARCH_RESULTS,
   API_GEO_URL,
