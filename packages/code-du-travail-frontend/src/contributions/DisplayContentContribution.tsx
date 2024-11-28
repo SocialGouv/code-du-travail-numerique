@@ -101,13 +101,11 @@ const mapTbody = (tbody: Element) => {
       {theadChildren.length > 0 && (
         <thead>
           {theadChildren.map((child, index) => (
-            <tr key={`tr-${index}`}>
-              {renderChildrenWithNoTrim(domNode)}
-            </tr>
+            <tr key={`tr-${index}`}>{renderChildrenWithNoTrim(child)}</tr>
           ))}
         </thead>
       )}
-      <tbody>{renderChildrenWithNoTrim(domNode)}</tbody>
+      <tbody>{renderChildrenWithNoTrim(tbody)}</tbody>
     </UITable>
   );
 };
