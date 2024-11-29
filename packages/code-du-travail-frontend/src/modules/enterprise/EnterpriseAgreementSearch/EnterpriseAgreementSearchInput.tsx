@@ -137,9 +137,8 @@ export const EnterpriseAgreementSearchInput = ({
           )}
           hintText={
             <>
-              Ex : Café de la mairie ou 40123778000127
-              <br />
-              (présent sur la fiche de paie du salarié)
+              Ex : Café de la mairie ou 40123778000127 (présent sur la fiche de
+              paie du salarié)
             </>
           }
           label={<>Nom de votre entreprise ou numéro Siren/Siret</>}
@@ -174,7 +173,6 @@ export const EnterpriseAgreementSearchInput = ({
             "fr-mt-2w",
             "fr-mt-md-0"
           )}
-          classes={{ label: fr.cx("fr-mb-md-7v") }}
         />
         <div className={fr.cx("fr-mt-2w", "fr-col-xl-2", getStateMargin())}>
           <Button
@@ -246,7 +244,11 @@ export const EnterpriseAgreementSearchInput = ({
                   ? `/widgets/convention-collective/${enterprise.siren}${getQueries()}`
                   : `/outils/convention-collective/entreprise/${enterprise.siren}${getQueries()}`,
               }}
-              desc={`Activité : ${enterprise.activitePrincipale}`}
+              desc={
+                enterprise.activitePrincipale
+                  ? `Activité : ${enterprise.activitePrincipale}`
+                  : undefined
+              }
               end={<Badge>{`${enterprise.matching} établissements`}</Badge>}
               size="large"
               title={enterprise.label}

@@ -29,9 +29,11 @@ export const EnterpriseAgreementSelection = ({
       <p className={fr.cx("fr-text--bold", "fr-m-0", "fr-mt-2w")}>
         {enterprise.label}
       </p>
-      <p className={fr.cx("fr-m-0")}>
-        Activité : {enterprise.activitePrincipale}
-      </p>
+      {enterprise.activitePrincipale && (
+        <p className={fr.cx("fr-m-0")}>
+          Activité : {enterprise.activitePrincipale}
+        </p>
+      )}
       <p className={fr.cx("fr-mb-2w")}>{enterprise.address}</p>
       {enterprise.conventions?.map((agreement) => {
         const { slug, url, contributions } = agreement;
