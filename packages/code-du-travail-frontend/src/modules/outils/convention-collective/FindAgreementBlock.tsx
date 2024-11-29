@@ -1,7 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
 import AgreementSearch from "../../convention-collective/AgreementSearch.svg";
-import { css } from "../../../../styled-system/css";
+import { css } from "@styled-system/css";
 import { ReactNode } from "react";
 
 type Props = {

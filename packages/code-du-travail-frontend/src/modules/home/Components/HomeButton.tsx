@@ -1,5 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import { css } from "../../../../styled-system/css";
+import { css } from "@styled-system/css";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 
 type Props = {

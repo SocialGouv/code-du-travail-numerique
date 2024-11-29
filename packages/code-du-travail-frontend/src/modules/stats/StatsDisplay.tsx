@@ -1,6 +1,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { CallOut } from "@codegouvfr/react-dsfr/CallOut";
-import { css } from "../../../styled-system/css";
+import { css } from "@styled-system/css";
 
 type StatsProps = {
   title: string;

@@ -1,5 +1,4 @@
 import parse, { domToReact } from "html-react-parser";
-import { ReactHTMLElement } from "react";
 
 export const ContentParser = ({
   children,

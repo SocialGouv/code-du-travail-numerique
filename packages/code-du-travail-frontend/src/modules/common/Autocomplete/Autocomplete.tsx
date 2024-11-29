@@ -6,7 +6,7 @@ import Input, { InputProps } from "@codegouvfr/react-dsfr/Input";
 import { useCombobox } from "downshift";
 import { useState } from "react";
 import Spinner from "../Spinner.svg";
-import { css } from "../../../../styled-system/css";
+import { css } from "@styled-system/css";
 import { redirect } from "next/navigation";
 
 export type AutocompleteProps<K> = InputProps & {

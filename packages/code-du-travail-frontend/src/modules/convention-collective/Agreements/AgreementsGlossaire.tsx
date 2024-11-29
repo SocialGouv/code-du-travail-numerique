@@ -1,6 +1,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Link from "next/link";
-import { css } from "../../../../styled-system/css";
+import { css } from "@styled-system/css";
 
 type Props = {
   letters: string[];

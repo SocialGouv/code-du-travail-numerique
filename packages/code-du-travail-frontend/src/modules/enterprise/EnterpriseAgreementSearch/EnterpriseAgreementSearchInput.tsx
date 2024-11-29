@@ -7,7 +7,7 @@ import Badge from "@codegouvfr/react-dsfr/Badge";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { Card } from "@codegouvfr/react-dsfr/Card";
 import { ReactNode, useEffect, useState } from "react";
-import { css } from "../../../../styled-system/css";
+import { css } from "@styled-system/css";
 
 import Spinner from "../../common/Spinner.svg";
 import { LocationSearchInput } from "../../Location/LocationSearchInput";
@@ -105,7 +105,7 @@ export const EnterpriseAgreementSearchInput = ({
       });
       setSearchState(!result.length ? "errorSearch" : "fullSearch");
       setSearchState(
-        search.length > 1 && !result.length ? "notFoundSearch" : "noSearch"
+        search.length > 0 && !result.length ? "notFoundSearch" : "noSearch"
       );
       setEnterprises(result);
     } catch (e) {
@@ -187,9 +187,8 @@ export const EnterpriseAgreementSearchInput = ({
           )}
           hintText={
             <>
-              Ex : Café de la mairie ou 40123778000127
-              <br />
-              (présent sur la fiche de paie du salarié)
+              Ex : Café de la mairie ou 40123778000127 (présent sur la fiche de
+              paie du salarié)
             </>
           }
           label={<>Nom de votre entreprise ou numéro Siren/Siret</>}
@@ -224,7 +223,6 @@ export const EnterpriseAgreementSearchInput = ({
             "fr-mt-2w",
             "fr-mt-md-0"
           )}
-          classes={{ label: fr.cx("fr-mb-md-7v") }}
         />
         <div className={fr.cx("fr-mt-2w", "fr-col-xl-2", getStateMargin())}>
           <Button
@@ -305,7 +303,11 @@ export const EnterpriseAgreementSearchInput = ({
                       },
                     }
               }
-              desc={`Activité : ${enterprise.activitePrincipale}`}
+              desc={
+                enterprise.activitePrincipale
+                  ? `Activité : ${enterprise.activitePrincipale}`
+                  : undefined
+              }
               end={<Badge>{`${enterprise.matching} établissements`}</Badge>}
               size="large"
               title={enterprise.label}

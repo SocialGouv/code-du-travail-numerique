@@ -39,7 +39,6 @@ export const LocationSearchInput = ({
         if (onLocationChange) onLocationChange(value);
       }}
       onInputValueChange={(value) => {
-        console.log("value", value);
         setPostalCode(detectIfPostalCode(value) ? value : undefined);
       }}
       displayLabel={itemToString}

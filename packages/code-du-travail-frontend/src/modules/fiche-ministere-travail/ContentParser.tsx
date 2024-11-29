@@ -59,13 +59,13 @@ const options = (): HTMLReactParserOptions => {
         ) {
           return (
             <div className={fr.cx("fr-callout", "fr-icon-information-line")}>
-              {domToReact(domNode.children as DOMNode[], { trim: true })}
+              {domToReact(domNode.children as DOMNode[])}
             </div>
           );
         }
       }
     },
-    trim: true,
+    trim: false,
   };
 };
 

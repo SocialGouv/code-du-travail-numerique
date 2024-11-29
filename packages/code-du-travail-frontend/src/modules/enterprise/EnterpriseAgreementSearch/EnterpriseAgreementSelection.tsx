@@ -4,7 +4,7 @@ import Card from "@codegouvfr/react-dsfr/Card";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { Enterprise, EnterpriseAgreement } from "../types";
 import { ButtonStyle, CardTitleStyle } from "../../convention-collective/style";
-import { css } from "../../../../styled-system/css";
+import { css } from "@styled-system/css";
 import { useSearchParams } from "next/navigation";
 
 type Props = {
@@ -33,9 +33,11 @@ export const EnterpriseAgreementSelection = ({
       <p className={fr.cx("fr-text--bold", "fr-m-0", "fr-mt-2w")}>
         {enterprise.label}
       </p>
-      <p className={fr.cx("fr-m-0")}>
-        Activité : {enterprise.activitePrincipale}
-      </p>
+      {enterprise.activitePrincipale && (
+        <p className={fr.cx("fr-m-0")}>
+          Activité : {enterprise.activitePrincipale}
+        </p>
+      )}
       <p className={fr.cx("fr-mb-2w")}>{enterprise.address}</p>
       {enterprise.conventions?.map((agreement) => {
         const { slug, url, contributions } = agreement;

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { searchAgreement } from "../../conventions/Search/api/agreement.service";
 import { Agreement } from "../../outils/types";
+import { ElasticAgreement } from "@socialgouv/cdtn-types";
 
 export const useAgreementFetch = (search?: string) => {
   const [data, setData] =
@@ -9,11 +10,14 @@ export const useAgreementFetch = (search?: string) => {
     const fetchData = async () => {
       const response = await searchAgreement(search ?? "");
       setData(
-        response.map((d) => ({
-          shortTitle: d.shortTitle,
-          slug: d.slug ?? "",
-          num: d.num,
-        }))
+        response.map(
+          (d) =>
+            ({
+              shortTitle: d.shortTitle,
+              slug: d.slug,
+              num: d.num,
+            }) as ElasticAgreement
+        )
       );
     };
     fetchData();

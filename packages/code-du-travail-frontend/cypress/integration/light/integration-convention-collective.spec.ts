@@ -1,11 +1,3 @@
-Cypress.Commands.add("getIframe" as any, () => {
-  return cy
-    .get("iframe")
-    .its("0.contentDocument.body")
-    .should("not.be.empty")
-    .then(cy.wrap);
-});
-
 describe("Pages integration convention collective", () => {
   it("should display iframe convention collective", () => {
     cy.visit("/integration/convention-collective", {
@@ -14,23 +6,23 @@ describe("Pages integration convention collective", () => {
       },
     });
 
-    // @ts-ignore
-    cy.getIframe().as("iframe");
+    cy.frameLoaded({ url: "/widgets/convention-collective" });
 
-    cy.get("@iframe")
+    cy.iframe()
       .findByRole("heading", { level: 1 })
-      .should("have.text", "Trouver sa convention collective");
+      .should("have.text", "Trouver sa convention collective")
+      .click();
 
-    cy.wait(3000);
-    cy.get("@iframe")
+    cy.iframe()
       // @ts-ignore
       .findByLabel("Nom de votre entreprise ou numéro Siren/Siret")
-      .type("carrefour", { force: true });
-    cy.get("@iframe").find("button[type=submit]").as("button-submit");
-    cy.get("@button-submit").click();
-    cy.get("@iframe").contains("CARREFOUR HYPERMARCHES").as("entreprise");
-    cy.get("@entreprise").click();
-    cy.get("@iframe")
+      .as("inputSiret");
+
+    cy.get("@inputSiret").type("carrefour", { force: true });
+
+    cy.iframe().find("button[type=submit]").contains("Rechercher").click();
+    cy.iframe().contains("CARREFOUR HYPERMARCHES").click();
+    cy.iframe()
       .contains("Commerce de détail et de gros à prédominance alimentaire")
       .as("cc");
     cy.get("@cc").click();
