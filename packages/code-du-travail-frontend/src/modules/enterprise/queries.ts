@@ -22,7 +22,10 @@ const siretNumberError =
 const apiEnterprises = function createFetcher(
   searchParams: SearchParams
 ): Promise<Enterprise[]> {
-  if (/^\d{2,8}$/.test(searchParams.query.replace(/\s/g, ""))) {
+  if (
+    /^\d{2,8}$/.test(searchParams.query.replace(/\s/g, "")) ||
+    /^\d{4}[A-Za-z]$/.test(searchParams.query.replace(/\W/g, ""))
+  ) {
     return Promise.reject(siretSirenError);
   }
   if (
