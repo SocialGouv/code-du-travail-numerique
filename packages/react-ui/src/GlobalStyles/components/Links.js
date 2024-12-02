@@ -10,8 +10,8 @@ export default createGlobalStyle`
     text-decoration: underline;
     text-decoration-color: ${({ theme }) => theme.primary};
     transition: color ${animations.transitionTiming} linear, text-decoration ${
-  animations.transitionTiming
-} linear;
+      animations.transitionTiming
+    } linear;
     @media print {
       text-decoration: none;
     }
@@ -27,8 +27,8 @@ export default createGlobalStyle`
     text-decoration-color: ${({ theme }) => theme.secondary};
   }
   a[target="_blank"]:not(.no-after):after,
-  a[href^="http://"]:not(.no-after):not([href*="social.gouv.fr"]):after,
-  a[href^="https://"]:not(.no-after):not([href*="social.gouv.fr"]):after{
+  a[href^="http://"]:not(.no-after):not([href*="code.travail.gouv.fr"]):after,
+  a[href^="https://"]:not(.no-after):not([href*="code.travail.gouv.fr"]):after{
     position: relative;
     top: 2px;
     width: 16px;

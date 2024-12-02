@@ -1,6 +1,5 @@
 import "katex/dist/katex.min.css";
 import "react-image-lightbox/style.css";
-import "../public/static/modeles.css";
 
 import * as Sentry from "@sentry/nextjs";
 import { GlobalStyles, ThemeProvider } from "@socialgouv/cdtn-ui";
@@ -11,7 +10,12 @@ import React, { useEffect } from "react";
 import { A11y } from "../src/a11y";
 import { getSourceUrlFromPath } from "../src/lib";
 import { useRouter } from "next/router";
-import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL } from "../src/config";
+import {
+  PIWIK_SITE_ID,
+  PIWIK_URL,
+  SITE_URL,
+  WIDGETS_PATH,
+} from "../src/config";
 
 if (typeof window !== "undefined") {
   import("../src/web-components/tooltip")
@@ -35,8 +39,6 @@ if (typeof window !== "undefined") {
       Sentry.captureException(err);
     });
 }
-
-const WIDGETS_PATH = /\/widgets\/.*/;
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();

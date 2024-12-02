@@ -43,10 +43,10 @@ const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
         <>
           <p>
             Un accord collectif d’entreprise, le contrat de travail ou un usage
-            peut prévoir une durée de préavis<sup>*</sup> ou une condition
-            d’ancienneté<sup>*</sup> plus favorable pour le salarié. Dans ce
-            cas, c’est cette durée ou cette ancienneté plus favorable qui
-            s’applique au salarié.
+            peut prévoir une durée de préavis
+            <sup>*</sup> ou une condition d’ancienneté<sup>*</sup> plus
+            favorable pour le salarié. Dans ce cas, c’est cette durée ou cette
+            ancienneté plus favorable qui s’applique au salarié.
           </p>
 
           <SmallText>
@@ -63,10 +63,10 @@ const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
         <>
           <p>
             Un accord collectif d’entreprise, le contrat de travail ou un usage
-            peut prévoir une durée de préavis<sup>*</sup> ou une condition
-            d’ancienneté<sup>*</sup> plus favorable pour le salarié. Dans ce
-            cas, c’est cette durée ou cette ancienneté plus favorable qui
-            s’applique au salarié.
+            peut prévoir une durée de préavis
+            <sup>*</sup> ou une condition d’ancienneté<sup>*</sup> plus
+            favorable pour le salarié. Dans ce cas, c’est cette durée ou cette
+            ancienneté plus favorable qui s’applique au salarié.
           </p>
 
           <SmallText>

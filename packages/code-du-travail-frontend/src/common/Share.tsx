@@ -47,15 +47,13 @@ export const Share = ({
       >
         <Circle>
           <StyledIcon as={icons.ShareFacebook} />
-          <span className="sr-only">Facebook</span>
+          <Span>Facebook</Span>
         </Circle>
       </StyledButton>
       <StyledLink
         href={`mailto:?subject=${encodeURIComponent(
           `A lire sur le Code du travail numérique : ${title}`
-        )}&body=${`${encodeURIComponent(
-          `${metaDescription}\n\n${currentPageUrl}`
-        )}`}`}
+        )}&body=${`${encodeURIComponent(`${metaDescription}\n\n${currentPageUrl}`)}`}`}
         className="spacing-left"
         title="Envoyer par email"
         onClick={() => {
@@ -65,7 +63,7 @@ export const Share = ({
       >
         <Circle>
           <StyledIcon as={icons.Mail} />
-          <span className="sr-only">Courriel</span>
+          <Span>Courriel</Span>
         </Circle>
       </StyledLink>
       <StyledButton
@@ -86,7 +84,7 @@ export const Share = ({
       >
         <Circle>
           <StyledIcon as={icons.ShareLinkedin} />
-          <span className="sr-only">Linkedin</span>
+          <Span>Linkedin</Span>
         </Circle>
       </StyledButton>
       <Dropdown
@@ -119,7 +117,7 @@ export const Share = ({
           >
             <Circle>
               <StyledIcon as={icons.Share} />
-              <span className="sr-only">Partage</span>
+              <Span>Partage</Span>
             </Circle>
           </StyledButton>
         )}
@@ -133,9 +131,7 @@ export const Share = ({
           onClick={() => {
             matopush(["trackEvent", "clic_share", currentPageUrl, "twitter"]);
             window.open(
-              `https://twitter.com/intent/tweet/?text=${encodeURIComponent(
-                `${title} : ${currentPageUrl}`
-              )}`,
+              `https://twitter.com/intent/tweet/?text=${encodeURIComponent(`${title} : ${currentPageUrl}`)}`,
               "twitter_popup",
               POPUP_OPTIONS
             );
@@ -181,9 +177,7 @@ export const Share = ({
           onClick={() => {
             matopush(["trackEvent", "clic_share", currentPageUrl, "whatsapp"]);
             window.open(
-              `https://wa.me/?text=${encodeURIComponent(
-                `${title} : ${currentPageUrl}`
-              )}`,
+              `https://wa.me/?text=${encodeURIComponent(`${title} : ${currentPageUrl}`)}`,
               "whatsapp_popup",
               POPUP_OPTIONS
             );
@@ -282,4 +276,7 @@ const HiddenInput = styled.input`
   padding: 0;
   border: 0;
   opacity: 0;
+`;
+const Span = styled.span`
+  display: none;
 `;

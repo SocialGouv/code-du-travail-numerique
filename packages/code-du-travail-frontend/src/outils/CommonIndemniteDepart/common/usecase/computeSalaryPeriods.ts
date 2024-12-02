@@ -22,9 +22,7 @@ function computeSalaryPeriods({
     });
     // HACK: sometimes the formattedData return an empty string
     if (!formattedData?.trim()) {
-      return `${
-        notificationLessOneMonth.getMonth() + 1
-      }/${notificationLessOneMonth.getFullYear()}`;
+      return `${notificationLessOneMonth.getMonth() + 1}/${notificationLessOneMonth.getFullYear()}`;
     }
     return formattedData;
   });

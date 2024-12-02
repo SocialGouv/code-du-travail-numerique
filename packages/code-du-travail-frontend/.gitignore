@@ -6,5 +6,10 @@ node_modules
 cypress/videos
 cypress/screenshots
 cypress/downloads
+scripts/logs/*
 .env
 .env.*
+
+## Panda
+src/styled-system
+src/styled-system-studio

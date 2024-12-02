@@ -311,11 +311,11 @@ const Accessibilite = () => {
               Pour en savoir plus sur la politique d’accessibilité numérique de
               l’État&nbsp;: <br />
               <A11yLink
-                href="http://references.modernisation.gouv.fr/accessibilite-numerique"
+                href="https://accessibilite.numerique.gouv.fr/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                http://references.modernisation.gouv.fr/accessibilite-numerique
+                https://accessibilite.numerique.gouv.fr
               </A11yLink>
             </p>
           </Wrapper>

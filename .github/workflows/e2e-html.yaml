@@ -1,0 +1,44 @@
+name: Tests e2e (HTML validation)
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 22 * * 0" # each sunday at 22:00
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.ref }}
+
+jobs:
+  e2e:
+    name: End-to-end testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: master
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "yarn"
+      - name: Install dependencies
+        run: |
+          yarn install --immutable
+      - name: Run test e2e
+        run: |
+          TEST_BASEURL=https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr TEST_MODE=html-validation yarn test:e2e
+      - name: Archive generated screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-screenshots
+          path: |
+            packages/code-du-travail-frontend/cypress/screenshots
+      - name: Send message to mattermost when done
+        uses: mattermost/action-mattermost-notify@master
+        if: failure()
+        with:
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
+          TEXT: |-
+            Tests e2e (HTML validation): **${{ job.status }}** ([logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})) ⚠️

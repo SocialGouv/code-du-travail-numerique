@@ -20,6 +20,11 @@ import {
 import { pushAgreementEvents } from "../../../../common/Agreement";
 import { AgreementRoute } from "../../../../common/type/WizardType";
 import { isCcFullySupportedIndemniteLicenciement } from "../../../../CommonIndemniteDepart/common";
+import {
+  getAgreementFromLocalStorage,
+  removeAgreementFromLocalStorage,
+  saveAgreementToLocalStorage,
+} from "../../../../../lib/useLocalStorage";
 
 const initialState: Omit<
   CommonAgreementStoreData<PublicodesSimulator>,
@@ -43,9 +48,8 @@ const createCommonAgreementStore: StoreSlicePublicode<
   agreementFunction: {
     onInitAgreementPage: () => {
       try {
-        const data = window?.localStorage?.getItem(STORAGE_KEY_AGREEMENT);
-        if (data) {
-          const parsedData: Agreement = JSON.parse(data);
+        const parsedData = getAgreementFromLocalStorage();
+        if (parsedData) {
           if (parsedData?.num !== get().agreementData.input.agreement?.num) {
             applyGenericValidation(get, set, "agreement", parsedData);
             applyGenericValidation(
@@ -84,13 +88,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
     },
     onRouteChange: (value) => {
       if (value === "not-selected") {
-        try {
-          if (window?.localStorage) {
-            window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
-          }
-        } catch (e) {
-          console.error(e);
-        }
+        removeAgreementFromLocalStorage();
         set(
           produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
             state.agreementData.publicodes = loadPublicodes(simulator);
@@ -114,18 +112,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
     },
     onAgreementChange: (agreement, enterprise) => {
       applyGenericValidation(get, set, "agreement", agreement);
-      try {
-        if (agreement) {
-          window?.localStorage?.setItem(
-            STORAGE_KEY_AGREEMENT,
-            JSON.stringify(agreement)
-          );
-        } else {
-          window?.localStorage?.removeItem(STORAGE_KEY_AGREEMENT);
-        }
-      } catch (e) {
-        console.error(e);
-      }
+      saveAgreementToLocalStorage(agreement);
       applyGenericValidation(get, set, "enterprise", enterprise);
       const idcc = agreement?.num?.toString();
       set(

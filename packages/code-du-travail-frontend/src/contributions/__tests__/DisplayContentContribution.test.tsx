@@ -12,24 +12,7 @@ describe("DisplayContentContribution", () => {
         ></DisplayContentContribution>
       );
 
-      expect(baseElement.firstChild).toMatchInlineSnapshot(`
-        <div>
-          <div
-            class="sc-eulNck hOEymR"
-          >
-            <h2
-              class="sc-kAyceB dvmaTz"
-            >
-              Mon titre
-            </h2>
-            <h3
-              class="sc-kAyceB dvmaTz"
-            >
-              Mon sous titre
-            </h3>
-          </div>
-        </div>
-      `);
+      expect(baseElement.firstChild).toMatchSnapshot();
     });
     it(`should replace span with with heading according to given title level`, () => {
       const { baseElement } = render(
@@ -39,24 +22,7 @@ describe("DisplayContentContribution", () => {
         ></DisplayContentContribution>
       );
 
-      expect(baseElement.firstChild).toMatchInlineSnapshot(`
-        <div>
-          <div
-            class="sc-eulNck hOEymR"
-          >
-            <h4
-              class="sc-kAyceB dvmaTz"
-            >
-              Mon title
-            </h4>
-            <h5
-              class="sc-kAyceB dvmaTz"
-            >
-              Mon title
-            </h5>
-          </div>
-        </div>
-      `);
+      expect(baseElement.firstChild).toMatchSnapshot();
     });
     it(`should not add headings higher than h6 for titles`, () => {
       const { baseElement } = render(
@@ -66,22 +32,7 @@ describe("DisplayContentContribution", () => {
         ></DisplayContentContribution>
       );
 
-      expect(baseElement.firstChild).toMatchInlineSnapshot(`
-        <div>
-          <div
-            class="sc-eulNck hOEymR"
-          >
-            <h6
-              class="sc-kAyceB dvmaTz"
-            >
-              Mon title
-            </h6>
-            <strong>
-              Mon title
-            </strong>
-          </div>
-        </div>
-      `);
+      expect(baseElement.firstChild).toMatchSnapshot();
     });
     it(`should not add headings higher than h6 for accordion`, () => {
       const { asFragment } = render(
@@ -323,60 +274,7 @@ describe("DisplayContentContribution", () => {
         ></DisplayContentContribution>
       );
 
-      expect(asFragment().firstChild).toMatchInlineSnapshot(`
-        <div
-          class="sc-eulNck hOEymR"
-        >
-          <table
-            class="sc-cmaqmh juENof"
-          >
-            <thead>
-              <tr>
-                <th
-                  colspan="1"
-                  rowspan="1"
-                />
-                <th
-                  colspan="1"
-                  rowspan="1"
-                >
-                  <p>
-                    Titre 1
-                  </p>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td
-                  colspan="1"
-                  rowspan="1"
-                >
-                  <p>
-                    Pour les 
-                    <strong>
-                      cadres
-                    </strong>
-                    , la prolongation ...
-                  </p>
-                </td>
-                <td
-                  colspan="1"
-                  rowspan="1"
-                >
-                  <ul>
-                    <li>
-                      <p>
-                        L’employeur et le salarié donnent par écrit ou par mail.
-                      </p>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      `);
+      expect(asFragment().firstChild).toMatchSnapshot();
     });
     it(`should not change if thead is already present`, () => {
       const { asFragment } = render(
@@ -400,42 +298,7 @@ describe("DisplayContentContribution", () => {
         ></DisplayContentContribution>
       );
 
-      expect(asFragment().firstChild).toMatchInlineSnapshot(`
-        <div
-          class="sc-eulNck hOEymR"
-        >
-          <table>
-            <tbody>
-              <tr>
-                <td
-                  colspan="1"
-                  rowspan="1"
-                >
-                  <p>
-                    Pour les 
-                    <strong>
-                      cadres
-                    </strong>
-                    , la prolongation ...
-                  </p>
-                </td>
-                <td
-                  colspan="1"
-                  rowspan="1"
-                >
-                  <ul>
-                    <li>
-                      <p>
-                        L’employeur et le salarié donnent par écrit ou par mail.
-                      </p>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      `);
+      expect(asFragment().firstChild).toMatchSnapshot();
     });
 
     it(`should keep whitespace in specific tag`, () => {
@@ -446,35 +309,7 @@ describe("DisplayContentContribution", () => {
         ></DisplayContentContribution>
       );
 
-      expect(asFragment().firstChild).toMatchInlineSnapshot(`
-        <div
-          class="sc-eulNck hOEymR"
-        >
-          <p>
-            Ceci est un
-            <strong>
-               
-            </strong>
-            texte généré
-            <strong>
-               
-            </strong>
-            par 
-            <em>
-              tiptap 
-            </em>
-            avec des
-            <em>
-               
-            </em>
-            résidus
-            <em>
-               
-            </em>
-            de balise
-          </p>
-        </div>
-      `);
+      expect(asFragment().firstChild).toMatchSnapshot();
     });
 
     it(`should render correctly a table with multiple head lines`, () => {
@@ -537,15 +372,7 @@ describe("DisplayContentContribution", () => {
       ></DisplayContentContribution>
     );
 
-    expect(asFragment().firstChild).toMatchInlineSnapshot(`
-      <div
-        class="sc-eulNck hOEymR"
-      >
-        <p>
-          hello
-        </p>
-      </div>
-    `);
+    expect(asFragment().firstChild).toMatchSnapshot();
   });
   it(`should keep whitespace in specific tag`, () => {
     const { asFragment } = render(
@@ -555,35 +382,7 @@ describe("DisplayContentContribution", () => {
       ></DisplayContentContribution>
     );
 
-    expect(asFragment().firstChild).toMatchInlineSnapshot(`
-      <div
-        class="sc-eulNck hOEymR"
-      >
-        <p>
-          Ceci est un
-          <strong>
-             
-          </strong>
-          texte généré
-          <strong>
-             
-          </strong>
-          par 
-          <em>
-            tiptap 
-          </em>
-          avec des
-          <em>
-             
-          </em>
-          résidus
-          <em>
-             
-          </em>
-          de balise
-        </p>
-      </div>
-    `);
+    expect(asFragment().firstChild).toMatchSnapshot();
   });
   it(`should not remove space between strong and em tag in p tag`, () => {
     const { asFragment } = render(
@@ -593,21 +392,7 @@ describe("DisplayContentContribution", () => {
       ></DisplayContentContribution>
     );
 
-    expect(asFragment().firstChild).toMatchInlineSnapshot(`
-      <div
-        class="sc-eulNck hOEymR"
-      >
-        <p>
-          <strong>
-            À noter :
-          </strong>
-           
-          <em>
-            L'échelon professionnel du salarié est habituellement mentionné 
-          </em>
-        </p>
-      </div>
-    `);
+    expect(asFragment().firstChild).toMatchSnapshot();
   });
 
   describe("Alerts", () => {
@@ -628,6 +413,17 @@ describe("DisplayContentContribution", () => {
         <DisplayContentContribution
           content={`
         <div><p>Le contrat de mission (intérim) doit :</p><ul><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être<strong> écrit</strong> et <strong>rédigé</strong> en français (si conclu en France) ;</p></li><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être <strong>signé</strong>, dans un délai de <strong>2 jours</strong> suivant la mise à disposition du salarié auprès de l'entreprise ; si l’employeur transmet le CDD au salarié après le délai de 2 jours, il s'expose au paiement d'une indemnité égale à 1 mois de salaire maximum.</p></li><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être établi <strong>en plusieurs exemplaires</strong> ; c'est-à-dire autant d'exemplaires que de parties au contrat. Chaque partie au contrat aura un exemplaire.</p><p></p><div class="alert"><p><strong>Attention : </strong>En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.</p></div></li></ul></div>`}
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
+
+      expect(asFragment().firstChild).toMatchSnapshot();
+    });
+
+    it(`should have space in table item for a strong and an other content`, () => {
+      const { asFragment } = render(
+        <DisplayContentContribution
+          content={`<table class="sc-4e3ba411-0 kGLBMt"><thead><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p><strong>Repos compensateur&nbsp;</strong></p></td><td colspan="1" rowspan="1"><p><strong>Majoration de salaire</strong></p></td></tr></thead><tbody><tr><td colspan="1" rowspan="1"><p><strong>Salariés</strong></p></td><td colspan="1" rowspan="1"><p>Une journée entière déterminée par roulement et par quinzaine</p></td><td colspan="1" rowspan="2"><p>Pour les commerces avec une surface de vente <strong>supérieure à 400 m2</strong>,<strong></strong>la loi prévoit une majoration de&nbsp;salaire d’au moins 30 % par rapport au salaire normalement dû pour une durée équivalente</p><p>Pour les commerces avec une surface de vente <strong>inférieure ou égale à 400 m2</strong>, la loi ne prévoit aucune majoration de salaire.&nbsp;Mais l’employeur, s’il le souhaite, ou un <webcomponent-tooltip content="Accord%20conclu%20entre%20un%20employeur%20ou%20des%20repr%C3%A9sentants%20d%E2%80%99employeurs%20et%20une%20ou%20plusieurs%20organisations%20syndicales%20ou%20des%20repr%C3%A9sentants%20de%20salari%C3%A9s%2C%20ou%20dans%20certains%20cas%2C%20%C3%A0%20la%20suite%20de%20la%20consultation%20des%20salari%C3%A9s%2C%20en%20respectant%20des%20r%C3%A8gles%20de%20validit%C3%A9%20issues%20du%20code%20du%20travail.%20Il%20peut%20%C3%AAtre%20conclu%20%C3%A0%20plusieurs%20niveaux%20%3A%20branche%20professionnelle%2C%20groupe%2C%20entreprise%2C%20%C3%A9tablissement...%20L%E2%80%99accord%20collectif%20concerne%20un%20ou%20plusieurs%20th%C3%A8mes%20contrairement%20%C3%A0%20la%20convention%20collective%20qui%20traite%20de%20l%E2%80%99ensemble%20des%20conditions%20d%E2%80%99emploi%2C%20de%20travail%20et%20de%20formation%20professionnelle%20et%20des%20garanties%20sociales%20des%20salari%C3%A9s.%20">accord collectif</webcomponent-tooltip>, peuvent le prévoir.</p></td></tr><tr><td colspan="1" rowspan="1"><p><strong>Salariés de moins de 21 ans logés chez leur employeur</strong></p></td><td colspan="1" rowspan="1"><p>Un autre après-midi déterminé par roulement et par quinzaine</p></td></tr></tbody></table>`}
           titleLevel={3}
         ></DisplayContentContribution>
       );

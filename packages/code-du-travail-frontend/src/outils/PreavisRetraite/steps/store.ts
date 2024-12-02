@@ -15,7 +15,7 @@ import { createResultStore, ResultStoreSlice } from "./Result/store";
 
 export type StoreSliceWrapperPreavisRetraite<
   T extends object,
-  E extends object = T
+  E extends object = T,
 > = (
   set: StoreApi<E extends T ? E : E & T>["setState"],
   get: StoreApi<E extends T ? E : E & T>["getState"]

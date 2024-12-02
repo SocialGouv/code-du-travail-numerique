@@ -50,7 +50,9 @@ export class ReferenceSalary2596
       catPro === CatPro2596.esthetique ||
       catPro === CatPro2596.nonTechnique
     ) {
-      return new ReferenceSalaryLegal().computeReferenceSalary({ salaires });
+      return new ReferenceSalaryLegal().computeReferenceSalary({
+        salaires,
+      });
     } else {
       const rankedSalaires = rankByMonthArrayDescFrench(salaires);
       const rankedSalairesPendantPreavis = rankByMonthArrayDescFrench(

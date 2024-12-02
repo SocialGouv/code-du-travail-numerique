@@ -3,6 +3,174 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.166.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.165.0...v4.166.0) (2024-11-28)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+## [4.165.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.165.0...v4.165.1) (2024-11-28)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.165.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.164.2...v4.165.0) (2024-11-25)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+## [4.164.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.164.1...v4.164.2) (2024-11-22)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+## [4.164.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.164.0...v4.164.1) (2024-11-18)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.164.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.163.0...v4.164.0) (2024-11-15)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.163.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.162.0...v4.163.0) (2024-11-13)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.162.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.161.0...v4.162.0) (2024-11-13)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.161.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.160.0...v4.161.0) (2024-11-12)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.160.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.159.0...v4.160.0) (2024-11-06)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.159.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.158.1...v4.159.0) (2024-10-31)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+## [4.158.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.158.0...v4.158.1) (2024-10-30)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.158.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.157.0...v4.158.0) (2024-10-29)
+
+
+### Features
+
+* 6188 ajout des tests UI pour le simu preavis de demission ([#6190](https://github.com/SocialGouv/code-du-travail-numerique/issues/6190)) ([6db4f07](https://github.com/SocialGouv/code-du-travail-numerique/commit/6db4f07731e5ba66d934da7e029083c4d0d7f7b3))
+* 6189 ajout des tests UI pour le simu preavis de licenciement ([#6191](https://github.com/SocialGouv/code-du-travail-numerique/issues/6191)) ([7f6a995](https://github.com/SocialGouv/code-du-travail-numerique/commit/7f6a99587c5a7c203eef47dcf7e3c2eb9b64f2de))
+* add TU heure recherche emploi ([#6195](https://github.com/SocialGouv/code-du-travail-numerique/issues/6195)) ([826c649](https://github.com/SocialGouv/code-du-travail-numerique/commit/826c6498d7f4c7fe9ca33f8f8dcef24c0b3624d6))
+* modification des références et message d'erreurs ([#6239](https://github.com/SocialGouv/code-du-travail-numerique/issues/6239)) ([5f4df8e](https://github.com/SocialGouv/code-du-travail-numerique/commit/5f4df8e4b287638971e021fea84d150e65e4399e))
+
+
+
+
+
+# [4.157.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.156.1...v4.157.0) (2024-10-22)
+
+
+### Features
+
+* **dsfr:** ajout des premières pages et composants en DSFR ([#6078](https://github.com/SocialGouv/code-du-travail-numerique/issues/6078)) ([d841f65](https://github.com/SocialGouv/code-du-travail-numerique/commit/d841f65ec429eccd16dfcfbfa5e12d5be36270fa)), closes [#6079](https://github.com/SocialGouv/code-du-travail-numerique/issues/6079) [#6085](https://github.com/SocialGouv/code-du-travail-numerique/issues/6085) [#6090](https://github.com/SocialGouv/code-du-travail-numerique/issues/6090) [#6082](https://github.com/SocialGouv/code-du-travail-numerique/issues/6082) [#6092](https://github.com/SocialGouv/code-du-travail-numerique/issues/6092) [#6096](https://github.com/SocialGouv/code-du-travail-numerique/issues/6096) [#6099](https://github.com/SocialGouv/code-du-travail-numerique/issues/6099) [#6094](https://github.com/SocialGouv/code-du-travail-numerique/issues/6094)
+
+
+
+
+
+## [4.156.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.156.0...v4.156.1) (2024-10-14)
+
+### Bug Fixes
+
+- **indemnité de licenciement:** ajout de l'avenant pour la CC 275 ([#6174](https://github.com/SocialGouv/code-du-travail-numerique/issues/6174)) ([bf843e5](https://github.com/SocialGouv/code-du-travail-numerique/commit/bf843e54f6778bb7be2d937a412b578e02667997))
+- preavis demission ref manquante 3239 ([#6168](https://github.com/SocialGouv/code-du-travail-numerique/issues/6168)) ([1a85a22](https://github.com/SocialGouv/code-du-travail-numerique/commit/1a85a2279a74bd8d05d93865433da07d03e8aabc))
+
+# [4.156.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.155.2...v4.156.0) (2024-10-10)
+
+### Bug Fixes
+
+- **indemnité de licenciement:** simplification de la CC 275 ([#6173](https://github.com/SocialGouv/code-du-travail-numerique/issues/6173)) ([10cc1bd](https://github.com/SocialGouv/code-du-travail-numerique/commit/10cc1bd0e156243dd33da88c7915e89a0637c63e))
+
+## [4.155.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.155.1...v4.155.2) (2024-09-25)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+## [4.155.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.155.0...v4.155.1) (2024-09-23)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.155.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.154.0...v4.155.0) (2024-09-19)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.154.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.153.0...v4.154.0) (2024-09-19)
+
+### Bug Fixes
+
+- **preavis-retraite:** correction des valeurs pour la CC 2216 ([#6144](https://github.com/SocialGouv/code-du-travail-numerique/issues/6144)) ([90000b5](https://github.com/SocialGouv/code-du-travail-numerique/commit/90000b5be84b489eb088d0560a4856b7cfbba44b))
+
+# [4.153.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.152.0...v4.153.0) (2024-09-11)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.152.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.151.1...v4.152.0) (2024-09-04)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+## [4.151.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.151.0...v4.151.1) (2024-08-30)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+# [4.151.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.150.0...v4.151.0) (2024-08-19)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
 # [4.150.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.149.1...v4.150.0) (2024-08-13)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

@@ -14,8 +14,24 @@
     "incremental": true,
     "forceConsistentCasingInFileNames": true,
     "strictNullChecks": true,
-    "downlevelIteration": true
+    "downlevelIteration": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@styled-system/*": [
+        "./src/styled-system/*"
+      ]
+    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules", "cypress"]
 }

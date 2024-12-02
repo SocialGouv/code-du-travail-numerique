@@ -109,19 +109,19 @@ export const searchWithQuery = async (
 
   return {
     articles: articles.map(({ _score, _source }) => ({
-      _score,
+      _score: _score ?? null,
       ..._source,
       title: _source.shortTitle ?? _source.title,
     })),
     documents: documents.map(({ _score, _source }) => ({
-      _score,
+      _score: _score ?? null,
       ..._source,
       title: _source.shortTitle ?? _source.title,
     })),
     // we add source prop since some result might come from dedicated themes index
     // which has no source prop
     themes: themes.map(({ _score, _source }) => ({
-      _score,
+      _score: _score ?? null,
       ..._source,
       source: SOURCES.THEMES,
     })),
@@ -158,11 +158,7 @@ async function msearch(searches) {
 
     if (resp.status !== 200) {
       console.error(
-        `Elastic search error : index ${index}, search key ${key} : ${JSON.stringify(
-          resp,
-          null,
-          2
-        )}`
+        `Elastic search error : index ${index}, search key ${key} : ${JSON.stringify(resp, null, 2)}`
       );
     }
 
