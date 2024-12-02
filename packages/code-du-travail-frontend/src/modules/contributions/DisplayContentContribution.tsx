@@ -1,7 +1,6 @@
 // import { Alert, Heading, Table as UITable, theme } from "@socialgouv/cdtn-ui";
 
-import { AccordionWithAnchor as Accordion } from "../../../src/common/AccordionWithAnchor";
-import { css } from "../../../styled-system/css";
+import { css } from "@styled-system/css";
 // import { FicheServicePublic } from "../../fiche-service-public";
 import parse, {
   DOMNode,
@@ -11,7 +10,10 @@ import parse, {
 } from "html-react-parser";
 import { xssWrapper } from "../../lib";
 import Alert from "@codegouvfr/react-dsfr/Alert";
+import Table from "@codegouvfr/react-dsfr/Table";
 import { ElementType } from "react";
+import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
+import { v4 as generateUUID } from "uuid";
 
 export const ContentSP = ({ raw, titleLevel }) => {
   return (
@@ -29,7 +31,7 @@ export const ContentSP = ({ raw, titleLevel }) => {
 };
 
 const mapItem = (titleLevel: number, domNode: Element, summary: Element) => ({
-  body: domToReact(domNode.children as DOMNode[], options(titleLevel + 1)),
+  content: domToReact(domNode.children as DOMNode[], options(titleLevel + 1)),
   title: domToReact(summary.children as DOMNode[], {
     transform: (reactNode, domNode) => {
       // @ts-ignore
@@ -46,9 +48,13 @@ const mapItem = (titleLevel: number, domNode: Element, summary: Element) => ({
 const mapToAccordion = (titleLevel: number, items) => {
   const props = titleLevel <= 6 ? { titleLevel: titleLevel } : {};
 
-  // return <>TOTO</>;
-  // return <details></details>;
-  return <Accordion {...props} data-testid="contrib-accordion" items={items} />;
+  return (
+    <AccordionWithAnchor
+      {...props}
+      data-testid="contrib-accordion"
+      items={items.map((item) => ({ ...item, id: generateUUID() }))}
+    />
+  );
 };
 
 function getFirstElementChild(domNode: Element) {
@@ -117,7 +123,8 @@ const mapTbody = (tbody: Element) => {
 function getItem(domNode: Element, titleLevel: number) {
   const summary = getFirstElementChild(domNode);
   if (summary && summary.name === "summary") {
-    return mapItem(titleLevel, domNode, summary);
+    const mapI = mapItem(titleLevel, domNode, summary);
+    return mapI;
   }
 }
 
@@ -135,34 +142,40 @@ const getHeadingElement = (titleLevel: number, domNode) => {
 };
 
 const options = (titleLevel: number): HTMLReactParserOptions => {
-  let accordionTitle = titleLevel;
+  let accordionTitleLevel = titleLevel;
 
   return {
     replace(domNode) {
       if (domNode instanceof Element) {
         if (domNode.name === "span" && domNode.attribs.class === "title") {
-          accordionTitle = titleLevel + 1;
+          accordionTitleLevel = titleLevel + 1;
           return getHeadingElement(titleLevel, domNode);
         }
         if (domNode.name === "span" && domNode.attribs.class === "sub-title") {
-          accordionTitle = titleLevel + 1;
+          accordionTitleLevel = titleLevel + 1;
           return getHeadingElement(titleLevel + 1, domNode);
         }
         if (domNode.name === "details") {
           const items: any[] = [];
-          const item = getItem(domNode, accordionTitle);
+          let id = 0;
+          const item = getItem(domNode, accordionTitleLevel);
           if (item) {
-            items.push(item);
+            items.push({ ...item, id });
           }
           let next = getNextFirstElement(domNode);
           while (next && next.name === "details") {
-            const item = getItem(next, accordionTitle);
+            id = id + 1;
+            const item = getItem(next, accordionTitleLevel);
             if (item) {
-              items.push(item);
+              items.push({ ...item, id });
             }
             next = getNextFirstElement(next);
           }
-          return items.length ? mapToAccordion(accordionTitle, items) : <></>;
+          return items.length ? (
+            mapToAccordion(accordionTitleLevel, items)
+          ) : (
+            <></>
+          );
         }
         if (domNode.name === "table") {
           const tableContent = getFirstElementChild(domNode);
@@ -176,7 +189,7 @@ const options = (titleLevel: number): HTMLReactParserOptions => {
           return (
             <Alert
               severity="warning"
-              title="Alerte"
+              small
               description={domToReact(domNode.children as DOMNode[], {
                 trim: true,
               })}

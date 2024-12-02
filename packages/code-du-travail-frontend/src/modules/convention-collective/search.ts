@@ -16,7 +16,9 @@ const formatCCn = ({ num, id, slug, title, shortTitle, highlight, url }) => ({
 export const onlyNumberError =
   "Numéro d’indentification (IDCC) incorrect. Ce numéro est composé de 4 chiffres uniquement.";
 
-const apiIdcc = function createFetcher(query: string): Promise<Agreement[]> {
+const apiIdcc = function createFetcher(
+  query: string
+): Promise<ElasticAgreement[]> {
   if (/^\d{4}[A-Za-z]$/.test(query.replace(/\W/g, ""))) {
     return Promise.reject(nafError);
   }

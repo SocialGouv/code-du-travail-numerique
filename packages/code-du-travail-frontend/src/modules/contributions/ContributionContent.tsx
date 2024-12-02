@@ -2,16 +2,13 @@ import {
   ElasticSearchContributionConventionnelle,
   ElasticSearchContributionGeneric,
 } from "@socialgouv/cdtn-types";
-import { theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import { A11yLink } from "../../common/A11yLink";
 
 import DisplayContentContribution, {
   ContentSP,
 } from "./DisplayContentContribution";
-// import { Section } from "@socialgouv/cdtn-ui";
 import { getLabelBySource } from "@socialgouv/cdtn-utils";
-import { css } from "../../../styled-system/css";
 
 type Props = {
   contribution:
@@ -48,7 +45,7 @@ export const ContributionContent = ({ contribution, titleLevel }: Props) => {
               <span>Mis à jour le&nbsp;: {contribution.date}</span>
             )}
           </div>
-          <ContentSP raw={contribution.raw} titleLevel={titleLevel - 2} />
+          {/* <ContentSP raw={contribution.raw} titleLevel={titleLevel - 2} /> */}
         </div>
       ) : (
         <DisplayContentContribution
