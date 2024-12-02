@@ -1,1 +1,6 @@
-@layer reset, base, tokens, recipes, utilities;
+@layer reset {
+  * {
+    text-wrap: normal;
+  }
+}
+@layer base, tokens, recipes, utilities;
