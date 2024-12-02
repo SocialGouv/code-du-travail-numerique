@@ -167,14 +167,16 @@ export const EnterpriseAgreementSearchInput = ({
           defaultValue={location}
           className={fr.cx(
             "fr-col-12",
-            "fr-col-xl-4",
-            "fr-col-md-5",
+            "fr-col-xl",
+            "fr-col-md",
             getStateMargin(),
             "fr-mt-2w",
             "fr-mt-md-0"
           )}
         />
-        <div className={fr.cx("fr-mt-2w", "fr-col-xl-2", getStateMargin())}>
+        <div
+          className={`${fr.cx("fr-col-xl", getStateMargin())} ${ButtonContainer}`}
+        >
           <Button
             type="submit"
             iconPosition="right"
@@ -307,4 +309,10 @@ const SpinnerBlock = css({
   height: "100%",
   alignContent: "center",
   marginTop: "0.5rem",
+});
+
+const ButtonContainer = css({
+  md: {
+    maxW: "164px",
+  },
 });
