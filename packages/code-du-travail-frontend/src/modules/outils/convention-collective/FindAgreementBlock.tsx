@@ -19,7 +19,7 @@ export const FindAgreementBlock = ({
   return (
     <div
       id="convention-collective"
-      className={`${fr.cx("fr-p-3w")} ${noBackground ? "" : block}`}
+      className={`${fr.cx("fr-px-3w", "fr-pt-4w", "fr-pb-11v")} ${noBackground ? "" : block}`}
     >
       <div className={"fr-grid-row"}>
         <Image

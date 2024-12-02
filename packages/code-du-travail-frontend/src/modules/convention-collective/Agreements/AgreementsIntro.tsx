@@ -8,7 +8,9 @@ import AgreementSearch from "../AgreementSearch.svg";
 export const AgreementsIntro = () => {
   return (
     <>
-      <div className={`${fr.cx("fr-p-3w", "fr-mb-6w")} ${block}`}>
+      <div
+        className={`${fr.cx("fr-px-3w", "fr-pt-4w", "fr-pb-11v", "fr-mb-6w")} ${block}`}
+      >
         <div className={fr.cx("fr-mb-4v", "fr-grid-row")}>
           <Image
             priority
@@ -20,21 +22,19 @@ export const AgreementsIntro = () => {
             Trouver sa convention collective
           </h2>
         </div>
-        <Highlight size="lg">
-          <span>
+        <div className={`${fr.cx("fr-mt-2w", "fr-ml-md-15v")}`}>
+          <p className={Paragraph}>
             La convention collective est un texte conclu au niveau d&apos;une
-            branche d&apos;activité (Ex&nbsp;: Transports routiers). Elle adapte
-            les règles du Code du travail sur des points précis, en fonction des
+            branche d&apos;activité (Ex: Transports routiers). Elle adapte les
+            règles du Code du travail sur des points précis, en fonction des
             situations particulières de la branche (primes, congés, salaires
             minima, préavis, prévoyance...)
-          </span>
-          <br />
-          <br />
-          <span className={fr.cx("fr-text--bold")}>
+          </p>
+          <p className={`${fr.cx("fr-text--bold", "fr-mb-2w")} ${Paragraph}`}>
             Vous pouvez retrouver le nom de votre convention collective sur
             votre bulletin de paie ou sur votre contrat de travail.
-          </span>
-        </Highlight>
+          </p>
+        </div>
         <div
           className={`${fr.cx(
             "fr-grid-row",
@@ -81,4 +81,8 @@ const block = css({
 
 const ImageContainer = css({
   height: "52px",
+});
+
+const Paragraph = css({
+  fontSize: "18px !important",
 });
