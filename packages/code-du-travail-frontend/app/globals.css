@@ -1,6 +1,12 @@
-@layer reset {
-  * {
-    text-wrap: normal;
+@layer reset, base, tokens, recipes, utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: initial;
   }
 }
-@layer base, tokens, recipes, utilities;
