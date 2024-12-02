@@ -2,7 +2,6 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Link from "next/link";
 import { css } from "@styled-system/css";
 import Image from "next/image";
-import { Highlight } from "@codegouvfr/react-dsfr/Highlight";
 import AgreementSearch from "../AgreementSearch.svg";
 
 export const AgreementsIntro = () => {
