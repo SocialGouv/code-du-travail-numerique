@@ -16,7 +16,7 @@
 ### Installation
 
 ```sh
-# Install all the packages
+# Install all the packages :)
 yarn
 yarn build
 ```
