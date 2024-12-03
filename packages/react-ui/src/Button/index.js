@@ -19,8 +19,10 @@ export const StyledButton = styled.button`
   border: 1px solid;
   border-radius: ${box.borderRadius};
   cursor: pointer;
-  transition: background-color ${animations.transitionTiming} linear,
-    border-color ${animations.transitionTiming} linear, transform 100ms linear;
+  transition:
+    background-color ${animations.transitionTiming} linear,
+    border-color ${animations.transitionTiming} linear,
+    transform 100ms linear;
   appearance: none;
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.small};
@@ -75,7 +77,8 @@ export const StyledButton = styled.button`
         border: none;
         border-radius: 0;
         overflow: visible;
-        transition: color ${animations.transitionTiming} linear,
+        transition:
+          color ${animations.transitionTiming} linear,
           text-decoration ${animations.transitionTiming} linear;
 
         &:focus {
@@ -97,7 +100,8 @@ export const StyledButton = styled.button`
         border: none;
         border-radius: 0;
         overflow: visible;
-        transition: color ${animations.transitionTiming} linear,
+        transition:
+          color ${animations.transitionTiming} linear,
           text-decoration ${animations.transitionTiming} linear;
       `;
     }
@@ -110,7 +114,7 @@ export const StyledButton = styled.button`
     const smallShadow = "0px 5px 7px";
     let boxShadow = `${largeShadow} ${rgba(
       theme.secondary,
-      0.26
+      0.26,
     )}, ${smallShadow} ${rgba(theme.secondary, 0.35)}`;
     let opacity = "1";
 
@@ -148,8 +152,16 @@ export const StyledButton = styled.button`
     if (variant === "primary" || variant === "light") {
       boxShadow = `${largeShadow} ${rgba(
         theme.primary,
-        0.26
+        0.26,
       )}, ${smallShadow} ${rgba(theme.primary, 0.35)}`;
+    }
+
+    if (!backgroundColor) {
+      backgroundColor = theme.white;
+    }
+
+    if (!borderColor) {
+      borderColor = theme.white;
     }
 
     return css`
@@ -209,7 +221,7 @@ export const Button = React.forwardRef(
         {props.variant === "link" && <StyledCustomIcon />}
       </StyledButton>
     );
-  }
+  },
 );
 Button.displayName = "Button";
 
