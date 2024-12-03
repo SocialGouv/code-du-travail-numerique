@@ -7,6 +7,7 @@ import { A11yLink } from "../../common/A11yLink";
 
 import DisplayContentContribution, {
   ContentSP,
+  numberLevel,
 } from "./DisplayContentContribution";
 import { getLabelBySource } from "@socialgouv/cdtn-utils";
 
@@ -14,7 +15,7 @@ type Props = {
   contribution:
     | ElasticSearchContributionGeneric
     | ElasticSearchContributionConventionnelle;
-  titleLevel: number;
+  titleLevel: numberLevel;
 };
 
 export const ContributionContent = ({ contribution, titleLevel }: Props) => {

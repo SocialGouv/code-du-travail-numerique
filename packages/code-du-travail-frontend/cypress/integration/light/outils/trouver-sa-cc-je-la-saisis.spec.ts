@@ -1,6 +1,7 @@
 describe("Outil - Trouver sa convention collective", () => {
   it("Recherche de convention collective je la saisis", () => {
     cy.visit("/outils/convention-collective");
+    cy.checkNoIndex(false);
     cy.checkCanonical("/outils/convention-collective");
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Trouver sa convention collective")

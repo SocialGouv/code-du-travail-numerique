@@ -1,5 +1,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Button from "@codegouvfr/react-dsfr/Button";
+import { css } from "@styled-system/css";
 
 type Props = {
   navigationUrl?: string;
@@ -10,15 +11,15 @@ export const AgreementSearchIntro = ({
 }: Props) => {
   return (
     <>
-      <div className={`${fr.cx("fr-mt-2w", "fr-highlight")}`}>
-        <p>
+      <div className={`${fr.cx("fr-mt-2w", "fr-ml-md-15v")}`}>
+        <p className={Paragraph}>
           La convention collective est un texte conclu au niveau d&apos;une
-          branche d&apos;activité (Ex: Transports routiers). Elle adapte les
-          règles du Code du travail sur des points précis, en fonction des
+          branche d&apos;activité (Ex&nbsp;: Transports routiers). Elle adapte
+          les règles du Code du travail sur des points précis, en fonction des
           situations particulières de la branche (primes, congés, salaires
           minima, préavis, prévoyance...)
         </p>
-        <p className={fr.cx("fr-text--bold", "fr-mb-2w")}>
+        <p className={`${fr.cx("fr-text--bold", "fr-mb-2w")} ${Paragraph}`}>
           Vous pouvez retrouver le nom de votre convention collective sur votre
           bulletin de paie ou sur votre contrat de travail.
         </p>
@@ -30,6 +31,7 @@ export const AgreementSearchIntro = ({
           "fr-px-0",
           "fr-px-md-4w",
           "fr-px-1w",
+          "fr-mt-5w",
           "fr-mb-0"
         )}`}
       >
@@ -70,3 +72,7 @@ export const AgreementSearchIntro = ({
     </>
   );
 };
+
+const Paragraph = css({
+  fontSize: "18px !important",
+});

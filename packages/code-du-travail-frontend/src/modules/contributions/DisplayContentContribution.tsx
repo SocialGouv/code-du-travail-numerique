@@ -10,10 +10,12 @@ import parse, {
 } from "html-react-parser";
 import { xssWrapper } from "../../lib";
 import Alert from "@codegouvfr/react-dsfr/Alert";
-import Table from "@codegouvfr/react-dsfr/Table";
 import { ElementType } from "react";
 import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
 import { v4 as generateUUID } from "uuid";
+import { fr } from "@codegouvfr/react-dsfr";
+
+export type numberLevel = 2 | 3 | 4 | 5 | 6;
 
 export const ContentSP = ({ raw, titleLevel }) => {
   return (
@@ -30,8 +32,15 @@ export const ContentSP = ({ raw, titleLevel }) => {
   );
 };
 
-const mapItem = (titleLevel: number, domNode: Element, summary: Element) => ({
-  content: domToReact(domNode.children as DOMNode[], options(titleLevel + 1)),
+const mapItem = (
+  titleLevel: numberLevel,
+  domNode: Element,
+  summary: Element
+) => ({
+  content: domToReact(
+    domNode.children as DOMNode[],
+    options((titleLevel + 1) as numberLevel)
+  ),
   title: domToReact(summary.children as DOMNode[], {
     transform: (reactNode, domNode) => {
       // @ts-ignore
@@ -45,14 +54,15 @@ const mapItem = (titleLevel: number, domNode: Element, summary: Element) => ({
     trim: true,
   }),
 });
-const mapToAccordion = (titleLevel: number, items) => {
-  const props = titleLevel <= 6 ? { titleLevel: titleLevel } : {};
+const mapToAccordion = (titleLevel: numberLevel, items) => {
+  const props = titleLevel <= 6 ? { titleLevel } : {};
 
   return (
     <AccordionWithAnchor
       {...props}
       data-testid="contrib-accordion"
       items={items.map((item) => ({ ...item, id: generateUUID() }))}
+      titleAs={`h${titleLevel}`}
     />
   );
 };
@@ -104,23 +114,48 @@ const mapTbody = (tbody: Element) => {
     }
   }
 
+  const numberLine = tbody.children.length;
   return (
-    <table>
-      {theadChildren.length > 0 && (
-        <thead>
-          {theadChildren.map((child, index) => (
-            <tr key={`tr-${index}`}>
-              {domToReact(child.children as DOMNode[], { trim: true })}
-            </tr>
-          ))}
-        </thead>
-      )}
-      <tbody>{domToReact(tbody.children as DOMNode[], { trim: true })}</tbody>
-    </table>
+    <div className={"fr-table--md fr-table fr-table"}>
+      <div className="fr-table__wrapper">
+        <div className="fr-table__container">
+          <div className="fr-table__content">
+            <table>
+              {theadChildren.length > 0 && (
+                <thead>
+                  {theadChildren.map((child, rowIndex) => {
+                    return (
+                      <tr key={`tr-${rowIndex}`}>
+                        {domToReact(
+                          child.children.map((c, columnIndex) => ({
+                            ...c,
+                            name:
+                              (rowIndex === 0 && columnIndex === 0) ||
+                              numberLine !== 0
+                                ? "th"
+                                : "td",
+                          })) as DOMNode[],
+                          {
+                            trim: true,
+                          }
+                        )}
+                      </tr>
+                    );
+                  })}
+                </thead>
+              )}
+              <tbody>
+                {domToReact(tbody.children as DOMNode[], { trim: true })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
-function getItem(domNode: Element, titleLevel: number) {
+function getItem(domNode: Element, titleLevel: numberLevel) {
   const summary = getFirstElementChild(domNode);
   if (summary && summary.name === "summary") {
     const mapI = mapItem(titleLevel, domNode, summary);
@@ -132,7 +167,7 @@ function renderChildrenWithNoTrim(domNode) {
   return domToReact(domNode.children as DOMNode[]);
 }
 
-const getHeadingElement = (titleLevel: number, domNode) => {
+const getHeadingElement = (titleLevel: numberLevel, domNode) => {
   const Tag = ("h" + titleLevel) as ElementType;
   return titleLevel <= 6 ? (
     <Tag>{renderChildrenWithNoTrim(domNode)}</Tag>
@@ -141,7 +176,7 @@ const getHeadingElement = (titleLevel: number, domNode) => {
   );
 };
 
-const options = (titleLevel: number): HTMLReactParserOptions => {
+const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
   let accordionTitleLevel = titleLevel;
 
   return {
@@ -153,7 +188,7 @@ const options = (titleLevel: number): HTMLReactParserOptions => {
         }
         if (domNode.name === "span" && domNode.attribs.class === "sub-title") {
           accordionTitleLevel = titleLevel + 1;
-          return getHeadingElement(titleLevel + 1, domNode);
+          return getHeadingElement((titleLevel + 1) as numberLevel, domNode);
         }
         if (domNode.name === "details") {
           const items: any[] = [];
@@ -188,8 +223,9 @@ const options = (titleLevel: number): HTMLReactParserOptions => {
         if (domNode.name === "div" && domNode.attribs.class === "alert") {
           return (
             <Alert
-              severity="warning"
+              severity="info"
               small
+              className={fr.cx("fr-mb-2w")}
               description={domToReact(domNode.children as DOMNode[], {
                 trim: true,
               })}
@@ -219,7 +255,7 @@ const options = (titleLevel: number): HTMLReactParserOptions => {
 
 type Props = {
   content: string;
-  titleLevel: number;
+  titleLevel: numberLevel;
 };
 const DisplayContentContribution = ({
   content,

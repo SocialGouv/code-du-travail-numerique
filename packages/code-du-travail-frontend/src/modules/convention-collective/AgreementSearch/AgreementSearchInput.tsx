@@ -3,7 +3,6 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { ReactNode, useState } from "react";
-import { css } from "@styled-system/css";
 
 import { Autocomplete } from "../../common/Autocomplete/Autocomplete";
 import { Agreement } from "../../../outils/types";
@@ -120,18 +119,18 @@ export const AgreementSearchInput = ({
         {searchState === "notFoundSearch" && (
           <Alert
             className={fr.cx("fr-mt-2w")}
-            title="Vous ne trouvez pas votre convention collective ?"
+            title="Vous ne trouvez pas votre convention collective&nbsp;?"
             description={
               <>
-                <p>Il peut y avoir plusieurs explications à cela :</p>
+                <p>Il peut y avoir plusieurs explications à cela&nbsp;:</p>
                 <ul>
                   <li>
-                    Votre convention collective a un autre code : si vous le
-                    pouvez, utilisez le numéro Siret de votre entreprise. Ce
+                    Votre convention collective a un autre code&nbsp;: si vous
+                    le pouvez, utilisez le numéro Siret de votre entreprise. Ce
                     dernier doit être présent sur votre bulletin de paie.
                   </li>
                   <li>
-                    Votre convention collective a un statut particulier :
+                    Votre convention collective a un statut particulier&nbsp;:
                     administration ou établissements publics, associations,
                     secteur agricole, La Poste, La Croix Rouge etc.
                   </li>

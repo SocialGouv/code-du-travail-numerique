@@ -92,9 +92,9 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
                 alt="Personnalisez la réponse avec votre convention collective"
                 className={fr.cx("fr-unhidden-md", "fr-hidden")}
               />
-              <h1 className={fr.cx("fr-h3", "fr-mt-1w", "fr-mb-1w")}>
+              <span className={fr.cx("fr-h3", "fr-mt-1w", "fr-mb-1w")}>
                 Personnalisez la réponse avec votre convention collective
-              </h1>
+              </span>
             </div>
             <div>
               <AgreementSearchForm
@@ -127,13 +127,14 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
         ) : (
           <>
             <div className={"fr-grid-row"}>
-              <h1 className={fr.cx("fr-h3", "fr-mt-1w", "fr-mb-1w")}>
+              <span className={fr.cx("fr-h3", "fr-mt-1w", "fr-mb-1w")}>
                 Réponse personnalisée pour la convention collective
-              </h1>
+              </span>
             </div>
             <Card
               title={`${(contribution as ElasticSearchContributionConventionnelle).ccnShortTitle} IDCC${contribution.idcc}`}
               size="small"
+              titleAs="h2"
               className={fr.cx("fr-mt-2w")}
               classes={{
                 content: fr.cx("fr-p-2w"),
@@ -188,7 +189,7 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
                         | ElasticSearchContributionGeneric
                         | ElasticSearchContributionConventionnelle
                     }
-                    titleLevel={3}
+                    titleLevel={2}
                   ></ContributionContent>
                 </div>
                 <Feedback></Feedback>
