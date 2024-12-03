@@ -23,9 +23,9 @@ import AccordionWrapper from "./Accordion";
 import SectionWithTitle from "./SectionWithTitle";
 
 export const ElementBuilder = ({
-  data,
-  headingLevel = 0,
-}: {
+                                 data,
+                                 headingLevel = 0,
+                               }: {
   data: FicheSPData | FicheSPData[];
   headingLevel?: number;
 }) => {

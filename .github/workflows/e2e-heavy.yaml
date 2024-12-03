@@ -49,15 +49,9 @@ jobs:
             packages/code-du-travail-frontend/cypress/screenshots
       - name: Send message to mattermost when done
         uses: mattermost/action-mattermost-notify@master
-        if: always()
-        with:
-          MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
-          TEXT: |-
-            Les tests automatiques e2e sont terminés: **${{ job.status }}** ([logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})).
-      - name: Ping the team when failed
-        uses: mattermost/action-mattermost-notify@master
         if: failure()
         with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
           TEXT: |-
-            Tests e2e (heavy + light) en échec
+            Tests e2e (heavy + light): **${{ job.status }}** ([logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})) ⚠️
+

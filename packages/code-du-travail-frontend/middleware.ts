@@ -18,6 +18,7 @@ export function middleware(request) {
   ).trim();
 
   const requestHeaders = new Headers(request.headers);
+  requestHeaders.set("x-url", request.nextUrl.pathname);
   requestHeaders.set("x-nonce", nonce);
   requestHeaders.set(
     "Content-Security-Policy",

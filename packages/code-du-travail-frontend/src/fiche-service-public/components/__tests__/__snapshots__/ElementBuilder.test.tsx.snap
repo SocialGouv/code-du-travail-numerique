@@ -6,7 +6,7 @@ exports[`<ElementBuilder /> does not render anything when element name is not re
 
 exports[`<ElementBuilder /> does render several elements 1`] = `
 <div>
-  Texte
+  Chapitre
   SousChapitre
   <i>
     Expression (inside i)
@@ -31,22 +31,22 @@ exports[`<ElementBuilder /> does render several elements 1`] = `
 exports[`<ElementBuilder /> does render stuff inside a styled block 1`] = `
 <div>
   <div
-    class="fr-alert fr-alert--info fr-mb-2w"
+    class="sc-2a0a4b0a-0 sc-fb4ce9da-0 dLOZmV bDyXMm"
   >
     stuff 0
   </div>
   <div
-    class="fr-alert fr-alert--info fr-mb-2w"
+    class="sc-2a0a4b0a-0 sc-fb4ce9da-0 dLOZmV bDyXMm"
   >
     stuff 1
   </div>
   <div
-    class="fr-alert fr-alert--warning fr-mb-2w"
+    class="sc-2a0a4b0a-0 sc-fb4ce9da-0 dLOZmV bDyXMm"
   >
     stuff 2
   </div>
   <div
-    class="fr-alert fr-alert--info fr-mb-2w"
+    class="sc-2a0a4b0a-0 sc-fb4ce9da-0 dLOZmV bDyXMm"
   >
     stuff 3
   </div>

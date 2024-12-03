@@ -1,8 +1,8 @@
 "use client";
 
 import { fr } from "@codegouvfr/react-dsfr";
+import { css } from "@styled-system/css";
 import React from "react";
-import { css } from "../../../styled-system/css";
 
 export const ListWithArrow = ({ items }: { items: JSX.Element[] }) => {
   return (

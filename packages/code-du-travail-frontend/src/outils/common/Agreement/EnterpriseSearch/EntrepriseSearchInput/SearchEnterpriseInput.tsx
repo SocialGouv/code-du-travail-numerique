@@ -17,6 +17,7 @@ import {
   LocationSearchInput,
 } from "../Location/Search";
 import { Error } from "../../../ErrorField";
+import { push as matopush } from "@socialgouv/matomo-next";
 
 type Props = {
   searchParams?: SearchParams;
@@ -73,6 +74,9 @@ export const SearchEnterpriseInput = ({
           <InfoBulle
             title={"Qu’est ce qu’un n° Siret ou Siren  ?"}
             isDisabled={isDisabled}
+            onVisibilityChange={() => {
+              matopush(["trackEvent", "outil", `click_tooltip_entreprise`]);
+            }}
           >
             <p>
               Le numéro Siren est un{" "}

@@ -16,6 +16,7 @@ import {
   StyledList,
   StyledInput,
 } from "../../../../../search/SearchBar";
+import { push as matopush } from "@socialgouv/matomo-next";
 
 type Props = {
   onSelectAgreement: (agreement: Agreement) => void;
@@ -84,7 +85,12 @@ export const SearchAgreementInput = ({
           (champ obligatoire)
         </Text>
       </InlineLabel>
-      <InfoBulle title="Qu'est ce qu'un IDCC">
+      <InfoBulle
+        title="Qu'est ce qu'un IDCC"
+        onVisibilityChange={() => {
+          matopush(["trackEvent", "outil", `click_tooltip_cc`]);
+        }}
+      >
         <p>
           L’Identifiant de la Convention Collective (IDCC) est un numéro unique
           de <strong>4 chiffres</strong> déterminant chaque convention

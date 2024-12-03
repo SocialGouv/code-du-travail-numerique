@@ -3,6 +3,83 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.166.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.165.0...v4.166.0) (2024-11-28)
+
+
+### Bug Fixes
+
+* **contribution:** `trim` à `false` sur les tables ([#6324](https://github.com/SocialGouv/code-du-travail-numerique/issues/6324)) ([d957c8f](https://github.com/SocialGouv/code-du-travail-numerique/commit/d957c8fe26a03e75151f587bdb7cfbcca2ab387a))
+* **fiches-mt:** ajout du parsing entre deux balises ([#6321](https://github.com/SocialGouv/code-du-travail-numerique/issues/6321)) ([05580fd](https://github.com/SocialGouv/code-du-travail-numerique/commit/05580fd81d1843a917d5449a88cd30524ff648c5))
+* **polyfills:** ajout du replaceAll de manière globale ([#6311](https://github.com/SocialGouv/code-du-travail-numerique/issues/6311)) ([cd1bf5c](https://github.com/SocialGouv/code-du-travail-numerique/commit/cd1bf5ce27a14e1fe55f2508457d34c051bb3e0b))
+* **tests:** ignorer les fichiers avec `.script` ([136ec7a](https://github.com/SocialGouv/code-du-travail-numerique/commit/136ec7a8da61cae6a1ccd63ec9202c180842714f))
+
+
+### Features
+
+* support de la version 3.4 des fiches SP ([#6327](https://github.com/SocialGouv/code-du-travail-numerique/issues/6327)) ([34a2210](https://github.com/SocialGouv/code-du-travail-numerique/commit/34a2210e9f2917ad7a2692649dc3b2fdc525b139))
+* **theme:** gestion du dark mode sur les widgets ([#6275](https://github.com/SocialGouv/code-du-travail-numerique/issues/6275)) ([a59bb29](https://github.com/SocialGouv/code-du-travail-numerique/commit/a59bb29df50dd1b5815f0eb3be0b15d28c09d71e))
+
+
+
+
+
+## [4.165.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.165.0...v4.165.1) (2024-11-28)
+
+**Note:** Version bump only for package @socialgouv/code-du-travail
+
+
+
+
+
+# [4.165.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.164.2...v4.165.0) (2024-11-25)
+
+
+### Bug Fixes
+
+* **ci:** mis à jour des messages mattermost pour les e2e => retrait des doublons quand les tests fails ([#6317](https://github.com/SocialGouv/code-du-travail-numerique/issues/6317)) ([4ab71bf](https://github.com/SocialGouv/code-du-travail-numerique/commit/4ab71bfd48a4c3830d03454f8461d2314e84b25c))
+
+
+### Features
+
+* ajout de redirections pour les nouvelles CC ([#6313](https://github.com/SocialGouv/code-du-travail-numerique/issues/6313)) ([4d9fac3](https://github.com/SocialGouv/code-du-travail-numerique/commit/4d9fac375ecb0c9eacfb4a40ac6b8e12c7ee88f0))
+
+
+
+
+
+## [4.164.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.164.1...v4.164.2) (2024-11-22)
+
+
+### Bug Fixes
+
+* contenu lié de type SP ne renvoient plus chez nous ([#6314](https://github.com/SocialGouv/code-du-travail-numerique/issues/6314)) ([91a41f9](https://github.com/SocialGouv/code-du-travail-numerique/commit/91a41f9824fa56871e9f9629bf0e80b0d50d6b3e))
+
+
+
+
+
+## [4.164.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.164.0...v4.164.1) (2024-11-18)
+
+
+### Bug Fixes
+
+* **fiches-mt:** modication de la canonical ([#6306](https://github.com/SocialGouv/code-du-travail-numerique/issues/6306)) ([cf296a8](https://github.com/SocialGouv/code-du-travail-numerique/commit/cf296a8f382b875a148703837309118bf286c42e))
+
+
+
+
+
+# [4.164.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.163.0...v4.164.0) (2024-11-15)
+
+
+### Features
+
+* ajout d'events pour suivre les clicks sur des aides ([#6303](https://github.com/SocialGouv/code-du-travail-numerique/issues/6303)) ([f077b10](https://github.com/SocialGouv/code-du-travail-numerique/commit/f077b1019ea3eec13716ffc196fa464f181842d7))
+
+
+
+
+
 # [4.163.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.162.0...v4.163.0) (2024-11-13)
 
 
