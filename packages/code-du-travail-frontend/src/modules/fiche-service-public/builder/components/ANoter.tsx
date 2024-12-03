@@ -12,15 +12,8 @@ export const ANoter = ({
   headingLevel: number;
 }) => {
   const title = getInChildrenByName(data, "Titre");
-  const titleText = title && getText(title);
   return (
-    <div
-      className={
-        titleText === "Exemple"
-          ? fr.cx("fr-highlight")
-          : fr.cx("fr-alert", "fr-alert--info", "fr-mb-2w")
-      }
-    >
+    <div className={fr.cx("fr-alert", "fr-alert--info", "fr-mb-2w")}>
       {title && <p className={fr.cx("fr-text--bold")}>{getText(title)}</p>}
       <ElementBuilder data={filterOutTitle(data)} headingLevel={headingLevel} />
     </div>

@@ -1,6 +1,4 @@
 {
-  "type": "element",
-  "name": "Chapitre",
   "children": [
     {
       "type": "element",
@@ -12,7 +10,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Comment faire la demande ?"
+              "text": "titre 0"
             }
           ]
         }
@@ -24,44 +22,25 @@
       "children": [
         {
           "type": "text",
-          "text": "Il y a une procédure pour la victime directe et une autre pour l'ayant-droit de victime."
+          "text": "paragraphe 0"
         }
       ]
     },
     {
       "type": "element",
-      "name": "BlocCas",
-      "attributes": {
-        "affichage": "radio"
-      },
+      "name": "Chapitre",
       "children": [
         {
           "type": "element",
-          "name": "Cas",
+          "name": "Titre",
           "children": [
             {
               "type": "element",
-              "name": "Titre",
+              "name": "Paragraphe",
               "children": [
                 {
                   "type": "text",
-                  "text": "Vous êtes une victime directe"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Introduction",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "La démarche varie suivant que votre maladie a été reconnue comme maladie professionnelle ou non."
-                    }
-                  ]
+                  "text": "titre 1"
                 }
               ]
             }
@@ -69,21 +48,73 @@
         },
         {
           "type": "element",
-          "name": "Cas",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "paragraphe 1-1"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "paragraphe 1-2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Chapitre",
+      "children": [
+        {
+          "type": "element",
+          "name": "Titre",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "titre 2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "paragraphe 2-1"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "paragraphe 2-2"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Texte",
           "children": [
             {
               "type": "element",
               "name": "Titre",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Vous êtes un ayant-droit de victime"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Introduction",
               "children": [
                 {
                   "type": "element",
@@ -91,13 +122,55 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "La procédure varie suivant que la maladie de votre proche a été reconnue comme maladie professionnelle ou non."
+                      "text": "titre 2-1"
                     }
                   ]
                 }
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Chapitre",
+      "children": [
+        {
+          "type": "element",
+          "name": "Titre",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "titre 3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "paragraphe 3-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Paragraphe",
+      "children": [
+        {
+          "type": "text",
+          "text": "paragraphe 4"
         }
       ]
     }

@@ -1,11 +1,11 @@
 import React from "react";
 
 import { filterOutTitle, getInChildrenByName, getText } from "../utils";
-import { AccordionWithAnchor } from "../../modules/common/AccordionWithAnchor";
 import { ElementBuilder } from "./ElementBuilder";
 import { getTitleLevel } from "./Title";
 import { FicheSPDataChapitre } from "../type";
 import SectionWithTitle from "./SectionWithTitle";
+import { AccordionWithAnchor } from "../../../common/AccordionWithAnchor";
 
 export const AccordionWrapper = ({
   data,

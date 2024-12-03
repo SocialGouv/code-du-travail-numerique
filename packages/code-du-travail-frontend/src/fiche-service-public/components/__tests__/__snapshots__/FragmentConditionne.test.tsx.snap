@@ -3,215 +3,136 @@
 exports[`FragmentConditionne Should display element within 1`] = `
 <div>
   <div
-    class="fr-accordions-group"
-    data-fr-group="false"
+    class="sc-e32628d4-0 eFvDQP"
   >
-    <section
-      class="fr-accordion"
+    <h2
+      class="sc-d6e72754-0 egzXkL"
     >
-      <h2
-        class="fr-accordion__title"
+      <span
+        class="sc-a4d7a179-0 gGBEJx"
+      />
+      Comment le saisir le médiateur de l'apprentissage ?
+    </h2>
+  </div>
+  <p>
+    Le médiateur de l'apprentissage à saisir dépend de l'activité de l'entreprise. Il est désigné par la chambre consulaire.
+  </p>
+  <div
+    class="sc-ac4a133f-0 fvNPWb"
+    data-rttabs="true"
+  >
+    <div
+      class="sc-ac4a133f-1 fxZtdi"
+    >
+      <ul
+        class="sc-ac4a133f-2 fHCeXh"
+        role="tablist"
       >
-        <button
-          aria-controls="comment-le-saisir-le-mediateur-de-lapprentissage-collapse"
-          aria-expanded="false"
-          class="fr-accordion__btn"
-          id="comment-le-saisir-le-mediateur-de-lapprentissage__toggle-btn"
-          type="button"
+        <li
+          aria-controls="react-tabs-1"
+          aria-disabled="false"
+          aria-selected="true"
+          class="sc-ac4a133f-3 faZqNG react-tabs__tab--selected"
+          data-rttab="true"
+          id="react-tabs-0"
+          role="tab"
+          tabindex="0"
         >
-          Comment le saisir le médiateur de l'apprentissage ?
-        </button>
-      </h2>
+          Commerce - industrie
+        </li>
+        <li
+          aria-controls="react-tabs-3"
+          aria-disabled="false"
+          aria-selected="false"
+          class="sc-ac4a133f-3 faZqNG"
+          data-rttab="true"
+          id="react-tabs-2"
+          role="tab"
+        >
+          Artisanat
+        </li>
+        <li
+          aria-controls="react-tabs-5"
+          aria-disabled="false"
+          aria-selected="false"
+          class="sc-ac4a133f-3 faZqNG"
+          data-rttab="true"
+          id="react-tabs-4"
+          role="tab"
+        >
+          Agriculture
+        </li>
+        <li
+          aria-controls="react-tabs-7"
+          aria-disabled="false"
+          aria-selected="false"
+          class="sc-ac4a133f-3 faZqNG"
+          data-rttab="true"
+          id="react-tabs-6"
+          role="tab"
+        >
+          Secteur public
+        </li>
+      </ul>
+    </div>
+    <div
+      aria-labelledby="react-tabs-0"
+      class="sc-ac4a133f-4 haGXHZ react-tabs__tab-panel--selected"
+      id="react-tabs-1"
+      role="tabpanel"
+    >
       <div
-        class="fr-collapse"
-        id="comment-le-saisir-le-mediateur-de-lapprentissage-collapse"
+        class="sc-8dcb2faa-0 gxfPDw"
+      >
+        <h2
+          class="sc-b879fc2d-0 hyiHle"
+        >
+          Commerce - industrie
+        </h2>
+      </div>
+      <div
+        class="sc-ac4a133f-5 yflIk"
       >
         <p>
-          Le médiateur de l'apprentissage à saisir dépend de l'activité de l'entreprise. Il est désigné par la chambre consulaire.
+          Il faut saisir la chambre de commerce et d'industrie.
         </p>
         <div
-          class="fr-tabs"
-          id="fr-tabs-:r1:"
+          class="sc-b28d9feb-0 jhRKAI"
         >
-          <ul
-            class="fr-tabs__list"
-            role="tablist"
+          <strong
+            class="sc-b28d9feb-1 FSydE"
           >
-            <li
-              role="presentation"
-            >
-              <button
-                aria-controls="tabpanel-:r2:-0-panel"
-                aria-selected="true"
-                class="fr-tabs__tab fr-tabs__tab--icon-left"
-                id="tabpanel-:r2:-0"
-                role="tab"
-                tabindex="0"
-                type="button"
-              >
-                <h3
-                  class="fr-text--md"
-                >
-                  Commerce - industrie
-                </h3>
-              </button>
-            </li>
-            <li
-              role="presentation"
-            >
-              <button
-                aria-controls="tabpanel-:r2:-1-panel"
-                aria-selected="false"
-                class="fr-tabs__tab fr-tabs__tab--icon-left"
-                id="tabpanel-:r2:-1"
-                role="tab"
-                tabindex="-1"
-                type="button"
-              >
-                <h3
-                  class="fr-text--md"
-                >
-                  Artisanat
-                </h3>
-              </button>
-            </li>
-            <li
-              role="presentation"
-            >
-              <button
-                aria-controls="tabpanel-:r2:-2-panel"
-                aria-selected="false"
-                class="fr-tabs__tab fr-tabs__tab--icon-left"
-                id="tabpanel-:r2:-2"
-                role="tab"
-                tabindex="-1"
-                type="button"
-              >
-                <h3
-                  class="fr-text--md"
-                >
-                  Agriculture
-                </h3>
-              </button>
-            </li>
-            <li
-              role="presentation"
-            >
-              <button
-                aria-controls="tabpanel-:r2:-3-panel"
-                aria-selected="false"
-                class="fr-tabs__tab fr-tabs__tab--icon-left"
-                id="tabpanel-:r2:-3"
-                role="tab"
-                tabindex="-1"
-                type="button"
-              >
-                <h3
-                  class="fr-text--md"
-                >
-                  Secteur public
-                </h3>
-              </button>
-            </li>
-          </ul>
-          <div
-            aria-labelledby="tabpanel-:r2:-0"
-            class="fr-tabs__panel fr-tabs__panel--selected"
-            id="tabpanel-:r2:-0-panel"
-            role="tabpanel"
-            tabindex="0"
+            Ou s'adresser ?
+          </strong>
+          <a
+            aria-label="Chambre de commerce et d'industrie (CCI) (nouvelle fenêtre)"
+            href="http://www.cci.fr/web/organisation-du-reseau/annuaire"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            <p>
-              Il faut saisir la chambre de commerce et d'industrie.
-            </p>
-            <div
-              class="fr-callout"
-            >
-              <p
-                class="fr-text--bold"
-              >
-                Où s'adresser ?
-              </p>
-              <a
-                href="http://www.cci.fr/web/organisation-du-reseau/annuaire"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Chambre de commerce et d'industrie (CCI)
-              </a>
-            </div>
-          </div>
-          <div
-            aria-labelledby="tabpanel-:r2:-1"
-            class="fr-tabs__panel fr-tabs__panel"
-            id="tabpanel-:r2:-1-panel"
-            role="tabpanel"
-            tabindex="0"
-          >
-            <p>
-              Il faut saisir la chambre des métiers et de l'artisanat.
-            </p>
-            <div
-              class="fr-callout"
-            >
-              <p
-                class="fr-text--bold"
-              >
-                Où s'adresser ?
-              </p>
-              <a
-                href="https://www.artisanat.fr/reseau-des-cma/un-reseau-de-proximite/annuaire-des-cma"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Chambre de métiers et de l'artisanat (CMA)
-              </a>
-            </div>
-          </div>
-          <div
-            aria-labelledby="tabpanel-:r2:-2"
-            class="fr-tabs__panel fr-tabs__panel"
-            id="tabpanel-:r2:-2-panel"
-            role="tabpanel"
-            tabindex="0"
-          >
-            <p>
-              Il faut saisir la chambre d'agriculture.
-            </p>
-            <div
-              class="fr-callout"
-            >
-              <p
-                class="fr-text--bold"
-              >
-                Où s'adresser ?
-              </p>
-              <a
-                href="https://chambres-agriculture.fr/chambres-dagriculture/nous-connaitre/lannuaire-des-chambres-dagriculture/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Chambre d'agriculture
-              </a>
-            </div>
-          </div>
-          <div
-            aria-labelledby="tabpanel-:r2:-3"
-            class="fr-tabs__panel fr-tabs__panel"
-            id="tabpanel-:r2:-3-panel"
-            role="tabpanel"
-            tabindex="0"
-          >
-            <p>
-              Un service est chargé de la médiation pour les apprentis du secteur public non industriel et non commercial.
-            </p>
-            <p>
-              Dans certains ministères des médiateurs ont été nommés. Sinon, la médiation est assurée par le service des ressources humaines de proximité dont relève l'apprenti.
-            </p>
-          </div>
+            Chambre de commerce et d'industrie (CCI)
+          </a>
         </div>
       </div>
-    </section>
+    </div>
+    <div
+      aria-labelledby="react-tabs-2"
+      class="sc-ac4a133f-4 haGXHZ"
+      id="react-tabs-3"
+      role="tabpanel"
+    />
+    <div
+      aria-labelledby="react-tabs-4"
+      class="sc-ac4a133f-4 haGXHZ"
+      id="react-tabs-5"
+      role="tabpanel"
+    />
+    <div
+      aria-labelledby="react-tabs-6"
+      class="sc-ac4a133f-4 haGXHZ"
+      id="react-tabs-7"
+      role="tabpanel"
+    />
   </div>
 </div>
 `;

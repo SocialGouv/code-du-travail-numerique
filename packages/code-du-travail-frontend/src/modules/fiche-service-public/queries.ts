@@ -5,7 +5,7 @@ import {
   DocumentElasticWithSource,
   FicheServicePublicDoc,
 } from "@socialgouv/cdtn-types";
-import { FicheSPData } from "../../fiche-service-public/type";
+import { FicheSPData } from "./builder/type";
 
 export type ElasticFicheServicePublic = DocumentElasticWithSource<
   FicheServicePublicDoc,

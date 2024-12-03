@@ -1347,7 +1347,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                par semaine.
             </p>
             <div
-              class="fr-highlight"
+              class="fr-alert fr-alert--info fr-mb-2w"
             >
               <p
                 class="fr-text--bold"

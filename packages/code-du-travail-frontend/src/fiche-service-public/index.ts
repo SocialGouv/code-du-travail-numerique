@@ -1,1 +1,1 @@
-export { ElementBuilder as FicheServicePublic } from "./components/ElementBuilder";
+export { FicheServicePublic } from "./components/Fiche.js";

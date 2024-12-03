@@ -5,9 +5,9 @@ import { ElasticFicheServicePublic } from "./queries";
 import { ContainerRichWithBreadcrumbs } from "../layout/ContainerRichWithBreadcrumbs";
 import { SourceData } from "../layout/SourceData";
 import "../../../public/static/fiches-mt.css";
-import { ElementBuilder } from "../../fiche-service-public/components/ElementBuilder";
+import { FicheServicePublic } from "./builder";
 import { ReferenceList } from "../common/ReferencesList";
-import { FicheSPData } from "../../fiche-service-public/type";
+import { FicheSPData } from "./builder/type";
 import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
 
 type Props = {
@@ -49,7 +49,7 @@ export function FicheServicePublicContainer({
       />
 
       <div className={fr.cx("fr-mb-5w")}>
-        <ElementBuilder data={raw.children} />
+        <FicheServicePublic data={raw.children} />
 
         {referencedTexts?.length > 0 && (
           <AccordionWithAnchor

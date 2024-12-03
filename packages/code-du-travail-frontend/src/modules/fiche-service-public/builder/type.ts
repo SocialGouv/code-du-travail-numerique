@@ -27,7 +27,8 @@ export type FicheSPDataElement = {
     | "Exposant"
     | "LienIntra"
     | "LienInterne"
-    | "Texte";
+    | "Texte"
+    | "Complement";
 };
 
 export type FicheSPData =
@@ -48,7 +49,8 @@ export type FicheSPData =
   | FicheSPDataServiceEnLigne
   | FicheSPDataChapitre
   | FicheSPDataTableau
-  | FicheSPDataTableauChildren;
+  | FicheSPDataTableauChildren
+  | FicheSPDataTitreFlottant;
 
 export type FicheSPDataBlocCas = {
   type: "element";
@@ -67,7 +69,7 @@ export type FicheSPDataParagraphe = {
 export type FicheSPDataWithElementChildren = {
   type: "element";
   children: FicheSPDataElement[];
-  name: "ANoter" | "ASavoir" | "Rappel" | "Cas";
+  name: "ANoter" | "ASavoir" | "Rappel" | "Cas" | "Exemple";
 };
 export type FicheSPDataTableau = {
   type: "element";
@@ -170,4 +172,10 @@ export type FicheSPDataListeSituations = {
   };
   children: FicheSPDataSituation[];
   name: "ListeSituations";
+};
+
+export type FicheSPDataTitreFlottant = {
+  type: "element";
+  children: FicheSPDataParagraphe[];
+  name: "TitreFlottant";
 };

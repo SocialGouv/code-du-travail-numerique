@@ -1,12 +1,7 @@
 "use client";
 import React from "react";
 import { useUIDSeed } from "react-uid";
-import {
-  filterOutTitle,
-  getInChildrenByName,
-  getText,
-  ignoreParagraph,
-} from "../utils";
+import { getText, ignoreParagraph } from "../utils";
 import { LienExterne, LienExterneCommente } from "./LienExterne";
 import List from "./List";
 
@@ -21,11 +16,13 @@ import { ImageComponent as ImageElement } from "./ImageComponent";
 import { FicheSPData } from "../type";
 import AccordionWrapper from "./Accordion";
 import SectionWithTitle from "./SectionWithTitle";
+import TitreFlottant from "./TitreFlottant";
+import Exemple from "./Exemple";
 
 export const ElementBuilder = ({
-                                 data,
-                                 headingLevel = 0,
-                               }: {
+  data,
+  headingLevel = 0,
+}: {
   data: FicheSPData | FicheSPData[];
   headingLevel?: number;
 }) => {
@@ -84,6 +81,8 @@ export const ElementBuilder = ({
       return <Table data={data} headingLevel={headingLevel} />;
     case "Titre":
       return <Title level={headingLevel}>{getText(data)}</Title>;
+    case "TitreFlottant":
+      return <TitreFlottant level={headingLevel} data={data} />;
     case "Avertissement":
     case "Attention":
       return <Avertissement data={data} headingLevel={headingLevel} />;
@@ -91,6 +90,8 @@ export const ElementBuilder = ({
     case "ASavoir":
     case "Rappel":
       return <ANoter data={data} headingLevel={headingLevel} />;
+    case "Exemple":
+      return <Exemple data={data} headingLevel={headingLevel} />;
     case "Cas":
       return <SectionWithTitle data={data} headingLevel={headingLevel} />;
     case "Chapitre":
@@ -101,6 +102,7 @@ export const ElementBuilder = ({
     case "LienIntra":
     case "LienInterne":
     case "Texte":
+    case "Complement":
       return (
         <ElementBuilder data={data.children} headingLevel={headingLevel} />
       );
