@@ -137,8 +137,8 @@ export const EnterpriseAgreementSearchInput = ({
           )}
           hintText={
             <>
-              Ex : Café de la mairie ou 40123778000127 (présent sur la fiche de
-              paie du salarié)
+              Ex&nbsp;: Café de la mairie ou 40123778000127 (présent sur la
+              fiche de paie du salarié)
             </>
           }
           label={<>Nom de votre entreprise ou numéro Siren/Siret</>}
@@ -210,20 +210,21 @@ export const EnterpriseAgreementSearchInput = ({
           )}
           {searchState === "notFoundSearch" && (
             <Alert
-              title="Vous ne trouvez pas votre entreprise ?"
+              title={<>Vous ne trouvez pas votre entreprise&nbsp;?</>}
               description={
                 <>
-                  <p>Il peut y avoir plusieurs explications à cela :</p>
+                  <p>Il peut y avoir plusieurs explications à cela&nbsp;:</p>
                   <ul>
                     <li>
                       Votre entreprise a été enregistrée sous un autre nom ou un
-                      autre code : si vous le pouvez, utilisez son numéro Siret.
-                      Ce dernier doit être présent sur votre bulletin de paie.
+                      autre code&nbsp;: si vous le pouvez, utilisez son numéro
+                      Siret. Ce dernier doit être présent sur votre bulletin de
+                      paie.
                     </li>
                     <li>
-                      Votre entreprise a un statut particulier : administration
-                      ou établissements publics, associations, secteur agricole,
-                      La Poste, La Croix Rouge etc. ;
+                      Votre entreprise a un statut particulier&nbsp;:
+                      administration ou établissements publics, associations,
+                      secteur agricole, La Poste, La Croix Rouge etc.
                     </li>
                     <li>Votre entreprise n’a pas de convention collective.</li>
                   </ul>
@@ -247,9 +248,9 @@ export const EnterpriseAgreementSearchInput = ({
                   : `/outils/convention-collective/entreprise/${enterprise.siren}${getQueries()}`,
               }}
               desc={
-                enterprise.activitePrincipale
-                  ? `Activité : ${enterprise.activitePrincipale}`
-                  : undefined
+                enterprise.activitePrincipale ? (
+                  <>Activité&nbsp;: {enterprise.activitePrincipale}</>
+                ) : undefined
               }
               end={<Badge>{`${enterprise.matching} établissements`}</Badge>}
               size="large"

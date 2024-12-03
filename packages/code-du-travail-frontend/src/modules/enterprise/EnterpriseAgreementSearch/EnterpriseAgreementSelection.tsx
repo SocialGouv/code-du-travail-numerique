@@ -20,18 +20,23 @@ export const EnterpriseAgreementSelection = ({
   return (
     <>
       <h2 className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
-        {enterprise.conventions.length === 0
-          ? `Aucune convention collective n'a été déclarée pour l'entreprise`
-          : enterprise.conventions.length === 1
-            ? `1 convention collective trouvée pour :`
-            : `${enterprise.conventions.length} conventions collectives trouvées pour :`}
+        {enterprise.conventions.length === 0 ? (
+          `Aucune convention collective n'a été déclarée pour l'entreprise`
+        ) : enterprise.conventions.length === 1 ? (
+          <>1 convention collective trouvée pour&nbsp;:</>
+        ) : (
+          <>
+            {enterprise.conventions.length} conventions collectives trouvées
+            pour&nbsp;:
+          </>
+        )}
       </h2>
       <p className={fr.cx("fr-text--bold", "fr-m-0", "fr-mt-2w")}>
         {enterprise.label}
       </p>
       {enterprise.activitePrincipale && (
         <p className={fr.cx("fr-m-0")}>
-          Activité : {enterprise.activitePrincipale}
+          Activité&nbsp;: {enterprise.activitePrincipale}
         </p>
       )}
       <p className={fr.cx("fr-mb-2w")}>{enterprise.address}</p>
