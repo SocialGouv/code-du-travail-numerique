@@ -149,7 +149,7 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
         ui.enterpriseAgreementSearch.resultLines.carrefour.link.query()
       ).toHaveAttribute(
         "href",
-        "/widgets/convention-collective/345130488?q=carrefour"
+        "/widgets/convention-collective/entreprise/345130488?q=carrefour"
       );
       expect(
         ui.enterpriseAgreementSearch.childminder.title.query()

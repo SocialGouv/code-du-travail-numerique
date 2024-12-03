@@ -3,7 +3,6 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { useState } from "react";
-import { css } from "@styled-system/css";
 
 import { Autocomplete } from "../../common/Autocomplete/Autocomplete";
 import { Agreement } from "../../../outils/types";

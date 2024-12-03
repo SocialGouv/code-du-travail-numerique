@@ -1534,7 +1534,7 @@ export const searchWithSiretMockResponse = {
           niveau: "departement",
         },
         convention_collective_renseignee: true,
-        liste_idcc: ["5021", "3228", "9999"],
+        liste_idcc: ["5021", "3228", "9999", "9998"],
         egapro_renseignee: false,
         est_association: false,
         est_bio: false,

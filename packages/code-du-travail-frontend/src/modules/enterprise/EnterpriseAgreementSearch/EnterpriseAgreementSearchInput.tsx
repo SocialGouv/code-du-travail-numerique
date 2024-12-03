@@ -244,7 +244,7 @@ export const EnterpriseAgreementSearchInput = ({
               enlargeLink
               linkProps={{
                 href: widgetMode
-                  ? `/widgets/convention-collective/${enterprise.siren}${getQueries()}`
+                  ? `/widgets/convention-collective/entreprise/${enterprise.siren}${getQueries()}`
                   : `/outils/convention-collective/entreprise/${enterprise.siren}${getQueries()}`,
               }}
               desc={
