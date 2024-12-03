@@ -22,14 +22,14 @@ export const AgreementsIntro = () => {
           </h2>
         </div>
         <div className={`${fr.cx("fr-mt-2w", "fr-ml-md-15v")}`}>
-          <p className={Paragraph}>
+          <p className={fr.cx("fr-text--lg")}>
             La convention collective est un texte conclu au niveau d&apos;une
             branche d&apos;activité (Ex: Transports routiers). Elle adapte les
             règles du Code du travail sur des points précis, en fonction des
             situations particulières de la branche (primes, congés, salaires
             minima, préavis, prévoyance...)
           </p>
-          <p className={`${fr.cx("fr-text--bold", "fr-mb-2w")} ${Paragraph}`}>
+          <p className={`${fr.cx("fr-text--bold", "fr-mb-2w", "fr-text--lg")}`}>
             Vous pouvez retrouver le nom de votre convention collective sur
             votre bulletin de paie ou sur votre contrat de travail.
           </p>
@@ -80,8 +80,4 @@ const block = css({
 
 const ImageContainer = css({
   height: "52px",
-});
-
-const Paragraph = css({
-  fontSize: "18px !important",
 });
