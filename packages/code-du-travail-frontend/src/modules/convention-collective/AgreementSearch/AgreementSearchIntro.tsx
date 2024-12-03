@@ -31,6 +31,7 @@ export const AgreementSearchIntro = ({
           "fr-px-0",
           "fr-px-md-4w",
           "fr-px-1w",
+          "fr-mt-5w",
           "fr-mb-0"
         )}`}
       >
