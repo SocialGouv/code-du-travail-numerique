@@ -1,5 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import { ContainerSimulator } from "../layout/ContainerSimulator";
+import { ContainerSimulator } from "../../layout/ContainerSimulator";
 import { ElasticAgreement } from "@socialgouv/cdtn-types";
 import { AgreementsSection } from "./AgreementsSection";
 import { AgreementsGlossaire } from "./AgreementsGlossaire";

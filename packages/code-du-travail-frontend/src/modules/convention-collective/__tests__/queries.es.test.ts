@@ -1,10 +1,12 @@
 /** @jest-environment node */
 
-import { fetchAgreements } from "../queries";
+import { fetchAllAgreements, fetchAgreementsByCdtnIds } from "../queries";
 
 describe("Conventions collectives", () => {
   it("Récupération de toutes les conventions collectives", async () => {
-    const result = await fetchAgreements(["slug", "title", "num"]);
+    const result = await fetchAllAgreements({
+      fields: ["slug", "title", "num"],
+    });
     expect(result).toEqual([
       {
         num: 843,
@@ -31,5 +33,13 @@ describe("Conventions collectives", () => {
           "Éducation, culture, loisirs et animation au service des territoires (ÉCLAT)",
       },
     ]);
+  });
+
+  it("Récupération des cc filtrées", async () => {
+    const result = await fetchAgreementsByCdtnIds({
+      fields: ["slug"],
+      cdtnIds: ["647c224c9b", "a25dfc974f", "98b9c85542"],
+    });
+    expect(result.length).toEqual(3);
   });
 });

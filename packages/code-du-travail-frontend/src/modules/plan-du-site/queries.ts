@@ -2,7 +2,7 @@ import {
   ContributionElasticDocument,
   ElasticAgreement,
 } from "@socialgouv/cdtn-types";
-import { fetchAgreements } from "../convention-collective/queries";
+import { fetchAllAgreements } from "../convention-collective/queries";
 import { orderByAlpha } from "../utils";
 import { fetchRootThemes } from "../themes";
 import { fetchTools } from "../outils";
@@ -32,10 +32,10 @@ export const fetchSitemapData = async () => {
   const themes = await getAllThemesAndSubThemes();
   const tools = await fetchTools(["slug", "title"]);
   const modeles = await fetchModels(["slug", "title"]);
-  const agreements = await fetchAgreements(
-    ["slug", "shortTitle", "num"],
-    "shortTitle"
-  );
+  const agreements = await fetchAllAgreements({
+    fields: ["slug", "shortTitle", "num"],
+    sortBy: "shortTitle",
+  });
   const informations = await fetchAllInformations(["slug", "title"], "title");
   const contributions = await getAllContributionsGroupByQuestion(agreements);
   const response: GetSitemapPage = {
