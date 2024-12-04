@@ -1,8 +1,6 @@
-// import { Alert, Heading, Table as UITable, theme } from "@socialgouv/cdtn-ui";
-
-import { css } from "@styled-system/css";
 // import { FicheServicePublic } from "../../fiche-service-public";
 import parse, {
+  Text,
   DOMNode,
   domToReact,
   Element,
@@ -99,6 +97,19 @@ const theadMaxRowspan = (tr: Element) => {
   return maxRowspan === -1 ? 1 : maxRowspan;
 };
 
+const getData = (el?: ChildNode) => {
+  if (!el) return "";
+  if (el instanceof Text) {
+    return el.data;
+  } else {
+    let str = "";
+    el.childNodes.forEach((node) => {
+      str += getData(node);
+    });
+    return str;
+  }
+};
+
 const mapTbody = (tbody: Element) => {
   let theadChildren: Element[] = [];
   const firstLine = getFirstElementChild(tbody);
@@ -114,35 +125,37 @@ const mapTbody = (tbody: Element) => {
     }
   }
 
-  const numberLine = tbody.children.length;
   return (
-    <div className={"fr-table--md fr-table fr-table"}>
+    <div className={"fr-table--md fr-table"}>
       <div className="fr-table__wrapper">
         <div className="fr-table__container">
           <div className="fr-table__content">
             <table>
               {theadChildren.length > 0 && (
-                <thead>
-                  {theadChildren.map((child, rowIndex) => {
-                    return (
-                      <tr key={`tr-${rowIndex}`}>
-                        {domToReact(
-                          child.children.map((c, columnIndex) => ({
-                            ...c,
-                            name:
-                              (rowIndex === 0 && columnIndex === 0) ||
-                              numberLine !== 0
-                                ? "th"
-                                : "td",
-                          })) as DOMNode[],
-                          {
-                            trim: true,
-                          }
-                        )}
-                      </tr>
-                    );
-                  })}
-                </thead>
+                <>
+                  {theadChildren[0].children[0] && (
+                    <caption className={fr.cx("fr-hidden")}>
+                      {getData(theadChildren[0].childNodes[0] as any)}
+                    </caption>
+                  )}
+                  <thead>
+                    {theadChildren.map((child, rowIndex) => {
+                      return (
+                        <tr key={`tr-${rowIndex}`}>
+                          {domToReact(
+                            child.children.map((c) => ({
+                              ...c,
+                              name: "th",
+                            })) as DOMNode[],
+                            {
+                              trim: true,
+                            }
+                          )}
+                        </tr>
+                      );
+                    })}
+                  </thead>
+                </>
               )}
               <tbody>
                 {domToReact(tbody.children as DOMNode[], { trim: true })}

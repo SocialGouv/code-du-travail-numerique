@@ -20,6 +20,9 @@ import {
 } from "@socialgouv/cdtn-types";
 import { ContributionElasticDocument } from "./type";
 import { ContributionContent } from "./ContributionContent";
+import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
+import Alert from "@codegouvfr/react-dsfr/Alert";
+import Html from "../common/Html";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
@@ -79,10 +82,20 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
       return <>Vous pouvez consulter les informations générales ci-dessous.</>;
   };
   return (
-    <div className={fr.cx("fr-grid-row--gutters", "fr-my-4w", "fr-my-md-12w")}>
+    <div>
+      <Breadcrumb
+        currentPageLabel={title}
+        homeLinkProps={{
+          href: "/",
+        }}
+        segments={contribution.breadcrumbs.map((breadcrumb) => ({
+          label: breadcrumb.label,
+          linkProps: { href: breadcrumb.slug },
+        }))}
+      />
       <h1 className={fr.cx("fr-mb-6w")}>{title}</h1>
-      <p>Mis à jour le&nbsp;: {date}</p>
-      <div className={`${fr.cx("fr-p-3w")} ${block}`}>
+      <p className={fr.cx("fr-mt-6w")}>Mis à jour le&nbsp;: {date}</p>
+      <div className={`${fr.cx("fr-p-3w", "fr-mt-6w")} ${block}`}>
         {isGeneric ? (
           <>
             <div className={"fr-grid-row"}>
@@ -154,7 +167,7 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
           </>
         )}
       </div>
-      <div className={fr.cx("fr-grid-row")}>
+      <div className={fr.cx("fr-grid-row", "fr-my-6w")}>
         {!isNoCDT && (
           <div
             className={fr.cx(
@@ -204,6 +217,14 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
                   }
                   titleLevel={3}
                 ></ContributionContent>
+                {contribution.messageBlock && (
+                  <div className={fr.cx("fr-alert", "fr-alert--info")}>
+                    <>
+                      <div className={fr.cx("fr-h5")}>Attention</div>
+                      <Html>{contribution.messageBlock}</Html>
+                    </>
+                  </div>
+                )}
               </>
             )}
           </div>

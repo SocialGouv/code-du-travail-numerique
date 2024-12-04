@@ -34,9 +34,7 @@ async function FindAgreementByNamePage() {
 }
 
 const getTool = async () => {
-  const tool: DocumentElasticResult<ElasticTool> = await fetchTool(
-    "convention-collective"
-  );
+  const tool = await fetchTool("convention-collective");
 
   if (!tool) {
     return notFound();
