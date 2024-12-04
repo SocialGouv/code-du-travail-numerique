@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.167.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.166.0...v4.167.0) (2024-12-04)
+
+
+### Bug Fixes
+
+* **replaceAll:** correction de l'erreur sur la page 404 qui load `pandacss` mais qui ne contient pas le `PolyfillComponent` ([b345f9f](https://github.com/SocialGouv/code-du-travail-numerique/commit/b345f9fff67c5bc6158ef8db74edb211e78cef01))
+* **text-wrapping:** change reset from `pandacss` ([#6336](https://github.com/SocialGouv/code-du-travail-numerique/issues/6336)) ([a15cdbc](https://github.com/SocialGouv/code-du-travail-numerique/commit/a15cdbc336dcfae32b63e47a0aaa9e5557464dd6))
+
+
+### Features
+
+* module trouver sa cc ([#6267](https://github.com/SocialGouv/code-du-travail-numerique/issues/6267)) ([847861b](https://github.com/SocialGouv/code-du-travail-numerique/commit/847861bec2b772ec8f7fa426e6ffc79ec86a44e8)), closes [#6079](https://github.com/SocialGouv/code-du-travail-numerique/issues/6079) [#6085](https://github.com/SocialGouv/code-du-travail-numerique/issues/6085) [#6090](https://github.com/SocialGouv/code-du-travail-numerique/issues/6090) [#6082](https://github.com/SocialGouv/code-du-travail-numerique/issues/6082) [#6092](https://github.com/SocialGouv/code-du-travail-numerique/issues/6092) [#6096](https://github.com/SocialGouv/code-du-travail-numerique/issues/6096) [#6099](https://github.com/SocialGouv/code-du-travail-numerique/issues/6099) [#6094](https://github.com/SocialGouv/code-du-travail-numerique/issues/6094)
+
+
+
+
+
 # [4.166.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.165.0...v4.166.0) (2024-11-28)
 
 
