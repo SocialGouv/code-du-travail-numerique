@@ -32,6 +32,9 @@ declare global {
        */
       checkCanonical(value: string): Chainable<Element>;
       checkNoIndex(noIndex: boolean): Chainable<Element>;
+
+      selectByLabel: Chainable<Element>;
+      findByLabel: Chainable<Element>;
     }
   }
 }
