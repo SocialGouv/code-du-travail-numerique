@@ -11,7 +11,7 @@ import { notFound } from "next/navigation";
 export async function generateMetadata({ params }) {
   const { title, type, metaDescription, meta_title, slug } = await getModel(
     params.id,
-    ["title", "meta_title", "type", "metaDescription"]
+    ["title", "meta_title", "type", "metaDescription", "slug"]
   );
   const category = `Modèle ${type !== "fichier" ? `de ${type}` : "à télécharger"}`;
 
