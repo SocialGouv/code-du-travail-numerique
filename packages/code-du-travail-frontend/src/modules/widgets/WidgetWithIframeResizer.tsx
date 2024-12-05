@@ -43,9 +43,3 @@ export function WidgetWithIframeResizer({
     </div>
   );
 }
-
-const noTarget = css({
-  _after: {
-    display: "none !important",
-  },
-});

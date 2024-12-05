@@ -44,9 +44,3 @@ export const ContainerWidget = ({ children }: Props) => {
     </>
   );
 };
-
-const noTarget = css({
-  _after: {
-    display: "none !important",
-  },
-});
