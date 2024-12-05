@@ -99,7 +99,7 @@ export const EnterpriseAgreementSelection = ({
             classes={{
               title: `${fr.cx("fr-h5")} ${CardTitleStyle} ${disabled ? disabledTitle : ""}`,
               content: `${fr.cx("fr-px-2w", "fr-pt-1w", "fr-pb-7v")} ${disabled ? disabledContent : ""}`,
-              desc: fr.cx("fr-mt-1w", "fr-mr-6w"),
+              desc: fr.cx("fr-mt-1w", "fr-mr-8w"),
               end: fr.cx("fr-hidden"),
               root: `${disabled ? disabledRoot : ""}`,
             }}
