@@ -1,0 +1,115 @@
+{
+  "type": "element",
+  "name": "ListeSituations",
+  "attributes": {
+    "affichage": "onglet"
+  },
+  "children": [
+    {
+      "type": "element",
+      "name": "Situation",
+      "children": [
+        {
+          "type": "element",
+          "name": "Titre",
+          "children": [
+            {
+              "type": "text",
+              "text": "CDI"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Texte",
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "titre 1"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "paragraphe 1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Situation",
+      "children": [
+        {
+          "type": "element",
+          "name": "Titre",
+          "children": [
+            {
+              "type": "text",
+              "text": "CDD"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Texte",
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "titre 2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "paragraphe 2-1"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "paragraphe 2-2"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

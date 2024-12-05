@@ -1,0 +1,105 @@
+{
+  "type": "element",
+  "name": "Chapitre",
+  "children": [
+    {
+      "type": "element",
+      "name": "Titre",
+      "children": [
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "Comment faire la demande ?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Paragraphe",
+      "children": [
+        {
+          "type": "text",
+          "text": "Il y a une procédure pour la victime directe et une autre pour l'ayant-droit de victime."
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "BlocCas",
+      "attributes": {
+        "affichage": "radio"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "Cas",
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Vous êtes une victime directe"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Introduction",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "La démarche varie suivant que votre maladie a été reconnue comme maladie professionnelle ou non."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Cas",
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Vous êtes un ayant-droit de victime"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Introduction",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "La procédure varie suivant que la maladie de votre proche a été reconnue comme maladie professionnelle ou non."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
