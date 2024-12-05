@@ -45,6 +45,7 @@
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "devDependencies": {
+    "cypress-iframe": "^1.0.1",
     "husky": "^9.1.6",
     "lerna": "8.1.8"
   },

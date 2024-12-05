@@ -1,6 +1,6 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
 
-export function getIdccBody({ query, idccQuery }) {
+export function getIdccBody({ query, idccQuery, size = 50 }) {
   return {
     _source: [
       "id",
@@ -74,6 +74,6 @@ export function getIdccBody({ query, idccQuery }) {
         },
       },
     },
-    size: 50,
+    size,
   };
 }

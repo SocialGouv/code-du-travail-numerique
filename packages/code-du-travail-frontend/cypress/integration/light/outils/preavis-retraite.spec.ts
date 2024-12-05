@@ -181,14 +181,16 @@ describe("Outil - Préavis de retraite", () => {
     cy.contains("Cliquez sur Suivant pour poursuivre la simulation.");
     cy.get('[aria-label="Fermer"]').click();
     cy.get("#enterprise-search").clear();
-    cy.get("#enterprise-search").type("boulangerie", { delay: 0 });
-    cy.get("#enterprise-search-address").type("7927");
+    cy.get("#enterprise-search").type("boursorama", { delay: 0 });
+    cy.get("#enterprise-search-address").type("9210");
     cy.get("#enterprise-search-address").type("0{downArrow}{enter}", {
       delay: 3000,
       force: true,
     });
     cy.get('button[type="submit"]').last().click();
-    cy.contains("PHILIPPE PETIT").click();
+    cy.contains(
+      "BOURSORAMA (BOURSORAMA - BOURSORAMA BANQUE - BOURSOBANK)"
+    ).click();
     cy.contains(
       "Une convention collective a été trouvée pour cette entreprise"
     );
@@ -209,10 +211,10 @@ describe("Outil - Préavis de retraite", () => {
     cy.contains("2 mois");
     cy.contains("Durée prévue par le code du travail (durée légale) : 2 mois");
     cy.contains(
-      "Durée prévue par la convention collective (durée conventionnelle) : 6 mois"
+      "Durée prévue par la convention collective (durée conventionnelle) : pas de préavis"
     );
     cy.contains(
-      "La durée à appliquer pour le salarié est donc la durée légale, celle-ci étant plus courte que la durée prévue par la convention collective."
+      "En l’absence de durée prévue par la convention collective, la durée de préavis à appliquer pour le salarié est donc la durée légale."
     );
   });
 });
