@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import { FicheServicePublicContainer } from "../FicheServicePublicContainer";
-import { FicheSPData } from "../../../fiche-service-public/type";
 import { ServicePublicReference } from "@socialgouv/cdtn-types";
+import { FicheSPData } from "../builder/type";
 
 const rawData: FicheSPData = {
   children: [
