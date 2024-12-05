@@ -1,6 +1,7 @@
 "use client";
 
 import { fr } from "@codegouvfr/react-dsfr";
+import { css } from "@styled-system/css";
 import { useIframeResizer } from "../../common/hooks";
 import Link from "next/link";
 import { useIsDark } from "@codegouvfr/react-dsfr/useIsDark";
@@ -38,6 +39,8 @@ export function WidgetWithIframeResizer({
           <Link
             title="Code du travail numérique, Ministère du Travail"
             href="/"
+            target="_blank"
+            className={noTarget}
           >
             <img
               className="fr-responsive-img"
@@ -52,3 +55,9 @@ export function WidgetWithIframeResizer({
     </div>
   );
 }
+
+const noTarget = css({
+  _after: {
+    display: "none !important",
+  },
+});
