@@ -1,0 +1,406 @@
+{
+  "1": {
+    "name": "AIN",
+    "url": "https://auvergne-rhone-alpes.dreets.gouv.fr/Vos-interlocuteurs-en-droit-du-travail"
+  },
+  "2": {
+    "name": "AISNE",
+    "url": "https://hauts-de-france.dreets.gouv.fr/Salaries-et-employeurs-du-secteur-prive-renseignez-vous-sur-le-droit-du-travail"
+  },
+  "3": {
+    "name": "ALLIER",
+    "url": "https://auvergne-rhone-alpes.dreets.gouv.fr/Vos-interlocuteurs-en-droit-du-travail"
+  },
+  "4": {
+    "name": "ALPES DE HAUTE-PROVENCE",
+    "url": "https://paca.dreets.gouv.fr/Alpes-de-Haute-Provence"
+  },
+  "5": {
+    "name": "HAUTES-ALPES",
+    "url": "https://paca.dreets.gouv.fr/Le-Service-Renseignement-en-droit-du-Travail"
+  },
+  "6": {
+    "name": "ALPES-MARITIMES",
+    "url": "https://paca.dreets.gouv.fr/Alpes-Maritimes"
+  },
+  "7": {
+    "name": "ARDECHE",
+    "url": "https://auvergne-rhone-alpes.dreets.gouv.fr/Vos-interlocuteurs-en-droit-du-travail"
+  },
+  "8": {
+    "name": "ARDENNES",
+    "url": "https://grand-est.dreets.gouv.fr/La-DDETSPP-des-Ardennes"
+  },
+  "9": {
+    "name": "ARIEGE",
+    "url": "https://occitanie.dreets.gouv.fr/Renseignements-en-droit-du-travail-a-la-DREETS-Occitanie"
+  },
+  "10": {
+    "name": "aube",
+    "url": "https://www.smartagenda.fr/pro/direccte-grand-est/rendez-vous/"
+  },
+  "11": {
+    "name": "AUDE",
+    "url": "https://occitanie.dreets.gouv.fr/Renseignements-en-droit-du-travail-a-la-DREETS-Occitanie"
+  },
+  "12": {
+    "name": "AVEYRON",
+    "url": "https://occitanie.dreets.gouv.fr/Renseignements-en-droit-du-travail-a-la-DREETS-Occitanie"
+  },
+  "13": {
+    "name": "BOUCHES-DU-RHONE",
+    "url": "https://paca.dreets.gouv.fr/Renseignement-du-public-sur-la-legislation-du-travail"
+  },
+  "14": {
+    "name": "CALVADOS",
+    "url": "https://normandie.dreets.gouv.fr/Contacter-vos-services-de-renseignements-en-droit-du-travail-au-0-806-000-126"
+  },
+  "15": {
+    "name": "CANTAL",
+    "url": "https://auvergne-rhone-alpes.dreets.gouv.fr/Vos-interlocuteurs-en-droit-du-travail"
+  },
+  "16": {
+    "name": "CHARENTE",
+    "url": "https://nouvelle-aquitaine.dreets.gouv.fr/Renseignements-droit-du-travail-17780"
+  },
+  "17": {
+    "name": "CHARENTE-MARITIME",
+    "url": "https://nouvelle-aquitaine.dreets.gouv.fr/Renseignements-droit-du-travail-6373"
+  },
+  "18": {
+    "name": "CHER",
+    "url": "https://centre-val-de-loire.dreets.gouv.fr/L-application-du-droit-du-travail-17722"
+  },
+  "19": {
+    "name": "CORREZEZ",
+    "url": "https://nouvelle-aquitaine.dreets.gouv.fr/Renseignements-droit-du-travail-17668"
+  },
+  "21": {
+    "name": "COTE D'OR",
+    "url": "https://bourgogne-franche-comte.dreets.gouv.fr/Contacts-et-horaires-d-ouverture-des-services-au-public"
+  },
+  "22": {
+    "name": "COTE D'ARMOR",
+    "url": "https://bretagne.dreets.gouv.fr/Le-Service-Renseignement-du-Public-2949"
+  },
+  "23": {
+    "name": "CREUSE",
+    "url": "https://nouvelle-aquitaine.dreets.gouv.fr/Creuse"
+  },
+  "24": {
+    "name": "DORDOGNE",
+    "url": "https://nouvelle-aquitaine.dreets.gouv.fr/Renseignements-droit-du-travail-17669"
+  },
+  "25": {
+    "name": "DOUBS",
+    "url": "https://user.clicrdv.com/direccte-bourgogne-franche-comte"
+  },
+  "26": {
+    "name": "DROME",
+    "url": "https://auvergne-rhone-alpes.dreets.gouv.fr/Vos-interlocuteurs-en-droit-du-travail"
+  },
+  "27": {
+    "name": "EURE",
+    "url": "https://normandie.dreets.gouv.fr/Contacter-vos-services-de-renseignements-en-droit-du-travail-au-0-806-000-126"
+  },
+  "28": {
+    "name": "EURE-ET-LOIRE",
+    "url": "https://centre-val-de-loire.dreets.gouv.fr/Eure-et-Loir"
+  },
+  "29": {
+    "name": "FINISTERE",
+    "url": "https://bretagne.dreets.gouv.fr/Renseignements-en-droit-du-travail-en-Bretagne"
+  },
+  "2a": {
+    "name": "CORSE-DU-SUD",
+    "url": "https://corse.dreets.gouv.fr/Renseignements-en-droit-du-travail"
+  },
+  "2b": {
+    "name": "HAUTE-CORSE",
+    "url": "https://corse.dreets.gouv.fr/Renseignements-en-droit-du-travail-17835"
+  },
+  "30": {
+    "name": "GARD",
+    "url": "https://occitanie.dreets.gouv.fr/Renseignements-en-droit-du-travail-a-la-DREETS-Occitanie"
+  },
+  "31": {
+    "name": "HAUTE-GARONNE",
+    "url": "https://occitanie.dreets.gouv.fr/Renseignements-en-droit-du-travail-a-la-DREETS-Occitanie"
+  },
+  "32": {
+    "name": "GERS",
+    "url": "https://occitanie.dreets.gouv.fr/Renseignements-en-droit-du-travail-a-la-DREETS-Occitanie"
+  },
+  "33": {
+    "name": "GIRONDE",
+    "url": "https://nouvelle-aquitaine.dreets.gouv.fr/Renseignements-droit-du-travail-17665"
+  },
+  "34": {
+    "name": "HERAULT",
+    "url": "https://occitanie.dreets.gouv.fr/Renseignements-en-droit-du-travail-a-la-DREETS-Occitanie"
+  },
+  "35": {
+    "name": "ILLE-ET-VILAINE",
+    "url": "https://bretagne.dreets.gouv.fr/Renseignements-au-public"
+  },
+  "36": {
+    "name": "INDRE",
+    "url": "https://centre-val-de-loire.dreets.gouv.fr/Indre-4954"
+  },
+  "37": {
+    "name": "INDRE-ET-LOIRE",
+    "url": "https://centre-val-de-loire.dreets.gouv.fr/Indre-et-Loire"
+  },
+  "38": {
+    "name": "ISERE",
+    "url": "https://auvergne-rhone-alpes.dreets.gouv.fr/Vos-interlocuteurs-en-droit-du-travail"
+  },
+  "39": {
+    "name": "JURA",
+    "url": "https://bourgogne-franche-comte.dreets.gouv.fr/Ou-se-renseigner-4595"
+  },
+  "40": {
+    "name": "LANDES",
+    "url": "https://nouvelle-aquitaine.dreets.gouv.fr/Renseignements-droit-du-travail-17670"
+  },
+  "41": {
+    "name": "LOIR-ET-CHER",
+    "url": "https://centre-val-de-loire.dreets.gouv.fr/L-application-du-droit-du-travail"
+  },
+  "42": {
+    "name": "LOIRE",
+    "url": "https://auvergne-rhone-alpes.dreets.gouv.fr/Vos-interlocuteurs-en-droit-du-travail"
+  },
+  "43": {
+    "name": "HAUTE-LOIRE",
+    "url": "https://auvergne-rhone-alpes.dreets.gouv.fr/Vos-interlocuteurs-en-droit-du-travail"
+  },
+  "44": {
+    "name": "LOIRE-ATLANTIQUE",
+    "url": "https://pays-de-la-loire.dreets.gouv.fr/Acces-au-droit-du-travail-les-DDETS-et-DDETS-PP-vous-renseignent"
+  },
+  "45": {
+    "name": "LOiRET",
+    "url": "https://centre-val-de-loire.dreets.gouv.fr/L-application-du-droit-du-travail-17737"
+  },
+  "46": {
+    "name": "LOT",
+    "url": "https://occitanie.dreets.gouv.fr/Renseignements-en-droit-du-travail-a-la-DREETS-Occitanie"
+  },
+  "47": {
+    "name": "LOT-ET-GARONNE",
+    "url": "https://nouvelle-aquitaine.dreets.gouv.fr/Renseignements-droit-du-travail-17671"
+  },
+  "48": {
+    "name": "LOZERE",
+    "url": "https://occitanie.dreets.gouv.fr/Renseignements-en-droit-du-travail-a-la-DREETS-Occitanie"
+  },
+  "49": {
+    "name": "MAINE-ET-LOIRE",
+    "url": "https://pays-de-la-loire.dreets.gouv.fr/Acces-au-droit-du-travail-les-DDETS-et-DDETS-PP-vous-renseignent"
+  },
+  "50": {
+    "name": "MANCHE",
+    "url": "https://normandie.dreets.gouv.fr/Un-numero-unique-pour-se-renseigner-sur-le-droit-du-travail"
+  },
+  "51": {
+    "name": "MARNE",
+    "url": "https://grand-est.dreets.gouv.fr/La-DDETSPP-de-la-Marne"
+  },
+  "52": {
+    "name": "HAUTE-MARNE",
+    "url": "https://grand-est.dreets.gouv.fr/Direction-departementale-de-l-emploi-du-travail-des-solidarites-et-de-la"
+  },
+  "53": {
+    "name": "MAYENNE",
+    "url": "https://pays-de-la-loire.dreets.gouv.fr/Acces-au-droit-du-travail-les-DDETS-et-DDETS-PP-vous-renseignent"
+  },
+  "54": {
+    "name": "MEURTHE-ET-MOSELLE",
+    "url": "https://grand-est.dreets.gouv.fr/Presentation-de-la-DDETS-Nous-contacter"
+  },
+  "55": {
+    "name": "MEUSE",
+    "url": "https://grand-est.dreets.gouv.fr/La-Direction-departementale-de-l-emploi-du-travail-des-solidarites-et-de-la"
+  },
+  "56": {
+    "name": "MORBIHAN",
+    "url": "https://bretagne.dreets.gouv.fr/Renseignement-au-public-3009"
+  },
+  "57": {
+    "name": "MOSELLE",
+    "url": "https://grand-est.dreets.gouv.fr/Presentation-de-la-DDETS-Moselle-Nous-contacter"
+  },
+  "58": {
+    "name": "NIEVRE",
+    "url": "https://bourgogne-franche-comte.dreets.gouv.fr/nievre"
+  },
+  "59": {
+    "name": "NORD",
+    "url": "https://hauts-de-france.dreets.gouv.fr/Salaries-et-employeurs-du-secteur-prive-renseignez-vous-sur-le-droit-du-travail"
+  },
+  "60": {
+    "name": "OISE",
+    "url": "https://hauts-de-france.dreets.gouv.fr/Salaries-et-employeurs-du-secteur-prive-renseignez-vous-sur-le-droit-du-travail"
+  },
+  "61": {
+    "name": "ORNE",
+    "url": "https://normandie.dreets.gouv.fr/Un-numero-unique-pour-contacter-vos-services-de-renseignements-en-droit-du-18314"
+  },
+  "62": {
+    "name": "PAS-DE-CALAIS",
+    "url": "https://hauts-de-france.dreets.gouv.fr/Salaries-et-employeurs-du-secteur-prive-renseignez-vous-sur-le-droit-du-travail"
+  },
+  "63": {
+    "name": "PUY-DE-DOME",
+    "url": "https://auvergne-rhone-alpes.dreets.gouv.fr/Vos-interlocuteurs-en-droit-du-travail"
+  },
+  "64": {
+    "name": "PYRENNES-ATLANTIQUE",
+    "url": "https://nouvelle-aquitaine.dreets.gouv.fr/Renseignements-droit-du-travail-17672"
+  },
+  "65": {
+    "name": "HAUTES-PYRENEES",
+    "url": "https://occitanie.dreets.gouv.fr/Renseignements-en-droit-du-travail-a-la-DREETS-Occitanie"
+  },
+  "66": {
+    "name": "PYRENEES-ORIENTALES",
+    "url": "https://occitanie.dreets.gouv.fr/Renseignements-en-droit-du-travail-a-la-DREETS-Occitanie"
+  },
+  "67": {
+    "name": "BAS-RHIN",
+    "url": "https://grand-est.dreets.gouv.fr/Presentation-de-la-DDETS-67-Nous-contacter"
+  },
+  "68": {
+    "name": "HAUT-RHIN",
+    "url": "https://grand-est.dreets.gouv.fr/La-DDETS-du-Haut-Rhin"
+  },
+  "69": {
+    "name": "RHONE",
+    "url": "https://auvergne-rhone-alpes.dreets.gouv.fr/Vos-interlocuteurs-en-droit-du-travail"
+  },
+  "70": {
+    "name": "HAUTE-SAONE",
+    "url": "https://bourgogne-franche-comte.dreets.gouv.fr/Ou-se-renseigner-4595"
+  },
+  "71": {
+    "name": "SAONE-ET-LOIRE",
+    "url": "https://bourgogne-franche-comte.dreets.gouv.fr/Comment-contacter-le-service-renseignement-en-droit-du-travail"
+  },
+  "72": {
+    "name": "SARTHE",
+    "url": "https://pays-de-la-loire.dreets.gouv.fr/Acces-au-droit-du-travail-les-DDETS-et-DDETS-PP-vous-renseignent"
+  },
+  "73": {
+    "name": "SAVOIE",
+    "url": "https://auvergne-rhone-alpes.dreets.gouv.fr/Vos-interlocuteurs-en-droit-du-travail"
+  },
+  "74": {
+    "name": "HAUTE SAVOIE",
+    "url": "https://auvergne-rhone-alpes.dreets.gouv.fr/Vos-interlocuteurs-en-droit-du-travail"
+  },
+  "75": {
+    "name": "PARIS",
+    "url": "https://idf.drieets.gouv.fr/Adresse-et-horaires-d-ouverture-de-l-unite-departementale-75"
+  },
+  "76": {
+    "name": "SEINE-MARITIME",
+    "url": "https://normandie.dreets.gouv.fr/Un-numero-unique-pour-contacter-le-service-de-renseignements-en-droit-du-6180"
+  },
+  "77": {
+    "name": "SEINE-ET-MARNE",
+    "url": "https://idf.drieets.gouv.fr/Une-question-en-droit-du-travail"
+  },
+  "78": {
+    "name": "YVELINES",
+    "url": "https://idf.drieets.gouv.fr/Une-question-en-droit-du-travail"
+  },
+  "79": {
+    "name": "DEUX SEVRES",
+    "url": "https://nouvelle-aquitaine.dreets.gouv.fr/Renseignements-en-droit-du-travail"
+  },
+  "80": {
+    "name": "SOMME",
+    "url": "https://hauts-de-france.dreets.gouv.fr/Salaries-et-employeurs-du-secteur-prive-renseignez-vous-sur-le-droit-du-travail"
+  },
+  "81": {
+    "name": "TARN",
+    "url": "https://occitanie.dreets.gouv.fr/Renseignements-en-droit-du-travail-a-la-DREETS-Occitanie"
+  },
+  "82": {
+    "name": "TARN-ET-GARONNE",
+    "url": "https://occitanie.dreets.gouv.fr/Renseignements-en-droit-du-travail-a-la-DREETS-Occitanie"
+  },
+  "83": {
+    "name": "VAR",
+    "url": "https://paca.dreets.gouv.fr/Les-numeros-utiles-de-la-Direction-Departementale-de-l-Emploi-du-Travail-et-des"
+  },
+  "84": {
+    "name": "VAUCLUSE",
+    "url": "https://paca.dreets.gouv.fr/Vaucluse"
+  },
+  "85": {
+    "name": "VENDEE",
+    "url": "https://pays-de-la-loire.dreets.gouv.fr/Acces-au-droit-du-travail-les-DDETS-et-DDETS-PP-vous-renseignent"
+  },
+  "86": {
+    "name": "VIENNE",
+    "url": "https://nouvelle-aquitaine.dreets.gouv.fr/Renseignements-droit-du-travail-5599"
+  },
+  "87": {
+    "name": "HAUTE-VIENNE",
+    "url": "https://nouvelle-aquitaine.dreets.gouv.fr/Renseignements-droit-du-travail-17666"
+  },
+  "88": {
+    "name": "VOSGES",
+    "url": "https://grand-est.dreets.gouv.fr/La-DDETSPP-des-Vosges"
+  },
+  "89": {
+    "name": "YONNE",
+    "url": "https://bourgogne-franche-comte.dreets.gouv.fr/DDETSPP-Yonne"
+  },
+  "90": {
+    "name": "TERRITOIRE-DE-BELFORT",
+    "url": "https://bourgogne-franche-comte.dreets.gouv.fr/DDETSPP-Territoire-de-Belfort"
+  },
+  "91": {
+    "name": "ESSONNE",
+    "url": "https://idf.drieets.gouv.fr/Une-question-en-droit-du-travail"
+  },
+  "92": {
+    "name": "HAUTS-DE-SEINE",
+    "url": "https://idf.drieets.gouv.fr/Une-question-en-droit-du-travail"
+  },
+  "93": {
+    "name": "SEINE-SAINT-DENIS",
+    "url": "https://idf.drieets.gouv.fr/RDV-SRDT"
+  },
+  "94": {
+    "name": "VAL-DE-MARNE",
+    "url": "https://idf.drieets.gouv.fr/RDV-SRDT"
+  },
+  "95": {
+    "name": "VAL-D'OISE",
+    "url": "https://idf.drieets.gouv.fr/RDV-SRDT"
+  },
+  "971": {
+    "name": "GUADELOUPE",
+    "url": "https://guadeloupe.deets.gouv.fr/nos-adresses"
+  },
+  "972": {
+    "name": "MARTINIQUE",
+    "url": "https://martinique.deets.gouv.fr/Renseignements-en-droit-du-travail-ecrivez-nous"
+  },
+  "973": {
+    "name": "GUYANE",
+    "url": "https://guyane.deets.gouv.fr/Renseignement-en-droit-du-travail"
+  },
+  "974": {
+    "name": "LA REUNION",
+    "url": "https://reunion.deets.gouv.fr/Nous-contacter"
+  },
+  "976": {
+    "name": "MAYOTTE",
+    "url": "https://mayotte.deets.gouv.fr/Contacter-les-services-de-la-DEETS"
+  }
+}
