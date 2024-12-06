@@ -156,6 +156,7 @@ export const EnterpriseAgreementSearchInput = ({
           setConvention(agreement);
           setSelectedAgreement(agreement);
         }}
+        noPrevious
       />
     );
   }

@@ -119,7 +119,7 @@ export const EnterpriseAgreementSelection = ({
         );
       })}
 
-      {noPrevious && (
+      {!noPrevious && (
         <div className={fr.cx("fr-mt-2w")}>
           <Button
             linkProps={{
