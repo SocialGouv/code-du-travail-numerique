@@ -1,15 +1,6 @@
 import "@testing-library/cypress/add-commands";
 import "cypress-iframe";
 
-declare global {
-  namespace Cypress {
-    interface Chainable {
-      selectByLabel: Chainable<Element>;
-      findByLabel: Chainable<Element>;
-    }
-  }
-}
-
 Cypress.Commands.add("checkCanonical", (path) => {
   cy.get("head > link[rel='canonical']")
     .should("have.prop", "href")

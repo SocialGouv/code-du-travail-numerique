@@ -124,8 +124,8 @@ export const EnterpriseAgreementSelection = ({
           <Button
             linkProps={{
               href: widgetMode
-                ? "/widgets/convention-collective?${searchParams?.toString()}"
-                : "/outils/convention-collective/entreprise?${searchParams?.toString()}",
+                ? `/widgets/convention-collective?${searchParams?.toString()}`
+                : `/outils/convention-collective/entreprise?${searchParams?.toString()}`,
             }}
             priority="secondary"
             className={`${fr.cx("fr-col-12", "fr-col-md-2")} ${ButtonStyle}`}

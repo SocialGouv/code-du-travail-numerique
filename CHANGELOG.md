@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.167.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.166.0...v4.167.0) (2024-12-04)
+
+
+### Bug Fixes
+
+* **replaceAll:** correction de l'erreur sur la page 404 qui load `pandacss` mais qui ne contient pas le `PolyfillComponent` ([b345f9f](https://github.com/SocialGouv/code-du-travail-numerique/commit/b345f9fff67c5bc6158ef8db74edb211e78cef01))
+* **text-wrapping:** change reset from `pandacss` ([#6336](https://github.com/SocialGouv/code-du-travail-numerique/issues/6336)) ([a15cdbc](https://github.com/SocialGouv/code-du-travail-numerique/commit/a15cdbc336dcfae32b63e47a0aaa9e5557464dd6))
+
+
+### Features
+
+* module trouver sa cc ([#6267](https://github.com/SocialGouv/code-du-travail-numerique/issues/6267)) ([847861b](https://github.com/SocialGouv/code-du-travail-numerique/commit/847861bec2b772ec8f7fa426e6ffc79ec86a44e8)), closes [#6079](https://github.com/SocialGouv/code-du-travail-numerique/issues/6079) [#6085](https://github.com/SocialGouv/code-du-travail-numerique/issues/6085) [#6090](https://github.com/SocialGouv/code-du-travail-numerique/issues/6090) [#6082](https://github.com/SocialGouv/code-du-travail-numerique/issues/6082) [#6092](https://github.com/SocialGouv/code-du-travail-numerique/issues/6092) [#6096](https://github.com/SocialGouv/code-du-travail-numerique/issues/6096) [#6099](https://github.com/SocialGouv/code-du-travail-numerique/issues/6099) [#6094](https://github.com/SocialGouv/code-du-travail-numerique/issues/6094)
+
+
+
+
+
+# [4.166.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.165.0...v4.166.0) (2024-11-28)
+
+
+### Bug Fixes
+
+* **contribution:** `trim` à `false` sur les tables ([#6324](https://github.com/SocialGouv/code-du-travail-numerique/issues/6324)) ([d957c8f](https://github.com/SocialGouv/code-du-travail-numerique/commit/d957c8fe26a03e75151f587bdb7cfbcca2ab387a))
+* **fiches-mt:** ajout du parsing entre deux balises ([#6321](https://github.com/SocialGouv/code-du-travail-numerique/issues/6321)) ([05580fd](https://github.com/SocialGouv/code-du-travail-numerique/commit/05580fd81d1843a917d5449a88cd30524ff648c5))
+* **polyfills:** ajout du replaceAll de manière globale ([#6311](https://github.com/SocialGouv/code-du-travail-numerique/issues/6311)) ([cd1bf5c](https://github.com/SocialGouv/code-du-travail-numerique/commit/cd1bf5ce27a14e1fe55f2508457d34c051bb3e0b))
+* **tests:** ignorer les fichiers avec `.script` ([136ec7a](https://github.com/SocialGouv/code-du-travail-numerique/commit/136ec7a8da61cae6a1ccd63ec9202c180842714f))
+
+
+### Features
+
+* support de la version 3.4 des fiches SP ([#6327](https://github.com/SocialGouv/code-du-travail-numerique/issues/6327)) ([34a2210](https://github.com/SocialGouv/code-du-travail-numerique/commit/34a2210e9f2917ad7a2692649dc3b2fdc525b139))
+* **theme:** gestion du dark mode sur les widgets ([#6275](https://github.com/SocialGouv/code-du-travail-numerique/issues/6275)) ([a59bb29](https://github.com/SocialGouv/code-du-travail-numerique/commit/a59bb29df50dd1b5815f0eb3be0b15d28c09d71e))
+
+
+
+
+
+## [4.165.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.165.0...v4.165.1) (2024-11-28)
+
+**Note:** Version bump only for package @socialgouv/code-du-travail
+
+
+
+
+
 # [4.165.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.164.2...v4.165.0) (2024-11-25)
 
 

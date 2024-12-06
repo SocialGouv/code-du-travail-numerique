@@ -61,7 +61,6 @@ export const AgreementSearchInput = ({
         return "error";
     }
   };
-
   return (
     <>
       <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>

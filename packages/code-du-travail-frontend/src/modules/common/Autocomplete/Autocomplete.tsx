@@ -17,8 +17,8 @@ export type AutocompleteProps<K> = InputProps & {
   search: (search: string) => Promise<K[]>;
   dataTestId?: string;
   lineAsLink?: (value: K) => string;
-  defaultValue?: K;
   displayNoResult?: boolean;
+  defaultValue?: K;
   onInputValueChange?: (value: string) => void;
 };
 
