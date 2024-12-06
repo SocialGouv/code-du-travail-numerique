@@ -1,6 +1,5 @@
 import { Footer as FooterDsfr } from "@codegouvfr/react-dsfr/Footer";
 import { PACKAGE_VERSION } from "../../config";
-import { headerFooterDisplayItem } from "@codegouvfr/react-dsfr/Display";
 import { BrandTop } from "./BrandTop";
 import { homeLinksProps } from "./common";
 
@@ -173,7 +172,6 @@ export const Footer = () => {
           },
           text: "Plan du site",
         },
-        headerFooterDisplayItem,
       ]}
     />
   );
