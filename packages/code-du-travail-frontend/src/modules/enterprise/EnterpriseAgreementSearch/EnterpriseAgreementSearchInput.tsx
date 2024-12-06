@@ -6,18 +6,24 @@ import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { Card } from "@codegouvfr/react-dsfr/Card";
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { css } from "@styled-system/css";
 
 import Spinner from "../../common/Spinner.svg";
 import { LocationSearchInput } from "../../Location/LocationSearchInput";
 import { searchEnterprises } from "../queries";
-import { Enterprise } from "../types";
+import { Enterprise, EnterpriseAgreement } from "../types";
 import { ApiGeoResult } from "../../Location/searchCities";
 import { CardTitleStyle, ButtonStyle } from "../../convention-collective/style";
+import { EnterpriseAgreementSelection } from "./EnterpriseAgreementSelection";
+import { useLocalStorageForAgreementOnPageLoad } from "../../common/useLocalStorage";
 
 type Props = {
   widgetMode?: boolean;
+  onAgreementSelect?: (agreement: EnterpriseAgreement) => void;
+  selectedAgreementAlert?: (
+    agreement?: EnterpriseAgreement
+  ) => NonNullable<ReactNode> | undefined;
   defaultSearch?: string;
   defaultLocation?: ApiGeoResult;
 };
@@ -26,7 +32,10 @@ export const EnterpriseAgreementSearchInput = ({
   widgetMode = false,
   defaultSearch,
   defaultLocation,
+  onAgreementSelect,
+  selectedAgreementAlert,
 }: Props) => {
+  const [convention, setConvention] = useLocalStorageForAgreementOnPageLoad();
   const [searchState, setSearchState] = useState<
     "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch" | "required"
   >("noSearch");
@@ -36,6 +45,9 @@ export const EnterpriseAgreementSearchInput = ({
     defaultLocation
   );
   const [enterprises, setEnterprises] = useState<Enterprise[]>();
+  const [selectedEnterprise, setSelectedEnterprise] = useState<Enterprise>();
+  const [selectedAgreement, setSelectedAgreement] =
+    useState<EnterpriseAgreement | null>(convention);
   const [error, setError] = useState("");
   const getStateMessage = () => {
     switch (searchState) {
@@ -109,6 +121,45 @@ export const EnterpriseAgreementSearchInput = ({
       onSubmit();
     }
   }, [defaultSearch]);
+  if (selectedAgreement) {
+    return (
+      <>
+        <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
+          Vous avez sélectionné la convention collective
+        </p>
+        <Card
+          title={`${selectedAgreement.shortTitle} IDCC${selectedAgreement.id}`}
+          size="small"
+          className={fr.cx("fr-mt-2w")}
+          classes={{
+            content: fr.cx("fr-p-2w"),
+            start: fr.cx("fr-m-0"),
+            end: fr.cx("fr-p-0", "fr-m-0"),
+          }}
+        ></Card>
+        {selectedAgreement && selectedAgreementAlert?.(selectedAgreement) && (
+          <Alert
+            className={fr.cx("fr-mt-2w")}
+            title="Nous n’avons pas de réponse pour cette convention collective"
+            description={selectedAgreementAlert(selectedAgreement)}
+            severity="warning"
+          />
+        )}
+      </>
+    );
+  } else if (selectedEnterprise) {
+    return (
+      <EnterpriseAgreementSelection
+        enterprise={selectedEnterprise}
+        onAgreementSelect={(agreement) => {
+          if (onAgreementSelect) onAgreementSelect(agreement);
+          setConvention(agreement);
+          setSelectedAgreement(agreement);
+        }}
+        noPrevious
+      />
+    );
+  }
   return (
     <>
       <h2 className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
@@ -242,11 +293,20 @@ export const EnterpriseAgreementSearchInput = ({
               className={fr.cx("fr-mt-2w")}
               border
               enlargeLink
-              linkProps={{
-                href: widgetMode
-                  ? `/widgets/convention-collective/entreprise/${enterprise.siren}${getQueries()}`
-                  : `/outils/convention-collective/entreprise/${enterprise.siren}${getQueries()}`,
-              }}
+              linkProps={
+                !onAgreementSelect
+                  ? {
+                      href: widgetMode
+                        ? `/widgets/convention-collective/entreprise/${enterprise.siren}${getQueries()}`
+                        : `/outils/convention-collective/entreprise/${enterprise.siren}${getQueries()}`,
+                    }
+                  : {
+                      href: "",
+                      onClick: () => {
+                        setSelectedEnterprise(enterprise);
+                      },
+                    }
+              }
               desc={
                 enterprise.activitePrincipale ? (
                   <>Activité&nbsp;: {enterprise.activitePrincipale}</>
