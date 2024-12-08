@@ -93,7 +93,7 @@ export const Header = ({ currentPage = "" }) => {
   );
 };
 
-const { box, breakpoints, spacings } = theme;
+const { box, breakpoints, colors, spacings } = theme;
 
 const StyledHeader = styled.header`
   position: absolute;
@@ -101,7 +101,7 @@ const StyledHeader = styled.header`
   z-index: 3;
   width: 100%;
   background-color: ${({ theme }) => theme.white};
-  box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
+  box-shadow: ${box.shadow.default(colors.secondary)};
   ${({ floating, overThreshold }) => {
     if (overThreshold && floating) {
       return css`

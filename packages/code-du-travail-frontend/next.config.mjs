@@ -42,9 +42,6 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   staticPageGenerationTimeout: 60 * 5, // 5 minutes
-  experimental: {
-    instrumentationHook: true,
-  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.woff2$/,

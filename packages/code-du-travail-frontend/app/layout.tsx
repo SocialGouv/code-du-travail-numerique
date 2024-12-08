@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const headersData = headers();
+  const headersData = await headers();
   const nonce = headersData.get("x-nonce") ?? undefined;
   const pathname = headersData.get("x-url") ?? "";
 
