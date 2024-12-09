@@ -188,7 +188,6 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
             className={fr.cx(
               "fr-col-12",
               "fr-col-md-8",
-              "fr-mb-6w",
               "fr-mb-md-0",
               "fr-my-6w",
               displayContent ? "fr-unhidden" : "fr-hidden"
