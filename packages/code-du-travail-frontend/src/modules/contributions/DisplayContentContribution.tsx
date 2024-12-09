@@ -12,6 +12,7 @@ import { ElementType } from "react";
 import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
 import { v4 as generateUUID } from "uuid";
 import { fr } from "@codegouvfr/react-dsfr";
+import { css } from "@styled-system/css";
 
 export type numberLevel = 2 | 3 | 4 | 5 | 6;
 
@@ -61,6 +62,7 @@ const mapToAccordion = (titleLevel: numberLevel, items) => {
       data-testid="contrib-accordion"
       items={items.map((item) => ({ ...item, id: generateUUID() }))}
       titleAs={`h${titleLevel}`}
+      className={fr.cx("fr-my-3w")}
     />
   );
 };
@@ -238,7 +240,6 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
             <Alert
               severity="info"
               small
-              className={fr.cx("fr-mb-2w")}
               description={domToReact(domNode.children as DOMNode[], {
                 trim: true,
               })}
@@ -258,7 +259,17 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
             return <br />;
           }
           // Disable trim on p
-          return <p>{renderChildrenWithNoTrim(domNode)}</p>;
+          return (
+            <p
+              className={
+                (domNode.parentNode as Element | undefined)?.name === "li"
+                  ? fr.cx("fr-mb-0")
+                  : undefined
+              }
+            >
+              {renderChildrenWithNoTrim(domNode)}
+            </p>
+          );
         }
       }
     },
@@ -276,27 +287,5 @@ const DisplayContentContribution = ({
 }: Props): string | JSX.Element | JSX.Element[] => {
   return <div>{parse(xssWrapper(content), options(titleLevel))}</div>;
 };
-
-// const { spacings } = theme;
-
-// const ContentStyled = styled("div")`
-//   li {
-//     margin-bottom: ${spacings.small};
-
-//     p {
-//       margin: 0;
-//     }
-//   }
-// `;
-
-// const StyledAccordion = styled(Accordion)`
-//   *[data-accordion-component="AccordionItemButton"] {
-//     padding-left: ${spacings.small};
-//   }
-// `;
-
-// const StyledContent = styled.div`
-//   margin-bottom: ${spacings.large};
-// `;
 
 export default DisplayContentContribution;

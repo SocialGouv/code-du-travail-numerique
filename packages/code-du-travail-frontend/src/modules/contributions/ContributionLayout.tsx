@@ -23,6 +23,8 @@ import { ContributionContent } from "./ContributionContent";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import Html from "../common/Html";
+import CallOut from "@codegouvfr/react-dsfr/CallOut";
+import Link from "next/link";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
@@ -167,7 +169,129 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
           </>
         )}
       </div>
-      <div className={fr.cx("fr-grid-row", "fr-my-6w")}>
+      {isGeneric && !isNoCDT && (
+        <Button
+          className={fr.cx(
+            !displayContent ? "fr-unhidden" : "fr-hidden",
+            "fr-mb-2w"
+          )}
+          priority="tertiary no outline"
+          onClick={() => setDisplayContent(true)}
+        >
+          Afficher les informations sans sélectionner une convention collective
+        </Button>
+      )}
+      {isGeneric && !isNoCDT && (
+        <div
+          className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-my-6w")}
+        >
+          <div
+            className={fr.cx(
+              "fr-col-12",
+              "fr-col-md-8",
+              "fr-mb-6w",
+              "fr-mb-md-0",
+              displayContent ? "fr-unhidden" : "fr-hidden"
+            )}
+          >
+            <div>
+              <p className={fr.cx("fr-h5")}>Que dit le code du travail ?</p>
+              <ContributionContent
+                contribution={
+                  contribution as
+                    | ElasticSearchContributionGeneric
+                    | ElasticSearchContributionConventionnelle
+                }
+                titleLevel={2}
+              ></ContributionContent>
+              {contribution.references.length && (
+                <div className={fr.cx("fr-callout", "fr-mt-6w")}>
+                  <span className={fr.cx("fr-h3")}>Références</span>
+                  <ul>
+                    {contribution.references.map(({ title, url }) => (
+                      <li key={title}>
+                        <Link href={url}>{title}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {contribution.messageBlock && (
+                <div
+                  className={fr.cx("fr-alert", "fr-alert--info", "fr-my-6w")}
+                >
+                  <>
+                    <div className={fr.cx("fr-h5")}>Attention</div>
+                    <Html>{contribution.messageBlock}</Html>
+                  </>
+                </div>
+              )}
+              <Feedback></Feedback>
+            </div>
+          </div>
+          <div
+            className={fr.cx(
+              "fr-col-12",
+              "fr-col-md-4",
+              displayContent ? "fr-unhidden" : "fr-hidden"
+            )}
+          >
+            <div>
+              <RelatedItems relatedItems={relatedItems} />
+              <Share title={title} metaDescription={metaDescription} />
+            </div>
+          </div>
+        </div>
+      )}
+      {!isGeneric && (
+        <div
+          className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-my-6w")}
+        >
+          <div
+            className={fr.cx(
+              "fr-col-12",
+              "fr-col-md-8",
+              "fr-mb-6w",
+              "fr-mb-md-0"
+            )}
+          >
+            <ContributionContent
+              contribution={
+                contribution as
+                  | ElasticSearchContributionGeneric
+                  | ElasticSearchContributionConventionnelle
+              }
+              titleLevel={3}
+            ></ContributionContent>
+            {contribution.references.length && (
+              <div className={fr.cx("fr-callout", "fr-mt-6w")}>
+                <span className={fr.cx("fr-h3")}>Références</span>
+                <ul>
+                  {contribution.references.map(({ title, url }) => (
+                    <li key={title}>
+                      <Link href={url}>{title}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {contribution.messageBlock && (
+              <div className={fr.cx("fr-alert", "fr-alert--info", "fr-my-6w")}>
+                <>
+                  <div className={fr.cx("fr-h5")}>Attention</div>
+                  <Html>{contribution.messageBlock}</Html>
+                </>
+              </div>
+            )}
+            <Feedback></Feedback>
+          </div>
+          <div className={fr.cx("fr-col-12", "fr-col-md-4")}>
+            <RelatedItems relatedItems={relatedItems} />
+            <Share title={title} metaDescription={metaDescription} />
+          </div>
+        </div>
+      )}
+      {/* <div className={fr.cx("fr-grid-row", "fr-my-6w")}>
         {!isNoCDT && (
           <div
             className={fr.cx(
@@ -175,36 +299,54 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
               "fr-col-md-7",
               "fr-mb-6w",
               "fr-mb-md-0",
-              "fr-mt-2w"
+              "fr-mt-2w",
+              displayContent ? "fr-unhidden" : "fr-hidden"
             )}
           >
             {isGeneric ? (
               <>
-                <Button
-                  className={fr.cx(
-                    !displayContent ? "fr-unhidden" : "fr-hidden",
-                    "fr-mb-2w"
-                  )}
-                  priority="tertiary no outline"
-                  onClick={() => setDisplayContent(true)}
-                >
-                  Afficher les informations sans sélectionner une convention
-                  collective
-                </Button>
-                <div
-                  className={fr.cx(
-                    displayContent ? "fr-unhidden" : "fr-hidden"
-                  )}
-                >
-                  <ContributionContent
-                    contribution={
-                      contribution as
-                        | ElasticSearchContributionGeneric
-                        | ElasticSearchContributionConventionnelle
-                    }
-                    titleLevel={2}
-                  ></ContributionContent>
+                <div>
+                  <div>
+                    <p className={fr.cx("fr-h5")}>
+                      Que dit le code du travail ?
+                    </p>
+                    <ContributionContent
+                      contribution={
+                        contribution as
+                          | ElasticSearchContributionGeneric
+                          | ElasticSearchContributionConventionnelle
+                      }
+                      titleLevel={2}
+                    ></ContributionContent>
+                    {contribution.references.length && (
+                      <div className={fr.cx("fr-callout", "fr-mt-6w")}>
+                        <span className={fr.cx("fr-h3")}>Références</span>
+                        <ul>
+                          {contribution.references.map(({ title, url }) => (
+                            <li key={title}>
+                              <Link href={url}>{title}</Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {contribution.messageBlock && (
+                      <div
+                        className={fr.cx(
+                          "fr-alert",
+                          "fr-alert--info",
+                          "fr-my-6w"
+                        )}
+                      >
+                        <>
+                          <div className={fr.cx("fr-h5")}>Attention</div>
+                          <Html>{contribution.messageBlock}</Html>
+                        </>
+                      </div>
+                    )}
+                  </div>
                 </div>
+
                 <Feedback></Feedback>
               </>
             ) : (
@@ -217,14 +359,29 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
                   }
                   titleLevel={3}
                 ></ContributionContent>
+                {contribution.references.length && (
+                  <div className={fr.cx("fr-callout", "fr-mt-6w")}>
+                    <span className={fr.cx("fr-h3")}>Références</span>
+                    <ul>
+                      {contribution.references.map(({ title, url }) => (
+                        <li key={title}>
+                          <Link href={url}>{title}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
                 {contribution.messageBlock && (
-                  <div className={fr.cx("fr-alert", "fr-alert--info")}>
+                  <div
+                    className={fr.cx("fr-alert", "fr-alert--info", "fr-my-6w")}
+                  >
                     <>
                       <div className={fr.cx("fr-h5")}>Attention</div>
                       <Html>{contribution.messageBlock}</Html>
                     </>
                   </div>
                 )}
+                <Feedback></Feedback>
               </>
             )}
           </div>
@@ -235,7 +392,7 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
           <RelatedItems relatedItems={relatedItems} />
           <Share title={title} metaDescription={metaDescription} />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

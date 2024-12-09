@@ -26,11 +26,11 @@ export const AgreementSearchForm = ({
 
   return (
     <>
-      <Highlight size="lg" className={`${fr.cx("fr-mt-2w")}`}>
+      <p className={`${fr.cx("fr-mt-2w")}`}>
         La réponse dépend de la convention collective à laquelle votre
         entreprise est rattachée. Veuillez renseigner votre situation afin
-        d’obtenir une réponse adaptée
-      </Highlight>
+        d’obtenir une réponse adaptée.
+      </p>
       <RadioButtons
         legend="Quel est le nom de la convention collective applicable ?"
         options={[
@@ -56,13 +56,13 @@ export const AgreementSearchForm = ({
         <AgreementSearchInput
           onAgreementSelect={onAgreementSelect}
           selectedAgreementAlert={selectedAgreementAlert}
-        ></AgreementSearchInput>
+        />
       )}
       {mode === "enterpriseSearch" && (
         <EnterpriseAgreementSearchInput
           onAgreementSelect={onAgreementSelect}
           selectedAgreementAlert={selectedAgreementAlert}
-        ></EnterpriseAgreementSearchInput>
+        />
       )}
     </>
   );

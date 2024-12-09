@@ -15,7 +15,7 @@ import { searchEnterprises } from "../queries";
 import { Enterprise, EnterpriseAgreement } from "../types";
 import { ApiGeoResult } from "../../Location/searchCities";
 import { CardTitleStyle, ButtonStyle } from "../../convention-collective/style";
-import { EnterpriseAgreementSelection } from "./EnterpriseAgreementSelection";
+import { EnterpriseAgreementSelectionForm } from "./EnterpriseAgreementSelectionForm";
 import { useLocalStorageForAgreementOnPageLoad } from "../../common/useLocalStorage";
 
 type Props = {
@@ -127,16 +127,43 @@ export const EnterpriseAgreementSearchInput = ({
         <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
           Vous avez sélectionné la convention collective
         </p>
-        <Card
-          title={`${selectedAgreement.shortTitle} IDCC${selectedAgreement.id}`}
-          size="small"
-          className={fr.cx("fr-mt-2w")}
-          classes={{
-            content: fr.cx("fr-p-2w"),
-            start: fr.cx("fr-m-0"),
-            end: fr.cx("fr-p-0", "fr-m-0"),
-          }}
-        ></Card>
+        <div
+          className={fr.cx(
+            "fr-my-2w",
+            "fr-grid-row",
+            "fr-grid-row--middle",
+            "fr-grid-row--gutters"
+          )}
+        >
+          <Card
+            title={`${selectedAgreement.shortTitle} IDCC${selectedAgreement.id}`}
+            size="small"
+            className={fr.cx("fr-col-10")}
+            classes={{
+              content: fr.cx("fr-py-1w"),
+              start: fr.cx("fr-m-0"),
+              end: fr.cx("fr-p-0", "fr-m-0"),
+            }}
+          />
+          <div className={fr.cx("fr-col")}>
+            <Button
+              iconId="fr-icon-arrow-go-back-fill"
+              priority="secondary"
+              onClick={() => {
+                setSelectedAgreement(null);
+                if (
+                  selectedEnterprise?.conventions.length &&
+                  selectedEnterprise?.conventions.length < 2
+                ) {
+                  setSelectedEnterprise(undefined);
+                }
+              }}
+            >
+              Modifier
+            </Button>
+          </div>
+        </div>
+
         {selectedAgreement && selectedAgreementAlert?.(selectedAgreement) && (
           <Alert
             className={fr.cx("fr-mt-2w")}
@@ -149,14 +176,14 @@ export const EnterpriseAgreementSearchInput = ({
     );
   } else if (selectedEnterprise) {
     return (
-      <EnterpriseAgreementSelection
+      <EnterpriseAgreementSelectionForm
         enterprise={selectedEnterprise}
+        goBack={() => setSelectedEnterprise(undefined)}
         onAgreementSelect={(agreement) => {
           if (onAgreementSelect) onAgreementSelect(agreement);
           setConvention(agreement);
           setSelectedAgreement(agreement);
         }}
-        noPrevious
       />
     );
   }

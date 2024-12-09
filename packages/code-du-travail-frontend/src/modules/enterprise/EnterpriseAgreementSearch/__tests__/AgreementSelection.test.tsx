@@ -1,6 +1,6 @@
 import { render, RenderResult, screen } from "@testing-library/react";
 import React from "react";
-import { EnterpriseAgreementSelection } from "../EnterpriseAgreementSelection";
+import { EnterpriseAgreementSelection } from "../EnterpriseAgreementSelectionLink";
 import { ui } from "./ui";
 
 const defaultEnterprise = {
