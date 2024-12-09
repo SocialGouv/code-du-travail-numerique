@@ -40,7 +40,6 @@ exports[`<PopupContent /> should match snapshot 1`] = `
       class="fr-input-wrap fr-input-wrap--addon"
     >
       <input
-        aria-describedby="input-:r0:-desc-error"
         class="fr-input max-w_280px"
         id="input-:r0:"
         maxlength="3"
