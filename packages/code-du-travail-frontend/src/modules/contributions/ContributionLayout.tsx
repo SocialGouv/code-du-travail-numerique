@@ -173,7 +173,8 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
         <Button
           className={fr.cx(
             !displayContent ? "fr-unhidden" : "fr-hidden",
-            "fr-mb-2w"
+            "fr-mt-2w",
+            "fr-mb-6w"
           )}
           priority="tertiary no outline"
           onClick={() => setDisplayContent(true)}
@@ -182,15 +183,14 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
         </Button>
       )}
       {isGeneric && !isNoCDT && (
-        <div
-          className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-my-6w")}
-        >
+        <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
           <div
             className={fr.cx(
               "fr-col-12",
               "fr-col-md-8",
               "fr-mb-6w",
               "fr-mb-md-0",
+              "fr-my-6w",
               displayContent ? "fr-unhidden" : "fr-hidden"
             )}
           >
@@ -226,13 +226,13 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
                   </>
                 </div>
               )}
-              <Feedback></Feedback>
             </div>
           </div>
           <div
             className={fr.cx(
               "fr-col-12",
               "fr-col-md-4",
+              "fr-mt-6w",
               displayContent ? "fr-unhidden" : "fr-hidden"
             )}
           >
@@ -283,7 +283,6 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
                 </>
               </div>
             )}
-            <Feedback></Feedback>
           </div>
           <div className={fr.cx("fr-col-12", "fr-col-md-4")}>
             <RelatedItems relatedItems={relatedItems} />
@@ -291,108 +290,9 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
           </div>
         </div>
       )}
-      {/* <div className={fr.cx("fr-grid-row", "fr-my-6w")}>
-        {!isNoCDT && (
-          <div
-            className={fr.cx(
-              "fr-col-12",
-              "fr-col-md-7",
-              "fr-mb-6w",
-              "fr-mb-md-0",
-              "fr-mt-2w",
-              displayContent ? "fr-unhidden" : "fr-hidden"
-            )}
-          >
-            {isGeneric ? (
-              <>
-                <div>
-                  <div>
-                    <p className={fr.cx("fr-h5")}>
-                      Que dit le code du travail ?
-                    </p>
-                    <ContributionContent
-                      contribution={
-                        contribution as
-                          | ElasticSearchContributionGeneric
-                          | ElasticSearchContributionConventionnelle
-                      }
-                      titleLevel={2}
-                    ></ContributionContent>
-                    {contribution.references.length && (
-                      <div className={fr.cx("fr-callout", "fr-mt-6w")}>
-                        <span className={fr.cx("fr-h3")}>Références</span>
-                        <ul>
-                          {contribution.references.map(({ title, url }) => (
-                            <li key={title}>
-                              <Link href={url}>{title}</Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                    {contribution.messageBlock && (
-                      <div
-                        className={fr.cx(
-                          "fr-alert",
-                          "fr-alert--info",
-                          "fr-my-6w"
-                        )}
-                      >
-                        <>
-                          <div className={fr.cx("fr-h5")}>Attention</div>
-                          <Html>{contribution.messageBlock}</Html>
-                        </>
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                <Feedback></Feedback>
-              </>
-            ) : (
-              <>
-                <ContributionContent
-                  contribution={
-                    contribution as
-                      | ElasticSearchContributionGeneric
-                      | ElasticSearchContributionConventionnelle
-                  }
-                  titleLevel={3}
-                ></ContributionContent>
-                {contribution.references.length && (
-                  <div className={fr.cx("fr-callout", "fr-mt-6w")}>
-                    <span className={fr.cx("fr-h3")}>Références</span>
-                    <ul>
-                      {contribution.references.map(({ title, url }) => (
-                        <li key={title}>
-                          <Link href={url}>{title}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                {contribution.messageBlock && (
-                  <div
-                    className={fr.cx("fr-alert", "fr-alert--info", "fr-my-6w")}
-                  >
-                    <>
-                      <div className={fr.cx("fr-h5")}>Attention</div>
-                      <Html>{contribution.messageBlock}</Html>
-                    </>
-                  </div>
-                )}
-                <Feedback></Feedback>
-              </>
-            )}
-          </div>
-        )}
-        <div
-          className={fr.cx("fr-col-12", "fr-col-offset-md-1", "fr-col-md-4")}
-        >
-          <RelatedItems relatedItems={relatedItems} />
-          <Share title={title} metaDescription={metaDescription} />
-        </div>
-      </div> */}
+      <div className={fr.cx("fr-col-12", "fr-col-md-8", "fr-mb-6w")}>
+        <Feedback></Feedback>
+      </div>
     </div>
   );
 }
