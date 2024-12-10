@@ -405,6 +405,7 @@ export const EnterpriseAgreementSearchInput = ({
                     };
                     setSelectedAgreement(assMatAgreement);
                     setAgreement(assMatAgreement);
+                    onAgreementSelect(assMatAgreement);
                   },
                 }
           }

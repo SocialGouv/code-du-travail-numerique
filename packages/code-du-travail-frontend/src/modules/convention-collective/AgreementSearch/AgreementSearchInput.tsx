@@ -79,9 +79,9 @@ export const AgreementSearchInput = ({
           state={getInputState()}
           stateRelatedMessage={getStateMessage()}
           onChange={(agreement) => {
+            setSelectedAgreement(agreement);
             if (onAgreementSelect && agreement) {
               onAgreementSelect(agreement);
-              setSelectedAgreement(agreement);
             }
           }}
           displayLabel={(item) => {
