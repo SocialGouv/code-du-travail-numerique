@@ -130,7 +130,11 @@ export const EnterpriseAgreementSearchInput = ({
       setSelectedAgreement(agreement);
     }
   }, [selectedEnterprise]);
-  if (selectedAgreement && (selectedEnterprise?.conventions?.length ?? 0) < 2) {
+  if (
+    onAgreementSelect &&
+    selectedAgreement &&
+    (selectedEnterprise?.conventions?.length ?? 0) < 2
+  ) {
     return (
       <>
         {selectedEnterprise && (
@@ -187,7 +191,7 @@ export const EnterpriseAgreementSearchInput = ({
         )}
       </>
     );
-  } else if (selectedEnterprise) {
+  } else if (onAgreementSelect && selectedEnterprise) {
     return (
       <EnterpriseAgreementSelectionForm
         enterprise={selectedEnterprise}
