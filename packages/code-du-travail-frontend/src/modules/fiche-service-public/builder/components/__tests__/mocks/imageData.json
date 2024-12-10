@@ -1,0 +1,152 @@
+{
+  "type": "element",
+  "name": "Image",
+  "attributes": {
+    "LienPublication": "I4596.jpg",
+    "langue": "fr"
+  },
+  "children": [
+    {
+      "type": "element",
+      "name": "Legende",
+      "children": [
+        {
+          "type": "text",
+          "text": "Comment calculer un délai quand il y a un jour férié ?"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Credits",
+      "children": [
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "Service Public (DILA)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "TexteDeRemplacement",
+      "children": [
+        {
+          "type": "text",
+          "text": "Comment calculer un délai quand il y a un jour férié ?"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Description",
+      "children": [
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "Comment calculer un délai quand il y a un jour férié ?"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "Voici comment calculer un délai de 7 jours, selon que l'on parle de jours calendaires, francs, ouvrables ou ouvrés. Dans notre exemple, le délai commence un lundi et il y a un jour férié (le mercredi)."
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "- Délai compté en jour calendaire : lundi + mardi + mercredi + jeudi + vendredi + samedi + dimanche"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "Chaque jour compte."
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "- Délai compté en jour franc : lundi + mardi + mercredi même si c'est un jour férié + jeudi + vendredi + samedi + lundi de la semaine suivante."
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "Report au jour suivant si le 7e jour tombe un samedi, un dimanche (comme c'est le cas dans notre exemple) ou un jour férié."
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "- Délai compté en jour ouvrable : lundi + mardi + jeudi + vendredi + samedi + lundi de la semaine suivante + mardi de la semaine suivante."
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "On ne compte pas le dimanche ni le jour férié."
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "- Délai compté en jour ouvré : lundi + mardi + jeudi + vendredi + lundi de la semaine suivante + mardi de la semaine suivante + mercredi de la semaine suivante."
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "On ne compte pas le jour férié (ici mercredi), le samedi ni le dimanche."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

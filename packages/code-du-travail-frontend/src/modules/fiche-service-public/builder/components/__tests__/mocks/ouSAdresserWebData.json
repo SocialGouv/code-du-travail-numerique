@@ -1,0 +1,218 @@
+{
+  "type": "element",
+  "name": "OuSAdresser",
+  "attributes": {
+    "ID": "R35483",
+    "sve": "non",
+    "type": "National"
+  },
+  "children": [
+    {
+      "type": "element",
+      "name": "Titre",
+      "children": [
+        {
+          "type": "text",
+          "text": "Fonds d'indemnisation des victimes de l'amiante (Fiva)"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Texte",
+      "children": [
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "Pour une question concernant une demande d'indemnisation ou l'état d'avancement d'un dossier en cours d'instruction"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Chapitre",
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Par téléphone"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "MiseEnEvidence",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "081 90 24 94"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Numéro gratuit"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Du lundi au vendredi de 9h30 à 18h (le samedi de 9h à 12h pour déposer un message et être rappelé le lundi matin)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Chapitre",
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Sur place"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Fiva"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Tour Altaïs"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "1, place Aimé Césaire"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "93102 MONTREUIL CEDEX"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "MiseEnEvidence",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Attention :"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " prendre obligatoirement rendez-vous par téléphone."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Chapitre",
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Par courrier électronique"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "LienExterne",
+                  "attributes": {
+                    "URL": "mailto:contact@fiva.fr"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "contact@fiva.fr"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

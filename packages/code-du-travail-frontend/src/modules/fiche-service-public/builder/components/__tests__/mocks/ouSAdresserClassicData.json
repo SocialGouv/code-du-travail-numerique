@@ -1,0 +1,36 @@
+{
+  "type": "element",
+  "name": "OuSAdresser",
+  "attributes": {
+    "ID": "R14971",
+    "type": "pas pris en compte"
+  },
+  "children": [
+    {
+      "type": "element",
+      "name": "Titre",
+      "children": [
+        {
+          "type": "text",
+          "text": "Nom du centre"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Texte",
+      "children": [
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "Un paragraphe tout bête"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
