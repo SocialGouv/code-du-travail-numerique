@@ -37,7 +37,10 @@ export const EnterpriseAgreementSearchInput = ({
   onAgreementSelect,
   selectedAgreementAlert,
 }: Props) => {
-  const [_, setAgreement] = useLocalStorageForAgreement();
+  const [agreement, setAgreement] = useLocalStorageForAgreement();
+  if (onAgreementSelect && agreement) {
+    onAgreementSelect(agreement);
+  }
   const [selectedAgreement, setSelectedAgreement] = useState<
     EnterpriseAgreement | undefined
   >();

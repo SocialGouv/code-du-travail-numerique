@@ -25,6 +25,9 @@ export const AgreementSearchInput = ({
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] =
     useLocalStorageForAgreement();
+  if (onAgreementSelect && selectedAgreement) {
+    onAgreementSelect(selectedAgreement);
+  }
   const [searchState, setSearchState] = useState<
     "noSearch" | "lowSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
   >("noSearch");
