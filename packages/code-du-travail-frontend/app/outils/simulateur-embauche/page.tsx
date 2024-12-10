@@ -5,6 +5,9 @@ import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import HiringSimulator from "../../../src/modules/outils/simulateur-embauche/HiringSimulator";
 
+export const dynamic = "force-static";
+export const revalidate = 86400;
+
 export async function generateMetadata() {
   const { metaTitle, metaDescription } = await getTool();
 
