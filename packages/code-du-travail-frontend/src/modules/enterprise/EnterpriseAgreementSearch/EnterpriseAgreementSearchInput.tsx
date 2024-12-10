@@ -129,10 +129,11 @@ export const EnterpriseAgreementSearchInput = ({
   }, [defaultSearch]);
   useEffect(() => {
     if (selectedEnterprise?.conventions?.length === 1) {
-      const [agreement] = getEnterpriseAgreements(
+      const [enterpriseAgreement] = getEnterpriseAgreements(
         selectedEnterprise.conventions
       );
-      setSelectedAgreement(agreement);
+      setSelectedAgreement(enterpriseAgreement);
+      setAgreement(enterpriseAgreement);
     }
   }, [selectedEnterprise]);
   if (
@@ -173,6 +174,7 @@ export const EnterpriseAgreementSearchInput = ({
               priority="secondary"
               onClick={() => {
                 setSelectedAgreement(undefined);
+                setAgreement(undefined);
                 if (
                   selectedEnterprise?.conventions.length &&
                   selectedEnterprise?.conventions.length < 2
