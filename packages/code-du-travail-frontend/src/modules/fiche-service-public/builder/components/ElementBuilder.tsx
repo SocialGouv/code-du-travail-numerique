@@ -99,15 +99,16 @@ export const ElementBuilder = ({
     case "Cas":
       return <SectionWithTitle data={data} headingLevel={headingLevel} />;
     case "Texte":
-      if (
-        data.children.find(
-          (child) => isFicheSPDataChapitre(child)
-        )
-      ) {
-        return <AccordionWrapper data={data as FicheSPDataTextWithChapitre} headingLevel={headingLevel}/>;
+      if (data.children.find((child) => isFicheSPDataChapitre(child))) {
+        return (
+          <AccordionWrapper
+            data={data as FicheSPDataTextWithChapitre}
+            headingLevel={headingLevel}
+          />
+        );
       }
       return (
-        <ElementBuilder data={data.children} headingLevel={headingLevel}/>
+        <ElementBuilder data={data.children} headingLevel={headingLevel} />
       );
     case "Description":
     case "FragmentConditionne":

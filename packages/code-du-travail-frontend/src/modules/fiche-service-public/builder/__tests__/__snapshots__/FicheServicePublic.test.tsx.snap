@@ -5,9 +5,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
   <div
     class="fr-alert fr-alert--warning fr-mb-2w"
   >
-    <h2>
+    <p
+      class="fr-text--bold"
+    >
       Abandon de poste et démission
-    </h2>
+    </p>
     <p
       class="fr-text--xs fr-pb-2w"
     >
@@ -49,7 +51,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
      ou en intérim, des dispositions spécifiques de rupture anticipée du contrat de travail sont prévues. Nous vous présentons les informations à connaître.
   </p>
   <div
-    class="fr-tabs"
+    class="fr-tabs fr-mb-2w"
     id="fr-tabs-:r0:"
   >
     <ul
@@ -190,11 +192,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </ul>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -244,11 +241,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -302,9 +294,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             <div
               class="fr-alert fr-alert--warning fr-mb-2w"
             >
-              <h4>
+              <p
+                class="fr-text--bold"
+              >
                 Attention
-              </h4>
+              </p>
               <p>
                 Des 
                 dispositions conventionnelles
@@ -315,11 +309,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </div>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -353,11 +342,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -593,11 +577,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </div>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -683,11 +662,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -741,11 +715,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </ul>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -799,11 +768,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </ul>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -838,11 +802,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -876,11 +835,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -908,11 +862,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -940,11 +889,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -972,11 +916,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -1004,11 +943,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -1153,11 +1087,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </div>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -1207,11 +1136,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -1265,9 +1189,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             <div
               class="fr-alert fr-alert--warning fr-mb-2w"
             >
-              <h4>
+              <p
+                class="fr-text--bold"
+              >
                 Attention
-              </h4>
+              </p>
               <p>
                 Des 
                 dispositions conventionnelles
@@ -1278,11 +1204,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </div>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -1316,11 +1237,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -1360,11 +1276,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </div>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -1450,11 +1361,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -1508,11 +1414,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </ul>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -1566,11 +1467,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </ul>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -1605,11 +1501,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -1643,11 +1534,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -1675,11 +1561,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -1707,11 +1588,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -1739,11 +1615,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -1771,11 +1642,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -1901,11 +1767,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </div>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -1955,11 +1816,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -2013,9 +1869,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
             <div
               class="fr-alert fr-alert--warning fr-mb-2w"
             >
-              <h4>
+              <p
+                class="fr-text--bold"
+              >
                 Attention
-              </h4>
+              </p>
               <p>
                 Des 
                 dispositions conventionnelles
@@ -2026,11 +1884,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </div>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -2064,11 +1917,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -2121,11 +1969,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -2179,11 +2022,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </ul>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -2237,11 +2075,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </ul>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -2295,11 +2128,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </ul>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -2333,11 +2161,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -2365,11 +2188,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -2397,11 +2215,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -2429,11 +2242,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >
@@ -2461,11 +2269,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="fr-accordions-group"
-        data-fr-group="false"
-      >
         <section
           class="fr-accordion"
         >

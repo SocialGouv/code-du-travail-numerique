@@ -2,10 +2,38 @@
 
 exports[`<Accordion /> should have different levels of headings & render both BlocCas & Chapitre 1`] = `
 <div>
+  <p>
+    Avant l'accordéon
+  </p>
   <div
     class="fr-accordions-group"
     data-fr-group="false"
   >
+    <section
+      class="fr-accordion"
+    >
+      <h2
+        class="fr-accordion__title"
+      >
+        <button
+          aria-controls="qui-peut-etre-indemnise-collapse"
+          aria-expanded="false"
+          class="fr-accordion__btn"
+          id="qui-peut-etre-indemnise__toggle-btn"
+          type="button"
+        >
+          Qui peut être indemnisé ?
+        </button>
+      </h2>
+      <div
+        class="fr-collapse"
+        id="qui-peut-etre-indemnise-collapse"
+      >
+        <p>
+          Vous pouvez être indemnisé par le Fiva si vous êtes dans l'une des 3 situations suivantes :
+        </p>
+      </div>
+    </section>
     <section
       class="fr-accordion"
     >
@@ -44,6 +72,9 @@ exports[`<Accordion /> should have different levels of headings & render both Bl
       </div>
     </section>
   </div>
+  <p>
+    Après l'accordéon
+  </p>
 </div>
 `;
 

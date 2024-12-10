@@ -42,20 +42,34 @@ export const AccordionWrapper = ({
       />
     ));
   }
+  const firstIndexOfAccordionItem = data.children.findIndex(isItemOfAccordion);
   const accordionItems = data.children
     .filter(isItemOfAccordion)
     .map((child) =>
       formatAccordionItem(child as FicheSPDataChapitre, headingLevel)
     );
 
+  const beforeAccordionElements = data.children
+    .slice(0, firstIndexOfAccordionItem)
+    .map((element, index) => (
+      <ElementBuilder key={index} data={element} headingLevel={headingLevel} />
+    ));
+
+  const afterAccordionElements = data.children
+    .slice(firstIndexOfAccordionItem + accordionItems.length)
+    .map((element, index) => (
+      <ElementBuilder key={index} data={element} headingLevel={headingLevel} />
+    ));
   return (
     <>
+      {beforeAccordionElements}
       {accordionItems.length > 0 && (
         <AccordionWithAnchor
           items={accordionItems}
           titleAs={getTitleLevel(headingLevel)}
         />
       )}
+      {afterAccordionElements}
     </>
   );
 };
