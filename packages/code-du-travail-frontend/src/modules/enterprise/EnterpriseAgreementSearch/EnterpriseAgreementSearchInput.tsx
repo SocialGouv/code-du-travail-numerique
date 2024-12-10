@@ -202,7 +202,11 @@ export const EnterpriseAgreementSearchInput = ({
     return (
       <EnterpriseAgreementSelectionForm
         enterprise={selectedEnterprise}
-        goBack={() => setSelectedEnterprise(undefined)}
+        goBack={() => {
+          setSelectedEnterprise(undefined);
+          setSelectedAgreement(undefined);
+          setAgreement(undefined);
+        }}
         onAgreementSelect={(agreement) => {
           if (onAgreementSelect) onAgreementSelect(agreement);
           setSelectedAgreement(agreement);
