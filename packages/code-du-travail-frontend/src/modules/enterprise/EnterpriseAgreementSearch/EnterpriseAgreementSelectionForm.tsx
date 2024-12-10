@@ -5,6 +5,8 @@ import RadioButtons from "@codegouvfr/react-dsfr/RadioButtons";
 import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelectionDetail";
 import { getEnterpriseAgreements } from "./utils";
 import Button from "@codegouvfr/react-dsfr/Button";
+import Alert from "@codegouvfr/react-dsfr/Alert";
+import { useState } from "react";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;
@@ -17,6 +19,7 @@ export const EnterpriseAgreementSelectionForm = ({
   goBack,
   onAgreementSelect,
 }: Props) => {
+  const [agreement, setAgreement] = useState<EnterpriseAgreement | undefined>();
   const agreements = getEnterpriseAgreements(enterprise.conventions);
   return (
     <>
@@ -35,12 +38,23 @@ export const EnterpriseAgreementSelectionForm = ({
           nativeInputProps: {
             value: agreement.num,
             ...(onAgreementSelect
-              ? { onChange: () => onAgreementSelect(agreement) }
+              ? {
+                  onChange: () => {
+                    onAgreementSelect(agreement);
+                    setAgreement(agreement);
+                  },
+                }
               : {}),
           },
-          hintText: description,
         }))}
       />
+      {agreement && !agreement.contributions && (
+        <Alert
+          severity="info"
+          title="Nous n'avons pas de réponse pour cette convention collective"
+          description="Vous pouvez tout de même poursuivre pour obtenir les informations générales prévues par le code du travail."
+        />
+      )}
     </>
   );
 };

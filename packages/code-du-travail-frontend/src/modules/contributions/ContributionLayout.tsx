@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -21,9 +21,7 @@ import {
 import { ContributionElasticDocument } from "./type";
 import { ContributionContent } from "./ContributionContent";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
-import Alert from "@codegouvfr/react-dsfr/Alert";
 import Html from "../common/Html";
-import CallOut from "@codegouvfr/react-dsfr/CallOut";
 import Link from "next/link";
 
 type Props = {
@@ -37,8 +35,14 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
   const isNoCDT = contribution?.type === "generic-no-cdt";
 
   const [displayContent, setDisplayContent] = useState(false);
+  const [displaySlug, setDisplaySlug] = useState(`/contribution/${slug}`);
   const [selectedAgreement, setSelectedAgreement] =
     useState<EnterpriseAgreement>();
+  useEffect(() => {
+    setDisplaySlug(
+      selectedAgreement ? `/contribution/${selectedAgreement.num}-${slug}` : ""
+    );
+  }, [selectedAgreement]);
   const isCCSupported = (
     agreement: EnterpriseAgreement,
     ccSupported: string[]
@@ -114,8 +118,9 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
             <div>
               <AgreementSearchForm
                 onAgreementSelect={(agreement) => {
-                  if (isAgreementValid(agreement))
-                    setSelectedAgreement(agreement);
+                  setSelectedAgreement(
+                    isAgreementValid(agreement) ? agreement : undefined
+                  );
                 }}
                 selectedAgreementAlert={selectedAgreementAlert}
               ></AgreementSearchForm>
@@ -123,9 +128,7 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
                 <Button
                   className={fr.cx("fr-mt-2w")}
                   linkProps={{
-                    href: selectedAgreement
-                      ? `/contribution/${selectedAgreement?.num}-${slug}`
-                      : "",
+                    href: displaySlug,
                     onClick: (ev) => {
                       if (!selectedAgreement) {
                         ev.preventDefault();
