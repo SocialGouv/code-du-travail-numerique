@@ -7,7 +7,7 @@ import {
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../../../src/modules/common/metas";
 import { ElasticTool } from "../../../../../src/modules/outils/type";
-import { EnterpriseAgreementSelection } from "../../../../../src/modules/enterprise";
+import { EnterpriseAgreementSelectionLink } from "../../../../../src/modules/enterprise";
 import { searchEnterprises } from "../../../../../src/modules/enterprise/queries";
 import { agreementRelatedItems } from "../../../../../src/modules/convention-collective/agreementRelatedItems";
 import { SITE_URL } from "../../../../../src/config";
@@ -38,7 +38,7 @@ async function AgreementSelectionPage({ params }) {
         relatedItems={agreementRelatedItems}
         description={tool.description}
       >
-        <EnterpriseAgreementSelection enterprise={enterprise} />
+        <EnterpriseAgreementSelectionLink enterprise={enterprise} />
       </FindAgreementLayout>
     </DsfrLayout>
   );
