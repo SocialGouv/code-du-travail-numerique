@@ -37,8 +37,10 @@ export const EnterpriseAgreementSearchInput = ({
   onAgreementSelect,
   selectedAgreementAlert,
 }: Props) => {
-  const [selectedAgreement, setSelectedAgreement] =
-    useLocalStorageForAgreement();
+  const [_, setAgreement] = useLocalStorageForAgreement();
+  const [selectedAgreement, setSelectedAgreement] = useState<
+    EnterpriseAgreement | undefined
+  >();
   const [searchState, setSearchState] = useState<
     "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch" | "required"
   >("noSearch");
@@ -199,6 +201,7 @@ export const EnterpriseAgreementSearchInput = ({
         onAgreementSelect={(agreement) => {
           if (onAgreementSelect) onAgreementSelect(agreement);
           setSelectedAgreement(agreement);
+          setAgreement(agreement);
         }}
       />
     );
@@ -390,7 +393,7 @@ export const EnterpriseAgreementSearchInput = ({
               : {
                   href: "",
                   onClick: () => {
-                    setSelectedAgreement({
+                    const assMatAgreement = {
                       contributions: true,
                       num: 3239,
                       id: "3239",
@@ -399,7 +402,9 @@ export const EnterpriseAgreementSearchInput = ({
                       slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
                       title: "Particuliers employeurs et emploi à domicile",
                       url: "/3239-particuliers-employeurs-et-emploi-a-domicile",
-                    });
+                    };
+                    setSelectedAgreement(assMatAgreement);
+                    setAgreement(assMatAgreement);
                   },
                 }
           }
