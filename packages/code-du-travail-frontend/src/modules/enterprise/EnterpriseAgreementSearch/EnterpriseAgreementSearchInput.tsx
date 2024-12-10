@@ -16,7 +16,9 @@ import { Enterprise, EnterpriseAgreement } from "../types";
 import { ApiGeoResult } from "../../Location/searchCities";
 import { CardTitleStyle, ButtonStyle } from "../../convention-collective/style";
 import { EnterpriseAgreementSelectionForm } from "./EnterpriseAgreementSelectionForm";
-import { useLocalStorageForAgreementOnPageLoad } from "../../common/useLocalStorage";
+import { useLocalStorageForAgreement } from "../../common/useLocalStorage";
+import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelectionDetail";
+import { getEnterpriseAgreements } from "./utils";
 
 type Props = {
   widgetMode?: boolean;
@@ -35,7 +37,8 @@ export const EnterpriseAgreementSearchInput = ({
   onAgreementSelect,
   selectedAgreementAlert,
 }: Props) => {
-  const [convention, setConvention] = useLocalStorageForAgreementOnPageLoad();
+  const [selectedAgreement, setSelectedAgreement] =
+    useLocalStorageForAgreement();
   const [searchState, setSearchState] = useState<
     "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch" | "required"
   >("noSearch");
@@ -46,8 +49,6 @@ export const EnterpriseAgreementSearchInput = ({
   );
   const [enterprises, setEnterprises] = useState<Enterprise[]>();
   const [selectedEnterprise, setSelectedEnterprise] = useState<Enterprise>();
-  const [selectedAgreement, setSelectedAgreement] =
-    useState<EnterpriseAgreement | null>(convention);
   const [error, setError] = useState("");
   const getStateMessage = () => {
     switch (searchState) {
@@ -121,9 +122,21 @@ export const EnterpriseAgreementSearchInput = ({
       onSubmit();
     }
   }, [defaultSearch]);
-  if (selectedAgreement) {
+  useEffect(() => {
+    if (selectedEnterprise?.conventions?.length === 1) {
+      const [agreement] = getEnterpriseAgreements(
+        selectedEnterprise.conventions
+      );
+      setSelectedAgreement(agreement);
+    }
+  }, [selectedEnterprise]);
+  if (selectedAgreement && (selectedEnterprise?.conventions?.length ?? 0) < 2) {
     return (
       <>
+        {selectedEnterprise && (
+          <EnterpriseAgreementSelectionDetail enterprise={selectedEnterprise} />
+        )}
+
         <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
           Vous avez sélectionné la convention collective
         </p>
@@ -150,7 +163,7 @@ export const EnterpriseAgreementSearchInput = ({
               iconId="fr-icon-arrow-go-back-fill"
               priority="secondary"
               onClick={() => {
-                setSelectedAgreement(null);
+                setSelectedAgreement(undefined);
                 if (
                   selectedEnterprise?.conventions.length &&
                   selectedEnterprise?.conventions.length < 2
@@ -181,7 +194,6 @@ export const EnterpriseAgreementSearchInput = ({
         goBack={() => setSelectedEnterprise(undefined)}
         onAgreementSelect={(agreement) => {
           if (onAgreementSelect) onAgreementSelect(agreement);
-          setConvention(agreement);
           setSelectedAgreement(agreement);
         }}
       />
@@ -365,10 +377,28 @@ export const EnterpriseAgreementSearchInput = ({
         <Card
           border
           enlargeLink
-          linkProps={{
-            href: `/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile`,
-            ...(widgetMode ? { target: "_blank" } : {}),
-          }}
+          linkProps={
+            !onAgreementSelect
+              ? {
+                  href: `/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile`,
+                  ...(widgetMode ? { target: "_blank" } : {}),
+                }
+              : {
+                  href: "",
+                  onClick: () => {
+                    setSelectedAgreement({
+                      contributions: true,
+                      num: 3239,
+                      id: "3239",
+                      shortTitle:
+                        "Particuliers employeurs et emploi à domicile",
+                      slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
+                      title: "Particuliers employeurs et emploi à domicile",
+                      url: "/3239-particuliers-employeurs-et-emploi-a-domicile",
+                    });
+                  },
+                }
+          }
           title="Particuliers employeurs et emploi à domicile"
           desc="Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective"
           size="small"

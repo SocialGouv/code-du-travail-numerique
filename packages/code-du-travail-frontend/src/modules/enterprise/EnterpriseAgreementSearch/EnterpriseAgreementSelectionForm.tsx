@@ -18,9 +18,6 @@ export const EnterpriseAgreementSelectionForm = ({
   onAgreementSelect,
 }: Props) => {
   const agreements = getEnterpriseAgreements(enterprise.conventions);
-  if (onAgreementSelect && agreements.length === 1 && agreements[0]) {
-    onAgreementSelect(agreements[0]);
-  }
   return (
     <>
       <EnterpriseAgreementSelectionDetail enterprise={enterprise} />
