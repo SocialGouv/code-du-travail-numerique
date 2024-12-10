@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.167.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.167.0...v4.167.1) (2024-12-05)
+
+
+### Bug Fixes
+
+* widget dsfr ([#6341](https://github.com/SocialGouv/code-du-travail-numerique/issues/6341)) ([6018cc5](https://github.com/SocialGouv/code-du-travail-numerique/commit/6018cc58445474fc2d7b16834e76c97f6b6582f4))
+* **widget modèle de courrier:** affichage de l'url canonique ([#6340](https://github.com/SocialGouv/code-du-travail-numerique/issues/6340)) ([ed9d3bb](https://github.com/SocialGouv/code-du-travail-numerique/commit/ed9d3bb4dfbb36f282ff2cdf8985b0b51da52200))
+
+
+
+
+
 # [4.167.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.166.0...v4.167.0) (2024-12-04)
 
 
