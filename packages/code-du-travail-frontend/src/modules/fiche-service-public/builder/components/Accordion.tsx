@@ -1,41 +1,62 @@
 import React from "react";
 
-import { filterOutTitle, getInChildrenByName, getText } from "../utils";
+import { filterOutTitle, getTitleInChildren } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
 import { getTitleLevel } from "./Title";
-import { FicheSPDataChapitre } from "../type";
+import { FicheSPDataChapitre, FicheSPDataTextWithChapitre } from "../type";
 import SectionWithTitle from "./SectionWithTitle";
 import { AccordionWithAnchor } from "../../../common/AccordionWithAnchor";
+
+const formatAccordionItem = (
+  data: FicheSPDataChapitre,
+  headingLevel: number
+) => {
+  return {
+    title: getTitleInChildren(data),
+    content: (
+      <ElementBuilder
+        data={filterOutTitle(data)}
+        headingLevel={headingLevel + 1}
+      />
+    ),
+  };
+};
+
+const isItemOfAccordion = (element) =>
+  element.name === "Chapitre" &&
+  element.children.find((child) => child.name === "Titre");
 
 export const AccordionWrapper = ({
   data,
   headingLevel,
 }: {
-  data: FicheSPDataChapitre;
+  data: FicheSPDataTextWithChapitre;
   headingLevel: number;
 }) => {
   if (headingLevel >= 2) {
-    return <SectionWithTitle data={data} headingLevel={headingLevel} />;
+    return data.children.map((child) => (
+      <SectionWithTitle
+        data={child}
+        headingLevel={headingLevel}
+        key={child.name + headingLevel}
+      />
+    ));
   }
-
-  const title = getInChildrenByName(data, "Titre");
-  if (!title) return <></>;
+  const accordionItems = data.children
+    .filter(isItemOfAccordion)
+    .map((child) =>
+      formatAccordionItem(child as FicheSPDataChapitre, headingLevel)
+    );
 
   return (
-    <AccordionWithAnchor
-      items={[
-        {
-          title: getText(title),
-          content: (
-            <ElementBuilder
-              data={filterOutTitle(data)}
-              headingLevel={headingLevel + 1}
-            />
-          ),
-        },
-      ]}
-      titleAs={getTitleLevel(headingLevel)}
-    />
+    <>
+      {accordionItems.length > 0 && (
+        <AccordionWithAnchor
+          items={accordionItems}
+          titleAs={getTitleLevel(headingLevel)}
+        />
+      )}
+    </>
   );
 };
 

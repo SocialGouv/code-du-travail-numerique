@@ -13,7 +13,11 @@ import ServiceEnLigne from "./ServiceEnLigne";
 import OuSAdresser from "./OuSAdresser";
 import Tabulator from "./Tabulator";
 import { ImageComponent as ImageElement } from "./ImageComponent";
-import { FicheSPData } from "../type";
+import {
+  FicheSPData,
+  FicheSPDataTextWithChapitre,
+  isFicheSPDataChapitre,
+} from "../type";
 import AccordionWrapper from "./Accordion";
 import SectionWithTitle from "./SectionWithTitle";
 import TitreFlottant from "./TitreFlottant";
@@ -94,14 +98,22 @@ export const ElementBuilder = ({
       return <Exemple data={data} headingLevel={headingLevel} />;
     case "Cas":
       return <SectionWithTitle data={data} headingLevel={headingLevel} />;
-    case "Chapitre":
-      return <AccordionWrapper data={data} headingLevel={headingLevel} />;
+    case "Texte":
+      if (
+        data.children.find(
+          (child) => isFicheSPDataChapitre(child)
+        )
+      ) {
+        return <AccordionWrapper data={data as FicheSPDataTextWithChapitre} headingLevel={headingLevel}/>;
+      }
+      return (
+        <ElementBuilder data={data.children} headingLevel={headingLevel}/>
+      );
     case "Description":
     case "FragmentConditionne":
     case "SousChapitre":
     case "LienIntra":
     case "LienInterne":
-    case "Texte":
     case "Complement":
       return (
         <ElementBuilder data={data.children} headingLevel={headingLevel} />

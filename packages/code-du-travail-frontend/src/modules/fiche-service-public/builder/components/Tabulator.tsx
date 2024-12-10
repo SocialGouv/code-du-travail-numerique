@@ -13,6 +13,7 @@ export const Tabulator = ({
   headingLevel: number;
 }) => (
   <Tabs
+    className="fr-mb-2w"
     tabs={data.children.map((tab) => {
       const title = getTitleInChildren(tab);
       return {

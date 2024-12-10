@@ -85,6 +85,11 @@ export type FicheSPDataTableauChildren = {
   name: "Rangée" | "Colonne";
 };
 
+export type FicheSPDataTextWithChapitre = {
+  type: "element";
+  children: FicheSPDataChapitre[] | FicheSPDataElement[];
+  name: "Texte";
+};
 export type FicheSPDataChapitre = {
   type: "element";
   children: FicheSPDataElement[] | FicheSPDataParagraphe[];
@@ -178,4 +183,11 @@ export type FicheSPDataTitreFlottant = {
   type: "element";
   children: FicheSPDataParagraphe[];
   name: "TitreFlottant";
+};
+
+export const isFicheSPDataChapitre = (child: FicheSPData) => {
+  return (
+    (child as FicheSPDataElement).name !== undefined &&
+    (child as FicheSPDataChapitre).name === "Chapitre"
+  );
 };
