@@ -44,7 +44,7 @@ export const AgreementSearchForm = ({
           },
           {
             label:
-              "Je ne sais pas quelle est ma convention collective et je la recherche.",
+              "Je cherche mon entreprise pour trouver ma convention collective.",
             nativeInputProps: {
               checked: mode === "enterpriseSearch",
               onChange: () => setMode("enterpriseSearch"),

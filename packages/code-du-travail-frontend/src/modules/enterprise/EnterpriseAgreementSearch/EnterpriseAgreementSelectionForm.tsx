@@ -48,7 +48,7 @@ export const EnterpriseAgreementSelectionForm = ({
           },
         }))}
       />
-      {agreement && !agreement.contributions && (
+      {((agreement && !agreement.contributions) || !agreements.length) && (
         <Alert
           severity="info"
           title="Nous n'avons pas de réponse pour cette convention collective"
