@@ -21,18 +21,32 @@ type SectionProps = {
     source: SourceKeys;
     docs: Document[];
   };
+  headingLevel?: number;
 };
 
-const SiteMapSection = ({ title, url, detail }: SectionProps) => (
+const SiteMapSection = ({
+  title,
+  url,
+  detail,
+  headingLevel = 3,
+}: SectionProps) => (
   <div className={fr.cx("fr-mb-4w")}>
     {url ? (
-      <Link href={url}>
-        <span className={fr.cx("fr-text--lead", "fr-text--bold")}>{title}</span>
-      </Link>
+      <div
+        role="heading"
+        aria-level={headingLevel}
+        className={fr.cx("fr-text--lead", "fr-text--bold")}
+      >
+        <Link href={url}>{title}</Link>
+      </div>
     ) : (
-      <span className={fr.cx("fr-text--lead", "fr-text--bold", "fr-mb-3w")}>
+      <div
+        role="heading"
+        aria-level={headingLevel}
+        className={fr.cx("fr-text--lead", "fr-text--bold", "fr-mb-3w")}
+      >
         {title}
-      </span>
+      </div>
     )}
 
     {detail && (
@@ -74,7 +88,7 @@ export const SiteMap = ({
     <h1 id="plan-du-site" className={fr.cx("fr-mt-0", "fr-mb-3w")}>
       Plan du site
     </h1>
-    <SiteMapSection title={"Page d'accueil"} url={"/"} />
+    <SiteMapSection title={"Page d'accueil"} url={"/"} headingLevel={2} />
     <SiteMapSection
       title={"Boîte à outils"}
       url={"/outils"}
