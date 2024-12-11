@@ -8,6 +8,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 
 export type Props = {
   titleAs?: `h${2 | 3 | 4 | 5 | 6}`;
+  className?: string;
   items: {
     id?: string;
     title: string;
@@ -18,6 +19,7 @@ export type Props = {
 export const AccordionWithAnchor = ({
   items,
   titleAs = "h2",
+  className,
 }: Props): React.ReactElement => {
   const path = useRouter();
   const [anchor, setAnchor] = useState<string | null>();
@@ -65,7 +67,10 @@ export const AccordionWithAnchor = ({
   }
 
   return (
-    <div className={fr.cx("fr-accordions-group")} data-fr-group="false">
+    <div
+      className={`${fr.cx("fr-accordions-group")} ${className}`}
+      data-fr-group="false"
+    >
       {itemsWithId.map((item) => (
         <Accordion
           titleAs={titleAs}

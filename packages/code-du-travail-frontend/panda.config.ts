@@ -16,6 +16,11 @@ export default defineConfig({
       },
     },
   },
+  globalCss: {
+    ".fr-table__content table, .fr-table__content table *": {
+      whiteSpace: "normal",
+    },
+  },
   outdir: "src/styled-system",
   outExtension: "js",
   importMap: "@styled-system",
