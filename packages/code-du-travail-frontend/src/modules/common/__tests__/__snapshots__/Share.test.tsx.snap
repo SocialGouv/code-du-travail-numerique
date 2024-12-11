@@ -5,9 +5,13 @@ exports[`<Share /> renders 1`] = `
   <div
     class="fr-follow__social"
   >
-    <p>
+    <div
+      aria-level="3"
+      class="fr-mb-2w"
+      role="heading"
+    >
       Partager la page
-    </p>
+    </div>
     <ul
       class="fr-btns-group"
     >
