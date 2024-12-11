@@ -70,6 +70,7 @@ export const Header = () => {
         />
       )}
       onSearchButtonClick={onSearchSubmit}
+      disableDisplay={true}
     />
   );
 };

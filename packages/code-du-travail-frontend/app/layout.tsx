@@ -24,13 +24,9 @@ export default function RootLayout({
 }) {
   const headersData = headers();
   const nonce = headersData.get("x-nonce") ?? undefined;
-  const pathname = headersData.get("x-url") ?? "";
 
   return (
-    <DefaultLayout
-      nonce={nonce}
-      defaultColorScheme={pathname.includes("/widgets") ? "light" : "system"}
-    >
+    <DefaultLayout nonce={nonce} defaultColorScheme={"light"}>
       {children}
     </DefaultLayout>
   );
