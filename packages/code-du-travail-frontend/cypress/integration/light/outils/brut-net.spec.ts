@@ -7,6 +7,5 @@ describe("Outil - Salaire brut/net", () => {
       "have.text",
       "Calculer le salaire brut/net"
     );
-    cy.findByRole("heading", { level: 1 }).click();
   });
 });
