@@ -114,9 +114,7 @@ export const BesoinPlusInformations = () => {
             href={result.url}
             target="_blank"
             data-testid="result-search-service"
-            ref={(link) => {
-              setLinkRef(link);
-            }}
+            ref={setLinkRef}
           >
             {result.url}
           </a>
