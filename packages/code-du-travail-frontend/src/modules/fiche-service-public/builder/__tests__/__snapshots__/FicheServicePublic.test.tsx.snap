@@ -127,10 +127,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="dans-quels-cas-pouvez-vous-demissionner-collapse"
+              aria-controls="62uid70-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="dans-quels-cas-pouvez-vous-demissionner__toggle-btn"
+              id="62uid70__toggle-btn"
               type="button"
             >
               Dans quels cas pouvez-vous démissionner ?
@@ -138,7 +138,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="dans-quels-cas-pouvez-vous-demissionner-collapse"
+            id="62uid70-collapse"
           >
             <p>
               La démission est un mode de rupture du contrat de travail qui vous permet de quitter votre entreprise sans avoir à justifier votre décision.
@@ -202,10 +202,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="comment-avertir-lemployeur-de-votre-volonte-de-demissionner-collapse"
+              aria-controls="62uid71-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="comment-avertir-lemployeur-de-votre-volonte-de-demissionner__toggle-btn"
+              id="62uid71__toggle-btn"
               type="button"
             >
               Comment avertir l'employeur de votre volonté de démissionner ?
@@ -213,7 +213,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="comment-avertir-lemployeur-de-votre-volonte-de-demissionner-collapse"
+            id="62uid71-collapse"
           >
             <p>
               Pour que votre démission soit valable, vous devez 
@@ -251,10 +251,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="quelle-est-la-procedure-pour-demissionner-collapse"
+              aria-controls="62uid72-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="quelle-est-la-procedure-pour-demissionner__toggle-btn"
+              id="62uid72__toggle-btn"
               type="button"
             >
               Quelle est la procédure pour démissionner ?
@@ -262,7 +262,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="quelle-est-la-procedure-pour-demissionner-collapse"
+            id="62uid72-collapse"
           >
             <p>
               Pour manifester votre volonté claire et non équivoque de démissionner, vous devez 
@@ -319,10 +319,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="devez-vous-effectuer-un-preavis-dans-le-cadre-de-votre-demission-collapse"
+              aria-controls="62uid73-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="devez-vous-effectuer-un-preavis-dans-le-cadre-de-votre-demission__toggle-btn"
+              id="62uid73__toggle-btn"
               type="button"
             >
               Devez-vous effectuer un préavis dans le cadre de votre démission ?
@@ -330,7 +330,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="devez-vous-effectuer-un-preavis-dans-le-cadre-de-votre-demission-collapse"
+            id="62uid73-collapse"
           >
             <p>
               Vous ne pouvez pas quitter votre travail dès que vous avez signalé votre volonté de démissionner à votre employeur.
@@ -352,10 +352,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="quelle-est-la-duree-de-votre-preavis-en-cas-de-demission-collapse"
+              aria-controls="62uid74-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="quelle-est-la-duree-de-votre-preavis-en-cas-de-demission__toggle-btn"
+              id="62uid74__toggle-btn"
               type="button"
             >
               Quelle est la durée de votre préavis en cas de démission ?
@@ -363,7 +363,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="quelle-est-la-duree-de-votre-preavis-en-cas-de-demission-collapse"
+            id="62uid74-collapse"
           >
             <h4>
               Vous êtes journaliste
@@ -593,10 +593,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-etre-dispense-deffectuer-un-preavis-en-cas-de-demission-collapse"
+              aria-controls="62uid75-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-etre-dispense-deffectuer-un-preavis-en-cas-de-demission__toggle-btn"
+              id="62uid75__toggle-btn"
               type="button"
             >
               Pouvez-vous être dispensé d'effectuer un préavis en cas de démission ?
@@ -604,7 +604,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-etre-dispense-deffectuer-un-preavis-en-cas-de-demission-collapse"
+            id="62uid75-collapse"
           >
             <p>
               Vous n'effectuez pas de préavis dans l'un des cas suivants :
@@ -682,10 +682,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="le-preavis-de-demission-peut-il-etre-reporte-collapse"
+              aria-controls="62uid76-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="le-preavis-de-demission-peut-il-etre-reporte__toggle-btn"
+              id="62uid76__toggle-btn"
               type="button"
             >
               Le préavis de démission peut-il être reporté ?
@@ -693,7 +693,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="le-preavis-de-demission-peut-il-etre-reporte-collapse"
+            id="62uid76-collapse"
           >
             <p>
               Le préavis peut être reporté dans les cas suivants :
@@ -743,10 +743,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="le-preavis-de-demission-peut-il-etre-suspendu-collapse"
+              aria-controls="62uid77-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="le-preavis-de-demission-peut-il-etre-suspendu__toggle-btn"
+              id="62uid77__toggle-btn"
               type="button"
             >
               Le préavis de démission peut-il être suspendu ?
@@ -754,7 +754,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="le-preavis-de-demission-peut-il-etre-suspendu-collapse"
+            id="62uid77-collapse"
           >
             <p>
               Le préavis peut être suspendu dans les cas suivants :
@@ -804,10 +804,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-vous-absenter-pour-rechercher-un-emploi-durant-votre-preavis-collapse"
+              aria-controls="62uid78-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-vous-absenter-pour-rechercher-un-emploi-durant-votre-preavis__toggle-btn"
+              id="62uid78__toggle-btn"
               type="button"
             >
               Pouvez-vous vous absenter pour rechercher un emploi durant votre préavis ?
@@ -815,7 +815,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-vous-absenter-pour-rechercher-un-emploi-durant-votre-preavis-collapse"
+            id="62uid78-collapse"
           >
             <p>
               Il n'existe aucune disposition légale vous permettant de vous 
@@ -838,10 +838,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-toucher-des-allocations-chomage-en-cas-de-demission-collapse"
+              aria-controls="62uid79-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-toucher-des-allocations-chomage-en-cas-de-demission__toggle-btn"
+              id="62uid79__toggle-btn"
               type="button"
             >
               Pouvez-vous toucher des allocations chômage en cas de démission ?
@@ -849,7 +849,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-toucher-des-allocations-chomage-en-cas-de-demission-collapse"
+            id="62uid79-collapse"
           >
             <p>
               En principe, vous ne bénéficiez pas de l'allocation de retour à l'emploi (ARE) si vous démissionnez.
@@ -871,10 +871,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-toucher-une-indemnite-compensatrice-de-preavis-en-cas-de-demission-collapse"
+              aria-controls="62uid80-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-toucher-une-indemnite-compensatrice-de-preavis-en-cas-de-demission__toggle-btn"
+              id="62uid80__toggle-btn"
               type="button"
             >
               Pouvez-vous toucher une indemnité compensatrice de préavis en cas de démission ?
@@ -882,7 +882,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-toucher-une-indemnite-compensatrice-de-preavis-en-cas-de-demission-collapse"
+            id="62uid80-collapse"
           >
             <p>
               Si vous êtes dispensé d'effectuer un préavis parvotre employeur, vous avez droit au versement d'une 
@@ -898,10 +898,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-toucher-une-indemnite-compensatrice-de-conges-payes-en-cas-de-demission-collapse"
+              aria-controls="62uid81-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-toucher-une-indemnite-compensatrice-de-conges-payes-en-cas-de-demission__toggle-btn"
+              id="62uid81__toggle-btn"
               type="button"
             >
               Pouvez-vous toucher une indemnité compensatrice de congés payés en cas de démission ?
@@ -909,7 +909,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-toucher-une-indemnite-compensatrice-de-conges-payes-en-cas-de-demission-collapse"
+            id="62uid81-collapse"
           >
             <p>
               Vous avez droit à une 
@@ -925,10 +925,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-continuer-a-beneficier-de-votre-complementaire-sante-en-cas-de-demission-collapse"
+              aria-controls="62uid82-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-continuer-a-beneficier-de-votre-complementaire-sante-en-cas-de-demission__toggle-btn"
+              id="62uid82__toggle-btn"
               type="button"
             >
               Pouvez-vous continuer à bénéficier de votre complémentaire santé en cas de démission ?
@@ -936,7 +936,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-continuer-a-beneficier-de-votre-complementaire-sante-en-cas-de-demission-collapse"
+            id="62uid82-collapse"
           >
             <p>
               Vous continuez à bénéficier de la couverture santé souscrite dans le cadre de votre ancien travail, sous 
@@ -952,10 +952,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-demander-le-deblocage-anticipe-de-votre-epargne-salariale-en-cas-de-demission-collapse"
+              aria-controls="62uid83-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-demander-le-deblocage-anticipe-de-votre-epargne-salariale-en-cas-de-demission__toggle-btn"
+              id="62uid83__toggle-btn"
               type="button"
             >
               Pouvez-vous demander le déblocage anticipé de votre épargne salariale en cas de démission ?
@@ -963,7 +963,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-demander-le-deblocage-anticipe-de-votre-epargne-salariale-en-cas-de-demission-collapse"
+            id="62uid83-collapse"
           >
             <p>
               Si vous bénéficiez d'un dispositif d'épargne salariale, vous pouvez 
@@ -979,10 +979,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="quels-sont-les-documents-que-votre-employeur-doit-vous-remettre-en-cas-de-demission-collapse"
+              aria-controls="62uid84-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="quels-sont-les-documents-que-votre-employeur-doit-vous-remettre-en-cas-de-demission__toggle-btn"
+              id="62uid84__toggle-btn"
               type="button"
             >
               Quels sont les documents que votre employeur doit vous remettre en cas de démission ?
@@ -990,7 +990,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="quels-sont-les-documents-que-votre-employeur-doit-vous-remettre-en-cas-de-demission-collapse"
+            id="62uid84-collapse"
           >
             <p>
               L'employeur doit vous remettre tous les documents suivants :
@@ -1052,10 +1052,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="dans-quels-cas-pouvez-vous-demissionner-de-votre-cdd-collapse"
+              aria-controls="528uid379-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="dans-quels-cas-pouvez-vous-demissionner-de-votre-cdd__toggle-btn"
+              id="528uid379__toggle-btn"
               type="button"
             >
               Dans quels cas pouvez-vous démissionner de votre CDD ?
@@ -1063,7 +1063,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="dans-quels-cas-pouvez-vous-demissionner-de-votre-cdd-collapse"
+            id="528uid379-collapse"
           >
             <p>
               En principe, vous ne pouvez pas démissionner de votre CDD.
@@ -1146,10 +1146,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="comment-avertir-lemployeur-de-votre-volonte-de-demissionner-collapse"
+              aria-controls="528uid380-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="comment-avertir-lemployeur-de-votre-volonte-de-demissionner__toggle-btn"
+              id="528uid380__toggle-btn"
               type="button"
             >
               Comment avertir l'employeur de votre volonté de démissionner ?
@@ -1157,7 +1157,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="comment-avertir-lemployeur-de-votre-volonte-de-demissionner-collapse"
+            id="528uid380-collapse"
           >
             <p>
               Pour que votre démission soit valable, vous devez 
@@ -1195,10 +1195,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="quelle-est-la-procedure-pour-demissionner-dun-cdd-collapse"
+              aria-controls="528uid381-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="quelle-est-la-procedure-pour-demissionner-dun-cdd__toggle-btn"
+              id="528uid381__toggle-btn"
               type="button"
             >
               Quelle est la procédure pour démissionner d'un CDD ?
@@ -1206,7 +1206,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="quelle-est-la-procedure-pour-demissionner-dun-cdd-collapse"
+            id="528uid381-collapse"
           >
             <p>
               Pour manifester votre volonté claire et non équivoque de démissionner, vous devez 
@@ -1263,10 +1263,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="devez-vous-effectuer-un-preavis-suite-a-votre-demission-dun-cdd-collapse"
+              aria-controls="528uid382-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="devez-vous-effectuer-un-preavis-suite-a-votre-demission-dun-cdd__toggle-btn"
+              id="528uid382__toggle-btn"
               type="button"
             >
               Devez-vous effectuer un préavis suite à votre démission d'un CDD ?
@@ -1274,7 +1274,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="devez-vous-effectuer-un-preavis-suite-a-votre-demission-dun-cdd-collapse"
+            id="528uid382-collapse"
           >
             <p>
               Vous ne pouvez pas quitter votre travail dès que vous avez signalé votre volonté de démissionner à votre employeur.
@@ -1296,10 +1296,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="quelle-est-la-duree-de-votre-preavis-en-cas-de-demission-collapse"
+              aria-controls="528uid383-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="quelle-est-la-duree-de-votre-preavis-en-cas-de-demission__toggle-btn"
+              id="528uid383__toggle-btn"
               type="button"
             >
               Quelle est la durée de votre préavis en cas de démission ?
@@ -1307,7 +1307,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="quelle-est-la-duree-de-votre-preavis-en-cas-de-demission-collapse"
+            id="528uid383-collapse"
           >
             <p>
               La durée du préavis dépend de la durée totale du CDD à raison d'un jour 
@@ -1335,10 +1335,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-etre-dispense-deffectuer-un-preavis-en-cas-de-demission-collapse"
+              aria-controls="528uid384-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-etre-dispense-deffectuer-un-preavis-en-cas-de-demission__toggle-btn"
+              id="528uid384__toggle-btn"
               type="button"
             >
               Pouvez-vous être dispensé d'effectuer un préavis en cas de démission ?
@@ -1346,7 +1346,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-etre-dispense-deffectuer-un-preavis-en-cas-de-demission-collapse"
+            id="528uid384-collapse"
           >
             <p>
               Vous n'avez pas à effectuer de préavis si vous êtes dans l'un des cas suivants :
@@ -1424,10 +1424,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="le-preavis-de-demission-peut-il-etre-reporte-collapse"
+              aria-controls="528uid385-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="le-preavis-de-demission-peut-il-etre-reporte__toggle-btn"
+              id="528uid385__toggle-btn"
               type="button"
             >
               Le préavis de démission peut-il être reporté ?
@@ -1435,7 +1435,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="le-preavis-de-demission-peut-il-etre-reporte-collapse"
+            id="528uid385-collapse"
           >
             <p>
               Le préavis peut être reporté dans les cas suivants :
@@ -1485,10 +1485,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="le-preavis-de-demission-peut-il-etre-suspendu-collapse"
+              aria-controls="528uid386-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="le-preavis-de-demission-peut-il-etre-suspendu__toggle-btn"
+              id="528uid386__toggle-btn"
               type="button"
             >
               Le préavis de démission peut-il être suspendu ?
@@ -1496,7 +1496,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="le-preavis-de-demission-peut-il-etre-suspendu-collapse"
+            id="528uid386-collapse"
           >
             <p>
               Le préavis peut être suspendu dans les cas suivants :
@@ -1546,10 +1546,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-vous-absenter-pour-rechercher-un-emploi-durant-votre-preavis-collapse"
+              aria-controls="528uid387-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-vous-absenter-pour-rechercher-un-emploi-durant-votre-preavis__toggle-btn"
+              id="528uid387__toggle-btn"
               type="button"
             >
               Pouvez-vous vous absenter pour rechercher un emploi durant votre préavis ?
@@ -1557,7 +1557,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-vous-absenter-pour-rechercher-un-emploi-durant-votre-preavis-collapse"
+            id="528uid387-collapse"
           >
             <p>
               Il n'existe aucune disposition légale vous permettant de vous 
@@ -1580,10 +1580,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-percevoir-des-allocations-chomage-en-cas-de-demission-collapse"
+              aria-controls="528uid388-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-percevoir-des-allocations-chomage-en-cas-de-demission__toggle-btn"
+              id="528uid388__toggle-btn"
               type="button"
             >
               Pouvez-vous percevoir des allocations chômage en cas de démission ?
@@ -1591,7 +1591,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-percevoir-des-allocations-chomage-en-cas-de-demission-collapse"
+            id="528uid388-collapse"
           >
             <p>
               En principe, vous ne bénéficiez pas de l'allocation de retour à l'emploi (ARE) si vous démissionnez.
@@ -1613,10 +1613,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-toucher-une-indemnite-compensatrice-de-preavis-en-cas-de-demission-collapse"
+              aria-controls="528uid389-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-toucher-une-indemnite-compensatrice-de-preavis-en-cas-de-demission__toggle-btn"
+              id="528uid389__toggle-btn"
               type="button"
             >
               Pouvez-vous toucher une indemnité compensatrice de préavis en cas de démission ?
@@ -1624,7 +1624,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-toucher-une-indemnite-compensatrice-de-preavis-en-cas-de-demission-collapse"
+            id="528uid389-collapse"
           >
             <p>
               Si vous êtes dispensé d'effectuer un préavis parvotre employeur, vous avez droit au versement d'une 
@@ -1640,10 +1640,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-toucher-une-indemnite-compensatrice-de-conges-payes-en-cas-de-demission-collapse"
+              aria-controls="528uid390-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-toucher-une-indemnite-compensatrice-de-conges-payes-en-cas-de-demission__toggle-btn"
+              id="528uid390__toggle-btn"
               type="button"
             >
               Pouvez-vous toucher une indemnité compensatrice de congés payés en cas de démission ?
@@ -1651,7 +1651,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-toucher-une-indemnite-compensatrice-de-conges-payes-en-cas-de-demission-collapse"
+            id="528uid390-collapse"
           >
             <p>
               Vous avez droit à une 
@@ -1667,10 +1667,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-continuer-a-beneficier-de-votre-complementaire-sante-en-cas-de-demission-collapse"
+              aria-controls="528uid391-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-continuer-a-beneficier-de-votre-complementaire-sante-en-cas-de-demission__toggle-btn"
+              id="528uid391__toggle-btn"
               type="button"
             >
               Pouvez-vous continuer à bénéficier de votre complémentaire santé en cas de démission ?
@@ -1678,7 +1678,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-continuer-a-beneficier-de-votre-complementaire-sante-en-cas-de-demission-collapse"
+            id="528uid391-collapse"
           >
             <p>
               Vous continuez à bénéficier de la couverture santé souscrite dans le cadre de votre ancien travail, sous 
@@ -1694,10 +1694,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-demander-le-deblocage-anticipe-de-votre-epargne-salariale-en-cas-de-demission-collapse"
+              aria-controls="528uid392-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-demander-le-deblocage-anticipe-de-votre-epargne-salariale-en-cas-de-demission__toggle-btn"
+              id="528uid392__toggle-btn"
               type="button"
             >
               Pouvez-vous demander le déblocage anticipé de votre épargne salariale en cas de démission ?
@@ -1705,7 +1705,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-demander-le-deblocage-anticipe-de-votre-epargne-salariale-en-cas-de-demission-collapse"
+            id="528uid392-collapse"
           >
             <p>
               Si vous bénéficiez d'un dispositif d'épargne salariale, vous pouvez 
@@ -1721,10 +1721,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="quels-sont-les-documents-que-votre-employeur-doit-vous-remettre-en-cas-de-demission-collapse"
+              aria-controls="528uid393-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="quels-sont-les-documents-que-votre-employeur-doit-vous-remettre-en-cas-de-demission__toggle-btn"
+              id="528uid393__toggle-btn"
               type="button"
             >
               Quels sont les documents que votre employeur doit vous remettre en cas de démission ?
@@ -1732,7 +1732,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="quels-sont-les-documents-que-votre-employeur-doit-vous-remettre-en-cas-de-demission-collapse"
+            id="528uid393-collapse"
           >
             <p>
               L'employeur doit vous remettre tous les documents suivants :
@@ -1794,10 +1794,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="dans-quels-cas-pouvez-vous-demissionner-de-votre-mission-dinterim-collapse"
+              aria-controls="919uid639-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="dans-quels-cas-pouvez-vous-demissionner-de-votre-mission-dinterim__toggle-btn"
+              id="919uid639__toggle-btn"
               type="button"
             >
               Dans quels cas pouvez-vous démissionner de votre mission d'intérim ?
@@ -1805,7 +1805,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="dans-quels-cas-pouvez-vous-demissionner-de-votre-mission-dinterim-collapse"
+            id="919uid639-collapse"
           >
             <p>
               Vous ne pouvez pas démissionner de votre contrat de travail temporaire.
@@ -1865,10 +1865,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="comment-avertir-lemployeur-de-votre-volonte-de-demissionner-collapse"
+              aria-controls="919uid640-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="comment-avertir-lemployeur-de-votre-volonte-de-demissionner__toggle-btn"
+              id="919uid640__toggle-btn"
               type="button"
             >
               Comment avertir l'employeur de votre volonté de démissionner ?
@@ -1876,7 +1876,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="comment-avertir-lemployeur-de-votre-volonte-de-demissionner-collapse"
+            id="919uid640-collapse"
           >
             <p>
               Pour que votre démission soit valable, vous devez 
@@ -1914,10 +1914,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="quelle-est-la-procedure-pour-demissionner-de-votre-mission-dinterim-collapse"
+              aria-controls="919uid641-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="quelle-est-la-procedure-pour-demissionner-de-votre-mission-dinterim__toggle-btn"
+              id="919uid641__toggle-btn"
               type="button"
             >
               Quelle est la procédure pour démissionner de votre mission d'intérim ?
@@ -1925,7 +1925,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="quelle-est-la-procedure-pour-demissionner-de-votre-mission-dinterim-collapse"
+            id="919uid641-collapse"
           >
             <p>
               Pour manifester votre volonté claire et non équivoque de démissionner, vous devez 
@@ -1982,10 +1982,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="devez-vous-effectuer-un-preavis-suite-a-votre-demission-collapse"
+              aria-controls="919uid642-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="devez-vous-effectuer-un-preavis-suite-a-votre-demission__toggle-btn"
+              id="919uid642__toggle-btn"
               type="button"
             >
               Devez-vous effectuer un préavis suite à votre démission ?
@@ -1993,7 +1993,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="devez-vous-effectuer-un-preavis-suite-a-votre-demission-collapse"
+            id="919uid642-collapse"
           >
             <p>
               Vous ne pouvez pas quitter votre travail dès que vous avez signalé votre volonté de démissionner à votre employeur.
@@ -2015,10 +2015,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="quelle-est-la-duree-de-votre-preavis-en-cas-de-demission-dune-mission-dinterim-collapse"
+              aria-controls="919uid643-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="quelle-est-la-duree-de-votre-preavis-en-cas-de-demission-dune-mission-dinterim__toggle-btn"
+              id="919uid643__toggle-btn"
               type="button"
             >
               Quelle est la durée de votre préavis en cas de démission d'une mission d'intérim ?
@@ -2026,7 +2026,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="quelle-est-la-duree-de-votre-preavis-en-cas-de-demission-dune-mission-dinterim-collapse"
+            id="919uid643-collapse"
           >
             <p>
               Un préavis s'applique si vous mettez fin à votre mission d'intérim pour un 
@@ -2071,10 +2071,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-etre-dispense-deffectuer-un-preavis-en-cas-de-demission-collapse"
+              aria-controls="919uid644-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-etre-dispense-deffectuer-un-preavis-en-cas-de-demission__toggle-btn"
+              id="919uid644__toggle-btn"
               type="button"
             >
               Pouvez-vous être dispensé d'effectuer un préavis en cas de démission ?
@@ -2082,7 +2082,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-etre-dispense-deffectuer-un-preavis-en-cas-de-demission-collapse"
+            id="919uid644-collapse"
           >
             <p>
               Le préavis peut être reporté dans les cas suivants :
@@ -2132,10 +2132,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="le-preavis-de-demission-peut-il-etre-reporte-collapse"
+              aria-controls="919uid645-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="le-preavis-de-demission-peut-il-etre-reporte__toggle-btn"
+              id="919uid645__toggle-btn"
               type="button"
             >
               Le préavis de démission peut-il être reporté ?
@@ -2143,7 +2143,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="le-preavis-de-demission-peut-il-etre-reporte-collapse"
+            id="919uid645-collapse"
           >
             <p>
               Le préavis peut être reporté dans les cas suivants :
@@ -2193,10 +2193,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="le-preavis-de-demission-peut-il-etre-suspendu-collapse"
+              aria-controls="919uid646-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="le-preavis-de-demission-peut-il-etre-suspendu__toggle-btn"
+              id="919uid646__toggle-btn"
               type="button"
             >
               Le préavis de démission peut-il être suspendu ?
@@ -2204,7 +2204,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="le-preavis-de-demission-peut-il-etre-suspendu-collapse"
+            id="919uid646-collapse"
           >
             <p>
               Le préavis peut être suspendu dans les cas suivants :
@@ -2254,10 +2254,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-toucher-des-allocations-chomage-en-cas-de-demission-collapse"
+              aria-controls="919uid647-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-toucher-des-allocations-chomage-en-cas-de-demission__toggle-btn"
+              id="919uid647__toggle-btn"
               type="button"
             >
               Pouvez-vous toucher des allocations chômage en cas de démission ?
@@ -2265,7 +2265,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-toucher-des-allocations-chomage-en-cas-de-demission-collapse"
+            id="919uid647-collapse"
           >
             <p>
               En principe, vous ne bénéficiez pas de l'allocation de retour à l'emploi (ARE) si vous démissionnez.
@@ -2287,10 +2287,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-toucher-une-indemnite-compensatrice-de-preavis-en-cas-de-demission-collapse"
+              aria-controls="919uid648-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-toucher-une-indemnite-compensatrice-de-preavis-en-cas-de-demission__toggle-btn"
+              id="919uid648__toggle-btn"
               type="button"
             >
               Pouvez-vous toucher une indemnité compensatrice de préavis en cas de démission ?
@@ -2298,7 +2298,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-toucher-une-indemnite-compensatrice-de-preavis-en-cas-de-demission-collapse"
+            id="919uid648-collapse"
           >
             <p>
               Si vous êtes dispensé d'effectuer un préavis parvotre employeur, vous avez droit au versement d'une 
@@ -2314,10 +2314,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-toucher-une-indemnite-compensatrice-de-conges-payes-en-cas-de-demission-collapse"
+              aria-controls="919uid649-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-toucher-une-indemnite-compensatrice-de-conges-payes-en-cas-de-demission__toggle-btn"
+              id="919uid649__toggle-btn"
               type="button"
             >
               Pouvez-vous toucher une indemnité compensatrice de congés payés en cas de démission ?
@@ -2325,7 +2325,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-toucher-une-indemnite-compensatrice-de-conges-payes-en-cas-de-demission-collapse"
+            id="919uid649-collapse"
           >
             <p>
               Vous avez droit à une 
@@ -2341,10 +2341,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-continuer-a-beneficier-de-votre-complementaire-sante-en-cas-de-demission-collapse"
+              aria-controls="919uid650-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-continuer-a-beneficier-de-votre-complementaire-sante-en-cas-de-demission__toggle-btn"
+              id="919uid650__toggle-btn"
               type="button"
             >
               Pouvez-vous continuer à bénéficier de votre complémentaire santé en cas de démission ?
@@ -2352,7 +2352,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-continuer-a-beneficier-de-votre-complementaire-sante-en-cas-de-demission-collapse"
+            id="919uid650-collapse"
           >
             <p>
               Vous continuez à bénéficier de la couverture santé souscrite dans le cadre de votre ancien travail, sous 
@@ -2368,10 +2368,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="pouvez-vous-demander-le-deblocage-anticipe-de-votre-epargne-salariale-en-cas-de-demission-collapse"
+              aria-controls="919uid651-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="pouvez-vous-demander-le-deblocage-anticipe-de-votre-epargne-salariale-en-cas-de-demission__toggle-btn"
+              id="919uid651__toggle-btn"
               type="button"
             >
               Pouvez-vous demander le déblocage anticipé de votre épargne salariale en cas de démission ?
@@ -2379,7 +2379,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="pouvez-vous-demander-le-deblocage-anticipe-de-votre-epargne-salariale-en-cas-de-demission-collapse"
+            id="919uid651-collapse"
           >
             <p>
               Si vous bénéficiez d'un dispositif d'épargne salariale, vous pouvez 
@@ -2395,10 +2395,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
             class="fr-accordion__title"
           >
             <button
-              aria-controls="quels-sont-les-documents-que-votre-employeur-doit-vous-remettre-en-cas-de-demission-collapse"
+              aria-controls="919uid652-collapse"
               aria-expanded="false"
               class="fr-accordion__btn"
-              id="quels-sont-les-documents-que-votre-employeur-doit-vous-remettre-en-cas-de-demission__toggle-btn"
+              id="919uid652__toggle-btn"
               type="button"
             >
               Quels sont les documents que votre employeur doit vous remettre en cas de démission ?
@@ -2406,7 +2406,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
           <div
             class="fr-collapse"
-            id="quels-sont-les-documents-que-votre-employeur-doit-vous-remettre-en-cas-de-demission-collapse"
+            id="919uid652-collapse"
           >
             <p>
               L'employeur doit vous remettre tous les documents suivants :

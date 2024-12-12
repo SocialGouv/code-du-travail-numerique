@@ -27,10 +27,10 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
           class="fr-accordion__title"
         >
           <button
-            aria-controls="par-telephone-collapse"
+            aria-controls="7uid3-collapse"
             aria-expanded="false"
             class="fr-accordion__btn"
-            id="par-telephone__toggle-btn"
+            id="7uid3__toggle-btn"
             type="button"
           >
             Par téléphone
@@ -38,7 +38,7 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
         </h3>
         <div
           class="fr-collapse"
-          id="par-telephone-collapse"
+          id="7uid3-collapse"
         >
           <p>
             <strong>
@@ -60,10 +60,10 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
           class="fr-accordion__title"
         >
           <button
-            aria-controls="sur-place-collapse"
+            aria-controls="7uid4-collapse"
             aria-expanded="false"
             class="fr-accordion__btn"
-            id="sur-place__toggle-btn"
+            id="7uid4__toggle-btn"
             type="button"
           >
             Sur place
@@ -71,7 +71,7 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
         </h3>
         <div
           class="fr-collapse"
-          id="sur-place-collapse"
+          id="7uid4-collapse"
         >
           <p>
             Fiva
@@ -100,10 +100,10 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
           class="fr-accordion__title"
         >
           <button
-            aria-controls="par-courrier-electronique-collapse"
+            aria-controls="7uid5-collapse"
             aria-expanded="false"
             class="fr-accordion__btn"
-            id="par-courrier-electronique__toggle-btn"
+            id="7uid5__toggle-btn"
             type="button"
           >
             Par courrier électronique
@@ -111,7 +111,7 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
         </h3>
         <div
           class="fr-collapse"
-          id="par-courrier-electronique-collapse"
+          id="7uid5-collapse"
         >
           <p>
             <a
