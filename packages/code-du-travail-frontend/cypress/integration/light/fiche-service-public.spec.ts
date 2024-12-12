@@ -5,9 +5,13 @@ describe("Fiche Service public", () => {
       "have.text",
       "Salaire, primes et avantages"
     );
-    cy.checkCanonical(
-      "https://www.service-public.fr/particuliers/vosdroits/F2301"
-    );
+    cy.get("head > link[rel='canonical']")
+      .should("have.prop", "href")
+      .and(
+        "equal",
+        "https://www.service-public.fr/particuliers/vosdroits/F2301"
+      );
+
     cy.contains("a", "Fiche service-public.fr")
       .should("have.attr", "href")
       .and(

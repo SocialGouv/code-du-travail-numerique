@@ -6,13 +6,16 @@ import { getTitleLevel } from "./Title";
 import { FicheSPDataChapitre, FicheSPDataTextWithChapitre } from "../type";
 import SectionWithTitle from "./SectionWithTitle";
 import { AccordionWithAnchor } from "../../../common/AccordionWithAnchor";
+import { useUIDSeed } from "react-uid";
 
 const formatAccordionItem = (
   data: FicheSPDataChapitre,
-  headingLevel: number
+  headingLevel: number,
+  seedId: string
 ) => {
   return {
     title: getTitleInChildren(data),
+    id: seedId,
     content: (
       <ElementBuilder
         data={filterOutTitle(data)}
@@ -33,12 +36,14 @@ export const AccordionWrapper = ({
   data: FicheSPDataTextWithChapitre;
   headingLevel: number;
 }) => {
+  const seedId = useUIDSeed();
+
   if (headingLevel >= 2) {
     return data.children.map((child) => (
       <SectionWithTitle
         data={child}
         headingLevel={headingLevel}
-        key={child.name + headingLevel}
+        key={seedId(child)}
       />
     ));
   }
@@ -46,19 +51,31 @@ export const AccordionWrapper = ({
   const accordionItems = data.children
     .filter(isItemOfAccordion)
     .map((child) =>
-      formatAccordionItem(child as FicheSPDataChapitre, headingLevel)
+      formatAccordionItem(
+        child as FicheSPDataChapitre,
+        headingLevel,
+        seedId(child)
+      )
     );
 
   const beforeAccordionElements = data.children
     .slice(0, firstIndexOfAccordionItem)
     .map((element, index) => (
-      <ElementBuilder key={index} data={element} headingLevel={headingLevel} />
+      <ElementBuilder
+        key={seedId(element)}
+        data={element}
+        headingLevel={headingLevel}
+      />
     ));
 
   const afterAccordionElements = data.children
     .slice(firstIndexOfAccordionItem + accordionItems.length)
     .map((element, index) => (
-      <ElementBuilder key={index} data={element} headingLevel={headingLevel} />
+      <ElementBuilder
+        key={seedId(element)}
+        data={element}
+        headingLevel={headingLevel}
+      />
     ));
   return (
     <>
