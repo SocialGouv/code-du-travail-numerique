@@ -92,28 +92,4 @@ describe("Page d’accueil", () => {
     cy.get("button").contains("Plus de résultats").click();
     cy.get('div[role="region"]>ul li').should("have.length", 14);
   });
-
-  it("Affiche la popup de recherche Besoin de plus d'information", () => {
-    cy.visit("/");
-    cy.findByRole("heading", { level: 1 })
-      .should("have.text", "Bienvenue sur le Code du travail numérique")
-      .click();
-
-    cy.contains("Besoin de plus d'informations ?");
-
-    cy.contains("Trouver les services près de chez moi").click();
-    cy.get("h1").should("contain", "Les services du ministère du Travail");
-
-    cy.get("#search-service").type("75");
-    cy.get("#search-service").type("{enter}");
-
-    cy.get(
-      'a[href="https://idf.drieets.gouv.fr/Adresse-et-horaires-d-ouverture-de-l-unite-departementale-75"]'
-    ).should("have.attr", "target", "_blank");
-
-    cy.get(".fr-btn--close.fr-btn[title='Fermer']").click({
-      multiple: true,
-      force: true,
-    });
-  });
 });

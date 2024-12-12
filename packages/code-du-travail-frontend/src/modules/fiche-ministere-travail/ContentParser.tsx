@@ -45,7 +45,11 @@ const options = (): HTMLReactParserOptions => {
         ) {
           return (
             <p>
-              <a href={domNode.attribs["data-src"]} target={"_blank"}>
+              <a
+                href={domNode.attribs["data-src"]}
+                title={""}
+                target={"_blank"}
+              >
                 Cliquez ici pour voir la vidéo
               </a>
             </p>
