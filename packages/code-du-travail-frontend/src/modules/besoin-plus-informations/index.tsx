@@ -17,6 +17,7 @@ import {
 export const BesoinPlusInformations = () => {
   const [department, setDepartment] = useState<string>("");
   const [hasSearched, setHasSearched] = useState<boolean>(false);
+  const [hasError, setHasError] = useState<boolean>(false);
   const [inputRef, setInputRef] = useState<HTMLInputElement | null>();
   const [linkRef, setLinkRef] = useState<HTMLAnchorElement | null>();
   const [result, setResult] = useState<undefined | ServiceRenseignement>(
@@ -36,7 +37,8 @@ export const BesoinPlusInformations = () => {
   };
 
   useEffect(() => {
-    if (hasSearched && !result) {
+    setHasError(hasSearched && !result);
+    if (hasError) {
       inputRef?.focus();
     }
   }, [hasSearched, result]);
@@ -76,7 +78,7 @@ export const BesoinPlusInformations = () => {
           label="Saisissez le numéro de votre département"
           stateRelatedMessage={
             <>
-              {hasSearched && !result && (
+              {hasError && (
                 <span>
                   Aucun service de renseignement n&apos;a été trouvé pour ce
                   département.
@@ -84,7 +86,7 @@ export const BesoinPlusInformations = () => {
               )}
             </>
           }
-          state={hasSearched && !result ? "error" : undefined}
+          state={hasError ? "error" : undefined}
           nativeInputProps={{
             maxLength: 3,
             onChange: (e) => setDepartment(e.target.value),
@@ -93,7 +95,7 @@ export const BesoinPlusInformations = () => {
                 onSearchInput();
               }
             },
-            "aria-invalid": hasSearched && !result ? true : undefined,
+            "aria-invalid": hasError ? true : undefined,
             ref: setInputRef,
           }}
           addon={
