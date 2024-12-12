@@ -70,11 +70,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           tabindex="0"
           type="button"
         >
-          <h2
-            class="fr-text--md"
-          >
-            CDI
-          </h2>
+          CDI
         </button>
       </li>
       <li
@@ -89,11 +85,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           tabindex="-1"
           type="button"
         >
-          <h2
-            class="fr-text--md"
-          >
-            CDD
-          </h2>
+          CDD
         </button>
       </li>
       <li
@@ -108,11 +100,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           tabindex="-1"
           type="button"
         >
-          <h2
-            class="fr-text--md"
-          >
-            Intérim
-          </h2>
+          Intérim
         </button>
       </li>
     </ul>
@@ -123,6 +111,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
       role="tabpanel"
       tabindex="0"
     >
+      <h2
+        class="fr-sr-only"
+      >
+        CDI
+      </h2>
       <div
         class="fr-accordions-group"
         data-fr-group="false"
@@ -159,31 +152,41 @@ exports[`<FicheServicePublic /> should render 1`] = `
               Vous pouvez mettre fin à votre contrat de travail dans les cas suivants :
             </p>
             <ul>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit dans le cadre d'une rupture volontaire du contrat de travail
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit pendant la 
                   période d'essai
                    sans motif particulier
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas de 
                   départ volontaire à la retraite
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit dans le cadre d'une 
                   résiliation judiciaire
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit dans le cadre d'une 
                   prise d'acte
@@ -529,20 +532,26 @@ exports[`<FicheServicePublic /> should render 1`] = `
               La durée du préavis de démission est fixée :
             </p>
             <ul>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit par 
                   convention collective
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit par les 
                   usages
                    pratiqués dans la localité et dans la profession
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit par le droit local (en Alsace-Moselle).
                 </p>
@@ -568,7 +577,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
             <div>
               <a
                 class="fr-btn fr-btn--secondary fr-mb-2w"
-                href="https://code.travail.gouv.fr/outils/preavis-demission?src_url=https://service-public.fr/particuliers/vosdroits/F2883"
+                href="https://code.travail.gouv.fr/outils/preavis-demission"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -601,13 +610,17 @@ exports[`<FicheServicePublic /> should render 1`] = `
               Vous n'effectuez pas de préavis dans l'un des cas suivants :
             </p>
             <ul>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Démission 
                   pendant la grossesse ou pour élever un enfant
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Démission à la fin d'un 
                   congé pour création d'entreprise
@@ -686,26 +699,34 @@ exports[`<FicheServicePublic /> should render 1`] = `
               Le préavis peut être reporté dans les cas suivants :
             </p>
             <ul>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas d'accord entre vous-même et votre employeur
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas de prise de 
                   congés payés
                    dont la date a été fixée avant la notification de la rupture
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas 
                   d'arrêt de travail
                    survenant en cours de préavis et lié à un accident du travail ou une maladie professionnelle
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas de 
                   dispositions conventionnelles
@@ -739,26 +760,34 @@ exports[`<FicheServicePublic /> should render 1`] = `
               Le préavis peut être suspendu dans les cas suivants :
             </p>
             <ul>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas d'accord entre vous-même et votre employeur
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas de prise de 
                   congés payés
                    dont la date a été fixée avant la notification de la rupture
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas 
                   d'arrêt de travail
                    survenant en cours de préavis et lié à un accident du travail ou une maladie professionnelle
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas de 
                   dispositions conventionnelles
@@ -967,22 +996,30 @@ exports[`<FicheServicePublic /> should render 1`] = `
               L'employeur doit vous remettre tous les documents suivants :
             </p>
             <ul>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Certificat de travail
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Attestation Pôle emploi
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Solde de tout compte
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Dispositifs de participation, d'intéressement, plans d'épargne salariale au sein de l'entreprise, état récapitulatif de l'ensemble des sommes et valeurs mobilières épargnées
                 </p>
@@ -999,6 +1036,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
       role="tabpanel"
       tabindex="0"
     >
+      <h2
+        class="fr-sr-only"
+      >
+        CDD
+      </h2>
       <div
         class="fr-accordions-group"
         data-fr-group="false"
@@ -1042,29 +1084,39 @@ exports[`<FicheServicePublic /> should render 1`] = `
                :
             </p>
             <ul>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Accord entre vous-même et votre employeur
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Embauche en 
                   CDI
                   . Pour éviter toute difficulté, vous pouvez notifier par écrit la rupture de votre CDD à votre employeur et lui fournir le justificatif de l'embauche prévue (promesse d'embauche ou contrat de travail, par exemple).
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Faute grave
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Force majeure
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Inaptitude
                    constatée par le médecin du travail
@@ -1300,13 +1352,17 @@ exports[`<FicheServicePublic /> should render 1`] = `
               Vous n'avez pas à effectuer de préavis si vous êtes dans l'un des cas suivants :
             </p>
             <ul>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Démission 
                   pendant la grossesse ou pour élever un enfant
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Démission à la fin du 
                   congé pour création d'entreprise
@@ -1385,26 +1441,34 @@ exports[`<FicheServicePublic /> should render 1`] = `
               Le préavis peut être reporté dans les cas suivants :
             </p>
             <ul>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas d'accord entre vous-même et votre employeur
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas de prise de 
                   congés payés
                    dont la date a été fixée avant la notification de la rupture
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas 
                   d'arrêt de travail
                    survenant en cours de préavis et lié à un accident du travail ou une maladie professionnelle
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas de 
                   dispositions conventionnelles
@@ -1438,26 +1502,34 @@ exports[`<FicheServicePublic /> should render 1`] = `
               Le préavis peut être suspendu dans les cas suivants :
             </p>
             <ul>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas d'accord entre vous-même et votre employeur
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas de prise de 
                   congés payés
                    dont la date a été fixée avant la notification de la rupture
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas 
                   d'arrêt de travail
                    survenant en cours de préavis et lié à un accident du travail ou une maladie professionnelle
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas de 
                   dispositions conventionnelles
@@ -1666,22 +1738,30 @@ exports[`<FicheServicePublic /> should render 1`] = `
               L'employeur doit vous remettre tous les documents suivants :
             </p>
             <ul>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Certificat de travail
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Attestation Pôle emploi
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Solde de tout compte
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Dispositifs de participation, d'intéressement, plans d'épargne salariale au sein de l'entreprise, état récapitulatif de l'ensemble des sommes et valeurs mobilières épargnées
                 </p>
@@ -1698,6 +1778,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
       role="tabpanel"
       tabindex="0"
     >
+      <h2
+        class="fr-sr-only"
+      >
+        Intérim
+      </h2>
       <div
         class="fr-accordions-group"
         data-fr-group="false"
@@ -1732,19 +1817,25 @@ exports[`<FicheServicePublic /> should render 1`] = `
               Vous pouvez mettre fin à votre mission d'intérim de manière anticipée dans les cas suivants :
             </p>
             <ul>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit pendant la 
                   période d'essai
                    sans motif particulier
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas d'embauche en CDI
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas de 
                   force majeure
@@ -1948,12 +2039,16 @@ exports[`<FicheServicePublic /> should render 1`] = `
               Ce préavis est calculé à raison d'un jour par semaine, compte tenu :
             </p>
             <ul>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit de la durée du contrat, renouvellement inclus, si celui-ci comporte un terme précis
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit de la durée effectuée, si le contrat ne comporte pas de terme précis
                 </p>
@@ -1993,26 +2088,34 @@ exports[`<FicheServicePublic /> should render 1`] = `
               Le préavis peut être reporté dans les cas suivants :
             </p>
             <ul>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas d'accord entre vous-même et votre employeur
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas de prise de 
                   congés payés
                    dont la date a été fixée avant la notification de la rupture
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas 
                   d'arrêt de travail
                    survenant en cours de préavis et lié à un accident du travail ou une maladie professionnelle
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas de 
                   dispositions conventionnelles
@@ -2046,26 +2149,34 @@ exports[`<FicheServicePublic /> should render 1`] = `
               Le préavis peut être reporté dans les cas suivants :
             </p>
             <ul>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas d'accord entre vous-même et votre employeur
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas de prise de 
                   congés payés
                    dont la date a été fixée avant la notification de la rupture
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas 
                   d'arrêt de travail
                    survenant en cours de préavis et lié à un accident du travail ou une maladie professionnelle
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas de 
                   dispositions conventionnelles
@@ -2099,26 +2210,34 @@ exports[`<FicheServicePublic /> should render 1`] = `
               Le préavis peut être suspendu dans les cas suivants :
             </p>
             <ul>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas d'accord entre vous-même et votre employeur
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas de prise de 
                   congés payés
                    dont la date a été fixée avant la notification de la rupture
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas 
                   d'arrêt de travail
                    survenant en cours de préavis et lié à un accident du travail ou une maladie professionnelle
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Soit en cas de 
                   dispositions conventionnelles
@@ -2293,22 +2412,30 @@ exports[`<FicheServicePublic /> should render 1`] = `
               L'employeur doit vous remettre tous les documents suivants :
             </p>
             <ul>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Certificat de travail
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Attestation Pôle emploi
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Solde de tout compte
                 </p>
               </li>
-              <li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
                 <p>
                   Dispositifs de participation, d'intéressement, plans d'épargne salariale au sein de l'entreprise, état récapitulatif de l'ensemble des sommes et valeurs mobilières épargnées
                 </p>
@@ -2332,7 +2459,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
   <div>
     <a
       class="fr-btn fr-btn--secondary fr-mb-2w"
-      href="https://code.travail.gouv.fr/outils/preavis-demission?src_url=https://service-public.fr/particuliers/vosdroits/F2883"
+      href="https://code.travail.gouv.fr/outils/preavis-demission"
       rel="noopener noreferrer"
       target="_blank"
     >

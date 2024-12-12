@@ -81,6 +81,12 @@ exports[`<Accordion /> should have different levels of headings & render both Bl
 exports[`<Accordion /> should not display accordion after heading level 2 1`] = `
 <div>
   <h4>
+    Qui peut être indemnisé ?
+  </h4>
+  <p>
+    Vous pouvez être indemnisé par le Fiva si vous êtes dans l'une des 3 situations suivantes :
+  </p>
+  <h4>
     Comment faire la demande ?
   </h4>
   <p>

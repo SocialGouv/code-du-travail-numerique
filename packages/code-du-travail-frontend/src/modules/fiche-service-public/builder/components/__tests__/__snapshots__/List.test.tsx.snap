@@ -3,12 +3,16 @@
 exports[`<List /> should render and increment heading level of children by one 1`] = `
 <div>
   <ul>
-    <li>
+    <li
+      class="[&>_p]:mb_0!"
+    >
       <h3>
         title
       </h3>
     </li>
-    <li>
+    <li
+      class="[&>_p]:mb_0!"
+    >
       <p>
         ok
       </p>

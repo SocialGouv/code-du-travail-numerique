@@ -5,9 +5,11 @@ exports[`<Avertissement /> affiche un avertissement 1`] = `
   <div
     class="fr-alert fr-alert--warning fr-mb-2w"
   >
-    <h2>
+    <p
+      class="fr-text--bold"
+    >
       Développement de l'apprentissage transfrontalier
-    </h2>
+    </p>
     <p
       class="fr-text--xs fr-pb-2w"
     >

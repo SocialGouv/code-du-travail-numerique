@@ -53,11 +53,6 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
           </p>
         </div>
       </section>
-    </div>
-    <div
-      class="fr-accordions-group"
-      data-fr-group="false"
-    >
       <section
         class="fr-accordion"
       >
@@ -98,11 +93,6 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
           </p>
         </div>
       </section>
-    </div>
-    <div
-      class="fr-accordions-group"
-      data-fr-group="false"
-    >
       <section
         class="fr-accordion"
       >

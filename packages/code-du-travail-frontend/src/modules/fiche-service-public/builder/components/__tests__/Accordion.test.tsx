@@ -36,7 +36,7 @@ describe("<Accordion />", () => {
     expect(container).toMatchSnapshot();
 
     const h2 = getAllByRole("heading", { level: 4 });
-    expect(h2[0].textContent).toEqual("Comment faire la demande ?");
+    expect(h2[0].textContent).toEqual("Qui peut être indemnisé ?");
 
     const h3 = getAllByRole("heading", { level: 5 });
     expect(h3[0].textContent).toEqual("Vous êtes une victime directe");
