@@ -50,7 +50,8 @@ export type FicheSPData =
   | FicheSPDataChapitre
   | FicheSPDataTableau
   | FicheSPDataTableauChildren
-  | FicheSPDataTitreFlottant;
+  | FicheSPDataTitreFlottant
+  | FicheSPDataVideo;
 
 export type FicheSPDataBlocCas = {
   type: "element";
@@ -162,6 +163,13 @@ export type FicheSPDataServiceEnLigne = {
   attributes: { URL: string };
   children: FicheSPDataElement[];
   name: "ServiceEnLigne" | "PourEnSavoirPlus";
+};
+
+export type FicheSPDataVideo = {
+  type: "element";
+  attributes: { URL: string };
+  children: FicheSPDataElement[];
+  name: "Video";
 };
 
 export type FicheSPDataSituation = {

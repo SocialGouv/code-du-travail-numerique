@@ -22,6 +22,7 @@ import AccordionWrapper from "./Accordion";
 import SectionWithTitle from "./SectionWithTitle";
 import TitreFlottant from "./TitreFlottant";
 import Exemple from "./Exemple";
+import Video from "./Video";
 
 export const ElementBuilder = ({
   data,
@@ -98,6 +99,8 @@ export const ElementBuilder = ({
       return <Exemple data={data} headingLevel={headingLevel} />;
     case "Cas":
       return <SectionWithTitle data={data} headingLevel={headingLevel} />;
+    case "Video":
+      return <Video data={data} />;
     case "Texte":
       if (data.children.find((child) => isFicheSPDataChapitre(child))) {
         return (

@@ -1,6 +1,7 @@
 import React from "react";
 import { ElementBuilder } from "./ElementBuilder";
 import { FicheSPDataList } from "../type";
+import { css } from "@styled-system/css";
 
 export const List = ({
   data,
@@ -13,7 +14,7 @@ export const List = ({
   return (
     <UL>
       {data.children.map((item, index) => (
-        <li key={index}>
+        <li key={index} className={liP}>
           <ElementBuilder
             data={item.children}
             headingLevel={headingLevel + 1}
@@ -23,5 +24,10 @@ export const List = ({
     </UL>
   );
 };
+const liP = css({
+  "&> p": {
+    mb: "0!",
+  },
+});
 
 export default List;
