@@ -17,16 +17,17 @@ export const Tabulator = ({
     tabs={data.children.map((tab) => {
       const title = getTitleInChildren(tab);
       return {
-        label: (
-          <Title className={"fr-text--md"} level={headingLevel}>
-            {title}
-          </Title>
-        ),
+        label: title,
         content: (
-          <ElementBuilder
-            data={filterOutTitle(tab)}
-            headingLevel={headingLevel + 1}
-          />
+          <>
+            <Title className={"fr-sr-only"} level={headingLevel}>
+              {title}
+            </Title>
+            <ElementBuilder
+              data={filterOutTitle(tab)}
+              headingLevel={headingLevel + 1}
+            />
+          </>
         ),
       };
     })}

@@ -28,8 +28,15 @@ export const LienExterneCommente = ({
     </>
   );
 };
+export const cleanUrl = (url: string): string => {
+  if (url.includes("code.travail.gouv.fr")) {
+    return url.split("?")[0];
+  }
+  return url;
+};
+
 export const LienExterne = ({ data }: { data: FicheSPDataLienExterne }) => {
-  const url = data.attributes.URL;
+  const url = cleanUrl(data.attributes.URL);
   const label = getText(data);
   return (
     <Link href={url} rel="noopener noreferrer" target="_blank">

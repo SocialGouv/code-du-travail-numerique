@@ -3,7 +3,7 @@
 exports[`<Tabulator /> should render 1`] = `
 <div>
   <div
-    class="fr-tabs"
+    class="fr-tabs fr-mb-2w"
     id="fr-tabs-:r0:"
   >
     <ul
@@ -22,11 +22,7 @@ exports[`<Tabulator /> should render 1`] = `
           tabindex="0"
           type="button"
         >
-          <h4
-            class="fr-text--md"
-          >
-            CDI
-          </h4>
+          CDI
         </button>
       </li>
       <li
@@ -41,11 +37,7 @@ exports[`<Tabulator /> should render 1`] = `
           tabindex="-1"
           type="button"
         >
-          <h4
-            class="fr-text--md"
-          >
-            CDD
-          </h4>
+          CDD
         </button>
       </li>
     </ul>
@@ -56,6 +48,11 @@ exports[`<Tabulator /> should render 1`] = `
       role="tabpanel"
       tabindex="0"
     >
+      <h4
+        class="fr-sr-only"
+      >
+        CDI
+      </h4>
       <h5>
         titre 1
       </h5>
@@ -70,6 +67,11 @@ exports[`<Tabulator /> should render 1`] = `
       role="tabpanel"
       tabindex="0"
     >
+      <h4
+        class="fr-sr-only"
+      >
+        CDD
+      </h4>
       <h5>
         titre 2
       </h5>

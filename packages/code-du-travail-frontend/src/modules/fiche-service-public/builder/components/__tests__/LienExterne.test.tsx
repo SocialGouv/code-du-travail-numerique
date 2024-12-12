@@ -25,4 +25,25 @@ describe("<LienExterne />", () => {
     );
     expect(container).toMatchSnapshot();
   });
+  it("should clean url if it's a link to code.travail.gouv.fr", () => {
+    const data: FicheSPDataLienExterne = {
+      type: "element",
+      name: "LienExterne",
+      attributes: {
+        URL: "https://code.travail.gouv.fr/outils/indemnite-licenciement?src_url=https://service-public.fr/particuliers/vosdroits/F987",
+      },
+      children: [
+        {
+          type: "text",
+          text: "formulaire",
+        },
+      ],
+    };
+
+    const { getByText } = render(<LienExterne data={data} />);
+    expect(getByText("formulaire")).toHaveAttribute(
+      "href",
+      "https://code.travail.gouv.fr/outils/indemnite-licenciement"
+    );
+  });
 });
