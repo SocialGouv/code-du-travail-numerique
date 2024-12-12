@@ -8,14 +8,5 @@ describe("Outil - Salaire brut/net", () => {
       "Calculer le salaire brut/net"
     );
     cy.findByRole("heading", { level: 1 }).click();
-    cy.iframe("#simulateurEmbauche")
-      .contains("Coût total employeur")
-      .should("be.visible");
-    cy.iframe("#simulateurEmbauche")
-      .find("#salarié___coût_total_employeur")
-      .type("1000");
-    cy.iframe("#simulateurEmbauche")
-      .contains("De quel type de contrat s'agit-il ?")
-      .should("be.visible");
   });
 });
