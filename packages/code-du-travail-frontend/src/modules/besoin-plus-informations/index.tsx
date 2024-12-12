@@ -2,7 +2,7 @@
 
 import { fr } from "@codegouvfr/react-dsfr";
 import { Container } from "../layout/Container";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNeedMoreInfoEvents } from "../layout/infos/tracking";
 import Image from "next/image";
 import { Input } from "@codegouvfr/react-dsfr/Input";
@@ -17,6 +17,8 @@ import {
 export const BesoinPlusInformations = () => {
   const [department, setDepartment] = useState<string>("");
   const [hasSearched, setHasSearched] = useState<boolean>(false);
+  const [inputRef, setInputRef] = useState<HTMLInputElement | null>();
+  const [linkRef, setLinkRef] = useState<HTMLAnchorElement | null>();
   const [result, setResult] = useState<undefined | ServiceRenseignement>(
     undefined
   );
@@ -33,12 +35,20 @@ export const BesoinPlusInformations = () => {
     emitTrackNumber();
   };
 
+  useEffect(() => {
+    if (hasSearched && !result) {
+      inputRef?.focus();
+    }
+  }, [hasSearched, result]);
+
+  useEffect(() => {
+    linkRef?.focus();
+  }, [linkRef]);
   return (
     <Container>
       <h1 id="mentions-legales" className={fr.cx("fr-mt-0")}>
         Besoin de plus d&apos;informations
       </h1>
-
       <p className={fr.cx("fr-mt-6w", "fr-mb-6w", "fr-text--lg")}>
         Les services du ministère du Travail en région informent, conseillent et
         orientent les salariés et les employeurs du secteur privé sur leurs
@@ -64,6 +74,17 @@ export const BesoinPlusInformations = () => {
         <Input
           id="search-service"
           label="Saisissez le numéro de votre département"
+          stateRelatedMessage={
+            <>
+              {hasSearched && !result && (
+                <span>
+                  Aucun service de renseignement n&apos;a été trouvé pour ce
+                  département.
+                </span>
+              )}
+            </>
+          }
+          state={hasSearched && !result ? "error" : undefined}
           nativeInputProps={{
             maxLength: 3,
             onChange: (e) => setDepartment(e.target.value),
@@ -72,6 +93,8 @@ export const BesoinPlusInformations = () => {
                 onSearchInput();
               }
             },
+            "aria-invalid": hasSearched && !result ? true : undefined,
+            ref: setInputRef,
           }}
           addon={
             <Button
@@ -91,18 +114,12 @@ export const BesoinPlusInformations = () => {
             href={result.url}
             target="_blank"
             data-testid="result-search-service"
+            ref={(link) => {
+              setLinkRef(link);
+            }}
           >
             {result.url}
           </a>
-        )}
-        {hasSearched && !result && (
-          <p
-            className={fr.cx("fr-error-text", "fr-text--md")}
-            data-testid="result-search-service-failed"
-          >
-            Aucun service de renseignement n&apos;a été trouvé pour ce
-            département.
-          </p>
         )}
       </section>
       <Alert
