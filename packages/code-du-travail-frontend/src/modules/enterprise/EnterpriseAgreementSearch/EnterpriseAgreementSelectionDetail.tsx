@@ -10,16 +10,7 @@ export const EnterpriseAgreementSelectionDetail = ({ enterprise }: Props) => {
   return (
     <>
       <div className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
-        {enterprise.conventions.length === 0 ? (
-          `Aucune convention collective n'a été déclarée pour l'entreprise`
-        ) : enterprise.conventions.length === 1 ? (
-          <>1 convention collective trouvée pour&nbsp;:</>
-        ) : (
-          <>
-            {enterprise.conventions.length} conventions collectives trouvées
-            pour&nbsp;:
-          </>
-        )}
+        Votre entreprise
       </div>
       <h2 className={fr.cx("fr-h6", "fr-m-0", "fr-mt-2w")}>
         {enterprise.label}

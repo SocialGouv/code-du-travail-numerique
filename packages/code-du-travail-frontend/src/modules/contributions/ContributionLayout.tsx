@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -23,6 +23,8 @@ import { ContributionContent } from "./ContributionContent";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
 import Html from "../common/Html";
 import Link from "next/link";
+import Accordion from "@codegouvfr/react-dsfr/Accordion";
+import { ListWithArrow } from "../common/ListWithArrow";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
@@ -36,6 +38,12 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
 
   const [displayContent, setDisplayContent] = useState(false);
   const [displaySlug, setDisplaySlug] = useState(`/contribution/${slug}`);
+  const titleRef = useRef<HTMLDivElement>(null);
+  const scrollToTitle = () => {
+    setTimeout(() => {
+      titleRef?.current?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
   const [selectedAgreement, setSelectedAgreement] =
     useState<EnterpriseAgreement>();
   useEffect(() => {
@@ -134,6 +142,7 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
                         ev.preventDefault();
                         setDisplayContent(true);
                       }
+                      if (isGeneric) scrollToTitle();
                     },
                   }}
                 >
@@ -180,7 +189,10 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
             "fr-mb-6w"
           )}
           priority="tertiary no outline"
-          onClick={() => setDisplayContent(true)}
+          onClick={() => {
+            setDisplayContent(true);
+            if (isGeneric) scrollToTitle();
+          }}
         >
           Afficher les informations sans sélectionner une convention collective
         </Button>
@@ -196,8 +208,10 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
               displayContent ? "fr-unhidden" : "fr-hidden"
             )}
           >
-            <div>
-              <p className={fr.cx("fr-h5")}>Que dit le code du travail ?</p>
+            <div id="cdt">
+              <p className={fr.cx("fr-h5")} ref={titleRef}>
+                Que dit le code du travail&nbsp;?
+              </p>
               <ContributionContent
                 contribution={
                   contribution as
@@ -207,16 +221,17 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
                 titleLevel={2}
               ></ContributionContent>
               {contribution.references.length && (
-                <div className={fr.cx("fr-callout", "fr-mt-6w")}>
-                  <span className={fr.cx("fr-h3")}>Références</span>
-                  <ul>
-                    {contribution.references.map(({ title, url }) => (
-                      <li key={title}>
-                        <Link href={url}>{title}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <Accordion label="Références">
+                  <ListWithArrow
+                    items={contribution.references.map(({ title, url }) => {
+                      return (
+                        <Link key={title} href={url}>
+                          {title}
+                        </Link>
+                      );
+                    })}
+                  />
+                </Accordion>
               )}
               {contribution.messageBlock && (
                 <div
@@ -266,16 +281,17 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
               titleLevel={3}
             ></ContributionContent>
             {contribution.references.length && (
-              <div className={fr.cx("fr-callout", "fr-mt-6w")}>
-                <span className={fr.cx("fr-h3")}>Références</span>
-                <ul>
-                  {contribution.references.map(({ title, url }) => (
-                    <li key={title}>
-                      <Link href={url}>{title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <Accordion label="Références">
+                <ListWithArrow
+                  items={contribution.references.map(({ title, url }) => {
+                    return (
+                      <Link key={title} href={url}>
+                        {title}
+                      </Link>
+                    );
+                  })}
+                />
+              </Accordion>
             )}
             {contribution.messageBlock && (
               <div className={fr.cx("fr-alert", "fr-alert--info", "fr-my-6w")}>

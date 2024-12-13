@@ -31,6 +31,14 @@ export const EnterpriseAgreementSelectionForm = ({
       >
         Modifier
       </Button>
+      <div className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
+        {!!agreements.length &&
+          (agreements.length === 1 ? (
+            <>1 convention collective trouvée&nbsp;:</>
+          ) : (
+            <>{agreements.length} conventions collectives trouvées&nbsp;:</>
+          ))}
+      </div>
       <RadioButtons
         className={fr.cx("fr-mt-2w")}
         options={agreements.map(({ disabled, description, ...agreement }) => ({
@@ -51,7 +59,7 @@ export const EnterpriseAgreementSelectionForm = ({
       {((agreement && !agreement.contributions) || !agreements.length) && (
         <Alert
           severity="info"
-          title="Nous n'avons pas de réponse pour cette convention collective"
+          title="Aucune convention collective n'a été déclarée pour l'entreprise"
           description="Vous pouvez tout de même poursuivre pour obtenir les informations générales prévues par le code du travail."
         />
       )}
