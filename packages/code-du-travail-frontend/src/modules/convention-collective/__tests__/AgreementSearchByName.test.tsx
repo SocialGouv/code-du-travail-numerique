@@ -6,6 +6,15 @@ import { ui } from "./ui";
 import { wait } from "@testing-library/user-event/dist/utils";
 import { act } from "react-dom/test-utils";
 import { searchAgreement } from "../search";
+import { sendEvent } from "../../utils";
+
+jest.mock("../../utils", () => ({
+  sendEvent: jest.fn(),
+}));
+
+jest.mock("uuid", () => ({
+  v4: jest.fn(() => ""),
+}));
 
 jest.mock("../search", () => ({
   searchAgreement: jest.fn(),
@@ -37,6 +46,17 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
       userAction = new UserAction();
       userAction.setInput(ui.searchByName.input.get(), "16");
       await wait();
+      expect(sendEvent).toHaveBeenCalledTimes(1);
+      // @ts-ignore
+      expect(sendEvent.mock.calls).toEqual([
+        [
+          {
+            action: "Trouver sa convention collective",
+            category: "cc_search",
+            name: '{"query":"16"}',
+          },
+        ],
+      ]);
       expect(
         ui.searchByName.autocompleteLines.IDCC16.name.query()
       ).toBeInTheDocument();
