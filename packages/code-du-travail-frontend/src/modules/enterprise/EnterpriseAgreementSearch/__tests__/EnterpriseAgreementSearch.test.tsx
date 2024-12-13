@@ -5,6 +5,15 @@ import { EnterpriseAgreementSearch } from "../EnterpriseAgreementSearch";
 import { ui } from "./ui";
 import { wait } from "@testing-library/user-event/dist/utils";
 import { searchEnterprises } from "../../queries";
+import { sendEvent } from "../../../utils";
+
+jest.mock("../../../utils", () => ({
+  sendEvent: jest.fn(),
+}));
+
+jest.mock("uuid", () => ({
+  v4: jest.fn(() => ""),
+}));
 
 jest.mock("../../queries", () => ({
   searchEnterprises: jest.fn(),
@@ -58,6 +67,12 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
       );
       userAction.click(ui.enterpriseAgreementSearch.submitButton.get());
       await wait();
+      expect(sendEvent).toHaveBeenCalledTimes(1);
+      expect(sendEvent).toHaveBeenCalledWith({
+        action: "Trouver sa convention collective",
+        category: "enterprise_search",
+        name: '{"query":"carrefour"}',
+      });
       expect(
         ui.enterpriseAgreementSearch.resultLines.carrefour.title.query()
       ).toBeInTheDocument();
