@@ -47,16 +47,11 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
       userAction.setInput(ui.searchByName.input.get(), "16");
       await wait();
       expect(sendEvent).toHaveBeenCalledTimes(1);
-      // @ts-ignore
-      expect(sendEvent.mock.calls).toEqual([
-        [
-          {
-            action: "Trouver sa convention collective",
-            category: "cc_search",
-            name: '{"query":"16"}',
-          },
-        ],
-      ]);
+      expect(sendEvent).toHaveBeenCalledWith({
+        action: "Trouver sa convention collective",
+        category: "cc_search",
+        name: '{"query":"16"}',
+      });
       expect(
         ui.searchByName.autocompleteLines.IDCC16.name.query()
       ).toBeInTheDocument();

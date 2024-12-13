@@ -68,16 +68,11 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
       userAction.click(ui.enterpriseAgreementSearch.submitButton.get());
       await wait();
       expect(sendEvent).toHaveBeenCalledTimes(1);
-      // @ts-ignore
-      expect(sendEvent.mock.calls).toEqual([
-        [
-          {
-            action: "Trouver sa convention collective",
-            category: "enterprise_search",
-            name: '{"query":"carrefour"}',
-          },
-        ],
-      ]);
+      expect(sendEvent).toHaveBeenCalledWith({
+        action: "Trouver sa convention collective",
+        category: "enterprise_search",
+        name: '{"query":"carrefour"}',
+      });
       expect(
         ui.enterpriseAgreementSearch.resultLines.carrefour.title.query()
       ).toBeInTheDocument();
