@@ -1,5 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Accordion /> handle unique ids in nested accordion 1`] = `
+<div>
+  <div
+    class="fr-accordions-group"
+    data-fr-group="false"
+  >
+    <section
+      class="fr-accordion"
+    >
+      <h2
+        class="fr-accordion__title"
+      >
+        <button
+          aria-controls="niveau-1-collapse"
+          aria-expanded="false"
+          class="fr-accordion__btn"
+          id="niveau-1__toggle-btn"
+          type="button"
+        >
+          Niveau 1
+        </button>
+      </h2>
+      <div
+        class="fr-collapse"
+        id="niveau-1-collapse"
+      >
+        <div
+          class="fr-accordions-group"
+          data-fr-group="false"
+        >
+          <section
+            class="fr-accordion"
+          >
+            <h3
+              class="fr-accordion__title"
+            >
+              <button
+                aria-controls="4uid3-collapse"
+                aria-expanded="false"
+                class="fr-accordion__btn"
+                id="4uid3__toggle-btn"
+                type="button"
+              >
+                Niveau 2
+              </button>
+            </h3>
+            <div
+              class="fr-collapse"
+              id="4uid3-collapse"
+            >
+              <p>
+                Sous accordéon
+              </p>
+            </div>
+          </section>
+          <section
+            class="fr-accordion"
+          >
+            <h3
+              class="fr-accordion__title"
+            >
+              <button
+                aria-controls="4uid4-collapse"
+                aria-expanded="false"
+                class="fr-accordion__btn"
+                id="4uid4__toggle-btn"
+                type="button"
+              >
+                Niveau 2
+              </button>
+            </h3>
+            <div
+              class="fr-collapse"
+              id="4uid4-collapse"
+            >
+              <p>
+                Sous accordéon
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
 exports[`<Accordion /> should have different levels of headings & render both BlocCas & Chapitre 1`] = `
 <div>
   <p>
