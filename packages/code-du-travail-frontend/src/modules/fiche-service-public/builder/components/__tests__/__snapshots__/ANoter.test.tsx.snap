@@ -3,7 +3,7 @@
 exports[`<ANoter /> affiche un encart à noter (alert) 1`] = `
 <div>
   <div
-    class="fr-alert fr-alert--info fr-mb-2w"
+    class="fr-alert fr-alert--info fr-mb-4w"
   >
     <p
       class="fr-text--bold"

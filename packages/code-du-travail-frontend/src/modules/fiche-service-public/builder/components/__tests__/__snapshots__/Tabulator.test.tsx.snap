@@ -3,7 +3,7 @@
 exports[`<Tabulator /> should render 1`] = `
 <div>
   <div
-    class="fr-tabs fr-mb-2w"
+    class="fr-tabs fr-mb-4w"
     id="fr-tabs-:r0:"
   >
     <ul

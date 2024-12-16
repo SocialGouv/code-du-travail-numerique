@@ -51,7 +51,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
      ou en intérim, des dispositions spécifiques de rupture anticipée du contrat de travail sont prévues. Nous vous présentons les informations à connaître.
   </p>
   <div
-    class="fr-tabs fr-mb-2w"
+    class="fr-tabs fr-mb-4w"
     id="fr-tabs-:r0:"
   >
     <ul
@@ -286,7 +286,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
             <div>
               <a
-                class="fr-btn fr-btn--secondary fr-mb-2w"
+                class="fr-btn fr-btn--secondary fr-mb-4w"
                 href="https://www.service-public.fr/simulateur/calcul/Demission"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -576,7 +576,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
             <div>
               <a
-                class="fr-btn fr-btn--secondary fr-mb-2w"
+                class="fr-btn fr-btn--secondary fr-mb-4w"
                 href="https://code.travail.gouv.fr/outils/preavis-demission"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -1124,7 +1124,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
               </li>
             </ul>
             <div
-              class="fr-alert fr-alert--info fr-mb-2w"
+              class="fr-alert fr-alert--info fr-mb-4w"
             >
               <p
                 class="fr-text--bold"
@@ -1230,7 +1230,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
             <div>
               <a
-                class="fr-btn fr-btn--secondary fr-mb-2w"
+                class="fr-btn fr-btn--secondary fr-mb-4w"
                 href="https://www.service-public.fr/simulateur/calcul/Demission"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -1315,7 +1315,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                par semaine.
             </p>
             <div
-              class="fr-alert fr-alert--info fr-mb-2w"
+              class="fr-alert fr-alert--info fr-mb-4w"
             >
               <p
                 class="fr-text--bold"
@@ -1843,7 +1843,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
               </li>
             </ul>
             <div
-              class="fr-alert fr-alert--info fr-mb-2w"
+              class="fr-alert fr-alert--info fr-mb-4w"
             >
               <p
                 class="fr-text--bold"
@@ -1949,7 +1949,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </p>
             <div>
               <a
-                class="fr-btn fr-btn--secondary fr-mb-2w"
+                class="fr-btn fr-btn--secondary fr-mb-4w"
                 href="https://www.service-public.fr/simulateur/calcul/Demission"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -2448,7 +2448,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
   </div>
   <div>
     <a
-      class="fr-btn fr-btn--secondary fr-mb-2w"
+      class="fr-btn fr-btn--secondary fr-mb-4w"
       href="https://www.service-public.fr/simulateur/calcul/Demission"
       rel="noopener noreferrer"
       target="_blank"
@@ -2458,7 +2458,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
   </div>
   <div>
     <a
-      class="fr-btn fr-btn--secondary fr-mb-2w"
+      class="fr-btn fr-btn--secondary fr-mb-4w"
       href="https://code.travail.gouv.fr/outils/preavis-demission"
       rel="noopener noreferrer"
       target="_blank"

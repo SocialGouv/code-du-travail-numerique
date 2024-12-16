@@ -13,7 +13,7 @@ export const Exemple = ({
 }) => {
   const title = getInChildrenByName(data, "Titre");
   return (
-    <div className={fr.cx("fr-highlight", "fr-mb-2w", "fr-ml-0")}>
+    <div className={fr.cx("fr-highlight", "fr-mb-4w", "fr-ml-0")}>
       {title && <p className={fr.cx("fr-text--bold")}>{getText(title)}</p>}
       <ElementBuilder data={filterOutTitle(data)} headingLevel={headingLevel} />
     </div>

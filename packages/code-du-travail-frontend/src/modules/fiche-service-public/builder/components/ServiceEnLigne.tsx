@@ -16,7 +16,7 @@ export const ServiceEnLigne = ({
   return (
     <div>
       <Link
-        className={fr.cx("fr-btn", "fr-btn--secondary", "fr-mb-2w")}
+        className={fr.cx("fr-btn", "fr-btn--secondary", "fr-mb-4w")}
         href={url}
         target="_blank"
         rel="noopener noreferrer"

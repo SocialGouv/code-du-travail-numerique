@@ -13,7 +13,7 @@ export const ANoter = ({
 }) => {
   const title = getInChildrenByName(data, "Titre");
   return (
-    <div className={fr.cx("fr-alert", "fr-alert--info", "fr-mb-2w")}>
+    <div className={fr.cx("fr-alert", "fr-alert--info", "fr-mb-4w")}>
       {title && <p className={fr.cx("fr-text--bold")}>{getText(title)}</p>}
       <ElementBuilder data={filterOutTitle(data)} headingLevel={headingLevel} />
     </div>

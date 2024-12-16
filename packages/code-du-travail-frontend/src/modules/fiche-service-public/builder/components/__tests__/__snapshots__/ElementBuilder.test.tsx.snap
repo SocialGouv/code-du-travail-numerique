@@ -31,12 +31,12 @@ exports[`<ElementBuilder /> does render several elements 1`] = `
 exports[`<ElementBuilder /> does render stuff inside a styled block 1`] = `
 <div>
   <div
-    class="fr-alert fr-alert--info fr-mb-2w"
+    class="fr-alert fr-alert--info fr-mb-4w"
   >
     stuff 0
   </div>
   <div
-    class="fr-alert fr-alert--info fr-mb-2w"
+    class="fr-alert fr-alert--info fr-mb-4w"
   >
     stuff 1
   </div>
@@ -46,7 +46,7 @@ exports[`<ElementBuilder /> does render stuff inside a styled block 1`] = `
     stuff 2
   </div>
   <div
-    class="fr-alert fr-alert--info fr-mb-2w"
+    class="fr-alert fr-alert--info fr-mb-4w"
   >
     stuff 3
   </div>

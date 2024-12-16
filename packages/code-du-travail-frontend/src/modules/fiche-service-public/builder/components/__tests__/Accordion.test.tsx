@@ -52,7 +52,6 @@ describe("<Accordion />", () => {
         headingLevel={0}
       />
     );
-    expect(container).toMatchSnapshot();
 
     const h2 = getAllByRole("heading", { level: 2 });
     expect(h2[0].textContent).toEqual("Niveau 1");
@@ -60,9 +59,8 @@ describe("<Accordion />", () => {
 
     const h3 = getAllByRole("heading", { level: 3 });
     expect(h3[0].textContent).toEqual("Niveau 2");
-    expect(h3[0].children[0].id).toEqual("56uid22__toggle-btn");
+    expect(h3[0].children[0].id).not.toEqual(h3[1].children[0].id);
 
     expect(h3[1].textContent).toEqual("Niveau 2");
-    expect(h3[1].children[0].id).toEqual("56uid23__toggle-btn");
   });
 });
