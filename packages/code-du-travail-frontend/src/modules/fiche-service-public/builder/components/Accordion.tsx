@@ -15,7 +15,7 @@ const formatAccordionItem = (
 ) => {
   return {
     title: getTitleInChildren(data),
-    id: seedId,
+    id: headingLevel === 0 ? undefined : seedId,
     content: (
       <ElementBuilder
         data={filterOutTitle(data)}
@@ -60,7 +60,7 @@ export const AccordionWrapper = ({
 
   const beforeAccordionElements = data.children
     .slice(0, firstIndexOfAccordionItem)
-    .map((element, index) => (
+    .map((element) => (
       <ElementBuilder
         key={seedId(element)}
         data={element}
@@ -70,7 +70,7 @@ export const AccordionWrapper = ({
 
   const afterAccordionElements = data.children
     .slice(firstIndexOfAccordionItem + accordionItems.length)
-    .map((element, index) => (
+    .map((element) => (
       <ElementBuilder
         key={seedId(element)}
         data={element}
