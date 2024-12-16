@@ -44,7 +44,6 @@ const options = (): HTMLReactParserOptions => {
           domNode.name === "div" &&
           domNode.attribs.class?.includes("youtube_player")
         ) {
-          console.log(domNode.attribs["data-title"]);
           return (
             <p>
               <Link
