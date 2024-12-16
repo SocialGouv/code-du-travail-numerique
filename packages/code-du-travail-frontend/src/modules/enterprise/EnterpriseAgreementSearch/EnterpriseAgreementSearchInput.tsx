@@ -15,6 +15,7 @@ import { searchEnterprises } from "../queries";
 import { Enterprise } from "../types";
 import { ApiGeoResult } from "../../Location/searchCities";
 import { CardTitleStyle, ButtonStyle } from "../../convention-collective/style";
+import { useEnterpriseAgreementSearchTracking } from "./tracking";
 
 type Props = {
   widgetMode?: boolean;
@@ -30,6 +31,9 @@ export const EnterpriseAgreementSearchInput = ({
   const [searchState, setSearchState] = useState<
     "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch" | "required"
   >("noSearch");
+  const { emitEnterpriseAgreementSearchInputEvent } =
+    useEnterpriseAgreementSearchTracking();
+
   const [search, setSearch] = useState<string | undefined>(defaultSearch);
   const [loading, setLoading] = useState<boolean>(false);
   const [location, setLocation] = useState<ApiGeoResult | undefined>(
@@ -85,6 +89,7 @@ export const EnterpriseAgreementSearchInput = ({
       setSearchState("required");
       return;
     }
+    emitEnterpriseAgreementSearchInputEvent(search, location);
     setLoading(true);
     try {
       const result = await searchEnterprises({

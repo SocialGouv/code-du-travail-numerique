@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.167.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.167.1...v4.167.2) (2024-12-13)
+
+
+### Bug Fixes
+
+* ajout du tracking sur outil recherche cc ([#6366](https://github.com/SocialGouv/code-du-travail-numerique/issues/6366)) ([c1fd3d8](https://github.com/SocialGouv/code-du-travail-numerique/commit/c1fd3d8ef0d153b54bc137cbe32a7915da659f72))
+* **seo:** retrait des h1 dupliqués ([#6342](https://github.com/SocialGouv/code-du-travail-numerique/issues/6342)) ([26580e0](https://github.com/SocialGouv/code-du-travail-numerique/commit/26580e0abd9544c11b21c3ff9039f6391552a0f7))
+
+
+
+
+
 ## [4.167.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.167.0...v4.167.1) (2024-12-05)
 
 
