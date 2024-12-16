@@ -1,6 +1,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { TrackApproval } from "./TrackApproval";
-import Link from "next/link";
+import Link from "../common/Link";
 
 export const PrivacyPolicy = () => {
   return (

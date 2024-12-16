@@ -1,7 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Document } from "./queries";
 import React from "react";
-import Link from "next/link";
+import Link from "../common/Link";
 import { getRouteBySource, SourceKeys, SOURCES } from "@socialgouv/cdtn-utils";
 import { Container } from "../layout/Container";
 
