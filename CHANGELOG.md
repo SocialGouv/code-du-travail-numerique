@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.168.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.167.2...v4.168.0) (2024-12-17)
+
+
+### Bug Fixes
+
+* **matomo:** envoyer les events de changement de pages ([#6368](https://github.com/SocialGouv/code-du-travail-numerique/issues/6368)) ([fdd8487](https://github.com/SocialGouv/code-du-travail-numerique/commit/fdd8487be4d4e970bcd0574827bda1bbbd704dc9))
+
+
+### Features
+
+* **DSFR:** migration des pages fiches service public ([#6277](https://github.com/SocialGouv/code-du-travail-numerique/issues/6277)) ([85918d7](https://github.com/SocialGouv/code-du-travail-numerique/commit/85918d7d56d2941e119701e1fbb858935f97fb73))
+
+
+
+
+
 ## [4.167.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.167.1...v4.167.2) (2024-12-13)
 
 
