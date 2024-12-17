@@ -1,0 +1,32 @@
+{
+  "type": "element",
+  "name": "Cas",
+  "children": [
+    {
+      "type": "element",
+      "name": "Titre",
+      "children": [
+        {
+          "type": "text",
+          "text": "Vous êtes une victime directe"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Introduction",
+      "children": [
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "La démarche varie suivant que votre maladie a été reconnue comme maladie professionnelle ou non."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
