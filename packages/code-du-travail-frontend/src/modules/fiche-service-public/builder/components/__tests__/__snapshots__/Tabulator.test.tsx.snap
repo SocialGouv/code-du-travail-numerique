@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tabulator /> should render 1`] = `
+<div>
+  <div
+    class="fr-tabs fr-mb-4w"
+    id="fr-tabs-:r0:"
+  >
+    <ul
+      class="fr-tabs__list"
+      role="tablist"
+    >
+      <li
+        role="presentation"
+      >
+        <button
+          aria-controls="tabpanel-:r1:-0-panel"
+          aria-selected="true"
+          class="fr-tabs__tab fr-tabs__tab--icon-left"
+          id="tabpanel-:r1:-0"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          CDI
+        </button>
+      </li>
+      <li
+        role="presentation"
+      >
+        <button
+          aria-controls="tabpanel-:r1:-1-panel"
+          aria-selected="false"
+          class="fr-tabs__tab fr-tabs__tab--icon-left"
+          id="tabpanel-:r1:-1"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          CDD
+        </button>
+      </li>
+    </ul>
+    <div
+      aria-labelledby="tabpanel-:r1:-0"
+      class="fr-tabs__panel fr-tabs__panel--selected"
+      id="tabpanel-:r1:-0-panel"
+      role="tabpanel"
+      tabindex="0"
+    >
+      <h4
+        class="fr-sr-only"
+      >
+        CDI
+      </h4>
+      <h5>
+        titre 1
+      </h5>
+      <p>
+        paragraphe 1
+      </p>
+    </div>
+    <div
+      aria-labelledby="tabpanel-:r1:-1"
+      class="fr-tabs__panel fr-tabs__panel"
+      id="tabpanel-:r1:-1-panel"
+      role="tabpanel"
+      tabindex="0"
+    >
+      <h4
+        class="fr-sr-only"
+      >
+        CDD
+      </h4>
+      <h5>
+        titre 2
+      </h5>
+      <p>
+        paragraphe 2-1
+      </p>
+      <p>
+        paragraphe 2-2
+      </p>
+    </div>
+  </div>
+</div>
+`;

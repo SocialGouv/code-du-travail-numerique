@@ -1,0 +1,287 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Table /> should render with th, td, colspan etc. 1`] = `
+<div>
+  <div
+    class="fr-table--sm fr-table fr-table"
+  >
+    <div
+      class="fr-table__wrapper"
+    >
+      <div
+        class="fr-table__container"
+      >
+        <div
+          class="fr-table__content"
+        >
+          <table>
+            <caption>
+              Nombre de trimestres d'assurance exigé pour avoir droit à une retraite à taux plein
+            </caption>
+            <thead>
+              <tr>
+                <th
+                  colspan="1"
+                  rowspan="1"
+                >
+                  Vous êtes né :
+                </th>
+                <th
+                  colspan="1"
+                  rowspan="1"
+                >
+                  Vous pouvez partir en retraite à partir de :
+                </th>
+                <th
+                  colspan="1"
+                  rowspan="1"
+                >
+                  Nombre de trimestres exigé pour avoir le taux plein
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  En 1956 ou 1957
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  62 ans
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  166 (41 ans 6 mois)
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  Entre le 1
+                  <sup>
+                    er
+                  </sup>
+                   janvier 1958 et le 31 décembre 1960
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  62 ans
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  167 (41 ans 9 mois)
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  Entre le 1
+                  <sup>
+                    er
+                  </sup>
+                   janvier 1961 et le 31 aout 1961
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  62 ans
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  168 (42 ans)
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  Entre le 1
+                  <sup>
+                    er 
+                  </sup>
+                  septembre 1961 et le 31 décembre 1961
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  62 ans et 3 mois
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  169 (42 ans 3 mois)
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  1962
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  62 ans et 6 mois
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  169 (42 ans 3 mois)
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  1963
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  62 ans et 9 mois
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  170 (42 ans 6 mois)
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  1964
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  63 ans
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  171 (42 ans 9 mois)
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  1965
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  63 ans et 3 mois
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  172 (43 ans)
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  1966
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  63 ans et 6 mois
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  172 (43 ans)
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  1967
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  63 ans et 9 mois
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  172 (43 ans)
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  À partir du 1
+                  <sup>
+                    er
+                  </sup>
+                   janvier 1968
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  64 ans
+                </td>
+                <td
+                  colspan="1"
+                  rowspan="1"
+                >
+                  172 (43 ans)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
