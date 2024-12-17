@@ -1,0 +1,26 @@
+{
+  "type": "element",
+  "name": "ANoter",
+  "children": [
+    {
+      "type": "element",
+      "name": "Titre",
+      "children": [
+        {
+          "type": "text",
+          "text": "Exemple"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Paragraphe",
+      "children": [
+        {
+          "type": "text",
+          "text": "Un salarié perçoit une indemnité spécifique de rupture conventionnelle de 120 000 dont 70 000 correspondent à l'indemnité prévue par sa convention collective. Sa rémunération brute de l'année civile précédant la rupture du contrat est de 40 000."
+        }
+      ]
+    }
+  ]
+}

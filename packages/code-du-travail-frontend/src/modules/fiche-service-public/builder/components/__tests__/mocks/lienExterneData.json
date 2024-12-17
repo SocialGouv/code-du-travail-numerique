@@ -1,0 +1,13 @@
+{
+  "type": "element",
+  "name": "LienExterne",
+  "attributes": {
+    "URL": "https://formulaire.defenseurdesdroits.fr/code/afficher.php?ETAPE=accueil_2016"
+  },
+  "children": [
+    {
+      "type": "text",
+      "text": "formulaire de contact"
+    }
+  ]
+}

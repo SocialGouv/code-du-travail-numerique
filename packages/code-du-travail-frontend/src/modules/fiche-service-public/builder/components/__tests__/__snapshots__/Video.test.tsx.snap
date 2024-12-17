@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Video /> should render 1`] = `
+<div>
+  <a
+    href="https://youtu.be/ie4KrcEt6pU"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    Cliquez ici pour voir la vidéo 
+    Le compte retraite
+  </a>
+</div>
+`;

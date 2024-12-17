@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SectionWithTitle /> should render section 1`] = `
+<div>
+  <h4>
+    Vous êtes une victime directe
+  </h4>
+  <p>
+    La démarche varie suivant que votre maladie a été reconnue comme maladie professionnelle ou non.
+  </p>
+</div>
+`;
