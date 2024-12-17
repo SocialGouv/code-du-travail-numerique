@@ -31,7 +31,7 @@ export const EnterpriseAgreementSearchInput = ({
   const [searchState, setSearchState] = useState<
     "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch" | "required"
   >("noSearch");
-  const { emitEnterpriseAgreementSearchInputEvent } =
+  const { emitEnterpriseAgreementSearchInputEvent, emitSelectEnterpriseEvent } =
     useEnterpriseAgreementSearchTracking();
 
   const [search, setSearch] = useState<string | undefined>(defaultSearch);
@@ -251,6 +251,9 @@ export const EnterpriseAgreementSearchInput = ({
                 href: widgetMode
                   ? `/widgets/convention-collective/entreprise/${enterprise.siren}${getQueries()}`
                   : `/outils/convention-collective/entreprise/${enterprise.siren}${getQueries()}`,
+                onClick: () => {
+                  emitSelectEnterpriseEvent(enterprise);
+                },
               }}
               desc={
                 enterprise.activitePrincipale ? (

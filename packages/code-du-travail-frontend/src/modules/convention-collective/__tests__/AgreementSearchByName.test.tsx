@@ -20,6 +20,10 @@ jest.mock("../search", () => ({
   searchAgreement: jest.fn(),
 }));
 
+jest.mock("next/navigation", () => ({
+  redirect: jest.fn(),
+}));
+
 describe("Trouver sa CC - recherche par nom de CC", () => {
   describe("Test de l'autocomplete", () => {
     let rendering: RenderResult;
@@ -28,7 +32,7 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
       jest.resetAllMocks();
       rendering = render(<AgreementSearch />);
     });
-    it("Vérifier le déroulement de la liste & effacement", async () => {
+    it("Vérifier la navigation", async () => {
       (searchAgreement as jest.Mock).mockImplementation(() =>
         Promise.resolve([
           {
@@ -47,7 +51,7 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
       userAction.setInput(ui.searchByName.input.get(), "16");
       await wait();
       expect(sendEvent).toHaveBeenCalledTimes(1);
-      expect(sendEvent).toHaveBeenCalledWith({
+      expect(sendEvent).toHaveBeenLastCalledWith({
         action: "Trouver sa convention collective",
         category: "cc_search",
         name: '{"query":"16"}',
@@ -61,9 +65,20 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
         "href",
         "/convention-collective/16-transports-routiers-et-activites-auxiliaires-du-transport"
       );
-      expect(ui.searchByName.input.get()).toHaveValue("16");
-      userAction.click(ui.searchByName.inputCloseBtn.get());
-      expect(ui.searchByName.input.get()).toHaveValue("");
+      userAction.click(ui.searchByName.autocompleteLines.IDCC16.link.get());
+      expect(sendEvent).toHaveBeenCalledTimes(2);
+      expect(sendEvent).toHaveBeenLastCalledWith({
+        action: "Trouver sa convention collective",
+        category: "cc_select_p1",
+        name: "idcc0016",
+      });
+      userAction.click(ui.searchByName.buttonPrevious.get());
+      expect(sendEvent).toHaveBeenCalledTimes(3);
+      expect(sendEvent).toHaveBeenLastCalledWith({
+        action: "back_step_cc_search_p1",
+        category: "view_step_cc_search_p1",
+        name: "Trouver sa convention collective",
+      });
     });
     it("Vérifier l'affichage des erreurs", async () => {
       (searchAgreement as jest.Mock).mockImplementation(() =>
