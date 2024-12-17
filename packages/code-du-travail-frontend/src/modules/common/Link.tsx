@@ -10,12 +10,10 @@ type Props = LinkProps & {
 };
 
 const Link = ({ ...props }: Props): JSX.Element => {
-  return (
-    <BaseLink
-      {...props}
-      title={`${props.title || props.children?.toString()}${props.target === "_blank" ? " - nouvelle fenêtre" : ""}`}
-    />
-  );
+  if (!props.title && props.target === "_blank" && props.children) {
+    props.title = `${props.children.toString()} - nouvelle fenêtre`;
+  }
+  return <BaseLink {...props} />;
 };
 
 export default Link;

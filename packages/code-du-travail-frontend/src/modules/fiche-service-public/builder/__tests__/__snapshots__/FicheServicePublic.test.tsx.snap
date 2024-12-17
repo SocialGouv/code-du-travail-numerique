@@ -21,6 +21,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
         href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000046771781"
         rel="noopener noreferrer"
         target="_blank"
+        title="loi n°2022-1598 du 21 décembre 2022 - nouvelle fenêtre"
       >
         loi n°2022-1598 du 21 décembre 2022
       </a>
@@ -34,6 +35,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
         href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000047455109"
         rel="noopener noreferrer"
         target="_blank"
+        title="n°2023-275 du 17 avril 2023 - nouvelle fenêtre"
       >
         n°2023-275 du 17 avril 2023
       </a>
@@ -290,6 +292,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 href="https://www.service-public.fr/simulateur/calcul/Demission"
                 rel="noopener noreferrer"
                 target="_blank"
+                title="Lettre de démission du salarié - nouvelle fenêtre"
               >
                 Lettre de démission du salarié
               </a>
@@ -580,6 +583,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 href="https://code.travail.gouv.fr/outils/preavis-demission"
                 rel="noopener noreferrer"
                 target="_blank"
+                title="Calculer la durée du préavis de démission selon la convention collective - nouvelle fenêtre"
               >
                 Calculer la durée du préavis de démission selon la convention collective
               </a>
@@ -1234,6 +1238,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 href="https://www.service-public.fr/simulateur/calcul/Demission"
                 rel="noopener noreferrer"
                 target="_blank"
+                title="Lettre de démission du salarié - nouvelle fenêtre"
               >
                 Lettre de démission du salarié
               </a>
@@ -1953,6 +1958,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 href="https://www.service-public.fr/simulateur/calcul/Demission"
                 rel="noopener noreferrer"
                 target="_blank"
+                title="Lettre de démission du salarié - nouvelle fenêtre"
               >
                 Lettre de démission du salarié
               </a>
@@ -2452,6 +2458,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
       href="https://www.service-public.fr/simulateur/calcul/Demission"
       rel="noopener noreferrer"
       target="_blank"
+      title="Lettre de démission du salarié - nouvelle fenêtre"
     >
       Lettre de démission du salarié
     </a>
@@ -2462,6 +2469,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
       href="https://code.travail.gouv.fr/outils/preavis-demission"
       rel="noopener noreferrer"
       target="_blank"
+      title="Calculer la durée du préavis de démission selon la convention collective - nouvelle fenêtre"
     >
       Calculer la durée du préavis de démission selon la convention collective
     </a>
