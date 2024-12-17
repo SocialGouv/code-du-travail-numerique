@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { LienExterne, LienExterneCommente } from "../LienExterne";
+import { cleanUrl, LienExterne, LienExterneCommente } from "../LienExterne";
 import lienExterneCommenteDataMock from "./mocks/lienExterneCommenteData.json";
 import lienExterneDataMock from "./mocks/lienExterneData.json";
 import {
@@ -62,5 +62,29 @@ describe("<LienExterne />", () => {
     // @ts-ignore
     const { getByText } = render(<LienExterne data={data} />);
     expect(getByText("formulaire")).toHaveAttribute("href", "");
+  });
+});
+describe("cleanUrl", () => {
+  it("retourne la même url si pas code.travail.gouv.fr", () => {
+    expect(cleanUrl("hello.fr")).toEqual("hello.fr");
+  });
+
+  it("retourne l'url sans query params si code.travail.gouv.fr", () => {
+    expect(
+      cleanUrl(
+        "https://code.travail.gouv.fr/outils/indemnite-licenciement?src_url=https://service-public.fr/particuliers/vosdroits/F987"
+      )
+    ).toEqual("https://code.travail.gouv.fr/outils/indemnite-licenciement");
+  });
+
+  it("retourne la même url si code.travail.gouv.fr mais de query params", () => {
+    expect(
+      cleanUrl("https://code.travail.gouv.fr/outils/indemnite-licenciement")
+    ).toEqual("https://code.travail.gouv.fr/outils/indemnite-licenciement");
+  });
+
+  it("ne fails pas si rien n'est passé", () => {
+    // @ts-ignore
+    expect(cleanUrl()).toEqual(undefined);
   });
 });

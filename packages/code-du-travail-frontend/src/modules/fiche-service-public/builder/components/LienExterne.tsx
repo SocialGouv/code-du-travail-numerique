@@ -36,7 +36,7 @@ export const cleanUrl = (url: string): string => {
 };
 
 export const LienExterne = ({ data }: { data: FicheSPDataLienExterne }) => {
-  const url = cleanUrl(data.attributes.URL) || "";
+  const url = cleanUrl(data.attributes.URL);
   const label = getText(data);
   return (
     <Link href={url} rel="noopener noreferrer" target="_blank">
