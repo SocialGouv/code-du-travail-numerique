@@ -6,7 +6,7 @@ import { getTitleLevel } from "./Title";
 import { FicheSPDataChapitre, FicheSPDataTextWithChapitre } from "../type";
 import SectionWithTitle from "./SectionWithTitle";
 import { AccordionWithAnchor } from "../../../common/AccordionWithAnchor";
-import { useUIDSeed } from "react-uid";
+import { v4 as generateUUID } from "uuid";
 
 const formatAccordionItem = (
   data: FicheSPDataChapitre,
@@ -25,7 +25,7 @@ const formatAccordionItem = (
   };
 };
 
-const isItemOfAccordion = (element) =>
+const isItemOfAccordion = (element): FicheSPDataChapitre =>
   element.name === "Chapitre" &&
   element.children.find((child) => child.name === "Titre");
 
@@ -36,33 +36,27 @@ export const AccordionWrapper = ({
   data: FicheSPDataTextWithChapitre;
   headingLevel: number;
 }) => {
-  const seedId = useUIDSeed();
-
   if (headingLevel >= 2) {
     return data.children.map((child) => (
       <SectionWithTitle
         data={child}
         headingLevel={headingLevel}
-        key={seedId(child)}
+        key={generateUUID(child)}
       />
     ));
   }
   const firstIndexOfAccordionItem = data.children.findIndex(isItemOfAccordion);
   const accordionItems = data.children
     .filter(isItemOfAccordion)
-    .map((child) =>
-      formatAccordionItem(
-        child as FicheSPDataChapitre,
-        headingLevel,
-        seedId(child)
-      )
+    .map((child: FicheSPDataChapitre) =>
+      formatAccordionItem(child, headingLevel, generateUUID(child))
     );
 
   const beforeAccordionElements = data.children
     .slice(0, firstIndexOfAccordionItem)
     .map((element) => (
       <ElementBuilder
-        key={seedId(element)}
+        key={generateUUID(element)}
         data={element}
         headingLevel={headingLevel}
       />
@@ -72,7 +66,7 @@ export const AccordionWrapper = ({
     .slice(firstIndexOfAccordionItem + accordionItems.length)
     .map((element) => (
       <ElementBuilder
-        key={seedId(element)}
+        key={generateUUID(element)}
         data={element}
         headingLevel={headingLevel}
       />

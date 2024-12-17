@@ -10,9 +10,9 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
     >
       Où s'adresser ?
     </p>
-    <h3>
+    <h2>
       Fonds d'indemnisation des victimes de l'amiante (Fiva)
-    </h3>
+    </h2>
     <p>
       Pour une question concernant une demande d'indemnisation ou l'état d'avancement d'un dossier en cours d'instruction
     </p>
@@ -23,22 +23,22 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
       <section
         class="fr-accordion"
       >
-        <h3
+        <h2
           class="fr-accordion__title"
         >
           <button
-            aria-controls="7uid3-collapse"
+            aria-controls="par-telephone-collapse"
             aria-expanded="false"
             class="fr-accordion__btn"
-            id="7uid3__toggle-btn"
+            id="par-telephone__toggle-btn"
             type="button"
           >
             Par téléphone
           </button>
-        </h3>
+        </h2>
         <div
           class="fr-collapse"
-          id="7uid3-collapse"
+          id="par-telephone-collapse"
         >
           <p>
             <strong>
@@ -56,22 +56,22 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
       <section
         class="fr-accordion"
       >
-        <h3
+        <h2
           class="fr-accordion__title"
         >
           <button
-            aria-controls="7uid4-collapse"
+            aria-controls="sur-place-collapse"
             aria-expanded="false"
             class="fr-accordion__btn"
-            id="7uid4__toggle-btn"
+            id="sur-place__toggle-btn"
             type="button"
           >
             Sur place
           </button>
-        </h3>
+        </h2>
         <div
           class="fr-collapse"
-          id="7uid4-collapse"
+          id="sur-place-collapse"
         >
           <p>
             Fiva
@@ -96,22 +96,22 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
       <section
         class="fr-accordion"
       >
-        <h3
+        <h2
           class="fr-accordion__title"
         >
           <button
-            aria-controls="7uid5-collapse"
+            aria-controls="par-courrier-electronique-collapse"
             aria-expanded="false"
             class="fr-accordion__btn"
-            id="7uid5__toggle-btn"
+            id="par-courrier-electronique__toggle-btn"
             type="button"
           >
             Par courrier électronique
           </button>
-        </h3>
+        </h2>
         <div
           class="fr-collapse"
-          id="7uid5-collapse"
+          id="par-courrier-electronique-collapse"
         >
           <p>
             <a

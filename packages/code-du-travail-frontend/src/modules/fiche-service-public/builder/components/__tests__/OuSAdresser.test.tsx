@@ -23,7 +23,7 @@ describe("<OuSAdresser />", () => {
     const { container } = render(
       <OuSAdresser
         data={ressourceWebData as FicheSPDataOuSAdresser}
-        headingLevel={1}
+        headingLevel={0}
       />
     );
     expect(container).toMatchSnapshot();

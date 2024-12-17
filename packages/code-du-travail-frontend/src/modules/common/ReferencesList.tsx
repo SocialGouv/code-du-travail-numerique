@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { ServicePublicReference } from "@socialgouv/cdtn-types";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";

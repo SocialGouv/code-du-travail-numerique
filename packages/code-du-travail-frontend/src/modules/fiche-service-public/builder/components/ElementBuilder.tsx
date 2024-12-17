@@ -1,6 +1,6 @@
-"use client";
 import React from "react";
-import { useUIDSeed } from "react-uid";
+import { v4 as generateUUID } from "uuid";
+
 import { getText, ignoreParagraph } from "../utils";
 import { LienExterne, LienExterneCommente } from "./LienExterne";
 import List from "./List";
@@ -31,7 +31,6 @@ export const ElementBuilder = ({
   data: FicheSPData | FicheSPData[];
   headingLevel?: number;
 }) => {
-  const seedId = useUIDSeed();
   // in cases where the parent's "$"/children is undefined while it should not
   // e.g. in a "Texte" element.
   if (!data) return <></>;
@@ -39,7 +38,7 @@ export const ElementBuilder = ({
   if (Array.isArray(data)) {
     return data.map((child) => (
       <ElementBuilder
-        key={seedId(child)}
+        key={generateUUID(child)}
         data={child}
         headingLevel={headingLevel}
       />
