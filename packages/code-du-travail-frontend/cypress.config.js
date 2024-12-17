@@ -13,7 +13,7 @@ module.exports = defineConfig({
       process.env.TEST_MODE === "heavy"
         ? "cypress/integration/heavy/**/*.spec.{js,jsx,ts,tsx}"
         : process.env.TEST_MODE === "light"
-          ? "cypress/integration/{light,html-validation}/**/*.spec.{js,jsx,ts,tsx}"
+          ? "cypress/integration/{html-validation}/**/*.spec.{js,jsx,ts,tsx}"
           : process.env.TEST_MODE === "html-validation"
             ? "cypress/integration/html-validation/**/*.spec.{js,jsx,ts,tsx}"
             : process.env.TEST_MODE === "heavy-and-light"
