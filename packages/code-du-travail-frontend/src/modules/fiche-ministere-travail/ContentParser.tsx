@@ -49,7 +49,7 @@ const options = (): HTMLReactParserOptions => {
               <Link
                 href={domNode.attribs["data-src"]}
                 target={"_blank"}
-                title={domNode.attribs["data-title"]}
+                title={`Cliquez ici pour voir la vidéo ${ldomNode.attribs["data-title"]}`}
               >
                 Cliquez ici pour voir la vidéo
               </Link>
