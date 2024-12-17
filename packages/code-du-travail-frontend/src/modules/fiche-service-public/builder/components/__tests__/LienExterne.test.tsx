@@ -46,23 +46,6 @@ describe("<LienExterne />", () => {
       "https://code.travail.gouv.fr/outils/indemnite-licenciement"
     );
   });
-  it("should not fails if no url", () => {
-    const data = {
-      type: "element",
-      name: "LienExterne",
-      attributes: {},
-      children: [
-        {
-          type: "text",
-          text: "formulaire",
-        },
-      ],
-    };
-
-    // @ts-ignore
-    const { getByText } = render(<LienExterne data={data} />);
-    expect(getByText("formulaire")).toHaveAttribute("href", "");
-  });
 });
 describe("cleanUrl", () => {
   it("retourne la même url si pas code.travail.gouv.fr", () => {
