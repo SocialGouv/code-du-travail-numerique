@@ -4,7 +4,7 @@ import { parseString } from "xml2js";
 
 const PRODUCTION_DOMAIN = "https://code.travail.gouv.fr";
 const PREPROD_DOMAIN =
-  "https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr";
+  "https://code-du-travail-numerique-carolinebda-headings-level-69ngsiyc.ovh.fabrique.social.gouv.fr/";
 
 export const downloadAllUrlsToValidate = async () => {
   console.log("Download all URLs to validate HTML...");
@@ -37,8 +37,10 @@ export const downloadAllUrlsToValidate = async () => {
       )
     );
 
-    const urlsContributions: string[] = urls.filter((url) =>
-      url.includes("/contribution/")
+    const urlsContributions: string[] = urls.filter(
+      (url) =>
+        url.includes("/contribution/") &&
+        url.includes("arret-maladie-pendant-le-preavis-quelles-consequences")
     );
 
     fs.writeFileSync(
