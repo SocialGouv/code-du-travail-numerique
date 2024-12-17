@@ -12,10 +12,10 @@ export const ServiceEnLigne = ({
   data: FicheSPDataServiceEnLigne;
 }) => {
   const title = getText(data.children[0]);
-    if (!data.attributes.URL) {
-      return <p>{title}</p>;
-    }
-    const url = cleanUrl(data.attributes.URL);
+  if (!data.attributes.URL) {
+    return <p>{title}</p>;
+  }
+  const url = cleanUrl(data.attributes.URL);
   return (
     <div>
       <Link
