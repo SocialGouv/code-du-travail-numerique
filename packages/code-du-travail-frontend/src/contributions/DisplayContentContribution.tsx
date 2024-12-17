@@ -131,17 +131,19 @@ const getHeadingElement = (titleLevel: number, domNode) => {
 
 const options = (titleLevel: number): HTMLReactParserOptions => {
   let accordionTitle = titleLevel;
+  let headingTitleLevel = titleLevel;
 
   return {
     replace(domNode) {
       if (domNode instanceof Element) {
         if (domNode.name === "span" && domNode.attribs.class === "title") {
           accordionTitle = titleLevel + 1;
+          headingTitleLevel = titleLevel + 1;
           return getHeadingElement(titleLevel, domNode);
         }
         if (domNode.name === "span" && domNode.attribs.class === "sub-title") {
           accordionTitle = titleLevel + 1;
-          return getHeadingElement(titleLevel + 1, domNode);
+          return getHeadingElement(headingTitleLevel, domNode);
         }
         if (domNode.name === "details") {
           const items: any[] = [];
@@ -175,18 +177,15 @@ const options = (titleLevel: number): HTMLReactParserOptions => {
           );
         }
         if (domNode.name === "strong") {
-          // Disable trim on strong
           return <strong>{renderChildrenWithNoTrim(domNode)}</strong>;
         }
         if (domNode.name === "em") {
-          // Disable trim on em
           return <em>{renderChildrenWithNoTrim(domNode)}</em>;
         }
         if (domNode.name === "p") {
           if (!domNode.children.length) {
             return <br />;
           }
-          // Disable trim on p
           return <p>{renderChildrenWithNoTrim(domNode)}</p>;
         }
       }
