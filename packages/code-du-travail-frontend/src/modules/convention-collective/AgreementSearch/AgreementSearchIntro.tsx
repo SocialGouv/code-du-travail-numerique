@@ -3,7 +3,6 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
 import { useAgreementSearchTracking } from "../tracking";
-import { useEffect } from "react";
 
 type Props = {
   navigationUrl?: string;
