@@ -6,6 +6,7 @@ type Props = LinkProps & {
   title?: string;
   target?: string;
   className?: string;
+  rel?: string;
 };
 
 const Link = ({ ...props }: Props): JSX.Element => {

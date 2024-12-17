@@ -1,10 +1,11 @@
 import React from "react";
 
 import { getText } from "../utils";
-import Link from "next/link";
+
 import { fr } from "@codegouvfr/react-dsfr";
 import { FicheSPDataServiceEnLigne } from "../type";
 import { cleanUrl } from "./LienExterne";
+import Link from "../../../common/Link";
 
 export const ServiceEnLigne = ({
   data,
