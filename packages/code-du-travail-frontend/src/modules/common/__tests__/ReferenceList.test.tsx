@@ -33,9 +33,52 @@ const references = [
 
 describe("<ReferenceList />", () => {
   it("should render", () => {
-    const { container } = render(
+    const { container, getByText } = render(
       <ReferenceList references={references as ServicePublicReference[]} />
     );
+    expect(getByText("Article L2323-4 du Code du travail").tagName).toEqual(
+      "A"
+    );
+    expect(getByText("Article L2323-4 du Code du travail")).toHaveAttribute(
+      "href",
+      "/code-du-travail/l2323-4"
+    );
+
+    expect(
+      getByText("Convention collective: Article yyy du JO").tagName
+    ).toEqual("A");
+    expect(
+      getByText("Convention collective: Article yyy du JO")
+    ).toHaveAttribute("href", "https://article.jo/yyy");
+    expect(
+      getByText("Convention collective: Article yyy du JO")
+    ).toHaveAttribute("target", "_blank");
+    expect(
+      getByText("Convention collective: Article yyy du JO")
+    ).toHaveAttribute("rel", "noreferer noopener");
+
+    expect(getByText("Convention collective: CCN metallurgie").tagName).toEqual(
+      "A"
+    );
+    expect(getByText("Convention collective: CCN metallurgie")).toHaveAttribute(
+      "href",
+      "https://legifrance/ccn-metallurgie"
+    );
+    expect(getByText("Convention collective: CCN metallurgie")).toHaveAttribute(
+      "target",
+      "_blank"
+    );
+    expect(getByText("Convention collective: CCN metallurgie")).toHaveAttribute(
+      "rel",
+      "noreferer noopener"
+    );
+
+    expect(getByText("Convention collective: automobile").tagName).toEqual("A");
+    expect(getByText("Convention collective: automobile")).toHaveAttribute(
+      "href",
+      "/convention-collective/123-automobile"
+    );
+
     expect(container).toMatchSnapshot();
   });
 });
