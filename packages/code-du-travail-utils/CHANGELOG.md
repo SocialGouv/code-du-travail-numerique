@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.169.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.168.1...v4.169.0) (2024-12-18)
+
+**Note:** Version bump only for package @socialgouv/cdtn-utils
+
+
+
+
+
 ## [4.168.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.168.0...v4.168.1) (2024-12-17)
 
 **Note:** Version bump only for package @socialgouv/cdtn-utils

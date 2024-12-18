@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.169.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.168.1...v4.169.0) (2024-12-18)
+
+
+### Bug Fixes
+
+* search cc tracking ([#6373](https://github.com/SocialGouv/code-du-travail-numerique/issues/6373)) ([ff6095d](https://github.com/SocialGouv/code-du-travail-numerique/commit/ff6095d53bc2373856979a4d9ccf65a508c185c4))
+
+
+### Features
+
+* **information:** utilisation de tiptap sur les pages infos ([#6362](https://github.com/SocialGouv/code-du-travail-numerique/issues/6362)) ([9bbdd41](https://github.com/SocialGouv/code-du-travail-numerique/commit/9bbdd4162e10f9bd022f2293f11fe0432ed8442b))
+
+
+
+
+
 ## [4.168.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.168.0...v4.168.1) (2024-12-17)
 
 
