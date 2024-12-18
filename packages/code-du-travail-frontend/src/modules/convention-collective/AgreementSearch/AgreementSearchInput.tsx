@@ -18,7 +18,8 @@ export const AgreementSearchInput = ({ onSearch }: Props) => {
     "noSearch" | "lowSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
   >("noSearch");
   const [error, setError] = useState("");
-  const { emitAgreementSearchInputEvent } = useAgreementSearchTracking();
+  const { emitAgreementSearchInputEvent, emitSelectEvent } =
+    useAgreementSearchTracking();
   const getStateMessage = () => {
     switch (searchState) {
       case "lowSearch":
@@ -72,6 +73,11 @@ export const AgreementSearchInput = ({ onSearch }: Props) => {
           }}
           lineAsLink={(item) => {
             return `/${getRouteBySource(SOURCES.CCN)}/${item.slug}`;
+          }}
+          onChange={(agreement) => {
+            if (agreement) {
+              emitSelectEvent(`idcc${agreement.id}`);
+            }
           }}
           search={searchAgreement}
           onSearch={(query, agreements) => {

@@ -6,6 +6,7 @@ import { Enterprise } from "../types";
 import { ButtonStyle, CardTitleStyle } from "../../convention-collective/style";
 import { css } from "@styled-system/css";
 import { useSearchParams } from "next/navigation";
+import { useEnterpriseAgreementSearchTracking } from "./tracking";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;
@@ -17,6 +18,8 @@ export const EnterpriseAgreementSelection = ({
   widgetMode = false,
 }: Props) => {
   const searchParams = useSearchParams();
+  const { emitSelectEnterpriseAgreementEvent } =
+    useEnterpriseAgreementSearchTracking();
   return (
     <>
       <h2 className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
@@ -64,6 +67,9 @@ export const EnterpriseAgreementSelection = ({
               ...(!disabled
                 ? {
                     href: `/convention-collective/${agreement.slug}`,
+                    onClick: () => {
+                      emitSelectEnterpriseAgreementEvent(`idcc${agreement.id}`);
+                    },
                   }
                 : {
                     href: "#",

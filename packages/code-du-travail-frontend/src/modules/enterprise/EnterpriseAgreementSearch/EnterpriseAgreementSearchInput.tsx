@@ -31,8 +31,11 @@ export const EnterpriseAgreementSearchInput = ({
   const [searchState, setSearchState] = useState<
     "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch" | "required"
   >("noSearch");
-  const { emitEnterpriseAgreementSearchInputEvent } =
-    useEnterpriseAgreementSearchTracking();
+  const {
+    emitEnterpriseAgreementSearchInputEvent,
+    emitSelectEnterpriseEvent,
+    emitNoEnterpriseEvent,
+  } = useEnterpriseAgreementSearchTracking();
 
   const [search, setSearch] = useState<string | undefined>(defaultSearch);
   const [loading, setLoading] = useState<boolean>(false);
@@ -251,6 +254,9 @@ export const EnterpriseAgreementSearchInput = ({
                 href: widgetMode
                   ? `/widgets/convention-collective/entreprise/${enterprise.siren}${getQueries()}`
                   : `/outils/convention-collective/entreprise/${enterprise.siren}${getQueries()}`,
+                onClick: () => {
+                  emitSelectEnterpriseEvent(enterprise);
+                },
               }}
               desc={
                 enterprise.activitePrincipale ? (
@@ -286,6 +292,9 @@ export const EnterpriseAgreementSearchInput = ({
           linkProps={{
             href: `/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile`,
             ...(widgetMode ? { target: "_blank" } : {}),
+            onClick: () => {
+              emitNoEnterpriseEvent();
+            },
           }}
           title="Particuliers employeurs et emploi à domicile"
           desc="Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective"
