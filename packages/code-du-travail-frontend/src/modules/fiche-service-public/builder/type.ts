@@ -160,7 +160,7 @@ export type FicheSPDataOuSAdresser = {
 
 export type FicheSPDataServiceEnLigne = {
   type: "element";
-  attributes: { URL: string };
+  attributes: { URL?: string };
   children: FicheSPDataElement[];
   name: "ServiceEnLigne" | "PourEnSavoirPlus";
 };

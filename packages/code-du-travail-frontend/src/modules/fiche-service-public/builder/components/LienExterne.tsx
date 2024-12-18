@@ -29,7 +29,7 @@ export const LienExterneCommente = ({
   );
 };
 export const cleanUrl = (url: string): string => {
-  if (url.includes("code.travail.gouv.fr")) {
+  if (url?.includes("code.travail.gouv.fr")) {
     return url.split("?")[0];
   }
   return url;
