@@ -10,7 +10,9 @@ exports[`<Share /> renders 1`] = `
       class="fr-mb-2w"
       role="heading"
     >
-      Partager la page
+      <span>
+        Partager la page
+      </span>
     </div>
     <ul
       class="fr-btns-group"
