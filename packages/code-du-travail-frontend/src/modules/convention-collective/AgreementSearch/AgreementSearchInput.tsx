@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Autocomplete } from "../../common/Autocomplete/Autocomplete";
 import { Agreement } from "../../../outils/types";
 import { searchAgreement } from "../search";
+import { useAgreementSearchTracking } from "../tracking";
 
 type Props = {
   onSearch?: (query: string, value?: Agreement[]) => void;
@@ -17,6 +18,7 @@ export const AgreementSearchInput = ({ onSearch }: Props) => {
     "noSearch" | "lowSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
   >("noSearch");
   const [error, setError] = useState("");
+  const { emitAgreementSearchInputEvent } = useAgreementSearchTracking();
   const getStateMessage = () => {
     switch (searchState) {
       case "lowSearch":
@@ -73,6 +75,9 @@ export const AgreementSearchInput = ({ onSearch }: Props) => {
           }}
           search={searchAgreement}
           onSearch={(query, agreements) => {
+            if (query) {
+              emitAgreementSearchInputEvent(query);
+            }
             if (onSearch) onSearch(query, agreements);
             if (!query) {
               setSearchState("noSearch");

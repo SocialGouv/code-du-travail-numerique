@@ -1,0 +1,98 @@
+{
+  "type": "element",
+  "name": "Texte",
+  "children": [
+    {
+      "type": "element",
+      "name": "Chapitre",
+      "children": [
+        {
+          "type": "element",
+          "name": "Titre",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Niveau 1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Texte",
+          "children": [
+            {
+              "type": "element",
+              "name": "Chapitre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Niveau 2"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Sous accordéon"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Chapitre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Niveau 2"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Sous accordéon"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
