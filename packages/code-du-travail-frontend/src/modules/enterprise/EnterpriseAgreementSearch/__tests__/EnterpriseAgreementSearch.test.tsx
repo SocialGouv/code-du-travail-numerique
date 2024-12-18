@@ -98,17 +98,24 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
       expect(
         ui.enterpriseAgreementSearch.childminder.link.query()
       ).not.toHaveAttribute("target", "_blank");
+      userAction.click(ui.enterpriseAgreementSearch.childminder.link.get());
+      expect(sendEvent).toHaveBeenCalledTimes(2);
+      expect(sendEvent).toHaveBeenLastCalledWith({
+        action: "click_je_n_ai_pas_d_entreprise",
+        category: "cc_search_type_of_users",
+        name: "Trouver sa convention collective",
+      });
       userAction.click(
         ui.enterpriseAgreementSearch.resultLines.carrefour.link.get()
       );
-      expect(sendEvent).toHaveBeenCalledTimes(2);
+      expect(sendEvent).toHaveBeenCalledTimes(3);
       expect(sendEvent).toHaveBeenLastCalledWith({
         action: "Trouver sa convention collective",
         category: "enterprise_select",
         name: JSON.stringify(enterprise),
       });
       userAction.click(ui.enterpriseAgreementSearch.buttonPrevious.get());
-      expect(sendEvent).toHaveBeenCalledTimes(3);
+      expect(sendEvent).toHaveBeenCalledTimes(4);
       expect(sendEvent).toHaveBeenLastCalledWith({
         action: "back_step_cc_search_p2",
         category: "view_step_cc_search_p2",
@@ -186,9 +193,6 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
         "href",
         "/widgets/convention-collective/entreprise/345130488?q=carrefour"
       );
-      expect(
-        ui.enterpriseAgreementSearch.childminder.title.query()
-      ).toBeInTheDocument();
       expect(
         ui.enterpriseAgreementSearch.childminder.link.query()
       ).toHaveAttribute(

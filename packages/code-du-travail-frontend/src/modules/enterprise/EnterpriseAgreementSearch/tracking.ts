@@ -49,10 +49,19 @@ export const useEnterpriseAgreementSearchTracking = () => {
     });
   };
 
+  const emitNoEnterpriseEvent = () => {
+    sendEvent({
+      category: TrackingAgreementSearchCategory.CC_SEARCH_TYPE_OF_USERS,
+      action: TrackingAgreementSearchAction.CLICK_NO_COMPANY,
+      name: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
+    });
+  };
+
   return {
     emitEnterpriseAgreementSearchInputEvent,
     emitSelectEnterpriseEvent,
     emitSelectEnterpriseAgreementEvent,
     emitPreviousEvent,
+    emitNoEnterpriseEvent,
   };
 };
