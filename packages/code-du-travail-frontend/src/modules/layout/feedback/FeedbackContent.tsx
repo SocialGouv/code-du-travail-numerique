@@ -73,6 +73,9 @@ export const FeedbackContent = (props: Props) => {
       });
     }
   };
+  const charactersCountThresholds = [
+    400, 300, 200, 100, 50, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0,
+  ];
 
   return (
     <>
@@ -136,9 +139,7 @@ export const FeedbackContent = (props: Props) => {
           "fr-mb-3w"
         )}
         aria-live={
-          [400, 300, 200, 100, 50, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0].indexOf(
-            remainingCharacters
-          ) !== -1
+          charactersCountThresholds.indexOf(remainingCharacters) !== -1
             ? "polite"
             : "off"
         }
