@@ -9,7 +9,7 @@ describe("Fiche MT content parser", () => {
     );
 
     expect(getByText("Cliquez ici pour voir la vidéo").title).toEqual(
-      "Cliquez ici pour voir la vidéo Le travail illégal ; la répression | web série droit du travail"
+      "Cliquez ici pour voir la vidéo Le travail illégal ; la répression | web série droit du travail - nouvelle fenêtre"
     );
     expect(getByText("Cliquez ici pour voir la vidéo")).toHaveAttribute(
       "href",
