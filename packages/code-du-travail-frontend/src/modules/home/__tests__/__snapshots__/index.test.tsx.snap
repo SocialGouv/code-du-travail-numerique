@@ -38,6 +38,7 @@ exports[`<Home /> should match snapshot 1`] = `
               </h2>
               <div
                 class="fr-grid-row fr-grid-row--gutters fr-grid-row--bottom"
+                role="search"
               >
                 <div
                   class="fr-col-12 fr-col-md-8"
@@ -66,7 +67,7 @@ exports[`<Home /> should match snapshot 1`] = `
                       autocomplete="off"
                       class="fr-input"
                       data-testid="search-input"
-                      id="home-searchbar"
+                      id="downshift-:r0:-input"
                       role="combobox"
                       value=""
                     />
