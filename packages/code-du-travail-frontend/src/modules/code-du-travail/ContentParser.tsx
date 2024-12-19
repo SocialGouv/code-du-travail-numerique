@@ -1,4 +1,5 @@
 import parse, { domToReact } from "html-react-parser";
+import Link from "../common/Link";
 
 export const ContentParser = ({
   children,
@@ -19,8 +20,7 @@ export const ContentParser = ({
         const textToTrim = text[text.length - 1] === " ";
         return (
           <>
-            <a {...domNode.attribs}>{domToReact(domNode.children)}</a>
-
+            <Link {...domNode.attribs}>{domToReact(domNode.children)}</Link>
             {textToTrim ? " " : ""}
           </>
         );

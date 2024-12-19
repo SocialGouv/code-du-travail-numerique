@@ -1,7 +1,7 @@
 "use client";
 
 import { startReactDsfr } from "@codegouvfr/react-dsfr/next-appdir";
-import Link from "next/link";
+import Link from "../common/Link";
 
 declare module "@codegouvfr/react-dsfr/next-appdir" {
   interface RegisterLink {

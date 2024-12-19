@@ -6,6 +6,7 @@ exports[`<LienExterne /> should render 1`] = `
     href="https://formulaire.defenseurdesdroits.fr/code/afficher.php?ETAPE=accueil_2016"
     rel="noopener noreferrer"
     target="_blank"
+    title="formulaire de contact - nouvelle fenêtre"
   >
     formulaire de contact
   </a>
@@ -22,6 +23,7 @@ exports[`<LienExterneCommente /> should render 1`] = `
       href="http://travail-emploi.gouv.fr/droit-du-travail/contrats-et-carriere/contrats-de-travail/types-de-contrats/article/le-contrat-a-duree-determinee-cdd"
       rel="noopener noreferrer"
       target="_blank"
+      title="Fiche pratique sur le CDD - nouvelle fenêtre"
     >
       Fiche pratique sur le CDD
     </a>

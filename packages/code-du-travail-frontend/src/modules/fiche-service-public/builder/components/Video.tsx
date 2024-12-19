@@ -1,8 +1,8 @@
 import React from "react";
 
 import { getText } from "../utils";
-import Link from "next/link";
 import { FicheSPDataVideo } from "../type";
+import Link from "../../../common/Link";
 
 export const Video = ({ data }: { data: FicheSPDataVideo }) => {
   const url = data.attributes.URL;

@@ -1,11 +1,12 @@
 import React from "react";
 
 import { getInChildrenByName, getText } from "../utils";
-import Link from "next/link";
+
 import {
   FicheSPDataLienExterne,
   FicheSPDataLienExterneCommente,
 } from "../type";
+import Link from "../../../common/Link";
 
 export const LienExterneCommente = ({
   data,

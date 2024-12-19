@@ -1,7 +1,7 @@
 import React from "react";
 import { IconError } from "./IconError";
 import { fr } from "@codegouvfr/react-dsfr";
-import Link from "next/link";
+import Link from "../common/Link";
 
 export const NotFound: React.FC = () => {
   return (
