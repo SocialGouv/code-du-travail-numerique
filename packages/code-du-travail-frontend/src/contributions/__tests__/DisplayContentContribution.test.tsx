@@ -323,6 +323,31 @@ describe("DisplayContentContribution", () => {
       expect(asFragment().firstChild).toMatchSnapshot();
     });
 
+    it(`should replace td by th in thead`, () => {
+      const { asFragment } = render(
+        <DisplayContentContribution
+          content={`
+        <table>
+        <thead>
+            <tr>
+              <td colspan="1" rowspan="1">Titre 1</td>
+              <td colspan="1" rowspan="1">Titre 2</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="1" rowspan="1"><p>Pour les <strong>cadres</strong>, la prolongation ...</p></td>
+                <td colspan="1" rowspan="1"><ul><li><p>L’employeur et le salarié donnent par écrit ou par mail.</p></li></ul></td>
+            </tr>
+        </tbody>
+        </table>`}
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
+
+      expect(asFragment().firstChild).toMatchSnapshot();
+    });
+
     it(`should keep whitespace in specific tag`, () => {
       const { asFragment } = render(
         <DisplayContentContribution
