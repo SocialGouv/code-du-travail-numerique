@@ -3,7 +3,7 @@ import { Button } from "@codegouvfr/react-dsfr/Button";
 import { Checkbox } from "@codegouvfr/react-dsfr/Checkbox";
 import { Input } from "@codegouvfr/react-dsfr/Input";
 import { FeedbackActionChoiceValue } from "./tracking";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const MAX_LENGTH_SUGGESTION = 500;
 
@@ -18,6 +18,9 @@ export type FeedbackDataSent = {
 };
 
 export const FeedbackContent = (props: Props) => {
+  const [firstCheckboxRef, setFirstCheckboxRef] =
+    useState<HTMLInputElement | null>();
+  const [textAreaRef, setTextAreaRef] = useState<HTMLTextAreaElement | null>();
   const [categories, setCategories] = useState<FeedbackActionChoiceValue[]>([]);
   const [suggestion, setSuggestion] = useState<string | undefined>(undefined);
   const [hasCheckBoxError, setHasCheckBoxError] = useState<boolean>(false);
@@ -77,6 +80,14 @@ export const FeedbackContent = (props: Props) => {
     400, 300, 200, 100, 50, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0,
   ];
 
+  useEffect(() => {
+    if (props.type === "negative") {
+      firstCheckboxRef?.focus();
+    } else {
+      textAreaRef?.focus();
+    }
+  });
+
   return (
     <>
       <h2 className={fr.cx("fr-h5")}>Merci pour votre réponse.</h2>
@@ -90,6 +101,7 @@ export const FeedbackContent = (props: Props) => {
                 name: "unclear",
                 value: "unclear" as FeedbackActionChoiceValue,
                 onChange: onChangeCategories,
+                ref: setFirstCheckboxRef,
               },
             },
             {
@@ -128,6 +140,7 @@ export const FeedbackContent = (props: Props) => {
         nativeTextAreaProps={{
           onChange: onInputSuggestion,
           value: suggestion,
+          ref: setTextAreaRef,
         }}
         state={hasSuggestionError ? "error" : "default"}
         stateRelatedMessage={errorMessageSuggestion}
