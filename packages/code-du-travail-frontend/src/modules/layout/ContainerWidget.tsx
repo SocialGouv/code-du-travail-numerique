@@ -2,7 +2,7 @@
 import { ReactNode, useEffect } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { useIframeResizer } from "../../../src/common/hooks";
-import Link from "next/link";
+import Link from "../common/Link";
 import { useIsDark } from "@codegouvfr/react-dsfr/useIsDark";
 import { LogoLink } from "../common/LogoLink";
 

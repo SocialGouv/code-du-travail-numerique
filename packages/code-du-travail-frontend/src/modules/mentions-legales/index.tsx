@@ -1,5 +1,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Container } from "../layout/Container";
+import Link from "../common/Link";
 
 export const MentionsLegales = () => (
   <Container>
@@ -11,9 +12,9 @@ export const MentionsLegales = () => (
     <div className={fr.cx("fr-mb-3w")}>
       <p className={fr.cx("fr-mb-0")}>
         Le site est édité par la{" "}
-        <a target="_blank" href="https://www.fabrique.social.gouv.fr/">
+        <Link target="_blank" href="https://www.fabrique.social.gouv.fr/">
           fabrique des Ministères sociaux
-        </a>{" "}
+        </Link>{" "}
         située&nbsp;:
       </p>
       <address>
@@ -60,7 +61,7 @@ export const MentionsLegales = () => (
       Si vous rencontrez un défaut d’accessibilité vous empêchant d’accéder à un
       contenu ou une fonctionnalité du site,{" "}
       <a
-        title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
+        title="Merci de nous en faire part en envoyant un mail à codedutravailnumerique@travail.gouv.fr"
         href="mailto:codedutravailnumerique@travail.gouv.fr"
       >
         merci de nous en faire part.
