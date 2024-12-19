@@ -60,7 +60,7 @@ export const MentionsLegales = () => (
       Si vous rencontrez un défaut d’accessibilité vous empêchant d’accéder à un
       contenu ou une fonctionnalité du site,{" "}
       <a
-        title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
+        title="Merci de nous en faire part en envoyant un mail à codedutravailnumerique@travail.gouv.fr"
         href="mailto:codedutravailnumerique@travail.gouv.fr"
       >
         merci de nous en faire part.
