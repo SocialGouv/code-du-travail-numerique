@@ -78,12 +78,12 @@ export const PrivacyPolicy = () => {
           <li>Traitement réalisé&nbsp;: Hébergement</li>
           <li>
             Garantie&nbsp;:{" "}
-            <a
+            <Link
               href="https://us.ovhcloud.com/legal/data-processing-agreement"
               target="_blank"
             >
               https://us.ovhcloud.com/legal/data-processing-agreement
-            </a>
+            </Link>
           </li>
         </ul>
         <h2 className={fr.cx("fr-h3")}>Cookies</h2>
