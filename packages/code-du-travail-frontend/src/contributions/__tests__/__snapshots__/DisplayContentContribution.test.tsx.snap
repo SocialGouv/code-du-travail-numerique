@@ -3,10 +3,10 @@
 exports[`DisplayContentContribution Accordions should not fail if no summary tag 1`] = `
 <div>
   <div
-    class="sc-1678e795-0 fDgxNU"
+    class="sc-10167302-0 dCJsPi"
   >
     <div
-      class="sc-1678e795-1 bYYZgz"
+      class="sc-10167302-1 hzFSzJ"
       data-accordion-component="Accordion"
       data-testid="contrib-accordion"
     >
@@ -80,7 +80,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
       
                 </p>
                 <div
-                  class="sc-1678e795-1 bYYZgz"
+                  class="sc-10167302-1 hzFSzJ"
                   data-accordion-component="Accordion"
                   data-testid="contrib-accordion"
                 >
@@ -147,7 +147,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                         >
                           <div>
                             <div
-                              class="sc-1678e795-1 bYYZgz"
+                              class="sc-10167302-1 hzFSzJ"
                               data-accordion-component="Accordion"
                               data-testid="contrib-accordion"
                             >
@@ -397,10 +397,10 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
 
 exports[`DisplayContentContribution Accordions should replace details element by one accordion 1`] = `
 <div
-  class="sc-1678e795-0 fDgxNU"
+  class="sc-10167302-0 dCJsPi"
 >
   <div
-    class="sc-1678e795-1 bYYZgz"
+    class="sc-10167302-1 hzFSzJ"
     data-accordion-component="Accordion"
     data-testid="contrib-accordion"
   >
@@ -481,10 +481,10 @@ exports[`DisplayContentContribution Accordions should replace details element by
 
 exports[`DisplayContentContribution Accordions should replace details element within details element 1`] = `
 <div
-  class="sc-1678e795-0 fDgxNU"
+  class="sc-10167302-0 dCJsPi"
 >
   <div
-    class="sc-1678e795-1 bYYZgz"
+    class="sc-10167302-1 hzFSzJ"
     data-accordion-component="Accordion"
     data-testid="contrib-accordion"
   >
@@ -551,7 +551,7 @@ exports[`DisplayContentContribution Accordions should replace details element wi
           >
             <div>
               <div
-                class="sc-1678e795-1 bYYZgz"
+                class="sc-10167302-1 hzFSzJ"
                 data-accordion-component="Accordion"
                 data-testid="contrib-accordion"
               >
@@ -640,10 +640,10 @@ exports[`DisplayContentContribution Accordions should replace multiple details e
 <body>
   <div>
     <div
-      class="sc-1678e795-0 fDgxNU"
+      class="sc-10167302-0 dCJsPi"
     >
       <div
-        class="sc-1678e795-1 bYYZgz"
+        class="sc-10167302-1 hzFSzJ"
         data-accordion-component="Accordion"
         data-testid="contrib-accordion"
       >
@@ -797,7 +797,7 @@ exports[`DisplayContentContribution Accordions should replace multiple details e
 
 exports[`DisplayContentContribution Alerts should have space in table item for a strong and an other content 1`] = `
 <div
-  class="sc-1678e795-0 fDgxNU"
+  class="sc-10167302-0 dCJsPi"
 >
   <table
     class="sc-4e3ba411-0 kGLBMt"
@@ -877,7 +877,7 @@ exports[`DisplayContentContribution Alerts should have space in table item for a
 
 exports[`DisplayContentContribution Alerts should replace div with alert class in li component to Alert component 1`] = `
 <div
-  class="sc-1678e795-0 fDgxNU"
+  class="sc-10167302-0 dCJsPi"
 >
   <div>
     <p>
@@ -943,7 +943,7 @@ exports[`DisplayContentContribution Alerts should replace div with alert class i
 
 exports[`DisplayContentContribution Alerts should replace div with alert class to Alert component 1`] = `
 <div
-  class="sc-1678e795-0 fDgxNU"
+  class="sc-10167302-0 dCJsPi"
 >
   <div
     class="sc-6c78813f-0 fnbVWG"
@@ -961,7 +961,7 @@ exports[`DisplayContentContribution Alerts should replace div with alert class t
 exports[`DisplayContentContribution Headings should replace span with class "title" and "sub-titles" with heading 1`] = `
 <div>
   <div
-    class="sc-1678e795-0 fDgxNU"
+    class="sc-10167302-0 dCJsPi"
   >
     <h2
       class="sc-b879fc2d-0 hyiHle"
@@ -979,7 +979,7 @@ exports[`DisplayContentContribution Headings should replace span with class "tit
 
 exports[`DisplayContentContribution Tables should add thead to table if not present and move table into a Table element 1`] = `
 <div
-  class="sc-1678e795-0 fDgxNU"
+  class="sc-10167302-0 dCJsPi"
 >
   <table
     class="sc-4e3ba411-0 kKVapO"
@@ -1034,7 +1034,7 @@ exports[`DisplayContentContribution Tables should add thead to table if not pres
 
 exports[`DisplayContentContribution Tables should keep whitespace in specific tag 1`] = `
 <div
-  class="sc-1678e795-0 fDgxNU"
+  class="sc-10167302-0 dCJsPi"
 >
   <p>
     Ceci est un
@@ -1064,7 +1064,7 @@ exports[`DisplayContentContribution Tables should keep whitespace in specific ta
 
 exports[`DisplayContentContribution Tables should not change if thead is already present 1`] = `
 <div
-  class="sc-1678e795-0 fDgxNU"
+  class="sc-10167302-0 dCJsPi"
 >
   <table>
     <tbody>
@@ -1102,14 +1102,14 @@ exports[`DisplayContentContribution Tables should not change if thead is already
 exports[`DisplayContentContribution Tables should render correctly a table with multiple head lines 1`] = `
 <div>
   <div
-    class="sc-1678e795-0 fDgxNU"
+    class="sc-10167302-0 dCJsPi"
   >
     <table
       class="sc-4e3ba411-0 kKVapO"
     >
       <thead>
         <tr>
-          <td
+          <th
             colspan="1"
             rowspan="2"
           >
@@ -1126,8 +1126,8 @@ exports[`DisplayContentContribution Tables should render correctly a table with 
             </p>
             
       
-          </td>
-          <td
+          </th>
+          <th
             colspan="2"
             rowspan="1"
           >
@@ -1144,10 +1144,10 @@ exports[`DisplayContentContribution Tables should render correctly a table with 
             </p>
             
       
-          </td>
+          </th>
         </tr>
         <tr>
-          <td
+          <th
             colspan="1"
             rowspan="1"
           >
@@ -1164,8 +1164,8 @@ exports[`DisplayContentContribution Tables should render correctly a table with 
             </p>
             
       
-          </td>
-          <td
+          </th>
+          <th
             colspan="1"
             rowspan="1"
           >
@@ -1182,7 +1182,7 @@ exports[`DisplayContentContribution Tables should render correctly a table with 
             </p>
             
       
-          </td>
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -1230,9 +1230,46 @@ exports[`DisplayContentContribution Tables should render correctly a table with 
 </div>
 `;
 
+exports[`DisplayContentContribution Tables should replace td by th in thead 1`] = `
+<div
+  class="sc-10167302-0 dCJsPi"
+>
+  <table>
+    <tbody>
+      <tr>
+        <td
+          colspan="1"
+          rowspan="1"
+        >
+          <p>
+            Pour les 
+            <strong>
+              cadres
+            </strong>
+            , la prolongation ...
+          </p>
+        </td>
+        <td
+          colspan="1"
+          rowspan="1"
+        >
+          <ul>
+            <li>
+              <p>
+                L’employeur et le salarié donnent par écrit ou par mail.
+              </p>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
 exports[`DisplayContentContribution should keep whitespace in specific tag 1`] = `
 <div
-  class="sc-1678e795-0 fDgxNU"
+  class="sc-10167302-0 dCJsPi"
 >
   <p>
     Ceci est un
@@ -1262,7 +1299,7 @@ exports[`DisplayContentContribution should keep whitespace in specific tag 1`] =
 
 exports[`DisplayContentContribution should not remove space between strong and em tag in p tag 1`] = `
 <div
-  class="sc-1678e795-0 fDgxNU"
+  class="sc-10167302-0 dCJsPi"
 >
   <p>
     <strong>
@@ -1278,7 +1315,7 @@ exports[`DisplayContentContribution should not remove space between strong and e
 
 exports[`DisplayContentContribution should return html 1`] = `
 <div
-  class="sc-1678e795-0 fDgxNU"
+  class="sc-10167302-0 dCJsPi"
 >
   <p>
     hello
