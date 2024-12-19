@@ -62,6 +62,7 @@ export const HomeSearch = (props: Props) => {
         "fr-grid-row--gutters",
         "fr-grid-row--bottom"
       )}
+      role="search"
     >
       <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
         <div className={`${fr.cx("fr-input-group")}`}>
@@ -81,7 +82,6 @@ export const HomeSearch = (props: Props) => {
               onKeyDown: handleKeyDown,
               "aria-label": "Champ de recherche par mots-clés",
               "data-testid": "search-input",
-              id: "home-searchbar",
             })}
           />
           <ul
