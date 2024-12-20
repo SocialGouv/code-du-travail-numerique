@@ -86,7 +86,7 @@ export const FeedbackContent = (props: Props) => {
     } else {
       textAreaRef?.focus();
     }
-  });
+  }, [props.type, firstCheckboxRef, textAreaRef]);
 
   return (
     <>
