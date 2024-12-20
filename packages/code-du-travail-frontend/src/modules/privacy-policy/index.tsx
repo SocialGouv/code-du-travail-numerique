@@ -63,7 +63,7 @@ export const PrivacyPolicy = () => {
           Vous êtes également en droit de saisir la Commission Nationale de
           l’Informatique et des Libertés pour toute réclamation à{" "}
           <Link
-            title="Adresser une réclamation (plainte) à la CNIL"
+            title="Utiliser l’adresse suivante pour adresser une réclamation (plainte) à la CNIL"
             target="_blank"
             href="https://www.cnil.fr/fr/cnil-direct/question/844"
           >
