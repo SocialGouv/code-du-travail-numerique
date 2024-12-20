@@ -306,9 +306,15 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
       <div
         class="fr-follow__social"
       >
-        <p>
-          Partager la page
-        </p>
+        <div
+          aria-level="3"
+          class="fr-mb-2w"
+          role="heading"
+        >
+          <span>
+            Partager la page
+          </span>
+        </div>
         <ul
           class="fr-btns-group"
         >

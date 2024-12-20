@@ -96,12 +96,24 @@ const mapTbody = (tbody: Element) => {
     }
   }
 
+  const forceTh = (child: Element) => {
+    child.children = child.children.map((child) => {
+      if (child.type === "tag" && child.name === "td") {
+        child.name = "th";
+      }
+      return child;
+    });
+    return child;
+  };
+
   return (
     <UITable>
       {theadChildren.length > 0 && (
         <thead>
           {theadChildren.map((child, index) => (
-            <tr key={`tr-${index}`}>{renderChildrenWithNoTrim(child)}</tr>
+            <tr key={`tr-${index}`}>
+              {renderChildrenWithNoTrim(forceTh(child))}
+            </tr>
           ))}
         </thead>
       )}
@@ -118,7 +130,10 @@ function getItem(domNode: Element, titleLevel: number) {
 }
 
 function renderChildrenWithNoTrim(domNode) {
-  return domToReact(domNode.children as DOMNode[]);
+  if (domNode.children) {
+    return domToReact(domNode.children as DOMNode[]);
+  }
+  return domToReact(domNode);
 }
 
 const getHeadingElement = (titleLevel: number, domNode) => {

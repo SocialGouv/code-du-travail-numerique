@@ -17,28 +17,32 @@ exports[`<SiteMap /> should match snapshot 1`] = `
       <div
         class="fr-mb-4w"
       >
-        <a
-          href="/"
+        <div
+          aria-level="2"
+          class="fr-text--lead fr-text--bold"
+          role="heading"
         >
-          <span
-            class="fr-text--lead fr-text--bold"
+          <a
+            href="/"
           >
             Page d'accueil
-          </span>
-        </a>
+          </a>
+        </div>
       </div>
       <div
         class="fr-mb-4w"
       >
-        <a
-          href="/outils"
+        <div
+          aria-level="3"
+          class="fr-text--lead fr-text--bold"
+          role="heading"
         >
-          <span
-            class="fr-text--lead fr-text--bold"
+          <a
+            href="/outils"
           >
             Boîte à outils
-          </span>
-        </a>
+          </a>
+        </div>
         <ul
           class="fr-mt-3w"
         >
@@ -70,15 +74,17 @@ exports[`<SiteMap /> should match snapshot 1`] = `
       <div
         class="fr-mb-4w"
       >
-        <a
-          href="/modeles-de-courriers"
+        <div
+          aria-level="3"
+          class="fr-text--lead fr-text--bold"
+          role="heading"
         >
-          <span
-            class="fr-text--lead fr-text--bold"
+          <a
+            href="/modeles-de-courriers"
           >
             Modèles de documents
-          </span>
-        </a>
+          </a>
+        </div>
         <ul
           class="fr-mt-3w"
         >
@@ -110,11 +116,13 @@ exports[`<SiteMap /> should match snapshot 1`] = `
       <div
         class="fr-mb-4w"
       >
-        <span
+        <div
+          aria-level="3"
           class="fr-text--lead fr-text--bold fr-mb-3w"
+          role="heading"
         >
           Contenus éditoriaux
-        </span>
+        </div>
         <ul
           class="fr-mt-3w"
         >
@@ -146,15 +154,17 @@ exports[`<SiteMap /> should match snapshot 1`] = `
       <div
         class="fr-mb-4w"
       >
-        <a
-          href="/contribution"
+        <div
+          aria-level="3"
+          class="fr-text--lead fr-text--bold"
+          role="heading"
         >
-          <span
-            class="fr-text--lead fr-text--bold"
+          <a
+            href="/contribution"
           >
             Vos fiches pratiques
-          </span>
-        </a>
+          </a>
+        </div>
         <ul
           class="fr-mt-3w"
         >
@@ -186,15 +196,17 @@ exports[`<SiteMap /> should match snapshot 1`] = `
       <div
         class="fr-mb-4w"
       >
-        <a
-          href="/convention-collective"
+        <div
+          aria-level="3"
+          class="fr-text--lead fr-text--bold"
+          role="heading"
         >
-          <span
-            class="fr-text--lead fr-text--bold"
+          <a
+            href="/convention-collective"
           >
             Votre convention collective
-          </span>
-        </a>
+          </a>
+        </div>
         <ul
           class="fr-mt-3w"
         >
@@ -226,15 +238,17 @@ exports[`<SiteMap /> should match snapshot 1`] = `
       <div
         class="fr-mb-4w"
       >
-        <a
-          href="/themes"
+        <div
+          aria-level="3"
+          class="fr-text--lead fr-text--bold"
+          role="heading"
         >
-          <span
-            class="fr-text--lead fr-text--bold"
+          <a
+            href="/themes"
           >
             Thèmes
-          </span>
-        </a>
+          </a>
+        </div>
         <ul
           class="fr-mt-3w"
         >

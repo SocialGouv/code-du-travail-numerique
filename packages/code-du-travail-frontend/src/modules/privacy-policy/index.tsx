@@ -1,6 +1,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { TrackApproval } from "./TrackApproval";
-import Link from "next/link";
+import Link from "../common/Link";
 
 export const PrivacyPolicy = () => {
   return (
@@ -41,12 +41,12 @@ export const PrivacyPolicy = () => {
           d’attester que vous êtes bien l’auteur du message - ces éléments sont
           indispensables pour nous permettre de retrouver votre recherche - par
           voie électronique à l’adresse suivante&nbsp;:{" "}
-          <a
+          <Link
             title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
             href="mailto:codedutravailnumerique@travail.gouv.fr"
           >
             codedutravailnumerique@travail.gouv.fr
-          </a>
+          </Link>
           .
         </p>
         <p>ou par voie postale&nbsp;:</p>
@@ -62,13 +62,13 @@ export const PrivacyPolicy = () => {
         <p>
           Vous êtes également en droit de saisir la Commission Nationale de
           l’Informatique et des Libertés pour toute réclamation à{" "}
-          <a
+          <Link
             title="Adresser une réclamation (plainte) à la CNIL"
             target="_blank"
             href="https://www.cnil.fr/fr/cnil-direct/question/844"
           >
             l’adresse suivante
-          </a>
+          </Link>
           .
         </p>
         <h2 className={fr.cx("fr-h3")}>Hébergement</h2>
@@ -78,12 +78,12 @@ export const PrivacyPolicy = () => {
           <li>Traitement réalisé&nbsp;: Hébergement</li>
           <li>
             Garantie&nbsp;:{" "}
-            <a
+            <Link
               href="https://us.ovhcloud.com/legal/data-processing-agreement"
               target="_blank"
             >
               https://us.ovhcloud.com/legal/data-processing-agreement
-            </a>
+            </Link>
           </li>
         </ul>
         <h2 className={fr.cx("fr-h3")}>Cookies</h2>
@@ -130,20 +130,20 @@ export const PrivacyPolicy = () => {
         </p>
         <ul className={fr.cx("fr-mb-6v")}>
           <li>
-            <a
+            <Link
               target="_blank"
               href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi"
             >
               Cookies et traceurs : que dit la loi ?
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               target="_blank"
               href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser"
             >
               Cookies : les outils pour les maîtriser
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

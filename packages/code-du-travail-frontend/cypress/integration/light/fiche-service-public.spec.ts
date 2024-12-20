@@ -24,6 +24,7 @@ describe("Fiche Service public", () => {
 
   it("je vois une fiche service public avec un accordéon ouvert", () => {
     cy.visit("/fiche-service-public/salaire-primes-et-avantages#salaire");
+    cy.findAllByRole("heading", { level: 1 }).click();
     cy.get("h2").get('[aria-expanded="true"]').should("contain", "Salaire");
   });
 });

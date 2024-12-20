@@ -4,8 +4,9 @@ import { getInChildrenByName, getTitleInChildren } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
 import Title from "./Title";
 import { fr } from "@codegouvfr/react-dsfr";
-import Link from "next/link";
+
 import { FicheSPDataOuSAdresser, FicheSPDataRessourceWeb } from "../type";
+import Link from "../../../common/Link";
 
 export const OuSAdresser = ({
   data,

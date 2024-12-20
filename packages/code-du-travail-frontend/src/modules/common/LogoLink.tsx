@@ -1,7 +1,7 @@
 "use client";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
-import Link from "next/link";
+import Link from "../common/Link";
 
 export const LogoLink = () => {
   return (
