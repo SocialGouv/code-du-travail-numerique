@@ -22,7 +22,7 @@ export const SimulatorLayout = (props: Props<string>) => {
   const [navigationAction, setNavigationAction] = useState<
     "next" | "prev" | "none"
   >("none");
-  const [currentStepIndex, setStepIndex] = useState(0);
+  const [stepIndex, setStepIndex] = useState(0);
   const { steps, title, onStepChange, hiddenStep, simulator } = props;
 
   const visibleSteps = useMemo(
@@ -30,16 +30,17 @@ export const SimulatorLayout = (props: Props<string>) => {
       steps.filter((step) => !hiddenStep || !hiddenStep.includes(step.name)),
     [steps, hiddenStep]
   );
-  const nbTotalSteps = steps.length;
-  const Step = visibleSteps[currentStepIndex].Component;
-  const stepName = visibleSteps[currentStepIndex].name;
-  const nextStepTitle = visibleSteps[currentStepIndex + 1]?.label;
+  const currentNumStep = stepIndex + 1;
+  const nbTotalSteps = visibleSteps.length;
+  const Step = visibleSteps[stepIndex].Component;
+  const stepName = visibleSteps[stepIndex].label;
+  const nextStepTitle = visibleSteps[stepIndex + 1]?.label;
 
   useEffect(() => {
-    const currentStepName = visibleSteps[currentStepIndex].name;
+    const currentStepName = visibleSteps[stepIndex].name;
     if (doNotTriggerMatomo(currentStepName)) return;
     emitNextPreviousEvent(title, navigationAction === "prev", currentStepName);
-  }, [currentStepIndex]);
+  }, [stepIndex]);
 
   const doNotTriggerMatomo = (stepName: string) =>
     navigationAction === "none" ||
@@ -47,11 +48,11 @@ export const SimulatorLayout = (props: Props<string>) => {
       simulator === PublicodesSimulator.INDEMNITE_LICENCIEMENT);
 
   const onNextStep = () => {
-    const nextStepIndex = currentStepIndex + 1;
+    const nextStepIndex = stepIndex + 1;
     if (nextStepIndex >= visibleSteps.length) {
       throw Error("Can't show the next step with index more than steps");
     } else {
-      const currentStepName = visibleSteps[currentStepIndex].name;
+      const currentStepName = visibleSteps[stepIndex].name;
 
       const stepChange = onStepChange.find(
         (validator) => validator.stepName === currentStepName
@@ -68,7 +69,7 @@ export const SimulatorLayout = (props: Props<string>) => {
           setStepIndex(visibleSteps.length - 1);
           break;
         case ValidationResponse.Valid:
-          setStepIndex(currentStepIndex + 1);
+          setStepIndex(stepIndex + 1);
           break;
       }
       setNavigationAction("next");
@@ -76,7 +77,7 @@ export const SimulatorLayout = (props: Props<string>) => {
   };
 
   const onPrevStep = () => {
-    const previousStepIndex = currentStepIndex - 1;
+    const previousStepIndex = stepIndex - 1;
     const prevStepName = visibleSteps[previousStepIndex].name;
     const stepChange = onStepChange.find(
       (validator) => validator.stepName === prevStepName
@@ -86,7 +87,7 @@ export const SimulatorLayout = (props: Props<string>) => {
     }
 
     if (previousStepIndex >= 0) {
-      setStepIndex(currentStepIndex - 1);
+      setStepIndex(stepIndex - 1);
       setNavigationAction("prev");
     } else {
       throw Error("Can't show the previous step with index less than 0");
@@ -109,55 +110,64 @@ export const SimulatorLayout = (props: Props<string>) => {
   };
 
   const validator = onStepChange.find(
-    (validator) => validator.stepName === visibleSteps[currentStepIndex].name
+    (validator) => validator.stepName === visibleSteps[stepIndex].name
   );
 
   return (
-    <div className={fr.cx("fr-container")}>
+    <div>
       <Stepper
-        currentStep={currentStepIndex + 1}
+        currentStep={currentNumStep}
         nextTitle={nextStepTitle}
-        stepCount={nbTotalSteps + 1}
+        stepCount={nbTotalSteps}
         title={stepName}
+        classes={{
+          root: fr.cx("fr-mb-3w"),
+        }}
       />
 
-      <div className={fr.cx("fr-card", "fr-p-3w")}>
+      <div>
         <Step />
       </div>
 
-      <div
-        className={fr.cx(
-          "fr-btns-group",
-          "fr-btns-group--inline-reverse",
-          "fr-btns-group--right",
-          "fr-mt-2w"
-        )}
-      >
-        {currentStepIndex > 1 && (
-          <Button onClick={onPrevStep} priority="secondary">
+      <div className={fr.cx("fr-mt-3w")}>
+        {currentNumStep > 1 && (
+          <Button
+            onClick={onPrevStep}
+            priority="secondary"
+            iconId="ri-arrow-drop-left-fill"
+            iconPosition="left"
+            className="fr-mr-3w"
+          >
             Précédent
           </Button>
         )}
-        {currentStepIndex < nbTotalSteps && (
+        {currentNumStep < nbTotalSteps && (
           <Button
             onClick={onNextStep}
             priority="primary"
+            iconId="ri-arrow-drop-right-fill"
+            iconPosition="right"
             disabled={validator?.isStepValid === false}
           >
             Suivant
           </Button>
         )}
-        {currentStepIndex === nbTotalSteps && (
-          <Button onClick={onPrint} priority="primary">
+        {currentNumStep === nbTotalSteps && (
+          <Button
+            onClick={onPrint}
+            priority="primary"
+            iconId="ri-printer-fill"
+            iconPosition="right"
+          >
             Imprimer le résultat
           </Button>
         )}
       </div>
 
-      {visibleSteps[currentStepIndex].options?.annotation && (
-        <div className="fr-text--sm fr-mt-3w">
-          <p>{visibleSteps[currentStepIndex].options?.annotation}</p>
-        </div>
+      {visibleSteps[stepIndex].options?.annotation && (
+        <p className={fr.cx("fr-text--sm", "fr-mt-3w")}>
+          {visibleSteps[stepIndex].options?.annotation}
+        </p>
       )}
     </div>
   );

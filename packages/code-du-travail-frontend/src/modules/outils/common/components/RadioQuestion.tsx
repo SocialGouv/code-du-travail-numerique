@@ -1,6 +1,6 @@
 import React from "react";
-import { Tooltip } from "./types";
 import Html from "src/modules/common/Html";
+import { RadioButtons } from "@codegouvfr/react-dsfr/RadioButtons";
 
 type Question = {
   label: string;
@@ -16,21 +16,18 @@ type Props = {
   questions: Question[];
   showRequired?: boolean;
   name: string;
-  tooltip?: Tooltip;
   subLabel?: string;
   note?: string;
   autoFocus?: boolean;
 };
 
-export default function RadioQuestion({
+export function RadioQuestion({
   selectedOption,
   onChangeSelectedOption,
   error,
   label,
   questions,
-  showRequired,
   name,
-  tooltip,
   subLabel,
   note,
   autoFocus = false,
@@ -41,26 +38,24 @@ export default function RadioQuestion({
 
   return (
     <div>
-      {/* <Question required={showRequired} tooltip={tooltip}> */}
-      <Html as="span">{label}</Html>
-      {/* </Question> */}
-      {/* {subLabel && <SubLabel>{subLabel}</SubLabel>} */}
-      {/* <RadioContainer>
-          {questions.map((question, index) => (
-            <InputRadio
-              key={index}
-              name={name}
-              label={question.label}
-              value={question.value}
-              id={question.id}
-              data-testid={`${name} - ${question.label}`}
-              checked={selectedOption === question.value}
-              onChange={() => onChange(question.value)}
-              autoFocus={autoFocus ? index === 0 : false}
-            />
-          ))}
-          {error && <Error>{error}</Error>}
-        </RadioContainer> */}
+      <RadioButtons
+        legend={<Html as="p">{label}</Html>}
+        hintText={subLabel}
+        options={questions.map((question, index) => ({
+          name,
+          label: question.label,
+          value: question.value,
+          id: question.id,
+          "data-testid": `${name} - ${question.label}`,
+          nativeInputProps: {
+            checked: selectedOption === question.value,
+            onChange: () => onChange(question.value),
+            autoFocus: autoFocus && index === 0,
+          },
+        }))}
+        state={error ? "error" : "default"}
+        stateRelatedMessage={error}
+      />
       {note && <i>{note}</i>}
     </div>
   );

@@ -1,20 +1,17 @@
 import React, { useContext } from "react";
 import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
-import { RadioQuestion, TextQuestion } from "../../../Components";
-import { SalaireTempsPlein, TempsPartiel } from "./components";
+import { HighlightSalary, SalaireTempsPlein, TempsPartiel } from "./components";
 import { getSupportedAgreement } from "@socialgouv/modeles-social";
 import { IndemniteDepartStepName } from "../..";
 import { AgreementsInjector } from "../../agreements";
-import {
-  getSalairesTempsPleinSubtitle,
-  getTooltipSalairesMensuel,
-} from "../../agreements/ui-customizations";
+import { getSalairesTempsPleinSubtitle } from "../../agreements/ui-customizations";
 import {
   generateSalaireTempsPleinQuestion,
   generateSameSalaryQuestion,
   generateSmallText,
 } from "../../utils/question";
-import { IndemniteDepartType } from "../../../types";
+import { IndemniteDepartType } from "../../types";
+import { RadioQuestion, TextQuestion } from "../../../components";
 
 type Props = {
   type: IndemniteDepartType;
@@ -125,15 +122,13 @@ const StepSalaires = ({ type }: Props) => {
           {hasSameSalary === "oui" && (
             <TextQuestion
               label="Quel a été le montant du salaire mensuel brut ?"
-              smallText={generateSmallText(agreement)}
+              subLabel={generateSmallText(agreement)}
               title="Salaire mensuel brut en € (prendre en compte les primes et avantages en nature)"
               inputType="number"
               value={salary}
               onChange={onChangeSalary}
               error={errorSalary}
               id="salary"
-              showRequired
-              text="€"
               dataTestId={"same-salary-value"}
               autoFocus={hasSameSalary === "oui"}
             />
@@ -146,7 +141,11 @@ const StepSalaires = ({ type }: Props) => {
                 salaryPeriods
               )}
               subTitle={getSalairesTempsPleinSubtitle(agreement?.num)}
-              tooltip={getTooltipSalairesMensuel(agreement?.num)}
+              HighLightComponent={
+                agreement?.num === 3239 ? undefined : (
+                  <HighlightSalary agreementNumber={agreement?.num} />
+                )
+              }
               onSalariesChange={onSalariesChange}
               salaryPeriods={salaryPeriods}
               error={errorSalaryPeriods}

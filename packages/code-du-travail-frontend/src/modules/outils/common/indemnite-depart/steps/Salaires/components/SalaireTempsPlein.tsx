@@ -4,7 +4,7 @@ import { Alert } from "@codegouvfr/react-dsfr/Alert";
 import { SalaryPeriods } from "@socialgouv/modeles-social";
 import React from "react";
 import Html from "src/modules/common/Html";
-import { Tooltip } from "src/modules/outils/common/components/types";
+import HighlightSalary from "./HighlightSalary";
 
 type Props = {
   title: string;
@@ -13,10 +13,10 @@ type Props = {
   onSalariesChange: (salaries: SalaryPeriods[]) => void;
   error?: string;
   note?: string;
-  tooltip?: Tooltip;
   dataTestidSalaries?: string;
   noPrime?: boolean;
   autoFocus?: boolean;
+  HighLightComponent?: React.ReactNode;
 };
 
 export const SalaireTempsPlein = ({
@@ -26,9 +26,9 @@ export const SalaireTempsPlein = ({
   title,
   note,
   subTitle,
-  tooltip,
   dataTestidSalaries,
   noPrime,
+  HighLightComponent,
   autoFocus = false,
 }: Props): JSX.Element => {
   const [isFirstEdit, setIsFirstEdit] = React.useState(true);
@@ -104,12 +104,13 @@ export const SalaireTempsPlein = ({
         value: sPeriod.value ?? "",
         onChange: (e) => onChangeSalaries(index, e.target.value),
         onBlur: () => setIsFirstEdit(false),
-        "data-testid": dataTestidSalaries ?? "salary-input",
+
         autoFocus: autoFocus ? index === 0 : false,
       }}
+      data-testid={dataTestidSalaries ?? "salary-input"}
       state={errorsSalaries[`${index}`] ? "error" : "default"}
       stateRelatedMessage={errorsSalaries[`${index}`]}
-      hint="€"
+      hintText="€"
     />,
     !noPrime && index < 3 && (
       <Input
@@ -121,19 +122,20 @@ export const SalaireTempsPlein = ({
           name: `prime.${index}`,
           value: sPeriod.prime ?? "",
           onChange: (e) => onChangeLocalPrimes(index, e.target.value),
-          "data-testid": dataTestidSalaries
-            ? "prime-" + dataTestidSalaries
-            : "prime-input",
         }}
         state={errorsPrimes[`${index}`] ? "error" : "default"}
         stateRelatedMessage={errorsPrimes[`${index}`]}
-        hint="€"
+        data-testid={
+          dataTestidSalaries ? "prime-" + dataTestidSalaries : "prime-input"
+        }
+        hintText="€"
       />
     ),
   ]);
 
   return (
-    <div className="fr-container">
+    <div>
+      {HighLightComponent}
       <Table
         caption={
           <>
@@ -141,11 +143,22 @@ export const SalaireTempsPlein = ({
             {subTitle && <p className="fr-text--sm">{subTitle}</p>}
           </>
         }
-        headers={tableHeaders}
+        headers={tableHeaders
+          .filter((header) => header !== false)
+          .map((header, index) => (
+            <th key={index} scope={header.attribute}>
+              {header.label}
+            </th>
+          ))}
         data={tableData}
       />
       {error && (
-        <Alert severity="error" description={error} className="fr-mt-2w" />
+        <Alert
+          severity="error"
+          title="Erreur"
+          description={error}
+          className="fr-mt-2w"
+        />
       )}
       {note && <p className="fr-text--sm fr-mt-2w">{note}</p>}
     </div>

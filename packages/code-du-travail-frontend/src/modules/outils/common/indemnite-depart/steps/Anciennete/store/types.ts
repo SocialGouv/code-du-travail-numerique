@@ -1,7 +1,7 @@
 import { StepData } from "../../../store";
 import { OuiNon } from "../../../common";
 import { Absence, Motif } from "@socialgouv/modeles-social";
-import { ValidationResponse } from "../../../../components/Simulator/SimulatorLayout";
+import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 
 export type AncienneteStoreInput = {
   dateEntree?: string;

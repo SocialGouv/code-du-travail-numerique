@@ -1,6 +1,6 @@
 import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
 import { useContext } from "react";
-import { PubliQuestion } from "../../../components/Informations";
+import { PubliQuestion } from "./components/PubliQuestion";
 
 const InformationsStep = (): JSX.Element => {
   const store = useContext(IndemniteDepartContext);

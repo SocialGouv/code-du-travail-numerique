@@ -7,8 +7,7 @@ import {
   generateResultSameSalary,
 } from "../../../utils/question";
 import { formatToEuro } from "src/common/formatToEuro";
-import { SectionTitle } from "src/outils/common/stepStyles";
-import { IndemniteDepartType } from "src/outils/types";
+import { IndemniteDepartType } from "../../../types";
 
 type SituationItem = {
   text: string;
@@ -40,7 +39,7 @@ type Props = {
 export default function FilledElements(props: Props) {
   return (
     <>
-      <SectionTitle>Éléments saisis</SectionTitle>
+      <h2>Éléments saisis</h2>
       <ul>
         <li>
           <strong>Contrat de travail</strong>

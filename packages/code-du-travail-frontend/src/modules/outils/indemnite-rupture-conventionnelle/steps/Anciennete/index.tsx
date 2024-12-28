@@ -1,12 +1,11 @@
 import React, { useContext, useEffect } from "react";
-import { informationToSituation } from "src/modules/outils/common/components/Informations/utils";
-import RadioQuestion from "src/modules/outils/common/components/RadioQuestion";
-import TextQuestion from "src/modules/outils/common/components/TextQuestion";
-import { getMessageMotifExample } from "src/modules/outils/common/indemnite-depart/agreements";
 import {
-  AbsencePeriods,
-  SectionTitleWithTooltip,
-} from "src/modules/outils/common/indemnite-depart/steps/Anciennete";
+  RadioQuestion,
+  TextQuestion,
+} from "src/modules/outils/common/components";
+import { informationToSituation } from "src/modules/outils/common/indemnite-depart/steps/Informations/utils";
+import { getMessageMotifExample } from "src/modules/outils/common/indemnite-depart/agreements";
+import { AbsencePeriods } from "src/modules/outils/common/indemnite-depart/steps/Anciennete";
 import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
@@ -65,22 +64,18 @@ const StepAnciennete = () => {
 
   return (
     <>
-      <h2>Dates de début et de fin de contrat</h2>
       <TextQuestion
         label="Quelle est la date de début du contrat de travail&nbsp;?"
         inputType="date"
-        placeholder="jj/mm/aaaa"
         value={dateEntree}
         onChange={onChangeDateEntree}
         error={errorDateEntree}
         id="dateEntree"
-        showRequired
         dataTestId={"date-entree"}
       />
       <TextQuestion
         label="Quelle est la date de fin du contrat de travail&nbsp;?"
         inputType="date"
-        placeholder="jj/mm/aaaa"
         value={dateSortie}
         onChange={(value) => {
           onChangeDateNotification(value);
@@ -88,32 +83,8 @@ const StepAnciennete = () => {
         }}
         error={errorDateSortie}
         id="dateSortie"
-        showRequired
         dataTestId={"date-sortie"}
-        tooltip={{
-          content: (
-            <p>
-              La date de rupture du contrat est indiquée dans la convention de
-              rupture. Dans tous les cas, elle ne peut intervenir avant la fin
-              du délai laissé à l’administration pour valider la rupture
-              conventionnelle.
-            </p>
-          ),
-        }}
-      />
-      <SectionTitleWithTooltip
-        name="Période d’absence prolongée"
-        tooltip={{
-          content: (
-            <p>
-              Pour rendre la saisie de l&apos;outil plus simple, les absences de
-              moins d&apos;un mois ne sont pas comptabilisées. Or, ces absences
-              peuvent impacter l&apos;ancienneté et donner ainsi lieu à un
-              montant d&apos;indemnité inférieur à celui calculé par notre
-              simulateur.
-            </p>
-          ),
-        }}
+        subLabel="La date de rupture du contrat est indiquée dans la convention de rupture. Dans tous les cas, elle ne peut intervenir avant la fin du délai laissé à l’administration pour valider la rupture conventionnelle."
       />
       <RadioQuestion
         questions={[
@@ -133,7 +104,6 @@ const StepAnciennete = () => {
         selectedOption={hasAbsenceProlonge}
         onChangeSelectedOption={onChangeHasAbsenceProlonge}
         error={errorAbsenceProlonge}
-        showRequired
       />
       {hasAbsenceProlonge === "oui" && (
         <AbsencePeriods

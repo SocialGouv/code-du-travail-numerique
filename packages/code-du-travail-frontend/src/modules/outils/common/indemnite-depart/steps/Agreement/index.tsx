@@ -37,19 +37,20 @@ const AgreementStep = (): JSX.Element => {
   }, [onInitAgreementPage]);
 
   return (
-    <CommonAgreementStep
-      agreement={agreement}
-      enterprise={enterprise}
-      error={error}
-      hasNoEnterpriseSelected={hasNoEnterpriseSelected}
-      onAgreementChange={onAgreementChange}
-      onAgreementSearch={onAgreementSearch}
-      onEnterpriseSearch={onEnterpriseSearch}
-      onInitAgreementPage={onInitAgreementPage}
-      onRouteChange={onRouteChange}
-      route={route}
-      setHasNoEnterpriseSelected={setHasNoEnterpriseSelected}
-    />
+    // <CommonAgreementStep
+    //   agreement={agreement}
+    //   enterprise={enterprise}
+    //   error={error}
+    //   hasNoEnterpriseSelected={hasNoEnterpriseSelected}
+    //   onAgreementChange={onAgreementChange}
+    //   onAgreementSearch={onAgreementSearch}
+    //   onEnterpriseSearch={onEnterpriseSearch}
+    //   onInitAgreementPage={onInitAgreementPage}
+    //   onRouteChange={onRouteChange}
+    //   route={route}
+    //   setHasNoEnterpriseSelected={setHasNoEnterpriseSelected}
+    // />
+    <></>
   );
 };
 

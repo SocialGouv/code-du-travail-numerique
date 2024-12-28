@@ -1,4 +1,3 @@
-import { ValidationResponse } from "../../../../components/Simulator/SimulatorLayout";
 import { AgreementRoute } from "src/outils/common/type/WizardType";
 import {
   PublicodesInstance,
@@ -6,6 +5,7 @@ import {
 } from "@socialgouv/modeles-social";
 import { Agreement } from "../../../types";
 import { Enterprise } from "src/conventions/Search/api/enterprises.service";
+import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 
 export type CommonAgreementStoreInput = {
   route?: AgreementRoute;

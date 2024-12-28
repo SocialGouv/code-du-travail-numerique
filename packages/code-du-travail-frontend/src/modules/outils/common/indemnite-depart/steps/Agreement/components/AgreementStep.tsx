@@ -60,15 +60,7 @@ export const CommonAgreementStep = ({
         selectedOption={route}
         onChangeSelectedOption={onRouteChange}
         error={error?.route}
-        showRequired
-        tooltip={{
-          content: (
-            <p>
-              Vous pouvez trouver le nom de votre convention collective sur
-              votre <strong>bulletin de paie</strong>.
-            </p>
-          ),
-        }}
+        subLabel="Vous pouvez trouver le nom de votre convention collective sur votre bulletin de paie"
         autoFocus
       />
       {route === "not-selected" && <ShowAlert route="not-selected" />}

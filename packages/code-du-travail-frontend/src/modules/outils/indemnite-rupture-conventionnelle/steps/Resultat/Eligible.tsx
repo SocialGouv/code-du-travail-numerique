@@ -9,7 +9,7 @@ import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
 } from "src/modules/outils/common/indemnite-depart/store";
-import { informationToSituation } from "src/modules/outils/common/components/Informations/utils";
+import { informationToSituation } from "src/modules/outils/common/indemnite-depart/steps/Informations/utils";
 import {
   DecryptResult,
   FilledElements,

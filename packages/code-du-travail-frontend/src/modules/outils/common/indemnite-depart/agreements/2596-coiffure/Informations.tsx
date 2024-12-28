@@ -1,9 +1,4 @@
 import React, { useContext } from "react";
-import { Paragraph } from "@socialgouv/cdtn-ui";
-import {
-  StyledFilledElementSpan,
-  StyledFilledElementTable,
-} from "../../steps/Resultat/components/FilledElements";
 import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
 
 export default function Agreement2596Informations() {
@@ -29,20 +24,18 @@ export default function Agreement2596Informations() {
 
           {hasReceivedSalaries === "oui" && (
             <li>
-              <Paragraph noMargin>
-                Salaires perçus pendant le préavis&nbsp;:
-              </Paragraph>
+              <p>Salaires perçus pendant le préavis&nbsp;:</p>
 
-              <StyledFilledElementTable data-testid={"result-table"}>
+              <table data-testid={"result-table"}>
                 <thead>
                   <tr>
                     <th>Mois</th>
                     <th>
                       Salaire{noticeSalaryPeriods.length > 1 && "s"}
                       <br />
-                      <StyledFilledElementSpan>
+                      <span className="fr--small">
                         (primes et avantages en nature inclus)
-                      </StyledFilledElementSpan>
+                      </span>
                     </th>
                   </tr>
                 </thead>
@@ -57,7 +50,7 @@ export default function Agreement2596Informations() {
                     </tr>
                   ))}
                 </tbody>
-              </StyledFilledElementTable>
+              </table>
             </li>
           )}
         </>

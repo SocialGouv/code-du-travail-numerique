@@ -1,17 +1,9 @@
-import {
-  Input,
-  InputDate,
-  Label,
-  Select,
-  Text,
-  theme,
-} from "@socialgouv/cdtn-ui";
+import { Select } from "@codegouvfr/react-dsfr/Select";
+import { Input } from "@codegouvfr/react-dsfr/Input";
 import React, { useState } from "react";
-import styled from "styled-components";
 import { Motif } from "@socialgouv/modeles-social";
 import { AbsenceWithKey } from "./AbsencePeriods";
-import { DelButton } from "src/outils/common/Buttons";
-import { MultiFieldRow } from "src/outils/common/MultiFieldRow";
+import { Button } from "@codegouvfr/react-dsfr/Button";
 
 type Errors = {
   duration?: string;
@@ -57,37 +49,20 @@ const AbsencePeriod = ({
     onSelectMotif(key, value);
   };
 
-  const DurationWrapper = shouldAskAbsenceDate
-    ? FieldWrapper
-    : FieldWrapperNoMargin;
-
   return (
-    <RelativeDiv key={absence?.key}>
-      <RowTitle>
-        <Text
-          variant="secondary"
-          fontSize="hsmall"
-          role="heading"
-          aria-level="2"
-        >
-          Absence {index + 1}
-        </Text>
-      </RowTitle>
-      <MultiFieldRow
-        gridRows={["auto", "auto"]}
-        gridColumns={
-          shouldAskAbsenceDate
-            ? ["2fr", "1fr", "1fr", "13rem"]
-            : ["2fr", "1fr", "13rem"]
-        }
-        emptyCells={shouldAskAbsenceDate ? [7] : [5]}
-      >
-        <Label htmlFor={`${index}.type`}>Motif</Label>
-        <FieldWrapper>
-          <StyledSelect
-            id={`${index}.type`}
-            onChange={(e) => selectMotif(absence.key, e.target.value)}
-            value={absence?.motif?.label}
+    <div className="fr-mt-2v" key={absence?.key}>
+      <div className="fr-mb-2v">
+        <p className="fr-text--sm fr-mb-1v">Absence {index + 1}</p>
+      </div>
+      <div className="fr-grid-row fr-grid-row--gutters">
+        <div className="fr-col-12 fr-col-md-4">
+          <Select
+            label="Motif"
+            nativeSelectProps={{
+              id: `${index}.type`,
+              onChange: (e) => selectMotif(absence.key, e.target.value),
+              value: absence?.motif?.label,
+            }}
             data-testid={`absence-motif-${index}`}
           >
             {motifs.map(({ label }) => (
@@ -95,94 +70,54 @@ const AbsencePeriod = ({
                 {label}
               </option>
             ))}
-          </StyledSelect>
-        </FieldWrapper>
-        <Label htmlFor={`${index}.duration`}>Durée (en mois)</Label>
-        <DurationWrapper>
+          </Select>
+        </div>
+        <div className="fr-col-12 fr-col-md-3">
           <Input
-            id={`${index}.duration`}
-            onChange={(e) => onSetDurationDate(absence.key, e.target.value)}
-            invalid={errors?.duration !== undefined}
-            value={absence?.durationInMonth}
-            type="number"
-            name={`${index}.duration`}
-            aria-label={`${index}.duration`}
-            updateOnScrollDisabled
+            label="Durée (en mois)"
+            state={errors?.duration ? "error" : "default"}
+            stateRelatedMessage={errors?.duration}
+            nativeInputProps={{
+              id: `${index}.duration`,
+              type: "number",
+              onChange: (e) => onSetDurationDate(absence.key, e.target.value),
+              value: absence?.durationInMonth ?? "",
+            }}
             data-testid={`absence-duree-${index}`}
           />
-          {errors?.duration && <StyledError>{errors.duration}</StyledError>}
-        </DurationWrapper>
+        </div>
         {shouldAskAbsenceDate && (
-          <>
-            <Label htmlFor={`${index}.duration`}>
-              Date de début de l&apos;absence
-            </Label>
-            <div>
-              <InputDate
-                id={`${index}.dateAbsence`}
-                onChange={(e) => onSetAbsenceDate(absence.key, e)}
-                placeholder={"jj/mm/aaaa"}
-                invalid={errors?.absenceDate !== undefined}
-                value={absence?.startedAt}
-                type="text"
-                name={`${index}.dateAbsence`}
-                aria-label={`${index}.dateAbsence`}
-                updateOnScrollDisabled
-                data-testid={`absence-date-${index}`}
-              />
-              {errors?.absenceDate && (
-                <StyledError>{errors.absenceDate}</StyledError>
-              )}
-            </div>
-          </>
+          <div className="fr-col-12 fr-col-md-3">
+            <Input
+              label="Date de début de l'absence"
+              state={errors?.absenceDate ? "error" : "default"}
+              stateRelatedMessage={errors?.absenceDate}
+              nativeInputProps={{
+                id: `${index}.dateAbsence`,
+                type: "date",
+                onChange: (e) => onSetAbsenceDate(absence.key, e.target.value),
+                value: absence?.startedAt ?? "",
+              }}
+              data-testid={`absence-date-${index}`}
+            />
+          </div>
         )}
         {showDeleteButton && (
-          <StyledDelButton onClick={() => onDeleteAbsence(absence.key)}>
-            Supprimer
-          </StyledDelButton>
+          <div className="fr-col-12 fr-col-md-2 fr-mt-2v">
+            <Button
+              onClick={() => onDeleteAbsence(absence.key)}
+              priority="secondary"
+              size="small"
+              iconPosition="right"
+              iconId="ri-delete-bin-line"
+            >
+              Supprimer
+            </Button>
+          </div>
         )}
-      </MultiFieldRow>
-    </RelativeDiv>
+      </div>
+    </div>
   );
 };
 
 export default AbsencePeriod;
-
-const { breakpoints, spacings } = theme;
-
-const RelativeDiv = styled.div`
-  position: relative;
-`;
-
-const RowTitle = styled.div`
-  margin-bottom: ${spacings.base};
-  padding-top: ${spacings.small};
-`;
-
-const StyledSelect = styled(Select)`
-  display: flex;
-`;
-
-const FieldWrapper = styled.div`
-  margin-right: ${spacings.base};
-  @media (max-width: ${breakpoints.mobile}) {
-    margin-right: 0;
-    margin-bottom: ${spacings.base};
-  }
-`;
-
-const FieldWrapperNoMargin = styled.div``;
-
-const StyledError = styled(Error)`
-  margin-bottom: 0;
-`;
-
-const StyledDelButton = styled(DelButton)`
-  margin-top: ${spacings.xsmall};
-  @media (max-width: ${breakpoints.mobile}) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 0;
-  }
-`;

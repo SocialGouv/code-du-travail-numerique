@@ -1,7 +1,7 @@
 "use client";
 import { ContainerSimulator } from "../../layout/ContainerSimulator";
 import { RelatedItem } from "../../documents";
-import React, { useContext } from "react";
+import React from "react";
 import {
   StepAgreement,
   StepInformations,
@@ -13,15 +13,14 @@ import {
   StepResultat,
 } from "./steps";
 import { useRuptureCoEventEmitter } from "./events/useRuptureCoEventEmitter";
-import { EVENT_CATEGORY } from "../common/components/Feedback/tracking";
 import {
   CalculateurIndemnite,
   IndemniteDepartStepName,
 } from "../common/indemnite-depart";
-import { SimulatorLayout } from "../common/components/SimulatorLayout";
-import { IndemniteDepartContext } from "../common/indemnite-depart/store";
 import { Step } from "../common/components/SimulatorLayout/types";
 import { IndemniteDepartType } from "../common/indemnite-depart/types";
+import { EVENT_CATEGORY } from "src/outils/common/Feedback/tracking";
+import StepSalaires from "../common/indemnite-depart/steps/Salaires";
 
 const steps: Step<IndemniteDepartStepName>[] = [
   {
@@ -29,38 +28,38 @@ const steps: Step<IndemniteDepartStepName>[] = [
     name: IndemniteDepartStepName.Introduction,
     Component: StepIntro,
   },
-  // {
-  //   label: "Contrat de travail",
-  //   name: IndemniteDepartStepName.ContratTravail,
-  //   Component: StepContratTravail,
-  // },
-  // {
-  //   label: "Convention collective",
-  //   name: IndemniteDepartStepName.Agreement,
-  //   Component: StepAgreement,
-  // },
-  // {
-  //   label: "Informations",
-  //   name: IndemniteDepartStepName.Informations,
-  //   Component: StepInformations,
-  // },
-  // {
-  //   label: "Ancienneté",
-  //   name: IndemniteDepartStepName.Anciennete,
-  //   Component: StepAnciennete,
-  // },
-  // {
-  //   label: "Salaires",
-  //   name: IndemniteDepartStepName.Salaires,
-  //   Component: () => (
-  //     <StepSalaires type={IndemniteDepartType.RUPTURE_CONVENTIONNELLE} />
-  //   ),
-  // },
-  // {
-  //   label: "Indemnité",
-  //   name: IndemniteDepartStepName.Resultat,
-  //   Component: StepResultat,
-  // },
+  {
+    label: "Contrat de travail",
+    name: IndemniteDepartStepName.ContratTravail,
+    Component: StepContratTravail,
+  },
+  {
+    label: "Convention collective",
+    name: IndemniteDepartStepName.Agreement,
+    Component: StepAgreement,
+  },
+  {
+    label: "Informations",
+    name: IndemniteDepartStepName.Informations,
+    Component: StepInformations,
+  },
+  {
+    label: "Ancienneté",
+    name: IndemniteDepartStepName.Anciennete,
+    Component: StepAnciennete,
+  },
+  {
+    label: "Salaires",
+    name: IndemniteDepartStepName.Salaires,
+    Component: () => (
+      <StepSalaires type={IndemniteDepartType.RUPTURE_CONVENTIONNELLE} />
+    ),
+  },
+  {
+    label: "Indemnité",
+    name: IndemniteDepartStepName.Resultat,
+    Component: StepResultat,
+  },
 ];
 
 type Props = {

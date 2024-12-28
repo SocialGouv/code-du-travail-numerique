@@ -16,7 +16,7 @@ import {
   SeniorityFactory,
   SupportedCc,
 } from "@socialgouv/modeles-social";
-import { informationToSituation } from "../../../../components/Informations/utils";
+import { informationToSituation } from "../../Informations/utils";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { validateStep } from "./validator";

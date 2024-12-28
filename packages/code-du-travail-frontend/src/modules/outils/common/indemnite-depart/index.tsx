@@ -7,10 +7,9 @@ import {
 } from "./store";
 import { IndemniteDepartType } from "./types";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
-import { Feedback } from "../components/Feedback";
-import { EVENT_CATEGORY } from "../components/Feedback/tracking";
 import { Step } from "../components/SimulatorLayout/types";
 import { SimulatorLayout } from "../components/SimulatorLayout";
+import { EVENT_CATEGORY } from "src/outils/common/Feedback/tracking";
 
 type SimulateurProps = CalculateurIndemniteProps & {
   title: string;
@@ -73,42 +72,39 @@ const IndemniteDepartSimulator = ({
   };
 
   return (
-    <div>
-      <SimulatorLayout
-        simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
-        title={title}
-        steps={steps}
-        onStepChange={[
-          {
-            stepName: IndemniteDepartStepName.ContratTravail,
-            isStepValid: isStepContratTravailValid,
-            onNextStep: onNextStepContratTravail,
-          },
-          {
-            stepName: IndemniteDepartStepName.Agreement,
-            isStepValid: isStepAgreementValid,
-            onNextStep: onNextStepAgreement,
-          },
-          {
-            stepName: IndemniteDepartStepName.Anciennete,
-            isStepValid: isStepAncienneteValid,
-            onNextStep: onNextStepAnciennete,
-          },
-          {
-            stepName: IndemniteDepartStepName.Salaires,
-            isStepValid: isStepSalairesValid,
-            onNextStep: onNextStepSalaires,
-          },
-          {
-            stepName: IndemniteDepartStepName.Informations,
-            isStepValid: isStepInformationsValid,
-            onNextStep: onNextStepInformations,
-          },
-        ]}
-        hiddenStep={getHiddenSteps()}
-      />
-      {feedbackPopup && <Feedback category={feedbackPopup} />}
-    </div>
+    <SimulatorLayout
+      simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
+      title={title}
+      steps={steps}
+      onStepChange={[
+        {
+          stepName: IndemniteDepartStepName.ContratTravail,
+          isStepValid: isStepContratTravailValid,
+          onNextStep: onNextStepContratTravail,
+        },
+        {
+          stepName: IndemniteDepartStepName.Agreement,
+          isStepValid: isStepAgreementValid,
+          onNextStep: onNextStepAgreement,
+        },
+        {
+          stepName: IndemniteDepartStepName.Anciennete,
+          isStepValid: isStepAncienneteValid,
+          onNextStep: onNextStepAnciennete,
+        },
+        {
+          stepName: IndemniteDepartStepName.Salaires,
+          isStepValid: isStepSalairesValid,
+          onNextStep: onNextStepSalaires,
+        },
+        {
+          stepName: IndemniteDepartStepName.Informations,
+          isStepValid: isStepInformationsValid,
+          onNextStep: onNextStepInformations,
+        },
+      ]}
+      hiddenStep={getHiddenSteps()}
+    />
   );
 };
 

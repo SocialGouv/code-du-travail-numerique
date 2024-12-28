@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 import React from "react";
 import FilledElement from "../FilledElements";
 import { MotifKeys } from "@socialgouv/modeles-social";
-import { IndemniteDepartType } from "src/outils/types";
+import { IndemniteDepartType } from "../../../../types";
 
 describe("<FilledElement />", () => {
   it("should render", () => {

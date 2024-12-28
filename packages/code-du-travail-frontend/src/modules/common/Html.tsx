@@ -4,13 +4,36 @@ import { xssWrapper } from "../../lib";
 type Props = {
   children: string;
   as?: string;
-  inline?: boolean;
 };
 
 const Html = ({ children, ...props }: Props): JSX.Element => {
+  if (props.as === "p") {
+    return (
+      <p
+        dangerouslySetInnerHTML={{
+          __html: xssWrapper(children),
+        }}
+      />
+    );
+  } else if (props.as === "span") {
+    return (
+      <span
+        dangerouslySetInnerHTML={{
+          __html: xssWrapper(children),
+        }}
+      />
+    );
+  } else if (props.as === "div") {
+    return (
+      <div
+        dangerouslySetInnerHTML={{
+          __html: xssWrapper(children),
+        }}
+      />
+    );
+  }
   return (
     <div
-      {...props}
       dangerouslySetInnerHTML={{
         __html: xssWrapper(children),
       }}

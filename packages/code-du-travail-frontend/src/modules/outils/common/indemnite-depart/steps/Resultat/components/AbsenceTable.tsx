@@ -1,4 +1,3 @@
-import { StyledFilledElementTable } from "./FilledElements";
 import { Absence } from "@socialgouv/modeles-social";
 
 type Props = {
@@ -14,7 +13,7 @@ const AbsenceTable = ({ absencesPeriods }: Props): JSX.Element => {
     absencesPeriods.filter((item) => item.startedAt !== undefined).length > 0;
 
   return (
-    <StyledFilledElementTable>
+    <table>
       <thead>
         <tr>
           <th>Motif de l&apos;absence</th>
@@ -35,7 +34,7 @@ const AbsenceTable = ({ absencesPeriods }: Props): JSX.Element => {
           </tr>
         ))}
       </tbody>
-    </StyledFilledElementTable>
+    </table>
   );
 };
 

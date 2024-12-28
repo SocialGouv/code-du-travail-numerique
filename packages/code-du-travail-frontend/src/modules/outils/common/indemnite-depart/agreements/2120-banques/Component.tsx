@@ -91,11 +91,11 @@ export default function Agreement2120({ type }: Props) {
       error={errorSalariesVariablePart}
       id="salariesVariablePart"
       dataTestId="salariesVariablePart"
-      showRequired
-      text="€"
-      tooltip={{
-        content,
-      }}
+      // unit="€"
+      // tooltip={{
+      //   content,
+      // }}
+      //TODO ATTENTION FAUT IL METTRE LE TOOLTIP ?
     />
   );
 }

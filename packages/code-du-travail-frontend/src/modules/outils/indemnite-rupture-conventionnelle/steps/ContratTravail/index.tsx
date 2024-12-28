@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
-import RadioQuestion from "src/modules/outils/common/components/RadioQuestion";
-import TextQuestion from "src/modules/outils/common/components/TextQuestion";
+import {
+  RadioQuestion,
+  TextQuestion,
+} from "src/modules/outils/common/components";
 import { CdiCdd } from "src/modules/outils/common/indemnite-depart/steps/ContratTravail";
 import {
   IndemniteDepartContext,
@@ -72,7 +74,6 @@ const StepContratTravail = (): JSX.Element => {
           }
         }}
         error={errorTypeContratTravail}
-        showRequired
         autoFocus
       />
       {typeContratTravail === "cdi" && (
@@ -94,19 +95,16 @@ const StepContratTravail = (): JSX.Element => {
           selectedOption={arretTravail}
           onChangeSelectedOption={onChangeArretTravail}
           error={errorArretTravail}
-          showRequired
         />
       )}
       {typeContratTravail === "cdi" && arretTravail === "oui" && (
         <TextQuestion
           label="Depuis quelle date le salarié est-il en arrêt&nbsp;?"
           inputType="date"
-          placeholder="jj/mm/aaaa"
           value={dateArretTravail}
           onChange={onChangeDateArretTravail}
           error={errorDateArretTravail}
           id="dateArretTravail"
-          showRequired
           dataTestId={"date-arret-travail"}
         />
       )}

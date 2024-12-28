@@ -1,12 +1,10 @@
 import { Absence, Motif } from "@socialgouv/modeles-social";
 import React, { useEffect } from "react";
-import styled from "styled-components";
+import { Button } from "@codegouvfr/react-dsfr/Button";
+import { Alert } from "@codegouvfr/react-dsfr/Alert";
 
 import AbsencePeriod from "./AbsencePeriod";
 import type { AncienneteAbsenceStoreError } from "../store";
-import { AddButton } from "src/outils/common/Buttons";
-import { SmallText } from "src/outils/common/stepStyles";
-import { Question } from "src/outils/common/Question";
 
 type Props = {
   onChange: (absences: Absence[]) => void;
@@ -122,16 +120,15 @@ const AbsencePeriods = ({
   };
 
   return (
-    <>
-      {messageMotifExample && <p>{messageMotifExample}</p>}
-      <Question>
-        Quels sont le motif et la durée de ces absences prolongées&nbsp;?
-      </Question>
-      <SmallText>
-        Veuillez créer une ligne différente pour chaque période d’absence (de
-        plus d’un mois) même si vous avez été absent plusieurs fois pour le même
-        motif.
-      </SmallText>
+    <div className="fr-container">
+      {messageMotifExample && <p className="fr-text">{messageMotifExample}</p>}
+      <p>Quels sont le motif et la durée de ces absences prolongées&nbsp;?</p>
+      <p className="fr-text--sm fr-mb-2w">
+        Veuillez créer une ligne différente pour chaque période d&apos;absence
+        (de plus d&apos;un mois) même si vous avez été absent plusieurs fois
+        pour le même motif.
+      </p>
+
       {localAbsences.map((value, index) => (
         <AbsencePeriod
           key={value.key}
@@ -156,14 +153,25 @@ const AbsencePeriods = ({
           informationData={informationData}
         />
       ))}
-      {error?.global && <StyledError>{error.global}</StyledError>}
-      <AddButton onClick={onAddButtonClick}>Ajouter une absence</AddButton>
-    </>
+
+      {error?.global && (
+        <Alert
+          title="Erreur"
+          severity="error"
+          description={error.global}
+          className="fr-mb-2w"
+        />
+      )}
+
+      <Button
+        onClick={onAddButtonClick}
+        priority="secondary"
+        className="fr-mt-2w"
+      >
+        Ajouter une absence
+      </Button>
+    </div>
   );
 };
-
-const StyledError = styled(Error)`
-  margin-bottom: 0;
-`;
 
 export default AbsencePeriods;

@@ -30,8 +30,9 @@ const initialState: Omit<
 > = {
   input: {
     isAgreementSupportedIndemniteLicenciement: false,
-    hasNoEnterpriseSelected: false,
+    hasNoEnterpriseSelected: true,
     informationError: false,
+    route: "not-selected",
   },
   error: {},
   hasBeenSubmit: false,

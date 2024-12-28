@@ -1,84 +1,72 @@
-import React, { FunctionComponent, useEffect, useState } from "react";
-import { Tooltip } from "./types";
+import React, { useEffect, useState } from "react";
 import Html from "src/modules/common/Html";
 import { xssWrapper } from "src/lib";
+import { Input } from "@codegouvfr/react-dsfr/Input";
 
 type Props = {
   onChange: (value: string) => void;
   error?: string;
   label: string;
-  tooltip?: Tooltip;
   inputType?: "date" | "number" | "text";
   value: string | number | undefined;
-  placeholder?: string;
   subLabel?: string;
-  smallText?: string;
   title?: string;
-  showRequired?: boolean;
-  icon?: FunctionComponent;
   id: string;
   dataTestId?: string;
-  text?: string;
   autoFocus?: boolean;
 };
 
-export default function TextQuestion({
-  tooltip,
-  inputType,
+export function TextQuestion({
+  inputType = "text",
   label,
   error,
   value,
-  placeholder,
   onChange,
-  smallText,
   subLabel,
   title,
-  showRequired,
-  icon,
   id,
   dataTestId,
-  text,
   autoFocus = false,
 }: Props) {
   const [inputRef, setInputRef] = useState<HTMLInputElement>();
+
   useEffect(() => {
     if (inputRef && error) {
       inputRef?.focus();
     }
   }, [inputRef, error]);
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue =
+      inputType === "date" ? event.target.value : event.target.value;
+    onChange(newValue);
+  };
+
   return (
-    <div>
-      <p>
-        <Html as="span">{label}</Html>
-      </p>
-      {smallText && <p>{smallText}</p>}
-      {subLabel && <p>{subLabel}</p>}
-      <div>
-        {/* <input
-          id={id}
-          name={id}
-          value={value}
-          onChange={(e) => onChange(inputType === "date" ? e : e.target.value)}
-          invalid={!!error}
-          placeholder={placeholder}
-          icon={icon}
-          text={text}
-          type={inputType === "date" ? "text" : inputType}
-          updateOnScrollDisabled
-          data-testid={dataTestId}
-          autoFocus={autoFocus}
-          title={title}
-        /> */}
-      </div>
-      {error && (
-        <p>
+    <Input
+      label={<Html as="p">{label}</Html>}
+      hintText={subLabel}
+      nativeInputProps={{
+        type: inputType,
+        id,
+        name: id,
+        value: value ?? "",
+        onChange: handleChange,
+        autoFocus,
+        title,
+        ref: (ref: HTMLInputElement) => setInputRef(ref),
+      }}
+      data-testid={dataTestId}
+      state={error ? "error" : "default"}
+      stateRelatedMessage={
+        error && (
           <span
             dangerouslySetInnerHTML={{
               __html: xssWrapper(error),
             }}
           />
-        </p>
-      )}
-    </div>
+        )
+      }
+    />
   );
 }

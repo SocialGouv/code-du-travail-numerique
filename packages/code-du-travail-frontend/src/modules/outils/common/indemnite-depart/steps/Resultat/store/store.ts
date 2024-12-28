@@ -24,7 +24,7 @@ import { PublicodesResult } from "@socialgouv/modeles-social/bin";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { CommonSituationStoreSlice } from "../../../situationStore";
 import { StoreSlice } from "../../../types";
-import { informationToSituation } from "src/modules/outils/common/components/Informations/utils";
+import { informationToSituation } from "src/modules/outils/common/indemnite-depart/steps/Informations/utils";
 
 const initialState: ResultStoreData = {
   input: {
