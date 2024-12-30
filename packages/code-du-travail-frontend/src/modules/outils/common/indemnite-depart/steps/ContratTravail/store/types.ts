@@ -1,6 +1,6 @@
 import { StepData } from "../../../store";
 import { OuiNon } from "../../../common";
-import { ValidationResponse } from "../../../../components/Simulator/SimulatorLayout";
+import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 
 export type CdiCdd = "cdi" | "cdd";
 

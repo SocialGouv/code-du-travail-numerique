@@ -14,7 +14,6 @@ type Props = {
   error?: string;
   label: string;
   questions: Question[];
-  showRequired?: boolean;
   name: string;
   subLabel?: string;
   note?: string;

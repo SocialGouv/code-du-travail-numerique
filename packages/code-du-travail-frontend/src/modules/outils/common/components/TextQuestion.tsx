@@ -16,6 +16,18 @@ type Props = {
   autoFocus?: boolean;
 };
 
+function formatValueToFr(value: string): string {
+  if (!value) return value;
+  const [year, month, days] = value.split("-");
+  return `${days}/${month}/${year}`;
+}
+
+function formatValueToEn(value: string): string {
+  if (!value) return value;
+  const [days, month, year] = value.split("/");
+  return `${year}-${month}-${days}`;
+}
+
 export function TextQuestion({
   inputType = "text",
   label,
@@ -38,19 +50,24 @@ export function TextQuestion({
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue =
-      inputType === "date" ? event.target.value : event.target.value;
+      inputType === "date"
+        ? formatValueToFr(event.target.value)
+        : event.target.value;
     onChange(newValue);
   };
 
   return (
     <Input
-      label={<Html as="p">{label}</Html>}
+      label={<Html as="span">{label}</Html>}
       hintText={subLabel}
       nativeInputProps={{
         type: inputType,
         id,
         name: id,
-        value: value ?? "",
+        value:
+          inputType === "date"
+            ? formatValueToEn(value as string)
+            : (value ?? ""),
         onChange: handleChange,
         autoFocus,
         title,

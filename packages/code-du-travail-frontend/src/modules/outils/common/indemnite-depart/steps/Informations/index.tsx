@@ -1,6 +1,7 @@
 import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
 import { useContext } from "react";
 import { PubliQuestion } from "./components/PubliQuestion";
+import { fr } from "@codegouvfr/react-dsfr";
 
 const InformationsStep = (): JSX.Element => {
   const store = useContext(IndemniteDepartContext);
@@ -34,7 +35,9 @@ const InformationsStep = (): JSX.Element => {
           />
         );
       })}
-      {errors.errorPublicodes && <p>{errors.errorPublicodes}</p>}
+      {errors.errorPublicodes && (
+        <p className={fr.cx("fr-error-text")}>{errors.errorPublicodes}</p>
+      )}
     </>
   );
 };

@@ -9,7 +9,7 @@ import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
 } from "src/modules/outils/common/indemnite-depart/store";
-import { informationToSituation } from "src/modules/outils/common/indemnite-depart/steps/Informations/utils";
+import { informationToSituation } from "src/modules/outils/common/indemnite-depart/steps/Informations/components/utils";
 import {
   DecryptResult,
   FilledElements,
@@ -22,6 +22,11 @@ import {
   Disclaimer,
   PubliReferences,
 } from "src/modules/outils/common/components";
+import Accordion from "@codegouvfr/react-dsfr/Accordion";
+import {
+  eventEmitter,
+  EventType,
+} from "src/modules/outils/common/indemnite-depart/events";
 
 const Eligible = () => {
   const store = useContext(IndemniteDepartContext);
@@ -68,6 +73,10 @@ const Eligible = () => {
     } as Notification,
   ];
 
+  const onClickAccordion = () => {
+    eventEmitter.dispatch(EventType.TRACK_RESULT);
+  };
+
   return (
     <>
       <Result
@@ -75,7 +84,10 @@ const Eligible = () => {
         notifications={defaultNotification.concat(result.notifications ?? [])}
         resultMessage={getResultMessage(informationData)}
       />
-      <div>
+      <Accordion
+        label="Voir le détail du calcul"
+        onExpandedChange={onClickAccordion}
+      >
         <FilledElements
           type={IndemniteDepartType.RUPTURE_CONVENTIONNELLE}
           contractTravail={[
@@ -150,7 +162,7 @@ const Eligible = () => {
               : result.legalReferences
           }
         />
-      </div>
+      </Accordion>
       {!result.agreementHasNoBetterAllowance && result.infoWarning && (
         <Disclaimer
           title={result.infoWarning.title}

@@ -31,7 +31,6 @@ export default function Agreement1527() {
         selectedOption={hasCommission}
         onChangeSelectedOption={onChangeHasCommission}
         error={errorHasCommission}
-        showRequired
       />
     </>
   );

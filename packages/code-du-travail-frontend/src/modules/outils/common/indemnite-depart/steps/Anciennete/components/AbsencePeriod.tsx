@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Motif } from "@socialgouv/modeles-social";
 import { AbsenceWithKey } from "./AbsencePeriods";
 import { Button } from "@codegouvfr/react-dsfr/Button";
+import { fr } from "@codegouvfr/react-dsfr";
 
 type Errors = {
   duration?: string;
@@ -50,12 +51,15 @@ const AbsencePeriod = ({
   };
 
   return (
-    <div className="fr-mt-2v" key={absence?.key}>
-      <div className="fr-mb-2v">
-        <p className="fr-text--sm fr-mb-1v">Absence {index + 1}</p>
-      </div>
-      <div className="fr-grid-row fr-grid-row--gutters">
-        <div className="fr-col-12 fr-col-md-4">
+    <div className="fr-mt-4w" key={absence?.key}>
+      <p className={fr.cx("fr-text--bold", "fr-mb-1w")}>Absence {index + 1}</p>
+      <div
+        className="fr-grid-row fr-grid-row--gutters"
+        style={{ display: "flex", alignItems: "flex-end" }}
+      >
+        <div
+          className={`fr-col-12 ${shouldAskAbsenceDate ? "fr-col-md-4" : "fr-col-md-6"}`}
+        >
           <Select
             label="Motif"
             nativeSelectProps={{
@@ -72,7 +76,9 @@ const AbsencePeriod = ({
             ))}
           </Select>
         </div>
-        <div className="fr-col-12 fr-col-md-3">
+        <div
+          className={`fr-col-12 ${shouldAskAbsenceDate ? "fr-col-md-3" : "fr-col-md-4"}`}
+        >
           <Input
             label="Durée (en mois)"
             state={errors?.duration ? "error" : "default"}
@@ -103,7 +109,7 @@ const AbsencePeriod = ({
           </div>
         )}
         {showDeleteButton && (
-          <div className="fr-col-12 fr-col-md-2 fr-mt-2v">
+          <div className="fr-col-12 fr-col-md-2">
             <Button
               onClick={() => onDeleteAbsence(absence.key)}
               priority="secondary"

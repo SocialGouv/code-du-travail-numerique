@@ -8,6 +8,7 @@ import {
 } from "../../../utils/question";
 import { formatToEuro } from "src/common/formatToEuro";
 import { IndemniteDepartType } from "../../../types";
+import { fr } from "@codegouvfr/react-dsfr";
 
 type SituationItem = {
   text: string;
@@ -157,39 +158,49 @@ export default function FilledElements(props: Props) {
                     props.salaryPeriods
                   )}
                   &nbsp;:&nbsp;
-                  <table style={{ borderCollapse: "collapse", width: "100%" }}>
-                    <caption>Salaires et Primes mensuelles</caption>
-                    <thead>
-                      <tr>
-                        <th scope="col">Mois</th>
-                        <th scope="col">
-                          Salaires
-                          <br />
-                          <span>(primes et avantages en nature inclus)</span>
-                        </th>
-                        <th scope="col">
-                          Dont primes
-                          <br />
-                          <span>(au cours des 3 derniers mois)</span>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {props.salaryPeriods.map((salary, index) => (
-                        <tr
-                          key={"salary-" + index}
-                          data-testid={"table-salary-row"}
-                        >
-                          <th scope="row">{salary.month}</th>
-                          <td>{formatToEuro(salary.value ?? 0)}</td>
-                          <td>
-                            {salary.prime !== undefined &&
-                              formatToEuro(salary.prime)}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                  <div className={fr.cx("fr-mt-4w", "fr-table")}>
+                    <div className={fr.cx("fr-table__wrapper")}>
+                      <div className={fr.cx("fr-table__container")}>
+                        <div className={fr.cx("fr-table__content")}>
+                          <table>
+                            <caption>Salaires et Primes mensuelles</caption>
+                            <thead>
+                              <tr>
+                                <th scope="col">Mois</th>
+                                <th scope="col">
+                                  Salaires
+                                  <br />
+                                  <span>
+                                    (primes et avantages en nature inclus)
+                                  </span>
+                                </th>
+                                <th scope="col">
+                                  Dont primes
+                                  <br />
+                                  <span>(au cours des 3 derniers mois)</span>
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {props.salaryPeriods.map((salary, index) => (
+                                <tr
+                                  key={"salary-" + index}
+                                  data-testid={"table-salary-row"}
+                                >
+                                  <th scope="row">{salary.month}</th>
+                                  <td>{formatToEuro(salary.value ?? 0)}</td>
+                                  <td>
+                                    {salary.prime !== undefined &&
+                                      formatToEuro(salary.prime)}
+                                  </td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </li>
               )}
               {props.agreementRefSalaryInfo}

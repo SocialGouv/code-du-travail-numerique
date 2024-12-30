@@ -4,6 +4,7 @@ import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
 } from "src/modules/outils/common/indemnite-depart/store";
+import Alert from "@codegouvfr/react-dsfr/Alert";
 
 export default function Ineligible() {
   const store = useContext(IndemniteDepartContext);
@@ -25,9 +26,12 @@ export default function Ineligible() {
       </p>
       <Html>{getEligibilityError() ?? ""}</Html>
       {!agreementHasNoLegalIndemnity && infoWarning && (
-        <p title={infoWarning.title} data-testid="ineligible-cc-disclaimer">
-          <p>{infoWarning.message}</p>
-        </p>
+        <Alert
+          title={infoWarning.title}
+          description={infoWarning.message}
+          data-testid="ineligible-cc-disclaimer"
+          severity="warning"
+        />
       )}
     </>
   );

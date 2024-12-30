@@ -4,6 +4,7 @@ import { xssWrapper } from "../../lib";
 type Props = {
   children: string;
   as?: string;
+  className?: string;
 };
 
 const Html = ({ children, ...props }: Props): JSX.Element => {
@@ -13,6 +14,7 @@ const Html = ({ children, ...props }: Props): JSX.Element => {
         dangerouslySetInnerHTML={{
           __html: xssWrapper(children),
         }}
+        className={props.className}
       />
     );
   } else if (props.as === "span") {
@@ -21,6 +23,7 @@ const Html = ({ children, ...props }: Props): JSX.Element => {
         dangerouslySetInnerHTML={{
           __html: xssWrapper(children),
         }}
+        className={props.className}
       />
     );
   } else if (props.as === "div") {
@@ -29,6 +32,7 @@ const Html = ({ children, ...props }: Props): JSX.Element => {
         dangerouslySetInnerHTML={{
           __html: xssWrapper(children),
         }}
+        className={props.className}
       />
     );
   }
@@ -37,6 +41,7 @@ const Html = ({ children, ...props }: Props): JSX.Element => {
       dangerouslySetInnerHTML={{
         __html: xssWrapper(children),
       }}
+      className={props.className}
     />
   );
 };

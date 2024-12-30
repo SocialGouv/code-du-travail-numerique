@@ -136,7 +136,7 @@ export const SimulatorLayout = (props: Props<string>) => {
             priority="secondary"
             iconId="ri-arrow-drop-left-fill"
             iconPosition="left"
-            className="fr-mr-3w"
+            className="fr-mr-2w"
           >
             Précédent
           </Button>

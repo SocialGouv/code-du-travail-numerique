@@ -5,6 +5,8 @@ import { Alert } from "@codegouvfr/react-dsfr/Alert";
 
 import AbsencePeriod from "./AbsencePeriod";
 import type { AncienneteAbsenceStoreError } from "../store";
+import { fr } from "@codegouvfr/react-dsfr";
+import Html from "src/modules/common/Html";
 
 type Props = {
   onChange: (absences: Absence[]) => void;
@@ -120,14 +122,19 @@ const AbsencePeriods = ({
   };
 
   return (
-    <div className="fr-container">
-      {messageMotifExample && <p className="fr-text">{messageMotifExample}</p>}
-      <p>Quels sont le motif et la durée de ces absences prolongées&nbsp;?</p>
-      <p className="fr-text--sm fr-mb-2w">
+    <div>
+      <label className={fr.cx("fr-text--bold", "fr-text--lg")}>
+        Quels sont le motif et la durée de ces absences prolongées&nbsp;
+      </label>
+      <p className={fr.cx("fr-mt-2w")}>
         Veuillez créer une ligne différente pour chaque période d&apos;absence
         (de plus d&apos;un mois) même si vous avez été absent plusieurs fois
         pour le même motif.
       </p>
+
+      {messageMotifExample && (
+        <Html className={fr.cx("fr-highlight")}>{messageMotifExample}</Html>
+      )}
 
       {localAbsences.map((value, index) => (
         <AbsencePeriod
@@ -154,22 +161,19 @@ const AbsencePeriods = ({
         />
       ))}
 
-      {error?.global && (
-        <Alert
-          title="Erreur"
-          severity="error"
-          description={error.global}
-          className="fr-mb-2w"
-        />
-      )}
-
       <Button
         onClick={onAddButtonClick}
         priority="secondary"
         className="fr-mt-2w"
+        iconId="ri-add-fill"
+        iconPosition="right"
       >
         Ajouter une absence
       </Button>
+
+      {error?.global && (
+        <Alert title={error.global} severity="error" className="fr-mt-2w" />
+      )}
     </div>
   );
 };

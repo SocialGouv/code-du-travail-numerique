@@ -57,7 +57,6 @@ export default function Agreement1702() {
             selectedOption={hasReceivedSalaries}
             onChangeSelectedOption={onChangeHasReceivedSalaries}
             error={errorHasReceivedSalaries}
-            showRequired
             note={
               hasReceivedSalaries === "non"
                 ? `Le calcul de l’indemnité nécessite le${S()} salaire${S()} perçu${S()} pendant le préavis. Pour réaliser cette simulation, nous considérerons que le${S()} salaire${S()} perçu${S()} pendant le préavis correspond${
@@ -69,13 +68,15 @@ export default function Agreement1702() {
           {hasReceivedSalaries === "oui" && (
             <SalaireTempsPlein
               title={`Salaire${S()} perçu${S()} pendant le préavis`}
-              subTitle={`Indiquez le montant ${
-                hasMoreThanOneNoticeSalary ? "des" : "du"
-              } salaire${S()} (en incluant l’indemnité de congés payés, les primes, dont la prime de vacances, et les avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)`}
+              // subTitle={`Indiquez le montant ${
+              //   hasMoreThanOneNoticeSalary ? "des" : "du"
+              // } salaire${S()} (en incluant l’indemnité de congés payés, les primes, dont la prime de vacances, et les avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)`}
+              //TODO attention
               onSalariesChange={onSalariesChange}
               salaryPeriods={noticeSalaryPeriods}
               error={errorNoticeSalaryPeriods}
               dataTestidSalaries="notice-salary"
+              agreementNumber={1702}
             />
           )}
         </>

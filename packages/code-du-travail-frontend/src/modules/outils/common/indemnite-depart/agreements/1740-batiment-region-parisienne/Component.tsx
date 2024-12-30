@@ -56,7 +56,6 @@ export default function Agreement1740() {
             selectedOption={hasReceivedSalaries}
             onChangeSelectedOption={onChangeHasReceivedSalaries}
             error={errorHasReceivedSalaries}
-            showRequired
             note={
               hasReceivedSalaries === "non"
                 ? `Le calcul de l’indemnité nécessite le${S()} salaire${S()} perçu${S()} pendant le préavis. Pour réaliser cette simulation, nous considérerons que le${S()} salaire${S()} perçu${S()} pendant le préavis correspond${
@@ -70,11 +69,12 @@ export default function Agreement1740() {
               title={`Salaire${S()} perçu${S()} pendant le préavis`}
               onSalariesChange={onSalariesChange}
               salaryPeriods={noticeSalaryPeriods}
-              subTitle={`Indiquez le montant ${
-                hasMoreThanOneNoticeSalary ? "des" : "du"
-              } salaire${S()} (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ`}
+              // subTitle={`Indiquez le montant ${
+              //   hasMoreThanOneNoticeSalary ? "des" : "du"
+              // } salaire${S()} (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ`}
               error={errorNoticeSalaryPeriods}
               dataTestidSalaries="notice-salary"
+              agreementNumber={1740}
             />
           )}
         </>

@@ -36,7 +36,6 @@ export default function Agreement2609() {
         selectedOption={hasVariablePay}
         onChangeSelectedOption={onChangeHasVariablePay}
         error={errorHasVariablePay}
-        showRequired
       />
     );
   }

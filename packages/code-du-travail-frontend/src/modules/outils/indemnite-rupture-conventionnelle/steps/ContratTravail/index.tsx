@@ -75,6 +75,7 @@ const StepContratTravail = (): JSX.Element => {
         }}
         error={errorTypeContratTravail}
         autoFocus
+        // showRequired //TODO ATTENTION on a viré ça
       />
       {typeContratTravail === "cdi" && (
         <RadioQuestion
@@ -106,6 +107,7 @@ const StepContratTravail = (): JSX.Element => {
           error={errorDateArretTravail}
           id="dateArretTravail"
           dataTestId={"date-arret-travail"}
+          // placeholder="jj/mm/aaaa" // TODO ATTENTION on a viré ça
         />
       )}
     </>

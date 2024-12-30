@@ -32,7 +32,7 @@ const initialState: Omit<
     isAgreementSupportedIndemniteLicenciement: false,
     hasNoEnterpriseSelected: true,
     informationError: false,
-    route: "not-selected",
+    route: "not-selected", //TODO A VIRERRRRR
   },
   error: {},
   hasBeenSubmit: false,

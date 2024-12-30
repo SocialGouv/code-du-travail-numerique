@@ -1,22 +1,23 @@
 import { Input } from "@codegouvfr/react-dsfr/Input";
-import { Table } from "@codegouvfr/react-dsfr/Table";
 import { Alert } from "@codegouvfr/react-dsfr/Alert";
 import { SalaryPeriods } from "@socialgouv/modeles-social";
 import React from "react";
-import Html from "src/modules/common/Html";
+import { fr } from "@codegouvfr/react-dsfr";
 import HighlightSalary from "./HighlightSalary";
+import { getSalairesTempsPleinSubtitle } from "../../../agreements";
 
 type Props = {
   title: string;
-  subTitle?: string;
+  // subTitle?: string; //TODO on a viré ça
   salaryPeriods: SalaryPeriods[];
   onSalariesChange: (salaries: SalaryPeriods[]) => void;
   error?: string;
   note?: string;
+  //   tooltip?: Tooltip; //TODO on a viré ça
   dataTestidSalaries?: string;
   noPrime?: boolean;
   autoFocus?: boolean;
-  HighLightComponent?: React.ReactNode;
+  agreementNumber?: number;
 };
 
 export const SalaireTempsPlein = ({
@@ -25,15 +26,13 @@ export const SalaireTempsPlein = ({
   error,
   title,
   note,
-  subTitle,
   dataTestidSalaries,
   noPrime,
-  HighLightComponent,
   autoFocus = false,
+  agreementNumber,
 }: Props): JSX.Element => {
-  const [isFirstEdit, setIsFirstEdit] = React.useState(true);
-  const [errorsSalaries, setErrorsSalaries] = React.useState<any>({});
-  const [errorsPrimes, setErrorsPrimes] = React.useState<any>({});
+  const [errorsSalaries, setErrorsSalaries] = React.useState({});
+  const [errorsPrimes, setErrorsPrimes] = React.useState({});
 
   const onChangeSalaries = (index: number, value: string) => {
     const salary = parseFloat(value);
@@ -50,15 +49,10 @@ export const SalaireTempsPlein = ({
       });
     }
     let newLocalSalaries: SalaryPeriods[];
-    if (isFirstEdit) {
-      newLocalSalaries = salaryPeriods.map((p, i) =>
-        i >= index ? { ...p, value: salary } : p
-      );
-    } else {
-      newLocalSalaries = salaryPeriods.map((p, i) =>
-        i === index ? { ...p, value: salary } : p
-      );
-    }
+
+    newLocalSalaries = salaryPeriods.map((p, i) =>
+      i === index ? { ...p, value: salary } : p
+    );
     onSalariesChange(newLocalSalaries);
   };
 
@@ -86,81 +80,91 @@ export const SalaireTempsPlein = ({
     onSalariesChange(newLocalSalaries);
   };
 
-  const tableHeaders = [
-    { label: "Mois", attribute: "scope", value: "col" },
-    { label: "Salaire mensuel brut", attribute: "scope", value: "col" },
-    !noPrime && { label: "Dont primes", attribute: "scope", value: "col" },
-  ].filter(Boolean);
-
-  const tableData = salaryPeriods.map((sPeriod, index) => [
-    sPeriod.month,
-    <Input
-      key={`salary-${index}`}
-      label={`Salaire mensuel brut en € pour le mois ${index + 1}`}
-      nativeInputProps={{
-        type: "number",
-        id: `salary.${index}`,
-        name: `salary.${index}`,
-        value: sPeriod.value ?? "",
-        onChange: (e) => onChangeSalaries(index, e.target.value),
-        onBlur: () => setIsFirstEdit(false),
-
-        autoFocus: autoFocus ? index === 0 : false,
-      }}
-      data-testid={dataTestidSalaries ?? "salary-input"}
-      state={errorsSalaries[`${index}`] ? "error" : "default"}
-      stateRelatedMessage={errorsSalaries[`${index}`]}
-      hintText="€"
-    />,
-    !noPrime && index < 3 && (
-      <Input
-        key={`prime-${index}`}
-        label={`Prime exceptionnelle pour le mois ${index + 1}`}
-        nativeInputProps={{
-          type: "number",
-          id: `prime.${index}`,
-          name: `prime.${index}`,
-          value: sPeriod.prime ?? "",
-          onChange: (e) => onChangeLocalPrimes(index, e.target.value),
-        }}
-        state={errorsPrimes[`${index}`] ? "error" : "default"}
-        stateRelatedMessage={errorsPrimes[`${index}`]}
-        data-testid={
-          dataTestidSalaries ? "prime-" + dataTestidSalaries : "prime-input"
-        }
-        hintText="€"
-      />
-    ),
-  ]);
-
   return (
     <div>
-      {HighLightComponent}
-      <Table
-        caption={
-          <>
-            <Html as="span">{title}</Html>
-            {subTitle && <p className="fr-text--sm">{subTitle}</p>}
-          </>
-        }
-        headers={tableHeaders
-          .filter((header) => header !== false)
-          .map((header, index) => (
-            <th key={index} scope={header.attribute}>
-              {header.label}
-            </th>
-          ))}
-        data={tableData}
+      <p className={fr.cx("fr-text--bold")}>{title}</p>
+      <HighlightSalary
+        agreementNumber={agreementNumber}
+        salaireTempsPlein={getSalairesTempsPleinSubtitle(agreementNumber)}
       />
+      <div className={fr.cx("fr-mt-4w", "fr-table")}>
+        <div className={fr.cx("fr-table__wrapper")}>
+          <div className={fr.cx("fr-table__container")}>
+            <div className={fr.cx("fr-table__content")}>
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Mois</th>
+                    <th scope="col">Salaire mensuel brut</th>
+                    {!noPrime && <th scope="col">Dont primes</th>}
+                  </tr>
+                </thead>
+                <tbody>
+                  {salaryPeriods.map((sPeriod, index) => (
+                    <tr key={index}>
+                      <td>{sPeriod.month}</td>
+                      <td>
+                        <Input
+                          label={`Salaire mensuel brut en € pour le mois ${index + 1}`}
+                          hideLabel
+                          nativeInputProps={{
+                            type: "number",
+                            id: `salary.${index}`,
+                            name: `salary.${index}`,
+                            value: sPeriod.value ?? "",
+                            onChange: (e) =>
+                              onChangeSalaries(index, e.target.value),
+                            autoFocus: autoFocus ? index === 0 : false,
+                          }}
+                          data-testid={dataTestidSalaries ?? "salary-input"}
+                          state={
+                            errorsSalaries[`${index}`] ? "error" : "default"
+                          }
+                          stateRelatedMessage={errorsSalaries[`${index}`]}
+                        />
+                      </td>
+                      {!noPrime && index < 3 && (
+                        <td>
+                          <Input
+                            label={`Prime exceptionnelle pour le mois ${index + 1}`}
+                            hideLabel
+                            nativeInputProps={{
+                              type: "number",
+                              id: `prime.${index}`,
+                              name: `prime.${index}`,
+                              value: sPeriod.prime ?? "",
+                              onChange: (e) =>
+                                onChangeLocalPrimes(index, e.target.value),
+                            }}
+                            state={
+                              errorsPrimes[`${index}`] ? "error" : "default"
+                            }
+                            stateRelatedMessage={errorsPrimes[`${index}`]}
+                            data-testid={
+                              dataTestidSalaries
+                                ? "prime-" + dataTestidSalaries
+                                : "prime-input"
+                            }
+                          />
+                        </td>
+                      )}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
       {error && (
         <Alert
           severity="error"
           title="Erreur"
           description={error}
-          className="fr-mt-2w"
+          className={fr.cx("fr-mt-2w")}
         />
       )}
-      {note && <p className="fr-text--sm fr-mt-2w">{note}</p>}
+      {note && <p className={fr.cx("fr-text--sm", "fr-mt-2w")}>{note}</p>}
     </div>
   );
 };

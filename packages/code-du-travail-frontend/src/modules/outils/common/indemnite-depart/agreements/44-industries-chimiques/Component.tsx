@@ -63,7 +63,6 @@ export default function Agreement44() {
           selectedOption={hasVariablePay}
           onChangeSelectedOption={onChangeHasVariablePay}
           error={errorHasVariablePay}
-          showRequired
         />
       )}
       {showKnowingLastSalary && (
@@ -85,7 +84,6 @@ export default function Agreement44() {
           selectedOption={knowingLastSalary}
           onChangeSelectedOption={onChangeKnowingLastSalary}
           error={errorKnowingLastSalary}
-          showRequired
           note={
             knowingLastSalary === "non"
               ? "Le calcul de l’indemnité nécessite le dernier salaire perçu (incluant le préavis). Pour réaliser cette simulation nous prendrons en considération la moyenne des salaires perçus au cours des 12 derniers mois précédant la notification du licenciement. En conséquence, le résultat obtenu pourrait ne pas correspondre exactement à votre situation."
@@ -96,13 +94,15 @@ export default function Agreement44() {
       {showKnowingLastSalary && showLastMonthSalary && (
         <SalaireTempsPlein
           title="Salaire et primes perçus au cours du dernier mois"
-          subTitle="Renseignez le montant du dernier salaire perçu (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ."
+          // subTitle="Renseignez le montant du dernier salaire perçu (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ."
+          //TODO ATTENTION on a viré ça
           onSalariesChange={(salaryPeriods) => {
             onChangeLastMonthSalary(salaryPeriods[0]);
           }}
           salaryPeriods={lastMonthSalary ? [lastMonthSalary] : []}
           error={errorLastMonthSalary}
           dataTestidSalaries="last-month-salary"
+          agreementNumber={44}
         />
       )}
     </>

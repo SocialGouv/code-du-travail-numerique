@@ -10,21 +10,20 @@ import { AncienneteStoreSlice } from "../../Anciennete";
 import { ContratTravailStoreSlice } from "../../ContratTravail";
 import { SalairesStoreSlice } from "../../Salaires/store";
 import produce from "immer";
-
 import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
-import { isParentalNoticeHiddenForAgreement } from "../../../agreements/ui-customizations/messages";
+import { isParentalNoticeHiddenForAgreement } from "../../../agreements/messages";
 import { AgreementInformation, hasNoBetterAllowance } from "../../../common";
 import { getInfoWarning } from "./service";
 import getSupportedCc from "../../../common/usecase/getSupportedCc";
 import * as Sentry from "@sentry/nextjs";
 import { eventEmitter } from "../../../events/emitter";
 import { EventType } from "../../../events/events";
-import { PublicodesResult } from "@socialgouv/modeles-social/bin";
+import { PublicodesResult } from "@socialgouv/modeles-social";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { CommonSituationStoreSlice } from "../../../situationStore";
 import { StoreSlice } from "../../../types";
-import { informationToSituation } from "src/modules/outils/common/indemnite-depart/steps/Informations/utils";
+import { informationToSituation } from "src/modules/outils/common/indemnite-depart/steps/Informations/components/utils";
 
 const initialState: ResultStoreData = {
   input: {

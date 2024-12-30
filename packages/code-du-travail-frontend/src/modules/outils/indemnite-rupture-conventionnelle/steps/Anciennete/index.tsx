@@ -1,11 +1,11 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useMemo } from "react";
 import {
   RadioQuestion,
   TextQuestion,
 } from "src/modules/outils/common/components";
-import { informationToSituation } from "src/modules/outils/common/indemnite-depart/steps/Informations/utils";
-import { getMessageMotifExample } from "src/modules/outils/common/indemnite-depart/agreements";
+import { getMotifExampleMessage } from "src/modules/outils/common/indemnite-depart/agreements";
 import { AbsencePeriods } from "src/modules/outils/common/indemnite-depart/steps/Anciennete";
+import { informationToSituation } from "src/modules/outils/common/indemnite-depart/steps/Informations/components/utils";
 import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
@@ -53,14 +53,14 @@ const StepAnciennete = () => {
     ),
   }));
 
+  const messageMotifExample = useMemo(
+    () => getMotifExampleMessage(informationData),
+    [informationData]
+  );
+
   useEffect(() => {
     init();
   }, [init]);
-
-  const messageMotifsExample = React.useMemo(
-    () => getMessageMotifExample(informationData),
-    [informationData]
-  );
 
   return (
     <>
@@ -105,6 +105,20 @@ const StepAnciennete = () => {
         onChangeSelectedOption={onChangeHasAbsenceProlonge}
         error={errorAbsenceProlonge}
       />
+      {/* <SectionTitleWithTooltip
+        name="Période d’absence prolongée"
+        tooltip={{
+          content: (
+            <p>
+              Pour rendre la saisie de l&apos;outil plus simple, les absences de
+              moins d&apos;un mois ne sont pas comptabilisées. Or, ces absences
+              peuvent impacter l&apos;ancienneté et donner ainsi lieu à un
+              montant d&apos;indemnité inférieur à celui calculé par notre
+              simulateur.
+            </p>
+          ),
+        }}
+      /> //TODO attention on a viré ça*/}
       {hasAbsenceProlonge === "oui" && (
         <AbsencePeriods
           onChange={onChangeAbsencePeriods}
@@ -112,7 +126,7 @@ const StepAnciennete = () => {
           absences={absencePeriods}
           error={errorAbsencePeriods}
           informationData={informationData}
-          messageMotifExample={messageMotifsExample}
+          messageMotifExample={messageMotifExample}
         />
       )}
     </>

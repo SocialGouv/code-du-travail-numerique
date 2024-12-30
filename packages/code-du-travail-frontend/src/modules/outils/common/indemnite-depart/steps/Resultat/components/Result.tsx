@@ -1,6 +1,7 @@
 import { Notification } from "@socialgouv/modeles-social";
 import React from "react";
 import { formatToEuro } from "src/common/formatToEuro";
+import { NoticeNote } from "src/modules/outils/common/components/NoticeNote";
 
 type Props = {
   maxResult: string;
@@ -25,18 +26,21 @@ export default function Result({
             }}
           />
         </strong>
-        <small>
-          {notifications.length > 0 && (
-            <ul>
-              {notifications.map((notification, index) => (
-                <li key={index} data-testid={`notification-${index}`}>
-                  {notification.description}
-                </li>
-              ))}
-            </ul>
-          )}
-        </small>
+        <NoticeNote
+          numberOfElements={notifications.length}
+          currentElement={0}
+          isList
+        />
       </p>
+      {notifications.map((notification, index) => (
+        <small key={index} data-testid={`notification-${index}`}>
+          <NoticeNote
+            numberOfElements={notifications.length}
+            currentElement={1 + index}
+          />
+          {notification.description}
+        </small>
+      ))}
     </div>
   );
 }

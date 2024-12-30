@@ -1,5 +1,5 @@
 import { CatPro3239 } from "@socialgouv/modeles-social";
-import { getMessageMotifExample } from "../ui-customizations/messages";
+import { getMotifExampleMessage } from "../messages";
 
 describe("getMessageMotifExample", () => {
   test.each`
@@ -11,7 +11,7 @@ describe("getMessageMotifExample", () => {
     "getMessageMotifExample returns $expected when categoryPro3239 is $categoryPro3239",
     ({ categoryPro3239, expected }) => {
       expect(
-        getMessageMotifExample({
+        getMotifExampleMessage({
           "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle":
             categoryPro3239,
         })
@@ -20,7 +20,7 @@ describe("getMessageMotifExample", () => {
   );
 
   test("getMessageMotifExample returns 'c' when informations is undefined", () => {
-    expect(getMessageMotifExample()).toBe(
+    expect(getMotifExampleMessage()).toBe(
       "Les congés payés, le congé de maternité, paternité ou d'adoption, le congé de présence parentale, le congé parental d'éducation à temps partiel, l'arrêt de travail lié à un accident du travail ou une maladie professionnelle, le congé lié à la formation professionnelle (CIF, projet de transition professionnelle), le congé de solidarité internationale, le congé de solidarité familiale et le stage de fin d'étude de plus de 2 mois sont déjà pris en compte dans l'ancienneté et ne sont pas des périodes à renseigner ci-après :"
     );
   });

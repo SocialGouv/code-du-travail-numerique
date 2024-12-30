@@ -72,7 +72,6 @@ export const PubliQuestion: React.FC<Props> = ({
           selectedOption={value}
           onChangeSelectedOption={onChange}
           error={error}
-          showRequired
           subLabel={description}
           autoFocus={autoFocus}
         />

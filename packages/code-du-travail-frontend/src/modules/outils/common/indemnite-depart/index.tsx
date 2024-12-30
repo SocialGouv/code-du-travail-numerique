@@ -105,6 +105,7 @@ const IndemniteDepartSimulator = ({
       ]}
       hiddenStep={getHiddenSteps()}
     />
+    // {feedbackPopup && <Feedback category={feedbackPopup} />} //TODO A FAIRE
   );
 };
 

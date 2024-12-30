@@ -1,5 +1,5 @@
 import { supportedCcn } from "@socialgouv/modeles-social";
-import { AgreementSupportInfo } from "../../../components/Agreement/types";
+import { AgreementSupportInfo } from "../types";
 
 const getSupportedCc = (): AgreementSupportInfo[] =>
   supportedCcn.map((item) => ({

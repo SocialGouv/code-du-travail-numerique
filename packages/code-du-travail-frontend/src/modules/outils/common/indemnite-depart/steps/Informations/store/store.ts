@@ -15,7 +15,7 @@ import {
 } from "@socialgouv/modeles-social";
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../../publicodes";
 import { removeDuplicateObject } from "src/lib";
-import { informationToSituation } from "../utils";
+import { informationToSituation } from "../components/utils";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import * as Sentry from "@sentry/nextjs";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";

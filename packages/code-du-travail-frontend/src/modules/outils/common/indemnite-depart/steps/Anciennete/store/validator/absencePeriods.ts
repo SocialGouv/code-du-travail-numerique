@@ -6,7 +6,7 @@ import {
   AncienneteStoreInput,
 } from "../types";
 import { CommonInformationsStoreInput } from "../../../Informations/store";
-import { informationToSituation } from "../../../Informations/utils";
+import { informationToSituation } from "../../../Informations/components/utils";
 
 export const getAbsencePeriodsErrors = (
   state: AncienneteStoreInput,
@@ -67,7 +67,7 @@ export const getAbsencePeriodsErrors = (
       });
     if (absenceErrors.length === 0) {
       errors.errorAbsencePeriods = {
-        global: "Vous devez renseigner tous les champs",
+        global: "Vous devez renseigner à minima une absence",
       };
     } else if (
       absenceErrors.filter(

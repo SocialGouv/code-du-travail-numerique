@@ -8,7 +8,6 @@ describe("<SalaireTempsPlein />", () => {
       render(
         <SalaireTempsPlein
           title="Yo"
-          subTitle="Wesh"
           onSalariesChange={jest.fn()}
           salaryPeriods={[]}
           error={undefined}
@@ -21,7 +20,6 @@ describe("<SalaireTempsPlein />", () => {
     const { queryByText } = render(
       <SalaireTempsPlein
         title="Indiquez le montant des salaires mensuels brut blabla"
-        subTitle="Wesh"
         onSalariesChange={jest.fn()}
         salaryPeriods={[
           {
@@ -47,15 +45,14 @@ describe("<SalaireTempsPlein />", () => {
     const onSalariesChange = (salaries: any) => {
       initObject = salaries;
     };
-    const { getByTitle } = render(
+    const { getByLabelText } = render(
       <SalaireTempsPlein
         title="Yo"
-        subTitle="Wesh"
         onSalariesChange={onSalariesChange}
         salaryPeriods={initObject}
       />
     );
-    const input1 = getByTitle(
+    const input1 = getByLabelText(
       /Salaire mensuel brut en € pour le mois/i
     ) as HTMLInputElement;
     fireEvent.change(input1, { target: { value: "1500" } });
@@ -73,16 +70,15 @@ describe("<SalaireTempsPlein />", () => {
     const onSalariesChange = (salaries: any) => {
       initObject = salaries;
     };
-    const { getByTitle } = render(
+    const { getByLabelText } = render(
       <SalaireTempsPlein
         title="Yo"
-        subTitle="Wesh"
         onSalariesChange={onSalariesChange}
         salaryPeriods={initObject}
       />
     );
-    const input1 = getByTitle(
-      /Renseignez la prime exceptionnelle pour le mois 1 ici/i
+    const input1 = getByLabelText(
+      /Prime exceptionnelle pour le mois 1/i
     ) as HTMLInputElement;
     expect(input1).toBeTruthy();
     fireEvent.change(input1, { target: { value: "6000" } });
@@ -93,7 +89,6 @@ describe("<SalaireTempsPlein />", () => {
     const { getByText } = render(
       <SalaireTempsPlein
         title="Yo"
-        subTitle="Wesh"
         onSalariesChange={jest.fn()}
         salaryPeriods={[
           {

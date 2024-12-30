@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
 import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
-import { HighlightSalary, SalaireTempsPlein, TempsPartiel } from "./components";
+import { SalaireTempsPlein, TempsPartiel } from "./components";
 import { getSupportedAgreement } from "@socialgouv/modeles-social";
 import { IndemniteDepartStepName } from "../..";
 import { AgreementsInjector } from "../../agreements";
-import { getSalairesTempsPleinSubtitle } from "../../agreements/ui-customizations";
 import {
   generateSalaireTempsPleinQuestion,
   generateSameSalaryQuestion,
@@ -86,7 +85,6 @@ const StepSalaires = ({ type }: Props) => {
           selectedOption={hasTempsPartiel}
           onChangeSelectedOption={onChangeHasTempsPartiel}
           error={errorHasTempsPartiel}
-          showRequired
           autoFocus={showHasTempsPartiel}
         />
       )}
@@ -116,7 +114,6 @@ const StepSalaires = ({ type }: Props) => {
             selectedOption={hasSameSalary}
             onChangeSelectedOption={onChangeHasSameSalary}
             error={errorHasSameSalary}
-            showRequired
             autoFocus={hasTempsPartiel === "non"}
           />
           {hasSameSalary === "oui" && (
@@ -131,6 +128,7 @@ const StepSalaires = ({ type }: Props) => {
               id="salary"
               dataTestId={"same-salary-value"}
               autoFocus={hasSameSalary === "oui"}
+              // text="€" // TODO: quid
             />
           )}
           {hasSameSalary === "non" && (
@@ -140,16 +138,11 @@ const StepSalaires = ({ type }: Props) => {
                 arretTravail,
                 salaryPeriods
               )}
-              subTitle={getSalairesTempsPleinSubtitle(agreement?.num)}
-              HighLightComponent={
-                agreement?.num === 3239 ? undefined : (
-                  <HighlightSalary agreementNumber={agreement?.num} />
-                )
-              }
               onSalariesChange={onSalariesChange}
               salaryPeriods={salaryPeriods}
               error={errorSalaryPeriods}
               autoFocus={hasSameSalary === "non"}
+              agreementNumber={agreement?.num}
             />
           )}
           {(hasSameSalary === "oui" || hasSameSalary === "non") &&

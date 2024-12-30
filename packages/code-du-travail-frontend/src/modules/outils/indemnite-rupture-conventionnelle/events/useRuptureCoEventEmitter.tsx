@@ -5,25 +5,31 @@ import {
   MatomoSimulatorEvent,
   trackQuestion,
 } from "src/lib";
-import { push as matopush } from "@socialgouv/matomo-next";
 import { IndemniteDepartStepName } from "../../common/indemnite-depart";
 import { EventType, eventEmitter } from "../../common/indemnite-depart/events";
+import { sendEvent } from "src/modules/utils";
 
 export const useRuptureCoEventEmitter = () => {
   useEffect(() => {
     eventEmitter.subscribe(EventType.SEND_RESULT_EVENT, (isEligible) => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoBaseEvent.OUTIL,
-        MatomoActionEvent.RUPTURE_CONVENTIONNELLE,
-        isEligible
+      sendEvent({
+        category: MatomoBaseEvent.OUTIL,
+        action: MatomoActionEvent.RUPTURE_CONVENTIONNELLE,
+        name: isEligible
           ? IndemniteDepartStepName.Resultat
           : MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE,
-      ]);
+      });
     });
 
     eventEmitter.subscribe(EventType.TRACK_QUESTION, (titre) => {
       trackQuestion(titre, MatomoActionEvent.RUPTURE_CONVENTIONNELLE);
+    });
+
+    eventEmitter.subscribe(EventType.TRACK_RESULT, () => {
+      sendEvent({
+        category: MatomoBaseEvent.OUTIL,
+        action: MatomoSimulatorEvent.CLICK_CALCUL_DETAIL,
+      });
     });
 
     return () => {
