@@ -20,6 +20,8 @@ type Props = {
   agreementNumber?: number;
 };
 
+//TODO: mieux gérer le responsive mobile du tableau
+
 export const SalaireTempsPlein = ({
   salaryPeriods,
   onSalariesChange,

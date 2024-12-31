@@ -62,6 +62,8 @@ const StepAnciennete = () => {
     init();
   }, [init]);
 
+  //TODO : à revoir au niveau de la validation, une fois qu'on clique sur suivant, impossible de compléter convenablement les dates
+
   return (
     <>
       <TextQuestion
