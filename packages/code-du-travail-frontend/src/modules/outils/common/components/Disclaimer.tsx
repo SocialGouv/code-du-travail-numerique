@@ -1,18 +1,23 @@
+import { fr } from "@codegouvfr/react-dsfr";
+import Alert from "@codegouvfr/react-dsfr/Alert";
 import React from "react";
 
 type Props = {
   title: string;
-  children: React.ReactNode;
+  message: string;
   dataTestId?: string;
 };
 
 export const Disclaimer = ({
   title,
-  children,
+  message,
   dataTestId,
 }: Props): JSX.Element => (
-  <div data-testid={dataTestId}>
-    <h2>{title}</h2>
-    {children}
-  </div>
+  <Alert
+    severity="warning"
+    data-testid={dataTestId}
+    title={title}
+    description={message}
+    className={fr.cx("fr-my-2w")}
+  />
 );

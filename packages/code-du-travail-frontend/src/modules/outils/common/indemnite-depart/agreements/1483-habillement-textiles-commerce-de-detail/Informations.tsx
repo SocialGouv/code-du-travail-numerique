@@ -27,7 +27,7 @@ export default function Agreement1483Informations() {
           {hasReceivedSalaries === "oui" && (
             <li>
               <p>Salaires perçus pendant le préavis&nbsp;:</p>
-              <div className={fr.cx("fr-mt-4w", "fr-table")}>
+              <div className={fr.cx("fr-mt-2w", "fr-table")}>
                 <div className={fr.cx("fr-table__wrapper")}>
                   <div className={fr.cx("fr-table__container")}>
                     <div className={fr.cx("fr-table__content")}>

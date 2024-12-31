@@ -1,5 +1,5 @@
 import { Formula } from "@socialgouv/modeles-social";
-import { MathFormula } from "src/outils/common/MathFormula";
+import { MathFormula } from "./MathFormula";
 
 type Props = {
   formula?: Formula;

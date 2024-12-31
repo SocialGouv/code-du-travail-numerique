@@ -9,6 +9,7 @@ import {
 import { formatToEuro } from "src/common/formatToEuro";
 import { IndemniteDepartType } from "../../../types";
 import { fr } from "@codegouvfr/react-dsfr";
+import { css } from "@styled-system/css";
 
 type SituationItem = {
   text: string;
@@ -41,10 +42,10 @@ export default function FilledElements(props: Props) {
   return (
     <>
       <h2>Éléments saisis</h2>
-      <ul>
+      <ul className={mainListStyle}>
         <li>
           <strong>Contrat de travail</strong>
-          <ul>
+          <ul className={fr.cx("fr-ml-2w")}>
             {props.contractTravail.map((item) => {
               return (
                 <li key={item.text}>
@@ -69,7 +70,7 @@ export default function FilledElements(props: Props) {
           props.agreementInformations.length > 0 && (
             <li>
               <strong>Informations</strong>
-              <ul>
+              <ul className={fr.cx("fr-ml-2w")}>
                 {props.agreementInformations.map((info, index) => (
                   <li key={"agreement-" + index}>
                     {info.label}&nbsp;:&nbsp;{info.value.replace(/^'|'$/g, "")}
@@ -85,7 +86,7 @@ export default function FilledElements(props: Props) {
           )}
         <li>
           <strong>Ancienneté (A)</strong>
-          <ul>
+          <ul className={fr.cx("fr-ml-2w")}>
             <li>
               Date de début du contrat de travail&nbsp;:&nbsp;
               {props.dateEntree}
@@ -123,7 +124,7 @@ export default function FilledElements(props: Props) {
         {!props.isStepSalaryHidden && (
           <li>
             <strong>Salaire de référence (Sref)</strong>
-            <ul>
+            <ul className={fr.cx("fr-ml-2w")}>
               {props.showHasTempsPartiel && (
                 <li>
                   Alternance temps plein / temps partiel&nbsp;:&nbsp;
@@ -158,12 +159,11 @@ export default function FilledElements(props: Props) {
                     props.salaryPeriods
                   )}
                   &nbsp;:&nbsp;
-                  <div className={fr.cx("fr-mt-4w", "fr-table")}>
+                  <div className={fr.cx("fr-mt-2w", "fr-table")}>
                     <div className={fr.cx("fr-table__wrapper")}>
                       <div className={fr.cx("fr-table__container")}>
                         <div className={fr.cx("fr-table__content")}>
                           <table>
-                            <caption>Salaires et Primes mensuelles</caption>
                             <thead>
                               <tr>
                                 <th scope="col">Mois</th>
@@ -211,3 +211,9 @@ export default function FilledElements(props: Props) {
     </>
   );
 }
+
+const mainListStyle = css({
+  "& > li": {
+    listStyleType: "none",
+  },
+});

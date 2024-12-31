@@ -27,6 +27,7 @@ import {
   eventEmitter,
   EventType,
 } from "src/modules/outils/common/indemnite-depart/events";
+import { fr } from "@codegouvfr/react-dsfr";
 
 const Eligible = () => {
   const store = useContext(IndemniteDepartContext);
@@ -87,6 +88,7 @@ const Eligible = () => {
       <Accordion
         label="Voir le détail du calcul"
         onExpandedChange={onClickAccordion}
+        className={fr.cx("fr-mb-2w")}
       >
         <FilledElements
           type={IndemniteDepartType.RUPTURE_CONVENTIONNELLE}
@@ -166,10 +168,9 @@ const Eligible = () => {
       {!result.agreementHasNoBetterAllowance && result.infoWarning && (
         <Disclaimer
           title={result.infoWarning.title}
+          message={result.infoWarning.message}
           dataTestId="eligible-cc-disclaimer"
-        >
-          <p>{result.infoWarning.message}</p>
-        </Disclaimer>
+        />
       )}
       <i>
         Le montant donné n’est qu’une estimation, il est donné à titre

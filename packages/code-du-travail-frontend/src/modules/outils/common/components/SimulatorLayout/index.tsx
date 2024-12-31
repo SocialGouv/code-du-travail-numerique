@@ -96,13 +96,8 @@ export const SimulatorLayout = (props: Props<string>) => {
 
   const onPrint = () => {
     try {
-      const detailsTags = document.getElementsByTagName("details");
-      for (let i = 0; i < detailsTags.length; i++) {
-        detailsTags[i].setAttribute("open", "");
-      }
       emitPrintEvent(title);
-
-      window?.print();
+      window.print();
     } catch (e) {
       console.error(e);
       Sentry.captureException(e);

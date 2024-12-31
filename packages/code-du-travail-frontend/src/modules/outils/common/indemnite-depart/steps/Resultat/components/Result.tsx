@@ -1,3 +1,4 @@
+import { fr } from "@codegouvfr/react-dsfr";
 import { Notification } from "@socialgouv/modeles-social";
 import React from "react";
 import { formatToEuro } from "src/common/formatToEuro";
@@ -15,22 +16,23 @@ export default function Result({
   maxResult,
 }: Props) {
   return (
-    <div>
+    <div className={fr.cx("fr-mb-2w")}>
       <h2>Indemnité</h2>
-      <p>
-        {resultMessage}{" "}
-        <strong>
+      <p className={fr.cx("fr-mb-1w")}>
+        {resultMessage}
+        <br />
+        <strong className={fr.cx("fr-h2", "fr-mt-3v")}>
           <span
             dangerouslySetInnerHTML={{
               __html: formatToEuro(parseFloat(maxResult)),
             }}
           />
+          <NoticeNote
+            numberOfElements={notifications.length}
+            currentElement={0}
+            isList
+          />
         </strong>
-        <NoticeNote
-          numberOfElements={notifications.length}
-          currentElement={0}
-          isList
-        />
       </p>
       {notifications.map((notification, index) => (
         <small key={index} data-testid={`notification-${index}`}>

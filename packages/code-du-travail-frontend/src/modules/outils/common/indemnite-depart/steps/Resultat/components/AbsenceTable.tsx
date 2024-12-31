@@ -14,7 +14,7 @@ const AbsenceTable = ({ absencesPeriods }: Props): JSX.Element => {
     absencesPeriods.filter((item) => item.startedAt !== undefined).length > 0;
 
   return (
-    <div className={fr.cx("fr-mt-4w", "fr-table")}>
+    <div className={fr.cx("fr-mt-2w", "fr-table")}>
       <div className={fr.cx("fr-table__wrapper")}>
         <div className={fr.cx("fr-table__container")}>
           <div className={fr.cx("fr-table__content")}>

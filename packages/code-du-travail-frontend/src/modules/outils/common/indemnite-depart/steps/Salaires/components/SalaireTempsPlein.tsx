@@ -87,7 +87,7 @@ export const SalaireTempsPlein = ({
         agreementNumber={agreementNumber}
         salaireTempsPlein={getSalairesTempsPleinSubtitle(agreementNumber)}
       />
-      <div className={fr.cx("fr-mt-4w", "fr-table")}>
+      <div className={fr.cx("fr-mt-3w", "fr-table")}>
         <div className={fr.cx("fr-table__wrapper")}>
           <div className={fr.cx("fr-table__container")}>
             <div className={fr.cx("fr-table__content")}>
