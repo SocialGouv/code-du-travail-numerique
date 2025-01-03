@@ -24,9 +24,9 @@ export const AgreementsSection = ({ letter, agreements }: Props) => {
 
   return (
     <>
-      <div id={letter} ref={letterRef} tabIndex={-1} className={fr.cx("fr-h3")}>
+      <p id={letter} ref={letterRef} tabIndex={-1} className={fr.cx("fr-h3")}>
         {letter}
-      </div>
+      </p>
       <ListWithArrow
         items={agreements.map(({ shortTitle, slug }) => {
           return (
