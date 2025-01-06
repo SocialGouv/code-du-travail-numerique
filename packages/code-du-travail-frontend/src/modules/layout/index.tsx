@@ -1,5 +1,5 @@
 import { PolyfillComponent } from "../config/PolyfillComponent";
-import { Footer } from "./Footer";
+import { Footer } from "./footer";
 import { Header } from "./header";
 import { SkipLinks } from "./SkipLinks";
 
