@@ -6,7 +6,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
     aria-hidden="true"
   >
     <button
-      class="sc-b0ebfae6-0 hPQAhy"
+      class="sc-95bd4344-0 dqVtzj"
     >
       texte dans le bouton
     </button>
@@ -22,37 +22,37 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
     >
       <div>
         <div
-          class="sc-f4126b8e-0 dWonlk"
+          class="sc-19478701-0 jZYVgz"
           data-reach-dialog-overlay=""
         >
           <div
             aria-label="Contact"
             aria-modal="true"
-            class="sc-f4126b8e-1 kQHvXg"
+            class="sc-19478701-1 hQHZiT"
             data-reach-dialog-content=""
             role="dialog"
             tabindex="-1"
           >
             <header
-              class="sc-238bfc37-0 bnxcHY"
+              class="sc-e32628d4-0 cXUuvO"
             >
               <h1
-                class="sc-efa69b03-0 cNAUpX"
+                class="sc-5f05e99b-0 dQbgIy"
               >
                 <span
-                  class="sc-f4f767e-0 jZdFSO"
+                  class="sc-a4d7a179-0 jRxkkJ"
                 />
                 Contact
               </h1>
             </header>
             <div
-              class="sc-13323d30-0 exlNfj"
+              class="sc-2a0a4b0a-0 dLOZmV"
             >
               <p>
                 Si vous souhaitez nous interroger sur vos droits ou sur des dispositions en droit du travail, nous vous invitons à contacter
                  
                 <button
-                  class="sc-b0ebfae6-0 jcMFcJ"
+                  class="sc-95bd4344-0 hgVQqQ"
                 >
                   les services du ministère du Travail
                   <svg
@@ -94,11 +94,11 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
               </a>
             </p>
             <button
-              class="sc-b0ebfae6-0 dGXoMZ sc-f4126b8e-2 irTzHW"
+              class="sc-95bd4344-0 dxXsic sc-19478701-2 fGtwND"
               title="fermer la modale"
             >
               <div
-                class="sc-f92038f6-0 llOtbb"
+                class="sc-8dcb2faa-0 gxfPDw"
               >
                 fermer la modale
               </div>
