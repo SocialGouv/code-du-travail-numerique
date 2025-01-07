@@ -39,7 +39,6 @@ export function RadioQuestion({
     <div>
       <RadioButtons
         legend={<Html as="p">{label}</Html>}
-        hintText={subLabel}
         options={questions.map((question, index) => ({
           name,
           label: question.label,
@@ -53,8 +52,8 @@ export function RadioQuestion({
             required: true,
           },
         }))}
-        state={error ? "error" : "default"}
-        stateRelatedMessage={error}
+        state={error ? "error" : subLabel ? "info" : "default"}
+        stateRelatedMessage={error || subLabel || undefined}
       />
       {note && <i>{note}</i>}
     </div>

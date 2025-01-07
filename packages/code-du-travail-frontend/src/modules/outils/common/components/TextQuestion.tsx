@@ -62,7 +62,21 @@ export function TextQuestion({
   return (
     <Input
       label={<Html as="span">{label}</Html>}
-      hintText={subLabel}
+      hintText={
+        unit === "an"
+          ? "Durée attendue en années"
+          : unit === "jour"
+            ? "Durée attendue en jours"
+            : unit === "mois"
+              ? "Durée attendue en mois"
+              : unit === "pourcent"
+                ? "Pourcentage attendu"
+                : unit === "semestre"
+                  ? "Durée attendue en semestres"
+                  : unit === "€"
+                    ? "Montant attendu en euros"
+                    : undefined
+      }
       nativeInputProps={{
         type: inputType,
         id,
@@ -87,9 +101,9 @@ export function TextQuestion({
               __html: xssWrapper(error),
             }}
           />
-        ) : subLabel ? (
-          subLabel
-        ) : undefined
+        ) : (
+          subLabel || undefined
+        )
       }
     />
   );

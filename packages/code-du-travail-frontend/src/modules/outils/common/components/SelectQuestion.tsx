@@ -42,7 +42,6 @@ export const SelectQuestion = ({
   return (
     <Select
       label={<Html as="span">{label}</Html>}
-      hint={subLabel}
       data-testid={name}
       nativeSelectProps={{
         onChange: handleChange,
@@ -51,8 +50,8 @@ export const SelectQuestion = ({
         autoFocus,
         required: true,
       }}
-      state={error ? "error" : "default"}
-      stateRelatedMessage={error}
+      state={error ? "error" : subLabel ? "info" : "default"}
+      stateRelatedMessage={error || subLabel || undefined}
     >
       <option value="" disabled>
         Sélectionnez une option
