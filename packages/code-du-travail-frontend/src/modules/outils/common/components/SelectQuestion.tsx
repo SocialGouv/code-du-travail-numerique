@@ -49,6 +49,7 @@ export const SelectQuestion = ({
         value: selectedOption ?? "",
         id: `input-${name}`,
         autoFocus,
+        required: true,
       }}
       state={error ? "error" : "default"}
       stateRelatedMessage={error}

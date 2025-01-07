@@ -50,6 +50,7 @@ export function RadioQuestion({
             checked: selectedOption === question.value,
             onChange: () => onChange(question.value),
             autoFocus: autoFocus && index === 0,
+            required: true,
           },
         }))}
         state={error ? "error" : "default"}

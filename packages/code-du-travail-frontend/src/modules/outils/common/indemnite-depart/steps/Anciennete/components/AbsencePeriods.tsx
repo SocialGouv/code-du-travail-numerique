@@ -128,8 +128,10 @@ const AbsencePeriods = ({
       </label>
       <p className={fr.cx("fr-mt-2w")}>
         Veuillez créer une ligne différente pour chaque période d&apos;absence
-        (de plus d&apos;un mois) même si vous avez été absent plusieurs fois
-        pour le même motif.
+        de plus d&apos;un mois même si vous avez été absent plusieurs fois pour
+        le même motif. Les absences de moins d&apos;un mois ne sont pas
+        comptabilisées dans ce simulateur, cela peut impacter l&apos;ancienneté
+        et donner un montant inférieur.
       </p>
 
       {messageMotifExample && (

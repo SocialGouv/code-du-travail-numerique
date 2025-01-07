@@ -71,6 +71,7 @@ export function TextQuestion({
         onChange: handleChange,
         autoFocus,
         title,
+        required: true,
         ref: (ref: HTMLInputElement) => setInputRef(ref),
       }}
       data-testid={dataTestId}

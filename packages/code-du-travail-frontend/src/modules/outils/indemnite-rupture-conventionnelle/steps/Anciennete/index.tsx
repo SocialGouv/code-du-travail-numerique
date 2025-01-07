@@ -107,20 +107,6 @@ const StepAnciennete = () => {
         onChangeSelectedOption={onChangeHasAbsenceProlonge}
         error={errorAbsenceProlonge}
       />
-      {/* <SectionTitleWithTooltip
-        name="Période d’absence prolongée"
-        tooltip={{
-          content: (
-            <p>
-              Pour rendre la saisie de l&apos;outil plus simple, les absences de
-              moins d&apos;un mois ne sont pas comptabilisées. Or, ces absences
-              peuvent impacter l&apos;ancienneté et donner ainsi lieu à un
-              montant d&apos;indemnité inférieur à celui calculé par notre
-              simulateur.
-            </p>
-          ),
-        }}
-      /> //TODO attention on a viré ça*/}
       {hasAbsenceProlonge === "oui" && (
         <AbsencePeriods
           onChange={onChangeAbsencePeriods}

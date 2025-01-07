@@ -95,7 +95,8 @@ export default function Agreement2120({ type }: Props) {
       // tooltip={{
       //   content,
       // }}
-      //TODO ATTENTION FAUT IL METTRE LE TOOLTIP ?
+
+      //TODO ATTENTION FAUT IL METTRE LE TOOLTIP ? => passer le tooltip dans la barre bleu (msie en exerge)
     />
   );
 }

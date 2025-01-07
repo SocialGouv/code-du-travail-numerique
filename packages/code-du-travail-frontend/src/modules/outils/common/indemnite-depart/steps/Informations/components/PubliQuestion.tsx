@@ -32,7 +32,6 @@ export const PubliQuestion: React.FC<Props> = ({
   );
   const { question, cdtn, description } = rule;
 
-  // cdtn.precision? ???????? //TODO add precision
   // unit={rule.unité} // TODO add unit
 
   if (!question) {
