@@ -3,7 +3,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Container } from "../layout/Container";
 import { useEffect, useState } from "react";
-import { useNeedMoreInfoEvents } from "../layout/infos/tracking";
+import { useNeedMoreInfoEvents } from "../layout/footer/infos/tracking";
 import Image from "next/image";
 import { Input } from "@codegouvfr/react-dsfr/Input";
 import { Button } from "@codegouvfr/react-dsfr/Button";
