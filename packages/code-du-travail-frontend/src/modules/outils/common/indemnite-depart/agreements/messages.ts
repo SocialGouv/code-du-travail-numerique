@@ -19,19 +19,6 @@ export const getMotifExampleMessage = (
   return `<b>Ne pas déclarer les absences suivantes :</b><br/><ul><li>Congés payés</li><li>Congé de maternité, de paternité ou d’adoption</li><li>Arrêt de travail lié à un accident du travail ou maladie professionnelle</li><li>Congé parental d’éducation à temps partiel</li><li>Congé de présence parentale</li><li>Congé lié à la formation professionnelle (CIF, projet de transition professionnelle)</li><li>Congé de solidarité familiale</li><li>Stage de fin d'étude de plus de 2 mois</li><li>Congé de solidarité internationale</li></ul><b>Pour le calcul de l'indemnité de licenciement, ces absences n’ont pas d’impact sur le calcul de l’ancienneté.</b>`;
 };
 
-export const getSalairesTempsPleinSubtitle = (
-  agreementNumber?: number
-): string | undefined => {
-  switch (agreementNumber) {
-    case 3239:
-      return undefined;
-    case 1702:
-      return "Indiquez le montant des salaires (en incluant l’indemnité de congés payés, les primes, dont la prime de vacances, et les avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)";
-    default:
-      return "Indiquez le montant des salaires (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)";
-  }
-};
-
 export const isParentalNoticeHiddenForAgreement = (
   isAgreementBetter: boolean,
   agreementNumber: number

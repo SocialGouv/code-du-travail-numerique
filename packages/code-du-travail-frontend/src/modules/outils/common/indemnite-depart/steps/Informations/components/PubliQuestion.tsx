@@ -8,6 +8,8 @@ import {
 } from "../../../../components";
 import { reverseValues } from "../../../../publicodes";
 
+export type InputUnit = "€" | "an" | "semestre" | "mois" | "jour" | "pourcent";
+
 interface Props {
   name: string;
   rule: Rule;
@@ -31,8 +33,6 @@ export const PubliQuestion: React.FC<Props> = ({
     Math.random().toString(36).substring(2, 15)
   );
   const { question, cdtn, description } = rule;
-
-  // unit={rule.unité} // TODO add unit
 
   if (!question) {
     return <></>;
@@ -87,6 +87,7 @@ export const PubliQuestion: React.FC<Props> = ({
           subLabel={description}
           dataTestId={name}
           autoFocus={autoFocus}
+          unit={rule.unité}
         />
       );
     case RuleType.Date:
@@ -115,6 +116,7 @@ export const PubliQuestion: React.FC<Props> = ({
           id={name}
           dataTestId={name}
           autoFocus={autoFocus}
+          unit={rule.unité as InputUnit}
         />
       );
   }

@@ -128,7 +128,7 @@ const StepSalaires = ({ type }: Props) => {
               id="salary"
               dataTestId={"same-salary-value"}
               autoFocus={hasSameSalary === "oui"}
-              // text="€" // TODO: quid
+              unit="€"
             />
           )}
           {hasSameSalary === "non" && (

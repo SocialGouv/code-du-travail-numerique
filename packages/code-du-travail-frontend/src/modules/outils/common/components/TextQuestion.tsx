@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Html from "src/modules/common/Html";
 import { xssWrapper } from "src/lib";
 import { Input } from "@codegouvfr/react-dsfr/Input";
+import { InputUnit } from "../indemnite-depart/steps/Informations/components/PubliQuestion";
 
 type Props = {
   onChange: (value: string) => void;
@@ -14,6 +15,7 @@ type Props = {
   id: string;
   dataTestId?: string;
   autoFocus?: boolean;
+  unit?: InputUnit;
 };
 
 function formatValueToFr(value: string): string {
@@ -38,6 +40,7 @@ export function TextQuestion({
   title,
   id,
   dataTestId,
+  unit,
   autoFocus = false,
 }: Props) {
   const [inputRef, setInputRef] = useState<HTMLInputElement>();
@@ -75,15 +78,18 @@ export function TextQuestion({
         ref: (ref: HTMLInputElement) => setInputRef(ref),
       }}
       data-testid={dataTestId}
-      state={error ? "error" : "default"}
+      state={error ? "error" : subLabel ? "info" : "default"}
+      iconId={unit === "€" ? "fr-icon-money-euro-circle-line" : undefined}
       stateRelatedMessage={
-        error && (
+        error ? (
           <span
             dangerouslySetInnerHTML={{
               __html: xssWrapper(error),
             }}
           />
-        )
+        ) : subLabel ? (
+          subLabel
+        ) : undefined
       }
     />
   );

@@ -3,15 +3,15 @@ import React from "react";
 
 const HighlightSalary = ({
   agreementNumber,
-  salaireTempsPlein,
+  salaireTempsPleinMessage,
 }: {
   agreementNumber?: number;
-  salaireTempsPlein?: string;
+  salaireTempsPleinMessage?: string;
 }): JSX.Element | undefined => {
   if (agreementNumber === 3239) return undefined;
   return (
     <div className={fr.cx("fr-highlight", "fr-mb-2w")}>
-      {salaireTempsPlein && <p>{salaireTempsPlein}</p>}
+      {salaireTempsPleinMessage && <p>{salaireTempsPleinMessage}</p>}
       <p>
         Prendre en compte le salaire fixe et variable (ex : commissions), les
         primes et avantages en nature. Les éléments de rémunération suivants

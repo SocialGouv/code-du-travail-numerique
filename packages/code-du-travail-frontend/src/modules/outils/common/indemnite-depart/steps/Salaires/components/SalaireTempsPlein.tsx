@@ -4,20 +4,18 @@ import { SalaryPeriods } from "@socialgouv/modeles-social";
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import HighlightSalary from "./HighlightSalary";
-import { getSalairesTempsPleinSubtitle } from "../../../agreements";
 
 type Props = {
   title: string;
-  // subTitle?: string; //TODO on a viré ça
   salaryPeriods: SalaryPeriods[];
   onSalariesChange: (salaries: SalaryPeriods[]) => void;
   error?: string;
   note?: string;
-  //   tooltip?: Tooltip; //TODO on a viré ça
   dataTestidSalaries?: string;
   noPrime?: boolean;
   autoFocus?: boolean;
   agreementNumber?: number;
+  salaireTempsPleinMessage?: string;
 };
 
 //TODO: mieux gérer le responsive mobile du tableau
@@ -32,6 +30,7 @@ export const SalaireTempsPlein = ({
   noPrime,
   autoFocus = false,
   agreementNumber,
+  salaireTempsPleinMessage,
 }: Props): JSX.Element => {
   const [errorsSalaries, setErrorsSalaries] = React.useState({});
   const [errorsPrimes, setErrorsPrimes] = React.useState({});
@@ -87,7 +86,10 @@ export const SalaireTempsPlein = ({
       <p className={fr.cx("fr-text--bold")}>{title}</p>
       <HighlightSalary
         agreementNumber={agreementNumber}
-        salaireTempsPlein={getSalairesTempsPleinSubtitle(agreementNumber)}
+        salaireTempsPleinMessage={
+          salaireTempsPleinMessage ??
+          "Indiquez le montant des salaires (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)"
+        }
       />
       <div className={fr.cx("fr-mt-3w", "fr-table")}>
         <div className={fr.cx("fr-table__wrapper")}>
@@ -122,6 +124,7 @@ export const SalaireTempsPlein = ({
                           state={
                             errorsSalaries[`${index}`] ? "error" : "default"
                           }
+                          iconId="fr-icon-money-euro-circle-fill"
                           stateRelatedMessage={errorsSalaries[`${index}`]}
                         />
                       </td>
@@ -147,6 +150,7 @@ export const SalaireTempsPlein = ({
                                 ? "prime-" + dataTestidSalaries
                                 : "prime-input"
                             }
+                            iconId="fr-icon-money-euro-circle-fill"
                           />
                         </td>
                       )}
