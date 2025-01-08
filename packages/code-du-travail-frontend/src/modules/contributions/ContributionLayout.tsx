@@ -204,7 +204,7 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
               "fr-col-12",
               "fr-col-md-8",
               "fr-mb-md-0",
-              "fr-my-6w",
+              "fr-mt-6w",
               displayContent ? "fr-unhidden" : "fr-hidden"
             )}
           >
@@ -235,7 +235,7 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
               )}
               {contribution.messageBlock && (
                 <div
-                  className={fr.cx("fr-alert", "fr-alert--info", "fr-my-6w")}
+                  className={fr.cx("fr-alert", "fr-alert--info", "fr-mt-6w")}
                 >
                   <>
                     <div className={fr.cx("fr-h5")}>Attention</div>
@@ -308,7 +308,7 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
           </div>
         </div>
       )}
-      <div className={fr.cx("fr-col-12", "fr-col-md-8", "fr-mb-6w")}>
+      <div className={fr.cx("fr-col-12", "fr-col-md-8", "fr-my-6w")}>
         <Feedback></Feedback>
       </div>
     </div>
