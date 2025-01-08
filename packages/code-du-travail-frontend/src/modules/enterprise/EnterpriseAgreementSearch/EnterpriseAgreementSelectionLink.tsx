@@ -9,6 +9,7 @@ import { useSearchParams } from "next/navigation";
 import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelectionDetail";
 import { getEnterpriseAgreements } from "./utils";
 import { CardTitleStyle } from "../../convention-collective/style";
+import { useEnterpriseAgreementSearchTracking } from "./tracking";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;
@@ -22,6 +23,8 @@ export const EnterpriseAgreementSelectionLink = ({
   onAgreementSelect,
 }: Props) => {
   const searchParams = useSearchParams();
+  const { emitSelectEnterpriseAgreementEvent } =
+    useEnterpriseAgreementSearchTracking();
   return (
     <>
       <EnterpriseAgreementSelectionDetail enterprise={enterprise} />
@@ -39,6 +42,9 @@ export const EnterpriseAgreementSelectionLink = ({
                         href: `/convention-collective/${agreement.slug}`,
                         onClick: widgetMode
                           ? (ev) => {
+                              emitSelectEnterpriseAgreementEvent(
+                                `idcc${agreement.id}`
+                              );
                               if (disabled) ev.preventDefault();
                               else if (widgetMode) {
                                 window.parent?.postMessage(
@@ -54,12 +60,19 @@ export const EnterpriseAgreementSelectionLink = ({
                                 );
                               }
                             }
-                          : undefined,
+                          : () => {
+                              emitSelectEnterpriseAgreementEvent(
+                                `idcc${agreement.id}`
+                              );
+                            },
                       }
                     : {
                         href: "#",
                         onClick: (ev) => {
                           if (disabled) ev.preventDefault();
+                          emitSelectEnterpriseAgreementEvent(
+                            `idcc${agreement.id}`
+                          );
                           onAgreementSelect(agreement);
                         },
                       }

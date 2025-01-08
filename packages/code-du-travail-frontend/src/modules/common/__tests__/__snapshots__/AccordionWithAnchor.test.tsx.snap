@@ -3,7 +3,7 @@
 exports[`<AccordionWithAnchor /> with items 1`] = `
 <div>
   <div
-    class="fr-accordions-group"
+    class="fr-accordions-group undefined"
     data-fr-group="false"
   >
     <section

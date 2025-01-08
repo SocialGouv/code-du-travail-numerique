@@ -17,7 +17,7 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
       Pour une question concernant une demande d'indemnisation ou l'état d'avancement d'un dossier en cours d'instruction
     </p>
     <div
-      class="fr-accordions-group"
+      class="fr-accordions-group undefined"
       data-fr-group="false"
     >
       <section

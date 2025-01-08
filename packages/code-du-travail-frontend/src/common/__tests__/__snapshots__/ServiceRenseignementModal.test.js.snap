@@ -6,7 +6,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
     aria-hidden="true"
   >
     <button
-      class="sc-95bd4344-0 dqVtzj"
+      class="sc-b0ebfae6-0 hPQAhy"
     >
       texte dans le bouton
     </button>
@@ -22,31 +22,31 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
     >
       <div>
         <div
-          class="sc-19478701-0 jZYVgz"
+          class="sc-f4126b8e-0 dWonlk"
           data-reach-dialog-overlay=""
         >
           <div
             aria-label="Service de renseignement"
             aria-modal="true"
-            class="sc-19478701-1 hQHZiT"
+            class="sc-f4126b8e-1 kQHvXg"
             data-reach-dialog-content=""
             role="dialog"
             tabindex="-1"
           >
             <header
-              class="sc-e32628d4-0 cXUuvO"
+              class="sc-238bfc37-0 bnxcHY"
             >
               <h1
-                class="sc-5f05e99b-0 dQbgIy"
+                class="sc-efa69b03-0 cNAUpX"
               >
                 <span
-                  class="sc-a4d7a179-0 jRxkkJ"
+                  class="sc-f4f767e-0 jZdFSO"
                 />
                 Les services du ministère du Travail
               </h1>
             </header>
             <h2
-              class="sc-b879fc2d-0 hyiHle"
+              class="sc-a53a0f9a-0 bIsTsN"
             >
               Contact téléphonique
             </h2>
@@ -69,7 +69,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </em>
             </a>
             <h2
-              class="sc-b879fc2d-0 hyiHle"
+              class="sc-a53a0f9a-0 bIsTsN"
             >
               Contact par email et prise de rendez-vous
             </h2>
@@ -82,11 +82,11 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                 Saisissez votre numéro de département :
               </label>
               <div
-                class="sc-669fe731-0 amSvQ sc-56e7bccd-4 jcgfHv"
+                class="sc-46a9700d-0 eEbjpm sc-56e7bccd-4 jcgfHv"
               >
                 <input
                   autocomplete="off"
-                  class="sc-669fe731-1 bBYNqO"
+                  class="sc-46a9700d-1 dZpFqX"
                   id="search-service"
                   maxlength="3"
                   name="departement"
@@ -97,7 +97,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </div>
               <button
                 aria-label="Recherchez le service"
-                class="sc-95bd4344-0 dxXsic sc-56e7bccd-5 ifcrZi"
+                class="sc-b0ebfae6-0 dGXoMZ sc-56e7bccd-5 ifcrZi"
                 title="Lancer une recherche"
                 type="submit"
               >
@@ -137,11 +137,11 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </ul>
             </div>
             <button
-              class="sc-95bd4344-0 dxXsic sc-19478701-2 fGtwND"
+              class="sc-b0ebfae6-0 dGXoMZ sc-f4126b8e-2 irTzHW"
               title="fermer la modale"
             >
               <div
-                class="sc-8dcb2faa-0 gxfPDw"
+                class="sc-f92038f6-0 llOtbb"
               >
                 fermer la modale
               </div>

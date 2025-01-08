@@ -119,7 +119,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
         CDI
       </h2>
       <div
-        class="fr-accordions-group"
+        class="fr-accordions-group undefined"
         data-fr-group="false"
       >
         <section
@@ -1046,7 +1046,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
         CDD
       </h2>
       <div
-        class="fr-accordions-group"
+        class="fr-accordions-group undefined"
         data-fr-group="false"
       >
         <section
@@ -1789,7 +1789,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
         Intérim
       </h2>
       <div
-        class="fr-accordions-group"
+        class="fr-accordions-group undefined"
         data-fr-group="false"
       >
         <section
