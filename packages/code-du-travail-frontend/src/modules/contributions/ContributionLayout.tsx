@@ -228,7 +228,7 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
                     | ElasticSearchContributionConventionnelle
                 }
                 titleLevel={2}
-              ></ContributionContent>
+              />
               {contribution.references.length && (
                 <Accordion label="Références">
                   <ListWithArrow

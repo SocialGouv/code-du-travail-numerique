@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
   });
 }
 
-async function Fiche({ params }) {
+async function Contribution({ params }) {
   const { _id, ...source } = await getContribution(params.slug);
   const relatedItems = await fetchRelatedItems({ _id }, params.slug);
   return (
@@ -37,4 +37,4 @@ const getContribution = async (slug: string) => {
   return contribution;
 };
 
-export default Fiche;
+export default Contribution;

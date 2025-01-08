@@ -1,6 +1,6 @@
 import { render, RenderResult } from "@testing-library/react";
 import React from "react";
-import { EnterpriseAgreementSelection } from "../EnterpriseAgreementSelectionLink";
+import { EnterpriseAgreementSelectionLink } from "../EnterpriseAgreementSelectionLink";
 import { ui } from "./ui";
 import { sendEvent } from "../../../utils";
 import { UserAction } from "src/common";
@@ -51,7 +51,7 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
   let userAction: UserAction;
   it("Vérifier l'affichage de la selection", async () => {
     rendering = render(
-      <EnterpriseAgreementSelection enterprise={defaultEnterprise} />
+      <EnterpriseAgreementSelectionLink enterprise={defaultEnterprise} />
     );
     userAction = new UserAction();
     expect(
@@ -91,7 +91,7 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
 
   it("Vérifier l'affichage de la selection avec une CC sans slug", async () => {
     rendering = render(
-      <EnterpriseAgreementSelection
+      <EnterpriseAgreementSelectionLink
         enterprise={{
           ...defaultEnterprise,
           conventions: [
@@ -113,7 +113,7 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
 
   it("Vérifier l'affichage de la selection avec une CC sans url et contribution", async () => {
     rendering = render(
-      <EnterpriseAgreementSelection
+      <EnterpriseAgreementSelectionLink
         enterprise={{
           ...defaultEnterprise,
           conventions: [
@@ -136,7 +136,10 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
 
   it("Vérifier l'affichage de la selection en widgetMode", async () => {
     rendering = render(
-      <EnterpriseAgreementSelection enterprise={defaultEnterprise} widgetMode />
+      <EnterpriseAgreementSelectionLink
+        enterprise={defaultEnterprise}
+        widgetMode
+      />
     );
     expect(
       ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
