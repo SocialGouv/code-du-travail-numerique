@@ -1,6 +1,5 @@
 "use client";
 import { fr } from "@codegouvfr/react-dsfr";
-import Highlight from "@codegouvfr/react-dsfr/Highlight";
 import { RadioButtons } from "@codegouvfr/react-dsfr/RadioButtons";
 import { ReactNode, useState } from "react";
 import { AgreementSearchInput } from "./AgreementSearchInput";
@@ -54,13 +53,17 @@ export const AgreementSearchForm = ({
       />
       {mode === "agreementSearch" && (
         <AgreementSearchInput
-          onAgreementSelect={onAgreementSelect}
+          onAgreementSelect={(agreement) => {
+            if (onAgreementSelect) onAgreementSelect(agreement);
+          }}
           selectedAgreementAlert={selectedAgreementAlert}
         />
       )}
       {mode === "enterpriseSearch" && (
         <EnterpriseAgreementSearchInput
-          onAgreementSelect={onAgreementSelect}
+          onAgreementSelect={(agreement) => {
+            if (onAgreementSelect) onAgreementSelect(agreement);
+          }}
           selectedAgreementAlert={selectedAgreementAlert}
         />
       )}

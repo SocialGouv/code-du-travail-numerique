@@ -25,6 +25,7 @@ import Html from "../common/Html";
 import Link from "next/link";
 import Accordion from "@codegouvfr/react-dsfr/Accordion";
 import { ListWithArrow } from "../common/ListWithArrow";
+import { useContributionTracking } from "./tracking";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
@@ -32,6 +33,7 @@ type Props = {
 };
 
 export function ContributionLayout({ relatedItems, contribution }: Props) {
+  const getTitle = () => `/contribution/${slug}`;
   const { date, title, slug, idcc, metaDescription } = contribution;
   const isGeneric = idcc === "0000";
   const isNoCDT = contribution?.type === "generic-no-cdt";
@@ -46,36 +48,35 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
   };
   const [selectedAgreement, setSelectedAgreement] =
     useState<EnterpriseAgreement>();
+  const {
+    emitAgreementTreatedEvent,
+    emitAgreementUntreatedEvent,
+    emitDisplayAgreementContent,
+    emitDisplayGeneralContent,
+    emitClickP3,
+  } = useContributionTracking();
   useEffect(() => {
     setDisplaySlug(
       selectedAgreement ? `/contribution/${selectedAgreement.num}-${slug}` : ""
     );
   }, [selectedAgreement]);
-  const isCCSupported = (
-    agreement: EnterpriseAgreement,
-    ccSupported: string[]
-  ) => {
+  const isCCSupported = (agreement: EnterpriseAgreement) => {
+    const { ccSupported } = contribution as ElasticSearchContributionGeneric;
     return ccSupported.includes(agreement.id);
   };
-  const isCCUnextended = (
-    agreement: EnterpriseAgreement,
-    ccUnextended: string[]
-  ) => {
+  const isCCUnextended = (agreement: EnterpriseAgreement) => {
+    const { ccUnextended } = contribution as ElasticSearchContributionGeneric;
     return ccUnextended.includes(agreement?.id);
   };
   const isAgreementValid = (agreement?: EnterpriseAgreement) => {
     if (!agreement) return false;
-    const { ccSupported, ccUnextended } =
-      contribution as ElasticSearchContributionGeneric;
-    const isSupported = isCCSupported(agreement, ccSupported);
-    const isUnextended = isCCUnextended(agreement, ccUnextended);
+    const isSupported = isCCSupported(agreement);
+    const isUnextended = isCCUnextended(agreement);
     return !isUnextended && isSupported;
   };
   const selectedAgreementAlert = (agreement: EnterpriseAgreement) => {
-    const { ccSupported, ccUnextended } =
-      contribution as ElasticSearchContributionGeneric;
-    const isSupported = isCCSupported(agreement, ccSupported);
-    const isUnextended = isCCUnextended(agreement, ccUnextended);
+    const isSupported = isCCSupported(agreement);
+    const isUnextended = isCCUnextended(agreement);
     if (isUnextended)
       return (
         <>
@@ -129,9 +130,14 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
                   setSelectedAgreement(
                     isAgreementValid(agreement) ? agreement : undefined
                   );
+                  if (agreement && isCCSupported(agreement)) {
+                    emitAgreementTreatedEvent(agreement?.id);
+                  } else if (agreement) {
+                    emitAgreementUntreatedEvent(agreement?.id);
+                  }
                 }}
                 selectedAgreementAlert={selectedAgreementAlert}
-              ></AgreementSearchForm>
+              />
               {(!isGeneric || !isNoCDT || selectedAgreement) && (
                 <Button
                   className={fr.cx("fr-mt-2w")}
@@ -142,6 +148,8 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
                         ev.preventDefault();
                         setDisplayContent(true);
                       }
+                      if (displaySlug) emitDisplayAgreementContent(getTitle());
+                      else emitDisplayGeneralContent(getTitle());
                       if (isGeneric) scrollToTitle();
                     },
                   }}
@@ -192,6 +200,7 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
           onClick={() => {
             setDisplayContent(true);
             if (isGeneric) scrollToTitle();
+            emitClickP3(getTitle());
           }}
         >
           Afficher les informations sans sélectionner une convention collective

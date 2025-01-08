@@ -2,13 +2,13 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 import { Autocomplete } from "../../common/Autocomplete/Autocomplete";
 import { Agreement } from "../../../outils/types";
 import { searchAgreement } from "../search";
 import { EnterpriseAgreement } from "../../enterprise";
-import { useLocalStorageForAgreement } from "../../common/useLocalStorage";
+import { useLocalStorageForAgreementOnPageLoad } from "../../common/useLocalStorage";
 import { useAgreementSearchTracking } from "../tracking";
 
 type Props = {
@@ -25,10 +25,10 @@ export const AgreementSearchInput = ({
   selectedAgreementAlert,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] =
-    useLocalStorageForAgreement();
-  if (onAgreementSelect && selectedAgreement) {
-    onAgreementSelect(selectedAgreement);
-  }
+    useLocalStorageForAgreementOnPageLoad();
+  useEffect(() => {
+    if (onAgreementSelect) onAgreementSelect(selectedAgreement);
+  }, [selectedAgreement]);
   const [searchState, setSearchState] = useState<
     "noSearch" | "lowSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
   >("noSearch");
@@ -72,7 +72,7 @@ export const AgreementSearchInput = ({
       </p>
       <div className={fr.cx("fr-mt-2w")}>
         <Autocomplete<EnterpriseAgreement>
-          defaultValue={selectedAgreement ?? undefined}
+          defaultValue={selectedAgreement}
           dataTestId="AgreementSearchAutocomplete"
           className={fr.cx("fr-col-12", "fr-mb-0")}
           hintText="Ex : transport routier ou 1486"

@@ -5,7 +5,7 @@ import { EnterpriseAgreement } from "../enterprise";
 export const STORAGE_KEY_AGREEMENT = "convention";
 
 export function useLocalStorageForAgreementOnPageLoad(): [
-  EnterpriseAgreement | null,
+  EnterpriseAgreement | undefined,
   (a?: EnterpriseAgreement) => void,
 ] {
   const [value, setValue] = useState(null);
@@ -22,7 +22,7 @@ export function useLocalStorageForAgreementOnPageLoad(): [
     [JSON.stringify(value)]
   );
 
-  return [value, updateValue];
+  return [value ?? undefined, updateValue];
 }
 
 export function useLocalStorageForAgreement(
@@ -36,7 +36,7 @@ export function useLocalStorageForAgreement(
       setValue(value);
       saveAgreementToLocalStorage(value);
     },
-    [JSON.stringify(value)]
+    [value]
   );
 
   return [value, updateValue];

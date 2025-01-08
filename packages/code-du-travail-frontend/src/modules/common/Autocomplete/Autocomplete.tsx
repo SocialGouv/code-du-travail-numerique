@@ -4,7 +4,7 @@ import Image from "next/image";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Input, { InputProps } from "@codegouvfr/react-dsfr/Input";
 import { useCombobox } from "downshift";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Spinner from "../Spinner.svg";
 import { css } from "@styled-system/css";
 import { redirect } from "next/navigation";
@@ -45,6 +45,12 @@ export const Autocomplete = <K,>({
   const [selectedResult, setSelectedResult] = useState<K | undefined>(
     defaultValue
   );
+  useEffect(() => {
+    if (defaultValue) {
+      setSelectedResult(defaultValue);
+      setValue(displayLabel(defaultValue));
+    }
+  }, [defaultValue]);
   const [suggestions, setSuggestions] = useState<K[]>([]);
   const {
     isOpen,

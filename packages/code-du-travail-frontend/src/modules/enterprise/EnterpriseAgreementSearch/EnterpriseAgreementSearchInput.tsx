@@ -16,7 +16,7 @@ import { Enterprise, EnterpriseAgreement } from "../types";
 import { ApiGeoResult } from "../../Location/searchCities";
 import { CardTitleStyle, ButtonStyle } from "../../convention-collective/style";
 import { EnterpriseAgreementSelectionForm } from "./EnterpriseAgreementSelectionForm";
-import { useLocalStorageForAgreement } from "../../common/useLocalStorage";
+import { useLocalStorageForAgreementOnPageLoad } from "../../common/useLocalStorage";
 import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelectionDetail";
 import { getEnterpriseAgreements } from "./utils";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
@@ -38,20 +38,17 @@ export const EnterpriseAgreementSearchInput = ({
   onAgreementSelect,
   selectedAgreementAlert,
 }: Props) => {
-  const [agreement, setAgreement] = useLocalStorageForAgreement();
-  if (onAgreementSelect && agreement) {
-    onAgreementSelect(agreement);
-  }
-  const [selectedAgreement, setSelectedAgreement] = useState<
-    EnterpriseAgreement | undefined
-  >();
+  const [selectedAgreement, setSelectedAgreement] =
+    useLocalStorageForAgreementOnPageLoad();
   const [searchState, setSearchState] = useState<
     "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch" | "required"
   >("noSearch");
   const {
     emitEnterpriseAgreementSearchInputEvent,
     emitSelectEnterpriseEvent,
-    emitNoEnterpriseEvent,
+    emitNoEnterpriseClickEvent,
+    emitNoEnterpriseSelectEvent,
+    emitSelectEnterpriseAgreementEvent,
   } = useEnterpriseAgreementSearchTracking();
 
   const [search, setSearch] = useState<string | undefined>(defaultSearch);
@@ -141,7 +138,6 @@ export const EnterpriseAgreementSearchInput = ({
         selectedEnterprise.conventions
       );
       setSelectedAgreement(enterpriseAgreement);
-      setAgreement(enterpriseAgreement);
     }
   }, [selectedEnterprise]);
   if (
@@ -182,7 +178,6 @@ export const EnterpriseAgreementSearchInput = ({
               priority="secondary"
               onClick={() => {
                 setSelectedAgreement(undefined);
-                setAgreement(undefined);
                 if (
                   selectedEnterprise?.conventions.length &&
                   selectedEnterprise?.conventions.length < 2
@@ -213,12 +208,10 @@ export const EnterpriseAgreementSearchInput = ({
         goBack={() => {
           setSelectedEnterprise(undefined);
           setSelectedAgreement(undefined);
-          setAgreement(undefined);
         }}
         onAgreementSelect={(agreement) => {
           if (onAgreementSelect) onAgreementSelect(agreement);
           setSelectedAgreement(agreement);
-          setAgreement(agreement);
         }}
       />
     );
@@ -363,14 +356,25 @@ export const EnterpriseAgreementSearchInput = ({
                         ? `/widgets/convention-collective/entreprise/${enterprise.siren}${getQueries()}`
                         : `/outils/convention-collective/entreprise/${enterprise.siren}${getQueries()}`,
                       onClick: () => {
-                        emitSelectEnterpriseEvent(enterprise);
+                        emitSelectEnterpriseEvent({
+                          label: enterprise.label,
+                          siren: enterprise.siren,
+                        });
                       },
                     }
                   : {
                       href: "",
                       onClick: () => {
-                        emitSelectEnterpriseEvent(enterprise);
+                        emitSelectEnterpriseEvent({
+                          label: enterprise.label,
+                          siren: enterprise.siren,
+                        });
                         setSelectedEnterprise(enterprise);
+                        if (enterprise.conventions.length === 1) {
+                          emitSelectEnterpriseAgreementEvent(
+                            `idcc${enterprise.conventions[0].id}`
+                          );
+                        }
                       },
                     }
               }
@@ -411,7 +415,7 @@ export const EnterpriseAgreementSearchInput = ({
                   href: `/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile`,
                   ...(widgetMode ? { target: "_blank" } : {}),
                   onClick: () => {
-                    emitNoEnterpriseEvent();
+                    emitNoEnterpriseClickEvent();
                   },
                 }
               : {
@@ -427,9 +431,8 @@ export const EnterpriseAgreementSearchInput = ({
                       title: "Particuliers employeurs et emploi à domicile",
                       url: "/3239-particuliers-employeurs-et-emploi-a-domicile",
                     };
-                    emitNoEnterpriseEvent();
+                    emitNoEnterpriseSelectEvent();
                     setSelectedAgreement(assMatAgreement);
-                    setAgreement(assMatAgreement);
                     onAgreementSelect(assMatAgreement);
                   },
                 }
