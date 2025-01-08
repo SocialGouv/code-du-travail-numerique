@@ -1,0 +1,2478 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FicheServicePublic /> should render 1`] = `
+<div>
+  <div
+    class="fr-alert fr-alert--warning fr-mb-2w"
+  >
+    <p
+      class="fr-text--bold"
+    >
+      Abandon de poste et démission
+    </p>
+    <p
+      class="fr-text--xs fr-pb-2w"
+    >
+      04 mai 2023
+    </p>
+    <p>
+      L'article 4 de la 
+      <a
+        href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000046771781"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="loi n°2022-1598 du 21 décembre 2022 - nouvelle fenêtre"
+      >
+        loi n°2022-1598 du 21 décembre 2022
+      </a>
+       prévoit qu'un salarié qui abandonne son poste et qui ne reprend pas le travail après avoir été 
+      mis en demeure
+       par l'employeur peut être considéré comme démissionnaire.
+    </p>
+    <p>
+      Le décret 
+      <a
+        href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000047455109"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="n°2023-275 du 17 avril 2023 - nouvelle fenêtre"
+      >
+        n°2023-275 du 17 avril 2023
+      </a>
+       détermine les conditions d'application de cet article.
+    </p>
+    <p>
+      Cette page est en cours de mise à jour.
+    </p>
+  </div>
+  <p>
+    Vous êtes en 
+    CDI
+     et souhaitez démissionner de votre emploi ? Vous pouvez mettre fin à votre CDI de votre propre initiative et sans justification. Cependant, votre démission doit respecter certaines conditions. Si vous êtes en 
+    CDD
+     ou en intérim, des dispositions spécifiques de rupture anticipée du contrat de travail sont prévues. Nous vous présentons les informations à connaître.
+  </p>
+  <div
+    class="fr-tabs fr-mb-4w"
+    id="fr-tabs-:r0:"
+  >
+    <ul
+      class="fr-tabs__list"
+      role="tablist"
+    >
+      <li
+        role="presentation"
+      >
+        <button
+          aria-controls="tabpanel-:r1:-0-panel"
+          aria-selected="true"
+          class="fr-tabs__tab fr-tabs__tab--icon-left"
+          id="tabpanel-:r1:-0"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          CDI
+        </button>
+      </li>
+      <li
+        role="presentation"
+      >
+        <button
+          aria-controls="tabpanel-:r1:-1-panel"
+          aria-selected="false"
+          class="fr-tabs__tab fr-tabs__tab--icon-left"
+          id="tabpanel-:r1:-1"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          CDD
+        </button>
+      </li>
+      <li
+        role="presentation"
+      >
+        <button
+          aria-controls="tabpanel-:r1:-2-panel"
+          aria-selected="false"
+          class="fr-tabs__tab fr-tabs__tab--icon-left"
+          id="tabpanel-:r1:-2"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Intérim
+        </button>
+      </li>
+    </ul>
+    <div
+      aria-labelledby="tabpanel-:r1:-0"
+      class="fr-tabs__panel fr-tabs__panel--selected"
+      id="tabpanel-:r1:-0-panel"
+      role="tabpanel"
+      tabindex="0"
+    >
+      <h2
+        class="fr-sr-only"
+      >
+        CDI
+      </h2>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Dans quels cas pouvez-vous démissionner ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              La démission est un mode de rupture du contrat de travail qui vous permet de quitter votre entreprise sans avoir à justifier votre décision.
+            </p>
+            <p>
+              Ce droit peut être exercé à tout moment, même si votre contrat de travail est 
+              suspendu
+              .
+            </p>
+            <p>
+              Vous pouvez mettre fin à votre contrat de travail dans les cas suivants :
+            </p>
+            <ul>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit dans le cadre d'une rupture volontaire du contrat de travail
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit pendant la 
+                  période d'essai
+                   sans motif particulier
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas de 
+                  départ volontaire à la retraite
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit dans le cadre d'une 
+                  résiliation judiciaire
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit dans le cadre d'une 
+                  prise d'acte
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Comment avertir l'employeur de votre volonté de démissionner ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Pour que votre démission soit valable, vous devez 
+              <strong>
+                exprimer de façon claire
+              </strong>
+               votre volonté de mettre fin à votre contrat de travail.
+            </p>
+            <p>
+              Une absence injustifiée ou un 
+              abandon de poste
+               ne peuvent pas être considérés comme une démission.
+            </p>
+            <p>
+              En cas d'ambiguïté sur votre volonté claire et non équivoque, le conseil de prud'hommes peut requalifier la démission en 
+              licenciement injustifié (ou sans cause réelle et sérieuse)
+              .
+            </p>
+            <p>
+              Dans certains cas, vous pouvez 
+              revenir sur votre démission
+              .
+            </p>
+            <p>
+              La démission ne doit pas être abusive. C'est-à-dire qu'elle ne doit pas être prise avec l'intention de nuire à votre employeur. Sinon, vous pouvez peut être condamné au versement de 
+              dommages et intérêts
+               à votre employeur.
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Quelle est la procédure pour démissionner ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Pour manifester votre volonté claire et non équivoque de démissionner, vous devez 
+              <strong>
+                impérativement 
+              </strong>
+              prévenir votre employeur.
+            </p>
+            <p>
+              Il n'y a pas de procédure légale imposée pour signifier une démission.
+            </p>
+            <p>
+              Vous 
+              <strong>
+                prévenez 
+              </strong>
+              votre employeur soit par oral, soit par écrit en lui adressant une lettre de démission.
+            </p>
+            <p>
+              Un modèle de lettre de démission est disponible :
+            </p>
+            <div>
+              <a
+                class="fr-btn fr-btn--secondary fr-mb-4w"
+                href="https://www.service-public.fr/simulateur/calcul/Demission"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Lettre de démission du salarié - nouvelle fenêtre"
+              >
+                Lettre de démission du salarié
+              </a>
+            </div>
+            <div
+              class="fr-alert fr-alert--warning fr-mb-2w"
+            >
+              <p
+                class="fr-text--bold"
+              >
+                Attention
+              </p>
+              <p>
+                Des 
+                dispositions conventionnelles
+                 peuvent imposer l'envoi de la lettre de démission par lettre recommandée avec 
+                RAR
+                .
+              </p>
+            </div>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Devez-vous effectuer un préavis dans le cadre de votre démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Vous ne pouvez pas quitter votre travail dès que vous avez signalé votre volonté de démissionner à votre employeur.
+            </p>
+            <p>
+              Vous devez travailler jusqu'à la fin de votre contrat de travail.
+            </p>
+            <p>
+              Vous devez respecter le délai de 
+              préavis
+               prévu. Toutefois, l'employeur peut vous dispenser d'effectuer le préavis.
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Quelle est la durée de votre préavis en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <h4>
+              Vous êtes journaliste
+            </h4>
+            <p>
+              Vous devez respecter un délai de préavis fixé en fonction de votre ancienneté dans l'entreprise, dans les conditions suivantes :
+            </p>
+            <div
+              class="fr-table--sm fr-table fr-table"
+            >
+              <div
+                class="fr-table__wrapper"
+              >
+                <div
+                  class="fr-table__container"
+                >
+                  <div
+                    class="fr-table__content"
+                  >
+                    <table>
+                      <caption>
+                        Durée minimale du préavis en fonction de l'ancienneté du salarié
+                      </caption>
+                      <thead>
+                        <tr>
+                          <th
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            Ancienneté du salarié
+                          </th>
+                          <th
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            Durée minimale du préavis
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            3 ans maximum
+                          </td>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            1 mois
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            Plus de 3 ans
+                          </td>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            2 mois
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h4>
+              Vous êtes VRP
+            </h4>
+            <p>
+              Vous devez respecter un délai de préavis fixé en fonction de votre ancienneté dans l'entreprise, dans les conditions suivantes :
+            </p>
+            <div
+              class="fr-table--sm fr-table fr-table"
+            >
+              <div
+                class="fr-table__wrapper"
+              >
+                <div
+                  class="fr-table__container"
+                >
+                  <div
+                    class="fr-table__content"
+                  >
+                    <table>
+                      <caption>
+                        Durée minimale du préavis en fonction de l'ancienneté du salarié
+                      </caption>
+                      <thead>
+                        <tr>
+                          <th
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            Ancienneté du salarié
+                          </th>
+                          <th
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            Durée minimale du préavis
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            Moins de 1 an
+                          </td>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            1 mois
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            Entre 1 an et 2 ans
+                          </td>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            2 mois
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            Plus de 2 ans
+                          </td>
+                          <td
+                            colspan="1"
+                            rowspan="1"
+                          >
+                            3 mois
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h4>
+              Autre situation
+            </h4>
+            <p>
+              La durée du préavis de démission est fixée :
+            </p>
+            <ul>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit par 
+                  convention collective
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit par les 
+                  usages
+                   pratiqués dans la localité et dans la profession
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit par le droit local (en Alsace-Moselle).
+                </p>
+              </li>
+            </ul>
+            <p>
+              Le contrat de travail peut prévoir un préavis de démission.
+            </p>
+            <p>
+              Le préavis s'applique si sa durée est plus courte que celle prévue par la convention collective.
+            </p>
+            <p>
+              Si vous travaillez à temps partiel, la durée du préavis de démission est la même que celle d'un salarié à temps plein.
+            </p>
+            <p>
+              Le préavis commence à partir de votre 
+              notification
+               à votre employeur de votre démission.
+            </p>
+            <p>
+              Un simulateur est disponible :
+            </p>
+            <div>
+              <a
+                class="fr-btn fr-btn--secondary fr-mb-4w"
+                href="https://code.travail.gouv.fr/outils/preavis-demission"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Calculer la durée du préavis de démission selon la convention collective - nouvelle fenêtre"
+              >
+                Calculer la durée du préavis de démission selon la convention collective
+              </a>
+            </div>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous être dispensé d'effectuer un préavis en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Vous n'effectuez pas de préavis dans l'un des cas suivants :
+            </p>
+            <ul>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Démission 
+                  pendant la grossesse ou pour élever un enfant
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Démission à la fin d'un 
+                  congé pour création d'entreprise
+                </p>
+              </li>
+            </ul>
+            <p>
+              En dehors de ces 2 cas, vous pouvez être dispensé d'effectuer un préavis, de votre propre initiative ou à la demande de votre employeur, dans les conditions suivantes :
+            </p>
+            <h4>
+              Vous demandez une dispense de préavis
+            </h4>
+            <p>
+              Vous pouvez demander à votre employeur d'être dispensé d'effectuer un préavis (par écrit ou par oral).
+            </p>
+            <h5>
+              Accord de votre employeur
+            </h5>
+            <p>
+              Si votre employeur accepte votre demande, votre contrat de travail prend fin à la date convenue.
+            </p>
+            <p>
+              Dans ce cas, votre employeur ne vous verse pas 
+              d'indemnité compensatrice de préavis
+              .
+            </p>
+            <h5>
+              Refus de votre employeur
+            </h5>
+            <p>
+              Si votre employeur refuse votre demande de dispense, vous devez effectuer votre préavis.
+            </p>
+            <p>
+              Si vous n'effectuez pas votre préavis, votre employeur peut vous demander de lui verser une indemnité.
+            </p>
+            <p>
+              Cette indemnité est d'un montant égal à la rémunération brute que vous auriez perçu durant la période du préavis initialement prévu.
+            </p>
+            <h4>
+              Votre employeur vous dispense de préavis
+            </h4>
+            <p>
+              Votre employeur peut vous dispenser d'effectuer votre préavis.
+            </p>
+            <p>
+              Dans ce cas, vous conservez les avantages que vous auriez perçus si vous aviez travaillé jusqu'à la fin de votre préavis non effectué.
+            </p>
+            <p>
+              Vous percevez 
+              l'indemnité compensatrice de préavis
+              .
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Le préavis de démission peut-il être reporté ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Le préavis peut être reporté dans les cas suivants :
+            </p>
+            <ul>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas d'accord entre vous-même et votre employeur
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas de prise de 
+                  congés payés
+                   dont la date a été fixée avant la notification de la rupture
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas 
+                  d'arrêt de travail
+                   survenant en cours de préavis et lié à un accident du travail ou une maladie professionnelle
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas de 
+                  dispositions conventionnelles
+                   le prévoyant
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Le préavis de démission peut-il être suspendu ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Le préavis peut être suspendu dans les cas suivants :
+            </p>
+            <ul>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas d'accord entre vous-même et votre employeur
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas de prise de 
+                  congés payés
+                   dont la date a été fixée avant la notification de la rupture
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas 
+                  d'arrêt de travail
+                   survenant en cours de préavis et lié à un accident du travail ou une maladie professionnelle
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas de 
+                  dispositions conventionnelles
+                   le prévoyant
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous vous absenter pour rechercher un emploi durant votre préavis ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Il n'existe aucune disposition légale vous permettant de vous 
+              absenter
+               pour rechercher un emploi durant votre préavis.
+            </p>
+            <p>
+              Toutefois, des 
+              dispositions conventionnelles
+               ou un 
+              usage
+               dans la localité ou la profession peuvent prévoir des temps d'absence pour rechercher un emploi pendant la durée du préavis.
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous toucher des allocations chômage en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              En principe, vous ne bénéficiez pas de l'allocation de retour à l'emploi (ARE) si vous démissionnez.
+            </p>
+            <p>
+              Toutefois, dans certains cas précis, votre démission peut être considérée comme 
+              légitime
+               par Pôle emploi.
+            </p>
+            <p>
+              Elle ouvre alors droit à l'ARE dans les conditions habituelles.
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous toucher une indemnité compensatrice de préavis en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Si vous êtes dispensé d'effectuer un préavis parvotre employeur, vous avez droit au versement d'une 
+              indemnité compensatrice de préavis
+              .
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous toucher une indemnité compensatrice de congés payés en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Vous avez droit à une 
+              indemnité compensatrice de congés payés
+               si vous n'avez pas pu prendre la totalité de vos congés acquis avant la date de rupture de votre contrat de travail.
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous continuer à bénéficier de votre complémentaire santé en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Vous continuez à bénéficier de la couverture santé souscrite dans le cadre de votre ancien travail, sous 
+              certaines conditions
+              .
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous demander le déblocage anticipé de votre épargne salariale en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Si vous bénéficiez d'un dispositif d'épargne salariale, vous pouvez 
+              demander le déblocage anticipé
+               des sommes.
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Quels sont les documents que votre employeur doit vous remettre en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              L'employeur doit vous remettre tous les documents suivants :
+            </p>
+            <ul>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Certificat de travail
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Attestation Pôle emploi
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Solde de tout compte
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Dispositifs de participation, d'intéressement, plans d'épargne salariale au sein de l'entreprise, état récapitulatif de l'ensemble des sommes et valeurs mobilières épargnées
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div
+      aria-labelledby="tabpanel-:r1:-1"
+      class="fr-tabs__panel fr-tabs__panel"
+      id="tabpanel-:r1:-1-panel"
+      role="tabpanel"
+      tabindex="0"
+    >
+      <h2
+        class="fr-sr-only"
+      >
+        CDD
+      </h2>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Dans quels cas pouvez-vous démissionner de votre CDD ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              En principe, vous ne pouvez pas démissionner de votre CDD.
+            </p>
+            <p>
+              Toutefois, le CDD peut être rompu de manière anticipée sous conditions.
+            </p>
+            <p>
+              Pendant la 
+              période d'essai
+              , vous pouvez mettre fin à votre CDD sans motif particulier.
+            </p>
+            <p>
+              En dehors de la période d'essai, le CDD peut être rompu avant le terme prévu 
+              <strong>
+                uniquement dans les cas suivants
+              </strong>
+               :
+            </p>
+            <ul>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Accord entre vous-même et votre employeur
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Embauche en 
+                  CDI
+                  . Pour éviter toute difficulté, vous pouvez notifier par écrit la rupture de votre CDD à votre employeur et lui fournir le justificatif de l'embauche prévue (promesse d'embauche ou contrat de travail, par exemple).
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Faute grave
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Force majeure
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Inaptitude
+                   constatée par le médecin du travail
+                </p>
+              </li>
+            </ul>
+            <div
+              class="fr-alert fr-alert--info fr-mb-4w"
+            >
+              <p
+                class="fr-text--bold"
+              >
+                À noter
+              </p>
+              <p>
+                si vous mettez fin à votre CDD après la période d'essai et en dehors des cas autorisés, vous pouvez être condamné par le juge à verser à votre employeur des 
+                dommages et intérêts
+                .
+              </p>
+            </div>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Comment avertir l'employeur de votre volonté de démissionner ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Pour que votre démission soit valable, vous devez 
+              <strong>
+                exprimer de façon claire
+              </strong>
+               votre volonté de mettre fin à votre contrat de travail.
+            </p>
+            <p>
+              Une absence injustifiée ou un 
+              abandon de poste
+               ne peuvent pas être considérés comme une démission.
+            </p>
+            <p>
+              En cas d'ambiguïté sur votre volonté claire et non équivoque, le conseil de prud'hommes peut requalifier la démission en 
+              licenciement injustifié (ou sans cause réelle et sérieuse)
+              .
+            </p>
+            <p>
+              Dans certains cas, vous pouvez 
+              revenir sur votre démission
+              .
+            </p>
+            <p>
+              La démission ne doit pas être abusive. C'est-à-dire qu'elle ne doit pas être prise avec l'intention de nuire à votre employeur. Sinon, vous pouvez peut être condamné au versement de 
+              dommages et intérêts
+               à votre employeur.
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Quelle est la procédure pour démissionner d'un CDD ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Pour manifester votre volonté claire et non équivoque de démissionner, vous devez 
+              <strong>
+                impérativement 
+              </strong>
+              prévenir votre employeur.
+            </p>
+            <p>
+              Il n'y a pas de procédure légale imposée pour signifier une démission.
+            </p>
+            <p>
+              Vous 
+              <strong>
+                prévenez 
+              </strong>
+              votre employeur soit par oral, soit par écrit en lui adressant une lettre de démission.
+            </p>
+            <p>
+              Un modèle de lettre de démission est disponible :
+            </p>
+            <div>
+              <a
+                class="fr-btn fr-btn--secondary fr-mb-4w"
+                href="https://www.service-public.fr/simulateur/calcul/Demission"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Lettre de démission du salarié - nouvelle fenêtre"
+              >
+                Lettre de démission du salarié
+              </a>
+            </div>
+            <div
+              class="fr-alert fr-alert--warning fr-mb-2w"
+            >
+              <p
+                class="fr-text--bold"
+              >
+                Attention
+              </p>
+              <p>
+                Des 
+                dispositions conventionnelles
+                 peuvent imposer l'envoi de la lettre de démission par lettre recommandée avec 
+                RAR
+                .
+              </p>
+            </div>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Devez-vous effectuer un préavis suite à votre démission d'un CDD ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Vous ne pouvez pas quitter votre travail dès que vous avez signalé votre volonté de démissionner à votre employeur.
+            </p>
+            <p>
+              Vous devez travailler jusqu'à la fin de votre contrat de travail.
+            </p>
+            <p>
+              Vous devez respecter le délai de 
+              préavis
+               prévu. Toutefois, l'employeur peut vous dispenser de faire le préavis.
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Quelle est la durée de votre préavis en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              La durée du préavis dépend de la durée totale du CDD à raison d'un jour 
+              ouvré
+               par semaine.
+            </p>
+            <div
+              class="fr-alert fr-alert--info fr-mb-4w"
+            >
+              <p
+                class="fr-text--bold"
+              >
+                Exemple
+              </p>
+              <p>
+                Si votre CDD prévoyait 8 semaines de travail, le préavis est de 8 jours ouvrés.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous être dispensé d'effectuer un préavis en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Vous n'avez pas à effectuer de préavis si vous êtes dans l'un des cas suivants :
+            </p>
+            <ul>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Démission 
+                  pendant la grossesse ou pour élever un enfant
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Démission à la fin du 
+                  congé pour création d'entreprise
+                </p>
+              </li>
+            </ul>
+            <p>
+              En dehors de ces 2 cas, vous pouvez être dispensé d'effectuer un préavis, de votre propre initiative ou à la demande de votre employeur, dans les conditions suivantes :
+            </p>
+            <h4>
+              Vous demandez une dispense de préavis
+            </h4>
+            <p>
+              Vous pouvez demander à votre employeur d'être dispensé d'effectuer un préavis (par écrit ou par oral).
+            </p>
+            <h5>
+              Accord de votre employeur
+            </h5>
+            <p>
+              Si votre employeur accepte votre demande, votre contrat de travail prend fin à la date convenue.
+            </p>
+            <p>
+              Dans ce cas, votre employeur ne vous verse pas 
+              d'indemnité compensatrice de préavis
+              .
+            </p>
+            <h5>
+              Refus de votre employeur
+            </h5>
+            <p>
+              Si votre employeur refuse votre demande de dispense, vous devez effectuer votre préavis.
+            </p>
+            <p>
+              Si vous n'effectuez pas votre préavis, votre employeur peut vous demander de lui verser une indemnité.
+            </p>
+            <p>
+              Cette indemnité est d'un montant égal à la rémunération brute que vous auriez perçu durant la période du préavis initialement prévu.
+            </p>
+            <h4>
+              Votre employeur vous dispense de préavis
+            </h4>
+            <p>
+              Votre employeur peut vous dispenser d'effectuer votre préavis.
+            </p>
+            <p>
+              Dans ce cas, vous conservez les avantages que vous auriez perçus si vous aviez travaillé jusqu'à la fin de votre préavis non effectué.
+            </p>
+            <p>
+              Vous percevez 
+              l'indemnité compensatrice de préavis
+              .
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Le préavis de démission peut-il être reporté ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Le préavis peut être reporté dans les cas suivants :
+            </p>
+            <ul>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas d'accord entre vous-même et votre employeur
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas de prise de 
+                  congés payés
+                   dont la date a été fixée avant la notification de la rupture
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas 
+                  d'arrêt de travail
+                   survenant en cours de préavis et lié à un accident du travail ou une maladie professionnelle
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas de 
+                  dispositions conventionnelles
+                   le prévoyant
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Le préavis de démission peut-il être suspendu ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Le préavis peut être suspendu dans les cas suivants :
+            </p>
+            <ul>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas d'accord entre vous-même et votre employeur
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas de prise de 
+                  congés payés
+                   dont la date a été fixée avant la notification de la rupture
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas 
+                  d'arrêt de travail
+                   survenant en cours de préavis et lié à un accident du travail ou une maladie professionnelle
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas de 
+                  dispositions conventionnelles
+                   le prévoyant
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous vous absenter pour rechercher un emploi durant votre préavis ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Il n'existe aucune disposition légale vous permettant de vous 
+              absenter
+               pour rechercher un emploi durant votre préavis.
+            </p>
+            <p>
+              Toutefois, des 
+              dispositions conventionnelles
+               ou un 
+              usage
+               dans la localité ou la profession peuvent prévoir des temps d'absence pour rechercher un emploi pendant la durée du préavis.
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous percevoir des allocations chômage en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              En principe, vous ne bénéficiez pas de l'allocation de retour à l'emploi (ARE) si vous démissionnez.
+            </p>
+            <p>
+              Toutefois, dans certains cas précis, votre démission peut être considérée comme 
+              légitime
+               par Pôle emploi.
+            </p>
+            <p>
+              Elle ouvre alors droit à l'ARE dans les conditions habituelles.
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous toucher une indemnité compensatrice de préavis en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Si vous êtes dispensé d'effectuer un préavis parvotre employeur, vous avez droit au versement d'une 
+              indemnité compensatrice de préavis
+              .
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous toucher une indemnité compensatrice de congés payés en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Vous avez droit à une 
+              indemnité compensatrice de congés payés
+               si vous n'avez pas pu prendre la totalité de vos congés acquis avant la date de rupture de votre contrat de travail.
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous continuer à bénéficier de votre complémentaire santé en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Vous continuez à bénéficier de la couverture santé souscrite dans le cadre de votre ancien travail, sous 
+              certaines conditions
+              .
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous demander le déblocage anticipé de votre épargne salariale en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Si vous bénéficiez d'un dispositif d'épargne salariale, vous pouvez 
+              demander le déblocage anticipé
+               des sommes.
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Quels sont les documents que votre employeur doit vous remettre en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              L'employeur doit vous remettre tous les documents suivants :
+            </p>
+            <ul>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Certificat de travail
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Attestation Pôle emploi
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Solde de tout compte
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Dispositifs de participation, d'intéressement, plans d'épargne salariale au sein de l'entreprise, état récapitulatif de l'ensemble des sommes et valeurs mobilières épargnées
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div
+      aria-labelledby="tabpanel-:r1:-2"
+      class="fr-tabs__panel fr-tabs__panel"
+      id="tabpanel-:r1:-2-panel"
+      role="tabpanel"
+      tabindex="0"
+    >
+      <h2
+        class="fr-sr-only"
+      >
+        Intérim
+      </h2>
+      <div
+        class="fr-accordions-group"
+        data-fr-group="false"
+      >
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Dans quels cas pouvez-vous démissionner de votre mission d'intérim ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Vous ne pouvez pas démissionner de votre contrat de travail temporaire.
+            </p>
+            <p>
+              Toutefois, le contrat peut être rompu de manière anticipée sous conditions.
+            </p>
+            <p>
+              Vous pouvez mettre fin à votre mission d'intérim de manière anticipée dans les cas suivants :
+            </p>
+            <ul>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit pendant la 
+                  période d'essai
+                   sans motif particulier
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas d'embauche en CDI
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas de 
+                  force majeure
+                </p>
+              </li>
+            </ul>
+            <div
+              class="fr-alert fr-alert--info fr-mb-4w"
+            >
+              <p
+                class="fr-text--bold"
+              >
+                À noter
+              </p>
+              <p>
+                si vous mettez fin à votre mission d'intérim après la période d'essai et en dehors des cas autorisés, vous pouvez être condamné par le juge à verser à votre employeur des 
+                dommages et intérêts
+                .
+              </p>
+            </div>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Comment avertir l'employeur de votre volonté de démissionner ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Pour que votre démission soit valable, vous devez 
+              <strong>
+                exprimer de façon claire
+              </strong>
+               votre volonté de mettre fin à votre contrat de travail.
+            </p>
+            <p>
+              Une absence injustifiée ou un 
+              abandon de poste
+               ne peuvent pas être considérés comme une démission.
+            </p>
+            <p>
+              En cas d'ambiguïté sur votre volonté claire et non équivoque, le conseil de prud'hommes peut requalifier la démission en 
+              licenciement injustifié (ou sans cause réelle et sérieuse)
+              .
+            </p>
+            <p>
+              Dans certains cas, vous pouvez 
+              revenir sur votre démission
+              .
+            </p>
+            <p>
+              La démission ne doit pas être abusive. C'est-à-dire qu'elle ne doit pas être prise avec l'intention de nuire à votre employeur. Sinon, vous pouvez peut être condamné au versement de 
+              dommages et intérêts
+               à votre employeur.
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Quelle est la procédure pour démissionner de votre mission d'intérim ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Pour manifester votre volonté claire et non équivoque de démissionner, vous devez 
+              <strong>
+                impérativement 
+              </strong>
+              prévenir votre employeur.
+            </p>
+            <p>
+              Il n'y a pas de procédure légale imposée pour signifier une démission.
+            </p>
+            <p>
+              Vous 
+              <strong>
+                prévenez 
+              </strong>
+              votre employeur soit par oral, soit par écrit en lui adressant une lettre de démission.
+            </p>
+            <p>
+              Un modèle de lettre de démission est disponible :
+            </p>
+            <div>
+              <a
+                class="fr-btn fr-btn--secondary fr-mb-4w"
+                href="https://www.service-public.fr/simulateur/calcul/Demission"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Lettre de démission du salarié - nouvelle fenêtre"
+              >
+                Lettre de démission du salarié
+              </a>
+            </div>
+            <div
+              class="fr-alert fr-alert--warning fr-mb-2w"
+            >
+              <p
+                class="fr-text--bold"
+              >
+                Attention
+              </p>
+              <p>
+                Des 
+                dispositions conventionnelles
+                 peuvent imposer l'envoi de la lettre de démission par lettre recommandée avec 
+                RAR
+                .
+              </p>
+            </div>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Devez-vous effectuer un préavis suite à votre démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Vous ne pouvez pas quitter votre travail dès que vous avez signalé votre volonté de démissionner à votre employeur.
+            </p>
+            <p>
+              Vous devez travailler jusqu'à la fin de votre contrat de travail.
+            </p>
+            <p>
+              Vous devez respecter le délai de 
+              préavis
+               prévu (sauf en cas de dispense du préavis donnée par l'employeur).
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Quelle est la durée de votre préavis en cas de démission d'une mission d'intérim ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Un préavis s'applique si vous mettez fin à votre mission d'intérim pour un 
+              CDI
+               après la 
+              période d'essai
+              .
+            </p>
+            <p>
+              Ce préavis est calculé à raison d'un jour par semaine, compte tenu :
+            </p>
+            <ul>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit de la durée du contrat, renouvellement inclus, si celui-ci comporte un terme précis
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit de la durée effectuée, si le contrat ne comporte pas de terme précis
+                </p>
+              </li>
+            </ul>
+            <p>
+              La durée totale du préavis ne peut pas être inférieure à 1 jour, ni supérieure à 2 semaines.
+            </p>
+            <p>
+              Le décompte s'effectue en 
+              jours ouvrés
+              .
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous être dispensé d'effectuer un préavis en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Le préavis peut être reporté dans les cas suivants :
+            </p>
+            <ul>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas d'accord entre vous-même et votre employeur
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas de prise de 
+                  congés payés
+                   dont la date a été fixée avant la notification de la rupture
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas 
+                  d'arrêt de travail
+                   survenant en cours de préavis et lié à un accident du travail ou une maladie professionnelle
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas de 
+                  dispositions conventionnelles
+                   le prévoyant
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Le préavis de démission peut-il être reporté ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Le préavis peut être reporté dans les cas suivants :
+            </p>
+            <ul>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas d'accord entre vous-même et votre employeur
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas de prise de 
+                  congés payés
+                   dont la date a été fixée avant la notification de la rupture
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas 
+                  d'arrêt de travail
+                   survenant en cours de préavis et lié à un accident du travail ou une maladie professionnelle
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas de 
+                  dispositions conventionnelles
+                   le prévoyant
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Le préavis de démission peut-il être suspendu ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Le préavis peut être suspendu dans les cas suivants :
+            </p>
+            <ul>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas d'accord entre vous-même et votre employeur
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas de prise de 
+                  congés payés
+                   dont la date a été fixée avant la notification de la rupture
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas 
+                  d'arrêt de travail
+                   survenant en cours de préavis et lié à un accident du travail ou une maladie professionnelle
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Soit en cas de 
+                  dispositions conventionnelles
+                   le prévoyant
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous toucher des allocations chômage en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              En principe, vous ne bénéficiez pas de l'allocation de retour à l'emploi (ARE) si vous démissionnez.
+            </p>
+            <p>
+              Toutefois, dans certains cas précis, votre démission peut être considérée comme 
+              légitime
+               par Pôle emploi.
+            </p>
+            <p>
+              Elle ouvre alors droit à l'ARE dans les conditions habituelles.
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous toucher une indemnité compensatrice de préavis en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Si vous êtes dispensé d'effectuer un préavis parvotre employeur, vous avez droit au versement d'une 
+              indemnité compensatrice de préavis
+              .
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous toucher une indemnité compensatrice de congés payés en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Vous avez droit à une 
+              indemnité compensatrice de congés payés
+               si vous n'avez pas pu prendre la totalité de vos congés acquis avant la date de rupture de votre contrat de travail.
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous continuer à bénéficier de votre complémentaire santé en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Vous continuez à bénéficier de la couverture santé souscrite dans le cadre de votre ancien travail, sous 
+              certaines conditions
+              .
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Pouvez-vous demander le déblocage anticipé de votre épargne salariale en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              Si vous bénéficiez d'un dispositif d'épargne salariale, vous pouvez 
+              demander le déblocage anticipé
+               des sommes.
+            </p>
+          </div>
+        </section>
+        <section
+          class="fr-accordion"
+        >
+          <h3
+            class="fr-accordion__title"
+          >
+            <button
+              aria-controls="123456789-collapse"
+              aria-expanded="false"
+              class="fr-accordion__btn"
+              id="123456789__toggle-btn"
+              type="button"
+            >
+              Quels sont les documents que votre employeur doit vous remettre en cas de démission ?
+            </button>
+          </h3>
+          <div
+            class="fr-collapse"
+            id="123456789-collapse"
+          >
+            <p>
+              L'employeur doit vous remettre tous les documents suivants :
+            </p>
+            <ul>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Certificat de travail
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Attestation Pôle emploi
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Solde de tout compte
+                </p>
+              </li>
+              <li
+                class="[&>_p]:mb_0!"
+              >
+                <p>
+                  Dispositifs de participation, d'intéressement, plans d'épargne salariale au sein de l'entreprise, état récapitulatif de l'ensemble des sommes et valeurs mobilières épargnées
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div>
+    <a
+      class="fr-btn fr-btn--secondary fr-mb-4w"
+      href="https://www.service-public.fr/simulateur/calcul/Demission"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Lettre de démission du salarié - nouvelle fenêtre"
+    >
+      Lettre de démission du salarié
+    </a>
+  </div>
+  <div>
+    <a
+      class="fr-btn fr-btn--secondary fr-mb-4w"
+      href="https://code.travail.gouv.fr/outils/preavis-demission"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Calculer la durée du préavis de démission selon la convention collective - nouvelle fenêtre"
+    >
+      Calculer la durée du préavis de démission selon la convention collective
+    </a>
+  </div>
+</div>
+`;

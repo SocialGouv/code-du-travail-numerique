@@ -1,6 +1,9 @@
+"use client";
 import { fr } from "@codegouvfr/react-dsfr";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
+import { useAgreementSearchTracking } from "../tracking";
+import { useEffect } from "react";
 
 type Props = {
   navigationUrl?: string;
@@ -9,6 +12,14 @@ type Props = {
 export const AgreementSearchIntro = ({
   navigationUrl = "/outils/convention-collective",
 }: Props) => {
+  const {
+    emitNavigateEnterpriseSearchEvent,
+    emitNavigateAgreementSearchEvent,
+    emitViewStepEvent,
+  } = useAgreementSearchTracking();
+  useEffect(() => {
+    emitViewStepEvent();
+  });
   return (
     <>
       <div className={`${fr.cx("fr-mt-2w", "fr-ml-md-15v")}`}>
@@ -48,6 +59,7 @@ export const AgreementSearchIntro = ({
           iconId="fr-icon-arrow-right-line"
           linkProps={{
             href: `${navigationUrl}/convention`,
+            onClick: emitNavigateAgreementSearchEvent,
           }}
         >
           Je connais ma convention collective je la saisis
@@ -64,6 +76,7 @@ export const AgreementSearchIntro = ({
           iconId="fr-icon-arrow-right-line"
           linkProps={{
             href: `${navigationUrl}/entreprise`,
+            onClick: emitNavigateEnterpriseSearchEvent,
           }}
         >
           Je cherche mon entreprise pour trouver ma convention collective

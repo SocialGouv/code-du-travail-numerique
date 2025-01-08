@@ -6,9 +6,22 @@ import { ui } from "./ui";
 import { wait } from "@testing-library/user-event/dist/utils";
 import { act } from "react-dom/test-utils";
 import { searchAgreement } from "../search";
+import { sendEvent } from "../../utils";
+
+jest.mock("../../utils", () => ({
+  sendEvent: jest.fn(),
+}));
+
+jest.mock("uuid", () => ({
+  v4: jest.fn(() => ""),
+}));
 
 jest.mock("../search", () => ({
   searchAgreement: jest.fn(),
+}));
+
+jest.mock("next/navigation", () => ({
+  redirect: jest.fn(),
 }));
 
 describe("Trouver sa CC - recherche par nom de CC", () => {
@@ -19,7 +32,7 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
       jest.resetAllMocks();
       rendering = render(<AgreementSearch />);
     });
-    it("Vérifier le déroulement de la liste & effacement", async () => {
+    it("Vérifier la navigation", async () => {
       (searchAgreement as jest.Mock).mockImplementation(() =>
         Promise.resolve([
           {
@@ -37,6 +50,12 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
       userAction = new UserAction();
       userAction.setInput(ui.searchByName.input.get(), "16");
       await wait();
+      expect(sendEvent).toHaveBeenCalledTimes(1);
+      expect(sendEvent).toHaveBeenLastCalledWith({
+        action: "Trouver sa convention collective",
+        category: "cc_search",
+        name: '{"query":"16"}',
+      });
       expect(
         ui.searchByName.autocompleteLines.IDCC16.name.query()
       ).toBeInTheDocument();
@@ -46,9 +65,20 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
         "href",
         "/convention-collective/16-transports-routiers-et-activites-auxiliaires-du-transport"
       );
-      expect(ui.searchByName.input.get()).toHaveValue("16");
-      userAction.click(ui.searchByName.inputCloseBtn.get());
-      expect(ui.searchByName.input.get()).toHaveValue("");
+      userAction.click(ui.searchByName.autocompleteLines.IDCC16.link.get());
+      expect(sendEvent).toHaveBeenCalledTimes(2);
+      expect(sendEvent).toHaveBeenLastCalledWith({
+        action: "Trouver sa convention collective",
+        category: "cc_select_p1",
+        name: "idcc0016",
+      });
+      userAction.click(ui.searchByName.buttonPrevious.get());
+      expect(sendEvent).toHaveBeenCalledTimes(3);
+      expect(sendEvent).toHaveBeenLastCalledWith({
+        action: "back_step_cc_search_p1",
+        category: "view_step_cc_search_p1",
+        name: "Trouver sa convention collective",
+      });
     });
     it("Vérifier l'affichage des erreurs", async () => {
       (searchAgreement as jest.Mock).mockImplementation(() =>

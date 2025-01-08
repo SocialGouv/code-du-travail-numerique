@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.169.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.168.1...v4.169.0) (2024-12-18)
+
+
+### Bug Fixes
+
+* search cc tracking ([#6373](https://github.com/SocialGouv/code-du-travail-numerique/issues/6373)) ([ff6095d](https://github.com/SocialGouv/code-du-travail-numerique/commit/ff6095d53bc2373856979a4d9ccf65a508c185c4))
+
+
+### Features
+
+* **information:** utilisation de tiptap sur les pages infos ([#6362](https://github.com/SocialGouv/code-du-travail-numerique/issues/6362)) ([9bbdd41](https://github.com/SocialGouv/code-du-travail-numerique/commit/9bbdd4162e10f9bd022f2293f11fe0432ed8442b))
+
+
+
+
+
+## [4.168.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.168.0...v4.168.1) (2024-12-17)
+
+
+### Bug Fixes
+
+* **e2e:** rendre la spec brut/net non flaky ([#6371](https://github.com/SocialGouv/code-du-travail-numerique/issues/6371)) ([5098955](https://github.com/SocialGouv/code-du-travail-numerique/commit/509895594a0992e34daa0ecb4baf0f4ed439f13d))
+* **fiches SP:** gérer les cas de liens sans attributs URL ([#6372](https://github.com/SocialGouv/code-du-travail-numerique/issues/6372)) ([54bcc48](https://github.com/SocialGouv/code-du-travail-numerique/commit/54bcc48eba51c5a5e3ac72f5c5ec58e0ea376df5))
+
+
+
+
+
+# [4.168.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.167.2...v4.168.0) (2024-12-17)
+
+
+### Bug Fixes
+
+* **matomo:** envoyer les events de changement de pages ([#6368](https://github.com/SocialGouv/code-du-travail-numerique/issues/6368)) ([fdd8487](https://github.com/SocialGouv/code-du-travail-numerique/commit/fdd8487be4d4e970bcd0574827bda1bbbd704dc9))
+
+
+### Features
+
+* **DSFR:** migration des pages fiches service public ([#6277](https://github.com/SocialGouv/code-du-travail-numerique/issues/6277)) ([85918d7](https://github.com/SocialGouv/code-du-travail-numerique/commit/85918d7d56d2941e119701e1fbb858935f97fb73))
+
+
+
+
+
+## [4.167.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.167.1...v4.167.2) (2024-12-13)
+
+
+### Bug Fixes
+
+* ajout du tracking sur outil recherche cc ([#6366](https://github.com/SocialGouv/code-du-travail-numerique/issues/6366)) ([c1fd3d8](https://github.com/SocialGouv/code-du-travail-numerique/commit/c1fd3d8ef0d153b54bc137cbe32a7915da659f72))
+* **seo:** retrait des h1 dupliqués ([#6342](https://github.com/SocialGouv/code-du-travail-numerique/issues/6342)) ([26580e0](https://github.com/SocialGouv/code-du-travail-numerique/commit/26580e0abd9544c11b21c3ff9039f6391552a0f7))
+
+
+
+
+
 ## [4.167.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.167.0...v4.167.1) (2024-12-05)
 
 

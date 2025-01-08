@@ -1,0 +1,40 @@
+{
+  "type": "element",
+  "name": "Video",
+  "attributes": {
+    "URL": "https://youtu.be/ie4KrcEt6pU",
+    "type": "Video",
+    "langue": "fr",
+    "fournisseur": "youTube",
+    "format": "text/html",
+    "redimensionnable": "oui"
+  },
+  "children": [
+    {
+      "type": "element",
+      "name": "Titre",
+      "children": [
+        {
+          "type": "text",
+          "text": "Le compte retraite"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "name": "Credits",
+      "children": [
+        {
+          "type": "element",
+          "name": "Paragraphe",
+          "children": [
+            {
+              "type": "text",
+              "text": "Groupement d'intérêt public \"Union retraite\""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

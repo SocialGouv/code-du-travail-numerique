@@ -214,12 +214,14 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
           >
             <h2
               class="fr-h5 fr-mb-md-0"
+              id="feedback-title"
             >
               Avez-vous trouvé la réponse à votre question ?
             </h2>
           </div>
           <div>
             <button
+              aria-describedby="feedback-title"
               class="fr-btn fr-btn--secondary fr-mr-2w"
               id="fr-button-:r7:"
               type="button"
@@ -227,6 +229,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
               Non
             </button>
             <button
+              aria-describedby="feedback-title"
               class="fr-btn fr-btn--secondary"
               id="fr-button-:r8:"
               type="button"
@@ -303,9 +306,15 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
       <div
         class="fr-follow__social"
       >
-        <p>
-          Partager la page
-        </p>
+        <div
+          aria-level="3"
+          class="fr-mb-2w"
+          role="heading"
+        >
+          <span>
+            Partager la page
+          </span>
+        </div>
         <ul
           class="fr-btns-group"
         >

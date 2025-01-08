@@ -15,38 +15,60 @@ describe("DisplayContentContribution", () => {
       expect(baseElement.firstChild).toMatchSnapshot();
     });
     it(`should replace span with with heading according to given title level`, () => {
-      const { baseElement } = render(
+      const { getByText } = render(
         <DisplayContentContribution
-          content={`<span class="title">Mon title</span><span class="sub-title">Mon title</span>`}
+          content={`<span class="title">Ceci est un titre</span><span class="sub-title">Ceci est un sous titre</span>`}
           titleLevel={4}
         ></DisplayContentContribution>
       );
 
-      expect(baseElement.firstChild).toMatchSnapshot();
+      expect(getByText("Ceci est un titre").tagName).toEqual("H4");
+      expect(getByText("Ceci est un sous titre").tagName).toEqual("H5");
     });
     it(`should not add headings higher than h6 for titles`, () => {
-      const { baseElement } = render(
+      const { getByText } = render(
         <DisplayContentContribution
-          content={`<span class="title">Mon title</span><span class="sub-title">Mon title</span>`}
+          content={`<span class="title">Ceci est un titre</span><span class="sub-title">Ceci est un sous titre</span>`}
           titleLevel={6}
         ></DisplayContentContribution>
       );
 
-      expect(baseElement.firstChild).toMatchSnapshot();
+      expect(getByText("Ceci est un titre").tagName).toEqual("H6");
+      expect(getByText("Ceci est un sous titre").tagName).toEqual("STRONG");
     });
     it(`should not add headings higher than h6 for accordion`, () => {
-      const { asFragment } = render(
+      const { getByText } = render(
         <DisplayContentContribution
           content={`
         <details className=" details"><summary>Ceci est un titre</summary>
           <div data-type=" detailsContent">
-            <span class="sub-title">Mon title</span>
+            <span class="title">Ceci est un sous titre</span>
+            <span class="sub-title">Ceci est un sous sous titre</span>
           </div>
         </details>`}
           titleLevel={6}
         ></DisplayContentContribution>
       );
-      expect(asFragment().firstChild).toMatchSnapshot();
+      expect(getByText("Ceci est un titre").tagName).toEqual("H6");
+      expect(getByText("Ceci est un sous titre").tagName).toEqual("STRONG");
+      expect(getByText("Ceci est un sous sous titre").tagName).toEqual(
+        "STRONG"
+      );
+    });
+    it(`should handle sub-title in accordion even if no title`, () => {
+      const { getByText } = render(
+        <DisplayContentContribution
+          content={`
+        <details className=" details"><summary>Ceci est un titre</summary>
+          <div data-type=" detailsContent">
+            <span class="sub-title">Ceci est un sous titre</span>
+          </div>
+        </details>`}
+          titleLevel={4}
+        ></DisplayContentContribution>
+      );
+      expect(getByText("Ceci est un titre").tagName).toEqual("H4");
+      expect(getByText("Ceci est un sous titre").tagName).toEqual("H5");
     });
   });
 
@@ -285,6 +307,31 @@ describe("DisplayContentContribution", () => {
             <tr>
               <th colspan="1" rowspan="1"></th>
               <th colspan="1" rowspan="1"><p>Titre 1</p></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="1" rowspan="1"><p>Pour les <strong>cadres</strong>, la prolongation ...</p></td>
+                <td colspan="1" rowspan="1"><ul><li><p>L’employeur et le salarié donnent par écrit ou par mail.</p></li></ul></td>
+            </tr>
+        </tbody>
+        </table>`}
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
+
+      expect(asFragment().firstChild).toMatchSnapshot();
+    });
+
+    it(`should replace td by th in thead`, () => {
+      const { asFragment } = render(
+        <DisplayContentContribution
+          content={`
+        <table>
+        <thead>
+            <tr>
+              <td colspan="1" rowspan="1">Titre 1</td>
+              <td colspan="1" rowspan="1">Titre 2</td>
             </tr>
         </thead>
         <tbody>

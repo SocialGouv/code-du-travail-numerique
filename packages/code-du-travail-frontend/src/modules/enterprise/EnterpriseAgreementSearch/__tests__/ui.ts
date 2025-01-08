@@ -5,6 +5,7 @@ export const ui = {
     input: byLabelText(/Nom de votre entreprise ou numéro Siren\/Siret/),
     inputLocation: byLabelText("Code postal ou Ville (optionnel)"),
     submitButton: byText("Rechercher"),
+    buttonPrevious: byText("Précédent"),
     childminder: {
       title: byText("Particuliers employeurs et emploi à domicile"),
       link: byRole("link", {

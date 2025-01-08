@@ -19,6 +19,7 @@ import { EnterpriseAgreementSelectionForm } from "./EnterpriseAgreementSelection
 import { useLocalStorageForAgreement } from "../../common/useLocalStorage";
 import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelectionDetail";
 import { getEnterpriseAgreements } from "./utils";
+import { useEnterpriseAgreementSearchTracking } from "./tracking";
 
 type Props = {
   widgetMode?: boolean;
@@ -47,6 +48,12 @@ export const EnterpriseAgreementSearchInput = ({
   const [searchState, setSearchState] = useState<
     "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch" | "required"
   >("noSearch");
+  const {
+    emitEnterpriseAgreementSearchInputEvent,
+    emitSelectEnterpriseEvent,
+    emitNoEnterpriseEvent,
+  } = useEnterpriseAgreementSearchTracking();
+
   const [search, setSearch] = useState<string | undefined>(defaultSearch);
   const [loading, setLoading] = useState<boolean>(false);
   const [location, setLocation] = useState<ApiGeoResult | undefined>(
@@ -103,6 +110,7 @@ export const EnterpriseAgreementSearchInput = ({
       setSearchState("required");
       return;
     }
+    emitEnterpriseAgreementSearchInputEvent(search, location);
     setLoading(true);
     try {
       const result = await searchEnterprises({
@@ -354,10 +362,14 @@ export const EnterpriseAgreementSearchInput = ({
                       href: widgetMode
                         ? `/widgets/convention-collective/entreprise/${enterprise.siren}${getQueries()}`
                         : `/outils/convention-collective/entreprise/${enterprise.siren}${getQueries()}`,
+                      onClick: () => {
+                        emitSelectEnterpriseEvent(enterprise);
+                      },
                     }
                   : {
                       href: "",
                       onClick: () => {
+                        emitSelectEnterpriseEvent(enterprise);
                         setSelectedEnterprise(enterprise);
                       },
                     }
@@ -398,6 +410,9 @@ export const EnterpriseAgreementSearchInput = ({
               ? {
                   href: `/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile`,
                   ...(widgetMode ? { target: "_blank" } : {}),
+                  onClick: () => {
+                    emitNoEnterpriseEvent();
+                  },
                 }
               : {
                   href: "",
@@ -412,6 +427,7 @@ export const EnterpriseAgreementSearchInput = ({
                       title: "Particuliers employeurs et emploi à domicile",
                       url: "/3239-particuliers-employeurs-et-emploi-a-domicile",
                     };
+                    emitNoEnterpriseEvent();
                     setSelectedAgreement(assMatAgreement);
                     setAgreement(assMatAgreement);
                     onAgreementSelect(assMatAgreement);

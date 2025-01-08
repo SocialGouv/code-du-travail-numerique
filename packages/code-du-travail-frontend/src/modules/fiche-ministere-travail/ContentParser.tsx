@@ -6,6 +6,7 @@ import parse, {
 } from "html-react-parser";
 import { fr } from "@codegouvfr/react-dsfr";
 import xss, { escapeAttrValue, getDefaultWhiteList } from "xss";
+import Link from "../common/Link";
 
 const xssWrapper = (text: string): string => {
   return xss(text, {
@@ -18,7 +19,7 @@ const xssWrapper = (text: string): string => {
         "type",
         "data-fr-js-collapse-button",
       ],
-      div: ["data-src"],
+      div: ["data-src", "data-title"],
     },
     /*
     Keep this attribute for all HTML tag. Use it safely.
@@ -45,9 +46,14 @@ const options = (): HTMLReactParserOptions => {
         ) {
           return (
             <p>
-              <a href={domNode.attribs["data-src"]} target={"_blank"}>
+              <Link
+                href={domNode.attribs["data-src"]}
+                target={"_blank"}
+                rel="noopener noreferrer"
+                title={`Cliquez ici pour voir la vidéo ${domNode.attribs["data-title"]}`}
+              >
                 Cliquez ici pour voir la vidéo
-              </a>
+              </Link>
             </p>
           );
         }

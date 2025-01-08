@@ -1,7 +1,22 @@
-import { render, RenderResult, screen } from "@testing-library/react";
+import { render, RenderResult } from "@testing-library/react";
 import React from "react";
 import { EnterpriseAgreementSelection } from "../EnterpriseAgreementSelectionLink";
 import { ui } from "./ui";
+import { sendEvent } from "../../../utils";
+import { UserAction } from "src/common";
+
+jest.mock("../../../utils", () => ({
+  sendEvent: jest.fn(),
+}));
+
+jest.mock("uuid", () => ({
+  v4: jest.fn(() => {}),
+}));
+
+jest.mock("next/navigation", () => ({
+  redirect: jest.fn(),
+  useSearchParams: jest.fn(),
+}));
 
 const defaultEnterprise = {
   activitePrincipale:
@@ -33,10 +48,12 @@ const defaultEnterprise = {
 
 describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
   let rendering: RenderResult;
+  let userAction: UserAction;
   it("Vérifier l'affichage de la selection", async () => {
     rendering = render(
       <EnterpriseAgreementSelection enterprise={defaultEnterprise} />
     );
+    userAction = new UserAction();
     expect(
       ui.enterpriseAgreementSelection.carrefour.title.query()
     ).toBeInTheDocument();
@@ -61,6 +78,15 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
     expect(
       ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
     ).not.toHaveAttribute("target", "_blank");
+    userAction.click(
+      ui.enterpriseAgreementSelection.agreement.IDCC2216.link.get()
+    );
+    expect(sendEvent).toHaveBeenCalledTimes(1);
+    expect(sendEvent).toHaveBeenLastCalledWith({
+      action: "Trouver sa convention collective",
+      category: "cc_select_p2",
+      name: "idcc2216",
+    });
   });
 
   it("Vérifier l'affichage de la selection avec une CC sans slug", async () => {

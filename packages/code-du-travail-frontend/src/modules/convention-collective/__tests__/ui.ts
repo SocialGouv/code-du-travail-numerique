@@ -6,11 +6,22 @@ import {
 } from "testing-library-selector";
 
 export const ui = {
+  searchAgreementIntro: {
+    buttonSearchAgreement: byRole("link", {
+      name: "Je connais ma convention collective je la saisis",
+    }),
+    buttonSearchEnterprise: byRole("link", {
+      name: "Je cherche mon entreprise pour trouver ma convention collective",
+    }),
+  },
   searchByName: {
     input: byLabelText(
       /Nom de la convention collective ou son numéro d’identification IDCC \(4 chiffres\)/
     ),
     inputCloseBtn: byTestId("AgreementSearchAutocomplete-autocomplete-close"),
+    buttonPrevious: byRole("link", {
+      name: "Précédent",
+    }),
     autocompleteLines: {
       IDCC16: {
         name: byText(
