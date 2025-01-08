@@ -10,6 +10,7 @@ import DisplayContentContribution, {
   numberLevel,
 } from "./DisplayContentContribution";
 import { getLabelBySource } from "@socialgouv/cdtn-utils";
+import { fr } from "@codegouvfr/react-dsfr";
 
 type Props = {
   contribution:
@@ -25,29 +26,31 @@ export const ContributionContent = ({ contribution, titleLevel }: Props) => {
   return (
     <section>
       {isFicheSP ? (
-        <div>
+        <>
           <div>
-            {contribution.url && (
-              <span>
-                Source&nbsp;:{" "}
-                <A11yLink
-                  href={contribution.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {`Fiche: ${getLabelBySource("fiches_service_public")}`}
-                </A11yLink>
-              </span>
-            )}
-            {contribution.url && contribution.date && (
-              <span aria-hidden="true">&nbsp;-&nbsp;</span>
-            )}
-            {contribution.date && (
-              <span>Mis à jour le&nbsp;: {contribution.date}</span>
-            )}
+            <div className={fr.cx("fr-mb-2w")}>
+              {contribution.url && (
+                <span>
+                  Source&nbsp;:{" "}
+                  <A11yLink
+                    href={contribution.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {`Fiche: ${getLabelBySource("fiches_service_public")}`}
+                  </A11yLink>
+                </span>
+              )}
+              {contribution.url && contribution.date && (
+                <span aria-hidden="true">&nbsp;-&nbsp;</span>
+              )}
+              {contribution.date && (
+                <span>Mis à jour le&nbsp;: {contribution.date}</span>
+              )}
+            </div>
+            <ContentSP raw={contribution.raw} titleLevel={titleLevel - 2} />
           </div>
-          {/* <ContentSP raw={contribution.raw} titleLevel={titleLevel - 2} /> */}
-        </div>
+        </>
       ) : (
         <DisplayContentContribution
           content={contribution.content}

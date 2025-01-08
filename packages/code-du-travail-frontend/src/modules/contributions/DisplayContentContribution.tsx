@@ -1,4 +1,3 @@
-// import { FicheServicePublic } from "../../fiche-service-public";
 import parse, {
   Text,
   DOMNode,
@@ -12,7 +11,7 @@ import { ElementType } from "react";
 import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
 import { v4 as generateUUID } from "uuid";
 import { fr } from "@codegouvfr/react-dsfr";
-import { css } from "@styled-system/css";
+import { FicheServicePublic } from "../fiche-service-public/builder";
 
 export type numberLevel = 2 | 3 | 4 | 5 | 6;
 
@@ -21,10 +20,10 @@ export const ContentSP = ({ raw, titleLevel }) => {
     <>
       {raw && (
         <div>
-          {/* <FicheServicePublic
+          <FicheServicePublic
             data={JSON.parse(raw).children}
             headingLevel={titleLevel}
-          /> */}
+          />
         </div>
       )}
     </>
