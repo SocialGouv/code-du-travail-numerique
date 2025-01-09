@@ -110,7 +110,14 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
           linkProps: { href: breadcrumb.slug },
         }))}
       />
-      <h1 className={fr.cx("fr-mb-6w")}>{title}</h1>
+      <h1 className={fr.cx("fr-mb-6w")}>
+        {title}{" "}
+        {!isGeneric && (
+          <span className={`${fr.cx("fr-h2")} ${h1}`}>
+            {contribution.ccnShortTitle}
+          </span>
+        )}
+      </h1>
       <p className={fr.cx("fr-mt-6w")}>Mis à jour le&nbsp;: {date}</p>
       <div className={`${fr.cx("fr-p-3w", "fr-mt-6w")} ${block}`}>
         {isGeneric ? (
@@ -233,11 +240,7 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
                 Que dit le code du travail&nbsp;?
               </p>
               <ContributionContent
-                contribution={
-                  contribution as
-                    | ElasticSearchContributionGeneric
-                    | ElasticSearchContributionConventionnelle
-                }
+                contribution={contribution as ElasticSearchContributionGeneric}
                 titleLevel={2}
               />
               {contribution.references.length && (
@@ -294,9 +297,7 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
           >
             <ContributionContent
               contribution={
-                contribution as
-                  | ElasticSearchContributionGeneric
-                  | ElasticSearchContributionConventionnelle
+                contribution as ElasticSearchContributionConventionnelle
               }
               titleLevel={3}
             ></ContributionContent>
@@ -334,6 +335,10 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
     </div>
   );
 }
+
+const h1 = css({
+  display: "block",
+});
 
 const block = css({
   background: "var(--background-alt-blue-cumulus) !important",
