@@ -123,7 +123,10 @@ export function ContributionLayout({ contribution }: Props) {
         {title}{" "}
         {!isGeneric && (
           <span className={`${fr.cx("fr-h2")} ${h1}`}>
-            {contribution.ccnShortTitle}
+            {
+              (contribution as ElasticSearchContributionConventionnelle)
+                .ccnShortTitle
+            }
           </span>
         )}
       </h1>
