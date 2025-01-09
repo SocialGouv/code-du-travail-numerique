@@ -9,7 +9,7 @@ import {
 } from "../../enterprise";
 
 type Props = {
-  onAgreementSelect?: (agreement?: EnterpriseAgreement) => void;
+  onAgreementSelect?: (agreement?: EnterpriseAgreement, mode?: string) => void;
   selectedAgreementAlert?: (
     agreement?: EnterpriseAgreement
   ) => NonNullable<ReactNode> | undefined;
@@ -54,7 +54,7 @@ export const AgreementSearchForm = ({
       {mode === "agreementSearch" && (
         <AgreementSearchInput
           onAgreementSelect={(agreement) => {
-            if (onAgreementSelect) onAgreementSelect(agreement);
+            if (onAgreementSelect) onAgreementSelect(agreement, "p1");
           }}
           selectedAgreementAlert={selectedAgreementAlert}
         />
@@ -62,7 +62,7 @@ export const AgreementSearchForm = ({
       {mode === "enterpriseSearch" && (
         <EnterpriseAgreementSearchInput
           onAgreementSelect={(agreement) => {
-            if (onAgreementSelect) onAgreementSelect(agreement);
+            if (onAgreementSelect) onAgreementSelect(agreement, "p2");
           }}
           selectedAgreementAlert={selectedAgreementAlert}
         />

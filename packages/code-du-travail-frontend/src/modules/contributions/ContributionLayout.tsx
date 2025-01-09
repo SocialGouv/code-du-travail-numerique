@@ -53,6 +53,8 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
     emitAgreementUntreatedEvent,
     emitDisplayAgreementContent,
     emitDisplayGeneralContent,
+    emitClickP1,
+    emitClickP2,
     emitClickP3,
   } = useContributionTracking();
   useEffect(() => {
@@ -126,13 +128,22 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
             </div>
             <div>
               <AgreementSearchForm
-                onAgreementSelect={(agreement) => {
+                onAgreementSelect={(agreement, mode) => {
                   setSelectedAgreement(
                     isAgreementValid(agreement) ? agreement : undefined
                   );
-                  if (agreement && isCCSupported(agreement)) {
+                  if (!agreement) return;
+                  switch (mode) {
+                    case "p1":
+                      emitClickP1(getTitle());
+                      break;
+                    case "p2":
+                      emitClickP2(getTitle());
+                      break;
+                  }
+                  if (isCCSupported(agreement)) {
                     emitAgreementTreatedEvent(agreement?.id);
-                  } else if (agreement) {
+                  } else {
                     emitAgreementUntreatedEvent(agreement?.id);
                   }
                 }}
