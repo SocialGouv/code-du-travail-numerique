@@ -21,7 +21,7 @@ const contribution = {
 describe("<PageContribution />", () => {
   it("should render title with cc name in it", () => {
     const { getByRole } = render(
-      <ContributionLayout contribution={contribution} relatedItems={[]} />
+      <ContributionLayout contribution={contribution} />
     );
     const titreH1 = getByRole("heading", { level: 1 });
     expect(titreH1.textContent).toBe(
@@ -31,7 +31,7 @@ describe("<PageContribution />", () => {
   it("should render title with only question", () => {
     contribution.ccnShortTitle = "Ce short title fait plus de 15 caractères";
     const { getByRole } = render(
-      <ContributionLayout contribution={contribution} relatedItems={[]} />
+      <ContributionLayout contribution={contribution} />
     );
     const titreH1 = getByRole("heading", { level: 1 });
     expect(titreH1.textContent).toBe(
