@@ -123,7 +123,7 @@ export function ContributionLayout({ contribution }: Props) {
         {title}
         {!isGeneric && " "}
         {!isGeneric && (
-          <span className={`${fr.cx("fr-h2")} ${h1}`}>
+          <span className={`${fr.cx("fr-h2")} ${h1Agreement}`}>
             {
               (contribution as ElasticSearchContributionConventionnelle)
                 .ccnShortTitle
@@ -364,7 +364,7 @@ export function ContributionLayout({ contribution }: Props) {
   );
 }
 
-const h1 = css({
+const h1Agreement = css({
   display: "block",
 });
 
