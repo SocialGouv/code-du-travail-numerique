@@ -374,6 +374,7 @@ export const EnterpriseAgreementSearchInput = ({
                           emitSelectEnterpriseAgreementEvent(
                             `idcc${enterprise.conventions[0].id}`
                           );
+                          onAgreementSelect(enterprise.conventions[0]);
                         }
                       },
                     }
