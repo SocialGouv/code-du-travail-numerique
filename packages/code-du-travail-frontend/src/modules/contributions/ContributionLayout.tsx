@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
-import { RelatedItem } from "../documents";
+import { RelatedItem, sources } from "../documents";
 import { RelatedItems } from "../common/RelatedItems";
 import { Share } from "../common/Share";
 import { Feedback } from "../layout/feedback";
@@ -28,15 +28,24 @@ import { ListWithArrow } from "../common/ListWithArrow";
 import { useContributionTracking } from "./tracking";
 
 type Props = {
-  relatedItems: { items: RelatedItem[]; title: string }[];
   contribution: ContributionElasticDocument;
 };
 
-export function ContributionLayout({ relatedItems, contribution }: Props) {
+export function ContributionLayout({ contribution }: Props) {
   const getTitle = () => `/contribution/${slug}`;
   const { date, title, slug, idcc, metaDescription } = contribution;
   const isGeneric = idcc === "0000";
   const isNoCDT = contribution?.type === "generic-no-cdt";
+  const relatedItems = [
+    {
+      title: "Articles liés",
+      items: contribution.linkedContent.map((linked) => ({
+        title: linked.title,
+        url: linked.slug,
+        source: linked.source as (typeof sources)[number],
+      })),
+    },
+  ];
 
   const [displayContent, setDisplayContent] = useState(false);
   const [displaySlug, setDisplaySlug] = useState(`/contribution/${slug}`);
@@ -178,7 +187,7 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
               </span>
             </div>
             <Card
-              title={`${(contribution as ElasticSearchContributionConventionnelle).ccnShortTitle} IDCC${contribution.idcc}`}
+              title={`${(contribution as ElasticSearchContributionConventionnelle).ccnShortTitle} IDCC ${contribution.idcc}`}
               size="small"
               titleAs="h2"
               className={fr.cx("fr-mt-2w")}
@@ -200,7 +209,7 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
           </>
         )}
       </div>
-      {isGeneric && !isNoCDT && (
+      {isGeneric && !isNoCDT && !selectedAgreement && (
         <Button
           className={fr.cx(
             !displayContent ? "fr-unhidden" : "fr-hidden",
@@ -299,7 +308,7 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
                   | ElasticSearchContributionConventionnelle
               }
               titleLevel={3}
-            ></ContributionContent>
+            />
             {contribution.references.length && (
               <Accordion label="Références">
                 <ListWithArrow
@@ -313,6 +322,21 @@ export function ContributionLayout({ relatedItems, contribution }: Props) {
                 />
               </Accordion>
             )}
+            <p className={fr.cx("fr-my-2w")}>
+              Consultez les questions-réponses fréquentes pour la convention
+              collective{" "}
+              <a
+                href={`/convention-collective/${
+                  (contribution as ElasticSearchContributionConventionnelle)
+                    .ccnSlug
+                }`}
+              >
+                {
+                  (contribution as ElasticSearchContributionConventionnelle)
+                    .ccnShortTitle
+                }
+              </a>
+            </p>
             {contribution.messageBlock && (
               <div className={fr.cx("fr-alert", "fr-alert--info", "fr-my-6w")}>
                 <>
