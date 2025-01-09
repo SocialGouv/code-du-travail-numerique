@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
-import { RelatedItem, sources } from "../documents";
+import { sources } from "../documents";
 import { RelatedItems } from "../common/RelatedItems";
 import { Share } from "../common/Share";
 import { Feedback } from "../layout/feedback";
@@ -120,7 +120,8 @@ export function ContributionLayout({ contribution }: Props) {
         }))}
       />
       <h1 className={fr.cx("fr-mb-6w")}>
-        {title}{" "}
+        {title}
+        {!isGeneric && " "}
         {!isGeneric && (
           <span className={`${fr.cx("fr-h2")} ${h1}`}>
             {
