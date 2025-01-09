@@ -89,9 +89,6 @@ export const AgreementSearchInput = ({
             if (agreement) {
               emitSelectEvent(`idcc${agreement.id}`);
             }
-            if (onAgreementSelect && agreement) {
-              onAgreementSelect(agreement);
-            }
           }}
           displayLabel={(item) => {
             return item ? `${item.shortTitle} (IDCC ${item.num})` : "";
