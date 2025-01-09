@@ -7,6 +7,7 @@ import { getEnterpriseAgreements } from "./utils";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { useState } from "react";
+import { useEnterpriseAgreementSearchTracking } from "./tracking";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;
@@ -19,6 +20,8 @@ export const EnterpriseAgreementSelectionForm = ({
   goBack,
   onAgreementSelect,
 }: Props) => {
+  const { emitSelectEnterpriseAgreementEvent } =
+    useEnterpriseAgreementSearchTracking();
   const [agreement, setAgreement] = useState<EnterpriseAgreement | undefined>();
   const agreements = getEnterpriseAgreements(enterprise.conventions);
   return (
@@ -50,6 +53,7 @@ export const EnterpriseAgreementSelectionForm = ({
                   onChange: () => {
                     onAgreementSelect(agreement);
                     setAgreement(agreement);
+                    emitSelectEnterpriseAgreementEvent(`idcc${agreement.id}`);
                   },
                 }
               : {}),
