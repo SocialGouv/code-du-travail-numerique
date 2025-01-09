@@ -20,10 +20,9 @@ export async function generateMetadata({ params }) {
 
 async function Contribution({ params }) {
   const { _id, ...source } = await getContribution(params.slug);
-  const relatedItems = await fetchRelatedItems({ _id }, params.slug);
   return (
     <DsfrLayout>
-      <ContributionLayout contribution={source} relatedItems={relatedItems} />
+      <ContributionLayout contribution={source} />
     </DsfrLayout>
   );
 }

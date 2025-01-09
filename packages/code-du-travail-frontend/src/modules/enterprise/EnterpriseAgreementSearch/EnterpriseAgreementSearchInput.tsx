@@ -38,8 +38,10 @@ export const EnterpriseAgreementSearchInput = ({
   onAgreementSelect,
   selectedAgreementAlert,
 }: Props) => {
-  const [selectedAgreement, setSelectedAgreement] =
-    useLocalStorageForAgreementOnPageLoad();
+  const [selectedAgreement, setSelectedAgreement] = useState<
+    EnterpriseAgreement | undefined
+  >();
+  const [_, setAgreementLocalStorage] = useLocalStorageForAgreementOnPageLoad();
   const [searchState, setSearchState] = useState<
     "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch" | "required"
   >("noSearch");
@@ -138,6 +140,7 @@ export const EnterpriseAgreementSearchInput = ({
         selectedEnterprise.conventions
       );
       setSelectedAgreement(enterpriseAgreement);
+      setAgreementLocalStorage(enterpriseAgreement);
     }
   }, [selectedEnterprise]);
   if (
@@ -163,7 +166,7 @@ export const EnterpriseAgreementSearchInput = ({
           )}
         >
           <Card
-            title={`${selectedAgreement.shortTitle} IDCC${selectedAgreement.id}`}
+            title={`${selectedAgreement.shortTitle} IDCC ${selectedAgreement.id}`}
             size="small"
             className={fr.cx("fr-col-10")}
             classes={{

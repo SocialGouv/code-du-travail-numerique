@@ -79,7 +79,7 @@ export const AgreementSearchInput = ({
           label={
             <>
               Nom de la convention collective ou son numéro
-              d’identification IDCC (4 chiffres)
+              d’identification IDCC (4&nbsp;chiffres)
             </>
           }
           state={getInputState()}
