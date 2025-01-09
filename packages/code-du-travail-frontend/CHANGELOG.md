@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.170.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.169.0...v4.170.0) (2025-01-09)
+
+
+### Bug Fixes
+
+* ajout header plan du site ([#6358](https://github.com/SocialGouv/code-du-travail-numerique/issues/6358)) ([dc52e7e](https://github.com/SocialGouv/code-du-travail-numerique/commit/dc52e7e208d8b49a5b13e34748139c51890290c5))
+* **contributions:** afficher une hierarchie des headings valides même si un sous-titre est utilisé alors que pas de titre avant ([#6370](https://github.com/SocialGouv/code-du-travail-numerique/issues/6370)) ([f72703d](https://github.com/SocialGouv/code-du-travail-numerique/commit/f72703de6f9bdc89a7b3d549ce214614e89f6608))
+* **contributions:** td dans le thead d'un tableau ([#6380](https://github.com/SocialGouv/code-du-travail-numerique/issues/6380)) ([029267e](https://github.com/SocialGouv/code-du-travail-numerique/commit/029267efdeee4fbb2310febb61062138a0f5a934))
+* **convention-collection:** utilisation du `focus` sur les lettres de la section ([#6391](https://github.com/SocialGouv/code-du-travail-numerique/issues/6391)) ([645aa6d](https://github.com/SocialGouv/code-du-travail-numerique/commit/645aa6d1a4bfb905de62916df770aff71a1f0b25))
+* **convention-collective:** ajout des redirections de la DARES ([#6393](https://github.com/SocialGouv/code-du-travail-numerique/issues/6393)) ([233991f](https://github.com/SocialGouv/code-du-travail-numerique/commit/233991f5f4c7fbafc8049f53a8f1718a94983245))
+* focus qui bouge sur le feedback negative lorsque textarea est rempli ([#6381](https://github.com/SocialGouv/code-du-travail-numerique/issues/6381)) ([4e8bf39](https://github.com/SocialGouv/code-du-travail-numerique/commit/4e8bf3968d6aa57b6542133076291a7e3cd93a62))
+* **footer:** passage du composant `<NeedMoreInfo/>` dans celui-ci ([#6394](https://github.com/SocialGouv/code-du-travail-numerique/issues/6394)) ([8e77464](https://github.com/SocialGouv/code-du-travail-numerique/commit/8e774649463767e0ccba5e0c7c8b6dc14c09f2cb))
+* **home:** utilisation de balise sémantique `<p/>` pour les tuiles ([#6389](https://github.com/SocialGouv/code-du-travail-numerique/issues/6389)) ([5fa2057](https://github.com/SocialGouv/code-du-travail-numerique/commit/5fa2057631e553047447f8f893bfe03ea75fa05c))
+* lié le label à l'input search sur la home ([#6356](https://github.com/SocialGouv/code-du-travail-numerique/issues/6356)) ([15dffdd](https://github.com/SocialGouv/code-du-travail-numerique/commit/15dffdd3edcd2dfaacfbfaf9c21d9cb53ec28ead))
+* rgaa ajout header contenu lié - partage ([#6359](https://github.com/SocialGouv/code-du-travail-numerique/issues/6359)) ([8d4ebc6](https://github.com/SocialGouv/code-du-travail-numerique/commit/8d4ebc6d1a151037abbb53030f4282c25b901ea4))
+* rgaa fix sur l'input contact page besoin plus info ([#6361](https://github.com/SocialGouv/code-du-travail-numerique/issues/6361)) ([9c0e5ac](https://github.com/SocialGouv/code-du-travail-numerique/commit/9c0e5aca45c9d17c2b359400448e0c6b62129edf))
+* test e2e ([#6378](https://github.com/SocialGouv/code-du-travail-numerique/issues/6378)) ([fb11f43](https://github.com/SocialGouv/code-du-travail-numerique/commit/fb11f43cc247b68ba21fee911d061249bf3ca918))
+* **test e2e:** modification de la date pour ête dans 18 mois ([#6398](https://github.com/SocialGouv/code-du-travail-numerique/issues/6398)) ([19898e3](https://github.com/SocialGouv/code-du-travail-numerique/commit/19898e3c6654699d1110a8f42ebb11fb35465ba9))
+
+
+### Features
+
+* ajout de aria-live sur compteur caractères suggestion ([#6379](https://github.com/SocialGouv/code-du-travail-numerique/issues/6379)) ([70a216b](https://github.com/SocialGouv/code-du-travail-numerique/commit/70a216bfbf4e5c1897c4b3fbca865ab9236451ff))
+* rgaa link target title ([#6367](https://github.com/SocialGouv/code-du-travail-numerique/issues/6367)) ([a01a52b](https://github.com/SocialGouv/code-du-travail-numerique/commit/a01a52bd395b18a7b414480d788d6838262a4436))
+
+
+
+
+
 # [4.169.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.168.1...v4.169.0) (2024-12-18)
 
 
