@@ -1,9 +1,9 @@
 import parse, {
-  Text,
   DOMNode,
   domToReact,
   Element,
   HTMLReactParserOptions,
+  Text,
 } from "html-react-parser";
 import { xssWrapper } from "../../lib";
 import Alert from "@codegouvfr/react-dsfr/Alert";
@@ -56,13 +56,14 @@ const mapToAccordion = (titleLevel: numberLevel, items) => {
   const props = titleLevel <= 6 ? { titleLevel } : {};
 
   return (
-    <AccordionWithAnchor
-      {...props}
-      data-testid="contrib-accordion"
-      items={items.map((item) => ({ ...item, id: generateUUID() }))}
-      titleAs={`h${titleLevel}`}
-      className={fr.cx("fr-my-3w")}
-    />
+    <div className={fr.cx("fr-my-3w")}>
+      <AccordionWithAnchor
+        {...props}
+        data-testid="contrib-accordion"
+        items={items.map((item) => ({ ...item, id: generateUUID() }))}
+        titleAs={`h${titleLevel}`}
+      />
+    </div>
   );
 };
 
