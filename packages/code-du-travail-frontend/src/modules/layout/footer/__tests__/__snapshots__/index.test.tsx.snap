@@ -47,7 +47,6 @@ exports[`<Footer /> should match snapshot 1`] = `
     </div>
     <div
       class="fr-footer"
-      role="contentinfo"
     >
       <div
         class="fr-footer__top"
