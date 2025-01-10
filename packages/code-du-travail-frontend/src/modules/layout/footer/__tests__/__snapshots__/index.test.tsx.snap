@@ -2,7 +2,9 @@
 
 exports[`<Footer /> should match snapshot 1`] = `
 <div>
-  <footer>
+  <footer
+    role="contentinfo"
+  >
     <div
       class="bg_var(--background-alt-blue-cumulus)"
       id="more-info"
