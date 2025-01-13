@@ -9,11 +9,11 @@ import {
 } from "../../../src/modules/contributions";
 
 export async function generateMetadata({ params }) {
-  const { title, description } = await getContribution(params.slug);
+  const { metas } = await getContribution(params.slug);
 
   return generateDefaultMetadata({
-    title: title,
-    description: description,
+    title: metas.title,
+    description: metas.description,
     path: `/contribution/${params.slug}`,
   });
 }
