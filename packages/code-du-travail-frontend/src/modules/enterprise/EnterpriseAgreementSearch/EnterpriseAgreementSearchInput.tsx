@@ -213,6 +213,10 @@ export const EnterpriseAgreementSearchInput = ({
           setSelectedAgreement(undefined);
         }}
         onAgreementSelect={(agreement) => {
+          emitSelectEnterpriseEvent({
+            label: selectedEnterprise.label,
+            siren: selectedEnterprise.siren,
+          });
           if (onAgreementSelect) onAgreementSelect(agreement);
           setSelectedAgreement(agreement);
         }}
@@ -367,16 +371,17 @@ export const EnterpriseAgreementSearchInput = ({
                     }
                   : {
                       href: "",
-                      onClick: () => {
-                        emitSelectEnterpriseEvent({
-                          label: enterprise.label,
-                          siren: enterprise.siren,
-                        });
+                      onClick: (ev) => {
+                        ev.preventDefault();
                         setSelectedEnterprise(enterprise);
                         if (enterprise.conventions.length === 1) {
                           emitSelectEnterpriseAgreementEvent(
                             `idcc${enterprise.conventions[0].id}`
                           );
+                          emitSelectEnterpriseEvent({
+                            label: enterprise.label,
+                            siren: enterprise.siren,
+                          });
                           onAgreementSelect(enterprise.conventions[0]);
                         }
                       },

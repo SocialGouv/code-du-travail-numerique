@@ -131,12 +131,11 @@ export function ContributionLayout({ contribution }: Props) {
           </span>
         )}
       </h1>
-      <p className={isGeneric ? fr.cx("fr-mt-6w") : fr.cx("fr-mt-2v")}>
-        Mis à jour le&nbsp;: {date}
-      </p>
-      <div className={`${fr.cx("fr-p-3w", "fr-mt-6w")} ${block}`}>
-        {isGeneric ? (
-          <>
+
+      {isGeneric ? (
+        <>
+          <p className={fr.cx("fr-mt-6w")}>Mis à jour le&nbsp;: {date}</p>
+          <div className={`${fr.cx("fr-p-3w", "fr-mt-6w")} ${block}`}>
             <div className={"fr-grid-row"}>
               <Image
                 priority
@@ -191,9 +190,12 @@ export function ContributionLayout({ contribution }: Props) {
                 </Button>
               )}
             </div>
-          </>
-        ) : (
-          <>
+          </div>
+        </>
+      ) : (
+        <>
+          <p className={fr.cx("fr-mt-2v")}>Mis à jour le&nbsp;: {date}</p>
+          <div className={`${fr.cx("fr-p-3w", "fr-mt-6w")} ${block}`}>
             <div className={"fr-grid-row"}>
               <span className={fr.cx("fr-h3", "fr-mt-1w", "fr-mb-1w")}>
                 Votre convention collective
@@ -217,12 +219,14 @@ export function ContributionLayout({ contribution }: Props) {
                 href: `/contribution/${removeCCNumberFromSlug(slug)}`,
               }}
               priority="secondary"
+              iconId="fr-icon-arrow-go-back-line"
+              iconPosition="right"
             >
               Modifier
             </Button>
-          </>
-        )}
-      </div>
+          </div>
+        </>
+      )}
       {isGeneric && !isNoCDT && !selectedAgreement && (
         <Button
           className={fr.cx(
@@ -255,6 +259,15 @@ export function ContributionLayout({ contribution }: Props) {
               <p className={fr.cx("fr-h5")} ref={titleRef}>
                 Que dit le code du travail&nbsp;?
               </p>
+              {isGeneric && (
+                <p>
+                  <strong>
+                    Cette réponse correspond à ce que prévoit le code du
+                    travail, elle ne tient pas compte des spécificités de la
+                    convention collective Industrie du pétrole
+                  </strong>
+                </p>
+              )}
               <ContributionContent
                 contribution={contribution as ElasticSearchContributionGeneric}
                 titleLevel={2}
