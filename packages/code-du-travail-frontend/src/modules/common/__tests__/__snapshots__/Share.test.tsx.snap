@@ -6,7 +6,7 @@ exports[`<Share /> renders 1`] = `
     class="fr-follow__social"
   >
     <div
-      aria-level="3"
+      aria-level="2"
       class="fr-mb-2w"
       role="heading"
     >
