@@ -21,7 +21,14 @@ export const AccordionWithAnchor = ({
 }: Props): React.ReactElement => {
   const path = useRouter();
   const [anchor, setAnchor] = useState<string | null>();
-  const [itemsWithId, setItemsToDisplay] = useState<any[]>([]);
+  const [itemsWithId, setItemsToDisplay] = useState<
+    {
+      id: string;
+      expended: boolean;
+      title: string;
+      content: React.ReactElement;
+    }[]
+  >([]);
   const refs = useRef<Record<string, HTMLDivElement | null>>({});
 
   useEffect(() => {
