@@ -1,13 +1,12 @@
 import { DsfrHead } from "@codegouvfr/react-dsfr/next-appdir/DsfrHead";
 import { DsfrProvider } from "@codegouvfr/react-dsfr/next-appdir/DsfrProvider";
 import { getHtmlAttributes } from "@codegouvfr/react-dsfr/next-appdir/getHtmlAttributes";
-import Link from "next/link";
+import Link from "../common/Link";
 import { MatomoAnalytics } from "./MatomoAnalytics";
 import { DefaultColorScheme } from "@codegouvfr/react-dsfr/next-appdir";
 import { StartDsfrSystem } from "./StartDsfrSystem";
 import { StartDsfrLight } from "./StartDsfrLight";
 import { StartDsfrDark } from "./StartDsfrDark";
-import { PolyfillComponent } from "./PolyfillComponent";
 
 type Props = {
   children: React.ReactNode;
@@ -45,7 +44,6 @@ export default function DefaultLayout({
         />
       </head>
       <body>
-        <PolyfillComponent />
         <DsfrProvider lang={lang}>{children}</DsfrProvider>
         <MatomoAnalytics />
       </body>

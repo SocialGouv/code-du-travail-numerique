@@ -8,7 +8,21 @@ describe("Fiche MT content parser", () => {
       <ContentParser>{contentWithYoutubeVideo}</ContentParser>
     );
 
-    expect(getByText("Cliquez ici pour voir la vidéo")).toBeInTheDocument();
+    expect(getByText("Cliquez ici pour voir la vidéo").title).toEqual(
+      "Cliquez ici pour voir la vidéo Le travail illégal ; la répression | web série droit du travail - nouvelle fenêtre"
+    );
+    expect(getByText("Cliquez ici pour voir la vidéo")).toHaveAttribute(
+      "href",
+      "https://www.youtube.com/embed/lSYAHnf9F1Q?t&start=0"
+    );
+    expect(getByText("Cliquez ici pour voir la vidéo")).toHaveAttribute(
+      "target",
+      "_blank"
+    );
+    expect(getByText("Cliquez ici pour voir la vidéo")).toHaveAttribute(
+      "rel",
+      "noopener noreferrer"
+    );
   });
 
   test("should replace callout with icon by a default one to avoid icon issue", () => {

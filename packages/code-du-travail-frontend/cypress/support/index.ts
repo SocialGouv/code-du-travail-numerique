@@ -31,6 +31,10 @@ declare global {
        * @example cy.checkCanonical("/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd")
        */
       checkCanonical(value: string): Chainable<Element>;
+      checkNoIndex(noIndex: boolean): Chainable<Element>;
+
+      selectByLabel: Chainable<Element>;
+      findByLabel: Chainable<Element>;
     }
   }
 }

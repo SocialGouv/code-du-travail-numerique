@@ -1,10 +1,11 @@
 "use client";
 
 import { fr } from "@codegouvfr/react-dsfr";
+import { css } from "@styled-system/css";
 import { useIframeResizer } from "../../common/hooks";
-import Link from "next/link";
 import { useIsDark } from "@codegouvfr/react-dsfr/useIsDark";
 import { useEffect } from "react";
+import { LogoLink } from "../common/LogoLink";
 
 export function WidgetWithIframeResizer({
   children,
@@ -35,17 +36,7 @@ export function WidgetWithIframeResizer({
         </div>
 
         <div className={fr.cx("fr-col-4", "fr-col-offset-md-1", "fr-col-md-2")}>
-          <Link
-            title="Code du travail numérique, Ministère du Travail"
-            href="/"
-          >
-            <img
-              className="fr-responsive-img"
-              src="/static/assets/img/logo.svg"
-              alt="Code du travail numérique"
-              data-fr-js-ratio="true"
-            />
-          </Link>
+          <LogoLink />
         </div>
         <div className={fr.cx("fr-col-12", "fr-col-md-9")}>{children}</div>
       </div>

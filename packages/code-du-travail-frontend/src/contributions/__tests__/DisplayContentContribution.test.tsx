@@ -15,38 +15,60 @@ describe("DisplayContentContribution", () => {
       expect(baseElement.firstChild).toMatchSnapshot();
     });
     it(`should replace span with with heading according to given title level`, () => {
-      const { baseElement } = render(
+      const { getByText } = render(
         <DisplayContentContribution
-          content={`<span class="title">Mon title</span><span class="sub-title">Mon title</span>`}
+          content={`<span class="title">Ceci est un titre</span><span class="sub-title">Ceci est un sous titre</span>`}
           titleLevel={4}
         ></DisplayContentContribution>
       );
 
-      expect(baseElement.firstChild).toMatchSnapshot();
+      expect(getByText("Ceci est un titre").tagName).toEqual("H4");
+      expect(getByText("Ceci est un sous titre").tagName).toEqual("H5");
     });
     it(`should not add headings higher than h6 for titles`, () => {
-      const { baseElement } = render(
+      const { getByText } = render(
         <DisplayContentContribution
-          content={`<span class="title">Mon title</span><span class="sub-title">Mon title</span>`}
+          content={`<span class="title">Ceci est un titre</span><span class="sub-title">Ceci est un sous titre</span>`}
           titleLevel={6}
         ></DisplayContentContribution>
       );
 
-      expect(baseElement.firstChild).toMatchSnapshot();
+      expect(getByText("Ceci est un titre").tagName).toEqual("H6");
+      expect(getByText("Ceci est un sous titre").tagName).toEqual("STRONG");
     });
     it(`should not add headings higher than h6 for accordion`, () => {
-      const { asFragment } = render(
+      const { getByText } = render(
         <DisplayContentContribution
           content={`
         <details className=" details"><summary>Ceci est un titre</summary>
           <div data-type=" detailsContent">
-            <span class="sub-title">Mon title</span>
+            <span class="title">Ceci est un sous titre</span>
+            <span class="sub-title">Ceci est un sous sous titre</span>
           </div>
         </details>`}
           titleLevel={6}
         ></DisplayContentContribution>
       );
-      expect(asFragment().firstChild).toMatchSnapshot();
+      expect(getByText("Ceci est un titre").tagName).toEqual("H6");
+      expect(getByText("Ceci est un sous titre").tagName).toEqual("STRONG");
+      expect(getByText("Ceci est un sous sous titre").tagName).toEqual(
+        "STRONG"
+      );
+    });
+    it(`should handle sub-title in accordion even if no title`, () => {
+      const { getByText } = render(
+        <DisplayContentContribution
+          content={`
+        <details className=" details"><summary>Ceci est un titre</summary>
+          <div data-type=" detailsContent">
+            <span class="sub-title">Ceci est un sous titre</span>
+          </div>
+        </details>`}
+          titleLevel={4}
+        ></DisplayContentContribution>
+      );
+      expect(getByText("Ceci est un titre").tagName).toEqual("H4");
+      expect(getByText("Ceci est un sous titre").tagName).toEqual("H5");
     });
   });
 
@@ -301,6 +323,31 @@ describe("DisplayContentContribution", () => {
       expect(asFragment().firstChild).toMatchSnapshot();
     });
 
+    it(`should replace td by th in thead`, () => {
+      const { asFragment } = render(
+        <DisplayContentContribution
+          content={`
+        <table>
+        <thead>
+            <tr>
+              <td colspan="1" rowspan="1">Titre 1</td>
+              <td colspan="1" rowspan="1">Titre 2</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="1" rowspan="1"><p>Pour les <strong>cadres</strong>, la prolongation ...</p></td>
+                <td colspan="1" rowspan="1"><ul><li><p>L’employeur et le salarié donnent par écrit ou par mail.</p></li></ul></td>
+            </tr>
+        </tbody>
+        </table>`}
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
+
+      expect(asFragment().firstChild).toMatchSnapshot();
+    });
+
     it(`should keep whitespace in specific tag`, () => {
       const { asFragment } = render(
         <DisplayContentContribution
@@ -413,6 +460,17 @@ describe("DisplayContentContribution", () => {
         <DisplayContentContribution
           content={`
         <div><p>Le contrat de mission (intérim) doit :</p><ul><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être<strong> écrit</strong> et <strong>rédigé</strong> en français (si conclu en France) ;</p></li><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être <strong>signé</strong>, dans un délai de <strong>2 jours</strong> suivant la mise à disposition du salarié auprès de l'entreprise ; si l’employeur transmet le CDD au salarié après le délai de 2 jours, il s'expose au paiement d'une indemnité égale à 1 mois de salaire maximum.</p></li><li class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"><p>Être établi <strong>en plusieurs exemplaires</strong> ; c'est-à-dire autant d'exemplaires que de parties au contrat. Chaque partie au contrat aura un exemplaire.</p><p></p><div class="alert"><p><strong>Attention : </strong>En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.</p></div></li></ul></div>`}
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
+
+      expect(asFragment().firstChild).toMatchSnapshot();
+    });
+
+    it(`should have space in table item for a strong and an other content`, () => {
+      const { asFragment } = render(
+        <DisplayContentContribution
+          content={`<table class="sc-4e3ba411-0 kGLBMt"><thead><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p><strong>Repos compensateur&nbsp;</strong></p></td><td colspan="1" rowspan="1"><p><strong>Majoration de salaire</strong></p></td></tr></thead><tbody><tr><td colspan="1" rowspan="1"><p><strong>Salariés</strong></p></td><td colspan="1" rowspan="1"><p>Une journée entière déterminée par roulement et par quinzaine</p></td><td colspan="1" rowspan="2"><p>Pour les commerces avec une surface de vente <strong>supérieure à 400 m2</strong>,<strong></strong>la loi prévoit une majoration de&nbsp;salaire d’au moins 30 % par rapport au salaire normalement dû pour une durée équivalente</p><p>Pour les commerces avec une surface de vente <strong>inférieure ou égale à 400 m2</strong>, la loi ne prévoit aucune majoration de salaire.&nbsp;Mais l’employeur, s’il le souhaite, ou un <webcomponent-tooltip content="Accord%20conclu%20entre%20un%20employeur%20ou%20des%20repr%C3%A9sentants%20d%E2%80%99employeurs%20et%20une%20ou%20plusieurs%20organisations%20syndicales%20ou%20des%20repr%C3%A9sentants%20de%20salari%C3%A9s%2C%20ou%20dans%20certains%20cas%2C%20%C3%A0%20la%20suite%20de%20la%20consultation%20des%20salari%C3%A9s%2C%20en%20respectant%20des%20r%C3%A8gles%20de%20validit%C3%A9%20issues%20du%20code%20du%20travail.%20Il%20peut%20%C3%AAtre%20conclu%20%C3%A0%20plusieurs%20niveaux%20%3A%20branche%20professionnelle%2C%20groupe%2C%20entreprise%2C%20%C3%A9tablissement...%20L%E2%80%99accord%20collectif%20concerne%20un%20ou%20plusieurs%20th%C3%A8mes%20contrairement%20%C3%A0%20la%20convention%20collective%20qui%20traite%20de%20l%E2%80%99ensemble%20des%20conditions%20d%E2%80%99emploi%2C%20de%20travail%20et%20de%20formation%20professionnelle%20et%20des%20garanties%20sociales%20des%20salari%C3%A9s.%20">accord collectif</webcomponent-tooltip>, peuvent le prévoir.</p></td></tr><tr><td colspan="1" rowspan="1"><p><strong>Salariés de moins de 21 ans logés chez leur employeur</strong></p></td><td colspan="1" rowspan="1"><p>Un autre après-midi déterminé par roulement et par quinzaine</p></td></tr></tbody></table>`}
           titleLevel={3}
         ></DisplayContentContribution>
       );

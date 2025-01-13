@@ -7,6 +7,7 @@ import styled from "styled-components";
 import { BlockGraphic } from "./BlockGraphic";
 import { ContentList } from "../../content";
 import Html from "../../common/Html";
+import DisplayContentContribution from "../../contributions/DisplayContentContribution";
 
 export const BlockList = ({
   blocks,
@@ -30,7 +31,12 @@ export const BlockList = ({
             );
             break;
           case EditorialContentType.markdown:
-            comp = <Html>{block.html}</Html>;
+            comp = (
+              <DisplayContentContribution
+                content={block.html}
+                titleLevel={2}
+              ></DisplayContentContribution>
+            );
             break;
         }
         return (

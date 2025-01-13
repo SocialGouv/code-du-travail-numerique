@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NeedMoreInfo /> should match snapshot 1`] = `
+<div>
+  <div
+    class="bg_var(--background-alt-blue-cumulus)"
+    id="more-info"
+  >
+    <div
+      class="fr-container"
+    >
+      <div
+        class="fr-grid-row fr-grid-row--center"
+      >
+        <div
+          class="fr-col-md-6 fr-py-6w"
+        >
+          <div
+            aria-level="2"
+            class="fr-h2 c_var(--text-action-high-blue-france)! ta_center"
+            role="heading"
+          >
+            Besoin de plus d'informations ?
+          </div>
+          <p
+            class="c_var(--text-action-high-blue-france)"
+          >
+            Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+          </p>
+          <div
+            class="d_flex jc_center"
+          >
+            <a
+              class="fr-btn fr-btn--secondary fr-icon-chat-3-line fr-btn--icon-right"
+              href="/besoin-plus-informations"
+              id="fr-button-:r0:"
+            >
+              Trouver les services près de chez moi
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

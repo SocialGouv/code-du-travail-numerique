@@ -24,7 +24,9 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
 
   return (
     <div className={fr.cx("fr-follow__social")}>
-      <p>Partager la page</p>
+      <div className={fr.cx("fr-mb-2w")} role="heading" aria-level={2}>
+        <span>Partager la page</span>
+      </div>
       <ul className={fr.cx("fr-btns-group")}>
         <li>
           <a

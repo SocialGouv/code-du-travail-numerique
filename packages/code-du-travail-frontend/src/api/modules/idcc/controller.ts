@@ -13,8 +13,11 @@ export class IdccController {
 
   public async get() {
     try {
-      const { q } = this.req.query;
-      const response = await getIdccByQuery(q as string);
+      const { q, size } = this.req.query;
+      const response = await getIdccByQuery(
+        q as string,
+        size ? parseInt(size as string) : undefined
+      );
       this.res.status(200).json(response);
     } catch (error) {
       if (error instanceof NotFoundError) {

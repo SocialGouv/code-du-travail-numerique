@@ -10,12 +10,14 @@ exports[`<FeedbackDefault /> should match snapshot 1`] = `
     >
       <h2
         class="fr-h5 fr-mb-md-0"
+        id="feedback-title"
       >
         Avez-vous trouvé la réponse à votre question ?
       </h2>
     </div>
     <div>
       <button
+        aria-describedby="feedback-title"
         class="fr-btn fr-btn--secondary fr-mr-2w"
         id="fr-button-:r0:"
         type="button"
@@ -23,6 +25,7 @@ exports[`<FeedbackDefault /> should match snapshot 1`] = `
         Non
       </button>
       <button
+        aria-describedby="feedback-title"
         class="fr-btn fr-btn--secondary"
         id="fr-button-:r1:"
         type="button"

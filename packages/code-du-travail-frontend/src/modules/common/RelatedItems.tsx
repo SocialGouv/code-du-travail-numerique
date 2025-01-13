@@ -23,9 +23,13 @@ export const RelatedItems = ({
         ({ title, items }) =>
           items.length > 0 && (
             <div key={title}>
-              <p className={fr.cx("fr-text--lead")}>
+              <div
+                className={fr.cx("fr-mb-2w", "fr-text--lead")}
+                role="heading"
+                aria-level={2}
+              >
                 <strong>{title}&nbsp;:</strong>
-              </p>
+              </div>
               <ListWithArrow
                 items={items.map(({ source, title, url }) => {
                   return (

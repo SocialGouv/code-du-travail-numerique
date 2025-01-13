@@ -35,14 +35,30 @@ export const fetchEnterprises = async (
   }
   const jsonResponse: ApiRechercheEntrepriseResponse = await fetchReq.json();
 
+  const specialCCList = [
+    {
+      num: "9999",
+      title: "___Sans convention collective___",
+    },
+    {
+      num: "9998",
+      title: "___Convention non encore en vigueur___",
+    },
+  ];
+
   const entreprises = jsonResponse.results.map((result) => {
     const conventions =
       result.complements.liste_idcc?.map((idccNumber) => {
+        const specialCC = specialCCList.find(({ num }) => num === idccNumber);
         return {
           idcc: parseInt(idccNumber, 10),
-          shortTitle: `Convention collective ${idccNumber}`,
+          shortTitle: specialCC
+            ? specialCC.title
+            : `Convention collective ${idccNumber}`,
           id: idccNumber,
-          title: `Convention collective ${idccNumber}`,
+          title: specialCC
+            ? specialCC.title
+            : `Convention collective ${idccNumber}`,
         };
       }) ?? [];
 
