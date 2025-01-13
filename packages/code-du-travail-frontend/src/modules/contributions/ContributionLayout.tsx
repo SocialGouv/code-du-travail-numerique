@@ -68,7 +68,9 @@ export function ContributionLayout({ contribution }: Props) {
   } = useContributionTracking();
   useEffect(() => {
     setDisplaySlug(
-      selectedAgreement ? `/contribution/${selectedAgreement.num}-${slug}` : ""
+      selectedAgreement && isAgreementValid(selectedAgreement)
+        ? `/contribution/${selectedAgreement.num}-${slug}`
+        : ""
     );
   }, [selectedAgreement]);
   const isCCSupported = (agreement: EnterpriseAgreement) => {
@@ -150,9 +152,7 @@ export function ContributionLayout({ contribution }: Props) {
             <div>
               <AgreementSearchForm
                 onAgreementSelect={(agreement, mode) => {
-                  setSelectedAgreement(
-                    isAgreementValid(agreement) ? agreement : undefined
-                  );
+                  setSelectedAgreement(agreement);
                   if (!agreement) return;
                   switch (mode) {
                     case "p1":
@@ -170,25 +170,26 @@ export function ContributionLayout({ contribution }: Props) {
                 }}
                 selectedAgreementAlert={selectedAgreementAlert}
               />
-              {(!isGeneric || !isNoCDT || selectedAgreement) && (
-                <Button
-                  className={fr.cx("fr-mt-2w")}
-                  linkProps={{
-                    href: displaySlug,
-                    onClick: (ev) => {
-                      if (!selectedAgreement) {
-                        ev.preventDefault();
-                        setDisplayContent(true);
-                      }
-                      if (displaySlug) emitDisplayAgreementContent(getTitle());
-                      else emitDisplayGeneralContent(getTitle());
-                      if (isGeneric) scrollToTitle();
-                    },
-                  }}
-                >
-                  Afficher les informations
-                </Button>
-              )}
+              <Button
+                className={fr.cx("fr-mt-2w")}
+                linkProps={{
+                  href: displaySlug,
+                  onClick: (ev) => {
+                    if (
+                      !isAgreementValid(selectedAgreement) ||
+                      !selectedAgreement
+                    ) {
+                      ev.preventDefault();
+                      setDisplayContent(true);
+                    }
+                    if (displaySlug) emitDisplayAgreementContent(getTitle());
+                    else emitDisplayGeneralContent(getTitle());
+                    if (isGeneric) scrollToTitle();
+                  },
+                }}
+              >
+                Afficher les informations
+              </Button>
             </div>
           </div>
         </>
@@ -244,7 +245,8 @@ export function ContributionLayout({ contribution }: Props) {
           Afficher les informations sans sélectionner une convention collective
         </Button>
       )}
-      {isGeneric && !isNoCDT && (
+      {((isGeneric && !isNoCDT) ||
+        (selectedAgreement && !isAgreementValid(selectedAgreement))) && (
         <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
           <div
             className={fr.cx(
@@ -259,12 +261,12 @@ export function ContributionLayout({ contribution }: Props) {
               <p className={fr.cx("fr-h5")} ref={titleRef}>
                 Que dit le code du travail&nbsp;?
               </p>
-              {isGeneric && (
+              {selectedAgreement && !isCCSupported(selectedAgreement) && (
                 <p>
                   <strong>
                     Cette réponse correspond à ce que prévoit le code du
                     travail, elle ne tient pas compte des spécificités de la
-                    convention collective Industrie du pétrole
+                    convention collective {selectedAgreement.shortTitle}
                   </strong>
                 </p>
               )}
