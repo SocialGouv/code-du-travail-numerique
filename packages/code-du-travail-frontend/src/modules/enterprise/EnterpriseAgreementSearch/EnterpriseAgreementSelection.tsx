@@ -38,10 +38,12 @@ export const EnterpriseAgreementSelection = ({
             Aucune convention collective n&apos;a été déclarée pour
             l&apos;entreprise
           </>
+        ) : enterprise.conventions.length === 1 ? (
+          <>1 convention collective trouvée pour&nbsp;:</>
         ) : (
           <>
-            {enterprise.conventions.length} conventions collectives trouvée
-            {enterprise.conventions.length > 1 ? "s" : ""} pour&nbsp;:
+            {enterprise.conventions.length} conventions collectives trouvées
+            pour&nbsp;:
           </>
         )}
       </h2>
