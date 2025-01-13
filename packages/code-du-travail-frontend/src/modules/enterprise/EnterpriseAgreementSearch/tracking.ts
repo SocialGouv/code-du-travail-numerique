@@ -49,10 +49,17 @@ export const useEnterpriseAgreementSearchTracking = () => {
     });
   };
 
-  const emitNoEnterpriseEvent = () => {
+  const emitNoEnterpriseClickEvent = () => {
     sendEvent({
       category: TrackingAgreementSearchCategory.CC_SEARCH_TYPE_OF_USERS,
       action: TrackingAgreementSearchAction.CLICK_NO_COMPANY,
+      name: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
+    });
+  };
+  const emitNoEnterpriseSelectEvent = () => {
+    sendEvent({
+      category: TrackingAgreementSearchCategory.CC_SEARCH_TYPE_OF_USERS,
+      action: TrackingAgreementSearchAction.SELECT_NO_COMPANY,
       name: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
     });
   };
@@ -62,6 +69,7 @@ export const useEnterpriseAgreementSearchTracking = () => {
     emitSelectEnterpriseEvent,
     emitSelectEnterpriseAgreementEvent,
     emitPreviousEvent,
-    emitNoEnterpriseEvent,
+    emitNoEnterpriseClickEvent,
+    emitNoEnterpriseSelectEvent,
   };
 };

@@ -1,6 +1,7 @@
 import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
-import { ContributionElasticDocument } from "@socialgouv/cdtn-types";
 import { SOURCES } from "@socialgouv/cdtn-utils";
+import { DocumentElasticResult, fetchDocument } from "../documents";
+import { ContributionElasticDocument } from "./type";
 
 export const fetchContributions = async <
   K extends keyof ContributionElasticDocument,
@@ -8,6 +9,7 @@ export const fetchContributions = async <
   fields: K[],
   filters?: {
     cdtnIds?: string[];
+    slugs?: string[];
   }
 ): Promise<Pick<ContributionElasticDocument, K>[]> => {
   const baseFilters: Array<any> = [
@@ -17,6 +19,9 @@ export const fetchContributions = async <
 
   if (filters?.cdtnIds) {
     baseFilters.push({ terms: { cdtnId: filters.cdtnIds } });
+  }
+  if (filters?.slugs) {
+    baseFilters.push({ terms: { slug: filters.slugs } });
   }
 
   const result = await elasticsearchClient.search<
@@ -35,4 +40,29 @@ export const fetchContributions = async <
   return result.hits.hits
     .map(({ _source }) => _source)
     .filter((source) => source !== undefined);
+};
+
+export const fetchContributionBySlug = async (
+  slug: string
+): Promise<DocumentElasticResult<ContributionElasticDocument>> => {
+  const response = await elasticsearchClient.search<
+    DocumentElasticResult<ContributionElasticDocument>
+  >({
+    index: elasticDocumentsIndex,
+    query: {
+      bool: {
+        filter: [
+          { term: { source: SOURCES.CONTRIBUTIONS } },
+          { term: { slug } },
+          { term: { isPublished: true } },
+        ],
+      },
+    },
+    size: 1,
+  });
+  const item = response.hits.hits[0];
+  if (!item || !item._source) {
+    throw new Error("not Found");
+  }
+  return { ...item._source, _id: item._id };
 };
