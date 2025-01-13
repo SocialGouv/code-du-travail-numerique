@@ -20,12 +20,13 @@ export const AccordionWithAnchor = ({
   titleAs = "h2",
 }: Props): React.ReactElement => {
   const path = useRouter();
+  const [anchor, setAnchor] = useState<string | null>();
   const [itemsToDiplay, setItemsToDisplay] = useState<any[]>([]);
   const refs = useRef<Record<string, HTMLDivElement | null>>({});
 
   useEffect(() => {
-    const hash = window.location.hash?.substring(1) || "";
-
+    const hash = window.location.hash?.substring(1);
+    setAnchor(hash);
     if (items.length && !itemsToDiplay.length) {
       const itemsWithId = items.map(({ id, ...item }) => {
         const idDefaulted = id ?? slugify(item.title);
@@ -38,13 +39,15 @@ export const AccordionWithAnchor = ({
 
       setItemsToDisplay(itemsWithId);
     }
+  }, [path]);
 
-    if (hash) {
-      refs.current[hash]?.scrollIntoView({
+  useEffect(() => {
+    if (anchor && refs.current[anchor]) {
+      refs.current[anchor]?.scrollIntoView({
         behavior: "smooth",
       });
     }
-  }, [path]);
+  }, [refs.current, anchor]);
 
   if (items.length === 0) {
     return <></>;
