@@ -123,7 +123,7 @@ export function ContributionLayout({ contribution }: Props) {
         {title}
         {!isGeneric && " "}
         {!isGeneric && (
-          <span className={`${fr.cx("fr-h2")} ${h1Agreement}`}>
+          <span className={`fr-mt-4w ${h1Agreement}`}>
             {
               (contribution as ElasticSearchContributionConventionnelle)
                 .ccnShortTitle
@@ -194,16 +194,17 @@ export function ContributionLayout({ contribution }: Props) {
           <>
             <div className={"fr-grid-row"}>
               <span className={fr.cx("fr-h3", "fr-mt-1w", "fr-mb-1w")}>
-                Réponse personnalisée pour la convention collective
+                Votre convention collective
               </span>
             </div>
             <Card
-              title={`${(contribution as ElasticSearchContributionConventionnelle).ccnShortTitle} IDCC ${contribution.idcc}`}
+              title={`${(contribution as ElasticSearchContributionConventionnelle).ccnShortTitle} (IDCC ${contribution.idcc})`}
               size="small"
               titleAs="h2"
               className={fr.cx("fr-mt-2w")}
               classes={{
                 content: fr.cx("fr-p-2w"),
+                title: cardTitle,
                 start: fr.cx("fr-m-0"),
                 end: fr.cx("fr-p-0", "fr-m-0"),
               }}
@@ -366,6 +367,12 @@ export function ContributionLayout({ contribution }: Props) {
 
 const h1Agreement = css({
   display: "block",
+  fontSize: "1rem",
+  fontWeight: "normal",
+});
+
+const cardTitle = css({
+  fontWeight: "normal!",
 });
 
 const block = css({
