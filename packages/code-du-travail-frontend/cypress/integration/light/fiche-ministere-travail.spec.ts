@@ -8,7 +8,7 @@ describe("Page Ministère du travail", () => {
     cy.contains("a", "Fiche Ministère du travail")
       .should("have.attr", "href")
       .and("contain", "https://travail-emploi.gouv.fr");
-    cy.findAllByRole("heading", { level: 2 }).should("have.length", 10);
+    cy.findAllByRole("heading", { level: 2 }).should("have.length", 12);
     cy.get("h2")
       .first()
       .should("contain.text", "Qu'est-ce qu'une entreprise d’insertion");

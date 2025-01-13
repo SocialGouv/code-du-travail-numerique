@@ -26,7 +26,7 @@ export const RelatedItems = ({
               <div
                 className={fr.cx("fr-mb-2w", "fr-text--lead")}
                 role="heading"
-                aria-level={3}
+                aria-level={2}
               >
                 <strong>{title}&nbsp;:</strong>
               </div>

@@ -1,7 +1,6 @@
 import { PolyfillComponent } from "../config/PolyfillComponent";
-import { Footer } from "./Footer";
+import { Footer } from "./footer";
 import { Header } from "./header";
-import { NeedMoreInfo } from "./infos";
 import { SkipLinks } from "./SkipLinks";
 
 type Props = {
@@ -15,10 +14,9 @@ export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
       <PolyfillComponent />
       <SkipLinks />
       <Header />
-      <main className={container} id="main">
+      <main className={container} id="main" role="main">
         {children}
       </main>
-      <NeedMoreInfo />
       <Footer />
     </>
   );

@@ -155,19 +155,20 @@ exports[`<Home /> should match snapshot 1`] = `
                     <div
                       class="fr-card__start fr-mb-2w"
                     >
-                      <span
+                      <p
                         class="fr-tag fr-tag--sm"
-                        id="fr-tag-:r3:"
                       >
                         light
-                      </span>
+                      </p>
                     </div>
                     <div
                       class="fr-card__end fr-text--xs"
                     >
-                      <span>
+                      <p
+                        class="fr-m-0 fr-text--xs"
+                      >
                         Consulter
-                      </span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -199,7 +200,7 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-tile fr-enlarge-link fr-tile--vertical"
-                id="fr-tile-:r4:"
+                id="fr-tile-:r3:"
               >
                 <div
                   class="fr-tile__body"
@@ -247,7 +248,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/outils"
-              id="fr-button-:r5:"
+              id="fr-button-:r4:"
             >
               Voir tous les outils
             </a>
@@ -276,7 +277,7 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-card fr-enlarge-link fr-card--horizontal"
-                id="fr-card-:r6:"
+                id="fr-card-:r5:"
               >
                 <div
                   class="fr-card__body"
@@ -302,19 +303,20 @@ exports[`<Home /> should match snapshot 1`] = `
                     <div
                       class="fr-card__start fr-mb-2w"
                     >
-                      <span
+                      <p
                         class="fr-tag fr-tag--sm"
-                        id="fr-tag-:r7:"
                       >
                         dark
-                      </span>
+                      </p>
                     </div>
                     <div
                       class="fr-card__end fr-text--xs"
                     >
-                      <span>
+                      <p
+                        class="fr-m-0 fr-text--xs"
+                      >
                         Consulter
-                      </span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -327,7 +329,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/modeles-de-courriers"
-              id="fr-button-:r8:"
+              id="fr-button-:r6:"
             >
               Voir tous les modèles de documents
             </a>
@@ -356,7 +358,7 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-card fr-enlarge-link fr-card--horizontal"
-                id="fr-card-:r9:"
+                id="fr-card-:r7:"
               >
                 <div
                   class="fr-card__body"
@@ -382,19 +384,20 @@ exports[`<Home /> should match snapshot 1`] = `
                     <div
                       class="fr-card__start fr-mb-2w"
                     >
-                      <span
+                      <p
                         class="fr-tag fr-tag--sm"
-                        id="fr-tag-:ra:"
                       >
                         light
-                      </span>
+                      </p>
                     </div>
                     <div
                       class="fr-card__end fr-text--xs"
                     >
-                      <span>
+                      <p
+                        class="fr-m-0 fr-text--xs"
+                      >
                         Consulter
-                      </span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -407,7 +410,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/contribution"
-              id="fr-button-:rb:"
+              id="fr-button-:r8:"
             >
               Voir toutes les fiches pratiques
             </a>
@@ -437,7 +440,7 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-card fr-enlarge-link fr-card--horizontal"
-                id="fr-card-:rc:"
+                id="fr-card-:r9:"
               >
                 <div
                   class="fr-card__body"
@@ -463,19 +466,20 @@ exports[`<Home /> should match snapshot 1`] = `
                     <div
                       class="fr-card__start fr-mb-2w"
                     >
-                      <span
+                      <p
                         class="fr-tag fr-tag--sm"
-                        id="fr-tag-:rd:"
                       >
                         dark
-                      </span>
+                      </p>
                     </div>
                     <div
                       class="fr-card__end fr-text--xs"
                     >
-                      <span>
+                      <p
+                        class="fr-m-0 fr-text--xs"
+                      >
                         Consulter
-                      </span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -488,7 +492,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/convention-collective"
-              id="fr-button-:re:"
+              id="fr-button-:ra:"
             >
               Voir toutes les conventions collectives
             </a>
@@ -532,7 +536,7 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--no-icon fr-tile--sm"
-                id="fr-tile-:rf:"
+                id="fr-tile-:rb:"
               >
                 <div
                   class="fr-tile__body"
@@ -581,7 +585,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/themes"
-              id="fr-button-:rg:"
+              id="fr-button-:rc:"
             >
               Voir tous les thèmes
             </a>
