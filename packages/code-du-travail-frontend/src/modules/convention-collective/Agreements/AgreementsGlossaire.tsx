@@ -1,5 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import Link from "next/link";
+import Link from "../../common/Link";
 import { css } from "@styled-system/css";
 
 type Props = {

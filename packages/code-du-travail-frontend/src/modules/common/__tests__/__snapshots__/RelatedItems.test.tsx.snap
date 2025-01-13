@@ -6,14 +6,16 @@ exports[`<RelatedItems /> should render 1`] = `
     class="fr-mb-5w"
   >
     <div>
-      <p
-        class="fr-text--lead"
+      <div
+        aria-level="2"
+        class="fr-mb-2w fr-text--lead"
+        role="heading"
       >
         <strong>
           Modèles et outils liés
            :
         </strong>
-      </p>
+      </div>
       <ul
         class="fr-pl-0 li-s_none!"
       >
@@ -48,14 +50,16 @@ exports[`<RelatedItems /> should render 1`] = `
       </ul>
     </div>
     <div>
-      <p
-        class="fr-text--lead"
+      <div
+        aria-level="2"
+        class="fr-mb-2w fr-text--lead"
+        role="heading"
       >
         <strong>
           Articles liés
            :
         </strong>
-      </p>
+      </div>
       <ul
         class="fr-pl-0 li-s_none!"
       >

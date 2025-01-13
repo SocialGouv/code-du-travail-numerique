@@ -24,6 +24,7 @@ exports[`<Avertissement /> affiche un avertissement 1`] = `
         href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000045197395/"
         rel="noopener noreferrer"
         target="_blank"
+        title="loi n°2022-217 du 21 février 2022 - nouvelle fenêtre"
       >
         loi n°2022-217 du 21 février 2022
       </a>
@@ -34,6 +35,7 @@ exports[`<Avertissement /> affiche un avertissement 1`] = `
         href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000046780040"
         rel="noopener noreferrer"
         target="_blank"
+        title="L'ordonnance n°2022-1067 du 22 décembre 2022 - nouvelle fenêtre"
       >
         L'ordonnance n°2022-1067 du 22 décembre 2022
       </a>

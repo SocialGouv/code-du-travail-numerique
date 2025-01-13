@@ -34,7 +34,9 @@ describe("<BesoinPlusInformations />", () => {
   });
 
   it("doit trouver indiquer si le code postal n'existe pas", () => {
-    const { getByTestId, getByLabelText } = render(<BesoinPlusInformations />);
+    const { getByTestId, getByLabelText, getByText } = render(
+      <BesoinPlusInformations />
+    );
     const userAction = new UserAction();
     userAction.setInput(
       getByLabelText("Saisissez le numéro de votre département"),
@@ -42,8 +44,10 @@ describe("<BesoinPlusInformations />", () => {
     );
     userAction.click(getByTestId("button-search-service"));
 
-    expect(getByTestId("result-search-service-failed").textContent).toBe(
-      "Aucun service de renseignement n'a été trouvé pour ce département."
-    );
+    expect(
+      getByText(
+        "Aucun service de renseignement n'a été trouvé pour ce département."
+      )
+    ).toBeInTheDocument();
   });
 });

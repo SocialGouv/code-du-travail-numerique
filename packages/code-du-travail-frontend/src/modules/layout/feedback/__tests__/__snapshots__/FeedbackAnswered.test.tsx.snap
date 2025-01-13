@@ -4,6 +4,7 @@ exports[`<FeedbackAnswered /> should match snapshot 1`] = `
 <div>
   <h2
     class="fr-h5"
+    tabindex="-1"
   >
     Merci pour votre réponse.
   </h2>

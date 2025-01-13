@@ -6,12 +6,21 @@ concurrency:
   cancel-in-progress: true
   group: release-${{ github.ref }}
 
+permissions:
+  id-token: write  # Required for OIDC token generation
+
 jobs:
   release:
     if: github.ref == 'refs/heads/master'
     name: Release
     runs-on: ubuntu-latest
     steps:
+      - name: Get GitHub App Token
+        id: token
+        uses: SocialGouv/token-bureau@main
+        with:
+          token-bureau-url: https://token-bureau.fabrique.social.gouv.fr
+          audience: socialgouv
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -30,7 +39,7 @@ jobs:
           git config --global user.email "${EMAIL}"
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
         env:
-          GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
+          GITHUB_TOKEN: ${{ steps.token.outputs.token }}
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
       - name: Build for npm
@@ -38,7 +47,7 @@ jobs:
       - name: Versionning code
         run: GH_TOKEN=${GITHUB_TOKEN} yarn lerna version --force-publish --yes --conventional-commits --create-release github
         env:
-          GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
+          GITHUB_TOKEN: ${{ steps.token.outputs.token }}
       - name: Rebase master to dev
         run: |
           git config --global user.name "${NAME}"
@@ -49,7 +58,7 @@ jobs:
           git rebase master
           git push
         env:
-          GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
+          GITHUB_TOKEN: ${{ steps.token.outputs.token }}
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
       - name: Setup token

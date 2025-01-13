@@ -6,11 +6,20 @@ concurrency:
   cancel-in-progress: true
   group: pre-release-${{ github.ref }}
 
+permissions:
+  id-token: write  # Required for OIDC token generation
+
 jobs:
   release:
     name: Pre-release
     runs-on: ubuntu-latest
     steps:
+      - name: Get GitHub App Token
+        id: token
+        uses: SocialGouv/token-bureau@main
+        with:
+          token-bureau-url: https://token-bureau.fabrique.social.gouv.fr
+          audience: socialgouv
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -26,6 +35,6 @@ jobs:
           git rebase dev
           git push
         env:
-          GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
+          GITHUB_TOKEN: ${{ steps.token.outputs.token }}
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}

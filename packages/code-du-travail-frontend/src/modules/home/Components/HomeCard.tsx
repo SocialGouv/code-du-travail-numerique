@@ -1,6 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Card } from "@codegouvfr/react-dsfr/Card";
-import { Tag } from "@codegouvfr/react-dsfr/Tag";
 
 export type HomeCardProps = {
   theme: string;
@@ -16,7 +15,7 @@ export const HomeCard = ({
   link,
 }: HomeCardProps) => (
   <Card
-    start={<Tag small>{theme}</Tag>}
+    start={<p className={fr.cx("fr-tag", "fr-tag--sm")}>{theme}</p>}
     border
     desc={description}
     horizontal
@@ -27,7 +26,7 @@ export const HomeCard = ({
     title={title}
     titleAs="h3"
     enlargeLink
-    end={<span>Consulter</span>}
+    end={<p className={fr.cx("fr-m-0", "fr-text--xs")}>Consulter</p>}
     classes={{
       start: fr.cx("fr-mb-2w"),
       end: fr.cx("fr-text--xs"),
