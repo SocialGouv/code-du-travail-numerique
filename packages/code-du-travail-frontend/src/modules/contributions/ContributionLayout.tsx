@@ -119,7 +119,7 @@ export function ContributionLayout({ contribution }: Props) {
           linkProps: { href: breadcrumb.slug },
         }))}
       />
-      <h1 className={fr.cx("fr-mb-6w")}>
+      <h1 className={fr.cx("fr-mb-0")}>
         {title}
         {!isGeneric && " "}
         {!isGeneric && (
@@ -131,7 +131,9 @@ export function ContributionLayout({ contribution }: Props) {
           </span>
         )}
       </h1>
-      <p className={fr.cx("fr-mt-6w")}>Mis à jour le&nbsp;: {date}</p>
+      <p className={isGeneric ? fr.cx("fr-mt-6w") : fr.cx("fr-mt-2v")}>
+        Mis à jour le&nbsp;: {date}
+      </p>
       <div className={`${fr.cx("fr-p-3w", "fr-mt-6w")} ${block}`}>
         {isGeneric ? (
           <>
