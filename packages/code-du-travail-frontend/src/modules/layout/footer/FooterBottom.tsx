@@ -1,6 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import React from "react";
 import { PACKAGE_VERSION } from "../../../config";
+import Link from "../../common/Link";
 
 export const FooterBottom = () => (
   <div className={fr.cx("fr-footer__bottom")}>
@@ -24,14 +25,14 @@ export const FooterBottom = () => (
         </a>
       </li>
       <li className={fr.cx("fr-footer__bottom-item")}>
-        <a
+        <Link
           href={`https://github.com/SocialGouv/code-du-travail-numerique/tree/v${PACKAGE_VERSION}`}
           className={fr.cx("fr-footer__bottom-link")}
           target="_blank"
           rel="noopener noreferrer"
         >
           Contribuer sur Github
-        </a>
+        </Link>
       </li>
       <li className={fr.cx("fr-footer__bottom-item")}>
         <a href="/plan-du-site" className={fr.cx("fr-footer__bottom-link")}>
@@ -43,13 +44,13 @@ export const FooterBottom = () => (
       <p>
         Sauf mention explicite de propriété intellectuelle détenue par des
         tiers, les contenus de ce site sont proposés sous{" "}
-        <a
+        <Link
           href="https://github.com/etalab/licence-ouverte/blob/master/LO.md"
           target="_blank"
           rel="noopener noreferrer"
         >
           licence etalab-2.0
-        </a>
+        </Link>
       </p>
     </div>
   </div>
