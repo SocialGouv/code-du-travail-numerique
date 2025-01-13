@@ -6,7 +6,7 @@ import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { Card } from "@codegouvfr/react-dsfr/Card";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { css } from "@styled-system/css";
 
 import Spinner from "../../common/Spinner.svg";
@@ -44,6 +44,8 @@ export const EnterpriseAgreementSearchInput = ({
   );
   const [enterprises, setEnterprises] = useState<Enterprise[]>();
   const [error, setError] = useState("");
+  const resultRef = useRef<HTMLDivElement>(null);
+
   const getStateMessage = () => {
     switch (searchState) {
       case "notFoundSearch":
@@ -104,6 +106,7 @@ export const EnterpriseAgreementSearchInput = ({
         search.length > 0 && !result.length ? "notFoundSearch" : "noSearch"
       );
       setEnterprises(result);
+      resultRef.current?.focus();
     } catch (e) {
       setSearchState("errorSearch");
       setEnterprises(undefined);
@@ -119,16 +122,12 @@ export const EnterpriseAgreementSearchInput = ({
   }, [defaultSearch]);
   return (
     <>
-      <h2 className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
-        Précisez votre entreprise
-      </h2>
+      <h2 className={fr.cx("fr-h4", "fr-my-2w")}>Précisez votre entreprise</h2>
       <form
         className={fr.cx(
           "fr-grid-row",
-          "fr-grid-row--top",
           "fr-grid-row--gutters",
           "fr-grid-row--bottom",
-          "fr-mt-2w",
           "fr-mb-0"
         )}
         onSubmit={async (event) => {
@@ -175,7 +174,6 @@ export const EnterpriseAgreementSearchInput = ({
           defaultValue={location}
           className={fr.cx(
             "fr-col-12",
-            "fr-col-xl",
             "fr-col-md",
             getStateMargin(),
             "fr-mt-2w",
@@ -198,7 +196,7 @@ export const EnterpriseAgreementSearchInput = ({
       <div>
         <div className={fr.cx("fr-mt-2w")}>
           {!!enterprises?.length && !loading && (
-            <p className={fr.cx("fr-h5")}>
+            <p className={fr.cx("fr-h5")} tabIndex={-1} ref={resultRef}>
               {enterprises.length}
               {enterprises.length > 1
                 ? " entreprises trouvées"

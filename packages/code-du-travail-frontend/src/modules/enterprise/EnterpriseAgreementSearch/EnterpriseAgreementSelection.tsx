@@ -7,6 +7,7 @@ import { CardTitleStyle } from "../../convention-collective/style";
 import { css } from "@styled-system/css";
 import { useSearchParams } from "next/navigation";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
+import { useEffect, useRef } from "react";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;
@@ -20,20 +21,27 @@ export const EnterpriseAgreementSelection = ({
   const searchParams = useSearchParams();
   const { emitSelectEnterpriseAgreementEvent } =
     useEnterpriseAgreementSearchTracking();
+
+  const resultRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    resultRef.current?.focus();
+  }, []);
   return (
     <>
-      <h2 className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
+      <h2
+        className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}
+        tabIndex={-1}
+        ref={resultRef}
+      >
         {enterprise.conventions.length === 0 ? (
           <>
             Aucune convention collective n&apos;a été déclarée pour
             l&apos;entreprise
           </>
-        ) : enterprise.conventions.length === 1 ? (
-          <>1 convention collective trouvée pour&nbsp;:</>
         ) : (
           <>
-            {enterprise.conventions.length} conventions collectives trouvées
-            pour&nbsp;:
+            {enterprise.conventions.length} conventions collectives trouvée
+            {enterprise.conventions.length > 1 ? "s" : ""} pour&nbsp;:
           </>
         )}
       </h2>
