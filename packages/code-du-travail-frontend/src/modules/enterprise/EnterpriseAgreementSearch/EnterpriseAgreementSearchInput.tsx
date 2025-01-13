@@ -14,7 +14,7 @@ import { LocationSearchInput } from "../../Location/LocationSearchInput";
 import { searchEnterprises } from "../queries";
 import { Enterprise } from "../types";
 import { ApiGeoResult } from "../../Location/searchCities";
-import { CardTitleStyle, ButtonStyle } from "../../convention-collective/style";
+import { CardTitleStyle } from "../../convention-collective/style";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
 
 type Props = {
@@ -189,7 +189,6 @@ export const EnterpriseAgreementSearchInput = ({
             type="submit"
             iconPosition="right"
             iconId="fr-icon-search-line"
-            className={`${ButtonStyle}`}
           >
             Rechercher
           </Button>
@@ -218,7 +217,7 @@ export const EnterpriseAgreementSearchInput = ({
           )}
           {searchState === "notFoundSearch" && (
             <Alert
-              title={<>Vous ne trouvez pas votre entreprise&nbsp;?</>}
+              title="Vous ne trouvez pas votre entreprise&nbsp;?"
               description={
                 <>
                   <p>Il peut y avoir plusieurs explications à cela&nbsp;:</p>
@@ -276,7 +275,9 @@ export const EnterpriseAgreementSearchInput = ({
           ))}
       </div>
       <div>
-        <p
+        <div
+          role="heading"
+          aria-level={2}
           className={fr.cx(
             "fr-text--bold",
             !loading ? "fr-mt-5w" : "fr-mt-2w",
@@ -285,7 +286,7 @@ export const EnterpriseAgreementSearchInput = ({
         >
           Votre recherche concerne les assistants maternels, employés de
           maison&nbsp;?
-        </p>
+        </div>
         <Card
           border
           enlargeLink

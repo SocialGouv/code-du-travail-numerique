@@ -8,10 +8,3 @@ export const CardTitleStyle = css({
   },
 });
 
-export const ButtonStyle = css({
-  maxH: "40px!",
-  width: "100%!",
-  md: {
-    w: "auto!",
-  },
-});

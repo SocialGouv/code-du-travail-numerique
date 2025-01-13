@@ -1,8 +1,6 @@
 "use client";
 import { fr } from "@codegouvfr/react-dsfr";
 import Button from "@codegouvfr/react-dsfr/Button";
-
-import { ButtonStyle } from "../../convention-collective/style";
 import { EnterpriseAgreementSearchInput } from "./EnterpriseAgreementSearchInput";
 import { useSearchParams } from "next/navigation";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
@@ -32,7 +30,7 @@ export const EnterpriseAgreementSearch = ({ widgetMode = false }: Props) => {
               onClick: emitPreviousEvent,
             }}
             priority="secondary"
-            className={ButtonStyle}
+            iconId="fr-icon-arrow-left-line"
           >
             Précédent
           </Button>

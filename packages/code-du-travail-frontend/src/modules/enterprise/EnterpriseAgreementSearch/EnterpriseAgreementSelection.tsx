@@ -3,7 +3,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Card from "@codegouvfr/react-dsfr/Card";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { Enterprise } from "../types";
-import { ButtonStyle, CardTitleStyle } from "../../convention-collective/style";
+import { CardTitleStyle } from "../../convention-collective/style";
 import { css } from "@styled-system/css";
 import { useSearchParams } from "next/navigation";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
@@ -24,7 +24,10 @@ export const EnterpriseAgreementSelection = ({
     <>
       <h2 className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
         {enterprise.conventions.length === 0 ? (
-          `Aucune convention collective n'a été déclarée pour l'entreprise`
+          <>
+            Aucune convention collective n&apos;a été déclarée pour
+            l&apos;entreprise
+          </>
         ) : enterprise.conventions.length === 1 ? (
           <>1 convention collective trouvée pour&nbsp;:</>
         ) : (
@@ -121,7 +124,7 @@ export const EnterpriseAgreementSelection = ({
               : `/outils/convention-collective/entreprise?${searchParams?.toString()}`,
           }}
           priority="secondary"
-          className={`${fr.cx("fr-col-12", "fr-col-md-2")} ${ButtonStyle}`}
+          iconId="fr-icon-arrow-left-line"
         >
           Précédent
         </Button>
