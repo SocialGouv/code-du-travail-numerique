@@ -21,13 +21,13 @@ export const AccordionWithAnchor = ({
 }: Props): React.ReactElement => {
   const path = useRouter();
   const [anchor, setAnchor] = useState<string | null>();
-  const [itemsToDiplay, setItemsToDisplay] = useState<any[]>([]);
+  const [itemsWithId, setItemsToDisplay] = useState<any[]>([]);
   const refs = useRef<Record<string, HTMLDivElement | null>>({});
 
   useEffect(() => {
     const hash = window.location.hash?.substring(1);
     setAnchor(hash);
-    if (items.length && !itemsToDiplay.length) {
+    if (items.length && !itemsWithId.length) {
       const itemsWithId = items.map(({ id, ...item }) => {
         const idDefaulted = id ?? slugify(item.title);
         return {
@@ -55,7 +55,7 @@ export const AccordionWithAnchor = ({
 
   return (
     <div className={fr.cx("fr-accordions-group")} data-fr-group="false">
-      {itemsToDiplay.map((item) => (
+      {itemsWithId.map((item) => (
         <Accordion
           titleAs={titleAs}
           id={item.id}
