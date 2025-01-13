@@ -120,10 +120,11 @@ export function ContributionLayout({ contribution }: Props) {
         }))}
       />
       <h1 className={fr.cx("fr-mb-6w")}>{title}</h1>
-      <p className={fr.cx("fr-mt-6w")}>Mis à jour le&nbsp;: {date}</p>
-      <div className={`${fr.cx("fr-p-3w", "fr-mt-6w")} ${block}`}>
-        {isGeneric ? (
-          <>
+
+      {isGeneric ? (
+        <>
+          <p className={fr.cx("fr-mt-6w")}>Mis à jour le&nbsp;: {date}</p>
+          <div className={`${fr.cx("fr-p-3w", "fr-mt-6w")} ${block}`}>
             <div className={"fr-grid-row"}>
               <Image
                 priority
@@ -178,21 +179,27 @@ export function ContributionLayout({ contribution }: Props) {
                 </Button>
               )}
             </div>
-          </>
-        ) : (
-          <>
+          </div>
+        </>
+      ) : (
+        <>
+          <p
+            className={fr.cx("fr-mt-6w", "fr-mb-2w")}
+          >{`${(contribution as ElasticSearchContributionConventionnelle).ccnShortTitle} (IDCC ${contribution.idcc})`}</p>
+          <p>Mis à jour le&nbsp;: {date}</p>
+          <div className={`${fr.cx("fr-p-3w", "fr-mt-6w")} ${block}`}>
             <div className={"fr-grid-row"}>
               <span className={fr.cx("fr-h3", "fr-mt-1w", "fr-mb-1w")}>
-                Réponse personnalisée pour la convention collective
+                Votre convention collective
               </span>
             </div>
             <Card
-              title={`${(contribution as ElasticSearchContributionConventionnelle).ccnShortTitle} IDCC ${contribution.idcc}`}
+              title={`${(contribution as ElasticSearchContributionConventionnelle).ccnShortTitle} (IDCC ${contribution.idcc})`}
               size="small"
               titleAs="h2"
               className={fr.cx("fr-mt-2w")}
               classes={{
-                content: fr.cx("fr-p-2w"),
+                content: `${fr.cx("fr-p-2w", "fr-text--light")} ${TitleLight}`,
                 start: fr.cx("fr-m-0"),
                 end: fr.cx("fr-p-0", "fr-m-0"),
               }}
@@ -203,12 +210,14 @@ export function ContributionLayout({ contribution }: Props) {
                 href: `/contribution/${removeCCNumberFromSlug(slug)}`,
               }}
               priority="secondary"
+              iconId="fr-icon-arrow-go-back-line"
+              iconPosition="right"
             >
               Modifier
             </Button>
-          </>
-        )}
-      </div>
+          </div>
+        </>
+      )}
       {isGeneric && !isNoCDT && !selectedAgreement && (
         <Button
           className={fr.cx(
@@ -241,6 +250,15 @@ export function ContributionLayout({ contribution }: Props) {
               <p className={fr.cx("fr-h5")} ref={titleRef}>
                 Que dit le code du travail&nbsp;?
               </p>
+              {isGeneric && (
+                <p>
+                  <strong>
+                    Cette réponse correspond à ce que prévoit le code du
+                    travail, elle ne tient pas compte des spécificités de la
+                    convention collective Industrie du pétrole
+                  </strong>
+                </p>
+              )}
               <ContributionContent
                 contribution={
                   contribution as
@@ -361,4 +379,10 @@ export function ContributionLayout({ contribution }: Props) {
 
 const block = css({
   background: "var(--background-alt-blue-cumulus) !important",
+});
+
+const TitleLight = css({
+  "& > h2": {
+    fontWeight: "normal",
+  },
 });
