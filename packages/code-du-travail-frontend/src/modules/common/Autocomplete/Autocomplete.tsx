@@ -47,6 +47,8 @@ export const Autocomplete = <K,>({
   const [selectedResult, setSelectedResult] = useState<K | undefined>(
     defaultValue
   );
+  const [inputRef, setInputRef] = useState<HTMLInputElement | null>();
+
   const [suggestions, setSuggestions] = useState<K[]>([]);
   const {
     isOpen,
@@ -86,11 +88,14 @@ export const Autocomplete = <K,>({
                       if (onSearch) onSearch("", []);
                       setValue("");
                       setSuggestions([]);
+                      inputRef?.focus();
                     }}
                     priority="tertiary no outline"
                     title="Effacer la sélection"
                     type="button"
-                  />
+                  >
+                    <span className={"fr-sr-only"}>Effacer la sélection</span>
+                  </Button>
                 )}
                 {(loading || (lineAsLink && selectedResult)) && (
                   <Image
@@ -131,6 +136,7 @@ export const Autocomplete = <K,>({
             },
             // @ts-ignore
             "data-testid": dataTestId,
+            ref: setInputRef,
           }}
           className={`${fr.cx("fr-mb-0")}`}
           hintText={hintText}
