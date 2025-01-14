@@ -196,12 +196,12 @@ export const EnterpriseAgreementSearchInput = ({
       <div>
         <div className={fr.cx("fr-mt-2w")}>
           {!!enterprises?.length && !loading && (
-            <p className={fr.cx("fr-h5")} tabIndex={-1} ref={resultRef}>
+            <h2 className={fr.cx("fr-h5")} tabIndex={-1} ref={resultRef}>
               {enterprises.length}
               {enterprises.length > 1
                 ? " entreprises trouvées"
                 : " entreprise trouvée"}
-            </p>
+            </h2>
           )}
           {loading && (
             <div className={fr.cx("fr-grid-row")}>
@@ -216,6 +216,7 @@ export const EnterpriseAgreementSearchInput = ({
           {searchState === "notFoundSearch" && (
             <Alert
               title="Vous ne trouvez pas votre entreprise&nbsp;?"
+              as="h2"
               description={
                 <>
                   <p>Il peut y avoir plusieurs explications à cela&nbsp;:</p>
