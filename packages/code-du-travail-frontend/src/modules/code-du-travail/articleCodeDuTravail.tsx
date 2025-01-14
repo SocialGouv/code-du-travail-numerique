@@ -4,6 +4,7 @@ import Html from "../common/Html";
 import { ContainerRich } from "../layout/ContainerRich";
 import { RelatedItem } from "../documents";
 import { ContentParser } from "./ContentParser";
+import Link from "../common/Link";
 
 type Props = {
   metaDescription: string;
@@ -34,9 +35,9 @@ export function ArticleCodeDuTravail({
 
       <p>
         Source&nbsp;:{" "}
-        <a href={url} target="_blank" rel="noopener noreferrer">
+        <Link href={url} target="_blank" rel="noopener noreferrer">
           Code du travail
-        </a>{" "}
+        </Link>{" "}
         - Mis à jour le&nbsp;: {date}
       </p>
 

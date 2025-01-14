@@ -324,7 +324,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
               href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fapi.urlundefined&quote=Mon%20modele"
               rel="noopener noreferrer"
               target="_blank"
-              title="Partager sur Facebook"
+              title="Partager sur Facebook - nouvelle fenêtre"
             >
               Facebook
             </a>
@@ -335,7 +335,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
               href="https://x.com/intent/post?text=Mon%20modele%20%3A%20http%3A%2F%2Fapi.urlundefined"
               rel="noopener noreferrer"
               target="_blank"
-              title="Partager sur X (anciennement Twitter)"
+              title="Partager sur X (anciennement Twitter) - nouvelle fenêtre"
             >
               X (anciennement Twitter)
             </a>
@@ -346,7 +346,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
               href="https://www.linkedin.com/shareArticle?mini=true&title=Mon%20modele&url=http%3A%2F%2Fapi.urlundefined"
               rel="noopener noreferrer"
               target="_blank"
-              title="Partager sur LinkedIn"
+              title="Partager sur LinkedIn - nouvelle fenêtre"
             >
               Linkedin
             </a>
@@ -367,7 +367,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
               href="https://wa.me/?text=Mon%20modele%20%3A%20http%3A%2F%2Fapi.urlundefined"
               rel="noopener noreferrer"
               target="_blank"
-              title="Envoyer par Whatsapp"
+              title="Envoyer par Whatsapp - nouvelle fenêtre"
             >
               Whatsapp
             </a>
