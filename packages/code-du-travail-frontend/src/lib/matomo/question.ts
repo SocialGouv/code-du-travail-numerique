@@ -1,6 +1,5 @@
-import { push as matopush } from "@socialgouv/matomo-next";
-
 import { MatomoActionEvent, MatomoBaseEvent, MatomoMapping } from ".";
+import { sendEvent } from "src/modules/utils";
 
 export const trackQuestion = (
   trackTitle: string | null,
@@ -16,19 +15,17 @@ export const trackQuestion = (
       mappingElement.questionLabels.includes(trackTitle.toLowerCase())
     ) {
       if (mappingElement.helpEvent && isTrackingHelp) {
-        matopush([
-          MatomoBaseEvent.TRACK_EVENT,
-          MatomoBaseEvent.OUTIL,
-          simulatorEvent,
-          mappingElement.helpEvent,
-        ]);
+        sendEvent({
+          category: MatomoBaseEvent.OUTIL,
+          action: simulatorEvent,
+          name: mappingElement.helpEvent,
+        });
       } else if (mappingElement.selectEvent && !isTrackingHelp) {
-        matopush([
-          MatomoBaseEvent.TRACK_EVENT,
-          MatomoBaseEvent.OUTIL,
-          simulatorEvent,
-          mappingElement.selectEvent,
-        ]);
+        sendEvent({
+          category: MatomoBaseEvent.OUTIL,
+          action: simulatorEvent,
+          name: mappingElement.selectEvent,
+        });
       }
     }
   });

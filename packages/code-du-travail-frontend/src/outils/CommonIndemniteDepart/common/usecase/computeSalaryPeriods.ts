@@ -20,7 +20,7 @@ function computeSalaryPeriods({
     const formattedData = format(notificationLessOneMonth, "MMMM yyyy", {
       locale: frLocale,
     });
-    // HACK: sometimes the formattedData return an empty string
+    // sometimes the formattedData return an empty string
     if (!formattedData?.trim()) {
       return `${notificationLessOneMonth.getMonth() + 1}/${notificationLessOneMonth.getFullYear()}`;
     }
