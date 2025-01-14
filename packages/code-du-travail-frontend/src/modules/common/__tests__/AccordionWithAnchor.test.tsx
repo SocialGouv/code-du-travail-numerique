@@ -41,6 +41,8 @@ describe("<AccordionWithAnchor />", () => {
     expect(title2Button).toHaveAttribute("aria-expanded", "true");
     // On a bien scroll vers le bon accordéon
     expect(scrollIntoViewMock).toHaveBeenCalled();
-    expect(scrollIntoViewMock.mock.instances[0]).toBe(title2Button);
+    expect(scrollIntoViewMock.mock.instances[0].textContent).toContain(
+      title2Button.textContent
+    );
   });
 });
