@@ -2,18 +2,33 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 import { Autocomplete } from "../../common/Autocomplete/Autocomplete";
 import { Agreement } from "../../../outils/types";
 import { searchAgreement } from "../search";
+import { EnterpriseAgreement } from "../../enterprise";
+import { useLocalStorageForAgreementOnPageLoad } from "../../common/useLocalStorage";
 import { useAgreementSearchTracking } from "../tracking";
 
 type Props = {
   onSearch?: (query: string, value?: Agreement[]) => void;
+  onAgreementSelect?: (agreement?: EnterpriseAgreement) => void;
+  selectedAgreementAlert?: (
+    agreement?: EnterpriseAgreement
+  ) => NonNullable<ReactNode> | undefined;
 };
 
-export const AgreementSearchInput = ({ onSearch }: Props) => {
+export const AgreementSearchInput = ({
+  onSearch,
+  onAgreementSelect,
+  selectedAgreementAlert,
+}: Props) => {
+  const [selectedAgreement, setSelectedAgreement] =
+    useLocalStorageForAgreementOnPageLoad();
+  useEffect(() => {
+    if (onAgreementSelect) onAgreementSelect(selectedAgreement);
+  }, [selectedAgreement]);
   const [searchState, setSearchState] = useState<
     "noSearch" | "lowSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
   >("noSearch");
@@ -56,29 +71,35 @@ export const AgreementSearchInput = ({ onSearch }: Props) => {
         Précisez et sélectionnez votre convention collective
       </h2>
       <div className={fr.cx("fr-mt-2w")}>
-        <Autocomplete<Agreement>
+        <Autocomplete<EnterpriseAgreement>
+          defaultValue={selectedAgreement}
           dataTestId="AgreementSearchAutocomplete"
           className={fr.cx("fr-col-12", "fr-mb-0")}
           hintText="Ex : transport routier ou 1486"
           label={
             <>
               Nom de la convention collective ou son numéro
-              d’identification IDCC (4 chiffres)
+              d’identification IDCC (4&nbsp;chiffres)
             </>
           }
           state={getInputState()}
           stateRelatedMessage={getStateMessage()}
-          displayLabel={(item) => {
-            return item ? `${item.shortTitle} (IDCC ${item.num})` : "";
-          }}
-          lineAsLink={(item) => {
-            return `/${getRouteBySource(SOURCES.CCN)}/${item.slug}`;
-          }}
           onChange={(agreement) => {
+            setSelectedAgreement(agreement);
             if (agreement) {
               emitSelectEvent(`idcc${agreement.id}`);
             }
           }}
+          displayLabel={(item) => {
+            return item ? `${item.shortTitle} (IDCC ${item.num})` : "";
+          }}
+          lineAsLink={
+            !onAgreementSelect
+              ? (item) => {
+                  return `/${getRouteBySource(SOURCES.CCN)}/${item.slug}`;
+                }
+              : undefined
+          }
           search={searchAgreement}
           onSearch={(query, agreements) => {
             if (query) {
@@ -127,6 +148,14 @@ export const AgreementSearchInput = ({ onSearch }: Props) => {
               </>
             }
             severity="info"
+          />
+        )}
+        {selectedAgreement && selectedAgreementAlert?.(selectedAgreement) && (
+          <Alert
+            className={fr.cx("fr-mt-2w")}
+            title="Nous n’avons pas de réponse pour cette convention collective"
+            description={selectedAgreementAlert(selectedAgreement)}
+            severity="warning"
           />
         )}
       </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Input, { InputProps } from "@codegouvfr/react-dsfr/Input";
 import { useCombobox } from "downshift";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Spinner from "../Spinner.svg";
 import { css } from "@styled-system/css";
 import { redirect } from "next/navigation";
@@ -13,7 +13,7 @@ export type AutocompleteProps<K> = InputProps & {
   onChange?: (value: K | undefined) => void;
   onError?: (value: string) => void;
   onSearch?: (query: string, results: K[]) => void;
-  displayLabel: (item: K | null) => string;
+  displayLabel: (item: K | undefined) => string;
   search: (search: string) => Promise<K[]>;
   dataTestId?: string;
   lineAsLink?: (value: K) => string;
@@ -37,18 +37,21 @@ export const Autocomplete = <K,>({
   hintText,
   classes,
   dataTestId,
-  displayNoResult,
   defaultValue,
+  displayNoResult,
 }: AutocompleteProps<K>) => {
-  const [value, setValue] = useState<string>(
-    displayLabel(defaultValue ?? null)
-  );
+  const [value, setValue] = useState<string>(displayLabel(defaultValue));
   const [loading, setLoading] = useState(false);
   const [selectedResult, setSelectedResult] = useState<K | undefined>(
     defaultValue
   );
+  useEffect(() => {
+    if (defaultValue) {
+      setSelectedResult(defaultValue);
+      setValue(displayLabel(defaultValue));
+    }
+  }, [defaultValue]);
   const [inputRef, setInputRef] = useState<HTMLInputElement | null>();
-
   const [suggestions, setSuggestions] = useState<K[]>([]);
   const {
     isOpen,
@@ -57,6 +60,7 @@ export const Autocomplete = <K,>({
     highlightedIndex,
     getItemProps,
   } = useCombobox({
+    defaultInputValue: displayLabel(defaultValue),
     items: suggestions,
     itemToString: displayLabel,
     selectedItem: selectedResult,
@@ -64,7 +68,8 @@ export const Autocomplete = <K,>({
       setSelectedResult(changes.selectedItem);
       setValue(changes.inputValue ?? "");
       if (onChange) onChange(changes.selectedItem);
-      if (lineAsLink) redirect(lineAsLink(changes.selectedItem));
+      if (lineAsLink && changes.selectedItem)
+        redirect(lineAsLink(changes.selectedItem));
     },
   });
   return (
@@ -97,7 +102,7 @@ export const Autocomplete = <K,>({
                     <span className={"fr-sr-only"}>Effacer la sélection</span>
                   </Button>
                 )}
-                {(loading || (lineAsLink && selectedResult)) && (
+                {loading && (
                   <Image
                     className={fr.cx("fr-mr-1v")}
                     priority
