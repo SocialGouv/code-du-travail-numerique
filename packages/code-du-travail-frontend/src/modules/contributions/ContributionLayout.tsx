@@ -5,11 +5,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { sources } from "../documents";
 import { Feedback } from "../layout/feedback";
 import { EnterpriseAgreement } from "../enterprise";
-import {
-  ContributionElasticDocument,
-  ElasticSearchContributionConventionnelle,
-  ElasticSearchContributionGeneric,
-} from "@socialgouv/cdtn-types";
+import { ElasticSearchContributionConventionnelle } from "@socialgouv/cdtn-types";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
 import { useContributionTracking } from "./tracking";
 import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
@@ -17,9 +13,10 @@ import { isAgreementValid, isCCSupported } from "./contributionUtils";
 import { ContributionGenericContent } from "./ContributionGenericContent";
 import { ContributionAgreementSelect } from "./ContributionAgreemeentSelect";
 import { ContributionAgreementContent } from "./ContributionAgreementContent";
+import { Contribution } from "./type";
 
 type Props = {
-  contribution: ContributionElasticDocument;
+  contribution: Contribution;
 };
 
 export type RelatedItem = {
@@ -33,19 +30,7 @@ export type RelatedItem = {
 
 export function ContributionLayout({ contribution }: Props) {
   const getTitle = () => `/contribution/${slug}`;
-  const { date, title, slug, idcc } = contribution;
-  const isGeneric = idcc === "0000";
-  const isNoCDT = contribution?.type === "generic-no-cdt";
-  const relatedItems = [
-    {
-      title: "Articles liés",
-      items: contribution.linkedContent.map((linked) => ({
-        title: linked.title,
-        url: linked.slug,
-        source: linked.source as (typeof sources)[number],
-      })),
-    },
-  ];
+  const { date, title, slug, isGeneric, isNoCDT, relatedItems } = contribution;
 
   const [displayGeneric, setDisplayGeneric] = useState(false);
   const [selectedAgreement, setSelectedAgreement] =
@@ -76,10 +61,7 @@ export function ContributionLayout({ contribution }: Props) {
         {!isGeneric && " "}
         {!isGeneric && (
           <span className={`fr-mt-4w ${h1Agreement}`}>
-            {
-              (contribution as ElasticSearchContributionConventionnelle)
-                .ccnShortTitle
-            }
+            {contribution.ccnShortTitle}
           </span>
         )}
       </h1>
@@ -88,7 +70,7 @@ export function ContributionLayout({ contribution }: Props) {
         <>
           <p className={fr.cx("fr-mt-6w")}>Mis à jour le&nbsp;: {date}</p>
           <ContributionGenericAgreementSearch
-            contribution={contribution as ElasticSearchContributionGeneric}
+            contribution={contribution}
             onAgreementSelect={(agreement, mode) => {
               setSelectedAgreement(agreement);
               if (!agreement) return;
@@ -100,12 +82,7 @@ export function ContributionLayout({ contribution }: Props) {
                   emitClickP2(getTitle());
                   break;
               }
-              if (
-                isCCSupported(
-                  contribution as ElasticSearchContributionGeneric,
-                  agreement
-                )
-              ) {
+              if (isCCSupported(contribution, agreement)) {
                 emitAgreementTreatedEvent(agreement?.id);
               } else {
                 emitAgreementUntreatedEvent(agreement?.id);
@@ -114,10 +91,7 @@ export function ContributionLayout({ contribution }: Props) {
             onDisplayClick={(ev) => {
               setDisplayGeneric(!displayGeneric);
               if (
-                !isAgreementValid(
-                  contribution as ElasticSearchContributionGeneric,
-                  selectedAgreement
-                ) ||
+                !isAgreementValid(contribution, selectedAgreement) ||
                 !selectedAgreement
               ) {
                 ev.preventDefault();
@@ -132,27 +106,33 @@ export function ContributionLayout({ contribution }: Props) {
       ) : (
         <>
           <p className={fr.cx("fr-mt-2v")}>Mis à jour le&nbsp;: {date}</p>
-          <ContributionAgreementSelect
-            contribution={
-              contribution as ElasticSearchContributionConventionnelle
-            }
-          />
+          <ContributionAgreementSelect contribution={contribution} />
         </>
       )}
       {isGeneric &&
         !isNoCDT &&
         (!selectedAgreement ||
-          !isAgreementValid(
-            contribution as ElasticSearchContributionGeneric,
-            selectedAgreement
-          )) && (
+          !isAgreementValid(contribution, selectedAgreement)) && (
           <ContributionGenericContent
-            contribution={contribution as ElasticSearchContributionGeneric}
+            contribution={contribution}
             onDisplayClick={() => {
               emitClickP3(getTitle());
             }}
             relatedItems={relatedItems}
             displayGeneric={displayGeneric}
+            alertText={
+              selectedAgreement &&
+              !isCCSupported(contribution, selectedAgreement) && (
+                <p>
+                  <strong>
+                    Cette réponse correspond à ce que prévoit le code du
+                    travail, elle ne tient pas compte des spécificités de la
+                    convention collective Industrie du pétrole convention
+                    collective {selectedAgreement.shortTitle}
+                  </strong>
+                </p>
+              )
+            }
           />
         )}
       {!isGeneric && (

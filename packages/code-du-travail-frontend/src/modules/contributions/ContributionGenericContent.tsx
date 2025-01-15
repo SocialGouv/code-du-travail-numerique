@@ -3,7 +3,6 @@ import React, { ReactNode, useEffect, useRef, useState } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Share } from "../common/Share";
-import { EnterpriseAgreement } from "../enterprise";
 import { ElasticSearchContributionGeneric } from "@socialgouv/cdtn-types";
 import { ContributionContent } from "./ContributionContent";
 import Html from "../common/Html";
@@ -12,10 +11,11 @@ import Accordion from "@codegouvfr/react-dsfr/Accordion";
 import { ListWithArrow } from "../common/ListWithArrow";
 import { RelatedItems } from "../common/RelatedItems";
 import { RelatedItem } from "../documents";
+import { Contribution } from "./type";
 
 type Props = {
   onDisplayClick: () => void;
-  contribution: ElasticSearchContributionGeneric;
+  contribution: Contribution;
   alertText?: ReactNode;
   relatedItems: {
     items: RelatedItem[];

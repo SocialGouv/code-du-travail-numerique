@@ -6,10 +6,10 @@ import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
 import { removeCCNumberFromSlug } from "../common/utils";
 
-import { ElasticSearchContributionConventionnelle } from "@socialgouv/cdtn-types";
+import { Contribution } from "./type";
 
 type Props = {
-  contribution: ElasticSearchContributionConventionnelle;
+  contribution: Contribution;
 };
 
 export function ContributionAgreementSelect({ contribution }: Props) {
@@ -24,7 +24,7 @@ export function ContributionAgreementSelect({ contribution }: Props) {
           </span>
         </div>
         <Card
-          title={`${(contribution as ElasticSearchContributionConventionnelle).ccnShortTitle} (IDCC ${contribution.idcc})`}
+          title={`${contribution.ccnShortTitle} (IDCC ${contribution.idcc})`}
           size="small"
           titleAs="h2"
           className={fr.cx("fr-mt-2w")}

@@ -1,22 +1,22 @@
-import { ElasticSearchContributionGeneric } from "@socialgouv/cdtn-types";
 import { EnterpriseAgreement } from "../enterprise";
+import { Contribution } from "./type";
 
 export const isCCSupported = (
-  contribution: ElasticSearchContributionGeneric,
+  contribution: Contribution,
   agreement: EnterpriseAgreement
 ) => {
-  const { ccSupported } = contribution;
+  const { ccSupported = [] } = contribution;
   return ccSupported.includes(agreement.id);
 };
 export const isCCUnextended = (
-  contribution: ElasticSearchContributionGeneric,
+  contribution: Contribution,
   agreement: EnterpriseAgreement
 ) => {
-  const { ccUnextended } = contribution;
+  const { ccUnextended = [] } = contribution;
   return ccUnextended.includes(agreement?.id);
 };
 export const isAgreementValid = (
-  contribution: ElasticSearchContributionGeneric,
+  contribution: Contribution,
   agreement?: EnterpriseAgreement
 ) => {
   if (!agreement) return false;

@@ -8,17 +8,17 @@ import AgreementSearch from "../convention-collective/AgreementSearch.svg";
 
 import { AgreementSearchForm } from "../convention-collective/AgreementSearch/AgreementSearchForm";
 import { EnterpriseAgreement } from "../enterprise";
-import { ElasticSearchContributionGeneric } from "@socialgouv/cdtn-types";
 import {
   isAgreementValid,
   isCCSupported,
   isCCUnextended,
 } from "./contributionUtils";
+import { Contribution } from "./type";
 
 type Props = {
   onAgreementSelect: (agreement?: EnterpriseAgreement, mode?: string) => void;
   onDisplayClick: (ev: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
-  contribution: ElasticSearchContributionGeneric;
+  contribution: Contribution;
 };
 
 export function ContributionGenericAgreementSearch({
@@ -82,15 +82,18 @@ export function ContributionGenericAgreementSearch({
             }}
             selectedAgreementAlert={selectedAgreementAlert}
           />
-          <Button
-            className={fr.cx("fr-mt-2w")}
-            linkProps={{
-              href: displaySlug,
-              onClick: onDisplayClick,
-            }}
-          >
-            Afficher les informations
-          </Button>
+          {(!contribution.isNoCDT ||
+            isAgreementValid(contribution, selectedAgreement)) && (
+            <Button
+              className={fr.cx("fr-mt-2w")}
+              linkProps={{
+                href: displaySlug,
+                onClick: onDisplayClick,
+              }}
+            >
+              Afficher les informations
+            </Button>
+          )}
         </div>
       </div>
     </>
