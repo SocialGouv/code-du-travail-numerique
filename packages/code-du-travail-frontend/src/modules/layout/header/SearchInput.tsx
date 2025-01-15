@@ -56,12 +56,14 @@ export const SearchInput = (props: Props) => {
           id: props.id,
           placeholder: props.placeholder,
           type: props.type,
+          "aria-labelledby": "fr-header-search-label",
         })}
         data-testid="search-input"
       />
       <ul
         {...getMenuProps({
           className: list,
+          "aria-labelledby": "fr-header-search-label",
         })}
       >
         {isOpen &&
