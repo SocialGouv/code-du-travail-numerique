@@ -9,7 +9,6 @@ export const fetchContributions = async <
   fields: K[],
   filters?: {
     cdtnIds?: string[];
-    slugs?: string[];
   }
 ): Promise<Pick<ContributionElasticDocument, K>[]> => {
   const baseFilters: Array<any> = [
@@ -19,9 +18,6 @@ export const fetchContributions = async <
 
   if (filters?.cdtnIds) {
     baseFilters.push({ terms: { cdtnId: filters.cdtnIds } });
-  }
-  if (filters?.slugs) {
-    baseFilters.push({ terms: { slug: filters.slugs } });
   }
 
   const result = await elasticsearchClient.search<
