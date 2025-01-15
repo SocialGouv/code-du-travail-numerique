@@ -1,6 +1,6 @@
 "use client";
 
-import { Header as HeaderDsfr } from "@codegouvfr/react-dsfr/Header";
+import { Header as HeaderDsfr } from "../../dsfr-extract/Header";
 import { usePathname, useRouter } from "next/navigation";
 import { SearchInput } from "./SearchInput";
 import { BrandTop } from "../BrandTop";

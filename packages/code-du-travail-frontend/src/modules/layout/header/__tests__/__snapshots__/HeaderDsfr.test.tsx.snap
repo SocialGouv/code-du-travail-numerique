@@ -99,6 +99,7 @@ exports[`<Header /> should match snapshot 1`] = `
                   <label
                     class="fr-label"
                     for="fr-header-search-input"
+                    id="fr-header-search-label"
                   >
                     Rechercher
                   </label>
@@ -107,7 +108,7 @@ exports[`<Header /> should match snapshot 1`] = `
                     aria-autocomplete="list"
                     aria-controls="downshift-:r0:-menu"
                     aria-expanded="false"
-                    aria-labelledby="downshift-:r0:-label"
+                    aria-labelledby="fr-header-search-label"
                     autocomplete="off"
                     class="fr-input"
                     data-testid="search-input"
@@ -118,7 +119,7 @@ exports[`<Header /> should match snapshot 1`] = `
                     value=""
                   />
                   <ul
-                    aria-labelledby="downshift-:r0:-label"
+                    aria-labelledby="fr-header-search-label"
                     class="pos_absolute top_2.5rem w_100% z_100 bg_var(--background-default-grey)"
                     id="downshift-:r0:-menu"
                     role="listbox"
