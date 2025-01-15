@@ -536,7 +536,6 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--no-icon fr-tile--sm"
-                id="fr-tile-:rb:"
               >
                 <div
                   class="fr-tile__body"
@@ -544,21 +543,14 @@ exports[`<Home /> should match snapshot 1`] = `
                   <div
                     class="fr-tile__content"
                   >
-                    <h3
+                    <p
                       class="fr-tile__title"
                     >
                       <a
-                        aria-disabled="false"
-                        class=""
                         href="https://example.com/theme"
                       >
                         Theme Title
                       </a>
-                    </h3>
-                    <p
-                      class="fr-tile__desc"
-                    >
-                      Theme description
                     </p>
                   </div>
                 </div>
@@ -566,12 +558,16 @@ exports[`<Home /> should match snapshot 1`] = `
                   class="fr-tile__header"
                 >
                   <div
-                    class="fr-tile__img fr-mb-0 w_56px! h_56px!"
+                    class="fr-tile__img fr-mb-0"
                   >
                     <img
                       alt=""
-                      class="fr-responsive-img"
+                      data-nimg="1"
+                      decoding="async"
+                      height="56"
+                      loading="lazy"
                       src="/static/assets/icons/themes/theme-icon.svg"
+                      style="color: transparent;"
                       width="56"
                     />
                   </div>
@@ -585,7 +581,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/themes"
-              id="fr-button-:rc:"
+              id="fr-button-:rb:"
             >
               Voir tous les thèmes
             </a>
