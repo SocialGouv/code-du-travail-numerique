@@ -25,7 +25,7 @@ export const FindAgreementBlock = ({
         <Image
           priority
           src={AgreementSearch}
-          alt={title}
+          alt=""
           className={fr.cx("fr-unhidden-md", "fr-hidden")}
         />
         <h1 className={fr.cx("fr-h3", "fr-mt-1w", "fr-mb-1w")}>{title}</h1>

@@ -1,5 +1,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import React from "react";
+import Link from "../../common/Link";
 
 const DOMAINS = [
   "travail-emploi.gouv.fr",
@@ -14,14 +15,14 @@ export const FooterContent = () => (
     <ul className={fr.cx("fr-footer__content-list")}>
       {DOMAINS.map((domain) => (
         <li key={domain} className={fr.cx("fr-footer__content-item" as any)}>
-          <a
+          <Link
             className={fr.cx("fr-footer__content-link")}
             href={`https://${domain}`}
             target="_blank"
             rel="noopener noreferrer"
           >
             {domain}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>

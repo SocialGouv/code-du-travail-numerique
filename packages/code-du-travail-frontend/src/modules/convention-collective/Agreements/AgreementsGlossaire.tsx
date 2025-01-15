@@ -15,18 +15,19 @@ export const AgreementsGlossaire = ({ letters }: Props) => {
         termes de nombre de salariés.
       </p>
       <div>
-        <ul className={`${fr.cx("fr-pl-0", "fr-m-0", "fr-grid-row")} ${ul}`}>
+        <ul className={`${fr.cx("fr-grid-row")} ${ul}`}>
           {letters.map((letter, index) => (
-            <>
-              <li
-                key={letter}
-                className={`${fr.cx("fr-mb-0", "fr-mx-1v")}${index !== 0 ? ` ${li}` : ""}`}
-              >
-                <Link href={`#${letter}`} className={fr.cx("fr-h3")}>
-                  {letter}
-                </Link>
-              </li>
-            </>
+            <li key={letter} className={fr.cx("fr-mx-1v")}>
+              {index > 0 && (
+                <strong aria-hidden="true" className={fr.cx("fr-h3")}>
+                  {" "}
+                  -{" "}
+                </strong>
+              )}
+              <Link href={`#${letter}`} className={fr.cx("fr-h3")}>
+                {letter}
+              </Link>
+            </li>
           ))}
         </ul>
       </div>
@@ -36,14 +37,4 @@ export const AgreementsGlossaire = ({ letters }: Props) => {
 
 const ul = css({
   listStyle: "none!",
-  display: "flex",
-  flexDirection: "row",
-});
-
-const li = css({
-  _before: {
-    content: `"- "`,
-    fontSize: "28px",
-    fontWeight: "bold",
-  },
 });

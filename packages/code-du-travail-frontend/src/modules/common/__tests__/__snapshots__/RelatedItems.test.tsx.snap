@@ -7,7 +7,7 @@ exports[`<RelatedItems /> should render 1`] = `
   >
     <div>
       <div
-        aria-level="3"
+        aria-level="2"
         class="fr-mb-2w fr-text--lead"
         role="heading"
       >
@@ -51,7 +51,7 @@ exports[`<RelatedItems /> should render 1`] = `
     </div>
     <div>
       <div
-        aria-level="3"
+        aria-level="2"
         class="fr-mb-2w fr-text--lead"
         role="heading"
       >

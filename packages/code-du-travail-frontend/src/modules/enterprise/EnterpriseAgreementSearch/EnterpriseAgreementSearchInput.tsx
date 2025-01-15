@@ -6,7 +6,7 @@ import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { Card } from "@codegouvfr/react-dsfr/Card";
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import { css } from "@styled-system/css";
 
 import Spinner from "../../common/Spinner.svg";
@@ -14,7 +14,7 @@ import { LocationSearchInput } from "../../Location/LocationSearchInput";
 import { searchEnterprises } from "../queries";
 import { Enterprise, EnterpriseAgreement } from "../types";
 import { ApiGeoResult } from "../../Location/searchCities";
-import { CardTitleStyle, ButtonStyle } from "../../convention-collective/style";
+import { CardTitleStyle } from "../../convention-collective/style";
 import { EnterpriseAgreementSelectionForm } from "./EnterpriseAgreementSelectionForm";
 import { useLocalStorageForAgreementOnPageLoad } from "../../common/useLocalStorage";
 import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelectionDetail";
@@ -61,6 +61,8 @@ export const EnterpriseAgreementSearchInput = ({
   const [enterprises, setEnterprises] = useState<Enterprise[]>();
   const [selectedEnterprise, setSelectedEnterprise] = useState<Enterprise>();
   const [error, setError] = useState("");
+  const resultRef = useRef<HTMLDivElement>(null);
+
   const getStateMessage = () => {
     switch (searchState) {
       case "notFoundSearch":
@@ -121,6 +123,7 @@ export const EnterpriseAgreementSearchInput = ({
         search.length > 0 && !result.length ? "notFoundSearch" : "noSearch"
       );
       setEnterprises(result);
+      resultRef.current?.focus();
     } catch (e) {
       setSearchState("errorSearch");
       setEnterprises(undefined);
@@ -225,16 +228,12 @@ export const EnterpriseAgreementSearchInput = ({
   }
   return (
     <>
-      <h2 className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
-        Précisez votre entreprise
-      </h2>
+      <h2 className={fr.cx("fr-h4", "fr-my-2w")}>Précisez votre entreprise</h2>
       <form
         className={fr.cx(
           "fr-grid-row",
-          "fr-grid-row--top",
           "fr-grid-row--gutters",
           "fr-grid-row--bottom",
-          "fr-mt-2w",
           "fr-mb-0"
         )}
         onSubmit={async (event) => {
@@ -281,7 +280,6 @@ export const EnterpriseAgreementSearchInput = ({
           defaultValue={location}
           className={fr.cx(
             "fr-col-12",
-            "fr-col-xl",
             "fr-col-md",
             getStateMargin(),
             "fr-mt-2w",
@@ -295,7 +293,6 @@ export const EnterpriseAgreementSearchInput = ({
             type="submit"
             iconPosition="right"
             iconId="fr-icon-search-line"
-            className={`${ButtonStyle}`}
           >
             Rechercher
           </Button>
@@ -305,12 +302,12 @@ export const EnterpriseAgreementSearchInput = ({
       <div>
         <div className={fr.cx("fr-mt-2w")}>
           {!!enterprises?.length && !loading && (
-            <p className={fr.cx("fr-h5")}>
+            <h2 className={fr.cx("fr-h5")} tabIndex={-1} ref={resultRef}>
               {enterprises.length}
               {enterprises.length > 1
                 ? " entreprises trouvées"
                 : " entreprise trouvée"}
-            </p>
+            </h2>
           )}
           {loading && (
             <div className={fr.cx("fr-grid-row")}>
@@ -324,7 +321,8 @@ export const EnterpriseAgreementSearchInput = ({
           )}
           {searchState === "notFoundSearch" && (
             <Alert
-              title={<>Vous ne trouvez pas votre entreprise&nbsp;?</>}
+              title="Vous ne trouvez pas votre entreprise&nbsp;?"
+              as="h2"
               description={
                 <>
                   <p>Il peut y avoir plusieurs explications à cela&nbsp;:</p>
@@ -405,7 +403,9 @@ export const EnterpriseAgreementSearchInput = ({
           ))}
       </div>
       <div>
-        <p
+        <div
+          role="heading"
+          aria-level={2}
           className={fr.cx(
             "fr-text--bold",
             !loading ? "fr-mt-5w" : "fr-mt-2w",
@@ -414,7 +414,7 @@ export const EnterpriseAgreementSearchInput = ({
         >
           Votre recherche concerne les assistants maternels, employés de
           maison&nbsp;?
-        </p>
+        </div>
         <Card
           border
           enlargeLink

@@ -2,7 +2,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { Enterprise, EnterpriseAgreement } from "../types";
-import { ButtonStyle } from "../../convention-collective/style";
 import Card from "@codegouvfr/react-dsfr/Card";
 import { css } from "@styled-system/css";
 import { useSearchParams } from "next/navigation";
@@ -107,7 +106,7 @@ export const EnterpriseAgreementSelectionLink = ({
               : `/outils/convention-collective/entreprise?${searchParams?.toString()}`,
           }}
           priority="secondary"
-          className={`${fr.cx("fr-col-12", "fr-col-md-2")} ${ButtonStyle}`}
+          iconId="fr-icon-arrow-left-line"
         >
           Précédent
         </Button>

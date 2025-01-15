@@ -2,6 +2,7 @@ import React from "react";
 import { ServicePublicReference } from "@socialgouv/cdtn-types";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { fr } from "@codegouvfr/react-dsfr";
+import Link from "./Link";
 
 export const ReferenceList = ({
   references,
@@ -27,12 +28,12 @@ export const ReferenceList = ({
           );
         case SOURCES.EXTERNALS:
           return (
-            <a
+            <Link
               key={ref.url + ref.title}
               href={ref.url}
               target="_blank"
               rel="noreferer noopener"
-            >{`Convention collective: ${ref.title}`}</a>
+            >{`Convention collective: ${ref.title}`}</Link>
           );
       }
     })
