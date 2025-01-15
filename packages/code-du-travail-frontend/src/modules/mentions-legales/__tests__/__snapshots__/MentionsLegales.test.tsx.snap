@@ -108,6 +108,7 @@ exports[`<MentionsLegales /> should match snapshot 1`] = `
         <a
           href="https://accessibilite.numerique.gouv.fr/"
           target="_blank"
+          title="https://accessibilite.numerique.gouv.fr - nouvelle fenêtre"
         >
           https://accessibilite.numerique.gouv.fr
         </a>

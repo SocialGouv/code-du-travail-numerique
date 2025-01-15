@@ -14,7 +14,7 @@ export const AgreementsIntro = () => {
           <Image
             priority
             src={AgreementSearch}
-            alt="Trouver sa convention collective"
+            alt=""
             className={`${fr.cx("fr-unhidden-md", "fr-hidden")} ${ImageContainer}`}
           />
           <h2 className={fr.cx("fr-mt-md-2v")}>

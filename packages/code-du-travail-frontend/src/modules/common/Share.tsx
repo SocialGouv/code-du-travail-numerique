@@ -7,6 +7,7 @@ import { SITE_URL } from "../../config";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import { useCommonTracking } from "./tracking";
+import Link from "./Link";
 
 type Props = {
   title: string;
@@ -24,12 +25,12 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
 
   return (
     <div className={fr.cx("fr-follow__social")}>
-      <div className={fr.cx("fr-mb-2w")} role="heading" aria-level={3}>
+      <div className={fr.cx("fr-mb-2w")} role="heading" aria-level={2}>
         <span>Partager la page</span>
       </div>
       <ul className={fr.cx("fr-btns-group")}>
         <li>
-          <a
+          <Link
             className={`${fr.cx(
               "fr-btn",
               "fr-btn--tertiary",
@@ -46,10 +47,10 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
             }}
           >
             Facebook
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             className={`${fr.cx(
               "fr-btn",
               "fr-btn--tertiary",
@@ -64,10 +65,10 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
             }}
           >
             X (anciennement Twitter)
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             className={`${fr.cx(
               "fr-btn",
               "fr-btn--tertiary",
@@ -84,7 +85,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
             }}
           >
             Linkedin
-          </a>
+          </Link>
         </li>
         <li>
           <a
@@ -106,7 +107,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
           </a>
         </li>
         <li>
-          <a
+          <Link
             className={`${fr.cx(
               "fr-btn",
               "fr-btn--tertiary",
@@ -121,7 +122,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
             }}
           >
             Whatsapp
-          </a>
+          </Link>
         </li>
         <li>
           {isUrlCopied ? (

@@ -13,6 +13,7 @@ import {
   getServiceInfo,
   ServiceRenseignement,
 } from "./data/servicesDeRenseignement";
+import Link from "../common/Link";
 
 export const BesoinPlusInformations = () => {
   const [department, setDepartment] = useState<string>("");
@@ -111,7 +112,7 @@ export const BesoinPlusInformations = () => {
           }}
         />
         {result && (
-          <a
+          <Link
             className={fr.cx("fr-link")}
             href={result.url}
             target="_blank"
@@ -119,7 +120,7 @@ export const BesoinPlusInformations = () => {
             ref={setLinkRef}
           >
             {result.url}
-          </a>
+          </Link>
         )}
       </section>
       <Alert

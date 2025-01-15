@@ -6,7 +6,7 @@ import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelecti
 import { getEnterpriseAgreements } from "./utils";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Alert from "@codegouvfr/react-dsfr/Alert";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
 
 type Props = {
@@ -24,6 +24,10 @@ export const EnterpriseAgreementSelectionForm = ({
     useEnterpriseAgreementSearchTracking();
   const [agreement, setAgreement] = useState<EnterpriseAgreement | undefined>();
   const agreements = getEnterpriseAgreements(enterprise.conventions);
+  const resultRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    resultRef.current?.focus();
+  }, []);
   return (
     <>
       <EnterpriseAgreementSelectionDetail enterprise={enterprise} />
@@ -63,7 +67,14 @@ export const EnterpriseAgreementSelectionForm = ({
       {((agreement && !agreement.contributions) || !agreements.length) && (
         <Alert
           severity="info"
-          title="Aucune convention collective n'a été déclarée pour l'entreprise"
+          title={
+            <>
+              <span tabIndex={-1} ref={resultRef}>
+                Aucune convention collective n&apos;a été déclarée pour
+                l&apos;entreprise
+              </span>
+            </>
+          }
           description="Vous pouvez tout de même poursuivre pour obtenir les informations générales prévues par le code du travail."
         />
       )}

@@ -21,44 +21,40 @@ export const AccordionWithAnchor = ({
 }: Props): React.ReactElement => {
   const path = useRouter();
   const [anchor, setAnchor] = useState<string | null>();
-  const [expandedIds, setExpandedIds] = React.useState<string[]>([]);
+  const [itemsWithId, setItemsToDisplay] = useState<
+    {
+      id: string;
+      expended: boolean;
+      title: string;
+      content: React.ReactElement;
+    }[]
+  >([]);
   const refs = useRef<Record<string, HTMLDivElement | null>>({});
 
   useEffect(() => {
     const hash = window.location.hash?.substring(1);
-    if (hash) {
-      setExpandedIds([hash]);
-      setAnchor(hash);
+    setAnchor(hash);
+    if (items.length && !itemsWithId.length) {
+      const itemsWithId = items.map(({ id, ...item }) => {
+        const idDefaulted = id ?? slugify(item.title);
+        return {
+          ...item,
+          id: idDefaulted,
+          expended: hash === idDefaulted,
+        };
+      });
+
+      setItemsToDisplay(itemsWithId);
     }
   }, [path]);
 
   useEffect(() => {
-    if (anchor) {
-      const anchorElement = document?.querySelector(`#${anchor}__toggle-btn`);
-      if (anchorElement) {
-        anchorElement.scrollIntoView({
-          behavior: "smooth",
-        });
-      }
+    if (anchor && refs.current[anchor]) {
+      refs.current[anchor]?.scrollIntoView({
+        behavior: "smooth",
+      });
     }
-  }, [anchor]);
-
-  const itemsWithId = items.map(({ id, ...item }) => {
-    return {
-      ...item,
-      id: id ?? slugify(item.title),
-    };
-  });
-
-  const onExpandedChange = (id: string, expanded: boolean) => {
-    let value: string[];
-    if (expanded) {
-      value = expandedIds.concat([id]);
-    } else {
-      value = expandedIds.filter((item) => item !== id);
-    }
-    setExpandedIds([...new Set(value)]);
-  };
+  }, [refs.current, anchor]);
 
   if (items.length === 0) {
     return <></>;
@@ -72,10 +68,7 @@ export const AccordionWithAnchor = ({
           id={item.id}
           key={item.id}
           label={item.title}
-          onExpandedChange={(expanded) => {
-            onExpandedChange(item.id, expanded);
-          }}
-          expanded={expandedIds.includes(item.id)}
+          defaultExpanded={item.expended}
           ref={(el) => (refs.current[item.id] = el)}
         >
           {item.content}
