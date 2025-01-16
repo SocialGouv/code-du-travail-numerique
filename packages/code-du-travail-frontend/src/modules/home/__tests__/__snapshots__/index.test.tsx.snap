@@ -96,7 +96,7 @@ exports[`<Home /> should match snapshot 1`] = `
               class="fr-col-md-5 fr-col-12"
             >
               <img
-                alt="Illustration graphique du site montrant des personnes travaillant"
+                alt=""
                 data-nimg="1"
                 decoding="async"
                 height="393"
