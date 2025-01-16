@@ -67,7 +67,9 @@ export function ContributionAgreementContent({
           )}
         </div>
         <div className={fr.cx("fr-col-12", "fr-col-md-4")}>
-          <RelatedItems relatedItems={relatedItems} />
+          {!!relatedItems[0].items.length && (
+            <RelatedItems relatedItems={relatedItems} />
+          )}
           <Share title={title} metaDescription={metas.description} />
         </div>
       </div>
