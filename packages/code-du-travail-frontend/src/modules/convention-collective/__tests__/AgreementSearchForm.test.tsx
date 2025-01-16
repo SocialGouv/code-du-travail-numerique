@@ -185,4 +185,16 @@ describe("<PageContribution />", () => {
       ui.enterpriseAgreementSearch.errorNotFound.notDeclared.query()
     ).toBeInTheDocument();
   });
+
+  it("should track when selecting agreement 3239", async () => {
+    render(<AgreementSearchForm />);
+    userAction = new UserAction();
+    userAction.click(ui.radio.enterpriseSearchOption.get());
+    userAction.click(ui.enterpriseAgreementSearch.childminder.link.get());
+    expect(sendEvent).toHaveBeenCalledWith({
+      action: "select_je_n_ai_pas_d_entreprise",
+      category: "cc_search_type_of_users",
+      name: "Trouver sa convention collective",
+    });
+  });
 });

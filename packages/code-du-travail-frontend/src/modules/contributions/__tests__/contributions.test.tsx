@@ -1,15 +1,11 @@
-import {
-  fireEvent,
-  render,
-  RenderResult,
-  cleanup,
-} from "@testing-library/react";
+import { fireEvent, render, RenderResult } from "@testing-library/react";
 import React from "react";
 import { wait } from "@testing-library/user-event/dist/utils";
 
 import { ContributionLayout } from "../ContributionLayout";
 import { ui } from "./ui";
 import { ui as ccUi } from "../../convention-collective/__tests__/ui";
+import { ui as entrepriseUi } from "../../enterprise/EnterpriseAgreementSearch/__tests__/ui";
 import { Contribution } from "../type";
 import { searchAgreement } from "../../convention-collective/search";
 import { sendEvent } from "../../utils";
@@ -31,7 +27,7 @@ const contribution = {
   type: "content",
   isGeneric: true,
   isNoCdt: false,
-  ccSupported: ["0016"],
+  ccSupported: ["0016", "3239"],
   ccUnextended: ["0029"],
   messageBlockGenericNoCDT: "message No CDT",
 } as Partial<Contribution> as any;
@@ -119,6 +115,20 @@ describe("<ContributionLayout />", () => {
         action: "cc_select_traitée",
         category: "outil",
         name: "0016",
+      });
+    });
+
+    it("should display correctly when a selecting agreement 3239", async () => {
+      fireEvent.click(entrepriseUi.radio.enterpriseSearchOption.get());
+      fireEvent.click(ccUi.searchByEnterprise.noEnterprise.get());
+      expect(ccUi.buttonDisplayInfo.query()).toHaveAttribute(
+        "href",
+        "/contribution/3239-slug"
+      );
+      expect(sendEvent).toHaveBeenLastCalledWith({
+        action: "cc_select_traitée",
+        category: "outil",
+        name: "3239",
       });
     });
 
