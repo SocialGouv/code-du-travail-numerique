@@ -36,7 +36,7 @@ export function ContributionAgreementContent({
           )}
         >
           <ContributionContent contribution={contribution} titleLevel={3} />
-          {contribution.references.length && (
+          {!!contribution.references.length && (
             <Accordion label="Références">
               <ListWithArrow
                 items={contribution.references.map(({ title, url }) => {
