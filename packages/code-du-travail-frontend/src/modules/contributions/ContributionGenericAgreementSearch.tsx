@@ -41,22 +41,38 @@ export function ContributionGenericAgreementSearch({
   const selectedAgreementAlert = (agreement: EnterpriseAgreement) => {
     const isSupported = isCCSupported(contribution, agreement);
     const isUnextended = isCCUnextended(contribution, agreement);
-    if (isUnextended)
-      return (
-        <>
-          Les dispositions de cette convention n’ont pas été étendues. Cela
-          signifie qu&apos;elles ne s&apos;appliquent qu&apos;aux entreprises
-          adhérentes à l&apos;une des organisations signataires de
-          l&apos;accord. Dans ce contexte, nous ne sommes pas en mesure
-          d&apos;identifier si cette règle s&apos;applique ou non au sein de
-          votre entreprise. Vous pouvez toutefois consulter la convention
-          collective{" "}
-          <a target="_blank" href={agreement.url}>
-            ici
-          </a>{" "}
-          dans le cas où elle s&apos;applique à votre situation.
-        </>
-      );
+    if (contribution.isNoCDT) {
+      if (isUnextended)
+        return (
+          <>
+            Les dispositions de cette convention n’ont pas été étendues. Cela
+            signifie qu&apos;elles ne s&apos;appliquent qu&apos;aux entreprises
+            adhérentes à l&apos;une des organisations signataires de
+            l&apos;accord. Dans ce contexte, nous ne sommes pas en mesure
+            d&apos;identifier si cette règle s&apos;applique ou non au sein de
+            votre entreprise. Vous pouvez toutefois consulter la convention
+            collective{" "}
+            <a target="_blank" href={agreement.url}>
+              ici
+            </a>{" "}
+            dans le cas où elle s&apos;applique à votre situation.
+          </>
+        );
+      if (!isSupported)
+        return (
+          <>
+            Nous vous invitons à consulter votre convention collective qui peut
+            prévoir une réponse. Vous pouvez consulter votre convention
+            collective{" "}
+            <a target="_blank" href={agreement.url}>
+              ici
+            </a>
+            .
+            <br />
+            {contribution.messageBlockGenericNoCDT}
+          </>
+        );
+    }
     if (!isSupported)
       return <>Vous pouvez consulter les informations générales ci-dessous.</>;
   };

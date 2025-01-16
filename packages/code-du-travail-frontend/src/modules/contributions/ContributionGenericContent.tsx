@@ -49,20 +49,18 @@ export function ContributionGenericContent({
   }, [displayContent]);
   return (
     <>
-      <Button
-        className={fr.cx(
-          !displayContent ? "fr-unhidden" : "fr-hidden",
-          "fr-mt-2w",
-          "fr-mb-6w"
-        )}
-        priority="tertiary no outline"
-        onClick={() => {
-          setDisplayContent(true);
-          onDisplayClick();
-        }}
-      >
-        Afficher les informations sans sélectionner une convention collective
-      </Button>
+      {!displayContent && (
+        <Button
+          className={fr.cx("fr-mt-2w", "fr-mb-6w")}
+          priority="tertiary no outline"
+          onClick={() => {
+            setDisplayContent(true);
+            onDisplayClick();
+          }}
+        >
+          Afficher les informations sans sélectionner une convention collective
+        </Button>
+      )}
       <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
         <div
           className={fr.cx(

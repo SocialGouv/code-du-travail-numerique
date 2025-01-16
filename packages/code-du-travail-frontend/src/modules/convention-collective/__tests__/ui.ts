@@ -6,6 +6,21 @@ import {
 } from "testing-library-selector";
 
 export const ui = {
+  buttonDisplayInfo: byText("Afficher les informations"),
+  warning: {
+    title: byText(
+      "Nous n’avons pas de réponse pour cette convention collective"
+    ),
+    nonTreatedAgreement: byText(
+      /Vous pouvez consulter les informations générales ci-dessous/
+    ),
+    noCdtUnextendedAgreement: byText(
+      /Les dispositions de cette convention n’ont pas été étendues/
+    ),
+    noCdtNonTreatedAgreement: byText(
+      /Nous vous invitons à consulter votre convention collective qui peut prévoir une réponse/
+    ),
+  },
   searchAgreementIntro: {
     buttonSearchAgreement: byRole("link", {
       name: "Je connais ma convention collective je la saisis",
@@ -29,6 +44,29 @@ export const ui = {
         ),
         link: byRole("link", {
           name: "Transports routiers et activités auxiliaires du transport (IDCC 16)",
+        }),
+        button: byRole("button", {
+          name: "Transports routiers et activités auxiliaires du transport (IDCC 16)",
+        }),
+      },
+      IDCC1388: {
+        name: byText(/Industrie du pétrole \(IDCC 1388\)/),
+        link: byRole("link", {
+          name: "Industrie du pétrole (IDCC 1388)",
+        }),
+        button: byRole("button", {
+          name: "Industrie du pétrole (IDCC 1388)",
+        }),
+      },
+      IDCC29: {
+        name: byText(
+          "Hospitalisation privée : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP) (IDCC 29)"
+        ),
+        link: byRole("link", {
+          name: "Hospitalisation privée : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP) (IDCC 29)",
+        }),
+        button: byRole("button", {
+          name: "Hospitalisation privée : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP) (IDCC 29)",
         }),
       },
     },

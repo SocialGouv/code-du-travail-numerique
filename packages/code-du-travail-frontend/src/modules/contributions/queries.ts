@@ -1,18 +1,7 @@
 import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import {
-  DocumentElasticResult,
-  fetchDocument,
-  isSource,
-  Source,
-  sources,
-} from "../documents";
-import {
-  Contribution,
-  ContributionElasticDocument,
-  ContributionGeneric,
-  ContributionSpecific,
-} from "./type";
+import { DocumentElasticResult, fetchDocument, isSource } from "../documents";
+import { Contribution, ContributionElasticDocument } from "./type";
 
 export const fetchContributions = async <
   K extends keyof ContributionElasticDocument,
@@ -79,7 +68,7 @@ const formatContribution = (
 
 export const fetchContributionBySlug = async (
   slug: string
-): Promise<ContributionGeneric | ContributionSpecific | undefined> => {
+): Promise<Contribution | undefined> => {
   const response = await fetchDocument<
     ContributionElasticDocument,
     keyof DocumentElasticResult<ContributionElasticDocument>
