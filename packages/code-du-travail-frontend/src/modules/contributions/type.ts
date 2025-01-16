@@ -1,29 +1,27 @@
 import {
   Breadcrumb,
-  ContributionContent,
+  ContributionContentBase,
+  ContributionConventionnelInfos,
   ContributionDocumentJson,
+  ContributionFicheSpContent,
+  ContributionGenericInfos,
+  ContributionGenericNoCDTContent,
   ContributionHighlight,
   ContributionMetadata,
   DocumentElasticWithSource,
   ExportContributionFullLinkedContent,
 } from "@socialgouv/cdtn-types";
-
-export interface ContributionConventionnelInfos {
-  ccnSlug: string;
-  ccnShortTitle: string;
-  isGeneric: false;
-}
-export interface ContributionGenericInfos {
-  ccSupported: string[];
-  ccUnextended: string[];
-  isGeneric: true;
-}
+import { RelatedItem } from "../documents";
 
 type ExportContributionInfo = {
   breadcrumbs: Breadcrumb[];
   highlight?: ContributionHighlight;
   messageBlock?: string;
 };
+
+export type ContributionContent = Partial<ContributionContentBase> &
+  Partial<ContributionFicheSpContent> &
+  Partial<ContributionGenericNoCDTContent>;
 
 type ContributionElasticDocumentBase = Omit<
   DocumentElasticWithSource<Omit<ContributionDocumentJson, "linkedContent">>,
@@ -32,7 +30,22 @@ type ContributionElasticDocumentBase = Omit<
   ContributionMetadata &
   ContributionContent &
   ExportContributionFullLinkedContent &
-  ExportContributionInfo;
+  ExportContributionInfo & {
+    raw: string;
+    url: string;
+  };
 
 export type ContributionElasticDocument = ContributionElasticDocumentBase &
-  (ContributionGenericInfos | ContributionConventionnelInfos);
+  Partial<ContributionGenericInfos> &
+  Partial<ContributionConventionnelInfos>;
+
+export type ContributionRelatedItems = {
+  title: string;
+  items: RelatedItem[];
+};
+
+export type Contribution = ContributionElasticDocument & {
+  isGeneric: boolean;
+  isNoCDT: boolean;
+  relatedItems: ContributionRelatedItems[];
+};

@@ -133,7 +133,7 @@ export const Autocomplete = <K,>({
                 onSearch?.(inputValue, results);
                 setSuggestions(results);
               } catch (error) {
-                onError?.(error);
+                onError?.(error.message);
                 setSuggestions([]);
               } finally {
                 setLoading(false);

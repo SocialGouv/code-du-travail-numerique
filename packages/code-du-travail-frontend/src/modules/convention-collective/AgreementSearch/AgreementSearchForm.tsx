@@ -46,7 +46,10 @@ export const AgreementSearchForm = ({
               "Je cherche mon entreprise pour trouver ma convention collective.",
             nativeInputProps: {
               checked: mode === "enterpriseSearch",
-              onChange: () => setMode("enterpriseSearch"),
+              onChange: () => {
+                if (onAgreementSelect) onAgreementSelect();
+                setMode("enterpriseSearch");
+              },
             },
           },
         ]}

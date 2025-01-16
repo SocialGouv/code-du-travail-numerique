@@ -429,7 +429,8 @@ export const EnterpriseAgreementSearchInput = ({
                 }
               : {
                   href: "",
-                  onClick: () => {
+                  onClick: (ev) => {
+                    ev.preventDefault();
                     const assMatAgreement = {
                       contributions: true,
                       num: 3239,
