@@ -137,7 +137,7 @@ describe("<PageContribution />", () => {
       value: "",
     });
   });
-  it("should track when searching by enterprise name", async () => {
+  it("should track when searching by enterprise with multiple agreements", async () => {
     render(<AgreementSearchForm />);
     (searchEnterprises as jest.Mock).mockImplementation(() =>
       Promise.resolve([enterpriseMoreCC])
