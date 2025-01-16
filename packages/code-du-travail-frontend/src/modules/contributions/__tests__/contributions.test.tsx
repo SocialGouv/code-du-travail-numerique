@@ -155,6 +155,10 @@ describe("<ContributionLayout />", () => {
         category: "outil",
         name: "1388",
       });
+      expect(ccUi.warning.title.query()).toBeInTheDocument();
+      fireEvent.click(ui.generic.linkDisplayInfo.get());
+      expect(ui.generic.nonTreatedInfo.query()).toBeInTheDocument();
+      expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
     });
   });
 

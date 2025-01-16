@@ -1,9 +1,4 @@
-import {
-  byText,
-  byLabelText,
-  byTestId,
-  byRole,
-} from "testing-library-selector";
+import { byText } from "testing-library-selector";
 
 export const ui = {
   generic: {
@@ -11,5 +6,8 @@ export const ui = {
       "Afficher les informations sans sélectionner une convention collective"
     ),
     title: byText("Que dit le code du travail ?"),
+    nonTreatedInfo: byText(
+      /Cette réponse correspond à ce que prévoit le code du travail/
+    ),
   },
 };
