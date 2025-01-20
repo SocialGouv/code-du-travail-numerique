@@ -94,6 +94,7 @@ export const fetchContributionBySlug = async (
       "messageBlock",
       "references",
       "ccnShortTitle",
+      "ccnSlug",
       "raw",
       "ficheSpDescription",
       "content",
