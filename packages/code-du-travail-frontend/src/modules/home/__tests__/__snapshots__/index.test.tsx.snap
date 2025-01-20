@@ -513,11 +513,11 @@ exports[`<Home /> should match snapshot 1`] = `
           >
             Retrouvez tous nos contenus organisés par thèmes
           </p>
-          <div
+          <ul
             class="fr-grid-row fr-grid-row--gutters fr-grid-row--right"
           >
-            <div
-              class="fr-col-4 fr-hidden fr-unhidden-lg"
+            <li
+              class="fr-col-4 fr-hidden fr-unhidden-lg li-s_none!"
             >
               <img
                 alt="Illustration graphique sur les thèmes"
@@ -530,51 +530,39 @@ exports[`<Home /> should match snapshot 1`] = `
                 style="color: transparent;"
                 width="384"
               />
-            </div>
-            <div
-              class="fr-col-12 fr-col-sm-6 fr-col-md-4 fr-col-lg-2"
+            </li>
+            <li
+              class="fr-col-12 fr-col-sm-6 fr-col-md-4 fr-col-lg-2 li-s_none!"
             >
               <div
-                class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--no-icon fr-tile--sm"
+                class="fr-tile fr-enlarge-link fr-tile--no-icon fr-tile--sm"
               >
-                <div
-                  class="fr-tile__body"
+                <p
+                  class="fr-tile__title"
                 >
-                  <div
-                    class="fr-tile__content"
+                  <a
+                    href="https://example.com/theme"
                   >
-                    <p
-                      class="fr-tile__title"
-                    >
-                      <a
-                        href="https://example.com/theme"
-                      >
-                        Theme Title
-                      </a>
-                    </p>
-                  </div>
-                </div>
+                    Theme Title
+                  </a>
+                </p>
                 <div
-                  class="fr-tile__header"
+                  class="fr-tile__img"
                 >
-                  <div
-                    class="fr-tile__img fr-mb-0"
-                  >
-                    <img
-                      alt=""
-                      data-nimg="1"
-                      decoding="async"
-                      height="56"
-                      loading="lazy"
-                      src="/static/assets/icons/themes/theme-icon.svg"
-                      style="color: transparent;"
-                      width="56"
-                    />
-                  </div>
+                  <img
+                    alt=""
+                    data-nimg="1"
+                    decoding="async"
+                    height="56"
+                    loading="lazy"
+                    src="/static/assets/icons/themes/theme-icon.svg"
+                    style="color: transparent;"
+                    width="56"
+                  />
                 </div>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
           <div
             class="fr-mt-3w d_flex jc_center"
           >
