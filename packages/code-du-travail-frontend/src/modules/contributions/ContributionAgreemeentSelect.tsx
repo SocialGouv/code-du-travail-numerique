@@ -19,9 +19,9 @@ export function ContributionAgreementSelect({ contribution }: Props) {
     <>
       <div className={`${fr.cx("fr-p-3w", "fr-mt-6w")} ${block}`}>
         <div className={"fr-grid-row"}>
-          <span className={fr.cx("fr-h3", "fr-mt-1w", "fr-mb-1w")}>
+          <p className={fr.cx("fr-h3", "fr-mt-1w")}>
             Votre convention collective
-          </span>
+          </p>
         </div>
         <Card
           title={`${contribution.ccnShortTitle} (IDCC ${contribution.idcc})`}
