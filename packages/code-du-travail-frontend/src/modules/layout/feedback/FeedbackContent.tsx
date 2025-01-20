@@ -99,7 +99,7 @@ export const FeedbackContent = (props: Props) => {
               label: "Les informations ne sont pas claires",
               nativeInputProps: {
                 name: "unclear",
-                value: "unclear" as FeedbackActionChoiceValue,
+                value: FeedbackActionChoiceValue.unclear,
                 onChange: onChangeCategories,
                 ref: setFirstCheckboxRef,
               },
@@ -109,7 +109,7 @@ export const FeedbackContent = (props: Props) => {
                 "Cette page ne correspond pas à ma recherche ou à ma situation.",
               nativeInputProps: {
                 name: "unrelated",
-                value: "unrelated" as FeedbackActionChoiceValue,
+                value: FeedbackActionChoiceValue.unrelated,
                 onChange: onChangeCategories,
               },
             },
@@ -117,7 +117,7 @@ export const FeedbackContent = (props: Props) => {
               label: "Je ne suis pas satisfait de cette réglementation.",
               nativeInputProps: {
                 name: "unsatisfied",
-                value: "unsatisfied" as FeedbackActionChoiceValue,
+                value: FeedbackActionChoiceValue.unsatisfied,
                 onChange: onChangeCategories,
               },
             },
@@ -125,7 +125,7 @@ export const FeedbackContent = (props: Props) => {
               label: "Les informations me semblent fausses.",
               nativeInputProps: {
                 name: "wrong",
-                value: "wrong" as FeedbackActionChoiceValue,
+                value: FeedbackActionChoiceValue.wrong,
                 onChange: onChangeCategories,
               },
             },
