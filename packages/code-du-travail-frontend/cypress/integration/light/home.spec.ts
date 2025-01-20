@@ -69,7 +69,6 @@ describe("Page d’accueil", () => {
       .should("have.text", "Bienvenue sur le Code du travail numérique")
       .click();
 
-    // @ts-ignore
     cy.selectByLabel("Recherchez par mots-clés").type("congés");
 
     cy.get('ul[role="listbox"]').should("be.visible");

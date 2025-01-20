@@ -13,7 +13,7 @@ export const metadata = generateDefaultMetadata({
   description:
     "Retrouvez les questions/réponses fréquentes organisées par thème pour votre convention collective",
   path: "/convention-collective",
-  overrideCanonical: `${SITE_URL}/outils/convention-collective`,
+  overrideCanonical: `${SITE_URL}/convention-collective`,
 });
 
 const removeAccents = (text: string) =>

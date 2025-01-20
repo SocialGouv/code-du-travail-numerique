@@ -30,11 +30,17 @@ declare global {
        * Custom command to select DOM element by data-cy attribute.
        * @example cy.checkCanonical("/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd")
        */
-      checkCanonical(value: string): Chainable<Element>;
-      checkNoIndex(noIndex: boolean): Chainable<Element>;
+      checkUrlIs(path: string): Chainable<Element>;
 
-      selectByLabel: Chainable<Element>;
-      findByLabel: Chainable<Element>;
+      checkCanonical(path: string): Chainable<Element>;
+
+      checkNoIndexPresent(): Chainable<Element>;
+
+      checkNoIndexNotPresent(): Chainable<Element>;
+
+      selectByLabel(label: string): Chainable<Element>;
+
+      findByLabel(label: string): Chainable<Element>;
     }
   }
 }

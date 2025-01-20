@@ -1,20 +1,19 @@
 describe("Outil - Trouver sa convention collective", () => {
   it("Recherche de convention collective par entreprise", () => {
     cy.visit("/outils/convention-collective");
-    cy.checkNoIndex(false);
+    cy.checkNoIndexNotPresent();
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Trouver sa convention collective")
       .click();
     cy.contains(
       "Je cherche mon entreprise pour trouver ma convention collective"
     ).click();
+    cy.checkUrlIs("/outils/convention-collective");
     cy.checkCanonical("/outils/convention-collective");
-    // @ts-ignore
     cy.selectByLabel("Nom de votre entreprise ou numéro Siren/Siret").type(
       "82129756100010",
       { delay: 0 }
     );
-    // @ts-ignore
     cy.selectByLabel("Code postal ou Ville (optionnel)")
       .as("locationInput")
       .type("7501");
@@ -23,6 +22,8 @@ describe("Outil - Trouver sa convention collective", () => {
       force: true,
     });
     cy.get('button[type="submit"]').last().click();
+    cy.checkUrlIs("/outils/convention-collective/entreprise");
+    cy.checkCanonical("/outils/convention-collective");
     cy.contains("BOUILLON PIGALLE").click();
 
     cy.contains("1 convention collective trouvée pour :");
@@ -46,7 +47,6 @@ describe("Outil - Trouver sa convention collective", () => {
       .type("Q")
       .type("U")
       .type("E");
-    // @ts-ignore
     cy.selectByLabel("Code postal ou Ville (optionnel)").clear();
     cy.get('button[type="submit"]').last().click();
     cy.contains("CARREFOUR BANQUE").click();
