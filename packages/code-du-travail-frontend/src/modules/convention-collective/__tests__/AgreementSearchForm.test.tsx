@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import React from "react";
 import { wait } from "@testing-library/user-event/dist/utils";
 import { searchEnterprises } from "../../enterprise/queries";
@@ -163,7 +163,7 @@ describe("<PageContribution />", () => {
     expect(sendEvent).toHaveBeenCalledWith({
       action: "Trouver sa convention collective",
       category: "cc_select_p2",
-      name: "idcc2216",
+      name: "idcc2120",
       value: "",
     });
     expect(sendEvent).toHaveBeenCalledWith({
@@ -176,13 +176,13 @@ describe("<PageContribution />", () => {
       value: "",
     });
     expect(
-      ui.enterpriseAgreementSearch.errorNotFound.notDeclared.query()
+      ui.enterpriseAgreementSearch.errorNotFound.notTreated.query()
     ).not.toBeInTheDocument();
     userAction.click(
       ui.enterpriseAgreementSearch.resultLines.bnp.ccList.idcc9999.get()
     );
     expect(
-      ui.enterpriseAgreementSearch.errorNotFound.notDeclared.query()
+      ui.enterpriseAgreementSearch.errorNotFound.notTreated.query()
     ).toBeInTheDocument();
   });
 
