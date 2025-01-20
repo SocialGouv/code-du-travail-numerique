@@ -9,9 +9,7 @@ type Props = {
 export const EnterpriseAgreementSelectionDetail = ({ enterprise }: Props) => {
   return (
     <>
-      <div className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
-        Votre entreprise
-      </div>
+      <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>Votre entreprise</p>
       <h2 className={fr.cx("fr-h6", "fr-m-0", "fr-mt-2w")}>
         {enterprise.label}
       </h2>

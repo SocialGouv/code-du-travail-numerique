@@ -25,7 +25,7 @@ describe("Outil - Trouver sa convention collective", () => {
     cy.get('button[type="submit"]').last().click();
     cy.contains("BOUILLON PIGALLE").click();
 
-    cy.contains("1 convention collective trouvée pour :");
+    cy.contains("1 convention collective trouvée :");
 
     cy.contains("Précédent").click();
     cy.selectByLabel("Nom de votre entreprise ou numéro Siren/Siret")
@@ -50,7 +50,7 @@ describe("Outil - Trouver sa convention collective", () => {
     cy.selectByLabel("Code postal ou Ville (optionnel)").clear();
     cy.get('button[type="submit"]').last().click();
     cy.contains("CARREFOUR BANQUE").click();
-    cy.contains("2 conventions collectives trouvées pour :");
+    cy.contains("2 conventions collectives trouvées :");
     cy.contains("Banque")
       .should("have.prop", "href")
       .and(
