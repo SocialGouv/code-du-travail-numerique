@@ -7,7 +7,7 @@ describe("Conventions collectives", () => {
     cy.get("#fr-header-main-navigation")
       .contains("Votre convention collective")
       .click();
-    cy.checkUrlIs("/convention-collective");
+    cy.urlEqual("/convention-collective");
 
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Votre convention collective")
@@ -18,7 +18,7 @@ describe("Conventions collectives", () => {
     );
     cy.get("#content a").should("have.length", 49);
     cy.get("#content a").first().click();
-    cy.checkUrlIs(
+    cy.urlEqual(
       "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
     );
     cy.get('[data-accordion-component="Accordion"]')
@@ -72,31 +72,31 @@ describe("Conventions collectives", () => {
       .first()
       .click();
     cy.get('[data-accordion-component="AccordionItem"] a').first().click();
-    cy.checkUrlIs(
+    cy.urlEqual(
       "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
     );
   });
 
   it("je suis redirigé vers la cc si je mets seulement l'idcc dans l'url", () => {
     cy.visit("/convention-collective/0029");
-    cy.checkUrlIs(
+    cy.urlEqual(
       "/convention-collective/29-hospitalisation-privee-etablissements-prives-dhospitalisation-de-soins-d"
     );
   });
 
   it("je suis redirigé vers la cc si je mets l'idcc en 4 chiffres", () => {
     cy.visit("/convention-collective/0650");
-    cy.checkUrlIs("/convention-collective/3248-metallurgie");
+    cy.urlEqual("/convention-collective/3248-metallurgie");
   });
 
   it("je suis redirigé vers la cc si je mets l'idcc en 3 chiffres", () => {
     cy.visit("/convention-collective/650");
-    cy.checkUrlIs("/convention-collective/3248-metallurgie");
+    cy.urlEqual("/convention-collective/3248-metallurgie");
   });
 
   it("je suis redirigé vers la cc si je mets l'idcc en 4 chiffres et deux zeros", () => {
     cy.visit("/convention-collective/0054");
-    cy.checkUrlIs("/convention-collective/3248-metallurgie");
+    cy.urlEqual("/convention-collective/3248-metallurgie");
   });
 
   it("je ne dois pas être redirigé s'il n'y a pas de redirection", () => {

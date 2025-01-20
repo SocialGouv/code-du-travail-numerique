@@ -33,6 +33,6 @@ describe("Outil - Dossier Licenciement", () => {
       .contains("Afficher les informations personnalisées")
       .click();
 
-    cy.checkUrlIs("/information/licenciement-pour-motif-non-disciplinaire");
+    cy.urlEqual("/information/licenciement-pour-motif-non-disciplinaire");
   });
 });

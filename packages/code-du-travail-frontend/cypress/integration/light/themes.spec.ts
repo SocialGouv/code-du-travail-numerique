@@ -10,7 +10,7 @@ describe("Navigation par thème", () => {
 
   it('redirige vers la page "/themes/embauche-et-contrat-de-travail" lorsque je clique sur "Embauche et contrat de travail"', () => {
     cy.get("a").contains("Embauche et contrat de travail").click();
-    cy.checkUrlIs("/themes/embauche-et-contrat-de-travail");
+    cy.urlEqual("/themes/embauche-et-contrat-de-travail");
     cy.get("h1").should("contain", "Embauche et contrat de travail");
     cy.get("a").should("contain", "Embauche");
     cy.get("a").should("contain", "Contrat de travail");
@@ -20,9 +20,9 @@ describe("Navigation par thème", () => {
 
   it('redirige vers la page "/themes/embauche" lorsque je clique sur "Embauche"', () => {
     cy.get("a").contains("Embauche").click();
-    cy.checkUrlIs("/themes/embauche-et-contrat-de-travail");
+    cy.urlEqual("/themes/embauche-et-contrat-de-travail");
     cy.get("a").contains("Embauche").click();
-    cy.checkUrlIs("/themes/embauche");
+    cy.urlEqual("/themes/embauche");
     cy.get("h1").should("contain", "Embauche");
     cy.get("a").should("contain", "Méthodes de recrutement");
     cy.get("a").should("contain", "Période d’essai");
@@ -31,7 +31,7 @@ describe("Navigation par thème", () => {
 
   it('redirige vers la page "/themes/embauche-et-contrat-de-travail" et vérifie les liens', () => {
     cy.get("a").contains("Embauche et contrat de travail").click();
-    cy.checkUrlIs("/themes/embauche-et-contrat-de-travail");
+    cy.urlEqual("/themes/embauche-et-contrat-de-travail");
     cy.get("h1").should("contain", "Embauche et contrat de travail");
     cy.get("a").should("not.contain", "Embauche et contrat de travail");
     cy.get("a").should("contain", "Embauche");

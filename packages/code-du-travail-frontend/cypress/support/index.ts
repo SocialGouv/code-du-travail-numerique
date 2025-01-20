@@ -28,17 +28,17 @@ declare global {
     interface Chainable {
       /**
        * Custom command to select DOM element by data-cy attribute.
-       * @example cy.checkCanonical("/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd")
+       * @example cy.canonicalUrlEqual("/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd")
        */
-      checkUrlIs(path: string): Chainable<Element>;
+      urlEqual(path: string): Chainable<Element>;
 
-      checkCanonical(path: string): Chainable<Element>;
+      canonicalUrlEqual(path: string): Chainable<Element>;
 
-      checkNoIndexPresent(): Chainable<Element>;
+      checkNoIndex(): Chainable<Element>;
 
-      checkNoIndexNotPresent(): Chainable<Element>;
+      isIndexable(): Chainable<Element>;
 
-      checkTitleAndMetaDescription(
+      titleAndMetaDescriptionEqual(
         title: string,
         description: string
       ): Chainable<Element>;

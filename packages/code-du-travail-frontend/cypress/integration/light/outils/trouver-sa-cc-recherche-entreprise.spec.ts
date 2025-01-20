@@ -1,8 +1,8 @@
 describe("Outil - Trouver sa convention collective", () => {
   it("Recherche de convention collective par entreprise", () => {
     cy.visit("/outils/convention-collective");
-    cy.checkNoIndexNotPresent();
-    cy.checkTitleAndMetaDescription(
+    cy.isIndexable();
+    cy.titleAndMetaDescriptionEqual(
       "Simulateur - Trouver sa convention collective - Code du travail numérique",
       "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC"
     );
@@ -12,8 +12,8 @@ describe("Outil - Trouver sa convention collective", () => {
     cy.contains(
       "Je cherche mon entreprise pour trouver ma convention collective"
     ).click();
-    cy.checkUrlIs("/outils/convention-collective");
-    cy.checkCanonical("/outils/convention-collective");
+    cy.urlEqual("/outils/convention-collective");
+    cy.canonicalUrlEqual("/outils/convention-collective");
     cy.selectByLabel("Nom de votre entreprise ou numéro Siren/Siret").type(
       "82129756100010",
       { delay: 0 }
@@ -26,8 +26,8 @@ describe("Outil - Trouver sa convention collective", () => {
       force: true,
     });
     cy.get('button[type="submit"]').last().click();
-    cy.checkUrlIs("/outils/convention-collective/entreprise");
-    cy.checkCanonical("/outils/convention-collective");
+    cy.urlEqual("/outils/convention-collective/entreprise");
+    cy.canonicalUrlEqual("/outils/convention-collective");
     cy.contains("BOUILLON PIGALLE").click();
 
     cy.contains("1 convention collective trouvée pour :");

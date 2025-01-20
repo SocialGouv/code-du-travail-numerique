@@ -10,7 +10,7 @@ describe("Widget - Modèles de courrier", () => {
       "href",
       "https://cdtn-prod-public.s3.gra.io.cloud.ovh.net/preview/default/lettre_de_demission.docx"
     );
-    cy.checkCanonical("/modeles-de-courriers/lettre-de-demission");
+    cy.canonicalUrlEqual("/modeles-de-courriers/lettre-de-demission");
   });
 
   it("s'affiche bien sur un site externe", () => {

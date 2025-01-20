@@ -1,7 +1,7 @@
 describe("Page d’accueil", () => {
   it("Affiche les éléments requis", () => {
     cy.visit("/");
-    cy.checkTitleAndMetaDescription(
+    cy.titleAndMetaDescriptionEqual(
       "Code du travail numérique",
       "Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités)."
     );

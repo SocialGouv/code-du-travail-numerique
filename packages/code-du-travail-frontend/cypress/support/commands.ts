@@ -1,11 +1,11 @@
 import "@testing-library/cypress/add-commands";
 import "cypress-iframe";
 
-Cypress.Commands.add("checkUrlIs", (path) => {
+Cypress.Commands.add("urlEqual", (path) => {
   cy.url().should("equal", `${Cypress.config().baseUrl}${path}`);
 });
 
-Cypress.Commands.add("checkTitleAndMetaDescription", (title, description) => {
+Cypress.Commands.add("titleAndMetaDescriptionEqual", (title, description) => {
   cy.title().should("eq", title);
   cy.get(`head > meta[name="description"]`).should(
     "have.attr",
@@ -14,19 +14,19 @@ Cypress.Commands.add("checkTitleAndMetaDescription", (title, description) => {
   );
 });
 
-Cypress.Commands.add("checkCanonical", (path) => {
+Cypress.Commands.add("canonicalUrlEqual", (path) => {
   cy.get("head > link[rel='canonical']")
     .should("have.prop", "href")
     .and("equal", `${Cypress.config().baseUrl}${path}`);
 });
 
-Cypress.Commands.add("checkNoIndexPresent", () => {
+Cypress.Commands.add("checkNoIndex", () => {
   cy.get("head > meta[name='robots']")
     .should("have.prop", "content")
     .and("equal", `noindex,nofollow`);
 });
 
-Cypress.Commands.add("checkNoIndexNotPresent", () => {
+Cypress.Commands.add("isIndexable", () => {
   cy.get("head > meta[name='robots']").should("not.exist");
 });
 

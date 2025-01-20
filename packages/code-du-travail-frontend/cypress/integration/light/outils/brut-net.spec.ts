@@ -3,7 +3,7 @@ import "cypress-iframe";
 describe("Outil - Salaire brut/net", () => {
   it("Valider que le simulateur s'affiche correctement dans l'iframe", () => {
     cy.visit("/outils/simulateur-embauche");
-    cy.checkTitleAndMetaDescription(
+    cy.titleAndMetaDescriptionEqual(
       "Simulateur - Calcul du salaire brut/net - Code du travail numérique",
       "Réalisez vos conversions et calculs de salaire (brut en net, net en brut, net après impôt, heures supplémentaires et coût total employeur) avec notre simulateur."
     );

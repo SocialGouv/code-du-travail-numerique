@@ -11,7 +11,7 @@ describe("Contributions", () => {
     cy.get("#content li").should("have.length", 7);
     cy.contains("Quelle peut être la durée maximale d'un CDD").click();
 
-    cy.checkUrlIs(
+    cy.urlEqual(
       "/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd?q=dur%C3%A9e%20maximale%20CDD"
     );
   });
