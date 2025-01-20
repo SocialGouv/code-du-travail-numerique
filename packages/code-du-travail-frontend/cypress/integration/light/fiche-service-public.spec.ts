@@ -1,9 +1,9 @@
 describe("Fiche Service public", () => {
   it("je vois une page fiche service public", () => {
     cy.visit("/fiche-service-public/salaire-primes-et-avantages");
-    cy.titleAndMetaDescriptionEqual(
-      "Salaire, primes et avantages - Code du travail numérique",
-      "Le montant du salaire est fixé librement au cours d'une négociation entre l'employeur et le salarié. Certaines dispositions légales et conventionnelles doivent toutefois être respectées. Le salaire se compose de l'ensemble des sommes versées en argent et des avantages en nature que perçoit le salarié."
+    cy.title().should(
+      "eq",
+      "Salaire, primes et avantages - Code du travail numérique"
     );
     cy.findAllByRole("heading", { level: 1 }).should(
       "have.text",

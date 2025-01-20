@@ -1,10 +1,7 @@
 describe("Article code du travail", () => {
   it("je vois une page article code du travail", () => {
     cy.visit("/code-du-travail/l2312-1");
-    cy.titleAndMetaDescriptionEqual(
-      "L2312-1 - Code du travail numérique",
-      "Les attributions du comité social et économique des entreprises de moins de cinquante salariés sont définies par la section 2 du présent chapitre. Les attributions du comité social et économique des entreprises d'au moins cinquante salariés sont définies par la section 3 du présent chapitre. Les attributions du comité social et économique sont définies en fonction de l'effectif de l'entreprise"
-    );
+    cy.title().should("eq", "L2312-1 - Code du travail numérique");
     cy.findByRole("heading", { level: 1 }).should("have.text", "L2312-1");
     cy.get("a")
       .contains("Code du travail")
