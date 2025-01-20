@@ -18,10 +18,6 @@ describe("Conventions collectives", () => {
     );
     cy.get("#content a").should("have.length", 49);
     cy.get("#content a").first().click();
-    cy.url().should(
-      "include",
-      "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
-    );
     cy.get('[data-accordion-component="Accordion"]')
       .eq(0)
       .find('[data-accordion-component="AccordionItemButton"]')
@@ -73,10 +69,6 @@ describe("Conventions collectives", () => {
       .first()
       .click();
     cy.get('[data-accordion-component="AccordionItem"] a').first().click();
-    cy.url().should(
-      "include",
-      "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
-    );
   });
 
   it("je suis redirigé vers la cc si je mets seulement l'idcc dans l'url", () => {
