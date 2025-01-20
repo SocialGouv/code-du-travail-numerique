@@ -1,6 +1,10 @@
 describe("Page Ministère du travail", () => {
   it("je vois une page fiche ministère du travail", () => {
     cy.visit("/fiche-ministere-travail/entreprises-dinsertion-ei");
+    cy.title().should(
+      "eq",
+      "Les entreprises d'insertion (EI) - Code du travail numérique"
+    );
     cy.findAllByRole("heading", { level: 1 }).should(
       "have.text",
       "Les entreprises d'insertion (EI)"
