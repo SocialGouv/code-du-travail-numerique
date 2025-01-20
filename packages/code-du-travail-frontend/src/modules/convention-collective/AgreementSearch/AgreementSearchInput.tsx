@@ -8,7 +8,6 @@ import { Autocomplete } from "../../common/Autocomplete/Autocomplete";
 import { Agreement } from "../../../outils/types";
 import { searchAgreement } from "../search";
 import { EnterpriseAgreement } from "../../enterprise";
-import { useLocalStorageForAgreementOnPageLoad } from "../../common/useLocalStorage";
 import { useAgreementSearchTracking } from "../tracking";
 
 type Props = {
@@ -17,15 +16,16 @@ type Props = {
   selectedAgreementAlert?: (
     agreement?: EnterpriseAgreement
   ) => NonNullable<ReactNode> | undefined;
+  defaultAgreement?: EnterpriseAgreement;
 };
 
 export const AgreementSearchInput = ({
   onSearch,
   onAgreementSelect,
   selectedAgreementAlert,
+  defaultAgreement,
 }: Props) => {
-  const [selectedAgreement, setSelectedAgreement] =
-    useLocalStorageForAgreementOnPageLoad();
+  const [selectedAgreement, setSelectedAgreement] = useState(defaultAgreement);
   useEffect(() => {
     if (onAgreementSelect) onAgreementSelect(selectedAgreement);
   }, [selectedAgreement]);
