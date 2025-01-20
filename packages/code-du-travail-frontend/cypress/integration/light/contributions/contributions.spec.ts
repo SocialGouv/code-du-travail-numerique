@@ -69,6 +69,6 @@ describe("Contributions", () => {
       "have.text",
       "Combien de fois le contrat de travail peut-il être renouvelé ? Métallurgie"
     );
-    cy.get('[aria-expanded="true"]').find("h3").should("contain", "CDD");
+    cy.get('[aria-expanded="true"]').should("contain", "CDD");
   });
 });

@@ -60,7 +60,10 @@ const mapToAccordion = (titleLevel: numberLevel, items) => {
       <AccordionWithAnchor
         {...props}
         data-testid="contrib-accordion"
-        items={items.map((item) => ({ ...item, id: generateUUID() }))}
+        items={items.map((item) => ({
+          ...item,
+          ...(titleLevel === 3 ? { id: item.title } : {}),
+        }))}
         titleAs={`h${titleLevel}`}
       />
     </div>
