@@ -44,7 +44,7 @@ export const EnterpriseAgreementSearchInput = ({
   );
   const [enterprises, setEnterprises] = useState<Enterprise[]>();
   const [error, setError] = useState("");
-  const resultRef = useRef<HTMLDivElement>(null);
+  const resultRef = useRef<HTMLHeadingElement>(null);
 
   const getStateMessage = () => {
     switch (searchState) {
@@ -106,7 +106,6 @@ export const EnterpriseAgreementSearchInput = ({
         search.length > 0 && !result.length ? "notFoundSearch" : "noSearch"
       );
       setEnterprises(result);
-      resultRef.current?.focus();
     } catch (e) {
       setSearchState("errorSearch");
       setEnterprises(undefined);
@@ -120,6 +119,10 @@ export const EnterpriseAgreementSearchInput = ({
       onSubmit();
     }
   }, [defaultSearch]);
+
+  useEffect(() => {
+    resultRef.current?.focus();
+  }, [enterprises]);
   return (
     <>
       <h2 className={fr.cx("fr-h4", "fr-my-2w")}>Précisez votre entreprise</h2>
@@ -195,8 +198,13 @@ export const EnterpriseAgreementSearchInput = ({
 
       <div>
         <div className={fr.cx("fr-mt-2w")}>
-          {!!enterprises?.length && !loading && (
-            <h2 className={fr.cx("fr-h5")} tabIndex={-1} ref={resultRef}>
+          {enterprises && enterprises.length > 0 && !loading && (
+            <h2
+              className={fr.cx("fr-h5")}
+              tabIndex={-1}
+              ref={resultRef}
+              data-testid={"result-title"}
+            >
               {enterprises.length}
               {enterprises.length > 1
                 ? " entreprises trouvées"

@@ -1,4 +1,4 @@
-import { render, RenderResult } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { UserAction } from "../../../../common";
 import React from "react";
 import { EnterpriseAgreementSearch } from "../EnterpriseAgreementSearch";
@@ -26,7 +26,6 @@ jest.mock("next/navigation", () => ({
 
 describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
   describe("Test de l'autocomplete", () => {
-    let rendering: RenderResult;
     let userAction: UserAction;
     const enterprise = {
       activitePrincipale:
@@ -60,7 +59,7 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
       jest.resetAllMocks();
     });
     it("Vérifier l'affichage de la recherche", async () => {
-      rendering = render(<EnterpriseAgreementSearch />);
+      render(<EnterpriseAgreementSearch />);
       (searchEnterprises as jest.Mock).mockImplementation(() =>
         Promise.resolve([enterprise])
       );
@@ -77,6 +76,9 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
         category: "enterprise_search",
         name: '{"query":"carrefour"}',
       });
+      expect(
+        ui.enterpriseAgreementSearch.resultTitle.get().textContent
+      ).toEqual("1 entreprise trouvée");
       expect(
         ui.enterpriseAgreementSearch.resultLines.carrefour.title.query()
       ).toBeInTheDocument();
@@ -124,7 +126,7 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
     });
 
     it("Vérifier l'affichage de l'erreur si aucun résultat", async () => {
-      rendering = render(<EnterpriseAgreementSearch />);
+      render(<EnterpriseAgreementSearch />);
       (searchEnterprises as jest.Mock).mockImplementation(() =>
         Promise.resolve([])
       );
@@ -144,7 +146,7 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
     });
 
     it("Vérifier l'affichage de la recherche en mode widget", async () => {
-      rendering = render(<EnterpriseAgreementSearch widgetMode />);
+      render(<EnterpriseAgreementSearch widgetMode />);
       (searchEnterprises as jest.Mock).mockImplementation(() =>
         Promise.resolve([
           {
