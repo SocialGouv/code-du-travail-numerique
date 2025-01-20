@@ -1,6 +1,10 @@
 describe("Page Ministère du travail", () => {
   it("je vois une page fiche ministère du travail", () => {
     cy.visit("/fiche-ministere-travail/entreprises-dinsertion-ei");
+    cy.checkTitleAndMetaDescription(
+      "Les entreprises d'insertion (EI) - Code du travail numérique",
+      "Une entreprise d’insertion (EI) propose l’accès à l’emploi et un accompagnement socioprofessionnel à des personnes éloignées de l’emploi : demandeurs d’emploi de longue durée, allocataires de minima sociaux, jeunes sans qualification, etc."
+    );
     cy.findAllByRole("heading", { level: 1 }).should(
       "have.text",
       "Les entreprises d'insertion (EI)"

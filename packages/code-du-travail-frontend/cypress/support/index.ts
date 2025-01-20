@@ -38,6 +38,11 @@ declare global {
 
       checkNoIndexNotPresent(): Chainable<Element>;
 
+      checkTitleAndMetaDescription(
+        title: string,
+        description: string
+      ): Chainable<Element>;
+
       selectByLabel(label: string): Chainable<Element>;
 
       findByLabel(label: string): Chainable<Element>;

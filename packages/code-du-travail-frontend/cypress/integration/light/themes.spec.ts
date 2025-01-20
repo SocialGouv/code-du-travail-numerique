@@ -20,8 +20,9 @@ describe("Navigation par thème", () => {
 
   it('redirige vers la page "/themes/embauche" lorsque je clique sur "Embauche"', () => {
     cy.get("a").contains("Embauche").click();
+    cy.checkUrlIs("/themes/embauche-et-contrat-de-travail");
+    cy.get("a").contains("Embauche").click();
     cy.checkUrlIs("/themes/embauche");
-    cy.visit("/themes/embauche");
     cy.get("h1").should("contain", "Embauche");
     cy.get("a").should("contain", "Méthodes de recrutement");
     cy.get("a").should("contain", "Période d’essai");

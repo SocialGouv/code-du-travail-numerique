@@ -7,6 +7,10 @@ describe("Modèles de documents", () => {
     cy.checkUrlIs(
       "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"
     );
+    cy.checkTitleAndMetaDescription(
+      "Modèle de document : Rupture du contrat en période d’essai par le salarié - Code du travail numérique",
+      "Pendant la période d’essai, le contrat de travail peut être rompu librement par le salarié. Téléchargez et personnalisez notre modèle pour informer votre employeur de votre intention de mettre fin à la période d’essai."
+    );
   });
 
   it("cherche un modèle", () => {

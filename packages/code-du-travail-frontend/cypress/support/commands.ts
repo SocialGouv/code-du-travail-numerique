@@ -1,9 +1,17 @@
 import "@testing-library/cypress/add-commands";
 import "cypress-iframe";
 
-
 Cypress.Commands.add("checkUrlIs", (path) => {
   cy.url().should("equal", `${Cypress.config().baseUrl}${path}`);
+});
+
+Cypress.Commands.add("checkTitleAndMetaDescription", (title, description) => {
+  cy.title().should("eq", title);
+  cy.get(`head > meta[name="description"]`).should(
+    "have.attr",
+    "content",
+    description
+  );
 });
 
 Cypress.Commands.add("checkCanonical", (path) => {

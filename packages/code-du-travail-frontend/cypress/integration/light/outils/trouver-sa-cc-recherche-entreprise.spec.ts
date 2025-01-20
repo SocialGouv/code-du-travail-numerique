@@ -2,6 +2,10 @@ describe("Outil - Trouver sa convention collective", () => {
   it("Recherche de convention collective par entreprise", () => {
     cy.visit("/outils/convention-collective");
     cy.checkNoIndexNotPresent();
+    cy.checkTitleAndMetaDescription(
+      "Simulateur - Trouver sa convention collective - Code du travail numérique",
+      "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC"
+    );
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Trouver sa convention collective")
       .click();
