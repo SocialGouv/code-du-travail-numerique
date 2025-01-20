@@ -26,10 +26,6 @@ import "cypress-real-events";
 declare global {
   namespace Cypress {
     interface Chainable {
-      /**
-       * Custom command to select DOM element by data-cy attribute.
-       * @example cy.canonicalUrlEqual("/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd")
-       */
       urlEqual(path: string): Chainable<Element>;
 
       canonicalUrlEqual(path: string): Chainable<Element>;
