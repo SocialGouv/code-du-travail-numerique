@@ -62,7 +62,7 @@ const mapToAccordion = (titleLevel: numberLevel, items) => {
         data-testid="contrib-accordion"
         items={items.map((item) => ({
           ...item,
-          ...(titleLevel === 3 ? { id: item.title } : { id: generateUUID() }),
+          ...(titleLevel === 3 ? { id: undefined } : { id: generateUUID() }),
         }))}
         titleAs={`h${titleLevel}`}
       />
