@@ -30,14 +30,6 @@ export function ContributionGenericAgreementSearch({
 
   const [selectedAgreement, setSelectedAgreement] =
     useState<EnterpriseAgreement>();
-  const [displaySlug, setDisplaySlug] = useState(`/contribution/${slug}`);
-  useEffect(() => {
-    setDisplaySlug(
-      selectedAgreement && isAgreementValid(contribution, selectedAgreement)
-        ? `/contribution/${selectedAgreement.num}-${slug}`
-        : ""
-    );
-  }, [selectedAgreement]);
   const selectedAgreementAlert = (agreement: EnterpriseAgreement) => {
     const isSupported = isCCSupported(contribution, agreement);
     const isUnextended = isCCUnextended(contribution, agreement);
@@ -86,9 +78,9 @@ export function ContributionGenericAgreementSearch({
             alt="Personnalisez la réponse avec votre convention collective"
             className={fr.cx("fr-unhidden-md", "fr-hidden")}
           />
-          <span className={fr.cx("fr-h3", "fr-mt-1w", "fr-mb-1w")}>
+          <p className={fr.cx("fr-h3", "fr-mt-1w")}>
             Personnalisez la réponse avec votre convention collective
-          </span>
+          </p>
         </div>
         <div>
           <AgreementSearchForm
@@ -103,7 +95,11 @@ export function ContributionGenericAgreementSearch({
             <Button
               className={fr.cx("fr-mt-2w")}
               linkProps={{
-                href: displaySlug,
+                href:
+                  selectedAgreement &&
+                  isAgreementValid(contribution, selectedAgreement)
+                    ? `/contribution/${selectedAgreement.num}-${slug}`
+                    : "",
                 onClick: onDisplayClick,
               }}
             >

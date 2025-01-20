@@ -23,8 +23,8 @@ const contribution = {
   title: "La période d’essai peut-elle être renouvelée ?",
   breadcrumbs: [],
   slug: "slug",
-  ccnShortTitle: "Nom de la CC",
   type: "content",
+  content: "my content",
   isGeneric: true,
   isNoCdt: false,
   ccSupported: ["0016", "3239"],
@@ -52,24 +52,36 @@ jest.mock("next/navigation", () => ({
 describe("<ContributionLayout />", () => {
   let rendering: RenderResult;
   it("should render title only if generic", () => {
-    const { getByRole } = render(
-      <ContributionLayout contribution={contribution} />
-    );
-    const titreH1 = getByRole("heading", { level: 1 });
+    rendering = render(<ContributionLayout contribution={contribution} />);
+    const titreH1 = rendering.getByRole("heading", { level: 1 });
     expect(titreH1.textContent).toBe(
       "La période d’essai peut-elle être renouvelée ?"
     );
+    expect(
+      rendering.getByText("Mis à jour le : 05/12/2023")
+    ).toBeInTheDocument();
   });
   it("should render title with cc short name if contribution with CC", () => {
-    const { getByRole } = render(
+    rendering = render(
       <ContributionLayout
-        contribution={{ ...contribution, idcc: "0029", isGeneric: false }}
+        contribution={{
+          ...contribution,
+          idcc: "0029",
+          isGeneric: false,
+          ccnSlug: "cc-slug",
+          ccnShortTitle: "Nom de la CC",
+        }}
       />
     );
-    const titreH1 = getByRole("heading", { level: 1 });
+    const titreH1 = rendering.getByRole("heading", { level: 1 });
     expect(titreH1.textContent).toBe(
       "La période d’essai peut-elle être renouvelée ? Nom de la CC"
     );
+    expect(
+      rendering.getByText("Mis à jour le : 05/12/2023")
+    ).toBeInTheDocument();
+    const ccLink = rendering.getByRole("link", { name: "Nom de la CC" });
+    expect(ccLink).toHaveAttribute("href", "/convention-collective/cc-slug");
   });
   describe("base", () => {
     beforeEach(async () => {
@@ -80,8 +92,10 @@ describe("<ContributionLayout />", () => {
       expect(ccUi.buttonDisplayInfo.query()).toBeInTheDocument();
       expect(ui.generic.linkDisplayInfo.query()).toBeInTheDocument();
       expect(ui.generic.title.query()).toBeInTheDocument();
+      expect(rendering.getByText("my content")).toBeInTheDocument();
       fireEvent.click(ui.generic.linkDisplayInfo.get());
       expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
+      expect(rendering.getByText("my content")).toBeInTheDocument();
     });
 
     it("should display correctly when a treated agreement is selected", async () => {

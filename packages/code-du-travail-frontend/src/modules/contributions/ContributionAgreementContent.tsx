@@ -36,7 +36,7 @@ export function ContributionAgreementContent({
           )}
         >
           <ContributionContent contribution={contribution} titleLevel={3} />
-          {!!contribution.references.length && (
+          {contribution.references.length > 0 && (
             <Accordion label="Références">
               <ListWithArrow
                 items={contribution.references.map(({ title, url }) => {
@@ -67,7 +67,7 @@ export function ContributionAgreementContent({
           )}
         </div>
         <div className={fr.cx("fr-col-12", "fr-col-md-4")}>
-          {relatedItems && !!relatedItems[0].items.length && (
+          {relatedItems && relatedItems[0].items.length > 0 && (
             <RelatedItems relatedItems={relatedItems} />
           )}
           <Share title={title} metaDescription={metas.description} />

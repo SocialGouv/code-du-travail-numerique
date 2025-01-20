@@ -34,7 +34,7 @@ export function ContributionAgreementSelect({ contribution }: Props) {
             start: fr.cx("fr-m-0"),
             end: fr.cx("fr-p-0", "fr-m-0"),
           }}
-        ></Card>
+        />
         <Button
           className={fr.cx("fr-mt-2w")}
           linkProps={{

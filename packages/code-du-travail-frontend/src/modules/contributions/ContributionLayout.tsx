@@ -144,7 +144,7 @@ export function ContributionLayout({ contribution }: Props) {
         />
       )}
       <div className={fr.cx("fr-col-12", "fr-col-md-8", "fr-my-6w")}>
-        <Feedback></Feedback>
+        <Feedback />
       </div>
     </div>
   );

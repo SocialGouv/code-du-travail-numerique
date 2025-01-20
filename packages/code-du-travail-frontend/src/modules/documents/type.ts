@@ -13,6 +13,7 @@ export const sources = [
   SOURCES.CONTRIBUTIONS,
   SOURCES.EXTERNALS,
   SOURCES.LABOUR_LAW,
+  SOURCES.SHEET_MT_PAGE,
 ] as const;
 
 export type Source = (typeof sources)[number];

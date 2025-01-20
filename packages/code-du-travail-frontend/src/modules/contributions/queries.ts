@@ -1,3 +1,4 @@
+import * as Sentry from "@sentry/nextjs";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { DocumentElasticResult, fetchDocument, isSource } from "../documents";
@@ -51,16 +52,22 @@ const formatContribution = (
     relatedItems: [
       {
         title: "Articles liés",
-        items: contribution.linkedContent.map((linked) => {
+        items: contribution.linkedContent.reduce((arr, linked) => {
           if (!isSource(linked.source)) {
-            throw new Error("la source est incorrecte");
+            Sentry.captureMessage(
+              `la source de ${JSON.stringify(linked)} est incorrecte`
+            );
+            return arr;
           }
-          return {
-            title: linked.title,
-            url: linked.slug,
-            source: linked.source,
-          };
-        }),
+          return [
+            ...arr,
+            {
+              title: linked.title,
+              url: linked.slug,
+              source: linked.source,
+            },
+          ];
+        }, []),
       },
     ],
   };
