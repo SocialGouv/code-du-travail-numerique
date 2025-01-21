@@ -1,4 +1,9 @@
-import { byText, byLabelText, byRole } from "testing-library-selector";
+import {
+  byLabelText,
+  byRole,
+  byTestId,
+  byText,
+} from "testing-library-selector";
 
 export const ui = {
   enterpriseAgreementSearch: {
@@ -12,6 +17,7 @@ export const ui = {
         name: "Particuliers employeurs et emploi à domicile",
       }),
     },
+    resultTitle: byTestId("result-title"),
     resultLines: {
       carrefour: {
         title: byText("CARREFOUR PROXIMITE FRANCE (SHOPI-8 A HUIT)"),
