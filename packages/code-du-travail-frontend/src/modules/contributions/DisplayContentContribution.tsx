@@ -199,17 +199,19 @@ const getHeadingElement = (titleLevel: numberLevel, domNode) => {
 
 const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
   let accordionTitleLevel = titleLevel;
+  let headingTitleLevel = titleLevel;
 
   return {
     replace(domNode) {
       if (domNode instanceof Element) {
         if (domNode.name === "span" && domNode.attribs.class === "title") {
           accordionTitleLevel = titleLevel + 1;
+          headingTitleLevel = titleLevel + 1;
           return getHeadingElement(titleLevel, domNode);
         }
         if (domNode.name === "span" && domNode.attribs.class === "sub-title") {
           accordionTitleLevel = titleLevel + 1;
-          return getHeadingElement((titleLevel + 1) as numberLevel, domNode);
+          return getHeadingElement(headingTitleLevel, domNode);
         }
         if (domNode.name === "details") {
           const items: any[] = [];
