@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import React from "react";
 import { wait } from "@testing-library/user-event/dist/utils";
 import { searchEnterprises } from "../../enterprise/queries";
@@ -137,7 +137,7 @@ describe("<PageContribution />", () => {
       value: "",
     });
   });
-  it("should track when searching by enterprise name", async () => {
+  it("should track when searching by enterprise with multiple agreements", async () => {
     render(<AgreementSearchForm />);
     (searchEnterprises as jest.Mock).mockImplementation(() =>
       Promise.resolve([enterpriseMoreCC])
@@ -163,7 +163,7 @@ describe("<PageContribution />", () => {
     expect(sendEvent).toHaveBeenCalledWith({
       action: "Trouver sa convention collective",
       category: "cc_select_p2",
-      name: "idcc2216",
+      name: "idcc2120",
       value: "",
     });
     expect(sendEvent).toHaveBeenCalledWith({
@@ -176,13 +176,25 @@ describe("<PageContribution />", () => {
       value: "",
     });
     expect(
-      ui.enterpriseAgreementSearch.errorNotFound.notDeclared.query()
+      ui.enterpriseAgreementSearch.errorNotFound.notTreated.query()
     ).not.toBeInTheDocument();
     userAction.click(
       ui.enterpriseAgreementSearch.resultLines.bnp.ccList.idcc9999.get()
     );
     expect(
-      ui.enterpriseAgreementSearch.errorNotFound.notDeclared.query()
+      ui.enterpriseAgreementSearch.errorNotFound.notTreated.query()
     ).toBeInTheDocument();
+  });
+
+  it("should track when selecting agreement 3239", async () => {
+    render(<AgreementSearchForm />);
+    userAction = new UserAction();
+    userAction.click(ui.radio.enterpriseSearchOption.get());
+    userAction.click(ui.enterpriseAgreementSearch.childminder.link.get());
+    expect(sendEvent).toHaveBeenCalledWith({
+      action: "select_je_n_ai_pas_d_entreprise",
+      category: "cc_search_type_of_users",
+      name: "Trouver sa convention collective",
+    });
   });
 });

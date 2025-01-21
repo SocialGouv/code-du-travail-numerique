@@ -60,24 +60,3 @@ export const ContributionContent = ({ contribution, titleLevel }: Props) => {
     </section>
   );
 };
-
-// const { breakpoints, fonts, spacings } = theme;
-
-// const Meta = css({
-//   display: "flex",
-//   marginBottom: spacings.medium,
-//   fontSize: fonts.sizes.small,
-//   @media (max-width: ${breakpoints.mobile}) {
-//     flex-direction: column;
-//   }
-// });
-
-// const HideOnMobile = styled.span`
-//   @media (max-width: ${breakpoints.mobile}) {
-//     display: none;
-//   }
-// `;
-
-// const SectionNoPadding = styled(Section)`
-//   padding-top: 0;
-// `;

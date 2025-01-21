@@ -42,7 +42,9 @@ export function useLocalStorageForAgreement(
   return [value, updateValue];
 }
 
-export const saveAgreementToLocalStorage = (agreement?: Agreement | null) => {
+export const saveAgreementToLocalStorage = (
+  agreement?: EnterpriseAgreement | null
+) => {
   try {
     if (window?.localStorage) {
       if (agreement) {
@@ -59,7 +61,9 @@ export const saveAgreementToLocalStorage = (agreement?: Agreement | null) => {
   }
 };
 
-export const getAgreementFromLocalStorage = (): Agreement | undefined => {
+export const getAgreementFromLocalStorage = ():
+  | EnterpriseAgreement
+  | undefined => {
   try {
     if (window?.localStorage) {
       const data = window.localStorage.getItem(STORAGE_KEY_AGREEMENT);

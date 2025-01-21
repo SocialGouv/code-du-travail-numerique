@@ -1,60 +1,38 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import { Button } from "@codegouvfr/react-dsfr/Button";
+import React, { useState } from "react";
 import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
 import { sources } from "../documents";
-import { RelatedItems } from "../common/RelatedItems";
-import { Share } from "../common/Share";
 import { Feedback } from "../layout/feedback";
-import Image from "next/image";
-import AgreementSearch from "../convention-collective/AgreementSearch.svg";
-
-import { AgreementSearchForm } from "../convention-collective/AgreementSearch/AgreementSearchForm";
 import { EnterpriseAgreement } from "../enterprise";
-import Card from "@codegouvfr/react-dsfr/Card";
-import { removeCCNumberFromSlug } from "../common/utils";
-import {
-  ElasticSearchContributionConventionnelle,
-  ElasticSearchContributionGeneric,
-} from "@socialgouv/cdtn-types";
-import { ContributionElasticDocument } from "./type";
-import { ContributionContent } from "./ContributionContent";
+import { ElasticSearchContributionConventionnelle } from "@socialgouv/cdtn-types";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
-import Html from "../common/Html";
-import Link from "next/link";
-import Accordion from "@codegouvfr/react-dsfr/Accordion";
-import { ListWithArrow } from "../common/ListWithArrow";
 import { useContributionTracking } from "./tracking";
+import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
+import { isAgreementValid, isCCSupported } from "./contributionUtils";
+import { ContributionGenericContent } from "./ContributionGenericContent";
+import { ContributionAgreementSelect } from "./ContributionAgreemeentSelect";
+import { ContributionAgreementContent } from "./ContributionAgreementContent";
+import { Contribution } from "./type";
 
 type Props = {
-  contribution: ContributionElasticDocument;
+  contribution: Contribution;
+};
+
+export type RelatedItem = {
+  title: string;
+  items: {
+    title: string;
+    url: string;
+    source: (typeof sources)[number];
+  }[];
 };
 
 export function ContributionLayout({ contribution }: Props) {
   const getTitle = () => `/contribution/${slug}`;
-  const { date, title, slug, idcc, metaDescription } = contribution;
-  const isGeneric = idcc === "0000";
-  const isNoCDT = contribution?.type === "generic-no-cdt";
-  const relatedItems = [
-    {
-      title: "Articles liés",
-      items: contribution.linkedContent.map((linked) => ({
-        title: linked.title,
-        url: linked.slug,
-        source: linked.source as (typeof sources)[number],
-      })),
-    },
-  ];
+  const { date, title, slug, isGeneric, isNoCDT, relatedItems } = contribution;
 
-  const [displayContent, setDisplayContent] = useState(false);
-  const [displaySlug, setDisplaySlug] = useState(`/contribution/${slug}`);
-  const titleRef = useRef<HTMLDivElement>(null);
-  const scrollToTitle = () => {
-    setTimeout(() => {
-      titleRef?.current?.scrollIntoView({ behavior: "smooth" });
-    }, 100);
-  };
+  const [displayGeneric, setDisplayGeneric] = useState(false);
   const [selectedAgreement, setSelectedAgreement] =
     useState<EnterpriseAgreement>();
   const {
@@ -66,49 +44,6 @@ export function ContributionLayout({ contribution }: Props) {
     emitClickP2,
     emitClickP3,
   } = useContributionTracking();
-  useEffect(() => {
-    setDisplaySlug(
-      selectedAgreement && isAgreementValid(selectedAgreement)
-        ? `/contribution/${selectedAgreement.num}-${slug}`
-        : ""
-    );
-  }, [selectedAgreement]);
-  const isCCSupported = (agreement: EnterpriseAgreement) => {
-    const { ccSupported } = contribution as ElasticSearchContributionGeneric;
-    return ccSupported.includes(agreement.id);
-  };
-  const isCCUnextended = (agreement: EnterpriseAgreement) => {
-    const { ccUnextended } = contribution as ElasticSearchContributionGeneric;
-    return ccUnextended.includes(agreement?.id);
-  };
-  const isAgreementValid = (agreement?: EnterpriseAgreement) => {
-    if (!agreement) return false;
-    const isSupported = isCCSupported(agreement);
-    const isUnextended = isCCUnextended(agreement);
-    return !isUnextended && isSupported;
-  };
-  const selectedAgreementAlert = (agreement: EnterpriseAgreement) => {
-    const isSupported = isCCSupported(agreement);
-    const isUnextended = isCCUnextended(agreement);
-    if (isUnextended)
-      return (
-        <>
-          Les dispositions de cette convention n’ont pas été étendues. Cela
-          signifie qu&apos;elles ne s&apos;appliquent qu&apos;aux entreprises
-          adhérentes à l&apos;une des organisations signataires de
-          l&apos;accord. Dans ce contexte, nous ne sommes pas en mesure
-          d&apos;identifier si cette règle s&apos;applique ou non au sein de
-          votre entreprise. Vous pouvez toutefois consulter la convention
-          collective{" "}
-          <a target="_blank" href={agreement.url}>
-            ici
-          </a>{" "}
-          dans le cas où elle s&apos;applique à votre situation.
-        </>
-      );
-    if (!isSupported)
-      return <>Vous pouvez consulter les informations générales ci-dessous.</>;
-  };
   return (
     <div>
       <Breadcrumb
@@ -126,10 +61,7 @@ export function ContributionLayout({ contribution }: Props) {
         {!isGeneric && " "}
         {!isGeneric && (
           <span className={`fr-mt-4w ${h1Agreement}`}>
-            {
-              (contribution as ElasticSearchContributionConventionnelle)
-                .ccnShortTitle
-            }
+            {contribution.ccnShortTitle}
           </span>
         )}
       </h1>
@@ -137,246 +69,82 @@ export function ContributionLayout({ contribution }: Props) {
       {isGeneric ? (
         <>
           <p className={fr.cx("fr-mt-6w")}>Mis à jour le&nbsp;: {date}</p>
-          <div className={`${fr.cx("fr-p-3w", "fr-mt-6w")} ${block}`}>
-            <div className={"fr-grid-row"}>
-              <Image
-                priority
-                src={AgreementSearch}
-                alt="Personnalisez la réponse avec votre convention collective"
-                className={fr.cx("fr-unhidden-md", "fr-hidden")}
-              />
-              <span className={fr.cx("fr-h3", "fr-mt-1w", "fr-mb-1w")}>
-                Personnalisez la réponse avec votre convention collective
-              </span>
-            </div>
-            <div>
-              <AgreementSearchForm
-                onAgreementSelect={(agreement, mode) => {
-                  setSelectedAgreement(agreement);
-                  if (!agreement) return;
-                  switch (mode) {
-                    case "p1":
-                      emitClickP1(getTitle());
-                      break;
-                    case "p2":
-                      emitClickP2(getTitle());
-                      break;
-                  }
-                  if (isCCSupported(agreement)) {
-                    emitAgreementTreatedEvent(agreement?.id);
-                  } else {
-                    emitAgreementUntreatedEvent(agreement?.id);
-                  }
-                }}
-                selectedAgreementAlert={selectedAgreementAlert}
-              />
-              <Button
-                className={fr.cx("fr-mt-2w")}
-                linkProps={{
-                  href: displaySlug,
-                  onClick: (ev) => {
-                    if (
-                      !isAgreementValid(selectedAgreement) ||
-                      !selectedAgreement
-                    ) {
-                      ev.preventDefault();
-                      setDisplayContent(true);
-                    }
-                    if (displaySlug) emitDisplayAgreementContent(getTitle());
-                    else emitDisplayGeneralContent(getTitle());
-                    if (isGeneric) scrollToTitle();
-                  },
-                }}
-              >
-                Afficher les informations
-              </Button>
-            </div>
-          </div>
+          <ContributionGenericAgreementSearch
+            contribution={contribution}
+            onAgreementSelect={(agreement, mode) => {
+              setSelectedAgreement(agreement);
+              if (!agreement) return;
+              switch (mode) {
+                case "p1":
+                  emitClickP1(getTitle());
+                  break;
+                case "p2":
+                  emitClickP2(getTitle());
+                  break;
+              }
+              if (isCCSupported(contribution, agreement)) {
+                emitAgreementTreatedEvent(agreement?.id);
+              } else {
+                emitAgreementUntreatedEvent(agreement?.id);
+              }
+            }}
+            onDisplayClick={(ev) => {
+              setDisplayGeneric(!displayGeneric);
+              if (
+                !isAgreementValid(contribution, selectedAgreement) ||
+                !selectedAgreement
+              ) {
+                ev.preventDefault();
+                setDisplayGeneric(true);
+                emitDisplayGeneralContent(getTitle());
+              } else {
+                emitDisplayAgreementContent(getTitle());
+              }
+            }}
+          />
         </>
       ) : (
         <>
           <p className={fr.cx("fr-mt-2v")}>Mis à jour le&nbsp;: {date}</p>
-          <div className={`${fr.cx("fr-p-3w", "fr-mt-6w")} ${block}`}>
-            <div className={"fr-grid-row"}>
-              <span className={fr.cx("fr-h3", "fr-mt-1w", "fr-mb-1w")}>
-                Votre convention collective
-              </span>
-            </div>
-            <Card
-              title={`${(contribution as ElasticSearchContributionConventionnelle).ccnShortTitle} (IDCC ${contribution.idcc})`}
-              size="small"
-              titleAs="h2"
-              className={fr.cx("fr-mt-2w")}
-              classes={{
-                content: fr.cx("fr-p-2w"),
-                title: cardTitle,
-                start: fr.cx("fr-m-0"),
-                end: fr.cx("fr-p-0", "fr-m-0"),
-              }}
-            ></Card>
-            <Button
-              className={fr.cx("fr-mt-2w")}
-              linkProps={{
-                href: `/contribution/${removeCCNumberFromSlug(slug)}`,
-              }}
-              priority="secondary"
-              iconId="fr-icon-arrow-go-back-line"
-              iconPosition="right"
-            >
-              Modifier
-            </Button>
-          </div>
+          <ContributionAgreementSelect contribution={contribution} />
         </>
       )}
-      {isGeneric && !isNoCDT && !selectedAgreement && (
-        <Button
-          className={fr.cx(
-            !displayContent ? "fr-unhidden" : "fr-hidden",
-            "fr-mt-2w",
-            "fr-mb-6w"
-          )}
-          priority="tertiary no outline"
-          onClick={() => {
-            setDisplayContent(true);
-            if (isGeneric) scrollToTitle();
-            emitClickP3(getTitle());
-          }}
-        >
-          Afficher les informations sans sélectionner une convention collective
-        </Button>
-      )}
-      {((isGeneric && !isNoCDT) ||
-        (selectedAgreement && !isAgreementValid(selectedAgreement))) && (
-        <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
-          <div
-            className={fr.cx(
-              "fr-col-12",
-              "fr-col-md-8",
-              "fr-mb-md-0",
-              "fr-mt-6w",
-              displayContent ? "fr-unhidden" : "fr-hidden"
-            )}
-          >
-            <div id="cdt">
-              <p className={fr.cx("fr-h5")} ref={titleRef}>
-                Que dit le code du travail&nbsp;?
-              </p>
-              {selectedAgreement && !isCCSupported(selectedAgreement) && (
+      {isGeneric &&
+        !isNoCDT &&
+        (!selectedAgreement ||
+          !isAgreementValid(contribution, selectedAgreement)) && (
+          <ContributionGenericContent
+            contribution={contribution}
+            onDisplayClick={() => {
+              emitClickP3(getTitle());
+            }}
+            relatedItems={relatedItems}
+            displayGeneric={displayGeneric}
+            alertText={
+              selectedAgreement &&
+              !isCCSupported(contribution, selectedAgreement) && (
                 <p>
                   <strong>
                     Cette réponse correspond à ce que prévoit le code du
                     travail, elle ne tient pas compte des spécificités de la
-                    convention collective {selectedAgreement.shortTitle}
+                    convention collective Industrie du pétrole convention
+                    collective {selectedAgreement.shortTitle}
                   </strong>
                 </p>
-              )}
-              <ContributionContent
-                contribution={contribution as ElasticSearchContributionGeneric}
-                titleLevel={2}
-              />
-              {contribution.references.length && (
-                <Accordion label="Références">
-                  <ListWithArrow
-                    items={contribution.references.map(({ title, url }) => {
-                      return (
-                        <Link key={title} href={url}>
-                          {title}
-                        </Link>
-                      );
-                    })}
-                  />
-                </Accordion>
-              )}
-              {contribution.messageBlock && (
-                <div
-                  className={fr.cx("fr-alert", "fr-alert--info", "fr-mt-6w")}
-                >
-                  <>
-                    <div className={fr.cx("fr-h5")}>Attention</div>
-                    <Html>{contribution.messageBlock}</Html>
-                  </>
-                </div>
-              )}
-            </div>
-          </div>
-          <div
-            className={fr.cx(
-              "fr-col-12",
-              "fr-col-md-4",
-              "fr-mt-6w",
-              displayContent ? "fr-unhidden" : "fr-hidden"
-            )}
-          >
-            <div>
-              <RelatedItems relatedItems={relatedItems} />
-              <Share title={title} metaDescription={metaDescription} />
-            </div>
-          </div>
-        </div>
-      )}
+              )
+            }
+          />
+        )}
       {!isGeneric && (
-        <div
-          className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-my-6w")}
-        >
-          <div
-            className={fr.cx(
-              "fr-col-12",
-              "fr-col-md-8",
-              "fr-mb-6w",
-              "fr-mb-md-0"
-            )}
-          >
-            <ContributionContent
-              contribution={
-                contribution as ElasticSearchContributionConventionnelle
-              }
-              titleLevel={3}
-            />
-            {contribution.references.length && (
-              <Accordion label="Références">
-                <ListWithArrow
-                  items={contribution.references.map(({ title, url }) => {
-                    return (
-                      <Link key={title} href={url}>
-                        {title}
-                      </Link>
-                    );
-                  })}
-                />
-              </Accordion>
-            )}
-            <p className={fr.cx("fr-my-2w")}>
-              Consultez les questions-réponses fréquentes pour la convention
-              collective{" "}
-              <a
-                href={`/convention-collective/${
-                  (contribution as ElasticSearchContributionConventionnelle)
-                    .ccnSlug
-                }`}
-              >
-                {
-                  (contribution as ElasticSearchContributionConventionnelle)
-                    .ccnShortTitle
-                }
-              </a>
-            </p>
-            {contribution.messageBlock && (
-              <div className={fr.cx("fr-alert", "fr-alert--info", "fr-my-6w")}>
-                <>
-                  <div className={fr.cx("fr-h5")}>Attention</div>
-                  <Html>{contribution.messageBlock}</Html>
-                </>
-              </div>
-            )}
-          </div>
-          <div className={fr.cx("fr-col-12", "fr-col-md-4")}>
-            <RelatedItems relatedItems={relatedItems} />
-            <Share title={title} metaDescription={metaDescription} />
-          </div>
-        </div>
+        <ContributionAgreementContent
+          contribution={
+            contribution as ElasticSearchContributionConventionnelle
+          }
+          relatedItems={relatedItems}
+        />
       )}
       <div className={fr.cx("fr-col-12", "fr-col-md-8", "fr-my-6w")}>
-        <Feedback></Feedback>
+        <Feedback />
       </div>
     </div>
   );
@@ -386,12 +154,4 @@ const h1Agreement = css({
   display: "block",
   fontSize: "1rem",
   fontWeight: "normal",
-});
-
-const cardTitle = css({
-  fontWeight: "normal!",
-});
-
-const block = css({
-  background: "var(--background-alt-blue-cumulus) !important",
 });

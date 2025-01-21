@@ -24,9 +24,18 @@ export const EnterpriseAgreementSelectionLink = ({
   const searchParams = useSearchParams();
   const { emitSelectEnterpriseAgreementEvent } =
     useEnterpriseAgreementSearchTracking();
+  const agreementPlurial = enterprise.conventions.length > 1 ? "s" : "";
   return (
     <>
       <EnterpriseAgreementSelectionDetail enterprise={enterprise} />
+      {enterprise.conventions.length > 0 && (
+        <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
+          {enterprise.conventions.length} convention
+          {agreementPlurial} collective
+          {agreementPlurial} trouvée
+          {agreementPlurial} :
+        </p>
+      )}
       {getEnterpriseAgreements(enterprise.conventions).map(
         ({ disabled, description, ...agreement }) => {
           return (

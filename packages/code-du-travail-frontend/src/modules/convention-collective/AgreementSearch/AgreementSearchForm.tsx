@@ -7,6 +7,7 @@ import {
   EnterpriseAgreement,
   EnterpriseAgreementSearchInput,
 } from "../../enterprise";
+import { useLocalStorageForAgreement } from "../../common/useLocalStorage";
 
 type Props = {
   onAgreementSelect?: (agreement?: EnterpriseAgreement, mode?: string) => void;
@@ -19,6 +20,7 @@ export const AgreementSearchForm = ({
   onAgreementSelect,
   selectedAgreementAlert,
 }: Props) => {
+  const [storageAgreement, setStorageAgreement] = useLocalStorageForAgreement();
   const [mode, setMode] = useState<
     "agreementSearch" | "enterpriseSearch" | "noSearch" | undefined
   >("agreementSearch");
@@ -46,7 +48,10 @@ export const AgreementSearchForm = ({
               "Je cherche mon entreprise pour trouver ma convention collective.",
             nativeInputProps: {
               checked: mode === "enterpriseSearch",
-              onChange: () => setMode("enterpriseSearch"),
+              onChange: () => {
+                if (onAgreementSelect) onAgreementSelect();
+                setMode("enterpriseSearch");
+              },
             },
           },
         ]}
@@ -55,8 +60,10 @@ export const AgreementSearchForm = ({
         <AgreementSearchInput
           onAgreementSelect={(agreement) => {
             if (onAgreementSelect) onAgreementSelect(agreement, "p1");
+            setStorageAgreement(agreement);
           }}
           selectedAgreementAlert={selectedAgreementAlert}
+          defaultAgreement={storageAgreement}
         />
       )}
       {mode === "enterpriseSearch" && (

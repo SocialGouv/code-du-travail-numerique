@@ -45,6 +45,9 @@ export const ui = {
       notDeclared: byText(
         /Aucune convention collective n'a été déclarée pour l'entreprise/
       ),
+      notTreated: byText(
+        "Nous n'avons pas de réponse pour cette convention collective"
+      ),
     },
   },
   enterpriseAgreementSelection: {

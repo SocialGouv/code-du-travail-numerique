@@ -19,10 +19,10 @@ export async function generateMetadata({ params }) {
 }
 
 async function Contribution({ params }) {
-  const { _id, ...source } = await getContribution(params.slug);
+  const contribution = await getContribution(params.slug);
   return (
     <DsfrLayout>
-      <ContributionLayout contribution={source} />
+      <ContributionLayout contribution={contribution} />
     </DsfrLayout>
   );
 }

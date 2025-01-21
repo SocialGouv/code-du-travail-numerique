@@ -64,7 +64,21 @@ export const EnterpriseAgreementSelectionForm = ({
           },
         }))}
       />
-      {((agreement && !agreement.contributions) || !agreements.length) && (
+      {agreement && !agreement.contributions && (
+        <Alert
+          severity="info"
+          title={
+            <>
+              <span tabIndex={-1} ref={resultRef}>
+                Nous n&apos;avons pas de réponse pour cette convention
+                collective
+              </span>
+            </>
+          }
+          description="Vous pouvez tout de même poursuivre pour obtenir les informations générales prévues par le code du travail."
+        />
+      )}
+      {!agreements.length && (
         <Alert
           severity="info"
           title={
