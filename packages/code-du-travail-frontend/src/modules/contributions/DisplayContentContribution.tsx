@@ -13,6 +13,7 @@ import { v4 as generateUUID } from "uuid";
 import { fr } from "@codegouvfr/react-dsfr";
 import { FicheServicePublic } from "../fiche-service-public/builder";
 
+const DEFAULT_HEADING_LEVEL = 3;
 export type numberLevel = 2 | 3 | 4 | 5 | 6;
 
 export const ContentSP = ({ raw, titleLevel }) => {
@@ -62,7 +63,9 @@ const mapToAccordion = (titleLevel: numberLevel, items) => {
         data-testid="contrib-accordion"
         items={items.map((item) => ({
           ...item,
-          ...(titleLevel === 3 ? { id: undefined } : { id: generateUUID() }),
+          ...(titleLevel === DEFAULT_HEADING_LEVEL
+            ? { id: undefined }
+            : { id: generateUUID() }),
         }))}
         titleAs={`h${titleLevel}`}
       />
