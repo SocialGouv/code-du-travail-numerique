@@ -81,7 +81,7 @@ export function ContributionGenericContent({
               titleLevel={2}
             />
             {contribution.references.length && (
-              <Accordion label="Références">
+              <Accordion label="Références" className={fr.cx("fr-mt-6w")}>
                 <ListWithArrow
                   items={contribution.references.map(({ title, url }) => {
                     return (

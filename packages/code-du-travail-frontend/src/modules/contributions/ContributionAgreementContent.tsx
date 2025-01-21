@@ -37,7 +37,7 @@ export function ContributionAgreementContent({
         >
           <ContributionContent contribution={contribution} titleLevel={3} />
           {contribution.references.length > 0 && (
-            <Accordion label="Références">
+            <Accordion label="Références" className={fr.cx("fr-mt-6w")}>
               <ListWithArrow
                 items={contribution.references.map(({ title, url }) => {
                   if (!url) return <></>;
