@@ -20,7 +20,6 @@ const detectIfPostalCode = (postalCodeOrName: string): boolean => {
 };
 
 export const LocationSearchInput = ({
-  className,
   onLocationChange,
   classes,
   defaultValue,
@@ -34,7 +33,6 @@ export const LocationSearchInput = ({
 
   return (
     <Autocomplete<ApiGeoResult>
-      className={className}
       onChange={(value) => {
         if (onLocationChange) onLocationChange(value);
       }}
