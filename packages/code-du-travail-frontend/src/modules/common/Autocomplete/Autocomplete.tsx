@@ -185,7 +185,7 @@ export const Autocomplete = <K,>({
   );
 };
 
-const autocompleteListContainer = css({
+export const autocompleteListContainer = css({
   position: "absolute",
   w: "calc(100% - 1rem)",
   zIndex: 100,
@@ -193,7 +193,7 @@ const autocompleteListContainer = css({
   listStyleType: "none!",
 });
 
-const suggestion = css({
+export const suggestion = css({
   cursor: "pointer",
   color: "var(--text-action-high-blue-france)",
 });

@@ -1,5 +1,5 @@
 import { HomeSearch } from "../Components";
-import { render, waitFor } from "@testing-library/react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 import React from "react";
 import { byTestId } from "testing-library-selector";
 import { fetchSuggestResults } from "../../layout/header/fetchSuggestResults";
@@ -52,6 +52,7 @@ describe("<HomeSearch />", () => {
     expect(getByText("congés payés et maladie")).toBeInTheDocument();
 
     userAction.click(congesSansSolde);
+    fireEvent.submit(byTestId("search-input").get());
     expect(onSearchSubmitHasBeenCalled).toBeTruthy();
     expect(emitSuggestionEventMock).toHaveBeenCalledWith(
       "congés",

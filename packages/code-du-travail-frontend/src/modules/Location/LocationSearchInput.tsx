@@ -1,9 +1,6 @@
 "use client";
 import { ApiGeoResult, searchCities } from "./searchCities";
-import {
-  Autocomplete,
-  AutocompleteProps,
-} from "../common/Autocomplete/Autocomplete";
+import { Autocomplete, AutocompleteProps } from "../common/Autocomplete";
 import { useState } from "react";
 
 type Props = Pick<AutocompleteProps<ApiGeoResult>, "classes"> & {
