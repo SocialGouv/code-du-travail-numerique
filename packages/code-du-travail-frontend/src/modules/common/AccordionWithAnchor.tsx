@@ -40,8 +40,7 @@ export const AccordionWithAnchor = ({
         return {
           ...item,
           id: idDefaulted,
-          expended:
-            hash.toLocaleLowerCase() === idDefaulted.toLocaleLowerCase(),
+          expended: hash === idDefaulted,
         };
       });
 
