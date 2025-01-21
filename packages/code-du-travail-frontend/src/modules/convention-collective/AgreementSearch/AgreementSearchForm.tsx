@@ -10,6 +10,7 @@ import {
 import { useLocalStorageForAgreement } from "../../common/useLocalStorage";
 
 type Props = {
+  description?: string;
   onAgreementSelect?: (agreement?: EnterpriseAgreement, mode?: string) => void;
   selectedAgreementAlert?: (
     agreement?: EnterpriseAgreement
@@ -17,6 +18,7 @@ type Props = {
 };
 
 export const AgreementSearchForm = ({
+  description,
   onAgreementSelect,
   selectedAgreementAlert,
 }: Props) => {
@@ -27,11 +29,7 @@ export const AgreementSearchForm = ({
 
   return (
     <>
-      <p className={`${fr.cx("fr-mt-2w")}`}>
-        La réponse dépend de la convention collective à laquelle votre
-        entreprise est rattachée. Veuillez renseigner votre situation afin
-        d’obtenir une réponse adaptée.
-      </p>
+      {description && <p className={`${fr.cx("fr-mt-2w")}`}>{description}</p>}
       <RadioButtons
         legend="Quel est le nom de la convention collective applicable ?"
         options={[

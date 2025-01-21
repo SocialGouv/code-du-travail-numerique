@@ -9,5 +9,8 @@ export const ui = {
     nonTreatedInfo: byText(
       /Cette réponse correspond à ce que prévoit le code du travail/
     ),
+    noCdtDescription: byText(
+      "La convention collective est nécessaire pour obtenir une réponse car le code du travail ne prévoit rien sur ce sujet."
+    ),
   },
 };

@@ -26,7 +26,7 @@ export function ContributionGenericAgreementSearch({
   onAgreementSelect,
   onDisplayClick,
 }: Props) {
-  const { slug } = contribution;
+  const { slug, isNoCDT } = contribution;
 
   const [selectedAgreement, setSelectedAgreement] =
     useState<EnterpriseAgreement>();
@@ -93,6 +93,11 @@ export function ContributionGenericAgreementSearch({
               );
             }}
             selectedAgreementAlert={selectedAgreementAlert}
+            description={
+              isNoCDT
+                ? "La convention collective est nécessaire pour obtenir une réponse car le code du travail ne prévoit rien sur ce sujet."
+                : "La réponse dépend de la convention collective à laquelle votre entreprise est rattachée. Veuillez renseigner votre situation afin d’obtenir une réponse adaptée."
+            }
           />
           {(!contribution.isNoCDT || selectedAgreement) && (
             <Button

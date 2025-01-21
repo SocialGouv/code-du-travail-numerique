@@ -194,6 +194,7 @@ describe("<ContributionLayout />", () => {
       );
     });
     it("should display correctly when no agreement is selected", () => {
+      expect(ui.generic.noCdtDescription.query()).toBeInTheDocument();
       expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
       expect(ccUi.buttonDisplayInfo.query()).not.toBeInTheDocument();
     });

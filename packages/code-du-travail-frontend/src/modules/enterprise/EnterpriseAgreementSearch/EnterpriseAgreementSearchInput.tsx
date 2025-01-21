@@ -221,6 +221,7 @@ export const EnterpriseAgreementSearchInput = ({
             siren: selectedEnterprise.siren,
           });
           if (onAgreementSelect) onAgreementSelect(agreement);
+          setAgreementLocalStorage(agreement);
           setSelectedAgreement(agreement);
         }}
       />
