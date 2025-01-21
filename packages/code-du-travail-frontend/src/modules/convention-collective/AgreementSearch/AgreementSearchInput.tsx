@@ -52,9 +52,9 @@ export const AgreementSearchInput = ({ onSearch }: Props) => {
   };
   return (
     <>
-      <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
+      <h2 className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
         Précisez et sélectionnez votre convention collective
-      </p>
+      </h2>
       <div className={fr.cx("fr-mt-2w")}>
         <Autocomplete<Agreement>
           dataTestId="AgreementSearchAutocomplete"
@@ -103,6 +103,7 @@ export const AgreementSearchInput = ({ onSearch }: Props) => {
         {searchState === "notFoundSearch" && (
           <Alert
             className={fr.cx("fr-mt-2w")}
+            as="h2"
             title="Vous ne trouvez pas votre convention collective&nbsp;?"
             description={
               <>

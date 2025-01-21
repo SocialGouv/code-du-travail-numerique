@@ -35,12 +35,7 @@ export const Themes = (props: Props) => {
         <li
           className={`${fr.cx("fr-col-4", "fr-hidden", "fr-unhidden-lg")} ${li}`}
         >
-          <Image
-            src={IllustrationTheme}
-            alt="Illustration graphique sur les thèmes"
-            width="384"
-            height="233"
-          />
+          <Image src={IllustrationTheme} alt="" width="384" height="233" />
         </li>
         {props.items.map((item, index) => (
           <li
