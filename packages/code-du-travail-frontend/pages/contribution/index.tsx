@@ -91,10 +91,10 @@ export default Page;
 export async function getStaticProps() {
   try {
     const data = await getGenericContributionsGroupByThemes();
-    return { props: { contribs: data }, revalidate: REVALIDATE_TIME };
+    return { props: { contribs: data }, revalidate: 10 };
   } catch (error) {
     console.error(error);
-    return { props: { contribs: {} }, revalidate: REVALIDATE_TIME };
+    return { props: { contribs: {} }, revalidate: 10 };
   }
 }
 
