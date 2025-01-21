@@ -159,10 +159,10 @@ export const Autocomplete = <K,>({
                         index,
                         key: `${displayLabel(item)}${index}`,
                       })}
-                      className={`${fr.cx("fr-p-2v")} ${suggestion} ${highlightedIndex === index ? isHighlighted : ""}`}
+                      className={`${fr.cx("fr-p-3v")} ${suggestion} ${highlightedIndex === index ? isHighlighted : ""}`}
                     >
                       {lineAsLink ? (
-                        <Link href={lineAsLink(item)}>
+                        <Link href={lineAsLink(item)} className={link}>
                           {displayLabel(item)}
                         </Link>
                       ) : (
@@ -174,7 +174,7 @@ export const Autocomplete = <K,>({
               : displayNoResult &&
                 !selectedResult && (
                   <>
-                    <li className={`${fr.cx("fr-p-2v")} }`}>
+                    <li className={`${fr.cx("fr-p-3v")} }`}>
                       <>Aucun résultat</>
                     </li>
                   </>
@@ -187,8 +187,8 @@ export const Autocomplete = <K,>({
 
 export const autocompleteListContainer = css({
   position: "absolute",
-  w: "calc(100% - 1rem)",
-  zIndex: 100,
+  w: "100%",
+  zIndex: 10,
   bg: "var(--background-default-grey)",
   listStyleType: "none!",
 });
@@ -221,4 +221,8 @@ export const isHighlighted = css({
     _hover: "var(--background-default-grey-hover)",
   },
   fontWeight: { base: "bold", _hover: "normal" },
+});
+
+const link = css({
+  backgroundImage: "none!",
 });

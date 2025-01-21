@@ -74,6 +74,7 @@ exports[`<Home /> should match snapshot 1`] = `
                       >
                         <input
                           class="fr-input"
+                          data-testid="search-input"
                           id="input-:r1:"
                           type="search"
                           value=""
@@ -90,7 +91,7 @@ exports[`<Home /> should match snapshot 1`] = `
                     </div>
                     <ul
                       aria-labelledby="downshift-:r0:-label"
-                      class="fr-p-0 fr-m-0 pos_absolute w_calc(100%_-_1rem) z_100 bg_var(--background-default-grey) li-t_none!"
+                      class="fr-p-0 fr-m-0 pos_absolute w_100% z_10 bg_var(--background-default-grey) li-t_none!"
                       id="downshift-:r0:-menu"
                       role="listbox"
                     />
