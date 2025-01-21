@@ -42,7 +42,7 @@ export const Search = () => {
             <Image
               priority={false}
               src={IllustrationHomePrincipal}
-              alt="Illustration graphique du site montrant des personnes travaillant"
+              alt=""
               width="577"
               height="393"
             />
