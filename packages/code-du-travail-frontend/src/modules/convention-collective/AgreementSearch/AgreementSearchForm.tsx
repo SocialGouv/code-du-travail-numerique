@@ -68,6 +68,7 @@ export const AgreementSearchForm = ({
         <EnterpriseAgreementSearchInput
           onAgreementSelect={(agreement) => {
             if (onAgreementSelect) onAgreementSelect(agreement, "p2");
+            setStorageAgreement(agreement);
           }}
           selectedAgreementAlert={selectedAgreementAlert}
         />

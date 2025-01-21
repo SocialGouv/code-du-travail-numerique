@@ -16,7 +16,6 @@ import { Enterprise, EnterpriseAgreement } from "../types";
 import { ApiGeoResult } from "../../Location/searchCities";
 import { CardTitleStyle } from "../../convention-collective/style";
 import { EnterpriseAgreementSelectionForm } from "./EnterpriseAgreementSelectionForm";
-import { useLocalStorageForAgreementOnPageLoad } from "../../common/useLocalStorage";
 import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelectionDetail";
 import { getEnterpriseAgreements } from "./utils";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
@@ -41,7 +40,6 @@ export const EnterpriseAgreementSearchInput = ({
   const [selectedAgreement, setSelectedAgreement] = useState<
     EnterpriseAgreement | undefined
   >();
-  const [_, setAgreementLocalStorage] = useLocalStorageForAgreementOnPageLoad();
   const [searchState, setSearchState] = useState<
     "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch" | "required"
   >("noSearch");
@@ -143,7 +141,6 @@ export const EnterpriseAgreementSearchInput = ({
         selectedEnterprise.conventions
       );
       setSelectedAgreement(enterpriseAgreement);
-      setAgreementLocalStorage(enterpriseAgreement);
     }
   }, [selectedEnterprise]);
   if (
@@ -221,7 +218,6 @@ export const EnterpriseAgreementSearchInput = ({
             siren: selectedEnterprise.siren,
           });
           if (onAgreementSelect) onAgreementSelect(agreement);
-          setAgreementLocalStorage(agreement);
           setSelectedAgreement(agreement);
         }}
       />
