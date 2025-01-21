@@ -35,7 +35,6 @@ export const Autocomplete = <K,>({
   state,
   stateRelatedMessage,
   hintText,
-  classes,
   dataTestId,
   displayNoResult,
   defaultValue,
@@ -143,7 +142,6 @@ export const Autocomplete = <K,>({
           label={label}
           state={state}
           stateRelatedMessage={stateRelatedMessage}
-          classes={classes}
         />
         <ul
           {...getMenuProps()}
