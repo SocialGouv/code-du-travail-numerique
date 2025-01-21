@@ -52,10 +52,10 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                       class="fr-accordion__title"
                     >
                       <button
-                        aria-controls="7876723f-6292-44e9-b8ed-9661330f7fbe-collapse"
+                        aria-controls="b95d9272-7473-4694-b02a-7f46f641cd8d-collapse"
                         aria-expanded="false"
                         class="fr-accordion__btn"
-                        id="7876723f-6292-44e9-b8ed-9661330f7fbe__toggle-btn"
+                        id="b95d9272-7473-4694-b02a-7f46f641cd8d__toggle-btn"
                         type="button"
                       >
                         Congés payés
@@ -63,7 +63,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                     </h4>
                     <div
                       class="fr-collapse"
-                      id="7876723f-6292-44e9-b8ed-9661330f7fbe-collapse"
+                      id="b95d9272-7473-4694-b02a-7f46f641cd8d-collapse"
                     >
                       <div>
                         <div
@@ -80,10 +80,10 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                                 class="fr-accordion__title"
                               >
                                 <button
-                                  aria-controls="2f5df028-93ad-4784-8bcb-22c124a436f7-collapse"
+                                  aria-controls="c5a9a538-7207-4675-99ff-0805b22fe1e6-collapse"
                                   aria-expanded="false"
                                   class="fr-accordion__btn"
-                                  id="2f5df028-93ad-4784-8bcb-22c124a436f7__toggle-btn"
+                                  id="c5a9a538-7207-4675-99ff-0805b22fe1e6__toggle-btn"
                                   type="button"
                                 >
                                   
@@ -93,7 +93,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                               </h5>
                               <div
                                 class="fr-collapse"
-                                id="2f5df028-93ad-4784-8bcb-22c124a436f7-collapse"
+                                id="c5a9a538-7207-4675-99ff-0805b22fe1e6-collapse"
                               >
                                 <div>
                                   <p>
@@ -114,10 +114,10 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                                 class="fr-accordion__title"
                               >
                                 <button
-                                  aria-controls="4f15454b-7f9c-4544-8dc8-d43293566400-collapse"
+                                  aria-controls="24022d69-ef1f-49b1-94c7-e91dae4e8ad1-collapse"
                                   aria-expanded="false"
                                   class="fr-accordion__btn"
-                                  id="4f15454b-7f9c-4544-8dc8-d43293566400__toggle-btn"
+                                  id="24022d69-ef1f-49b1-94c7-e91dae4e8ad1__toggle-btn"
                                   type="button"
                                 >
                                   
@@ -127,7 +127,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                               </h5>
                               <div
                                 class="fr-collapse"
-                                id="4f15454b-7f9c-4544-8dc8-d43293566400-collapse"
+                                id="24022d69-ef1f-49b1-94c7-e91dae4e8ad1-collapse"
                               >
                                 <div>
                                   <p>
@@ -149,10 +149,10 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                                 class="fr-accordion__title"
                               >
                                 <button
-                                  aria-controls="1ac6400a-0af0-43d2-b6d0-4444b9ab3fe3-collapse"
+                                  aria-controls="817700f8-ba7c-4643-a6dc-5cfcb1d0feb1-collapse"
                                   aria-expanded="false"
                                   class="fr-accordion__btn"
-                                  id="1ac6400a-0af0-43d2-b6d0-4444b9ab3fe3__toggle-btn"
+                                  id="817700f8-ba7c-4643-a6dc-5cfcb1d0feb1__toggle-btn"
                                   type="button"
                                 >
                                   Licenciement notifié pendant les congés payés
@@ -160,7 +160,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                               </h5>
                               <div
                                 class="fr-collapse"
-                                id="1ac6400a-0af0-43d2-b6d0-4444b9ab3fe3-collapse"
+                                id="817700f8-ba7c-4643-a6dc-5cfcb1d0feb1-collapse"
                               >
                                 <div>
                                   <p>
@@ -273,10 +273,10 @@ exports[`DisplayContentContribution Accordions should replace details element wi
                     class="fr-accordion__title"
                   >
                     <button
-                      aria-controls="5f36aa9e-8943-4b30-bbdb-67fc45a23595-collapse"
+                      aria-controls="44ee4e1a-3945-4fee-b603-cae2e71de684-collapse"
                       aria-expanded="false"
                       class="fr-accordion__btn"
-                      id="5f36aa9e-8943-4b30-bbdb-67fc45a23595__toggle-btn"
+                      id="44ee4e1a-3945-4fee-b603-cae2e71de684__toggle-btn"
                       type="button"
                     >
                       Ceci est un sous titre
@@ -284,7 +284,7 @@ exports[`DisplayContentContribution Accordions should replace details element wi
                   </h4>
                   <div
                     class="fr-collapse"
-                    id="5f36aa9e-8943-4b30-bbdb-67fc45a23595-collapse"
+                    id="44ee4e1a-3945-4fee-b603-cae2e71de684-collapse"
                   >
                     <div>
                       <p>

@@ -43,10 +43,18 @@ export const useContributionTracking = () => {
     });
   };
 
+  const emitDisplayGenericContent = (path: string) => {
+    sendEvent({
+      category: TrackingContributionCategory.CONTRIBUTION,
+      action: TrackingAgreementSearchAction.CLICK_DISPLAY_GENERIC_CONTENT,
+      name: path,
+    });
+  };
+
   const emitDisplayGeneralContent = (path: string) => {
     sendEvent({
       category: TrackingContributionCategory.CONTRIBUTION,
-      action: TrackingAgreementSearchAction.CLICK_DISPLAY_AGREEMENT_CONTENT,
+      action: TrackingAgreementSearchAction.CLICK_DISPLAY_GENERAL_CONTENT,
       name: path,
     });
   };
@@ -80,6 +88,7 @@ export const useContributionTracking = () => {
     emitAgreementUntreatedEvent,
     emitDisplayAgreementContent,
     emitDisplayGeneralContent,
+    emitDisplayGenericContent,
     emitClickP1,
     emitClickP2,
     emitClickP3,

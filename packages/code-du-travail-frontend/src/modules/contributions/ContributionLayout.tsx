@@ -40,6 +40,7 @@ export function ContributionLayout({ contribution }: Props) {
     emitAgreementUntreatedEvent,
     emitDisplayAgreementContent,
     emitDisplayGeneralContent,
+    emitDisplayGenericContent,
     emitClickP1,
     emitClickP2,
     emitClickP3,
@@ -96,7 +97,11 @@ export function ContributionLayout({ contribution }: Props) {
               ) {
                 ev.preventDefault();
                 setDisplayGeneric(true);
-                emitDisplayGeneralContent(getTitle());
+                if (selectedAgreement) {
+                  emitDisplayGenericContent(getTitle());
+                } else {
+                  emitDisplayGeneralContent(getTitle());
+                }
               } else {
                 emitDisplayAgreementContent(getTitle());
               }
