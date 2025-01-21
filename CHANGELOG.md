@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.171.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.170.1...v4.171.0) (2025-01-21)
+
+
+### Bug Fixes
+
+* **accordéons avec des ancres:** les accordéons s'ouvrent bien quand on a une ancre dans l'url ([#6418](https://github.com/SocialGouv/code-du-travail-numerique/issues/6418)) ([9f266a9](https://github.com/SocialGouv/code-du-travail-numerique/commit/9f266a9232ec0b58382dae7bcc1da66a95cc5515))
+* **e2e:** les données de la fiche MT ont été modifié ([#6412](https://github.com/SocialGouv/code-du-travail-numerique/issues/6412)) ([e590799](https://github.com/SocialGouv/code-du-travail-numerique/commit/e59079950681052cd4d96051803cb417af3e412e))
+* **footer:** ajout du role sur le tag footer ([#6400](https://github.com/SocialGouv/code-du-travail-numerique/issues/6400)) ([a5c11ed](https://github.com/SocialGouv/code-du-travail-numerique/commit/a5c11ed7d3201d3c7aebba16274d11591c92e616))
+* **home:** prise en compte des retours RGAA pour les liens sur les tuiles sans textes ([#6417](https://github.com/SocialGouv/code-du-travail-numerique/issues/6417)) ([94b6180](https://github.com/SocialGouv/code-du-travail-numerique/commit/94b6180298b634eeebf3419613792bd09aa534bd))
+* **liens:** prise en compte des retours RGAA pour les liens qui s'ouvrent dans une nouvelle fenêtre ([#6416](https://github.com/SocialGouv/code-du-travail-numerique/issues/6416)) ([4a887a4](https://github.com/SocialGouv/code-du-travail-numerique/commit/4a887a4fc7e139ed907d43bdaaed95b817128adc))
+* mauvaise canonical sur la page Votre convention collective ([#6419](https://github.com/SocialGouv/code-du-travail-numerique/issues/6419)) ([f74f24a](https://github.com/SocialGouv/code-du-travail-numerique/commit/f74f24addab042d4e7afa8491fa98e01b8e4b7c5))
+* **outils trouver sa CC:** prise en compte des retours RGAA ([#6413](https://github.com/SocialGouv/code-du-travail-numerique/issues/6413)) ([8fb2849](https://github.com/SocialGouv/code-du-travail-numerique/commit/8fb284984484b68b35a3e45aa8fa2dc64b40994b))
+* **page convention collective:** prise en compte des retours RGAA ([#6415](https://github.com/SocialGouv/code-du-travail-numerique/issues/6415)) ([d896a95](https://github.com/SocialGouv/code-du-travail-numerique/commit/d896a95afe5b2e0507a6785d95ec0775bceaf0e1))
+* rgaa review 1 ([#6383](https://github.com/SocialGouv/code-du-travail-numerique/issues/6383)) ([6226cb9](https://github.com/SocialGouv/code-du-travail-numerique/commit/6226cb9903bfcf0395d2c26b0030e80de5ea9a61))
+* **satisfaction:** renomer les evenements envoyés tel qu'ils étaient avant ([#6426](https://github.com/SocialGouv/code-du-travail-numerique/issues/6426)) ([968a5aa](https://github.com/SocialGouv/code-du-travail-numerique/commit/968a5aae2c2317f2e95180d1f0754a7d0c48f0af))
+* **Trouver sa CC:** mettre le focus sur les résultats quand on fait une recherche par entreprises ([#6425](https://github.com/SocialGouv/code-du-travail-numerique/issues/6425)) ([58b67a2](https://github.com/SocialGouv/code-du-travail-numerique/commit/58b67a2cfb26775e651c415dc9cd71445ba0f40b))
+
+
+### Features
+
+* rgga pas de alt sur image home ([#6382](https://github.com/SocialGouv/code-du-travail-numerique/issues/6382)) ([f1a9185](https://github.com/SocialGouv/code-du-travail-numerique/commit/f1a91853f726d2ce757d4b7dd165099d43e82951))
+
+
+
+
+
 ## [4.170.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.170.0...v4.170.1) (2025-01-09)
 
 **Note:** Version bump only for package @socialgouv/code-du-travail
