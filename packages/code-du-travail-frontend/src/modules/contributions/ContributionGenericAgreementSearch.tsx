@@ -86,20 +86,21 @@ export function ContributionGenericAgreementSearch({
           <AgreementSearchForm
             onAgreementSelect={(agreement, mode) => {
               onAgreementSelect(agreement, mode);
-              setSelectedAgreement(agreement);
+              setSelectedAgreement(
+                isAgreementValid(contribution, agreement)
+                  ? agreement
+                  : undefined
+              );
             }}
             selectedAgreementAlert={selectedAgreementAlert}
           />
-          {(!contribution.isNoCDT ||
-            isAgreementValid(contribution, selectedAgreement)) && (
+          {(!contribution.isNoCDT || selectedAgreement) && (
             <Button
               className={fr.cx("fr-mt-2w")}
               linkProps={{
-                href:
-                  selectedAgreement &&
-                  isAgreementValid(contribution, selectedAgreement)
-                    ? `/contribution/${selectedAgreement.num}-${slug}`
-                    : "",
+                href: selectedAgreement
+                  ? `/contribution/${selectedAgreement.num}-${slug}`
+                  : "",
                 onClick: onDisplayClick,
               }}
             >
