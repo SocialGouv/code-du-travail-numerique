@@ -1,10 +1,14 @@
 describe("Page d’accueil", () => {
   it("Affiche les éléments requis", () => {
     cy.visit("/");
-
-    cy.findByRole("heading", { level: 1 })
-      .should("have.text", "Bienvenue sur le Code du travail numérique")
-      .click();
+    cy.titleAndMetaDescriptionEqual(
+      "Code du travail numérique",
+      "Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités)."
+    );
+    cy.findByRole("heading", { level: 1 }).should(
+      "have.text",
+      "Bienvenue sur le Code du travail numérique"
+    );
 
     cy.findAllByRole("heading", {
       level: 2,
@@ -69,7 +73,6 @@ describe("Page d’accueil", () => {
       .should("have.text", "Bienvenue sur le Code du travail numérique")
       .click();
 
-    // @ts-ignore
     cy.selectByLabel("Recherchez par mots-clés").type("congés");
 
     cy.get('ul[role="listbox"]').should("be.visible");

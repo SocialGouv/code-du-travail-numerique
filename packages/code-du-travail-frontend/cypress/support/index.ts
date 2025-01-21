@@ -26,15 +26,22 @@ import "cypress-real-events";
 declare global {
   namespace Cypress {
     interface Chainable {
-      /**
-       * Custom command to select DOM element by data-cy attribute.
-       * @example cy.checkCanonical("/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd")
-       */
-      checkCanonical(value: string): Chainable<Element>;
-      checkNoIndex(noIndex: boolean): Chainable<Element>;
+      urlEqual(path: string): Chainable<Element>;
 
-      selectByLabel: Chainable<Element>;
-      findByLabel: Chainable<Element>;
+      canonicalUrlEqual(path: string): Chainable<Element>;
+
+      checkNoIndex(): Chainable<Element>;
+
+      isIndexable(): Chainable<Element>;
+
+      titleAndMetaDescriptionEqual(
+        title: string,
+        description: string
+      ): Chainable<Element>;
+
+      selectByLabel(label: string): Chainable<Element>;
+
+      findByLabel(label: string): Chainable<Element>;
     }
   }
 }

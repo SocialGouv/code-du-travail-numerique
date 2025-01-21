@@ -7,7 +7,7 @@ describe("Contributions", () => {
     cy.get("#fr-header-main-navigation")
       .contains("Vos fiches pratiques")
       .click();
-    cy.url().should("include", "/contribution");
+    cy.urlEqual("/contribution");
     cy.get("h1").should("have.text", "Vos fiches pratiques");
     cy.get("body").should(
       "contain",
@@ -19,10 +19,7 @@ describe("Contributions", () => {
       .should("contain", "Embauche et contrat de travail");
     cy.get("#content li").should("have.length", 42);
     cy.get("#content li").first().click();
-    cy.url().should(
-      "include",
-      "/contribution/la-periode-dessai-peut-elle-etre-renouvelee"
-    );
+    cy.urlEqual("/contribution/la-periode-dessai-peut-elle-etre-renouvelee");
   });
   it("je vois une page contribution", () => {
     cy.visit("/contribution/la-periode-dessai-peut-elle-etre-renouvelee");

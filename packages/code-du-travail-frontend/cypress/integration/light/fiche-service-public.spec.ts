@@ -1,6 +1,10 @@
 describe("Fiche Service public", () => {
   it("je vois une page fiche service public", () => {
     cy.visit("/fiche-service-public/salaire-primes-et-avantages");
+    cy.title().should(
+      "eq",
+      "Salaire, primes et avantages - Code du travail numérique"
+    );
     cy.findAllByRole("heading", { level: 1 }).should(
       "have.text",
       "Salaire, primes et avantages"

@@ -4,7 +4,6 @@ describe("Contributions", () => {
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Bienvenue sur le Code du travail numérique")
       .click();
-    // @ts-ignore
     cy.selectByLabel("Recherchez par mots-clés").type("durée maximale CDD");
     cy.get("button[aria-label='Lancer la recherche']")
       .contains("Rechercher")
@@ -12,8 +11,7 @@ describe("Contributions", () => {
     cy.get("#content li").should("have.length", 7);
     cy.contains("Quelle peut être la durée maximale d'un CDD").click();
 
-    cy.url().should(
-      "include",
+    cy.urlEqual(
       "/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd?q=dur%C3%A9e%20maximale%20CDD"
     );
   });
