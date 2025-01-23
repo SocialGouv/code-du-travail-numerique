@@ -75,7 +75,7 @@ describe("Indemnité licenciement - CC 3239 - changement de convention collectiv
 
     userAction.click(ui.next.get());
     expect(
-      screen.queryByText("Vous devez renseigner tous les champs")
+      screen.queryByText("Vous devez renseigner à minima une absence")
     ).toBeInTheDocument();
 
     userAction.setInput(ui.seniority.absences.duration(0).get(), "6");
