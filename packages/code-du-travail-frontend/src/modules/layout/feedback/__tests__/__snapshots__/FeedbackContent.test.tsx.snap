@@ -28,7 +28,7 @@ exports[`<FeedbackContent /> should match snapshot for negative 1`] = `
           id="fr-fieldset-checkbox-:r2:-0"
           name="unclear"
           type="checkbox"
-          value="unclear"
+          value="Les informations ne sont pas claires."
         />
         <label
           class="fr-label"
@@ -44,7 +44,7 @@ exports[`<FeedbackContent /> should match snapshot for negative 1`] = `
           id="fr-fieldset-checkbox-:r2:-1"
           name="unrelated"
           type="checkbox"
-          value="unrelated"
+          value="Cette page ne correspond pas à ma recherche ou à ma situation."
         />
         <label
           class="fr-label"
@@ -60,7 +60,7 @@ exports[`<FeedbackContent /> should match snapshot for negative 1`] = `
           id="fr-fieldset-checkbox-:r2:-2"
           name="unsatisfied"
           type="checkbox"
-          value="unsatisfied"
+          value="Je ne suis pas satisfait de cette réglementation."
         />
         <label
           class="fr-label"
@@ -76,7 +76,7 @@ exports[`<FeedbackContent /> should match snapshot for negative 1`] = `
           id="fr-fieldset-checkbox-:r2:-3"
           name="wrong"
           type="checkbox"
-          value="wrong"
+          value="Les informations me semblent fausses."
         />
         <label
           class="fr-label"
