@@ -49,6 +49,7 @@ const formatContribution = (
     ...contribution,
     isGeneric: contribution.idcc === "0000",
     isNoCDT: contribution?.type === "generic-no-cdt",
+    isFicheSP: "raw" in contribution,
     relatedItems: [
       {
         title: "Articles liés",

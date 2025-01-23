@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
+import { getLabelBySource } from "@socialgouv/cdtn-utils";
 import { sources } from "../documents";
 import { Feedback } from "../layout/feedback";
 import { EnterpriseAgreement } from "../enterprise";
@@ -14,6 +15,7 @@ import { ContributionGenericContent } from "./ContributionGenericContent";
 import { ContributionAgreementSelect } from "./ContributionAgreemeentSelect";
 import { ContributionAgreementContent } from "./ContributionAgreementContent";
 import { Contribution } from "./type";
+import { A11yLink } from "../../common/A11yLink";
 
 type Props = {
   contribution: Contribution;
@@ -30,7 +32,8 @@ export type RelatedItem = {
 
 export function ContributionLayout({ contribution }: Props) {
   const getTitle = () => `/contribution/${slug}`;
-  const { date, title, slug, isGeneric, isNoCDT, relatedItems } = contribution;
+  const { date, title, slug, isGeneric, isNoCDT, isFicheSP, relatedItems } =
+    contribution;
 
   const [displayGeneric, setDisplayGeneric] = useState(false);
   const [selectedAgreement, setSelectedAgreement] =
@@ -45,6 +48,30 @@ export function ContributionLayout({ contribution }: Props) {
     emitClickP2,
     emitClickP3,
   } = useContributionTracking();
+  const updateDetail = isFicheSP ? (
+    <p className={fr.cx("fr-mt-6w")}>
+      {contribution.url && (
+        <span>
+          Source&nbsp;:{" "}
+          <A11yLink
+            href={contribution.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {`Fiche: ${getLabelBySource("fiches_service_public")}`}
+          </A11yLink>
+        </span>
+      )}
+      {contribution.url && contribution.date && (
+        <span aria-hidden="true">&nbsp;-&nbsp;</span>
+      )}
+      {contribution.date && (
+        <span>Mis à jour le&nbsp;: {contribution.date}</span>
+      )}
+    </p>
+  ) : (
+    <p className={fr.cx("fr-mt-6w")}>Mis à jour le&nbsp;: {date}</p>
+  );
   return (
     <div>
       <Breadcrumb
@@ -69,7 +96,7 @@ export function ContributionLayout({ contribution }: Props) {
 
       {isGeneric ? (
         <>
-          <p className={fr.cx("fr-mt-6w")}>Mis à jour le&nbsp;: {date}</p>
+          {updateDetail}
           <ContributionGenericAgreementSearch
             contribution={contribution}
             onAgreementSelect={(agreement, mode) => {
@@ -110,7 +137,7 @@ export function ContributionLayout({ contribution }: Props) {
         </>
       ) : (
         <>
-          <p className={fr.cx("fr-mt-2v")}>Mis à jour le&nbsp;: {date}</p>
+          {updateDetail}
           <ContributionAgreementSelect contribution={contribution} />
         </>
       )}

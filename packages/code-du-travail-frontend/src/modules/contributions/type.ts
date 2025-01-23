@@ -47,5 +47,6 @@ export type ContributionRelatedItems = {
 export type Contribution = ContributionElasticDocument & {
   isGeneric: boolean;
   isNoCDT: boolean;
+  isFicheSP: boolean;
   relatedItems: ContributionRelatedItems[];
 };
