@@ -159,4 +159,5 @@ const h1Agreement = css({
   display: "block",
   fontSize: "1rem",
   fontWeight: "normal",
+  lineHeight: "normal",
 });

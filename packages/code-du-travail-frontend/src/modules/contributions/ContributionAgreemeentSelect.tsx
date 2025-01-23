@@ -17,12 +17,10 @@ export function ContributionAgreementSelect({ contribution }: Props) {
 
   return (
     <>
-      <div className={`${fr.cx("fr-p-3w", "fr-mt-6w")} ${block}`}>
-        <div className={"fr-grid-row"}>
-          <p className={fr.cx("fr-h3", "fr-mt-1w")}>
-            Votre convention collective
-          </p>
-        </div>
+      <div className={`${fr.cx("fr-p-2w", "fr-p-md-3w", "fr-mt-6w")} ${block}`}>
+        <p className={fr.cx("fr-h3", "fr-mt-1w")}>
+          Votre convention collective
+        </p>
         <Card
           title={`${contribution.ccnShortTitle} (IDCC ${contribution.idcc})`}
           size="small"
