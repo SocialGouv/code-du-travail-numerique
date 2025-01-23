@@ -19,17 +19,27 @@ type Props = {
   onAgreementSelect: (agreement?: EnterpriseAgreement, mode?: string) => void;
   onDisplayClick: (ev: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   contribution: Contribution;
+  defaultAgreement?: EnterpriseAgreement;
 };
 
 export function ContributionGenericAgreementSearch({
   contribution,
   onAgreementSelect,
   onDisplayClick,
+  defaultAgreement,
 }: Props) {
   const { slug, isNoCDT } = contribution;
 
   const [selectedAgreement, setSelectedAgreement] =
     useState<EnterpriseAgreement>();
+  const [isValid, setIsValid] = useState(
+    defaultAgreement ? isAgreementValid(contribution, defaultAgreement) : false
+  );
+  useEffect(() => {
+    setIsValid(
+      isAgreementValid(contribution, selectedAgreement ?? defaultAgreement)
+    );
+  }, [selectedAgreement, defaultAgreement]);
   const selectedAgreementAlert = (agreement: EnterpriseAgreement) => {
     const isSupported = isCCSupported(contribution, agreement);
     const isUnextended = isCCUnextended(contribution, agreement);
@@ -98,13 +108,14 @@ export function ContributionGenericAgreementSearch({
                 ? "La convention collective est nécessaire pour obtenir une réponse car le code du travail ne prévoit rien sur ce sujet."
                 : "La réponse dépend de la convention collective à laquelle votre entreprise est rattachée. Veuillez renseigner votre situation afin d’obtenir une réponse adaptée."
             }
+            defaultAgreement={defaultAgreement}
           />
-          {(!contribution.isNoCDT || selectedAgreement) && (
+          {((contribution.isNoCDT && isValid) || !contribution.isNoCDT) && (
             <Button
               className={fr.cx("fr-mt-2w")}
               linkProps={{
-                href: selectedAgreement
-                  ? `/contribution/${selectedAgreement.num}-${slug}`
+                href: isValid
+                  ? `/contribution/${(selectedAgreement ?? defaultAgreement)?.num}-${slug}`
                   : "",
                 onClick: onDisplayClick,
               }}

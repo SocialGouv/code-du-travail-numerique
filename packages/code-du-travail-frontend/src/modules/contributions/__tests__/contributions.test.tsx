@@ -89,6 +89,7 @@ describe("<ContributionLayout />", () => {
       rendering = render(<ContributionLayout contribution={contribution} />);
     });
     it("should display correctly when no agreement is selected", async () => {
+      fireEvent.click(ccUi.radio.agreementSearchOption.get());
       expect(ccUi.buttonDisplayInfo.query()).toBeInTheDocument();
       expect(ui.generic.linkDisplayInfo.query()).toBeInTheDocument();
       expect(ui.generic.title.query()).toBeInTheDocument();
@@ -113,6 +114,7 @@ describe("<ContributionLayout />", () => {
           },
         ])
       );
+      fireEvent.click(ccUi.radio.agreementSearchOption.get());
       expect(ui.generic.linkDisplayInfo.query()).toBeInTheDocument();
       fireEvent.change(ccUi.searchByName.input.get(), {
         target: { value: "16" },
@@ -125,7 +127,7 @@ describe("<ContributionLayout />", () => {
         "/contribution/16-slug"
       );
       expect(ccUi.warning.nonTreatedAgreement.query()).not.toBeInTheDocument();
-      expect(sendEvent).toHaveBeenLastCalledWith({
+      expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_traitée",
         category: "outil",
         name: "0016",
@@ -133,13 +135,13 @@ describe("<ContributionLayout />", () => {
     });
 
     it("should display correctly when a selecting agreement 3239", async () => {
-      fireEvent.click(entrepriseUi.radio.enterpriseSearchOption.get());
+      fireEvent.click(ccUi.radio.enterpriseSearchOption.get());
       fireEvent.click(ccUi.searchByEnterprise.noEnterprise.get());
       expect(ccUi.buttonDisplayInfo.query()).toHaveAttribute(
         "href",
         "/contribution/3239-slug"
       );
-      expect(sendEvent).toHaveBeenLastCalledWith({
+      expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_traitée",
         category: "outil",
         name: "3239",
@@ -163,6 +165,7 @@ describe("<ContributionLayout />", () => {
           },
         ])
       );
+      fireEvent.click(ccUi.radio.agreementSearchOption.get());
       fireEvent.change(ccUi.searchByName.input.get(), {
         target: { value: "1388" },
       });
@@ -174,7 +177,7 @@ describe("<ContributionLayout />", () => {
       expect(ccUi.buttonDisplayInfo.query()).toHaveAttribute("href", "");
       expect(ccUi.warning.title.query()).toBeInTheDocument();
       expect(ccUi.warning.nonTreatedAgreement.query()).toBeInTheDocument();
-      expect(sendEvent).toHaveBeenLastCalledWith({
+      expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_non_traitée",
         category: "outil",
         name: "1388",
@@ -194,6 +197,7 @@ describe("<ContributionLayout />", () => {
       );
     });
     it("should display correctly when no agreement is selected", () => {
+      fireEvent.click(ccUi.radio.agreementSearchOption.get());
       expect(ui.generic.noCdtDescription.query()).toBeInTheDocument();
       expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
       expect(ccUi.buttonDisplayInfo.query()).not.toBeInTheDocument();
@@ -214,6 +218,7 @@ describe("<ContributionLayout />", () => {
           },
         ])
       );
+      fireEvent.click(ccUi.radio.agreementSearchOption.get());
       expect(ccUi.buttonDisplayInfo.query()).not.toBeInTheDocument();
       fireEvent.change(ccUi.searchByName.input.get(), {
         target: { value: "16" },
@@ -225,7 +230,7 @@ describe("<ContributionLayout />", () => {
         "/contribution/16-slug"
       );
       expect(ccUi.warning.nonTreatedAgreement.query()).not.toBeInTheDocument();
-      expect(sendEvent).toHaveBeenLastCalledWith({
+      expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_traitée",
         category: "outil",
         name: "0016",
@@ -249,6 +254,7 @@ describe("<ContributionLayout />", () => {
           },
         ])
       );
+      fireEvent.click(ccUi.radio.agreementSearchOption.get());
       fireEvent.change(ccUi.searchByName.input.get(), {
         target: { value: "1388" },
       });
@@ -263,7 +269,7 @@ describe("<ContributionLayout />", () => {
       expect(
         rendering.getByText(new RegExp(contribution.messageBlockGenericNoCDT))
       ).toBeInTheDocument();
-      expect(sendEvent).toHaveBeenLastCalledWith({
+      expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_non_traitée",
         category: "outil",
         name: "1388",
@@ -288,6 +294,7 @@ describe("<ContributionLayout />", () => {
           },
         ])
       );
+      fireEvent.click(ccUi.radio.agreementSearchOption.get());
       fireEvent.change(ccUi.searchByName.input.get(), {
         target: { value: "29" },
       });

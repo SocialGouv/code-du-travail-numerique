@@ -26,9 +26,6 @@ export const AgreementSearchInput = ({
   defaultAgreement,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState(defaultAgreement);
-  useEffect(() => {
-    if (onAgreementSelect) onAgreementSelect(selectedAgreement);
-  }, [selectedAgreement]);
   const [searchState, setSearchState] = useState<
     "noSearch" | "lowSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
   >("noSearch");
@@ -86,6 +83,7 @@ export const AgreementSearchInput = ({
           stateRelatedMessage={getStateMessage()}
           onChange={(agreement) => {
             setSelectedAgreement(agreement);
+            if (onAgreementSelect) onAgreementSelect(agreement);
             if (agreement) {
               emitSelectEvent(`idcc${agreement.id}`);
             }

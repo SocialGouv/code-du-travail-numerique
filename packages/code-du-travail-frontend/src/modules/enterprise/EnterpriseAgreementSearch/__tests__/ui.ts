@@ -6,14 +6,6 @@ import {
 } from "testing-library-selector";
 
 export const ui = {
-  radio: {
-    agreementSearchOption: byLabelText(
-      /Je sais quelle est ma convention collective et je la saisis\./
-    ),
-    enterpriseSearchOption: byLabelText(
-      /Je cherche mon entreprise pour trouver ma convention collective\./
-    ),
-  },
   enterpriseAgreementSearch: {
     input: byLabelText(/Nom de votre entreprise ou numéro Siren\/Siret/),
     inputLocation: byLabelText("Code postal ou Ville (optionnel)"),

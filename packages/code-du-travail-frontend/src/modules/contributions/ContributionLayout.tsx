@@ -16,6 +16,7 @@ import { ContributionAgreementSelect } from "./ContributionAgreemeentSelect";
 import { ContributionAgreementContent } from "./ContributionAgreementContent";
 import { Contribution } from "./type";
 import { A11yLink } from "../../common/A11yLink";
+import { useLocalStorageForAgreement } from "../common/useLocalStorage";
 
 type Props = {
   contribution: Contribution;
@@ -37,7 +38,7 @@ export function ContributionLayout({ contribution }: Props) {
 
   const [displayGeneric, setDisplayGeneric] = useState(false);
   const [selectedAgreement, setSelectedAgreement] =
-    useState<EnterpriseAgreement>();
+    useLocalStorageForAgreement();
   const {
     emitAgreementTreatedEvent,
     emitAgreementUntreatedEvent,
@@ -101,6 +102,7 @@ export function ContributionLayout({ contribution }: Props) {
             contribution={contribution}
             onAgreementSelect={(agreement, mode) => {
               setSelectedAgreement(agreement);
+              setDisplayGeneric(false);
               if (!agreement) return;
               switch (mode) {
                 case "p1":
@@ -133,6 +135,7 @@ export function ContributionLayout({ contribution }: Props) {
                 emitDisplayAgreementContent(getTitle());
               }
             }}
+            defaultAgreement={selectedAgreement}
           />
         </>
       ) : (

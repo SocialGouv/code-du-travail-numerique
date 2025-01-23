@@ -6,6 +6,14 @@ import {
 } from "testing-library-selector";
 
 export const ui = {
+  radio: {
+    agreementSearchOption: byLabelText(
+      /Je sais quelle est ma convention collective et je la saisis\./
+    ),
+    enterpriseSearchOption: byLabelText(
+      /Je cherche mon entreprise pour trouver ma convention collective\./
+    ),
+  },
   buttonDisplayInfo: byText("Afficher les informations"),
   warning: {
     title: byText(

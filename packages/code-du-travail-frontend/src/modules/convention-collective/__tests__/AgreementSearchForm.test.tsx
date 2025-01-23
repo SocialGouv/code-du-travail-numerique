@@ -3,7 +3,8 @@ import React from "react";
 import { wait } from "@testing-library/user-event/dist/utils";
 import { searchEnterprises } from "../../enterprise/queries";
 import { sendEvent } from "../../utils";
-import { ui } from "../../enterprise/EnterpriseAgreementSearch/__tests__/ui";
+import { ui } from "./ui";
+import { ui as enterpriseUi } from "../../enterprise/EnterpriseAgreementSearch/__tests__/ui";
 import { UserAction } from "src/common";
 import { AgreementSearchForm } from "../AgreementSearch/AgreementSearchForm";
 
@@ -106,8 +107,11 @@ describe("<PageContribution />", () => {
     );
     userAction = new UserAction();
     userAction.click(ui.radio.enterpriseSearchOption.get());
-    userAction.setInput(ui.enterpriseAgreementSearch.input.get(), "carrefour");
-    userAction.click(ui.enterpriseAgreementSearch.submitButton.get());
+    userAction.setInput(
+      enterpriseUi.enterpriseAgreementSearch.input.get(),
+      "carrefour"
+    );
+    userAction.click(enterpriseUi.enterpriseAgreementSearch.submitButton.get());
     await wait();
     expect(sendEvent).toHaveBeenCalledWith({
       action: "Trouver sa convention collective",
@@ -116,10 +120,10 @@ describe("<PageContribution />", () => {
       value: "",
     });
     expect(
-      ui.enterpriseAgreementSearch.resultLines.carrefour.title.query()
+      enterpriseUi.enterpriseAgreementSearch.resultLines.carrefour.title.query()
     ).toBeInTheDocument();
     userAction.click(
-      ui.enterpriseAgreementSearch.resultLines.carrefour.link.get()
+      enterpriseUi.enterpriseAgreementSearch.resultLines.carrefour.link.get()
     );
     expect(sendEvent).toHaveBeenCalledWith({
       action: "Trouver sa convention collective",
@@ -144,8 +148,11 @@ describe("<PageContribution />", () => {
     );
     userAction = new UserAction();
     userAction.click(ui.radio.enterpriseSearchOption.get());
-    userAction.setInput(ui.enterpriseAgreementSearch.input.get(), "bnp");
-    userAction.click(ui.enterpriseAgreementSearch.submitButton.get());
+    userAction.setInput(
+      enterpriseUi.enterpriseAgreementSearch.input.get(),
+      "bnp"
+    );
+    userAction.click(enterpriseUi.enterpriseAgreementSearch.submitButton.get());
     await wait();
     expect(sendEvent).toHaveBeenCalledWith({
       action: "Trouver sa convention collective",
@@ -154,11 +161,13 @@ describe("<PageContribution />", () => {
       value: "",
     });
     expect(
-      ui.enterpriseAgreementSearch.resultLines.bnp.title.query()
+      enterpriseUi.enterpriseAgreementSearch.resultLines.bnp.title.query()
     ).toBeInTheDocument();
-    userAction.click(ui.enterpriseAgreementSearch.resultLines.bnp.link.get());
     userAction.click(
-      ui.enterpriseAgreementSearch.resultLines.bnp.ccList.idcc2120.get()
+      enterpriseUi.enterpriseAgreementSearch.resultLines.bnp.link.get()
+    );
+    userAction.click(
+      enterpriseUi.enterpriseAgreementSearch.resultLines.bnp.ccList.idcc2120.get()
     );
     expect(sendEvent).toHaveBeenCalledWith({
       action: "Trouver sa convention collective",
@@ -176,13 +185,13 @@ describe("<PageContribution />", () => {
       value: "",
     });
     expect(
-      ui.enterpriseAgreementSearch.errorNotFound.notTreated.query()
+      enterpriseUi.enterpriseAgreementSearch.errorNotFound.notTreated.query()
     ).not.toBeInTheDocument();
     userAction.click(
-      ui.enterpriseAgreementSearch.resultLines.bnp.ccList.idcc9999.get()
+      enterpriseUi.enterpriseAgreementSearch.resultLines.bnp.ccList.idcc9999.get()
     );
     expect(
-      ui.enterpriseAgreementSearch.errorNotFound.notTreated.query()
+      enterpriseUi.enterpriseAgreementSearch.errorNotFound.notTreated.query()
     ).toBeInTheDocument();
   });
 
@@ -190,7 +199,9 @@ describe("<PageContribution />", () => {
     render(<AgreementSearchForm />);
     userAction = new UserAction();
     userAction.click(ui.radio.enterpriseSearchOption.get());
-    userAction.click(ui.enterpriseAgreementSearch.childminder.link.get());
+    userAction.click(
+      enterpriseUi.enterpriseAgreementSearch.childminder.link.get()
+    );
     expect(sendEvent).toHaveBeenCalledWith({
       action: "select_je_n_ai_pas_d_entreprise",
       category: "cc_search_type_of_users",

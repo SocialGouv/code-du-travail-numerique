@@ -15,17 +15,18 @@ type Props = {
   selectedAgreementAlert?: (
     agreement?: EnterpriseAgreement
   ) => NonNullable<ReactNode> | undefined;
+  defaultAgreement?: EnterpriseAgreement;
 };
 
 export const AgreementSearchForm = ({
   description,
   onAgreementSelect,
   selectedAgreementAlert,
+  defaultAgreement,
 }: Props) => {
-  const [storageAgreement, setStorageAgreement] = useLocalStorageForAgreement();
   const [mode, setMode] = useState<
     "agreementSearch" | "enterpriseSearch" | "noSearch" | undefined
-  >(!!storageAgreement ? "agreementSearch" : undefined);
+  >(!!defaultAgreement ? "agreementSearch" : undefined);
 
   return (
     <>
@@ -58,17 +59,15 @@ export const AgreementSearchForm = ({
         <AgreementSearchInput
           onAgreementSelect={(agreement) => {
             if (onAgreementSelect) onAgreementSelect(agreement, "p1");
-            setStorageAgreement(agreement);
           }}
           selectedAgreementAlert={selectedAgreementAlert}
-          defaultAgreement={storageAgreement}
+          defaultAgreement={defaultAgreement}
         />
       )}
       {mode === "enterpriseSearch" && (
         <EnterpriseAgreementSearchInput
           onAgreementSelect={(agreement) => {
             if (onAgreementSelect) onAgreementSelect(agreement, "p2");
-            setStorageAgreement(agreement);
           }}
           selectedAgreementAlert={selectedAgreementAlert}
         />
