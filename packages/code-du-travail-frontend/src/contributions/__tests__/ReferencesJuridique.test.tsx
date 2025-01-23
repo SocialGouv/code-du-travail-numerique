@@ -1,5 +1,4 @@
 import { render } from "@testing-library/react";
-import DisplayContentContribution from "../DisplayContentContribution";
 import { ReferencesJuridiques } from "../References";
 
 describe("ReferencesJuridiques", () => {

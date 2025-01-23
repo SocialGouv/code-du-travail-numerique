@@ -26,11 +26,27 @@ jest.mock("next/navigation", () => ({
 
 describe("Trouver sa CC - recherche par nom de CC", () => {
   describe("Test de l'autocomplete", () => {
-    let rendering: RenderResult;
     let userAction: UserAction;
     beforeEach(() => {
       jest.resetAllMocks();
-      rendering = render(<AgreementSearch />);
+    });
+    it("Vérifier l'affichage des erreurs", async () => {
+      (searchAgreement as jest.Mock).mockImplementation(() =>
+        Promise.resolve([])
+      );
+      render(<AgreementSearch />);
+      userAction = new UserAction();
+      userAction.setInput(ui.searchByName.input.get(), "cccc");
+      await wait();
+      expect(ui.searchByName.errorNotFound.error.query()).toBeInTheDocument();
+      expect(ui.searchByName.errorNotFound.info.query()).toBeInTheDocument();
+      userAction.click(ui.searchByName.inputCloseBtn.get());
+      expect(
+        ui.searchByName.errorNotFound.error.query()
+      ).not.toBeInTheDocument();
+      expect(
+        ui.searchByName.errorNotFound.info.query()
+      ).not.toBeInTheDocument();
     });
     it("Vérifier la navigation", async () => {
       (searchAgreement as jest.Mock).mockImplementation(() =>
@@ -47,6 +63,7 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
           },
         ])
       );
+      render(<AgreementSearch />);
       userAction = new UserAction();
       userAction.setInput(ui.searchByName.input.get(), "16");
       await wait();
@@ -80,27 +97,12 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
         name: "Trouver sa convention collective",
       });
     });
-    it("Vérifier l'affichage des erreurs", async () => {
-      (searchAgreement as jest.Mock).mockImplementation(() =>
-        Promise.resolve([])
-      );
-      userAction = new UserAction();
-      userAction.setInput(ui.searchByName.input.get(), "cccc");
-      await wait();
-      expect(ui.searchByName.errorNotFound.error.query()).toBeInTheDocument();
-      expect(ui.searchByName.errorNotFound.info.query()).toBeInTheDocument();
-      userAction.click(ui.searchByName.inputCloseBtn.get());
-      expect(
-        ui.searchByName.errorNotFound.error.query()
-      ).not.toBeInTheDocument();
-      expect(
-        ui.searchByName.errorNotFound.info.query()
-      ).not.toBeInTheDocument();
-    });
+
     it("Vérifier l'affichage des infos si moins 2 caractères", () => {
       (searchAgreement as jest.Mock).mockImplementation(() =>
         Promise.resolve([])
       );
+      render(<AgreementSearch />);
       act(async () => {
         userAction = new UserAction();
         userAction.setInput(ui.searchByName.input.get(), "cc");
