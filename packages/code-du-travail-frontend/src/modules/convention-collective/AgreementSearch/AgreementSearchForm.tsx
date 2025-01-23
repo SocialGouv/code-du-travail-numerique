@@ -25,7 +25,7 @@ export const AgreementSearchForm = ({
   const [storageAgreement, setStorageAgreement] = useLocalStorageForAgreement();
   const [mode, setMode] = useState<
     "agreementSearch" | "enterpriseSearch" | "noSearch" | undefined
-  >();
+  >(!!storageAgreement ? "agreementSearch" : undefined);
 
   return (
     <>
