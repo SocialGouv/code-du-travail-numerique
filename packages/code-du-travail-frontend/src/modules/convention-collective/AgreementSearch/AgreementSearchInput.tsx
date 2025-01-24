@@ -56,50 +56,51 @@ export const AgreementSearchInput = ({ onSearch }: Props) => {
         Précisez et sélectionnez votre convention collective
       </h2>
       <div className={fr.cx("fr-mt-2w")}>
-        <Autocomplete<Agreement>
-          dataTestId="AgreementSearchAutocomplete"
-          className={fr.cx("fr-col-12", "fr-mb-0")}
-          hintText="Ex : transport routier ou 1486"
-          label={
-            <>
-              Nom de la convention collective ou son numéro
-              d’identification IDCC (4 chiffres)
-            </>
-          }
-          state={getInputState()}
-          stateRelatedMessage={getStateMessage()}
-          displayLabel={(item) => {
-            return item ? `${item.shortTitle} (IDCC ${item.num})` : "";
-          }}
-          lineAsLink={(item) => {
-            return `/${getRouteBySource(SOURCES.CCN)}/${item.slug}`;
-          }}
-          onChange={(agreement) => {
-            if (agreement) {
-              emitSelectEvent(`idcc${agreement.id}`);
+        <div className={fr.cx("fr-col-12", "fr-mb-0")}>
+          <Autocomplete<Agreement>
+            dataTestId="AgreementSearchAutocomplete"
+            hintText="Ex : transport routier ou 1486"
+            label={
+              <>
+                Nom de la convention collective ou son numéro d’identification
+                IDCC (4 chiffres)
+              </>
             }
-          }}
-          search={searchAgreement}
-          onSearch={(query, agreements) => {
-            if (query) {
-              emitAgreementSearchInputEvent(query);
-            }
-            if (onSearch) onSearch(query, agreements);
-            if (!query) {
-              setSearchState("noSearch");
-            } else if (!agreements.length && query.length <= 2) {
-              setSearchState("lowSearch");
-            } else if (!agreements.length && query.length > 2) {
-              setSearchState("notFoundSearch");
-            } else {
-              setSearchState("fullSearch");
-            }
-          }}
-          onError={(message) => {
-            setSearchState("errorSearch");
-            setError(message);
-          }}
-        />
+            state={getInputState()}
+            stateRelatedMessage={getStateMessage()}
+            displayLabel={(item) => {
+              return item ? `${item.shortTitle} (IDCC ${item.num})` : "";
+            }}
+            lineAsLink={(item) => {
+              return `/${getRouteBySource(SOURCES.CCN)}/${item.slug}`;
+            }}
+            onChange={(agreement) => {
+              if (agreement) {
+                emitSelectEvent(`idcc${agreement.id}`);
+              }
+            }}
+            search={searchAgreement}
+            onSearch={(query, agreements) => {
+              if (query) {
+                emitAgreementSearchInputEvent(query);
+              }
+              if (onSearch) onSearch(query, agreements);
+              if (!query) {
+                setSearchState("noSearch");
+              } else if (!agreements.length && query.length <= 2) {
+                setSearchState("lowSearch");
+              } else if (!agreements.length && query.length > 2) {
+                setSearchState("notFoundSearch");
+              } else {
+                setSearchState("fullSearch");
+              }
+            }}
+            onError={(message) => {
+              setSearchState("errorSearch");
+              setError(message);
+            }}
+          />
+        </div>
         {searchState === "notFoundSearch" && (
           <Alert
             className={fr.cx("fr-mt-2w")}

@@ -8,6 +8,7 @@ import { useState } from "react";
 import Spinner from "../Spinner.svg";
 import { css } from "@styled-system/css";
 import { redirect } from "next/navigation";
+import Link from "../Link";
 
 export type AutocompleteProps<K> = InputProps & {
   onChange?: (value: K | undefined) => void;
@@ -23,7 +24,6 @@ export type AutocompleteProps<K> = InputProps & {
 };
 
 export const Autocomplete = <K,>({
-  className,
   onChange,
   onSearch,
   onError,
@@ -35,7 +35,6 @@ export const Autocomplete = <K,>({
   state,
   stateRelatedMessage,
   hintText,
-  classes,
   dataTestId,
   displayNoResult,
   defaultValue,
@@ -69,7 +68,7 @@ export const Autocomplete = <K,>({
   });
   return (
     <>
-      <div className={`${autocompleteContainer} ${className}`}>
+      <div className={`${fr.cx("fr-input-group")}`}>
         <Input
           {...getInputProps({
             id: "location-search",
@@ -143,7 +142,6 @@ export const Autocomplete = <K,>({
           label={label}
           state={state}
           stateRelatedMessage={stateRelatedMessage}
-          classes={classes}
         />
         <ul
           {...getMenuProps()}
@@ -159,35 +157,23 @@ export const Autocomplete = <K,>({
                         index,
                         key: `${displayLabel(item)}${index}`,
                       })}
-                      className={`${fr.cx("fr-sidemenu__item", "fr-p-0", "fr-grid-row")} ${autocompleteContainer}${highlightedIndex === index ? ` ${buttonActive}` : ""}`}
+                      className={`${fr.cx("fr-p-3v")} ${suggestion} ${highlightedIndex === index ? isHighlighted : ""}`}
                     >
-                      <Button
-                        {...(lineAsLink
-                          ? {
-                              linkProps: {
-                                href: lineAsLink(item),
-                              },
-                            }
-                          : {
-                              linkProps: undefined,
-                            })}
-                        priority="tertiary no outline"
-                        className={`${fr.cx("fr-col-12")} ${autocompleteButton}`}
-                      >
-                        {displayLabel(item)}
-                      </Button>
+                      {lineAsLink ? (
+                        <Link href={lineAsLink(item)} className={link}>
+                          {displayLabel(item)}
+                        </Link>
+                      ) : (
+                        <>{displayLabel(item)}</>
+                      )}
                     </li>
                   </>
                 ))
               : displayNoResult &&
                 !selectedResult && (
                   <>
-                    <li
-                      className={`${fr.cx("fr-sidemenu__item", "fr-p-0", "fr-grid-row")} ${autocompleteContainer}`}
-                    >
-                      <span className={fr.cx("fr-py-1w", "fr-px-2w")}>
-                        Aucun résultat
-                      </span>
+                    <li className={`${fr.cx("fr-p-3v")} }`}>
+                      <>Aucun résultat</>
                     </li>
                   </>
                 ))}
@@ -197,23 +183,17 @@ export const Autocomplete = <K,>({
   );
 };
 
-const autocompleteContainer = css({
-  position: "relative",
-});
-
-const autocompleteListContainer = css({
+export const autocompleteListContainer = css({
   position: "absolute",
-  w: "calc(100% - 1rem)",
-  zIndex: 100,
+  w: "100%",
+  zIndex: 10,
   bg: "var(--background-default-grey)",
+  listStyleType: "none!",
 });
 
-const autocompleteButton = css({
-  textAlign: "left",
-});
-
-const buttonActive = css({
-  backgroundColor: "rgb(246, 246, 246)",
+export const suggestion = css({
+  cursor: "pointer",
+  color: "var(--text-action-high-blue-france)",
 });
 
 const addonBlock = css({
@@ -225,10 +205,22 @@ const addonBlock = css({
 
 const buttonClose = css({
   _before: {
-    width: "18px !important",
-    height: "18px !important",
+    width: "18px!",
+    height: "18px!",
   },
   _hover: {
-    backgroundColor: "unset !important",
+    backgroundColor: "unset!",
   },
+});
+
+export const isHighlighted = css({
+  bg: {
+    base: "var(--background-contrast-grey-hover)",
+    _hover: "var(--background-default-grey-hover)",
+  },
+  fontWeight: { base: "bold", _hover: "normal" },
+});
+
+const link = css({
+  backgroundImage: "none!",
 });
