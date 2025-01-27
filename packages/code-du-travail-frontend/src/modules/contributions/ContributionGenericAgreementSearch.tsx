@@ -82,7 +82,7 @@ export function ContributionGenericAgreementSearch({
   return (
     <>
       <div className={`${fr.cx("fr-p-3w", "fr-mt-6w")} ${block}`}>
-        <div className={"fr-grid-row"}>
+        <div className={fr.cx("fr-grid-row")}>
           <Image
             priority
             src={AgreementSearch}
