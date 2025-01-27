@@ -3,6 +3,7 @@ import { useCombobox } from "downshift";
 import { fetchSuggestResults } from "./fetchSuggestResults";
 import { SUGGEST_MAX_RESULTS } from "../../../config";
 import { fr } from "@codegouvfr/react-dsfr";
+import { css } from "@styled-system/css";
 import { useLayoutTracking } from "../tracking";
 import {
   autocompleteListContainer,
@@ -65,7 +66,7 @@ export const SearchInput = (props: Props) => {
       />
       <ul
         {...getMenuProps({
-          className: autocompleteListContainer,
+          className: `${autocompleteListContainer} ${list}`,
         })}
       >
         {isOpen &&
@@ -87,3 +88,7 @@ export const SearchInput = (props: Props) => {
     </>
   );
 };
+const list = css({
+  top: "2.5rem",
+  textAlign: "left",
+});
