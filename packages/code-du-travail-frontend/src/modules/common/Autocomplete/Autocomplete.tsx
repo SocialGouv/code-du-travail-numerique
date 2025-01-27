@@ -214,11 +214,8 @@ const buttonClose = css({
 });
 
 export const isHighlighted = css({
-  bg: {
-    base: "var(--background-contrast-grey-hover)",
-    _hover: "var(--background-default-grey-hover)",
-  },
-  fontWeight: { base: "bold", _hover: "normal" },
+  bg: "var(--background-default-grey-hover)",
+  fontWeight: "bold",
 });
 
 const link = css({

@@ -7,18 +7,20 @@ import { fetchSuggestResults } from "../../layout/header/fetchSuggestResults";
 import { Autocomplete } from "../../common/Autocomplete";
 import { SUGGEST_MAX_RESULTS } from "../../../config";
 import { useLayoutTracking } from "../../layout/tracking";
+import { useRouter } from "next/navigation";
 
-type Props = {
-  onSearchSubmit: (text: string) => void;
-};
-
-export const HomeSearch = (props: Props) => {
+export const HomeSearch = () => {
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const { emitSuggestionEvent } = useLayoutTracking();
+  const router = useRouter();
 
   const onSubmit = () => {
-    props.onSearchSubmit(query);
+    router.push(getSearchUrl(query));
+  };
+
+  const getSearchUrl = (text: string) => {
+    return `/recherche?q=${encodeURIComponent(text)}`;
   };
 
   const search = async (inputValue: string) => {
@@ -60,6 +62,7 @@ export const HomeSearch = (props: Props) => {
           search={search}
           onError={onError}
           dataTestId={"search-input"}
+          lineAsLink={getSearchUrl}
         />
       </div>
       <div className={fr.cx("fr-col-12", "fr-col-md-4")}>

@@ -4,7 +4,7 @@ import Alert from "@codegouvfr/react-dsfr/Alert";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { useState } from "react";
 
-import { Autocomplete } from "../../common/Autocomplete/Autocomplete";
+import { Autocomplete } from "../../common/Autocomplete";
 import { Agreement } from "../../../outils/types";
 import { searchAgreement } from "../search";
 import { useAgreementSearchTracking } from "../tracking";
