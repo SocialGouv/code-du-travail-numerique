@@ -33,6 +33,7 @@ type ContributionElasticDocumentBase = Omit<
   ExportContributionInfo & {
     raw: string;
     url: string;
+    content: string;
   };
 
 export type ContributionElasticDocument = ContributionElasticDocumentBase &

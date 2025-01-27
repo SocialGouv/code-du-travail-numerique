@@ -1,28 +1,22 @@
-import {
-  ElasticSearchContributionConventionnelle,
-  ElasticSearchContributionGeneric,
-} from "@socialgouv/cdtn-types";
 import React from "react";
 
 import DisplayContentContribution, {
   ContentSP,
   numberLevel,
 } from "./DisplayContentContribution";
+import { Contribution } from "./type";
 
 type Props = {
-  contribution:
-    | ElasticSearchContributionGeneric
-    | ElasticSearchContributionConventionnelle;
+  contribution: Contribution;
   titleLevel: numberLevel;
 };
 
 export const ContributionContent = ({ contribution, titleLevel }: Props) => {
   if (contribution.type === "generic-no-cdt") return <></>;
-  const isFicheSP = "raw" in contribution;
 
   return (
     <section>
-      {isFicheSP ? (
+      {contribution.isFicheSP ? (
         <>
           <div>
             <ContentSP raw={contribution.raw} titleLevel={titleLevel - 2} />

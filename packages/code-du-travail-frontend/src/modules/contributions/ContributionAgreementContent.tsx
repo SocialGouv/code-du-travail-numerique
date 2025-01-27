@@ -6,13 +6,13 @@ import Html from "../common/Html";
 import Link from "../common/Link";
 import Accordion from "@codegouvfr/react-dsfr/Accordion";
 import { ListWithArrow } from "../common/ListWithArrow";
-import { ElasticSearchContributionConventionnelle } from "@socialgouv/cdtn-types";
 import { RelatedItems } from "../common/RelatedItems";
 import { RelatedItem } from "../documents";
 import { Share } from "../common/Share";
+import { Contribution } from "./type";
 
 type Props = {
-  contribution: ElasticSearchContributionConventionnelle;
+  contribution: Contribution;
   relatedItems: {
     items: RelatedItem[];
     title: string;
@@ -42,7 +42,7 @@ export function ContributionAgreementContent({
                 items={contribution.references.map(({ title, url }) => {
                   if (!url) return <></>;
                   return (
-                    <Link key={title} href={url}>
+                    <Link key={title} href={url} target="_blank">
                       {title}
                     </Link>
                   );

@@ -134,7 +134,7 @@ const mapTbody = (tbody: Element) => {
   }
 
   return (
-    <div className={"fr-table--md fr-table"}>
+    <div className={fr.cx("fr-table", "fr-mb-2w")}>
       <div className="fr-table__wrapper">
         <div className="fr-table__container">
           <div className="fr-table__content">
@@ -191,9 +191,11 @@ function renderChildrenWithNoTrim(domNode) {
 const getHeadingElement = (titleLevel: numberLevel, domNode) => {
   const Tag = ("h" + titleLevel) as ElementType;
   return titleLevel <= 6 ? (
-    <Tag>{renderChildrenWithNoTrim(domNode)}</Tag>
+    <Tag className={fr.cx("fr-mt-2w")}>{renderChildrenWithNoTrim(domNode)}</Tag>
   ) : (
-    <strong>{renderChildrenWithNoTrim(domNode)}</strong>
+    <strong className={fr.cx("fr-mt-2w")}>
+      {renderChildrenWithNoTrim(domNode)}
+    </strong>
   );
 };
 
@@ -251,6 +253,7 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
               description={domToReact(domNode.children as DOMNode[], {
                 trim: true,
               })}
+              className={fr.cx("fr-mt-2w")}
             ></Alert>
           );
         }
@@ -272,7 +275,7 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
               className={
                 (domNode.parentNode as Element | undefined)?.name === "li"
                   ? fr.cx("fr-mb-0")
-                  : undefined
+                  : fr.cx("fr-mt-2w")
               }
             >
               {renderChildrenWithNoTrim(domNode)}

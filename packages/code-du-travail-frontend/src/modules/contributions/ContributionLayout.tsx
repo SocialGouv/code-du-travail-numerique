@@ -172,9 +172,7 @@ export function ContributionLayout({ contribution }: Props) {
         )}
       {!isGeneric && (
         <ContributionAgreementContent
-          contribution={
-            contribution as ElasticSearchContributionConventionnelle
-          }
+          contribution={contribution}
           relatedItems={relatedItems}
         />
       )}

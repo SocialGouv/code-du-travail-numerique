@@ -1,6 +1,6 @@
 import * as Sentry from "@sentry/nextjs";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
-import { SOURCES } from "@socialgouv/cdtn-utils";
+import { slugify, SOURCES } from "@socialgouv/cdtn-utils";
 import { DocumentElasticResult, fetchDocument, isSource } from "../documents";
 import { Contribution, ContributionElasticDocument } from "./type";
 
@@ -64,7 +64,7 @@ const formatContribution = (
             ...arr,
             {
               title: linked.title,
-              url: linked.slug,
+              url: `/${slugify(linked.source)}/${linked.slug}`,
               source: linked.source,
             },
           ];

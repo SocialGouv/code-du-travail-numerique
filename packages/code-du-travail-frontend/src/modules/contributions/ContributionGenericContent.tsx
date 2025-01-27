@@ -2,6 +2,7 @@
 import React, { ReactNode, useEffect, useRef, useState } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
+import { css } from "@styled-system/css";
 import { Share } from "../common/Share";
 import { ElasticSearchContributionGeneric } from "@socialgouv/cdtn-types";
 import { ContributionContent } from "./ContributionContent";
@@ -71,21 +72,18 @@ export function ContributionGenericContent({
             displayContent ? "fr-unhidden" : "fr-hidden"
           )}
         >
-          <div id="cdt">
+          <div id="cdt" className={w100}>
             <p className={fr.cx("fr-h5")} ref={titleRef}>
               Que dit le code du travail&nbsp;?
             </p>
             {alertText}
-            <ContributionContent
-              contribution={contribution as ElasticSearchContributionGeneric}
-              titleLevel={2}
-            />
+            <ContributionContent contribution={contribution} titleLevel={2} />
             {contribution.references.length && (
               <Accordion label="Références" className={fr.cx("fr-mt-6w")}>
                 <ListWithArrow
                   items={contribution.references.map(({ title, url }) => {
                     return (
-                      <Link key={title} href={url ?? ""}>
+                      <Link key={title} href={url ?? ""} target="_blank">
                         {title}
                       </Link>
                     );
@@ -120,3 +118,8 @@ export function ContributionGenericContent({
     </>
   );
 }
+
+const w100 = css({
+  w: "100%!",
+  justifyContent: "center",
+});
