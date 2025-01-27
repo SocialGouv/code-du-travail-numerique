@@ -150,32 +150,26 @@ export const Autocomplete = <K,>({
           {value.length > 1 &&
             (isOpen && suggestions.length
               ? suggestions.map((item, index) => (
-                  <>
-                    <li
-                      {...getItemProps({
-                        item,
-                        index,
-                        key: `${displayLabel(item)}${index}`,
-                      })}
-                      className={`${fr.cx("fr-p-3v")} ${suggestion} ${highlightedIndex === index ? isHighlighted : ""}`}
-                    >
-                      {lineAsLink ? (
-                        <Link href={lineAsLink(item)} className={link}>
-                          {displayLabel(item)}
-                        </Link>
-                      ) : (
-                        <>{displayLabel(item)}</>
-                      )}
-                    </li>
-                  </>
+                  <li
+                    {...getItemProps({
+                      item,
+                      index,
+                    })}
+                    key={`${displayLabel(item)}${index}`}
+                    className={`${fr.cx("fr-p-3v")} ${suggestion} ${highlightedIndex === index ? isHighlighted : ""}`}
+                  >
+                    {lineAsLink ? (
+                      <Link href={lineAsLink(item)} className={link}>
+                        {displayLabel(item)}
+                      </Link>
+                    ) : (
+                      <>{displayLabel(item)}</>
+                    )}
+                  </li>
                 ))
               : displayNoResult &&
                 !selectedResult && (
-                  <>
-                    <li className={`${fr.cx("fr-p-3v")} }`}>
-                      <>Aucun résultat</>
-                    </li>
-                  </>
+                  <li className={`${fr.cx("fr-p-3v")} }`}>Aucun résultat</li>
                 ))}
         </ul>
       </div>

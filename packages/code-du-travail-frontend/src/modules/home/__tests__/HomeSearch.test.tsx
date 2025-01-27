@@ -1,12 +1,10 @@
 import { HomeSearch } from "../Components";
 import { fireEvent, render, waitFor } from "@testing-library/react";
 import React from "react";
-import { byTestId } from "testing-library-selector";
+import { byTestId, byLabelText } from "testing-library-selector";
 import { fetchSuggestResults } from "../../layout/header/fetchSuggestResults";
 import { useLayoutTracking } from "../../layout/tracking";
 import { UserAction } from "../../../common";
-
-const pushRouter = jest.fn();
 
 jest.mock("../../layout/header/fetchSuggestResults");
 jest.mock("../../layout/tracking");
