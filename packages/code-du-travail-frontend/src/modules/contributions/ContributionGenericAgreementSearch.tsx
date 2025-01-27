@@ -14,7 +14,7 @@ import {
   isAgreementUnextended,
 } from "./contributionUtils";
 import { Contribution } from "./type";
-import Link from "next/link";
+import Link from "../common/Link";
 
 type Props = {
   onAgreementSelect: (agreement?: EnterpriseAgreement, mode?: string) => void;

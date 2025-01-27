@@ -13,8 +13,8 @@ import { ContributionGenericContent } from "./ContributionGenericContent";
 import { ContributionAgreementSelect } from "./ContributionAgreemeentSelect";
 import { ContributionAgreementContent } from "./ContributionAgreementContent";
 import { Contribution } from "./type";
-import { A11yLink } from "../../common/A11yLink";
 import { useLocalStorageForAgreement } from "../common/useLocalStorage";
+import Link from "../common/Link";
 
 type Props = {
   contribution: Contribution;
@@ -52,13 +52,13 @@ export function ContributionLayout({ contribution }: Props) {
       {contribution.url && (
         <span>
           Source&nbsp;:{" "}
-          <A11yLink
+          <Link
             href={contribution.url}
             target="_blank"
             rel="noopener noreferrer"
           >
             {`Fiche: ${getLabelBySource("fiches_service_public")}`}
-          </A11yLink>
+          </Link>
         </span>
       )}
       {contribution.url && contribution.date && (
