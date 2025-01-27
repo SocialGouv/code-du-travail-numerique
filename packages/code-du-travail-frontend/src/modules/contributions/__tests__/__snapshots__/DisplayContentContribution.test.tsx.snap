@@ -31,7 +31,9 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
             id="report-ou-suspension-du-preavis-collapse"
           >
             <div>
-              <p>
+              <p
+                class="fr-mt-2w"
+              >
                 
         En principe, le préavis de licenciement court de date à date sans
         interruption, ni suspension. Dans certaines situations, il existe des
@@ -52,10 +54,10 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                       class="fr-accordion__title"
                     >
                       <button
-                        aria-controls="9428c98d-062e-4c8e-aa89-403908d1115d-collapse"
+                        aria-controls="7df80872-bd6e-4f3c-99f4-db528c8a8257-collapse"
                         aria-expanded="false"
                         class="fr-accordion__btn"
-                        id="9428c98d-062e-4c8e-aa89-403908d1115d__toggle-btn"
+                        id="7df80872-bd6e-4f3c-99f4-db528c8a8257__toggle-btn"
                         type="button"
                       >
                         Congés payés
@@ -63,7 +65,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                     </h4>
                     <div
                       class="fr-collapse"
-                      id="9428c98d-062e-4c8e-aa89-403908d1115d-collapse"
+                      id="7df80872-bd6e-4f3c-99f4-db528c8a8257-collapse"
                     >
                       <div>
                         <div
@@ -80,10 +82,10 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                                 class="fr-accordion__title"
                               >
                                 <button
-                                  aria-controls="97143415-10a6-4b4b-8652-f69a26b05e84-collapse"
+                                  aria-controls="863bf9f7-3c3b-4d3d-94de-3e1cd0ef00d3-collapse"
                                   aria-expanded="false"
                                   class="fr-accordion__btn"
-                                  id="97143415-10a6-4b4b-8652-f69a26b05e84__toggle-btn"
+                                  id="863bf9f7-3c3b-4d3d-94de-3e1cd0ef00d3__toggle-btn"
                                   type="button"
                                 >
                                   
@@ -93,10 +95,12 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                               </h5>
                               <div
                                 class="fr-collapse"
-                                id="97143415-10a6-4b4b-8652-f69a26b05e84-collapse"
+                                id="863bf9f7-3c3b-4d3d-94de-3e1cd0ef00d3-collapse"
                               >
                                 <div>
-                                  <p>
+                                  <p
+                                    class="fr-mt-2w"
+                                  >
                                     
                 Des congés payés qui interviennent pendant le préavis et qui ont
                 été demandés à l'employeur avant la notification du licenciement
@@ -114,10 +118,10 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                                 class="fr-accordion__title"
                               >
                                 <button
-                                  aria-controls="96048d34-5392-47eb-b2dc-1d71eb065b08-collapse"
+                                  aria-controls="4541539e-824b-4a88-856b-74ac9ddc1d41-collapse"
                                   aria-expanded="false"
                                   class="fr-accordion__btn"
-                                  id="96048d34-5392-47eb-b2dc-1d71eb065b08__toggle-btn"
+                                  id="4541539e-824b-4a88-856b-74ac9ddc1d41__toggle-btn"
                                   type="button"
                                 >
                                   
@@ -127,10 +131,12 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                               </h5>
                               <div
                                 class="fr-collapse"
-                                id="96048d34-5392-47eb-b2dc-1d71eb065b08-collapse"
+                                id="4541539e-824b-4a88-856b-74ac9ddc1d41-collapse"
                               >
                                 <div>
-                                  <p>
+                                  <p
+                                    class="fr-mt-2w"
+                                  >
                                     
                 Des congés payés qui interviennent pendant le préavis et qui ont
                 été demandés à l'employeur après la notification du
@@ -149,10 +155,10 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                                 class="fr-accordion__title"
                               >
                                 <button
-                                  aria-controls="ee619fe4-e406-4b5b-a832-f5f574d8fedf-collapse"
+                                  aria-controls="823ae7ba-7a44-498b-81b8-d4d03603cdb7-collapse"
                                   aria-expanded="false"
                                   class="fr-accordion__btn"
-                                  id="ee619fe4-e406-4b5b-a832-f5f574d8fedf__toggle-btn"
+                                  id="823ae7ba-7a44-498b-81b8-d4d03603cdb7__toggle-btn"
                                   type="button"
                                 >
                                   Licenciement notifié pendant les congés payés
@@ -160,10 +166,12 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                               </h5>
                               <div
                                 class="fr-collapse"
-                                id="ee619fe4-e406-4b5b-a832-f5f574d8fedf-collapse"
+                                id="823ae7ba-7a44-498b-81b8-d4d03603cdb7-collapse"
                               >
                                 <div>
-                                  <p>
+                                  <p
+                                    class="fr-mt-2w"
+                                  >
                                     
                 Dans ce cas, le préavis ne commencera qu'après les congés payés.
               
@@ -217,7 +225,9 @@ exports[`DisplayContentContribution Accordions should replace details element by
           id="ceci-est-un-titre-collapse"
         >
           <div>
-            <p>
+            <p
+              class="fr-mt-2w"
+            >
               Ceci est le body
             </p>
             <br />
@@ -273,10 +283,10 @@ exports[`DisplayContentContribution Accordions should replace details element wi
                     class="fr-accordion__title"
                   >
                     <button
-                      aria-controls="3834a251-b2e6-4471-bb15-df7568615477-collapse"
+                      aria-controls="3037398e-cf8a-4f20-bb62-3485df5f3f18-collapse"
                       aria-expanded="false"
                       class="fr-accordion__btn"
-                      id="3834a251-b2e6-4471-bb15-df7568615477__toggle-btn"
+                      id="3037398e-cf8a-4f20-bb62-3485df5f3f18__toggle-btn"
                       type="button"
                     >
                       Ceci est un sous titre
@@ -284,10 +294,12 @@ exports[`DisplayContentContribution Accordions should replace details element wi
                   </h4>
                   <div
                     class="fr-collapse"
-                    id="3834a251-b2e6-4471-bb15-df7568615477-collapse"
+                    id="3037398e-cf8a-4f20-bb62-3485df5f3f18-collapse"
                   >
                     <div>
-                      <p>
+                      <p
+                        class="fr-mt-2w"
+                      >
                         Ceci est le body
                       </p>
                       <br />
@@ -336,7 +348,9 @@ exports[`DisplayContentContribution Accordions should replace multiple details e
               id="ceci-est-le-titre-1-collapse"
             >
               <div>
-                <p>
+                <p
+                  class="fr-mt-2w"
+                >
                   Ceci est le body 1
                 </p>
                 <br />
@@ -364,7 +378,9 @@ exports[`DisplayContentContribution Accordions should replace multiple details e
               id="ceci-est-le-titre-2-collapse"
             >
               <div>
-                <p>
+                <p
+                  class="fr-mt-2w"
+                >
                   Ceci est le body 2
                 </p>
                 <br />
@@ -389,7 +405,9 @@ exports[`DisplayContentContribution Alerts should have space in table item for a
           colspan="1"
           rowspan="1"
         >
-          <p>
+          <p
+            class="fr-mt-2w"
+          >
             <strong>
               Salariés
             </strong>
@@ -399,7 +417,9 @@ exports[`DisplayContentContribution Alerts should have space in table item for a
           colspan="1"
           rowspan="1"
         >
-          <p>
+          <p
+            class="fr-mt-2w"
+          >
             Une journée entière déterminée par roulement et par quinzaine
           </p>
         </td>
@@ -407,7 +427,9 @@ exports[`DisplayContentContribution Alerts should have space in table item for a
           colspan="1"
           rowspan="2"
         >
-          <p>
+          <p
+            class="fr-mt-2w"
+          >
             Pour les commerces avec une surface de vente 
             <strong>
               supérieure à 400 m2
@@ -416,7 +438,9 @@ exports[`DisplayContentContribution Alerts should have space in table item for a
             <strong />
             la loi prévoit une majoration de salaire d’au moins 30 % par rapport au salaire normalement dû pour une durée équivalente
           </p>
-          <p>
+          <p
+            class="fr-mt-2w"
+          >
             Pour les commerces avec une surface de vente 
             <strong>
               inférieure ou égale à 400 m2
@@ -436,7 +460,9 @@ exports[`DisplayContentContribution Alerts should have space in table item for a
           colspan="1"
           rowspan="1"
         >
-          <p>
+          <p
+            class="fr-mt-2w"
+          >
             <strong>
               Salariés de moins de 21 ans logés chez leur employeur
             </strong>
@@ -446,7 +472,9 @@ exports[`DisplayContentContribution Alerts should have space in table item for a
           colspan="1"
           rowspan="1"
         >
-          <p>
+          <p
+            class="fr-mt-2w"
+          >
             Un autre après-midi déterminé par roulement et par quinzaine
           </p>
         </td>
@@ -459,7 +487,9 @@ exports[`DisplayContentContribution Alerts should have space in table item for a
 exports[`DisplayContentContribution Alerts should replace div with alert class in li component to Alert component 1`] = `
 <div>
   <div>
-    <p>
+    <p
+      class="fr-mt-2w"
+    >
       Le contrat de mission (intérim) doit :
     </p>
     <ul>
@@ -511,7 +541,7 @@ exports[`DisplayContentContribution Alerts should replace div with alert class i
         </p>
         <br />
         <div
-          class="fr-alert fr-alert--info fr-alert--sm"
+          class="fr-alert fr-alert--info fr-alert--sm fr-mt-2w"
           id="fr-alert-:rh:"
         >
           <div>
@@ -532,7 +562,7 @@ exports[`DisplayContentContribution Alerts should replace div with alert class i
 exports[`DisplayContentContribution Alerts should replace div with alert class to Alert component 1`] = `
 <div>
   <div
-    class="fr-alert fr-alert--info fr-alert--sm"
+    class="fr-alert fr-alert--info fr-alert--sm fr-mt-2w"
     id="fr-alert-:rg:"
   >
     <div>
@@ -550,10 +580,14 @@ exports[`DisplayContentContribution Alerts should replace div with alert class t
 exports[`DisplayContentContribution Headings should replace span with class "title" and "sub-titles" with heading 1`] = `
 <div>
   <div>
-    <h2>
+    <h2
+      class="fr-mt-2w"
+    >
       Mon titre
     </h2>
-    <h3>
+    <h3
+      class="fr-mt-2w"
+    >
       Mon sous titre
     </h3>
   </div>
@@ -563,7 +597,7 @@ exports[`DisplayContentContribution Headings should replace span with class "tit
 exports[`DisplayContentContribution Tables should add thead to table if not present and move table into a Table element 1`] = `
 <div>
   <div
-    class="fr-table--md fr-table"
+    class="fr-table fr-mb-2w"
   >
     <div
       class="fr-table__wrapper"
@@ -635,7 +669,9 @@ exports[`DisplayContentContribution Tables should add thead to table if not pres
 
 exports[`DisplayContentContribution Tables should keep whitespace in specific tag 1`] = `
 <div>
-  <p>
+  <p
+    class="fr-mt-2w"
+  >
     Ceci est un
     <strong>
        
@@ -670,7 +706,9 @@ exports[`DisplayContentContribution Tables should not change if thead is already
           colspan="1"
           rowspan="1"
         >
-          <p>
+          <p
+            class="fr-mt-2w"
+          >
             Pour les 
             <strong>
               cadres
@@ -702,7 +740,7 @@ exports[`DisplayContentContribution Tables should render correctly a table with 
 <div>
   <div>
     <div
-      class="fr-table--md fr-table"
+      class="fr-table fr-mb-2w"
     >
       <div
         class="fr-table__wrapper"
@@ -812,7 +850,9 @@ exports[`DisplayContentContribution Tables should replace td by th in thead 1`] 
           colspan="1"
           rowspan="1"
         >
-          <p>
+          <p
+            class="fr-mt-2w"
+          >
             Pour les 
             <strong>
               cadres
@@ -842,7 +882,9 @@ exports[`DisplayContentContribution Tables should replace td by th in thead 1`] 
 
 exports[`DisplayContentContribution should keep whitespace in specific tag 1`] = `
 <div>
-  <p>
+  <p
+    class="fr-mt-2w"
+  >
     Ceci est un
     <strong>
        
@@ -870,7 +912,9 @@ exports[`DisplayContentContribution should keep whitespace in specific tag 1`] =
 
 exports[`DisplayContentContribution should not remove space between strong and em tag in p tag 1`] = `
 <div>
-  <p>
+  <p
+    class="fr-mt-2w"
+  >
     <strong>
       À noter :
     </strong>
@@ -884,7 +928,9 @@ exports[`DisplayContentContribution should not remove space between strong and e
 
 exports[`DisplayContentContribution should return html 1`] = `
 <div>
-  <p>
+  <p
+    class="fr-mt-2w"
+  >
     hello
   </p>
 </div>

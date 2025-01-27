@@ -135,9 +135,9 @@ const mapTbody = (tbody: Element) => {
 
   return (
     <div className={fr.cx("fr-table", "fr-mb-2w")}>
-      <div className="fr-table__wrapper">
-        <div className="fr-table__container">
-          <div className="fr-table__content">
+      <div className={fr.cx("fr-table__wrapper")}>
+        <div className={fr.cx("fr-table__container")}>
+          <div className={fr.cx("fr-table__content")}>
             <table>
               {theadChildren.length > 0 && (
                 <>

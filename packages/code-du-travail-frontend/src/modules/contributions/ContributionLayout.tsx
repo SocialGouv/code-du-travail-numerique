@@ -5,12 +5,10 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { getLabelBySource } from "@socialgouv/cdtn-utils";
 import { sources } from "../documents";
 import { Feedback } from "../layout/feedback";
-import { EnterpriseAgreement } from "../enterprise";
-import { ElasticSearchContributionConventionnelle } from "@socialgouv/cdtn-types";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
 import { useContributionTracking } from "./tracking";
 import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
-import { isAgreementValid, isCCSupported } from "./contributionUtils";
+import { isAgreementValid, isAgreementSupported } from "./contributionUtils";
 import { ContributionGenericContent } from "./ContributionGenericContent";
 import { ContributionAgreementSelect } from "./ContributionAgreemeentSelect";
 import { ContributionAgreementContent } from "./ContributionAgreementContent";
@@ -112,7 +110,7 @@ export function ContributionLayout({ contribution }: Props) {
                   emitClickP2(getTitle());
                   break;
               }
-              if (isCCSupported(contribution, agreement)) {
+              if (isAgreementSupported(contribution, agreement)) {
                 emitAgreementTreatedEvent(agreement?.id);
               } else {
                 emitAgreementUntreatedEvent(agreement?.id);
@@ -157,13 +155,12 @@ export function ContributionLayout({ contribution }: Props) {
             displayGeneric={displayGeneric}
             alertText={
               selectedAgreement &&
-              !isCCSupported(contribution, selectedAgreement) && (
+              !isAgreementSupported(contribution, selectedAgreement) && (
                 <p>
                   <strong>
                     Cette réponse correspond à ce que prévoit le code du
-                    travail, elle ne tient pas compte des spécificités de la
-                    convention collective Industrie du pétrole convention
-                    collective {selectedAgreement.shortTitle}
+                    travail, elle ne tient pas compte des spécificités de la{" "}
+                    {selectedAgreement.shortTitle}
                   </strong>
                 </p>
               )

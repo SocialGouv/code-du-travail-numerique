@@ -33,7 +33,7 @@ export const EnterpriseAgreementSelectionLink = ({
           {enterprise.conventions.length} convention
           {agreementPlurial} collective
           {agreementPlurial} trouvée
-          {agreementPlurial} :
+          {agreementPlurial}&nbsp;:
         </p>
       )}
       {getEnterpriseAgreements(enterprise.conventions).map(

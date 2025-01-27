@@ -4,7 +4,6 @@ import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import { Share } from "../common/Share";
-import { ElasticSearchContributionGeneric } from "@socialgouv/cdtn-types";
 import { ContributionContent } from "./ContributionContent";
 import Html from "../common/Html";
 import Link from "../common/Link";
@@ -83,7 +82,7 @@ export function ContributionGenericContent({
                 <ListWithArrow
                   items={contribution.references.map(({ title, url }) => {
                     return (
-                      <Link key={title} href={url ?? ""} target="_blank">
+                      <Link key={title} href={url} target="_blank">
                         {title}
                       </Link>
                     );

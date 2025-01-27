@@ -10,10 +10,11 @@ import { AgreementSearchForm } from "../convention-collective/AgreementSearch/Ag
 import { EnterpriseAgreement } from "../enterprise";
 import {
   isAgreementValid,
-  isCCSupported,
-  isCCUnextended,
+  isAgreementSupported,
+  isAgreementUnextended,
 } from "./contributionUtils";
 import { Contribution } from "./type";
+import Link from "next/link";
 
 type Props = {
   onAgreementSelect: (agreement?: EnterpriseAgreement, mode?: string) => void;
@@ -41,8 +42,8 @@ export function ContributionGenericAgreementSearch({
     );
   }, [selectedAgreement, defaultAgreement]);
   const selectedAgreementAlert = (agreement: EnterpriseAgreement) => {
-    const isSupported = isCCSupported(contribution, agreement);
-    const isUnextended = isCCUnextended(contribution, agreement);
+    const isSupported = isAgreementSupported(contribution, agreement);
+    const isUnextended = isAgreementUnextended(contribution, agreement);
     if (contribution.isNoCDT) {
       if (isUnextended)
         return (
@@ -54,9 +55,9 @@ export function ContributionGenericAgreementSearch({
             d&apos;identifier si cette règle s&apos;applique ou non au sein de
             votre entreprise. Vous pouvez toutefois consulter la convention
             collective{" "}
-            <a target="_blank" href={agreement.url}>
+            <Link target="_blank" href={agreement.url}>
               ici
-            </a>{" "}
+            </Link>{" "}
             dans le cas où elle s&apos;applique à votre situation.
           </>
         );
@@ -66,9 +67,9 @@ export function ContributionGenericAgreementSearch({
             Nous vous invitons à consulter votre convention collective qui peut
             prévoir une réponse. Vous pouvez consulter votre convention
             collective{" "}
-            <a target="_blank" href={agreement.url}>
+            <Link target="_blank" href={agreement.url}>
               ici
-            </a>
+            </Link>
             .
             <br />
             {contribution.messageBlockGenericNoCDT}

@@ -1,14 +1,14 @@
 import { EnterpriseAgreement } from "../enterprise";
 import { Contribution } from "./type";
 
-export const isCCSupported = (
+export const isAgreementSupported = (
   contribution: Contribution,
   agreement: EnterpriseAgreement
 ) => {
   const { ccSupported = [] } = contribution;
   return ccSupported.includes(agreement.id);
 };
-export const isCCUnextended = (
+export const isAgreementUnextended = (
   contribution: Contribution,
   agreement: EnterpriseAgreement
 ) => {
@@ -20,7 +20,7 @@ export const isAgreementValid = (
   agreement?: EnterpriseAgreement
 ) => {
   if (!agreement) return false;
-  const isSupported = isCCSupported(contribution, agreement);
-  const isUnextended = isCCUnextended(contribution, agreement);
+  const isSupported = isAgreementSupported(contribution, agreement);
+  const isUnextended = isAgreementUnextended(contribution, agreement);
   return !isUnextended && isSupported;
 };

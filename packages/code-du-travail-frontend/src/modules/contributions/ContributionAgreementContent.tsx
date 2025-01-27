@@ -53,9 +53,9 @@ export function ContributionAgreementContent({
           <p className={fr.cx("fr-my-2w")}>
             Consultez les questions-réponses fréquentes pour la convention
             collective{" "}
-            <a href={`/convention-collective/${contribution.ccnSlug}`}>
+            <Link href={`/convention-collective/${contribution.ccnSlug}`}>
               {contribution.ccnShortTitle}
-            </a>
+            </Link>
           </p>
           {contribution.messageBlock && (
             <div className={fr.cx("fr-alert", "fr-alert--info", "fr-my-6w")}>
