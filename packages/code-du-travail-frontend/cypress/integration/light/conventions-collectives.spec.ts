@@ -1,23 +1,29 @@
 describe("Conventions collectives", () => {
   it("je vois la liste de toutes les cc", () => {
     cy.visit("/");
-    cy.findByRole("heading", { level: 1 })
-      .should("have.text", "Bienvenue sur le Code du travail numérique")
-      .click();
-    cy.get("#fr-header-main-navigation")
+    cy.findByRole("heading", { level: 1 }).should(
+      "have.text",
+      "Bienvenue sur le Code du travail numérique"
+    );
+
+    cy.get("#fr-header-main-navigation a")
       .contains("Votre convention collective")
       .click();
+
     cy.urlEqual("/convention-collective");
 
-    cy.findByRole("heading", { level: 1 })
-      .should("have.text", "Votre convention collective")
-      .click();
+    cy.findByRole("heading", { level: 1 }).should(
+      "have.text",
+      "Votre convention collective"
+    );
     cy.get("body").should(
       "contain",
       "Les conventions collectives présentées sont les plus représentatives en termes de nombre de salariés"
     );
     cy.get("#content a").should("have.length", 49);
+
     cy.get("#content a").first().click();
+
     cy.urlEqual(
       "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
     );
