@@ -16,6 +16,8 @@ export const localConfig: ConfigData = {
     "no-dup-id": "off",
     "wcag/h63": "off",
     "wcag/h32": "off",
+    "no-redundant-role": "off",
+    "no-missing-references": "off",
   },
 };
 

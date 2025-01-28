@@ -31,6 +31,7 @@ describe("Conventions collectives", () => {
       .eq(0)
       .find('[data-accordion-component="AccordionItemButton"]')
       .should("have.length", 6);
+
     cy.get('[data-accordion-component="Accordion"]')
       .eq(0)
       .find('[data-accordion-component="AccordionItemButton"]')
@@ -77,9 +78,14 @@ describe("Conventions collectives", () => {
       .find('[data-accordion-component="AccordionItemButton"]')
       .first()
       .click();
-    cy.get('[data-accordion-component="AccordionItem"] a').first().click();
+    cy.get('[data-accordion-component="AccordionItem"] a')
+      .first()
+      .contains(
+        "Quelles sont les conditions d’indemnisation pendant le congé de maternité"
+      )
+      .click();
     cy.urlEqual(
-      "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
+      "/contribution/2941-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
     );
   });
 
