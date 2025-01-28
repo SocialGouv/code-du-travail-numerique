@@ -2,7 +2,6 @@
 import React, { ReactNode, useEffect, useRef, useState } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
-import { css } from "@styled-system/css";
 import { Share } from "../common/Share";
 import { ContributionContent } from "./ContributionContent";
 import Html from "../common/Html";
@@ -71,7 +70,7 @@ export function ContributionGenericContent({
             displayContent ? "fr-unhidden" : "fr-hidden"
           )}
         >
-          <div id="cdt" className={w100}>
+          <div id="cdt">
             <p className={fr.cx("fr-h5")} ref={titleRef}>
               Que dit le code du travail&nbsp;?
             </p>
@@ -92,10 +91,8 @@ export function ContributionGenericContent({
             )}
             {contribution.messageBlock && (
               <div className={fr.cx("fr-alert", "fr-alert--info", "fr-mt-6w")}>
-                <>
-                  <div className={fr.cx("fr-h5")}>Attention</div>
-                  <Html>{contribution.messageBlock}</Html>
-                </>
+                <div className={fr.cx("fr-h5")}>Attention</div>
+                <Html>{contribution.messageBlock}</Html>
               </div>
             )}
           </div>
@@ -117,8 +114,3 @@ export function ContributionGenericContent({
     </>
   );
 }
-
-const w100 = css({
-  w: "100%!",
-  justifyContent: "center",
-});

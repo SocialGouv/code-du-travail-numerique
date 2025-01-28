@@ -53,16 +53,10 @@ export const ui = {
         link: byRole("link", {
           name: "Transports routiers et activités auxiliaires du transport (IDCC 16)",
         }),
-        button: byRole("button", {
-          name: "Transports routiers et activités auxiliaires du transport (IDCC 16)",
-        }),
       },
       IDCC1388: {
         name: byText(/Industrie du pétrole \(IDCC 1388\)/),
         link: byRole("link", {
-          name: "Industrie du pétrole (IDCC 1388)",
-        }),
-        button: byRole("button", {
           name: "Industrie du pétrole (IDCC 1388)",
         }),
       },
@@ -71,9 +65,6 @@ export const ui = {
           "Hospitalisation privée : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP) (IDCC 29)"
         ),
         link: byRole("link", {
-          name: "Hospitalisation privée : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP) (IDCC 29)",
-        }),
-        button: byRole("button", {
           name: "Hospitalisation privée : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP) (IDCC 29)",
         }),
       },

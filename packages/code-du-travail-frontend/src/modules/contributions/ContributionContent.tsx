@@ -12,16 +12,11 @@ type Props = {
 };
 
 export const ContributionContent = ({ contribution, titleLevel }: Props) => {
-  if (contribution.type === "generic-no-cdt") return <></>;
 
   return (
     <section>
       {contribution.isFicheSP ? (
-        <>
-          <div>
-            <ContentSP raw={contribution.raw} titleLevel={titleLevel - 2} />
-          </div>
-        </>
+        <ContentSP raw={contribution.raw} titleLevel={titleLevel - 2} />
       ) : (
         <DisplayContentContribution
           content={contribution.content}

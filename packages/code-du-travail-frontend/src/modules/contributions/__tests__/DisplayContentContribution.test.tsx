@@ -1,6 +1,13 @@
 import { render } from "@testing-library/react";
 import DisplayContentContribution from "../DisplayContentContribution";
 
+let count = 0;
+jest.mock("uuid", () => ({
+  v4: jest.fn(() => {
+    return "123" + count++;
+  }),
+}));
+
 describe("DisplayContentContribution", () => {
   describe("Headings", () => {
     it(`should replace span with class "title" and "sub-titles" with heading`, () => {

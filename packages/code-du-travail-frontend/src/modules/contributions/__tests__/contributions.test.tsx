@@ -1,13 +1,12 @@
-import { fireEvent, render, RenderResult } from "@testing-library/react";
+import { act, fireEvent, render, RenderResult } from "@testing-library/react";
 import React from "react";
 import { wait } from "@testing-library/user-event/dist/utils";
 
 import { ContributionLayout } from "../ContributionLayout";
 import { ui } from "./ui";
 import { ui as ccUi } from "../../convention-collective/__tests__/ui";
-import { ui as entrepriseUi } from "../../enterprise/EnterpriseAgreementSearch/__tests__/ui";
 import { Contribution } from "../type";
-import { searchAgreement } from "../../convention-collective/search";
+import { searchAgreement } from "../../convention-collective";
 import { sendEvent } from "../../utils";
 
 const contribution = {
@@ -116,11 +115,15 @@ describe("<ContributionLayout />", () => {
       );
       fireEvent.click(ccUi.radio.agreementSearchOption.get());
       expect(ui.generic.linkDisplayInfo.query()).toBeInTheDocument();
-      fireEvent.change(ccUi.searchByName.input.get(), {
-        target: { value: "16" },
+      act(() => {
+        fireEvent.change(ccUi.searchByName.input.get(), {
+          target: { value: "16" },
+        });
       });
       await wait();
-      fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC16.button.get());
+
+      fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC16.name.get());
+
       expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
       expect(ccUi.buttonDisplayInfo.query()).toHaveAttribute(
         "href",
@@ -170,9 +173,7 @@ describe("<ContributionLayout />", () => {
         target: { value: "1388" },
       });
       await wait();
-      fireEvent.click(
-        ccUi.searchByName.autocompleteLines.IDCC1388.button.get()
-      );
+      fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC1388.name.get());
       expect(ui.generic.linkDisplayInfo.query()).toBeInTheDocument();
       expect(ccUi.buttonDisplayInfo.query()).toHaveAttribute("href", "");
       expect(ccUi.warning.title.query()).toBeInTheDocument();
@@ -224,7 +225,7 @@ describe("<ContributionLayout />", () => {
         target: { value: "16" },
       });
       await wait();
-      fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC16.button.get());
+      fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC16.name.get());
       expect(ccUi.buttonDisplayInfo.query()).toHaveAttribute(
         "href",
         "/contribution/16-slug"
@@ -259,9 +260,7 @@ describe("<ContributionLayout />", () => {
         target: { value: "1388" },
       });
       await wait();
-      fireEvent.click(
-        ccUi.searchByName.autocompleteLines.IDCC1388.button.get()
-      );
+      fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC1388.name.get());
       expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
       expect(ccUi.buttonDisplayInfo.query()).not.toBeInTheDocument();
       expect(ccUi.warning.title.query()).toBeInTheDocument();
@@ -299,7 +298,7 @@ describe("<ContributionLayout />", () => {
         target: { value: "29" },
       });
       await wait();
-      fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC29.button.get());
+      fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC29.name.get());
       expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
       expect(ccUi.buttonDisplayInfo.query()).not.toBeInTheDocument();
       expect(ccUi.warning.title.query()).toBeInTheDocument();
