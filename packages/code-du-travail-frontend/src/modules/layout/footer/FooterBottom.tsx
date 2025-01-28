@@ -7,9 +7,9 @@ export const FooterBottom = () => (
   <div className={fr.cx("fr-footer__bottom")}>
     <ul className={fr.cx("fr-footer__bottom-list")}>
       <li className={fr.cx("fr-footer__bottom-item")}>
-        <a href="/mentions-legales" className={fr.cx("fr-footer__bottom-link")}>
+        <Link href="/accessibilite" className={fr.cx("fr-footer__bottom-link")}>
           Accessibilité : partiellement conforme
-        </a>
+        </Link>
       </li>
       <li className={fr.cx("fr-footer__bottom-item")}>
         <a href="/mentions-legales" className={fr.cx("fr-footer__bottom-link")}>
