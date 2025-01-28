@@ -363,7 +363,7 @@ exports[`<Footer /> should match snapshot 1`] = `
             >
               <a
                 class="fr-footer__bottom-link"
-                href="/mentions-legales"
+                href="/accessibilite"
               >
                 Accessibilité : partiellement conforme
               </a>

@@ -122,7 +122,9 @@ export const PrivacyPolicy = () => {
           Pour l’outil Matomo, vous pouvez décider de ne jamais être suivi, y
           compris anonymement&nbsp;:
         </p>
-        <TrackApproval />
+        <div className={fr.cx("fr-mb-2w")}>
+          <TrackApproval />
+        </div>
         <p>
           Pour aller plus loin, vous pouvez consulter les fiches proposées par
           la Commission Nationale de l’Informatique et des Libertés

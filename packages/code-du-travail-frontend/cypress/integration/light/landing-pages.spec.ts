@@ -12,9 +12,19 @@ describe("Landing pages", () => {
 
   it("je vois la page à propos", () => {
     cy.visit("/a-propos");
-
+    cy.findByRole("heading", { level: 1 }).should("have.text", "À propos");
     cy.contains("Qu’est-ce que le Code du travail numérique");
     cy.contains("Qui sommes-nous");
+  });
+
+  it("je vois la page déclaration d'accessibilité", () => {
+    cy.visit("/accessibilite");
+    cy.findByRole("heading", { level: 1 }).should(
+      "have.text",
+      "Déclaration d'accessibilité"
+    );
+    cy.contains("État de conformité");
+    cy.contains("[75%] des critères du RGAA version 4.1 sont respectés");
   });
 
   it("je vois la page droit du travail", () => {
