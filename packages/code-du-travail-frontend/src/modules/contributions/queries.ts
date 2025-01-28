@@ -4,8 +4,7 @@ import {
   DocumentElasticResult,
   fetchDocument,
   formatRelatedItems,
-  RawRelatedItem,
-  Source,
+  LinkedContent,
 } from "../documents";
 import { Contribution, ContributionElasticDocument } from "./type";
 
@@ -56,7 +55,7 @@ const formatContribution = (
     isNoCDT: contribution?.type === "generic-no-cdt",
     isFicheSP: "raw" in contribution,
     relatedItems: contribution.linkedContent
-      ? formatRelatedItems(contribution.linkedContent as RawRelatedItem[])
+      ? formatRelatedItems(contribution.linkedContent as LinkedContent[])
       : [],
   };
 };

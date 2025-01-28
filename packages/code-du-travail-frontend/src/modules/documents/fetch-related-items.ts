@@ -2,7 +2,7 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 
 import { nonNullable } from "@socialgouv/modeles-social";
-import { RawRelatedItem, RelatedItem, sources } from "./type";
+import { LinkedContent, RelatedItem, sources } from "./type";
 import {
   MAX_RELATED_ITEMS_ARTICLES,
   MAX_RELATED_ITEMS_MODELS_AND_TOOLS,
@@ -58,13 +58,13 @@ const getRelatedItemsBody = (
   };
 };
 
-const getUrl = (item: RawRelatedItem): string =>
+const getUrl = (item: LinkedContent): string =>
   item.source === SOURCES.EXTERNALS
     ? item.url!
     : `/${getRouteBySource(item.source)}/${item.slug}`;
 
 export const formatRelatedItems = (
-  items: RawRelatedItem[]
+  items: LinkedContent[]
 ): { items: RelatedItem[]; title: string }[] => {
   const formatted: RelatedItem[] = items.map((item) => ({
     url: getUrl(item),

@@ -22,7 +22,9 @@ export type RelatedItem = Pick<DocumentElastic, "title"> & {
   source: Source;
   url: string;
 };
-export type RawRelatedItem = Pick<DocumentElastic, "title"> & {
+
+// @TODO : utiliser LinkedContent dans cdtn-types une fois le package publié
+export type LinkedContent = Pick<DocumentElastic, "title"> & {
   source: Source;
   slug: string;
   url?: string;
