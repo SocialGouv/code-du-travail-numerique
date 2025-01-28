@@ -18,9 +18,12 @@ export const sources = [
 
 export type Source = (typeof sources)[number];
 
-export const isSource = (x: any): x is Source => sources.includes(x);
-
 export type RelatedItem = Pick<DocumentElastic, "title"> & {
   source: Source;
   url: string;
+};
+export type RawRelatedItem = Pick<DocumentElastic, "title"> & {
+  source: Source;
+  slug: string;
+  url?: string;
 };

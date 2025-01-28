@@ -2,7 +2,7 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 
 import { nonNullable } from "@socialgouv/modeles-social";
-import { RelatedItem, sources } from "./type";
+import { RawRelatedItem, RelatedItem, sources } from "./type";
 import {
   MAX_RELATED_ITEMS_ARTICLES,
   MAX_RELATED_ITEMS_MODELS_AND_TOOLS,
@@ -58,30 +58,16 @@ const getRelatedItemsBody = (
   };
 };
 
-export const fetchRelatedItems = async (
-  settings: RelatedItemSettings,
-  excludedSlug: string
-): Promise<{ items: RelatedItem[]; title: string }[]> => {
-  const searchBasedItems = await getSearchBasedItems(settings);
+const getUrl = (item: RawRelatedItem): string =>
+  item.source === SOURCES.EXTERNALS
+    ? item.url!
+    : `/${getRouteBySource(item.source)}/${item.slug}`;
 
-  const filteredItems = searchBasedItems
-    // avoid elements already visible within the item as fragments
-    .filter(
-      (item: { slug: string }) =>
-        !excludedSlug.startsWith(item.slug.split("#")[0])
-    )
-    .reduce((acc, related) => {
-      const key = related.source + related.slug;
-      if (!acc.has(key)) acc.set(key, related);
-      return acc;
-    }, new Map())
-    .values();
-
-  const formatted: RelatedItem[] = Array.from(filteredItems).map((item) => ({
-    url:
-      item.source === SOURCES.EXTERNALS
-        ? item.url
-        : `/${getRouteBySource(item.source)}/${item.slug}`,
+export const formatRelatedItems = (
+  items: RawRelatedItem[]
+): { items: RelatedItem[]; title: string }[] => {
+  const formatted: RelatedItem[] = items.map((item) => ({
+    url: getUrl(item),
     source: item.source,
     title: item.title,
   }));
@@ -97,4 +83,28 @@ export const fetchRelatedItems = async (
     { items: relatedOtherItems, title: "Modèles et outils liés" },
     { items: relatedArticleItems, title: "Articles liés" },
   ];
+};
+
+export const fetchRelatedItems = async (
+  settings: RelatedItemSettings,
+  excludedSlug: string
+): Promise<{ items: RelatedItem[]; title: string }[]> => {
+  const searchBasedItems = await getSearchBasedItems(settings);
+
+  const filteredItems: (RelatedItem & { slug: string })[] = Array.from(
+    searchBasedItems
+      // avoid elements already visible within the item as fragments
+      .filter(
+        (item: { slug: string }) =>
+          !excludedSlug.startsWith(item.slug.split("#")[0])
+      )
+      .reduce((acc, related) => {
+        const key = related.source + related.slug;
+        if (!acc.has(key)) acc.set(key, related);
+        return acc;
+      }, new Map())
+      .values()
+  );
+
+  return formatRelatedItems(filteredItems);
 };

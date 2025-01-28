@@ -1,7 +1,12 @@
-import * as Sentry from "@sentry/nextjs";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
-import { slugify, SOURCES } from "@socialgouv/cdtn-utils";
-import { DocumentElasticResult, fetchDocument, isSource } from "../documents";
+import { SOURCES } from "@socialgouv/cdtn-utils";
+import {
+  DocumentElasticResult,
+  fetchDocument,
+  formatRelatedItems,
+  RawRelatedItem,
+  Source,
+} from "../documents";
 import { Contribution, ContributionElasticDocument } from "./type";
 
 export const fetchContributions = async <
@@ -50,27 +55,9 @@ const formatContribution = (
     isGeneric: contribution.idcc === "0000",
     isNoCDT: contribution?.type === "generic-no-cdt",
     isFicheSP: "raw" in contribution,
-    relatedItems: [
-      {
-        title: "Articles liés",
-        items: contribution.linkedContent.reduce((arr, linked) => {
-          if (!isSource(linked.source)) {
-            Sentry.captureMessage(
-              `la source de ${JSON.stringify(linked)} est incorrecte`
-            );
-            return arr;
-          }
-          return [
-            ...arr,
-            {
-              title: linked.title,
-              url: `/${slugify(linked.source)}/${linked.slug}`,
-              source: linked.source,
-            },
-          ];
-        }, []),
-      },
-    ],
+    relatedItems: contribution.linkedContent
+      ? formatRelatedItems(contribution.linkedContent as RawRelatedItem[])
+      : [],
   };
 };
 
