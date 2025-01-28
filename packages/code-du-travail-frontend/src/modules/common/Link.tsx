@@ -14,6 +14,7 @@ const Link = ({ ...props }: Props): JSX.Element => {
   if (props.target === "_blank" && props.children) {
     props.title = `${props.title || props.children.toString()} - nouvelle fenêtre`;
   }
+
   return <BaseLink {...props} />;
 };
 
