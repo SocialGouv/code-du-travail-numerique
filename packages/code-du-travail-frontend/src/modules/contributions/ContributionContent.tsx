@@ -12,7 +12,6 @@ type Props = {
 };
 
 export const ContributionContent = ({ contribution, titleLevel }: Props) => {
-
   return (
     <section>
       {contribution.isFicheSP ? (
