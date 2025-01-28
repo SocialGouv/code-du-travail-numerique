@@ -9,9 +9,9 @@ import AgreementSearch from "../convention-collective/AgreementSearch.svg";
 import { AgreementSearchForm } from "../convention-collective/AgreementSearch/AgreementSearchForm";
 import { EnterpriseAgreement } from "../enterprise";
 import {
-  isAgreementValid,
   isAgreementSupported,
   isAgreementUnextended,
+  isAgreementValid,
 } from "./contributionUtils";
 import { Contribution } from "./type";
 import Link from "../common/Link";
@@ -80,56 +80,47 @@ export function ContributionGenericAgreementSearch({
       return <>Vous pouvez consulter les informations générales ci-dessous.</>;
   };
   return (
-    <>
-      <div className={`${fr.cx("fr-p-3w", "fr-mt-6w")} ${block}`}>
-        <div className={fr.cx("fr-grid-row")}>
-          <Image
-            priority
-            src={AgreementSearch}
-            alt="Personnalisez la réponse avec votre convention collective"
-            className={fr.cx("fr-unhidden-md", "fr-hidden")}
-          />
-          <p className={fr.cx("fr-h3", "fr-mt-1w")}>
-            Personnalisez la réponse avec votre convention collective
-          </p>
-        </div>
-        <div>
-          <AgreementSearchForm
-            onAgreementSelect={(agreement, mode) => {
-              onAgreementSelect(agreement, mode);
-              setSelectedAgreement(
-                isAgreementValid(contribution, agreement)
-                  ? agreement
-                  : undefined
-              );
-            }}
-            selectedAgreementAlert={selectedAgreementAlert}
-            description={
-              isNoCDT
-                ? "La convention collective est nécessaire pour obtenir une réponse car le code du travail ne prévoit rien sur ce sujet."
-                : "La réponse dépend de la convention collective à laquelle votre entreprise est rattachée. Veuillez renseigner votre situation afin d’obtenir une réponse adaptée."
-            }
-            defaultAgreement={defaultAgreement}
-          />
-          {((contribution.isNoCDT && isValid) || !contribution.isNoCDT) && (
-            <Button
-              className={fr.cx("fr-mt-2w")}
-              linkProps={{
-                href: isValid
-                  ? `/contribution/${(selectedAgreement ?? defaultAgreement)?.num}-${slug}`
-                  : "",
-                onClick: onDisplayClick,
-              }}
-            >
-              Afficher les informations
-            </Button>
-          )}
-        </div>
+    <div className={`${fr.cx("fr-p-3w", "fr-mt-6w")} ${block}`}>
+      <div className={fr.cx("fr-grid-row")}>
+        <Image
+          priority
+          src={AgreementSearch}
+          alt="Personnalisez la réponse avec votre convention collective"
+          className={fr.cx("fr-unhidden-md", "fr-hidden")}
+        />
+        <p className={fr.cx("fr-h3", "fr-mt-1w")}>
+          Personnalisez la réponse avec votre convention collective
+        </p>
       </div>
-    </>
+      <div>
+        <AgreementSearchForm
+          onAgreementSelect={(agreement, mode) => {
+            onAgreementSelect(agreement, mode);
+            setSelectedAgreement(
+              isAgreementValid(contribution, agreement) ? agreement : undefined
+            );
+          }}
+          selectedAgreementAlert={selectedAgreementAlert}
+          defaultAgreement={defaultAgreement}
+        />
+        {((contribution.isNoCDT && isValid) || !contribution.isNoCDT) && (
+          <Button
+            className={fr.cx("fr-mt-2w")}
+            linkProps={{
+              href: isValid
+                ? `/contribution/${(selectedAgreement ?? defaultAgreement)?.num}-${slug}`
+                : "",
+              onClick: onDisplayClick,
+            }}
+          >
+            Afficher les informations
+          </Button>
+        )}
+      </div>
+    </div>
   );
 }
 
 const block = css({
-  background: "var(--background-alt-blue-cumulus) !important",
+  background: "var(--background-alt-blue-cumulus)!",
 });

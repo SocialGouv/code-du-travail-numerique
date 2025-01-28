@@ -16,36 +16,32 @@ export function ContributionAgreementSelect({ contribution }: Props) {
   const { slug } = contribution;
 
   return (
-    <>
-      <div className={`${fr.cx("fr-p-2w", "fr-p-md-3w", "fr-mt-6w")} ${block}`}>
-        <p className={fr.cx("fr-h3", "fr-mt-1w")}>
-          Votre convention collective
-        </p>
-        <Card
-          title={`${contribution.ccnShortTitle} (IDCC ${contribution.idcc})`}
-          size="small"
-          titleAs="h2"
-          className={fr.cx("fr-mt-2w")}
-          classes={{
-            content: fr.cx("fr-p-2w"),
-            title: cardTitle,
-            start: fr.cx("fr-m-0"),
-            end: fr.cx("fr-p-0", "fr-m-0"),
-          }}
-        />
-        <Button
-          className={fr.cx("fr-mt-2w")}
-          linkProps={{
-            href: `/contribution/${removeCCNumberFromSlug(slug)}`,
-          }}
-          priority="secondary"
-          iconId="fr-icon-arrow-go-back-line"
-          iconPosition="right"
-        >
-          Modifier
-        </Button>
-      </div>
-    </>
+    <div className={`${fr.cx("fr-p-2w", "fr-p-md-3w", "fr-mt-6w")} ${block}`}>
+      <p className={fr.cx("fr-h3", "fr-mt-1w")}>Votre convention collective</p>
+      <Card
+        title={`${contribution.ccnShortTitle} (IDCC ${contribution.idcc})`}
+        size="small"
+        titleAs="h2"
+        className={fr.cx("fr-mt-2w")}
+        classes={{
+          content: fr.cx("fr-p-2w"),
+          title: cardTitle,
+          start: fr.cx("fr-m-0"),
+          end: fr.cx("fr-p-0", "fr-m-0"),
+        }}
+      />
+      <Button
+        className={fr.cx("fr-mt-2w")}
+        linkProps={{
+          href: `/contribution/${removeCCNumberFromSlug(slug)}`,
+        }}
+        priority="secondary"
+        iconId="fr-icon-arrow-go-back-line"
+        iconPosition="right"
+      >
+        Modifier
+      </Button>
+    </div>
   );
 }
 
@@ -54,5 +50,5 @@ const cardTitle = css({
 });
 
 const block = css({
-  background: "var(--background-alt-blue-cumulus) !important",
+  background: "var(--background-alt-blue-cumulus)!",
 });

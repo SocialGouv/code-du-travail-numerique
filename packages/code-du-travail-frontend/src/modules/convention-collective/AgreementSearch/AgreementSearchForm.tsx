@@ -1,5 +1,4 @@
 "use client";
-import { fr } from "@codegouvfr/react-dsfr";
 import { RadioButtons } from "@codegouvfr/react-dsfr/RadioButtons";
 import { ReactNode, useState } from "react";
 import { AgreementSearchInput } from "./AgreementSearchInput";
@@ -7,10 +6,8 @@ import {
   EnterpriseAgreement,
   EnterpriseAgreementSearchInput,
 } from "../../enterprise";
-import { useLocalStorageForAgreement } from "../../common/useLocalStorage";
 
 type Props = {
-  description?: string;
   onAgreementSelect?: (agreement?: EnterpriseAgreement, mode?: string) => void;
   selectedAgreementAlert?: (
     agreement?: EnterpriseAgreement
@@ -19,7 +16,6 @@ type Props = {
 };
 
 export const AgreementSearchForm = ({
-  description,
   onAgreementSelect,
   selectedAgreementAlert,
   defaultAgreement,
@@ -30,7 +26,6 @@ export const AgreementSearchForm = ({
 
   return (
     <>
-      {description && <p className={`${fr.cx("fr-mt-2w")}`}>{description}</p>}
       <RadioButtons
         legend="Quel est le nom de la convention collective applicable ?"
         options={[

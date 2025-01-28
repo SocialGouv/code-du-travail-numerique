@@ -25,54 +25,47 @@ export function ContributionAgreementContent({
 }: Props) {
   const { title, metas } = contribution;
   return (
-    <>
-      <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-my-6w")}>
-        <div
-          className={fr.cx(
-            "fr-col-12",
-            "fr-col-md-8",
-            "fr-mb-6w",
-            "fr-mb-md-0"
-          )}
-        >
-          <ContributionContent contribution={contribution} titleLevel={3} />
-          {contribution.references.length > 0 && (
-            <Accordion label="Références" className={fr.cx("fr-mt-6w")}>
-              <ListWithArrow
-                items={contribution.references.map(({ title, url }) => {
-                  if (!url) return <></>;
-                  return (
-                    <Link key={title} href={url} target="_blank">
-                      {title}
-                    </Link>
-                  );
-                })}
-              />
-            </Accordion>
-          )}
-          <p className={fr.cx("fr-my-2w")}>
-            Consultez les questions-réponses fréquentes pour la convention
-            collective{" "}
-            <Link href={`/convention-collective/${contribution.ccnSlug}`}>
-              {contribution.ccnShortTitle}
-            </Link>
-          </p>
-          {contribution.messageBlock && (
-            <div className={fr.cx("fr-alert", "fr-alert--info", "fr-my-6w")}>
-              <>
-                <div className={fr.cx("fr-h5")}>Attention</div>
-                <Html>{contribution.messageBlock}</Html>
-              </>
-            </div>
-          )}
-        </div>
-        <div className={fr.cx("fr-col-12", "fr-col-md-4")}>
-          {relatedItems && relatedItems[0].items.length > 0 && (
-            <RelatedItems relatedItems={relatedItems} />
-          )}
-          <Share title={title} metaDescription={metas.description} />
-        </div>
+    <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-my-6w")}>
+      <div
+        className={fr.cx("fr-col-12", "fr-col-md-8", "fr-mb-6w", "fr-mb-md-0")}
+      >
+        <ContributionContent contribution={contribution} titleLevel={3} />
+        {contribution.references.length > 0 && (
+          <Accordion label="Références" className={fr.cx("fr-mt-6w")}>
+            <ListWithArrow
+              items={contribution.references.map(({ title, url }) => {
+                if (!url) return <></>;
+                return (
+                  <Link key={title} href={url} target="_blank">
+                    {title}
+                  </Link>
+                );
+              })}
+            />
+          </Accordion>
+        )}
+        <p className={fr.cx("fr-my-2w")}>
+          Consultez les questions-réponses fréquentes pour la convention
+          collective{" "}
+          <Link href={`/convention-collective/${contribution.ccnSlug}`}>
+            {contribution.ccnShortTitle}
+          </Link>
+        </p>
+        {contribution.messageBlock && (
+          <div className={fr.cx("fr-alert", "fr-alert--info", "fr-my-6w")}>
+            <>
+              <div className={fr.cx("fr-h5")}>Attention</div>
+              <Html>{contribution.messageBlock}</Html>
+            </>
+          </div>
+        )}
       </div>
-    </>
+      <div className={fr.cx("fr-col-12", "fr-col-md-4")}>
+        {relatedItems && relatedItems[0].items.length > 0 && (
+          <RelatedItems relatedItems={relatedItems} />
+        )}
+        <Share title={title} metaDescription={metas.description} />
+      </div>
+    </div>
   );
 }

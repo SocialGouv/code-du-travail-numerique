@@ -67,48 +67,45 @@ export function ContributionGenericContent({
             "fr-col-md-8",
             "fr-mb-md-0",
             "fr-mt-6w",
-            displayContent ? "fr-unhidden" : "fr-hidden"
+            !displayContent && "fr-hidden"
           )}
+          id="cdt"
         >
-          <div id="cdt">
-            <p className={fr.cx("fr-h5")} ref={titleRef}>
-              Que dit le code du travail&nbsp;?
-            </p>
-            {alertText}
-            <ContributionContent contribution={contribution} titleLevel={2} />
-            {contribution.references.length && (
-              <Accordion label="Références" className={fr.cx("fr-mt-6w")}>
-                <ListWithArrow
-                  items={contribution.references.map(({ title, url }) => {
-                    return (
-                      <Link key={title} href={url} target="_blank">
-                        {title}
-                      </Link>
-                    );
-                  })}
-                />
-              </Accordion>
-            )}
-            {contribution.messageBlock && (
-              <div className={fr.cx("fr-alert", "fr-alert--info", "fr-mt-6w")}>
-                <div className={fr.cx("fr-h5")}>Attention</div>
-                <Html>{contribution.messageBlock}</Html>
-              </div>
-            )}
-          </div>
+          <p className={fr.cx("fr-h5")} ref={titleRef}>
+            Que dit le code du travail&nbsp;?
+          </p>
+          {alertText}
+          <ContributionContent contribution={contribution} titleLevel={2} />
+          {contribution.references.length && (
+            <Accordion label="Références" className={fr.cx("fr-mt-6w")}>
+              <ListWithArrow
+                items={contribution.references.map(({ title, url }) => {
+                  return (
+                    <Link key={title} href={url} target="_blank">
+                      {title}
+                    </Link>
+                  );
+                })}
+              />
+            </Accordion>
+          )}
+          {contribution.messageBlock && (
+            <div className={fr.cx("fr-alert", "fr-alert--info", "fr-mt-6w")}>
+              <div className={fr.cx("fr-h5")}>Attention</div>
+              <Html>{contribution.messageBlock}</Html>
+            </div>
+          )}
         </div>
         <div
           className={fr.cx(
             "fr-col-12",
             "fr-col-md-4",
             "fr-mt-6w",
-            displayContent ? "fr-unhidden" : "fr-hidden"
+            !displayContent && "fr-hidden"
           )}
         >
-          <div>
-            <RelatedItems relatedItems={relatedItems} />
-            <Share title={title} metaDescription={metas.description} />
-          </div>
+          <RelatedItems relatedItems={relatedItems} />
+          <Share title={title} metaDescription={metas.description} />
         </div>
       </div>
     </>
