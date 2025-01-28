@@ -1,10 +1,7 @@
 "use client";
 
 import { fr } from "@codegouvfr/react-dsfr";
-import { css } from "@styled-system/css";
 import { useIframeResizer } from "../../common/hooks";
-import { useIsDark } from "@codegouvfr/react-dsfr/useIsDark";
-import { useEffect } from "react";
 import { LogoLink } from "../common/LogoLink";
 
 export function WidgetWithIframeResizer({
@@ -14,12 +11,6 @@ export function WidgetWithIframeResizer({
   children: React.ReactNode;
   title: string;
 }) {
-  const { setIsDark } = useIsDark();
-
-  useEffect(() => {
-    setIsDark(false);
-  }, []);
-
   useIframeResizer();
 
   return (

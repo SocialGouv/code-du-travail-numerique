@@ -31,12 +31,13 @@ export const About = () => {
       <p>
         La décision de créer le Code du travail numérique a donc été prise et
         inscrite dans{" "}
-        <a
-          title="voir l'ordonnance du Code du travail numérique"
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=F175675A5AF37BD5745391E7C64C2FAB.tplgfr41s_3?cidTexte=JORFTEXT000035607388&idArticle=LEGIARTI000036762196&dateTexte=20191129&categorieLien=id#LEGIARTI000036762196"
         >
           les ordonnances sur le renforcement du dialogue social de 2017.
-        </a>
+        </Link>
       </p>
       <h3>À qui ce service s’adresse-t-il&nbsp;?</h3>
       <p>
@@ -83,23 +84,30 @@ export const About = () => {
       </p>
       <p>
         Le Code du travail numérique est un service public initié par{" "}
-        <a
-          title="le site du ministère du travail"
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://travail-emploi.gouv.fr/"
         >
           le ministère du Travail
-        </a>
+        </Link>
         , conçu et développé au sein de{" "}
-        <a
-          title="le site de la fabrique des Ministères sociaux"
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://www.fabrique.social.gouv.fr/"
         >
           la fabrique des Ministères sociaux
-        </a>{" "}
+        </Link>{" "}
         en partenariat avec la communauté{" "}
-        <a title="le site beta.gouv" href="https://beta.gouv.fr/">
+        <Link
+          title="le site beta.gouv"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://beta.gouv.fr/"
+        >
           beta.gouv.fr
-        </a>
+        </Link>
         .
       </p>
       <h3>Nos méthodes</h3>
@@ -113,12 +121,13 @@ export const About = () => {
         Le site sur lequel vous naviguez est en évolution continue et s’enrichit
         régulièrement de nouveaux contenus et de nouvelles fonctionnalités. Nous
         vous invitons à{" "}
-        <a
+        <Link
+          target="_blank"
           title="contactez nous par courriel"
           href="mailto:codedutravailnumerique@travail.gouv.fr"
         >
           nous contacter
-        </a>{" "}
+        </Link>{" "}
         si vous souhaitez nous faire part d’une proposition
         d’amélioration&nbsp;!
       </p>

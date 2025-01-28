@@ -121,99 +121,100 @@ export const Accessibilite = () => {
         <li>headings maps</li>
         <li>wcag color contrast checker</li>
         <li>
-          <a
+          <Link
             href="https://validator.w3.org"
-            title="Accéder au validateur html du w3c"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             Validateur w3c
-          </a>
+          </Link>
         </li>
       </ul>
       <h3>Pages du site ayant fait l’objet de la vérification de conformité</h3>
       <ol>
         <li>
           Page d&apos;accueil :{" "}
-          <a href="https://code.travail.gouv.fr/">
+          <Link href="https://code.travail.gouv.fr/">
             https://code.travail.gouv.fr/
-          </a>
+          </Link>
         </li>
         <li>
           Page mentions légales :{" "}
-          <a href="https://code.travail.gouv.fr/mentions-legales">
+          <Link href="https://code.travail.gouv.fr/mentions-legales">
             https://code.travail.gouv.fr/mentions-legales
-          </a>
+          </Link>
         </li>
         <li>
           Page droit du travail :{" "}
-          <a href="https://code.travail.gouv.fr/droit-du-travail">
+          <Link href="https://code.travail.gouv.fr/droit-du-travail">
             https://code.travail.gouv.fr/droit-du-travail
-          </a>
+          </Link>
         </li>
         <li>
           Page boîte à outils :{" "}
-          <a href="https://code.travail.gouv.fr/outils">
+          <Link href="https://code.travail.gouv.fr/outils">
             https://code.travail.gouv.fr/outils
-          </a>
+          </Link>
         </li>
         <li>
           Page service-public :{" "}
-          <a href="https://code.travail.gouv.fr/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie">
+          <Link href="https://code.travail.gouv.fr/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie">
             https://code.travail.gouv.fr/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie
-          </a>
+          </Link>
         </li>
         <li>
           Page information :{" "}
-          <a href="https://code.travail.gouv.fr/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-protocole-national">
+          <Link href="https://code.travail.gouv.fr/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-protocole-national">
             https://code.travail.gouv.fr/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-protocole-national
-          </a>
+          </Link>
         </li>
         <li>
           Page statistiques :{" "}
-          <a href="https://code.travail.gouv.fr/stats">
+          <Link href="https://code.travail.gouv.fr/stats">
             https://code.travail.gouv.fr/stats
-          </a>
+          </Link>
         </li>
         <li>
           Page thème :{" "}
-          <a href="https://code.travail.gouv.fr/themes/contrat-de-travail">
+          <Link href="https://code.travail.gouv.fr/themes/contrat-de-travail">
             https://code.travail.gouv.fr/themes/contrat-de-travail
-          </a>
+          </Link>
         </li>
         <li>
           Page recherche :{" "}
-          <a href="https://code.travail.gouv.fr/recherche?q=cong%C3%A9s+pay%C3%A9s">
+          <Link href="https://code.travail.gouv.fr/recherche?q=cong%C3%A9s+pay%C3%A9s">
             https://code.travail.gouv.fr/recherche?q=cong%C3%A9s+pay%C3%A9s
-          </a>
+          </Link>
         </li>
         <li>
           Page modèle de courrier :{" "}
-          <a href="https://code.travail.gouv.fr/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-a-linitiative-du-salarie">
+          <Link href="https://code.travail.gouv.fr/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-a-linitiative-du-salarie">
             https://code.travail.gouv.fr/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-a-linitiative-du-salarie
-          </a>
+          </Link>
         </li>
         <li>
           Page dossier :{" "}
-          <a href="https://code.travail.gouv.fr/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus">
+          <Link href="https://code.travail.gouv.fr/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus">
             https://code.travail.gouv.fr/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus
-          </a>
+          </Link>
         </li>
         <li>
           Page contribution :{" "}
-          <a href="https://code.travail.gouv.fr/contribution/les-conges-pour-evenements-familiaux">
+          <Link href="https://code.travail.gouv.fr/contribution/les-conges-pour-evenements-familiaux">
             https://code.travail.gouv.fr/contribution/les-conges-pour-evenements-familiaux
-          </a>
+          </Link>
         </li>
         <li>
           Page outil :{" "}
-          <a href="https://code.travail.gouv.fr/outils/indemnite-licenciement">
+          <Link href="https://code.travail.gouv.fr/outils/indemnite-licenciement">
             https://code.travail.gouv.fr/outils/indemnite-licenciement
-          </a>
+          </Link>
         </li>
         <li>
           Page glossaire :{" "}
-          <a href="https://code.travail.gouv.fr/glossaire">
+          <Link href="https://code.travail.gouv.fr/glossaire">
             https://code.travail.gouv.fr/glossaire
-          </a>
+          </Link>
         </li>
       </ol>
       <h2>Amélioration et contact</h2>

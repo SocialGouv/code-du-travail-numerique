@@ -4,9 +4,7 @@ import { getHtmlAttributes } from "@codegouvfr/react-dsfr/next-appdir/getHtmlAtt
 import Link from "../common/Link";
 import { MatomoAnalytics } from "./MatomoAnalytics";
 import { DefaultColorScheme } from "@codegouvfr/react-dsfr/next-appdir";
-import { StartDsfrSystem } from "./StartDsfrSystem";
 import { StartDsfrLight } from "./StartDsfrLight";
-import { StartDsfrDark } from "./StartDsfrDark";
 
 type Props = {
   children: React.ReactNode;
@@ -23,9 +21,7 @@ export default function DefaultLayout({
   return (
     <html {...getHtmlAttributes({ defaultColorScheme, lang })}>
       <head>
-        {defaultColorScheme === "light" && <StartDsfrLight />}
-        {defaultColorScheme === "dark" && <StartDsfrDark />}
-        {defaultColorScheme === "system" && <StartDsfrSystem />}
+        <StartDsfrLight />
         <DsfrHead
           Link={Link}
           preloadFonts={[

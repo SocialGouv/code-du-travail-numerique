@@ -1,9 +1,8 @@
 "use client";
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { useIframeResizer } from "../../common/hooks";
 import Link from "../common/Link";
-import { useIsDark } from "@codegouvfr/react-dsfr/useIsDark";
 import { LogoLink } from "../common/LogoLink";
 
 type Props = {
@@ -11,12 +10,6 @@ type Props = {
 };
 
 export const ContainerWidget = ({ children }: Props) => {
-  const { setIsDark } = useIsDark();
-
-  useEffect(() => {
-    setIsDark(false);
-  }, []);
-
   useIframeResizer();
   return (
     <>

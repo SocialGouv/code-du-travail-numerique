@@ -139,7 +139,9 @@ exports[`<Accessibilite /> should match snapshot 1`] = `
         <li>
           <a
             href="https://validator.w3.org"
-            title="Accéder au validateur html du w3c"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Validateur w3c - nouvelle fenêtre"
           >
             Validateur w3c
           </a>

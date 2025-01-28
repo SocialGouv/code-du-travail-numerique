@@ -40,7 +40,9 @@ exports[`<About /> should match snapshot 1`] = `
          
         <a
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=F175675A5AF37BD5745391E7C64C2FAB.tplgfr41s_3?cidTexte=JORFTEXT000035607388&idArticle=LEGIARTI000036762196&dateTexte=20191129&categorieLien=id#LEGIARTI000036762196"
-          title="voir l'ordonnance du Code du travail numérique"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="les ordonnances sur le renforcement du dialogue social de 2017. - nouvelle fenêtre"
         >
           les ordonnances sur le renforcement du dialogue social de 2017.
         </a>
@@ -95,7 +97,9 @@ exports[`<About /> should match snapshot 1`] = `
          
         <a
           href="https://travail-emploi.gouv.fr/"
-          title="le site du ministère du travail"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="le ministère du Travail - nouvelle fenêtre"
         >
           le ministère du Travail
         </a>
@@ -103,7 +107,9 @@ exports[`<About /> should match snapshot 1`] = `
          
         <a
           href="https://www.fabrique.social.gouv.fr/"
-          title="le site de la fabrique des Ministères sociaux"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="la fabrique des Ministères sociaux - nouvelle fenêtre"
         >
           la fabrique des Ministères sociaux
         </a>
@@ -112,7 +118,9 @@ exports[`<About /> should match snapshot 1`] = `
          
         <a
           href="https://beta.gouv.fr/"
-          title="le site beta.gouv"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="le site beta.gouv - nouvelle fenêtre"
         >
           beta.gouv.fr
         </a>
@@ -129,7 +137,8 @@ exports[`<About /> should match snapshot 1`] = `
          
         <a
           href="mailto:codedutravailnumerique@travail.gouv.fr"
-          title="contactez nous par courriel"
+          target="_blank"
+          title="contactez nous par courriel - nouvelle fenêtre"
         >
           nous contacter
         </a>
