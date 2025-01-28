@@ -274,9 +274,7 @@ export const EnterpriseAgreementSearchInput = ({
             }),
           }}
         />
-        <LocationSearchInput
-          onLocationChange={setLocation}
-          defaultValue={location}
+        <div
           className={fr.cx(
             "fr-col-12",
             "fr-col-md",
@@ -284,7 +282,12 @@ export const EnterpriseAgreementSearchInput = ({
             "fr-mt-2w",
             "fr-mt-md-0"
           )}
-        />
+        >
+          <LocationSearchInput
+            onLocationChange={setLocation}
+            defaultValue={location}
+          />
+        </div>
         <div
           className={`${fr.cx("fr-col-xl", getStateMargin())} ${ButtonContainer}`}
         >
