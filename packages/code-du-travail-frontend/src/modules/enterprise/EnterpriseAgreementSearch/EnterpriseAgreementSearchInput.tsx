@@ -364,9 +364,7 @@ export const EnterpriseAgreementSearchInput = ({
               linkProps={
                 !onAgreementSelect
                   ? {
-                      href: widgetMode
-                        ? `/widgets/convention-collective/entreprise/${enterprise.siren}${getQueries()}`
-                        : `/outils/convention-collective/entreprise/${enterprise.siren}${getQueries()}`,
+                      href: `/${widgetMode ? "widgets" : "outils"}/convention-collective/entreprise/${enterprise.siren}${getQueries()}`,
                       onClick: () => {
                         emitSelectEnterpriseEvent({
                           label: enterprise.label,

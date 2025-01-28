@@ -110,9 +110,7 @@ export const EnterpriseAgreementSelectionLink = ({
       <div className={fr.cx("fr-mt-2w")}>
         <Button
           linkProps={{
-            href: widgetMode
-              ? `/widgets/convention-collective?${searchParams?.toString()}`
-              : `/outils/convention-collective/entreprise?${searchParams?.toString()}`,
+            href: `/${widgetMode ? "widgets" : "outils"}/convention-collective/entreprise?${searchParams?.toString()}`,
           }}
           priority="secondary"
           iconId="fr-icon-arrow-left-line"
