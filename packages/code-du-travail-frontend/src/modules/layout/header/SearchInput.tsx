@@ -5,6 +5,11 @@ import { SUGGEST_MAX_RESULTS } from "../../../config";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import { useLayoutTracking } from "../tracking";
+import {
+  autocompleteListContainer,
+  isHighlighted,
+  suggestion,
+} from "../../common/Autocomplete";
 
 type Props = {
   id: string;
@@ -61,7 +66,7 @@ export const SearchInput = (props: Props) => {
       />
       <ul
         {...getMenuProps({
-          className: list,
+          className: `${autocompleteListContainer} ${list}`,
         })}
       >
         {isOpen &&
@@ -71,7 +76,7 @@ export const SearchInput = (props: Props) => {
                 item,
                 index,
                 className: `${fr.cx("fr-p-3v")} ${suggestion} ${
-                  highlightedIndex === index && suggestionHover
+                  highlightedIndex === index ? isHighlighted : ""
                 }`,
               })}
               key={`${item}${index}`}
@@ -83,21 +88,7 @@ export const SearchInput = (props: Props) => {
     </>
   );
 };
-
 const list = css({
-  pos: "absolute",
   top: "2.5rem",
-  w: "100%",
-  zIndex: 100,
-  bg: "var(--background-default-grey)",
-});
-
-const suggestion = css({
-  cursor: "pointer",
-  color: "var(--text-action-high-blue-france)",
   textAlign: "left",
-});
-
-const suggestionHover = css({
-  bg: "var(--background-default-grey-hover)",
 });
