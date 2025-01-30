@@ -8,7 +8,7 @@ import { FooterBottom } from "./FooterBottom";
 
 export const Footer = () => {
   return (
-    <footer role="contentinfo">
+    <footer>
       <NeedMoreInfo />
       <div className={fr.cx("fr-footer")}>
         <FooterTop />
