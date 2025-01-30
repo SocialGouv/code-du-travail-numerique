@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import React from "react";
+import React, { useRef } from "react";
 import { wait } from "@testing-library/user-event/dist/utils";
 import { searchEnterprises } from "../../enterprise/queries";
 import { sendEvent } from "../../utils";
@@ -25,6 +25,14 @@ jest.mock("next/navigation", () => ({
   useSearchParams: jest.fn(),
   usePathname: jest.fn(),
 }));
+
+jest.mock("react", () => {
+  const originReact = jest.requireActual("react");
+  return {
+    ...originReact,
+    useRef: jest.fn(() => ({ current: {} })),
+  };
+});
 
 const enterprise1CC = {
   activitePrincipale:
@@ -195,12 +203,13 @@ describe("<PageContribution />", () => {
     ).toBeInTheDocument();
   });
 
-  it("should track when selecting agreement 3239", async () => {
+  it("should track when selecting agreement 3239", () => {
     render(<AgreementSearchForm />);
     userAction = new UserAction();
     userAction.click(ui.radio.enterpriseSearchOption.get());
+    screen.debug();
     userAction.click(
-      enterpriseUi.enterpriseAgreementSearch.childminder.link.get()
+      enterpriseUi.enterpriseAgreementSearch.childminder.title.get()
     );
     expect(sendEvent).toHaveBeenCalledWith({
       action: "select_je_n_ai_pas_d_entreprise",

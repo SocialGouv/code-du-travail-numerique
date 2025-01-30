@@ -22,6 +22,14 @@ jest.mock("next/navigation", () => ({
   useSearchParams: jest.fn(),
 }));
 
+jest.mock("react", () => {
+  const originReact = jest.requireActual("react");
+  return {
+    ...originReact,
+    useRef: jest.fn(() => ({ current: {} })),
+  };
+});
+
 describe("EnterpriseAgreementSearchInput", () => {
   let rendering: RenderResult;
   const enterprise = {
