@@ -213,6 +213,7 @@ export const EnterpriseAgreementSearchInput = ({
         goBack={() => {
           setSelectedEnterprise(undefined);
           setSelectedAgreement(undefined);
+          window.scrollTo(0, 0);
         }}
         onAgreementSelect={(agreement) => {
           emitSelectEnterpriseEvent({
