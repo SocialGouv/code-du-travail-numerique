@@ -114,7 +114,10 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
       expect(sendEvent).toHaveBeenLastCalledWith({
         action: "Trouver sa convention collective",
         category: "enterprise_select",
-        name: JSON.stringify(enterprise),
+        name: JSON.stringify({
+          label: enterprise.label,
+          siren: enterprise.siren,
+        }),
       });
       userAction.click(ui.enterpriseAgreementSearch.buttonPrevious.get());
       expect(sendEvent).toHaveBeenCalledTimes(4);

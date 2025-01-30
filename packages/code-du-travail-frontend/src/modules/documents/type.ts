@@ -13,9 +13,19 @@ export const sources = [
   SOURCES.CONTRIBUTIONS,
   SOURCES.EXTERNALS,
   SOURCES.LABOUR_LAW,
+  SOURCES.SHEET_MT_PAGE,
 ] as const;
 
+export type Source = (typeof sources)[number];
+
 export type RelatedItem = Pick<DocumentElastic, "title"> & {
-  source: (typeof sources)[number];
+  source: Source;
   url: string;
+};
+
+// @TODO : utiliser LinkedContent dans cdtn-types une fois le package publié
+export type LinkedContent = Pick<DocumentElastic, "title"> & {
+  source: Source;
+  slug: string;
+  url?: string;
 };

@@ -20,6 +20,7 @@ export enum TrackingAgreementSearchAction {
   BACK_STEP_P1 = "back_step_cc_search_p1",
   BACK_STEP_P2 = "back_step_cc_search_p2",
   CLICK_NO_COMPANY = "click_je_n_ai_pas_d_entreprise",
+  SELECT_NO_COMPANY = "select_je_n_ai_pas_d_entreprise",
 }
 
 export const useAgreementSearchTracking = () => {
