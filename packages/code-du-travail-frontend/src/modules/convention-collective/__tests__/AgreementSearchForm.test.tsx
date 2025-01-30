@@ -26,14 +26,6 @@ jest.mock("next/navigation", () => ({
   usePathname: jest.fn(),
 }));
 
-jest.mock("react", () => {
-  const originReact = jest.requireActual("react");
-  return {
-    ...originReact,
-    useRef: jest.fn(() => ({ current: {} })),
-  };
-});
-
 const enterprise1CC = {
   activitePrincipale:
     "Location-bail de propriété intellectuelle et de produits similaires, à l’exception des œuvres soumises à copyright",

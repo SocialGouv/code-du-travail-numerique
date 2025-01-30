@@ -18,14 +18,6 @@ jest.mock("next/navigation", () => ({
   useSearchParams: jest.fn(),
 }));
 
-jest.mock("react", () => {
-  const originReact = jest.requireActual("react");
-  return {
-    ...originReact,
-    useRef: jest.fn(() => ({ current: {} })),
-  };
-});
-
 const defaultEnterprise = {
   activitePrincipale:
     "Location-bail de propriété intellectuelle et de produits similaires, à l’exception des œuvres soumises à copyright",

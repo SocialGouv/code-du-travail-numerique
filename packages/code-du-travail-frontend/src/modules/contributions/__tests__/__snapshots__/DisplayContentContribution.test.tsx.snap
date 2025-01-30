@@ -492,13 +492,13 @@ exports[`DisplayContentContribution Alerts should replace div with alert class i
     >
       Le contrat de mission (intérim) doit :
     </p>
-    <ul>
+    <ul
+      class="fr-pl-5v"
+    >
       <li
         class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"
       >
-        <p
-          class="fr-mb-0"
-        >
+        <p>
           Être
           <strong>
              écrit
@@ -513,9 +513,7 @@ exports[`DisplayContentContribution Alerts should replace div with alert class i
       <li
         class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"
       >
-        <p
-          class="fr-mb-0"
-        >
+        <p>
           Être 
           <strong>
             signé
@@ -530,28 +528,23 @@ exports[`DisplayContentContribution Alerts should replace div with alert class i
       <li
         class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"
       >
-        <p
-          class="fr-mb-0"
-        >
+        <p>
           Être établi 
           <strong>
             en plusieurs exemplaires
           </strong>
            ; c'est-à-dire autant d'exemplaires que de parties au contrat. Chaque partie au contrat aura un exemplaire.
         </p>
-        <br />
+        <p />
         <div
-          class="fr-alert fr-alert--info fr-alert--sm fr-mt-2w"
-          id="fr-alert-:rh:"
+          class="alert"
         >
-          <div>
-            <p>
-              <strong>
-                Attention : 
-              </strong>
-              En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.
-            </p>
-          </div>
+          <p>
+            <strong>
+              Attention : 
+            </strong>
+            En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.
+          </p>
         </div>
       </li>
     </ul>
@@ -720,11 +713,11 @@ exports[`DisplayContentContribution Tables should not change if thead is already
           colspan="1"
           rowspan="1"
         >
-          <ul>
+          <ul
+            class="fr-pl-5v"
+          >
             <li>
-              <p
-                class="fr-mb-0"
-              >
+              <p>
                 L’employeur et le salarié donnent par écrit ou par mail.
               </p>
             </li>
@@ -864,11 +857,11 @@ exports[`DisplayContentContribution Tables should replace td by th in thead 1`] 
           colspan="1"
           rowspan="1"
         >
-          <ul>
+          <ul
+            class="fr-pl-5v"
+          >
             <li>
-              <p
-                class="fr-mb-0"
-              >
+              <p>
                 L’employeur et le salarié donnent par écrit ou par mail.
               </p>
             </li>

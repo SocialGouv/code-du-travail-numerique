@@ -9,9 +9,15 @@ type Props = {
 
 export const EnterpriseAgreementSelectionDetail = ({ enterprise }: Props) => {
   const titleRef = useRef<HTMLParagraphElement>(null);
+  const scrollToTitle = () => {
+    setTimeout(() => {
+      titleRef?.current?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
   useEffect(() => {
-    titleRef.current?.scrollIntoView();
+    scrollToTitle();
   }, []);
+
   return (
     <>
       <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")} ref={titleRef}>
