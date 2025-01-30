@@ -261,6 +261,13 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
           // Disable trim on strong
           return <strong>{renderChildrenWithNoTrim(domNode)}</strong>;
         }
+        if (domNode.name === "ul") {
+          return (
+            <ul className={fr.cx("fr-pl-5v")}>
+              {renderChildrenWithNoTrim(domNode)}
+            </ul>
+          );
+        }
         if (domNode.name === "em") {
           // Disable trim on em
           return <em>{renderChildrenWithNoTrim(domNode)}</em>;
