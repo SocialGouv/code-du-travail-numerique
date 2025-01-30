@@ -183,6 +183,7 @@ export const EnterpriseAgreementSearchInput = ({
               priority="secondary"
               onClick={() => {
                 setSelectedAgreement(undefined);
+                window.scrollTo(0, 0);
                 if (
                   selectedEnterprise?.conventions.length &&
                   selectedEnterprise?.conventions.length < 2
