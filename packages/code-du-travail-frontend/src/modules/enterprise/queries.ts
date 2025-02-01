@@ -8,7 +8,7 @@ export type SearchParams = {
 };
 
 export const messageFetchSearchCcOrEnterprise =
-  "Ce service est momentanément indisponible. Dans le cas de l'utilisation d'un simulateur, vous pourrait tout de même poursuivre la simulation pour obtenir le résultat prévu par le code du travail en sélectionnant l'option \"Je ne souhaite pas renseigner ma convention collective (je passe l'étape)\"";
+  "Ce service est momentanément indisponible. Si vous utilisez un simulateur, vous pouvez tout de même poursuivre la simulation pour obtenir le résultat prévu par le Code du travail en sélectionnant l'option \"Je ne souhaite pas renseigner ma convention collective (je passe l'étape)\"";
 
 const siretSirenError =
   "Veuillez indiquer un numéro Siret (14 chiffres) ou Siren (9 chiffres) valide";

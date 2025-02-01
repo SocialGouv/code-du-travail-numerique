@@ -1,7 +1,7 @@
 import { HomeSearch } from "../Components";
-import { render, waitFor } from "@testing-library/react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 import React from "react";
-import { byTestId } from "testing-library-selector";
+import { byTestId, byLabelText } from "testing-library-selector";
 import { fetchSuggestResults } from "../../layout/header/fetchSuggestResults";
 import { useLayoutTracking } from "../../layout/tracking";
 import { UserAction } from "../../../common";
@@ -9,6 +9,23 @@ import { UserAction } from "../../../common";
 jest.mock("../../layout/header/fetchSuggestResults");
 jest.mock("../../layout/tracking");
 
+jest.mock("../../layout/header/fetchSuggestResults");
+jest.mock("../../layout/tracking");
+let onSearchSubmitHasBeenCalled = false;
+let redirectUrl;
+jest.mock("next/navigation", () => {
+  return {
+    redirect: jest.fn((url) => {
+      onSearchSubmitHasBeenCalled = true;
+      redirectUrl = url;
+    }),
+    useRouter: () => {
+      return {
+        push: jest.fn(),
+      };
+    },
+  };
+});
 describe("<HomeSearch />", () => {
   it("should show suggestions and send event tracking", async () => {
     const suggestions = [
@@ -30,14 +47,7 @@ describe("<HomeSearch />", () => {
       emitSuggestionEvent: emitSuggestionEventMock,
     });
 
-    let onSearchSubmitHasBeenCalled = false;
-    const { getByText } = render(
-      <HomeSearch
-        onSearchSubmit={() => {
-          onSearchSubmitHasBeenCalled = true;
-        }}
-      />
-    );
+    const { getByText } = render(<HomeSearch />);
     const userAction = new UserAction();
     userAction.setInput(byTestId("search-input").get(), "congés");
 
@@ -52,7 +62,9 @@ describe("<HomeSearch />", () => {
     expect(getByText("congés payés et maladie")).toBeInTheDocument();
 
     userAction.click(congesSansSolde);
+    fireEvent.submit(byTestId("search-input").get());
     expect(onSearchSubmitHasBeenCalled).toBeTruthy();
+    expect(redirectUrl).toEqual("/recherche?q=cong%C3%A9s%20sans%20solde");
     expect(emitSuggestionEventMock).toHaveBeenCalledWith(
       "congés",
       "congés sans solde",

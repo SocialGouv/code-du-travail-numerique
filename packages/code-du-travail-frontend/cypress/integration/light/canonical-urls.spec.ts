@@ -1,22 +1,22 @@
 describe("référencement", () => {
   it("vérification des balises canonical", () => {
     cy.visit("/");
-    cy.checkCanonical("/");
+    cy.canonicalUrlEqual("/");
 
     cy.visit("/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd");
-    cy.checkCanonical(
+    cy.canonicalUrlEqual(
       "/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd"
     );
 
     cy.visit("/contribution/1090-quelle-peut-etre-la-duree-maximale-dun-cdd");
-    cy.checkCanonical(
+    cy.canonicalUrlEqual(
       "/contribution/1090-quelle-peut-etre-la-duree-maximale-dun-cdd"
     );
 
     cy.visit(
       "/contribution/1090-quelle-peut-etre-la-duree-maximale-dun-cdd?queryParam=ab"
     );
-    cy.checkCanonical(
+    cy.canonicalUrlEqual(
       "/contribution/1090-quelle-peut-etre-la-duree-maximale-dun-cdd"
     );
   });

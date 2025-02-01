@@ -7,7 +7,7 @@ describe("Contributions", () => {
     cy.get("#fr-header-main-navigation")
       .contains("Vos fiches pratiques")
       .click();
-    cy.url().should("include", "/contribution");
+    cy.urlEqual("/contribution");
     cy.get("h1").should("have.text", "Vos fiches pratiques");
     cy.get("body").should(
       "contain",
@@ -19,10 +19,7 @@ describe("Contributions", () => {
       .should("contain", "Embauche et contrat de travail");
     cy.get("#content li").should("have.length", 42);
     cy.get("#content li").first().click();
-    cy.url().should(
-      "include",
-      "/contribution/la-periode-dessai-peut-elle-etre-renouvelee"
-    );
+    cy.urlEqual("/contribution/la-periode-dessai-peut-elle-etre-renouvelee");
   });
   it("je vois une page contribution", () => {
     cy.visit("/contribution/la-periode-dessai-peut-elle-etre-renouvelee");
@@ -31,15 +28,8 @@ describe("Contributions", () => {
       "La période d’essai peut-elle être renouvelée ?"
     );
 
-    cy.get("div > p > span")
-      .invoke("text")
-      .should("match", /Mis à jour le/);
-    cy.get("div > p > span")
-      .invoke("text")
-      .should("match", /\d\d\/\d\d\/\d\d\d\d/);
-
     cy.contains(
-      "Accéder aux informations générales sans renseigner ma convention collective"
+      "Afficher les informations sans sélectionner une convention collective"
     ).click();
     cy.get("body").should("contain", "Que dit le code du travail");
     cy.get("body").should(
@@ -48,18 +38,17 @@ describe("Contributions", () => {
     );
     cy.get("body").should("contain", "Références");
     cy.get("body").should("contain", "L1221-21");
-    cy.get("body").should("contain", "Pour aller plus loin");
   });
 
   it("je vois une page contribution pour une CC", () => {
     cy.visit("/contribution/675-la-periode-dessai-peut-elle-etre-renouvelee");
     cy.get("h1").should(
       "have.text",
-      "La période d’essai peut-elle être renouvelée ?"
+      "La période d’essai peut-elle être renouvelée ? Maisons à succursales de vente au détail d'habillement"
     );
     cy.get("h2").should(
       "contain",
-      "Votre convention collective est Maisons à succursales de vente au détail d'habillement (IDCC 0675)"
+      "Maisons à succursales de vente au détail d'habillement (IDCC 0675)"
     );
 
     cy.get("body").should(
@@ -68,16 +57,14 @@ describe("Contributions", () => {
     );
 
     cy.get("a")
-      .contains(
-        "la convention collective Maisons à succursales de vente au détail d'habillement"
-      )
+      .contains("Maisons à succursales de vente au détail d'habillement")
       .should(
         "have.attr",
         "href",
         "/convention-collective/675-maisons-a-succursales-de-vente-au-detail-dhabillement"
       );
-    cy.get("h2").should("contain", "Pour aller plus loin");
-    cy.get("h3").should(
+
+    cy.get("a").should(
       "contain",
       "Demande d’accord du salarié pour le renouvellement d’une période d’essai"
     );
@@ -89,8 +76,8 @@ describe("Contributions", () => {
     );
     cy.get("h1").should(
       "have.text",
-      "Combien de fois le contrat de travail peut-il être renouvelé ?"
+      "Combien de fois le contrat de travail peut-il être renouvelé ? Métallurgie"
     );
-    cy.get('[aria-expanded="true"]').find("h3").should("contain", "CDD");
+    cy.get('[aria-expanded="true"]').should("contain", "CDD");
   });
 });

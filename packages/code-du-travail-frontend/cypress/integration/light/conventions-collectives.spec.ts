@@ -1,31 +1,37 @@
 describe("Conventions collectives", () => {
   it("je vois la liste de toutes les cc", () => {
     cy.visit("/");
-    cy.findByRole("heading", { level: 1 })
-      .should("have.text", "Bienvenue sur le Code du travail numérique")
-      .click();
-    cy.get("#fr-header-main-navigation")
+    cy.findByRole("heading", { level: 1 }).should(
+      "have.text",
+      "Bienvenue sur le Code du travail numérique"
+    );
+
+    cy.get("#fr-header-main-navigation a")
       .contains("Votre convention collective")
       .click();
-    cy.url().should("include", "/convention-collective");
 
-    cy.findByRole("heading", { level: 1 })
-      .should("have.text", "Votre convention collective")
-      .click();
+    cy.urlEqual("/convention-collective");
+
+    cy.findByRole("heading", { level: 1 }).should(
+      "have.text",
+      "Votre convention collective"
+    );
     cy.get("body").should(
       "contain",
       "Les conventions collectives présentées sont les plus représentatives en termes de nombre de salariés"
     );
     cy.get("#content a").should("have.length", 49);
+
     cy.get("#content a").first().click();
-    cy.url().should(
-      "include",
+
+    cy.urlEqual(
       "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
     );
     cy.get('[data-accordion-component="Accordion"]')
       .eq(0)
       .find('[data-accordion-component="AccordionItemButton"]')
       .should("have.length", 6);
+
     cy.get('[data-accordion-component="Accordion"]')
       .eq(0)
       .find('[data-accordion-component="AccordionItemButton"]')
@@ -72,34 +78,37 @@ describe("Conventions collectives", () => {
       .find('[data-accordion-component="AccordionItemButton"]')
       .first()
       .click();
-    cy.get('[data-accordion-component="AccordionItem"] a').first().click();
-    cy.url().should(
-      "include",
-      "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
+    cy.get('[data-accordion-component="AccordionItem"] a')
+      .first()
+      .contains(
+        "Quelles sont les conditions d’indemnisation pendant le congé de maternité"
+      )
+      .click();
+    cy.urlEqual(
+      "/contribution/2941-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
     );
   });
 
   it("je suis redirigé vers la cc si je mets seulement l'idcc dans l'url", () => {
     cy.visit("/convention-collective/0029");
-    cy.url().should(
-      "include",
+    cy.urlEqual(
       "/convention-collective/29-hospitalisation-privee-etablissements-prives-dhospitalisation-de-soins-d"
     );
   });
 
   it("je suis redirigé vers la cc si je mets l'idcc en 4 chiffres", () => {
     cy.visit("/convention-collective/0650");
-    cy.url().should("include", "/convention-collective/3248-metallurgie");
+    cy.urlEqual("/convention-collective/3248-metallurgie");
   });
 
   it("je suis redirigé vers la cc si je mets l'idcc en 3 chiffres", () => {
     cy.visit("/convention-collective/650");
-    cy.url().should("include", "/convention-collective/3248-metallurgie");
+    cy.urlEqual("/convention-collective/3248-metallurgie");
   });
 
   it("je suis redirigé vers la cc si je mets l'idcc en 4 chiffres et deux zeros", () => {
     cy.visit("/convention-collective/0054");
-    cy.url().should("include", "/convention-collective/3248-metallurgie");
+    cy.urlEqual("/convention-collective/3248-metallurgie");
   });
 
   it("je ne dois pas être redirigé s'il n'y a pas de redirection", () => {

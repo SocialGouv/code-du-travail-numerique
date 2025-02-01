@@ -8,6 +8,7 @@ import servicesDeRenseignement from "../../../../data/services-de-renseignement.
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
+import Link from "../../../common/Link";
 
 type ServiceRenseignement = {
   name: string;
@@ -71,9 +72,9 @@ export function PopupContent() {
         }}
       />
       {result && (
-        <a className={fr.cx("fr-link")} href={result.url} target="_blank">
+        <Link className={fr.cx("fr-link")} href={result.url} target="_blank">
           {result.url}
-        </a>
+        </Link>
       )}
       {hasSearched && !result && (
         <p className={fr.cx("fr-error-text", "fr-text--md")}>

@@ -10,7 +10,7 @@ export const Footer = () => {
   return (
     <footer>
       <NeedMoreInfo />
-      <div className={fr.cx("fr-footer")} role="contentinfo">
+      <div className={fr.cx("fr-footer")}>
         <FooterTop />
         <div className={fr.cx("fr-container")}>
           <div className={fr.cx("fr-footer__body")}>

@@ -4,16 +4,17 @@ import Image from "next/image";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Input, { InputProps } from "@codegouvfr/react-dsfr/Input";
 import { useCombobox } from "downshift";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Spinner from "../Spinner.svg";
 import { css } from "@styled-system/css";
 import { redirect } from "next/navigation";
+import Link from "../Link";
 
 export type AutocompleteProps<K> = InputProps & {
   onChange?: (value: K | undefined) => void;
   onError?: (value: string) => void;
   onSearch?: (query: string, results: K[]) => void;
-  displayLabel: (item: K | null) => string;
+  displayLabel: (item: K | undefined) => string;
   search: (search: string) => Promise<K[]>;
   dataTestId?: string;
   lineAsLink?: (value: K) => string;
@@ -23,7 +24,6 @@ export type AutocompleteProps<K> = InputProps & {
 };
 
 export const Autocomplete = <K,>({
-  className,
   onChange,
   onSearch,
   onError,
@@ -35,18 +35,22 @@ export const Autocomplete = <K,>({
   state,
   stateRelatedMessage,
   hintText,
-  classes,
   dataTestId,
-  displayNoResult,
   defaultValue,
+  displayNoResult,
 }: AutocompleteProps<K>) => {
-  const [value, setValue] = useState<string>(
-    displayLabel(defaultValue ?? null)
-  );
+  const [value, setValue] = useState<string>(displayLabel(defaultValue));
   const [loading, setLoading] = useState(false);
   const [selectedResult, setSelectedResult] = useState<K | undefined>(
     defaultValue
   );
+  useEffect(() => {
+    if (defaultValue) {
+      setSelectedResult(defaultValue);
+      setValue(displayLabel(defaultValue));
+    }
+  }, [defaultValue]);
+  const [inputRef, setInputRef] = useState<HTMLInputElement | null>();
   const [suggestions, setSuggestions] = useState<K[]>([]);
   const {
     isOpen,
@@ -55,6 +59,7 @@ export const Autocomplete = <K,>({
     highlightedIndex,
     getItemProps,
   } = useCombobox({
+    defaultInputValue: displayLabel(defaultValue),
     items: suggestions,
     itemToString: displayLabel,
     selectedItem: selectedResult,
@@ -62,12 +67,13 @@ export const Autocomplete = <K,>({
       setSelectedResult(changes.selectedItem);
       setValue(changes.inputValue ?? "");
       if (onChange) onChange(changes.selectedItem);
-      if (lineAsLink) redirect(lineAsLink(changes.selectedItem));
+      if (lineAsLink && changes.selectedItem)
+        redirect(lineAsLink(changes.selectedItem));
     },
   });
   return (
     <>
-      <div className={`${autocompleteContainer} ${className}`}>
+      <div className={`${fr.cx("fr-input-group")}`}>
         <Input
           {...getInputProps({
             id: "location-search",
@@ -86,13 +92,16 @@ export const Autocomplete = <K,>({
                       if (onSearch) onSearch("", []);
                       setValue("");
                       setSuggestions([]);
+                      inputRef?.focus();
                     }}
                     priority="tertiary no outline"
                     title="Effacer la sélection"
                     type="button"
-                  />
+                  >
+                    <span className={"fr-sr-only"}>Effacer la sélection</span>
+                  </Button>
                 )}
-                {(loading || (lineAsLink && selectedResult)) && (
+                {loading && (
                   <Image
                     className={fr.cx("fr-mr-1v")}
                     priority
@@ -123,7 +132,7 @@ export const Autocomplete = <K,>({
                 onSearch?.(inputValue, results);
                 setSuggestions(results);
               } catch (error) {
-                onError?.(error);
+                onError?.(error.message);
                 setSuggestions([]);
               } finally {
                 setLoading(false);
@@ -131,13 +140,13 @@ export const Autocomplete = <K,>({
             },
             // @ts-ignore
             "data-testid": dataTestId,
+            ref: setInputRef,
           }}
           className={`${fr.cx("fr-mb-0")}`}
           hintText={hintText}
           label={label}
           state={state}
           stateRelatedMessage={stateRelatedMessage}
-          classes={classes}
         />
         <ul
           {...getMenuProps()}
@@ -146,44 +155,26 @@ export const Autocomplete = <K,>({
           {value.length > 1 &&
             (isOpen && suggestions.length
               ? suggestions.map((item, index) => (
-                  <>
-                    <li
-                      {...getItemProps({
-                        item,
-                        index,
-                        key: `${displayLabel(item)}${index}`,
-                      })}
-                      className={`${fr.cx("fr-sidemenu__item", "fr-p-0", "fr-grid-row")} ${autocompleteContainer}${highlightedIndex === index ? ` ${buttonActive}` : ""}`}
-                    >
-                      <Button
-                        {...(lineAsLink
-                          ? {
-                              linkProps: {
-                                href: lineAsLink(item),
-                              },
-                            }
-                          : {
-                              linkProps: undefined,
-                            })}
-                        priority="tertiary no outline"
-                        className={`${fr.cx("fr-col-12")} ${autocompleteButton}`}
-                      >
+                  <li
+                    {...getItemProps({
+                      item,
+                      index,
+                    })}
+                    key={`${displayLabel(item)}${index}`}
+                    className={`${fr.cx("fr-p-3v")} ${suggestion} ${highlightedIndex === index ? isHighlighted : ""}`}
+                  >
+                    {lineAsLink ? (
+                      <Link href={lineAsLink(item)} className={link}>
                         {displayLabel(item)}
-                      </Button>
-                    </li>
-                  </>
+                      </Link>
+                    ) : (
+                      <>{displayLabel(item)}</>
+                    )}
+                  </li>
                 ))
               : displayNoResult &&
                 !selectedResult && (
-                  <>
-                    <li
-                      className={`${fr.cx("fr-sidemenu__item", "fr-p-0", "fr-grid-row")} ${autocompleteContainer}`}
-                    >
-                      <span className={fr.cx("fr-py-1w", "fr-px-2w")}>
-                        Aucun résultat
-                      </span>
-                    </li>
-                  </>
+                  <li className={`${fr.cx("fr-p-3v")} }`}>Aucun résultat</li>
                 ))}
         </ul>
       </div>
@@ -191,23 +182,17 @@ export const Autocomplete = <K,>({
   );
 };
 
-const autocompleteContainer = css({
-  position: "relative",
-});
-
-const autocompleteListContainer = css({
+export const autocompleteListContainer = css({
   position: "absolute",
-  w: "calc(100% - 1rem)",
-  zIndex: 100,
+  w: "100%",
+  zIndex: 10,
   bg: "var(--background-default-grey)",
+  listStyleType: "none!",
 });
 
-const autocompleteButton = css({
-  textAlign: "left",
-});
-
-const buttonActive = css({
-  backgroundColor: "rgb(246, 246, 246)",
+export const suggestion = css({
+  cursor: "pointer",
+  color: "var(--text-action-high-blue-france)",
 });
 
 const addonBlock = css({
@@ -219,10 +204,19 @@ const addonBlock = css({
 
 const buttonClose = css({
   _before: {
-    width: "18px !important",
-    height: "18px !important",
+    width: "18px!",
+    height: "18px!",
   },
   _hover: {
-    backgroundColor: "unset !important",
+    backgroundColor: "unset!",
   },
+});
+
+export const isHighlighted = css({
+  bg: "var(--background-default-grey-hover)",
+  fontWeight: "bold",
+});
+
+const link = css({
+  backgroundImage: "none!",
 });

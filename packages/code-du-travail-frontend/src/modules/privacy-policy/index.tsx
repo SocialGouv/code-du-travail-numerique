@@ -63,7 +63,7 @@ export const PrivacyPolicy = () => {
           Vous êtes également en droit de saisir la Commission Nationale de
           l’Informatique et des Libertés pour toute réclamation à{" "}
           <Link
-            title="Adresser une réclamation (plainte) à la CNIL"
+            title="Utiliser l’adresse suivante pour adresser une réclamation (plainte) à la CNIL"
             target="_blank"
             href="https://www.cnil.fr/fr/cnil-direct/question/844"
           >
@@ -122,7 +122,9 @@ export const PrivacyPolicy = () => {
           Pour l’outil Matomo, vous pouvez décider de ne jamais être suivi, y
           compris anonymement&nbsp;:
         </p>
-        <TrackApproval />
+        <div className={fr.cx("fr-mb-2w")}>
+          <TrackApproval />
+        </div>
         <p>
           Pour aller plus loin, vous pouvez consulter les fiches proposées par
           la Commission Nationale de l’Informatique et des Libertés

@@ -6,19 +6,26 @@ import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { Card } from "@codegouvfr/react-dsfr/Card";
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import { css } from "@styled-system/css";
 
 import Spinner from "../../common/Spinner.svg";
 import { LocationSearchInput } from "../../Location/LocationSearchInput";
 import { searchEnterprises } from "../queries";
-import { Enterprise } from "../types";
+import { Enterprise, EnterpriseAgreement } from "../types";
 import { ApiGeoResult } from "../../Location/searchCities";
-import { CardTitleStyle, ButtonStyle } from "../../convention-collective/style";
+import { CardTitleStyle } from "../../convention-collective/style";
+import { EnterpriseAgreementSelectionForm } from "./EnterpriseAgreementSelectionForm";
+import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelectionDetail";
+import { getEnterpriseAgreements } from "./utils";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
 
 type Props = {
   widgetMode?: boolean;
+  onAgreementSelect?: (agreement: EnterpriseAgreement) => void;
+  selectedAgreementAlert?: (
+    agreement?: EnterpriseAgreement
+  ) => NonNullable<ReactNode> | undefined;
   defaultSearch?: string;
   defaultLocation?: ApiGeoResult;
 };
@@ -27,14 +34,21 @@ export const EnterpriseAgreementSearchInput = ({
   widgetMode = false,
   defaultSearch,
   defaultLocation,
+  onAgreementSelect,
+  selectedAgreementAlert,
 }: Props) => {
+  const [selectedAgreement, setSelectedAgreement] = useState<
+    EnterpriseAgreement | undefined
+  >();
   const [searchState, setSearchState] = useState<
     "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch" | "required"
   >("noSearch");
   const {
     emitEnterpriseAgreementSearchInputEvent,
     emitSelectEnterpriseEvent,
-    emitNoEnterpriseEvent,
+    emitNoEnterpriseClickEvent,
+    emitNoEnterpriseSelectEvent,
+    emitSelectEnterpriseAgreementEvent,
   } = useEnterpriseAgreementSearchTracking();
 
   const [search, setSearch] = useState<string | undefined>(defaultSearch);
@@ -43,7 +57,10 @@ export const EnterpriseAgreementSearchInput = ({
     defaultLocation
   );
   const [enterprises, setEnterprises] = useState<Enterprise[]>();
+  const [selectedEnterprise, setSelectedEnterprise] = useState<Enterprise>();
   const [error, setError] = useState("");
+  const resultRef = useRef<HTMLHeadingElement>(null);
+
   const getStateMessage = () => {
     switch (searchState) {
       case "notFoundSearch":
@@ -117,18 +134,107 @@ export const EnterpriseAgreementSearchInput = ({
       onSubmit();
     }
   }, [defaultSearch]);
+  useEffect(() => {
+    if (selectedEnterprise?.conventions?.length === 1) {
+      const [enterpriseAgreement] = getEnterpriseAgreements(
+        selectedEnterprise.conventions
+      );
+      setSelectedAgreement(enterpriseAgreement);
+    }
+  }, [selectedEnterprise]);
+  useEffect(() => {
+    resultRef.current?.focus();
+  }, [enterprises]);
+  if (
+    onAgreementSelect &&
+    selectedAgreement &&
+    (selectedEnterprise?.conventions?.length ?? 0) < 2
+  ) {
+    return (
+      <>
+        {selectedEnterprise && (
+          <EnterpriseAgreementSelectionDetail enterprise={selectedEnterprise} />
+        )}
+
+        <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
+          Vous avez sélectionné la convention collective
+        </p>
+        <div
+          className={fr.cx(
+            "fr-my-2w",
+            "fr-grid-row",
+            "fr-grid-row--middle",
+            "fr-grid-row--gutters"
+          )}
+        >
+          <Card
+            title={`${selectedAgreement.shortTitle} IDCC ${selectedAgreement.id}`}
+            size="small"
+            className={fr.cx("fr-col-10")}
+            classes={{
+              content: fr.cx("fr-py-1w"),
+              start: fr.cx("fr-m-0"),
+              end: fr.cx("fr-p-0", "fr-m-0"),
+            }}
+          />
+          <div className={fr.cx("fr-col")}>
+            <Button
+              iconId="fr-icon-arrow-go-back-fill"
+              priority="secondary"
+              onClick={() => {
+                setSelectedAgreement(undefined);
+                window.scrollTo(0, 0);
+                if (
+                  selectedEnterprise?.conventions.length &&
+                  selectedEnterprise?.conventions.length < 2
+                ) {
+                  setSelectedEnterprise(undefined);
+                }
+              }}
+            >
+              Modifier
+            </Button>
+          </div>
+        </div>
+
+        {selectedAgreement && selectedAgreementAlert?.(selectedAgreement) && (
+          <Alert
+            className={fr.cx("fr-mt-2w")}
+            title="Nous n’avons pas de réponse pour cette convention collective"
+            description={selectedAgreementAlert(selectedAgreement)}
+            severity="warning"
+          />
+        )}
+      </>
+    );
+  } else if (onAgreementSelect && selectedEnterprise) {
+    return (
+      <EnterpriseAgreementSelectionForm
+        enterprise={selectedEnterprise}
+        goBack={() => {
+          setSelectedEnterprise(undefined);
+          setSelectedAgreement(undefined);
+          window.scrollTo(0, 0);
+        }}
+        onAgreementSelect={(agreement) => {
+          emitSelectEnterpriseEvent({
+            label: selectedEnterprise.label,
+            siren: selectedEnterprise.siren,
+          });
+          if (onAgreementSelect) onAgreementSelect(agreement);
+          setSelectedAgreement(agreement);
+        }}
+      />
+    );
+  }
   return (
     <>
-      <h2 className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
-        Précisez votre entreprise
-      </h2>
+      <h2 className={fr.cx("fr-h4", "fr-my-2w")}>Précisez votre entreprise</h2>
       <form
         className={fr.cx(
           "fr-grid-row",
-          "fr-grid-row--top",
           "fr-grid-row--gutters",
           "fr-grid-row--bottom",
-          "fr-mt-2w",
           "fr-mb-0"
         )}
         onSubmit={async (event) => {
@@ -170,18 +276,20 @@ export const EnterpriseAgreementSearchInput = ({
             }),
           }}
         />
-        <LocationSearchInput
-          onLocationChange={setLocation}
-          defaultValue={location}
+        <div
           className={fr.cx(
             "fr-col-12",
-            "fr-col-xl",
             "fr-col-md",
             getStateMargin(),
             "fr-mt-2w",
             "fr-mt-md-0"
           )}
-        />
+        >
+          <LocationSearchInput
+            onLocationChange={setLocation}
+            defaultValue={location}
+          />
+        </div>
         <div
           className={`${fr.cx("fr-col-xl", getStateMargin())} ${ButtonContainer}`}
         >
@@ -189,7 +297,6 @@ export const EnterpriseAgreementSearchInput = ({
             type="submit"
             iconPosition="right"
             iconId="fr-icon-search-line"
-            className={`${ButtonStyle}`}
           >
             Rechercher
           </Button>
@@ -198,13 +305,18 @@ export const EnterpriseAgreementSearchInput = ({
 
       <div>
         <div className={fr.cx("fr-mt-2w")}>
-          {!!enterprises?.length && !loading && (
-            <p className={fr.cx("fr-h5")}>
+          {enterprises && enterprises.length > 0 && !loading && (
+            <h2
+              className={fr.cx("fr-h5")}
+              tabIndex={-1}
+              ref={resultRef}
+              data-testid={"result-title"}
+            >
               {enterprises.length}
               {enterprises.length > 1
                 ? " entreprises trouvées"
                 : " entreprise trouvée"}
-            </p>
+            </h2>
           )}
           {loading && (
             <div className={fr.cx("fr-grid-row")}>
@@ -218,7 +330,8 @@ export const EnterpriseAgreementSearchInput = ({
           )}
           {searchState === "notFoundSearch" && (
             <Alert
-              title={<>Vous ne trouvez pas votre entreprise&nbsp;?</>}
+              title="Vous ne trouvez pas votre entreprise&nbsp;?"
+              as="h2"
               description={
                 <>
                   <p>Il peut y avoir plusieurs explications à cela&nbsp;:</p>
@@ -250,14 +363,35 @@ export const EnterpriseAgreementSearchInput = ({
               className={fr.cx("fr-mt-2w")}
               border
               enlargeLink
-              linkProps={{
-                href: widgetMode
-                  ? `/widgets/convention-collective/entreprise/${enterprise.siren}${getQueries()}`
-                  : `/outils/convention-collective/entreprise/${enterprise.siren}${getQueries()}`,
-                onClick: () => {
-                  emitSelectEnterpriseEvent(enterprise);
-                },
-              }}
+              linkProps={
+                !onAgreementSelect
+                  ? {
+                      href: `/${widgetMode ? "widgets" : "outils"}/convention-collective/entreprise/${enterprise.siren}${getQueries()}`,
+                      onClick: () => {
+                        emitSelectEnterpriseEvent({
+                          label: enterprise.label,
+                          siren: enterprise.siren,
+                        });
+                      },
+                    }
+                  : {
+                      href: "",
+                      onClick: (ev) => {
+                        ev.preventDefault();
+                        setSelectedEnterprise(enterprise);
+                        if (enterprise.conventions.length === 1) {
+                          emitSelectEnterpriseAgreementEvent(
+                            `idcc${enterprise.conventions[0].id}`
+                          );
+                          emitSelectEnterpriseEvent({
+                            label: enterprise.label,
+                            siren: enterprise.siren,
+                          });
+                          onAgreementSelect(enterprise.conventions[0]);
+                        }
+                      },
+                    }
+              }
               desc={
                 enterprise.activitePrincipale ? (
                   <>Activité&nbsp;: {enterprise.activitePrincipale}</>
@@ -276,7 +410,9 @@ export const EnterpriseAgreementSearchInput = ({
           ))}
       </div>
       <div>
-        <p
+        <div
+          role="heading"
+          aria-level={2}
           className={fr.cx(
             "fr-text--bold",
             !loading ? "fr-mt-5w" : "fr-mt-2w",
@@ -285,17 +421,39 @@ export const EnterpriseAgreementSearchInput = ({
         >
           Votre recherche concerne les assistants maternels, employés de
           maison&nbsp;?
-        </p>
+        </div>
         <Card
           border
           enlargeLink
-          linkProps={{
-            href: `/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile`,
-            ...(widgetMode ? { target: "_blank" } : {}),
-            onClick: () => {
-              emitNoEnterpriseEvent();
-            },
-          }}
+          linkProps={
+            !onAgreementSelect
+              ? {
+                  href: `/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile`,
+                  ...(widgetMode ? { target: "_blank" } : {}),
+                  onClick: () => {
+                    emitNoEnterpriseClickEvent();
+                  },
+                }
+              : {
+                  href: "",
+                  onClick: (ev) => {
+                    ev.preventDefault();
+                    const assMatAgreement = {
+                      contributions: true,
+                      num: 3239,
+                      id: "3239",
+                      shortTitle:
+                        "Particuliers employeurs et emploi à domicile",
+                      slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
+                      title: "Particuliers employeurs et emploi à domicile",
+                      url: "/3239-particuliers-employeurs-et-emploi-a-domicile",
+                    };
+                    emitNoEnterpriseSelectEvent();
+                    setSelectedAgreement(assMatAgreement);
+                    onAgreementSelect(assMatAgreement);
+                  },
+                }
+          }
           title="Particuliers employeurs et emploi à domicile"
           desc="Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective"
           size="small"

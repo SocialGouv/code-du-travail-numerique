@@ -1,4 +1,9 @@
-import { byText, byLabelText, byRole } from "testing-library-selector";
+import {
+  byLabelText,
+  byRole,
+  byTestId,
+  byText,
+} from "testing-library-selector";
 
 export const ui = {
   enterpriseAgreementSearch: {
@@ -12,6 +17,7 @@ export const ui = {
         name: "Particuliers employeurs et emploi à domicile",
       }),
     },
+    resultTitle: byTestId("result-title"),
     resultLines: {
       carrefour: {
         title: byText("CARREFOUR PROXIMITE FRANCE (SHOPI-8 A HUIT)"),
@@ -19,10 +25,27 @@ export const ui = {
           name: "CARREFOUR PROXIMITE FRANCE (SHOPI-8 A HUIT)",
         }),
       },
+      bnp: {
+        title: byText("BNP PARIBAS (HELLO BANK!)"),
+        link: byRole("link", {
+          name: "BNP PARIBAS (HELLO BANK!)",
+        }),
+        ccList: {
+          idcc2120: byLabelText("Banque IDCC 2120"),
+          idcc9999: byLabelText("___Sans convention collective___ IDCC 9999"),
+          idcc2931: byLabelText("Activités de marchés financiers IDCC 2931"),
+        },
+      },
     },
     errorNotFound: {
       error: byText(/Aucune entreprise n'a été trouvée\./),
       info: byText(/Vous ne trouvez pas votre entreprise \?/),
+      notDeclared: byText(
+        /Aucune convention collective n'a été déclarée pour l'entreprise/
+      ),
+      notTreated: byText(
+        "Nous n'avons pas de réponse pour cette convention collective"
+      ),
     },
   },
   enterpriseAgreementSelection: {

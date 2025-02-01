@@ -1,13 +1,9 @@
 "use client";
 import { ApiGeoResult, searchCities } from "./searchCities";
-import {
-  Autocomplete,
-  AutocompleteProps,
-} from "../common/Autocomplete/Autocomplete";
+import { Autocomplete, AutocompleteProps } from "../common/Autocomplete";
 import { useState } from "react";
 
 type Props = Pick<AutocompleteProps<ApiGeoResult>, "classes"> & {
-  className?: string;
   onLocationChange?: (location: ApiGeoResult | undefined) => void;
   defaultValue?: ApiGeoResult;
 };
@@ -20,13 +16,11 @@ const detectIfPostalCode = (postalCodeOrName: string): boolean => {
 };
 
 export const LocationSearchInput = ({
-  className,
   onLocationChange,
-  classes,
   defaultValue,
 }: Props) => {
   const [postalCode, setPostalCode] = useState<string | undefined>();
-  function itemToString(item: ApiGeoResult | null) {
+  function itemToString(item: ApiGeoResult | undefined) {
     return item
       ? `${item.nom} (${postalCode ?? (item.codesPostaux.length > 1 ? item.codeDepartement : item.codesPostaux[0])})`
       : "";
@@ -34,7 +28,6 @@ export const LocationSearchInput = ({
 
   return (
     <Autocomplete<ApiGeoResult>
-      className={className}
       onChange={(value) => {
         if (onLocationChange) onLocationChange(value);
       }}
@@ -47,7 +40,6 @@ export const LocationSearchInput = ({
       label={<>Code postal ou Ville (optionnel)</>}
       state={"default"}
       dataTestId={"locationSearchAutocomplete"}
-      classes={classes}
       displayNoResult
       defaultValue={defaultValue}
     />
