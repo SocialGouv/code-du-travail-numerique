@@ -15,6 +15,7 @@ import {
 } from "./contributionUtils";
 import { Contribution } from "./type";
 import Link from "../common/Link";
+import BlueCard from "../common/BlueCard";
 
 type Props = {
   onAgreementSelect: (agreement?: EnterpriseAgreement, mode?: string) => void;
@@ -80,7 +81,7 @@ export function ContributionGenericAgreementSearch({
       return <>Vous pouvez consulter les informations générales ci-dessous.</>;
   };
   return (
-    <div className={`${fr.cx("fr-p-1w", "fr-p-md-3w", "fr-mt-6w")} ${block}`}>
+    <BlueCard>
       <div className={fr.cx("fr-grid-row")}>
         <Image
           priority
@@ -117,10 +118,6 @@ export function ContributionGenericAgreementSearch({
           </Button>
         )}
       </div>
-    </div>
+    </BlueCard>
   );
 }
-
-const block = css({
-  background: "var(--background-alt-blue-cumulus)!",
-});

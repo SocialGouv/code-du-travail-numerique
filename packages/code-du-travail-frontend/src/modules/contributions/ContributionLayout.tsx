@@ -6,14 +6,14 @@ import { sources } from "../documents";
 import { Feedback } from "../layout/feedback";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
 import { useContributionTracking } from "./tracking";
-import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
 import { isAgreementSupported, isAgreementValid } from "./contributionUtils";
 import { ContributionGenericContent } from "./ContributionGenericContent";
-import { ContributionAgreementSelect } from "./ContributionAgreemeentSelect";
 import { ContributionAgreementContent } from "./ContributionAgreementContent";
 import { Contribution } from "./type";
 import { useLocalStorageForAgreement } from "../common/useLocalStorage";
 import { SourceData } from "../layout/SourceData";
+import { ContributionAgreementSelect } from "./ContributionAgreemeentSelect";
+import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
 
 type Props = {
   contribution: Contribution;
@@ -132,6 +132,7 @@ export function ContributionLayout({ contribution }: Props) {
             relatedItems={relatedItems}
             displayGeneric={displayGeneric}
             alertText={
+              selectedAgreement &&
               !isAgreementSupported(contribution, selectedAgreement) && (
                 <p>
                   <strong>

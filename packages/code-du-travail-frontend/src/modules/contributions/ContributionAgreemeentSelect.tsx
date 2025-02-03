@@ -7,6 +7,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { removeCCNumberFromSlug } from "../common/utils";
 
 import { Contribution } from "./type";
+import BlueCard from "../common/BlueCard";
 
 type Props = {
   contribution: Contribution;
@@ -16,7 +17,7 @@ export function ContributionAgreementSelect({ contribution }: Props) {
   const { slug } = contribution;
 
   return (
-    <div className={`${fr.cx("fr-p-1w", "fr-p-md-3w", "fr-mt-6w")} ${block}`}>
+    <BlueCard>
       <p className={fr.cx("fr-h3", "fr-mt-1w")}>Votre convention collective</p>
       <Card
         title={`${contribution.ccnShortTitle} (IDCC ${contribution.idcc})`}
@@ -41,14 +42,10 @@ export function ContributionAgreementSelect({ contribution }: Props) {
       >
         Modifier
       </Button>
-    </div>
+    </BlueCard>
   );
 }
 
 const cardTitle = css({
   fontWeight: "normal!",
-});
-
-const block = css({
-  background: "var(--background-alt-blue-cumulus)!",
 });
