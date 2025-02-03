@@ -80,12 +80,12 @@ export function ContributionGenericAgreementSearch({
       return <>Vous pouvez consulter les informations générales ci-dessous.</>;
   };
   return (
-    <div className={`${fr.cx("fr-p-3w", "fr-mt-6w")} ${block}`}>
+    <div className={`${fr.cx("fr-p-1w", "fr-p-md-3w", "fr-mt-6w")} ${block}`}>
       <div className={fr.cx("fr-grid-row")}>
         <Image
           priority
           src={AgreementSearch}
-          alt="Personnalisez la réponse avec votre convention collective"
+          alt=""
           className={fr.cx("fr-unhidden-md", "fr-hidden")}
         />
         <p className={fr.cx("fr-h3", "fr-mt-1w")}>

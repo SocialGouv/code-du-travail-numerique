@@ -8,7 +8,7 @@ export const AgreementsIntro = () => {
   return (
     <>
       <div
-        className={`${fr.cx("fr-px-3w", "fr-pt-4w", "fr-pb-11v", "fr-mb-6w")} ${block}`}
+        className={`${fr.cx("fr-px-1w", "fr-px-md-3w", "fr-pt-4w", "fr-pb-11v", "fr-mb-6w")} ${block}`}
       >
         <div className={fr.cx("fr-mb-4v", "fr-grid-row")}>
           <Image

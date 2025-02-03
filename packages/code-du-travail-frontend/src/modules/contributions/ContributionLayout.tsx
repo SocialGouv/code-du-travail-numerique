@@ -48,7 +48,7 @@ export function ContributionLayout({ contribution }: Props) {
   } = useContributionTracking();
 
   return (
-    <div>
+    <>
       <Breadcrumb
         currentPageLabel={title}
         homeLinkProps={{
@@ -62,12 +62,10 @@ export function ContributionLayout({ contribution }: Props) {
       <h1 className={fr.cx("fr-mb-0")}>
         {title}
         {!isGeneric && (
-          <>
+          <span className={`fr-mt-4w ${h1Agreement}`}>
             {" "}
-            <span className={`fr-mt-4w ${h1Agreement}`}>
-              {contribution.ccnShortTitle}
-            </span>
-          </>
+            {contribution.ccnShortTitle}
+          </span>
         )}
       </h1>
       <p className={fr.cx("fr-mt-6w")}>
@@ -125,8 +123,7 @@ export function ContributionLayout({ contribution }: Props) {
       )}
       {isGeneric &&
         !isNoCDT &&
-        (!selectedAgreement ||
-          !isAgreementValid(contribution, selectedAgreement)) && (
+        !isAgreementValid(contribution, selectedAgreement) && (
           <ContributionGenericContent
             contribution={contribution}
             onDisplayClick={() => {
@@ -135,7 +132,6 @@ export function ContributionLayout({ contribution }: Props) {
             relatedItems={relatedItems}
             displayGeneric={displayGeneric}
             alertText={
-              selectedAgreement &&
               !isAgreementSupported(contribution, selectedAgreement) && (
                 <p>
                   <strong>
@@ -157,7 +153,7 @@ export function ContributionLayout({ contribution }: Props) {
       <div className={fr.cx("fr-col-12", "fr-col-md-8", "fr-my-6w")}>
         <Feedback />
       </div>
-    </div>
+    </>
   );
 }
 
