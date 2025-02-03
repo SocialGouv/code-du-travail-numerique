@@ -1,12 +1,13 @@
 import { render, screen } from "@testing-library/react";
-import React, { useRef } from "react";
+import React from "react";
 import { wait } from "@testing-library/user-event/dist/utils";
-import { searchEnterprises } from "../../enterprise/queries";
-import { sendEvent } from "../../../common/utils";
-import { ui } from "./ui";
-import { ui as enterpriseUi } from "../../enterprise/EnterpriseAgreementSearch/__tests__/ui";
+import { AgreementSearchForm } from "../AgreementSearchForm";
+import { searchEnterprises } from "../../../enterprise";
 import { UserAction } from "../../../../common";
-import { AgreementSearchForm } from "../../common/AgreementSearchForm/AgreementSearchForm";
+import { TrackingAgreementSearchAction } from "../../../convention-collective/tracking";
+import { ui } from "../../../convention-collective/__tests__/ui";
+import { ui as enterpriseUi } from "../../../enterprise/EnterpriseAgreementSearch/__tests__/ui";
+import { sendEvent } from "../../../utils";
 
 jest.mock("../../../common/utils", () => ({
   sendEvent: jest.fn(),
@@ -101,7 +102,11 @@ const enterpriseMoreCC = {
 describe("<PageContribution />", () => {
   let userAction: UserAction;
   it("should track when searching by enterprise name", async () => {
-    render(<AgreementSearchForm />);
+    render(
+      <AgreementSearchForm
+        trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+      />
+    );
     (searchEnterprises as jest.Mock).mockImplementation(() =>
       Promise.resolve([enterprise1CC])
     );
@@ -142,7 +147,11 @@ describe("<PageContribution />", () => {
     });
   });
   it("should track when searching by enterprise with multiple agreements", async () => {
-    render(<AgreementSearchForm />);
+    render(
+      <AgreementSearchForm
+        trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+      />
+    );
     (searchEnterprises as jest.Mock).mockImplementation(() =>
       Promise.resolve([enterpriseMoreCC])
     );
@@ -196,7 +205,11 @@ describe("<PageContribution />", () => {
   });
 
   it("should track when selecting agreement 3239", () => {
-    render(<AgreementSearchForm />);
+    render(
+      <AgreementSearchForm
+        trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+      />
+    );
     userAction = new UserAction();
     userAction.click(ui.radio.enterpriseSearchOption.get());
     screen.debug();

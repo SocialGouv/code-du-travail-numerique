@@ -20,32 +20,29 @@ export const useEnterpriseAgreementSearchTracking = () => {
     });
   };
 
-    const emitSelectEnterpriseEvent = (
-      action: string,
-      enterprise: {
-        label: string;
-        siren: string;
-      }
-    ) => {
-      sendEvent({
-        category: TrackingAgreementSearchCategory.CC_ENTERPRISE_SELECT,
-        action: action,
-        name: JSON.stringify(enterprise),
-        value: generateUUID(),
-      });
-    };
+  const emitSelectEnterpriseEvent = (
+    action: string,
+    enterprise: {
+      label: string;
+      siren: string;
+    }
+  ) => {
+    sendEvent({
+      category: TrackingAgreementSearchCategory.CC_ENTERPRISE_SELECT,
+      action: action,
+      name: JSON.stringify(enterprise),
+      value: generateUUID(),
+    });
+  };
 
-    const emitSelectEnterpriseAgreementEvent = (
-      idcc: string,
-      action: string
-    ) => {
-      sendEvent({
-        category: TrackingAgreementSearchCategory.CC_SELECT_P2,
-        action: action,
-        name: idcc,
-        value: generateUUID(),
-      });
-    };
+  const emitSelectEnterpriseAgreementEvent = (idcc: string, action: string) => {
+    sendEvent({
+      category: TrackingAgreementSearchCategory.CC_SELECT_P2,
+      action: action,
+      name: idcc,
+      value: generateUUID(),
+    });
+  };
 
   const emitPreviousEvent = () => {
     sendEvent({

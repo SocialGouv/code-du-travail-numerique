@@ -33,8 +33,9 @@ export function ContributionGenericAgreementSearch({
 }: Props) {
   const { slug } = contribution;
 
-  const [selectedAgreement, setSelectedAgreement] =
-    useState<EnterpriseAgreement>();
+  const [selectedAgreement, setSelectedAgreement] = useState<
+    EnterpriseAgreement | undefined
+  >(defaultAgreement);
   const [isValid, setIsValid] = useState(
     defaultAgreement ? isAgreementValid(contribution, defaultAgreement) : false
   );

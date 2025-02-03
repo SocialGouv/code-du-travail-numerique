@@ -4,6 +4,7 @@ import { searchEnterprises } from "../../queries";
 import { ui } from "./ui";
 import { sendEvent } from "../../../utils";
 import { wait } from "@testing-library/user-event/dist/utils";
+import { TrackingAgreementSearchAction } from "../../../convention-collective/tracking";
 
 jest.mock("../../../utils", () => ({
   sendEvent: jest.fn(),
@@ -44,7 +45,10 @@ describe("EnterpriseAgreementSearchInput", () => {
   describe("Form mode", () => {
     beforeEach(async () => {
       rendering = render(
-        <EnterpriseAgreementSearchInput onAgreementSelect={() => {}} />
+        <EnterpriseAgreementSearchInput
+          onAgreementSelect={() => {}}
+          trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+        />
       );
     });
     it("should navigate correctly with one treated agreement on enterprise", async () => {

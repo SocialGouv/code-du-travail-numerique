@@ -4,7 +4,10 @@ import { useContributionTracking } from "./tracking";
 import { isAgreementSupported, isAgreementValid } from "./contributionUtils";
 import { ContributionGenericContent } from "./ContributionGenericContent";
 import { Contribution } from "./type";
-import { useLocalStorageForAgreementOnPageLoad } from "../common/useLocalStorage";
+import {
+  useLocalStorageForAgreement,
+  useLocalStorageForAgreementOnPageLoad,
+} from "../common/useLocalStorage";
 import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
 
 type Props = {
@@ -17,7 +20,7 @@ export function ContributionGeneric({ contribution }: Props) {
 
   const [displayGeneric, setDisplayGeneric] = useState(false);
   const [selectedAgreement, setSelectedAgreement] =
-    useLocalStorageForAgreementOnPageLoad();
+    useLocalStorageForAgreement();
   const {
     emitAgreementTreatedEvent,
     emitAgreementUntreatedEvent,
