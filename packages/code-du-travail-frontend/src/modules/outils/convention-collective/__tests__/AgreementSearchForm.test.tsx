@@ -9,7 +9,7 @@ import { ui } from "../../../convention-collective/__tests__/ui";
 import { ui as enterpriseUi } from "../../../enterprise/EnterpriseAgreementSearch/__tests__/ui";
 import { sendEvent } from "../../../utils";
 
-jest.mock("../../../common/utils", () => ({
+jest.mock("../../../utils", () => ({
   sendEvent: jest.fn(),
 }));
 
@@ -17,7 +17,7 @@ jest.mock("uuid", () => ({
   v4: jest.fn(() => ""),
 }));
 
-jest.mock("../../enterprise/queries", () => ({
+jest.mock("../../../enterprise/queries", () => ({
   searchEnterprises: jest.fn(),
 }));
 
