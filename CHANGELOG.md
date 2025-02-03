@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.171.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.171.0...v4.171.1) (2025-01-23)
+
+
+### Bug Fixes
+
+* correction d'une faute dans l'erreur lors d'une recherche de CC ([#6432](https://github.com/SocialGouv/code-du-travail-numerique/issues/6432)) ([9651ec4](https://github.com/SocialGouv/code-du-travail-numerique/commit/9651ec4bfdeb05f6cd4dfa2d6a9f93672fd88b45))
+
+
+
+
+
 # [4.171.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.170.1...v4.171.0) (2025-01-21)
 
 
