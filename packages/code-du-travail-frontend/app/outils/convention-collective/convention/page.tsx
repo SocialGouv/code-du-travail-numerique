@@ -1,9 +1,7 @@
 import { DsfrLayout } from "../../../../src/modules/layout";
-import { DocumentElasticResult } from "../../../../src/modules/documents";
 import { fetchTool, FindAgreementLayout } from "../../../../src/modules/outils";
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../../src/modules/common/metas";
-import { ElasticTool } from "../../../../src/modules/outils/type";
 import { AgreementSearch } from "../../../../src/modules/convention-collective";
 import { agreementRelatedItems } from "../../../../src/modules/convention-collective/agreementRelatedItems";
 import { SITE_URL } from "../../../../src/config";

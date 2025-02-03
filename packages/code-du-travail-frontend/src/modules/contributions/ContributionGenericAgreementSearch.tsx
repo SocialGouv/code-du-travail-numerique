@@ -1,12 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
 import AgreementSearch from "../convention-collective/AgreementSearch.svg";
 
-import { AgreementSearchForm } from "../convention-collective/AgreementSearch/AgreementSearchForm";
+import { AgreementSearchForm } from "../outils/convention-collective/AgreementSearchForm";
 import { EnterpriseAgreement } from "../enterprise";
 import {
   isAgreementSupported,
@@ -22,6 +21,7 @@ type Props = {
   onDisplayClick: (ev: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   contribution: Contribution;
   defaultAgreement?: EnterpriseAgreement;
+  trackingActionName: string;
 };
 
 export function ContributionGenericAgreementSearch({
@@ -29,8 +29,9 @@ export function ContributionGenericAgreementSearch({
   onAgreementSelect,
   onDisplayClick,
   defaultAgreement,
+  trackingActionName,
 }: Props) {
-  const { slug, isNoCDT } = contribution;
+  const { slug } = contribution;
 
   const [selectedAgreement, setSelectedAgreement] =
     useState<EnterpriseAgreement>();
@@ -103,6 +104,7 @@ export function ContributionGenericAgreementSearch({
           }}
           selectedAgreementAlert={selectedAgreementAlert}
           defaultAgreement={defaultAgreement}
+          trackingActionName={trackingActionName}
         />
         {((contribution.isNoCDT && isValid) || !contribution.isNoCDT) && (
           <Button

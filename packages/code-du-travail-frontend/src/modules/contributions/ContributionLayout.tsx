@@ -117,6 +117,7 @@ export function ContributionLayout({ contribution }: Props) {
             }
           }}
           defaultAgreement={selectedAgreement}
+          trackingActionName={getTitle()}
         />
       ) : (
         <ContributionAgreementSelect contribution={contribution} />

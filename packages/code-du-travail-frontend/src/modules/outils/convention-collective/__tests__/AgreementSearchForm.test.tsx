@@ -2,13 +2,13 @@ import { render, screen } from "@testing-library/react";
 import React, { useRef } from "react";
 import { wait } from "@testing-library/user-event/dist/utils";
 import { searchEnterprises } from "../../enterprise/queries";
-import { sendEvent } from "../../utils";
+import { sendEvent } from "../../../common/utils";
 import { ui } from "./ui";
 import { ui as enterpriseUi } from "../../enterprise/EnterpriseAgreementSearch/__tests__/ui";
-import { UserAction } from "src/common";
-import { AgreementSearchForm } from "../AgreementSearch/AgreementSearchForm";
+import { UserAction } from "../../../../common";
+import { AgreementSearchForm } from "../../common/AgreementSearchForm/AgreementSearchForm";
 
-jest.mock("../../utils", () => ({
+jest.mock("../../../common/utils", () => ({
   sendEvent: jest.fn(),
 }));
 

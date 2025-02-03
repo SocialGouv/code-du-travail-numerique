@@ -50,7 +50,7 @@ export function ContributionGenericContent({
     <>
       {!displayContent && (
         <Button
-          className={fr.cx("fr-mt-2w", "fr-mb-6w")}
+          className={fr.cx("fr-mb-6w")}
           priority="tertiary no outline"
           onClick={() => {
             setDisplayContent(true);

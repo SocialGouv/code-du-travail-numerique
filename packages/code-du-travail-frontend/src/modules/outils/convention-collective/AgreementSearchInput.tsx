@@ -6,9 +6,9 @@ import { ReactNode, useState } from "react";
 
 import { Autocomplete } from "../../common/Autocomplete";
 import { Agreement } from "../../../outils/types";
-import { searchAgreement } from "../search";
+import { searchAgreement } from "../../convention-collective/search";
 import { EnterpriseAgreement } from "../../enterprise";
-import { useAgreementSearchTracking } from "../tracking";
+import { useAgreementSearchTracking } from "../../convention-collective/tracking";
 
 type Props = {
   onSearch?: (query: string, value?: Agreement[]) => void;
@@ -17,6 +17,7 @@ type Props = {
     agreement?: EnterpriseAgreement
   ) => NonNullable<ReactNode> | undefined;
   defaultAgreement?: EnterpriseAgreement;
+  trackingActionName: string;
 };
 
 export const AgreementSearchInput = ({
@@ -24,6 +25,7 @@ export const AgreementSearchInput = ({
   onAgreementSelect,
   selectedAgreementAlert,
   defaultAgreement,
+  trackingActionName,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState(defaultAgreement);
   const [searchState, setSearchState] = useState<
@@ -68,11 +70,10 @@ export const AgreementSearchInput = ({
         Précisez et sélectionnez votre convention collective
       </h2>
       <div className={fr.cx("fr-mt-2w")}>
-        <div className={fr.cx("fr-col-12", "fr-mb-0")}>
+        <div className={fr.cx("fr-col-12")}>
           <Autocomplete<EnterpriseAgreement>
             defaultValue={selectedAgreement}
             dataTestId="AgreementSearchAutocomplete"
-            className={fr.cx("fr-col-12", "fr-mb-0")}
             hintText="Ex : transport routier ou 1486"
             label={
               <>
@@ -86,7 +87,7 @@ export const AgreementSearchInput = ({
               setSelectedAgreement(agreement);
               if (onAgreementSelect) onAgreementSelect(agreement);
               if (agreement) {
-                emitSelectEvent(`idcc${agreement.id}`);
+                emitSelectEvent(`idcc${agreement.id}`, trackingActionName);
               }
             }}
             displayLabel={(item) => {

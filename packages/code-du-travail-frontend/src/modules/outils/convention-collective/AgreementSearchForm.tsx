@@ -13,12 +13,14 @@ type Props = {
     agreement?: EnterpriseAgreement
   ) => NonNullable<ReactNode> | undefined;
   defaultAgreement?: EnterpriseAgreement;
+  trackingActionName: string;
 };
 
 export const AgreementSearchForm = ({
   onAgreementSelect,
   selectedAgreementAlert,
   defaultAgreement,
+  trackingActionName,
 }: Props) => {
   const [mode, setMode] = useState<
     "agreementSearch" | "enterpriseSearch" | "noSearch" | undefined
@@ -57,6 +59,7 @@ export const AgreementSearchForm = ({
           }}
           selectedAgreementAlert={selectedAgreementAlert}
           defaultAgreement={defaultAgreement}
+          trackingActionName={trackingActionName}
         />
       )}
       {mode === "enterpriseSearch" && (
@@ -65,6 +68,7 @@ export const AgreementSearchForm = ({
             if (onAgreementSelect) onAgreementSelect(agreement, "p2");
           }}
           selectedAgreementAlert={selectedAgreementAlert}
+          trackingActionName={trackingActionName}
         />
       )}
     </>

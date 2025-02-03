@@ -13,12 +13,14 @@ type Props = {
   enterprise: Omit<Enterprise, "complements">;
   goBack: () => void;
   onAgreementSelect?: (agreement: EnterpriseAgreement) => void;
+  trackingActionName: string;
 };
 
 export const EnterpriseAgreementSelectionForm = ({
   enterprise,
   goBack,
   onAgreementSelect,
+  trackingActionName,
 }: Props) => {
   const { emitSelectEnterpriseAgreementEvent } =
     useEnterpriseAgreementSearchTracking();
@@ -57,7 +59,10 @@ export const EnterpriseAgreementSelectionForm = ({
                   onChange: () => {
                     onAgreementSelect(agreement);
                     setAgreement(agreement);
-                    emitSelectEnterpriseAgreementEvent(`idcc${agreement.id}`);
+                    emitSelectEnterpriseAgreementEvent(
+                      `idcc${agreement.id}`,
+                      trackingActionName
+                    );
                   },
                 }
               : {}),
