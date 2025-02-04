@@ -1,21 +1,20 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Link from "../../common/Link";
-import { css } from "@styled-system/css";
 import Image from "next/image";
 import AgreementSearch from "../AgreementSearch.svg";
+import BlueCard from "../../common/BlueCard";
 
 export const AgreementsIntro = () => {
   return (
     <>
-      <div
-        className={`${fr.cx("fr-px-3w", "fr-pt-4w", "fr-pb-11v", "fr-mb-6w")} ${block}`}
-      >
+      <BlueCard>
         <div className={fr.cx("fr-mb-4v", "fr-grid-row")}>
           <Image
             priority
             src={AgreementSearch}
             alt=""
-            className={`${fr.cx("fr-unhidden-md", "fr-hidden")} ${ImageContainer}`}
+            height={52}
+            className={`${fr.cx("fr-unhidden-md", "fr-hidden")}`}
           />
           <h2 className={fr.cx("fr-mt-md-2v")}>
             Trouver sa convention collective
@@ -69,15 +68,7 @@ export const AgreementsIntro = () => {
             Je cherche mon entreprise pour trouver ma convention collective
           </Link>
         </div>
-      </div>
+      </BlueCard>
     </>
   );
 };
-
-const block = css({
-  background: "var(--background-alt-blue-cumulus)",
-});
-
-const ImageContainer = css({
-  height: "52px",
-});

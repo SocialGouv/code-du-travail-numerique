@@ -1,11 +1,12 @@
 import { render, screen } from "@testing-library/react";
-import React, { useRef } from "react";
+import React from "react";
 import { wait } from "@testing-library/user-event/dist/utils";
-import { searchEnterprises } from "../../enterprise/queries";
-import { sendEvent } from "../../utils";
+import { searchEnterprises } from "../../enterprise";
+import { UserAction } from "../../../common";
+import { TrackingAgreementSearchAction } from "../tracking";
 import { ui } from "./ui";
 import { ui as enterpriseUi } from "../../enterprise/EnterpriseAgreementSearch/__tests__/ui";
-import { UserAction } from "src/common";
+import { sendEvent } from "../../utils";
 import { AgreementSearchForm } from "../AgreementSearch/AgreementSearchForm";
 
 jest.mock("../../utils", () => ({
@@ -101,7 +102,12 @@ const enterpriseMoreCC = {
 describe("<PageContribution />", () => {
   let userAction: UserAction;
   it("should track when searching by enterprise name", async () => {
-    render(<AgreementSearchForm />);
+    render(
+      <AgreementSearchForm
+        trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+        onAgreementSelect={() => {}}
+      />
+    );
     (searchEnterprises as jest.Mock).mockImplementation(() =>
       Promise.resolve([enterprise1CC])
     );
@@ -142,7 +148,12 @@ describe("<PageContribution />", () => {
     });
   });
   it("should track when searching by enterprise with multiple agreements", async () => {
-    render(<AgreementSearchForm />);
+    render(
+      <AgreementSearchForm
+        trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+        onAgreementSelect={() => {}}
+      />
+    );
     (searchEnterprises as jest.Mock).mockImplementation(() =>
       Promise.resolve([enterpriseMoreCC])
     );
@@ -196,7 +207,12 @@ describe("<PageContribution />", () => {
   });
 
   it("should track when selecting agreement 3239", () => {
-    render(<AgreementSearchForm />);
+    render(
+      <AgreementSearchForm
+        trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+        onAgreementSelect={() => {}}
+      />
+    );
     userAction = new UserAction();
     userAction.click(ui.radio.enterpriseSearchOption.get());
     screen.debug();

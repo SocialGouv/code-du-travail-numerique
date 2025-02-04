@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.172.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.171.1...v4.172.0) (2025-02-03)
+
+
+### Bug Fixes
+
+* **autocomplete:** réutilisation du composant autocomplete sur la home, accentuation du contraste quand on parcours les suggestions au clavier ([#6429](https://github.com/SocialGouv/code-du-travail-numerique/issues/6429)) ([e968432](https://github.com/SocialGouv/code-du-travail-numerique/commit/e968432b0c3987f24bc7edabdf61e952be085180))
+* **autocomplete:** réutilisation du composant autocomplete sur la home, accentuation du contraste quand on parcours les suggestions au clavier ([#6429](https://github.com/SocialGouv/code-du-travail-numerique/issues/6429)) ([6364fc2](https://github.com/SocialGouv/code-du-travail-numerique/commit/6364fc20e3e5a6466e7ef40a7f063909c2f66bae))
+
+
+### Features
+
+* **A propos:** migration au DSFR des pages A propos et Déclaration d'accessibilité ([#6440](https://github.com/SocialGouv/code-du-travail-numerique/issues/6440)) ([aacfbb9](https://github.com/SocialGouv/code-du-travail-numerique/commit/aacfbb94a6e66e28159f3a6de7b57a04c3d31faa))
+* **A propos:** migration au DSFR des pages A propos et Déclaration d'accessibilité ([#6440](https://github.com/SocialGouv/code-du-travail-numerique/issues/6440)) ([a53f878](https://github.com/SocialGouv/code-du-travail-numerique/commit/a53f878a108d7f799ed627657c76100a5f8872dc))
+* **contribution:** passage au DSFR ([#6428](https://github.com/SocialGouv/code-du-travail-numerique/issues/6428)) ([423d249](https://github.com/SocialGouv/code-du-travail-numerique/commit/423d249be4abb6db04fc66fa7ba75026bae70cd4)), closes [#6096](https://github.com/SocialGouv/code-du-travail-numerique/issues/6096) [#6099](https://github.com/SocialGouv/code-du-travail-numerique/issues/6099) [#6094](https://github.com/SocialGouv/code-du-travail-numerique/issues/6094)
+* **contribution:** passage au DSFR ([#6428](https://github.com/SocialGouv/code-du-travail-numerique/issues/6428)) ([04ed765](https://github.com/SocialGouv/code-du-travail-numerique/commit/04ed765428a53741ea61d123cb84e24f12942712)), closes [#6096](https://github.com/SocialGouv/code-du-travail-numerique/issues/6096) [#6099](https://github.com/SocialGouv/code-du-travail-numerique/issues/6099) [#6094](https://github.com/SocialGouv/code-du-travail-numerique/issues/6094)
+
+
+
+
+
 ## [4.171.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.171.0...v4.171.1) (2025-01-23)
 
 

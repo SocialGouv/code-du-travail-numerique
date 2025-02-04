@@ -24,10 +24,10 @@ export enum TrackingAgreementSearchAction {
 }
 
 export const useAgreementSearchTracking = () => {
-  const emitAgreementSearchInputEvent = (query: string) => {
+  const emitAgreementSearchInputEvent = (query: string, action: string) => {
     sendEvent({
       category: TrackingAgreementSearchCategory.CC_SEARCH,
-      action: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
+      action: action,
       name: JSON.stringify({ query }),
       value: generateUUID(),
     });
@@ -59,10 +59,10 @@ export const useAgreementSearchTracking = () => {
     });
   };
 
-  const emitSelectEvent = (idcc: string) => {
+  const emitSelectEvent = (idcc: string, action: string) => {
     sendEvent({
       category: TrackingAgreementSearchCategory.CC_SELECT_P1,
-      action: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
+      action: action,
       name: idcc,
       value: generateUUID(),
     });

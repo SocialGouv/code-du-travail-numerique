@@ -1,12 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
 import AgreementSearch from "../convention-collective/AgreementSearch.svg";
 
-import { AgreementSearchForm } from "../convention-collective/AgreementSearch/AgreementSearchForm";
 import { EnterpriseAgreement } from "../enterprise";
 import {
   isAgreementSupported,
@@ -15,32 +13,30 @@ import {
 } from "./contributionUtils";
 import { Contribution } from "./type";
 import Link from "../common/Link";
+import BlueCard from "../common/BlueCard";
+import { AgreementSearchForm } from "../convention-collective/AgreementSearch/AgreementSearchForm";
 
 type Props = {
-  onAgreementSelect: (agreement?: EnterpriseAgreement, mode?: string) => void;
+  onAgreementSelect: (agreement?: EnterpriseAgreement) => void;
   onDisplayClick: (ev: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   contribution: Contribution;
-  defaultAgreement?: EnterpriseAgreement;
+  selectedAgreement?: EnterpriseAgreement;
+  trackingActionName: string;
 };
 
 export function ContributionGenericAgreementSearch({
   contribution,
   onAgreementSelect,
   onDisplayClick,
-  defaultAgreement,
+  selectedAgreement,
+  trackingActionName,
 }: Props) {
-  const { slug, isNoCDT } = contribution;
-
-  const [selectedAgreement, setSelectedAgreement] =
-    useState<EnterpriseAgreement>();
-  const [isValid, setIsValid] = useState(
-    defaultAgreement ? isAgreementValid(contribution, defaultAgreement) : false
-  );
+  const { slug } = contribution;
+  const [isValid, setIsValid] = useState(false);
   useEffect(() => {
-    setIsValid(
-      isAgreementValid(contribution, selectedAgreement ?? defaultAgreement)
-    );
-  }, [selectedAgreement, defaultAgreement]);
+    setIsValid(isAgreementValid(contribution, selectedAgreement));
+  }, [selectedAgreement]);
+
   const selectedAgreementAlert = (agreement: EnterpriseAgreement) => {
     const isSupported = isAgreementSupported(contribution, agreement);
     const isUnextended = isAgreementUnextended(contribution, agreement);
@@ -80,12 +76,12 @@ export function ContributionGenericAgreementSearch({
       return <>Vous pouvez consulter les informations générales ci-dessous.</>;
   };
   return (
-    <div className={`${fr.cx("fr-p-3w", "fr-mt-6w")} ${block}`}>
+    <BlueCard>
       <div className={fr.cx("fr-grid-row")}>
         <Image
           priority
           src={AgreementSearch}
-          alt="Personnalisez la réponse avec votre convention collective"
+          alt=""
           className={fr.cx("fr-unhidden-md", "fr-hidden")}
         />
         <p className={fr.cx("fr-h3", "fr-mt-1w")}>
@@ -94,22 +90,19 @@ export function ContributionGenericAgreementSearch({
       </div>
       <div>
         <AgreementSearchForm
-          onAgreementSelect={(agreement, mode) => {
-            onAgreementSelect(agreement, mode);
-            setSelectedAgreement(
-              isAgreementValid(contribution, agreement) ? agreement : undefined
-            );
-          }}
+          onAgreementSelect={onAgreementSelect}
           selectedAgreementAlert={selectedAgreementAlert}
-          defaultAgreement={defaultAgreement}
+          defaultAgreement={selectedAgreement}
+          trackingActionName={trackingActionName}
         />
         {((contribution.isNoCDT && isValid) || !contribution.isNoCDT) && (
           <Button
             className={fr.cx("fr-mt-2w")}
             linkProps={{
-              href: isValid
-                ? `/contribution/${(selectedAgreement ?? defaultAgreement)?.num}-${slug}`
-                : "",
+              href:
+                isValid && selectedAgreement
+                  ? `/contribution/${selectedAgreement?.num}-${slug}`
+                  : "",
               onClick: onDisplayClick,
             }}
           >
@@ -117,10 +110,6 @@ export function ContributionGenericAgreementSearch({
           </Button>
         )}
       </div>
-    </div>
+    </BlueCard>
   );
 }
-
-const block = css({
-  background: "var(--background-alt-blue-cumulus)!",
-});

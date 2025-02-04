@@ -1,28 +1,41 @@
 "use client";
 import { RadioButtons } from "@codegouvfr/react-dsfr/RadioButtons";
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { AgreementSearchInput } from "./AgreementSearchInput";
+
+import { useContributionTracking } from "../../contributions/tracking";
 import {
   EnterpriseAgreement,
   EnterpriseAgreementSearchInput,
 } from "../../enterprise";
+import { AgreementRoute } from "../../../outils/common/type/WizardType";
 
 type Props = {
-  onAgreementSelect?: (agreement?: EnterpriseAgreement, mode?: string) => void;
+  onAgreementSelect: (agreement?: EnterpriseAgreement) => void;
   selectedAgreementAlert?: (
     agreement?: EnterpriseAgreement
   ) => NonNullable<ReactNode> | undefined;
   defaultAgreement?: EnterpriseAgreement;
+  trackingActionName: string;
 };
 
 export const AgreementSearchForm = ({
   onAgreementSelect,
   selectedAgreementAlert,
   defaultAgreement,
+  trackingActionName,
 }: Props) => {
-  const [mode, setMode] = useState<
-    "agreementSearch" | "enterpriseSearch" | "noSearch" | undefined
-  >(!!defaultAgreement ? "agreementSearch" : undefined);
+  const [selectedRoute, setSelectedRoute] = useState<
+    AgreementRoute | undefined
+  >();
+
+  useEffect(() => {
+    if (defaultAgreement && !selectedRoute) {
+      setSelectedRoute("agreement");
+    }
+  }, [defaultAgreement]);
+
+  const { emitClickP1, emitClickP2 } = useContributionTracking();
 
   return (
     <>
@@ -33,38 +46,42 @@ export const AgreementSearchForm = ({
             label:
               "Je sais quelle est ma convention collective et je la saisis.",
             nativeInputProps: {
-              checked: mode === "agreementSearch",
-              onChange: () => setMode("agreementSearch"),
+              checked: selectedRoute === "agreement",
+              onChange: () => setSelectedRoute("agreement"),
             },
           },
           {
             label:
               "Je cherche mon entreprise pour trouver ma convention collective.",
             nativeInputProps: {
-              checked: mode === "enterpriseSearch",
+              checked: selectedRoute === "enterprise",
               onChange: () => {
-                if (onAgreementSelect) onAgreementSelect();
-                setMode("enterpriseSearch");
+                onAgreementSelect();
+                setSelectedRoute("enterprise");
               },
             },
           },
         ]}
       />
-      {mode === "agreementSearch" && (
+      {selectedRoute === "agreement" && (
         <AgreementSearchInput
           onAgreementSelect={(agreement) => {
-            if (onAgreementSelect) onAgreementSelect(agreement, "p1");
+            emitClickP1(trackingActionName);
+            onAgreementSelect(agreement);
           }}
           selectedAgreementAlert={selectedAgreementAlert}
           defaultAgreement={defaultAgreement}
+          trackingActionName={trackingActionName}
         />
       )}
-      {mode === "enterpriseSearch" && (
+      {selectedRoute === "enterprise" && (
         <EnterpriseAgreementSearchInput
           onAgreementSelect={(agreement) => {
-            if (onAgreementSelect) onAgreementSelect(agreement, "p2");
+            emitClickP2(trackingActionName);
+            onAgreementSelect(agreement);
           }}
           selectedAgreementAlert={selectedAgreementAlert}
+          trackingActionName={trackingActionName}
         />
       )}
     </>

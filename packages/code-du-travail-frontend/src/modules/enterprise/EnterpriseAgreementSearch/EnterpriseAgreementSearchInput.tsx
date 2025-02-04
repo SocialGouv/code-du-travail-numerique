@@ -28,6 +28,7 @@ type Props = {
   ) => NonNullable<ReactNode> | undefined;
   defaultSearch?: string;
   defaultLocation?: ApiGeoResult;
+  trackingActionName: string;
 };
 
 export const EnterpriseAgreementSearchInput = ({
@@ -36,6 +37,7 @@ export const EnterpriseAgreementSearchInput = ({
   defaultLocation,
   onAgreementSelect,
   selectedAgreementAlert,
+  trackingActionName,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState<
     EnterpriseAgreement | undefined
@@ -109,7 +111,11 @@ export const EnterpriseAgreementSearchInput = ({
       setSearchState("required");
       return;
     }
-    emitEnterpriseAgreementSearchInputEvent(search, location);
+    emitEnterpriseAgreementSearchInputEvent(
+      trackingActionName,
+      search,
+      location
+    );
     setLoading(true);
     try {
       const result = await searchEnterprises({
@@ -217,13 +223,14 @@ export const EnterpriseAgreementSearchInput = ({
           window.scrollTo(0, 0);
         }}
         onAgreementSelect={(agreement) => {
-          emitSelectEnterpriseEvent({
+          emitSelectEnterpriseEvent(trackingActionName, {
             label: selectedEnterprise.label,
             siren: selectedEnterprise.siren,
           });
           if (onAgreementSelect) onAgreementSelect(agreement);
           setSelectedAgreement(agreement);
         }}
+        trackingActionName={trackingActionName}
       />
     );
   }
@@ -357,9 +364,9 @@ export const EnterpriseAgreementSearchInput = ({
         </div>
         {!!enterprises?.length &&
           !loading &&
-          enterprises?.map((enterprise) => (
+          enterprises?.map((enterprise, index) => (
             <Card
-              key={enterprise.label}
+              key={enterprise.label + index}
               className={fr.cx("fr-mt-2w")}
               border
               enlargeLink
@@ -368,7 +375,7 @@ export const EnterpriseAgreementSearchInput = ({
                   ? {
                       href: `/${widgetMode ? "widgets" : "outils"}/convention-collective/entreprise/${enterprise.siren}${getQueries()}`,
                       onClick: () => {
-                        emitSelectEnterpriseEvent({
+                        emitSelectEnterpriseEvent(trackingActionName, {
                           label: enterprise.label,
                           siren: enterprise.siren,
                         });
@@ -381,9 +388,10 @@ export const EnterpriseAgreementSearchInput = ({
                         setSelectedEnterprise(enterprise);
                         if (enterprise.conventions.length === 1) {
                           emitSelectEnterpriseAgreementEvent(
-                            `idcc${enterprise.conventions[0].id}`
+                            `idcc${enterprise.conventions[0].num}`,
+                            trackingActionName
                           );
-                          emitSelectEnterpriseEvent({
+                          emitSelectEnterpriseEvent(trackingActionName, {
                             label: enterprise.label,
                             siren: enterprise.siren,
                           });
