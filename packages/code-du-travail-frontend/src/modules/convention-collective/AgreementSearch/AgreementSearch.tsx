@@ -3,7 +3,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { useState } from "react";
 
 import Button from "@codegouvfr/react-dsfr/Button";
-import { AgreementSearchInput } from "../../outils/convention-collective/AgreementSearchInput";
+import { AgreementSearchInput } from "./AgreementSearchInput";
 import {
   TrackingAgreementSearchAction,
   useAgreementSearchTracking,

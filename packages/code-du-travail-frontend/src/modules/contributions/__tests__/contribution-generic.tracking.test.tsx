@@ -6,7 +6,7 @@ import { ui as ccUi } from "../../convention-collective/__tests__/ui";
 import { byText } from "testing-library-selector";
 import { ContributionGeneric } from "../ContributionGeneric";
 import { Contribution } from "../type";
-import { searchEnterprises } from "../../enterprise";
+import { searchEnterprises } from "../../enterprise/queries";
 
 beforeEach(() => {
   localStorage.clear();
@@ -28,7 +28,7 @@ jest.mock("next/navigation", () => ({
 jest.mock("../../convention-collective/search", () => ({
   searchAgreement: jest.fn(),
 }));
-jest.mock("../../enterprise", () => ({
+jest.mock("../../enterprise/queries", () => ({
   searchEnterprises: jest.fn(),
 }));
 
@@ -226,42 +226,50 @@ describe("<ContributionGeneric />", () => {
       );
     });
     expect(
-      byText(/Vous avez sélectionné l'entreprise/).query()
+      byText(/Vous avez sélectionné la convention collective/).query()
     ).toBeInTheDocument();
-    fireEvent.click(
-      byText(
-        "Commerce de détail et de gros à prédominance alimentaire (IDCC 2216)"
-      ).get()
-    );
+
     expect(sendEvent).toHaveBeenCalledTimes(5);
     // @ts-ignore
     expect(sendEvent.mock.calls).toEqual([
       [
-        [
-          "trackEvent",
-          "enterprise_search",
-          "/contribution/my-contrib",
-          '{"query":"carrefour"}',
-        ],
+        {
+          action: "/contribution/my-contrib",
+          category: "enterprise_search",
+          name: '{"query":"carrefour"}',
+          value: "",
+        },
       ],
       [
-        [
-          "trackEvent",
-          "cc_search_type_of_users",
-          "click_p2",
-          "/contribution/my-contrib",
-        ],
+        {
+          action: "/contribution/my-contrib",
+          category: "cc_select_p2",
+          name: "idcc2216",
+          value: "",
+        },
       ],
       [
-        [
-          "trackEvent",
-          "enterprise_select",
-          "/contribution/my-contrib",
-          '{"label":"CARREFOUR HYPERMARCHES","siren":"451321335"}',
-        ],
+        {
+          action: "/contribution/my-contrib",
+          category: "enterprise_select",
+          name: '{"label":"CARREFOUR PROXIMITE FRANCE (SHOPI-8 A HUIT)","siren":"345130488"}',
+          value: "",
+        },
       ],
-      [["trackEvent", "cc_select_p2", "/contribution/my-contrib", "idcc2216"]],
-      [["trackEvent", "outil", "cc_select_non_traitée", 2216]],
+      [
+        {
+          action: "click_p2",
+          category: "cc_search_type_of_users",
+          name: "/contribution/my-contrib",
+        },
+      ],
+      [
+        {
+          action: "cc_select_non_traitée",
+          category: "outil",
+          name: 2216,
+        },
+      ],
     ]);
   });
   it("afficher les infos - sans CC", async () => {

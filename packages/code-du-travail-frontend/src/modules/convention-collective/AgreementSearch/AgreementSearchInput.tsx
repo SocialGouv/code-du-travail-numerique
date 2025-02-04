@@ -6,9 +6,9 @@ import { ReactNode, useState } from "react";
 
 import { Autocomplete } from "../../common/Autocomplete";
 import { Agreement } from "../../../outils/types";
-import { searchAgreement } from "../../convention-collective/search";
+import { searchAgreement } from "../search";
 import { EnterpriseAgreement } from "../../enterprise";
-import { useAgreementSearchTracking } from "../../convention-collective/tracking";
+import { useAgreementSearchTracking } from "../tracking";
 
 type Props = {
   onSearch?: (query: string, value?: Agreement[]) => void;

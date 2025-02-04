@@ -14,7 +14,7 @@ import {
 import { Contribution } from "./type";
 import Link from "../common/Link";
 import BlueCard from "../common/BlueCard";
-import { AgreementSearchForm } from "../outils/convention-collective/AgreementSearchForm";
+import { AgreementSearchForm } from "../convention-collective/AgreementSearch/AgreementSearchForm";
 
 type Props = {
   onAgreementSelect: (agreement?: EnterpriseAgreement) => void;
@@ -33,10 +33,11 @@ export function ContributionGenericAgreementSearch({
 }: Props) {
   const { slug } = contribution;
 
-  const [selectedAgreement, setSelectedAgreement] = useState<
-    EnterpriseAgreement | undefined
-  >(defaultAgreement);
-  const [isValid, setIsValid] = useState<boolean>();
+  const [selectedAgreement, setSelectedAgreement] =
+    useState<EnterpriseAgreement>();
+  const [isValid, setIsValid] = useState(
+    defaultAgreement ? isAgreementValid(contribution, defaultAgreement) : false
+  );
   useEffect(() => {
     setIsValid(
       isAgreementValid(contribution, selectedAgreement ?? defaultAgreement)

@@ -1,15 +1,15 @@
 import { render, screen } from "@testing-library/react";
 import React from "react";
 import { wait } from "@testing-library/user-event/dist/utils";
-import { AgreementSearchForm } from "../AgreementSearchForm";
-import { searchEnterprises } from "../../../enterprise";
-import { UserAction } from "../../../../common";
-import { TrackingAgreementSearchAction } from "../../../convention-collective/tracking";
-import { ui } from "../../../convention-collective/__tests__/ui";
-import { ui as enterpriseUi } from "../../../enterprise/EnterpriseAgreementSearch/__tests__/ui";
-import { sendEvent } from "../../../utils";
+import { searchEnterprises } from "../../enterprise";
+import { UserAction } from "../../../common";
+import { TrackingAgreementSearchAction } from "../tracking";
+import { ui } from "./ui";
+import { ui as enterpriseUi } from "../../enterprise/EnterpriseAgreementSearch/__tests__/ui";
+import { sendEvent } from "../../utils";
+import { AgreementSearchForm } from "../AgreementSearch/AgreementSearchForm";
 
-jest.mock("../../../utils", () => ({
+jest.mock("../../utils", () => ({
   sendEvent: jest.fn(),
 }));
 
@@ -17,7 +17,7 @@ jest.mock("uuid", () => ({
   v4: jest.fn(() => ""),
 }));
 
-jest.mock("../../../enterprise/queries", () => ({
+jest.mock("../../enterprise/queries", () => ({
   searchEnterprises: jest.fn(),
 }));
 
@@ -105,6 +105,7 @@ describe("<PageContribution />", () => {
     render(
       <AgreementSearchForm
         trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+        onAgreementSelect={() => {}}
       />
     );
     (searchEnterprises as jest.Mock).mockImplementation(() =>
@@ -150,6 +151,7 @@ describe("<PageContribution />", () => {
     render(
       <AgreementSearchForm
         trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+        onAgreementSelect={() => {}}
       />
     );
     (searchEnterprises as jest.Mock).mockImplementation(() =>
@@ -208,6 +210,7 @@ describe("<PageContribution />", () => {
     render(
       <AgreementSearchForm
         trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+        onAgreementSelect={() => {}}
       />
     );
     userAction = new UserAction();

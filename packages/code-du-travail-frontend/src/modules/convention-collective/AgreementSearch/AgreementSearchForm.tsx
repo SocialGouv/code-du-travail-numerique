@@ -2,11 +2,12 @@
 import { RadioButtons } from "@codegouvfr/react-dsfr/RadioButtons";
 import { ReactNode, useEffect, useState } from "react";
 import { AgreementSearchInput } from "./AgreementSearchInput";
+
+import { useContributionTracking } from "../../contributions/tracking";
 import {
   EnterpriseAgreement,
   EnterpriseAgreementSearchInput,
 } from "../../enterprise";
-import { useContributionTracking } from "../../contributions/tracking";
 
 type Props = {
   onAgreementSelect: (agreement?: EnterpriseAgreement) => void;
@@ -25,11 +26,8 @@ export const AgreementSearchForm = ({
 }: Props) => {
   const [mode, setMode] = useState<
     "agreementSearch" | "enterpriseSearch" | "noSearch" | undefined
-  >();
+  >(!!defaultAgreement ? "agreementSearch" : undefined);
 
-  useEffect(() => {
-    setMode(!!defaultAgreement ? "agreementSearch" : undefined);
-  }, [defaultAgreement]);
   const { emitClickP1, emitClickP2 } = useContributionTracking();
 
   return (
