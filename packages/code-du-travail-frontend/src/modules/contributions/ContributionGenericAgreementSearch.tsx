@@ -20,7 +20,7 @@ type Props = {
   onAgreementSelect: (agreement?: EnterpriseAgreement) => void;
   onDisplayClick: (ev: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   contribution: Contribution;
-  defaultAgreement?: EnterpriseAgreement;
+  selectedAgreement?: EnterpriseAgreement;
   trackingActionName: string;
 };
 
@@ -28,21 +28,15 @@ export function ContributionGenericAgreementSearch({
   contribution,
   onAgreementSelect,
   onDisplayClick,
-  defaultAgreement,
+  selectedAgreement,
   trackingActionName,
 }: Props) {
   const { slug } = contribution;
-
-  const [selectedAgreement, setSelectedAgreement] =
-    useState<EnterpriseAgreement>();
-  const [isValid, setIsValid] = useState(
-    defaultAgreement ? isAgreementValid(contribution, defaultAgreement) : false
-  );
+  const [isValid, setIsValid] = useState(false);
   useEffect(() => {
-    setIsValid(
-      isAgreementValid(contribution, selectedAgreement ?? defaultAgreement)
-    );
-  }, [selectedAgreement, defaultAgreement]);
+    setIsValid(isAgreementValid(contribution, selectedAgreement));
+  }, [selectedAgreement]);
+
   const selectedAgreementAlert = (agreement: EnterpriseAgreement) => {
     const isSupported = isAgreementSupported(contribution, agreement);
     const isUnextended = isAgreementUnextended(contribution, agreement);
@@ -96,23 +90,19 @@ export function ContributionGenericAgreementSearch({
       </div>
       <div>
         <AgreementSearchForm
-          onAgreementSelect={(agreement) => {
-            onAgreementSelect(agreement);
-            setSelectedAgreement(
-              isAgreementValid(contribution, agreement) ? agreement : undefined
-            );
-          }}
+          onAgreementSelect={onAgreementSelect}
           selectedAgreementAlert={selectedAgreementAlert}
-          defaultAgreement={defaultAgreement}
+          defaultAgreement={selectedAgreement}
           trackingActionName={trackingActionName}
         />
         {((contribution.isNoCDT && isValid) || !contribution.isNoCDT) && (
           <Button
             className={fr.cx("fr-mt-2w")}
             linkProps={{
-              href: isValid
-                ? `/contribution/${(selectedAgreement ?? defaultAgreement)?.num}-${slug}`
-                : "",
+              href:
+                isValid && selectedAgreement
+                  ? `/contribution/${selectedAgreement?.num}-${slug}`
+                  : "",
               onClick: onDisplayClick,
             }}
           >
