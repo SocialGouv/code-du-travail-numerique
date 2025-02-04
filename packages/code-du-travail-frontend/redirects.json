@@ -498,5 +498,10 @@
     "source": "/convention-collective/1921(-[a-z0-9-]+)?",
     "destination": "/convention-collective/3250-commissaires-de-justice-et-societes-de-ventes-volontaires",
     "permanent": true
+  },
+  {
+    "source": "/convention-collective/1947(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/3216-materiaux-de-construction-negoce",
+    "permanent": true
   }
 ]
