@@ -103,7 +103,7 @@ export const AgreementSearchInput = ({
             search={searchAgreement}
             onSearch={(query, agreements) => {
               if (query) {
-                emitAgreementSearchInputEvent(query);
+                emitAgreementSearchInputEvent(query, trackingActionName);
               }
               if (onSearch) onSearch(query, agreements);
               if (!query) {

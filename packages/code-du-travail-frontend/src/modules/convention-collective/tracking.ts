@@ -24,10 +24,10 @@ export enum TrackingAgreementSearchAction {
 }
 
 export const useAgreementSearchTracking = () => {
-  const emitAgreementSearchInputEvent = (query: string) => {
+  const emitAgreementSearchInputEvent = (query: string, action: string) => {
     sendEvent({
       category: TrackingAgreementSearchCategory.CC_SEARCH,
-      action: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
+      action: action,
       name: JSON.stringify({ query }),
       value: generateUUID(),
     });

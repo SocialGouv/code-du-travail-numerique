@@ -22,7 +22,7 @@ import { useEnterpriseAgreementSearchTracking } from "./tracking";
 
 type Props = {
   widgetMode?: boolean;
-  onAgreementSelect?: (agreement: EnterpriseAgreement) => void;
+  onAgreementSelect?: (agreement?: EnterpriseAgreement) => void;
   selectedAgreementAlert?: (
     agreement?: EnterpriseAgreement
   ) => NonNullable<ReactNode> | undefined;

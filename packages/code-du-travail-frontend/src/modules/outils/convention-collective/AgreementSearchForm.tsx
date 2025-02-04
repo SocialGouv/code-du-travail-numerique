@@ -6,9 +6,10 @@ import {
   EnterpriseAgreement,
   EnterpriseAgreementSearchInput,
 } from "../../enterprise";
+import { useContributionTracking } from "../../contributions/tracking";
 
 type Props = {
-  onAgreementSelect?: (agreement?: EnterpriseAgreement, mode?: string) => void;
+  onAgreementSelect: (agreement?: EnterpriseAgreement) => void;
   selectedAgreementAlert?: (
     agreement?: EnterpriseAgreement
   ) => NonNullable<ReactNode> | undefined;
@@ -29,6 +30,7 @@ export const AgreementSearchForm = ({
   useEffect(() => {
     setMode(!!defaultAgreement ? "agreementSearch" : undefined);
   }, [defaultAgreement]);
+  const { emitClickP1, emitClickP2 } = useContributionTracking();
 
   return (
     <>
@@ -49,7 +51,7 @@ export const AgreementSearchForm = ({
             nativeInputProps: {
               checked: mode === "enterpriseSearch",
               onChange: () => {
-                if (onAgreementSelect) onAgreementSelect();
+                onAgreementSelect();
                 setMode("enterpriseSearch");
               },
             },
@@ -59,7 +61,8 @@ export const AgreementSearchForm = ({
       {mode === "agreementSearch" && (
         <AgreementSearchInput
           onAgreementSelect={(agreement) => {
-            if (onAgreementSelect) onAgreementSelect(agreement, "p1");
+            emitClickP1(trackingActionName);
+            onAgreementSelect(agreement);
           }}
           selectedAgreementAlert={selectedAgreementAlert}
           defaultAgreement={defaultAgreement}
@@ -69,7 +72,8 @@ export const AgreementSearchForm = ({
       {mode === "enterpriseSearch" && (
         <EnterpriseAgreementSearchInput
           onAgreementSelect={(agreement) => {
-            if (onAgreementSelect) onAgreementSelect(agreement, "p2");
+            emitClickP2(trackingActionName);
+            onAgreementSelect(agreement);
           }}
           selectedAgreementAlert={selectedAgreementAlert}
           trackingActionName={trackingActionName}

@@ -73,13 +73,3 @@ export const getAgreementFromLocalStorage = ():
     console.error(e);
   }
 };
-
-export const removeAgreementFromLocalStorage = () => {
-  try {
-    if (window?.localStorage) {
-      window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
-    }
-  } catch (e) {
-    console.error(e);
-  }
-};

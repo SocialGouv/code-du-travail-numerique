@@ -4,11 +4,10 @@ import { useContributionTracking } from "./tracking";
 import { isAgreementSupported, isAgreementValid } from "./contributionUtils";
 import { ContributionGenericContent } from "./ContributionGenericContent";
 import { Contribution } from "./type";
-import {
-  useLocalStorageForAgreement,
-  useLocalStorageForAgreementOnPageLoad,
-} from "../common/useLocalStorage";
+import { useLocalStorageForAgreementOnPageLoad } from "../common/useLocalStorage";
 import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
+import { Button } from "@codegouvfr/react-dsfr/Button";
+import { fr } from "@codegouvfr/react-dsfr";
 
 type Props = {
   contribution: Contribution;
@@ -19,16 +18,15 @@ export function ContributionGeneric({ contribution }: Props) {
   const { slug, isNoCDT, relatedItems } = contribution;
 
   const [displayGeneric, setDisplayGeneric] = useState(false);
+
   const [selectedAgreement, setSelectedAgreement] =
-    useLocalStorageForAgreement();
+    useLocalStorageForAgreementOnPageLoad();
   const {
     emitAgreementTreatedEvent,
     emitAgreementUntreatedEvent,
     emitDisplayAgreementContent,
     emitDisplayGeneralContent,
     emitDisplayGenericContent,
-    emitClickP1,
-    emitClickP2,
     emitClickP3,
   } = useContributionTracking();
 
@@ -36,22 +34,15 @@ export function ContributionGeneric({ contribution }: Props) {
     <>
       <ContributionGenericAgreementSearch
         contribution={contribution}
-        onAgreementSelect={(agreement, mode) => {
+        onAgreementSelect={(agreement) => {
           setSelectedAgreement(agreement);
           setDisplayGeneric(false);
           if (!agreement) return;
-          switch (mode) {
-            case "p1":
-              emitClickP1(getTitle());
-              break;
-            case "p2":
-              emitClickP2(getTitle());
-              break;
-          }
+
           if (isAgreementSupported(contribution, agreement)) {
-            emitAgreementTreatedEvent(agreement?.id);
+            emitAgreementTreatedEvent(agreement.num);
           } else {
-            emitAgreementUntreatedEvent(agreement?.id);
+            emitAgreementUntreatedEvent(agreement.num);
           }
         }}
         onDisplayClick={(ev) => {
@@ -63,9 +54,9 @@ export function ContributionGeneric({ contribution }: Props) {
             ev.preventDefault();
             setDisplayGeneric(true);
             if (selectedAgreement) {
-              emitDisplayGenericContent(getTitle());
-            } else {
               emitDisplayGeneralContent(getTitle());
+            } else {
+              emitDisplayGenericContent(getTitle());
             }
           } else {
             emitDisplayAgreementContent(getTitle());
@@ -74,13 +65,21 @@ export function ContributionGeneric({ contribution }: Props) {
         defaultAgreement={selectedAgreement}
         trackingActionName={getTitle()}
       />
-
+      {!displayGeneric && (
+        <Button
+          className={fr.cx("fr-mb-6w")}
+          priority="tertiary no outline"
+          onClick={() => {
+            setDisplayGeneric(true);
+            emitClickP3(getTitle());
+          }}
+        >
+          Afficher les informations sans sélectionner une convention collective
+        </Button>
+      )}
       {!isNoCDT && !isAgreementValid(contribution, selectedAgreement) && (
         <ContributionGenericContent
           contribution={contribution}
-          onDisplayClick={() => {
-            emitClickP3(getTitle());
-          }}
           relatedItems={relatedItems}
           displayGeneric={displayGeneric}
           alertText={

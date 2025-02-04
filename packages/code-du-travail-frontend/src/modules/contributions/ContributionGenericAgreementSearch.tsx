@@ -5,7 +5,6 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
 import AgreementSearch from "../convention-collective/AgreementSearch.svg";
 
-import { AgreementSearchForm } from "../outils/convention-collective/AgreementSearchForm";
 import { EnterpriseAgreement } from "../enterprise";
 import {
   isAgreementSupported,
@@ -15,9 +14,10 @@ import {
 import { Contribution } from "./type";
 import Link from "../common/Link";
 import BlueCard from "../common/BlueCard";
+import { AgreementSearchForm } from "../outils/convention-collective/AgreementSearchForm";
 
 type Props = {
-  onAgreementSelect: (agreement?: EnterpriseAgreement, mode?: string) => void;
+  onAgreementSelect: (agreement?: EnterpriseAgreement) => void;
   onDisplayClick: (ev: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   contribution: Contribution;
   defaultAgreement?: EnterpriseAgreement;
@@ -36,9 +36,7 @@ export function ContributionGenericAgreementSearch({
   const [selectedAgreement, setSelectedAgreement] = useState<
     EnterpriseAgreement | undefined
   >(defaultAgreement);
-  const [isValid, setIsValid] = useState(
-    defaultAgreement ? isAgreementValid(contribution, defaultAgreement) : false
-  );
+  const [isValid, setIsValid] = useState<boolean>();
   useEffect(() => {
     setIsValid(
       isAgreementValid(contribution, selectedAgreement ?? defaultAgreement)
@@ -97,8 +95,8 @@ export function ContributionGenericAgreementSearch({
       </div>
       <div>
         <AgreementSearchForm
-          onAgreementSelect={(agreement, mode) => {
-            onAgreementSelect(agreement, mode);
+          onAgreementSelect={(agreement) => {
+            onAgreementSelect(agreement);
             setSelectedAgreement(
               isAgreementValid(contribution, agreement) ? agreement : undefined
             );
