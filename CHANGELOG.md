@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.172.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.172.0...v4.172.1) (2025-02-04)
+
+
+### Bug Fixes
+
+* **contributions:** fix de l'erreur js dans la console quand une CC était présente dans le localStorage ([#6445](https://github.com/SocialGouv/code-du-travail-numerique/issues/6445)) ([28f0170](https://github.com/SocialGouv/code-du-travail-numerique/commit/28f017032200605985e5a69aa8204254c0b41dfc))
+* **contributions:** modification des events sur les contribs generiques pour être ISO avec ce qu'on avait avant le passage au DSFR ([#6443](https://github.com/SocialGouv/code-du-travail-numerique/issues/6443)) ([f022582](https://github.com/SocialGouv/code-du-travail-numerique/commit/f022582f6421c42492d592ef17da3f2b0a04d55e))
+
+
+
+
+
 # [4.172.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.171.1...v4.172.0) (2025-02-03)
 
 
