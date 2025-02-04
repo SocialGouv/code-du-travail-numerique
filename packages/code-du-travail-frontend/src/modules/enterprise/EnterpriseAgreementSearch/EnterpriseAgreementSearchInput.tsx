@@ -364,9 +364,9 @@ export const EnterpriseAgreementSearchInput = ({
         </div>
         {!!enterprises?.length &&
           !loading &&
-          enterprises?.map((enterprise) => (
+          enterprises?.map((enterprise, index) => (
             <Card
-              key={enterprise.label}
+              key={enterprise.label + index}
               className={fr.cx("fr-mt-2w")}
               border
               enlargeLink

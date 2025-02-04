@@ -65,36 +65,40 @@ export function ContributionGeneric({ contribution }: Props) {
         defaultAgreement={selectedAgreement}
         trackingActionName={getTitle()}
       />
-      {!displayGeneric && (
-        <Button
-          className={fr.cx("fr-mb-6w")}
-          priority="tertiary no outline"
-          onClick={() => {
-            setDisplayGeneric(true);
-            emitClickP3(getTitle());
-          }}
-        >
-          Afficher les informations sans sélectionner une convention collective
-        </Button>
-      )}
+
       {!isNoCDT && !isAgreementValid(contribution, selectedAgreement) && (
-        <ContributionGenericContent
-          contribution={contribution}
-          relatedItems={relatedItems}
-          displayGeneric={displayGeneric}
-          alertText={
-            selectedAgreement &&
-            !isAgreementSupported(contribution, selectedAgreement) && (
-              <p>
-                <strong>
-                  Cette réponse correspond à ce que prévoit le code du travail,
-                  elle ne tient pas compte des spécificités de la{" "}
-                  {selectedAgreement.shortTitle}
-                </strong>
-              </p>
-            )
-          }
-        />
+        <>
+          {!displayGeneric && (
+            <Button
+              className={fr.cx("fr-mb-6w")}
+              priority="tertiary no outline"
+              onClick={() => {
+                setDisplayGeneric(true);
+                emitClickP3(getTitle());
+              }}
+            >
+              Afficher les informations sans sélectionner une convention
+              collective
+            </Button>
+          )}
+          <ContributionGenericContent
+            contribution={contribution}
+            relatedItems={relatedItems}
+            displayGeneric={displayGeneric}
+            alertText={
+              selectedAgreement &&
+              !isAgreementSupported(contribution, selectedAgreement) && (
+                <p>
+                  <strong>
+                    Cette réponse correspond à ce que prévoit le code du
+                    travail, elle ne tient pas compte des spécificités de la{" "}
+                    {selectedAgreement.shortTitle}
+                  </strong>
+                </p>
+              )
+            }
+          />
+        </>
       )}
     </>
   );
