@@ -1,6 +1,6 @@
 "use client";
 import { RadioButtons } from "@codegouvfr/react-dsfr/RadioButtons";
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { AgreementSearchInput } from "./AgreementSearchInput";
 
 import { useContributionTracking } from "../../contributions/tracking";
@@ -29,9 +29,12 @@ export const AgreementSearchForm = ({
     AgreementRoute | undefined
   >();
 
-  if (defaultAgreement && !selectedRoute) {
-    setSelectedRoute("agreement");
-  }
+  useEffect(() => {
+    if (defaultAgreement && !selectedRoute) {
+      setSelectedRoute("agreement");
+    }
+  }, [defaultAgreement]);
+
   const { emitClickP1, emitClickP2 } = useContributionTracking();
 
   return (
