@@ -1,4 +1,4 @@
-import { render, RenderResult } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import React from "react";
 import { EnterpriseAgreementSelectionLink } from "../EnterpriseAgreementSelectionLink";
 import { ui } from "./ui";
@@ -47,12 +47,9 @@ const defaultEnterprise = {
 };
 
 describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
-  let rendering: RenderResult;
   let userAction: UserAction;
   it("Vérifier l'affichage de la selection", async () => {
-    rendering = render(
-      <EnterpriseAgreementSelectionLink enterprise={defaultEnterprise} />
-    );
+    render(<EnterpriseAgreementSelectionLink enterprise={defaultEnterprise} />);
     userAction = new UserAction();
     expect(
       ui.enterpriseAgreementSelection.carrefour.title.query()
@@ -90,7 +87,7 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
   });
 
   it("Vérifier l'affichage de la selection avec une CC sans slug", async () => {
-    rendering = render(
+    render(
       <EnterpriseAgreementSelectionLink
         enterprise={{
           ...defaultEnterprise,
@@ -112,7 +109,7 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
   });
 
   it("Vérifier l'affichage de la selection avec une CC sans url et contribution", async () => {
-    rendering = render(
+    render(
       <EnterpriseAgreementSelectionLink
         enterprise={{
           ...defaultEnterprise,
@@ -135,7 +132,7 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
   });
 
   it("Vérifier l'affichage de la selection en widgetMode", async () => {
-    rendering = render(
+    render(
       <EnterpriseAgreementSelectionLink
         enterprise={defaultEnterprise}
         widgetMode

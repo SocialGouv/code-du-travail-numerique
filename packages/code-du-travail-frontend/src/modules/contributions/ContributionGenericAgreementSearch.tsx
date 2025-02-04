@@ -1,12 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
 import AgreementSearch from "../convention-collective/AgreementSearch.svg";
 
-import { AgreementSearchForm } from "../convention-collective/AgreementSearch/AgreementSearchForm";
 import { EnterpriseAgreement } from "../enterprise";
 import {
   isAgreementSupported,
@@ -15,12 +13,15 @@ import {
 } from "./contributionUtils";
 import { Contribution } from "./type";
 import Link from "../common/Link";
+import BlueCard from "../common/BlueCard";
+import { AgreementSearchForm } from "../convention-collective/AgreementSearch/AgreementSearchForm";
 
 type Props = {
-  onAgreementSelect: (agreement?: EnterpriseAgreement, mode?: string) => void;
+  onAgreementSelect: (agreement?: EnterpriseAgreement) => void;
   onDisplayClick: (ev: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   contribution: Contribution;
   defaultAgreement?: EnterpriseAgreement;
+  trackingActionName: string;
 };
 
 export function ContributionGenericAgreementSearch({
@@ -28,8 +29,9 @@ export function ContributionGenericAgreementSearch({
   onAgreementSelect,
   onDisplayClick,
   defaultAgreement,
+  trackingActionName,
 }: Props) {
-  const { slug, isNoCDT } = contribution;
+  const { slug } = contribution;
 
   const [selectedAgreement, setSelectedAgreement] =
     useState<EnterpriseAgreement>();
@@ -80,12 +82,12 @@ export function ContributionGenericAgreementSearch({
       return <>Vous pouvez consulter les informations générales ci-dessous.</>;
   };
   return (
-    <div className={`${fr.cx("fr-p-3w", "fr-mt-6w")} ${block}`}>
+    <BlueCard>
       <div className={fr.cx("fr-grid-row")}>
         <Image
           priority
           src={AgreementSearch}
-          alt="Personnalisez la réponse avec votre convention collective"
+          alt=""
           className={fr.cx("fr-unhidden-md", "fr-hidden")}
         />
         <p className={fr.cx("fr-h3", "fr-mt-1w")}>
@@ -94,14 +96,15 @@ export function ContributionGenericAgreementSearch({
       </div>
       <div>
         <AgreementSearchForm
-          onAgreementSelect={(agreement, mode) => {
-            onAgreementSelect(agreement, mode);
+          onAgreementSelect={(agreement) => {
+            onAgreementSelect(agreement);
             setSelectedAgreement(
               isAgreementValid(contribution, agreement) ? agreement : undefined
             );
           }}
           selectedAgreementAlert={selectedAgreementAlert}
           defaultAgreement={defaultAgreement}
+          trackingActionName={trackingActionName}
         />
         {((contribution.isNoCDT && isValid) || !contribution.isNoCDT) && (
           <Button
@@ -117,10 +120,6 @@ export function ContributionGenericAgreementSearch({
           </Button>
         )}
       </div>
-    </div>
+    </BlueCard>
   );
 }
-
-const block = css({
-  background: "var(--background-alt-blue-cumulus)!",
-});

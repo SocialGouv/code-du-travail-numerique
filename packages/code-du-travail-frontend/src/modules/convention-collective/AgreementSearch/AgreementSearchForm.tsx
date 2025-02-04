@@ -1,28 +1,34 @@
 "use client";
 import { RadioButtons } from "@codegouvfr/react-dsfr/RadioButtons";
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { AgreementSearchInput } from "./AgreementSearchInput";
+
+import { useContributionTracking } from "../../contributions/tracking";
 import {
   EnterpriseAgreement,
   EnterpriseAgreementSearchInput,
 } from "../../enterprise";
 
 type Props = {
-  onAgreementSelect?: (agreement?: EnterpriseAgreement, mode?: string) => void;
+  onAgreementSelect: (agreement?: EnterpriseAgreement) => void;
   selectedAgreementAlert?: (
     agreement?: EnterpriseAgreement
   ) => NonNullable<ReactNode> | undefined;
   defaultAgreement?: EnterpriseAgreement;
+  trackingActionName: string;
 };
 
 export const AgreementSearchForm = ({
   onAgreementSelect,
   selectedAgreementAlert,
   defaultAgreement,
+  trackingActionName,
 }: Props) => {
   const [mode, setMode] = useState<
     "agreementSearch" | "enterpriseSearch" | "noSearch" | undefined
   >(!!defaultAgreement ? "agreementSearch" : undefined);
+
+  const { emitClickP1, emitClickP2 } = useContributionTracking();
 
   return (
     <>
@@ -43,7 +49,7 @@ export const AgreementSearchForm = ({
             nativeInputProps: {
               checked: mode === "enterpriseSearch",
               onChange: () => {
-                if (onAgreementSelect) onAgreementSelect();
+                onAgreementSelect();
                 setMode("enterpriseSearch");
               },
             },
@@ -53,18 +59,22 @@ export const AgreementSearchForm = ({
       {mode === "agreementSearch" && (
         <AgreementSearchInput
           onAgreementSelect={(agreement) => {
-            if (onAgreementSelect) onAgreementSelect(agreement, "p1");
+            emitClickP1(trackingActionName);
+            onAgreementSelect(agreement);
           }}
           selectedAgreementAlert={selectedAgreementAlert}
           defaultAgreement={defaultAgreement}
+          trackingActionName={trackingActionName}
         />
       )}
       {mode === "enterpriseSearch" && (
         <EnterpriseAgreementSearchInput
           onAgreementSelect={(agreement) => {
-            if (onAgreementSelect) onAgreementSelect(agreement, "p2");
+            emitClickP2(trackingActionName);
+            onAgreementSelect(agreement);
           }}
           selectedAgreementAlert={selectedAgreementAlert}
+          trackingActionName={trackingActionName}
         />
       )}
     </>

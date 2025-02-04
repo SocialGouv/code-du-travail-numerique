@@ -4,7 +4,10 @@ import { useState } from "react";
 
 import Button from "@codegouvfr/react-dsfr/Button";
 import { AgreementSearchInput } from "./AgreementSearchInput";
-import { useAgreementSearchTracking } from "../tracking";
+import {
+  TrackingAgreementSearchAction,
+  useAgreementSearchTracking,
+} from "../tracking";
 
 export const AgreementSearch = () => {
   const [noResult, setNoResult] = useState(false);
@@ -15,6 +18,7 @@ export const AgreementSearch = () => {
         onSearch={(query, result) => {
           setNoResult(query.length > 2 && !result?.length);
         }}
+        trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
       />
       <div className={fr.cx("fr-mt-2w", "fr-grid-row")}>
         <Button

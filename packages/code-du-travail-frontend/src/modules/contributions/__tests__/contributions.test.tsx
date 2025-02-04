@@ -50,6 +50,10 @@ jest.mock("next/navigation", () => ({
 
 describe("<ContributionLayout />", () => {
   let rendering: RenderResult;
+  beforeEach(() => {
+    const ma = sendEvent as jest.MockedFunction<typeof sendEvent>;
+    ma.mockReset();
+  });
   it("should render title only if generic", () => {
     rendering = render(<ContributionLayout contribution={contribution} />);
     const titreH1 = rendering.getByRole("heading", { level: 1 });
@@ -133,7 +137,7 @@ describe("<ContributionLayout />", () => {
       expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_traitée",
         category: "outil",
-        name: "0016",
+        name: 16,
       });
     });
 
@@ -147,7 +151,7 @@ describe("<ContributionLayout />", () => {
       expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_traitée",
         category: "outil",
-        name: "3239",
+        name: 3239,
       });
     });
 
@@ -181,7 +185,7 @@ describe("<ContributionLayout />", () => {
       expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_non_traitée",
         category: "outil",
-        name: "1388",
+        name: 1388,
       });
       expect(ccUi.warning.title.query()).toBeInTheDocument();
       fireEvent.click(ui.generic.linkDisplayInfo.get());
@@ -233,7 +237,7 @@ describe("<ContributionLayout />", () => {
       expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_traitée",
         category: "outil",
-        name: "0016",
+        name: 16,
       });
     });
 
@@ -270,7 +274,7 @@ describe("<ContributionLayout />", () => {
       expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_non_traitée",
         category: "outil",
-        name: "1388",
+        name: 1388,
       });
     });
 
