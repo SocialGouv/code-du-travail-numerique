@@ -9,6 +9,7 @@ import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelecti
 import { getEnterpriseAgreements } from "./utils";
 import { CardTitleStyle } from "../../convention-collective/style";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
+import { TrackingAgreementSearchAction } from "../../convention-collective/tracking";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;
@@ -48,38 +49,32 @@ export const EnterpriseAgreementSelectionLink = ({
                     ? {
                         target: widgetMode ? "_blank" : "auto",
                         href: `/convention-collective/${agreement.slug}`,
-                        onClick: widgetMode
-                          ? (ev) => {
-                              emitSelectEnterpriseAgreementEvent(
-                                `idcc${agreement.id}`
-                              );
-                              if (disabled) ev.preventDefault();
-                              else if (widgetMode) {
-                                window.parent?.postMessage(
-                                  {
-                                    name: "agreement",
-                                    kind: "select",
-                                    extra: {
-                                      idcc: agreement.num,
-                                      title: agreement.title,
-                                    },
-                                  },
-                                  "*"
-                                );
-                              }
-                            }
-                          : () => {
-                              emitSelectEnterpriseAgreementEvent(
-                                `idcc${agreement.id}`
-                              );
-                            },
+                        onClick: () => {
+                          emitSelectEnterpriseAgreementEvent(
+                            `idcc${agreement.num}`,
+                            TrackingAgreementSearchAction.AGREEMENT_SEARCH
+                          );
+                          if (widgetMode) {
+                            window.parent?.postMessage(
+                              {
+                                name: "agreement",
+                                kind: "select",
+                                extra: {
+                                  idcc: agreement.num,
+                                  title: agreement.title,
+                                },
+                              },
+                              "*"
+                            );
+                          }
+                        },
                       }
                     : {
                         href: "#",
-                        onClick: (ev) => {
-                          if (disabled) ev.preventDefault();
+                        onClick: () => {
                           emitSelectEnterpriseAgreementEvent(
-                            `idcc${agreement.id}`
+                            `idcc${agreement.num}`,
+                            TrackingAgreementSearchAction.AGREEMENT_SEARCH
                           );
                           onAgreementSelect(agreement);
                         },
