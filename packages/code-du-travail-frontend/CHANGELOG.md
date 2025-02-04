@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.172.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.171.1...v4.172.0) (2025-02-03)
+
+
+### Bug Fixes
+
+* **autocomplete:** réutilisation du composant autocomplete sur la home, accentuation du contraste quand on parcours les suggestions au clavier ([#6429](https://github.com/SocialGouv/code-du-travail-numerique/issues/6429)) ([e968432](https://github.com/SocialGouv/code-du-travail-numerique/commit/e968432b0c3987f24bc7edabdf61e952be085180))
+
+
+### Features
+
+* **A propos:** migration au DSFR des pages A propos et Déclaration d'accessibilité ([#6440](https://github.com/SocialGouv/code-du-travail-numerique/issues/6440)) ([aacfbb9](https://github.com/SocialGouv/code-du-travail-numerique/commit/aacfbb94a6e66e28159f3a6de7b57a04c3d31faa))
+* **contribution:** passage au DSFR ([#6428](https://github.com/SocialGouv/code-du-travail-numerique/issues/6428)) ([423d249](https://github.com/SocialGouv/code-du-travail-numerique/commit/423d249be4abb6db04fc66fa7ba75026bae70cd4)), closes [#6096](https://github.com/SocialGouv/code-du-travail-numerique/issues/6096) [#6099](https://github.com/SocialGouv/code-du-travail-numerique/issues/6099) [#6094](https://github.com/SocialGouv/code-du-travail-numerique/issues/6094)
+
+
+
+
+
 ## [4.171.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.171.0...v4.171.1) (2025-01-23)
 
 
