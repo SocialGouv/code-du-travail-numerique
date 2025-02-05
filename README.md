@@ -12,7 +12,6 @@
 - Pour remonter un bug technique, [ouvrez un ticket](https://github.com/SocialGouv/code-du-travail-numerique/issues/new/choose).
 
 ## Développement
-
 ### Installation
 
 ```sh
