@@ -37,8 +37,6 @@ export const AgreementSearchForm = ({
 
   const { emitClickP1, emitClickP2 } = useContributionTracking();
 
-  const { emitClickP1, emitClickP2 } = useContributionTracking();
-
   return (
     <>
       <RadioButtons
