@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
+import { BUCKET_URL } from "./src/config";
 
 export function middleware(request) {
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
   const ContentSecurityPolicy = `
-  img-src 'self' https://travail-emploi.gouv.fr https://www.service-public.fr https://cdtn-prod-public.s3.gra.io.cloud.ovh.net https://matomo.fabrique.social.gouv.fr data:;
+  img-src 'self' https://travail-emploi.gouv.fr https://www.service-public.fr ${BUCKET_URL} https://matomo.fabrique.social.gouv.fr data:;
   script-src 'self' 'nonce-${nonce}' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr ${
     process.env.NEXT_PUBLIC_APP_ENV !== "production" ? "'unsafe-eval'" : ""
   };
