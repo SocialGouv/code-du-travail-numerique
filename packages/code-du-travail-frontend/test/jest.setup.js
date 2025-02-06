@@ -32,7 +32,7 @@ if (typeof window !== "undefined") {
 jest.mock("../src/config", () => ({
   SITE_URL: "http://api.url",
   BUCKET_URL: "bucket.url",
-  BUCKET_DEFAULT_FOLDER: "default",
+  BUCKET_FOLDER: "preview",
   BUCKET_SITEMAP_FOLDER: "sitemap",
   PACKAGE_VERSION: "vX.Y.Z",
   ENTERPRISE_API_URL: "https://api-entreprise",

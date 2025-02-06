@@ -2,9 +2,8 @@ const { version } = require("../package.json");
 
 export const BUCKET_URL =
   process.env.NEXT_PUBLIC_BUCKET_URL ??
-  "https://cdtn-prod-public.s3.gra.io.cloud.ovh.net/preview";
-export const BUCKET_DEFAULT_FOLDER =
-  process.env.NEXT_PUBLIC_BUCKET_DEFAULT_FOLDER ?? "default";
+  "https://cdtn-dev-public.s3.gra.io.cloud.ovh.net";
+export const BUCKET_FOLDER = process.env.NEXT_PUBLIC_BUCKET_FOLDER ?? "preview";
 export const BUCKET_SITEMAP_FOLDER =
   process.env.NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER ?? "sitemap";
 export const COMMIT = process.env.NEXT_PUBLIC_COMMIT ?? "";

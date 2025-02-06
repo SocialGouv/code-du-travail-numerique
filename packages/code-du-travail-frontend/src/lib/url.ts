@@ -1,10 +1,10 @@
-import { BUCKET_URL, BUCKET_DEFAULT_FOLDER } from "../config";
+import { BUCKET_URL, BUCKET_FOLDER } from "../config";
 
 export const toUrl = (file: string): string => {
   if (!file) return "";
   const index = file.lastIndexOf("/");
   const filename = index !== -1 ? file.substring(index + 1) : file;
-  return `${BUCKET_URL}/${BUCKET_DEFAULT_FOLDER}/${filename}`;
+  return `${BUCKET_URL}/${BUCKET_FOLDER}/default/${filename}`;
 };
 
 export const removeQueryParameters = (url: string): string => {

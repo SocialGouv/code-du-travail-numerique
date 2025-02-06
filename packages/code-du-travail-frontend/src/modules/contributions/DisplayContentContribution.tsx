@@ -5,13 +5,15 @@ import parse, {
   HTMLReactParserOptions,
   Text,
 } from "html-react-parser";
-import { xssWrapper } from "../../lib";
+import { toUrl, xssWrapper } from "../../lib";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { ElementType } from "react";
 import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
 import { v4 as generateUUID } from "uuid";
 import { fr } from "@codegouvfr/react-dsfr";
 import { FicheServicePublic } from "../fiche-service-public/builder";
+import ImageWrapper from "../common/ImageWrapper";
+import { Tile } from "@codegouvfr/react-dsfr/Tile";
 import Link from "../common/Link";
 
 const DEFAULT_HEADING_LEVEL = 3;
@@ -256,6 +258,44 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
               })}
               className={fr.cx("fr-mt-2w")}
             ></Alert>
+          );
+        }
+        if (domNode.name === "div" && domNode.attribs.class === "infographic") {
+          const pdfName = domNode.attribs["data-pdf"];
+          const pdfSize = domNode.attribs["data-pdf-size"];
+          const pictoName = domNode.attribs["data-infographic"];
+          // Remove the img tag. It contains an absolute path. We need to build our own path.
+          const firstChild =
+            domNode.children.length > 0 ? domNode.children[0] : undefined;
+          if (
+            firstChild &&
+            firstChild.type === "tag" &&
+            firstChild.name === "img"
+          ) {
+            domNode.children.shift();
+          }
+
+          return (
+            <div>
+              <ImageWrapper altText={""} src={toUrl(pictoName)} />
+              {domToReact(
+                domNode.children as DOMNode[],
+                options(titleLevel as numberLevel)
+              )}
+              <Tile
+                downloadButton
+                enlargeLinkOrButton
+                imageSvg={false}
+                imageUrl={`/static/assets/img/modeles-de-courriers-download.svg`}
+                title={`Télécharger l'infographie`}
+                titleAs={`h${titleLevel}`}
+                detail={`Format PDF - ${pdfSize}Ko`}
+                imageAlt={""}
+                linkProps={{
+                  href: toUrl(pdfName),
+                }}
+              />
+            </div>
           );
         }
         if (domNode.name === "strong") {

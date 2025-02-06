@@ -1,4 +1,5 @@
 import "./globals.css";
+import "react-image-lightbox/style.css";
 import { Metadata } from "next/types";
 import { SITE_URL } from "../src/config";
 import { headers } from "next/headers";
