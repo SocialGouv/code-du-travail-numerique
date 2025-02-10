@@ -4,10 +4,9 @@ jobs:
       use: build
       with:
         buildArgs:
-          NEXT_PUBLIC_SENTRY_DSN: https://81b6e3d265cf736588f894040d265705@sentry.fabrique.social.gouv.fr/107
-          NEXT_PUBLIC_SENTRY_PUBLIC_KEY: 81b6e3d265cf736588f894040d265705
-          NEXT_PUBLIC_SENTRY_PROJECT_ID: 107
-          NEXT_PUBLIC_SENTRY_BASE_URL: https://sentry.fabrique.social.gouv.fr
+          NEXT_PUBLIC_SENTRY_DSN_CLIENT: https://8e35d91832e6892f25a5980cb5557f89@sentry2.fabrique.social.gouv.fr/12
+          NEXT_PUBLIC_SENTRY_DSN_SERVER: https://0f463ef7e0ebf79d9704fa7fb11e607f@sentry2.fabrique.social.gouv.fr/13
+          NEXT_PUBLIC_SENTRY_BASE_URL: https://sentry2.fabrique.social.gouv.fr/
           NEXT_PUBLIC_SENTRY_ENV: dev
           NEXT_PUBLIC_SENTRY_RELEASE: "{{.Values.global.branchSlug32}}"
           NEXT_PUBLIC_BUCKET_DEFAULT_FOLDER: "default"
@@ -18,8 +17,7 @@ jobs:
           NEXT_PUBLIC_COMMIT: "{{.Values.global.sha}}"
           NEXT_PUBLIC_SITE_URL: "https://{{.Values.global.host}}"
           NEXT_PUBLIC_SENTRY_ORG: "incubateur"
-          NEXT_PUBLIC_SENTRY_PROJECT: "code-du-travail-numerique-v2"
-          NEXT_PUBLIC_SENTRY_URL: "https://sentry.fabrique.social.gouv.fr"
+          NEXT_PUBLIC_SENTRY_URL: "https://sentry2.fabrique.social.gouv.fr"
           NEXT_PUBLIC_ES_INDEX_PREFIX: "cdtn-preprod"
           NEXT_PUBLIC_BRANCH_NAME_SLUG: "{{.Values.global.branchSlug32}}"
         secrets:

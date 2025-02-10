@@ -7,7 +7,7 @@ script-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.socia
   process.env.NEXT_PUBLIC_APP_ENV !== "production" ? "'unsafe-eval'" : ""
 };
 frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr *.dailymotion.com;
-connect-src 'self' https://geo.api.gouv.fr https://sentry.fabrique.social.gouv.fr https://matomo.fabrique.social.gouv.fr;
+connect-src 'self' https://geo.api.gouv.fr https://sentry2.fabrique.social.gouv.fr https://matomo.fabrique.social.gouv.fr;
 worker-src 'self' blob:;
 `;
 
