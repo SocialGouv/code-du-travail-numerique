@@ -1,9 +1,11 @@
 import debounce from "debounce-promise";
 import { nafError } from "./error";
 import { SITE_URL } from "../../config";
-import { ElasticAgreement } from "@socialgouv/cdtn-types";
+import { Agreement } from "../../outils/types";
 
-const formatCCn = ({ num, id, slug, title, shortTitle, highlight, url }) => ({
+const formatCCn = ({
+  _source: { num, id, slug, title, shortTitle, highlight, url },
+}) => ({
   ...(highlight ? { highlight } : {}),
   id,
   num,
@@ -16,9 +18,7 @@ const formatCCn = ({ num, id, slug, title, shortTitle, highlight, url }) => ({
 export const onlyNumberError =
   "Numéro d’indentification (IDCC) incorrect. Ce numéro est composé de 4 chiffres uniquement.";
 
-const apiIdcc = function createFetcher(
-  query: string
-): Promise<ElasticAgreement[]> {
+const apiIdcc = function createFetcher(query: string): Promise<Agreement[]> {
   if (/^\d{4}[A-Za-z]$/.test(query.replace(/\W/g, ""))) {
     return Promise.reject(nafError);
   }
@@ -35,12 +35,7 @@ const apiIdcc = function createFetcher(
       if (response.ok) {
         return response
           .json()
-          .then(
-            (results) =>
-              results.hits.hits.map(({ _source }) =>
-                formatCCn(_source)
-              ) as ElasticAgreement[]
-          );
+          .then((results) => results.hits.hits.map(formatCCn));
       }
       throw new Error();
     })
@@ -51,4 +46,4 @@ const apiIdcc = function createFetcher(
 
 const searchAgreement = debounce(apiIdcc, 300);
 
-export { searchAgreement, apiIdcc };
+export { searchAgreement };

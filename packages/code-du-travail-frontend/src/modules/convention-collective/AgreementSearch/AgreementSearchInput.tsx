@@ -7,16 +7,15 @@ import { ReactNode, useState } from "react";
 import { Autocomplete } from "../../common/Autocomplete";
 import { Agreement } from "../../../outils/types";
 import { searchAgreement } from "../search";
-import { EnterpriseAgreement } from "../../enterprise";
 import { useAgreementSearchTracking } from "../tracking";
 
 type Props = {
   onSearch?: (query: string, value?: Agreement[]) => void;
-  onAgreementSelect?: (agreement?: EnterpriseAgreement) => void;
+  onAgreementSelect?: (agreement?: Agreement) => void;
   selectedAgreementAlert?: (
-    agreement?: EnterpriseAgreement
+    agreement?: Agreement
   ) => NonNullable<ReactNode> | undefined;
-  defaultAgreement?: EnterpriseAgreement;
+  defaultAgreement?: Agreement;
   trackingActionName: string;
 };
 
@@ -71,7 +70,7 @@ export const AgreementSearchInput = ({
       </h2>
       <div className={fr.cx("fr-mt-2w")}>
         <div className={fr.cx("fr-col-12")}>
-          <Autocomplete<EnterpriseAgreement>
+          <Autocomplete<Agreement>
             defaultValue={selectedAgreement}
             dataTestId="AgreementSearchAutocomplete"
             hintText="Ex : transport routier ou 1486"
