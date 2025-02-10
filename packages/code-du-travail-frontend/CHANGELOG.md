@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.172.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.172.2...v4.172.3) (2025-02-10)
+
+
+### Bug Fixes
+
+* **code:** suppression du vieux code qui n'est plus utilisé pour après le passage au DSFR ([#6446](https://github.com/SocialGouv/code-du-travail-numerique/issues/6446)) ([96f95f5](https://github.com/SocialGouv/code-du-travail-numerique/commit/96f95f571892c374d7f86019490716593d581de5))
+* **contribution:** html valide pour les contributions qui sont des fiches SP ([#6450](https://github.com/SocialGouv/code-du-travail-numerique/issues/6450)) ([584da94](https://github.com/SocialGouv/code-du-travail-numerique/commit/584da9450349ac59b8a2119ffdeed085c903ef6f))
+
+
+
+
+
 ## [4.172.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.172.1...v4.172.2) (2025-02-06)
 
 
