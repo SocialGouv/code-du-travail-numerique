@@ -2,7 +2,6 @@ import { Alert, Heading, Table as UITable, theme } from "@socialgouv/cdtn-ui";
 import { AccordionWithAnchor as Accordion } from "../../src/common/AccordionWithAnchor";
 
 import styled from "styled-components";
-import { FicheServicePublic } from "../fiche-service-public";
 import parse, {
   DOMNode,
   domToReact,
@@ -10,21 +9,6 @@ import parse, {
   HTMLReactParserOptions,
 } from "html-react-parser";
 import { xssWrapper } from "../lib";
-
-export const ContentSP = ({ raw, titleLevel }) => {
-  return (
-    <>
-      {raw && (
-        <StyledContent>
-          <FicheServicePublic
-            data={JSON.parse(raw).children}
-            headingLevel={titleLevel}
-          />
-        </StyledContent>
-      )}
-    </>
-  );
-};
 
 const mapItem = (titleLevel: number, domNode: Element, summary: Element) => ({
   body: domToReact(domNode.children as DOMNode[], options(titleLevel + 1)),
