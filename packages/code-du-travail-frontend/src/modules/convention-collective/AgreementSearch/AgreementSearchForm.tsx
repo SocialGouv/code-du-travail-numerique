@@ -4,18 +4,16 @@ import { ReactNode, useEffect, useState } from "react";
 import { AgreementSearchInput } from "./AgreementSearchInput";
 
 import { useContributionTracking } from "../../contributions/tracking";
-import {
-  EnterpriseAgreement,
-  EnterpriseAgreementSearchInput,
-} from "../../enterprise";
+import { EnterpriseAgreementSearchInput } from "../../enterprise";
 import { AgreementRoute } from "../../../outils/common/type/WizardType";
+import { Agreement } from "../../../outils/types";
 
 type Props = {
-  onAgreementSelect: (agreement?: EnterpriseAgreement) => void;
+  onAgreementSelect: (agreement?: Agreement) => void;
   selectedAgreementAlert?: (
-    agreement?: EnterpriseAgreement
+    agreement?: Agreement
   ) => NonNullable<ReactNode> | undefined;
-  defaultAgreement?: EnterpriseAgreement;
+  defaultAgreement?: Agreement;
   trackingActionName: string;
 };
 
