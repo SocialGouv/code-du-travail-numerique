@@ -1,28 +1,21 @@
 import { StoreApi } from "zustand";
 import produce from "immer";
-import { push as matopush } from "@socialgouv/matomo-next";
 import { validateStep } from "./validator";
 
 import { CommonAgreementStoreData, CommonAgreementStoreSlice } from "./types";
-import {
-  Agreement,
-  STORAGE_KEY_AGREEMENT,
-  StoreSlicePublicode,
-} from "../../../types";
-import { CommonInformationsStoreSlice } from "src/outils/CommonIndemniteDepart/steps/Informations/store";
-import { loadPublicodes } from "src/outils/api";
 
 import { PublicodesSimulator, supportedCcn } from "@socialgouv/modeles-social";
-import { MatomoBaseEvent, MatomoSearchAgreementCategory } from "src/lib";
-import { pushAgreementEvents } from "src/outils/common/Agreement";
-import { AgreementRoute } from "src/outils/common/type/WizardType";
-import { isCcFullySupportedIndemniteLicenciement } from "src/outils/CommonIndemniteDepart/common";
+import { AgreementRoute, StoreSlicePublicode } from "../../../types";
+import { CommonInformationsStoreSlice } from "../../Informations/store";
+import { getAgreementFromLocalStorage } from "src/modules/common/useLocalStorage";
 import {
-  getAgreementFromLocalStorage,
   removeAgreementFromLocalStorage,
   saveAgreementToLocalStorage,
 } from "src/lib/useLocalStorage";
+import { pushAgreementEvents } from "src/outils/common";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
+import { loadPublicodes } from "src/modules/outils/common/publicodes";
+import { isCcFullySupportedIndemniteLicenciement } from "../../../common";
 
 const initialState: Omit<
   CommonAgreementStoreData<PublicodesSimulator>,
@@ -30,9 +23,7 @@ const initialState: Omit<
 > = {
   input: {
     isAgreementSupportedIndemniteLicenciement: false,
-    hasNoEnterpriseSelected: true,
     informationError: false,
-    route: "not-selected", //TODO A VIRERRRRR
   },
   error: {},
   hasBeenSubmit: false,
@@ -43,7 +34,12 @@ const createCommonAgreementStore: StoreSlicePublicode<
   CommonAgreementStoreSlice<PublicodesSimulator>,
   CommonInformationsStoreSlice
 > = (set, get, { simulator, type }) => ({
-  agreementData: { ...initialState, publicodes: loadPublicodes(simulator) },
+  agreementData: {
+    ...initialState,
+    publicodes: loadPublicodes(simulator),
+    indemniteDepartType: type,
+    simulator: simulator,
+  },
   agreementFunction: {
     onInitAgreementPage: () => {
       try {
@@ -98,7 +94,6 @@ const createCommonAgreementStore: StoreSlicePublicode<
         produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
           state.agreementData.input.enterprise = undefined;
           state.agreementData.input.agreement = undefined;
-          state.agreementData.input.hasNoEnterpriseSelected = false;
         })
       );
       applyGenericValidation(get, set, "route", value);
@@ -130,14 +125,6 @@ const createCommonAgreementStore: StoreSlicePublicode<
         })
       );
     },
-    setHasNoEnterpriseSelected: (value) => {
-      applyGenericValidation(
-        get,
-        set,
-        "hasNoEnterpriseSelected",
-        value ? value : false
-      );
-    },
     onNextStep: () => {
       const input = get().agreementData.input;
       const { isValid, errorState } = validateStep(input);
@@ -155,7 +142,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
             enterprise,
           },
           isTreated,
-          input.hasNoEnterpriseSelected
+          false
         );
       }
       set(
@@ -166,22 +153,6 @@ const createCommonAgreementStore: StoreSlicePublicode<
         })
       );
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
-    },
-    onAgreementSearch: (data) => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.AGREEMENT_SEARCH,
-        type,
-        JSON.stringify(data),
-      ]);
-    },
-    onEnterpriseSearch: (data) => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.ENTERPRISE_SEARCH,
-        type,
-        JSON.stringify(data),
-      ]);
     },
   },
 });

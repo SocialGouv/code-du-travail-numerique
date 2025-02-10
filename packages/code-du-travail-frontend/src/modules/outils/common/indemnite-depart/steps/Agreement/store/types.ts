@@ -1,10 +1,9 @@
-import { AgreementRoute } from "src/outils/common/type/WizardType";
 import {
   PublicodesInstance,
   PublicodesSimulator,
 } from "@socialgouv/modeles-social";
-import { Agreement } from "../../../types";
-import { Enterprise } from "src/conventions/Search/api/enterprises.service";
+import { Agreement, AgreementRoute, IndemniteDepartType } from "../../../types";
+import { Enterprise } from "src/modules/enterprise";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 
 export type CommonAgreementStoreInput = {
@@ -12,8 +11,9 @@ export type CommonAgreementStoreInput = {
   agreement?: Agreement;
   enterprise?: Enterprise;
   isAgreementSupportedIndemniteLicenciement: boolean;
-  hasNoEnterpriseSelected: boolean;
   informationError: boolean;
+  indemniteDepartType?: IndemniteDepartType;
+  simulator?: PublicodesSimulator;
 };
 
 export type CommonAgreementStoreError = {
@@ -31,11 +31,6 @@ export type CommonAgreementStoreData<T extends PublicodesSimulator> = {
   publicodes: PublicodesInstance<T>;
 };
 
-export type AgreementSearchValue = {
-  address: string;
-  query: string;
-};
-
 export type CommonAgreementStoreFn = {
   onRouteChange: (value: AgreementRoute) => void;
   onInitAgreementPage: () => void;
@@ -44,9 +39,6 @@ export type CommonAgreementStoreFn = {
     enterprise?: Enterprise
   ) => void;
   onNextStep: () => ValidationResponse;
-  onEnterpriseSearch: (value: AgreementSearchValue) => void;
-  onAgreementSearch: (value: AgreementSearchValue) => void;
-  setHasNoEnterpriseSelected: (value: boolean) => void;
 };
 
 export type CommonAgreementStoreSlice<T extends PublicodesSimulator> = {

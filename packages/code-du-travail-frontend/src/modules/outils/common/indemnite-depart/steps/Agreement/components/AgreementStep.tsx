@@ -1,18 +1,26 @@
 import React from "react";
 import { RadioQuestion } from "../../../../components";
+import { Agreement, AgreementRoute } from "../../../types";
+import Alert from "@codegouvfr/react-dsfr/Alert";
+import { AgreementSearchInput } from "src/modules/convention-collective/AgreementSearch/AgreementSearchInput";
+import { EnterpriseAgreementSearchInput } from "src/modules/enterprise";
 import {
-  AgreementSearch,
-  EnterpriseSearch,
-  NoEnterprise,
-} from "src/outils/Components/Agreements";
-import { AgreementSearchValue } from "../store";
-import { PublicodesSimulator } from "@socialgouv/modeles-social";
-import { Error } from "src/outils/common/ErrorField";
-import ShowAlert from "src/outils/common/Agreement/RouteSelection/ShowAlert";
-import { getSupportedCc } from "../../../common";
-import { Agreement } from "../../../types";
-import { getCc3239Informations } from "src/outils/api";
-import { AgreementRoute } from "src/outils/common/type/WizardType";
+  CommonAgreementStoreError,
+  CommonAgreementStoreFn,
+  CommonAgreementStoreInput,
+} from "../store";
+
+type Props = {
+  error: CommonAgreementStoreError;
+  onRouteChange: (route: AgreementRoute) => void;
+  route: CommonAgreementStoreInput["route"];
+  onAgreementChange: CommonAgreementStoreFn["onAgreementChange"];
+  enterprise: CommonAgreementStoreInput["enterprise"];
+  agreement: CommonAgreementStoreInput["agreement"];
+  onInitAgreementPage: CommonAgreementStoreFn["onInitAgreementPage"];
+  indemniteDepartType: CommonAgreementStoreInput["indemniteDepartType"];
+  simulator: CommonAgreementStoreInput["simulator"];
+};
 
 export const CommonAgreementStep = ({
   error,
@@ -20,15 +28,11 @@ export const CommonAgreementStep = ({
   route,
   onAgreementChange,
   enterprise,
-  onEnterpriseSearch,
   agreement,
-  onAgreementSearch,
   onInitAgreementPage,
-  hasNoEnterpriseSelected,
-  setHasNoEnterpriseSelected,
-}): JSX.Element => {
-  const supportedCc = getSupportedCc();
-
+  simulator,
+  indemniteDepartType,
+}: Required<Props>): JSX.Element => {
   React.useEffect(() => {
     onInitAgreementPage();
   }, [onInitAgreementPage]);
@@ -38,13 +42,14 @@ export const CommonAgreementStep = ({
       <RadioQuestion
         questions={[
           {
-            label: "Je sais quelle est ma convention collective (je la saisis)",
+            label:
+              "Je sais quelle est ma convention collective et je la saisis.",
             value: "agreement" as AgreementRoute,
             id: "route-agreement",
           },
           {
             label:
-              "Je ne sais pas quelle est ma convention collective (je la recherche)",
+              "Je ne sais pas quelle est ma convention collective et je la recherche.",
             value: "enterprise" as AgreementRoute,
             id: "route-enterprise",
           },
@@ -56,92 +61,57 @@ export const CommonAgreementStep = ({
           },
         ]}
         name="route"
-        label=" Quel est le nom de la convention collective applicable&nbsp;?"
+        label="Quel est le nom de la convention collective applicable&nbsp;?"
         selectedOption={route}
         onChangeSelectedOption={onRouteChange}
         error={error?.route}
         subLabel="Vous pouvez trouver le nom de votre convention collective sur votre bulletin de paie"
         autoFocus
       />
-      {route === "not-selected" && <ShowAlert route="not-selected" />}
+      {route === "not-selected" && (
+        <Alert
+          severity="warning"
+          title="Attention"
+          description="Vous pouvez passer cette étape et poursuivre la simulation qui vous fournira un résultat basé sur le code du travail. Nous vous recommandons de renseigner votre convention collective qui peut prévoir un résultat plus favorable que celui défini par le code du travail."
+        />
+      )}
 
       {route === "agreement" && (
         <>
-          <AgreementSearch
-            supportedAgreements={supportedCc}
-            selectedAgreement={agreement}
-            onSelectAgreement={onAgreementChange}
-            onUserAction={(_action, value: AgreementSearchValue) =>
-              onAgreementSearch(value)
-            }
-            alertAgreementNotSupported={undefined}
-            simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
-            searchResultOverride={inject650IfDetected}
+          <AgreementSearchInput
+            onAgreementSelect={(agreement) => {
+              if (agreement) {
+                onAgreementChange(agreement);
+              }
+            }}
+            selectedAgreementAlert={agreement}
+            defaultAgreement={agreement}
+            trackingActionName={indemniteDepartType}
           />
-          {error?.agreement && <Error>{error.agreement}</Error>}
+          {error?.agreement && (
+            <Alert title={error.agreement} severity="error" />
+          )}
         </>
       )}
       {route === "enterprise" && (
         <>
-          <EnterpriseSearch
-            supportedAgreements={supportedCc}
-            selectedAgreement={agreement}
-            selectedEnterprise={enterprise}
-            onSelectAgreement={onAgreementChange}
-            onUserAction={(action, value: AgreementSearchValue) =>
-              onEnterpriseSearch(value)
-            }
-            simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
-            isDisabled={agreement?.num === 3239}
+          <EnterpriseAgreementSearchInput
+            onAgreementSelect={(agreement) => {
+              onAgreementChange(agreement);
+            }}
+            selectedAgreementAlert={agreement}
+            trackingActionName={indemniteDepartType}
+            // selectedAgreement={agreement}
+            // selectedEnterprise={enterprise}
           />
-          {!enterprise && (
-            <NoEnterprise
-              isCheckboxChecked={hasNoEnterpriseSelected}
-              setIsCheckboxChecked={setHasNoEnterpriseSelected}
-              onCheckboxChange={async (isCheckboxChecked) => {
-                const cc3239 = await getCc3239Informations();
-                onAgreementChange(isCheckboxChecked ? cc3239 : null);
-              }}
-            />
+          {error?.enterprise && (
+            <Alert title={error.enterprise} severity="error" />
           )}
-          {error?.enterprise && <Error>{error.enterprise}</Error>}
         </>
       )}
-      {error?.errorPublicodes && <Error>{error.errorPublicodes}</Error>}
+      {error?.errorPublicodes && (
+        <Alert title={error.errorPublicodes} severity="error" />
+      )}
     </>
   );
-};
-
-const inject650IfDetected = (
-  query: string,
-  results: Agreement[]
-): Agreement[] => {
-  const lowerQuery = query.toLowerCase();
-  const words = [
-    "métallurgie",
-    "ingénieurs",
-    "cadres",
-    "metallurgie",
-    "ingénieur",
-    "cadre",
-    "650",
-  ];
-  const detectInQuery = (word) => {
-    return lowerQuery.toLowerCase().includes(word);
-  };
-  const atLeastOneWordDetected = words.some(detectInQuery);
-  if (atLeastOneWordDetected) {
-    return results.concat([
-      {
-        url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635842",
-        id: "KALICONT000005635842",
-        num: 650,
-        shortTitle: "Métallurgie : ingénieurs et cadres",
-        slug: "650-metallurgie-ingenieurs-et-cadres",
-        title: "Métallurgie : ingénieurs et cadres",
-        contributions: false,
-      },
-    ]);
-  }
-  return results;
 };
