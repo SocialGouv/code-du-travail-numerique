@@ -37,16 +37,16 @@ export function ContributionLayout({ contribution }: Props) {
           </span>
         )}
       </h1>
-      <p className={fr.cx("fr-mt-6w")}>
+      <div className={fr.cx("fr-mt-6w")}>
         {isFicheSP ? (
           <SourceData
             source={{ url: contribution.url, name: "Fiche service-public.fr" }}
             updatedAt={date}
           />
         ) : (
-          <>Mis à jour le&nbsp;: {contribution.date}</>
+          <p>Mis à jour le&nbsp;: {contribution.date}</p>
         )}
-      </p>
+      </div>
       {isGeneric ? (
         <ContributionGeneric contribution={contribution} />
       ) : (
