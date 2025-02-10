@@ -53,14 +53,16 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
     it("Vérifier la navigation", async () => {
       mockFetch([
         {
-          id: "0016",
-          num: 16,
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
-          shortTitle:
-            "Transports routiers et activités auxiliaires du transport",
-          slug: "16-transports-routiers-et-activites-auxiliaires-du-transport",
-          title:
-            "Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950",
+          _source: {
+            id: "0016",
+            num: 16,
+            url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
+            shortTitle:
+              "Transports routiers et activités auxiliaires du transport",
+            slug: "16-transports-routiers-et-activites-auxiliaires-du-transport",
+            title:
+              "Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950",
+          },
         },
       ]);
 
@@ -100,10 +102,11 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
     });
 
     it("Vérifier l'affichage des infos si moins 2 caractères", async () => {
+      mockFetch([]);
       render(<AgreementSearch />);
       userAction = new UserAction();
-      userAction.setInput(ui.searchByName.input.get(), "c");
-      await wait();
+      userAction.setInput(ui.searchByName.input.get(), "cc");
+      await wait(300);
       expect(ui.searchByName.infoNotFound.query()).toBeInTheDocument();
       userAction.click(ui.searchByName.inputCloseBtn.get());
       expect(ui.searchByName.infoNotFound.query()).not.toBeInTheDocument();
