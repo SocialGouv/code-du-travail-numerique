@@ -40,9 +40,9 @@ export function ContributionGeneric({ contribution }: Props) {
           if (!agreement) return;
 
           if (isAgreementSupported(contribution, agreement)) {
-            emitAgreementTreatedEvent(agreement.num);
+            emitAgreementTreatedEvent(agreement.num.toString());
           } else {
-            emitAgreementUntreatedEvent(agreement.num);
+            emitAgreementUntreatedEvent(agreement.num.toString());
           }
         }}
         onDisplayClick={(ev) => {

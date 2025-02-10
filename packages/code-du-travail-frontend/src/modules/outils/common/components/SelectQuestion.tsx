@@ -1,6 +1,7 @@
 import React from "react";
 import Html from "src/modules/common/Html";
 import { Select } from "@codegouvfr/react-dsfr/Select";
+import { xssWrapper } from "src/lib";
 
 type Props = {
   name: string;
@@ -51,7 +52,23 @@ export const SelectQuestion = ({
         required: true,
       }}
       state={error ? "error" : subLabel ? "info" : "default"}
-      stateRelatedMessage={error || subLabel || undefined}
+      stateRelatedMessage={
+        error ? (
+          <span
+            dangerouslySetInnerHTML={{
+              __html: xssWrapper(error),
+            }}
+          />
+        ) : (
+          subLabel && (
+            <span
+              dangerouslySetInnerHTML={{
+                __html: xssWrapper(subLabel),
+              }}
+            />
+          )
+        )
+      }
     >
       <option value="" disabled>
         Sélectionnez une option

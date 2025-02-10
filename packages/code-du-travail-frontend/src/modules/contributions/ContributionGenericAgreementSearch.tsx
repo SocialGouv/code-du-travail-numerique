@@ -41,7 +41,7 @@ export function ContributionGenericAgreementSearch({
     const isSupported = isAgreementSupported(contribution, agreement);
     const isUnextended = isAgreementUnextended(contribution, agreement);
     if (contribution.isNoCDT) {
-      if (isUnextended)
+      if (isUnextended && agreement.url)
         return (
           <>
             Les dispositions de cette convention n’ont pas été étendues. Cela
@@ -57,7 +57,7 @@ export function ContributionGenericAgreementSearch({
             dans le cas où elle s&apos;applique à votre situation.
           </>
         );
-      if (!isSupported)
+      if (!isSupported && agreement.url)
         return (
           <>
             Nous vous invitons à consulter votre convention collective qui peut

@@ -1,6 +1,7 @@
 import React from "react";
 import Html from "src/modules/common/Html";
 import { RadioButtons } from "@codegouvfr/react-dsfr/RadioButtons";
+import { xssWrapper } from "src/lib";
 
 type Question = {
   label: string;
@@ -53,7 +54,23 @@ export function RadioQuestion({
           },
         }))}
         state={error ? "error" : subLabel ? "info" : "default"}
-        stateRelatedMessage={error || subLabel || undefined}
+        stateRelatedMessage={
+          error ? (
+            <span
+              dangerouslySetInnerHTML={{
+                __html: xssWrapper(error),
+              }}
+            />
+          ) : (
+            subLabel && (
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: xssWrapper(subLabel),
+                }}
+              />
+            )
+          )
+        }
       />
       {note && <i>{note}</i>}
     </div>

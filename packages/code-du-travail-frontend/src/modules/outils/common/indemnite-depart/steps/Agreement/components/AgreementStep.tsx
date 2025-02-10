@@ -10,6 +10,7 @@ import {
   CommonAgreementStoreInput,
 } from "../store";
 import { selectedAgreementAlert } from "./selectedAgreementAlert";
+import { fr } from "@codegouvfr/react-dsfr";
 
 type Props = {
   error: CommonAgreementStoreError;
@@ -88,7 +89,11 @@ export const CommonAgreementStep = ({
             }
           />
           {error?.agreement && (
-            <Alert title={error.agreement} severity="error" />
+            <Alert
+              title={error.agreement}
+              severity="error"
+              className={fr.cx("fr-mt-2w")}
+            />
           )}
         </>
       )}
@@ -106,12 +111,20 @@ export const CommonAgreementStep = ({
             agreement={agreement}
           />
           {error?.enterprise && (
-            <Alert title={error.enterprise} severity="error" />
+            <Alert
+              title={error.enterprise}
+              severity="error"
+              className={fr.cx("fr-mt-2w")}
+            />
           )}
         </>
       )}
       {error?.errorPublicodes && (
-        <Alert title={error.errorPublicodes} severity="error" />
+        <Alert
+          title={error.errorPublicodes}
+          severity="error"
+          className={fr.cx("fr-mt-2w")}
+        />
       )}
     </>
   );

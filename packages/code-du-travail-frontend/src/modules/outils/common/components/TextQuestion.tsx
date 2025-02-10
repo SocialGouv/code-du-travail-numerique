@@ -3,6 +3,11 @@ import Html from "src/modules/common/Html";
 import { xssWrapper } from "src/lib";
 import { Input } from "@codegouvfr/react-dsfr/Input";
 import { InputUnit } from "../indemnite-depart/steps/Informations/components/PubliQuestion";
+import {
+  convertISOToFrDate,
+  isFrenchDateFormat,
+  convertFrToISODate,
+} from "../utils";
 
 type Props = {
   onChange: (value: string) => void;
@@ -18,18 +23,6 @@ type Props = {
   unit?: InputUnit;
 };
 
-function formatValueToFr(value: string): string {
-  if (!value) return value;
-  const [year, month, days] = value.split("-");
-  return `${days}/${month}/${year}`;
-}
-
-function formatValueToEn(value: string): string {
-  if (!value) return value;
-  const [days, month, year] = value.split("/");
-  return `${year}-${month}-${days}`;
-}
-
 export function TextQuestion({
   inputType = "text",
   label,
@@ -44,20 +37,34 @@ export function TextQuestion({
   autoFocus = false,
 }: Props) {
   const [inputRef, setInputRef] = useState<HTMLInputElement>();
+  const [localValue, setLocalValue] = useState(value || "");
 
   useEffect(() => {
-    if (inputRef && error) {
+    setLocalValue(value || "");
+  }, [value]);
+
+  useEffect(() => {
+    if (inputRef && error && autoFocus) {
       inputRef?.focus();
     }
-  }, [inputRef, error]);
+  }, [inputRef, error, autoFocus]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue =
-      inputType === "date"
-        ? formatValueToFr(event.target.value)
-        : event.target.value;
-    onChange(newValue);
+    const newValue = event.target.value;
+    setLocalValue(newValue);
+    if (inputType === "date" && newValue.length === 10) {
+      onChange(convertISOToFrDate(newValue));
+    } else if (inputType !== "date") {
+      onChange(newValue);
+    }
   };
+
+  const displayValue =
+    inputType === "date" &&
+    typeof localValue === "string" &&
+    isFrenchDateFormat(localValue)
+      ? convertFrToISODate(localValue)
+      : localValue;
 
   return (
     <Input
@@ -81,10 +88,7 @@ export function TextQuestion({
         type: inputType,
         id,
         name: id,
-        value:
-          inputType === "date"
-            ? formatValueToEn(value as string)
-            : (value ?? ""),
+        value: displayValue,
         onChange: handleChange,
         autoFocus,
         title,
@@ -96,13 +100,11 @@ export function TextQuestion({
       iconId={unit === "€" ? "fr-icon-money-euro-circle-line" : undefined}
       stateRelatedMessage={
         error ? (
-          <span
-            dangerouslySetInnerHTML={{
-              __html: xssWrapper(error),
-            }}
-          />
+          <span dangerouslySetInnerHTML={{ __html: xssWrapper(error) }} />
         ) : (
-          subLabel || undefined
+          subLabel && (
+            <span dangerouslySetInnerHTML={{ __html: xssWrapper(subLabel) }} />
+          )
         )
       }
     />

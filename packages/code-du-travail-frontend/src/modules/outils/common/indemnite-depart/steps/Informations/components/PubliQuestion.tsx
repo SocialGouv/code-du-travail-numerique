@@ -87,7 +87,7 @@ export const PubliQuestion: React.FC<Props> = ({
           subLabel={description}
           dataTestId={name}
           autoFocus={autoFocus}
-          unit={rule.unité}
+          unit={rule.unité as InputUnit}
         />
       );
     case RuleType.Date:
