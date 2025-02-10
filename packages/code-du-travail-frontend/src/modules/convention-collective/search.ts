@@ -51,4 +51,4 @@ const apiIdcc = function createFetcher(
 
 const searchAgreement = debounce(apiIdcc, 300);
 
-export { searchAgreement, apiIdcc };
+export { searchAgreement };

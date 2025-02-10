@@ -119,11 +119,12 @@ export const Autocomplete = <K,>({
               const inputValue = ev.target.value;
               onInputValueChange?.(inputValue);
               setValue(inputValue);
-              if (!inputValue) {
+              if (!inputValue || inputValue.length <= 1) {
                 setSelectedResult(undefined);
                 onSearch?.(inputValue, []);
+                return;
               }
-              if (selectedResult || inputValue.length <= 1) {
+              if (selectedResult) {
                 return;
               }
               try {
@@ -132,7 +133,7 @@ export const Autocomplete = <K,>({
                 onSearch?.(inputValue, results);
                 setSuggestions(results);
               } catch (error) {
-                onError?.(error.message);
+                onError?.(error);
                 setSuggestions([]);
               } finally {
                 setLoading(false);
