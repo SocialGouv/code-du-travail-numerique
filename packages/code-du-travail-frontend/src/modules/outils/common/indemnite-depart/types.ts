@@ -28,7 +28,7 @@ export type Agreement = {
   shortTitle: string;
   slug?: string;
   title: string;
-  url?: string;
+  url: string;
   highlight?: {
     title: string;
     content: string;

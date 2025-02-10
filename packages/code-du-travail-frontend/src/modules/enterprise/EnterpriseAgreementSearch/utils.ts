@@ -1,11 +1,11 @@
-import { EnterpriseAgreement } from "../types";
+import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
 
-export type DescribedEnterpriseAgreement = EnterpriseAgreement & {
+export type DescribedEnterpriseAgreement = Agreement & {
   disabled: boolean;
   description: string;
 };
 
-export const getEnterpriseAgreements = (agreements: EnterpriseAgreement[]) => {
+export const getEnterpriseAgreements = (agreements: Agreement[]) => {
   return agreements.map((agreement) => {
     const { slug, url, contributions } = agreement;
     let disabled = false;

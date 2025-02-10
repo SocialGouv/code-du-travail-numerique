@@ -1,6 +1,6 @@
 import React from "react";
 import { RadioQuestion } from "../../../../components";
-import { Agreement, AgreementRoute } from "../../../types";
+import { Agreement, AgreementRoute, IndemniteDepartType } from "../../../types";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { AgreementSearchInput } from "src/modules/convention-collective/AgreementSearch/AgreementSearchInput";
 import { EnterpriseAgreementSearchInput } from "src/modules/enterprise";
@@ -9,6 +9,7 @@ import {
   CommonAgreementStoreFn,
   CommonAgreementStoreInput,
 } from "../store";
+import { selectedAgreementAlert } from "./selectedAgreementAlert";
 
 type Props = {
   error: CommonAgreementStoreError;
@@ -19,7 +20,6 @@ type Props = {
   agreement: CommonAgreementStoreInput["agreement"];
   onInitAgreementPage: CommonAgreementStoreFn["onInitAgreementPage"];
   indemniteDepartType: CommonAgreementStoreInput["indemniteDepartType"];
-  simulator: CommonAgreementStoreInput["simulator"];
 };
 
 export const CommonAgreementStep = ({
@@ -30,7 +30,6 @@ export const CommonAgreementStep = ({
   enterprise,
   agreement,
   onInitAgreementPage,
-  simulator,
   indemniteDepartType,
 }: Required<Props>): JSX.Element => {
   React.useEffect(() => {
@@ -80,13 +79,13 @@ export const CommonAgreementStep = ({
         <>
           <AgreementSearchInput
             onAgreementSelect={(agreement) => {
-              if (agreement) {
-                onAgreementChange(agreement);
-              }
+              onAgreementChange(agreement);
             }}
-            selectedAgreementAlert={agreement}
+            selectedAgreementAlert={selectedAgreementAlert}
             defaultAgreement={agreement}
-            trackingActionName={indemniteDepartType}
+            trackingActionName={
+              indemniteDepartType ?? IndemniteDepartType.LICENCIEMENT
+            }
           />
           {error?.agreement && (
             <Alert title={error.agreement} severity="error" />
@@ -96,13 +95,15 @@ export const CommonAgreementStep = ({
       {route === "enterprise" && (
         <>
           <EnterpriseAgreementSearchInput
-            onAgreementSelect={(agreement) => {
-              onAgreementChange(agreement);
+            onAgreementSelect={(agreement, enterprise) => {
+              onAgreementChange(agreement, enterprise);
             }}
-            selectedAgreementAlert={agreement}
-            trackingActionName={indemniteDepartType}
-            // selectedAgreement={agreement}
-            // selectedEnterprise={enterprise}
+            selectedAgreementAlert={selectedAgreementAlert}
+            trackingActionName={
+              indemniteDepartType ?? IndemniteDepartType.LICENCIEMENT
+            }
+            enterprise={enterprise}
+            agreement={agreement}
           />
           {error?.enterprise && (
             <Alert title={error.enterprise} severity="error" />

@@ -1,13 +1,10 @@
 import debounce from "debounce-promise";
 import { SITE_URL } from "../../../config";
-import {
-  Enterprise as ApiEntreprise,
-  EnterpriseAgreement as ApiEnterpriseAgreement,
-} from "../../../api/modules/enterprises/types";
+import { Enterprise as ApiEntreprise } from "../../../api/modules/enterprises/types";
 import { SearchParams } from "../../../outils/common/Agreement/EnterpriseSearch/EntrepriseSearchInput/SearchEnterpriseInput";
+import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
 
 export type Enterprise = ApiEntreprise;
-export type EnterpriseAgreement = ApiEnterpriseAgreement;
 
 export const messageFetchSearchCcOrEnterprise =
   "Ce service est momentanément indisponible. Si vous utilisez un simulateur, vous pouvez tout de même poursuivre la simulation pour obtenir le résultat prévu par le Code du travail en sélectionnant l'option \"Je ne souhaite pas renseigner ma convention collective (je passe l'étape)\"";

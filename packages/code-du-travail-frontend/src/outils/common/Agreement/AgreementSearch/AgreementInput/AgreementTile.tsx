@@ -12,10 +12,10 @@ import {
 } from "../../../../ConventionCollective/types";
 import { LinkedTile } from "../../../../../common/tiles/LinkedTile";
 import { SITE_URL } from "../../../../../config";
-import { EnterpriseAgreement } from "../../../../../conventions/Search/api/enterprises.service";
+import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
 
 type Props = {
-  agreement: EnterpriseAgreement;
+  agreement: Agreement;
   isWidgetMode?: boolean;
   noRedirect?: boolean;
 } & TrackingProps;

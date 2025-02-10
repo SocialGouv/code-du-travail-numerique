@@ -5,9 +5,9 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { ReactNode, useState } from "react";
 
 import { Autocomplete } from "../../common/Autocomplete";
-import { Agreement } from "../../../outils/types";
 import { searchAgreement } from "../search";
 import { useAgreementSearchTracking } from "../tracking";
+import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
 
 type Props = {
   onSearch?: (query: string, value?: Agreement[]) => void;

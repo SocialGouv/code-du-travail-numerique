@@ -3,10 +3,9 @@ import React from "react";
 
 import { EmbeddedForm } from "../../../../../test/TestForm";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
-import { Agreement } from "../../../../outils/types";
+import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
 import type { Props } from "../EnterpriseSearch/EnterpriseSearch";
 import EnterpriseSearch from "../EnterpriseSearch/EnterpriseSearch";
-import { EnterpriseAgreement } from "../../../../api/modules/enterprises/types";
 import { Simulator } from "../../NoticeExample";
 import { SupportedTypes } from "@socialgouv/modeles-social";
 
@@ -21,7 +20,7 @@ const onUserAction = () => {
   /* dummy */
 };
 
-const agreement1: EnterpriseAgreement = {
+const agreement1: Agreement = {
   id: "KALICONT000005635093",
   url: "hello.com",
   num: 2156,
@@ -32,7 +31,7 @@ const agreement1: EnterpriseAgreement = {
   contributions: true,
 };
 
-const agreement2: EnterpriseAgreement = {
+const agreement2: Agreement = {
   id: "KALICONT000005635085",
   num: 2216,
   shortTitle: "Commerce de détail et de gros à prédominance alimentaire",

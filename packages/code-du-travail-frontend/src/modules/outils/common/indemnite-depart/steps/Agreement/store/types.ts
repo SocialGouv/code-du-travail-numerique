@@ -13,7 +13,6 @@ export type CommonAgreementStoreInput = {
   isAgreementSupportedIndemniteLicenciement: boolean;
   informationError: boolean;
   indemniteDepartType?: IndemniteDepartType;
-  simulator?: PublicodesSimulator;
 };
 
 export type CommonAgreementStoreError = {
@@ -34,10 +33,7 @@ export type CommonAgreementStoreData<T extends PublicodesSimulator> = {
 export type CommonAgreementStoreFn = {
   onRouteChange: (value: AgreementRoute) => void;
   onInitAgreementPage: () => void;
-  onAgreementChange: (
-    agreement: Agreement | null,
-    enterprise?: Enterprise
-  ) => void;
+  onAgreementChange: (agreement?: Agreement, enterprise?: Enterprise) => void;
   onNextStep: () => ValidationResponse;
 };
 

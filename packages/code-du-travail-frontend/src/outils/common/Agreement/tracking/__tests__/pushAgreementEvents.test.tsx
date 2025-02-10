@@ -1,7 +1,4 @@
-import {
-  Enterprise,
-  EnterpriseAgreement,
-} from "../../../../../conventions/Search/api/enterprises.service";
+import { Enterprise } from "../../../../../conventions/Search/api/enterprises.service";
 import {
   MatomoAgreementEvent,
   MatomoBaseEvent,
@@ -11,12 +8,13 @@ import {
 import { push as matopush } from "@socialgouv/matomo-next";
 import { ConventionCollective } from "../../../type/WizardType";
 import { pushAgreementEvents } from "../index";
+import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
 
 jest.mock("@socialgouv/matomo-next", () => ({
   push: jest.fn(),
 }));
 
-const agreement: EnterpriseAgreement = {
+const agreement: Agreement = {
   id: "AGREEMENT_ID",
   num: 3239,
   shortTitle: "Service à la personne",
@@ -195,7 +193,7 @@ describe("Push agreement events on click next", () => {
 
   describe("not tracking", () => {
     it("should not send matomo events if agreement is 9999", () => {
-      const agreement9999: EnterpriseAgreement = {
+      const agreement9999: Agreement = {
         id: "AGREEMENT_ID",
         num: 9999,
         shortTitle: "?",

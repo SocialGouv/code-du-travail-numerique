@@ -14,7 +14,6 @@ const AgreementStep = (): JSX.Element => {
     agreement,
     onInitAgreementPage,
     indemniteDepartType,
-    simulator,
   } = useIndemniteDepartStore(store, (state) => ({
     error: state.agreementData.error,
     onRouteChange: state.agreementFunction.onRouteChange,
@@ -24,7 +23,6 @@ const AgreementStep = (): JSX.Element => {
     agreement: state.agreementData.input.agreement,
     onInitAgreementPage: state.agreementFunction.onInitAgreementPage,
     indemniteDepartType: state.agreementData.input.indemniteDepartType,
-    simulator: state.agreementData.input.simulator,
   }));
 
   React.useEffect(() => {
@@ -41,7 +39,6 @@ const AgreementStep = (): JSX.Element => {
       onInitAgreementPage={onInitAgreementPage}
       onRouteChange={onRouteChange}
       route={route}
-      simulator={simulator}
     />
   );
 };

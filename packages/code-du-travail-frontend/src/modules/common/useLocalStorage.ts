@@ -1,12 +1,11 @@
-import { Agreement } from "@socialgouv/cdtn-types";
 import { useCallback, useEffect, useState } from "react";
-import { EnterpriseAgreement } from "../enterprise";
+import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
 
 export const STORAGE_KEY_AGREEMENT = "convention";
 
 export function useLocalStorageForAgreementOnPageLoad(): [
-  EnterpriseAgreement | undefined,
-  (a?: EnterpriseAgreement) => void,
+  Agreement | undefined,
+  (a?: Agreement) => void,
 ] {
   const [value, setValue] = useState(null);
 
@@ -42,9 +41,7 @@ export function useLocalStorageForAgreement(
   return [value, updateValue];
 }
 
-export const saveAgreementToLocalStorage = (
-  agreement?: EnterpriseAgreement | null
-) => {
+export const saveAgreementToLocalStorage = (agreement?: Agreement | null) => {
   try {
     if (window?.localStorage) {
       if (agreement) {
@@ -61,9 +58,7 @@ export const saveAgreementToLocalStorage = (
   }
 };
 
-export const getAgreementFromLocalStorage = ():
-  | EnterpriseAgreement
-  | undefined => {
+export const getAgreementFromLocalStorage = (): Agreement | undefined => {
   try {
     if (window?.localStorage) {
       const data = window.localStorage.getItem(STORAGE_KEY_AGREEMENT);

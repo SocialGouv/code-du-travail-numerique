@@ -1,6 +1,6 @@
 "use client";
 import { fr } from "@codegouvfr/react-dsfr";
-import { Enterprise, EnterpriseAgreement } from "../types";
+import { Enterprise } from "../types";
 import RadioButtons from "@codegouvfr/react-dsfr/RadioButtons";
 import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelectionDetail";
 import { getEnterpriseAgreements } from "./utils";
@@ -8,11 +8,12 @@ import Button from "@codegouvfr/react-dsfr/Button";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { useEffect, useRef, useState } from "react";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
+import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;
   goBack: () => void;
-  onAgreementSelect?: (agreement: EnterpriseAgreement) => void;
+  onAgreementSelect?: (agreement: Agreement) => void;
   trackingActionName: string;
 };
 
@@ -24,7 +25,7 @@ export const EnterpriseAgreementSelectionForm = ({
 }: Props) => {
   const { emitSelectEnterpriseAgreementEvent } =
     useEnterpriseAgreementSearchTracking();
-  const [agreement, setAgreement] = useState<EnterpriseAgreement | undefined>();
+  const [agreement, setAgreement] = useState<Agreement | undefined>();
   const agreements = getEnterpriseAgreements(enterprise.conventions);
   const resultRef = useRef<HTMLDivElement>(null);
   useEffect(() => {

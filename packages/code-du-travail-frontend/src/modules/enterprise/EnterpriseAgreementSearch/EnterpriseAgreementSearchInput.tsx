@@ -12,22 +12,25 @@ import { css } from "@styled-system/css";
 import Spinner from "../../common/Spinner.svg";
 import { LocationSearchInput } from "../../Location/LocationSearchInput";
 import { searchEnterprises } from "../queries";
-import { Enterprise, EnterpriseAgreement } from "../types";
+import { Enterprise } from "../types";
 import { ApiGeoResult } from "../../Location/searchCities";
 import { CardTitleStyle } from "../../convention-collective/style";
 import { EnterpriseAgreementSelectionForm } from "./EnterpriseAgreementSelectionForm";
 import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelectionDetail";
 import { getEnterpriseAgreements } from "./utils";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
+import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
 
 type Props = {
   widgetMode?: boolean;
-  onAgreementSelect?: (agreement: EnterpriseAgreement) => void;
+  onAgreementSelect?: (agreement: Agreement, enterprise?: Enterprise) => void;
   selectedAgreementAlert?: (
-    agreement?: EnterpriseAgreement
+    agreement?: Agreement
   ) => NonNullable<ReactNode> | undefined;
   defaultSearch?: string;
   defaultLocation?: ApiGeoResult;
+  enterprise?: Enterprise;
+  agreement?: Agreement;
   trackingActionName: string;
 };
 
@@ -38,10 +41,12 @@ export const EnterpriseAgreementSearchInput = ({
   onAgreementSelect,
   selectedAgreementAlert,
   trackingActionName,
+  enterprise,
+  agreement,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState<
-    EnterpriseAgreement | undefined
-  >();
+    Agreement | undefined
+  >(agreement);
   const [searchState, setSearchState] = useState<
     "noSearch" | "notFoundSearch" | "errorSearch" | "fullSearch" | "required"
   >("noSearch");
@@ -59,7 +64,9 @@ export const EnterpriseAgreementSearchInput = ({
     defaultLocation
   );
   const [enterprises, setEnterprises] = useState<Enterprise[]>();
-  const [selectedEnterprise, setSelectedEnterprise] = useState<Enterprise>();
+  const [selectedEnterprise, setSelectedEnterprise] = useState<
+    Enterprise | undefined
+  >(enterprise);
   const [error, setError] = useState("");
   const resultRef = useRef<HTMLHeadingElement>(null);
 
@@ -151,6 +158,19 @@ export const EnterpriseAgreementSearchInput = ({
   useEffect(() => {
     resultRef.current?.focus();
   }, [enterprises]);
+
+  useEffect(() => {
+    if (agreement) {
+      setSelectedAgreement(agreement);
+    }
+  }, [agreement]);
+
+  useEffect(() => {
+    if (enterprise) {
+      setSelectedEnterprise(enterprise);
+    }
+  }, [enterprise]);
+
   if (
     onAgreementSelect &&
     selectedAgreement &&
@@ -395,7 +415,10 @@ export const EnterpriseAgreementSearchInput = ({
                             label: enterprise.label,
                             siren: enterprise.siren,
                           });
-                          onAgreementSelect(enterprise.conventions[0]);
+                          onAgreementSelect(
+                            enterprise.conventions[0],
+                            enterprise
+                          );
                         }
                       },
                     }

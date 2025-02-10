@@ -1,7 +1,7 @@
 import debounce from "debounce-promise";
 import { nafError } from "./error";
 import { SITE_URL } from "../../config";
-import { Agreement } from "../../outils/types";
+import { Agreement } from "../outils/common/indemnite-depart/types";
 
 const formatCCn = ({
   _source: { num, id, slug, title, shortTitle, highlight, url },

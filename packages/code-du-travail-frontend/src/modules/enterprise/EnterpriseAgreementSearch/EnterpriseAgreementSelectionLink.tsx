@@ -1,7 +1,7 @@
 "use client";
 import { fr } from "@codegouvfr/react-dsfr";
 import Button from "@codegouvfr/react-dsfr/Button";
-import { Enterprise, EnterpriseAgreement } from "../types";
+import { Enterprise } from "../types";
 import Card from "@codegouvfr/react-dsfr/Card";
 import { css } from "@styled-system/css";
 import { useSearchParams } from "next/navigation";
@@ -10,11 +10,12 @@ import { getEnterpriseAgreements } from "./utils";
 import { CardTitleStyle } from "../../convention-collective/style";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
 import { TrackingAgreementSearchAction } from "../../convention-collective/tracking";
+import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;
   widgetMode?: boolean;
-  onAgreementSelect?: (agreement: EnterpriseAgreement) => void;
+  onAgreementSelect?: (agreement: Agreement) => void;
 };
 
 export const EnterpriseAgreementSelectionLink = ({

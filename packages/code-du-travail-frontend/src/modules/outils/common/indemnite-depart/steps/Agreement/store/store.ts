@@ -5,7 +5,11 @@ import { validateStep } from "./validator";
 import { CommonAgreementStoreData, CommonAgreementStoreSlice } from "./types";
 
 import { PublicodesSimulator, supportedCcn } from "@socialgouv/modeles-social";
-import { AgreementRoute, StoreSlicePublicode } from "../../../types";
+import {
+  AgreementRoute,
+  IndemniteDepartType,
+  StoreSlicePublicode,
+} from "../../../types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
 import { getAgreementFromLocalStorage } from "src/modules/common/useLocalStorage";
 import {
@@ -38,7 +42,6 @@ const createCommonAgreementStore: StoreSlicePublicode<
     ...initialState,
     publicodes: loadPublicodes(simulator),
     indemniteDepartType: type,
-    simulator: simulator,
   },
   agreementFunction: {
     onInitAgreementPage: () => {

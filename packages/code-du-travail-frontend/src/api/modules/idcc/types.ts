@@ -1,4 +1,4 @@
-import { Agreement } from "../../../outils/types";
+import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
 
 export type ApiEnterpriseData = {
   entreprises: Enterprise[] | undefined;
@@ -11,7 +11,7 @@ export type MatchingEtablissement = {
 
 export type Enterprise = {
   activitePrincipale?: string;
-  conventions: EnterpriseAgreement[];
+  conventions: Agreement[];
   etablissements: number;
   highlightLabel: string;
   label: string;
@@ -21,5 +21,3 @@ export type Enterprise = {
   address?: string;
   firstMatchingEtablissement?: MatchingEtablissement;
 };
-
-export type EnterpriseAgreement = Agreement;
