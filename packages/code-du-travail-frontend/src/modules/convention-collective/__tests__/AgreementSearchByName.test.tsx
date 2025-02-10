@@ -1,12 +1,11 @@
-import { render, RenderResult } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { UserAction } from "../../../common";
 import React from "react";
 import { AgreementSearch } from "../AgreementSearch";
 import { ui } from "./ui";
 import { wait } from "@testing-library/user-event/dist/utils";
-import { act } from "react-dom/test-utils";
-import { searchAgreement } from "../search";
 import { sendEvent } from "../../utils";
+import { byText } from "testing-library-selector";
 
 jest.mock("../../utils", () => ({
   sendEvent: jest.fn(),
@@ -16,13 +15,18 @@ jest.mock("uuid", () => ({
   v4: jest.fn(() => ""),
 }));
 
-jest.mock("../search", () => ({
-  searchAgreement: jest.fn(),
-}));
+global.fetch = jest.fn();
 
 jest.mock("next/navigation", () => ({
   redirect: jest.fn(),
 }));
+
+function mockFetch(data) {
+  (fetch as any).mockResolvedValue({
+    json: jest.fn().mockResolvedValue({ hits: { hits: data } }),
+    ok: true,
+  });
+}
 
 describe("Trouver sa CC - recherche par nom de CC", () => {
   describe("Test de l'autocomplete", () => {
@@ -31,13 +35,11 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
       jest.resetAllMocks();
     });
     it("Vérifier l'affichage des erreurs", async () => {
-      (searchAgreement as jest.Mock).mockImplementation(() =>
-        Promise.resolve([])
-      );
+      mockFetch([]);
       render(<AgreementSearch />);
       userAction = new UserAction();
       userAction.setInput(ui.searchByName.input.get(), "cccc");
-      await wait();
+      await wait(300);
       expect(ui.searchByName.errorNotFound.error.query()).toBeInTheDocument();
       expect(ui.searchByName.errorNotFound.info.query()).toBeInTheDocument();
       userAction.click(ui.searchByName.inputCloseBtn.get());
@@ -49,9 +51,9 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
       ).not.toBeInTheDocument();
     });
     it("Vérifier la navigation", async () => {
-      (searchAgreement as jest.Mock).mockImplementation(() =>
-        Promise.resolve([
-          {
+      mockFetch([
+        {
+          _source: {
             id: "0016",
             num: 16,
             url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
@@ -61,12 +63,13 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
             title:
               "Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950",
           },
-        ])
-      );
+        },
+      ]);
+
       render(<AgreementSearch />);
       userAction = new UserAction();
       userAction.setInput(ui.searchByName.input.get(), "16");
-      await wait();
+      await wait(300);
       expect(sendEvent).toHaveBeenCalledTimes(1);
       expect(sendEvent).toHaveBeenLastCalledWith({
         action: "Trouver sa convention collective",
@@ -98,19 +101,39 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
       });
     });
 
-    it("Vérifier l'affichage des infos si moins 2 caractères", () => {
-      (searchAgreement as jest.Mock).mockImplementation(() =>
-        Promise.resolve([])
-      );
+    it("Vérifier l'affichage des infos si moins 2 caractères", async () => {
+      mockFetch([]);
       render(<AgreementSearch />);
-      act(async () => {
-        userAction = new UserAction();
-        userAction.setInput(ui.searchByName.input.get(), "cc");
-        await wait();
-        expect(ui.searchByName.infoNotFound.query()).toBeInTheDocument();
-        userAction.click(ui.searchByName.inputCloseBtn.get());
-        expect(ui.searchByName.infoNotFound.query()).not.toBeInTheDocument();
-      });
+      userAction = new UserAction();
+      userAction.setInput(ui.searchByName.input.get(), "cc");
+      await wait(300);
+      expect(ui.searchByName.infoNotFound.query()).toBeInTheDocument();
+      userAction.click(ui.searchByName.inputCloseBtn.get());
+      expect(ui.searchByName.infoNotFound.query()).not.toBeInTheDocument();
+    });
+
+    it("Vérifier l'affichage du message d'erreur pour les mauvais code Naf", async () => {
+      render(<AgreementSearch />);
+      userAction = new UserAction();
+      userAction.setInput(ui.searchByName.input.get(), "1234A");
+      await wait(300);
+      expect(
+        byText(/Numéro d’indentification \(IDCC\) incorrect./).get().textContent
+      ).toEqual(
+        "Numéro d’indentification (IDCC) incorrect. Il semblerait que vous ayez saisi un code APE (Activité Principale Exercée) ou NAF (Nomenclature des Activités Françaises) et dont l’objectif est d’identifier l’activité principale de l’entreprise."
+      );
+    });
+
+    it("Vérifier l'affichage du message d'erreur concernant du format du code", async () => {
+      render(<AgreementSearch />);
+      userAction = new UserAction();
+      userAction.setInput(ui.searchByName.input.get(), "12345366");
+      await wait(300);
+      expect(
+        byText(/Numéro d’indentification \(IDCC\) incorrect./).get().textContent
+      ).toEqual(
+        "Numéro d’indentification (IDCC) incorrect. Ce numéro est composé de 4 chiffres uniquement."
+      );
     });
   });
 });

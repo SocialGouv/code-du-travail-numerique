@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.172.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.172.2...v4.172.3) (2025-02-10)
+
+
+### Bug Fixes
+
+* **code:** suppression du vieux code qui n'est plus utilisé pour après le passage au DSFR ([#6446](https://github.com/SocialGouv/code-du-travail-numerique/issues/6446)) ([96f95f5](https://github.com/SocialGouv/code-du-travail-numerique/commit/96f95f571892c374d7f86019490716593d581de5))
+* **contribution:** html valide pour les contributions qui sont des fiches SP ([#6450](https://github.com/SocialGouv/code-du-travail-numerique/issues/6450)) ([584da94](https://github.com/SocialGouv/code-du-travail-numerique/commit/584da9450349ac59b8a2119ffdeed085c903ef6f))
+
+
+
+
+
+## [4.172.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.172.1...v4.172.2) (2025-02-06)
+
+
+### Bug Fixes
+
+* **convention-collective:** ajout des redirections suite aux changements de la DARES du mois de janvier ([#6447](https://github.com/SocialGouv/code-du-travail-numerique/issues/6447)) ([6fd7767](https://github.com/SocialGouv/code-du-travail-numerique/commit/6fd7767f5eff635abf079730c55ccbffb2f986ac)), closes [#6443](https://github.com/SocialGouv/code-du-travail-numerique/issues/6443)
+
+
+
+
+
+## [4.172.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.172.0...v4.172.1) (2025-02-04)
+
+
+### Bug Fixes
+
+* **contributions:** fix de l'erreur js dans la console quand une CC était présente dans le localStorage ([#6445](https://github.com/SocialGouv/code-du-travail-numerique/issues/6445)) ([28f0170](https://github.com/SocialGouv/code-du-travail-numerique/commit/28f017032200605985e5a69aa8204254c0b41dfc))
+* **contributions:** modification des events sur les contribs generiques pour être ISO avec ce qu'on avait avant le passage au DSFR ([#6443](https://github.com/SocialGouv/code-du-travail-numerique/issues/6443)) ([f022582](https://github.com/SocialGouv/code-du-travail-numerique/commit/f022582f6421c42492d592ef17da3f2b0a04d55e))
+
+
+
+
+
 # [4.172.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.171.1...v4.172.0) (2025-02-03)
 
 

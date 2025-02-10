@@ -122,6 +122,7 @@ export const Autocomplete = <K,>({
               if (!inputValue) {
                 setSelectedResult(undefined);
                 onSearch?.(inputValue, []);
+                return;
               }
               if (selectedResult || inputValue.length <= 1) {
                 return;
@@ -132,7 +133,7 @@ export const Autocomplete = <K,>({
                 onSearch?.(inputValue, results);
                 setSuggestions(results);
               } catch (error) {
-                onError?.(error.message);
+                onError?.(error);
                 setSuggestions([]);
               } finally {
                 setLoading(false);
