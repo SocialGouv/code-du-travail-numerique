@@ -144,7 +144,7 @@ export const SimulatorLayout = (props: Props<string>) => {
             iconPosition="right"
             disabled={validator?.isStepValid === false}
           >
-            Suivant
+            {currentNumStep === 1 ? "Commencer" : "Suivant"}
           </Button>
         )}
         {currentNumStep === nbTotalSteps && (
