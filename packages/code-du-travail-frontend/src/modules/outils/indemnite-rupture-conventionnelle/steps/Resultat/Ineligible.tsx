@@ -19,10 +19,8 @@ export default function Ineligible() {
     <>
       <h2>Indemnité de rupture conventionnelle</h2>
       <p>
-        <p>
-          Il n&apos;y a pas d&apos;indemnité de rupture conventionnelle dans
-          cette situation
-        </p>
+        Il n&apos;y a pas d&apos;indemnité de rupture conventionnelle dans cette
+        situation
       </p>
       <Html>{getEligibilityError() ?? ""}</Html>
       {!agreementHasNoLegalIndemnity && infoWarning && (

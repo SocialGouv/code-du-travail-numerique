@@ -99,7 +99,6 @@ exports[`<Header /> should match snapshot 1`] = `
                   <label
                     class="fr-label"
                     for="fr-header-search-input"
-                    id="fr-header-search-label"
                   >
                     Rechercher
                   </label>

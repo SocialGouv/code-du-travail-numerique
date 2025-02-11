@@ -1,5 +1,6 @@
 import { References } from "@socialgouv/modeles-social";
 import React from "react";
+import Link from "../../../common/Link";
 
 type Props = {
   references: References[];
@@ -15,13 +16,12 @@ export const PubliReferences: React.FC<Props> = ({ references }) => (
             .filter(({ article }) => article !== null)
             .map(({ article, url }, id) => (
               <li key={`${url}-${id}`} data-testid={`source-${id}`}>
-                <a href={url} target="_blank" rel="noopener noreferrer">
+                <Link href={url} target="_blank" rel="noopener noreferrer">
                   {article}
-                </a>
+                </Link>
               </li>
             ))}
         </ul>
-        {references.length === 0 && <li>Source non disponible...</li>}
       </>
     )}
   </>

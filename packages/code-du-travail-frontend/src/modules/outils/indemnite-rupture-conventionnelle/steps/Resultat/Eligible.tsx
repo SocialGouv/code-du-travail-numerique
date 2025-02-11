@@ -28,6 +28,7 @@ import {
   EventType,
 } from "src/modules/outils/common/indemnite-depart/events";
 import { fr } from "@codegouvfr/react-dsfr";
+import Link from "src/modules/common/Link";
 
 const Eligible = () => {
   const store = useContext(IndemniteDepartContext);
@@ -63,12 +64,12 @@ const Eligible = () => {
         <span>
           Ce montant est exonéré d’impôt sur le revenu et de cotisations
           sociales sous certaines conditions,{" "}
-          <a
+          <Link
             href="/fiche-service-public/comment-calculer-lindemnite-specifique-de-rupture-conventionnelle#lindemnite-de-rupture-conventionnelle-est-elle-imposable"
             target="_blank"
           >
             en savoir plus
-          </a>
+          </Link>
         </span>
       ),
     } as Notification,
