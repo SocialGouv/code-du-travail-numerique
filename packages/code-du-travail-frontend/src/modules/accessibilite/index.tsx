@@ -13,20 +13,19 @@ export const Accessibilite = () => {
       <p>
         À cette fin, il met en œuvre la stratégie et les actions
         suivantes&nbsp;:
-        <ul>
-          <li>
-            La réalisation d’un audit de conformité le 19 mai de l’année 2021
-          </li>
-          <li>
-            La réalisation d’un contre-audit d’ici la fin du premier semestre
-            2024
-          </li>
-          <li>
-            La mise en œuvre des recommandations pour maintenir l’objectif de
-            75%
-          </li>
-        </ul>
       </p>
+      <ul className="fr-mb-2w">
+        <li>
+          La réalisation d’un audit de conformité le 19 mai de l’année 2021
+        </li>
+        <li>
+          La réalisation d’un contre-audit d’ici la fin du premier semestre 2024
+        </li>
+        <li>
+          La mise en œuvre des recommandations pour maintenir l’objectif de 75%
+        </li>
+      </ul>
+
       <p>
         Cette déclaration d’accessibilité s’applique au site Internet
         code.travail.gouv.fr.
@@ -43,12 +42,12 @@ export const Accessibilite = () => {
       </p>
       <h3>Résultat des tests</h3>
       <p>L’audit de conformité réalisé par Alter Way révèle que :</p>
-      <ul>
+      <ul className="fr-mb-2w">
         <li>[75%] des critères du RGAA version 4.1 sont respectés</li>
       </ul>
 
       <h2>Non-conformité</h2>
-      <ul>
+      <ul className="fr-mb-2w">
         <li>
           Critère 5.7. Pour chaque tableau de données, la technique appropriée
           permettant d’associer chaque cellule avec ses en-têtes est-elle
@@ -93,7 +92,7 @@ export const Accessibilite = () => {
       <h3>
         Technologies utilisées pour la réalisation du Code du travail numérique
       </h3>
-      <ul>
+      <ul className="fr-mb-2w">
         <li>HTML5</li>
         <li>WAI-ARIA</li>
         <li>CSS</li>
@@ -105,7 +104,7 @@ export const Accessibilite = () => {
         base de la combinaison fournie par la base de référence du RGAA 4.1,
         avec les versions suivantes&nbsp;:
       </p>
-      <ul>
+      <ul className="fr-mb-2w">
         <li>Firefox</li>
         <li>NVDA</li>
       </ul>
@@ -115,7 +114,7 @@ export const Accessibilite = () => {
         base de la combinaison fournie par la base de référence du RGAA 4.1,
         avec les versions suivantes&nbsp;:
       </p>
-      <ul>
+      <ul className="fr-mb-2w">
         <li>wave</li>
         <li>web developper toolbar</li>
         <li>headings maps</li>
@@ -131,7 +130,7 @@ export const Accessibilite = () => {
         </li>
       </ul>
       <h3>Pages du site ayant fait l’objet de la vérification de conformité</h3>
-      <ol>
+      <ol className="fr-mb-2w">
         <li>
           Page d&apos;accueil :{" "}
           <Link href="https://code.travail.gouv.fr/">
@@ -241,36 +240,35 @@ export const Accessibilite = () => {
         d’accessibilité qui vous empêche d’accéder à un contenu ou à un des
         services du portail et vous n’avez pas obtenu de réponse satisfaisante.
       </p>
-      <p>
-        Vous pouvez&nbsp;:
-        <ul>
-          <li>
-            <Link
-              href="https://formulaire.defenseurdesdroits.fr/code/afficher.php?ETAPE=accueil_2016"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Écrire un message au Défenseur des droits
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://www.defenseurdesdroits.fr/carte-des-delegues"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Contacter le délégué du Défenseur des droits dans votre région
-            </Link>
-          </li>
-          <li>
-            Envoyer un courrier par la poste (gratuit, ne pas mettre de
-            timbre)&nbsp;: <br />
-            Défenseur des droits <br />
-            Libre réponse 71120 <br />
-            75342 Paris CEDEX 07
-          </li>
-        </ul>
-      </p>
+      <p>Vous pouvez&nbsp;:</p>
+      <ul className="fr-mb-2w">
+        <li>
+          <Link
+            href="https://formulaire.defenseurdesdroits.fr/code/afficher.php?ETAPE=accueil_2016"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Écrire un message au Défenseur des droits
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="https://www.defenseurdesdroits.fr/carte-des-delegues"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contacter le délégué du Défenseur des droits dans votre région
+          </Link>
+        </li>
+        <li>
+          Envoyer un courrier par la poste (gratuit, ne pas mettre de
+          timbre)&nbsp;: <br />
+          Défenseur des droits <br />
+          Libre réponse 71120 <br />
+          75342 Paris CEDEX 07
+        </li>
+      </ul>
+
       <h2>En savoir plus sur l’accessibilité</h2>
       <p>
         Pour en savoir plus sur la politique d’accessibilité numérique de
