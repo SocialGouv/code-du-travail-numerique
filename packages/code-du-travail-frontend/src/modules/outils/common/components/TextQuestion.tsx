@@ -97,7 +97,6 @@ export function TextQuestion({
       }}
       data-testid={dataTestId}
       state={error ? "error" : subLabel ? "info" : "default"}
-      iconId={unit === "€" ? "fr-icon-money-euro-circle-line" : undefined}
       stateRelatedMessage={
         error ? (
           <span dangerouslySetInnerHTML={{ __html: xssWrapper(error) }} />

@@ -216,4 +216,5 @@ const mainListStyle = css({
   "& > li": {
     listStyleType: "none",
   },
+  paddingLeft: "0!",
 });

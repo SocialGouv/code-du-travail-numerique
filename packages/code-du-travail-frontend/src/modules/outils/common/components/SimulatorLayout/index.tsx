@@ -124,12 +124,12 @@ export const SimulatorLayout = (props: Props<string>) => {
         <Step />
       </div>
 
-      <div className={fr.cx("fr-mt-3w")}>
+      <div className={fr.cx("fr-mt-3w", "fr-grid-row", "fr-grid-row--middle")}>
         {currentNumStep > 1 && (
           <Button
             onClick={onPrevStep}
             priority="secondary"
-            iconId="ri-arrow-drop-left-fill"
+            iconId="ri-arrow-left-line"
             iconPosition="left"
             className="fr-mr-2w"
           >
@@ -140,7 +140,7 @@ export const SimulatorLayout = (props: Props<string>) => {
           <Button
             onClick={onNextStep}
             priority="primary"
-            iconId="ri-arrow-drop-right-fill"
+            iconId="ri-arrow-right-line"
             iconPosition="right"
             disabled={validator?.isStepValid === false}
           >
