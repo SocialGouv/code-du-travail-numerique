@@ -10,6 +10,7 @@ import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { Step } from "../components/SimulatorLayout/types";
 import { SimulatorLayout } from "../components/SimulatorLayout";
 import { EVENT_CATEGORY } from "src/outils/common/Feedback/tracking";
+import { Feedback } from "./feedback";
 
 type SimulateurProps = CalculateurIndemniteProps & {
   title: string;
@@ -104,8 +105,8 @@ const IndemniteDepartSimulator = ({
         },
       ]}
       hiddenStep={getHiddenSteps()}
+      footerComponent={feedbackPopup && <Feedback category={feedbackPopup} />}
     />
-    // {feedbackPopup && <Feedback category={feedbackPopup} />} //TODO A FAIRE
   );
 };
 

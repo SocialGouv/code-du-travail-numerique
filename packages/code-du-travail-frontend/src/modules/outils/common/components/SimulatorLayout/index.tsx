@@ -14,6 +14,7 @@ type Props<T extends string> = {
   onStepChange: StepChange<T>[];
   hiddenStep?: string[];
   simulator: PublicodesSimulator;
+  footerComponent?: React.ReactNode;
 };
 
 export const SimulatorLayout = (props: Props<string>) => {
@@ -164,6 +165,7 @@ export const SimulatorLayout = (props: Props<string>) => {
           {visibleSteps[stepIndex].options?.annotation}
         </p>
       )}
+      {props.footerComponent}
     </div>
   );
 };
