@@ -12,7 +12,15 @@ const whiteListTags = ["webcomponent-tooltip", "webcomponent-tooltip-cc"];
  * @type {string[]}
  * class is used for modeles-de-courrier
  */
-const whiteListAttr = ["class", "rel", "href", "target"];
+const whiteListAttr = [
+  "class",
+  "rel",
+  "href",
+  "target",
+  "data-pdf",
+  "data-pdf-size",
+  "data-infographic",
+];
 
 export const xssWrapper = (text: string): string => {
   return xss(text, {
