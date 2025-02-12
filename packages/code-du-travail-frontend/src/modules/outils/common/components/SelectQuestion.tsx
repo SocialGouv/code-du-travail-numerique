@@ -43,14 +43,16 @@ export const SelectQuestion = ({
   return (
     <Select
       label={<Html as="span">{label}</Html>}
-      data-testid={name}
-      nativeSelectProps={{
-        onChange: handleChange,
-        value: selectedOption ?? "",
-        id: `input-${name}`,
-        autoFocus,
-        required: true,
-      }}
+      nativeSelectProps={
+        {
+          onChange: handleChange,
+          value: selectedOption ?? "",
+          id: `input-${name}`,
+          autoFocus,
+          required: true,
+          "data-testid": name,
+        } as any
+      }
       state={error ? "error" : subLabel ? "info" : "default"}
       stateRelatedMessage={
         error ? (
@@ -74,7 +76,7 @@ export const SelectQuestion = ({
         Sélectionnez une option
       </option>
       {optionsArray.map(([key, label]) => (
-        <option key={key} value={key}>
+        <option key={key} value={key} data-testid={key}>
           {label}
         </option>
       ))}
