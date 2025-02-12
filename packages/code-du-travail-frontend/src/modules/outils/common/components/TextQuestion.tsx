@@ -84,18 +84,20 @@ export function TextQuestion({
                     ? "Montant attendu en euros"
                     : undefined
       }
-      nativeInputProps={{
-        type: inputType,
-        id,
-        name: id,
-        value: displayValue,
-        onChange: handleChange,
-        autoFocus,
-        title,
-        required: true,
-        ref: (ref: HTMLInputElement) => setInputRef(ref),
-      }}
-      data-testid={dataTestId}
+      nativeInputProps={
+        {
+          type: inputType,
+          id,
+          name: id,
+          value: displayValue,
+          onChange: handleChange,
+          autoFocus,
+          title,
+          required: true,
+          ref: (ref: HTMLInputElement) => setInputRef(ref),
+          "data-testid": dataTestId,
+        } as any
+      }
       state={error ? "error" : subLabel ? "info" : "default"}
       stateRelatedMessage={
         error ? (

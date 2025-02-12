@@ -111,15 +111,17 @@ export const SimulatorLayout = (props: Props<string>) => {
 
   return (
     <div>
-      <Stepper
-        currentStep={currentNumStep}
-        nextTitle={nextStepTitle}
-        stepCount={nbTotalSteps}
-        title={stepName}
-        classes={{
-          root: fr.cx("fr-mb-3w"),
-        }}
-      />
+      <div data-testid="stepper">
+        <Stepper
+          currentStep={currentNumStep}
+          nextTitle={nextStepTitle}
+          stepCount={nbTotalSteps}
+          title={stepName}
+          classes={{
+            root: fr.cx("fr-mb-3w"),
+          }}
+        />
+      </div>
 
       <div>
         <Step />

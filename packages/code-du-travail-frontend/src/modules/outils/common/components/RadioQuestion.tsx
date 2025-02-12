@@ -45,12 +45,12 @@ export function RadioQuestion({
           label: question.label,
           value: question.value,
           id: question.id,
-          "data-testid": `${name} - ${question.label}`,
           nativeInputProps: {
             checked: selectedOption === question.value,
             onChange: () => onChange(question.value),
             autoFocus: autoFocus && index === 0,
             required: true,
+            "data-testid": `${name} - ${question.label}`,
           },
         }))}
         state={error ? "error" : subLabel ? "info" : "default"}

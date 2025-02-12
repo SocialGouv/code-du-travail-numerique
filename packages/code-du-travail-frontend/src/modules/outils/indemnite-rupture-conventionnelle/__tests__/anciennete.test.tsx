@@ -22,11 +22,14 @@ describe("Rupture conventionnelle - Etape ancienneté", () => {
       .click(ui.introduction.startButton.get())
       .click(ui.contract.type.cdi.get())
       .click(ui.contract.arretTravail.non.get())
-      .click(ui.next.get())
-      .click(ui.agreement.noAgreement.get())
       .click(ui.next.get());
 
+    expect(ui.activeStep.query()).toHaveTextContent("Convention collective");
+
+    userAction.click(ui.agreement.noAgreement.get()).click(ui.next.get());
+
     expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
+
     userAction
       .setInput(ui.seniority.startDate.get(), "01/01/2024")
       .setInput(ui.seniority.endDate.get(), "01/01/2024")

@@ -1,4 +1,4 @@
-import { byTestId, byText, byTitle } from "testing-library-selector";
+import { byTestId, byText, byRole } from "testing-library-selector";
 
 export const ui = {
   introduction: {
@@ -44,10 +44,10 @@ export const ui = {
       "route - Je ne souhaite pas renseigner ma convention collective (je passe l'étape)"
     ),
     agreement: byTestId(
-      "route - Je sais quelle est ma convention collective (je la saisis)"
+      "route -  Je sais quelle est ma convention collective et je la saisis."
     ),
     unknownAgreement: byTestId(
-      "route - Je ne sais pas quelle est ma convention collective (je la recherche)"
+      "route - Je ne sais pas quelle est ma convention collective et je la recherche."
     ),
     agreementInput: byTestId("agreement-search-input"),
     agreementInputConfirm: byText(
@@ -525,7 +525,7 @@ export const ui = {
   },
   next: byText("Suivant"),
   previous: byText("Précédent"),
-  activeStep: byTitle("onglet actif"),
+  activeStep: byTestId("stepper"),
   warning: byText("Attention"),
   title: byText("Calculer l'indemnité de licenciement"),
 };
