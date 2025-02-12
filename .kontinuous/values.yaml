@@ -29,6 +29,17 @@ app:
         name: www-configmap
     - secretRef:
         name: www-secret
+  env:
+    - name: SENTRY_AUTH_TOKEN
+      valueFrom:
+        secretKeyRef:
+          name: sentry
+          key: SENTRY_AUTH_TOKEN
+    - name: NEXT_PUBLIC_SENTRY_DSN
+      valueFrom:
+        secretKeyRef:
+          name: sentry
+          key: SENTRY_DSN
   resources:
     limits:
       cpu: 400m

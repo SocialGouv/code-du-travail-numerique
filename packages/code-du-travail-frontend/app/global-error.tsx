@@ -2,8 +2,8 @@
 
 import { useEffect } from "react";
 import { UnexpectedError } from "../src/modules/error/UnexpectedError";
-import * as Sentry from "@sentry/nextjs";
 import { Metadata } from "next";
+import { captureError } from "../src/modules/sentry/error";
 
 export const metadata: Metadata = {
   title: "Erreur",
@@ -17,7 +17,11 @@ export default function GlobalError({
 }) {
   useEffect(() => {
     console.error(error);
-    Sentry.captureException(error);
+    captureError(error, {
+      type: "client",
+      url: window.location.href,
+      path: window.location.pathname,
+    });
   }, [error]);
 
   return (

@@ -16,17 +16,29 @@ const sentryConfig = {
   project: process.env.NEXT_PUBLIC_SENTRY_PROJECT,
   sentryUrl: process.env.NEXT_PUBLIC_SENTRY_URL,
   authToken: process.env.SENTRY_AUTH_TOKEN,
-  release: {
-    name: process.env.NEXT_PUBLIC_SENTRY_RELEASE,
-    setCommits: process.env.NEXT_PUBLIC_COMMIT
-      ? {
-          repo: "SocialGouv/code-du-travail-numerique",
-          commit: process.env.NEXT_PUBLIC_COMMIT,
-        }
-      : { auto: true },
+  // Source maps configuration
+  sourcemaps: {
+    assets: ".next/**/*.{js,map}",
+    ignore: ["node_modules/**/*"],
+    rewrite: true,
+    stripPrefix: ["webpack://_N_E/", "webpack://", "app://"],
+    urlPrefix: "app:///_next",
   },
-  hideSourceMaps: true,
-  widenClientFileUpload: true,
+  // Debug and release configuration
+  silent: false,
+  debug: true,
+  release:
+    process.env.SENTRY_RELEASE || process.env.NEXT_PUBLIC_GITHUB_SHA || "dev",
+  dist: process.env.NEXT_PUBLIC_GITHUB_SHA || "dev",
+  setCommits: {
+    auto: true,
+    ignoreMissing: true,
+  },
+  deploy: {
+    env: process.env.NEXT_PUBLIC_EGAPRO_ENV || "development",
+    dist: process.env.NEXT_PUBLIC_GITHUB_SHA || "dev",
+  },
+  injectBuildInformation: true,
 };
 
 const nextConfig = {
@@ -45,11 +57,21 @@ const nextConfig = {
   experimental: {
     instrumentationHook: true,
   },
-  webpack: (config) => {
+  webpack: (config, { dev, isServer }) => {
     config.module.rules.push({
       test: /\.woff2$/,
       type: "asset/resource",
     });
+    // Configure source maps for production
+    if (!isServer && !dev) {
+      config.devtool = "source-map";
+      config.optimization = {
+        ...config.optimization,
+        minimize: true,
+        moduleIds: "deterministic",
+        chunkIds: "deterministic",
+      };
+    }
     return config;
   },
   transpilePackages: ["@codegouvfr/react-dsfr"],
@@ -101,4 +123,62 @@ const moduleExports = {
   },
 };
 
-export default withSentryConfig(moduleExports, sentryConfig);
+export default withSentryConfig(
+  moduleExports,
+  {
+    // Sentry webpack plugin options
+    org: process.env.SENTRY_ORG,
+    project: process.env.SENTRY_PROJECT,
+    url: process.env.SENTRY_URL,
+    authToken: process.env.SENTRY_AUTH_TOKEN,
+
+    // Source maps configuration
+    sourcemaps: {
+      assets: ".next/**/*.{js,map}",
+      ignore: ["node_modules/**/*"],
+      rewrite: true,
+      stripPrefix: ["webpack://_N_E/", "webpack://", "app://"],
+      urlPrefix: "app:///_next",
+    },
+
+    // Debug and release configuration
+    silent: false,
+    debug: true,
+    release:
+      process.env.SENTRY_RELEASE || process.env.NEXT_PUBLIC_GITHUB_SHA || "dev",
+    dist: process.env.NEXT_PUBLIC_GITHUB_SHA || "dev",
+    setCommits: {
+      auto: true,
+      ignoreMissing: true,
+    },
+    deploy: {
+      env: process.env.NEXT_PUBLIC_SENTRY_ENV || "development",
+      dist: process.env.NEXT_PUBLIC_GITHUB_SHA || "dev",
+    },
+    injectBuildInformation: true,
+  },
+  {
+    // Sentry Next.js SDK options
+    // Note: tunnelRoute option doesn't work with self-hosted instances
+    // Using custom tunnel implementation instead
+    tunnelRoute: false,
+    widenClientFileUpload: true,
+    hideSourceMaps: false,
+    disableLogger: true,
+
+    // Enable component names and release injection
+    includeNames: true,
+    release: {
+      inject: true,
+      name:
+        process.env.SENTRY_RELEASE ||
+        process.env.NEXT_PUBLIC_GITHUB_SHA ||
+        "dev",
+    },
+
+    // Server instrumentation options
+    autoInstrumentServerFunctions: true,
+    autoInstrumentMiddleware: true,
+    automaticVercelMonitors: true,
+  }
+);
