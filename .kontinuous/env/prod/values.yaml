@@ -1,14 +1,16 @@
 jobs:
   runs:
     build-app:
+      use: build
+      env:
+        - name: NEXT_PUBLIC_SENTRY_DSN
+          valueFrom:
+            secretKeyRef:
+              name: sentry
+              key: SENTRY_DSN
       with:
         buildArgs:
-          NEXT_PUBLIC_SENTRY_DSN: https://81b6e3d265cf736588f894040d265705@sentry.fabrique.social.gouv.fr/107
-          NEXT_PUBLIC_SENTRY_PUBLIC_KEY: 81b6e3d265cf736588f894040d265705
-          NEXT_PUBLIC_SENTRY_PROJECT_ID: 107
-          NEXT_PUBLIC_SENTRY_BASE_URL: https://sentry.fabrique.social.gouv.fr
-          NEXT_PUBLIC_SENTRY_ENV: production
-          NEXT_PUBLIC_SENTRY_RELEASE: "{{.Values.global.imageTag}}"
+          NEXT_PUBLIC_CDTN_ENV: production
           NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT: "true"
           NEXT_PUBLIC_BUCKET_FOLDER: "published"
           NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER: "sitemap"
@@ -17,13 +19,15 @@ jobs:
           NEXT_PUBLIC_PIWIK_URL: https://matomo.fabrique.social.gouv.fr
           NEXT_PUBLIC_COMMIT: "{{.Values.global.sha}}"
           NEXT_PUBLIC_SITE_URL: https://code.travail.gouv.fr
-          NEXT_PUBLIC_SENTRY_ORG: "incubateur"
-          NEXT_PUBLIC_SENTRY_PROJECT: "code-du-travail-numerique-v2"
-          NEXT_PUBLIC_SENTRY_URL: "https://sentry.fabrique.social.gouv.fr"
+          NEXT_PUBLIC_SENTRY_DSN: "$NEXT_PUBLIC_SENTRY_DSN"
+          SENTRY_RELEASE: "{{.Values.global.imageTag}}"
+          SENTRY_ORG: incubateur
+          SENTRY_PROJECT: fabnum-code-du-travail-numerique
+          SENTRY_URL: https://sentry2.fabrique.social.gouv.fr
           NEXT_PUBLIC_ES_INDEX_PREFIX: "cdtn-prod"
         secrets:
           sentry_auth_token:
-            secretName: www-secret
+            secretName: sentry
             secretKey: SENTRY_AUTH_TOKEN
           elasticsearch_token_api:
             secretName: www-secret

@@ -1,5 +1,6 @@
 const { version } = require("../package.json");
 
+type EnvironmentType = "development" | "preprod" | "production";
 export const BUCKET_URL =
   process.env.NEXT_PUBLIC_BUCKET_URL ??
   "https://cdtn-dev-public.s3.gra.io.cloud.ovh.net";
@@ -17,6 +18,8 @@ export const IS_PREPROD =
   process.env.NEXT_PUBLIC_IS_PREPRODUCTION_DEPLOYMENT ?? false;
 export const IS_PROD =
   process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT ?? false;
+export const ENV = (process.env.NEXT_PUBLIC_CDTN_ENV ??
+  "development") as EnvironmentType;
 export const ENTERPRISE_API_URL = "https://recherche-entreprises.api.gouv.fr";
 export const API_GEO_URL = "https://geo.api.gouv.fr";
 export const REVALIDATE_TIME = 1800; // 30 minutes
