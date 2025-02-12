@@ -83,13 +83,15 @@ const AbsencePeriod = ({
             label="Durée (en mois)"
             state={errors?.duration ? "error" : "default"}
             stateRelatedMessage={errors?.duration}
-            nativeInputProps={{
-              id: `${index}.duration`,
-              type: "number",
-              onChange: (e) => onSetDurationDate(absence.key, e.target.value),
-              value: absence?.durationInMonth ?? "",
-            }}
-            data-testid={`absence-duree-${index}`}
+            nativeInputProps={
+              {
+                id: `${index}.duration`,
+                type: "number",
+                onChange: (e) => onSetDurationDate(absence.key, e.target.value),
+                value: absence?.durationInMonth ?? "",
+                "data-testid": `absence-duree-${index}`,
+              } as any
+            }
           />
         </div>
         {shouldAskAbsenceDate && (
@@ -98,13 +100,16 @@ const AbsencePeriod = ({
               label="Date de début de l'absence"
               state={errors?.absenceDate ? "error" : "default"}
               stateRelatedMessage={errors?.absenceDate}
-              nativeInputProps={{
-                id: `${index}.dateAbsence`,
-                type: "date",
-                onChange: (e) => onSetAbsenceDate(absence.key, e.target.value),
-                value: absence?.startedAt ?? "",
-              }}
-              data-testid={`absence-date-${index}`}
+              nativeInputProps={
+                {
+                  id: `${index}.dateAbsence`,
+                  type: "date",
+                  onChange: (e) =>
+                    onSetAbsenceDate(absence.key, e.target.value),
+                  value: absence?.startedAt ?? "",
+                  "data-testid": `absence-date-${index}`,
+                } as any
+              }
             />
           </div>
         )}

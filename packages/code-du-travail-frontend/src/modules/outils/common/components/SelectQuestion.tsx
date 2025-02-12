@@ -76,7 +76,7 @@ export const SelectQuestion = ({
         Sélectionnez une option
       </option>
       {optionsArray.map(([key, label]) => (
-        <option key={key} value={key} data-testid={key}>
+        <option key={key} value={key}>
           {label}
         </option>
       ))}
