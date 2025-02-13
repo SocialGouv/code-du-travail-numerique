@@ -9,7 +9,6 @@
     "build": "lerna run build --scope=@socialgouv/cdtn-utils --scope=@socialgouv/cdtn-ui --scope=@socialgouv/modeles-social --scope=@cdt/frontend --stream",
     "build:npm": "lerna run build --scope=@socialgouv/cdtn-utils --scope=@socialgouv/cdtn-ui --scope=@socialgouv/modeles-social --stream",
     "clean": "lerna clean",
-    "dev:docker": "docker-compose up elasticsearch",
     "dev": "SENTRY_IGNORE_API_RESOLUTION_ERROR=1 lerna run dev --parallel",
     "type-check": "lerna run type-check --stream",
     "dev:frontend": "lerna run dev --parallel --scope=@cdt/frontend --scope=@socialgouv/cdtn-ui --scope=@socialgouv/modeles-social --stream",
