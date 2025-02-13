@@ -14,6 +14,7 @@ const absence: AbsenceWithKey = {
   key: "abc",
   motif: motif1,
 };
+
 describe("<AbsencePeriod />", () => {
   it("should render", () => {
     expect(
@@ -174,10 +175,13 @@ describe("<AbsencePeriod />", () => {
       getByRole("option", { name: "Motif 2" })
     );
     expect(onSelectModifMock.mock.calls.length).toBe(1);
-    userEvent.type(getByRole("spinbutton", { name: `0.duration` }), "5");
-    expect(onSetDurationDate.mock.calls.length).toBe(1);
-    userEvent.type(getByTestId("absence-date-0"), "2020-01-01");
-    expect(onSetAbsenceDate.mock.calls.length).toBe(1);
+    expect(onSetDurationDate.mock.calls.length).toBe(0);
+    userEvent.type(getByTestId("absence-duree-0"), "5");
+    expect(onSetDurationDate.mock.calls.length).toBeGreaterThan(0);
+    expect(onSetAbsenceDate.mock.calls.length).toBe(0);
+    userEvent.type(getByTestId("absence-date-0"), "2024-01-01");
+    expect(onSetAbsenceDate.mock.calls.length).toBeGreaterThan(0);
+    expect(onDeleteAbsence.mock.calls.length).toBe(0);
     userEvent.click(getByRole("button", { name: /supprimer/i }));
     expect(onDeleteAbsence.mock.calls.length).toBe(1);
   });

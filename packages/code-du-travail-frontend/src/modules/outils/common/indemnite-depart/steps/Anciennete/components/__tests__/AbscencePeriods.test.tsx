@@ -37,7 +37,7 @@ describe("<AbsencePeriods />", () => {
   });
 
   it("should render absences by default", () => {
-    const { getByRole, getByLabelText } = render(
+    const { getByRole, getByTestId } = render(
       <AbsencePeriods
         onChange={jest.fn()}
         motifs={sampleMotifs}
@@ -66,7 +66,7 @@ describe("<AbsencePeriods />", () => {
         }) as HTMLOptionElement
       ).selected
     ).toBe(false);
-    const input = getByLabelText(/\.duration/) as HTMLInputElement;
+    const input = getByTestId("absence-duree-0") as HTMLInputElement;
     expect(input.value).toBe("3");
   });
 
