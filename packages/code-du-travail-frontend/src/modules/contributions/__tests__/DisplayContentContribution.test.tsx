@@ -496,4 +496,35 @@ describe("DisplayContentContribution", () => {
       expect(asFragment().firstChild).toMatchSnapshot();
     });
   });
+  describe("Links", () => {
+    it(`should replace anchor tag with the same tag`, () => {
+      const { getByTitle } = render(
+        <DisplayContentContribution
+          content={`
+        <a class="alert" href="hello.com" title="link"><span>Mon Lien</span></a>`}
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
+
+      const anchor = getByTitle("link");
+      expect(anchor.getAttribute("href")).toEqual("hello.com");
+      expect(anchor.getAttribute("class")).toEqual("alert");
+      expect(anchor.getElementsByTagName("span").item(0)?.textContent).toEqual(
+        "Mon Lien"
+      );
+    });
+    it(`should add "Nouvelle fenêtre" if ancher had target="_blank" attribute`, () => {
+      const { getByText } = render(
+        <DisplayContentContribution
+          content={`
+        <a target="_blank" href="hello.com">Mon Lien</a>`}
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
+
+      expect(getByText("Mon Lien").getAttribute("title")).toEqual(
+        "Mon Lien - nouvelle fenêtre"
+      );
+    });
+  });
 });

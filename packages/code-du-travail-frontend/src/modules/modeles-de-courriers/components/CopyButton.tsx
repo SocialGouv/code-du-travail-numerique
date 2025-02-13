@@ -30,7 +30,7 @@ export const CopyButton = ({ slug }: { slug: string }) => {
       >
         Copier le modèle
       </Button>
-      <div className={`${fr.cx("fr-py-2v")} ${fixHeight}`}>
+      <div className={`${fr.cx("fr-py-2v")} ${fixHeight}`} aria-live="polite">
         {isCopied && (
           <div>
             <p>

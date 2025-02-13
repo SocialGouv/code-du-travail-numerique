@@ -12,6 +12,7 @@ import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
 import { v4 as generateUUID } from "uuid";
 import { fr } from "@codegouvfr/react-dsfr";
 import { FicheServicePublic } from "../fiche-service-public/builder";
+import Link from "../common/Link";
 
 const DEFAULT_HEADING_LEVEL = 3;
 export type numberLevel = 2 | 3 | 4 | 5 | 6;
@@ -287,6 +288,15 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
             >
               {renderChildrenWithNoTrim(domNode)}
             </p>
+          );
+        }
+        if (domNode.name === "a") {
+          return (
+            <Link href={domNode.attribs.href} {...domNode.attribs}>
+              {domToReact(domNode.children as DOMNode[], {
+                trim: true,
+              })}
+            </Link>
           );
         }
       }
