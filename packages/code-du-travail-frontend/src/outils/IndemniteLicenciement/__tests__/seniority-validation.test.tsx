@@ -135,7 +135,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       userAction.click(ui.seniority.hasAbsence.oui.get());
 
       expect(
-        rendering.queryByText("Vous devez renseigner à minima une absence")
+        rendering.queryByText("Vous devez renseigner tous les champs")
       ).toBeInTheDocument();
       expect(
         rendering.queryByText("Date de début de l'absence")
