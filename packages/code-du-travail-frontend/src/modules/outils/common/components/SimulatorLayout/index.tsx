@@ -5,7 +5,7 @@ import { Step, StepChange, ValidationResponse } from "./types";
 import { useEffect, useMemo, useState } from "react";
 import { useSimulatorLayoutTracking } from "./tracking";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
-import { IndemniteDepartStepName } from "../../indemnite-depart";
+import { IndemniteDepartStepName } from "../../../indemnite-depart";
 import * as Sentry from "@sentry/nextjs";
 
 type Props<T extends string> = {

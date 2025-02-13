@@ -19,7 +19,7 @@ import { EnterpriseAgreementSelectionForm } from "./EnterpriseAgreementSelection
 import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelectionDetail";
 import { getEnterpriseAgreements } from "./utils";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
-import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
+import { Agreement } from "src/modules/outils/indemnite-depart/types";
 
 type Props = {
   widgetMode?: boolean;

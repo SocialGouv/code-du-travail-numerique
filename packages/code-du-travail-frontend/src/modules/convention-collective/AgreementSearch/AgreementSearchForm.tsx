@@ -6,7 +6,7 @@ import { AgreementSearchInput } from "./AgreementSearchInput";
 import { useContributionTracking } from "../../contributions/tracking";
 import { EnterpriseAgreementSearchInput } from "../../enterprise";
 import { AgreementRoute } from "../../../outils/common/type/WizardType";
-import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
+import { Agreement } from "src/modules/outils/indemnite-depart/types";
 
 type Props = {
   onAgreementSelect: (agreement?: Agreement) => void;

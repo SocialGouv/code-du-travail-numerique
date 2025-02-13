@@ -2,7 +2,7 @@ import debounce from "debounce-promise";
 import { SITE_URL } from "../../../config";
 import { Enterprise as ApiEntreprise } from "../../../api/modules/enterprises/types";
 import { SearchParams } from "../../../outils/common/Agreement/EnterpriseSearch/EntrepriseSearchInput/SearchEnterpriseInput";
-import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
+import { Agreement } from "src/modules/outils/indemnite-depart/types";
 
 export type Enterprise = ApiEntreprise;
 

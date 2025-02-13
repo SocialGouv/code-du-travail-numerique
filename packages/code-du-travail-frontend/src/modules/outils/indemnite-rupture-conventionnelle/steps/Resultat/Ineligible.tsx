@@ -3,7 +3,7 @@ import Html from "../../../../common/Html";
 import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
-} from "src/modules/outils/common/indemnite-depart/store";
+} from "src/modules/outils/indemnite-depart/store";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 
 export default function Ineligible() {

@@ -10,7 +10,7 @@ import { getEnterpriseAgreements } from "./utils";
 import { CardTitleStyle } from "../../convention-collective/style";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
 import { TrackingAgreementSearchAction } from "../../convention-collective/tracking";
-import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
+import { Agreement } from "src/modules/outils/indemnite-depart/types";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;

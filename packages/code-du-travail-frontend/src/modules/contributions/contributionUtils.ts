@@ -1,5 +1,5 @@
 import { Contribution } from "./type";
-import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
+import { Agreement } from "src/modules/outils/indemnite-depart/types";
 
 export const isAgreementSupported = (
   contribution: Contribution,

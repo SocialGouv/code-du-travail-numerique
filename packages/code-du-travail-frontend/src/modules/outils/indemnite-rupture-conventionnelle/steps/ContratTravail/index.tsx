@@ -3,11 +3,11 @@ import {
   RadioQuestion,
   TextQuestion,
 } from "src/modules/outils/common/components";
-import { CdiCdd } from "src/modules/outils/common/indemnite-depart/steps/ContratTravail";
+import { CdiCdd } from "src/modules/outils/indemnite-depart/steps/ContratTravail";
 import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
-} from "src/modules/outils/common/indemnite-depart/store";
+} from "src/modules/outils/indemnite-depart/store";
 
 const StepContratTravail = (): JSX.Element => {
   const store = useContext(IndemniteDepartContext);

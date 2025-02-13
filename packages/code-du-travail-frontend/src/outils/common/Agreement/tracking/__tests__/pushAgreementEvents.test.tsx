@@ -8,7 +8,7 @@ import {
 import { push as matopush } from "@socialgouv/matomo-next";
 import { ConventionCollective } from "../../../type/WizardType";
 import { pushAgreementEvents } from "../index";
-import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
+import { Agreement } from "src/modules/outils/indemnite-depart/types";
 
 jest.mock("@socialgouv/matomo-next", () => ({
   push: jest.fn(),

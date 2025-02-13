@@ -5,7 +5,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
 import AgreementSearch from "../convention-collective/AgreementSearch.svg";
 
-import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
+import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import {
   isAgreementSupported,
   isAgreementUnextended,

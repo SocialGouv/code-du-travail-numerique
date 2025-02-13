@@ -4,7 +4,7 @@ import React from "react";
 import { byText } from "testing-library-selector";
 import IndemniteRuptureCoSimulator from "../IndemniteRuptureCoSimulator";
 import { UserAction } from "../../common/utils/UserAction";
-import { ui } from "../../common/indemnite-depart/__tests__/ui";
+import { ui } from "../../indemnite-depart/__tests__/ui";
 
 describe("Rupture conventionnelle - Etape ancienneté", () => {
   test("ne pas autoriser une date de début et de fin identique", () => {

@@ -12,7 +12,7 @@ import {
 } from "../../../../ConventionCollective/types";
 import { LinkedTile } from "../../../../../common/tiles/LinkedTile";
 import { SITE_URL } from "../../../../../config";
-import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
+import { Agreement } from "src/modules/outils/indemnite-depart/types";
 
 type Props = {
   agreement: Agreement;

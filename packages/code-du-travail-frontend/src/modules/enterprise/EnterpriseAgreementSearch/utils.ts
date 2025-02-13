@@ -1,4 +1,4 @@
-import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
+import { Agreement } from "src/modules/outils/indemnite-depart/types";
 
 export type DescribedEnterpriseAgreement = Agreement & {
   disabled: boolean;

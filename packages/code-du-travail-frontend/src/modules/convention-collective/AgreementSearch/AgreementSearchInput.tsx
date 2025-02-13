@@ -7,7 +7,7 @@ import { ReactNode, useState } from "react";
 import { Autocomplete } from "../../common/Autocomplete";
 import { searchAgreement } from "../search";
 import { useAgreementSearchTracking } from "../tracking";
-import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
+import { Agreement } from "src/modules/outils/indemnite-depart/types";
 
 type Props = {
   onSearch?: (query: string, value?: Agreement[]) => void;

@@ -2,10 +2,7 @@
 import { ContainerSimulator } from "../../layout/ContainerSimulator";
 import { RelatedItem } from "../../documents";
 import React from "react";
-import {
-  StepAgreement,
-  StepInformations,
-} from "../common/indemnite-depart/steps";
+import { StepAgreement, StepInformations } from "../indemnite-depart/steps";
 import {
   StepAnciennete,
   StepContratTravail,
@@ -16,11 +13,11 @@ import { useRuptureCoEventEmitter } from "./events/useRuptureCoEventEmitter";
 import {
   CalculateurIndemnite,
   IndemniteDepartStepName,
-} from "../common/indemnite-depart";
+} from "../indemnite-depart";
 import { Step } from "../common/components/SimulatorLayout/types";
-import { IndemniteDepartType } from "../common/indemnite-depart/types";
+import { IndemniteDepartType } from "../indemnite-depart/types";
 import { EVENT_CATEGORY } from "src/outils/common/Feedback/tracking";
-import StepSalaires from "../common/indemnite-depart/steps/Salaires";
+import StepSalaires from "../indemnite-depart/steps/Salaires";
 
 const steps: Step<IndemniteDepartStepName>[] = [
   {
@@ -88,13 +85,21 @@ const IndemniteRuptureCoSimulator = ({
       segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
     >
       <h1 id="simulateur-indemnite-rupture-co">{title}</h1>
-      <CalculateurIndemnite
-        title={title}
-        tool={IndemniteDepartType.RUPTURE_CONVENTIONNELLE}
-        steps={steps}
-        feedbackPopup={EVENT_CATEGORY.ruptureConventionnelle}
-      />
+      <CalculateurIndemniteRuptureCo title={title} />
     </ContainerSimulator>
+  );
+};
+
+export const CalculateurIndemniteRuptureCo = ({
+  title,
+}: Pick<Props, "title">) => {
+  return (
+    <CalculateurIndemnite
+      title={title}
+      tool={IndemniteDepartType.RUPTURE_CONVENTIONNELLE}
+      steps={steps}
+      feedbackPopup={EVENT_CATEGORY.ruptureConventionnelle}
+    />
   );
 };
 

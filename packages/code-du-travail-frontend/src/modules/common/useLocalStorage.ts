@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
+import { Agreement } from "src/modules/outils/indemnite-depart/types";
 
 export const STORAGE_KEY_AGREEMENT = "convention";
 

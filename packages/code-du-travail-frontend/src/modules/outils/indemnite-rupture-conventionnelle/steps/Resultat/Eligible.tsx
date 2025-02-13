@@ -4,20 +4,20 @@ import {
   Notification,
 } from "@socialgouv/modeles-social";
 import { getResultMessage } from "./utils";
-import Result from "src/modules/outils/common/indemnite-depart/steps/Resultat/components/Result";
+import Result from "src/modules/outils/indemnite-depart/steps/Resultat/components/Result";
 import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
-} from "src/modules/outils/common/indemnite-depart/store";
-import { informationToSituation } from "src/modules/outils/common/indemnite-depart/steps/Informations/components/utils";
+} from "src/modules/outils/indemnite-depart/store";
+import { informationToSituation } from "src/modules/outils/indemnite-depart/steps/Informations/components/utils";
 import {
   DecryptResult,
   FilledElements,
   FormulaInterpreter,
-} from "src/modules/outils/common/indemnite-depart/steps/Resultat/components";
-import { IndemniteDepartType } from "src/modules/outils/common/indemnite-depart/types";
-import { AgreementsInjector } from "src/modules/outils/common/indemnite-depart/agreements";
-import { IndemniteDepartStepName } from "src/modules/outils/common/indemnite-depart";
+} from "src/modules/outils/indemnite-depart/steps/Resultat/components";
+import { IndemniteDepartType } from "src/modules/outils/indemnite-depart/types";
+import { AgreementsInjector } from "src/modules/outils/indemnite-depart/agreements";
+import { IndemniteDepartStepName } from "src/modules/outils/indemnite-depart";
 import {
   Disclaimer,
   PubliReferences,
@@ -26,7 +26,7 @@ import Accordion from "@codegouvfr/react-dsfr/Accordion";
 import {
   eventEmitter,
   EventType,
-} from "src/modules/outils/common/indemnite-depart/events";
+} from "src/modules/outils/indemnite-depart/events";
 import { fr } from "@codegouvfr/react-dsfr";
 import Link from "src/modules/common/Link";
 

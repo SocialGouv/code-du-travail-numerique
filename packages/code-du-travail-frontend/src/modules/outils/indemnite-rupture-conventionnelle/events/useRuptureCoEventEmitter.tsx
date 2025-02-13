@@ -5,8 +5,8 @@ import {
   MatomoSimulatorEvent,
   trackQuestion,
 } from "src/lib";
-import { IndemniteDepartStepName } from "../../common/indemnite-depart";
-import { EventType, eventEmitter } from "../../common/indemnite-depart/events";
+import { IndemniteDepartStepName } from "../../indemnite-depart";
+import { EventType, eventEmitter } from "../../indemnite-depart/events";
 import { sendEvent } from "src/modules/utils";
 
 export const useRuptureCoEventEmitter = () => {

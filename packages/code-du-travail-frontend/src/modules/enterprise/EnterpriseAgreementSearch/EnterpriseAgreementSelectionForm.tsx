@@ -8,7 +8,7 @@ import Button from "@codegouvfr/react-dsfr/Button";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { useEffect, useRef, useState } from "react";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
-import { Agreement } from "src/modules/outils/common/indemnite-depart/types";
+import { Agreement } from "src/modules/outils/indemnite-depart/types";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;

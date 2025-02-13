@@ -3,13 +3,13 @@ import {
   RadioQuestion,
   TextQuestion,
 } from "src/modules/outils/common/components";
-import { getMotifExampleMessage } from "src/modules/outils/common/indemnite-depart/agreements";
-import { AbsencePeriods } from "src/modules/outils/common/indemnite-depart/steps/Anciennete";
-import { informationToSituation } from "src/modules/outils/common/indemnite-depart/steps/Informations/components/utils";
+import { getMotifExampleMessage } from "src/modules/outils/indemnite-depart/agreements";
+import { AbsencePeriods } from "src/modules/outils/indemnite-depart/steps/Anciennete";
+import { informationToSituation } from "src/modules/outils/indemnite-depart/steps/Informations/components/utils";
 import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
-} from "src/modules/outils/common/indemnite-depart/store";
+} from "src/modules/outils/indemnite-depart/store";
 
 const StepAnciennete = () => {
   const store = useContext(IndemniteDepartContext);

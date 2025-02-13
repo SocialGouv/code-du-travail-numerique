@@ -1,5 +1,5 @@
 import { UserAction } from "../../common/utils/UserAction";
-import { ui } from "../../common/indemnite-depart/__tests__/ui";
+import { ui } from "../../indemnite-depart/__tests__/ui";
 import { render } from "@testing-library/react";
 import IndemniteRuptureCoSimulator from "../IndemniteRuptureCoSimulator";
 
