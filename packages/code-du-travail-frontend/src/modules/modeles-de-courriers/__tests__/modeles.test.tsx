@@ -37,7 +37,7 @@ describe("<LetterModel />", () => {
     );
     expect(
       getAllByText("Télécharger le Mon modele")[0].getAttribute("href")
-    ).toEqual("bucket.url/default/mon-fichier.txt");
+    ).toEqual("bucket.url/preview/default/mon-fichier.txt");
 
     expect(container).toMatchSnapshot();
   });
