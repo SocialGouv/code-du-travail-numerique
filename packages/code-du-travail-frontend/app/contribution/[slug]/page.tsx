@@ -2,7 +2,6 @@ import React from "react";
 import { DsfrLayout } from "../../../src/modules/layout";
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
-import { fetchRelatedItems } from "../../../src/modules/documents";
 import {
   ContributionLayout,
   fetchContributionBySlug,
