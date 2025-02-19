@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.173.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.172.3...v4.173.0) (2025-02-19)
+
+
+### Bug Fixes
+
+* **contributions:** remise en place des articles liés ([#6458](https://github.com/SocialGouv/code-du-travail-numerique/issues/6458)) ([356aec4](https://github.com/SocialGouv/code-du-travail-numerique/commit/356aec42a7e71f584e4486bac3aea5ec2aab318c))
+* **modèle de courriers:** prise en compte des retours RGAA ([#6453](https://github.com/SocialGouv/code-du-travail-numerique/issues/6453)) ([707f6e6](https://github.com/SocialGouv/code-du-travail-numerique/commit/707f6e6a6aa33e0a2b1a96cba864bd61ee826a03))
+* **page d'accessibilité:** rendre le html valide ([#6452](https://github.com/SocialGouv/code-du-travail-numerique/issues/6452)) ([e7e0248](https://github.com/SocialGouv/code-du-travail-numerique/commit/e7e024875ffed65ee42d5e2555bb2b0842f6b6df))
+* **sitemap:** correction de l'url vers le sitemap ([#6460](https://github.com/SocialGouv/code-du-travail-numerique/issues/6460)) ([d88770d](https://github.com/SocialGouv/code-du-travail-numerique/commit/d88770dc6b72185576719153b7307377dc07d823))
+
+
+### Features
+
+* **contributions:** ajout du support des infographies dans les contributions ([#6449](https://github.com/SocialGouv/code-du-travail-numerique/issues/6449)) ([8e03a98](https://github.com/SocialGouv/code-du-travail-numerique/commit/8e03a9881d7f8e3eac21f6e152c22465525ce2f9))
+
+
+
+
+
 ## [4.172.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.172.2...v4.172.3) (2025-02-10)
 
 
