@@ -87,7 +87,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
                   <a
                     aria-disabled="false"
                     class=""
-                    href="bucket.url/default/mon-fichier.txt"
+                    href="bucket.url/preview/default/mon-fichier.txt"
                   >
                     Télécharger le Mon modele
                   </a>
@@ -178,7 +178,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
                 <a
                   aria-disabled="false"
                   class=""
-                  href="bucket.url/default/mon-fichier.txt"
+                  href="bucket.url/preview/default/mon-fichier.txt"
                 >
                   Télécharger le Mon modele
                 </a>
@@ -267,7 +267,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
                   <a
                     aria-disabled="false"
                     class=""
-                    href="bucket.url/default/mon-fichier.txt"
+                    href="bucket.url/preview/default/mon-fichier.txt"
                   >
                     Télécharger le Mon modele
                   </a>
