@@ -97,7 +97,7 @@
     "@types/jest": "^29.5.12",
     "@types/xml2js": "^0.4.14",
     "cypress": "^13.13.2",
-    "cypress-html-validate": "^6.1.0",
+    "cypress-html-validate": "^7.0.0",
     "cypress-iframe": "^1.0.1",
     "cypress-real-events": "^1.13.0",
     "eslint": "^8",
