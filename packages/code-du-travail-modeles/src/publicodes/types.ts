@@ -42,7 +42,6 @@ export enum RuleType {
 export interface RuleListe {
   type: RuleType;
   valeurs: Record<string, string>;
-  precision?: string;
 }
 
 export type RuleCdtn = RuleListe;

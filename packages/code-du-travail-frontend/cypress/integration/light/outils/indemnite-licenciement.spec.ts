@@ -1,7 +1,4 @@
-export const formatToEuro = new Intl.NumberFormat("fr-FR", {
-  style: "currency",
-  currency: "EUR",
-}).format;
+import { formatToEuro } from "../../../support/utils";
 
 describe("Outil - Indemnité de licenciement", () => {
   it("Calcul de l'indemnité de licenciement", () => {
