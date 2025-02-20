@@ -3,13 +3,13 @@
 exports[`<Stats /> should match snapshot 1`] = `
 <div>
   <div
-    class="fr-grid-row"
+    class="fr-grid-row fr-mt-8w fr-mb-8w"
   >
     <div
       class="fr-my-4w fr-col-12"
     >
       <h1
-        class="fr-mt-0"
+        class="fr-mt-0 fr-mb-6w"
       >
         Statistiques d'utilisation
       </h1>
@@ -17,7 +17,7 @@ exports[`<Stats /> should match snapshot 1`] = `
         class="fr-grid-row fr-grid-row--gutters"
       >
         <div
-          class="fr-col-12 fr-col-md-3"
+          class="fr-col-12 fr-col-lg-3"
         >
           <div
             class="fr-callout h_100%"
@@ -28,12 +28,17 @@ exports[`<Stats /> should match snapshot 1`] = `
             >
                
               <span
-                class="ta_right d_block fr-mt-4v fr-display--xs"
+                class="lg:ta_right lg:d_block ta_left fr-mt-4v fr-m-0 fr-h2"
               >
                 100
               </span>
               <span
-                class="ta_left fr-text--bold fr-text--xl"
+                class="fr-hidden-lg"
+              >
+                 
+              </span>
+              <span
+                class="lg:ta_right lg:ms_0 ms_1em fr-text--bold fr-mt-4v fr-mb-0 fr-h5"
               >
                 Contenus référencés
               </span>
@@ -42,7 +47,7 @@ exports[`<Stats /> should match snapshot 1`] = `
           </div>
         </div>
         <div
-          class="fr-col-12 fr-col-md-3"
+          class="fr-col-12 fr-col-lg-3"
         >
           <div
             class="fr-callout h_100%"
@@ -53,12 +58,17 @@ exports[`<Stats /> should match snapshot 1`] = `
             >
                
               <span
-                class="ta_right d_block fr-mt-4v fr-display--xs"
+                class="lg:ta_right lg:d_block ta_left fr-mt-4v fr-m-0 fr-h2"
               >
                 400
               </span>
               <span
-                class="ta_left fr-text--bold fr-text--xl"
+                class="fr-hidden-lg"
+              >
+                 
+              </span>
+              <span
+                class="lg:ta_right lg:ms_0 ms_1em fr-text--bold fr-mt-4v fr-mb-0 fr-h5"
               >
                 Visites
               </span>
@@ -67,7 +77,7 @@ exports[`<Stats /> should match snapshot 1`] = `
           </div>
         </div>
         <div
-          class="fr-col-12 fr-col-md-3"
+          class="fr-col-12 fr-col-lg-3"
         >
           <div
             class="fr-callout h_100%"
@@ -78,12 +88,17 @@ exports[`<Stats /> should match snapshot 1`] = `
             >
                
               <span
-                class="ta_right d_block fr-mt-4v fr-display--xs"
+                class="lg:ta_right lg:d_block ta_left fr-mt-4v fr-m-0 fr-h2"
               >
                 300
               </span>
               <span
-                class="ta_left fr-text--bold fr-text--xl"
+                class="fr-hidden-lg"
+              >
+                 
+              </span>
+              <span
+                class="lg:ta_right lg:ms_0 ms_1em fr-text--bold fr-mt-4v fr-mb-0 fr-h5"
               >
                 Recherches
               </span>
@@ -92,7 +107,7 @@ exports[`<Stats /> should match snapshot 1`] = `
           </div>
         </div>
         <div
-          class="fr-col-12 fr-col-md-3"
+          class="fr-col-12 fr-col-lg-3"
         >
           <div
             class="fr-callout h_100%"
@@ -103,12 +118,17 @@ exports[`<Stats /> should match snapshot 1`] = `
             >
                
               <span
-                class="ta_right d_block fr-mt-4v fr-display--xs"
+                class="lg:ta_right lg:d_block ta_left fr-mt-4v fr-m-0 fr-h2"
               >
                 200
               </span>
               <span
-                class="ta_left fr-text--bold fr-text--xl"
+                class="fr-hidden-lg"
+              >
+                 
+              </span>
+              <span
+                class="lg:ta_right lg:ms_0 ms_1em fr-text--bold fr-mt-4v fr-mb-0 fr-h5"
               >
                 Consultations
               </span>
@@ -118,10 +138,111 @@ exports[`<Stats /> should match snapshot 1`] = `
         </div>
       </div>
       <p
-        class="fr-mt-4v"
+        class="fr-mt-6w"
       >
         Statistiques d’utilisation depuis le 01/01/2020
       </p>
+      <h2
+        class="fr-mt-6w fr-h3"
+      >
+        Bilans annuels
+      </h2>
+      <div
+        class="fr-mt-6w fr-grid-row fr-grid-row--gutters"
+      >
+        <div
+          class="fr-col-12 fr-col-lg-3"
+        >
+          <div
+            class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--sm fr-tile--download"
+            id="fr-tile-:r4:"
+          >
+            <div
+              class="fr-tile__body"
+            >
+              <div
+                class="fr-tile__content"
+              >
+                <h4
+                  class="fr-tile__title"
+                >
+                  <a
+                    aria-disabled="false"
+                    class=""
+                    href="bucket.url/preview/default/cdtn_bilan_2024.pdf"
+                  >
+                    Télécharger le bilan annuel de l’année 2024
+                  </a>
+                </h4>
+                <p
+                  class="fr-tile__detail"
+                >
+                  Format PDF - 1Mo
+                </p>
+              </div>
+            </div>
+            <div
+              class="fr-tile__header"
+            >
+              <div
+                class="fr-tile__img"
+              >
+                <img
+                  alt=""
+                  class="fr-responsive-img"
+                  src="/static/assets/img/modeles-de-courriers-download.svg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="fr-col-12 fr-col-lg-3"
+        >
+          <div
+            class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--sm fr-tile--download"
+            id="fr-tile-:r5:"
+          >
+            <div
+              class="fr-tile__body"
+            >
+              <div
+                class="fr-tile__content"
+              >
+                <h4
+                  class="fr-tile__title"
+                >
+                  <a
+                    aria-disabled="false"
+                    class=""
+                    href="bucket.url/preview/default/cdtn_bilan_2023.pdf"
+                  >
+                    Télécharger le bilan annuel de l’année 2023
+                  </a>
+                </h4>
+                <p
+                  class="fr-tile__detail"
+                >
+                  Format PDF - 1.1Mo
+                </p>
+              </div>
+            </div>
+            <div
+              class="fr-tile__header"
+            >
+              <div
+                class="fr-tile__img"
+              >
+                <img
+                  alt=""
+                  class="fr-responsive-img"
+                  src="/static/assets/img/modeles-de-courriers-download.svg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
