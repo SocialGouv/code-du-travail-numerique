@@ -8,25 +8,30 @@ type StatsProps = {
 };
 
 export const StatsDisplay = (props: StatsProps) => (
-  <div className={fr.cx("fr-col-12", "fr-col-md-3")}>
-    <CallOut className={`${callOut}`}>
-      <span className={`${metric} ${fr.cx("fr-mt-4v", "fr-display--xs")}`}>
-        {props.metric}
-      </span>
-      <span className={`${title} ${fr.cx("fr-text--bold", "fr-text--xl")}`}>
-        {props.title}
-      </span>
-    </CallOut>
-  </div>
+  <CallOut className={`${callOut}`}>
+    <span className={`${metric} ${fr.cx("fr-mt-4v", "fr-m-0", "fr-h2")}`}>
+      {props.metric.toLocaleString("fr").split(/\s/).join("\u00a0")}
+    </span>
+    <span className={fr.cx("fr-hidden-lg")}> </span>
+    <span
+      className={`${title} ${fr.cx("fr-text--bold", "fr-mt-4v", "fr-mb-0", "fr-h5")}`}
+    >
+      {props.title}
+    </span>
+  </CallOut>
 );
 
 const metric = css({
-  textAlign: "right",
-  display: "block",
+  lg: { textAlign: "right", display: "block" },
+  textAlign: "left",
 });
 
 const title = css({
-  textAlign: "left",
+  lg: {
+    textAlign: "right",
+    marginStart: 0,
+  },
+  marginStart: "1em",
 });
 
 const callOut = css({
