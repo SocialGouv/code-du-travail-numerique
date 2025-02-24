@@ -1,26 +1,28 @@
 "use client";
+
 import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Input, { InputProps } from "@codegouvfr/react-dsfr/Input";
-import { useCombobox } from "downshift";
-import { useEffect, useState } from "react";
+import Downshift from "downshift";
+import { useState } from "react";
 import Spinner from "../Spinner.svg";
 import { css } from "@styled-system/css";
-import { redirect } from "next/navigation";
 import Link from "../Link";
+import { redirect } from "next/navigation";
 
 export type AutocompleteProps<K> = InputProps & {
   onChange?: (value: K | undefined) => void;
   onError?: (value: string) => void;
   onSearch?: (query: string, results: K[]) => void;
-  displayLabel: (item: K | undefined) => string;
+  displayLabel: (item: K | null) => string;
   search: (search: string) => Promise<K[]>;
   dataTestId?: string;
   lineAsLink?: (value: K) => string;
   displayNoResult?: boolean;
   defaultValue?: K;
   onInputValueChange?: (value: string) => void;
+  isSearch?: boolean;
 };
 
 export const Autocomplete = <K,>({
@@ -38,123 +40,115 @@ export const Autocomplete = <K,>({
   dataTestId,
   defaultValue,
   displayNoResult,
+  isSearch = false,
 }: AutocompleteProps<K>) => {
-  const [value, setValue] = useState<string>(displayLabel(defaultValue));
   const [loading, setLoading] = useState(false);
-  const [selectedResult, setSelectedResult] = useState<K | undefined>(
-    defaultValue
-  );
-  useEffect(() => {
-    if (defaultValue) {
-      setSelectedResult(defaultValue);
-      setValue(displayLabel(defaultValue));
-    }
-  }, [defaultValue]);
   const [inputRef, setInputRef] = useState<HTMLInputElement | null>();
   const [suggestions, setSuggestions] = useState<K[]>([]);
-  const {
-    isOpen,
-    getMenuProps,
-    getInputProps,
-    highlightedIndex,
-    getItemProps,
-  } = useCombobox({
-    defaultInputValue: displayLabel(defaultValue),
-    items: suggestions,
-    itemToString: displayLabel,
-    selectedItem: selectedResult,
-    onSelectedItemChange: (changes) => {
-      setSelectedResult(changes.selectedItem);
-      setValue(changes.inputValue ?? "");
-      if (onChange) onChange(changes.selectedItem);
-      if (lineAsLink && changes.selectedItem)
-        redirect(lineAsLink(changes.selectedItem));
-    },
-  });
+
   return (
-    <>
-      <div className={`${fr.cx("fr-input-group")}`}>
-        <Input
-          {...getInputProps({
-            id: "location-search",
-          })}
-          addon={
-            <>
-              <div className={addonBlock}>
-                {!loading && (selectedResult || value) && (
-                  <Button
-                    data-testid={`${dataTestId ? dataTestId + "-" : ""}autocomplete-close`}
-                    iconId="fr-icon-close-circle-fill"
-                    className={`${fr.cx("fr-p-0")} ${buttonClose}`}
-                    onClick={() => {
-                      setSelectedResult(undefined);
-                      if (onChange) onChange(undefined);
-                      if (onSearch) onSearch("", []);
-                      setValue("");
-                      setSuggestions([]);
-                      inputRef?.focus();
-                    }}
-                    priority="tertiary no outline"
-                    title="Effacer la sélection"
-                    type="button"
-                  >
-                    <span className={"fr-sr-only"}>Effacer la sélection</span>
-                  </Button>
-                )}
-                {loading && (
-                  <Image
-                    className={fr.cx("fr-mr-1v")}
-                    priority
-                    src={Spinner}
-                    alt="Chargement en cours"
-                  />
-                )}
-              </div>
-            </>
+    <Downshift<K>
+      initialSelectedItem={defaultValue}
+      onInputValueChange={async (value, stateAndHelpers) => {
+        if (!stateAndHelpers.selectedItem) {
+          onInputValueChange?.(value);
+
+          if (!value) {
+            onSearch?.(value, []);
+            return;
           }
-          nativeInputProps={{
-            type: "search",
-            value,
-            onChange: async (ev) => {
-              const inputValue = ev.target.value;
-              onInputValueChange?.(inputValue);
-              setValue(inputValue);
-              if (!inputValue) {
-                setSelectedResult(undefined);
-                onSearch?.(inputValue, []);
-                return;
-              }
-              if (selectedResult || inputValue.length <= 1) {
-                return;
-              }
-              try {
-                setLoading(true);
-                const results = await search(inputValue);
-                onSearch?.(inputValue, results);
-                setSuggestions(results);
-              } catch (error) {
-                onError?.(error);
-                setSuggestions([]);
-              } finally {
-                setLoading(false);
-              }
-            },
-            // @ts-ignore
-            "data-testid": dataTestId,
-            ref: setInputRef,
-          }}
-          className={`${fr.cx("fr-mb-0")}`}
-          hintText={hintText}
-          label={label}
-          state={state}
-          stateRelatedMessage={stateRelatedMessage}
-        />
-        <ul
-          {...getMenuProps()}
-          className={`${fr.cx("fr-p-0", "fr-m-0")} ${autocompleteListContainer}`}
+
+          try {
+            setLoading(true);
+            const results = await search(value);
+            onSearch?.(value, results);
+            setSuggestions(results);
+          } catch (error) {
+            onError?.(error);
+            setSuggestions([]);
+          } finally {
+            setLoading(false);
+          }
+        }
+      }}
+      onChange={(item) => {
+        if (item && onChange) onChange(item);
+        if (lineAsLink && item) redirect(lineAsLink(item));
+      }}
+      itemToString={displayLabel}
+    >
+      {({
+        getInputProps,
+        getItemProps,
+        getLabelProps,
+        getMenuProps,
+        inputValue,
+        isOpen,
+        highlightedIndex,
+        selectedItem,
+        getRootProps,
+        clearSelection,
+      }) => (
+        <div
+          className={fr.cx(isSearch ? "fr-search-bar" : "fr-input-group")}
+          {...getRootProps({}, { suppressRefError: true })}
         >
-          {value.length > 1 &&
-            (isOpen && suggestions.length
+          <Input
+            nativeLabelProps={getLabelProps()}
+            addon={
+              <>
+                <div className={addonBlock}>
+                  {!loading && (selectedItem || inputValue) && (
+                    <Button
+                      data-testid={`${dataTestId ? dataTestId + "-" : ""}autocomplete-close`}
+                      iconId="fr-icon-close-circle-fill"
+                      className={`${fr.cx("fr-p-0")} ${buttonClose}`}
+                      onClick={() => {
+                        clearSelection();
+                        if (onChange) onChange(undefined);
+                        if (onSearch) onSearch("", []);
+                        setSuggestions([]);
+                        inputRef?.focus();
+                      }}
+                      priority="tertiary no outline"
+                      title="Effacer la sélection"
+                      type="button"
+                    >
+                      <span className={"fr-sr-only"}>Effacer la sélection</span>
+                    </Button>
+                  )}
+                  {loading && (
+                    <Image
+                      className={fr.cx("fr-mr-1v")}
+                      priority
+                      src={Spinner}
+                      alt="Chargement en cours"
+                    />
+                  )}
+                </div>
+              </>
+            }
+            nativeInputProps={{
+              type: "search",
+              // @ts-ignore
+              "data-testid": dataTestId,
+              ref: setInputRef,
+              ...getInputProps(),
+            }}
+            className={`${fr.cx("fr-mb-0")}`}
+            hintText={hintText}
+            label={label}
+            state={state}
+            stateRelatedMessage={stateRelatedMessage}
+            classes={{
+              wrap: isSearch ? inputSearchNoMarginTop : undefined,
+            }}
+          />
+          <ul
+            {...getMenuProps()}
+            className={`${fr.cx("fr-p-0", "fr-m-0")} ${autocompleteListContainer} ${isSearch ? listSearch : ""}`}
+          >
+            {isOpen && suggestions.length
               ? suggestions.map((item, index) => (
                   <li
                     {...getItemProps({
@@ -173,13 +167,20 @@ export const Autocomplete = <K,>({
                     )}
                   </li>
                 ))
-              : displayNoResult &&
-                !selectedResult && (
-                  <li className={`${fr.cx("fr-p-3v")} }`}>Aucun résultat</li>
-                ))}
-        </ul>
-      </div>
-    </>
+              : isOpen &&
+                displayNoResult &&
+                !selectedItem && (
+                  <li className={fr.cx("fr-p-3v")}>Aucun résultat</li>
+                )}
+          </ul>
+          {isSearch && (
+            <button className="fr-btn" title="Rechercher" type="submit">
+              Rechercher
+            </button>
+          )}
+        </div>
+      )}
+    </Downshift>
   );
 };
 
@@ -220,4 +221,13 @@ export const isHighlighted = css({
 
 const link = css({
   backgroundImage: "none!",
+});
+
+const inputSearchNoMarginTop = css({
+  marginTop: "0!",
+});
+
+const listSearch = css({
+  marginTop: "2.5rem!",
+  textAlign: "left",
 });

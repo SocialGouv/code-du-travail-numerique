@@ -62,7 +62,6 @@ describe("<HomeSearch />", () => {
     expect(getByText("congés payés et maladie")).toBeInTheDocument();
 
     userAction.click(congesSansSolde);
-    fireEvent.submit(byTestId("search-input").get());
     expect(onSearchSubmitHasBeenCalled).toBeTruthy();
     expect(redirectUrl).toEqual("/recherche?q=cong%C3%A9s%20sans%20solde");
     expect(emitSuggestionEventMock).toHaveBeenCalledWith(

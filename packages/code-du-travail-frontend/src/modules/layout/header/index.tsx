@@ -1,28 +1,21 @@
 "use client";
 
-import { Header as HeaderDsfr } from "@codegouvfr/react-dsfr/Header";
 import { usePathname, useRouter } from "next/navigation";
-import { SearchInput } from "./SearchInput";
-import { BrandTop } from "../BrandTop";
-import { homeLinksProps } from "../common";
+import { HeaderDsfr } from "./HeaderDsfr";
 
 export const Header = () => {
   const currentPath = usePathname();
   const router = useRouter();
 
   const onSearchSubmit = (text: string) => {
-    router.push(`/recherche?q=${encodeURIComponent(text)}`);
+    if (text !== "") {
+      router.push(`/recherche?q=${encodeURIComponent(text)}`);
+    }
   };
 
   return (
     <HeaderDsfr
-      operatorLogo={{
-        alt: "Code du travail numérique",
-        imgUrl: "/static/assets/img/logo.svg",
-        orientation: "horizontal",
-      }}
-      brandTop={<BrandTop />}
-      homeLinkProps={homeLinksProps}
+      onSearchSubmit={onSearchSubmit}
       navigation={[
         {
           text: "Boîte à outils",
@@ -60,17 +53,6 @@ export const Header = () => {
           isActive: currentPath === "/themes",
         },
       ]}
-      renderSearchInput={({ className, id, placeholder, type }) => (
-        <SearchInput
-          className={className}
-          id={id}
-          placeholder={placeholder}
-          type={type}
-          onSearchSubmit={onSearchSubmit}
-        />
-      )}
-      onSearchButtonClick={onSearchSubmit}
-      disableDisplay={true}
     />
   );
 };
