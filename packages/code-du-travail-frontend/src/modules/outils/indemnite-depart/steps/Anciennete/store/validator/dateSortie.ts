@@ -1,4 +1,10 @@
-import { format, isAfter, isEqual, isValid } from "date-fns";
+import {
+  differenceInMonths,
+  format,
+  isAfter,
+  isEqual,
+  isValid,
+} from "date-fns";
 import { parse } from "../../../../../common/utils";
 import { AncienneteStoreError, AncienneteStoreInput } from "../types";
 import frLocale from "date-fns/locale/fr";
@@ -26,6 +32,12 @@ export const getDateSortieErrors = (
         locale: frLocale,
       }
     )}</strong>`;
+  } else if (
+    state.dateNotification &&
+    differenceInMonths(new Date(), dSortie) > 18
+  ) {
+    errors.errorDateSortie =
+      "La date de sortie doit se situer dans les 18 derniers mois";
   } else {
     errors.errorDateSortie = undefined;
   }

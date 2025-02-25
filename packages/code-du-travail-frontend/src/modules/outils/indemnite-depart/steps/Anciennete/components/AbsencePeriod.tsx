@@ -5,6 +5,8 @@ import { Motif } from "@socialgouv/modeles-social";
 import { AbsenceWithKey } from "./AbsencePeriods";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
+import { css } from "@styled-system/css";
+import { DEFAULT_MIN_INPUT_SIZE } from "src/modules/config/size";
 
 type Errors = {
   duration?: string;
@@ -92,6 +94,9 @@ const AbsencePeriod = ({
                 "data-testid": `absence-duree-${index}`,
               } as any
             }
+            classes={{
+              nativeInputOrTextArea: inputStyle,
+            }}
           />
         </div>
         {shouldAskAbsenceDate && (
@@ -110,6 +115,9 @@ const AbsencePeriod = ({
                   "data-testid": `absence-date-${index}`,
                 } as any
               }
+              classes={{
+                nativeInputOrTextArea: inputStyle,
+              }}
             />
           </div>
         )}
@@ -132,3 +140,7 @@ const AbsencePeriod = ({
 };
 
 export default AbsencePeriod;
+
+const inputStyle = css({
+  maxWidth: `${DEFAULT_MIN_INPUT_SIZE}!`,
+});

@@ -35,13 +35,16 @@ export default function Result({
         </strong>
       </p>
       {notifications.map((notification, index) => (
-        <small key={index} data-testid={`notification-${index}`}>
-          <NoticeNote
-            numberOfElements={notifications.length}
-            currentElement={1 + index}
-          />
-          {notification.description}
-        </small>
+        <div key={index}>
+          <small data-testid={`notification-${index}`}>
+            <NoticeNote
+              numberOfElements={notifications.length}
+              currentElement={1 + index}
+            />
+            {notification.description}
+          </small>
+          <br />
+        </div>
       ))}
     </div>
   );

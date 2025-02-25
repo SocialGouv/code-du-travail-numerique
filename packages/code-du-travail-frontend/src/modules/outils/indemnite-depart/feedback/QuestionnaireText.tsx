@@ -1,4 +1,3 @@
-// @ts-nocheck
 "use client";
 
 import { Input } from "@codegouvfr/react-dsfr/Input";
@@ -34,15 +33,18 @@ export const QuestionnaireText = ({
       <label htmlFor={textareaId} className={fr.cx("fr-label")}>
         {title}
       </label>
+      {/* @ts-ignore */}
       <Input
         textArea
-        nativeTextAreaProps={{
-          id: textareaId,
-          onChange: handleChange,
-          maxLength: maxCharacters,
-          "aria-describedby": `${textareaId}-hint ${textareaId}-remaining`,
-          "data-testid": dataTestId,
-        }}
+        nativeTextAreaProps={
+          {
+            id: textareaId,
+            onChange: handleChange,
+            maxLength: maxCharacters,
+            "aria-describedby": `${textareaId}-hint ${textareaId}-remaining`,
+            "data-testid": dataTestId,
+          } as any
+        }
         hintText={placeholder}
         state="info"
         stateRelatedMessage={`${remainingChars} caractères restants`}

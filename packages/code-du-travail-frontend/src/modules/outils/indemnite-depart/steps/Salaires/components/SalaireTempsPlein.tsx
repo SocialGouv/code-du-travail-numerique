@@ -4,6 +4,8 @@ import { SalaryPeriods } from "@socialgouv/modeles-social";
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import HighlightSalary from "./HighlightSalary";
+import { css } from "@styled-system/css";
+import { DEFAULT_MIN_INPUT_SIZE } from "src/modules/config/size";
 
 type Props = {
   title: string;
@@ -97,8 +99,10 @@ export const SalaireTempsPlein = ({
                 <thead>
                   <tr>
                     <th scope="col">Mois</th>
-                    <th scope="col">Salaire mensuel brut primes incluses</th>
-                    {!noPrime && <th scope="col">Total des primes primes</th>}
+                    <th scope="col">
+                      Salaire mensuel brut primes incluses (en €)
+                    </th>
+                    {!noPrime && <th scope="col">Total des primes (en €)</th>}
                   </tr>
                 </thead>
                 <tbody>
@@ -122,14 +126,16 @@ export const SalaireTempsPlein = ({
                           state={
                             errorsSalaries[`${index}`] ? "error" : "default"
                           }
-                          iconId="fr-icon-money-euro-circle-fill"
                           stateRelatedMessage={errorsSalaries[`${index}`]}
+                          classes={{
+                            nativeInputOrTextArea: inputStyle,
+                          }}
                         />
                       </td>
                       {!noPrime && index < 3 && (
                         <td>
                           <Input
-                            label={`Prime exceptionnelle pour le mois ${index + 1}`}
+                            label={`Prime exceptionnelle en € pour le mois ${index + 1}`}
                             hideLabel
                             nativeInputProps={{
                               type: "number",
@@ -148,7 +154,9 @@ export const SalaireTempsPlein = ({
                                 ? "prime-" + dataTestidSalaries
                                 : "prime-input"
                             }
-                            iconId="fr-icon-money-euro-circle-fill"
+                            classes={{
+                              nativeInputOrTextArea: inputStyle,
+                            }}
                           />
                         </td>
                       )}
@@ -174,3 +182,7 @@ export const SalaireTempsPlein = ({
 };
 
 export default SalaireTempsPlein;
+
+const inputStyle = css({
+  maxWidth: `${DEFAULT_MIN_INPUT_SIZE}!`,
+});

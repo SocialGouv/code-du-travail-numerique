@@ -20,6 +20,7 @@ import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelecti
 import { getEnterpriseAgreements } from "./utils";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
+import { scrollToTop } from "src/modules/outils/common/utils";
 
 type Props = {
   widgetMode?: boolean;
@@ -209,7 +210,7 @@ export const EnterpriseAgreementSearchInput = ({
               priority="secondary"
               onClick={() => {
                 setSelectedAgreement(undefined);
-                window.scrollTo(0, 0);
+                scrollToTop();
                 if (
                   selectedEnterprise?.conventions.length &&
                   selectedEnterprise?.conventions.length < 2
@@ -240,14 +241,14 @@ export const EnterpriseAgreementSearchInput = ({
         goBack={() => {
           setSelectedEnterprise(undefined);
           setSelectedAgreement(undefined);
-          window.scrollTo(0, 0);
+          scrollToTop();
         }}
         onAgreementSelect={(agreement) => {
           emitSelectEnterpriseEvent(trackingActionName, {
             label: selectedEnterprise.label,
             siren: selectedEnterprise.siren,
           });
-          if (onAgreementSelect) onAgreementSelect(agreement);
+          onAgreementSelect(agreement, selectedEnterprise);
           setSelectedAgreement(agreement);
         }}
         trackingActionName={trackingActionName}

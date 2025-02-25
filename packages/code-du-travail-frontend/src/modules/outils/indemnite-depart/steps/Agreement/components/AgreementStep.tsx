@@ -101,6 +101,7 @@ export const CommonAgreementStep = ({
         <>
           <EnterpriseAgreementSearchInput
             onAgreementSelect={(agreement, enterprise) => {
+              console.log(agreement, enterprise);
               onAgreementChange(agreement, enterprise);
             }}
             selectedAgreementAlert={selectedAgreementAlert}

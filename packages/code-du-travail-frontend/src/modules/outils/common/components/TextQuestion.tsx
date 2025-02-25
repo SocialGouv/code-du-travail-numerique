@@ -8,6 +8,8 @@ import {
   isFrenchDateFormat,
   convertFrToISODate,
 } from "../utils";
+import { css } from "@styled-system/css";
+import { DEFAULT_MIN_INPUT_SIZE } from "src/modules/config/size";
 
 type Props = {
   onChange: (value: string) => void;
@@ -108,6 +110,13 @@ export function TextQuestion({
           )
         )
       }
+      classes={{
+        nativeInputOrTextArea: inputStyle,
+      }}
     />
   );
 }
+
+const inputStyle = css({
+  maxWidth: `${DEFAULT_MIN_INPUT_SIZE}!`,
+});

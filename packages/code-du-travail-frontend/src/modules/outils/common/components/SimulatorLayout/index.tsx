@@ -7,6 +7,7 @@ import { useSimulatorLayoutTracking } from "./tracking";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { IndemniteDepartStepName } from "../../../indemnite-depart";
 import * as Sentry from "@sentry/nextjs";
+import { scrollToTop } from "../../utils";
 
 type Props<T extends string> = {
   title: string;
@@ -74,6 +75,7 @@ export const SimulatorLayout = (props: Props<string>) => {
           break;
       }
       setNavigationAction("next");
+      scrollToTop();
     }
   };
 
@@ -90,6 +92,7 @@ export const SimulatorLayout = (props: Props<string>) => {
     if (previousStepIndex >= 0) {
       setStepIndex(stepIndex - 1);
       setNavigationAction("prev");
+      scrollToTop();
     } else {
       throw Error("Can't show the previous step with index less than 0");
     }
@@ -153,7 +156,7 @@ export const SimulatorLayout = (props: Props<string>) => {
         {currentNumStep === nbTotalSteps && (
           <Button
             onClick={onPrint}
-            priority="primary"
+            priority="secondary"
             iconId="ri-printer-fill"
             iconPosition="right"
           >

@@ -124,7 +124,7 @@ const AbsencePeriods = ({
   return (
     <div>
       <label className={fr.cx("fr-text--bold", "fr-text--lg")}>
-        Quels sont le motif et la durée de ces absences prolongées&nbsp;
+        Quels sont le motif et la durée de ces absences prolongées&nbsp;?
       </label>
       <p className={fr.cx("fr-mt-2w")}>
         Veuillez créer une ligne différente pour chaque période d&apos;absence

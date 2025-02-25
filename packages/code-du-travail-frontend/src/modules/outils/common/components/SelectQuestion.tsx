@@ -2,6 +2,8 @@ import React from "react";
 import Html from "src/modules/common/Html";
 import { Select } from "@codegouvfr/react-dsfr/Select";
 import { xssWrapper } from "src/lib";
+import { css } from "@styled-system/css";
+import { DEFAULT_MIN_INPUT_SIZE } from "src/modules/config/size";
 
 type Props = {
   name: string;
@@ -71,6 +73,7 @@ export const SelectQuestion = ({
           )
         )
       }
+      className={inputStyle}
     >
       <option value="" disabled>
         Sélectionnez une option
@@ -83,3 +86,7 @@ export const SelectQuestion = ({
     </Select>
   );
 };
+
+const inputStyle = css({
+  "&>select": { maxWidth: `${DEFAULT_MIN_INPUT_SIZE}!` },
+});
