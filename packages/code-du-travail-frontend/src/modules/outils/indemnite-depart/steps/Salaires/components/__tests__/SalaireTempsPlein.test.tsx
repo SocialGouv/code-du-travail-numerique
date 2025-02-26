@@ -78,7 +78,7 @@ describe("<SalaireTempsPlein />", () => {
       />
     );
     const input1 = getByLabelText(
-      /Prime exceptionnelle pour le mois 1/i
+      /Prime exceptionnelle en € pour le mois 1/i
     ) as HTMLInputElement;
     expect(input1).toBeTruthy();
     fireEvent.change(input1, { target: { value: "6000" } });

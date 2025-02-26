@@ -67,4 +67,7 @@ const block = css({
   borderColor: "var(--border-default-blue-france)",
   width: "fit-content!",
   justifySelf: "flex-end",
+  "@media print": {
+    display: "none",
+  },
 });

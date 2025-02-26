@@ -8,7 +8,7 @@ type Props = {
 
 export const FeedbackDefault = (props: Props) => {
   return (
-    <div className="fr-grid-row">
+    <div className={fr.cx("fr-grid-row")}>
       <div className="fr-col-12 fr-col-md">
         <h2 className={fr.cx("fr-h5", "fr-mb-md-0")} id="feedback-title">
           Avez-vous trouvé la réponse à votre question ?

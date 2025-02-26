@@ -8,6 +8,7 @@ import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { IndemniteDepartStepName } from "../../../indemnite-depart";
 import * as Sentry from "@sentry/nextjs";
 import { scrollToTop } from "../../utils";
+import { css } from "@styled-system/css";
 
 type Props<T extends string> = {
   title: string;
@@ -114,7 +115,7 @@ export const SimulatorLayout = (props: Props<string>) => {
 
   return (
     <div>
-      <div data-testid="stepper">
+      <div data-testid="stepper" className={hideOnPrint}>
         <Stepper
           currentStep={currentNumStep}
           nextTitle={nextStepTitle}
@@ -124,6 +125,17 @@ export const SimulatorLayout = (props: Props<string>) => {
             root: fr.cx("fr-mb-3w"),
           }}
         />
+      </div>
+
+      <div className={printOnlyDate}>
+        Simulé le{" "}
+        {new Date().toLocaleDateString("fr-FR", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+        })}
       </div>
 
       <div>
@@ -164,7 +176,6 @@ export const SimulatorLayout = (props: Props<string>) => {
           </Button>
         )}
       </div>
-
       {visibleSteps[stepIndex].options?.annotation && (
         <p className={fr.cx("fr-text--sm", "fr-mt-3w")}>
           {visibleSteps[stepIndex].options?.annotation}
@@ -174,3 +185,18 @@ export const SimulatorLayout = (props: Props<string>) => {
     </div>
   );
 };
+
+const hideOnPrint = css({
+  "@media print": {
+    display: "none",
+  },
+});
+
+const printOnlyDate = css({
+  display: "none",
+  "@media print": {
+    display: "block",
+    marginBottom: "1rem",
+    fontStyle: "italic",
+  },
+});

@@ -1,4 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
+import { css } from "@styled-system/css";
 import React from "react";
 import { BrandTop } from "../BrandTop";
 import { NeedMoreInfo } from "./infos";
@@ -8,7 +9,7 @@ import { FooterBottom } from "./FooterBottom";
 
 export const Footer = () => {
   return (
-    <footer>
+    <footer className={footerStyle}>
       <NeedMoreInfo />
       <div className={fr.cx("fr-footer")}>
         <FooterTop />
@@ -27,3 +28,9 @@ export const Footer = () => {
     </footer>
   );
 };
+
+const footerStyle = css({
+  "@media print": {
+    display: "none",
+  },
+});
