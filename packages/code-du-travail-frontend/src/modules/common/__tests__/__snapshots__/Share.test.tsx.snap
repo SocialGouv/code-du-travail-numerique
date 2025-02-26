@@ -3,7 +3,7 @@
 exports[`<Share /> renders 1`] = `
 <div>
   <div
-    class="fr-follow__social"
+    class="fr-follow__social [@media_print]:d_none"
   >
     <div
       aria-level="2"
