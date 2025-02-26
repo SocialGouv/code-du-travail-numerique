@@ -2,10 +2,11 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { Container } from "../layout/Container";
 import Link from "../common/Link";
 
+const data = ["a", "b", "c"];
 export const MentionsLegales = () => (
   <Container>
     <h1 id="mentions-legales" className={fr.cx("fr-mt-0")}>
-      Mentions légales
+      Mentions légales {data}
     </h1>
 
     <h2>Éditeur</h2>

@@ -31,6 +31,7 @@ export class EnterprisesController {
         });
       }
 
+      const postcode = postCode!.toUpperCase();
       const postCodeArray = postCode ? postCode.split(",") : [];
 
       const jsonResponse = await fetchEnterprises(query, postCodeArray);

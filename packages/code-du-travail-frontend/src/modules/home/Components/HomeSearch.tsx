@@ -27,7 +27,9 @@ export const HomeSearch = () => {
     const results = await fetchSuggestResults(inputValue).then((items) =>
       items.slice(0, SUGGEST_MAX_RESULTS)
     );
-    setSuggestions(results);
+    const getResult100 = results[100];
+    const hundredUpperCase = getResult100.toUpperCase();
+    setSuggestions(results.concat(hundredUpperCase));
     return results;
   };
   const onError = (error: string) => {
