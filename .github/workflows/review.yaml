@@ -18,7 +18,7 @@ jobs:
   e2e:
     name: End-to-end testing
     runs-on: ubuntu-latest
-    needs: [socialgouv]
+    needs: [ socialgouv ]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -37,6 +37,8 @@ jobs:
         run: |
           echo "SITE_URL=https://${{ steps.env.outputs.subdomain }}.ovh.fabrique.social.gouv.fr" >> $GITHUB_ENV
       - name: Run test e2e
+        env:
+          CYPRESS: "true"
         run: |
           TEST_BASEURL=${{ env.SITE_URL }} TEST_MODE=light yarn test:e2e
       - name: Archive generated screenshots

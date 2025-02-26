@@ -56,6 +56,10 @@ ENV NEXT_PUBLIC_ES_INDEX_PREFIX=$NEXT_PUBLIC_ES_INDEX_PREFIX
 ARG NEXT_PUBLIC_BRANCH_NAME_SLUG
 ENV NEXT_PUBLIC_BRANCH_NAME_SLUG=$NEXT_PUBLIC_BRANCH_NAME_SLUG
 
+# Enable source map generation during build
+ENV GENERATE_SOURCEMAP=true \
+    NODE_ENV=production
+
 # hadolint ignore=SC2046
 RUN --mount=type=secret,id=sentry_auth_token \
   --mount=type=secret,id=elasticsearch_token_api \
@@ -63,6 +67,7 @@ RUN --mount=type=secret,id=sentry_auth_token \
   export SENTRY_AUTH_TOKEN=$(cat /run/secrets/sentry_auth_token) && \
   export ELASTICSEARCH_TOKEN_API=$(cat /run/secrets/elasticsearch_token_api) && \
   export ELASTICSEARCH_URL=$(cat /run/secrets/elasticsearch_url) && \
+  export GENERATE_SOURCEMAP=true && \
   yarn build && \
   yarn workspaces focus --production --all && \
   yarn cache clean
@@ -86,6 +91,7 @@ COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/next.c
 COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/instrumentation.ts /app/packages/code-du-travail-frontend/instrumentation.ts
 COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/sentry.client.config.ts /app/packages/code-du-travail-frontend/sentry.client.config.ts
 COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/sentry.server.config.ts /app/packages/code-du-travail-frontend/sentry.server.config.ts
+COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/sentry.edge.config.ts /app/packages/code-du-travail-frontend/sentry.edge.config.ts
 COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/redirects.json /app/packages/code-du-travail-frontend/redirects.json
 COPY --from=dist --chown=1000:1000 /dep/packages/code-du-travail-frontend/scripts /app/packages/code-du-travail-frontend/scripts
 COPY --from=dist --chown=1000:1000 /dep/package.json /app/package.json
