@@ -40,7 +40,7 @@ exports[`<PopupContent /> should match snapshot 1`] = `
       class="fr-input-wrap fr-input-wrap--addon"
     >
       <input
-        class="fr-input max-w_280px"
+        class="fr-input w_fit-content! min-w_282px! [&::-webkit-outer-spin-button,_&::-webkit-inner-spin-button]:-webkit-appearance_none [&::-webkit-outer-spin-button,_&::-webkit-inner-spin-button]:m_0 [&[type=number]]:ap_textfield"
         id="input-:r0:"
         maxlength="3"
         type="text"
