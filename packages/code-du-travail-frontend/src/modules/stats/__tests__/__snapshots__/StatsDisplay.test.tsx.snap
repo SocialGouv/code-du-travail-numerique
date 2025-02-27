@@ -3,29 +3,30 @@
 exports[`<StatsDisplay /> should match snapshot 1`] = `
 <div>
   <div
-    class="fr-col-12 fr-col-md-3"
+    class="fr-callout h_100%"
+    id="fr-callout-:r0:"
   >
-    <div
-      class="fr-callout h_100%"
-      id="fr-callout-:r0:"
+    <p
+      class="fr-callout__text"
     >
-      <p
-        class="fr-callout__text"
+       
+      <span
+        class="lg:ta_right lg:d_block ta_left fr-mt-4v fr-m-0 fr-h2"
+      >
+        100
+      </span>
+      <span
+        class="fr-hidden-lg"
       >
          
-        <span
-          class="ta_right d_block fr-mt-4v fr-display--xs"
-        >
-          100
-        </span>
-        <span
-          class="ta_left fr-text--bold fr-text--xl"
-        >
-          Contenus référencés
-        </span>
-         
-      </p>
-    </div>
+      </span>
+      <span
+        class="lg:ta_right lg:ms_0 ms_1em fr-text--bold fr-mt-4v fr-mb-0 fr-h5"
+      >
+        Contenus référencés
+      </span>
+       
+    </p>
   </div>
 </div>
 `;
