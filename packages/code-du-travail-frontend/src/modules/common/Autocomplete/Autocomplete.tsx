@@ -23,6 +23,7 @@ export type AutocompleteProps<K> = InputProps & {
   defaultValue?: K;
   onInputValueChange?: (value: string) => void;
   isSearch?: boolean;
+  placeholder?: string;
 };
 
 export const Autocomplete = <K,>({
@@ -41,6 +42,7 @@ export const Autocomplete = <K,>({
   defaultValue,
   displayNoResult,
   isSearch = false,
+  placeholder,
 }: AutocompleteProps<K>) => {
   const [loading, setLoading] = useState(false);
   const [inputRef, setInputRef] = useState<HTMLInputElement | null>();
@@ -90,11 +92,12 @@ export const Autocomplete = <K,>({
         clearSelection,
       }) => (
         <div
-          className={fr.cx(isSearch ? "fr-search-bar" : "fr-input-group")}
+          className={`${searchContainer}`}
           {...getRootProps({}, { suppressRefError: true })}
         >
           <Input
             nativeLabelProps={getLabelProps()}
+            hideLabel={isSearch}
             addon={
               <>
                 <div className={addonBlock}>
@@ -132,6 +135,7 @@ export const Autocomplete = <K,>({
               type: "search",
               // @ts-ignore
               "data-testid": dataTestId,
+              placeholder,
               ref: setInputRef,
               ...getInputProps(),
             }}
@@ -142,6 +146,7 @@ export const Autocomplete = <K,>({
             stateRelatedMessage={stateRelatedMessage}
             classes={{
               wrap: isSearch ? inputSearchNoMarginTop : undefined,
+              root: rootInputCss,
             }}
           />
           <ul
@@ -174,9 +179,13 @@ export const Autocomplete = <K,>({
                 )}
           </ul>
           {isSearch && (
-            <button className="fr-btn" title="Rechercher" type="submit">
-              Rechercher
-            </button>
+            <Button
+              className="fr-btn"
+              title="Rechercher"
+              type="submit"
+              iconId="fr-icon-search-line"
+              priority="primary"
+            />
           )}
         </div>
       )}
@@ -184,12 +193,30 @@ export const Autocomplete = <K,>({
   );
 };
 
-export const autocompleteListContainer = css({
+const searchContainer = css({
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  width: "100%",
+  position: "relative",
+});
+
+const autocompleteListContainer = css({
   position: "absolute",
-  w: "100%",
+  top: "100%",
+  left: 0,
+  width: "100%",
   zIndex: 10,
   bg: "var(--background-default-grey)",
   listStyleType: "none!",
+  borderTop: "none",
+  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+  maxHeight: "300px",
+  overflowY: "auto",
+});
+
+const rootInputCss = css({
+  width: "100%",
 });
 
 export const suggestion = css({
@@ -214,7 +241,7 @@ const buttonClose = css({
   },
 });
 
-export const isHighlighted = css({
+const isHighlighted = css({
   bg: "var(--background-default-grey-hover)",
   fontWeight: "bold",
 });
@@ -228,6 +255,6 @@ const inputSearchNoMarginTop = css({
 });
 
 const listSearch = css({
-  marginTop: "2.5rem!",
+  marginTop: "0!",
   textAlign: "left",
 });
