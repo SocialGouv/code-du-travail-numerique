@@ -100,9 +100,8 @@ export const CommonAgreementStep = ({
       {route === "enterprise" && (
         <>
           <EnterpriseAgreementSearchInput
-            onAgreementSelect={(agreement, enterprise) => {
-              console.log(agreement, enterprise);
-              onAgreementChange(agreement, enterprise);
+            onAgreementSelect={(agr, ent) => {
+              onAgreementChange(agr, ent);
             }}
             selectedAgreementAlert={selectedAgreementAlert}
             trackingActionName={

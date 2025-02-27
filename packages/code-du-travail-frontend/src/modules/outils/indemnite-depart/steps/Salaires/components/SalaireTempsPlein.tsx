@@ -4,8 +4,8 @@ import { SalaryPeriods } from "@socialgouv/modeles-social";
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import HighlightSalary from "./HighlightSalary";
-import { css } from "@styled-system/css";
-import { DEFAULT_MIN_INPUT_SIZE } from "src/modules/config/size";
+import { preventScroll } from "src/modules/outils/common/utils/input";
+import { defaultInputStyle } from "src/modules/outils/common/styles/input";
 
 type Props = {
   title: string;
@@ -121,6 +121,7 @@ export const SalaireTempsPlein = ({
                             onChange: (e) =>
                               onChangeSalaries(index, e.target.value),
                             autoFocus: autoFocus ? index === 0 : false,
+                            onWheel: preventScroll,
                           }}
                           data-testid={dataTestidSalaries ?? "salary-input"}
                           state={
@@ -128,7 +129,7 @@ export const SalaireTempsPlein = ({
                           }
                           stateRelatedMessage={errorsSalaries[`${index}`]}
                           classes={{
-                            nativeInputOrTextArea: inputStyle,
+                            nativeInputOrTextArea: defaultInputStyle,
                           }}
                         />
                       </td>
@@ -144,6 +145,7 @@ export const SalaireTempsPlein = ({
                               value: sPeriod.prime ?? "",
                               onChange: (e) =>
                                 onChangeLocalPrimes(index, e.target.value),
+                              onWheel: preventScroll,
                             }}
                             state={
                               errorsPrimes[`${index}`] ? "error" : "default"
@@ -155,7 +157,7 @@ export const SalaireTempsPlein = ({
                                 : "prime-input"
                             }
                             classes={{
-                              nativeInputOrTextArea: inputStyle,
+                              nativeInputOrTextArea: defaultInputStyle,
                             }}
                           />
                         </td>
@@ -182,7 +184,3 @@ export const SalaireTempsPlein = ({
 };
 
 export default SalaireTempsPlein;
-
-const inputStyle = css({
-  maxWidth: `${DEFAULT_MIN_INPUT_SIZE}!`,
-});

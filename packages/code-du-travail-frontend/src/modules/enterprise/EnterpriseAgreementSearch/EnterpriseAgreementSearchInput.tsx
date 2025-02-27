@@ -24,7 +24,7 @@ import { scrollToTop } from "src/modules/outils/common/utils";
 
 type Props = {
   widgetMode?: boolean;
-  onAgreementSelect?: (agreement: Agreement, enterprise?: Enterprise) => void;
+  onAgreementSelect?: (agreement?: Agreement, enterprise?: Enterprise) => void;
   selectedAgreementAlert?: (
     agreement?: Agreement
   ) => NonNullable<ReactNode> | undefined;
@@ -238,6 +238,7 @@ export const EnterpriseAgreementSearchInput = ({
     return (
       <EnterpriseAgreementSelectionForm
         enterprise={selectedEnterprise}
+        selectedAgreement={selectedAgreement}
         goBack={() => {
           setSelectedEnterprise(undefined);
           setSelectedAgreement(undefined);
@@ -248,8 +249,8 @@ export const EnterpriseAgreementSearchInput = ({
             label: selectedEnterprise.label,
             siren: selectedEnterprise.siren,
           });
-          onAgreementSelect(agreement, selectedEnterprise);
           setSelectedAgreement(agreement);
+          onAgreementSelect(agreement, selectedEnterprise);
         }}
         trackingActionName={trackingActionName}
       />
@@ -407,6 +408,7 @@ export const EnterpriseAgreementSearchInput = ({
                       onClick: (ev) => {
                         ev.preventDefault();
                         setSelectedEnterprise(enterprise);
+                        onAgreementSelect(selectedAgreement, enterprise);
                         if (enterprise.conventions.length === 1) {
                           emitSelectEnterpriseAgreementEvent(
                             `idcc${enterprise.conventions[0].num}`,

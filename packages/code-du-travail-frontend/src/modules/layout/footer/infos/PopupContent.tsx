@@ -7,8 +7,8 @@ import { useNeedMoreInfoEvents } from "./tracking";
 import servicesDeRenseignement from "../../../../data/services-de-renseignement.json";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
-import { css } from "@styled-system/css";
 import Link from "../../../common/Link";
+import { defaultInputStyle } from "src/modules/outils/common/styles/input";
 
 type ServiceRenseignement = {
   name: string;
@@ -68,7 +68,7 @@ export function PopupContent() {
           />
         }
         classes={{
-          nativeInputOrTextArea: inputCss,
+          nativeInputOrTextArea: defaultInputStyle,
         }}
       />
       {result && (
@@ -105,7 +105,3 @@ export function PopupContent() {
     </>
   );
 }
-
-const inputCss = css({
-  maxWidth: "280px",
-});

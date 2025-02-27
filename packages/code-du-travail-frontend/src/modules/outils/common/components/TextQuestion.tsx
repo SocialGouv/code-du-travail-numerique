@@ -8,8 +8,8 @@ import {
   isFrenchDateFormat,
   convertFrToISODate,
 } from "../utils";
-import { css } from "@styled-system/css";
-import { DEFAULT_MIN_INPUT_SIZE } from "src/modules/config/size";
+import { preventScroll } from "src/modules/outils/common/utils/input";
+import { defaultInputStyle } from "../styles/input";
 
 type Props = {
   onChange: (value: string) => void;
@@ -98,6 +98,7 @@ export function TextQuestion({
           required: true,
           ref: (ref: HTMLInputElement) => setInputRef(ref),
           "data-testid": dataTestId,
+          onWheel: preventScroll,
         } as any
       }
       state={error ? "error" : subLabel ? "info" : "default"}
@@ -111,12 +112,8 @@ export function TextQuestion({
         )
       }
       classes={{
-        nativeInputOrTextArea: inputStyle,
+        nativeInputOrTextArea: defaultInputStyle,
       }}
     />
   );
 }
-
-const inputStyle = css({
-  maxWidth: `${DEFAULT_MIN_INPUT_SIZE}!`,
-});

@@ -5,8 +5,12 @@ import { Motif } from "@socialgouv/modeles-social";
 import { AbsenceWithKey } from "./AbsencePeriods";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
-import { css } from "@styled-system/css";
-import { DEFAULT_MIN_INPUT_SIZE } from "src/modules/config/size";
+import {
+  preventScroll,
+  handleNumberInput,
+} from "src/modules/outils/common/utils/input";
+import { defaultSelectStyle } from "src/modules/outils/common/styles/select";
+import { defaultInputStyle } from "src/modules/outils/common/styles/input";
 
 type Errors = {
   duration?: string;
@@ -59,9 +63,7 @@ const AbsencePeriod = ({
         className="fr-grid-row fr-grid-row--gutters"
         style={{ display: "flex", alignItems: "flex-end" }}
       >
-        <div
-          className={`fr-col-12 ${shouldAskAbsenceDate ? "fr-col-md-4" : "fr-col-md-6"}`}
-        >
+        <div className={`fr-col-12 fr-col-md-3`}>
           <Select
             label="Motif"
             nativeSelectProps={{
@@ -70,6 +72,7 @@ const AbsencePeriod = ({
               value: absence?.motif?.label,
             }}
             data-testid={`absence-motif-${index}`}
+            className={defaultSelectStyle}
           >
             {motifs.map(({ label }) => (
               <option key={label} value={label}>
@@ -78,9 +81,7 @@ const AbsencePeriod = ({
             ))}
           </Select>
         </div>
-        <div
-          className={`fr-col-12 ${shouldAskAbsenceDate ? "fr-col-md-3" : "fr-col-md-4"}`}
-        >
+        <div className={`fr-col-12 fr-col-md-3`}>
           <Input
             label="Durée (en mois)"
             state={errors?.duration ? "error" : "default"}
@@ -89,13 +90,18 @@ const AbsencePeriod = ({
               {
                 id: `${index}.duration`,
                 type: "number",
-                onChange: (e) => onSetDurationDate(absence.key, e.target.value),
+                step: "1",
+                pattern: "[0-9]*",
+                inputMode: "numeric",
+                onChange: (e) =>
+                  onSetDurationDate(absence.key, handleNumberInput(e)),
+                onWheel: preventScroll,
                 value: absence?.durationInMonth ?? "",
                 "data-testid": `absence-duree-${index}`,
               } as any
             }
             classes={{
-              nativeInputOrTextArea: inputStyle,
+              nativeInputOrTextArea: defaultInputStyle,
             }}
           />
         </div>
@@ -116,13 +122,13 @@ const AbsencePeriod = ({
                 } as any
               }
               classes={{
-                nativeInputOrTextArea: inputStyle,
+                nativeInputOrTextArea: defaultInputStyle,
               }}
             />
           </div>
         )}
         {showDeleteButton && (
-          <div className="fr-col-12 fr-col-md-2">
+          <div className="fr-col-12 fr-col-md-3">
             <Button
               onClick={() => onDeleteAbsence(absence.key)}
               priority="secondary"
@@ -140,7 +146,3 @@ const AbsencePeriod = ({
 };
 
 export default AbsencePeriod;
-
-const inputStyle = css({
-  maxWidth: `${DEFAULT_MIN_INPUT_SIZE}!`,
-});

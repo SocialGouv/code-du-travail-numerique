@@ -12,6 +12,7 @@ import { Agreement } from "src/modules/outils/indemnite-depart/types";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;
+  selectedAgreement?: Agreement;
   goBack: () => void;
   onAgreementSelect?: (agreement: Agreement) => void;
   trackingActionName: string;
@@ -19,18 +20,23 @@ type Props = {
 
 export const EnterpriseAgreementSelectionForm = ({
   enterprise,
+  selectedAgreement,
   goBack,
   onAgreementSelect,
   trackingActionName,
 }: Props) => {
   const { emitSelectEnterpriseAgreementEvent } =
     useEnterpriseAgreementSearchTracking();
-  const [agreement, setAgreement] = useState<Agreement | undefined>();
+  const [agreement, setAgreement] = useState<Agreement | undefined>(
+    selectedAgreement
+  );
   const agreements = getEnterpriseAgreements(enterprise.conventions);
   const resultRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     resultRef.current?.focus();
   }, []);
+
   return (
     <>
       <EnterpriseAgreementSelectionDetail enterprise={enterprise} />
@@ -51,10 +57,14 @@ export const EnterpriseAgreementSelectionForm = ({
       </div>
       <RadioButtons
         className={fr.cx("fr-mt-2w")}
+        name="convention-collective"
         options={agreements.map(({ disabled, description, ...agreement }) => ({
           label: `${agreement.shortTitle} IDCC ${agreement.id}`,
           nativeInputProps: {
             value: agreement.num,
+            checked: selectedAgreement
+              ? selectedAgreement.num === agreement.num
+              : false,
             ...(onAgreementSelect
               ? {
                   onChange: () => {
