@@ -39,7 +39,8 @@ export const ui = {
   },
   searchByName: {
     input: byLabelText(
-      /Nom de la convention collective ou son numéro d’identification IDCC \(4 chiffres\)/
+      /Nom de la convention collective ou son numéro d’identification IDCC \(4 chiffres\)/,
+      { selector: "input" }
     ),
     inputCloseBtn: byTestId("AgreementSearchAutocomplete-autocomplete-close"),
     buttonPrevious: byRole("link", {
@@ -79,7 +80,9 @@ export const ui = {
   },
   searchByEnterprise: {
     input: byLabelText(/Nom de votre entreprise ou numéro Siren\/Siret/),
-    inputLocation: byLabelText("Code postal ou Ville (optionnel)"),
+    inputLocation: byLabelText("Code postal ou Ville (optionnel)", {
+      selector: "input",
+    }),
     submitButton: byText("Rechercher"),
     resultLines: {
       carrefour: {

@@ -44,23 +44,19 @@ exports[`<Home /> should match snapshot 1`] = `
                   class="fr-col-12 fr-col-md-8"
                 >
                   <div
-                    class="fr-input-group"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="downshift-0-label"
+                    class="d_flex flex-d_row ai_center w_100% pos_relative"
+                    role="combobox"
                   >
                     <div
-                      aria-activedescendant=""
-                      aria-autocomplete="list"
-                      aria-controls="downshift-:r0:-menu"
-                      aria-expanded="false"
-                      aria-labelledby="downshift-:r0:-label"
-                      autocomplete="off"
-                      class="fr-input-group fr-mb-0"
-                      id="location-search"
-                      role="combobox"
-                      value=""
+                      class="fr-input-group w_100% fr-mb-0"
                     >
                       <label
                         class="fr-label"
-                        for="input-:r1:"
+                        for="downshift-0-input"
+                        id="downshift-0-label"
                       >
                         Recherchez par mots-clés
                         <span
@@ -73,9 +69,12 @@ exports[`<Home /> should match snapshot 1`] = `
                         class="fr-input-wrap fr-input-wrap--addon"
                       >
                         <input
+                          aria-autocomplete="list"
+                          aria-labelledby="downshift-0-label"
+                          autocomplete="off"
                           class="fr-input"
                           data-testid="search-input"
-                          id="input-:r1:"
+                          id="downshift-0-input"
                           type="search"
                           value=""
                         />
@@ -86,13 +85,13 @@ exports[`<Home /> should match snapshot 1`] = `
                       <div
                         aria-live="polite"
                         class="fr-messages-group"
-                        id="input-:r1:-messages-group"
+                        id="downshift-0-input-messages-group"
                       />
                     </div>
                     <ul
-                      aria-labelledby="downshift-:r0:-label"
-                      class="fr-p-0 fr-m-0 pos_absolute w_100% z_10 bg_var(--background-default-grey) li-t_none!"
-                      id="downshift-:r0:-menu"
+                      aria-labelledby="downshift-0-label"
+                      class="fr-p-0 fr-m-0 pos_absolute top_100% left_0 w_100% z_10 bg_var(--background-default-grey) li-t_none! bd-t_none bx-sh_0_4px_8px_rgba(0,_0,_0,_0.1) max-h_300px ov-y_auto "
+                      id="downshift-0-menu"
                       role="listbox"
                     />
                   </div>
@@ -103,7 +102,7 @@ exports[`<Home /> should match snapshot 1`] = `
                   <button
                     aria-label="Lancer la recherche"
                     class="fr-btn fr-icon-search-line fr-btn--icon-right mdDown:w_100%! mdDown:jc_center!"
-                    id="fr-button-:r2:"
+                    id="fr-button-:r1:"
                     type="submit"
                   >
                     Rechercher
@@ -148,7 +147,7 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-card fr-enlarge-link fr-card--horizontal"
-                id="fr-card-:r3:"
+                id="fr-card-:r2:"
               >
                 <div
                   class="fr-card__body"
@@ -219,7 +218,7 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-tile fr-enlarge-link fr-tile--vertical"
-                id="fr-tile-:r4:"
+                id="fr-tile-:r3:"
               >
                 <div
                   class="fr-tile__body"
@@ -267,7 +266,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/outils"
-              id="fr-button-:r5:"
+              id="fr-button-:r4:"
             >
               Voir tous les outils
             </a>
@@ -296,7 +295,7 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-card fr-enlarge-link fr-card--horizontal"
-                id="fr-card-:r6:"
+                id="fr-card-:r5:"
               >
                 <div
                   class="fr-card__body"
@@ -348,7 +347,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/modeles-de-courriers"
-              id="fr-button-:r7:"
+              id="fr-button-:r6:"
             >
               Voir tous les modèles de documents
             </a>
@@ -377,7 +376,7 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-card fr-enlarge-link fr-card--horizontal"
-                id="fr-card-:r8:"
+                id="fr-card-:r7:"
               >
                 <div
                   class="fr-card__body"
@@ -429,7 +428,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/contribution"
-              id="fr-button-:r9:"
+              id="fr-button-:r8:"
             >
               Voir toutes les fiches pratiques
             </a>
@@ -459,7 +458,7 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-card fr-enlarge-link fr-card--horizontal"
-                id="fr-card-:ra:"
+                id="fr-card-:r9:"
               >
                 <div
                   class="fr-card__body"
@@ -511,7 +510,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/convention-collective"
-              id="fr-button-:rb:"
+              id="fr-button-:ra:"
             >
               Voir toutes les conventions collectives
             </a>
@@ -588,7 +587,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/themes"
-              id="fr-button-:rc:"
+              id="fr-button-:rb:"
             >
               Voir tous les thèmes
             </a>

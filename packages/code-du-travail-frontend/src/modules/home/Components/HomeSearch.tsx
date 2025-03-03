@@ -15,12 +15,15 @@ export const HomeSearch = () => {
   const { emitSuggestionEvent } = useLayoutTracking();
   const router = useRouter();
 
-  const onSubmit = () => {
-    router.push(getSearchUrl(query));
+  const handleSearch = (searchTerm: string) => {
+    if (searchTerm.trim()) {
+      router.push(`/recherche?q=${encodeURIComponent(searchTerm)}`);
+    }
   };
 
-  const getSearchUrl = (text: string) => {
-    return `/recherche?q=${encodeURIComponent(text)}`;
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    handleSearch(query);
   };
 
   const search = async (inputValue: string) => {
@@ -30,16 +33,19 @@ export const HomeSearch = () => {
     setSuggestions(results);
     return results;
   };
+
   const onError = (error: string) => {
-    console.error("Echec lors de la récupération des suggestions", error);
-    Sentry.captureMessage("Echec lors de la récupération des suggestions");
+    console.error("Échec lors de la récupération des suggestions", error);
+    Sentry.captureMessage("Échec lors de la récupération des suggestions");
   };
-  const onSelectedItemChange = (value) => {
+
+  const onSelectedItemChange = (value: string | undefined) => {
     if (value) {
-      setQuery(value);
       emitSuggestionEvent(query, value, suggestions);
+      handleSearch(value);
     }
   };
+
   return (
     <form
       className={fr.cx(
@@ -56,13 +62,14 @@ export const HomeSearch = () => {
           label={<>Recherchez par mots-clés</>}
           displayLabel={(item) => item ?? ""}
           onInputValueChange={(value) => {
-            setQuery(value);
+            if (value) {
+              setQuery(value);
+            }
           }}
           onChange={onSelectedItemChange}
           search={search}
           onError={onError}
           dataTestId={"search-input"}
-          lineAsLink={getSearchUrl}
         />
       </div>
       <div className={fr.cx("fr-col-12", "fr-col-md-4")}>
