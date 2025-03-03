@@ -5,6 +5,8 @@ import styled, { css } from "styled-components";
 import { ErrorBoundary } from "../common/ErrorBoundary";
 import Footer from "./Footer";
 import { Header, HEADER_HEIGHT, MOBILE_HEADER_HEIGHT } from "./Header";
+import { SentryTest } from "../lib/SentryTest";
+import { ENV } from "../config";
 
 const Layout = ({ children, currentPage = "" }) => {
   return (
@@ -17,6 +19,7 @@ const Layout = ({ children, currentPage = "" }) => {
         </StyledMain>
       </ErrorBoundary>
       <Footer />
+      {ENV === "development" && <SentryTest />}
     </BackgroundContainer>
   );
 };

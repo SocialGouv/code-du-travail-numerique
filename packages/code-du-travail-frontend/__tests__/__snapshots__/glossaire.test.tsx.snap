@@ -3,10 +3,10 @@
 exports[`<Glossaire /> should render 1`] = `
 <div>
   <div
-    class="sc-454ca646-0 jYVKdr"
+    class="sc-5e9f8e85-0 dAotBL"
   >
     <div
-      class="sc-454ca646-1 fiVDmP"
+      class="sc-5e9f8e85-1 joGszH"
     />
     <header
       class="sc-1bce5a92-0 daRkfQ"
@@ -168,7 +168,7 @@ exports[`<Glossaire /> should render 1`] = `
       </div>
     </header>
     <main
-      class="sc-454ca646-2 kMooQt"
+      class="sc-5e9f8e85-2 iZYNzd"
       id="content"
       tabindex="-1"
     >

@@ -43,9 +43,14 @@ exports[`<Header /> should match snapshot 1`] = `
               >
                 <img
                   alt="Code du travail numérique"
-                  class="fr-responsive-img"
+                  class="fr-responsive-img max-w_9.0625rem"
+                  data-nimg="1"
+                  decoding="async"
+                  fetchpriority="high"
+                  height="50"
                   src="/static/assets/img/logo.svg"
-                  style="max-width: 9.0625rem;"
+                  style="color: transparent;"
+                  width="145"
                 />
               </div>
               <div
@@ -54,6 +59,7 @@ exports[`<Header /> should match snapshot 1`] = `
                 <button
                   aria-controls="fr-header-search-modal"
                   class="fr-btn--search fr-btn"
+                  data-fr-js-modal-button="true"
                   data-fr-opened="false"
                   id="fr-header-search-button"
                   title="Rechercher"
@@ -64,6 +70,7 @@ exports[`<Header /> should match snapshot 1`] = `
                   aria-controls="header-menu-modal-fr-header"
                   aria-haspopup="menu"
                   class="fr-btn--menu fr-btn"
+                  data-fr-js-modal-button="true"
                   data-fr-opened="false"
                   id="fr-header-menu-button"
                   title="Menu"
@@ -77,8 +84,9 @@ exports[`<Header /> should match snapshot 1`] = `
             class="fr-header__tools"
           >
             <div
-              aria-labelledby="fr-header-search-bar-button"
               class="fr-header__search fr-modal"
+              data-fr-js-header-modal="true"
+              data-fr-js-modal="true"
               id="fr-header-search-modal"
             >
               <div
@@ -87,13 +95,13 @@ exports[`<Header /> should match snapshot 1`] = `
                 <button
                   aria-controls="fr-header-search-modal"
                   class="fr-btn--close fr-btn"
+                  data-fr-js-modal-button="true"
                   id="fr-header-search-close-button"
                   title="Fermer"
                 >
                   Fermer
                 </button>
-                <div
-                  class="fr-search-bar"
+                <form
                   role="search"
                 >
                   <label
@@ -108,30 +116,58 @@ exports[`<Header /> should match snapshot 1`] = `
                     aria-autocomplete="list"
                     aria-controls="downshift-:r0:-menu"
                     aria-expanded="false"
-                    aria-labelledby="downshift-:r0:-label"
-                    autocomplete="off"
-                    class="fr-input"
-                    data-testid="search-input"
-                    id="fr-header-search-input"
-                    placeholder="Rechercher"
+                    aria-haspopup="listbox"
+                    aria-labelledby="downshift-0-label"
+                    class="d_flex flex-d_row ai_center w_100% pos_relative"
                     role="combobox"
-                    type="search"
-                    value=""
-                  />
-                  <ul
-                    aria-labelledby="downshift-:r0:-label"
-                    class="pos_absolute w_100% z_10 bg_var(--background-default-grey) li-t_none! top_2.5rem ta_left"
-                    id="downshift-:r0:-menu"
-                    role="listbox"
-                  />
-                  <button
-                    class="fr-btn"
-                    id="fr-header-search-bar-button"
-                    title="Rechercher"
                   >
-                    Rechercher
-                  </button>
-                </div>
+                    <div
+                      class="fr-input-group w_100% fr-mb-0"
+                    >
+                      <label
+                        class="fr-label fr-sr-only"
+                        for="downshift-0-input"
+                        id="downshift-0-label"
+                      >
+                        Rechercher sur le site
+                      </label>
+                      <div
+                        class="fr-input-wrap fr-input-wrap--addon mt_0!"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-labelledby="downshift-0-label"
+                          autocomplete="off"
+                          class="fr-input"
+                          id="downshift-0-input"
+                          placeholder="Rechercher sur le site"
+                          type="search"
+                          value=""
+                        />
+                        <div
+                          class="pos_absolute right_0 h_100% ac_center"
+                        />
+                      </div>
+                      <div
+                        aria-live="polite"
+                        class="fr-messages-group"
+                        id="downshift-0-input-messages-group"
+                      />
+                    </div>
+                    <ul
+                      aria-labelledby="downshift-0-label"
+                      class="fr-p-0 fr-m-0 pos_absolute top_100% left_0 w_100% z_10 bg_var(--background-default-grey) li-t_none! bd-t_none bx-sh_0_4px_8px_rgba(0,_0,_0,_0.1) max-h_300px ov-y_auto mt_0! ta_left"
+                      id="downshift-0-menu"
+                      role="listbox"
+                    />
+                    <button
+                      class="fr-btn fr-icon-search-line fr-btn"
+                      id="fr-button-:r1:"
+                      title="Rechercher"
+                      type="submit"
+                    />
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -139,8 +175,9 @@ exports[`<Header /> should match snapshot 1`] = `
       </div>
     </div>
     <div
-      aria-labelledby="fr-header-menu-button"
       class="fr-header__menu fr-modal"
+      data-fr-js-header-modal="true"
+      data-fr-js-modal="true"
       id="header-menu-modal-fr-header"
     >
       <div
@@ -149,6 +186,7 @@ exports[`<Header /> should match snapshot 1`] = `
         <button
           aria-controls="header-menu-modal-fr-header"
           class="fr-btn--close fr-btn"
+          data-fr-js-modal-button="true"
           id="fr-header-mobile-overlay-button-close"
           title="Fermer"
         >
@@ -164,6 +202,7 @@ exports[`<Header /> should match snapshot 1`] = `
         <nav
           aria-label="Menu principal"
           class="fr-nav"
+          data-fr-js-navigation="true"
           id="fr-header-main-navigation"
           role="navigation"
         >
@@ -172,55 +211,55 @@ exports[`<Header /> should match snapshot 1`] = `
           >
             <li
               class="fr-nav__item"
+              data-fr-js-navigation-item="true"
             >
               <a
                 class="fr-nav__link"
                 href="/outils"
-                id="fr-header-main-navigation-link-0"
               >
                 Boîte à outils
               </a>
             </li>
             <li
               class="fr-nav__item"
+              data-fr-js-navigation-item="true"
             >
               <a
                 class="fr-nav__link"
                 href="/modeles-de-courriers"
-                id="fr-header-main-navigation-link-1"
               >
                 Modèles de documents
               </a>
             </li>
             <li
               class="fr-nav__item"
+              data-fr-js-navigation-item="true"
             >
               <a
                 class="fr-nav__link"
                 href="/contribution"
-                id="fr-header-main-navigation-link-2"
               >
                 Vos fiches pratiques
               </a>
             </li>
             <li
               class="fr-nav__item"
+              data-fr-js-navigation-item="true"
             >
               <a
                 class="fr-nav__link"
                 href="/convention-collective"
-                id="fr-header-main-navigation-link-3"
               >
                 Votre convention collective
               </a>
             </li>
             <li
               class="fr-nav__item"
+              data-fr-js-navigation-item="true"
             >
               <a
                 class="fr-nav__link"
                 href="/themes"
-                id="fr-header-main-navigation-link-4"
               >
                 Thèmes
               </a>

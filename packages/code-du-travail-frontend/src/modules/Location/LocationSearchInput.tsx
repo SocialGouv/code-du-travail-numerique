@@ -20,7 +20,7 @@ export const LocationSearchInput = ({
   defaultValue,
 }: Props) => {
   const [postalCode, setPostalCode] = useState<string | undefined>();
-  function itemToString(item: ApiGeoResult | undefined) {
+  function itemToString(item: ApiGeoResult | null) {
     return item
       ? `${item.nom} (${postalCode ?? (item.codesPostaux.length > 1 ? item.codeDepartement : item.codesPostaux[0])})`
       : "";

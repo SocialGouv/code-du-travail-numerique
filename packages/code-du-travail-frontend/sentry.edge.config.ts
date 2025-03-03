@@ -1,18 +1,14 @@
-// This file configures the initialization of Sentry on the server.
-// The config you add here will be used whenever the server handles a request.
-// https://docs.sentry.io/platforms/javascript/guides/nextjs/
+// This file configures the initialization of Sentry for edge runtimes
+// The config you add here will be used whenever your app runs on the edge
 
 import * as Sentry from "@sentry/nextjs";
 
 const ENVIRONMENT = process.env.NEXT_PUBLIC_SENTRY_ENV || "dev";
 const IS_PRODUCTION = ENVIRONMENT === "production";
 
-// Check for Cypress test environment
-const isCypressTest = process.env.CYPRESS === "true";
-
 Sentry.init({
   // Basic configuration
-  dsn: isCypressTest ? undefined : process.env.NEXT_PUBLIC_SENTRY_DSN, // Disable Sentry in Cypress
+  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
   environment: ENVIRONMENT,
   debug: true, // Temporarily enable debug mode to troubleshoot
   dist: process.env.NEXT_PUBLIC_GITHUB_SHA || "dev",
@@ -26,8 +22,6 @@ Sentry.init({
 
   // Error tracking configuration
   sampleRate: 1.0, // Capture all errors
-  autoSessionTracking: true, // Enable automatic session tracking
-  sendClientReports: true, // Enable immediate client reports
 
   beforeSend(event) {
     // Filter out non-error events in production
@@ -39,10 +33,6 @@ Sentry.init({
       "Network request failed",
       /^Loading chunk .* failed/,
       /^Loading CSS chunk .* failed/,
-      /^ECONNREFUSED/,
-      /^ECONNRESET/,
-      /^ETIMEDOUT/,
-      "Database connection timeout",
     ];
 
     if (
