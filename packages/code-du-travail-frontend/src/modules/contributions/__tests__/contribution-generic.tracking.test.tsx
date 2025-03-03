@@ -136,7 +136,7 @@ describe("<ContributionGeneric />", () => {
       "/contribution/1388-my-contrib"
     );
     fireEvent.click(ui.generic.buttonDisplayInfo.get());
-    expect(sendEvent).toHaveBeenCalledTimes(6);
+    expect(sendEvent).toHaveBeenCalledTimes(5);
     expect(sendEvent).toHaveBeenLastCalledWith({
       action: "click_afficher_les_informations_CC",
       category: "contribution",
