@@ -104,17 +104,7 @@ exports[`<Header /> should match snapshot 1`] = `
                 <form
                   role="search"
                 >
-                  <label
-                    class="fr-label"
-                    for="fr-header-search-input"
-                    id="fr-header-search-label"
-                  >
-                    Rechercher
-                  </label>
-                  <input
-                    aria-activedescendant=""
-                    aria-autocomplete="list"
-                    aria-controls="downshift-:r0:-menu"
+                  <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="downshift-0-label"
