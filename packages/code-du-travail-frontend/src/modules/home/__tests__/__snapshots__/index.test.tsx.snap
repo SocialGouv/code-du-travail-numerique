@@ -47,11 +47,11 @@ exports[`<Home /> should match snapshot 1`] = `
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="downshift-0-label"
-                    class="fr-input-group"
+                    class="d_flex flex-d_row ai_center w_100% pos_relative"
                     role="combobox"
                   >
                     <div
-                      class="fr-input-group fr-mb-0"
+                      class="fr-input-group w_100% fr-mb-0"
                     >
                       <label
                         class="fr-label"
@@ -90,7 +90,7 @@ exports[`<Home /> should match snapshot 1`] = `
                     </div>
                     <ul
                       aria-labelledby="downshift-0-label"
-                      class="fr-p-0 fr-m-0 pos_absolute w_100% z_10 bg_var(--background-default-grey) li-t_none! "
+                      class="fr-p-0 fr-m-0 pos_absolute top_100% left_0 w_100% z_10 bg_var(--background-default-grey) li-t_none! bd-t_none bx-sh_0_4px_8px_rgba(0,_0,_0,_0.1) max-h_300px ov-y_auto "
                       id="downshift-0-menu"
                       role="listbox"
                     />

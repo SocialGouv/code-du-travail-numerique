@@ -44,8 +44,13 @@ exports[`<Header /> should match snapshot 1`] = `
                 <img
                   alt="Code du travail numérique"
                   class="fr-responsive-img max-w_9.0625rem"
-                  data-fr-js-ratio="true"
+                  data-nimg="1"
+                  decoding="async"
+                  fetchpriority="high"
+                  height="50"
                   src="/static/assets/img/logo.svg"
+                  style="color: transparent;"
+                  width="145"
                 />
               </div>
               <div
@@ -103,18 +108,18 @@ exports[`<Header /> should match snapshot 1`] = `
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="downshift-0-label"
-                    class="fr-search-bar"
+                    class="d_flex flex-d_row ai_center w_100% pos_relative"
                     role="combobox"
                   >
                     <div
-                      class="fr-input-group fr-mb-0"
+                      class="fr-input-group w_100% fr-mb-0"
                     >
                       <label
-                        class="fr-label"
+                        class="fr-label fr-sr-only"
                         for="downshift-0-input"
                         id="downshift-0-label"
                       >
-                        Rechercher
+                        Rechercher sur le site
                       </label>
                       <div
                         class="fr-input-wrap fr-input-wrap--addon mt_0!"
@@ -125,6 +130,7 @@ exports[`<Header /> should match snapshot 1`] = `
                           autocomplete="off"
                           class="fr-input"
                           id="downshift-0-input"
+                          placeholder="Rechercher sur le site"
                           type="search"
                           value=""
                         />
@@ -140,17 +146,16 @@ exports[`<Header /> should match snapshot 1`] = `
                     </div>
                     <ul
                       aria-labelledby="downshift-0-label"
-                      class="fr-p-0 fr-m-0 pos_absolute w_100% z_10 bg_var(--background-default-grey) li-t_none! mt_2.5rem! ta_left"
+                      class="fr-p-0 fr-m-0 pos_absolute top_100% left_0 w_100% z_10 bg_var(--background-default-grey) li-t_none! bd-t_none bx-sh_0_4px_8px_rgba(0,_0,_0,_0.1) max-h_300px ov-y_auto mt_0! ta_left"
                       id="downshift-0-menu"
                       role="listbox"
                     />
                     <button
-                      class="fr-btn"
+                      class="fr-btn fr-icon-search-line fr-btn"
+                      id="fr-button-:r1:"
                       title="Rechercher"
                       type="submit"
-                    >
-                      Rechercher
-                    </button>
+                    />
                   </div>
                 </form>
               </div>

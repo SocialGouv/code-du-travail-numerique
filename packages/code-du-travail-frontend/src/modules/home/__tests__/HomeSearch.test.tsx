@@ -9,24 +9,19 @@ import { UserAction } from "../../../common";
 jest.mock("../../layout/header/fetchSuggestResults");
 jest.mock("../../layout/tracking");
 
-jest.mock("../../layout/header/fetchSuggestResults");
-jest.mock("../../layout/tracking");
-let onSearchSubmitHasBeenCalled = false;
-let redirectUrl;
-jest.mock("next/navigation", () => {
-  return {
-    redirect: jest.fn((url) => {
-      onSearchSubmitHasBeenCalled = true;
-      redirectUrl = url;
-    }),
-    useRouter: () => {
-      return {
-        push: jest.fn(),
-      };
-    },
-  };
-});
+// Mock router with a proper spy function
+const mockRouterPush = jest.fn();
+jest.mock("next/navigation", () => ({
+  useRouter: () => ({
+    push: mockRouterPush,
+  }),
+}));
+
 describe("<HomeSearch />", () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   it("should show suggestions and send event tracking", async () => {
     const suggestions = [
       "congés payés et fractionnement",
@@ -54,7 +49,8 @@ describe("<HomeSearch />", () => {
     await waitFor(() => {
       expect(getByText("congés payés et fractionnement")).toBeInTheDocument();
     });
-    expect(onSearchSubmitHasBeenCalled).toBeFalsy();
+    expect(mockRouterPush).not.toHaveBeenCalled();
+
     const congesSansSolde = getByText("congés sans solde");
     expect(getByText("congés sans solde")).toBeInTheDocument();
     expect(getByText("congés payés acquisition")).toBeInTheDocument();
@@ -62,8 +58,9 @@ describe("<HomeSearch />", () => {
     expect(getByText("congés payés et maladie")).toBeInTheDocument();
 
     userAction.click(congesSansSolde);
-    expect(onSearchSubmitHasBeenCalled).toBeTruthy();
-    expect(redirectUrl).toEqual("/recherche?q=cong%C3%A9s%20sans%20solde");
+    expect(mockRouterPush).toHaveBeenCalledWith(
+      "/recherche?q=cong%C3%A9s%20sans%20solde"
+    );
     expect(emitSuggestionEventMock).toHaveBeenCalledWith(
       "congés",
       "congés sans solde",
