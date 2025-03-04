@@ -16,9 +16,7 @@ export const HomeSearch = () => {
   const router = useRouter();
 
   const handleSearch = (searchTerm: string) => {
-    if (searchTerm.trim()) {
-      router.push(`/recherche?q=${encodeURIComponent(searchTerm)}`);
-    }
+    router.push(`/recherche?q=${encodeURIComponent(searchTerm)}`);
   };
 
   const onSubmit = (e: React.FormEvent) => {

@@ -179,13 +179,13 @@ export const Autocomplete = <K,>({
                 )}
           </ul>
           {isSearch && (
-            <Button
-              className="fr-btn"
+            <button
+              className="fr-btn fr-icon-search-line fr-btn--icon"
               title="Rechercher"
               type="submit"
-              iconId="fr-icon-search-line"
-              priority="primary"
-            />
+            >
+              <span className={fr.cx("fr-sr-only")}>Rechercher</span>
+            </button>
           )}
         </div>
       )}
