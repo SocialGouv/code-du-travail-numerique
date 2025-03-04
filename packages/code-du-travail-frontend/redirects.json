@@ -503,5 +503,15 @@
     "source": "/convention-collective/1947(-[a-z0-9-]+)?",
     "destination": "/convention-collective/3216-materiaux-de-construction-negoce",
     "permanent": true
+  },
+  {
+    "source": "/convention-collective/3203(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/1518-education-culture-loisirs-et-animation-au-service-des-territoires-eclat",
+    "permanent": true
+  },
+  {
+    "source": "/convention-collective/1031(-[a-z0-9-]+)?",
+    "destination": "/convention-collective/1518-education-culture-loisirs-et-animation-au-service-des-territoires-eclat",
+    "permanent": true
   }
 ]
