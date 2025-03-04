@@ -151,11 +151,16 @@ exports[`<Header /> should match snapshot 1`] = `
                       role="listbox"
                     />
                     <button
-                      class="fr-btn fr-icon-search-line fr-btn"
-                      id="fr-button-:r1:"
+                      class="fr-btn fr-icon-search-line fr-btn--icon"
                       title="Rechercher"
                       type="submit"
-                    />
+                    >
+                      <span
+                        class="fr-sr-only"
+                      >
+                        Rechercher
+                      </span>
+                    </button>
                   </div>
                 </form>
               </div>
