@@ -19,11 +19,18 @@ describe("Modèles de documents", () => {
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Bienvenue sur le Code du travail numérique")
       .click();
-    cy.selectByLabel("Recherchez par mots-clés")
-      .as("home-searchbar")
-      .type("modele rupture contrat periode d'essai");
+    cy.selectByLabel("Recherchez par mots-clés").as("home-searchbar");
+
+    cy.get("@home-searchbar").type("modele rupture contrat periode d'essai");
 
     cy.get("@home-searchbar").type("{enter}");
+
+    cy.get("@home-searchbar").should(
+      "have.value",
+      "modele rupture contrat periode d'essai"
+    );
+
+    cy.urlEqual("/recherche?q=modele+rupture+contrat+periode+d%27essai");
 
     cy.contains("Rupture du contrat en période d’essai par le salarié").click();
 
