@@ -14,7 +14,7 @@ describe("Outil - Indemnité de rupture conventionnelle", () => {
     cy.contains("Suivant").click();
 
     cy.contains(
-      "Je ne souhaite pas renseigner ma convention collective (je passe l'étape)"
+      "Je ne souhaite pas renseigner ma convention collective (je passe l'étape)."
     ).click();
     cy.contains("Suivant").click();
 
