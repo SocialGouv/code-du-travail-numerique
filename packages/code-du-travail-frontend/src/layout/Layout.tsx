@@ -7,12 +7,14 @@ import Footer from "./Footer";
 import { Header, HEADER_HEIGHT, MOBILE_HEADER_HEIGHT } from "./Header";
 import { SentryTest } from "../lib/SentryTest";
 import { ENV } from "../config";
+import { Tally } from "src/tally/Tally";
 
 const Layout = ({ children, currentPage = "" }) => {
   return (
     <BackgroundContainer>
       <BackgroundLayer currentPage={currentPage} />
       <Header currentPage={currentPage} />
+      <Tally />
       <ErrorBoundary message="Une erreur est survenue">
         <StyledMain id="content" tabIndex="-1">
           {children}
