@@ -408,7 +408,6 @@ export const EnterpriseAgreementSearchInput = ({
                       onClick: (ev) => {
                         ev.preventDefault();
                         setSelectedEnterprise(enterprise);
-                        onAgreementSelect(selectedAgreement, enterprise);
                         if (enterprise.conventions.length === 1) {
                           emitSelectEnterpriseAgreementEvent(
                             `idcc${enterprise.conventions[0].num}`,

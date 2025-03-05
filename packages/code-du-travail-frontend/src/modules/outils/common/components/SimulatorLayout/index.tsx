@@ -27,6 +27,9 @@ export const SimulatorLayout = (props: Props<string>) => {
   >("none");
   const [stepIndex, setStepIndex] = useState(0);
   const { steps, title, onStepChange, hiddenStep, simulator } = props;
+  const [lastIneligibleStep, setLastIneligibleStep] = useState<
+    number | undefined
+  >();
 
   const visibleSteps = useMemo(
     () =>
@@ -69,10 +72,12 @@ export const SimulatorLayout = (props: Props<string>) => {
 
       switch (validationResponse) {
         case ValidationResponse.NotEligible:
+          setLastIneligibleStep(stepIndex);
           setStepIndex(visibleSteps.length - 1);
           break;
         case ValidationResponse.Valid:
-          setStepIndex(stepIndex + 1);
+          setStepIndex(nextStepIndex);
+          setLastIneligibleStep(undefined);
           break;
       }
       setNavigationAction("next");
@@ -90,8 +95,13 @@ export const SimulatorLayout = (props: Props<string>) => {
       stepChange.onPrevStep();
     }
 
-    if (previousStepIndex >= 0) {
-      setStepIndex(stepIndex - 1);
+    if (lastIneligibleStep) {
+      setStepIndex(lastIneligibleStep);
+      setLastIneligibleStep(undefined);
+      setNavigationAction("prev");
+      scrollToTop();
+    } else if (previousStepIndex >= 0) {
+      setStepIndex(previousStepIndex);
       setNavigationAction("prev");
       scrollToTop();
     } else {
