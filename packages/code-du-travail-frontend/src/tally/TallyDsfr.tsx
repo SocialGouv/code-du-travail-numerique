@@ -54,7 +54,7 @@ export const TallyDsfr = (): React.ReactNode => {
         }
       `}</style>
 
-      <Script id="tally-js" async src="https://tally.so/widgets/embed.js" />
+      <Script id="tally-js" src="https://tally.so/widgets/embed.js" />
       <button
         className={buttonSuggestionStyles}
         data-tally-open="3Xzlkg"

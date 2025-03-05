@@ -6,7 +6,7 @@ import { theme } from "@socialgouv/cdtn-ui";
 export const Tally = (): React.ReactNode => {
   return (
     <>
-      <Script id="tally-js" async src="https://tally.so/widgets/embed.js" />
+      <Script id="tally-js" src="https://tally.so/widgets/embed.js" />
       <ButtonSuggestion
         data-tally-open="3Xzlkg"
         data-tally-width="500"
