@@ -80,7 +80,7 @@ const buttonSuggestionStyles = css({
   position: "fixed",
   top: "12rem",
   right: "-10.2rem",
-  width: "13.5rem", // Slightly increased width for better text accommodation
+  width: "13.5rem",
   height: "3.8rem",
   borderRadius: "3rem 0px 0px 3rem",
   border: "none",
@@ -88,10 +88,10 @@ const buttonSuggestionStyles = css({
   zIndex: 5,
   cursor: "pointer",
   display: "flex",
-  alignItems: "center", // Better vertical alignment
-  justifyContent: "flex-start", // Align items to the start
-  paddingLeft: "16px", // More consistent padding
-  paddingTop: "0", // Remove top padding in favor of proper alignment
+  alignItems: "center",
+  justifyContent: "flex-start",
+  paddingLeft: "16px",
+  paddingTop: "0",
   backgroundColor: "hsl(220deg, calc(100% - 34%), 33%)!",
   "@media (min-width: 1200px)": {
     animation: "moveLeftAndRight 30s ease-in-out infinite 5s",
@@ -101,8 +101,8 @@ const buttonSuggestionStyles = css({
 const imgSuggestionStyles = css({
   height: "28px",
   width: "28px",
-  margin: "0", // Reset margins
-  marginRight: "8px", // Add spacing between icon and text
+  margin: "0",
+  marginRight: "8px",
   animation: "wiggle 2.5s ease 7.5s 1",
   "&:hover": {
     animation: "wiggle 2.5s ease 0s infinite",
@@ -112,9 +112,9 @@ const imgSuggestionStyles = css({
 const spanStyle = css({
   color: "white",
   fontSize: "14px",
-  lineHeight: "1.2", // Improve readability
-  fontWeight: "500", // Slightly bolder for better legibility
-  maxWidth: "90px", // Ensure text doesn't overflow
-  wordWrap: "break-word", // Handle long words
-  padding: "0", // Reset paddings
+  lineHeight: "1.2",
+  fontWeight: "500",
+  maxWidth: "90px",
+  wordWrap: "break-word",
+  padding: "0",
 });
