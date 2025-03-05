@@ -13,14 +13,8 @@ import styled from "styled-components";
 
 const { spacings } = theme;
 
-export function TextSearch({ containerId, convention }) {
+export function TextSearch({ idcc, convention }) {
   const [query, setQuery] = useState("");
-  const formatQuery = useCallback(
-    (e) => {
-      setQuery(`"${e.target.value}"`);
-    },
-    [setQuery]
-  );
   const trackSearch = useCallback(() => {
     matopush(["trackEvent", "pagecc_searchcc", convention.shortTitle, query]);
   }, [query, convention]);
@@ -34,24 +28,28 @@ export function TextSearch({ containerId, convention }) {
       </Title>
       <Form
         target="_blank"
-        action="https://legifrance.gouv.fr/search/kali#kali"
+        action="https://www.legifrance.gouv.fr/search/kali"
         onSubmit={trackSearch}
       >
         <Box>
           <StyledInput
-            onChange={formatQuery}
+            onChange={(e) => setQuery(e.target.value)}
             id="search-agreement"
             type="search"
             autoComplete="off"
             name="rawQuery"
             aria-label="Recherchez dans la collection collective"
             placeholder="Congés exceptionnels, prime"
+            value={query}
           />
-          <input type="hidden" name="query" value={query} />
-          <input type="hidden" name="cidKaliCont" value={containerId} />
-          <input type="hidden" name="searchField" value="ALL" />
-          <input type="hidden" name="searchType" value="ALL" />
+          <input type="hidden" name="idcc" value={idcc} />
           <input type="hidden" name="tab_selection" value="kali" />
+          <input type="hidden" name="searchField" value="ALL" />
+          <input type="hidden" name="query" value={encodeURIComponent(query)} />
+          <input type="hidden" name="searchType" value="ALL" />
+          <input type="hidden" name="typePagination" value="DEFAUT" />
+          <input type="hidden" name="sortValue" value="PERTINENCE" />
+          <input type="hidden" name="pageSize" value="10" />
           <input type="hidden" name="page" value="1" />
           <SubmitIcon
             type="submit"
