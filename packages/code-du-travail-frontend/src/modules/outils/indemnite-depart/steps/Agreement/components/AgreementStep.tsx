@@ -55,7 +55,7 @@ export const CommonAgreementStep = ({
           },
           {
             label:
-              "Je ne souhaite pas renseigner ma convention collective (je passe l'étape)",
+              "Je ne souhaite pas renseigner ma convention collective (je passe l'étape).",
             value: "not-selected" as AgreementRoute,
             id: "route-none",
           },
