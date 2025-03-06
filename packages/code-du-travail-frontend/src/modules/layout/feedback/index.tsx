@@ -8,6 +8,7 @@ import { FeedbackAnswered } from "./FeedbackAnswered";
 import { useFeedbackEvents } from "./tracking";
 import { FeedbackAdblock } from "./FeedbackAdblock";
 import { detectAdBlockCall } from "./AdBlockDetector";
+import { css } from "@styled-system/css";
 
 export const Feedback = () => {
   const [viewFeedback, setViewFeedback] = useState<
@@ -41,7 +42,9 @@ export const Feedback = () => {
   };
 
   return (
-    <div className={fr.cx("fr-highlight", "fr-p-2w", "fr-m-0")}>
+    <div
+      className={`${fr.cx("fr-highlight", "fr-p-2w", "fr-m-0")} ${hideOnPrint}`}
+    >
       {viewFeedback === "default" && (
         <FeedbackDefault onClickNo={onClickNo} onClickYes={onClickYes} />
       )}
@@ -56,3 +59,9 @@ export const Feedback = () => {
     </div>
   );
 };
+
+const hideOnPrint = css({
+  "@media print": {
+    display: "none",
+  },
+});

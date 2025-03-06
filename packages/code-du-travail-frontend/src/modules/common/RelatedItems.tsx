@@ -6,6 +6,7 @@ import React from "react";
 import { ListWithArrow } from "./ListWithArrow";
 import { useCommonTracking } from "./tracking";
 import { RelatedItem } from "../documents";
+import { css } from "@styled-system/css";
 
 export const RelatedItems = ({
   relatedItems = [],
@@ -18,7 +19,7 @@ export const RelatedItems = ({
   }
 
   return (
-    <div className={fr.cx("fr-mb-5w")}>
+    <div className={`${fr.cx("fr-mb-5w")} ${hideOnPrint}`}>
       {relatedItems.map(
         ({ title, items }) =>
           items.length > 0 && (
@@ -54,3 +55,9 @@ export const RelatedItems = ({
     </div>
   );
 };
+
+const hideOnPrint = css({
+  "@media print": {
+    display: "none",
+  },
+});
