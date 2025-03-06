@@ -27,9 +27,9 @@ export function TextSearch({ idcc, convention }) {
         Recherche dans la convention collective
       </Title>
       <Form
-        target="_blank"
         action="https://www.legifrance.gouv.fr/search/kali"
         onSubmit={trackSearch}
+        role="search"
       >
         <Box>
           <StyledInput
