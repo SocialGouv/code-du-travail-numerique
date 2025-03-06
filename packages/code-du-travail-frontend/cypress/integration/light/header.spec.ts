@@ -2,7 +2,9 @@ describe("Header", () => {
   it("doit afficher les liens d'évitement", () => {
     cy.visit("/mentions-legales");
     cy.get("[id^=fr-skiplinks]").as("skipLink").should("not.be.visible");
-    cy.window().focus().realPress("Tab");
+    cy.window().focus();
+    cy.realPress("Tab"); // TODO: to remove when we delete tally
+    cy.realPress("Tab");
     cy.get("@skipLink").should("be.visible");
     cy.focused().should("have.attr", "href", "#main");
     cy.realPress("Tab");

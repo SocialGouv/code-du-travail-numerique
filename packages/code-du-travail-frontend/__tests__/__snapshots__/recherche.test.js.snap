@@ -91,7 +91,7 @@ exports[`<Recherche /> should render 1`] = `
       aria-expanded="false"
       aria-haspopup="dialog"
       aria-label="Donner votre avis"
-      class="sc-9c40f270-0 djiQfg"
+      class="sc-75b32afb-0 gCqjGZ"
       data-tally-open="3Xzlkg"
       data-tally-overlay="1"
       data-tally-width="500"
@@ -99,7 +99,7 @@ exports[`<Recherche /> should render 1`] = `
       <img
         alt="Suggestion"
         aria-hidden="true"
-        class="sc-9c40f270-1 bPEIdU"
+        class="sc-75b32afb-1 llnJcR"
         src="/static/assets/img/emoj-wave.png"
       />
       <span>
