@@ -48,7 +48,7 @@ const Convention = ({ convention }) => {
       )}
 
       {convention.url ? (
-        <TextSearch containerId={convention.id} convention={convention} />
+        <TextSearch idcc={convention.num} convention={convention} />
       ) : (
         <Paragraph variant="altText" fontSize="default">
           Cette convention collective n&apos;est pas traitée par nos services.
