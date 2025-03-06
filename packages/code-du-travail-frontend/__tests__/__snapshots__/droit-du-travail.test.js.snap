@@ -3,10 +3,10 @@
 exports[`<DroitDuTravail /> should render 1`] = `
 <div>
   <div
-    class="sc-5e9f8e85-0 dAotBL"
+    class="sc-9de0b6ba-0 iWFzdL"
   >
     <div
-      class="sc-5e9f8e85-1 joGszH"
+      class="sc-9de0b6ba-1 bmfqCL"
     />
     <header
       class="sc-1bce5a92-0 daRkfQ"
@@ -167,8 +167,27 @@ exports[`<DroitDuTravail /> should render 1`] = `
         </button>
       </div>
     </header>
+    <button
+      aria-expanded="false"
+      aria-haspopup="dialog"
+      aria-label="Donner votre avis"
+      class="sc-75b32afb-0 gCqjGZ"
+      data-tally-open="3Xzlkg"
+      data-tally-overlay="1"
+      data-tally-width="500"
+    >
+      <img
+        alt="Suggestion"
+        aria-hidden="true"
+        class="sc-75b32afb-1 llnJcR"
+        src="/static/assets/img/emoj-wave.png"
+      />
+      <span>
+        Donnez votre avis
+      </span>
+    </button>
     <main
-      class="sc-5e9f8e85-2 iZYNzd"
+      class="sc-9de0b6ba-2 dWBwXZ"
       id="content"
       tabindex="-1"
     >
