@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.174.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.173.0...v4.174.0) (2025-03-11)
+
+
+### Bug Fixes
+
+* **autocomplete:** utilisation du composant Downshift ([#6479](https://github.com/SocialGouv/code-du-travail-numerique/issues/6479)) ([7cf2f15](https://github.com/SocialGouv/code-du-travail-numerique/commit/7cf2f1568e8c002b37a7ab10c48e11e6507e01b9))
+* **convention-collective:** ajout des redirections de la DARES du mois de mars 2025  ([feac7d0](https://github.com/SocialGouv/code-du-travail-numerique/commit/feac7d04fae8bcac81d5b013072b45efcb47b0dd))
+* **conventions-collectives:** corection de la barre de recherche sur legifrance ([#6490](https://github.com/SocialGouv/code-du-travail-numerique/issues/6490)) ([e02fe9c](https://github.com/SocialGouv/code-du-travail-numerique/commit/e02fe9cb8fadd5b3b0f24fb779fce31fb6d2e1af))
+* **e2e:** correction de problème lié à de l'html invalide ([#6486](https://github.com/SocialGouv/code-du-travail-numerique/issues/6486)) ([0a96183](https://github.com/SocialGouv/code-du-travail-numerique/commit/0a9618326845f4770d75b9f8c09f05a2ab0518ed))
+
+
+### Features
+
+* **sentry:** migration sur la nouvelle version de Sentry ([#6481](https://github.com/SocialGouv/code-du-travail-numerique/issues/6481)) ([7425678](https://github.com/SocialGouv/code-du-travail-numerique/commit/74256780efda8e07c545a21614e7159ccd0de4ab))
+* **stats:** ajout des bilans sur la page statistiques ([#6461](https://github.com/SocialGouv/code-du-travail-numerique/issues/6461)) ([7bdc667](https://github.com/SocialGouv/code-du-travail-numerique/commit/7bdc66702fe9ede97c65dc78f64715401c0d8efd))
+* **tally:** affichage du formulaire pour l'enquête igas ([#6488](https://github.com/SocialGouv/code-du-travail-numerique/issues/6488)) ([dc967a2](https://github.com/SocialGouv/code-du-travail-numerique/commit/dc967a2df33c2a9541bf7f70c50dadb1fc3bf95a))
+
+
+
+
+
 # [4.173.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.172.3...v4.173.0) (2025-02-19)
 
 
