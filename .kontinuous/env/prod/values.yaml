@@ -20,6 +20,7 @@ jobs:
           NEXT_PUBLIC_COMMIT: "{{.Values.global.sha}}"
           NEXT_PUBLIC_SITE_URL: https://code.travail.gouv.fr
           NEXT_PUBLIC_SENTRY_DSN: "$NEXT_PUBLIC_SENTRY_DSN"
+          NEXT_PUBLIC_SENTRY_ENV: production
           SENTRY_RELEASE: "{{.Values.global.imageTag}}"
           SENTRY_ORG: incubateur
           SENTRY_PROJECT: fabnum-code-du-travail-numerique
