@@ -96,6 +96,9 @@ const buttonSuggestionStyles = css({
   "@media (min-width: 1200px)": {
     animation: "moveLeftAndRight 30s ease-in-out infinite 5s",
   },
+  "@media print": {
+    display: "none",
+  },
 });
 
 const imgSuggestionStyles = css({

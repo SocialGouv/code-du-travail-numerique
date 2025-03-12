@@ -1,3 +1,4 @@
+import { css } from "@styled-system/css";
 import { PolyfillComponent } from "../config/PolyfillComponent";
 import { Footer } from "./footer";
 import { Header } from "./header";
@@ -14,10 +15,16 @@ export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
       <PolyfillComponent />
       <SkipLinks />
       <Header />
-      <main className={container} id="main" role="main">
+      <main className={`${container} ${printStyle}`} id="main" role="main">
         {children}
       </main>
       <Footer />
     </>
   );
 };
+
+const printStyle = css({
+  "@media print": {
+    printColorAdjust: "exact!",
+  },
+});
