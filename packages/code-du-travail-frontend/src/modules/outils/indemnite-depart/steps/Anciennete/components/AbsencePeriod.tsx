@@ -66,12 +66,14 @@ const AbsencePeriod = ({
         <div className={`fr-col-12 fr-col-md-3`}>
           <Select
             label="Motif"
-            nativeSelectProps={{
-              id: `${index}.type`,
-              onChange: (e) => selectMotif(absence.key, e.target.value),
-              value: absence?.motif?.label,
-            }}
-            data-testid={`absence-motif-${index}`}
+            nativeSelectProps={
+              {
+                id: `${index}.type`,
+                onChange: (e) => selectMotif(absence.key, e.target.value),
+                value: absence?.motif?.label,
+                "data-testid": `absence-motif-${index}`,
+              } as any
+            }
             className={defaultSelectStyle}
           >
             {motifs.map(({ label }) => (
