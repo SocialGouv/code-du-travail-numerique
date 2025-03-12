@@ -70,7 +70,14 @@ describe("Indemnité licenciement - CC 2941", () => {
         "Absence pour maladie non professionnelle"
       )
       .setInput(ui.seniority.absences.duration(0).get(), "6")
-      .setInput(ui.seniority.absences.date(0).get(), "01/01/2015")
+      .setInput(ui.seniority.absences.date(0).get(), "01/01/2025")
+      .click(ui.next.get())
+      .click(ui.salary.hasPartialTime.non.get())
+      .click(ui.salary.hasSameSalary.oui.get())
+      .setInput(ui.salary.sameSalaryValue.get(), "2700")
       .click(ui.next.get());
+
+    expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+    expect(ui.result.resultat.get()).toHaveTextContent("19 800,00 €");
   });
 });

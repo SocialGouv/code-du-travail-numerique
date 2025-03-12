@@ -148,16 +148,13 @@ const AbsencePeriods = ({
           onDeleteAbsence={onDeleteButtonClick}
           motifs={motifs}
           showDeleteButton={localAbsences.length > 1}
-          errors={{
-            duration:
-              errorsInput[`${index}`] ??
-              (error?.absences
-                ? error.absences[index].errorDuration
-                : undefined),
-            absenceDate: error?.absences
-              ? error.absences[index].errorDate
-              : undefined,
-          }}
+          durationError={
+            errorsInput[`${index}`] ??
+            (error?.absences ? error.absences[index].errorDuration : undefined)
+          }
+          absenceDateError={
+            error?.absences ? error.absences[index].errorDate : undefined
+          }
           absence={value}
           informationData={informationData}
         />

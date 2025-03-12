@@ -11,11 +11,7 @@ import {
 } from "src/modules/outils/common/utils/input";
 import { defaultSelectStyle } from "src/modules/outils/common/styles/select";
 import { defaultInputStyle } from "src/modules/outils/common/styles/input";
-
-type Errors = {
-  duration?: string;
-  absenceDate?: string;
-};
+import { TextQuestion } from "src/modules/outils/common/components";
 
 type Props = {
   index: number;
@@ -25,7 +21,8 @@ type Props = {
   onDeleteAbsence: (key: string) => void;
   motifs: Motif[];
   absence: AbsenceWithKey;
-  errors?: Errors;
+  durationError?: string;
+  absenceDateError?: string;
   showDeleteButton: boolean;
   informationData: Record<string, string | undefined>;
 };
@@ -37,7 +34,8 @@ const AbsencePeriod = ({
   onSetAbsenceDate,
   absence,
   motifs,
-  errors,
+  durationError,
+  absenceDateError,
   showDeleteButton,
   onDeleteAbsence,
   informationData,
@@ -86,8 +84,8 @@ const AbsencePeriod = ({
         <div className={`fr-col-12 fr-col-md-3`}>
           <Input
             label="Durée (en mois)"
-            state={errors?.duration ? "error" : "default"}
-            stateRelatedMessage={errors?.duration}
+            state={durationError ? "error" : "default"}
+            stateRelatedMessage={durationError}
             nativeInputProps={
               {
                 id: `${index}.duration`,
@@ -109,23 +107,16 @@ const AbsencePeriod = ({
         </div>
         {shouldAskAbsenceDate && (
           <div className="fr-col-12 fr-col-md-3">
-            <Input
+            <TextQuestion
               label="Date de début de l'absence"
-              state={errors?.absenceDate ? "error" : "default"}
-              stateRelatedMessage={errors?.absenceDate}
-              nativeInputProps={
-                {
-                  id: `${index}.dateAbsence`,
-                  type: "date",
-                  onChange: (e) =>
-                    onSetAbsenceDate(absence.key, e.target.value),
-                  value: absence?.startedAt ?? "",
-                  "data-testid": `absence-date-${index}`,
-                } as any
-              }
-              classes={{
-                nativeInputOrTextArea: defaultInputStyle,
+              inputType="date"
+              value={absence?.startedAt ?? ""}
+              onChange={(value) => {
+                onSetAbsenceDate(absence.key, value);
               }}
+              error={absenceDateError}
+              id={`${index}.dateAbsence`}
+              dataTestId={`absence-date-${index}`}
             />
           </div>
         )}

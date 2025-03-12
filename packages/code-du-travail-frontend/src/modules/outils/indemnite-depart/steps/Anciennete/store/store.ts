@@ -154,6 +154,12 @@ const createAncienneteStore: StoreSlice<
         } catch (e) {
           console.error(e);
           Sentry.captureException(e);
+          set(
+            produce((state: AncienneteStoreSlice) => {
+              state.ancienneteData.error.errorPublicodes =
+                "Une erreur liée au moteur de calcul nous empêche de continuer la simulation. Veuillez vérifier les informations saisies ou rafraîchir la page si le problème persiste.";
+            })
+          );
           return ValidationResponse.NotValid;
         }
       }
@@ -164,6 +170,7 @@ const createAncienneteStore: StoreSlice<
           state.ancienneteData.isStepValid = isValid;
           state.ancienneteData.error = errorState;
           state.ancienneteData.error.errorEligibility = errorEligibility;
+          state.ancienneteData.error.errorPublicodes = undefined;
         })
       );
       return errorEligibility

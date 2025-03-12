@@ -113,17 +113,20 @@ export const SalaireTempsPlein = ({
                         <Input
                           label={`Salaire mensuel brut en € pour le mois ${index + 1}`}
                           hideLabel
-                          nativeInputProps={{
-                            type: "number",
-                            id: `salary.${index}`,
-                            name: `salary.${index}`,
-                            value: sPeriod.value ?? "",
-                            onChange: (e) =>
-                              onChangeSalaries(index, e.target.value),
-                            autoFocus: autoFocus ? index === 0 : false,
-                            onWheel: preventScroll,
-                          }}
-                          data-testid={dataTestidSalaries ?? "salary-input"}
+                          nativeInputProps={
+                            {
+                              type: "number",
+                              id: `salary.${index}`,
+                              name: `salary.${index}`,
+                              value: sPeriod.value ?? "",
+                              onChange: (e) =>
+                                onChangeSalaries(index, e.target.value),
+                              autoFocus: autoFocus ? index === 0 : false,
+                              onWheel: preventScroll,
+                              "data-testid":
+                                dataTestidSalaries ?? "salary-input",
+                            } as any
+                          }
                           state={
                             errorsSalaries[`${index}`] ? "error" : "default"
                           }

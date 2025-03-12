@@ -22,6 +22,7 @@ export type AncienneteStoreError = {
     absences?: AncienneteAbsenceStoreError[];
   };
   errorEligibility?: string;
+  errorPublicodes?: string;
 };
 
 export type AncienneteAbsenceStoreError = {

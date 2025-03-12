@@ -1,3 +1,5 @@
+import { fr } from "@codegouvfr/react-dsfr";
+import Alert from "@codegouvfr/react-dsfr/Alert";
 import React, { useContext, useEffect, useMemo } from "react";
 import {
   RadioQuestion,
@@ -30,6 +32,7 @@ const StepAnciennete = () => {
     errorDateEntree,
     errorAbsencePeriods,
     informationData,
+    errorPublicodes,
   } = useIndemniteDepartStore(store, (state) => ({
     init: state.ancienneteFunction.init,
     onChangeAbsencePeriods: state.ancienneteFunction.onChangeAbsencePeriods,
@@ -51,6 +54,7 @@ const StepAnciennete = () => {
     informationData: informationToSituation(
       state.informationsData.input.publicodesInformations
     ),
+    errorPublicodes: state.ancienneteData.error.errorPublicodes,
   }));
 
   const messageMotifExample = useMemo(
@@ -113,6 +117,13 @@ const StepAnciennete = () => {
           error={errorAbsencePeriods}
           informationData={informationData}
           messageMotifExample={messageMotifExample}
+        />
+      )}
+      {errorPublicodes && (
+        <Alert
+          title={errorPublicodes}
+          severity="error"
+          className={fr.cx("fr-mt-2w")}
         />
       )}
     </>
