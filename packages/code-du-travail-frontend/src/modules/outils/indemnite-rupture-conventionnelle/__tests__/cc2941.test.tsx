@@ -59,4 +59,18 @@ describe("Indemnité licenciement - CC 2941", () => {
       "Non applicable dans votre situation"
     );
   });
+
+  test(`Rupture conventionnelle avec des absences`, () => {
+    userAction
+      .setInput(ui.seniority.startDate.get(), "01/01/2000")
+      .setInput(ui.seniority.endDate.get(), "01/01/2025")
+      .click(ui.seniority.hasAbsence.oui.get())
+      .changeInputList(
+        ui.seniority.absences.motif(0).get(),
+        "Absence pour maladie non professionnelle"
+      )
+      .setInput(ui.seniority.absences.duration(0).get(), "6")
+      .setInput(ui.seniority.absences.date(0).get(), "01/01/2015")
+      .click(ui.next.get());
+  });
 });

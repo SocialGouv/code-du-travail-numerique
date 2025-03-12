@@ -54,7 +54,7 @@ const StepAnciennete = () => {
   }));
 
   const messageMotifExample = useMemo(
-    () => getMotifExampleMessage(informationData),
+    () => getMotifExampleMessage(informationData, true),
     [informationData]
   );
 

@@ -1,4 +1,4 @@
-import { Introduction } from "./introduction";
+import { Introduction } from "./Itroduction";
 import { useState } from "react";
 import { Questionnaire } from "./Questionnaire";
 import { QuestionnaireAdvanced } from "./QuestionnaireAdvanced";
@@ -18,56 +18,63 @@ export const Feedback = ({ category }: Props): JSX.Element => {
   const [position, setPosition] = useState(0);
   const [bodyPosition, setBodyPosition] = useState(0);
   return (
-    <div className={`${fr.cx("fr-m-4v")} ${block}`}>
-      {!status && (
-        <div className={fr.cx("fr-p-3w")}>
-          <Introduction
-            onClick={() => {
-              setStatus("questionnaire");
-            }}
-          />
-        </div>
-      )}
-      {status && (
-        <div
-          className={fr.cx("fr-p-3w")}
-          ref={(el) => {
-            if (!el) return;
+    <div className={wrapper}>
+      <div className={`${fr.cx("fr-m-4v")} ${block}`}>
+        {!status && (
+          <div className={fr.cx("fr-p-3w")}>
+            <Introduction
+              onClick={() => {
+                setStatus("questionnaire");
+              }}
+            />
+          </div>
+        )}
+        {status && (
+          <div
+            className={fr.cx("fr-p-3w")}
+            ref={(el) => {
+              if (!el) return;
 
-            setPosition(el.getBoundingClientRect().top);
-            setBodyPosition(document.body.getBoundingClientRect().top);
-          }}
-        >
-          {status === "questionnaire" && (
-            <Questionnaire
-              onClick={() => {
-                setStatus("questionnaireAdvanced");
-              }}
-              category={category}
-            />
-          )}
-          {status === "questionnaireAdvanced" && (
-            <QuestionnaireAdvanced
-              onClick={() => {
-                setStatus("questionnaireEnd");
-                window.scrollTo(0, position - bodyPosition - 220);
-              }}
-              category={category}
-            />
-          )}
-          {status === "questionnaireEnd" && <QuestionnaireEnd />}
-        </div>
-      )}
+              setPosition(el.getBoundingClientRect().top);
+              setBodyPosition(document.body.getBoundingClientRect().top);
+            }}
+          >
+            {status === "questionnaire" && (
+              <Questionnaire
+                onClick={() => {
+                  setStatus("questionnaireAdvanced");
+                }}
+                category={category}
+              />
+            )}
+            {status === "questionnaireAdvanced" && (
+              <QuestionnaireAdvanced
+                onClick={() => {
+                  setStatus("questionnaireEnd");
+                  window.scrollTo(0, position - bodyPosition - 220);
+                }}
+                category={category}
+              />
+            )}
+            {status === "questionnaireEnd" && <QuestionnaireEnd />}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
 
-const block = css({
-  border: "1px solid",
-  borderColor: "var(--border-default-blue-france)",
-  width: "fit-content!",
-  justifySelf: "flex-end",
+const wrapper = css({
+  display: "flex",
+  justifyContent: "flex-end",
+  width: "100%",
   "@media print": {
     display: "none",
   },
+});
+
+const block = css({
+  border: "1px solid",
+  borderColor: "var(--border-default-blue-france)",
+  width: "fit-content",
 });
