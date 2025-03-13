@@ -206,7 +206,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
         </div>
       </div>
       <div
-        class="fr-highlight fr-p-2w fr-m-0"
+        class="fr-highlight fr-p-2w fr-m-0 [@media_print]:d_none"
       >
         <div
           class="fr-grid-row"
@@ -307,7 +307,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
         />
       </div>
       <div
-        class="fr-follow__social"
+        class="fr-follow__social [@media_print]:d_none"
       >
         <div
           aria-level="2"

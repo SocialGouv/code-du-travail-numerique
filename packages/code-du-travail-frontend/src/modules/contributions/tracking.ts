@@ -19,19 +19,19 @@ export enum TrackingAgreementSearchAction {
 }
 
 export const useContributionTracking = () => {
-  const emitAgreementTreatedEvent = (idcc: string) => {
+  const emitAgreementTreatedEvent = (idcc: number) => {
     sendEvent({
       category: TrackingContributionCategory.TOOL,
       action: TrackingAgreementSearchAction.CC_TREATED,
-      name: idcc,
+      name: idcc.toString(),
     });
   };
 
-  const emitAgreementUntreatedEvent = (idcc: string) => {
+  const emitAgreementUntreatedEvent = (idcc: number) => {
     sendEvent({
       category: TrackingContributionCategory.TOOL,
       action: TrackingAgreementSearchAction.CC_UNTREATED,
-      name: idcc,
+      name: idcc.toString(),
     });
   };
 
