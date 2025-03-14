@@ -77,6 +77,7 @@ export function getAgreementsByIds(ids: string[]) {
 export const getAgreementBySlug = (slug: string) => {
   return {
     _source: [
+      "_id",
       "title",
       "shortTitle",
       "description",
