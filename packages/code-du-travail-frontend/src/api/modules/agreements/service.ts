@@ -49,18 +49,23 @@ export const getByIdsAgreements = async (
     : [];
 };
 
-export const getBySlugAgreements = async (slug: string) => {
+export const getBySlugAgreements = async (
+  slug: string
+): Promise<(ElasticAgreement & { _id: string }) | undefined> => {
   const body = await getAgreementBySlug(slug);
 
-  const response = await elasticsearchClient.search<AgreementDoc[]>({
+  const response = await elasticsearchClient.search<ElasticAgreement>({
     body,
     index: elasticDocumentsIndex,
   });
-  if (response.hits.hits.length === 0) {
+  if (response.hits.hits.length === 0 || !response.hits.hits[0]._source) {
     return;
   }
 
-  return { ...response.hits.hits[0]._source };
+  return {
+    _id: response.hits.hits[0]._id,
+    ...response.hits.hits[0]._source,
+  };
 };
 
 const orderByAlpha = (a, b) => {
