@@ -25,9 +25,12 @@ export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
 
 const printStyle = css({
   "@media print": {
-    printColorAdjust: "exact!",
-    "& table, & th, & td": {
-      printColorAdjust: "exact!",
-    },
+    "& *": {
+      "-webkit-print-color-adjust":
+        "exact !important" /* Chrome, Safari 6 – 15.3, Edge */,
+      "color-adjust": "exact !important" /* Firefox 48 – 96 */,
+      "print-color-adjust": "exact !important" /* Firefox 97+, Safari 15.4+ */,
+    } as any,
+    forcedColorAdjust: "auto !important",
   },
 });
