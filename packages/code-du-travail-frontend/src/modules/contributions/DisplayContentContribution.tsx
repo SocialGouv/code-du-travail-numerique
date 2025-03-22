@@ -15,8 +15,8 @@ import { FicheServicePublic } from "../fiche-service-public/builder";
 import ImageWrapper from "../common/ImageWrapper";
 import { Tile } from "@codegouvfr/react-dsfr/Tile";
 import Link from "../common/Link";
+import { slugify } from "@socialgouv/cdtn-utils";
 
-const DEFAULT_HEADING_LEVEL = 3;
 export type numberLevel = 2 | 3 | 4 | 5 | 6;
 
 export const ContentSP = ({ raw, titleLevel }) => {
@@ -66,9 +66,7 @@ const mapToAccordion = (titleLevel: numberLevel, items) => {
         data-testid="contrib-accordion"
         items={items.map((item) => ({
           ...item,
-          ...(titleLevel === DEFAULT_HEADING_LEVEL
-            ? { id: undefined }
-            : { id: generateUUID() }),
+          id: slugify(item.title) + "_" + generateUUID(),
         }))}
         titleAs={`h${titleLevel}`}
       />
@@ -168,9 +166,7 @@ const mapTbody = (tbody: Element) => {
                   </thead>
                 </>
               )}
-              <tbody>
-                {domToReact(tbody.children as DOMNode[], { trim: true })}
-              </tbody>
+              <tbody>{renderChildrenWithNoTrim(tbody)}</tbody>
             </table>
           </div>
         </div>
@@ -299,7 +295,7 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
           );
         }
         if (domNode.name === "strong") {
-          // Disable trim on strong
+          // Disable trim on strong and preserve whitespace
           return <strong>{renderChildrenWithNoTrim(domNode)}</strong>;
         }
         if (domNode.name === "ul") {

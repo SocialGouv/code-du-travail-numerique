@@ -3,7 +3,7 @@
 exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
 <div>
   <div
-    class="sc-2a0a4b0a-0 hpYuum"
+    class="sc-13323d30-0 eYPJba"
   >
     <form
       class="sc-d0ca486a-0 LJxxm"
@@ -71,7 +71,7 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
         </div>
       </div>
       <div
-        class="sc-2a0a4b0a-0 sc-a01ac225-0 dLOZmV dIXgrP"
+        class="sc-13323d30-0 sc-a01ac225-0 exlNfj dIXgrP"
       >
         <span
           class="sc-a01ac225-1 iBHdtt"
@@ -90,7 +90,7 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
           </span>
         </span>
         <ol
-          class="sc-ab356c14-0 bpNHPl"
+          class="sc-78dd7a00-0 fVqAjV"
         >
           <li
             aria-live="polite"
@@ -156,7 +156,7 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
         class="sc-bc9d1e5-1 csPxMe"
       >
         <button
-          class="sc-95bd4344-0 jqYNvz sc-bc9d1e5-0 sc-bc9d1e5-2 kyKZPU gPKfXM"
+          class="sc-b0ebfae6-0 jQBCMS sc-bc9d1e5-0 sc-bc9d1e5-2 kyKZPU gPKfXM"
         >
           Commencer
           <svg
