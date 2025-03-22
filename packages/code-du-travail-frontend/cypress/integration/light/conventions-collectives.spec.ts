@@ -51,12 +51,9 @@ describe("Conventions collectives", () => {
 
       cy.get("#frequent-questions .fr-accordion__btn").first().click();
 
-      cy.get("#frequent-questions-list-Congés\\ et\\ repos").should("exist");
+      cy.get("#frequent-questions-list-0").should("exist");
 
-      cy.get("#frequent-questions-list-Congés\\ et\\ repos li").should(
-        "have.length",
-        6
-      );
+      cy.get("#frequent-questions-list-0 li").should("have.length", 6);
 
       cy.get("#agreement-articles").should("exist");
 
@@ -76,7 +73,7 @@ describe("Conventions collectives", () => {
 
       cy.get("#agreement-articles a").should("have.length", 49);
 
-      cy.get("#frequent-questions-list-Congés\\ et\\ repos a").first().click();
+      cy.get("#frequent-questions-list-0 a").first().click();
 
       cy.urlEqual(
         "/contribution/2941-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"

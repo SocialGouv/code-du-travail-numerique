@@ -30,16 +30,16 @@ export function FrequentQuestions({ answers }: Props) {
       </p>
       <AccordionWithAnchor
         data-testid="frequent-questions-accordion"
-        items={answers.map((group) => ({
+        items={answers.map((group, index) => ({
           title: group.theme,
           content: (
             <ul
-              id={`frequent-questions-list-${group.theme}`}
+              id={`frequent-questions-list-${index}`}
               data-testid="frequent-questions-list"
             >
-              {group.answers.map((item) => (
+              {group.answers.map((item, itemIndex) => (
                 <li
-                  id={`frequent-question-${item.slug}`}
+                  id={`frequent-question-${itemIndex}`}
                   key={item.slug}
                   data-testid="frequent-question-item"
                 >
