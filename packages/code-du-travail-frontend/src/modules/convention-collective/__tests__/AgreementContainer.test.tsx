@@ -43,8 +43,8 @@ jest.mock("../AgreementArticles", () => ({
   ),
 }));
 
-jest.mock("../AgreementSearch", () => ({
-  AgreementSearch: ({ idcc, shortTitle }) => (
+jest.mock("../LegiFranceSearch", () => ({
+  LegiFranceSearch: ({ idcc, shortTitle }) => (
     <div data-testid="mock-agreement-search">
       Search for {shortTitle} (IDCC: {idcc})
     </div>
