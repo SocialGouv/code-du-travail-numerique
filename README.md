@@ -44,6 +44,7 @@ Pour lancer l'application en se basant sur l'API de pre-production :
 ```sh
 cp packages/code-du-travail-frontend/.env.sample packages/code-du-travail-frontend/.env # Puis setter les bonnes variables
 yarn dev:frontend
+NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn ELASTICSEARCH_URL=http://localhost:9200 yarn workspace @cdt/frontend dev # Pour lancer l'application en se basant sur un container docker en local
 ```
 
 Notre bibliothèque de composants UI est disponible en démo [ici](https://socialgouv.github.io/code-du-travail-numerique/).
