@@ -81,7 +81,7 @@ export function AgreementContainer({ agreement, relatedItems }: Props) {
               shortTitle={agreement.shortTitle}
             />
           ) : (
-            <p data-testid="agreement-not-treated-message">
+            <p data-testid="agreement-not-treated-message" className="fr-mt-3w">
               Cette convention collective n&apos;est pas traitée par nos
               services.
             </p>

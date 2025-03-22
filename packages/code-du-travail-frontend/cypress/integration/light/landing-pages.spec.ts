@@ -7,7 +7,11 @@ describe("Landing pages", () => {
       "have.text",
       "Commerces et services de l'audiovisuel, de l'électronique et de l'équipement ménager"
     );
-    cy.get("body").should("contain", "Source: Légifrance");
+    cy.get("body").should(
+      "contain",
+      "Retrouver l’intégralité de la convention collective sur Légifrance"
+    );
+    cy.get("body").should("contain", "Entrée en vigueur le 01/01/1993");
   });
 
   it("je vois la page à propos", () => {

@@ -17,6 +17,7 @@ export function FrequentQuestions({ answers }: Props) {
 
   return (
     <div
+      id="frequent-questions"
       className={fr.cx("fr-mt-6w")}
       data-testid="frequent-questions-container"
     >
@@ -32,9 +33,16 @@ export function FrequentQuestions({ answers }: Props) {
         items={answers.map((group) => ({
           title: group.theme,
           content: (
-            <ul data-testid="frequent-questions-list">
+            <ul
+              id={`frequent-questions-list-${group.theme}`}
+              data-testid="frequent-questions-list"
+            >
               {group.answers.map((item) => (
-                <li key={item.slug} data-testid="frequent-question-item">
+                <li
+                  id={`frequent-question-${item.slug}`}
+                  key={item.slug}
+                  data-testid="frequent-question-item"
+                >
                   <a
                     href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${item.slug}`}
                     data-testid={`frequent-question-link-${item.slug}`}

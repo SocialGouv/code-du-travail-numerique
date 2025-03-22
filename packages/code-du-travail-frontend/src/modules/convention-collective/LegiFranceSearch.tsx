@@ -52,8 +52,6 @@ export function LegiFranceSearch({ idcc, shortTitle }: Props) {
                 type: "search",
                 autoComplete: "off",
                 name: "rawQuery",
-                "aria-label":
-                  "Recherchez dans la convention collective sur Légifrance",
                 value: query,
                 placeholder: "Rechercher sur Légifrance",
                 "data-testid": "agreement-search-input",

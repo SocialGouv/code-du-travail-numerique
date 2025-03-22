@@ -37,6 +37,7 @@ export function AgreementArticles({ articlesByTheme, containerId }: Props) {
 
   return (
     <div
+      id="agreement-articles"
       className={fr.cx("fr-mt-6w")}
       data-testid="agreement-articles-container"
     >

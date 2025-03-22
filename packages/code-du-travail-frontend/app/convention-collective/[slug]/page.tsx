@@ -14,6 +14,7 @@ export async function generateMetadata({ params }) {
     title: agreement?.title ?? "",
     description: agreement?.metaDescription ?? "",
     path: `/convention-collective/${params.slug}`,
+    robots: agreement?.url ? undefined : "noindex, nofollow",
   });
 }
 
@@ -34,7 +35,7 @@ async function Page({ params }) {
 const getAgreement = async (slug: string) => {
   const IDCC_ONLY = /^\d{2,4}$/;
   if (IDCC_ONLY.test(slug)) {
-    const agreements = await searchAgreement(slug.padStart(4, "0"));
+    const agreements = await searchAgreement(slug.padStart(4, "0"), true);
     if (!agreements.length) {
       return notFound();
     }

@@ -6,6 +6,7 @@ type Props = {
   path?: string;
   overrideCanonical?: string;
   noTitleAdd?: boolean;
+  robots?: string;
 };
 
 export function generateDefaultMetadata({
@@ -13,6 +14,7 @@ export function generateDefaultMetadata({
   description,
   overrideCanonical,
   path,
+  robots,
 }: Props): Metadata {
   return {
     title: title,
@@ -28,5 +30,8 @@ export function generateDefaultMetadata({
       images: `/static/assets/img/social-preview.png`,
       locale: "fr_FR",
     },
+    ...(robots && {
+      robots,
+    }),
   };
 }
