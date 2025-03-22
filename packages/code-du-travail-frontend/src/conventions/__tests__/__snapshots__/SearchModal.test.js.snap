@@ -32,28 +32,28 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
     >
       <div>
         <div
-          class="sc-f4126b8e-0 dWonlk"
+          class="sc-19478701-0 jZYVgz"
           data-reach-dialog-overlay=""
         >
           <div
             aria-label="Rechercher votre convention collective"
             aria-modal="true"
-            class="sc-f4126b8e-1 kQHvXg"
+            class="sc-19478701-1 hQHZiT"
             data-reach-dialog-content=""
             role="dialog"
             tabindex="-1"
           >
             <label
-              class="sc-9b1edd7b-0 erCyth"
+              class="sc-75bae102-0 jzkYDa"
               for="convention-search"
             >
               Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
             </label>
             <div
-              class="sc-46a9700d-0 eEbjpm sc-7029e335-0 btjXXy"
+              class="sc-669fe731-0 amSvQ sc-7029e335-0 btjXXy"
             >
               <input
-                class="sc-46a9700d-1 dZpFqX"
+                class="sc-669fe731-1 bBYNqO"
                 id="convention-search"
                 name="q"
                 placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -71,7 +71,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                 Consultez
                  
                 <button
-                  class="sc-b0ebfae6-0 iBhawp sc-7029e335-3 enfoOw"
+                  class="sc-95bd4344-0 ksRRNY sc-7029e335-3 enfoOw"
                   type="button"
                 >
                   notre aide
@@ -80,11 +80,11 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               </span>
             </p>
             <button
-              class="sc-b0ebfae6-0 dGXoMZ sc-f4126b8e-2 irTzHW"
+              class="sc-95bd4344-0 dxXsic sc-19478701-2 fGtwND"
               title="fermer la modale"
             >
               <div
-                class="sc-f92038f6-0 llOtbb"
+                class="sc-8dcb2faa-0 gxfPDw"
               >
                 fermer la modale
               </div>

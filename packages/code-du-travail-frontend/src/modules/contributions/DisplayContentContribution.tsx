@@ -295,7 +295,6 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
           );
         }
         if (domNode.name === "strong") {
-          // Disable trim on strong and preserve whitespace
           return <strong>{renderChildrenWithNoTrim(domNode)}</strong>;
         }
         if (domNode.name === "ul") {
@@ -306,14 +305,12 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
           );
         }
         if (domNode.name === "em") {
-          // Disable trim on em
           return <em>{renderChildrenWithNoTrim(domNode)}</em>;
         }
         if (domNode.name === "p") {
           if (!domNode.children.length) {
             return <br />;
           }
-          // Disable trim on p
           return (
             <p
               className={

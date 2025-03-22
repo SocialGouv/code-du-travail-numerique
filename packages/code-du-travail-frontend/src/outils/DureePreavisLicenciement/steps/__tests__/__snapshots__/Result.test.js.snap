@@ -19,12 +19,12 @@ exports[`<StepResult /> should render with O duration 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-b0ebfae6-0 cVUzbD sc-a45f48bd-1 fdaxUP"
+      class="sc-95bd4344-0 kEXnui sc-da0440cf-1 fwhlXZ"
       type="button"
     >
       <svg
         aria-hidden="true"
-        class="sc-efc7f1fd-0 cFvIxv"
+        class="sc-93c68677-0 fWneNg"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -40,13 +40,13 @@ exports[`<StepResult /> should render with O duration 1`] = `
         />
       </svg>
       <span
-        class="sc-a45f48bd-2 dzrMBi"
+        class="sc-da0440cf-2 cdlSfE"
       >
         Voir le détail du calcul
       </span>
     </button>
     <div
-      class="sc-a45f48bd-0 dnXrPP"
+      class="sc-da0440cf-0 kQbZar"
     >
       <h2
         class="sc-967f95b8-2 fsAvGZ"
@@ -157,13 +157,13 @@ exports[`<StepResult /> should render with O duration 1`] = `
     </div>
   </div>
   <div
-    class="sc-35146c68-0 sc-add1a668-0 eYIxsm eTxwuf"
+    class="sc-6c78813f-0 sc-add1a668-0 fnbVWG eTxwuf"
   >
     <div
-      class="sc-b74609e1-0 elMQpY"
+      class="sc-66a696c4-0 MNJNF"
     >
       <div
-        class="sc-b74609e1-1 jxlJZx"
+        class="sc-66a696c4-1 dvlKxa"
       >
         <svg
           aria-hidden="true"
@@ -183,10 +183,10 @@ exports[`<StepResult /> should render with O duration 1`] = `
         </svg>
       </div>
       <div
-        class="sc-b74609e1-2 ipaEJM"
+        class="sc-66a696c4-2 eRMOZl"
       >
         <p
-          class="sc-a4406a0f-1 bEYgDv sc-add1a668-1 dblvAa"
+          class="sc-3633cc97-1 bjSNvY sc-add1a668-1 dblvAa"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -256,12 +256,12 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   <div>
     <button
       aria-expanded="false"
-      class="sc-b0ebfae6-0 cVUzbD sc-a45f48bd-1 fdaxUP"
+      class="sc-95bd4344-0 kEXnui sc-da0440cf-1 fwhlXZ"
       type="button"
     >
       <svg
         aria-hidden="true"
-        class="sc-efc7f1fd-0 cFvIxv"
+        class="sc-93c68677-0 fWneNg"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -277,13 +277,13 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
         />
       </svg>
       <span
-        class="sc-a45f48bd-2 dzrMBi"
+        class="sc-da0440cf-2 cdlSfE"
       >
         Voir le détail du calcul
       </span>
     </button>
     <div
-      class="sc-a45f48bd-0 dnXrPP"
+      class="sc-da0440cf-0 kQbZar"
     >
       <h2
         class="sc-967f95b8-2 fsAvGZ"
@@ -394,13 +394,13 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     </div>
   </div>
   <div
-    class="sc-35146c68-0 sc-add1a668-0 eYIxsm eTxwuf"
+    class="sc-6c78813f-0 sc-add1a668-0 fnbVWG eTxwuf"
   >
     <div
-      class="sc-b74609e1-0 elMQpY"
+      class="sc-66a696c4-0 MNJNF"
     >
       <div
-        class="sc-b74609e1-1 jxlJZx"
+        class="sc-66a696c4-1 dvlKxa"
       >
         <svg
           aria-hidden="true"
@@ -420,10 +420,10 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
         </svg>
       </div>
       <div
-        class="sc-b74609e1-2 ipaEJM"
+        class="sc-66a696c4-2 eRMOZl"
       >
         <p
-          class="sc-a4406a0f-1 bEYgDv sc-add1a668-1 dblvAa"
+          class="sc-3633cc97-1 bjSNvY sc-add1a668-1 dblvAa"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -493,12 +493,12 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-b0ebfae6-0 cVUzbD sc-a45f48bd-1 fdaxUP"
+      class="sc-95bd4344-0 kEXnui sc-da0440cf-1 fwhlXZ"
       type="button"
     >
       <svg
         aria-hidden="true"
-        class="sc-efc7f1fd-0 cFvIxv"
+        class="sc-93c68677-0 fWneNg"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -514,13 +514,13 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
         />
       </svg>
       <span
-        class="sc-a45f48bd-2 dzrMBi"
+        class="sc-da0440cf-2 cdlSfE"
       >
         Voir le détail du calcul
       </span>
     </button>
     <div
-      class="sc-a45f48bd-0 dnXrPP"
+      class="sc-da0440cf-0 kQbZar"
     >
       <h2
         class="sc-967f95b8-2 fsAvGZ"
@@ -631,13 +631,13 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
     </div>
   </div>
   <div
-    class="sc-35146c68-0 sc-add1a668-0 eYIxsm eTxwuf"
+    class="sc-6c78813f-0 sc-add1a668-0 fnbVWG eTxwuf"
   >
     <div
-      class="sc-b74609e1-0 elMQpY"
+      class="sc-66a696c4-0 MNJNF"
     >
       <div
-        class="sc-b74609e1-1 jxlJZx"
+        class="sc-66a696c4-1 dvlKxa"
       >
         <svg
           aria-hidden="true"
@@ -657,10 +657,10 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
         </svg>
       </div>
       <div
-        class="sc-b74609e1-2 ipaEJM"
+        class="sc-66a696c4-2 eRMOZl"
       >
         <p
-          class="sc-a4406a0f-1 bEYgDv sc-add1a668-1 dblvAa"
+          class="sc-3633cc97-1 bjSNvY sc-add1a668-1 dblvAa"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -730,12 +730,12 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-b0ebfae6-0 cVUzbD sc-a45f48bd-1 fdaxUP"
+      class="sc-95bd4344-0 kEXnui sc-da0440cf-1 fwhlXZ"
       type="button"
     >
       <svg
         aria-hidden="true"
-        class="sc-efc7f1fd-0 cFvIxv"
+        class="sc-93c68677-0 fWneNg"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -751,13 +751,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         />
       </svg>
       <span
-        class="sc-a45f48bd-2 dzrMBi"
+        class="sc-da0440cf-2 cdlSfE"
       >
         Voir le détail du calcul
       </span>
     </button>
     <div
-      class="sc-a45f48bd-0 dnXrPP"
+      class="sc-da0440cf-0 kQbZar"
     >
       <h2
         class="sc-967f95b8-2 fsAvGZ"
@@ -811,13 +811,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     </div>
   </div>
   <div
-    class="sc-35146c68-0 sc-add1a668-0 eYIxsm eTxwuf"
+    class="sc-6c78813f-0 sc-add1a668-0 fnbVWG eTxwuf"
   >
     <div
-      class="sc-b74609e1-0 elMQpY"
+      class="sc-66a696c4-0 MNJNF"
     >
       <div
-        class="sc-b74609e1-1 jxlJZx"
+        class="sc-66a696c4-1 dvlKxa"
       >
         <svg
           aria-hidden="true"
@@ -837,10 +837,10 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         </svg>
       </div>
       <div
-        class="sc-b74609e1-2 ipaEJM"
+        class="sc-66a696c4-2 eRMOZl"
       >
         <p
-          class="sc-a4406a0f-1 bEYgDv sc-add1a668-1 dblvAa"
+          class="sc-3633cc97-1 bjSNvY sc-add1a668-1 dblvAa"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -910,12 +910,12 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   <div>
     <button
       aria-expanded="false"
-      class="sc-b0ebfae6-0 cVUzbD sc-a45f48bd-1 fdaxUP"
+      class="sc-95bd4344-0 kEXnui sc-da0440cf-1 fwhlXZ"
       type="button"
     >
       <svg
         aria-hidden="true"
-        class="sc-efc7f1fd-0 cFvIxv"
+        class="sc-93c68677-0 fWneNg"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -931,13 +931,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         />
       </svg>
       <span
-        class="sc-a45f48bd-2 dzrMBi"
+        class="sc-da0440cf-2 cdlSfE"
       >
         Voir le détail du calcul
       </span>
     </button>
     <div
-      class="sc-a45f48bd-0 dnXrPP"
+      class="sc-da0440cf-0 kQbZar"
     >
       <h2
         class="sc-967f95b8-2 fsAvGZ"
@@ -1001,13 +1001,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     </div>
   </div>
   <div
-    class="sc-35146c68-0 sc-add1a668-0 eYIxsm eTxwuf"
+    class="sc-6c78813f-0 sc-add1a668-0 fnbVWG eTxwuf"
   >
     <div
-      class="sc-b74609e1-0 elMQpY"
+      class="sc-66a696c4-0 MNJNF"
     >
       <div
-        class="sc-b74609e1-1 jxlJZx"
+        class="sc-66a696c4-1 dvlKxa"
       >
         <svg
           aria-hidden="true"
@@ -1027,10 +1027,10 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         </svg>
       </div>
       <div
-        class="sc-b74609e1-2 ipaEJM"
+        class="sc-66a696c4-2 eRMOZl"
       >
         <p
-          class="sc-a4406a0f-1 bEYgDv sc-add1a668-1 dblvAa"
+          class="sc-3633cc97-1 bjSNvY sc-add1a668-1 dblvAa"
         >
           Attention il peut exister une durée plus favorable
         </p>

@@ -3,17 +3,17 @@
 exports[`<ReferencesJuridiques /> should render 1`] = `
 <div>
   <div
-    class="sc-13323d30-0 gtmVnh"
+    class="sc-2a0a4b0a-0 hPfzrL"
   >
     <div>
       <button
         aria-expanded="false"
-        class="sc-b0ebfae6-0 cVUzbD sc-a45f48bd-1 fdaxUP"
+        class="sc-95bd4344-0 kEXnui sc-da0440cf-1 fwhlXZ"
         type="button"
       >
         <svg
           aria-hidden="true"
-          class="sc-efc7f1fd-0 cFvIxv"
+          class="sc-93c68677-0 fWneNg"
           fill="none"
           height="24"
           stroke="currentColor"
@@ -29,25 +29,25 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           />
         </svg>
         <span
-          class="sc-a45f48bd-2 dzrMBi"
+          class="sc-da0440cf-2 cdlSfE"
         >
           Références juridiques concernées :
         </span>
       </button>
       <div
-        class="sc-a45f48bd-0 dnXrPP"
+        class="sc-da0440cf-0 kQbZar"
       >
         <ul
-          class="sc-78dd7a00-0 sc-ab4aba5d-1 fVqAjV dDdmoO"
+          class="sc-ab356c14-0 sc-ab4aba5d-1 bpNHPl dDdmoO"
         >
           <li>
             <a
-              class="sc-c95f41ec-0 edttdJ sc-ab4aba5d-0 gOxGeu"
+              class="sc-60a7e89-0 haggkt sc-ab4aba5d-0 gOxGeu"
               href="/code-du-travail/l1244-3"
             >
               <svg
                 aria-hidden="true"
-                class="sc-c95f41ec-2 iFvcod"
+                class="sc-60a7e89-2 bJDpVh"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 />
               </svg>
               <span
-                class="sc-c95f41ec-1 juvzjJ"
+                class="sc-60a7e89-1 eSlLWj"
               >
                 Article L1244-3 du Code du travail
               </span>
@@ -66,12 +66,12 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           </li>
           <li>
             <a
-              class="sc-c95f41ec-0 edttdJ sc-ab4aba5d-0 gOxGeu"
+              class="sc-60a7e89-0 haggkt sc-ab4aba5d-0 gOxGeu"
               href="/code-du-travail/r1244-4"
             >
               <svg
                 aria-hidden="true"
-                class="sc-c95f41ec-2 iFvcod"
+                class="sc-60a7e89-2 bJDpVh"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +82,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 />
               </svg>
               <span
-                class="sc-c95f41ec-1 juvzjJ"
+                class="sc-60a7e89-1 eSlLWj"
               >
                 Article R1244-4 du Code du travail
               </span>
@@ -91,13 +91,13 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           <li>
             <a
               aria-label="Article L3121-44 du JO (Nouvelle fenêtre)"
-              class="sc-c95f41ec-0 edttdJ sc-ab4aba5d-0 gOxGeu no-after"
+              class="sc-60a7e89-0 haggkt sc-ab4aba5d-0 gOxGeu no-after"
               href="https://article.jo/L3121-44"
               target="_blank"
             >
               <svg
                 aria-hidden="true"
-                class="sc-c95f41ec-2 iFvcod"
+                class="sc-60a7e89-2 bJDpVh"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +108,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 />
               </svg>
               <span
-                class="sc-c95f41ec-1 juvzjJ"
+                class="sc-60a7e89-1 eSlLWj"
               >
                 Article L3121-44 du JO
               </span>
@@ -117,13 +117,13 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           <li>
             <a
               aria-label="Article foo du JPO (Nouvelle fenêtre)"
-              class="sc-c95f41ec-0 edttdJ sc-ab4aba5d-0 gOxGeu no-after"
+              class="sc-60a7e89-0 haggkt sc-ab4aba5d-0 gOxGeu no-after"
               href="https://article.jo/foo"
               target="_blank"
             >
               <svg
                 aria-hidden="true"
-                class="sc-c95f41ec-2 iFvcod"
+                class="sc-60a7e89-2 bJDpVh"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +134,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 />
               </svg>
               <span
-                class="sc-c95f41ec-1 juvzjJ"
+                class="sc-60a7e89-1 eSlLWj"
               >
                 Article foo du JPO
               </span>
@@ -143,13 +143,13 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           <li>
             <a
               aria-label="Convention foo (Nouvelle fenêtre)"
-              class="sc-c95f41ec-0 edttdJ sc-ab4aba5d-0 gOxGeu no-after"
+              class="sc-60a7e89-0 haggkt sc-ab4aba5d-0 gOxGeu no-after"
               href="https://ma-convention-collective/ccc-foo"
               target="_blank"
             >
               <svg
                 aria-hidden="true"
-                class="sc-c95f41ec-2 iFvcod"
+                class="sc-60a7e89-2 bJDpVh"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -160,7 +160,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 />
               </svg>
               <span
-                class="sc-c95f41ec-1 juvzjJ"
+                class="sc-60a7e89-1 eSlLWj"
               >
                 Convention foo
               </span>
