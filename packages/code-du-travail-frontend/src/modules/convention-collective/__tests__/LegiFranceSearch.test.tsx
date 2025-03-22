@@ -1,13 +1,13 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import { AgreementSearch } from "../AgreementSearch";
+import { LegiFranceSearch } from "../LegiFranceSearch";
 import { push as matopush } from "@socialgouv/matomo-next";
 
 jest.mock("@socialgouv/matomo-next", () => ({
   push: jest.fn(),
 }));
 
-describe("AgreementSearch", () => {
+describe("LegiFranceSearch", () => {
   const props = {
     idcc: "1234",
     shortTitle: "Test Convention",
@@ -18,7 +18,7 @@ describe("AgreementSearch", () => {
   });
 
   it("should render the search form", () => {
-    render(<AgreementSearch {...props} />);
+    render(<LegiFranceSearch {...props} />);
 
     expect(
       screen.getByTestId("agreement-search-container")
@@ -32,7 +32,7 @@ describe("AgreementSearch", () => {
   });
 
   it("should update query state when input changes", () => {
-    render(<AgreementSearch {...props} />);
+    render(<LegiFranceSearch {...props} />);
 
     const input = screen.getByTestId("agreement-search-input");
     fireEvent.change(input, { target: { value: "test query" } });
@@ -41,7 +41,7 @@ describe("AgreementSearch", () => {
   });
 
   it("should track search when form is submitted", () => {
-    render(<AgreementSearch {...props} />);
+    render(<LegiFranceSearch {...props} />);
 
     const input = screen.getByTestId("agreement-search-input");
     const form = screen.getByTestId("agreement-search-form");
@@ -58,7 +58,7 @@ describe("AgreementSearch", () => {
   });
 
   it("should have correct hidden inputs with values", () => {
-    render(<AgreementSearch {...props} />);
+    render(<LegiFranceSearch {...props} />);
 
     // Check the idcc input
     expect(screen.getByTestId("agreement-search-idcc")).toHaveAttribute(

@@ -11,7 +11,7 @@ type Props = {
   shortTitle: string;
 };
 
-export function AgreementSearch({ idcc, shortTitle }: Props) {
+export function LegiFranceSearch({ idcc, shortTitle }: Props) {
   const [query, setQuery] = useState("");
 
   const trackSearch = useCallback(() => {

@@ -12,7 +12,7 @@ import { format, parseISO } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import { FrequentQuestions } from "./FrequentQuestions";
 import { AgreementArticles } from "./AgreementArticles";
-import { AgreementSearch } from "./AgreementSearch";
+import { LegiFranceSearch } from "./LegiFranceSearch";
 
 type Props = {
   agreement: ElasticAgreement;
@@ -76,7 +76,7 @@ export function AgreementContainer({ agreement, relatedItems }: Props) {
           />
 
           {agreement.url ? (
-            <AgreementSearch
+            <LegiFranceSearch
               idcc={agreement.num}
               shortTitle={agreement.shortTitle}
             />
