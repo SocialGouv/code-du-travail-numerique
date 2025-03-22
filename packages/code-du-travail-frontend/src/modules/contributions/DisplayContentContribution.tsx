@@ -56,7 +56,7 @@ const mapItem = (
     trim: true,
   }),
 });
-const mapToAccordion = (titleLevel: numberLevel, items) => {
+const mapToAccordion = (titleLevel: numberLevel, isParent: boolean, items) => {
   const props = titleLevel <= 6 ? { titleLevel } : {};
 
   return (
@@ -66,7 +66,9 @@ const mapToAccordion = (titleLevel: numberLevel, items) => {
         data-testid="contrib-accordion"
         items={items.map((item) => ({
           ...item,
-          id: slugify(item.title) + "_" + generateUUID(),
+          ...(isParent
+            ? { id: slugify(item.title) }
+            : { id: slugify(item.title) + "_" + generateUUID() }),
         }))}
         titleAs={`h${titleLevel}`}
       />
@@ -88,6 +90,17 @@ function getNextFirstElement(domNode: Element) {
     next = next.next;
   }
   return next;
+}
+
+function hasDetailsParent(domNode: Element) {
+  let parent = domNode.parent;
+  while (parent) {
+    if (parent.type === "tag" && parent.name === "details") {
+      return true;
+    }
+    parent = parent.parent;
+  }
+  return false;
 }
 
 const theadMaxRowspan = (tr: Element) => {
@@ -230,8 +243,13 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
             }
             next = getNextFirstElement(next);
           }
+
           return items.length ? (
-            mapToAccordion(accordionTitleLevel, items)
+            mapToAccordion(
+              accordionTitleLevel,
+              !hasDetailsParent(domNode),
+              items
+            )
           ) : (
             <></>
           );
