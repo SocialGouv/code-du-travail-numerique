@@ -12,14 +12,13 @@ import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
 import { Layout } from "../../src/layout/Layout";
 import {
-  CalculateurIndemniteLicenciement,
-  CalculateurRuptureConventionnelle,
   DismissalProcess,
   DureePreavisDemission,
   DureePreavisLicenciement,
   HeuresRechercheEmploi,
   SimulateurIndemnitePrecarite,
   CalculateurPreavisRetraite,
+  CalculateurIndemniteLicenciement,
 } from "../../src/outils";
 import {
   getBySlugTools,
@@ -30,13 +29,12 @@ import { Tool } from "@socialgouv/cdtn-types";
 
 const toolsBySlug = {
   "heures-recherche-emploi": HeuresRechercheEmploi,
-  "indemnite-licenciement": CalculateurIndemniteLicenciement,
   "indemnite-precarite": SimulateurIndemnitePrecarite,
   "preavis-demission": DureePreavisDemission,
   "preavis-licenciement": DureePreavisLicenciement,
   "preavis-retraite": CalculateurPreavisRetraite,
   "procedure-licenciement": DismissalProcess,
-  "indemnite-rupture-conventionnelle": CalculateurRuptureConventionnelle,
+  "indemnite-licenciement": CalculateurIndemniteLicenciement,
 };
 
 export interface Props {

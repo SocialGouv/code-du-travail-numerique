@@ -137,7 +137,7 @@ describe("<ContributionLayout />", () => {
       expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_traitée",
         category: "outil",
-        name: 16,
+        name: "16",
       });
     });
 
@@ -151,7 +151,7 @@ describe("<ContributionLayout />", () => {
       expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_traitée",
         category: "outil",
-        name: 3239,
+        name: "3239",
       });
     });
 
@@ -185,7 +185,7 @@ describe("<ContributionLayout />", () => {
       expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_non_traitée",
         category: "outil",
-        name: 1388,
+        name: "1388",
       });
       expect(ccUi.warning.title.query()).toBeInTheDocument();
       fireEvent.click(ui.generic.linkDisplayInfo.get());
@@ -237,7 +237,7 @@ describe("<ContributionLayout />", () => {
       expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_traitée",
         category: "outil",
-        name: 16,
+        name: "16",
       });
     });
 
@@ -274,7 +274,7 @@ describe("<ContributionLayout />", () => {
       expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_non_traitée",
         category: "outil",
-        name: 1388,
+        name: "1388",
       });
     });
 

@@ -5,7 +5,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
 import AgreementSearch from "../convention-collective/AgreementSearch.svg";
 
-import { EnterpriseAgreement } from "../enterprise";
+import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import {
   isAgreementSupported,
   isAgreementUnextended,
@@ -17,10 +17,10 @@ import BlueCard from "../common/BlueCard";
 import { AgreementSearchForm } from "../convention-collective/AgreementSearch/AgreementSearchForm";
 
 type Props = {
-  onAgreementSelect: (agreement?: EnterpriseAgreement) => void;
+  onAgreementSelect: (agreement?: Agreement) => void;
   onDisplayClick: (ev: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   contribution: Contribution;
-  selectedAgreement?: EnterpriseAgreement;
+  selectedAgreement?: Agreement;
   trackingActionName: string;
 };
 
@@ -37,11 +37,11 @@ export function ContributionGenericAgreementSearch({
     setIsValid(isAgreementValid(contribution, selectedAgreement));
   }, [selectedAgreement]);
 
-  const selectedAgreementAlert = (agreement: EnterpriseAgreement) => {
+  const selectedAgreementAlert = (agreement: Agreement) => {
     const isSupported = isAgreementSupported(contribution, agreement);
     const isUnextended = isAgreementUnextended(contribution, agreement);
     if (contribution.isNoCDT) {
-      if (isUnextended)
+      if (isUnextended && agreement.url)
         return (
           <>
             Les dispositions de cette convention n’ont pas été étendues. Cela
@@ -57,7 +57,7 @@ export function ContributionGenericAgreementSearch({
             dans le cas où elle s&apos;applique à votre situation.
           </>
         );
-      if (!isSupported)
+      if (!isSupported && agreement.url)
         return (
           <>
             Nous vous invitons à consulter votre convention collective qui peut

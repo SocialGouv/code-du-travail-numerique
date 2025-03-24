@@ -56,7 +56,6 @@ const PubliQuestion: React.FC<Props> = ({
           error={error}
           tooltip={tooltip}
           showRequired
-          subLabel={cdtn.precision}
           autoFocus={autoFocus}
         />
       );
@@ -82,7 +81,6 @@ const PubliQuestion: React.FC<Props> = ({
           onChangeSelectedOption={onChange}
           error={error}
           showRequired
-          subLabel={cdtn.precision}
           autoFocus={autoFocus}
         />
       );
@@ -98,7 +96,6 @@ const PubliQuestion: React.FC<Props> = ({
           id={name}
           showRequired
           text={unité}
-          subLabel={cdtn.precision}
           dataTestId={name}
           autoFocus={autoFocus}
         />
@@ -131,7 +128,6 @@ const PubliQuestion: React.FC<Props> = ({
           error={error}
           id={name}
           showRequired
-          subLabel={cdtn?.precision}
           dataTestId={name}
           autoFocus={autoFocus}
         />

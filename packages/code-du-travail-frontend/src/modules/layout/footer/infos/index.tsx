@@ -59,6 +59,9 @@ export const NeedMoreInfo = () => {
 
 const mainContainer = css({
   background: "var(--background-alt-blue-cumulus)",
+  "@media print": {
+    display: "none",
+  },
 });
 
 const title = css({

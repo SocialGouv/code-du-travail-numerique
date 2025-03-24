@@ -119,7 +119,7 @@ describe("<ContributionGeneric />", () => {
         {
           action: "cc_select_traitée",
           category: "outil",
-          name: 1388,
+          name: "1388",
         },
       ],
       [
@@ -190,7 +190,7 @@ describe("<ContributionGeneric />", () => {
         {
           action: "cc_select_non_traitée",
           category: "outil",
-          name: 16,
+          name: "16",
         },
       ],
       [
@@ -267,7 +267,7 @@ describe("<ContributionGeneric />", () => {
         {
           action: "cc_select_non_traitée",
           category: "outil",
-          name: 2216,
+          name: "2216",
         },
       ],
     ]);

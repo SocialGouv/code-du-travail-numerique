@@ -7,13 +7,13 @@ import { useNeedMoreInfoEvents } from "../layout/footer/infos/tracking";
 import Image from "next/image";
 import { Input } from "@codegouvfr/react-dsfr/Input";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { css } from "@styled-system/css";
 import { Alert } from "@codegouvfr/react-dsfr/Alert";
 import {
   getServiceInfo,
   ServiceRenseignement,
 } from "./data/servicesDeRenseignement";
 import Link from "../common/Link";
+import { defaultInputStyle } from "../outils/common/styles/input";
 
 export const BesoinPlusInformations = () => {
   const [department, setDepartment] = useState<string>("");
@@ -108,7 +108,7 @@ export const BesoinPlusInformations = () => {
             />
           }
           classes={{
-            nativeInputOrTextArea: inputCss,
+            nativeInputOrTextArea: defaultInputStyle,
           }}
         />
         {result && (
@@ -152,7 +152,3 @@ export const BesoinPlusInformations = () => {
     </Container>
   );
 };
-
-const inputCss = css({
-  maxWidth: "280px",
-});

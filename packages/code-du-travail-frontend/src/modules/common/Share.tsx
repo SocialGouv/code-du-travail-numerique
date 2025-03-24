@@ -24,7 +24,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
   };
 
   return (
-    <div className={fr.cx("fr-follow__social")}>
+    <div className={`${fr.cx("fr-follow__social")} ${hideOnPrint}`}>
       <div className={fr.cx("fr-mb-2w")} role="heading" aria-level={2}>
         <span>Partager la page</span>
       </div>
@@ -159,5 +159,11 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
 const blueCumulus = css({
   _before: {
     color: "var(--artwork-minor-blue-cumulus)",
+  },
+});
+
+const hideOnPrint = css({
+  "@media print": {
+    display: "none",
   },
 });
