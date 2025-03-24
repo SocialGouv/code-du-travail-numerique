@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.175.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.174.0...v4.175.0) (2025-03-24)
+
+
+### Bug Fixes
+
+* **contributions:** problème d'affichage des accordéons qui ont le même nom ([#6499](https://github.com/SocialGouv/code-du-travail-numerique/issues/6499)) ([3106d59](https://github.com/SocialGouv/code-du-travail-numerique/commit/3106d59da913918c424170c5b6a4b895e71a29dc))
+* **sentry:** set the right environment ([#6496](https://github.com/SocialGouv/code-du-travail-numerique/issues/6496)) ([c78cb14](https://github.com/SocialGouv/code-du-travail-numerique/commit/c78cb144d362722dc772508be76683a4a116fac9))
+
+
+### Features
+
+* **rupture-co:** passage en DSFR ([#6392](https://github.com/SocialGouv/code-du-travail-numerique/issues/6392)) ([4543276](https://github.com/SocialGouv/code-du-travail-numerique/commit/45432763a5c1570337b575e759d47eabb9192cab))
+
+
+
+
+
 # [4.174.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.173.0...v4.174.0) (2025-03-11)
 
 

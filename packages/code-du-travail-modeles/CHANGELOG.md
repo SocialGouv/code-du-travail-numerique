@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.175.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.174.0...v4.175.0) (2025-03-24)
+
+
+### Features
+
+* **rupture-co:** passage en DSFR ([#6392](https://github.com/SocialGouv/code-du-travail-numerique/issues/6392)) ([4543276](https://github.com/SocialGouv/code-du-travail-numerique/commit/45432763a5c1570337b575e759d47eabb9192cab))
+
+
+
+
+
 # [4.174.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.173.0...v4.174.0) (2025-03-11)
 
 **Note:** Version bump only for package @socialgouv/modeles-social
