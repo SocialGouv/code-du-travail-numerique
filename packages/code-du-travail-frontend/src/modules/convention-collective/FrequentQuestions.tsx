@@ -33,16 +33,9 @@ export function FrequentQuestions({ answers }: Props) {
         items={answers.map((group, index) => ({
           title: group.theme,
           content: (
-            <ul
-              id={`frequent-questions-list-${index}`}
-              data-testid="frequent-questions-list"
-            >
-              {group.answers.map((item, itemIndex) => (
-                <li
-                  id={`frequent-question-${itemIndex}`}
-                  key={item.slug}
-                  data-testid="frequent-question-item"
-                >
+            <ul id={`frequent-questions-list-${index}`}>
+              {group.answers.map((item) => (
+                <li key={item.slug} data-testid="frequent-question-item">
                   <a
                     href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${item.slug}`}
                     data-testid={`frequent-question-link-${item.slug}`}
