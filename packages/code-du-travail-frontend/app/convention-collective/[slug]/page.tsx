@@ -6,6 +6,7 @@ import { searchAgreement } from "src/modules/convention-collective";
 import { getBySlugAgreements } from "src/api";
 import { AgreementContainer } from "src/modules/convention-collective/AgreementContainer";
 import { fetchRelatedItems } from "src/modules/documents";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 
 export async function generateMetadata({ params }) {
   const agreement = await getBySlugAgreements(params.slug);
@@ -25,9 +26,48 @@ async function Page({ params }) {
     params.slug
   );
 
+  const articlesIndex = relatedItems.findIndex(
+    (item) => item.title === "Articles liés"
+  );
+
+  const staticArticles = [
+    {
+      source: SOURCES.SHEET_SP,
+      title: "Convention collective",
+      url: "/fiche-service-public/convention-collective",
+    },
+    {
+      source: SOURCES.SHEET_SP,
+      title: "Comment consulter un accord d'entreprise ?",
+      url: "/fiche-service-public/comment-consulter-un-accord-dentreprise",
+    },
+    {
+      source: SOURCES.LABOUR_LAW,
+      title: "Droit du travail: Existe-t-il une hiérarchie entre les textes ?",
+      url: "/droit-du-travail#hierarchie",
+    },
+  ];
+
+  const augmentedRelatedItems = [...relatedItems];
+
+  if (articlesIndex !== -1) {
+    augmentedRelatedItems[articlesIndex] = {
+      ...augmentedRelatedItems[articlesIndex],
+      items: [...staticArticles, ...augmentedRelatedItems[articlesIndex].items],
+    };
+  } else {
+    augmentedRelatedItems.push({
+      title: "Articles liés",
+      items: staticArticles,
+    });
+  }
+
   return (
     <DsfrLayout>
-      <AgreementContainer agreement={agreement} relatedItems={relatedItems} />
+      <AgreementContainer
+        agreement={agreement}
+        relatedItems={augmentedRelatedItems}
+      />
     </DsfrLayout>
   );
 }
