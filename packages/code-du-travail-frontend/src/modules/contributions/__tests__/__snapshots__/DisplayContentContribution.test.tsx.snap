@@ -54,10 +54,10 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                       class="fr-accordion__title"
                     >
                       <button
-                        aria-controls="1235-collapse"
+                        aria-controls="conges-payes_1233-collapse"
                         aria-expanded="false"
                         class="fr-accordion__btn"
-                        id="1235__toggle-btn"
+                        id="conges-payes_1233__toggle-btn"
                         type="button"
                       >
                         Congés payés
@@ -65,7 +65,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                     </h4>
                     <div
                       class="fr-collapse"
-                      id="1235-collapse"
+                      id="conges-payes_1233-collapse"
                     >
                       <div>
                         <div
@@ -82,10 +82,10 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                                 class="fr-accordion__title"
                               >
                                 <button
-                                  aria-controls="1232-collapse"
+                                  aria-controls="dates-des-conges-fixees-avant-la-notification-du-licenciement_1230-collapse"
                                   aria-expanded="false"
                                   class="fr-accordion__btn"
-                                  id="1232__toggle-btn"
+                                  id="dates-des-conges-fixees-avant-la-notification-du-licenciement_1230__toggle-btn"
                                   type="button"
                                 >
                                   
@@ -95,7 +95,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                               </h5>
                               <div
                                 class="fr-collapse"
-                                id="1232-collapse"
+                                id="dates-des-conges-fixees-avant-la-notification-du-licenciement_1230-collapse"
                               >
                                 <div>
                                   <p
@@ -118,10 +118,10 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                                 class="fr-accordion__title"
                               >
                                 <button
-                                  aria-controls="1233-collapse"
+                                  aria-controls="dates-des-conges-fixees-apres-la-notification-du-licenciement_1231-collapse"
                                   aria-expanded="false"
                                   class="fr-accordion__btn"
-                                  id="1233__toggle-btn"
+                                  id="dates-des-conges-fixees-apres-la-notification-du-licenciement_1231__toggle-btn"
                                   type="button"
                                 >
                                   
@@ -131,7 +131,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                               </h5>
                               <div
                                 class="fr-collapse"
-                                id="1233-collapse"
+                                id="dates-des-conges-fixees-apres-la-notification-du-licenciement_1231-collapse"
                               >
                                 <div>
                                   <p
@@ -155,10 +155,10 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                                 class="fr-accordion__title"
                               >
                                 <button
-                                  aria-controls="1234-collapse"
+                                  aria-controls="licenciement-notifie-pendant-les-conges-payes_1232-collapse"
                                   aria-expanded="false"
                                   class="fr-accordion__btn"
-                                  id="1234__toggle-btn"
+                                  id="licenciement-notifie-pendant-les-conges-payes_1232__toggle-btn"
                                   type="button"
                                 >
                                   Licenciement notifié pendant les congés payés
@@ -166,7 +166,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
                               </h5>
                               <div
                                 class="fr-collapse"
-                                id="1234-collapse"
+                                id="licenciement-notifie-pendant-les-conges-payes_1232-collapse"
                               >
                                 <div>
                                   <p
@@ -283,10 +283,10 @@ exports[`DisplayContentContribution Accordions should replace details element wi
                     class="fr-accordion__title"
                   >
                     <button
-                      aria-controls="1236-collapse"
+                      aria-controls="ceci-est-un-sous-titre_1234-collapse"
                       aria-expanded="false"
                       class="fr-accordion__btn"
-                      id="1236__toggle-btn"
+                      id="ceci-est-un-sous-titre_1234__toggle-btn"
                       type="button"
                     >
                       Ceci est un sous titre
@@ -294,7 +294,7 @@ exports[`DisplayContentContribution Accordions should replace details element wi
                   </h4>
                   <div
                     class="fr-collapse"
-                    id="1236-collapse"
+                    id="ceci-est-un-sous-titre_1234-collapse"
                   >
                     <div>
                       <p
@@ -877,25 +877,37 @@ exports[`DisplayContentContribution Tables should render correctly a table with 
                     colspan="1"
                     rowspan="1"
                   >
+                    
+        
                     <p>
                       Remplacement d’un salarié absent ou dont le contrat de travail est suspendu
                     </p>
+                    
+      
                   </td>
                   <td
                     colspan="1"
                     rowspan="1"
                   >
+                    
+        
                     <p>
                       18 mois
                     </p>
+                    
+      
                   </td>
                   <td
                     colspan="1"
                     rowspan="1"
                   >
+                    
+        
                     <p>
                       Fin de l’absence
                     </p>
+                    
+      
                   </td>
                 </tr>
               </tbody>
