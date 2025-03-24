@@ -15,8 +15,8 @@ import { FicheServicePublic } from "../fiche-service-public/builder";
 import ImageWrapper from "../common/ImageWrapper";
 import { Tile } from "@codegouvfr/react-dsfr/Tile";
 import Link from "../common/Link";
+import { slugify } from "@socialgouv/cdtn-utils";
 
-const DEFAULT_HEADING_LEVEL = 3;
 export type numberLevel = 2 | 3 | 4 | 5 | 6;
 
 export const ContentSP = ({ raw, titleLevel }) => {
@@ -56,7 +56,7 @@ const mapItem = (
     trim: true,
   }),
 });
-const mapToAccordion = (titleLevel: numberLevel, items) => {
+const mapToAccordion = (titleLevel: numberLevel, isParent: boolean, items) => {
   const props = titleLevel <= 6 ? { titleLevel } : {};
 
   return (
@@ -66,9 +66,9 @@ const mapToAccordion = (titleLevel: numberLevel, items) => {
         data-testid="contrib-accordion"
         items={items.map((item) => ({
           ...item,
-          ...(titleLevel === DEFAULT_HEADING_LEVEL
-            ? { id: undefined }
-            : { id: generateUUID() }),
+          ...(isParent
+            ? { id: slugify(item.title) }
+            : { id: slugify(item.title) + "_" + generateUUID() }),
         }))}
         titleAs={`h${titleLevel}`}
       />
@@ -90,6 +90,17 @@ function getNextFirstElement(domNode: Element) {
     next = next.next;
   }
   return next;
+}
+
+function hasDetailsParent(domNode: Element) {
+  let parent = domNode.parent;
+  while (parent) {
+    if (parent.type === "tag" && parent.name === "details") {
+      return true;
+    }
+    parent = parent.parent;
+  }
+  return false;
 }
 
 const theadMaxRowspan = (tr: Element) => {
@@ -168,9 +179,7 @@ const mapTbody = (tbody: Element) => {
                   </thead>
                 </>
               )}
-              <tbody>
-                {domToReact(tbody.children as DOMNode[], { trim: true })}
-              </tbody>
+              <tbody>{renderChildrenWithNoTrim(tbody)}</tbody>
             </table>
           </div>
         </div>
@@ -234,8 +243,13 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
             }
             next = getNextFirstElement(next);
           }
+
           return items.length ? (
-            mapToAccordion(accordionTitleLevel, items)
+            mapToAccordion(
+              accordionTitleLevel,
+              !hasDetailsParent(domNode),
+              items
+            )
           ) : (
             <></>
           );
@@ -299,7 +313,6 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
           );
         }
         if (domNode.name === "strong") {
-          // Disable trim on strong
           return <strong>{renderChildrenWithNoTrim(domNode)}</strong>;
         }
         if (domNode.name === "ul") {
@@ -310,14 +323,12 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
           );
         }
         if (domNode.name === "em") {
-          // Disable trim on em
           return <em>{renderChildrenWithNoTrim(domNode)}</em>;
         }
         if (domNode.name === "p") {
           if (!domNode.children.length) {
             return <br />;
           }
-          // Disable trim on p
           return (
             <p
               className={
