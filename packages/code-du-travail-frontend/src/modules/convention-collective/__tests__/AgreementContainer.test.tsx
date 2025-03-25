@@ -80,7 +80,7 @@ describe("AgreementContainer", () => {
     shortTitle: "Test Agreement",
     title: "Full Test Agreement Title",
     num: "1234",
-    url: "https://legifrance.gouv.fr/test",
+    url: "https://legifrance.gouv.fr/abc?idConvention=test",
     date_publi: "2022-01-01",
     breadcrumbs: [{ label: "Category", slug: "/category", position: 1 }],
     metaDescription: "Test description",
@@ -146,7 +146,7 @@ describe("AgreementContainer", () => {
     expect(legifranceLink).toBeInTheDocument();
     expect(legifranceLink).toHaveAttribute(
       "href",
-      "https://legifrance.gouv.fr/test"
+      "https://www.legifrance.gouv.fr/conv_coll/id/test"
     );
   });
 
