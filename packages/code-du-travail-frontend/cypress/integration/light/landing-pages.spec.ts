@@ -9,7 +9,7 @@ describe("Landing pages", () => {
     );
     cy.get("body").should(
       "contain",
-      "Retrouver l'intégralité de la convention collective sur Légifrance"
+      "Retrouvez l'intégralité de la convention collective sur Légifrance"
     );
     cy.get("body").should("contain", "Entrée en vigueur le 01/01/1993");
   });
