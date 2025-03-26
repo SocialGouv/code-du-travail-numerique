@@ -34,25 +34,23 @@ export function AgreementContainer({ agreement, relatedItems }: Props) {
       description={agreement.metaDescription}
     >
       <h1 data-testid="agreement-title">{agreement.shortTitle}</h1>
-      <p data-testid="agreement-full-title">
-        {agreement.title}
-        {agreement.date_publi && (
-          <small data-testid="agreement-date">
-            {" - "}
-            Entrée en vigueur le{" "}
-            {format(parseISO(agreement.date_publi), "dd/MM/yyyy", {
-              locale: frLocale,
-            })}
-          </small>
-        )}
-      </p>
+      <p data-testid="agreement-full-title">{agreement.title}</p>
+      {agreement.date_publi && (
+        <p data-testid="agreement-date">
+          {" - "}
+          Entrée en vigueur le{" "}
+          {format(parseISO(agreement.date_publi), "dd/MM/yyyy", {
+            locale: frLocale,
+          })}
+        </p>
+      )}
       <a
         href={`https://www.legifrance.gouv.fr/conv_coll/id/${getIdConvention(agreement.url)}`}
         target="_blank"
         className={fr.cx("fr-link")}
         data-testid="agreement-legifrance-link"
       >
-        Retrouver l&apos;intégralité de la convention collective sur Légifrance
+        Retrouvez l&apos;intégralité de la convention collective sur Légifrance
       </a>
 
       <FrequentQuestions answers={agreement.answers} />

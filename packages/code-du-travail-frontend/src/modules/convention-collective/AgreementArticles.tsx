@@ -53,11 +53,11 @@ export function AgreementArticles({ articlesByTheme, containerId }: Props) {
         data-testid="agreement-articles-highlight"
       >
         <p>
-          Les thèmes sélectionnés par le ministère du Travail sont les thèmes
-          pour lesquels la convention collective s&apos;applique à votre
-          situation. Cela signifie que même s&apos;il existe un accord
-          d&apos;entreprise sur ces thèmes, celui-ci ne peut prévoir de règles
-          différentes de celles prévues par la convention collective.
+          Les thèmes sélectionnés sont les thèmes pour lesquels la convention
+          collective s&apos;applique à votre situation. Cela signifie que même
+          s&apos;il existe un accord d&apos;entreprise sur ces thèmes, celui-ci
+          ne peut prévoir de règles différentes de celles prévues par la
+          convention collective.
         </p>
         <p>
           En effet, selon la loi, il existe 13 thèmes dans lesquels
