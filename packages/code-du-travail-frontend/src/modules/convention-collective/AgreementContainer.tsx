@@ -37,7 +37,6 @@ export function AgreementContainer({ agreement, relatedItems }: Props) {
       <p data-testid="agreement-full-title">{agreement.title}</p>
       {agreement.date_publi && (
         <p data-testid="agreement-date">
-          {" - "}
           Entrée en vigueur le{" "}
           {format(parseISO(agreement.date_publi), "dd/MM/yyyy", {
             locale: frLocale,
