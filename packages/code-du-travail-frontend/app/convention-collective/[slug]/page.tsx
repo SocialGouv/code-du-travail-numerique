@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
   const agreement = await getBySlugAgreements(params.slug);
 
   return generateDefaultMetadata({
-    title: agreement?.title ?? "",
+    title: `Convention collective : ${agreement?.shortTitle ?? agreement?.title}`,
     description: agreement?.metaDescription ?? "",
     path: `/convention-collective/${params.slug}`,
     robots: agreement?.url ? undefined : "noindex, nofollow",

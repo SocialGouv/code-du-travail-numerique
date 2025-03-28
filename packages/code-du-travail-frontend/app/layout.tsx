@@ -7,7 +7,7 @@ import DefaultLayout from "../src/modules/config/DefaultLayout";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s  - Code du travail numérique",
+    template: "%s - Code du travail numérique",
     default: "Code du travail numérique",
   },
   description:
