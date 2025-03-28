@@ -36,63 +36,45 @@ describe("Conventions collectives", () => {
       cy.visit(
         "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"
       );
-      cy.get('[data-accordion-component="Accordion"]')
-        .eq(0)
-        .find('[data-accordion-component="AccordionItemButton"]')
-        .should("have.length", 6);
 
-      cy.get('[data-accordion-component="Accordion"]')
-        .eq(0)
-        .find('[data-accordion-component="AccordionItemButton"]')
-        .first()
-        .should("have.text", "Congés et repos");
-      cy.get('[data-accordion-component="Accordion"]')
-        .eq(0)
-        .find('[data-accordion-component="AccordionItem"] a')
-        .should("have.length", 40);
-      cy.get('[data-accordion-component="Accordion"]')
-        .eq(0)
-        .find('[data-accordion-component="AccordionItem"] a')
-        .first()
-        .contains(
-          "Quelles sont les conditions d’indemnisation pendant le congé de maternité"
-        );
+      cy.get("#frequent-questions").should("exist");
+      cy.get("#frequent-questions h2").should(
+        "have.text",
+        "Questions-réponses fréquentes"
+      );
 
-      cy.get('[data-accordion-component="Accordion"]')
-        .eq(1)
-        .find('[data-accordion-component="AccordionItemButton"]')
-        .should("have.length", 1);
-      cy.get('[data-accordion-component="Accordion"]')
-        .eq(1)
-        .find('[data-accordion-component="AccordionItemButton"]')
-        .first()
-        .should("have.text", "En savoir plus");
+      cy.get("#frequent-questions .fr-accordion__btn").should("have.length", 6);
 
-      cy.get('[data-accordion-component="Accordion"]')
-        .eq(2)
-        .find('[data-accordion-component="AccordionItemButton"]')
-        .should("have.length", 3);
-      cy.get('[data-accordion-component="Accordion"]')
-        .eq(2)
-        .find('[data-accordion-component="AccordionItemButton"]')
+      cy.get("#frequent-questions .fr-accordion__btn")
         .first()
-        .should("have.text", "Salaires minima hiérarchiques");
-      cy.get('[data-accordion-component="Accordion"]')
-        .eq(2)
-        .find('[data-accordion-component="AccordionItem"] a')
-        .should("have.length", 46);
+        .should("contain", "Congés et repos");
 
-      cy.get('[data-accordion-component="Accordion"]')
-        .eq(0)
-        .find('[data-accordion-component="AccordionItemButton"]')
+      cy.get("#frequent-questions .fr-accordion__btn").first().click();
+
+      cy.get("#frequent-questions-list-0").should("exist");
+
+      cy.get("#frequent-questions-list-0 li").should("have.length", 6);
+
+      cy.get("#agreement-articles").should("exist");
+
+      cy.get("#agreement-articles h2").should(
+        "have.text",
+        "Articles de la convention collective"
+      );
+
+      cy.get("#agreement-articles .fr-accordion__title").should(
+        "have.length",
+        3
+      );
+
+      cy.get("#agreement-articles .fr-accordion__title")
         .first()
-        .click();
-      cy.get('[data-accordion-component="AccordionItem"] a')
-        .first()
-        .contains(
-          "Quelles sont les conditions d’indemnisation pendant le congé de maternité"
-        )
-        .click();
+        .should("have.text", "Salaires minima hiérarchiques");
+
+      cy.get("#agreement-articles a").should("have.length", 49);
+
+      cy.get("#frequent-questions-list-0 a").first().click();
+
       cy.urlEqual(
         "/contribution/2941-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
       );

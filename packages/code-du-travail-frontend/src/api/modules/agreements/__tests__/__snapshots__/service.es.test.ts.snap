@@ -57,6 +57,7 @@ exports[`Agreements getByIdsAgreements 1`] = `
 
 exports[`Agreements getBySlugAgreements 1`] = `
 {
+  "_id": "19",
   "answers": [
     {
       "answer": "<p>Pour <strong>le personnel de fabrication, le personnel de vente et le personnel de services</strong>, la durée de la période d'essai a été fixée par une convention collective conclue avant le 26 juin 2008 :</p>

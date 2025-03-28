@@ -18,7 +18,10 @@ const formatCCn = ({
 export const onlyNumberError =
   "Numéro d’indentification (IDCC) incorrect. Ce numéro est composé de 4 chiffres uniquement.";
 
-const apiIdcc = function createFetcher(query: string): Promise<Agreement[]> {
+const apiIdcc = function createFetcher(
+  query: string,
+  isStrict = false
+): Promise<Agreement[]> {
   if (/^\d{4}[A-Za-z]$/.test(query.replace(/\W/g, ""))) {
     return Promise.reject(nafError);
   }
@@ -27,7 +30,7 @@ const apiIdcc = function createFetcher(query: string): Promise<Agreement[]> {
   }
   let url = `${SITE_URL}/api/idcc?q=${encodeURIComponent(query)}`;
 
-  if (/^\d+$/.test(query.replace(/\W/g, ""))) {
+  if (/^\d+$/.test(query.replace(/\W/g, "")) && !isStrict) {
     url = `${SITE_URL}/api/idcc?q=${encodeURIComponent(parseInt(query.replace(/\W/g, "")))}&size=10`;
   }
   return fetch(url)
