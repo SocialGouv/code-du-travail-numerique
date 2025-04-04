@@ -8,7 +8,7 @@ describe("Widgets", () => {
     );
 
     cy.get("button").contains("Commencer").click();
-    cy.contains("Qui est à l’origine du départ en retraite");
+    cy.contains("Qui est à l'origine du départ en retraite");
   });
 
   it("Page widget preavis de licenciement", () => {

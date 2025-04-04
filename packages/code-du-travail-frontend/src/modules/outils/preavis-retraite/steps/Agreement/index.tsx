@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { PreavisRetraiteContext, usePreavisRetraiteStore } from "../store";
 import { CommonAgreementStep } from "src/modules/outils/indemnite-depart/steps/Agreement/components/AgreementStep";
-import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 const StepAgreement = (): JSX.Element => {
   const store = useContext(PreavisRetraiteContext);

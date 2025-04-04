@@ -76,6 +76,7 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
     onRouteChange: (value) => {
       if (value === "not-selected") {
         try {
+          applyGenericValidation(get, set, "agreement", undefined);
           removeAgreementFromLocalStorage();
           get().informationsFunction.generatePublicodesQuestions();
           set(
@@ -102,6 +103,7 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
     },
     onAgreementChange: (agreement, enterprise) => {
       applyGenericValidation(get, set, "agreement", agreement);
+      saveAgreementToLocalStorage(agreement);
       try {
         applyGenericValidation(get, set, "enterprise", enterprise);
         const idcc = agreement?.num?.toString();

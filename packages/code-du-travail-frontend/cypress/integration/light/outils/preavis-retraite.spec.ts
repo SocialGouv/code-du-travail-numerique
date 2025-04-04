@@ -9,7 +9,7 @@ describe("Outil - Préavis de retraite", () => {
     cy.contains("Commencer").click();
 
     // Origine du départ à la retraite
-    cy.contains("Qui est à l’origine du départ en retraite ?");
+    cy.contains("Qui est à l'origine du départ en retraite ?");
     cy.get("button").contains("Suivant").click();
     cy.contains("Vous devez répondre à cette question");
     cy.get(
@@ -83,7 +83,7 @@ describe("Outil - Préavis de retraite", () => {
       "Durée prévue par la convention collective (durée conventionnelle) : convention collective non renseignée"
     );
     cy.contains(
-      "La convention collective n’ayant pas été renseignée, la durée de préavis affichée correspond à la durée légale."
+      "La convention collective n'ayant pas été renseignée, la durée de préavis affichée correspond à la durée légale."
     );
   });
 
@@ -103,12 +103,12 @@ describe("Outil - Préavis de retraite", () => {
     // Convention collective
     cy.contains("Quel est le nom de la convention collective applicable ?");
     cy.get(
-      'label:contains("Je sais quelle est ma convention collective (je la saisis)")'
+      'label:contains("Je sais quelle est ma convention collective et je la saisis.")'
     )
       .first()
       .click();
     cy.contains("Précisez et sélectionnez votre convention collective");
-    cy.get("#agreement-search").type("843");
+    cy.get('input[type="search"]').eq(1).type("843");
     cy.get('ul[role="listbox"] li').contains("Boulangerie").click();
     cy.get("button").contains("Suivant").click();
 
@@ -159,42 +159,42 @@ describe("Outil - Préavis de retraite", () => {
     // Convention collective
     cy.contains("Quel est le nom de la convention collective applicable ?");
     cy.get(
-      'label:contains("Je ne sais pas quelle est ma convention collective (je la recherche)")'
+      'label:contains("Je ne sais pas quelle est ma convention collective et je la recherche.")'
     )
       .first()
       .click();
-    cy.contains("Précisez et sélectionnez votre entreprise");
+    cy.contains("Précisez votre entreprise");
     cy.get("button").contains("Suivant").click();
     cy.contains("Vous devez sélectionner une entreprise");
-    cy.get("#enterprise-search").type("CARREFOUR BANQUE", { delay: 0 });
+    cy.selectByLabel("Nom de votre entreprise ou numéro Siren/Siret").type(
+      "CARREFOUR BANQUE"
+    );
     cy.get('button[type="submit"]').last().click();
     cy.contains("CARREFOUR BANQUE").click();
+    cy.contains("2 conventions collectives trouvées");
+    cy.contains("Sociétés financières IDCC 0478");
+    cy.contains("Banque IDCC 2120");
+    cy.get('label:contains("Sociétés financières IDCC 0478")').first().click();
     cy.contains("Vous devez sélectionner une entreprise").should("not.exist");
-    cy.contains(
-      "2 conventions collectives ont été trouvées pour cette entreprise"
+    cy.contains("Nous n'avons pas de réponse pour cette convention collective");
+    cy.get("button").contains("Modifier").click();
+    cy.selectByLabel("Nom de votre entreprise ou numéro Siren/Siret").clear();
+    cy.selectByLabel("Nom de votre entreprise ou numéro Siren/Siret").type(
+      "boursorama"
     );
-    cy.contains("Sociétés financières (IDCC 0478)");
-    cy.contains("Banque (IDCC 2120)");
-    cy.get('label:contains("Sociétés financières (IDCC 0478)")')
-      .first()
-      .click();
-    cy.contains("Cliquez sur Suivant pour poursuivre la simulation.");
-    cy.get('[aria-label="Fermer"]').click();
-    cy.get("#enterprise-search").clear();
-    cy.get("#enterprise-search").type("boursorama", { delay: 0 });
-    cy.get("#enterprise-search-address").type("9210");
-    cy.get("#enterprise-search-address").type("0{downArrow}{enter}", {
-      delay: 3000,
-      force: true,
-    });
+    cy.selectByLabel("Code postal ou Ville (optionnel)").type("9210");
+    cy.selectByLabel("Code postal ou Ville (optionnel)").type(
+      "0{downArrow}{enter}",
+      {
+        delay: 2000,
+        force: true,
+      }
+    );
     cy.get('button[type="submit"]').last().click();
     cy.contains(
       "BOURSORAMA (BOURSORAMA - BOURSORAMA BANQUE - BOURSOBANK)"
     ).click();
-    cy.contains(
-      "Une convention collective a été trouvée pour cette entreprise"
-    );
-    cy.contains("Cliquez sur Suivant pour poursuivre la simulation.");
+    cy.contains("Vous avez sélectionné la convention collective");
 
     cy.get("button").contains("Suivant").click();
 
@@ -214,7 +214,7 @@ describe("Outil - Préavis de retraite", () => {
       "Durée prévue par la convention collective (durée conventionnelle) : pas de préavis"
     );
     cy.contains(
-      "En l’absence de durée prévue par la convention collective, la durée de préavis à appliquer pour le salarié est donc la durée légale."
+      "En l'absence de durée prévue par la convention collective, la durée de préavis à appliquer pour le salarié est donc la durée légale."
     );
   });
 });

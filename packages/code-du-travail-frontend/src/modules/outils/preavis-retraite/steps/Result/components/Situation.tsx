@@ -52,9 +52,9 @@ const Situation: React.FC<Props> = ({
           >
             {info.label}&nbsp;:&nbsp;
             <strong>
-              {info.value.replace(/^&apos;|&apos;$/g, "")}
+              {info.value.replace(/^'|'$/g, "")}
               {info.label === "Travailleur handicapé" &&
-                info.value === "&apos;Oui&apos;" && <sup>*</sup>}
+                info.value === "'Oui'" && <sup>*</sup>}
             </strong>
             &nbsp;
             {publicodesUnitTranslator(

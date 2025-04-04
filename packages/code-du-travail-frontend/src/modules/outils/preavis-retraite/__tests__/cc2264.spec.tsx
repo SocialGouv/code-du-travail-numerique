@@ -1,5 +1,5 @@
-import { CalculateurPreavisRetraite } from "../..";
-import { UserAction } from "../../../common";
+import { UserAction } from "../../common/utils/UserAction";
+import { CalculateurPreavisRetraite } from "../PreavisRetraiteSimulator";
 import { ui } from "./ui";
 
 import { render } from "@testing-library/react";
@@ -22,9 +22,7 @@ Storage.prototype.getItem = jest.fn(
 );
 
 test(`5 ans minimum pour la question pour la CC 2264`, async () => {
-  await render(
-    <CalculateurPreavisRetraite icon={""} title={""} displayTitle={""} />
-  );
+  await render(<CalculateurPreavisRetraite title="Préavis de retraite" />);
   const userAction = new UserAction();
 
   expect(ui.introduction.startButton.query()).toBeInTheDocument();
@@ -76,7 +74,7 @@ test(`5 ans minimum pour la question pour la CC 2264`, async () => {
   expect(ui.result.noticeWarning.get()).toHaveTextContent(
     "Attention il peut exister une durée plus favorable"
   );
-  expect(ui.result.noticeWarning.get()).toHaveTextContent(
-    "Un accord collectif d’entreprise, le contrat de travail ou un usage peut prévoir une durée de préavis* ou une condition d’ancienneté* plus favorable pour le salarié. Dans ce cas, c’est cette durée ou cette ancienneté plus favorable qui s’applique au salarié."
+  expect(ui.result.noticeWarningDescription.get()).toHaveTextContent(
+    "Un accord collectif d'entreprise, le contrat de travail ou un usage peut prévoir une durée de préavis(1) ou une condition d'ancienneté(2) plus favorable pour le salarié. Dans ce cas, c'est cette durée ou cette ancienneté plus favorable qui s'applique au salarié."
   );
 });

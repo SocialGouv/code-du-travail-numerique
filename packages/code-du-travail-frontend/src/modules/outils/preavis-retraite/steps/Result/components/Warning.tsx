@@ -20,12 +20,12 @@ const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
     <Alert
       severity="warning"
       title={hasNotice ? titreFavorable : titrePreavis}
-      data-testid="preavis-warning"
+      data-testid="notice-warning"
       description={
         <>
           {type === WarningType.noNoticeWithAgreement ? (
             <>
-              <p>
+              <p data-testid="notice-warning-description">
                 Un accord collectif d&apos;entreprise, le contrat de travail ou
                 un usage peut prévoir une durée de préavis. Dans ce cas, cette
                 durée doit s&apos;appliquer.
@@ -34,7 +34,7 @@ const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
             </>
           ) : type === WarningType.noNoticeWithoutAgreement ? (
             <>
-              <p>
+              <p data-testid="notice-warning-description">
                 Une convention collective de branche, un accord collectif
                 d&apos;entreprise, le contrat de travail ou un usage peut
                 prévoir une durée de préavis. Dans ce cas, cette durée doit
@@ -44,126 +44,126 @@ const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
             </>
           ) : type === WarningType.departWithAgreement ? (
             <>
-              <p>
+              <p data-testid="notice-warning-description">
                 Un accord collectif d&apos;entreprise, le contrat de travail ou
                 un usage peut prévoir une durée de préavis
-                <sup>*</sup> ou une condition d&apos;ancienneté<sup>*</sup> plus
-                favorable pour le salarié. Dans ce cas, c&apos;est cette durée
-                ou cette ancienneté plus favorable qui s&apos;applique au
+                <sup>(1)</sup> ou une condition d&apos;ancienneté<sup>(2)</sup>{" "}
+                plus favorable pour le salarié. Dans ce cas, c&apos;est cette
+                durée ou cette ancienneté plus favorable qui s&apos;applique au
                 salarié.
               </p>
 
               <p className={fr.cx("fr-text--xs")}>
-                <sup>*</sup>&nbsp;durée de préavis plus favorable pour le
+                <sup>(1)</sup>&nbsp;durée de préavis plus favorable pour le
                 salarié = durée plus courte.
               </p>
               <p className={fr.cx("fr-text--xs")}>
-                <sup>*</sup>&nbsp;condition d&apos;ancienneté plus favorable
+                <sup>(2)</sup>&nbsp;condition d&apos;ancienneté plus favorable
                 pour le salarié = condition d&apos;ancienneté moins restrictive
                 et conduisant à une durée de préavis plus courte.
               </p>
             </>
           ) : type === WarningType.miseWithAgreement ? (
             <>
-              <p>
+              <p data-testid="notice-warning-description">
                 Un accord collectif d&apos;entreprise, le contrat de travail ou
                 un usage peut prévoir une durée de préavis
-                <sup>*</sup> ou une condition d&apos;ancienneté<sup>*</sup> plus
-                favorable pour le salarié. Dans ce cas, c&apos;est cette durée
-                ou cette ancienneté plus favorable qui s&apos;applique au
+                <sup>(1)</sup> ou une condition d&apos;ancienneté<sup>(2)</sup>{" "}
+                plus favorable pour le salarié. Dans ce cas, c&apos;est cette
+                durée ou cette ancienneté plus favorable qui s&apos;applique au
                 salarié.
               </p>
 
               <p className={fr.cx("fr-text--xs")}>
-                <sup>*</sup>&nbsp;durée de préavis plus favorable pour le
+                <sup>(1)</sup>&nbsp;durée de préavis plus favorable pour le
                 salarié = durée plus longue.
               </p>
               <p className={fr.cx("fr-text--xs")}>
-                <sup>*</sup>&nbsp;condition d&apos;ancienneté plus favorable
+                <sup>(2)</sup>&nbsp;condition d&apos;ancienneté plus favorable
                 pour le salarié = condition d&apos;ancienneté moins restrictive
                 et conduisant à une durée de préavis plus longue.
               </p>
             </>
           ) : type === WarningType.departWithoutAgreement ? (
             <>
-              <p>
+              <p data-testid="notice-warning-description">
                 Une convention collective de branche, un accord collectif
                 d&apos;entreprise, le contrat de travail ou un usage peut
-                prévoir une durée de préavis<sup>*</sup> ou une condition
+                prévoir une durée de préavis<sup>(1)</sup> ou une condition
                 d&apos;ancienneté
-                <sup>*</sup> plus favorable pour le salarié. Dans ce cas,
+                <sup>(2)</sup> plus favorable pour le salarié. Dans ce cas,
                 c&apos;est cette durée ou cette ancienneté plus favorable qui
                 s&apos;applique au salarié.
               </p>
 
               <p className={fr.cx("fr-text--xs")}>
-                <sup>*</sup>&nbsp;durée de préavis plus favorable pour le
+                <sup>(1)</sup>&nbsp;durée de préavis plus favorable pour le
                 salarié = durée plus courte.
               </p>
               <p className={fr.cx("fr-text--xs")}>
-                <sup>*</sup>&nbsp;condition d&apos;ancienneté plus favorable
+                <sup>(2)</sup>&nbsp;condition d&apos;ancienneté plus favorable
                 pour le salarié = condition d&apos;ancienneté moins restrictive
                 et conduisant à une durée de préavis plus courte.
               </p>
             </>
           ) : type === WarningType.miseWithoutAgreement ? (
             <>
-              <p>
+              <p data-testid="notice-warning-description">
                 Une convention collective de branche, un accord collectif
                 d&apos;entreprise, le contrat de travail ou un usage peut
-                prévoir une durée de préavis<sup>*</sup> ou une condition
+                prévoir une durée de préavis<sup>(1)</sup> ou une condition
                 d&apos;ancienneté
-                <sup>*</sup> plus favorable pour le salarié. Dans ce cas,
+                <sup>(2)</sup> plus favorable pour le salarié. Dans ce cas,
                 c&apos;est cette durée ou cette ancienneté plus favorable qui
                 s&apos;applique au salarié.
               </p>
 
               <p className={fr.cx("fr-text--xs")}>
-                <sup>*</sup>&nbsp;durée de préavis plus favorable pour le
+                <sup>(1)</sup>&nbsp;durée de préavis plus favorable pour le
                 salarié = durée plus longue.
               </p>
               <p className={fr.cx("fr-text--xs")}>
-                <sup>*</sup>&nbsp;condition d&apos;ancienneté plus favorable
+                <sup>(2)</sup>&nbsp;condition d&apos;ancienneté plus favorable
                 pour le salarié = condition d&apos;ancienneté moins restrictive
                 et conduisant à une durée de préavis plus longue.
               </p>
             </>
           ) : type === WarningType.miseWithoutCollectiveAgreement ? (
             <>
-              <p>
+              <p data-testid="notice-warning-description">
                 Le contrat de travail ou un usage peut prévoir une durée de
                 préavis
-                <sup>*</sup> ou une condition d&apos;ancienneté<sup>*</sup> plus
-                favorable pour le salarié. Dans ce cas, c&apos;est cette durée
-                ou cette ancienneté plus favorable qui s&apos;applique au
+                <sup>(1)</sup> ou une condition d&apos;ancienneté<sup>(2)</sup>{" "}
+                plus favorable pour le salarié. Dans ce cas, c&apos;est cette
+                durée ou cette ancienneté plus favorable qui s&apos;applique au
                 salarié.
               </p>
               <p className={fr.cx("fr-text--xs")}>
-                <sup>*</sup>&nbsp;durée de préavis plus favorable pour le
+                <sup>(1)</sup>&nbsp;durée de préavis plus favorable pour le
                 salarié = durée plus longue.
               </p>
               <p className={fr.cx("fr-text--xs")}>
-                <sup>*</sup>&nbsp;condition d&apos;ancienneté plus favorable
+                <sup>(2)</sup>&nbsp;condition d&apos;ancienneté plus favorable
                 pour le salarié = condition d&apos;ancienneté moins restrictive
                 et conduisant à une durée de préavis plus longue.
               </p>
             </>
           ) : type === WarningType.departWithoutCollectiveAgreement ? (
             <>
-              <p>
+              <p data-testid="notice-warning-description">
                 Le contrat de travail ou un usage peut prévoir une durée de
                 préavis
-                <sup>*</sup> ou une condition d&apos;ancienneté<sup>*</sup> plus
-                favorable pour le salarié. Dans ce cas, c&apos;est cette durée
-                ou cette ancienneté plus favorable qui s&apos;applique au
+                <sup>(1)</sup> ou une condition d&apos;ancienneté<sup>(2)</sup>{" "}
+                plus favorable pour le salarié. Dans ce cas, c&apos;est cette
+                durée ou cette ancienneté plus favorable qui s&apos;applique au
                 salarié.
               </p>
               <p className={fr.cx("fr-text--xs")}>
-                <sup>*</sup>&nbsp;durée de préavis plus favorable pour le
+                <sup>(1)</sup>&nbsp;durée de préavis plus favorable pour le
                 salarié = durée plus courte.
               </p>
               <p className={fr.cx("fr-text--xs")}>
-                <sup>*</sup>&nbsp;condition d&apos;ancienneté plus favorable
+                <sup>(2)</sup>&nbsp;condition d&apos;ancienneté plus favorable
                 pour le salarié = condition d&apos;ancienneté moins restrictive
                 et conduisant à une durée de préavis plus courte.
               </p>

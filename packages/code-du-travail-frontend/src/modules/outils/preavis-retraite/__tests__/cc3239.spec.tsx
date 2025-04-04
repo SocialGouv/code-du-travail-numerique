@@ -1,5 +1,5 @@
-import { CalculateurPreavisRetraite } from "../..";
-import { UserAction } from "../../../common";
+import { UserAction } from "../../common/utils/UserAction";
+import { CalculateurPreavisRetraite } from "../PreavisRetraiteSimulator";
 import { ui } from "./ui";
 
 import { render } from "@testing-library/react";
@@ -19,9 +19,7 @@ Storage.prototype.getItem = jest.fn(
 );
 
 test(`Mise à la retraite pour la CC 3239 impossible`, async () => {
-  await render(
-    <CalculateurPreavisRetraite icon={""} title={""} displayTitle={""} />
-  );
+  await render(<CalculateurPreavisRetraite title="Préavis de retraite" />);
   const userAction = new UserAction();
 
   expect(ui.introduction.startButton.query()).toBeInTheDocument();

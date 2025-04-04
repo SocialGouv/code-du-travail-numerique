@@ -14,7 +14,6 @@ import {
   DureePreavisDemission,
   DureePreavisLicenciement,
   SimulateurIndemnitePrecarite,
-  CalculateurPreavisRetraite,
 } from "../../src/outils";
 import Metas from "../../src/common/Metas";
 import { SITE_URL } from "../../src/config";
@@ -22,7 +21,6 @@ import { getBySlugTools } from "../../src/api";
 
 const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
-  "preavis-retraite": CalculateurPreavisRetraite,
   "procedure-licenciement": DismissalProcess,
   "indemnite-licenciement": CalculateurIndemniteLicenciement,
   "indemnite-precarite": SimulateurIndemnitePrecarite,
