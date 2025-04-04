@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.177.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.176.0...v4.177.0) (2025-04-04)
+
+
+### Features
+
+* ajout des redirections de 2717 et 2397 vers 3252 ([#6521](https://github.com/SocialGouv/code-du-travail-numerique/issues/6521)) ([5bc47fd](https://github.com/SocialGouv/code-du-travail-numerique/commit/5bc47fd91d2750e74ffcca36dddb1fbe7e997fa0))
+
+
+
+
+
 # [4.176.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.175.0...v4.176.0) (2025-03-31)
 
 
