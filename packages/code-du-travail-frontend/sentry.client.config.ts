@@ -23,7 +23,6 @@ Sentry.init({
   // Basic configuration
   dsn: isCypressTest ? undefined : process.env.NEXT_PUBLIC_SENTRY_DSN, // Disable Sentry in Cypress by setting DSN to undefined
   environment: ENVIRONMENT,
-  debug: false, // Temporarily enable debug mode to troubleshoot
   dist: process.env.NEXT_PUBLIC_GITHUB_SHA || "dev",
 
   // Performance monitoring and source maps
