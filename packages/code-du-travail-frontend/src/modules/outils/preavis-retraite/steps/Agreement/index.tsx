@@ -1,11 +1,9 @@
-import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
-import React from "react";
-import { useContext } from "react";
-import { CommonAgreementStep } from "./components/AgreementStep";
-import { IndemniteDepartType } from "../../types";
+import React, { useContext } from "react";
+import { PreavisRetraiteContext, usePreavisRetraiteStore } from "../store";
+import { CommonAgreementStep } from "src/modules/outils/indemnite-depart/steps/Agreement/components/AgreementStep";
 
-const AgreementStep = (): JSX.Element => {
-  const store = useContext(IndemniteDepartContext);
+const StepAgreement = (): JSX.Element => {
+  const store = useContext(PreavisRetraiteContext);
   const {
     error,
     onRouteChange,
@@ -14,8 +12,7 @@ const AgreementStep = (): JSX.Element => {
     enterprise,
     agreement,
     onInitAgreementPage,
-    indemniteDepartType,
-  } = useIndemniteDepartStore(store, (state) => ({
+  } = usePreavisRetraiteStore(store, (state) => ({
     error: state.agreementData.error,
     onRouteChange: state.agreementFunction.onRouteChange,
     route: state.agreementData.input.route,
@@ -23,12 +20,7 @@ const AgreementStep = (): JSX.Element => {
     enterprise: state.agreementData.input.enterprise,
     agreement: state.agreementData.input.agreement,
     onInitAgreementPage: state.agreementFunction.onInitAgreementPage,
-    indemniteDepartType: state.agreementData.input.indemniteDepartType,
   }));
-
-  React.useEffect(() => {
-    onInitAgreementPage();
-  }, [onInitAgreementPage]);
 
   return (
     <CommonAgreementStep
@@ -36,9 +28,7 @@ const AgreementStep = (): JSX.Element => {
       enterprise={enterprise}
       error={error}
       onAgreementChange={onAgreementChange}
-      trackingActionName={
-        indemniteDepartType ?? IndemniteDepartType.LICENCIEMENT
-      }
+      trackingActionName={"Préavis de départ à la retraite"}
       onInitAgreementPage={onInitAgreementPage}
       onRouteChange={onRouteChange}
       route={route}
@@ -46,4 +36,4 @@ const AgreementStep = (): JSX.Element => {
   );
 };
 
-export default AgreementStep;
+export default StepAgreement;
