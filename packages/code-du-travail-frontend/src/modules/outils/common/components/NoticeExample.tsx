@@ -151,8 +151,8 @@ const PrecisionOpenDay = (): JSX.Element => (
 const PrecisionCalendarDay = (): JSX.Element => (
   <span className={fr.cx("fr-text--sm")} data-testid="notice-calendar-day">
     Les jours calendaires correspondent à la totalité des jours du calendrier de
-    l’année civile, du 1er janvier au @31 décembre, y compris les jours fériés
-    ou chômés.
+    l’année civile, du 1er janvier au 31 décembre, y compris les jours fériés ou
+    chômés.
     <br />
   </span>
 );
