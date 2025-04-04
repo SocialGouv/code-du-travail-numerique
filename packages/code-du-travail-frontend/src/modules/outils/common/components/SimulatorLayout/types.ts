@@ -4,7 +4,7 @@ export type Step<T extends string> = {
   Component: () => JSX.Element;
   options?: {
     isForm?: boolean;
-    annotation?: JSX.Element;
+    annotation?: string;
     hasNoMarginBottom?: boolean;
     validate?: (data) => any;
   };

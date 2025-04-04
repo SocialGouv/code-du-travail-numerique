@@ -1,13 +1,17 @@
 "use client";
+
 import { ContainerSimulator } from "../../layout/ContainerSimulator";
 import { RelatedItem } from "../../documents";
 import React, { useContext } from "react";
 import { StepIntro, StepOrigin } from "./steps";
 import { Step } from "../common/components/SimulatorLayout/types";
-import { PreavisRetraiteContext, usePreavisRetraiteStore } from "./steps/store";
+import {
+  createPreavisRetraiteStore,
+  PreavisRetraiteContext,
+  usePreavisRetraiteStore,
+} from "./steps/store";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { SimulatorLayout } from "../common/components/SimulatorLayout";
-import { IntroAnnotation } from "./steps/Introduction/components/Annotation";
 import StepSeniority from "./steps/Seniority";
 import StepResult from "./steps/Result";
 import StepInformations from "./steps/Informations";
@@ -27,7 +31,10 @@ const steps: Step<PreavisRetraiteStepName>[] = [
     label: "Introduction",
     name: PreavisRetraiteStepName.Intro,
     Component: StepIntro,
-    options: { annotation: <IntroAnnotation /> },
+    options: {
+      annotation:
+        "Attention : Le résultat affiché correspond à la durée légale ou conventionnelle, en fonction des informations renseignées.",
+    },
   },
   {
     label: "Origine du départ à la retraite",
@@ -85,7 +92,16 @@ const PreavisRetraiteSimulator = ({
   );
 };
 
-export const CalculateurPreavisRetraite = ({ title }: Pick<Props, "title">) => {
+export const CalculateurPreavisRetraite = ({ title }: { title: string }) => {
+  const store = React.useRef(createPreavisRetraiteStore()).current;
+  return (
+    <PreavisRetraiteContext.Provider value={store}>
+      <PreavisRetraite title={title} />
+    </PreavisRetraiteContext.Provider>
+  );
+};
+
+const PreavisRetraite = ({ title }: Pick<Props, "title">) => {
   const store = useContext(PreavisRetraiteContext);
   const {
     onNextStepOriginDepart,

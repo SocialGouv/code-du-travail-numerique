@@ -1,14 +1,12 @@
-import { CalculateurPreavisRetraite } from "../../../../src/outils";
-import { UserAction } from "../../../common";
+import { UserAction } from "../../common/utils/UserAction";
+import { CalculateurPreavisRetraite } from "../PreavisRetraiteSimulator";
 import { ui } from "./ui";
 
 import { render } from "@testing-library/react";
 
 test(`Départ à la retraite sans sélection de CC
 `, async () => {
-  await render(
-    <CalculateurPreavisRetraite icon={""} title={""} displayTitle={""} />
-  );
+  await render(<CalculateurPreavisRetraite title="Préavis de retraite" />);
   const userAction = new UserAction();
 
   expect(ui.introduction.startButton.query()).toBeInTheDocument();
@@ -40,7 +38,7 @@ test(`Départ à la retraite sans sélection de CC
     "convention collective non renseignée"
   );
   expect(ui.result.decryptedDescription.get()).toHaveTextContent(
-    "La convention collective n’ayant pas été renseignée, la durée de préavis affichée correspond à la durée légale."
+    "La convention collective n'ayant pas été renseignée, la durée de préavis affichée correspond à la durée légale."
   );
   const sources = ui.result.sources.queryAll();
   expect(sources).toHaveLength(2);
@@ -49,7 +47,7 @@ test(`Départ à la retraite sans sélection de CC
   expect(ui.result.noticeWarning.get()).toHaveTextContent(
     "Attention il peut exister une durée plus favorable"
   );
-  expect(ui.result.noticeWarning.get()).toHaveTextContent(
-    "Une convention collective de branche, un accord collectif d’entreprise, le contrat de travail ou un usage peut prévoir une durée de préavis* ou une condition d’ancienneté* plus favorable pour le salarié. Dans ce cas, c’est cette durée ou cette ancienneté plus favorable qui s’applique au salarié."
+  expect(ui.result.noticeWarningDescription.get()).toHaveTextContent(
+    "Une convention collective de branche, un accord collectif d'entreprise, le contrat de travail ou un usage peut prévoir une durée de préavis(1) ou une condition d'ancienneté(2) plus favorable pour le salarié. Dans ce cas, c'est cette durée ou cette ancienneté plus favorable qui s'applique au salarié."
   );
 });

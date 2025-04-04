@@ -2,11 +2,11 @@ import { byTestId, byText, byTitle } from "testing-library-selector";
 
 export const ui = {
   introduction: {
-    startButton: byTestId("commencer"),
+    startButton: byText("Commencer"),
   },
   contract: {
     originDepart: {
-      question: byText("Qui est à l’origine du départ en retraite ?"),
+      question: byText("Qui est à l'origine du départ en retraite ?"),
       depart: byTestId(
         "originDepart - Le salarié décide lui-même de partir à la retraite"
       ),
@@ -18,13 +18,13 @@ export const ui = {
   },
   agreement: {
     noAgreement: byTestId(
-      "route - Je ne souhaite pas renseigner ma convention collective (je passe l'étape)"
+      "route - Je ne souhaite pas renseigner ma convention collective (je passe l'étape)."
     ),
     agreement: byTestId(
-      "route - Je sais quelle est ma convention collective (je la saisis)"
+      "route -  Je sais quelle est ma convention collective et je la saisis."
     ),
     unknownAgreement: byTestId(
-      "route - Je ne sais pas quelle est ma convention collective (je la recherche)"
+      "route - Je ne sais pas quelle est ma convention collective et je la recherche."
     ),
     agreementInput: byTestId("agreement-search-input"),
     agreementInputConfirm: byText(
@@ -93,7 +93,7 @@ export const ui = {
       categoryAnswers: byTestId(
         "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle"
       ),
-      alert: byTestId("alert-3239-mise"),
+      alert: byTestId("alert-note"),
     },
     handicap: {
       question: byText(
@@ -141,6 +141,7 @@ export const ui = {
     travailleurHandicape: byTestId("situation-Travailleur handicapé"),
     decryptedDescription: byTestId("description-decrypted"),
     noticeWarning: byTestId("notice-warning"),
+    noticeWarningDescription: byTestId("notice-warning-description"),
     noticeHandicap1: byTestId("situation-note-handicap-1"),
     noticeHandicap2: byTestId("situation-note-handicap-2"),
     conventionCollective: byTestId("situation-convention collective"),

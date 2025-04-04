@@ -11,7 +11,7 @@ export const Note = ({ message }: Props): JSX.Element => (
     severity="info"
     title="À noter"
     className={fr.cx("fr-mt-2w")}
-    data-testid="alert-3239-mise"
+    data-testid="alert-note"
     description={message}
   />
 );

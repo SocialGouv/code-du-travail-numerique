@@ -29,7 +29,7 @@ const StepOrigin = (): JSX.Element => {
           },
         ]}
         name="originDepart"
-        label="Qui est à l’origine du départ en retraite&nbsp;?"
+        label="Qui est à l'origine du départ en retraite&nbsp;?"
         selectedOption={originDepart}
         onChangeSelectedOption={onChangeOriginDepart}
         error={errorOriginDepart}
