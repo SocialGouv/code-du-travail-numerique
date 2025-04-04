@@ -186,11 +186,7 @@ export const SimulatorLayout = (props: Props<string>) => {
           </Button>
         )}
       </div>
-      {visibleSteps[stepIndex].options?.annotation && (
-        <p className={fr.cx("fr-text--sm", "fr-mt-3w")}>
-          {visibleSteps[stepIndex].options?.annotation}
-        </p>
-      )}
+      {visibleSteps[stepIndex].options?.annotation}
       {props.footerComponent}
     </div>
   );
