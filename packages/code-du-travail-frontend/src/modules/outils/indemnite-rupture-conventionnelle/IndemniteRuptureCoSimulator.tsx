@@ -16,7 +16,7 @@ import {
 } from "../indemnite-depart";
 import { Step } from "../common/components/SimulatorLayout/types";
 import { IndemniteDepartType } from "../indemnite-depart/types";
-import { EVENT_CATEGORY } from "src/outils/common/Feedback/tracking";
+import { EVENT_CATEGORY } from "../../../outils/common/Feedback/tracking";
 import StepSalaires from "../indemnite-depart/steps/Salaires";
 
 const steps: Step<IndemniteDepartStepName>[] = [

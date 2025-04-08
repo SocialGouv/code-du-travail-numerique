@@ -9,7 +9,7 @@ import { IndemniteDepartType } from "./types";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { Step } from "../common/components/SimulatorLayout/types";
 import { SimulatorLayout } from "../common/components/SimulatorLayout";
-import { EVENT_CATEGORY } from "src/outils/common/Feedback/tracking";
+import { EVENT_CATEGORY } from "../../../outils/common/Feedback/tracking";
 import { Feedback } from "./feedback";
 
 type SimulateurProps = CalculateurIndemniteProps & {
