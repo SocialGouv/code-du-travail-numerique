@@ -1,6 +1,10 @@
 import { fr } from "@codegouvfr/react-dsfr";
 
-export const Container = ({ children }) => {
+type Props = {
+  children: React.ReactNode;
+};
+
+export const Container = ({ children }: Props) => {
   return (
     <div
       className={fr.cx(
