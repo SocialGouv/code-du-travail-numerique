@@ -11,7 +11,7 @@ import { sendEvent } from "src/modules/utils";
 
 export const useRuptureCoEventEmitter = () => {
   useEffect(() => {
-    eventEmitter.subscribe(EventType.SEND_RESULT_EVENT, (isEligible) => {
+    const resultHandler = (isEligible: boolean) => {
       sendEvent({
         category: MatomoBaseEvent.OUTIL,
         action: MatomoActionEvent.RUPTURE_CONVENTIONNELLE,
@@ -19,21 +19,27 @@ export const useRuptureCoEventEmitter = () => {
           ? IndemniteDepartStepName.Resultat
           : MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE,
       });
-    });
+    };
 
-    eventEmitter.subscribe(EventType.TRACK_QUESTION, (titre) => {
+    const questionHandler = (titre: string) => {
       trackQuestion(titre, MatomoActionEvent.RUPTURE_CONVENTIONNELLE);
-    });
+    };
 
-    eventEmitter.subscribe(EventType.TRACK_RESULT, () => {
+    const trackResultHandler = () => {
       sendEvent({
         category: MatomoBaseEvent.OUTIL,
         action: MatomoSimulatorEvent.CLICK_CALCUL_DETAIL,
       });
-    });
+    };
+
+    eventEmitter.subscribe(EventType.SEND_RESULT_EVENT, resultHandler);
+    eventEmitter.subscribe(EventType.TRACK_QUESTION, questionHandler);
+    eventEmitter.subscribe(EventType.TRACK_RESULT, trackResultHandler);
 
     return () => {
-      eventEmitter.unsubscribeAll();
+      eventEmitter.unsubscribe(EventType.SEND_RESULT_EVENT, resultHandler);
+      eventEmitter.unsubscribe(EventType.TRACK_QUESTION, questionHandler);
+      eventEmitter.unsubscribe(EventType.TRACK_RESULT, trackResultHandler);
     };
   }, []);
 };

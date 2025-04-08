@@ -10,7 +10,10 @@ export const eventEmitter: {
     eventType: T,
     callback: CallbackEventType[T]
   ): void;
-  unsubscribe<T extends EventType>(eventType: T): void;
+  unsubscribe<T extends EventType>(
+    eventType: T,
+    callback?: CallbackEventType[T]
+  ): void;
   unsubscribeAll(): void;
 } = {
   events: {},
@@ -27,13 +30,28 @@ export const eventEmitter: {
 
   subscribe(event, callback) {
     if (!this.events[event]) this.events[event] = [];
-    if (!this.events[event]?.includes(this.events[event][0]))
-      this.events[event]?.push(callback);
+    if (!this.events[event].includes(callback)) {
+      this.events[event].push(callback);
+    }
   },
 
-  unsubscribe(event) {
+  unsubscribe(event, callback) {
     if (!this.events[event]) return;
-    delete this.events[event];
+
+    if (callback) {
+      // Si un callback est fourni, ne supprimer que cet abonnement spécifique
+      const index = this.events[event].indexOf(callback);
+      if (index !== -1) {
+        this.events[event].splice(index, 1);
+      }
+      // Si la liste est vide après suppression, supprimer l'entrée
+      if (this.events[event].length === 0) {
+        delete this.events[event];
+      }
+    } else {
+      // Si aucun callback n'est fourni, supprimer tous les abonnements pour cet événement
+      delete this.events[event];
+    }
   },
 
   unsubscribeAll() {
