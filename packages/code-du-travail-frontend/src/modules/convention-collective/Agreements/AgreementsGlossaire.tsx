@@ -15,7 +15,7 @@ export const AgreementsGlossaire = ({ letters }: Props) => {
         termes de nombre de salariés.
       </p>
       <div>
-        <ul className={`${fr.cx("fr-grid-row")} ${ul}`}>
+        <ul className={`${fr.cx("fr-grid-row")} ${ulStyle}`}>
           {letters.map((letter, index) => (
             <li key={letter} className={fr.cx("fr-mx-1v")}>
               {index > 0 && (
@@ -35,6 +35,6 @@ export const AgreementsGlossaire = ({ letters }: Props) => {
   );
 };
 
-const ul = css({
+const ulStyle = css({
   listStyle: "none!",
 });
