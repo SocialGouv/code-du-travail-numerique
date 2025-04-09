@@ -41,7 +41,7 @@ const DecryptedResult: React.FC<Props> = ({
   );
   return (
     <>
-      <h2>Le résultat décrypté</h2>
+      <h3>Le résultat décrypté</h3>
       <p>
         Durée prévue par le code du travail (durée légale)&nbsp;:&nbsp;
         <ShowResult

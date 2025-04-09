@@ -1,8 +1,8 @@
-import { fr } from "@codegouvfr/react-dsfr";
 import React from "react";
 
 import { WarningType } from "../utils/types";
 import Alert from "@codegouvfr/react-dsfr/Alert";
+import { fr } from "@codegouvfr/react-dsfr";
 
 type Props = {
   type?: WarningType;
@@ -18,9 +18,10 @@ export const titrePreavis =
 const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
   return (
     <Alert
-      severity="warning"
+      severity="info"
       title={hasNotice ? titreFavorable : titrePreavis}
       data-testid="notice-warning"
+      className={fr.cx("fr-my-2w")}
       description={
         <>
           {type === WarningType.noNoticeWithAgreement ? (
@@ -53,11 +54,11 @@ const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
                 salarié.
               </p>
 
-              <p className={fr.cx("fr-text--xs")}>
+              <p>
                 <sup>(1)</sup>&nbsp;durée de préavis plus favorable pour le
                 salarié = durée plus courte.
               </p>
-              <p className={fr.cx("fr-text--xs")}>
+              <p>
                 <sup>(2)</sup>&nbsp;condition d&apos;ancienneté plus favorable
                 pour le salarié = condition d&apos;ancienneté moins restrictive
                 et conduisant à une durée de préavis plus courte.
@@ -74,11 +75,11 @@ const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
                 salarié.
               </p>
 
-              <p className={fr.cx("fr-text--xs")}>
+              <p>
                 <sup>(1)</sup>&nbsp;durée de préavis plus favorable pour le
                 salarié = durée plus longue.
               </p>
-              <p className={fr.cx("fr-text--xs")}>
+              <p>
                 <sup>(2)</sup>&nbsp;condition d&apos;ancienneté plus favorable
                 pour le salarié = condition d&apos;ancienneté moins restrictive
                 et conduisant à une durée de préavis plus longue.
@@ -96,11 +97,11 @@ const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
                 s&apos;applique au salarié.
               </p>
 
-              <p className={fr.cx("fr-text--xs")}>
+              <p>
                 <sup>(1)</sup>&nbsp;durée de préavis plus favorable pour le
                 salarié = durée plus courte.
               </p>
-              <p className={fr.cx("fr-text--xs")}>
+              <p>
                 <sup>(2)</sup>&nbsp;condition d&apos;ancienneté plus favorable
                 pour le salarié = condition d&apos;ancienneté moins restrictive
                 et conduisant à une durée de préavis plus courte.
@@ -118,11 +119,11 @@ const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
                 s&apos;applique au salarié.
               </p>
 
-              <p className={fr.cx("fr-text--xs")}>
+              <p>
                 <sup>(1)</sup>&nbsp;durée de préavis plus favorable pour le
                 salarié = durée plus longue.
               </p>
-              <p className={fr.cx("fr-text--xs")}>
+              <p>
                 <sup>(2)</sup>&nbsp;condition d&apos;ancienneté plus favorable
                 pour le salarié = condition d&apos;ancienneté moins restrictive
                 et conduisant à une durée de préavis plus longue.
@@ -138,11 +139,11 @@ const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
                 durée ou cette ancienneté plus favorable qui s&apos;applique au
                 salarié.
               </p>
-              <p className={fr.cx("fr-text--xs")}>
+              <p>
                 <sup>(1)</sup>&nbsp;durée de préavis plus favorable pour le
                 salarié = durée plus longue.
               </p>
-              <p className={fr.cx("fr-text--xs")}>
+              <p>
                 <sup>(2)</sup>&nbsp;condition d&apos;ancienneté plus favorable
                 pour le salarié = condition d&apos;ancienneté moins restrictive
                 et conduisant à une durée de préavis plus longue.
@@ -158,11 +159,11 @@ const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
                 durée ou cette ancienneté plus favorable qui s&apos;applique au
                 salarié.
               </p>
-              <p className={fr.cx("fr-text--xs")}>
+              <p>
                 <sup>(1)</sup>&nbsp;durée de préavis plus favorable pour le
                 salarié = durée plus courte.
               </p>
-              <p className={fr.cx("fr-text--xs")}>
+              <p>
                 <sup>(2)</sup>&nbsp;condition d&apos;ancienneté plus favorable
                 pour le salarié = condition d&apos;ancienneté moins restrictive
                 et conduisant à une durée de préavis plus courte.

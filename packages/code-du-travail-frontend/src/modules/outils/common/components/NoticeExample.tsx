@@ -3,7 +3,6 @@ import React from "react";
 import { convertPeriodToHumanDate, Extra, getExtra } from "../utils";
 import { ListSimulator } from "../types";
 import { convertDate, dateToString, Unit } from "src/lib";
-import { fr } from "@codegouvfr/react-dsfr";
 
 const FROM_DATE = new Date("2022-04-05");
 
@@ -46,10 +45,7 @@ export const NoticeExample = ({
   switch (simulator) {
     case ListSimulator.PREAVIS_DEMISSION:
       return (
-        <p
-          className={fr.cx("fr-text--sm")}
-          data-testid="notice-preavis-demission"
-        >
+        <p data-testid="notice-preavis-demission">
           {note}
           <MorePrecision extra={extra} />
           {defaultDayPreavisDemissionMessage}
@@ -75,10 +71,7 @@ export const NoticeExample = ({
       );
     case ListSimulator.PREAVIS_LICENCIEMENT:
       return (
-        <p
-          className={fr.cx("fr-text--sm")}
-          data-testid="notice-preavis-licenciement"
-        >
+        <p data-testid="notice-preavis-licenciement">
           {note}
           <MorePrecision extra={extra} />
           {defaultDayPreavisLicenciementMessage}
@@ -101,7 +94,7 @@ export const NoticeExample = ({
       return (
         <div data-testid="notice-depart-retraite">
           <MorePrecision extra={extra} />
-          <p className={fr.cx("fr-text--sm")}>
+          <p>
             {note}
             Le préavis débute le jour où le salarié remet sa lettre de départ à
             la retraite en main propre ou à la date de première présentation de
@@ -115,7 +108,7 @@ export const NoticeExample = ({
       return (
         <div data-testid="notice-mise-retraite">
           <MorePrecision extra={extra} />
-          <p className={fr.cx("fr-text--sm")}>
+          <p>
             {note}
             Le préavis débute à la date de première présentation de la
             notification de la mise à la retraite par lettre recommandée, peu
@@ -141,7 +134,7 @@ const MorePrecision = ({ extra }: { extra: Extra | null }): JSX.Element => {
 };
 
 const PrecisionOpenDay = (): JSX.Element => (
-  <span className={fr.cx("fr-text--sm")} data-testid="notice-open-day">
+  <span data-testid="notice-open-day">
     Les jours ouvrés sont les jours effectivement travaillés dans une entreprise
     ou une administration. On en compte 5 par semaine.
     <br />
@@ -149,7 +142,7 @@ const PrecisionOpenDay = (): JSX.Element => (
 );
 
 const PrecisionCalendarDay = (): JSX.Element => (
-  <span className={fr.cx("fr-text--sm")} data-testid="notice-calendar-day">
+  <span data-testid="notice-calendar-day">
     Les jours calendaires correspondent à la totalité des jours du calendrier de
     l’année civile, du 1er janvier au 31 décembre, y compris les jours fériés ou
     chômés.
@@ -158,7 +151,7 @@ const PrecisionCalendarDay = (): JSX.Element => (
 );
 
 const CommunAccord = (): JSX.Element => (
-  <span className={fr.cx("fr-text--sm")} data-testid="notice-commun-accord">
+  <span data-testid="notice-commun-accord">
     <br />
     L’employeur et le salarié peuvent fixer d’un commun accord une date de
     départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou

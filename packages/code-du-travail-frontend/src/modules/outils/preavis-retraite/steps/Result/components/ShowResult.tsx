@@ -39,7 +39,7 @@ const ShowResult: React.FC<Props> = ({
               type === "depart-retraite" ? "départ" : "mise"
             } à la retraite est estimée à`
           : ""}
-        &nbsp;:{" "}
+        <br />
         <strong className={fr.cx("fr-h2", "fr-mt-3v")}>
           {agreementMaximumResult?.value &&
           agreementMaximumResult?.value !== result.value ? (
@@ -88,7 +88,7 @@ const ShowResult: React.FC<Props> = ({
         />
       )}
       {notifications.length > 0 && (
-        <small data-testid="notice-description">
+        <p data-testid="notice-description">
           {notifications.map((notification, index) => (
             <div key={index}>
               <NoticeNote
@@ -98,7 +98,7 @@ const ShowResult: React.FC<Props> = ({
               {notification.description}
             </div>
           ))}
-        </small>
+        </p>
       )}
     </>
   );

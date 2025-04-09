@@ -5,6 +5,7 @@ import { RelatedItems } from "../common/RelatedItems";
 import { Share } from "../common/Share";
 import { RelatedItem } from "../documents";
 import { Feedback } from "../layout/feedback";
+import { css } from "@styled-system/css";
 
 type Props = {
   relatedItems: { items: RelatedItem[]; title: string }[];
@@ -21,7 +22,7 @@ export const ContainerSimulator = ({
   segments = [],
 }: Props) => {
   return (
-    <div className={fr.cx("fr-grid-row")}>
+    <div className={`${fr.cx("fr-grid-row")} ${printOnlySpace}`}>
       <Breadcrumb
         currentPageLabel={title}
         homeLinkProps={{
@@ -48,3 +49,9 @@ export const ContainerSimulator = ({
     </div>
   );
 };
+
+const printOnlySpace = css({
+  "@media print": {
+    marginTop: "30px!",
+  },
+});

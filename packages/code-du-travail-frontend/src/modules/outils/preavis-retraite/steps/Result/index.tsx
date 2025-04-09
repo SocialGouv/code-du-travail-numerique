@@ -8,7 +8,6 @@ import { NoticeUsed } from "./utils/types";
 import Situation from "./components/Situation";
 import ErrorPublicodes from "src/modules/outils/indemnite-depart/steps/Resultat/components/ErrorPublicodes";
 import { PubliReferences } from "src/modules/outils/common/components";
-import Accordion from "@codegouvfr/react-dsfr/Accordion";
 import { fr } from "@codegouvfr/react-dsfr";
 
 const StepResult = (): JSX.Element => {
@@ -64,7 +63,7 @@ const StepResult = (): JSX.Element => {
   }
 
   return (
-    <>
+    <div className={fr.cx("fr-col-md-8", "fr-col-12")}>
       <ShowResult
         notifications={resultNotifications ?? []}
         result={result}
@@ -72,30 +71,6 @@ const StepResult = (): JSX.Element => {
         type={originDepart!}
         idccNumber={agreement?.num}
       />
-      <Accordion label="Voir le détail du calcul" className={fr.cx("fr-mb-2w")}>
-        <Situation
-          agreement={agreement}
-          isAgreementSupported={isAgreementSupported}
-          originDepart={originDepart!}
-          seniorityInMonths={seniorityInMonths}
-          situations={publicodesInformations ?? []}
-          hasHandicap={hasHandicap}
-          seniorityMoreThanXYears={moreThanXYears === "oui"}
-        />
-        <DecryptedResult
-          hasAgreement={agreement ? true : false}
-          isAgreementSupported={!!isAgreementSupported}
-          hasHandicap={!!hasHandicap}
-          legalResult={legalResult}
-          agreementResult={agreementResult}
-          agreementMaximumResult={agreementMaximumResult}
-          noticeUsed={noticeUsed!}
-          typeDeDepart={originDepart!}
-          isSeniorityLessThan6Months={!!isSeniorityLessThan6Months}
-          agreementRoute={agreementRoute}
-        />
-        <PubliReferences references={resultReferences ?? []} />
-      </Accordion>
       <WarningResult
         hasNotice={NoticeUsed.none !== noticeUsed}
         type={getWarningType(
@@ -105,7 +80,30 @@ const StepResult = (): JSX.Element => {
           isAgreementSupported
         )}
       />
-    </>
+      <h2>Détail du calcul</h2>
+      <Situation
+        agreement={agreement}
+        isAgreementSupported={isAgreementSupported}
+        originDepart={originDepart!}
+        seniorityInMonths={seniorityInMonths}
+        situations={publicodesInformations ?? []}
+        hasHandicap={hasHandicap}
+        seniorityMoreThanXYears={moreThanXYears === "oui"}
+      />
+      <DecryptedResult
+        hasAgreement={agreement ? true : false}
+        isAgreementSupported={!!isAgreementSupported}
+        hasHandicap={!!hasHandicap}
+        legalResult={legalResult}
+        agreementResult={agreementResult}
+        agreementMaximumResult={agreementMaximumResult}
+        noticeUsed={noticeUsed!}
+        typeDeDepart={originDepart!}
+        isSeniorityLessThan6Months={!!isSeniorityLessThan6Months}
+        agreementRoute={agreementRoute}
+      />
+      <PubliReferences references={resultReferences ?? []} />
+    </div>
   );
 };
 

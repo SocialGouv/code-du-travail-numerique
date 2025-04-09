@@ -76,7 +76,6 @@ describe("Outil - Préavis de retraite", () => {
     cy.get("button").contains("Suivant").click();
 
     // Résultat
-    cy.contains("Voir le détail du calcul");
     cy.contains("2 mois");
     cy.contains("Durée prévue par le code du travail (durée légale) : 2 mois");
     cy.contains(

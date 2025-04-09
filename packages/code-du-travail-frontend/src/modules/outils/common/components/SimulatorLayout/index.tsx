@@ -186,7 +186,6 @@ export const SimulatorLayout = (props: Props<string>) => {
           </Button>
         )}
       </div>
-      {visibleSteps[stepIndex].options?.annotation}
       {props.footerComponent}
     </div>
   );

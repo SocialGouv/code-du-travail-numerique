@@ -33,13 +33,6 @@ export const useRuptureCoEventEmitter = () => {
       trackQuestion(titre, MatomoActionEvent.RUPTURE_CONVENTIONNELLE);
     });
 
-    eventEmitter.subscribe(EventType.TRACK_RESULT, () => {
-      sendEvent({
-        category: MatomoBaseEvent.OUTIL,
-        action: MatomoSimulatorEvent.CLICK_CALCUL_DETAIL,
-      });
-    });
-
     return () => {
       eventEmitter.unsubscribeAll();
     };

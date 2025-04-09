@@ -16,7 +16,6 @@ import StepSeniority from "./steps/Seniority";
 import StepResult from "./steps/Result";
 import StepInformations from "./steps/Informations";
 import StepAgreement from "./steps/Agreement";
-import { IntroAnnotation } from "./steps/Introduction/components/Annotation";
 
 enum PreavisRetraiteStepName {
   Intro = "intro",
@@ -32,9 +31,6 @@ const steps: Step<PreavisRetraiteStepName>[] = [
     label: "Introduction",
     name: PreavisRetraiteStepName.Intro,
     Component: StepIntro,
-    options: {
-      annotation: <IntroAnnotation />,
-    },
   },
   {
     label: "Origine du départ à la retraite",
