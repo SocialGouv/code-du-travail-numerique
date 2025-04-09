@@ -5,9 +5,9 @@ import React from "react";
 export const List = ({ items }: { items: JSX.Element[] }) => {
   return (
     <ul className={`${fr.cx("fr-pl-0")} ${ul}`}>
-      {items.map((item) => {
+      {items.map((item, index) => {
         return (
-          <li key={item.key} className={`${fr.cx("fr-pb-2w")} ${li}`}>
+          <li key={index} className={`${fr.cx("fr-pb-2w")} ${li}`}>
             <span>{item}</span>
           </li>
         );
