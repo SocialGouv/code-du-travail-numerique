@@ -5,13 +5,13 @@ import { Breadcrumb as BreadcrumbType } from "@socialgouv/cdtn-types";
 type Props = {
   children: React.ReactNode;
   currentPage: string;
-  breacrumbs: BreadcrumbType[];
+  breadcrumbs: BreadcrumbType[];
 };
 
 export const ContainerWithBreadcrumbs = ({
   children,
   currentPage,
-  breacrumbs,
+  breadcrumbs,
 }: Props) => {
   return (
     <div>
@@ -20,7 +20,7 @@ export const ContainerWithBreadcrumbs = ({
         homeLinkProps={{
           href: "/",
         }}
-        segments={breacrumbs.map(({ label, slug }) => ({
+        segments={breadcrumbs.map(({ label, slug }) => ({
           label: <>{label}</>,
           linkProps: { href: slug },
         }))}

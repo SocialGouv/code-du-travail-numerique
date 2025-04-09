@@ -17,7 +17,7 @@ export const GlossaryList = ({ glossary = [] }: GlossaryProps) => {
     .map(({ letter }) => letter);
 
   return (
-    <ContainerWithBreadcrumbs currentPage={"Glossaire"} breacrumbs={[]}>
+    <ContainerWithBreadcrumbs currentPage={"Glossaire"} breadcrumbs={[]}>
       <h1 id="glossary" className={fr.cx("fr-mt-0", "fr-mb-4w")}>
         Glossaire
       </h1>

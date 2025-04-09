@@ -20,7 +20,7 @@ export const GlossaryTermDetail = ({
   return (
     <ContainerWithBreadcrumbs
       currentPage={term}
-      breacrumbs={[
+      breadcrumbs={[
         {
           label: "Glossaire",
           slug: `/${getRouteBySource(SOURCES.GLOSSARY)}`,

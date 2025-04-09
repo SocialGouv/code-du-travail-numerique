@@ -38,7 +38,7 @@ export function FicheMinistereTravail({
   return (
     <ContainerRichWithBreadcrumbs
       currentPage={title}
-      breacrumbs={breadcrumbs}
+      breadcrumbs={breadcrumbs}
       relatedItems={relatedItems}
       title={title}
       description={metaDescription}
