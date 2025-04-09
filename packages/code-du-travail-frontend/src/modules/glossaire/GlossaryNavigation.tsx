@@ -9,7 +9,7 @@ type GlossaryNavigationProps = {
 export const GlossaryNavigation = ({ letters }: GlossaryNavigationProps) => {
   return (
     <div>
-      <ul className={`${fr.cx("fr-grid-row")} ${ul}`}>
+      <ul className={`${fr.cx("fr-grid-row")} ${ulStyle}`}>
         {letters.map((letter, index) => (
           <li key={letter} className={fr.cx("fr-mx-1v")}>
             {index > 0 && (
@@ -28,6 +28,6 @@ export const GlossaryNavigation = ({ letters }: GlossaryNavigationProps) => {
   );
 };
 
-const ul = css({
+const ulStyle = css({
   listStyle: "none!",
 });
