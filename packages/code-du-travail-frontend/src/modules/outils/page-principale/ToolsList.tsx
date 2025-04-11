@@ -4,8 +4,7 @@ import React from "react";
 import { ToolTile } from "./ToolTile";
 import { ContainerWithBreadcrumbs } from "../../layout/ContainerWithBreadcrumbs";
 import { Tool } from "@socialgouv/cdtn-types";
-
-// Type pour les outils externes qui ont une URL au lieu d'un slug
+// Type pour les outils externes qui ont une propriété url
 type ExternalTool = Partial<Tool> & {
   url?: string;
 };
@@ -19,7 +18,6 @@ export const ToolsList = ({
   cdtnSimulators = [],
   externalTools = [],
 }: ToolsListProps) => {
-  // Combiner les simulateurs CDTN et les outils externes dans une seule liste
   const allTools = [
     ...cdtnSimulators.map((tool) => ({
       ...tool,
@@ -28,15 +26,15 @@ export const ToolsList = ({
     })),
     ...externalTools.map((tool) => ({
       ...tool,
-      link: tool.url,
       isExternal: true,
+      link: tool.url,
     })),
   ];
 
   return (
-    <ContainerWithBreadcrumbs currentPage="Outils" breadcrumbs={[]}>
+    <ContainerWithBreadcrumbs currentPage="Simulateurs" breadcrumbs={[]}>
       <h1 id="tools" className={fr.cx("fr-mt-0", "fr-mb-4w")}>
-        Outils et simulateurs
+        Simulateurs
       </h1>
 
       <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>

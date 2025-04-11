@@ -41,11 +41,14 @@ export const getToolsByIdsAndSlugs = async (
       cause: null,
     });
   }
-  // Transformer les SearchHit<Tool> en Tool
-  return response.hits.hits.map(({ _id, _source }) => ({
-    ..._source,
-    _id,
-  })) as Tool[];
+  return response.hits.hits
+    .map(({ _id, _source }) => ({
+      ..._source,
+      _id,
+    }))
+    .filter((tool) =>
+      process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT ? tool.displayTool : true
+    ) as Tool[];
 };
 
 export const getToolsByIds = async (

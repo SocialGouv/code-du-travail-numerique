@@ -8,10 +8,7 @@ import { REVALIDATE_TIME } from "../../src/config";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { Tool } from "@socialgouv/cdtn-types";
 
-// Type pour les outils externes qui ont une URL au lieu d'un slug
-type ExternalTool = Tool & {
-  url: string;
-};
+// Les outils externes ont déjà une propriété url dans le type Tool
 
 export const metadata = generateDefaultMetadata({
   title: "Outils et simulateurs",
@@ -27,30 +24,18 @@ export const revalidate = REVALIDATE_TIME;
 async function OutilsPage() {
   try {
     const tools = await getToolsByIdsAndSlugs();
-    const filteredTools = tools.filter((tool) =>
-      process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT ? tool.displayTool : true
-    );
 
-    if (!filteredTools || filteredTools.length === 0) {
+    if (!tools || tools.length === 0) {
       return notFound();
     }
 
-    // Filtrer les outils pour ne garder que les simulateurs CDTN et les outils externes
-    const cdtnSimulators = filteredTools.filter(
+    const cdtnSimulators = tools.filter(
       (tool) => tool.source === SOURCES.TOOLS
     );
 
-    // Convertir les outils externes pour ajouter la propriété url
-    const externalTools = filteredTools
-      .filter((tool) => tool.source === SOURCES.EXTERNALS)
-      .map((tool) => {
-        // Pour les outils externes, on utilise le champ cdtnId comme URL
-        // C'est une convention utilisée dans l'application
-        return {
-          ...tool,
-          url: tool.cdtnId,
-        } as ExternalTool;
-      });
+    const externalTools = tools.filter(
+      (tool) => tool.source === SOURCES.EXTERNALS
+    );
 
     return (
       <DsfrLayout>
