@@ -5,41 +5,61 @@ import { ToolTile } from "./ToolTile";
 import { ContainerWithBreadcrumbs } from "../../layout/ContainerWithBreadcrumbs";
 import { Tool } from "@socialgouv/cdtn-types";
 
-type ToolsListProps = {
-  cdtnSimulators: Partial<Tool>[];
+// Type pour les outils externes qui ont une URL au lieu d'un slug
+type ExternalTool = Partial<Tool> & {
+  url?: string;
 };
 
-export const ToolsList = ({ cdtnSimulators = [] }: ToolsListProps) => {
+type ToolsListProps = {
+  cdtnSimulators: Partial<Tool>[];
+  externalTools?: ExternalTool[];
+};
+
+export const ToolsList = ({
+  cdtnSimulators = [],
+  externalTools = [],
+}: ToolsListProps) => {
+  // Combiner les simulateurs CDTN et les outils externes dans une seule liste
+  const allTools = [
+    ...cdtnSimulators.map((tool) => ({
+      ...tool,
+      link: `/outils/${tool.slug}`,
+      isExternal: false,
+    })),
+    ...externalTools.map((tool) => ({
+      ...tool,
+      link: tool.url,
+      isExternal: true,
+    })),
+  ];
+
   return (
-    <ContainerWithBreadcrumbs currentPage="Simulateurs" breadcrumbs={[]}>
+    <ContainerWithBreadcrumbs currentPage="Outils" breadcrumbs={[]}>
       <h1 id="tools" className={fr.cx("fr-mt-0", "fr-mb-4w")}>
-        Simulateurs
+        Outils et simulateurs
       </h1>
 
       <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
-        {cdtnSimulators.map(
-          ({ id, description, metaDescription, icon, slug, title }) => {
-            const link = `/outils/${slug}`;
-            return (
-              <div
-                key={id}
-                className={fr.cx(
-                  "fr-col-12",
-                  "fr-col-sm-6",
-                  "fr-col-md-4",
-                  "fr-col-lg-3",
-                  "fr-mb-4w"
-                )}
-              >
-                <ToolTile
-                  title={title}
-                  description={description ?? metaDescription}
-                  iconName={icon}
-                  link={link}
-                />
-              </div>
-            );
-          }
+        {allTools.map(
+          ({ id, description, metaDescription, icon, title, link }) => (
+            <div
+              key={id}
+              className={fr.cx(
+                "fr-col-12",
+                "fr-col-sm-6",
+                "fr-col-md-4",
+                "fr-col-lg-3",
+                "fr-mb-4w"
+              )}
+            >
+              <ToolTile
+                title={title}
+                description={description ?? metaDescription}
+                iconName={icon}
+                link={link}
+              />
+            </div>
+          )
         )}
       </div>
     </ContainerWithBreadcrumbs>

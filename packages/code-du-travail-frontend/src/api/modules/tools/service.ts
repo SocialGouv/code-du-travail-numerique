@@ -28,7 +28,7 @@ export const getAllTools = async (): Promise<Tool[]> => {
 export const getToolsByIdsAndSlugs = async (
   ids?: string[],
   slugs?: string[]
-): Promise<SearchHit<Tool>[]> => {
+): Promise<Tool[]> => {
   const body: any = getTools(ids, slugs);
   const response = await elasticsearchClient.search<Tool>({
     body,
@@ -41,7 +41,11 @@ export const getToolsByIdsAndSlugs = async (
       cause: null,
     });
   }
-  return response.hits.hits;
+  // Transformer les SearchHit<Tool> en Tool
+  return response.hits.hits.map(({ _id, _source }) => ({
+    ..._source,
+    _id,
+  })) as Tool[];
 };
 
 export const getToolsByIds = async (
