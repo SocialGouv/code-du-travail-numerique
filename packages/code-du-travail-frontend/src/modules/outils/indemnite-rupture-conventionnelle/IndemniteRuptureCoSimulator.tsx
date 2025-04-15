@@ -65,7 +65,7 @@ type Props = {
     title: string;
   }[];
   title: string;
-  breadcrumbTitle: string;
+  displayTitle: string;
   description: string;
 };
 
@@ -73,18 +73,18 @@ const IndemniteRuptureCoSimulator = ({
   relatedItems,
   description,
   title,
-  breadcrumbTitle,
+  displayTitle,
 }: Props) => {
   useRuptureCoEventEmitter();
 
   return (
     <ContainerSimulator
       relatedItems={relatedItems}
-      title={breadcrumbTitle}
+      title={title}
       description={description}
       segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
     >
-      <h1 id="simulateur-indemnite-rupture-co">{title}</h1>
+      <h1 id="simulateur-indemnite-rupture-co">{displayTitle}</h1>
       <CalculateurIndemniteRuptureCo title={title} />
     </ContainerSimulator>
   );

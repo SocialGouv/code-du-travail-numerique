@@ -4,18 +4,28 @@ import { UserAction } from "../../common/utils/UserAction";
 import { ui } from "../../indemnite-depart/__tests__/ui";
 import { byText } from "testing-library-selector";
 import IndemniteRuptureCoSimulator from "../IndemniteRuptureCoSimulator";
+import { sendEvent } from "../../../utils";
+
+jest.mock("../../../utils", () => ({
+  sendEvent: jest.fn(),
+}));
 
 describe("Rupture conventionnelle - légale", () => {
   test("parcours classique", () => {
     let userAction: UserAction;
     render(
       <IndemniteRuptureCoSimulator
-        breadcrumbTitle="Simulateur d'indemnité de rupture conventionnelle"
+        displayTitle="Simulateur d'indemnité de rupture conventionnelle"
         description="Estimez le montant de l'indemnité de rupture conventionnelle"
         relatedItems={[]}
         title="Simulateur d'indemnité de rupture conventionnelle"
       />
     );
+    expect(sendEvent).toHaveBeenCalledWith({
+      action: "view_step_Indemnité de rupture conventionnelle",
+      category: "outil",
+      name: "start",
+    });
     userAction = new UserAction();
     userAction
       .click(ui.introduction.startButton.get())
