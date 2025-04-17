@@ -8,6 +8,7 @@ export enum MatomoBaseEvent {
   HEADER = "header",
   PAGE_HOME = "page_home",
   PAGE_MODELS = "page_modeles_de_documents",
+  SELECT_RESULT = "selectResult",
 }
 
 export enum MatomoBaseAction {

@@ -1,24 +1,34 @@
 import Image from "next/image";
+import { fr } from "@codegouvfr/react-dsfr";
+import { css } from "@styled-system/css";
 
 type Props = {
   title: string;
   iconName: string;
   link: string;
+  subThemes: string[];
 };
 
-export const ThemeTile = (props: Props) => (
-  <div className="fr-tile fr-enlarge-link fr-tile--no-icon fr-tile--sm">
-    <p className="fr-tile__title">
-      <a href={props.link}>{props.title}</a>
+export const ThemeTile = ({ title, iconName, link, subThemes }: Props) => (
+  <div className={`${fr.cx("fr-tile", "fr-enlarge-link")}`}>
+    <p className={fr.cx("fr-tile__title")}>
+      <a href={link}>{title}</a>
     </p>
-
-    <div className="fr-tile__img">
+    <p className={`${fr.cx("fr-tile__detail", "fr-mb-4w")} ${centerDetail}`}>
+      {subThemes.slice(0, 3).join(" • ")}
+      {subThemes.length > 2 && <>&nbsp;&hellip;</>}
+    </p>
+    <div className={fr.cx("fr-tile__img")}>
       <Image
-        src={`/static/assets/icons/themes/${props.iconName}.svg`}
+        src={`/static/assets/icons/themes/${iconName}.svg`}
         alt=""
-        width={56}
-        height={56}
+        width={80}
+        height={80}
       ></Image>
     </div>
   </div>
 );
+
+const centerDetail = css({
+  justifyContent: "center",
+});
