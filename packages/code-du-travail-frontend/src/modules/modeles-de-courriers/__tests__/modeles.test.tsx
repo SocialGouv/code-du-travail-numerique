@@ -1,6 +1,6 @@
 import { push as matopush } from "@socialgouv/matomo-next";
 import { fireEvent, render } from "@testing-library/react";
-import { LetterModel } from "../modeles";
+import { LetterModel } from "../LetterModel";
 
 jest.mock("@socialgouv/matomo-next", () => {
   return {

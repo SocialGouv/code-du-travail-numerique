@@ -1,3 +1,4 @@
 export * from "./queries";
-export * from "./modeles";
+export * from "./LetterModel";
+export * from "./LetterModels";
 export * from "./helpers";
