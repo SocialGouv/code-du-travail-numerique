@@ -4,8 +4,8 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { MatomoHomeEvent, useHomeTracking } from "./tracking";
 import { HomeTileItem } from "./queries";
 import IllustrationTheme from "./picto/themes.svg";
-import { ThemeTile } from "../themes/ThemeTile";
 import { css } from "@styled-system/css";
+import { HomeThemeTile } from "../themes/HomeThemeTile";
 
 type Props = {
   items: HomeTileItem[];
@@ -47,7 +47,7 @@ export const Themes = (props: Props) => {
               "fr-col-lg-2"
             )} ${li}`}
           >
-            <ThemeTile {...item} />
+            <HomeThemeTile {...item} />
           </li>
         ))}
       </>

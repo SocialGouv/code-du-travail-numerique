@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Themes /> affiche la liste des thèmes principaux 1`] = `
+<div>
+  <div
+    class="fr-grid-row"
+  >
+    <nav
+      aria-label="vous êtes ici :"
+      class="fr-breadcrumb fr-mb-2v"
+      id="fr-breadcrumb-:r0:"
+      role="navigation"
+    >
+      <button
+        aria-controls="breadcrumb-:r1:"
+        aria-expanded="false"
+        class="fr-breadcrumb__button"
+      >
+        Voir le fil d’Ariane
+      </button>
+      <div
+        class="fr-collapse"
+        id="breadcrumb-:r1:"
+      >
+        <ol
+          class="fr-breadcrumb__list"
+        >
+          <li>
+            <a
+              class="fr-breadcrumb__link"
+              href="/"
+            >
+              Accueil
+            </a>
+          </li>
+          <li>
+            <a
+              aria-current="page"
+              class="fr-breadcrumb__link"
+            >
+              Thèmes
+            </a>
+          </li>
+        </ol>
+      </div>
+    </nav>
+    <div
+      class="fr-col-12 fr-mb-4w fr-mb-md-12w"
+    >
+      <h1
+        class="fr-mt-0 fr-mb-6w"
+        id="themes"
+      >
+        Thèmes
+      </h1>
+      <p
+        class="fr-text--md"
+      >
+        Découvrez l’intégralité de nos contenus organisés par grands thèmes
+      </p>
+      <div
+        class="fr-mt-6w"
+      >
+        <ul
+          class="fr-grid-row fr-grid-row--gutters fr-grid-row--left"
+        >
+          <li
+            class="fr-col-12 fr-col-sm-6 fr-col-md-4 fr-col-lg-3 fr-mb-3v li-s_none!"
+          >
+            <div
+              class="fr-tile fr-enlarge-link"
+            >
+              <p
+                class="fr-tile__title"
+              >
+                <a
+                  href="/themes/theme1"
+                >
+                  Theme 1
+                </a>
+              </p>
+              <p
+                class="fr-tile__detail fr-mb-4w jc_center"
+              >
+                children 1 • children 2
+              </p>
+              <div
+                class="fr-tile__img"
+              >
+                <img
+                  alt=""
+                  data-nimg="1"
+                  decoding="async"
+                  height="80"
+                  loading="lazy"
+                  src="/static/assets/icons/themes/.svg"
+                  style="color: transparent;"
+                  width="80"
+                />
+              </div>
+            </div>
+          </li>
+          <li
+            class="fr-col-12 fr-col-sm-6 fr-col-md-4 fr-col-lg-3 fr-mb-3v li-s_none!"
+          >
+            <div
+              class="fr-tile fr-enlarge-link"
+            >
+              <p
+                class="fr-tile__title"
+              >
+                <a
+                  href="/themes/theme2"
+                >
+                  Theme 2
+                </a>
+              </p>
+              <p
+                class="fr-tile__detail fr-mb-4w jc_center"
+              >
+                children 3 • children 4
+              </p>
+              <div
+                class="fr-tile__img"
+              >
+                <img
+                  alt=""
+                  data-nimg="1"
+                  decoding="async"
+                  height="80"
+                  loading="lazy"
+                  src="/static/assets/icons/themes/.svg"
+                  style="color: transparent;"
+                  width="80"
+                />
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;

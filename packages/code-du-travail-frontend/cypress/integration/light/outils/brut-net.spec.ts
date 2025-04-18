@@ -15,7 +15,7 @@ describe("Outil - Salaire brut/net", () => {
       .contains("Coût total employeur")
       .should("be.visible");
     cy.iframe("#simulateurEmbauche")
-      .find("#salarié___coût_total_employeur")
+      .find("#salarié___coût_total_employeur-input")
       .as("salaireInput")
       .click();
     cy.get("@salaireInput").type("1000");
