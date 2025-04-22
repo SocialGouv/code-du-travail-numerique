@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.178.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.177.0...v4.178.0) (2025-04-22)
+
+
+### Bug Fixes
+
+* **e2e:** correction du test sur le salaire brut/net ([#6544](https://github.com/SocialGouv/code-du-travail-numerique/issues/6544)) ([dddec02](https://github.com/SocialGouv/code-du-travail-numerique/commit/dddec02a2646b9f768893be177958ebcc7e2875d))
+* event matomo simu RC ([#6541](https://github.com/SocialGouv/code-du-travail-numerique/issues/6541)) ([235e8cb](https://github.com/SocialGouv/code-du-travail-numerique/commit/235e8cbc17a356482ab174b314e47d56a71986a9))
+
+
+### Features
+
+* **themes:** migration en DSFR des pages thèmes ([#6523](https://github.com/SocialGouv/code-du-travail-numerique/issues/6523)) ([f9e51a5](https://github.com/SocialGouv/code-du-travail-numerique/commit/f9e51a51bd47d1e7709643ba5ac875a198df2fa5))
+
+
+### Reverts
+
+* Revert "feat(tally): affichage du formulaire pour l'enquête igas (#6488)" (#6542) ([3b27a8d](https://github.com/SocialGouv/code-du-travail-numerique/commit/3b27a8d311ceba9a7ae7882c3e5fd5168d269f25)), closes [#6488](https://github.com/SocialGouv/code-du-travail-numerique/issues/6488) [#6542](https://github.com/SocialGouv/code-du-travail-numerique/issues/6542)
+
+
+
+
+
 # [4.177.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.176.0...v4.177.0) (2025-04-04)
 
 
