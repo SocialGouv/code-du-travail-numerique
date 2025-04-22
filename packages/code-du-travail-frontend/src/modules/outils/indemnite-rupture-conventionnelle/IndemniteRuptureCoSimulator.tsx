@@ -1,7 +1,7 @@
 "use client";
 import { ContainerSimulator } from "../../layout/ContainerSimulator";
 import { RelatedItem } from "../../documents";
-import React from "react";
+import React, { useEffect } from "react";
 import { StepAgreement, StepInformations } from "../indemnite-depart/steps";
 import {
   StepAnciennete,
@@ -17,6 +17,8 @@ import {
 import { Step } from "../common/components/SimulatorLayout/types";
 import { IndemniteDepartType } from "../indemnite-depart/types";
 import { EVENT_CATEGORY } from "src/outils/common/Feedback/tracking";
+import { MatomoActionEvent, MatomoBaseEvent } from "src/lib";
+import { sendEvent } from "src/modules/utils";
 import StepSalaires from "../indemnite-depart/steps/Salaires";
 
 const steps: Step<IndemniteDepartStepName>[] = [
@@ -65,7 +67,7 @@ type Props = {
     title: string;
   }[];
   title: string;
-  breadcrumbTitle: string;
+  displayTitle: string;
   description: string;
 };
 
@@ -73,18 +75,18 @@ const IndemniteRuptureCoSimulator = ({
   relatedItems,
   description,
   title,
-  breadcrumbTitle,
+  displayTitle,
 }: Props) => {
   useRuptureCoEventEmitter();
 
   return (
     <ContainerSimulator
       relatedItems={relatedItems}
-      title={breadcrumbTitle}
+      title={title}
       description={description}
       segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
     >
-      <h1 id="simulateur-indemnite-rupture-co">{title}</h1>
+      <h1 id="simulateur-indemnite-rupture-co">{displayTitle}</h1>
       <CalculateurIndemniteRuptureCo title={title} />
     </ContainerSimulator>
   );
@@ -93,6 +95,14 @@ const IndemniteRuptureCoSimulator = ({
 export const CalculateurIndemniteRuptureCo = ({
   title,
 }: Pick<Props, "title">) => {
+  useEffect(() => {
+    sendEvent({
+      category: MatomoBaseEvent.OUTIL,
+      action: MatomoActionEvent.RUPTURE_CONVENTIONNELLE,
+      name: IndemniteDepartStepName.Introduction,
+    });
+  }, []);
+
   return (
     <CalculateurIndemnite
       title={title}

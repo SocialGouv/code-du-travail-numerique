@@ -11,7 +11,7 @@ describe("Rupture conventionnelle - Etape ancienneté", () => {
     let userAction: UserAction;
     render(
       <IndemniteRuptureCoSimulator
-        breadcrumbTitle="Simulateur d'indemnité de rupture conventionnelle"
+        displayTitle="Simulateur d'indemnité de rupture conventionnelle"
         description="Estimez le montant de l'indemnité de rupture conventionnelle"
         relatedItems={[]}
         title="Simulateur d'indemnité de rupture conventionnelle"

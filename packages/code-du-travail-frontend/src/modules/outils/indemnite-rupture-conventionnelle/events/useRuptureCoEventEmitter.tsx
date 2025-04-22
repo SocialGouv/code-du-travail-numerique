@@ -11,6 +11,14 @@ import { sendEvent } from "src/modules/utils";
 
 export const useRuptureCoEventEmitter = () => {
   useEffect(() => {
+    sendEvent({
+      category: MatomoBaseEvent.OUTIL,
+      action: MatomoActionEvent.RUPTURE_CONVENTIONNELLE,
+      name: IndemniteDepartStepName.Introduction,
+    });
+  }, []);
+
+  useEffect(() => {
     eventEmitter.subscribe(EventType.SEND_RESULT_EVENT, (isEligible) => {
       sendEvent({
         category: MatomoBaseEvent.OUTIL,
