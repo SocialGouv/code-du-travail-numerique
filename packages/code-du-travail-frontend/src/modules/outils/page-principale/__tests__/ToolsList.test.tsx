@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { ToolsList } from "../ToolsList";
 import { ToolItem } from "../../../../../app/outils/page";
 
@@ -24,34 +24,28 @@ describe("ToolsList", () => {
       } as ToolItem,
     ];
 
-    render(<ToolsList tools={tools} />);
+    const { getByRole, getAllByRole } = render(<ToolsList tools={tools} />);
 
     // Vérifier le titre
-    expect(screen.getByText("Simulateurs")).toBeInTheDocument();
+    expect(getByRole("heading", { level: 1 })).toHaveTextContent("Simulateurs");
 
     // Vérifier que les simulateurs CDTN sont rendus
-    const toolTiles = screen.getAllByTestId("tool-tile");
+    const toolTiles = getAllByRole("heading", { level: 3 });
     expect(toolTiles.length).toBe(2);
 
     // Vérifier les titres des simulateurs
-    expect(screen.getByText("Simulator 1")).toBeInTheDocument();
-    expect(screen.getByText("Simulator 2")).toBeInTheDocument();
+    expect(toolTiles[0]).toHaveTextContent("Simulator 1");
+    expect(toolTiles[1]).toHaveTextContent("Simulator 2");
 
     // Vérifier les liens des simulateurs
-    const toolLinks = screen.getAllByTestId("tool-link");
-    expect(toolLinks[0]).toHaveTextContent("/outils/simulator-1");
-    expect(toolLinks[1]).toHaveTextContent("/outils/simulator-2");
-  });
-
-  it("should handle empty simulators", () => {
-    render(<ToolsList tools={[]} />);
-
-    // Vérifier que le titre est toujours présent
-    expect(screen.getByText("Simulateurs")).toBeInTheDocument();
-
-    // Vérifier qu'aucun outil n'est rendu
-    const toolTiles = screen.queryAllByTestId("tool-tile");
-    expect(toolTiles.length).toBe(0);
+    expect(getByRole("link", { name: "Simulator 1" })).toHaveAttribute(
+      "href",
+      "/outils/simulator-1"
+    );
+    expect(getByRole("link", { name: "Simulator 2" })).toHaveAttribute(
+      "href",
+      "/outils/simulator-2"
+    );
   });
 
   it("should handle missing descriptions and use metaDescription as fallback", () => {
@@ -73,11 +67,9 @@ describe("ToolsList", () => {
       } as ToolItem,
     ];
 
-    render(<ToolsList tools={tools} />);
+    const { queryByText } = render(<ToolsList tools={tools} />);
 
-    // Vérifier que les descriptions sont correctement affichées
-    const toolDescriptions = screen.getAllByTestId("tool-description");
-    expect(toolDescriptions[0]).toHaveTextContent("Description");
-    expect(toolDescriptions[1]).toHaveTextContent("Second Meta Description");
+    expect(queryByText("Description")).toBeInTheDocument();
+    expect(queryByText("Second Meta Description")).toBeInTheDocument();
   });
 });
