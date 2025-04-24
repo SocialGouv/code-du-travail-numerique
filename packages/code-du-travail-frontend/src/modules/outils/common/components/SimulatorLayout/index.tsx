@@ -42,16 +42,15 @@ export const SimulatorLayout = (props: Props<string>) => {
   const stepName = visibleSteps[stepIndex].label;
   const nextStepTitle = visibleSteps[stepIndex + 1]?.label;
 
+  const doNotTriggerMatomo = (stepName: string) =>
+    stepName === IndemniteDepartStepName.Resultat &&
+    simulator === PublicodesSimulator.INDEMNITE_LICENCIEMENT;
+
   useEffect(() => {
     const currentStepName = visibleSteps[stepIndex].name;
     if (doNotTriggerMatomo(currentStepName)) return;
     emitNextPreviousEvent(title, navigationAction === "prev", currentStepName);
   }, [stepIndex]);
-
-  const doNotTriggerMatomo = (stepName: string) =>
-    navigationAction === "none" ||
-    (stepName === IndemniteDepartStepName.Resultat &&
-      simulator === PublicodesSimulator.INDEMNITE_LICENCIEMENT);
 
   const onNextStep = () => {
     const nextStepIndex = stepIndex + 1;

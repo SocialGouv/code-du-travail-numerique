@@ -95,14 +95,6 @@ const IndemniteRuptureCoSimulator = ({
 export const CalculateurIndemniteRuptureCo = ({
   title,
 }: Pick<Props, "title">) => {
-  useEffect(() => {
-    sendEvent({
-      category: MatomoBaseEvent.OUTIL,
-      action: MatomoActionEvent.RUPTURE_CONVENTIONNELLE,
-      name: IndemniteDepartStepName.Introduction,
-    });
-  }, []);
-
   return (
     <CalculateurIndemnite
       title={title}

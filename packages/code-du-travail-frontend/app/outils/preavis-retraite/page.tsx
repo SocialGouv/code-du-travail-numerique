@@ -24,8 +24,8 @@ async function PreavisRetraite() {
   return (
     <DsfrLayout>
       <PreavisRetraiteSimulator
-        title={tool.displayTitle}
-        breadcrumbTitle={tool.title}
+        title={tool.title}
+        displayTitle={tool.displayTitle}
         relatedItems={relatedItems}
         description={tool.description}
       />

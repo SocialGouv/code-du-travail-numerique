@@ -65,7 +65,7 @@ type Props = {
     title: string;
   }[];
   title: string;
-  breadcrumbTitle: string;
+  displayTitle: string;
   description: string;
 };
 
@@ -73,16 +73,16 @@ const PreavisRetraiteSimulator = ({
   relatedItems,
   description,
   title,
-  breadcrumbTitle,
+  displayTitle,
 }: Props) => {
   return (
     <ContainerSimulator
       relatedItems={relatedItems}
-      title={breadcrumbTitle}
+      title={title}
       description={description}
       segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
     >
-      <h1 id="simulateur-preavis-retraite">{title}</h1>
+      <h1 id="simulateur-preavis-retraite">{displayTitle}</h1>
       <CalculateurPreavisRetraite title={title} />
     </ContainerSimulator>
   );
