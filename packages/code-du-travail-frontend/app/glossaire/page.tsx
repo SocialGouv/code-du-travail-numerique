@@ -2,9 +2,7 @@ import { DsfrLayout } from "../../src/modules/layout";
 import { generateDefaultMetadata } from "../../src/modules/common/metas";
 import { SITE_URL } from "../../src/config";
 import { GlossaryList } from "../../src/modules/glossaire/GlossaryList";
-import { getGlossary } from "../../src/api/modules/glossary/service";
-import { notFound } from "next/navigation";
-import { REVALIDATE_TIME } from "../../src/config";
+import { fetchGlossary } from "../../src/modules/glossaire/queries";
 
 export const metadata = generateDefaultMetadata({
   title: "Glossaire",
@@ -14,26 +12,14 @@ export const metadata = generateDefaultMetadata({
   overrideCanonical: `${SITE_URL}/glossaire`,
 });
 
-export const dynamic = "force-static";
-export const revalidate = REVALIDATE_TIME;
-
 async function GlossaryPage() {
-  try {
-    const glossary = await getGlossary();
+  const glossary = await fetchGlossary();
 
-    if (!glossary || glossary.length === 0) {
-      return notFound();
-    }
-
-    return (
-      <DsfrLayout>
-        <GlossaryList glossary={glossary} />
-      </DsfrLayout>
-    );
-  } catch (error) {
-    console.error("Erreur lors de la récupération du glossaire:", error);
-    return notFound();
-  }
+  return (
+    <DsfrLayout>
+      <GlossaryList glossary={glossary} />
+    </DsfrLayout>
+  );
 }
 
 export default GlossaryPage;

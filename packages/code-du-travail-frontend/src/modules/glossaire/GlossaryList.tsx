@@ -1,13 +1,13 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import React from "react";
-import { GlossaryNavigation } from "./GlossaryNavigation";
 import { GlossaryTerms } from "./GlossaryTerms";
 import { getGlossaryLetters } from "./utils";
-import { GlossaryTerm } from "./types";
+import { GlossaryItem } from "./types";
 import { ContainerWithBreadcrumbs } from "../layout/ContainerWithBreadcrumbs";
+import { AlphabeticList } from "../utils/alphabetic.list";
 
 type GlossaryProps = {
-  glossary: GlossaryTerm[];
+  glossary: GlossaryItem[];
 };
 
 export const GlossaryList = ({ glossary = [] }: GlossaryProps) => {
@@ -30,7 +30,7 @@ export const GlossaryList = ({ glossary = [] }: GlossaryProps) => {
       </p>
 
       <div className={fr.cx("fr-mb-6w")}>
-        <GlossaryNavigation letters={availableLetters} />
+        <AlphabeticList letters={availableLetters} />
       </div>
 
       <div className={fr.cx("fr-mt-4w")}>

@@ -1,11 +1,12 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Link from "next/link";
 import React from "react";
-import { GlossaryLetter } from "./types";
+import { GlossaryByLetter } from "./types";
 import { ListWithArrow } from "../common/ListWithArrow";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 
 type GlossaryTermsProps = {
-  letters: GlossaryLetter[];
+  letters: GlossaryByLetter;
 };
 
 export const GlossaryTerms = ({ letters }: GlossaryTermsProps) => {
@@ -18,13 +19,16 @@ export const GlossaryTerms = ({ letters }: GlossaryTermsProps) => {
 
         return (
           <div key={letter} className={fr.cx("fr-col-12", "fr-mb-4w")}>
-            <h2 className={fr.cx("fr-mb-2w")} id={`ancre-${letter}`}>
+            <h2 className={fr.cx("fr-mb-2w")} id={letter}>
               {letter}
             </h2>
             <ListWithArrow
               items={terms.map(({ term, slug }) => {
                 return (
-                  <Link key={slug} href={`/glossaire/${slug}`}>
+                  <Link
+                    key={slug}
+                    href={`/${getRouteBySource(SOURCES.GLOSSARY)}/${slug}`}
+                  >
                     {term}
                   </Link>
                 );

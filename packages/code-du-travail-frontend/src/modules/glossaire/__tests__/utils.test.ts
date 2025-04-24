@@ -1,12 +1,24 @@
 import { getGlossaryLetters } from "../utils";
-import { GlossaryTerm } from "../types";
+import { GlossaryItem } from "../types";
 
 describe("getGlossaryLetters", () => {
   it("should group terms by their first letter", () => {
-    const mockGlossary: GlossaryTerm[] = [
-      { term: "Arrêt", slug: "arret", definition: "Definition" },
-      { term: "Accord", slug: "accord", definition: "Definition" },
-      { term: "Bénéfice", slug: "benefice", definition: "Definition" },
+    const mockGlossary: GlossaryItem[] = [
+      {
+        term: "Arrêt",
+        slug: "arret",
+        definition: "Definition",
+      } as GlossaryItem,
+      {
+        term: "Accord",
+        slug: "accord",
+        definition: "Definition",
+      } as GlossaryItem,
+      {
+        term: "Bénéfice",
+        slug: "benefice",
+        definition: "Definition",
+      } as GlossaryItem,
     ];
 
     const result = getGlossaryLetters(mockGlossary);

@@ -1,27 +1,6 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { getByRole, render } from "@testing-library/react";
 import { GlossaryTermDetail } from "../GlossaryTermDetail";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-
-// Mock des modules externes
-jest.mock("next/link", () => {
-  const MockNextLink = ({
-    children,
-    href,
-  }: {
-    children: React.ReactNode;
-    href: string;
-  }) => <a href={href}>{children}</a>;
-  MockNextLink.displayName = "MockNextLink";
-  return MockNextLink;
-});
-
-jest.mock("@socialgouv/cdtn-utils", () => ({
-  getRouteBySource: jest.fn().mockReturnValue("glossaire"),
-  SOURCES: {
-    GLOSSARY: "glossary",
-  },
-}));
 
 jest.mock("../../layout/ContainerWithBreadcrumbs", () => ({
   ContainerWithBreadcrumbs: ({ children }: { children: React.ReactNode }) => (
@@ -29,24 +8,16 @@ jest.mock("../../layout/ContainerWithBreadcrumbs", () => ({
   ),
 }));
 
-jest.mock("../../layout/Container", () => ({
-  Container: ({ children }: { children: React.ReactNode }) => (
-    <div data-testid="container">{children}</div>
-  ),
-}));
-
 describe("GlossaryTermDetail", () => {
   it("should render term and definition", () => {
-    render(
+    const { getByText, queryByText, getByRole } = render(
       <GlossaryTermDetail term="Salaire" definition="Rémunération du travail" />
     );
 
-    expect(screen.getByText("Salaire")).toBeInTheDocument();
-    expect(screen.getByText("Rémunération du travail")).toBeInTheDocument();
-    expect(screen.getByText("Définition")).toBeInTheDocument();
-
-    // La section Sources ne devrait pas apparaître si aucune référence n'est fournie
-    expect(screen.queryByText("Sources")).not.toBeInTheDocument();
+    expect(getByRole("heading", { level: 1 })).toHaveTextContent("Salaire");
+    expect(getByText("Définition")).toBeInTheDocument();
+    expect(getByText("Rémunération du travail")).toBeInTheDocument();
+    expect(queryByText("Sources")).not.toBeInTheDocument();
   });
 
   it("should render references when provided", () => {
@@ -55,7 +26,7 @@ describe("GlossaryTermDetail", () => {
       "https://www.example.com/ref2",
     ];
 
-    render(
+    const { getByText, getAllByRole } = render(
       <GlossaryTermDetail
         term="Salaire"
         definition="Rémunération du travail"
@@ -63,29 +34,32 @@ describe("GlossaryTermDetail", () => {
       />
     );
 
-    expect(screen.getByText("Sources")).toBeInTheDocument();
-    expect(
-      screen.getByText("https://www.example.com/ref1")
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText("https://www.example.com/ref2")
-    ).toBeInTheDocument();
-
-    // Vérifier que les liens sont corrects
-    const links = screen.getAllByRole("link");
-    const referenceLinks = links.filter((link) =>
-      link.getAttribute("href")?.startsWith("https://www.example.com/")
+    expect(getByText("Sources")).toBeInTheDocument();
+    const sourceListItems = getAllByRole("listitem");
+    expect(sourceListItems).toHaveLength(2);
+    expect(sourceListItems[0]).toHaveTextContent(
+      "https://www.example.com/ref1"
     );
-    expect(referenceLinks).toHaveLength(2);
+    expect(getByRole(sourceListItems[0], "link")).toHaveAttribute(
+      "href",
+      "https://www.example.com/ref1"
+    );
+    expect(sourceListItems[1]).toHaveTextContent(
+      "https://www.example.com/ref2"
+    );
+    expect(getByRole(sourceListItems[1], "link")).toHaveAttribute(
+      "href",
+      "https://www.example.com/ref2"
+    );
   });
 
   it("should render back link to glossary", () => {
-    render(
+    const { getByRole } = render(
       <GlossaryTermDetail term="Salaire" definition="Rémunération du travail" />
     );
 
-    const backLink = screen.getByText("Glossaire");
+    const backLink = getByRole("link", { name: "Glossaire" });
     expect(backLink).toBeInTheDocument();
-    expect(backLink.closest("a")).toHaveAttribute("href", "/glossaire");
+    expect(backLink).toHaveAttribute("href", "/glossaire");
   });
 });

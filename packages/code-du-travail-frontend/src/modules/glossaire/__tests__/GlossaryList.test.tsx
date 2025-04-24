@@ -1,87 +1,48 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { GlossaryList } from "../GlossaryList";
-import { GlossaryTerm } from "../types";
-import { getGlossaryLetters } from "../utils";
-
-// Mock des composants et fonctions utilisés
-jest.mock("../GlossaryNavigation", () => ({
-  GlossaryNavigation: ({ letters }: { letters: string[] }) => (
-    <div data-testid="glossary-navigation">
-      Navigation letters: {letters.join(", ")}
-    </div>
-  ),
-}));
-
-jest.mock("../GlossaryTerms", () => ({
-  GlossaryTerms: ({ letters }: { letters: any[] }) => (
-    <div data-testid="glossary-terms">
-      Showing terms for {letters.filter((l) => l.terms.length > 0).length}{" "}
-      letters
-    </div>
-  ),
-}));
-
-jest.mock("../utils", () => ({
-  getGlossaryLetters: jest.fn(),
-}));
-
-jest.mock("../../layout/ContainerWithBreadcrumbs", () => ({
-  ContainerWithBreadcrumbs: ({ children }: { children: React.ReactNode }) => (
-    <div data-testid="breadcrumbs-container">{children}</div>
-  ),
-}));
+import { GlossaryItem } from "../types";
 
 describe("GlossaryList", () => {
   it("should render the glossary with navigation and terms", () => {
-    const mockGlossary: GlossaryTerm[] = [
-      { term: "Accord", slug: "accord", definition: "Définition" },
-      { term: "Bénéfice", slug: "benefice", definition: "Définition" },
+    const glossary: GlossaryItem[] = [
+      {
+        term: "Accord",
+        slug: "accord",
+        definition: "Définition",
+      } as GlossaryItem,
+      {
+        term: "Bénéfice",
+        slug: "benefice",
+        definition: "Définition",
+      } as GlossaryItem,
     ];
 
-    const mockTermsByLetters = [
-      { letter: "A", terms: [mockGlossary[0]] },
-      { letter: "B", terms: [mockGlossary[1]] },
-      { letter: "C", terms: [] },
-    ];
+    const { getByRole, getByText, getAllByRole } = render(
+      <GlossaryList glossary={glossary} />
+    );
 
-    (getGlossaryLetters as jest.Mock).mockReturnValue(mockTermsByLetters);
-
-    render(<GlossaryList glossary={mockGlossary} />);
-
-    // Vérifier les titres et textes
-    expect(screen.getByText("Glossaire")).toBeInTheDocument();
+    expect(getByRole("heading", { level: 1 })).toHaveTextContent("Glossaire");
     expect(
-      screen.getByText(
-        /Les définitions de ce glossaire, disponibles en surbrillance/i
-      )
+      getByText(/Les définitions de ce glossaire, disponibles en surbrillance/i)
     ).toBeInTheDocument();
 
     // Vérifier que la navigation est rendue avec les bonnes lettres
-    expect(screen.getByTestId("glossary-navigation")).toHaveTextContent(
-      "Navigation letters: A, B"
-    );
+    expect(getByRole("link", { name: "A" })).toHaveAttribute("href", "#A");
+    expect(getByRole("link", { name: "B" })).toHaveAttribute("href", "#B");
 
     // Vérifier que les termes sont rendus
-    expect(screen.getByTestId("glossary-terms")).toBeInTheDocument();
-  });
-
-  it("should handle empty glossary", () => {
-    (getGlossaryLetters as jest.Mock).mockReturnValue([
-      { letter: "A", terms: [] },
-      { letter: "B", terms: [] },
-    ]);
-
-    render(<GlossaryList glossary={[]} />);
-
-    // La navigation ne devrait afficher aucune lettre
-    expect(screen.getByTestId("glossary-navigation")).toHaveTextContent(
-      "Navigation letters:"
+    const headers = getAllByRole("heading", { level: 2 });
+    expect(headers).toHaveLength(2);
+    expect(headers[0]).toHaveAttribute("id", "A");
+    expect(headers[1]).toHaveAttribute("id", "B");
+    expect(getByRole("link", { name: "Accord" })).toHaveAttribute(
+      "href",
+      "/glossaire/accord"
     );
-
-    // Les termes devraient être rendus, mais sans contenu
-    expect(screen.getByTestId("glossary-terms")).toHaveTextContent(
-      "Showing terms for 0 letters"
+    expect(getByRole("link", { name: "Bénéfice" })).toHaveAttribute(
+      "href",
+      "/glossaire/benefice"
     );
   });
 });

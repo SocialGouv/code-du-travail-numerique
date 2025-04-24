@@ -31,13 +31,13 @@ export const GlossaryTermDetail = ({
       <Container>
         <h1 id="glossary-term">{term}</h1>
         <div>
-          <h2 className={fr.cx("fr-h4")}>Définition</h2>
+          <p className={fr.cx("fr-h4")}>Définition</p>
           <p>{definition}</p>
         </div>
 
         {references && references.length > 0 && (
           <div>
-            <h2 className={fr.cx("fr-h4")}>Sources</h2>
+            <p className={fr.cx("fr-h4")}>Sources</p>
             <List
               items={references.map((url) => {
                 return (

@@ -1,6 +1,6 @@
-import { GlossaryTerm } from "./types";
+import { GlossaryByLetter, GlossaryItem } from "./types";
 
-export function getGlossaryLetters(glossary: GlossaryTerm[]) {
+export function getGlossaryLetters(glossary: GlossaryItem[]): GlossaryByLetter {
   const A = "A".charCodeAt(0);
   const alphabet = Array.from({ length: 26 }, (_, index) =>
     String.fromCharCode(A + index)
