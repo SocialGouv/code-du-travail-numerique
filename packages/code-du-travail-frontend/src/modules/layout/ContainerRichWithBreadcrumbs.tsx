@@ -9,7 +9,7 @@ import React from "react";
 
 type Props = ContainerRichProps & {
   currentPage: string;
-  breacrumbs: BreadcrumbType[];
+  breadcrumbs: BreadcrumbType[];
 };
 
 export const ContainerRichWithBreadcrumbs = ({
@@ -17,7 +17,7 @@ export const ContainerRichWithBreadcrumbs = ({
   relatedItems,
   title,
   description,
-  breacrumbs,
+  breadcrumbs,
   currentPage,
 }: Props) => {
   return (
@@ -27,7 +27,7 @@ export const ContainerRichWithBreadcrumbs = ({
         homeLinkProps={{
           href: "/",
         }}
-        segments={breacrumbs.map(({ label, slug }) => ({
+        segments={breadcrumbs.map(({ label, slug }) => ({
           label: <>{label}</>,
           linkProps: { href: slug },
         }))}

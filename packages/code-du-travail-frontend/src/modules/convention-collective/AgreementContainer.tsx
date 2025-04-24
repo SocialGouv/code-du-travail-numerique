@@ -21,7 +21,7 @@ export function AgreementContainer({ agreement, relatedItems }: Props) {
   return (
     <ContainerRichWithBreadcrumbs
       currentPage={agreement.shortTitle}
-      breacrumbs={[
+      breadcrumbs={[
         {
           label: "Convention collective",
           slug: "/convention-collective",

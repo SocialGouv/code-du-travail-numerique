@@ -1,6 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import Link from "../../common/Link";
-import { css } from "@styled-system/css";
+import { AlphabeticList } from "../../utils/alphabetic.list";
 
 type Props = {
   letters: string[];
@@ -15,26 +14,8 @@ export const AgreementsGlossaire = ({ letters }: Props) => {
         termes de nombre de salariés.
       </p>
       <div>
-        <ul className={`${fr.cx("fr-grid-row")} ${ul}`}>
-          {letters.map((letter, index) => (
-            <li key={letter} className={fr.cx("fr-mx-1v")}>
-              {index > 0 && (
-                <strong aria-hidden="true" className={fr.cx("fr-h3")}>
-                  {" "}
-                  -{" "}
-                </strong>
-              )}
-              <Link href={`#${letter}`} className={fr.cx("fr-h3")}>
-                {letter}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <AlphabeticList letters={letters} />
       </div>
     </>
   );
 };
-
-const ul = css({
-  listStyle: "none!",
-});
