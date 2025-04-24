@@ -48,7 +48,6 @@ export const HeaderSearch = ({ onSearchSubmit }: HeaderSearchProps) => {
                   );
                   return results;
                 } catch (error) {
-                  console.log("Failed");
                   return [];
                 }
               }}
