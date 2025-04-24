@@ -1,47 +1,30 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { ToolsList } from "../ToolsList";
-import { Tool } from "@socialgouv/cdtn-types";
-
-// Mock du composant ToolTile
-jest.mock("../ToolTile", () => ({
-  ToolTile: (props: any) => (
-    <div data-testid="tool-tile">
-      <div data-testid="tool-title">{props.title}</div>
-      <div data-testid="tool-description">{props.description}</div>
-      <div data-testid="tool-link">{props.link}</div>
-      <div data-testid="tool-icon">{props.iconName}</div>
-    </div>
-  ),
-}));
-
-// Mock du composant ContainerWithBreadcrumbs
-jest.mock("../../../layout/ContainerWithBreadcrumbs", () => ({
-  ContainerWithBreadcrumbs: ({ children }: { children: React.ReactNode }) => (
-    <div data-testid="breadcrumbs-container">{children}</div>
-  ),
-}));
+import { ToolItem } from "../../../../../app/outils/page";
 
 describe("ToolsList", () => {
   it("should render the tools list with CDTN simulators", () => {
-    const mockCdtnSimulators = [
+    const tools = [
       {
         id: "1",
         title: "Simulator 1",
         description: "Description 1",
+        metaDescription: "Meta Description 1",
         icon: "icon1",
-        slug: "simulator-1",
-      } as Tool,
+        url: "/outils/simulator-1",
+      } as ToolItem,
       {
         id: "2",
         title: "Simulator 2",
         description: "Description 2",
+        metaDescription: "Meta Description 2",
         icon: "icon2",
-        slug: "simulator-2",
-      } as Tool,
+        url: "/outils/simulator-2",
+      } as ToolItem,
     ];
 
-    render(<ToolsList cdtnSimulators={mockCdtnSimulators} />);
+    render(<ToolsList tools={tools} />);
 
     // Vérifier le titre
     expect(screen.getByText("Simulateurs")).toBeInTheDocument();
@@ -61,7 +44,7 @@ describe("ToolsList", () => {
   });
 
   it("should handle empty simulators", () => {
-    render(<ToolsList cdtnSimulators={[]} />);
+    render(<ToolsList tools={[]} />);
 
     // Vérifier que le titre est toujours présent
     expect(screen.getByText("Simulateurs")).toBeInTheDocument();
@@ -72,28 +55,29 @@ describe("ToolsList", () => {
   });
 
   it("should handle missing descriptions and use metaDescription as fallback", () => {
-    const mockCdtnSimulators = [
+    const tools = [
       {
         id: "1",
         title: "Simulator with description",
         description: "Description",
+        metaDescription: "First Meta Description",
         icon: "icon1",
-        slug: "simulator-1",
-      } as Tool,
+        url: "/outils/simulator-1",
+      } as ToolItem,
       {
         id: "2",
         title: "Simulator with metaDescription",
-        metaDescription: "Meta Description",
+        metaDescription: "Second Meta Description",
         icon: "icon2",
-        slug: "simulator-2",
-      } as Tool,
+        url: "/outils/simulator-1",
+      } as ToolItem,
     ];
 
-    render(<ToolsList cdtnSimulators={mockCdtnSimulators} />);
+    render(<ToolsList tools={tools} />);
 
     // Vérifier que les descriptions sont correctement affichées
     const toolDescriptions = screen.getAllByTestId("tool-description");
     expect(toolDescriptions[0]).toHaveTextContent("Description");
-    expect(toolDescriptions[1]).toHaveTextContent("Meta Description");
+    expect(toolDescriptions[1]).toHaveTextContent("Second Meta Description");
   });
 });

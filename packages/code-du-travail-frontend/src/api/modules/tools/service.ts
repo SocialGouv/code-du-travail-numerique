@@ -1,4 +1,4 @@
-import { Tool } from "@socialgouv/cdtn-types";
+import { ElasticTool } from "@socialgouv/cdtn-types";
 import {
   elasticsearchClient,
   elasticDocumentsIndex,
@@ -7,7 +7,7 @@ import {
 import { getTools, getAllToolsQuery } from "./queries";
 import { SearchHit } from "@elastic/elasticsearch/lib/api/types";
 
-export const getAllTools = async (): Promise<Tool[]> => {
+export const getAllTools = async (): Promise<ElasticTool[]> => {
   const body: any = getAllToolsQuery();
   const response = await elasticsearchClient.search<any>({
     body,
@@ -28,9 +28,9 @@ export const getAllTools = async (): Promise<Tool[]> => {
 export const getToolsByIdsAndSlugs = async (
   ids?: string[],
   slugs?: string[]
-): Promise<Tool[]> => {
+): Promise<ElasticTool[]> => {
   const body: any = getTools(ids, slugs);
-  const response = await elasticsearchClient.search<Tool>({
+  const response = await elasticsearchClient.search<ElasticTool>({
     body,
     index: elasticDocumentsIndex,
   });
@@ -48,14 +48,14 @@ export const getToolsByIdsAndSlugs = async (
     }))
     .filter((tool) =>
       process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT ? tool.displayTool : true
-    ) as Tool[];
+    ) as ElasticTool[];
 };
 
 export const getToolsByIds = async (
   cdtnIds: string[]
-): Promise<SearchHit<Tool>[]> => {
+): Promise<SearchHit<ElasticTool>[]> => {
   const body: any = getTools(undefined, undefined, cdtnIds);
-  const response = await elasticsearchClient.search<Tool>({
+  const response = await elasticsearchClient.search<ElasticTool>({
     body,
     index: elasticDocumentsIndex,
   });
@@ -71,9 +71,9 @@ export const getToolsByIds = async (
 
 export const getToolsBySlugs = async (
   slugs: string[]
-): Promise<SearchHit<Tool>[]> => {
+): Promise<SearchHit<ElasticTool>[]> => {
   const body: any = getTools(undefined, slugs);
-  const response = await elasticsearchClient.search<Tool>({
+  const response = await elasticsearchClient.search<ElasticTool>({
     body,
     index: elasticDocumentsIndex,
   });
@@ -89,9 +89,9 @@ export const getToolsBySlugs = async (
 
 export const getBySlugTools = async (
   slug: string
-): Promise<Tool | undefined> => {
+): Promise<ElasticTool | undefined> => {
   const body: any = getTools(undefined, [slug]);
-  const response = await elasticsearchClient.search<Tool>({
+  const response = await elasticsearchClient.search<ElasticTool>({
     body,
     index: elasticDocumentsIndex,
   });

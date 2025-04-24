@@ -2,7 +2,7 @@ import { DocumentElasticResult } from "../../../src/modules/documents";
 import { fetchTool } from "../../../src/modules/outils";
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
-import { ElasticTool } from "../../../src/modules/outils/type";
+import { ElasticTool } from "@socialgouv/cdtn-types";
 import { SITE_URL } from "../../../src/config";
 import { CalculateurIndemniteRuptureCo } from "src/modules/outils/indemnite-rupture-conventionnelle/IndemniteRuptureCoSimulator";
 import { WidgetWithIframeResizer } from "src/modules/widgets/WidgetWithIframeResizer";

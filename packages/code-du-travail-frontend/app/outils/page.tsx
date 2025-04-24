@@ -1,14 +1,10 @@
 import { DsfrLayout } from "../../src/modules/layout";
 import { generateDefaultMetadata } from "../../src/modules/common/metas";
-import { SITE_URL } from "../../src/config";
+import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
 import { ToolsList } from "../../src/modules/outils/page-principale/ToolsList";
-import { getToolsByIdsAndSlugs } from "../../src/api/modules/tools/service";
 import { notFound } from "next/navigation";
-import { REVALIDATE_TIME } from "../../src/config";
-import { SOURCES } from "@socialgouv/cdtn-utils";
-import { Tool } from "@socialgouv/cdtn-types";
-
-// Les outils externes ont déjà une propriété url dans le type Tool
+import { fetchExternalTools, fetchTools } from "../../src/modules/outils";
+import { ElasticTool } from "@socialgouv/cdtn-types";
 
 export const metadata = generateDefaultMetadata({
   title: "Outils et simulateurs",
@@ -21,34 +17,53 @@ export const metadata = generateDefaultMetadata({
 export const dynamic = "force-static";
 export const revalidate = REVALIDATE_TIME;
 
+export type ToolItem = Pick<
+  ElasticTool,
+  "id" | "description" | "metaDescription" | "icon" | "title"
+> & {
+  url: string;
+};
+
 async function OutilsPage() {
-  try {
-    const tools = await getToolsByIdsAndSlugs();
+  const tools = await getTools();
 
-    if (!tools || tools.length === 0) {
-      return notFound();
-    }
+  return (
+    <DsfrLayout>
+      <ToolsList tools={tools} />
+    </DsfrLayout>
+  );
+}
 
-    const cdtnSimulators = tools.filter(
-      (tool) => tool.source === SOURCES.TOOLS
-    );
+const getTools = async (): Promise<ToolItem[]> => {
+  // // id, description, metaDescription, icon, title, link
+  const tools = await fetchTools([
+    "slug",
+    "id",
+    "description",
+    "metaDescription",
+    "icon",
+    "title",
+  ]);
+  const externalTools = await fetchExternalTools([
+    "slug",
+    "id",
+    "description",
+    "metaDescription",
+    "icon",
+    "title",
+    "url",
+  ]);
 
-    const externalTools = tools.filter(
-      (tool) => tool.source === SOURCES.EXTERNALS
-    );
-
-    return (
-      <DsfrLayout>
-        <ToolsList
-          cdtnSimulators={cdtnSimulators}
-          externalTools={externalTools}
-        />
-      </DsfrLayout>
-    );
-  } catch (error) {
-    console.error("Erreur lors de la récupération des outils:", error);
+  if (!tools || tools.length === 0) {
     return notFound();
   }
-}
+
+  return tools
+    .map((tool) => ({
+      ...tool,
+      url: `/outils/${tool.slug}`,
+    }))
+    .concat(externalTools);
+};
 
 export default OutilsPage;

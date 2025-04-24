@@ -25,7 +25,7 @@ import {
   getBySourceAndSlugItems,
   RelatedItem,
 } from "../../src/api";
-import { Tool } from "@socialgouv/cdtn-types";
+import { ElasticTool } from "@socialgouv/cdtn-types";
 
 const toolsBySlug = {
   "heures-recherche-emploi": HeuresRechercheEmploi,
@@ -115,7 +115,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     metaTitle,
     metaDescription,
   } = tool;
-  const data = await getBySourceAndSlugItems<Tool>(SOURCES.TOOLS, slug);
+  const data = await getBySourceAndSlugItems<ElasticTool>(SOURCES.TOOLS, slug);
   const relatedItems = filterRelatedItems(slug, data?.relatedItems ?? []);
 
   return {

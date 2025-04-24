@@ -5,7 +5,7 @@ import {
 } from "../../../../../src/modules/outils";
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../../../src/modules/common/metas";
-import { ElasticTool } from "../../../../../src/modules/outils/type";
+import { ElasticTool } from "@socialgouv/cdtn-types";
 import { EnterpriseAgreementSelectionLink } from "../../../../../src/modules/enterprise";
 import { searchEnterprises } from "../../../../../src/modules/enterprise/queries";
 import { SITE_URL } from "../../../../../src/config";
