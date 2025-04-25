@@ -9,6 +9,7 @@ import Situation from "./components/Situation";
 import ErrorPublicodes from "src/modules/outils/indemnite-depart/steps/Resultat/components/ErrorPublicodes";
 import { PubliReferences } from "src/modules/outils/common/components";
 import { fr } from "@codegouvfr/react-dsfr";
+import { cx } from "@styled-system/css";
 
 const StepResult = (): JSX.Element => {
   const store = useContext(PreavisRetraiteContext);
@@ -63,7 +64,7 @@ const StepResult = (): JSX.Element => {
   }
 
   return (
-    <div className={fr.cx("fr-col-md-8", "fr-col-12")}>
+    <div className={fr.cx("fr-col-md-8", "fr-col-12", "fr-mb-6w")}>
       <ShowResult
         notifications={resultNotifications ?? []}
         result={result}
@@ -80,7 +81,7 @@ const StepResult = (): JSX.Element => {
           isAgreementSupported
         )}
       />
-      <h2>Détail du calcul</h2>
+      <h2 className={fr.cx("fr-h4")}>Détail du calcul</h2>
       <Situation
         agreement={agreement}
         isAgreementSupported={isAgreementSupported}
@@ -102,7 +103,10 @@ const StepResult = (): JSX.Element => {
         isSeniorityLessThan6Months={!!isSeniorityLessThan6Months}
         agreementRoute={agreementRoute}
       />
-      <PubliReferences references={resultReferences ?? []} />
+      <PubliReferences
+        references={resultReferences ?? []}
+        classNameTitle={fr.cx("fr-h5", "fr-mb-0")}
+      />
     </div>
   );
 };

@@ -48,7 +48,7 @@ test(`Mise à la retraite avec une CC plus favorable
   userAction.click(ui.next.get());
   expect(ui.result.resultat.query()).toBeInTheDocument();
   expect(ui.result.print.query()).toBeInTheDocument();
-  expect(ui.result.resultat.get()).toHaveTextContent("1 semaine");
+  expect(ui.result.resultatValeur.get()).toHaveTextContent("1 semaine");
   expect(ui.result.noticeMiseRetraite.get()).toBeInTheDocument();
   expect(ui.result.categorieProfessionnelle.get()).toHaveTextContent(
     "Ouvriers"

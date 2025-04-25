@@ -26,7 +26,7 @@ test(`Mise à la retraite sans sélection de CC
   userAction.click(ui.next.get());
   expect(ui.result.resultat.query()).toBeInTheDocument();
   expect(ui.result.print.query()).toBeInTheDocument();
-  expect(ui.result.resultat.get()).toHaveTextContent("2 mois");
+  expect(ui.result.resultatValeur.get()).toHaveTextContent("2 mois");
   expect(ui.result.noticeMiseRetraite.get()).toBeInTheDocument();
   expect(ui.result.originDepart.get()).toHaveTextContent("Mise à la retraite");
   expect(ui.result.seniority.get()).toHaveTextContent("Plus de 2 ans");

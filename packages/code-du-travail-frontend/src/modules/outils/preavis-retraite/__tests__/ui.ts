@@ -128,6 +128,7 @@ export const ui = {
   },
   result: {
     resultat: byText(/À partir des éléments que vous avez saisis/),
+    resultatValeur: byTestId("resultat"),
     resultatLegal: byText(/Durée prévue par le code du travail/),
     resultatAgreement: byText(/Durée prévue par la convention collective/),
     data: byText(/Éléments saisis/),

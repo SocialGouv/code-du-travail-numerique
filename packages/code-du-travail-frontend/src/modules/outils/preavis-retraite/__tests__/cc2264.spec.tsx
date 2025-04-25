@@ -50,7 +50,7 @@ test(`5 ans minimum pour la question pour la CC 2264`, async () => {
   userAction.click(ui.next.get());
   expect(ui.result.resultat.query()).toBeInTheDocument();
   expect(ui.result.print.query()).toBeInTheDocument();
-  expect(ui.result.resultat.get()).toHaveTextContent("3 mois");
+  expect(ui.result.resultatValeur.get()).toHaveTextContent("3 mois");
   expect(ui.result.noticeMiseRetraite.get()).toBeInTheDocument();
   expect(ui.result.categorieProfessionnelle.get()).toHaveTextContent(
     "Non-cadres"

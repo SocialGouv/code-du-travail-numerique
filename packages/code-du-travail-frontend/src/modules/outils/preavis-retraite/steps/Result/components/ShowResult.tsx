@@ -28,19 +28,21 @@ const ShowResult: React.FC<Props> = ({
   if (!result) return null;
   return (
     <>
-      <h2>
+      <h2 className={fr.cx("fr-mt-3w")}>
         Préavis de {type === "depart-retraite" ? "départ" : "mise"} à la
         retraite
       </h2>
-      <p className={fr.cx("fr-mb-1w")}>
+      <p className={fr.cx("fr-mb-3w", "fr-pr-md-2v")}>
         À partir des éléments que vous avez saisis
         {result.value > 0
           ? `, la durée du préavis en cas de ${
               type === "depart-retraite" ? "départ" : "mise"
             } à la retraite est estimée à`
           : ""}
-        <br />
-        <strong className={fr.cx("fr-h2", "fr-mt-3v")}>
+        &nbsp;:
+      </p>
+      <p data-testid="resultat">
+        <strong className={fr.cx("fr-h2")}>
           {agreementMaximumResult?.value &&
           agreementMaximumResult?.value !== result.value ? (
             <>

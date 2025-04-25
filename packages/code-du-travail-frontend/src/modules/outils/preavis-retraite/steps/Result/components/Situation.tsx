@@ -27,7 +27,7 @@ const Situation: React.FC<Props> = ({
 }) => {
   return (
     <>
-      <h3>Les éléments saisis</h3>
+      <h3 className={fr.cx("fr-h5", "fr-mb-0")}>Les éléments saisis</h3>
       <ul>
         <li key="originDepart" data-testid="situation-originDepart">
           Origine du départ :{" "}

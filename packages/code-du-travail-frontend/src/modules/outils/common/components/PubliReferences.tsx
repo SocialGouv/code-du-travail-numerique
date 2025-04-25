@@ -4,13 +4,17 @@ import Link from "../../../common/Link";
 
 type Props = {
   references: References[];
+  classNameTitle?: string;
 };
 
-export const PubliReferences: React.FC<Props> = ({ references }) => (
+export const PubliReferences: React.FC<Props> = ({
+  references,
+  classNameTitle,
+}) => (
   <>
     {references && references.length > 0 && (
       <>
-        <h3>Sources</h3>
+        <h3 className={classNameTitle}>Sources</h3>
         <ul data-testid="sources">
           {references
             .filter(({ article }) => article !== null)

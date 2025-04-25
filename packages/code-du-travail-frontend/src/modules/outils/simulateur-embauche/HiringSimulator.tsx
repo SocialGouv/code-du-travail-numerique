@@ -2,9 +2,9 @@
 import { Highlight } from "@codegouvfr/react-dsfr/Highlight";
 import { fr } from "@codegouvfr/react-dsfr";
 import { createRef, memo, useEffect, useState } from "react";
-import { ContainerSimulator } from "../../layout/ContainerSimulator";
 import { RelatedItem } from "../../documents";
 import * as Sentry from "@sentry/nextjs";
+import { ContainerSimulatorLight } from "../../layout/ContainerSimulatorLight";
 
 type Props = {
   relatedItems: {
@@ -78,7 +78,7 @@ const HiringSimulator = memo(function HiringSimulator({
   }, []);
   const { simulator } = state;
   return (
-    <ContainerSimulator
+    <ContainerSimulatorLight
       relatedItems={relatedItems}
       title={breadcrumbTitle}
       description={description}
@@ -107,7 +107,7 @@ const HiringSimulator = memo(function HiringSimulator({
       ) : (
         <div ref={simRef} className={fr.cx("fr-col-12")} />
       )}
-    </ContainerSimulator>
+    </ContainerSimulatorLight>
   );
 });
 

@@ -3,9 +3,11 @@
 exports[`<RelatedItems /> should render 1`] = `
 <div>
   <div
-    class="fr-mb-5w [@media_print]:d_none"
+    class="[@media_print]:d_none"
   >
-    <div>
+    <div
+      class="fr-mb-5w"
+    >
       <div
         aria-level="2"
         class="fr-mb-2w fr-text--lead"
@@ -49,7 +51,9 @@ exports[`<RelatedItems /> should render 1`] = `
         </li>
       </ul>
     </div>
-    <div>
+    <div
+      class="fr-mb-5w"
+    >
       <div
         aria-level="2"
         class="fr-mb-2w fr-text--lead"

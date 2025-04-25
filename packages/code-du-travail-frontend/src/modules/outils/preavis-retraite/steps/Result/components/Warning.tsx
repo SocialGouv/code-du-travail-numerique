@@ -21,7 +21,7 @@ const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
       severity="info"
       title={hasNotice ? titreFavorable : titrePreavis}
       data-testid="notice-warning"
-      className={fr.cx("fr-my-2w")}
+      className={fr.cx("fr-my-3w")}
       description={
         <>
           {type === WarningType.noNoticeWithAgreement ? (

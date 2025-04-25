@@ -1,7 +1,7 @@
 "use client";
 import { ContainerSimulator } from "../../layout/ContainerSimulator";
 import { RelatedItem } from "../../documents";
-import React, { useEffect } from "react";
+import React from "react";
 import { StepAgreement, StepInformations } from "../indemnite-depart/steps";
 import {
   StepAnciennete,
@@ -17,8 +17,6 @@ import {
 import { Step } from "../common/components/SimulatorLayout/types";
 import { IndemniteDepartType } from "../indemnite-depart/types";
 import { EVENT_CATEGORY } from "src/outils/common/Feedback/tracking";
-import { MatomoActionEvent, MatomoBaseEvent } from "src/lib";
-import { sendEvent } from "src/modules/utils";
 import StepSalaires from "../indemnite-depart/steps/Salaires";
 
 const steps: Step<IndemniteDepartStepName>[] = [
@@ -68,12 +66,10 @@ type Props = {
   }[];
   title: string;
   displayTitle: string;
-  description: string;
 };
 
 const IndemniteRuptureCoSimulator = ({
   relatedItems,
-  description,
   title,
   displayTitle,
 }: Props) => {
@@ -82,11 +78,9 @@ const IndemniteRuptureCoSimulator = ({
   return (
     <ContainerSimulator
       relatedItems={relatedItems}
-      title={title}
-      description={description}
+      title={displayTitle}
       segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
     >
-      <h1 id="simulateur-indemnite-rupture-co">{displayTitle}</h1>
       <CalculateurIndemniteRuptureCo title={title} />
     </ContainerSimulator>
   );

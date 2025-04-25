@@ -158,7 +158,7 @@ export const SimulatorLayout = (props: Props<string>) => {
             priority="secondary"
             iconId="ri-arrow-left-line"
             iconPosition="left"
-            className="fr-mr-2w"
+            className={fr.cx("fr-mr-2w", "fr-mb-3w")}
           >
             Précédent
           </Button>
@@ -170,6 +170,7 @@ export const SimulatorLayout = (props: Props<string>) => {
             iconId="ri-arrow-right-line"
             iconPosition="right"
             disabled={validator?.isStepValid === false}
+            className={fr.cx("fr-mr-2w", "fr-mb-3w")}
           >
             {currentNumStep === 1 ? "Commencer" : "Suivant"}
           </Button>
@@ -180,6 +181,7 @@ export const SimulatorLayout = (props: Props<string>) => {
             priority="secondary"
             iconId="ri-printer-fill"
             iconPosition="right"
+            className={fr.cx("fr-mr-2w", "fr-mb-3w")}
           >
             Imprimer le résultat
           </Button>

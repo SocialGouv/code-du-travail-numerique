@@ -57,7 +57,7 @@ test(`Départ à la retraite avec une CC plus favorable
   userAction.click(ui.next.get());
   expect(ui.result.resultat.query()).toBeInTheDocument();
   expect(ui.result.print.query()).toBeInTheDocument();
-  expect(ui.result.resultat.get()).toHaveTextContent("2 semaines");
+  expect(ui.result.resultatValeur.get()).toHaveTextContent("2 semaines");
   expect(ui.result.noticeDepartRetraite.get()).toBeInTheDocument();
   expect(ui.result.categorieProfessionnelle.get()).toHaveTextContent(
     "Ouvriers"
