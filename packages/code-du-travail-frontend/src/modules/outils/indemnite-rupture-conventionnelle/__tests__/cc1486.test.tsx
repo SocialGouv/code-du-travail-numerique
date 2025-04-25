@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
     "slug": "1486-bureaux-detudes-techniques-cabinets-dingenieurs-conseils-et-societes-de",
     "title": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. ",
     "contributions": true
-  }  
+  }
 `
 );
 
@@ -25,7 +25,6 @@ describe("Indemnité licenciement - CC 1486", () => {
     render(
       <IndemniteRuptureCoSimulator
         displayTitle="Simulateur d'indemnité de rupture conventionnelle"
-        description="Estimez le montant de l'indemnité de rupture conventionnelle"
         relatedItems={[]}
         title="Simulateur d'indemnité de rupture conventionnelle"
       />

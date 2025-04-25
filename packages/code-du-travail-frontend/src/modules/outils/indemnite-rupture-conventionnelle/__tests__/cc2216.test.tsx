@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
     "slug": "2216-commerce-de-detail-et-de-gros-a-predominance-alimentaire",
     "title": "Convention collective nationale du commerce de détail et de gros à prédominance alimentaire du 12 juillet 2001.  Etendue par arrêté du 26 juillet 2002 JORF 6 août 2002.",
     "contributions": true
-  }  
+  }
 `
 );
 
@@ -25,7 +25,6 @@ describe("Indemnité licenciement - CC 2216", () => {
     render(
       <IndemniteRuptureCoSimulator
         displayTitle="Simulateur d'indemnité de rupture conventionnelle"
-        description="Estimez le montant de l'indemnité de rupture conventionnelle"
         relatedItems={[]}
         title="Simulateur d'indemnité de rupture conventionnelle"
       />

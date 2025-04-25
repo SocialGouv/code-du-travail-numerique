@@ -128,7 +128,7 @@ describe("Outil - Préavis de retraite", () => {
 
     // Résultat
     cy.contains("Préavis de départ à la retraite");
-    cy.contains("2 mois*");
+    cy.contains("2 mois");
     cy.contains("Travailleur handicapé : Oui*");
     cy.contains(
       "Le salarié étant reconnu en tant que travailleur handicapé, la durée du préavis de départ à la retraite est doublée mais ne peut pas dépasser un maximum de 3 mois."

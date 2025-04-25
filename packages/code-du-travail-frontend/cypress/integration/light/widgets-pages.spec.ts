@@ -1,7 +1,7 @@
 describe("Widgets", () => {
   it("Page widget preavis de retraite", () => {
     cy.visit("/widgets/preavis-retraite");
-    cy.contains("Étapes");
+    cy.contains("Étape");
     cy.contains("Calculer le préavis de départ à la retraite");
     cy.contains(
       "permet de calculer la durée de préavis à respecter en cas de départ ou de mise à la retraite"

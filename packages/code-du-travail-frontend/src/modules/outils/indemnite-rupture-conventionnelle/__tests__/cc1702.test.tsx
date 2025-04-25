@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
     "slug": "1702-travaux-publics-tome-ii-ouvriers",
     "title": "Convention collective nationale des ouvriers des travaux publics du 15 décembre 1992",
     "contributions": true
-  }  
+  }
 `
 );
 
@@ -25,7 +25,6 @@ describe("Indemnité licenciement - CC 1702", () => {
     render(
       <IndemniteRuptureCoSimulator
         displayTitle="Simulateur d'indemnité de rupture conventionnelle"
-        description="Estimez le montant de l'indemnité de rupture conventionnelle"
         relatedItems={[]}
         title="Simulateur d'indemnité de rupture conventionnelle"
       />
