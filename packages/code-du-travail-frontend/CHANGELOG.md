@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.179.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.178.0...v4.179.0) (2025-04-25)
+
+
+### Bug Fixes
+
+* correction du role sur la combobox ([#6547](https://github.com/SocialGouv/code-du-travail-numerique/issues/6547)) ([b69fb50](https://github.com/SocialGouv/code-du-travail-numerique/commit/b69fb5007b415454a025309e90925bbc52398fcd))
+
+
+### Features
+
+* **glossaire:** passage en dsfr ([#6535](https://github.com/SocialGouv/code-du-travail-numerique/issues/6535)) ([eb3c6f3](https://github.com/SocialGouv/code-du-travail-numerique/commit/eb3c6f380673fad47e3c4cd81bf4ca23ba3ec72f))
+* **modeles:** migration en DSFR de la page qui liste les modèles de documents ([#6543](https://github.com/SocialGouv/code-du-travail-numerique/issues/6543)) ([c9cf8d2](https://github.com/SocialGouv/code-du-travail-numerique/commit/c9cf8d2fc9964d0cbf920b7123b40ce207e9983b))
+* **outils:** passage en dsfr de la page principale ([#6539](https://github.com/SocialGouv/code-du-travail-numerique/issues/6539)) ([4540025](https://github.com/SocialGouv/code-du-travail-numerique/commit/454002590d3ff07e8d234e3125f87d7775283ca1))
+
+
+
+
+
 # [4.178.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.177.0...v4.178.0) (2025-04-22)
 
 
