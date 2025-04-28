@@ -32,7 +32,8 @@ export const HeaderSearch = ({ onSearchSubmit }: HeaderSearchProps) => {
 
           <form
             role="search"
-            onSubmit={() => {
+            onSubmit={(e) => {
+              e.preventDefault();
               onSearchSubmit(value);
             }}
           >
