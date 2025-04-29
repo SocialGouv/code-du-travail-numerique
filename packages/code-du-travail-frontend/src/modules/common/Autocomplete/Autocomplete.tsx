@@ -91,7 +91,7 @@ export const Autocomplete = <K,>({
         getRootProps,
         clearSelection,
       }) => (
-        <div {...getRootProps({ className: `${searchContainer}` })}>
+        <div className={`${searchContainer}`}>
           <Input
             nativeLabelProps={getLabelProps()}
             hideLabel={isSearch}
@@ -134,6 +134,8 @@ export const Autocomplete = <K,>({
               "data-testid": dataTestId,
               placeholder,
               ref: setInputRef,
+              role: getRootProps().role,
+              "aria-expanded": getRootProps()["aria-expanded"],
               ...getInputProps(),
             }}
             className={`${fr.cx("fr-mb-0")}`}
