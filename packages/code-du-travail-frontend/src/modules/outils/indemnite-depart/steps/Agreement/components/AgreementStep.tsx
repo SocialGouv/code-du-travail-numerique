@@ -109,7 +109,6 @@ export const CommonAgreementStep = ({
             }
             enterprise={enterprise}
             agreement={agreement}
-            disableMatomo={true}
           />
           {error?.enterprise && (
             <Alert
