@@ -53,7 +53,9 @@ export const HeaderSearch = ({ onSearchSubmit }: HeaderSearchProps) => {
                 }
               }}
               onInputValueChange={(value) => {
-                setValue(value);
+                if (value) {
+                  setValue(value);
+                }
               }}
               onChange={(value) => {
                 setValue(value ?? "");
