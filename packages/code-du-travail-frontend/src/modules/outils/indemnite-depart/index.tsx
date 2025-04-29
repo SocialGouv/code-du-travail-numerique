@@ -31,6 +31,7 @@ const IndemniteDepartSimulator = ({
   title,
   feedbackPopup,
   steps,
+  tool,
 }: SimulateurProps): JSX.Element => {
   const store = useContext(IndemniteDepartContext);
   const {
@@ -74,7 +75,11 @@ const IndemniteDepartSimulator = ({
 
   return (
     <SimulatorLayout
-      simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
+      simulator={
+        tool === IndemniteDepartType.RUPTURE_CONVENTIONNELLE
+          ? PublicodesSimulator.RUPTURE_CONVENTIONNELLE
+          : PublicodesSimulator.INDEMNITE_LICENCIEMENT
+      }
       title={title}
       steps={steps}
       onStepChange={[
