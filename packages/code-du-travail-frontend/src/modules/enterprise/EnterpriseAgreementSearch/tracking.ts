@@ -6,18 +6,20 @@ import {
   TrackingAgreementSearchCategory,
 } from "../../convention-collective/tracking";
 
-export const useEnterpriseAgreementSearchTracking = () => {
+export const useEnterpriseAgreementSearchTracking = (disableMatomo = false) => {
   const emitEnterpriseAgreementSearchInputEvent = (
     action: string,
     query: string,
     apiGeoResult?: ApiGeoResult
   ) => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.ENTERPRISE_SEARCH,
-      action: action,
-      name: JSON.stringify({ query, apiGeoResult }),
-      value: generateUUID(),
-    });
+    if (!disableMatomo) {
+      sendEvent({
+        category: TrackingAgreementSearchCategory.ENTERPRISE_SEARCH,
+        action: action,
+        name: JSON.stringify({ query, apiGeoResult }),
+        value: generateUUID(),
+      });
+    }
   };
 
   const emitSelectEnterpriseEvent = (
@@ -27,45 +29,55 @@ export const useEnterpriseAgreementSearchTracking = () => {
       siren: string;
     }
   ) => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.CC_ENTERPRISE_SELECT,
-      action: action,
-      name: JSON.stringify(enterprise),
-      value: generateUUID(),
-    });
+    if (!disableMatomo) {
+      sendEvent({
+        category: TrackingAgreementSearchCategory.CC_ENTERPRISE_SELECT,
+        action: action,
+        name: JSON.stringify(enterprise),
+        value: generateUUID(),
+      });
+    }
   };
 
   const emitSelectEnterpriseAgreementEvent = (idcc: string, action: string) => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.CC_SELECT_P2,
-      action: action,
-      name: idcc,
-      value: generateUUID(),
-    });
+    if (!disableMatomo) {
+      sendEvent({
+        category: TrackingAgreementSearchCategory.CC_SELECT_P2,
+        action: action,
+        name: idcc,
+        value: generateUUID(),
+      });
+    }
   };
 
   const emitPreviousEvent = () => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.VIEW_STEP_CC_SEARCH_P2,
-      action: TrackingAgreementSearchAction.BACK_STEP_P2,
-      name: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
-      value: generateUUID(),
-    });
+    if (!disableMatomo) {
+      sendEvent({
+        category: TrackingAgreementSearchCategory.VIEW_STEP_CC_SEARCH_P2,
+        action: TrackingAgreementSearchAction.BACK_STEP_P2,
+        name: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
+        value: generateUUID(),
+      });
+    }
   };
 
   const emitNoEnterpriseClickEvent = () => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.CC_SEARCH_TYPE_OF_USERS,
-      action: TrackingAgreementSearchAction.CLICK_NO_COMPANY,
-      name: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
-    });
+    if (!disableMatomo) {
+      sendEvent({
+        category: TrackingAgreementSearchCategory.CC_SEARCH_TYPE_OF_USERS,
+        action: TrackingAgreementSearchAction.CLICK_NO_COMPANY,
+        name: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
+      });
+    }
   };
   const emitNoEnterpriseSelectEvent = () => {
-    sendEvent({
-      category: TrackingAgreementSearchCategory.CC_SEARCH_TYPE_OF_USERS,
-      action: TrackingAgreementSearchAction.SELECT_NO_COMPANY,
-      name: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
-    });
+    if (!disableMatomo) {
+      sendEvent({
+        category: TrackingAgreementSearchCategory.CC_SEARCH_TYPE_OF_USERS,
+        action: TrackingAgreementSearchAction.SELECT_NO_COMPANY,
+        name: TrackingAgreementSearchAction.AGREEMENT_SEARCH,
+      });
+    }
   };
 
   return {

@@ -33,6 +33,7 @@ type Props = {
   enterprise?: Enterprise;
   agreement?: Agreement;
   trackingActionName: string;
+  disableMatomo?: boolean;
 };
 
 export const EnterpriseAgreementSearchInput = ({
@@ -44,6 +45,7 @@ export const EnterpriseAgreementSearchInput = ({
   trackingActionName,
   enterprise,
   agreement,
+  disableMatomo = false,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState<
     Agreement | undefined
@@ -57,7 +59,7 @@ export const EnterpriseAgreementSearchInput = ({
     emitNoEnterpriseClickEvent,
     emitNoEnterpriseSelectEvent,
     emitSelectEnterpriseAgreementEvent,
-  } = useEnterpriseAgreementSearchTracking();
+  } = useEnterpriseAgreementSearchTracking(disableMatomo);
 
   const [search, setSearch] = useState<string | undefined>(defaultSearch);
   const [loading, setLoading] = useState<boolean>(false);
@@ -253,6 +255,7 @@ export const EnterpriseAgreementSearchInput = ({
           onAgreementSelect(agreement, selectedEnterprise);
         }}
         trackingActionName={trackingActionName}
+        disableMatomo={disableMatomo}
       />
     );
   }

@@ -15,6 +15,7 @@ type Props = {
   ) => NonNullable<ReactNode> | undefined;
   defaultAgreement?: Agreement;
   trackingActionName: string;
+  disableMatomo?: boolean;
 };
 
 export const AgreementSearchForm = ({
@@ -22,6 +23,7 @@ export const AgreementSearchForm = ({
   selectedAgreementAlert,
   defaultAgreement,
   trackingActionName,
+  disableMatomo,
 }: Props) => {
   const [selectedRoute, setSelectedRoute] = useState<
     AgreementRoute | undefined
@@ -80,6 +82,7 @@ export const AgreementSearchForm = ({
           }}
           selectedAgreementAlert={selectedAgreementAlert}
           trackingActionName={trackingActionName}
+          disableMatomo={disableMatomo}
         />
       )}
     </>

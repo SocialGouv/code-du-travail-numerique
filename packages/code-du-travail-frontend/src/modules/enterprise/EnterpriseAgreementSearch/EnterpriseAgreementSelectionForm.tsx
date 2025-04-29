@@ -16,6 +16,7 @@ type Props = {
   goBack: () => void;
   onAgreementSelect?: (agreement: Agreement) => void;
   trackingActionName: string;
+  disableMatomo?: boolean;
 };
 
 export const EnterpriseAgreementSelectionForm = ({
@@ -24,9 +25,10 @@ export const EnterpriseAgreementSelectionForm = ({
   goBack,
   onAgreementSelect,
   trackingActionName,
+  disableMatomo = false,
 }: Props) => {
   const { emitSelectEnterpriseAgreementEvent } =
-    useEnterpriseAgreementSearchTracking();
+    useEnterpriseAgreementSearchTracking(disableMatomo);
   const [agreement, setAgreement] = useState<Agreement | undefined>(
     selectedAgreement
   );
