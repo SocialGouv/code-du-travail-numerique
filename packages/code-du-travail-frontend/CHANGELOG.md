@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.179.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.179.0...v4.179.1) (2025-04-30)
+
+
+### Bug Fixes
+
+* bug sur la redirection de la recherche non fonctionnelle depuis le header ([#6556](https://github.com/SocialGouv/code-du-travail-numerique/issues/6556)) ([487cf46](https://github.com/SocialGouv/code-du-travail-numerique/commit/487cf469843c4b1a07c2cb6157486dd34faeab97))
+
+
+
+
+
 # [4.179.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.178.0...v4.179.0) (2025-04-25)
 
 
