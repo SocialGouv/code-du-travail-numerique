@@ -247,7 +247,6 @@ export const EnterpriseAgreementSearchInput = ({
           setSelectedAgreement(agreement);
           onAgreementSelect(agreement, selectedEnterprise);
         }}
-        trackingActionName={trackingActionName}
       />
     );
   }
