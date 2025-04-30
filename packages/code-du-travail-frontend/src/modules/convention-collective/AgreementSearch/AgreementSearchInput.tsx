@@ -31,8 +31,7 @@ export const AgreementSearchInput = ({
     "noSearch" | "lowSearch" | "notFoundSearch" | "errorSearch" | "fullSearch"
   >("noSearch");
   const [error, setError] = useState("");
-  const { emitAgreementSearchInputEvent, emitSelectEvent } =
-    useAgreementSearchTracking();
+  const { emitAgreementSearchInputEvent } = useAgreementSearchTracking();
   const getStateMessage = () => {
     switch (searchState) {
       case "lowSearch":
@@ -85,9 +84,6 @@ export const AgreementSearchInput = ({
             onChange={(agreement) => {
               setSelectedAgreement(agreement);
               if (onAgreementSelect) onAgreementSelect(agreement);
-              if (agreement) {
-                emitSelectEvent(`idcc${agreement.id}`, trackingActionName);
-              }
             }}
             displayLabel={(item) => {
               return item ? `${item.shortTitle} (IDCC ${item.num})` : "";

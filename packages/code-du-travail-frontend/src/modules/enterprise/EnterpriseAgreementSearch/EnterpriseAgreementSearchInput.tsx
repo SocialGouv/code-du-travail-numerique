@@ -55,7 +55,6 @@ export const EnterpriseAgreementSearchInput = ({
     emitEnterpriseAgreementSearchInputEvent,
     emitSelectEnterpriseEvent,
     emitNoEnterpriseClickEvent,
-    emitNoEnterpriseSelectEvent,
     emitSelectEnterpriseAgreementEvent,
   } = useEnterpriseAgreementSearchTracking();
 
@@ -245,10 +244,6 @@ export const EnterpriseAgreementSearchInput = ({
           scrollToTop();
         }}
         onAgreementSelect={(agreement) => {
-          emitSelectEnterpriseEvent(trackingActionName, {
-            label: selectedEnterprise.label,
-            siren: selectedEnterprise.siren,
-          });
           setSelectedAgreement(agreement);
           onAgreementSelect(agreement, selectedEnterprise);
         }}
@@ -409,14 +404,6 @@ export const EnterpriseAgreementSearchInput = ({
                         ev.preventDefault();
                         setSelectedEnterprise(enterprise);
                         if (enterprise.conventions.length === 1) {
-                          emitSelectEnterpriseAgreementEvent(
-                            `idcc${enterprise.conventions[0].num}`,
-                            trackingActionName
-                          );
-                          emitSelectEnterpriseEvent(trackingActionName, {
-                            label: enterprise.label,
-                            siren: enterprise.siren,
-                          });
                           onAgreementSelect(
                             enterprise.conventions[0],
                             enterprise
@@ -481,7 +468,6 @@ export const EnterpriseAgreementSearchInput = ({
                       title: "Particuliers employeurs et emploi à domicile",
                       url: "/3239-particuliers-employeurs-et-emploi-a-domicile",
                     };
-                    emitNoEnterpriseSelectEvent();
                     setSelectedAgreement(assMatAgreement);
                     onAgreementSelect(assMatAgreement);
                   },
