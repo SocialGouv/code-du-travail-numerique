@@ -17,7 +17,7 @@ import {
   getBySourceAndSlugItems,
   RelatedItem,
 } from "../../../src/api";
-import { Tool } from "@socialgouv/cdtn-types";
+import { ElasticTool } from "@socialgouv/cdtn-types";
 import { SITE_URL } from "../../../src/config";
 
 export interface Props {
@@ -88,7 +88,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     tool;
   let relatedItems: RelatedItem[] = [];
   try {
-    const data = await getBySourceAndSlugItems<Tool>(
+    const data = await getBySourceAndSlugItems<ElasticTool>(
       SOURCES.TOOLS,
       "convention-collective"
     );

@@ -2,7 +2,7 @@ import { HomeTileItem } from "./queries";
 import { HomeButton, SectionContainer } from "./Components";
 import { MatomoHomeEvent, useHomeTracking } from "./tracking";
 import { fr } from "@codegouvfr/react-dsfr";
-import { ToolTile } from "../outils/ToolTile";
+import { ToolTile } from "../outils/page-principale/ToolTile";
 
 type Props = {
   items: HomeTileItem[];

@@ -1,5 +1,3 @@
-"use client";
-
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import React from "react";

@@ -32,7 +32,8 @@ export const HeaderSearch = ({ onSearchSubmit }: HeaderSearchProps) => {
 
           <form
             role="search"
-            onSubmit={() => {
+            onSubmit={(e) => {
+              e.preventDefault();
               onSearchSubmit(value);
             }}
           >
@@ -48,12 +49,13 @@ export const HeaderSearch = ({ onSearchSubmit }: HeaderSearchProps) => {
                   );
                   return results;
                 } catch (error) {
-                  console.log("Failed");
                   return [];
                 }
               }}
               onInputValueChange={(value) => {
-                setValue(value);
+                if (value) {
+                  setValue(value);
+                }
               }}
               onChange={(value) => {
                 setValue(value ?? "");

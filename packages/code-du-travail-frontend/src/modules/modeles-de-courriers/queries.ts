@@ -92,3 +92,35 @@ export const fetchModel = async <
 
   return format(model);
 };
+
+export type ModelDescription = Pick<
+  DocumentElasticResult<DocumentElasticWithSource<MailTemplateDoc>>,
+  "slug" | "title" | "description" | "breadcrumbs"
+>;
+export type ThemeModelDescription = {
+  theme: string;
+  modeles: ModelDescription[];
+};
+export type ModelDescriptionByRootTheme = ThemeModelDescription[];
+
+export const formatByRootTheme = (
+  models: ModelDescription[]
+): ModelDescriptionByRootTheme => {
+  const groupBy = <T, K extends keyof any>(arr: T[], key: (i: T) => K) =>
+    arr.reduce(
+      (groups, item) => {
+        (groups[key(item)] ||= []).push(item);
+        return groups;
+      },
+      {} as Record<K, T[]>
+    );
+  const data = groupBy(models, (model) => {
+    return model.breadcrumbs && model.breadcrumbs.length > 0
+      ? model.breadcrumbs[0].label
+      : "Autre";
+  });
+  return Object.keys(data).map((theme) => ({
+    theme,
+    modeles: data[theme],
+  }));
+};

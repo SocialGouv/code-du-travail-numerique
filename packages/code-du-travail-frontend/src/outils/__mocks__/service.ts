@@ -1,6 +1,6 @@
-import { Tool } from "@socialgouv/cdtn-types";
+import { ElasticTool } from "@socialgouv/cdtn-types";
 
-export const fetchTools = async (_params: any): Promise<Tool[]> => {
+export const fetchTools = async (_params: any): Promise<ElasticTool[]> => {
   return Promise.resolve([
     {
       date: "18/10/2018",
@@ -45,5 +45,5 @@ export const fetchTools = async (_params: any): Promise<Tool[]> => {
       _id: "d8a3605790",
       displayTool: true,
     },
-  ] as any as Tool[]);
+  ] as any as ElasticTool[]);
 };

@@ -3,17 +3,16 @@ import {
   elasticsearchClient,
   NotFoundError,
 } from "../../api/utils";
-import { Tool } from "@socialgouv/cdtn-types";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 import { DocumentElasticResult, fetchDocument } from "../documents";
-import { ElasticTool } from "./type";
+import { ElasticExternalTool, ElasticTool } from "@socialgouv/cdtn-types";
 
-export const fetchTools = async <K extends keyof Tool>(
+export const fetchTools = async <K extends keyof ElasticTool>(
   fields: K[],
   filters?: {
     cdtnIds?: string[];
   }
-): Promise<Pick<Tool, K>[]> => {
+): Promise<Pick<ElasticTool, K>[]> => {
   const baseFilters: Array<any> = [
     {
       term: {
@@ -36,7 +35,7 @@ export const fetchTools = async <K extends keyof Tool>(
     baseFilters.push({ terms: { cdtnId: filters.cdtnIds } });
   }
 
-  const response = await elasticsearchClient.search<Pick<Tool, K>>({
+  const response = await elasticsearchClient.search<Pick<ElasticTool, K>>({
     query: {
       bool: {
         must: baseFilters,
@@ -87,4 +86,54 @@ export const fetchTool = async (
     throw new Error("Outils non trouvé");
   }
   return result;
+};
+
+export const fetchExternalTools = async <K extends keyof ElasticExternalTool>(
+  fields: K[]
+): Promise<Pick<ElasticExternalTool, K>[]> => {
+  const response = await elasticsearchClient.search<
+    Pick<ElasticExternalTool, K>
+  >({
+    query: {
+      bool: {
+        must: [
+          {
+            term: {
+              isPublished: true,
+            },
+          },
+          {
+            term: {
+              source: SOURCES.EXTERNALS,
+            },
+          },
+          {
+            term: {
+              displayTool: true,
+            },
+          },
+        ],
+      },
+    },
+    size: 50,
+    sort: [
+      {
+        order: {
+          order: "asc",
+        },
+      },
+    ],
+    _source: fields,
+    index: elasticDocumentsIndex,
+  });
+  if (response.hits.hits.length === 0) {
+    throw new NotFoundError({
+      message: `There is no externals tools that match query`,
+      name: "TOOLS_NOT_FOUND",
+      cause: null,
+    });
+  }
+  return response.hits.hits
+    .map(({ _source }) => _source)
+    .filter((source) => source !== undefined);
 };

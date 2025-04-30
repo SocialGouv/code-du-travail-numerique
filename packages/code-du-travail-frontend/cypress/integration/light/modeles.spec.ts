@@ -1,6 +1,15 @@
 describe("Modèles de documents", () => {
   it("liste les modèles", () => {
     cy.visit("/modeles-de-courriers");
+    cy.isIndexable();
+    cy.canonicalUrlEqual("/modeles-de-courriers");
+    cy.titleAndMetaDescriptionEqual(
+      "Modèles de documents - Code du travail numérique",
+      "Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail"
+    );
+    cy.findByRole("heading", { level: 1 })
+      .should("have.text", "Modèles de documents")
+      .click();
 
     cy.contains("Rupture du contrat en période d’essai par le salarié").click();
 
