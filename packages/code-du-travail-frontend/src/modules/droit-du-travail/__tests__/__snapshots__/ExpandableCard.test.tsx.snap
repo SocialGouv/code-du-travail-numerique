@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ExpandableCard /> renders correctly with default props 1`] = `
+<div>
+  <div
+    class="bg_var(--background-alt-blue-cumulus) bdr_8px ov_hidden h_fit-content trs_all_0.3s_ease pos_relative"
+  >
+    <button
+      aria-controls="content-test-title"
+      aria-expanded="false"
+      class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+    >
+      <div
+        class="d_flex ai_center p_16px pos_relative"
+      >
+        <div
+          class="mr_16px d_flex ai_center jc_center"
+        >
+          <img
+            alt=""
+            aria-hidden="true"
+            height="40"
+            src="/test-icon.svg"
+            width="40"
+          />
+        </div>
+        <h3
+          class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+        >
+          Test Title
+        </h3>
+        <div
+          class="ml_auto"
+        >
+          <svg
+            aria-hidden="true"
+            class="trs_transform_0.3s_ease"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline
+              points="6 9 12 15 18 9"
+            />
+          </svg>
+        </div>
+      </div>
+    </button>
+  </div>
+</div>
+`;

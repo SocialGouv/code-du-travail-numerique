@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Hierarchy /> renders correctly 1`] = `
+<div>
+  <div>
+    <h2>
+      Existe-t-il une hiérarchie entre les textes ?
+    </h2>
+    <p>
+      Le principe général en droit du travail est le suivant : lorsqu'il existe plusieurs textes sur un même sujet, c'est le texte le plus favorable au salarié qui s'applique.
+    </p>
+    <div
+      data-icon="/static/assets/icons/droit-du-travail/texte-internationaux.svg"
+      data-show-bottom-tab="true"
+      data-testid="mock-expandable-card"
+      data-title="Les textes internationaux et européens"
+    >
+      <h3>
+        Les textes internationaux et européens
+      </h3>
+      <div>
+        <p>
+          Les textes nationaux doivent être conformes aux textes internationaux et européens.
+        </p>
+      </div>
+    </div>
+    <div
+      data-icon="/static/assets/icons/droit-du-travail/constitution-francaise.svg"
+      data-show-bottom-tab="true"
+      data-testid="mock-expandable-card"
+      data-title="La Constitution"
+    >
+      <h3>
+        La Constitution
+      </h3>
+      <div>
+        <p>
+          Tous les textes nationaux doivent être conformes à la Constitution française ainsi qu'au bloc de constitutionnalité.
+        </p>
+      </div>
+    </div>
+    <div
+      data-icon="/static/assets/icons/droit-du-travail/lois.svg"
+      data-show-bottom-tab="true"
+      data-testid="mock-expandable-card"
+      data-title="Lois, ordonnances et décrets (Code du travail)"
+    >
+      <h3>
+        Lois, ordonnances et décrets (Code du travail)
+      </h3>
+      <div>
+        <p>
+          Il n'y a pas de règle de hiérarchie unique pour tous les articles du Code du travail.
+        </p>
+      </div>
+    </div>
+    <div
+      data-icon="/static/assets/icons/droit-du-travail/conventions-collectives.svg"
+      data-id="hierarchie"
+      data-show-bottom-tab="true"
+      data-testid="mock-expandable-card"
+      data-title="Les conventions et accords collectifs"
+    >
+      <h3>
+        Les conventions et accords collectifs
+      </h3>
+      <div>
+        <p>
+          La règle qui détermine quel est le texte applicable est différente en fonction du niveau des textes comparés.
+        </p>
+        <p>
+          Ce principe ne s'applique pas dans
+           
+          <a
+            href="#"
+          >
+            13 matières
+          </a>
+           
+          où la loi reconnaît la primauté à la convention collective de branche et
+           
+          <a
+            href="#"
+          >
+            4 matières
+          </a>
+           
+          où la branche elle-même peut reconnaître sa primauté.
+        </p>
+      </div>
+    </div>
+    <div
+      data-icon="/static/assets/icons/droit-du-travail/usage-unilateraux.svg"
+      data-show-bottom-tab="true"
+      data-testid="mock-expandable-card"
+      data-title="Les usages et les engagements unilatéraux"
+    >
+      <h3>
+        Les usages et les engagements unilatéraux
+      </h3>
+      <div>
+        <p>
+          Les usages et les engagements unilatéraux doivent respecter les textes situés en haut.
+        </p>
+      </div>
+    </div>
+    <div
+      data-icon="/static/assets/icons/droit-du-travail/reglement-interieur-entreprise.svg"
+      data-show-bottom-tab="true"
+      data-testid="mock-expandable-card"
+      data-title="Le règlement intérieur de l'entreprise"
+    >
+      <h3>
+        Le règlement intérieur de l'entreprise
+      </h3>
+      <div>
+        <p>
+          Le règlement intérieur doit respecter les textes situés en haut.
+        </p>
+      </div>
+    </div>
+    <div
+      data-icon="/static/assets/icons/droit-du-travail/contrat-travail.svg"
+      data-show-bottom-tab="false"
+      data-testid="mock-expandable-card"
+      data-title="Le contrat de travail"
+    >
+      <h3>
+        Le contrat de travail
+      </h3>
+      <div>
+        <p>
+          Le contrat de travail doit respecter les textes situés en haut.
+        </p>
+      </div>
+    </div>
+    <div
+      data-size="large"
+      data-testid="mock-modal"
+      data-title="13 matières où la loi reconnaît la primauté à la convention collective de branche"
+    >
+      <h2>
+        13 matières où la loi reconnaît la primauté à la convention collective de branche
+      </h2>
+      <div>
+        <ul>
+          <li>
+            Salaires minima
+          </li>
+          <li>
+            Classifications
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      data-size="large"
+      data-testid="mock-modal"
+      data-title="4 matières où la branche peut reconnaître sa primauté"
+    >
+      <h2>
+        4 matières où la branche peut reconnaître sa primauté
+      </h2>
+      <div>
+        <ul>
+          <li>
+            La prévention des effets de l'exposition aux facteurs de risques professionnels
+          </li>
+          <li>
+            L'insertion professionnelle et le maintien dans l'emploi des travailleurs handicapés
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
