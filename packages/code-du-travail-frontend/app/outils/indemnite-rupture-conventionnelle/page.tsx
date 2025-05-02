@@ -27,7 +27,6 @@ async function IndemniteRuptureCo() {
         title={tool.title}
         displayTitle={tool.displayTitle}
         relatedItems={relatedItems}
-        description={tool.description}
       />
     </DsfrLayout>
   );

@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
     "slug": "16-transports-routiers-et-activites-auxiliaires-du-transport",
     "title": "Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950",
     "contributions": true
-  }   
+  }
 `
 );
 
@@ -25,7 +25,6 @@ describe("Indemnité licenciement - CC 16", () => {
     render(
       <IndemniteRuptureCoSimulator
         displayTitle="Simulateur d'indemnité de rupture conventionnelle"
-        description="Estimez le montant de l'indemnité de rupture conventionnelle"
         relatedItems={[]}
         title="Simulateur d'indemnité de rupture conventionnelle"
       />

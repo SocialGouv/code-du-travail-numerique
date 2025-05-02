@@ -19,11 +19,11 @@ export const RelatedItems = ({
   }
 
   return (
-    <div className={`${fr.cx("fr-mb-5w")} ${hideOnPrint}`}>
+    <div className={`${hideOnPrint}`}>
       {relatedItems.map(
         ({ title, items }) =>
           items.length > 0 && (
-            <div key={title}>
+            <div key={title} className={fr.cx("fr-mb-5w")}>
               <div
                 className={fr.cx("fr-mb-2w", "fr-text--lead")}
                 role="heading"

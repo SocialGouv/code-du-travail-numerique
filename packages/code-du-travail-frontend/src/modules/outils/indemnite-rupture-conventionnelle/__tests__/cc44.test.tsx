@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
     "slug": "44-industries-chimiques-et-connexes",
     "title": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956",
     "contributions": true
-  }  
+  }
 `
 );
 
@@ -25,7 +25,6 @@ describe("Indemnité licenciement - CC 44", () => {
     render(
       <IndemniteRuptureCoSimulator
         displayTitle="Simulateur d'indemnité de rupture conventionnelle"
-        description="Estimez le montant de l'indemnité de rupture conventionnelle"
         relatedItems={[]}
         title="Simulateur d'indemnité de rupture conventionnelle"
       />

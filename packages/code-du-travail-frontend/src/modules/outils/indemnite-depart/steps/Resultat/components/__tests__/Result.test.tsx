@@ -6,6 +6,7 @@ describe("<Result />", () => {
   it("should render", () => {
     const { queryByText } = render(
       <Result
+        title="Indemnité de rupture co"
         maxResult="2000"
         resultMessage="Le résultat est :"
         notifications={[

@@ -1,9 +1,9 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import { ContainerSimulator } from "../../layout/ContainerSimulator";
 import { ElasticAgreement } from "@socialgouv/cdtn-types";
 import { AgreementsSection } from "./AgreementsSection";
 import { AgreementsGlossaire } from "./AgreementsGlossaire";
 import { AgreementsIntro } from "./AgreementsIntro";
+import { ContainerSimulatorLight } from "../../layout/ContainerSimulatorLight";
 
 type Agreement = Pick<ElasticAgreement, "shortTitle" | "slug">;
 
@@ -17,7 +17,7 @@ type Props = {
 
 export const Agreements = ({ firstLettersAgreements }: Props) => {
   return (
-    <ContainerSimulator
+    <ContainerSimulatorLight
       title="Votre convention collective"
       description="Retrouvez les questions/réponses fréquentes organisées par thème pour votre convention collective"
       relatedItems={[]}
@@ -39,6 +39,6 @@ export const Agreements = ({ firstLettersAgreements }: Props) => {
           />
         ))}
       </div>
-    </ContainerSimulator>
+    </ContainerSimulatorLight>
   );
 };

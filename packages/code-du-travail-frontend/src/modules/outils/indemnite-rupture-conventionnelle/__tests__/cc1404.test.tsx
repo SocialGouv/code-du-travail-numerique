@@ -16,7 +16,7 @@ Storage.prototype.getItem = jest.fn(
     "title": "Convention collective nationale métropolitaine des entreprises de la maintenance, distribution et location de matériels agricoles, de travaux publics, de bâtiment, de manutention, de motoculture de plaisance et activités connexes, dite SDLM du 23 avril 2012",
     "contributions": true
   }
-  
+
 `
 );
 
@@ -26,7 +26,6 @@ describe("Indemnité licenciement - CC 1404", () => {
     render(
       <IndemniteRuptureCoSimulator
         displayTitle="Simulateur d'indemnité de rupture conventionnelle"
-        description="Estimez le montant de l'indemnité de rupture conventionnelle"
         relatedItems={[]}
         title="Simulateur d'indemnité de rupture conventionnelle"
       />
