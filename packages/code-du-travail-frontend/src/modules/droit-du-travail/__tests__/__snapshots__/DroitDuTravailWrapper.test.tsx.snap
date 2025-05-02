@@ -1,0 +1,1284 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
+<div>
+  <div
+    class="fr-container"
+  >
+    <nav
+      aria-label="vous êtes ici :"
+      class="fr-breadcrumb fr-mb-2w fr-mt-2w"
+      id="fr-breadcrumb-:r0:"
+      role="navigation"
+    >
+      <button
+        aria-controls="breadcrumb-:r1:"
+        aria-expanded="false"
+        class="fr-breadcrumb__button"
+      >
+        Voir le fil d’Ariane
+      </button>
+      <div
+        class="fr-collapse"
+        id="breadcrumb-:r1:"
+      >
+        <ol
+          class="fr-breadcrumb__list"
+        >
+          <li>
+            <a
+              class="fr-breadcrumb__link"
+              href="/"
+            >
+              Accueil
+            </a>
+          </li>
+          <li>
+            <a
+              aria-current="page"
+              class="fr-breadcrumb__link"
+            >
+              Le droit du travail
+            </a>
+          </li>
+        </ol>
+      </div>
+    </nav>
+  </div>
+  <div
+    class="fr-container"
+  >
+    <div
+      class="fr-grid-row fr-grid-row--gutters fr-grid-row--center fr-my-4w fr-my-md-4w"
+    >
+      <div
+        class="fr-col-12 fr-col-md-12"
+      >
+        <div
+          class="fr-grid-row fr-grid-row--center"
+        >
+          <div
+            class="fr-col-12 fr-col-md-10 fr-col-lg-8"
+          >
+            <h1>
+              Le droit du travail
+            </h1>
+            <p
+              class="fr-text--xl fr-mb-3w"
+            >
+              Retrouvez la définition du droit du travail, les textes qui en sont à l’origine ainsi que leur articulation.
+            </p>
+            <h2>
+              Qu'est-ce que le droit du travail ?
+            </h2>
+            <p
+              class="fr-text--bold fr-text--lg"
+            >
+              Le droit du travail est l’ensemble des règles juridiques applicables aux relations entre employeurs privés et salariés, à l’occasion du travail.
+            </p>
+            <p
+              class="fr-text--lg"
+            >
+              Le droit du travail organise les relations professionnelles de travail entre l’employeur et le salarié individuellement et la collectivité des salariés. Il encadre de nombreux domaines tels que le contrat de travail, la rémunération, la durée du travail, les congés, la discipline, le licenciement, l’emploi, la formation, la sécurité et la santé au travail, la négociation collective, la grève et la représentation du personnel.
+            </p>
+            <p
+              class="fr-text--lg"
+            >
+              Le droit du travail est un droit en constante évolution car il comprend des enjeux sociaux, économiques et politiques forts.
+            </p>
+            <div
+              class="fr-alert fr-alert--info fr-mt-4w"
+              id="fr-alert-:r2:"
+            >
+              <h3
+                class="fr-alert__title"
+              >
+                Le droit du travail, ce n'est pas...
+              </h3>
+              <p>
+                Le droit du travail ne concerne pas les travailleurs qui sont soumis au droit public (par exemple, les fonctionnaires), les travailleurs indépendants (artisan, commerçant, professions libérales…), les bénévoles et les dirigeants d’entreprise.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="bg_var(--background-alt-blue-cumulus)"
+  >
+    <div
+      class="fr-container fr-py-6w"
+    >
+      <div
+        class="fr-grid-row fr-col-12 fr-col-md-8"
+      >
+        <h2>
+          Quels sont les textes à l'origine du droit du travail ?
+        </h2>
+        <p
+          class="fr-text--lg"
+        >
+          Le droit du travail est construit par de nombreux textes juridiques dont les sources sont diverses : sources internationales, sources européennes et sources nationales. Vous trouverez les textes participant à la construction du droit du travail en France ci-dessous.
+        </p>
+      </div>
+      <div
+        class="fr-grid-row fr-grid-row--gutters"
+      >
+        <div
+          class="fr-col-12 fr-col-md-6"
+        >
+          <div
+            class="bg_var(--background-default-grey) bdr_8px ov_hidden h_fit-content trs_all_0.3s_ease pos_relative"
+          >
+            <button
+              aria-controls="content-les-textes-internationaux"
+              aria-expanded="false"
+              class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+            >
+              <div
+                class="d_flex ai_center p_16px pos_relative"
+              >
+                <div
+                  class="mr_16px d_flex ai_center jc_center"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    data-nimg="1"
+                    decoding="async"
+                    height="40"
+                    loading="lazy"
+                    src="/static/assets/icons/droit-du-travail/texte-internationaux.svg"
+                    style="color: transparent;"
+                    width="40"
+                  />
+                </div>
+                <h3
+                  class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                >
+                  Les textes internationaux
+                </h3>
+                <div
+                  class="ml_auto"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="trs_transform_0.3s_ease"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="6 9 12 15 18 9"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div
+          class="fr-col-12 fr-col-md-6"
+        >
+          <div
+            class="bg_var(--background-default-grey) bdr_8px ov_hidden h_fit-content trs_all_0.3s_ease pos_relative"
+          >
+            <button
+              aria-controls="content-les-textes-européens"
+              aria-expanded="false"
+              class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+            >
+              <div
+                class="d_flex ai_center p_16px pos_relative"
+              >
+                <div
+                  class="mr_16px d_flex ai_center jc_center"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    data-nimg="1"
+                    decoding="async"
+                    height="40"
+                    loading="lazy"
+                    src="/static/assets/icons/droit-du-travail/texte-europeens.svg"
+                    style="color: transparent;"
+                    width="40"
+                  />
+                </div>
+                <h3
+                  class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                >
+                  Les textes européens
+                </h3>
+                <div
+                  class="ml_auto"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="trs_transform_0.3s_ease"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="6 9 12 15 18 9"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div
+          class="fr-col-12 fr-col-md-6"
+        >
+          <div
+            class="bg_var(--background-default-grey) bdr_8px ov_hidden h_fit-content trs_all_0.3s_ease pos_relative"
+          >
+            <button
+              aria-controls="content-la-constitution-française"
+              aria-expanded="false"
+              class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+            >
+              <div
+                class="d_flex ai_center p_16px pos_relative"
+              >
+                <div
+                  class="mr_16px d_flex ai_center jc_center"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    data-nimg="1"
+                    decoding="async"
+                    height="40"
+                    loading="lazy"
+                    src="/static/assets/icons/droit-du-travail/constitution-francaise.svg"
+                    style="color: transparent;"
+                    width="40"
+                  />
+                </div>
+                <h3
+                  class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                >
+                  La Constitution française
+                </h3>
+                <div
+                  class="ml_auto"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="trs_transform_0.3s_ease"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="6 9 12 15 18 9"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div
+          class="fr-col-12 fr-col-md-6"
+        >
+          <div
+            class="bg_var(--background-default-grey) bdr_8px ov_hidden h_fit-content trs_all_0.3s_ease pos_relative"
+          >
+            <button
+              aria-controls="content-lois,-ordonnances,-décrets-et-arrêtés"
+              aria-expanded="false"
+              class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+            >
+              <div
+                class="d_flex ai_center p_16px pos_relative"
+              >
+                <div
+                  class="mr_16px d_flex ai_center jc_center"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    data-nimg="1"
+                    decoding="async"
+                    height="40"
+                    loading="lazy"
+                    src="/static/assets/icons/droit-du-travail/lois.svg"
+                    style="color: transparent;"
+                    width="40"
+                  />
+                </div>
+                <h3
+                  class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                >
+                  Lois, ordonnances, décrets et arrêtés
+                </h3>
+                <div
+                  class="ml_auto"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="trs_transform_0.3s_ease"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="6 9 12 15 18 9"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div
+          class="fr-col-12 fr-col-md-6"
+        >
+          <div
+            class="bg_var(--background-default-grey) bdr_8px ov_hidden h_fit-content trs_all_0.3s_ease pos_relative"
+          >
+            <button
+              aria-controls="content-les-conventions-et-accords-collectifs"
+              aria-expanded="false"
+              class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+            >
+              <div
+                class="d_flex ai_center p_16px pos_relative"
+              >
+                <div
+                  class="mr_16px d_flex ai_center jc_center"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    data-nimg="1"
+                    decoding="async"
+                    height="40"
+                    loading="lazy"
+                    src="/static/assets/icons/droit-du-travail/conventions-collectives.svg"
+                    style="color: transparent;"
+                    width="40"
+                  />
+                </div>
+                <h3
+                  class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                >
+                  Les conventions et accords collectifs
+                </h3>
+                <div
+                  class="ml_auto"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="trs_transform_0.3s_ease"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="6 9 12 15 18 9"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div
+          class="fr-col-12 fr-col-md-6"
+        >
+          <div
+            class="bg_var(--background-default-grey) bdr_8px ov_hidden h_fit-content trs_all_0.3s_ease pos_relative"
+          >
+            <button
+              aria-controls="content-les-usages-et-les-engagements-unilatéraux"
+              aria-expanded="false"
+              class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+            >
+              <div
+                class="d_flex ai_center p_16px pos_relative"
+              >
+                <div
+                  class="mr_16px d_flex ai_center jc_center"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    data-nimg="1"
+                    decoding="async"
+                    height="40"
+                    loading="lazy"
+                    src="/static/assets/icons/droit-du-travail/usage-unilateraux.svg"
+                    style="color: transparent;"
+                    width="40"
+                  />
+                </div>
+                <h3
+                  class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                >
+                  Les usages et les engagements unilatéraux
+                </h3>
+                <div
+                  class="ml_auto"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="trs_transform_0.3s_ease"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="6 9 12 15 18 9"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div
+          class="fr-col-12 fr-col-md-6"
+        >
+          <div
+            class="bg_var(--background-default-grey) bdr_8px ov_hidden h_fit-content trs_all_0.3s_ease pos_relative"
+          >
+            <button
+              aria-controls="content-le-règlement-intérieur-de-l'entreprise"
+              aria-expanded="false"
+              class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+            >
+              <div
+                class="d_flex ai_center p_16px pos_relative"
+              >
+                <div
+                  class="mr_16px d_flex ai_center jc_center"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    data-nimg="1"
+                    decoding="async"
+                    height="40"
+                    loading="lazy"
+                    src="/static/assets/icons/droit-du-travail/reglement-interieur-entreprise.svg"
+                    style="color: transparent;"
+                    width="40"
+                  />
+                </div>
+                <h3
+                  class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                >
+                  Le règlement intérieur de l'entreprise
+                </h3>
+                <div
+                  class="ml_auto"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="trs_transform_0.3s_ease"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="6 9 12 15 18 9"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div
+          class="fr-col-12 fr-col-md-6"
+        >
+          <div
+            class="bg_var(--background-default-grey) bdr_8px ov_hidden h_fit-content trs_all_0.3s_ease pos_relative"
+          >
+            <button
+              aria-controls="content-le-contrat-de-travail"
+              aria-expanded="false"
+              class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+            >
+              <div
+                class="d_flex ai_center p_16px pos_relative"
+              >
+                <div
+                  class="mr_16px d_flex ai_center jc_center"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    data-nimg="1"
+                    decoding="async"
+                    height="40"
+                    loading="lazy"
+                    src="/static/assets/icons/droit-du-travail/contrat-travail.svg"
+                    style="color: transparent;"
+                    width="40"
+                  />
+                </div>
+                <h3
+                  class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                >
+                  Le contrat de travail
+                </h3>
+                <div
+                  class="ml_auto"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="trs_transform_0.3s_ease"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="6 9 12 15 18 9"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="fr-grid-row fr-grid-row--center fr-mt-4w"
+      >
+        <div
+          class="fr-col-12"
+        >
+          <p
+            class="fr-text--bold fr-text--lg"
+          >
+            La jurisprudence de la Cour Européenne des droits de l'Homme, de la Cour de justice de l'Union européenne, du Conseil Constitutionnel, du Conseil d'Etat et de la Cour de cassation influence également le droit du travail en France.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="fr-container"
+  >
+    <div
+      class="fr-grid-row fr-grid-row--gutters fr-grid-row--center fr-my-4w fr-my-md-4w"
+    >
+      <div
+        class="fr-col-12 fr-col-md-12"
+      >
+        <div
+          class="fr-grid-row fr-grid-row--center"
+        >
+          <div
+            class="fr-col-12 fr-col-md-10 fr-col-lg-8"
+          >
+            <h2>
+              Existe-t-il une hiérarchie entre les textes ?
+            </h2>
+            <p
+              class="fr-text--lg fr-mb-3w"
+            >
+              Le principe général en droit du travail est le suivant : lorsqu'il existe plusieurs textes sur un même sujet, c'est le texte le plus favorable au salarié qui s'applique. Ce principe continue a s'appliquer en droit du travail mais il connaît quelques exceptions.
+            </p>
+            <p
+              class="fr-text--lg fr-text--bold"
+            >
+              Pour vous aider à comprendre, vous trouverez ci-dessous un schèma récapitulant la hiérarchie des textes entre eux.
+            </p>
+            <div
+              class="fr-grid-row fr-grid-row--gutters"
+            >
+              <div
+                class="fr-col-12"
+              >
+                <div
+                  class="bg_var(--background-alt-blue-cumulus) bdr_8px ov_visible h_fit-content trs_all_0.3s_ease pos_relative"
+                >
+                  <button
+                    aria-controls="content-les-textes-internationaux-et-européens"
+                    aria-expanded="false"
+                    class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+                  >
+                    <div
+                      class="d_flex ai_center p_16px pos_relative"
+                    >
+                      <div
+                        class="mr_16px d_flex ai_center jc_center"
+                      >
+                        <img
+                          alt=""
+                          aria-hidden="true"
+                          data-nimg="1"
+                          decoding="async"
+                          height="40"
+                          loading="lazy"
+                          src="/static/assets/icons/droit-du-travail/texte-internationaux.svg"
+                          style="color: transparent;"
+                          width="40"
+                        />
+                      </div>
+                      <h3
+                        class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                      >
+                        Les textes internationaux et européens
+                      </h3>
+                      <div
+                        class="ml_auto"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="trs_transform_0.3s_ease"
+                          fill="none"
+                          height="24"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <polyline
+                            points="6 9 12 15 18 9"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                  <div
+                    class="pos_absolute bottom_-15px left_50% trf_translateX(-50%) w_60px h_30px bg_inherit cp-path_polygon(0%_0%,_100%_0%,_50%_100%) z_-1"
+                  />
+                </div>
+              </div>
+              <div
+                class="fr-col-12"
+              >
+                <div
+                  class="bg_var(--background-alt-blue-cumulus) bdr_8px ov_visible h_fit-content trs_all_0.3s_ease pos_relative"
+                >
+                  <button
+                    aria-controls="content-la-constitution"
+                    aria-expanded="false"
+                    class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+                  >
+                    <div
+                      class="d_flex ai_center p_16px pos_relative"
+                    >
+                      <div
+                        class="mr_16px d_flex ai_center jc_center"
+                      >
+                        <img
+                          alt=""
+                          aria-hidden="true"
+                          data-nimg="1"
+                          decoding="async"
+                          height="40"
+                          loading="lazy"
+                          src="/static/assets/icons/droit-du-travail/constitution-francaise.svg"
+                          style="color: transparent;"
+                          width="40"
+                        />
+                      </div>
+                      <h3
+                        class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                      >
+                        La Constitution
+                      </h3>
+                      <div
+                        class="ml_auto"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="trs_transform_0.3s_ease"
+                          fill="none"
+                          height="24"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <polyline
+                            points="6 9 12 15 18 9"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                  <div
+                    class="pos_absolute bottom_-15px left_50% trf_translateX(-50%) w_60px h_30px bg_inherit cp-path_polygon(0%_0%,_100%_0%,_50%_100%) z_-1"
+                  />
+                </div>
+              </div>
+              <div
+                class="fr-col-12"
+              >
+                <div
+                  class="bg_var(--background-alt-blue-cumulus) bdr_8px ov_visible h_fit-content trs_all_0.3s_ease pos_relative"
+                >
+                  <button
+                    aria-controls="content-lois,-ordonnances-et-décrets-(code-du-travail)"
+                    aria-expanded="false"
+                    class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+                  >
+                    <div
+                      class="d_flex ai_center p_16px pos_relative"
+                    >
+                      <div
+                        class="mr_16px d_flex ai_center jc_center"
+                      >
+                        <img
+                          alt=""
+                          aria-hidden="true"
+                          data-nimg="1"
+                          decoding="async"
+                          height="40"
+                          loading="lazy"
+                          src="/static/assets/icons/droit-du-travail/lois.svg"
+                          style="color: transparent;"
+                          width="40"
+                        />
+                      </div>
+                      <h3
+                        class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                      >
+                        Lois, ordonnances et décrets (Code du travail)
+                      </h3>
+                      <div
+                        class="ml_auto"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="trs_transform_0.3s_ease"
+                          fill="none"
+                          height="24"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <polyline
+                            points="6 9 12 15 18 9"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                  <div
+                    class="pos_absolute bottom_-15px left_50% trf_translateX(-50%) w_60px h_30px bg_inherit cp-path_polygon(0%_0%,_100%_0%,_50%_100%) z_-1"
+                  />
+                </div>
+              </div>
+              <div
+                class="fr-col-12"
+              >
+                <div
+                  class="bg_var(--background-alt-blue-cumulus) bdr_8px ov_visible h_fit-content trs_all_0.3s_ease pos_relative"
+                  id="hierarchie"
+                >
+                  <button
+                    aria-controls="content-les-conventions-et-accords-collectifs"
+                    aria-expanded="false"
+                    class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+                  >
+                    <div
+                      class="d_flex ai_center p_16px pos_relative"
+                    >
+                      <div
+                        class="mr_16px d_flex ai_center jc_center"
+                      >
+                        <img
+                          alt=""
+                          aria-hidden="true"
+                          data-nimg="1"
+                          decoding="async"
+                          height="40"
+                          loading="lazy"
+                          src="/static/assets/icons/droit-du-travail/conventions-collectives.svg"
+                          style="color: transparent;"
+                          width="40"
+                        />
+                      </div>
+                      <h3
+                        class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                      >
+                        Les conventions et accords collectifs
+                      </h3>
+                      <div
+                        class="ml_auto"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="trs_transform_0.3s_ease"
+                          fill="none"
+                          height="24"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <polyline
+                            points="6 9 12 15 18 9"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                  <div
+                    class="pos_absolute bottom_-15px left_50% trf_translateX(-50%) w_60px h_30px bg_inherit cp-path_polygon(0%_0%,_100%_0%,_50%_100%) z_-1"
+                  />
+                </div>
+              </div>
+              <div
+                class="fr-col-12"
+              >
+                <div
+                  class="bg_var(--background-alt-blue-cumulus) bdr_8px ov_visible h_fit-content trs_all_0.3s_ease pos_relative"
+                >
+                  <button
+                    aria-controls="content-les-usages-et-les-engagements-unilatéraux"
+                    aria-expanded="false"
+                    class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+                  >
+                    <div
+                      class="d_flex ai_center p_16px pos_relative"
+                    >
+                      <div
+                        class="mr_16px d_flex ai_center jc_center"
+                      >
+                        <img
+                          alt=""
+                          aria-hidden="true"
+                          data-nimg="1"
+                          decoding="async"
+                          height="40"
+                          loading="lazy"
+                          src="/static/assets/icons/droit-du-travail/usage-unilateraux.svg"
+                          style="color: transparent;"
+                          width="40"
+                        />
+                      </div>
+                      <h3
+                        class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                      >
+                        Les usages et les engagements unilatéraux
+                      </h3>
+                      <div
+                        class="ml_auto"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="trs_transform_0.3s_ease"
+                          fill="none"
+                          height="24"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <polyline
+                            points="6 9 12 15 18 9"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                  <div
+                    class="pos_absolute bottom_-15px left_50% trf_translateX(-50%) w_60px h_30px bg_inherit cp-path_polygon(0%_0%,_100%_0%,_50%_100%) z_-1"
+                  />
+                </div>
+              </div>
+              <div
+                class="fr-col-12"
+              >
+                <div
+                  class="bg_var(--background-alt-blue-cumulus) bdr_8px ov_visible h_fit-content trs_all_0.3s_ease pos_relative"
+                >
+                  <button
+                    aria-controls="content-le-règlement-intérieur-de-l'entreprise"
+                    aria-expanded="false"
+                    class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+                  >
+                    <div
+                      class="d_flex ai_center p_16px pos_relative"
+                    >
+                      <div
+                        class="mr_16px d_flex ai_center jc_center"
+                      >
+                        <img
+                          alt=""
+                          aria-hidden="true"
+                          data-nimg="1"
+                          decoding="async"
+                          height="40"
+                          loading="lazy"
+                          src="/static/assets/icons/droit-du-travail/reglement-interieur-entreprise.svg"
+                          style="color: transparent;"
+                          width="40"
+                        />
+                      </div>
+                      <h3
+                        class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                      >
+                        Le règlement intérieur de l'entreprise
+                      </h3>
+                      <div
+                        class="ml_auto"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="trs_transform_0.3s_ease"
+                          fill="none"
+                          height="24"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <polyline
+                            points="6 9 12 15 18 9"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                  <div
+                    class="pos_absolute bottom_-15px left_50% trf_translateX(-50%) w_60px h_30px bg_inherit cp-path_polygon(0%_0%,_100%_0%,_50%_100%) z_-1"
+                  />
+                </div>
+              </div>
+              <div
+                class="fr-col-12"
+              >
+                <div
+                  class="bg_var(--background-alt-blue-cumulus) bdr_8px ov_hidden h_fit-content trs_all_0.3s_ease pos_relative"
+                >
+                  <button
+                    aria-controls="content-le-contrat-de-travail"
+                    aria-expanded="false"
+                    class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+                  >
+                    <div
+                      class="d_flex ai_center p_16px pos_relative"
+                    >
+                      <div
+                        class="mr_16px d_flex ai_center jc_center"
+                      >
+                        <img
+                          alt=""
+                          aria-hidden="true"
+                          data-nimg="1"
+                          decoding="async"
+                          height="40"
+                          loading="lazy"
+                          src="/static/assets/icons/droit-du-travail/contrat-travail.svg"
+                          style="color: transparent;"
+                          width="40"
+                        />
+                      </div>
+                      <h3
+                        class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                      >
+                        Le contrat de travail
+                      </h3>
+                      <div
+                        class="ml_auto"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="trs_transform_0.3s_ease"
+                          fill="none"
+                          height="24"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <polyline
+                            points="6 9 12 15 18 9"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            aria-controls="modal-13-matieres"
+            aria-hidden="true"
+            class="fr-btn fr-hidden"
+            data-fr-opened="false"
+            id="modal-13-matieres-hidden-control-button"
+            tabindex="-1"
+            type="button"
+          >
+             
+          </button>
+          <dialog
+            aria-labelledby="fr-modal-title-modal-13-matieres"
+            class="fr-modal"
+            data-fr-concealing-backdrop="true"
+            id="modal-13-matieres"
+          >
+            <div
+              class="fr-container fr-container--fluid fr-container-md"
+            >
+              <div
+                class="fr-grid-row fr-grid-row--center"
+              >
+                <div
+                  class="fr-col-12 fr-col-md-10 fr-col-lg-8"
+                >
+                  <div
+                    class="fr-modal__body"
+                  >
+                    <div
+                      class="fr-modal__header"
+                    >
+                      <button
+                        aria-controls="modal-13-matieres"
+                        class="fr-btn--close fr-btn"
+                        title="Fermer"
+                        type="button"
+                      >
+                        Fermer
+                      </button>
+                    </div>
+                    <div
+                      class="fr-modal__content"
+                    >
+                      <h1
+                        class="fr-modal__title"
+                        id="fr-modal-title-modal-13-matieres"
+                      >
+                        13 matières où la loi reconnaît la primauté à la convention collective de branche
+                      </h1>
+                      <div
+                        class="fr-grid-row fr-grid-row--gutters"
+                      >
+                        <div
+                          class="fr-col-12 fr-col-md-6"
+                        >
+                          <ul>
+                            <li>
+                              Salaires 
+                              <strong>
+                                minima
+                              </strong>
+                            </li>
+                            <li>
+                              Classifications
+                            </li>
+                            <li>
+                              Mutualisation des fonds de financement du paritarisme
+                            </li>
+                            <li>
+                              Mutualisation des fonds de la formation professionnelle
+                            </li>
+                            <li>
+                              Protection sociale complémentaire
+                            </li>
+                            <li>
+                              Durée du travail (certaines mesures seulement)
+                            </li>
+                            <li>
+                              CDD et contrats de travail temporaire (durée totale, renouvellement, délai de carence et délai de transmission des contrats)
+                            </li>
+                          </ul>
+                        </div>
+                        <div
+                          class="fr-col-12 fr-col-md-6"
+                        >
+                          <ul>
+                            <li>
+                              CDI de chantier
+                            </li>
+                            <li>
+                              Egalité professionnelle
+                            </li>
+                            <li>
+                              Conditions et durées de renouvellement de la période d'essai
+                            </li>
+                            <li>
+                              Transfert des contrats de travail en cas de changement de prestataire
+                            </li>
+                            <li>
+                              2 cas de mise à disposition d'un salarié temporaire auprès d'une entreprise utilisatrice
+                            </li>
+                            <li>
+                              Rémunération minimale du salarié porté et montant de l'indemnité d'apport d'affaire
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </dialog>
+          <button
+            aria-controls="modal-4-matieres"
+            aria-hidden="true"
+            class="fr-btn fr-hidden"
+            data-fr-opened="false"
+            id="modal-4-matieres-hidden-control-button"
+            tabindex="-1"
+            type="button"
+          >
+             
+          </button>
+          <dialog
+            aria-labelledby="fr-modal-title-modal-4-matieres"
+            class="fr-modal"
+            data-fr-concealing-backdrop="true"
+            id="modal-4-matieres"
+          >
+            <div
+              class="fr-container fr-container--fluid fr-container-md"
+            >
+              <div
+                class="fr-grid-row fr-grid-row--center"
+              >
+                <div
+                  class="fr-col-12 fr-col-md-10 fr-col-lg-8"
+                >
+                  <div
+                    class="fr-modal__body"
+                  >
+                    <div
+                      class="fr-modal__header"
+                    >
+                      <button
+                        aria-controls="modal-4-matieres"
+                        class="fr-btn--close fr-btn"
+                        title="Fermer"
+                        type="button"
+                      >
+                        Fermer
+                      </button>
+                    </div>
+                    <div
+                      class="fr-modal__content"
+                    >
+                      <h1
+                        class="fr-modal__title"
+                        id="fr-modal-title-modal-4-matieres"
+                      >
+                        4 matières où la branche peut reconnaître sa primauté
+                      </h1>
+                      <div
+                        class="fr-grid-row fr-grid-row--gutters"
+                      >
+                        <div
+                          class="fr-col-12 fr-col-md-6"
+                        >
+                          <ul>
+                            <li>
+                              La prévention des effets de l'exposition aux facteurs de risques professionnels
+                            </li>
+                            <li>
+                              L'insertion professionnelle et le maintien dans l'emploi des travailleurs handicapés
+                            </li>
+                          </ul>
+                        </div>
+                        <div
+                          class="fr-col-12 fr-col-md-6"
+                        >
+                          <ul>
+                            <li>
+                              Seuil de désignation, nombre et valorisation des parcours syndicaux des délégués syndicaux
+                            </li>
+                            <li>
+                              Les primes pour travaux dangereux ou insalubres
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </dialog>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
