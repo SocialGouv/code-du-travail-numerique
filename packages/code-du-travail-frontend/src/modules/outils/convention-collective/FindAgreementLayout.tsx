@@ -1,8 +1,8 @@
 "use client";
-import { ContainerSimulator } from "../../layout/ContainerSimulator";
 import { RelatedItem } from "../../documents";
 import { ReactNode } from "react";
 import { FindAgreementBlock } from "./FindAgreementBlock";
+import { ContainerSimulatorLight } from "../../layout/ContainerSimulatorLight";
 
 type Props = {
   children: ReactNode;
@@ -19,13 +19,13 @@ export const FindAgreementLayout = ({
   description,
 }: Props) => {
   return (
-    <ContainerSimulator
+    <ContainerSimulatorLight
       relatedItems={relatedItems}
       title="Trouver sa convention collective"
       description={description}
       segments={[{ label: "Simulateurs", linkProps: { href: "/outils" } }]}
     >
       <FindAgreementBlock>{children}</FindAgreementBlock>
-    </ContainerSimulator>
+    </ContainerSimulatorLight>
   );
 };

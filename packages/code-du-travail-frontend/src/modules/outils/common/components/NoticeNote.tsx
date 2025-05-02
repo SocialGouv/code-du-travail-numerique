@@ -16,7 +16,7 @@ export const NoticeNote = (props: NoticeNoteProps) => {
       {props.isList ? (
         <sup>
           {isUniq ? (
-            <>*</>
+            <></>
           ) : (
             <>
               {Array.from(Array(props.numberOfElements).keys()).map((i) => (
@@ -26,7 +26,7 @@ export const NoticeNote = (props: NoticeNoteProps) => {
           )}
         </sup>
       ) : (
-        <sup>{isUniq ? <>*</> : <>({props.currentElement}) </>}</sup>
+        <sup>{isUniq ? <></> : <>({props.currentElement}) </>}</sup>
       )}
     </>
   );

@@ -2,6 +2,7 @@ import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
 import React from "react";
 import { useContext } from "react";
 import { CommonAgreementStep } from "./components/AgreementStep";
+import { IndemniteDepartType } from "../../types";
 
 const AgreementStep = (): JSX.Element => {
   const store = useContext(IndemniteDepartContext);
@@ -35,7 +36,9 @@ const AgreementStep = (): JSX.Element => {
       enterprise={enterprise}
       error={error}
       onAgreementChange={onAgreementChange}
-      indemniteDepartType={indemniteDepartType}
+      trackingActionName={
+        indemniteDepartType ?? IndemniteDepartType.LICENCIEMENT
+      }
       onInitAgreementPage={onInitAgreementPage}
       onRouteChange={onRouteChange}
       route={route}

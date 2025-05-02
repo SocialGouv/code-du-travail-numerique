@@ -41,7 +41,7 @@ type Props = {
 export default function FilledElements(props: Props) {
   return (
     <>
-      <h2>Éléments saisis</h2>
+      <h3>Éléments saisis</h3>
       <ul className={mainListStyle}>
         <li>
           <strong>Contrat de travail</strong>

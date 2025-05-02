@@ -42,16 +42,15 @@ export const SimulatorLayout = (props: Props<string>) => {
   const stepName = visibleSteps[stepIndex].label;
   const nextStepTitle = visibleSteps[stepIndex + 1]?.label;
 
+  const doNotTriggerMatomo = (stepName: string) =>
+    stepName === IndemniteDepartStepName.Resultat &&
+    simulator === PublicodesSimulator.INDEMNITE_LICENCIEMENT;
+
   useEffect(() => {
     const currentStepName = visibleSteps[stepIndex].name;
     if (doNotTriggerMatomo(currentStepName)) return;
     emitNextPreviousEvent(title, navigationAction === "prev", currentStepName);
   }, [stepIndex]);
-
-  const doNotTriggerMatomo = (stepName: string) =>
-    navigationAction === "none" ||
-    (stepName === IndemniteDepartStepName.Resultat &&
-      simulator === PublicodesSimulator.INDEMNITE_LICENCIEMENT);
 
   const onNextStep = () => {
     const nextStepIndex = stepIndex + 1;
@@ -159,7 +158,7 @@ export const SimulatorLayout = (props: Props<string>) => {
             priority="secondary"
             iconId="ri-arrow-left-line"
             iconPosition="left"
-            className="fr-mr-2w"
+            className={fr.cx("fr-mr-2w", "fr-mb-3w")}
           >
             Précédent
           </Button>
@@ -171,6 +170,7 @@ export const SimulatorLayout = (props: Props<string>) => {
             iconId="ri-arrow-right-line"
             iconPosition="right"
             disabled={validator?.isStepValid === false}
+            className={fr.cx("fr-mr-2w", "fr-mb-3w")}
           >
             {currentNumStep === 1 ? "Commencer" : "Suivant"}
           </Button>
@@ -181,16 +181,12 @@ export const SimulatorLayout = (props: Props<string>) => {
             priority="secondary"
             iconId="ri-printer-fill"
             iconPosition="right"
+            className={fr.cx("fr-mr-2w", "fr-mb-3w")}
           >
             Imprimer le résultat
           </Button>
         )}
       </div>
-      {visibleSteps[stepIndex].options?.annotation && (
-        <p className={fr.cx("fr-text--sm", "fr-mt-3w")}>
-          {visibleSteps[stepIndex].options?.annotation}
-        </p>
-      )}
       {props.footerComponent}
     </div>
   );

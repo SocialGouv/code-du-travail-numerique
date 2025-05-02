@@ -22,13 +22,8 @@ import {
   Disclaimer,
   PubliReferences,
 } from "src/modules/outils/common/components";
-import Accordion from "@codegouvfr/react-dsfr/Accordion";
-import {
-  eventEmitter,
-  EventType,
-} from "src/modules/outils/indemnite-depart/events";
-import { fr } from "@codegouvfr/react-dsfr";
 import Link from "src/modules/common/Link";
+import { fr } from "@codegouvfr/react-dsfr";
 
 const Eligible = () => {
   const store = useContext(IndemniteDepartContext);
@@ -75,97 +70,14 @@ const Eligible = () => {
     } as Notification,
   ];
 
-  const onClickAccordion = () => {
-    eventEmitter.dispatch(EventType.TRACK_RESULT);
-  };
-
   return (
-    <>
+    <div className={fr.cx("fr-col-md-8", "fr-col-12")}>
       <Result
+        title="Indemnité de rupture conventionnelle"
         maxResult={result.result.value?.toString() ?? ""}
         notifications={defaultNotification.concat(result.notifications ?? [])}
         resultMessage={getResultMessage(informationData)}
       />
-      <Accordion
-        label="Voir le détail du calcul"
-        onExpandedChange={onClickAccordion}
-        className={fr.cx("fr-mb-2w")}
-      >
-        <FilledElements
-          type={IndemniteDepartType.RUPTURE_CONVENTIONNELLE}
-          contractTravail={[
-            {
-              text: "Type de contrat",
-              value: contratTravail
-                .typeContratTravail!.toString()
-                .toUpperCase(),
-            },
-            {
-              text: "Arrêt de travail au moment de la rupture conventionnelle",
-              value: contratTravail.arretTravail === "oui" ? "Oui" : "Non",
-            },
-          ].concat(
-            contratTravail.dateArretTravail
-              ? [
-                  {
-                    text: "Date de début de l'arrêt de travail",
-                    value: contratTravail.dateArretTravail,
-                  },
-                ]
-              : []
-          )}
-          showHasTempsPartiel={salary.showHasTempsPartiel}
-          absencesPeriods={seniority.absencePeriods}
-          agreementName={agreement.agreement?.shortTitle}
-          isArretTravail={contratTravail.arretTravail === "oui"}
-          dateEntree={seniority.dateEntree!}
-          dateSortie={seniority.dateSortie!}
-          salaryPeriods={salary.salaryPeriods}
-          hasTempsPartiel={salary.hasTempsPartiel === "oui"}
-          hasSameSalary={salary.hasSameSalary === "oui"}
-          salary={salary.salary}
-          isAgreementBetter={result.isAgreementBetter}
-          agreementInformations={result.agreementInformations}
-          agreementRefSalaryInfo={
-            agreement.agreement &&
-            agreement.isAgreementSupportedIndemniteLicenciement && (
-              <AgreementsInjector
-                idcc={getSupportedAgreement(agreement.agreement.num)}
-                step={IndemniteDepartStepName.Resultat}
-                type={IndemniteDepartType.RUPTURE_CONVENTIONNELLE}
-              />
-            )
-          }
-          isStepSalaryHidden={isStepSalaryHidden}
-          disableParentalNotice={result.isParentalNoticeHidden}
-        />
-        <FormulaInterpreter formula={result.formula} />
-        {!result.agreementHasNoLegalIndemnity && (
-          <DecryptResult
-            resultExplanation={resultExplanation}
-            agreementExplanation={agreementExplanation}
-            legalResult={
-              result.publicodesLegalResult.value
-                ? result.publicodesLegalResult.value.toString()
-                : "0"
-            }
-            agreementResult={
-              result.publicodesAgreementResult &&
-              result.publicodesAgreementResult.value
-                ? result.publicodesAgreementResult.value.toString()
-                : undefined
-            }
-            label="rupture conventionnelle"
-          />
-        )}
-        <PubliReferences
-          references={
-            result.isAgreementBetter
-              ? (result.agreementReferences ?? [])
-              : result.legalReferences
-          }
-        />
-      </Accordion>
       {!result.agreementHasNoBetterAllowance && result.infoWarning && (
         <Disclaimer
           title={result.infoWarning.title}
@@ -173,6 +85,79 @@ const Eligible = () => {
           dataTestId="eligible-cc-disclaimer"
         />
       )}
+      <h2>Détail du calcul</h2>
+      <FilledElements
+        type={IndemniteDepartType.RUPTURE_CONVENTIONNELLE}
+        contractTravail={[
+          {
+            text: "Type de contrat",
+            value: contratTravail.typeContratTravail!.toString().toUpperCase(),
+          },
+          {
+            text: "Arrêt de travail au moment de la rupture conventionnelle",
+            value: contratTravail.arretTravail === "oui" ? "Oui" : "Non",
+          },
+        ].concat(
+          contratTravail.dateArretTravail
+            ? [
+                {
+                  text: "Date de début de l'arrêt de travail",
+                  value: contratTravail.dateArretTravail,
+                },
+              ]
+            : []
+        )}
+        showHasTempsPartiel={salary.showHasTempsPartiel}
+        absencesPeriods={seniority.absencePeriods}
+        agreementName={agreement.agreement?.shortTitle}
+        isArretTravail={contratTravail.arretTravail === "oui"}
+        dateEntree={seniority.dateEntree!}
+        dateSortie={seniority.dateSortie!}
+        salaryPeriods={salary.salaryPeriods}
+        hasTempsPartiel={salary.hasTempsPartiel === "oui"}
+        hasSameSalary={salary.hasSameSalary === "oui"}
+        salary={salary.salary}
+        isAgreementBetter={result.isAgreementBetter}
+        agreementInformations={result.agreementInformations}
+        agreementRefSalaryInfo={
+          agreement.agreement &&
+          agreement.isAgreementSupportedIndemniteLicenciement && (
+            <AgreementsInjector
+              idcc={getSupportedAgreement(agreement.agreement.num)}
+              step={IndemniteDepartStepName.Resultat}
+              type={IndemniteDepartType.RUPTURE_CONVENTIONNELLE}
+            />
+          )
+        }
+        isStepSalaryHidden={isStepSalaryHidden}
+        disableParentalNotice={result.isParentalNoticeHidden}
+      />
+      <FormulaInterpreter formula={result.formula} />
+      {!result.agreementHasNoLegalIndemnity && (
+        <DecryptResult
+          resultExplanation={resultExplanation}
+          agreementExplanation={agreementExplanation}
+          legalResult={
+            result.publicodesLegalResult.value
+              ? result.publicodesLegalResult.value.toString()
+              : "0"
+          }
+          agreementResult={
+            result.publicodesAgreementResult &&
+            result.publicodesAgreementResult.value
+              ? result.publicodesAgreementResult.value.toString()
+              : undefined
+          }
+          label="rupture conventionnelle"
+        />
+      )}
+      <PubliReferences
+        references={
+          result.isAgreementBetter
+            ? (result.agreementReferences ?? [])
+            : result.legalReferences
+        }
+      />
       <i>
         Le montant donné n’est qu’une estimation, il est donné à titre
         indicatif. Pour simplifier l’utilisation de ce simulateur, certains
@@ -181,7 +166,7 @@ const Eligible = () => {
         les absences de moins d’un mois ou les contrats antérieurs au CDI ne
         sont pas pris en compte dans le calcul de l’ancienneté du salarié.
       </i>
-    </>
+    </div>
   );
 };
 
