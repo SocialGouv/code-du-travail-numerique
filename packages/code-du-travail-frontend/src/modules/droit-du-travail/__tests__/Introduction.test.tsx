@@ -2,25 +2,6 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import Introduction from "../Introduction";
 
-// Mock DSFR Alert component
-jest.mock("@codegouvfr/react-dsfr/Alert", () => {
-  return {
-    __esModule: true,
-    default: ({
-      title,
-      description,
-    }: {
-      title: string;
-      description: string;
-    }) => (
-      <div data-testid="mock-alert">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    ),
-  };
-});
-
 describe("<Introduction />", () => {
   it("renders correctly", () => {
     const { container } = render(<Introduction />);
@@ -58,15 +39,5 @@ describe("<Introduction />", () => {
     expect(
       screen.getByText("Le droit du travail, ce n'est pas...")
     ).toBeInTheDocument();
-  });
-
-  it("displays the alert with correct description", () => {
-    render(<Introduction />);
-    // Vérifier que le texte de description est passé au composant Alert mocké
-    const alertElement = screen.getByTestId("mock-alert");
-    const descriptionElement = alertElement.querySelector("p");
-    expect(descriptionElement).toHaveTextContent(
-      /Le droit du travail ne concerne pas les travailleurs qui sont soumis au droit public/
-    );
   });
 });

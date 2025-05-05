@@ -19,8 +19,12 @@ exports[`<ExpandableCard /> renders correctly with default props 1`] = `
           <img
             alt=""
             aria-hidden="true"
+            data-nimg="1"
+            decoding="async"
             height="40"
+            loading="lazy"
             src="/test-icon.svg"
+            style="color: transparent;"
             width="40"
           />
         </div>

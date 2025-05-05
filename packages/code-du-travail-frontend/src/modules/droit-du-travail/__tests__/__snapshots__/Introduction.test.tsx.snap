@@ -35,9 +35,12 @@ exports[`<Introduction /> renders correctly 1`] = `
         Le droit du travail est un droit en constante évolution car il comprend des enjeux sociaux, économiques et politiques forts.
       </p>
       <div
-        data-testid="mock-alert"
+        class="fr-alert fr-alert--info fr-mt-4w"
+        id="fr-alert-:r0:"
       >
-        <h3>
+        <h3
+          class="fr-alert__title"
+        >
           Le droit du travail, ce n'est pas...
         </h3>
         <p>
