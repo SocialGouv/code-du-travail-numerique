@@ -20,7 +20,7 @@ type Props = {
   enterprise: CommonAgreementStoreInput["enterprise"];
   agreement: CommonAgreementStoreInput["agreement"];
   onInitAgreementPage: CommonAgreementStoreFn["onInitAgreementPage"];
-  indemniteDepartType: CommonAgreementStoreInput["indemniteDepartType"];
+  trackingActionName: string;
 };
 
 export const CommonAgreementStep = ({
@@ -31,7 +31,7 @@ export const CommonAgreementStep = ({
   enterprise,
   agreement,
   onInitAgreementPage,
-  indemniteDepartType,
+  trackingActionName,
 }: Required<Props>): JSX.Element => {
   React.useEffect(() => {
     onInitAgreementPage();
@@ -85,7 +85,7 @@ export const CommonAgreementStep = ({
             selectedAgreementAlert={selectedAgreementAlert}
             defaultAgreement={agreement}
             trackingActionName={
-              indemniteDepartType || IndemniteDepartType.LICENCIEMENT
+              trackingActionName || IndemniteDepartType.LICENCIEMENT
             }
           />
           {error?.agreement && (
@@ -105,7 +105,7 @@ export const CommonAgreementStep = ({
             }}
             selectedAgreementAlert={selectedAgreementAlert}
             trackingActionName={
-              indemniteDepartType || IndemniteDepartType.LICENCIEMENT
+              trackingActionName || IndemniteDepartType.LICENCIEMENT
             }
             enterprise={enterprise}
             agreement={agreement}

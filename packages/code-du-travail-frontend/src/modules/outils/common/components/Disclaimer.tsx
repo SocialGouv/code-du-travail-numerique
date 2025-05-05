@@ -14,10 +14,10 @@ export const Disclaimer = ({
   dataTestId,
 }: Props): JSX.Element => (
   <Alert
-    severity="warning"
+    severity="info"
     data-testid={dataTestId}
     title={title}
     description={message}
-    className={fr.cx("fr-my-2w")}
+    className={fr.cx("fr-mb-2w")}
   />
 );

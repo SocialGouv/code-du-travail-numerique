@@ -15,7 +15,7 @@ Storage.prototype.getItem = jest.fn(
     "slug": "1501-restauration-rapide",
     "title": "Convention collective nationale de la restauration rapide du 18 mars 1988",
     "contributions": true
-  }  
+  }
 `
 );
 
@@ -25,7 +25,6 @@ describe("Indemnité licenciement - CC 1501", () => {
     render(
       <IndemniteRuptureCoSimulator
         displayTitle="Simulateur d'indemnité de rupture conventionnelle"
-        description="Estimez le montant de l'indemnité de rupture conventionnelle"
         relatedItems={[]}
         title="Simulateur d'indemnité de rupture conventionnelle"
       />
