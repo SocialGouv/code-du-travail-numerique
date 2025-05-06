@@ -85,7 +85,7 @@ export const CommonAgreementStep = ({
             selectedAgreementAlert={selectedAgreementAlert}
             defaultAgreement={agreement}
             trackingActionName={
-              trackingActionName || IndemniteDepartType.LICENCIEMENT
+              trackingActionName ?? IndemniteDepartType.LICENCIEMENT
             }
           />
           {error?.agreement && (
@@ -105,7 +105,7 @@ export const CommonAgreementStep = ({
             }}
             selectedAgreementAlert={selectedAgreementAlert}
             trackingActionName={
-              trackingActionName || IndemniteDepartType.LICENCIEMENT
+              trackingActionName ?? IndemniteDepartType.LICENCIEMENT
             }
             enterprise={enterprise}
             agreement={agreement}
