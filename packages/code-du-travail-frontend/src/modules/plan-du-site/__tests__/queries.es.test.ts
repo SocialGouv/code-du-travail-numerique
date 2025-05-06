@@ -53,8 +53,8 @@ describe("Sitemap", () => {
     ]);
     expect(result.tools[0]).toEqual({
       root: {
-        slug: "indemnite-rupture-conventionnelle",
-        title: "Indemnité de rupture conventionnelle",
+        slug: "indemnite-licenciement",
+        title: "Indemnité de licenciement",
       },
     });
     expect(result.contributions).toEqual([
