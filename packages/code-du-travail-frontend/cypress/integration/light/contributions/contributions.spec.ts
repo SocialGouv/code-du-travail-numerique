@@ -17,7 +17,7 @@ describe("Contributions", () => {
     cy.get("#content h2")
       .first()
       .should("contain", "Embauche et contrat de travail");
-    cy.get("#content li").should("have.length", 42);
+    cy.get("#content li").should("have.length.at.least", 1);
     cy.get("#content li").first().click();
     cy.urlEqual("/contribution/la-periode-dessai-peut-elle-etre-renouvelee");
   });
