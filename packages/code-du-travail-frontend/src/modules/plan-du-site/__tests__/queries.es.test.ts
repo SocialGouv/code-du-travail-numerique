@@ -53,8 +53,8 @@ describe("Sitemap", () => {
     ]);
     expect(result.tools[0]).toEqual({
       root: {
-        slug: "indemnite-licenciement",
-        title: "Indemnité de licenciement",
+        slug: "indemnite-rupture-conventionnelle",
+        title: "Indemnité de rupture conventionnelle",
       },
     });
     expect(result.contributions).toEqual([
@@ -62,11 +62,12 @@ describe("Sitemap", () => {
         children: [
           {
             slug: "44-slug-content1",
-            title: "title1",
+            title: "title1 - Industries chimiques et connexes",
           },
           {
             slug: "16-slug-content1",
-            title: "title1",
+            title:
+              "title1 - Transports routiers et activités auxiliaires du transport",
           },
         ],
         root: {
@@ -78,7 +79,8 @@ describe("Sitemap", () => {
         children: [
           {
             slug: "16-slug-content2",
-            title: "title2",
+            title:
+              "title2 - Transports routiers et activités auxiliaires du transport",
           },
         ],
         root: {

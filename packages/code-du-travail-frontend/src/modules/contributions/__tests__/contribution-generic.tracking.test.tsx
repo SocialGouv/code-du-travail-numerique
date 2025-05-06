@@ -110,6 +110,14 @@ describe("<ContributionGeneric />", () => {
       ],
       [
         {
+          action: "/contribution/my-contrib",
+          category: "cc_select_p1",
+          name: "idcc1388",
+          value: "",
+        },
+      ],
+      [
+        {
           action: "click_p1",
           category: "cc_search_type_of_users",
           name: "/contribution/my-contrib",
@@ -120,14 +128,6 @@ describe("<ContributionGeneric />", () => {
           action: "cc_select_traitée",
           category: "outil",
           name: "1388",
-        },
-      ],
-      [
-        {
-          action: "/contribution/my-contrib",
-          category: "cc_select_p1",
-          name: "idcc1388",
-          value: "",
         },
       ],
     ]);
@@ -181,6 +181,14 @@ describe("<ContributionGeneric />", () => {
       ],
       [
         {
+          action: "/contribution/my-contrib",
+          category: "cc_select_p1",
+          name: "idcc0016",
+          value: "",
+        },
+      ],
+      [
+        {
           action: "click_p1",
           category: "cc_search_type_of_users",
           name: "/contribution/my-contrib",
@@ -191,14 +199,6 @@ describe("<ContributionGeneric />", () => {
           action: "cc_select_non_traitée",
           category: "outil",
           name: "16",
-        },
-      ],
-      [
-        {
-          action: "/contribution/my-contrib",
-          category: "cc_select_p1",
-          name: "idcc0016",
-          value: "",
         },
       ],
     ]);
@@ -243,16 +243,16 @@ describe("<ContributionGeneric />", () => {
       [
         {
           action: "/contribution/my-contrib",
-          category: "cc_select_p2",
-          name: "idcc2216",
+          category: "enterprise_select",
+          name: '{"label":"CARREFOUR PROXIMITE FRANCE (SHOPI-8 A HUIT)","siren":"345130488"}',
           value: "",
         },
       ],
       [
         {
           action: "/contribution/my-contrib",
-          category: "enterprise_select",
-          name: '{"label":"CARREFOUR PROXIMITE FRANCE (SHOPI-8 A HUIT)","siren":"345130488"}',
+          category: "cc_select_p2",
+          name: "idcc2216",
           value: "",
         },
       ],
