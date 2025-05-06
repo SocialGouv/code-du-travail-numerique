@@ -62,12 +62,11 @@ describe("Sitemap", () => {
         children: [
           {
             slug: "44-slug-content1",
-            title: "title1 - Industries chimiques et connexes",
+            title: "title1",
           },
           {
             slug: "16-slug-content1",
-            title:
-              "title1 - Transports routiers et activités auxiliaires du transport",
+            title: "title1",
           },
         ],
         root: {
@@ -79,8 +78,7 @@ describe("Sitemap", () => {
         children: [
           {
             slug: "16-slug-content2",
-            title:
-              "title2 - Transports routiers et activités auxiliaires du transport",
+            title: "title2",
           },
         ],
         root: {
