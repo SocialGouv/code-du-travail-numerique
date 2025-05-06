@@ -20,12 +20,21 @@ describe("Rupture conventionnelle - légale", () => {
         title="Indemnité de rupture conventionnelle"
       />
     );
-    expect(push).toHaveBeenCalledWith([
+    expect(push).toHaveBeenNthCalledWith(1, [
       "trackEvent",
       "outil",
       "view_step_Indemnité de rupture conventionnelle",
       "start",
     ]);
+
+    const startEventCalls = (push as jest.Mock).mock.calls.filter(
+      (call) =>
+        call[0][0] === "trackEvent" &&
+        call[0][1] === "outil" &&
+        call[0][2] === "view_step_Indemnité de rupture conventionnelle" &&
+        call[0][3] === "start"
+    );
+    expect(startEventCalls.length).toBe(1);
     userAction = new UserAction();
     userAction
       .click(ui.introduction.startButton.get())

@@ -27,7 +27,7 @@ export const eventEmitter: {
 
   subscribe(event, callback) {
     if (!this.events[event]) this.events[event] = [];
-    if (!this.events[event]?.includes(this.events[event][0]))
+    if (!this.events[event]?.includes(callback))
       this.events[event]?.push(callback);
   },
 

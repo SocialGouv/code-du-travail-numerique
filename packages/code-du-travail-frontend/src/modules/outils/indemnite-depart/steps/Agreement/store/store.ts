@@ -42,6 +42,10 @@ const createCommonAgreementStore: StoreSlicePublicode<
     ...initialState,
     publicodes: loadPublicodes(simulator),
     indemniteDepartType: type,
+    input: {
+      ...initialState.input,
+      indemniteDepartType: type,
+    },
   },
   agreementFunction: {
     onInitAgreementPage: () => {

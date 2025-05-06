@@ -15,7 +15,6 @@ type Props = {
   selectedAgreement?: Agreement;
   goBack: () => void;
   onAgreementSelect?: (agreement: Agreement) => void;
-  trackingActionName: string;
 };
 
 export const EnterpriseAgreementSelectionForm = ({
@@ -23,10 +22,7 @@ export const EnterpriseAgreementSelectionForm = ({
   selectedAgreement,
   goBack,
   onAgreementSelect,
-  trackingActionName,
 }: Props) => {
-  const { emitSelectEnterpriseAgreementEvent } =
-    useEnterpriseAgreementSearchTracking();
   const [agreement, setAgreement] = useState<Agreement | undefined>(
     selectedAgreement
   );
@@ -70,10 +66,6 @@ export const EnterpriseAgreementSelectionForm = ({
                   onChange: () => {
                     onAgreementSelect(agreement);
                     setAgreement(agreement);
-                    emitSelectEnterpriseAgreementEvent(
-                      `idcc${agreement.id}`,
-                      trackingActionName
-                    );
                   },
                 }
               : {}),
