@@ -76,12 +76,6 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
         name: '{"query":"16"}',
         value: undefined,
       });
-      // expect(sendEvent).toHaveBeenCalledWith({
-      //   action: "Trouver sa convention collective",
-      //   category: "cc_select_p1",
-      //   name: "idcc0016",
-      //   value: undefined,
-      // });
 
       expect(
         ui.searchByName.autocompleteLines.IDCC16.name.query()
