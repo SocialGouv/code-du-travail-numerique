@@ -48,6 +48,20 @@ export default class MyDocument extends Document {
             type="text/css"
             href="/static/fonts.css"
           />
+
+          {/* Google Tag Manager script - Will only be activated with user consent */}
+          <script
+            id="gtm-script-placeholder"
+            dangerouslySetInnerHTML={{
+              __html: `
+                // This script will be replaced by the actual GTM script when user consents
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'DC-3048978');
+              `,
+            }}
+          />
         </Head>
         <body>
           <noscript>

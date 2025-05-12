@@ -10,6 +10,8 @@ import React, { useEffect } from "react";
 import { A11y } from "../src/a11y";
 import { getSourceUrlFromPath } from "../src/lib";
 import { useRouter } from "next/router";
+import CookieConsentLegacy from "../src/components/CookieConsent/index";
+import { initConsent } from "../src/lib/consent";
 import {
   PIWIK_SITE_ID,
   PIWIK_URL,
@@ -43,6 +45,10 @@ if (typeof window !== "undefined") {
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   useEffect(() => {
+    // Initialize consent
+    initConsent();
+
+    // Initialize Matomo
     init({
       siteId: PIWIK_SITE_ID,
       url: PIWIK_URL,
@@ -66,6 +72,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <GlobalStyles />
         <A11y />
         <Component {...pageProps} />
+        <CookieConsentLegacy />
       </ThemeProvider>
     </React.StrictMode>
   );

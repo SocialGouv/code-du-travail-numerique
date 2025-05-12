@@ -94,16 +94,35 @@ export const PrivacyPolicy = () => {
           terminal (ordinateur, mobile ou tablette).
         </p>
         <p>
-          Nous collectons donc des données par l’intermédiaire de dispositifs
-          appelés “cookies” permettant d’établir des mesures statistiques.
+          Nous collectons donc des données par l&apos;intermédiaire de
+          dispositifs appelés &quot;cookies&quot; permettant d&apos;établir des
+          mesures statistiques et de suivre l&apos;efficacité de nos campagnes
+          publicitaires.
         </p>
-        <ul className={fr.cx("fr-mb-6v")}>
-          <li>Catégorie de cookie&nbsp;: Mesure d’audience anonymisée</li>
+        <h3 className={fr.cx("fr-h5", "fr-mb-2w")}>
+          Cookies de mesure d&apos;audience (obligatoires)
+        </h3>
+        <ul className={fr.cx("fr-mb-4w")}>
+          <li>Catégorie de cookie&nbsp;: Mesure d&apos;audience anonymisée</li>
           <li>Nom du cookie&nbsp;: Matomo</li>
           <li>Délai de conservation&nbsp;: 13 mois</li>
           <li>Finalités&nbsp;: Mesure d’audience</li>
           <li>Éditeur&nbsp;: Matomo & Fabrique numérique</li>
           <li>Destination&nbsp;: France</li>
+        </ul>
+        <h3 className={fr.cx("fr-h5", "fr-mb-2w")}>
+          Cookies de suivi des campagnes publicitaires (SEA)
+        </h3>
+        <ul className={fr.cx("fr-mb-6v")}>
+          <li>Catégorie de cookie&nbsp;: Suivi des campagnes publicitaires</li>
+          <li>Nom du cookie&nbsp;: Google Tag Manager</li>
+          <li>Délai de conservation&nbsp;: 13 mois</li>
+          <li>
+            Finalités&nbsp;: Suivi des campagnes publicitaires sur les moteurs
+            de recherche
+          </li>
+          <li>Éditeur&nbsp;: Google</li>
+          <li>Destination&nbsp;: États-Unis (avec garanties appropriées)</li>
         </ul>
         <p>
           L’accès aux informations contenues dans les cookies est limité aux
@@ -112,11 +131,11 @@ export const PrivacyPolicy = () => {
           qui lui sont propres.
         </p>
         <p>
-          À tout moment, vous pouvez refuser l’utilisation des cookies et
-          désactiver le dépôt sur votre ordinateur en utilisant la fonction
-          dédiée de votre navigateur (fonction disponible notamment sur
-          Microsoft Internet Explorer 11, Google Chrome, Mozilla Firefox, Apple
-          Safari et Opera).
+          À tout moment, vous pouvez refuser l&apos;utilisation des cookies de
+          suivi des campagnes publicitaires et désactiver leur dépôt sur votre
+          ordinateur en utilisant la fonction dédiée de votre navigateur
+          (fonction disponible notamment sur Microsoft Internet Explorer 11,
+          Google Chrome, Mozilla Firefox, Apple Safari et Opera).
         </p>
         <p>
           Pour l’outil Matomo, vous pouvez décider de ne jamais être suivi, y
