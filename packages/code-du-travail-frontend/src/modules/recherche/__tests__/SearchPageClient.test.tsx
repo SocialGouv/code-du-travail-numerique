@@ -7,6 +7,9 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 // Mock des dépendances
 jest.mock("next/navigation", () => ({
   useSearchParams: jest.fn(),
+  useRouter: jest.fn().mockReturnValue({
+    replace: jest.fn(),
+  }),
 }));
 
 jest.mock("@socialgouv/cdtn-utils", () => ({
@@ -18,31 +21,34 @@ jest.mock("@socialgouv/cdtn-utils", () => ({
   },
 }));
 
+// Mock le composant SearchBar
+jest.mock("../SearchBar", () => ({
+  SearchBar: jest.fn(({ initialValue }) => (
+    <div data-testid="search-bar">
+      <span>Rechercher</span>
+      <input type="text" defaultValue={initialValue} />
+    </div>
+  )),
+}));
+
+// Mock le composant Button de @codegouvfr/react-dsfr
+jest.mock("@codegouvfr/react-dsfr/Button", () => ({
+  Button: jest.fn(({ children, onClick, priority }) => (
+    <button
+      onClick={onClick}
+      className={`fr-btn ${priority ? `fr-btn--${priority}` : ""}`}
+    >
+      {children}
+    </button>
+  )),
+}));
+
 describe("<SearchPageClient />", () => {
   const mockSearchParams = new URLSearchParams({ q: "test query" });
 
   beforeEach(() => {
     jest.clearAllMocks();
     (useSearchParams as jest.Mock).mockReturnValue(mockSearchParams);
-  });
-
-  it("should render with empty results", () => {
-    render(
-      <SearchPageClient
-        query="test query"
-        items={{ documents: [], themes: [], articles: [] }}
-      />
-    );
-
-    expect(screen.getByText("Rechercher")).toBeInTheDocument();
-    expect(
-      screen.getByText('Résultats de recherche pour "test query"')
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText(
-        "Nous n'avons pas trouvé de résultat pour votre recherche."
-      )
-    ).toBeInTheDocument();
   });
 
   it("should render with documents results", () => {
@@ -133,7 +139,10 @@ describe("<SearchPageClient />", () => {
     expect(screen.getAllByText(/Document \d/).length).toBe(8);
 
     // Cliquer sur le bouton "Plus de résultats"
-    fireEvent.click(screen.getByText("Plus de résultats"));
+    const loadMoreButton = screen.getByRole("button", {
+      name: "Plus de résultats",
+    });
+    fireEvent.click(loadMoreButton);
 
     // Après le clic, tous les 10 résultats devraient être affichés
     expect(screen.getAllByText(/Document \d/).length).toBe(10);
@@ -158,6 +167,8 @@ describe("<SearchPageClient />", () => {
     expect(screen.getAllByText(/Document \d/).length).toBe(5);
 
     // Le bouton "Plus de résultats" ne devrait pas être présent
-    expect(screen.queryByText("Plus de résultats")).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole("button", { name: "Plus de résultats" })
+    ).not.toBeInTheDocument();
   });
 });

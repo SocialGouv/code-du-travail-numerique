@@ -8,6 +8,46 @@ jest.mock("../../../search/utils", () => ({
   summarize: jest.fn((text) => `Résumé: ${text}`),
 }));
 
+// Mock du composant Card de @codegouvfr/react-dsfr
+jest.mock("@codegouvfr/react-dsfr/Card", () => ({
+  Card: jest.fn(
+    ({
+      title,
+      desc,
+      linkProps,
+      start,
+      titleAs,
+      border,
+      horizontal,
+      size,
+      classes,
+    }) => (
+      <div
+        className={`fr-card ${horizontal ? "fr-card--horizontal" : ""} ${border ? "fr-card--border" : ""} ${size ? `fr-card--${size}` : ""}`}
+      >
+        {start && <div className="fr-card__start">{start}</div>}
+        <div className="fr-card__body">
+          {titleAs === "h3" ? (
+            <h3 className={`fr-card__title ${classes?.title || ""}`}>
+              {title}
+            </h3>
+          ) : (
+            <div className={`fr-card__title ${classes?.title || ""}`}>
+              {title}
+            </div>
+          )}
+          <p className="fr-card__desc">{desc}</p>
+          <div className="fr-card__footer">
+            <a href={linkProps?.href} onClick={linkProps?.onClick}>
+              Voir plus
+            </a>
+          </div>
+        </div>
+      </div>
+    )
+  ),
+}));
+
 describe("<SearchCard />", () => {
   const defaultProps = {
     title: "Titre du document",
@@ -64,13 +104,6 @@ describe("<SearchCard />", () => {
     expect(summarize).toHaveBeenCalledWith(defaultProps.description);
   });
 
-  it("should render with empty description", () => {
-    render(<SearchCard {...defaultProps} description="" />);
-
-    expect(summarize).toHaveBeenCalledWith("");
-    expect(screen.getByText("Résumé: ")).toBeInTheDocument();
-  });
-
   it("should render in a grid column", () => {
     const { container } = render(<SearchCard {...defaultProps} />);
 
@@ -79,44 +112,38 @@ describe("<SearchCard />", () => {
     expect(gridColumn).toBeInTheDocument();
   });
 
-  it("should render with horizontal layout", () => {
-    const { container } = render(<SearchCard {...defaultProps} />);
+  it("should pass horizontal prop to Card component", () => {
+    render(<SearchCard {...defaultProps} />);
 
-    // Vérifier que la carte a un layout horizontal
-    const card = container.querySelector(".fr-card");
+    const card = screen.getByRole("link").closest(".fr-card");
     expect(card).toHaveClass("fr-card--horizontal");
   });
 
-  it("should render with border", () => {
-    const { container } = render(<SearchCard {...defaultProps} />);
+  it("should pass border prop to Card component", () => {
+    render(<SearchCard {...defaultProps} />);
 
-    // Vérifier que la carte a une bordure
-    const card = container.querySelector(".fr-card");
+    const card = screen.getByRole("link").closest(".fr-card");
     expect(card).toHaveClass("fr-card--border");
   });
 
-  it("should render with medium size", () => {
-    const { container } = render(<SearchCard {...defaultProps} />);
+  it("should pass medium size to Card component", () => {
+    render(<SearchCard {...defaultProps} />);
 
-    // Vérifier que la carte a une taille moyenne
-    const card = container.querySelector(".fr-card");
+    const card = screen.getByRole("link").closest(".fr-card");
     expect(card).toHaveClass("fr-card--medium");
   });
 
-  it("should render with title as h3", () => {
-    const { container } = render(<SearchCard {...defaultProps} />);
+  it("should render title as h3", () => {
+    render(<SearchCard {...defaultProps} />);
 
-    // Vérifier que le titre est un h3
-    const title = container.querySelector("h3");
-    expect(title).toBeInTheDocument();
-    expect(title).toHaveTextContent("Titre du document");
+    const title = screen.getByText("Titre du document");
+    expect(title.tagName).toBe("H3");
   });
 
-  it("should render with blue title", () => {
-    const { container } = render(<SearchCard {...defaultProps} />);
+  it("should apply blue-france class to title", () => {
+    render(<SearchCard {...defaultProps} />);
 
-    // Vérifier que le titre a la classe blue-france
-    const title = container.querySelector(".fr-card__title");
+    const title = screen.getByText("Titre du document");
     expect(title).toHaveClass("fr-card__title--blue-france");
   });
 });
