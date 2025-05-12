@@ -4,7 +4,6 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { useEffect, useState } from "react";
 import { push } from "@socialgouv/matomo-next";
 import Button from "@codegouvfr/react-dsfr/Button";
-import Alert from "@codegouvfr/react-dsfr/Alert";
 import Checkbox from "@codegouvfr/react-dsfr/Checkbox";
 import { createModal } from "@codegouvfr/react-dsfr/Modal";
 import { useIsModalOpen } from "@codegouvfr/react-dsfr/Modal/useIsModalOpen";
@@ -224,11 +223,26 @@ export const CookieConsent = () => {
           },
         ]}
       >
-        <Alert
-          severity="info"
-          title="À propos des cookies"
-          description="Les cookies sont des petits fichiers déposés sur votre appareil (ordinateur, smartphone ou tablette) lorsque vous visitez un site web. Ils permettent de collecter des informations sur votre navigation et de vous proposer des services adaptés à votre utilisation."
-        />
+        <div className={fr.cx("fr-alert", "fr-alert--info")}>
+          <div className={fr.cx("fr-alert__title")}>
+            <h2 className={fr.cx("fr-h6")}>À propos des cookies</h2>
+          </div>
+          <p>
+            Les cookies sont des petits fichiers déposés sur votre appareil
+            (ordinateur, smartphone ou tablette) lorsque vous visitez un site
+            web. Ils permettent de collecter des informations sur votre
+            navigation et de vous proposer des services adaptés à votre
+            utilisation.
+          </p>
+        </div>
+
+        <p className={fr.cx("fr-mt-2w")}>
+          Pour plus d&apos;informations, vous pouvez consulter notre{" "}
+          <a href="/politique-confidentialite" className={fr.cx("fr-link")}>
+            politique de confidentialité
+          </a>
+          .
+        </p>
 
         <div className={fr.cx("fr-mt-4w")}>
           <Checkbox

@@ -160,9 +160,11 @@ const ModalHeader = styled.div`
   margin-bottom: 1.5rem;
 `;
 
-const ModalTitle = styled.h2`
+const ModalTitle = styled.h1`
   margin-top: 0;
   margin-bottom: 1rem;
+  font-size: 2.25rem;
+  font-weight: bold;
 `;
 
 const ModalBody = styled.div`
@@ -176,10 +178,11 @@ const InfoBox = styled.div`
   margin-bottom: 1.5rem;
 `;
 
-const InfoTitle = styled.h3`
+const InfoTitle = styled.h2`
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 `;
 
 const CheckboxGroup = styled.div`
@@ -336,6 +339,19 @@ export const CookieConsentLegacy = () => {
                 site web. Ils permettent de collecter des informations sur votre
                 navigation et de vous proposer des services adaptés à votre
                 utilisation.
+              </p>
+              <p>
+                Pour plus d&apos;informations, vous pouvez consulter notre{" "}
+                <a
+                  href="/politique-confidentialite"
+                  style={{
+                    color: theme.colors.primary,
+                    textDecoration: "underline",
+                  }}
+                >
+                  politique de confidentialité
+                </a>
+                .
               </p>
             </InfoBox>
 
