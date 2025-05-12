@@ -179,7 +179,7 @@ export const CookieConsentDSFR = () => {
         <Alert
           severity="info"
           title="À propos des cookies"
-          description="Les cookies sont des fichiers déposés sur votre terminal lors de la visite d'un site. Ils ont pour but de collecter des informations relatives à votre navigation et de vous adresser des services adaptés à votre terminal."
+          description="Les cookies sont des petits fichiers déposés sur votre appareil (ordinateur, smartphone ou tablette) lorsque vous visitez un site web. Ils permettent de collecter des informations sur votre navigation et de vous proposer des services adaptés à votre utilisation."
         />
 
         <div className={fr.cx("fr-mt-4w")}>

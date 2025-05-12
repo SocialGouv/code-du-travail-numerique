@@ -88,10 +88,10 @@ export const PrivacyPolicy = () => {
         </ul>
         <h2 className={fr.cx("fr-h3")}>Cookies</h2>
         <p>
-          Un cookie est un fichier déposé sur votre terminal lors de la visite
-          d’un site. Il a pour but de collecter des informations relatives à
-          votre navigation et de vous adresser des services adaptés à votre
-          terminal (ordinateur, mobile ou tablette).
+          Un cookie est un petit fichier déposé sur votre appareil (ordinateur,
+          smartphone ou tablette) lorsque vous visitez un site web. Il permet de
+          collecter des informations sur votre navigation et de vous proposer
+          des services adaptés à votre utilisation.
         </p>
         <p>
           Nous collectons donc des données par l&apos;intermédiaire de

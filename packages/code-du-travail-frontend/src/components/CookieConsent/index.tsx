@@ -331,10 +331,11 @@ export const CookieConsentLegacy = () => {
             <InfoBox>
               <InfoTitle>À propos des cookies</InfoTitle>
               <p>
-                Les cookies sont des fichiers déposés sur votre terminal lors de
-                la visite d&apos;un site. Ils ont pour but de collecter des
-                informations relatives à votre navigation et de vous adresser
-                des services adaptés à votre terminal.
+                Les cookies sont des petits fichiers déposés sur votre appareil
+                (ordinateur, smartphone ou tablette) lorsque vous visitez un
+                site web. Ils permettent de collecter des informations sur votre
+                navigation et de vous proposer des services adaptés à votre
+                utilisation.
               </p>
             </InfoBox>
 
