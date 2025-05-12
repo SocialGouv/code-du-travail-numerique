@@ -6,7 +6,7 @@ import { push } from "@socialgouv/matomo-next";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import Checkbox from "@codegouvfr/react-dsfr/Checkbox";
-import Modal from "@codegouvfr/react-dsfr/Modal";
+import { createModal } from "@codegouvfr/react-dsfr/Modal";
 import { useIsModalOpen } from "@codegouvfr/react-dsfr/Modal/useIsModalOpen";
 
 // Cookie consent types
@@ -68,10 +68,14 @@ const applyConsent = (consent: ConsentType) => {
 export const CookieConsent = () => {
   const [consent, setConsent] = useState<ConsentType | null>(null);
   const [showBanner, setShowBanner] = useState(false);
-  const isModalOpen = useIsModalOpen({
+
+  // Create the cookie settings modal
+  const cookieSettingsModal = createModal({
     id: "cookie-settings",
     isOpenedByDefault: false,
   });
+
+  const isModalOpen = useIsModalOpen(cookieSettingsModal);
 
   // Initialize consent state from local storage
   useEffect(() => {
@@ -83,6 +87,13 @@ export const CookieConsent = () => {
       setShowBanner(true);
     }
   }, []);
+
+  // Trigger openSettings when modal opens
+  useEffect(() => {
+    if (isModalOpen) {
+      openSettings();
+    }
+  }, [isModalOpen]);
 
   // Handle accepting all cookies
   const handleAcceptAll = () => {
@@ -181,11 +192,9 @@ export const CookieConsent = () => {
                 <Button
                   onClick={() => {
                     setShowBanner(false);
+                    cookieSettingsModal.open();
                   }}
                   priority="tertiary"
-                  id="cookie-settings-button"
-                  aria-controls="cookie-settings"
-                  data-fr-opened={isModalOpen}
                 >
                   Personnaliser
                 </Button>
@@ -196,57 +205,63 @@ export const CookieConsent = () => {
       )}
 
       {/* Cookie Settings Modal */}
-      <Modal.Root id="cookie-settings" onOpen={openSettings}>
-        <Modal.Title>Paramètres des cookies</Modal.Title>
-        <Modal.Content>
-          <Alert
-            severity="info"
-            title="À propos des cookies"
-            description="Les cookies sont des fichiers déposés sur votre terminal lors de la visite d'un site. Ils ont pour but de collecter des informations relatives à votre navigation et de vous adresser des services adaptés à votre terminal."
+      <cookieSettingsModal.Component
+        title="Paramètres des cookies"
+        buttons={[
+          {
+            children: "Enregistrer",
+            onClick: handleSaveSettings,
+          },
+          {
+            children: "Tout accepter",
+            onClick: handleAcceptAll,
+            priority: "secondary",
+          },
+          {
+            children: "Tout refuser",
+            onClick: handleRejectAll,
+            priority: "tertiary",
+          },
+        ]}
+      >
+        <Alert
+          severity="info"
+          title="À propos des cookies"
+          description="Les cookies sont des petits fichiers déposés sur votre appareil (ordinateur, smartphone ou tablette) lorsque vous visitez un site web. Ils permettent de collecter des informations sur votre navigation et de vous proposer des services adaptés à votre utilisation."
+        />
+
+        <div className={fr.cx("fr-mt-4w")}>
+          <Checkbox
+            options={[
+              {
+                label: "Mesure d&apos;audience (Matomo)",
+                hintText:
+                  "Ces cookies nous permettent d&apos;établir des statistiques de fréquentation de notre site et d&apos;améliorer ses performances.",
+                nativeInputProps: {
+                  checked: consent?.matomo || false,
+                  onChange: () => handleConsentChange("matomo"),
+                },
+              },
+            ]}
           />
+        </div>
 
-          <div className={fr.cx("fr-mt-4w")}>
-            <Checkbox
-              options={[
-                {
-                  label: "Mesure d&apos;audience (Matomo)",
-                  hintText:
-                    "Ces cookies nous permettent d&apos;établir des statistiques de fréquentation de notre site et d&apos;améliorer ses performances.",
-                  nativeInputProps: {
-                    checked: consent?.matomo || false,
-                    onChange: () => handleConsentChange("matomo"),
-                  },
+        <div className={fr.cx("fr-mt-2w")}>
+          <Checkbox
+            options={[
+              {
+                label: "Suivi des campagnes publicitaires (SEA)",
+                hintText:
+                  "Ces cookies nous permettent de suivre l&apos;efficacité de nos campagnes publicitaires sur les moteurs de recherche.",
+                nativeInputProps: {
+                  checked: consent?.sea || false,
+                  onChange: () => handleConsentChange("sea"),
                 },
-              ]}
-            />
-          </div>
-
-          <div className={fr.cx("fr-mt-2w")}>
-            <Checkbox
-              options={[
-                {
-                  label: "Suivi des campagnes publicitaires (SEA)",
-                  hintText:
-                    "Ces cookies nous permettent de suivre l&apos;efficacité de nos campagnes publicitaires sur les moteurs de recherche.",
-                  nativeInputProps: {
-                    checked: consent?.sea || false,
-                    onChange: () => handleConsentChange("sea"),
-                  },
-                },
-              ]}
-            />
-          </div>
-        </Modal.Content>
-        <Modal.Footer>
-          <Button onClick={handleSaveSettings}>Enregistrer</Button>
-          <Button onClick={handleAcceptAll} priority="secondary">
-            Tout accepter
-          </Button>
-          <Button onClick={handleRejectAll} priority="tertiary">
-            Tout refuser
-          </Button>
-        </Modal.Footer>
-      </Modal.Root>
+              },
+            ]}
+          />
+        </div>
+      </cookieSettingsModal.Component>
 
       {/* Manage Cookies Button (fixed at the bottom) */}
       {!showBanner && (
@@ -261,9 +276,7 @@ export const CookieConsent = () => {
           <Button
             size="small"
             priority="tertiary"
-            id="cookie-settings-button"
-            aria-controls="cookie-settings"
-            data-fr-opened={isModalOpen}
+            onClick={() => cookieSettingsModal.open()}
             iconId="fr-icon-settings-5-line"
             title="Gérer les cookies"
           >
