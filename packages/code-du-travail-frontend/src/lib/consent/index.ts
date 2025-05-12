@@ -63,12 +63,12 @@ const applyMatomoConsent = (isConsented: boolean): void => {
 
   try {
     if (isConsented) {
-      console.debug("Activation des cookies Matomo.");
+      console.log("Activation des cookies Matomo.");
       window._paq = window._paq || [];
       window._paq.push(["forgetUserOptOut"]);
       window._paq.push(["rememberCookieConsentGiven"]);
     } else {
-      console.debug("Désactivation des cookies Matomo.");
+      console.log("Désactivation des cookies Matomo.");
       window._paq = window._paq || [];
       window._paq.push(["optUserOut"]);
       window._paq.push(["forgetCookieConsentGiven"]);
@@ -78,13 +78,72 @@ const applyMatomoConsent = (isConsented: boolean): void => {
   }
 };
 
+// List of paths where SEA tracking is allowed
+const SEA_ALLOWED_PATHS = [
+  "/",
+  "/contribution/a-quelles-indemnites-peut-pretendre-un-salarie-qui-part-a-la-retraite",
+  "/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire",
+  "/contribution/est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe",
+  "/contribution/faut-il-respecter-un-delai-de-carence-entre-deux-cdd-si-oui-quelle-est-sa-duree",
+  "/contribution/jours-feries-et-ponts-dans-le-secteur-prive",
+  "/contribution/les-conges-pour-evenements-familiaux",
+  "/contribution/quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
+  "/contribution/quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite",
+  "/contribution/quelle-est-la-duree-du-conge-de-maternite",
+  "/contribution/quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement",
+  "/information/acquisition-de-conges-payes-pendant-un-arret-maladie-les-nouvelles-regles",
+  "/information/la-prime-de-partage-de-la-valeur-infographie",
+  "/information/licenciement-pour-inaptitude-medicale",
+  "/information/licenciement-pour-motif-disciplinaire",
+  "/information/licenciement-pour-motif-non-disciplinaire",
+  "/information/metallurgie-lessentiel-de-la-nouvelle-convention-collective",
+  "/information/quelles-sont-les-consequences-dun-abandon-de-poste-sur-le-contrat-de-travail",
+  "/information/rupture-conventionnelle-individuelle-la-procedure-en-details",
+  "/information/suivi-medical-et-accompagnement-de-certains-salaries",
+  "/modeles-de-courriers/attestation-de-travail",
+  "/modeles-de-courriers/contrat-de-travail-a-duree-determinee-cdd",
+  "/modeles-de-courriers/contrat-de-travail-a-duree-indeterminee",
+  "/modeles-de-courriers/convocation-a-un-entretien-prealable-au-licenciement-pour-motif-personnel",
+  "/modeles-de-courriers/demande-de-maintien-de-salaire-en-cas-darret-maladie",
+  "/modeles-de-courriers/lettre-de-demission",
+  "/modeles-de-courriers/promesse-dembauche",
+  "/modeles-de-courriers/recu-pour-solde-de-tout-compte",
+  "/modeles-de-courriers/rupture-de-periode-dessai-par-lemployeur",
+  "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie",
+  "/modeles-de-courriers/rupture-dun-contrat-de-travail-a-duree-determinee-dun-commun-accord",
+  "/modeles-de-courriers/signalement-de-faits-pouvant-relever-du-harcelement-moral-ou-sexuel",
+  "/outils/convention-collective",
+  "/outils/indemnite-licenciement",
+  "/outils/indemnite-precarite",
+  "/outils/indemnite-rupture-conventionnelle",
+  "/outils/preavis-demission",
+  "/outils/simulateur-embauche",
+];
+
+// Check if current path is allowed for SEA tracking
+const isPathAllowedForSEA = (): boolean => {
+  if (typeof window === "undefined") return false;
+
+  const currentPath = window.location.pathname;
+  const isAllowed = SEA_ALLOWED_PATHS.some((path) => currentPath === path);
+
+  console.log(
+    `Current path: ${currentPath}, SEA tracking allowed: ${isAllowed}`
+  );
+
+  return isAllowed;
+};
+
 // Apply SEA consent (Google Tag Manager)
 const applySeaConsent = (isConsented: boolean): void => {
   if (typeof window === "undefined") return;
 
   try {
-    if (isConsented) {
-      console.debug("Activation du tracking SEA.");
+    // Check if current path is allowed for SEA tracking
+    const isAllowed = isPathAllowedForSEA();
+
+    if (isConsented && isAllowed) {
+      console.log("Activation du tracking SEA sur une page autorisée.");
 
       // Load Google Tag Manager script if not already loaded
       if (!document.getElementById("gtm-script")) {
@@ -109,7 +168,11 @@ const applySeaConsent = (isConsented: boolean): void => {
         });
       }
     } else {
-      console.debug("Désactivation du tracking SEA.");
+      if (isConsented && !isAllowed) {
+        console.log("Page non autorisée pour le tracking SEA.");
+      } else {
+        console.log("Désactivation du tracking SEA.");
+      }
 
       // Remove Google Tag Manager script if it exists
       const script = document.getElementById("gtm-script");
@@ -142,10 +205,51 @@ export const initConsent = (): void => {
     const consent = getStoredConsent();
     // Ensure Matomo is always enabled (mandatory)
     const finalConsent = { ...consent, matomo: true };
+
+    console.log("Consent has been given, current consent state:", finalConsent);
+
     applyConsent(finalConsent);
+
+    // Set up listener for route changes in single-page applications
+    setupRouteChangeListener();
   } else {
     // Don't apply any cookies if user hasn't consented yet
-    console.debug("No consent given yet, not loading any cookies");
+    console.log("No consent given yet, not loading any cookies");
+  }
+};
+
+// Set up listener for route changes to reapply consent when navigating between pages
+const setupRouteChangeListener = (): void => {
+  if (typeof window === "undefined") return;
+
+  // Store the current path
+  let currentPath = window.location.pathname;
+
+  // Check for History API support
+  if (window.history && typeof window.history.pushState === "function") {
+    // Create a new observer instance
+    const observer = new MutationObserver(() => {
+      // If the path has changed
+      if (currentPath !== window.location.pathname) {
+        // Update the current path
+        currentPath = window.location.pathname;
+
+        // Reapply consent based on the new path
+        console.log(
+          `Path changed from ${currentPath} to ${window.location.pathname}`
+        );
+
+        const consent = getStoredConsent();
+        const finalConsent = { ...consent, matomo: true };
+
+        console.log("Reapplying consent after path change:", finalConsent);
+
+        applyConsent(finalConsent);
+      }
+    });
+
+    // Start observing the document with the configured parameters
+    observer.observe(document, { subtree: true, childList: true });
   }
 };
 

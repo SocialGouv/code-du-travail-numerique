@@ -34,9 +34,11 @@ export const CookieConsentDSFR = () => {
     // Show banner if no consent has been given yet
     const hasConsented = localStorage.getItem("cdtn-cookie-consent-given");
     if (!hasConsented) {
+      console.log("No previous consent found, showing banner");
       setShowBanner(true);
       // Don't initialize cookies until user has consented
     } else {
+      console.log("Previous consent found, initializing consent");
       // User has already made a choice, initialize consent
       initConsent();
     }
@@ -45,20 +47,30 @@ export const CookieConsentDSFR = () => {
   // Handle accepting all cookies
   const handleAcceptAll = () => {
     const newConsent = { matomo: true, sea: true };
+    console.log("User accepted all cookies:", newConsent);
     setConsent(newConsent);
     saveConsent(newConsent);
     setShowBanner(false);
     localStorage.setItem("cdtn-cookie-consent-given", "true");
+
+    // Initialize consent after user has made a choice
+    console.log("Initializing consent after user acceptance");
+    initConsent();
   };
 
   // Handle rejecting all cookies
   const handleRejectAll = () => {
     // Matomo is mandatory, so it's always true
     const newConsent = { matomo: true, sea: false };
+    console.log("User rejected optional cookies:", newConsent);
     setConsent(newConsent);
     saveConsent(newConsent);
     setShowBanner(false);
     localStorage.setItem("cdtn-cookie-consent-given", "true");
+
+    // Initialize consent after user has made a choice
+    console.log("Initializing consent after user rejection");
+    initConsent();
   };
 
   // Handle saving custom settings
@@ -105,11 +117,11 @@ export const CookieConsentDSFR = () => {
                 <strong>Ce site utilise des cookies</strong>
               </p>
               <p className={fr.cx("fr-mb-1w")}>
-                Nous utilisons des cookies pour mesurer l&apos;audience (Matomo)
-                et pour le suivi des campagnes publicitaires (SEA). Les cookies
-                de mesure d&apos;audience sont nécessaires au bon fonctionnement
-                du site. Vous pouvez choisir d&apos;accepter ou de refuser les
-                cookies de suivi des campagnes publicitaires.
+                Nous utilisons des cookies pour mesurer l&apos;audience et pour
+                le suivi des campagnes publicitaires. Les cookies de mesure
+                d&apos;audience sont nécessaires au bon fonctionnement du site.
+                Vous pouvez choisir d&apos;accepter ou de refuser les cookies de
+                suivi des campagnes publicitaires.
               </p>
             </div>
             <div
@@ -174,9 +186,9 @@ export const CookieConsentDSFR = () => {
           <Checkbox
             options={[
               {
-                label: "Mesure d&apos;audience (Matomo) - Obligatoire",
+                label: "Mesure d'audience - Obligatoire",
                 hintText:
-                  "Ces cookies nous permettent d&apos;établir des statistiques de fréquentation de notre site et d&apos;améliorer ses performances.",
+                  "Ces cookies nous permettent d'établir des statistiques de fréquentation de notre site et d'améliorer ses performances.",
                 nativeInputProps: {
                   checked: true,
                   disabled: true,
@@ -191,9 +203,9 @@ export const CookieConsentDSFR = () => {
           <Checkbox
             options={[
               {
-                label: "Suivi des campagnes publicitaires (SEA)",
+                label: "Suivi des campagnes publicitaires",
                 hintText:
-                  "Ces cookies nous permettent de suivre l&apos;efficacité de nos campagnes publicitaires sur les moteurs de recherche.",
+                  "Ces cookies nous permettent de suivre l'efficacité de nos campagnes publicitaires sur les moteurs de recherche.",
                 nativeInputProps: {
                   checked: consent.sea,
                   onChange: () => handleConsentChange("sea"),

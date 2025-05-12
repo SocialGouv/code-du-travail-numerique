@@ -228,9 +228,11 @@ export const CookieConsentLegacy = () => {
     // Show banner if no consent has been given yet
     const hasConsented = localStorage.getItem("cdtn-cookie-consent-given");
     if (!hasConsented) {
+      console.log("No previous consent found, showing banner (legacy)");
       setShowBanner(true);
       // Don't initialize cookies until user has consented
     } else {
+      console.log("Previous consent found, initializing consent (legacy)");
       // User has already made a choice, initialize consent
       initConsent();
     }
@@ -239,30 +241,45 @@ export const CookieConsentLegacy = () => {
   // Handle accepting all cookies
   const handleAcceptAll = () => {
     const newConsent = { matomo: true, sea: true };
+    console.log("User accepted all cookies (legacy):", newConsent);
     setConsent(newConsent);
     saveConsent(newConsent);
     setShowBanner(false);
     setIsModalOpen(false);
     localStorage.setItem("cdtn-cookie-consent-given", "true");
+
+    // Initialize consent after user has made a choice
+    console.log("Initializing consent after user acceptance (legacy)");
+    initConsent();
   };
 
   // Handle rejecting all cookies
   const handleRejectAll = () => {
     // Matomo is mandatory, so it's always true
     const newConsent = { matomo: true, sea: false };
+    console.log("User rejected optional cookies (legacy):", newConsent);
     setConsent(newConsent);
     saveConsent(newConsent);
     setShowBanner(false);
     setIsModalOpen(false);
     localStorage.setItem("cdtn-cookie-consent-given", "true");
+
+    // Initialize consent after user has made a choice
+    console.log("Initializing consent after user rejection (legacy)");
+    initConsent();
   };
 
   // Handle saving custom settings
   const handleSaveSettings = () => {
+    console.log("User saved custom settings (legacy):", consent);
     saveConsent(consent);
     setShowBanner(false);
     setIsModalOpen(false);
     localStorage.setItem("cdtn-cookie-consent-given", "true");
+
+    // Initialize consent after user has made a choice
+    console.log("Initializing consent after user saved settings (legacy)");
+    initConsent();
   };
 
   // Handle checkbox changes
@@ -282,11 +299,11 @@ export const CookieConsentLegacy = () => {
             <BannerText>
               <Title>Ce site utilise des cookies</Title>
               <Description>
-                Nous utilisons des cookies pour mesurer l&apos;audience (Matomo)
-                et pour le suivi des campagnes publicitaires (SEA). Les cookies
-                de mesure d&apos;audience sont nécessaires au bon fonctionnement
-                du site. Vous pouvez choisir d&apos;accepter ou de refuser les
-                cookies de suivi des campagnes publicitaires.
+                Nous utilisons des cookies pour mesurer l&apos;audience et pour
+                le suivi des campagnes publicitaires. Les cookies de mesure
+                d&apos;audience sont nécessaires au bon fonctionnement du site.
+                Vous pouvez choisir d&apos;accepter ou de refuser les cookies de
+                suivi des campagnes publicitaires.
               </Description>
             </BannerText>
             <ButtonGroup>
@@ -331,7 +348,7 @@ export const CookieConsentLegacy = () => {
                 />
                 <CheckboxText>
                   <CheckboxTitle>
-                    Mesure d&apos;audience (Matomo) - Obligatoire
+                    Mesure d&apos;audience - Obligatoire
                   </CheckboxTitle>
                   <CheckboxDescription>
                     Ces cookies nous permettent d&apos;établir des statistiques
@@ -351,7 +368,7 @@ export const CookieConsentLegacy = () => {
                 />
                 <CheckboxText>
                   <CheckboxTitle>
-                    Suivi des campagnes publicitaires (SEA)
+                    Suivi des campagnes publicitaires
                   </CheckboxTitle>
                   <CheckboxDescription>
                     Ces cookies nous permettent de suivre l&apos;efficacité de

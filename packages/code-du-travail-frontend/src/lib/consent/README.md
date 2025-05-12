@@ -5,6 +5,7 @@ This module provides a comprehensive consent management system for tracking tool
 ## Features
 
 - Manages consent for tracking tools (Matomo is mandatory, Google Tag Manager for SEA is optional)
+- Restricts SEA tracking to specific pages only
 - Persists consent settings in localStorage
 - Provides components for both legacy and DSFR parts of the application
 - Ensures no cookies are loaded until explicit user consent is given
@@ -138,7 +139,9 @@ saveConsent({ matomo: false, sea: false }); // matomo will still be true
 
 ## SEA Campaign Tracking
 
-When the user consents to SEA tracking, the following Google Tag Manager script is loaded:
+SEA tracking is only enabled on specific pages (homepage, key contribution pages, information pages, tools, etc.) even when the user has consented. This ensures that tracking is limited to the most relevant pages for campaign measurement.
+
+When the user consents to SEA tracking and is on an allowed page, the following Google Tag Manager script is loaded:
 
 ```html
 <!-- Google tag (gtag.js) -->
