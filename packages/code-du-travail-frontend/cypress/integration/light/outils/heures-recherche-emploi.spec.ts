@@ -1,12 +1,10 @@
 describe("Outil - Heures d'absence pour rechercher un emploi", () => {
   it("Parcours avec convention collective non traité", () => {
     cy.visit("/outils/heures-recherche-emploi");
-    cy.get("h1")
-      .first()
-      .should(
-        "have.text",
-        "Calculer le nombre d'heures d'absence pour rechercher un emploi"
-      );
+    cy.get("h1").should(
+      "have.text",
+      "Calculer le nombre d'heures d'absence pour rechercher un emploi"
+    );
     cy.contains("Commencer").click();
 
     cy.get("#agreement").check();
@@ -22,12 +20,10 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
 
   it("Parcours en connaissant sa convention collective et sans information complémentaire", () => {
     cy.visit("/outils/heures-recherche-emploi");
-    cy.get("h1")
-      .first()
-      .should(
-        "have.text",
-        "Calculer le nombre d'heures d'absence pour rechercher un emploi"
-      );
+    cy.get("h1").should(
+      "have.text",
+      "Calculer le nombre d'heures d'absence pour rechercher un emploi"
+    );
     cy.contains("Commencer").click();
 
     cy.get("#agreement").check();
@@ -65,12 +61,10 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
 
   it("Parcours en connaissant sa convention collective et avec informations complémentaires", () => {
     cy.visit("/outils/heures-recherche-emploi");
-    cy.get("h1")
-      .first()
-      .should(
-        "have.text",
-        "Calculer le nombre d'heures d'absence pour rechercher un emploi"
-      );
+    cy.get("h1").should(
+      "have.text",
+      "Calculer le nombre d'heures d'absence pour rechercher un emploi"
+    );
     cy.contains("Commencer").click();
 
     cy.get("#agreement").check();
