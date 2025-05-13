@@ -10,6 +10,12 @@ import Card from "@codegouvfr/react-dsfr/Card";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { useThemeTracking } from "./tracking";
 import { summarize } from "../utils";
+import { DocumentRef } from "@socialgouv/cdtn-types";
+
+type ExternalRef = DocumentRef & {
+  source: "external";
+  url: string;
+};
 
 type Props = {
   theme: Pick<
@@ -81,9 +87,18 @@ export const ThemeModel = ({ theme }: Props) => {
                 desc={summarize(refs.description)}
                 horizontal
                 linkProps={{
-                  href: `/${getRouteBySource(refs.source)}/${refs.slug}`,
+                  href:
+                    refs.source === "external"
+                      ? (refs as unknown as ExternalRef).url
+                      : `/${getRouteBySource(refs.source)}/${refs.slug}`,
                   onClick: () =>
-                    emitDocumentClickButtonEvent(refs.source, refs.slug),
+                    refs.source === "external"
+                      ? emitDocumentClickButtonEvent(
+                          refs.source,
+                          refs.slug,
+                          (refs as unknown as ExternalRef).url
+                        )
+                      : emitDocumentClickButtonEvent(refs.source, refs.slug),
                 }}
                 size="medium"
                 title={refs.title}
