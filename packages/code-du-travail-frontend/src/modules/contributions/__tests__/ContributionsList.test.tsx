@@ -1,4 +1,4 @@
-import { getAllByRole, getByLabelText, render } from "@testing-library/react";
+import { render, getAllByRole as getByRole } from "@testing-library/react";
 import { ContributionsList } from "../ContributionsList";
 import userEvent from "@testing-library/user-event";
 
@@ -34,7 +34,7 @@ describe("<ContributionsList />", () => {
     );
     const selectThemes = getByLabelText("Sélectionnez un thème");
     expect(selectThemes).toBeInTheDocument();
-    const themeOptions = getAllByRole(selectThemes, "option");
+    const themeOptions = getByRole(selectThemes, "option");
     expect(themeOptions).toHaveLength(3);
     expect(themeOptions[0]).toHaveTextContent("Tous les thèmes");
     expect(themeOptions[1]).toHaveTextContent("Thème A");

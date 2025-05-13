@@ -110,5 +110,5 @@ const li = css({
 });
 
 const list = css({
-  maxWidth: 500,
+  maxWidth: "500px",
 });

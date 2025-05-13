@@ -59,7 +59,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
         Obtenez une réponse personnalisée selon votre convention collective
       </p>
       <div
-        class="fr-select-group fr-mt-6w max-w_500"
+        class="fr-select-group fr-mt-6w max-w_500px"
         id="fr-select-group-:r2:"
       >
         <label
