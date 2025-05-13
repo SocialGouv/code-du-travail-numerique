@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
+<div>
+  <div
+    class="fr-grid-row"
+  >
+    <nav
+      aria-label="vous êtes ici :"
+      class="fr-breadcrumb fr-mb-2v"
+      id="fr-breadcrumb-:r0:"
+      role="navigation"
+    >
+      <button
+        aria-controls="breadcrumb-:r1:"
+        aria-expanded="false"
+        class="fr-breadcrumb__button"
+      >
+        Voir le fil d’Ariane
+      </button>
+      <div
+        class="fr-collapse"
+        id="breadcrumb-:r1:"
+      >
+        <ol
+          class="fr-breadcrumb__list"
+        >
+          <li>
+            <a
+              class="fr-breadcrumb__link"
+              href="/"
+            >
+              Accueil
+            </a>
+          </li>
+          <li>
+            <a
+              aria-current="page"
+              class="fr-breadcrumb__link"
+            >
+              Vos fiches pratiques
+            </a>
+          </li>
+        </ol>
+      </div>
+    </nav>
+    <div
+      class="fr-col-12 fr-mb-4w fr-mb-md-12w"
+    >
+      <h1
+        class="fr-mt-0 fr-mb-6w"
+        id="contributions"
+      >
+        Vos fiches pratiques
+      </h1>
+      <p
+        class="fr-text--md"
+      >
+        Obtenez une réponse personnalisée selon votre convention collective
+      </p>
+      <div
+        class="fr-select-group fr-mt-6w max-w_500"
+        id="fr-select-group-:r2:"
+      >
+        <label
+          class="fr-label"
+          for="select-:r3:"
+        >
+          Sélectionnez un thème
+        </label>
+        <select
+          aria-describedby="select-:r4:-desc"
+          class="fr-select"
+          id="select-:r3:"
+        >
+          <option
+            value=""
+          >
+            Tous les thèmes
+          </option>
+          <option
+            value="Thème A"
+          >
+            Thème A
+          </option>
+          <option
+            value="Thème B"
+          >
+            Thème B
+          </option>
+        </select>
+        <div
+          aria-live="polite"
+          class="fr-messages-group"
+          id="select-:r3:-messages-group"
+        />
+      </div>
+      <h2
+        class="fr-mt-6w fr-h3"
+      >
+        Thème A
+      </h2>
+      <ul
+        class="fr-grid-row fr-grid-row--gutters fr-grid-row--left"
+      >
+        <li
+          class="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-6 li-s_none!"
+        >
+          <div
+            class="fr-card fr-enlarge-link fr-card--horizontal"
+            id="fr-card-:r5:"
+          >
+            <div
+              class="fr-card__body"
+            >
+              <div
+                class="fr-card__content"
+              >
+                <h3
+                  class="fr-card__title"
+                >
+                  <a
+                    class=""
+                    href="/contribution/contribution-aa"
+                  >
+                    Contribution AA
+                  </a>
+                </h3>
+                <p
+                  class="fr-card__desc"
+                >
+                  Description contribution AA
+                </p>
+                <div
+                  class="fr-card__start fr-hidden"
+                />
+                <div
+                  class="fr-card__end"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-6 li-s_none!"
+        >
+          <div
+            class="fr-card fr-enlarge-link fr-card--horizontal"
+            id="fr-card-:r6:"
+          >
+            <div
+              class="fr-card__body"
+            >
+              <div
+                class="fr-card__content"
+              >
+                <h3
+                  class="fr-card__title"
+                >
+                  <a
+                    class=""
+                    href="/contribution/contribution-ab"
+                  >
+                    Contribution AB
+                  </a>
+                </h3>
+                <p
+                  class="fr-card__desc"
+                >
+                  Description contribution AB
+                </p>
+                <div
+                  class="fr-card__start fr-hidden"
+                />
+                <div
+                  class="fr-card__end"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <h2
+        class="fr-mt-6w fr-h3"
+      >
+        Thème B
+      </h2>
+      <ul
+        class="fr-grid-row fr-grid-row--gutters fr-grid-row--left"
+      >
+        <li
+          class="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-6 li-s_none!"
+        >
+          <div
+            class="fr-card fr-enlarge-link fr-card--horizontal"
+            id="fr-card-:r7:"
+          >
+            <div
+              class="fr-card__body"
+            >
+              <div
+                class="fr-card__content"
+              >
+                <h3
+                  class="fr-card__title"
+                >
+                  <a
+                    class=""
+                    href="/contribution/contribution-ba"
+                  >
+                    Contribution BA
+                  </a>
+                </h3>
+                <p
+                  class="fr-card__desc"
+                >
+                  Description contribution BA
+                </p>
+                <div
+                  class="fr-card__start fr-hidden"
+                />
+                <div
+                  class="fr-card__end"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
