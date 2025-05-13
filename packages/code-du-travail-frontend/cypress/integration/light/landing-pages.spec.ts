@@ -3,10 +3,12 @@ describe("Landing pages", () => {
     cy.visit(
       "/convention-collective/1686-commerces-et-services-de-laudiovisuel-de-lelectronique-et-de-lequipemen"
     );
-    cy.get("h1").should(
-      "have.text",
-      "Commerces et services de l'audiovisuel, de l'électronique et de l'équipement ménager"
-    );
+    cy.get("h1")
+      .first()
+      .should(
+        "have.text",
+        "Commerces et services de l'audiovisuel, de l'électronique et de l'équipement ménager"
+      );
     cy.get("body").should(
       "contain",
       "Retrouvez l'intégralité de la convention collective sur Légifrance"

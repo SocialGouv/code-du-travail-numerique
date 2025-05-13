@@ -2,10 +2,9 @@ describe("Outil - Préavis de retraite", () => {
   it("Parcours sans convention collective avec validation des erreurs", () => {
     cy.visit("/outils/preavis-retraite");
     // Intro
-    cy.get("h1").should(
-      "have.text",
-      "Calculer le préavis de départ à la retraite"
-    );
+    cy.get("h1")
+      .first()
+      .should("have.text", "Calculer le préavis de départ à la retraite");
     cy.contains("Commencer").click();
 
     // Origine du départ à la retraite

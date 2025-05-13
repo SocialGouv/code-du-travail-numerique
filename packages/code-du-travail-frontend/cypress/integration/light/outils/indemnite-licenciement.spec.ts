@@ -3,7 +3,9 @@ import { formatToEuro } from "../../../support/utils";
 describe("Outil - Indemnité de licenciement", () => {
   it("Calcul de l'indemnité de licenciement", () => {
     cy.visit("/outils/indemnite-licenciement");
-    cy.get("h1").should("have.text", "Calculer l'indemnité de licenciement");
+    cy.get("h1")
+      .first()
+      .should("have.text", "Calculer l'indemnité de licenciement");
     cy.contains("Commencer").click();
 
     cy.contains("Contrat à durée indéterminée (CDI)").click();

@@ -23,6 +23,7 @@ describe("Pages integration", () => {
 
     cy.get("@iframe")
       .find("label", { timeout: 10000 })
+      .first()
       .should(
         "have.text",
         "Trouvez les réponses à vos questions en droit du travail"

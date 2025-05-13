@@ -8,7 +8,7 @@ describe("Contributions", () => {
       .contains("Vos fiches pratiques")
       .click();
     cy.urlEqual("/contribution");
-    cy.get("h1").should("have.text", "Vos fiches pratiques");
+    cy.get("h1").first().should("have.text", "Vos fiches pratiques");
     cy.get("body").should(
       "contain",
       "Obtenez une réponses personnalisée selon votre convention collective"
@@ -18,15 +18,14 @@ describe("Contributions", () => {
       .first()
       .should("contain", "Embauche et contrat de travail");
     cy.get("#content li").should("have.length.at.least", 1);
-    cy.get("#content li").first().click();
+    cy.contains("La période d’essai peut-elle être renouvelée ?").click();
     cy.urlEqual("/contribution/la-periode-dessai-peut-elle-etre-renouvelee");
   });
   it("je vois une page contribution", () => {
     cy.visit("/contribution/la-periode-dessai-peut-elle-etre-renouvelee");
-    cy.get("h1").should(
-      "have.text",
-      "La période d’essai peut-elle être renouvelée ?"
-    );
+    cy.get("h1")
+      .first()
+      .should("have.text", "La période d’essai peut-elle être renouvelée ?");
 
     cy.contains(
       "Afficher les informations sans sélectionner une convention collective"
@@ -42,10 +41,12 @@ describe("Contributions", () => {
 
   it("je vois une page contribution pour une CC", () => {
     cy.visit("/contribution/675-la-periode-dessai-peut-elle-etre-renouvelee");
-    cy.get("h1").should(
-      "have.text",
-      "La période d’essai peut-elle être renouvelée ? Maisons à succursales de vente au détail d'habillement"
-    );
+    cy.get("h1")
+      .first()
+      .should(
+        "have.text",
+        "La période d’essai peut-elle être renouvelée ? Maisons à succursales de vente au détail d'habillement"
+      );
     cy.get("h2").should(
       "contain",
       "Maisons à succursales de vente au détail d'habillement (IDCC 0675)"
@@ -74,10 +75,12 @@ describe("Contributions", () => {
     cy.visit(
       "/contribution/3248-combien-de-fois-le-contrat-de-travail-peut-il-etre-renouvele#cdd"
     );
-    cy.get("h1").should(
-      "have.text",
-      "Combien de fois le contrat de travail peut-il être renouvelé ? Métallurgie"
-    );
+    cy.get("h1")
+      .first()
+      .should(
+        "have.text",
+        "Combien de fois le contrat de travail peut-il être renouvelé ? Métallurgie"
+      );
     cy.get('[aria-expanded="true"]').should("contain", "CDD");
   });
 });

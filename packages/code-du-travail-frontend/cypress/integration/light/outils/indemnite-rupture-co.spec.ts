@@ -3,10 +3,9 @@ import { formatToEuro } from "../../../support/utils";
 describe("Outil - Indemnité de rupture conventionnelle", () => {
   it("Calcul de l'indemnité de rupture conventionnelle", () => {
     cy.visit("/outils/indemnite-rupture-conventionnelle");
-    cy.get("h1").should(
-      "have.text",
-      "Calculer l'indemnité de rupture conventionnelle"
-    );
+    cy.get("h1")
+      .first()
+      .should("have.text", "Calculer l'indemnité de rupture conventionnelle");
     cy.contains("Commencer").click();
 
     cy.contains("Contrat à durée indéterminée (CDI)").click();

@@ -1,7 +1,9 @@
 describe("Outil - Dossier Licenciement", () => {
   it("Parcours Licenciement pour motif non disciplinaire", () => {
     cy.visit("/outils/procedure-licenciement");
-    cy.get("h1").should("have.text", "Comprendre sa procédure de licenciement");
+    cy.get("h1")
+      .first()
+      .should("have.text", "Comprendre sa procédure de licenciement");
 
     cy.contains("Quelle est votre situation ?");
     cy.contains("Salarié");

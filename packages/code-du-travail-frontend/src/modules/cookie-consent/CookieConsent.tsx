@@ -2,6 +2,7 @@
 
 import { fr } from "@codegouvfr/react-dsfr";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Checkbox from "@codegouvfr/react-dsfr/Checkbox";
 import { createModal } from "@codegouvfr/react-dsfr/Modal";
@@ -24,6 +25,10 @@ export const CookieConsentDSFR = () => {
   const [consent, setConsent] = useState<ConsentType>(DEFAULT_CONSENT);
   const [showBanner, setShowBanner] = useState(false);
   const isModalOpen = useIsModalOpen(cookieSettingsModal);
+  const pathname = usePathname();
+
+  // Don't show cookie consent on widget pages
+  const isWidgetPage = pathname?.startsWith("/widgets");
 
   // Initialize consent state from local storage
   useEffect(() => {
@@ -91,7 +96,7 @@ export const CookieConsentDSFR = () => {
   return (
     <>
       {/* Cookie Consent Banner */}
-      {showBanner && (
+      {!isWidgetPage && showBanner && (
         <div
           className={fr.cx(
             "fr-container",
@@ -231,7 +236,7 @@ export const CookieConsentDSFR = () => {
       </cookieSettingsModal.Component>
 
       {/* Manage Cookies Button (fixed at the bottom) */}
-      {!showBanner && (
+      {!isWidgetPage && !showBanner && (
         <div
           style={{
             position: "fixed",

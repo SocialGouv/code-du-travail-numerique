@@ -1,7 +1,9 @@
 describe("Outil - Préavis de démission", () => {
   it("Parcours avec convention collective non traité", () => {
     cy.visit("/outils/preavis-demission");
-    cy.get("h1").should("have.text", "Calculer le préavis de démission");
+    cy.get("h1")
+      .first()
+      .should("have.text", "Calculer le préavis de démission");
     cy.contains("Commencer").click();
 
     cy.get("#agreement").check();
@@ -18,7 +20,9 @@ describe("Outil - Préavis de démission", () => {
 
   it("Parcours en connaissant sa convention collective", () => {
     cy.visit("/outils/preavis-demission");
-    cy.get("h1").should("have.text", "Calculer le préavis de démission");
+    cy.get("h1")
+      .first()
+      .should("have.text", "Calculer le préavis de démission");
     cy.contains("Commencer").click();
 
     cy.get("#agreement").check();

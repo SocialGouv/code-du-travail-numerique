@@ -1,7 +1,9 @@
 describe("Outil - Indemnité de Precarite", () => {
   it("Calcul de l'ndemnité de precarite", () => {
     cy.visit("/outils/indemnite-precarite");
-    cy.get("h1").should("have.text", "Calculer l'indemnité de précarité");
+    cy.get("h1")
+      .first()
+      .should("have.text", "Calculer l'indemnité de précarité");
     cy.contains("Commencer").click();
 
     cy.contains(

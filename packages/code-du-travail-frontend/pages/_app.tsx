@@ -72,7 +72,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <GlobalStyles />
         <A11y />
         <Component {...pageProps} />
-        <CookieConsentLegacy />
+        {!router.pathname.startsWith("/widgets") && <CookieConsentLegacy />}
       </ThemeProvider>
     </React.StrictMode>
   );
