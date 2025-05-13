@@ -194,7 +194,10 @@ export const CookieConsentDSFR = () => {
         </div>
 
         <p className={fr.cx("fr-mt-2w")}>
-          Pour plus d&apos;informations, vous pouvez consulter notre{" "}
+          Les cookies de mesure d&apos;audience sont nécessaires au bon
+          fonctionnement du site. Vous pouvez choisir d&apos;accepter ou de
+          refuser les cookies de suivi des campagnes publicitaires. Pour plus
+          d&apos;informations, vous pouvez consulter notre{" "}
           <a href="/politique-confidentialite" className={fr.cx("fr-link")}>
             politique de confidentialité
           </a>

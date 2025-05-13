@@ -16,7 +16,7 @@ const CookieBanner = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: ${theme.colors.bgSecondary};
+  background-color: ${theme.colors.bgSecondary || "#f5f5fe"};
   padding: 1.5rem;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -70,12 +70,12 @@ const Button = styled.button<{ primary?: boolean; secondary?: boolean }>`
   ${({ primary }) =>
     primary &&
     `
-    background-color: ${theme.colors.primary};
+    background-color: ${theme.colors.primary || "#000091"};
     color: white;
-    border: 1px solid ${theme.colors.primary};
+    border: 1px solid ${theme.colors.primary || "#000091"};
     
     &:hover {
-      background-color: ${theme.colors.primaryDark};
+      background-color: ${theme.colors.primaryDark || "#00006D"};
     }
   `}
 
@@ -83,11 +83,11 @@ const Button = styled.button<{ primary?: boolean; secondary?: boolean }>`
     secondary &&
     `
     background-color: transparent;
-    color: ${theme.colors.primary};
-    border: 1px solid ${theme.colors.primary};
+    color: ${theme.colors.primary || "#000091"};
+    border: 1px solid ${theme.colors.primary || "#000091"};
     
     &:hover {
-      background-color: ${theme.colors.bgSecondary};
+      background-color: ${theme.colors.bgSecondary || "#f5f5fe"};
     }
   `}
 `;
@@ -96,9 +96,9 @@ const SettingsButton = styled.button`
   position: fixed;
   bottom: 1rem;
   right: 1rem;
-  background-color: ${theme.colors.bgSecondary};
-  color: ${theme.colors.primary};
-  border: 1px solid ${theme.colors.primary};
+  background-color: ${theme.colors.bgSecondary || "#f5f5fe"};
+  color: ${theme.colors.primary || "#000091"};
+  border: 1px solid ${theme.colors.primary || "#000091"};
   border-radius: 4px;
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
@@ -109,7 +109,7 @@ const SettingsButton = styled.button`
   gap: 0.5rem;
 
   &:hover {
-    background-color: ${theme.colors.bgTertiary};
+    background-color: ${theme.colors.bgTertiary || "#eeeef9"};
   }
 `;
 
@@ -126,7 +126,7 @@ const Modal = styled.div<{ isOpen: boolean }>`
 
 const ModalContent = styled.div`
   position: relative;
-  background-color: white;
+  background-color: #ffffff;
   margin: 10% auto;
   padding: 2rem;
   border-radius: 4px;
@@ -143,7 +143,7 @@ const CloseButton = styled.button`
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: ${theme.colors.textSecondary};
+  color: ${theme.colors.textSecondary || "#666666"};
   width: 2rem;
   height: 2rem;
   display: flex;
@@ -152,7 +152,7 @@ const CloseButton = styled.button`
   padding: 0;
 
   &:hover {
-    color: ${theme.colors.primary};
+    color: ${theme.colors.primary || "#000091"};
   }
 `;
 
@@ -172,7 +172,7 @@ const ModalBody = styled.div`
 `;
 
 const InfoBox = styled.div`
-  background-color: ${theme.colors.bgSecondary};
+  background-color: ${theme.colors.bgSecondary || "#f5f5fe"};
   padding: 1rem;
   border-radius: 4px;
   margin-bottom: 1.5rem;
@@ -201,15 +201,19 @@ const Checkbox = styled.input`
   margin-top: 0.25rem;
 `;
 
-const CheckboxText = styled.div``;
+const CheckboxText = styled.span`
+  display: block;
+`;
 
-const CheckboxTitle = styled.div`
+const CheckboxTitle = styled.span`
+  display: block;
   font-weight: 500;
 `;
 
-const CheckboxDescription = styled.div`
+const CheckboxDescription = styled.span`
+  display: block;
   font-size: 0.875rem;
-  color: ${theme.colors.textSecondary};
+  color: ${theme.colors.textSecondary || "#666666"};
 `;
 
 const ModalFooter = styled.div`
@@ -341,6 +345,9 @@ export const CookieConsentLegacy = () => {
                 utilisation.
               </p>
               <p>
+                Les cookies de mesure d&apos;audience sont nécessaires au bon
+                fonctionnement du site. Vous pouvez choisir d&apos;accepter ou
+                de refuser les cookies de suivi des campagnes publicitaires.
                 Pour plus d&apos;informations, vous pouvez consulter notre{" "}
                 <a
                   href="/politique-confidentialite"
