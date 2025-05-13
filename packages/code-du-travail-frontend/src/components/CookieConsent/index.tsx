@@ -168,20 +168,6 @@ const ModalBody = styled.div`
   margin-bottom: 1.5rem;
 `;
 
-const InfoBox = styled.div`
-  background-color: ${theme.colors.bgSecondary || "#f5f5fe"};
-  padding: 1rem;
-  border-radius: 4px;
-  margin-bottom: 1.5rem;
-`;
-
-const InfoTitle = styled.div`
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-`;
-
 const CheckboxGroup = styled.fieldset`
   margin-bottom: 1rem;
   border: none;
@@ -189,19 +175,12 @@ const CheckboxGroup = styled.fieldset`
 `;
 
 const CheckboxLegend = styled.legend`
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 `;
 
 const ToggleContainer = styled.div`
   margin-bottom: 1rem;
-`;
-
-const ToggleLabel = styled.label`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0.5rem;
-  cursor: pointer;
 `;
 
 const ToggleTitle = styled.span`
@@ -399,32 +378,22 @@ export const CookieConsentLegacy = () => {
             <ModalTitle>Paramètres des cookies</ModalTitle>
           </ModalHeader>
           <ModalBody>
-            <InfoBox>
-              <InfoTitle>À propos des cookies</InfoTitle>
-              <p>
-                Les cookies sont des petits fichiers déposés sur votre appareil
-                (ordinateur, smartphone ou tablette) lorsque vous visitez un
-                site web. Ils permettent de collecter des informations sur votre
-                navigation et de vous proposer des services adaptés à votre
-                utilisation.
-              </p>
-              <p>
-                Les cookies de mesure d&apos;audience sont nécessaires au bon
-                fonctionnement du site. Vous pouvez choisir d&apos;accepter ou
-                de refuser les cookies de suivi des campagnes publicitaires.
-                Pour plus d&apos;informations, vous pouvez consulter notre{" "}
-                <a
-                  href="/politique-confidentialite"
-                  style={{
-                    color: theme.colors.primary,
-                    textDecoration: "underline",
-                  }}
-                >
-                  politique de confidentialité
-                </a>
-                .
-              </p>
-            </InfoBox>
+            <p>
+              Les cookies de mesure d&apos;audience sont nécessaires au bon
+              fonctionnement du site. Vous pouvez choisir d&apos;accepter ou de
+              refuser les cookies de suivi des campagnes publicitaires. Pour
+              plus d&apos;informations, vous pouvez consulter notre{" "}
+              <a
+                href="/politique-confidentialite"
+                style={{
+                  color: theme.colors.primary,
+                  textDecoration: "underline",
+                }}
+              >
+                politique de confidentialité
+              </a>
+              .
+            </p>
 
             <CheckboxGroup>
               <CheckboxLegend>Cookies de mesure d&apos;audience</CheckboxLegend>

@@ -223,19 +223,6 @@ export const CookieConsent = () => {
           },
         ]}
       >
-        <div className={fr.cx("fr-alert", "fr-alert--info")}>
-          <div className={fr.cx("fr-alert__title")}>
-            <h2 className={fr.cx("fr-h6")}>À propos des cookies</h2>
-          </div>
-          <p>
-            Les cookies sont des petits fichiers déposés sur votre appareil
-            (ordinateur, smartphone ou tablette) lorsque vous visitez un site
-            web. Ils permettent de collecter des informations sur votre
-            navigation et de vous proposer des services adaptés à votre
-            utilisation.
-          </p>
-        </div>
-
         <p className={fr.cx("fr-mt-2w")}>
           Les cookies de mesure d&apos;audience sont nécessaires au bon
           fonctionnement du site. Vous pouvez choisir d&apos;accepter ou de
