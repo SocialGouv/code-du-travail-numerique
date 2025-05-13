@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
+import * as Sentry from "@sentry/nextjs";
 import { Autocomplete } from "../common/Autocomplete";
 import { fetchSuggestResults } from "../layout/header/fetchSuggestResults";
 import { SUGGEST_MAX_RESULTS } from "../../config";
@@ -13,7 +14,6 @@ type SearchBarProps = {
 export const SearchBar: React.FC<SearchBarProps> = ({ initialValue = "" }) => {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
-
   const [query, setQuery] = useState(initialValue);
 
   const handleSearch = (searchTerm: string) => {
@@ -29,8 +29,21 @@ export const SearchBar: React.FC<SearchBarProps> = ({ initialValue = "" }) => {
     handleSearch(query);
   };
 
-  const submitForm = () => {
-    handleSubmit();
+  const search = async (inputValue: string) => {
+    try {
+      const results = await fetchSuggestResults(inputValue).then((items) =>
+        items.slice(0, SUGGEST_MAX_RESULTS)
+      );
+      return results;
+    } catch (error) {
+      console.error("Échec lors de la récupération des suggestions", error);
+      return [];
+    }
+  };
+
+  const onError = (error: string) => {
+    console.error("Échec lors de la récupération des suggestions", error);
+    Sentry.captureMessage("Échec lors de la récupération des suggestions");
   };
 
   return (
@@ -40,16 +53,8 @@ export const SearchBar: React.FC<SearchBarProps> = ({ initialValue = "" }) => {
         placeholder="Rechercher"
         isSearch
         displayLabel={(data) => data ?? ""}
-        search={async (input) => {
-          try {
-            const results = await fetchSuggestResults(input).then((items) =>
-              items.slice(0, SUGGEST_MAX_RESULTS)
-            );
-            return results;
-          } catch (error) {
-            return [];
-          }
-        }}
+        search={search}
+        onError={onError}
         onInputValueChange={(value) => {
           if (value) {
             setQuery(value);
@@ -61,7 +66,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ initialValue = "" }) => {
             handleSearch(value);
           }
         }}
-        onSubmitSearch={submitForm}
+        dataTestId="search-bar-input"
       />
     </form>
   );

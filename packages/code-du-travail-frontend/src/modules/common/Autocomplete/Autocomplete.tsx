@@ -24,7 +24,6 @@ export type AutocompleteProps<K> = InputProps & {
   onInputValueChange?: (value: string) => void;
   isSearch?: boolean;
   placeholder?: string;
-  onSubmitSearch?: () => void;
 };
 
 export const Autocomplete = <K,>({
@@ -44,7 +43,6 @@ export const Autocomplete = <K,>({
   displayNoResult,
   isSearch = false,
   placeholder,
-  onSubmitSearch,
 }: AutocompleteProps<K>) => {
   const [loading, setLoading] = useState(false);
   const [inputRef, setInputRef] = useState<HTMLInputElement | null>();
@@ -139,21 +137,6 @@ export const Autocomplete = <K,>({
               role: getRootProps().role,
               "aria-expanded": getRootProps()["aria-expanded"],
               ...getInputProps(),
-              onKeyDown: (e) => {
-                const originalKeyDown = getInputProps().onKeyDown;
-                if (originalKeyDown) {
-                  originalKeyDown(e);
-                }
-                if (e.key === "Enter") {
-                  e.preventDefault();
-
-                  // Sinon, comportement par défaut
-                  if (onSubmitSearch) {
-                    setSuggestions([]);
-                    onSubmitSearch();
-                  }
-                }
-              },
             }}
             className={`${fr.cx("fr-mb-0")}`}
             hintText={hintText}
@@ -199,12 +182,6 @@ export const Autocomplete = <K,>({
               className="fr-btn fr-icon-search-line fr-btn--icon"
               title="Rechercher"
               type="submit"
-              onClick={(e) => {
-                if (onSubmitSearch) {
-                  e.preventDefault();
-                  onSubmitSearch();
-                }
-              }}
             >
               <span className={fr.cx("fr-sr-only")}>Rechercher</span>
             </button>

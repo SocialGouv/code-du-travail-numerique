@@ -8,7 +8,7 @@ describe("Contributions", () => {
     cy.get("button[aria-label='Lancer la recherche']")
       .contains("Rechercher")
       .click();
-    cy.get("#content li").should("have.length", 7);
+    cy.get("#content h3").should("have.length", 8);
     cy.contains("Quelle peut être la durée maximale d'un CDD").click();
 
     cy.urlEqual(

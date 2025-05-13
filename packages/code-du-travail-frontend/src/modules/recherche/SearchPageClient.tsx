@@ -4,9 +4,11 @@ import React, { useEffect, useState, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 import { Breadcrumb } from "@codegouvfr/react-dsfr/Breadcrumb";
 import { Button } from "@codegouvfr/react-dsfr/Button";
+import { fr } from "@codegouvfr/react-dsfr";
 import { SearchBar } from "./SearchBar";
 import { SearchCard } from "./Card";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
+import { ContainerWithBreadcrumbs } from "../layout/ContainerWithBreadcrumbs";
 
 type SearchPageClientProps = {
   query: string;
@@ -57,42 +59,32 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
   const relatedThemes = themes.slice(0, 6);
 
   return (
-    <div className="fr-container fr-mb-4w">
-      <Breadcrumb
-        segments={[
-          {
-            label: "Accueil",
-            linkProps: {
-              href: "/",
-            },
-          },
-        ]}
-        currentPageLabel="Recherche"
-        className="fr-mb-2w"
-      />
+    <ContainerWithBreadcrumbs currentPage="Recherche" breadcrumbs={[]}>
+      <h1 className={fr.cx("fr-mt-0", "fr-mb-6w")}>Rechercher</h1>
 
-      <h1 className="fr-h2 fr-mb-4w">Rechercher</h1>
-
-      <div className="fr-grid-row fr-grid-row--gutters fr-mb-4w">
-        <div className="fr-col-12 fr-col-md-4">
+      <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mb-6w")}>
+        <div className={fr.cx("fr-col-12", "fr-col-md-4")}>
           <SearchBar initialValue={query} />
         </div>
       </div>
 
       {query && (
         <>
-          <h2 className="fr-h4 fr-mb-4w">
+          <h2 className={fr.cx("fr-h4", "fr-mb-3w")}>
             Résultats de recherche pour &quot;{query}&quot;
           </h2>
 
           {allResults.length === 0 ? (
-            <div className="fr-alert fr-alert--info fr-mb-4w">
+            <div className={fr.cx("fr-alert", "fr-alert--info", "fr-mb-4w")}>
               <p>
                 Nous n&apos;avons pas trouvé de résultat pour votre recherche.
               </p>
             </div>
           ) : (
-            <div className="fr-grid-row fr-grid-row--gutters">
+            <div
+              id="content"
+              className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}
+            >
               {allResults.slice(0, visibleItems).map((item, index) => {
                 const category =
                   item.source === "code_du_travail"
@@ -115,7 +107,13 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
           )}
 
           {hasMoreResults && (
-            <div className="fr-mt-4w fr-mb-8w fr-text--center">
+            <div
+              className={fr.cx(
+                "fr-mt-3w",
+                "fr-grid-row",
+                "fr-grid-row--center"
+              )}
+            >
               <Button onClick={loadMoreResults} priority="secondary">
                 Plus de résultats
               </Button>
@@ -123,9 +121,11 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
           )}
 
           {codeArticles.length > 0 && (
-            <section className="fr-mt-8w">
-              <h2 className="fr-h3 fr-mb-4w">Articles du code du travail</h2>
-              <div className="fr-grid-row fr-grid-row--gutters">
+            <section className={fr.cx("fr-mt-6w")}>
+              <h2 className={fr.cx("fr-h3", "fr-mb-3w")}>
+                Articles du code du travail
+              </h2>
+              <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
                 {codeArticles.map((article, index) => (
                   <SearchCard
                     key={`${article.source}-${article.slug || index}`}
@@ -139,11 +139,17 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
           )}
 
           {relatedThemes.length > 0 && (
-            <section className="fr-mt-8w">
-              <h2 className="fr-h3 fr-mb-4w">
+            <section className={fr.cx("fr-mt-6w")}>
+              <h2 className={fr.cx("fr-h3", "fr-mb-3w")}>
                 Les thèmes suivants peuvent vous intéresser
               </h2>
-              <div className="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
+              <div
+                className={fr.cx(
+                  "fr-grid-row",
+                  "fr-grid-row--gutters",
+                  "fr-grid-row--center"
+                )}
+              >
                 {relatedThemes.map((theme, index) => (
                   <Button
                     key={index}
@@ -151,7 +157,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                       href: `/themes/${theme.slug}`,
                     }}
                     priority="secondary"
-                    className="fr-mr-2w fr-mb-2w"
+                    className={fr.cx("fr-mr-2w", "fr-mb-2w")}
                   >
                     {theme.title}
                   </Button>
@@ -161,6 +167,8 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
           )}
         </>
       )}
-    </div>
+
+      <div className={fr.cx("fr-mb-11w")} />
+    </ContainerWithBreadcrumbs>
   );
 };
