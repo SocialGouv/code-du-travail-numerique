@@ -391,7 +391,7 @@ const Origins = () => (
       </div>
       <div className={fr.cx("fr-grid-row", "fr-grid-row--center", "fr-mt-4w")}>
         <div className={fr.cx("fr-col-12")}>
-          <p className={fr.cx("fr-text--bold", "fr-text--lg")}>
+          <p className={fr.cx("fr-text--bold", "fr-text--lg", "fr-mb-0")}>
             La jurisprudence de la Cour Européenne des droits de l&apos;Homme,
             de la Cour de justice de l&apos;Union européenne, du Conseil
             Constitutionnel, du Conseil d&apos;Etat et de la Cour de cassation

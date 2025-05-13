@@ -19,7 +19,14 @@ const modal4Matieres = createModal({
 const Hierarchy = () => {
   return (
     <div className={fr.cx("fr-grid-row", "fr-grid-row--center")}>
-      <div className={fr.cx("fr-col-12", "fr-col-md-10", "fr-col-lg-8")}>
+      <div
+        className={fr.cx(
+          "fr-col-12",
+          "fr-col-md-10",
+          "fr-col-lg-8",
+          "fr-mb-8w"
+        )}
+      >
         <h2>Existe-t-il une hiérarchie entre les textes ?</h2>
         <p className={fr.cx("fr-text--lg", "fr-mb-3w")}>
           Le principe général en droit du travail est le suivant&nbsp;:

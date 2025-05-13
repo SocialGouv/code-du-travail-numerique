@@ -6,7 +6,7 @@ exports[`<Hierarchy /> renders correctly 1`] = `
     class="fr-grid-row fr-grid-row--center"
   >
     <div
-      class="fr-col-12 fr-col-md-10 fr-col-lg-8"
+      class="fr-col-12 fr-col-md-10 fr-col-lg-8 fr-mb-8w"
     >
       <h2>
         Existe-t-il une hiérarchie entre les textes ?
@@ -28,15 +28,15 @@ exports[`<Hierarchy /> renders correctly 1`] = `
           class="fr-col-12"
         >
           <div
-            class="bg_var(--background-alt-blue-cumulus) bdr_8px ov_visible h_fit-content trs_all_0.3s_ease pos_relative"
+            class="bg_var(--background-alt-blue-cumulus) ov_visible h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-les-textes-internationaux-et-européens"
               aria-expanded="false"
-              class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+              class="w_100% h_100% bg_none bd_none p_0 cursor_pointer ta_left [&:hover]:bg_none!"
             >
               <div
-                class="d_flex ai_center p_16px pos_relative"
+                class="d_flex ai_center px_16px pos_relative h_100% py_40px"
               >
                 <div
                   class="mr_16px d_flex ai_center jc_center"
@@ -46,15 +46,15 @@ exports[`<Hierarchy /> renders correctly 1`] = `
                     aria-hidden="true"
                     data-nimg="1"
                     decoding="async"
-                    height="40"
+                    height="52"
                     loading="lazy"
                     src="/static/assets/icons/droit-du-travail/texte-internationaux.svg"
                     style="color: transparent;"
-                    width="40"
+                    width="52"
                   />
                 </div>
                 <h3
-                  class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                  class="fr-mb-0 fr-h4 c_var(--text-action-high-blue-france)!"
                 >
                   Les textes internationaux et européens
                 </h3>
@@ -90,15 +90,15 @@ exports[`<Hierarchy /> renders correctly 1`] = `
           class="fr-col-12"
         >
           <div
-            class="bg_var(--background-alt-blue-cumulus) bdr_8px ov_visible h_fit-content trs_all_0.3s_ease pos_relative"
+            class="bg_var(--background-alt-blue-cumulus) ov_visible h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-la-constitution"
               aria-expanded="false"
-              class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+              class="w_100% h_100% bg_none bd_none p_0 cursor_pointer ta_left [&:hover]:bg_none!"
             >
               <div
-                class="d_flex ai_center p_16px pos_relative"
+                class="d_flex ai_center px_16px pos_relative h_100% py_40px"
               >
                 <div
                   class="mr_16px d_flex ai_center jc_center"
@@ -108,15 +108,15 @@ exports[`<Hierarchy /> renders correctly 1`] = `
                     aria-hidden="true"
                     data-nimg="1"
                     decoding="async"
-                    height="40"
+                    height="52"
                     loading="lazy"
                     src="/static/assets/icons/droit-du-travail/constitution-francaise.svg"
                     style="color: transparent;"
-                    width="40"
+                    width="52"
                   />
                 </div>
                 <h3
-                  class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                  class="fr-mb-0 fr-h4 c_var(--text-action-high-blue-france)!"
                 >
                   La Constitution
                 </h3>
@@ -152,15 +152,15 @@ exports[`<Hierarchy /> renders correctly 1`] = `
           class="fr-col-12"
         >
           <div
-            class="bg_var(--background-alt-blue-cumulus) bdr_8px ov_visible h_fit-content trs_all_0.3s_ease pos_relative"
+            class="bg_var(--background-alt-blue-cumulus) ov_visible h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-lois,-ordonnances-et-décrets-(code-du-travail)"
               aria-expanded="false"
-              class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+              class="w_100% h_100% bg_none bd_none p_0 cursor_pointer ta_left [&:hover]:bg_none!"
             >
               <div
-                class="d_flex ai_center p_16px pos_relative"
+                class="d_flex ai_center px_16px pos_relative h_100% py_40px"
               >
                 <div
                   class="mr_16px d_flex ai_center jc_center"
@@ -170,15 +170,15 @@ exports[`<Hierarchy /> renders correctly 1`] = `
                     aria-hidden="true"
                     data-nimg="1"
                     decoding="async"
-                    height="40"
+                    height="52"
                     loading="lazy"
                     src="/static/assets/icons/droit-du-travail/lois.svg"
                     style="color: transparent;"
-                    width="40"
+                    width="52"
                   />
                 </div>
                 <h3
-                  class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                  class="fr-mb-0 fr-h4 c_var(--text-action-high-blue-france)!"
                 >
                   Lois, ordonnances et décrets (Code du travail)
                 </h3>
@@ -214,16 +214,16 @@ exports[`<Hierarchy /> renders correctly 1`] = `
           class="fr-col-12"
         >
           <div
-            class="bg_var(--background-alt-blue-cumulus) bdr_8px ov_visible h_fit-content trs_all_0.3s_ease pos_relative"
+            class="bg_var(--background-alt-blue-cumulus) ov_visible h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
             id="hierarchie"
           >
             <button
               aria-controls="content-les-conventions-et-accords-collectifs"
               aria-expanded="false"
-              class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+              class="w_100% h_100% bg_none bd_none p_0 cursor_pointer ta_left [&:hover]:bg_none!"
             >
               <div
-                class="d_flex ai_center p_16px pos_relative"
+                class="d_flex ai_center px_16px pos_relative h_100% py_40px"
               >
                 <div
                   class="mr_16px d_flex ai_center jc_center"
@@ -233,15 +233,15 @@ exports[`<Hierarchy /> renders correctly 1`] = `
                     aria-hidden="true"
                     data-nimg="1"
                     decoding="async"
-                    height="40"
+                    height="52"
                     loading="lazy"
                     src="/static/assets/icons/droit-du-travail/conventions-collectives.svg"
                     style="color: transparent;"
-                    width="40"
+                    width="52"
                   />
                 </div>
                 <h3
-                  class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                  class="fr-mb-0 fr-h4 c_var(--text-action-high-blue-france)!"
                 >
                   Les conventions et accords collectifs
                 </h3>
@@ -277,15 +277,15 @@ exports[`<Hierarchy /> renders correctly 1`] = `
           class="fr-col-12"
         >
           <div
-            class="bg_var(--background-alt-blue-cumulus) bdr_8px ov_visible h_fit-content trs_all_0.3s_ease pos_relative"
+            class="bg_var(--background-alt-blue-cumulus) ov_visible h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-les-usages-et-les-engagements-unilatéraux"
               aria-expanded="false"
-              class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+              class="w_100% h_100% bg_none bd_none p_0 cursor_pointer ta_left [&:hover]:bg_none!"
             >
               <div
-                class="d_flex ai_center p_16px pos_relative"
+                class="d_flex ai_center px_16px pos_relative h_100% py_40px"
               >
                 <div
                   class="mr_16px d_flex ai_center jc_center"
@@ -295,15 +295,15 @@ exports[`<Hierarchy /> renders correctly 1`] = `
                     aria-hidden="true"
                     data-nimg="1"
                     decoding="async"
-                    height="40"
+                    height="52"
                     loading="lazy"
                     src="/static/assets/icons/droit-du-travail/usage-unilateraux.svg"
                     style="color: transparent;"
-                    width="40"
+                    width="52"
                   />
                 </div>
                 <h3
-                  class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                  class="fr-mb-0 fr-h4 c_var(--text-action-high-blue-france)!"
                 >
                   Les usages et les engagements unilatéraux
                 </h3>
@@ -339,15 +339,15 @@ exports[`<Hierarchy /> renders correctly 1`] = `
           class="fr-col-12"
         >
           <div
-            class="bg_var(--background-alt-blue-cumulus) bdr_8px ov_visible h_fit-content trs_all_0.3s_ease pos_relative"
+            class="bg_var(--background-alt-blue-cumulus) ov_visible h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-le-règlement-intérieur-de-l'entreprise"
               aria-expanded="false"
-              class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+              class="w_100% h_100% bg_none bd_none p_0 cursor_pointer ta_left [&:hover]:bg_none!"
             >
               <div
-                class="d_flex ai_center p_16px pos_relative"
+                class="d_flex ai_center px_16px pos_relative h_100% py_40px"
               >
                 <div
                   class="mr_16px d_flex ai_center jc_center"
@@ -357,15 +357,15 @@ exports[`<Hierarchy /> renders correctly 1`] = `
                     aria-hidden="true"
                     data-nimg="1"
                     decoding="async"
-                    height="40"
+                    height="52"
                     loading="lazy"
                     src="/static/assets/icons/droit-du-travail/reglement-interieur-entreprise.svg"
                     style="color: transparent;"
-                    width="40"
+                    width="52"
                   />
                 </div>
                 <h3
-                  class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                  class="fr-mb-0 fr-h4 c_var(--text-action-high-blue-france)!"
                 >
                   Le règlement intérieur de l'entreprise
                 </h3>
@@ -401,15 +401,15 @@ exports[`<Hierarchy /> renders correctly 1`] = `
           class="fr-col-12"
         >
           <div
-            class="bg_var(--background-alt-blue-cumulus) bdr_8px ov_hidden h_fit-content trs_all_0.3s_ease pos_relative"
+            class="bg_var(--background-alt-blue-cumulus) ov_hidden h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-le-contrat-de-travail"
               aria-expanded="false"
-              class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+              class="w_100% h_100% bg_none bd_none p_0 cursor_pointer ta_left [&:hover]:bg_none!"
             >
               <div
-                class="d_flex ai_center p_16px pos_relative"
+                class="d_flex ai_center px_16px pos_relative h_100% py_40px"
               >
                 <div
                   class="mr_16px d_flex ai_center jc_center"
@@ -419,15 +419,15 @@ exports[`<Hierarchy /> renders correctly 1`] = `
                     aria-hidden="true"
                     data-nimg="1"
                     decoding="async"
-                    height="40"
+                    height="52"
                     loading="lazy"
                     src="/static/assets/icons/droit-du-travail/contrat-travail.svg"
                     style="color: transparent;"
-                    width="40"
+                    width="52"
                   />
                 </div>
                 <h3
-                  class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+                  class="fr-mb-0 fr-h4 c_var(--text-action-high-blue-france)!"
                 >
                   Le contrat de travail
                 </h3>

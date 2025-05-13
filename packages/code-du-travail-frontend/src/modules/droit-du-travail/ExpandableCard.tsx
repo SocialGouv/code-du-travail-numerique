@@ -42,12 +42,12 @@ const ExpandableCard = ({
             <Image
               src={iconSrc}
               alt=""
-              width={40}
-              height={40}
+              width={52}
+              height={52}
               aria-hidden="true"
             />
           </div>
-          <h3 className={`${fr.cx("fr-mb-0", "fr-text--xl")} ${titleStyle}`}>
+          <h3 className={`${fr.cx("fr-mb-0", "fr-h4")} ${titleStyle}`}>
             {title}
           </h3>
           <div className={arrowContainer}>
@@ -88,11 +88,11 @@ export default ExpandableCard;
 const cardContainer = (backgroundColor?: string, showBottomTab?: boolean) =>
   css({
     background: backgroundColor || "var(--background-alt-blue-cumulus)",
-    borderRadius: "8px",
     overflow: showBottomTab ? "visible" : "hidden",
     height: "fit-content",
     transition: "all 0.3s ease",
     position: "relative",
+    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
   });
 
 const titleStyle = css({
@@ -101,18 +101,24 @@ const titleStyle = css({
 
 const cardButton = css({
   width: "100%",
+  height: "100%",
   background: "none",
   border: "none",
   padding: 0,
   cursor: "pointer",
   textAlign: "left",
+  "&:hover": {
+    background: "none!",
+  },
 });
 
 const cardHeader = css({
   display: "flex",
   alignItems: "center",
-  padding: "16px",
+  paddingX: "16px",
   position: "relative",
+  height: "100%",
+  paddingY: "40px",
 });
 
 const iconContainer = css({

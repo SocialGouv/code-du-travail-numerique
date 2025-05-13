@@ -3,15 +3,15 @@
 exports[`<ExpandableCard /> renders correctly with default props 1`] = `
 <div>
   <div
-    class="bg_var(--background-alt-blue-cumulus) bdr_8px ov_hidden h_fit-content trs_all_0.3s_ease pos_relative"
+    class="bg_var(--background-alt-blue-cumulus) ov_hidden h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
   >
     <button
       aria-controls="content-test-title"
       aria-expanded="false"
-      class="w_100% bg_none bd_none p_0 cursor_pointer ta_left"
+      class="w_100% h_100% bg_none bd_none p_0 cursor_pointer ta_left [&:hover]:bg_none!"
     >
       <div
-        class="d_flex ai_center p_16px pos_relative"
+        class="d_flex ai_center px_16px pos_relative h_100% py_40px"
       >
         <div
           class="mr_16px d_flex ai_center jc_center"
@@ -21,15 +21,15 @@ exports[`<ExpandableCard /> renders correctly with default props 1`] = `
             aria-hidden="true"
             data-nimg="1"
             decoding="async"
-            height="40"
+            height="52"
             loading="lazy"
             src="/test-icon.svg"
             style="color: transparent;"
-            width="40"
+            width="52"
           />
         </div>
         <h3
-          class="fr-mb-0 fr-text--xl c_var(--text-action-high-blue-france)!"
+          class="fr-mb-0 fr-h4 c_var(--text-action-high-blue-france)!"
         >
           Test Title
         </h3>

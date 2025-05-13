@@ -5,6 +5,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
 import { Introduction, Origins, Hierarchy } from "./index";
 import { Container } from "../layout/Container";
+import { Feedback } from "../layout/feedback";
 
 export const DroitDuTravailWrapper = () => {
   return (
