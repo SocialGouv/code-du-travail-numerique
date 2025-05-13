@@ -11,7 +11,7 @@ describe("Contributions", () => {
     cy.get("h1").should("have.text", "Vos fiches pratiques");
     cy.get("body").should(
       "contain",
-      "Obtenez une réponses personnalisée selon votre convention collective"
+      "Obtenez une réponse personnalisée selon votre convention collective"
     );
     cy.get("#content h2").should("have.length", 6);
     cy.get("#content h2")
