@@ -193,31 +193,89 @@ const CheckboxLegend = styled.legend`
   margin-bottom: 0.5rem;
 `;
 
-const CheckboxLabel = styled.label`
+const ToggleContainer = styled.div`
+  margin-bottom: 1rem;
+`;
+
+const ToggleLabel = styled.label`
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
   margin-bottom: 0.5rem;
   cursor: pointer;
 `;
 
-const Checkbox = styled.input`
-  margin-right: 0.5rem;
-  margin-top: 0.25rem;
-`;
-
-const CheckboxText = styled.span`
-  display: block;
-`;
-
-const CheckboxTitle = styled.span`
+const ToggleTitle = styled.span`
   display: block;
   font-weight: 500;
+  margin-bottom: 0.25rem;
 `;
 
-const CheckboxDescription = styled.span`
+const ToggleDescription = styled.span`
   display: block;
   font-size: 0.875rem;
   color: ${theme.colors.textSecondary || "#666666"};
+  margin-bottom: 0.5rem;
+`;
+
+const ToggleSwitch = styled.div`
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+`;
+
+const ToggleInput = styled.input`
+  opacity: 0;
+  width: 0;
+  height: 0;
+
+  &:checked + span {
+    background-color: ${theme.colors.primary || "#000091"};
+  }
+
+  &:checked + span:before {
+    transform: translateX(26px);
+  }
+
+  &:disabled + span {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+`;
+
+const ToggleSlider = styled.span`
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+`;
+
+const ToggleStatus = styled.span`
+  margin-left: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+`;
+
+const ToggleRow = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 const ModalFooter = styled.div`
@@ -370,44 +428,50 @@ export const CookieConsentLegacy = () => {
 
             <CheckboxGroup>
               <CheckboxLegend>Cookies de mesure d&apos;audience</CheckboxLegend>
-              <CheckboxLabel>
-                <Checkbox
-                  type="checkbox"
-                  checked={true}
-                  disabled={true}
-                  onChange={() => {}} // No-op function
-                />
-                <CheckboxText>
-                  <CheckboxTitle>
-                    Mesure d&apos;audience - Obligatoire
-                  </CheckboxTitle>
-                  <CheckboxDescription>
-                    Ces cookies nous permettent d&apos;établir des statistiques
-                    de fréquentation de notre site et d&apos;améliorer ses
-                    performances.
-                  </CheckboxDescription>
-                </CheckboxText>
-              </CheckboxLabel>
+              <ToggleContainer>
+                <ToggleTitle>Mesure d&apos;audience - Obligatoire</ToggleTitle>
+                <ToggleDescription>
+                  Ces cookies nous permettent d&apos;établir des statistiques de
+                  fréquentation de notre site et d&apos;améliorer ses
+                  performances.
+                </ToggleDescription>
+                <ToggleRow>
+                  <ToggleSwitch>
+                    <ToggleInput
+                      type="checkbox"
+                      checked={true}
+                      disabled={true}
+                      onChange={() => {}} // No-op function
+                    />
+                    <ToggleSlider />
+                  </ToggleSwitch>
+                  <ToggleStatus>Activé</ToggleStatus>
+                </ToggleRow>
+              </ToggleContainer>
             </CheckboxGroup>
 
             <CheckboxGroup>
               <CheckboxLegend>Cookies de suivi publicitaire</CheckboxLegend>
-              <CheckboxLabel>
-                <Checkbox
-                  type="checkbox"
-                  checked={consent.sea}
-                  onChange={() => handleConsentChange("sea")}
-                />
-                <CheckboxText>
-                  <CheckboxTitle>
-                    Suivi des campagnes publicitaires
-                  </CheckboxTitle>
-                  <CheckboxDescription>
-                    Ces cookies nous permettent de suivre l&apos;efficacité de
-                    nos campagnes publicitaires sur les moteurs de recherche.
-                  </CheckboxDescription>
-                </CheckboxText>
-              </CheckboxLabel>
+              <ToggleContainer>
+                <ToggleTitle>Suivi des campagnes publicitaires</ToggleTitle>
+                <ToggleDescription>
+                  Ces cookies nous permettent de suivre l&apos;efficacité de nos
+                  campagnes publicitaires sur les moteurs de recherche.
+                </ToggleDescription>
+                <ToggleRow>
+                  <ToggleSwitch>
+                    <ToggleInput
+                      type="checkbox"
+                      checked={consent.sea}
+                      onChange={() => handleConsentChange("sea")}
+                    />
+                    <ToggleSlider />
+                  </ToggleSwitch>
+                  <ToggleStatus>
+                    {consent.sea ? "Activé" : "Désactivé"}
+                  </ToggleStatus>
+                </ToggleRow>
+              </ToggleContainer>
             </CheckboxGroup>
           </ModalBody>
           <CloseButton

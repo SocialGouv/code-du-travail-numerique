@@ -4,7 +4,6 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Button from "@codegouvfr/react-dsfr/Button";
-import Checkbox from "@codegouvfr/react-dsfr/Checkbox";
 import {
   ConsentType,
   DEFAULT_CONSENT,
@@ -173,6 +172,7 @@ export const CookieConsentDSFR = () => {
         aria-labelledby="cookie-settings-modal-title"
         role="dialog"
         aria-modal={isModalOpen ? "true" : "false"}
+        style={{ overflow: "visible" }}
       >
         {isModalOpen && (
           <div className="fr-modal__backdrop" onClick={closeModal}></div>
@@ -186,7 +186,10 @@ export const CookieConsentDSFR = () => {
         >
           <div className={fr.cx("fr-grid-row", "fr-grid-row--center")}>
             <div className={fr.cx("fr-col-12", "fr-col-md-10", "fr-col-lg-8")}>
-              <div className={fr.cx("fr-modal__body")}>
+              <div
+                className={fr.cx("fr-modal__body")}
+                style={{ maxHeight: "none", overflow: "visible" }}
+              >
                 <div className={fr.cx("fr-modal__header")}>
                   <button
                     className={fr.cx("fr-btn--close", "fr-btn")}
@@ -197,7 +200,10 @@ export const CookieConsentDSFR = () => {
                     Fermer
                   </button>
                 </div>
-                <div className={fr.cx("fr-modal__content")}>
+                <div
+                  className={fr.cx("fr-modal__content")}
+                  style={{ overflow: "visible" }}
+                >
                   <div className={fr.cx("fr-modal__title")}>
                     <div
                       className={fr.cx("fr-h3")}
@@ -237,46 +243,72 @@ export const CookieConsentDSFR = () => {
                     .
                   </p>
 
-                  <div className={fr.cx("fr-mt-4w")}>
-                    <fieldset className={fr.cx("fr-fieldset")}>
+                  <div className={fr.cx("fr-mt-2w")}>
+                    <fieldset
+                      className={fr.cx("fr-fieldset")}
+                      id="cookie-audience-fieldset"
+                    >
                       <legend className={fr.cx("fr-fieldset__legend")}>
                         Cookies de mesure d&apos;audience
                       </legend>
-                      <Checkbox
-                        options={[
-                          {
-                            label: "Mesure d'audience - Obligatoire",
-                            hintText:
-                              "Ces cookies nous permettent d'établir des statistiques de fréquentation de notre site et d'améliorer ses performances.",
-                            nativeInputProps: {
-                              checked: true,
-                              disabled: true,
-                              onChange: () => {}, // No-op function
-                            },
-                          },
-                        ]}
-                      />
+                      <div className={fr.cx("fr-toggle")}>
+                        <input
+                          type="checkbox"
+                          className={fr.cx("fr-toggle__input")}
+                          id="toggle-audience"
+                          name="toggle-audience"
+                          checked={true}
+                          disabled={true}
+                          onChange={() => {}}
+                        />
+                        <label
+                          className={fr.cx("fr-toggle__label")}
+                          htmlFor="toggle-audience"
+                          data-fr-checked-label="Activé"
+                          data-fr-unchecked-label="Désactivé"
+                        >
+                          Mesure d&apos;audience - Obligatoire
+                        </label>
+                        <p className={fr.cx("fr-hint-text")}>
+                          Ces cookies nous permettent d&apos;établir des
+                          statistiques de fréquentation de notre site et
+                          d&apos;améliorer ses performances.
+                        </p>
+                      </div>
                     </fieldset>
                   </div>
 
                   <div className={fr.cx("fr-mt-2w")}>
-                    <fieldset className={fr.cx("fr-fieldset")}>
+                    <fieldset
+                      className={fr.cx("fr-fieldset")}
+                      id="cookie-sea-fieldset"
+                    >
                       <legend className={fr.cx("fr-fieldset__legend")}>
                         Cookies de suivi publicitaire
                       </legend>
-                      <Checkbox
-                        options={[
-                          {
-                            label: "Suivi des campagnes publicitaires",
-                            hintText:
-                              "Ces cookies nous permettent de suivre l'efficacité de nos campagnes publicitaires sur les moteurs de recherche.",
-                            nativeInputProps: {
-                              checked: consent.sea,
-                              onChange: () => handleConsentChange("sea"),
-                            },
-                          },
-                        ]}
-                      />
+                      <div className={fr.cx("fr-toggle")}>
+                        <input
+                          type="checkbox"
+                          className={fr.cx("fr-toggle__input")}
+                          id="toggle-sea"
+                          name="toggle-sea"
+                          checked={consent.sea}
+                          onChange={() => handleConsentChange("sea")}
+                        />
+                        <label
+                          className={fr.cx("fr-toggle__label")}
+                          htmlFor="toggle-sea"
+                          data-fr-checked-label="Activé"
+                          data-fr-unchecked-label="Désactivé"
+                        >
+                          Suivi des campagnes publicitaires
+                        </label>
+                        <p className={fr.cx("fr-hint-text")}>
+                          Ces cookies nous permettent de suivre
+                          l&apos;efficacité de nos campagnes publicitaires sur
+                          les moteurs de recherche.
+                        </p>
+                      </div>
                     </fieldset>
                   </div>
                 </div>
