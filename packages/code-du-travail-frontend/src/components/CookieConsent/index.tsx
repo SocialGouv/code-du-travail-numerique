@@ -160,7 +160,7 @@ const ModalHeader = styled.div`
   margin-bottom: 1.5rem;
 `;
 
-const ModalTitle = styled.h1`
+const ModalTitle = styled.div`
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 2.25rem;
@@ -178,7 +178,7 @@ const InfoBox = styled.div`
   margin-bottom: 1.5rem;
 `;
 
-const InfoTitle = styled.h2`
+const InfoTitle = styled.div`
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-size: 1.5rem;

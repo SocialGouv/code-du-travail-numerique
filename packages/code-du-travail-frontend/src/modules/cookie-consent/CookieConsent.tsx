@@ -5,8 +5,6 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Checkbox from "@codegouvfr/react-dsfr/Checkbox";
-import { createModal } from "@codegouvfr/react-dsfr/Modal";
-import { useIsModalOpen } from "@codegouvfr/react-dsfr/Modal/useIsModalOpen";
 import {
   ConsentType,
   DEFAULT_CONSENT,
@@ -15,20 +13,24 @@ import {
   initConsent,
 } from "../../lib/consent";
 
-// Create the cookie settings modal
-export const cookieSettingsModal = createModal({
-  id: "cookie-settings-modal",
-  isOpenedByDefault: false,
-});
-
 export const CookieConsentDSFR = () => {
   const [consent, setConsent] = useState<ConsentType>(DEFAULT_CONSENT);
   const [showBanner, setShowBanner] = useState(false);
-  const isModalOpen = useIsModalOpen(cookieSettingsModal);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const pathname = usePathname();
 
   // Don't show cookie consent on widget pages
   const isWidgetPage = pathname?.startsWith("/widgets");
+
+  // Open modal
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  // Close modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   // Initialize consent state from local storage
   useEffect(() => {
@@ -55,6 +57,7 @@ export const CookieConsentDSFR = () => {
     setConsent(newConsent);
     saveConsent(newConsent);
     setShowBanner(false);
+    closeModal();
     localStorage.setItem("cdtn-cookie-consent-given", "true");
 
     // Initialize consent after user has made a choice
@@ -70,6 +73,7 @@ export const CookieConsentDSFR = () => {
     setConsent(newConsent);
     saveConsent(newConsent);
     setShowBanner(false);
+    closeModal();
     localStorage.setItem("cdtn-cookie-consent-given", "true");
 
     // Initialize consent after user has made a choice
@@ -81,7 +85,7 @@ export const CookieConsentDSFR = () => {
   const handleSaveSettings = () => {
     saveConsent(consent);
     setShowBanner(false);
-    cookieSettingsModal.close();
+    closeModal();
     localStorage.setItem("cdtn-cookie-consent-given", "true");
   };
 
@@ -147,10 +151,7 @@ export const CookieConsentDSFR = () => {
                 <Button onClick={handleRejectAll} priority="secondary">
                   Tout refuser
                 </Button>
-                <Button
-                  onClick={() => cookieSettingsModal.open()}
-                  priority="tertiary"
-                >
+                <Button onClick={openModal} priority="tertiary">
                   Personnaliser
                 </Button>
               </div>
@@ -160,83 +161,138 @@ export const CookieConsentDSFR = () => {
       )}
 
       {/* Cookie Settings Modal */}
-      <cookieSettingsModal.Component
-        title="Paramètres des cookies"
-        className="fr-modal--cookie-settings"
-        buttons={[
-          {
-            children: "Enregistrer",
-            onClick: handleSaveSettings,
-          },
-          {
-            children: "Tout accepter",
-            onClick: handleAcceptAll,
-            priority: "secondary",
-          },
-          {
-            children: "Tout refuser",
-            onClick: handleRejectAll,
-            priority: "tertiary",
-          },
-        ]}
+      <div
+        className={`fr-modal ${isModalOpen ? "fr-modal--opened" : ""}`}
+        id="cookie-settings-modal"
+        aria-labelledby="cookie-settings-modal-title"
+        role="dialog"
+        aria-modal={isModalOpen ? "true" : "false"}
       >
-        <div className={fr.cx("fr-alert", "fr-alert--info")}>
-          <div className={fr.cx("fr-alert__title")}>
-            <h2 className={fr.cx("fr-h6")}>À propos des cookies</h2>
+        {isModalOpen && (
+          <div className="fr-modal__backdrop" onClick={closeModal}></div>
+        )}
+        <div
+          className={fr.cx(
+            "fr-container",
+            "fr-container--fluid",
+            "fr-container-md"
+          )}
+        >
+          <div className={fr.cx("fr-grid-row", "fr-grid-row--center")}>
+            <div className={fr.cx("fr-col-12", "fr-col-md-10", "fr-col-lg-8")}>
+              <div className={fr.cx("fr-modal__body")}>
+                <div className={fr.cx("fr-modal__header")}>
+                  <button
+                    className={fr.cx("fr-btn--close", "fr-btn")}
+                    title="Fermer la fenêtre modale"
+                    aria-controls="cookie-settings-modal"
+                    onClick={closeModal}
+                  >
+                    Fermer
+                  </button>
+                </div>
+                <div className={fr.cx("fr-modal__content")}>
+                  <div className={fr.cx("fr-modal__title")}>
+                    <div
+                      className={fr.cx("fr-h3")}
+                      id="cookie-settings-modal-title"
+                    >
+                      Paramètres des cookies
+                    </div>
+                  </div>
+
+                  <div className={fr.cx("fr-alert", "fr-alert--info")}>
+                    <div className={fr.cx("fr-alert__title")}>
+                      <div className={fr.cx("fr-text--bold")}>
+                        À propos des cookies
+                      </div>
+                    </div>
+                    <p>
+                      Les cookies sont des petits fichiers déposés sur votre
+                      appareil (ordinateur, smartphone ou tablette) lorsque vous
+                      visitez un site web. Ils permettent de collecter des
+                      informations sur votre navigation et de vous proposer des
+                      services adaptés à votre utilisation.
+                    </p>
+                  </div>
+
+                  <p className={fr.cx("fr-mt-2w")}>
+                    Les cookies de mesure d&apos;audience sont nécessaires au
+                    bon fonctionnement du site. Vous pouvez choisir
+                    d&apos;accepter ou de refuser les cookies de suivi des
+                    campagnes publicitaires. Pour plus d&apos;informations, vous
+                    pouvez consulter notre{" "}
+                    <a
+                      href="/politique-confidentialite"
+                      className={fr.cx("fr-link")}
+                    >
+                      politique de confidentialité
+                    </a>
+                    .
+                  </p>
+
+                  <div className={fr.cx("fr-mt-4w")}>
+                    <Checkbox
+                      options={[
+                        {
+                          label: "Mesure d'audience - Obligatoire",
+                          hintText:
+                            "Ces cookies nous permettent d'établir des statistiques de fréquentation de notre site et d'améliorer ses performances.",
+                          nativeInputProps: {
+                            checked: true,
+                            disabled: true,
+                            onChange: () => {}, // No-op function
+                          },
+                        },
+                      ]}
+                    />
+                  </div>
+
+                  <div className={fr.cx("fr-mt-2w")}>
+                    <Checkbox
+                      options={[
+                        {
+                          label: "Suivi des campagnes publicitaires",
+                          hintText:
+                            "Ces cookies nous permettent de suivre l'efficacité de nos campagnes publicitaires sur les moteurs de recherche.",
+                          nativeInputProps: {
+                            checked: consent.sea,
+                            onChange: () => handleConsentChange("sea"),
+                          },
+                        },
+                      ]}
+                    />
+                  </div>
+                </div>
+                <div className={fr.cx("fr-modal__footer")}>
+                  <ul
+                    className={fr.cx(
+                      "fr-btns-group",
+                      "fr-btns-group--right",
+                      "fr-btns-group--inline-reverse",
+                      "fr-btns-group--inline-lg"
+                    )}
+                  >
+                    <li>
+                      <Button onClick={handleSaveSettings}>Enregistrer</Button>
+                    </li>
+                    <li>
+                      <Button onClick={handleAcceptAll} priority="secondary">
+                        Tout accepter
+                      </Button>
+                    </li>
+                    <li>
+                      <Button onClick={handleRejectAll} priority="tertiary">
+                        Tout refuser
+                      </Button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-          <p>
-            Les cookies sont des petits fichiers déposés sur votre appareil
-            (ordinateur, smartphone ou tablette) lorsque vous visitez un site
-            web. Ils permettent de collecter des informations sur votre
-            navigation et de vous proposer des services adaptés à votre
-            utilisation.
-          </p>
         </div>
-
-        <p className={fr.cx("fr-mt-2w")}>
-          Les cookies de mesure d&apos;audience sont nécessaires au bon
-          fonctionnement du site. Vous pouvez choisir d&apos;accepter ou de
-          refuser les cookies de suivi des campagnes publicitaires. Pour plus
-          d&apos;informations, vous pouvez consulter notre{" "}
-          <a href="/politique-confidentialite" className={fr.cx("fr-link")}>
-            politique de confidentialité
-          </a>
-          .
-        </p>
-
-        <div className={fr.cx("fr-mt-4w")}>
-          <Checkbox
-            options={[
-              {
-                label: "Mesure d'audience - Obligatoire",
-                hintText:
-                  "Ces cookies nous permettent d'établir des statistiques de fréquentation de notre site et d'améliorer ses performances.",
-                nativeInputProps: {
-                  checked: true,
-                  disabled: true,
-                  onChange: () => {}, // No-op function
-                },
-              },
-            ]}
-          />
-        </div>
-
-        <div className={fr.cx("fr-mt-2w")}>
-          <Checkbox
-            options={[
-              {
-                label: "Suivi des campagnes publicitaires",
-                hintText:
-                  "Ces cookies nous permettent de suivre l'efficacité de nos campagnes publicitaires sur les moteurs de recherche.",
-                nativeInputProps: {
-                  checked: consent.sea,
-                  onChange: () => handleConsentChange("sea"),
-                },
-              },
-            ]}
-          />
-        </div>
-      </cookieSettingsModal.Component>
+      </div>
 
       {/* Manage Cookies Button (fixed at the bottom) */}
       {!isWidgetPage && !showBanner && (
@@ -251,7 +307,7 @@ export const CookieConsentDSFR = () => {
           <Button
             size="small"
             priority="tertiary"
-            onClick={() => cookieSettingsModal.open()}
+            onClick={openModal}
             iconId="fr-icon-settings-5-line"
             title="Gérer les cookies"
           >
