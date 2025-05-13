@@ -28,20 +28,15 @@ const BannerContent = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (min-width: ${theme.breakpoints.desktop}) {
-    flex-direction: row;
-    align-items: center;
+  @media (min-width: 768px) {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 `;
 
 const BannerText = styled.div`
-  flex: 1;
-  margin-bottom: 1rem;
-
-  @media (min-width: ${theme.breakpoints.desktop}) {
-    margin-bottom: 0;
-    margin-right: 2rem;
-  }
+  margin-bottom: 1.5rem;
 `;
 
 const Title = styled.h2`
@@ -56,8 +51,10 @@ const Description = styled.p`
 
 const ButtonGroup = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 0.5rem;
+  justify-content: flex-end;
 `;
 
 const Button = styled.button<{ primary?: boolean; secondary?: boolean }>`
@@ -225,6 +222,8 @@ const CheckboxDescription = styled.span`
 
 const ModalFooter = styled.div`
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: flex-end;
   gap: 0.5rem;
 `;
@@ -321,14 +320,14 @@ export const CookieConsentLegacy = () => {
               </Description>
             </BannerText>
             <ButtonGroup>
-              <Button primary onClick={handleAcceptAll}>
-                Tout accepter
-              </Button>
-              <Button secondary onClick={handleRejectAll}>
-                Tout refuser
-              </Button>
               <Button secondary onClick={() => setIsModalOpen(true)}>
                 Personnaliser
+              </Button>
+              <Button primary onClick={handleRejectAll}>
+                Tout refuser
+              </Button>
+              <Button primary onClick={handleAcceptAll}>
+                Tout accepter
               </Button>
             </ButtonGroup>
           </BannerContent>
@@ -418,14 +417,14 @@ export const CookieConsentLegacy = () => {
             ×
           </CloseButton>
           <ModalFooter>
+            <Button primary onClick={handleSaveSettings}>
+              Enregistrer
+            </Button>
             <Button secondary onClick={handleRejectAll}>
               Tout refuser
             </Button>
             <Button secondary onClick={handleAcceptAll}>
               Tout accepter
-            </Button>
-            <Button primary onClick={handleSaveSettings}>
-              Enregistrer
             </Button>
           </ModalFooter>
         </ModalContent>

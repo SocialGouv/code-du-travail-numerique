@@ -119,12 +119,12 @@ export const CookieConsentDSFR = () => {
             boxShadow: "0 -2px 4px rgba(0, 0, 0, 0.1)",
           }}
         >
-          <div className={fr.cx("fr-grid-row", "fr-grid-row--middle")}>
-            <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
+          <div className={fr.cx("fr-grid-row")}>
+            <div className={fr.cx("fr-col-12")}>
               <p className={fr.cx("fr-mb-1w")}>
                 <strong>Ce site utilise des cookies</strong>
               </p>
-              <p className={fr.cx("fr-mb-1w")}>
+              <p className={fr.cx("fr-mb-3w")}>
                 Nous utilisons des cookies pour mesurer l&apos;audience et pour
                 le suivi des campagnes publicitaires. Les cookies de mesure
                 d&apos;audience sont nécessaires au bon fonctionnement du site.
@@ -132,28 +132,34 @@ export const CookieConsentDSFR = () => {
                 suivi des campagnes publicitaires.
               </p>
             </div>
+          </div>
+          <div className={fr.cx("fr-grid-row")}>
             <div
               className={fr.cx(
                 "fr-col-12",
-                "fr-col-md-4",
-                "fr-mt-1w",
-                "fr-mt-md-0"
+                "fr-col-offset-md-6",
+                "fr-col-md-6"
               )}
             >
               <div
                 className={fr.cx(
                   "fr-btns-group",
-                  "fr-btns-group--inline-reverse",
-                  "fr-btns-group--inline-md"
+                  "fr-btns-group--right",
+                  "fr-btns-group--inline",
+                  "fr-btns-group--inline-reverse"
                 )}
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  flexWrap: "nowrap",
+                  justifyContent: "flex-end",
+                }}
               >
-                <Button onClick={handleAcceptAll}>Tout accepter</Button>
-                <Button onClick={handleRejectAll} priority="secondary">
-                  Tout refuser
-                </Button>
                 <Button onClick={openModal} priority="tertiary">
                   Personnaliser
                 </Button>
+                <Button onClick={handleRejectAll}>Tout refuser</Button>
+                <Button onClick={handleAcceptAll}>Tout accepter</Button>
               </div>
             </div>
           </div>
@@ -279,21 +285,27 @@ export const CookieConsentDSFR = () => {
                     className={fr.cx(
                       "fr-btns-group",
                       "fr-btns-group--right",
+                      "fr-btns-group--inline",
                       "fr-btns-group--inline-reverse",
                       "fr-btns-group--inline-lg"
                     )}
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      flexWrap: "nowrap",
+                    }}
                   >
                     <li>
                       <Button onClick={handleSaveSettings}>Enregistrer</Button>
                     </li>
                     <li>
-                      <Button onClick={handleAcceptAll} priority="secondary">
-                        Tout accepter
+                      <Button onClick={handleRejectAll} priority="tertiary">
+                        Tout refuser
                       </Button>
                     </li>
                     <li>
-                      <Button onClick={handleRejectAll} priority="tertiary">
-                        Tout refuser
+                      <Button onClick={handleAcceptAll} priority="secondary">
+                        Tout accepter
                       </Button>
                     </li>
                   </ul>
