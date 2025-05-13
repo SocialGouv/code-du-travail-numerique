@@ -232,36 +232,46 @@ export const CookieConsentDSFR = () => {
                   </p>
 
                   <div className={fr.cx("fr-mt-4w")}>
-                    <Checkbox
-                      options={[
-                        {
-                          label: "Mesure d'audience - Obligatoire",
-                          hintText:
-                            "Ces cookies nous permettent d'établir des statistiques de fréquentation de notre site et d'améliorer ses performances.",
-                          nativeInputProps: {
-                            checked: true,
-                            disabled: true,
-                            onChange: () => {}, // No-op function
+                    <fieldset className={fr.cx("fr-fieldset")}>
+                      <legend className={fr.cx("fr-fieldset__legend")}>
+                        Cookies de mesure d&apos;audience
+                      </legend>
+                      <Checkbox
+                        options={[
+                          {
+                            label: "Mesure d'audience - Obligatoire",
+                            hintText:
+                              "Ces cookies nous permettent d'établir des statistiques de fréquentation de notre site et d'améliorer ses performances.",
+                            nativeInputProps: {
+                              checked: true,
+                              disabled: true,
+                              onChange: () => {}, // No-op function
+                            },
                           },
-                        },
-                      ]}
-                    />
+                        ]}
+                      />
+                    </fieldset>
                   </div>
 
                   <div className={fr.cx("fr-mt-2w")}>
-                    <Checkbox
-                      options={[
-                        {
-                          label: "Suivi des campagnes publicitaires",
-                          hintText:
-                            "Ces cookies nous permettent de suivre l'efficacité de nos campagnes publicitaires sur les moteurs de recherche.",
-                          nativeInputProps: {
-                            checked: consent.sea,
-                            onChange: () => handleConsentChange("sea"),
+                    <fieldset className={fr.cx("fr-fieldset")}>
+                      <legend className={fr.cx("fr-fieldset__legend")}>
+                        Cookies de suivi publicitaire
+                      </legend>
+                      <Checkbox
+                        options={[
+                          {
+                            label: "Suivi des campagnes publicitaires",
+                            hintText:
+                              "Ces cookies nous permettent de suivre l'efficacité de nos campagnes publicitaires sur les moteurs de recherche.",
+                            nativeInputProps: {
+                              checked: consent.sea,
+                              onChange: () => handleConsentChange("sea"),
+                            },
                           },
-                        },
-                      ]}
-                    />
+                        ]}
+                      />
+                    </fieldset>
                   </div>
                 </div>
                 <div className={fr.cx("fr-modal__footer")}>

@@ -185,8 +185,15 @@ const InfoTitle = styled.div`
   font-weight: bold;
 `;
 
-const CheckboxGroup = styled.div`
+const CheckboxGroup = styled.fieldset`
   margin-bottom: 1rem;
+  border: none;
+  padding: 0;
+`;
+
+const CheckboxLegend = styled.legend`
+  font-weight: 500;
+  margin-bottom: 0.5rem;
 `;
 
 const CheckboxLabel = styled.label`
@@ -363,6 +370,7 @@ export const CookieConsentLegacy = () => {
             </InfoBox>
 
             <CheckboxGroup>
+              <CheckboxLegend>Cookies de mesure d&apos;audience</CheckboxLegend>
               <CheckboxLabel>
                 <Checkbox
                   type="checkbox"
@@ -384,6 +392,7 @@ export const CookieConsentLegacy = () => {
             </CheckboxGroup>
 
             <CheckboxGroup>
+              <CheckboxLegend>Cookies de suivi publicitaire</CheckboxLegend>
               <CheckboxLabel>
                 <Checkbox
                   type="checkbox"
