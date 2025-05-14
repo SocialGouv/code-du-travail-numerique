@@ -50,19 +50,7 @@ export const PrivacyPolicy = () => {
         </ul>
 
         <h2 className={fr.cx("fr-h3")}>Cookies</h2>
-        <p>
-          Un cookie est un fichier déposé sur votre terminal lors de la visite
-          d&apos;un site. Il a pour but de collecter des informations relatives
-          à votre navigation et de vous adresser des services adaptés à votre
-          terminal (ordinateur, mobile ou tablette).
-        </p>
-        <p>
-          Nous collectons donc des données par l&apos;intermédiaire de
-          dispositifs appelés &quot;cookies&quot; permettant d&apos;établir des
-          mesures statistiques.
-        </p>
 
-        <h3 className={fr.cx("fr-h5", "fr-mb-2w")}>Cookies utilisés</h3>
         <table className={fr.cx("fr-table", "fr-mb-4w")}>
           <thead>
             <tr>
@@ -110,10 +98,17 @@ export const PrivacyPolicy = () => {
             </tr>
           </tbody>
         </table>
-
-        <h3 className={fr.cx("fr-h5", "fr-mb-2w")}>
-          Cookies de mesure d&apos;audience (obligatoires)
-        </h3>
+        <p>
+          Un cookie est un fichier déposé sur votre terminal lors de la visite
+          d&apos;un site. Il a pour but de collecter des informations relatives
+          à votre navigation et de vous adresser des services adaptés à votre
+          terminal (ordinateur, mobile ou tablette).
+        </p>
+        <p>
+          Nous collectons donc des données par l&apos;intermédiaire de
+          dispositifs appelés &quot;cookies&quot; permettant d&apos;établir des
+          mesures statistiques.
+        </p>
         <ul className={fr.cx("fr-mb-4w")}>
           <li>Catégorie de cookie&nbsp;: Mesure d&apos;audience anonymisée</li>
           <li>Nom du cookie&nbsp;: Matomo</li>
