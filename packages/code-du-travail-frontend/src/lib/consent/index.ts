@@ -121,11 +121,15 @@ const SEA_ALLOWED_PATHS = [
 ];
 
 // Check if current path is allowed for SEA tracking
+const normalizePath = (path: string): string => {
+  return path.replace(/\/+$/, "").split("?")[0];
+};
 const isPathAllowedForSEA = (): boolean => {
   if (typeof window === "undefined") return false;
-
-  const currentPath = window.location.pathname;
-  const isAllowed = SEA_ALLOWED_PATHS.some((path) => currentPath === path);
+  const currentPath = normalizePath(window.location.pathname);
+  const isAllowed = SEA_ALLOWED_PATHS.some(
+    (path) => normalizePath(path) === currentPath
+  );
 
   console.log(
     `Current path: ${currentPath}, SEA tracking allowed: ${isAllowed}`
@@ -225,32 +229,28 @@ const setupRouteChangeListener = (): void => {
   // Store the current path
   let currentPath = window.location.pathname;
 
-  // Check for History API support
-  if (window.history && typeof window.history.pushState === "function") {
-    // Create a new observer instance
-    const observer = new MutationObserver(() => {
-      // If the path has changed
-      if (currentPath !== window.location.pathname) {
-        // Update the current path
-        currentPath = window.location.pathname;
-
-        // Reapply consent based on the new path
-        console.log(
-          `Path changed from ${currentPath} to ${window.location.pathname}`
-        );
-
-        const consent = getStoredConsent();
-        const finalConsent = { ...consent, matomo: true };
-
-        console.log("Reapplying consent after path change:", finalConsent);
-
-        applyConsent(finalConsent);
-      }
-    });
-
-    // Start observing the document with the configured parameters
-    observer.observe(document, { subtree: true, childList: true });
-  }
+  // Function to handle route changes
+  const handleRouteChange = (): void => {
+    if (currentPath !== window.location.pathname) {
+      // Update the current path
+      const previousPath = currentPath;
+      currentPath = window.location.pathname;
+      // Reapply consent based on the new path
+      console.log(`Path changed from ${previousPath} to ${currentPath}`);
+      const consent = getStoredConsent();
+      const finalConsent = { ...consent, matomo: true };
+      console.log("Reapplying consent after path change:", finalConsent);
+      applyConsent(finalConsent);
+    }
+  };
+  // Listen for popstate events (back/forward navigation)
+  window.addEventListener("popstate", handleRouteChange);
+  // Monkey-patch pushState to detect programmatic navigation
+  const originalPushState = window.history.pushState;
+  window.history.pushState = function (...args) {
+    originalPushState.apply(this, args);
+    handleRouteChange();
+  };
 };
 
 // Declare global window types
