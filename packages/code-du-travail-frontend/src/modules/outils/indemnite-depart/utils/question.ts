@@ -20,6 +20,27 @@ export const generateSameSalaryQuestion = (
   }&nbsp;?`;
 };
 
+export const generateSameSalaryQuestionSubLabel = (
+  type: IndemniteDepartType,
+  arretTravail: OuiNon | undefined,
+  salaryPeriods: SalaryPeriods[]
+): string | undefined => {
+  if (type === IndemniteDepartType.RUPTURE_CONVENTIONNELLE) {
+    const periodeTexte =
+      salaryPeriods.length === 1
+        ? "le dernier mois"
+        : `les ${salaryPeriods.length} derniers mois`;
+
+    const referencePoint =
+      arretTravail === "oui"
+        ? "l'arrêt de travail"
+        : "la demande d'homologation";
+
+    return `Pour l'estimation, vous pouvez saisir ${periodeTexte} avant ${referencePoint}. Attention, l'indemnité versée devra être calculée sur les 12 mois précédant la rupture du contrat.`;
+  }
+  return undefined;
+};
+
 export const generateSalaireTempsPleinQuestion = (
   type: IndemniteDepartType,
   arretTravail: OuiNon | undefined,

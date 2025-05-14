@@ -25,7 +25,7 @@ export function ContributionAgreementContent({
 }: Props) {
   const { title, metas } = contribution;
   return (
-    <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-my-6w")}>
+    <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mb-6w")}>
       <div
         className={fr.cx("fr-col-12", "fr-col-md-8", "fr-mb-6w", "fr-mb-md-0")}
       >
