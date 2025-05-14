@@ -78,7 +78,11 @@ const ExpandableCard = ({
           {children}
         </div>
       )}
-      {showBottomTab && <div className={bottomTab}></div>}
+      {showBottomTab && (
+        <div className={bottomTabContainer}>
+          <div className={bottomTab(backgroundColor)}></div>
+        </div>
+      )}
     </div>
   );
 };
@@ -145,14 +149,21 @@ const cardContent = css({
   padding: "0 16px 16px 16px",
 });
 
-const bottomTab = css({
+const bottomTabContainer = css({
   position: "absolute",
   bottom: "-15px",
   left: "50%",
   transform: "translateX(-50%)",
-  width: "60px",
+  width: "100px", // Augmenté de 60px à 100px
   height: "30px",
-  background: "inherit",
-  clipPath: "polygon(0% 0%, 100% 0%, 50% 100%)",
-  zIndex: "-1",
+  overflow: "visible",
 });
+
+const bottomTab = (backgroundColor?: string) =>
+  css({
+    width: "100%",
+    height: "100%",
+    background: backgroundColor || "var(--background-alt-blue-cumulus)",
+    clipPath: "polygon(0% 0%, 100% 0%, 50% 100%)",
+    filter: "drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1))",
+  });

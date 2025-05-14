@@ -82,8 +82,12 @@ exports[`<Hierarchy /> renders correctly 1`] = `
               </div>
             </button>
             <div
-              class="pos_absolute bottom_-15px left_50% trf_translateX(-50%) w_60px h_30px bg_inherit cp-path_polygon(0%_0%,_100%_0%,_50%_100%) z_-1"
-            />
+              class="pos_absolute bottom_-15px left_50% trf_translateX(-50%) w_100px h_30px ov_visible"
+            >
+              <div
+                class="w_100% h_100% bg_var(--background-alt-blue-cumulus) cp-path_polygon(0%_0%,_100%_0%,_50%_100%) filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -144,8 +148,12 @@ exports[`<Hierarchy /> renders correctly 1`] = `
               </div>
             </button>
             <div
-              class="pos_absolute bottom_-15px left_50% trf_translateX(-50%) w_60px h_30px bg_inherit cp-path_polygon(0%_0%,_100%_0%,_50%_100%) z_-1"
-            />
+              class="pos_absolute bottom_-15px left_50% trf_translateX(-50%) w_100px h_30px ov_visible"
+            >
+              <div
+                class="w_100% h_100% bg_var(--background-alt-blue-cumulus) cp-path_polygon(0%_0%,_100%_0%,_50%_100%) filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -206,8 +214,12 @@ exports[`<Hierarchy /> renders correctly 1`] = `
               </div>
             </button>
             <div
-              class="pos_absolute bottom_-15px left_50% trf_translateX(-50%) w_60px h_30px bg_inherit cp-path_polygon(0%_0%,_100%_0%,_50%_100%) z_-1"
-            />
+              class="pos_absolute bottom_-15px left_50% trf_translateX(-50%) w_100px h_30px ov_visible"
+            >
+              <div
+                class="w_100% h_100% bg_var(--background-alt-blue-cumulus) cp-path_polygon(0%_0%,_100%_0%,_50%_100%) filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -269,8 +281,12 @@ exports[`<Hierarchy /> renders correctly 1`] = `
               </div>
             </button>
             <div
-              class="pos_absolute bottom_-15px left_50% trf_translateX(-50%) w_60px h_30px bg_inherit cp-path_polygon(0%_0%,_100%_0%,_50%_100%) z_-1"
-            />
+              class="pos_absolute bottom_-15px left_50% trf_translateX(-50%) w_100px h_30px ov_visible"
+            >
+              <div
+                class="w_100% h_100% bg_var(--background-alt-blue-cumulus) cp-path_polygon(0%_0%,_100%_0%,_50%_100%) filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -331,8 +347,12 @@ exports[`<Hierarchy /> renders correctly 1`] = `
               </div>
             </button>
             <div
-              class="pos_absolute bottom_-15px left_50% trf_translateX(-50%) w_60px h_30px bg_inherit cp-path_polygon(0%_0%,_100%_0%,_50%_100%) z_-1"
-            />
+              class="pos_absolute bottom_-15px left_50% trf_translateX(-50%) w_100px h_30px ov_visible"
+            >
+              <div
+                class="w_100% h_100% bg_var(--background-alt-blue-cumulus) cp-path_polygon(0%_0%,_100%_0%,_50%_100%) filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -393,8 +413,12 @@ exports[`<Hierarchy /> renders correctly 1`] = `
               </div>
             </button>
             <div
-              class="pos_absolute bottom_-15px left_50% trf_translateX(-50%) w_60px h_30px bg_inherit cp-path_polygon(0%_0%,_100%_0%,_50%_100%) z_-1"
-            />
+              class="pos_absolute bottom_-15px left_50% trf_translateX(-50%) w_100px h_30px ov_visible"
+            >
+              <div
+                class="w_100% h_100% bg_var(--background-alt-blue-cumulus) cp-path_polygon(0%_0%,_100%_0%,_50%_100%) filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
+              />
+            </div>
           </div>
         </div>
         <div
