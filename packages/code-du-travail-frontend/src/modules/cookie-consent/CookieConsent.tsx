@@ -236,29 +236,33 @@ export const CookieConsentDSFR = () => {
                       <legend className={fr.cx("fr-fieldset__legend")}>
                         Cookies de mesure d&apos;audience
                       </legend>
-                      <div className={fr.cx("fr-toggle")}>
-                        <input
-                          type="checkbox"
-                          className={fr.cx("fr-toggle__input")}
-                          id="toggle-audience"
-                          name="toggle-audience"
-                          checked={true}
-                          disabled={true}
-                          onChange={() => {}}
-                        />
-                        <label
-                          className={fr.cx("fr-toggle__label")}
-                          htmlFor="toggle-audience"
-                          data-fr-checked-label="Activé"
-                          data-fr-unchecked-label="Désactivé"
-                        >
-                          Mesure d&apos;audience - Obligatoire
-                        </label>
-                        <p className={fr.cx("fr-hint-text")}>
-                          Ces cookies nous permettent d&apos;établir des
-                          statistiques de fréquentation de notre site et
-                          d&apos;améliorer ses performances.
-                        </p>
+                      <div className="fr-form-group">
+                        <div className={fr.cx("fr-toggle")}>
+                          <input
+                            type="checkbox"
+                            className={fr.cx("fr-toggle__input")}
+                            id="toggle-audience"
+                            name="toggle-audience"
+                            checked={true}
+                            disabled={true}
+                            onChange={() => {}}
+                            aria-labelledby="toggle-audience-label"
+                          />
+                          <label
+                            className={fr.cx("fr-toggle__label")}
+                            htmlFor="toggle-audience"
+                            id="toggle-audience-label"
+                            data-fr-checked-label="Activé"
+                            data-fr-unchecked-label="Désactivé"
+                          >
+                            Mesure d&apos;audience - Obligatoire
+                          </label>
+                          <p className={fr.cx("fr-hint-text")}>
+                            Ces cookies nous permettent d&apos;établir des
+                            statistiques de fréquentation de notre site et
+                            d&apos;améliorer ses performances.
+                          </p>
+                        </div>
                       </div>
                     </fieldset>
                   </div>
@@ -271,28 +275,32 @@ export const CookieConsentDSFR = () => {
                       <legend className={fr.cx("fr-fieldset__legend")}>
                         Cookies de suivi publicitaire
                       </legend>
-                      <div className={fr.cx("fr-toggle")}>
-                        <input
-                          type="checkbox"
-                          className={fr.cx("fr-toggle__input")}
-                          id="toggle-sea"
-                          name="toggle-sea"
-                          checked={consent.sea}
-                          onChange={() => handleConsentChange("sea")}
-                        />
-                        <label
-                          className={fr.cx("fr-toggle__label")}
-                          htmlFor="toggle-sea"
-                          data-fr-checked-label="Activé"
-                          data-fr-unchecked-label="Désactivé"
-                        >
-                          Suivi des campagnes publicitaires
-                        </label>
-                        <p className={fr.cx("fr-hint-text")}>
-                          Ces cookies nous permettent de suivre
-                          l&apos;efficacité de nos campagnes publicitaires sur
-                          les moteurs de recherche.
-                        </p>
+                      <div className="fr-form-group">
+                        <div className={fr.cx("fr-toggle")}>
+                          <input
+                            type="checkbox"
+                            className={fr.cx("fr-toggle__input")}
+                            id="toggle-sea"
+                            name="toggle-sea"
+                            checked={consent.sea}
+                            onChange={() => handleConsentChange("sea")}
+                            aria-labelledby="toggle-sea-label"
+                          />
+                          <label
+                            className={fr.cx("fr-toggle__label")}
+                            htmlFor="toggle-sea"
+                            id="toggle-sea-label"
+                            data-fr-checked-label="Activé"
+                            data-fr-unchecked-label="Désactivé"
+                          >
+                            Suivi des campagnes publicitaires
+                          </label>
+                          <p className={fr.cx("fr-hint-text")}>
+                            Ces cookies nous permettent de suivre
+                            l&apos;efficacité de nos campagnes publicitaires sur
+                            les moteurs de recherche.
+                          </p>
+                        </div>
                       </div>
                     </fieldset>
                   </div>
