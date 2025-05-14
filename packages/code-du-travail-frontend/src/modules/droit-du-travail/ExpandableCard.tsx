@@ -154,7 +154,7 @@ const bottomTabContainer = css({
   bottom: "-15px",
   left: "50%",
   transform: "translateX(-50%)",
-  width: "100px", // Augmenté de 60px à 100px
+  width: "100px",
   height: "30px",
   overflow: "visible",
 });
