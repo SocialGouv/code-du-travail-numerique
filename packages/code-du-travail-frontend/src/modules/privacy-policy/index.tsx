@@ -51,53 +51,53 @@ export const PrivacyPolicy = () => {
 
         <h2 className={fr.cx("fr-h3")}>Cookies</h2>
 
-        <table className={fr.cx("fr-table", "fr-mb-4w")}>
-          <thead>
-            <tr>
-              <th scope="col">Cookies</th>
-              <th scope="col">Pays destinataires</th>
-              <th scope="col">Base juridique</th>
-              <th scope="col">Finalités</th>
-              <th scope="col">Durée</th>
-              <th scope="col">Garanties</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Matomo</td>
-              <td>France (Auto-hébergèrent)</td>
-              <td>Exemption de consentement</td>
-              <td>Mesure d&apos;audience</td>
-              <td>13 mois</td>
-              <td>
-                <Link
-                  href="https://fr.matomo.org/privacy-policy/"
-                  target="_blank"
-                >
-                  https://fr.matomo.org/privacy-policy/
-                </Link>
-              </td>
-            </tr>
-            <tr>
-              <td>Google Tag Manager</td>
-              <td>Etats-Unis</td>
-              <td>Consentement</td>
-              <td>
-                Gestion de balises, publicité et suivi d&apos;interface
-                utilisateur
-              </td>
-              <td>13 mois</td>
-              <td>
-                <Link
-                  href="https://policies.google.com/privacy?hl=fr"
-                  target="_blank"
-                >
-                  https://policies.google.com/privacy?hl=fr
-                </Link>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <h3 className={fr.cx("fr-h5", "fr-mb-2w")}>Matomo</h3>
+        <ul className={fr.cx("fr-mb-3w")}>
+          <li>
+            <strong>Pays destinataires :</strong> France (Auto-hébergèrent)
+          </li>
+          <li>
+            <strong>Base juridique :</strong> Exemption de consentement
+          </li>
+          <li>
+            <strong>Finalités :</strong> Mesure d&apos;audience
+          </li>
+          <li>
+            <strong>Durée :</strong> 13 mois
+          </li>
+          <li>
+            <strong>Garanties :</strong>{" "}
+            <Link href="https://fr.matomo.org/privacy-policy/" target="_blank">
+              https://fr.matomo.org/privacy-policy/
+            </Link>
+          </li>
+        </ul>
+
+        <h3 className={fr.cx("fr-h5", "fr-mb-2w")}>Google Tag Manager</h3>
+        <ul className={fr.cx("fr-mb-4w")}>
+          <li>
+            <strong>Pays destinataires :</strong> Etats-Unis
+          </li>
+          <li>
+            <strong>Base juridique :</strong> Consentement
+          </li>
+          <li>
+            <strong>Finalités :</strong> Gestion de balises, publicité et suivi
+            d&apos;interface utilisateur
+          </li>
+          <li>
+            <strong>Durée :</strong> 13 mois
+          </li>
+          <li>
+            <strong>Garanties :</strong>{" "}
+            <Link
+              href="https://policies.google.com/privacy?hl=fr"
+              target="_blank"
+            >
+              https://policies.google.com/privacy?hl=fr
+            </Link>
+          </li>
+        </ul>
         <p>
           Un cookie est un fichier déposé sur votre terminal lors de la visite
           d&apos;un site. Il a pour but de collecter des informations relatives
