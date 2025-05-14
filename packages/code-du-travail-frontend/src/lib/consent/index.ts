@@ -122,7 +122,8 @@ const SEA_ALLOWED_PATHS = [
 
 // Check if current path is allowed for SEA tracking
 const normalizePath = (path: string): string => {
-  return path.replace(/\/+$/, "").split("?")[0];
+  // Remove trailing slashes, query parameters and anchors
+  return path.replace(/\/+$/, "").split(/[?#]/)[0];
 };
 const isPathAllowedForSEA = (): boolean => {
   if (typeof window === "undefined") return false;
