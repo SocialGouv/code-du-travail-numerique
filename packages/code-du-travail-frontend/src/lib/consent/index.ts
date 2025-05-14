@@ -149,6 +149,15 @@ const applySeaConsent = (isConsented: boolean): void => {
     if (isConsented && isAllowed) {
       console.log("Activation du tracking SEA sur une page autorisée.");
 
+      // Remove the opt-out cookie if it exists
+      const disableStr = "ga-disable-DC-3048978";
+      document.cookie =
+        disableStr + "=false; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
+      window[disableStr] = false;
+      console.log(
+        "Enabling Google Analytics tracking (removing opt-out cookie)"
+      );
+
       // Load Google Tag Manager script if not already loaded
       if (!document.getElementById("gtm-script")) {
         const script = document.createElement("script");
