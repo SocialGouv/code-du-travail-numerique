@@ -398,7 +398,9 @@ export const CookieConsentLegacy = () => {
             <CheckboxGroup>
               <CheckboxLegend>Cookies de mesure d&apos;audience</CheckboxLegend>
               <ToggleContainer>
-                <ToggleTitle>Mesure d&apos;audience - Obligatoire</ToggleTitle>
+                <ToggleTitle id="toggle-audience-label-legacy">
+                  Mesure d&apos;audience - Obligatoire
+                </ToggleTitle>
                 <ToggleDescription>
                   Ces cookies nous permettent d&apos;établir des statistiques de
                   fréquentation de notre site et d&apos;améliorer ses
@@ -407,10 +409,12 @@ export const CookieConsentLegacy = () => {
                 <ToggleRow>
                   <ToggleSwitch>
                     <ToggleInput
+                      id="toggle-audience-legacy"
                       type="checkbox"
                       checked={true}
                       disabled={true}
                       onChange={() => {}} // No-op function
+                      aria-labelledby="toggle-audience-label-legacy"
                     />
                     <ToggleSlider />
                   </ToggleSwitch>
@@ -422,7 +426,9 @@ export const CookieConsentLegacy = () => {
             <CheckboxGroup>
               <CheckboxLegend>Cookies de suivi publicitaire</CheckboxLegend>
               <ToggleContainer>
-                <ToggleTitle>Suivi des campagnes publicitaires</ToggleTitle>
+                <ToggleTitle id="toggle-sea-label-legacy">
+                  Suivi des campagnes publicitaires
+                </ToggleTitle>
                 <ToggleDescription>
                   Ces cookies nous permettent de suivre l&apos;efficacité de nos
                   campagnes publicitaires sur les moteurs de recherche.
@@ -430,9 +436,11 @@ export const CookieConsentLegacy = () => {
                 <ToggleRow>
                   <ToggleSwitch>
                     <ToggleInput
+                      id="toggle-sea-legacy"
                       type="checkbox"
                       checked={consent.sea}
                       onChange={() => handleConsentChange("sea")}
+                      aria-labelledby="toggle-sea-label-legacy"
                     />
                     <ToggleSlider />
                   </ToggleSwitch>
