@@ -7,7 +7,7 @@ describe("Pages Politique confidentialité", () => {
     );
     cy.get("body").should(
       "contain",
-      "Le Code du travail numérique ne vous demande ni ne stocke d’information nominative."
+      "Le Code du travail numérique ne vous demande ni ne stocke d'information à caractère personnel."
     );
   });
 });
