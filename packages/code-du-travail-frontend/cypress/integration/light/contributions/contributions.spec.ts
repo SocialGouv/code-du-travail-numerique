@@ -13,12 +13,10 @@ describe("Contributions", () => {
       "contain",
       "Obtenez une réponse personnalisée selon votre convention collective"
     );
-    cy.get("#content h2").should("have.length", 6);
-    cy.get("#content h2")
-      .first()
-      .should("contain", "Embauche et contrat de travail");
-    cy.get("#content li").should("have.length.at.least", 1);
-    cy.get("#content li").first().click();
+    cy.get("h2").should("have.length", 6);
+    cy.get("h2").first().should("contain", "Embauche et contrat de travail");
+    cy.get("h3").should("have.length.at.least", 1);
+    cy.get("h3").first().click();
     cy.urlEqual("/contribution/la-periode-dessai-peut-elle-etre-renouvelee");
   });
   it("je vois une page contribution", () => {
