@@ -7,12 +7,17 @@ enum MatomoThemeCategory {
 
 export const useThemeTracking = () => {
   const emitDocumentClickButtonEvent = (
-    source: keyof typeof routeBySource,
-    slug: string
+    source: keyof typeof routeBySource | "external",
+    slug: string,
+    externalUrl?: string
   ) => {
     sendEvent({
       category: MatomoThemeCategory.SELECT_RESULT,
-      action: JSON.stringify({ url: `/${getRouteBySource(source)}/${slug}` }),
+      action: JSON.stringify({
+        url:
+          externalUrl ||
+          `/${getRouteBySource(source as keyof typeof routeBySource)}/${slug}`,
+      }),
     });
   };
 
