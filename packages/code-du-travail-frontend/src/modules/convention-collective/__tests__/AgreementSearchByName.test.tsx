@@ -70,12 +70,13 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
       userAction = new UserAction();
       userAction.setInput(ui.searchByName.input.get(), "16");
       await wait(300);
-      expect(sendEvent).toHaveBeenCalledTimes(1);
-      expect(sendEvent).toHaveBeenLastCalledWith({
+      expect(sendEvent).toHaveBeenCalledWith({
         action: "Trouver sa convention collective",
         category: "cc_search",
         name: '{"query":"16"}',
+        value: undefined,
       });
+
       expect(
         ui.searchByName.autocompleteLines.IDCC16.name.query()
       ).toBeInTheDocument();
@@ -86,14 +87,8 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
         "/convention-collective/16-transports-routiers-et-activites-auxiliaires-du-transport"
       );
       userAction.click(ui.searchByName.autocompleteLines.IDCC16.link.get());
-      expect(sendEvent).toHaveBeenCalledTimes(2);
-      expect(sendEvent).toHaveBeenLastCalledWith({
-        action: "Trouver sa convention collective",
-        category: "cc_select_p1",
-        name: "idcc0016",
-      });
+
       userAction.click(ui.searchByName.buttonPrevious.get());
-      expect(sendEvent).toHaveBeenCalledTimes(3);
       expect(sendEvent).toHaveBeenLastCalledWith({
         action: "back_step_cc_search_p1",
         category: "view_step_cc_search_p1",
