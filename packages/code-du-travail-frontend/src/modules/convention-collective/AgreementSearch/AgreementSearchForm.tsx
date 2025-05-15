@@ -7,6 +7,8 @@ import { useContributionTracking } from "../../contributions/tracking";
 import { EnterpriseAgreementSearchInput } from "../../enterprise";
 import { AgreementRoute } from "../../../outils/common/type/WizardType";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
+import { useEnterpriseAgreementSearchTracking } from "src/modules/enterprise/EnterpriseAgreementSearch/tracking";
+import { useAgreementSearchTracking } from "../tracking";
 
 type Props = {
   onAgreementSelect: (agreement?: Agreement) => void;
@@ -34,6 +36,12 @@ export const AgreementSearchForm = ({
   }, [defaultAgreement]);
 
   const { emitClickP1, emitClickP2 } = useContributionTracking();
+  const {
+    emitSelectEnterpriseEvent,
+    emitNoEnterpriseSelectEvent,
+    emitSelectEnterpriseAgreementEvent,
+  } = useEnterpriseAgreementSearchTracking();
+  const { emitSelectEvent } = useAgreementSearchTracking();
 
   return (
     <>
@@ -64,6 +72,9 @@ export const AgreementSearchForm = ({
       {selectedRoute === "agreement" && (
         <AgreementSearchInput
           onAgreementSelect={(agreement) => {
+            if (agreement) {
+              emitSelectEvent(`idcc${agreement.id}`, trackingActionName);
+            }
             emitClickP1(trackingActionName);
             onAgreementSelect(agreement);
           }}
@@ -74,7 +85,19 @@ export const AgreementSearchForm = ({
       )}
       {selectedRoute === "enterprise" && (
         <EnterpriseAgreementSearchInput
-          onAgreementSelect={(agreement) => {
+          onAgreementSelect={(agreement, enterprise) => {
+            if (enterprise) {
+              emitSelectEnterpriseEvent(trackingActionName, {
+                label: enterprise.label,
+                siren: enterprise.siren,
+              });
+              emitSelectEnterpriseAgreementEvent(
+                `idcc${enterprise.conventions[0].num}`,
+                trackingActionName
+              );
+            } else {
+              emitNoEnterpriseSelectEvent();
+            }
             emitClickP2(trackingActionName);
             onAgreementSelect(agreement);
           }}

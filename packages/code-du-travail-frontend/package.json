@@ -1,6 +1,6 @@
 {
   "name": "@cdt/frontend",
-  "version": "4.179.1",
+  "version": "4.180.0",
   "description": "Code du travail frontend",
   "private": true,
   "homepage": "https://code-du-travail.beta.gouv.fr/",
@@ -66,7 +66,7 @@
     "lit": "2.6.1",
     "lodash.deburr": "^4.1.0",
     "memoizee": "^0.4.15",
-    "next": "14.2.25",
+    "next": "14.2.28",
     "p-debounce": "^2.1.0",
     "prettier": "^3.3.3",
     "prop-types": "^15.8.1",

@@ -59,6 +59,22 @@ const dataTheme = {
   ],
 };
 
+const dataThemeWithExternalRef = {
+  ...dataTheme,
+  refs: [
+    ...dataTheme.refs,
+    {
+      cdtnId: "",
+      breadcrumbs: [],
+      title: "Document Externe",
+      slug: "document_externe",
+      source: "external",
+      url: "https://example.com/document",
+      description: "Description du document externe",
+    },
+  ],
+};
+
 describe("<ThemeModel />", () => {
   it("validation du contenu de la page d'un thème", () => {
     const { container } = render(<ThemeModel theme={dataTheme} />);
@@ -94,5 +110,35 @@ describe("<ThemeModel />", () => {
   it("affiche un thème", () => {
     const { container } = render(<ThemeModel theme={dataTheme} />);
     expect(container).toMatchSnapshot();
+  });
+
+  it("utilise l'URL externe pour les références avec source 'external'", () => {
+    const { container } = render(
+      <ThemeModel theme={dataThemeWithExternalRef as any} />
+    );
+
+    const documentList = getAllByRole(container, "list")[2];
+    const documents = getAllByRole(documentList, "listitem");
+    expect(documents).toHaveLength(3);
+
+    // Vérifier que le troisième document (externe) a le bon lien
+    const externalDocument = documents[2];
+    expect(getAllByRole(externalDocument, "link")).toHaveLength(1);
+    expect(
+      getAllByRole(externalDocument, "link")[0].getAttribute("href")
+    ).toEqual("https://example.com/document");
+
+    const externalDocumentTitle = getAllByRole(externalDocument, "heading", {
+      level: 2,
+    })[0];
+    expect(externalDocumentTitle).toHaveTextContent("Document Externe");
+
+    fireEvent.click(getByRole(externalDocumentTitle, "link"));
+
+    expect(matopush).toHaveBeenCalledWith([
+      "trackEvent",
+      "selectResult",
+      `{"url":"https://example.com/document"}`,
+    ]);
   });
 });
