@@ -48,7 +48,7 @@ export function ContributionGenericContent({
             "fr-col-12",
             "fr-col-md-8",
             "fr-mb-md-0",
-            "fr-mt-6w",
+            "fr-mt-2w",
             "fr-p-0",
             !displayGeneric && "fr-hidden"
           )}

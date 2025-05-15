@@ -7,6 +7,7 @@ import { AgreementsInjector } from "../../agreements";
 import {
   generateSalaireTempsPleinQuestion,
   generateSameSalaryQuestion,
+  generateSameSalaryQuestionSubLabel,
   generateSmallText,
 } from "../../utils/question";
 import { IndemniteDepartType } from "../../types";
@@ -107,6 +108,11 @@ const StepSalaires = ({ type }: Props) => {
             ]}
             name="hasSameSalary"
             label={generateSameSalaryQuestion(
+              type,
+              arretTravail,
+              salaryPeriods
+            )}
+            subLabel={generateSameSalaryQuestionSubLabel(
               type,
               arretTravail,
               salaryPeriods

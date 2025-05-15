@@ -4,6 +4,7 @@ import {
   generateResultSameSalary,
   generateSalaireTempsPleinQuestion,
   generateSameSalaryQuestion,
+  generateSameSalaryQuestionSubLabel,
 } from "../question";
 import { IndemniteDepartType } from "../../types";
 
@@ -147,6 +148,48 @@ describe("question.ts", () => {
       (type, arretTravail, salaryPeriods, expected) => {
         expect(
           generateResultSalaireTempsPlein(type, arretTravail, salaryPeriods)
+        ).toBe(expected);
+      }
+    );
+  });
+
+  describe("generateSameSalaryQuestionSubLabel", () => {
+    it.each([
+      [
+        IndemniteDepartType.RUPTURE_CONVENTIONNELLE,
+        "non" as OuiNon,
+        [{ month: "janvier" }],
+        "Pour l'estimation, vous pouvez saisir les derniers mois connus avant la demande d'homologation. Attention, l'indemnité versée devra être calculée sur le mois précédant la rupture du contrat.",
+      ],
+      [
+        IndemniteDepartType.RUPTURE_CONVENTIONNELLE,
+        "non" as OuiNon,
+        [{ month: "janvier" }, { month: "février" }, { month: "mars" }],
+        "Pour l'estimation, vous pouvez saisir les derniers mois connus avant la demande d'homologation. Attention, l'indemnité versée devra être calculée sur les 3 mois précédant la rupture du contrat.",
+      ],
+      [
+        IndemniteDepartType.RUPTURE_CONVENTIONNELLE,
+        undefined,
+        [{ month: "janvier" }, { month: "février" }],
+        "Pour l'estimation, vous pouvez saisir les derniers mois connus avant la demande d'homologation. Attention, l'indemnité versée devra être calculée sur les 2 mois précédant la rupture du contrat.",
+      ],
+      [
+        IndemniteDepartType.RUPTURE_CONVENTIONNELLE,
+        "oui" as OuiNon,
+        [{ month: "janvier" }],
+        undefined,
+      ],
+      [
+        IndemniteDepartType.LICENCIEMENT,
+        "non" as OuiNon,
+        [{ month: "janvier" }],
+        undefined,
+      ],
+    ])(
+      "should return the correct subLabel for type %s, arretTravail %s, and salaryPeriods with %i month(s)",
+      (type, arretTravail, salaryPeriods, expected) => {
+        expect(
+          generateSameSalaryQuestionSubLabel(type, arretTravail, salaryPeriods)
         ).toBe(expected);
       }
     );
