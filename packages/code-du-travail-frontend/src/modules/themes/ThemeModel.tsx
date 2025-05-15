@@ -84,15 +84,15 @@ export const ThemeModel = ({ theme }: Props) => {
                 linkProps={{
                   href:
                     refs.source === "external" &&
-                    (refs as unknown as RelatedDocument).url !== undefined
-                      ? (refs as unknown as RelatedDocument).url!
+                    (refs as RelatedDocument<"external">).url
+                      ? (refs as RelatedDocument<"external">).url!
                       : `/${getRouteBySource(refs.source)}/${refs.slug}`,
                   onClick: () =>
                     refs.source === "external"
                       ? emitDocumentClickButtonEvent(
                           refs.source,
                           refs.slug,
-                          (refs as unknown as RelatedDocument).url
+                          (refs as RelatedDocument<"external">).url
                         )
                       : emitDocumentClickButtonEvent(refs.source, refs.slug),
                 }}
