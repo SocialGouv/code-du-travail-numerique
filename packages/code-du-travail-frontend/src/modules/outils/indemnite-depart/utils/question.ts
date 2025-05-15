@@ -25,18 +25,16 @@ export const generateSameSalaryQuestionSubLabel = (
   arretTravail: OuiNon | undefined,
   salaryPeriods: SalaryPeriods[]
 ): string | undefined => {
-  if (type === IndemniteDepartType.RUPTURE_CONVENTIONNELLE) {
+  if (
+    type === IndemniteDepartType.RUPTURE_CONVENTIONNELLE &&
+    (!arretTravail || arretTravail === "non")
+  ) {
     const periodeTexte =
       salaryPeriods.length === 1
-        ? "le dernier mois"
-        : `les ${salaryPeriods.length} derniers mois`;
+        ? "le mois"
+        : `les ${salaryPeriods.length} mois`;
 
-    const referencePoint =
-      arretTravail === "oui"
-        ? "l'arrêt de travail"
-        : "la demande d'homologation";
-
-    return `Pour l'estimation, vous pouvez saisir ${periodeTexte} avant ${referencePoint}. Attention, l'indemnité versée devra être calculée sur les 12 mois précédant la rupture du contrat.`;
+    return `Pour l'estimation, vous pouvez saisir les derniers mois connus avant la demande d'homologation. Attention, l'indemnité versée devra être calculée sur ${periodeTexte} précédant la rupture du contrat.`;
   }
   return undefined;
 };

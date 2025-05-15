@@ -155,35 +155,30 @@ describe("question.ts", () => {
 
   describe("generateSameSalaryQuestionSubLabel", () => {
     it.each([
-      // Pour une rupture conventionnelle avec 1 période de salaire, sans arrêt de travail
       [
         IndemniteDepartType.RUPTURE_CONVENTIONNELLE,
         "non" as OuiNon,
         [{ month: "janvier" }],
-        "Pour l'estimation, vous pouvez saisir le dernier mois avant la demande d'homologation. Attention, l'indemnité versée devra être calculée sur les 12 mois précédant la rupture du contrat.",
+        "Pour l'estimation, vous pouvez saisir les derniers mois connus avant la demande d'homologation. Attention, l'indemnité versée devra être calculée sur le mois précédant la rupture du contrat.",
       ],
-      // Pour une rupture conventionnelle avec 1 période de salaire, avec arrêt de travail
-      [
-        IndemniteDepartType.RUPTURE_CONVENTIONNELLE,
-        "oui" as OuiNon,
-        [{ month: "janvier" }],
-        "Pour l'estimation, vous pouvez saisir le dernier mois avant l'arrêt de travail. Attention, l'indemnité versée devra être calculée sur les 12 mois précédant la rupture du contrat.",
-      ],
-      // Pour une rupture conventionnelle avec plusieurs périodes de salaire, sans arrêt de travail
       [
         IndemniteDepartType.RUPTURE_CONVENTIONNELLE,
         "non" as OuiNon,
         [{ month: "janvier" }, { month: "février" }, { month: "mars" }],
-        "Pour l'estimation, vous pouvez saisir les 3 derniers mois avant la demande d'homologation. Attention, l'indemnité versée devra être calculée sur les 12 mois précédant la rupture du contrat.",
+        "Pour l'estimation, vous pouvez saisir les derniers mois connus avant la demande d'homologation. Attention, l'indemnité versée devra être calculée sur les 3 mois précédant la rupture du contrat.",
       ],
-      // Pour une rupture conventionnelle avec plusieurs périodes de salaire, avec arrêt de travail
+      [
+        IndemniteDepartType.RUPTURE_CONVENTIONNELLE,
+        undefined,
+        [{ month: "janvier" }, { month: "février" }],
+        "Pour l'estimation, vous pouvez saisir les derniers mois connus avant la demande d'homologation. Attention, l'indemnité versée devra être calculée sur les 2 mois précédant la rupture du contrat.",
+      ],
       [
         IndemniteDepartType.RUPTURE_CONVENTIONNELLE,
         "oui" as OuiNon,
-        [{ month: "janvier" }, { month: "février" }],
-        "Pour l'estimation, vous pouvez saisir les 2 derniers mois avant l'arrêt de travail. Attention, l'indemnité versée devra être calculée sur les 12 mois précédant la rupture du contrat.",
+        [{ month: "janvier" }],
+        undefined,
       ],
-      // Pour un licenciement (autre type que rupture conventionnelle), devrait retourner undefined
       [
         IndemniteDepartType.LICENCIEMENT,
         "non" as OuiNon,
