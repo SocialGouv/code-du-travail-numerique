@@ -139,11 +139,4 @@ describe("<SearchCard />", () => {
     const title = screen.getByText("Titre du document");
     expect(title.tagName).toBe("H3");
   });
-
-  it("should apply blue-france class to title", () => {
-    render(<SearchCard {...defaultProps} />);
-
-    const title = screen.getByText("Titre du document");
-    expect(title).toHaveClass("fr-card__title--blue-france");
-  });
 });

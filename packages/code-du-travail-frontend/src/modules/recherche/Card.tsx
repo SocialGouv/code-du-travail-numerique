@@ -10,6 +10,7 @@ type SearchCardProps = {
   category?: string;
   link: string;
   onClick?: () => void;
+  hiddenHeader?: boolean;
 };
 
 export const SearchCard: React.FC<SearchCardProps> = ({
@@ -18,6 +19,7 @@ export const SearchCard: React.FC<SearchCardProps> = ({
   category,
   link,
   onClick,
+  hiddenHeader = false,
 }) => {
   return (
     <div className="fr-col-12 fr-col-md-6">
@@ -39,8 +41,7 @@ export const SearchCard: React.FC<SearchCardProps> = ({
         }}
         desc={summarize(description)}
         classes={{
-          start: fr.cx("fr-mb-2w"),
-          title: "fr-card__title--blue-france",
+          start: hiddenHeader ? fr.cx("fr-hidden") : fr.cx("fr-mb-2w"),
         }}
       />
     </div>

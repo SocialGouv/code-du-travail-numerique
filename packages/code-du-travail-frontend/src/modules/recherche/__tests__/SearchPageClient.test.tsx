@@ -31,12 +31,28 @@ jest.mock("../SearchBar", () => ({
   )),
 }));
 
+// Mock le composant SearchCard
+jest.mock("../Card", () => ({
+  SearchCard: jest.fn(({ title, description, category, link }) => (
+    <div data-testid="search-card">
+      <h3>{title}</h3>
+      <p>{description}</p>
+      {category && <span>{category}</span>}
+      <a href={link} data-testid="search-card-link">
+        Voir plus
+      </a>
+    </div>
+  )),
+}));
+
 // Mock le composant Button de @codegouvfr/react-dsfr
 jest.mock("@codegouvfr/react-dsfr/Button", () => ({
-  Button: jest.fn(({ children, onClick, priority }) => (
+  Button: jest.fn(({ children, onClick, priority, linkProps }) => (
     <button
       onClick={onClick}
       className={`fr-btn ${priority ? `fr-btn--${priority}` : ""}`}
+      data-testid="theme-button"
+      data-href={linkProps?.href}
     >
       {children}
     </button>
@@ -170,5 +186,104 @@ describe("<SearchPageClient />", () => {
     expect(
       screen.queryByRole("button", { name: "Plus de résultats" })
     ).not.toBeInTheDocument();
+  });
+
+  it("should include query parameter in result links", () => {
+    const mockItems = {
+      documents: [
+        {
+          source: "contributions",
+          slug: "doc1",
+          title: "Document 1",
+          description: "Description du document 1",
+          breadcrumbs: [{ label: "Catégorie 1" }],
+        },
+      ],
+      themes: [{ slug: "theme1", title: "Thème 1" }],
+      articles: [
+        {
+          source: "code_du_travail",
+          slug: "L1234-5",
+          title: "Article L1234-5",
+          description: "Description de l'article L1234-5",
+        },
+      ],
+    };
+
+    render(<SearchPageClient query="test query" items={mockItems} />);
+
+    // Vérifier que les liens des résultats généraux incluent le paramètre q=
+    const documentLinks = screen.getAllByTestId("search-card-link");
+    expect(documentLinks[0]).toHaveAttribute(
+      "href",
+      "/contributions-route/doc1?q=test%20query"
+    );
+
+    // Vérifier que les liens des articles du code du travail incluent le paramètre q=
+    const articleCardLinks = screen.getAllByTestId("search-card-link");
+    const articleLink = articleCardLinks.find((link) =>
+      link
+        .closest("[data-testid='search-card']")
+        ?.textContent?.includes("L1234-5")
+    );
+    expect(articleLink).toHaveAttribute(
+      "href",
+      "/code-du-travail/L1234-5?q=test%20query"
+    );
+
+    // Vérifier que les liens des thèmes incluent le paramètre q=
+    const themeButtons = screen.getAllByTestId("theme-button");
+    expect(themeButtons[0]).toHaveAttribute(
+      "data-href",
+      "/themes/theme1?q=test%20query"
+    );
+  });
+  it("should use direct URL for external sources", () => {
+    const mockItems = {
+      documents: [
+        {
+          source: "external",
+          slug: "external-doc",
+          title: "External Document",
+          description: "Description of external document",
+          url: "https://external-site.com/page",
+          breadcrumbs: [{ label: "External Category" }],
+        },
+        {
+          source: "contributions",
+          slug: "internal-doc",
+          title: "Internal Document",
+          description: "Description of internal document",
+          breadcrumbs: [{ label: "Internal Category" }],
+        },
+      ],
+      themes: [],
+      articles: [],
+    };
+
+    render(<SearchPageClient query="test query" items={mockItems} />);
+
+    // Verify that external link uses the direct URL
+    const documentLinks = screen.getAllByTestId("search-card-link");
+    const externalLink = documentLinks.find((link) =>
+      link
+        .closest("[data-testid='search-card']")
+        ?.textContent?.includes("External Document")
+    );
+    expect(externalLink).toHaveAttribute(
+      "href",
+      "https://external-site.com/page"
+    );
+
+    // Verify that internal link still uses the constructed path
+    const internalLink = documentLinks.find((link) =>
+      link
+        .closest("[data-testid='search-card']")
+        ?.textContent?.includes("Internal Document")
+    );
+    expect(internalLink).toHaveAttribute(
+      "href",
+      "/contributions-route/internal-doc?q=test%20query"
+    );
   });
 });

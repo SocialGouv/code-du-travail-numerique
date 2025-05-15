@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
-import { Breadcrumb } from "@codegouvfr/react-dsfr/Breadcrumb";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
 import { SearchBar } from "./SearchBar";
@@ -99,7 +98,11 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                     title={item.title}
                     description={item.description || ""}
                     category={category}
-                    link={`/${getRouteBySource(item.source)}/${item.slug}`}
+                    link={
+                      item.source === "external" && item.url
+                        ? item.url
+                        : `/${getRouteBySource(item.source)}/${item.slug}?q=${encodeURIComponent(query)}`
+                    }
                   />
                 );
               })}
@@ -131,7 +134,8 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                     key={`${article.source}-${article.slug || index}`}
                     title={article.slug}
                     description={article.description || ""}
-                    link={`/code-du-travail/${article.slug}`}
+                    link={`/code-du-travail/${article.slug}?q=${encodeURIComponent(query)}`}
+                    hiddenHeader
                   />
                 ))}
               </div>
@@ -154,7 +158,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                   <Button
                     key={index}
                     linkProps={{
-                      href: `/themes/${theme.slug}`,
+                      href: `/themes/${theme.slug}?q=${encodeURIComponent(query)}`,
                     }}
                     priority="secondary"
                     className={fr.cx("fr-mr-2w", "fr-mb-2w")}
