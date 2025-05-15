@@ -48,6 +48,29 @@ export default class MyDocument extends Document {
             type="text/css"
             href="/static/fonts.css"
           />
+
+          {/* Google Tag Manager placeholder - Will only be activated with user consent */}
+          <script
+            id="gtm-script-placeholder"
+            dangerouslySetInnerHTML={{
+              __html: `
+                // This is just a placeholder. The actual GTM script will be loaded
+                // dynamically only after user gives explicit consent for SEA tracking.
+                // See src/lib/consent/index.ts for the implementation.
+                
+                // The following calls will be made AFTER consent in src/lib/consent/index.ts:
+                // - gtag('js', new Date());
+                // - gtag('config', 'DC-3048978');
+                
+                // Define empty functions to prevent errors if called before consent
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function() {
+                  // Do nothing until consent is given
+                  console.log('GTM tracking blocked: waiting for user consent');
+                };
+              `,
+            }}
+          />
         </Head>
         <body>
           <noscript>

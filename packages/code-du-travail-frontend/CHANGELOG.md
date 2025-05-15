@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.180.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.179.1...v4.180.0) (2025-05-14)
+
+
+### Bug Fixes
+
+* e2e tests nombre contrib ([#6560](https://github.com/SocialGouv/code-du-travail-numerique/issues/6560)) ([e0bb28c](https://github.com/SocialGouv/code-du-travail-numerique/commit/e0bb28c4b63e08fe2a7509d14b17144fa28979ef))
+
+
+### Features
+
+* implementation de la campagne SEA 2025 ([#6569](https://github.com/SocialGouv/code-du-travail-numerique/issues/6569)) ([93880ac](https://github.com/SocialGouv/code-du-travail-numerique/commit/93880acfc8474009d7a4d2a9d753dc029fafb5ab))
+* **preavis-retraite:** passage en dsfr ([#6524](https://github.com/SocialGouv/code-du-travail-numerique/issues/6524)) ([52c7509](https://github.com/SocialGouv/code-du-travail-numerique/commit/52c75091f10dd58acc3a0a7193100a67ac4db045))
+
+
+
+
+
 ## [4.179.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.179.0...v4.179.1) (2025-04-30)
 
 
