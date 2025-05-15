@@ -205,7 +205,7 @@ const autocompleteListContainer = css({
   top: "100%",
   left: 0,
   width: "100%",
-  zIndex: 10,
+  zIndex: 1000,
   bg: "var(--background-default-grey)",
   listStyleType: "none!",
   borderTop: "none",
