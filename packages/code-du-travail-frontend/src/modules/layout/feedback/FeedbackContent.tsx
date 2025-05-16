@@ -91,48 +91,54 @@ export const FeedbackContent = (props: Props) => {
   return (
     <>
       <h2 className={fr.cx("fr-h5")}>Merci pour votre réponse.</h2>
+
       {props.type === "negative" && (
-        <Checkbox
-          legend="Pouvez-vous nous en dire plus ?"
-          options={[
-            {
-              label: "Les informations ne sont pas claires",
-              nativeInputProps: {
-                name: "unclear",
-                value: FeedbackActionChoiceValue.unclear,
-                onChange: onChangeCategories,
-                ref: setFirstCheckboxRef,
+        <>
+          <p className={fr.cx("fr-text--sm")}>
+            Choisissez une réponse ou faites une suggestion pour valider
+          </p>
+          <Checkbox
+            legend="Pouvez-vous nous en dire plus ?"
+            options={[
+              {
+                label: "Les informations ne sont pas claires",
+                nativeInputProps: {
+                  name: "unclear",
+                  value: FeedbackActionChoiceValue.unclear,
+                  onChange: onChangeCategories,
+                  ref: setFirstCheckboxRef,
+                },
               },
-            },
-            {
-              label:
-                "Cette page ne correspond pas à ma recherche ou à ma situation.",
-              nativeInputProps: {
-                name: "unrelated",
-                value: FeedbackActionChoiceValue.unrelated,
-                onChange: onChangeCategories,
+              {
+                label:
+                  "Cette page ne correspond pas à ma recherche ou à ma situation.",
+                nativeInputProps: {
+                  name: "unrelated",
+                  value: FeedbackActionChoiceValue.unrelated,
+                  onChange: onChangeCategories,
+                },
               },
-            },
-            {
-              label: "Je ne suis pas satisfait de cette réglementation.",
-              nativeInputProps: {
-                name: "unsatisfied",
-                value: FeedbackActionChoiceValue.unsatisfied,
-                onChange: onChangeCategories,
+              {
+                label: "Je ne suis pas satisfait de cette réglementation.",
+                nativeInputProps: {
+                  name: "unsatisfied",
+                  value: FeedbackActionChoiceValue.unsatisfied,
+                  onChange: onChangeCategories,
+                },
               },
-            },
-            {
-              label: "Les informations me semblent fausses.",
-              nativeInputProps: {
-                name: "wrong",
-                value: FeedbackActionChoiceValue.wrong,
-                onChange: onChangeCategories,
+              {
+                label: "Les informations me semblent fausses.",
+                nativeInputProps: {
+                  name: "wrong",
+                  value: FeedbackActionChoiceValue.wrong,
+                  onChange: onChangeCategories,
+                },
               },
-            },
-          ]}
-          state={hasCheckBoxError ? "error" : "default"}
-          stateRelatedMessage={errorMessageCheckbox}
-        />
+            ]}
+            state={hasCheckBoxError ? "error" : "default"}
+            stateRelatedMessage={errorMessageCheckbox}
+          />
+        </>
       )}
       <Input
         label="Faire une suggestion pour améliorer cette page"

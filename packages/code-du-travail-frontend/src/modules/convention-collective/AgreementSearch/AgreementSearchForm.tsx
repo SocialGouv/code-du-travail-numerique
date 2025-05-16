@@ -9,6 +9,7 @@ import { AgreementRoute } from "../../../outils/common/type/WizardType";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { useEnterpriseAgreementSearchTracking } from "src/modules/enterprise/EnterpriseAgreementSearch/tracking";
 import { useAgreementSearchTracking } from "../tracking";
+import { fr } from "@codegouvfr/react-dsfr";
 
 type Props = {
   onAgreementSelect: (agreement?: Agreement) => void;
@@ -45,8 +46,11 @@ export const AgreementSearchForm = ({
 
   return (
     <>
+      <p className={fr.cx("fr-text--sm")}>
+        Tous les champs sont obligatoires sauf mention contraire
+      </p>
       <RadioButtons
-        legend="Quel est le nom de la convention collective applicable ?"
+        legend="Quel est le nom de la convention collective applicable ? (facultatif)"
         options={[
           {
             label:
