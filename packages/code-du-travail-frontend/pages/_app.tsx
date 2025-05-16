@@ -61,8 +61,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         if (router.pathname.match(WIDGETS_PATH)) {
           push(["setCookieSameSite", "None"]);
         }
-        // Activation de la carte des chaleurs (heatmap)
-        push(["HeatmapSessionRecording::enable"]);
+        // Activation de la carte des chaleurs (heatmap) pour Matomo 5.2.2
+        push(["enableHeartBeatTimer"]);
+        push(["enableLinkTracking"]);
+
+        // Activation spécifique pour le plugin Heatmap & Session Recording
+        push(["HeatmapSessionRecording.enable"]);
       },
       excludeUrlsPatterns: [WIDGETS_PATH],
     });
