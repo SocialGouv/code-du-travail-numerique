@@ -7,6 +7,15 @@ import { AppProps } from "next/app";
 import { init, push } from "@socialgouv/matomo-next";
 import React, { useEffect } from "react";
 
+// Déclaration de type pour window.Piwik
+declare global {
+  interface Window {
+    Piwik?: {
+      HeatmapSessionRecording?: any;
+    };
+  }
+}
+
 import { A11y } from "../src/a11y";
 import { getSourceUrlFromPath } from "../src/lib";
 import { useRouter } from "next/router";
@@ -67,6 +76,57 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         // Activation spécifique pour le plugin Heatmap & Session Recording
         push(["HeatmapSessionRecording.enable"]);
+
+        // Activer le mode debug de Matomo (affiche les événements dans la console)
+        if (process.env.NODE_ENV !== "production") {
+          push(["setDebugMode", "true"]);
+          console.log("Matomo debug mode activé");
+        }
+
+        // Événement de test pour vérifier la communication avec Matomo
+        push([
+          "trackEvent",
+          "Heatmap_Test",
+          "Page_Visit",
+          window.location.pathname,
+        ]);
+        console.log(
+          "Événement de test Matomo envoyé pour la page:",
+          window.location.pathname
+        );
+
+        // Débogage spécifique pour les heatmaps
+        if (
+          typeof window !== "undefined" &&
+          window.Piwik &&
+          window.Piwik.HeatmapSessionRecording
+        ) {
+          console.log(
+            "Configuration HeatmapSessionRecording:",
+            window.Piwik.HeatmapSessionRecording
+          );
+        } else {
+          console.log(
+            "Piwik.HeatmapSessionRecording n'est pas disponible immédiatement"
+          );
+          // Vérifier après un délai
+          setTimeout(() => {
+            if (
+              typeof window !== "undefined" &&
+              window.Piwik &&
+              window.Piwik.HeatmapSessionRecording
+            ) {
+              console.log(
+                "Configuration HeatmapSessionRecording (après délai):",
+                window.Piwik.HeatmapSessionRecording
+              );
+            } else {
+              console.log(
+                "Piwik.HeatmapSessionRecording n'est toujours pas disponible après délai"
+              );
+            }
+          }, 3000);
+        }
       },
       excludeUrlsPatterns: [WIDGETS_PATH],
     });
