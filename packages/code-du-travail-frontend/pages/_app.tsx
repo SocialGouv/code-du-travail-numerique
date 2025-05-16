@@ -61,6 +61,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         if (router.pathname.match(WIDGETS_PATH)) {
           push(["setCookieSameSite", "None"]);
         }
+        // Activation de la carte des chaleurs (heatmap)
+        push(["HeatmapSessionRecording::enable"]);
       },
       excludeUrlsPatterns: [WIDGETS_PATH],
     });
