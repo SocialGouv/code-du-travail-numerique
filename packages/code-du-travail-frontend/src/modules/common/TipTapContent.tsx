@@ -8,13 +8,13 @@ import parse, {
 import { toUrl, xssWrapper } from "../../lib";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { ElementType } from "react";
-import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
+import { AccordionWithAnchor } from "./AccordionWithAnchor";
 import { v4 as generateUUID } from "uuid";
 import { fr } from "@codegouvfr/react-dsfr";
 import { FicheServicePublic } from "../fiche-service-public/builder";
-import ImageWrapper from "../common/ImageWrapper";
+import ImageWrapper from "./ImageWrapper";
 import { Tile } from "@codegouvfr/react-dsfr/Tile";
-import Link from "../common/Link";
+import Link from "./Link";
 import { slugify } from "@socialgouv/cdtn-utils";
 
 export type numberLevel = 2 | 3 | 4 | 5 | 6;
@@ -196,8 +196,8 @@ function getItem(domNode: Element, titleLevel: numberLevel) {
   }
 }
 
-function renderChildrenWithNoTrim(domNode) {
-  return domToReact(domNode.children as DOMNode[]);
+function renderChildrenWithNoTrim(domNode, option?: HTMLReactParserOptions) {
+  return domToReact(domNode.children as DOMNode[], option);
 }
 
 const getHeadingElement = (titleLevel: numberLevel, domNode) => {
@@ -318,7 +318,7 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
         if (domNode.name === "ul") {
           return (
             <ul className={fr.cx("fr-pl-5v")}>
-              {renderChildrenWithNoTrim(domNode)}
+              {renderChildrenWithNoTrim(domNode, options(titleLevel))}
             </ul>
           );
         }
