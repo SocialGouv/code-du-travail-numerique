@@ -7,7 +7,7 @@ import { DownloadTile } from "./DownloadTile";
 import { CopyButton } from "./CopyButton";
 import "../../../../public/static/modeles.css";
 import { MailElasticDocument } from "@socialgouv/cdtn-types";
-import DisplayContentContribution from "../../contributions/DisplayContentContribution";
+import TipTapContent from "../../common/TipTapContent";
 
 export type LetterModelContentProps = Pick<
   MailElasticDocument,
@@ -31,7 +31,7 @@ export const LetterModelContent = ({
       <p className={fr.cx("fr-mb-6w")}>Mis à jour le&nbsp;: {date}</p>
       {intro && (
         <div className={`${fr.cx("fr-highlight", "fr-mb-6w")}`}>
-          <DisplayContentContribution content={intro} titleLevel={2} />
+          <TipTapContent content={intro} titleLevel={2} />
         </div>
       )}
       <div className={fr.cx("fr-hidden-md")}>
