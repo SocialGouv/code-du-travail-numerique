@@ -7,11 +7,16 @@ import { css } from "@styled-system/css";
 import useScrollBlock from "../utils/useScrollBlock";
 
 type Props = {
+  className?: string;
   altText: string;
   src: string;
 };
 
-const InfographicWrapper = ({ altText, src }: Props): JSX.Element => {
+const InfographicWrapper = ({
+  altText,
+  src,
+  className,
+}: Props): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
   const [blockScroll, allowScroll] = useScrollBlock();
 
@@ -32,7 +37,7 @@ const InfographicWrapper = ({ altText, src }: Props): JSX.Element => {
         alt={altText}
         onClick={onOpen}
         aria-hidden="true"
-        className={`${ImageZoom}`}
+        className={`${ImageZoom}${className ? ` ${className}` : ""}`}
       />
       {isOpen && <Lightbox mainSrc={src} onCloseRequest={onClose} />}
     </>

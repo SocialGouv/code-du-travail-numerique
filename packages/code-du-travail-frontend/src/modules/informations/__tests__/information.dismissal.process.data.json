@@ -1,0 +1,392 @@
+{
+  "date": "31/01/2024",
+  "contents": [
+    {
+      "name": "la-procedure-format-infographie",
+      "title": "La procédure : format infographie ",
+      "blocks": [
+        {
+          "size": "3.8 MB",
+          "type": "graphic",
+          "imgUrl": "info7.svg",
+          "altText": "Les étapes détaillées de la procédure du petit licenciement collectif (2 à 9 salariés) pour motif économique dans une entreprise avec CSE : le congé de reclassement.",
+          "fileUrl": "info7.pdf",
+          "html": "<p>Le petit licenciement collectif pour motif économique, impliquant la mise en place du congé de reclassement, concerne le licenciement de 2 à 9 salariés (sur une période de 30 jours) pour motif économique au sein d’une entreprise avec <webcomponent-tooltip content=\"Instance%20unique%20charg%C3%A9e%20de%20repr%C3%A9senter%20le%20personnel%20dans%20une%20entreprise.%20Elle%20remplace%20les%20anciennes%20instances%20repr%C3%A9sentatives%20du%20personnel%20dans%20l%E2%80%99entreprise%20qui%20%C3%A9taient%20les%20d%C3%A9l%C3%A9gu%C3%A9s%20du%20personnel%2C%20le%20comit%C3%A9%20d%E2%80%99entreprise%20et%20le%20CHSCT.%20Sa%20mise%20en%20place%20est%20obligatoire%20dans%20les%20entreprises%20dont%20l%E2%80%99effectif%20atteint%2011%20salari%C3%A9s%20pendant%2012%20mois%20cons%C3%A9cutifs.%20Ses%20attributions%20%C3%A9voluent%20en%20fonction%20des%20effectifs%20de%20l%E2%80%99entreprise.%20\">CSE</webcomponent-tooltip> d’au moins 1000 salariés ou appartenant à un groupe (français ou européen) employant au moins 1000 salariés.</p>\n<h3>Consultation du CSE (et du CSE central ou d’établissement le cas échéant)</h3>\n<p>Le <webcomponent-tooltip content=\"Instance%20unique%20charg%C3%A9e%20de%20repr%C3%A9senter%20le%20personnel%20dans%20une%20entreprise.%20Elle%20remplace%20les%20anciennes%20instances%20repr%C3%A9sentatives%20du%20personnel%20dans%20l%E2%80%99entreprise%20qui%20%C3%A9taient%20les%20d%C3%A9l%C3%A9gu%C3%A9s%20du%20personnel%2C%20le%20comit%C3%A9%20d%E2%80%99entreprise%20et%20le%20CHSCT.%20Sa%20mise%20en%20place%20est%20obligatoire%20dans%20les%20entreprises%20dont%20l%E2%80%99effectif%20atteint%2011%20salari%C3%A9s%20pendant%2012%20mois%20cons%C3%A9cutifs.%20Ses%20attributions%20%C3%A9voluent%20en%20fonction%20des%20effectifs%20de%20l%E2%80%99entreprise.%20\">CSE</webcomponent-tooltip> rend son avis au plus tard 1 mois après la première réunion.</p>\n<h3>Application des critères d’ordre de licenciement</h3>\n<p>Ils sont définis par <webcomponent-tooltip-cc>accord de branche</webcomponent-tooltip-cc> ou d’entreprise, ou à défaut, par l’employeur. Ils permettent d’identifier les salariés concernés par le licenciement.</p>\n<h3>Recherche des postes de reclassement</h3>\n<p>Cette recherche doit être réalisée dans l’entreprise ou les autres entreprises du groupe, uniquement en France.</p>\n<h3>Proposition écrite et précise des postes disponibles</h3>\n<p>Cette proposition des postes doit être réalisée de manière personnalisée à chaque salarié ou de manière collective par le biais de la diffusion d’une liste des offres disponibles.</p>\n<p>Le salarié dispose d’un délai de réponse de 15 jours si les postes ont été proposés de manière collective.</p>\n<p><strong>À noter :</strong> si le salarié accepte un des postes proposés, la procédure de licenciement s’arrête ici, et le salarié conserve sa place au sein de l’entreprise.</p>\n<h3>Convocation à l’entretien préalable</h3>\n<p>Si aucun poste de reclassement n’est disponible ou si le salarié refuse l’ensemble des postes proposés, l’employeur le convoque à un entretien préalable.\nLa convocation est réalisée par lettre recommandée avec accusé de réception ou remise en main propre contre décharge.</p>\n<h3>Entretien préalable au licenciement</h3>\n<p>L’entretien a lieu au moins 5 <webcomponent-tooltip content=\"Correspond%20%C3%A0%20tous%20les%20jours%20de%20la%20semaine%2C%20%C3%A0%20l%E2%80%99exception%20du%20jour%20de%20repos%20hebdomadaire%20(g%C3%A9n%C3%A9ralement%20le%20dimanche)%20et%20des%20jours%20f%C3%A9ri%C3%A9s%20habituellement%20non%20travaill%C3%A9s%20dans%20l%E2%80%99entreprise.\">jours ouvrables</webcomponent-tooltip> après la réception par le salarié de la lettre de convocation.</p>\n<p>Si le salarié est absent, l’employeur peut poursuivre la procédure de licenciement.</p>\n<p><strong>À noter :</strong> le salarié et l’employeur peuvent être accompagnés au cours de l’entretien par une personne appartenant au personnel de l’entreprise.</p>\n<h3>Envoi de la lettre de licenciement recommandée avec accusé de réception</h3>\n<p>La lettre de licenciement contient obligatoirement la proposition du congé de reclassement. Elle est envoyée au moins 7 <webcomponent-tooltip content=\"Correspond%20%C3%A0%20tous%20les%20jours%20de%20la%20semaine%2C%20%C3%A0%20l%E2%80%99exception%20du%20jour%20de%20repos%20hebdomadaire%20(g%C3%A9n%C3%A9ralement%20le%20dimanche)%20et%20des%20jours%20f%C3%A9ri%C3%A9s%20habituellement%20non%20travaill%C3%A9s%20dans%20l%E2%80%99entreprise.\">jours ouvrables</webcomponent-tooltip> après l’entretien préalable.</p>\n<p><strong>À noter :</strong> cette lettre doit rappeler la date d’expiration du délai de réflexion.</p>\n<p>Parallèlement à cela, la DREETS doit être informée dans les 8 jours qui suivent l’envoi de la lettre de licenciement.</p>\n<p><strong>-\tEn cas d’accord du congé de reclassement par le salarié</strong></p>\n<p>L’exécution du congé de reclassement prend effet le lendemain de l’expiration du délai de réflexion de 8 jours accordé au salarié.</p>\n<p>Puis, le <webcomponent-tooltip content=\"D%C3%A9lai%20qui%20s%E2%80%99%C3%A9coule%20entre%20la%20notification%20de%20la%20rupture%20du%20contrat%20de%20travail%20(licenciement%2C%20d%C3%A9mission%2C%20etc.)%20et%20la%20date%20de%20fin%20du%20contrat%20de%20travail.%20Exemple%20%3A%20un%20salari%C3%A9%20qui%20donne%20sa%20d%C3%A9mission%20le%201er%20juillet%20et%20qui%20a%20un%20pr%C3%A9avis%20de%203%20mois%20%C3%A0%20effectuer%2C%20cela%20signifie%20que%20le%20salari%C3%A9%20ne%20quittera%20l%E2%80%99entreprise%20que%20le%2030%20septembre%20au%20soir.%20\">préavis</webcomponent-tooltip> prend fin ainsi que le congé de reclassement.</p>\n<p><strong>À noter :</strong> si la durée du congé de reclassement excède celle du <webcomponent-tooltip content=\"D%C3%A9lai%20qui%20s%E2%80%99%C3%A9coule%20entre%20la%20notification%20de%20la%20rupture%20du%20contrat%20de%20travail%20(licenciement%2C%20d%C3%A9mission%2C%20etc.)%20et%20la%20date%20de%20fin%20du%20contrat%20de%20travail.%20Exemple%20%3A%20un%20salari%C3%A9%20qui%20donne%20sa%20d%C3%A9mission%20le%201er%20juillet%20et%20qui%20a%20un%20pr%C3%A9avis%20de%203%20mois%20%C3%A0%20effectuer%2C%20cela%20signifie%20que%20le%20salari%C3%A9%20ne%20quittera%20l%E2%80%99entreprise%20que%20le%2030%20septembre%20au%20soir.%20\">préavis</webcomponent-tooltip>, ce dernier est prolongé jusqu’à la fin du congé de reclassement.</p>\n<p><strong>-\tEn cas de refus du congé de reclassement par le salarié</strong></p>\n<p>Si le salarié refuse le congé de reclassement, le salarié effectue son <webcomponent-tooltip content=\"D%C3%A9lai%20qui%20s%E2%80%99%C3%A9coule%20entre%20la%20notification%20de%20la%20rupture%20du%20contrat%20de%20travail%20(licenciement%2C%20d%C3%A9mission%2C%20etc.)%20et%20la%20date%20de%20fin%20du%20contrat%20de%20travail.%20Exemple%20%3A%20un%20salari%C3%A9%20qui%20donne%20sa%20d%C3%A9mission%20le%201er%20juillet%20et%20qui%20a%20un%20pr%C3%A9avis%20de%203%20mois%20%C3%A0%20effectuer%2C%20cela%20signifie%20que%20le%20salari%C3%A9%20ne%20quittera%20l%E2%80%99entreprise%20que%20le%2030%20septembre%20au%20soir.%20\">préavis</webcomponent-tooltip> et le contrat prend fin.</p>\n<p><strong>À noter</strong> : le silence du salarié au terme du délai vaut refus du congé de reclassement.</p>\n<p><strong>À noter :</strong> à la rupture du contrat de travail, le salarié aura droit au versement de l’indemnité de licenciement et du solde de tout compte. L’employeur devra également tenir à la <webcomponent-tooltip content=\"Phrase%20ou%20ensemble%20de%20phrases%20d%E2%80%99un%20accord%2C%20d%E2%80%99une%20convention%20collective%2C%20d%E2%80%99une%20loi.\">disposition</webcomponent-tooltip> du salarié l’ensemble des documents de fin de contrat à savoir le <webcomponent-tooltip content=\"Document%20remis%20par%20l%E2%80%99employeur%20au%20salari%C3%A9%20%C3%A0%20la%20fin%20de%20son%20contrat%20de%20travail%20qui%20atteste%20que%20le%20salari%C3%A9%20a%20bien%20travaill%C3%A9%20dans%20l%E2%80%99entreprise%20en%20indiquant%20la%20nature%20du%20ou%20des%20emplois%20exerc%C3%A9s%20par%20le%20salari%C3%A9%20dans%20l%E2%80%99entreprise%20et%20la%20ou%20les%20dur%C3%A9es%20des%20emplois%20occup%C3%A9s.%20\">certificat de travail</webcomponent-tooltip>, l’attestation France Travail et le reçu pour solde de tout compte.</p>"
+        },
+        {
+          "type": "content",
+          "title": "Les modèles de courrier liés à cette procédure",
+          "contents": [
+            {
+              "id": "af864d27-eaa4-4242-a02a-d3eeeec6a269",
+              "cdtnId": "397fed9a25",
+              "breadcrumbs": [
+                {
+                  "label": "Départ de l’entreprise",
+                  "position": 7,
+                  "slug": "/themes/depart-de-lentreprise"
+                },
+                {
+                  "label": "Licenciement : droits des salariés et procédures",
+                  "position": 4,
+                  "slug": "/themes/licenciement-droits-des-salaries-et-procedures"
+                },
+                {
+                  "label": "Licenciement pour motif économique",
+                  "position": 1,
+                  "slug": "/themes/licenciement-pour-motif-economique"
+                }
+              ],
+              "title": "Convocation à un entretien préalable au licenciement économique de moins de 10 salariés pendant 30 jours",
+              "slug": "convocation-a-un-entretien-prealable-au-licenciement-economique-de-moins-de-10-salaries-pendant-30-jours",
+              "source": "modeles_de_courriers",
+              "description": "L’employeur qui envisage le licenciement pour motif économique de moins de 10 salariés durant une période de 30 jours doit convoquer chaque salarié à un entretien préalable. La convocation, envoyée par lettre recommandée avec accusé de réception ou remise en main propre contre signature, doit parvenir à l’intéressé au moins 5 jours ouvrables avant l’entretien préalable."
+            },
+            {
+              "id": "4c9ce58e-30cf-415f-b576-3cbf9be46dc5",
+              "cdtnId": "3b33484506",
+              "breadcrumbs": [
+                {
+                  "label": "Départ de l’entreprise",
+                  "position": 7,
+                  "slug": "/themes/depart-de-lentreprise"
+                },
+                {
+                  "label": "Licenciement : droits des salariés et procédures",
+                  "position": 4,
+                  "slug": "/themes/licenciement-droits-des-salaries-et-procedures"
+                },
+                {
+                  "label": "Licenciement pour motif économique",
+                  "position": 1,
+                  "slug": "/themes/licenciement-pour-motif-economique"
+                }
+              ],
+              "title": "Lettre de licenciement économique avec entretien préalable - congé de reclassement",
+              "slug": "lettre-de-licenciement-economique-avec-entretien-prealable-conge-de-reclassement",
+              "source": "modeles_de_courriers",
+              "description": "La lettre de licenciement comporte l’énoncé précis des motifs invoqués par l’employeur (article L. 1232-6 du code du travail). Elle doit être envoyée au salarié par lettre recommandée avec avis de réception, après les délais suivants : <ul> <li> Licenciement économique individuel : 7 jours ouvrables après la date prévue de l’entretien préalable (article L. 1233-15) ou 2 jours en cas de procédure collective ; </li> <li> Licenciement économique de 2 à 9 salariés : 7 jours ouvrables après la date prévue de l’entretien préalable (article L. 1233-15), ce délai est porté à quinze jours ouvrables si cela concerne un membre du personnel d’encadrement (article L. 1441-13) ou 2 jours en cas de procédure collective ; </li><li> Licenciement économique d’au moins 10 salariés pendant 30 jours, dans une entreprise de moins de 50 salariés, sans CSE : 30 jours calendaires après la notification du projet de licenciement à la DREETS (article L. 1233-39), y compris en cas de procédure collective ; </li><li> Licenciement économique d’au moins 10 salariés pendant 30 jours, dans une entreprise de 50 salariés ou plus, sans CSE : après la validation de l’accord collectif ou l’homologation du document unilatéral par la DREETS (article L. 1233-39), y compris en cas de procédure collective. </li></ul>"
+            }
+          ],
+          "blockDisplayMode": "line"
+        }
+      ]
+    },
+    {
+      "name": "la-procedure-format-texte",
+      "title": "La procédure : format texte",
+      "blocks": [
+        {
+          "type": "markdown",
+          "html": "<p>Le petit licenciement collectif pour motif économique, impliquant la mise en place du congé de reclassement, concerne le licenciement de 2 à 9 salariés (sur une période de 30 jours) pour motif économique au sein d’une entreprise avec <webcomponent-tooltip content=\"Instance%20unique%20charg%C3%A9e%20de%20repr%C3%A9senter%20le%20personnel%20dans%20une%20entreprise.%20Elle%20remplace%20les%20anciennes%20instances%20repr%C3%A9sentatives%20du%20personnel%20dans%20l%E2%80%99entreprise%20qui%20%C3%A9taient%20les%20d%C3%A9l%C3%A9gu%C3%A9s%20du%20personnel%2C%20le%20comit%C3%A9%20d%E2%80%99entreprise%20et%20le%20CHSCT.%20Sa%20mise%20en%20place%20est%20obligatoire%20dans%20les%20entreprises%20dont%20l%E2%80%99effectif%20atteint%2011%20salari%C3%A9s%20pendant%2012%20mois%20cons%C3%A9cutifs.%20Ses%20attributions%20%C3%A9voluent%20en%20fonction%20des%20effectifs%20de%20l%E2%80%99entreprise.%20\">CSE</webcomponent-tooltip> d’au moins 1000 salariés ou appartenant à un groupe (français ou européen) employant au moins 1000 salariés.</p>\n<h3>Consultation du CSE (et du CSE central ou d’établissement le cas échéant)</h3>\n<p>Le <webcomponent-tooltip content=\"Instance%20unique%20charg%C3%A9e%20de%20repr%C3%A9senter%20le%20personnel%20dans%20une%20entreprise.%20Elle%20remplace%20les%20anciennes%20instances%20repr%C3%A9sentatives%20du%20personnel%20dans%20l%E2%80%99entreprise%20qui%20%C3%A9taient%20les%20d%C3%A9l%C3%A9gu%C3%A9s%20du%20personnel%2C%20le%20comit%C3%A9%20d%E2%80%99entreprise%20et%20le%20CHSCT.%20Sa%20mise%20en%20place%20est%20obligatoire%20dans%20les%20entreprises%20dont%20l%E2%80%99effectif%20atteint%2011%20salari%C3%A9s%20pendant%2012%20mois%20cons%C3%A9cutifs.%20Ses%20attributions%20%C3%A9voluent%20en%20fonction%20des%20effectifs%20de%20l%E2%80%99entreprise.%20\">CSE</webcomponent-tooltip> rend son avis au plus tard 1 mois après la première réunion.</p>\n<h3>Application des critères d’ordre de licenciement</h3>\n<p>Ils sont définis par <webcomponent-tooltip-cc>accord de branche</webcomponent-tooltip-cc> ou d’entreprise, ou à défaut, par l’employeur. Ils permettent d’identifier les salariés concernés par le licenciement.</p>\n<h3>Recherche des postes de reclassement</h3>\n<p>Cette recherche doit être réalisée dans l’entreprise ou les autres entreprises du groupe, uniquement en France.</p>\n<h3>Proposition écrite et précise des postes disponibles</h3>\n<p>Cette proposition des postes doit être réalisée de manière personnalisée à chaque salarié ou de manière collective par le biais de la diffusion d’une liste des offres disponibles.</p>\n<p>Le salarié dispose d’un délai de réponse de 15 jours si les postes ont été proposés de manière collective.</p>\n<p><strong>À noter :</strong> si le salarié accepte un des postes proposés, la procédure de licenciement s’arrête ici, et le salarié conserve sa place au sein de l’entreprise.</p>\n<h3>Convocation à l’entretien préalable</h3>\n<p>Si aucun poste de reclassement n’est disponible ou si le salarié refuse l’ensemble des postes proposés, l’employeur le convoque à un entretien préalable.\nLa convocation est réalisée par lettre recommandée avec accusé de réception ou remise en main propre contre décharge.</p>\n<h3>Entretien préalable au licenciement</h3>\n<p>L’entretien a lieu au moins 5 <webcomponent-tooltip content=\"Correspond%20%C3%A0%20tous%20les%20jours%20de%20la%20semaine%2C%20%C3%A0%20l%E2%80%99exception%20du%20jour%20de%20repos%20hebdomadaire%20(g%C3%A9n%C3%A9ralement%20le%20dimanche)%20et%20des%20jours%20f%C3%A9ri%C3%A9s%20habituellement%20non%20travaill%C3%A9s%20dans%20l%E2%80%99entreprise.\">jours ouvrables</webcomponent-tooltip> après la réception par le salarié de la lettre de convocation.</p>\n<p>Si le salarié est absent, l’employeur peut poursuivre la procédure de licenciement.</p>\n<p><strong>À noter :</strong> le salarié et l’employeur peuvent être accompagnés au cours de l’entretien par une personne appartenant au personnel de l’entreprise.</p>\n<h3>Envoi de la lettre de licenciement recommandée avec accusé de réception</h3>\n<p>La lettre de licenciement contient obligatoirement la proposition du congé de reclassement. Elle est envoyée au moins 7 <webcomponent-tooltip content=\"Correspond%20%C3%A0%20tous%20les%20jours%20de%20la%20semaine%2C%20%C3%A0%20l%E2%80%99exception%20du%20jour%20de%20repos%20hebdomadaire%20(g%C3%A9n%C3%A9ralement%20le%20dimanche)%20et%20des%20jours%20f%C3%A9ri%C3%A9s%20habituellement%20non%20travaill%C3%A9s%20dans%20l%E2%80%99entreprise.\">jours ouvrables</webcomponent-tooltip> après l’entretien préalable.</p>\n<p><strong>À noter :</strong> cette lettre doit rappeler la date d’expiration du délai de réflexion.</p>\n<p>Parallèlement à cela, la DREETS doit être informée dans les 8 jours qui suivent l’envoi de la lettre de licenciement.</p>\n<p><strong>-\tEn cas d’accord du congé de reclassement par le salarié</strong></p>\n<p>L’exécution du congé de reclassement prend effet le lendemain de l’expiration du délai de réflexion de 8 jours accordé au salarié.</p>\n<p>Puis, le <webcomponent-tooltip content=\"D%C3%A9lai%20qui%20s%E2%80%99%C3%A9coule%20entre%20la%20notification%20de%20la%20rupture%20du%20contrat%20de%20travail%20(licenciement%2C%20d%C3%A9mission%2C%20etc.)%20et%20la%20date%20de%20fin%20du%20contrat%20de%20travail.%20Exemple%20%3A%20un%20salari%C3%A9%20qui%20donne%20sa%20d%C3%A9mission%20le%201er%20juillet%20et%20qui%20a%20un%20pr%C3%A9avis%20de%203%20mois%20%C3%A0%20effectuer%2C%20cela%20signifie%20que%20le%20salari%C3%A9%20ne%20quittera%20l%E2%80%99entreprise%20que%20le%2030%20septembre%20au%20soir.%20\">préavis</webcomponent-tooltip> prend fin ainsi que le congé de reclassement.</p>\n<p><strong>À noter :</strong> si la durée du congé de reclassement excède celle du <webcomponent-tooltip content=\"D%C3%A9lai%20qui%20s%E2%80%99%C3%A9coule%20entre%20la%20notification%20de%20la%20rupture%20du%20contrat%20de%20travail%20(licenciement%2C%20d%C3%A9mission%2C%20etc.)%20et%20la%20date%20de%20fin%20du%20contrat%20de%20travail.%20Exemple%20%3A%20un%20salari%C3%A9%20qui%20donne%20sa%20d%C3%A9mission%20le%201er%20juillet%20et%20qui%20a%20un%20pr%C3%A9avis%20de%203%20mois%20%C3%A0%20effectuer%2C%20cela%20signifie%20que%20le%20salari%C3%A9%20ne%20quittera%20l%E2%80%99entreprise%20que%20le%2030%20septembre%20au%20soir.%20\">préavis</webcomponent-tooltip>, ce dernier est prolongé jusqu’à la fin du congé de reclassement.</p>\n<p><strong>-\tEn cas de refus du congé de reclassement par le salarié</strong></p>\n<p>Si le salarié refuse le congé de reclassement, le salarié effectue son <webcomponent-tooltip content=\"D%C3%A9lai%20qui%20s%E2%80%99%C3%A9coule%20entre%20la%20notification%20de%20la%20rupture%20du%20contrat%20de%20travail%20(licenciement%2C%20d%C3%A9mission%2C%20etc.)%20et%20la%20date%20de%20fin%20du%20contrat%20de%20travail.%20Exemple%20%3A%20un%20salari%C3%A9%20qui%20donne%20sa%20d%C3%A9mission%20le%201er%20juillet%20et%20qui%20a%20un%20pr%C3%A9avis%20de%203%20mois%20%C3%A0%20effectuer%2C%20cela%20signifie%20que%20le%20salari%C3%A9%20ne%20quittera%20l%E2%80%99entreprise%20que%20le%2030%20septembre%20au%20soir.%20\">préavis</webcomponent-tooltip> et le contrat prend fin.</p>\n<p><strong>À noter</strong> : le silence du salarié au terme du délai vaut refus du congé de reclassement.</p>\n<p><strong>À noter :</strong> à la rupture du contrat de travail, le salarié aura droit au versement de l’indemnité de licenciement et du solde de tout compte. L’employeur devra également tenir à la <webcomponent-tooltip content=\"Phrase%20ou%20ensemble%20de%20phrases%20d%E2%80%99un%20accord%2C%20d%E2%80%99une%20convention%20collective%2C%20d%E2%80%99une%20loi.\">disposition</webcomponent-tooltip> du salarié l’ensemble des documents de fin de contrat à savoir le <webcomponent-tooltip content=\"Document%20remis%20par%20l%E2%80%99employeur%20au%20salari%C3%A9%20%C3%A0%20la%20fin%20de%20son%20contrat%20de%20travail%20qui%20atteste%20que%20le%20salari%C3%A9%20a%20bien%20travaill%C3%A9%20dans%20l%E2%80%99entreprise%20en%20indiquant%20la%20nature%20du%20ou%20des%20emplois%20exerc%C3%A9s%20par%20le%20salari%C3%A9%20dans%20l%E2%80%99entreprise%20et%20la%20ou%20les%20dur%C3%A9es%20des%20emplois%20occup%C3%A9s.%20\">certificat de travail</webcomponent-tooltip>, l’attestation France Travail et le reçu pour solde de tout compte.</p>"
+        },
+        {
+          "type": "content",
+          "title": "Les modèles de courrier liés à cette procédure",
+          "contents": [
+            {
+              "id": "af864d27-eaa4-4242-a02a-d3eeeec6a269",
+              "cdtnId": "397fed9a25",
+              "breadcrumbs": [
+                {
+                  "label": "Départ de l’entreprise",
+                  "position": 7,
+                  "slug": "/themes/depart-de-lentreprise"
+                },
+                {
+                  "label": "Licenciement : droits des salariés et procédures",
+                  "position": 4,
+                  "slug": "/themes/licenciement-droits-des-salaries-et-procedures"
+                },
+                {
+                  "label": "Licenciement pour motif économique",
+                  "position": 1,
+                  "slug": "/themes/licenciement-pour-motif-economique"
+                }
+              ],
+              "title": "Convocation à un entretien préalable au licenciement économique de moins de 10 salariés pendant 30 jours",
+              "slug": "convocation-a-un-entretien-prealable-au-licenciement-economique-de-moins-de-10-salaries-pendant-30-jours",
+              "source": "modeles_de_courriers",
+              "description": "L’employeur qui envisage le licenciement pour motif économique de moins de 10 salariés durant une période de 30 jours doit convoquer chaque salarié à un entretien préalable. La convocation, envoyée par lettre recommandée avec accusé de réception ou remise en main propre contre signature, doit parvenir à l’intéressé au moins 5 jours ouvrables avant l’entretien préalable."
+            },
+            {
+              "id": "4c9ce58e-30cf-415f-b576-3cbf9be46dc5",
+              "cdtnId": "3b33484506",
+              "breadcrumbs": [
+                {
+                  "label": "Départ de l’entreprise",
+                  "position": 7,
+                  "slug": "/themes/depart-de-lentreprise"
+                },
+                {
+                  "label": "Licenciement : droits des salariés et procédures",
+                  "position": 4,
+                  "slug": "/themes/licenciement-droits-des-salaries-et-procedures"
+                },
+                {
+                  "label": "Licenciement pour motif économique",
+                  "position": 1,
+                  "slug": "/themes/licenciement-pour-motif-economique"
+                }
+              ],
+              "title": "Lettre de licenciement économique avec entretien préalable - congé de reclassement",
+              "slug": "lettre-de-licenciement-economique-avec-entretien-prealable-conge-de-reclassement",
+              "source": "modeles_de_courriers",
+              "description": "La lettre de licenciement comporte l’énoncé précis des motifs invoqués par l’employeur (article L. 1232-6 du code du travail). Elle doit être envoyée au salarié par lettre recommandée avec avis de réception, après les délais suivants : <ul> <li> Licenciement économique individuel : 7 jours ouvrables après la date prévue de l’entretien préalable (article L. 1233-15) ou 2 jours en cas de procédure collective ; </li> <li> Licenciement économique de 2 à 9 salariés : 7 jours ouvrables après la date prévue de l’entretien préalable (article L. 1233-15), ce délai est porté à quinze jours ouvrables si cela concerne un membre du personnel d’encadrement (article L. 1441-13) ou 2 jours en cas de procédure collective ; </li><li> Licenciement économique d’au moins 10 salariés pendant 30 jours, dans une entreprise de moins de 50 salariés, sans CSE : 30 jours calendaires après la notification du projet de licenciement à la DREETS (article L. 1233-39), y compris en cas de procédure collective ; </li><li> Licenciement économique d’au moins 10 salariés pendant 30 jours, dans une entreprise de 50 salariés ou plus, sans CSE : après la validation de l’accord collectif ou l’homologation du document unilatéral par la DREETS (article L. 1233-39), y compris en cas de procédure collective. </li></ul>"
+            }
+          ],
+          "blockDisplayMode": "line"
+        }
+      ]
+    },
+    {
+      "name": "les-simulateurs",
+      "title": "Les simulateurs",
+      "blocks": [
+        {
+          "type": "content",
+          "title": "",
+          "contents": [
+            {
+              "id": "fcc43645-9ac1-433d-bd95-0eb44239b864",
+              "cdtnId": "2fac5f4163",
+              "breadcrumbs": [
+                {
+                  "label": "Départ de l’entreprise",
+                  "position": 7,
+                  "slug": "/themes/depart-de-lentreprise"
+                },
+                {
+                  "label": "Licenciement : droits des salariés et procédures",
+                  "position": 4,
+                  "slug": "/themes/licenciement-droits-des-salaries-et-procedures"
+                }
+              ],
+              "title": "Préavis de licenciement",
+              "slug": "preavis-licenciement",
+              "source": "outils",
+              "description": "Estimez la durée de préavis à respecter en cas de licenciement",
+              "icon": "Termination",
+              "action": "Calculer"
+            },
+            {
+              "id": "085a07ba-2936-4b0c-89c5-89c3e0cdb773",
+              "cdtnId": "d8a3605790",
+              "breadcrumbs": [
+                {
+                  "label": "Départ de l’entreprise",
+                  "position": 7,
+                  "slug": "/themes/depart-de-lentreprise"
+                },
+                {
+                  "label": "Licenciement : droits des salariés et procédures",
+                  "position": 4,
+                  "slug": "/themes/licenciement-droits-des-salaries-et-procedures"
+                }
+              ],
+              "title": "Indemnité de licenciement",
+              "slug": "indemnite-licenciement",
+              "source": "outils",
+              "description": "Estimez simplement le montant de l’indemnité de licenciement",
+              "icon": "Indemnity",
+              "action": "Estimer"
+            },
+            {
+              "id": "d09665fc-961c-44bf-a399-c34cfedf1d24",
+              "cdtnId": "d8fca710c5",
+              "breadcrumbs": [
+                {
+                  "label": "Départ de l’entreprise",
+                  "position": 7,
+                  "slug": "/themes/depart-de-lentreprise"
+                }
+              ],
+              "title": "Heures d'absence pour rechercher un emploi",
+              "slug": "heures-recherche-emploi",
+              "source": "outils",
+              "description": "Estimez le nombre d'heures d'absence autorisée pour rechercher un emploi pendant un préavis",
+              "icon": "Time",
+              "action": "Calculer"
+            }
+          ],
+          "blockDisplayMode": "square"
+        }
+      ]
+    },
+    {
+      "name": "les-autres-ressources-utiles",
+      "title": "Les autres ressources utiles",
+      "blocks": [
+        {
+          "type": "content",
+          "title": "",
+          "contents": [
+            {
+              "id": "article201155",
+              "cdtnId": "7ad616df28",
+              "breadcrumbs": [
+                {
+                  "label": "Départ de l’entreprise",
+                  "position": 7,
+                  "slug": "/themes/depart-de-lentreprise"
+                },
+                {
+                  "label": "Licenciement : droits des salariés et procédures",
+                  "position": 4,
+                  "slug": "/themes/licenciement-droits-des-salaries-et-procedures"
+                },
+                {
+                  "label": "Licenciement pour motif économique",
+                  "position": 1,
+                  "slug": "/themes/licenciement-pour-motif-economique"
+                }
+              ],
+              "title": "Le congé de reclassement",
+              "slug": "conge-de-reclassement",
+              "source": "page_fiche_ministere_travail",
+              "description": "Les entreprises ou groupe d’entreprises employant au moins 1 000 salariés doivent proposer un congé de reclassement aux salariés dont le licenciement économique est envisagé."
+            },
+            {
+              "id": "article101099",
+              "cdtnId": "533386dfae",
+              "breadcrumbs": [
+                {
+                  "label": "Départ de l’entreprise",
+                  "position": 7,
+                  "slug": "/themes/depart-de-lentreprise"
+                },
+                {
+                  "label": "Licenciement : droits des salariés et procédures",
+                  "position": 4,
+                  "slug": "/themes/licenciement-droits-des-salaries-et-procedures"
+                },
+                {
+                  "label": "Licenciement pour motif économique",
+                  "position": 1,
+                  "slug": "/themes/licenciement-pour-motif-economique"
+                }
+              ],
+              "title": "La définition du licenciement pour motif économique",
+              "slug": "la-definition-du-licenciement-pour-motif-economique",
+              "source": "page_fiche_ministere_travail",
+              "description": "Constitue un licenciement pour motif économique le licenciement effectué par un employeur pour un ou plusieurs motifs non inhérents à la personne du salarié résultant d'une suppression ou transformation d'emploi ou d'une modification, refusée par le salarié, d'un élément essentiel du contrat de travail, consécutives notamment à des difficultés économiques ou à des mutations technologiques.. Constitue un licenciement pour motif économique le licenciement effectué par un employeur pour un ou plusieurs motifs non inhérents à la personne du salarié résultant d'une suppression ou transformation d'emploi ou d'une modification, refusée par le salarié, d'un élément essentiel du contrat de travail, consécutives notamment à des difficultés économiques, à des mutations technologiques, à une réorganisation de l'entreprise nécessaire à la sauvegarde de sa compétitivité ou à la cessation d'activité de l'entreprise."
+            },
+            {
+              "id": "7822c019-5080-4108-89f5-1413f3bb459e",
+              "cdtnId": "2564772bc9",
+              "breadcrumbs": [
+                {
+                  "label": "Départ de l’entreprise",
+                  "position": 7,
+                  "slug": "/themes/depart-de-lentreprise"
+                },
+                {
+                  "label": "Documents à remettre au salarié",
+                  "position": 0,
+                  "slug": "/themes/documents-a-remettre-au-salarie"
+                }
+              ],
+              "title": "Lettre de réclamation des documents de fin de contrat",
+              "slug": "lettre-de-reclamation-des-documents-de-fin-de-contrat",
+              "source": "modeles_de_courriers",
+              "description": "À la rupture du contrat de travail, l’employeur doit délivrer au salarié des documents (ex : certificat de travail). Téléchargez et personnalisez notre modèle pour réclamer ces documents à l’employeur qui n’aurait pas satisfait à cette obligation."
+            },
+            {
+              "id": "a9046fb7-6fd0-49d6-9a9e-d6013b1296d9",
+              "cdtnId": "19837df114",
+              "breadcrumbs": [
+                {
+                  "label": "Départ de l’entreprise",
+                  "position": 7,
+                  "slug": "/themes/depart-de-lentreprise"
+                },
+                {
+                  "label": "Documents à remettre au salarié",
+                  "position": 0,
+                  "slug": "/themes/documents-a-remettre-au-salarie"
+                }
+              ],
+              "title": "Certificat de travail",
+              "slug": "certificat-de-travail",
+              "source": "modeles_de_courriers",
+              "description": "Le certificat de travail est un document que l'employeur doit obligatoirement tenir à la disposition ou transmettre au salarié, à la date de fin du contrat de travail."
+            },
+            {
+              "id": "F2867",
+              "cdtnId": "8aa88070a7",
+              "breadcrumbs": [
+                {
+                  "label": "Départ de l’entreprise",
+                  "position": 7,
+                  "slug": "/themes/depart-de-lentreprise"
+                },
+                {
+                  "label": "Documents à remettre au salarié",
+                  "position": 0,
+                  "slug": "/themes/documents-a-remettre-au-salarie"
+                }
+              ],
+              "title": "Attestation employeur destinée à France Travail (anciennement Pôle emploi)",
+              "slug": "attestation-employeur-destinee-a-france-travail-anciennement-pole-emploi",
+              "source": "fiches_service_public",
+              "description": "L'attestation employeur, dite attestation France Travail, est remise au salarié à la fin du contrat de travail."
+            },
+            {
+              "id": "f6f59c01-650f-45ef-b67b-d109422a00fb",
+              "cdtnId": "8d20e4cf48",
+              "breadcrumbs": [
+                {
+                  "label": "Départ de l’entreprise",
+                  "position": 7,
+                  "slug": "/themes/depart-de-lentreprise"
+                },
+                {
+                  "label": "Documents à remettre au salarié",
+                  "position": 0,
+                  "slug": "/themes/documents-a-remettre-au-salarie"
+                }
+              ],
+              "title": "Reçu pour solde de tout compte",
+              "slug": "recu-pour-solde-de-tout-compte",
+              "source": "modeles_de_courriers",
+              "description": "Le solde de tout compte est un document obligatoire remis en fin de contrat de travail. Il est établi par l’employeur et remis contre reçu au salarié qui quitte l’entreprise."
+            }
+          ],
+          "blockDisplayMode": "line"
+        }
+      ]
+    }
+  ],
+  "description": "Le petit licenciement collectif (2 à 9 salariés) pour motif économique dans une entreprise avec CSE : le congé de reclassement (CR) : comprendre la procédure (infographie, modèles, simulateurs, ressources utiles).",
+  "dismissalProcess": true,
+  "sectionDisplayMode": "tab",
+  "breadcrumbs": [
+    {
+      "label": "Départ de l’entreprise",
+      "position": 7,
+      "slug": "/themes/depart-de-lentreprise"
+    },
+    {
+      "label": "Licenciement : droits des salariés et procédures",
+      "position": 4,
+      "slug": "/themes/licenciement-droits-des-salaries-et-procedures"
+    },
+    {
+      "label": "Licenciement pour motif économique",
+      "position": 1,
+      "slug": "/themes/licenciement-pour-motif-economique"
+    }
+  ],
+  "cdtnId": "81df33780b",
+  "excludeFromSearch": false,
+  "id": "cbe865dc-9cad-4406-9416-5148d64abcb8",
+  "isPublished": true,
+  "metaDescription": "Le petit licenciement collectif (2 à 9 salariés) pour motif économique dans une entreprise avec CSE : le congé de reclassement (CR) : comprendre la procédure (infographie, modèles, simulateurs, ressources utiles).",
+  "refs": [],
+  "slug": "petit-licenciement-collectif-2-a-9-salaries-pour-motif-economique-dans-une-entreprise-avec-cse-le-conge-de-reclassement",
+  "source": "information",
+  "text": "Petit licenciement collectif (2 à 9 salariés) pour motif économique dans une entreprise avec CSE : le congé de reclassement (CR)",
+  "title": "Petit licenciement collectif (2 à 9 salariés) pour motif économique dans une entreprise avec CSE : le congé de reclassement (CR)",
+  "intro": "",
+  "_id": "12345"
+}

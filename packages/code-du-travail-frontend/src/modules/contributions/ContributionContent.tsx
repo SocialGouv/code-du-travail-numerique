@@ -1,10 +1,8 @@
 import React from "react";
 
-import DisplayContentContribution, {
-  ContentSP,
-  numberLevel,
-} from "./DisplayContentContribution";
 import { Contribution } from "./type";
+import DisplayContent, { numberLevel } from "../common/DisplayContent";
+import { ContentSP } from "./ContentSP";
 
 type Props = {
   contribution: Contribution;
@@ -17,7 +15,7 @@ export const ContributionContent = ({ contribution, titleLevel }: Props) => {
       {contribution.isFicheSP ? (
         <ContentSP raw={contribution.raw} titleLevel={titleLevel - 2} />
       ) : (
-        <DisplayContentContribution
+        <DisplayContent
           content={contribution.content}
           titleLevel={titleLevel}
         />
