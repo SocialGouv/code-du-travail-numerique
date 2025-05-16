@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import DisplayContentContribution from "../DisplayContentContribution";
+import DisplayContentContribution from "../TipTapContent";
 
 let count = 0;
 jest.mock("uuid", () => ({
@@ -8,7 +8,7 @@ jest.mock("uuid", () => ({
   }),
 }));
 
-describe("DisplayContentContribution", () => {
+describe("TipTapContent", () => {
   describe("Headings", () => {
     it(`should replace span with class "title" and "sub-titles" with heading`, () => {
       const { baseElement } = render(
