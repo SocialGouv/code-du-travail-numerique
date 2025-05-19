@@ -51,7 +51,7 @@ export const CookieConsentDSFR = () => {
 
   // Handle accepting all cookies
   const handleAcceptAll = () => {
-    const newConsent = { matomo: true, sea: true };
+    const newConsent = { matomo: true, sea: true, matomoHeatmap: true };
     console.log("User accepted all cookies:", newConsent);
     setConsent(newConsent);
     saveConsent(newConsent);
@@ -67,7 +67,7 @@ export const CookieConsentDSFR = () => {
   // Handle rejecting all cookies
   const handleRejectAll = () => {
     // Matomo is mandatory, so it's always true
-    const newConsent = { matomo: true, sea: false };
+    const newConsent = { matomo: true, sea: false, matomoHeatmap: false };
     console.log("User rejected optional cookies:", newConsent);
     setConsent(newConsent);
     saveConsent(newConsent);
@@ -299,6 +299,47 @@ export const CookieConsentDSFR = () => {
                             Ces cookies nous permettent de suivre
                             l&apos;efficacité de nos campagnes publicitaires sur
                             les moteurs de recherche.
+                          </p>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+
+                  <div className={fr.cx("fr-mt-2w")}>
+                    <fieldset
+                      className={fr.cx("fr-fieldset")}
+                      id="cookie-heatmap-fieldset"
+                    >
+                      <legend className={fr.cx("fr-fieldset__legend")}>
+                        Carte des chaleurs Matomo
+                      </legend>
+                      <div className="fr-form-group">
+                        <div className={fr.cx("fr-toggle")}>
+                          <input
+                            type="checkbox"
+                            className={fr.cx("fr-toggle__input")}
+                            id="toggle-heatmap"
+                            name="toggle-heatmap"
+                            checked={consent.matomoHeatmap}
+                            onChange={() =>
+                              handleConsentChange("matomoHeatmap")
+                            }
+                            aria-labelledby="toggle-heatmap-label"
+                          />
+                          <label
+                            className={fr.cx("fr-toggle__label")}
+                            htmlFor="toggle-heatmap"
+                            id="toggle-heatmap-label"
+                            data-fr-checked-label="Activé"
+                            data-fr-unchecked-label="Désactivé"
+                          >
+                            Carte des chaleurs
+                          </label>
+                          <p className={fr.cx("fr-hint-text")}>
+                            Cette fonctionnalité nous permet de visualiser
+                            comment les utilisateurs interagissent avec notre
+                            site (clics, mouvements de souris) pour améliorer
+                            l&apos;expérience utilisateur.
                           </p>
                         </div>
                       </div>

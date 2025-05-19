@@ -74,8 +74,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         push(["enableHeartBeatTimer"]);
         push(["enableLinkTracking"]);
 
-        // Activation spécifique pour le plugin Heatmap & Session Recording
-        push(["HeatmapSessionRecording.enable"]);
+        // La carte des chaleurs sera activée ou désactivée en fonction du consentement de l'utilisateur
+        // via la fonction applyMatomoHeatmapConsent dans src/lib/consent/index.ts
 
         // Activer le mode debug de Matomo (affiche les événements dans la console)
         if (process.env.NODE_ENV !== "production") {

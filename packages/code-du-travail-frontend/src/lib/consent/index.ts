@@ -4,6 +4,7 @@
 export type ConsentType = {
   matomo: boolean;
   sea: boolean;
+  matomoHeatmap: boolean;
 };
 
 // Local storage key for cookie consent
@@ -13,6 +14,7 @@ export const CONSENT_STORAGE_KEY = "cdtn-cookie-consent";
 export const DEFAULT_CONSENT: ConsentType = {
   matomo: false,
   sea: false,
+  matomoHeatmap: false,
 };
 
 // Get consent from local storage
@@ -26,7 +28,12 @@ export const getStoredConsent = (): ConsentType => {
 
     // If user hasn't consented yet, return default with no tracking
     if (!hasConsented) {
-      return { ...DEFAULT_CONSENT, matomo: false, sea: false };
+      return {
+        ...DEFAULT_CONSENT,
+        matomo: false,
+        sea: false,
+        matomoHeatmap: false,
+      };
     }
 
     return storedConsent ? JSON.parse(storedConsent) : DEFAULT_CONSENT;
@@ -41,7 +48,7 @@ export const saveConsent = (consent: ConsentType): void => {
   if (typeof window === "undefined") return;
 
   try {
-    // Ensure Matomo is always enabled (mandatory)
+    // Ensure Matomo is always enabled (mandatory), but respect user choice for matomoHeatmap
     const finalConsent = { ...consent, matomo: true };
     localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(finalConsent));
     applyConsent(finalConsent);
@@ -54,7 +61,28 @@ export const saveConsent = (consent: ConsentType): void => {
 export const applyConsent = (consent: ConsentType): void => {
   // Matomo is always enabled (mandatory)
   applyMatomoConsent(true);
+  // Matomo Heatmap requires explicit consent
+  applyMatomoHeatmapConsent(consent.matomoHeatmap);
   applySeaConsent(consent.sea);
+};
+
+// Apply Matomo Heatmap consent
+const applyMatomoHeatmapConsent = (isConsented: boolean): void => {
+  if (typeof window === "undefined") return;
+
+  try {
+    if (isConsented) {
+      console.log("Activation de la carte des chaleurs Matomo.");
+      window._paq = window._paq || [];
+      window._paq.push(["HeatmapSessionRecording.enable"]);
+    } else {
+      console.log("Désactivation de la carte des chaleurs Matomo.");
+      window._paq = window._paq || [];
+      window._paq.push(["HeatmapSessionRecording.disable"]);
+    }
+  } catch (e) {
+    console.error("Error applying Matomo Heatmap consent:", e);
+  }
 };
 
 // Apply Matomo consent
@@ -217,7 +245,7 @@ export const initConsent = (): void => {
 
   if (hasConsented) {
     const consent = getStoredConsent();
-    // Ensure Matomo is always enabled (mandatory)
+    // Ensure Matomo is always enabled (mandatory), but respect user choice for matomoHeatmap
     const finalConsent = { ...consent, matomo: true };
 
     console.log("Consent has been given, current consent state:", finalConsent);

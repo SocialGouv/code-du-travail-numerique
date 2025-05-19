@@ -290,7 +290,7 @@ export const CookieConsentLegacy = () => {
 
   // Handle accepting all cookies
   const handleAcceptAll = () => {
-    const newConsent = { matomo: true, sea: true };
+    const newConsent = { matomo: true, sea: true, matomoHeatmap: true };
     console.log("User accepted all cookies (legacy):", newConsent);
     setConsent(newConsent);
     saveConsent(newConsent);
@@ -306,7 +306,7 @@ export const CookieConsentLegacy = () => {
   // Handle rejecting all cookies
   const handleRejectAll = () => {
     // Matomo is mandatory, so it's always true
-    const newConsent = { matomo: true, sea: false };
+    const newConsent = { matomo: true, sea: false, matomoHeatmap: false };
     console.log("User rejected optional cookies (legacy):", newConsent);
     setConsent(newConsent);
     saveConsent(newConsent);
@@ -446,6 +446,35 @@ export const CookieConsentLegacy = () => {
                   </ToggleSwitch>
                   <ToggleStatus>
                     {consent.sea ? "Activé" : "Désactivé"}
+                  </ToggleStatus>
+                </ToggleRow>
+              </ToggleContainer>
+            </CheckboxGroup>
+
+            <CheckboxGroup>
+              <CheckboxLegend>Carte des chaleurs Matomo</CheckboxLegend>
+              <ToggleContainer>
+                <ToggleTitle id="toggle-heatmap-label-legacy">
+                  Carte des chaleurs
+                </ToggleTitle>
+                <ToggleDescription>
+                  Cette fonctionnalité nous permet de visualiser comment les
+                  utilisateurs interagissent avec notre site (clics, mouvements
+                  de souris) pour améliorer l&apos;expérience utilisateur.
+                </ToggleDescription>
+                <ToggleRow>
+                  <ToggleSwitch>
+                    <ToggleInput
+                      id="toggle-heatmap-legacy"
+                      type="checkbox"
+                      checked={consent.matomoHeatmap}
+                      onChange={() => handleConsentChange("matomoHeatmap")}
+                      aria-labelledby="toggle-heatmap-label-legacy"
+                    />
+                    <ToggleSlider />
+                  </ToggleSwitch>
+                  <ToggleStatus>
+                    {consent.matomoHeatmap ? "Activé" : "Désactivé"}
                   </ToggleStatus>
                 </ToggleRow>
               </ToggleContainer>

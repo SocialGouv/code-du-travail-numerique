@@ -74,6 +74,32 @@ export const PrivacyPolicy = () => {
           </li>
         </ul>
 
+        <h3 className={fr.cx("fr-h5", "fr-mb-2w")}>
+          Carte des chaleurs Matomo
+        </h3>
+        <ul className={fr.cx("fr-mb-3w")}>
+          <li>
+            <strong>Pays destinataires :</strong> France (Auto-hébergèrent)
+          </li>
+          <li>
+            <strong>Base juridique :</strong> Consentement
+          </li>
+          <li>
+            <strong>Finalités :</strong> Visualisation des interactions
+            utilisateurs (clics, mouvements de souris) pour améliorer
+            l&apos;expérience utilisateur
+          </li>
+          <li>
+            <strong>Durée :</strong> 13 mois
+          </li>
+          <li>
+            <strong>Garanties :</strong>{" "}
+            <Link href="https://fr.matomo.org/privacy-policy/" target="_blank">
+              https://fr.matomo.org/privacy-policy/
+            </Link>
+          </li>
+        </ul>
+
         <h3 className={fr.cx("fr-h5", "fr-mb-2w")}>Google Tag Manager</h3>
         <ul className={fr.cx("fr-mb-4w")}>
           <li>
