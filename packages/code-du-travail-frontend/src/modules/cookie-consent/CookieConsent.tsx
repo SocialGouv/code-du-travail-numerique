@@ -398,9 +398,8 @@ export const CookieConsentDSFR = () => {
             onClick={openModal}
             iconId="fr-icon-settings-5-line"
             title="Gérer les cookies"
-          >
-            Cookies
-          </Button>
+            aria-label="Gérer les cookies"
+          />
         </div>
       )}
     </>

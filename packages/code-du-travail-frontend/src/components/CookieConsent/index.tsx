@@ -502,7 +502,11 @@ export const CookieConsentLegacy = () => {
 
       {/* Manage Cookies Button (fixed at the bottom) */}
       {!showBanner && (
-        <SettingsButton onClick={() => setIsModalOpen(true)}>
+        <SettingsButton
+          onClick={() => setIsModalOpen(true)}
+          title="Gérer les cookies"
+          aria-label="Gérer les cookies"
+        >
           <svg
             width="16"
             height="16"
@@ -525,7 +529,6 @@ export const CookieConsentLegacy = () => {
               strokeLinejoin="round"
             />
           </svg>
-          Cookies
         </SettingsButton>
       )}
     </>
