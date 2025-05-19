@@ -93,7 +93,6 @@ const IntroContainer = styled.div`
   border: 1px solid ${colors.secondary};
   border-radius: ${box.borderRadius};
   background-color: ${theme.colors.white};
-  min-width: 460px;
   max-width: 100%;
   padding: 0;
   position: relative;

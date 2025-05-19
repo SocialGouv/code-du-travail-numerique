@@ -25,6 +25,12 @@ export enum FEEDBACK_RESULT {
   GOOD = "très_bien",
   EASY = "facile",
   YES = "oui",
+  // New values for 5-point scale
+  ONE = "1",
+  TWO = "2",
+  THREE = "3",
+  FOUR = "4",
+  FIVE = "5",
 }
 
 export const useFeedbackEvents = () => {
