@@ -60,7 +60,7 @@ export function ContributionAgreementContent({
           </div>
         )}
       </div>
-      <div className={fr.cx("fr-col-12", "fr-col-md-4")}>
+      <div className={fr.cx("fr-col-12", "fr-col-md-4", "fr-p-md-3w")}>
         {relatedItems && <RelatedItems relatedItems={relatedItems} />}
         <Share title={title} metaDescription={metas.description} />
       </div>
