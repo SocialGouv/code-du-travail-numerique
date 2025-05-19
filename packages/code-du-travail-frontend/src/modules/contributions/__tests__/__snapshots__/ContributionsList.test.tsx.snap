@@ -79,14 +79,14 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
             Tous les thèmes
           </option>
           <option
-            value="Thème A"
+            value="Congés et repos"
           >
-            Thème A
+            Congés et repos
           </option>
           <option
-            value="Thème B"
+            value="Embauche et contrat"
           >
-            Thème B
+            Embauche et contrat
           </option>
         </select>
         <div
@@ -98,7 +98,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
       <h2
         class="fr-mt-6w fr-h3"
       >
-        Thème A
+        Congés et repos
       </h2>
       <ul
         class="fr-grid-row fr-grid-row--gutters fr-grid-row--left"
@@ -121,15 +121,15 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
                 >
                   <a
                     class=""
-                    href="/contribution/contribution-aa"
+                    href="/contribution/conges-payes"
                   >
-                    Contribution AA
+                    Congés payés
                   </a>
                 </h3>
                 <p
                   class="fr-card__desc"
                 >
-                  Description contribution AA
+                  Tout savoir sur les congés payés
                 </p>
                 <div
                   class="fr-card__start fr-hidden"
@@ -159,15 +159,15 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
                 >
                   <a
                     class=""
-                    href="/contribution/contribution-ab"
+                    href="/contribution/jours-feries"
                   >
-                    Contribution AB
+                    Jours fériés
                   </a>
                 </h3>
                 <p
                   class="fr-card__desc"
                 >
-                  Description contribution AB
+                  Informations sur les jours fériés
                 </p>
                 <div
                   class="fr-card__start fr-hidden"
@@ -183,7 +183,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
       <h2
         class="fr-mt-6w fr-h3"
       >
-        Thème B
+        Embauche et contrat
       </h2>
       <ul
         class="fr-grid-row fr-grid-row--gutters fr-grid-row--left"
@@ -206,15 +206,15 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
                 >
                   <a
                     class=""
-                    href="/contribution/contribution-ba"
+                    href="/contribution/periode-essai"
                   >
-                    Contribution BA
+                    Période d'essai
                   </a>
                 </h3>
                 <p
                   class="fr-card__desc"
                 >
-                  Description contribution BA
+                  Tout savoir sur la période d'essai
                 </p>
                 <div
                   class="fr-card__start fr-hidden"
