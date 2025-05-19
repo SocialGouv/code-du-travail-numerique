@@ -7,18 +7,24 @@ describe("Contributions", () => {
     cy.get("#fr-header-main-navigation")
       .contains("Vos fiches pratiques")
       .click();
+    cy.isIndexable();
     cy.urlEqual("/contribution");
+    cy.canonicalUrlEqual("/contribution");
+    cy.titleAndMetaDescriptionEqual(
+      "Vos fiches pratiques - Code du travail numérique",
+      "Obtenez une réponse personnalisée selon votre convention collective"
+    );
     cy.get("h1").should("have.text", "Vos fiches pratiques");
     cy.get("body").should(
       "contain",
-      "Obtenez une réponses personnalisée selon votre convention collective"
+      "Obtenez une réponse personnalisée selon votre convention collective"
     );
-    cy.get("#content h2").should("have.length", 6);
-    cy.get("#content h2")
+    cy.findAllByRole("heading", { level: 2 }).should("have.length", 7);
+    cy.findAllByRole("heading", { level: 2 })
       .first()
       .should("contain", "Embauche et contrat de travail");
-    cy.get("#content li").should("have.length.at.least", 1);
-    cy.get("#content li").first().click();
+    cy.findAllByRole("heading", { level: 3 }).should("have.length.at.least", 1);
+    cy.findAllByRole("heading", { level: 3 }).first().click();
     cy.urlEqual("/contribution/la-periode-dessai-peut-elle-etre-renouvelee");
   });
   it("je vois une page contribution", () => {

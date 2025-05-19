@@ -10,6 +10,8 @@ import { getAllAgreements } from "../../agreements";
 describe("Contributions", () => {
   it("getGenericContributions", async () => {
     const result = await getGenericContributionsGroupByThemes();
+    expect(result).toHaveProperty("themes");
+    expect(result).toHaveProperty("documents");
     expect(result).toMatchSnapshot();
   });
 
