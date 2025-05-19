@@ -51,7 +51,7 @@ export const MatomoInitializer = () => {
       },
       excludeUrlsPatterns: [WIDGETS_PATH],
     });
-  }, []);
+  }, [router.asPath, router.pathname]); // Ajout des dépendances manquantes
 
   return null;
 };

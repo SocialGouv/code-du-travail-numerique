@@ -1,10 +1,10 @@
 "use client";
 
-import "./CookieConsent.css";
 import { fr } from "@codegouvfr/react-dsfr";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Button from "@codegouvfr/react-dsfr/Button";
+import { css } from "@styled-system/css";
 import {
   ConsentType,
   DEFAULT_CONSENT,
@@ -12,6 +12,80 @@ import {
   saveConsent,
   initConsent,
 } from "../../lib/consent";
+
+// Styles définis séparément
+const modalBody = css({
+  maxHeight: "80vh !important",
+  overflowY: "auto !important",
+});
+
+const modalContent = css({
+  maxHeight: "none !important",
+  overflowY: "visible !important",
+});
+
+const modalFooter = css({
+  position: "sticky",
+  bottom: 0,
+  backgroundColor: "var(--background-default-grey)",
+  paddingTop: "1rem",
+  zIndex: 1,
+  width: "100%",
+  overflow: "hidden",
+});
+
+const footerButtonsGroup = css({
+  marginBottom: "0.5rem",
+});
+
+const cookieBanner = css({
+  position: "fixed",
+  bottom: 0,
+  left: 0,
+  right: 0,
+  zIndex: 1000,
+  backgroundColor: "var(--background-default-grey)",
+  boxShadow: "0 -2px 4px rgba(0, 0, 0, 0.1)",
+});
+
+const manageButton = css({
+  position: "fixed",
+  bottom: "1rem",
+  right: "1rem",
+  zIndex: 1000,
+});
+
+// Styles pour les écrans mobiles
+const mobileFooterButtonsGroup = css({
+  "@media (max-width: 576px)": {
+    flexDirection: "column-reverse !important",
+    alignItems: "stretch !important",
+  },
+});
+
+const mobileFooterButton = css({
+  "@media (max-width: 576px)": {
+    marginLeft: 0,
+    marginBottom: "0.5rem",
+    width: "100%",
+  },
+});
+
+const mobileFooterButtonElement = css({
+  "@media (max-width: 576px)": {
+    width: "100%",
+    marginLeft: 0,
+    marginRight: 0,
+  },
+});
+
+const mobileModalBody = css({
+  "@media (max-width: 576px)": {
+    maxWidth: "100% !important",
+    paddingLeft: "1rem !important",
+    paddingRight: "1rem !important",
+  },
+});
 
 export const CookieConsentDSFR = () => {
   const [consent, setConsent] = useState<ConsentType>(DEFAULT_CONSENT);
@@ -40,11 +114,9 @@ export const CookieConsentDSFR = () => {
     // Show banner if no consent has been given yet
     const hasConsented = localStorage.getItem("cdtn-cookie-consent-given");
     if (!hasConsented) {
-      console.log("No previous consent found, showing banner");
       setShowBanner(true);
       // Don't initialize cookies until user has consented
     } else {
-      console.log("Previous consent found, initializing consent");
       // User has already made a choice, initialize consent
       initConsent();
     }
@@ -53,7 +125,6 @@ export const CookieConsentDSFR = () => {
   // Handle accepting all cookies
   const handleAcceptAll = () => {
     const newConsent = { matomo: true, sea: true, matomoHeatmap: true };
-    console.log("User accepted all cookies:", newConsent);
     setConsent(newConsent);
     saveConsent(newConsent);
     setShowBanner(false);
@@ -61,7 +132,6 @@ export const CookieConsentDSFR = () => {
     localStorage.setItem("cdtn-cookie-consent-given", "true");
 
     // Initialize consent after user has made a choice
-    console.log("Initializing consent after user acceptance");
     initConsent();
   };
 
@@ -69,7 +139,6 @@ export const CookieConsentDSFR = () => {
   const handleRejectAll = () => {
     // Matomo is mandatory, so it's always true
     const newConsent = { matomo: true, sea: false, matomoHeatmap: false };
-    console.log("User rejected optional cookies:", newConsent);
     setConsent(newConsent);
     saveConsent(newConsent);
     setShowBanner(false);
@@ -77,7 +146,6 @@ export const CookieConsentDSFR = () => {
     localStorage.setItem("cdtn-cookie-consent-given", "true");
 
     // Initialize consent after user has made a choice
-    console.log("Initializing consent after user rejection");
     initConsent();
   };
 
@@ -102,22 +170,13 @@ export const CookieConsentDSFR = () => {
       {/* Cookie Consent Banner */}
       {!isWidgetPage && showBanner && (
         <div
-          className={fr.cx(
+          className={`${fr.cx(
             "fr-container",
             "fr-py-2w",
             "fr-px-2w",
             "fr-mb-0",
             "fr-mt-0"
-          )}
-          style={{
-            position: "fixed",
-            bottom: 0,
-            left: 0,
-            right: 0,
-            zIndex: 1000,
-            backgroundColor: "var(--background-default-grey)",
-            boxShadow: "0 -2px 4px rgba(0, 0, 0, 0.1)",
-          }}
+          )} ${cookieBanner}`}
         >
           <div className={fr.cx("fr-grid-row")}>
             <div className={fr.cx("fr-col-12")}>
@@ -184,8 +243,7 @@ export const CookieConsentDSFR = () => {
           <div className={fr.cx("fr-grid-row", "fr-grid-row--center")}>
             <div className={fr.cx("fr-col-12", "fr-col-md-10", "fr-col-lg-8")}>
               <div
-                className={fr.cx("fr-modal__body")}
-                style={{ maxHeight: "none", overflow: "visible" }}
+                className={`${fr.cx("fr-modal__body")} ${modalBody} ${mobileModalBody}`}
               >
                 <div className={fr.cx("fr-modal__header")}>
                   <button
@@ -198,8 +256,7 @@ export const CookieConsentDSFR = () => {
                   </button>
                 </div>
                 <div
-                  className={fr.cx("fr-modal__content")}
-                  style={{ overflow: "visible" }}
+                  className={`${fr.cx("fr-modal__content")} ${modalContent}`}
                 >
                   <div className={fr.cx("fr-modal__title")}>
                     <div
@@ -343,9 +400,9 @@ export const CookieConsentDSFR = () => {
                     </fieldset>
                   </div>
                 </div>
-                <div className={fr.cx("fr-modal__footer")}>
+                <div className={`${fr.cx("fr-modal__footer")} ${modalFooter}`}>
                   <ul
-                    className={fr.cx(
+                    className={`${fr.cx(
                       "fr-btns-group",
                       "fr-btns-group--right",
                       "fr-btns-group--inline",
@@ -353,20 +410,32 @@ export const CookieConsentDSFR = () => {
                       "fr-btns-group--inline-lg",
                       "fr-grid-row",
                       "fr-grid-row--right"
-                    )}
+                    )} ${footerButtonsGroup} ${mobileFooterButtonsGroup}`}
                   >
-                    <li>
-                      <Button onClick={handleSaveSettings} priority="primary">
+                    <li className={mobileFooterButton}>
+                      <Button
+                        onClick={handleSaveSettings}
+                        priority="primary"
+                        className={mobileFooterButtonElement}
+                      >
                         Enregistrer
                       </Button>
                     </li>
-                    <li>
-                      <Button onClick={handleAcceptAll} priority="secondary">
+                    <li className={mobileFooterButton}>
+                      <Button
+                        onClick={handleAcceptAll}
+                        priority="secondary"
+                        className={mobileFooterButtonElement}
+                      >
                         Tout accepter
                       </Button>
                     </li>
-                    <li>
-                      <Button onClick={handleRejectAll} priority="tertiary">
+                    <li className={mobileFooterButton}>
+                      <Button
+                        onClick={handleRejectAll}
+                        priority="tertiary"
+                        className={mobileFooterButtonElement}
+                      >
                         Tout refuser
                       </Button>
                     </li>
@@ -380,14 +449,7 @@ export const CookieConsentDSFR = () => {
 
       {/* Manage Cookies Button (fixed at the bottom) */}
       {!isWidgetPage && !showBanner && (
-        <div
-          style={{
-            position: "fixed",
-            bottom: "1rem",
-            right: "1rem",
-            zIndex: 1000,
-          }}
-        >
+        <div className={manageButton}>
           <Button
             size="small"
             priority="tertiary"
