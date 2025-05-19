@@ -1,5 +1,6 @@
 "use client";
 
+import "./CookieConsent.css";
 import { fr } from "@codegouvfr/react-dsfr";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -145,14 +146,10 @@ export const CookieConsentDSFR = () => {
                   "fr-btns-group",
                   "fr-btns-group--right",
                   "fr-btns-group--inline",
-                  "fr-btns-group--inline-reverse"
+                  "fr-btns-group--inline-reverse",
+                  "fr-grid-row",
+                  "fr-grid-row--right"
                 )}
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  flexWrap: "nowrap",
-                  justifyContent: "flex-end",
-                }}
               >
                 <Button onClick={openModal} priority="tertiary">
                   Personnaliser
@@ -353,25 +350,24 @@ export const CookieConsentDSFR = () => {
                       "fr-btns-group--right",
                       "fr-btns-group--inline",
                       "fr-btns-group--inline-reverse",
-                      "fr-btns-group--inline-lg"
+                      "fr-btns-group--inline-lg",
+                      "fr-grid-row",
+                      "fr-grid-row--right"
                     )}
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      flexWrap: "nowrap",
-                    }}
                   >
                     <li>
-                      <Button onClick={handleSaveSettings}>Enregistrer</Button>
-                    </li>
-                    <li>
-                      <Button onClick={handleRejectAll} priority="tertiary">
-                        Tout refuser
+                      <Button onClick={handleSaveSettings} priority="primary">
+                        Enregistrer
                       </Button>
                     </li>
                     <li>
                       <Button onClick={handleAcceptAll} priority="secondary">
                         Tout accepter
+                      </Button>
+                    </li>
+                    <li>
+                      <Button onClick={handleRejectAll} priority="tertiary">
+                        Tout refuser
                       </Button>
                     </li>
                   </ul>
