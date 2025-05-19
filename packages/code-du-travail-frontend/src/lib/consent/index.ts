@@ -74,6 +74,16 @@ const applyMatomoHeatmapConsent = (isConsented: boolean): void => {
     if (isConsented) {
       console.log("Activation de la carte des chaleurs Matomo.");
       window._paq = window._paq || [];
+      // Configure Heatmap & Session Recording
+      window._paq.push([
+        "HeatmapSessionRecording.setRecordingEnvironment",
+        "production",
+      ]);
+      window._paq.push(["HeatmapSessionRecording.setKeystrokes", "false"]); // Don't record keystrokes for privacy
+      window._paq.push([
+        "HeatmapSessionRecording.setCaptureVisibleContentOnly",
+        "false",
+      ]); // Capture full page for heatmaps
       window._paq.push(["HeatmapSessionRecording.enable"]);
     } else {
       console.log("Désactivation de la carte des chaleurs Matomo.");
