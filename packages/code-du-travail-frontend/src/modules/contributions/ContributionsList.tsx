@@ -1,7 +1,7 @@
 "use client";
 
 import { fr } from "@codegouvfr/react-dsfr";
-import React, { useState } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import { ContainerList } from "../layout/ContainerList";
 import { css } from "@styled-system/css";
 import Card from "@codegouvfr/react-dsfr/Card";
@@ -31,12 +31,25 @@ export const ContributionsList = ({
 }: Props) => {
   const [selectedTheme, setTheme] = useState<string>("");
 
-  const themes = initialThemes ?? Object.keys(initialContribs);
+  const themes = useMemo(
+    () => initialThemes ?? Object.keys(initialContribs),
+    [initialThemes, initialContribs]
+  );
 
-  const documents =
-    selectedTheme === ""
-      ? initialContribs
-      : { [selectedTheme]: initialContribs[selectedTheme] };
+  const documents = useMemo(
+    () =>
+      selectedTheme === ""
+        ? initialContribs
+        : { [selectedTheme]: initialContribs[selectedTheme] },
+    [selectedTheme, initialContribs]
+  );
+
+  const handleThemeChange = useCallback(
+    (event: React.ChangeEvent<HTMLSelectElement>) => {
+      setTheme(event.target.value);
+    },
+    []
+  );
 
   return (
     <ContainerList title="Vos fiches pratiques" segments={[]}>
@@ -52,7 +65,7 @@ export const ContributionsList = ({
         className={`${fr.cx("fr-mt-6w")} ${list}`}
         label="Sélectionnez un thème"
         nativeSelectProps={{
-          onChange: (event) => setTheme(event.target.value),
+          onChange: handleThemeChange,
           value: selectedTheme,
         }}
       >

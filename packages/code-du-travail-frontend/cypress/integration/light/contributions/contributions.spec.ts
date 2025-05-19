@@ -1,30 +1,30 @@
 describe("Contributions", () => {
   it("je vois la liste de toutes les contributions par thèmes", () => {
     cy.visit("/");
-    cy.isIndexable();
-    cy.canonicalUrlEqual("/contribution");
-    cy.titleAndMetaDescriptionEqual(
-      "Vos fiches pratiques",
-      "Obtenez une réponse personnalisée selon votre convention collective"
-    );
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Bienvenue sur le Code du travail numérique")
       .click();
     cy.get("#fr-header-main-navigation")
       .contains("Vos fiches pratiques")
       .click();
+    cy.isIndexable();
     cy.urlEqual("/contribution");
+    cy.canonicalUrlEqual("/contribution");
+    cy.titleAndMetaDescriptionEqual(
+      "Vos fiches pratiques - Code du travail numérique",
+      "Obtenez une réponse personnalisée selon votre convention collective"
+    );
     cy.get("h1").should("have.text", "Vos fiches pratiques");
     cy.get("body").should(
       "contain",
       "Obtenez une réponse personnalisée selon votre convention collective"
     );
-    cy.findByRole("heading", { level: 2 }).should("have.length", 6);
-    cy.findByRole("heading", { level: 2 })
+    cy.findAllByRole("heading", { level: 2 }).should("have.length", 7);
+    cy.findAllByRole("heading", { level: 2 })
       .first()
       .should("contain", "Embauche et contrat de travail");
-    cy.findByRole("heading", { level: 3 }).should("have.length.at.least", 1);
-    cy.findByRole("heading", { level: 3 }).first().click();
+    cy.findAllByRole("heading", { level: 3 }).should("have.length.at.least", 1);
+    cy.findAllByRole("heading", { level: 3 }).first().click();
     cy.urlEqual("/contribution/la-periode-dessai-peut-elle-etre-renouvelee");
   });
   it("je vois une page contribution", () => {
