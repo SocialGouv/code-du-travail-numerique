@@ -22,15 +22,21 @@ type ContributionsData = {
 
 type Props = {
   contribs: ContributionsData;
+  themes: string[];
 };
 
-export const ContributionsList = ({ contribs }: Props) => {
+export const ContributionsList = ({
+  contribs: initialContribs,
+  themes: initialThemes,
+}: Props) => {
   const [selectedTheme, setTheme] = useState<string>("");
-  const themes = Object.keys(contribs);
+
+  const themes = initialThemes ?? Object.keys(initialContribs);
+
   const documents =
     selectedTheme === ""
-      ? contribs
-      : { [selectedTheme]: contribs[selectedTheme] };
+      ? initialContribs
+      : { [selectedTheme]: initialContribs[selectedTheme] };
 
   return (
     <ContainerList title="Vos fiches pratiques" segments={[]}>

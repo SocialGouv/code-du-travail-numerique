@@ -4,20 +4,31 @@ import { fetchAllContributions } from "./fetch";
 import { ElasticSearchItem } from "../../types";
 import { ElasticAgreement } from "@socialgouv/cdtn-types";
 
-export const getGenericContributionsGroupByThemes = async () => {
+export const getGenericContributionsGroupByThemes = async (
+  selectedTheme: string = ""
+) => {
   const body = getAllGenericsContributions();
 
   const response = await elasticsearchClient.search({
     body,
     index: elasticDocumentsIndex,
   });
-  return response.hits.hits
+
+  const contribs = response.hits.hits
     .map(({ _source }) => _source)
     .map((contrib: any) => {
       contrib.theme = contrib.breadcrumbs[0].label;
       return contrib;
     })
     .reduce(groupByThemes, {});
+
+  const themes = Object.keys(contribs);
+  const documents =
+    selectedTheme === ""
+      ? contribs
+      : { [selectedTheme]: contribs[selectedTheme] };
+
+  return { themes, documents };
 };
 
 const isGeneric = (contrib) => contrib.idcc === "0000";

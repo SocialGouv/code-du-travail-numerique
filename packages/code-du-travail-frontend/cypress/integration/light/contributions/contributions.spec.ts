@@ -1,6 +1,12 @@
 describe("Contributions", () => {
   it("je vois la liste de toutes les contributions par thèmes", () => {
     cy.visit("/");
+    cy.isIndexable();
+    cy.canonicalUrlEqual("/contribution");
+    cy.titleAndMetaDescriptionEqual(
+      "Vos fiches pratiques",
+      "Obtenez une réponse personnalisée selon votre convention collective"
+    );
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Bienvenue sur le Code du travail numérique")
       .click();
@@ -13,10 +19,12 @@ describe("Contributions", () => {
       "contain",
       "Obtenez une réponse personnalisée selon votre convention collective"
     );
-    cy.get("h2").should("have.length", 6);
-    cy.get("h2").first().should("contain", "Embauche et contrat de travail");
-    cy.get("h3").should("have.length.at.least", 1);
-    cy.get("h3").first().click();
+    cy.findByRole("heading", { level: 2 }).should("have.length", 6);
+    cy.findByRole("heading", { level: 2 })
+      .first()
+      .should("contain", "Embauche et contrat de travail");
+    cy.findByRole("heading", { level: 3 }).should("have.length.at.least", 1);
+    cy.findByRole("heading", { level: 3 }).first().click();
     cy.urlEqual("/contribution/la-periode-dessai-peut-elle-etre-renouvelee");
   });
   it("je vois une page contribution", () => {

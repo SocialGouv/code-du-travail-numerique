@@ -11,23 +11,18 @@ export const metadata = generateDefaultMetadata({
 });
 
 async function Index() {
-  const contribs = await getContributions();
+  const { documents, themes } = await getContributions();
 
   return (
     <DsfrLayout>
-      <ContributionsList contribs={contribs} />
+      <ContributionsList contribs={documents} themes={themes} />
     </DsfrLayout>
   );
 }
 
 const getContributions = async () => {
-  try {
-    const data = await getGenericContributionsGroupByThemes();
-    return data;
-  } catch (error) {
-    console.error(error);
-    return {};
-  }
+  const data = await getGenericContributionsGroupByThemes();
+  return data;
 };
 
 export default Index;
