@@ -6,6 +6,7 @@ import * as Sentry from "@sentry/nextjs";
 import { Autocomplete } from "../common/Autocomplete";
 import { fetchSuggestResults } from "../layout/header/fetchSuggestResults";
 import { SUGGEST_MAX_RESULTS } from "../../config";
+import { useSearchTracking } from "./tracking";
 
 type SearchBarProps = {
   initialValue?: string;
@@ -15,10 +16,12 @@ export const SearchBar: React.FC<SearchBarProps> = ({ initialValue = "" }) => {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
   const [query, setQuery] = useState(initialValue);
+  const { emitSearchEvent, emitSuggestionSelectionEvent } = useSearchTracking();
 
   const handleSearch = (searchTerm: string) => {
     if (searchTerm.trim()) {
-      router.replace(`/recherche?q=${encodeURIComponent(searchTerm.trim())}`);
+      emitSearchEvent(searchTerm.trim());
+      router.push(`/recherche?q=${encodeURIComponent(searchTerm.trim())}`);
     }
   };
 
@@ -63,6 +66,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ initialValue = "" }) => {
         onChange={(value) => {
           setQuery(value ?? "");
           if (value) {
+            emitSuggestionSelectionEvent(query, value);
             handleSearch(value);
           }
         }}

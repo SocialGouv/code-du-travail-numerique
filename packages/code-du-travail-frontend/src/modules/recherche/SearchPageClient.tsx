@@ -6,8 +6,10 @@ import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
 import { SearchBar } from "./SearchBar";
 import { SearchCard } from "./Card";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 import { ContainerWithBreadcrumbs } from "../layout/ContainerWithBreadcrumbs";
+import { useSearchTracking } from "./tracking";
+import { generateSearchLink } from "./utils";
 
 type SearchPageClientProps = {
   query: string;
@@ -24,6 +26,8 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
 }) => {
   const searchParams = useSearchParams();
   const [query, setQuery] = useState(initialQuery);
+  const { emitSearchEvent, emitResultSelectionEvent, emitNextPageEvent } =
+    useSearchTracking();
 
   const getSearchParam = useCallback(
     (param: string) => searchParams?.get(param),
@@ -36,6 +40,12 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
       setQuery(q);
     }
   }, [getSearchParam]);
+
+  useEffect(() => {
+    if (query) {
+      emitSearchEvent(query);
+    }
+  }, [query, emitSearchEvent]);
 
   const { documents, themes, articles } = items;
 
@@ -52,6 +62,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
   const hasMoreResults = visibleItems < allResults.length;
 
   const loadMoreResults = () => {
+    emitNextPageEvent(query);
     setVisibleItems((prev) => prev + 8);
   };
 
@@ -85,23 +96,31 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
               className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}
             >
               {allResults.slice(0, visibleItems).map((item, index) => {
-                const category =
-                  item.source === "code_du_travail"
-                    ? "Code du travail"
-                    : item.breadcrumbs?.length > 0
-                      ? item.breadcrumbs[item.breadcrumbs.length - 1].label
-                      : item.source;
-
                 return (
                   <SearchCard
                     key={`${item.source}-${item.slug || index}`}
                     title={item.title}
                     description={item.description || ""}
-                    category={category}
-                    link={
-                      item.source === "external" && item.url
-                        ? item.url
-                        : `/${getRouteBySource(item.source)}/${item.slug}?q=${encodeURIComponent(query)}`
+                    category={
+                      item.source === "code_du_travail"
+                        ? "Code du travail"
+                        : item.breadcrumbs?.length > 0
+                          ? item.breadcrumbs[item.breadcrumbs.length - 1].label
+                          : item.source
+                    }
+                    link={generateSearchLink(
+                      item.source,
+                      item.slug,
+                      query,
+                      item.url
+                    )}
+                    onClick={() =>
+                      emitResultSelectionEvent(
+                        item.source,
+                        item.slug,
+                        item.url,
+                        item.algo
+                      )
                     }
                   />
                 );
@@ -129,15 +148,29 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                 Articles du code du travail
               </h2>
               <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
-                {codeArticles.map((article, index) => (
-                  <SearchCard
-                    key={`${article.source}-${article.slug || index}`}
-                    title={article.slug}
-                    description={article.description || ""}
-                    link={`/code-du-travail/${article.slug}?q=${encodeURIComponent(query)}`}
-                    hiddenHeader
-                  />
-                ))}
+                {codeArticles.map((article, index) => {
+                  return (
+                    <SearchCard
+                      key={`${article.source}-${article.slug || index}`}
+                      title={article.slug}
+                      description={article.description || ""}
+                      link={generateSearchLink(
+                        article.source,
+                        article.slug,
+                        query
+                      )}
+                      onClick={() =>
+                        emitResultSelectionEvent(
+                          article.source,
+                          article.slug,
+                          undefined,
+                          article.algo
+                        )
+                      }
+                      hiddenHeader
+                    />
+                  );
+                })}
               </div>
             </section>
           )}
@@ -154,18 +187,33 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                   "fr-grid-row--center"
                 )}
               >
-                {relatedThemes.map((theme, index) => (
-                  <Button
-                    key={index}
-                    linkProps={{
-                      href: `/themes/${theme.slug}?q=${encodeURIComponent(query)}`,
-                    }}
-                    priority="secondary"
-                    className={fr.cx("fr-mr-2w", "fr-mb-2w")}
-                  >
-                    {theme.title}
-                  </Button>
-                ))}
+                {relatedThemes.map((theme, index) => {
+                  const handleThemeClick = () =>
+                    emitResultSelectionEvent(
+                      theme.source,
+                      theme.slug,
+                      undefined,
+                      theme.algo
+                    );
+
+                  return (
+                    <Button
+                      key={index}
+                      linkProps={{
+                        href: generateSearchLink(
+                          theme.source,
+                          theme.slug,
+                          query
+                        ),
+                        onClick: handleThemeClick,
+                      }}
+                      priority="secondary"
+                      className={fr.cx("fr-mr-2w", "fr-mb-2w")}
+                    >
+                      {theme.title}
+                    </Button>
+                  );
+                })}
               </div>
             </section>
           )}
