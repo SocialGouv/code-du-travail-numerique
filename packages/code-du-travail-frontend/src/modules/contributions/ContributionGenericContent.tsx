@@ -42,13 +42,13 @@ export function ContributionGenericContent({
   }, [displayGeneric]);
   return (
     <>
-      <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
+      <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-px-3v")}>
         <div
           className={fr.cx(
             "fr-col-12",
             "fr-col-md-8",
             "fr-mb-md-0",
-            "fr-mt-6w",
+            "fr-mt-2w",
             "fr-p-0",
             !displayGeneric && "fr-hidden"
           )}
@@ -84,6 +84,7 @@ export function ContributionGenericContent({
             "fr-col-12",
             "fr-col-md-4",
             "fr-mt-6w",
+            "fr-p-md-3w",
             !displayGeneric && "fr-hidden"
           )}
         >
