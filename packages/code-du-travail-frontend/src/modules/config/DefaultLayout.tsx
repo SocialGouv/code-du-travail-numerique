@@ -7,7 +7,7 @@ import { DefaultColorScheme } from "@codegouvfr/react-dsfr/next-appdir";
 import { StartDsfrLight } from "./StartDsfrLight";
 import { ENV } from "../../config";
 import { SentryTest } from "../sentry";
-import { CookieConsentDSFR } from "../cookie-consent";
+import { ConsentManager } from "../cookie-consent";
 
 type Props = {
   children: React.ReactNode;
@@ -45,7 +45,7 @@ export default function DefaultLayout({
       <body>
         <DsfrProvider lang={lang}>
           {children}
-          <CookieConsentDSFR />
+          <ConsentManager />
         </DsfrProvider>
         <MatomoAnalytics />
         {ENV === "development" && <SentryTest />}
