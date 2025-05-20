@@ -4,13 +4,6 @@ import { Metadata } from "next/types";
 import { SITE_URL } from "../src/config";
 import { headers } from "next/headers";
 import DefaultLayout from "../src/modules/config/DefaultLayout";
-import dynamic from "next/dynamic";
-
-// Import MatomoTracker dynamically to ensure it only runs on the client
-const MatomoTracker = dynamic(
-  () => import("../src/modules/config/MatomoTracker"),
-  { ssr: false }
-);
 
 export const metadata: Metadata = {
   title: {
@@ -34,11 +27,8 @@ export default function RootLayout({
   const nonce = headersData.get("x-nonce") ?? undefined;
 
   return (
-    <>
-      <MatomoTracker />
-      <DefaultLayout nonce={nonce} defaultColorScheme={"light"}>
-        {children}
-      </DefaultLayout>
-    </>
+    <DefaultLayout nonce={nonce} defaultColorScheme={"light"}>
+      {children}
+    </DefaultLayout>
   );
 }
