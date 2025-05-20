@@ -188,14 +188,6 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                 )}
               >
                 {relatedThemes.map((theme, index) => {
-                  const handleThemeClick = () =>
-                    emitResultSelectionEvent(
-                      theme.source,
-                      theme.slug,
-                      undefined,
-                      theme.algo
-                    );
-
                   return (
                     <Button
                       key={index}
@@ -205,7 +197,13 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                           theme.slug,
                           query
                         ),
-                        onClick: handleThemeClick,
+                        onClick: () =>
+                          emitResultSelectionEvent(
+                            theme.source,
+                            theme.slug,
+                            undefined,
+                            theme.algo
+                          ),
                       }}
                       priority="secondary"
                       className={fr.cx("fr-mr-2w", "fr-mb-2w")}

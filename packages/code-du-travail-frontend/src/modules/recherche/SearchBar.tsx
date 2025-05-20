@@ -63,10 +63,10 @@ export const SearchBar: React.FC<SearchBarProps> = ({ initialValue = "" }) => {
             setQuery(value);
           }
         }}
-        onChange={(value) => {
+        onChange={(value, suggestions) => {
           setQuery(value ?? "");
           if (value) {
-            emitSuggestionSelectionEvent(query, value);
+            emitSuggestionSelectionEvent(query, value, suggestions ?? []);
             handleSearch(value);
           }
         }}

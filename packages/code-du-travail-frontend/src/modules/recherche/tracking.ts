@@ -10,6 +10,7 @@ import { MatomoBaseEvent } from "../../lib/matomo/types";
 
 enum MatomoSearchCategory {
   CANDIDATE_RESULTS = "candidateResults",
+  CANDIDATE_SUGGESTIONS = "candidateSuggestions",
   SELECTED_SUGGESTION = "selectedSuggestion",
   NEXT_RESULT_PAGE = "nextResultPage",
   SELECT_RESULT = "selectResult",
@@ -61,11 +62,15 @@ export const useSearchTracking = () => {
   }, []);
 
   const emitSuggestionSelectionEvent = useCallback(
-    (query: string, suggestion: string) => {
+    (query: string, suggestion: string, suggestions: string[]) => {
       sendEvent({
         category: MatomoSearchCategory.SELECTED_SUGGESTION,
         action: query,
         name: suggestion,
+      });
+      sendEvent({
+        category: MatomoSearchCategory.CANDIDATE_SUGGESTIONS,
+        action: suggestions.join("###"),
       });
     },
     []
