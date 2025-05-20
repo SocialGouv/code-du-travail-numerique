@@ -1,129 +1,104 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
-import { PIWIK_SITE_ID, PIWIK_URL, WIDGETS_PATH } from "../../config";
+import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL, WIDGETS_PATH } from "../../config";
+import { getSourceUrlFromPath } from "../../lib";
+import init, { push } from "./MatomoNext";
 import { getStoredConsent } from "../../lib/consent";
 
-/**
- * Hook personnalisé pour initialiser Matomo uniquement côté client
- * Cette approche est spécifique pour l'App Router de Next.js
- */
-function useMatomoClient() {
+function MatomoComponent() {
+  const searchParams = useSearchParams();
+  const searchParamsString = searchParams?.toString();
   const path = usePathname();
-  const [isMounted, setIsMounted] = useState(false);
+  const [previousPath, setPreviousPath] = useState<string | null>(null);
 
-  // S'assurer que le composant est monté côté client
   useEffect(() => {
-    setIsMounted(true);
+    init({
+      siteId: PIWIK_SITE_ID,
+      url: PIWIK_URL,
+      onInitialization: () => {
+        const referrerUrl =
+          document?.referrer || getSourceUrlFromPath(SITE_URL + path);
+        if (referrerUrl) {
+          push(["setReferrerUrl", referrerUrl]);
+        }
+        if (path && path.match(WIDGETS_PATH)) {
+          push(["setCookieSameSite", "None"]);
+        }
+      },
+      excludeUrlsPatterns: [WIDGETS_PATH],
+    });
+
+    // Vérifier le consentement
+    const consent = getStoredConsent();
+
+    // Activation des fonctionnalités de base si l'utilisateur a donné son consentement pour Matomo
+    if (consent.matomo) {
+      push(["enableHeartBeatTimer"]);
+    }
+
+    // Activer la carte des chaleurs si l'utilisateur a donné son consentement
+    if (consent.matomoHeatmap) {
+      console.log("Activating Matomo Heatmap in DSFR version");
+
+      // Configuration de la carte des chaleurs
+      push(["HeatmapSessionRecording.setRecordingEnvironment", "production"]);
+      push(["HeatmapSessionRecording.setKeystrokes", "false"]); // Don't record keystrokes for privacy
+      push(["HeatmapSessionRecording.setCaptureVisibleContentOnly", "false"]); // Capture full page for heatmaps
+      push(["HeatmapSessionRecording.enable"]);
+
+      // Événement spécifique pour la carte des chaleurs
+      push([
+        "trackEvent",
+        "Heatmap_Test",
+        "Page_Visit",
+        window.location.pathname,
+      ]);
+    }
   }, []);
 
   useEffect(() => {
-    // Ne rien faire si le composant n'est pas monté (côté serveur)
-    if (!isMounted) return;
+    if (path && !isExcludedUrl(path, [WIDGETS_PATH])) {
+      let [pathname] = path.split("?");
+      pathname = pathname.replace(/#.*/, "");
 
-    // Vérifier le consentement de l'utilisateur
-    const consent = getStoredConsent();
-    console.log("DSFR Matomo consent (App Router):", consent);
-
-    // Ne pas initialiser Matomo sur les pages widgets
-    if (path?.match(WIDGETS_PATH)) {
-      console.log("Skipping Matomo initialization on widget page");
-      return;
-    }
-
-    // Supprimer tout script Matomo existant
-    const existingScript = document.getElementById("matomo-script");
-    if (existingScript) {
-      existingScript.remove();
-    }
-
-    // Créer un nouveau script pour initialiser Matomo
-    const script = document.createElement("script");
-    script.id = "matomo-script";
-    script.type = "text/javascript";
-
-    // Contenu du script avec toute la configuration Matomo
-    script.textContent = `
-      // Initialisation de Matomo
-      var _paq = window._paq = window._paq || [];
-      
-      // Configuration de base
-      _paq.push(['setTrackerUrl', '${PIWIK_URL}/matomo.php']);
-      _paq.push(['setSiteId', '${PIWIK_SITE_ID}']);
-      
-      // Fonctionnalités de base
-      ${consent.matomo ? "_paq.push(['enableHeartBeatTimer']);" : ""}
-      ${consent.matomo ? "_paq.push(['enableLinkTracking']);" : ""}
-      
-      // Configuration de la carte des chaleurs
-      ${consent.matomoHeatmap ? "_paq.push(['HeatmapSessionRecording.setRecordingEnvironment', 'production']);" : ""}
-      ${consent.matomoHeatmap ? "_paq.push(['HeatmapSessionRecording.setKeystrokes', 'false']);" : ""}
-      ${consent.matomoHeatmap ? "_paq.push(['HeatmapSessionRecording.setCaptureVisibleContentOnly', 'false']);" : ""}
-      ${consent.matomoHeatmap ? "_paq.push(['HeatmapSessionRecording.enable']);" : ""}
-      
-      // Événement spécifique pour la carte des chaleurs
-      ${consent.matomoHeatmap ? "_paq.push(['trackEvent', 'Heatmap_Test', 'Page_Visit', window.location.pathname]);" : ""}
-      
-      // Tracker la page vue
-      ${consent.matomo ? "_paq.push(['trackPageView']);" : ""}
-    `;
-
-    // Ajouter le script au document
-    document.head.appendChild(script);
-
-    // Créer un second script pour charger Matomo
-    const loaderScript = document.createElement("script");
-    loaderScript.id = "matomo-loader-script";
-    loaderScript.async = true;
-    loaderScript.defer = true;
-    loaderScript.src = `${PIWIK_URL}/matomo.js`;
-
-    // Ajouter le script de chargement au document
-    document.head.appendChild(loaderScript);
-
-    console.log(
-      "Matomo scripts injected directly in DSFR version (App Router)"
-    );
-
-    return () => {
-      // Nettoyer les scripts lors du démontage du composant
-      const scriptToRemove = document.getElementById("matomo-script");
-      if (scriptToRemove) {
-        scriptToRemove.remove();
+      if (previousPath) {
+        push(["setReferrerUrl", `${previousPath}`]);
       }
 
-      const loaderToRemove = document.getElementById("matomo-loader-script");
-      if (loaderToRemove) {
-        loaderToRemove.remove();
-      }
-    };
-  }, [isMounted, path]); // Dépendance à isMounted pour s'assurer que le code s'exécute uniquement côté client
-}
+      push(["setCustomUrl", pathname]);
+      push(["deleteCustomVariables", "page"]);
+      setPreviousPath(pathname);
 
-/**
- * Composant qui utilise le hook personnalisé pour initialiser Matomo
- */
-function MatomoComponent() {
-  useMatomoClient();
+      const query = searchParams?.get("q");
+      push(["setDocumentTitle", document.title]);
+      if (startsWith(path, "/recherche") || startsWith(path, "/search")) {
+        push(["trackSiteSearch", query ?? ""]);
+      } else {
+        push(["trackPageView"]);
+      }
+    }
+  }, [path, searchParamsString]);
   return null;
 }
 
-/**
- * Composant exporté qui s'assure que MatomoComponent est rendu uniquement côté client
- */
-export const MatomoAnalytics = () => {
-  const [isClient, setIsClient] = useState(false);
+export const MatomoAnalytics = () => (
+  <Suspense>
+    <MatomoComponent />
+  </Suspense>
+);
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+const startsWith = (str: string, needle: string) => {
+  return str.substring(0, needle.length) === needle;
+};
 
-  if (!isClient) return null;
-
-  return (
-    <Suspense>
-      <MatomoComponent />
-    </Suspense>
-  );
+const isExcludedUrl = (url: string, patterns: RegExp[]): boolean => {
+  let excluded = false;
+  patterns.forEach((pattern) => {
+    if (pattern.exec(url) !== null) {
+      excluded = true;
+    }
+  });
+  return excluded;
 };
