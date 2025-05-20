@@ -4,8 +4,8 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL, WIDGETS_PATH } from "../../config";
 import { getSourceUrlFromPath } from "../../lib";
-import init, { push } from "./MatomoNext";
 import { getStoredConsent } from "../../lib/consent";
+import init, { push } from "./MatomoNext";
 
 function MatomoComponent() {
   const searchParams = useSearchParams();
@@ -30,31 +30,36 @@ function MatomoComponent() {
       excludeUrlsPatterns: [WIDGETS_PATH],
     });
 
-    // Vérifier le consentement
     const consent = getStoredConsent();
+    console.log("Consent for Matomo Heatmap:", consent.matomoHeatmap);
 
-    // Activation des fonctionnalités de base si l'utilisateur a donné son consentement pour Matomo
-    if (consent.matomo) {
-      push(["enableHeartBeatTimer"]);
+    if (consent.matomoHeatmap) {
+      // Charger tracker.min.js explicitement
+      const script = document.createElement("script");
+      script.src = `${PIWIK_URL}/plugins/HeatmapSessionRecording/tracker.min.js`;
+      script.async = true;
+      script.onload = () => {
+        console.log("HeatmapSessionRecording tracker.min.js loaded");
+      };
+      script.onerror = () => {
+        console.error("Failed to load HeatmapSessionRecording tracker.min.js");
+      };
+      document.head.appendChild(script);
+
+      const handleLoad = () => {
+        push(["HeatmapSessionRecording.setKeystrokes", "false"]);
+        push(["HeatmapSessionRecording.setCaptureVisibleContentOnly", "false"]);
+        push(["HeatmapSessionRecording::enable"]);
+      };
+      window.addEventListener("load", handleLoad);
+      return () => {
+        window.removeEventListener("load", handleLoad);
+        document.head.removeChild(script);
+      };
     }
 
-    // Activer la carte des chaleurs si l'utilisateur a donné son consentement
-    if (consent.matomoHeatmap) {
-      console.log("Activating Matomo Heatmap in DSFR version");
-
-      // Configuration de la carte des chaleurs
-      push(["HeatmapSessionRecording.setRecordingEnvironment", "production"]);
-      push(["HeatmapSessionRecording.setKeystrokes", "false"]); // Don't record keystrokes for privacy
-      push(["HeatmapSessionRecording.setCaptureVisibleContentOnly", "false"]); // Capture full page for heatmaps
-      push(["HeatmapSessionRecording.enable"]);
-
-      // Événement spécifique pour la carte des chaleurs
-      push([
-        "trackEvent",
-        "Heatmap_Test",
-        "Page_Visit",
-        window.location.pathname,
-      ]);
+    if (consent.matomo) {
+      push(["enableHeartBeatTimer"]);
     }
   }, []);
 
@@ -80,6 +85,7 @@ function MatomoComponent() {
       }
     }
   }, [path, searchParamsString]);
+
   return null;
 }
 
