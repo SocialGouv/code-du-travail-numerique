@@ -5,7 +5,6 @@ import { Suspense, useEffect, useState } from "react";
 import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL, WIDGETS_PATH } from "../../config";
 import { getSourceUrlFromPath } from "../../lib";
 import init, { push } from "./MatomoNext";
-import { getStoredConsent } from "../../lib/consent";
 
 function MatomoComponent() {
   const searchParams = useSearchParams();
@@ -29,33 +28,6 @@ function MatomoComponent() {
       },
       excludeUrlsPatterns: [WIDGETS_PATH],
     });
-
-    // Vérifier le consentement
-    const consent = getStoredConsent();
-
-    // Activation des fonctionnalités de base si l'utilisateur a donné son consentement pour Matomo
-    if (consent.matomo) {
-      push(["enableHeartBeatTimer"]);
-    }
-
-    // Activer la carte des chaleurs si l'utilisateur a donné son consentement
-    if (consent.matomoHeatmap) {
-      console.log("Activating Matomo Heatmap in DSFR version");
-
-      // Configuration de la carte des chaleurs
-      push(["HeatmapSessionRecording.setRecordingEnvironment", "production"]);
-      push(["HeatmapSessionRecording.setKeystrokes", "false"]); // Don't record keystrokes for privacy
-      push(["HeatmapSessionRecording.setCaptureVisibleContentOnly", "false"]); // Capture full page for heatmaps
-      push(["HeatmapSessionRecording.enable"]);
-
-      // Événement spécifique pour la carte des chaleurs
-      push([
-        "trackEvent",
-        "Heatmap_Test",
-        "Page_Visit",
-        window.location.pathname,
-      ]);
-    }
   }, []);
 
   useEffect(() => {
