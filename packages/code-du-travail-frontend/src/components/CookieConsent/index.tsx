@@ -201,6 +201,7 @@ const ToggleSwitch = styled.div`
   display: inline-block;
   width: 60px;
   height: 34px;
+  cursor: pointer;
 `;
 
 const ToggleInput = styled.input`
@@ -255,6 +256,7 @@ const ToggleStatus = styled.span`
 const ToggleRow = styled.div`
   display: flex;
   align-items: center;
+  cursor: pointer;
 `;
 
 const ModalFooter = styled.div`
@@ -434,12 +436,11 @@ export const CookieConsentLegacy = () => {
                   campagnes publicitaires sur les moteurs de recherche.
                 </ToggleDescription>
                 <ToggleRow>
-                  <ToggleSwitch>
+                  <ToggleSwitch onClick={() => handleConsentChange("sea")}>
                     <ToggleInput
                       id="toggle-sea-legacy"
                       type="checkbox"
                       checked={consent.sea}
-                      onChange={() => handleConsentChange("sea")}
                       aria-labelledby="toggle-sea-label-legacy"
                     />
                     <ToggleSlider />
@@ -463,12 +464,13 @@ export const CookieConsentLegacy = () => {
                   de souris) pour améliorer l&apos;expérience utilisateur.
                 </ToggleDescription>
                 <ToggleRow>
-                  <ToggleSwitch>
+                  <ToggleSwitch
+                    onClick={() => handleConsentChange("matomoHeatmap")}
+                  >
                     <ToggleInput
                       id="toggle-heatmap-legacy"
                       type="checkbox"
                       checked={consent.matomoHeatmap}
-                      onChange={() => handleConsentChange("matomoHeatmap")}
                       aria-labelledby="toggle-heatmap-label-legacy"
                     />
                     <ToggleSlider />
