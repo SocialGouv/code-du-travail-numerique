@@ -17,26 +17,30 @@ export const ui = {
   questionnaire2: {
     title: byText(/Merci pour votre aide ! Pouvez-vous nous en dire plus \?/),
     simulator: {
-      title: byText(/Le simulateur était-il facile à utiliser \?/),
-      bad: byTestId("simulator-bad"),
-      average: byTestId("simulator-average"),
-      good: byTestId("simulator-good"),
+      title: byText(/Que pensez-vous de l'utilisation du simulateur \?/),
+      one: byTestId("simulator-one"),
+      two: byTestId("simulator-two"),
+      three: byTestId("simulator-three"),
+      four: byTestId("simulator-four"),
+      five: byTestId("simulator-five"),
     },
     questionClarity: {
       title: byText(
-        /Les questions étaient-elles claires et compréhensibles \?/
+        /Qu'avez-vous pensé des informations et des instructions fournies \?/
       ),
-      bad: byTestId("questionClarity-bad"),
-      average: byTestId("questionClarity-average"),
-      good: byTestId("questionClarity-good"),
+      one: byTestId("questionClarity-one"),
+      two: byTestId("questionClarity-two"),
+      three: byTestId("questionClarity-three"),
+      four: byTestId("questionClarity-four"),
+      five: byTestId("questionClarity-five"),
     },
     resultClarity: {
-      title: byText(
-        /Les explications du résultat obtenu étaient-elles claires et compréhensibles \?/
-      ),
-      bad: byTestId("resultClarity-bad"),
-      average: byTestId("resultClarity-average"),
-      good: byTestId("resultClarity-good"),
+      title: byText(/Que pensez-vous des explications du résultat obtenu \?/),
+      one: byTestId("resultClarity-one"),
+      two: byTestId("resultClarity-two"),
+      three: byTestId("resultClarity-three"),
+      four: byTestId("resultClarity-four"),
+      five: byTestId("resultClarity-five"),
     },
     more: {
       title: byText(/Vous souhaitez nous en dire davantage \?/),
