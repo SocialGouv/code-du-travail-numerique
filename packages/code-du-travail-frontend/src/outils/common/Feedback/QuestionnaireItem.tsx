@@ -103,41 +103,67 @@ export const QuestionnaireItem = ({
   return (
     <Div className={className} data-testId={dataTestId}>
       {title && <strong>{title}</strong>}
-      <ButtonContainer>
-        <StyledButton
-          variant={status === Status.BAD ? "light" : "naked"}
-          onClick={() => {
-            setStatus(Status.BAD);
-            onChange(badEventValue!);
-          }}
-          data-testId={`${dataTestId}-bad`}
-        >
-          <icons.Bad width="32px" />
-          {badText ?? "Pas bien"}
-        </StyledButton>
-        <StyledButton
-          variant={status === Status.AVERAGE ? "light" : "naked"}
-          onClick={() => {
-            setStatus(Status.AVERAGE);
-            onChange(averageEventValue!);
-          }}
-          data-testId={`${dataTestId}-average`}
-        >
-          <icons.Medium width="32px" />
-          {averageText ?? "Moyen"}
-        </StyledButton>
-        <StyledButton
-          variant={status === Status.GOOD ? "light" : "naked"}
-          onClick={() => {
-            setStatus(Status.GOOD);
-            onChange(goodEventValue!);
-          }}
-          data-testId={`${dataTestId}-good`}
-        >
-          <icons.Good width="32px" />
-          {goodText ?? "Très bien"}
-        </StyledButton>
-      </ButtonContainer>
+      <RadioContainer>
+        <RadioCard isSelected={status === Status.BAD}>
+          <RadioInput
+            type="radio"
+            name={dataTestId || "feedback"}
+            id={`${dataTestId}-bad`}
+            checked={status === Status.BAD}
+            onChange={() => {
+              setStatus(Status.BAD);
+              onChange(badEventValue!);
+            }}
+            data-testId={`${dataTestId}-bad`}
+          />
+          <RadioLabel htmlFor={`${dataTestId}-bad`}>
+            <RadioContent>
+              <icons.Bad width="32px" />
+              <RadioText>{badText ?? "Pas bien"}</RadioText>
+            </RadioContent>
+          </RadioLabel>
+        </RadioCard>
+
+        <RadioCard isSelected={status === Status.AVERAGE}>
+          <RadioInput
+            type="radio"
+            name={dataTestId || "feedback"}
+            id={`${dataTestId}-average`}
+            checked={status === Status.AVERAGE}
+            onChange={() => {
+              setStatus(Status.AVERAGE);
+              onChange(averageEventValue!);
+            }}
+            data-testId={`${dataTestId}-average`}
+          />
+          <RadioLabel htmlFor={`${dataTestId}-average`}>
+            <RadioContent>
+              <icons.Medium width="32px" />
+              <RadioText>{averageText ?? "Moyen"}</RadioText>
+            </RadioContent>
+          </RadioLabel>
+        </RadioCard>
+
+        <RadioCard isSelected={status === Status.GOOD}>
+          <RadioInput
+            type="radio"
+            name={dataTestId || "feedback"}
+            id={`${dataTestId}-good`}
+            checked={status === Status.GOOD}
+            onChange={() => {
+              setStatus(Status.GOOD);
+              onChange(goodEventValue!);
+            }}
+            data-testId={`${dataTestId}-good`}
+          />
+          <RadioLabel htmlFor={`${dataTestId}-good`}>
+            <RadioContent>
+              <icons.Good width="32px" />
+              <RadioText>{goodText ?? "Très bien"}</RadioText>
+            </RadioContent>
+          </RadioLabel>
+        </RadioCard>
+      </RadioContainer>
       {displayError && (
         <StyledError>Vous devez choisir une des réponses</StyledError>
       )}
@@ -147,15 +173,76 @@ export const QuestionnaireItem = ({
 
 const { colors } = theme;
 
-const ButtonContainer = styled.div`
+const RadioContainer = styled.div`
   display: flex;
   flex-direction: row;
   padding: 6px 0;
-  max-width: 300px;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 1rem;
 
   @media (max-width: 480px) {
-    max-width: 100%;
+    gap: 0.5rem;
+  }
+`;
+
+const RadioCard = styled.div<{ isSelected: boolean }>`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid
+    ${(props) => (props.isSelected ? colors.primary : colors.border)};
+  border-radius: 4px;
+  padding: 1rem;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  background-color: ${(props) =>
+    props.isSelected ? colors.primaryBgLight : "transparent"};
+
+  @media (max-width: 480px) {
+    width: 100px;
+    height: 100px;
+    padding: 0.5rem;
+  }
+`;
+
+const RadioInput = styled.input`
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  margin: 0;
+`;
+
+const RadioLabel = styled.label`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+`;
+
+const RadioContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+
+  @media (max-width: 480px) {
+    margin-top: 0.5rem;
+    gap: 0.25rem;
+  }
+`;
+
+const RadioText = styled.span`
+  font-size: 1rem;
+  text-align: center;
+
+  @media (max-width: 480px) {
+    font-size: 0.875rem;
   }
 `;
 

@@ -109,7 +109,7 @@ export const QuestionnaireItem = ({
                     setStatus(buttonStatus);
                     onChange(values[index]);
                   }}
-                  className={`${numberButtonStyle} ${status === buttonStatus ? selectedStyle : ""}`}
+                  className={`${numberButtonStyle} ${status === buttonStatus ? selectedStyle : ""} ${fr.cx("fr-mb-0")}`}
                   data-testid={`${dataTestId}-${buttonStatus}`}
                   priority="secondary"
                   type="button"
@@ -145,89 +145,85 @@ export const QuestionnaireItem = ({
           className={fr.cx("fr-btns-group", "fr-btns-group--inline")}
           role="group"
           aria-labelledby={title ? `${fieldsetId}-legend` : undefined}
-          style={{ justifyContent: "center" }}
+          style={{ justifyContent: "center", gap: "1rem" }}
         >
-          <Button
-            id={`${fieldsetId}-bad`}
-            onClick={() => {
-              setStatus(Status.BAD);
-              onChange(badEventValue!);
-            }}
-            className={status === Status.BAD ? selectedStyle : ""}
-            data-testid={`${dataTestId}-bad`}
-            priority="secondary"
-            type="button"
-            aria-pressed={status === Status.BAD}
-            aria-label={`Noter ${badText ?? "Pas bien"}${
-              status === Status.BAD ? " (sélectionné)" : ""
-            }`}
-          >
-            <span className={buttonContentStyle}>
-              <BadIcon width={"24px"} isActive={status === Status.BAD} />
-              <span
-                style={{
-                  fontSize: window.innerWidth <= 480 ? "11px" : "inherit",
-                  lineHeight: window.innerWidth <= 480 ? "1.1" : "inherit",
-                }}
-              >
-                {badText ?? "Pas bien"}
-              </span>
-            </span>
-          </Button>
-          <Button
-            id={`${fieldsetId}-average`}
-            onClick={() => {
-              setStatus(Status.AVERAGE);
-              onChange(averageEventValue!);
-            }}
-            className={status === Status.AVERAGE ? selectedStyle : ""}
-            data-testid={`${dataTestId}-average`}
-            priority="secondary"
-            type="button"
-            aria-pressed={status === Status.AVERAGE}
-            aria-label={`Noter ${averageText ?? "Moyen"}${
-              status === Status.AVERAGE ? " (sélectionné)" : ""
-            }`}
-          >
-            <span className={buttonContentStyle}>
-              <MediumIcon width={"24px"} isActive={status === Status.AVERAGE} />
-              <span
-                style={{
-                  fontSize: window.innerWidth <= 480 ? "11px" : "inherit",
-                  lineHeight: window.innerWidth <= 480 ? "1.1" : "inherit",
-                }}
-              >
-                {averageText ?? "Moyen"}
-              </span>
-            </span>
-          </Button>
-          <Button
-            id={`${fieldsetId}-good`}
-            onClick={() => {
-              setStatus(Status.GOOD);
-              onChange(goodEventValue!);
-            }}
-            className={status === Status.GOOD ? selectedStyle : ""}
-            data-testid={`${dataTestId}-good`}
-            priority="secondary"
-            type="button"
-            aria-pressed={status === Status.GOOD}
-            aria-label={`Noter ${goodText ?? "Très bien"}${
-              status === Status.GOOD ? " (sélectionné)" : ""
-            }`}
-          >
-            <span className={buttonContentStyle}>
-              <GoodIcon width={"24px"} isActive={status === Status.GOOD} />
-              <span
-                style={{
-                  fontSize: window.innerWidth <= 480 ? "11px" : "inherit",
-                  lineHeight: window.innerWidth <= 480 ? "1.1" : "inherit",
-                }}
-              >
-                {goodText ?? "Très bien"}
-              </span>
-            </span>
-          </Button>
+          <div className={radioCardStyle}>
+            <input
+              type="radio"
+              name={fieldsetId}
+              id={`${fieldsetId}-bad`}
+              className="fr-radio"
+              checked={status === Status.BAD}
+              onChange={() => {
+                setStatus(Status.BAD);
+                onChange(badEventValue!);
+              }}
+              data-testid={`${dataTestId}-bad`}
+              aria-label={`Noter ${badText ?? "Pas bien"}${
+                status === Status.BAD ? " (sélectionné)" : ""
+              }`}
+            />
+            <label htmlFor={`${fieldsetId}-bad`} className={radioLabelStyle}>
+              <div className={radioContentStyle}>
+                <BadIcon width={"32px"} isActive={status === Status.BAD} />
+                <span className={radioTextStyle}>{badText ?? "Pas bien"}</span>
+              </div>
+            </label>
+          </div>
+          <div className={radioCardStyle}>
+            <input
+              type="radio"
+              name={fieldsetId}
+              id={`${fieldsetId}-average`}
+              className="fr-radio"
+              checked={status === Status.AVERAGE}
+              onChange={() => {
+                setStatus(Status.AVERAGE);
+                onChange(averageEventValue!);
+              }}
+              data-testid={`${dataTestId}-average`}
+              aria-label={`Noter ${averageText ?? "Moyen"}${
+                status === Status.AVERAGE ? " (sélectionné)" : ""
+              }`}
+            />
+            <label
+              htmlFor={`${fieldsetId}-average`}
+              className={radioLabelStyle}
+            >
+              <div className={radioContentStyle}>
+                <MediumIcon
+                  width={"32px"}
+                  isActive={status === Status.AVERAGE}
+                />
+                <span className={radioTextStyle}>{averageText ?? "Moyen"}</span>
+              </div>
+            </label>
+          </div>
+          <div className={radioCardStyle}>
+            <input
+              type="radio"
+              name={fieldsetId}
+              id={`${fieldsetId}-good`}
+              className="fr-radio"
+              checked={status === Status.GOOD}
+              onChange={() => {
+                setStatus(Status.GOOD);
+                onChange(goodEventValue!);
+              }}
+              data-testid={`${dataTestId}-good`}
+              aria-label={`Noter ${goodText ?? "Très bien"}${
+                status === Status.GOOD ? " (sélectionné)" : ""
+              }`}
+            />
+            <label htmlFor={`${fieldsetId}-good`} className={radioLabelStyle}>
+              <div className={radioContentStyle}>
+                <GoodIcon width={"32px"} isActive={status === Status.GOOD} />
+                <span className={radioTextStyle}>
+                  {goodText ?? "Très bien"}
+                </span>
+              </div>
+            </label>
+          </div>
         </div>
       </fieldset>
       {displayError && (
@@ -277,6 +273,58 @@ const scaleContainer = css({
   width: "100%",
   maxWidth: "600px",
   marginBottom: "1rem",
+});
+
+const radioCardStyle = css({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  border: "1px solid var(--border-default-grey)",
+  borderRadius: "4px",
+  padding: "1rem",
+  width: "120px !important",
+  height: "120px",
+  position: "relative",
+  "@media (max-width: 480px)": {
+    width: "100% !important",
+    height: "100px",
+    padding: "0.5rem",
+  },
+  "&:has(input:checked)": {
+    borderColor: "var(--border-active-blue-france)",
+    backgroundColor: "var(--background-alt-blue-france)",
+  },
+});
+
+const radioLabelStyle = css({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "100%",
+  height: "100%",
+  cursor: "pointer",
+});
+
+const radioContentStyle = css({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "0.5rem",
+  marginTop: "1rem",
+  "@media (max-width: 480px)": {
+    marginTop: "0.5rem",
+    gap: "0.25rem",
+  },
+});
+
+const radioTextStyle = css({
+  fontSize: "1rem",
+  textAlign: "center",
+  "@media (max-width: 480px)": {
+    fontSize: "0.875rem",
+  },
 });
 
 const labelLeftStyle = css({
