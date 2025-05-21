@@ -6,17 +6,18 @@ import { css } from "@styled-system/css";
 import { fetchSuggestResults } from "../../layout/header/fetchSuggestResults";
 import { Autocomplete } from "../../common/Autocomplete";
 import { SUGGEST_MAX_RESULTS } from "../../../config";
-import { useLayoutTracking } from "../../layout/tracking";
 import { useRouter } from "next/navigation";
+import { useSearchTracking } from "src/modules/recherche/tracking";
 
 export const HomeSearch = () => {
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState<string[]>([]);
-  const { emitSuggestionEvent } = useLayoutTracking();
   const router = useRouter();
+  const { emitSearchEvent, emitSuggestionSelectionEvent } = useSearchTracking();
 
   const handleSearch = (searchTerm: string) => {
-    router.push(`/recherche?q=${encodeURIComponent(searchTerm)}`);
+    emitSearchEvent(searchTerm.trim());
+    router.push(`/recherche?q=${encodeURIComponent(searchTerm.trim())}`);
   };
 
   const onSubmit = (e: React.FormEvent) => {
@@ -39,7 +40,7 @@ export const HomeSearch = () => {
 
   const onSelectedItemChange = (value: string | undefined) => {
     if (value) {
-      emitSuggestionEvent(query, value, suggestions);
+      emitSuggestionSelectionEvent(query, value, suggestions);
       handleSearch(value);
     }
   };

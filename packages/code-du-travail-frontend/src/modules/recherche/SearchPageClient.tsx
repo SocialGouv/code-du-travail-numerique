@@ -80,12 +80,19 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
 
       {query && (
         <>
-          <h2 className={fr.cx("fr-h4", "fr-mb-3w")}>
+          <h2 className={fr.cx("fr-h4")}>
             Résultats de recherche pour &quot;{query}&quot;
           </h2>
 
           {allResults.length === 0 ? (
-            <div className={fr.cx("fr-alert", "fr-alert--info", "fr-mb-4w")}>
+            <div
+              className={fr.cx(
+                "fr-alert",
+                "fr-alert--info",
+                "fr-mb-4w",
+                "fr-mt-3w"
+              )}
+            >
               <p>
                 Nous n&apos;avons pas trouvé de résultat pour votre recherche.
               </p>
@@ -93,7 +100,11 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
           ) : (
             <div
               id="content"
-              className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}
+              className={fr.cx(
+                "fr-grid-row",
+                "fr-grid-row--gutters",
+                "fr-mt-3w"
+              )}
             >
               {allResults.slice(0, visibleItems).map((item, index) => {
                 return (
@@ -144,10 +155,14 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
 
           {codeArticles.length > 0 && (
             <section className={fr.cx("fr-mt-6w")}>
-              <h2 className={fr.cx("fr-h3", "fr-mb-3w")}>
-                Articles du code du travail
-              </h2>
-              <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
+              <h2 className={fr.cx("fr-h3")}>Articles du code du travail</h2>
+              <div
+                className={fr.cx(
+                  "fr-grid-row",
+                  "fr-grid-row--gutters",
+                  "fr-mt-3w"
+                )}
+              >
                 {codeArticles.map((article, index) => {
                   return (
                     <SearchCard
@@ -177,14 +192,15 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
 
           {relatedThemes.length > 0 && (
             <section className={fr.cx("fr-mt-6w")}>
-              <h2 className={fr.cx("fr-h3", "fr-mb-3w")}>
+              <h2 className={fr.cx("fr-h3")}>
                 Les thèmes suivants peuvent vous intéresser
               </h2>
               <div
                 className={fr.cx(
                   "fr-grid-row",
                   "fr-grid-row--gutters",
-                  "fr-grid-row--center"
+                  "fr-grid-row--center",
+                  "fr-mt-3w"
                 )}
               >
                 {relatedThemes.map((theme, index) => {
