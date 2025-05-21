@@ -53,7 +53,7 @@ export const QuestionnaireAdvanced = ({
         />
         <QuestionnaireItem
           useNumberedScale={true}
-          title="Qu'avez-vous pensé des informations et des instructions fournies?"
+          title="Qu'avez-vous pensé des informations et des instructions fournies ?"
           values={[
             FEEDBACK_RESULT.ONE,
             FEEDBACK_RESULT.TWO,

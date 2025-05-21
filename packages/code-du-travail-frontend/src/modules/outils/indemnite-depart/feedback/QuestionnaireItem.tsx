@@ -105,6 +105,7 @@ export const QuestionnaireItem = ({
                 <Button
                   key={buttonStatus}
                   id={`${fieldsetId}-${buttonStatus}`}
+                  data-testId={`${dataTestId}-${buttonStatus}`}
                   onClick={() => {
                     setStatus(buttonStatus);
                     onChange(values[index]);
