@@ -48,7 +48,7 @@
     "@socialgouv/cdtn-ui": "workspace:^",
     "@socialgouv/cdtn-utils": "workspace:^",
     "@socialgouv/fiches-travail-data": "^4.241.0",
-    "@socialgouv/matomo-next": "^1.6.1",
+    "@socialgouv/matomo-next": "^1.9.2",
     "@socialgouv/modeles-social": "workspace:^",
     "@socialgouv/reference-article": "^1.0.1",
     "cors": "^2.8.5",

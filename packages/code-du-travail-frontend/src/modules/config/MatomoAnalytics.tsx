@@ -40,6 +40,8 @@ function MatomoComponent() {
       script.async = true;
       script.onload = () => {
         console.log("HeatmapSessionRecording tracker.min.js loaded");
+        // Ajouter un espion pour vérifier les requêtes
+        push(["HeatmapSessionRecording::debug", "true"]);
       };
       script.onerror = () => {
         console.error("Failed to load HeatmapSessionRecording tracker.min.js");
@@ -47,9 +49,16 @@ function MatomoComponent() {
       document.head.appendChild(script);
 
       const handleLoad = () => {
+        console.log("Activating Matomo Heatmap in DSFR version");
         push(["HeatmapSessionRecording.setKeystrokes", "false"]);
+        console.log("Keystrokes disabled");
         push(["HeatmapSessionRecording.setCaptureVisibleContentOnly", "false"]);
+        console.log("Capture full page enabled");
         push(["HeatmapSessionRecording::enable"]);
+        console.log(
+          "HeatmapSessionRecording enabled at",
+          new Date().toISOString()
+        );
       };
       window.addEventListener("load", handleLoad);
       return () => {
