@@ -1,6 +1,5 @@
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import { SITE_URL } from "../../../src/config";
-import { WidgetWithIframeResizer } from "src/modules/widgets/WidgetWithIframeResizer";
 import { SearchWidgetDisplay } from "src/modules/recherche";
 
 export async function generateMetadata() {
@@ -14,11 +13,7 @@ export async function generateMetadata() {
 }
 
 async function SearchWidget() {
-  return (
-    <WidgetWithIframeResizer title={"Recherche - Code du travail numérique"}>
-      <SearchWidgetDisplay />
-    </WidgetWithIframeResizer>
-  );
+  return <SearchWidgetDisplay />;
 }
 
 export default SearchWidget;

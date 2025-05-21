@@ -4,10 +4,14 @@ import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import { useSearchTracking, MatomoWidgetEvent } from "./tracking";
+import Image from "next/image";
 import Button from "@codegouvfr/react-dsfr/Button";
+import Link from "next/link";
+import { useIframeResizer } from "../../common/hooks";
 
 export const SearchWidgetDisplay: React.FC = () => {
   const { emitSearchEvent, emitWidgetEvent } = useSearchTracking();
+  useIframeResizer();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -15,11 +19,14 @@ export const SearchWidgetDisplay: React.FC = () => {
     const input = form.querySelector('input[name="q"]') as HTMLInputElement;
     const query = input?.value?.trim();
 
+    emitWidgetEvent(MatomoWidgetEvent.SUBMIT_SEARCH);
+    window.parent?.postMessage({ name: "button-search", kind: "click" }, "*");
+
     if (query) {
       emitSearchEvent(query);
-      emitWidgetEvent(MatomoWidgetEvent.SUBMIT_SEARCH);
-      window.parent?.postMessage({ name: "button-search", kind: "click" }, "*");
     }
+
+    form.submit();
   };
 
   const onClickLogo = () => {
@@ -28,88 +35,81 @@ export const SearchWidgetDisplay: React.FC = () => {
   };
 
   return (
-    <div className={fr.cx("fr-container")}>
-      <div className={containerStyles}>
-        <form target="_blank" action="/recherche" onSubmit={handleSubmit}>
-          <label
-            htmlFor="cdtn-search"
-            className={`${labelStyles} ${fr.cx("fr-my-3v")}`}
-          >
-            Trouvez les réponses à vos questions en droit du travail
-          </label>
-
-          <div className={searchContainerStyles}>
-            <input
-              name="q"
-              autoComplete="off"
-              type="text"
-              id="cdtn-search"
-              placeholder="période d'essai"
-              aria-label="Votre recherche"
-              className={`${inputStyles} ${fr.cx("fr-input")} ${fr.cx("fr-my-3v")}`}
-            />
-
-            <Button
-              id="button-search"
-              type="submit"
-              iconId="fr-icon-search-line"
-              priority="primary"
-              className={buttonStyles}
-            >
-              Rechercher
-            </Button>
-          </div>
-        </form>
+    <div className={`${containerStyles} ${fr.cx("fr-p-2w")}`}>
+      <div className={fr.cx("fr-mb-3w")}>
+        <Link
+          title="Le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail."
+          href="/"
+          target="_blank"
+          className={logoLinkStyles}
+        >
+          <Image
+            src="/static/assets/img/logo.svg"
+            alt="Code du travail numérique"
+            width={144}
+            height={65}
+            onClick={onClickLogo}
+          />
+        </Link>
       </div>
+
+      <form target="_blank" action="/recherche" onSubmit={handleSubmit}>
+        <label
+          htmlFor="cdtn-search"
+          className={`${labelStyles} ${fr.cx("fr-mb-3w")}`}
+        >
+          Trouvez les réponses à vos questions en droit du travail
+        </label>
+
+        <div className={searchContainerStyles}>
+          <input
+            name="q"
+            autoComplete="off"
+            type="text"
+            id="cdtn-search"
+            placeholder="Période d'essai"
+            aria-label="Votre recherche sur le code du travail numérique"
+            className={fr.cx("fr-input")}
+          />
+
+          <Button
+            id="button-search"
+            type="submit"
+            iconId="fr-icon-search-line"
+            priority="primary"
+          >
+            Rechercher
+          </Button>
+        </div>
+      </form>
     </div>
   );
 };
 
 const containerStyles = css({
-  maxWidth: "500px",
-  textAlign: "center",
-  margin: "auto",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  alignSelf: "center",
 });
 
 const logoLinkStyles = css({
-  display: "inline-block",
-  marginBottom: fr.spacing("4v"),
-});
-
-const logoImageStyles = css({
-  width: "auto",
-  height: "65px",
-  "@media (max-width: 576px)": {
-    height: fr.spacing("8v"),
+  _after: {
+    display: "none !important",
   },
 });
 
 const labelStyles = css({
-  color: fr.colors.decisions.text.default.grey.default,
   fontWeight: "bold",
-  fontSize: fr.spacing("4v"),
   display: "block",
+  textAlign: "center",
 });
 
 const searchContainerStyles = css({
   width: "100%",
-});
-
-const inputStyles = css({
-  margin: `${fr.spacing("4v")}`,
-  height: fr.spacing("6v"),
-  width: "100%",
-  fontSize: fr.spacing("4v"),
-});
-
-const buttonStyles = css({
-  marginTop: `${fr.spacing("3v")}`,
-  height: "100%",
   display: "flex",
+  flexDirection: "row",
+  justifyContent: "center",
   alignItems: "center",
-  color: fr.colors.decisions.text.actionHigh.blueFrance.default,
-  cursor: "pointer",
-  background: "transparent",
-  border: "none",
-  transition: "all 100ms ease-out",
 });
