@@ -12,7 +12,7 @@ import Link from "../Link";
 import { redirect } from "next/navigation";
 
 export type AutocompleteProps<K> = InputProps & {
-  onChange?: (value: K | undefined) => void;
+  onChange?: (value: K | undefined, suggestions?: K[]) => void;
   onError?: (value: string) => void;
   onSearch?: (query: string, results: K[]) => void;
   displayLabel: (item: K | null) => string;
@@ -74,7 +74,7 @@ export const Autocomplete = <K,>({
         }
       }}
       onChange={(item) => {
-        if (item && onChange) onChange(item);
+        if (item && onChange) onChange(item, suggestions);
         if (lineAsLink && item) redirect(lineAsLink(item));
       }}
       itemToString={displayLabel}
@@ -105,7 +105,7 @@ export const Autocomplete = <K,>({
                       className={`${fr.cx("fr-p-0")} ${buttonClose}`}
                       onClick={() => {
                         clearSelection();
-                        if (onChange) onChange(undefined);
+                        if (onChange) onChange(undefined, []);
                         if (onSearch) onSearch("", []);
                         setSuggestions([]);
                         inputRef?.focus();
@@ -205,7 +205,7 @@ const autocompleteListContainer = css({
   top: "100%",
   left: 0,
   width: "100%",
-  zIndex: 10,
+  zIndex: 1000,
   bg: "var(--background-default-grey)",
   listStyleType: "none!",
   borderTop: "none",

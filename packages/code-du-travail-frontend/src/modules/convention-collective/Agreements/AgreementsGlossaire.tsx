@@ -1,5 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import { AlphabeticList } from "../../utils/alphabetic.list";
+import { AlphabeticList } from "../../glossaire/AlphabeticList";
 
 type Props = {
   letters: string[];
