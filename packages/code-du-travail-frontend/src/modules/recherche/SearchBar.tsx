@@ -16,12 +16,15 @@ export const SearchBar: React.FC<SearchBarProps> = ({ initialValue = "" }) => {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
   const [query, setQuery] = useState(initialValue);
+  const [key, setKey] = useState(0);
   const { emitSearchEvent, emitSuggestionSelectionEvent } = useSearchTracking();
 
   const handleSearch = (searchTerm: string) => {
     if (searchTerm.trim()) {
       emitSearchEvent(searchTerm.trim());
       router.push(`/recherche?q=${encodeURIComponent(searchTerm.trim())}`);
+      // Incrémente la clé pour forcer la réinitialisation du composant Autocomplete
+      setKey((prevKey) => prevKey + 1);
     }
   };
 
@@ -52,6 +55,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ initialValue = "" }) => {
   return (
     <form role="search" onSubmit={handleSubmit} ref={formRef}>
       <Autocomplete<string>
+        key={key}
         label="Rechercher"
         placeholder="Rechercher"
         isSearch
