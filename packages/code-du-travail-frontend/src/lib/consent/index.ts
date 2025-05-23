@@ -73,16 +73,6 @@ const applyMatomoHeatmapConsent = (isConsented: boolean): void => {
   try {
     if (isConsented) {
       window._paq = window._paq || [];
-      // Configure Heatmap & Session Recording
-      window._paq.push([
-        "HeatmapSessionRecording.setRecordingEnvironment",
-        "production",
-      ]);
-      window._paq.push(["HeatmapSessionRecording.setKeystrokes", "false"]); // Don't record keystrokes for privacy
-      window._paq.push([
-        "HeatmapSessionRecording.setCaptureVisibleContentOnly",
-        "false",
-      ]); // Capture full page for heatmaps
       window._paq.push(["HeatmapSessionRecording.enable"]);
     } else {
       window._paq = window._paq || [];
