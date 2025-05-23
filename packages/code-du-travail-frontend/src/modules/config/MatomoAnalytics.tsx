@@ -4,7 +4,8 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL, WIDGETS_PATH } from "../../config";
 import { getSourceUrlFromPath } from "../../lib";
-import init, { push } from "./MatomoNext";
+import { getStoredConsent } from "../../lib/consent";
+import init, { push } from "@socialgouv/matomo-next";
 
 function MatomoComponent() {
   const searchParams = useSearchParams();
@@ -28,6 +29,47 @@ function MatomoComponent() {
       },
       excludeUrlsPatterns: [WIDGETS_PATH],
     });
+
+    const consent = getStoredConsent();
+    console.log("Consent for Matomo Heatmap:", consent.matomoHeatmap);
+
+    if (consent.matomoHeatmap) {
+      // Charger tracker.min.js explicitement
+      const script = document.createElement("script");
+      script.src = `${PIWIK_URL}/plugins/HeatmapSessionRecording/tracker.min.js`;
+      script.async = true;
+      script.onload = () => {
+        console.log("HeatmapSessionRecording tracker.min.js loaded");
+        // Ajouter un espion pour vérifier les requêtes
+        push(["HeatmapSessionRecording::debug", "true"]);
+      };
+      script.onerror = () => {
+        console.error("Failed to load HeatmapSessionRecording tracker.min.js");
+      };
+      document.head.appendChild(script);
+
+      const handleLoad = () => {
+        console.log("Activating Matomo Heatmap in DSFR version");
+        push(["HeatmapSessionRecording.setKeystrokes", "false"]);
+        console.log("Keystrokes disabled");
+        push(["HeatmapSessionRecording.setCaptureVisibleContentOnly", "false"]);
+        console.log("Capture full page enabled");
+        push(["HeatmapSessionRecording::enable"]);
+        console.log(
+          "HeatmapSessionRecording enabled at",
+          new Date().toISOString()
+        );
+      };
+      window.addEventListener("load", handleLoad);
+      return () => {
+        window.removeEventListener("load", handleLoad);
+        document.head.removeChild(script);
+      };
+    }
+
+    if (consent.matomo) {
+      push(["enableHeartBeatTimer"]);
+    }
   }, []);
 
   useEffect(() => {
@@ -52,6 +94,7 @@ function MatomoComponent() {
       }
     }
   }, [path, searchParamsString]);
+
   return null;
 }
 

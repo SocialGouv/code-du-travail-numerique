@@ -4,6 +4,7 @@
 export type ConsentType = {
   matomo: boolean;
   sea: boolean;
+  matomoHeatmap: boolean;
 };
 
 // Local storage key for cookie consent
@@ -13,6 +14,7 @@ export const CONSENT_STORAGE_KEY = "cdtn-cookie-consent";
 export const DEFAULT_CONSENT: ConsentType = {
   matomo: false,
   sea: false,
+  matomoHeatmap: false,
 };
 
 // Get consent from local storage
@@ -26,7 +28,12 @@ export const getStoredConsent = (): ConsentType => {
 
     // If user hasn't consented yet, return default with no tracking
     if (!hasConsented) {
-      return { ...DEFAULT_CONSENT, matomo: false, sea: false };
+      return {
+        ...DEFAULT_CONSENT,
+        matomo: false,
+        sea: false,
+        matomoHeatmap: false,
+      };
     }
 
     return storedConsent ? JSON.parse(storedConsent) : DEFAULT_CONSENT;
@@ -41,7 +48,7 @@ export const saveConsent = (consent: ConsentType): void => {
   if (typeof window === "undefined") return;
 
   try {
-    // Ensure Matomo is always enabled (mandatory)
+    // Ensure Matomo is always enabled (mandatory), but respect user choice for matomoHeatmap
     const finalConsent = { ...consent, matomo: true };
     localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(finalConsent));
     applyConsent(finalConsent);
@@ -54,7 +61,26 @@ export const saveConsent = (consent: ConsentType): void => {
 export const applyConsent = (consent: ConsentType): void => {
   // Matomo is always enabled (mandatory)
   applyMatomoConsent(true);
+  // Matomo Heatmap requires explicit consent
+  applyMatomoHeatmapConsent(consent.matomoHeatmap);
   applySeaConsent(consent.sea);
+};
+
+// Apply Matomo Heatmap consent
+const applyMatomoHeatmapConsent = (isConsented: boolean): void => {
+  if (typeof window === "undefined") return;
+
+  try {
+    if (isConsented) {
+      window._paq = window._paq || [];
+      window._paq.push(["HeatmapSessionRecording.enable"]);
+    } else {
+      window._paq = window._paq || [];
+      window._paq.push(["HeatmapSessionRecording.disable"]);
+    }
+  } catch (e) {
+    console.error("Error applying Matomo Heatmap consent:", e);
+  }
 };
 
 // Apply Matomo consent
@@ -63,12 +89,10 @@ const applyMatomoConsent = (isConsented: boolean): void => {
 
   try {
     if (isConsented) {
-      console.log("Activation des cookies Matomo.");
       window._paq = window._paq || [];
       window._paq.push(["forgetUserOptOut"]);
       window._paq.push(["rememberCookieConsentGiven"]);
     } else {
-      console.log("Désactivation des cookies Matomo.");
       window._paq = window._paq || [];
       window._paq.push(["optUserOut"]);
       window._paq.push(["forgetCookieConsentGiven"]);
@@ -132,10 +156,6 @@ const isPathAllowedForSEA = (): boolean => {
     (path) => normalizePath(path) === currentPath
   );
 
-  console.log(
-    `Current path: ${currentPath}, SEA tracking allowed: ${isAllowed}`
-  );
-
   return isAllowed;
 };
 
@@ -148,16 +168,11 @@ const applySeaConsent = (isConsented: boolean): void => {
     const isAllowed = isPathAllowedForSEA();
 
     if (isConsented && isAllowed) {
-      console.log("Activation du tracking SEA sur une page autorisée.");
-
       // Remove the opt-out cookie if it exists
       const disableStr = "ga-disable-DC-3048978";
       document.cookie =
         disableStr + "=false; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
       window[disableStr] = false;
-      console.log(
-        "Enabling Google Analytics tracking (removing opt-out cookie)"
-      );
 
       // Load Google Tag Manager script if not already loaded
       if (!document.getElementById("gtm-script")) {
@@ -182,12 +197,6 @@ const applySeaConsent = (isConsented: boolean): void => {
         });
       }
     } else {
-      if (isConsented && !isAllowed) {
-        console.log("Page non autorisée pour le tracking SEA.");
-      } else {
-        console.log("Désactivation du tracking SEA.");
-      }
-
       // Remove Google Tag Manager script if it exists
       const script = document.getElementById("gtm-script");
       if (script) {
@@ -217,10 +226,8 @@ export const initConsent = (): void => {
 
   if (hasConsented) {
     const consent = getStoredConsent();
-    // Ensure Matomo is always enabled (mandatory)
+    // Ensure Matomo is always enabled (mandatory), but respect user choice for matomoHeatmap
     const finalConsent = { ...consent, matomo: true };
-
-    console.log("Consent has been given, current consent state:", finalConsent);
 
     applyConsent(finalConsent);
 
@@ -228,7 +235,6 @@ export const initConsent = (): void => {
     setupRouteChangeListener();
   } else {
     // Don't apply any cookies if user hasn't consented yet
-    console.log("No consent given yet, not loading any cookies");
   }
 };
 
@@ -246,10 +252,8 @@ const setupRouteChangeListener = (): void => {
       const previousPath = currentPath;
       currentPath = window.location.pathname;
       // Reapply consent based on the new path
-      console.log(`Path changed from ${previousPath} to ${currentPath}`);
       const consent = getStoredConsent();
       const finalConsent = { ...consent, matomo: true };
-      console.log("Reapplying consent after path change:", finalConsent);
       applyConsent(finalConsent);
     }
   };

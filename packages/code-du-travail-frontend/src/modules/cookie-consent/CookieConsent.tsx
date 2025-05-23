@@ -4,6 +4,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Button from "@codegouvfr/react-dsfr/Button";
+import { css } from "@styled-system/css";
 import {
   ConsentType,
   DEFAULT_CONSENT,
@@ -11,6 +12,63 @@ import {
   saveConsent,
   initConsent,
 } from "../../lib/consent";
+
+// Styles définis séparément
+const modalBody = css({
+  maxHeight: "80vh !important",
+  overflowY: "auto !important",
+});
+
+const modalContent = css({
+  maxHeight: "none !important",
+  overflowY: "visible !important",
+});
+
+const modalFooter = css({
+  position: "sticky",
+  bottom: 0,
+  backgroundColor: "var(--background-default-grey)",
+  paddingTop: "1rem",
+  zIndex: 1,
+  width: "100%",
+  overflow: "hidden",
+});
+
+const cookieBanner = css({
+  position: "fixed",
+  bottom: 0,
+  left: 0,
+  right: 0,
+  zIndex: 1000,
+  backgroundColor: "var(--background-default-grey)",
+  boxShadow: "0 -2px 4px rgba(0, 0, 0, 0.1)",
+});
+
+const manageButton = css({
+  position: "fixed",
+  bottom: "1rem",
+  right: "1rem",
+  zIndex: 1000,
+});
+
+// Style responsive pour les boutons
+const responsiveButtonsContainer = css({
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "flex-end",
+  gap: "1rem",
+  width: "100%",
+  "@media (max-width: 768px)": {
+    flexDirection: "column",
+    gap: "0.5rem",
+  },
+});
+
+const responsiveButton = css({
+  "@media (max-width: 768px)": {
+    width: "100% !important",
+  },
+});
 
 export const CookieConsentDSFR = () => {
   const [consent, setConsent] = useState<ConsentType>(DEFAULT_CONSENT);
@@ -39,11 +97,9 @@ export const CookieConsentDSFR = () => {
     // Show banner if no consent has been given yet
     const hasConsented = localStorage.getItem("cdtn-cookie-consent-given");
     if (!hasConsented) {
-      console.log("No previous consent found, showing banner");
       setShowBanner(true);
       // Don't initialize cookies until user has consented
     } else {
-      console.log("Previous consent found, initializing consent");
       // User has already made a choice, initialize consent
       initConsent();
     }
@@ -51,8 +107,7 @@ export const CookieConsentDSFR = () => {
 
   // Handle accepting all cookies
   const handleAcceptAll = () => {
-    const newConsent = { matomo: true, sea: true };
-    console.log("User accepted all cookies:", newConsent);
+    const newConsent = { matomo: true, sea: true, matomoHeatmap: true };
     setConsent(newConsent);
     saveConsent(newConsent);
     setShowBanner(false);
@@ -60,15 +115,13 @@ export const CookieConsentDSFR = () => {
     localStorage.setItem("cdtn-cookie-consent-given", "true");
 
     // Initialize consent after user has made a choice
-    console.log("Initializing consent after user acceptance");
     initConsent();
   };
 
   // Handle rejecting all cookies
   const handleRejectAll = () => {
     // Matomo is mandatory, so it's always true
-    const newConsent = { matomo: true, sea: false };
-    console.log("User rejected optional cookies:", newConsent);
+    const newConsent = { matomo: true, sea: false, matomoHeatmap: false };
     setConsent(newConsent);
     saveConsent(newConsent);
     setShowBanner(false);
@@ -76,7 +129,6 @@ export const CookieConsentDSFR = () => {
     localStorage.setItem("cdtn-cookie-consent-given", "true");
 
     // Initialize consent after user has made a choice
-    console.log("Initializing consent after user rejection");
     initConsent();
   };
 
@@ -101,22 +153,13 @@ export const CookieConsentDSFR = () => {
       {/* Cookie Consent Banner */}
       {!isWidgetPage && showBanner && (
         <div
-          className={fr.cx(
+          className={`${fr.cx(
             "fr-container",
             "fr-py-2w",
             "fr-px-2w",
             "fr-mb-0",
             "fr-mt-0"
-          )}
-          style={{
-            position: "fixed",
-            bottom: 0,
-            left: 0,
-            right: 0,
-            zIndex: 1000,
-            backgroundColor: "var(--background-default-grey)",
-            boxShadow: "0 -2px 4px rgba(0, 0, 0, 0.1)",
-          }}
+          )} ${cookieBanner}`}
         >
           <div className={fr.cx("fr-grid-row")}>
             <div className={fr.cx("fr-col-12")}>
@@ -145,14 +188,10 @@ export const CookieConsentDSFR = () => {
                   "fr-btns-group",
                   "fr-btns-group--right",
                   "fr-btns-group--inline",
-                  "fr-btns-group--inline-reverse"
+                  "fr-btns-group--inline-reverse",
+                  "fr-grid-row",
+                  "fr-grid-row--right"
                 )}
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  flexWrap: "nowrap",
-                  justifyContent: "flex-end",
-                }}
               >
                 <Button onClick={openModal} priority="tertiary">
                   Personnaliser
@@ -186,10 +225,7 @@ export const CookieConsentDSFR = () => {
         >
           <div className={fr.cx("fr-grid-row", "fr-grid-row--center")}>
             <div className={fr.cx("fr-col-12", "fr-col-md-10", "fr-col-lg-8")}>
-              <div
-                className={fr.cx("fr-modal__body")}
-                style={{ maxHeight: "none", overflow: "visible" }}
-              >
+              <div className={`${fr.cx("fr-modal__body")}`}>
                 <div className={fr.cx("fr-modal__header")}>
                   <button
                     className={fr.cx("fr-btn--close", "fr-btn")}
@@ -200,10 +236,7 @@ export const CookieConsentDSFR = () => {
                     Fermer
                   </button>
                 </div>
-                <div
-                  className={fr.cx("fr-modal__content")}
-                  style={{ overflow: "visible" }}
-                >
+                <div className={`${fr.cx("fr-modal__content")}`}>
                   <div className={fr.cx("fr-modal__title")}>
                     <div
                       className={fr.cx("fr-h3")}
@@ -304,36 +337,78 @@ export const CookieConsentDSFR = () => {
                       </div>
                     </fieldset>
                   </div>
+
+                  <div className={fr.cx("fr-mt-2w")}>
+                    <fieldset
+                      className={fr.cx("fr-fieldset")}
+                      id="cookie-heatmap-fieldset"
+                    >
+                      <legend className={fr.cx("fr-fieldset__legend")}>
+                        Carte des chaleurs Matomo
+                      </legend>
+                      <div className="fr-form-group">
+                        <div className={fr.cx("fr-toggle")}>
+                          <input
+                            type="checkbox"
+                            className={fr.cx("fr-toggle__input")}
+                            id="toggle-heatmap"
+                            name="toggle-heatmap"
+                            checked={consent.matomoHeatmap}
+                            onChange={() =>
+                              handleConsentChange("matomoHeatmap")
+                            }
+                            aria-labelledby="toggle-heatmap-label"
+                          />
+                          <label
+                            className={fr.cx("fr-toggle__label")}
+                            htmlFor="toggle-heatmap"
+                            id="toggle-heatmap-label"
+                            data-fr-checked-label="Activé"
+                            data-fr-unchecked-label="Désactivé"
+                          >
+                            Carte des chaleurs
+                          </label>
+                          <p className={fr.cx("fr-hint-text")}>
+                            Cette fonctionnalité nous permet de visualiser
+                            comment les utilisateurs interagissent avec notre
+                            site (clics, mouvements de souris) pour améliorer
+                            l&apos;expérience utilisateur.
+                          </p>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
                 </div>
-                <div className={fr.cx("fr-modal__footer")}>
-                  <ul
-                    className={fr.cx(
-                      "fr-btns-group",
-                      "fr-btns-group--right",
-                      "fr-btns-group--inline",
-                      "fr-btns-group--inline-reverse",
-                      "fr-btns-group--inline-lg"
-                    )}
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      flexWrap: "nowrap",
-                    }}
-                  >
-                    <li>
-                      <Button onClick={handleSaveSettings}>Enregistrer</Button>
-                    </li>
-                    <li>
-                      <Button onClick={handleRejectAll} priority="tertiary">
+                <div className={`${fr.cx("fr-modal__footer")} ${modalFooter}`}>
+                  <div className={responsiveButtonsContainer}>
+                    <div className={responsiveButton}>
+                      <Button
+                        onClick={handleRejectAll}
+                        priority="tertiary"
+                        className={responsiveButton}
+                      >
                         Tout refuser
                       </Button>
-                    </li>
-                    <li>
-                      <Button onClick={handleAcceptAll} priority="secondary">
+                    </div>
+                    <div className={responsiveButton}>
+                      <Button
+                        onClick={handleAcceptAll}
+                        priority="secondary"
+                        className={responsiveButton}
+                      >
                         Tout accepter
                       </Button>
-                    </li>
-                  </ul>
+                    </div>
+                    <div className={responsiveButton}>
+                      <Button
+                        onClick={handleSaveSettings}
+                        priority="primary"
+                        className={responsiveButton}
+                      >
+                        Enregistrer
+                      </Button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -343,23 +418,15 @@ export const CookieConsentDSFR = () => {
 
       {/* Manage Cookies Button (fixed at the bottom) */}
       {!isWidgetPage && !showBanner && (
-        <div
-          style={{
-            position: "fixed",
-            bottom: "1rem",
-            right: "1rem",
-            zIndex: 1000,
-          }}
-        >
+        <div className={manageButton}>
           <Button
             size="small"
             priority="tertiary"
             onClick={openModal}
             iconId="fr-icon-settings-5-line"
             title="Gérer les cookies"
-          >
-            Cookies
-          </Button>
+            aria-label="Gérer les cookies"
+          />
         </div>
       )}
     </>
