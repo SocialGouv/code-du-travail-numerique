@@ -1,0 +1,94 @@
+{
+  "_id": "12345",
+  "date": "01/03/0023",
+  "contents": [
+    {
+      "name": "quelle-situation-ou-pathologie",
+      "title": "Quelle situation ou pathologie ?",
+      "blocks": [
+        {
+          "type": "markdown",
+          "html": "<p>L'une de ces situations ou pathologies accroît le risque de faire une forme grave de Covid-19 et constitue <strong>un critère de vulnérabilité</strong>  :</p>\n<ul>\n<li>\n<p>être âgé de 65 ans et plus</p>\n</li>\n<li>\n<p>avoir des antécédents (ATCD) cardiovasculaires : hypertension artérielle compliquée (avec complications cardiaques, rénales et vasculo-cérébrales), ATCD d'accident vasculaire cérébral ou de coronaropathie, de chirurgie cardiaque, insuffisance cardiaque stade NYHA III ou IV</p>\n</li>\n<li>\n<p>avoir un diabète non équilibré ou présentant des complications</p>\n</li>\n<li>\n<p>présenter une pathologie chronique respiratoire susceptible de décompenser lors d'une infection virale (broncho pneumopathie obstructive, asthme sévère, fibrose pulmonaire, syndrome d'apnées du sommeil, mucoviscidose notamment)</p>\n</li>\n<li>\n<p>présenter une insuffisance rénale chronique sévère</p>\n</li>\n<li>\n<p>être atteint de cancer évolutif sous traitement (hors hormonothérapie)</p>\n</li>\n<li>\n<p>présenter une obésité (indice de masse corporelle (IMC) > 30 kgm2)</p>\n</li>\n<li>\n<p>être atteint d'une immunodépression congénitale ou acquise, non sévère :</p>\n<ul>\n<li>médicamenteuse : chimiothérapie anticancéreuse, traitement immunosuppresseur, biothérapie et/ou corticothérapie à dose immunosuppressive</li>\n<li>infection à VIH non contrôlée ou avec des CD4 &#x3C; 200/mm3</li>\n<li>consécutive à une <webcomponent-tooltip content=\"Service%20d%E2%80%99un%20tribunal%20compos%C3%A9%20de%20fonctionnaires%20qui%20assistent%20les%20magistrats%20dans%20leur%20mission.\">greffe</webcomponent-tooltip> d'organe solide ou de cellules souches hématopoïétiques</li>\n<li>liée à une hémopathie maligne en cours de traitement</li>\n</ul>\n</li>\n<li>\n<p>être atteint de cirrhose au stade B du score de Child Pugh au moins</p>\n</li>\n<li>\n<p>présenter un syndrome drépanocytaire majeur ou ayant un antécédent de splénectomie</p>\n</li>\n<li>\n<p>être au troisième trimestre de la grossesse</p>\n</li>\n<li>\n<p>être atteint d'une maladie du motoneurone, d'une myasthénie grave, de sclérose en plaques, de la maladie de Parkinson, de paralysie cérébrale, de quadriplégie ou hémiplégie, d'une tumeur maligne primitive cérébrale, d'une maladie cérébelleuse progressive ou d'une maladie rare</p>\n</li>\n<li>\n<p>être atteint de trisomie 21</p>\n</li>\n</ul>\n<p><strong>L'immunodépression</strong>, qui accroît le risque de faire une forme grave de Covid-19, est constituée par l'une de ces situations ou pathologies :</p>\n<ul>\n<li>\n<p>avoir reçu une transplantation d'organe ou de cellules souches hématopoïétiques</p>\n</li>\n<li>\n<p>être sous chimiothérapie lymphopéniante</p>\n</li>\n<li>\n<p>être traités par des médicaments immunosuppresseurs forts, comme les antimétabolites (cellcept, myfortic, mycophénolate mofétil, imurel, azathioprine) et les AntiCD20 (rituximab : Mabthera, Rixathon, Truxima)</p>\n</li>\n<li>\n<p>être dialysés chroniques</p>\n</li>\n<li>\n<p>au cas par cas, être sous immunosuppresseurs sans relever des catégories susmentionnées ou être porteur d'un déficit immunitaire primitif.</p>\n</li>\n</ul>",
+          "markdown": "",
+          "htmlWithGlossary": ""
+        }
+      ],
+      "references": [
+        {
+          "label": "Références juridiques",
+          "links": [
+            {
+              "slug": "",
+              "id": "ba060dd4-eb55-4a05-9571-73b540da54ef",
+              "url": "https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000046497048",
+              "type": "external",
+              "order": 1,
+              "title": "Décret n° 2022-1369 du 27 octobre 2022 relatif aux personnes vulnérables présentant un risque avéré de développer une forme grave d'infection au virus de la covid-19, article 1."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "retour-en-presentiel-et-mesures-daccompagnement",
+      "title": "Retour en présentiel et mesures d'accompagnement ",
+      "blocks": [
+        {
+          "type": "markdown",
+          "html": "<p>Les personnes vulnérables reprennent leur activité professionnelle en présentiel sous réserve de <strong>la mise en place par l'employeur</strong> de certaines mesures d'accompagnement, comme :</p>\n<ul>\n<li><strong>l'isolement du poste de travail</strong> par la mise à <webcomponent-tooltip content=\"Phrase%20ou%20ensemble%20de%20phrases%20d%E2%80%99un%20accord%2C%20d%E2%80%99une%20convention%20collective%2C%20d%E2%80%99une%20loi.\">disposition</webcomponent-tooltip> d'un bureau individuel ou de dispositifs limitant les risques (ex: écran de protection, aménagement des horaires)</li>\n<li><strong>le respect des gestes barrière</strong> dans les salles de réunion ou les autres espaces confinés fréquentés par la personne vulnérable dans le cadre de son activité professionnelle</li>\n<li><strong>l'adaptation des conditions de transport</strong>, notamment par <strong>l'adaptation des horaires d'arrivée et de départ</strong></li>\n<li><strong>la limitation du partage du poste</strong> de travail.</li>\n</ul>\n<p><strong>Attention : Le salarié dans cette situation peut s'adresser au médecin du travail pour solliciter une visite.</strong></p>",
+          "markdown": "",
+          "htmlWithGlossary": ""
+        }
+      ],
+      "references": [
+        {
+          "label": "Références juridiques",
+          "links": [
+            {
+              "slug": "",
+              "id": "fd410dcf-7942-4a9f-9765-200a4b3d84b7",
+              "url": "https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000046497052",
+              "type": "external",
+              "order": 1,
+              "title": "Décret n° 2022-1369 du 27 octobre 2022 relatif aux personnes vulnérables présentant un risque avéré de développer une forme grave d'infection au virus de la covid-19, article 2."
+            },
+            {
+              "slug": "",
+              "id": "32fb987d-cb58-44ea-9c80-c3772ffc2749",
+              "url": "https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000046186705",
+              "type": "external",
+              "order": 2,
+              "title": "Loi n° 2022-1157 du 16 août 2022 de finances rectificative pour 2022, article 33."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "description": "Les personnes à risque de forme grave de Covid-19 peuvent reprendre leur activité professionnelle en présentiel, sous réserve de certaines mesures de protection.",
+  "dismissalProcess": false,
+  "sectionDisplayMode": "accordion",
+  "breadcrumbs": [
+    {
+      "label": "Santé, sécurité et conditions de travail",
+      "position": 5,
+      "slug": "/themes/sante-securite-et-conditions-de-travail"
+    },
+    {
+      "label": "Travailleurs et secteurs spécifiques",
+      "position": 4,
+      "slug": "/themes/travailleurs-et-secteurs-specifiques"
+    }
+  ],
+  "cdtnId": "aaccb26656",
+  "excludeFromSearch": false,
+  "id": "12154a66-b38a-43a7-9397-8e4f46d0061c",
+  "isPublished": true,
+  "metaDescription": "Les personnes à risque de forme grave de Covid-19 peuvent reprendre leur activité professionnelle en présentiel, sous réserve de certaines mesures de protection.",
+  "refs": [],
+  "slug": "personnes-vulnerables-reprise-dactivite-ou-activite-partielle",
+  "source": "information",
+  "text": "Personnes vulnérables :  accompagnement de la reprise d'activité ",
+  "title": "Personnes vulnérables :  accompagnement de la reprise d'activité ",
+  "intro": "<p>Les personnes à risque de forme grave de Covid-19 peuvent reprendre leur activité professionnelle en présentiel, sous réserve de certaines mesures de protection.</p>"
+}

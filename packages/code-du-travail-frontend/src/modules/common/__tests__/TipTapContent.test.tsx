@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import DisplayContentContribution from "../DisplayContentContribution";
+import DisplayContentContribution from "../TipTapContent";
 
 let count = 0;
 jest.mock("uuid", () => ({
@@ -8,7 +8,7 @@ jest.mock("uuid", () => ({
   }),
 }));
 
-describe("DisplayContentContribution", () => {
+describe("TipTapContent", () => {
   describe("Headings", () => {
     it(`should replace span with class "title" and "sub-titles" with heading`, () => {
       const { baseElement } = render(
@@ -539,6 +539,20 @@ describe("DisplayContentContribution", () => {
       expect(getByText("Mon Lien").getAttribute("title")).toEqual(
         "Mon Lien - nouvelle fenêtre"
       );
+    });
+
+    it(`should remove margin space for p in li`, () => {
+      const { getAllByRole } = render(
+        <DisplayContentContribution
+          content={`<ul><li><p>Element 1</p><p>Element 2</p></li></ul><p>Element 3</p>`}
+          titleLevel={3}
+        ></DisplayContentContribution>
+      );
+      const allParagraphs = getAllByRole("paragraph");
+      expect(allParagraphs).toHaveLength(3);
+      expect(allParagraphs[0].getAttribute("class")).toContain("fr-mb-0");
+      expect(allParagraphs[1].getAttribute("class")).toContain("fr-mb-0");
+      expect(allParagraphs[2].getAttribute("class")).toContain("fr-mt-2w");
     });
   });
 });
