@@ -34,10 +34,6 @@ const modalFooter = css({
   overflow: "hidden",
 });
 
-const footerButtonsGroup = css({
-  marginBottom: "0.5rem",
-});
-
 const cookieBanner = css({
   position: "fixed",
   bottom: 0,
@@ -55,35 +51,22 @@ const manageButton = css({
   zIndex: 1000,
 });
 
-// Styles pour les écrans mobiles
-const mobileFooterButtonsGroup = css({
-  "@media (max-width: 576px)": {
-    flexDirection: "column-reverse !important",
-    alignItems: "stretch !important",
+// Style responsive pour les boutons
+const responsiveButtonsContainer = css({
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "flex-end",
+  gap: "1rem",
+  width: "100%",
+  "@media (max-width: 768px)": {
+    flexDirection: "column",
+    gap: "0.5rem",
   },
 });
 
-const mobileFooterButton = css({
-  "@media (max-width: 576px)": {
-    marginLeft: 0,
-    marginBottom: "0.5rem",
-    width: "100%",
-  },
-});
-
-const mobileFooterButtonElement = css({
-  "@media (max-width: 576px)": {
-    width: "100%",
-    marginLeft: 0,
-    marginRight: 0,
-  },
-});
-
-const mobileModalBody = css({
-  "@media (max-width: 576px)": {
-    maxWidth: "100% !important",
-    paddingLeft: "1rem !important",
-    paddingRight: "1rem !important",
+const responsiveButton = css({
+  "@media (max-width: 768px)": {
+    width: "100% !important",
   },
 });
 
@@ -242,9 +225,7 @@ export const CookieConsentDSFR = () => {
         >
           <div className={fr.cx("fr-grid-row", "fr-grid-row--center")}>
             <div className={fr.cx("fr-col-12", "fr-col-md-10", "fr-col-lg-8")}>
-              <div
-                className={`${fr.cx("fr-modal__body")} ${modalBody} ${mobileModalBody}`}
-              >
+              <div className={`${fr.cx("fr-modal__body")}`}>
                 <div className={fr.cx("fr-modal__header")}>
                   <button
                     className={fr.cx("fr-btn--close", "fr-btn")}
@@ -255,9 +236,7 @@ export const CookieConsentDSFR = () => {
                     Fermer
                   </button>
                 </div>
-                <div
-                  className={`${fr.cx("fr-modal__content")} ${modalContent}`}
-                >
+                <div className={`${fr.cx("fr-modal__content")}`}>
                   <div className={fr.cx("fr-modal__title")}>
                     <div
                       className={fr.cx("fr-h3")}
@@ -401,45 +380,35 @@ export const CookieConsentDSFR = () => {
                   </div>
                 </div>
                 <div className={`${fr.cx("fr-modal__footer")} ${modalFooter}`}>
-                  <ul
-                    className={`${fr.cx(
-                      "fr-btns-group",
-                      "fr-btns-group--right",
-                      "fr-btns-group--inline",
-                      "fr-btns-group--inline-reverse",
-                      "fr-btns-group--inline-lg",
-                      "fr-grid-row",
-                      "fr-grid-row--right"
-                    )} ${footerButtonsGroup} ${mobileFooterButtonsGroup}`}
-                  >
-                    <li className={mobileFooterButton}>
-                      <Button
-                        onClick={handleSaveSettings}
-                        priority="primary"
-                        className={mobileFooterButtonElement}
-                      >
-                        Enregistrer
-                      </Button>
-                    </li>
-                    <li className={mobileFooterButton}>
-                      <Button
-                        onClick={handleAcceptAll}
-                        priority="secondary"
-                        className={mobileFooterButtonElement}
-                      >
-                        Tout accepter
-                      </Button>
-                    </li>
-                    <li className={mobileFooterButton}>
+                  <div className={responsiveButtonsContainer}>
+                    <div className={responsiveButton}>
                       <Button
                         onClick={handleRejectAll}
                         priority="tertiary"
-                        className={mobileFooterButtonElement}
+                        className={responsiveButton}
                       >
                         Tout refuser
                       </Button>
-                    </li>
-                  </ul>
+                    </div>
+                    <div className={responsiveButton}>
+                      <Button
+                        onClick={handleAcceptAll}
+                        priority="secondary"
+                        className={responsiveButton}
+                      >
+                        Tout accepter
+                      </Button>
+                    </div>
+                    <div className={responsiveButton}>
+                      <Button
+                        onClick={handleSaveSettings}
+                        priority="primary"
+                        className={responsiveButton}
+                      >
+                        Enregistrer
+                      </Button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

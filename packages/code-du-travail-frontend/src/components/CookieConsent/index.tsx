@@ -259,15 +259,27 @@ const ToggleRow = styled.div`
   cursor: pointer;
 `;
 
+// Nouveau style responsive pour les boutons du footer
 const ModalFooter = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-end;
-  gap: 0.5rem;
+  gap: 1rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 `;
 
-export const CookieConsentLegacy = () => {
+// Style pour les boutons en mode mobile
+const ResponsiveButton = styled(Button)`
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+const CookieConsentLegacy = () => {
   const [consent, setConsent] = useState<ConsentType>(DEFAULT_CONSENT);
   const [showBanner, setShowBanner] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -489,15 +501,15 @@ export const CookieConsentLegacy = () => {
             ×
           </CloseButton>
           <ModalFooter>
-            <Button primary onClick={handleSaveSettings}>
-              Enregistrer
-            </Button>
-            <Button secondary onClick={handleRejectAll}>
+            <ResponsiveButton secondary onClick={handleRejectAll}>
               Tout refuser
-            </Button>
-            <Button secondary onClick={handleAcceptAll}>
+            </ResponsiveButton>
+            <ResponsiveButton secondary onClick={handleAcceptAll}>
               Tout accepter
-            </Button>
+            </ResponsiveButton>
+            <ResponsiveButton primary onClick={handleSaveSettings}>
+              Enregistrer
+            </ResponsiveButton>
           </ModalFooter>
         </ModalContent>
       </Modal>
@@ -506,7 +518,6 @@ export const CookieConsentLegacy = () => {
       {!showBanner && (
         <SettingsButton
           onClick={() => setIsModalOpen(true)}
-          title="Gérer les cookies"
           aria-label="Gérer les cookies"
         >
           <svg
@@ -531,10 +542,12 @@ export const CookieConsentLegacy = () => {
               strokeLinejoin="round"
             />
           </svg>
+          Gérer les cookies
         </SettingsButton>
       )}
     </>
   );
 };
 
+// Exporter le composant comme export par défaut
 export default CookieConsentLegacy;
