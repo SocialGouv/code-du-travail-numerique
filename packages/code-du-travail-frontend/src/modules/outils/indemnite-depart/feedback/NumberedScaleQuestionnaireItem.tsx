@@ -28,6 +28,7 @@ export type NumberedScaleQuestionnaireItemProps = {
   displayError?: boolean;
   onChange: (status: FEEDBACK_RESULT) => void;
   dataTestId?: string;
+  hint?: string;
 };
 
 // Component for numbered scale feedback (1-5)
@@ -38,6 +39,7 @@ export const NumberedScaleQuestionnaireItem = ({
   displayError,
   onChange,
   dataTestId,
+  hint,
 }: NumberedScaleQuestionnaireItemProps): JSX.Element => {
   const [status, setStatus] = useState<Status>();
   const fieldsetId = title
@@ -60,8 +62,7 @@ export const NumberedScaleQuestionnaireItem = ({
         )}
         <p className={fr.cx("fr-text--sm", "fr-mb-1w")}>
           <span className={`${fr.cx("fr-hint-text")} ${desktopLabelStyle}`}>
-            Sur une échelle de 1 à 5, 1 n&apos;est pas clair du tout et 5 est
-            très clair.
+            {hint}
           </span>
         </p>
         <div className={scaleContainer}>

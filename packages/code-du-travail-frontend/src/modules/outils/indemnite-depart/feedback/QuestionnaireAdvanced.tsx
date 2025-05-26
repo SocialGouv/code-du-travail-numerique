@@ -48,6 +48,8 @@ export const QuestionnaireAdvanced = ({
           onChange={(status) => {
             setStatusSimulator(status);
           }}
+          hint="Sur une échelle de 1 à 5, 1 n'est pas facile du tout et 5 est
+            très facile."
           dataTestId="simulator"
         />
         <NumberedScaleQuestionnaireItem
@@ -63,6 +65,8 @@ export const QuestionnaireAdvanced = ({
           onChange={(status) => {
             setStatusQuestion(status);
           }}
+          hint="Sur une échelle de 1 à 5, 1 n'est pas clair du tout et 5 est
+            très clair."
           dataTestId="questionClarity"
         />
         <NumberedScaleQuestionnaireItem
@@ -78,6 +82,8 @@ export const QuestionnaireAdvanced = ({
           onChange={(status) => {
             setStatusExplanation(status);
           }}
+          hint="Sur une échelle de 1 à 5, 1 n'est pas clair du tout et 5 est
+            très clair."
           dataTestId="resultClarity"
         />
         <QuestionnaireText
