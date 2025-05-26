@@ -97,9 +97,7 @@ describe("Etant donné un composant Feedback", () => {
       describe("Lors d'une sélection et clique sur le bouton 'Envoyer'", () => {
         beforeEach(() => {
           fireEvent.click(ui.questionnaire2.simulator.one.get());
-          fireEvent.click(ui.questionnaire2.simulator.two.get());
           fireEvent.click(ui.questionnaire2.questionClarity.three.get());
-          fireEvent.click(ui.questionnaire2.questionClarity.four.get());
           fireEvent.click(ui.questionnaire2.resultClarity.five.get());
           fireEvent.change(ui.questionnaire2.more.input.get(), {
             target: { value: "test" },
@@ -124,6 +122,12 @@ describe("Etant donné un composant Feedback", () => {
             "feedback_simulateurs",
             "Clarté_questions",
             "3",
+          ]);
+          expect(matopush).toHaveBeenCalledWith([
+            "trackEvent",
+            "feedback_simulateurs",
+            "Clarté_résultat",
+            "5",
           ]);
           expect(ui.questionnaireEnd.title.query()).toBeInTheDocument();
           expect(ui.questionnaireEnd.description.query()).toBeInTheDocument();
