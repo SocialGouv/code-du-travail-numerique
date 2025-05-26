@@ -66,17 +66,17 @@ export const QuestionnaireItem = ({
   // Render numbered scale buttons (1-5)
   if (useNumberedScale && values && labels) {
     return (
-      <div className={fr.cx("fr-mb-3w", "fr-ml-2v")} data-testid={dataTestId}>
+      <div
+        className={`fr.cx("fr-mb-3w", "fr-ml-2v") ${scaleContainer}`}
+        data-testid={dataTestId}
+      >
         <fieldset className={fr.cx("fr-fieldset")} id={fieldsetId}>
           {title && (
             <legend className={fr.cx("fr-mb-2v")} id={`${fieldsetId}-legend`}>
               {title}
             </legend>
           )}
-          <p
-            className={fr.cx("fr-text--sm", "fr-mb-1w")}
-            style={{ textAlign: "center" }}
-          >
+          <p className={fr.cx("fr-text--sm", "fr-mb-1w")}>
             <span className={desktopLabelStyle}>
               Sur une échelle de 1 à 5, 1 n&apos;est pas clair du tout et 5 est
               très clair.
@@ -234,16 +234,6 @@ export const QuestionnaireItem = ({
   );
 };
 
-const buttonContentStyle = css({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  gap: "0.5rem",
-  "@media (max-width: 480px)": {
-    gap: "0.25rem",
-  },
-});
-
 const selectedStyle = css({
   backgroundColor: "var(--background-action-high-blue-france)!important",
   color: "var(--text-inverted-blue-france)!important",
@@ -267,10 +257,13 @@ const numberButtonStyle = css({
   },
 });
 
+const container = css({
+  maxWidth: "600px",
+});
+
 const scaleContainer = css({
   display: "flex",
   alignItems: "center",
-  justifyContent: "center",
   width: "100%",
   maxWidth: "600px",
   marginBottom: "1rem",
@@ -332,8 +325,7 @@ const labelLeftStyle = css({
   fontSize: "0.875rem",
   color: "var(--text-mention-grey)",
   marginRight: "1.25rem",
-  textAlign: "right",
-  width: "130px",
+  width: "120px",
   "@media (max-width: 768px)": {
     display: "none",
   },
@@ -343,25 +335,10 @@ const labelRightStyle = css({
   fontSize: "0.875rem",
   color: "var(--text-mention-grey)",
   marginLeft: "1.25rem",
-  textAlign: "left",
-  width: "130px",
+  width: "120px",
   "@media (max-width: 768px)": {
     display: "none",
   },
-});
-
-const numberStyle = css({
-  fontSize: "1.5rem",
-  fontWeight: "bold",
-});
-
-const labelRangeStyle = css({
-  display: "flex",
-  justifyContent: "space-between",
-  width: "100%",
-  fontSize: "0.875rem",
-  color: "var(--text-mention-grey)",
-  marginBottom: "0.5rem",
 });
 
 const mobileLabelStyle = css({
