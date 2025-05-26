@@ -46,7 +46,7 @@ export const NumberedScaleQuestionnaireItem = ({
 
   return (
     <div
-      className={`fr.cx("fr-mb-3w", "fr-ml-2v") ${scaleContainer}`}
+      className={`${fr.cx("fr-ml-1w", "fr-mb-2w")} ${scaleContainer}`}
       data-testid={dataTestId}
     >
       <fieldset className={fr.cx("fr-fieldset")} id={fieldsetId}>
@@ -117,8 +117,8 @@ const selectedStyle = css({
 });
 
 const numberButtonStyle = css({
-  width: "60px",
-  height: "60px",
+  width: "35px",
+  height: "35px",
   margin: "0 0.5rem",
   display: "flex",
   justifyContent: "center",
@@ -126,8 +126,6 @@ const numberButtonStyle = css({
   fontSize: "1.25rem",
   fontWeight: "bold",
   "@media (max-width: 480px)": {
-    width: "35px",
-    height: "35px",
     fontSize: "0.9rem",
     margin: "0 0.1rem",
     padding: "0",
@@ -139,7 +137,6 @@ const scaleContainer = css({
   alignItems: "center",
   width: "100%",
   maxWidth: "600px",
-  marginBottom: "1rem",
 });
 
 const labelLeftStyle = css({
