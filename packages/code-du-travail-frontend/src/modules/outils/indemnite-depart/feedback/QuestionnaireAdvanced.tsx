@@ -32,7 +32,7 @@ export const QuestionnaireAdvanced = ({
   return (
     <div>
       <h3 className={fr.cx("fr-text--lg", "fr-mb-2w", "fr-text--bold")}>
-        Merci pour votre aide ! Pouvez-vous nous en dire plus ?
+        Merci pour votre aide&nbsp;! Pouvez-vous nous en dire plus&nbsp;?
       </h3>
       <div>
         <NumberedScaleQuestionnaireItem
