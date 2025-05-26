@@ -51,7 +51,10 @@ export const NumberedScaleQuestionnaireItem = ({
     >
       <fieldset className={fr.cx("fr-fieldset")} id={fieldsetId}>
         {title && (
-          <legend className={fr.cx("fr-mb-2v")} id={`${fieldsetId}-legend`}>
+          <legend
+            className={fr.cx("fr-mb-2v", "fr-label")}
+            id={`${fieldsetId}-legend`}
+          >
             {title}
           </legend>
         )}
