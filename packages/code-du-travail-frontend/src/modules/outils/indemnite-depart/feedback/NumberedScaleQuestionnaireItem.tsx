@@ -146,7 +146,7 @@ const labelLeftStyle = css({
   fontSize: "0.875rem",
   color: "var(--text-mention-grey)",
   marginRight: "1.25rem",
-  width: "120px",
+  width: "130px",
   "@media (max-width: 768px)": {
     display: "none",
   },
@@ -156,7 +156,7 @@ const labelRightStyle = css({
   fontSize: "0.875rem",
   color: "var(--text-mention-grey)",
   marginLeft: "1.25rem",
-  width: "120px",
+  width: "130px",
   "@media (max-width: 768px)": {
     display: "none",
   },
