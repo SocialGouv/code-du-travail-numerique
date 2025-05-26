@@ -60,7 +60,34 @@ export const PrivacyPolicy = () => {
             <strong>Base juridique :</strong> Exemption de consentement
           </li>
           <li>
-            <strong>Finalités :</strong> Mesure d&apos;audience
+            <strong>Finalités :</strong> Mesure d&apos;audience, suivi du
+            comportement
+          </li>
+          <li>
+            <strong>Durée :</strong> 13 mois
+          </li>
+          <li>
+            <strong>Garanties :</strong>{" "}
+            <Link href="https://fr.matomo.org/privacy-policy/" target="_blank">
+              https://fr.matomo.org/privacy-policy/
+            </Link>
+          </li>
+        </ul>
+
+        <h3 className={fr.cx("fr-h5", "fr-mb-2w")}>
+          Carte des chaleurs Matomo
+        </h3>
+        <ul className={fr.cx("fr-mb-3w")}>
+          <li>
+            <strong>Pays destinataires :</strong> France (Auto-hébergèrent)
+          </li>
+          <li>
+            <strong>Base juridique :</strong> Consentement
+          </li>
+          <li>
+            <strong>Finalités :</strong> Visualisation des interactions
+            utilisateurs (clics, mouvements de souris) pour améliorer
+            l&apos;expérience utilisateur
           </li>
           <li>
             <strong>Durée :</strong> 13 mois
@@ -104,19 +131,6 @@ export const PrivacyPolicy = () => {
           à votre navigation et de vous adresser des services adaptés à votre
           terminal (ordinateur, mobile ou tablette).
         </p>
-        <p>
-          Nous collectons donc des données par l&apos;intermédiaire de
-          dispositifs appelés &quot;cookies&quot; permettant d&apos;établir des
-          mesures statistiques.
-        </p>
-        <ul className={fr.cx("fr-mb-4w")}>
-          <li>Catégorie de cookie&nbsp;: Mesure d&apos;audience anonymisée</li>
-          <li>Nom du cookie&nbsp;: Matomo</li>
-          <li>Délai de conservation&nbsp;: 13 mois</li>
-          <li>Finalités&nbsp;: Mesure d&apos;audience</li>
-          <li>Éditeur&nbsp;: Matomo & Fabrique numérique</li>
-          <li>Destination&nbsp;: France</li>
-        </ul>
 
         <p>
           L&apos;accès aux informations contenues dans les cookies est limité
