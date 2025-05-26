@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { QuestionnaireItem } from "./QuestionnaireItem";
+import { NumberedScaleQuestionnaireItem } from "./NumberedScaleQuestionnaireItem";
 import { QuestionnaireText } from "./QuestionnaireText";
 import { useState } from "react";
 import {
@@ -35,8 +35,7 @@ export const QuestionnaireAdvanced = ({
         Merci pour votre aide ! Pouvez-vous nous en dire plus ?
       </h3>
       <div>
-        <QuestionnaireItem
-          useNumberedScale={true}
+        <NumberedScaleQuestionnaireItem
           title="Que pensez-vous de l'utilisation du simulateur ?"
           values={[
             FEEDBACK_RESULT.ONE,
@@ -51,8 +50,7 @@ export const QuestionnaireAdvanced = ({
           }}
           dataTestId="simulator"
         />
-        <QuestionnaireItem
-          useNumberedScale={true}
+        <NumberedScaleQuestionnaireItem
           title="Qu'avez-vous pensé des informations et des instructions fournies ?"
           values={[
             FEEDBACK_RESULT.ONE,
@@ -61,14 +59,13 @@ export const QuestionnaireAdvanced = ({
             FEEDBACK_RESULT.FOUR,
             FEEDBACK_RESULT.FIVE,
           ]}
-          labels={["Pas clair du tout", "", "", "", "Très clair"]}
+          labels={["Pas claires du tout", "", "", "", "Très claires"]}
           onChange={(status) => {
             setStatusQuestion(status);
           }}
           dataTestId="questionClarity"
         />
-        <QuestionnaireItem
-          useNumberedScale={true}
+        <NumberedScaleQuestionnaireItem
           title="Que pensez-vous des explications du résultat obtenu ?"
           values={[
             FEEDBACK_RESULT.ONE,
@@ -77,7 +74,7 @@ export const QuestionnaireAdvanced = ({
             FEEDBACK_RESULT.FOUR,
             FEEDBACK_RESULT.FIVE,
           ]}
-          labels={["Pas clair du tout", "", "", "", "Très clair"]}
+          labels={["Pas claires du tout", "", "", "", "Très claires"]}
           onChange={(status) => {
             setStatusExplanation(status);
           }}

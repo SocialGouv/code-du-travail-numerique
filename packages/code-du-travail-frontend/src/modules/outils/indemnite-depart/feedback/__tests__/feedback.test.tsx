@@ -52,7 +52,9 @@ describe("Etant donné un composant Feedback", () => {
 
         expect(ui.questionnaire2.simulator.title.query()).toBeInTheDocument();
         expect(ui.questionnaire2.simulator.one.query()).toBeInTheDocument();
+        expect(ui.questionnaire2.simulator.two.query()).toBeInTheDocument();
         expect(ui.questionnaire2.simulator.three.query()).toBeInTheDocument();
+        expect(ui.questionnaire2.simulator.four.query()).toBeInTheDocument();
         expect(ui.questionnaire2.simulator.five.query()).toBeInTheDocument();
 
         expect(
@@ -62,7 +64,13 @@ describe("Etant donné un composant Feedback", () => {
           ui.questionnaire2.questionClarity.one.query()
         ).toBeInTheDocument();
         expect(
+          ui.questionnaire2.questionClarity.two.query()
+        ).toBeInTheDocument();
+        expect(
           ui.questionnaire2.questionClarity.three.query()
+        ).toBeInTheDocument();
+        expect(
+          ui.questionnaire2.questionClarity.four.query()
         ).toBeInTheDocument();
         expect(
           ui.questionnaire2.questionClarity.five.query()
@@ -72,8 +80,12 @@ describe("Etant donné un composant Feedback", () => {
           ui.questionnaire2.resultClarity.title.query()
         ).toBeInTheDocument();
         expect(ui.questionnaire2.resultClarity.one.query()).toBeInTheDocument();
+        expect(ui.questionnaire2.resultClarity.two.query()).toBeInTheDocument();
         expect(
           ui.questionnaire2.resultClarity.three.query()
+        ).toBeInTheDocument();
+        expect(
+          ui.questionnaire2.resultClarity.four.query()
         ).toBeInTheDocument();
         expect(
           ui.questionnaire2.resultClarity.five.query()
@@ -85,7 +97,9 @@ describe("Etant donné un composant Feedback", () => {
       describe("Lors d'une sélection et clique sur le bouton 'Envoyer'", () => {
         beforeEach(() => {
           fireEvent.click(ui.questionnaire2.simulator.one.get());
+          fireEvent.click(ui.questionnaire2.simulator.two.get());
           fireEvent.click(ui.questionnaire2.questionClarity.three.get());
+          fireEvent.click(ui.questionnaire2.questionClarity.four.get());
           fireEvent.click(ui.questionnaire2.resultClarity.five.get());
           fireEvent.change(ui.questionnaire2.more.input.get(), {
             target: { value: "test" },
