@@ -4,7 +4,7 @@ import { GlossaryTerms } from "./GlossaryTerms";
 import { getGlossaryLetters } from "./utils";
 import { GlossaryItem } from "./types";
 import { ContainerWithBreadcrumbs } from "../layout/ContainerWithBreadcrumbs";
-import { AlphabeticList } from "../utils/alphabetic.list";
+import { AlphabeticList } from "./AlphabeticList";
 
 type GlossaryProps = {
   glossary: GlossaryItem[];

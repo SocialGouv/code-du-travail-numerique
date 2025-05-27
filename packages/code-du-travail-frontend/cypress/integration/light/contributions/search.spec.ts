@@ -8,7 +8,7 @@ describe("Contributions", () => {
     cy.get("button[aria-label='Lancer la recherche']")
       .contains("Rechercher")
       .click();
-    cy.get("#content li").should("have.length", 7);
+    cy.findAllByRole("heading", { level: 3 }).should("have.length", 18);
     cy.contains("Durée maximale d'un CDD").click();
 
     cy.urlEqual(

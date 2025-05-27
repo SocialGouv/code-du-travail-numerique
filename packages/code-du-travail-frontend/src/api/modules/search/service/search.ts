@@ -5,7 +5,7 @@ import {
   getRelatedThemesBody,
   getSearchBody,
 } from "../queries";
-import { merge, mergePipe, removeDuplicate } from "../utils";
+import { removeDuplicate } from "../utils";
 import { getPrequalifiedResults } from "./prequalified";
 
 const MAX_RESULTS = 100;
@@ -107,17 +107,24 @@ export const searchWithQuery = async (
     articles = removeDuplicate(articles.concat(results[CDT_ES].hits.hits));
   }
 
+  const mapDocuments = documents.map(({ _score, _source }) => ({
+    _score: _score ?? null,
+    ..._source,
+    title: _source.shortTitle ?? _source.title,
+  }));
+
+  const allDocumentsWithoutCdtnSource = [
+    ...mapDocuments,
+    ...articles.filter((item) => item.source !== SOURCES.CDT),
+  ];
+
   return {
     articles: articles.map(({ _score, _source }) => ({
       _score: _score ?? null,
       ..._source,
       title: _source.shortTitle ?? _source.title,
     })),
-    documents: documents.map(({ _score, _source }) => ({
-      _score: _score ?? null,
-      ..._source,
-      title: _source.shortTitle ?? _source.title,
-    })),
+    documents: allDocumentsWithoutCdtnSource,
     // we add source prop since some result might come from dedicated themes index
     // which has no source prop
     themes: themes.map(({ _score, _source }) => ({
