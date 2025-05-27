@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.182.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.181.0...v4.182.0) (2025-05-27)
+
+
+### Features
+
+* 6554 revoir les questions de satisfaction simulateur indemnité de licenciementindemnité de rc ([#6584](https://github.com/SocialGouv/code-du-travail-numerique/issues/6584)) ([3a74387](https://github.com/SocialGouv/code-du-travail-numerique/commit/3a74387b5e0e99d3a88cf710aa34a1be083a27e4))
+* activation carte chaleur ([#6574](https://github.com/SocialGouv/code-du-travail-numerique/issues/6574)) ([b80b138](https://github.com/SocialGouv/code-du-travail-numerique/commit/b80b138de51a40c49af1757b7e54cf84083ccd26))
+
+
+
+
+
 # [4.181.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.180.0...v4.181.0) (2025-05-21)
 
 
