@@ -12,7 +12,7 @@ type SearchBarProps = {
   initialValue?: string;
 };
 
-export const SearchBar: React.FC<SearchBarProps> = ({ initialValue = "" }) => {
+export const SearchBar = ({ initialValue = "" }: SearchBarProps) => {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
   const [query, setQuery] = useState(initialValue);
@@ -42,14 +42,17 @@ export const SearchBar: React.FC<SearchBarProps> = ({ initialValue = "" }) => {
       );
       return results;
     } catch (error) {
-      console.error("Échec lors de la récupération des suggestions", error);
+      Sentry.captureMessage(
+        "Échec lors de la récupération des suggestions - " + error
+      );
       return [];
     }
   };
 
   const onError = (error: string) => {
-    console.error("Échec lors de la récupération des suggestions", error);
-    Sentry.captureMessage("Échec lors de la récupération des suggestions");
+    Sentry.captureMessage(
+      "Échec lors de la récupération des suggestions - " + error
+    );
   };
 
   return (

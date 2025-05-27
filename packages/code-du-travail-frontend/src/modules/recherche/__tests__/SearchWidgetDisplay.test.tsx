@@ -17,41 +17,6 @@ jest.mock("../tracking", () => ({
   },
 }));
 
-// Mock the next/image component
-jest.mock("next/image", () => ({
-  __esModule: true,
-  default: ({ src, alt, onClick }) => (
-    <img src={src} alt={alt} onClick={onClick} data-testid="logo-image" />
-  ),
-}));
-
-// Mock the next/link component
-jest.mock("next/link", () => ({
-  __esModule: true,
-  default: ({ href, children, ...props }) => (
-    <a href={href} {...props}>
-      {children}
-    </a>
-  ),
-}));
-
-// Mock the Button component from @codegouvfr/react-dsfr
-jest.mock("@codegouvfr/react-dsfr/Button", () => ({
-  __esModule: true,
-  default: ({ children, type, onClick }) => (
-    <button type={type} onClick={onClick} data-testid="search-button">
-      {children}
-    </button>
-  ),
-}));
-
-// Mock the fr object from @codegouvfr/react-dsfr
-jest.mock("@codegouvfr/react-dsfr", () => ({
-  fr: {
-    cx: (...args) => args.join(" "),
-  },
-}));
-
 describe("SearchWidgetDisplay", () => {
   // Mock the tracking functions
   const mockEmitSearchEvent = jest.fn();
@@ -80,20 +45,24 @@ describe("SearchWidgetDisplay", () => {
     render(<SearchWidgetDisplay />);
 
     // Check that the logo is rendered
-    expect(screen.getByTestId("logo-image")).toBeInTheDocument();
+    expect(
+      screen.getByAltText("Code du travail numérique")
+    ).toBeInTheDocument();
 
     // Check that the search input is rendered
     expect(screen.getByPlaceholderText("Période d'essai")).toBeInTheDocument();
 
     // Check that the search button is rendered
-    expect(screen.getByTestId("search-button")).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: "Rechercher" })
+    ).toBeInTheDocument();
   });
 
   it("should emit widget event and post message when logo is clicked", () => {
     render(<SearchWidgetDisplay />);
 
     // Find and click the logo
-    const logo = screen.getByTestId("logo-image");
+    const logo = screen.getByAltText("Code du travail numérique");
     fireEvent.click(logo);
 
     // Check that emitWidgetEvent was called with the correct event

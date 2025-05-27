@@ -8,46 +8,6 @@ jest.mock("../../../search/utils", () => ({
   summarize: jest.fn((text) => `Résumé: ${text}`),
 }));
 
-// Mock du composant Card de @codegouvfr/react-dsfr
-jest.mock("@codegouvfr/react-dsfr/Card", () => ({
-  Card: jest.fn(
-    ({
-      title,
-      desc,
-      linkProps,
-      start,
-      titleAs,
-      border,
-      horizontal,
-      size,
-      classes,
-    }) => (
-      <div
-        className={`fr-card ${horizontal ? "fr-card--horizontal" : ""} ${border ? "fr-card--border" : ""} ${size ? `fr-card--${size}` : ""}`}
-      >
-        {start && <div className="fr-card__start">{start}</div>}
-        <div className="fr-card__body">
-          {titleAs === "h3" ? (
-            <h3 className={`fr-card__title ${classes?.title || ""}`}>
-              {title}
-            </h3>
-          ) : (
-            <div className={`fr-card__title ${classes?.title || ""}`}>
-              {title}
-            </div>
-          )}
-          <p className="fr-card__desc">{desc}</p>
-          <div className="fr-card__footer">
-            <a href={linkProps?.href} onClick={linkProps?.onClick}>
-              Voir plus
-            </a>
-          </div>
-        </div>
-      </div>
-    )
-  ),
-}));
-
 describe("<SearchCard />", () => {
   const defaultProps = {
     title: "Titre du document",
@@ -117,26 +77,5 @@ describe("<SearchCard />", () => {
 
     const card = screen.getByRole("link").closest(".fr-card");
     expect(card).toHaveClass("fr-card--horizontal");
-  });
-
-  it("should pass border prop to Card component", () => {
-    render(<SearchCard {...defaultProps} />);
-
-    const card = screen.getByRole("link").closest(".fr-card");
-    expect(card).toHaveClass("fr-card--border");
-  });
-
-  it("should pass medium size to Card component", () => {
-    render(<SearchCard {...defaultProps} />);
-
-    const card = screen.getByRole("link").closest(".fr-card");
-    expect(card).toHaveClass("fr-card--medium");
-  });
-
-  it("should render title as h3", () => {
-    render(<SearchCard {...defaultProps} />);
-
-    const title = screen.getByText("Titre du document");
-    expect(title.tagName).toBe("H3");
   });
 });

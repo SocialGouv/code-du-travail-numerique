@@ -34,8 +34,9 @@ export const HomeSearch = () => {
   };
 
   const onError = (error: string) => {
-    console.error("Échec lors de la récupération des suggestions", error);
-    Sentry.captureMessage("Échec lors de la récupération des suggestions");
+    Sentry.captureMessage(
+      "Échec lors de la récupération des suggestions - " + error
+    );
   };
 
   const onSelectedItemChange = (value: string | undefined) => {

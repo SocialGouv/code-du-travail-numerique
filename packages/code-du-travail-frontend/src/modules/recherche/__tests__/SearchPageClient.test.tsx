@@ -4,56 +4,24 @@ import { SearchPageClient } from "../SearchPageClient";
 import { useSearchTracking } from "../tracking";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 
-// Mock the useSearchParams hook
+// Mock the Next.js navigation hooks
 jest.mock("next/navigation", () => ({
   useSearchParams: () => ({
     get: jest.fn((param) => (param === "q" ? "test query" : null)),
+  }),
+  useRouter: () => ({
+    push: jest.fn(),
+    replace: jest.fn(),
+    prefetch: jest.fn(),
+    back: jest.fn(),
+    forward: jest.fn(),
+    refresh: jest.fn(),
   }),
 }));
 
 // Mock the useSearchTracking hook
 jest.mock("../tracking", () => ({
   useSearchTracking: jest.fn(),
-}));
-
-// Mock the ContainerWithBreadcrumbs component
-jest.mock("../../layout/ContainerWithBreadcrumbs", () => ({
-  ContainerWithBreadcrumbs: ({ children }) => <div>{children}</div>,
-}));
-
-// Mock the SearchBar component
-jest.mock("../SearchBar", () => ({
-  SearchBar: ({ initialValue }) => (
-    <div data-testid="search-bar">Search Bar: {initialValue}</div>
-  ),
-}));
-
-// Mock the SearchCard component
-jest.mock("../Card", () => ({
-  SearchCard: ({ title, onClick }) => (
-    <div data-testid="search-card" onClick={onClick}>
-      {title}
-    </div>
-  ),
-}));
-
-// Mock the fr object from @codegouvfr/react-dsfr
-jest.mock("@codegouvfr/react-dsfr", () => ({
-  fr: {
-    cx: (...args) => args.join(" "),
-  },
-}));
-
-// Mock the Button component
-jest.mock("@codegouvfr/react-dsfr/Button", () => ({
-  Button: ({ children, onClick, linkProps }) => (
-    <button
-      data-testid="button"
-      onClick={onClick || (linkProps && linkProps.onClick)}
-    >
-      {children}
-    </button>
-  ),
 }));
 
 describe("SearchPageClient", () => {
@@ -76,18 +44,22 @@ describe("SearchPageClient", () => {
   const mockItems = {
     documents: [
       {
+        cdtnId: "doc-1",
         source: SOURCES.SHEET_MT,
         slug: "document-1",
         title: "Document 1",
         description: "Description 1",
         algo: "fulltext",
+        breadcrumbs: [{ label: "Fiches pratiques" }],
       },
       {
+        cdtnId: "doc-2",
         source: SOURCES.SHEET_SP,
         slug: "document-2",
         title: "Document 2",
         description: "Description 2",
         algo: "fulltext",
+        breadcrumbs: [{ label: "Fiches service public" }],
       },
     ],
     themes: [
@@ -119,9 +91,9 @@ describe("SearchPageClient", () => {
   it("should emit result selection event when a search result is clicked", () => {
     render(<SearchPageClient query="test query" items={mockItems} />);
 
-    // Find and click the first search card
-    const searchCards = screen.getAllByTestId("search-card");
-    fireEvent.click(searchCards[0]);
+    // Find and click the first search card link
+    const firstCard = screen.getByRole("link", { name: "Document 1" });
+    fireEvent.click(firstCard);
 
     // Check that emitResultSelectionEvent was called with the correct parameters
     expect(mockEmitResultSelectionEvent).toHaveBeenCalledWith(
@@ -137,11 +109,13 @@ describe("SearchPageClient", () => {
     const manyDocuments = Array(10)
       .fill(null)
       .map((_, index) => ({
+        cdtnId: `doc-${index}`,
         source: SOURCES.SHEET_MT,
         slug: `document-${index}`,
         title: `Document ${index}`,
         description: `Description ${index}`,
         algo: "fulltext",
+        breadcrumbs: [{ label: "Fiches pratiques" }],
       }));
 
     const itemsWithManyDocuments = {
@@ -164,8 +138,8 @@ describe("SearchPageClient", () => {
   it("should emit result selection event when a theme button is clicked", () => {
     render(<SearchPageClient query="test query" items={mockItems} />);
 
-    // Find and click the theme button
-    const themeButton = screen.getByText("Theme 1");
+    // Find and click the theme link (styled as a button)
+    const themeButton = screen.getByRole("link", { name: "Theme 1" });
     fireEvent.click(themeButton);
 
     // Check that emitResultSelectionEvent was called with the correct parameters
@@ -180,10 +154,8 @@ describe("SearchPageClient", () => {
   it("should emit result selection event when a code article is clicked", () => {
     render(<SearchPageClient query="test query" items={mockItems} />);
 
-    // Find and click the code article
-    const codeArticles = screen.getAllByTestId("search-card");
-    // The code article should be the last search card (after the documents)
-    const codeArticle = codeArticles[codeArticles.length - 1];
+    // Find and click the code article link
+    const codeArticle = screen.getByRole("link", { name: "article-1" });
     fireEvent.click(codeArticle);
 
     // Check that emitResultSelectionEvent was called with the correct parameters

@@ -10,6 +10,7 @@ import { SOURCES } from "@socialgouv/cdtn-utils";
 import { ContainerWithBreadcrumbs } from "../layout/ContainerWithBreadcrumbs";
 import { useSearchTracking } from "./tracking";
 import { generateSearchLink } from "./utils";
+import { SEARCH_VISIBLE_ITEMS } from "./constants";
 
 type SearchPageClientProps = {
   query: string;
@@ -53,20 +54,13 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
     (item) => item.source === SOURCES.CDT && item.slug
   );
 
-  const allResults = [
-    ...documents,
-    ...articles.filter((item) => item.source !== SOURCES.CDT),
-  ];
-
   const [visibleItems, setVisibleItems] = React.useState(8);
-  const hasMoreResults = visibleItems < allResults.length;
+  const hasMoreResults = visibleItems < documents.length;
 
   const loadMoreResults = () => {
     emitNextPageEvent(query);
-    setVisibleItems((prev) => prev + 8);
+    setVisibleItems((prev) => prev + SEARCH_VISIBLE_ITEMS);
   };
-
-  const relatedThemes = themes.slice(0, 6);
 
   return (
     <ContainerWithBreadcrumbs currentPage="Recherche" breadcrumbs={[]}>
@@ -84,7 +78,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
             Résultats de recherche pour &quot;{query}&quot;
           </h2>
 
-          {allResults.length === 0 ? (
+          {documents.length === 0 ? (
             <div
               className={fr.cx(
                 "fr-alert",
@@ -106,10 +100,10 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                 "fr-mt-3w"
               )}
             >
-              {allResults.slice(0, visibleItems).map((item, index) => {
+              {documents.slice(0, visibleItems).map((item) => {
                 return (
                   <SearchCard
-                    key={`${item.source}-${item.slug || index}`}
+                    key={item.cdtnId}
                     title={item.title}
                     description={item.description || ""}
                     category={
@@ -163,10 +157,10 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                   "fr-mt-3w"
                 )}
               >
-                {codeArticles.map((article, index) => {
+                {codeArticles.map((article) => {
                   return (
                     <SearchCard
-                      key={`${article.source}-${article.slug || index}`}
+                      key={`${article.source}-${article.slug}`}
                       title={article.slug}
                       description={article.description || ""}
                       link={generateSearchLink(
@@ -190,7 +184,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
             </section>
           )}
 
-          {relatedThemes.length > 0 && (
+          {themes.length > 0 && (
             <section className={fr.cx("fr-mt-6w")}>
               <h2 className={fr.cx("fr-h3")}>
                 Les thèmes suivants peuvent vous intéresser
@@ -203,7 +197,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                   "fr-mt-3w"
                 )}
               >
-                {relatedThemes.map((theme, index) => {
+                {themes.map((theme, index) => {
                   return (
                     <Button
                       key={index}

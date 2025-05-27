@@ -31,18 +31,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   let items = { articles: [], documents: [], themes: [] };
 
   if (query) {
-    try {
-      const timeoutPromise = new Promise((_, reject) =>
-        setTimeout(() => reject(new Error("Search timeout")), 10000)
-      );
-
-      const searchPromise = searchWithQuery(query, false, undefined);
-
-      items = (await Promise.race([searchPromise, timeoutPromise])) as any;
-    } catch (error) {
-      console.error("Error searching:", error);
-      items = { articles: [], documents: [], themes: [] };
-    }
+    items = (await searchWithQuery(query, false, undefined)) as any;
   }
 
   return (
