@@ -33,36 +33,48 @@ export const QuestionnaireAdvanced = ({
       </Heading>
       <div>
         <QuestionnaireItem
-          badEventValue={FEEDBACK_RESULT.NOT_AT_ALL}
-          averageEventValue={FEEDBACK_RESULT.AVERAGE}
-          goodEventValue={FEEDBACK_RESULT.EASY}
-          title="Le simulateur était-il facile à utiliser ?"
-          badText="Pas du tout"
-          goodText="Facile"
+          useNumberedScale={true}
+          title="Que pensez-vous de l'utilisation du simulateur ?"
+          values={[
+            FEEDBACK_RESULT.ONE,
+            FEEDBACK_RESULT.TWO,
+            FEEDBACK_RESULT.THREE,
+            FEEDBACK_RESULT.FOUR,
+            FEEDBACK_RESULT.FIVE,
+          ]}
+          labels={["Pas facile du tout", "", "", "", "Très facile"]}
           onChange={(status) => {
             setStatusSimulator(status);
           }}
           dataTestId="simulator"
         />
         <QuestionnaireItem
-          badEventValue={FEEDBACK_RESULT.NOT_AT_ALL}
-          averageEventValue={FEEDBACK_RESULT.AVERAGE}
-          goodEventValue={FEEDBACK_RESULT.YES}
-          title="Les questions étaient-elles claires et compréhensibles ?"
-          badText="Pas du tout"
-          goodText="Oui"
+          useNumberedScale={true}
+          title="Qu'avez-vous pensé des informations et des instructions fournies ?"
+          values={[
+            FEEDBACK_RESULT.ONE,
+            FEEDBACK_RESULT.TWO,
+            FEEDBACK_RESULT.THREE,
+            FEEDBACK_RESULT.FOUR,
+            FEEDBACK_RESULT.FIVE,
+          ]}
+          labels={["Pas clair du tout", "", "", "", "Très clair"]}
           onChange={(status) => {
             setStatusQuestion(status);
           }}
           dataTestId="questionClarity"
         />
         <QuestionnaireItem
-          badEventValue={FEEDBACK_RESULT.NOT_AT_ALL}
-          averageEventValue={FEEDBACK_RESULT.AVERAGE}
-          goodEventValue={FEEDBACK_RESULT.YES}
-          title="Les explications du résultat obtenu étaient-elles claires et compréhensibles ?"
-          badText="Pas du tout"
-          goodText="Oui"
+          useNumberedScale={true}
+          title="Que pensez-vous des explications du résultat obtenu ?"
+          values={[
+            FEEDBACK_RESULT.ONE,
+            FEEDBACK_RESULT.TWO,
+            FEEDBACK_RESULT.THREE,
+            FEEDBACK_RESULT.FOUR,
+            FEEDBACK_RESULT.FIVE,
+          ]}
+          labels={["Pas clair du tout", "", "", "", "Très clair"]}
           onChange={(status) => {
             setStatusExplanation(status);
           }}

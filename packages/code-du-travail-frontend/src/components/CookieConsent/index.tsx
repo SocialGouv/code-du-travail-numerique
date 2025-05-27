@@ -201,6 +201,7 @@ const ToggleSwitch = styled.div`
   display: inline-block;
   width: 60px;
   height: 34px;
+  cursor: pointer;
 `;
 
 const ToggleInput = styled.input`
@@ -255,17 +256,30 @@ const ToggleStatus = styled.span`
 const ToggleRow = styled.div`
   display: flex;
   align-items: center;
+  cursor: pointer;
 `;
 
+// Nouveau style responsive pour les boutons du footer
 const ModalFooter = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-end;
-  gap: 0.5rem;
+  gap: 1rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 `;
 
-export const CookieConsentLegacy = () => {
+// Style pour les boutons en mode mobile
+const ResponsiveButton = styled(Button)`
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+const CookieConsentLegacy = () => {
   const [consent, setConsent] = useState<ConsentType>(DEFAULT_CONSENT);
   const [showBanner, setShowBanner] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -290,7 +304,7 @@ export const CookieConsentLegacy = () => {
 
   // Handle accepting all cookies
   const handleAcceptAll = () => {
-    const newConsent = { matomo: true, sea: true };
+    const newConsent = { matomo: true, sea: true, matomoHeatmap: true };
     console.log("User accepted all cookies (legacy):", newConsent);
     setConsent(newConsent);
     saveConsent(newConsent);
@@ -306,7 +320,7 @@ export const CookieConsentLegacy = () => {
   // Handle rejecting all cookies
   const handleRejectAll = () => {
     // Matomo is mandatory, so it's always true
-    const newConsent = { matomo: true, sea: false };
+    const newConsent = { matomo: true, sea: false, matomoHeatmap: false };
     console.log("User rejected optional cookies (legacy):", newConsent);
     setConsent(newConsent);
     saveConsent(newConsent);
@@ -434,18 +448,47 @@ export const CookieConsentLegacy = () => {
                   campagnes publicitaires sur les moteurs de recherche.
                 </ToggleDescription>
                 <ToggleRow>
-                  <ToggleSwitch>
+                  <ToggleSwitch onClick={() => handleConsentChange("sea")}>
                     <ToggleInput
                       id="toggle-sea-legacy"
                       type="checkbox"
                       checked={consent.sea}
-                      onChange={() => handleConsentChange("sea")}
                       aria-labelledby="toggle-sea-label-legacy"
                     />
                     <ToggleSlider />
                   </ToggleSwitch>
                   <ToggleStatus>
                     {consent.sea ? "Activé" : "Désactivé"}
+                  </ToggleStatus>
+                </ToggleRow>
+              </ToggleContainer>
+            </CheckboxGroup>
+
+            <CheckboxGroup>
+              <CheckboxLegend>Carte des chaleurs Matomo</CheckboxLegend>
+              <ToggleContainer>
+                <ToggleTitle id="toggle-heatmap-label-legacy">
+                  Carte des chaleurs
+                </ToggleTitle>
+                <ToggleDescription>
+                  Cette fonctionnalité nous permet de visualiser comment les
+                  utilisateurs interagissent avec notre site (clics, mouvements
+                  de souris) pour améliorer l&apos;expérience utilisateur.
+                </ToggleDescription>
+                <ToggleRow>
+                  <ToggleSwitch
+                    onClick={() => handleConsentChange("matomoHeatmap")}
+                  >
+                    <ToggleInput
+                      id="toggle-heatmap-legacy"
+                      type="checkbox"
+                      checked={consent.matomoHeatmap}
+                      aria-labelledby="toggle-heatmap-label-legacy"
+                    />
+                    <ToggleSlider />
+                  </ToggleSwitch>
+                  <ToggleStatus>
+                    {consent.matomoHeatmap ? "Activé" : "Désactivé"}
                   </ToggleStatus>
                 </ToggleRow>
               </ToggleContainer>
@@ -458,22 +501,25 @@ export const CookieConsentLegacy = () => {
             ×
           </CloseButton>
           <ModalFooter>
-            <Button primary onClick={handleSaveSettings}>
-              Enregistrer
-            </Button>
-            <Button secondary onClick={handleRejectAll}>
+            <ResponsiveButton secondary onClick={handleRejectAll}>
               Tout refuser
-            </Button>
-            <Button secondary onClick={handleAcceptAll}>
+            </ResponsiveButton>
+            <ResponsiveButton secondary onClick={handleAcceptAll}>
               Tout accepter
-            </Button>
+            </ResponsiveButton>
+            <ResponsiveButton primary onClick={handleSaveSettings}>
+              Enregistrer
+            </ResponsiveButton>
           </ModalFooter>
         </ModalContent>
       </Modal>
 
       {/* Manage Cookies Button (fixed at the bottom) */}
       {!showBanner && (
-        <SettingsButton onClick={() => setIsModalOpen(true)}>
+        <SettingsButton
+          onClick={() => setIsModalOpen(true)}
+          aria-label="Gérer les cookies"
+        >
           <svg
             width="16"
             height="16"
@@ -496,11 +542,12 @@ export const CookieConsentLegacy = () => {
               strokeLinejoin="round"
             />
           </svg>
-          Cookies
+          Gérer les cookies
         </SettingsButton>
       )}
     </>
   );
 };
 
+// Exporter le composant comme export par défaut
 export default CookieConsentLegacy;

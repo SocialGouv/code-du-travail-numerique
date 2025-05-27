@@ -9,7 +9,7 @@ describe("Contributions", () => {
       .contains("Rechercher")
       .click();
     cy.findAllByRole("heading", { level: 3 }).should("have.length", 18);
-    cy.contains("Quelle peut être la durée maximale d'un CDD").click();
+    cy.contains("Durée maximale d'un CDD").click();
 
     cy.urlEqual(
       "/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd?q=dur%C3%A9e%20maximale%20CDD"

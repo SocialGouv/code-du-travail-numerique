@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.182.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.181.0...v4.182.0) (2025-05-27)
+
+
+### Features
+
+* 6554 revoir les questions de satisfaction simulateur indemnité de licenciementindemnité de rc ([#6584](https://github.com/SocialGouv/code-du-travail-numerique/issues/6584)) ([3a74387](https://github.com/SocialGouv/code-du-travail-numerique/commit/3a74387b5e0e99d3a88cf710aa34a1be083a27e4))
+* activation carte chaleur ([#6574](https://github.com/SocialGouv/code-du-travail-numerique/issues/6574)) ([b80b138](https://github.com/SocialGouv/code-du-travail-numerique/commit/b80b138de51a40c49af1757b7e54cf84083ccd26))
+
+
+
+
+
+# [4.181.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.180.0...v4.181.0) (2025-05-21)
+
+
+### Bug Fixes
+
+* 6540 bug sur le tracking du simu rc ([#6557](https://github.com/SocialGouv/code-du-travail-numerique/issues/6557)) ([4ed77c5](https://github.com/SocialGouv/code-du-travail-numerique/commit/4ed77c5d4ad247bc744c46ec7135defcf694e60f))
+* **dsfr:** retours sur le simulateurs + spacing sur les fiches contributions ([#6572](https://github.com/SocialGouv/code-du-travail-numerique/issues/6572)) ([b6c9bce](https://github.com/SocialGouv/code-du-travail-numerique/commit/b6c9bcee8f5c975f5e810a68bc705dd8fe0e75f3))
+* **themes:** correction des urls ayant comme source `external` ([#6570](https://github.com/SocialGouv/code-du-travail-numerique/issues/6570)) ([23c3150](https://github.com/SocialGouv/code-du-travail-numerique/commit/23c3150483554f1ac311ad336d171889b27335bd))
+
+
+### Features
+
+* **droit-du-travail:** passage en DSFR ([#6558](https://github.com/SocialGouv/code-du-travail-numerique/issues/6558)) ([4691e93](https://github.com/SocialGouv/code-du-travail-numerique/commit/4691e935b61a7a299105b890dd1cc4718928dd2e))
+* **fiches-pratiques:** passage en DSFR ([#6571](https://github.com/SocialGouv/code-du-travail-numerique/issues/6571)) ([c4c4179](https://github.com/SocialGouv/code-du-travail-numerique/commit/c4c4179d590688b973b245295ac77cff92cb2f5b))
+
+
+
+
+
 # [4.180.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.179.1...v4.180.0) (2025-05-14)
 
 
