@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { QuestionnaireItem } from "./QuestionnaireItem";
+import { SmileyQuestionnaireItem } from "./SmileyQuestionnaireItem";
 import { useState } from "react";
 import {
   EVENT_ACTION,
@@ -29,7 +29,7 @@ export const Questionnaire = ({
       <h3 className={fr.cx("fr-text--lg", "fr-mb-2w", "fr-text--bold")}>
         Comment s&apos;est passée cette simulation pour vous ?
       </h3>
-      <QuestionnaireItem
+      <SmileyQuestionnaireItem
         badEventValue={FEEDBACK_RESULT.NOT_GOOD}
         averageEventValue={FEEDBACK_RESULT.AVERAGE}
         goodEventValue={FEEDBACK_RESULT.GOOD}

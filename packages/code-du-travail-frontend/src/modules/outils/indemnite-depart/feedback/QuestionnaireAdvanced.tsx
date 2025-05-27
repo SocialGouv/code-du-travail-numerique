@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { QuestionnaireItem } from "./QuestionnaireItem";
+import { NumberedScaleQuestionnaireItem } from "./NumberedScaleQuestionnaireItem";
 import { QuestionnaireText } from "./QuestionnaireText";
 import { useState } from "react";
 import {
@@ -32,43 +32,58 @@ export const QuestionnaireAdvanced = ({
   return (
     <div>
       <h3 className={fr.cx("fr-text--lg", "fr-mb-2w", "fr-text--bold")}>
-        Merci pour votre aide ! Pouvez-vous nous en dire plus ?
+        Merci pour votre aide&nbsp;! Pouvez-vous nous en dire plus&nbsp;?
       </h3>
       <div>
-        <QuestionnaireItem
-          badEventValue={FEEDBACK_RESULT.NOT_AT_ALL}
-          averageEventValue={FEEDBACK_RESULT.AVERAGE}
-          goodEventValue={FEEDBACK_RESULT.EASY}
-          title="Le simulateur était-il facile à utiliser ?"
-          badText="Pas du tout"
-          goodText="Facile"
+        <NumberedScaleQuestionnaireItem
+          title="Que pensez-vous de l'utilisation du simulateur ?"
+          values={[
+            FEEDBACK_RESULT.ONE,
+            FEEDBACK_RESULT.TWO,
+            FEEDBACK_RESULT.THREE,
+            FEEDBACK_RESULT.FOUR,
+            FEEDBACK_RESULT.FIVE,
+          ]}
+          labels={["Pas facile du tout", "", "", "", "Très facile"]}
           onChange={(status) => {
             setStatusSimulator(status);
           }}
+          hint="Sur une échelle de 1 à 5, 1 n'est pas facile du tout et 5 est
+            très facile."
           dataTestId="simulator"
         />
-        <QuestionnaireItem
-          badEventValue={FEEDBACK_RESULT.NOT_AT_ALL}
-          averageEventValue={FEEDBACK_RESULT.AVERAGE}
-          goodEventValue={FEEDBACK_RESULT.YES}
-          title="Les questions étaient-elles claires et compréhensibles ?"
-          badText="Pas du tout"
-          goodText="Oui"
+        <NumberedScaleQuestionnaireItem
+          title="Qu'avez-vous pensé des informations et des instructions fournies ?"
+          values={[
+            FEEDBACK_RESULT.ONE,
+            FEEDBACK_RESULT.TWO,
+            FEEDBACK_RESULT.THREE,
+            FEEDBACK_RESULT.FOUR,
+            FEEDBACK_RESULT.FIVE,
+          ]}
+          labels={["Pas claires du tout", "", "", "", "Très claires"]}
           onChange={(status) => {
             setStatusQuestion(status);
           }}
+          hint="Sur une échelle de 1 à 5, 1 n'est pas clair du tout et 5 est
+            très clair."
           dataTestId="questionClarity"
         />
-        <QuestionnaireItem
-          badEventValue={FEEDBACK_RESULT.NOT_AT_ALL}
-          averageEventValue={FEEDBACK_RESULT.AVERAGE}
-          goodEventValue={FEEDBACK_RESULT.YES}
-          title="Les explications du résultat obtenu étaient-elles claires et compréhensibles ?"
-          badText="Pas du tout"
-          goodText="Oui"
+        <NumberedScaleQuestionnaireItem
+          title="Que pensez-vous des explications du résultat obtenu ?"
+          values={[
+            FEEDBACK_RESULT.ONE,
+            FEEDBACK_RESULT.TWO,
+            FEEDBACK_RESULT.THREE,
+            FEEDBACK_RESULT.FOUR,
+            FEEDBACK_RESULT.FIVE,
+          ]}
+          labels={["Pas claires du tout", "", "", "", "Très claires"]}
           onChange={(status) => {
             setStatusExplanation(status);
           }}
+          hint="Sur une échelle de 1 à 5, 1 n'est pas clair du tout et 5 est
+            très clair."
           dataTestId="resultClarity"
         />
         <QuestionnaireText

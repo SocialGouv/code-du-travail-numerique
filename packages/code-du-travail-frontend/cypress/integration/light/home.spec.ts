@@ -87,13 +87,12 @@ describe("Page d’accueil", () => {
 
     cy.contains("congés sans solde").click();
 
-    cy.get('div[role="region"]>ul li').should("have.length", 7);
-    cy.contains("Résultats de recherche pour “congés sans solde”");
-    cy.contains("Que dit le code du travail");
-    cy.contains("Vous n’avez pas trouvé ce que vous cherchiez");
+    cy.findAllByRole("heading", { level: 3 }).should("have.length", 18);
+    cy.contains('Résultats de recherche pour "congés sans solde"');
+    cy.contains("Articles du code du travail");
     cy.contains("Les thèmes suivants peuvent vous intéresser");
 
     cy.get("button").contains("Plus de résultats").click();
-    cy.get('div[role="region"]>ul li').should("have.length", 14);
+    cy.findAllByRole("heading", { level: 3 }).should("have.length", 26);
   });
 });

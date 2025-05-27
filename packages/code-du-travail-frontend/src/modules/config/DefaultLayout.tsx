@@ -1,3 +1,5 @@
+"use client";
+
 import { DsfrHead } from "@codegouvfr/react-dsfr/next-appdir/DsfrHead";
 import { DsfrProvider } from "@codegouvfr/react-dsfr/next-appdir/DsfrProvider";
 import { getHtmlAttributes } from "@codegouvfr/react-dsfr/next-appdir/getHtmlAttributes";
@@ -7,7 +9,8 @@ import { DefaultColorScheme } from "@codegouvfr/react-dsfr/next-appdir";
 import { StartDsfrLight } from "./StartDsfrLight";
 import { ENV } from "../../config";
 import { SentryTest } from "../sentry";
-import { CookieConsentDSFR } from "../cookie-consent";
+import { ConsentManager } from "../cookie-consent";
+import { usePathname } from "next/navigation";
 
 type Props = {
   children: React.ReactNode;
@@ -21,6 +24,9 @@ export default function DefaultLayout({
   defaultColorScheme,
 }: Props) {
   const lang = "fr";
+  const pathname = usePathname();
+  const isWidgetPage = pathname?.startsWith("/widgets");
+
   return (
     <html {...getHtmlAttributes({ defaultColorScheme, lang })}>
       <head>
@@ -45,7 +51,7 @@ export default function DefaultLayout({
       <body>
         <DsfrProvider lang={lang}>
           {children}
-          <CookieConsentDSFR />
+          {!isWidgetPage && <ConsentManager />}
         </DsfrProvider>
         <MatomoAnalytics />
         {ENV === "development" && <SentryTest />}
