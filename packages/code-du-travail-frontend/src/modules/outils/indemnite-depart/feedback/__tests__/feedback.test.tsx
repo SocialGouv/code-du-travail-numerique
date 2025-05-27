@@ -51,32 +51,44 @@ describe("Etant donné un composant Feedback", () => {
         ]);
 
         expect(ui.questionnaire2.simulator.title.query()).toBeInTheDocument();
-        expect(ui.questionnaire2.simulator.bad.query()).toBeInTheDocument();
-        expect(ui.questionnaire2.simulator.average.query()).toBeInTheDocument();
-        expect(ui.questionnaire2.simulator.good.query()).toBeInTheDocument();
+        expect(ui.questionnaire2.simulator.one.query()).toBeInTheDocument();
+        expect(ui.questionnaire2.simulator.two.query()).toBeInTheDocument();
+        expect(ui.questionnaire2.simulator.three.query()).toBeInTheDocument();
+        expect(ui.questionnaire2.simulator.four.query()).toBeInTheDocument();
+        expect(ui.questionnaire2.simulator.five.query()).toBeInTheDocument();
 
         expect(
           ui.questionnaire2.questionClarity.title.query()
         ).toBeInTheDocument();
         expect(
-          ui.questionnaire2.questionClarity.bad.query()
+          ui.questionnaire2.questionClarity.one.query()
         ).toBeInTheDocument();
         expect(
-          ui.questionnaire2.questionClarity.average.query()
+          ui.questionnaire2.questionClarity.two.query()
         ).toBeInTheDocument();
         expect(
-          ui.questionnaire2.questionClarity.good.query()
+          ui.questionnaire2.questionClarity.three.query()
+        ).toBeInTheDocument();
+        expect(
+          ui.questionnaire2.questionClarity.four.query()
+        ).toBeInTheDocument();
+        expect(
+          ui.questionnaire2.questionClarity.five.query()
         ).toBeInTheDocument();
 
         expect(
           ui.questionnaire2.resultClarity.title.query()
         ).toBeInTheDocument();
-        expect(ui.questionnaire2.resultClarity.bad.query()).toBeInTheDocument();
+        expect(ui.questionnaire2.resultClarity.one.query()).toBeInTheDocument();
+        expect(ui.questionnaire2.resultClarity.two.query()).toBeInTheDocument();
         expect(
-          ui.questionnaire2.resultClarity.average.query()
+          ui.questionnaire2.resultClarity.three.query()
         ).toBeInTheDocument();
         expect(
-          ui.questionnaire2.resultClarity.good.query()
+          ui.questionnaire2.resultClarity.four.query()
+        ).toBeInTheDocument();
+        expect(
+          ui.questionnaire2.resultClarity.five.query()
         ).toBeInTheDocument();
 
         expect(ui.questionnaire2.more.title.query()).toBeInTheDocument();
@@ -84,9 +96,9 @@ describe("Etant donné un composant Feedback", () => {
       });
       describe("Lors d'une sélection et clique sur le bouton 'Envoyer'", () => {
         beforeEach(() => {
-          fireEvent.click(ui.questionnaire2.simulator.bad.get());
-          fireEvent.click(ui.questionnaire2.questionClarity.average.get());
-          fireEvent.click(ui.questionnaire2.resultClarity.good.get());
+          fireEvent.click(ui.questionnaire2.simulator.one.get());
+          fireEvent.click(ui.questionnaire2.questionClarity.three.get());
+          fireEvent.click(ui.questionnaire2.resultClarity.five.get());
           fireEvent.change(ui.questionnaire2.more.input.get(), {
             target: { value: "test" },
           });
@@ -103,13 +115,19 @@ describe("Etant donné un composant Feedback", () => {
             "trackEvent",
             "feedback_simulateurs",
             "Facilité_utilisation_simulateur",
-            "pas_du_tout",
+            "1",
           ]);
           expect(matopush).toHaveBeenCalledWith([
             "trackEvent",
             "feedback_simulateurs",
             "Clarté_questions",
-            "moyen",
+            "3",
+          ]);
+          expect(matopush).toHaveBeenCalledWith([
+            "trackEvent",
+            "feedback_simulateurs",
+            "Clarté_résultat",
+            "5",
           ]);
           expect(ui.questionnaireEnd.title.query()).toBeInTheDocument();
           expect(ui.questionnaireEnd.description.query()).toBeInTheDocument();
