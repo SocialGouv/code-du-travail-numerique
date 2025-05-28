@@ -55,9 +55,9 @@ jobs:
           buildkit-svc-count: ${{ vars.BUILDKIT_SVC_COUNT }}
           buildkit-daemon-address: ${{ vars.BUILDKIT_DAEMON_ADDRESS }}
           secrets: |
-            sentry_auth_token=${{ secrets.SENTRY_AUTH_TOKEN }}
-            elasticsearch_token_api=${{ secrets.ELASTICSEARCH_TOKEN_API }}
-            elasticsearch_url=${{ secrets.ELASTICSEARCH_URL }}
+            SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}
+            ELASTICSEARCH_TOKEN_API=${{ secrets.ELASTICSEARCH_TOKEN_API }}
+            ELASTICSEARCH_URL=${{ secrets.ELASTICSEARCH_URL }}
           build-args: |
             NEXT_PUBLIC_CDTN_ENV=development
             NEXT_PUBLIC_BUCKET_FOLDER=preview
