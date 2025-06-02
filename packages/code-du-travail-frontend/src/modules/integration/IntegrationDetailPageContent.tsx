@@ -1,6 +1,6 @@
 import React from "react";
-import { IntegrationDetailContent, Widget } from "./IntegrationDetailContent";
-import { SelectItem } from "./IntegrationDetailContent";
+import { IntegrationDetailContent } from "./IntegrationDetailContent";
+import { Widget, SelectItem } from "./types";
 import { ContainerList } from "../layout/ContainerList";
 
 export interface IntegrationDetailPageContentProps {

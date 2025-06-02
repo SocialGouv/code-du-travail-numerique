@@ -2,45 +2,11 @@
 
 import { fr } from "@codegouvfr/react-dsfr";
 import { Select } from "@codegouvfr/react-dsfr/Select";
+import { css } from "@styled-system/css";
 import React, { useEffect, useState } from "react";
-
-export type SelectItem = {
-  value: string;
-  label: string;
-};
-
-export type WidgetMessage = {
-  [action: string]: {
-    name: string;
-    description: string;
-    extra?: {
-      [key: string]: string;
-    };
-  }[];
-};
-
-export type Widget = {
-  metaTitle: string;
-  metaDescription: string;
-  title: string;
-  description: string[];
-  shortTitle: string;
-  shortDescription: string;
-  url: string;
-  id: string;
-  messages?: WidgetMessage;
-  isModele?: boolean;
-};
-
-export type Integration = {
-  [slug: string]: Widget;
-};
-
-export interface IntegrationDetailContentProps
-  extends Omit<Widget, "shortDescription" | "metaTitle" | "metaDescription"> {
-  host: string;
-  selectOptions?: SelectItem[] | null;
-}
+import { IntegrationInstructions } from "./IntegrationInstructions";
+import { IntegrationTracking } from "./IntegrationTracking";
+import { IntegrationDetailContentProps } from "./types";
 
 export const IntegrationDetailContent = ({
   description,
@@ -95,18 +61,10 @@ export const IntegrationDetailContent = ({
     };
   }, [id]);
 
-  const codeBlockStyle = {
-    backgroundColor: "#f5f5fe",
-    padding: "1rem",
-    borderRadius: "0.25rem",
-    overflow: "auto" as const,
-  };
-
   return (
     <>
       <h1
         className={fr.cx("fr-h2", "fr-mb-4w")}
-        style={{ textAlign: "center" }}
         data-testid="integration-detail-title"
       >
         {title}
@@ -157,13 +115,11 @@ export const IntegrationDetailContent = ({
 
       {message && (
         <div
-          className={fr.cx("fr-callout", "fr-mb-4w")}
+          className={fr.cx("fr-alert", "fr-alert--info", "fr-mb-4w")}
           data-testid="integration-detail-message"
         >
-          <h3 className={fr.cx("fr-callout__title")}>Message envoyé:</h3>
-          <pre style={{ ...codeBlockStyle, whiteSpace: "pre-wrap" }}>
-            {JSON.stringify(message, null, 2)}
-          </pre>
+          <h3 className={fr.cx("fr-alert__title")}>Message envoyé:</h3>
+          <pre>{JSON.stringify(message, null, 2)}</pre>
         </div>
       )}
 
@@ -171,122 +127,13 @@ export const IntegrationDetailContent = ({
 
       {messages && <IntegrationTracking messages={messages} id={id} />}
 
-      <div className={fr.cx("fr-alert", "fr-alert--info", "fr-mb-4w")}>
-        <p className={fr.cx("fr-alert__title")}>Besoin d&apos;aide ?</p>
-        <p>
-          En cas de difficulté, nous vous invitons à nous contacter à
-          l&apos;adresse suivante&nbsp;:{" "}
-          <a href="mailto:codedutravailnumerique@travail.gouv.fr">
-            codedutravailnumerique@travail.gouv.fr
-          </a>
-        </p>
-      </div>
+      <p className={fr.cx("fr-mb-0")}>
+        En cas de difficulté, nous vous invitons à nous contacter à
+        l&apos;adresse suivante&nbsp;:{" "}
+        <a href="mailto:codedutravailnumerique@travail.gouv.fr">
+          codedutravailnumerique@travail.gouv.fr
+        </a>
+      </p>
     </>
-  );
-};
-
-interface IntegrationInstructionsProps {
-  parsedUrl: string;
-  shortTitle: string;
-}
-
-const IntegrationInstructions = ({
-  parsedUrl,
-  shortTitle,
-}: IntegrationInstructionsProps) => {
-  const codeBlockStyle = {
-    backgroundColor: "#f5f5fe",
-    padding: "1rem",
-    borderRadius: "0.25rem",
-    overflow: "auto" as const,
-  };
-
-  return (
-    <div className={fr.cx("fr-mb-6w")} data-testid="integration-instructions">
-      <h2 className={fr.cx("fr-h3", "fr-mb-3w")}>
-        Intégrez ce module à votre site
-      </h2>
-      <p className={fr.cx("fr-mb-2w")}>
-        L&apos;installation se passe en deux temps :
-      </p>
-
-      <ol className={fr.cx("fr-mb-4w")}>
-        <li className={fr.cx("fr-mb-3w")}>
-          <p className={fr.cx("fr-mb-1w")}>
-            Ajoutez le code suivant dans la balise <code>&lt;body&gt;</code> de
-            votre page&nbsp;:
-          </p>
-          <pre style={codeBlockStyle}>
-            {`<script src="https://code.travail.gouv.fr/widget.js" defer></script>`}
-          </pre>
-        </li>
-        <li>
-          <p className={fr.cx("fr-mb-1w")}>
-            Intégrez le code suivant à l&apos;endroit où vous souhaitez voir le
-            module s&apos;afficher&nbsp;:
-          </p>
-          <pre style={codeBlockStyle}>
-            {`<a href="https://code.travail.gouv.fr${parsedUrl}">${shortTitle}</a>`}
-          </pre>
-        </li>
-      </ol>
-    </div>
-  );
-};
-
-interface IntegrationTrackingProps {
-  messages: NonNullable<Widget["messages"]>;
-  id: string;
-}
-
-const IntegrationTracking = ({ messages, id }: IntegrationTrackingProps) => {
-  const codeBlockStyle = {
-    fontSize: "0.875rem",
-    backgroundColor: "#f5f5fe",
-    padding: "1rem",
-    borderRadius: "0.25rem",
-    overflow: "auto" as const,
-  };
-
-  return (
-    <div className={fr.cx("fr-mb-6w")} data-testid="integration-tracking">
-      <h3 className={fr.cx("fr-h4", "fr-mb-3w")}>Messages</h3>
-      <p className={fr.cx("fr-mb-2w")}>
-        Il est possible d&apos;effectuer du tracking sur nos liens et boutons en
-        interceptant les messages envoyés par le widget avec le code qui suit :
-      </p>
-      <pre style={codeBlockStyle}>
-        {`window.addEventListener(
-  "message",
-  ({ data, source }) => {
-    const iframe = document.getElementById('cdtn-iframe-${id}');
-    if (
-      source === iframe.contentWindow
-      ${Object.keys(messages)
-        .map((key) => `&& data.kind === "${key}"`)
-        .join("\n      ")}
-    ) {
-      ${Object.keys(messages)
-        .map((key) =>
-          messages[key]
-            .map(({ name, description, extra }) => {
-              let extraString = "";
-              if (extra) {
-                extraString = Object.entries(extra)
-                  .map(
-                    ([key, value]) => `\n      data.extra.${key} // ${value}`
-                  )
-                  .join("");
-              }
-              return `data.name === '${name}' // ${description}${extraString}`;
-            })
-            .join("\n      ")
-        )
-        .join("\n      ")}
-    }
-  }
-);`}
-      </pre>
-    </div>
   );
 };

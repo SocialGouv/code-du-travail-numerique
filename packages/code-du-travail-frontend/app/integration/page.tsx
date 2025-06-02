@@ -1,6 +1,6 @@
 import { DsfrLayout } from "../../src/modules/layout";
 import { generateDefaultMetadata } from "../../src/modules/common/metas";
-import { IntegrationPageContent } from "../../src/modules/integration";
+import { IntegrationPageContent } from "src/modules/integration/IntegrationPageContent";
 
 export const metadata = generateDefaultMetadata({
   title: "Widgets pour intégrer le Code du travail numérique à votre site",

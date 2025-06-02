@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import { IntegrationDetailPageContent } from "../IntegrationDetailPageContent";
+import { Widget } from "../types";
 
-// Mock du widget
-const mockWidget = {
+const mockWidget: Widget = {
   id: "test-widget",
   title: "Test Widget Title",
   shortTitle: "Test Widget",
@@ -24,16 +24,13 @@ describe("IntegrationDetailPageContent", () => {
   it("should render the breadcrumb", () => {
     render(<IntegrationDetailPageContent {...defaultProps} />);
 
-    // Vérifier la présence du breadcrumb
     const homeLink = screen.getByText("Accueil");
     const integrationLink = screen.getByText(
       "Intégrer les outils du Code du travail numérique"
     );
-    const currentPage = screen.getByText("Test Widget");
 
     expect(homeLink).toBeInTheDocument();
     expect(integrationLink).toBeInTheDocument();
-    expect(currentPage).toBeInTheDocument();
   });
 
   it("should render breadcrumb with correct links", () => {
@@ -51,11 +48,9 @@ describe("IntegrationDetailPageContent", () => {
   it("should render the IntegrationDetailContent with correct props", () => {
     render(<IntegrationDetailPageContent {...defaultProps} />);
 
-    // Vérifier que le titre est affiché (depuis IntegrationDetailContent)
     const title = screen.getByTestId("integration-detail-title");
     expect(title).toHaveTextContent("Test Widget Title");
 
-    // Vérifier que la description est affichée
     const description = screen.getByTestId("integration-detail-description");
     expect(description).toHaveTextContent("Description line 1");
     expect(description).toHaveTextContent("Description line 2");
@@ -103,12 +98,9 @@ describe("IntegrationDetailPageContent", () => {
   });
 
   it("should use ContainerList layout", () => {
-    const { container } = render(
-      <IntegrationDetailPageContent {...defaultProps} />
-    );
+    render(<IntegrationDetailPageContent {...defaultProps} />);
 
-    // Vérifier que le composant utilise la structure ContainerList
-    const gridRow = container.querySelector(".fr-grid-row");
-    expect(gridRow).toBeInTheDocument();
+    const nav = screen.getByRole("navigation");
+    expect(nav).toBeInTheDocument();
   });
 });

@@ -1,9 +1,7 @@
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import { IntegrationPageContent } from "../IntegrationPageContent";
 
-// Mock des données d'intégration
-jest.mock("../../../integration", () => ({
+jest.mock("../data", () => ({
   integrationData: {
     "moteur-recherche": {
       shortTitle: "Moteur de recherche",
@@ -33,28 +31,27 @@ describe("IntegrationPageContent", () => {
     const description = screen.getByTestId("integration-page-description");
     expect(description).toBeInTheDocument();
     expect(description).toHaveTextContent(
-      "L&apos;équipe du Code du travail numérique"
+      "L'équipe du Code du travail numérique vous propose d'intégrer son moteur de recherche, ses modèles de courriers ainsi que certains de ses simulateurs et outils sur votre site grâce à un module (widget)."
     );
   });
 
-  it("should render integration tiles", () => {
+  it("should render integration cards", () => {
     render(<IntegrationPageContent />);
 
-    const motorTile = screen.getByTestId("integration-tile-moteur-recherche");
-    const modelsTile = screen.getByTestId(
-      "integration-tile-modeles-de-courriers"
+    const motorCard = screen.getByTestId("integration-card-moteur-recherche");
+    const modelsCard = screen.getByTestId(
+      "integration-card-modeles-de-courriers"
     );
 
-    expect(motorTile).toBeInTheDocument();
-    expect(modelsTile).toBeInTheDocument();
+    expect(motorCard).toBeInTheDocument();
+    expect(modelsCard).toBeInTheDocument();
 
-    // Verify tile content
-    expect(motorTile).toHaveTextContent("Moteur de recherche");
-    expect(motorTile).toHaveTextContent(
+    expect(motorCard).toHaveTextContent("Moteur de recherche");
+    expect(motorCard).toHaveTextContent(
       "Effectuez une recherche depuis votre site"
     );
-    expect(modelsTile).toHaveTextContent("Modèles de documents");
-    expect(modelsTile).toHaveTextContent(
+    expect(modelsCard).toHaveTextContent("Modèles de documents");
+    expect(modelsCard).toHaveTextContent(
       "Téléchargez et personnalisez les modèles"
     );
   });

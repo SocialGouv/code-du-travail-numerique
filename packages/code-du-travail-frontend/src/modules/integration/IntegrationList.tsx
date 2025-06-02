@@ -9,7 +9,7 @@ export const IntegrationList = () => {
   const keys = useMemo(() => Object.keys(integrationData), []);
 
   return (
-    <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
+    <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mb-7w")}>
       {keys.map((key) => {
         const { shortDescription, shortTitle } = integrationData[key];
         return (
@@ -33,6 +33,7 @@ export const IntegrationList = () => {
               footer={
                 <Button
                   iconId="fr-icon-code-s-slash-line"
+                  iconPosition="right"
                   linkProps={{
                     href: `/integration/${key}`,
                   }}
@@ -51,7 +52,7 @@ export const IntegrationList = () => {
 };
 
 const imgBackground = css({
-  backgroundColor: "blue!",
+  backgroundColor: "var(--background-alt-blue-cumulus)!",
   backgroundSize: "contain!",
   backgroundPosition: "center!",
   backgroundRepeat: "no-repeat!",

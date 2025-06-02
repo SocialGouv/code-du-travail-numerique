@@ -2,10 +2,10 @@ import { notFound } from "next/navigation";
 import { headers } from "next/headers";
 
 import { getAllModeles } from "../../../src/api";
-import { IntegrationDetailPageContent } from "../../../src/modules/integration";
 import { integrationData } from "src/modules/integration/data";
 import { DsfrLayout } from "../../../src/modules/layout";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
+import { IntegrationDetailPageContent } from "src/modules/integration/IntegrationDetailPageContent";
 
 const keys = Object.keys(integrationData);
 
