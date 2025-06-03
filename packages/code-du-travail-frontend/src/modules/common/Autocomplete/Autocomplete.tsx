@@ -129,7 +129,7 @@ export const Autocomplete = <K,>({
               </>
             }
             nativeInputProps={{
-              type: "search",
+              type: "text",
               // @ts-ignore
               "data-testid": dataTestId,
               placeholder,
