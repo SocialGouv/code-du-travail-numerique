@@ -24,6 +24,7 @@ export type AutocompleteProps<K> = InputProps & {
   onInputValueChange?: (value: string) => void;
   isSearch?: boolean;
   placeholder?: string;
+  nativeInputProps?: React.InputHTMLAttributes<HTMLInputElement>;
 };
 
 export const Autocomplete = <K,>({
@@ -43,6 +44,7 @@ export const Autocomplete = <K,>({
   displayNoResult,
   isSearch = false,
   placeholder,
+  nativeInputProps,
 }: AutocompleteProps<K>) => {
   const [loading, setLoading] = useState(false);
   const [inputRef, setInputRef] = useState<HTMLInputElement | null>();
@@ -137,6 +139,7 @@ export const Autocomplete = <K,>({
               role: getRootProps().role,
               "aria-expanded": getRootProps()["aria-expanded"],
               ...getInputProps(),
+              ...nativeInputProps,
             }}
             className={`${fr.cx("fr-mb-0")}`}
             hintText={hintText}
