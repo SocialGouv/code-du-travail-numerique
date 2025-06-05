@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DisplayContentContribution Accordions should not fail if no summary tag 1`] = `
+exports[`DisplayContent Accordions should not fail if no summary tag 1`] = `
 <div>
   <div>
     <div
@@ -195,7 +195,7 @@ exports[`DisplayContentContribution Accordions should not fail if no summary tag
 </div>
 `;
 
-exports[`DisplayContentContribution Accordions should replace details element by one accordion 1`] = `
+exports[`DisplayContent Accordions should replace details element by one accordion 1`] = `
 <div>
   <div
     class="fr-my-3w"
@@ -239,7 +239,7 @@ exports[`DisplayContentContribution Accordions should replace details element by
 </div>
 `;
 
-exports[`DisplayContentContribution Accordions should replace details element within details element 1`] = `
+exports[`DisplayContent Accordions should replace details element within details element 1`] = `
 <div>
   <div
     class="fr-my-3w"
@@ -316,7 +316,7 @@ exports[`DisplayContentContribution Accordions should replace details element wi
 </div>
 `;
 
-exports[`DisplayContentContribution Accordions should replace multiple details element by one accordion 1`] = `
+exports[`DisplayContent Accordions should replace multiple details element by one accordion 1`] = `
 <body>
   <div>
     <div>
@@ -394,7 +394,7 @@ exports[`DisplayContentContribution Accordions should replace multiple details e
 </body>
 `;
 
-exports[`DisplayContentContribution Alerts should have space in table item for a strong and an other content 1`] = `
+exports[`DisplayContent Alerts should have space in table item for a strong and an other content 1`] = `
 <div>
   <table
     class="sc-4e3ba411-0 kGLBMt"
@@ -484,7 +484,7 @@ exports[`DisplayContentContribution Alerts should have space in table item for a
 </div>
 `;
 
-exports[`DisplayContentContribution Alerts should replace div with alert class in li component to Alert component 1`] = `
+exports[`DisplayContent Alerts should replace div with alert class in li component to Alert component 1`] = `
 <div>
   <div>
     <p
@@ -498,7 +498,9 @@ exports[`DisplayContentContribution Alerts should replace div with alert class i
       <li
         class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"
       >
-        <p>
+        <p
+          class="fr-mb-0"
+        >
           Être
           <strong>
              écrit
@@ -513,7 +515,9 @@ exports[`DisplayContentContribution Alerts should replace div with alert class i
       <li
         class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"
       >
-        <p>
+        <p
+          class="fr-mb-0"
+        >
           Être 
           <strong>
             signé
@@ -528,23 +532,28 @@ exports[`DisplayContentContribution Alerts should replace div with alert class i
       <li
         class="DisplayContentContribution__StyledLi-sc-c2bbc7a4-1 SBjaL"
       >
-        <p>
+        <p
+          class="fr-mb-0"
+        >
           Être établi 
           <strong>
             en plusieurs exemplaires
           </strong>
            ; c'est-à-dire autant d'exemplaires que de parties au contrat. Chaque partie au contrat aura un exemplaire.
         </p>
-        <p />
+        <br />
         <div
-          class="alert"
+          class="fr-alert fr-alert--info fr-alert--sm fr-mt-2w"
+          id="fr-alert-:rh:"
         >
-          <p>
-            <strong>
-              Attention : 
-            </strong>
-            En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.
-          </p>
+          <div>
+            <p>
+              <strong>
+                Attention : 
+              </strong>
+              En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.
+            </p>
+          </div>
         </div>
       </li>
     </ul>
@@ -552,7 +561,7 @@ exports[`DisplayContentContribution Alerts should replace div with alert class i
 </div>
 `;
 
-exports[`DisplayContentContribution Alerts should replace div with alert class to Alert component 1`] = `
+exports[`DisplayContent Alerts should replace div with alert class to Alert component 1`] = `
 <div>
   <div
     class="fr-alert fr-alert--info fr-alert--sm fr-mt-2w"
@@ -570,7 +579,7 @@ exports[`DisplayContentContribution Alerts should replace div with alert class t
 </div>
 `;
 
-exports[`DisplayContentContribution Headings should replace span with class "title" and "sub-titles" with heading 1`] = `
+exports[`DisplayContent Headings should replace span with class "title" and "sub-titles" with heading 1`] = `
 <div>
   <div>
     <h2
@@ -587,7 +596,7 @@ exports[`DisplayContentContribution Headings should replace span with class "tit
 </div>
 `;
 
-exports[`DisplayContentContribution Infographic should replace div with infographic class to Infographic component 1`] = `
+exports[`DisplayContent Infographic should replace div with infographic class to Infographic component 1`] = `
 <div>
   <div>
     <img
@@ -617,7 +626,7 @@ exports[`DisplayContentContribution Infographic should replace div with infograp
     </div>
     <div
       class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--download"
-      id="fr-tile-:rh:"
+      id="fr-tile-:ri:"
     >
       <div
         class="fr-tile__body"
@@ -661,7 +670,7 @@ exports[`DisplayContentContribution Infographic should replace div with infograp
 </div>
 `;
 
-exports[`DisplayContentContribution Tables should add thead to table if not present and move table into a Table element 1`] = `
+exports[`DisplayContent Tables should add thead to table if not present and move table into a Table element 1`] = `
 <div>
   <div
     class="fr-table fr-mb-2w"
@@ -734,7 +743,7 @@ exports[`DisplayContentContribution Tables should add thead to table if not pres
 </div>
 `;
 
-exports[`DisplayContentContribution Tables should keep whitespace in specific tag 1`] = `
+exports[`DisplayContent Tables should keep whitespace in specific tag 1`] = `
 <div>
   <p
     class="fr-mt-2w"
@@ -764,7 +773,7 @@ exports[`DisplayContentContribution Tables should keep whitespace in specific ta
 </div>
 `;
 
-exports[`DisplayContentContribution Tables should not change if thead is already present 1`] = `
+exports[`DisplayContent Tables should not change if thead is already present 1`] = `
 <div>
   <table>
     <tbody>
@@ -791,7 +800,9 @@ exports[`DisplayContentContribution Tables should not change if thead is already
             class="fr-pl-5v"
           >
             <li>
-              <p>
+              <p
+                class="fr-mb-0"
+              >
                 L’employeur et le salarié donnent par écrit ou par mail.
               </p>
             </li>
@@ -803,7 +814,7 @@ exports[`DisplayContentContribution Tables should not change if thead is already
 </div>
 `;
 
-exports[`DisplayContentContribution Tables should render correctly a table with multiple head lines 1`] = `
+exports[`DisplayContent Tables should render correctly a table with multiple head lines 1`] = `
 <div>
   <div>
     <div
@@ -920,7 +931,7 @@ exports[`DisplayContentContribution Tables should render correctly a table with 
 </div>
 `;
 
-exports[`DisplayContentContribution Tables should replace td by th in thead 1`] = `
+exports[`DisplayContent Tables should replace td by th in thead 1`] = `
 <div>
   <table>
     <tbody>
@@ -947,7 +958,9 @@ exports[`DisplayContentContribution Tables should replace td by th in thead 1`] 
             class="fr-pl-5v"
           >
             <li>
-              <p>
+              <p
+                class="fr-mb-0"
+              >
                 L’employeur et le salarié donnent par écrit ou par mail.
               </p>
             </li>
@@ -959,7 +972,7 @@ exports[`DisplayContentContribution Tables should replace td by th in thead 1`] 
 </div>
 `;
 
-exports[`DisplayContentContribution should keep whitespace in specific tag 1`] = `
+exports[`DisplayContent should keep whitespace in specific tag 1`] = `
 <div>
   <p
     class="fr-mt-2w"
@@ -989,7 +1002,7 @@ exports[`DisplayContentContribution should keep whitespace in specific tag 1`] =
 </div>
 `;
 
-exports[`DisplayContentContribution should not remove space between strong and em tag in p tag 1`] = `
+exports[`DisplayContent should not remove space between strong and em tag in p tag 1`] = `
 <div>
   <p
     class="fr-mt-2w"
@@ -1005,7 +1018,7 @@ exports[`DisplayContentContribution should not remove space between strong and e
 </div>
 `;
 
-exports[`DisplayContentContribution should return html 1`] = `
+exports[`DisplayContent should return html 1`] = `
 <div>
   <p
     class="fr-mt-2w"
