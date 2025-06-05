@@ -6,6 +6,7 @@ export type HomeTileProps = {
   description?: string;
   iconName: string;
   link: string;
+  level: "h2" | "h3" | "h4" | "h5" | "h6";
 };
 
 export const ToolTile = (props: HomeTileProps) => {
@@ -24,7 +25,7 @@ export const ToolTile = (props: HomeTileProps) => {
       orientation="vertical"
       title={props.title}
       desc={props.description}
-      titleAs="h3"
+      titleAs={props.level}
       classes={{
         img: fr.cx("fr-mb-0"),
       }}
