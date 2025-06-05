@@ -41,7 +41,7 @@ export const ContributionGenericContent = forwardRef<
           )}
           id="cdt"
         >
-          <p className={fr.cx("fr-h5")} ref={ref}>
+          <p className={fr.cx("fr-h5")} tabIndex={-1} ref={ref}>
             Que dit le code du travail&nbsp;?
           </p>
           {alertText}
