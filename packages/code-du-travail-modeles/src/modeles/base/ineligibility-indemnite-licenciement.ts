@@ -6,7 +6,6 @@ export class IneligibilityLegalIndemniteLicenciement
   getContractIneligibility(
     args: Record<string, string | undefined>
   ): string | undefined {
-    console.log("TOTO");
     if (args.typeContratTravail && args.typeContratTravail === "cdd") {
       return `
         <p>
