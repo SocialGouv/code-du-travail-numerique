@@ -56,7 +56,6 @@ ENV NEXT_PUBLIC_BRANCH_NAME_SLUG=$NEXT_PUBLIC_BRANCH_NAME_SLUG
 ENV GENERATE_SOURCEMAP=true \
     NODE_ENV=production
 
-# hadolint ignore=SC2046
 RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   --mount=type=secret,id=ELASTICSEARCH_TOKEN_API,env=ELASTICSEARCH_TOKEN_API \
   --mount=type=secret,id=ELASTICSEARCH_URL,env=ELASTICSEARCH_URL \
@@ -68,7 +67,6 @@ RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
 # app
 FROM node:$NODE_VERSION
 
-# hadolint ignore=DL3018
 RUN apk --update --no-cache add ca-certificates && apk upgrade
 
 ENV NEXT_PUBLIC_APP_ENV=production
