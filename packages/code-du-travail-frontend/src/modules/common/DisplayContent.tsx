@@ -149,10 +149,23 @@ const mapTbody = (tbody: Element) => {
                       return (
                         <tr key={`tr-${rowIndex}`}>
                           {domToReact(
-                            child.children.map((c) => ({
-                              ...c,
-                              name: "th",
-                            })) as DOMNode[],
+                            child.children.map((c) => {
+                              if (c instanceof Element && c.attribs) {
+                                return {
+                                  ...c,
+                                  name: "th",
+                                  attribs: {
+                                    ...c.attribs,
+                                    scope: "col",
+                                  },
+                                };
+                              } else {
+                                return {
+                                  ...c,
+                                  name: "th",
+                                };
+                              }
+                            }) as DOMNode[],
                             {
                               trim: true,
                             }
