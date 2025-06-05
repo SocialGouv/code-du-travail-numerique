@@ -63,6 +63,9 @@ export const HeaderSearch = ({ onSearchSubmit }: HeaderSearchProps) => {
                   onSearchSubmit(value);
                 }
               }}
+              nativeInputProps={{
+                id: "fr-header-search-input",
+              }}
             />
           </form>
         </div>
