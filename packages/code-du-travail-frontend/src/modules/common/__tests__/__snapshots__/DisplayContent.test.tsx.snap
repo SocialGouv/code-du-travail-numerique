@@ -696,10 +696,12 @@ exports[`DisplayContent Tables should add thead to table if not present and move
                 <th
                   colspan="1"
                   rowspan="1"
+                  scope="col"
                 />
                 <th
                   colspan="1"
                   rowspan="1"
+                  scope="col"
                 >
                   <p>
                     Titre 1
@@ -841,6 +843,7 @@ exports[`DisplayContent Tables should render correctly a table with multiple hea
                   <th
                     colspan="1"
                     rowspan="2"
+                    scope="col"
                   >
                     <p>
                       <strong>
@@ -851,6 +854,7 @@ exports[`DisplayContent Tables should render correctly a table with multiple hea
                   <th
                     colspan="2"
                     rowspan="1"
+                    scope="col"
                   >
                     <p>
                       <strong>
@@ -863,6 +867,7 @@ exports[`DisplayContent Tables should render correctly a table with multiple hea
                   <th
                     colspan="1"
                     rowspan="1"
+                    scope="col"
                   >
                     <p>
                       <strong>
@@ -873,6 +878,7 @@ exports[`DisplayContent Tables should render correctly a table with multiple hea
                   <th
                     colspan="1"
                     rowspan="1"
+                    scope="col"
                   >
                     <p>
                       <strong>
