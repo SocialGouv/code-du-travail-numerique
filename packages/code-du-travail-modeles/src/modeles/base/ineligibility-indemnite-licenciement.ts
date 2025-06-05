@@ -1,15 +1,16 @@
-import type { IInegibility } from "../common/types/ineligibility";
+import type { IIndemniteDepartIneligibility } from "../common/types/ineligibility";
 
-export class IneligibilityLegalIndemniteLicenciement implements IInegibility {
+export class IneligibilityLegalIndemniteLicenciement
+  implements IIndemniteDepartIneligibility
+{
   getContractIneligibility(
     args: Record<string, string | undefined>
   ): string | undefined {
+    console.log("TOTO");
     if (args.typeContratTravail && args.typeContratTravail === "cdd") {
       return `
         <p>
-          L’indemnité de licenciement ne concerne pas les salariés en CDD et en contrat de travail temporaire.
-          Sous certaines conditions, le salarié peut avoir le droit à une 
-          <a href="/outils/indemnite-precarite">indemnité de précarité</a>.
+          L'indemnité de licenciement ne concerne pas les salariés en CDD et en contrat de travail temporaire.
         </p>
       `;
     } else if (

@@ -1,4 +1,4 @@
-import { ExplanationBuilder } from "../ExplanationBuilder";
+import { ExplanationBuilder } from "../../common/ExplanationBuilder";
 import { ExplanationBuilderRuptureCo } from "../ExplanationBuilderRuptureCo";
 
 describe("Explanations", () => {

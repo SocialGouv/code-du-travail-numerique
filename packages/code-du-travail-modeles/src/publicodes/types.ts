@@ -14,9 +14,10 @@ import type {
   References,
   SupportedCc,
 } from "../modeles";
-import type { IInegibility } from "../modeles/common/types/ineligibility";
+import type { IIneligibility } from "../modeles/common/types/ineligibility";
 import type {
   IndemniteLicenciementPublicodes,
+  PreavisDemissionPublicodes,
   PreavisRetraitePublicodes,
   RuptureConventionnellePublicodes,
 } from ".";
@@ -137,6 +138,10 @@ export enum PublicodesSimulator {
   INDEMNITE_LICENCIEMENT = "INDEMNITE_LICENCIEMENT",
   PREAVIS_RETRAITE = "PREAVIS_RETRAITE",
   RUPTURE_CONVENTIONNELLE = "RUPTURE_CONVENTIONNELLE",
+  PREAVIS_LICENCIEMENT = "PREAVIS_LICENCIEMENT",
+  PREAVIS_DEMISSION = "PREAVIS_DEMISSION",
+  HEURES_RECHERCHE_EMPLOI = "HEURES_RECHERCHE_EMPLOI",
+  INDEMNITE_PRECARITE = "INDEMNITE_PRECARITE",
 }
 
 export const PublicodesDefaultRules = {
@@ -146,6 +151,12 @@ export const PublicodesDefaultRules = {
     "contrat salarié . préavis de retraite en jours",
   [PublicodesSimulator.RUPTURE_CONVENTIONNELLE]:
     "contrat salarié . indemnité de licenciement . résultat légal",
+  [PublicodesSimulator.PREAVIS_LICENCIEMENT]:
+    "contrat salarié . résultat légal",
+  [PublicodesSimulator.PREAVIS_DEMISSION]: "contrat salarié . résultat légal",
+  [PublicodesSimulator.HEURES_RECHERCHE_EMPLOI]:
+    "contrat salarié . résultat légal",
+  [PublicodesSimulator.INDEMNITE_PRECARITE]: "contrat salarié . résultat légal",
 };
 
 export enum PublicodesConvertedUnit {
@@ -163,6 +174,16 @@ export type PublicodesPreavisRetraiteResult = {
   valueInDays: number;
 };
 
+export type PublicodesPreavisLicenciementResult = {
+  value: Evaluation<number>;
+  unit?: Unit;
+};
+
+export type PublicodesPreavisDemissionResult = {
+  value: Evaluation<number>;
+  unit?: Unit;
+};
+
 export type PublicodesIndemniteLicenciementResult = {
   value: Evaluation<number>;
   unit?: Unit;
@@ -176,10 +197,12 @@ export type PublicodesInstance<T extends PublicodesSimulator> =
       ? IndemniteLicenciementPublicodes
       : T extends PublicodesSimulator.RUPTURE_CONVENTIONNELLE
         ? RuptureConventionnellePublicodes
-        : never;
+        : T extends PublicodesSimulator.PREAVIS_DEMISSION
+          ? PreavisDemissionPublicodes
+          : never;
 
 export interface IndemniteDepartInstance {
-  ineligibility: IInegibility;
+  ineligibility: IIneligibility;
 
   seniority: ISeniority<SupportedCc>;
 

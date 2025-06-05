@@ -30,5 +30,4 @@ export const ui = {
   activeStep: byTitle("onglet actif"),
   warning: byText("Attention"),
   print: byText("Imprimer le résultat"),
-  viewResultDetail: byText("Voir le détail du calcul"),
 };

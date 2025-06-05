@@ -1,15 +1,15 @@
-import type { IInegibility } from "../common/types/ineligibility";
+import type { IIndemniteDepartIneligibility } from "../common/types/ineligibility";
 
-export class IneligibilityRuptureConventionnelle implements IInegibility {
+export class IneligibilityRuptureConventionnelle
+  implements IIndemniteDepartIneligibility
+{
   getContractIneligibility(
     args: Record<string, string | undefined>
   ): string | undefined {
     if (args.typeContratTravail && args.typeContratTravail === "cdd") {
       return `
         <p>
-          La rupture conventionnelle ne concerne pas les salariés en CDD ou en contrat d'intérim. 
-          Sous certaines conditions, le salarié peut avoir le droit à une 
-          <a href="/outils/indemnite-precarite">indemnité de précarité</a>.
+          La rupture conventionnelle ne concerne pas les salariés en CDD ou en contrat d'intérim.
         </p>
       `;
     }

@@ -33,7 +33,6 @@ function CurrencyField({
               <StyledWrapperInput>
                 <Input
                   id={`currency-${id}`}
-                  data-testId={`currency`}
                   {...inputProps}
                   {...input}
                   type="number"
