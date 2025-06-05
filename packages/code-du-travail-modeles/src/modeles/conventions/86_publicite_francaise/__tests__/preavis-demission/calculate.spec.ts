@@ -1,4 +1,4 @@
-import { PreavisDemissionPublicodes } from "../../../../../publicodes/PreavisDemission";
+import { PreavisDemissionPublicodes } from "../../../../../publicodes";
 
 const engine = new PreavisDemissionPublicodes(modelsPreavisDemission, "86");
 

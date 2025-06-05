@@ -7,11 +7,8 @@ import Engine from "publicodes";
 import { extractSupportedCc } from "./extractSupportedCc";
 import {
   mergeCommonModels,
-  mergeHeuresRechercheEmploiModels,
   mergeIndemniteLicenciementModels,
-  mergeIndemnitePrecariteModels,
   mergePreavisDemissionModels,
-  mergePreavisLicenciementModels,
   mergePreavisRetraiteModels,
   mergeRuptureConventionnelle,
 } from "./merger";
@@ -71,14 +68,6 @@ writeJsonModel({
   outputName: "modeles-preavis-retraite",
 });
 writeJsonModel({
-  merger: mergePreavisLicenciementModels,
-  outputName: "modeles-preavis-licenciement",
-});
-writeJsonModel({
-  merger: mergePreavisDemissionModels,
-  outputName: "modeles-preavis-demission",
-});
-writeJsonModel({
   merger: () => mergeIndemniteLicenciementModels(),
   outputName: "modeles-indemnite-licenciement",
 });
@@ -87,10 +76,6 @@ writeJsonModel({
   outputName: "modeles-rupture-conventionnelle",
 });
 writeJsonModel({
-  merger: mergeHeuresRechercheEmploiModels,
-  outputName: "modeles-heures-recherche-emploi",
-});
-writeJsonModel({
-  merger: () => mergeIndemnitePrecariteModels(),
-  outputName: "modeles-indemnite-precarite",
+  merger: mergePreavisDemissionModels,
+  outputName: "modeles-preavis-demission",
 });
