@@ -35,6 +35,7 @@ export const ToolsList = ({ tools }: ToolsListProps) => {
               description={description ?? metaDescription}
               iconName={icon}
               link={url}
+              level="h2"
             />
           </div>
         ))}

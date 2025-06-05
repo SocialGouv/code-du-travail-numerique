@@ -38,7 +38,7 @@ export const Tools = (props: Props) => {
             "fr-col-lg-3"
           )}
         >
-          <ToolTile {...item} />
+          <ToolTile {...item} level="h3" />
         </div>
       ))}
     </SectionContainer>
