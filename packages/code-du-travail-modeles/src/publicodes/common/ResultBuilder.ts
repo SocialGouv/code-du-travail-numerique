@@ -1,12 +1,11 @@
 import type { Formula, References } from "../../modeles";
 import type {
   ChosenResult,
-  PublicodesIndemniteLicenciementResult,
   PublicodesOutput,
   SituationElement,
 } from "../types";
 import type { ExplanationBuilder } from "./ExplanationBuilder";
-import type { IndemniteDepartResult } from "./types";
+import { BuilderResult, PublicodesCalculateResult } from "./type";
 
 export class ResultBuilder {
   private readonly explanationBuilder: ExplanationBuilder;
@@ -17,9 +16,9 @@ export class ResultBuilder {
 
   buildResult(
     situation: SituationElement[],
-    legalResult?: IndemniteDepartResult<PublicodesIndemniteLicenciementResult>,
-    agreementResult?: IndemniteDepartResult<PublicodesIndemniteLicenciementResult>
-  ): PublicodesOutput<PublicodesIndemniteLicenciementResult> {
+    legalResult?: BuilderResult<PublicodesCalculateResult>,
+    agreementResult?: BuilderResult<PublicodesCalculateResult>
+  ): PublicodesOutput<PublicodesCalculateResult> {
     const { chosenResult, result, formula, references } = this.chosenResult(
       legalResult,
       agreementResult
@@ -48,11 +47,11 @@ export class ResultBuilder {
   }
 
   private chosenResult(
-    legalResult?: IndemniteDepartResult<PublicodesIndemniteLicenciementResult>,
-    agreementResult?: IndemniteDepartResult<PublicodesIndemniteLicenciementResult>
+    legalResult?: BuilderResult<PublicodesCalculateResult>,
+    agreementResult?: BuilderResult<PublicodesCalculateResult>
   ): {
     chosenResult: ChosenResult;
-    result: PublicodesIndemniteLicenciementResult;
+    result: PublicodesCalculateResult;
     formula: Formula;
     references: References[];
   } {
