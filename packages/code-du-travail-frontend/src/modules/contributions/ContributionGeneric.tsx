@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useContributionTracking } from "./tracking";
 import { isAgreementSupported, isAgreementValid } from "./contributionUtils";
 import { ContributionGenericContent } from "./ContributionGenericContent";
@@ -29,6 +29,13 @@ export function ContributionGeneric({ contribution }: Props) {
     emitDisplayGenericContent,
     emitClickP3,
   } = useContributionTracking();
+  const genericTitleRef = useRef<HTMLDivElement>(null);
+
+  const scrollToTitle = () => {
+    setTimeout(() => {
+      genericTitleRef?.current?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
 
   return (
     <>
@@ -45,14 +52,11 @@ export function ContributionGeneric({ contribution }: Props) {
             emitAgreementUntreatedEvent(agreement.num);
           }
         }}
-        onDisplayClick={(ev) => {
+        onDisplayClick={(isAgreementSelected) => {
           setDisplayGeneric(!displayGeneric);
-          if (
-            !isAgreementValid(contribution, selectedAgreement) ||
-            !selectedAgreement
-          ) {
-            ev.preventDefault();
+          if (!isAgreementSelected) {
             setDisplayGeneric(true);
+            scrollToTitle();
             if (selectedAgreement) {
               emitDisplayGeneralContent(getTitle());
             } else {
@@ -82,6 +86,7 @@ export function ContributionGeneric({ contribution }: Props) {
             </Button>
           )}
           <ContributionGenericContent
+            ref={genericTitleRef}
             contribution={contribution}
             relatedItems={relatedItems}
             displayGeneric={displayGeneric}

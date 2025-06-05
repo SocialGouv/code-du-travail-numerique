@@ -1,5 +1,5 @@
 "use client";
-import React, { ReactNode, useEffect, useRef } from "react";
+import React, { forwardRef, ReactNode } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Share } from "../common/Share";
 import { ContributionContent } from "./ContributionContent";
@@ -21,25 +21,12 @@ type Props = {
   displayGeneric: boolean;
 };
 
-export function ContributionGenericContent({
-  contribution,
-  alertText,
-  relatedItems,
-  displayGeneric,
-}: Props) {
+export const ContributionGenericContent = forwardRef<
+  HTMLParagraphElement,
+  Props
+>(({ contribution, alertText, relatedItems, displayGeneric }, ref) => {
   const { title, metas } = contribution;
-  const titleRef = useRef<HTMLDivElement>(null);
-  const scrollToTitle = () => {
-    setTimeout(() => {
-      titleRef?.current?.scrollIntoView({ behavior: "smooth" });
-    }, 100);
-  };
 
-  useEffect(() => {
-    if (displayGeneric) {
-      scrollToTitle();
-    }
-  }, [displayGeneric]);
   return (
     <>
       <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-px-3v")}>
@@ -54,7 +41,7 @@ export function ContributionGenericContent({
           )}
           id="cdt"
         >
-          <p className={fr.cx("fr-h5")} ref={titleRef}>
+          <p className={fr.cx("fr-h5")} ref={ref}>
             Que dit le code du travail&nbsp;?
           </p>
           {alertText}
@@ -94,4 +81,6 @@ export function ContributionGenericContent({
       </div>
     </>
   );
-}
+});
+
+ContributionGenericContent.displayName = "ContributionGenericContent";
