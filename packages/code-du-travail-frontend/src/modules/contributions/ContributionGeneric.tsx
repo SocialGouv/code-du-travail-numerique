@@ -34,6 +34,7 @@ export function ContributionGeneric({ contribution }: Props) {
   const scrollToTitle = () => {
     setTimeout(() => {
       genericTitleRef?.current?.scrollIntoView({ behavior: "smooth" });
+      genericTitleRef?.current?.focus();
     }, 100);
   };
 
@@ -78,6 +79,7 @@ export function ContributionGeneric({ contribution }: Props) {
               priority="tertiary no outline"
               onClick={() => {
                 setDisplayGeneric(true);
+                scrollToTitle();
                 emitClickP3(getTitle());
               }}
             >
