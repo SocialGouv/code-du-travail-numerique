@@ -106,7 +106,7 @@ export const LocationSearchInput = (props: Props) => {
             data-testid="agreement-postal-code-search-input"
             placeholder="Ex : 31000 ou Toulouse"
             disabled={props.isDisabled}
-            type="search"
+            type="text"
           />
 
           <StyledList {...getMenuProps()}>
