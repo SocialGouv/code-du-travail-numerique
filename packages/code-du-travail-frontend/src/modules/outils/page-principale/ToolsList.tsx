@@ -19,26 +19,37 @@ export const ToolsList = ({ tools }: ToolsListProps) => {
       <div
         className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mb-12w")}
       >
-        {tools.map(({ id, description, metaDescription, icon, title, url }) => (
-          <div
-            key={id}
-            className={fr.cx(
-              "fr-col-12",
-              "fr-col-sm-6",
-              "fr-col-md-4",
-              "fr-col-lg-3",
-              "fr-mb-3w"
-            )}
-          >
-            <ToolTile
-              title={title}
-              description={description ?? metaDescription}
-              iconName={icon}
-              link={url}
-              level="h2"
-            />
-          </div>
-        ))}
+        {tools.map(
+          ({
+            id,
+            description,
+            metaDescription,
+            icon,
+            title,
+            url,
+            isExternal,
+          }) => (
+            <div
+              key={id}
+              className={fr.cx(
+                "fr-col-12",
+                "fr-col-sm-6",
+                "fr-col-md-4",
+                "fr-col-lg-3",
+                "fr-mb-3w"
+              )}
+            >
+              <ToolTile
+                title={title}
+                description={description ?? metaDescription}
+                iconName={icon}
+                link={url}
+                isExternal={isExternal}
+                level="h2"
+              />
+            </div>
+          )
+        )}
       </div>
     </ContainerWithBreadcrumbs>
   );
