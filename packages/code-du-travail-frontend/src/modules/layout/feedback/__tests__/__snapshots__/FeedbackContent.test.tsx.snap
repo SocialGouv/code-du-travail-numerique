@@ -4,9 +4,15 @@ exports[`<FeedbackContent /> should match snapshot for negative 1`] = `
 <div>
   <h2
     class="fr-h5"
+    tabindex="-1"
   >
     Merci pour votre réponse.
   </h2>
+  <p
+    class="fr-text--sm"
+  >
+    Choisissez une réponse ou faites une suggestion pour valider
+  </p>
   <fieldset
     aria-labelledby="fr-fieldset-checkbox-:r2:-legend fr-fieldset-checkbox-:r2:-messages"
     class="fr-fieldset"
@@ -137,6 +143,7 @@ exports[`<FeedbackContent /> should match snapshot for positive 1`] = `
 <div>
   <h2
     class="fr-h5"
+    tabindex="-1"
   >
     Merci pour votre réponse.
   </h2>
