@@ -2,7 +2,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { ReactNode, useState } from "react";
+import { createElement, ReactNode, useState } from "react";
 
 import { Autocomplete } from "../../common/Autocomplete";
 import { searchAgreement } from "../search";
@@ -17,6 +17,7 @@ type Props = {
   ) => NonNullable<ReactNode> | undefined;
   defaultAgreement?: Agreement;
   trackingActionName: string;
+  level?: 2 | 3;
 };
 
 export const AgreementSearchInput = ({
@@ -25,6 +26,7 @@ export const AgreementSearchInput = ({
   selectedAgreementAlert,
   defaultAgreement,
   trackingActionName,
+  level,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState(defaultAgreement);
   const [searchState, setSearchState] = useState<
@@ -64,9 +66,13 @@ export const AgreementSearchInput = ({
   };
   return (
     <>
-      <h2 className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
-        Précisez et sélectionnez votre convention collective
-      </h2>
+      {createElement(
+        `h${level ?? 2}`,
+        {
+          className: fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0"),
+        },
+        "Précisez et sélectionnez votre convention collective"
+      )}
       <div className={fr.cx("fr-mt-2w")}>
         <div className={fr.cx("fr-col-12")}>
           <Autocomplete<Agreement>
@@ -120,7 +126,7 @@ export const AgreementSearchInput = ({
         {searchState === "notFoundSearch" && (
           <Alert
             className={fr.cx("fr-mt-2w")}
-            as="h2"
+            as={`h${(level ?? 2) + 1}` as "h3" | "h4"}
             title="Vous ne trouvez pas votre convention collective&nbsp;?"
             description={
               <>
