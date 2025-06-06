@@ -17,6 +17,7 @@ type Props = {
   ) => NonNullable<ReactNode> | undefined;
   defaultAgreement?: Agreement;
   trackingActionName: string;
+  level?: 2 | 3;
 };
 
 export const AgreementSearchForm = ({
@@ -24,6 +25,7 @@ export const AgreementSearchForm = ({
   selectedAgreementAlert,
   defaultAgreement,
   trackingActionName,
+  level,
 }: Props) => {
   const [selectedRoute, setSelectedRoute] = useState<
     AgreementRoute | undefined
@@ -81,6 +83,7 @@ export const AgreementSearchForm = ({
           selectedAgreementAlert={selectedAgreementAlert}
           defaultAgreement={defaultAgreement}
           trackingActionName={trackingActionName}
+          level={level}
         />
       )}
       {selectedRoute === "enterprise" && (
@@ -103,6 +106,7 @@ export const AgreementSearchForm = ({
           }}
           selectedAgreementAlert={selectedAgreementAlert}
           trackingActionName={trackingActionName}
+          level={level}
         />
       )}
     </>

@@ -86,7 +86,7 @@ export function ContributionGenericAgreementSearch({
           alt=""
           className={fr.cx("fr-unhidden-md", "fr-hidden")}
         />
-        <p className={fr.cx("fr-h3", "fr-mt-1w")}>
+        <p className={fr.cx("fr-h3", "fr-mt-1w")} role="heading" aria-level={2}>
           Personnalisez la réponse avec votre convention collective
         </p>
       </div>
@@ -96,6 +96,7 @@ export function ContributionGenericAgreementSearch({
           selectedAgreementAlert={selectedAgreementAlert}
           defaultAgreement={selectedAgreement}
           trackingActionName={trackingActionName}
+          level={3}
         />
         {((contribution.isNoCDT && isValid) || !contribution.isNoCDT) && (
           <Button

@@ -41,11 +41,17 @@ export const ContributionGenericContent = forwardRef<
           )}
           id="cdt"
         >
-          <p className={fr.cx("fr-h5")} tabIndex={-1} ref={ref}>
+          <p
+            className={fr.cx("fr-h5")}
+            tabIndex={-1}
+            ref={ref}
+            role="heading"
+            aria-level={2}
+          >
             Que dit le code du travail&nbsp;?
           </p>
           {alertText}
-          <ContributionContent contribution={contribution} titleLevel={2} />
+          <ContributionContent contribution={contribution} titleLevel={3} />
           {contribution.references.length > 0 && (
             <Accordion label="Références" className={fr.cx("fr-mt-6w")}>
               <ListWithArrow
