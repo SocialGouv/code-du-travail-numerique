@@ -7,26 +7,27 @@ export const HeaderBrand = () => {
     <div className={fr.cx("fr-header__brand", "fr-enlarge-link")}>
       <div className={fr.cx("fr-header__brand-top")}>
         <div className={fr.cx("fr-header__logo")}>
+          <p className={fr.cx("fr-logo")}>
+            RÉPUBLIQUE
+            <br />
+            FRANÇAISE
+          </p>
+          <p className={fr.cx("fr-sr-only")}>Liberté égalité fraternité</p>
+        </div>
+        <div className={fr.cx("fr-header__operator")}>
           <a
             title="Accueil - Code du travail numérique, Ministère du Travail"
             href="/"
           >
-            <p className={fr.cx("fr-logo")}>
-              RÉPUBLIQUE
-              <br />
-              FRANÇAISE
-            </p>
+            <Image
+              className={`${fr.cx("fr-responsive-img")} ${Logo}`}
+              src="/static/assets/img/logo.svg"
+              alt=""
+              width={145}
+              height={50}
+              priority
+            />
           </a>
-        </div>
-        <div className={fr.cx("fr-header__operator")}>
-          <Image
-            className={`${fr.cx("fr-responsive-img")} ${Logo}`}
-            src="/static/assets/img/logo.svg"
-            alt="Code du travail numérique"
-            width={145}
-            height={50}
-            priority
-          />
         </div>
         <div className={fr.cx("fr-header__navbar")}>
           <button

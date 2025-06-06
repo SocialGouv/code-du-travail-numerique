@@ -6,7 +6,7 @@ import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { Card } from "@codegouvfr/react-dsfr/Card";
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { createElement, ReactNode, useEffect, useRef, useState } from "react";
 import { css } from "@styled-system/css";
 
 import Spinner from "../../common/Spinner.svg";
@@ -33,6 +33,7 @@ type Props = {
   enterprise?: Enterprise;
   agreement?: Agreement;
   trackingActionName: string;
+  level?: 2 | 3;
 };
 
 export const EnterpriseAgreementSearchInput = ({
@@ -44,6 +45,7 @@ export const EnterpriseAgreementSearchInput = ({
   trackingActionName,
   enterprise,
   agreement,
+  level,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState<
     Agreement | undefined
@@ -252,7 +254,13 @@ export const EnterpriseAgreementSearchInput = ({
   }
   return (
     <>
-      <h2 className={fr.cx("fr-h4", "fr-my-2w")}>Précisez votre entreprise</h2>
+      {createElement(
+        `h${level ?? 2}`,
+        {
+          className: fr.cx("fr-h4", "fr-my-2w"),
+        },
+        "Précisez votre entreprise"
+      )}
       <form
         className={fr.cx(
           "fr-grid-row",
@@ -354,7 +362,7 @@ export const EnterpriseAgreementSearchInput = ({
           {searchState === "notFoundSearch" && (
             <Alert
               title="Vous ne trouvez pas votre entreprise&nbsp;?"
-              as="h2"
+              as={`h${(level ?? 2) + 1}` as "h3" | "h4"}
               description={
                 <>
                   <p>Il peut y avoir plusieurs explications à cela&nbsp;:</p>
@@ -431,7 +439,7 @@ export const EnterpriseAgreementSearchInput = ({
       <div>
         <div
           role="heading"
-          aria-level={2}
+          aria-level={level ?? 2}
           className={fr.cx(
             "fr-text--bold",
             !loading ? "fr-mt-5w" : "fr-mt-2w",
@@ -444,6 +452,7 @@ export const EnterpriseAgreementSearchInput = ({
         <Card
           border
           enlargeLink
+          titleAs={`h${(level ?? 2) + 1}` as "h3" | "h4"}
           linkProps={
             !onAgreementSelect
               ? {

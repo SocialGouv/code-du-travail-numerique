@@ -20,9 +20,13 @@ jest.mock("uuid", () => ({
   v4: jest.fn(() => ""),
 }));
 
+const pushMock = jest.fn();
 jest.mock("next/navigation", () => ({
   redirect: jest.fn(),
   usePathname: jest.fn(),
+  useRouter: () => ({
+    push: pushMock,
+  }),
 }));
 
 jest.mock("../../convention-collective/search", () => ({
@@ -36,6 +40,7 @@ describe("<ContributionGeneric />", () => {
   beforeEach(() => {
     const ma = sendEvent as jest.MockedFunction<typeof sendEvent>;
     ma.mockReset();
+    pushMock.mockClear();
   });
   const contribution = {
     date: "05/12/2023",
@@ -131,10 +136,6 @@ describe("<ContributionGeneric />", () => {
         },
       ],
     ]);
-    expect(ui.generic.buttonDisplayInfo.get()).toHaveAttribute(
-      "href",
-      "/contribution/1388-my-contrib"
-    );
     fireEvent.click(ui.generic.buttonDisplayInfo.get());
     expect(sendEvent).toHaveBeenCalledTimes(5);
     expect(sendEvent).toHaveBeenLastCalledWith({

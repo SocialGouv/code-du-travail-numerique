@@ -30,7 +30,7 @@ describe("ToolsList", () => {
     expect(getByRole("heading", { level: 1 })).toHaveTextContent("Simulateurs");
 
     // Vérifier que les simulateurs CDTN sont rendus
-    const toolTiles = getAllByRole("heading", { level: 3 });
+    const toolTiles = getAllByRole("heading", { level: 2 });
     expect(toolTiles.length).toBe(2);
 
     // Vérifier les titres des simulateurs

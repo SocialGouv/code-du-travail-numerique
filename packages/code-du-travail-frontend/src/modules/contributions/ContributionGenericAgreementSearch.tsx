@@ -4,6 +4,7 @@ import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
 import AgreementSearch from "../convention-collective/AgreementSearch.svg";
+import { useRouter } from "next/navigation";
 
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import {
@@ -18,7 +19,7 @@ import { AgreementSearchForm } from "../convention-collective/AgreementSearch/Ag
 
 type Props = {
   onAgreementSelect: (agreement?: Agreement) => void;
-  onDisplayClick: (ev: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
+  onDisplayClick: (isAgreementSelected: boolean) => void;
   contribution: Contribution;
   selectedAgreement?: Agreement;
   trackingActionName: string;
@@ -31,6 +32,7 @@ export function ContributionGenericAgreementSearch({
   selectedAgreement,
   trackingActionName,
 }: Props) {
+  const router = useRouter();
   const { slug } = contribution;
   const [isValid, setIsValid] = useState(false);
   useEffect(() => {
@@ -84,7 +86,7 @@ export function ContributionGenericAgreementSearch({
           alt=""
           className={fr.cx("fr-unhidden-md", "fr-hidden")}
         />
-        <p className={fr.cx("fr-h3", "fr-mt-1w")}>
+        <p className={fr.cx("fr-h3", "fr-mt-1w")} role="heading" aria-level={2}>
           Personnalisez la réponse avec votre convention collective
         </p>
       </div>
@@ -94,16 +96,19 @@ export function ContributionGenericAgreementSearch({
           selectedAgreementAlert={selectedAgreementAlert}
           defaultAgreement={selectedAgreement}
           trackingActionName={trackingActionName}
+          level={3}
         />
         {((contribution.isNoCDT && isValid) || !contribution.isNoCDT) && (
           <Button
             className={fr.cx("fr-mt-2w")}
-            linkProps={{
-              href:
-                isValid && selectedAgreement
-                  ? `/contribution/${selectedAgreement?.num}-${slug}`
-                  : "",
-              onClick: onDisplayClick,
+            type="button"
+            onClick={(event) => {
+              onDisplayClick(isValid && !!selectedAgreement);
+              if (isValid && selectedAgreement) {
+                router.push(`/contribution/${selectedAgreement?.num}-${slug}`);
+              } else {
+                event.preventDefault();
+              }
             }}
           >
             Afficher les informations
