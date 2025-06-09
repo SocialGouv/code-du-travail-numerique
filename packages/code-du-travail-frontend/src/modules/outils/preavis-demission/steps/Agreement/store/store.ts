@@ -13,6 +13,7 @@ import {
   AgreementSearchValue,
 } from "./types";
 import { loadPublicodes } from "src/modules/outils/common/publicodes";
+import { InformationsStoreSlice } from "../../Informations/store";
 
 const initialState: Omit<AgreementStoreData, "publicodes"> = {
   input: {
@@ -25,7 +26,8 @@ const initialState: Omit<AgreementStoreData, "publicodes"> = {
 };
 
 const createAgreementStore: StoreSliceWrapperPreavisDemission<
-  AgreementStoreSlice
+  AgreementStoreSlice,
+  InformationsStoreSlice
 > = (set, get) => ({
   agreementData: {
     ...initialState,
@@ -45,6 +47,8 @@ const createAgreementStore: StoreSliceWrapperPreavisDemission<
           state.agreementData.isStepValid = false;
         })
       );
+
+      // Plus besoin de gérer "not-selected" car cette option n'est plus disponible
     },
     onInitAgreementPage: () => {
       set(
@@ -66,6 +70,31 @@ const createAgreementStore: StoreSliceWrapperPreavisDemission<
           state.agreementData.isStepValid = !!agreement;
         })
       );
+
+      // Recharger l'instance publicodes avec la nouvelle convention collective
+      const idcc = agreement?.num?.toString();
+      if (idcc) {
+        set(
+          produce((state: AgreementStoreSlice) => {
+            state.agreementData.publicodes =
+              loadPublicodes<PublicodesSimulator.PREAVIS_DEMISSION>(
+                PublicodesSimulator.PREAVIS_DEMISSION,
+                idcc
+              );
+          })
+        );
+      } else {
+        set(
+          produce((state: AgreementStoreSlice) => {
+            state.agreementData.publicodes =
+              loadPublicodes<PublicodesSimulator.PREAVIS_DEMISSION>(
+                PublicodesSimulator.PREAVIS_DEMISSION
+              );
+          })
+        );
+      }
+      // Générer les questions publicodes après changement de convention
+      get().informationsFunction.generatePublicodesQuestions();
     },
     onNextStep: (): ValidationResponse => {
       const { agreement } = get().agreementData.input;

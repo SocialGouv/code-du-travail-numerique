@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { PreavisDemissionContext, usePreavisDemissionStore } from "../store";
-import { CommonAgreementStep } from "src/modules/outils/indemnite-depart/steps/Agreement/components/AgreementStep";
+import { PreavisDemissionAgreementStep } from "./components/PreavisDemissionAgreementStep";
 
 const StepAgreement = (): JSX.Element => {
   const store = useContext(PreavisDemissionContext);
@@ -23,7 +23,7 @@ const StepAgreement = (): JSX.Element => {
   }));
 
   return (
-    <CommonAgreementStep
+    <PreavisDemissionAgreementStep
       agreement={agreement}
       enterprise={enterprise}
       error={error}

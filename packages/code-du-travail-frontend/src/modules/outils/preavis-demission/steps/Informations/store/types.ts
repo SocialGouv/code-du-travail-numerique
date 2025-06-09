@@ -10,14 +10,12 @@ export type InformationsStoreInput = {
   publicodesInformations: Array<PublicodesInformation>;
   hasNoMissingQuestions: boolean;
   informationError: boolean;
-  seniority?: string;
 };
 
 export type InformationsStoreError = {
   errorInformations: Record<string, string>;
   errorPublicodes?: string;
   errorNote?: string;
-  errorSeniority?: string;
 };
 
 export type InformationsStoreData = {
@@ -35,7 +33,6 @@ export type InformationsStoreFn = {
   ) => void;
   generatePublicodesQuestions: () => boolean;
   onNextStep: () => ValidationResponse;
-  onSeniorityChange: (seniority: string) => void;
 };
 
 export type InformationsStoreSlice = {

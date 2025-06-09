@@ -31,7 +31,6 @@ const createResultStore: StoreSliceWrapperPreavisDemission<
       const state = get();
       const agreement = state.agreementData.input.agreement;
       const publicodes = state.agreementData.publicodes;
-      const seniority = state.informationsData.input.seniority;
 
       const isAgreementSupported = !!supportedCcn.find(
         ({ idcc }) => idcc === agreement?.num
@@ -42,24 +41,12 @@ const createResultStore: StoreSliceWrapperPreavisDemission<
         return;
       }
 
-      if (!seniority) {
-        console.warn("Seniority is not defined");
-        set(
-          produce((state: ResultStoreSlice) => {
-            state.resultData.error.errorPublicodes = true;
-          })
-        );
-        return;
-      }
-
       let errorPublicodes: boolean = false;
       let result: PublicodesPreavisDemissionResult | undefined;
       let resultNotifications: Notification[] | undefined;
       let resultReferences: References[] | undefined;
 
-      // Utilisation de la fonction utilitaire pour créer la situation
       const situation = mapToPublicodesSituationForCalculationPreavisDemission(
-        seniority,
         agreement?.num
       );
 
@@ -70,8 +57,7 @@ const createResultStore: StoreSliceWrapperPreavisDemission<
         resultReferences = publicodes.getReferences();
       } catch (e) {
         errorPublicodes = true;
-        console.error(`La situation est ${JSON.stringify(situation)}`);
-        console.error(`L'erreur remontée est : ${JSON.stringify(e)}`);
+
         Sentry.captureException(e);
       }
 
