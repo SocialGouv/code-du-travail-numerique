@@ -31,8 +31,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle":
-          "'Noncadres'",
-        "contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle Noncadres . ancienneté":
+          "'Non-cadres'",
+        "contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle Non-cadres . ancienneté":
           "'Moins de 6 mois'",
       },
     },
@@ -47,8 +47,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle":
-          "'Noncadres'",
-        "contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle Noncadres . ancienneté":
+          "'Non-cadres'",
+        "contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle Non-cadres . ancienneté":
           "'6 mois et plus'",
       },
     },

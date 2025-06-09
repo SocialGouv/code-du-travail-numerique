@@ -30,7 +30,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . pharmacie . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
       },
     },
   ])(

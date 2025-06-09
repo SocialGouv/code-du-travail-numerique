@@ -76,6 +76,6 @@ writeJsonModel({
   outputName: "modeles-rupture-conventionnelle",
 });
 writeJsonModel({
-  merger: mergePreavisDemissionModels,
+  merger: mergePreavisDemissionModels(),
   outputName: "modeles-preavis-demission",
 });
