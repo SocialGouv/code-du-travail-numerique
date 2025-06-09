@@ -9,7 +9,7 @@ export class IneligibilityLegalIndemniteLicenciement
     if (args.typeContratTravail && args.typeContratTravail === "cdd") {
       return `
         <p>
-          L'indemnité de licenciement ne concerne pas les salariés en CDD et en contrat de travail temporaire.
+          L’indemnité de licenciement ne concerne pas les salariés en CDD et en contrat de travail temporaire.
         </p>
       `;
     } else if (
