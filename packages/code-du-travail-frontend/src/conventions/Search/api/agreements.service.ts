@@ -25,7 +25,7 @@ const formatCCn = ({
   contributions,
 });
 export const onlyNumberError =
-  "Numéro d’indentification (IDCC) incorrect. Ce numéro est composé de 4 chiffres uniquement.";
+  "Numéro d’identification (IDCC) incorrect. Ce numéro est composé de 4 chiffres uniquement.";
 
 const apiIdcc = function createFetcher(query) {
   if (/^\d{4}[A-Za-z]$/.test(query.replace(/\W/g, ""))) {
