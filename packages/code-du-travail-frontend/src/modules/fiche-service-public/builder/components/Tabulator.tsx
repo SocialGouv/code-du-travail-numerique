@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { filterOutTitle, getTitleInChildren } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
