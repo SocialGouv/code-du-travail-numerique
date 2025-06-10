@@ -1,6 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import React from "react";
 import { Widget } from "./types";
+import { css } from "@styled-system/css";
 
 interface IntegrationTrackingProps {
   messages: NonNullable<Widget["messages"]>;
@@ -18,7 +19,7 @@ export const IntegrationTracking = ({
         Il est possible d&apos;effectuer du tracking sur nos liens et boutons en
         interceptant les messages envoyés par le widget avec le code qui suit :
       </p>
-      <pre className={fr.cx("fr-alert")}>
+      <pre className={`${fr.cx("fr-alert")} ${preWrap}`}>
         {`window.addEventListener(
           "message",
           ({ data, source }) => {
@@ -54,3 +55,8 @@ export const IntegrationTracking = ({
     </div>
   );
 };
+
+const preWrap = css({
+  whiteSpace: "pre-wrap",
+  wordBreak: "break-word",
+});

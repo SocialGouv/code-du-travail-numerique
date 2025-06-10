@@ -1,5 +1,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import React from "react";
+import { css } from "@styled-system/css";
 
 interface IntegrationInstructionsProps {
   parsedUrl: string;
@@ -25,7 +26,7 @@ export const IntegrationInstructions = ({
             Ajoutez le code suivant dans la balise <code>&lt;body&gt;</code> de
             votre page&nbsp;:
           </p>
-          <pre className={fr.cx("fr-alert")}>
+          <pre className={`${fr.cx("fr-alert")} ${preWrap}`}>
             {`<script src="https://code.travail.gouv.fr/widget.js" defer></script>`}
           </pre>
         </li>
@@ -34,7 +35,7 @@ export const IntegrationInstructions = ({
             Intégrez le code suivant à l&apos;endroit où vous souhaitez voir le
             module s&apos;afficher&nbsp;:
           </p>
-          <pre className={fr.cx("fr-alert")}>
+          <pre className={`${fr.cx("fr-alert")} ${preWrap}`}>
             {`<a href="https://code.travail.gouv.fr${parsedUrl}">${shortTitle}</a>`}
           </pre>
         </li>
@@ -42,3 +43,8 @@ export const IntegrationInstructions = ({
     </div>
   );
 };
+
+const preWrap = css({
+  whiteSpace: "pre-wrap",
+  wordBreak: "break-word",
+});
