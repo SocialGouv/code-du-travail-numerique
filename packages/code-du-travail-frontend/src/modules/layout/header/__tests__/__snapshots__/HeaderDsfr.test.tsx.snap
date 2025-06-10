@@ -129,7 +129,7 @@ exports[`<Header /> should match snapshot 1`] = `
                           id="downshift-0-input"
                           placeholder="Rechercher sur le site"
                           role="combobox"
-                          type="search"
+                          type="text"
                           value=""
                         />
                         <div
