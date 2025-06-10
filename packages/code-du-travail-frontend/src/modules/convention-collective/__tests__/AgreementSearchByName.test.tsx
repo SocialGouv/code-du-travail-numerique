@@ -113,9 +113,9 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
       userAction.setInput(ui.searchByName.input.get(), "1234A");
       await wait(300);
       expect(
-        byText(/Numéro d’indentification \(IDCC\) incorrect./).get().textContent
+        byText(/Numéro d’identification \(IDCC\) incorrect./).get().textContent
       ).toEqual(
-        "Numéro d’indentification (IDCC) incorrect. Il semblerait que vous ayez saisi un code APE (Activité Principale Exercée) ou NAF (Nomenclature des Activités Françaises) et dont l’objectif est d’identifier l’activité principale de l’entreprise."
+        "Numéro d’identification (IDCC) incorrect. Il semblerait que vous ayez saisi un code APE (Activité Principale Exercée) ou NAF (Nomenclature des Activités Françaises) et dont l’objectif est d’identifier l’activité principale de l’entreprise."
       );
     });
 
@@ -125,9 +125,9 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
       userAction.setInput(ui.searchByName.input.get(), "12345366");
       await wait(300);
       expect(
-        byText(/Numéro d’indentification \(IDCC\) incorrect./).get().textContent
+        byText(/Numéro d’identification \(IDCC\) incorrect./).get().textContent
       ).toEqual(
-        "Numéro d’indentification (IDCC) incorrect. Ce numéro est composé de 4 chiffres uniquement."
+        "Numéro d’identification (IDCC) incorrect. Ce numéro est composé de 4 chiffres uniquement."
       );
     });
   });

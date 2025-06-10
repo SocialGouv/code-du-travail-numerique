@@ -4,7 +4,7 @@ import { Error } from "../../../outils/common/ErrorField";
 
 export const nafError = (
   <Error>
-    Numéro d’indentification (IDCC) incorrect. Il semblerait que vous ayez saisi
+    Numéro d’identification (IDCC) incorrect. Il semblerait que vous ayez saisi
     un code <abbr title="Activité Principale Exercée">APE</abbr> (Activité
     Principale Exercée) ou{" "}
     <abbr title="Nomenclature des Activités Françaises">NAF</abbr> (Nomenclature
