@@ -236,11 +236,11 @@ exports[`<Home /> should match snapshot 1`] = `
                         Tool Title
                       </a>
                     </h3>
-                    <p
+                    <div
                       class="fr-tile__desc"
                     >
                       Tool description
-                    </p>
+                    </div>
                   </div>
                 </div>
                 <div
