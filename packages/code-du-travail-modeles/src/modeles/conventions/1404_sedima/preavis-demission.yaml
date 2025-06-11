@@ -11,6 +11,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle:
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Agents de maîtrise niveau IV et V:
   applicable si: catégorie professionnelle = 'Agents de maîtrise niveau IV et V'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Agents de maîtrise niveau IV et V . résultat conventionnel:
   valeur: 3 mois
@@ -20,6 +21,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle A
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Cadres niveau VI et plus:
   applicable si: catégorie professionnelle = 'Cadres niveau VI et plus'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Cadres niveau VI et plus . résultat conventionnel:
   valeur: 3 mois
@@ -29,6 +31,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle C
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveau III:
   applicable si: catégorie professionnelle = 'Ouvriers, Employés niveau III'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveau III . niveau:
   titre: niveau
@@ -40,6 +43,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveau III . niveau III:
   applicable si: niveau = 'III'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveau III . niveau III . résultat conventionnel:
   valeur: 2 mois
@@ -49,6 +53,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveaux I et II:
   applicable si: catégorie professionnelle = 'Ouvriers, Employés niveaux I et II'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveaux I et II . niveau:
   titre: niveau
@@ -60,6 +65,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveaux I et II . niveau I à II:
   applicable si: niveau = 'I à II'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveaux I et II . niveau I à II . résultat conventionnel:
   valeur: 1 mois

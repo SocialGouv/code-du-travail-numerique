@@ -10,6 +10,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle:
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé:
   applicable si: catégorie professionnelle = 'Employé'
+  valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté:
   titre: ancienneté
@@ -23,6 +24,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Empl
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté Moins de 6 mois:
   applicable si: ancienneté = 'Moins de 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté Moins de 6 mois . résultat conventionnel:
   valeur: 1 semaine
@@ -34,6 +36,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Empl
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté 6 mois à 2 ans:
   applicable si: ancienneté = '6 mois à 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -45,6 +48,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Empl
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -56,6 +60,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Empl
 
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise:
   applicable si: catégorie professionnelle = 'Technicienagent de maîtrise'
+  valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté:
   titre: ancienneté
@@ -68,6 +73,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Tech
 
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -79,6 +85,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Tech
 
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -90,6 +97,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Tech
 
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre:
   applicable si: catégorie professionnelle = 'Cadre'
+  valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté:
   titre: ancienneté
@@ -102,6 +110,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Cadr
 
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -113,6 +122,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Cadr
 
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 4 mois

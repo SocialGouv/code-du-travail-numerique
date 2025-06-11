@@ -11,6 +11,7 @@ contrat salarié . convention collective . transports routiers . catégorie prof
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Employés:
   applicable si: catégorie professionnelle = 'Employés'
+  valeur: oui
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Employés . résultat conventionnel:
   valeur: 1 mois
@@ -20,6 +21,7 @@ contrat salarié . convention collective . transports routiers . catégorie prof
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Ingénieurs et Cadres:
   applicable si: catégorie professionnelle = 'Ingénieurs et Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Ingénieurs et Cadres . résultat conventionnel:
   valeur: 3 mois
@@ -33,6 +35,7 @@ contrat salarié . convention collective . transports routiers . catégorie prof
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Ouvriers:
   applicable si: catégorie professionnelle = 'Ouvriers'
+  valeur: oui
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Ouvriers . personnel de conduite:
   titre: personnel de conduite
@@ -45,6 +48,7 @@ contrat salarié . convention collective . transports routiers . catégorie prof
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Ouvriers . personnel de conduite Oui:
   applicable si: personnel de conduite = 'Oui'
+  valeur: oui
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Ouvriers . personnel de conduite Oui . résultat conventionnel:
   valeur: 2 semaines
@@ -54,6 +58,7 @@ contrat salarié . convention collective . transports routiers . catégorie prof
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Ouvriers . personnel de conduite Non:
   applicable si: personnel de conduite = 'Non'
+  valeur: oui
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Ouvriers . personnel de conduite Non . personnels des entreprises de transport routier de marchandises:
   titre: personnels des entreprises de transport routier de marchandises
@@ -66,6 +71,7 @@ contrat salarié . convention collective . transports routiers . catégorie prof
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Ouvriers . personnel de conduite Non . personnels des entreprises de transport routier de marchandises Oui:
   applicable si: personnels des entreprises de transport routier de marchandises = 'Oui'
+  valeur: oui
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Ouvriers . personnel de conduite Non . personnels des entreprises de transport routier de marchandises Oui . résultat conventionnel:
   valeur: 2 semaines
@@ -76,6 +82,7 @@ contrat salarié . convention collective . transports routiers . catégorie prof
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Ouvriers . personnel de conduite Non . personnels des entreprises de transport routier de marchandises Non:
   applicable si: personnels des entreprises de transport routier de marchandises = 'Non'
+  valeur: oui
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Ouvriers . personnel de conduite Non . personnels des entreprises de transport routier de marchandises Non . résultat conventionnel:
   valeur: 1 semaine
@@ -85,6 +92,7 @@ contrat salarié . convention collective . transports routiers . catégorie prof
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Techniciens et agents de maîtrise TAM:
   applicable si: catégorie professionnelle = 'Techniciens et agents de maîtrise TAM'
+  valeur: oui
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Techniciens et agents de maîtrise TAM . groupe:
   titre: groupe
@@ -97,6 +105,7 @@ contrat salarié . convention collective . transports routiers . catégorie prof
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Techniciens et agents de maîtrise TAM . groupe 1 à 5:
   applicable si: groupe = '1 à 5'
+  valeur: oui
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Techniciens et agents de maîtrise TAM . groupe 1 à 5 . résultat conventionnel:
   valeur: 1 mois
@@ -106,6 +115,7 @@ contrat salarié . convention collective . transports routiers . catégorie prof
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Techniciens et agents de maîtrise TAM . groupe 6 à 8:
   applicable si: groupe = '6 à 8'
+  valeur: oui
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Techniciens et agents de maîtrise TAM . groupe 6 à 8 . résultat conventionnel:
   valeur: 2 mois

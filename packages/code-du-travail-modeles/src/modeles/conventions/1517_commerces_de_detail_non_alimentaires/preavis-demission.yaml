@@ -16,6 +16,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau I:
   applicable si: niveau = 'I'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau I . résultat conventionnel:
   valeur: 1 mois
@@ -25,6 +26,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau II:
   applicable si: niveau = 'II'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau II . résultat conventionnel:
   valeur: 1 mois
@@ -34,6 +36,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau III:
   applicable si: niveau = 'III'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau III . résultat conventionnel:
   valeur: 1 mois
@@ -43,6 +46,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IV:
   applicable si: niveau = 'IV'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IV . résultat conventionnel:
   valeur: 1 mois
@@ -52,6 +56,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau V:
   applicable si: niveau = 'V'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau V . résultat conventionnel:
   valeur: 1 mois
@@ -61,6 +66,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VI:
   applicable si: niveau = 'VI'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VI . résultat conventionnel:
   valeur: 2 mois
@@ -70,6 +76,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VII:
   applicable si: niveau = 'VII'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VII . résultat conventionnel:
   valeur: 3 mois
@@ -79,6 +86,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VIII:
   applicable si: niveau = 'VIII'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VIII . résultat conventionnel:
   valeur: 3 mois
@@ -88,6 +96,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IX:
   applicable si: niveau = 'IX'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IX . résultat conventionnel:
   valeur: 3 mois

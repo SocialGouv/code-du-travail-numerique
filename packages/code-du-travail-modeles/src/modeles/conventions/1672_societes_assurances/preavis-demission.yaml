@@ -9,6 +9,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres Classes 5 à 7:
   applicable si: catégorie professionnelle = 'Cadres Classes 5 à 7'
+  valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres Classes 5 à 7 . résultat conventionnel:
   valeur: 3 mois
@@ -18,6 +19,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Non-cadres Classes 1 à 4:
   applicable si: catégorie professionnelle = 'Non-cadres Classes 1 à 4'
+  valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Non-cadres Classes 1 à 4 . résultat conventionnel:
   valeur: 1 mois

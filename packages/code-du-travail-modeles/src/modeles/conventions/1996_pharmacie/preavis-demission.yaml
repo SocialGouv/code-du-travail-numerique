@@ -9,6 +9,7 @@ contrat salarié . convention collective . pharmacie . catégorie professionnell
 
 contrat salarié . convention collective . pharmacie . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . pharmacie . catégorie professionnelle Cadres . résultat conventionnel:
   valeur: 3 mois
@@ -18,6 +19,7 @@ contrat salarié . convention collective . pharmacie . catégorie professionnell
 
 contrat salarié . convention collective . pharmacie . catégorie professionnelle Non-cadres:
   applicable si: catégorie professionnelle = 'Non-cadres'
+  valeur: oui
 
 contrat salarié . convention collective . pharmacie . catégorie professionnelle Non-cadres . résultat conventionnel:
   valeur: 1 mois

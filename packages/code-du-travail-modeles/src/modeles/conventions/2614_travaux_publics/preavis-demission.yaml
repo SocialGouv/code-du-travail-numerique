@@ -9,6 +9,7 @@ contrat salarié . convention collective . travaux publics . ancienneté:
 
 contrat salarié . convention collective . travaux publics . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . travaux publics . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -18,6 +19,7 @@ contrat salarié . convention collective . travaux publics . ancienneté Moins d
 
 contrat salarié . convention collective . travaux publics . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . travaux publics . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois

@@ -11,6 +11,7 @@ contrat salarié . convention collective . télécommunications . groupe:
 
 contrat salarié . convention collective . télécommunications . groupe A et B:
   applicable si: groupe = 'A et B'
+  valeur: oui
 
 contrat salarié . convention collective . télécommunications . groupe A et B . ancienneté:
   titre: ancienneté
@@ -23,6 +24,7 @@ contrat salarié . convention collective . télécommunications . groupe A et B 
 
 contrat salarié . convention collective . télécommunications . groupe A et B . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . télécommunications . groupe A et B . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -32,6 +34,7 @@ contrat salarié . convention collective . télécommunications . groupe A et B 
 
 contrat salarié . convention collective . télécommunications . groupe A et B . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . télécommunications . groupe A et B . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -41,6 +44,7 @@ contrat salarié . convention collective . télécommunications . groupe A et B 
 
 contrat salarié . convention collective . télécommunications . groupe C et D:
   applicable si: groupe = 'C et D'
+  valeur: oui
 
 contrat salarié . convention collective . télécommunications . groupe C et D . résultat conventionnel:
   valeur: 2 mois
@@ -50,6 +54,7 @@ contrat salarié . convention collective . télécommunications . groupe C et D 
 
 contrat salarié . convention collective . télécommunications . groupe E, F et G:
   applicable si: groupe = 'E, F et G'
+  valeur: oui
 
 contrat salarié . convention collective . télécommunications . groupe E, F et G . résultat conventionnel:
   valeur: 3 mois
@@ -59,6 +64,7 @@ contrat salarié . convention collective . télécommunications . groupe E, F et
 
 contrat salarié . convention collective . télécommunications . groupe Hors classification:
   applicable si: groupe = 'Hors classification'
+  valeur: oui
 
 contrat salarié . convention collective . télécommunications . groupe Hors classification . résultat conventionnel:
   valeur: 3 mois

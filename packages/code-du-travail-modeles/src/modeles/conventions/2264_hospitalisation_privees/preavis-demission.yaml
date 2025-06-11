@@ -12,6 +12,7 @@ contrat salarié . convention collective . hospitalisation privées . catégorie
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Cadres . résultat conventionnel:
   valeur: 3 mois
@@ -21,6 +22,7 @@ contrat salarié . convention collective . hospitalisation privées . catégorie
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Cadres dirigeants:
   applicable si: catégorie professionnelle = 'Cadres dirigeants'
+  valeur: oui
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Cadres dirigeants . résultat conventionnel:
   valeur: 6 mois
@@ -30,6 +32,7 @@ contrat salarié . convention collective . hospitalisation privées . catégorie
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Cadres supérieurs:
   applicable si: catégorie professionnelle = 'Cadres supérieurs'
+  valeur: oui
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Cadres supérieurs . résultat conventionnel:
   valeur: 6 mois
@@ -39,6 +42,7 @@ contrat salarié . convention collective . hospitalisation privées . catégorie
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Employés:
   applicable si: catégorie professionnelle = 'Employés'
+  valeur: oui
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Employés . ancienneté:
   titre: ancienneté
@@ -51,6 +55,7 @@ contrat salarié . convention collective . hospitalisation privées . catégorie
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Employés . ancienneté 6 mois ou moins:
   applicable si: ancienneté = '6 mois ou moins'
+  valeur: oui
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Employés . ancienneté 6 mois ou moins . résultat conventionnel:
   valeur: 5 jours
@@ -60,6 +65,7 @@ contrat salarié . convention collective . hospitalisation privées . catégorie
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Employés . ancienneté Plus de 6 mois:
   applicable si: ancienneté = 'Plus de 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Employés . ancienneté Plus de 6 mois . résultat conventionnel:
   valeur: 1 mois
@@ -69,6 +75,7 @@ contrat salarié . convention collective . hospitalisation privées . catégorie
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Techniciens et agents de maîtrise TAM:
   applicable si: catégorie professionnelle = 'Techniciens et agents de maîtrise TAM'
+  valeur: oui
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté:
   titre: ancienneté
@@ -81,6 +88,7 @@ contrat salarié . convention collective . hospitalisation privées . catégorie
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -90,6 +98,7 @@ contrat salarié . convention collective . hospitalisation privées . catégorie
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois

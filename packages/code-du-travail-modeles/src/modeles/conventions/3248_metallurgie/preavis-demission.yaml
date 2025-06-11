@@ -11,6 +11,7 @@ contrat salarié . convention collective . métallurgie . groupe:
 
 contrat salarié . convention collective . métallurgie . groupe A ou B:
   applicable si: groupe = 'A ou B'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . groupe A ou B . résultat conventionnel:
   valeur: 2 semaines
@@ -24,6 +25,7 @@ contrat salarié . convention collective . métallurgie . groupe A ou B . résul
 
 contrat salarié . convention collective . métallurgie . groupe C:
   applicable si: groupe = 'C'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . groupe C . résultat conventionnel:
   valeur: 1 mois
@@ -37,6 +39,7 @@ contrat salarié . convention collective . métallurgie . groupe C . résultat c
 
 contrat salarié . convention collective . métallurgie . groupe D ou E:
   applicable si: groupe = 'D ou E'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . groupe D ou E . résultat conventionnel:
   valeur: 2 mois
@@ -50,6 +53,7 @@ contrat salarié . convention collective . métallurgie . groupe D ou E . résul
 
 contrat salarié . convention collective . métallurgie . groupe F, G, H ou I:
   applicable si: groupe = 'F, G, H ou I'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . groupe F, G, H ou I . résultat conventionnel:
   valeur: 3 mois

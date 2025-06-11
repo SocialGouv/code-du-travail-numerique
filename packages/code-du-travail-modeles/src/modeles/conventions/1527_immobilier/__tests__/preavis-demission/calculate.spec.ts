@@ -215,4 +215,92 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expect(result).toContainNotifications(expectedNotifications);
     }
   );
+
+  describe("Tests d'erreur avec arguments manquants", () => {
+    it("doit retourner une erreur si aucune catégorie professionnelle n'est fournie", () => {
+      const result = engine.calculate({
+        "contrat salarié . convention collective": "'IDCC1527'",
+      });
+
+      expect(result).toNextMissingQuestionBeEqual(
+        "Quelle est la catégorie professionnelle du salarié ?"
+      );
+    });
+
+    it("doit retourner une erreur si l'ancienneté n'est pas fournie pour Agents de maîtrise", () => {
+      const result = engine.calculate({
+        "contrat salarié . convention collective": "'IDCC1527'",
+        "contrat salarié . convention collective . immobilier . catégorie professionnelle":
+          "'Agents de maîtrise'",
+      });
+
+      expect(result).toNextMissingQuestionBeEqual(
+        "Quelle est l'ancienneté du salarié ?"
+      );
+    });
+
+    it("doit retourner une erreur si l'ancienneté n'est pas fournie pour Cadres VRP", () => {
+      const result = engine.calculate({
+        "contrat salarié . convention collective": "'IDCC1527'",
+        "contrat salarié . convention collective . immobilier . catégorie professionnelle":
+          "'Cadres VRP'",
+      });
+
+      expect(result).toNextMissingQuestionBeEqual(
+        "Quelle est l'ancienneté du salarié ?"
+      );
+    });
+
+    it("doit retourner une erreur si l'ancienneté n'est pas fournie pour Négociateur non VRP", () => {
+      const result = engine.calculate({
+        "contrat salarié . convention collective": "'IDCC1527'",
+        "contrat salarié . convention collective . immobilier . catégorie professionnelle":
+          "'Négociateur non VRP'",
+      });
+
+      expect(result).toNextMissingQuestionBeEqual(
+        "Quelle est l'ancienneté du salarié ?"
+      );
+    });
+
+    it("doit retourner une erreur si l'ancienneté n'est pas fournie pour Négociateur VRP", () => {
+      const result = engine.calculate({
+        "contrat salarié . convention collective": "'IDCC1527'",
+        "contrat salarié . convention collective . immobilier . catégorie professionnelle":
+          "'Négociateur VRP'",
+      });
+
+      expect(result).toNextMissingQuestionBeEqual(
+        "Quelle est l'ancienneté du salarié ?"
+      );
+    });
+
+    it("doit retourner une erreur si l'ancienneté n'est pas fournie pour Ouvriers, Employés", () => {
+      const result = engine.calculate({
+        "contrat salarié . convention collective": "'IDCC1527'",
+        "contrat salarié . convention collective . immobilier . catégorie professionnelle":
+          "'Ouvriers, Employés'",
+      });
+
+      expect(result).toNextMissingQuestionBeEqual(
+        "Quelle est l'ancienneté du salarié ?"
+      );
+    });
+
+    it("ne doit pas retourner d'erreur pour Cadres nonVRP (pas d'ancienneté requise)", () => {
+      const result = engine.calculate({
+        "contrat salarié . convention collective": "'IDCC1527'",
+        "contrat salarié . convention collective . immobilier . catégorie professionnelle":
+          "'Cadres nonVRP'",
+      });
+
+      expect(result).toResultBeEqual(3, "mois");
+      expect(result).toHaveReferencesBeEqual([
+        {
+          article: "Article 32",
+          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id",
+        },
+      ]);
+    });
+  });
 });

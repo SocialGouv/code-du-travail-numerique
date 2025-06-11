@@ -9,6 +9,7 @@ contrat salarié . convention collective . ouvriers bâtiment région parisienne
 
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . ancienneté Au delà de la période d'essai et jusqu'à 3 mois:
   applicable si: ancienneté = 'Au delà de la période d'essai et jusqu'à 3 mois'
+  valeur: oui
 
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . ancienneté Au delà de la période d'essai et jusqu'à 3 mois . résultat conventionnel:
   valeur: 2 jours
@@ -18,6 +19,7 @@ contrat salarié . convention collective . ouvriers bâtiment région parisienne
 
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . ancienneté Plus de 3 mois:
   applicable si: ancienneté = 'Plus de 3 mois'
+  valeur: oui
 
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . ancienneté Plus de 3 mois . résultat conventionnel:
   valeur: 2 semaines

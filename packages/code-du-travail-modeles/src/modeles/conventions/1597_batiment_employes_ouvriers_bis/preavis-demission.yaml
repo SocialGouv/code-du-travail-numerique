@@ -8,6 +8,7 @@ contrat salarié . convention collective . batiment ouvriers employés bis . cat
 
 contrat salarié . convention collective . batiment ouvriers employés bis . catégorie professionnelle Ouvriers:
   applicable si: catégorie professionnelle = 'Ouvriers'
+  valeur: oui
 
 contrat salarié . convention collective . batiment ouvriers employés bis . catégorie professionnelle Ouvriers . ancienneté:
   titre: ancienneté
@@ -20,6 +21,7 @@ contrat salarié . convention collective . batiment ouvriers employés bis . cat
 
 contrat salarié . convention collective . batiment ouvriers employés bis . catégorie professionnelle Ouvriers . ancienneté Au delà de la période d'essai et jusqu'à 3 mois:
   applicable si: ancienneté = 'Au delà de la période d'essai et jusqu'à 3 mois'
+  valeur: oui
 
 contrat salarié . convention collective . batiment ouvriers employés bis . catégorie professionnelle Ouvriers . ancienneté Au delà de la période d'essai et jusqu'à 3 mois . résultat conventionnel:
   valeur: 2 jours
@@ -29,6 +31,7 @@ contrat salarié . convention collective . batiment ouvriers employés bis . cat
 
 contrat salarié . convention collective . batiment ouvriers employés bis . catégorie professionnelle Ouvriers . ancienneté Plus de 3 mois:
   applicable si: ancienneté = 'Plus de 3 mois'
+  valeur: oui
 
 contrat salarié . convention collective . batiment ouvriers employés bis . catégorie professionnelle Ouvriers . ancienneté Plus de 3 mois . résultat conventionnel:
   valeur: 2 semaines

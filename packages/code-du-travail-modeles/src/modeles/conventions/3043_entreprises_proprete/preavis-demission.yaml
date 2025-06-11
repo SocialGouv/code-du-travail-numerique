@@ -11,6 +11,7 @@ contrat salarié . convention collective . entreprises de propreté . catégorie
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Agents de propreté:
   applicable si: catégorie professionnelle = 'Agents de propreté'
+  valeur: oui
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Agents de propreté . ancienneté:
   titre: ancienneté
@@ -24,6 +25,7 @@ contrat salarié . convention collective . entreprises de propreté . catégorie
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Agents de propreté . ancienneté Moins de 1 mois:
   applicable si: ancienneté = 'Moins de 1 mois'
+  valeur: oui
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Agents de propreté . ancienneté Moins de 1 mois . résultat conventionnel:
   valeur: 0
@@ -33,6 +35,7 @@ contrat salarié . convention collective . entreprises de propreté . catégorie
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Agents de propreté . ancienneté 1 mois à 6 mois:
   applicable si: ancienneté = '1 mois à 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Agents de propreté . ancienneté 1 mois à 6 mois . résultat conventionnel:
   valeur: 2 jours
@@ -42,6 +45,7 @@ contrat salarié . convention collective . entreprises de propreté . catégorie
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Agents de propreté . ancienneté Plus de 6 mois:
   applicable si: ancienneté = 'Plus de 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Agents de propreté . ancienneté Plus de 6 mois . résultat conventionnel:
   valeur: 1 semaine
@@ -51,6 +55,7 @@ contrat salarié . convention collective . entreprises de propreté . catégorie
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Cadres . résultat conventionnel:
   valeur: 3 mois
@@ -60,6 +65,7 @@ contrat salarié . convention collective . entreprises de propreté . catégorie
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Employés:
   applicable si: catégorie professionnelle = 'Employés'
+  valeur: oui
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Employés . résultat conventionnel:
   valeur: 1 mois
@@ -69,6 +75,7 @@ contrat salarié . convention collective . entreprises de propreté . catégorie
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Techniciens et agents de maîtrise TAM:
   applicable si: catégorie professionnelle = 'Techniciens et agents de maîtrise TAM'
+  valeur: oui
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté:
   titre: ancienneté
@@ -81,6 +88,7 @@ contrat salarié . convention collective . entreprises de propreté . catégorie
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté 2 mois à 2 ans:
   applicable si: ancienneté = '2 mois à 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté 2 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -90,6 +98,7 @@ contrat salarié . convention collective . entreprises de propreté . catégorie
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois

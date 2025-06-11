@@ -9,6 +9,7 @@ contrat salarié . convention collective . entreprises de services à la personn
 
 contrat salarié . convention collective . entreprises de services à la personne . ancienneté 6 mois à 2 ans:
   applicable si: ancienneté = '6 mois à 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . entreprises de services à la personne . ancienneté 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -18,6 +19,7 @@ contrat salarié . convention collective . entreprises de services à la personn
 
 contrat salarié . convention collective . entreprises de services à la personne . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . entreprises de services à la personne . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois

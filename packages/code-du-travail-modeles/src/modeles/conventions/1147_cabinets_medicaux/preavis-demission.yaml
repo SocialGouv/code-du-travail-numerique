@@ -9,6 +9,7 @@ contrat salarié . convention collective . cabinets médicaux . catégorie profe
 
 contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle Cadres . résultat conventionnel:
   valeur: 3 mois
@@ -20,6 +21,7 @@ contrat salarié . convention collective . cabinets médicaux . catégorie profe
 
 contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle Non-cadres:
   applicable si: catégorie professionnelle = 'Non-cadres'
+  valeur: oui
 
 contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle Non-cadres . ancienneté:
   titre: ancienneté
@@ -32,6 +34,7 @@ contrat salarié . convention collective . cabinets médicaux . catégorie profe
 
 contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle Non-cadres . ancienneté Moins de 6 mois:
   applicable si: ancienneté = 'Moins de 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle Non-cadres . ancienneté Moins de 6 mois . résultat conventionnel:
   valeur: 5 jours
@@ -41,6 +44,7 @@ contrat salarié . convention collective . cabinets médicaux . catégorie profe
 
 contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle Non-cadres . ancienneté 6 mois et plus:
   applicable si: ancienneté = '6 mois et plus'
+  valeur: oui
 
 contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle Non-cadres . ancienneté 6 mois et plus . résultat conventionnel:
   valeur: 1 mois

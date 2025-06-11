@@ -10,6 +10,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Cadres . résultat conventionnel:
   valeur: 3 mois
@@ -19,6 +20,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Ouvriers, Employés:
   applicable si: catégorie professionnelle = 'Ouvriers, Employés'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Ouvriers, Employés . résultat conventionnel:
   valeur: 1 mois
@@ -28,6 +30,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Techniciens et agents de maîtrise TAM:
   applicable si: catégorie professionnelle = 'Techniciens et agents de maîtrise TAM'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Techniciens et agents de maîtrise TAM . résultat conventionnel:
   valeur: 2 mois
