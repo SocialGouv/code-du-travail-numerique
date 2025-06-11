@@ -152,11 +152,13 @@ export const PublicodesDefaultRules = {
   [PublicodesSimulator.RUPTURE_CONVENTIONNELLE]:
     "contrat salarié . indemnité de licenciement . résultat légal",
   [PublicodesSimulator.PREAVIS_LICENCIEMENT]:
-    "contrat salarié . résultat légal",
-  [PublicodesSimulator.PREAVIS_DEMISSION]: "contrat salarié . résultat légal",
+    "contrat salarié . préavis de démission . résultat légal",
+  [PublicodesSimulator.PREAVIS_DEMISSION]:
+    "contrat salarié . préavis de démission . résultat légal",
   [PublicodesSimulator.HEURES_RECHERCHE_EMPLOI]:
-    "contrat salarié . résultat légal",
-  [PublicodesSimulator.INDEMNITE_PRECARITE]: "contrat salarié . résultat légal",
+    "contrat salarié . préavis de démission . résultat légal",
+  [PublicodesSimulator.INDEMNITE_PRECARITE]:
+    "contrat salarié . préavis de démission . résultat légal",
 };
 
 export enum PublicodesConvertedUnit {

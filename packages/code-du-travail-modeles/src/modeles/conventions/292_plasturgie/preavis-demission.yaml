@@ -1,5 +1,5 @@
 contrat salarié . convention collective . plasturgie . catégorie professionnelle:
-  titre: catégorie professionnelle
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -12,7 +12,7 @@ contrat salarié . convention collective . plasturgie . catégorie professionnel
 
 contrat salarié . convention collective . plasturgie . catégorie professionnelle Cadres . résultat conventionnel:
   valeur: 3 mois
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Avenant Cadres, Article 8": https://www.legifrance.gouv.fr/affichIDCC.do?cidTexte=KALITEXT000005682082&idSectionTA=KALISCTA000005726361&idConvention=KALICONT000005635856&dateTexte=29990101
 
@@ -20,7 +20,7 @@ contrat salarié . convention collective . plasturgie . catégorie professionnel
   applicable si: catégorie professionnelle = 'Collaborateurs'
 
 contrat salarié . convention collective . plasturgie . catégorie professionnelle Collaborateurs . coefficient:
-  titre: coefficient
+  titre: Coefficient
   question: Quel est le coefficient hiérarchique du salarié ?
   cdtn:
     type: liste
@@ -33,7 +33,7 @@ contrat salarié . convention collective . plasturgie . catégorie professionnel
 
 contrat salarié . convention collective . plasturgie . catégorie professionnelle Collaborateurs . coefficient 700 à 750 . résultat conventionnel:
   valeur: 1 mois
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 15": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856709&cidTexte=KALITEXT000005682080&dateTexte=29990101&categorieLien=id
 
@@ -42,6 +42,6 @@ contrat salarié . convention collective . plasturgie . catégorie professionnel
 
 contrat salarié . convention collective . plasturgie . catégorie professionnelle Collaborateurs . coefficient 800 à 830 inclus . résultat conventionnel:
   valeur: 2 mois
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 15": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856709&cidTexte=KALITEXT000005682080&dateTexte=29990101&categorieLien=id

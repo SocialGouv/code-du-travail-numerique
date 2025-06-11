@@ -25,7 +25,7 @@ contrat salarié . convention collective . industrie pharmaceutique . conclusion
 
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 . groupe 1 à 3 . résultat conventionnel:
   valeur: 2 mois
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 35, 2°": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109
 
@@ -34,7 +34,7 @@ contrat salarié . convention collective . industrie pharmaceutique . conclusion
 
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 . groupe 4 . résultat conventionnel:
   valeur: 2 mois
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 35, 2°": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109
 
@@ -43,7 +43,7 @@ contrat salarié . convention collective . industrie pharmaceutique . conclusion
 
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 . groupe 5 et suivants . résultat conventionnel:
   valeur: 3 mois
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 35, 2°": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109
 
@@ -65,7 +65,7 @@ contrat salarié . convention collective . industrie pharmaceutique . conclusion
 
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 . groupe 1 à 3 . résultat conventionnel:
   valeur: 2 mois
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 35, 2°": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109
 
@@ -74,7 +74,7 @@ contrat salarié . convention collective . industrie pharmaceutique . conclusion
 
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 . groupe 4 à 5 . résultat conventionnel:
   valeur: 3 mois
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 35, 2°": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109
 
@@ -83,6 +83,6 @@ contrat salarié . convention collective . industrie pharmaceutique . conclusion
 
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 . groupe 6 et suivants . résultat conventionnel:
   valeur: 4 mois
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 35, 2°": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109?idConteneur=KALICONT000005635184&origin=list#KALIARTI000039117109

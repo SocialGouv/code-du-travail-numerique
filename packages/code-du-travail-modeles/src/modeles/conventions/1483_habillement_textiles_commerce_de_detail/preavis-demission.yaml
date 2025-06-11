@@ -1,5 +1,5 @@
 contrat salarié . convention collective . habillement textiles commerce de detail . catégorie professionnelle:
-  titre: catégorie professionnelle
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -13,7 +13,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
 
 contrat salarié . convention collective . habillement textiles commerce de detail . catégorie professionnelle Agents de maîtrise . résultat conventionnel:
   valeur: 3 mois
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 9 du Chapitre II de la convention collective": https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005750625&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594
 
@@ -22,7 +22,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
 
 contrat salarié . convention collective . habillement textiles commerce de detail . catégorie professionnelle Cadres . résultat conventionnel:
   valeur: 3 mois
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 9 du Chapitre II de la convention collective": https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005750625&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594
 
@@ -43,7 +43,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
 
 contrat salarié . convention collective . habillement textiles commerce de detail . catégorie professionnelle Employés . ancienneté Moins de 6 mois . résultat conventionnel:
   valeur: 2 semaines
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 14 du Chapitre Ier de la convention collective": https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005761249&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594&dateTexte=29990101
 
@@ -52,6 +52,6 @@ contrat salarié . convention collective . habillement textiles commerce de deta
 
 contrat salarié . convention collective . habillement textiles commerce de detail . catégorie professionnelle Employés . ancienneté Plus de 6 mois . résultat conventionnel:
   valeur: 1 mois
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 14 du Chapitre Ier de la convention collective": https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005761249&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594&dateTexte=29990101

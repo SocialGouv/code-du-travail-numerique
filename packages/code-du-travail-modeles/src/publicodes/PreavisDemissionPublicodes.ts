@@ -26,7 +26,7 @@ export class PreavisDemissionPublicodes extends PublicodesBase<PublicodesCalcula
   ): CalculateOutput<PublicodesCalculateResult> {
     const result = this.setSituation(
       situation,
-      "contrat salarié . résultat conventionnel"
+      "contrat salarié . préavis de démission . résultat conventionnel"
     );
     if (result.missingArgs.length > 0) {
       return {
@@ -51,7 +51,7 @@ export class PreavisDemissionPublicodes extends PublicodesBase<PublicodesCalcula
   ): CalculateOutput<PublicodesCalculateResult> {
     const result = this.setSituation(
       situation,
-      "contrat salarié . résultat légal"
+      "contrat salarié . préavis de démission . résultat légal"
     );
     if (result.missingArgs.length > 0) {
       return {

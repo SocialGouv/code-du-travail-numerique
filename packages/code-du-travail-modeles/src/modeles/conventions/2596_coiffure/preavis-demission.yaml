@@ -1,5 +1,5 @@
 contrat salarié . convention collective . coiffure . catégorie professionnelle:
-  titre: catégorie professionnelle
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -15,7 +15,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Agents de maîtrise . résultat conventionnel:
   valeur: 3 mois
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
 
@@ -24,7 +24,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Cadres . résultat conventionnel:
   valeur: 3 mois
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
 
@@ -45,7 +45,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique . ancienneté 6 mois ou moins . résultat conventionnel:
   valeur: 1 semaine
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
 
@@ -54,7 +54,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique . ancienneté Plus de 6 mois . résultat conventionnel:
   valeur: 1 mois
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
 
@@ -75,7 +75,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure . ancienneté 6 mois ou moins . résultat conventionnel:
   valeur: 1 semaine
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
 
@@ -84,7 +84,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure . ancienneté Plus de 6 mois . résultat conventionnel:
   valeur: 1 mois
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
 
@@ -105,7 +105,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi technique de la coiffure . ancienneté 6 mois ou moins . résultat conventionnel:
   valeur: 1 semaine
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
 
@@ -114,6 +114,6 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi technique de la coiffure . ancienneté Plus de 6 mois . résultat conventionnel:
   valeur: 1 mois
-  remplace: contrat salarié . résultat conventionnel
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760

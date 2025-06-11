@@ -15,7 +15,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
         {
           "contrat salarié . convention collective": "'IDCC1486'",
         },
-        "contrat salarié . résultat conventionnel"
+        "contrat salarié . préavis de démission . résultat conventionnel"
       );
     });
 
@@ -33,7 +33,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
             "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle":
               "'Employés, Techniciens ou Agents de maîtrise ETAM'",
           },
-          "contrat salarié . résultat conventionnel"
+          "contrat salarié . préavis de démission . résultat conventionnel"
         );
       });
 
@@ -53,7 +53,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
               "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient":
                 "'de 240 à 355'",
             },
-            "contrat salarié . résultat conventionnel"
+            "contrat salarié . préavis de démission . résultat conventionnel"
           );
         });
 
@@ -75,7 +75,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
                 "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté":
                   "'2 ans ou moins'",
               },
-              "contrat salarié . résultat conventionnel"
+              "contrat salarié . préavis de démission . résultat conventionnel"
             );
           });
 
@@ -96,7 +96,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
                 "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté":
                   "'Plus de 2 ans'",
               },
-              "contrat salarié . résultat conventionnel"
+              "contrat salarié . préavis de démission . résultat conventionnel"
             );
           });
 
@@ -116,7 +116,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
               "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient":
                 "'De 400 à 500'",
             },
-            "contrat salarié . résultat conventionnel"
+            "contrat salarié . préavis de démission . résultat conventionnel"
           );
         });
 
@@ -138,7 +138,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
                 "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500 . ancienneté":
                   "'2 ans ou moins'",
               },
-              "contrat salarié . résultat conventionnel"
+              "contrat salarié . préavis de démission . résultat conventionnel"
             );
           });
 
@@ -159,7 +159,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
                 "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500 . ancienneté":
                   "'Plus de 2 ans'",
               },
-              "contrat salarié . résultat conventionnel"
+              "contrat salarié . préavis de démission . résultat conventionnel"
             );
           });
 
@@ -178,7 +178,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
             "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle":
               "'Chargés d'enquête intermittents'",
           },
-          "contrat salarié . résultat conventionnel"
+          "contrat salarié . préavis de démission . résultat conventionnel"
         );
       });
 
@@ -195,7 +195,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
             "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle":
               "'Ingénieurs, Cadres'",
           },
-          "contrat salarié . résultat conventionnel"
+          "contrat salarié . préavis de démission . résultat conventionnel"
         );
       });
 
