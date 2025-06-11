@@ -1,6 +1,6 @@
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle:
   titre: catégorie professionnelle
-  question: Quelle est la catégorie professionnelle du salarié ?
+  question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -13,7 +13,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise et Techniciens . coefficient:
   titre: coefficient
-  question: Quel est le coefficient hiérarchique du salarié ?
+  question: Quel est le coefficient hiérarchique du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -52,7 +52,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers et collaborateurs . coefficient:
   titre: coefficient
-  question: Quel est le coefficient hiérarchique du salarié ?
+  question: Quel est le coefficient hiérarchique du salarié ?
   cdtn:
     type: liste
     valeurs:

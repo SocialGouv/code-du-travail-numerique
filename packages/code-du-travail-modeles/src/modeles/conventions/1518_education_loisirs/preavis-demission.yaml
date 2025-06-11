@@ -1,6 +1,6 @@
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle:
   titre: catégorie professionnelle
-  question: Quelle est la catégorie professionnelle du salarié ?
+  question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -54,7 +54,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau:
   titre: niveau
-  question: Quel est le niveau du salarié ?
+  question: Quel est le niveau du salarié ?
   cdtn:
     type: liste
     valeurs:

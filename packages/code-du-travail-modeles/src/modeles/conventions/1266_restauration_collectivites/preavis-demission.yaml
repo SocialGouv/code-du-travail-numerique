@@ -1,6 +1,6 @@
 contrat salarié . convention collective . restauration collectivités . catégorie professionnelle:
   titre: catégorie professionnelle
-  question: Quelle est la catégorie professionnelle du salarié ?
+  question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -22,7 +22,7 @@ contrat salarié . convention collective . restauration collectivités . catégo
 
 contrat salarié . convention collective . restauration collectivités . catégorie professionnelle Employés . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -62,7 +62,7 @@ contrat salarié . convention collective . restauration collectivités . catégo
 
 contrat salarié . convention collective . restauration collectivités . catégorie professionnelle Maîtrises . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:

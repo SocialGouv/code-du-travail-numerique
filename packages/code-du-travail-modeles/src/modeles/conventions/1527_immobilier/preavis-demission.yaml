@@ -1,6 +1,6 @@
 contrat salarié . convention collective . immobilier . catégorie professionnelle:
   titre: catégorie professionnelle
-  question: Quelle est la catégorie professionnelle du salarié ?
+  question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -16,7 +16,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Agents de maîtrise . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -55,7 +55,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Cadres VRP . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -85,7 +85,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur non VRP . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -115,7 +115,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur VRP . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -155,7 +155,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Ouvriers, Employés . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:

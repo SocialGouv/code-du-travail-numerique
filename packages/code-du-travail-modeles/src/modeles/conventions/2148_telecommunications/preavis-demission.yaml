@@ -14,7 +14,7 @@ contrat salarié . convention collective . télécommunications . groupe A et B:
 
 contrat salarié . convention collective . télécommunications . groupe A et B . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:

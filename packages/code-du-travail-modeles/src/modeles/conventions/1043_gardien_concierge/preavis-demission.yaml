@@ -1,6 +1,6 @@
 contrat salarié . convention collective . gardien concierge . logement:
   titre: logement
-  question: Le salarié est-il logé ?
+  question: Le salarié est-il logé ?
   cdtn:
     type: liste
     valeurs:
@@ -12,7 +12,7 @@ contrat salarié . convention collective . gardien concierge . logement Nonlogé
 
 contrat salarié . convention collective . gardien concierge . logement Nonlogé . coefficient:
   titre: coefficient
-  question: Quel est le coefficient hiérarchique du salarié ?
+  question: Quel est le coefficient hiérarchique du salarié ?
   cdtn:
     type: liste
     valeurs:

@@ -1,6 +1,6 @@
 contrat salarié . convention collective . automobiles . catégorie professionnelle:
   titre: catégorie professionnelle
-  question: Quelle est la catégorie professionnelle du salarié ?
+  question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -13,7 +13,7 @@ contrat salarié . convention collective . automobiles . catégorie professionne
 
 contrat salarié . convention collective . automobiles . catégorie professionnelle Agents de maîtrise . échelon:
   titre: échelon
-  question: Quel est l'échelon du salarié ?
+  question: Quel est l'échelon du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -52,7 +52,7 @@ contrat salarié . convention collective . automobiles . catégorie professionne
 
 contrat salarié . convention collective . automobiles . catégorie professionnelle Ouvriers, Employés . échelon:
   titre: échelon
-  question: Quel est l'échelon du salarié ?
+  question: Quel est l'échelon du salarié ?
   cdtn:
     type: liste
     valeurs:

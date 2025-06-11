@@ -1,6 +1,6 @@
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle:
   titre: catégorie professionnelle
-  question: Quelle est la catégorie professionnelle du salarié ?
+  question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -13,7 +13,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau:
   titre: niveau
-  question: Quel est le niveau du salarié ?
+  question: Quel est le niveau du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -28,7 +28,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -98,7 +98,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -168,7 +168,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -238,7 +238,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -298,7 +298,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -358,7 +358,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau:
   titre: niveau
-  question: Quel est le niveau du salarié ?
+  question: Quel est le niveau du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -373,7 +373,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -433,7 +433,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -493,7 +493,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -553,7 +553,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -613,7 +613,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -673,7 +673,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:

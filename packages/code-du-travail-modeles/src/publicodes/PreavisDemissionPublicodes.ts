@@ -93,8 +93,8 @@ export class PreavisDemissionPublicodes extends PublicodesBase<PublicodesCalcula
 
     return this.builder.buildResult(
       this.data.situation,
-      legalResult,
-      agreementResult
+      legalResult.type === "result" ? legalResult : undefined,
+      agreementResult.type === "result" ? agreementResult : undefined
     );
   }
 
@@ -107,3 +107,5 @@ export class PreavisDemissionPublicodes extends PublicodesBase<PublicodesCalcula
     };
   }
 }
+
+export default PreavisDemissionPublicodes;

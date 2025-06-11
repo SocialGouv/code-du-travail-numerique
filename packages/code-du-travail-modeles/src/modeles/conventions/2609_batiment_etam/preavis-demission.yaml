@@ -1,6 +1,6 @@
 contrat salarié . convention collective . batiment etam . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:

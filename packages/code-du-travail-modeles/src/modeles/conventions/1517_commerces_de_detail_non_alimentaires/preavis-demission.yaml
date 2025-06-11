@@ -1,6 +1,6 @@
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau:
   titre: niveau
-  question: Quel est le niveau du salarié ?
+  question: Quel est le niveau du salarié ?
   cdtn:
     type: liste
     valeurs:

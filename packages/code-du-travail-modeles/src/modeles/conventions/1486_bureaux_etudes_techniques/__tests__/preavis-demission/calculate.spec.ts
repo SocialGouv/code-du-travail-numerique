@@ -33,9 +33,9 @@ describe("Test de la fonctionnalité 'calculate' pour la CC 1486 - Préavis de d
       situation: {
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle":
           "'Employés, Techniciens ou Agents de maîtrise ETAM'",
-        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient":
+        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient":
           "'de 240 à 355'",
-        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté":
+        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté":
           "'2 ans ou moins'",
       },
       title: "ETAM coefficient 240-355, ancienneté 2 ans ou moins",
@@ -52,9 +52,9 @@ describe("Test de la fonctionnalité 'calculate' pour la CC 1486 - Préavis de d
       situation: {
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle":
           "'Employés, Techniciens ou Agents de maîtrise ETAM'",
-        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient":
+        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient":
           "'de 240 à 355'",
-        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté":
+        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté":
           "'Plus de 2 ans'",
       },
       title: "ETAM coefficient 240-355, ancienneté plus de 2 ans",
@@ -71,9 +71,9 @@ describe("Test de la fonctionnalité 'calculate' pour la CC 1486 - Préavis de d
       situation: {
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle":
           "'Employés, Techniciens ou Agents de maîtrise ETAM'",
-        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient":
+        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient":
           "'De 400 à 500'",
-        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500 . ancienneté":
+        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500 . ancienneté":
           "'2 ans ou moins'",
       },
       title: "ETAM coefficient 400-500, ancienneté 2 ans ou moins",
@@ -90,9 +90,9 @@ describe("Test de la fonctionnalité 'calculate' pour la CC 1486 - Préavis de d
       situation: {
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle":
           "'Employés, Techniciens ou Agents de maîtrise ETAM'",
-        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient":
+        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient":
           "'De 400 à 500'",
-        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500 . ancienneté":
+        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500 . ancienneté":
           "'Plus de 2 ans'",
       },
       title: "ETAM coefficient 400-500, ancienneté plus de 2 ans",
@@ -135,12 +135,10 @@ describe("Test de la fonctionnalité 'calculate' pour la CC 1486 - Préavis de d
   );
 
   describe("Tests d'erreur avec arguments manquants", () => {
-    it("doit retourner une erreur si aucune catégorie professionnelle n'est fournie", () => {
+    it("doit retourner une erreur si aucune catégorie professionnelle . n'est fournie", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC1486'",
       });
-
-      console.log(JSON.stringify(result));
 
       expect(result).toNextMissingQuestionBeEqual(
         "Quelle est la catégorie professionnelle du salarié ?"
@@ -164,7 +162,7 @@ describe("Test de la fonctionnalité 'calculate' pour la CC 1486 - Préavis de d
         "contrat salarié . convention collective": "'IDCC1486'",
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle":
           "'Employés, Techniciens ou Agents de maîtrise ETAM'",
-        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient":
+        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient":
           "'de 240 à 355'",
       });
 
@@ -178,7 +176,7 @@ describe("Test de la fonctionnalité 'calculate' pour la CC 1486 - Préavis de d
         "contrat salarié . convention collective": "'IDCC1486'",
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle":
           "'Employés, Techniciens ou Agents de maîtrise ETAM'",
-        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient":
+        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient":
           "'De 400 à 500'",
       });
 

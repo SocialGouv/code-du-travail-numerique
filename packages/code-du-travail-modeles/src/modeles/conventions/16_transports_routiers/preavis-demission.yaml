@@ -1,6 +1,6 @@
 contrat salarié . convention collective . transports routiers . catégorie professionnelle:
   titre: catégorie professionnelle
-  question: Quelle est la catégorie professionnelle du salarié ?
+  question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -36,7 +36,7 @@ contrat salarié . convention collective . transports routiers . catégorie prof
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Ouvriers . personnel de conduite:
   titre: personnel de conduite
-  question: Le salarié fait-il partie des personnels de conduite du transport de voyageurs ?
+  question: Le salarié fait-il partie des personnels de conduite du transport de voyageurs ?
   cdtn:
     type: liste
     valeurs:

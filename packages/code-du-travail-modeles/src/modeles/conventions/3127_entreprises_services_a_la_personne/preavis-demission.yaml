@@ -1,6 +1,6 @@
 contrat salarié . convention collective . entreprises de services à la personne . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:

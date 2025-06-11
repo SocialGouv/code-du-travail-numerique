@@ -1,6 +1,6 @@
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle:
   titre: catégorie professionnelle
-  question: Quelle est la catégorie professionnelle du salarié ?
+  question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -42,7 +42,7 @@ contrat salarié . convention collective . hospitalisation privées . catégorie
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Employés . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -72,7 +72,7 @@ contrat salarié . convention collective . hospitalisation privées . catégorie
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:

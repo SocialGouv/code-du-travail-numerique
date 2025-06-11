@@ -1,6 +1,6 @@
 contrat salarié . convention collective . plasturgie . catégorie professionnelle:
   titre: catégorie professionnelle
-  question: Quelle est la catégorie professionnelle du salarié ?
+  question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -21,7 +21,7 @@ contrat salarié . convention collective . plasturgie . catégorie professionnel
 
 contrat salarié . convention collective . plasturgie . catégorie professionnelle Collaborateurs . coefficient:
   titre: coefficient
-  question: Quel est le coefficient hiérarchique du salarié ?
+  question: Quel est le coefficient hiérarchique du salarié ?
   cdtn:
     type: liste
     valeurs:

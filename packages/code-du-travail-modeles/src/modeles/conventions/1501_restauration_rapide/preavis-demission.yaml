@@ -1,6 +1,6 @@
 contrat salarié . convention collective . restauration rapide . catégorie professionnelle:
   titre: catégorie professionnelle
-  question: Quelle est la catégorie professionnelle du salarié ?
+  question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -23,7 +23,7 @@ contrat salarié . convention collective . restauration rapide . catégorie prof
 
 contrat salarié . convention collective . restauration rapide . catégorie professionnelle Employés . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -63,7 +63,7 @@ contrat salarié . convention collective . restauration rapide . catégorie prof
 
 contrat salarié . convention collective . restauration rapide . catégorie professionnelle Maîtrises . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -93,7 +93,7 @@ contrat salarié . convention collective . restauration rapide . catégorie prof
 
 contrat salarié . convention collective . restauration rapide . catégorie professionnelle Ouvriers . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:

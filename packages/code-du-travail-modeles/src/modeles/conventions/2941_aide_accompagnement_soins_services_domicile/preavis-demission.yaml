@@ -1,6 +1,6 @@
 contrat salarié . convention collective . bad . catégorie professionnelle:
   titre: catégorie professionnelle
-  question: Quelle est la catégorie professionnelle du salarié ?
+  question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -13,7 +13,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Empl
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -59,7 +59,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Tech
 
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -93,7 +93,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Cadr
 
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:

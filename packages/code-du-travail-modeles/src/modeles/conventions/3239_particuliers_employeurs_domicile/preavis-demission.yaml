@@ -1,6 +1,6 @@
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle:
   titre: catégorie professionnelle
-  question: Quelle est la catégorie professionnelle du salarié ?
+  question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -12,7 +12,7 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle Salariés du particulier employeur . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -49,7 +49,7 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle Assistants maternels du particulier employeur . ancienneté:
   titre: ancienneté
-  question: Quelle est l'ancienneté du salarié ?
+  question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
     valeurs:
