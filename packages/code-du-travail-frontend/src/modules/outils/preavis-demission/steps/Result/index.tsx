@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { PreavisDemissionContext, usePreavisDemissionStore } from "../store";
 import { fr } from "@codegouvfr/react-dsfr";
+import { ShowResult, Situation, Warning } from "./components";
 
 const ResultStepComponent = (): JSX.Element => {
   const store = useContext(PreavisDemissionContext);
@@ -43,66 +44,29 @@ const ResultStepComponent = (): JSX.Element => {
     return <div>Calcul en cours...</div>;
   }
 
+  // Convert PublicodesInformation to AgreementInformation for display
+  const situationsForDisplay =
+    publicodesInformations?.map((info) => ({
+      label: info.question.rule.titre || info.question.name,
+      value: info.info || "",
+      unit: info.question.rule.unité || "",
+    })) || [];
+
   return (
     <div className={fr.cx("fr-col-md-8", "fr-col-12", "fr-mb-6w")}>
-      <h2 className={fr.cx("fr-mt-3w")}>Préavis de démission</h2>
-      <p className={fr.cx("fr-mb-3w", "fr-pr-md-2v")}>
-        À partir des éléments que vous avez saisis
-        {result.value != null && result.value > 0
-          ? ", la durée du préavis de démission est estimée à"
-          : ""}
-        &nbsp;:
-      </p>
-      <p data-testid="resultat">
-        <strong className={fr.cx("fr-h2")}>
-          {result.value != null && result.value > 0 ? (
-            <>
-              {result.value}
-              &nbsp;
-              {result.unit?.toString() || ""}
-            </>
-          ) : (
-            <>il n&apos;y a pas de préavis à effectuer</>
-          )}
-        </strong>
-      </p>
+      <ShowResult
+        result={result}
+        notifications={resultNotifications || []}
+        idccNumber={agreement?.num}
+      />
 
-      {!isAgreementSupported && agreement && (
-        <div className={fr.cx("fr-mt-4w")}>
-          <h3 className={fr.cx("fr-h5")}>
-            Attention il peut exister une autre durée de préavis
-          </h3>
-          <p>
-            L&apos;existence ou la durée du préavis de démission peut être
-            prévue par un accord d&apos;entreprise ou à défaut, par un usage
-            dans l&apos;entreprise.
-          </p>
-        </div>
-      )}
+      <Warning
+        isAgreementSupported={isAgreementSupported}
+        agreement={agreement}
+      />
 
       <h2 className={fr.cx("fr-h4", "fr-mt-4w")}>Détail du calcul</h2>
-      <h3 className={fr.cx("fr-h5", "fr-mb-0")}>Les éléments saisis</h3>
-      <ul>
-        <li data-testid="situation-convention-collective">
-          Convention collective :{" "}
-          <strong>
-            {agreement
-              ? `${agreement.shortTitle} (IDCC ${agreement.num})`
-              : "Code du travail"}
-          </strong>
-        </li>
-        {publicodesInformations &&
-          publicodesInformations.length > 0 &&
-          publicodesInformations.map((info, index) => (
-            <li key={index} data-testid={`situation-${info.question.rule.nom}`}>
-              {info.question.rule.titre || info.question.name} :{" "}
-              <strong>
-                {info.info}
-                {info.question.rule.unité && ` ${info.question.rule.unité}`}
-              </strong>
-            </li>
-          ))}
-      </ul>
+      <Situation situations={situationsForDisplay} agreement={agreement} />
 
       {resultReferences && resultReferences.length > 0 && (
         <div className={fr.cx("fr-mt-4w")}>

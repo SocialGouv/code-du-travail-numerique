@@ -57,13 +57,18 @@ const createResultStore: StoreSliceWrapperPreavisDemission<
       );
 
       try {
-        const publicodesCalculation = publicodes.setSituation(situation);
+        const publicodesCalculation = publicodes.calculate(situation);
+        if (publicodesCalculation.type !== "result") {
+          throw new Error(
+            `Le calcul sur l'écran de résultat retourne un ${publicodesCalculation.type} (detail: ${JSON.stringify(publicodesCalculation)})`
+          );
+        }
         result = publicodesCalculation.result;
-        resultNotifications = publicodes.getNotifications();
-        resultReferences = publicodes.getReferences();
+        resultNotifications = publicodesCalculation.notifications;
+        resultReferences = publicodesCalculation.references;
       } catch (e) {
         errorPublicodes = true;
-
+        console.error("Error in publicodes calculation:", e);
         Sentry.captureException(e);
       }
 
