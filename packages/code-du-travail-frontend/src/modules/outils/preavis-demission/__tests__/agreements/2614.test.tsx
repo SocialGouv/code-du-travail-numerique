@@ -18,7 +18,13 @@ Storage.prototype.getItem = jest.fn(
 
 describe("PreavisDemissionSimulator", () => {
   beforeEach(() => {
-    render(<PreavisDemissionSimulator relatedItems={[]} title={""} displayTitle={""} />);
+    render(
+      <PreavisDemissionSimulator
+        relatedItems={[]}
+        title={""}
+        displayTitle={""}
+      />
+    );
     fireEvent.click(ui.introduction.startButton.get());
 
     fireEvent.click(ui.next.get());
