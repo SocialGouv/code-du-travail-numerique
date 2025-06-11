@@ -1,5 +1,6 @@
 contrat salarié . convention collective . automobiles . catégorie professionnelle:
   titre: Catégorie professionnelle
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -14,6 +15,7 @@ contrat salarié . convention collective . automobiles . catégorie professionne
 
 contrat salarié . convention collective . automobiles . catégorie professionnelle Agents de maîtrise . échelon:
   titre: échelon
+  description: L'échelon du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   question: Quel est l'échelon du salarié ?
   cdtn:
     type: liste
@@ -57,6 +59,7 @@ contrat salarié . convention collective . automobiles . catégorie professionne
 
 contrat salarié . convention collective . automobiles . catégorie professionnelle Ouvriers, Employés . échelon:
   titre: échelon
+  description: L'échelon du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   question: Quel est l'échelon du salarié ?
   cdtn:
     type: liste

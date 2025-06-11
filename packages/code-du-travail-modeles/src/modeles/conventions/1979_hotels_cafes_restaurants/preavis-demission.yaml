@@ -1,5 +1,6 @@
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle:
   titre: Catégorie professionnelle
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -14,6 +15,7 @@ contrat salarié . convention collective . hotels cafes restaurants . catégorie
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Agents de maîtrise . ancienneté:
   titre: ancienneté
+  description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -58,6 +60,7 @@ contrat salarié . convention collective . hotels cafes restaurants . catégorie
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Cadres . ancienneté:
   titre: ancienneté
+  description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -91,6 +94,7 @@ contrat salarié . convention collective . hotels cafes restaurants . catégorie
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Employés . ancienneté:
   titre: ancienneté
+  description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste

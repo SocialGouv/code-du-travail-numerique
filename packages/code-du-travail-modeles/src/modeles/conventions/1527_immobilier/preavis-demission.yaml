@@ -1,5 +1,6 @@
 contrat salarié . convention collective . immobilier . catégorie professionnelle:
   titre: Catégorie professionnelle
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -17,6 +18,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Agents de maîtrise . ancienneté:
   titre: ancienneté
+  description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -60,6 +62,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Cadres VRP . ancienneté:
   titre: ancienneté
+  description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -93,6 +96,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur non VRP . ancienneté:
   titre: ancienneté
+  description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -126,6 +130,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur VRP . ancienneté:
   titre: ancienneté
+  description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -170,6 +175,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Ouvriers, Employés . ancienneté:
   titre: ancienneté
+  description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste

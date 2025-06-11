@@ -4,17 +4,40 @@ import { fr } from "@codegouvfr/react-dsfr";
 
 const ResultStepComponent = (): JSX.Element => {
   const store = useContext(PreavisDemissionContext);
-  const { result, isAgreementSupported, agreement, getPublicodesResult } =
-    usePreavisDemissionStore(store, (state) => ({
-      result: state.resultData.input.result,
-      isAgreementSupported: state.resultData.input.isAgreementSupported,
-      agreement: state.agreementData.input.agreement,
-      getPublicodesResult: state.resultFunction.getPublicodesResult,
-    }));
+  const {
+    result,
+    isAgreementSupported,
+    agreement,
+    getPublicodesResult,
+    publicodesInformations,
+    resultNotifications,
+    resultReferences,
+    errorPublicodes,
+  } = usePreavisDemissionStore(store, (state) => ({
+    result: state.resultData.input.result,
+    isAgreementSupported: state.resultData.input.isAgreementSupported,
+    agreement: state.agreementData.input.agreement,
+    getPublicodesResult: state.resultFunction.getPublicodesResult,
+    publicodesInformations: state.informationsData.input.publicodesInformations,
+    resultNotifications: state.resultData.input.resultNotifications,
+    resultReferences: state.resultData.input.resultReferences,
+    errorPublicodes: state.resultData.error.errorPublicodes,
+  }));
 
   useEffect(() => {
     getPublicodesResult();
   }, [getPublicodesResult]);
+
+  if (errorPublicodes) {
+    return (
+      <div className={fr.cx("fr-col-md-8", "fr-col-12", "fr-mb-6w")}>
+        <div className={fr.cx("fr-alert", "fr-alert--error")}>
+          <h3 className={fr.cx("fr-alert__title")}>Erreur de calcul</h3>
+          <p>Une erreur est survenue lors du calcul. Veuillez réessayer.</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!result) {
     return <div>Calcul en cours...</div>;
@@ -68,7 +91,52 @@ const ResultStepComponent = (): JSX.Element => {
               : "Code du travail"}
           </strong>
         </li>
+        {publicodesInformations &&
+          publicodesInformations.length > 0 &&
+          publicodesInformations.map((info, index) => (
+            <li key={index} data-testid={`situation-${info.question.rule.nom}`}>
+              {info.question.rule.titre || info.question.name} :{" "}
+              <strong>
+                {info.info}
+                {info.question.rule.unité && ` ${info.question.rule.unité}`}
+              </strong>
+            </li>
+          ))}
       </ul>
+
+      {resultReferences && resultReferences.length > 0 && (
+        <div className={fr.cx("fr-mt-4w")}>
+          <h3 className={fr.cx("fr-h5")}>Références juridiques</h3>
+          <ul>
+            {resultReferences.map((ref, index) => (
+              <li key={index}>
+                <strong>{ref.article}</strong>
+                {ref.url && (
+                  <span>
+                    {" - "}
+                    <a href={ref.url} target="_blank" rel="noopener noreferrer">
+                      Consulter
+                    </a>
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {resultNotifications && resultNotifications.length > 0 && (
+        <div className={fr.cx("fr-mt-4w")}>
+          {resultNotifications.map((notification, index) => (
+            <div
+              key={index}
+              className={fr.cx("fr-alert", "fr-alert--info", "fr-mb-2w")}
+            >
+              <p>{notification.description}</p>
+            </div>
+          ))}
+        </div>
+      )}
 
       <div className={fr.cx("fr-mt-4w")}>
         <h3 className={fr.cx("fr-h5")}>Informations importantes</h3>

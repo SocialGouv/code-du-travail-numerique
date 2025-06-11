@@ -1,18 +1,19 @@
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau:
   titre: niveau
+  description: Le niveau du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   question: Quel est le niveau du salarié ?
   cdtn:
     type: liste
     valeurs:
-      I: "'I'"
-      II: "'II'"
-      III: "'III'"
-      IV: "'IV'"
-      V: "'V'"
-      VI: "'VI'"
-      VII: "'VII'"
-      VIII: "'VIII'"
-      IX: "'IX'"
+      I: '''I'''
+      II: '''II'''
+      III: '''III'''
+      IV: '''IV'''
+      V: '''V'''
+      VI: '''VI'''
+      VII: '''VII'''
+      VIII: '''VIII'''
+      IX: '''IX'''
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau I:
   applicable si: niveau = 'I'
@@ -22,7 +23,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
   valeur: 1 mois
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
-    "Chapitre VI, Article 1": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau II:
   applicable si: niveau = 'II'
@@ -32,7 +33,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
   valeur: 1 mois
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
-    "Chapitre VI, Article 1": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau III:
   applicable si: niveau = 'III'
@@ -42,7 +43,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
   valeur: 1 mois
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
-    "Chapitre VI, Article 1": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IV:
   applicable si: niveau = 'IV'
@@ -52,7 +53,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
   valeur: 1 mois
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
-    "Chapitre VI, Article 1": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau V:
   applicable si: niveau = 'V'
@@ -62,7 +63,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
   valeur: 1 mois
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
-    "Chapitre VI, Article 1": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VI:
   applicable si: niveau = 'VI'
@@ -72,7 +73,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
   valeur: 2 mois
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
-    "Chapitre VI, Article 1": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VII:
   applicable si: niveau = 'VII'
@@ -82,7 +83,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
   valeur: 3 mois
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
-    "Chapitre VI, Article 1": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VIII:
   applicable si: niveau = 'VIII'
@@ -92,7 +93,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
   valeur: 3 mois
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
-    "Chapitre VI, Article 1": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IX:
   applicable si: niveau = 'IX'
@@ -102,4 +103,4 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
   valeur: 3 mois
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
-    "Chapitre VI, Article 1": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id
+    Chapitre VI, Article 1: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id

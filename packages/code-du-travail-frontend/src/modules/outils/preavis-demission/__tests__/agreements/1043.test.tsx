@@ -69,10 +69,10 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.logement = 3| logés", () => {
+  describe("criteria.logement = 3| Logé", () => {
     beforeEach(() => {
       fireEvent.change(screen.getByTestId("criteria.logement"), {
-        target: { value: "3| logés" },
+        target: { value: "3| Logé" },
       });
       fireEvent.click(ui.next.get());
     });

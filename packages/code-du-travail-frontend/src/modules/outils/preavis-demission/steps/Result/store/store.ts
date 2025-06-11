@@ -11,6 +11,7 @@ import {
   supportedCcn,
 } from "@socialgouv/modeles-social";
 import { mapToPublicodesSituationForCalculationPreavisDemission } from "../../../../common/publicodes/preavis-demission";
+import { informationToSituation } from "../../../../indemnite-depart/steps/Informations/components/utils";
 
 const initialState: ResultStoreData = {
   input: {
@@ -46,8 +47,13 @@ const createResultStore: StoreSliceWrapperPreavisDemission<
       let resultNotifications: Notification[] | undefined;
       let resultReferences: References[] | undefined;
 
+      const infos = informationToSituation(
+        state.informationsData.input.publicodesInformations
+      );
+
       const situation = mapToPublicodesSituationForCalculationPreavisDemission(
-        agreement?.num
+        agreement?.num,
+        infos
       );
 
       try {

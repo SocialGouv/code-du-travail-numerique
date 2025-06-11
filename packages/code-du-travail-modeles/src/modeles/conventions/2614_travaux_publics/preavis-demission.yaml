@@ -1,5 +1,6 @@
 contrat salarié . convention collective . travaux publics . ancienneté:
   titre: ancienneté
+  description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste

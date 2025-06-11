@@ -15,8 +15,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . gardien concierge . logement":
-          "'Nonlogé'",
-        "contrat salarié . convention collective . gardien concierge . logement Nonlogé . coefficient":
+          "'Non-logé'",
+        "contrat salarié . convention collective . gardien concierge . logement Non-logé . coefficient":
           "'Inférieur ou égal à 602'",
       },
     },
@@ -31,8 +31,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . gardien concierge . logement":
-          "'Nonlogé'",
-        "contrat salarié . convention collective . gardien concierge . logement Nonlogé . coefficient":
+          "'Non-logé'",
+        "contrat salarié . convention collective . gardien concierge . logement Non-logé . coefficient":
           "'Supérieur à 602'",
       },
     },
@@ -47,7 +47,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . gardien concierge . logement":
-          "'logés'",
+          "'Logé'",
       },
     },
   ])(
@@ -81,11 +81,11 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expect(result).toNextMissingQuestionBeEqual("Le salarié est-il logé ?");
     });
 
-    it("doit retourner une erreur si le coefficient n'est pas fourni pour Nonlogé", () => {
+    it("doit retourner une erreur si le coefficient n'est pas fourni pour Non-logé", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC1043'",
         "contrat salarié . convention collective . gardien concierge . logement":
-          "'Nonlogé'",
+          "'Non-logé'",
       });
 
       expect(result).toNextMissingQuestionBeEqual(
@@ -93,11 +93,11 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       );
     });
 
-    it("doit calculer correctement sans demander d'autres questions pour logés", () => {
+    it("doit calculer correctement sans demander d'autres questions pour Logé", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC1043'",
         "contrat salarié . convention collective . gardien concierge . logement":
-          "'logés'",
+          "'Logé'",
       });
 
       expect(result).toResultBeEqual(1, "mois");

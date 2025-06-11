@@ -34,7 +34,7 @@ describe("Test de la fonctionnalité 'calculate' pour la CC 1486 - Préavis de d
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle":
           "'Employés, Techniciens ou Agents de maîtrise ETAM'",
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient":
-          "'de 240 à 355'",
+          "'De 240 à 355'",
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté":
           "'2 ans ou moins'",
       },
@@ -53,7 +53,7 @@ describe("Test de la fonctionnalité 'calculate' pour la CC 1486 - Préavis de d
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle":
           "'Employés, Techniciens ou Agents de maîtrise ETAM'",
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient":
-          "'de 240 à 355'",
+          "'De 240 à 355'",
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté":
           "'Plus de 2 ans'",
       },
@@ -163,7 +163,7 @@ describe("Test de la fonctionnalité 'calculate' pour la CC 1486 - Préavis de d
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle":
           "'Employés, Techniciens ou Agents de maîtrise ETAM'",
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient":
-          "'de 240 à 355'",
+          "'De 240 à 355'",
       });
 
       expect(result).toNextMissingQuestionBeEqual(

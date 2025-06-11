@@ -93,7 +93,7 @@ const createAgreementStore: StoreSliceWrapperPreavisDemission<
           })
         );
       }
-      // Générer les questions publicodes après changement de convention
+      get().informationsFunction.resetQuestions();
       get().informationsFunction.generatePublicodesQuestions();
     },
     onNextStep: (): ValidationResponse => {

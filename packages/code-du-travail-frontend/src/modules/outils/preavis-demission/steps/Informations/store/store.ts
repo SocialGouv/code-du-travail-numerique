@@ -34,6 +34,8 @@ const createInformationsStore: StoreSliceWrapperPreavisDemission<
     generatePublicodesQuestions: (): boolean => {
       const publicodes = get().agreementData.publicodes;
       const agreement = get().agreementData.input.agreement;
+      const existingQuestions =
+        get().informationsData.input.publicodesInformations;
 
       if (!publicodes) {
         return false;
@@ -41,6 +43,11 @@ const createInformationsStore: StoreSliceWrapperPreavisDemission<
 
       if (!agreement) {
         return false;
+      }
+
+      // Si des questions existent déjà, ne pas les régénérer
+      if (existingQuestions.length > 0) {
+        return true;
       }
 
       try {
@@ -63,7 +70,7 @@ const createInformationsStore: StoreSliceWrapperPreavisDemission<
         if (missingArgs.length > 0) {
           const questions = missingArgs.map((arg, index) => ({
             order: index,
-            id: Math.random().toString(36).substring(2, 15),
+            id: `question-${arg.name}-${index}`,
             question: {
               name: arg.name,
               rule: arg.rawNode,
@@ -154,7 +161,7 @@ const createInformationsStore: StoreSliceWrapperPreavisDemission<
             },
             order: questionAnswered.order + index + 1,
             info: undefined,
-            id: Math.random().toString(36).substring(2, 15),
+            id: `question-${arg.name}-${questionAnswered.order + index + 1}`,
           }));
         if (missingArgs.length === 0) {
           newPublicodesInformationsForNextQuestions =
@@ -199,6 +206,16 @@ const createInformationsStore: StoreSliceWrapperPreavisDemission<
         })
       );
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
+    },
+    resetQuestions: () => {
+      set(
+        produce((state: InformationsStoreSlice) => {
+          state.informationsData.input.publicodesInformations = [];
+          state.informationsData.input.hasNoMissingQuestions = true;
+          state.informationsData.error.errorInformations = {};
+          state.informationsData.input.informationError = false;
+        })
+      );
     },
   },
 });
