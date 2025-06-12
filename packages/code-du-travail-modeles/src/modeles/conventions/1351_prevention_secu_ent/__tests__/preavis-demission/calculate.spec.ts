@@ -24,7 +24,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 1, unit: "jour" },
+      expectedResult: { expectedValue: 1, unit: "jour ouvré" },
       expectedReferences: [
         {
           article:
@@ -43,7 +43,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 2, unit: "jours" },
+      expectedResult: { expectedValue: 2, unit: "jours ouvrés" },
       expectedReferences: [
         {
           article:
@@ -62,7 +62,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 7, unit: "jours" },
+      expectedResult: { expectedValue: 7, unit: "jours calendaires" },
       expectedReferences: [
         {
           article:
@@ -138,7 +138,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 1, unit: "jour" },
+      expectedResult: { expectedValue: 1, unit: "jour ouvré" },
       expectedReferences: [
         {
           article:
@@ -157,7 +157,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 2, unit: "jours" },
+      expectedResult: { expectedValue: 2, unit: "jours ouvrés" },
       expectedReferences: [
         {
           article:
@@ -176,7 +176,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 7, unit: "jours" },
+      expectedResult: { expectedValue: 7, unit: "jours calendaires" },
       expectedReferences: [
         {
           article:
@@ -252,7 +252,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 1, unit: "jour" },
+      expectedResult: { expectedValue: 1, unit: "jour ouvré" },
       expectedReferences: [
         {
           article:
@@ -271,7 +271,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 2, unit: "jours" },
+      expectedResult: { expectedValue: 2, unit: "jours ouvrés" },
       expectedReferences: [
         {
           article:
@@ -290,7 +290,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 7, unit: "jours" },
+      expectedResult: { expectedValue: 7, unit: "jours calendaires" },
       expectedReferences: [
         {
           article:
@@ -347,7 +347,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 1, unit: "jour" },
+      expectedResult: { expectedValue: 1, unit: "jour ouvré" },
       expectedReferences: [
         {
           article:
@@ -366,7 +366,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 2, unit: "jours" },
+      expectedResult: { expectedValue: 2, unit: "jours ouvrés" },
       expectedReferences: [
         {
           article:
@@ -385,7 +385,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 4, unit: "jours" },
+      expectedResult: { expectedValue: 14, unit: "jours calendaires" },
       expectedReferences: [
         {
           article:
@@ -442,7 +442,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 1, unit: "jour" },
+      expectedResult: { expectedValue: 1, unit: "jour ouvré" },
       expectedReferences: [
         {
           article:
@@ -461,7 +461,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 2, unit: "jours" },
+      expectedResult: { expectedValue: 2, unit: "jours ouvrés" },
       expectedReferences: [
         {
           article:
@@ -480,7 +480,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 4, unit: "jours" },
+      expectedResult: { expectedValue: 14, unit: "jours calendaires" },
       expectedReferences: [
         {
           article:
@@ -987,7 +987,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 7, unit: "jours" },
+      expectedResult: { expectedValue: 7, unit: "jours calendaires" },
       expectedReferences: [
         {
           article: "Annexe VI: Cadres, article 9",
@@ -1003,7 +1003,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 4, unit: "jours" },
+      expectedResult: { expectedValue: 14, unit: "jours calendaires" },
       expectedReferences: [
         {
           article: "Annexe VI: Cadres, article 9",

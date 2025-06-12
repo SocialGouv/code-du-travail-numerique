@@ -59,7 +59,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté 15 jours à 1 mois . résultat conventionnel:
-  valeur: 1 jour
+  valeur: 1 jour ouvré
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -69,7 +69,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Plus de 1 mois à 2 mois . résultat conventionnel:
-  valeur: 2 jours
+  valeur: 2 jours ouvrés
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -79,7 +79,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Plus de 2 mois à 6 mois . résultat conventionnel:
-  valeur: 7 jours
+  valeur: 7 jours calendaires
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -137,7 +137,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté 15 jours à 1 mois . résultat conventionnel:
-  valeur: 1 jour
+  valeur: 1 jour ouvré
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -147,7 +147,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Plus de 1 mois à 2 mois . résultat conventionnel:
-  valeur: 2 jours
+  valeur: 2 jours ouvrés
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -157,7 +157,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Plus de 2 mois à 6 mois . résultat conventionnel:
-  valeur: 7 jours
+  valeur: 7 jours calendaires
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -215,7 +215,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté 15 jours à 1 mois . résultat conventionnel:
-  valeur: 1 jour
+  valeur: 1 jour ouvré
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -225,7 +225,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Plus de 1 mois à 2 mois . résultat conventionnel:
-  valeur: 2 jours
+  valeur: 2 jours ouvrés
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -235,7 +235,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Plus de 2 mois à 6 mois . résultat conventionnel:
-  valeur: 7 jours
+  valeur: 7 jours calendaires
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -282,7 +282,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté 15 jours à 1 mois . résultat conventionnel:
-  valeur: 1 jour
+  valeur: 1 jour ouvré
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -292,7 +292,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Plus de 1 mois à 2 mois . résultat conventionnel:
-  valeur: 2 jours
+  valeur: 2 jours ouvrés
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -302,7 +302,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Plus de 2 mois à 6 mois . résultat conventionnel:
-  valeur: 4 jours
+  valeur: 14 jours calendaires
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -349,7 +349,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté 15 jours à 1 mois . résultat conventionnel:
-  valeur: 1 jour
+  valeur: 1 jour ouvré
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -359,7 +359,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Plus de 1 mois à 2 mois . résultat conventionnel:
-  valeur: 2 jours
+  valeur: 2 jours ouvrés
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -369,7 +369,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Plus de 2 mois à 6 mois . résultat conventionnel:
-  valeur: 4 jours
+  valeur: 14 jours calendaires
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id
@@ -768,7 +768,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté 15 jours à 1 mois . résultat conventionnel:
-  valeur: 7 jours
+  valeur: 7 jours calendaires
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Annexe VI: Cadres, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id
@@ -778,7 +778,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
   valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Plus de 1 mois à 3 mois . résultat conventionnel:
-  valeur: 4 jours
+  valeur: 14 jours calendaires
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Annexe VI: Cadres, article 9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id
