@@ -7,11 +7,11 @@ contrat salarié . convention collective . gardien concierge . logement:
       Non-logé: "'Non-logé'"
       Logé: "'Logé'"
 
-contrat salarié . convention collective . gardien concierge . logement Non-logé:
+contrat salarié . convention collective . gardien concierge . logement . Non-logé:
   applicable si: logement = 'Non-logé'
   valeur: oui
 
-contrat salarié . convention collective . gardien concierge . logement Non-logé . coefficient:
+contrat salarié . convention collective . gardien concierge . logement . Non-logé . coefficient:
   titre: Coefficient
   description: La coefficient du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   question: Quel est le coefficient hiérarchique du salarié ?
@@ -21,31 +21,31 @@ contrat salarié . convention collective . gardien concierge . logement Non-log�
       Inférieur ou égal à 602: "'Inférieur ou égal à 602'"
       Supérieur à 602: "'Supérieur à 602'"
 
-contrat salarié . convention collective . gardien concierge . logement Non-logé . coefficient Inférieur ou égal à 602:
+contrat salarié . convention collective . gardien concierge . logement . Non-logé . coefficient . Inférieur ou égal à 602:
   applicable si: coefficient = 'Inférieur ou égal à 602'
   valeur: oui
 
-contrat salarié . convention collective . gardien concierge . logement Non-logé . coefficient Inférieur ou égal à 602 . résultat conventionnel:
+contrat salarié . convention collective . gardien concierge . logement . Non-logé . coefficient . Inférieur ou égal à 602 . résultat conventionnel:
   valeur: 8 jours
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     Article 14: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9BE634B39A56D325EB33F7F23B8EC784.tplgfr36s_3?idArticle=KALIARTI000034978399&cidTexte=KALITEXT000021180979&dateTexte=29981231&categorieLien=id
 
-contrat salarié . convention collective . gardien concierge . logement Non-logé . coefficient Supérieur à 602:
+contrat salarié . convention collective . gardien concierge . logement . Non-logé . coefficient . Supérieur à 602:
   applicable si: coefficient = 'Supérieur à 602'
   valeur: oui
 
-contrat salarié . convention collective . gardien concierge . logement Non-logé . coefficient Supérieur à 602 . résultat conventionnel:
+contrat salarié . convention collective . gardien concierge . logement . Non-logé . coefficient . Supérieur à 602 . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     Article 14: https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9BE634B39A56D325EB33F7F23B8EC784.tplgfr36s_3?idArticle=KALIARTI000034978399&cidTexte=KALITEXT000021180979&dateTexte=29981231&categorieLien=id
 
-contrat salarié . convention collective . gardien concierge . logement Logé:
+contrat salarié . convention collective . gardien concierge . logement . Logé:
   applicable si: logement = 'Logé'
   valeur: oui
 
-contrat salarié . convention collective . gardien concierge . logement Logé . résultat conventionnel:
+contrat salarié . convention collective . gardien concierge . logement . Logé . résultat conventionnel:
   valeur: 1 mois
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:

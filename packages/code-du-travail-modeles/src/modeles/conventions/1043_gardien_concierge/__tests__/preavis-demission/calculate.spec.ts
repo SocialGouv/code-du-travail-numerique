@@ -16,7 +16,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       situation: {
         "contrat salarié . convention collective . gardien concierge . logement":
           "'Non-logé'",
-        "contrat salarié . convention collective . gardien concierge . logement Non-logé . coefficient":
+        "contrat salarié . convention collective . gardien concierge . logement . Non-logé . coefficient":
           "'Inférieur ou égal à 602'",
       },
     },
@@ -32,7 +32,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       situation: {
         "contrat salarié . convention collective . gardien concierge . logement":
           "'Non-logé'",
-        "contrat salarié . convention collective . gardien concierge . logement Non-logé . coefficient":
+        "contrat salarié . convention collective . gardien concierge . logement . Non-logé . coefficient":
           "'Supérieur à 602'",
       },
     },

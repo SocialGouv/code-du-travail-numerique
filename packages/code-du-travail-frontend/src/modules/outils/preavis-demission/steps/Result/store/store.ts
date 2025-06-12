@@ -65,7 +65,13 @@ const createResultStore: StoreSliceWrapperPreavisDemission<
         }
         result = publicodesCalculation.result;
         resultNotifications = publicodesCalculation.notifications;
-        resultReferences = publicodesCalculation.references;
+        resultReferences = [
+          {
+            article: "Article L.1237-1 du code du travail",
+            url: "https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174",
+          },
+          ...publicodesCalculation.references,
+        ];
       } catch (e) {
         errorPublicodes = true;
         console.error("Error in publicodes calculation:", e);

@@ -8,7 +8,7 @@ describe("Test de vérification du bug corrigé pour la CC 1043 - Gardien Concie
       "contrat salarié . convention collective": "'IDCC1043'",
       "contrat salarié . convention collective . gardien concierge . logement":
         "'Non-logé'",
-      "contrat salarié . convention collective . gardien concierge . logement Non-logé . coefficient":
+      "contrat salarié . convention collective . gardien concierge . logement . Non-logé . coefficient":
         "'Inférieur ou égal à 602'",
     });
 
@@ -27,7 +27,7 @@ describe("Test de vérification du bug corrigé pour la CC 1043 - Gardien Concie
       "contrat salarié . convention collective": "'IDCC1043'",
       "contrat salarié . convention collective . gardien concierge . logement":
         "'Non-logé'",
-      "contrat salarié . convention collective . gardien concierge . logement Non-logé . coefficient":
+      "contrat salarié . convention collective . gardien concierge . logement . Non-logé . coefficient":
         "'Supérieur à 602'",
     });
 
