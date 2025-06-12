@@ -21,6 +21,7 @@ describe("Suggestion", () => {
   });
   test("accentuation is ignored", async () => {
     const res = await request(server).get("/api/suggest?q=rét");
+    expect(res.body.includes("retraite")).toBeTruthy();
     expect(res.body).toMatchSnapshot();
   });
 

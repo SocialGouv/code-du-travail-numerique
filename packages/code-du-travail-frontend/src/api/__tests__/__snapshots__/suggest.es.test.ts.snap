@@ -3,10 +3,10 @@
 exports[`Suggestion accentuation is ignored 1`] = `
 [
   "renseignements",
+  "déplacement régulier",
   "retraite",
   "repos",
   "réintégration",
-  "déplacement régulier",
 ]
 `;
 
@@ -28,10 +28,10 @@ exports[`Suggestion fuzzy matching works 1`] = `
 exports[`Suggestion should return a list of suggestion 1`] = `
 [
   "renseignements",
-  "déplacement régulier",
   "retraite",
   "repos",
   "réintégration",
+  "déplacement régulier",
 ]
 `;
 
