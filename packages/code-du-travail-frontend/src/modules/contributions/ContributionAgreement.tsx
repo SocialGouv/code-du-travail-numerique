@@ -6,7 +6,6 @@ import { ContributionAgreementContent } from "./ContributionAgreementContent";
 import { Contribution } from "./type";
 import { removeCCNumberFromSlug } from "../common/utils";
 import BlueCard from "../common/BlueCard";
-import Card from "@codegouvfr/react-dsfr/Card";
 import Button from "@codegouvfr/react-dsfr/Button";
 
 type Props = {
@@ -22,18 +21,15 @@ export function ContributionAgreement({ contribution }: Props) {
         <p className={fr.cx("fr-h3", "fr-mt-1w")}>
           Votre convention collective
         </p>
-        <Card
-          title={`${contribution.ccnShortTitle} (IDCC ${contribution.idcc})`}
-          size="small"
-          titleAs="h2"
-          className={fr.cx("fr-mt-2w")}
-          classes={{
-            content: fr.cx("fr-p-2w"),
-            title: cardTitle,
-            start: fr.cx("fr-m-0"),
-            end: fr.cx("fr-p-0", "fr-m-0"),
-          }}
-        />
+        <div className={fr.cx("fr-card", "fr-card--sm", "fr-mt-2w")}>
+          <div className={fr.cx("fr-card__body")}>
+            <div className={fr.cx("fr-card__content", "fr-p-2w")}>
+              <p className={`${fr.cx("fr-card__title")} fw_normal!`}>
+                {contribution.ccnShortTitle} (IDCC {contribution.idcc})
+              </p>
+            </div>
+          </div>
+        </div>
         <Button
           className={fr.cx("fr-mt-2w")}
           linkProps={{

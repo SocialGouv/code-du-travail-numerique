@@ -29,9 +29,13 @@ export function ContributionAgreementContent({
       <div
         className={fr.cx("fr-col-12", "fr-col-md-8", "fr-mb-6w", "fr-mb-md-0")}
       >
-        <ContributionContent contribution={contribution} titleLevel={3} />
+        <ContributionContent contribution={contribution} titleLevel={2} />
         {contribution.references.length > 0 && (
-          <Accordion label="Références" className={fr.cx("fr-mt-6w")}>
+          <Accordion
+            label="Références"
+            titleAs="h2"
+            className={fr.cx("fr-mt-6w")}
+          >
             <ListWithArrow
               items={contribution.references.map(({ title, url }) => {
                 if (!url) return <></>;

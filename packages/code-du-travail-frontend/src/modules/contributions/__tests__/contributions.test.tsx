@@ -101,7 +101,6 @@ describe("<ContributionLayout />", () => {
       fireEvent.click(ccUi.radio.agreementSearchOption.get());
       expect(ccUi.buttonDisplayInfo.query()).toBeInTheDocument();
       expect(ui.generic.linkDisplayInfo.query()).toBeInTheDocument();
-      expect(ui.generic.title.query()).toBeInTheDocument();
       expect(rendering.getByText("my content")).toBeInTheDocument();
       fireEvent.click(ui.generic.linkDisplayInfo.get());
       expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();

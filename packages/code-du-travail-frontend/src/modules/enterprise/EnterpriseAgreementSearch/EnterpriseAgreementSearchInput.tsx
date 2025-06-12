@@ -452,7 +452,7 @@ export const EnterpriseAgreementSearchInput = ({
         <Card
           border
           enlargeLink
-          titleAs={`h${(level ?? 2) + 1}` as "h3" | "h4"}
+          titleAs={level === 2 ? "h3" : "h4"}
           linkProps={
             !onAgreementSelect
               ? {

@@ -31,6 +31,8 @@ export const ContributionGenericContent = forwardRef<
     <>
       <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-px-3v")}>
         <div
+          tabIndex={-1}
+          ref={ref}
           className={fr.cx(
             "fr-col-12",
             "fr-col-md-8",
@@ -41,19 +43,14 @@ export const ContributionGenericContent = forwardRef<
           )}
           id="cdt"
         >
-          <p
-            className={fr.cx("fr-h5")}
-            tabIndex={-1}
-            ref={ref}
-            role="heading"
-            aria-level={2}
-          >
-            Que dit le code du travail&nbsp;?
-          </p>
           {alertText}
-          <ContributionContent contribution={contribution} titleLevel={3} />
+          <ContributionContent contribution={contribution} titleLevel={2} />
           {contribution.references.length > 0 && (
-            <Accordion label="Références" className={fr.cx("fr-mt-6w")}>
+            <Accordion
+              label="Références"
+              titleAs="h2"
+              className={fr.cx("fr-mt-6w")}
+            >
               <ListWithArrow
                 items={contribution.references.map(({ title, url }) => {
                   return (
