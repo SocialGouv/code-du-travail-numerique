@@ -25,33 +25,37 @@ exports[`<Header /> should match snapshot 1`] = `
               <div
                 class="fr-header__logo"
               >
-                <a
-                  href="/"
-                  title="Accueil - Code du travail numérique, Ministère du Travail"
+                <p
+                  class="fr-logo"
                 >
-                  <p
-                    class="fr-logo"
-                  >
-                    RÉPUBLIQUE
-                    <br />
-                    FRANÇAISE
-                  </p>
-                </a>
+                  RÉPUBLIQUE
+                  <br />
+                  FRANÇAISE
+                </p>
+                <p
+                  class="fr-sr-only"
+                >
+                  Liberté égalité fraternité
+                </p>
               </div>
               <div
                 class="fr-header__operator"
               >
-                <img
-                  alt="Code du travail numérique"
-                  class="fr-responsive-img max-w_9.0625rem"
-                  data-nimg="1"
-                  decoding="async"
-                  fetchpriority="high"
-                  height="50"
-                  src="/static/assets/img/logo.svg"
-                  style="color: transparent;"
-                  width="145"
-                />
+                <a
+                  href="/"
+                >
+                  <img
+                    alt="Accueil - Code du travail numérique, Ministère du Travail"
+                    class="fr-responsive-img max-w_9.0625rem"
+                    data-nimg="1"
+                    decoding="async"
+                    fetchpriority="high"
+                    height="50"
+                    src="/static/assets/img/logo.svg"
+                    style="color: transparent;"
+                    width="145"
+                  />
+                </a>
               </div>
               <div
                 class="fr-header__navbar"

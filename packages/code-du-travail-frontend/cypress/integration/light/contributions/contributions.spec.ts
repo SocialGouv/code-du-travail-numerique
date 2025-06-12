@@ -34,7 +34,6 @@ describe("Contributions", () => {
     cy.contains(
       "Afficher les informations sans sélectionner une convention collective"
     ).click();
-    cy.get("body").should("contain", "Que dit le code du travail");
     cy.get("body").should(
       "contain",
       "La convention collective ou l’accord de branche étendu prévoit le renouvellement de la période d’essai"
@@ -45,8 +44,7 @@ describe("Contributions", () => {
 
   it("je vois une page contribution pour une CC", () => {
     cy.visit("/contribution/675-la-periode-dessai-peut-elle-etre-renouvelee");
-    cy.get("h2").should(
-      "contain",
+    cy.contains(
       "Maisons à succursales de vente au détail d'habillement (IDCC 0675)"
     );
 

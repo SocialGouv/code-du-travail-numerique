@@ -23,8 +23,9 @@ const mapItem = (
   domNode: Element,
   summary: Element
 ) => ({
-  content: domToReact(
-    domNode.children as DOMNode[],
+  content: renderChildren(
+    domNode,
+    true,
     options((titleLevel + 1) as numberLevel)
   ),
   title: domToReact(summary.children as DOMNode[], {
@@ -149,10 +150,23 @@ const mapTbody = (tbody: Element) => {
                       return (
                         <tr key={`tr-${rowIndex}`}>
                           {domToReact(
-                            child.children.map((c) => ({
-                              ...c,
-                              name: "th",
-                            })) as DOMNode[],
+                            child.children.map((c) => {
+                              if (c instanceof Element && c.attribs) {
+                                return {
+                                  ...c,
+                                  name: "th",
+                                  attribs: {
+                                    ...c.attribs,
+                                    scope: "col",
+                                  },
+                                };
+                              } else {
+                                return {
+                                  ...c,
+                                  name: "th",
+                                };
+                              }
+                            }) as DOMNode[],
                             {
                               trim: true,
                             }
@@ -163,7 +177,7 @@ const mapTbody = (tbody: Element) => {
                   </thead>
                 </>
               )}
-              <tbody>{renderChildrenWithNoTrim(tbody)}</tbody>
+              <tbody>{renderChildren(tbody, false)}</tbody>
             </table>
           </div>
         </div>
@@ -180,17 +194,33 @@ function getItem(domNode: Element, titleLevel: numberLevel) {
   }
 }
 
-function renderChildrenWithNoTrim(domNode, option?: HTMLReactParserOptions) {
-  return domToReact(domNode.children as DOMNode[], option);
+function renderChildren(
+  domNode,
+  trim: boolean,
+  option?: HTMLReactParserOptions
+) {
+  return domToReact(domNode.children as DOMNode[], {
+    ...option,
+    trim,
+  });
+}
+
+function render(domNode, trim: boolean, option: HTMLReactParserOptions) {
+  return domToReact(domNode, {
+    ...option,
+    trim,
+  });
 }
 
 const getHeadingElement = (titleLevel: numberLevel, domNode) => {
   const Tag = ("h" + titleLevel) as ElementType;
   return titleLevel <= 6 ? (
-    <Tag className={fr.cx("fr-mt-2w")}>{renderChildrenWithNoTrim(domNode)}</Tag>
+    <Tag className={fr.cx("fr-mt-2w")}>
+      {renderChildren(domNode, false, options(titleLevel))}
+    </Tag>
   ) : (
     <strong className={fr.cx("fr-mt-2w")}>
-      {renderChildrenWithNoTrim(domNode)}
+      {renderChildren(domNode, false, options(titleLevel))}
     </strong>
   );
 };
@@ -251,10 +281,8 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
             <Alert
               severity="info"
               small
-              description={domToReact(domNode.children as DOMNode[], {
-                trim: true,
-              })}
-              className={fr.cx("fr-mt-2w")}
+              description={renderChildren(domNode, true, options(titleLevel))}
+              className={fr.cx("fr-mt-2w", "fr-pb-2w")}
             ></Alert>
           );
         }
@@ -276,8 +304,9 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
           return (
             <div>
               <ImageWrapper altText={""} src={toUrl(pictoName)} />
-              {domToReact(
-                domNode.children as DOMNode[],
+              {renderChildren(
+                domNode,
+                true,
                 options(titleLevel as numberLevel)
               )}
               <Tile
@@ -297,20 +326,24 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
           );
         }
         if (domNode.name === "strong") {
-          return <strong>{renderChildrenWithNoTrim(domNode)}</strong>;
+          return (
+            <strong>
+              {renderChildren(domNode, false, options(titleLevel))}
+            </strong>
+          );
         }
         if (domNode.name === "ul") {
           return (
             <ul className={fr.cx("fr-pl-5v")}>
-              {renderChildrenWithNoTrim(domNode, options(titleLevel))}
+              {renderChildren(domNode, false, options(titleLevel))}
             </ul>
           );
         }
         if (domNode.name === "em") {
-          return <em>{renderChildrenWithNoTrim(domNode)}</em>;
+          return <em>{renderChildren(domNode, false, options(titleLevel))}</em>;
         }
         if (domNode.name === "p") {
-          if (!domNode.children.length) {
+          if (domNode.children && !domNode.children.length) {
             return <br />;
           }
           return (
@@ -321,16 +354,14 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
                   : fr.cx("fr-mt-2w")
               }
             >
-              {renderChildrenWithNoTrim(domNode)}
+              {renderChildren(domNode, false, options(titleLevel))}
             </p>
           );
         }
         if (domNode.name === "a") {
           return (
             <Link href={domNode.attribs.href} {...domNode.attribs}>
-              {domToReact(domNode.children as DOMNode[], {
-                trim: true,
-              })}
+              {renderChildren(domNode, true, options(titleLevel))}
             </Link>
           );
         }

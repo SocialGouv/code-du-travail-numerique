@@ -543,11 +543,13 @@ exports[`DisplayContent Alerts should replace div with alert class in li compone
         </p>
         <br />
         <div
-          class="fr-alert fr-alert--info fr-alert--sm fr-mt-2w"
+          class="fr-alert fr-alert--info fr-alert--sm fr-mt-2w fr-pb-2w"
           id="fr-alert-:rh:"
         >
           <div>
-            <p>
+            <p
+              class="fr-mt-2w"
+            >
               <strong>
                 Attention : 
               </strong>
@@ -564,11 +566,13 @@ exports[`DisplayContent Alerts should replace div with alert class in li compone
 exports[`DisplayContent Alerts should replace div with alert class to Alert component 1`] = `
 <div>
   <div
-    class="fr-alert fr-alert--info fr-alert--sm fr-mt-2w"
+    class="fr-alert fr-alert--info fr-alert--sm fr-mt-2w fr-pb-2w"
     id="fr-alert-:rg:"
   >
     <div>
-      <p>
+      <p
+        class="fr-mt-2w"
+      >
         <strong>
           Attention : 
         </strong>
@@ -696,10 +700,12 @@ exports[`DisplayContent Tables should add thead to table if not present and move
                 <th
                   colspan="1"
                   rowspan="1"
+                  scope="col"
                 />
                 <th
                   colspan="1"
                   rowspan="1"
+                  scope="col"
                 >
                   <p>
                     Titre 1
@@ -841,6 +847,7 @@ exports[`DisplayContent Tables should render correctly a table with multiple hea
                   <th
                     colspan="1"
                     rowspan="2"
+                    scope="col"
                   >
                     <p>
                       <strong>
@@ -851,6 +858,7 @@ exports[`DisplayContent Tables should render correctly a table with multiple hea
                   <th
                     colspan="2"
                     rowspan="1"
+                    scope="col"
                   >
                     <p>
                       <strong>
@@ -863,6 +871,7 @@ exports[`DisplayContent Tables should render correctly a table with multiple hea
                   <th
                     colspan="1"
                     rowspan="1"
+                    scope="col"
                   >
                     <p>
                       <strong>
@@ -873,6 +882,7 @@ exports[`DisplayContent Tables should render correctly a table with multiple hea
                   <th
                     colspan="1"
                     rowspan="1"
+                    scope="col"
                   >
                     <p>
                       <strong>
