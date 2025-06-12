@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.183.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.182.0...v4.183.0) (2025-06-12)
+
+
+### Bug Fixes
+
+* accessibility search header ([#6594](https://github.com/SocialGouv/code-du-travail-numerique/issues/6594)) ([249e6fa](https://github.com/SocialGouv/code-du-travail-numerique/commit/249e6fa0ec474f1d59a614fbbedec5e11d28129f))
+* **accessibility:** mauvais focus après avoir répondu ([#6587](https://github.com/SocialGouv/code-du-travail-numerique/issues/6587)) ([c29104e](https://github.com/SocialGouv/code-du-travail-numerique/commit/c29104ebc4ade24cadc7792428b48d901f374ff3))
+* tracking de test ([#6616](https://github.com/SocialGouv/code-du-travail-numerique/issues/6616)) ([1885397](https://github.com/SocialGouv/code-du-travail-numerique/commit/18853974bbc08baa51ad90285ece328dbee1de59))
+* **typo:** indentification vs identification ([#6612](https://github.com/SocialGouv/code-du-travail-numerique/issues/6612)) ([5aa0c26](https://github.com/SocialGouv/code-du-travail-numerique/commit/5aa0c26fc79935ab917a8cbfa32d482263966d6e))
+
+
+### Features
+
+* **information:** migration en DSFR ([#6576](https://github.com/SocialGouv/code-du-travail-numerique/issues/6576)) ([189b4f1](https://github.com/SocialGouv/code-du-travail-numerique/commit/189b4f1eeac6ed89a725315b9dab71ff574b563b))
+* **recherche:** passage de la page en dsfr ([#6566](https://github.com/SocialGouv/code-du-travail-numerique/issues/6566)) ([fcc79d1](https://github.com/SocialGouv/code-du-travail-numerique/commit/fcc79d1263338d7ec2b113eab37b525ce070bfc5))
+* **widget:** passage des pages aux DSFR ([#6589](https://github.com/SocialGouv/code-du-travail-numerique/issues/6589)) ([5203fe9](https://github.com/SocialGouv/code-du-travail-numerique/commit/5203fe98d78a67280afab21491aeaff02f4b7b55))
+
+
+
+
+
 # [4.182.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.181.0...v4.182.0) (2025-05-27)
 
 
