@@ -1,19 +1,23 @@
+import { StoreApi } from "zustand";
 import produce from "immer";
-import { PublicodesSimulator } from "@socialgouv/modeles-social";
-import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
-import {
-  Agreement,
-  AgreementRoute,
-} from "src/modules/outils/indemnite-depart/types";
-import { Enterprise } from "src/modules/enterprise";
+import { push as matopush } from "@socialgouv/matomo-next";
+
+import { PublicodesSimulator, supportedCcn } from "@socialgouv/modeles-social";
 import { StoreSliceWrapperPreavisDemission } from "../../store";
-import {
-  AgreementStoreData,
-  AgreementStoreSlice,
-  AgreementSearchValue,
-} from "./types";
-import { loadPublicodes } from "src/modules/outils/common/publicodes";
+import { AgreementStoreData, AgreementStoreSlice } from "./types";
 import { InformationsStoreSlice } from "../../Informations/store";
+import { captureException } from "@sentry/nextjs";
+import {
+  getAgreementFromLocalStorage,
+  removeAgreementFromLocalStorage,
+  saveAgreementToLocalStorage,
+} from "src/modules/common/useLocalStorage";
+import { MatomoBaseEvent, MatomoSearchAgreementCategory } from "src/lib";
+import { loadPublicodes } from "src/modules/outils/common/publicodes";
+import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
+import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
+import { pushAgreementEvents } from "src/modules/outils/preavis-retraite/events/pushAgreementEvents";
+import { validateStep } from "./validator";
 
 const initialState: Omit<AgreementStoreData, "publicodes"> = {
   input: {
@@ -22,7 +26,7 @@ const initialState: Omit<AgreementStoreData, "publicodes"> = {
   },
   error: {},
   hasBeenSubmit: false,
-  isStepValid: false,
+  isStepValid: true,
 };
 
 const createAgreementStore: StoreSliceWrapperPreavisDemission<
@@ -36,44 +40,76 @@ const createAgreementStore: StoreSliceWrapperPreavisDemission<
     ),
   },
   agreementFunction: {
-    onRouteChange: (value: AgreementRoute) => {
-      set(
-        produce((state: AgreementStoreSlice) => {
-          state.agreementData.input.route = value;
-          state.agreementData.input.agreement = undefined;
-          state.agreementData.input.enterprise = undefined;
-          state.agreementData.error.agreement = undefined;
-          state.agreementData.error.enterprise = undefined;
-          state.agreementData.isStepValid = false;
-        })
-      );
-
-      // Plus besoin de gérer "not-selected" car cette option n'est plus disponible
-    },
     onInitAgreementPage: () => {
-      set(
-        produce((state: AgreementStoreSlice) => {
-          state.agreementData.input.route = "agreement";
-        })
-      );
+      try {
+        const parsedData = getAgreementFromLocalStorage();
+        if (parsedData) {
+          if (parsedData?.num !== get().agreementData.input.agreement?.num) {
+            applyGenericValidation(get, set, "agreement", parsedData);
+            applyGenericValidation(
+              get,
+              set,
+              "route",
+              "agreement" as AgreementRoute
+            );
+            const idcc = parsedData?.num?.toString();
+            if (idcc) {
+              get().informationsFunction.generatePublicodesQuestions();
+              set(
+                produce((state: AgreementStoreSlice) => {
+                  state.agreementData.publicodes =
+                    loadPublicodes<PublicodesSimulator.PREAVIS_DEMISSION>(
+                      PublicodesSimulator.PREAVIS_DEMISSION,
+                      idcc
+                    );
+                })
+              );
+            }
+          }
+        }
+      } catch (e) {
+        console.error(e);
+        captureException(e);
+      }
     },
-    onAgreementChange: (
-      agreement: Agreement | undefined,
-      enterprise?: Enterprise
-    ) => {
+    onRouteChange: (value) => {
+      if (value === "not-selected") {
+        try {
+          applyGenericValidation(get, set, "agreement", undefined);
+          removeAgreementFromLocalStorage();
+          get().informationsFunction.generatePublicodesQuestions();
+          set(
+            produce((state: AgreementStoreSlice) => {
+              state.agreementData.publicodes =
+                loadPublicodes<PublicodesSimulator.PREAVIS_DEMISSION>(
+                  PublicodesSimulator.PREAVIS_DEMISSION
+                );
+            })
+          );
+        } catch (e) {
+          console.error(e);
+          captureException(e);
+        }
+      }
       set(
         produce((state: AgreementStoreSlice) => {
-          state.agreementData.input.agreement = agreement;
-          state.agreementData.input.enterprise = enterprise;
-          state.agreementData.error.agreement = undefined;
-          state.agreementData.error.enterprise = undefined;
-          state.agreementData.isStepValid = !!agreement;
+          state.agreementData.input.enterprise = undefined;
+          state.agreementData.input.agreement = undefined;
+          state.agreementData.input.hasNoEnterpriseSelected = false;
         })
       );
-
-      // Recharger l'instance publicodes avec la nouvelle convention collective
-      const idcc = agreement?.num?.toString();
-      if (idcc) {
+      applyGenericValidation(get, set, "route", value);
+    },
+    onAgreementChange: (agreement, enterprise) => {
+      applyGenericValidation(get, set, "agreement", agreement);
+      if (agreement) {
+        saveAgreementToLocalStorage(agreement);
+      }
+      try {
+        applyGenericValidation(get, set, "enterprise", enterprise);
+        const idcc = agreement?.num?.toString();
+        get().informationsFunction.resetQuestions();
+        get().informationsFunction.generatePublicodesQuestions();
         set(
           produce((state: AgreementStoreSlice) => {
             state.agreementData.publicodes =
@@ -83,60 +119,88 @@ const createAgreementStore: StoreSliceWrapperPreavisDemission<
               );
           })
         );
-      } else {
-        set(
-          produce((state: AgreementStoreSlice) => {
-            state.agreementData.publicodes =
-              loadPublicodes<PublicodesSimulator.PREAVIS_DEMISSION>(
-                PublicodesSimulator.PREAVIS_DEMISSION
-              );
-          })
+      } catch (e) {
+        console.error(e);
+        captureException(e);
+      }
+    },
+    setHasNoEnterpriseSelected: (value) => {
+      applyGenericValidation(
+        get,
+        set,
+        "hasNoEnterpriseSelected",
+        value ? value : false
+      );
+    },
+    onNextStep: () => {
+      const input = get().agreementData.input;
+      const { isValid, errorState } = validateStep(input);
+      const { route, agreement, enterprise } = input;
+      if (isValid && route) {
+        pushAgreementEvents(
+          PublicodesSimulator.PREAVIS_DEMISSION,
+          {
+            route,
+            selected: agreement,
+            enterprise,
+          },
+          true,
+          input.hasNoEnterpriseSelected
         );
       }
-      get().informationsFunction.resetQuestions();
-      get().informationsFunction.generatePublicodesQuestions();
-    },
-    onNextStep: (): ValidationResponse => {
-      const { agreement } = get().agreementData.input;
-
       set(
         produce((state: AgreementStoreSlice) => {
-          state.agreementData.hasBeenSubmit = true;
-          if (!agreement) {
-            state.agreementData.error.agreement =
-              "Vous devez sélectionner une convention collective";
-            state.agreementData.isStepValid = false;
-          } else {
-            state.agreementData.error.agreement = undefined;
-            state.agreementData.isStepValid = true;
-          }
+          state.agreementData.hasBeenSubmit = !isValid;
+          state.agreementData.isStepValid = isValid;
+          state.agreementData.error = errorState;
         })
       );
-
-      return agreement ? ValidationResponse.Valid : ValidationResponse.NotValid;
+      return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
     },
-    onEnterpriseSearch: (value: AgreementSearchValue) => {
-      set(
-        produce((state: AgreementStoreSlice) => {
-          state.agreementData.input.route = "enterprise";
-        })
-      );
+    onAgreementSearch: (data) => {
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoSearchAgreementCategory.AGREEMENT_SEARCH,
+        PublicodesSimulator.PREAVIS_DEMISSION,
+        JSON.stringify(data),
+      ]);
     },
-    onAgreementSearch: (value: AgreementSearchValue) => {
-      set(
-        produce((state: AgreementStoreSlice) => {
-          state.agreementData.input.route = "agreement";
-        })
-      );
-    },
-    setHasNoEnterpriseSelected: (value: boolean) => {
-      set(
-        produce((state: AgreementStoreSlice) => {
-          state.agreementData.input.hasNoEnterpriseSelected = value;
-        })
-      );
+    onEnterpriseSearch: (data) => {
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoSearchAgreementCategory.ENTERPRISE_SEARCH,
+        PublicodesSimulator.PREAVIS_DEMISSION,
+        JSON.stringify(data),
+      ]);
     },
   },
 });
+
+const applyGenericValidation = (
+  get: StoreApi<AgreementStoreSlice>["getState"],
+  set: StoreApi<AgreementStoreSlice>["setState"],
+  paramName: any,
+  value: any
+) => {
+  if (get().agreementData.hasBeenSubmit) {
+    const nextState = produce(get(), (draft) => {
+      draft.agreementData.input[paramName] = value;
+    });
+    const { isValid, errorState } = validateStep(nextState.agreementData.input);
+    set(
+      produce((state: AgreementStoreSlice) => {
+        state.agreementData.error = errorState;
+        state.agreementData.isStepValid = isValid;
+        state.agreementData.input[paramName] = value;
+      })
+    );
+  } else {
+    set(
+      produce((state: AgreementStoreSlice) => {
+        state.agreementData.input[paramName] = value;
+      })
+    );
+  }
+};
 
 export default createAgreementStore;

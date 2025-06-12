@@ -68,15 +68,18 @@ const createInformationsStore: StoreSliceWrapperPreavisDemission<
         );
 
         if (missingArgs.length > 0) {
-          const questions = missingArgs.map((arg, index) => ({
-            order: index,
-            id: `question-${arg.name}-${index}`,
-            question: {
-              name: arg.name,
-              rule: arg.rawNode,
+          const firstMissingArg = missingArgs[0];
+          const questions = [
+            {
+              order: 0,
+              id: `question-${firstMissingArg.name}-0`,
+              question: {
+                name: firstMissingArg.name,
+                rule: firstMissingArg.rawNode,
+              },
+              info: undefined,
             },
-            info: undefined,
-          }));
+          ];
 
           set(
             produce((state: InformationsStoreSlice) => {
@@ -152,17 +155,20 @@ const createInformationsStore: StoreSliceWrapperPreavisDemission<
           informationError = true;
           console.error(e);
         }
-        const newQuestions = missingArgs
-          .sort((a, b) => b.indice - a.indice)
-          .map((arg, index) => ({
-            question: {
-              name: arg.name,
-              rule: arg.rawNode,
-            },
-            order: questionAnswered.order + index + 1,
-            info: undefined,
-            id: `question-${arg.name}-${questionAnswered.order + index + 1}`,
-          }));
+        const newQuestions =
+          missingArgs.length > 0
+            ? [
+                {
+                  question: {
+                    name: missingArgs[0].name,
+                    rule: missingArgs[0].rawNode,
+                  },
+                  order: questionAnswered.order + 1,
+                  info: undefined,
+                  id: `question-${missingArgs[0].name}-${questionAnswered.order + 1}`,
+                },
+              ]
+            : [];
         if (missingArgs.length === 0) {
           newPublicodesInformationsForNextQuestions =
             newPublicodesInformations.filter(
@@ -197,15 +203,53 @@ const createInformationsStore: StoreSliceWrapperPreavisDemission<
     onNextStep: (): ValidationResponse => {
       const state = get().informationsData.input;
       const { isValid, errorState } = validateStep(state);
+
+      // Vérifier que toutes les questions actuelles ont une réponse
+      const allCurrentQuestionsAnswered = state.publicodesInformations.every(
+        (info) =>
+          info.info !== undefined && info.info !== null && info.info !== ""
+      );
+
+      let hasMoreQuestions = false;
+      if (allCurrentQuestionsAnswered && isValid) {
+        try {
+          const publicodes = get().agreementData.publicodes!;
+          const agreement = get().agreementData.input.agreement;
+          const rules = informationToSituation(state.publicodesInformations);
+          const result = publicodes.calculate(
+            mapToPublicodesSituationForCalculationPreavisDemission(
+              agreement?.num,
+              rules
+            )
+          );
+
+          if (result.type === "missing-args") {
+            const missingArgs = result.missingArgs.filter(
+              (item) => item.rawNode.cdtn
+            );
+            hasMoreQuestions = missingArgs.length > 0;
+          }
+        } catch (e) {
+          console.error(e);
+        }
+      }
+
+      const canProceed =
+        isValid && allCurrentQuestionsAnswered && !hasMoreQuestions;
+
       set(
         produce((state: InformationsStoreSlice) => {
           state.informationsData.hasBeenSubmit = isValid ? false : true;
-          state.informationsData.isStepValid =
-            isValid && get().informationsData.input.hasNoMissingQuestions;
+          state.informationsData.isStepValid = canProceed;
+          state.informationsData.input.hasNoMissingQuestions =
+            !hasMoreQuestions;
           state.informationsData.error = errorState;
         })
       );
-      return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
+
+      return canProceed
+        ? ValidationResponse.Valid
+        : ValidationResponse.NotValid;
     },
     resetQuestions: () => {
       set(
