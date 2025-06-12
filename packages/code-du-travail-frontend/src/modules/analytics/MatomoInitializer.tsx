@@ -40,14 +40,6 @@ export const MatomoInitializer = () => {
         if (process.env.NODE_ENV !== "production") {
           push(["setDebugMode", "true"]);
         }
-
-        // Événement de base pour le tracking de page
-        push([
-          "trackEvent",
-          "Heatmap_Test",
-          "Page_Visit",
-          window.location.pathname,
-        ]);
       },
       excludeUrlsPatterns: [WIDGETS_PATH],
     });
