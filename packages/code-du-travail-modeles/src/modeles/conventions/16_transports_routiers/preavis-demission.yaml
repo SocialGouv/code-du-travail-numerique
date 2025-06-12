@@ -39,7 +39,7 @@ contrat salarié . convention collective . transports routiers . catégorie prof
   valeur: oui
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Ouvriers . personnel de conduite:
-  titre: personnel de conduite
+  titre: Personnel de conduite
   question: Le salarié fait-il partie des personnels de conduite du transport de voyageurs ?
   cdtn:
     type: liste
@@ -62,7 +62,7 @@ contrat salarié . convention collective . transports routiers . catégorie prof
   valeur: oui
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Ouvriers . personnel de conduite Non . personnels des entreprises de transport routier de marchandises:
-  titre: personnels des entreprises de transport routier de marchandises
+  titre: Personnels des entreprises de transport routier de marchandises
   question: Le salarié fait-il partie des personnels de transport routier de marchandises ou d'activités auxiliaires du transport ?
   cdtn:
     type: liste
@@ -96,7 +96,7 @@ contrat salarié . convention collective . transports routiers . catégorie prof
   valeur: oui
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Techniciens et agents de maîtrise TAM . groupe:
-  titre: groupe
+  titre: Groupe
   description: Le groupe du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   question: Quel est le groupe professionnel du salarié ?
   cdtn:

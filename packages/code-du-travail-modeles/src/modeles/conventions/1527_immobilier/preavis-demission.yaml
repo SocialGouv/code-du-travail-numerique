@@ -17,7 +17,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
   valeur: oui
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Agents de maîtrise . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -61,7 +61,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
   valeur: oui
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Cadres VRP . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -95,7 +95,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
   valeur: oui
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur non VRP . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -129,7 +129,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
   valeur: oui
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur VRP . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -174,7 +174,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
   valeur: oui
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Ouvriers, Employés . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:

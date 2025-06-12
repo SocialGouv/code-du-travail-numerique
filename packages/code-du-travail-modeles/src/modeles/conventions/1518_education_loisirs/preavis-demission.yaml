@@ -5,25 +5,25 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   cdtn:
     type: liste
     valeurs:
-      Agents de maîtrise et Techniciens: '''Agents de maîtrise et Techniciens'''
-      Animateurs, techniciens et professeurs: '''Animateurs, techniciens et professeurs'''
-      Cadres: '''Cadres'''
-      Ouvriers, Employés: '''Ouvriers, Employés'''
+      Agents de maîtrise et Techniciens: "'Agents de maîtrise et Techniciens'"
+      Animateurs, techniciens et professeurs: "'Animateurs, techniciens et professeurs'"
+      Cadres: "'Cadres'"
+      Ouvriers, Employés: "'Ouvriers, Employés'"
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens:
   applicable si: catégorie professionnelle = 'Agents de maîtrise et Techniciens'
   valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe:
-  titre: groupe
+  titre: Groupe
   description: Le groupe du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste
     valeurs:
-      '4': '''4'''
-      '5': '''5'''
-      '6': '''6'''
+      "4": "'4'"
+      "5": "'5'"
+      "6": "'6'"
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 4:
   applicable si: groupe = '4'
@@ -60,14 +60,14 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau:
-  titre: niveau
+  titre: Niveau
   description: Le niveau du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   question: Quel est le niveau du salarié ?
   cdtn:
     type: liste
     valeurs:
-      A: '''A'''
-      B: '''B'''
+      A: "'A'"
+      B: "'B'"
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau A:
   applicable si: niveau = 'A'
@@ -94,14 +94,14 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Cadres . groupe:
-  titre: groupe
+  titre: Groupe
   description: Le groupe du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste
     valeurs:
-      '7': '''7'''
-      '8': '''8'''
+      "7": "'7'"
+      "8": "'8'"
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Cadres . groupe 7:
   applicable si: groupe = '7'
@@ -128,14 +128,14 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe:
-  titre: groupe
+  titre: Groupe
   description: Le groupe du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste
     valeurs:
-      '2': '''2'''
-      '3': '''3'''
+      "2": "'2'"
+      "3": "'3'"
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 2:
   applicable si: groupe = '2'

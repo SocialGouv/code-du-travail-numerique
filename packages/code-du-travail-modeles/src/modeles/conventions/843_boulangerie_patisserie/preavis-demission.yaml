@@ -23,7 +23,7 @@ contrat salarié . convention collective . boulangerie patisserie . catégorie p
   valeur: oui
 
 contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:

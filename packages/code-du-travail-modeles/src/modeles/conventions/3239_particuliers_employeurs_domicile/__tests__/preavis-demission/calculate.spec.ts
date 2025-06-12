@@ -6,7 +6,12 @@ describe("Test de la fonctionnalité 'calculate'", () => {
   test.each([
     {
       expectedResult: { expectedValue: 1, unit: "semaine" },
-      expectedReferences: [],
+      expectedReferences: [
+        {
+          article: "Article 162-6 de la convention collective",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942455#KALIARTI000043942455",
+        },
+      ],
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle":
@@ -17,7 +22,12 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     },
     {
       expectedResult: { expectedValue: 2, unit: "semaines" },
-      expectedReferences: [],
+      expectedReferences: [
+        {
+          article: "Article 162-6 de la convention collective",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942455#KALIARTI000043942455",
+        },
+      ],
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle":
@@ -28,7 +38,12 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     },
     {
       expectedResult: { expectedValue: 1, unit: "mois" },
-      expectedReferences: [],
+      expectedReferences: [
+        {
+          article: "Article 162-6 de la convention collective",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942455#KALIARTI000043942455",
+        },
+      ],
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle":
@@ -60,10 +75,10 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 5, unit: "jours" },
+      expectedResult: { expectedValue: 15, unit: "jours" },
       expectedReferences: [
         {
-          article: "Art. L. 423-26 du Code de l’action sociale et des familles",
+          article: "Art. L. 423-26 du Code de l'action sociale et des familles",
           url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054",
         },
         {

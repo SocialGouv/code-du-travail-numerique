@@ -39,7 +39,7 @@ contrat salarié . convention collective . bureaux études techniques . catégor
   valeur: oui
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -75,7 +75,7 @@ contrat salarié . convention collective . bureaux études techniques . catégor
   valeur: oui
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500 . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:

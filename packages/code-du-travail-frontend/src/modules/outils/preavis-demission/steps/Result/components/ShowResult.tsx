@@ -48,6 +48,12 @@ const ShowResult: React.FC<Props> = ({
           : ""}
         &nbsp;:
       </p>
+      {/* {situation.answer3 && parseInt(situation.answer3, 10) === 0 && (
+        <p>
+          Le code du travail ne prévoit pas de durée de préavis de démission
+          sauf, cas particuliers.
+        </p>
+      )} */}
       <p data-testid="resultat">
         <strong className={fr.cx("fr-h2")}>
           {result.value != null && result.value > 0 ? (

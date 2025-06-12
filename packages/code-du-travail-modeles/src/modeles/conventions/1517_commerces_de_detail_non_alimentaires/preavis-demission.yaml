@@ -1,19 +1,19 @@
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau:
-  titre: niveau
+  titre: Niveau
   description: Le niveau du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   question: Quel est le niveau du salarié ?
   cdtn:
     type: liste
     valeurs:
-      I: '''I'''
-      II: '''II'''
-      III: '''III'''
-      IV: '''IV'''
-      V: '''V'''
-      VI: '''VI'''
-      VII: '''VII'''
-      VIII: '''VIII'''
-      IX: '''IX'''
+      I: "'I'"
+      II: "'II'"
+      III: "'III'"
+      IV: "'IV'"
+      V: "'V'"
+      VI: "'VI'"
+      VII: "'VII'"
+      VIII: "'VIII'"
+      IX: "'IX'"
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau I:
   applicable si: niveau = 'I'

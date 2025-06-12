@@ -12,7 +12,7 @@ contrat salarié . convention collective . ouvriers travaux public . catégorie 
   valeur: oui
 
 contrat salarié . convention collective . ouvriers travaux public . catégorie professionnelle Ouvriers . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:

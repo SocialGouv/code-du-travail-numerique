@@ -1,14 +1,14 @@
 contrat salarié . convention collective . métallurgie . groupe:
-  titre: groupe
+  titre: Groupe
   description: Le groupe du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste
     valeurs:
-      A ou B: '''A ou B'''
-      C: '''C'''
-      D ou E: '''D ou E'''
-      F, G, H ou I: '''F, G, H ou I'''
+      A ou B: "'A ou B'"
+      C: "'C'"
+      D ou E: "'D ou E'"
+      F, G, H ou I: "'F, G, H ou I'"
 
 contrat salarié . convention collective . métallurgie . groupe A ou B:
   applicable si: groupe = 'A ou B'

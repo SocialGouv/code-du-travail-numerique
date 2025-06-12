@@ -1,26 +1,26 @@
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail:
-  titre: conclusion contrat travail
+  titre: Conclusion contrat travail
   question: Quelle est la date d'entrée du salarié dans l'entreprise?
   cdtn:
     type: liste
     valeurs:
-      Contrat de travail conclu avant le 1er juillet 2009: '''Contrat de travail conclu avant le 1er juillet 2009'''
-      Contrat de travail conclu après le 1er juillet 2009: '''Contrat de travail conclu après le 1er juillet 2009'''
+      Contrat de travail conclu avant le 1er juillet 2009: "'Contrat de travail conclu avant le 1er juillet 2009'"
+      Contrat de travail conclu après le 1er juillet 2009: "'Contrat de travail conclu après le 1er juillet 2009'"
 
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009:
   applicable si: conclusion contrat travail = 'Contrat de travail conclu avant le 1er juillet 2009'
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 . groupe:
-  titre: groupe
+  titre: Groupe
   description: Le groupe du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste
     valeurs:
-      '4': '''4'''
-      1 à 3: '''1 à 3'''
-      5 et suivants: '''5 et suivants'''
+      "4": "'4'"
+      1 à 3: "'1 à 3'"
+      5 et suivants: "'5 et suivants'"
 
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 . groupe 1 à 3:
   applicable si: groupe = '1 à 3'
@@ -57,15 +57,15 @@ contrat salarié . convention collective . industrie pharmaceutique . conclusion
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 . groupe:
-  titre: groupe
+  titre: Groupe
   description: Le groupe du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste
     valeurs:
-      1 à 3: '''1 à 3'''
-      4 à 5: '''4 à 5'''
-      6 et suivants: '''6 et suivants'''
+      1 à 3: "'1 à 3'"
+      4 à 5: "'4 à 5'"
+      6 et suivants: "'6 et suivants'"
 
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 . groupe 1 à 3:
   applicable si: groupe = '1 à 3'

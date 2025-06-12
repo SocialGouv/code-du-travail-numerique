@@ -25,7 +25,7 @@ contrat salarié . convention collective . restauration rapide . catégorie prof
   valeur: oui
 
 contrat salarié . convention collective . restauration rapide . catégorie professionnelle Employés . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -70,7 +70,7 @@ contrat salarié . convention collective . restauration rapide . catégorie prof
   valeur: oui
 
 contrat salarié . convention collective . restauration rapide . catégorie professionnelle Maîtrises . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -104,7 +104,7 @@ contrat salarié . convention collective . restauration rapide . catégorie prof
   valeur: oui
 
 contrat salarié . convention collective . restauration rapide . catégorie professionnelle Ouvriers . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:

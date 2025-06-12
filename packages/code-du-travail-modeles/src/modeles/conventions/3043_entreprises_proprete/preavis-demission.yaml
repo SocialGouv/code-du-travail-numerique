@@ -15,7 +15,7 @@ contrat salarié . convention collective . entreprises de propreté . catégorie
   valeur: oui
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Agents de propreté . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
@@ -80,7 +80,7 @@ contrat salarié . convention collective . entreprises de propreté . catégorie
   valeur: oui
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est l'ancienneté du salarié ?
   cdtn:

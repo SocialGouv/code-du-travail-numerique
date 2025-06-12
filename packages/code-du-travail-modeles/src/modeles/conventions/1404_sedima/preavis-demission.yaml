@@ -5,10 +5,10 @@ contrat salarié . convention collective . sedima . catégorie professionnelle:
   cdtn:
     type: liste
     valeurs:
-      Agents de maîtrise niveau IV et V: '''Agents de maîtrise niveau IV et V'''
-      Cadres niveau VI et plus: '''Cadres niveau VI et plus'''
-      Ouvriers, Employés niveau III: '''Ouvriers, Employés niveau III'''
-      Ouvriers, Employés niveaux I et II: '''Ouvriers, Employés niveaux I et II'''
+      Agents de maîtrise niveau IV et V: "'Agents de maîtrise niveau IV et V'"
+      Cadres niveau VI et plus: "'Cadres niveau VI et plus'"
+      Ouvriers, Employés niveau III: "'Ouvriers, Employés niveau III'"
+      Ouvriers, Employés niveaux I et II: "'Ouvriers, Employés niveaux I et II'"
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Agents de maîtrise niveau IV et V:
   applicable si: catégorie professionnelle = 'Agents de maîtrise niveau IV et V'
@@ -35,13 +35,13 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
   valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveau III . niveau:
-  titre: niveau
+  titre: Niveau
   description: Le niveau du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   question: Quel est le niveau du salarié ?
   cdtn:
     type: liste
     valeurs:
-      III: '''III'''
+      III: "'III'"
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveau III . niveau III:
   applicable si: niveau = 'III'
@@ -58,13 +58,13 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
   valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveaux I et II . niveau:
-  titre: niveau
+  titre: Niveau
   description: Le niveau du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   question: Quel est le niveau du salarié ?
   cdtn:
     type: liste
     valeurs:
-      I à II: '''I à II'''
+      I à II: "'I à II'"
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés niveaux I et II . niveau I à II:
   applicable si: niveau = 'I à II'
