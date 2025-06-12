@@ -15,14 +15,11 @@ export const HeaderBrand = () => {
           <p className={fr.cx("fr-sr-only")}>Liberté égalité fraternité</p>
         </div>
         <div className={fr.cx("fr-header__operator")}>
-          <a
-            title="Accueil - Code du travail numérique, Ministère du Travail"
-            href="/"
-          >
+          <a href="/">
             <Image
               className={`${fr.cx("fr-responsive-img")} ${Logo}`}
               src="/static/assets/img/logo.svg"
-              alt=""
+              alt="Accueil - Code du travail numérique, Ministère du Travail"
               width={145}
               height={50}
               priority
