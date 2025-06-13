@@ -110,7 +110,7 @@ export const SearchAgreementInput = ({
         data-testid="agreement-search-input"
         id="agreement-search"
         placeholder={"Ex : Transports routiers ou 1486"}
-        type="search"
+        type="text"
       />
 
       <StyledUl

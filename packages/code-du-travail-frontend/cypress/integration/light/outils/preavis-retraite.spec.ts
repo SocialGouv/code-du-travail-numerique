@@ -107,7 +107,7 @@ describe("Outil - Préavis de retraite", () => {
       .first()
       .click();
     cy.contains("Précisez et sélectionnez votre convention collective");
-    cy.get('input[type="search"]').eq(1).type("843");
+    cy.get('input[type="text"]').eq(1).type("843");
     cy.get('ul[role="listbox"] li').contains("Boulangerie").click();
     cy.get("button").contains("Suivant").click();
 
