@@ -8,7 +8,12 @@ import {
   elasticsearchClient,
   NotFoundError,
 } from "../../utils";
-import { getModeles, getModelesByIds } from "./queries";
+import {
+  getModeleBySlug,
+  getModeles,
+  getModelesByIds,
+  getModelesBySlugs,
+} from "./queries";
 
 export const getAllModeles = async () => {
   const body = getModeles();
