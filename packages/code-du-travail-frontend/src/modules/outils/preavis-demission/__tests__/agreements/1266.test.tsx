@@ -33,9 +33,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 48| Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - restauration collectivités - catégorie professionnelle"
+        ),
         {
-          target: { value: "48| Cadres" },
+          target: { value: "'Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -51,9 +53,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 16| Employés", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - restauration collectivités - catégorie professionnelle"
+        ),
         {
-          target: { value: "16| Employés" },
+          target: { value: "'Employés'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -61,9 +65,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.ancienneté = 15| Moins de 6 mois", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "15| Moins de 6 mois" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - restauration collectivités - catégorie professionnelle Employés - ancienneté"
+          ),
+          {
+            target: { value: "'Moins de 6 mois'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -76,9 +85,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "35| 6 mois à 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - restauration collectivités - catégorie professionnelle Employés - ancienneté"
+          ),
+          {
+            target: { value: "'6 mois à 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -91,9 +105,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "43| Plus de 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - restauration collectivités - catégorie professionnelle Employés - ancienneté"
+          ),
+          {
+            target: { value: "'Plus de 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -108,9 +127,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 26| Maîtrises", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - restauration collectivités - catégorie professionnelle"
+        ),
         {
-          target: { value: "26| Maîtrises" },
+          target: { value: "'Maîtrises'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -118,9 +139,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.ancienneté = 15| Moins de 6 mois", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "15| Moins de 6 mois" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - restauration collectivités - catégorie professionnelle Maîtrises - ancienneté"
+          ),
+          {
+            target: { value: "'Moins de 6 mois'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -133,9 +159,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "35| 6 mois à 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - restauration collectivités - catégorie professionnelle Maîtrises - ancienneté"
+          ),
+          {
+            target: { value: "'6 mois à 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -148,9 +179,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "43| Plus de 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - restauration collectivités - catégorie professionnelle Maîtrises - ancienneté"
+          ),
+          {
+            target: { value: "'Plus de 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 

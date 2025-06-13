@@ -30,12 +30,14 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 48| Cadres", () => {
+  describe("criteria.catégorie professionnelle = 'Cadres'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - pharmacie - catégorie professionnelle"
+        ),
         {
-          target: { value: "48| Cadres" },
+          target: { value: "'Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -52,12 +54,14 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 38| Non-cadres", () => {
+  describe("criteria.catégorie professionnelle = 'Non-cadres'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - pharmacie - catégorie professionnelle"
+        ),
         {
-          target: { value: "38| Non-cadres" },
+          target: { value: "'Non-cadres'" },
         }
       );
       fireEvent.click(ui.next.get());

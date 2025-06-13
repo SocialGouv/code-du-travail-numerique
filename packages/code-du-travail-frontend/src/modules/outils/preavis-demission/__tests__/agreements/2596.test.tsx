@@ -30,12 +30,14 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 23| Agents de maîtrise", () => {
+  describe("criteria.catégorie professionnelle = 'Agents de maîtrise'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle"
+        ),
         {
-          target: { value: "23| Agents de maîtrise" },
+          target: { value: "'Agents de maîtrise'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -48,12 +50,14 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 48| Cadres", () => {
+  describe("criteria.catégorie professionnelle = 'Cadres'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle"
+        ),
         {
-          target: { value: "48| Cadres" },
+          target: { value: "'Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -66,24 +70,31 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 33| Salariés occupant un emploi de l'esthétique-cosmétique", () => {
+  describe("criteria.catégorie professionnelle = 'Salariés occupant un emploi de l'esthétiquecosmétique'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle"
+        ),
         {
           target: {
-            value: "33| Salariés occupant un emploi de l'esthétique-cosmétique",
+            value: "'Salariés occupant un emploi de l'esthétiquecosmétique'",
           },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 21| 6 mois ou moins", () => {
+    describe("criteria.ancienneté = '6 mois ou moins'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "21| 6 mois ou moins" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique - ancienneté"
+          ),
+          {
+            target: { value: "'6 mois ou moins'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -94,11 +105,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 22| Plus de 6 mois", () => {
+    describe("criteria.ancienneté = 'Plus de 6 mois'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "22| Plus de 6 mois" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique - ancienneté"
+          ),
+          {
+            target: { value: "'Plus de 6 mois'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -110,25 +126,31 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 32| Salariés occupant un emploi non-technique de la coiffure", () => {
+  describe("criteria.catégorie professionnelle = 'Salariés occupant un emploi nontechnique de la coiffure'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle"
+        ),
         {
           target: {
-            value:
-              "32| Salariés occupant un emploi non-technique de la coiffure",
+            value: "'Salariés occupant un emploi nontechnique de la coiffure'",
           },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 21| 6 mois ou moins", () => {
+    describe("criteria.ancienneté = '6 mois ou moins'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "21| 6 mois ou moins" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure - ancienneté"
+          ),
+          {
+            target: { value: "'6 mois ou moins'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -139,11 +161,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 22| Plus de 6 mois", () => {
+    describe("criteria.ancienneté = 'Plus de 6 mois'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "22| Plus de 6 mois" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure - ancienneté"
+          ),
+          {
+            target: { value: "'Plus de 6 mois'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -155,24 +182,31 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 31| Salariés occupant un emploi technique de la coiffure", () => {
+  describe("criteria.catégorie professionnelle = 'Salariés occupant un emploi technique de la coiffure'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle"
+        ),
         {
           target: {
-            value: "31| Salariés occupant un emploi technique de la coiffure",
+            value: "'Salariés occupant un emploi technique de la coiffure'",
           },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 21| 6 mois ou moins", () => {
+    describe("criteria.ancienneté = '6 mois ou moins'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "21| 6 mois ou moins" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi technique de la coiffure - ancienneté"
+          ),
+          {
+            target: { value: "'6 mois ou moins'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -183,11 +217,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 22| Plus de 6 mois", () => {
+    describe("criteria.ancienneté = 'Plus de 6 mois'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "22| Plus de 6 mois" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi technique de la coiffure - ancienneté"
+          ),
+          {
+            target: { value: "'Plus de 6 mois'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 

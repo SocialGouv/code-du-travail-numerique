@@ -30,11 +30,16 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+  describe("criteria.ancienneté = 'Moins de 2 ans'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-        target: { value: "38| Moins de 2 ans" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - travaux publics - ancienneté"
+        ),
+        {
+          target: { value: "'Moins de 2 ans'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -47,11 +52,16 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+  describe("criteria.ancienneté = '2 ans ou plus'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-        target: { value: "42| 2 ans ou plus" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - travaux publics - ancienneté"
+        ),
+        {
+          target: { value: "'2 ans ou plus'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 

@@ -30,22 +30,29 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 100| Salariés du particulier employeur", () => {
+  describe("criteria.catégorie professionnelle = 'Salariés du particulier employeur'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle"
+        ),
         {
-          target: { value: "100| Salariés du particulier employeur" },
+          target: { value: "'Salariés du particulier employeur'" },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 15| Moins de 6 mois", () => {
+    describe("criteria.ancienneté = 'Moins de 6 mois'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "15| Moins de 6 mois" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle Salariés du particulier employeur - ancienneté"
+          ),
+          {
+            target: { value: "'Moins de 6 mois'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -58,11 +65,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
+    describe("criteria.ancienneté = '6 mois à 2 ans'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "35| 6 mois à 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle Salariés du particulier employeur - ancienneté"
+          ),
+          {
+            target: { value: "'6 mois à 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -75,11 +87,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+    describe("criteria.ancienneté = '2 ans ou plus'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "42| 2 ans ou plus" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle Salariés du particulier employeur - ancienneté"
+          ),
+          {
+            target: { value: "'2 ans ou plus'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -93,24 +110,31 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 101| Assistants maternels du particulier employeur", () => {
+  describe("criteria.catégorie professionnelle = 'Assistants maternels du particulier employeur'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle"
+        ),
         {
           target: {
-            value: "101| Assistants maternels du particulier employeur",
+            value: "'Assistants maternels du particulier employeur'",
           },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 105| Enfant accueilli depuis moins de 3 mois", () => {
+    describe("criteria.ancienneté = 'Enfant accueilli depuis moins de 3 mois'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "105| Enfant accueilli depuis moins de 3 mois" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle Assistants maternels du particulier employeur - ancienneté"
+          ),
+          {
+            target: { value: "'Enfant accueilli depuis moins de 3 mois'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -128,11 +152,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 106| Enfant accueilli de 3 mois à moins d'un an", () => {
+    describe("criteria.ancienneté = 'Enfant accueilli de 3 mois à moins d'un an'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "106| Enfant accueilli de 3 mois à moins d'un an" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle Assistants maternels du particulier employeur - ancienneté"
+          ),
+          {
+            target: { value: "'Enfant accueilli de 3 mois à moins d'un an'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -152,11 +181,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 107| Enfant accueilli depuis 1 an et plus", () => {
+    describe("criteria.ancienneté = 'Enfant accueilli depuis 1 an et plus'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "107| Enfant accueilli depuis 1 an et plus" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle Assistants maternels du particulier employeur - ancienneté"
+          ),
+          {
+            target: { value: "'Enfant accueilli depuis 1 an et plus'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 

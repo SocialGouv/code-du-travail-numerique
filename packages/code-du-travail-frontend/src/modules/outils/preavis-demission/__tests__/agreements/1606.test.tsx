@@ -30,12 +30,14 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 23| Agents de maîtrise", () => {
+  describe("criteria.catégorie professionnelle = 'Agents de maîtrise'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - bricolage - catégorie professionnelle"
+        ),
         {
-          target: { value: "23| Agents de maîtrise" },
+          target: { value: "'Agents de maîtrise'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -50,12 +52,14 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 48| Cadres", () => {
+  describe("criteria.catégorie professionnelle = 'Cadres'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - bricolage - catégorie professionnelle"
+        ),
         {
-          target: { value: "48| Cadres" },
+          target: { value: "'Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -70,12 +74,14 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 16| Employés", () => {
+  describe("criteria.catégorie professionnelle = 'Employés'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - bricolage - catégorie professionnelle"
+        ),
         {
-          target: { value: "16| Employés" },
+          target: { value: "'Employés'" },
         }
       );
       fireEvent.click(ui.next.get());

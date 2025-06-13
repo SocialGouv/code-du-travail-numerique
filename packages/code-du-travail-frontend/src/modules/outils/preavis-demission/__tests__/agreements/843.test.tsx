@@ -33,9 +33,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 48| Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - boulangerie patisserie - catégorie professionnelle"
+        ),
         {
-          target: { value: "48| Cadres" },
+          target: { value: "'Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -55,11 +57,13 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 35| Personnel de fabrication, personnel de vente et personnel de services", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - boulangerie patisserie - catégorie professionnelle"
+        ),
         {
           target: {
             value:
-              "35| Personnel de fabrication, personnel de vente et personnel de services",
+              "'Personnel de fabrication, personnel de vente et personnel de services'",
           },
         }
       );
@@ -68,9 +72,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.ancienneté = 15| Moins de 6 mois", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "15| Moins de 6 mois" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - boulangerie patisserie - catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services - ancienneté"
+          ),
+          {
+            target: { value: "'Moins de 6 mois'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -85,9 +94,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.ancienneté = 22| Plus de 6 mois", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "22| Plus de 6 mois" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - boulangerie patisserie - catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services - ancienneté"
+          ),
+          {
+            target: { value: "'Plus de 6 mois'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 

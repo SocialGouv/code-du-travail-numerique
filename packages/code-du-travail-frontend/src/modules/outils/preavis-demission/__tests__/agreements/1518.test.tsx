@@ -30,22 +30,29 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 21| Agents de maîtrise et Techniciens", () => {
+  describe("criteria.catégorie professionnelle = 'Agents de maîtrise et Techniciens'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle"
+        ),
         {
-          target: { value: "21| Agents de maîtrise et Techniciens" },
+          target: { value: "'Agents de maîtrise et Techniciens'" },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.groupe = 15| 4", () => {
+    describe("criteria.groupe = '4'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "15| 4" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Agents de maîtrise et Techniciens - groupe"
+          ),
+          {
+            target: { value: "'4'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -56,11 +63,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.groupe = 16| 5", () => {
+    describe("criteria.groupe = '5'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "16| 5" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Agents de maîtrise et Techniciens - groupe"
+          ),
+          {
+            target: { value: "'5'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -71,11 +83,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.groupe = 17| 6", () => {
+    describe("criteria.groupe = '6'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "17| 6" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Agents de maîtrise et Techniciens - groupe"
+          ),
+          {
+            target: { value: "'6'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -87,22 +104,29 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 45| Animateurs, techniciens et professeurs", () => {
+  describe("criteria.catégorie professionnelle = 'Animateurs, techniciens et professeurs'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle"
+        ),
         {
-          target: { value: "45| Animateurs, techniciens et professeurs" },
+          target: { value: "'Animateurs, techniciens et professeurs'" },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.niveau = 13| A", () => {
+    describe("criteria.niveau = 'A'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.niveau"), {
-          target: { value: "13| A" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Animateurs, techniciens et professeurs - niveau"
+          ),
+          {
+            target: { value: "'A'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -113,11 +137,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.niveau = 14| B", () => {
+    describe("criteria.niveau = 'B'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.niveau"), {
-          target: { value: "14| B" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Animateurs, techniciens et professeurs - niveau"
+          ),
+          {
+            target: { value: "'B'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -129,22 +158,29 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 48| Cadres", () => {
+  describe("criteria.catégorie professionnelle = 'Cadres'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle"
+        ),
         {
-          target: { value: "48| Cadres" },
+          target: { value: "'Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.groupe = 18| 7", () => {
+    describe("criteria.groupe = '7'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "18| 7" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Cadres - groupe"
+          ),
+          {
+            target: { value: "'7'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -155,11 +191,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.groupe = 19| 8", () => {
+    describe("criteria.groupe = '8'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "19| 8" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Cadres - groupe"
+          ),
+          {
+            target: { value: "'8'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -171,22 +212,29 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 6| Ouvriers, Employés", () => {
+  describe("criteria.catégorie professionnelle = 'Ouvriers, Employés'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle"
+        ),
         {
-          target: { value: "6| Ouvriers, Employés" },
+          target: { value: "'Ouvriers, Employés'" },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.groupe = 13| 2", () => {
+    describe("criteria.groupe = '2'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "13| 2" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Ouvriers, Employés - groupe"
+          ),
+          {
+            target: { value: "'2'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -197,11 +245,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.groupe = 14| 3", () => {
+    describe("criteria.groupe = '3'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "14| 3" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Ouvriers, Employés - groupe"
+          ),
+          {
+            target: { value: "'3'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 

@@ -30,12 +30,14 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 48| Cadres", () => {
+  describe("criteria.catégorie professionnelle = 'Cadres'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - sport - catégorie professionnelle"
+        ),
         {
-          target: { value: "48| Cadres" },
+          target: { value: "'Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -50,12 +52,14 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 6| Ouvriers, Employés", () => {
+  describe("criteria.catégorie professionnelle = 'Ouvriers, Employés'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - sport - catégorie professionnelle"
+        ),
         {
-          target: { value: "6| Ouvriers, Employés" },
+          target: { value: "'Ouvriers, Employés'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -70,12 +74,14 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 27| Techniciens et agents de maîtrise (TAM)", () => {
+  describe("criteria.catégorie professionnelle = 'Techniciens et agents de maîtrise TAM'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - sport - catégorie professionnelle"
+        ),
         {
-          target: { value: "27| Techniciens et agents de maîtrise (TAM)" },
+          target: { value: "'Techniciens et agents de maîtrise TAM'" },
         }
       );
       fireEvent.click(ui.next.get());

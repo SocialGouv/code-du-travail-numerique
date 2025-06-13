@@ -33,9 +33,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 16| Employés", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle"
+        ),
         {
-          target: { value: "16| Employés" },
+          target: { value: "'Employés'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -53,9 +55,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 61| Ingénieurs et Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle"
+        ),
         {
-          target: { value: "61| Ingénieurs et Cadres" },
+          target: { value: "'Ingénieurs et Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -73,9 +77,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 4| Ouvriers", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle"
+        ),
         {
-          target: { value: "4| Ouvriers" },
+          target: { value: "'Ouvriers'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -83,9 +89,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.personnel de conduite = 1| Oui", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.personnel de conduite"), {
-          target: { value: "1| Oui" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Ouvriers - personnel de conduite"
+          ),
+          {
+            target: { value: "'Oui'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -100,9 +111,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.personnel de conduite = 2| Non", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.personnel de conduite"), {
-          target: { value: "2| Non" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Ouvriers - personnel de conduite"
+          ),
+          {
+            target: { value: "'Non'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -110,10 +126,10 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "criteria.personnels des entreprises de transport routier de marchandises"
+              "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Ouvriers - personnel de conduite Non - personnels des entreprises de transport routier de marchandises"
             ),
             {
-              target: { value: "1| Oui" },
+              target: { value: "'Oui'" },
             }
           );
           fireEvent.click(ui.next.get());
@@ -135,10 +151,10 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "criteria.personnels des entreprises de transport routier de marchandises"
+              "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Ouvriers - personnel de conduite Non - personnels des entreprises de transport routier de marchandises"
             ),
             {
-              target: { value: "1| Non" },
+              target: { value: "'Non'" },
             }
           );
           fireEvent.click(ui.next.get());
@@ -158,9 +174,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 27| Techniciens et agents de maîtrise (TAM)", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle"
+        ),
         {
-          target: { value: "27| Techniciens et agents de maîtrise (TAM)" },
+          target: { value: "'Techniciens et agents de maîtrise TAM'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -168,9 +186,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.groupe = 25| 1 à 5 ", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "25| 1 à 5 " },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe"
+          ),
+          {
+            target: { value: "'1 à 5'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -185,9 +208,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.groupe = 30| 6 à 8", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "30| 6 à 8" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe"
+          ),
+          {
+            target: { value: "'6 à 8'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 

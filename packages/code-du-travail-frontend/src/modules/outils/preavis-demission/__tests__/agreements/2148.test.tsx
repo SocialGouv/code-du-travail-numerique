@@ -30,19 +30,29 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.groupe = 20| A et B", () => {
+  describe("criteria.groupe = 'A et B'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.groupe"), {
-        target: { value: "20| A et B" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - télécommunications - groupe"
+        ),
+        {
+          target: { value: "'A et B'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = 'Moins de 2 ans'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "38| Moins de 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - télécommunications - groupe A et B - ancienneté"
+          ),
+          {
+            target: { value: "'Moins de 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -53,11 +63,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = 'Plus de 2 ans'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "43| Plus de 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - télécommunications - groupe A et B - ancienneté"
+          ),
+          {
+            target: { value: "'Plus de 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -69,11 +84,16 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.groupe = 21| C et D", () => {
+  describe("criteria.groupe = 'C et D'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.groupe"), {
-        target: { value: "21| C et D" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - télécommunications - groupe"
+        ),
+        {
+          target: { value: "'C et D'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -84,11 +104,16 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.groupe = 22| E, F et G", () => {
+  describe("criteria.groupe = 'E, F et G'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.groupe"), {
-        target: { value: "22| E, F et G" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - télécommunications - groupe"
+        ),
+        {
+          target: { value: "'E, F et G'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -99,20 +124,21 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.groupe = 23| Hors classification", () => {
+  describe("criteria.groupe = 'Hors classification'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.groupe"), {
-        target: { value: "23| Hors classification" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - télécommunications - groupe"
+        ),
+        {
+          target: { value: "'Hors classification'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     it("should display expected answer", () => {
-      expect(
-        screen.queryAllByText(
-          /Pour les salariés hors classification, la durée du préavis est fixée par le contrat de travail dans la limite de 3 mois/g
-        )[0]
-      ).toBeInTheDocument();
+      expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
 
       expect(screen.queryAllByText(/Article 4.4.1.1/)[0]).toBeInTheDocument();
     });

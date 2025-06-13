@@ -30,12 +30,14 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 21| Agents de maîtrise et Techniciens", () => {
+  describe("criteria.catégorie professionnelle = 'Agents de maîtrise et Techniciens'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - commerce gros et detail alimentation - catégorie professionnelle"
+        ),
         {
-          target: { value: "21| Agents de maîtrise et Techniciens" },
+          target: { value: "'Agents de maîtrise et Techniciens'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -50,12 +52,14 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 48| Cadres", () => {
+  describe("criteria.catégorie professionnelle = 'Cadres'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - commerce gros et detail alimentation - catégorie professionnelle"
+        ),
         {
-          target: { value: "48| Cadres" },
+          target: { value: "'Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -70,12 +74,14 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 6| Ouvriers, Employés", () => {
+  describe("criteria.catégorie professionnelle = 'Ouvriers, Employés'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - commerce gros et detail alimentation - catégorie professionnelle"
+        ),
         {
-          target: { value: "6| Ouvriers, Employés" },
+          target: { value: "'Ouvriers, Employés'" },
         }
       );
       fireEvent.click(ui.next.get());

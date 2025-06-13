@@ -33,9 +33,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 48| Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - comptables - catégorie professionnelle"
+        ),
         {
-          target: { value: "48| Cadres" },
+          target: { value: "'Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -51,9 +53,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 16| Employés", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - comptables - catégorie professionnelle"
+        ),
         {
-          target: { value: "16| Employés" },
+          target: { value: "'Employés'" },
         }
       );
       fireEvent.click(ui.next.get());

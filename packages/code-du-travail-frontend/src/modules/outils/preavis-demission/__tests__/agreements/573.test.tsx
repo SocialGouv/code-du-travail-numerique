@@ -33,9 +33,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 48| Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - commerces de gros - catégorie professionnelle"
+        ),
         {
-          target: { value: "48| Cadres" },
+          target: { value: "'Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -51,9 +53,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 6| Ouvriers, Employés", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - commerces de gros - catégorie professionnelle"
+        ),
         {
-          target: { value: "6| Ouvriers, Employés" },
+          target: { value: "'Ouvriers, Employés'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -69,9 +73,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 27| Techniciens et agents de maîtrise (TAM)", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - commerces de gros - catégorie professionnelle"
+        ),
         {
-          target: { value: "27| Techniciens et agents de maîtrise (TAM)" },
+          target: { value: "'Techniciens et agents de maîtrise TAM'" },
         }
       );
       fireEvent.click(ui.next.get());

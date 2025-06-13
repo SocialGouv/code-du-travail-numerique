@@ -33,9 +33,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 23| Agents de maîtrise", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle"
+        ),
         {
-          target: { value: "23| Agents de maîtrise" },
+          target: { value: "'Agents de maîtrise'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -55,9 +57,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 48| Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle"
+        ),
         {
-          target: { value: "48| Cadres" },
+          target: { value: "'Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -77,9 +81,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 16| Employés", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle"
+        ),
         {
-          target: { value: "16| Employés" },
+          target: { value: "'Employés'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -87,15 +93,20 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.ancienneté = 3| Moins de 1 mois", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "3| Moins de 1 mois" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle Employés - ancienneté"
+          ),
+          {
+            target: { value: "'Moins de 1 mois'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
       it("should display expected answer", () => {
         expect(
-          screen.queryAllByText(/il n’y a pas de préavis à effectuer/g)[0]
+          screen.queryAllByText(/il n'y a pas de préavis à effectuer/g)[0]
         ).toBeInTheDocument();
 
         expect(
@@ -106,14 +117,19 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.ancienneté = 16| 1 mois à 6 mois", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "16| 1 mois à 6 mois" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle Employés - ancienneté"
+          ),
+          {
+            target: { value: "'1 mois à 6 mois'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
       it("should display expected answer", () => {
-        expect(screen.queryAllByText(/15 jours/g)[0]).toBeInTheDocument();
+        expect(screen.queryAllByText(/5 jours/g)[0]).toBeInTheDocument();
 
         expect(
           screen.queryAllByText(/Article 38 de la convention collective/)[0]
@@ -123,9 +139,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.ancienneté = 22| Plus de 6 mois", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "22| Plus de 6 mois" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle Employés - ancienneté"
+          ),
+          {
+            target: { value: "'Plus de 6 mois'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 

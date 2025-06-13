@@ -33,10 +33,12 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.conclusion contrat travail = 1| Contrat de travail conclu avant le 1er juillet 2009", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.conclusion contrat travail"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail"
+        ),
         {
           target: {
-            value: "1| Contrat de travail conclu avant le 1er juillet 2009",
+            value: "'Contrat de travail conclu avant le 1er juillet 2009'",
           },
         }
       );
@@ -45,9 +47,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.groupe = 24| 1 à 3", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "24| 1 à 3" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 - groupe"
+          ),
+          {
+            target: { value: "'1 à 3'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -60,9 +67,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.groupe = 15| 4", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "15| 4" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 - groupe"
+          ),
+          {
+            target: { value: "'4'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -75,9 +87,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.groupe = 29| 5 et suivants", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "29| 5 et suivants" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 - groupe"
+          ),
+          {
+            target: { value: "'5 et suivants'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -92,10 +109,12 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.conclusion contrat travail = 2| Contrat de travail conclu après le 1er juillet 2009", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.conclusion contrat travail"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail"
+        ),
         {
           target: {
-            value: "2| Contrat de travail conclu après le 1er juillet 2009",
+            value: "'Contrat de travail conclu après le 1er juillet 2009'",
           },
         }
       );
@@ -104,9 +123,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.groupe = 24| 1 à 3", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "24| 1 à 3" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 - groupe"
+          ),
+          {
+            target: { value: "'1 à 3'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -119,9 +143,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.groupe = 27| 4 à 5", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "27| 4 à 5" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 - groupe"
+          ),
+          {
+            target: { value: "'4 à 5'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -134,9 +163,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.groupe = 31| 6 et suivants ", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "31| 6 et suivants " },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 - groupe"
+          ),
+          {
+            target: { value: "'6 et suivants'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 

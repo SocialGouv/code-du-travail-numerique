@@ -30,12 +30,14 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 48| Cadres", () => {
+  describe("criteria.catégorie professionnelle = 'Cadres'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle"
+        ),
         {
-          target: { value: "48| Cadres" },
+          target: { value: "'Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -48,22 +50,29 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 16| Employés", () => {
+  describe("criteria.catégorie professionnelle = 'Employés'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle"
+        ),
         {
-          target: { value: "16| Employés" },
+          target: { value: "'Employés'" },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 15| Moins de 6 mois", () => {
+    describe("criteria.ancienneté = 'Moins de 6 mois'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "15| Moins de 6 mois" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle Employés - ancienneté"
+          ),
+          {
+            target: { value: "'Moins de 6 mois'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -74,11 +83,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
+    describe("criteria.ancienneté = '6 mois à 2 ans'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "35| 6 mois à 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle Employés - ancienneté"
+          ),
+          {
+            target: { value: "'6 mois à 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -89,11 +103,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = 'Plus de 2 ans'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "43| Plus de 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle Employés - ancienneté"
+          ),
+          {
+            target: { value: "'Plus de 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -105,22 +124,29 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 26| Maîtrises", () => {
+  describe("criteria.catégorie professionnelle = 'Maîtrises'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle"
+        ),
         {
-          target: { value: "26| Maîtrises" },
+          target: { value: "'Maîtrises'" },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 40| 2 ans ou moins", () => {
+    describe("criteria.ancienneté = '2 ans ou moins'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "40| 2 ans ou moins" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle Maîtrises - ancienneté"
+          ),
+          {
+            target: { value: "'2 ans ou moins'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -131,11 +157,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = 'Plus de 2 ans'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "43| Plus de 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle Maîtrises - ancienneté"
+          ),
+          {
+            target: { value: "'Plus de 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -147,22 +178,29 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 4| Ouvriers", () => {
+  describe("criteria.catégorie professionnelle = 'Ouvriers'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle"
+        ),
         {
-          target: { value: "4| Ouvriers" },
+          target: { value: "'Ouvriers'" },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 15| Moins de 6 mois", () => {
+    describe("criteria.ancienneté = 'Moins de 6 mois'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "15| Moins de 6 mois" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle Ouvriers - ancienneté"
+          ),
+          {
+            target: { value: "'Moins de 6 mois'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -173,11 +211,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 23| 6 mois et plus", () => {
+    describe("criteria.ancienneté = '6 mois et plus'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "23| 6 mois et plus" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle Ouvriers - ancienneté"
+          ),
+          {
+            target: { value: "'6 mois et plus'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 

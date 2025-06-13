@@ -33,9 +33,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 48| Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle"
+        ),
         {
-          target: { value: "48| Cadres" },
+          target: { value: "'Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -53,9 +55,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 38| Non-cadres", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle"
+        ),
         {
-          target: { value: "38| Non-cadres" },
+          target: { value: "'Non-cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -63,9 +67,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.ancienneté = 15| Moins de 6 mois", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "15| Moins de 6 mois" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle Non-cadres - ancienneté"
+          ),
+          {
+            target: { value: "'Moins de 6 mois'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -80,9 +89,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.ancienneté = 23| 6 mois et plus", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "23| 6 mois et plus" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle Non-cadres - ancienneté"
+          ),
+          {
+            target: { value: "'6 mois et plus'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 

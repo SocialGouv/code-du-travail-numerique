@@ -32,17 +32,27 @@ describe("PreavisDemissionSimulator", () => {
 
   describe("criteria.logement = 1| Non-logé", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.logement"), {
-        target: { value: "1| Non-logé" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - gardien concierge - logement"
+        ),
+        {
+          target: { value: "'Non-logé'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.coefficient = 21| Inférieur ou égal à 602", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.coefficient"), {
-          target: { value: "21| Inférieur ou égal à 602" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - gardien concierge - logement - Non-logé - coefficient"
+          ),
+          {
+            target: { value: "'Inférieur ou égal à 602'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -55,9 +65,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.coefficient = 22| Supérieur à 602", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.coefficient"), {
-          target: { value: "22| Supérieur à 602" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - gardien concierge - logement - Non-logé - coefficient"
+          ),
+          {
+            target: { value: "'Supérieur à 602'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -71,9 +86,14 @@ describe("PreavisDemissionSimulator", () => {
 
   describe("criteria.logement = 3| Logé", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.logement"), {
-        target: { value: "3| Logé" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - gardien concierge - logement"
+        ),
+        {
+          target: { value: "'Logé'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 

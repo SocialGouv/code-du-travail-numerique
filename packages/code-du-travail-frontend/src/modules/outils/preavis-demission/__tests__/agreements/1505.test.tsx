@@ -30,12 +30,14 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 25| Agents de maîtrise (AM1 et AM2)", () => {
+  describe("criteria.catégorie professionnelle = 'Agents de maîtrise AM1 et AM2'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - catégorie professionnelle"
+        ),
         {
-          target: { value: "25| Agents de maîtrise (AM1 et AM2)" },
+          target: { value: "'Agents de maîtrise AM1 et AM2'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -50,12 +52,14 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 51| Cadres (C1 et C2)", () => {
+  describe("criteria.catégorie professionnelle = 'Cadres C1 et C2'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - catégorie professionnelle"
+        ),
         {
-          target: { value: "51| Cadres (C1 et C2)" },
+          target: { value: "'Cadres C1 et C2'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -70,12 +74,14 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 11| Employés (E1 à E7)", () => {
+  describe("criteria.catégorie professionnelle = 'Employés E1 à E7'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - catégorie professionnelle"
+        ),
         {
-          target: { value: "11| Employés (E1 à E7)" },
+          target: { value: "'Employés E1 à E7'" },
         }
       );
       fireEvent.click(ui.next.get());

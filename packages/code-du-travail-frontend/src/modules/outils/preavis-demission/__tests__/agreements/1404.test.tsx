@@ -33,9 +33,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 24| Agents de maîtrise (niveau IV et V)", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - sedima - catégorie professionnelle"
+        ),
         {
-          target: { value: "24| Agents de maîtrise (niveau IV et V)" },
+          target: { value: "'Agents de maîtrise niveau IV et V'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -53,9 +55,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 52| Cadres (niveau VI et plus)", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - sedima - catégorie professionnelle"
+        ),
         {
-          target: { value: "52| Cadres (niveau VI et plus)" },
+          target: { value: "'Cadres niveau VI et plus'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -73,9 +77,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 10| Ouvriers, Employés (niveau III)", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - sedima - catégorie professionnelle"
+        ),
         {
-          target: { value: "10| Ouvriers, Employés (niveau III)" },
+          target: { value: "'Ouvriers, Employés niveau III'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -83,9 +89,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.niveau = 4| III", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.niveau"), {
-          target: { value: "4| III" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - sedima - catégorie professionnelle Ouvriers, Employés niveau III - niveau"
+          ),
+          {
+            target: { value: "'III'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -102,9 +113,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 7| Ouvriers, Employés (niveaux I et II)", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - sedima - catégorie professionnelle"
+        ),
         {
-          target: { value: "7| Ouvriers, Employés (niveaux I et II)" },
+          target: { value: "'Ouvriers, Employés niveaux I et II'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -112,9 +125,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.niveau = 2| I à II", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.niveau"), {
-          target: { value: "2| I à II" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - sedima - catégorie professionnelle Ouvriers, Employés niveaux I et II - niveau"
+          ),
+          {
+            target: { value: "'I à II'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 

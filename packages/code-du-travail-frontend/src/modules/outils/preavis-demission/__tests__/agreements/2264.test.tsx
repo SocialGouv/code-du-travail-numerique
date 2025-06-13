@@ -30,12 +30,14 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 48| Cadres", () => {
+  describe("criteria.catégorie professionnelle = 'Cadres'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
+        ),
         {
-          target: { value: "48| Cadres" },
+          target: { value: "'Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -48,12 +50,14 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 68| Cadres dirigeants", () => {
+  describe("criteria.catégorie professionnelle = 'Cadres dirigeants'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
+        ),
         {
-          target: { value: "68| Cadres dirigeants" },
+          target: { value: "'Cadres dirigeants'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -66,12 +70,14 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 63| Cadres supérieurs", () => {
+  describe("criteria.catégorie professionnelle = 'Cadres supérieurs'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
+        ),
         {
-          target: { value: "63| Cadres supérieurs" },
+          target: { value: "'Cadres supérieurs'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -84,22 +90,29 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 16| Employés", () => {
+  describe("criteria.catégorie professionnelle = 'Employés'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
+        ),
         {
-          target: { value: "16| Employés" },
+          target: { value: "'Employés'" },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 21| 6 mois ou moins", () => {
+    describe("criteria.ancienneté = '6 mois ou moins'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "21| 6 mois ou moins" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Employés - ancienneté"
+          ),
+          {
+            target: { value: "'6 mois ou moins'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -110,11 +123,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 22| Plus de 6 mois", () => {
+    describe("criteria.ancienneté = 'Plus de 6 mois'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "22| Plus de 6 mois" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Employés - ancienneté"
+          ),
+          {
+            target: { value: "'Plus de 6 mois'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -126,22 +144,29 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 27| Techniciens et agents de maîtrise (TAM)", () => {
+  describe("criteria.catégorie professionnelle = 'Techniciens et agents de maîtrise TAM'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
+        ),
         {
-          target: { value: "27| Techniciens et agents de maîtrise (TAM)" },
+          target: { value: "'Techniciens et agents de maîtrise TAM'" },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = 'Moins de 2 ans'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "38| Moins de 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Techniciens et agents de maîtrise TAM - ancienneté"
+          ),
+          {
+            target: { value: "'Moins de 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -152,11 +177,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+    describe("criteria.ancienneté = '2 ans ou plus'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "42| 2 ans ou plus" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Techniciens et agents de maîtrise TAM - ancienneté"
+          ),
+          {
+            target: { value: "'2 ans ou plus'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 

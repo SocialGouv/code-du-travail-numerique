@@ -30,12 +30,14 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 78| Chargés d'enquête intermittents", () => {
+  describe("criteria.catégorie professionnelle = 'Chargés d'enquête intermittents'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle"
+        ),
         {
-          target: { value: "78| Chargés d'enquête intermittents" },
+          target: { value: "'Chargés d'enquête intermittents'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -52,32 +54,44 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 19| Employés, Techniciens ou Agents de maîtrise (ETAM)", () => {
+  describe("criteria.catégorie professionnelle = 'Employés, Techniciens ou Agents de maîtrise ETAM'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle"
+        ),
         {
           target: {
-            value: "19| Employés, Techniciens ou Agents de maîtrise (ETAM)",
+            value: "'Employés, Techniciens ou Agents de maîtrise ETAM'",
           },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.coefficient = 16| de 240 à 355", () => {
+    describe("criteria.coefficient = 'De 240 à 355'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.coefficient"), {
-          target: { value: "16| de 240 à 355" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle - Employés, Techniciens ou Agents de maîtrise ETAM - coefficient"
+          ),
+          {
+            target: { value: "'De 240 à 355'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = 40| 2 ans ou moins", () => {
+      describe("criteria.ancienneté = '2 ans ou moins'", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-            target: { value: "40| 2 ans ou moins" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle - Employés, Techniciens ou Agents de maîtrise ETAM - coefficient de 240 à 355 - ancienneté"
+            ),
+            {
+              target: { value: "'2 ans ou moins'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -90,11 +104,16 @@ describe("PreavisDemissionSimulator", () => {
         });
       });
 
-      describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+      describe("criteria.ancienneté = 'Plus de 2 ans'", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-            target: { value: "43| Plus de 2 ans" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle - Employés, Techniciens ou Agents de maîtrise ETAM - coefficient de 240 à 355 - ancienneté"
+            ),
+            {
+              target: { value: "'Plus de 2 ans'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -108,19 +127,29 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.coefficient = 19| De 400 à 500", () => {
+    describe("criteria.coefficient = 'De 400 à 500'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.coefficient"), {
-          target: { value: "19| De 400 à 500" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle - Employés, Techniciens ou Agents de maîtrise ETAM - coefficient"
+          ),
+          {
+            target: { value: "'De 400 à 500'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = 40| 2 ans ou moins", () => {
+      describe("criteria.ancienneté = '2 ans ou moins'", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-            target: { value: "40| 2 ans ou moins" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle - Employés, Techniciens ou Agents de maîtrise ETAM - coefficient De 400 à 500 - ancienneté"
+            ),
+            {
+              target: { value: "'2 ans ou moins'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -133,11 +162,16 @@ describe("PreavisDemissionSimulator", () => {
         });
       });
 
-      describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+      describe("criteria.ancienneté = 'Plus de 2 ans'", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-            target: { value: "43| Plus de 2 ans" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle - Employés, Techniciens ou Agents de maîtrise ETAM - coefficient De 400 à 500 - ancienneté"
+            ),
+            {
+              target: { value: "'Plus de 2 ans'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -152,12 +186,14 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 60| Ingénieurs, Cadres", () => {
+  describe("criteria.catégorie professionnelle = 'Ingénieurs, Cadres'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle"
+        ),
         {
-          target: { value: "60| Ingénieurs, Cadres" },
+          target: { value: "'Ingénieurs, Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());

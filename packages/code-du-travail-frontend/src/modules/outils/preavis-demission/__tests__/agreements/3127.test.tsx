@@ -30,11 +30,16 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
+  describe("criteria.ancienneté = '6 mois à 2 ans'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-        target: { value: "35| 6 mois à 2 ans" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - entreprises de services à la personne - ancienneté"
+        ),
+        {
+          target: { value: "'6 mois à 2 ans'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -49,11 +54,16 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+  describe("criteria.ancienneté = 'Plus de 2 ans'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-        target: { value: "43| Plus de 2 ans" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - entreprises de services à la personne - ancienneté"
+        ),
+        {
+          target: { value: "'Plus de 2 ans'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 

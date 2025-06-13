@@ -30,13 +30,18 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.ancienneté = 10| Au delà de la période d'essai et jusqu'à 3 mois", () => {
+  describe("criteria.ancienneté = 'Au delà de la période d'essai et jusqu'à 3 mois'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-        target: {
-          value: "10| Au delà de la période d'essai et jusqu'à 3 mois",
-        },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - ouvriers bâtiment région parisienne - ancienneté"
+        ),
+        {
+          target: {
+            value: "'Au delà de la période d'essai et jusqu'à 3 mois'",
+          },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -47,11 +52,16 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.ancienneté = 13| Plus de 3 mois", () => {
+  describe("criteria.ancienneté = 'Plus de 3 mois'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-        target: { value: "13| Plus de 3 mois" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - ouvriers bâtiment région parisienne - ancienneté"
+        ),
+        {
+          target: { value: "'Plus de 3 mois'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 

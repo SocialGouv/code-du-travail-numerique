@@ -30,11 +30,16 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.niveau = 1| I", () => {
+  describe("criteria.niveau = 'I'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.niveau"), {
-        target: { value: "1| I" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+        ),
+        {
+          target: { value: "'I'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -47,11 +52,16 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.niveau = 3| II", () => {
+  describe("criteria.niveau = 'II'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.niveau"), {
-        target: { value: "3| II" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+        ),
+        {
+          target: { value: "'II'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -64,11 +74,16 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.niveau = 4| III", () => {
+  describe("criteria.niveau = 'III'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.niveau"), {
-        target: { value: "4| III" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+        ),
+        {
+          target: { value: "'III'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -81,11 +96,16 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.niveau = 5| IV", () => {
+  describe("criteria.niveau = 'IV'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.niveau"), {
-        target: { value: "5| IV" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+        ),
+        {
+          target: { value: "'IV'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -98,11 +118,16 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.niveau = 7| V", () => {
+  describe("criteria.niveau = 'V'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.niveau"), {
-        target: { value: "7| V" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+        ),
+        {
+          target: { value: "'V'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -115,11 +140,16 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.niveau = 8| VI", () => {
+  describe("criteria.niveau = 'VI'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.niveau"), {
-        target: { value: "8| VI" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+        ),
+        {
+          target: { value: "'VI'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -132,11 +162,16 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.niveau = 9| VII", () => {
+  describe("criteria.niveau = 'VII'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.niveau"), {
-        target: { value: "9| VII" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+        ),
+        {
+          target: { value: "'VII'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -149,11 +184,16 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.niveau = 11| VIII", () => {
+  describe("criteria.niveau = 'VIII'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.niveau"), {
-        target: { value: "11| VIII" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+        ),
+        {
+          target: { value: "'VIII'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -166,11 +206,16 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.niveau = 12| IX", () => {
+  describe("criteria.niveau = 'IX'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.niveau"), {
-        target: { value: "12| IX" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+        ),
+        {
+          target: { value: "'IX'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 

@@ -33,9 +33,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 23| Agents de maîtrise", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
+        ),
         {
-          target: { value: "23| Agents de maîtrise" },
+          target: { value: "'Agents de maîtrise'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -53,9 +55,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 28| Techniciens", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
+        ),
         {
-          target: { value: "28| Techniciens" },
+          target: { value: "'Techniciens'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -73,9 +77,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 48| Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
+        ),
         {
-          target: { value: "48| Cadres" },
+          target: { value: "'Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -93,9 +99,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 4| Ouvriers", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
+        ),
         {
-          target: { value: "4| Ouvriers" },
+          target: { value: "'Ouvriers'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -113,9 +121,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 16| Employés", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
+        ),
         {
-          target: { value: "16| Employés" },
+          target: { value: "'Employés'" },
         }
       );
       fireEvent.click(ui.next.get());

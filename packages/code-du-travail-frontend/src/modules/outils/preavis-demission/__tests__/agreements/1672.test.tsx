@@ -30,12 +30,14 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 58| Cadres (Classes 5 à 7)", () => {
+  describe("criteria.catégorie professionnelle = 'Cadres Classes 5 à 7'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle"
+        ),
         {
-          target: { value: "58| Cadres (Classes 5 à 7)" },
+          target: { value: "'Cadres Classes 5 à 7'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -52,12 +54,14 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 36| Non-cadres (Classes 1 à 4)", () => {
+  describe("criteria.catégorie professionnelle = 'Non-cadres Classes 1 à 4'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle"
+        ),
         {
-          target: { value: "36| Non-cadres (Classes 1 à 4)" },
+          target: { value: "'Non-cadres Classes 1 à 4'" },
         }
       );
       fireEvent.click(ui.next.get());

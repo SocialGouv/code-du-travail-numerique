@@ -30,22 +30,29 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 23| Agents de maîtrise", () => {
+  describe("criteria.catégorie professionnelle = 'Agents de maîtrise'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - immobilier - catégorie professionnelle"
+        ),
         {
-          target: { value: "23| Agents de maîtrise" },
+          target: { value: "'Agents de maîtrise'" },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 24| Moins de 1 an", () => {
+    describe("criteria.ancienneté = 'Moins de 1 an'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "24| Moins de 1 an" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - immobilier - catégorie professionnelle Agents de maîtrise - ancienneté"
+          ),
+          {
+            target: { value: "'Moins de 1 an'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -56,11 +63,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 25| Au moins 1 an", () => {
+    describe("criteria.ancienneté = 'Au moins 1 an'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "25| Au moins 1 an" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - immobilier - catégorie professionnelle Agents de maîtrise - ancienneté"
+          ),
+          {
+            target: { value: "'Au moins 1 an'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -72,12 +84,14 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 56| Cadres non-VRP", () => {
+  describe("criteria.catégorie professionnelle = 'Cadres nonVRP'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - immobilier - catégorie professionnelle"
+        ),
         {
-          target: { value: "56| Cadres non-VRP" },
+          target: { value: "'Cadres nonVRP'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -90,22 +104,29 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 55| Cadres VRP", () => {
+  describe("criteria.catégorie professionnelle = 'Cadres VRP'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - immobilier - catégorie professionnelle"
+        ),
         {
-          target: { value: "55| Cadres VRP" },
+          target: { value: "'Cadres VRP'" },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 24| Moins de 1 an", () => {
+    describe("criteria.ancienneté = 'Moins de 1 an'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "24| Moins de 1 an" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - immobilier - catégorie professionnelle Cadres VRP - ancienneté"
+          ),
+          {
+            target: { value: "'Moins de 1 an'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -116,11 +137,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 25| Au moins 1 an", () => {
+    describe("criteria.ancienneté = 'Au moins 1 an'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "25| Au moins 1 an" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - immobilier - catégorie professionnelle Cadres VRP - ancienneté"
+          ),
+          {
+            target: { value: "'Au moins 1 an'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -132,22 +158,29 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 76| Négociateur non VRP", () => {
+  describe("criteria.catégorie professionnelle = 'Négociateur non VRP'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - immobilier - catégorie professionnelle"
+        ),
         {
-          target: { value: "76| Négociateur non VRP" },
+          target: { value: "'Négociateur non VRP'" },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = 'Moins de 2 ans'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "38| Moins de 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - immobilier - catégorie professionnelle Négociateur non VRP - ancienneté"
+          ),
+          {
+            target: { value: "'Moins de 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -158,11 +191,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+    describe("criteria.ancienneté = '2 ans ou plus'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "42| 2 ans ou plus" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - immobilier - catégorie professionnelle Négociateur non VRP - ancienneté"
+          ),
+          {
+            target: { value: "'2 ans ou plus'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -174,22 +212,29 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 77| Négociateur VRP", () => {
+  describe("criteria.catégorie professionnelle = 'Négociateur VRP'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - immobilier - catégorie professionnelle"
+        ),
         {
-          target: { value: "77| Négociateur VRP" },
+          target: { value: "'Négociateur VRP'" },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 24| Moins de 1 an", () => {
+    describe("criteria.ancienneté = 'Moins de 1 an'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "24| Moins de 1 an" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - immobilier - catégorie professionnelle Négociateur VRP - ancienneté"
+          ),
+          {
+            target: { value: "'Moins de 1 an'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -200,11 +245,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 37| 1 an à moins de 2 ans", () => {
+    describe("criteria.ancienneté = '1 an à moins de 2 ans'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "37| 1 an à moins de 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - immobilier - catégorie professionnelle Négociateur VRP - ancienneté"
+          ),
+          {
+            target: { value: "'1 an à moins de 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -215,11 +265,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+    describe("criteria.ancienneté = '2 ans ou plus'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "42| 2 ans ou plus" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - immobilier - catégorie professionnelle Négociateur VRP - ancienneté"
+          ),
+          {
+            target: { value: "'2 ans ou plus'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -231,22 +286,29 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 6| Ouvriers, Employés", () => {
+  describe("criteria.catégorie professionnelle = 'Ouvriers, Employés'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - immobilier - catégorie professionnelle"
+        ),
         {
-          target: { value: "6| Ouvriers, Employés" },
+          target: { value: "'Ouvriers, Employés'" },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = 'Moins de 2 ans'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "38| Moins de 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - immobilier - catégorie professionnelle Ouvriers, Employés - ancienneté"
+          ),
+          {
+            target: { value: "'Moins de 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -257,11 +319,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+    describe("criteria.ancienneté = '2 ans ou plus'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "42| 2 ans ou plus" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - immobilier - catégorie professionnelle Ouvriers, Employés - ancienneté"
+          ),
+          {
+            target: { value: "'2 ans ou plus'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 

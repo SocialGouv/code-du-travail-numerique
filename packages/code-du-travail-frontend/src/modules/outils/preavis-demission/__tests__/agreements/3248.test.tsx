@@ -30,11 +30,16 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.groupe = 1| A ou B", () => {
+  describe("criteria.groupe = 'A ou B'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.groupe"), {
-        target: { value: "1| A ou B" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - métallurgie - groupe"
+        ),
+        {
+          target: { value: "'A ou B'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -51,11 +56,16 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.groupe = 2| C", () => {
+  describe("criteria.groupe = 'C'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.groupe"), {
-        target: { value: "2| C" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - métallurgie - groupe"
+        ),
+        {
+          target: { value: "'C'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -72,11 +82,16 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.groupe = 3| D ou E", () => {
+  describe("criteria.groupe = 'D ou E'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.groupe"), {
-        target: { value: "3| D ou E" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - métallurgie - groupe"
+        ),
+        {
+          target: { value: "'D ou E'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -93,11 +108,16 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.groupe = 4| F, G, H ou I", () => {
+  describe("criteria.groupe = 'F, G, H ou I'", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.groupe"), {
-        target: { value: "4| F, G, H ou I" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - métallurgie - groupe"
+        ),
+        {
+          target: { value: "'F, G, H ou I'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 

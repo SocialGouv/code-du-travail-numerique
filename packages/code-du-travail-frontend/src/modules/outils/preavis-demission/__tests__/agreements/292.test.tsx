@@ -33,9 +33,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 48| Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - plasturgie - catégorie professionnelle"
+        ),
         {
-          target: { value: "48| Cadres" },
+          target: { value: "'Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -53,9 +55,11 @@ describe("PreavisDemissionSimulator", () => {
   describe("criteria.catégorie professionnelle = 42| Collaborateurs", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - plasturgie - catégorie professionnelle"
+        ),
         {
-          target: { value: "42| Collaborateurs" },
+          target: { value: "'Collaborateurs'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -63,9 +67,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.coefficient = 24| 700 à 750", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.coefficient"), {
-          target: { value: "24| 700 à 750" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - plasturgie - catégorie professionnelle Collaborateurs - coefficient"
+          ),
+          {
+            target: { value: "'700 à 750'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -78,9 +87,14 @@ describe("PreavisDemissionSimulator", () => {
 
     describe("criteria.coefficient = 28| 800 à 830 inclus", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.coefficient"), {
-          target: { value: "28| 800 à 830 inclus" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - plasturgie - catégorie professionnelle Collaborateurs - coefficient"
+          ),
+          {
+            target: { value: "'800 à 830 inclus'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 

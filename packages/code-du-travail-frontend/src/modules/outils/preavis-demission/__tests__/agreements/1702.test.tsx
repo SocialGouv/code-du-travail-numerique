@@ -30,24 +30,31 @@ describe("PreavisDemissionSimulator", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 4| Ouvriers", () => {
+  describe("criteria.catégorie professionnelle = 'Ouvriers'", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - ouvriers travaux public - catégorie professionnelle"
+        ),
         {
-          target: { value: "4| Ouvriers" },
+          target: { value: "'Ouvriers'" },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 10| Au delà de la période d'essai et jusqu'à 3 mois", () => {
+    describe("criteria.ancienneté = 'Au delà de la période d'essai et jusqu'à 3 mois'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: {
-            value: "10| Au delà de la période d'essai et jusqu'à 3 mois",
-          },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - ouvriers travaux public - catégorie professionnelle Ouvriers - ancienneté"
+          ),
+          {
+            target: {
+              value: "'Au delà de la période d'essai et jusqu'à 3 mois'",
+            },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -58,11 +65,16 @@ describe("PreavisDemissionSimulator", () => {
       });
     });
 
-    describe("criteria.ancienneté = 13| Plus de 3 mois", () => {
+    describe("criteria.ancienneté = 'Plus de 3 mois'", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "13| Plus de 3 mois" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - ouvriers travaux public - catégorie professionnelle Ouvriers - ancienneté"
+          ),
+          {
+            target: { value: "'Plus de 3 mois'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
