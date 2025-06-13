@@ -31,10 +31,4 @@ export const ui = {
   warning: byText("Attention"),
   print: byText("Imprimer le résultat"),
   viewResultDetail: byText("Voir le détail du calcul"),
-  agreement1351: {
-    searchResult: byText(/Entreprises de prévention et de sécurité/),
-    categoryProInput: byTestId("criteria.catégorie professionnelle"),
-    levelInput: byTestId("criteria.niveau"),
-    seniorityInput: byTestId("criteria.ancienneté"),
-  },
 };
