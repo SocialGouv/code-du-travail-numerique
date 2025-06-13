@@ -43,9 +43,14 @@ jest.mock("uuid", () => ({
   v4: jest.fn(() => ""),
 }));
 
+const pushMock = jest.fn();
+
 jest.mock("next/navigation", () => ({
   redirect: jest.fn(),
   usePathname: jest.fn(),
+  useRouter: () => ({
+    push: pushMock,
+  }),
 }));
 
 describe("<ContributionLayout />", () => {
@@ -53,6 +58,7 @@ describe("<ContributionLayout />", () => {
   beforeEach(() => {
     const ma = sendEvent as jest.MockedFunction<typeof sendEvent>;
     ma.mockReset();
+    pushMock.mockClear();
   });
   it("should render title only if generic", () => {
     rendering = render(<ContributionLayout contribution={contribution} />);
@@ -95,7 +101,6 @@ describe("<ContributionLayout />", () => {
       fireEvent.click(ccUi.radio.agreementSearchOption.get());
       expect(ccUi.buttonDisplayInfo.query()).toBeInTheDocument();
       expect(ui.generic.linkDisplayInfo.query()).toBeInTheDocument();
-      expect(ui.generic.title.query()).toBeInTheDocument();
       expect(rendering.getByText("my content")).toBeInTheDocument();
       fireEvent.click(ui.generic.linkDisplayInfo.get());
       expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
@@ -129,10 +134,11 @@ describe("<ContributionLayout />", () => {
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC16.name.get());
 
       expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
-      expect(ccUi.buttonDisplayInfo.query()).toHaveAttribute(
-        "href",
-        "/contribution/16-slug"
-      );
+
+      fireEvent.click(ccUi.buttonDisplayInfo.get());
+      expect(pushMock).toHaveBeenCalledTimes(1);
+      expect(pushMock).toHaveBeenCalledWith("/contribution/16-slug");
+
       expect(ccUi.warning.nonTreatedAgreement.query()).not.toBeInTheDocument();
       expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_traitée",
@@ -144,10 +150,10 @@ describe("<ContributionLayout />", () => {
     it("should display correctly when a selecting agreement 3239", async () => {
       fireEvent.click(ccUi.radio.enterpriseSearchOption.get());
       fireEvent.click(ccUi.searchByEnterprise.noEnterprise.get());
-      expect(ccUi.buttonDisplayInfo.query()).toHaveAttribute(
-        "href",
-        "/contribution/3239-slug"
-      );
+
+      fireEvent.click(ccUi.buttonDisplayInfo.get());
+      expect(pushMock).toHaveBeenCalledTimes(1);
+      expect(pushMock).toHaveBeenCalledWith("/contribution/3239-slug");
       expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_traitée",
         category: "outil",
@@ -179,7 +185,7 @@ describe("<ContributionLayout />", () => {
       await wait();
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC1388.name.get());
       expect(ui.generic.linkDisplayInfo.query()).toBeInTheDocument();
-      expect(ccUi.buttonDisplayInfo.query()).toHaveAttribute("href", "");
+
       expect(ccUi.warning.title.query()).toBeInTheDocument();
       expect(ccUi.warning.nonTreatedAgreement.query()).toBeInTheDocument();
       expect(sendEvent).toHaveBeenCalledWith({
@@ -229,10 +235,11 @@ describe("<ContributionLayout />", () => {
       });
       await wait();
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC16.name.get());
-      expect(ccUi.buttonDisplayInfo.query()).toHaveAttribute(
-        "href",
-        "/contribution/16-slug"
-      );
+
+      fireEvent.click(ccUi.buttonDisplayInfo.get());
+      expect(pushMock).toHaveBeenCalledTimes(1);
+      expect(pushMock).toHaveBeenCalledWith("/contribution/16-slug");
+
       expect(ccUi.warning.nonTreatedAgreement.query()).not.toBeInTheDocument();
       expect(sendEvent).toHaveBeenCalledWith({
         action: "cc_select_traitée",

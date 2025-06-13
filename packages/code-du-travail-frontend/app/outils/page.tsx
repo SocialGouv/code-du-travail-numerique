@@ -22,6 +22,7 @@ export type ToolItem = Pick<
   "id" | "description" | "metaDescription" | "icon" | "title"
 > & {
   url: string;
+  isExternal: boolean;
 };
 
 async function OutilsPage() {
@@ -62,8 +63,9 @@ const getTools = async (): Promise<ToolItem[]> => {
     .map((tool) => ({
       ...tool,
       url: `/outils/${tool.slug}`,
+      isExternal: false,
     }))
-    .concat(externalTools);
+    .concat(externalTools.map((tool) => ({ ...tool, isExternal: true })));
 };
 
 export default OutilsPage;
