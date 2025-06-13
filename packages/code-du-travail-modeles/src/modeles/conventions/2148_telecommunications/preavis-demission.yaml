@@ -5,10 +5,10 @@ contrat salarié . convention collective . télécommunications . groupe:
   cdtn:
     type: liste
     valeurs:
-      A et B: '''A et B'''
-      C et D: '''C et D'''
-      E, F et G: '''E, F et G'''
-      Hors classification: '''Hors classification'''
+      A et B: "'A et B'"
+      C et D: "'C et D'"
+      E, F et G: "'E, F et G'"
+      Hors classification: "'Hors classification'"
 
 contrat salarié . convention collective . télécommunications . groupe A et B:
   applicable si: groupe = 'A et B'
@@ -21,8 +21,8 @@ contrat salarié . convention collective . télécommunications . groupe A et B 
   cdtn:
     type: liste
     valeurs:
-      Moins de 2 ans: '''Moins de 2 ans'''
-      Plus de 2 ans: '''Plus de 2 ans'''
+      Moins de 2 ans: "'Moins de 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
 
 contrat salarié . convention collective . télécommunications . groupe A et B . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'

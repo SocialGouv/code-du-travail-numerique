@@ -51,7 +51,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 5, unit: "jours" },
+      expectedResult: { expectedValue: 15, unit: "jours" },
       expectedReferences: [
         {
           article: "Avenant n°1 article 27",

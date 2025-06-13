@@ -6,14 +6,15 @@ export const ui = {
   },
   agreement: {
     agreement: byText(
-      "Je sais quelle est ma convention collective (je la saisis)"
+      "Je sais quelle est ma convention collective et je la saisis."
     ),
     unknownAgreement: byText(
-      "Je ne sais pas quelle est ma convention collective (je la recherche)"
+      "Je ne sais pas quelle est ma convention collective et je la recherche."
     ),
-    noAgreement: byText(
-      "Je ne souhaite pas renseigner ma convention collective (je passe l'étape)"
-    ),
+    // Option supprimée pour le préavis de démission
+    // noAgreement: byText(
+    //   "Je ne souhaite pas renseigner ma convention collective (je passe l'étape)"
+    // ),
     agreementInput: byTestId("agreement-search-input"),
     agreementInputConfirm: byText(
       /Vous avez sélectionné la convention collective/

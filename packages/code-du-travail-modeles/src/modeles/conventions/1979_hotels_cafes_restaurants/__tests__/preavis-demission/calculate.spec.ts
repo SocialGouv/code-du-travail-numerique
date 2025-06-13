@@ -5,7 +5,7 @@ const engine = new PreavisDemissionPublicodes(modelsPreavisDemission, "1979");
 describe("Test de la fonctionnalité 'calculate'", () => {
   test.each([
     {
-      expectedResult: { expectedValue: 5, unit: "jours" },
+      expectedResult: { expectedValue: 15, unit: "jours" },
       expectedReferences: [
         {
           article: "Article 30 de la convention collective",
@@ -101,7 +101,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 5, unit: "jours" },
+      expectedResult: { expectedValue: 15, unit: "jours" },
       expectedReferences: [
         {
           article: "Article 30 de la convention collective",

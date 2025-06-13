@@ -5,8 +5,8 @@ contrat salarié . convention collective . plasturgie . catégorie professionnel
   cdtn:
     type: liste
     valeurs:
-      Cadres: '''Cadres'''
-      Collaborateurs: '''Collaborateurs'''
+      Cadres: "'Cadres'"
+      Collaborateurs: "'Collaborateurs'"
 
 contrat salarié . convention collective . plasturgie . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
@@ -29,8 +29,8 @@ contrat salarié . convention collective . plasturgie . catégorie professionnel
   cdtn:
     type: liste
     valeurs:
-      700 à 750: '''700 à 750'''
-      800 à 830 inclus: '''800 à 830 inclus'''
+      700 à 750: "'700 à 750'"
+      800 à 830 inclus: "'800 à 830 inclus'"
 
 contrat salarié . convention collective . plasturgie . catégorie professionnelle Collaborateurs . coefficient 700 à 750:
   applicable si: coefficient = '700 à 750'

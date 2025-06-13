@@ -29,7 +29,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Empl
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté Moins de 6 mois . résultat conventionnel:
-  valeur: 1 semaine (de date à date)
+  valeur: 1 semaine de date à date
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Titre IV, Article 27": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523
@@ -39,7 +39,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Empl
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté 6 mois à 2 ans . résultat conventionnel:
-  valeur: 1 mois (de date à date)
+  valeur: 1 mois de date à date
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Titre IV, Article 27": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523
@@ -49,7 +49,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Empl
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté Plus de 2 ans . résultat conventionnel:
-  valeur: 2 mois (de date à date)
+  valeur: 2 mois de date à date
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Titre IV, Article 27": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523
@@ -73,7 +73,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Tech
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté Moins de 2 ans . résultat conventionnel:
-  valeur: 1 mois (de date à date)
+  valeur: 1 mois de date à date
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Titre IV, Article 27": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523
@@ -83,7 +83,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Tech
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté Plus de 2 ans . résultat conventionnel:
-  valeur: 2 mois (de date à date)
+  valeur: 2 mois de date à date
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Titre IV, Article 27": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523
@@ -107,7 +107,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Cadr
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté Moins de 2 ans . résultat conventionnel:
-  valeur: 2 mois (de date à date)
+  valeur: 2 mois de date à date
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Titre IV, Article 27": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523
@@ -117,7 +117,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Cadr
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté Plus de 2 ans . résultat conventionnel:
-  valeur: 4 mois (de date à date)
+  valeur: 4 mois de date à date
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
     "Titre IV, Article 27": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523

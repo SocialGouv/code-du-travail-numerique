@@ -5,9 +5,9 @@ contrat salarié . convention collective . bureaux études techniques . catégor
   cdtn:
     type: liste
     valeurs:
-      Chargés d'enquête intermittents: '''Chargés d''enquête intermittents'''
-      Employés, Techniciens ou Agents de maîtrise ETAM: '''Employés, Techniciens ou Agents de maîtrise ETAM'''
-      Ingénieurs, Cadres: '''Ingénieurs, Cadres'''
+      Chargés d'enquête intermittents: "'Chargés d'enquête intermittents'"
+      Employés, Techniciens ou Agents de maîtrise ETAM: "'Employés, Techniciens ou Agents de maîtrise ETAM'"
+      Ingénieurs, Cadres: "'Ingénieurs, Cadres'"
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . chargés:
   applicable si: contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle = 'Chargés d'enquête intermittents'
@@ -31,8 +31,8 @@ contrat salarié . convention collective . bureaux études techniques . catégor
   cdtn:
     type: liste
     valeurs:
-      De 240 à 355: '''De 240 à 355'''
-      De 400 à 500: '''De 400 à 500'''
+      De 240 à 355: "'De 240 à 355'"
+      De 400 à 500: "'De 400 à 500'"
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355:
   applicable si: contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient = 'De 240 à 355'
@@ -45,8 +45,8 @@ contrat salarié . convention collective . bureaux études techniques . catégor
   cdtn:
     type: liste
     valeurs:
-      2 ans ou moins: '''2 ans ou moins'''
-      Plus de 2 ans: '''Plus de 2 ans'''
+      2 ans ou moins: "'2 ans ou moins'"
+      Plus de 2 ans: "'Plus de 2 ans'"
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté 2 ans ou moins:
   applicable si: contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté = '2 ans ou moins'
@@ -81,8 +81,8 @@ contrat salarié . convention collective . bureaux études techniques . catégor
   cdtn:
     type: liste
     valeurs:
-      2 ans ou moins: '''2 ans ou moins'''
-      Plus de 2 ans: '''Plus de 2 ans'''
+      2 ans ou moins: "'2 ans ou moins'"
+      Plus de 2 ans: "'Plus de 2 ans'"
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500 . ancienneté 2 ans ou moins:
   applicable si: contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500 . ancienneté = '2 ans ou moins'

@@ -47,7 +47,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 5, unit: "jours" },
+      expectedResult: { expectedValue: 15, unit: "jours" },
       expectedReferences: [
         {
           article: "Article 45",

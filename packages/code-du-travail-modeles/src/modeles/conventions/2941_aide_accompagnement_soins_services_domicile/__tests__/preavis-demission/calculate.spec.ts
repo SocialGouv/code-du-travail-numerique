@@ -5,14 +5,14 @@ const engine = new PreavisDemissionPublicodes(modelsPreavisDemission, "2941");
 describe("Test de la fonctionnalité 'calculate'", () => {
   test.each([
     {
-      expectedResult: { expectedValue: 1, unit: "semaine" },
+      expectedResult: { expectedValue: 1, unit: "semaine de date à date" },
       expectedReferences: [
         {
           article: "Titre IV, Article 27",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523",
         },
       ],
-      expectedNotifications: ["de date à date"],
+      expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . bad . catégorie professionnelle":
           "'Employé'",
@@ -21,14 +21,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 1, unit: "mois" },
+      expectedResult: { expectedValue: 1, unit: "mois de date à date" },
       expectedReferences: [
         {
           article: "Titre IV, Article 27",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523",
         },
       ],
-      expectedNotifications: ["de date à date"],
+      expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . bad . catégorie professionnelle":
           "'Employé'",
@@ -37,14 +37,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 2, unit: "mois" },
+      expectedResult: { expectedValue: 2, unit: "mois de date à date" },
       expectedReferences: [
         {
           article: "Titre IV, Article 27",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523",
         },
       ],
-      expectedNotifications: ["de date à date"],
+      expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . bad . catégorie professionnelle":
           "'Employé'",
@@ -53,14 +53,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 1, unit: "mois" },
+      expectedResult: { expectedValue: 1, unit: "mois de date à date" },
       expectedReferences: [
         {
           article: "Titre IV, Article 27",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523",
         },
       ],
-      expectedNotifications: ["de date à date"],
+      expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . bad . catégorie professionnelle":
           "'Technicienagent de maîtrise'",
@@ -69,14 +69,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 2, unit: "mois" },
+      expectedResult: { expectedValue: 2, unit: "mois de date à date" },
       expectedReferences: [
         {
           article: "Titre IV, Article 27",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523",
         },
       ],
-      expectedNotifications: ["de date à date"],
+      expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . bad . catégorie professionnelle":
           "'Technicienagent de maîtrise'",
@@ -85,14 +85,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 2, unit: "mois" },
+      expectedResult: { expectedValue: 2, unit: "mois de date à date" },
       expectedReferences: [
         {
           article: "Titre IV, Article 27",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523",
         },
       ],
-      expectedNotifications: ["de date à date"],
+      expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . bad . catégorie professionnelle":
           "'Cadre'",
@@ -101,14 +101,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 4, unit: "mois" },
+      expectedResult: { expectedValue: 4, unit: "mois de date à date" },
       expectedReferences: [
         {
           article: "Titre IV, Article 27",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523",
         },
       ],
-      expectedNotifications: ["de date à date"],
+      expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . bad . catégorie professionnelle":
           "'Cadre'",
