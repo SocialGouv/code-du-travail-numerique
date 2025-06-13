@@ -69,7 +69,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
           Sélectionnez un thème
         </label>
         <select
-          aria-describedby="select-:r4:-desc"
+          aria-describedby=""
           class="fr-select"
           id="select-:r3:"
         >
