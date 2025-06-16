@@ -105,13 +105,10 @@ const PreavisDemissionSimulatorContent = ({
     shouldSkipInfoStep: state.informationsFunction.shouldSkipStep,
   }));
 
-  // Fonction personnalisée pour gérer le passage à l'étape suivante pour les Informations
   const handleNextStepInfos = (): ValidationResponse => {
-    // Si l'étape doit être passée automatiquement, on retourne Valid directement
     if (shouldSkipInfoStep()) {
       return ValidationResponse.Valid;
     }
-    // Sinon, on utilise la logique normale
     return onNextStepInfos();
   };
 
