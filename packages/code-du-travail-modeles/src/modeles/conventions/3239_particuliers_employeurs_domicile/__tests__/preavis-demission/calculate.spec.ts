@@ -56,7 +56,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 8, unit: "jours" },
       expectedReferences: [
         {
-          article: "Art. L. 423-26 du Code de l’action sociale et des familles",
+          article: "Art. L. 423-26 du Code de l'action sociale et des familles",
           url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054",
         },
         {
@@ -65,7 +65,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         },
       ],
       expectedNotifications: [
-        "Il s’agit de la durée la plus favorable entre celle prévue par le Code de l’action sociale et des familles et celle prévue par la convention collective.",
+        "Il s’agit de la durée la plus favorable entre celle prévue par le Code de l'action sociale et des familles et celle prévue par la convention collective.",
       ],
       situation: {
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle":
@@ -98,7 +98,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 1, unit: "mois" },
       expectedReferences: [
         {
-          article: "Art. L. 423-26 du Code de l’action sociale et des familles",
+          article: "Art. L. 423-26 du Code de l'action sociale et des familles",
           url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054",
         },
         {

@@ -1,4 +1,3 @@
-# Convention collective nationale métallurgie ingénieurs et cadres
 contrat salarié . convention collective . métallurgie ingénieurs et cadres:
   description: Convention collective nationale métallurgie ingénieurs et cadres
   applicable si: convention collective = 'IDCC0650'
@@ -7,3 +6,5 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres:
     idcc: 650
     préavis-retraite: true
     indemnité-licenciement: true
+    préavis-demission: true
+    rupture-conventionnelle: true

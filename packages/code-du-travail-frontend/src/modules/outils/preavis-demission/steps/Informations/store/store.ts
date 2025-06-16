@@ -2,7 +2,7 @@ import produce from "immer";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { StoreSliceWrapperPreavisDemission } from "../../store";
 import { InformationsStoreData, InformationsStoreSlice } from "./types";
-import { MissingArgs, RuleType } from "@socialgouv/modeles-social";
+import { MissingArgs } from "@socialgouv/modeles-social";
 import * as Sentry from "@sentry/nextjs";
 import { AgreementStoreSlice } from "../../Agreement/store";
 import { mapToPublicodesSituationForCalculationPreavisDemission } from "src/modules/outils/common/publicodes";

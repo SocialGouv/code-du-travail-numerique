@@ -58,7 +58,7 @@ describe("PreavisDemissionSimulator", () => {
 
       it("should display expected answer", () => {
         expect(
-          screen.queryAllByText(/1 semaine \(de date à date\)/g)[0]
+          screen.queryAllByText(/1 semaine de date à date/g)[0]
         ).toBeInTheDocument();
 
         expect(
@@ -82,7 +82,7 @@ describe("PreavisDemissionSimulator", () => {
 
       it("should display expected answer", () => {
         expect(
-          screen.queryAllByText(/1 mois \(de date à date\)/g)[0]
+          screen.queryAllByText(/1 mois de date à date/g)[0]
         ).toBeInTheDocument();
 
         expect(
@@ -106,7 +106,7 @@ describe("PreavisDemissionSimulator", () => {
 
       it("should display expected answer", () => {
         expect(
-          screen.queryAllByText(/2 mois \(de date à date\)/g)[0]
+          screen.queryAllByText(/2 mois de date à date/g)[0]
         ).toBeInTheDocument();
 
         expect(
@@ -144,7 +144,7 @@ describe("PreavisDemissionSimulator", () => {
 
       it("should display expected answer", () => {
         expect(
-          screen.queryAllByText(/1 mois \(de date à date\)/g)[0]
+          screen.queryAllByText(/1 mois de date à date/g)[0]
         ).toBeInTheDocument();
 
         expect(
@@ -168,7 +168,7 @@ describe("PreavisDemissionSimulator", () => {
 
       it("should display expected answer", () => {
         expect(
-          screen.queryAllByText(/2 mois \(de date à date\)/g)[0]
+          screen.queryAllByText(/2 mois de date à date/g)[0]
         ).toBeInTheDocument();
 
         expect(
@@ -206,7 +206,7 @@ describe("PreavisDemissionSimulator", () => {
 
       it("should display expected answer", () => {
         expect(
-          screen.queryAllByText(/2 mois \(de date à date\)/g)[0]
+          screen.queryAllByText(/2 mois de date à date/g)[0]
         ).toBeInTheDocument();
 
         expect(
@@ -230,7 +230,7 @@ describe("PreavisDemissionSimulator", () => {
 
       it("should display expected answer", () => {
         expect(
-          screen.queryAllByText(/4 mois \(de date à date\)/g)[0]
+          screen.queryAllByText(/4 mois de date à date/g)[0]
         ).toBeInTheDocument();
 
         expect(

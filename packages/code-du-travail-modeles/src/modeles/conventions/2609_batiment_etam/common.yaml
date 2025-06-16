@@ -1,4 +1,3 @@
-# Convention collective nationale des employés, techniciens et agents de maîtrise du bâtiment du 12 juillet 2006.
 contrat salarié . convention collective . batiment etam:
   description: Convention collective nationale des employés, techniciens et agents de maîtrise du bâtiment du 12 juillet 2006.
   applicable si: convention collective = 'IDCC2609'
@@ -7,3 +6,5 @@ contrat salarié . convention collective . batiment etam:
     idcc: 2609
     préavis-retraite: true
     indemnité-licenciement: true
+    préavis-demission: true
+    rupture-conventionnelle: true

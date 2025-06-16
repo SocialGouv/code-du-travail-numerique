@@ -1,4 +1,3 @@
-# Convention collective nationale de la restauration rapide du 18 mars 1988
 contrat salarié . convention collective . restauration rapide:
   titre: Convention collective nationale de la restauration rapide du 18 mars 1988
   applicable si: convention collective = 'IDCC1501'
@@ -7,3 +6,5 @@ contrat salarié . convention collective . restauration rapide:
     idcc: 1501
     préavis-retraite: true
     indemnité-licenciement: true
+    préavis-demission: true
+    rupture-conventionnelle: true

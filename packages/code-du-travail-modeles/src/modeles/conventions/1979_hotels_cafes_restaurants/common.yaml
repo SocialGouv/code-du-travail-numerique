@@ -6,3 +6,5 @@ contrat salarié . convention collective . hotels cafes restaurants:
     idcc: 1979
     préavis-retraite: true
     indemnité-licenciement: true
+    préavis-demission: true
+    rupture-conventionnelle: true

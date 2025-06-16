@@ -143,7 +143,7 @@ describe("PreavisDemissionSimulator", () => {
 
         expect(
           screen.queryAllByText(
-            /Art. L. 423-26 du Code de l’action sociale et des familles/
+            /Art. L. 423-26 du Code de l'action sociale et des familles/
           )[0]
         ).toBeInTheDocument();
         expect(
@@ -172,7 +172,7 @@ describe("PreavisDemissionSimulator", () => {
 
         expect(
           screen.queryAllByText(
-            /Art. L. 423-26 du Code de l’action sociale et des familles/
+            /Art. L. 423-26 du Code de l'action sociale et des familles/
           )[0]
         ).toBeInTheDocument();
         expect(
@@ -199,7 +199,7 @@ describe("PreavisDemissionSimulator", () => {
 
         expect(
           screen.queryAllByText(
-            /Art. L. 423-26 du Code de l’action sociale et des familles/
+            /Art. L. 423-26 du Code de l'action sociale et des familles/
           )[0]
         ).toBeInTheDocument();
         expect(

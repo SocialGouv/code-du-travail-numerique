@@ -1,4 +1,3 @@
-# Convention collective nationale des industries chimiques et connexes du 30 décembre 1952.
 contrat salarié . convention collective . industries chimiques:
   description: Convention collective nationale des industries chimiques et connexes du 30 décembre 1952.
   applicable si: convention collective = 'IDCC0044'
@@ -7,3 +6,5 @@ contrat salarié . convention collective . industries chimiques:
     idcc: 44
     préavis-retraite: true
     indemnité-licenciement: true
+    préavis-demission: true
+    rupture-conventionnelle: true

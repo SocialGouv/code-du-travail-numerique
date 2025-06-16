@@ -15,14 +15,14 @@ import { CommonInformationsStoreSlice } from "../../Informations/store";
 import { isParentalNoticeHiddenForAgreement } from "../../../agreements/messages";
 import { AgreementInformation, hasNoBetterAllowance } from "../../../common";
 import { getInfoWarning } from "./service";
-import getSupportedCc from "../../../common/usecase/getSupportedCc";
+import getSupportedCc from "../../../../common/utils/getSupportedCc";
 import * as Sentry from "@sentry/nextjs";
 import { eventEmitter } from "../../../events/emitter";
 import { EventType } from "../../../events/events";
 import { PublicodesResult } from "@socialgouv/modeles-social";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { CommonSituationStoreSlice } from "../../../situationStore";
-import { StoreSlice } from "../../../types";
+import { StoreSlicePublicodes } from "../../../types";
 import { informationToSituation } from "src/modules/outils/indemnite-depart/steps/Informations/components/utils";
 
 const initialState: ResultStoreData = {
@@ -42,7 +42,7 @@ const initialState: ResultStoreData = {
   isStepValid: true,
 };
 
-const createResultStore: StoreSlice<
+const createResultStore: StoreSlicePublicodes<
   ResultStoreSlice,
   AncienneteStoreSlice &
     ContratTravailStoreSlice &
@@ -50,7 +50,7 @@ const createResultStore: StoreSlice<
     CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT> &
     CommonInformationsStoreSlice &
     CommonSituationStoreSlice
-> = (set, get) => ({
+> = (set, get, { simulator }) => ({
   resultData: {
     ...initialState,
   },
@@ -191,7 +191,7 @@ const createResultStore: StoreSlice<
 
       if (
         agreement &&
-        getSupportedCc().some(
+        getSupportedCc(simulator).some(
           (item) => item.idcc === agreement.num && item.fullySupported
         )
       ) {

@@ -14,6 +14,7 @@ import {
 } from "src/modules/outils/indemnite-depart/steps/Agreement/store";
 import { selectedAgreementAlert } from "src/modules/outils/indemnite-depart/steps/Agreement/components/selectedAgreementAlert";
 import { fr } from "@codegouvfr/react-dsfr";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 type Props = {
   error: CommonAgreementStoreError;
@@ -73,7 +74,10 @@ export const PreavisDemissionAgreementStep = ({
             onAgreementSelect={(agreement) => {
               onAgreementChange(agreement);
             }}
-            selectedAgreementAlert={selectedAgreementAlert}
+            selectedAgreementAlert={(agr) =>
+              agr &&
+              selectedAgreementAlert(agr, PublicodesSimulator.PREAVIS_DEMISSION)
+            }
             defaultAgreement={agreement}
             trackingActionName={trackingActionName}
           />
@@ -92,7 +96,10 @@ export const PreavisDemissionAgreementStep = ({
             onAgreementSelect={(agreement, enterprise) => {
               onAgreementChange(agreement, enterprise);
             }}
-            selectedAgreementAlert={selectedAgreementAlert}
+            selectedAgreementAlert={(agr) =>
+              agr &&
+              selectedAgreementAlert(agr, PublicodesSimulator.PREAVIS_DEMISSION)
+            }
             agreement={agreement}
             enterprise={enterprise}
             trackingActionName={trackingActionName}

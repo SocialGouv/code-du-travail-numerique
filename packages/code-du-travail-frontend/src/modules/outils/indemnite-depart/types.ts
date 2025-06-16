@@ -12,7 +12,7 @@ export type StoreSlice<T extends object, E extends object = T> = (
   options: { type: IndemniteDepartType }
 ) => T;
 
-export type StoreSlicePublicode<T extends object, E extends object = T> = (
+export type StoreSlicePublicodes<T extends object, E extends object = T> = (
   set: StoreApi<E extends T ? E : E & T>["setState"],
   get: StoreApi<E extends T ? E : E & T>["getState"],
   options: { simulator: PublicodesSimulator; type: IndemniteDepartType }

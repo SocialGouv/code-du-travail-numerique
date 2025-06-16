@@ -1,4 +1,3 @@
-# Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.
 contrat salarié . convention collective . boulangerie patisserie:
   description: Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.
   applicable si: convention collective = 'IDCC0843'
@@ -7,3 +6,5 @@ contrat salarié . convention collective . boulangerie patisserie:
     idcc: 843
     préavis-retraite: true
     indemnité-licenciement: true
+    préavis-demission: true
+    rupture-conventionnelle: true

@@ -6,3 +6,5 @@ contrat salarié . convention collective . publicité française:
     idcc: 86
     préavis-retraite: true
     indemnité-licenciement: true
+    préavis-demission: true
+    rupture-conventionnelle: true
