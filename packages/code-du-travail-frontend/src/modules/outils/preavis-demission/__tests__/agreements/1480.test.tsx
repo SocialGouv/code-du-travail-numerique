@@ -31,7 +31,6 @@ describe("PreavisDemissionSimulator", () => {
   });
 
   it("should display expected answer", () => {
-    fireEvent.click(ui.next.get());
     expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
 
     expect(screen.queryAllByText(/Article 46/)[0]).toBeInTheDocument();
