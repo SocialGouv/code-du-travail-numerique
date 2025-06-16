@@ -26,11 +26,10 @@ export const getStoredConsent = (): ConsentType => {
     // Check if user has explicitly consented
     const hasConsented = localStorage.getItem("cdtn-cookie-consent-given");
 
-    // If user hasn't consented yet, return default with no tracking
     if (!hasConsented) {
       return {
         ...DEFAULT_CONSENT,
-        matomo: false,
+        matomo: true,
         sea: false,
         matomoHeatmap: false,
       };
@@ -224,18 +223,14 @@ export const initConsent = (): void => {
   // Check if user has explicitly consented
   const hasConsented = localStorage.getItem("cdtn-cookie-consent-given");
 
-  if (hasConsented) {
-    const consent = getStoredConsent();
-    // Ensure Matomo is always enabled (mandatory), but respect user choice for matomoHeatmap
-    const finalConsent = { ...consent, matomo: true };
+  // Always get consent (Matomo will be enabled regardless of explicit consent)
+  const consent = getStoredConsent();
 
-    applyConsent(finalConsent);
+  // Apply consent (Matomo is always enabled as per getStoredConsent)
+  applyConsent(consent);
 
-    // Set up listener for route changes in single-page applications
-    setupRouteChangeListener();
-  } else {
-    // Don't apply any cookies if user hasn't consented yet
-  }
+  // Set up listener for route changes in single-page applications
+  setupRouteChangeListener();
 };
 
 // Set up listener for route changes to reapply consent when navigating between pages
@@ -253,8 +248,8 @@ const setupRouteChangeListener = (): void => {
       currentPath = window.location.pathname;
       // Reapply consent based on the new path
       const consent = getStoredConsent();
-      const finalConsent = { ...consent, matomo: true };
-      applyConsent(finalConsent);
+      // No need to force matomo: true as getStoredConsent now always returns matomo: true
+      applyConsent(consent);
     }
   };
   // Listen for popstate events (back/forward navigation)
