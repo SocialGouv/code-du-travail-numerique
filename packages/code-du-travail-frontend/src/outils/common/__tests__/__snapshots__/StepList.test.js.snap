@@ -3,7 +3,7 @@
 exports[`<StepList /> should render 1`] = `
 <div>
   <div
-    class="sc-2a0a4b0a-0 sc-d8aa1285-0 dLOZmV fXgtLL"
+    class="sc-13323d30-0 sc-d8aa1285-0 exlNfj fXgtLL"
   >
     <span
       aria-level="2"
@@ -24,7 +24,7 @@ exports[`<StepList /> should render 1`] = `
       </span>
     </span>
     <ol
-      class="sc-ab356c14-0 bpNHPl"
+      class="sc-78dd7a00-0 fVqAjV"
     >
       <li
         class="sc-d8aa1285-4 kndAk"
