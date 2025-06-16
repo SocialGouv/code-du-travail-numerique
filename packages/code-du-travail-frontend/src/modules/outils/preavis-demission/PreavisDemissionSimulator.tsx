@@ -4,7 +4,10 @@ import { ContainerSimulator } from "../../layout/ContainerSimulator";
 import { RelatedItem } from "../../documents";
 import React, { useContext } from "react";
 import StepIntro from "./steps/Introduction";
-import { Step } from "../common/components/SimulatorLayout/types";
+import {
+  Step,
+  ValidationResponse,
+} from "../common/components/SimulatorLayout/types";
 import {
   createPreavisDemissionStore,
   PreavisDemissionContext,
@@ -93,12 +96,24 @@ const PreavisDemissionSimulatorContent = ({
     isStepAgreementValid,
     onNextStepInfos,
     isStepInfosValid,
+    shouldSkipInfoStep,
   } = usePreavisDemissionStore(store, (state) => ({
     onNextStepAgreement: state.agreementFunction.onNextStep,
     isStepAgreementValid: state.agreementData.isStepValid,
     onNextStepInfos: state.informationsFunction.onNextStep,
     isStepInfosValid: state.informationsData.isStepValid,
+    shouldSkipInfoStep: state.informationsFunction.shouldSkipStep,
   }));
+
+  // Fonction personnalisée pour gérer le passage à l'étape suivante pour les Informations
+  const handleNextStepInfos = (): ValidationResponse => {
+    // Si l'étape doit être passée automatiquement, on retourne Valid directement
+    if (shouldSkipInfoStep()) {
+      return ValidationResponse.Valid;
+    }
+    // Sinon, on utilise la logique normale
+    return onNextStepInfos();
+  };
 
   return (
     <SimulatorLayout
@@ -113,8 +128,8 @@ const PreavisDemissionSimulatorContent = ({
         },
         {
           stepName: PreavisDemissionStepName.Infos,
-          isStepValid: isStepInfosValid,
-          onNextStep: onNextStepInfos,
+          isStepValid: isStepInfosValid || shouldSkipInfoStep(),
+          onNextStep: handleNextStepInfos,
         },
       ]}
     />

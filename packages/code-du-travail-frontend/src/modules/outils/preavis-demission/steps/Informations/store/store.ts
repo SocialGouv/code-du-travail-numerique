@@ -95,6 +95,7 @@ const createInformationsStore: StoreSliceWrapperPreavisDemission<
             state.informationsData.input.publicodesInformations = [];
             state.informationsData.input.hasNoMissingQuestions = true;
             state.informationsData.error.errorInformations = {};
+            state.informationsData.isStepValid = true; // Marquer l'étape comme valide s'il n'y a pas de questions
           })
         );
         return true;
@@ -204,6 +205,22 @@ const createInformationsStore: StoreSliceWrapperPreavisDemission<
       const state = get().informationsData.input;
       const { isValid, errorState } = validateStep(state);
 
+      // Si aucune question n'a été générée (cas où il n'y a pas de missingArgs)
+      if (
+        state.publicodesInformations.length === 0 &&
+        state.hasNoMissingQuestions
+      ) {
+        set(
+          produce((state: InformationsStoreSlice) => {
+            state.informationsData.hasBeenSubmit = false;
+            state.informationsData.isStepValid = true;
+            state.informationsData.input.hasNoMissingQuestions = true;
+            state.informationsData.error = errorState;
+          })
+        );
+        return ValidationResponse.Valid;
+      }
+
       // Vérifier que toutes les questions actuelles ont une réponse
       const allCurrentQuestionsAnswered = state.publicodesInformations.every(
         (info) =>
@@ -250,6 +267,14 @@ const createInformationsStore: StoreSliceWrapperPreavisDemission<
       return canProceed
         ? ValidationResponse.Valid
         : ValidationResponse.NotValid;
+    },
+    shouldSkipStep: (): boolean => {
+      const state = get().informationsData.input;
+      // Si aucune question n'a été générée et qu'il n'y a pas de questions manquantes,
+      // l'étape peut être passée automatiquement
+      return (
+        state.publicodesInformations.length === 0 && state.hasNoMissingQuestions
+      );
     },
     resetQuestions: () => {
       set(

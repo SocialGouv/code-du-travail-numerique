@@ -33,6 +33,7 @@ export type InformationsStoreFn = {
   ) => void;
   generatePublicodesQuestions: () => boolean;
   onNextStep: () => ValidationResponse;
+  shouldSkipStep: () => boolean;
   resetQuestions: () => void;
 };
 
