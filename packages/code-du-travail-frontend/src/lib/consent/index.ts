@@ -220,13 +220,8 @@ const applySeaConsent = (isConsented: boolean): void => {
 export const initConsent = (): void => {
   if (typeof window === "undefined") return;
 
-  // Check if user has explicitly consented
-  const hasConsented = localStorage.getItem("cdtn-cookie-consent-given");
-
-  // Always get consent (Matomo will be enabled regardless of explicit consent)
   const consent = getStoredConsent();
 
-  // Apply consent (Matomo is always enabled as per getStoredConsent)
   applyConsent(consent);
 
   // Set up listener for route changes in single-page applications
