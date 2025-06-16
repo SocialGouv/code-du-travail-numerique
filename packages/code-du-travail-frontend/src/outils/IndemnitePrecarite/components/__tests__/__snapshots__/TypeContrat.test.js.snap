@@ -3,25 +3,25 @@
 exports[`<TypeContrat /> should render 1`] = `
 <div>
   <legend
-    class="sc-323a1d51-0 jxTawz sc-fb2bdc6b-0 cWKeit"
+    class="sc-7b4bcbaf-0 iaxPSC sc-fb2bdc6b-0 cWKeit"
     data-testid="question-label"
   >
     <span
-      class="sc-a4406a0f-0 bniLbk"
+      class="sc-3633cc97-0 eiVtrx"
     >
       Quel est le type du contrat de travail ?
       <span
-        class="sc-a4406a0f-0 fsogbD"
+        class="sc-3633cc97-0 hpZWjW"
       >
          (obligatoire)
       </span>
     </span>
   </legend>
   <div
-    class="sc-3a87ec1e-1 eAvcwx"
+    class="sc-f2c30c13-1 cRwNeF"
   >
     <input
-      class="sc-3a87ec1e-2 foFPOF"
+      class="sc-f2c30c13-2 bKCzpJ"
       data-testid="contrat-cdd"
       id="contrat-cdd"
       name="contrat"
@@ -29,24 +29,24 @@ exports[`<TypeContrat /> should render 1`] = `
       value="CDD"
     />
     <label
-      class="sc-3a87ec1e-0 jaibCk"
+      class="sc-f2c30c13-0 ebobyG"
       for="contrat-cdd"
     >
       Contrat à durée déterminée (CDD)
     </label>
   </div>
   <div
-    class="sc-3a87ec1e-1 eAvcwx"
+    class="sc-f2c30c13-1 cRwNeF"
   >
     <input
-      class="sc-3a87ec1e-2 foFPOF"
+      class="sc-f2c30c13-2 bKCzpJ"
       id="contrat-ci"
       name="contrat"
       type="radio"
       value="CTT"
     />
     <label
-      class="sc-3a87ec1e-0 jaibCk"
+      class="sc-f2c30c13-0 ebobyG"
       for="contrat-ci"
     >
       Contrat de travail temporaire (Contrat d’intérim)

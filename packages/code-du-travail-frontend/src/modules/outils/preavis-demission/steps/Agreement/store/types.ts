@@ -27,6 +27,7 @@ export type AgreementStoreError = {
   agreement?: string;
   enterprise?: string;
   errorPublicodes?: string;
+  unsupportedAgreement?: string;
 };
 
 export type AgreementStoreData = {

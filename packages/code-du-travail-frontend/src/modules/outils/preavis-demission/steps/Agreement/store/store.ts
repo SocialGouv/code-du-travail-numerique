@@ -2,7 +2,7 @@ import { StoreApi } from "zustand";
 import produce from "immer";
 import { push as matopush } from "@socialgouv/matomo-next";
 
-import { PublicodesSimulator, supportedCcn } from "@socialgouv/modeles-social";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { StoreSliceWrapperPreavisDemission } from "../../store";
 import { AgreementStoreData, AgreementStoreSlice } from "./types";
 import { InformationsStoreSlice } from "../../Informations/store";

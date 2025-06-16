@@ -4,15 +4,15 @@ exports[`<StepCDD /> should render 1`] = `
 <div>
   <form>
     <legend
-      class="sc-323a1d51-0 jxTawz sc-fb2bdc6b-0 cWKeit"
+      class="sc-7b4bcbaf-0 iaxPSC sc-fb2bdc6b-0 cWKeit"
       data-testid="question-label"
     >
       <span
-        class="sc-a4406a0f-0 bniLbk"
+        class="sc-3633cc97-0 eiVtrx"
       >
         Le CDD a-t-il été rompu pendant la période d’essai du salarié ?
         <span
-          class="sc-a4406a0f-0 fsogbD"
+          class="sc-3633cc97-0 hpZWjW"
         >
            (obligatoire)
         </span>
@@ -23,10 +23,10 @@ exports[`<StepCDD /> should render 1`] = `
       data-testid="finContratPeriodeDessai"
     >
       <div
-        class="sc-3a87ec1e-1 eAvcwx"
+        class="sc-f2c30c13-1 cRwNeF"
       >
         <input
-          class="sc-3a87ec1e-2 foFPOF"
+          class="sc-f2c30c13-2 bKCzpJ"
           data-testid="finContratPeriodeDessai-oui"
           id="finContratPeriodeDessai-oui"
           name="finContratPeriodeDessai"
@@ -34,17 +34,17 @@ exports[`<StepCDD /> should render 1`] = `
           value="true"
         />
         <label
-          class="sc-3a87ec1e-0 jaibCk"
+          class="sc-f2c30c13-0 ebobyG"
           for="finContratPeriodeDessai-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-3a87ec1e-1 eAvcwx"
+        class="sc-f2c30c13-1 cRwNeF"
       >
         <input
-          class="sc-3a87ec1e-2 foFPOF"
+          class="sc-f2c30c13-2 bKCzpJ"
           data-testid="finContratPeriodeDessai-non"
           id="finContratPeriodeDessai-non"
           name="finContratPeriodeDessai"
@@ -52,7 +52,7 @@ exports[`<StepCDD /> should render 1`] = `
           value="false"
         />
         <label
-          class="sc-3a87ec1e-0 jaibCk"
+          class="sc-f2c30c13-0 ebobyG"
           for="finContratPeriodeDessai-non"
         >
           Non
@@ -60,15 +60,15 @@ exports[`<StepCDD /> should render 1`] = `
       </div>
     </div>
     <legend
-      class="sc-323a1d51-0 jxTawz sc-fb2bdc6b-0 cWKeit"
+      class="sc-7b4bcbaf-0 iaxPSC sc-fb2bdc6b-0 cWKeit"
       data-testid="question-label"
     >
       <span
-        class="sc-a4406a0f-0 bniLbk"
+        class="sc-3633cc97-0 eiVtrx"
       >
         À la fin du CDD, le salarié a-t-il été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?
         <span
-          class="sc-a4406a0f-0 fsogbD"
+          class="sc-3633cc97-0 hpZWjW"
         >
            (obligatoire)
         </span>
@@ -79,10 +79,10 @@ exports[`<StepCDD /> should render 1`] = `
       data-testid="propositionCDIFindeContrat"
     >
       <div
-        class="sc-3a87ec1e-1 eAvcwx"
+        class="sc-f2c30c13-1 cRwNeF"
       >
         <input
-          class="sc-3a87ec1e-2 foFPOF"
+          class="sc-f2c30c13-2 bKCzpJ"
           data-testid="propositionCDIFindeContrat-oui"
           id="propositionCDIFindeContrat-oui"
           name="propositionCDIFindeContrat"
@@ -90,17 +90,17 @@ exports[`<StepCDD /> should render 1`] = `
           value="true"
         />
         <label
-          class="sc-3a87ec1e-0 jaibCk"
+          class="sc-f2c30c13-0 ebobyG"
           for="propositionCDIFindeContrat-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-3a87ec1e-1 eAvcwx"
+        class="sc-f2c30c13-1 cRwNeF"
       >
         <input
-          class="sc-3a87ec1e-2 foFPOF"
+          class="sc-f2c30c13-2 bKCzpJ"
           data-testid="propositionCDIFindeContrat-non"
           id="propositionCDIFindeContrat-non"
           name="propositionCDIFindeContrat"
@@ -108,7 +108,7 @@ exports[`<StepCDD /> should render 1`] = `
           value="false"
         />
         <label
-          class="sc-3a87ec1e-0 jaibCk"
+          class="sc-f2c30c13-0 ebobyG"
           for="propositionCDIFindeContrat-non"
         >
           Non
@@ -116,15 +116,15 @@ exports[`<StepCDD /> should render 1`] = `
       </div>
     </div>
     <legend
-      class="sc-323a1d51-0 jxTawz sc-fb2bdc6b-0 cWKeit"
+      class="sc-7b4bcbaf-0 iaxPSC sc-fb2bdc6b-0 cWKeit"
       data-testid="question-label"
     >
       <span
-        class="sc-a4406a0f-0 bniLbk"
+        class="sc-3633cc97-0 eiVtrx"
       >
         Le CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave ou faute lourde du salarié, cas de force majeure ?
         <span
-          class="sc-a4406a0f-0 fsogbD"
+          class="sc-3633cc97-0 hpZWjW"
         >
            (obligatoire)
         </span>
@@ -135,10 +135,10 @@ exports[`<StepCDD /> should render 1`] = `
       data-testid="interruptionFauteGrave"
     >
       <div
-        class="sc-3a87ec1e-1 eAvcwx"
+        class="sc-f2c30c13-1 cRwNeF"
       >
         <input
-          class="sc-3a87ec1e-2 foFPOF"
+          class="sc-f2c30c13-2 bKCzpJ"
           data-testid="interruptionFauteGrave-oui"
           id="interruptionFauteGrave-oui"
           name="interruptionFauteGrave"
@@ -146,17 +146,17 @@ exports[`<StepCDD /> should render 1`] = `
           value="true"
         />
         <label
-          class="sc-3a87ec1e-0 jaibCk"
+          class="sc-f2c30c13-0 ebobyG"
           for="interruptionFauteGrave-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-3a87ec1e-1 eAvcwx"
+        class="sc-f2c30c13-1 cRwNeF"
       >
         <input
-          class="sc-3a87ec1e-2 foFPOF"
+          class="sc-f2c30c13-2 bKCzpJ"
           data-testid="interruptionFauteGrave-non"
           id="interruptionFauteGrave-non"
           name="interruptionFauteGrave"
@@ -164,7 +164,7 @@ exports[`<StepCDD /> should render 1`] = `
           value="false"
         />
         <label
-          class="sc-3a87ec1e-0 jaibCk"
+          class="sc-f2c30c13-0 ebobyG"
           for="interruptionFauteGrave-non"
         >
           Non
@@ -172,15 +172,15 @@ exports[`<StepCDD /> should render 1`] = `
       </div>
     </div>
     <legend
-      class="sc-323a1d51-0 jxTawz sc-fb2bdc6b-0 cWKeit"
+      class="sc-7b4bcbaf-0 iaxPSC sc-fb2bdc6b-0 cWKeit"
       data-testid="question-label"
     >
       <span
-        class="sc-a4406a0f-0 bniLbk"
+        class="sc-3633cc97-0 eiVtrx"
       >
         Le salarié a-t-il refusé de renouveler le CDD alors que le renouvellement et ses modalités étaient prévus dès l’origine dans son contrat ?
         <span
-          class="sc-a4406a0f-0 fsogbD"
+          class="sc-3633cc97-0 hpZWjW"
         >
            (obligatoire)
         </span>
@@ -191,10 +191,10 @@ exports[`<StepCDD /> should render 1`] = `
       data-testid="refusRenouvellementAuto"
     >
       <div
-        class="sc-3a87ec1e-1 eAvcwx"
+        class="sc-f2c30c13-1 cRwNeF"
       >
         <input
-          class="sc-3a87ec1e-2 foFPOF"
+          class="sc-f2c30c13-2 bKCzpJ"
           data-testid="refusRenouvellementAuto-oui"
           id="refusRenouvellementAuto-oui"
           name="refusRenouvellementAuto"
@@ -202,17 +202,17 @@ exports[`<StepCDD /> should render 1`] = `
           value="true"
         />
         <label
-          class="sc-3a87ec1e-0 jaibCk"
+          class="sc-f2c30c13-0 ebobyG"
           for="refusRenouvellementAuto-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="sc-3a87ec1e-1 eAvcwx"
+        class="sc-f2c30c13-1 cRwNeF"
       >
         <input
-          class="sc-3a87ec1e-2 foFPOF"
+          class="sc-f2c30c13-2 bKCzpJ"
           data-testid="refusRenouvellementAuto-non"
           id="refusRenouvellementAuto-non"
           name="refusRenouvellementAuto"
@@ -220,7 +220,7 @@ exports[`<StepCDD /> should render 1`] = `
           value="false"
         />
         <label
-          class="sc-3a87ec1e-0 jaibCk"
+          class="sc-f2c30c13-0 ebobyG"
           for="refusRenouvellementAuto-non"
         >
           Non

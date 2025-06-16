@@ -1,29 +1,26 @@
 import React from "react";
 import { RadioQuestion } from "../../../../common/components";
-import {
-  Agreement,
-  AgreementRoute,
-} from "src/modules/outils/indemnite-depart/types";
+import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { AgreementSearchInput } from "src/modules/convention-collective/AgreementSearch/AgreementSearchInput";
 import { EnterpriseAgreementSearchInput } from "src/modules/enterprise";
 import {
-  CommonAgreementStoreError,
-  CommonAgreementStoreFn,
-  CommonAgreementStoreInput,
-} from "src/modules/outils/indemnite-depart/steps/Agreement/store";
+  AgreementStoreError,
+  AgreementStoreFn,
+  AgreementStoreInput,
+} from "../store/types";
 import { selectedAgreementAlert } from "src/modules/outils/indemnite-depart/steps/Agreement/components/selectedAgreementAlert";
 import { fr } from "@codegouvfr/react-dsfr";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 type Props = {
-  error: CommonAgreementStoreError;
+  error: AgreementStoreError;
   onRouteChange: (route: AgreementRoute) => void;
-  route: CommonAgreementStoreInput["route"];
-  onAgreementChange: CommonAgreementStoreFn["onAgreementChange"];
-  enterprise: CommonAgreementStoreInput["enterprise"];
-  agreement: CommonAgreementStoreInput["agreement"];
-  onInitAgreementPage: CommonAgreementStoreFn["onInitAgreementPage"];
+  route: AgreementStoreInput["route"];
+  onAgreementChange: AgreementStoreFn["onAgreementChange"];
+  enterprise: AgreementStoreInput["enterprise"];
+  agreement: AgreementStoreInput["agreement"];
+  onInitAgreementPage: AgreementStoreFn["onInitAgreementPage"];
   trackingActionName: string;
 };
 
@@ -57,7 +54,6 @@ export const PreavisDemissionAgreementStep = ({
             value: "enterprise" as AgreementRoute,
             id: "route-enterprise",
           },
-          // Option "not-selected" supprimée pour le préavis de démission
         ]}
         name="route"
         label="Quel est le nom de la convention collective applicable&nbsp;?"
@@ -119,6 +115,13 @@ export const PreavisDemissionAgreementStep = ({
             />
           )}
         </>
+      )}
+      {error?.unsupportedAgreement && (
+        <Alert
+          title={error.unsupportedAgreement}
+          severity="error"
+          className={fr.cx("fr-mt-2w")}
+        />
       )}
     </>
   );

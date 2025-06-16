@@ -3,10 +3,10 @@
 exports[`<Article /> should render 1`] = `
 <div>
   <div
-    class="sc-c707bea3-0 fLyNGe"
+    class="sc-d8f596bd-0 jtWYDW"
   >
     <div
-      class="sc-13323d30-0 eYPJba"
+      class="sc-2a0a4b0a-0 hpYuum"
     >
       <div
         class="sc-f2a41fcc-1 fNkZjj"
@@ -16,13 +16,13 @@ exports[`<Article /> should render 1`] = `
             class="sc-f2a41fcc-0 hQZrlv"
           >
             <header
-              class="sc-238bfc37-0 exhNAB sc-f2a41fcc-4 cqLxSJ"
+              class="sc-e32628d4-0 ktMpnf sc-f2a41fcc-4 cqLxSJ"
             >
               <h1
-                class="sc-efa69b03-0 jXMLJR"
+                class="sc-5f05e99b-0 cWsbaq"
               >
                 <span
-                  class="sc-f4f767e-0 hiuRaG"
+                  class="sc-a4d7a179-0 gGBEJx"
                 />
                 Contrat de travail et formalités d'embauche de l'assistante maternelle
               </h1>
@@ -31,7 +31,7 @@ exports[`<Article /> should render 1`] = `
               class="sc-f2a41fcc-5 tnWPU"
             >
               <p
-                class="sc-a4406a0f-1 dvtaRl"
+                class="sc-3633cc97-1 ksBhgq"
               >
                 <span
                   class="sc-f2a41fcc-8 ObhLq"
@@ -153,7 +153,7 @@ exports[`<Article /> should render 1`] = `
               </span>
             </button>
             <div
-              class="sc-26bde2b2-0 jUExxE"
+              class="sc-95cc8fb1-0 iHYHyU"
             >
               <button
                 class="sc-85592e61-1 bcotEV spacing-left"
