@@ -69,7 +69,7 @@ const ShowResult: React.FC<Props> = ({
               />
             </>
           ) : (
-            <>il n'y a pas de préavis à effectuer</>
+            <>il n’y a pas de préavis à effectuer</>
           )}
         </HighlightResult>
       </p>
