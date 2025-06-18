@@ -6,7 +6,7 @@ import {
   trackQuestion,
 } from "src/lib";
 import { IndemniteDepartStepName } from "../../indemnite-depart";
-import { EventType, eventEmitter } from "../../indemnite-depart/events";
+import { EventType, eventEmitter } from "../../common/events";
 import { sendEvent } from "src/modules/utils";
 
 export const useRuptureCoEventEmitter = () => {

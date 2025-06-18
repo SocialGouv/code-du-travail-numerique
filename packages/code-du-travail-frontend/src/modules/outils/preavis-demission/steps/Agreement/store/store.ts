@@ -16,7 +16,7 @@ import { MatomoBaseEvent, MatomoSearchAgreementCategory } from "src/lib";
 import { loadPublicodes } from "src/modules/outils/common/publicodes";
 import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
-import { pushAgreementEvents } from "src/modules/outils/preavis-retraite/events/pushAgreementEvents";
+import { pushAgreementEvents } from "src/modules/outils/common/events/pushAgreementEvents";
 import { validateStep } from "./validator";
 
 const initialState: Omit<AgreementStoreData, "publicodes"> = {
