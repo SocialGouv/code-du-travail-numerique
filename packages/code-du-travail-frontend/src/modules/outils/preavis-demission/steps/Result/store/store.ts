@@ -12,7 +12,6 @@ import {
 } from "@socialgouv/modeles-social";
 import { mapToPublicodesSituationForCalculationPreavisDemission } from "../../../../common/publicodes/preavis-demission";
 import { informationToSituation } from "../../../../indemnite-depart/steps/Informations/components/utils";
-import { eventEmitter, EventType } from "src/modules/outils/common/events";
 
 const initialState: ResultStoreData = {
   input: {
@@ -78,10 +77,6 @@ const createResultStore: StoreSliceWrapperPreavisDemission<
         console.error("Error in publicodes calculation:", e);
         Sentry.captureException(e);
       }
-
-      const hasResult = !errorPublicodes && result !== undefined;
-
-      eventEmitter.dispatch(EventType.SEND_RESULT_EVENT, hasResult);
 
       set(
         produce((state: ResultStoreSlice) => {

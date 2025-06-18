@@ -1,9 +1,11 @@
 export enum EventType {
-  SEND_RESULT_EVENT = "sendResultEvent",
+  SEND_INELIGIBLE_RESULT = "sendIneligibleResult",
   TRACK_QUESTION = "trackQuestion",
+  CC_BLOCK_USER = "ccBlockUser",
 }
 
 export type CallbackEventType = {
-  [EventType.SEND_RESULT_EVENT]: (isEligible: boolean) => void;
+  [EventType.SEND_INELIGIBLE_RESULT]: () => void;
   [EventType.TRACK_QUESTION]: (title: string) => void;
+  [EventType.CC_BLOCK_USER]: () => void;
 };

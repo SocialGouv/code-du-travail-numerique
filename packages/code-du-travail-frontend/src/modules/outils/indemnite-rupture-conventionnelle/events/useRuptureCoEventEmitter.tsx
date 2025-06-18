@@ -3,26 +3,26 @@ import {
   MatomoActionEvent,
   MatomoBaseEvent,
   MatomoSimulatorEvent,
-  trackQuestion,
 } from "src/lib";
-import { IndemniteDepartStepName } from "../../indemnite-depart";
 import { EventType, eventEmitter } from "../../common/events";
 import { sendEvent } from "src/modules/utils";
 
 export const useRuptureCoEventEmitter = () => {
   useEffect(() => {
-    eventEmitter.subscribe(EventType.SEND_RESULT_EVENT, (isEligible) => {
+    eventEmitter.subscribe(EventType.SEND_INELIGIBLE_RESULT, () => {
       sendEvent({
         category: MatomoBaseEvent.OUTIL,
         action: MatomoActionEvent.RUPTURE_CONVENTIONNELLE,
-        name: isEligible
-          ? IndemniteDepartStepName.Resultat
-          : MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE,
+        name: MatomoSimulatorEvent.STEP_RESULT_INELIGIBLE,
       });
     });
 
     eventEmitter.subscribe(EventType.TRACK_QUESTION, (titre) => {
-      trackQuestion(titre, MatomoActionEvent.RUPTURE_CONVENTIONNELLE);
+      sendEvent({
+        category: MatomoBaseEvent.OUTIL,
+        action: MatomoActionEvent.RUPTURE_CONVENTIONNELLE,
+        name: "select_" + titre,
+      });
     });
 
     return () => {

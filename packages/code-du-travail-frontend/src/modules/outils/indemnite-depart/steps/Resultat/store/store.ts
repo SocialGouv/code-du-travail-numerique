@@ -83,7 +83,7 @@ const createResultStore: StoreSlicePublicodes<
         ancienneteEligibility &&
         informationEligibility;
 
-      eventEmitter.dispatch(EventType.SEND_RESULT_EVENT, isEligible);
+      if (!isEligible) eventEmitter.dispatch(EventType.SEND_INELIGIBLE_RESULT);
 
       set(
         produce((state: ResultStoreSlice) => {

@@ -18,6 +18,8 @@ import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { pushAgreementEvents } from "src/modules/outils/common/events/pushAgreementEvents";
 import { validateStep } from "./validator";
+import { eventEmitter, EventType } from "src/modules/outils/common/events";
+import isCcFullySupported from "src/modules/outils/common/utils/isCcFullySupported";
 
 const initialState: Omit<AgreementStoreData, "publicodes"> = {
   input: {
@@ -136,6 +138,15 @@ const createAgreementStore: StoreSliceWrapperPreavisDemission<
       const input = get().agreementData.input;
       const { isValid, errorState } = validateStep(input);
       const { route, agreement, enterprise } = input;
+      if (
+        input.agreement?.num &&
+        !isCcFullySupported(
+          input.agreement?.num,
+          PublicodesSimulator.PREAVIS_DEMISSION
+        )
+      ) {
+        eventEmitter.dispatch(EventType.CC_BLOCK_USER);
+      }
       if (isValid && route) {
         pushAgreementEvents(
           PublicodesSimulator.PREAVIS_DEMISSION,

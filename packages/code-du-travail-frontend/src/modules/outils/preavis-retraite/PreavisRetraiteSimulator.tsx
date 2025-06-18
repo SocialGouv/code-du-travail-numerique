@@ -16,6 +16,7 @@ import StepSeniority from "./steps/Seniority";
 import StepResult from "./steps/Result";
 import StepInformations from "./steps/Informations";
 import StepAgreement from "./steps/Agreement";
+import { usePreavisRetraiteEventEmitter } from "./events/usePreavisRetraiteEventEmitter";
 
 enum PreavisRetraiteStepName {
   Intro = "intro",
@@ -114,6 +115,8 @@ const PreavisRetraite = ({ title }: Pick<Props, "title">) => {
     onNextStepSeniority: state.seniorityFunction.onNextStep,
     isStepSeniorityValid: state.seniorityData.isStepValid,
   }));
+
+  usePreavisRetraiteEventEmitter();
 
   return (
     <SimulatorLayout
