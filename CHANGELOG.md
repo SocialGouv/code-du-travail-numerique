@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.183.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.183.1...v4.183.2) (2025-06-17)
+
+
+### Bug Fixes
+
+* matomo tracking disabled prod ([#6630](https://github.com/SocialGouv/code-du-travail-numerique/issues/6630)) ([743e42d](https://github.com/SocialGouv/code-du-travail-numerique/commit/743e42d3c79b42371e507d956a450d44955ce476))
+
+
+
+
+
 ## [4.183.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.183.0...v4.183.1) (2025-06-12)
 
 
