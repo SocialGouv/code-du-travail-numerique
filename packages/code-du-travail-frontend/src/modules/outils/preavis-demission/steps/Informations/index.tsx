@@ -56,6 +56,12 @@ const InformationsStepComponent = (): JSX.Element => {
           />
         );
       })}
+      {informations.length === 0 && (
+        <p className={fr.cx("fr-mt-2w")}>
+          Aucune information à renseigner. Vous pouvez passer à l&apos;étape
+          suivante.
+        </p>
+      )}
       {errors.errorPublicodes && (
         <p className={fr.cx("fr-error-text")}>{errors.errorPublicodes}</p>
       )}
