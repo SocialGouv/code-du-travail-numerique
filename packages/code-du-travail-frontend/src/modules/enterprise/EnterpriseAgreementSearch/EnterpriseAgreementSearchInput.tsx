@@ -294,6 +294,8 @@ export const EnterpriseAgreementSearchInput = ({
             onChange: (event) => {
               setSearch(event.target.value);
             },
+            // @ts-ignore
+            "data-testid": "enterprise-search-input",
           }}
           classes={{
             label: css({
@@ -411,6 +413,10 @@ export const EnterpriseAgreementSearchInput = ({
                         ev.preventDefault();
                         setSelectedEnterprise(enterprise);
                         if (enterprise.conventions.length === 1) {
+                          emitSelectEnterpriseAgreementEvent(
+                            enterprise.conventions[0].id,
+                            trackingActionName
+                          );
                           onAgreementSelect(
                             enterprise.conventions[0],
                             enterprise
@@ -476,6 +482,10 @@ export const EnterpriseAgreementSearchInput = ({
                       title: "Particuliers employeurs et emploi à domicile",
                       url: "/3239-particuliers-employeurs-et-emploi-a-domicile",
                     };
+                    emitSelectEnterpriseAgreementEvent(
+                      assMatAgreement.id,
+                      trackingActionName
+                    );
                     setSelectedAgreement(assMatAgreement);
                     onAgreementSelect(assMatAgreement);
                   },

@@ -11,20 +11,15 @@ export const ui = {
     unknownAgreement: byText(
       "Je ne sais pas quelle est ma convention collective et je la recherche."
     ),
-    // Option supprimée pour le préavis de démission
-    // noAgreement: byText(
-    //   "Je ne souhaite pas renseigner ma convention collective (je passe l'étape)"
-    // ),
-    agreementInput: byTestId("agreement-search-input"),
+    agreementInput: byTestId("AgreementSearchAutocomplete"),
     agreementInputConfirm: byText(
       /Vous avez sélectionné la convention collective/
     ),
-    agreementCompanyInput: byTestId("agreement-company-search-input"),
+    agreementCompanyInput: byTestId("enterprise-search-input"),
     agreementCompanyInputAsk: byText(
       "Précisez et sélectionnez votre entreprise"
     ),
     agreementCompanyInputConfirm: byText(/Vous avez sélectionné l'entreprise/),
-    agreementPostalCodeInput: byTestId("agreement-postal-code-search-input"),
   },
   next: byText("Suivant"),
   previous: byText("Précédent"),

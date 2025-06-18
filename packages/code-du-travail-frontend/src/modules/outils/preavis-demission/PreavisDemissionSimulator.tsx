@@ -18,6 +18,7 @@ import { SimulatorLayout } from "../common/components/SimulatorLayout";
 import StepResult from "./steps/Result";
 import StepInformations from "./steps/Informations";
 import StepAgreement from "./steps/Agreement";
+import { usePreavisDemissionEventEmitter } from "./events/usePreavisDemissionEventEmitter";
 
 enum PreavisDemissionStepName {
   Intro = "intro",
@@ -91,6 +92,7 @@ const PreavisDemissionSimulatorContent = ({
   steps: Step<PreavisDemissionStepName>[];
 }): JSX.Element => {
   const store = useContext(PreavisDemissionContext);
+
   const {
     onNextStepAgreement,
     isStepAgreementValid,
@@ -104,6 +106,8 @@ const PreavisDemissionSimulatorContent = ({
     isStepInfosValid: state.informationsData.isStepValid,
     shouldSkipInfoStep: state.informationsFunction.shouldSkipStep,
   }));
+
+  usePreavisDemissionEventEmitter();
 
   const handleNextStepInfos = (): ValidationResponse => {
     if (shouldSkipInfoStep()) {

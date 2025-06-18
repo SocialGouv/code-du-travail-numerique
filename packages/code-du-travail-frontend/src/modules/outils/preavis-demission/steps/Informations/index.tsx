@@ -3,6 +3,8 @@ import { PreavisDemissionContext, usePreavisDemissionStore } from "../store";
 import { fr } from "@codegouvfr/react-dsfr";
 import { PubliQuestion } from "src/modules/outils/indemnite-depart/steps/Informations/components/PubliQuestion";
 import { Note } from "./components/Note";
+import { eventEmitter } from "src/modules/outils/common/events/emitter";
+import { EventType } from "src/modules/outils/common/events/events";
 
 const InformationsStepComponent = (): JSX.Element => {
   const store = useContext(PreavisDemissionContext);
@@ -21,7 +23,6 @@ const InformationsStepComponent = (): JSX.Element => {
     agreement: state.agreementData.input.agreement,
   }));
 
-  // Générer les questions Publicodes quand le composant est monté ou quand la convention change
   useEffect(() => {
     if (agreement) {
       generatePublicodesQuestions();
@@ -37,13 +38,17 @@ const InformationsStepComponent = (): JSX.Element => {
             name={"infos." + info.question.name}
             rule={info.question.rule}
             value={info.info}
-            onChange={(v: any) =>
+            onChange={(v: any) => {
               onInformationsChange(
                 info.question.rule.nom,
                 v,
                 info.question.rule.cdtn?.type
-              )
-            }
+              );
+              eventEmitter.dispatch(
+                EventType.TRACK_QUESTION,
+                info.question.rule.titre || info.question.rule.nom
+              );
+            }}
             error={
               errors.errorInformations[info.question.rule.nom] ?? undefined
             }
