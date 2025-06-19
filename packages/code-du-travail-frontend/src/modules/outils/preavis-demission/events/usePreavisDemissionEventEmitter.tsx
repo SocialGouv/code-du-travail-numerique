@@ -10,14 +10,6 @@ import { sendEvent } from "src/modules/utils";
 
 export const usePreavisDemissionEventEmitter = () => {
   useEffect(() => {
-    eventEmitter.subscribe(EventType.TRACK_QUESTION, (titre) => {
-      sendEvent({
-        category: MatomoBaseEvent.OUTIL,
-        action: MatomoActionEvent.PREAVIS_DEMISSION,
-        name: "select_" + titre,
-      });
-    });
-
     eventEmitter.subscribe(EventType.CC_BLOCK_USER, () => {
       sendEvent({
         category: TrackingContributionCategory.TOOL,

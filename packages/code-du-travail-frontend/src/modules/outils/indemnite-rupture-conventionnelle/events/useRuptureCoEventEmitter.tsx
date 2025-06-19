@@ -17,14 +17,6 @@ export const useRuptureCoEventEmitter = () => {
       });
     });
 
-    eventEmitter.subscribe(EventType.TRACK_QUESTION, (titre) => {
-      sendEvent({
-        category: MatomoBaseEvent.OUTIL,
-        action: MatomoActionEvent.RUPTURE_CONVENTIONNELLE,
-        name: "select_" + titre,
-      });
-    });
-
     return () => {
       eventEmitter.unsubscribeAll();
     };

@@ -58,6 +58,7 @@ export const EnterpriseAgreementSearchInput = ({
     emitSelectEnterpriseEvent,
     emitNoEnterpriseClickEvent,
     emitSelectEnterpriseAgreementEvent,
+    emitNoEnterpriseSelectEvent,
   } = useEnterpriseAgreementSearchTracking();
 
   const [search, setSearch] = useState<string | undefined>(defaultSearch);
@@ -247,6 +248,18 @@ export const EnterpriseAgreementSearchInput = ({
         }}
         onAgreementSelect={(agreement) => {
           setSelectedAgreement(agreement);
+          if (selectedEnterprise) {
+            emitSelectEnterpriseEvent(trackingActionName, {
+              label: selectedEnterprise.label,
+              siren: selectedEnterprise.siren,
+            });
+            emitSelectEnterpriseAgreementEvent(
+              `idcc${selectedEnterprise.conventions[0].num}`,
+              trackingActionName
+            );
+          } else {
+            emitNoEnterpriseSelectEvent();
+          }
           onAgreementSelect(agreement, selectedEnterprise);
         }}
       />
@@ -413,10 +426,18 @@ export const EnterpriseAgreementSearchInput = ({
                         ev.preventDefault();
                         setSelectedEnterprise(enterprise);
                         if (enterprise.conventions.length === 1) {
-                          emitSelectEnterpriseAgreementEvent(
-                            enterprise.conventions[0].id,
-                            trackingActionName
-                          );
+                          if (enterprise) {
+                            emitSelectEnterpriseEvent(trackingActionName, {
+                              label: enterprise.label,
+                              siren: enterprise.siren,
+                            });
+                            emitSelectEnterpriseAgreementEvent(
+                              `idcc${enterprise.conventions[0].num}`,
+                              trackingActionName
+                            );
+                          } else {
+                            emitNoEnterpriseSelectEvent();
+                          }
                           onAgreementSelect(
                             enterprise.conventions[0],
                             enterprise
@@ -482,11 +503,8 @@ export const EnterpriseAgreementSearchInput = ({
                       title: "Particuliers employeurs et emploi à domicile",
                       url: "/3239-particuliers-employeurs-et-emploi-a-domicile",
                     };
-                    emitSelectEnterpriseAgreementEvent(
-                      assMatAgreement.id,
-                      trackingActionName
-                    );
                     setSelectedAgreement(assMatAgreement);
+                    emitNoEnterpriseSelectEvent();
                     onAgreementSelect(assMatAgreement);
                   },
                 }

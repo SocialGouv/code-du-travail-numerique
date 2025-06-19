@@ -44,10 +44,6 @@ const InformationsStepComponent = (): JSX.Element => {
                 v,
                 info.question.rule.cdtn?.type
               );
-              eventEmitter.dispatch(
-                EventType.TRACK_QUESTION,
-                info.question.rule.titre || info.question.rule.nom
-              );
             }}
             error={
               errors.errorInformations[info.question.rule.nom] ?? undefined
