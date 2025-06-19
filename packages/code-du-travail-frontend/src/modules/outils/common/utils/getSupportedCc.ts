@@ -1,10 +1,14 @@
-import { PublicodesSimulator, supportedCcn } from "@socialgouv/modeles-social";
+import {
+  AgreementInfo,
+  PublicodesSimulator,
+  supportedCcn,
+} from "@socialgouv/modeles-social";
 import { AgreementSupportInfo } from "../../indemnite-depart/common/types";
 
 const getSupportedCc = (
   simulator: PublicodesSimulator
 ): AgreementSupportInfo[] => {
-  let key = "";
+  let key: keyof Omit<AgreementInfo, "idcc">;
   switch (simulator) {
     case PublicodesSimulator.PREAVIS_DEMISSION:
       key = "preavisDemission";
@@ -18,8 +22,6 @@ const getSupportedCc = (
     case PublicodesSimulator.PREAVIS_RETRAITE:
       key = "preavisRetraite";
       break;
-    default:
-      throw new Error("Unsupported simulator type");
   }
   return supportedCcn.map((item) => ({
     fullySupported: item[key],
