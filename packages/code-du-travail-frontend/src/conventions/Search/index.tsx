@@ -53,7 +53,7 @@ const Search = ({ onSelectConvention }: Props): JSX.Element => {
       <BlockInput
         placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
         value={query}
-        type="search"
+        type="text"
         name="q"
         id="convention-search"
         onChange={onInputChange}
