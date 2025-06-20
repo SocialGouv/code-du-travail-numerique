@@ -11,6 +11,7 @@ import {
 } from "../store";
 import { selectedAgreementAlert } from "./selectedAgreementAlert";
 import { fr } from "@codegouvfr/react-dsfr";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 type Props = {
   error: CommonAgreementStoreError;
@@ -21,6 +22,7 @@ type Props = {
   agreement: CommonAgreementStoreInput["agreement"];
   onInitAgreementPage: CommonAgreementStoreFn["onInitAgreementPage"];
   trackingActionName: string;
+  simulator: PublicodesSimulator;
 };
 
 export const CommonAgreementStep = ({
@@ -32,6 +34,7 @@ export const CommonAgreementStep = ({
   agreement,
   onInitAgreementPage,
   trackingActionName,
+  simulator,
 }: Required<Props>): JSX.Element => {
   React.useEffect(() => {
     onInitAgreementPage();
@@ -82,7 +85,9 @@ export const CommonAgreementStep = ({
             onAgreementSelect={(agreement) => {
               onAgreementChange(agreement);
             }}
-            selectedAgreementAlert={selectedAgreementAlert}
+            selectedAgreementAlert={(agr) =>
+              agr && selectedAgreementAlert(agr, simulator)
+            }
             defaultAgreement={agreement}
             trackingActionName={
               trackingActionName ?? IndemniteDepartType.LICENCIEMENT
@@ -103,7 +108,9 @@ export const CommonAgreementStep = ({
             onAgreementSelect={(agr, ent) => {
               onAgreementChange(agr, ent);
             }}
-            selectedAgreementAlert={selectedAgreementAlert}
+            selectedAgreementAlert={(agr) =>
+              agr && selectedAgreementAlert(agr, simulator)
+            }
             trackingActionName={
               trackingActionName ?? IndemniteDepartType.LICENCIEMENT
             }

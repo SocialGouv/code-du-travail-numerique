@@ -58,6 +58,7 @@ export const EnterpriseAgreementSearchInput = ({
     emitSelectEnterpriseEvent,
     emitNoEnterpriseClickEvent,
     emitSelectEnterpriseAgreementEvent,
+    emitNoEnterpriseSelectEvent,
   } = useEnterpriseAgreementSearchTracking();
 
   const [search, setSearch] = useState<string | undefined>(defaultSearch);
@@ -247,6 +248,18 @@ export const EnterpriseAgreementSearchInput = ({
         }}
         onAgreementSelect={(agreement) => {
           setSelectedAgreement(agreement);
+          if (selectedEnterprise) {
+            emitSelectEnterpriseEvent(trackingActionName, {
+              label: selectedEnterprise.label,
+              siren: selectedEnterprise.siren,
+            });
+            emitSelectEnterpriseAgreementEvent(
+              `idcc${selectedEnterprise.conventions[0].num}`,
+              trackingActionName
+            );
+          } else {
+            emitNoEnterpriseSelectEvent();
+          }
           onAgreementSelect(agreement, selectedEnterprise);
         }}
       />
@@ -294,6 +307,8 @@ export const EnterpriseAgreementSearchInput = ({
             onChange: (event) => {
               setSearch(event.target.value);
             },
+            // @ts-ignore
+            "data-testid": "enterprise-search-input",
           }}
           classes={{
             label: css({
@@ -411,6 +426,18 @@ export const EnterpriseAgreementSearchInput = ({
                         ev.preventDefault();
                         setSelectedEnterprise(enterprise);
                         if (enterprise.conventions.length === 1) {
+                          if (enterprise) {
+                            emitSelectEnterpriseEvent(trackingActionName, {
+                              label: enterprise.label,
+                              siren: enterprise.siren,
+                            });
+                            emitSelectEnterpriseAgreementEvent(
+                              `idcc${enterprise.conventions[0].num}`,
+                              trackingActionName
+                            );
+                          } else {
+                            emitNoEnterpriseSelectEvent();
+                          }
                           onAgreementSelect(
                             enterprise.conventions[0],
                             enterprise
@@ -477,6 +504,7 @@ export const EnterpriseAgreementSearchInput = ({
                       url: "/3239-particuliers-employeurs-et-emploi-a-domicile",
                     };
                     setSelectedAgreement(assMatAgreement);
+                    emitNoEnterpriseSelectEvent();
                     onAgreementSelect(assMatAgreement);
                   },
                 }

@@ -10,6 +10,8 @@ export type AgreementInfo = {
   idcc: number;
   preavisRetraite: SupportedTypes;
   indemniteLicenciement: SupportedTypes;
+  preavisDemission: SupportedTypes;
+  ruptureConventionnelle: SupportedTypes;
 };
 
 export const supportedCcn: AgreementInfo[] = ccnSupported;

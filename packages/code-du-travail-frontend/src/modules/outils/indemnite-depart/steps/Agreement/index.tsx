@@ -3,6 +3,7 @@ import React from "react";
 import { useContext } from "react";
 import { CommonAgreementStep } from "./components/AgreementStep";
 import { IndemniteDepartType } from "../../types";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 const AgreementStep = (): JSX.Element => {
   const store = useContext(IndemniteDepartContext);
@@ -42,6 +43,11 @@ const AgreementStep = (): JSX.Element => {
       onInitAgreementPage={onInitAgreementPage}
       onRouteChange={onRouteChange}
       route={route}
+      simulator={
+        indemniteDepartType === IndemniteDepartType.LICENCIEMENT
+          ? PublicodesSimulator.INDEMNITE_LICENCIEMENT
+          : PublicodesSimulator.RUPTURE_CONVENTIONNELLE
+      }
     />
   );
 };

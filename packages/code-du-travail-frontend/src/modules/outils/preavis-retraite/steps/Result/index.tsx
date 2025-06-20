@@ -9,7 +9,6 @@ import Situation from "./components/Situation";
 import ErrorPublicodes from "src/modules/outils/indemnite-depart/steps/Resultat/components/ErrorPublicodes";
 import { PubliReferences } from "src/modules/outils/common/components";
 import { fr } from "@codegouvfr/react-dsfr";
-import { cx } from "@styled-system/css";
 
 const StepResult = (): JSX.Element => {
   const store = useContext(PreavisRetraiteContext);
