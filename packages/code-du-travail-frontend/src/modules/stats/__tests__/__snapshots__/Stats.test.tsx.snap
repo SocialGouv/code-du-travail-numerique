@@ -177,7 +177,11 @@ exports[`<Stats /> should match snapshot 1`] = `
                 <div
                   class="fr-tile__detail"
                 >
-                  Format PDF - 1Mo
+                  <p>
+                    Format PDF - 
+                    1
+                    Mo
+                  </p>
                 </div>
               </div>
             </div>
@@ -223,7 +227,11 @@ exports[`<Stats /> should match snapshot 1`] = `
                 <div
                   class="fr-tile__detail"
                 >
-                  Format PDF - 1.1Mo
+                  <p>
+                    Format PDF - 
+                    1.1
+                    Mo
+                  </p>
                 </div>
               </div>
             </div>
