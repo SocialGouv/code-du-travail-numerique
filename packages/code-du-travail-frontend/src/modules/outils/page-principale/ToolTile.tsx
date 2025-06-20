@@ -29,7 +29,7 @@ export const ToolTile = (props: HomeTileProps) => {
       }}
       orientation="vertical"
       title={props.title}
-      desc={props.description}
+      desc={<p>{props.description}</p>}
       titleAs={props.level}
       classes={{
         img: fr.cx("fr-mb-0"),
