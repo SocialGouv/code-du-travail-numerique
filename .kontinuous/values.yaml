@@ -1,14 +1,5 @@
-jobs:
-  ~chart: jobs
-  runs:
-    build-app:
-      use: build
-      with:
-        imagePackage: app
-
 app:
   ~chart: app
-  ~needs: [build-app]
   imagePackage: app
   imageProject: cdtn
   probesPath: /api/health

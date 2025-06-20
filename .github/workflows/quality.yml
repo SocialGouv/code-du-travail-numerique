@@ -161,14 +161,3 @@ jobs:
           yarn workspace ${{ matrix.repositories }} test
         env:
           ELASTICSEARCH_URL: http://localhost:9200
-
-  docker:
-    name: Lint Dockerfile
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Lint Dockerfile
-        uses: hadolint/hadolint-action@v3.1.0
-        with:
-          recursive: true
