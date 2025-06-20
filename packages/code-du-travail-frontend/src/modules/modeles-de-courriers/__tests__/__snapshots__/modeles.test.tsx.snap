@@ -92,11 +92,17 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
                     Télécharger le Mon modele
                   </a>
                 </h2>
-                <p
+                <div
                   class="fr-tile__detail"
                 >
-                  Format txt - 10Ko
-                </p>
+                  <p>
+                    Format 
+                    txt
+                     - 
+                    10
+                    Ko
+                  </p>
+                </div>
               </div>
             </div>
             <div
@@ -183,11 +189,17 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
                   Télécharger le Mon modele
                 </a>
               </h2>
-              <p
+              <div
                 class="fr-tile__detail"
               >
-                Format txt - 10Ko
-              </p>
+                <p>
+                  Format 
+                  txt
+                   - 
+                  10
+                  Ko
+                </p>
+              </div>
             </div>
           </div>
           <div
@@ -272,11 +284,17 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
                     Télécharger le Mon modele
                   </a>
                 </h3>
-                <p
+                <div
                   class="fr-tile__detail"
                 >
-                  Format txt - 10Ko
-                </p>
+                  <p>
+                    Format 
+                    txt
+                     - 
+                    10
+                    Ko
+                  </p>
+                </div>
               </div>
             </div>
             <div
