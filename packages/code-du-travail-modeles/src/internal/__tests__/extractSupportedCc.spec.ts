@@ -12,6 +12,7 @@ describe("extractSupportedCc", () => {
       preavisRetraite: "fullySupported",
       ruptureConventionnelle: "neverSupported",
       preavisDemission: "fullySupported",
+      indemnitePrecarite: "fullySupported",
     });
   });
 });
