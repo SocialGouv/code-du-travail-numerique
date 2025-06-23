@@ -3,7 +3,7 @@
 exports[`<Table /> should render with th, td, colspan etc. 1`] = `
 <div>
   <div
-    class="fr-table--sm fr-table fr-table"
+    class="fr-table--sm fr-table"
   >
     <div
       class="fr-table__wrapper"

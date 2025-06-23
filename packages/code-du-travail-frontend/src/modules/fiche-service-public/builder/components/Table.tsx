@@ -40,7 +40,7 @@ export const Table = ({
   };
 
   return (
-    <div className="fr-table--sm fr-table fr-table">
+    <div className="fr-table--sm fr-table">
       <div className="fr-table__wrapper">
         <div className="fr-table__container">
           <div className="fr-table__content">

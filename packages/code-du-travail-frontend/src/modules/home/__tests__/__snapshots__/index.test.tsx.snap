@@ -73,7 +73,7 @@ exports[`<Home /> should match snapshot 1`] = `
                           data-testid="search-input"
                           id="downshift-0-input"
                           role="combobox"
-                          type="search"
+                          type="text"
                           value=""
                         />
                         <div

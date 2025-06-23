@@ -101,7 +101,7 @@ const SearchBar = ({
         }
         hasButton={hasButton}
         hasSearchIcon={hasSearchIcon}
-        type="search"
+        type="text"
       />
 
       <StyledList {...getMenuProps()} hasButton={hasButton}>
