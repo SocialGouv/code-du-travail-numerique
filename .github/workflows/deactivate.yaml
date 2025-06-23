@@ -18,6 +18,6 @@ on:
       - "!**-persist-**"
 
 jobs:
-  socialgouv:
-    uses: socialgouv/workflows/.github/workflows/use-ks-gh-deactivate.yaml@v1
+  kontinuous:
+    uses: socialgouv/workflows/.github/workflows/use-ks-gh-deactivate-atlas.yaml@v1
     secrets: inherit

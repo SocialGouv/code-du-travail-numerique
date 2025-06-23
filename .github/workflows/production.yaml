@@ -10,7 +10,64 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.ref }}
 
 jobs:
-  socialgouv:
-    name: "🇫🇷 SocialGouv"
-    uses: socialgouv/workflows/.github/workflows/use-ks-gh-with-env-production.yaml@v1
+  build-app:
+    environment: build-production
+    outputs:
+      tags: ${{ steps.meta.outputs.tags }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⏬ Checkout code repository
+        uses: actions/checkout@v4
+
+      - name: 📌 Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ vars.REGISTRY_URL }}/${{ vars.PROJECT_NAME }}/${{ github.event.repository.name }}/app
+          tags: |
+            type=semver,pattern=v{{version}},priority=900
+            type=sha,prefix=sha-,format=long,priority=890
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }},priority=200
+
+      - name: 📦 Build and push Docker image for app
+        uses: socialgouv/workflows/actions/buildkit@v1
+        with:
+          context: "."
+          dockerfile: "Dockerfile"
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          registry: "${{ vars.REGISTRY_URL }}"
+          registry-username: "${{ secrets.REGISTRY_USERNAME }}"
+          registry-password: "${{ secrets.REGISTRY_PASSWORD }}"
+          buildkit-cert-ca: "${{ secrets.BUILDKIT_CERT_CA }}"
+          buildkit-cert: "${{ secrets.BUILDKIT_CERT }}"
+          buildkit-cert-key: "${{ secrets.BUILDKIT_CERT_KEY }}"
+          buildkit-svc-count: ${{ vars.BUILDKIT_SVC_COUNT }}
+          buildkit-daemon-address: ${{ vars.BUILDKIT_DAEMON_ADDRESS }}
+          secrets: |
+            SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}
+            ELASTICSEARCH_TOKEN_API=${{ secrets.ELASTICSEARCH_TOKEN_API }}
+            ELASTICSEARCH_URL=${{ secrets.ELASTICSEARCH_URL }}
+          build-args: |
+            NEXT_PUBLIC_CDTN_ENV=production
+            NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=true
+            NEXT_PUBLIC_BUCKET_FOLDER=published
+            NEXT_PUBLIC_BUCKET_SITEMAP_FOLDER=sitemap
+            NEXT_PUBLIC_BUCKET_URL=https://cdtn-prod-public.s3.gra.io.cloud.ovh.net
+            NEXT_PUBLIC_PIWIK_SITE_ID=4
+            NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
+            NEXT_PUBLIC_COMMIT=${{ github.sha }}
+            NEXT_PUBLIC_SITE_URL=https://code.travail.gouv.fr
+            NEXT_PUBLIC_SENTRY_DSN=${{ secrets.PUBLIC_SENTRY_DSN }}
+            NEXT_PUBLIC_SENTRY_ENV=production
+            NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn-prod
+            SENTRY_RELEASE=${{ github.ref_name }}
+            SENTRY_ORG=incubateur
+            SENTRY_PROJECT=fabnum-code-du-travail-numerique
+            SENTRY_URL=https://sentry2.fabrique.social.gouv.fr
+
+  kontinuous:
+    needs: [build-app]
+    name: "Deploy on Kubernetes 🐳"
+    uses: socialgouv/workflows/.github/workflows/use-ks-gh-production-atlas.yaml@v1
     secrets: inherit
