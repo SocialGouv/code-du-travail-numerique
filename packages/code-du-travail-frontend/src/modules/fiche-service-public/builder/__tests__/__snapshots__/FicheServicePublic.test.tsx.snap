@@ -1035,7 +1035,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
     </div>
     <div
       aria-labelledby="tabpanel-:r1:-1"
-      class="fr-tabs__panel fr-tabs__panel"
+      class="fr-tabs__panel"
       id="tabpanel-:r1:-1-panel"
       role="tabpanel"
       tabindex="0"
@@ -1778,7 +1778,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
     </div>
     <div
       aria-labelledby="tabpanel-:r1:-2"
-      class="fr-tabs__panel fr-tabs__panel"
+      class="fr-tabs__panel"
       id="tabpanel-:r1:-2-panel"
       role="tabpanel"
       tabindex="0"
