@@ -1,10 +1,10 @@
 import { IneligibilityRuptureConventionnelle } from "../../base";
 import { IneligibilityRuptureConventionnelle3239 } from "../../conventions";
 import { SupportedCc } from "..";
-import type { IInegibility } from "../types/ineligibility";
+import type { IIneligibility } from "../types/ineligibility";
 
 export class IneligibilityRuptureConventionnelleFactory {
-  create<T extends SupportedCc>(idcc: T): IInegibility {
+  create<T extends SupportedCc>(idcc: T): IIneligibility {
     switch (idcc) {
       case SupportedCc.IDCC3239:
         return new IneligibilityRuptureConventionnelle3239();

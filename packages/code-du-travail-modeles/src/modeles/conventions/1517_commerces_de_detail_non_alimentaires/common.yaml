@@ -6,3 +6,5 @@ contrat salarié . convention collective . commerces de detail non alimentaires:
     idcc: 1517
     préavis-retraite: true
     indemnité-licenciement: true
+    préavis-demission: true
+    rupture-conventionnelle: true

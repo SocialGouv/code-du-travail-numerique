@@ -6,3 +6,5 @@ contrat salarié . convention collective . commerces de détail fruits et légum
     idcc: 1505
     préavis-retraite: true
     indemnité-licenciement: true
+    préavis-demission: true
+    rupture-conventionnelle: true
