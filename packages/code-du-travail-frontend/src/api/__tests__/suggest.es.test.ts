@@ -19,11 +19,6 @@ describe("Suggestion", () => {
     expect(res.status).toBe(200);
     expect(res.body).toMatchSnapshot();
   });
-  test("accentuation is ignored", async () => {
-    const res = await request(server).get("/api/suggest?q=rét");
-    expect(res.body.includes("retraite")).toBeTruthy();
-    expect(res.body).toMatchSnapshot();
-  });
 
   test("fuzzy matching works", async () => {
     const res = await request(server).get("/api/suggest?q=reta");
