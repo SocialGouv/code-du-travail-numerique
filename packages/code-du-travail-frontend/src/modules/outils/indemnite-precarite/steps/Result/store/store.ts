@@ -11,12 +11,17 @@ import {
   References,
   Notification,
   supportedCcn,
+  PublicodesIndemnitePrecariteResult,
 } from "@socialgouv/modeles-social";
 import { mapToPublicodesSituationForCalculationIndemnitePrecarite } from "../../../../common/publicodes/indemnite-precarite";
-import { informationToSituation } from "../../../../indemnite-depart/steps/Informations/components/utils";
 
 const initialState: ResultStoreData = {
+  result: undefined,
   isCalculating: false,
+  calculationError: undefined,
+  isAgreementSupported: false,
+  resultNotifications: undefined,
+  resultReferences: undefined,
 };
 
 const createResultStore: StoreSliceWrapperIndemnitePrecarite<
@@ -30,7 +35,7 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
     calculateResult: () => {
       const state = get();
       const agreement = state.agreementData.input.agreement;
-      const publicodes = state.agreementData.publicodes as any; // Type assertion temporaire
+      const publicodes = state.agreementData.publicodes;
 
       const isAgreementSupported = !!supportedCcn.find(
         ({ idcc }) => idcc === agreement?.num
@@ -42,7 +47,7 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
       }
 
       let errorPublicodes: boolean = false;
-      let result: any | undefined;
+      let result: PublicodesIndemnitePrecariteResult | undefined;
       let resultNotifications: Notification[] | undefined;
       let resultReferences: References[] | undefined;
 
@@ -64,8 +69,9 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
       if (state.remunerationData.input.salaryInfo) {
         const salaryInfo = state.remunerationData.input.salaryInfo;
         if (salaryInfo.totalGrossSalary) {
-          situationData["contrat salarié . rémunération . brut de base"] =
-            String(salaryInfo.totalGrossSalary);
+          situationData["contrat salarié . salaire de référence"] = String(
+            salaryInfo.totalGrossSalary
+          );
         }
       }
 
@@ -99,17 +105,21 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
 
       set(
         produce((state: ResultStoreSlice) => {
+          const resultValue = result?.value;
+          const amount =
+            typeof resultValue === "number"
+              ? resultValue
+              : (resultValue as any)?.nodeValue || 0;
+
           state.resultData.result = result
             ? {
-                amount: result.value || 0,
-                isEligible: (result.value || 0) > 0,
+                amount: amount,
+                isEligible: amount > 0,
                 reason:
-                  (result.value || 0) === 0
-                    ? "Non éligible selon les critères"
-                    : undefined,
+                  amount === 0 ? "Non éligible selon les critères" : undefined,
                 details: {
-                  baseAmount: 0, // À adapter selon les données publicodes
-                  rate: 0, // À adapter selon les données publicodes
+                  baseAmount: amount,
+                  rate: 10, // 10% par défaut pour l'indemnité de précarité
                 },
               }
             : undefined;
@@ -123,8 +133,6 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
       );
     },
     getPublicodesResult: () => {
-      // Cette fonction peut être utilisée pour récupérer le résultat publicodes
-      // Pour l'instant, elle fait la même chose que calculateResult
       const resultFunction = get().resultFunction;
       resultFunction.calculateResult();
     },
