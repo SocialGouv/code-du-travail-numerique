@@ -1,38 +1,69 @@
-import { InformationsStoreInput, InformationsStoreError } from "./types";
+import { InformationsStoreError, InformationsStoreInput } from "./types";
+import { RuleType } from "@socialgouv/modeles-social";
+import { deepEqualObject } from "src/lib";
+import {
+  isDate,
+  isPositiveNumber,
+} from "src/modules/outils/common/utils/validators";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
-import { CONTRACT_TYPE } from "../../../types";
 
 export const validateStep = (
-  input: InformationsStoreInput,
+  state: InformationsStoreInput,
   agreement?: Agreement
-): { isValid: boolean; errorState: InformationsStoreError } => {
-  const errorState: InformationsStoreError = {};
-  let isValid = true;
+) => {
+  const informations = state.publicodesInformations;
 
-  // Si pas de convention collective, l'étape est valide par défaut
-  if (!agreement) {
-    return { isValid: true, errorState: {} };
-  }
-
-  // Vérifier si un type de contrat est sélectionné
-  if (!input.contractType) {
-    errorState.contractType = "Veuillez sélectionner un type de contrat";
-    isValid = false;
-  }
-
-  // Validation spécifique selon le type de contrat
-  if (input.contractType) {
-    if (input.contractType === CONTRACT_TYPE.CDD) {
-      // Validation pour CDD
-      if (!input.criteria?.cddType) {
-        errorState.criteria = {
-          cddType: "Veuillez sélectionner un type de CDD",
-        };
-        isValid = false;
-      }
+  let errorInformations: Record<string, string> = {};
+  informations.forEach((info) => {
+    const error = isValidField(info.info, info.question.rule.cdtn?.type);
+    if (error !== undefined) {
+      errorInformations[info.question.rule.nom] = error;
     }
-    // Pour CTT (intérim), pas de validation spécifique pour l'instant
+  });
+
+  // Validation des critères spécifiques
+  let errorCriteria: Record<string, string> = {};
+  if (state.contractType) {
+    // Validation du type de contrat
+    if (!state.contractType) {
+      errorCriteria.contractType = "Vous devez sélectionner un type de contrat";
+    }
   }
 
+  let errorState: InformationsStoreError = {
+    errorInformations,
+    criteria: errorCriteria,
+    errorPublicodes: state.informationError
+      ? "Une erreur liée au moteur de calcul nous empêche de continuer la simulation. Veuillez vérifier les informations saisies ou rafraîchir la page si le problème persiste."
+      : undefined,
+  };
+
+  const isValid = deepEqualObject(errorState, {
+    errorInformations: {},
+    criteria: {},
+    errorPublicodes: undefined,
+    errorIneligibility: undefined,
+  });
   return { isValid, errorState };
+};
+
+export const isValidField = (
+  value: string | undefined | null,
+  type: RuleType | undefined
+): string | undefined => {
+  if (value === undefined || value === null || value === "") {
+    return "Vous devez répondre à cette question";
+  }
+  switch (type) {
+    case RuleType.Liste:
+      return undefined;
+    case RuleType.OuiNon:
+      return value !== "'Oui'" && value !== "'Non'"
+        ? "Vous devez répondre à cette question"
+        : undefined;
+    case RuleType.Date:
+      return isDate(value);
+    default:
+      return isPositiveNumber(value);
+  }
 };

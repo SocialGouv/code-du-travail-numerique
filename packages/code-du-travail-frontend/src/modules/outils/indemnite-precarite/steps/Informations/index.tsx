@@ -1,237 +1,116 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import {
   IndemnitePrecariteContext,
   useIndemnitePrecariteStore,
 } from "../store";
-import { CONTRACT_TYPE, QUESTIONS, EXCLUDED_CONTRACTS } from "../../types";
+import { fr } from "@codegouvfr/react-dsfr";
+import { PubliQuestion } from "src/modules/outils/indemnite-depart/steps/Informations/components/PubliQuestion";
+import Alert from "@codegouvfr/react-dsfr/Alert";
 
-const StepInfosGenerales = (): JSX.Element => {
+const InformationsStepComponent = (): JSX.Element => {
   const store = useContext(IndemnitePrecariteContext);
   const {
-    contractType,
-    onContractTypeChange,
-    criteria,
-    onCriteriaChange,
+    errors,
+    onInformationsChange,
+    informations,
+    generatePublicodesQuestions,
+    checkIneligibility,
     agreement,
+    hasNoMissingQuestions,
+    informationError,
   } = useIndemnitePrecariteStore(store, (state) => ({
-    contractType: state.informationsData.input.contractType,
-    onContractTypeChange: state.informationsFunction.onContractTypeChange,
-    criteria: state.informationsData.input.criteria,
-    onCriteriaChange: state.informationsFunction.onCriteriaChange,
+    errors: state.informationsData.error,
+    onInformationsChange: state.informationsFunction.onInformationsChange,
+    informations: state.informationsData.input.publicodesInformations,
+    generatePublicodesQuestions:
+      state.informationsFunction.generatePublicodesQuestions,
+    checkIneligibility: state.informationsFunction.checkIneligibility,
     agreement: state.agreementData.input.agreement,
+    hasNoMissingQuestions: state.informationsData.input.hasNoMissingQuestions,
+    informationError: state.informationsData.input.informationError,
   }));
 
-  const handleContractTypeChange = (
-    type: (typeof CONTRACT_TYPE)[keyof typeof CONTRACT_TYPE]
-  ) => {
-    onContractTypeChange(type);
-  };
+  useEffect(() => {
+    if (agreement) {
+      generatePublicodesQuestions();
+    }
+  }, [agreement, generatePublicodesQuestions]);
 
-  const handleCriteriaChange = (key: string, value: string) => {
-    onCriteriaChange({
-      ...criteria,
-      [key]: value,
-    });
-  };
+  // Vérifier l'ineligibility après chaque changement
+  const isIneligible = checkIneligibility();
 
   return (
-    <div>
-      <h3>Informations générales</h3>
-
-      {/* Sélection du type de contrat */}
-      <div style={{ marginBottom: "2rem" }}>
-        <fieldset>
-          <legend>Quel est votre type de contrat ?</legend>
-          <div>
-            <label>
-              <input
-                type="radio"
-                name="contractType"
-                value={CONTRACT_TYPE.CDD}
-                checked={contractType === CONTRACT_TYPE.CDD}
-                onChange={() => handleContractTypeChange(CONTRACT_TYPE.CDD)}
-              />
-              <span style={{ marginLeft: "0.5rem" }}>
-                Contrat à durée déterminée (CDD)
-              </span>
-            </label>
-          </div>
-          <div>
-            <label>
-              <input
-                type="radio"
-                name="contractType"
-                value={CONTRACT_TYPE.CTT}
-                checked={contractType === CONTRACT_TYPE.CTT}
-                onChange={() => handleContractTypeChange(CONTRACT_TYPE.CTT)}
-              />
-              <span style={{ marginLeft: "0.5rem" }}>
-                Contrat de travail temporaire (Intérim)
-              </span>
-            </label>
-          </div>
-        </fieldset>
-      </div>
-
-      {/* Questions spécifiques selon le type de contrat */}
-      {contractType === CONTRACT_TYPE.CDD && (
-        <div>
-          <h4>Informations sur votre CDD</h4>
-
-          {/* Type de CDD */}
-          <div style={{ marginBottom: "1rem" }}>
-            <label htmlFor="cdd-type">{QUESTIONS.cddType}</label>
-            <select
-              id="cdd-type"
-              value={criteria?.cddType || ""}
-              onChange={(e) => handleCriteriaChange("cddType", e.target.value)}
-            >
-              <option value="">Sélectionnez le type de CDD</option>
-              <option value="CDD classique">CDD classique</option>
-              <option value="CDD d'usage">CDD d&apos;usage</option>
-              <option value="CDD de remplacement">CDD de remplacement</option>
-              <option value="CDD saisonnier">CDD saisonnier</option>
-              <option value="Autres">Autres</option>
-              {EXCLUDED_CONTRACTS.map((contract) => (
-                <option key={contract} value={contract}>
-                  {contract}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Affichage d'un message d'exclusion si contrat exclu */}
-          {criteria?.cddType &&
-            EXCLUDED_CONTRACTS.includes(criteria.cddType as any) && (
-              <div
-                style={{
-                  padding: "1rem",
-                  backgroundColor: "#fff3cd",
-                  border: "1px solid #ffeaa7",
-                  borderRadius: "4px",
-                  marginBottom: "1rem",
-                }}
-              >
-                <p style={{ margin: 0, color: "#856404" }}>
-                  <strong>Information :</strong> Ce type de contrat ne permet
-                  pas au salarié d&apos;avoir droit à une prime de précarité.
-                </p>
-              </div>
-            )}
-
-          {/* Questions supplémentaires selon la convention collective */}
-          {agreement &&
-            criteria?.cddType &&
-            !EXCLUDED_CONTRACTS.includes(criteria.cddType as any) && (
-              <div>
-                <div style={{ marginBottom: "1rem" }}>
-                  <label htmlFor="cdi-proposal">
-                    {QUESTIONS.hasCdiProposal}
-                  </label>
-                  <select
-                    id="cdi-proposal"
-                    value={criteria?.hasCdiProposal || ""}
-                    onChange={(e) =>
-                      handleCriteriaChange("hasCdiProposal", e.target.value)
-                    }
-                  >
-                    <option value="">Sélectionnez une réponse</option>
-                    <option value="oui">Oui</option>
-                    <option value="non">Non</option>
-                  </select>
-                </div>
-
-                <div style={{ marginBottom: "1rem" }}>
-                  <label htmlFor="cdi-renewal">{QUESTIONS.hasCdiRenewal}</label>
-                  <select
-                    id="cdi-renewal"
-                    value={criteria?.hasCdiRenewal || ""}
-                    onChange={(e) =>
-                      handleCriteriaChange("hasCdiRenewal", e.target.value)
-                    }
-                  >
-                    <option value="">Sélectionnez une réponse</option>
-                    <option value="oui">Oui</option>
-                    <option value="non">Non</option>
-                  </select>
-                </div>
-
-                <div style={{ marginBottom: "1rem" }}>
-                  <label htmlFor="equivalent-cdi-renewal">
-                    {QUESTIONS.hasEquivalentCdiRenewal}
-                  </label>
-                  <select
-                    id="equivalent-cdi-renewal"
-                    value={criteria?.hasEquivalentCdiRenewal || ""}
-                    onChange={(e) =>
-                      handleCriteriaChange(
-                        "hasEquivalentCdiRenewal",
-                        e.target.value
-                      )
-                    }
-                  >
-                    <option value="">Sélectionnez une réponse</option>
-                    <option value="oui">Oui</option>
-                    <option value="non">Non</option>
-                  </select>
-                </div>
-              </div>
-            )}
-        </div>
+    <>
+      {/* Affichage d'un message d'ineligibility si applicable */}
+      {isIneligible && (
+        <Alert
+          severity="warning"
+          title="Vous n'êtes pas éligible à l'indemnité de précarité"
+          description="Selon les informations que vous avez fournies, vous ne remplissez pas les conditions pour bénéficier de l'indemnité de précarité."
+          className={fr.cx("fr-mb-2w")}
+        />
       )}
 
-      {contractType === CONTRACT_TYPE.CTT && (
-        <div>
-          <h4>Informations sur votre contrat d&apos;intérim</h4>
-          <p>
-            Les contrats de travail temporaire (intérim) donnent généralement
-            droit à une indemnité de fin de mission équivalente à
-            l&apos;indemnité de précarité.
-          </p>
+      {/* Questions dynamiques générées par publicodes */}
+      {informations.map((info, index) => {
+        return (
+          <PubliQuestion
+            key={info.id}
+            name={"infos." + info.question.name}
+            rule={info.question.rule}
+            value={info.info}
+            onChange={(v: any) => {
+              onInformationsChange(
+                info.question.rule.nom,
+                v,
+                info.question.rule.cdtn?.type
+              );
+            }}
+            error={
+              errors.errorInformations[info.question.rule.nom] ?? undefined
+            }
+            autoFocus={index === 0}
+          />
+        );
+      })}
 
-          {/* TODO: Ajouter les questions spécifiques à l'intérim */}
-          <div style={{ marginBottom: "1rem" }}>
-            <label htmlFor="mission-type">Type de mission :</label>
-            <select
-              id="mission-type"
-              value={criteria?.missionType || ""}
-              onChange={(e) =>
-                handleCriteriaChange("missionType", e.target.value)
-              }
-            >
-              <option value="">Sélectionnez le type de mission</option>
-              <option value="remplacement">
-                Remplacement d&apos;un salarié absent
-              </option>
-              <option value="accroissement">
-                Accroissement temporaire d&apos;activité
-              </option>
-              <option value="saisonnier">Emploi à caractère saisonnier</option>
-              <option value="autres">Autres</option>
-            </select>
-          </div>
-        </div>
+      {/* Message si aucune question à afficher */}
+      {informations.length === 0 &&
+        hasNoMissingQuestions &&
+        !informationError && (
+          <p className={fr.cx("fr-mt-2w")}>
+            Aucune information supplémentaire à renseigner. Vous pouvez passer à
+            l&apos;étape suivante.
+          </p>
+        )}
+
+      {/* Erreur publicodes */}
+      {errors.errorPublicodes && (
+        <Alert
+          severity="error"
+          title="Erreur de calcul"
+          description={errors.errorPublicodes}
+          className={fr.cx("fr-mt-2w")}
+        />
       )}
 
       {/* Informations d'aide */}
-      <div
-        style={{
-          marginTop: "2rem",
-          padding: "1rem",
-          backgroundColor: "#e3f2fd",
-          borderRadius: "4px",
-        }}
-      >
-        <h4 style={{ margin: "0 0 0.5rem 0" }}>💡 Bon à savoir</h4>
-        <p style={{ margin: 0, fontSize: "0.9rem" }}>
-          L&apos;indemnité de précarité est généralement égale à 10% de la
-          rémunération brute totale perçue pendant le contrat. Certaines
-          conventions collectives peuvent prévoir des dispositions
-          particulières.
-        </p>
-      </div>
-    </div>
+      {!isIneligible && (
+        <div
+          className={fr.cx("fr-mt-4w", "fr-p-2w")}
+          style={{ backgroundColor: "#e3f2fd" }}
+        >
+          <h4 className={fr.cx("fr-mb-1w")}>💡 Bon à savoir</h4>
+          <p className={fr.cx("fr-mb-0")} style={{ fontSize: "0.9rem" }}>
+            L&apos;indemnité de précarité est généralement égale à 10% de la
+            rémunération brute totale perçue pendant le contrat. Certaines
+            conventions collectives peuvent prévoir des dispositions
+            particulières.
+          </p>
+        </div>
+      )}
+    </>
   );
 };
 
-export default StepInfosGenerales;
+export default InformationsStepComponent;
