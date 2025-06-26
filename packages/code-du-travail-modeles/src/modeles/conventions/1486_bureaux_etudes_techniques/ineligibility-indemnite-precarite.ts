@@ -19,7 +19,6 @@ export class IneligibilityIndemnitePrecarite1486 extends IneligibilityLegalIndem
             "'Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès'")
       )
     ) {
-      console.log("TOTO");
       return "Ce type de contrat ne permet pas au salarié d’avoir droit à une prime de précarité.";
     }
   }

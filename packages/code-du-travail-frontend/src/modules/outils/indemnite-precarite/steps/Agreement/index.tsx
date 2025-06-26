@@ -53,6 +53,7 @@ const StepAgreement = (): JSX.Element => {
           <option value="1486">Convention collective test 1486</option>
           <option value="2511">Convention collective test 2511</option>
           <option value="1516">Convention collective test 1516</option>
+          <option value="2098">Convention collective test 2098</option>
         </select>
       </div>
 
