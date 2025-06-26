@@ -12,8 +12,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article:
-            "article 2.5 de la section 1 de la Partie 1 du Chapitre II de la convention collective",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C006837D6C1061AF47817DC0CD5FF05C.tplgfr43s_2?idArticle=KALIARTI000026943297&cidTexte=KALITEXT000026943196&dateTexte=29990101&categorieLien=id",
+            "Article 2.5 de la section 1 du Chapitre I de la Partie 2 de la convention collective",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041895535",
         },
       ],
       expectedNotifications: [],

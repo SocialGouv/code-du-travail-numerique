@@ -12,7 +12,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article:
-            "article 53 de l'annexe relative aux enquêteurs - Accord du 16 décembre 1991",
+            "Article 53 de l'annexe relative aux enquêteurs - Accord du 16 décembre 1991",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7625C278F6496D100BB4EC20B6D7BAA7.tplgfr25s_3?idArticle=KALIARTI000005851356&cidTexte=KALITEXT000005679885&dateTexte=29990101&categorieLien=id",
         },
       ],

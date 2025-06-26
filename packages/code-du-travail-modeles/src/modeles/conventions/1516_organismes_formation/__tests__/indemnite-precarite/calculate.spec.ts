@@ -11,8 +11,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 180, unit: "€" },
       expectedReferences: [
         {
-          article: "article 5 de la convention collective (point 5.4.3.)",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D21CB91C1CA2006FC1F3B641A83D2560.tplgfr43s_2?idArticle=KALIARTI000026451298&cidTexte=KALITEXT000005644543&dateTexte=29981231&categorieLien=id",
+          article: "Article 5 de la convention collective",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047382739",
         },
       ],
       expectedNotifications: [],

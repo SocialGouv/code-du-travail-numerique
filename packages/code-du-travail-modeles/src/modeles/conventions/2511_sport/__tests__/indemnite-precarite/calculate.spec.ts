@@ -11,8 +11,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 300, unit: "€" },
       expectedReferences: [
         {
-          article: "article 4.7 de la convention collective (point 4.7.2.)",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AC096B3D0CD017996E22DEE5D3C1ABFF.tplgfr41s_1?idArticle=KALIARTI000021063900&cidTexte=KALITEXT000017577657&dateTexte=20160726&categorieLien=id",
+          article: "Article 4.7 de la convention collective",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041494560",
         },
       ],
       expectedNotifications: [],
