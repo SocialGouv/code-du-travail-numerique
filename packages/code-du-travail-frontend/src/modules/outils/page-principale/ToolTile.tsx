@@ -27,6 +27,8 @@ export const ToolTile = (props: HomeTileProps) => {
           : undefined,
         target: props.isExternal ? "_blank" : undefined,
       }}
+      imageHeight={80}
+      imageWidth={80}
       orientation="vertical"
       title={props.title}
       desc={props.description}
