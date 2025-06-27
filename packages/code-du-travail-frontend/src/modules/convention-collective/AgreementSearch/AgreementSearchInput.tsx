@@ -12,6 +12,7 @@ import { Agreement } from "src/modules/outils/indemnite-depart/types";
 type Props = {
   onSearch?: (query: string, value?: Agreement[]) => void;
   onAgreementSelect?: (agreement?: Agreement) => void;
+  lineAsLink?: boolean;
   selectedAgreementAlert?: (
     agreement?: Agreement
   ) => NonNullable<ReactNode> | undefined;
@@ -23,6 +24,7 @@ type Props = {
 export const AgreementSearchInput = ({
   onSearch,
   onAgreementSelect,
+  lineAsLink,
   selectedAgreementAlert,
   defaultAgreement,
   trackingActionName,
@@ -95,7 +97,7 @@ export const AgreementSearchInput = ({
               return item ? `${item.shortTitle} (IDCC ${item.num})` : "";
             }}
             lineAsLink={
-              !onAgreementSelect
+              lineAsLink
                 ? (item) => {
                     return `/${getRouteBySource(SOURCES.CCN)}/${item.slug}`;
                   }
