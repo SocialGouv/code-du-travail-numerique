@@ -26,16 +26,20 @@ export const PrivacyPolicy = () => {
         </p>
         <p>
           Pour autant, nous enregistrons, de manière anonyme, les informations
-          saisies dans la barre de recherche. Elles sont conservées pendant deux
-          années pour analyser les usages, améliorer la précision des réponses
-          apportées et améliorer le service et ainsi réaliser la mission
-          d&apos;intérêt public telle que présentée dans la page{" "}
-          <Link href="/a-propos">à propos</Link>.
+          saisies dans la barre de recherche. La durée de conservation de ces
+          données est de deux années pour analyser les usages, améliorer la
+          précision des réponses apportées et améliorer le service et ainsi
+          réaliser la mission d&apos;intérêt public telle que présentée dans la
+          page <Link href="/a-propos">à propos</Link>.
         </p>
 
         <h2 className={fr.cx("fr-h3")}>Hébergement</h2>
+        <p>
+          Le Code du travail numérique fait appel à un sous-traitant pour
+          l&apos;hébergement de ses services.
+        </p>
         <ul className={fr.cx("fr-mb-6v")}>
-          <li>Partenaire&nbsp;: OVH</li>
+          <li>Partenaire sous-traitant&nbsp;: OVH</li>
           <li>Pays destinataire&nbsp;: France</li>
           <li>Traitement réalisé&nbsp;: Hébergement</li>
           <li>
