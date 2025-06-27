@@ -4,9 +4,20 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import Image from "next/image";
 import { HomeSearch } from "./Components";
-import IllustrationHomePrincipal from "./picto/IllustrationHomePrincipal.svg";
+import IllustrationHomePrincipalDesktop from "./picto/IllustrationHomePrincipalDesktop.svg";
+import IllustrationHomePrincipalMobile from "./picto/IllustrationHomePrincipalMobile.svg";
+import { useEffect, useState } from "react";
 
 export const Search = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div className={mainContainer}>
       <div className={fr.cx("fr-container", "fr-py-6w")}>
@@ -34,10 +45,14 @@ export const Search = () => {
           <div className={`${fr.cx("fr-col-md-5", "fr-col-12")}`}>
             <Image
               priority={false}
-              src={IllustrationHomePrincipal}
+              src={
+                isMobile
+                  ? IllustrationHomePrincipalMobile
+                  : IllustrationHomePrincipalDesktop
+              }
               alt=""
-              width="577"
-              height="393"
+              width={isMobile ? "378" : "486"}
+              height={isMobile ? "257" : "331"}
             />
           </div>
         </div>
