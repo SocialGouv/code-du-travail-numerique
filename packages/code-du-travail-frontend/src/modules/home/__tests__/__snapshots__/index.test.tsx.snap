@@ -115,12 +115,12 @@ exports[`<Home /> should match snapshot 1`] = `
                 alt=""
                 data-nimg="1"
                 decoding="async"
-                height="393"
+                height="331"
                 loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=1200&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=640&q=75 1x, /_next/image?url=%2Fimg.jpg&w=1200&q=75 2x"
+                src="/_next/image?url=%2Fimg.jpg&w=1080&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=640&q=75 1x, /_next/image?url=%2Fimg.jpg&w=1080&q=75 2x"
                 style="color: transparent;"
-                width="577"
+                width="486"
               />
             </div>
           </div>
@@ -251,7 +251,9 @@ exports[`<Home /> should match snapshot 1`] = `
                     <img
                       alt=""
                       class="fr-responsive-img"
+                      height="80"
                       src="/static/assets/icons/tools/tool-icon.svg"
+                      width="80"
                     />
                   </div>
                 </div>
