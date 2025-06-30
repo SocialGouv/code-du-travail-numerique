@@ -2,11 +2,11 @@ import { CalculationResult } from "../../../types";
 
 export type ResultStoreData = {
   result?: CalculationResult;
-  isCalculating: boolean;
   calculationError?: string;
   isAgreementSupported?: boolean;
   resultNotifications?: any[];
   resultReferences?: any[];
+  totalSalary?: number;
 };
 
 export type ResultStoreFn = {

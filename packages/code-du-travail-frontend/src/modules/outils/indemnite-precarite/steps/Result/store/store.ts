@@ -16,7 +16,6 @@ import { mapToPublicodesSituationForCalculationIndemnitePrecarite } from "../../
 
 const initialState: ResultStoreData = {
   result: undefined,
-  isCalculating: false,
   calculationError: undefined,
   isAgreementSupported: false,
   resultNotifications: undefined,
@@ -110,6 +109,7 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
                 },
               }
             : undefined;
+          state.resultData.totalSalary = totalSalary;
           state.resultData.isAgreementSupported = isAgreementSupported;
           state.resultData.resultNotifications = resultNotifications;
           state.resultData.resultReferences = resultReferences;
