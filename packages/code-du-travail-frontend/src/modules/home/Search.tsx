@@ -2,8 +2,8 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import Image from "next/image";
 import { HomeSearch } from "./Components";
-import IllustrationHomePrincipalDesktop from "./picto/IllustrationHomePrincipalDesktop.svg";
-import IllustrationHomePrincipalMobile from "./picto/IllustrationHomePrincipalMobile.svg";
+import IllustrationHomePrincipalDesktop from "./picto/IllustrationHomePrincipalDesktop.png";
+import IllustrationHomePrincipalMobile from "./picto/IllustrationHomePrincipalMobile.png";
 
 export const Search = () => {
   return (
@@ -34,15 +34,17 @@ export const Search = () => {
             <picture>
               <source
                 media="(max-width: 768px)"
-                srcSet={IllustrationHomePrincipalMobile}
+                srcSet={IllustrationHomePrincipalMobile.src}
                 width={378}
                 height={257}
+                type="image/png"
               />
               <source
                 media="(min-width: 769px)"
-                srcSet={IllustrationHomePrincipalDesktop}
+                srcSet={IllustrationHomePrincipalDesktop.src}
                 width={486}
                 height={331}
+                type="image/png"
               />
               <Image
                 src={IllustrationHomePrincipalMobile} // Image par défaut
