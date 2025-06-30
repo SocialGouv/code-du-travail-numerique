@@ -3,6 +3,8 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { Input } from "@codegouvfr/react-dsfr/Input";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { SalaryEntry } from "../store/types";
+import { defaultInputStyle } from "src/modules/outils/common/styles/input";
+import { css } from "@styled-system/css";
 
 interface Props {
   salaires: SalaryEntry[];
@@ -52,30 +54,31 @@ export const SalairesMensuels: React.FC<Props> = ({
 
       {salaires.map((salaire, index) => (
         <div key={index} className={fr.cx("fr-mb-2w")}>
-          <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
-            <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
-              <Input
-                label={`Montant ${index + 1} en €`}
-                nativeInputProps={{
-                  type: "number",
-                  min: "0",
-                  step: "100",
-                  value: salaire.salaire || "",
-                  onChange: (e) => handleSalaireChange(index, e.target.value),
-                }}
-              />
-            </div>
-            <div className={fr.cx("fr-col-12", "fr-col-md-4")}>
-              <Button
-                priority="secondary"
-                size="small"
-                iconId="fr-icon-delete-line"
-                onClick={() => removeSalaire(index)}
-                disabled={salaires.length <= 1}
-              >
-                Supprimer
-              </Button>
-            </div>
+          <div className={salaryContainerStyle}>
+            <Input
+              label={`Montant ${index + 1} en €`}
+              nativeInputProps={{
+                type: "number",
+                min: "0",
+                step: "100",
+                value: salaire.salaire || "",
+                onChange: (e) => handleSalaireChange(index, e.target.value),
+              }}
+              classes={{
+                nativeInputOrTextArea: defaultInputStyle,
+                root: fr.cx("fr-mb-0"),
+              }}
+            />
+
+            <Button
+              priority="secondary"
+              size="small"
+              iconId="fr-icon-delete-line"
+              onClick={() => removeSalaire(index)}
+              disabled={salaires.length <= 1}
+            >
+              Supprimer
+            </Button>
           </div>
         </div>
       ))}
@@ -97,3 +100,13 @@ export const SalairesMensuels: React.FC<Props> = ({
     </div>
   );
 };
+
+const salaryContainerStyle = css({
+  display: "flex",
+  flexDirection: "column",
+  gap: "1rem",
+  "@media (min-width: 768px)": {
+    flexDirection: "row",
+    alignItems: "flex-end",
+  },
+});

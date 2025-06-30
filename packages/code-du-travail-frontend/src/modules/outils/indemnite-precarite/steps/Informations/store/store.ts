@@ -59,8 +59,40 @@ const createInformationsStore: StoreSliceWrapperIndemnitePrecarite<
   },
   informationsFunction: {
     onContractTypeChange: (contractType: ContractType) => {
+      set(
+        produce((state: InformationsStoreSlice & AgreementStoreSlice) => {
+          // Reset questions CDD
+          state.informationsData.input.finContratPeriodeDessai = undefined;
+          state.informationsData.input.propositionCDIFindeContrat = undefined;
+          state.informationsData.input.refusCDIFindeContrat = undefined;
+          state.informationsData.input.interruptionFauteGrave = undefined;
+          state.informationsData.input.refusRenouvellementAuto = undefined;
+          // Reset questions CTT
+          state.informationsData.input.cttFormation = undefined;
+          state.informationsData.input.ruptureContratFauteGrave = undefined;
+          state.informationsData.input.propositionCDIFinContrat = undefined;
+          state.informationsData.input.refusSouplesse = undefined;
+          // Reset questions spécifiques aux conventions collectives
+          state.informationsData.input.hasCdiProposal = undefined;
+          state.informationsData.input.hasCdiRenewal = undefined;
+          state.informationsData.input.hasEquivalentCdiRenewal = undefined;
+          // Reset erreurs
+          state.informationsData.error.finContratPeriodeDessai = undefined;
+          state.informationsData.error.propositionCDIFindeContrat = undefined;
+          state.informationsData.error.refusCDIFindeContrat = undefined;
+          state.informationsData.error.interruptionFauteGrave = undefined;
+          state.informationsData.error.refusRenouvellementAuto = undefined;
+          state.informationsData.error.cttFormation = undefined;
+          state.informationsData.error.ruptureContratFauteGrave = undefined;
+          state.informationsData.error.propositionCDIFinContrat = undefined;
+          state.informationsData.error.refusSouplesse = undefined;
+          // Reset erreurs spécifiques aux conventions collectives
+          state.informationsData.error.hasCdiProposal = undefined;
+          state.informationsData.error.hasCdiRenewal = undefined;
+          state.informationsData.error.hasEquivalentCdiRenewal = undefined;
+        })
+      );
       applyGenericValidation(get, set, "contractType", contractType);
-      resetAllQuestions(get, set);
     },
     onCriteriaChange: (criteria: Record<string, any>) => {
       applyGenericValidation(get, set, "criteria", criteria);
@@ -73,9 +105,6 @@ const createInformationsStore: StoreSliceWrapperIndemnitePrecarite<
     },
     onConventionQuestionChange: (questionKey: string, value: string) => {
       applyGenericValidation(get, set, questionKey, value);
-    },
-    resetQuestions: () => {
-      resetAllQuestions(get, set);
     },
     onNextStep: (): ValidationResponse => {
       const state = get().informationsData.input;
@@ -124,45 +153,6 @@ const applyGenericValidation = (
       })
     );
   }
-};
-
-const resetAllQuestions = (
-  get: StoreApi<InformationsStoreSlice & AgreementStoreSlice>["getState"],
-  set: StoreApi<InformationsStoreSlice & AgreementStoreSlice>["setState"]
-) => {
-  set(
-    produce((state: InformationsStoreSlice & AgreementStoreSlice) => {
-      // Reset questions CDD
-      state.informationsData.input.finContratPeriodeDessai = undefined;
-      state.informationsData.input.propositionCDIFindeContrat = undefined;
-      state.informationsData.input.refusCDIFindeContrat = undefined;
-      state.informationsData.input.interruptionFauteGrave = undefined;
-      state.informationsData.input.refusRenouvellementAuto = undefined;
-      // Reset questions CTT
-      state.informationsData.input.cttFormation = undefined;
-      state.informationsData.input.ruptureContratFauteGrave = undefined;
-      state.informationsData.input.propositionCDIFinContrat = undefined;
-      state.informationsData.input.refusSouplesse = undefined;
-      // Reset questions spécifiques aux conventions collectives
-      state.informationsData.input.hasCdiProposal = undefined;
-      state.informationsData.input.hasCdiRenewal = undefined;
-      state.informationsData.input.hasEquivalentCdiRenewal = undefined;
-      // Reset erreurs
-      state.informationsData.error.finContratPeriodeDessai = undefined;
-      state.informationsData.error.propositionCDIFindeContrat = undefined;
-      state.informationsData.error.refusCDIFindeContrat = undefined;
-      state.informationsData.error.interruptionFauteGrave = undefined;
-      state.informationsData.error.refusRenouvellementAuto = undefined;
-      state.informationsData.error.cttFormation = undefined;
-      state.informationsData.error.ruptureContratFauteGrave = undefined;
-      state.informationsData.error.propositionCDIFinContrat = undefined;
-      state.informationsData.error.refusSouplesse = undefined;
-      // Reset erreurs spécifiques aux conventions collectives
-      state.informationsData.error.hasCdiProposal = undefined;
-      state.informationsData.error.hasCdiRenewal = undefined;
-      state.informationsData.error.hasEquivalentCdiRenewal = undefined;
-    })
-  );
 };
 
 export default createInformationsStore;

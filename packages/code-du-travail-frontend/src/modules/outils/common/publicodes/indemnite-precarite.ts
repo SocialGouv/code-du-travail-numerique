@@ -1,13 +1,24 @@
 import { formatIdcc } from "@socialgouv/modeles-social";
 
 export const mapToPublicodesSituationForCalculationIndemnitePrecarite = (
-  ccn?: number,
-  moreInfos?: Record<string, string>
+  salaireDeReference: number,
+  ccn?: number
 ): Record<string, string | undefined> => {
   return {
     "contrat salarié . convention collective": ccn
       ? `'IDCC${formatIdcc(ccn)}'`
       : "''",
-    ...moreInfos,
+    "contrat salarié . salaire de référence": `${salaireDeReference}`,
+    "contrat salarié . contractType": "'CDD'",
+    "contrat salarié . finContratPeriodeDessai": "non",
+    "contrat salarié . propositionCDIFindeContrat": "non",
+    "contrat salarié . refusCDIFindeContrat": "non",
+    "contrat salarié . interruptionFauteGrave": "non",
+    "contrat salarié . refusRenouvellementAuto": "non",
+    "contrat salarié . cttFormation": "non",
+    "contrat salarié . ruptureContratFauteGrave": "non",
+    "contrat salarié . propositionCDIFinContrat": "non",
+    "contrat salarié . refusSouplesse": "non",
+    "contrat salarié . type de cdd": "'Autres'",
   };
 };

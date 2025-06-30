@@ -11,9 +11,6 @@ export type ResultStoreData = {
 
 export type ResultStoreFn = {
   calculateResult: () => void;
-  getPublicodesResult: () => void;
-  resetResult: () => void;
-  setCalculationError: (error?: string) => void;
 };
 
 export type ResultStoreSlice = {

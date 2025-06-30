@@ -1,4 +1,3 @@
-import { StoreApi } from "zustand";
 import produce from "immer";
 import * as Sentry from "@sentry/nextjs";
 
@@ -51,21 +50,6 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
       let resultNotifications: Notification[] | undefined;
       let resultReferences: References[] | undefined;
 
-      // Construire la situation à partir des données du store
-      const situationData: Record<string, string> = {};
-
-      // Ajouter les critères du store informations
-      if (state.informationsData.input.criteria) {
-        Object.entries(state.informationsData.input.criteria).forEach(
-          ([key, value]) => {
-            if (value !== undefined && value !== null) {
-              situationData[key] = String(value);
-            }
-          }
-        );
-      }
-
-      // Ajouter les informations de rémunération
       const remunerationInput = state.remunerationData.input;
       let totalSalary = 0;
 
@@ -84,15 +68,10 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
         }, 0);
       }
 
-      if (totalSalary > 0) {
-        situationData["contrat salarié . salaire de référence"] =
-          String(totalSalary);
-      }
-
       const situation =
         mapToPublicodesSituationForCalculationIndemnitePrecarite(
-          agreement?.num,
-          situationData
+          totalSalary,
+          agreement?.num
         );
 
       try {
@@ -104,13 +83,7 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
         }
         result = publicodesCalculation.result;
         resultNotifications = publicodesCalculation.notifications;
-        resultReferences = [
-          {
-            article: "Article L.1243-8 du code du travail",
-            url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901199",
-          },
-          ...publicodesCalculation.references,
-        ];
+        resultReferences = publicodesCalculation.references;
       } catch (e) {
         errorPublicodes = true;
         console.error("Error in publicodes calculation:", e);
@@ -143,26 +116,6 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
           state.resultData.calculationError = errorPublicodes
             ? "Erreur de calcul publicodes"
             : undefined;
-        })
-      );
-    },
-    getPublicodesResult: () => {
-      const resultFunction = get().resultFunction;
-      resultFunction.calculateResult();
-    },
-    resetResult: () => {
-      set(
-        produce((state: ResultStoreSlice) => {
-          state.resultData.result = undefined;
-          state.resultData.calculationError = undefined;
-          state.resultData.isCalculating = false;
-        })
-      );
-    },
-    setCalculationError: (error) => {
-      set(
-        produce((state: ResultStoreSlice) => {
-          state.resultData.calculationError = error;
         })
       );
     },

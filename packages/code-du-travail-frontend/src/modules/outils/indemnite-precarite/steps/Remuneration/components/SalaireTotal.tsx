@@ -1,6 +1,7 @@
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Input } from "@codegouvfr/react-dsfr/Input";
+import { defaultInputStyle } from "src/modules/outils/common/styles/input";
 
 interface Props {
   value?: number;
@@ -17,7 +18,7 @@ export const SalaireTotal: React.FC<Props> = ({ value, onChange, error }) => {
   return (
     <div className={fr.cx("fr-mb-3w")}>
       <Input
-        label="Quelle est la rémunération totale brute perçue durant le contrat de travail ?"
+        label="Quelle est la rémunération totale brute perçue en € durant le contrat de travail ?"
         nativeInputProps={{
           type: "number",
           min: "0",
@@ -27,6 +28,9 @@ export const SalaireTotal: React.FC<Props> = ({ value, onChange, error }) => {
         }}
         state={error ? "error" : "default"}
         stateRelatedMessage={error}
+        classes={{
+          nativeInputOrTextArea: defaultInputStyle,
+        }}
       />
       <p className={fr.cx("fr-text--light", "fr-mt-1w", "fr-text--sm")}>
         Majorations, indemnités, primes et accessoires compris sauf les

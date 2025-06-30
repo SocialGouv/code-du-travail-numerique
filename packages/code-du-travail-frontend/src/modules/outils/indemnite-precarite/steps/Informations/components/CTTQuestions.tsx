@@ -13,7 +13,6 @@ interface Props {
 export const CTTQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
   return (
     <>
-      {JSON.stringify(input)}
       {/* Question sur le contrat de mission-formation */}
       <div className={fr.cx("fr-mb-3w")}>
         <RadioButtons

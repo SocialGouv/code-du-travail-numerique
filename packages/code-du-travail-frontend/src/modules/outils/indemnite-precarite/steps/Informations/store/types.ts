@@ -1,8 +1,6 @@
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { ContractType } from "../../../types";
-import { PublicodesInformation } from "src/modules/outils/indemnite-depart/steps/Informations/store";
 import {
-  RuleType,
   PublicodesInstance,
   PublicodesSimulator,
 } from "@socialgouv/modeles-social";
@@ -61,7 +59,6 @@ export type InformationsStoreFn = {
   onCTTQuestionChange: (questionKey: string, value: boolean) => void;
   onConventionQuestionChange: (questionKey: string, value: string) => void;
   onNextStep: () => ValidationResponse;
-  resetQuestions: () => void;
 };
 
 export type InformationsStoreSlice = {
