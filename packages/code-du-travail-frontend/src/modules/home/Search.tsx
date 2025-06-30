@@ -47,8 +47,8 @@ export const Search = () => {
                 height={331}
               />
               <Image
-                src={IllustrationHomePrincipalDesktop} // Image par défaut
-                alt="Illustration principale"
+                src={IllustrationHomePrincipalMobile} // Image par défaut
+                alt=""
                 priority={true} // Prioriser pour LCP
                 width={486}
                 height={331}
