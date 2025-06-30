@@ -32,24 +32,22 @@ export const Search = () => {
           </div>
           <div className={`${fr.cx("fr-col-md-5", "fr-col-12")}`}>
             <picture>
-              {/* Image pour mobile (écran <= 768px) */}
-              <source
+              {/* <source
                 media="(max-width: 768px)"
                 srcSet={IllustrationHomePrincipalMobile}
                 width={378}
                 height={257}
               />
-              {/* Image pour desktop (écran > 768px) */}
               <source
                 media="(min-width: 769px)"
                 srcSet={IllustrationHomePrincipalDesktop}
                 width={486}
                 height={331}
-              />
+              /> */}
               <Image
                 src={IllustrationHomePrincipalMobile} // Image par défaut
                 alt=""
-                priority={true} // Prioriser pour LCP
+                priority={false} // Prioriser pour LCP
                 width={486}
                 height={331}
               />
