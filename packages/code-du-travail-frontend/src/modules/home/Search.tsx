@@ -1,23 +1,11 @@
-"use client";
-
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import Image from "next/image";
 import { HomeSearch } from "./Components";
 import IllustrationHomePrincipalDesktop from "./picto/IllustrationHomePrincipalDesktop.svg";
 import IllustrationHomePrincipalMobile from "./picto/IllustrationHomePrincipalMobile.svg";
-import { useEffect, useState } from "react";
 
 export const Search = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
   return (
     <div className={mainContainer}>
       <div className={fr.cx("fr-container", "fr-py-6w")}>
@@ -43,17 +31,29 @@ export const Search = () => {
             <HomeSearch />
           </div>
           <div className={`${fr.cx("fr-col-md-5", "fr-col-12")}`}>
-            <Image
-              priority={false}
-              src={
-                isMobile
-                  ? IllustrationHomePrincipalMobile
-                  : IllustrationHomePrincipalDesktop
-              }
-              alt=""
-              width={isMobile ? "378" : "486"}
-              height={isMobile ? "257" : "331"}
-            />
+            <picture>
+              {/* Image pour mobile (écran <= 768px) */}
+              <source
+                media="(max-width: 768px)"
+                srcSet={IllustrationHomePrincipalMobile}
+                width={378}
+                height={257}
+              />
+              {/* Image pour desktop (écran > 768px) */}
+              <source
+                media="(min-width: 769px)"
+                srcSet={IllustrationHomePrincipalDesktop}
+                width={486}
+                height={331}
+              />
+              <Image
+                src={IllustrationHomePrincipalDesktop} // Image par défaut
+                alt="Illustration principale"
+                priority={true} // Prioriser pour LCP
+                width={486}
+                height={331}
+              />
+            </picture>
           </div>
         </div>
       </div>
