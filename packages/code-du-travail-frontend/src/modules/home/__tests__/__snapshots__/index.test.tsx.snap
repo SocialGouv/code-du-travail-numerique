@@ -112,24 +112,12 @@ exports[`<Home /> should match snapshot 1`] = `
               class="fr-col-md-5 fr-col-12"
             >
               <picture>
-                <source
-                  height="257"
-                  media="(max-width: 768px)"
-                  srcset="[object Object]"
-                  width="378"
-                />
-                <source
-                  height="331"
-                  media="(min-width: 769px)"
-                  srcset="[object Object]"
-                  width="486"
-                />
                 <img
                   alt=""
                   data-nimg="1"
                   decoding="async"
-                  fetchpriority="high"
                   height="331"
+                  loading="lazy"
                   src="/_next/image?url=%2Fimg.jpg&w=1080&q=75"
                   srcset="/_next/image?url=%2Fimg.jpg&w=640&q=75 1x, /_next/image?url=%2Fimg.jpg&w=1080&q=75 2x"
                   style="color: transparent;"
