@@ -4,7 +4,10 @@ import {
 } from "@socialgouv/modeles-social";
 import { Enterprise } from "src/modules/enterprise";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
-import { Agreement } from "src/modules/outils/indemnite-depart/types";
+import {
+  Agreement,
+  AgreementRoute,
+} from "src/modules/outils/indemnite-depart/types";
 
 export type AgreementSearchValue = {
   address: string;
@@ -12,6 +15,7 @@ export type AgreementSearchValue = {
 };
 
 export type AgreementStoreInput = {
+  route?: AgreementRoute;
   agreement?: Agreement;
   enterprise?: Enterprise;
   hasNoEnterpriseSelected: boolean;
@@ -19,10 +23,10 @@ export type AgreementStoreInput = {
 };
 
 export type AgreementStoreError = {
+  route?: string;
   agreement?: string;
   enterprise?: string;
   errorPublicodes?: string;
-  unsupportedAgreement?: string;
 };
 
 export type AgreementStoreData = {
@@ -34,6 +38,7 @@ export type AgreementStoreData = {
 };
 
 export type AgreementStoreFn = {
+  onRouteChange: (value: AgreementRoute) => void;
   onInitAgreementPage: () => void;
   onAgreementChange: (
     agreement: Agreement | undefined,

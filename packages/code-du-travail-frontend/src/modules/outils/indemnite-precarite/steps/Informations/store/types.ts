@@ -10,17 +10,41 @@ import {
 export type InformationsStoreInput = {
   contractType?: ContractType;
   criteria: Record<string, any>;
-  publicodesInformations: Array<PublicodesInformation>;
-  hasNoMissingQuestions: boolean;
-  informationError: boolean;
+  // Questions CDD
+  finContratPeriodeDessai?: boolean;
+  propositionCDIFindeContrat?: boolean;
+  refusCDIFindeContrat?: boolean;
+  interruptionFauteGrave?: boolean;
+  refusRenouvellementAuto?: boolean;
+  // Questions CTT
+  cttFormation?: boolean;
+  ruptureContratFauteGrave?: boolean;
+  propositionCDIFinContrat?: boolean;
+  refusSouplesse?: boolean;
+  // Questions spécifiques aux conventions collectives
+  hasCdiProposal?: string; // "oui" | "non"
+  hasCdiRenewal?: string; // "oui" | "non"
+  hasEquivalentCdiRenewal?: string; // "oui" | "non"
 };
 
 export type InformationsStoreError = {
   contractType?: string;
   criteria?: Record<string, string>;
-  errorInformations: Record<string, string>;
-  errorPublicodes?: string;
-  errorIneligibility?: string;
+  // Erreurs CDD
+  finContratPeriodeDessai?: string;
+  propositionCDIFindeContrat?: string;
+  refusCDIFindeContrat?: string;
+  interruptionFauteGrave?: string;
+  refusRenouvellementAuto?: string;
+  // Erreurs CTT
+  cttFormation?: string;
+  ruptureContratFauteGrave?: string;
+  propositionCDIFinContrat?: string;
+  refusSouplesse?: string;
+  // Erreurs spécifiques aux conventions collectives
+  hasCdiProposal?: string;
+  hasCdiRenewal?: string;
+  hasEquivalentCdiRenewal?: string;
 };
 
 export type InformationsStoreData = {
@@ -33,16 +57,11 @@ export type InformationsStoreData = {
 export type InformationsStoreFn = {
   onContractTypeChange: (contractType: ContractType) => void;
   onCriteriaChange: (criteria: Record<string, any>) => void;
-  onInformationsChange: (
-    questionKey: string,
-    value: string,
-    type: RuleType | undefined
-  ) => void;
-  generatePublicodesQuestions: () => boolean;
+  onCDDQuestionChange: (questionKey: string, value: boolean) => void;
+  onCTTQuestionChange: (questionKey: string, value: boolean) => void;
+  onConventionQuestionChange: (questionKey: string, value: string) => void;
   onNextStep: () => ValidationResponse;
-  shouldSkipStep: () => boolean;
   resetQuestions: () => void;
-  checkIneligibility: () => boolean;
 };
 
 export type InformationsStoreSlice = {

@@ -6,22 +6,53 @@ export const validateStep = (
   const errorState: RemunerationStoreError = {};
   let isValid = true;
 
-  // Validation du salaire mensuel
-  if (!input.salaryInfo?.monthlySalary || input.salaryInfo.monthlySalary <= 0) {
-    errorState.monthlySalary = "Veuillez saisir un salaire mensuel valide";
+  // Validation du type de rémunération
+  if (!input.typeRemuneration) {
+    errorState.typeRemuneration =
+      "Veuillez sélectionner un mode de saisie de la rémunération";
     isValid = false;
   }
 
-  // Validation de la partie variable (optionnelle mais doit être positive si renseignée)
-  if (input.salaryInfo?.variablePart && input.salaryInfo.variablePart < 0) {
-    errorState.variablePart = "La partie variable ne peut pas être négative";
-    isValid = false;
-  }
+  // Validation selon le type de rémunération
+  if (input.typeRemuneration === "total") {
+    // Validation du salaire total
+    if (!input.salaire || input.salaire <= 0) {
+      errorState.salaire =
+        "Veuillez saisir un montant total valide supérieur à 0";
+      isValid = false;
+    }
+  } else if (input.typeRemuneration === "mensuel") {
+    // Validation des salaires mensuels
+    if (!input.salaires || input.salaires.length === 0) {
+      errorState.salaires = "Veuillez saisir au moins un salaire mensuel";
+      isValid = false;
+    } else {
+      // Vérifier que tous les salaires sont valides et non nuls
+      const hasInvalidSalary = input.salaires.some(
+        (entry) =>
+          entry.salaire === null ||
+          entry.salaire === undefined ||
+          entry.salaire <= 0
+      );
+      if (hasInvalidSalary) {
+        errorState.salaires =
+          "Tous les salaires mensuels doivent être renseignés et supérieurs à 0";
+        isValid = false;
+      }
 
-  // Validation des avantages (optionnels mais doivent être positifs si renseignés)
-  if (input.salaryInfo?.benefits && input.salaryInfo.benefits < 0) {
-    errorState.benefits = "Les avantages ne peuvent pas être négatifs";
-    isValid = false;
+      // Vérifier qu'il y a au moins 2 salaires mensuels
+      const validSalaries = input.salaires.filter(
+        (entry) =>
+          entry.salaire !== null &&
+          entry.salaire !== undefined &&
+          entry.salaire > 0
+      );
+      if (validSalaries.length < 2) {
+        errorState.salaires =
+          "Veuillez saisir au moins 2 salaires mensuels valides";
+        isValid = false;
+      }
+    }
   }
 
   return { isValid, errorState };

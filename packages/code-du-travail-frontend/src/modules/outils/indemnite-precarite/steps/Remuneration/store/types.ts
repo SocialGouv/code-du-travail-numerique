@@ -1,14 +1,19 @@
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
-import { SalaryInfo } from "../../../types";
+
+export type SalaryEntry = {
+  salaire: number | null;
+};
 
 export type RemunerationStoreInput = {
-  salaryInfo: SalaryInfo;
+  typeRemuneration?: "total" | "mensuel";
+  salaire?: number; // Pour le montant total
+  salaires: SalaryEntry[]; // Pour les salaires mensuels
 };
 
 export type RemunerationStoreError = {
-  monthlySalary?: string;
-  variablePart?: string;
-  benefits?: string;
+  typeRemuneration?: string;
+  salaire?: string;
+  salaires?: string;
 };
 
 export type RemunerationStoreData = {
@@ -19,7 +24,9 @@ export type RemunerationStoreData = {
 };
 
 export type RemunerationStoreFn = {
-  onSalaryInfoChange: (salaryInfo: SalaryInfo) => void;
+  onTypeRemunerationChange: (type: "total" | "mensuel") => void;
+  onSalaireChange: (salaire: number) => void;
+  onSalairesChange: (salaires: SalaryEntry[]) => void;
   onNextStep: () => ValidationResponse;
 };
 

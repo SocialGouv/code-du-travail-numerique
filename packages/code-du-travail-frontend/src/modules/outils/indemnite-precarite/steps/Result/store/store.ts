@@ -66,13 +66,27 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
       }
 
       // Ajouter les informations de rémunération
-      if (state.remunerationData.input.salaryInfo) {
-        const salaryInfo = state.remunerationData.input.salaryInfo;
-        if (salaryInfo.totalGrossSalary) {
-          situationData["contrat salarié . salaire de référence"] = String(
-            salaryInfo.totalGrossSalary
-          );
-        }
+      const remunerationInput = state.remunerationData.input;
+      let totalSalary = 0;
+
+      if (
+        remunerationInput.typeRemuneration === "total" &&
+        remunerationInput.salaire
+      ) {
+        totalSalary = remunerationInput.salaire;
+      } else if (
+        remunerationInput.typeRemuneration === "mensuel" &&
+        remunerationInput.salaires
+      ) {
+        // Calculer la somme des salaires mensuels
+        totalSalary = remunerationInput.salaires.reduce((sum, entry) => {
+          return sum + (entry.salaire || 0);
+        }, 0);
+      }
+
+      if (totalSalary > 0) {
+        situationData["contrat salarié . salaire de référence"] =
+          String(totalSalary);
       }
 
       const situation =

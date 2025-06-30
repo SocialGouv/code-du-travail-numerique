@@ -100,7 +100,6 @@ const IndemnitePrecariteSimulatorContent = ({
     );
   }
 
-  // Utilisation du Context avec le store typé
   const {
     onNextStepAgreement,
     isStepAgreementValid,
@@ -108,7 +107,6 @@ const IndemnitePrecariteSimulatorContent = ({
     isStepInfosValid,
     onNextStepRemuneration,
     isStepRemunerationValid,
-    shouldSkipInfoStep,
   } = useIndemnitePrecariteStore(store, (state) => ({
     onNextStepAgreement: state.agreementFunction.onNextStep,
     isStepAgreementValid: state.agreementData.isStepValid,
@@ -116,15 +114,7 @@ const IndemnitePrecariteSimulatorContent = ({
     isStepInfosValid: state.informationsData.isStepValid,
     onNextStepRemuneration: state.remunerationFunction.onNextStep,
     isStepRemunerationValid: state.remunerationData.isStepValid,
-    shouldSkipInfoStep: state.informationsFunction.shouldSkipStep,
   }));
-
-  const handleNextStepInfos = (): ValidationResponse => {
-    if (shouldSkipInfoStep && shouldSkipInfoStep()) {
-      return ValidationResponse.Valid;
-    }
-    return onNextStepInfos();
-  };
 
   return (
     <SimulatorLayout
@@ -139,10 +129,8 @@ const IndemnitePrecariteSimulatorContent = ({
         },
         {
           stepName: IndemnitePrecariteStepName.InfosGenerales,
-          isStepValid:
-            isStepInfosValid ||
-            (shouldSkipInfoStep ? shouldSkipInfoStep() : false),
-          onNextStep: handleNextStepInfos,
+          isStepValid: isStepInfosValid,
+          onNextStep: onNextStepInfos,
         },
         {
           stepName: IndemnitePrecariteStepName.Remuneration,

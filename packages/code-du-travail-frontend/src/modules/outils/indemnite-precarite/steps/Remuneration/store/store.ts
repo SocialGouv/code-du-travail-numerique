@@ -2,17 +2,23 @@ import { StoreApi } from "zustand";
 import produce from "immer";
 
 import { StoreSliceWrapperIndemnitePrecarite } from "../../store";
-import { RemunerationStoreData, RemunerationStoreSlice } from "./types";
+import {
+  RemunerationStoreData,
+  RemunerationStoreSlice,
+  SalaryEntry,
+} from "./types";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { validateStep } from "./validator";
 
 const initialState: RemunerationStoreData = {
   input: {
-    salaryInfo: {},
+    typeRemuneration: undefined,
+    salaire: undefined,
+    salaires: [],
   },
   error: {},
   hasBeenSubmit: false,
-  isStepValid: false,
+  isStepValid: true,
 };
 
 const createRemunerationStore: StoreSliceWrapperIndemnitePrecarite<
@@ -22,8 +28,32 @@ const createRemunerationStore: StoreSliceWrapperIndemnitePrecarite<
     ...initialState,
   },
   remunerationFunction: {
-    onSalaryInfoChange: (salaryInfo) => {
-      applyGenericValidation(get, set, "salaryInfo", salaryInfo);
+    onTypeRemunerationChange: (type: "total" | "mensuel") => {
+      applyGenericValidation(get, set, "typeRemuneration", type);
+
+      // Reset des autres champs selon le type sélectionné
+      if (type === "mensuel") {
+        // Initialiser avec 2 salaires vides pour commencer
+        applyGenericValidation(get, set, "salaires", [
+          { salaire: null },
+          { salaire: null },
+        ]);
+        applyGenericValidation(get, set, "salaire", undefined);
+      } else {
+        // Reset des salaires mensuels
+        applyGenericValidation(get, set, "salaires", []);
+      }
+    },
+    onSalaireChange: (salaire: number) => {
+      applyGenericValidation(get, set, "salaire", salaire);
+    },
+    onSalairesChange: (salaires: SalaryEntry[]) => {
+      applyGenericValidation(get, set, "salaires", salaires);
+
+      // Si on supprime tous les salaires, revenir au mode total
+      if (salaires.length === 0) {
+        applyGenericValidation(get, set, "typeRemuneration", "total");
+      }
     },
     onNextStep: () => {
       const input = get().remunerationData.input;
@@ -31,7 +61,7 @@ const createRemunerationStore: StoreSliceWrapperIndemnitePrecarite<
 
       set(
         produce((state: RemunerationStoreSlice) => {
-          state.remunerationData.hasBeenSubmit = !isValid;
+          state.remunerationData.hasBeenSubmit = true;
           state.remunerationData.isStepValid = isValid;
           state.remunerationData.error = errorState;
         })

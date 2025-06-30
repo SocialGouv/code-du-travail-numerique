@@ -1,24 +1,3 @@
-// Migré depuis src/outils/IndemnitePrecarite/steps/situation.js
-// Implémentation simplifiée pour la migration
-
-// Pour l'instant, utilisation d'une implémentation simplifiée
-export const getSupportedCCWithoutConventionalProvision = () => {
-  // Retourne une liste basique de conventions collectives supportées
-  return [
-    { idcc: 3127, title: "Convention collective 3127" },
-    { idcc: 1486, title: "Convention collective 1486" },
-    { idcc: 2511, title: "Convention collective 2511" },
-    { idcc: 1516, title: "Convention collective 1516" },
-  ];
-};
-
-export const hasConventionalProvision = (idcc: string | number) => {
-  const numericIdcc = typeof idcc === "string" ? parseInt(idcc) : idcc;
-  // Liste des IDCC qui ont des dispositions conventionnelles
-  const conventionalIdccs = [3127, 1486, 2511, 1516];
-  return conventionalIdccs.includes(numericIdcc);
-};
-
 // Questions humanisées pour les critères
 export const questions = {
   cddType: "Quel est le type de CDD ?",
@@ -45,26 +24,6 @@ export const criteriaOrder = [
   "hasCdiProposal",
   "hasCdiRenewal",
   "hasEquivalentCdiRenewal",
-];
-
-// Validation des situations selon les critères
-export function validateSituation(
-  criteria: Record<string, any> = {},
-  errors: Record<string, any> = {}
-) {
-  // Implémentation simplifiée pour la validation
-  // TODO: Implémenter la logique complète de validation des situations
-  return { ...errors };
-}
-
-// Contrats exclus de l'indemnité de précarité
-export const excludeContracts = [
-  "CDD saisonnier",
-  "CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires",
-  "CCD dans le cadre d'un congé de mobilité",
-  "Contrat unique d'insertion (CUI) ou Parcours emploi compétences (PEC)",
-  "Contrat de professionnalisation ou Contrat d'apprentissage",
-  "Contrat pour lequel l'employeur s'est engagé à assurer un complément de formation professionnelle au salarié",
 ];
 
 // Validation spécifique pour certaines conventions collectives
@@ -124,17 +83,4 @@ export function validateSpecificConventions(
   }
 
   return errors;
-}
-
-// Vérifier si un contrat est exclu de l'indemnité de précarité
-export function isContractExcluded(cddType: string): boolean {
-  return excludeContracts.includes(cddType);
-}
-
-// Obtenir le message d'erreur pour un contrat exclu
-export function getExclusionMessage(cddType: string): string {
-  if (isContractExcluded(cddType)) {
-    return "Ce type de contrat ne permet pas au salarié d'avoir droit à une prime de précarité.";
-  }
-  return "";
 }
