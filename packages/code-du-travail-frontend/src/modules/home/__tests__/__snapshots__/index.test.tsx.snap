@@ -125,7 +125,7 @@ exports[`<Home /> should match snapshot 1`] = `
                   width="486"
                 />
                 <img
-                  alt="Illustration principale"
+                  alt=""
                   data-nimg="1"
                   decoding="async"
                   fetchpriority="high"
