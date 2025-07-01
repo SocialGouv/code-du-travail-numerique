@@ -3,7 +3,7 @@ import { css } from "@styled-system/css";
 import Image from "next/image";
 import { HomeSearch } from "./Components";
 import IllustrationHomePrincipalDesktop from "./picto/IllustrationHomePrincipalDesktop.svg";
-import IllustrationHomePrincipalMobile from "./picto/IllustrationHomePrincipalMobile.svg";
+// import IllustrationHomePrincipalMobile from "./picto/IllustrationHomePrincipalMobile.svg";
 
 export const Search = () => {
   return (
@@ -30,28 +30,17 @@ export const Search = () => {
             </h2>
             <HomeSearch />
           </div>
-          <div className={`${fr.cx("fr-col-md-5", "fr-col-12")}`}>
-            <picture>
-              <source
-                media="(max-width: 768px)"
-                srcSet={IllustrationHomePrincipalMobile}
-                width={378}
-                height={257}
-              />
-              <source
-                media="(min-width: 769px)"
-                srcSet={IllustrationHomePrincipalDesktop}
-                width={486}
-                height={331}
-              />
-              <Image
-                src={IllustrationHomePrincipalMobile} // Image par défaut
-                alt=""
-                priority={true} // Prioriser pour LCP
-                width={378}
-                height={257}
-              />
-            </picture>
+          <div className={fr.cx("fr-col-md-5", "fr-col-12")}>
+            <Image
+              src={IllustrationHomePrincipalDesktop}
+              alt=""
+              priority
+              fill={false}
+              width={486}
+              height={331}
+              sizes="(max-width: 768px) 378px, 486px"
+              style={{ width: "100%", height: "auto" }}
+            />
           </div>
         </div>
       </div>
