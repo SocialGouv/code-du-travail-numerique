@@ -2,8 +2,8 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import Image from "next/image";
 import { HomeSearch } from "./Components";
-// import IllustrationHomePrincipalDesktop from "./picto/IllustrationHomePrincipalDesktop.svg";
-import IllustrationHomePrincipalMobile from "./picto/IllustrationHomePrincipalMobile.svg";
+import IllustrationHomePrincipalDesktop from "./picto/IllustrationHomePrincipalDesktop.svg";
+// import IllustrationHomePrincipalMobile from "./picto/IllustrationHomePrincipalMobile.svg";
 
 export const Search = () => {
   return (
@@ -32,13 +32,14 @@ export const Search = () => {
           </div>
           <div className={fr.cx("fr-col-md-5", "fr-col-12")}>
             <Image
-              src="/images/illustration-home-mobile.webp"
+              src={IllustrationHomePrincipalDesktop}
               alt=""
               priority
-              width={378}
-              height={257}
-              style={{ width: "100%", height: "auto" }}
+              fill={false}
+              width={486}
+              height={331}
               sizes="(max-width: 768px) 378px, 486px"
+              style={{ width: "100%", height: "auto" }}
             />
           </div>
         </div>
