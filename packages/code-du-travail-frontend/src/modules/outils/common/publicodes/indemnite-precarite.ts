@@ -2,6 +2,7 @@ import { formatIdcc } from "@socialgouv/modeles-social";
 
 export const mapToPublicodesSituationForCalculationIndemnitePrecarite = (
   salaireDeReference: number,
+  additionalFields: Record<string, string | undefined>,
   ccn?: number
 ): Record<string, string | undefined> => {
   return {
@@ -19,6 +20,6 @@ export const mapToPublicodesSituationForCalculationIndemnitePrecarite = (
     "contrat salarié . ruptureContratFauteGrave": "non",
     "contrat salarié . propositionCDIFinContrat": "non",
     "contrat salarié . refusSouplesse": "non",
-    "contrat salarié . type de cdd": "'Autres'",
+    ...additionalFields,
   };
 };

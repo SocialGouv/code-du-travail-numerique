@@ -57,7 +57,7 @@ const InformationsStepComponent = (): JSX.Element => {
       {/* Questions spécifiques aux conventions collectives */}
       {agreement && (
         <AgreementsInjector
-          idcc={agreement.num as any}
+          idcc={agreement.num}
           step={IndemnitePrecariteStepName.InfosGenerales}
         />
       )}

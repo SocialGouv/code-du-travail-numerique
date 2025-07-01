@@ -73,6 +73,7 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
       const situation =
         mapToPublicodesSituationForCalculationIndemnitePrecarite(
           totalSalary,
+          { "contrat salarié . type de cdd": "'Autres'" },
           agreement?.num
         );
 

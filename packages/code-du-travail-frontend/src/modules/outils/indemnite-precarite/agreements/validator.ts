@@ -3,6 +3,7 @@ import {
   InformationsStoreInput,
   InformationsStoreError,
 } from "../steps/Informations/store/types";
+import { CDD_TYPES } from "./cddTypesFactory";
 
 export const validateAgreementSpecificRules = (
   input: InformationsStoreInput,
@@ -12,8 +13,7 @@ export const validateAgreementSpecificRules = (
   // Convention collective 3127 - Question hasEquivalentCdiRenewal
   if (
     agreement.num === 3127 &&
-    input.criteria?.cddType ===
-      "CDD dit de « mission ponctuelle ou occasionnelle »"
+    input.criteria?.cddType === CDD_TYPES.MISSION_PONCTUELLE
   ) {
     if (input.hasEquivalentCdiRenewal === undefined) {
       errors.hasEquivalentCdiRenewal = "Veuillez répondre à cette question";
@@ -26,8 +26,7 @@ export const validateAgreementSpecificRules = (
   // Convention collective 1486 - Question hasCdiProposal
   if (
     agreement.num === 1486 &&
-    input.criteria?.cddType ===
-      "Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès"
+    input.criteria?.cddType === CDD_TYPES.INTERVENTION_FOIRES_SALONS
   ) {
     if (input.hasCdiProposal === undefined) {
       errors.hasCdiProposal = "Veuillez répondre à cette question";
@@ -40,7 +39,7 @@ export const validateAgreementSpecificRules = (
   // Convention collective 2511 - Question hasCdiRenewal
   if (
     agreement.num === 2511 &&
-    input.criteria?.cddType === "CDD d'usage appelé contrat «d'intervention»"
+    input.criteria?.cddType === CDD_TYPES.USAGE_INTERVENTION_2511
   ) {
     if (input.hasCdiRenewal === undefined) {
       errors.hasCdiRenewal = "Veuillez répondre à cette question";
@@ -51,7 +50,10 @@ export const validateAgreementSpecificRules = (
   }
 
   // Convention collective 1516 - Question hasCdiRenewal
-  if (agreement.num === 1516 && input.criteria?.cddType === "CDD d'usage") {
+  if (
+    agreement.num === 1516 &&
+    input.criteria?.cddType === CDD_TYPES.USAGE_1516
+  ) {
     if (input.hasCdiRenewal === undefined) {
       errors.hasCdiRenewal = "Veuillez répondre à cette question";
     } else if (input.hasCdiRenewal === "oui") {
