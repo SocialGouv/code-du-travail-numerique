@@ -4,16 +4,11 @@ import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { RemunerationStoreInput } from "../../Remuneration/store/types";
 
 type Props = {
-  typeRemuneration: RemunerationStoreInput["typeRemuneration"];
   remuneration: number;
   agreement?: Agreement;
 };
 
-const Situation: React.FC<Props> = ({
-  remuneration,
-  agreement,
-  typeRemuneration,
-}) => {
+const Situation: React.FC<Props> = ({ remuneration, agreement }) => {
   const formatCurrency = (value: string, unit: string) => {
     if (unit === "€" && !isNaN(Number(value))) {
       return new Intl.NumberFormat("fr-FR", {
@@ -33,15 +28,13 @@ const Situation: React.FC<Props> = ({
           <li data-testid="situation-convention-collective">
             Convention collective :{" "}
             <strong>
-              ${agreement.shortTitle || agreement.title} (IDCC ${agreement.num})
+              {agreement.shortTitle || agreement.title} (IDCC {agreement.num})
             </strong>
           </li>
         )}
         <li data-testid="remuneration-input">
-          {typeRemuneration === "total"
-            ? "Total des salaires"
-            : "Somme des salaires"}{" "}
-          : <strong>{formatCurrency(remuneration.toString(), "€")}</strong>
+          Montant total des salaires renseignés&nbsp;:&nbsp;
+          <strong>{formatCurrency(remuneration.toString(), "€")}</strong>
         </li>
       </ul>
     </>

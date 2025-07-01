@@ -1,33 +1,14 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import React from "react";
-
-type CalculationResult = {
-  isEligible: boolean;
-  amount?: number;
-  reason?: string;
-  details?: {
-    baseAmount?: number;
-    rate?: number;
-  };
-};
-
-type Notification = {
-  description: string;
-};
+import { CalculationResult } from "../../../types";
+import { Notification } from "@socialgouv/modeles-social";
 
 type Props = {
   result?: CalculationResult;
-  notifications: Notification[];
-  idccNumber?: number;
-  contractType: string;
+  notifications?: Notification[];
 };
 
-const ShowResult: React.FC<Props> = ({
-  result,
-  notifications,
-  idccNumber,
-  contractType,
-}: Props) => {
+const ShowResult: React.FC<Props> = ({ result, notifications }: Props) => {
   if (!result) return null;
 
   const formatCurrency = (amount: number) => {
@@ -63,15 +44,7 @@ const ShowResult: React.FC<Props> = ({
             "Selon votre situation, vous n'êtes pas éligible à cette indemnité."}
         </p>
       )}
-      {result.isEligible && result.amount && result.amount > 0 && (
-        <p>
-          Montant estimé de votre{" "}
-          {contractType === "CTT"
-            ? "indemnité de fin de mission"
-            : "indemnité de précarité"}
-        </p>
-      )}
-      {notifications.length > 0 && (
+      {notifications && notifications.length > 0 && (
         <p data-testid="notice-description">
           {notifications.map((notification, index) => (
             <div key={index}>{notification.description}</div>

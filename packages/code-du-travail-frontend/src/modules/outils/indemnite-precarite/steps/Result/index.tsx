@@ -5,6 +5,7 @@ import {
 } from "../store";
 import { fr } from "@codegouvfr/react-dsfr";
 import { ShowResult, Situation, Warning } from "./components";
+import FormulaInterpreter from "src/modules/outils/common/components/FormulaInterpreter";
 
 const ResultStepComponent = (): JSX.Element => {
   const store = useContext(IndemnitePrecariteContext);
@@ -14,20 +15,18 @@ const ResultStepComponent = (): JSX.Element => {
     isAgreementSupported,
     resultNotifications,
     resultReferences,
-    contractType,
     agreement,
-    remunerationInput,
     totalSalary,
     calculateResult,
+    resultFormula,
   } = useIndemnitePrecariteStore(store, (state) => ({
     result: state.resultData.result,
     calculationError: state.resultData.calculationError,
     isAgreementSupported: state.resultData.isAgreementSupported,
     resultNotifications: state.resultData.resultNotifications,
     resultReferences: state.resultData.resultReferences,
-    contractType: state.informationsData.input.contractType,
+    resultFormula: state.resultData.resultFormula,
     agreement: state.agreementData.input.agreement,
-    remunerationInput: state.remunerationData.input,
     totalSalary: state.resultData.totalSalary,
     calculateResult: state.resultFunction.calculateResult,
   }));
@@ -49,12 +48,7 @@ const ResultStepComponent = (): JSX.Element => {
 
   return (
     <div className={fr.cx("fr-col-md-8", "fr-col-12", "fr-mb-6w")}>
-      <ShowResult
-        result={result}
-        notifications={resultNotifications || []}
-        idccNumber={agreement?.num}
-        contractType={contractType || ""}
-      />
+      <ShowResult result={result} notifications={resultNotifications} />
 
       <Warning
         agreement={agreement}
@@ -62,11 +56,8 @@ const ResultStepComponent = (): JSX.Element => {
       />
 
       <h2 className={fr.cx("fr-h4", "fr-mt-4w")}>Détail du calcul</h2>
-      <Situation
-        agreement={agreement}
-        remuneration={totalSalary ?? 0}
-        typeRemuneration={remunerationInput.typeRemuneration}
-      />
+      <Situation agreement={agreement} remuneration={totalSalary ?? 0} />
+      <FormulaInterpreter formula={resultFormula} />
 
       {resultReferences && resultReferences.length > 0 && (
         <div className={fr.cx("fr-mt-4w")}>

@@ -11,6 +11,7 @@ import {
   Notification,
   supportedCcn,
   PublicodesIndemnitePrecariteResult,
+  Formula,
 } from "@socialgouv/modeles-social";
 import { mapToPublicodesSituationForCalculationIndemnitePrecarite } from "../../../../common/publicodes/indemnite-precarite";
 
@@ -20,6 +21,7 @@ const initialState: ResultStoreData = {
   isAgreementSupported: false,
   resultNotifications: undefined,
   resultReferences: undefined,
+  resultFormula: undefined,
 };
 
 const createResultStore: StoreSliceWrapperIndemnitePrecarite<
@@ -48,6 +50,7 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
       let result: PublicodesIndemnitePrecariteResult | undefined;
       let resultNotifications: Notification[] | undefined;
       let resultReferences: References[] | undefined;
+      let resultFormula: Formula | undefined;
 
       const remunerationInput = state.remunerationData.input;
       let totalSalary = 0;
@@ -83,6 +86,7 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
         result = publicodesCalculation.result;
         resultNotifications = publicodesCalculation.notifications;
         resultReferences = publicodesCalculation.references;
+        resultFormula = publicodesCalculation.formula;
       } catch (e) {
         errorPublicodes = true;
         console.error("Error in publicodes calculation:", e);
@@ -113,6 +117,7 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
           state.resultData.isAgreementSupported = isAgreementSupported;
           state.resultData.resultNotifications = resultNotifications;
           state.resultData.resultReferences = resultReferences;
+          state.resultData.resultFormula = resultFormula;
           state.resultData.calculationError = errorPublicodes
             ? "Erreur de calcul publicodes"
             : undefined;

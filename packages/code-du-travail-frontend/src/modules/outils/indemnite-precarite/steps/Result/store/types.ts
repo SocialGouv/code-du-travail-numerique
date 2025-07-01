@@ -1,11 +1,13 @@
+import { Formula, Notification, References } from "@socialgouv/modeles-social";
 import { CalculationResult } from "../../../types";
 
 export type ResultStoreData = {
   result?: CalculationResult;
   calculationError?: string;
   isAgreementSupported?: boolean;
-  resultNotifications?: any[];
-  resultReferences?: any[];
+  resultNotifications?: Notification[];
+  resultReferences?: References[];
+  resultFormula?: Formula;
   totalSalary?: number;
 };
 
