@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.184.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.183.2...v4.184.0) (2025-07-01)
+
+
+### Bug Fixes
+
+* popup consent loading twice in legacy urls ([#6653](https://github.com/SocialGouv/code-du-travail-numerique/issues/6653)) ([d12f727](https://github.com/SocialGouv/code-du-travail-numerique/commit/d12f727c3c9968c25f50b41ce57f6b9c9dbd3ea2))
+* snapshot ([c19c0d7](https://github.com/SocialGouv/code-du-travail-numerique/commit/c19c0d77007d28ec5bfb0fbb30ca50ca312cb45b))
+
+
+### Features
+
+* implement test e2e for autocomplete with accent ([ed37dd8](https://github.com/SocialGouv/code-du-travail-numerique/commit/ed37dd8ea57384333fb41337c514f5ba0eef67e3))
+
+
+
+
+
 ## [4.183.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.183.1...v4.183.2) (2025-06-17)
 
 
