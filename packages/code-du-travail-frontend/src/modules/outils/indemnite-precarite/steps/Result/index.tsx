@@ -37,7 +37,7 @@ const ResultStepComponent = (): JSX.Element => {
 
   if (calculationError) {
     return (
-      <div className={fr.cx("fr-col-md-8", "fr-col-12", "fr-mb-6w")}>
+      <div className={fr.cx("fr-col-md-8", "fr-col-12", "fr-mb-3w")}>
         <div className={fr.cx("fr-alert", "fr-alert--error")}>
           <h3 className={fr.cx("fr-alert__title")}>Erreur de calcul</h3>
           <p>Une erreur est survenue lors du calcul. Veuillez réessayer.</p>

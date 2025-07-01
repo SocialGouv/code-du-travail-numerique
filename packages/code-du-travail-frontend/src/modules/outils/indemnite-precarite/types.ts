@@ -80,17 +80,6 @@ export interface ContractInfo {
   duration?: number;
 }
 
-export interface CalculationResult {
-  amount: number;
-  isEligible: boolean;
-  reason?: string;
-  details?: {
-    baseAmount: number;
-    rate: number;
-    conventionalAmount?: number;
-  };
-}
-
 // Types pour les questions dynamiques
 export interface Question {
   key: string;

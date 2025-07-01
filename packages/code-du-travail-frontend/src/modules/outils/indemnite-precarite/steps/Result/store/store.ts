@@ -13,7 +13,10 @@ import {
   PublicodesIndemnitePrecariteResult,
   Formula,
 } from "@socialgouv/modeles-social";
-import { mapToPublicodesSituationForCalculationIndemnitePrecarite } from "../../../../common/publicodes/indemnite-precarite";
+import {
+  mapToPublicodesSituationForCalculationIndemnitePrecarite,
+  mapAgreementSpecificParametersToPublicodes,
+} from "../../../../common/publicodes/indemnite-precarite";
 
 const initialState: ResultStoreData = {
   result: undefined,
@@ -70,10 +73,21 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
         }, 0);
       }
 
+      const conventionSpecificParams =
+        mapAgreementSpecificParametersToPublicodes(
+          state.informationsData.input,
+          agreement?.num
+        );
+
+      const additionalFields = {
+        "contrat salarié . type de cdd": `'${state.informationsData.input.criteria?.cddType ?? "Autres"}'`,
+        ...conventionSpecificParams,
+      };
+
       const situation =
         mapToPublicodesSituationForCalculationIndemnitePrecarite(
           totalSalary,
-          { "contrat salarié . type de cdd": "'Autres'" },
+          additionalFields,
           agreement?.num
         );
 
@@ -102,18 +116,7 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
               ? resultValue
               : (resultValue as any)?.nodeValue || 0;
 
-          state.resultData.result = result
-            ? {
-                amount: amount,
-                isEligible: amount > 0,
-                reason:
-                  amount === 0 ? "Non éligible selon les critères" : undefined,
-                details: {
-                  baseAmount: amount,
-                  rate: 10, // 10% par défaut pour l'indemnité de précarité
-                },
-              }
-            : undefined;
+          state.resultData.result = amount;
           state.resultData.totalSalary = totalSalary;
           state.resultData.isAgreementSupported = isAgreementSupported;
           state.resultData.resultNotifications = resultNotifications;
