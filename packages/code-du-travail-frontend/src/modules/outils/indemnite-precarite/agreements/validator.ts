@@ -1,13 +1,14 @@
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
-import { InformationsStoreInput, InformationsStoreError } from "../store/types";
+import {
+  InformationsStoreInput,
+  InformationsStoreError,
+} from "../steps/Informations/store/types";
 
 export const validateAgreementSpecificRules = (
   input: InformationsStoreInput,
   agreement: Agreement,
   errors: InformationsStoreError
 ) => {
-  // Validation des questions spécifiques aux conventions collectives
-
   // Convention collective 3127 - Question hasEquivalentCdiRenewal
   if (
     agreement.num === 3127 &&

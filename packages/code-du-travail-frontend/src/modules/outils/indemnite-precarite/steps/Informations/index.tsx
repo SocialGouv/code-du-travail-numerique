@@ -4,6 +4,8 @@ import {
   useIndemnitePrecariteStore,
 } from "../store";
 import { ContractTypeQuestion, CriteriaQuestions } from "./components";
+import AgreementsInjector from "../../agreements/AgreementsInjector";
+import { IndemnitePrecariteStepName } from "../../types";
 
 const InformationsStepComponent = (): JSX.Element => {
   const store = useContext(IndemnitePrecariteContext);
@@ -16,6 +18,7 @@ const InformationsStepComponent = (): JSX.Element => {
     contractType,
     criteria,
     input,
+    agreement,
   } = useIndemnitePrecariteStore(store, (state) => ({
     errors: state.informationsData.error,
     onContractTypeChange: state.informationsFunction.onContractTypeChange,
@@ -48,6 +51,14 @@ const InformationsStepComponent = (): JSX.Element => {
           onCDDQuestionChange={onCDDQuestionChange}
           onCTTQuestionChange={onCTTQuestionChange}
           errors={errors}
+        />
+      )}
+
+      {/* Questions spécifiques aux conventions collectives */}
+      {agreement && (
+        <AgreementsInjector
+          idcc={agreement.num as any}
+          step={IndemnitePrecariteStepName.InfosGenerales}
         />
       )}
     </div>

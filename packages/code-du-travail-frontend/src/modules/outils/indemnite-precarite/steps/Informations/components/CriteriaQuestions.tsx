@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { SelectQuestion } from "src/modules/outils/common/components/SelectQuestion";
 import { ContractType, CONTRACT_TYPE } from "../../../types";
 import { CDDQuestions } from "./CDDQuestions";
 import { CTTQuestions } from "./CTTQuestions";
 import { InformationsStoreInput, InformationsStoreError } from "../store/types";
-import { EXCLUDED_CONTRACTS } from "../store/validator";
+import { getCddTypesForAgreement } from "../../../agreements/cddTypesFactory";
+import {
+  IndemnitePrecariteContext,
+  useIndemnitePrecariteStore,
+} from "../../store";
 
 interface Props {
   contractType: ContractType;
@@ -25,17 +29,23 @@ export const CriteriaQuestions: React.FC<Props> = ({
   onCTTQuestionChange,
   errors,
 }) => {
+  const store = useContext(IndemnitePrecariteContext);
+  const { agreement } = useIndemnitePrecariteStore(store, (state) => ({
+    agreement: state.agreementData.input.agreement,
+  }));
+
   const handleCriteriaChange = (key: string, value: any) => {
     const newCriteria = { ...criteria, [key]: value };
     onChange(newCriteria);
   };
 
   if (contractType === CONTRACT_TYPE.CDD) {
-    // Toujours afficher la sélection du type de CDD
-    const cddTypeOptions: [string, string][] = [
-      ...EXCLUDED_CONTRACTS,
-      "Autres",
-    ].map((type) => [type, type]);
+    // Utiliser la factory pour obtenir les types de CDD selon la convention collective
+    const cddTypes = getCddTypesForAgreement(agreement);
+    const cddTypeOptions: [string, string][] = cddTypes.map((type) => [
+      type,
+      type,
+    ]);
 
     return (
       <>

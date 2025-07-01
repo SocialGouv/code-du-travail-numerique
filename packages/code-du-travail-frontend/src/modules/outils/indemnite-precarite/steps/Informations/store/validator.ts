@@ -1,7 +1,7 @@
 import { InformationsStoreInput, InformationsStoreError } from "./types";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { CONTRACT_TYPE } from "../../../types";
-import { validateAgreementSpecificRules } from "../agreements/validator";
+import { validateAgreementSpecificRules } from "../../../agreements/validator";
 
 // Contrats exclus de l'indemnité de précarité
 const EXCLUDED_CONTRACTS = [
