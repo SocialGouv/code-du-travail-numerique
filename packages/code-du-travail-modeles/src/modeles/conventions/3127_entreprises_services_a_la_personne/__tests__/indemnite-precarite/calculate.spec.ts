@@ -23,7 +23,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
       situation: {
         "contrat salarié . type de cdd":
-          "'CDD dit de mission ponctuelle ou occasionnelle'",
+          "'CDD dit de « mission ponctuelle ou occasionnelle »'",
         "contrat salarié . embauché en cdi sans interruption": "'non'",
       },
     },

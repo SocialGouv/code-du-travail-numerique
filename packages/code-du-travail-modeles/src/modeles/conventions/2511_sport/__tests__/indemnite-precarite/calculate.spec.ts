@@ -22,7 +22,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
       situation: {
         "contrat salarié . type de cdd":
-          "'CDD d'usage appelé contrat d'intervention'",
+          "'CDD d'usage appelé « contrat d'intervention »'",
         "contrat salarié . embauché en cdi": "'non'",
       },
     },

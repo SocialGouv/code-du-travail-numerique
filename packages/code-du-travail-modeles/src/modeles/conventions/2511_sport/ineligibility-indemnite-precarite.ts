@@ -15,7 +15,7 @@ export class IneligibilityIndemnitePrecarite2511 extends IneligibilityLegalIndem
       !(
         args["contrat salarié . contractType"] === "'CDD'" &&
         args["contrat salarié . type de cdd"] ===
-          "'CDD d'usage appelé contrat d'intervention'"
+          "'CDD d'usage appelé « contrat d'intervention »'"
       )
     ) {
       return "Ce type de contrat ne permet pas au salarié d’avoir droit à une prime de précarité.";

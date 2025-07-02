@@ -15,7 +15,7 @@ export class IneligibilityIndemnitePrecarite3127 extends IneligibilityLegalIndem
       !(
         args["contrat salarié . contractType"] === "'CDD'" &&
         args["contrat salarié . type de cdd"] ===
-          "'CDD dit de mission ponctuelle ou occasionnelle'"
+          "'CDD dit de « mission ponctuelle ou occasionnelle »'"
       )
     ) {
       return "Ce type de contrat ne permet pas au salarié d’avoir droit à une prime de précarité.";

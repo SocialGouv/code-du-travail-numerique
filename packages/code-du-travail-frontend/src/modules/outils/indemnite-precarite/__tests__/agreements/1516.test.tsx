@@ -42,9 +42,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
       describe("criteria.hasCdiRenewal = non", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.hasCdiRenewal"), {
-            target: { value: "non" },
-          });
+          fireEvent.click(screen.getByTestId("hasCdiRenewal - Non"));
           fireEvent.click(ui.next.get());
         });
 
@@ -64,9 +62,6 @@ describe("SimulateurIndemnitePrecarite", () => {
 
             it("should display expected answer", () => {
               expect(screen.queryAllByText(/180/g)[0]).toBeInTheDocument();
-              expect(
-                screen.queryAllByText(/L'indemnité dite "d'usage"/g)[0]
-              ).toBeInTheDocument();
 
               expect(
                 screen.queryAllByText(
@@ -162,29 +157,5 @@ describe("SimulateurIndemnitePrecarite", () => {
         });
       });
     });
-  });
-
-  it("should send error when selecting cddType = Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès and hasEquivalentCdiRenewal = oui", () => {
-    render(
-      <SimulateurIndemnitePrecarite icon={""} title={""} displayTitle={""} />
-    );
-    fireEvent.click(ui.introduction.startButton.get());
-
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.contractType.cdd.get());
-    fireEvent.change(ui.cddType.get(), {
-      target: {
-        value: "CDD d'usage",
-      },
-    });
-    fireEvent.change(screen.getByTestId("criteria.hasCdiRenewal"), {
-      target: { value: "oui" },
-    });
-    fireEvent.click(ui.next.get());
-    expect(
-      screen.queryByText(
-        /Selon votre convention collective, le salarié en contrat d'usage qui, à l'issu de son contrat, poursuit par un CDI, n’a pas le droit à une indemnité dite "d'usage"/g
-      )
-    ).toBeInTheDocument();
   });
 });

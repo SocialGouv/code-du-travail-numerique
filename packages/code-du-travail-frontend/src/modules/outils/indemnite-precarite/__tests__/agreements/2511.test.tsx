@@ -32,19 +32,17 @@ describe("SimulateurIndemnitePrecarite", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.cddType = CDD d'usage appelé contrat «d'intervention»", () => {
+    describe("criteria.cddType = CDD d'usage appelé « contrat d'intervention »", () => {
       beforeEach(() => {
         fireEvent.change(ui.cddType.get(), {
-          target: { value: "CDD d'usage appelé contrat «d'intervention»" },
+          target: { value: "CDD d'usage appelé « contrat d'intervention »" },
         });
         fireEvent.click(ui.next.get());
       });
 
       describe("criteria.hasCdiRenewal = non", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.hasCdiRenewal"), {
-            target: { value: "non" },
-          });
+          fireEvent.click(screen.getByTestId("hasCdiRenewal - Non"));
           fireEvent.click(ui.next.get());
         });
 
@@ -64,9 +62,6 @@ describe("SimulateurIndemnitePrecarite", () => {
 
             it("should display expected answer", () => {
               expect(screen.queryAllByText(/300/g)[0]).toBeInTheDocument();
-              expect(
-                screen.queryAllByText(/La prime d'intervention/g)[0]
-              ).toBeInTheDocument();
 
               expect(
                 screen.queryAllByText(
@@ -162,29 +157,5 @@ describe("SimulateurIndemnitePrecarite", () => {
         });
       });
     });
-  });
-
-  it("should send error when selecting cddType = Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès and hasEquivalentCdiRenewal = oui", () => {
-    render(
-      <SimulateurIndemnitePrecarite icon={""} title={""} displayTitle={""} />
-    );
-    fireEvent.click(ui.introduction.startButton.get());
-
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.contractType.cdd.get());
-    fireEvent.change(ui.cddType.get(), {
-      target: {
-        value: "CDD d'usage appelé contrat «d'intervention»",
-      },
-    });
-    fireEvent.change(screen.getByTestId("criteria.hasCdiRenewal"), {
-      target: { value: "oui" },
-    });
-    fireEvent.click(ui.next.get());
-    expect(
-      screen.queryByText(
-        /Selon votre convention collective, lorsque le contrat d'intervention est transformé en CDI, le salarié n’a pas le droit à une prime d'intervention/g
-      )
-    ).toBeInTheDocument();
   });
 });

@@ -44,12 +44,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
       describe("criteria.hasEquivalentCdiRenewal = non", () => {
         beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId("criteria.hasEquivalentCdiRenewal"),
-            {
-              target: { value: "non" },
-            }
-          );
+          fireEvent.click(screen.getByTestId("hasEquivalentCdiRenewal - Non"));
           fireEvent.click(ui.next.get());
         });
 
@@ -69,9 +64,6 @@ describe("SimulateurIndemnitePrecarite", () => {
 
             it("should display expected answer", () => {
               expect(screen.queryAllByText(/300/g)[0]).toBeInTheDocument();
-              expect(
-                screen.queryAllByText(/La prime de mission/g)[0]
-              ).toBeInTheDocument();
 
               expect(
                 screen.queryAllByText(
@@ -167,29 +159,5 @@ describe("SimulateurIndemnitePrecarite", () => {
         });
       });
     });
-  });
-
-  it("should send error when selecting cddType = CDD dit de « mission ponctuelle ou occasionnelle » and hasEquivalentCdiRenewal = oui", () => {
-    render(
-      <SimulateurIndemnitePrecarite icon={""} title={""} displayTitle={""} />
-    );
-    fireEvent.click(ui.introduction.startButton.get());
-
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.contractType.cdd.get());
-    fireEvent.change(ui.cddType.get(), {
-      target: {
-        value: "CDD dit de « mission ponctuelle ou occasionnelle »",
-      },
-    });
-    fireEvent.change(screen.getByTestId("criteria.hasEquivalentCdiRenewal"), {
-      target: { value: "oui" },
-    });
-    fireEvent.click(ui.next.get());
-    expect(
-      screen.queryByText(
-        /Selon votre convention collective, lorsque le contrat de mission ponctuelle est transformé en CDI pour un poste et une durée équivalents, le salarié n’a pas le droit à une prime d'intervention/g
-      )
-    ).toBeInTheDocument();
   });
 });

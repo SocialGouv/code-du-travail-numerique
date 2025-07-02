@@ -10,7 +10,7 @@ export const CDD_TYPES = {
   ANIMATION_COMMERCIALE: "CDD d'animation commerciale",
   INTERVENTION_ACCUEIL_EVENEMENTIEL:
     "Contrat d'intervention dans le secteur de l'accueil événementiel",
-  USAGE_INTERVENTION_2511: "CDD d'usage appelé contrat «d'intervention»",
+  USAGE_INTERVENTION_2511: "CDD d'usage appelé « contrat d'intervention »",
   MISSION_PONCTUELLE: "CDD dit de « mission ponctuelle ou occasionnelle »",
   AUTRES: "Autres",
 } as const;

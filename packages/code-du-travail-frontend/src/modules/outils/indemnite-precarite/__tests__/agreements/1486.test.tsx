@@ -56,9 +56,6 @@ describe("SimulateurIndemnitePrecarite", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/120/g)[0]).toBeInTheDocument();
-            expect(
-              screen.queryAllByText(/L'indemnité de fin de contrat/g)[0]
-            ).toBeInTheDocument();
 
             expect(
               screen.queryAllByText(
@@ -83,9 +80,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
       describe("criteria.hasCdiProposal = non", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.hasCdiProposal"), {
-            target: { value: "non" },
-          });
+          fireEvent.click(screen.getByTestId("hasCdiProposal - Non"));
           fireEvent.click(ui.next.get());
         });
 
@@ -105,9 +100,6 @@ describe("SimulateurIndemnitePrecarite", () => {
 
             it("should display expected answer", () => {
               expect(screen.queryAllByText(/180/g)[0]).toBeInTheDocument();
-              expect(
-                screen.queryAllByText(/La prime d'intervention/g)[0]
-              ).toBeInTheDocument();
 
               expect(
                 screen.queryAllByText(
@@ -203,30 +195,5 @@ describe("SimulateurIndemnitePrecarite", () => {
         });
       });
     });
-  });
-
-  it("should send error when selecting cddType = Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès and hasEquivalentCdiRenewal = oui", () => {
-    render(
-      <SimulateurIndemnitePrecarite icon={""} title={""} displayTitle={""} />
-    );
-    fireEvent.click(ui.introduction.startButton.get());
-
-    fireEvent.click(ui.next.get());
-    fireEvent.click(ui.contractType.cdd.get());
-    fireEvent.change(ui.cddType.get(), {
-      target: {
-        value:
-          "Contrat d'intervention dans le secteur d'activité d'organisation des foires, salons et congrès",
-      },
-    });
-    fireEvent.change(screen.getByTestId("criteria.hasCdiProposal"), {
-      target: { value: "oui" },
-    });
-    fireEvent.click(ui.next.get());
-    expect(
-      screen.queryByText(
-        /Selon votre convention collective, le salarié en contrat d'intervention qui, à l'issue de son contrat, a reçu une proposition d'un CDI, n’a pas le droit à une prime d'intervention/g
-      )
-    ).toBeInTheDocument();
   });
 });

@@ -46,22 +46,15 @@ export const mapAgreementSpecificParametersToPublicodes = (
       }
       break;
 
-    case 3127: // Entreprises services à la personne
-      if (cddType === CDD_TYPES.MISSION_PONCTUELLE) {
-        additionalFields[
-          "contrat salarié . embauché en cdi sans interruption"
-        ] =
-          informationsInput.hasEquivalentCdiRenewal === "oui"
-            ? "'oui'"
-            : "'non'";
-      }
-      break;
-
     case 1516: // Organismes formation
       if (cddType === CDD_TYPES.USAGE_1516) {
         additionalFields["contrat salarié . embauché en cdi"] =
           informationsInput.hasCdiRenewal === "oui" ? "'oui'" : "'non'";
       }
+      break;
+
+    case 2098: // Personnel presta service tertiaire
+      // Pas de paramètres spécifiques pour cette CC
       break;
 
     case 2511: // Sport
@@ -71,8 +64,15 @@ export const mapAgreementSpecificParametersToPublicodes = (
       }
       break;
 
-    case 2098: // Personnel presta service tertiaire
-      // Pas de paramètres spécifiques pour cette CC
+    case 3127: // Entreprises services à la personne
+      if (cddType === CDD_TYPES.MISSION_PONCTUELLE) {
+        additionalFields[
+          "contrat salarié . embauché en cdi sans interruption"
+        ] =
+          informationsInput.hasEquivalentCdiRenewal === "oui"
+            ? "'oui'"
+            : "'non'";
+      }
       break;
 
     default:

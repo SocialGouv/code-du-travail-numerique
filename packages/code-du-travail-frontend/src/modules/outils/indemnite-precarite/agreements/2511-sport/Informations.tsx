@@ -20,8 +20,8 @@ export default function Agreement2511Informations() {
     errorHasCdiRenewal: state.informationsData.error.hasCdiRenewal,
   }));
 
-  // Afficher la question seulement si le type de CDD est "CDD d'usage appelé contrat «d'intervention»"
-  if (criteria?.cddType === "CDD d'usage appelé contrat «d'intervention»") {
+  // Afficher la question seulement si le type de CDD est "CDD d'usage appelé « contrat d'intervention »"
+  if (criteria?.cddType === "CDD d'usage appelé « contrat d'intervention »") {
     return (
       <RadioQuestion
         questions={[

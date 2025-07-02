@@ -1,10 +1,10 @@
-contrat salarié . convention collective . sport . type de cdd CDD d'usage appelé contrat d'intervention:
-  applicable si: type de cdd = 'CDD d'usage appelé contrat d'intervention'
+contrat salarié . convention collective . sport . type de cdd CDD d'usage appelé « contrat d'intervention »:
+  applicable si: type de cdd = 'CDD d'usage appelé « contrat d'intervention »'
 
-contrat salarié . convention collective . sport . type de cdd CDD d'usage appelé contrat d'intervention . embauché en cdi non:
+contrat salarié . convention collective . sport . type de cdd CDD d'usage appelé « contrat d'intervention » . embauché en cdi non:
   applicable si: embauché en cdi = 'non'
 
-contrat salarié . convention collective . sport . type de cdd CDD d'usage appelé contrat d'intervention . embauché en cdi non . résultat conventionnel:
+contrat salarié . convention collective . sport . type de cdd CDD d'usage appelé « contrat d'intervention » . embauché en cdi non . résultat conventionnel:
   valeur:
     produit:
       assiette: contrat salarié . salaire de référence
