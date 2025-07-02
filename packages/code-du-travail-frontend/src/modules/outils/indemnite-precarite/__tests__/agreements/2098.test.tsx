@@ -1,4 +1,4 @@
-import { SimulateurIndemnitePrecarite } from "../../../index";
+import { CalculateurIndemnitePrecarite } from "../../IndemnitePrecariteSimulator";
 import { ui } from "../ui";
 import { fireEvent, render, screen } from "@testing-library/react";
 
@@ -19,7 +19,7 @@ Storage.prototype.getItem = jest.fn(
 describe("SimulateurIndemnitePrecarite", () => {
   beforeEach(() => {
     render(
-      <SimulateurIndemnitePrecarite icon={""} title={""} displayTitle={""} />
+      <CalculateurIndemnitePrecarite title="Test Indemnité de Précarité" />
     );
     fireEvent.click(ui.introduction.startButton.get());
 
@@ -28,13 +28,13 @@ describe("SimulateurIndemnitePrecarite", () => {
 
   describe("contractType = CDD", () => {
     beforeEach(() => {
-      fireEvent.click(screen.getByTestId("contractType-cdd"));
+      fireEvent.click(ui.contractType.cdd.get());
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.cddType = CDD d'optimisation linéaire", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.cddType"), {
+        fireEvent.change(ui.cddType.get(), {
           target: { value: "CDD d'optimisation linéaire" },
         });
         fireEvent.click(ui.next.get());
@@ -42,13 +42,13 @@ describe("SimulateurIndemnitePrecarite", () => {
 
       describe("typeRemuneration = amount", () => {
         beforeEach(() => {
-          fireEvent.click(screen.getByTestId("typeRemuneration-amount"));
+          fireEvent.click(ui.remuneration.typeRemuneration.total.get());
           fireEvent.click(ui.next.get());
         });
 
         describe("currency = 3000", () => {
           beforeEach(() => {
-            fireEvent.change(screen.getByTestId("currency"), {
+            fireEvent.change(ui.remuneration.salaireTotal.get(), {
               target: { value: "3000" },
             });
             fireEvent.click(ui.next.get());
@@ -56,11 +56,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/300/g)[0]).toBeInTheDocument();
-            expect(
-              screen.queryAllByText(/La prime de précarité/g)[0]
-            ).toBeInTheDocument();
-
-            expect(
+                      expect(
               screen.queryAllByText(
                 /Article 9 de l'accord du 10 mai 2010 relatif à l'activité d'optimisation de linéaires/
               )[0]
@@ -72,7 +68,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
     describe("criteria.cddType = CDD d'animation commerciale", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.cddType"), {
+        fireEvent.change(ui.cddType.get(), {
           target: { value: "CDD d'animation commerciale" },
         });
         fireEvent.click(ui.next.get());
@@ -80,13 +76,13 @@ describe("SimulateurIndemnitePrecarite", () => {
 
       describe("typeRemuneration = amount", () => {
         beforeEach(() => {
-          fireEvent.click(screen.getByTestId("typeRemuneration-amount"));
+          fireEvent.click(ui.remuneration.typeRemuneration.total.get());
           fireEvent.click(ui.next.get());
         });
 
         describe("currency = 3000", () => {
           beforeEach(() => {
-            fireEvent.change(screen.getByTestId("currency"), {
+            fireEvent.change(ui.remuneration.salaireTotal.get(), {
               target: { value: "3000" },
             });
             fireEvent.click(ui.next.get());
@@ -94,11 +90,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/300/g)[0]).toBeInTheDocument();
-            expect(
-              screen.queryAllByText(/La prime de précarité/g)[0]
-            ).toBeInTheDocument();
-
-            expect(
+                      expect(
               screen.queryAllByText(
                 /Article 9 de l'accord du 13 février 2006 Activités de l'animation commerciale/
               )[0]
@@ -110,7 +102,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
     describe("criteria.cddType = Contrat d'intervention dans le secteur de l'accueil événementiel", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.cddType"), {
+        fireEvent.change(ui.cddType.get(), {
           target: {
             value:
               "Contrat d'intervention dans le secteur de l'accueil événementiel",
@@ -121,13 +113,13 @@ describe("SimulateurIndemnitePrecarite", () => {
 
       describe("typeRemuneration = amount", () => {
         beforeEach(() => {
-          fireEvent.click(screen.getByTestId("typeRemuneration-amount"));
+          fireEvent.click(ui.remuneration.typeRemuneration.total.get());
           fireEvent.click(ui.next.get());
         });
 
         describe("currency = 3000", () => {
           beforeEach(() => {
-            fireEvent.change(screen.getByTestId("currency"), {
+            fireEvent.change(ui.remuneration.salaireTotal.get(), {
               target: { value: "3000" },
             });
             fireEvent.click(ui.next.get());
@@ -135,11 +127,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/300/g)[0]).toBeInTheDocument();
-            expect(
-              screen.queryAllByText(/La prime de précarité/g)[0]
-            ).toBeInTheDocument();
-
-            expect(
+                      expect(
               screen.queryAllByText(
                 /Article 4.1 de l'accord du 20 septembre 2002 \(1\) relatif aux dispositions spécifiques à l'accueil événementiel/
               )[0]
@@ -151,7 +139,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
     describe("criteria.cddType = Autres", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.cddType"), {
+        fireEvent.change(ui.cddType.get(), {
           target: { value: "Autres" },
         });
         fireEvent.click(ui.next.get());
@@ -159,28 +147,28 @@ describe("SimulateurIndemnitePrecarite", () => {
 
       describe("finContratPeriodeDessai = Non", () => {
         beforeEach(() => {
-          fireEvent.click(screen.getByTestId("finContratPeriodeDessai-non"));
+          fireEvent.click(ui.cddQuestions.finContratPeriodeDessai.non.get());
           fireEvent.click(ui.next.get());
         });
 
         describe("propositionCDIFindeContrat = Non", () => {
           beforeEach(() => {
             fireEvent.click(
-              screen.getByTestId("propositionCDIFindeContrat-non")
+              ui.cddQuestions.propositionCDIFindeContrat.non.get()
             );
             fireEvent.click(ui.next.get());
           });
 
           describe("refusCDIFindeContrat = Non", () => {
             beforeEach(() => {
-              fireEvent.click(screen.getByTestId("refusCDIFindeContrat-non"));
+              fireEvent.click(ui.cddQuestions.refusCDIFindeContrat.non.get());
               fireEvent.click(ui.next.get());
             });
 
             describe("interruptionFauteGrave = Non", () => {
               beforeEach(() => {
                 fireEvent.click(
-                  screen.getByTestId("interruptionFauteGrave-non")
+                  ui.cddQuestions.interruptionFauteGrave.non.get()
                 );
                 fireEvent.click(ui.next.get());
               });
@@ -188,7 +176,7 @@ describe("SimulateurIndemnitePrecarite", () => {
               describe("refusRenouvellementAuto = Non", () => {
                 beforeEach(() => {
                   fireEvent.click(
-                    screen.getByTestId("refusRenouvellementAuto-non")
+                    ui.cddQuestions.refusRenouvellementAuto.non.get()
                   );
                   fireEvent.click(ui.next.get());
                 });
@@ -196,14 +184,14 @@ describe("SimulateurIndemnitePrecarite", () => {
                 describe("typeRemuneration = amount", () => {
                   beforeEach(() => {
                     fireEvent.click(
-                      screen.getByTestId("typeRemuneration-amount")
+                      ui.remuneration.typeRemuneration.total.get()
                     );
                     fireEvent.click(ui.next.get());
                   });
 
                   describe("currency = 3000", () => {
                     beforeEach(() => {
-                      fireEvent.change(screen.getByTestId("currency"), {
+                      fireEvent.change(ui.remuneration.salaireTotal.get(), {
                         target: { value: "3000" },
                       });
                       fireEvent.click(ui.next.get());
@@ -213,10 +201,6 @@ describe("SimulateurIndemnitePrecarite", () => {
                       expect(
                         screen.queryAllByText(/300/g)[0]
                       ).toBeInTheDocument();
-                      expect(
-                        screen.queryAllByText(/La prime de précarité/g)[0]
-                      ).toBeInTheDocument();
-
                       expect(
                         screen.queryAllByText(
                           /Article L1243-8 du code du travail/

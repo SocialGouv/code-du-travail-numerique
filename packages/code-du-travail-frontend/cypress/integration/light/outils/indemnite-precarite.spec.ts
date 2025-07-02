@@ -14,12 +14,12 @@ describe("Outil - Indemnité de Precarite", () => {
     cy.get('ul[role="listbox"] li').contains("Boulangerie-pâtisserie").click();
     cy.get("button").contains("Suivant").click();
 
-    // Utiliser les id pour les tests
-    cy.get("#contractType-ctt").click();
-    cy.get("#cttFormation-non").click();
-    cy.get("#ruptureContratFauteGrave-non").click();
-    cy.get("#propositionCDIFinContrat-non").click();
-    cy.get("#refusSouplesse-non").click();
+    // Utiliser les name pour les tests
+    cy.get('input[name="contractType"][value="ctt"]').click();
+    cy.get('input[name="cttFormation"][value="false"]').click();
+    cy.get('input[name="ruptureContratFauteGrave"][value="false"]').click();
+    cy.get('input[name="propositionCDIFinContrat"][value="false"]').click();
+    cy.get('input[name="refusSouplesse"][value="false"]').click();
     cy.contains("Suivant").click();
 
     // Sélectionner le type de rémunération et saisir un montant
@@ -28,7 +28,7 @@ describe("Outil - Indemnité de Precarite", () => {
     cy.contains("Suivant").click();
 
     // Vérifier le résultat
-    cy.contains("Résultat").should("be.visible");
+    cy.contains("Détail du calcul").should("be.visible");
     cy.contains("200").should("be.visible");
     cy.contains("Imprimer le résultat").should("be.visible");
   });

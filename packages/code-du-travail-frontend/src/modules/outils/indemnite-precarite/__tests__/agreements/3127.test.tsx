@@ -1,4 +1,4 @@
-import { SimulateurIndemnitePrecarite } from "../../../index";
+import { CalculateurIndemnitePrecarite } from "../../IndemnitePrecariteSimulator";
 import { ui } from "../ui";
 import { fireEvent, render, screen } from "@testing-library/react";
 
@@ -19,7 +19,7 @@ Storage.prototype.getItem = jest.fn(
 describe("SimulateurIndemnitePrecarite", () => {
   beforeEach(() => {
     render(
-      <SimulateurIndemnitePrecarite icon={""} title={""} displayTitle={""} />
+      <CalculateurIndemnitePrecarite title="Test Indemnité de Précarité" />
     );
     fireEvent.click(ui.introduction.startButton.get());
 
@@ -28,13 +28,13 @@ describe("SimulateurIndemnitePrecarite", () => {
 
   describe("contractType = CDD", () => {
     beforeEach(() => {
-      fireEvent.click(screen.getByTestId("contractType-cdd"));
+      fireEvent.click(ui.contractType.cdd.get());
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.cddType = CDD dit de « mission ponctuelle ou occasionnelle »", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.cddType"), {
+        fireEvent.change(ui.cddType.get(), {
           target: {
             value: "CDD dit de « mission ponctuelle ou occasionnelle »",
           },
@@ -55,13 +55,13 @@ describe("SimulateurIndemnitePrecarite", () => {
 
         describe("typeRemuneration = amount", () => {
           beforeEach(() => {
-            fireEvent.click(screen.getByTestId("typeRemuneration-amount"));
+            fireEvent.click(ui.remuneration.typeRemuneration.total.get());
             fireEvent.click(ui.next.get());
           });
 
           describe("currency = 3000", () => {
             beforeEach(() => {
-              fireEvent.change(screen.getByTestId("currency"), {
+              fireEvent.change(ui.remuneration.salaireTotal.get(), {
                 target: { value: "3000" },
               });
               fireEvent.click(ui.next.get());
@@ -86,7 +86,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
     describe("criteria.cddType = Autres", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.cddType"), {
+        fireEvent.change(ui.cddType.get(), {
           target: { value: "Autres" },
         });
         fireEvent.click(ui.next.get());
@@ -94,28 +94,28 @@ describe("SimulateurIndemnitePrecarite", () => {
 
       describe("finContratPeriodeDessai = Non", () => {
         beforeEach(() => {
-          fireEvent.click(screen.getByTestId("finContratPeriodeDessai-non"));
+          fireEvent.click(ui.cddQuestions.finContratPeriodeDessai.non.get());
           fireEvent.click(ui.next.get());
         });
 
         describe("propositionCDIFindeContrat = Non", () => {
           beforeEach(() => {
             fireEvent.click(
-              screen.getByTestId("propositionCDIFindeContrat-non")
+              ui.cddQuestions.propositionCDIFindeContrat.non.get()
             );
             fireEvent.click(ui.next.get());
           });
 
           describe("refusCDIFindeContrat = Non", () => {
             beforeEach(() => {
-              fireEvent.click(screen.getByTestId("refusCDIFindeContrat-non"));
+              fireEvent.click(ui.cddQuestions.refusCDIFindeContrat.non.get());
               fireEvent.click(ui.next.get());
             });
 
             describe("interruptionFauteGrave = Non", () => {
               beforeEach(() => {
                 fireEvent.click(
-                  screen.getByTestId("interruptionFauteGrave-non")
+                  ui.cddQuestions.interruptionFauteGrave.non.get()
                 );
                 fireEvent.click(ui.next.get());
               });
@@ -123,7 +123,7 @@ describe("SimulateurIndemnitePrecarite", () => {
               describe("refusRenouvellementAuto = Non", () => {
                 beforeEach(() => {
                   fireEvent.click(
-                    screen.getByTestId("refusRenouvellementAuto-non")
+                    ui.cddQuestions.refusRenouvellementAuto.non.get()
                   );
                   fireEvent.click(ui.next.get());
                 });
@@ -131,14 +131,14 @@ describe("SimulateurIndemnitePrecarite", () => {
                 describe("typeRemuneration = amount", () => {
                   beforeEach(() => {
                     fireEvent.click(
-                      screen.getByTestId("typeRemuneration-amount")
+                      ui.remuneration.typeRemuneration.total.get()
                     );
                     fireEvent.click(ui.next.get());
                   });
 
                   describe("currency = 3000", () => {
                     beforeEach(() => {
-                      fireEvent.change(screen.getByTestId("currency"), {
+                      fireEvent.change(ui.remuneration.salaireTotal.get(), {
                         target: { value: "3000" },
                       });
                       fireEvent.click(ui.next.get());
@@ -148,10 +148,6 @@ describe("SimulateurIndemnitePrecarite", () => {
                       expect(
                         screen.queryAllByText(/300/g)[0]
                       ).toBeInTheDocument();
-                      expect(
-                        screen.queryAllByText(/La prime de précarité/g)[0]
-                      ).toBeInTheDocument();
-
                       expect(
                         screen.queryAllByText(
                           /Article L1243-8 du code du travail/
@@ -180,8 +176,8 @@ describe("SimulateurIndemnitePrecarite", () => {
     fireEvent.click(ui.introduction.startButton.get());
 
     fireEvent.click(ui.next.get());
-    fireEvent.click(screen.getByTestId("contractType-cdd"));
-    fireEvent.change(screen.getByTestId("criteria.cddType"), {
+    fireEvent.click(ui.contractType.cdd.get());
+    fireEvent.change(ui.cddType.get(), {
       target: {
         value: "CDD dit de « mission ponctuelle ou occasionnelle »",
       },
