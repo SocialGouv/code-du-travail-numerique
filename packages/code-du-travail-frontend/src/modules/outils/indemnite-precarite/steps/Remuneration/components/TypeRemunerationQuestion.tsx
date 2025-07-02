@@ -30,7 +30,8 @@ export const TypeRemunerationQuestion: React.FC<Props> = ({
               value: "total",
               checked: value === "total",
               onChange: () => onChange("total"),
-            },
+              "data-testid": "typeRemuneration-total",
+            } as any,
           },
           {
             label: (
@@ -43,7 +44,8 @@ export const TypeRemunerationQuestion: React.FC<Props> = ({
               value: "mensuel",
               checked: value === "mensuel",
               onChange: () => onChange("mensuel"),
-            },
+              "data-testid": "typeRemuneration-mensuel",
+            } as any,
           },
         ]}
         state={error ? "error" : "default"}

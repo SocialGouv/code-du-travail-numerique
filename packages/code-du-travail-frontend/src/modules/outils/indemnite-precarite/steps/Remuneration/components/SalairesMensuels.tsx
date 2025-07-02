@@ -57,13 +57,16 @@ export const SalairesMensuels: React.FC<Props> = ({
           <div className={salaryContainerStyle}>
             <Input
               label={`Montant ${index + 1} en €`}
-              nativeInputProps={{
-                type: "number",
-                min: "0",
-                step: "100",
-                value: salaire.salaire || "",
-                onChange: (e) => handleSalaireChange(index, e.target.value),
-              }}
+              nativeInputProps={
+                {
+                  type: "number",
+                  min: "0",
+                  step: "100",
+                  value: salaire.salaire || "",
+                  onChange: (e) => handleSalaireChange(index, e.target.value),
+                  "data-testid": `salaireMensuel-${index + 1}`,
+                } as any
+              }
               classes={{
                 nativeInputOrTextArea: defaultInputStyle,
                 root: fr.cx("fr-mb-0"),
@@ -76,6 +79,7 @@ export const SalairesMensuels: React.FC<Props> = ({
               iconId="fr-icon-delete-line"
               onClick={() => removeSalaire(index)}
               disabled={salaires.length <= 1}
+              data-testid={`removeSalaire-${index + 1}`}
             >
               Supprimer
             </Button>
@@ -89,6 +93,7 @@ export const SalairesMensuels: React.FC<Props> = ({
         iconId="fr-icon-add-line"
         onClick={addSalaire}
         className={fr.cx("fr-mb-2w")}
+        data-testid="addSalaire"
       >
         Ajouter un salaire
       </Button>

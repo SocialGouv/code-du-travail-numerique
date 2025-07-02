@@ -13,8 +13,11 @@ type Props = {
 
 const Warning: React.FC<Props> = ({ agreement, isAgreementSupported }) => {
   return (
-    <div className={fr.cx("fr-mt-4w", "fr-alert", "fr-alert--info")}>
-      <h3 className={fr.cx("fr-alert__title")}>
+    <div
+      className={fr.cx("fr-mt-4w", "fr-alert", "fr-alert--info")}
+      data-testid="warning-alert"
+    >
+      <h3 className={fr.cx("fr-alert__title")} data-testid="warning-title">
         Attention il peut exister un montant plus favorable
       </h3>
       <p>

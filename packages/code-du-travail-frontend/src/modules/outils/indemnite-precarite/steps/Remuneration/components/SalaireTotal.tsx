@@ -19,13 +19,16 @@ export const SalaireTotal: React.FC<Props> = ({ value, onChange, error }) => {
     <div className={fr.cx("fr-mb-3w")}>
       <Input
         label="Quelle est la rémunération totale brute perçue en € durant le contrat de travail ?"
-        nativeInputProps={{
-          type: "number",
-          min: "0",
-          step: "1000",
-          value: value || "",
-          onChange: handleChange,
-        }}
+        nativeInputProps={
+          {
+            type: "number",
+            min: "0",
+            step: "1000",
+            value: value || "",
+            onChange: handleChange,
+            "data-testid": "salaireTotal",
+          } as any
+        }
         state={error ? "error" : "default"}
         stateRelatedMessage={error}
         classes={{

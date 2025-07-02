@@ -1,39 +1,36 @@
-import { DsfrLayout } from "../../../src/modules/layout";
-import { fetchRelatedItems } from "../../../src/modules/documents";
+import { DocumentElasticResult } from "../../../src/modules/documents";
 import { fetchTool } from "../../../src/modules/outils";
 import { notFound } from "next/navigation";
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
-import IndemnitePrecariteSimulator from "../../../src/modules/outils/indemnite-precarite/IndemnitePrecariteSimulator";
+import { SITE_URL } from "../../../src/config";
+import { WidgetWithIframeResizer } from "src/modules/widgets/WidgetWithIframeResizer";
+import { ElasticTool } from "@socialgouv/cdtn-types";
+import { CalculateurIndemnitePrecarite } from "src/modules/outils/indemnite-precarite";
 
 export async function generateMetadata() {
-  const { metaTitle, metaDescription } = await getTool();
+  const { title, description } = await getTool();
 
   return generateDefaultMetadata({
-    title: metaTitle,
-    description: metaDescription,
-    path: `/widgets/indemnite-precarite`,
+    title: `Simulateur - ${title}`,
+    description: description,
+    path: `${SITE_URL}/widgets/preavis-demission`,
+    overrideCanonical: `${SITE_URL}/outils/preavis-demission`,
   });
 }
 
 async function IndemnitePrecariteWidget() {
-  const tool = await getTool();
-  const relatedItems = await fetchRelatedItems(
-    { _id: tool._id },
-    "indemnite-precarite"
-  );
+  const { title, displayTitle } = await getTool();
   return (
-    <DsfrLayout>
-      <IndemnitePrecariteSimulator
-        title={tool.title}
-        displayTitle={tool.displayTitle}
-        relatedItems={relatedItems}
-      />
-    </DsfrLayout>
+    <WidgetWithIframeResizer title={displayTitle}>
+      <CalculateurIndemnitePrecarite title={title} />
+    </WidgetWithIframeResizer>
   );
 }
 
 const getTool = async () => {
-  const tool = await fetchTool("indemnite-precarite");
+  const tool: DocumentElasticResult<ElasticTool> = await fetchTool(
+    "indemnite-precarite"
+  );
 
   if (!tool) {
     return notFound();

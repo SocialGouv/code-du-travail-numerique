@@ -25,7 +25,8 @@ export const CTTQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
                 value: "true",
                 checked: input.cttFormation === true,
                 onChange: () => onChange("cttFormation", true),
-              },
+                "data-testid": "cttFormation - Oui",
+              } as any,
             },
             {
               label: "Non",
@@ -33,7 +34,8 @@ export const CTTQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
                 value: "false",
                 checked: input.cttFormation === false,
                 onChange: () => onChange("cttFormation", false),
-              },
+                "data-testid": "cttFormation - Non",
+              } as any,
             },
           ]}
           state={errors.cttFormation ? "error" : "default"}
@@ -64,7 +66,8 @@ export const CTTQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
                 value: "true",
                 checked: input.ruptureContratFauteGrave === true,
                 onChange: () => onChange("ruptureContratFauteGrave", true),
-              },
+                "data-testid": "ruptureContratFauteGrave - Oui",
+              } as any,
             },
             {
               label: "Non",
@@ -72,7 +75,8 @@ export const CTTQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
                 value: "false",
                 checked: input.ruptureContratFauteGrave === false,
                 onChange: () => onChange("ruptureContratFauteGrave", false),
-              },
+                "data-testid": "ruptureContratFauteGrave - Non",
+              } as any,
             },
           ]}
           state={errors.ruptureContratFauteGrave ? "error" : "default"}
@@ -93,7 +97,8 @@ export const CTTQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
                 value: "true",
                 checked: input.propositionCDIFinContrat === true,
                 onChange: () => onChange("propositionCDIFinContrat", true),
-              },
+                "data-testid": "propositionCDIFinContrat - Oui",
+              } as any,
             },
             {
               label: "Non",
@@ -101,7 +106,8 @@ export const CTTQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
                 value: "false",
                 checked: input.propositionCDIFinContrat === false,
                 onChange: () => onChange("propositionCDIFinContrat", false),
-              },
+                "data-testid": "propositionCDIFinContrat - Non",
+              } as any,
             },
           ]}
           state={errors.propositionCDIFinContrat ? "error" : "default"}
@@ -122,7 +128,8 @@ export const CTTQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
                 value: "true",
                 checked: input.refusSouplesse === true,
                 onChange: () => onChange("refusSouplesse", true),
-              },
+                "data-testid": "refusSouplesse - Oui",
+              } as any,
             },
             {
               label: "Non",
@@ -130,7 +137,8 @@ export const CTTQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
                 value: "false",
                 checked: input.refusSouplesse === false,
                 onChange: () => onChange("refusSouplesse", false),
-              },
+                "data-testid": "refusSouplesse - Non",
+              } as any,
             },
           ]}
           state={errors.refusSouplesse ? "error" : "default"}

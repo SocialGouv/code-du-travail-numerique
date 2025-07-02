@@ -28,7 +28,8 @@ export const ContractTypeQuestion: React.FC<Props> = ({
             value: CONTRACT_TYPE.CDD,
             checked: value === CONTRACT_TYPE.CDD,
             onChange: () => handleChange(CONTRACT_TYPE.CDD),
-          },
+            "data-testid": "contractType - Contrat à durée déterminée (CDD)",
+          } as any,
         },
         {
           label: "Contrat de travail temporaire (Contrat d'intérim)",
@@ -36,7 +37,9 @@ export const ContractTypeQuestion: React.FC<Props> = ({
             value: CONTRACT_TYPE.CTT,
             checked: value === CONTRACT_TYPE.CTT,
             onChange: () => handleChange(CONTRACT_TYPE.CTT),
-          },
+            "data-testid":
+              "contractType - Contrat de travail temporaire (Contrat d'intérim)",
+          } as any,
         },
       ]}
       state={error ? "error" : "default"}
