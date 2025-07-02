@@ -21,8 +21,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       ],
       expectedNotifications: [],
       expectedFormula: {
-        formula: "1/10 * Sref",
-        explanations: ["Sref : Salaire de référence (3000 €)"],
+        formula: "1/10 * S",
+        explanations: ["S : Salaires renseignés (3000 €)"],
       },
       situation: { "contrat salarié . type de cdd": "'Autres'" },
     },

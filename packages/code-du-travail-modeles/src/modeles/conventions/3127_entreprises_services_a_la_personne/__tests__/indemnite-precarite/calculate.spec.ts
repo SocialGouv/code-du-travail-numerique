@@ -15,11 +15,19 @@ describe("Test de la fonctionnalité 'calculate'", () => {
             "Article 2.5 de la section 1 du Chapitre I de la Partie 2 de la convention collective",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041895535",
         },
+        {
+          article: "Article L1243-8 du code du travail",
+          url: "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501",
+        },
+        {
+          article: "Article L1243-9 du code du travail",
+          url: "https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech=",
+        },
       ],
       expectedNotifications: [],
       expectedFormula: {
-        formula: "1/10 * Sref",
-        explanations: ["Sref : Salaire de référence (3000 €)"],
+        formula: "1/10 * S",
+        explanations: ["S : Salaires renseignés (3000 €)"],
       },
       situation: {
         "contrat salarié . type de cdd":
@@ -41,8 +49,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       ],
       expectedNotifications: [],
       expectedFormula: {
-        formula: "1/10 * Sref",
-        explanations: ["Sref : Salaire de référence (3000 €)"],
+        formula: "1/10 * S",
+        explanations: ["S : Salaires renseignés (3000 €)"],
       },
       situation: { "contrat salarié . type de cdd": "'Autres'" },
     },
