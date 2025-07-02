@@ -72,10 +72,10 @@ export const MentionsLegales = () => (
       Pour en savoir plus sur la politique d&apos;accessibilité numérique de
       l&apos;État&nbsp;:{" "}
       <Link
-        href="http://references.modernisation.gouv.fr/accessibilite-numerique"
+        href="https://www.modernisation.gouv.fr/accessibilite"
         target="_blank"
       >
-        http://references.modernisation.gouv.fr/accessibilite-numerique
+        https://www.modernisation.gouv.fr/accessibilite
       </Link>
     </p>
 
