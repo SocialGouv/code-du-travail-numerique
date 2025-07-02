@@ -2,7 +2,6 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import Image from "next/image";
 import { HomeSearch } from "./Components";
-import IllustrationHomePrincipal from "./picto/IllustrationHomePrincipal.svg";
 
 export const Search = () => {
   return (
@@ -31,7 +30,7 @@ export const Search = () => {
           </div>
           <div className={fr.cx("fr-col-md-5", "fr-col-12")}>
             <Image
-              src={IllustrationHomePrincipal}
+              src="/static/assets/img/IllustrationHomePrincipal.png"
               alt=""
               priority
               fill={false}
