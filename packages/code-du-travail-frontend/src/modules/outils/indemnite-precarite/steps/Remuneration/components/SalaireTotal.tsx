@@ -21,6 +21,7 @@ export const SalaireTotal: React.FC<Props> = ({ value, onChange, error }) => {
         label="Quelle est la rémunération totale brute perçue en € durant le contrat de travail ?"
         nativeInputProps={
           {
+            id: "input-salaireTotal",
             type: "number",
             min: "0",
             step: "1000",
