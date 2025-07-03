@@ -88,6 +88,13 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
       );
       userAction.click(ui.searchByName.autocompleteLines.IDCC16.link.get());
 
+      expect(sendEvent).toHaveBeenCalledWith({
+        action: "Trouver sa convention collective",
+        category: "cc_select_p1",
+        name: "idcc0016",
+        value: undefined,
+      });
+
       userAction.click(ui.searchByName.buttonPrevious.get());
       expect(sendEvent).toHaveBeenLastCalledWith({
         action: "back_step_cc_search_p1",
