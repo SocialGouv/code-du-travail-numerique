@@ -67,7 +67,6 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
         remunerationInput.typeRemuneration === "mensuel" &&
         remunerationInput.salaires
       ) {
-        // Calculer la somme des salaires mensuels
         totalSalary = remunerationInput.salaires.reduce((sum, entry) => {
           return sum + (entry.salaire || 0);
         }, 0);
