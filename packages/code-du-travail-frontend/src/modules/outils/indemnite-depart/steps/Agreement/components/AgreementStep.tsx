@@ -66,7 +66,6 @@ export const CommonAgreementStep = ({
         onChangeSelectedOption={onRouteChange}
         error={error?.route}
         subLabel="Vous pouvez trouver le nom de votre convention collective sur votre bulletin de paie"
-        autoFocus
       />
       {route === "not-selected" && (
         <Alert

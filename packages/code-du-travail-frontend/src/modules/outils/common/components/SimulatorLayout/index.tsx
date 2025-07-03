@@ -1,8 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Button from "@codegouvfr/react-dsfr/Button";
-import { Stepper } from "@codegouvfr/react-dsfr/Stepper";
 import { Step, StepChange, ValidationResponse } from "./types";
-import { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useSimulatorLayoutTracking } from "./tracking";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { IndemniteDepartStepName } from "../../../indemnite-depart";
@@ -25,6 +24,7 @@ export const SimulatorLayout = (props: Props<string>) => {
   const [navigationAction, setNavigationAction] = useState<
     "next" | "prev" | "none"
   >("none");
+  const stepperRef = useRef<HTMLDivElement>(null);
   const [stepIndex, setStepIndex] = useState(0);
   const { steps, title, onStepChange, hiddenStep, simulator } = props;
   const [lastIneligibleStep, setLastIneligibleStep] = useState<
@@ -48,6 +48,7 @@ export const SimulatorLayout = (props: Props<string>) => {
 
   useEffect(() => {
     const currentStepName = visibleSteps[stepIndex].name;
+    stepperRef.current?.focus();
     if (doNotTriggerMatomo(currentStepName)) return;
     emitNextPreviousEvent(title, navigationAction === "prev", currentStepName);
   }, [stepIndex]);
@@ -125,15 +126,31 @@ export const SimulatorLayout = (props: Props<string>) => {
   return (
     <div>
       <div data-testid="stepper" className={hideOnPrint}>
-        <Stepper
-          currentStep={currentNumStep}
-          nextTitle={nextStepTitle}
-          stepCount={nbTotalSteps}
-          title={stepName}
-          classes={{
-            root: fr.cx("fr-mb-3w"),
-          }}
-        />
+        <div className={fr.cx("fr-stepper", "fr-mb-3w")}>
+          <h2
+            tabIndex={-1}
+            ref={stepperRef}
+            className={fr.cx("fr-stepper__title")}
+          >
+            {stepName}
+            <span className={fr.cx("fr-stepper__state")}>
+              Étape {currentNumStep} sur {nbTotalSteps}
+            </span>
+          </h2>
+          <div
+            className={fr.cx("fr-stepper__steps")}
+            data-fr-current-step={currentNumStep}
+            data-fr-steps={nbTotalSteps}
+          ></div>
+          {nextStepTitle !== undefined && (
+            <p className={fr.cx("fr-stepper__details")}>
+              <span className={fr.cx("fr-text--bold")}>
+                Étape suivante&nbsp;:
+              </span>{" "}
+              {nextStepTitle}
+            </p>
+          )}
+        </div>
       </div>
 
       <div className={printOnlyDate}>
@@ -170,6 +187,9 @@ export const SimulatorLayout = (props: Props<string>) => {
             iconId="ri-arrow-right-line"
             iconPosition="right"
             disabled={validator?.isStepValid === false}
+            nativeButtonProps={{
+              "aria-disabled": validator?.isStepValid === false,
+            }}
             className={fr.cx("fr-mr-2w", "fr-mb-3w")}
           >
             {currentNumStep === 1 ? "Commencer" : "Suivant"}
