@@ -56,7 +56,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/300/g)[0]).toBeInTheDocument();
-                      expect(
+            expect(
               screen.queryAllByText(
                 /Article 9 de l'accord du 10 mai 2010 relatif à l'activité d'optimisation de linéaires/
               )[0]
@@ -90,7 +90,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/300/g)[0]).toBeInTheDocument();
-                      expect(
+            expect(
               screen.queryAllByText(
                 /Article 9 de l'accord du 13 février 2006 Activités de l'animation commerciale/
               )[0]
@@ -127,7 +127,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/300/g)[0]).toBeInTheDocument();
-                      expect(
+            expect(
               screen.queryAllByText(
                 /Article 4.1 de l'accord du 20 septembre 2002 \(1\) relatif aux dispositions spécifiques à l'accueil événementiel/
               )[0]
