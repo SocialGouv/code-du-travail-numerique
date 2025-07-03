@@ -40,7 +40,10 @@ export const MentionsLegales = () => (
           Le code du logiciel est libre, et peut donc être vérifié et amélioré
           par toutes et tous à l&apos;adresse suivante&nbsp;:
           <br />
-          <a href="https://github.com/SocialGouv/code-du-travail-numerique">
+          <a
+            href="https://github.com/SocialGouv/code-du-travail-numerique"
+            target="_blank"
+          >
             https://github.com/SocialGouv/code-du-travail-numerique
           </a>
         </strong>
