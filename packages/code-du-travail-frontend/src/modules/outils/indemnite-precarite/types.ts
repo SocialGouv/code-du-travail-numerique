@@ -1,9 +1,9 @@
 export enum IndemnitePrecariteStepName {
   Introduction = "intro",
-  ConventionCollective = "ccn",
-  InfosGenerales = "infos_generales",
+  ConventionCollective = "info_cc",
+  InfosGenerales = "info_generales",
   Remuneration = "remuneration",
-  Resultat = "result",
+  Resultat = "indemnite",
 }
 
 // Constantes pour les types de contrat
