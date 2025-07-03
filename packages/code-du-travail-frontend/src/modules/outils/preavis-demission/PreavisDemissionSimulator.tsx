@@ -21,10 +21,10 @@ import StepAgreement from "./steps/Agreement";
 import { usePreavisDemissionEventEmitter } from "./events/usePreavisDemissionEventEmitter";
 
 enum PreavisDemissionStepName {
-  Intro = "intro",
-  Agreement = "ccn",
+  Intro = "start",
+  Agreement = "info_cc",
   Infos = "infos",
-  Result = "result",
+  Result = "results",
 }
 
 const steps: Step<PreavisDemissionStepName>[] = [
