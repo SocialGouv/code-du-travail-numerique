@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.185.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.184.0...v4.185.0) (2025-07-03)
+
+
+### Bug Fixes
+
+* **ci:** ajout de l'environnement preprod sur le build ([#6660](https://github.com/SocialGouv/code-du-travail-numerique/issues/6660)) ([233dd31](https://github.com/SocialGouv/code-du-travail-numerique/commit/233dd31a0921253074ceea9e9f076c6a580870f6))
+* html validation ([#6595](https://github.com/SocialGouv/code-du-travail-numerique/issues/6595)) ([e434033](https://github.com/SocialGouv/code-du-travail-numerique/commit/e4340333a0d47659e0665cd182b2d85f8286c1ee))
+* **trouver-cc:** envoie d'un event à la sélection d'une CC ([#6642](https://github.com/SocialGouv/code-du-travail-numerique/issues/6642)) ([4c59ce0](https://github.com/SocialGouv/code-du-travail-numerique/commit/4c59ce007b032754abbc4e7738cf1d27bb3c783d))
+
+
+### Features
+
+* update url service renseignement ([#6655](https://github.com/SocialGouv/code-du-travail-numerique/issues/6655)) ([00b7df3](https://github.com/SocialGouv/code-du-travail-numerique/commit/00b7df3839c3d95bcf9940cebf06c72c51e518c1))
+
+
+
+
+
 # [4.184.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.183.2...v4.184.0) (2025-07-01)
 
 
