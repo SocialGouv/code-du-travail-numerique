@@ -12,7 +12,7 @@ describe("Outil - Préavis de démission", () => {
       .first()
       .click();
     cy.contains("Précisez et sélectionnez votre convention collective");
-    cy.get('input[type="search"]').eq(1).type("1388");
+    cy.get('input[type="text"]').eq(1).type("1388");
     cy.get('ul[role="listbox"] li').contains("Industrie du pétrole").click();
 
     cy.contains(
@@ -37,7 +37,7 @@ describe("Outil - Préavis de démission", () => {
       .first()
       .click();
     cy.contains("Précisez et sélectionnez votre convention collective");
-    cy.get('input[type="search"]').eq(1).type("843");
+    cy.get('input[type="text"]').eq(1).type("843");
     cy.get('ul[role="listbox"] li').contains("Boulangerie").click();
 
     cy.get("button").contains("Suivant").click();
