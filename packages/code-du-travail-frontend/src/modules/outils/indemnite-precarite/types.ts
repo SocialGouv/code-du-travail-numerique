@@ -1,5 +1,5 @@
 export enum IndemnitePrecariteStepName {
-  Introduction = "intro",
+  Introduction = "start",
   ConventionCollective = "info_cc",
   InfosGenerales = "info_generales",
   Remuneration = "remuneration",
