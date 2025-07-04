@@ -46,7 +46,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         {!router.pathname.startsWith("/widgets") && <CookieConsentLegacy />}
         <MatomoInitializer />
-        {!router.pathname.startsWith("/widgets") && <ConsentManager />}
       </ThemeProvider>
     </React.StrictMode>
   );
