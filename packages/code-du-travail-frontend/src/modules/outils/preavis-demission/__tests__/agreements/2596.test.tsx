@@ -70,7 +70,7 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 'Salariés occupant un emploi de l'esthétiquecosmétique'", () => {
+  describe("criteria.catégorie professionnelle = 'Salariés occupant un emploi de l'esthétique-cosmétique'", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -78,7 +78,7 @@ describe("PreavisDemissionSimulator", () => {
         ),
         {
           target: {
-            value: "'Salariés occupant un emploi de l'esthétiquecosmétique'",
+            value: "'Salariés occupant un emploi de l'esthétique-cosmétique'",
           },
         }
       );
@@ -134,7 +134,7 @@ describe("PreavisDemissionSimulator", () => {
         ),
         {
           target: {
-            value: "'Salariés occupant un emploi nontechnique de la coiffure'",
+            value: "'Salariés occupant un emploi non-technique de la coiffure'",
           },
         }
       );

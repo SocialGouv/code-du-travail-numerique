@@ -16,7 +16,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle":
-          "'Cadres Classes 5 à 7'",
+          "'Cadres (Classes 5 à 7)'",
       },
     },
     {
@@ -30,7 +30,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle":
-          "'Non-cadres Classes 1 à 4'",
+          "'Non-cadres (Classes 1 à 4)'",
       },
     },
   ])(

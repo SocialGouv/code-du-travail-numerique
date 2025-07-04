@@ -63,7 +63,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . bad . catégorie professionnelle":
-          "'Technicienagent de maîtrise'",
+          "'Technicien-agent de maîtrise'",
         "contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté":
           "'Moins de 2 ans'",
       },
@@ -79,7 +79,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . bad . catégorie professionnelle":
-          "'Technicienagent de maîtrise'",
+          "'Technicien-agent de maîtrise'",
         "contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté":
           "'Plus de 2 ans'",
       },
