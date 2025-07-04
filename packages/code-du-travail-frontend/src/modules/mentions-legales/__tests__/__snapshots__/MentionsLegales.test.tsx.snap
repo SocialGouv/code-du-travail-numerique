@@ -56,7 +56,14 @@ exports[`<MentionsLegales /> should match snapshot 1`] = `
         </p>
         <p>
           <strong>
-            Le code du logiciel est libre, et peut donc être vérifié et amélioré par toutes et tous à l'adresse suivante.
+            Le code du logiciel est libre, et peut donc être vérifié et amélioré par toutes et tous à l'adresse suivante :
+            <br />
+            <a
+              href="https://github.com/SocialGouv/code-du-travail-numerique"
+              target="_blank"
+            >
+              https://github.com/SocialGouv/code-du-travail-numerique
+            </a>
           </strong>
         </p>
       </div>
