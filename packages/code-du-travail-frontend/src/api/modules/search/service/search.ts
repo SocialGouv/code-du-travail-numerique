@@ -1,5 +1,5 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { elasticsearchClient, elasticDocumentsIndex } from "../../../utils";
+import { elasticDocumentsIndex, elasticsearchClient } from "../../../utils";
 import {
   getRelatedArticlesBody,
   getRelatedThemesBody,
@@ -113,18 +113,13 @@ export const searchWithQuery = async (
     title: _source.shortTitle ?? _source.title,
   }));
 
-  const allDocumentsWithoutCdtnSource = [
-    ...mapDocuments,
-    ...articles.filter((item) => item.source !== SOURCES.CDT),
-  ];
-
   return {
     articles: articles.map(({ _score, _source }) => ({
       _score: _score ?? null,
       ..._source,
       title: _source.shortTitle ?? _source.title,
     })),
-    documents: allDocumentsWithoutCdtnSource,
+    documents: mapDocuments,
     // we add source prop since some result might come from dedicated themes index
     // which has no source prop
     themes: themes.map(({ _score, _source }) => ({
