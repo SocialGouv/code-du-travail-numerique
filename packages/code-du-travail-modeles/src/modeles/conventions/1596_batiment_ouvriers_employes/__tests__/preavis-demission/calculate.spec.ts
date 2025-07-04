@@ -14,9 +14,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       ],
       expectedNotifications: [],
       situation: {
-        "contrat salarié . convention collective . batiment ouvriers employés . catégorie professionnelle":
-          "'Ouvriers'",
-        "contrat salarié . convention collective . batiment ouvriers employés . catégorie professionnelle Ouvriers . ancienneté":
+        "contrat salarié . convention collective . batiment ouvriers employés . ancienneté":
           "'Au delà de la période d'essai et jusqu'à 3 mois'",
       },
     },
@@ -30,9 +28,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       ],
       expectedNotifications: [],
       situation: {
-        "contrat salarié . convention collective . batiment ouvriers employés . catégorie professionnelle":
-          "'Ouvriers'",
-        "contrat salarié . convention collective . batiment ouvriers employés . catégorie professionnelle Ouvriers . ancienneté":
+        "contrat salarié . convention collective . batiment ouvriers employés . ancienneté":
           "'Plus de 3 mois'",
       },
     },

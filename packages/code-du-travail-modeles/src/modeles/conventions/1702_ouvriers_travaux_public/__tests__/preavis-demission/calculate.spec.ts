@@ -14,9 +14,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       ],
       expectedNotifications: [],
       situation: {
-        "contrat salarié . convention collective . ouvriers travaux public . catégorie professionnelle":
-          "'Ouvriers'",
-        "contrat salarié . convention collective . ouvriers travaux public . catégorie professionnelle Ouvriers . ancienneté":
+        "contrat salarié . convention collective . ouvriers travaux public . ancienneté":
           "'Au delà de la période d'essai et jusqu'à 3 mois'",
       },
     },
@@ -30,9 +28,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       ],
       expectedNotifications: [],
       situation: {
-        "contrat salarié . convention collective . ouvriers travaux public . catégorie professionnelle":
-          "'Ouvriers'",
-        "contrat salarié . convention collective . ouvriers travaux public . catégorie professionnelle Ouvriers . ancienneté":
+        "contrat salarié . convention collective . ouvriers travaux public . ancienneté":
           "'Plus de 3 mois'",
       },
     },
@@ -46,7 +42,6 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     }) => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC1702'",
-
         ...situation,
       });
       expect(result).toResultBeEqual(
