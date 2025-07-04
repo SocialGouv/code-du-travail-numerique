@@ -5,6 +5,7 @@ import { Card } from "@codegouvfr/react-dsfr/Card";
 import { summarize } from "../../search/utils";
 
 type SearchCardProps = {
+  id?: string;
   title: string;
   description: string;
   category?: string;
@@ -14,6 +15,7 @@ type SearchCardProps = {
 };
 
 export const SearchCard: React.FC<SearchCardProps> = ({
+  id,
   title,
   description,
   category,
@@ -22,7 +24,7 @@ export const SearchCard: React.FC<SearchCardProps> = ({
   hiddenHeader = false,
 }) => {
   return (
-    <div className="fr-col-12 fr-col-md-6">
+    <div className={fr.cx("fr-col-12", "fr-col-md-6")}>
       <Card
         start={
           category ? (
@@ -36,6 +38,7 @@ export const SearchCard: React.FC<SearchCardProps> = ({
         size="medium"
         enlargeLink
         linkProps={{
+          id: id,
           href: link,
           onClick: onClick,
         }}

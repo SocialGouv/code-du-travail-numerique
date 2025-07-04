@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -59,7 +59,24 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
 
   const loadMoreResults = () => {
     emitNextPageEvent(query);
-    setVisibleItems((prev) => prev + SEARCH_VISIBLE_ITEMS);
+    const previousVisibleItems = visibleItems;
+    setVisibleItems((prev) =>
+      Math.min(documents.length, prev + SEARCH_VISIBLE_ITEMS)
+    );
+    setTimeout(() => {
+      const newItem =
+        documents.length > previousVisibleItems
+          ? documents[previousVisibleItems]
+          : undefined;
+      if (newItem) {
+        const newItemElement = document.getElementById(
+          `search-result-${newItem.cdtnId}`
+        );
+        if (newItemElement) {
+          newItemElement.focus();
+        }
+      }
+    }, 0);
   };
 
   return (
@@ -104,6 +121,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                 return (
                   <SearchCard
                     key={item.cdtnId}
+                    id={`search-result-${item.cdtnId}`}
                     title={item.title}
                     description={item.description || ""}
                     category={
