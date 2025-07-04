@@ -84,14 +84,14 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 'Cadres nonVRP'", () => {
+  describe("criteria.catégorie professionnelle = 'Cadres non-VRP'", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
           "infos.contrat salarié - convention collective - immobilier - catégorie professionnelle"
         ),
         {
-          target: { value: "'Cadres nonVRP'" },
+          target: { value: "'Cadres non-VRP'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -158,14 +158,14 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 'Négociateur non VRP'", () => {
+  describe("criteria.catégorie professionnelle = 'Négociateur non-VRP'", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
           "infos.contrat salarié - convention collective - immobilier - catégorie professionnelle"
         ),
         {
-          target: { value: "'Négociateur non VRP'" },
+          target: { value: "'Négociateur non-VRP'" },
         }
       );
       fireEvent.click(ui.next.get());

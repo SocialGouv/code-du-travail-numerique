@@ -47,7 +47,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . immobilier . catégorie professionnelle":
-          "'Cadres nonVRP'",
+          "'Cadres non-VRP'",
       },
     },
     {
@@ -93,7 +93,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . immobilier . catégorie professionnelle":
-          "'Négociateur non VRP'",
+          "'Négociateur non-VRP'",
         "contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur non VRP . ancienneté":
           "'Moins de 2 ans'",
       },
@@ -109,7 +109,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . immobilier . catégorie professionnelle":
-          "'Négociateur non VRP'",
+          "'Négociateur non-VRP'",
         "contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur non VRP . ancienneté":
           "'2 ans ou plus'",
       },
@@ -251,11 +251,11 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       );
     });
 
-    it("doit retourner une erreur si l'ancienneté n'est pas fournie pour Négociateur non VRP", () => {
+    it("doit retourner une erreur si l'ancienneté n'est pas fournie pour Négociateur non-VRP", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC1527'",
         "contrat salarié . convention collective . immobilier . catégorie professionnelle":
-          "'Négociateur non VRP'",
+          "'Négociateur non-VRP'",
       });
 
       expect(result).toNextMissingQuestionBeEqual(
@@ -287,11 +287,11 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       );
     });
 
-    it("ne doit pas retourner d'erreur pour Cadres nonVRP (pas d'ancienneté requise)", () => {
+    it("ne doit pas retourner d'erreur pour Cadres non-VRP (pas d'ancienneté requise)", () => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC1527'",
         "contrat salarié . convention collective . immobilier . catégorie professionnelle":
-          "'Cadres nonVRP'",
+          "'Cadres non-VRP'",
       });
 
       expect(result).toResultBeEqual(3, "mois");

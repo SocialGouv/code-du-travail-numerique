@@ -116,14 +116,14 @@ describe("PreavisDemissionSimulator", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 'Technicienagent de maîtrise'", () => {
+  describe("criteria.catégorie professionnelle = 'Technicien-agent de maîtrise'", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
           "infos.contrat salarié - convention collective - bad - catégorie professionnelle"
         ),
         {
-          target: { value: "'Technicienagent de maîtrise'" },
+          target: { value: "'Technicien-agent de maîtrise'" },
         }
       );
       fireEvent.click(ui.next.get());

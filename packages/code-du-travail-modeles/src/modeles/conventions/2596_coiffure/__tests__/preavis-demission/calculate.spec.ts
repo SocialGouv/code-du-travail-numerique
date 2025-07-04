@@ -43,7 +43,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . coiffure . catégorie professionnelle":
-          "'Salariés occupant un emploi de l'esthétiquecosmétique'",
+          "'Salariés occupant un emploi de l'esthétique-cosmétique'",
         "contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique . ancienneté":
           "'6 mois ou moins'",
       },
@@ -59,7 +59,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . coiffure . catégorie professionnelle":
-          "'Salariés occupant un emploi de l'esthétiquecosmétique'",
+          "'Salariés occupant un emploi de l'esthétique-cosmétique'",
         "contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique . ancienneté":
           "'Plus de 6 mois'",
       },
@@ -75,7 +75,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . coiffure . catégorie professionnelle":
-          "'Salariés occupant un emploi nontechnique de la coiffure'",
+          "'Salariés occupant un emploi non-technique de la coiffure'",
         "contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure . ancienneté":
           "'6 mois ou moins'",
       },
@@ -91,7 +91,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . coiffure . catégorie professionnelle":
-          "'Salariés occupant un emploi nontechnique de la coiffure'",
+          "'Salariés occupant un emploi non-technique de la coiffure'",
         "contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure . ancienneté":
           "'Plus de 6 mois'",
       },
