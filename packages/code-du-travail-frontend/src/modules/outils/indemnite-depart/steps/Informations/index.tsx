@@ -21,13 +21,13 @@ const InformationsStep = (): JSX.Element => {
             name={"infos." + info.question.name}
             rule={info.question.rule}
             value={info.info}
-            onChange={(v: any) =>
+            onChange={(v: any) => {
               onInformationsChange(
                 info.question.rule.nom,
                 v,
                 info.question.rule.cdtn?.type
-              )
-            }
+              );
+            }}
             error={
               errors.errorInformations[info.question.rule.nom] ?? undefined
             }

@@ -15,8 +15,6 @@ export const fetchGlossary = async (): Promise<GlossaryItem[]> => {
     }
   );
 
-  console.log("MMA - Result : ", result);
-
   if (!result) {
     throw new Error("Glossaire non trouvé");
   }

@@ -2,6 +2,7 @@ import type { Rule } from "publicodes";
 
 import {
   mergeIndemniteLicenciementModels,
+  mergePreavisDemissionModels,
   mergePreavisRetraiteModels,
   mergeRuptureConventionnelle,
 } from "../../internal/merger";
@@ -15,12 +16,14 @@ import type {
 declare global {
   const modelsIndemniteLicenciement: Record<string, any>;
   const modelsPreavisRetraite: Record<string, any>;
+  const modelsPreavisDemission: Record<string, any>;
   const modelsRuptureConventionnel: Record<string, any>;
   namespace jest {
     interface Matchers<R> {
       toContainTitre: () => R;
       toContainQuestion: () => R;
       toContainValidCdtnType: () => R;
+      toContainNotifications: (notification: string[]) => R;
       toHaveNextMissingRule: (rule: string | null) => R;
       toHaveNextMissingQuestion: (question: string | null) => R;
       toHaveReferencesBeEqual: (references: References[]) => R;
@@ -32,7 +35,7 @@ declare global {
         explanations?: string[] | null
       ) => R;
       toResultBeEqual: (
-        amount: number | null,
+        amount: string | number | null,
         unit: string | null | undefined
       ) => R;
       toAgreementResultBeEqual: (
@@ -217,6 +220,8 @@ expect.extend({
         pass: false,
       };
     }
+    const pass =
+      JSON.stringify(references) === JSON.stringify(result.references);
     return {
       message: () =>
         `Expected to receive ${references.length} references but received ${
@@ -226,7 +231,7 @@ Expected:
 ${JSON.stringify(references)}
 Received:
 ${JSON.stringify(result.references)}`,
-      pass: JSON.stringify(references) === JSON.stringify(result.references),
+      pass,
     };
   },
   toIneligibilityBeEqual(
@@ -384,7 +389,7 @@ ${JSON.stringify(result.references)}`,
   },
   toResultBeEqual(
     result: PublicodesOutput<any>,
-    amount: string | null,
+    amount: number | string | null,
     unit: string | null | undefined
   ) {
     if (result.type !== "result") {
@@ -399,7 +404,36 @@ ${JSON.stringify(result.references)}`,
         `Expected amount to be "${amount} ${unit}" but received "${result.result.value} ${result.result.unit?.numerators[0]}"`,
       pass:
         amount === result.result.value &&
-        unit === result.result.unit?.numerators[0],
+        (!unit || unit === result.result.unit?.numerators[0]),
+    };
+  },
+  toContainNotifications(
+    result: PublicodesOutput<any>,
+    notifications: string[]
+  ) {
+    if (result.type !== "result") {
+      return {
+        message: () => `Expected a result but received "${result.type}"`,
+        pass: false,
+      };
+    }
+    const pass =
+      !notifications.length ||
+      notifications.some((notification) =>
+        result.notifications.some(({ description }) => {
+          const replaceSpace = (text: string) =>
+            text.replace(/(?:\r\n|\r|\n|\\n\\n)/g, "");
+          return Array.isArray(description)
+            ? description.some(
+                (d) => replaceSpace(d) === replaceSpace(notification)
+              )
+            : description === notification;
+        })
+      );
+    return {
+      message: () =>
+        `Expected amount to be "${notifications.join()}" but not found"`,
+      pass,
     };
   },
 });
@@ -411,6 +445,7 @@ const replaceAll = (string: string, search: string, replace: string) => {
 (global as any).modelsIndemniteLicenciement =
   mergeIndemniteLicenciementModels();
 (global as any).modelsPreavisRetraite = mergePreavisRetraiteModels();
+(global as any).modelsPreavisDemission = mergePreavisDemissionModels();
 (global as any).modelsRuptureConventionnel = mergeRuptureConventionnelle();
 
 export default undefined;

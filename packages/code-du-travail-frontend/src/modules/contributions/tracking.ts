@@ -9,7 +9,7 @@ export enum TrackingContributionCategory {
 export enum TrackingAgreementSearchAction {
   CC_TREATED = "cc_select_traitée",
   CC_UNTREATED = "cc_select_non_traitée",
-  CC_BLOCK_USER = "user_blocked_info_cc",
+  CC_BLOCK_USER = "user_blocked_info_cc", // Event à émettre lorsqu'un utilisateur bloque l'affichage des informations de la CC et à mettre au niveau des simulateurs manuellement
   CLICK_DISPLAY_AGREEMENT_CONTENT = "click_afficher_les_informations_CC",
   CLICK_DISPLAY_GENERIC_CONTENT = "click_afficher_les_informations_sans_CC",
   CLICK_DISPLAY_GENERAL_CONTENT = "click_afficher_les_informations_générales",
