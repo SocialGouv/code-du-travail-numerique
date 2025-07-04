@@ -8,3 +8,4 @@ contrat salarié . convention collective . journalisme:
     indemnité-licenciement: false
     préavis-demission: true
     rupture-conventionnelle: false
+    indemnité-précarité: false

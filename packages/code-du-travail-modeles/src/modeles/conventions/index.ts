@@ -4,7 +4,6 @@ export * from "./176_industrie_pharmaceutique";
 export * from "./275_transport_aerien_personnel_au_sol";
 export * from "./292_plasturgie";
 export * from "./573_commerces_de_gros";
-export * from "./650_metallurgie_ingenieurs_cadres";
 export * from "./675_habillement_commerce_succursales";
 export * from "./1090_automobiles";
 export * from "./1404_sedima";

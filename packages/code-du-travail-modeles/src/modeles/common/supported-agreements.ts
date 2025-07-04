@@ -17,7 +17,6 @@ export enum SupportedCc {
   IDCC1486 = "1486",
   IDCC1527 = "1527",
   IDCC3239 = "3239",
-  IDCC650 = "650",
   IDCC2216 = "2216",
   IDCC0016 = "16",
   IDCC0573 = "573",

@@ -9,6 +9,7 @@ contrat salarié . convention collective . sociétés d'assurances:
     préavis-demission: true
     rupture-conventionnelle: true
 
+    indemnité-précarité: true
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle:
   titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?

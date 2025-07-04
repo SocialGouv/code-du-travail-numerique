@@ -15,7 +15,6 @@ import {
   DismissalProcess,
   DureePreavisLicenciement,
   HeuresRechercheEmploi,
-  SimulateurIndemnitePrecarite,
   CalculateurIndemniteLicenciement,
 } from "../../src/outils";
 import {
@@ -27,7 +26,6 @@ import { ElasticTool } from "@socialgouv/cdtn-types";
 
 const toolsBySlug = {
   "heures-recherche-emploi": HeuresRechercheEmploi,
-  "indemnite-precarite": SimulateurIndemnitePrecarite,
   "preavis-licenciement": DureePreavisLicenciement,
   "procedure-licenciement": DismissalProcess,
   "indemnite-licenciement": CalculateurIndemniteLicenciement,

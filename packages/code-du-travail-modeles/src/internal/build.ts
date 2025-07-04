@@ -8,6 +8,7 @@ import { extractSupportedCc } from "./extractSupportedCc";
 import {
   mergeCommonModels,
   mergeIndemniteLicenciementModels,
+  mergeIndemnitePrecariteModels,
   mergePreavisDemissionModels,
   mergePreavisRetraiteModels,
   mergeRuptureConventionnelle,
@@ -78,4 +79,8 @@ writeJsonModel({
 writeJsonModel({
   merger: mergePreavisDemissionModels,
   outputName: "modeles-preavis-demission",
+});
+writeJsonModel({
+  merger: mergeIndemnitePrecariteModels,
+  outputName: "modeles-indemnite-precarite",
 });

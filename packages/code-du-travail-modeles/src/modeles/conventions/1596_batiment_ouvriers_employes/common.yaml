@@ -8,3 +8,4 @@ contrat salarié . convention collective . batiment ouvriers employés:
     indemnité-licenciement: true
     préavis-demission: true
     rupture-conventionnelle: true
+    indemnité-précarité: true
