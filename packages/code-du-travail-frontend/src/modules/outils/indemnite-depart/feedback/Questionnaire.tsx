@@ -25,40 +25,41 @@ export const Questionnaire = ({
   const { trackFeedback } = useFeedbackEvents();
 
   return (
-    <div>
-      <h3 className={fr.cx("fr-text--lg", "fr-mb-2w", "fr-text--bold")}>
-        Comment s&apos;est passée cette simulation pour vous ?
-      </h3>
-      <SmileyQuestionnaireItem
-        badEventValue={FEEDBACK_RESULT.NOT_GOOD}
-        averageEventValue={FEEDBACK_RESULT.AVERAGE}
-        goodEventValue={FEEDBACK_RESULT.GOOD}
-        badText="Pas bien"
-        onChange={(status: FEEDBACK_RESULT) => {
-          setStatus(status);
-          setDisplayError(false);
-        }}
-        displayError={displayError}
-      />
+    <form
+      onSubmit={(e) => {
+        if (!status) {
+          setDisplayError(true);
+          e.preventDefault();
+        } else {
+          trackFeedback(EVENT_ACTION.GLOBAL, status, category);
+          onClick();
+        }
+      }}
+    >
+      <fieldset>
+        <legend>
+          <h3 className={fr.cx("fr-text--lg", "fr-mb-2w", "fr-text--bold")}>
+            Comment s&apos;est passée cette simulation pour vous ?
+          </h3>
+        </legend>
+        <SmileyQuestionnaireItem
+          badEventValue={FEEDBACK_RESULT.NOT_GOOD}
+          averageEventValue={FEEDBACK_RESULT.AVERAGE}
+          goodEventValue={FEEDBACK_RESULT.GOOD}
+          onChange={(status: FEEDBACK_RESULT) => {
+            setStatus(status);
+            setDisplayError(false);
+          }}
+          displayError={displayError}
+        />
+      </fieldset>
       <div
         className={fr.cx("fr-btns-group", "fr-btns-group--inline", "fr-mt-2w")}
       >
-        <Button
-          priority="secondary"
-          onClick={(e) => {
-            if (!status) {
-              setDisplayError(true);
-            } else {
-              trackFeedback(EVENT_ACTION.GLOBAL, status, category);
-              e.preventDefault();
-              onClick();
-            }
-          }}
-          type="button"
-        >
+        <Button priority="secondary" type="submit">
           Envoyer
         </Button>
       </div>
-    </div>
+    </form>
   );
 };
