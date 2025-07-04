@@ -536,7 +536,7 @@ exports[`<Hierarchy /> renders correctly 1`] = `
                   class="fr-grid-row fr-grid-row--gutters"
                 >
                   <div
-                    class="fr-col-12 fr-col-md-6"
+                    class="fr-col-12"
                   >
                     <ul>
                       <li>
@@ -563,12 +563,6 @@ exports[`<Hierarchy /> renders correctly 1`] = `
                       <li>
                         CDD et contrats de travail temporaire (durée totale, renouvellement, délai de carence et délai de transmission des contrats)
                       </li>
-                    </ul>
-                  </div>
-                  <div
-                    class="fr-col-12 fr-col-md-6"
-                  >
-                    <ul>
                       <li>
                         CDI de chantier
                       </li>
@@ -650,7 +644,7 @@ exports[`<Hierarchy /> renders correctly 1`] = `
                   class="fr-grid-row fr-grid-row--gutters"
                 >
                   <div
-                    class="fr-col-12 fr-col-md-6"
+                    class="fr-col-12"
                   >
                     <ul>
                       <li>
@@ -659,12 +653,6 @@ exports[`<Hierarchy /> renders correctly 1`] = `
                       <li>
                         L'insertion professionnelle et le maintien dans l'emploi des travailleurs handicapés
                       </li>
-                    </ul>
-                  </div>
-                  <div
-                    class="fr-col-12 fr-col-md-6"
-                  >
-                    <ul>
                       <li>
                         Seuil de désignation, nombre et valorisation des parcours syndicaux des délégués syndicaux
                       </li>
