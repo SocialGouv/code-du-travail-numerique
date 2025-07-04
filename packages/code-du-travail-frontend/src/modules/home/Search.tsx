@@ -1,5 +1,3 @@
-"use client";
-
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import Image from "next/image";
@@ -31,13 +29,16 @@ export const Search = () => {
             </h2>
             <HomeSearch />
           </div>
-          <div className={`${fr.cx("fr-col-md-5", "fr-col-12")}`}>
+          <div className={fr.cx("fr-col-md-5", "fr-col-12")}>
             <Image
-              priority={false}
               src={IllustrationHomePrincipal}
               alt=""
-              width="577"
-              height="393"
+              priority
+              fill={false}
+              width={486}
+              height={331}
+              sizes="(max-width: 768px) 378px, 486px"
+              style={{ width: "100%", height: "auto" }}
             />
           </div>
         </div>

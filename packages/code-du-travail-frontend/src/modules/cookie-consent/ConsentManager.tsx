@@ -1,23 +1,45 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import { initConsent } from "../../lib/consent";
-import { CookieConsentDSFR } from "./CookieConsent";
 
-/**
- * ConsentManager - Gère l'initialisation et l'affichage du consentement des cookies
- *
- * Ce composant:
- * 1. Initialise le système de consentement au chargement de la page
- * 2. Affiche la bannière de consentement des cookies
- */
+const CookieConsentDSFR = lazy(
+  () =>
+    new Promise<{
+      default: typeof import("./CookieConsent").CookieConsentDSFR;
+    }>((resolve) =>
+      setTimeout(
+        () =>
+          import("./CookieConsent").then((module) =>
+            resolve({ default: module.CookieConsentDSFR })
+          ),
+        1000
+      )
+    )
+);
+
 export const ConsentManager = () => {
-  // Initialiser le consentement au chargement de la page
+  const [shouldRender, setShouldRender] = useState(false);
+
   useEffect(() => {
     initConsent();
+
+    const timer = setTimeout(() => {
+      setShouldRender(true);
+    }, 1500);
+
+    return () => clearTimeout(timer);
   }, []);
 
-  return <CookieConsentDSFR />;
+  if (!shouldRender) {
+    return null;
+  }
+
+  return (
+    <Suspense fallback={null}>
+      <CookieConsentDSFR />
+    </Suspense>
+  );
 };
 
 export default ConsentManager;
