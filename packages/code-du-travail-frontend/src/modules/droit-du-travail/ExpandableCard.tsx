@@ -92,7 +92,6 @@ export default ExpandableCard;
 const cardContainer = (backgroundColor?: string, showBottomTab?: boolean) =>
   css({
     background: backgroundColor || "var(--background-alt-blue-cumulus)",
-    overflow: showBottomTab ? "visible" : "hidden",
     height: "fit-content",
     transition: "all 0.3s ease",
     position: "relative",

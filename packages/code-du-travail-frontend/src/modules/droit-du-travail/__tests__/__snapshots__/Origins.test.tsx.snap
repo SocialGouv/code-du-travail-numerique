@@ -27,7 +27,7 @@ exports[`<Origins /> renders correctly 1`] = `
           class="fr-col-12 fr-col-md-6"
         >
           <div
-            class="bg_var(--background-default-grey) ov_hidden h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            class="bg_var(--background-default-grey) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-les-textes-internationaux"
@@ -86,7 +86,7 @@ exports[`<Origins /> renders correctly 1`] = `
           class="fr-col-12 fr-col-md-6"
         >
           <div
-            class="bg_var(--background-default-grey) ov_hidden h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            class="bg_var(--background-default-grey) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-les-textes-européens"
@@ -145,7 +145,7 @@ exports[`<Origins /> renders correctly 1`] = `
           class="fr-col-12 fr-col-md-6"
         >
           <div
-            class="bg_var(--background-default-grey) ov_hidden h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            class="bg_var(--background-default-grey) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-la-constitution-française"
@@ -204,7 +204,7 @@ exports[`<Origins /> renders correctly 1`] = `
           class="fr-col-12 fr-col-md-6"
         >
           <div
-            class="bg_var(--background-default-grey) ov_hidden h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            class="bg_var(--background-default-grey) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-lois,-ordonnances,-décrets-et-arrêtés"
@@ -263,7 +263,7 @@ exports[`<Origins /> renders correctly 1`] = `
           class="fr-col-12 fr-col-md-6"
         >
           <div
-            class="bg_var(--background-default-grey) ov_hidden h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            class="bg_var(--background-default-grey) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-les-conventions-et-accords-collectifs"
@@ -322,7 +322,7 @@ exports[`<Origins /> renders correctly 1`] = `
           class="fr-col-12 fr-col-md-6"
         >
           <div
-            class="bg_var(--background-default-grey) ov_hidden h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            class="bg_var(--background-default-grey) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-les-usages-et-les-engagements-unilatéraux"
@@ -381,7 +381,7 @@ exports[`<Origins /> renders correctly 1`] = `
           class="fr-col-12 fr-col-md-6"
         >
           <div
-            class="bg_var(--background-default-grey) ov_hidden h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            class="bg_var(--background-default-grey) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-le-règlement-intérieur-de-l'entreprise"
@@ -440,7 +440,7 @@ exports[`<Origins /> renders correctly 1`] = `
           class="fr-col-12 fr-col-md-6"
         >
           <div
-            class="bg_var(--background-default-grey) ov_hidden h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            class="bg_var(--background-default-grey) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-le-contrat-de-travail"
