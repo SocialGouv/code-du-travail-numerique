@@ -29,8 +29,3 @@ export type HeuresRechercheEmploi = {
   questions: Question[];
   situations: SituationHeuresRechercheEmploi[];
 };
-
-export type PreavisLicenciement = {
-  questions: Question[];
-  situations: Situation[];
-};

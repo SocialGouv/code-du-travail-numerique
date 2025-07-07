@@ -6,3 +6,4 @@ export { default as SingletonPublicodesHelper } from "./SingletonPublicodesHelpe
 export * from "./types";
 export { PreavisDemissionPublicodes } from "./PreavisDemissionPublicodes";
 export { IndemnitePrecaritePublicodes } from "./IndemnitePrecarite";
+export { PreavisLicenciementPublicodes } from "./PreavisLicenciementPublicodes";

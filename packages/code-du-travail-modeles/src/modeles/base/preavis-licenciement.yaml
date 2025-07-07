@@ -1,0 +1,23 @@
+contrat salarié . travailleur handicapé: non
+
+contrat salarié . convention collective . ancienneté légal:
+  titre: ancienneté
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Moins de 6 mois: "'Moins de 6 mois'"
+      6 mois à moins de 2 ans: "'6 mois à moins de 2 ans'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+
+contrat salarié . résultat légal:
+  variations:
+    - si: contrat salarié . convention collective . ancienneté légal = 'Plus de 2 ans'
+      alors: 2 mois
+    - si: contrat salarié . convention collective . ancienneté légal = '6 mois à moins de 2 ans'
+      alors: 1 mois
+    - sinon: 0 mois
+
+contrat salarié . convention collective . résultat conventionnel:
+  valeur: 0 mois
+  unité: mois

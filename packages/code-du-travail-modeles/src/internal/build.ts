@@ -12,6 +12,7 @@ import {
   mergePreavisDemissionModels,
   mergePreavisRetraiteModels,
   mergeRuptureConventionnelle,
+  mergePreavisLicenciementModels,
 } from "./merger";
 
 const inDir = path.resolve(__dirname, "../../bin");
@@ -83,4 +84,8 @@ writeJsonModel({
 writeJsonModel({
   merger: mergeIndemnitePrecariteModels,
   outputName: "modeles-indemnite-precarite",
+});
+writeJsonModel({
+  merger: mergePreavisLicenciementModels,
+  outputName: "modeles-preavis-licenciement",
 });
