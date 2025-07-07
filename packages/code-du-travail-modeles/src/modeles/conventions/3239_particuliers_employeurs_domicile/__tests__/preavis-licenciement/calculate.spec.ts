@@ -41,7 +41,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 8, unit: "jours" },
+      expectedResult: { expectedValue: 8, unit: "jours calendaires" },
       expectedReferences: [
         {
           article: "Art. L. 423-25 du Code de l'action sociale et des familles",
@@ -63,7 +63,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 15, unit: "jours" },
+      expectedResult: { expectedValue: 15, unit: "jours calendaires" },
       expectedReferences: [
         {
           article: "Art. L. 423-25 du Code de l'action sociale et des familles",

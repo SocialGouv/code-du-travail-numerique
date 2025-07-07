@@ -8,7 +8,7 @@ const engine = new PreavisLicenciementPublicodes(
 describe("Test de la fonctionnalité 'calculate'", () => {
   test.each([
     {
-      expectedResult: { expectedValue: 1, unit: "mois" },
+      expectedResult: { expectedValue: 1, unit: "mois et demi" },
       expectedReferences: [
         {
           article: "Annexe : Statut du personnel d'encadrement, article 6",

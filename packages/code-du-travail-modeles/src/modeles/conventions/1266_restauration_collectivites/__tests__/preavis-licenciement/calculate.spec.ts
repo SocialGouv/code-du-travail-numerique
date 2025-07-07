@@ -8,14 +8,17 @@ const engine = new PreavisLicenciementPublicodes(
 describe("Test de la fonctionnalité 'calculate'", () => {
   test.each([
     {
-      expectedResult: { expectedValue: 3, unit: "mois" },
+      expectedResult: {
+        expectedValue: 3,
+        unit: "mois sauf stipulation contractuelle différente",
+      },
       expectedReferences: [
         {
           article: "Article 13",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7BE04E56DD26A6F4EA5E4E0CEB153D12.tplgfr24s_3?idArticle=KALIARTI000018649420&cidTexte=KALITEXT000005640427&dateTexte=29990101&categorieLien=id",
         },
       ],
-      expectedNotifications: ["sauf stipulation contractuelle différente"],
+      expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . restauration collectivités . catégorie professionnelle":
           "'Cadres'",

@@ -12,7 +12,7 @@ contrat salarié . convention collective . restauration collectivités . catégo
   applicable si: catégorie professionnelle = 'Cadres'
 
 contrat salarié . convention collective . restauration collectivités . catégorie professionnelle Cadres . résultat conventionnel:
-  valeur: 3 mois (sauf stipulation contractuelle différente)
+  valeur: 3 mois sauf stipulation contractuelle différente
   type: notification
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
