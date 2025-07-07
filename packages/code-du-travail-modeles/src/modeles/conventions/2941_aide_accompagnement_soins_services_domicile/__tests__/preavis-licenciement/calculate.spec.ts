@@ -11,7 +11,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 1, unit: "semaine" },
       expectedReferences: [
         {
-          article: "Titre IV, Article 26.1",
+          article: "Titre IV, article 26.1",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525",
         },
       ],
@@ -27,7 +27,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 1, unit: "mois" },
       expectedReferences: [
         {
-          article: "Titre IV, Article 26.1",
+          article: "Titre IV, article 26.1",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525",
         },
       ],
@@ -43,7 +43,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 2, unit: "mois" },
       expectedReferences: [
         {
-          article: "Titre IV, Article 26.1",
+          article: "Titre IV, article 26.1",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525",
         },
       ],
@@ -59,14 +59,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 1, unit: "mois" },
       expectedReferences: [
         {
-          article: "Titre IV, Article 26.1",
+          article: "Titre IV, article 26.1",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525",
         },
       ],
       expectedNotifications: ["de date à date"],
       situation: {
         "contrat salarié . convention collective . bad . catégorie professionnelle":
-          "'Technicienagent de maîtrise'",
+          "'Technicien-agent de maîtrise'",
         "contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté":
           "'Moins de 2 ans'",
       },
@@ -75,14 +75,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 2, unit: "mois" },
       expectedReferences: [
         {
-          article: "Titre IV, Article 26.1",
+          article: "Titre IV, article 26.1",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525",
         },
       ],
       expectedNotifications: ["de date à date"],
       situation: {
         "contrat salarié . convention collective . bad . catégorie professionnelle":
-          "'Technicienagent de maîtrise'",
+          "'Technicien-agent de maîtrise'",
         "contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté":
           "'Plus de 2 ans'",
       },
@@ -91,7 +91,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 2, unit: "mois" },
       expectedReferences: [
         {
-          article: "Titre IV, Article 26.1",
+          article: "Titre IV, article 26.1",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525",
         },
       ],
@@ -107,7 +107,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 4, unit: "mois" },
       expectedReferences: [
         {
-          article: "Titre IV, Article 26.1",
+          article: "Titre IV, article 26.1",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525",
         },
       ],

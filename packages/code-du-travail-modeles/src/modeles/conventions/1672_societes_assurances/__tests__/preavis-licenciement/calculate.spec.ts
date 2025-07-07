@@ -69,7 +69,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe":
           "'1'",
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 1 . ancienneté":
@@ -87,7 +87,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe":
           "'1'",
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 1 . ancienneté":
@@ -105,7 +105,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe":
           "'2'",
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 2 . ancienneté":
@@ -123,7 +123,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe":
           "'2'",
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 2 . ancienneté":
@@ -141,7 +141,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe":
           "'3'",
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 3 . ancienneté":
@@ -159,7 +159,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe":
           "'3'",
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 3 . ancienneté":
@@ -177,7 +177,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe":
           "'4'",
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 4 . ancienneté":
@@ -195,7 +195,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe":
           "'4'",
         "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 4 . ancienneté":

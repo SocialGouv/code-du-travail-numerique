@@ -15,7 +15,7 @@ contrat salarié . convention collective . habillement commerce succursales . ca
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "article 9 de l'avenant « Maîtrise »": https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005752473&cidTexte=KALITEXT000005679768&idConvention=KALICONT000005635617&dateTexte=29990101
+    "Article 9 de l'avenant « Maîtrise »": https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005752473&cidTexte=KALITEXT000005679768&idConvention=KALICONT000005635617&dateTexte=29990101
 
 contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'

@@ -47,7 +47,7 @@ describe("PreavisDemissionSimulator", () => {
       expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
       expect(
-        screen.queryAllByText(/article 5 de l'annexe II/)[0]
+        screen.queryAllByText(/Article 5 de l'annexe II/)[0]
       ).toBeInTheDocument();
     });
   });
@@ -69,7 +69,7 @@ describe("PreavisDemissionSimulator", () => {
       expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
 
       expect(
-        screen.queryAllByText(/article 7 de l'annexe III/)[0]
+        screen.queryAllByText(/Article 7 de l'annexe III/)[0]
       ).toBeInTheDocument();
     });
   });
@@ -91,7 +91,7 @@ describe("PreavisDemissionSimulator", () => {
       expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
 
       expect(
-        screen.queryAllByText(/article 3 de l'annexe I/)[0]
+        screen.queryAllByText(/Article 3 de l'annexe I/)[0]
       ).toBeInTheDocument();
     });
   });

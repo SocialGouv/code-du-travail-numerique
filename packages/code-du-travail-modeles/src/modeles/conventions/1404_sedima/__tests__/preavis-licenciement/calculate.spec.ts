@@ -11,7 +11,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 3, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 6-50",
+          article: "Article 6-50",
           url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idSectionTA=KALISCTA000026355935&cidTexte=KALITEXT000026355879&idConvention=KALICONT000005635653&dateTexte=29990101",
         },
       ],
@@ -27,7 +27,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 1, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 3-41-0",
+          article: "Article 3-41-0",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -45,7 +45,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 2, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 3-41-0",
+          article: "Article 3-41-0",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -63,7 +63,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 1, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 3-41-0",
+          article: "Article 3-41-0",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -81,7 +81,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 2, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 3-41-0",
+          article: "Article 3-41-0",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -99,7 +99,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 2, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 3-41-0",
+          article: "Article 3-41-0",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -115,7 +115,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 3, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 3-41-0",
+          article: "Article 3-41-0",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -131,7 +131,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 3, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 3-41-0",
+          article: "Article 3-41-0",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -147,7 +147,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 3, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 3-41-0",
+          article: "Article 3-41-0",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id",
         },
       ],

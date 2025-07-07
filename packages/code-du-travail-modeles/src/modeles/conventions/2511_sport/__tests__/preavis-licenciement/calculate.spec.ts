@@ -11,7 +11,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 3, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 4.4.3.2 de la convention collective",
+          article: "Article 4.4.3.2 de la convention collective",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657",
         },
       ],
@@ -25,14 +25,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 1, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 4.4.3.2 de la convention collective",
+          article: "Article 4.4.3.2 de la convention collective",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657",
         },
       ],
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . sport . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
         "contrat salarié . convention collective . sport . catégorie professionnelle Noncadres . ancienneté":
           "'Moins de 2 ans'",
       },
@@ -41,14 +41,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 2, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 4.4.3.2 de la convention collective",
+          article: "Article 4.4.3.2 de la convention collective",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657",
         },
       ],
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . sport . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
         "contrat salarié . convention collective . sport . catégorie professionnelle Noncadres . ancienneté":
           "'Plus de 2 ans'",
       },

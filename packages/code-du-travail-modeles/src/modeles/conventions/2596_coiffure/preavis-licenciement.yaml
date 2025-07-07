@@ -6,8 +6,8 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
     valeurs:
       Agents de maîtrise: "'Agents de maîtrise'"
       Cadres: "'Cadres'"
-      Salariés occupant un emploi de l'esthétiquecosmétique: "'Salariés occupant un emploi de l'esthétiquecosmétique'"
-      Salariés occupant un emploi nontechnique de la coiffure: "'Salariés occupant un emploi nontechnique de la coiffure'"
+      Salariés occupant un emploi de l'esthétique-cosmétique: "'Salariés occupant un emploi de l'esthétique-cosmétique'"
+      Salariés occupant un emploi non-technique de la coiffure: "'Salariés occupant un emploi non-technique de la coiffure'"
       Salariés occupant un emploi technique de la coiffure: "'Salariés occupant un emploi technique de la coiffure'"
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Agents de maîtrise:
@@ -17,7 +17,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+    "Article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
@@ -26,10 +26,10 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+    "Article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique:
-  applicable si: catégorie professionnelle = 'Salariés occupant un emploi de l'esthétiquecosmétique'
+  applicable si: catégorie professionnelle = 'Salariés occupant un emploi de l'esthétique-cosmétique'
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique . ancienneté:
   titre: ancienneté
@@ -48,7 +48,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
   valeur: 1 semaine
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+    "Article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique . ancienneté 6 mois à 2 ans:
   applicable si: ancienneté = '6 mois à 2 ans'
@@ -57,7 +57,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+    "Article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
@@ -66,10 +66,10 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+    "Article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure:
-  applicable si: catégorie professionnelle = 'Salariés occupant un emploi nontechnique de la coiffure'
+  applicable si: catégorie professionnelle = 'Salariés occupant un emploi non-technique de la coiffure'
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure . ancienneté:
   titre: ancienneté
@@ -88,7 +88,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
   valeur: 1 semaine
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+    "Article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure . ancienneté 6 mois à 2 ans:
   applicable si: ancienneté = '6 mois à 2 ans'
@@ -97,7 +97,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+    "Article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
@@ -106,7 +106,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+    "Article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi technique de la coiffure:
   applicable si: catégorie professionnelle = 'Salariés occupant un emploi technique de la coiffure'
@@ -128,7 +128,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
   valeur: 1 semaine
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+    "Article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi technique de la coiffure . ancienneté 6 mois à 2 ans:
   applicable si: ancienneté = '6 mois à 2 ans'
@@ -137,7 +137,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+    "Article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi technique de la coiffure . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
@@ -146,4 +146,4 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760
+    "Article 7.4.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760

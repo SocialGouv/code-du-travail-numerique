@@ -11,7 +11,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 1, unit: "mois" },
       expectedReferences: [
         {
-          article: 'annexe "agents de maîtrise" article 9',
+          article: 'Annexe "agents de maîtrise" Article 9',
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8FADC689945C3C0383FA1D95820D6E17.tplgfr44s_1?idArticle=KALIARTI000005870772&cidTexte=KALITEXT000005687528&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -27,7 +27,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 2, unit: "mois" },
       expectedReferences: [
         {
-          article: 'annexe "agents de maîtrise" article 9',
+          article: 'Annexe "agents de maîtrise" Article 9',
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8FADC689945C3C0383FA1D95820D6E17.tplgfr44s_1?idArticle=KALIARTI000005870772&cidTexte=KALITEXT000005687528&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -43,7 +43,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 1, unit: "mois" },
       expectedReferences: [
         {
-          article: 'annexe "cadres" article 9',
+          article: 'Annexe "cadres" Article 9',
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8FADC689945C3C0383FA1D95820D6E17.tplgfr44s_1?idArticle=KALIARTI000005870787&cidTexte=KALITEXT000005687530&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -59,7 +59,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 3, unit: "mois" },
       expectedReferences: [
         {
-          article: 'annexe "cadres" article 9',
+          article: 'Annexe "cadres" Article 9',
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8FADC689945C3C0383FA1D95820D6E17.tplgfr44s_1?idArticle=KALIARTI000005870787&cidTexte=KALITEXT000005687530&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -75,7 +75,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 0 },
       expectedReferences: [
         {
-          article: "article 9.2.1",
+          article: "Article 9.2.1",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005870734&cidTexte=KALITEXT000005687520",
         },
       ],
@@ -91,7 +91,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 15, unit: "jours" },
       expectedReferences: [
         {
-          article: "article 9.2.1",
+          article: "Article 9.2.1",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005870734&cidTexte=KALITEXT000005687520",
         },
       ],
@@ -107,7 +107,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 1, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 9.2.1",
+          article: "Article 9.2.1",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005870734&cidTexte=KALITEXT000005687520",
         },
       ],
@@ -123,7 +123,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 2, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 9.2.1",
+          article: "Article 9.2.1",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005870734&cidTexte=KALITEXT000005687520",
         },
       ],

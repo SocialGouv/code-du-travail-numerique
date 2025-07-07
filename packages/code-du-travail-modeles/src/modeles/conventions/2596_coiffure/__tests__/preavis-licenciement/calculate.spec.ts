@@ -11,7 +11,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 3, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 7.4.1",
+          article: "Article 7.4.1",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760",
         },
       ],
@@ -25,7 +25,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 3, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 7.4.1",
+          article: "Article 7.4.1",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760",
         },
       ],
@@ -39,14 +39,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 1, unit: "semaine" },
       expectedReferences: [
         {
-          article: "article 7.4.1",
+          article: "Article 7.4.1",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760",
         },
       ],
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . coiffure . catégorie professionnelle":
-          "'Salariés occupant un emploi de l'esthétiquecosmétique'",
+          "'Salariés occupant un emploi de l'esthétique-cosmétique'",
         "contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique . ancienneté":
           "'6 mois ou moins'",
       },
@@ -55,14 +55,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 1, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 7.4.1",
+          article: "Article 7.4.1",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760",
         },
       ],
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . coiffure . catégorie professionnelle":
-          "'Salariés occupant un emploi de l'esthétiquecosmétique'",
+          "'Salariés occupant un emploi de l'esthétique-cosmétique'",
         "contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique . ancienneté":
           "'6 mois à 2 ans'",
       },
@@ -71,14 +71,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 2, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 7.4.1",
+          article: "Article 7.4.1",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760",
         },
       ],
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . coiffure . catégorie professionnelle":
-          "'Salariés occupant un emploi de l'esthétiquecosmétique'",
+          "'Salariés occupant un emploi de l'esthétique-cosmétique'",
         "contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique . ancienneté":
           "'Plus de 2 ans'",
       },
@@ -87,14 +87,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 1, unit: "semaine" },
       expectedReferences: [
         {
-          article: "article 7.4.1",
+          article: "Article 7.4.1",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760",
         },
       ],
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . coiffure . catégorie professionnelle":
-          "'Salariés occupant un emploi nontechnique de la coiffure'",
+          "'Salariés occupant un emploi non-technique de la coiffure'",
         "contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure . ancienneté":
           "'6 mois ou moins'",
       },
@@ -103,14 +103,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 1, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 7.4.1",
+          article: "Article 7.4.1",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760",
         },
       ],
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . coiffure . catégorie professionnelle":
-          "'Salariés occupant un emploi nontechnique de la coiffure'",
+          "'Salariés occupant un emploi non-technique de la coiffure'",
         "contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure . ancienneté":
           "'6 mois à 2 ans'",
       },
@@ -119,14 +119,14 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 2, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 7.4.1",
+          article: "Article 7.4.1",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760",
         },
       ],
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . coiffure . catégorie professionnelle":
-          "'Salariés occupant un emploi nontechnique de la coiffure'",
+          "'Salariés occupant un emploi non-technique de la coiffure'",
         "contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure . ancienneté":
           "'Plus de 2 ans'",
       },
@@ -135,7 +135,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 1, unit: "semaine" },
       expectedReferences: [
         {
-          article: "article 7.4.1",
+          article: "Article 7.4.1",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760",
         },
       ],
@@ -151,7 +151,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 1, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 7.4.1",
+          article: "Article 7.4.1",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760",
         },
       ],
@@ -167,7 +167,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 2, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 7.4.1",
+          article: "Article 7.4.1",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760",
         },
       ],

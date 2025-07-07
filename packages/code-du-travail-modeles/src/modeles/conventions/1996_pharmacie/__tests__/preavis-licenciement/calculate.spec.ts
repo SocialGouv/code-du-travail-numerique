@@ -11,7 +11,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 3, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 6 des dispositions particulières aux cadres",
+          article: "Article 6 des dispositions particulières aux cadres",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1FBE77FACF3A20C70C10CCE69F359D7B.tplgfr23s_1?idArticle=KALIARTI000005829442&cidTexte=KALITEXT000005671154&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -32,7 +32,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . pharmacie . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
         "contrat salarié . convention collective . pharmacie . catégorie professionnelle Noncadres . ancienneté":
           "'Moins de 2 ans'",
       },
@@ -48,7 +48,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . pharmacie . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
         "contrat salarié . convention collective . pharmacie . catégorie professionnelle Noncadres . ancienneté":
           "'2 ans ou plus'",
       },

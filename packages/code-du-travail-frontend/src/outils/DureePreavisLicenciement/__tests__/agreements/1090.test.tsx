@@ -125,7 +125,7 @@ describe("DureePreavisLicenciement", () => {
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
 
-          expect(screen.queryAllByText(/article 2.12/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Article 2.12/)[0]).toBeInTheDocument();
         });
       });
 
@@ -140,7 +140,7 @@ describe("DureePreavisLicenciement", () => {
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
 
-          expect(screen.queryAllByText(/article 2.12/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Article 2.12/)[0]).toBeInTheDocument();
         });
       });
 
@@ -155,7 +155,7 @@ describe("DureePreavisLicenciement", () => {
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
-          expect(screen.queryAllByText(/article 2.12/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Article 2.12/)[0]).toBeInTheDocument();
         });
       });
     });
@@ -179,7 +179,7 @@ describe("DureePreavisLicenciement", () => {
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
 
-          expect(screen.queryAllByText(/article 2.12/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Article 2.12/)[0]).toBeInTheDocument();
         });
       });
 
@@ -194,7 +194,7 @@ describe("DureePreavisLicenciement", () => {
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
-          expect(screen.queryAllByText(/article 2.12/)[0]).toBeInTheDocument();
+          expect(screen.queryAllByText(/Article 2.12/)[0]).toBeInTheDocument();
         });
       });
     });

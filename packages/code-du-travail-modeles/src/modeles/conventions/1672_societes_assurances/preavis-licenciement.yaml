@@ -5,7 +5,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
     type: liste
     valeurs:
       Cadres: "'Cadres'"
-      Noncadres: "'Noncadres'"
+      Non-cadres: "'Non-cadres'"
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
@@ -48,7 +48,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
     'Accord relative aux dispositions particulières " Cadres ", article II. 6': https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3586CF13469976784B743EB6B765BDF5.tplgfr44s_1?idArticle=KALIARTI000026688804&cidTexte=KALITEXT000005654666&dateTexte=29990101&categorieLien=id
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres:
-  applicable si: catégorie professionnelle = 'Noncadres'
+  applicable si: catégorie professionnelle = 'Non-cadres'
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe:
   titre: classe

@@ -332,7 +332,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Avenant n°3 article 4/)[0]
+          screen.queryAllByText(/Avenant n°3 Article 4/)[0]
         ).toBeInTheDocument();
       });
     });

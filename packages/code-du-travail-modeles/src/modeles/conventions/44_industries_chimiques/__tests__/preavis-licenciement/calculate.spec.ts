@@ -221,7 +221,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 3, unit: "mois" },
       expectedReferences: [
         {
-          article: "Avenant n°3 article 4",
+          article: "Avenant n°3 Article 4",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846301&cidTexte=KALITEXT000005677770&dateTexte=20190829",
         },
       ],

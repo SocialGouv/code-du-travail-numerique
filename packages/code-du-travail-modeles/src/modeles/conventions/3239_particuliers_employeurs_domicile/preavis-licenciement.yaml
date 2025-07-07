@@ -61,7 +61,7 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
   applicable si: ancienneté = 'Enfant accueilli depuis moins de 3 mois'
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle Assistants maternels du particulier employeur . ancienneté Enfant accueilli depuis moins de 3 mois . résultat conventionnel:
-  valeur: 8 jours
+  valeur: 8 jours calendaires
   type: notification
   description: Si la lettre de licenciement a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2021 c’est la convention collective “Assistants maternels du particulier employeur (IDCC 2395)” qui s’appliquait. Celle-ci a fusionné avec la convention collective "Salariés du particulier employeur (IDCC 2111)" pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable depuis le 01/01/2022.
   remplace: contrat salarié . convention collective . résultat conventionnel
@@ -73,7 +73,7 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
   applicable si: ancienneté = 'Enfant accueilli de 3 mois à moins d'un an'
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle Assistants maternels du particulier employeur . ancienneté Enfant accueilli de 3 mois à moins d'un an . résultat conventionnel:
-  valeur: 15 jours
+  valeur: 15 jours calendaires
   type: notification
   description: Si la lettre de licenciement a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2021 c’est la convention collective “Assistants maternels du particulier employeur (IDCC 2395)” qui s’appliquait. Celle-ci a fusionné avec la convention collective "Salariés du particulier employeur (IDCC 2111)" pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable depuis le 01/01/2022.
   remplace: contrat salarié . convention collective . résultat conventionnel

@@ -5,7 +5,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle:
     type: liste
     valeurs:
       Employé: "'Employé'"
-      Technicienagent de maîtrise: "'Technicienagent de maîtrise'"
+      Technicien-agent de maîtrise: "'Technicien-agent de maîtrise'"
       Cadre: "'Cadre'"
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé:
@@ -25,37 +25,34 @@ contrat salarié . convention collective . bad . catégorie professionnelle Empl
   applicable si: ancienneté = 'Moins de 6 mois'
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté Moins de 6 mois . résultat conventionnel:
-  valeur: 1 semaine
+  valeur: 1 semaine (de date à date)
   type: notification
-  description: de date à date
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Titre IV, Article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
+    "Titre IV, article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté 6 mois à 2 ans:
   applicable si: ancienneté = '6 mois à 2 ans'
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté 6 mois à 2 ans . résultat conventionnel:
-  valeur: 1 mois
+  valeur: 1 mois (de date à date)
   type: notification
-  description: de date à date
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Titre IV, Article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
+    "Titre IV, article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté Plus de 2 ans . résultat conventionnel:
-  valeur: 2 mois
+  valeur: 2 mois (de date à date)
   type: notification
-  description: de date à date
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Titre IV, Article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
+    "Titre IV, article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
 
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise:
-  applicable si: catégorie professionnelle = 'Technicienagent de maîtrise'
+  applicable si: catégorie professionnelle = 'Technicien-agent de maîtrise'
 
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté:
   titre: ancienneté
@@ -70,23 +67,21 @@ contrat salarié . convention collective . bad . catégorie professionnelle Tech
   applicable si: ancienneté = 'Moins de 2 ans'
 
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté Moins de 2 ans . résultat conventionnel:
-  valeur: 1 mois
+  valeur: 1 mois (de date à date)
   type: notification
-  description: de date à date
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Titre IV, Article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
+    "Titre IV, article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
 
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
 
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté Plus de 2 ans . résultat conventionnel:
-  valeur: 2 mois
+  valeur: 2 mois (de date à date)
   type: notification
-  description: de date à date
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Titre IV, Article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
+    "Titre IV, article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
 
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre:
   applicable si: catégorie professionnelle = 'Cadre'
@@ -104,20 +99,18 @@ contrat salarié . convention collective . bad . catégorie professionnelle Cadr
   applicable si: ancienneté = 'Moins de 2 ans'
 
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté Moins de 2 ans . résultat conventionnel:
-  valeur: 2 mois
+  valeur: 2 mois (de date à date)
   type: notification
-  description: de date à date
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Titre IV, Article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
+    "Titre IV, article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
 
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
 
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté Plus de 2 ans . résultat conventionnel:
-  valeur: 4 mois
+  valeur: 4 mois (de date à date)
   type: notification
-  description: de date à date
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Titre IV, Article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
+    "Titre IV, article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525

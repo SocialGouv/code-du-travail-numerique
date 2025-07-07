@@ -47,7 +47,7 @@ describe("PreavisDemissionSimulator", () => {
       expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
 
       expect(
-        screen.queryAllByText(/Avenant Cadres, Article 8/)[0]
+        screen.queryAllByText(/Avenant Cadres, article 8/)[0]
       ).toBeInTheDocument();
     });
   });

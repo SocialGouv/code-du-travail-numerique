@@ -57,7 +57,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 2, unit: "semaines" },
       expectedReferences: [
         {
-          article: "article 2.12",
+          article: "Article 2.12",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid",
         },
       ],
@@ -75,7 +75,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 1, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 2.12",
+          article: "Article 2.12",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid",
         },
       ],
@@ -93,7 +93,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 2, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 2.12",
+          article: "Article 2.12",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid",
         },
       ],
@@ -111,7 +111,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 1, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 2.12",
+          article: "Article 2.12",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid",
         },
       ],
@@ -129,7 +129,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 2, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 2.12",
+          article: "Article 2.12",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid",
         },
       ],

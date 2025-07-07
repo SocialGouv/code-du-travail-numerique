@@ -79,7 +79,7 @@ contrat salarié . convention collective . automobiles . catégorie professionne
   valeur: 2 semaines
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "article 2.12": https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid
+    "Article 2.12": https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid
 
 contrat salarié . convention collective . automobiles . catégorie professionnelle Ouvriers, Employés . échelon 1 et 2 . ancienneté 6 mois à 2 ans:
   applicable si: ancienneté = '6 mois à 2 ans'
@@ -88,7 +88,7 @@ contrat salarié . convention collective . automobiles . catégorie professionne
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "article 2.12": https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid
+    "Article 2.12": https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid
 
 contrat salarié . convention collective . automobiles . catégorie professionnelle Ouvriers, Employés . échelon 1 et 2 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
@@ -97,7 +97,7 @@ contrat salarié . convention collective . automobiles . catégorie professionne
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "article 2.12": https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid
+    "Article 2.12": https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid
 
 contrat salarié . convention collective . automobiles . catégorie professionnelle Ouvriers, Employés . échelon De 3 à 12:
   applicable si: échelon = 'De 3 à 12'
@@ -118,7 +118,7 @@ contrat salarié . convention collective . automobiles . catégorie professionne
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "article 2.12": https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid
+    "Article 2.12": https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid
 
 contrat salarié . convention collective . automobiles . catégorie professionnelle Ouvriers, Employés . échelon De 3 à 12 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
@@ -127,4 +127,4 @@ contrat salarié . convention collective . automobiles . catégorie professionne
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "article 2.12": https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid
+    "Article 2.12": https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid

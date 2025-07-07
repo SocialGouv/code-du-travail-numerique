@@ -47,7 +47,7 @@ describe("PreavisDemissionSimulator", () => {
       expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
       expect(
-        screen.queryAllByText(/Article 8 de l'annexe "agents de maîtrise"/)[0]
+        screen.queryAllByText(/Article 8 de l'Annexe "agents de maîtrise"/)[0]
       ).toBeInTheDocument();
     });
   });
@@ -69,7 +69,7 @@ describe("PreavisDemissionSimulator", () => {
       expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
 
       expect(
-        screen.queryAllByText(/Article 8 de l'annexe "cadres"/)[0]
+        screen.queryAllByText(/Article 8 de l'Annexe "cadres"/)[0]
       ).toBeInTheDocument();
     });
   });

@@ -60,7 +60,7 @@ describe("DureePreavisLicenciement", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 26.1/)[0]
+          screen.queryAllByText(/Titre IV, article 26.1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -79,7 +79,7 @@ describe("DureePreavisLicenciement", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 26.1/)[0]
+          screen.queryAllByText(/Titre IV, article 26.1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -98,7 +98,7 @@ describe("DureePreavisLicenciement", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 26.1/)[0]
+          screen.queryAllByText(/Titre IV, article 26.1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -129,7 +129,7 @@ describe("DureePreavisLicenciement", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 26.1/)[0]
+          screen.queryAllByText(/Titre IV, article 26.1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -148,7 +148,7 @@ describe("DureePreavisLicenciement", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 26.1/)[0]
+          screen.queryAllByText(/Titre IV, article 26.1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -179,7 +179,7 @@ describe("DureePreavisLicenciement", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 26.1/)[0]
+          screen.queryAllByText(/Titre IV, article 26.1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -198,7 +198,7 @@ describe("DureePreavisLicenciement", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 26.1/)[0]
+          screen.queryAllByText(/Titre IV, article 26.1/)[0]
         ).toBeInTheDocument();
       });
     });

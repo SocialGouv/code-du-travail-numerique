@@ -50,7 +50,7 @@ describe("DureePreavisLicenciement", () => {
       expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
 
       expect(
-        screen.queryAllByText(/article 4.4.3.2 de la convention collective/)[0]
+        screen.queryAllByText(/Article 4.4.3.2 de la convention collective/)[0]
       ).toBeInTheDocument();
     });
   });
@@ -79,7 +79,7 @@ describe("DureePreavisLicenciement", () => {
 
         expect(
           screen.queryAllByText(
-            /article 4.4.3.2 de la convention collective/
+            /Article 4.4.3.2 de la convention collective/
           )[0]
         ).toBeInTheDocument();
       });
@@ -98,7 +98,7 @@ describe("DureePreavisLicenciement", () => {
 
         expect(
           screen.queryAllByText(
-            /article 4.4.3.2 de la convention collective/
+            /Article 4.4.3.2 de la convention collective/
           )[0]
         ).toBeInTheDocument();
       });

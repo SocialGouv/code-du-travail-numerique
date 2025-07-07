@@ -55,7 +55,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+          screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -72,7 +72,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+          screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -98,7 +98,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+          screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -115,7 +115,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+          screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -141,7 +141,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+          screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -158,7 +158,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+          screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -184,7 +184,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+          screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -201,7 +201,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+          screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -227,7 +227,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+          screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -244,7 +244,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+          screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -270,7 +270,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+          screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -287,7 +287,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+          screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -313,7 +313,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+          screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -330,7 +330,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+          screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -356,7 +356,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+          screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -373,7 +373,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+          screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -399,7 +399,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+          screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -416,7 +416,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+          screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
       });
     });

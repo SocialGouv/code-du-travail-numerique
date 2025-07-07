@@ -50,7 +50,7 @@ describe("DureePreavisLicenciement", () => {
       expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
 
       expect(
-        screen.queryAllByText(/Avenant Cadres, Article 8/)[0]
+        screen.queryAllByText(/Avenant Cadres, article 8/)[0]
       ).toBeInTheDocument();
     });
   });
@@ -86,7 +86,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Avenant Collaborateurs, Article 15/)[0]
+            screen.queryAllByText(/Avenant Collaborateurs, article 15/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -103,7 +103,7 @@ describe("DureePreavisLicenciement", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
           expect(
-            screen.queryAllByText(/Avenant Collaborateurs, Article 15/)[0]
+            screen.queryAllByText(/Avenant Collaborateurs, article 15/)[0]
           ).toBeInTheDocument();
         });
       });
@@ -121,7 +121,7 @@ describe("DureePreavisLicenciement", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Avenant Collaborateurs, Article 15/)[0]
+          screen.queryAllByText(/Avenant Collaborateurs, article 15/)[0]
         ).toBeInTheDocument();
       });
     });

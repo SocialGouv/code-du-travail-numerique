@@ -134,7 +134,7 @@ describe("HeuresRechercheEmploi", () => {
 
         expect(
           screen.queryAllByText(
-            /Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 27./
+            /Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27./
           )[0]
         ).toBeInTheDocument();
       });
@@ -178,7 +178,7 @@ describe("HeuresRechercheEmploi", () => {
 
           expect(
             screen.queryAllByText(
-              /Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 27./
+              /Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27./
             )[0]
           ).toBeInTheDocument();
         });
@@ -357,7 +357,7 @@ describe("HeuresRechercheEmploi", () => {
 
           expect(
             screen.queryAllByText(
-              /Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 3/
+              /Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 3/
             )[0]
           ).toBeInTheDocument();
         });
@@ -384,7 +384,7 @@ describe("HeuresRechercheEmploi", () => {
 
           expect(
             screen.queryAllByText(
-              /Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 3/
+              /Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 3/
             )[0]
           ).toBeInTheDocument();
         });
@@ -431,7 +431,7 @@ describe("HeuresRechercheEmploi", () => {
 
             expect(
               screen.queryAllByText(
-                /Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 3/
+                /Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 3/
               )[0]
             ).toBeInTheDocument();
           });
@@ -494,7 +494,7 @@ describe("HeuresRechercheEmploi", () => {
 
             expect(
               screen.queryAllByText(
-                /Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 3/
+                /Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 3/
               )[0]
             ).toBeInTheDocument();
           });
@@ -613,7 +613,7 @@ describe("HeuresRechercheEmploi", () => {
 
         expect(
           screen.queryAllByText(
-            /Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 27./
+            /Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27./
           )[0]
         ).toBeInTheDocument();
       });
@@ -657,7 +657,7 @@ describe("HeuresRechercheEmploi", () => {
 
           expect(
             screen.queryAllByText(
-              /Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 27./
+              /Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27./
             )[0]
           ).toBeInTheDocument();
         });
