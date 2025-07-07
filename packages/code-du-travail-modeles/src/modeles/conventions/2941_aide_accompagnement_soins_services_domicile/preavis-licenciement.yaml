@@ -25,7 +25,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Empl
   applicable si: ancienneté = 'Moins de 6 mois'
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté Moins de 6 mois . résultat conventionnel:
-  valeur: 1 semaine (de date à date)
+  valeur: 1 semaine de date à date
   type: notification
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
@@ -35,7 +35,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Empl
   applicable si: ancienneté = '6 mois à 2 ans'
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté 6 mois à 2 ans . résultat conventionnel:
-  valeur: 1 mois (de date à date)
+  valeur: 1 mois de date à date
   type: notification
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
@@ -45,7 +45,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Empl
   applicable si: ancienneté = 'Plus de 2 ans'
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté Plus de 2 ans . résultat conventionnel:
-  valeur: 2 mois (de date à date)
+  valeur: 2 mois de date à date
   type: notification
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
@@ -67,7 +67,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Tech
   applicable si: ancienneté = 'Moins de 2 ans'
 
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté Moins de 2 ans . résultat conventionnel:
-  valeur: 1 mois (de date à date)
+  valeur: 1 mois de date à date
   type: notification
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
@@ -77,7 +77,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Tech
   applicable si: ancienneté = 'Plus de 2 ans'
 
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté Plus de 2 ans . résultat conventionnel:
-  valeur: 2 mois (de date à date)
+  valeur: 2 mois de date à date
   type: notification
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
@@ -99,7 +99,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Cadr
   applicable si: ancienneté = 'Moins de 2 ans'
 
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté Moins de 2 ans . résultat conventionnel:
-  valeur: 2 mois (de date à date)
+  valeur: 2 mois de date à date
   type: notification
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
@@ -109,7 +109,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle Cadr
   applicable si: ancienneté = 'Plus de 2 ans'
 
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté Plus de 2 ans . résultat conventionnel:
-  valeur: 4 mois (de date à date)
+  valeur: 4 mois de date à date
   type: notification
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
