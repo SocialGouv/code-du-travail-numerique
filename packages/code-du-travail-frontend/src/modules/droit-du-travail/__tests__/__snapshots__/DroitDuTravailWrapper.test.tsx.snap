@@ -129,7 +129,7 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
           class="fr-col-12 fr-col-md-6"
         >
           <div
-            class="bg_var(--background-default-grey) ov_hidden h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            class="bg_var(--background-default-grey) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-les-textes-internationaux"
@@ -188,7 +188,7 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
           class="fr-col-12 fr-col-md-6"
         >
           <div
-            class="bg_var(--background-default-grey) ov_hidden h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            class="bg_var(--background-default-grey) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-les-textes-européens"
@@ -247,7 +247,7 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
           class="fr-col-12 fr-col-md-6"
         >
           <div
-            class="bg_var(--background-default-grey) ov_hidden h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            class="bg_var(--background-default-grey) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-la-constitution-française"
@@ -306,7 +306,7 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
           class="fr-col-12 fr-col-md-6"
         >
           <div
-            class="bg_var(--background-default-grey) ov_hidden h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            class="bg_var(--background-default-grey) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-lois,-ordonnances,-décrets-et-arrêtés"
@@ -365,7 +365,7 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
           class="fr-col-12 fr-col-md-6"
         >
           <div
-            class="bg_var(--background-default-grey) ov_hidden h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            class="bg_var(--background-default-grey) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-les-conventions-et-accords-collectifs"
@@ -424,7 +424,7 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
           class="fr-col-12 fr-col-md-6"
         >
           <div
-            class="bg_var(--background-default-grey) ov_hidden h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            class="bg_var(--background-default-grey) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-les-usages-et-les-engagements-unilatéraux"
@@ -483,7 +483,7 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
           class="fr-col-12 fr-col-md-6"
         >
           <div
-            class="bg_var(--background-default-grey) ov_hidden h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            class="bg_var(--background-default-grey) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-le-règlement-intérieur-de-l'entreprise"
@@ -542,7 +542,7 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
           class="fr-col-12 fr-col-md-6"
         >
           <div
-            class="bg_var(--background-default-grey) ov_hidden h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+            class="bg_var(--background-default-grey) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
           >
             <button
               aria-controls="content-le-contrat-de-travail"
@@ -648,7 +648,7 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
                 class="fr-col-12"
               >
                 <div
-                  class="bg_var(--background-alt-blue-cumulus) ov_visible h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+                  class="bg_var(--background-alt-blue-cumulus) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
                 >
                   <button
                     aria-controls="content-les-textes-internationaux-et-européens"
@@ -714,7 +714,7 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
                 class="fr-col-12"
               >
                 <div
-                  class="bg_var(--background-alt-blue-cumulus) ov_visible h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+                  class="bg_var(--background-alt-blue-cumulus) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
                 >
                   <button
                     aria-controls="content-la-constitution"
@@ -780,7 +780,7 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
                 class="fr-col-12"
               >
                 <div
-                  class="bg_var(--background-alt-blue-cumulus) ov_visible h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+                  class="bg_var(--background-alt-blue-cumulus) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
                 >
                   <button
                     aria-controls="content-lois,-ordonnances-et-décrets-(code-du-travail)"
@@ -846,7 +846,7 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
                 class="fr-col-12"
               >
                 <div
-                  class="bg_var(--background-alt-blue-cumulus) ov_visible h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+                  class="bg_var(--background-alt-blue-cumulus) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
                   id="hierarchie"
                 >
                   <button
@@ -913,7 +913,7 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
                 class="fr-col-12"
               >
                 <div
-                  class="bg_var(--background-alt-blue-cumulus) ov_visible h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+                  class="bg_var(--background-alt-blue-cumulus) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
                 >
                   <button
                     aria-controls="content-les-usages-et-les-engagements-unilatéraux"
@@ -979,7 +979,7 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
                 class="fr-col-12"
               >
                 <div
-                  class="bg_var(--background-alt-blue-cumulus) ov_visible h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+                  class="bg_var(--background-alt-blue-cumulus) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
                 >
                   <button
                     aria-controls="content-le-règlement-intérieur-de-l'entreprise"
@@ -1045,7 +1045,7 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
                 class="fr-col-12"
               >
                 <div
-                  class="bg_var(--background-alt-blue-cumulus) ov_hidden h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
+                  class="bg_var(--background-alt-blue-cumulus) h_fit-content trs_all_0.3s_ease pos_relative bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1)"
                 >
                   <button
                     aria-controls="content-le-contrat-de-travail"
@@ -1156,7 +1156,7 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
                         class="fr-grid-row fr-grid-row--gutters"
                       >
                         <div
-                          class="fr-col-12 fr-col-md-6"
+                          class="fr-col-12"
                         >
                           <ul>
                             <li>
@@ -1183,12 +1183,6 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
                             <li>
                               CDD et contrats de travail temporaire (durée totale, renouvellement, délai de carence et délai de transmission des contrats)
                             </li>
-                          </ul>
-                        </div>
-                        <div
-                          class="fr-col-12 fr-col-md-6"
-                        >
-                          <ul>
                             <li>
                               CDI de chantier
                             </li>
@@ -1270,7 +1264,7 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
                         class="fr-grid-row fr-grid-row--gutters"
                       >
                         <div
-                          class="fr-col-12 fr-col-md-6"
+                          class="fr-col-12"
                         >
                           <ul>
                             <li>
@@ -1279,12 +1273,6 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
                             <li>
                               L'insertion professionnelle et le maintien dans l'emploi des travailleurs handicapés
                             </li>
-                          </ul>
-                        </div>
-                        <div
-                          class="fr-col-12 fr-col-md-6"
-                        >
-                          <ul>
                             <li>
                               Seuil de désignation, nombre et valorisation des parcours syndicaux des délégués syndicaux
                             </li>
