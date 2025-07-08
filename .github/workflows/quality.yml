@@ -14,6 +14,7 @@ concurrency:
 jobs:
   build:
     name: Build
+    environment: build-preproduction
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

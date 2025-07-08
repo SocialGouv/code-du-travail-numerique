@@ -35,7 +35,7 @@ export function TextSearch({ idcc, convention }) {
           <StyledInput
             onChange={(e) => setQuery(e.target.value)}
             id="search-agreement"
-            type="search"
+            type="text"
             autoComplete="off"
             name="rawQuery"
             aria-label="Recherchez dans la collection collective"

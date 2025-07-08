@@ -11,14 +11,23 @@ import {
 
 export const AgreementSearch = () => {
   const [noResult, setNoResult] = useState(false);
-  const { emitPreviousEvent } = useAgreementSearchTracking();
+  const { emitPreviousEvent, emitSelectEvent } = useAgreementSearchTracking();
   return (
     <>
       <AgreementSearchInput
         onSearch={(query, result) => {
           setNoResult(query.length > 2 && !result?.length);
         }}
+        lineAsLink
         trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+        onAgreementSelect={(agreement) => {
+          if (agreement) {
+            emitSelectEvent(
+              `idcc${agreement.id}`,
+              "Trouver sa convention collective"
+            );
+          }
+        }}
       />
       <div className={fr.cx("fr-mt-2w", "fr-grid-row")}>
         <Button
