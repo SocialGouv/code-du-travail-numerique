@@ -7,9 +7,9 @@ import type {
 } from "../types";
 import { PublicodesDefaultRules, PublicodesSimulator } from "../types";
 import type { AgreementIndemniteCompute } from "./AgreementIndemniteCompute";
-import type { ExplanationBuilder } from "./ExplanationBuilder";
+import type { ExplanationBuilder } from "../common/ExplanationBuilder";
 import type { Legal } from "./Legal";
-import { ResultBuilder } from "./ResultBuilder";
+import { ResultBuilder } from "../common/ResultBuilder";
 import type { IndemniteDepartOutput } from "./types";
 
 export class IndemniteDepartPublicodes extends PublicodesBase<PublicodesIndemniteLicenciementResult> {

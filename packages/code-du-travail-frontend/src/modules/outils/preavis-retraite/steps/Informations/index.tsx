@@ -3,6 +3,8 @@ import { PreavisRetraiteContext, usePreavisRetraiteStore } from "../store";
 import { Note } from "./components/Note";
 import { fr } from "@codegouvfr/react-dsfr";
 import { PubliQuestion } from "src/modules/outils/indemnite-depart/steps/Informations/components/PubliQuestion";
+import { eventEmitter } from "src/modules/outils/common/events/emitter";
+import { EventType } from "src/modules/outils/common/events";
 
 const StepInformations = (): JSX.Element => {
   const store = useContext(PreavisRetraiteContext);
@@ -22,13 +24,13 @@ const StepInformations = (): JSX.Element => {
             name={"infos." + info.question.name}
             rule={info.question.rule}
             value={info.info}
-            onChange={(v: any) =>
+            onChange={(v: any) => {
               onInformationsChange(
                 info.question.rule.nom,
                 v,
                 info.question.rule.cdtn?.type
-              )
-            }
+              );
+            }}
             error={
               errors.errorInformations[info.question.rule.nom] ?? undefined
             }

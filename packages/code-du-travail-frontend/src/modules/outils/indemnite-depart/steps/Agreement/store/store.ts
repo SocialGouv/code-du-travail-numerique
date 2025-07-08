@@ -8,7 +8,7 @@ import { PublicodesSimulator, supportedCcn } from "@socialgouv/modeles-social";
 import {
   AgreementRoute,
   IndemniteDepartType,
-  StoreSlicePublicode,
+  StoreSlicePublicodes,
 } from "../../../types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
 import { getAgreementFromLocalStorage } from "src/modules/common/useLocalStorage";
@@ -19,7 +19,7 @@ import {
 import { pushAgreementEvents } from "src/outils/common";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { loadPublicodes } from "src/modules/outils/common/publicodes";
-import { isCcFullySupportedIndemniteLicenciement } from "../../../common";
+import isCcFullySupported from "src/modules/outils/common/utils/isCcFullySupported";
 
 const initialState: Omit<
   CommonAgreementStoreData<PublicodesSimulator>,
@@ -34,7 +34,7 @@ const initialState: Omit<
   isStepValid: true,
 };
 
-const createCommonAgreementStore: StoreSlicePublicode<
+const createCommonAgreementStore: StoreSlicePublicodes<
   CommonAgreementStoreSlice<PublicodesSimulator>,
   CommonInformationsStoreSlice
 > = (set, get, { simulator, type }) => ({
@@ -68,7 +68,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
                   (state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
                     state.agreementData.publicodes = publicodes;
                     state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
-                      isCcFullySupportedIndemniteLicenciement(parseInt(idcc));
+                      isCcFullySupported(parseInt(idcc), simulator);
                   }
                 )
               );
@@ -120,9 +120,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
         produce((state: CommonAgreementStoreSlice<PublicodesSimulator>) => {
           state.agreementData.publicodes = loadPublicodes(simulator, idcc);
           state.agreementData.input.isAgreementSupportedIndemniteLicenciement =
-            idcc
-              ? isCcFullySupportedIndemniteLicenciement(parseInt(idcc))
-              : false;
+            idcc ? isCcFullySupported(parseInt(idcc), simulator) : false;
         })
       );
       const isOk = get().informationsFunction.generatePublicodesQuestions();

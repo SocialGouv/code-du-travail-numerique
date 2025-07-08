@@ -1,5 +1,5 @@
 import { formatIdcc } from "@socialgouv/modeles-social";
-import { DepartOuMiseRetraite } from "src/outils/PreavisRetraite/steps/OriginStep/store";
+import { DepartOuMiseRetraite } from "../../preavis-retraite/steps/OriginStep/store";
 
 export const mapToPublicodesSituationForCalculationPreavisRetraite = (
   departOuMiseRetraite: DepartOuMiseRetraite,

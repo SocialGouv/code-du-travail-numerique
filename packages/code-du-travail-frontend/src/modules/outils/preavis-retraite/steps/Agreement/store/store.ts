@@ -18,7 +18,7 @@ import { MatomoBaseEvent, MatomoSearchAgreementCategory } from "src/lib";
 import { loadPublicodes } from "src/modules/outils/common/publicodes";
 import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
-import { pushAgreementEvents } from "../../../events/pushAgreementEvents";
+import { pushAgreementEvents } from "../../../../common/events/pushAgreementEvents";
 
 const initialState: Omit<AgreementStoreData, "publicodes"> = {
   input: {

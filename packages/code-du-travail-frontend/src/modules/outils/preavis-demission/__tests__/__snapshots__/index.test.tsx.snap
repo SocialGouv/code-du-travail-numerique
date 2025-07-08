@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PreavisDemissionSimulator /> should render 1`] = `
+<div>
+  <div
+    class="fr-grid-row [@media_print]:mt_30px!"
+  >
+    <nav
+      aria-label="vous êtes ici :"
+      class="fr-breadcrumb fr-mb-2v"
+      id="fr-breadcrumb-:r0:"
+      role="navigation"
+    >
+      <button
+        aria-controls="breadcrumb-:r1:"
+        aria-expanded="false"
+        class="fr-breadcrumb__button"
+      >
+        Voir le fil d’Ariane
+      </button>
+      <div
+        class="fr-collapse"
+        id="breadcrumb-:r1:"
+      >
+        <ol
+          class="fr-breadcrumb__list"
+        >
+          <li>
+            <a
+              class="fr-breadcrumb__link"
+              href="/"
+            >
+              Accueil
+            </a>
+          </li>
+          <li>
+            <a
+              class="fr-breadcrumb__link"
+              href="/outils"
+            >
+              Simulateurs
+            </a>
+          </li>
+          <li>
+            <a
+              aria-current="page"
+              class="fr-breadcrumb__link"
+            >
+              Simulateur de durée de préavis de démission
+            </a>
+          </li>
+        </ol>
+      </div>
+    </nav>
+    <div
+      class="fr-col-12"
+    >
+      <h1
+        class="fr-mb-6w"
+      >
+        Simulateur de durée de préavis de démission
+      </h1>
+      <div
+        class="fr-mb-3w h_1px p_0 w_100% bg-c_var(--border-default-blue-cumulus)"
+      />
+      <div>
+        <div
+          class="[@media_print]:d_none"
+          data-testid="stepper"
+        >
+          <div
+            class="fr-stepper fr-mb-3w"
+            id="fr-stepper-:r2:"
+          >
+            <h2
+              class="fr-stepper__title"
+            >
+              Introduction
+              <span
+                class="fr-stepper__state"
+              >
+                Étape 1 sur 4
+              </span>
+            </h2>
+            <div
+              class="fr-stepper__steps"
+              data-fr-current-step="1"
+              data-fr-steps="4"
+            />
+            <p
+              class="fr-stepper__details"
+            >
+              <span
+                class="fr-text--bold"
+              >
+                Étape suivante :
+              </span>
+               
+              Convention collective
+            </p>
+          </div>
+        </div>
+        <div
+          class="d_none [@media_print]:d_block [@media_print]:mb_1rem [@media_print]:font-style_italic"
+        >
+          Simulé le
+           
+          4 janvier 2020 à 00:00
+        </div>
+        <div>
+          <p>
+            Ce simulateur permet de calculer la durée du préavis que le salarié doit respecter en cas de démission.
+          </p>
+          <p>
+            Des informations disponibles sur le bulletin de salaire pourraient être utiles pour réaliser cette simulation.
+          </p>
+        </div>
+        <div
+          class="fr-mt-3w fr-grid-row fr-grid-row--middle"
+        >
+          <button
+            class="fr-btn ri-arrow-right-line fr-btn--icon-right fr-mr-2w fr-mb-3w"
+            id="fr-button-:r3:"
+          >
+            Commencer
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="fr-m-0 h_1px p_0 w_100% bg-c_var(--border-default-blue-cumulus)"
+    />
+    <div
+      class="fr-col-12 fr-col-md-7 fr-mb-12w"
+    >
+      <div
+        class="fr-highlight fr-p-2w fr-m-0 [@media_print]:d_none"
+      >
+        <div
+          class="fr-grid-row"
+        >
+          <div
+            class="fr-col-12 fr-col-md"
+          >
+            <h2
+              class="fr-h5 fr-mb-md-0"
+              id="feedback-title"
+            >
+              Avez-vous trouvé la réponse à votre question ?
+            </h2>
+          </div>
+          <div>
+            <button
+              aria-describedby="feedback-title"
+              class="fr-btn fr-btn--secondary fr-mr-2w"
+              id="fr-button-:r4:"
+              type="button"
+            >
+              Non
+            </button>
+            <button
+              aria-describedby="feedback-title"
+              class="fr-btn fr-btn--secondary"
+              id="fr-button-:r5:"
+              type="button"
+            >
+              Oui
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

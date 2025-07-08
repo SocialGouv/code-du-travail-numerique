@@ -97,7 +97,7 @@ const createRootSlice = (
   ...createContratTravailStore(set, get, { type: toolName }),
   ...createAncienneteStore(set, get, { type: toolName }),
   ...createSalairesStore(set, get, { type: toolName }),
-  ...createResultStore(set, get, { type: toolName }),
+  ...createResultStore(set, get, { type: toolName, simulator: simulatorName }),
   ...createRootAgreementsStore(set, get, { type: toolName }),
   ...createCommonAgreementStore(set, get, {
     type: toolName,
