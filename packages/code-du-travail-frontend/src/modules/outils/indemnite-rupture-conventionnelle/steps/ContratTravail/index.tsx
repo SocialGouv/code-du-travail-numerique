@@ -74,7 +74,6 @@ const StepContratTravail = (): JSX.Element => {
           }
         }}
         error={errorTypeContratTravail}
-        autoFocus
       />
       {typeContratTravail === "cdi" && (
         <RadioQuestion

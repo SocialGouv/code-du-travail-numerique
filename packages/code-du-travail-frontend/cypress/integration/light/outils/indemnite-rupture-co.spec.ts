@@ -7,7 +7,7 @@ describe("Outil - Indemnité de rupture conventionnelle", () => {
       "have.text",
       "Calculer l'indemnité de rupture conventionnelle"
     );
-    cy.contains("Commencer").click();
+    cy.get("button").contains("Commencer").click({ force: true });
 
     cy.contains("Contrat à durée indéterminée (CDI)").click();
     cy.get('label:contains("Non")').eq(0).click();
