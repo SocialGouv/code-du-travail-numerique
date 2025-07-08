@@ -181,14 +181,11 @@ describe("Outil - Préavis de retraite", () => {
     cy.selectByLabel("Nom de votre entreprise ou numéro Siren/Siret").type(
       "boursorama"
     );
-    cy.selectByLabel("Code postal ou Ville (optionnel)").type("9210");
-    cy.selectByLabel("Code postal ou Ville (optionnel)").type(
-      "0{downArrow}{enter}",
-      {
-        delay: 2000,
-        force: true,
-      }
-    );
+    cy.selectByLabel("Code postal ou Ville").type("9210");
+    cy.selectByLabel("Code postal ou Ville").type("0{downArrow}{enter}", {
+      delay: 2000,
+      force: true,
+    });
     cy.get('button[type="submit"]').last().click();
     cy.contains(
       "BOURSORAMA (BOURSORAMA - BOURSORAMA BANQUE - BOURSOBANK)"
