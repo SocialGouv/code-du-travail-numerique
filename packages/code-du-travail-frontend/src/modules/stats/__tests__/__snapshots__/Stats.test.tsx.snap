@@ -13,10 +13,10 @@ exports[`<Stats /> should match snapshot 1`] = `
       >
         Statistiques d'utilisation
       </h1>
-      <div
-        class="fr-grid-row fr-grid-row--gutters"
+      <ul
+        class="fr-grid-row fr-grid-row--gutters li-s_none!"
       >
-        <div
+        <li
           class="fr-col-12 fr-col-lg-3"
         >
           <div
@@ -45,8 +45,8 @@ exports[`<Stats /> should match snapshot 1`] = `
                
             </p>
           </div>
-        </div>
-        <div
+        </li>
+        <li
           class="fr-col-12 fr-col-lg-3"
         >
           <div
@@ -75,8 +75,8 @@ exports[`<Stats /> should match snapshot 1`] = `
                
             </p>
           </div>
-        </div>
-        <div
+        </li>
+        <li
           class="fr-col-12 fr-col-lg-3"
         >
           <div
@@ -105,8 +105,8 @@ exports[`<Stats /> should match snapshot 1`] = `
                
             </p>
           </div>
-        </div>
-        <div
+        </li>
+        <li
           class="fr-col-12 fr-col-lg-3"
         >
           <div
@@ -135,8 +135,8 @@ exports[`<Stats /> should match snapshot 1`] = `
                
             </p>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
       <p
         class="fr-mt-6w"
       >
@@ -163,7 +163,7 @@ exports[`<Stats /> should match snapshot 1`] = `
               <div
                 class="fr-tile__content"
               >
-                <h4
+                <h3
                   class="fr-tile__title"
                 >
                   <a
@@ -173,7 +173,7 @@ exports[`<Stats /> should match snapshot 1`] = `
                   >
                     Télécharger le bilan annuel de l’année 2024
                   </a>
-                </h4>
+                </h3>
                 <p
                   class="fr-tile__detail"
                 >
@@ -209,7 +209,7 @@ exports[`<Stats /> should match snapshot 1`] = `
               <div
                 class="fr-tile__content"
               >
-                <h4
+                <h3
                   class="fr-tile__title"
                 >
                   <a
@@ -219,7 +219,7 @@ exports[`<Stats /> should match snapshot 1`] = `
                   >
                     Télécharger le bilan annuel de l’année 2023
                   </a>
-                </h4>
+                </h3>
                 <p
                   class="fr-tile__detail"
                 >
