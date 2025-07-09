@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import Input from "@codegouvfr/react-dsfr/Input";
 import Button from "@codegouvfr/react-dsfr/Button";
@@ -130,12 +130,7 @@ export function LegiFranceSearch({ idcc, shortTitle }: Props) {
         severity="info"
         small
         className={fr.cx("fr-mb-0")}
-        description={
-          <>
-            Selon le thème, un accord collectif d&apos;entreprise peut prévoir
-            des règles différentes par rapport à la convention collective.{" "}
-          </>
-        }
+        description="Selon le thème, un accord collectif d'entreprise peut prévoir des règles différentes par rapport à la convention collective."
         data-testid="agreement-search-alert"
       />
     </div>
