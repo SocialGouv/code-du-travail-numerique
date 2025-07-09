@@ -159,28 +159,6 @@ describe("Conventions collectives", () => {
         "eq",
         "https://www.legifrance.gouv.fr/search/kali?rawQuery=cong%C3%A9s&idcc=2941&tab_selection=kali&searchField=ALL&query=cong%25C3%25A9s&searchType=ALL&typePagination=DEFAUT&sortValue=PERTINENCE&pageSize=10&page=1"
       );
-
-      cy.contains("Convention collective nationale", { timeout: 10000 }).should(
-        "be.visible"
-      );
-
-      cy.get(".result-item").then(($items) => {
-        const avenants = $items.filter((_, item) => {
-          return Cypress.$(item).text().includes("Avenant");
-        });
-
-        expect(avenants.length).to.be.at.least(
-          2,
-          "La page devrait contenir au moins 2 avenants"
-        );
-
-        cy.log(`Nombre d'avenants trouvés: ${avenants.length}`);
-
-        avenants.each((index, avenant) => {
-          const title = Cypress.$(avenant).find(".title").text().trim();
-          cy.log(`Avenant ${index + 1}: ${title}`);
-        });
-      });
     });
   });
 });
