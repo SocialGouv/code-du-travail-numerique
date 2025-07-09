@@ -4,6 +4,7 @@ import React from "react";
 import { ElasticAgreement } from "@socialgouv/cdtn-types";
 import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
 import { fr } from "@codegouvfr/react-dsfr";
+import Link from "../common/Link";
 
 type Props = {
   articlesByTheme: ElasticAgreement["articlesByTheme"];
@@ -99,20 +100,21 @@ export function AgreementArticles({ articlesByTheme, containerId }: Props) {
                   </p>
                 </div>
               )}
-              <div
+              <ul
                 className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}
                 data-testid="agreement-articles-list"
               >
                 {articles.map((article) => (
-                  <div
+                  <li
                     key={article.id}
                     className={fr.cx("fr-col-12")}
                     data-testid={`agreement-article-item-${article.id}`}
                   >
-                    <a
+                    <Link
                       href={`https://legifrance.gouv.fr/conv_coll/id/${article.id}/?idConteneur=${containerId}`}
                       target="_blank"
                       rel="noopener noreferrer"
+                      title={`Article ${article.title} : ${article.section}`}
                       data-testid={`agreement-article-link-${article.id}`}
                     >
                       <strong
@@ -123,10 +125,10 @@ export function AgreementArticles({ articlesByTheme, containerId }: Props) {
                       >
                         {article.section}
                       </span>
-                    </a>
-                  </div>
+                    </Link>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           ),
         }))}
