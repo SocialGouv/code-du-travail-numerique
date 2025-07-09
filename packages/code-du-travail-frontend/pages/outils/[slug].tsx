@@ -13,7 +13,6 @@ import { Share } from "../../src/common/Share";
 import { Layout } from "../../src/layout/Layout";
 import {
   DismissalProcess,
-  DureePreavisLicenciement,
   HeuresRechercheEmploi,
   CalculateurIndemniteLicenciement,
 } from "../../src/outils";
@@ -26,7 +25,6 @@ import { ElasticTool } from "@socialgouv/cdtn-types";
 
 const toolsBySlug = {
   "heures-recherche-emploi": HeuresRechercheEmploi,
-  "preavis-licenciement": DureePreavisLicenciement,
   "procedure-licenciement": DismissalProcess,
   "indemnite-licenciement": CalculateurIndemniteLicenciement,
 };
