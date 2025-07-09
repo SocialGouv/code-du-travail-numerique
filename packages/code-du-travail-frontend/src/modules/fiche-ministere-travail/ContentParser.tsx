@@ -29,6 +29,11 @@ const xssWrapper = (text: string): string => {
         case "id":
         case "class":
           return name + '="' + escapeAttrValue(value) + '"';
+        case "title":
+          if (value.includes("nouvelle fenêtre")) {
+            return name + '="' + escapeAttrValue(value) + '"';
+          }
+          return name + '="' + escapeAttrValue(value) + ' - nouvelle fenêtre"';
         default:
           return undefined;
       }
