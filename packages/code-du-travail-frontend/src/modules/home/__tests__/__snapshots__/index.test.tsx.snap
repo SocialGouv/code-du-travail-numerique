@@ -67,7 +67,6 @@ exports[`<Home /> should match snapshot 1`] = `
                         <input
                           aria-autocomplete="list"
                           aria-expanded="false"
-                          aria-labelledby="downshift-0-label"
                           autocomplete="off"
                           class="fr-input"
                           data-testid="search-input"
@@ -86,6 +85,9 @@ exports[`<Home /> should match snapshot 1`] = `
                         id="downshift-0-input-messages-group"
                       />
                     </div>
+                    <p>
+                      {"type":"text","data-testid":"search-input","role":"combobox","aria-expanded":false,"aria-autocomplete":"list","aria-labelledby":"downshift-0-label","autoComplete":"off","value":"","id":"downshift-0-input"}
+                    </p>
                     <ul
                       aria-labelledby="downshift-0-label"
                       class="fr-p-0 fr-m-0 pos_absolute top_100% left_0 w_100% z_1000 bg_var(--background-default-grey) li-t_none! bd-t_none bx-sh_0_4px_8px_rgba(0,_0,_0,_0.1) max-h_300px ov-y_auto "
