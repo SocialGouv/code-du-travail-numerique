@@ -116,7 +116,7 @@ exports[`<Header /> should match snapshot 1`] = `
                     >
                       <label
                         class="fr-label fr-sr-only"
-                        for="downshift-0-input"
+                        for="fr-header-search-input"
                         id="downshift-0-label"
                       >
                         Rechercher sur le site
@@ -127,7 +127,6 @@ exports[`<Header /> should match snapshot 1`] = `
                         <input
                           aria-autocomplete="list"
                           aria-expanded="false"
-                          aria-labelledby="downshift-0-label"
                           autocomplete="off"
                           class="fr-input"
                           id="fr-header-search-input"
@@ -146,6 +145,9 @@ exports[`<Header /> should match snapshot 1`] = `
                         id="fr-header-search-input-messages-group"
                       />
                     </div>
+                    <p>
+                      {"type":"text","placeholder":"Rechercher sur le site","role":"combobox","aria-expanded":false,"aria-autocomplete":"list","aria-labelledby":"downshift-0-label","autoComplete":"off","value":"","id":"fr-header-search-input"}
+                    </p>
                     <ul
                       aria-labelledby="downshift-0-label"
                       class="fr-p-0 fr-m-0 pos_absolute top_100% left_0 w_100% z_1000 bg_var(--background-default-grey) li-t_none! bd-t_none bx-sh_0_4px_8px_rgba(0,_0,_0,_0.1) max-h_300px ov-y_auto mt_0! ta_left"
