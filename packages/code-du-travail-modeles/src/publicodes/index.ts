@@ -5,3 +5,4 @@ export { default as RuptureConventionnellePublicodes } from "./RuptureConvention
 export { default as SingletonPublicodesHelper } from "./SingletonPublicodesHelper";
 export * from "./types";
 export { PreavisDemissionPublicodes } from "./PreavisDemissionPublicodes";
+export { IndemnitePrecaritePublicodes } from "./IndemnitePrecarite";

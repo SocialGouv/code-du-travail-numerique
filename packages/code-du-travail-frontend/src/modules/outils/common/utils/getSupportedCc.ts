@@ -22,6 +22,15 @@ const getSupportedCc = (
     case PublicodesSimulator.PREAVIS_RETRAITE:
       key = "preavisRetraite";
       break;
+    case PublicodesSimulator.INDEMNITE_PRECARITE:
+      key = "indemnitePrecarite";
+      break;
+    default:
+      throw new Error(
+        `Unsupported simulator: ${simulator}. Supported simulators are: ${Object.values(
+          PublicodesSimulator
+        ).join(", ")}`
+      );
   }
   return supportedCcn.map((item) => ({
     fullySupported: item[key],

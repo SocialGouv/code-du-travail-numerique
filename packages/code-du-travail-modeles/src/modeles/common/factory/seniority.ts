@@ -5,7 +5,6 @@ import {
   Seniority176,
   Seniority275,
   Seniority0292,
-  Seniority650,
   Seniority1090,
   Seniority1404,
   Seniority1483,
@@ -60,8 +59,6 @@ export class SeniorityFactory {
         return new Seniority0292();
       case SupportedCc.IDCC3239:
         return new Seniority3239();
-      case SupportedCc.IDCC650:
-        return new Seniority650() as ISeniority<SupportedCc.IDCC650>;
       case SupportedCc.IDCC2216:
         return new Seniority2216();
       case SupportedCc.IDCC0044:

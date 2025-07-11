@@ -8,3 +8,4 @@ contrat salarié . convention collective . pharmacie:
     indemnité-licenciement: true
     préavis-demission: true
     rupture-conventionnelle: true
+    indemnité-précarité: true

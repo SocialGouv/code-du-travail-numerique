@@ -17,6 +17,7 @@ import type {
 import type { IIneligibility } from "../modeles/common/types/ineligibility";
 import type {
   IndemniteLicenciementPublicodes,
+  IndemnitePrecaritePublicodes,
   PreavisDemissionPublicodes,
   PreavisRetraitePublicodes,
   RuptureConventionnellePublicodes,
@@ -157,8 +158,7 @@ export const PublicodesDefaultRules = {
     "contrat salarié . préavis de démission . résultat légal",
   [PublicodesSimulator.HEURES_RECHERCHE_EMPLOI]:
     "contrat salarié . préavis de démission . résultat légal",
-  [PublicodesSimulator.INDEMNITE_PRECARITE]:
-    "contrat salarié . préavis de démission . résultat légal",
+  [PublicodesSimulator.INDEMNITE_PRECARITE]: "contrat salarié . résultat légal",
 };
 
 export enum PublicodesConvertedUnit {
@@ -186,6 +186,12 @@ export type PublicodesPreavisDemissionResult = {
   unit?: Unit;
 };
 
+export type PublicodesIndemnitePrecariteResult = {
+  value: Evaluation<number>;
+  unit?: Unit;
+  ineligibility?: string;
+};
+
 export type PublicodesIndemniteLicenciementResult = {
   value: Evaluation<number>;
   unit?: Unit;
@@ -201,7 +207,9 @@ export type PublicodesInstance<T extends PublicodesSimulator> =
         ? RuptureConventionnellePublicodes
         : T extends PublicodesSimulator.PREAVIS_DEMISSION
           ? PreavisDemissionPublicodes
-          : never;
+          : T extends PublicodesSimulator.INDEMNITE_PRECARITE
+            ? IndemnitePrecaritePublicodes
+            : never;
 
 export interface IndemniteDepartInstance {
   ineligibility: IIneligibility;

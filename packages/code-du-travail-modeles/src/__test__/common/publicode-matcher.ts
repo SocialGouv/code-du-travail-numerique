@@ -2,6 +2,7 @@ import type { Rule } from "publicodes";
 
 import {
   mergeIndemniteLicenciementModels,
+  mergeIndemnitePrecariteModels,
   mergePreavisDemissionModels,
   mergePreavisRetraiteModels,
   mergeRuptureConventionnelle,
@@ -18,6 +19,7 @@ declare global {
   const modelsPreavisRetraite: Record<string, any>;
   const modelsPreavisDemission: Record<string, any>;
   const modelsRuptureConventionnel: Record<string, any>;
+  const modelsIndemnitePrecarite: Record<string, any>;
   namespace jest {
     interface Matchers<R> {
       toContainTitre: () => R;
@@ -447,5 +449,6 @@ const replaceAll = (string: string, search: string, replace: string) => {
 (global as any).modelsPreavisRetraite = mergePreavisRetraiteModels();
 (global as any).modelsPreavisDemission = mergePreavisDemissionModels();
 (global as any).modelsRuptureConventionnel = mergeRuptureConventionnelle();
+(global as any).modelsIndemnitePrecarite = mergeIndemnitePrecariteModels();
 
 export default undefined;
