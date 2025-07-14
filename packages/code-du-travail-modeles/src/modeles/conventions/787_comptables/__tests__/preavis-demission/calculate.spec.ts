@@ -26,9 +26,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=CFEA1065D76552B48FA299221688C973.tpdila22v_3?idArticle=KALIARTI000005839444&cidTexte=KALITEXT000005674852&dateTexte=19910731",
         },
       ],
-      expectedNotifications: [
-        "Le contrat de travail peut prévoir une durée plus longue",
-      ],
+      expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . comptables . catégorie professionnelle":
           "'Employés'",
