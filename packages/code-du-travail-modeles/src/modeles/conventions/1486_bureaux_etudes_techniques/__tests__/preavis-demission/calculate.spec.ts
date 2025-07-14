@@ -48,7 +48,9 @@ describe("Test de la fonctionnalité 'calculate' pour la CC 1486 - Préavis de d
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833",
         },
       ],
-      expectedNotifications: [],
+      expectedNotifications: [
+        "L'employeur et le salarié peuvent décider d'une durée plus longue",
+      ],
       situation: {
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle":
           "'Employés, Techniciens ou Agents de maîtrise ETAM'",
@@ -67,7 +69,9 @@ describe("Test de la fonctionnalité 'calculate' pour la CC 1486 - Préavis de d
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833",
         },
       ],
-      expectedNotifications: [],
+      expectedNotifications: [
+        "L'employeur et le salarié peuvent décider d'une durée plus longue",
+      ],
       situation: {
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle":
           "'Employés, Techniciens ou Agents de maîtrise ETAM'",
@@ -86,7 +90,9 @@ describe("Test de la fonctionnalité 'calculate' pour la CC 1486 - Préavis de d
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833",
         },
       ],
-      expectedNotifications: [],
+      expectedNotifications: [
+        "L'employeur et le salarié peuvent décider d'une durée plus longue",
+      ],
       situation: {
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle":
           "'Employés, Techniciens ou Agents de maîtrise ETAM'",
@@ -105,7 +111,9 @@ describe("Test de la fonctionnalité 'calculate' pour la CC 1486 - Préavis de d
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833",
         },
       ],
-      expectedNotifications: [],
+      expectedNotifications: [
+        "L'employeur et le salarié peuvent décider d'une durée plus longue",
+      ],
       situation: {
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle":
           "'Ingénieurs, Cadres'",

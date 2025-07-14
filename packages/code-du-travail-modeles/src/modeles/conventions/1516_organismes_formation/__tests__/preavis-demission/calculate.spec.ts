@@ -13,7 +13,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         },
       ],
       expectedNotifications: [
-        "En cas de Démission, les délais accordés peuvent être très courts si, à la suite de la demande du salarié, l'employeur estime que le départ précipité de ce dernier ne perturbe pas la bonne marche de l'entreprise. Ces délais sont à discuter au cas par cas et ne peuvent, en tout état de cause, être supérieurs à la durée des préavis fixés cidessus en cas de Licenciement",
+        "En cas de démission, les délais accordés peuvent être très courts si, à la suite de la demande du salarié, l'employeur estime que le départ précipité de ce dernier ne perturbe pas la bonne marche de l'entreprise. Ces délais sont à discuter au cas par cas et ne peuvent, en tout état de cause, être supérieurs à la durée des préavis fixés ci-dessus en cas de licenciement.",
       ],
       situation: {
         "contrat salarié . convention collective . organismes de formation . catégorie professionnelle":
@@ -29,7 +29,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         },
       ],
       expectedNotifications: [
-        "En cas de Démission, les délais accordés peuvent être très courts si, à la suite de la demande du salarié, l'employeur estime que le départ précipité de ce dernier ne perturbe pas la bonne marche de l'entreprise. Ces délais sont à discuter au cas par cas et ne peuvent, en tout état de cause, être supérieurs à la durée des préavis fixés cidessus en cas de Licenciement",
+        "En cas de démission, les délais accordés peuvent être très courts si, à la suite de la demande du salarié, l'employeur estime que le départ précipité de ce dernier ne perturbe pas la bonne marche de l'entreprise. Ces délais sont à discuter au cas par cas et ne peuvent, en tout état de cause, être supérieurs à la durée des préavis fixés ci-dessus en cas de licenciement.",
       ],
       situation: {
         "contrat salarié . convention collective . organismes de formation . catégorie professionnelle":
@@ -46,7 +46,9 @@ describe("Test de la fonctionnalité 'calculate'", () => {
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=081E95519848F14B8C138A45AEF8D87F.tplgfr33s_2?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id",
         },
       ],
-      expectedNotifications: [],
+      expectedNotifications: [
+        "En cas de démission, les délais accordés peuvent être très courts si, à la suite de la demande du salarié, l'employeur estime que le départ précipité de ce dernier ne perturbe pas la bonne marche de l'entreprise. Ces délais sont à discuter au cas par cas et ne peuvent, en tout état de cause, être supérieurs à la durée des préavis fixés ci-dessus en cas de licenciement.",
+      ],
       situation: {
         "contrat salarié . convention collective . organismes de formation . catégorie professionnelle":
           "'Employés'",
@@ -62,7 +64,9 @@ describe("Test de la fonctionnalité 'calculate'", () => {
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=081E95519848F14B8C138A45AEF8D87F.tplgfr33s_2?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id",
         },
       ],
-      expectedNotifications: [],
+      expectedNotifications: [
+        "En cas de démission, les délais accordés peuvent être très courts si, à la suite de la demande du salarié, l'employeur estime que le départ précipité de ce dernier ne perturbe pas la bonne marche de l'entreprise. Ces délais sont à discuter au cas par cas et ne peuvent, en tout état de cause, être supérieurs à la durée des préavis fixés ci-dessus en cas de licenciement.",
+      ],
       situation: {
         "contrat salarié . convention collective . organismes de formation . catégorie professionnelle":
           "'Agents de maîtrise ou techniciens'",

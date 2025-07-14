@@ -4,10 +4,11 @@ export type NoticeNoteProps = {
   isList?: boolean;
   numberOfElements: number;
   currentElement?: number;
+  displayUnique?: boolean;
 };
 
 export const NoticeNote = (props: NoticeNoteProps) => {
-  const isUniq = React.useMemo(
+  const isUnique = React.useMemo(
     () => props.numberOfElements === 1,
     [props.numberOfElements]
   );
@@ -15,8 +16,8 @@ export const NoticeNote = (props: NoticeNoteProps) => {
     <>
       {props.isList ? (
         <sup>
-          {isUniq ? (
-            <></>
+          {isUnique ? (
+            <>{props.displayUnique ? <>(1)</> : <></>}</>
           ) : (
             <>
               {Array.from(Array(props.numberOfElements).keys()).map((i) => (
@@ -26,7 +27,13 @@ export const NoticeNote = (props: NoticeNoteProps) => {
           )}
         </sup>
       ) : (
-        <sup>{isUniq ? <></> : <>({props.currentElement}) </>}</sup>
+        <sup>
+          {isUnique ? (
+            <>{props.displayUnique ? <>(1)</> : <></>}</>
+          ) : (
+            <>({props.currentElement}) </>
+          )}
+        </sup>
       )}
     </>
   );

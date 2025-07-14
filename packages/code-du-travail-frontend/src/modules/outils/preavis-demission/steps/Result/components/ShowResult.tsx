@@ -38,6 +38,9 @@ const ShowResult: React.FC<Props> = ({
 
   const unitString = formatUnit(result.unit);
 
+  const displayExample =
+    result.value != null && result.value > 0 && idccNumber !== 3239;
+
   return (
     <>
       <h2 className={fr.cx("fr-mt-3w")}>Préavis de démission</h2>
@@ -62,7 +65,19 @@ const ShowResult: React.FC<Props> = ({
               />
             </>
           ) : (
-            <>il n&apos;y a pas de préavis à effectuer</>
+            <>
+              il n&apos;y a pas de préavis à effectuer
+              <NoticeNote
+                numberOfElements={
+                  displayExample
+                    ? 1 + notifications.length
+                    : notifications.length
+                }
+                currentElement={0}
+                displayUnique={!displayExample}
+                isList
+              />
+            </>
           )}
         </strong>
       </p>
@@ -72,7 +87,7 @@ const ShowResult: React.FC<Props> = ({
           sauf, cas particuliers.
         </p>
       )}
-      {result.value !== 0 && (
+      {displayExample && (
         <NoticeExample
           note={
             <NoticeNote
@@ -91,7 +106,7 @@ const ShowResult: React.FC<Props> = ({
             <div key={index}>
               <NoticeNote
                 numberOfElements={1 + notifications.length}
-                currentElement={1 + 1 + index}
+                currentElement={displayExample ? 2 : 1 + index}
               />
               {notification.description}
             </div>

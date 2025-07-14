@@ -12,9 +12,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F4547682D53DBCC86360428C5C1B153D.tplgfr36s_3?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id",
         },
       ],
-      expectedNotifications: [
-        "Attention, pour les personnels en CDD entre 1 et 6 mois de présence, le préavis est de 8 jours.",
-      ],
+      expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle":
           "'Cadres'",
