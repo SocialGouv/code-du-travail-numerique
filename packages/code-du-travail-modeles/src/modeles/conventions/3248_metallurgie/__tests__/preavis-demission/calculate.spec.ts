@@ -21,9 +21,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
           url: "https://www.legifrance.gouv.fr/juri/id/JURITEXT000043352346",
         },
       ],
-      expectedNotifications: [
-        "Si la lettre de démission a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.",
-      ],
+      expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . métallurgie . groupe":
           "'A ou B'",
@@ -46,9 +44,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
           url: "https://www.legifrance.gouv.fr/juri/id/JURITEXT000043352346",
         },
       ],
-      expectedNotifications: [
-        "Si la lettre de démission a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.",
-      ],
+      expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . métallurgie . groupe": "'C'",
       },
@@ -70,9 +66,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
           url: "https://www.legifrance.gouv.fr/juri/id/JURITEXT000043352346",
         },
       ],
-      expectedNotifications: [
-        "Si la lettre de démission a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.",
-      ],
+      expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . métallurgie . groupe":
           "'D ou E'",
@@ -86,9 +80,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314525?idConteneur=KALICONT000046993250#KALIARTI000046314525",
         },
       ],
-      expectedNotifications: [
-        "Si la lettre de démission a été présentée avant le 01/01/2024, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01/01/2024.",
-      ],
+      expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . métallurgie . groupe":
           "'F, G, H ou I'",

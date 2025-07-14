@@ -28,7 +28,6 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       ],
       expectedNotifications: [
         "Sous réserve de durées plus longues prévues dans le contrat de travail",
-        "Les ingénieurs et cadres pourront quitter leur emploi après 2 mois de préavis sous réserve d'en avoir informé l'employeur au moins 15 jours à l'avance. Dans ce cas, ils n'auront droit, indépendamment de l'indemnité éventuelle de congédiement, qu'à la rémunération correspondant à leur temps effectif de travail.",
       ],
       situation: {
         "contrat salarié . convention collective . transports routiers . catégorie professionnelle":

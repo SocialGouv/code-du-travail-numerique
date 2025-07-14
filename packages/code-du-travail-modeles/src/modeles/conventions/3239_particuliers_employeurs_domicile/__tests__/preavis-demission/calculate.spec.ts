@@ -53,7 +53,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 8, unit: "jours" },
+      expectedResult: { expectedValue: 0, unit: "mois" },
       expectedReferences: [
         {
           article: "Art. L. 423-26 du Code de l'action sociale et des familles",

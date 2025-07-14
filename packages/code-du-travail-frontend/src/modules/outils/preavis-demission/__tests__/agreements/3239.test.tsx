@@ -139,7 +139,9 @@ describe("PreavisDemissionSimulator", () => {
       });
 
       it("should display expected answer", () => {
-        expect(screen.queryAllByText(/8 jours/g)[0]).toBeInTheDocument();
+        expect(
+          screen.queryAllByText(/il n'y a pas de préavis/g)[0]
+        ).toBeInTheDocument();
 
         expect(
           screen.queryAllByText(
