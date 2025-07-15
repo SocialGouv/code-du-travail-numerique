@@ -1,27 +1,32 @@
+import { deepEqualObject } from "src/lib";
 import { StatusStoreInput, StatusStoreError } from "./types";
 
-export const validateStatusStep = (
-  input: StatusStoreInput
-): StatusStoreError => {
-  const errors: StatusStoreError = {};
+export const validateStatusStepWithState = (input: StatusStoreInput) => {
+  const errorState: StatusStoreError = {
+    seriousMisconduct:
+      input.seriousMisconduct === undefined
+        ? "Veuillez indiquer si le licenciement est pour faute grave"
+        : input.seriousMisconduct === true
+          ? "Pas de préavis en cas de faute grave"
+          : undefined,
+    disabledWorker:
+      input.seriousMisconduct === false && input.disabledWorker === undefined
+        ? "Veuillez indiquer si le salarié est travailleur handicapé"
+        : undefined,
+    seniority:
+      input.seriousMisconduct === false &&
+      input.disabledWorker !== undefined &&
+      !input.seniority
+        ? "Veuillez sélectionner l'ancienneté"
+        : undefined,
+  };
 
-  if (input.seriousMisconduct === undefined) {
-    errors.seriousMisconduct =
-      "Veuillez indiquer si le licenciement est pour faute grave";
-  }
-
-  if (input.seriousMisconduct === false && input.disabledWorker === undefined) {
-    errors.disabledWorker =
-      "Veuillez indiquer si le salarié est travailleur handicapé";
-  }
-
-  if (
-    input.seriousMisconduct === false &&
-    input.disabledWorker !== undefined &&
-    !input.seniority
-  ) {
-    errors.seniority = "Veuillez sélectionner l'ancienneté";
-  }
-
-  return errors;
+  return {
+    isValid: deepEqualObject(errorState, {
+      seriousMisconduct: undefined,
+      disabledWorker: undefined,
+      seniority: undefined,
+    }),
+    errorState,
+  };
 };

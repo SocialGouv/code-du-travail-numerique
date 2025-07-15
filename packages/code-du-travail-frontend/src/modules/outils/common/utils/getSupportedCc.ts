@@ -25,6 +25,9 @@ const getSupportedCc = (
     case PublicodesSimulator.INDEMNITE_PRECARITE:
       key = "indemnitePrecarite";
       break;
+    case PublicodesSimulator.PREAVIS_LICENCIEMENT:
+      key = "preavisLicenciement";
+      break;
     default:
       throw new Error(
         `Unsupported simulator: ${simulator}. Supported simulators are: ${Object.values(

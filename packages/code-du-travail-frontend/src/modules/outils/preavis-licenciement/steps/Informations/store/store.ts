@@ -1,100 +1,160 @@
-import { create } from "zustand";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { InformationsStoreSlice } from "./types";
-import { validateInformationsStep } from "./validator";
+import { validateInformationsStepWithState } from "./validator";
+import { StoreSliceWrapperPreavisLicenciement } from "../../store";
 
-export const createInformationsStore = () =>
-  create<InformationsStoreSlice>((set, get) => ({
-    informationsData: {
-      input: {
-        questions: undefined,
-        notificationDate: undefined,
-        dismissalDate: undefined,
-        salary: undefined,
-        additionalInfo: undefined,
-      },
-      error: {},
-      hasBeenSubmit: false,
-      isStepValid: true,
-      publicodes: {},
-    },
-    informationsFunction: {
-      onQuestionsChange: (questions: any) => {
-        set((state) => ({
-          informationsData: {
-            ...state.informationsData,
-            input: { ...state.informationsData.input, questions },
-          },
-        }));
-      },
-      onNotificationDateChange: (date: string) => {
-        set((state) => ({
-          informationsData: {
-            ...state.informationsData,
-            input: { ...state.informationsData.input, notificationDate: date },
-          },
-        }));
-      },
-      onDismissalDateChange: (date: string) => {
-        set((state) => ({
-          informationsData: {
-            ...state.informationsData,
-            input: { ...state.informationsData.input, dismissalDate: date },
-          },
-        }));
-      },
-      onSalaryChange: (salary: string) => {
-        set((state) => ({
-          informationsData: {
-            ...state.informationsData,
-            input: { ...state.informationsData.input, salary },
-          },
-        }));
-      },
-      onAdditionalInfoChange: (info: string) => {
-        set((state) => ({
-          informationsData: {
-            ...state.informationsData,
-            input: { ...state.informationsData.input, additionalInfo: info },
-          },
-        }));
-      },
-      onNextStep: () => {
-        const { input } = get().informationsData;
-        const errors = validateInformationsStep(input);
+const initialState = {
+  input: {
+    questions: undefined,
+    notificationDate: undefined,
+    dismissalDate: undefined,
+    salary: undefined,
+    additionalInfo: undefined,
+  },
+  error: {},
+  hasBeenSubmit: false,
+  isStepValid: true,
+  publicodes: {},
+};
 
-        const isValid = Object.keys(errors).length === 0;
-        set((state) => ({
+const createInformationsStore: StoreSliceWrapperPreavisLicenciement<
+  InformationsStoreSlice
+> = (set, get) => ({
+  informationsData: { ...initialState },
+  informationsFunction: {
+    onQuestionsChange: (questions: any) => {
+      set((state) => {
+        const newInput = { ...state.informationsData.input, questions };
+        const { errorState, isValid } =
+          validateInformationsStepWithState(newInput);
+
+        return {
+          ...state,
           informationsData: {
             ...state.informationsData,
-            error: errors,
-            hasBeenSubmit: !isValid,
+            input: newInput,
+            error: errorState,
             isStepValid: isValid,
           },
-        }));
+        };
+      });
+    },
+    onNotificationDateChange: (date: string) => {
+      set((state) => {
+        const newInput = {
+          ...state.informationsData.input,
+          notificationDate: date,
+        };
+        const { errorState, isValid } =
+          validateInformationsStepWithState(newInput);
 
-        return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
-      },
-      shouldSkipStep: () => {
-        // Logic to determine if this step should be skipped
-        return false;
-      },
-      resetStep: () => {
-        set((state) => ({
+        return {
+          ...state,
           informationsData: {
             ...state.informationsData,
-            input: {
-              questions: undefined,
-              notificationDate: undefined,
-              dismissalDate: undefined,
-              salary: undefined,
-              additionalInfo: undefined,
-            },
-            error: {},
-            hasBeenSubmit: false,
-            isStepValid: true,
+            input: newInput,
+            error: errorState,
+            isStepValid: isValid,
           },
-        }));
-      },
+        };
+      });
     },
-  }));
+    onDismissalDateChange: (date: string) => {
+      set((state) => {
+        const newInput = {
+          ...state.informationsData.input,
+          dismissalDate: date,
+        };
+        const { errorState, isValid } =
+          validateInformationsStepWithState(newInput);
+
+        return {
+          ...state,
+          informationsData: {
+            ...state.informationsData,
+            input: newInput,
+            error: errorState,
+            isStepValid: isValid,
+          },
+        };
+      });
+    },
+    onSalaryChange: (salary: string) => {
+      set((state) => {
+        const newInput = { ...state.informationsData.input, salary };
+        const { errorState, isValid } =
+          validateInformationsStepWithState(newInput);
+
+        return {
+          ...state,
+          informationsData: {
+            ...state.informationsData,
+            input: newInput,
+            error: errorState,
+            isStepValid: isValid,
+          },
+        };
+      });
+    },
+    onAdditionalInfoChange: (info: string) => {
+      set((state) => {
+        const newInput = {
+          ...state.informationsData.input,
+          additionalInfo: info,
+        };
+        const { errorState, isValid } =
+          validateInformationsStepWithState(newInput);
+
+        return {
+          ...state,
+          informationsData: {
+            ...state.informationsData,
+            input: newInput,
+            error: errorState,
+            isStepValid: isValid,
+          },
+        };
+      });
+    },
+    onNextStep: () => {
+      const { input } = get().informationsData;
+      const { errorState, isValid } = validateInformationsStepWithState(input);
+
+      set((state) => ({
+        ...state,
+        informationsData: {
+          ...state.informationsData,
+          error: errorState,
+          hasBeenSubmit: !isValid,
+          isStepValid: isValid,
+        },
+      }));
+
+      return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
+    },
+    shouldSkipStep: () => {
+      // Logic to determine if this step should be skipped
+      return false;
+    },
+    resetStep: () => {
+      set((state) => ({
+        ...state,
+        informationsData: {
+          ...state.informationsData,
+          input: {
+            questions: undefined,
+            notificationDate: undefined,
+            dismissalDate: undefined,
+            salary: undefined,
+            additionalInfo: undefined,
+          },
+          error: {},
+          hasBeenSubmit: false,
+          isStepValid: true,
+        },
+      }));
+    },
+  },
+});
+
+export { createInformationsStore };

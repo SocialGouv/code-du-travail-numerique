@@ -1,75 +1,108 @@
-import { create } from "zustand";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import type { StatusStoreSlice } from "./types";
-import { validateStatusStep } from "./validator";
+import { validateStatusStepWithState } from "./validator";
+import { StoreSliceWrapperPreavisLicenciement } from "../../store";
 
-export const createStatusStore = () =>
-  create<StatusStoreSlice>((set, get) => ({
-    statusData: {
-      input: {
-        seriousMisconduct: undefined,
-        disabledWorker: undefined,
-        seniority: undefined,
-      },
-      error: {},
-      hasBeenSubmit: false,
-      isStepValid: true,
-    },
-    statusFunction: {
-      onSeriousMisconductChange: (value: boolean) => {
-        set((state) => ({
-          statusData: {
-            ...state.statusData,
-            input: { ...state.statusData.input, seriousMisconduct: value },
-          },
-        }));
-      },
-      onDisabledWorkerChange: (value: boolean) => {
-        set((state) => ({
-          statusData: {
-            ...state.statusData,
-            input: { ...state.statusData.input, disabledWorker: value },
-          },
-        }));
-      },
-      onSeniorityChange: (value: { value: string; label: string }) => {
-        set((state) => ({
-          statusData: {
-            ...state.statusData,
-            input: { ...state.statusData.input, seniority: value },
-          },
-        }));
-      },
-      onNextStep: () => {
-        const { input } = get().statusData;
-        const errors = validateStatusStep(input);
+const initialState = {
+  input: {
+    seriousMisconduct: undefined,
+    disabledWorker: undefined,
+    seniority: undefined,
+  },
+  error: {},
+  hasBeenSubmit: false,
+  isStepValid: true, // Par défaut, l'étape est valide pour permettre la navigation
+};
 
-        const isValid = Object.keys(errors).length === 0;
-        set((state) => ({
+const createStatusStore: StoreSliceWrapperPreavisLicenciement<
+  StatusStoreSlice
+> = (set, get) => ({
+  statusData: { ...initialState },
+  statusFunction: {
+    onSeriousMisconductChange: (value: boolean) => {
+      set((state) => {
+        const newInput = {
+          ...state.statusData.input,
+          seriousMisconduct: value,
+        };
+        const { errorState, isValid } = validateStatusStepWithState(newInput);
+
+        return {
+          ...state,
           statusData: {
             ...state.statusData,
-            error: errors,
-            hasBeenSubmit: !isValid,
+            input: newInput,
+            error: errorState,
             isStepValid: isValid,
           },
-        }));
+        };
+      });
+    },
+    onDisabledWorkerChange: (value: boolean) => {
+      set((state) => {
+        const newInput = { ...state.statusData.input, disabledWorker: value };
+        const { errorState, isValid } = validateStatusStepWithState(newInput);
 
-        return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
-      },
-      resetStep: () => {
-        set((state) => ({
+        return {
+          ...state,
           statusData: {
             ...state.statusData,
-            input: {
-              seriousMisconduct: undefined,
-              disabledWorker: undefined,
-              seniority: undefined,
-            },
-            error: {},
-            hasBeenSubmit: false,
-            isStepValid: false,
+            input: newInput,
+            error: errorState,
+            isStepValid: isValid,
           },
-        }));
-      },
+        };
+      });
     },
-  }));
+    onSeniorityChange: (value: { value: string; label: string }) => {
+      set((state) => {
+        const newInput = { ...state.statusData.input, seniority: value };
+        const { errorState, isValid } = validateStatusStepWithState(newInput);
+
+        return {
+          ...state,
+          statusData: {
+            ...state.statusData,
+            input: newInput,
+            error: errorState,
+            isStepValid: isValid,
+          },
+        };
+      });
+    },
+    onNextStep: () => {
+      const { input } = get().statusData;
+      const { errorState, isValid } = validateStatusStepWithState(input);
+
+      set((state) => ({
+        ...state,
+        statusData: {
+          ...state.statusData,
+          error: errorState,
+          hasBeenSubmit: !isValid,
+          isStepValid: isValid,
+        },
+      }));
+
+      return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
+    },
+    resetStep: () => {
+      set((state) => ({
+        ...state,
+        statusData: {
+          ...state.statusData,
+          input: {
+            seriousMisconduct: undefined,
+            disabledWorker: undefined,
+            seniority: undefined,
+          },
+          error: {},
+          hasBeenSubmit: false,
+          isStepValid: true, // Reset à true pour permettre la navigation
+        },
+      }));
+    },
+  },
+});
+
+export { createStatusStore };

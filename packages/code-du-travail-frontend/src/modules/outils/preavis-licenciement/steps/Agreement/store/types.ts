@@ -1,10 +1,12 @@
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
+import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
 
 export type AgreementStoreInput = {
-  route?: string;
+  route?: AgreementRoute;
   agreement?: any;
   enterprise?: any;
   hasNoEnterpriseSelected?: boolean;
+  informationError?: boolean;
 };
 
 export type AgreementStoreError = {
@@ -28,9 +30,13 @@ export type AgreementStoreData = StepData<
 };
 
 export type AgreementStoreFunction = {
-  onRouteChange: (value: string) => void;
+  onInitAgreementPage: () => void;
+  onRouteChange: (value: AgreementRoute) => void;
   onAgreementChange: (agreement: any, enterprise?: any) => void;
+  setHasNoEnterpriseSelected: (value: boolean) => void;
   onNextStep: () => ValidationResponse;
+  onAgreementSearch: (data: any) => void;
+  onEnterpriseSearch: (data: any) => void;
   resetStep: () => void;
 };
 
