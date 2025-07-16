@@ -54,7 +54,7 @@ contrat salarié . convention collective . bricolage . indemnité de licenciemen
   unité: €
   arrondi: 2 décimales
   références:
-    Article 10 de l'Annexe Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005870788?idConteneur=KALICONT000005635871
+    Article 10 de l'annexe Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005870788?idConteneur=KALICONT000005635871
   cdtn:
     formule:
       formula: ($formule) + (50% * (2% * Sref * A))
