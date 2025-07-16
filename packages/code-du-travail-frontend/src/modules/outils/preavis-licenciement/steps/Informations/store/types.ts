@@ -1,47 +1,44 @@
+import {
+  PublicodesInstance,
+  PublicodesSimulator,
+  RuleType,
+} from "@socialgouv/modeles-social";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
+import { PublicodesInformation } from "src/modules/outils/indemnite-depart/steps/Informations/store";
 
 export type InformationsStoreInput = {
-  questions?: any;
-  notificationDate?: string;
-  dismissalDate?: string;
-  salary?: string;
-  additionalInfo?: string;
+  publicodesInformations: Array<PublicodesInformation>;
+  hasNoMissingQuestions: boolean;
+  informationError: boolean;
 };
 
 export type InformationsStoreError = {
-  questions?: string;
-  notificationDate?: string;
-  dismissalDate?: string;
-  salary?: string;
-  additionalInfo?: string;
+  errorInformations: Record<string, string>;
+  errorPublicodes?: string;
+  errorNote?: string;
 };
 
-export type StepData<Input, Error> = {
-  input: Input;
-  error: Error;
+export type InformationsStoreData = {
+  input: InformationsStoreInput;
+  error: InformationsStoreError;
   hasBeenSubmit: boolean;
   isStepValid: boolean;
 };
 
-export type InformationsStoreData = StepData<
-  InformationsStoreInput,
-  InformationsStoreError
-> & {
-  publicodes: any;
-};
-
-export type InformationsStoreFunction = {
-  onQuestionsChange: (questions: any) => void;
-  onNotificationDateChange: (date: string) => void;
-  onDismissalDateChange: (date: string) => void;
-  onSalaryChange: (salary: string) => void;
-  onAdditionalInfoChange: (info: string) => void;
+export type InformationsStoreFn = {
+  onInformationsChange: (
+    questionKey: string,
+    value: string,
+    type: RuleType | undefined
+  ) => void;
+  generatePublicodesQuestions: () => boolean;
   onNextStep: () => ValidationResponse;
   shouldSkipStep: () => boolean;
-  resetStep: () => void;
 };
 
 export type InformationsStoreSlice = {
-  informationsData: InformationsStoreData;
-  informationsFunction: InformationsStoreFunction;
+  informationsData: InformationsStoreData & {
+    publicodes?: PublicodesInstance<PublicodesSimulator.PREAVIS_LICENCIEMENT>;
+  };
+  informationsFunction: InformationsStoreFn;
 };

@@ -2,11 +2,11 @@ import { createStore as create, StoreApi, useStore } from "zustand";
 import { createContext } from "react";
 import { createStatusStore, StatusStoreSlice } from "./Status/store";
 import { createAgreementStore, AgreementStoreSlice } from "./Agreement/store";
+import { createResultStore, ResultStoreSlice } from "./Result/store";
 import {
   createInformationsStore,
   InformationsStoreSlice,
 } from "./Informations/store";
-import { createResultStore, ResultStoreSlice } from "./Result/store";
 
 export type StoreSliceWrapperPreavisLicenciement<
   T extends object,

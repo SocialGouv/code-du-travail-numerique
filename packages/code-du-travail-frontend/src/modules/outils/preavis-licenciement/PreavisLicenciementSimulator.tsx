@@ -16,9 +16,9 @@ import {
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { SimulatorLayout } from "../common/components/SimulatorLayout";
 import StepResult from "./steps/Result";
-import StepInformations from "./steps/Informations";
 import StepAgreement from "./steps/Agreement";
 import StepStatus from "./steps/Status";
+import StepInformations from "./steps/Informations";
 
 enum PreavisLicenciementStepName {
   Intro = "start",

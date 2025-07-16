@@ -6,4 +6,3 @@ export type {
   AgreementStoreInput,
   AgreementStoreError,
 } from "./types";
-export { validateAgreementStep } from "./validator";

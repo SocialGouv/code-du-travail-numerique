@@ -6,4 +6,3 @@ export type {
   StatusStoreInput,
   StatusStoreError,
 } from "./types";
-export { validateStatusStep } from "./validator";
