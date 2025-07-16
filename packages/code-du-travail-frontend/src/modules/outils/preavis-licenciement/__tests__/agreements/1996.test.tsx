@@ -51,7 +51,7 @@ describe("DureePreavisLicenciement", () => {
 
       expect(
         screen.queryAllByText(
-          /Article 6 des dispositions particulières aux cadres/
+          /article 6 des dispositions particulières aux cadres/
         )[0]
       ).toBeInTheDocument();
     });

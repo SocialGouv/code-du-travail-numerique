@@ -29,13 +29,11 @@ export const validateStep = (
     errorPublicodes: state.informationError
       ? "Une erreur liée au moteur de calcul nous empêche de continuer la simulation. Veuillez vérifier les informations saisies ou rafraîchir la page si le problème persiste."
       : undefined,
-    errorNote: note,
   };
 
   const isValid = deepEqualObject(errorState, {
     errorInformations: {},
     errorPublicodes: undefined,
-    errorNote: undefined,
   });
   return { isValid, errorState };
 };

@@ -9,7 +9,6 @@ exports[`<StatsDisplay /> should match snapshot 1`] = `
     <p
       class="fr-callout__text"
     >
-       
       <span
         class="lg:ta_right lg:d_block ta_left fr-mt-4v fr-m-0 fr-h2"
       >
@@ -25,7 +24,6 @@ exports[`<StatsDisplay /> should match snapshot 1`] = `
       >
         Contenus référencés
       </span>
-       
     </p>
   </div>
 </div>

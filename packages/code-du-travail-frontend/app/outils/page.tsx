@@ -36,7 +36,6 @@ async function OutilsPage() {
 }
 
 const getTools = async (): Promise<ToolItem[]> => {
-  // // id, description, metaDescription, icon, title, link
   const tools = await fetchTools([
     "slug",
     "id",

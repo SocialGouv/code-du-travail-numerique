@@ -1,4 +1,4 @@
-import { byTestId, byText, byRole } from "testing-library-selector";
+import { byTestId, byText } from "testing-library-selector";
 
 export const ui = {
   introduction: {

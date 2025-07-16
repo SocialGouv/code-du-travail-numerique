@@ -299,7 +299,9 @@ export const EnterpriseAgreementSearchInput = ({
               fiche de paie du salarié)
             </>
           }
-          label={<>Nom de votre entreprise ou numéro Siren/Siret</>}
+          label={
+            <>Nom de votre entreprise ou numéro Siren/Siret (obligatoire)</>
+          }
           state={getInputState()}
           stateRelatedMessage={getStateMessage()}
           nativeInputProps={{

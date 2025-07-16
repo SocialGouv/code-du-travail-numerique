@@ -93,7 +93,6 @@ exports[`<FeedbackContent /> should match snapshot for negative 1`] = `
       </div>
     </div>
     <div
-      aria-live="assertive"
       class="fr-messages-group"
       id="fr-fieldset-checkbox-:r2:-messages"
     >

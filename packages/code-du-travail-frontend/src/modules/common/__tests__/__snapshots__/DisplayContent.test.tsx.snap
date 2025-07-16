@@ -649,11 +649,13 @@ exports[`DisplayContent Infographic should replace div with infographic class to
               Télécharger l'infographie
             </a>
           </h3>
-          <p
+          <div
             class="fr-tile__detail"
           >
-            Format PDF - 3200Ko
-          </p>
+            <p>
+              Format PDF - 3200Ko
+            </p>
+          </div>
         </div>
       </div>
       <div

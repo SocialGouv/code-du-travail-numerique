@@ -1,5 +1,5 @@
 import { Introduction } from "./Introduction";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Questionnaire } from "./Questionnaire";
 import { QuestionnaireAdvanced } from "./QuestionnaireAdvanced";
 import { QuestionnaireEnd } from "./QuestionnaireEnd";
@@ -17,6 +17,24 @@ export const Feedback = ({ category }: Props): JSX.Element => {
   >();
   const [position, setPosition] = useState(0);
   const [bodyPosition, setBodyPosition] = useState(0);
+  const refQuestionnaire = useRef<HTMLHeadingElement>(null);
+  const refQuestionnaireAdvanced = useRef<HTMLHeadingElement>(null);
+  const refQuestionnaireEnd = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    switch (status) {
+      case "questionnaire":
+        refQuestionnaire.current?.focus();
+        break;
+      case "questionnaireAdvanced":
+        refQuestionnaireAdvanced.current?.focus();
+        break;
+      case "questionnaireEnd":
+        refQuestionnaireEnd.current?.focus();
+        break;
+    }
+  }, [status]);
+
   return (
     <div className={wrapper}>
       <div className={`${fr.cx("fr-m-4v")} ${block}`}>
@@ -41,6 +59,7 @@ export const Feedback = ({ category }: Props): JSX.Element => {
           >
             {status === "questionnaire" && (
               <Questionnaire
+                ref={refQuestionnaire}
                 onClick={() => {
                   setStatus("questionnaireAdvanced");
                 }}
@@ -49,6 +68,7 @@ export const Feedback = ({ category }: Props): JSX.Element => {
             )}
             {status === "questionnaireAdvanced" && (
               <QuestionnaireAdvanced
+                ref={refQuestionnaireAdvanced}
                 onClick={() => {
                   setStatus("questionnaireEnd");
                   window.scrollTo(0, position - bodyPosition - 220);
@@ -56,7 +76,9 @@ export const Feedback = ({ category }: Props): JSX.Element => {
                 category={category}
               />
             )}
-            {status === "questionnaireEnd" && <QuestionnaireEnd />}
+            {status === "questionnaireEnd" && (
+              <QuestionnaireEnd ref={refQuestionnaireEnd} />
+            )}
           </div>
         )}
       </div>

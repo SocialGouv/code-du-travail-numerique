@@ -20,6 +20,7 @@ export const LocationSearchInput = ({
   defaultValue,
 }: Props) => {
   const [postalCode, setPostalCode] = useState<string | undefined>();
+
   function itemToString(item: ApiGeoResult | null) {
     return item
       ? `${item.nom} (${postalCode ?? (item.codesPostaux.length > 1 ? item.codeDepartement : item.codesPostaux[0])})`
@@ -37,7 +38,7 @@ export const LocationSearchInput = ({
       displayLabel={itemToString}
       search={searchCities}
       hintText={"Ex: 75007"}
-      label={<>Code postal ou Ville (optionnel)</>}
+      label={<>Code postal ou Ville</>}
       state={"default"}
       dataTestId={"locationSearchAutocomplete"}
       displayNoResult

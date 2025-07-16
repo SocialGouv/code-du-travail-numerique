@@ -50,7 +50,7 @@ describe("DureePreavisLicenciement", () => {
       expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
       expect(
-        screen.queryAllByText(/Article 9 de l'avenant « Maîtrise »/)[0]
+        screen.queryAllByText(/article 9 de l'avenant « Maîtrise »/)[0]
       ).toBeInTheDocument();
     });
   });

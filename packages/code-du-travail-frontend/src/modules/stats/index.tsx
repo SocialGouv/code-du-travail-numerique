@@ -1,6 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { StatsDisplay } from "./StatsDisplay";
 import { Resume } from "./Resume";
+import { css } from "@styled-system/css";
 
 type StatsProps = {
   nbDocuments: number;
@@ -15,23 +16,23 @@ export const Stats = (props: StatsProps) => (
       <h1 className={fr.cx("fr-mt-0", "fr-mb-6w")}>
         Statistiques d&apos;utilisation
       </h1>
-      <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
-        <div className={fr.cx("fr-col-12", "fr-col-lg-3")}>
+      <ul className={`${fr.cx("fr-grid-row", "fr-grid-row--gutters")} ${ul}`}>
+        <li className={fr.cx("fr-col-12", "fr-col-lg-3")}>
           <StatsDisplay
             title="Contenus référencés"
             metric={props.nbDocuments}
           />
-        </div>
-        <div className={fr.cx("fr-col-12", "fr-col-lg-3")}>
+        </li>
+        <li className={fr.cx("fr-col-12", "fr-col-lg-3")}>
           <StatsDisplay title="Visites" metric={props.nbVisits} />
-        </div>
-        <div className={fr.cx("fr-col-12", "fr-col-lg-3")}>
+        </li>
+        <li className={fr.cx("fr-col-12", "fr-col-lg-3")}>
           <StatsDisplay title="Recherches" metric={props.nbSearches} />
-        </div>
-        <div className={fr.cx("fr-col-12", "fr-col-lg-3")}>
+        </li>
+        <li className={fr.cx("fr-col-12", "fr-col-lg-3")}>
           <StatsDisplay title="Consultations" metric={props.nbPageViews} />
-        </div>
-      </div>
+        </li>
+      </ul>
       <p className={fr.cx("fr-mt-6w")}>
         Statistiques d’utilisation depuis le 01/01/2020
       </p>
@@ -51,3 +52,7 @@ export const Stats = (props: StatsProps) => (
     </div>
   </div>
 );
+
+const ul = css({
+  listStyle: "none!",
+});
