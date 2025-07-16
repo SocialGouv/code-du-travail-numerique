@@ -1,7 +1,5 @@
 import type {
   CC0016SeniorityProps,
-  CC650SeniorityProps,
-  CC650SeniorityRequiredProps,
   CC1672SeniorityProps,
   CC3248SeniorityProps,
   CC3248SeniorityRequiredProps,
@@ -50,9 +48,7 @@ export interface ISeniority<T extends SupportedCc> {
 
 export type SeniorityRequiredProps<T> = T extends SupportedCc.IDCC3248
   ? CC3248SeniorityRequiredProps
-  : T extends SupportedCc.IDCC650
-    ? CC650SeniorityRequiredProps
-    : DefaultSeniorityRequiredProps;
+  : DefaultSeniorityRequiredProps;
 
 export type SeniorityProps<T> = T extends SupportedCc.IDCC0016
   ? CC0016SeniorityProps
@@ -60,9 +56,7 @@ export type SeniorityProps<T> = T extends SupportedCc.IDCC0016
     ? CC1672SeniorityProps
     : T extends SupportedCc.IDCC3248
       ? CC3248SeniorityProps
-      : T extends SupportedCc.IDCC650
-        ? CC650SeniorityProps
-        : DefaultSeniorityProps;
+      : DefaultSeniorityProps;
 
 export type SeniorityResult = {
   value: number;

@@ -12,7 +12,6 @@ import {
   CalculateurIndemniteLicenciement,
   DismissalProcess,
   DureePreavisLicenciement,
-  SimulateurIndemnitePrecarite,
 } from "../../src/outils";
 import Metas from "../../src/common/Metas";
 import { SITE_URL } from "../../src/config";
@@ -22,7 +21,6 @@ const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
   "procedure-licenciement": DismissalProcess,
   "indemnite-licenciement": CalculateurIndemniteLicenciement,
-  "indemnite-precarite": SimulateurIndemnitePrecarite,
   "convention-collective": AgreementSearch,
 };
 const allowedSlugs = Object.keys(toolsBySlug);

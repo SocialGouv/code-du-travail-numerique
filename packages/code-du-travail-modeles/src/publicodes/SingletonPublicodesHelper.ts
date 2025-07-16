@@ -1,5 +1,6 @@
 import {
   indemniteLicenciementModeles,
+  indemnitePrecariteModeles,
   preavisRetraiteModeles,
   ruptureConventionnelleModeles,
   preavisDemissionModeles,
@@ -7,6 +8,7 @@ import {
 import type { PublicodesInstance } from ".";
 import {
   IndemniteLicenciementPublicodes,
+  IndemnitePrecaritePublicodes,
   PreavisDemissionPublicodes,
   PreavisRetraitePublicodes,
   PublicodesSimulator,
@@ -64,6 +66,8 @@ class SingletonPublicodesHelper<T extends PublicodesSimulator> {
         return new RuptureConventionnellePublicodes(rules, idcc);
       case PublicodesSimulator.PREAVIS_DEMISSION:
         return new PreavisDemissionPublicodes(rules, idcc);
+      case PublicodesSimulator.INDEMNITE_PRECARITE:
+        return new IndemnitePrecaritePublicodes(rules, idcc);
       default:
         throw new Error("Simulator not supported");
     }
@@ -81,6 +85,8 @@ class SingletonPublicodesHelper<T extends PublicodesSimulator> {
         return ruptureConventionnelleModeles;
       case PublicodesSimulator.PREAVIS_DEMISSION:
         return preavisDemissionModeles;
+      case PublicodesSimulator.INDEMNITE_PRECARITE:
+        return indemnitePrecariteModeles;
       default:
         throw new Error("Simulator not supported");
     }
