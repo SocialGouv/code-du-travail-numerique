@@ -1,16 +1,14 @@
 "use client";
 
-import { startReactDsfr } from "@codegouvfr/react-dsfr/next-appdir";
+import { StartDsfrOnHydration } from "@codegouvfr/react-dsfr/next-app-router";
 import Link from "../common/Link";
 
-declare module "@codegouvfr/react-dsfr/next-appdir" {
+declare module "@codegouvfr/react-dsfr/next-app-router" {
   interface RegisterLink {
     Link: typeof Link;
   }
 }
 
-startReactDsfr({ defaultColorScheme: "light", Link, doCheckNonce: true });
-
 export function StartDsfrLight() {
-  return null;
+  return <StartDsfrOnHydration />;
 }
