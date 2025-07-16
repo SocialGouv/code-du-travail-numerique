@@ -82,7 +82,7 @@ describe("Fiche MT content parser", () => {
     const src = `<p>La qualification de «&nbsp;démission&nbsp;» est réservée à la rupture, à l’initiative du salarié, de son contrat de travail à durée indéterminée. <strong>Les salariés en CDD peuvent mettre fin par anticipation, à leur contrat de travail dans certaines situations</strong> <a href="/le-contrat-duree-determinee-cdd" data-entity-type="node" data-entity-uuid="d223707a-504b-4740-8a97-618ce94b1175" data-entity-substitution="canonical" title="Le contrat à durée déterminée (CDD)">limitativement énumérées</a>.</p>`;
     const { container } = render(<ContentParser>{src}</ContentParser>);
     expect(container.innerHTML).toBe(
-      `<p>La qualification de «&nbsp;démission&nbsp;» est réservée à la rupture, à l’initiative du salarié, de son contrat de travail à durée indéterminée. <strong>Les salariés en CDD peuvent mettre fin par anticipation, à leur contrat de travail dans certaines situations</strong> <a href=\"/le-contrat-duree-determinee-cdd\" title=\"Le contrat à durée déterminée (CDD)\">limitativement énumérées</a>.</p>`
+      `<p>La qualification de «&nbsp;démission&nbsp;» est réservée à la rupture, à l’initiative du salarié, de son contrat de travail à durée indéterminée. <strong>Les salariés en CDD peuvent mettre fin par anticipation, à leur contrat de travail dans certaines situations</strong> <a href=\"/le-contrat-duree-determinee-cdd\" title=\"Le contrat à durée déterminée (CDD) - nouvelle fenêtre\">limitativement énumérées</a>.</p>`
     );
   });
 
@@ -91,6 +91,22 @@ describe("Fiche MT content parser", () => {
     const { container } = render(<ContentParser>{src}</ContentParser>);
     expect(container.innerHTML).toBe(
       `<ul><li><span><strong>À</strong></span><strong> sa demande et après acceptation de l'employeur</strong> (un écrit est conseillé). Dans ce cas, l'indemnité de préavis n'est pas due&nbsp;;</li><li><span><strong>À</strong> </span><strong>la seule initiative de l’employeu</strong>r. Celui-ci doit néanmoins verser l’indemnité de préavis.</li></ul>`
+    );
+  });
+
+  test("Should add nouvelle fenêtre on link", () => {
+    const src = `<p><a href="/le-contrat-duree-determinee-cdd" data-entity-type="node" data-entity-uuid="d223707a-504b-4740-8a97-618ce94b1175" data-entity-substitution="canonical" title="Le contrat à durée déterminée (CDD)">limitativement énumérées</a>.</p>`;
+    const { container } = render(<ContentParser>{src}</ContentParser>);
+    expect(container.innerHTML).toBe(
+      `<p><a href=\"/le-contrat-duree-determinee-cdd\" title=\"Le contrat à durée déterminée (CDD) - nouvelle fenêtre\">limitativement énumérées</a>.</p>`
+    );
+  });
+
+  test("Should have only one nouvelle fenêtre on link if already set", () => {
+    const src = `<p><a href="/le-contrat-duree-determinee-cdd" data-entity-type="node" data-entity-uuid="d223707a-504b-4740-8a97-618ce94b1175" data-entity-substitution="canonical" title="Le contrat à durée déterminée (CDD) - nouvelle fenêtre">limitativement énumérées</a>.</p>`;
+    const { container } = render(<ContentParser>{src}</ContentParser>);
+    expect(container.innerHTML).toBe(
+      `<p><a href=\"/le-contrat-duree-determinee-cdd\" title=\"Le contrat à durée déterminée (CDD) - nouvelle fenêtre\">limitativement énumérées</a>.</p>`
     );
   });
 });
