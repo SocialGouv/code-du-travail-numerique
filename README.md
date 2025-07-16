@@ -1,4 +1,4 @@
-# Code du travail numérique
+# Code du travail numérique - Test accessbilité
 
 ![Quality Status](https://github.com/SocialGouv/code-du-travail-numerique/actions/workflows/quality.yml/badge.svg)
 
