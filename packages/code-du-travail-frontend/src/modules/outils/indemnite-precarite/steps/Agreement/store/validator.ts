@@ -1,5 +1,13 @@
+<<<<<<<< HEAD:packages/code-du-travail-frontend/src/modules/outils/indemnite-precarite/steps/Agreement/store/validator.ts
 import { deepEqualObject } from "src/lib";
+|||||||| 0ed33d3ab:packages/code-du-travail-frontend/src/outils/PreavisRetraite/steps/Agreement/store/validator.ts
+import { deepEqualObject } from "../../../../../lib";
+========
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
+import { deepEqualObject } from "src/lib";
+>>>>>>>> dev:packages/code-du-travail-frontend/src/modules/outils/preavis-demission/steps/Agreement/store/validator.ts
 import { AgreementStoreError, AgreementStoreInput } from "./types";
+import isCcFullySupported from "src/modules/outils/common/utils/isCcFullySupported";
 
 export const validateStep = (state: AgreementStoreInput) => {
   const errorState: AgreementStoreError = {
@@ -22,6 +30,14 @@ export const validateStep = (state: AgreementStoreInput) => {
     errorPublicodes: state.informationError
       ? "Une erreur liée au moteur de calcul nous empêche de continuer la simulation. Veuillez vérifier les informations saisies ou rafraîchir la page si le problème persiste."
       : undefined,
+    unsupportedAgreement:
+      state.agreement &&
+      !isCcFullySupported(
+        state.agreement?.num,
+        PublicodesSimulator.PREAVIS_DEMISSION
+      )
+        ? "La simulation ne peut pas se poursuivre avec cette convention collective"
+        : undefined,
   };
   return {
     isValid: deepEqualObject(errorState, {
@@ -29,6 +45,7 @@ export const validateStep = (state: AgreementStoreInput) => {
       agreement: undefined,
       enterprise: undefined,
       errorPublicodes: undefined,
+      unsupportedAgreement: undefined,
     }),
     errorState,
   };

@@ -67,7 +67,6 @@ exports[`<Home /> should match snapshot 1`] = `
                         <input
                           aria-autocomplete="list"
                           aria-expanded="false"
-                          aria-labelledby="downshift-0-label"
                           autocomplete="off"
                           class="fr-input"
                           data-testid="search-input"
@@ -236,11 +235,13 @@ exports[`<Home /> should match snapshot 1`] = `
                         Tool Title
                       </a>
                     </h3>
-                    <p
+                    <div
                       class="fr-tile__desc"
                     >
-                      Tool description
-                    </p>
+                      <p>
+                        Tool description
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <div

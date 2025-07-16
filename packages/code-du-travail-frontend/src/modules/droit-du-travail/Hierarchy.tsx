@@ -3,8 +3,8 @@
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { createModal } from "@codegouvfr/react-dsfr/Modal";
-import { css } from "@styled-system/css";
 import ExpandableCard from "./ExpandableCard";
+import { useIsModalOpen } from "@codegouvfr/react-dsfr/Modal/useIsModalOpen";
 
 const modal13Matieres = createModal({
   id: "modal-13-matieres",
@@ -17,6 +17,19 @@ const modal4Matieres = createModal({
 });
 
 const Hierarchy = () => {
+  const ref13Matieres = React.useRef<HTMLAnchorElement | null>(null);
+  const ref4Matieres = React.useRef<HTMLAnchorElement | null>(null);
+  useIsModalOpen(modal13Matieres, {
+    onConceal: () => {
+      ref13Matieres?.current?.focus();
+    },
+  });
+  useIsModalOpen(modal4Matieres, {
+    onConceal: () => {
+      ref4Matieres?.current?.focus();
+    },
+  });
+
   return (
     <div className={fr.cx("fr-grid-row", "fr-grid-row--center")}>
       <div
@@ -74,10 +87,10 @@ const Hierarchy = () => {
               iconSrc="/static/assets/icons/droit-du-travail/lois.svg"
               showBottomTab={true}
             >
-              <h3 className={fr.cx("fr-text--lg", "fr-mb-2w")}>
+              <h4 className={fr.cx("fr-text--lg", "fr-mb-2w")}>
                 Hiérarchie entre le Code du travail et les conventions et
                 accords collectifs
-              </h3>
+              </h4>
               <p>
                 Il n&apos;y a pas de règle de hiérarchie unique pour tous les
                 articles du Code du travail. Il existe 3 hiérarchies
@@ -162,9 +175,9 @@ const Hierarchy = () => {
               </p>
 
               <div className={fr.cx("fr-alert", "fr-alert--info", "fr-my-3w")}>
-                <h3 className={fr.cx("fr-alert__title")}>
+                <h4 className={fr.cx("fr-alert__title")}>
                   Attention à certaines règles du Code du travail
-                </h3>
+                </h4>
                 <p>
                   Il existe des règles du Code du travail auxquelles tous les
                   textes situés en bas ne peuvent pas déroger même si les textes
@@ -194,10 +207,10 @@ const Hierarchy = () => {
                 La règle qui détermine quel est le texte applicable est
                 différente en fonction du niveau des textes comparés.
               </p>
-              <h3 className={fr.cx("fr-text--lg", "fr-mb-2w")}>
+              <h4 className={fr.cx("fr-text--lg", "fr-mb-2w")}>
                 Hiérarchie entre convention collective de branche et accord
                 d&apos;entreprise
-              </h3>
+              </h4>
               <p>
                 Le principe est que l&apos;accord d&apos;entreprise
                 s&apos;applique en priorité par rapport à l&apos;accord ou la
@@ -217,6 +230,7 @@ const Hierarchy = () => {
                       e.preventDefault();
                       modal13Matieres.open();
                     }}
+                    ref={ref13Matieres}
                   >
                     13 matières
                   </a>{" "}
@@ -228,6 +242,7 @@ const Hierarchy = () => {
                       e.preventDefault();
                       modal4Matieres.open();
                     }}
+                    ref={ref4Matieres}
                   >
                     4 matières
                   </a>{" "}
@@ -243,9 +258,9 @@ const Hierarchy = () => {
                 d&apos;établissement.
               </p>
 
-              <h3 className={fr.cx("fr-text--lg", "fr-mb-2w")}>
+              <h4 className={fr.cx("fr-text--lg", "fr-mb-2w")}>
                 Hiérarchie entre accord de groupe et accord d&apos;entreprise
-              </h3>
+              </h4>
               <p>
                 L&apos;accord de groupe s&apos;applique en priorité par rapport
                 à l&apos;accord d&apos;entreprise ou l&apos;accord
@@ -255,10 +270,10 @@ const Hierarchy = () => {
                 s&apos;applique.
               </p>
 
-              <h3 className={fr.cx("fr-text--lg", "fr-mb-2w")}>
+              <h4 className={fr.cx("fr-text--lg", "fr-mb-2w")}>
                 Hiérarchie entre accord d&apos;entreprise et accord
                 d&apos;établissement
-              </h3>
+              </h4>
               <p>
                 L&apos;accord d&apos;entreprise s&apos;applique en priorité par
                 rapport à l&apos;accord d&apos;établissement si l&apos;accord
@@ -321,7 +336,7 @@ const Hierarchy = () => {
         size="large"
       >
         <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
-          <div className={fr.cx("fr-col-12", "fr-col-md-6")}>
+          <div className={fr.cx("fr-col-12")}>
             <ul>
               <li>
                 Salaires <strong>minima</strong>
@@ -336,10 +351,6 @@ const Hierarchy = () => {
                 renouvellement, délai de carence et délai de transmission des
                 contrats)
               </li>
-            </ul>
-          </div>
-          <div className={fr.cx("fr-col-12", "fr-col-md-6")}>
-            <ul>
               <li>CDI de chantier</li>
               <li>Egalité professionnelle</li>
               <li>
@@ -368,7 +379,7 @@ const Hierarchy = () => {
         size="large"
       >
         <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
-          <div className={fr.cx("fr-col-12", "fr-col-md-6")}>
+          <div className={fr.cx("fr-col-12")}>
             <ul>
               <li>
                 La prévention des effets de l&apos;exposition aux facteurs de
@@ -378,10 +389,6 @@ const Hierarchy = () => {
                 L&apos;insertion professionnelle et le maintien dans
                 l&apos;emploi des travailleurs handicapés
               </li>
-            </ul>
-          </div>
-          <div className={fr.cx("fr-col-12", "fr-col-md-6")}>
-            <ul>
               <li>
                 Seuil de désignation, nombre et valorisation des parcours
                 syndicaux des délégués syndicaux
@@ -396,19 +403,3 @@ const Hierarchy = () => {
 };
 
 export default Hierarchy;
-
-const cardGrid = css({
-  display: "grid",
-  gridTemplateColumns: "repeat(1, 1fr)",
-  gap: "5w",
-  marginBottom: "4w",
-  "@media (min-width: 768px)": {
-    gridTemplateColumns: "repeat(2, 1fr)",
-  },
-});
-
-const nestedCard = css({
-  marginLeft: "2w",
-  borderLeft: "4px solid var(--border-default-grey)",
-  paddingLeft: "2w",
-});

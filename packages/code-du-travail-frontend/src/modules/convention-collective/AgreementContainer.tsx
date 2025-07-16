@@ -11,6 +11,7 @@ import { AgreementArticles } from "./AgreementArticles";
 import { LegiFranceSearch } from "./LegiFranceSearch";
 import { ContainerRichWithBreadcrumbs } from "../layout/ContainerRichWithBreadcrumbs";
 import { getIdConvention } from "./utils";
+import Link from "../common/Link";
 
 type Props = {
   agreement: ElasticAgreement;
@@ -43,14 +44,14 @@ export function AgreementContainer({ agreement, relatedItems }: Props) {
           })}
         </p>
       )}
-      <a
+      <Link
         href={`https://www.legifrance.gouv.fr/conv_coll/id/${getIdConvention(agreement.url)}`}
         target="_blank"
         className={fr.cx("fr-link")}
         data-testid="agreement-legifrance-link"
       >
         Retrouvez l&apos;intégralité de la convention collective sur Légifrance
-      </a>
+      </Link>
 
       <FrequentQuestions answers={agreement.answers} />
       <AgreementArticles

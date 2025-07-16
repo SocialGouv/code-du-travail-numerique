@@ -1,11 +1,11 @@
 "use client";
 
-import { DsfrHead } from "@codegouvfr/react-dsfr/next-appdir/DsfrHead";
-import { DsfrProvider } from "@codegouvfr/react-dsfr/next-appdir/DsfrProvider";
-import { getHtmlAttributes } from "@codegouvfr/react-dsfr/next-appdir/getHtmlAttributes";
+import { DsfrHeadBase as DsfrHead } from "@codegouvfr/react-dsfr/next-app-router/DsfrHead";
+import { DsfrProviderBase as DsfrProvider } from "@codegouvfr/react-dsfr/next-app-router/DsfrProvider";
+import { createGetHtmlAttributes } from "@codegouvfr/react-dsfr/next-app-router/getHtmlAttributes";
+import { DefaultColorScheme } from "@codegouvfr/react-dsfr/next-app-router";
 import Link from "../common/Link";
 import { MatomoAnalytics } from "./MatomoAnalytics";
-import { DefaultColorScheme } from "@codegouvfr/react-dsfr/next-appdir";
 import { StartDsfrLight } from "./StartDsfrLight";
 import { ENV } from "../../config";
 import { SentryTest } from "../sentry";
@@ -18,6 +18,11 @@ type Props = {
   defaultColorScheme: DefaultColorScheme;
 };
 
+// Create the getHtmlAttributes function
+const { getHtmlAttributes } = createGetHtmlAttributes({
+  defaultColorScheme: "light",
+});
+
 export default function DefaultLayout({
   children,
   nonce,
@@ -28,7 +33,7 @@ export default function DefaultLayout({
   const isWidgetPage = pathname?.startsWith("/widgets");
 
   return (
-    <html {...getHtmlAttributes({ defaultColorScheme, lang })}>
+    <html {...getHtmlAttributes({ lang })}>
       <head>
         <StartDsfrLight />
         <DsfrHead
@@ -49,7 +54,11 @@ export default function DefaultLayout({
         />
       </head>
       <body>
-        <DsfrProvider lang={lang}>
+        <DsfrProvider
+          lang={lang}
+          Link={Link}
+          defaultColorScheme={defaultColorScheme}
+        >
           {children}
           {!isWidgetPage && <ConsentManager />}
         </DsfrProvider>

@@ -6,6 +6,12 @@ contrat salarié . convention collective . comptables:
     idcc: 787
     préavis-retraite: true
     indemnité-licenciement: true
+<<<<<<< HEAD
     préavis-demission: true
     rupture-conventionnelle: true
     indemnité-précarité: true
+||||||| 0ed33d3ab
+=======
+    préavis-demission: true
+    rupture-conventionnelle: true
+>>>>>>> dev

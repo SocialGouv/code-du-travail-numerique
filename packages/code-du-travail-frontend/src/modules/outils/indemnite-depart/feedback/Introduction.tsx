@@ -9,9 +9,9 @@ type IntroductionProps = {
 export const Introduction = ({ onClick }: IntroductionProps): JSX.Element => {
   return (
     <div className={containerStyle}>
-      <p className={fr.cx("fr-text--lg", "fr-mb-2w", "fr-text--bold")}>
+      <h2 className={fr.cx("fr-text--lg", "fr-mb-2w", "fr-text--bold")}>
         Votre avis sur ce simulateur nous intéresse
-      </p>
+      </h2>
       <Button priority="secondary" onClick={onClick}>
         Donner mon avis
       </Button>

@@ -127,10 +127,9 @@ exports[`<Header /> should match snapshot 1`] = `
                         <input
                           aria-autocomplete="list"
                           aria-expanded="false"
-                          aria-labelledby="downshift-0-label"
                           autocomplete="off"
                           class="fr-input"
-                          id="fr-header-search-input"
+                          id="downshift-0-input"
                           placeholder="Rechercher sur le site"
                           role="combobox"
                           type="text"
@@ -143,7 +142,7 @@ exports[`<Header /> should match snapshot 1`] = `
                       <div
                         aria-live="polite"
                         class="fr-messages-group"
-                        id="fr-header-search-input-messages-group"
+                        id="downshift-0-input-messages-group"
                       />
                     </div>
                     <ul

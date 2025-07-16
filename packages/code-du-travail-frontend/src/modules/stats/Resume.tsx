@@ -17,8 +17,8 @@ export const Resume = ({
     small
     imageUrl={`/static/assets/img/modeles-de-courriers-download.svg`}
     title={`Télécharger le bilan annuel de l’année ${year}`}
-    titleAs={`h4`}
-    detail={`Format PDF - ${fileSizeMb}Mo`}
+    titleAs={`h3`}
+    detail={<p>Format PDF - {fileSizeMb}Mo</p>}
     imageAlt={""}
     linkProps={{
       href: toUrl(fileName),
