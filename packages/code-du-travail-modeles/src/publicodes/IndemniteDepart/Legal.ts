@@ -4,7 +4,7 @@ import {
   SeniorityFactory,
   SupportedCc,
 } from "../../modeles";
-import type { IInegibility } from "../../modeles/common/types/ineligibility";
+import type { IIneligibility } from "../../modeles/common/types/ineligibility";
 import type { PublicodesBase } from "../PublicodesBase";
 import type { PublicodesIndemniteLicenciementResult } from "../types";
 import type { IndemniteDepartOutput } from "./types";
@@ -17,13 +17,13 @@ import {
 } from "./utils";
 
 export class Legal {
-  public readonly ineligibility: IInegibility;
+  public readonly ineligibility: IIneligibility;
 
   public readonly seniority: ISeniority<SupportedCc>;
 
   public readonly salary: IReferenceSalary<SupportedCc>;
 
-  constructor(ineligibility: IInegibility) {
+  constructor(ineligibility: IIneligibility) {
     this.ineligibility = ineligibility;
     this.seniority = new SeniorityFactory().create(SupportedCc.default);
     this.salary = new ReferenceSalaryFactory().create(SupportedCc.default);

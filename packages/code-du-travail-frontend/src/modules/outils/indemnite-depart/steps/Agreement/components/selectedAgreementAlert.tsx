@@ -1,8 +1,12 @@
-import { isCcFullySupportedIndemniteLicenciement } from "../../../common";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { Agreement } from "../../../types";
+import isCcFullySupported from "src/modules/outils/common/utils/isCcFullySupported";
 
-export const selectedAgreementAlert = (agreement: Agreement) => {
-  const isSupported = isCcFullySupportedIndemniteLicenciement(agreement.num);
+export const selectedAgreementAlert = (
+  agreement: Agreement,
+  simulator: PublicodesSimulator
+) => {
+  const isSupported = isCcFullySupported(agreement.num, simulator);
   if (!isSupported) {
     return (
       <>

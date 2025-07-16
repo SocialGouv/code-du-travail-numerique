@@ -1,0 +1,69 @@
+contrat salarié . convention collective . organismes de formation . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Cadres: "'Cadres'"
+      Employés: "'Employés'"
+      Agents de maîtrise ou techniciens: "'Agents de maîtrise ou techniciens'"
+
+contrat salarié . convention collective . organismes de formation . catégorie professionnelle Cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
+
+contrat salarié . convention collective . organismes de formation . catégorie professionnelle Cadres . résultat conventionnel:
+  valeur: 3 mois
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
+  références:
+    "Article 9.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=081E95519848F14B8C138A45AEF8D87F.tplgfr33s_2?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id
+
+contrat salarié . convention collective . organismes de formation . catégorie professionnelle Employés:
+  applicable si: catégorie professionnelle = 'Employés'
+  valeur: oui
+
+contrat salarié . convention collective . organismes de formation . catégorie professionnelle Employés . ancienneté:
+  titre: Ancienneté
+  description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      2 ans ou moins: "'2 ans ou moins'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+
+contrat salarié . convention collective . organismes de formation . catégorie professionnelle Employés . ancienneté 2 ans ou moins:
+  applicable si: ancienneté = '2 ans ou moins'
+  valeur: oui
+
+contrat salarié . convention collective . organismes de formation . catégorie professionnelle Employés . ancienneté 2 ans ou moins . résultat conventionnel:
+  valeur: 1 mois
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
+  références:
+    "Article 9.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=081E95519848F14B8C138A45AEF8D87F.tplgfr33s_2?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id
+
+contrat salarié . convention collective . organismes de formation . catégorie professionnelle Employés . ancienneté Plus de 2 ans:
+  applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
+
+contrat salarié . convention collective . organismes de formation . catégorie professionnelle Employés . ancienneté Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
+  références:
+    "Article 9.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=081E95519848F14B8C138A45AEF8D87F.tplgfr33s_2?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id
+
+contrat salarié . convention collective . organismes de formation . catégorie professionnelle Agents de maîtrise ou techniciens:
+  applicable si: catégorie professionnelle = 'Agents de maîtrise ou techniciens'
+  valeur: oui
+
+contrat salarié . convention collective . organismes de formation . catégorie professionnelle Agents de maîtrise ou techniciens . résultat conventionnel:
+  valeur: 2 mois
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
+  références:
+    "Article 9.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=081E95519848F14B8C138A45AEF8D87F.tplgfr33s_2?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id
+
+contrat salarié . convention collective . organismes de formation . notification:
+  type: notification
+  description: En cas de démission, les délais accordés peuvent être très courts si, à la suite de la demande du salarié, l'employeur estime que le départ précipité de ce dernier ne perturbe pas la bonne marche de l'entreprise. Ces délais sont à discuter au cas par cas et ne peuvent, en tout état de cause, être supérieurs à la durée des préavis fixés ci-dessus en cas de licenciement.
+  valeur: oui

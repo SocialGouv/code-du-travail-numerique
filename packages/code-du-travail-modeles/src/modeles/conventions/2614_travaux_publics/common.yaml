@@ -6,3 +6,5 @@ contrat salarié . convention collective . travaux publics:
     idcc: 2614
     préavis-retraite: true
     indemnité-licenciement: true
+    préavis-demission: true
+    rupture-conventionnelle: true

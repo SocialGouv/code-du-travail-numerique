@@ -13,7 +13,7 @@ export const getNote = (
     )?.info === "'Assistants maternels du particulier employeur'" &&
     typeDepart === "mise-retraite"
   ) {
-    return "Les règles concernant la rupture du contrat de travail par le particulier employeur sont prévues par la convention collective et le Code de l’action sociale et des familles. Ces textes n’envisagent pas la mise à la retraite. Pour obtenir une durée de préavis, il doit s'agir d'un départ volontaire du salarié à la retraite (étape n°2 du simulateur).";
+    return "Les règles concernant la rupture du contrat de travail par le particulier employeur sont prévues par la convention collective et le Code de l'action sociale et des familles. Ces textes n’envisagent pas la mise à la retraite. Pour obtenir une durée de préavis, il doit s'agir d'un départ volontaire du salarié à la retraite (étape n°2 du simulateur).";
   }
   return undefined;
 };

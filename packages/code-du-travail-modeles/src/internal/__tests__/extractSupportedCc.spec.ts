@@ -10,6 +10,8 @@ describe("extractSupportedCc", () => {
       idcc: 1480,
       indemniteLicenciement: "neverSupported",
       preavisRetraite: "fullySupported",
+      ruptureConventionnelle: "neverSupported",
+      preavisDemission: "fullySupported",
     });
   });
 });

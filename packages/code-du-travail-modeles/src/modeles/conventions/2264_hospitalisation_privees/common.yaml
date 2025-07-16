@@ -6,3 +6,5 @@ contrat salarié . convention collective . hospitalisation privées:
     idcc: 2264
     préavis-retraite: true
     indemnité-licenciement: true
+    préavis-demission: true
+    rupture-conventionnelle: true

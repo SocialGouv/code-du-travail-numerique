@@ -1,0 +1,119 @@
+contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Chargés d'enquête intermittents: "'Chargés d'enquête intermittents'"
+      Employés, Techniciens ou Agents de maîtrise ETAM: "'Employés, Techniciens ou Agents de maîtrise ETAM'"
+      Ingénieurs, Cadres: "'Ingénieurs, Cadres'"
+
+contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . chargés:
+  applicable si: contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle = 'Chargés d'enquête intermittents'
+  valeur: oui
+
+contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . chargés . résultat conventionnel:
+  valeur: 1 mois
+  unité: mois
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
+  références:
+    Article 21 de l'annexe relative aux enquêteurs: https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005761991&cidTexte=KALITEXT000005679885&idConvention=KALICONT000005635173&dateTexte=29990101
+
+contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM:
+  applicable si: contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle = 'Employés, Techniciens ou Agents de maîtrise ETAM'
+  valeur: oui
+
+contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient:
+  titre: Coefficient
+  description: La coefficient du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
+  question: Quel est le coefficient hiérarchique du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      De 240 à 355: "'De 240 à 355'"
+      De 400 à 500: "'De 400 à 500'"
+
+contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355:
+  applicable si: contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient = 'De 240 à 355'
+  valeur: oui
+
+contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté:
+  titre: Ancienneté
+  description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      2 ans ou moins: "'2 ans ou moins'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+
+contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté 2 ans ou moins:
+  applicable si: contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté = '2 ans ou moins'
+  valeur: oui
+
+contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté 2 ans ou moins . résultat conventionnel:
+  valeur: 1 mois
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
+  références:
+    Article 4.2 de la convention collective: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833
+
+contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté Plus de 2 ans:
+  applicable si: contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté = 'Plus de 2 ans'
+  valeur: oui
+
+contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
+  références:
+    Article 4.2 de la convention collective: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833
+
+contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500:
+  applicable si: contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient = 'De 400 à 500'
+  valeur: oui
+
+contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500 . ancienneté:
+  titre: Ancienneté
+  description: L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  question: Quelle est l'ancienneté du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      2 ans ou moins: "'2 ans ou moins'"
+      Plus de 2 ans: "'Plus de 2 ans'"
+
+contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500 . ancienneté 2 ans ou moins:
+  applicable si: contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500 . ancienneté = '2 ans ou moins'
+  valeur: oui
+
+contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500 . ancienneté 2 ans ou moins . résultat conventionnel:
+  valeur: 2 mois
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
+  références:
+    Article 4.2 de la convention collective: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833
+
+contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500 . ancienneté Plus de 2 ans:
+  applicable si: contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500 . ancienneté = 'Plus de 2 ans'
+  valeur: oui
+
+contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500 . ancienneté Plus de 2 ans . résultat conventionnel:
+  valeur: 2 mois
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
+  références:
+    Article 4.2 de la convention collective: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833
+
+contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Ingénieurs, Cadres:
+  applicable si: contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle = 'Ingénieurs, Cadres'
+  valeur: oui
+
+contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Ingénieurs, Cadres . résultat conventionnel:
+  valeur: 3 mois
+  remplace: contrat salarié . préavis de démission . résultat conventionnel
+  références:
+    Article 4.2 de la convention collective: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833
+
+contrat salarié . convention collective . bureaux études techniques . notification:
+  non applicable si: contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle = 'Chargés d'enquête intermittents'
+  type: notification
+  description: L'employeur et le salarié peuvent décider d'une durée plus longue
+  valeur: oui

@@ -6,3 +6,5 @@ contrat salarié . convention collective . coiffure:
     idcc: 2596
     préavis-retraite: true
     indemnité-licenciement: true
+    préavis-demission: true
+    rupture-conventionnelle: true

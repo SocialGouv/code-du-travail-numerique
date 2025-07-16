@@ -6,3 +6,5 @@ contrat salarié . convention collective . entreprises de services à la personn
     idcc: 3127
     préavis-retraite: true
     indemnité-licenciement: true
+    préavis-demission: true
+    rupture-conventionnelle: true

@@ -9,6 +9,8 @@ export type RuleNodeIdcc = Rule & {
     idcc?: number;
     "préavis-retraite"?: boolean;
     "indemnité-licenciement"?: boolean;
+    "rupture-conventionnelle"?: boolean;
+    "préavis-demission"?: boolean;
   };
 };
 
@@ -38,6 +40,10 @@ export function extractSupportedCc(engine: Engine): Partial<AgreementInfo>[] {
               cdtnNode["indemnité-licenciement"]
             ),
             preavisRetraite: getSupportedStatus(cdtnNode["préavis-retraite"]),
+            ruptureConventionnelle: getSupportedStatus(
+              cdtnNode["rupture-conventionnelle"]
+            ),
+            preavisDemission: getSupportedStatus(cdtnNode["préavis-demission"]),
           };
         }
       }

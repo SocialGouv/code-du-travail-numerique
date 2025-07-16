@@ -1,6 +1,5 @@
 import {
   heuresRechercheEmploiData,
-  preavisDemissionData,
   preavisLicenciementData,
 } from "@socialgouv/modeles-social";
 import { FormApi } from "final-form";
@@ -47,8 +46,6 @@ export function StepInformations({
     switch (actionEvent) {
       case MatomoActionEvent.HEURE_RECHERCHE_EMPLOI:
         return heuresRechercheEmploiData.questions;
-      case MatomoActionEvent.PREAVIS_DEMISSION:
-        return preavisDemissionData.questions;
       case MatomoActionEvent.PREAVIS_LICENCIEMENT:
         return preavisLicenciementData.questions;
       default:
@@ -60,8 +57,6 @@ export function StepInformations({
     switch (actionEvent) {
       case MatomoActionEvent.HEURE_RECHERCHE_EMPLOI:
         return heuresRechercheEmploiData.situations;
-      case MatomoActionEvent.PREAVIS_DEMISSION:
-        return preavisDemissionData.situations;
       case MatomoActionEvent.PREAVIS_LICENCIEMENT:
         return preavisLicenciementData.situations;
       default:

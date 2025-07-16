@@ -1,9 +1,9 @@
 import { push as matopush } from "@socialgouv/matomo-next";
 import { render } from "@testing-library/react";
 import { Field } from "react-final-form";
-import { stepReducer } from "../../DureePreavisDemission/stepReducer";
 
 import { Wizard } from "../Wizard";
+import { stepReducer } from "src/outils/DureePreavisLicenciement/stepReducer";
 
 const FirstStep = () => <p>Premiere Etape</p>;
 FirstStep.validate = jest.fn();

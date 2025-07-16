@@ -2,6 +2,7 @@ export type Question = {
   name: string;
   question: string;
   note?: string;
+  key?: string;
 };
 
 export type Criteria = Record<string, string | undefined>;

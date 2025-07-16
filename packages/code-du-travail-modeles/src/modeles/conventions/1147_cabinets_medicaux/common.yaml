@@ -1,4 +1,3 @@
-# Convention collective nationale du personnel des cabinets médicaux du 14 octobre 1981
 contrat salarié . convention collective . cabinets médicaux:
   description: Convention collective nationale du personnel des cabinets médicaux du 14 octobre 1981
   applicable si: convention collective = 'IDCC1147'
@@ -7,3 +6,5 @@ contrat salarié . convention collective . cabinets médicaux:
     idcc: 1147
     préavis-retraite: true
     indemnité-licenciement: true
+    préavis-demission: true
+    rupture-conventionnelle: true

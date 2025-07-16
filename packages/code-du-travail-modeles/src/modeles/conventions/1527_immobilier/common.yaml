@@ -6,3 +6,5 @@ contrat salarié . convention collective . immobilier:
     idcc: 1527
     préavis-retraite: true
     indemnité-licenciement: true
+    préavis-demission: true
+    rupture-conventionnelle: true

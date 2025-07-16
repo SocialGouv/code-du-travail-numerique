@@ -1,4 +1,3 @@
-# Convention collective nationale des entreprises de propreté du 1er juillet 1994. Etendue par arrêté du 31 octobre 1994 JORF 5 novembre 1994.
 contrat salarié . convention collective . entreprises de propreté:
   description: Convention collective nationale des entreprises de propreté du 1er juillet 1994. Etendue par arrêté du 31 octobre 1994 JORF 5 novembre 1994.
   applicable si: convention collective = 'IDCC3043'
@@ -7,3 +6,5 @@ contrat salarié . convention collective . entreprises de propreté:
     idcc: 3043
     préavis-retraite: true
     indemnité-licenciement: true
+    préavis-demission: true
+    rupture-conventionnelle: true
