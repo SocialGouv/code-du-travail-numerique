@@ -3,7 +3,7 @@
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { NumberedScaleQuestionnaireItem } from "./NumberedScaleQuestionnaireItem";
 import { QuestionnaireText } from "./QuestionnaireText";
-import { useState } from "react";
+import React, { forwardRef, useState } from "react";
 import {
   EVENT_ACTION,
   EVENT_CATEGORY,
@@ -18,10 +18,10 @@ type QuestionnaireAdvancedProps = {
   category: EVENT_CATEGORY;
 };
 
-export const QuestionnaireAdvanced = ({
-  onClick,
-  category,
-}: QuestionnaireAdvancedProps): React.ReactElement => {
+export const QuestionnaireAdvanced = forwardRef<
+  HTMLHeadingElement,
+  QuestionnaireAdvancedProps
+>(({ onClick, category }, ref): React.ReactElement => {
   const path = usePathname();
   const [statusSimulator, setStatusSimulator] = useState<FEEDBACK_RESULT>();
   const [statusQuestion, setStatusQuestion] = useState<FEEDBACK_RESULT>();
@@ -31,9 +31,13 @@ export const QuestionnaireAdvanced = ({
 
   return (
     <div>
-      <h3 className={fr.cx("fr-text--lg", "fr-mb-2w", "fr-text--bold")}>
+      <h2
+        ref={ref}
+        tabIndex={-1}
+        className={fr.cx("fr-text--lg", "fr-mb-2w", "fr-text--bold")}
+      >
         Merci pour votre aide&nbsp;! Pouvez-vous nous en dire plus&nbsp;?
-      </h3>
+      </h2>
       <div>
         <NumberedScaleQuestionnaireItem
           title="Que pensez-vous de l'utilisation du simulateur ?"
@@ -126,4 +130,6 @@ export const QuestionnaireAdvanced = ({
       </div>
     </div>
   );
-};
+});
+
+QuestionnaireAdvanced.displayName = "SatisfactionQuestionnaireAdvanced";
