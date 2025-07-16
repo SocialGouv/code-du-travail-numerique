@@ -11,6 +11,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens:
   applicable si: catégorie professionnelle = 'Agents de maîtrise et Techniciens'
+  valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe:
   titre: groupe
@@ -24,6 +25,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 4:
   applicable si: groupe = '4'
+  valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 4 . résultat conventionnel:
   valeur: 2 mois
@@ -33,6 +35,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 5:
   applicable si: groupe = '5'
+  valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 5 . résultat conventionnel:
   valeur: 2 mois
@@ -42,6 +45,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 6:
   applicable si: groupe = '6'
+  valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 6 . résultat conventionnel:
   valeur: 2 mois
@@ -51,6 +55,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Animateurs, techniciens et professeurs:
   applicable si: catégorie professionnelle = 'Animateurs, techniciens et professeurs'
+  valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau:
   titre: niveau
@@ -63,6 +68,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau A:
   applicable si: niveau = 'A'
+  valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau A . résultat conventionnel:
   valeur: 2 mois
@@ -72,6 +78,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau B:
   applicable si: niveau = 'B'
+  valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau B . résultat conventionnel:
   valeur: 2 mois
@@ -81,6 +88,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Cadres . groupe:
   titre: groupe
@@ -93,6 +101,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Cadres . groupe 7:
   applicable si: groupe = '7'
+  valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Cadres . groupe 7 . résultat conventionnel:
   valeur: 3 mois
@@ -102,6 +111,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Cadres . groupe 8:
   applicable si: groupe = '8'
+  valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Cadres . groupe 8 . résultat conventionnel:
   valeur: 3 mois
@@ -111,6 +121,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés:
   applicable si: catégorie professionnelle = 'Ouvriers, Employés'
+  valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe:
   titre: groupe
@@ -123,6 +134,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 2:
   applicable si: groupe = '2'
+  valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 2 . ancienneté:
   titre: ancienneté
@@ -135,6 +147,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 2 . ancienneté 2 ans ou moins:
   applicable si: ancienneté = '2 ans ou moins'
+  valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 2 . ancienneté 2 ans ou moins . résultat conventionnel:
   valeur: 1 mois
@@ -144,6 +157,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 2 . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 2 . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -153,6 +167,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 3:
   applicable si: groupe = '3'
+  valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 3 . ancienneté:
   titre: ancienneté
@@ -165,6 +180,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 3 . ancienneté 2 ans ou moins:
   applicable si: ancienneté = '2 ans ou moins'
+  valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 3 . ancienneté 2 ans ou moins . résultat conventionnel:
   valeur: 1 mois
@@ -174,6 +190,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 3 . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 3 . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois

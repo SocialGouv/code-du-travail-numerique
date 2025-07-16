@@ -9,6 +9,7 @@ contrat salarié . convention collective . boulangerie patisserie . catégorie p
 
 contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Cadres . ancienneté:
   titre: ancienneté
@@ -21,6 +22,7 @@ contrat salarié . convention collective . boulangerie patisserie . catégorie p
 
 contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Cadres . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Cadres . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois et demi
@@ -30,6 +32,7 @@ contrat salarié . convention collective . boulangerie patisserie . catégorie p
 
 contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Cadres . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Cadres . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 3 mois
@@ -39,6 +42,7 @@ contrat salarié . convention collective . boulangerie patisserie . catégorie p
 
 contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services:
   applicable si: catégorie professionnelle = 'Personnel de fabrication, personnel de vente et personnel de services'
+  valeur: oui
 
 contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services . ancienneté:
   titre: ancienneté
@@ -52,6 +56,7 @@ contrat salarié . convention collective . boulangerie patisserie . catégorie p
 
 contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services . ancienneté Moins de 6 mois:
   applicable si: ancienneté = 'Moins de 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services . ancienneté Moins de 6 mois . résultat conventionnel:
   valeur: 1 semaine
@@ -61,6 +66,7 @@ contrat salarié . convention collective . boulangerie patisserie . catégorie p
 
 contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services . ancienneté Plus de 6 mois à moins de 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services . ancienneté Plus de 6 mois à moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -70,6 +76,7 @@ contrat salarié . convention collective . boulangerie patisserie . catégorie p
 
 contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . boulangerie patisserie . catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois

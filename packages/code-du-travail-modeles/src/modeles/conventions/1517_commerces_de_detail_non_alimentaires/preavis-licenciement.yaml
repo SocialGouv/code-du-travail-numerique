@@ -16,6 +16,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau I:
   applicable si: niveau = 'I'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau I . ancienneté:
   titre: ancienneté
@@ -28,6 +29,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau I . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau I . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -37,6 +39,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau I . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau I . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -46,6 +49,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau II:
   applicable si: niveau = 'II'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau II . ancienneté:
   titre: ancienneté
@@ -58,6 +62,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau II . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau II . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -67,6 +72,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau II . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau II . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -76,6 +82,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau III:
   applicable si: niveau = 'III'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau III . ancienneté:
   titre: ancienneté
@@ -88,6 +95,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau III . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau III . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -97,6 +105,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau III . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau III . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -106,6 +115,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IV:
   applicable si: niveau = 'IV'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IV . ancienneté:
   titre: ancienneté
@@ -118,6 +128,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IV . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IV . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -127,6 +138,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IV . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IV . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -136,6 +148,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau V:
   applicable si: niveau = 'V'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau V . ancienneté:
   titre: ancienneté
@@ -148,6 +161,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau V . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau V . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -157,6 +171,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau V . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau V . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -166,6 +181,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VI:
   applicable si: niveau = 'VI'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VI . ancienneté:
   titre: ancienneté
@@ -178,6 +194,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VI . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VI . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -187,6 +204,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VI . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VI . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -196,6 +214,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VII:
   applicable si: niveau = 'VII'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VII . ancienneté:
   titre: ancienneté
@@ -208,6 +227,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VII . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VII . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 3 mois
@@ -217,6 +237,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VII . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VII . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 3 mois
@@ -226,6 +247,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VIII:
   applicable si: niveau = 'VIII'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VIII . ancienneté:
   titre: ancienneté
@@ -238,6 +260,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VIII . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VIII . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 3 mois
@@ -247,6 +270,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VIII . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VIII . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 3 mois
@@ -256,6 +280,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IX:
   applicable si: niveau = 'IX'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IX . ancienneté:
   titre: ancienneté
@@ -268,6 +293,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IX . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IX . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 3 mois
@@ -277,6 +303,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IX . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IX . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 3 mois

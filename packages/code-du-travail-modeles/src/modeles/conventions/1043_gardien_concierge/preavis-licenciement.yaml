@@ -9,6 +9,7 @@ contrat salarié . convention collective . gardien concierge . catégorie profes
 
 contrat salarié . convention collective . gardien concierge . catégorie professionnelle A:
   applicable si: catégorie professionnelle = 'A'
+  valeur: oui
 
 contrat salarié . convention collective . gardien concierge . catégorie professionnelle A . ancienneté:
   titre: ancienneté
@@ -21,6 +22,7 @@ contrat salarié . convention collective . gardien concierge . catégorie profes
 
 contrat salarié . convention collective . gardien concierge . catégorie professionnelle A . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . gardien concierge . catégorie professionnelle A . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -30,6 +32,7 @@ contrat salarié . convention collective . gardien concierge . catégorie profes
 
 contrat salarié . convention collective . gardien concierge . catégorie professionnelle A . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . gardien concierge . catégorie professionnelle A . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -39,6 +42,7 @@ contrat salarié . convention collective . gardien concierge . catégorie profes
 
 contrat salarié . convention collective . gardien concierge . catégorie professionnelle B:
   applicable si: catégorie professionnelle = 'B'
+  valeur: oui
 
 contrat salarié . convention collective . gardien concierge . catégorie professionnelle B . résultat conventionnel:
   valeur: 3 mois

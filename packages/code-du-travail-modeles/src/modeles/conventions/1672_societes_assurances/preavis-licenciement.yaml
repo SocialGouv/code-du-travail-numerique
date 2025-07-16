@@ -9,6 +9,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres . classe:
   titre: classe
@@ -22,6 +23,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres . classe 5:
   applicable si: classe = '5'
+  valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres . classe 5 . résultat conventionnel:
   valeur: 3 mois
@@ -31,6 +33,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres . classe 6:
   applicable si: classe = '6'
+  valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres . classe 6 . résultat conventionnel:
   valeur: 3 mois
@@ -40,6 +43,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres . classe 7:
   applicable si: classe = '7'
+  valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres . classe 7 . résultat conventionnel:
   valeur: 3 mois
@@ -49,6 +53,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres:
   applicable si: catégorie professionnelle = 'Non-cadres'
+  valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe:
   titre: classe
@@ -63,6 +68,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 1:
   applicable si: classe = '1'
+  valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 1 . ancienneté:
   titre: ancienneté
@@ -75,6 +81,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 1 . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 1 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -84,6 +91,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 1 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 1 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -93,6 +101,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 2:
   applicable si: classe = '2'
+  valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 2 . ancienneté:
   titre: ancienneté
@@ -105,6 +114,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 2 . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 2 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -114,6 +124,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 2 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 2 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -123,6 +134,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 3:
   applicable si: classe = '3'
+  valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 3 . ancienneté:
   titre: ancienneté
@@ -135,6 +147,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 3 . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 3 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -144,6 +157,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 3 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 3 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -153,6 +167,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 4:
   applicable si: classe = '4'
+  valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 4 . ancienneté:
   titre: ancienneté
@@ -165,6 +180,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 4 . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 4 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -174,6 +190,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 4 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 4 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois

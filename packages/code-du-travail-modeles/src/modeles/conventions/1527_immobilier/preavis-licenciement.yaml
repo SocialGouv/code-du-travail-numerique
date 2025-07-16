@@ -12,6 +12,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Agents de maîtrise:
   applicable si: catégorie professionnelle = 'Agents de maîtrise'
+  valeur: oui
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Agents de maîtrise . ancienneté:
   titre: ancienneté
@@ -24,6 +25,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Agents de maîtrise . ancienneté Moins de 1 an:
   applicable si: ancienneté = 'Moins de 1 an'
+  valeur: oui
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Agents de maîtrise . ancienneté Moins de 1 an . résultat conventionnel:
   valeur: 1 mois
@@ -33,6 +35,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Agents de maîtrise . ancienneté Au moins 1 an:
   applicable si: ancienneté = 'Au moins 1 an'
+  valeur: oui
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Agents de maîtrise . ancienneté Au moins 1 an . résultat conventionnel:
   valeur: 2 mois
@@ -42,6 +45,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Cadres . résultat conventionnel:
   valeur: 3 mois
@@ -51,6 +55,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur non VRP:
   applicable si: catégorie professionnelle = 'Négociateur non VRP'
+  valeur: oui
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur non VRP . ancienneté:
   titre: ancienneté
@@ -63,6 +68,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur non VRP . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur non VRP . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -72,6 +78,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur non VRP . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur non VRP . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -81,6 +88,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur VRP:
   applicable si: catégorie professionnelle = 'Négociateur VRP'
+  valeur: oui
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur VRP . ancienneté:
   titre: ancienneté
@@ -93,6 +101,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur VRP . ancienneté Moins de 1 an:
   applicable si: ancienneté = 'Moins de 1 an'
+  valeur: oui
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur VRP . ancienneté Moins de 1 an . résultat conventionnel:
   valeur: 1 mois
@@ -102,6 +111,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur VRP . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Négociateur VRP . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 3 mois
@@ -111,6 +121,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Ouvriers, Employés:
   applicable si: catégorie professionnelle = 'Ouvriers, Employés'
+  valeur: oui
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Ouvriers, Employés . ancienneté:
   titre: ancienneté
@@ -123,6 +134,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Ouvriers, Employés . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Ouvriers, Employés . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -132,6 +144,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Ouvriers, Employés . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Ouvriers, Employés . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois

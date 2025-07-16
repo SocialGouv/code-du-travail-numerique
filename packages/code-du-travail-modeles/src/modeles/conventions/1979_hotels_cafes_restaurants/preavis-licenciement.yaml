@@ -10,6 +10,7 @@ contrat salarié . convention collective . hotels cafes restaurants . catégorie
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Cadres . ancienneté:
   titre: ancienneté
@@ -23,6 +24,7 @@ contrat salarié . convention collective . hotels cafes restaurants . catégorie
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Cadres . ancienneté Moins de 6 mois:
   applicable si: ancienneté = 'Moins de 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Cadres . ancienneté Moins de 6 mois . résultat conventionnel:
   valeur: 1 mois
@@ -32,6 +34,7 @@ contrat salarié . convention collective . hotels cafes restaurants . catégorie
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Cadres . ancienneté 6 mois à moins de 2 ans:
   applicable si: ancienneté = '6 mois à moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Cadres . ancienneté 6 mois à moins de 2 ans . résultat conventionnel:
   valeur: 3 mois
@@ -41,6 +44,7 @@ contrat salarié . convention collective . hotels cafes restaurants . catégorie
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Cadres . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Cadres . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 3 mois
@@ -50,6 +54,7 @@ contrat salarié . convention collective . hotels cafes restaurants . catégorie
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Employés:
   applicable si: catégorie professionnelle = 'Employés'
+  valeur: oui
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Employés . ancienneté:
   titre: ancienneté
@@ -63,6 +68,7 @@ contrat salarié . convention collective . hotels cafes restaurants . catégorie
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Employés . ancienneté Moins de 6 mois:
   applicable si: ancienneté = 'Moins de 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Employés . ancienneté Moins de 6 mois . résultat conventionnel:
   valeur: 8 jours
@@ -72,6 +78,7 @@ contrat salarié . convention collective . hotels cafes restaurants . catégorie
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Employés . ancienneté 6 mois à moins de 2 ans:
   applicable si: ancienneté = '6 mois à moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Employés . ancienneté 6 mois à moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -81,6 +88,7 @@ contrat salarié . convention collective . hotels cafes restaurants . catégorie
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Employés . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Employés . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -90,6 +98,7 @@ contrat salarié . convention collective . hotels cafes restaurants . catégorie
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Maîtrises:
   applicable si: catégorie professionnelle = 'Maîtrises'
+  valeur: oui
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Maîtrises . ancienneté:
   titre: ancienneté
@@ -103,6 +112,7 @@ contrat salarié . convention collective . hotels cafes restaurants . catégorie
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Maîtrises . ancienneté Moins de 6 mois:
   applicable si: ancienneté = 'Moins de 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Maîtrises . ancienneté Moins de 6 mois . résultat conventionnel:
   valeur: 15 jours
@@ -112,6 +122,7 @@ contrat salarié . convention collective . hotels cafes restaurants . catégorie
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Maîtrises . ancienneté 6 mois à moins de 2 ans:
   applicable si: ancienneté = '6 mois à moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Maîtrises . ancienneté 6 mois à moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -121,6 +132,7 @@ contrat salarié . convention collective . hotels cafes restaurants . catégorie
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Maîtrises . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle Maîtrises . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois

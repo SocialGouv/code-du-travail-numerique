@@ -12,6 +12,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Agents de maîtrise:
   applicable si: catégorie professionnelle = 'Agents de maîtrise'
+  valeur: oui
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Agents de maîtrise . ancienneté:
   titre: ancienneté
@@ -24,6 +25,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Agents de maîtrise . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Agents de maîtrise . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -33,6 +35,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Agents de maîtrise . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Agents de maîtrise . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -42,6 +45,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Techniciens:
   applicable si: catégorie professionnelle = 'Techniciens'
+  valeur: oui
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Techniciens . ancienneté:
   titre: ancienneté
@@ -54,6 +58,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Techniciens . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Techniciens . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -63,6 +68,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Techniciens . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Techniciens . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -72,6 +78,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Cadres . résultat conventionnel:
   valeur: 3 mois
@@ -81,6 +88,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Ouvriers:
   applicable si: catégorie professionnelle = 'Ouvriers'
+  valeur: oui
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Ouvriers . ancienneté:
   titre: ancienneté
@@ -93,6 +101,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Ouvriers . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Ouvriers . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -102,6 +111,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Ouvriers . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Ouvriers . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -111,6 +121,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Employés:
   applicable si: catégorie professionnelle = 'Employés'
+  valeur: oui
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Employés . ancienneté:
   titre: ancienneté
@@ -123,6 +134,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Employés . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Employés . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -132,6 +144,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Employés . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Employés . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois

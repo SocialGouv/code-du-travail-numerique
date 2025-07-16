@@ -12,6 +12,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise:
   applicable si: catégorie professionnelle = 'Agents de maîtrise'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise . groupe:
   titre: groupe
@@ -23,6 +24,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise . groupe IV:
   applicable si: groupe = 'IV'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise . groupe IV . coefficient:
   titre: coefficient
@@ -35,6 +37,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise . groupe IV . coefficient Inférieur à 275:
   applicable si: coefficient = 'Inférieur à 275'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise . groupe IV . coefficient Inférieur à 275 . résultat conventionnel:
   valeur: 2 mois
@@ -44,6 +47,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise . groupe IV . coefficient Supérieur à 275 inclus:
   applicable si: coefficient = 'Supérieur à 275 inclus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise . groupe IV . coefficient Supérieur à 275 inclus . résultat conventionnel:
   valeur: 3 mois
@@ -53,6 +57,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés:
   applicable si: catégorie professionnelle = 'Employés'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe:
   titre: groupe
@@ -66,6 +71,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I:
   applicable si: groupe = 'I'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient:
   titre: coefficient
@@ -78,6 +84,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient Inférieur à 190:
   applicable si: coefficient = 'Inférieur à 190'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient Inférieur à 190 . ancienneté:
   titre: ancienneté
@@ -90,6 +97,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient Inférieur à 190 . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient Inférieur à 190 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -99,6 +107,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient Inférieur à 190 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient Inférieur à 190 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -108,6 +117,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient 190 et plus:
   applicable si: coefficient = '190 et plus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient 190 et plus . résultat conventionnel:
   valeur: 2 mois
@@ -117,6 +127,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II:
   applicable si: groupe = 'II'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient:
   titre: coefficient
@@ -129,6 +140,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient Inférieur à 190:
   applicable si: coefficient = 'Inférieur à 190'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient Inférieur à 190 . ancienneté:
   titre: ancienneté
@@ -141,6 +153,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient Inférieur à 190 . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient Inférieur à 190 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -150,6 +163,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient Inférieur à 190 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient Inférieur à 190 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -159,6 +173,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient 190 et plus:
   applicable si: coefficient = '190 et plus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient 190 et plus . résultat conventionnel:
   valeur: 2 mois
@@ -168,6 +183,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III:
   applicable si: groupe = 'III'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient:
   titre: coefficient
@@ -180,6 +196,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient Inférieur à 190:
   applicable si: coefficient = 'Inférieur à 190'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient Inférieur à 190 . ancienneté:
   titre: ancienneté
@@ -192,6 +209,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient Inférieur à 190 . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient Inférieur à 190 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -201,6 +219,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient Inférieur à 190 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient Inférieur à 190 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -210,6 +229,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient 190 et plus:
   applicable si: coefficient = '190 et plus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient 190 et plus . résultat conventionnel:
   valeur: 2 mois
@@ -219,6 +239,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ingénieurs, Cadres:
   applicable si: catégorie professionnelle = 'Ingénieurs, Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ingénieurs, Cadres . groupe:
   titre: groupe
@@ -230,6 +251,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ingénieurs, Cadres . groupe V:
   applicable si: groupe = 'V'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ingénieurs, Cadres . groupe V . résultat conventionnel:
   valeur: 3 mois
@@ -239,6 +261,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers:
   applicable si: catégorie professionnelle = 'Ouvriers'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe:
   titre: groupe
@@ -252,6 +275,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I:
   applicable si: groupe = 'I'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient:
   titre: coefficient
@@ -264,6 +288,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient Inférieur à 190:
   applicable si: coefficient = 'Inférieur à 190'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient Inférieur à 190 . ancienneté:
   titre: ancienneté
@@ -276,6 +301,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient Inférieur à 190 . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient Inférieur à 190 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -285,6 +311,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient Inférieur à 190 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient Inférieur à 190 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -294,6 +321,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient 190 et plus:
   applicable si: coefficient = '190 et plus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient 190 et plus . résultat conventionnel:
   valeur: 2 mois
@@ -303,6 +331,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II:
   applicable si: groupe = 'II'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient:
   titre: coefficient
@@ -315,6 +344,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient Inférieur à 190:
   applicable si: coefficient = 'Inférieur à 190'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient Inférieur à 190 . ancienneté:
   titre: ancienneté
@@ -327,6 +357,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient Inférieur à 190 . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient Inférieur à 190 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -336,6 +367,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient Inférieur à 190 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient Inférieur à 190 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -345,6 +377,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient 190 et plus:
   applicable si: coefficient = '190 et plus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient 190 et plus . résultat conventionnel:
   valeur: 2 mois
@@ -354,6 +387,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III:
   applicable si: groupe = 'III'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient:
   titre: coefficient
@@ -366,6 +400,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient Inférieur à 190:
   applicable si: coefficient = 'Inférieur à 190'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient Inférieur à 190 . ancienneté:
   titre: ancienneté
@@ -378,6 +413,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient Inférieur à 190 . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient Inférieur à 190 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -387,6 +423,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient Inférieur à 190 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient Inférieur à 190 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -396,6 +433,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient 190 et plus:
   applicable si: coefficient = '190 et plus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient 190 et plus . résultat conventionnel:
   valeur: 2 mois
@@ -405,6 +443,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens:
   applicable si: catégorie professionnelle = 'Techniciens'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe:
   titre: groupe
@@ -419,6 +458,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I:
   applicable si: groupe = 'I'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient:
   titre: coefficient
@@ -431,6 +471,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient Inférieur à 190:
   applicable si: coefficient = 'Inférieur à 190'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient Inférieur à 190 . ancienneté:
   titre: ancienneté
@@ -443,6 +484,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient Inférieur à 190 . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient Inférieur à 190 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -452,6 +494,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient Inférieur à 190 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient Inférieur à 190 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -461,6 +504,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient 190 et plus:
   applicable si: coefficient = '190 et plus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient 190 et plus . résultat conventionnel:
   valeur: 2 mois
@@ -470,6 +514,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II:
   applicable si: groupe = 'II'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient:
   titre: coefficient
@@ -482,6 +527,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient Inférieur à 190:
   applicable si: coefficient = 'Inférieur à 190'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient Inférieur à 190 . ancienneté:
   titre: ancienneté
@@ -494,6 +540,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient Inférieur à 190 . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient Inférieur à 190 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -503,6 +550,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient Inférieur à 190 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient Inférieur à 190 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -512,6 +560,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient 190 et plus:
   applicable si: coefficient = '190 et plus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient 190 et plus . résultat conventionnel:
   valeur: 2 mois
@@ -521,6 +570,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III:
   applicable si: groupe = 'III'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient:
   titre: coefficient
@@ -533,6 +583,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient Inférieur à 190:
   applicable si: coefficient = 'Inférieur à 190'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient Inférieur à 190 . ancienneté:
   titre: ancienneté
@@ -545,6 +596,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient Inférieur à 190 . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient Inférieur à 190 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -554,6 +606,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient Inférieur à 190 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient Inférieur à 190 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -563,6 +616,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient 190 et plus:
   applicable si: coefficient = '190 et plus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient 190 et plus . résultat conventionnel:
   valeur: 2 mois
@@ -572,6 +626,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe IV:
   applicable si: groupe = 'IV'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe IV . coefficient:
   titre: coefficient
@@ -584,6 +639,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe IV . coefficient Inférieur à 275:
   applicable si: coefficient = 'Inférieur à 275'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe IV . coefficient Inférieur à 275 . résultat conventionnel:
   valeur: 2 mois
@@ -593,6 +649,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe IV . coefficient Supérieur à 275 inclus:
   applicable si: coefficient = 'Supérieur à 275 inclus'
+  valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe IV . coefficient Supérieur à 275 inclus . résultat conventionnel:
   valeur: 3 mois

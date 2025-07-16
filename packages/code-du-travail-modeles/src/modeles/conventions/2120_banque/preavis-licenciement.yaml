@@ -9,6 +9,7 @@ contrat salarié . convention collective . banque . catégorie professionnelle:
 
 contrat salarié . convention collective . banque . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . banque . catégorie professionnelle Cadres . résultat conventionnel:
   valeur: 3 mois
@@ -18,6 +19,7 @@ contrat salarié . convention collective . banque . catégorie professionnelle C
 
 contrat salarié . convention collective . banque . catégorie professionnelle Techniciens:
   applicable si: catégorie professionnelle = 'Techniciens'
+  valeur: oui
 
 contrat salarié . convention collective . banque . catégorie professionnelle Techniciens . ancienneté:
   titre: ancienneté
@@ -30,6 +32,7 @@ contrat salarié . convention collective . banque . catégorie professionnelle T
 
 contrat salarié . convention collective . banque . catégorie professionnelle Techniciens . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . banque . catégorie professionnelle Techniciens . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -39,6 +42,7 @@ contrat salarié . convention collective . banque . catégorie professionnelle T
 
 contrat salarié . convention collective . banque . catégorie professionnelle Techniciens . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . banque . catégorie professionnelle Techniciens . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois

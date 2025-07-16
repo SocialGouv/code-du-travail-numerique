@@ -10,6 +10,7 @@ contrat salarié . convention collective . bureaux études techniques . catégor
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Chargés d'enquête intermittents:
   applicable si: catégorie professionnelle = 'Chargés d'enquête intermittents'
+  valeur: oui
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Chargés d'enquête intermittents . ancienneté:
   titre: ancienneté
@@ -22,6 +23,7 @@ contrat salarié . convention collective . bureaux études techniques . catégor
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Chargés d'enquête intermittents . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Chargés d'enquête intermittents . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -31,6 +33,7 @@ contrat salarié . convention collective . bureaux études techniques . catégor
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Chargés d'enquête intermittents . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Chargés d'enquête intermittents . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -40,6 +43,7 @@ contrat salarié . convention collective . bureaux études techniques . catégor
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM:
   applicable si: catégorie professionnelle = 'Employés, Techniciens ou Agents de maîtrise ETAM'
+  valeur: oui
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient:
   titre: coefficient
@@ -52,6 +56,7 @@ contrat salarié . convention collective . bureaux études techniques . catégor
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355:
   applicable si: coefficient = 'de 240 à 355'
+  valeur: oui
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté:
   titre: ancienneté
@@ -64,6 +69,7 @@ contrat salarié . convention collective . bureaux études techniques . catégor
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -75,6 +81,7 @@ contrat salarié . convention collective . bureaux études techniques . catégor
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -84,6 +91,7 @@ contrat salarié . convention collective . bureaux études techniques . catégor
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500:
   applicable si: coefficient = 'De 400 à 500'
+  valeur: oui
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500 . résultat conventionnel:
   valeur: 2 mois
@@ -93,6 +101,7 @@ contrat salarié . convention collective . bureaux études techniques . catégor
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Ingénieurs, Cadres:
   applicable si: catégorie professionnelle = 'Ingénieurs, Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Ingénieurs, Cadres . résultat conventionnel:
   valeur: 3 mois

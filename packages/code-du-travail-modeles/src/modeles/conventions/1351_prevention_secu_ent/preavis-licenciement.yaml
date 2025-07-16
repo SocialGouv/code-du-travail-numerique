@@ -10,6 +10,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens:
   applicable si: catégorie professionnelle = 'Agents d'exploitation, employés administratifs et techniciens'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau:
   titre: niveau
@@ -25,6 +26,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I:
   applicable si: niveau = 'I'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté:
   titre: ancienneté
@@ -41,6 +43,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Moins de 15 jours:
   applicable si: ancienneté = 'Moins de 15 jours'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Moins de 15 jours . résultat conventionnel:
   valeur: 0
@@ -50,6 +53,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté 15 jours à 1 mois:
   applicable si: ancienneté = '15 jours à 1 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté 15 jours à 1 mois . résultat conventionnel:
   valeur: 1 jour ouvré
@@ -59,6 +63,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Plus de 1 mois à 2 mois:
   applicable si: ancienneté = 'Plus de 1 mois à 2 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Plus de 1 mois à 2 mois . résultat conventionnel:
   valeur: 2 jours ouvrés
@@ -68,6 +73,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Plus de 2 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Plus de 2 mois à 6 mois . résultat conventionnel:
   valeur: 7 jours calendaires
@@ -77,6 +83,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -86,6 +93,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau I . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -95,6 +103,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II:
   applicable si: niveau = 'II'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté:
   titre: ancienneté
@@ -111,6 +120,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Moins de 15 jours:
   applicable si: ancienneté = 'Moins de 15 jours'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Moins de 15 jours . résultat conventionnel:
   valeur: 0
@@ -120,6 +130,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté 15 jours à 1 mois:
   applicable si: ancienneté = '15 jours à 1 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté 15 jours à 1 mois . résultat conventionnel:
   valeur: 1 jour ouvré
@@ -129,6 +140,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Plus de 1 mois à 2 mois:
   applicable si: ancienneté = 'Plus de 1 mois à 2 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Plus de 1 mois à 2 mois . résultat conventionnel:
   valeur: 2 jours ouvrés
@@ -138,6 +150,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Plus de 2 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Plus de 2 mois à 6 mois . résultat conventionnel:
   valeur: 7 jours calendaires
@@ -147,6 +160,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -156,6 +170,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau II . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -165,6 +180,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III:
   applicable si: niveau = 'III'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté:
   titre: ancienneté
@@ -181,6 +197,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Moins de 15 jours:
   applicable si: ancienneté = 'Moins de 15 jours'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Moins de 15 jours . résultat conventionnel:
   valeur: 0
@@ -190,6 +207,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté 15 jours à 1 mois:
   applicable si: ancienneté = '15 jours à 1 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté 15 jours à 1 mois . résultat conventionnel:
   valeur: 1 jour ouvré
@@ -199,6 +217,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Plus de 1 mois à 2 mois:
   applicable si: ancienneté = 'Plus de 1 mois à 2 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Plus de 1 mois à 2 mois . résultat conventionnel:
   valeur: 2 jours ouvrés
@@ -208,6 +227,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Plus de 2 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Plus de 2 mois à 6 mois . résultat conventionnel:
   valeur: 7 jours calendaires
@@ -217,6 +237,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -226,6 +247,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau III . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -235,6 +257,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV:
   applicable si: niveau = 'IV'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté:
   titre: ancienneté
@@ -251,6 +274,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Moins de 15 jours:
   applicable si: ancienneté = 'Moins de 15 jours'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Moins de 15 jours . résultat conventionnel:
   valeur: 0
@@ -260,6 +284,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté 15 jours à 1 mois:
   applicable si: ancienneté = '15 jours à 1 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté 15 jours à 1 mois . résultat conventionnel:
   valeur: 1 jour ouvré
@@ -269,6 +294,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Plus de 1 mois à 2 mois:
   applicable si: ancienneté = 'Plus de 1 mois à 2 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Plus de 1 mois à 2 mois . résultat conventionnel:
   valeur: 2 jours ouvrés
@@ -278,6 +304,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Plus de 2 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Plus de 2 mois à 6 mois . résultat conventionnel:
   valeur: 14 jours calendaires
@@ -287,6 +314,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -296,6 +324,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau IV . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -305,6 +334,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V:
   applicable si: niveau = 'V'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté:
   titre: ancienneté
@@ -321,6 +351,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Moins de 15 jours:
   applicable si: ancienneté = 'Moins de 15 jours'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Moins de 15 jours . résultat conventionnel:
   valeur: 0
@@ -330,6 +361,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté 15 jours à 1 mois:
   applicable si: ancienneté = '15 jours à 1 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté 15 jours à 1 mois . résultat conventionnel:
   valeur: 1 jour ouvré
@@ -339,6 +371,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Plus de 1 mois à 2 mois:
   applicable si: ancienneté = 'Plus de 1 mois à 2 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Plus de 1 mois à 2 mois . résultat conventionnel:
   valeur: 2 jours ouvrés
@@ -348,6 +381,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Plus de 2 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Plus de 2 mois à 6 mois . résultat conventionnel:
   valeur: 14 jours calendaires
@@ -357,6 +391,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -366,6 +401,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens . niveau V . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -375,6 +411,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise:
   applicable si: catégorie professionnelle = 'Agents de maîtrise'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau:
   titre: niveau
@@ -390,6 +427,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I:
   applicable si: niveau = 'I'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté:
   titre: ancienneté
@@ -406,6 +444,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté Moins de 15 jours:
   applicable si: ancienneté = 'Moins de 15 jours'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté Moins de 15 jours . résultat conventionnel:
   valeur: 0
@@ -415,6 +454,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté 15 jours à 2 mois:
   applicable si: ancienneté = '15 jours à 2 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté 15 jours à 2 mois . résultat conventionnel:
   valeur: 1 semaine
@@ -424,6 +464,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté Plus de 2 mois à 3 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 3 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté Plus de 2 mois à 3 mois . résultat conventionnel:
   valeur: 1 semaine
@@ -433,6 +474,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté Plus de 3 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 3 mois à 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté Plus de 3 mois à 6 mois . résultat conventionnel:
   valeur: 2 semaines
@@ -442,6 +484,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -451,6 +494,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau I . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -460,6 +504,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II:
   applicable si: niveau = 'II'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté:
   titre: ancienneté
@@ -476,6 +521,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté Moins de 15 jours:
   applicable si: ancienneté = 'Moins de 15 jours'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté Moins de 15 jours . résultat conventionnel:
   valeur: 0
@@ -485,6 +531,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté 15 jours à 2 mois:
   applicable si: ancienneté = '15 jours à 2 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté 15 jours à 2 mois . résultat conventionnel:
   valeur: 1 semaine
@@ -494,6 +541,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté Plus de 2 mois à 3 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 3 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté Plus de 2 mois à 3 mois . résultat conventionnel:
   valeur: 1 semaine
@@ -503,6 +551,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté Plus de 3 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 3 mois à 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté Plus de 3 mois à 6 mois . résultat conventionnel:
   valeur: 2 semaines
@@ -512,6 +561,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -521,6 +571,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau II . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -530,6 +581,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III:
   applicable si: niveau = 'III'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté:
   titre: ancienneté
@@ -546,6 +598,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté Moins de 15 jours:
   applicable si: ancienneté = 'Moins de 15 jours'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté Moins de 15 jours . résultat conventionnel:
   valeur: 0
@@ -555,6 +608,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté 15 jours à 2 mois:
   applicable si: ancienneté = '15 jours à 2 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté 15 jours à 2 mois . résultat conventionnel:
   valeur: 1 semaine
@@ -564,6 +618,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté Plus de 2 mois à 3 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 3 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté Plus de 2 mois à 3 mois . résultat conventionnel:
   valeur: 1 semaine
@@ -573,6 +628,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté Plus de 3 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 3 mois à 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté Plus de 3 mois à 6 mois . résultat conventionnel:
   valeur: 2 semaines
@@ -582,6 +638,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -591,6 +648,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau III . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -600,6 +658,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV:
   applicable si: niveau = 'IV'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté:
   titre: ancienneté
@@ -616,6 +675,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté Moins de 15 jours:
   applicable si: ancienneté = 'Moins de 15 jours'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté Moins de 15 jours . résultat conventionnel:
   valeur: 0
@@ -625,6 +685,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté 15 jours à 2 mois:
   applicable si: ancienneté = '15 jours à 2 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté 15 jours à 2 mois . résultat conventionnel:
   valeur: 1 semaine
@@ -634,6 +695,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté Plus de 2 mois à 3 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 3 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté Plus de 2 mois à 3 mois . résultat conventionnel:
   valeur: 2 semaines
@@ -643,6 +705,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté Plus de 3 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 3 mois à 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté Plus de 3 mois à 6 mois . résultat conventionnel:
   valeur: 2 semaines
@@ -652,6 +715,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -661,6 +725,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau IV . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 3 mois
@@ -670,6 +735,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V:
   applicable si: niveau = 'V'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté:
   titre: ancienneté
@@ -686,6 +752,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté Moins de 15 jours:
   applicable si: ancienneté = 'Moins de 15 jours'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté Moins de 15 jours . résultat conventionnel:
   valeur: 0
@@ -695,6 +762,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté 15 jours à 2 mois:
   applicable si: ancienneté = '15 jours à 2 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté 15 jours à 2 mois . résultat conventionnel:
   valeur: 1 semaine
@@ -704,6 +772,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté Plus de 2 mois à 3 mois:
   applicable si: ancienneté = 'Plus de 2 mois à 3 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté Plus de 2 mois à 3 mois . résultat conventionnel:
   valeur: 2 semaines
@@ -713,6 +782,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté Plus de 3 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 3 mois à 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté Plus de 3 mois à 6 mois . résultat conventionnel:
   valeur: 2 semaines
@@ -722,6 +792,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté Plus de 6 mois à 2 ans:
   applicable si: ancienneté = 'Plus de 6 mois à 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté Plus de 6 mois à 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -731,6 +802,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Agents de maîtrise . niveau V . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 3 mois
@@ -740,6 +812,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté:
   titre: ancienneté
@@ -756,6 +829,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Moins de 15 jours:
   applicable si: ancienneté = 'Moins de 15 jours'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Moins de 15 jours . résultat conventionnel:
   valeur: 0
@@ -765,6 +839,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté 15 jours à 1 mois:
   applicable si: ancienneté = '15 jours à 1 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté 15 jours à 1 mois . résultat conventionnel:
   valeur: 7 jours calendaires
@@ -774,6 +849,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Plus de 1 mois à 3 mois:
   applicable si: ancienneté = 'Plus de 1 mois à 3 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Plus de 1 mois à 3 mois . résultat conventionnel:
   valeur: 14 jours calendaires
@@ -783,6 +859,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Plus de 3 mois à 6 mois:
   applicable si: ancienneté = 'Plus de 3 mois à 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Plus de 3 mois à 6 mois . résultat conventionnel:
   valeur: 1 mois
@@ -792,6 +869,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Plus de 6 mois à 1 an:
   applicable si: ancienneté = 'Plus de 6 mois à 1 an'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Plus de 6 mois à 1 an . résultat conventionnel:
   valeur: 2 mois
@@ -801,6 +879,7 @@ contrat salarié . convention collective . prevention sécurité entreprise . ca
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Plus de 1 an:
   applicable si: ancienneté = 'Plus de 1 an'
+  valeur: oui
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle Cadres . ancienneté Plus de 1 an . résultat conventionnel:
   valeur: 3 mois

@@ -10,6 +10,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle:
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Cadres . niveau:
   titre: niveau
@@ -21,6 +22,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle C
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Cadres . niveau VII et plus:
   applicable si: niveau = 'VII et plus'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Cadres . niveau VII et plus . résultat conventionnel:
   valeur: 3 mois
@@ -30,6 +32,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle C
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés:
   applicable si: catégorie professionnelle = 'Ouvriers, Employés'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau:
   titre: niveau
@@ -43,6 +46,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau I:
   applicable si: niveau = 'I'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau I . ancienneté:
   titre: ancienneté
@@ -55,6 +59,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau I . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau I . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -64,6 +69,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau I . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau I . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -73,6 +79,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau II:
   applicable si: niveau = 'II'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau II . ancienneté:
   titre: ancienneté
@@ -85,6 +92,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau II . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau II . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -94,6 +102,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau II . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau II . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -103,6 +112,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau III:
   applicable si: niveau = 'III'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau III . résultat conventionnel:
   valeur: 2 mois
@@ -112,6 +122,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Techniciens et agents de maîtrise TAM:
   applicable si: catégorie professionnelle = 'Techniciens et agents de maîtrise TAM'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Techniciens et agents de maîtrise TAM . niveau:
   titre: niveau
@@ -125,6 +136,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle T
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Techniciens et agents de maîtrise TAM . niveau IV:
   applicable si: niveau = 'IV'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Techniciens et agents de maîtrise TAM . niveau IV . résultat conventionnel:
   valeur: 3 mois
@@ -134,6 +146,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle T
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Techniciens et agents de maîtrise TAM . niveau V:
   applicable si: niveau = 'V'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Techniciens et agents de maîtrise TAM . niveau V . résultat conventionnel:
   valeur: 3 mois
@@ -143,6 +156,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle T
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Techniciens et agents de maîtrise TAM . niveau VI:
   applicable si: niveau = 'VI'
+  valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Techniciens et agents de maîtrise TAM . niveau VI . résultat conventionnel:
   valeur: 3 mois

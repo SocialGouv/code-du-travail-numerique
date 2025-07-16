@@ -10,6 +10,7 @@ contrat salarié . convention collective . métallurgie . âge:
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans:
   applicable si: âge = 'Moins de 50 ans'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position:
   titre: position
@@ -23,6 +24,7 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans .
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position A, B, C ou D:
   applicable si: position = 'A, B, C ou D'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position A, B, C ou D . anciennement cadre:
   titre: anciennement cadre
@@ -34,6 +36,7 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans .
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position A, B, C ou D . anciennement cadre Oui:
   applicable si: anciennement cadre = 'Oui'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position A, B, C ou D . anciennement cadre Oui . ancienneté:
   titre: ancienneté
@@ -46,6 +49,7 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans .
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position A, B, C ou D . anciennement cadre Oui . ancienneté Entre 3 ans et moins de 5 ans:
   applicable si: ancienneté = 'Entre 3 ans et moins de 5 ans'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position A, B, C ou D . anciennement cadre Oui . ancienneté Entre 3 ans et moins de 5 ans . résultat conventionnel:
   valeur: 3 mois
@@ -58,6 +62,7 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans .
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position A, B, C ou D . anciennement cadre Oui . ancienneté 5 ans ou plus:
   applicable si: ancienneté = '5 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position A, B, C ou D . anciennement cadre Oui . ancienneté 5 ans ou plus . résultat conventionnel:
   valeur: 3 mois
@@ -70,6 +75,7 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans .
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position E:
   applicable si: position = 'E'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position E . anciennement cadre:
   titre: anciennement cadre
@@ -81,6 +87,7 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans .
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position E . anciennement cadre Oui:
   applicable si: anciennement cadre = 'Oui'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position E . anciennement cadre Oui . ancienneté:
   titre: ancienneté
@@ -93,6 +100,7 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans .
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position E . anciennement cadre Oui . ancienneté Entre 3 ans et moins de 5 ans:
   applicable si: ancienneté = 'Entre 3 ans et moins de 5 ans'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position E . anciennement cadre Oui . ancienneté Entre 3 ans et moins de 5 ans . résultat conventionnel:
   valeur: 3 mois
@@ -105,6 +113,7 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans .
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position E . anciennement cadre Oui . ancienneté 5 ans ou plus:
   applicable si: ancienneté = '5 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position E . anciennement cadre Oui . ancienneté 5 ans ou plus . résultat conventionnel:
   valeur: 3 mois
@@ -117,6 +126,7 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans .
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position F, G, H ou I:
   applicable si: position = 'F, G, H ou I'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position F, G, H ou I . ancienneté:
   titre: ancienneté
@@ -129,6 +139,7 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans .
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position F, G, H ou I . ancienneté Entre 3 ans et moins de 5 ans:
   applicable si: ancienneté = 'Entre 3 ans et moins de 5 ans'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position F, G, H ou I . ancienneté Entre 3 ans et moins de 5 ans . résultat conventionnel:
   valeur: 3 mois
@@ -140,6 +151,7 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans .
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position F, G, H ou I . ancienneté 5 ans ou plus:
   applicable si: ancienneté = '5 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position F, G, H ou I . ancienneté 5 ans ou plus . résultat conventionnel:
   valeur: 3 mois
@@ -151,6 +163,7 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans .
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans:
   applicable si: âge = '50 ans à 55 ans'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position:
   titre: position
@@ -164,6 +177,7 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans 
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position A, B, C ou D:
   applicable si: position = 'A, B, C ou D'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position A, B, C ou D . anciennement cadre:
   titre: anciennement cadre
@@ -175,6 +189,7 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans 
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position A, B, C ou D . anciennement cadre Oui:
   applicable si: anciennement cadre = 'Oui'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position A, B, C ou D . anciennement cadre Oui . ancienneté:
   titre: ancienneté
@@ -187,6 +202,7 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans 
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position A, B, C ou D . anciennement cadre Oui . ancienneté Entre 3 ans et moins de 5 ans:
   applicable si: ancienneté = 'Entre 3 ans et moins de 5 ans'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position A, B, C ou D . anciennement cadre Oui . ancienneté Entre 3 ans et moins de 5 ans . résultat conventionnel:
   valeur: 4 mois
@@ -199,6 +215,7 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans 
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position A, B, C ou D . anciennement cadre Oui . ancienneté 5 ans ou plus:
   applicable si: ancienneté = '5 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position A, B, C ou D . anciennement cadre Oui . ancienneté 5 ans ou plus . résultat conventionnel:
   valeur: 6 mois
@@ -211,6 +228,7 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans 
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position E:
   applicable si: position = 'E'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position E . anciennement cadre:
   titre: anciennement cadre
@@ -222,6 +240,7 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans 
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position E . anciennement cadre Oui:
   applicable si: anciennement cadre = 'Oui'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position E . anciennement cadre Oui . ancienneté:
   titre: ancienneté
@@ -234,6 +253,7 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans 
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position E . anciennement cadre Oui . ancienneté Entre 3 ans et moins de 5 ans:
   applicable si: ancienneté = 'Entre 3 ans et moins de 5 ans'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position E . anciennement cadre Oui . ancienneté Entre 3 ans et moins de 5 ans . résultat conventionnel:
   valeur: 4 mois
@@ -246,6 +266,7 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans 
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position E . anciennement cadre Oui . ancienneté 5 ans ou plus:
   applicable si: ancienneté = '5 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position E . anciennement cadre Oui . ancienneté 5 ans ou plus . résultat conventionnel:
   valeur: 6 mois
@@ -258,6 +279,7 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans 
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position F, G, H ou I:
   applicable si: position = 'F, G, H ou I'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position F, G, H ou I . ancienneté:
   titre: ancienneté
@@ -270,6 +292,7 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans 
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position F, G, H ou I . ancienneté Entre 3 ans et moins de 5 ans:
   applicable si: ancienneté = 'Entre 3 ans et moins de 5 ans'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position F, G, H ou I . ancienneté Entre 3 ans et moins de 5 ans . résultat conventionnel:
   valeur: 4 mois
@@ -281,6 +304,7 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans 
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position F, G, H ou I . ancienneté 5 ans ou plus:
   applicable si: ancienneté = '5 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position F, G, H ou I . ancienneté 5 ans ou plus . résultat conventionnel:
   valeur: 6 mois
@@ -292,6 +316,7 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans 
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus:
   applicable si: âge = '55 ans et plus'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position:
   titre: position
@@ -305,6 +330,7 @@ contrat salarié . convention collective . métallurgie . âge 55 ans et plus . 
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position A, B, C ou D:
   applicable si: position = 'A, B, C ou D'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position A, B, C ou D . anciennement cadre:
   titre: anciennement cadre
@@ -316,6 +342,7 @@ contrat salarié . convention collective . métallurgie . âge 55 ans et plus . 
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position A, B, C ou D . anciennement cadre Oui:
   applicable si: anciennement cadre = 'Oui'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position A, B, C ou D . anciennement cadre Oui . ancienneté:
   titre: ancienneté
@@ -328,6 +355,7 @@ contrat salarié . convention collective . métallurgie . âge 55 ans et plus . 
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position A, B, C ou D . anciennement cadre Oui . ancienneté Entre 3 ans et moins de 5 ans:
   applicable si: ancienneté = 'Entre 3 ans et moins de 5 ans'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position A, B, C ou D . anciennement cadre Oui . ancienneté Entre 3 ans et moins de 5 ans . résultat conventionnel:
   valeur: 6 mois
@@ -340,6 +368,7 @@ contrat salarié . convention collective . métallurgie . âge 55 ans et plus . 
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position A, B, C ou D . anciennement cadre Oui . ancienneté 5 ans ou plus:
   applicable si: ancienneté = '5 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position A, B, C ou D . anciennement cadre Oui . ancienneté 5 ans ou plus . résultat conventionnel:
   valeur: 6 mois
@@ -352,6 +381,7 @@ contrat salarié . convention collective . métallurgie . âge 55 ans et plus . 
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position E:
   applicable si: position = 'E'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position E . anciennement cadre:
   titre: anciennement cadre
@@ -363,6 +393,7 @@ contrat salarié . convention collective . métallurgie . âge 55 ans et plus . 
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position E . anciennement cadre Oui:
   applicable si: anciennement cadre = 'Oui'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position E . anciennement cadre Oui . ancienneté:
   titre: ancienneté
@@ -375,6 +406,7 @@ contrat salarié . convention collective . métallurgie . âge 55 ans et plus . 
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position E . anciennement cadre Oui . ancienneté Entre 3 ans et moins de 5 ans:
   applicable si: ancienneté = 'Entre 3 ans et moins de 5 ans'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position E . anciennement cadre Oui . ancienneté Entre 3 ans et moins de 5 ans . résultat conventionnel:
   valeur: 6 mois
@@ -387,6 +419,7 @@ contrat salarié . convention collective . métallurgie . âge 55 ans et plus . 
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position E . anciennement cadre Oui . ancienneté 5 ans ou plus:
   applicable si: ancienneté = '5 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position E . anciennement cadre Oui . ancienneté 5 ans ou plus . résultat conventionnel:
   valeur: 6 mois
@@ -399,6 +432,7 @@ contrat salarié . convention collective . métallurgie . âge 55 ans et plus . 
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position F, G, H ou I:
   applicable si: position = 'F, G, H ou I'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position F, G, H ou I . ancienneté:
   titre: ancienneté
@@ -411,6 +445,7 @@ contrat salarié . convention collective . métallurgie . âge 55 ans et plus . 
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position F, G, H ou I . ancienneté Entre 3 ans et moins de 5 ans:
   applicable si: ancienneté = 'Entre 3 ans et moins de 5 ans'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position F, G, H ou I . ancienneté Entre 3 ans et moins de 5 ans . résultat conventionnel:
   valeur: 6 mois
@@ -422,6 +457,7 @@ contrat salarié . convention collective . métallurgie . âge 55 ans et plus . 
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position F, G, H ou I . ancienneté 5 ans ou plus:
   applicable si: ancienneté = '5 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position F, G, H ou I . ancienneté 5 ans ou plus . résultat conventionnel:
   valeur: 6 mois

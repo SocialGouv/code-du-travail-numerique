@@ -9,6 +9,7 @@ contrat salarié . convention collective . batiment etam . âge:
 
 contrat salarié . convention collective . batiment etam . âge Moins de 55 ans:
   applicable si: âge = 'Moins de 55 ans'
+  valeur: oui
 
 contrat salarié . convention collective . batiment etam . âge Moins de 55 ans . ancienneté:
   titre: ancienneté
@@ -21,6 +22,7 @@ contrat salarié . convention collective . batiment etam . âge Moins de 55 ans 
 
 contrat salarié . convention collective . batiment etam . âge Moins de 55 ans . ancienneté Moins de 2 ans:
   applicable si: ancienneté = 'Moins de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . batiment etam . âge Moins de 55 ans . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -30,6 +32,7 @@ contrat salarié . convention collective . batiment etam . âge Moins de 55 ans 
 
 contrat salarié . convention collective . batiment etam . âge Moins de 55 ans . ancienneté 2 ans ou plus:
   applicable si: ancienneté = '2 ans ou plus'
+  valeur: oui
 
 contrat salarié . convention collective . batiment etam . âge Moins de 55 ans . ancienneté 2 ans ou plus . résultat conventionnel:
   valeur: 2 mois
@@ -39,6 +42,7 @@ contrat salarié . convention collective . batiment etam . âge Moins de 55 ans 
 
 contrat salarié . convention collective . batiment etam . âge Plus de 55 ans:
   applicable si: âge = 'Plus de 55 ans'
+  valeur: oui
 
 contrat salarié . convention collective . batiment etam . âge Plus de 55 ans . ancienneté:
   titre: ancienneté
@@ -51,6 +55,7 @@ contrat salarié . convention collective . batiment etam . âge Plus de 55 ans .
 
 contrat salarié . convention collective . batiment etam . âge Plus de 55 ans . ancienneté Au moins 15 ans d'ancienneté:
   applicable si: ancienneté = 'Au moins 15 ans d'ancienneté'
+  valeur: oui
 
 contrat salarié . convention collective . batiment etam . âge Plus de 55 ans . ancienneté Au moins 15 ans d'ancienneté . résultat conventionnel:
   valeur: 3 mois
@@ -60,6 +65,7 @@ contrat salarié . convention collective . batiment etam . âge Plus de 55 ans .
 
 contrat salarié . convention collective . batiment etam . âge Plus de 55 ans . ancienneté Moins de 15 ans d'ancienneté:
   applicable si: ancienneté = 'Moins de 15 ans d'ancienneté'
+  valeur: oui
 
 contrat salarié . convention collective . batiment etam . âge Plus de 55 ans . ancienneté Moins de 15 ans d'ancienneté . résultat conventionnel:
   valeur: 2 mois

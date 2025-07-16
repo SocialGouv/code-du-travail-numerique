@@ -10,6 +10,7 @@ contrat salarié . convention collective . bricolage . catégorie professionnell
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Agents de maîtrise:
   applicable si: catégorie professionnelle = 'Agents de maîtrise'
+  valeur: oui
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Agents de maîtrise . ancienneté:
   titre: ancienneté
@@ -22,6 +23,7 @@ contrat salarié . convention collective . bricolage . catégorie professionnell
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Agents de maîtrise . ancienneté Entre 2 et 6 mois:
   applicable si: ancienneté = 'Entre 2 et 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Agents de maîtrise . ancienneté Entre 2 et 6 mois . résultat conventionnel:
   valeur: 1 mois
@@ -31,6 +33,7 @@ contrat salarié . convention collective . bricolage . catégorie professionnell
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Agents de maîtrise . ancienneté Plus de 6 mois:
   applicable si: ancienneté = 'Plus de 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Agents de maîtrise . ancienneté Plus de 6 mois . résultat conventionnel:
   valeur: 2 mois
@@ -40,6 +43,7 @@ contrat salarié . convention collective . bricolage . catégorie professionnell
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Cadres . ancienneté:
   titre: ancienneté
@@ -52,6 +56,7 @@ contrat salarié . convention collective . bricolage . catégorie professionnell
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Cadres . ancienneté De 3 à 6 mois:
   applicable si: ancienneté = 'De 3 à 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Cadres . ancienneté De 3 à 6 mois . résultat conventionnel:
   valeur: 1 mois
@@ -61,6 +66,7 @@ contrat salarié . convention collective . bricolage . catégorie professionnell
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Cadres . ancienneté Plus de 6 mois:
   applicable si: ancienneté = 'Plus de 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Cadres . ancienneté Plus de 6 mois . résultat conventionnel:
   valeur: 3 mois
@@ -70,6 +76,7 @@ contrat salarié . convention collective . bricolage . catégorie professionnell
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés:
   applicable si: catégorie professionnelle = 'Employés'
+  valeur: oui
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés . ancienneté:
   titre: ancienneté
@@ -84,6 +91,7 @@ contrat salarié . convention collective . bricolage . catégorie professionnell
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés . ancienneté Moins de 1 mois:
   applicable si: ancienneté = 'Moins de 1 mois'
+  valeur: oui
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés . ancienneté Moins de 1 mois . résultat conventionnel:
   valeur: 0
@@ -93,6 +101,7 @@ contrat salarié . convention collective . bricolage . catégorie professionnell
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés . ancienneté 1 mois à moins de 6 mois:
   applicable si: ancienneté = '1 mois à moins de 6 mois'
+  valeur: oui
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés . ancienneté 1 mois à moins de 6 mois . résultat conventionnel:
   valeur: 15 jours
@@ -102,6 +111,7 @@ contrat salarié . convention collective . bricolage . catégorie professionnell
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés . ancienneté 6 mois à 2 ans:
   applicable si: ancienneté = '6 mois à 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés . ancienneté 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -111,6 +121,7 @@ contrat salarié . convention collective . bricolage . catégorie professionnell
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . bricolage . catégorie professionnelle Employés . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois

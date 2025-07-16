@@ -10,6 +10,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Agents de maîtrise et Techniciens:
   applicable si: catégorie professionnelle = 'Agents de maîtrise et Techniciens'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Agents de maîtrise et Techniciens . résultat conventionnel:
   valeur: 2 mois
@@ -21,6 +22,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Cadres . résultat conventionnel:
   valeur: 3 mois
@@ -30,6 +32,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Ouvriers, Employés:
   applicable si: catégorie professionnelle = 'Ouvriers, Employés'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Ouvriers, Employés . motif de rupture:
   titre: motif de rupture
@@ -42,6 +45,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Ouvriers, Employés . motif de rupture Autre motif hors faute grave ou lourde:
   applicable si: motif de rupture = 'Autre motif hors faute grave ou lourde'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Ouvriers, Employés . motif de rupture Autre motif hors faute grave ou lourde . ancienneté:
   titre: ancienneté
@@ -54,6 +58,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Ouvriers, Employés . motif de rupture Autre motif hors faute grave ou lourde . ancienneté 2 ans ou moins:
   applicable si: ancienneté = '2 ans ou moins'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Ouvriers, Employés . motif de rupture Autre motif hors faute grave ou lourde . ancienneté 2 ans ou moins . résultat conventionnel:
   valeur: 1 mois
@@ -63,6 +68,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Ouvriers, Employés . motif de rupture Autre motif hors faute grave ou lourde . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Ouvriers, Employés . motif de rupture Autre motif hors faute grave ou lourde . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -72,6 +78,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Ouvriers, Employés . motif de rupture Motif économique:
   applicable si: motif de rupture = 'Motif économique'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle Ouvriers, Employés . motif de rupture Motif économique . résultat conventionnel:
   valeur: 2 mois

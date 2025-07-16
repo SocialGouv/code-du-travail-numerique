@@ -12,6 +12,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Agents de maîtrise:
   applicable si: catégorie professionnelle = 'Agents de maîtrise'
+  valeur: oui
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Agents de maîtrise . résultat conventionnel:
   valeur: 3 mois
@@ -21,6 +22,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Cadres . résultat conventionnel:
   valeur: 3 mois
@@ -30,6 +32,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique:
   applicable si: catégorie professionnelle = 'Salariés occupant un emploi de l'esthétique-cosmétique'
+  valeur: oui
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique . ancienneté:
   titre: ancienneté
@@ -43,6 +46,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique . ancienneté 6 mois ou moins:
   applicable si: ancienneté = '6 mois ou moins'
+  valeur: oui
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique . ancienneté 6 mois ou moins . résultat conventionnel:
   valeur: 1 semaine
@@ -52,6 +56,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique . ancienneté 6 mois à 2 ans:
   applicable si: ancienneté = '6 mois à 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique . ancienneté 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -61,6 +66,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -70,6 +76,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure:
   applicable si: catégorie professionnelle = 'Salariés occupant un emploi non-technique de la coiffure'
+  valeur: oui
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure . ancienneté:
   titre: ancienneté
@@ -83,6 +90,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure . ancienneté 6 mois ou moins:
   applicable si: ancienneté = '6 mois ou moins'
+  valeur: oui
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure . ancienneté 6 mois ou moins . résultat conventionnel:
   valeur: 1 semaine
@@ -92,6 +100,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure . ancienneté 6 mois à 2 ans:
   applicable si: ancienneté = '6 mois à 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure . ancienneté 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -101,6 +110,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
@@ -110,6 +120,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi technique de la coiffure:
   applicable si: catégorie professionnelle = 'Salariés occupant un emploi technique de la coiffure'
+  valeur: oui
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi technique de la coiffure . ancienneté:
   titre: ancienneté
@@ -123,6 +134,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi technique de la coiffure . ancienneté 6 mois ou moins:
   applicable si: ancienneté = '6 mois ou moins'
+  valeur: oui
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi technique de la coiffure . ancienneté 6 mois ou moins . résultat conventionnel:
   valeur: 1 semaine
@@ -132,6 +144,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi technique de la coiffure . ancienneté 6 mois à 2 ans:
   applicable si: ancienneté = '6 mois à 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi technique de la coiffure . ancienneté 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois
@@ -141,6 +154,7 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi technique de la coiffure . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
+  valeur: oui
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Salariés occupant un emploi technique de la coiffure . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois
