@@ -1,10 +1,13 @@
 export type ResultStoreInput = {
   result?: any;
   calculatedData?: any;
+  resultNotifications?: any[];
+  resultReferences?: any[];
 };
 
 export type ResultStoreError = {
   result?: string;
+  errorPublicodes?: string;
 };
 
 export type StepData<Input, Error> = {

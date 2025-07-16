@@ -18,6 +18,7 @@ const initialState: InformationsStoreData = {
     publicodesInformations: [],
     hasNoMissingQuestions: false,
     informationError: false,
+    isStepHidden: true,
   },
   error: {
     errorInformations: {},
@@ -65,6 +66,7 @@ const createInformationsStore: StoreSliceWrapperPreavisLicenciement<
                   info: undefined,
                 },
               ];
+              state.informationsData.input.isStepHidden = false;
             })
           );
           return true;
@@ -186,14 +188,6 @@ const createInformationsStore: StoreSliceWrapperPreavisLicenciement<
         })
       );
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
-    },
-    shouldSkipStep: (): boolean => {
-      const state = get().informationsData.input;
-      // Si aucune question n'a été générée et qu'il n'y a pas de questions manquantes,
-      // l'étape peut être passée automatiquement
-      return (
-        state.publicodesInformations.length === 0 && state.hasNoMissingQuestions
-      );
     },
   },
 });

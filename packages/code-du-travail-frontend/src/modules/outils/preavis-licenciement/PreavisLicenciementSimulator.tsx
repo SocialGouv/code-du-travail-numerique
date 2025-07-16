@@ -4,10 +4,7 @@ import { ContainerSimulator } from "../../layout/ContainerSimulator";
 import { RelatedItem } from "../../documents";
 import React, { useContext } from "react";
 import StepIntroduction from "./steps/Introduction";
-import {
-  Step,
-  ValidationResponse,
-} from "../common/components/SimulatorLayout/types";
+import { Step } from "../common/components/SimulatorLayout/types";
 import {
   createPreavisLicenciementStore,
   PreavisLicenciementContext,
@@ -110,7 +107,7 @@ const PreavisLicenciementSimulatorContent = ({
     isStepAgreementValid,
     onNextStepInfos,
     isStepInfosValid,
-    shouldSkipInfoStep,
+    isStepInformationsHidden,
   } = usePreavisLicenciementStore(store, (state) => ({
     onNextStepStatus: state.statusFunction.onNextStep,
     isStepStatusValid: state.statusData.isStepValid,
@@ -118,14 +115,15 @@ const PreavisLicenciementSimulatorContent = ({
     isStepAgreementValid: state.agreementData.isStepValid,
     onNextStepInfos: state.informationsFunction.onNextStep,
     isStepInfosValid: state.informationsData.isStepValid,
-    shouldSkipInfoStep: state.informationsFunction.shouldSkipStep,
+    isStepInformationsHidden: state.informationsData.input.isStepHidden,
   }));
 
-  const handleNextStepInfos = (): ValidationResponse => {
-    if (shouldSkipInfoStep()) {
-      return ValidationResponse.Valid;
+  const getHiddenSteps = (): PreavisLicenciementStepName[] => {
+    const hiddenSteps: PreavisLicenciementStepName[] = [];
+    if (isStepInformationsHidden) {
+      hiddenSteps.push(PreavisLicenciementStepName.Infos);
     }
-    return onNextStepInfos();
+    return hiddenSteps;
   };
 
   return (
@@ -133,6 +131,7 @@ const PreavisLicenciementSimulatorContent = ({
       simulator={PublicodesSimulator.PREAVIS_LICENCIEMENT}
       title={title}
       steps={steps}
+      hiddenStep={getHiddenSteps()}
       onStepChange={[
         {
           stepName: PreavisLicenciementStepName.Status,
@@ -146,8 +145,8 @@ const PreavisLicenciementSimulatorContent = ({
         },
         {
           stepName: PreavisLicenciementStepName.Infos,
-          isStepValid: isStepInfosValid || shouldSkipInfoStep(),
-          onNextStep: handleNextStepInfos,
+          isStepValid: isStepInfosValid,
+          onNextStep: onNextStepInfos,
         },
       ]}
     />
