@@ -316,7 +316,7 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
                 imageUrl={`/static/assets/img/modeles-de-courriers-download.svg`}
                 title={`Télécharger l'infographie`}
                 titleAs={`h${titleLevel}`}
-                detail={<p>Format PDF - ${pdfSize}Ko</p>}
+                detail={<p>Format PDF - {pdfSize}Ko</p>}
                 imageAlt={""}
                 linkProps={{
                   href: toUrl(pdfName),

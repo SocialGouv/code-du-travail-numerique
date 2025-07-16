@@ -653,7 +653,7 @@ exports[`DisplayContent Infographic should replace div with infographic class to
             class="fr-tile__detail"
           >
             <p>
-              Format PDF - $3200Ko
+              Format PDF - 3200Ko
             </p>
           </div>
         </div>
