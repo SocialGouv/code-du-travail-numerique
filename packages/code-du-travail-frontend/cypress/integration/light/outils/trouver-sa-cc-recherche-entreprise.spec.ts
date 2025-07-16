@@ -18,9 +18,7 @@ describe("Outil - Trouver sa convention collective", () => {
       "82129756100010",
       { delay: 0 }
     );
-    cy.selectByLabel("Code postal ou Ville (optionnel)")
-      .as("locationInput")
-      .type("7501");
+    cy.selectByLabel("Code postal ou Ville").as("locationInput").type("7501");
     cy.get("@locationInput").type("8{downArrow}{enter}", {
       delay: 2000,
       force: true,
@@ -51,7 +49,7 @@ describe("Outil - Trouver sa convention collective", () => {
       .type("Q")
       .type("U")
       .type("E");
-    cy.selectByLabel("Code postal ou Ville (optionnel)").clear();
+    cy.selectByLabel("Code postal ou Ville").clear();
     cy.get('button[type="submit"]').last().click();
     cy.contains("CARREFOUR BANQUE").click();
     cy.contains("2 conventions collectives trouvées :");
