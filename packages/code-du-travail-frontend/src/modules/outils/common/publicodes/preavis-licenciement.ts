@@ -2,6 +2,7 @@ import { formatIdcc } from "@socialgouv/modeles-social";
 
 export const mapToPublicodesSituationForCalculationPreavisLicenciement = (
   seniority: string,
+  isHandicappedWorker: boolean,
   ccn?: number,
   moreInfos?: Record<string, string>
 ): Record<string, string | undefined> => {
@@ -10,6 +11,9 @@ export const mapToPublicodesSituationForCalculationPreavisLicenciement = (
     "contrat salarié . convention collective": ccn
       ? `'IDCC${formatIdcc(ccn)}'`
       : "''",
+    "contrat salarié . travailleur handicapé": isHandicappedWorker
+      ? "oui"
+      : "non",
     ...moreInfos,
   };
 };

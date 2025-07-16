@@ -3,7 +3,7 @@ import produce from "immer";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
-import { AgreementStoreSlice } from "./types";
+import { AgreementStoreInput, AgreementStoreSlice } from "./types";
 import { validateAgreementStepWithState } from "./validator";
 import { StoreSliceWrapperPreavisLicenciement } from "../../store";
 import { captureException } from "@sentry/nextjs";
@@ -17,6 +17,9 @@ import { loadPublicodes } from "src/modules/outils/common/publicodes";
 import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
 import { pushAgreementEvents } from "../../../../common/events/pushAgreementEvents";
 import getSupportedCc from "src/modules/outils/common/utils/getSupportedCc";
+import { InformationsStoreSlice } from "../../Informations/store";
+import { StatusStoreSlice } from "../../Status/store";
+import { mapToPublicodesSituationForCalculationPreavisLicenciement } from "src/modules/outils/common/publicodes";
 
 const initialState = {
   input: {
@@ -25,6 +28,7 @@ const initialState = {
     enterprise: undefined,
     hasNoEnterpriseSelected: false,
     informationError: false,
+    isStepInformationsHidden: true,
   },
   error: {},
   hasBeenSubmit: false,
@@ -32,7 +36,8 @@ const initialState = {
 };
 
 const createAgreementStore: StoreSliceWrapperPreavisLicenciement<
-  AgreementStoreSlice
+  AgreementStoreSlice,
+  InformationsStoreSlice & StatusStoreSlice
 > = (set, get) => ({
   agreementData: {
     ...initialState,
@@ -44,6 +49,7 @@ const createAgreementStore: StoreSliceWrapperPreavisLicenciement<
     onInitAgreementPage: () => {
       try {
         const parsedData = getAgreementFromLocalStorage();
+        let shouldResetQuestions = false;
         if (parsedData) {
           if (parsedData?.num !== get().agreementData.input.agreement?.num) {
             applyGenericValidation(get, set, "agreement", parsedData);
@@ -65,8 +71,14 @@ const createAgreementStore: StoreSliceWrapperPreavisLicenciement<
                 })
               );
             }
+            shouldResetQuestions = true;
           }
         }
+        get().agreementFunction.onSetIsStepHidden();
+        if (shouldResetQuestions) {
+          get().informationsFunction.resetQuestions();
+        }
+        get().informationsFunction.generatePublicodesQuestions();
       } catch (e) {
         console.error(e);
         captureException(e);
@@ -85,6 +97,9 @@ const createAgreementStore: StoreSliceWrapperPreavisLicenciement<
                 );
             })
           );
+          get().agreementFunction.onSetIsStepHidden();
+          get().informationsFunction.resetQuestions();
+          get().informationsFunction.generatePublicodesQuestions();
         } catch (e) {
           console.error(e);
           captureException(e);
@@ -100,6 +115,9 @@ const createAgreementStore: StoreSliceWrapperPreavisLicenciement<
       applyGenericValidation(get, set, "route", value);
     },
     onAgreementChange: (agreement: any, enterprise?: any) => {
+      const currentAgreement = get().agreementData.input.agreement;
+      const hasAgreementChanged = currentAgreement?.num !== agreement?.num;
+
       applyGenericValidation(get, set, "agreement", agreement);
       saveAgreementToLocalStorage(agreement);
       try {
@@ -114,9 +132,52 @@ const createAgreementStore: StoreSliceWrapperPreavisLicenciement<
               );
           })
         );
+        get().agreementFunction.onSetIsStepHidden();
+        if (hasAgreementChanged) {
+          get().informationsFunction.resetQuestions();
+        }
+        get().informationsFunction.generatePublicodesQuestions();
       } catch (e) {
         console.error(e);
         captureException(e);
+      }
+    },
+    onSetIsStepHidden: () => {
+      const publicodes = get().agreementData.publicodes;
+      const agreement = get().agreementData.input.agreement;
+      const seniority = get().statusData.input.seniority ?? "'Moins de 6 mois'";
+      const isHandicappedWorker = !!get().statusData.input.disabledWorker;
+
+      try {
+        const situation =
+          mapToPublicodesSituationForCalculationPreavisLicenciement(
+            seniority,
+            isHandicappedWorker,
+            agreement?.num,
+            undefined
+          );
+
+        const result = publicodes.calculate(situation);
+
+        let missingArgs = [];
+        if (result.type === "missing-args") {
+          missingArgs = result.missingArgs.filter((item) => item.rawNode.cdtn);
+        }
+
+        set(
+          produce((state: AgreementStoreSlice) => {
+            state.agreementData.input.isStepInformationsHidden =
+              missingArgs.length === 0;
+          })
+        );
+      } catch (e) {
+        console.error(e);
+        captureException(e);
+        set(
+          produce((state: AgreementStoreSlice) => {
+            state.agreementData.input.isStepInformationsHidden = false;
+          })
+        );
       }
     },
     setHasNoEnterpriseSelected: (value: boolean) => {
@@ -170,24 +231,6 @@ const createAgreementStore: StoreSliceWrapperPreavisLicenciement<
         PublicodesSimulator.PREAVIS_LICENCIEMENT,
         JSON.stringify(data),
       ]);
-    },
-    resetStep: () => {
-      set((state) => ({
-        ...state,
-        agreementData: {
-          ...state.agreementData,
-          input: {
-            route: undefined,
-            agreement: undefined,
-            enterprise: undefined,
-            hasNoEnterpriseSelected: false,
-            informationError: false,
-          },
-          error: {},
-          hasBeenSubmit: false,
-          isStepValid: true, // Reset à true pour permettre la navigation
-        },
-      }));
     },
   },
 });

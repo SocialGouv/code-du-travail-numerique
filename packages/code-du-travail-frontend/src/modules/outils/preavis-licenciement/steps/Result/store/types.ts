@@ -3,6 +3,7 @@ export type ResultStoreInput = {
   calculatedData?: any;
   resultNotifications?: any[];
   resultReferences?: any[];
+  isAgreementSupported?: boolean;
 };
 
 export type ResultStoreError = {

@@ -11,8 +11,8 @@ describe("Vérification des arguments manquants pour la CC 1486", () => {
       "contrat salarié . convention collective": "'IDCC1486'",
       "contrat salarié . convention collective . ancienneté légal":
         "'Moins de 6 mois'",
+      "contrat salarié . travailleur handicapé": "non",
     });
-    console.log(JSON.stringify(result, null, 2));
     expect(result).toNextMissingQuestionBeEqual(
       "Quelle est la catégorie professionnelle du salarié ?"
     );

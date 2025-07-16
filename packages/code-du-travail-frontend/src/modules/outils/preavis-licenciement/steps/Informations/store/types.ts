@@ -10,7 +10,6 @@ export type InformationsStoreInput = {
   publicodesInformations: Array<PublicodesInformation>;
   hasNoMissingQuestions: boolean;
   informationError: boolean;
-  isStepHidden: boolean;
 };
 
 export type InformationsStoreError = {
@@ -34,6 +33,7 @@ export type InformationsStoreFn = {
   ) => void;
   generatePublicodesQuestions: () => boolean;
   onNextStep: () => ValidationResponse;
+  resetQuestions: () => void;
 };
 
 export type InformationsStoreSlice = {

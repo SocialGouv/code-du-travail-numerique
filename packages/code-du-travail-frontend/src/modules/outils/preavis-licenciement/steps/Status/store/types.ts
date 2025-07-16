@@ -1,9 +1,14 @@
 import type { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 
+export type Seniority =
+  | "'Moins de 6 mois'"
+  | "'6 mois à moins de 2 ans'"
+  | "'Plus de 2 ans'";
+
 export type StatusStoreInput = {
   seriousMisconduct?: boolean;
   disabledWorker?: boolean;
-  seniority?: { value: string; label: string };
+  seniority?: Seniority;
 };
 
 export type StatusStoreError = {
@@ -24,9 +29,8 @@ export type StatusStoreData = StepData<StatusStoreInput, StatusStoreError>;
 export type StatusStoreFunction = {
   onSeriousMisconductChange: (value: boolean) => void;
   onDisabledWorkerChange: (value: boolean) => void;
-  onSeniorityChange: (value: { value: string; label: string }) => void;
+  onSeniorityChange: (value: Seniority) => void;
   onNextStep: () => ValidationResponse;
-  resetStep: () => void;
 };
 
 export type StatusStoreSlice = {

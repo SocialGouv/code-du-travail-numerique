@@ -6,6 +6,7 @@ import {
   PreavisLicenciementContext,
   usePreavisLicenciementStore,
 } from "../store";
+import { Seniority } from "./store/types";
 
 const StepStatus = (): JSX.Element => {
   const store = useContext(PreavisLicenciementContext);
@@ -110,28 +111,16 @@ const StepStatus = (): JSX.Element => {
           label="Ancienneté du salarié"
           subLabel="L'ancienneté du salarié est habituellement mentionnée sur le bulletin de salaire."
           options={[
-            ["'Moins de 6 mois'", "Moins de 6 mois"],
-            ["'De 6 mois à moins de 2 ans'", "De 6 mois à moins de 2 ans"],
-            ["'2 ans et plus'", "2 ans et plus"],
+            ["'Moins de 6 mois'" as Seniority, "Moins de 6 mois"],
+            [
+              "'6 mois à moins de 2 ans'" as Seniority,
+              "De 6 mois à moins de 2 ans",
+            ],
+            ["'Plus de 2 ans'" as Seniority, "2 ans et plus"],
           ]}
-          selectedOption={seniority?.value || ""}
+          selectedOption={seniority || ""}
           onChangeSelectedOption={(selectedValue) => {
-            if (selectedValue === "'Moins de 6 mois'") {
-              onSeniorityChange({
-                value: "'Moins de 6 mois'",
-                label: "Moins de 6 mois",
-              });
-            } else if (selectedValue === "'De 6 mois à moins de 2 ans'") {
-              onSeniorityChange({
-                value: "'De 6 mois à moins de 2 ans'",
-                label: "De 6 mois à moins de 2 ans",
-              });
-            } else if (selectedValue === "'2 ans et plus'") {
-              onSeniorityChange({
-                value: "'2 ans et plus'",
-                label: "2 ans et plus",
-              });
-            }
+            onSeniorityChange(selectedValue as Seniority);
           }}
           error={hasBeenSubmit && error.seniority ? error.seniority : undefined}
         />

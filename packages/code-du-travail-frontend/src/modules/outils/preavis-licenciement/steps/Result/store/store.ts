@@ -1,3 +1,5 @@
+import produce from "immer";
+import * as Sentry from "@sentry/nextjs";
 import { ResultStoreSlice } from "./types";
 import { StoreSliceWrapperPreavisLicenciement } from "../../store";
 import { StatusStoreSlice } from "../../Status/store";
@@ -5,7 +7,12 @@ import { AgreementStoreSlice } from "../../Agreement/store";
 import { InformationsStoreSlice } from "../../Informations/store";
 import { mapToPublicodesSituationForCalculationPreavisLicenciement } from "src/modules/outils/common/publicodes";
 import { informationToSituation } from "src/modules/outils/indemnite-depart/steps/Informations/components/utils";
-import * as Sentry from "@sentry/nextjs";
+import {
+  PublicodesPreavisLicenciementResult,
+  References,
+  Notification,
+  supportedCcn,
+} from "@socialgouv/modeles-social";
 
 const initialState = {
   input: {
@@ -13,6 +20,7 @@ const initialState = {
     calculatedData: undefined,
     resultNotifications: [],
     resultReferences: [],
+    isAgreementSupported: false,
   },
   error: {},
   hasBeenSubmit: false,
@@ -27,93 +35,74 @@ const createResultStore: StoreSliceWrapperPreavisLicenciement<
   resultData: { ...initialState },
   resultFunction: {
     calculateResult: () => {
-      try {
-        const statusData = get().statusData.input;
-        const agreementData = get().agreementData.input;
-        const informationsData = get().informationsData.input;
-        const publicodes = get().agreementData.publicodes;
+      const state = get();
+      const statusData = state.statusData.input;
+      const agreementData = state.agreementData.input;
+      const informationsData = state.informationsData.input;
+      const publicodes = state.agreementData.publicodes;
+      const agreement = agreementData.agreement;
+      const isHandicappedWorker = !!statusData.disabledWorker;
 
-        if (!statusData.seniority || !publicodes) {
-          throw new Error("Données manquantes pour le calcul");
-        }
+      const isAgreementSupported = !!supportedCcn.find(
+        ({ idcc }) => idcc === agreement?.num
+      );
 
-        // Créer la situation publicodes
-        const informationSituation = informationToSituation(
-          informationsData.publicodesInformations
-        );
-        const situation =
-          mapToPublicodesSituationForCalculationPreavisLicenciement(
-            statusData.seniority.value,
-            agreementData.agreement?.num,
-            informationSituation
-          );
-
-        // Calculer le résultat avec publicodes
-        const publicodesResult = publicodes.calculate(situation);
-
-        let result;
-        let resultNotifications = [];
-        let resultReferences = [];
-
-        if (publicodesResult.type === "success") {
-          const duration = publicodesResult.result.value || "Aucun préavis";
-
-          result = {
-            duration: duration,
-            agreementSituation: agreementData.agreement
-              ? {
-                  duration: duration,
-                  source: agreementData.agreement.shortTitle,
-                }
-              : undefined,
-            legalSituation: {
-              duration: duration,
-              source: "Code du travail",
-            },
-            note: publicodesResult.result.note || undefined,
-          };
-
-          // Récupérer les notifications et références
-          resultNotifications = publicodesResult.notifications || [];
-          resultReferences = publicodesResult.references || [];
-        } else {
-          // Gestion des erreurs de calcul
-          result = {
-            duration: "Aucun préavis",
-            note: "Erreur lors du calcul du préavis",
-          };
-        }
-
-        set((state) => ({
-          ...state,
-          resultData: {
-            ...state.resultData,
-            input: {
-              ...state.resultData.input,
-              result,
-              calculatedData: result,
-              resultNotifications,
-              resultReferences,
-            },
-            error: {},
-          },
-        }));
-      } catch (error) {
-        console.error("Erreur lors du calcul du préavis:", error);
-        Sentry.captureException(error);
-
-        set((state) => ({
-          ...state,
-          resultData: {
-            ...state.resultData,
-            error: {
-              ...state.resultData.error,
-              errorPublicodes:
-                "Une erreur est survenue lors du calcul du préavis. Veuillez vérifier vos données et réessayer.",
-            },
-          },
-        }));
+      if (!publicodes) {
+        console.warn("Publicodes is not defined");
+        return;
       }
+
+      let errorPublicodes: boolean = false;
+      let result: PublicodesPreavisLicenciementResult | undefined;
+      let resultNotifications: Notification[] | undefined;
+      let resultReferences: References[] | undefined;
+
+      const infos = informationToSituation(
+        informationsData.publicodesInformations
+      );
+
+      const situation =
+        mapToPublicodesSituationForCalculationPreavisLicenciement(
+          statusData.seniority || "'Moins de 6 mois'",
+          isHandicappedWorker,
+          agreement?.num,
+          infos
+        );
+
+      try {
+        const publicodesCalculation = publicodes.calculate(situation);
+        if (publicodesCalculation.type !== "result") {
+          throw new Error(
+            `Le calcul sur l'écran de résultat retourne un ${publicodesCalculation.type} (detail: ${JSON.stringify(publicodesCalculation)})`
+          );
+        }
+        result = publicodesCalculation.result;
+        resultNotifications = publicodesCalculation.notifications;
+        resultReferences = [
+          {
+            article: "Article L.1234-1 du code du travail",
+            url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035611091/",
+          },
+          ...publicodesCalculation.references,
+        ];
+      } catch (e) {
+        errorPublicodes = true;
+        console.error("Error in publicodes calculation:", e);
+        Sentry.captureException(e);
+      }
+
+      set(
+        produce((state: ResultStoreSlice) => {
+          state.resultData.input.result = result;
+          state.resultData.input.calculatedData = result;
+          state.resultData.input.isAgreementSupported = isAgreementSupported;
+          state.resultData.input.resultNotifications = resultNotifications;
+          state.resultData.input.resultReferences = resultReferences;
+          state.resultData.error.errorPublicodes = errorPublicodes
+            ? "Erreur lors du calcul du préavis"
+            : undefined;
+        })
+      );
     },
     resetStep: () => {
       set((state) => ({

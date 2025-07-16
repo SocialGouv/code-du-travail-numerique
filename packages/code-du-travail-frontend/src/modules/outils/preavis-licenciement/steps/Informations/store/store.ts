@@ -18,7 +18,6 @@ const initialState: InformationsStoreData = {
     publicodesInformations: [],
     hasNoMissingQuestions: false,
     informationError: false,
-    isStepHidden: true,
   },
   error: {
     errorInformations: {},
@@ -38,48 +37,76 @@ const createInformationsStore: StoreSliceWrapperPreavisLicenciement<
     generatePublicodesQuestions: (): boolean => {
       const publicodes = get().agreementData.publicodes;
       const agreement = get().agreementData.input.agreement;
-      const seniority = get().statusData.input.seniority;
+      const seniority = get().statusData.input.seniority ?? "'Moins de 6 mois'";
+      const isHandicappedWorker = !!get().statusData.input.disabledWorker;
+      const existingQuestions =
+        get().informationsData.input.publicodesInformations;
+
+      if (!publicodes) {
+        return false;
+      }
+
+      if (!agreement) {
+        return false;
+      }
+
+      if (existingQuestions.length > 0) {
+        return true;
+      }
+
       try {
-        const result = publicodes.setSituation(
+        const situation =
           mapToPublicodesSituationForCalculationPreavisLicenciement(
-            seniority?.value || "0",
+            seniority,
+            isHandicappedWorker,
             agreement?.num,
             undefined
-          )
-        );
-        let resultMissingArgs: MissingArgs[] = result.missingArgs;
+          );
+
+        const result = publicodes.calculate(situation);
+
+        let resultMissingArgs: MissingArgs[] = [];
+        if (result.type === "missing-args") {
+          resultMissingArgs = result.missingArgs;
+        }
+
         const missingArgs = resultMissingArgs.filter(
           (item) => item.rawNode.cdtn
         );
+
         if (missingArgs.length > 0) {
-          const question = missingArgs.map((arg) => ({
-            name: arg.name,
-            rule: arg.rawNode,
-          }))[0];
+          const firstMissingArg = missingArgs[0];
+          const questions = [
+            {
+              order: 0,
+              id: `question-${firstMissingArg.name}-0`,
+              question: {
+                name: firstMissingArg.name,
+                rule: firstMissingArg.rawNode,
+              },
+              info: undefined,
+            },
+          ];
+
           set(
             produce((state: InformationsStoreSlice) => {
-              state.informationsData.input.publicodesInformations = [
-                {
-                  order: 0,
-                  id: Math.random().toString(36).substring(2, 15),
-                  question,
-                  info: undefined,
-                },
-              ];
-              state.informationsData.input.isStepHidden = false;
+              state.informationsData.input.publicodesInformations = questions;
+              state.informationsData.input.hasNoMissingQuestions = false;
             })
           );
           return true;
         }
+
         set(
           produce((state: InformationsStoreSlice) => {
-            state.informationsData.input = initialState.input;
-            state.informationsData.error = initialState.error;
+            state.informationsData.input.publicodesInformations = [];
+            state.informationsData.input.hasNoMissingQuestions = true;
+            state.informationsData.error.errorInformations = {};
+            state.informationsData.isStepValid = true; // Marquer l'étape comme valide s'il n'y a pas de questions
           })
         );
         return true;
       } catch (e) {
-        console.error(e);
         Sentry.captureException(e);
         set(
           produce((state: InformationsStoreSlice) => {
@@ -117,33 +144,43 @@ const createInformationsStore: StoreSliceWrapperPreavisLicenciement<
         const publicodes = get().agreementData.publicodes!;
         const agreement = get().agreementData.input.agreement;
         const rules = informationToSituation(newPublicodesInformations);
-        const seniority = get().statusData.input.seniority;
+        const seniority =
+          get().statusData.input.seniority ?? "'Moins de 6 mois'";
+        const isHandicappedWorker = !!get().statusData.input.disabledWorker;
         let missingArgs: MissingArgs[] = [];
         try {
-          const result = publicodes.setSituation(
+          const result = publicodes.calculate(
             mapToPublicodesSituationForCalculationPreavisLicenciement(
-              seniority?.value || "0",
+              seniority,
+              isHandicappedWorker,
               agreement?.num,
               rules
             )
           );
-          let resultMissingArgs: MissingArgs[] = result.missingArgs;
-          missingArgs = resultMissingArgs.filter((item) => item.rawNode.cdtn);
+
+          if (result.type === "missing-args") {
+            missingArgs = result.missingArgs.filter(
+              (item) => item.rawNode.cdtn
+            );
+          }
         } catch (e) {
           informationError = true;
           console.error(e);
         }
-        const newQuestions = missingArgs
-          .sort((a, b) => b.indice - a.indice)
-          .map((arg, index) => ({
-            question: {
-              name: arg.name,
-              rule: arg.rawNode,
-            },
-            order: questionAnswered.order + index + 1,
-            info: undefined,
-            id: Math.random().toString(36).substring(2, 15),
-          }))[0];
+        const newQuestions =
+          missingArgs.length > 0
+            ? [
+                {
+                  question: {
+                    name: missingArgs[0].name,
+                    rule: missingArgs[0].rawNode,
+                  },
+                  order: questionAnswered.order + 1,
+                  info: undefined,
+                  id: `question-${missingArgs[0].name}-${questionAnswered.order + 1}`,
+                },
+              ]
+            : [];
         if (missingArgs.length === 0) {
           newPublicodesInformationsForNextQuestions =
             newPublicodesInformations.filter(
@@ -151,7 +188,7 @@ const createInformationsStore: StoreSliceWrapperPreavisLicenciement<
             );
         } else {
           newPublicodesInformationsForNextQuestions = removeDuplicateObject(
-            [newQuestions, ...newPublicodesInformations].sort(
+            [...newQuestions, ...newPublicodesInformations].sort(
               (a, b) => a.order - b.order
             ),
             "order"
@@ -175,19 +212,88 @@ const createInformationsStore: StoreSliceWrapperPreavisLicenciement<
       );
       applyGenericValidation(get, set, "informationError", informationError);
     },
-    onNextStep: () => {
+    onNextStep: (): ValidationResponse => {
       const state = get().informationsData.input;
       const statusState = get().statusData.input;
       const { isValid, errorState } = validateStep(state, statusState);
+
+      // Si aucune question n'a été générée (cas où il n'y a pas de missingArgs)
+      if (
+        state.publicodesInformations.length === 0 &&
+        state.hasNoMissingQuestions
+      ) {
+        set(
+          produce((state: InformationsStoreSlice) => {
+            state.informationsData.hasBeenSubmit = false;
+            state.informationsData.isStepValid = true;
+            state.informationsData.input.hasNoMissingQuestions = true;
+            state.informationsData.error = errorState;
+          })
+        );
+        return ValidationResponse.Valid;
+      }
+
+      // Vérifier que toutes les questions actuelles ont une réponse
+      const allCurrentQuestionsAnswered = state.publicodesInformations.every(
+        (info) =>
+          info.info !== undefined && info.info !== null && info.info !== ""
+      );
+
+      let hasMoreQuestions = false;
+      if (allCurrentQuestionsAnswered && isValid) {
+        try {
+          const publicodes = get().agreementData.publicodes!;
+          const agreement = get().agreementData.input.agreement;
+          const seniority =
+            get().statusData.input.seniority ?? "'Moins de 6 mois'";
+          const isHandicappedWorker = !!get().statusData.input.disabledWorker;
+          const rules = informationToSituation(state.publicodesInformations);
+          const result = publicodes.calculate(
+            mapToPublicodesSituationForCalculationPreavisLicenciement(
+              seniority,
+              isHandicappedWorker,
+              agreement?.num,
+              rules
+            )
+          );
+
+          if (result.type === "missing-args") {
+            const missingArgs = result.missingArgs.filter(
+              (item) => item.rawNode.cdtn
+            );
+            hasMoreQuestions = missingArgs.length > 0;
+          }
+        } catch (e) {
+          console.error(e);
+        }
+      }
+
+      const canProceed =
+        isValid && allCurrentQuestionsAnswered && !hasMoreQuestions;
+
       set(
         produce((state: InformationsStoreSlice) => {
           state.informationsData.hasBeenSubmit = isValid ? false : true;
-          state.informationsData.isStepValid =
-            isValid && get().informationsData.input.hasNoMissingQuestions;
+          state.informationsData.isStepValid = canProceed;
+          state.informationsData.input.hasNoMissingQuestions =
+            !hasMoreQuestions;
           state.informationsData.error = errorState;
         })
       );
-      return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
+
+      return canProceed
+        ? ValidationResponse.Valid
+        : ValidationResponse.NotValid;
+    },
+    resetQuestions: () => {
+      set(
+        produce((state: InformationsStoreSlice) => {
+          state.informationsData.input.publicodesInformations = [];
+          state.informationsData.input.hasNoMissingQuestions = true;
+          state.informationsData.error.errorInformations = {};
+          state.informationsData.input.informationError = false;
+        })
+      );
     },
   },
 });

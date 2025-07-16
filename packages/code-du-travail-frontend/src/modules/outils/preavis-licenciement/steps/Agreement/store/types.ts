@@ -7,6 +7,7 @@ export type AgreementStoreInput = {
   enterprise?: any;
   hasNoEnterpriseSelected?: boolean;
   informationError?: boolean;
+  isStepInformationsHidden?: boolean;
 };
 
 export type AgreementStoreError = {
@@ -33,11 +34,11 @@ export type AgreementStoreFunction = {
   onInitAgreementPage: () => void;
   onRouteChange: (value: AgreementRoute) => void;
   onAgreementChange: (agreement: any, enterprise?: any) => void;
+  onSetIsStepHidden: () => void;
   setHasNoEnterpriseSelected: (value: boolean) => void;
   onNextStep: () => ValidationResponse;
   onAgreementSearch: (data: any) => void;
   onEnterpriseSearch: (data: any) => void;
-  resetStep: () => void;
 };
 
 export type AgreementStoreSlice = {

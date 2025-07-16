@@ -1,5 +1,5 @@
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
-import type { StatusStoreSlice } from "./types";
+import type { Seniority, StatusStoreSlice } from "./types";
 import { validateStatusStepWithState } from "./validator";
 import { StoreSliceWrapperPreavisLicenciement } from "../../store";
 
@@ -54,7 +54,7 @@ const createStatusStore: StoreSliceWrapperPreavisLicenciement<
         };
       });
     },
-    onSeniorityChange: (value: { value: string; label: string }) => {
+    onSeniorityChange: (value: Seniority) => {
       set((state) => {
         const newInput = { ...state.statusData.input, seniority: value };
         const { errorState, isValid } = validateStatusStepWithState(newInput);
@@ -85,22 +85,6 @@ const createStatusStore: StoreSliceWrapperPreavisLicenciement<
       }));
 
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
-    },
-    resetStep: () => {
-      set((state) => ({
-        ...state,
-        statusData: {
-          ...state.statusData,
-          input: {
-            seriousMisconduct: undefined,
-            disabledWorker: undefined,
-            seniority: undefined,
-          },
-          error: {},
-          hasBeenSubmit: false,
-          isStepValid: true, // Reset à true pour permettre la navigation
-        },
-      }));
     },
   },
 });

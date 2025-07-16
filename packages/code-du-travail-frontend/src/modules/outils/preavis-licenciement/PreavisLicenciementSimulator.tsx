@@ -115,7 +115,8 @@ const PreavisLicenciementSimulatorContent = ({
     isStepAgreementValid: state.agreementData.isStepValid,
     onNextStepInfos: state.informationsFunction.onNextStep,
     isStepInfosValid: state.informationsData.isStepValid,
-    isStepInformationsHidden: state.informationsData.input.isStepHidden,
+    isStepInformationsHidden:
+      state.agreementData.input.isStepInformationsHidden,
   }));
 
   const getHiddenSteps = (): PreavisLicenciementStepName[] => {
