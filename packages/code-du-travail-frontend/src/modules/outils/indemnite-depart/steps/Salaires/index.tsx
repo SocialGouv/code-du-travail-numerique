@@ -86,7 +86,6 @@ const StepSalaires = ({ type }: Props) => {
           selectedOption={hasTempsPartiel}
           onChangeSelectedOption={onChangeHasTempsPartiel}
           error={errorHasTempsPartiel}
-          autoFocus={showHasTempsPartiel}
         />
       )}
 
@@ -120,7 +119,6 @@ const StepSalaires = ({ type }: Props) => {
             selectedOption={hasSameSalary}
             onChangeSelectedOption={onChangeHasSameSalary}
             error={errorHasSameSalary}
-            autoFocus={hasTempsPartiel === "non"}
           />
           {hasSameSalary === "oui" && (
             <TextQuestion
@@ -133,7 +131,6 @@ const StepSalaires = ({ type }: Props) => {
               error={errorSalary}
               id="salary"
               dataTestId={"same-salary-value"}
-              autoFocus={hasSameSalary === "oui"}
               unit="€"
             />
           )}
@@ -147,7 +144,6 @@ const StepSalaires = ({ type }: Props) => {
               onSalariesChange={onSalariesChange}
               salaryPeriods={salaryPeriods}
               error={errorSalaryPeriods}
-              autoFocus={hasSameSalary === "non"}
               agreementNumber={agreement?.num}
             />
           )}
