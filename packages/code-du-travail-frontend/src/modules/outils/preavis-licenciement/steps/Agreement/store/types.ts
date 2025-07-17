@@ -1,13 +1,22 @@
+import {
+  PublicodesInstance,
+  PublicodesSimulator,
+} from "@socialgouv/modeles-social";
+import { Enterprise } from "src/modules/enterprise";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
-import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
+import {
+  Agreement,
+  AgreementRoute,
+} from "src/modules/outils/indemnite-depart/types";
 
 export type AgreementStoreInput = {
   route?: AgreementRoute;
-  agreement?: any;
-  enterprise?: any;
+  agreement?: Agreement;
+  enterprise?: Enterprise;
   hasNoEnterpriseSelected?: boolean;
   informationError?: boolean;
   isStepInformationsHidden?: boolean;
+  isAgreementSupported?: boolean;
 };
 
 export type AgreementStoreError = {
@@ -27,7 +36,7 @@ export type AgreementStoreData = StepData<
   AgreementStoreInput,
   AgreementStoreError
 > & {
-  publicodes: any;
+  publicodes: PublicodesInstance<PublicodesSimulator.PREAVIS_LICENCIEMENT>;
 };
 
 export type AgreementStoreFunction = {

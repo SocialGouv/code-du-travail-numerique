@@ -1,83 +1,98 @@
 import React, { useContext, useEffect } from "react";
-import { fr } from "@codegouvfr/react-dsfr";
 import {
   PreavisLicenciementContext,
   usePreavisLicenciementStore,
 } from "../store";
+import { fr } from "@codegouvfr/react-dsfr";
+import DecryptedResult from "./components/DecryptedResult";
 import ShowResult from "./components/ShowResult";
-import Warning from "./components/Warning";
 import Situation from "./components/Situation";
-import ErrorPublicodes from "src/modules/outils/indemnite-depart/steps/Resultat/components/ErrorPublicodes";
-import { PubliReferences } from "src/modules/outils/common/components";
-import { PublicodesInformation } from "src/modules/outils/indemnite-depart/steps/Informations/store";
+import Warning from "./components/Warning";
+import ReferenceJuridiques from "./components/ReferenceJuridiques";
 
-// Fonction pour transformer les PublicodesInformation en SituationItem
-const transformPublicodesToSituations = (
-  publicodesInformations: PublicodesInformation[]
-) => {
-  return publicodesInformations.map((info) => ({
-    label: info.question.rule.titre || info.question.name || "Question",
-    value: info.info || "Non renseigné",
-    unit: info.question.rule.unité || undefined,
-  }));
-};
-
-const StepResult = (): JSX.Element => {
+const ResultStepComponent = () => {
   const store = useContext(PreavisLicenciementContext);
   const {
-    calculateResult,
     result,
+    agreement,
+    calculateResult,
+    publicodesInformations,
     resultNotifications,
     resultReferences,
-    agreement,
-    statusData,
-    publicodesInformations,
     errorPublicodes,
+    isDisabledWorker,
+    isSeriousMisconduct,
+    seniority,
+    publicodesLegalResult,
+    publicodesAgreementResult,
+    isAgreementSupported,
+    route,
+    resultExplanation,
   } = usePreavisLicenciementStore(store, (state) => ({
-    calculateResult: state.resultFunction.calculateResult,
     result: state.resultData.input.result,
+    agreement: state.agreementData.input.agreement,
+    calculateResult: state.resultFunction.calculateResult,
+    publicodesInformations: state.informationsData.input.publicodesInformations,
     resultNotifications: state.resultData.input.resultNotifications,
     resultReferences: state.resultData.input.resultReferences,
-    agreement: state.agreementData.input.agreement,
-    statusData: state.statusData.input,
-    publicodesInformations: state.informationsData.input.publicodesInformations,
     errorPublicodes: state.resultData.error.errorPublicodes,
+    isDisabledWorker: state.statusData.input.disabledWorker,
+    isSeriousMisconduct: state.statusData.input.seriousMisconduct,
+    seniority: state.statusData.input.seniority,
+    publicodesLegalResult: state.resultData.input.publicodesLegalResult,
+    publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
+    route: state.agreementData.input.route,
+    isAgreementSupported: state.agreementData.input.isAgreementSupported,
+    resultExplanation: state.resultData.input.resultExplanation,
   }));
 
   useEffect(() => {
     calculateResult();
-  }, []);
+  }, [calculateResult]);
 
   if (errorPublicodes) {
-    return <ErrorPublicodes title={"Préavis de licenciement"} />;
+    return (
+      <div className={fr.cx("fr-col-md-8", "fr-col-12", "fr-mb-6w")}>
+        <div className={fr.cx("fr-alert", "fr-alert--error")}>
+          <h3 className={fr.cx("fr-alert__title")}>Erreur de calcul</h3>
+          <p>Une erreur est survenue lors du calcul. Veuillez réessayer.</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!result) {
+    return <div>Calcul en cours...</div>;
   }
 
   return (
     <div className={fr.cx("fr-col-md-8", "fr-col-12", "fr-mb-6w")}>
       <ShowResult
-        duration={result?.duration || "Aucun préavis"}
-        agreementSituation={result?.agreementSituation}
-        legalSituation={result?.legalSituation}
-        idcc={agreement?.num}
-        note={result?.note}
+        notifications={resultNotifications || []}
+        result={result}
+        idccNumber={agreement?.num}
       />
 
-      <Warning />
+      <Warning ccn={agreement} resultExplanation={resultExplanation} />
 
       <h2 className={fr.cx("fr-h4", "fr-mt-4w")}>Détail du calcul</h2>
+      <DecryptedResult
+        legalResult={publicodesLegalResult}
+        agreementResult={publicodesAgreementResult}
+        agreementRoute={route}
+        isAgreementSupported={isAgreementSupported}
+        resultExplanation={resultExplanation}
+      />
       <Situation
-        situations={transformPublicodesToSituations(
-          publicodesInformations || []
-        )}
+        situations={publicodesInformations || []}
         agreement={agreement}
+        isDisabledWorker={isDisabledWorker}
+        isSeriousMisconduct={isSeriousMisconduct}
+        seniority={seniority}
       />
-
-      <PubliReferences
-        references={resultReferences ?? []}
-        classNameTitle={fr.cx("fr-h5", "fr-mb-0")}
-      />
+      <ReferenceJuridiques references={resultReferences || []} />
     </div>
   );
 };
 
-export default StepResult;
+export default ResultStepComponent;

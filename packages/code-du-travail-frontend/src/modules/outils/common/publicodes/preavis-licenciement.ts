@@ -11,9 +11,9 @@ export const mapToPublicodesSituationForCalculationPreavisLicenciement = (
     "contrat salarié . convention collective": ccn
       ? `'IDCC${formatIdcc(ccn)}'`
       : "''",
-    "contrat salarié . travailleur handicapé": isHandicappedWorker
-      ? "oui"
-      : "non",
+    ...(isHandicappedWorker && {
+      "contrat salarié . travailleur handicapé": "oui",
+    }),
     ...moreInfos,
   };
 };

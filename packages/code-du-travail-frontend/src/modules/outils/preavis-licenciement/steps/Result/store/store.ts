@@ -12,6 +12,7 @@ import {
   References,
   Notification,
   supportedCcn,
+  ExplanationMainResult,
 } from "@socialgouv/modeles-social";
 
 const initialState = {
@@ -54,8 +55,11 @@ const createResultStore: StoreSliceWrapperPreavisLicenciement<
 
       let errorPublicodes: boolean = false;
       let result: PublicodesPreavisLicenciementResult | undefined;
+      let legalResult: PublicodesPreavisLicenciementResult | undefined;
+      let agreementResult: PublicodesPreavisLicenciementResult | undefined;
       let resultNotifications: Notification[] | undefined;
       let resultReferences: References[] | undefined;
+      let resultExplanation: ExplanationMainResult | undefined;
 
       const infos = informationToSituation(
         informationsData.publicodesInformations
@@ -77,11 +81,14 @@ const createResultStore: StoreSliceWrapperPreavisLicenciement<
           );
         }
         result = publicodesCalculation.result;
+        legalResult = publicodesCalculation.detail?.legalResult;
+        agreementResult = publicodesCalculation.detail?.agreementResult;
         resultNotifications = publicodesCalculation.notifications;
+        resultExplanation = publicodesCalculation.explanation;
         resultReferences = [
           {
             article: "Article L.1234-1 du code du travail",
-            url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035611091/",
+            url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901112",
           },
           ...publicodesCalculation.references,
         ];
@@ -93,33 +100,18 @@ const createResultStore: StoreSliceWrapperPreavisLicenciement<
 
       set(
         produce((state: ResultStoreSlice) => {
+          state.resultData.input.publicodesLegalResult = legalResult;
+          state.resultData.input.publicodesAgreementResult = agreementResult;
           state.resultData.input.result = result;
-          state.resultData.input.calculatedData = result;
           state.resultData.input.isAgreementSupported = isAgreementSupported;
           state.resultData.input.resultNotifications = resultNotifications;
           state.resultData.input.resultReferences = resultReferences;
+          state.resultData.input.resultExplanation = resultExplanation;
           state.resultData.error.errorPublicodes = errorPublicodes
             ? "Erreur lors du calcul du préavis"
             : undefined;
         })
       );
-    },
-    resetStep: () => {
-      set((state) => ({
-        ...state,
-        resultData: {
-          ...state.resultData,
-          input: {
-            result: undefined,
-            calculatedData: undefined,
-            resultNotifications: [],
-            resultReferences: [],
-          },
-          error: {},
-          hasBeenSubmit: false,
-          isStepValid: true,
-        },
-      }));
     },
   },
 });

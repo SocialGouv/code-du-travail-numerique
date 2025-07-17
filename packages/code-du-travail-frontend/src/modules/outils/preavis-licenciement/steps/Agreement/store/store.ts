@@ -159,7 +159,7 @@ const createAgreementStore: StoreSliceWrapperPreavisLicenciement<
 
         const result = publicodes.calculate(situation);
 
-        let missingArgs = [];
+        let missingArgs: any[] = [];
         if (result.type === "missing-args") {
           missingArgs = result.missingArgs.filter((item) => item.rawNode.cdtn);
         }
@@ -192,8 +192,9 @@ const createAgreementStore: StoreSliceWrapperPreavisLicenciement<
       const input = get().agreementData.input;
       const { errorState, isValid } = validateAgreementStepWithState(input);
       const { route, agreement, enterprise } = input;
+      let isTreated = false;
       if (isValid && route) {
-        const isTreated = !!getSupportedCc(
+        isTreated = !!getSupportedCc(
           PublicodesSimulator.PREAVIS_LICENCIEMENT
         ).find(({ idcc }) => idcc === agreement?.num);
         pushAgreementEvents(
@@ -212,6 +213,7 @@ const createAgreementStore: StoreSliceWrapperPreavisLicenciement<
           state.agreementData.hasBeenSubmit = true;
           state.agreementData.isStepValid = isValid;
           state.agreementData.error = errorState;
+          state.agreementData.input.isAgreementSupported = isTreated;
         })
       );
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;

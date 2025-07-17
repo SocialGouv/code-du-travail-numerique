@@ -38,7 +38,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     },
     {
       ancienneté: "'Plus de 2 ans'",
-      expectedResult: 4,
+      expectedResult: 3,
     },
   ])(
     "Vérifier que pour le légal et travailleur handicapé, l'ancienneté $ancienneté donne $expectedResult mois préavis",

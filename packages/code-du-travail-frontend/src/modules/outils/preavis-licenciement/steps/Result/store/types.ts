@@ -1,13 +1,21 @@
+import {
+  PublicodesPreavisLicenciementResult,
+  References,
+  Notification,
+  ExplanationMainResult,
+} from "@socialgouv/modeles-social";
+
 export type ResultStoreInput = {
-  result?: any;
-  calculatedData?: any;
-  resultNotifications?: any[];
-  resultReferences?: any[];
-  isAgreementSupported?: boolean;
+  result?: PublicodesPreavisLicenciementResult;
+  publicodesLegalResult?: PublicodesPreavisLicenciementResult;
+  publicodesAgreementResult?: PublicodesPreavisLicenciementResult;
+  resultExplanation?: ExplanationMainResult;
+  resultNotifications?: Notification[];
+  resultReferences?: References[];
+  isAgreementSupported: boolean;
 };
 
 export type ResultStoreError = {
-  result?: string;
   errorPublicodes?: string;
 };
 
@@ -24,7 +32,6 @@ export type ResultStoreData = StepData<ResultStoreInput, ResultStoreError> & {
 
 export type ResultStoreFunction = {
   calculateResult: () => void;
-  resetStep: () => void;
 };
 
 export type ResultStoreSlice = {

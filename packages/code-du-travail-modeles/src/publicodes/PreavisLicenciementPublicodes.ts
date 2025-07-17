@@ -89,20 +89,6 @@ export class PreavisLicenciementPublicodes extends PublicodesBase<PublicodesCalc
     ) {
       return legalResult;
     }
-    const isDisabledWorker =
-      args["contrat salarié . travailleur handicapé"] === "oui";
-    if (isDisabledWorker) {
-      const durationHandicappedMax = 90;
-      const agreementValue = legalResult?.result?.value ?? 0;
-      const legalValue = agreementResult?.result?.value ?? 0;
-      const durationMax = Math.max(legalValue, agreementValue);
-      let durationHandicapped = 1;
-      if (durationMax < durationHandicappedMax) {
-        durationHandicapped = Math.min(durationHandicappedMax / durationMax, 2);
-      }
-      legalResult.result.value = legalValue * durationHandicapped;
-      agreementResult.result.value = agreementValue * durationHandicapped;
-    }
 
     return this.builder.buildResult(
       this.data.situation,

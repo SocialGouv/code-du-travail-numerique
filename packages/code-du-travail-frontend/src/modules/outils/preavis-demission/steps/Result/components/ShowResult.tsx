@@ -8,25 +8,12 @@ import React from "react";
 import { NoticeNote } from "src/modules/outils/common/components/NoticeNote";
 import { NoticeExample } from "src/modules/outils/common/components/NoticeExample";
 import { ListSimulator } from "src/modules/outils/common/types";
+import { formatUnit } from "src/modules/outils/common/utils/formatUnit";
 
 type Props = {
   result?: PublicodesPreavisDemissionResult;
   notifications: Notification[];
   idccNumber?: number;
-};
-
-// Helper function to convert unit object to string
-const formatUnit = (unit: any): string => {
-  if (typeof unit === "string") {
-    return unit;
-  }
-  if (typeof unit === "object" && unit !== null) {
-    // Handle unit objects like {numerators: ["jour"], denominators: []}
-    if (unit.numerators && Array.isArray(unit.numerators)) {
-      return unit.numerators.join(" ");
-    }
-  }
-  return "";
 };
 
 const ShowResult: React.FC<Props> = ({
