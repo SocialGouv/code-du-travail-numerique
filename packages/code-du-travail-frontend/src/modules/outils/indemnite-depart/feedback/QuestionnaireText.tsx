@@ -30,11 +30,8 @@ export const QuestionnaireText = ({
 
   return (
     <div>
-      <label htmlFor={textareaId} className={fr.cx("fr-label")}>
-        {title}
-      </label>
-      {/* @ts-ignore */}
       <Input
+        label={title}
         textArea
         nativeTextAreaProps={
           {
