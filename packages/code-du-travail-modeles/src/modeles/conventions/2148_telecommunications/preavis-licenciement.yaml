@@ -1,5 +1,5 @@
 contrat salarié . convention collective . télécommunications . groupe:
-  titre: groupe
+  titre: Groupe
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste
@@ -14,7 +14,7 @@ contrat salarié . convention collective . télécommunications . groupe A et B:
   valeur: oui
 
 contrat salarié . convention collective . télécommunications . groupe A et B . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste

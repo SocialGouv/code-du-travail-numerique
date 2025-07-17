@@ -1,5 +1,5 @@
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle:
-  titre: catégorie professionnelle
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -12,7 +12,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres . classe:
-  titre: classe
+  titre: Classe
   question: Quelle est la classe du salarié ?
   cdtn:
     type: liste
@@ -56,7 +56,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe:
-  titre: classe
+  titre: Classe
   question: Quelle est la classe du salarié ?
   cdtn:
     type: liste
@@ -71,7 +71,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 1 . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -104,7 +104,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 2 . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -137,7 +137,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 3 . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -170,7 +170,7 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Noncadres . classe 4 . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste

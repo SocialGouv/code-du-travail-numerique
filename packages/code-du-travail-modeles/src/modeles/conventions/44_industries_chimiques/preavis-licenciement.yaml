@@ -1,5 +1,5 @@
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle:
-  titre: catégorie professionnelle
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -15,7 +15,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise . groupe:
-  titre: groupe
+  titre: Groupe
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste
@@ -27,7 +27,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise . groupe IV . coefficient:
-  titre: coefficient
+  titre: Coefficient
   question: Quel est le coefficient hiérarchique du salarié ?
   cdtn:
     type: liste
@@ -60,7 +60,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe:
-  titre: groupe
+  titre: Groupe
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste
@@ -74,7 +74,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient:
-  titre: coefficient
+  titre: Coefficient
   question: Quel est le coefficient hiérarchique du salarié ?
   cdtn:
     type: liste
@@ -87,7 +87,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe I . coefficient Inférieur à 190 . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -130,7 +130,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient:
-  titre: coefficient
+  titre: Coefficient
   question: Quel est le coefficient hiérarchique du salarié ?
   cdtn:
     type: liste
@@ -143,7 +143,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe II . coefficient Inférieur à 190 . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -186,7 +186,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient:
-  titre: coefficient
+  titre: Coefficient
   question: Quel est le coefficient hiérarchique du salarié ?
   cdtn:
     type: liste
@@ -199,7 +199,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Employés . groupe III . coefficient Inférieur à 190 . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -242,7 +242,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ingénieurs, Cadres . groupe:
-  titre: groupe
+  titre: Groupe
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste
@@ -264,7 +264,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe:
-  titre: groupe
+  titre: Groupe
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste
@@ -278,7 +278,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient:
-  titre: coefficient
+  titre: Coefficient
   question: Quel est le coefficient hiérarchique du salarié ?
   cdtn:
     type: liste
@@ -291,7 +291,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe I . coefficient Inférieur à 190 . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -334,7 +334,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient:
-  titre: coefficient
+  titre: Coefficient
   question: Quel est le coefficient hiérarchique du salarié ?
   cdtn:
     type: liste
@@ -347,7 +347,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe II . coefficient Inférieur à 190 . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -390,7 +390,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient:
-  titre: coefficient
+  titre: Coefficient
   question: Quel est le coefficient hiérarchique du salarié ?
   cdtn:
     type: liste
@@ -403,7 +403,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers . groupe III . coefficient Inférieur à 190 . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -446,7 +446,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe:
-  titre: groupe
+  titre: Groupe
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste
@@ -461,7 +461,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient:
-  titre: coefficient
+  titre: Coefficient
   question: Quel est le coefficient hiérarchique du salarié ?
   cdtn:
     type: liste
@@ -474,7 +474,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe I . coefficient Inférieur à 190 . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -517,7 +517,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient:
-  titre: coefficient
+  titre: Coefficient
   question: Quel est le coefficient hiérarchique du salarié ?
   cdtn:
     type: liste
@@ -530,7 +530,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe II . coefficient Inférieur à 190 . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -573,7 +573,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient:
-  titre: coefficient
+  titre: Coefficient
   question: Quel est le coefficient hiérarchique du salarié ?
   cdtn:
     type: liste
@@ -586,7 +586,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe III . coefficient Inférieur à 190 . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -629,7 +629,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Techniciens . groupe IV . coefficient:
-  titre: coefficient
+  titre: Coefficient
   question: Quel est le coefficient hiérarchique du salarié ?
   cdtn:
     type: liste

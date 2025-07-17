@@ -1,5 +1,5 @@
 contrat salarié . convention collective . batiment etam . âge:
-  titre: âge
+  titre: Âge
   question: Quel est l'âge du salarié ?
   cdtn:
     type: liste
@@ -12,7 +12,7 @@ contrat salarié . convention collective . batiment etam . âge Moins de 55 ans:
   valeur: oui
 
 contrat salarié . convention collective . batiment etam . âge Moins de 55 ans . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -45,7 +45,7 @@ contrat salarié . convention collective . batiment etam . âge Plus de 55 ans:
   valeur: oui
 
 contrat salarié . convention collective . batiment etam . âge Plus de 55 ans . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste

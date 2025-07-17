@@ -1,5 +1,5 @@
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail:
-  titre: conclusion contrat travail
+  titre: Conclusion contrat travail
   question: Quelle est la date d'entrée du salarié dans l'entreprise?
   cdtn:
     type: liste
@@ -12,7 +12,7 @@ contrat salarié . convention collective . industrie pharmaceutique . conclusion
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 . groupe:
-  titre: groupe
+  titre: Groupe
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste
@@ -56,7 +56,7 @@ contrat salarié . convention collective . industrie pharmaceutique . conclusion
   valeur: oui
 
 contrat salarié . convention collective . industrie pharmaceutique . conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 . groupe:
-  titre: groupe
+  titre: Groupe
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste

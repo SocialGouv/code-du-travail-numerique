@@ -1,5 +1,5 @@
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau:
-  titre: niveau
+  titre: Niveau
   question: Quel est le niveau du salarié ?
   cdtn:
     type: liste
@@ -19,7 +19,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
   valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau I . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -52,7 +52,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
   valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau II . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -85,7 +85,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
   valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau III . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -118,7 +118,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
   valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IV . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -151,7 +151,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
   valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau V . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -184,7 +184,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
   valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VI . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -217,7 +217,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
   valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VII . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -250,7 +250,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
   valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau VIII . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -283,7 +283,7 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
   valeur: oui
 
 contrat salarié . convention collective . commerces de detail non alimentaires . niveau IX . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste

@@ -1,5 +1,5 @@
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle:
-  titre: catégorie professionnelle
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -13,7 +13,7 @@ contrat salarié . convention collective . bureaux études techniques . catégor
   valeur: oui
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Chargés d'enquête intermittents . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -46,7 +46,7 @@ contrat salarié . convention collective . bureaux études techniques . catégor
   valeur: oui
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient:
-  titre: coefficient
+  titre: Coefficient
   question: Quel est le coefficient hiérarchique du salarié ?
   cdtn:
     type: liste
@@ -59,7 +59,7 @@ contrat salarié . convention collective . bureaux études techniques . catégor
   valeur: oui
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste

@@ -1,5 +1,5 @@
 contrat salarié . convention collective . sedima . catégorie professionnelle:
-  titre: catégorie professionnelle
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -13,7 +13,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle C
   valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Cadres . niveau:
-  titre: niveau
+  titre: Niveau
   question: Quel est le niveau du salarié ?
   cdtn:
     type: liste
@@ -35,7 +35,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
   valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau:
-  titre: niveau
+  titre: Niveau
   question: Quel est le niveau du salarié ?
   cdtn:
     type: liste
@@ -49,7 +49,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
   valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau I . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -82,7 +82,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle O
   valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Ouvriers, Employés . niveau II . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -125,7 +125,7 @@ contrat salarié . convention collective . sedima . catégorie professionnelle T
   valeur: oui
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Techniciens et agents de maîtrise TAM . niveau:
-  titre: niveau
+  titre: Niveau
   question: Quel est le niveau du salarié ?
   cdtn:
     type: liste

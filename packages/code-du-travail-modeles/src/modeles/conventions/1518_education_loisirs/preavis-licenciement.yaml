@@ -1,5 +1,5 @@
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle:
-  titre: catégorie professionnelle
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -14,7 +14,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe:
-  titre: groupe
+  titre: Groupe
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste
@@ -58,7 +58,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau:
-  titre: niveau
+  titre: Niveau
   question: Quel est le niveau du salarié ?
   cdtn:
     type: liste
@@ -91,7 +91,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Cadres . groupe:
-  titre: groupe
+  titre: Groupe
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste
@@ -124,7 +124,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe:
-  titre: groupe
+  titre: Groupe
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste
@@ -137,7 +137,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 2 . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -170,7 +170,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 3 . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste

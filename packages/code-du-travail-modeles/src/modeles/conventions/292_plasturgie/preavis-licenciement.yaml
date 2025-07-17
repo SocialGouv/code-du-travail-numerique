@@ -1,5 +1,5 @@
 contrat salarié . convention collective . plasturgie . catégorie professionnelle:
-  titre: catégorie professionnelle
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -22,7 +22,7 @@ contrat salarié . convention collective . plasturgie . catégorie professionnel
   valeur: oui
 
 contrat salarié . convention collective . plasturgie . catégorie professionnelle Collaborateurs . coefficient:
-  titre: coefficient
+  titre: Coefficient
   question: Quel est le coefficient hiérarchique du salarié ?
   cdtn:
     type: liste
@@ -35,7 +35,7 @@ contrat salarié . convention collective . plasturgie . catégorie professionnel
   valeur: oui
 
 contrat salarié . convention collective . plasturgie . catégorie professionnelle Collaborateurs . coefficient 700 à 750 . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste

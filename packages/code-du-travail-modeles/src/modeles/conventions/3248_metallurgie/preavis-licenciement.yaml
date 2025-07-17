@@ -1,5 +1,5 @@
 contrat salarié . convention collective . métallurgie . âge:
-  titre: âge
+  titre: Âge
   question: Quel est l'âge du salarié ?
   cdtn:
     type: liste
@@ -13,7 +13,7 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans:
   valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position:
-  titre: position
+  titre: Position
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste
@@ -27,7 +27,7 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans .
   valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position A, B, C ou D . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -60,7 +60,7 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans .
   valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position E . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -104,7 +104,7 @@ contrat salarié . convention collective . métallurgie . âge Moins de 50 ans .
   valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge Moins de 50 ans . position F, G, H ou I . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -159,7 +159,7 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans:
   valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position:
-  titre: position
+  titre: Position
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste
@@ -173,7 +173,7 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans 
   valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position A, B, C ou D . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -206,7 +206,7 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans 
   valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position E . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -250,7 +250,7 @@ contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans 
   valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 50 ans à 55 ans . position F, G, H ou I . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -305,7 +305,7 @@ contrat salarié . convention collective . métallurgie . âge 55 ans et plus:
   valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position:
-  titre: position
+  titre: Position
   question: Quel est le groupe professionnel du salarié ?
   cdtn:
     type: liste
@@ -319,7 +319,7 @@ contrat salarié . convention collective . métallurgie . âge 55 ans et plus . 
   valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position A, B, C ou D . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -352,7 +352,7 @@ contrat salarié . convention collective . métallurgie . âge 55 ans et plus . 
   valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position E . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -396,7 +396,7 @@ contrat salarié . convention collective . métallurgie . âge 55 ans et plus . 
   valeur: oui
 
 contrat salarié . convention collective . métallurgie . âge 55 ans et plus . position F, G, H ou I . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste

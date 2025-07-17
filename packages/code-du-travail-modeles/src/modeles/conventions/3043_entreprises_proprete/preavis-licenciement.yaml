@@ -1,5 +1,5 @@
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle:
-  titre: catégorie professionnelle
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -14,7 +14,7 @@ contrat salarié . convention collective . entreprises de propreté . catégorie
   valeur: oui
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Agents de propreté . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -79,7 +79,7 @@ contrat salarié . convention collective . entreprises de propreté . catégorie
   valeur: oui
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Employés . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -123,7 +123,7 @@ contrat salarié . convention collective . entreprises de propreté . catégorie
   valeur: oui
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Techniciens et agents de maîtrise TAM . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
