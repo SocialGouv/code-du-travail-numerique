@@ -31,6 +31,13 @@ export const ui = {
     handicapNon: byTestId("disabledWorker - Non"),
     seniority: byTestId("seniority"),
   },
+  informations: {
+    // Sélecteurs pour l'étape informations avec convention collective
+    categorieProf: byTestId("criteria.catégorie professionnelle"),
+    anciennete: byTestId("criteria.ancienneté"),
+    salaireBrut: byTestId("criteria.salaires.brutMensuel"),
+    primes: byTestId("criteria.salaires.primes"),
+  },
   next: byTestId("next-button"),
   previous: byTestId("previous-button"),
   activeStep: byTitle("onglet actif"),
