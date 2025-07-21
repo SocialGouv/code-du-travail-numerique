@@ -1,4 +1,4 @@
-import { DureePreavisLicenciement } from "../../index";
+import { CalculateurPreavisLicenciement } from "../../index";
 import { ui } from "../ui";
 import { fireEvent, render, screen } from "@testing-library/react";
 
@@ -16,15 +16,17 @@ Storage.prototype.getItem = jest.fn(
         `
 );
 
-describe("DureePreavisLicenciement", () => {
+describe("CalculateurPreavisLicenciement", () => {
   beforeEach(() => {
-    render(<DureePreavisLicenciement icon={""} title={""} displayTitle={""} />);
+    render(
+      <CalculateurPreavisLicenciement title="Test Préavis de Licenciement" />
+    );
     fireEvent.click(ui.introduction.startButton.get());
 
-    fireEvent.click(screen.getByTestId("seriousMisconduct-non"));
+    fireEvent.click(screen.getByTestId("seriousMisconduct-false"));
     fireEvent.click(ui.next.get());
 
-    fireEvent.click(screen.getByTestId("disabledWorker-non"));
+    fireEvent.click(screen.getByTestId("disabledWorker-false"));
     fireEvent.click(ui.next.get());
 
     fireEvent.change(screen.getByTestId("cdt.ancienneté"), {
