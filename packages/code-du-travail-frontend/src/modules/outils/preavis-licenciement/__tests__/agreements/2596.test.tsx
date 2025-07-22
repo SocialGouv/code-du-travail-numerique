@@ -23,26 +23,26 @@ describe("CalculateurPreavisLicenciement", () => {
     );
     fireEvent.click(ui.introduction.startButton.get());
 
-    fireEvent.click(screen.getByTestId("seriousMisconduct-false"));
-    fireEvent.click(ui.next.get());
-
-    fireEvent.click(screen.getByTestId("disabledWorker-false"));
-    fireEvent.click(ui.next.get());
-
-    fireEvent.change(screen.getByTestId("cdt.ancienneté"), {
-      target: { value: "15| Moins de 6 mois" },
+    // Étape 1 : Situation du salarié - Compléter toutes les questions
+    fireEvent.click(ui.situation.fauteGraveNon.get());
+    fireEvent.click(ui.situation.handicapNon.get());
+    fireEvent.change(ui.situation.seniority.get(), {
+      target: { value: "'Moins de 6 mois'" },
     });
     fireEvent.click(ui.next.get());
 
+    // Étape 2 : Convention collective (déjà sélectionnée par défaut)
     fireEvent.click(ui.next.get());
   });
 
   describe("criteria.catégorie professionnelle = 23| Agents de maîtrise", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle"
+        ),
         {
-          target: { value: "23| Agents de maîtrise" },
+          target: { value: "'Agents de maîtrise'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -58,9 +58,11 @@ describe("CalculateurPreavisLicenciement", () => {
   describe("criteria.catégorie professionnelle = 48| Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle"
+        ),
         {
-          target: { value: "48| Cadres" },
+          target: { value: "'Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -76,10 +78,12 @@ describe("CalculateurPreavisLicenciement", () => {
   describe("criteria.catégorie professionnelle = 33| Salariés occupant un emploi de l'esthétique-cosmétique", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle"
+        ),
         {
           target: {
-            value: "33| Salariés occupant un emploi de l'esthétique-cosmétique",
+            value: "'Salariés occupant un emploi de l'esthétique-cosmétique'",
           },
         }
       );
@@ -88,9 +92,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.ancienneté = 21| 6 mois ou moins", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "21| 6 mois ou moins" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - coiffure - ancienneté"
+          ),
+          {
+            target: { value: "'6 mois ou moins'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -103,9 +112,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "35| 6 mois à 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - coiffure - ancienneté"
+          ),
+          {
+            target: { value: "'6 mois à 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -118,9 +132,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "43| Plus de 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - coiffure - ancienneté"
+          ),
+          {
+            target: { value: "'Plus de 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -135,11 +154,13 @@ describe("CalculateurPreavisLicenciement", () => {
   describe("criteria.catégorie professionnelle = 32| Salariés occupant un emploi non-technique de la coiffure", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle"
+        ),
         {
           target: {
             value:
-              "32| Salariés occupant un emploi non-technique de la coiffure",
+              "'Salariés occupant un emploi non-technique de la coiffure'",
           },
         }
       );
@@ -148,9 +169,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.ancienneté = 21| 6 mois ou moins", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "21| 6 mois ou moins" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - coiffure - ancienneté"
+          ),
+          {
+            target: { value: "'6 mois ou moins'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -163,9 +189,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "35| 6 mois à 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - coiffure - ancienneté"
+          ),
+          {
+            target: { value: "'6 mois à 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -178,9 +209,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "43| Plus de 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - coiffure - ancienneté"
+          ),
+          {
+            target: { value: "'Plus de 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -195,10 +231,12 @@ describe("CalculateurPreavisLicenciement", () => {
   describe("criteria.catégorie professionnelle = 31| Salariés occupant un emploi technique de la coiffure", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle"
+        ),
         {
           target: {
-            value: "31| Salariés occupant un emploi technique de la coiffure",
+            value: "'Salariés occupant un emploi technique de la coiffure'",
           },
         }
       );
@@ -207,9 +245,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.ancienneté = 21| 6 mois ou moins", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "21| 6 mois ou moins" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - coiffure - ancienneté"
+          ),
+          {
+            target: { value: "'6 mois ou moins'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -222,9 +265,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "35| 6 mois à 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - coiffure - ancienneté"
+          ),
+          {
+            target: { value: "'6 mois à 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -237,9 +285,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "43| Plus de 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - coiffure - ancienneté"
+          ),
+          {
+            target: { value: "'Plus de 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 

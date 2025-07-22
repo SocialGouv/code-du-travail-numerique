@@ -23,26 +23,24 @@ describe("CalculateurPreavisLicenciement", () => {
     );
     fireEvent.click(ui.introduction.startButton.get());
 
-    fireEvent.click(screen.getByTestId("seriousMisconduct-false"));
-    fireEvent.click(ui.next.get());
-
-    fireEvent.click(screen.getByTestId("disabledWorker-false"));
-    fireEvent.click(ui.next.get());
-
-    fireEvent.change(screen.getByTestId("cdt.ancienneté"), {
-      target: { value: "15| Moins de 6 mois" },
+    // Étape 1 : Situation du salarié - Compléter toutes les questions
+    fireEvent.click(ui.situation.fauteGraveNon.get());
+    fireEvent.click(ui.situation.handicapNon.get());
+    fireEvent.change(ui.situation.seniority.get(), {
+      target: { value: "'Moins de 6 mois'" },
     });
     fireEvent.click(ui.next.get());
 
+    // Étape 2 : Convention collective (déjà sélectionnée par défaut)
     fireEvent.click(ui.next.get());
   });
 
   describe("criteria.catégorie professionnelle = 78| Chargés d'enquête intermittents", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId("infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle"),
         {
-          target: { value: "78| Chargés d'enquête intermittents" },
+          target: { value: "'Chargés d'"enquête intermittents'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -50,8 +48,8 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "38| Moins de 2 ans" },
+        fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - bureaux études techniques - ancienneté"), {
+          target: { value: "'Moins de 2 ans'" },
         });
         fireEvent.click(ui.next.get());
       });
@@ -69,8 +67,8 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "42| 2 ans ou plus" },
+        fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - bureaux études techniques - ancienneté"), {
+          target: { value: "'2 ans ou plus'" },
         });
         fireEvent.click(ui.next.get());
       });
@@ -90,10 +88,10 @@ describe("CalculateurPreavisLicenciement", () => {
   describe("criteria.catégorie professionnelle = 19| Employés, Techniciens ou Agents de maîtrise (ETAM)", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId("infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle"),
         {
           target: {
-            value: "19| Employés, Techniciens ou Agents de maîtrise (ETAM)",
+            value: "'Employés, Techniciens ou Agents de maîtrise (ETAM)'",
           },
         }
       );
@@ -102,16 +100,16 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.coefficient = 16| de 240 à 355", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.coefficient"), {
-          target: { value: "16| de 240 à 355" },
+        fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - bureaux études techniques - coefficient"), {
+          target: { value: "'de 240 à 355'" },
         });
         fireEvent.click(ui.next.get());
       });
 
       describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-            target: { value: "38| Moins de 2 ans" },
+          fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - bureaux études techniques - ancienneté"), {
+            target: { value: "'Moins de 2 ans'" },
           });
           fireEvent.click(ui.next.get());
         });
@@ -125,8 +123,8 @@ describe("CalculateurPreavisLicenciement", () => {
 
       describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-            target: { value: "42| 2 ans ou plus" },
+          fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - bureaux études techniques - ancienneté"), {
+            target: { value: "'2 ans ou plus'" },
           });
           fireEvent.click(ui.next.get());
         });
@@ -141,8 +139,8 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.coefficient = 19| De 400 à 500", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.coefficient"), {
-          target: { value: "19| De 400 à 500" },
+        fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - bureaux études techniques - coefficient"), {
+          target: { value: "'De 400 à 500'" },
         });
         fireEvent.click(ui.next.get());
       });
@@ -158,9 +156,9 @@ describe("CalculateurPreavisLicenciement", () => {
   describe("criteria.catégorie professionnelle = 60| Ingénieurs, Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId("infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle"),
         {
-          target: { value: "60| Ingénieurs, Cadres" },
+          target: { value: "'Ingénieurs, Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());

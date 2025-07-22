@@ -23,26 +23,26 @@ describe("CalculateurPreavisLicenciement", () => {
     );
     fireEvent.click(ui.introduction.startButton.get());
 
-    fireEvent.click(screen.getByTestId("seriousMisconduct-false"));
-    fireEvent.click(ui.next.get());
-
-    fireEvent.click(screen.getByTestId("disabledWorker-false"));
-    fireEvent.click(ui.next.get());
-
-    fireEvent.change(screen.getByTestId("cdt.ancienneté"), {
-      target: { value: "15| Moins de 6 mois" },
+    // Étape 1 : Situation du salarié - Compléter toutes les questions
+    fireEvent.click(ui.situation.fauteGraveNon.get());
+    fireEvent.click(ui.situation.handicapNon.get());
+    fireEvent.change(ui.situation.seniority.get(), {
+      target: { value: "'Moins de 6 mois'" },
     });
     fireEvent.click(ui.next.get());
 
+    // Étape 2 : Convention collective (déjà sélectionnée par défaut)
     fireEvent.click(ui.next.get());
   });
 
   describe("criteria.catégorie professionnelle = 23| Agents de maîtrise", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle"
+        ),
         {
-          target: { value: "23| Agents de maîtrise" },
+          target: { value: "'Agents de maîtrise'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -60,9 +60,11 @@ describe("CalculateurPreavisLicenciement", () => {
   describe("criteria.catégorie professionnelle = 48| Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle"
+        ),
         {
-          target: { value: "48| Cadres" },
+          target: { value: "'Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -80,9 +82,11 @@ describe("CalculateurPreavisLicenciement", () => {
   describe("criteria.catégorie professionnelle = 16| Employés", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle"
+        ),
         {
-          target: { value: "16| Employés" },
+          target: { value: "'Employés'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -90,14 +94,21 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.ancienneté = 3| Moins de 1 mois", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "3| Moins de 1 mois" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle Employés - ancienneté"
+          ),
+          {
+            target: { value: "'Moins de 1 mois'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
       it("should display expected answer", () => {
-        expect(screen.queryAllByText(/Aucun préavis/g)[0]).toBeInTheDocument();
+        expect(
+          screen.queryAllByText(/il n'y a pas de préavis/g)[0]
+        ).toBeInTheDocument();
 
         expect(screen.queryAllByText(/Article 38/)[0]).toBeInTheDocument();
       });
@@ -105,9 +116,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.ancienneté = 14| 1 mois à moins de 6 mois", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "14| 1 mois à moins de 6 mois" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle Employés - ancienneté"
+          ),
+          {
+            target: { value: "'1 mois à moins de 6 mois'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -120,9 +136,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.ancienneté = 33| 6 mois à moins de 2 ans", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "33| 6 mois à moins de 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle Employés - ancienneté"
+          ),
+          {
+            target: { value: "'6 mois à moins de 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -135,9 +156,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "42| 2 ans ou plus" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - habillement commerce succursales - ancienneté"
+          ),
+          {
+            target: { value: "'2 ans ou plus'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 

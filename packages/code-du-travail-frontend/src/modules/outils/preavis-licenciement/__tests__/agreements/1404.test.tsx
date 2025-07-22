@@ -23,26 +23,26 @@ describe("CalculateurPreavisLicenciement", () => {
     );
     fireEvent.click(ui.introduction.startButton.get());
 
-    fireEvent.click(screen.getByTestId("seriousMisconduct-false"));
-    fireEvent.click(ui.next.get());
-
-    fireEvent.click(screen.getByTestId("disabledWorker-false"));
-    fireEvent.click(ui.next.get());
-
-    fireEvent.change(screen.getByTestId("cdt.ancienneté"), {
-      target: { value: "15| Moins de 6 mois" },
+    // Étape 1 : Situation du salarié - Compléter toutes les questions
+    fireEvent.click(ui.situation.fauteGraveNon.get());
+    fireEvent.click(ui.situation.handicapNon.get());
+    fireEvent.change(ui.situation.seniority.get(), {
+      target: { value: "'Moins de 6 mois'" },
     });
     fireEvent.click(ui.next.get());
 
+    // Étape 2 : Convention collective (déjà sélectionnée par défaut)
     fireEvent.click(ui.next.get());
   });
 
   describe("criteria.catégorie professionnelle = 48| Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - sedima - catégorie professionnelle"
+        ),
         {
-          target: { value: "48| Cadres" },
+          target: { value: "'Cadres'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -50,9 +50,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.niveau = 10| VII et plus", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.niveau"), {
-          target: { value: "10| VII et plus" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - sedima - niveau"
+          ),
+          {
+            target: { value: "'VII et plus'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -67,9 +72,11 @@ describe("CalculateurPreavisLicenciement", () => {
   describe("criteria.catégorie professionnelle = 6| Ouvriers, Employés", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - sedima - catégorie professionnelle"
+        ),
         {
-          target: { value: "6| Ouvriers, Employés" },
+          target: { value: "'Ouvriers, Employés'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -77,17 +84,27 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.niveau = 1| I", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.niveau"), {
-          target: { value: "1| I" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - sedima - niveau"
+          ),
+          {
+            target: { value: "'I'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
       describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-            target: { value: "38| Moins de 2 ans" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - sedima - ancienneté"
+            ),
+            {
+              target: { value: "'Moins de 2 ans'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -102,9 +119,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
       describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-            target: { value: "42| 2 ans ou plus" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - sedima - ancienneté"
+            ),
+            {
+              target: { value: "'2 ans ou plus'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -120,17 +142,27 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.niveau = 3| II", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.niveau"), {
-          target: { value: "3| II" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - sedima - niveau"
+          ),
+          {
+            target: { value: "'II'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
       describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-            target: { value: "38| Moins de 2 ans" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - sedima - ancienneté"
+            ),
+            {
+              target: { value: "'Moins de 2 ans'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -145,9 +177,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
       describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-            target: { value: "42| 2 ans ou plus" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - sedima - ancienneté"
+            ),
+            {
+              target: { value: "'2 ans ou plus'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -163,9 +200,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.niveau = 4| III", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.niveau"), {
-          target: { value: "4| III" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - sedima - niveau"
+          ),
+          {
+            target: { value: "'III'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -180,9 +222,11 @@ describe("CalculateurPreavisLicenciement", () => {
   describe("criteria.catégorie professionnelle = 27| Techniciens et agents de maîtrise (TAM)", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.catégorie professionnelle"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - sedima - catégorie professionnelle"
+        ),
         {
-          target: { value: "27| Techniciens et agents de maîtrise (TAM)" },
+          target: { value: "'Techniciens et agents de maîtrise (TAM)'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -190,9 +234,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.niveau = 5| IV", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.niveau"), {
-          target: { value: "5| IV" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - sedima - niveau"
+          ),
+          {
+            target: { value: "'IV'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -205,9 +254,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.niveau = 7| V", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.niveau"), {
-          target: { value: "7| V" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - sedima - niveau"
+          ),
+          {
+            target: { value: "'V'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -220,9 +274,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.niveau = 8| VI", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.niveau"), {
-          target: { value: "8| VI" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - sedima - niveau"
+          ),
+          {
+            target: { value: "'VI'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 

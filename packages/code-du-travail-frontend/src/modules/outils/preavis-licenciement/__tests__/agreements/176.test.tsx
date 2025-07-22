@@ -23,27 +23,27 @@ describe("CalculateurPreavisLicenciement", () => {
     );
     fireEvent.click(ui.introduction.startButton.get());
 
-    fireEvent.click(screen.getByTestId("seriousMisconduct-false"));
-    fireEvent.click(ui.next.get());
-
-    fireEvent.click(screen.getByTestId("disabledWorker-false"));
-    fireEvent.click(ui.next.get());
-
-    fireEvent.change(screen.getByTestId("cdt.ancienneté"), {
-      target: { value: "15| Moins de 6 mois" },
+    // Étape 1 : Situation du salarié - Compléter toutes les questions
+    fireEvent.click(ui.situation.fauteGraveNon.get());
+    fireEvent.click(ui.situation.handicapNon.get());
+    fireEvent.change(ui.situation.seniority.get(), {
+      target: { value: "'Moins de 6 mois'" },
     });
     fireEvent.click(ui.next.get());
 
+    // Étape 2 : Convention collective (déjà sélectionnée par défaut)
     fireEvent.click(ui.next.get());
   });
 
   describe("criteria.conclusion contrat travail = 1| Contrat de travail conclu avant le 1er juillet 2009", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.conclusion contrat travail"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail"
+        ),
         {
           target: {
-            value: "1| Contrat de travail conclu avant le 1er juillet 2009",
+            value: "'Contrat de travail conclu avant le 1er juillet 2009'",
           },
         }
       );
@@ -52,9 +52,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.groupe = 24| 1 à 3", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "24| 1 à 3" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industrie pharmaceutique - groupe"
+          ),
+          {
+            target: { value: "'1 à 3'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -67,9 +72,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.groupe = 15| 4", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "15| 4" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industrie pharmaceutique - groupe"
+          ),
+          {
+            target: { value: "'4'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -82,9 +92,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.groupe = 29| 5 et suivants", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "29| 5 et suivants" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industrie pharmaceutique - groupe"
+          ),
+          {
+            target: { value: "'5 et suivants'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -99,10 +114,12 @@ describe("CalculateurPreavisLicenciement", () => {
   describe("criteria.conclusion contrat travail = 2| Contrat de travail conclu après le 1er juillet 2009", () => {
     beforeEach(() => {
       fireEvent.change(
-        screen.getByTestId("criteria.conclusion contrat travail"),
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail"
+        ),
         {
           target: {
-            value: "2| Contrat de travail conclu après le 1er juillet 2009",
+            value: "'Contrat de travail conclu après le 1er juillet 2009'",
           },
         }
       );
@@ -111,9 +128,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.groupe = 24| 1 à 3", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "24| 1 à 3" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industrie pharmaceutique - groupe"
+          ),
+          {
+            target: { value: "'1 à 3'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -126,9 +148,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.groupe = 28| 4 à 6 ", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "28| 4 à 6 " },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industrie pharmaceutique - groupe"
+          ),
+          {
+            target: { value: "'4 à 6 '" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -141,9 +168,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.groupe = 31| 6 et suivants ", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.groupe"), {
-          target: { value: "31| 6 et suivants " },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industrie pharmaceutique - groupe"
+          ),
+          {
+            target: { value: "'6 et suivants '" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 

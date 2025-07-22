@@ -24,9 +24,9 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.introduction.startButton.get());
 
     // Étape 1 : Situation du salarié - Compléter toutes les questions
-    fireEvent.click(screen.getByTestId("seriousMisconduct - Non"));
-    fireEvent.click(screen.getByTestId("disabledWorker - Non"));
-    fireEvent.change(screen.getByTestId("seniority"), {
+    fireEvent.click(ui.situation.fauteGraveNon.get());
+    fireEvent.click(ui.situation.handicapNon.get());
+    fireEvent.change(ui.situation.seniority.get(), {
       target: { value: "'Moins de 6 mois'" },
     });
     fireEvent.click(ui.next.get());
@@ -153,7 +153,7 @@ describe("CalculateurPreavisLicenciement", () => {
                 "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
               ),
               {
-                target: { value: "38| Moins de 2 ans" },
+                target: { value: "'Moins de 2 ans'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -175,7 +175,7 @@ describe("CalculateurPreavisLicenciement", () => {
                 "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
               ),
               {
-                target: { value: "42| 2 ans ou plus" },
+                target: { value: "'2 ans ou plus'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -198,7 +198,7 @@ describe("CalculateurPreavisLicenciement", () => {
               "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe I - coefficient"
             ),
             {
-              target: { value: "8| 190 et plus" },
+              target: { value: "'190 et plus'" },
             }
           );
           fireEvent.click(ui.next.get());
@@ -247,7 +247,7 @@ describe("CalculateurPreavisLicenciement", () => {
                 "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
               ),
               {
-                target: { value: "38| Moins de 2 ans" },
+                target: { value: "'Moins de 2 ans'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -269,7 +269,7 @@ describe("CalculateurPreavisLicenciement", () => {
                 "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
               ),
               {
-                target: { value: "42| 2 ans ou plus" },
+                target: { value: "'2 ans ou plus'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -341,7 +341,7 @@ describe("CalculateurPreavisLicenciement", () => {
                 "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
               ),
               {
-                target: { value: "38| Moins de 2 ans" },
+                target: { value: "'Moins de 2 ans'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -363,7 +363,7 @@ describe("CalculateurPreavisLicenciement", () => {
                 "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
               ),
               {
-                target: { value: "42| 2 ans ou plus" },
+                target: { value: "'2 ans ou plus'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -485,7 +485,7 @@ describe("CalculateurPreavisLicenciement", () => {
                 "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
               ),
               {
-                target: { value: "38| Moins de 2 ans" },
+                target: { value: "'Moins de 2 ans'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -507,7 +507,7 @@ describe("CalculateurPreavisLicenciement", () => {
                 "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
               ),
               {
-                target: { value: "42| 2 ans ou plus" },
+                target: { value: "'2 ans ou plus'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -579,7 +579,7 @@ describe("CalculateurPreavisLicenciement", () => {
                 "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
               ),
               {
-                target: { value: "38| Moins de 2 ans" },
+                target: { value: "'Moins de 2 ans'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -601,7 +601,7 @@ describe("CalculateurPreavisLicenciement", () => {
                 "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
               ),
               {
-                target: { value: "42| 2 ans ou plus" },
+                target: { value: "'2 ans ou plus'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -673,7 +673,7 @@ describe("CalculateurPreavisLicenciement", () => {
                 "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
               ),
               {
-                target: { value: "38| Moins de 2 ans" },
+                target: { value: "'Moins de 2 ans'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -695,7 +695,7 @@ describe("CalculateurPreavisLicenciement", () => {
                 "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
               ),
               {
-                target: { value: "42| 2 ans ou plus" },
+                target: { value: "'2 ans ou plus'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -781,7 +781,7 @@ describe("CalculateurPreavisLicenciement", () => {
                 "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
               ),
               {
-                target: { value: "38| Moins de 2 ans" },
+                target: { value: "'Moins de 2 ans'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -803,7 +803,7 @@ describe("CalculateurPreavisLicenciement", () => {
                 "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
               ),
               {
-                target: { value: "42| 2 ans ou plus" },
+                target: { value: "'2 ans ou plus'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -875,7 +875,7 @@ describe("CalculateurPreavisLicenciement", () => {
                 "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
               ),
               {
-                target: { value: "38| Moins de 2 ans" },
+                target: { value: "'Moins de 2 ans'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -897,7 +897,7 @@ describe("CalculateurPreavisLicenciement", () => {
                 "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
               ),
               {
-                target: { value: "42| 2 ans ou plus" },
+                target: { value: "'2 ans ou plus'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -969,7 +969,7 @@ describe("CalculateurPreavisLicenciement", () => {
                 "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
               ),
               {
-                target: { value: "38| Moins de 2 ans" },
+                target: { value: "'Moins de 2 ans'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -991,7 +991,7 @@ describe("CalculateurPreavisLicenciement", () => {
                 "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
               ),
               {
-                target: { value: "42| 2 ans ou plus" },
+                target: { value: "'2 ans ou plus'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -1050,7 +1050,7 @@ describe("CalculateurPreavisLicenciement", () => {
               "infos.contrat salarié - convention collective - industries chimiques - coefficient"
             ),
             {
-              target: { value: "11| Inférieur à 275" },
+              target: { value: "'Inférieur à 275'" },
             }
           );
           fireEvent.click(ui.next.get());
@@ -1072,7 +1072,7 @@ describe("CalculateurPreavisLicenciement", () => {
               "infos.contrat salarié - convention collective - industries chimiques - coefficient"
             ),
             {
-              target: { value: "14| Supérieur à 275 (inclus)" },
+              target: { value: "'Supérieur à 275 (inclus)'" },
             }
           );
           fireEvent.click(ui.next.get());

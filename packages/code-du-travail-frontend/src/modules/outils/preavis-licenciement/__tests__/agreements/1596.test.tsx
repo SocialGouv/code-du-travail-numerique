@@ -23,27 +23,30 @@ describe("CalculateurPreavisLicenciement", () => {
     );
     fireEvent.click(ui.introduction.startButton.get());
 
-    fireEvent.click(screen.getByTestId("seriousMisconduct-false"));
-    fireEvent.click(ui.next.get());
-
-    fireEvent.click(screen.getByTestId("disabledWorker-false"));
-    fireEvent.click(ui.next.get());
-
-    fireEvent.change(screen.getByTestId("cdt.ancienneté"), {
-      target: { value: "15| Moins de 6 mois" },
+    // Étape 1 : Situation du salarié - Compléter toutes les questions
+    fireEvent.click(ui.situation.fauteGraveNon.get());
+    fireEvent.click(ui.situation.handicapNon.get());
+    fireEvent.change(ui.situation.seniority.get(), {
+      target: { value: "'Moins de 6 mois'" },
     });
     fireEvent.click(ui.next.get());
 
+    // Étape 2 : Convention collective (déjà sélectionnée par défaut)
     fireEvent.click(ui.next.get());
   });
 
   describe("criteria.ancienneté = 10| Au delà de la période d'essai et jusqu'à 3 mois", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-        target: {
-          value: "10| Au delà de la période d'essai et jusqu'à 3 mois",
-        },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - batiment ouvriers employés - ancienneté"
+        ),
+        {
+          target: {
+            value: "'Au delà de la période d'essai et jusqu'à 3 mois'",
+          },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -56,9 +59,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
   describe("criteria.ancienneté = 19| De 3 à 6 mois", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-        target: { value: "19| De 3 à 6 mois" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - batiment ouvriers employés - ancienneté"
+        ),
+        {
+          target: { value: "'De 3 à 6 mois'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -71,9 +79,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
   describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-        target: { value: "35| 6 mois à 2 ans" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - batiment ouvriers employés - ancienneté"
+        ),
+        {
+          target: { value: "'6 mois à 2 ans'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -86,9 +99,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
   describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-        target: { value: "43| Plus de 2 ans" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - batiment ouvriers employés - ancienneté"
+        ),
+        {
+          target: { value: "'Plus de 2 ans'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 

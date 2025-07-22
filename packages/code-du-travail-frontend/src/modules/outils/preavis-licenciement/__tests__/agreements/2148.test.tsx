@@ -23,33 +23,41 @@ describe("CalculateurPreavisLicenciement", () => {
     );
     fireEvent.click(ui.introduction.startButton.get());
 
-    fireEvent.click(screen.getByTestId("seriousMisconduct-false"));
-    fireEvent.click(ui.next.get());
-
-    fireEvent.click(screen.getByTestId("disabledWorker-false"));
-    fireEvent.click(ui.next.get());
-
-    fireEvent.change(screen.getByTestId("cdt.ancienneté"), {
-      target: { value: "15| Moins de 6 mois" },
+    // Étape 1 : Situation du salarié - Compléter toutes les questions
+    fireEvent.click(ui.situation.fauteGraveNon.get());
+    fireEvent.click(ui.situation.handicapNon.get());
+    fireEvent.change(ui.situation.seniority.get(), {
+      target: { value: "'Moins de 6 mois'" },
     });
     fireEvent.click(ui.next.get());
 
+    // Étape 2 : Convention collective (déjà sélectionnée par défaut)
     fireEvent.click(ui.next.get());
   });
 
   describe("criteria.groupe = 20| A et B", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.groupe"), {
-        target: { value: "20| A et B" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - télécommunications - groupe"
+        ),
+        {
+          target: { value: "'A et B'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.ancienneté = 40| 2 ans ou moins", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "40| 2 ans ou moins" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - télécommunications - ancienneté"
+          ),
+          {
+            target: { value: "'2 ans ou moins'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -62,9 +70,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "43| Plus de 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - télécommunications - ancienneté"
+          ),
+          {
+            target: { value: "'Plus de 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -78,9 +91,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
   describe("criteria.groupe = 21| C et D", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.groupe"), {
-        target: { value: "21| C et D" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - télécommunications - groupe"
+        ),
+        {
+          target: { value: "'C et D'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -93,9 +111,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
   describe("criteria.groupe = 22| E, F et G", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.groupe"), {
-        target: { value: "22| E, F et G" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - télécommunications - groupe"
+        ),
+        {
+          target: { value: "'E, F et G'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -108,9 +131,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
   describe("criteria.groupe = 23| Hors classification", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.groupe"), {
-        target: { value: "23| Hors classification" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - télécommunications - groupe"
+        ),
+        {
+          target: { value: "'Hors classification'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 

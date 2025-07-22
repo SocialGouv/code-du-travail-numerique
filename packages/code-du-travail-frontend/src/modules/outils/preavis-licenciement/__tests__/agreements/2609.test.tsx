@@ -23,33 +23,41 @@ describe("CalculateurPreavisLicenciement", () => {
     );
     fireEvent.click(ui.introduction.startButton.get());
 
-    fireEvent.click(screen.getByTestId("seriousMisconduct-false"));
-    fireEvent.click(ui.next.get());
-
-    fireEvent.click(screen.getByTestId("disabledWorker-false"));
-    fireEvent.click(ui.next.get());
-
-    fireEvent.change(screen.getByTestId("cdt.ancienneté"), {
-      target: { value: "15| Moins de 6 mois" },
+    // Étape 1 : Situation du salarié - Compléter toutes les questions
+    fireEvent.click(ui.situation.fauteGraveNon.get());
+    fireEvent.click(ui.situation.handicapNon.get());
+    fireEvent.change(ui.situation.seniority.get(), {
+      target: { value: "'Moins de 6 mois'" },
     });
     fireEvent.click(ui.next.get());
 
+    // Étape 2 : Convention collective (déjà sélectionnée par défaut)
     fireEvent.click(ui.next.get());
   });
 
   describe("criteria.âge = 3| Moins de 55 ans", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.âge"), {
-        target: { value: "3| Moins de 55 ans" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - batiment etam - âge"
+        ),
+        {
+          target: { value: "'Moins de 55 ans'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "38| Moins de 2 ans" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - batiment etam - âge Moins de 55 ans - ancienneté"
+          ),
+          {
+            target: { value: "'Moins de 2 ans'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -62,9 +70,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "42| 2 ans ou plus" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - batiment etam - âge Moins de 55 ans - ancienneté"
+          ),
+          {
+            target: { value: "'2 ans ou plus'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -78,17 +91,27 @@ describe("CalculateurPreavisLicenciement", () => {
 
   describe("criteria.âge = 5| Plus de 55 ans", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("criteria.âge"), {
-        target: { value: "5| Plus de 55 ans" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - batiment etam - âge"
+        ),
+        {
+          target: { value: "'Plus de 55 ans'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.ancienneté = 50| Au moins 15 ans d'ancienneté", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "50| Au moins 15 ans d'ancienneté" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - batiment etam - âge Plus de 55 ans - ancienneté"
+          ),
+          {
+            target: { value: "'Au moins 15 ans d'ancienneté'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -101,9 +124,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
     describe("criteria.ancienneté = 49| Moins de 15 ans d'ancienneté", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-          target: { value: "49| Moins de 15 ans d'ancienneté" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - batiment etam - âge Plus de 55 ans - ancienneté"
+          ),
+          {
+            target: { value: "'Moins de 15 ans d'ancienneté'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
