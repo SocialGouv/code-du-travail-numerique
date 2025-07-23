@@ -1,13 +1,10 @@
-import { byTestId, byText } from "testing-library-selector";
+import { byRole, byTestId, byText } from "testing-library-selector";
 
 export const ui = {
-  situationTitle: byText("Quelle est votre situation ?"),
-  personnalizedTitle: byText("Titre personnalisé"),
   question1: {
     text: byText("Question1"),
     description: byText("Description"),
-    tooltip: byTestId("Tooltip-Question1"),
-    tooltipText: byText("Question1Info"),
+    info: byText("Question1Info"),
   },
   response1: {
     text: byText("Response1"),
@@ -36,8 +33,7 @@ export const ui = {
     text: byText("Response12"),
     statement: byText("Statement12"),
     neutralStatement: byText("neutralStatement12"),
-    neutralStatementTooltip: byTestId("Tooltip-neutralStatement12"),
-    neutralStatementTooltipText: byText("neutralStatementInfo12"),
+    info: byText("neutralStatementInfo12"),
     modify: byTestId("modify-Statement12"),
   },
   button: {

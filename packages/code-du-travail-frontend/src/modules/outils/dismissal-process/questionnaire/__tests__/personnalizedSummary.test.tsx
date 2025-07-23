@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { QuestionnaireWrapper } from "../Components";
+import { QuestionnaireWrapper } from "../QuestionnaireWrapper";
 import { withStore } from "../store";
 import { ui } from "./ui";
 
@@ -26,15 +26,7 @@ test(`Questionnaire
     },
     true
   );
-  await render(
-    <QuestionnaireWrapper
-      name="dismissalProcess"
-      title="Titre"
-      personnalizedTitle="Titre personnalisé"
-      slug="Slug12"
-    />
-  );
-  expect(screen.queryByText("Titre personnalisé")).toBeInTheDocument();
+  await render(<QuestionnaireWrapper name="dismissalProcess" slug="Slug12" />);
   expect(ui.response1.statement.query()).toBeInTheDocument();
   expect(ui.response12.statement.query()).toBeInTheDocument();
   expect(ui.question1.text.query()).not.toBeInTheDocument();
