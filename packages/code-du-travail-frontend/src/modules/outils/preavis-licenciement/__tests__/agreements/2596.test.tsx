@@ -35,7 +35,7 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 23| Agents de maîtrise", () => {
+  describe("criteria.catégorie professionnelle = Agents de maîtrise", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -55,7 +55,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 48| Cadres", () => {
+  describe("criteria.catégorie professionnelle = Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -75,7 +75,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 33| Salariés occupant un emploi de l'esthétique-cosmétique", () => {
+  describe("criteria.catégorie professionnelle = Salariés occupant un emploi de l'esthétique-cosmétique", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -90,7 +90,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 21| 6 mois ou moins", () => {
+    describe("criteria.ancienneté = 6 mois ou moins", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -110,7 +110,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
+    describe("criteria.ancienneté = 6 mois à 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -130,7 +130,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = Plus de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -151,7 +151,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 32| Salariés occupant un emploi non-technique de la coiffure", () => {
+  describe("criteria.catégorie professionnelle = Salariés occupant un emploi non-technique de la coiffure", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -159,15 +159,14 @@ describe("CalculateurPreavisLicenciement", () => {
         ),
         {
           target: {
-            value:
-              "'Salariés occupant un emploi non-technique de la coiffure'",
+            value: "'Salariés occupant un emploi non-technique de la coiffure'",
           },
         }
       );
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 21| 6 mois ou moins", () => {
+    describe("criteria.ancienneté = 6 mois ou moins", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -187,7 +186,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
+    describe("criteria.ancienneté = 6 mois à 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -207,7 +206,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = Plus de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -228,7 +227,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 31| Salariés occupant un emploi technique de la coiffure", () => {
+  describe("criteria.catégorie professionnelle = Salariés occupant un emploi technique de la coiffure", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -243,7 +242,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 21| 6 mois ou moins", () => {
+    describe("criteria.ancienneté = 6 mois ou moins", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -263,7 +262,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
+    describe("criteria.ancienneté = 6 mois à 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -283,7 +282,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = Plus de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(

@@ -35,7 +35,7 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 20| Agents d'exploitation, employés administratifs et techniciens", () => {
+  describe("criteria.catégorie professionnelle = Agents d'exploitation, employés administratifs et techniciens", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -51,7 +51,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.niveau = 1| I", () => {
+    describe("criteria.niveau = I", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -64,11 +64,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = 1| Moins de 15 jours", () => {
+      describe("criteria.ancienneté = Moins de 15 jours", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Cadres - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau I - ancienneté"
             ),
             {
               target: { value: "'Moins de 15 jours'" },
@@ -90,11 +90,11 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 2| 15 jours à 1 mois", () => {
+      describe("criteria.ancienneté = 15 jours à 1 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Cadres - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau I - ancienneté"
             ),
             {
               target: { value: "'15 jours à 1 mois'" },
@@ -114,11 +114,11 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 8| Plus de 1 mois à 2 mois", () => {
+      describe("criteria.ancienneté = Plus de 1 mois à 2 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Cadres - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau I - ancienneté"
             ),
             {
               target: { value: "'Plus de 1 mois à 2 mois'" },
@@ -140,7 +140,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 18| Plus de 2 mois à 6 mois", () => {
+      describe("criteria.ancienneté = Plus de 2 mois à 6 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -166,7 +166,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 6 mois à 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -190,7 +190,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -215,7 +215,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.niveau = 3| II", () => {
+    describe("criteria.niveau = II", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -228,7 +228,7 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = 1| Moins de 15 jours", () => {
+      describe("criteria.ancienneté = Moins de 15 jours", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -254,7 +254,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 2| 15 jours à 1 mois", () => {
+      describe("criteria.ancienneté = 15 jours à 1 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -278,7 +278,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 8| Plus de 1 mois à 2 mois", () => {
+      describe("criteria.ancienneté = Plus de 1 mois à 2 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -304,7 +304,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 18| Plus de 2 mois à 6 mois", () => {
+      describe("criteria.ancienneté = Plus de 2 mois à 6 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -330,7 +330,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 6 mois à 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -354,7 +354,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -379,7 +379,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.niveau = 4| III", () => {
+    describe("criteria.niveau = III", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -392,7 +392,7 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = 1| Moins de 15 jours", () => {
+      describe("criteria.ancienneté = Moins de 15 jours", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -418,7 +418,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 2| 15 jours à 1 mois", () => {
+      describe("criteria.ancienneté = 15 jours à 1 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -442,7 +442,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 8| Plus de 1 mois à 2 mois", () => {
+      describe("criteria.ancienneté = Plus de 1 mois à 2 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -468,7 +468,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 18| Plus de 2 mois à 6 mois", () => {
+      describe("criteria.ancienneté = Plus de 2 mois à 6 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -494,7 +494,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 6 mois à 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -518,7 +518,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -543,7 +543,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.niveau = 5| IV", () => {
+    describe("criteria.niveau = IV", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -556,7 +556,7 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = 1| Moins de 15 jours", () => {
+      describe("criteria.ancienneté = Moins de 15 jours", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -582,7 +582,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 2| 15 jours à 1 mois", () => {
+      describe("criteria.ancienneté = 15 jours à 1 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -606,7 +606,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 8| Plus de 1 mois à 2 mois", () => {
+      describe("criteria.ancienneté = Plus de 1 mois à 2 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -632,7 +632,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 18| Plus de 2 mois à 6 mois", () => {
+      describe("criteria.ancienneté = Plus de 2 mois à 6 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -658,7 +658,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 6 mois à 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -682,7 +682,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -707,7 +707,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.niveau = 7| V", () => {
+    describe("criteria.niveau = V", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -720,7 +720,7 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = 1| Moins de 15 jours", () => {
+      describe("criteria.ancienneté = Moins de 15 jours", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -746,7 +746,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 2| 15 jours à 1 mois", () => {
+      describe("criteria.ancienneté = 15 jours à 1 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -770,7 +770,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 8| Plus de 1 mois à 2 mois", () => {
+      describe("criteria.ancienneté = Plus de 1 mois à 2 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -796,7 +796,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 18| Plus de 2 mois à 6 mois", () => {
+      describe("criteria.ancienneté = Plus de 2 mois à 6 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -822,7 +822,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 6 mois à 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -846,7 +846,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -872,7 +872,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 23| Agents de maîtrise", () => {
+  describe("criteria.catégorie professionnelle = Agents de maîtrise", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -885,7 +885,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.niveau = 1| I", () => {
+    describe("criteria.niveau = I", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -898,7 +898,7 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = 1| Moins de 15 jours", () => {
+      describe("criteria.ancienneté = Moins de 15 jours", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -922,7 +922,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 7| 15 jours à 2 mois", () => {
+      describe("criteria.ancienneté = 15 jours à 2 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -944,7 +944,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 12| Plus de 2 mois à 3 mois", () => {
+      describe("criteria.ancienneté = Plus de 2 mois à 3 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -966,7 +966,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 20| Plus de 3 mois à 6 mois", () => {
+      describe("criteria.ancienneté = Plus de 3 mois à 6 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -988,7 +988,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 6 mois à 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1010,7 +1010,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1033,7 +1033,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.niveau = 3| II", () => {
+    describe("criteria.niveau = II", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -1046,7 +1046,7 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = 1| Moins de 15 jours", () => {
+      describe("criteria.ancienneté = Moins de 15 jours", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1070,7 +1070,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 7| 15 jours à 2 mois", () => {
+      describe("criteria.ancienneté = 15 jours à 2 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1092,7 +1092,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 12| Plus de 2 mois à 3 mois", () => {
+      describe("criteria.ancienneté = Plus de 2 mois à 3 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1114,7 +1114,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 20| Plus de 3 mois à 6 mois", () => {
+      describe("criteria.ancienneté = Plus de 3 mois à 6 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1136,7 +1136,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 6 mois à 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1158,7 +1158,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1181,7 +1181,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.niveau = 4| III", () => {
+    describe("criteria.niveau = III", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -1194,7 +1194,7 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = 1| Moins de 15 jours", () => {
+      describe("criteria.ancienneté = Moins de 15 jours", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1218,7 +1218,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 7| 15 jours à 2 mois", () => {
+      describe("criteria.ancienneté = 15 jours à 2 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1240,7 +1240,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 12| Plus de 2 mois à 3 mois", () => {
+      describe("criteria.ancienneté = Plus de 2 mois à 3 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1262,7 +1262,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 20| Plus de 3 mois à 6 mois", () => {
+      describe("criteria.ancienneté = Plus de 3 mois à 6 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1284,7 +1284,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 6 mois à 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1306,7 +1306,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1329,7 +1329,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.niveau = 5| IV", () => {
+    describe("criteria.niveau = IV", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -1342,7 +1342,7 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = 1| Moins de 15 jours", () => {
+      describe("criteria.ancienneté = Moins de 15 jours", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1366,7 +1366,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 7| 15 jours à 2 mois", () => {
+      describe("criteria.ancienneté = 15 jours à 2 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1388,7 +1388,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 12| Plus de 2 mois à 3 mois", () => {
+      describe("criteria.ancienneté = Plus de 2 mois à 3 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1410,7 +1410,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 20| Plus de 3 mois à 6 mois", () => {
+      describe("criteria.ancienneté = Plus de 3 mois à 6 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1432,7 +1432,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 6 mois à 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1454,7 +1454,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1477,7 +1477,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.niveau = 7| V", () => {
+    describe("criteria.niveau = V", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -1490,7 +1490,7 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = 1| Moins de 15 jours", () => {
+      describe("criteria.ancienneté = Moins de 15 jours", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1514,7 +1514,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 7| 15 jours à 2 mois", () => {
+      describe("criteria.ancienneté = 15 jours à 2 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1536,7 +1536,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 12| Plus de 2 mois à 3 mois", () => {
+      describe("criteria.ancienneté = Plus de 2 mois à 3 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1558,7 +1558,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 20| Plus de 3 mois à 6 mois", () => {
+      describe("criteria.ancienneté = Plus de 3 mois à 6 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1580,7 +1580,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 36| Plus de 6 mois à 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 6 mois à 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1602,7 +1602,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -1626,7 +1626,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 48| Cadres", () => {
+  describe("criteria.catégorie professionnelle = Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -1639,7 +1639,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 1| Moins de 15 jours", () => {
+    describe("criteria.ancienneté = Moins de 15 jours", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -1663,7 +1663,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 2| 15 jours à 1 mois", () => {
+    describe("criteria.ancienneté = 15 jours à 1 mois", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -1687,7 +1687,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 11| Plus de 1 mois à 3 mois", () => {
+    describe("criteria.ancienneté = Plus de 1 mois à 3 mois", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -1711,7 +1711,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 20| Plus de 3 mois à 6 mois", () => {
+    describe("criteria.ancienneté = Plus de 3 mois à 6 mois", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -1733,7 +1733,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 26| Plus de 6 mois à 1 an", () => {
+    describe("criteria.ancienneté = Plus de 6 mois à 1 an", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -1755,7 +1755,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 27| Plus de 1 an", () => {
+    describe("criteria.ancienneté = Plus de 1 an", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(

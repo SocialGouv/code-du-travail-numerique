@@ -35,7 +35,7 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 23| Agents de maîtrise", () => {
+  describe("criteria.catégorie professionnelle = Agents de maîtrise", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -48,7 +48,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = Moins de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -63,14 +63,13 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Article 11, Annexe II/)[0]
         ).toBeInTheDocument();
       });
     });
 
-    describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+    describe("criteria.ancienneté = 2 ans ou plus", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -85,7 +84,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Article 11, Annexe II/)[0]
         ).toBeInTheDocument();
@@ -93,7 +91,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 28| Techniciens", () => {
+  describe("criteria.catégorie professionnelle = Techniciens", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -106,7 +104,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = Moins de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -121,14 +119,13 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Article 11, Annexe II/)[0]
         ).toBeInTheDocument();
       });
     });
 
-    describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+    describe("criteria.ancienneté = 2 ans ou plus", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -143,7 +140,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Article 11, Annexe II/)[0]
         ).toBeInTheDocument();
@@ -151,7 +147,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 48| Cadres", () => {
+  describe("criteria.catégorie professionnelle = Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -166,14 +162,13 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
       expect(
         screen.queryAllByText(/Article 10, Annexe I/)[0]
       ).toBeInTheDocument();
     });
   });
 
-  describe("criteria.catégorie professionnelle = 4| Ouvriers", () => {
+  describe("criteria.catégorie professionnelle = Ouvriers", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -186,7 +181,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = Moins de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -201,14 +196,13 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Article 15, Annexe III/)[0]
         ).toBeInTheDocument();
       });
     });
 
-    describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+    describe("criteria.ancienneté = 2 ans ou plus", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -223,7 +217,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Article 15, Annexe III/)[0]
         ).toBeInTheDocument();
@@ -231,7 +224,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 16| Employés", () => {
+  describe("criteria.catégorie professionnelle = Employés", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -244,7 +237,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = Moins de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -259,14 +252,13 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Article 15, Annexe III/)[0]
         ).toBeInTheDocument();
       });
     });
 
-    describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+    describe("criteria.ancienneté = 2 ans ou plus", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -281,7 +273,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Article 15, Annexe III/)[0]
         ).toBeInTheDocument();

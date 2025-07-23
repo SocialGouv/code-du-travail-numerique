@@ -35,7 +35,7 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.âge = 3| Moins de 55 ans", () => {
+  describe("criteria.âge = Moins de 55 ans", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -48,7 +48,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = Moins de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -68,7 +68,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+    describe("criteria.ancienneté = 2 ans ou plus", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -89,7 +89,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.âge = 5| Plus de 55 ans", () => {
+  describe("criteria.âge = Plus de 55 ans", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -102,7 +102,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 50| Au moins 15 ans d'ancienneté", () => {
+    describe("criteria.ancienneté = Au moins 15 ans d'ancienneté", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -122,7 +122,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 49| Moins de 15 ans d'ancienneté", () => {
+    describe("criteria.ancienneté = Moins de 15 ans d'ancienneté", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(

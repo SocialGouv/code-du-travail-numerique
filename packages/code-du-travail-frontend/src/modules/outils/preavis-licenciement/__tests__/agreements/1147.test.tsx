@@ -35,7 +35,7 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 48| Cadres", () => {
+  describe("criteria.catégorie professionnelle = Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -57,7 +57,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 38| Non-cadres", () => {
+  describe("criteria.catégorie professionnelle = Non-cadres", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -70,11 +70,11 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 15| Moins de 6 mois", () => {
+    describe("criteria.ancienneté = Moins de 6 mois", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - cabinets médicaux - ancienneté"
+            "infos.contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle Noncadres - ancienneté"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -92,11 +92,11 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
+    describe("criteria.ancienneté = 6 mois à 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - cabinets médicaux - ancienneté"
+            "infos.contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle Noncadres - ancienneté"
           ),
           {
             target: { value: "'6 mois à 2 ans'" },
@@ -114,11 +114,11 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = Plus de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - cabinets médicaux - ancienneté"
+            "infos.contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle Noncadres - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },

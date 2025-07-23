@@ -35,7 +35,7 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+  describe("criteria.ancienneté = Moins de 2 ans", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -55,7 +55,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+  describe("criteria.ancienneté = 2 ans ou plus", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(

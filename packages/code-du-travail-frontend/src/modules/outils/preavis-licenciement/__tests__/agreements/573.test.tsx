@@ -35,7 +35,7 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 21| Agents de maîtrise et Techniciens", () => {
+  describe("criteria.catégorie professionnelle = Agents de maîtrise et Techniciens", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -50,12 +50,11 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
       expect(screen.queryAllByText(/Article 35/)[0]).toBeInTheDocument();
     });
   });
 
-  describe("criteria.catégorie professionnelle = 48| Cadres", () => {
+  describe("criteria.catégorie professionnelle = Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -70,12 +69,11 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
       expect(screen.queryAllByText(/Article 35/)[0]).toBeInTheDocument();
     });
   });
 
-  describe("criteria.catégorie professionnelle = 6| Ouvriers, Employés", () => {
+  describe("criteria.catégorie professionnelle = Ouvriers, Employés", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -88,24 +86,24 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.motif de rupture = 2| Autre motif (hors faute grave ou lourde)", () => {
+    describe("criteria.motif de rupture = Autre motif hors faute grave ou lourde", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de gros - motif de rupture"
+            "infos.contrat salarié - convention collective - commerces de gros - catégorie professionnelle Ouvriers, Employés - motif de rupture"
           ),
           {
-            target: { value: "'Autre motif (hors faute grave ou lourde)'" },
+            target: { value: "'Autre motif hors faute grave ou lourde'" },
           }
         );
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = 40| 2 ans ou moins", () => {
+      describe("criteria.ancienneté = 2 ans ou moins", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - commerces de gros - ancienneté"
+              "infos.contrat salarié - convention collective - commerces de gros - catégorie professionnelle Ouvriers, Employés - motif de rupture Autre motif hors faute grave ou lourde - ancienneté"
             ),
             {
               target: { value: "'2 ans ou moins'" },
@@ -116,16 +114,15 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
           expect(screen.queryAllByText(/Article 35/)[0]).toBeInTheDocument();
         });
       });
 
-      describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+      describe("criteria.ancienneté = Plus de 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - commerces de gros - ancienneté"
+              "infos.contrat salarié - convention collective - commerces de gros - catégorie professionnelle Ouvriers, Employés - motif de rupture Autre motif hors faute grave ou lourde - ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -136,17 +133,16 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(screen.queryAllByText(/Article 35/)[0]).toBeInTheDocument();
         });
       });
     });
 
-    describe("criteria.motif de rupture = 1| Motif économique", () => {
+    describe("criteria.motif de rupture = Motif économique", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de gros - motif de rupture"
+            "infos.contrat salarié - convention collective - commerces de gros - catégorie professionnelle Ouvriers, Employés - motif de rupture"
           ),
           {
             target: { value: "'Motif économique'" },
@@ -157,7 +153,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 38/)[0]).toBeInTheDocument();
       });
     });

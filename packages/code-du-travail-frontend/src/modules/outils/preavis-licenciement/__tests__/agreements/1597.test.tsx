@@ -35,11 +35,11 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.ancienneté = 10| Au delà de la période d'essai et jusqu'à 3 mois", () => {
+  describe("criteria.ancienneté = Au delà de la période d'essai et jusqu'à 3 mois", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - batiment ouvriers employés bis - ancienneté"
+          "infos.contrat salarié - convention collective - batiment etam - ancienneté"
         ),
         {
           target: {
@@ -57,11 +57,11 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.ancienneté = 19| De 3 à 6 mois", () => {
+  describe("criteria.ancienneté = De 3 à 6 mois", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - batiment ouvriers employés bis - ancienneté"
+          "infos.contrat salarié - convention collective - batiment etam - ancienneté"
         ),
         {
           target: { value: "'De 3 à 6 mois'" },
@@ -77,11 +77,11 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
+  describe("criteria.ancienneté = 6 mois à 2 ans", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - batiment ouvriers employés bis - ancienneté"
+          "infos.contrat salarié - convention collective - batiment etam - ancienneté"
         ),
         {
           target: { value: "'6 mois à 2 ans'" },
@@ -97,11 +97,11 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+  describe("criteria.ancienneté = Plus de 2 ans", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - batiment ouvriers employés bis - ancienneté"
+          "infos.contrat salarié - convention collective - batiment etam - ancienneté"
         ),
         {
           target: { value: "'Plus de 2 ans'" },

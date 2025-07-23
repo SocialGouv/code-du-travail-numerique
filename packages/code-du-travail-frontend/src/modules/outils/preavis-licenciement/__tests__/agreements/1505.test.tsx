@@ -35,11 +35,11 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 23| Agents de maîtrise (AM1 et AM2)", () => {
+  describe("criteria.catégorie professionnelle = Agents de maîtrise (AM1 et AM2)", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - catégorie professionnelle"
+          "infos.contrat salarié - convention collective - commerces gros - catégorie professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise (AM1 et AM2)'" },
@@ -55,11 +55,11 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 48| Cadres (C1 et C2)", () => {
+  describe("criteria.catégorie professionnelle = Cadres (C1 et C2)", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - catégorie professionnelle"
+          "infos.contrat salarié - convention collective - commerces gros - catégorie professionnelle"
         ),
         {
           target: { value: "'Cadres (C1 et C2)'" },
@@ -75,11 +75,11 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 6| Employés (E1 à E7)", () => {
+  describe("criteria.catégorie professionnelle = Employés (E1 à E7)", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - catégorie professionnelle"
+          "infos.contrat salarié - convention collective - commerces gros - catégorie professionnelle"
         ),
         {
           target: { value: "'Employés (E1 à E7)'" },
@@ -88,11 +88,11 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 40| 2 ans ou moins", () => {
+    describe("criteria.ancienneté = 2 ans ou moins", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - ancienneté"
+            "infos.contrat salarié - convention collective - commerces gros - ancienneté"
           ),
           {
             target: { value: "'2 ans ou moins'" },
@@ -108,11 +108,11 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = Plus de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - ancienneté"
+            "infos.contrat salarié - convention collective - commerces gros - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },

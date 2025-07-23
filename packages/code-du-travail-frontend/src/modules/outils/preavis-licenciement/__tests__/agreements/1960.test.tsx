@@ -35,7 +35,7 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.niveau = 1| I", () => {
+  describe("criteria.niveau = I", () => {
     beforeEach(() => {
       fireEvent.change(screen.getByTestId("criteria.niveau"), {
         target: { value: "'I'" },
@@ -43,7 +43,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 15| Moins de 6 mois", () => {
+    describe("criteria.ancienneté = Moins de 6 mois", () => {
       beforeEach(() => {
         fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
           target: { value: "'Moins de 6 mois'" },
@@ -62,7 +62,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
+    describe("criteria.ancienneté = 6 mois à 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
           target: { value: "'6 mois à 2 ans'" },
@@ -81,7 +81,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = Plus de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
           target: { value: "'Plus de 2 ans'" },
@@ -101,7 +101,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.niveau = 3| II", () => {
+  describe("criteria.niveau = II", () => {
     beforeEach(() => {
       fireEvent.change(screen.getByTestId("criteria.niveau"), {
         target: { value: "'II'" },
@@ -109,7 +109,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 40| 2 ans ou moins", () => {
+    describe("criteria.ancienneté = 2 ans ou moins", () => {
       beforeEach(() => {
         fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
           target: { value: "'2 ans ou moins'" },
@@ -128,7 +128,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = Plus de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
           target: { value: "'Plus de 2 ans'" },
@@ -148,7 +148,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.niveau = 4| III", () => {
+  describe("criteria.niveau = III", () => {
     beforeEach(() => {
       fireEvent.change(screen.getByTestId("criteria.niveau"), {
         target: { value: "'III'" },
@@ -156,7 +156,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 40| 2 ans ou moins", () => {
+    describe("criteria.ancienneté = 2 ans ou moins", () => {
       beforeEach(() => {
         fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
           target: { value: "'2 ans ou moins'" },
@@ -175,7 +175,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = Plus de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
           target: { value: "'Plus de 2 ans'" },
@@ -195,7 +195,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.niveau = 5| IV", () => {
+  describe("criteria.niveau = IV", () => {
     beforeEach(() => {
       fireEvent.change(screen.getByTestId("criteria.niveau"), {
         target: { value: "'IV'" },
@@ -214,7 +214,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.niveau = 7| V", () => {
+  describe("criteria.niveau = V", () => {
     beforeEach(() => {
       fireEvent.change(screen.getByTestId("criteria.niveau"), {
         target: { value: "'V'" },

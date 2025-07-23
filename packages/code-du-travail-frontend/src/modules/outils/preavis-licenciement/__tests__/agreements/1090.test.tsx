@@ -35,7 +35,7 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 23| Agents de maîtrise", () => {
+  describe("criteria.catégorie professionnelle = Agents de maîtrise", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -48,11 +48,11 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.échelon = 4| De 17 à 19", () => {
+    describe("criteria.échelon = De 17 à 19", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - automobiles - échelon"
+            "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Agents de maîtrise - échelon"
           ),
           {
             target: { value: "'De 17 à 19'" },
@@ -68,11 +68,11 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.échelon = 5| De 20 à 25", () => {
+    describe("criteria.échelon = De 20 à 25", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - automobiles - échelon"
+            "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Agents de maîtrise - échelon"
           ),
           {
             target: { value: "'De 20 à 25'" },
@@ -89,7 +89,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 48| Cadres", () => {
+  describe("criteria.catégorie professionnelle = Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -109,7 +109,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 6| Ouvriers, Employés", () => {
+  describe("criteria.catégorie professionnelle = Ouvriers, Employés", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -122,11 +122,11 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.échelon = 2| 1 et 2", () => {
+    describe("criteria.échelon = 1 et 2", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - automobiles - échelon"
+            "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Ouvriers, Employés - échelon"
           ),
           {
             target: { value: "'1 et 2'" },
@@ -135,11 +135,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = 15| Moins de 6 mois", () => {
+      describe("criteria.ancienneté = Moins de 6 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - automobiles - ancienneté"
+              "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Ouvriers, Employés - échelon 1 et 2 - ancienneté"
             ),
             {
               target: { value: "'Moins de 6 mois'" },
@@ -155,11 +155,11 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
+      describe("criteria.ancienneté = 6 mois à 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - automobiles - ancienneté"
+              "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Ouvriers, Employés - échelon 1 et 2 - ancienneté"
             ),
             {
               target: { value: "'6 mois à 2 ans'" },
@@ -175,11 +175,11 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+      describe("criteria.ancienneté = 2 ans ou plus", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - automobiles - ancienneté"
+              "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Ouvriers, Employés - échelon 1 et 2 - ancienneté"
             ),
             {
               target: { value: "'2 ans ou plus'" },
@@ -196,11 +196,11 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.échelon = 3| De 3 à 12", () => {
+    describe("criteria.échelon = De 3 à 12", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - automobiles - échelon"
+            "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Ouvriers, Employés - échelon"
           ),
           {
             target: { value: "'De 3 à 12'" },
@@ -209,11 +209,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+      describe("criteria.ancienneté = Moins de 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - automobiles - ancienneté"
+              "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Ouvriers, Employés - échelon De 3 à 12 - ancienneté"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -229,11 +229,11 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+      describe("criteria.ancienneté = 2 ans ou plus", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - automobiles - ancienneté"
+              "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Ouvriers, Employés - échelon De 3 à 12 - ancienneté"
             ),
             {
               target: { value: "'2 ans ou plus'" },

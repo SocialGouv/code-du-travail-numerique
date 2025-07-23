@@ -35,7 +35,7 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 48| Cadres", () => {
+  describe("criteria.catégorie professionnelle = Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -50,14 +50,13 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
       expect(
         screen.queryAllByText(/Avenant Cadres, article 8/)[0]
       ).toBeInTheDocument();
     });
   });
 
-  describe("criteria.catégorie professionnelle = 42| Collaborateurs", () => {
+  describe("criteria.catégorie professionnelle = Collaborateurs", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -70,11 +69,11 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.coefficient = 24| 700 à 750", () => {
+    describe("criteria.coefficient = 700 à 750", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - plasturgie - coefficient"
+            "infos.contrat salarié - convention collective - plasturgie - catégorie professionnelle Collaborateurs - coefficient"
           ),
           {
             target: { value: "'700 à 750'" },
@@ -83,11 +82,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+      describe("criteria.ancienneté = Moins de 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - plasturgie - ancienneté"
+              "infos.contrat salarié - convention collective - plasturgie - catégorie professionnelle Collaborateurs - coefficient 700 à 750 - ancienneté"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -98,18 +97,17 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
           expect(
             screen.queryAllByText(/Avenant Collaborateurs, article 15/)[0]
           ).toBeInTheDocument();
         });
       });
 
-      describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+      describe("criteria.ancienneté = 2 ans ou plus", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - plasturgie - ancienneté"
+              "infos.contrat salarié - convention collective - plasturgie - catégorie professionnelle Collaborateurs - coefficient 700 à 750 - ancienneté"
             ),
             {
               target: { value: "'2 ans ou plus'" },
@@ -120,7 +118,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(
             screen.queryAllByText(/Avenant Collaborateurs, article 15/)[0]
           ).toBeInTheDocument();
@@ -128,11 +125,11 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.coefficient = 28| 800 à 830 inclus", () => {
+    describe("criteria.coefficient = 800 à 830 inclus", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - plasturgie - coefficient"
+            "infos.contrat salarié - convention collective - plasturgie - catégorie professionnelle Collaborateurs - coefficient"
           ),
           {
             target: { value: "'800 à 830 inclus'" },
@@ -143,7 +140,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Avenant Collaborateurs, article 15/)[0]
         ).toBeInTheDocument();

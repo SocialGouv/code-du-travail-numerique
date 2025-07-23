@@ -35,7 +35,7 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 23| Agents de maîtrise", () => {
+  describe("criteria.catégorie professionnelle = Agents de maîtrise", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -48,7 +48,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 24| Moins de 1 an", () => {
+    describe("criteria.ancienneté = Moins de 1 an", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -68,7 +68,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 25| Au moins 1 an", () => {
+    describe("criteria.ancienneté = Au moins 1 an", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -89,7 +89,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 48| Cadres", () => {
+  describe("criteria.catégorie professionnelle = Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -109,7 +109,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 76| Négociateur non VRP", () => {
+  describe("criteria.catégorie professionnelle = Négociateur non VRP", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -122,7 +122,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = Moins de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -142,7 +142,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+    describe("criteria.ancienneté = 2 ans ou plus", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -163,7 +163,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 77| Négociateur VRP", () => {
+  describe("criteria.catégorie professionnelle = Négociateur VRP", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -176,7 +176,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 24| Moins de 1 an", () => {
+    describe("criteria.ancienneté = Moins de 1 an", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -196,7 +196,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+    describe("criteria.ancienneté = 2 ans ou plus", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -217,7 +217,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 6| Ouvriers, Employés", () => {
+  describe("criteria.catégorie professionnelle = Ouvriers, Employés", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -230,7 +230,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = Moins de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -250,7 +250,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+    describe("criteria.ancienneté = 2 ans ou plus", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(

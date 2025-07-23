@@ -35,11 +35,11 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.niveau = 1| I", () => {
+  describe("criteria.niveau = I", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos.contrat salarié - convention collective - participation - niveau"
         ),
         {
           target: { value: "'I'" },
@@ -48,11 +48,11 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = Moins de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - ancienneté"
+            "infos.contrat salarié - convention collective - participation - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -70,11 +70,11 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = Plus de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - ancienneté"
+            "infos.contrat salarié - convention collective - participation - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -93,11 +93,11 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.niveau = 3| II", () => {
+  describe("criteria.niveau = II", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos.contrat salarié - convention collective - participation - niveau"
         ),
         {
           target: { value: "'II'" },
@@ -106,11 +106,11 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = Moins de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - ancienneté"
+            "infos.contrat salarié - convention collective - participation - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -128,11 +128,11 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = Plus de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - ancienneté"
+            "infos.contrat salarié - convention collective - participation - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -151,11 +151,11 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.niveau = 4| III", () => {
+  describe("criteria.niveau = III", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos.contrat salarié - convention collective - participation - niveau"
         ),
         {
           target: { value: "'III'" },
@@ -164,11 +164,11 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = Plus de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - ancienneté"
+            "infos.contrat salarié - convention collective - participation - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -186,11 +186,11 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = Moins de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - ancienneté"
+            "infos.contrat salarié - convention collective - participation - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -209,11 +209,11 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.niveau = 5| IV", () => {
+  describe("criteria.niveau = IV", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos.contrat salarié - convention collective - participation - niveau"
         ),
         {
           target: { value: "'IV'" },
@@ -222,11 +222,11 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = Moins de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - ancienneté"
+            "infos.contrat salarié - convention collective - participation - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -244,11 +244,11 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = Plus de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - ancienneté"
+            "infos.contrat salarié - convention collective - participation - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -267,11 +267,11 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.niveau = 7| V", () => {
+  describe("criteria.niveau = V", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos.contrat salarié - convention collective - participation - niveau"
         ),
         {
           target: { value: "'V'" },
@@ -280,11 +280,11 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = Moins de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - ancienneté"
+            "infos.contrat salarié - convention collective - participation - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -302,11 +302,11 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = Plus de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - ancienneté"
+            "infos.contrat salarié - convention collective - participation - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -325,11 +325,11 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.niveau = 8| VI", () => {
+  describe("criteria.niveau = VI", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos.contrat salarié - convention collective - participation - niveau"
         ),
         {
           target: { value: "'VI'" },
@@ -338,11 +338,11 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = Moins de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - ancienneté"
+            "infos.contrat salarié - convention collective - participation - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -360,11 +360,11 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = Plus de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - ancienneté"
+            "infos.contrat salarié - convention collective - participation - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -383,11 +383,11 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.niveau = 9| VII", () => {
+  describe("criteria.niveau = VII", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos.contrat salarié - convention collective - participation - niveau"
         ),
         {
           target: { value: "'VII'" },
@@ -396,11 +396,11 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = Moins de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - ancienneté"
+            "infos.contrat salarié - convention collective - participation - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -418,11 +418,11 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = Plus de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - ancienneté"
+            "infos.contrat salarié - convention collective - participation - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -441,11 +441,11 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.niveau = 11| VIII", () => {
+  describe("criteria.niveau = VIII", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos.contrat salarié - convention collective - participation - niveau"
         ),
         {
           target: { value: "'VIII'" },
@@ -454,11 +454,11 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = Moins de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - ancienneté"
+            "infos.contrat salarié - convention collective - participation - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -476,11 +476,11 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = Plus de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - ancienneté"
+            "infos.contrat salarié - convention collective - participation - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -499,11 +499,11 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.niveau = 12| IX", () => {
+  describe("criteria.niveau = IX", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos.contrat salarié - convention collective - participation - niveau"
         ),
         {
           target: { value: "'IX'" },
@@ -512,11 +512,11 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = Moins de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - ancienneté"
+            "infos.contrat salarié - convention collective - participation - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -534,11 +534,11 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
+    describe("criteria.ancienneté = Plus de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - ancienneté"
+            "infos.contrat salarié - convention collective - participation - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },

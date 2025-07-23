@@ -35,7 +35,7 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 100| Salariés du particulier employeur", () => {
+  describe("criteria.catégorie professionnelle = Salariés du particulier employeur", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -48,7 +48,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 15| Moins de 6 mois", () => {
+    describe("criteria.ancienneté = Moins de 6 mois", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -63,9 +63,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 162.4.1/)[0]).toBeInTheDocument();
-
         expect(
           screen.queryByText(
             /Le contrat de travail ou un usage peut prévoir une durée de préavis ou une condition d'ancienneté plus favorable pour le salarié. Dans ce cas, c'est cette durée ou cette ancienneté plus favorable qui s'applique au salarié./
@@ -74,7 +72,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 35| 6 mois à 2 ans", () => {
+    describe("criteria.ancienneté = 6 mois à 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -89,9 +87,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 162.4.1/)[0]).toBeInTheDocument();
-
         expect(
           screen.queryByText(
             /Le contrat de travail ou un usage peut prévoir une durée de préavis ou une condition d'ancienneté plus favorable pour le salarié. Dans ce cas, c'est cette durée ou cette ancienneté plus favorable qui s'applique au salarié./
@@ -100,7 +96,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+    describe("criteria.ancienneté = 2 ans ou plus", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -115,9 +111,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 162.4.1/)[0]).toBeInTheDocument();
-
         expect(
           screen.queryByText(
             /Le contrat de travail ou un usage peut prévoir une durée de préavis ou une condition d'ancienneté plus favorable pour le salarié. Dans ce cas, c'est cette durée ou cette ancienneté plus favorable qui s'applique au salarié./
@@ -127,7 +121,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 101| Assistants maternels du particulier employeur", () => {
+  describe("criteria.catégorie professionnelle = Assistants maternels du particulier employeur", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -142,7 +136,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 105| Enfant accueilli depuis moins de 3 mois", () => {
+    describe("criteria.ancienneté = Enfant accueilli depuis moins de 3 mois", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -159,7 +153,6 @@ describe("CalculateurPreavisLicenciement", () => {
         expect(
           screen.queryAllByText(/8 jours calendaires/g)[0]
         ).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(
             /Art. L. 423-25 du Code de l'action sociale et des familles/
@@ -176,7 +169,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 106| Enfant accueilli de 3 mois à moins d'un an", () => {
+    describe("criteria.ancienneté = Enfant accueilli de 3 mois à moins d'un an", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -193,7 +186,6 @@ describe("CalculateurPreavisLicenciement", () => {
         expect(
           screen.queryAllByText(/15 jours calendaires/g)[0]
         ).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(
             /Art. L. 423-25 du Code de l'action sociale et des familles/
@@ -210,7 +202,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 107| Enfant accueilli depuis 1 an et plus", () => {
+    describe("criteria.ancienneté = Enfant accueilli depuis 1 an et plus", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -225,7 +217,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(
             /Art. L. 423-25 du Code de l'action sociale et des familles/

@@ -35,7 +35,7 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.ancienneté = 33| 6 mois à moins de 2 ans", () => {
+  describe("criteria.ancienneté = 6 mois à moins de 2 ans", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -50,7 +50,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
       expect(
         screen.queryAllByText(
           /Article 1. 1 de la section 1 du Chapitre 4 de la Partie II de la convention collective/
@@ -59,7 +58,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+  describe("criteria.ancienneté = 2 ans ou plus", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -74,7 +73,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
       expect(
         screen.queryAllByText(
           /Article 1. 1 de la section 1 du Chapitre 4 de la Partie II de la convention collective/

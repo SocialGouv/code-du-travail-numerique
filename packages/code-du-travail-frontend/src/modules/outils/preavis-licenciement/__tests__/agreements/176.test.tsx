@@ -35,7 +35,7 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.conclusion contrat travail = 1| Contrat de travail conclu avant le 1er juillet 2009", () => {
+  describe("criteria.conclusion contrat travail = Contrat de travail conclu avant le 1er juillet 2009", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -50,11 +50,11 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.groupe = 24| 1 à 3", () => {
+    describe("criteria.groupe = 1 à 3", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industrie pharmaceutique - groupe"
+            "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 - groupe"
           ),
           {
             target: { value: "'1 à 3'" },
@@ -65,16 +65,15 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 35, 2°/)[0]).toBeInTheDocument();
       });
     });
 
-    describe("criteria.groupe = 15| 4", () => {
+    describe("criteria.groupe = 4", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industrie pharmaceutique - groupe"
+            "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 - groupe"
           ),
           {
             target: { value: "'4'" },
@@ -85,16 +84,15 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 35, 2°/)[0]).toBeInTheDocument();
       });
     });
 
-    describe("criteria.groupe = 29| 5 et suivants", () => {
+    describe("criteria.groupe = 5 et suivants", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industrie pharmaceutique - groupe"
+            "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 - groupe"
           ),
           {
             target: { value: "'5 et suivants'" },
@@ -105,13 +103,12 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 35, 2°/)[0]).toBeInTheDocument();
       });
     });
   });
 
-  describe("criteria.conclusion contrat travail = 2| Contrat de travail conclu après le 1er juillet 2009", () => {
+  describe("criteria.conclusion contrat travail = Contrat de travail conclu après le 1er juillet 2009", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -126,11 +123,11 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.groupe = 24| 1 à 3", () => {
+    describe("criteria.groupe = 1 à 3", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industrie pharmaceutique - groupe"
+            "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 - groupe"
           ),
           {
             target: { value: "'1 à 3'" },
@@ -141,19 +138,18 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 35, 2°/)[0]).toBeInTheDocument();
       });
     });
 
-    describe("criteria.groupe = 28| 4 à 6 ", () => {
+    describe("criteria.groupe = 4 à 6", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industrie pharmaceutique - groupe"
+            "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 - groupe"
           ),
           {
-            target: { value: "'4 à 6 '" },
+            target: { value: "'4 à 6'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -161,19 +157,18 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 35, 2°/)[0]).toBeInTheDocument();
       });
     });
 
-    describe("criteria.groupe = 31| 6 et suivants ", () => {
+    describe("criteria.groupe = 6 et suivants", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industrie pharmaceutique - groupe"
+            "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 - groupe"
           ),
           {
-            target: { value: "'6 et suivants '" },
+            target: { value: "'6 et suivants'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -181,7 +176,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/4 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 35, 2°/)[0]).toBeInTheDocument();
       });
     });

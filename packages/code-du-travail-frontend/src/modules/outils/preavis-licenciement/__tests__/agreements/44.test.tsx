@@ -35,7 +35,7 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 23| Agents de maîtrise", () => {
+  describe("criteria.catégorie professionnelle = Agents de maîtrise", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -48,7 +48,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.groupe = 6| IV", () => {
+    describe("criteria.groupe = IV", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -61,7 +61,7 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.coefficient = 11| Inférieur à 275", () => {
+      describe("criteria.coefficient = Inférieur à 275", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -76,14 +76,13 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(
             screen.queryAllByText(/Avenant 2, article 20/)[0]
           ).toBeInTheDocument();
         });
       });
 
-      describe("criteria.coefficient = 14| Supérieur à 275 (inclus)", () => {
+      describe("criteria.coefficient = Supérieur à 275 inclus", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -98,7 +97,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
           expect(
             screen.queryAllByText(/Avenant 2, article 20/)[0]
           ).toBeInTheDocument();
@@ -107,7 +105,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 16| Employés", () => {
+  describe("criteria.catégorie professionnelle = Employés", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -120,11 +118,11 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.groupe = 1| I", () => {
+    describe("criteria.groupe = I", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe"
+            "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe"
           ),
           {
             target: { value: "'I'" },
@@ -133,11 +131,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.coefficient = 7| Inférieur à 190", () => {
+      describe("criteria.coefficient = Inférieur à 190", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe II - coefficient"
+              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe I - coefficient"
             ),
             {
               target: { value: "'Inférieur à 190'" },
@@ -146,11 +144,11 @@ describe("CalculateurPreavisLicenciement", () => {
           fireEvent.click(ui.next.get());
         });
 
-        describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+        describe("criteria.ancienneté = Moins de 2 ans", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
+                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe I - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -161,18 +159,17 @@ describe("CalculateurPreavisLicenciement", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
             expect(
               screen.queryAllByText(/Avenant n°1 article 27/)[0]
             ).toBeInTheDocument();
           });
         });
 
-        describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+        describe("criteria.ancienneté = 2 ans ou plus", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
+                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe I - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -183,7 +180,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
             expect(
               screen.queryAllByText(/Avenant n°1 article 27/)[0]
             ).toBeInTheDocument();
@@ -191,7 +187,7 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.coefficient = 8| 190 et plus", () => {
+      describe("criteria.coefficient = 190 et plus", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
@@ -206,7 +202,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(
             screen.queryAllByText(/Avenant n°1 article 27/)[0]
           ).toBeInTheDocument();
@@ -214,11 +209,11 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.groupe = 4| II", () => {
+    describe("criteria.groupe = II", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe"
+            "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe"
           ),
           {
             target: { value: "'II'" },
@@ -227,11 +222,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.coefficient = 7| Inférieur à 190", () => {
+      describe("criteria.coefficient = Inférieur à 190", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe II - coefficient"
+              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe II - coefficient"
             ),
             {
               target: { value: "'Inférieur à 190'" },
@@ -240,11 +235,11 @@ describe("CalculateurPreavisLicenciement", () => {
           fireEvent.click(ui.next.get());
         });
 
-        describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+        describe("criteria.ancienneté = Moins de 2 ans", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
+                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe II - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -255,18 +250,17 @@ describe("CalculateurPreavisLicenciement", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
             expect(
               screen.queryAllByText(/Avenant n°1 article 27/)[0]
             ).toBeInTheDocument();
           });
         });
 
-        describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+        describe("criteria.ancienneté = 2 ans ou plus", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
+                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe II - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -277,7 +271,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
             expect(
               screen.queryAllByText(/Avenant n°1 article 27/)[0]
             ).toBeInTheDocument();
@@ -285,11 +278,11 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.coefficient = 8| 190 et plus", () => {
+      describe("criteria.coefficient = 190 et plus", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe II - coefficient"
+              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe II - coefficient"
             ),
             {
               target: { value: "'190 et plus'" },
@@ -300,7 +293,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(
             screen.queryAllByText(/Avenant n°1 article 27/)[0]
           ).toBeInTheDocument();
@@ -308,11 +300,11 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.groupe = 5| III", () => {
+    describe("criteria.groupe = III", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe"
+            "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe"
           ),
           {
             target: { value: "'III'" },
@@ -321,11 +313,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.coefficient = 7| Inférieur à 190", () => {
+      describe("criteria.coefficient = Inférieur à 190", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe III - coefficient"
+              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe III - coefficient"
             ),
             {
               target: { value: "'Inférieur à 190'" },
@@ -334,11 +326,11 @@ describe("CalculateurPreavisLicenciement", () => {
           fireEvent.click(ui.next.get());
         });
 
-        describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+        describe("criteria.ancienneté = Moins de 2 ans", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
+                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe III - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -349,18 +341,17 @@ describe("CalculateurPreavisLicenciement", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
             expect(
               screen.queryAllByText(/Avenant n°1 article 27/)[0]
             ).toBeInTheDocument();
           });
         });
 
-        describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+        describe("criteria.ancienneté = 2 ans ou plus", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
+                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe III - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -371,7 +362,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
             expect(
               screen.queryAllByText(/Avenant n°1 article 27/)[0]
             ).toBeInTheDocument();
@@ -379,11 +369,11 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.coefficient = 8| 190 et plus", () => {
+      describe("criteria.coefficient = 190 et plus", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe III - coefficient"
+              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe III - coefficient"
             ),
             {
               target: { value: "'190 et plus'" },
@@ -394,7 +384,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(
             screen.queryAllByText(/Avenant n°1 article 27/)[0]
           ).toBeInTheDocument();
@@ -403,7 +392,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 60| Ingénieurs, Cadres", () => {
+  describe("criteria.catégorie professionnelle = Ingénieurs, Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -416,7 +405,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.groupe = 9| V", () => {
+    describe("criteria.groupe = V", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -431,7 +420,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Avenant n°3 Article 4/)[0]
         ).toBeInTheDocument();
@@ -439,7 +427,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 4| Ouvriers", () => {
+  describe("criteria.catégorie professionnelle = Ouvriers", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -452,7 +440,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.groupe = 1| I", () => {
+    describe("criteria.groupe = I", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -465,11 +453,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.coefficient = 7| Inférieur à 190", () => {
+      describe("criteria.coefficient = Inférieur à 190", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe II - coefficient"
+              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe I - coefficient"
             ),
             {
               target: { value: "'Inférieur à 190'" },
@@ -478,11 +466,11 @@ describe("CalculateurPreavisLicenciement", () => {
           fireEvent.click(ui.next.get());
         });
 
-        describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+        describe("criteria.ancienneté = Moins de 2 ans", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
+                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe I - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -493,18 +481,17 @@ describe("CalculateurPreavisLicenciement", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
             expect(
               screen.queryAllByText(/Avenant n°1 article 27/)[0]
             ).toBeInTheDocument();
           });
         });
 
-        describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+        describe("criteria.ancienneté = 2 ans ou plus", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
+                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe I - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -515,7 +502,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
             expect(
               screen.queryAllByText(/Avenant n°1 article 27/)[0]
             ).toBeInTheDocument();
@@ -523,11 +509,11 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.coefficient = 8| 190 et plus", () => {
+      describe("criteria.coefficient = 190 et plus", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe II - coefficient"
+              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe I - coefficient"
             ),
             {
               target: { value: "'190 et plus'" },
@@ -538,7 +524,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(
             screen.queryAllByText(/Avenant n°1 article 27/)[0]
           ).toBeInTheDocument();
@@ -546,7 +531,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.groupe = 4| II", () => {
+    describe("criteria.groupe = II", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -559,11 +544,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.coefficient = 7| Inférieur à 190", () => {
+      describe("criteria.coefficient = Inférieur à 190", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe II - coefficient"
+              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe II - coefficient"
             ),
             {
               target: { value: "'Inférieur à 190'" },
@@ -572,11 +557,11 @@ describe("CalculateurPreavisLicenciement", () => {
           fireEvent.click(ui.next.get());
         });
 
-        describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+        describe("criteria.ancienneté = Moins de 2 ans", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
+                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe II - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -587,18 +572,17 @@ describe("CalculateurPreavisLicenciement", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
             expect(
               screen.queryAllByText(/Avenant n°1 article 27/)[0]
             ).toBeInTheDocument();
           });
         });
 
-        describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+        describe("criteria.ancienneté = 2 ans ou plus", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
+                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe II - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -609,7 +593,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
             expect(
               screen.queryAllByText(/Avenant n°1 article 27/)[0]
             ).toBeInTheDocument();
@@ -617,11 +600,11 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.coefficient = 8| 190 et plus", () => {
+      describe("criteria.coefficient = 190 et plus", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe II - coefficient"
+              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe II - coefficient"
             ),
             {
               target: { value: "'190 et plus'" },
@@ -632,7 +615,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(
             screen.queryAllByText(/Avenant n°1 article 27/)[0]
           ).toBeInTheDocument();
@@ -640,7 +622,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.groupe = 5| III", () => {
+    describe("criteria.groupe = III", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -653,11 +635,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.coefficient = 7| Inférieur à 190", () => {
+      describe("criteria.coefficient = Inférieur à 190", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe II - coefficient"
+              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe III - coefficient"
             ),
             {
               target: { value: "'Inférieur à 190'" },
@@ -666,11 +648,11 @@ describe("CalculateurPreavisLicenciement", () => {
           fireEvent.click(ui.next.get());
         });
 
-        describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+        describe("criteria.ancienneté = Moins de 2 ans", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
+                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe III - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -681,18 +663,17 @@ describe("CalculateurPreavisLicenciement", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
             expect(
               screen.queryAllByText(/Avenant n°1 article 27/)[0]
             ).toBeInTheDocument();
           });
         });
 
-        describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+        describe("criteria.ancienneté = 2 ans ou plus", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
+                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe III - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -703,7 +684,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
             expect(
               screen.queryAllByText(/Avenant n°1 article 27/)[0]
             ).toBeInTheDocument();
@@ -711,11 +691,11 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.coefficient = 8| 190 et plus", () => {
+      describe("criteria.coefficient = 190 et plus", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe II - coefficient"
+              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe III - coefficient"
             ),
             {
               target: { value: "'190 et plus'" },
@@ -726,7 +706,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(
             screen.queryAllByText(/Avenant n°1 article 27/)[0]
           ).toBeInTheDocument();
@@ -735,7 +714,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 28| Techniciens", () => {
+  describe("criteria.catégorie professionnelle = Techniciens", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -748,7 +727,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.groupe = 1| I", () => {
+    describe("criteria.groupe = I", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -761,11 +740,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.coefficient = 7| Inférieur à 190", () => {
+      describe("criteria.coefficient = Inférieur à 190", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe II - coefficient"
+              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe I - coefficient"
             ),
             {
               target: { value: "'Inférieur à 190'" },
@@ -774,11 +753,11 @@ describe("CalculateurPreavisLicenciement", () => {
           fireEvent.click(ui.next.get());
         });
 
-        describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+        describe("criteria.ancienneté = Moins de 2 ans", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
+                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe I - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -789,18 +768,17 @@ describe("CalculateurPreavisLicenciement", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
             expect(
               screen.queryAllByText(/Avenant n°1 article 27/)[0]
             ).toBeInTheDocument();
           });
         });
 
-        describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+        describe("criteria.ancienneté = 2 ans ou plus", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
+                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe I - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -811,7 +789,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
             expect(
               screen.queryAllByText(/Avenant n°1 article 27/)[0]
             ).toBeInTheDocument();
@@ -819,11 +796,11 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.coefficient = 8| 190 et plus", () => {
+      describe("criteria.coefficient = 190 et plus", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe II - coefficient"
+              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe I - coefficient"
             ),
             {
               target: { value: "'190 et plus'" },
@@ -834,7 +811,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(
             screen.queryAllByText(/Avenant n°1 article 27/)[0]
           ).toBeInTheDocument();
@@ -842,7 +818,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.groupe = 4| II", () => {
+    describe("criteria.groupe = II", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -855,11 +831,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.coefficient = 7| Inférieur à 190", () => {
+      describe("criteria.coefficient = Inférieur à 190", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe II - coefficient"
+              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe II - coefficient"
             ),
             {
               target: { value: "'Inférieur à 190'" },
@@ -868,11 +844,11 @@ describe("CalculateurPreavisLicenciement", () => {
           fireEvent.click(ui.next.get());
         });
 
-        describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+        describe("criteria.ancienneté = Moins de 2 ans", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
+                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe II - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -883,18 +859,17 @@ describe("CalculateurPreavisLicenciement", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
             expect(
               screen.queryAllByText(/Avenant n°1 article 27/)[0]
             ).toBeInTheDocument();
           });
         });
 
-        describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+        describe("criteria.ancienneté = 2 ans ou plus", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
+                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe II - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -905,7 +880,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
             expect(
               screen.queryAllByText(/Avenant n°1 article 27/)[0]
             ).toBeInTheDocument();
@@ -913,11 +887,11 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.coefficient = 8| 190 et plus", () => {
+      describe("criteria.coefficient = 190 et plus", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe II - coefficient"
+              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe II - coefficient"
             ),
             {
               target: { value: "'190 et plus'" },
@@ -928,7 +902,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(
             screen.queryAllByText(/Avenant n°1 article 27/)[0]
           ).toBeInTheDocument();
@@ -936,7 +909,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.groupe = 5| III", () => {
+    describe("criteria.groupe = III", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -949,11 +922,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.coefficient = 7| Inférieur à 190", () => {
+      describe("criteria.coefficient = Inférieur à 190", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe II - coefficient"
+              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe III - coefficient"
             ),
             {
               target: { value: "'Inférieur à 190'" },
@@ -962,11 +935,11 @@ describe("CalculateurPreavisLicenciement", () => {
           fireEvent.click(ui.next.get());
         });
 
-        describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+        describe("criteria.ancienneté = Moins de 2 ans", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
+                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe III - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -977,18 +950,17 @@ describe("CalculateurPreavisLicenciement", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
             expect(
               screen.queryAllByText(/Avenant n°1 article 27/)[0]
             ).toBeInTheDocument();
           });
         });
 
-        describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+        describe("criteria.ancienneté = 2 ans ou plus", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - ancienneté"
+                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe III - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -999,7 +971,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
           it("should display expected answer", () => {
             expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
             expect(
               screen.queryAllByText(/Avenant n°1 article 27/)[0]
             ).toBeInTheDocument();
@@ -1007,11 +978,11 @@ describe("CalculateurPreavisLicenciement", () => {
         });
       });
 
-      describe("criteria.coefficient = 8| 190 et plus", () => {
+      describe("criteria.coefficient = 190 et plus", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe II - coefficient"
+              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe III - coefficient"
             ),
             {
               target: { value: "'190 et plus'" },
@@ -1022,7 +993,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(
             screen.queryAllByText(/Avenant n°1 article 27/)[0]
           ).toBeInTheDocument();
@@ -1030,7 +1000,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.groupe = 6| IV", () => {
+    describe("criteria.groupe = IV", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -1043,11 +1013,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.coefficient = 11| Inférieur à 275", () => {
+      describe("criteria.coefficient = Inférieur à 275", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - coefficient"
+              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe IV - coefficient"
             ),
             {
               target: { value: "'Inférieur à 275'" },
@@ -1058,21 +1028,20 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(
             screen.queryAllByText(/Avenant 2, article 20/)[0]
           ).toBeInTheDocument();
         });
       });
 
-      describe("criteria.coefficient = 14| Supérieur à 275 (inclus)", () => {
+      describe("criteria.coefficient = Supérieur à 275 inclus", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - coefficient"
+              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe IV - coefficient"
             ),
             {
-              target: { value: "'Supérieur à 275 (inclus)'" },
+              target: { value: "'Supérieur à 275 inclus'" },
             }
           );
           fireEvent.click(ui.next.get());
@@ -1080,7 +1049,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
           expect(
             screen.queryAllByText(/Avenant 2, article 20/)[0]
           ).toBeInTheDocument();

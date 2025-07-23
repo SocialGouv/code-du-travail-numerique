@@ -35,7 +35,7 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = 48| Cadres", () => {
+  describe("criteria.catégorie professionnelle = Cadres", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -55,7 +55,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 68| Cadres dirigeants", () => {
+  describe("criteria.catégorie professionnelle = Cadres dirigeants", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -75,7 +75,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 63| Cadres supérieurs", () => {
+  describe("criteria.catégorie professionnelle = Cadres supérieurs", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -95,7 +95,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 16| Employés", () => {
+  describe("criteria.catégorie professionnelle = Employés", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -108,7 +108,7 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = Moins de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -128,7 +128,7 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+    describe("criteria.ancienneté = 2 ans ou plus", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -149,7 +149,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
   });
 
-  describe("criteria.catégorie professionnelle = 27| Techniciens et agents de maîtrise (TAM)", () => {
+  describe("criteria.catégorie professionnelle = Techniciens et agents de maîtrise (TAM)", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -162,11 +162,11 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+    describe("criteria.ancienneté = Moins de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hospitalisation privées - ancienneté"
+            "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Techniciens et agents de maîtrise (TAM) - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -182,11 +182,11 @@ describe("CalculateurPreavisLicenciement", () => {
       });
     });
 
-    describe("criteria.ancienneté = 42| 2 ans ou plus", () => {
+    describe("criteria.ancienneté = 2 ans ou plus", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hospitalisation privées - ancienneté"
+            "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Techniciens et agents de maîtrise (TAM) - ancienneté"
           ),
           {
             target: { value: "'2 ans ou plus'" },
