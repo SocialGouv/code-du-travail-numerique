@@ -9,7 +9,12 @@ describe("Test de la fonctionnalité 'calculate'", () => {
   test.each([
     {
       expectedResult: { expectedValue: 1, unit: "semaine" },
-      expectedReferences: [],
+      expectedReferences: [
+        {
+          article: "Article 162.4.1",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942452?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942452",
+        },
+      ],
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle":
@@ -20,7 +25,12 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     },
     {
       expectedResult: { expectedValue: 1, unit: "mois" },
-      expectedReferences: [],
+      expectedReferences: [
+        {
+          article: "Article 162.4.1",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942452?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942452",
+        },
+      ],
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle":
@@ -31,7 +41,12 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     },
     {
       expectedResult: { expectedValue: 2, unit: "mois" },
-      expectedReferences: [],
+      expectedReferences: [
+        {
+          article: "Article 162.4.1",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942452?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942452",
+        },
+      ],
       expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle":
