@@ -50,10 +50,9 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
       expect(
         screen.queryAllByText(
-          /article 6 des dispositions particulières aux cadres/
+          /Article 6 des dispositions particulières aux cadres/
         )[0]
       ).toBeInTheDocument();
     });
@@ -76,7 +75,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - pharmacie - ancienneté"
+            "infos.contrat salarié - convention collective - pharmacie - catégorie professionnelle Noncadres - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -87,9 +86,8 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
         expect(
-          screen.queryAllByText(/article 20 de la convention collective/)[0]
+          screen.queryAllByText(/Article 20 de la convention collective/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -98,7 +96,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - pharmacie - ancienneté"
+            "infos.contrat salarié - convention collective - pharmacie - catégorie professionnelle Noncadres - ancienneté"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -109,9 +107,8 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(
-          screen.queryAllByText(/article 20 de la convention collective/)[0]
+          screen.queryAllByText(/Article 20 de la convention collective/)[0]
         ).toBeInTheDocument();
       });
     });

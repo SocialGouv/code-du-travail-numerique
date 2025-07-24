@@ -5,10 +5,10 @@ import {
 } from "../store";
 import { fr } from "@codegouvfr/react-dsfr";
 import DecryptedResult from "./components/DecryptedResult";
+import ReferenceJuridiques from "./components/ReferenceJuridiques";
 import ShowResult from "./components/ShowResult";
 import Situation from "./components/Situation";
 import Warning from "./components/Warning";
-import ReferenceJuridiques from "./components/ReferenceJuridiques";
 
 const ResultStepComponent = () => {
   const store = useContext(PreavisLicenciementContext);

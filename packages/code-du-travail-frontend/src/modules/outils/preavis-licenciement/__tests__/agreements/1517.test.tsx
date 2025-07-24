@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - participation - niveau"
+          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
         ),
         {
           target: { value: "'I'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - participation - ancienneté"
+            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau I - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -63,7 +63,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
@@ -74,7 +73,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - participation - ancienneté"
+            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau I - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -85,7 +84,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
@@ -97,7 +95,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - participation - niveau"
+          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
         ),
         {
           target: { value: "'II'" },
@@ -110,7 +108,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - participation - ancienneté"
+            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau II - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -121,7 +119,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
@@ -132,7 +129,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - participation - ancienneté"
+            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau II - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -143,7 +140,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
@@ -155,7 +151,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - participation - niveau"
+          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
         ),
         {
           target: { value: "'III'" },
@@ -164,33 +160,11 @@ describe("CalculateurPreavisLicenciement", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.ancienneté = Plus de 2 ans", () => {
-      beforeEach(() => {
-        fireEvent.change(
-          screen.getByTestId(
-            "infos.contrat salarié - convention collective - participation - ancienneté"
-          ),
-          {
-            target: { value: "'Plus de 2 ans'" },
-          }
-        );
-        fireEvent.click(ui.next.get());
-      });
-
-      it("should display expected answer", () => {
-        expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
-        expect(
-          screen.queryAllByText(/Chapitre VI, article 1/)[0]
-        ).toBeInTheDocument();
-      });
-    });
-
     describe("criteria.ancienneté = Moins de 2 ans", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - participation - ancienneté"
+            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau III - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -201,7 +175,27 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
+        expect(
+          screen.queryAllByText(/Chapitre VI, article 1/)[0]
+        ).toBeInTheDocument();
+      });
+    });
 
+    describe("criteria.ancienneté = Plus de 2 ans", () => {
+      beforeEach(() => {
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau III - ancienneté"
+          ),
+          {
+            target: { value: "'Plus de 2 ans'" },
+          }
+        );
+        fireEvent.click(ui.next.get());
+      });
+
+      it("should display expected answer", () => {
+        expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
         expect(
           screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
@@ -213,7 +207,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - participation - niveau"
+          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
         ),
         {
           target: { value: "'IV'" },
@@ -226,7 +220,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - participation - ancienneté"
+            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau IV - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -237,7 +231,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
@@ -248,7 +241,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - participation - ancienneté"
+            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau IV - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -259,7 +252,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
@@ -271,7 +263,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - participation - niveau"
+          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
         ),
         {
           target: { value: "'V'" },
@@ -284,7 +276,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - participation - ancienneté"
+            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau V - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -295,7 +287,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
@@ -306,7 +297,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - participation - ancienneté"
+            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau V - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -317,7 +308,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
@@ -329,7 +319,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - participation - niveau"
+          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
         ),
         {
           target: { value: "'VI'" },
@@ -342,7 +332,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - participation - ancienneté"
+            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau VI - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -353,7 +343,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
@@ -364,7 +353,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - participation - ancienneté"
+            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau VI - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -375,7 +364,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
@@ -387,7 +375,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - participation - niveau"
+          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
         ),
         {
           target: { value: "'VII'" },
@@ -400,7 +388,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - participation - ancienneté"
+            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau VII - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -411,7 +399,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
@@ -422,7 +409,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - participation - ancienneté"
+            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau VII - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -433,7 +420,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
@@ -445,7 +431,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - participation - niveau"
+          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
         ),
         {
           target: { value: "'VIII'" },
@@ -458,7 +444,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - participation - ancienneté"
+            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau VIII - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -469,7 +455,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
@@ -480,7 +465,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - participation - ancienneté"
+            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau VIII - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -491,7 +476,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
@@ -503,7 +487,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - participation - niveau"
+          "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
         ),
         {
           target: { value: "'IX'" },
@@ -516,7 +500,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - participation - ancienneté"
+            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau IX - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -527,7 +511,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();
@@ -538,7 +521,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - participation - ancienneté"
+            "infos.contrat salarié - convention collective - commerces de detail non alimentaires - niveau IX - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -549,7 +532,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Chapitre VI, article 1/)[0]
         ).toBeInTheDocument();

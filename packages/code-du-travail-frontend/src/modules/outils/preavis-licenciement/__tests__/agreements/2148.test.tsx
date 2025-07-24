@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - télécommunications - ancienneté"
+            "infos.contrat salarié - convention collective - télécommunications - groupe A et B - ancienneté"
           ),
           {
             target: { value: "'2 ans ou moins'" },
@@ -63,7 +63,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 4.4.1.1/)[0]).toBeInTheDocument();
       });
     });
@@ -72,7 +71,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - télécommunications - ancienneté"
+            "infos.contrat salarié - convention collective - télécommunications - groupe A et B - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -83,7 +82,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 4.4.1.1/)[0]).toBeInTheDocument();
       });
     });
@@ -104,7 +102,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
       expect(screen.queryAllByText(/Article 4.4.1.1/)[0]).toBeInTheDocument();
     });
   });
@@ -124,7 +121,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
       expect(screen.queryAllByText(/Article 4.4.1.1/)[0]).toBeInTheDocument();
     });
   });
@@ -144,11 +140,8 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(
-        screen.queryAllByText(
-          /pour les salariés hors classification, la durée du préavis est fixée par le contrat de travail dans la limite de 3 mois/g
-        )[0]
+        screen.queryAllByText(/il n'y a pas de préavis/g)[0]
       ).toBeInTheDocument();
-
       expect(screen.queryAllByText(/Article 4.4.1.1/)[0]).toBeInTheDocument();
     });
   });

@@ -116,7 +116,7 @@ describe("CalculateurPreavisLicenciement", () => {
           "infos.contrat salarié - convention collective - personnel presta service tertiaire - catégorie professionnelle"
         ),
         {
-          target: { value: "'Techniciens et agents de maîtrise (TAM)'" },
+          target: { value: "'Techniciens et agents de maîtrise TAM'" },
         }
       );
       fireEvent.click(ui.next.get());

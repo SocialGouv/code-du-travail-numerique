@@ -35,14 +35,14 @@ describe("CalculateurPreavisLicenciement", () => {
     fireEvent.click(ui.next.get());
   });
 
-  describe("criteria.catégorie professionnelle = Agents de maîtrise (AM1 et AM2)", () => {
+  describe("criteria.catégorie professionnelle = Agents de maîtrise AM1 et AM2", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces gros - catégorie professionnelle"
+          "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - catégorie professionnelle"
         ),
         {
-          target: { value: "'Agents de maîtrise (AM1 et AM2)'" },
+          target: { value: "'Agents de maîtrise AM1 et AM2'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -50,19 +50,18 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
       expect(screen.queryAllByText(/article 20/)[0]).toBeInTheDocument();
     });
   });
 
-  describe("criteria.catégorie professionnelle = Cadres (C1 et C2)", () => {
+  describe("criteria.catégorie professionnelle = Cadres C1 et C2", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces gros - catégorie professionnelle"
+          "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - catégorie professionnelle"
         ),
         {
-          target: { value: "'Cadres (C1 et C2)'" },
+          target: { value: "'Cadres C1 et C2'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -70,19 +69,18 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
       expect(screen.queryAllByText(/article 20/)[0]).toBeInTheDocument();
     });
   });
 
-  describe("criteria.catégorie professionnelle = Employés (E1 à E7)", () => {
+  describe("criteria.catégorie professionnelle = Employés E1 à E7", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces gros - catégorie professionnelle"
+          "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - catégorie professionnelle"
         ),
         {
-          target: { value: "'Employés (E1 à E7)'" },
+          target: { value: "'Employés E1 à E7'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -92,7 +90,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces gros - ancienneté"
+            "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - catégorie professionnelle Employés E1 à E7 - ancienneté"
           ),
           {
             target: { value: "'2 ans ou moins'" },
@@ -103,7 +101,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/article 20/)[0]).toBeInTheDocument();
       });
     });
@@ -112,7 +109,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces gros - ancienneté"
+            "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - catégorie professionnelle Employés E1 à E7 - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -123,7 +120,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/article 20/)[0]).toBeInTheDocument();
       });
     });

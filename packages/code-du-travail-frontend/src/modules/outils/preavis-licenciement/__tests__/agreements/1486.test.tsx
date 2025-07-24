@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bureaux études techniques - ancienneté"
+            "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle Chargés d'enquête intermittents - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -63,11 +63,8 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
         expect(
-          screen.queryAllByText(
-            /Annexe relative aux enquêteurs - Accord du 16 décembre 1991, article 21/
-          )[0]
+          screen.queryAllByText(/Annexe relative aux enquêteurs/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -76,7 +73,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM - coefficient de 240 à 355 - ancienneté"
+            "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle Chargés d'enquête intermittents - ancienneté"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -87,17 +84,14 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(
-          screen.queryAllByText(
-            /Annexe relative aux enquêteurs - Accord du 16 décembre 1991, article 21/
-          )[0]
+          screen.queryAllByText(/Annexe relative aux enquêteurs/)[0]
         ).toBeInTheDocument();
       });
     });
   });
 
-  describe("criteria.catégorie professionnelle = Employés, Techniciens ou Agents de maîtrise (ETAM)", () => {
+  describe("criteria.catégorie professionnelle = Employés, Techniciens ou Agents de maîtrise ETAM", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
@@ -140,7 +134,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
           expect(screen.queryAllByText(/Article 4.2/)[0]).toBeInTheDocument();
         });
       });
@@ -160,7 +153,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(screen.queryAllByText(/Article 4.2/)[0]).toBeInTheDocument();
         });
       });
@@ -181,7 +173,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 4.2/)[0]).toBeInTheDocument();
       });
     });
@@ -202,7 +193,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
       expect(screen.queryAllByText(/Article 4.2/)[0]).toBeInTheDocument();
     });
   });

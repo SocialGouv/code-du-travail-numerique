@@ -50,7 +50,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
       expect(screen.queryAllByText(/Article 45/)[0]).toBeInTheDocument();
     });
   });
@@ -70,7 +69,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/6 mois/g)[0]).toBeInTheDocument();
-
       expect(screen.queryAllByText(/Article 45/)[0]).toBeInTheDocument();
     });
   });
@@ -90,7 +88,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/6 mois/g)[0]).toBeInTheDocument();
-
       expect(screen.queryAllByText(/Article 45/)[0]).toBeInTheDocument();
     });
   });
@@ -123,7 +120,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 45/)[0]).toBeInTheDocument();
       });
     });
@@ -143,20 +139,19 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 45/)[0]).toBeInTheDocument();
       });
     });
   });
 
-  describe("criteria.catégorie professionnelle = Techniciens et agents de maîtrise (TAM)", () => {
+  describe("criteria.catégorie professionnelle = Techniciens et agents de maîtrise TAM", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
           "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
         ),
         {
-          target: { value: "'Techniciens et agents de maîtrise (TAM)'" },
+          target: { value: "'Techniciens et agents de maîtrise TAM'" },
         }
       );
       fireEvent.click(ui.next.get());
@@ -166,7 +161,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Techniciens et agents de maîtrise (TAM) - ancienneté"
+            "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Techniciens et agents de maîtrise TAM - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -177,7 +172,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 45/)[0]).toBeInTheDocument();
       });
     });
@@ -186,7 +180,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Techniciens et agents de maîtrise (TAM) - ancienneté"
+            "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Techniciens et agents de maîtrise TAM - ancienneté"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -197,7 +191,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 45/)[0]).toBeInTheDocument();
       });
     });

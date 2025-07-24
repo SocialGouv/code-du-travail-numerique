@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sociétés d'assurances - classe"
+            "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Cadres - classe"
           ),
           {
             target: { value: "'5'" },
@@ -63,7 +63,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(
             /Accord relative aux dispositions particulières " Cadres ", article II. 6/
@@ -76,7 +75,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sociétés d'assurances - classe"
+            "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Cadres - classe"
           ),
           {
             target: { value: "'6'" },
@@ -87,7 +86,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(
             /Accord relative aux dispositions particulières " Cadres ", article II. 6/
@@ -100,7 +98,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sociétés d'assurances - classe"
+            "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Cadres - classe"
           ),
           {
             target: { value: "'7'" },
@@ -111,7 +109,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(
             /Accord relative aux dispositions particulières " Cadres ", article II. 6/
@@ -138,7 +135,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sociétés d'assurances - classe"
+            "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe"
           ),
           {
             target: { value: "'1'" },
@@ -151,7 +148,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - sociétés d'assurances - ancienneté"
+              "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 1 - ancienneté"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -162,7 +159,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
           expect(screen.queryAllByText(/Article 91a/)[0]).toBeInTheDocument();
         });
       });
@@ -171,7 +167,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - sociétés d'assurances - ancienneté"
+              "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 1 - ancienneté"
             ),
             {
               target: { value: "'2 ans ou plus'" },
@@ -182,7 +178,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(screen.queryAllByText(/Article 91a/)[0]).toBeInTheDocument();
         });
       });
@@ -192,7 +187,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sociétés d'assurances - classe"
+            "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe"
           ),
           {
             target: { value: "'2'" },
@@ -205,7 +200,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - sociétés d'assurances - ancienneté"
+              "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 2 - ancienneté"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -216,7 +211,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
           expect(screen.queryAllByText(/Article 91a/)[0]).toBeInTheDocument();
         });
       });
@@ -225,7 +219,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - sociétés d'assurances - ancienneté"
+              "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 2 - ancienneté"
             ),
             {
               target: { value: "'2 ans ou plus'" },
@@ -236,7 +230,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(screen.queryAllByText(/Article 91a/)[0]).toBeInTheDocument();
         });
       });
@@ -246,7 +239,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sociétés d'assurances - classe"
+            "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe"
           ),
           {
             target: { value: "'3'" },
@@ -259,7 +252,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - sociétés d'assurances - ancienneté"
+              "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 3 - ancienneté"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -270,7 +263,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
           expect(screen.queryAllByText(/Article 91a/)[0]).toBeInTheDocument();
         });
       });
@@ -279,7 +271,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - sociétés d'assurances - ancienneté"
+              "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 3 - ancienneté"
             ),
             {
               target: { value: "'2 ans ou plus'" },
@@ -290,7 +282,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(screen.queryAllByText(/Article 91a/)[0]).toBeInTheDocument();
         });
       });
@@ -300,7 +291,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sociétés d'assurances - classe"
+            "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe"
           ),
           {
             target: { value: "'4'" },
@@ -313,7 +304,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - sociétés d'assurances - ancienneté"
+              "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 4 - ancienneté"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -324,7 +315,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
           expect(screen.queryAllByText(/Article 91a/)[0]).toBeInTheDocument();
         });
       });
@@ -333,7 +323,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - sociétés d'assurances - ancienneté"
+              "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 4 - ancienneté"
             ),
             {
               target: { value: "'2 ans ou plus'" },
@@ -344,7 +334,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(screen.queryAllByText(/Article 91a/)[0]).toBeInTheDocument();
         });
       });

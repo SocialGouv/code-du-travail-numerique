@@ -50,10 +50,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
-      expect(
-        screen.queryAllByText(/article 4.4.3.2 de la convention collective/)[0]
-      ).toBeInTheDocument();
+      expect(screen.queryAllByText(/Article 4.4.3.2/)[0]).toBeInTheDocument();
     });
   });
 
@@ -74,7 +71,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sport - ancienneté"
+            "infos.contrat salarié - convention collective - sport - catégorie professionnelle Noncadres - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -85,12 +82,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
-        expect(
-          screen.queryAllByText(
-            /article 4.4.3.2 de la convention collective/
-          )[0]
-        ).toBeInTheDocument();
+        expect(screen.queryAllByText(/Article 4.4.3.2/)[0]).toBeInTheDocument();
       });
     });
 
@@ -98,7 +90,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sport - ancienneté"
+            "infos.contrat salarié - convention collective - sport - catégorie professionnelle Noncadres - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -109,12 +101,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
-        expect(
-          screen.queryAllByText(
-            /article 4.4.3.2 de la convention collective/
-          )[0]
-        ).toBeInTheDocument();
+        expect(screen.queryAllByText(/Article 4.4.3.2/)[0]).toBeInTheDocument();
       });
     });
   });

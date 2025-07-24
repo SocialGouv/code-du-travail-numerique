@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - batiment etam - ancienneté"
+          "infos.contrat salarié - convention collective - batiment ouvriers employés bis - ancienneté"
         ),
         {
           target: {
@@ -52,7 +52,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/2 jours/g)[0]).toBeInTheDocument();
-
       expect(screen.queryAllByText(/Article 10.1/)[0]).toBeInTheDocument();
     });
   });
@@ -61,7 +60,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - batiment etam - ancienneté"
+          "infos.contrat salarié - convention collective - batiment ouvriers employés bis - ancienneté"
         ),
         {
           target: { value: "'De 3 à 6 mois'" },
@@ -72,7 +71,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
-
       expect(screen.queryAllByText(/Article 10.1/)[0]).toBeInTheDocument();
     });
   });
@@ -81,7 +79,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - batiment etam - ancienneté"
+          "infos.contrat salarié - convention collective - batiment ouvriers employés bis - ancienneté"
         ),
         {
           target: { value: "'6 mois à 2 ans'" },
@@ -92,7 +90,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
       expect(screen.queryAllByText(/Article 10.1/)[0]).toBeInTheDocument();
     });
   });
@@ -101,7 +98,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - batiment etam - ancienneté"
+          "infos.contrat salarié - convention collective - batiment ouvriers employés bis - ancienneté"
         ),
         {
           target: { value: "'Plus de 2 ans'" },
@@ -112,7 +109,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
       expect(screen.queryAllByText(/Article 10.1/)[0]).toBeInTheDocument();
     });
   });

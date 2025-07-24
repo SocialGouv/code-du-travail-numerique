@@ -55,7 +55,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - prevention sécurité entreprise - niveau"
+            "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau"
           ),
           {
             target: { value: "'I'" },
@@ -81,12 +81,7 @@ describe("CalculateurPreavisLicenciement", () => {
           expect(
             screen.queryAllByText(/il n'y a pas de préavis/g)[0]
           ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe IV/)[0]).toBeInTheDocument();
         });
       });
 
@@ -105,12 +100,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/1 jour ouvré/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe IV/)[0]).toBeInTheDocument();
         });
       });
 
@@ -131,12 +121,7 @@ describe("CalculateurPreavisLicenciement", () => {
           expect(
             screen.queryAllByText(/2 jours ouvrés/g)[0]
           ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe IV/)[0]).toBeInTheDocument();
         });
       });
 
@@ -144,7 +129,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau I - ancienneté"
             ),
             {
               target: { value: "'Plus de 2 mois à 6 mois'" },
@@ -157,12 +142,7 @@ describe("CalculateurPreavisLicenciement", () => {
           expect(
             screen.queryAllByText(/7 jours calendaires/g)[0]
           ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe IV/)[0]).toBeInTheDocument();
         });
       });
 
@@ -170,7 +150,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau I - ancienneté"
             ),
             {
               target: { value: "'Plus de 6 mois à 2 ans'" },
@@ -181,12 +161,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe IV/)[0]).toBeInTheDocument();
         });
       });
 
@@ -194,7 +169,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau I - ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -205,12 +180,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe IV/)[0]).toBeInTheDocument();
         });
       });
     });
@@ -219,7 +189,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - prevention sécurité entreprise - niveau"
+            "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau"
           ),
           {
             target: { value: "'II'" },
@@ -228,137 +198,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = Moins de 15 jours", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Moins de 15 jours'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(
-            screen.queryAllByText(/il n'y a pas de préavis/g)[0]
-          ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = 15 jours à 1 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'15 jours à 1 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 jour ouvré/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = Plus de 1 mois à 2 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Plus de 1 mois à 2 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(
-            screen.queryAllByText(/2 jours ouvrés/g)[0]
-          ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = Plus de 2 mois à 6 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Plus de 2 mois à 6 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(
-            screen.queryAllByText(/7 jours calendaires/g)[0]
-          ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = Plus de 6 mois à 2 ans", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Plus de 6 mois à 2 ans'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
-        });
-      });
-
       describe("criteria.ancienneté = Plus de 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau II - ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -369,12 +213,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe IV/)[0]).toBeInTheDocument();
         });
       });
     });
@@ -383,7 +222,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - prevention sécurité entreprise - niveau"
+            "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau"
           ),
           {
             target: { value: "'III'" },
@@ -392,137 +231,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = Moins de 15 jours", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Moins de 15 jours'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(
-            screen.queryAllByText(/il n'y a pas de préavis/g)[0]
-          ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = 15 jours à 1 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'15 jours à 1 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 jour ouvré/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = Plus de 1 mois à 2 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Plus de 1 mois à 2 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(
-            screen.queryAllByText(/2 jours ouvrés/g)[0]
-          ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = Plus de 2 mois à 6 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Plus de 2 mois à 6 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(
-            screen.queryAllByText(/7 jours calendaires/g)[0]
-          ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = Plus de 6 mois à 2 ans", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Plus de 6 mois à 2 ans'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
-        });
-      });
-
       describe("criteria.ancienneté = Plus de 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau III - ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -533,12 +246,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe IV/)[0]).toBeInTheDocument();
         });
       });
     });
@@ -547,7 +255,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - prevention sécurité entreprise - niveau"
+            "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau"
           ),
           {
             target: { value: "'IV'" },
@@ -556,87 +264,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = Moins de 15 jours", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Moins de 15 jours'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(
-            screen.queryAllByText(/il n'y a pas de préavis/g)[0]
-          ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = 15 jours à 1 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'15 jours à 1 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 jour ouvré/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = Plus de 1 mois à 2 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Plus de 1 mois à 2 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(
-            screen.queryAllByText(/2 jours ouvrés/g)[0]
-          ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
-        });
-      });
-
       describe("criteria.ancienneté = Plus de 2 mois à 6 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau IV - ancienneté"
             ),
             {
               target: { value: "'Plus de 2 mois à 6 mois'" },
@@ -649,36 +281,7 @@ describe("CalculateurPreavisLicenciement", () => {
           expect(
             screen.queryAllByText(/14 jours calendaires/g)[0]
           ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = Plus de 6 mois à 2 ans", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Plus de 6 mois à 2 ans'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe IV/)[0]).toBeInTheDocument();
         });
       });
 
@@ -686,7 +289,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau IV - ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -697,12 +300,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe IV/)[0]).toBeInTheDocument();
         });
       });
     });
@@ -711,7 +309,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - prevention sécurité entreprise - niveau"
+            "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau"
           ),
           {
             target: { value: "'V'" },
@@ -720,87 +318,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = Moins de 15 jours", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Moins de 15 jours'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(
-            screen.queryAllByText(/il n'y a pas de préavis/g)[0]
-          ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = 15 jours à 1 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'15 jours à 1 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 jour ouvré/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = Plus de 1 mois à 2 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Plus de 1 mois à 2 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(
-            screen.queryAllByText(/2 jours ouvrés/g)[0]
-          ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
-        });
-      });
-
       describe("criteria.ancienneté = Plus de 2 mois à 6 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau V - ancienneté"
             ),
             {
               target: { value: "'Plus de 2 mois à 6 mois'" },
@@ -813,36 +335,7 @@ describe("CalculateurPreavisLicenciement", () => {
           expect(
             screen.queryAllByText(/14 jours calendaires/g)[0]
           ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = Plus de 6 mois à 2 ans", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Plus de 6 mois à 2 ans'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe IV/)[0]).toBeInTheDocument();
         });
       });
 
@@ -850,7 +343,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau V - ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -861,12 +354,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(
-              /Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9/
-            )[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe IV/)[0]).toBeInTheDocument();
         });
       });
     });
@@ -889,7 +377,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - prevention sécurité entreprise - niveau"
+            "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents de maîtrise - niveau"
           ),
           {
             target: { value: "'I'" },
@@ -902,7 +390,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents de maîtrise - niveau I - ancienneté"
             ),
             {
               target: { value: "'Moins de 15 jours'" },
@@ -915,10 +403,7 @@ describe("CalculateurPreavisLicenciement", () => {
           expect(
             screen.queryAllByText(/il n'y a pas de préavis/g)[0]
           ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe V/)[0]).toBeInTheDocument();
         });
       });
 
@@ -926,7 +411,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents de maîtrise - niveau I - ancienneté"
             ),
             {
               target: { value: "'15 jours à 2 mois'" },
@@ -937,10 +422,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe V/)[0]).toBeInTheDocument();
         });
       });
 
@@ -948,7 +430,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents de maîtrise - niveau I - ancienneté"
             ),
             {
               target: { value: "'Plus de 2 mois à 3 mois'" },
@@ -959,10 +441,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe V/)[0]).toBeInTheDocument();
         });
       });
 
@@ -970,7 +449,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents de maîtrise - niveau I - ancienneté"
             ),
             {
               target: { value: "'Plus de 3 mois à 6 mois'" },
@@ -981,10 +460,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe V/)[0]).toBeInTheDocument();
         });
       });
 
@@ -992,7 +468,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents de maîtrise - niveau I - ancienneté"
             ),
             {
               target: { value: "'Plus de 6 mois à 2 ans'" },
@@ -1003,10 +479,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe V/)[0]).toBeInTheDocument();
         });
       });
 
@@ -1014,7 +487,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents de maîtrise - niveau I - ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -1025,10 +498,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe V/)[0]).toBeInTheDocument();
         });
       });
     });
@@ -1037,7 +507,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - prevention sécurité entreprise - niveau"
+            "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents de maîtrise - niveau"
           ),
           {
             target: { value: "'II'" },
@@ -1046,123 +516,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = Moins de 15 jours", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Moins de 15 jours'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(
-            screen.queryAllByText(/il n'y a pas de préavis/g)[0]
-          ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = 15 jours à 2 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'15 jours à 2 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = Plus de 2 mois à 3 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Plus de 2 mois à 3 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = Plus de 3 mois à 6 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Plus de 3 mois à 6 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = Plus de 6 mois à 2 ans", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Plus de 6 mois à 2 ans'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
-        });
-      });
-
       describe("criteria.ancienneté = Plus de 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents de maîtrise - niveau II - ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -1173,10 +531,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe V/)[0]).toBeInTheDocument();
         });
       });
     });
@@ -1185,7 +540,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - prevention sécurité entreprise - niveau"
+            "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents de maîtrise - niveau"
           ),
           {
             target: { value: "'III'" },
@@ -1194,123 +549,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = Moins de 15 jours", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Moins de 15 jours'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(
-            screen.queryAllByText(/il n'y a pas de préavis/g)[0]
-          ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = 15 jours à 2 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'15 jours à 2 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = Plus de 2 mois à 3 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Plus de 2 mois à 3 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = Plus de 3 mois à 6 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Plus de 3 mois à 6 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = Plus de 6 mois à 2 ans", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Plus de 6 mois à 2 ans'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
-        });
-      });
-
       describe("criteria.ancienneté = Plus de 2 ans", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents de maîtrise - niveau III - ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -1321,10 +564,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe V/)[0]).toBeInTheDocument();
         });
       });
     });
@@ -1333,7 +573,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - prevention sécurité entreprise - niveau"
+            "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents de maîtrise - niveau"
           ),
           {
             target: { value: "'IV'" },
@@ -1342,57 +582,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = Moins de 15 jours", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Moins de 15 jours'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(
-            screen.queryAllByText(/il n'y a pas de préavis/g)[0]
-          ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = 15 jours à 2 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'15 jours à 2 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
-        });
-      });
-
       describe("criteria.ancienneté = Plus de 2 mois à 3 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents de maîtrise - niveau IV - ancienneté"
             ),
             {
               target: { value: "'Plus de 2 mois à 3 mois'" },
@@ -1403,32 +597,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = Plus de 3 mois à 6 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Plus de 3 mois à 6 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe V/)[0]).toBeInTheDocument();
         });
       });
 
@@ -1436,7 +605,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents de maîtrise - niveau IV - ancienneté"
             ),
             {
               target: { value: "'Plus de 6 mois à 2 ans'" },
@@ -1447,10 +616,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe V/)[0]).toBeInTheDocument();
         });
       });
 
@@ -1458,7 +624,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents de maîtrise - niveau IV - ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -1469,10 +635,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe V/)[0]).toBeInTheDocument();
         });
       });
     });
@@ -1481,7 +644,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - prevention sécurité entreprise - niveau"
+            "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents de maîtrise - niveau"
           ),
           {
             target: { value: "'V'" },
@@ -1490,57 +653,11 @@ describe("CalculateurPreavisLicenciement", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = Moins de 15 jours", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Moins de 15 jours'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(
-            screen.queryAllByText(/il n'y a pas de préavis/g)[0]
-          ).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = 15 jours à 2 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'15 jours à 2 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/1 semaine/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
-        });
-      });
-
       describe("criteria.ancienneté = Plus de 2 mois à 3 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents de maîtrise - niveau V - ancienneté"
             ),
             {
               target: { value: "'Plus de 2 mois à 3 mois'" },
@@ -1551,32 +668,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
-        });
-      });
-
-      describe("criteria.ancienneté = Plus de 3 mois à 6 mois", () => {
-        beforeEach(() => {
-          fireEvent.change(
-            screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
-            ),
-            {
-              target: { value: "'Plus de 3 mois à 6 mois'" },
-            }
-          );
-          fireEvent.click(ui.next.get());
-        });
-
-        it("should display expected answer", () => {
-          expect(screen.queryAllByText(/2 semaines/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe V/)[0]).toBeInTheDocument();
         });
       });
 
@@ -1584,7 +676,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents de maîtrise - niveau V - ancienneté"
             ),
             {
               target: { value: "'Plus de 6 mois à 2 ans'" },
@@ -1595,10 +687,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe V/)[0]).toBeInTheDocument();
         });
       });
 
@@ -1606,7 +695,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+              "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents de maîtrise - niveau V - ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -1617,10 +706,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
-          expect(
-            screen.queryAllByText(/Annexe V: Agents de maîtrise, article 8/)[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Annexe V/)[0]).toBeInTheDocument();
         });
       });
     });
@@ -1643,7 +729,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+            "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Cadres - ancienneté"
           ),
           {
             target: { value: "'Moins de 15 jours'" },
@@ -1656,10 +742,7 @@ describe("CalculateurPreavisLicenciement", () => {
         expect(
           screen.queryAllByText(/il n'y a pas de préavis/g)[0]
         ).toBeInTheDocument();
-
-        expect(
-          screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]
-        ).toBeInTheDocument();
+        expect(screen.queryAllByText(/Annexe VI/)[0]).toBeInTheDocument();
       });
     });
 
@@ -1667,7 +750,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+            "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Cadres - ancienneté"
           ),
           {
             target: { value: "'15 jours à 1 mois'" },
@@ -1680,10 +763,7 @@ describe("CalculateurPreavisLicenciement", () => {
         expect(
           screen.queryAllByText(/7 jours calendaires/g)[0]
         ).toBeInTheDocument();
-
-        expect(
-          screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]
-        ).toBeInTheDocument();
+        expect(screen.queryAllByText(/Annexe VI/)[0]).toBeInTheDocument();
       });
     });
 
@@ -1691,7 +771,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+            "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Cadres - ancienneté"
           ),
           {
             target: { value: "'Plus de 1 mois à 3 mois'" },
@@ -1704,10 +784,7 @@ describe("CalculateurPreavisLicenciement", () => {
         expect(
           screen.queryAllByText(/14 jours calendaires/g)[0]
         ).toBeInTheDocument();
-
-        expect(
-          screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]
-        ).toBeInTheDocument();
+        expect(screen.queryAllByText(/Annexe VI/)[0]).toBeInTheDocument();
       });
     });
 
@@ -1715,7 +792,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+            "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Cadres - ancienneté"
           ),
           {
             target: { value: "'Plus de 3 mois à 6 mois'" },
@@ -1726,10 +803,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
-        expect(
-          screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]
-        ).toBeInTheDocument();
+        expect(screen.queryAllByText(/Annexe VI/)[0]).toBeInTheDocument();
       });
     });
 
@@ -1737,7 +811,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+            "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Cadres - ancienneté"
           ),
           {
             target: { value: "'Plus de 6 mois à 1 an'" },
@@ -1748,10 +822,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
-        expect(
-          screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]
-        ).toBeInTheDocument();
+        expect(screen.queryAllByText(/Annexe VI/)[0]).toBeInTheDocument();
       });
     });
 
@@ -1759,7 +830,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - prevention sécurité entreprise - ancienneté"
+            "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Cadres - ancienneté"
           ),
           {
             target: { value: "'Plus de 1 an'" },
@@ -1770,10 +841,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
-        expect(
-          screen.queryAllByText(/Annexe VI: Cadres, article 9/)[0]
-        ).toBeInTheDocument();
+        expect(screen.queryAllByText(/Annexe VI/)[0]).toBeInTheDocument();
       });
     });
   });

@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - éducation et loisirs - groupe"
+            "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Agents de maîtrise et Techniciens - groupe"
           ),
           {
             target: { value: "'4'" },
@@ -63,7 +63,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 4.4/)[0]).toBeInTheDocument();
       });
     });
@@ -72,7 +71,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - éducation et loisirs - groupe"
+            "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Agents de maîtrise et Techniciens - groupe"
           ),
           {
             target: { value: "'5'" },
@@ -83,7 +82,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 4.4/)[0]).toBeInTheDocument();
       });
     });
@@ -92,7 +90,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - éducation et loisirs - groupe"
+            "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Agents de maîtrise et Techniciens - groupe"
           ),
           {
             target: { value: "'6'" },
@@ -103,7 +101,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 4.4/)[0]).toBeInTheDocument();
       });
     });
@@ -126,7 +123,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - éducation et loisirs - niveau"
+            "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Animateurs, techniciens et professeurs - niveau"
           ),
           {
             target: { value: "'A'" },
@@ -137,7 +134,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 4.4/)[0]).toBeInTheDocument();
       });
     });
@@ -146,7 +142,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - éducation et loisirs - niveau"
+            "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Animateurs, techniciens et professeurs - niveau"
           ),
           {
             target: { value: "'B'" },
@@ -157,7 +153,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 4.4/)[0]).toBeInTheDocument();
       });
     });
@@ -180,7 +175,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - éducation et loisirs - groupe"
+            "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Cadres - groupe"
           ),
           {
             target: { value: "'7'" },
@@ -191,7 +186,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 4.4/)[0]).toBeInTheDocument();
       });
     });
@@ -200,7 +194,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - éducation et loisirs - groupe"
+            "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Cadres - groupe"
           ),
           {
             target: { value: "'8'" },
@@ -211,7 +205,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-
         expect(screen.queryAllByText(/Article 4.4/)[0]).toBeInTheDocument();
       });
     });
@@ -234,7 +227,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - éducation et loisirs - groupe"
+            "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Ouvriers, Employés - groupe"
           ),
           {
             target: { value: "'2'" },
@@ -247,7 +240,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - éducation et loisirs - ancienneté"
+              "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Ouvriers, Employés - groupe 2 - ancienneté"
             ),
             {
               target: { value: "'2 ans ou moins'" },
@@ -258,7 +251,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
           expect(screen.queryAllByText(/Article 4.4/)[0]).toBeInTheDocument();
         });
       });
@@ -267,7 +259,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - éducation et loisirs - ancienneté"
+              "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Ouvriers, Employés - groupe 2 - ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -278,7 +270,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(screen.queryAllByText(/Article 4.4/)[0]).toBeInTheDocument();
         });
       });
@@ -288,7 +279,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - éducation et loisirs - groupe"
+            "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Ouvriers, Employés - groupe"
           ),
           {
             target: { value: "'3'" },
@@ -301,7 +292,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - éducation et loisirs - ancienneté"
+              "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Ouvriers, Employés - groupe 3 - ancienneté"
             ),
             {
               target: { value: "'2 ans ou moins'" },
@@ -312,7 +303,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-
           expect(screen.queryAllByText(/Article 4.4/)[0]).toBeInTheDocument();
         });
       });
@@ -321,7 +311,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - éducation et loisirs - ancienneté"
+              "infos.contrat salarié - convention collective - éducation et loisirs - catégorie professionnelle Ouvriers, Employés - groupe 3 - ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -332,7 +322,6 @@ describe("CalculateurPreavisLicenciement", () => {
 
         it("should display expected answer", () => {
           expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-
           expect(screen.queryAllByText(/Article 4.4/)[0]).toBeInTheDocument();
         });
       });

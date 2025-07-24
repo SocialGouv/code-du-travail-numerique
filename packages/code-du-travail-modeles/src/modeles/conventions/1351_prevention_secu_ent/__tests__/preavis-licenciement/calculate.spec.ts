@@ -8,7 +8,7 @@ const engine = new PreavisLicenciementPublicodes(
 describe("Test de la fonctionnalité 'calculate'", () => {
   test.each([
     {
-      expectedResult: { expectedValue: 0 },
+      expectedResult: { expectedValue: 0, unit: "mois" },
       expectedReferences: [
         {
           article:
@@ -122,7 +122,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 0 },
+      expectedResult: { expectedValue: 0, unit: "mois" },
       expectedReferences: [
         {
           article:
@@ -236,7 +236,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 0 },
+      expectedResult: { expectedValue: 0, unit: "mois" },
       expectedReferences: [
         {
           article:
@@ -350,7 +350,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 0 },
+      expectedResult: { expectedValue: 0, unit: "mois" },
       expectedReferences: [
         {
           article:
@@ -464,7 +464,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 0 },
+      expectedResult: { expectedValue: 0, unit: "mois" },
       expectedReferences: [
         {
           article:
@@ -578,7 +578,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 0 },
+      expectedResult: { expectedValue: 0, unit: "mois" },
       expectedReferences: [
         {
           article: "Annexe V: Agents de maîtrise, article 8",
@@ -686,7 +686,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 0 },
+      expectedResult: { expectedValue: 0, unit: "mois" },
       expectedReferences: [
         {
           article: "Annexe V: Agents de maîtrise, article 8",
@@ -794,7 +794,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 0 },
+      expectedResult: { expectedValue: 0, unit: "mois" },
       expectedReferences: [
         {
           article: "Annexe V: Agents de maîtrise, article 8",
@@ -902,7 +902,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 0 },
+      expectedResult: { expectedValue: 0, unit: "mois" },
       expectedReferences: [
         {
           article: "Annexe V: Agents de maîtrise, article 8",
@@ -1010,7 +1010,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 0 },
+      expectedResult: { expectedValue: 0, unit: "mois" },
       expectedReferences: [
         {
           article: "Annexe V: Agents de maîtrise, article 8",
@@ -1118,7 +1118,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 0 },
+      expectedResult: { expectedValue: 0, unit: "mois" },
       expectedReferences: [
         {
           article: "Annexe VI: Cadres, article 9",
