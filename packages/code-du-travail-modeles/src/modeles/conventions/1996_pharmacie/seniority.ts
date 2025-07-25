@@ -26,13 +26,22 @@ const getTotalAbsenceNonPro = (
   const absences = absencePeriods.filter(
     (item) => item.motif.key === MotifKeys.maladieNonPro
   );
+
   const years = splitBySeniorityCalendarYear(dEntree, dSortie);
 
   const absencesBySeniorityYear = accumulateAbsenceByYear(absences, years);
 
-  return absencesBySeniorityYear.reduce((total, item) => {
-    return total + Math.max(item.totalAbsenceInMonth - 6, 0);
-  }, 0);
+  const totalCountingForSeniority = absencesBySeniorityYear.reduce(
+    (total, item) => {
+      if (item.totalAbsenceInMonth > 6) {
+        return total + Math.min(item.totalAbsenceInMonth, 6);
+      }
+      return total;
+    },
+    0
+  );
+
+  return totalCountingForSeniority;
 };
 
 export class Seniority1996 extends SeniorityDefault<SupportedCc.default> {
