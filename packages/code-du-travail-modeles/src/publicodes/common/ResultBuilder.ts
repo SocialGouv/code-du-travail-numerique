@@ -6,6 +6,7 @@ import type {
 } from "../types";
 import type { ExplanationBuilder } from "./ExplanationBuilder";
 import { BuilderResult, PublicodesCalculateResult } from "./type";
+import { compareValues } from "./comparator";
 
 export class ResultBuilder {
   private readonly explanationBuilder: ExplanationBuilder;
@@ -85,10 +86,12 @@ export class ResultBuilder {
       };
     }
     if (legalResult && agreementResult) {
-      const legalValue = legalResult.result.value ?? 0;
-      const agreementValue = agreementResult.result.value ?? 0;
+      const legalValue = `${legalResult.result.value ?? 0} ${legalResult.result.unit?.numerators[0]}`;
+      const agreementValue = `${agreementResult.result.value ?? 0} ${agreementResult.result.unit?.numerators[0]}`;
 
-      if (legalValue === agreementValue) {
+      const comparison = compareValues(legalValue, agreementValue);
+
+      if (comparison.chosenType === "SAME") {
         return {
           chosenResult: "SAME",
           formula: agreementResult.formula,
@@ -96,7 +99,8 @@ export class ResultBuilder {
           result: agreementResult.result,
         };
       }
-      if (legalValue < agreementValue) {
+      if (comparison.chosenType === "SECOND") {
+        // La valeur de l'accord (agreementValue) est plus avantageuse
         return {
           chosenResult: "AGREEMENT",
           formula: agreementResult.formula,
@@ -104,7 +108,8 @@ export class ResultBuilder {
           result: agreementResult.result,
         };
       }
-      if (legalValue > agreementValue) {
+      if (comparison.chosenType === "FIRST") {
+        // La valeur légale (legalValue) est plus avantageuse
         return {
           chosenResult: "LEGAL",
           formula: legalResult.formula,

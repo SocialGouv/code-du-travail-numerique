@@ -28,7 +28,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle . A 
 
 contrat salarié . convention collective . bad . catégorie professionnelle . A B C ou D . six mois . préavis de retaite . notification:
   type: notification
-  description: "1 semaine de date à date"
+  description: 1 semaine de date à date
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle . A B C ou D . moins de deux ans:
@@ -49,7 +49,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle . A 
 contrat salarié . convention collective . bad . catégorie professionnelle . A B C ou D . moins de deux ans . préavis de retaite . notification:
   type: notification
   applicable si: contrat salarié . préavis de retraite = contrat salarié . préavis de retraite collective
-  description: "1 mois de date à date"
+  description: 1 mois de date à date
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle . A B C ou D . plus de deux ans:
@@ -66,7 +66,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle . A 
 
 contrat salarié . convention collective . bad . catégorie professionnelle . A B C ou D . plus de deux ans . préavis de retaite . notification:
   type: notification
-  description: "2 mois de date à date"
+  description: 2 mois de date à date
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle . Technicien-agent de maîtrise:
@@ -87,7 +87,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle . Te
 
 contrat salarié . convention collective . bad . catégorie professionnelle . Technicien-agent de maîtrise . moins de deux ans . préavis de retaite . notification:
   type: notification
-  description: "1 mois de date à date"
+  description: 1 mois de date à date
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle . Technicien-agent de maîtrise . plus de deux ans:
@@ -104,7 +104,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle . Te
 
 contrat salarié . convention collective . bad . catégorie professionnelle . Technicien-agent de maîtrise . plus de deux ans . préavis de retaite . notification:
   type: notification
-  description: "2 mois de date à date"
+  description: 2 mois de date à date
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle . G H ou I:
@@ -125,7 +125,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle . G 
 
 contrat salarié . convention collective . bad . catégorie professionnelle . G H ou I . moins de deux ans . préavis de retaite . notification:
   type: notification
-  description: "2 mois de date à date"
+  description: 2 mois de date à date
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle . G H ou I . plus de deux ans:
@@ -142,5 +142,5 @@ contrat salarié . convention collective . bad . catégorie professionnelle . G 
 
 contrat salarié . convention collective . bad . catégorie professionnelle . G H ou I . plus de deux ans . préavis de retaite . notification:
   type: notification
-  description: "4 mois de date à date"
+  description: 4 mois de date à date
   valeur: oui
