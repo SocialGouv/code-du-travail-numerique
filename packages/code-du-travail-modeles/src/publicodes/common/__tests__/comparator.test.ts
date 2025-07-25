@@ -383,4 +383,13 @@ describe("compareValues", () => {
       isPeriodComparison: false,
     });
   });
+
+  it("should compare two 0 result", () => {
+    const result = compareValues("0 mois", "0 mois");
+    expect(result).toEqual({
+      chosenType: "SAME",
+      chosenValue: "0 mois",
+      isPeriodComparison: true,
+    });
+  });
 });

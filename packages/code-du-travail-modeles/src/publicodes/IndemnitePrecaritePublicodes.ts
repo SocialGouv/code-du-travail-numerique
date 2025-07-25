@@ -1,18 +1,18 @@
 import type { EvaluatedNode } from "publicodes";
 
-import { PublicodesBase } from "../PublicodesBase";
-import type { PublicodesOutput } from "../types";
-import { PublicodesDefaultRules, PublicodesSimulator } from "../types";
-import { ExplanationBuilder } from "../common/ExplanationBuilder";
-import { ResultBuilder } from "./ResultBuilder";
-import { CalculateOutput, PublicodesCalculateResult } from "../common/type";
+import { PublicodesBase } from "./PublicodesBase";
+import type { PublicodesOutput } from "./types";
+import { PublicodesDefaultRules, PublicodesSimulator } from "./types";
+import { ExplanationBuilder } from "./common/ExplanationBuilder";
+import { ResultBuilder } from "./common/ResultBuilder";
+import { CalculateOutput, PublicodesCalculateResult } from "./common/type";
 
-import { mapIneligibility } from "../common/mapper";
+import { mapIneligibility } from "./common/mapper";
 import {
   IneligibilityIndemnitePrecariteFactory,
   SupportedCc,
-} from "../../modeles";
-import { IIneligibility } from "../../modeles/common/types/ineligibility";
+} from "../modeles";
+import { IIneligibility } from "../modeles/common/types/ineligibility";
 
 export class IndemnitePrecaritePublicodes extends PublicodesBase<PublicodesCalculateResult> {
   protected explanationInstance: ExplanationBuilder;
@@ -104,7 +104,8 @@ export class IndemnitePrecaritePublicodes extends PublicodesBase<PublicodesCalcu
     return this.builder.buildResult(
       this.data.situation,
       legalResult,
-      agreementResult.type === "result" ? agreementResult : undefined
+      agreementResult.type === "result" ? agreementResult : undefined,
+      true
     );
   }
 

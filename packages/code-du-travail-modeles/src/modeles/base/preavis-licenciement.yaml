@@ -17,10 +17,10 @@ contrat salarié . résultat légal:
     - si: contrat salarié . convention collective . ancienneté légal = '6 mois à moins de 2 ans'
       alors: 1 mois
     - sinon: 0 mois
+  unité: mois
 
 contrat salarié . convention collective . résultat conventionnel:
-  valeur: 0
-  unité: mois
+  valeur: 0 mois
 
 contrat salarié . résultat légal pour travailleur handicapé:
   applicable si: contrat salarié . travailleur handicapé
@@ -29,3 +29,4 @@ contrat salarié . résultat légal pour travailleur handicapé:
     - si: contrat salarié . résultat légal * 2 > 3 mois
       alors: 3 mois
     - sinon: contrat salarié . résultat légal * 2
+  unité: mois

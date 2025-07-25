@@ -18,12 +18,12 @@ export class ResultBuilder {
   buildResult(
     situation: SituationElement[],
     legalResult?: BuilderResult<PublicodesCalculateResult>,
-    agreementResult?: BuilderResult<PublicodesCalculateResult>
+    agreementResult?: BuilderResult<PublicodesCalculateResult>,
+    chooseAgreement?: boolean
   ): PublicodesOutput<PublicodesCalculateResult> {
-    const { chosenResult, result, formula, references } = this.chosenResult(
-      legalResult,
-      agreementResult
-    );
+    const { chosenResult, result, formula, references } = chooseAgreement
+      ? this.chosenAgreementResult(legalResult, agreementResult)
+      : this.chosenResult(legalResult, agreementResult);
 
     return {
       detail: {
@@ -86,10 +86,18 @@ export class ResultBuilder {
       };
     }
     if (legalResult && agreementResult) {
-      const legalValue = `${legalResult.result.value ?? 0} ${legalResult.result.unit?.numerators[0]}`;
-      const agreementValue = `${agreementResult.result.value ?? 0} ${agreementResult.result.unit?.numerators[0]}`;
+      const legalNumerator = legalResult.result.unit?.numerators[0];
+      const legalValue = legalResult.result.value ?? 0;
+      const legalRes = legalNumerator
+        ? `${legalValue} ${legalNumerator}`
+        : legalNumerator;
+      const agreementlNumerator = agreementResult.result.unit?.numerators[0];
+      const agreementValue = agreementResult.result.value ?? 0;
+      const agreementRes = agreementlNumerator
+        ? `${agreementValue} ${agreementlNumerator}`
+        : agreementValue;
 
-      const comparison = compareValues(legalValue, agreementValue);
+      const comparison = compareValues(legalRes, agreementRes);
 
       if (comparison.chosenType === "SAME") {
         return {
@@ -117,6 +125,36 @@ export class ResultBuilder {
           result: legalResult.result,
         };
       }
+    }
+    throw new Error(
+      "Le légal et le conventionnel ne peut être tous les deux undefined"
+    );
+  }
+
+  private chosenAgreementResult(
+    legalResult?: BuilderResult<PublicodesCalculateResult>,
+    agreementResult?: BuilderResult<PublicodesCalculateResult>
+  ): {
+    chosenResult: ChosenResult;
+    result: PublicodesCalculateResult;
+    formula: Formula;
+    references: References[];
+  } {
+    if (agreementResult?.result.value) {
+      return {
+        chosenResult: "AGREEMENT",
+        formula: agreementResult.formula,
+        references: agreementResult.references,
+        result: agreementResult.result,
+      };
+    }
+    if (legalResult?.result.value) {
+      return {
+        chosenResult: "LEGAL",
+        formula: legalResult.formula,
+        references: legalResult.references,
+        result: legalResult.result,
+      };
     }
     throw new Error(
       "Le légal et le conventionnel ne peut être tous les deux undefined"

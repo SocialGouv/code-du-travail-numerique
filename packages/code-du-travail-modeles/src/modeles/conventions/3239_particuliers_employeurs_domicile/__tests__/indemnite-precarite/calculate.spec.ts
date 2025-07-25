@@ -1,4 +1,4 @@
-import { IndemnitePrecaritePublicodes } from "../../../../../publicodes/IndemnitePrecarite";
+import { IndemnitePrecaritePublicodes } from "../../../../../publicodes/IndemnitePrecaritePublicodes";
 
 const engine = new IndemnitePrecaritePublicodes(
   modelsIndemnitePrecarite,
