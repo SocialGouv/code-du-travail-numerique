@@ -51,7 +51,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   valeur: 3 mois
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
-    Avenant n°3 Article 4: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846301&cidTexte=KALITEXT000005677770&dateTexte=20190829
+    Avenant n°3 article 4: https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846301&cidTexte=KALITEXT000005677770&dateTexte=20190829
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Ouvriers et collaborateurs:
   applicable si: catégorie professionnelle = 'Ouvriers et collaborateurs'
