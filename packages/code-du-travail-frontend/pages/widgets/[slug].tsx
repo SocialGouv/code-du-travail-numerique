@@ -8,7 +8,6 @@ import { useRouter } from "next/router";
 import { Footer } from "../../src/widgets";
 
 import {
-  AgreementSearch,
   CalculateurIndemniteLicenciement,
   DismissalProcess,
 } from "../../src/outils";
@@ -19,7 +18,6 @@ import { getBySlugTools } from "../../src/api";
 const toolsBySlug = {
   "procedure-licenciement": DismissalProcess,
   "indemnite-licenciement": CalculateurIndemniteLicenciement,
-  "convention-collective": AgreementSearch,
 };
 const allowedSlugs = Object.keys(toolsBySlug);
 

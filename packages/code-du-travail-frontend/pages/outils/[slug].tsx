@@ -13,7 +13,6 @@ import { Share } from "../../src/common/Share";
 import { Layout } from "../../src/layout/Layout";
 import {
   DismissalProcess,
-  HeuresRechercheEmploi,
   CalculateurIndemniteLicenciement,
 } from "../../src/outils";
 import {
@@ -24,7 +23,6 @@ import {
 import { ElasticTool } from "@socialgouv/cdtn-types";
 
 const toolsBySlug = {
-  "heures-recherche-emploi": HeuresRechercheEmploi,
   "procedure-licenciement": DismissalProcess,
   "indemnite-licenciement": CalculateurIndemniteLicenciement,
 };
