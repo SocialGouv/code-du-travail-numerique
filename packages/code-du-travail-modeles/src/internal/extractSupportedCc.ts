@@ -13,6 +13,7 @@ export type RuleNodeIdcc = Rule & {
     "préavis-demission"?: boolean;
     "indemnité-précarité"?: boolean;
     "préavis-licenciement"?: boolean;
+    "heures-recherche-emploi"?: boolean;
   };
 };
 
@@ -51,6 +52,9 @@ export function extractSupportedCc(engine: Engine): Partial<AgreementInfo>[] {
             ),
             preavisLicenciement: getSupportedStatus(
               cdtnNode["préavis-licenciement"]
+            ),
+            heuresRechercheEmploi: getSupportedStatus(
+              cdtnNode["heures-recherche-emploi"]
             ),
           };
         }

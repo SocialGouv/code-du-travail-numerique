@@ -14,6 +14,7 @@ describe("extractSupportedCc", () => {
       preavisDemission: "fullySupported",
       indemnitePrecarite: "neverSupported",
       preavisLicenciement: "fullySupported",
+      heuresRechercheEmploi: "fullySupported",
     });
   });
 });
