@@ -16,7 +16,7 @@ describe("Outil - Préavis de licenciement", () => {
     );
     cy.get('label:contains("Non")').eq(1).click();
 
-    cy.contains("Ancienneté du salarié");
+    cy.contains("Quelle est l'ancienneté du salarié ?");
     cy.get('[id="input-seniority"]').select("2 ans et plus");
 
     cy.contains("Suivant").click();

@@ -108,7 +108,7 @@ const StepStatus = (): JSX.Element => {
       {typeof disabledWorker !== "undefined" && !seriousMisconduct && (
         <SelectQuestion
           name="seniority"
-          label="Ancienneté du salarié"
+          label="Quelle est l'ancienneté du salarié ?"
           subLabel="L'ancienneté du salarié est habituellement mentionnée sur le bulletin de salaire."
           options={[
             ["'Moins de 6 mois'" as Seniority, "Moins de 6 mois"],

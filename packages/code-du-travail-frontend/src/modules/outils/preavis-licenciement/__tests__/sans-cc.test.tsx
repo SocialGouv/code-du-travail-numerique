@@ -64,7 +64,9 @@ describe("SimulateurPreavisLicenciement - Sans Convention Collective", () => {
       expect(ui.situation.handicapOui.get()).toBeChecked();
 
       // Question sur l'ancienneté apparaît
-      expect(screen.getByText("Ancienneté du salarié")).toBeInTheDocument();
+      expect(
+        screen.getByText("Quelle est l'ancienneté du salarié ?")
+      ).toBeInTheDocument();
 
       fireEvent.change(ui.situation.seniority.get(), {
         target: { value: "'Plus de 2 ans'" },
