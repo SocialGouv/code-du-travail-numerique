@@ -1,18 +1,18 @@
-import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
+import React from "react";
 
 type Props = {
-  duration?: string | null; // La durée d'heures autorisées (null ou undefined si pas de durée)
+  isResultValid?: boolean;
 };
 
-export const DisclaimerBox: React.FC<Props> = ({ duration }) => {
+const Warning = (props: Props) => {
   return (
     <div className={fr.cx("fr-alert", "fr-alert--info")}>
       <h4 className={fr.cx("fr-alert__title")}>
         Attention il peut exister une durée plus favorable
       </h4>
       <div>
-        {duration ? (
+        {props.isResultValid ? (
           <p>
             Si un accord d&apos;entreprise ou à défaut un usage dans la
             profession ou l&apos;entreprise plus récent prévoit des heures
@@ -32,3 +32,5 @@ export const DisclaimerBox: React.FC<Props> = ({ duration }) => {
     </div>
   );
 };
+
+export default Warning;

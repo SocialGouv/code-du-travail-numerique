@@ -14,7 +14,7 @@ contrat salarié . convention collective . boulangerie patisserie . typeRupture 
   valeur: oui
 
 contrat salarié . convention collective . boulangerie patisserie . typeRupture Démission . résultat conventionnel:
-  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
+  valeur: "''"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 32": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=35EAB16785909B4320F79BDE561E5E6A.tplgfr29s_2?idArticle=KALIARTI000005873153&cidTexte=KALITEXT000005688564&dateTexte=29990101&categorieLien=id
@@ -38,7 +38,7 @@ contrat salarié . convention collective . boulangerie patisserie . typeRupture 
   valeur: oui
 
 contrat salarié . convention collective . boulangerie patisserie . typeRupture Rupture de la période d'essai . résultat conventionnel:
-  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
+  valeur: "''"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 17": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005873126&cidTexte=KALITEXT000005688564

@@ -14,7 +14,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   valeur: oui
 
 contrat salarié . convention collective . transport aérien personnel au sol . typeRupture Licenciement . catégorie professionnelle:
-  titre: catégorie professionnelle
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -100,7 +100,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   valeur: oui
 
 contrat salarié . convention collective . transport aérien personnel au sol . typeRupture Démission . catégorie professionnelle:
-  titre: catégorie professionnelle
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -186,6 +186,6 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   valeur: oui
 
 contrat salarié . convention collective . transport aérien personnel au sol . typeRupture Rupture de la période d'essai . résultat conventionnel:
-  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
+  valeur: "''"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:

@@ -45,10 +45,25 @@ const createResultStore: StoreSliceWrapperHeuresRechercheEmploi<
       let result: any | undefined;
       let resultNotifications: Notification[] | undefined;
       let resultReferences: References[] | undefined;
+      let isResultValid: boolean = true;
 
       const infos = informationToSituation(
         state.informationsData.input.publicodesInformations
       );
+
+      const isRupturePeriodeEssai =
+        state.informationsData.input.publicodesInformations.some(
+          (info) =>
+            info.question.name === "Type de rupture du contrat de travail" &&
+            info.info === "'Rupture de la période d'essai'"
+        );
+
+      const isRuptureConventionnelle =
+        state.informationsData.input.publicodesInformations.some(
+          (info) =>
+            info.question.name === "Type de rupture du contrat de travail" &&
+            info.info === "'Rupture conventionnelle'"
+        );
 
       const situation =
         mapToPublicodesSituationForCalculationHeuresRechercheEmploi(
@@ -63,15 +78,12 @@ const createResultStore: StoreSliceWrapperHeuresRechercheEmploi<
             `Le calcul sur l'écran de résultat retourne un ${publicodesCalculation.type} (detail: ${JSON.stringify(publicodesCalculation)})`
           );
         }
+        isResultValid =
+          publicodesCalculation.result !== undefined &&
+          publicodesCalculation.result.value !== "''";
         result = publicodesCalculation.result;
         resultNotifications = publicodesCalculation.notifications;
-        resultReferences = [
-          {
-            article: "Article L.1237-1 du code du travail",
-            url: "https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174",
-          },
-          ...publicodesCalculation.references,
-        ];
+        resultReferences = publicodesCalculation.references;
       } catch (e) {
         errorPublicodes = true;
         console.error("Error in publicodes calculation:", e);
@@ -85,6 +97,10 @@ const createResultStore: StoreSliceWrapperHeuresRechercheEmploi<
           state.resultData.input.resultNotifications = resultNotifications;
           state.resultData.input.resultReferences = resultReferences;
           state.resultData.error.errorPublicodes = errorPublicodes;
+          state.resultData.input.isRupturePeriodeEssai = isRupturePeriodeEssai;
+          state.resultData.input.isRuptureConventionnelle =
+            isRuptureConventionnelle;
+          state.resultData.input.isResultValid = isResultValid;
         })
       );
     },

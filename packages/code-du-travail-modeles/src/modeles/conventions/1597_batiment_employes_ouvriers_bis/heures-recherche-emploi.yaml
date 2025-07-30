@@ -14,7 +14,7 @@ contrat salarié . convention collective . batiment ouvriers employés bis . typ
   valeur: oui
 
 contrat salarié . convention collective . batiment ouvriers employés bis . typeRupture Licenciement . durée du préavis:
-  titre: durée du préavis
+  titre: Durée du préavis
   question: Quelle est la durée du préavis du salarié ?
   cdtn:
     type: liste
@@ -67,7 +67,7 @@ contrat salarié . convention collective . batiment ouvriers employés bis . typ
   valeur: oui
 
 contrat salarié . convention collective . batiment ouvriers employés bis . typeRupture Démission . durée du préavis:
-  titre: durée du préavis
+  titre: Durée du préavis
   question: Quelle est la durée du préavis du salarié ?
   cdtn:
     type: liste
@@ -120,7 +120,7 @@ contrat salarié . convention collective . batiment ouvriers employés bis . typ
   valeur: oui
 
 contrat salarié . convention collective . batiment ouvriers employés bis . typeRupture Rupture de la période d'essai . résultat conventionnel:
-  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
+  valeur: "''"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 2.3": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id

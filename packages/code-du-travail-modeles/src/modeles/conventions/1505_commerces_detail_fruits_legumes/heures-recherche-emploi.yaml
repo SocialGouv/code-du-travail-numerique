@@ -14,7 +14,7 @@ contrat salarié . convention collective . commerces de détail fruits et légum
   valeur: oui
 
 contrat salarié . convention collective . commerces de détail fruits et légumes . typeRupture Démission . résultat conventionnel:
-  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
+  valeur: "''"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 20.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562750#KALIARTI000043562750
@@ -37,7 +37,7 @@ contrat salarié . convention collective . commerces de détail fruits et légum
   valeur: oui
 
 contrat salarié . convention collective . commerces de détail fruits et légumes . typeRupture Rupture de la période d'essai . résultat conventionnel:
-  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
+  valeur: "''"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 16": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562743#KALIARTI000043562743

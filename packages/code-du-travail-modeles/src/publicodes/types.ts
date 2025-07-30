@@ -183,6 +183,10 @@ export type PublicodesPreavisLicenciementResult = {
   unit?: Unit;
 };
 
+export type PublicodesHeuresRechercheEmploiResult = {
+  value: Evaluation<string>;
+};
+
 export type PublicodesPreavisDemissionResult = {
   value: Evaluation<number>;
   unit?: Unit;

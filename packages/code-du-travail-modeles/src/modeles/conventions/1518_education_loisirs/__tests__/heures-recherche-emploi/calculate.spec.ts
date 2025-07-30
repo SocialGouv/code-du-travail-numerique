@@ -98,8 +98,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     },
     {
       expectedResult: {
-        expectedValue:
-          "D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.",
+        expectedValue: "",
         unit: "",
       },
       expectedReferences: [
@@ -116,8 +115,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     },
     {
       expectedResult: {
-        expectedValue:
-          "D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.",
+        expectedValue: "",
         unit: "",
       },
       expectedReferences: [

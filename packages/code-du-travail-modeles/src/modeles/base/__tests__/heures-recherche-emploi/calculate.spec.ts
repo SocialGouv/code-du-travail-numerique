@@ -4,7 +4,9 @@ const engine = new HeuresRechercheEmploiPublicodes(modelsHeuresRechercheEmploi);
 
 describe("Test de la fonctionnalité 'calculate'", () => {
   test("Vérifier que pour le légal donne heures de recherche emploi", () => {
-    const result = engine.calculate({});
+    const result = engine.calculate({
+      "contrat salarié . convention collective": "''",
+    });
     expect(result).toHaveReferencesBeEqual([
       {
         article: "Article L. 1234-17 du code du travail",

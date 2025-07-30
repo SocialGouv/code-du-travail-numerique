@@ -4,10 +4,12 @@ import {
   useHeuresRechercheEmploiStore,
 } from "../store";
 import { fr } from "@codegouvfr/react-dsfr";
-import { ShowResult } from "./components/ShowResult";
-import { Situation } from "./components/Situation";
-import { DisclaimerBox } from "./components/DisclaimerBox";
-import { NoResult } from "./components/NoResult";
+import {
+  JuridicalReferences,
+  Situation,
+} from "src/modules/outils/preavis-demission/steps/Result/components";
+import ShowResult from "./components/ShowResult";
+import Warning from "./components/Warning";
 
 const ResultStepComponent = () => {
   const store = useContext(HeuresRechercheEmploiContext);
@@ -17,12 +19,20 @@ const ResultStepComponent = () => {
     errorPublicodes,
     informationsData,
     agreementData,
+    resultNotifications,
+    resultReferences,
+    isRuptureConventionnelle,
+    isResultValid,
   } = useHeuresRechercheEmploiStore(store, (state) => ({
     result: state.resultData.input.result,
     getPublicodesResult: state.resultFunction.getPublicodesResult,
     errorPublicodes: state.resultData.error.errorPublicodes,
     informationsData: state.informationsData,
     agreementData: state.agreementData,
+    resultNotifications: state.resultData.input.resultNotifications,
+    resultReferences: state.resultData.input.resultReferences,
+    isRuptureConventionnelle: state.resultData.input.isRuptureConventionnelle,
+    isResultValid: state.resultData.input.isResultValid,
   }));
 
   useEffect(() => {
@@ -44,28 +54,47 @@ const ResultStepComponent = () => {
     return <div>Calcul en cours...</div>;
   }
 
-  // Détermine si nous avons un résultat valide
-  const hasValidResult =
-    result && result.nodeValue !== null && result.nodeValue !== undefined;
-
-  // Récupère l'instance publicodes
-  const publicodes = informationsData.publicodes || agreementData.publicodes;
+  const situationsForDisplay =
+    informationsData.input.publicodesInformations?.map((info) => ({
+      label: info.question.rule?.titre || info.question.name,
+      value: info.info || "",
+      unit: info.question.rule?.unité || "",
+    })) || [];
 
   return (
     <div className={fr.cx("fr-col-md-8", "fr-col-12", "fr-mb-6w")}>
-      <Situation />
-
-      {hasValidResult ? (
-        <ShowResult
-          result={result}
-          publicodes={publicodes}
-          ruleValue="contrat_travail_licenciement_heures_recherche_emploi"
-        />
+      {isRuptureConventionnelle ? (
+        <p>
+          Il n’y a pas d’heures d’absence autorisée pour rechercher un emploi
+          dans le cas d’une rupture conventionnelle.
+        </p>
       ) : (
-        <NoResult />
-      )}
+        <>
+          {isResultValid ? (
+            <>
+              <ShowResult
+                result={result}
+                notifications={resultNotifications || []}
+              />
+            </>
+          ) : (
+            <p>
+              D’après les éléments saisis, dans votre situation, la convention
+              collective ne prévoit pas d’heures d’absence autorisée pour
+              rechercher un emploi.
+            </p>
+          )}
 
-      <DisclaimerBox />
+          <Warning isResultValid={isResultValid} />
+
+          <h2 className={fr.cx("fr-h4", "fr-mt-4w")}>Détail du calcul</h2>
+          <Situation
+            situations={situationsForDisplay}
+            agreement={agreementData.input.agreement}
+          />
+          <JuridicalReferences references={resultReferences || []} />
+        </>
+      )}
     </div>
   );
 };

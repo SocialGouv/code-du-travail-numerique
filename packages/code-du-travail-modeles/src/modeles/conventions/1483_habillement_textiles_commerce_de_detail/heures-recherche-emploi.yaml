@@ -14,7 +14,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   valeur: oui
 
 contrat salarié . convention collective . habillement textiles commerce de detail . typeRupture Démission . catégorie professionnelle:
-  titre: catégorie professionnelle
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -27,7 +27,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   valeur: oui
 
 contrat salarié . convention collective . habillement textiles commerce de detail . typeRupture Démission . catégorie professionnelle Agents de maîtrise et Cadres . durée du travail:
-  titre: durée du travail
+  titre: Durée du travail
   question: Quelle est la durée du travail du salarié ?
   cdtn:
     type: liste
@@ -68,7 +68,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   valeur: oui
 
 contrat salarié . convention collective . habillement textiles commerce de detail . typeRupture Démission . catégorie professionnelle Employés . durée du travail:
-  titre: durée du travail
+  titre: Durée du travail
   question: Quelle est la durée du travail du salarié ?
   cdtn:
     type: liste
@@ -109,7 +109,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   valeur: oui
 
 contrat salarié . convention collective . habillement textiles commerce de detail . typeRupture Licenciement . catégorie professionnelle:
-  titre: catégorie professionnelle
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -122,7 +122,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   valeur: oui
 
 contrat salarié . convention collective . habillement textiles commerce de detail . typeRupture Licenciement . catégorie professionnelle Agents de maîtrise et Cadres . durée du travail:
-  titre: durée du travail
+  titre: Durée du travail
   question: Quelle est la durée du travail du salarié ?
   cdtn:
     type: liste
@@ -163,7 +163,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   valeur: oui
 
 contrat salarié . convention collective . habillement textiles commerce de detail . typeRupture Licenciement . catégorie professionnelle Employés . durée du travail:
-  titre: durée du travail
+  titre: Durée du travail
   question: Quelle est la durée du travail du salarié ?
   cdtn:
     type: liste
@@ -204,7 +204,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   valeur: oui
 
 contrat salarié . convention collective . habillement textiles commerce de detail . typeRupture Rupture de la période d'essai . catégorie professionnelle:
-  titre: catégorie professionnelle
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -217,7 +217,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   valeur: oui
 
 contrat salarié . convention collective . habillement textiles commerce de detail . typeRupture Rupture de la période d'essai . catégorie professionnelle Agents de maîtrise et Cadres . durée du travail:
-  titre: durée du travail
+  titre: Durée du travail
   question: Quelle est la durée du travail du salarié ?
   cdtn:
     type: liste
@@ -256,7 +256,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   valeur: oui
 
 contrat salarié . convention collective . habillement textiles commerce de detail . typeRupture Rupture de la période d'essai . catégorie professionnelle Employés . résultat conventionnel:
-  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
+  valeur: "''"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 16": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005840262&cidTexte=KALITEXT000005675211

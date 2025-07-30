@@ -1,7 +1,12 @@
 import React, { useContext, useEffect } from "react";
 import { PreavisDemissionContext, usePreavisDemissionStore } from "../store";
 import { fr } from "@codegouvfr/react-dsfr";
-import { ShowResult, Situation, Warning } from "./components";
+import {
+  ShowResult,
+  Situation,
+  Warning,
+  JuridicalReferences,
+} from "./components";
 
 const ResultStepComponent = () => {
   const store = useContext(PreavisDemissionContext);
@@ -62,20 +67,7 @@ const ResultStepComponent = () => {
       <h2 className={fr.cx("fr-h4", "fr-mt-4w")}>Détail du calcul</h2>
       <Situation situations={situationsForDisplay} agreement={agreement} />
 
-      {resultReferences && resultReferences.length > 0 && (
-        <div className={fr.cx("fr-mt-4w")}>
-          <h3 className={fr.cx("fr-h5")}>Références juridiques</h3>
-          <ul>
-            {resultReferences.map((ref, index) => (
-              <li key={index}>
-                <a href={ref.url} target="_blank" rel="noopener noreferrer">
-                  {ref.article}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <JuridicalReferences references={resultReferences || []} />
     </div>
   );
 };

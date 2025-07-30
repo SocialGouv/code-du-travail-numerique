@@ -1,10 +1,17 @@
-import { References, Notification } from "@socialgouv/modeles-social";
+import {
+  References,
+  Notification,
+  PublicodesHeuresRechercheEmploiResult,
+} from "@socialgouv/modeles-social";
 
 export type ResultStoreInput = {
-  result?: any; // Pour heures recherche emploi, nous utiliserons un type générique
+  result?: PublicodesHeuresRechercheEmploiResult;
   resultNotifications?: Notification[];
   resultReferences?: References[];
   isAgreementSupported: boolean;
+  isRupturePeriodeEssai?: boolean;
+  isRuptureConventionnelle?: boolean;
+  isResultValid?: boolean;
 };
 
 export type ResultStoreError = {

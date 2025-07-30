@@ -12,7 +12,7 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
   valeur: oui
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle:
-  titre: catégorie professionnelle
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -25,7 +25,7 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
   valeur: oui
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Assistants maternels du particulier employeur . résultat conventionnel:
-  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
+  valeur: "''"
   remplace: contrat salarié . convention collective . résultat conventionnel
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur:
@@ -33,7 +33,7 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
   valeur: oui
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail:
-  titre: durée du travail
+  titre: Durée du travail
   question: Quelle est la durée du travail du salarié ?
   cdtn:
     type: liste
@@ -59,7 +59,7 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
   valeur: oui
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail Moins de 40 heures par semaine . ancienneté Moins de 2 ans . résultat conventionnel:
-  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
+  valeur: "''"
   remplace: contrat salarié . convention collective . résultat conventionnel
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail Moins de 40 heures par semaine . ancienneté 2 ans ou plus:
@@ -67,7 +67,7 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
   valeur: oui
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail Moins de 40 heures par semaine . ancienneté 2 ans ou plus . résultat conventionnel:
-  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
+  valeur: "''"
   remplace: contrat salarié . convention collective . résultat conventionnel
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail 40 heures ou plus par semaine:

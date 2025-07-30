@@ -14,7 +14,7 @@ contrat salarié . convention collective . publicité française . typeRupture D
   valeur: oui
 
 contrat salarié . convention collective . publicité française . typeRupture Démission . catégorie professionnelle:
-  titre: catégorie professionnelle
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -70,7 +70,7 @@ contrat salarié . convention collective . publicité française . typeRupture L
   valeur: oui
 
 contrat salarié . convention collective . publicité française . typeRupture Licenciement . catégorie professionnelle:
-  titre: catégorie professionnelle
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -125,7 +125,7 @@ contrat salarié . convention collective . publicité française . typeRupture L
   valeur: oui
 
 contrat salarié . convention collective . publicité française . typeRupture Licenciement . catégorie professionnelle Employés . ancienneté 2 ans ou moins . résultat conventionnel:
-  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
+  valeur: "''"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 30": https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005857304&cidTexte=KALITEXT000005682357&dateTexte=19740607
@@ -149,7 +149,7 @@ contrat salarié . convention collective . publicité française . typeRupture R
   valeur: oui
 
 contrat salarié . convention collective . publicité française . typeRupture Rupture de la période d'essai . catégorie professionnelle:
-  titre: catégorie professionnelle
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
@@ -189,7 +189,7 @@ contrat salarié . convention collective . publicité française . typeRupture R
   valeur: oui
 
 contrat salarié . convention collective . publicité française . typeRupture Rupture de la période d'essai . catégorie professionnelle Agents de maîtrise et Techniciens . initiative de la rupture de la période d'essai Le salarié . résultat conventionnel:
-  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
+  valeur: "''"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 33": https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005753582&cidTexte=KALITEXT000005682357&idConvention=KALICONT000005635630&dateTexte=29990101
@@ -225,7 +225,7 @@ contrat salarié . convention collective . publicité française . typeRupture R
   valeur: oui
 
 contrat salarié . convention collective . publicité française . typeRupture Rupture de la période d'essai . catégorie professionnelle Cadres . initiative de la rupture de la période d'essai Le salarié . résultat conventionnel:
-  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
+  valeur: "''"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 53": https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005753602&cidTexte=KALITEXT000005682357&idConvention=KALICONT000005635630&dateTexte=29990101
@@ -235,7 +235,7 @@ contrat salarié . convention collective . publicité française . typeRupture R
   valeur: oui
 
 contrat salarié . convention collective . publicité française . typeRupture Rupture de la période d'essai . catégorie professionnelle Employés . résultat conventionnel:
-  valeur: "'D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.'"
+  valeur: "''"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Article 15": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=68C4D11B1B434910FCC8731A925B638E.tplgfr28s_1?idArticle=KALIARTI000022438632&cidTexte=KALITEXT000005682357&dateTexte=29990101&categorieLien=id
