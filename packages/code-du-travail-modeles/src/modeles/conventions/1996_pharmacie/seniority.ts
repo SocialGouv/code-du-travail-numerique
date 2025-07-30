@@ -47,7 +47,22 @@ const getTotalAbsenceNonPro = (
 
         totAbsenceNonPro += totalCountingForSeniority;
       } else if (absence.durationInMonth > 6) {
-        totAbsenceNonPro += Math.max(absence.durationInMonth - 6, 6);
+        let alreadyCounted = false;
+        const years = splitBySeniorityCalendarYear(dEntree, dSortie);
+        const absencesBySeniorityYear = accumulateAbsenceByYear(
+          absences,
+          years
+        );
+        absencesBySeniorityYear.forEach((absenceByYear) => {
+          if (
+            absenceByYear.totalAbsenceInMonth > 6 &&
+            !alreadyCounted &&
+            absence.durationInMonth !== undefined
+          ) {
+            alreadyCounted = true;
+            totAbsenceNonPro += Math.max(absence.durationInMonth - 6, 6);
+          }
+        });
       }
     }
   }
