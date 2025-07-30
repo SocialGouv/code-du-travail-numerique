@@ -13,7 +13,7 @@ type Props = {
 const ShowResult: React.FC<Props> = ({ result, notifications }: Props) => {
   return (
     <>
-      <h2 className={fr.cx("fr-mt-3w")}>
+      <h2 className={fr.cx("fr-h5", "fr-mt-4w")}>
         Nombre d&apos;heures d&apos;absence autorisée pour rechercher un emploi
       </h2>
       <p className={fr.cx("fr-mb-3w", "fr-pr-md-2v")}>

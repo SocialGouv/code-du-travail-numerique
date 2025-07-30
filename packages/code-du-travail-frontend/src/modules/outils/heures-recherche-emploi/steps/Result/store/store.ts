@@ -80,6 +80,7 @@ const createResultStore: StoreSliceWrapperHeuresRechercheEmploi<
         }
         isResultValid =
           publicodesCalculation.result !== undefined &&
+          publicodesCalculation.result.value !== null &&
           publicodesCalculation.result.value !== "''";
         result = publicodesCalculation.result;
         resultNotifications = publicodesCalculation.notifications;
