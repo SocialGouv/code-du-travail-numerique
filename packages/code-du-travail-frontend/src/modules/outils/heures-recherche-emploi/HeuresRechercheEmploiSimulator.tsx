@@ -4,10 +4,7 @@ import { ContainerSimulator } from "../../layout/ContainerSimulator";
 import { RelatedItem } from "../../documents";
 import React, { useContext } from "react";
 import StepIntro from "./steps/Introduction";
-import {
-  Step,
-  ValidationResponse,
-} from "../common/components/SimulatorLayout/types";
+import { Step } from "../common/components/SimulatorLayout/types";
 import {
   createHeuresRechercheEmploiStore,
   HeuresRechercheEmploiContext,
@@ -101,21 +98,12 @@ const HeuresRechercheEmploiSimulatorContent = ({
     isStepAgreementValid,
     onNextStepInfos,
     isStepInfosValid,
-    shouldSkipInfoStep,
   } = useHeuresRechercheEmploiStore(store, (state) => ({
     onNextStepAgreement: state.agreementFunction.onNextStep,
     isStepAgreementValid: state.agreementData.isStepValid,
     onNextStepInfos: state.informationsFunction.onNextStep,
     isStepInfosValid: state.informationsData.isStepValid,
-    shouldSkipInfoStep: state.informationsFunction.shouldSkipStep,
   }));
-
-  const handleNextStepInfos = (): ValidationResponse => {
-    if (shouldSkipInfoStep()) {
-      return ValidationResponse.Valid;
-    }
-    return onNextStepInfos();
-  };
 
   return (
     <SimulatorLayout
@@ -130,8 +118,8 @@ const HeuresRechercheEmploiSimulatorContent = ({
         },
         {
           stepName: HeuresRechercheEmploiStepName.Infos,
-          isStepValid: isStepInfosValid || shouldSkipInfoStep(),
-          onNextStep: handleNextStepInfos,
+          isStepValid: isStepInfosValid,
+          onNextStep: onNextStepInfos,
         },
       ]}
     />

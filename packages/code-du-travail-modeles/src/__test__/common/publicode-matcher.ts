@@ -6,7 +6,7 @@ import {
   mergePreavisDemissionModels,
   mergePreavisLicenciementModels,
   mergePreavisRetraiteModels,
-  mergerHeuresRechercheEmploiModels,
+  mergeHeuresRechercheEmploiModels,
   mergeRuptureConventionnelle,
 } from "../../internal/merger";
 import type { References } from "../../modeles";
@@ -456,6 +456,6 @@ const replaceAll = (string: string, search: string, replace: string) => {
 (global as any).modelsIndemnitePrecarite = mergeIndemnitePrecariteModels();
 (global as any).modelsPreavisLicenciement = mergePreavisLicenciementModels();
 (global as any).modelsHeuresRechercheEmploi =
-  mergerHeuresRechercheEmploiModels();
+  mergeHeuresRechercheEmploiModels();
 
 export default undefined;

@@ -1,11 +1,12 @@
 contrat salarié . convention collective . pharmacie . typeRupture:
-  titre: typeRupture
+  titre: Type de rupture du contrat de travail
   question: Pour quelle raison le contrat de travail a-t-il été rompu ?
   cdtn:
     type: liste
     valeurs:
       Démission ou licenciement: "'Démission ou licenciement'"
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
+      Rupture conventionnelle: "'Rupture conventionnelle'"
 
 contrat salarié . convention collective . pharmacie . typeRupture Démission ou licenciement:
   applicable si: typeRupture = 'Démission ou licenciement'

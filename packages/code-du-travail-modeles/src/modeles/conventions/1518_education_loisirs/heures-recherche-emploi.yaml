@@ -1,5 +1,5 @@
 contrat salarié . convention collective . éducation et loisirs . typeRupture:
-  titre: typeRupture
+  titre: Type de rupture du contrat de travail
   question: Pour quelle raison le contrat de travail a-t-il été rompu ?
   cdtn:
     type: liste
@@ -7,6 +7,7 @@ contrat salarié . convention collective . éducation et loisirs . typeRupture:
       Licenciement: "'Licenciement'"
       Démission: "'Démission'"
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
+      Rupture conventionnelle: "'Rupture conventionnelle'"
 
 contrat salarié . convention collective . éducation et loisirs . typeRupture Licenciement:
   applicable si: typeRupture = 'Licenciement'
@@ -26,7 +27,7 @@ contrat salarié . convention collective . éducation et loisirs . typeRupture L
   valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . typeRupture Licenciement . durée du travail Temps complet . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -67,7 +68,7 @@ contrat salarié . convention collective . éducation et loisirs . typeRupture L
   valeur: oui
 
 contrat salarié . convention collective . éducation et loisirs . typeRupture Licenciement . durée du travail Temps partiel . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste

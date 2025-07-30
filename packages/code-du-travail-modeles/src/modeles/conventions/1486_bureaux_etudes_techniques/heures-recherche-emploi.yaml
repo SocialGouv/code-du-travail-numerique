@@ -1,5 +1,5 @@
 contrat salarié . convention collective . bureaux études techniques . typeRupture:
-  titre: typeRupture
+  titre: Type de rupture du contrat de travail
   question: Pour quelle raison le contrat de travail a-t-il été rompu ?
   cdtn:
     type: liste
@@ -7,6 +7,7 @@ contrat salarié . convention collective . bureaux études techniques . typeRupt
       Démission: "'Démission'"
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
       Licenciement: "'Licenciement'"
+      Rupture conventionnelle: "'Rupture conventionnelle'"
 
 contrat salarié . convention collective . bureaux études techniques . typeRupture Démission:
   applicable si: typeRupture = 'Démission'
@@ -27,7 +28,7 @@ contrat salarié . convention collective . bureaux études techniques . typeRupt
   valeur: oui
 
 contrat salarié . convention collective . bureaux études techniques . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai:
-  titre: initiative de la rupture de la période d'essai
+  titre: Initiative de la rupture de la période d'essai
   question: Qui a pris l'initiative de rompre la période d'essai ?
   cdtn:
     type: liste

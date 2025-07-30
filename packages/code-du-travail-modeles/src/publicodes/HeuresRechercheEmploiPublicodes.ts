@@ -3,7 +3,7 @@ import type { EvaluatedNode } from "publicodes";
 import { PublicodesBase } from "./PublicodesBase";
 import type { PublicodesOutput } from "./types";
 import { PublicodesDefaultRules, PublicodesSimulator } from "./types";
-import { BuilderResult, PublicodesCalculateResult } from "./common/type";
+import { CalculateOutput, PublicodesCalculateResult } from "./common/type";
 
 export class HeuresRechercheEmploiPublicodes extends PublicodesBase<
   PublicodesCalculateResult<string>
@@ -17,11 +17,17 @@ export class HeuresRechercheEmploiPublicodes extends PublicodesBase<
 
   private calculateAgreement(
     situation: Record<string, string | undefined>
-  ): BuilderResult<PublicodesCalculateResult<string>> {
+  ): CalculateOutput<PublicodesCalculateResult<string>> {
     const result = this.setSituation(
       situation,
       "contrat salarié . convention collective . résultat conventionnel"
     );
+    if (result.missingArgs.length > 0) {
+      return {
+        missingArgs: result.missingArgs,
+        type: "missing-args",
+      };
+    }
     const notifications = this.getNotifications();
     const references = this.getReferences();
     return {
@@ -38,11 +44,17 @@ export class HeuresRechercheEmploiPublicodes extends PublicodesBase<
 
   private calculateLegal(
     situation: Record<string, string | undefined>
-  ): BuilderResult<PublicodesCalculateResult<string>> {
+  ): CalculateOutput<PublicodesCalculateResult<string>> {
     const result = this.setSituation(
       situation,
       "contrat salarié . résultat légal"
     );
+    if (result.missingArgs.length > 0) {
+      return {
+        missingArgs: result.missingArgs,
+        type: "missing-args",
+      };
+    }
     const notifications = this.getNotifications();
     const references = this.getReferences();
     return {
@@ -62,6 +74,12 @@ export class HeuresRechercheEmploiPublicodes extends PublicodesBase<
   ): PublicodesOutput<PublicodesCalculateResult<string>> {
     if (args["contrat salarié . convention collective"]) {
       const agreementResult = this.calculateAgreement(args);
+      if (
+        agreementResult.type === "ineligibility" ||
+        agreementResult.type === "missing-args"
+      ) {
+        return agreementResult;
+      }
       return {
         ...agreementResult,
         detail: {
@@ -81,6 +99,12 @@ export class HeuresRechercheEmploiPublicodes extends PublicodesBase<
       };
     }
     const legalResult = this.calculateLegal(args);
+    if (
+      legalResult.type === "ineligibility" ||
+      legalResult.type === "missing-args"
+    ) {
+      return legalResult;
+    }
     return {
       ...legalResult,
       detail: {

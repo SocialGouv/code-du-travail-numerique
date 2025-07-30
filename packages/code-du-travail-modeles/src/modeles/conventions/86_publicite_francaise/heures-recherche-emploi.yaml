@@ -1,5 +1,5 @@
 contrat salarié . convention collective . publicité française . typeRupture:
-  titre: typeRupture
+  titre: Type de rupture du contrat de travail
   question: Pour quelle raison le contrat de travail a-t-il été rompu ?
   cdtn:
     type: liste
@@ -7,6 +7,7 @@ contrat salarié . convention collective . publicité française . typeRupture:
       Démission: "'Démission'"
       Licenciement: "'Licenciement'"
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
+      Rupture conventionnelle: "'Rupture conventionnelle'"
 
 contrat salarié . convention collective . publicité française . typeRupture Démission:
   applicable si: typeRupture = 'Démission'
@@ -111,7 +112,7 @@ contrat salarié . convention collective . publicité française . typeRupture L
   valeur: oui
 
 contrat salarié . convention collective . publicité française . typeRupture Licenciement . catégorie professionnelle Employés . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste
@@ -162,7 +163,7 @@ contrat salarié . convention collective . publicité française . typeRupture R
   valeur: oui
 
 contrat salarié . convention collective . publicité française . typeRupture Rupture de la période d'essai . catégorie professionnelle Agents de maîtrise et Techniciens . initiative de la rupture de la période d'essai:
-  titre: initiative de la rupture de la période d'essai
+  titre: Initiative de la rupture de la période d'essai
   question: Qui a pris l'initiative de rompre la période d'essai ?
   cdtn:
     type: liste
@@ -198,7 +199,7 @@ contrat salarié . convention collective . publicité française . typeRupture R
   valeur: oui
 
 contrat salarié . convention collective . publicité française . typeRupture Rupture de la période d'essai . catégorie professionnelle Cadres . initiative de la rupture de la période d'essai:
-  titre: initiative de la rupture de la période d'essai
+  titre: Initiative de la rupture de la période d'essai
   question: Qui a pris l'initiative de rompre la période d'essai ?
   cdtn:
     type: liste

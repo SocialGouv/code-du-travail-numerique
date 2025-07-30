@@ -1,5 +1,5 @@
 contrat salarié . convention collective . comptables . typeRupture:
-  titre: typeRupture
+  titre: Type de rupture du contrat de travail
   question: Pour quelle raison le contrat de travail a-t-il été rompu ?
   cdtn:
     type: liste
@@ -7,13 +7,14 @@ contrat salarié . convention collective . comptables . typeRupture:
       Démission: "'Démission'"
       Licenciement: "'Licenciement'"
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
+      Rupture conventionnelle: "'Rupture conventionnelle'"
 
 contrat salarié . convention collective . comptables . typeRupture Démission:
   applicable si: typeRupture = 'Démission'
   valeur: oui
 
 contrat salarié . convention collective . comptables . typeRupture Démission . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste

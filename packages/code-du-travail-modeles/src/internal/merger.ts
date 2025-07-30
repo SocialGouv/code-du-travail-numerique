@@ -23,7 +23,7 @@ export function mergePreavisLicenciementModels(): any {
   return mergeModelsWithKeys([commonFile, preavisLicenciementFile]);
 }
 
-export function mergerHeuresRechercheEmploiModels(): any {
+export function mergeHeuresRechercheEmploiModels(): any {
   return mergeModelsWithKeys([commonFile, heuresRechercheEmploiFile]);
 }
 

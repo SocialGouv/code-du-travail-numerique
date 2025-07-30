@@ -268,14 +268,6 @@ const createInformationsStore: StoreSliceWrapperHeuresRechercheEmploi<
         ? ValidationResponse.Valid
         : ValidationResponse.NotValid;
     },
-    shouldSkipStep: (): boolean => {
-      const state = get().informationsData.input;
-      // Si aucune question n'a été générée et qu'il n'y a pas de questions manquantes,
-      // l'étape peut être passée automatiquement
-      return (
-        state.publicodesInformations.length === 0 && state.hasNoMissingQuestions
-      );
-    },
     resetQuestions: () => {
       set(
         produce((state: InformationsStoreSlice) => {

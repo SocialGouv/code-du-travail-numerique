@@ -1,5 +1,5 @@
 contrat salarié . convention collective . industries chimiques . typeRupture:
-  titre: typeRupture
+  titre: Type de rupture du contrat de travail
   question: Pour quelle raison le contrat de travail a-t-il été rompu ?
   cdtn:
     type: liste
@@ -7,6 +7,7 @@ contrat salarié . convention collective . industries chimiques . typeRupture:
       Démission: "'Démission'"
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
       Licenciement: "'Licenciement'"
+      Rupture conventionnelle: "'Rupture conventionnelle'"
 
 contrat salarié . convention collective . industries chimiques . typeRupture Démission:
   applicable si: typeRupture = 'Démission'
@@ -140,7 +141,7 @@ contrat salarié . convention collective . industries chimiques . typeRupture Ru
   valeur: oui
 
 contrat salarié . convention collective . industries chimiques . typeRupture Rupture de la période d'essai . catégorie professionnelle Ingénieurs, Cadres . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste

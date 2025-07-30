@@ -1,5 +1,5 @@
 contrat salarié . convention collective . hospitalisation privées . typeRupture:
-  titre: typeRupture
+  titre: Type de rupture du contrat de travail
   question: Pour quelle raison le contrat de travail a-t-il été rompu ?
   cdtn:
     type: liste
@@ -7,13 +7,14 @@ contrat salarié . convention collective . hospitalisation privées . typeRuptur
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
       Démission: "'Démission'"
       Licenciement: "'Licenciement'"
+      Rupture conventionnelle: "'Rupture conventionnelle'"
 
 contrat salarié . convention collective . hospitalisation privées . typeRupture Rupture de la période d'essai:
   applicable si: typeRupture = 'Rupture de la période d'essai'
   valeur: oui
 
 contrat salarié . convention collective . hospitalisation privées . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai:
-  titre: initiative de la rupture de la période d'essai
+  titre: Initiative de la rupture de la période d'essai
   question: Qui a pris l'initiative de rompre la période d'essai ?
   cdtn:
     type: liste
@@ -26,7 +27,7 @@ contrat salarié . convention collective . hospitalisation privées . typeRuptur
   valeur: oui
 
 contrat salarié . convention collective . hospitalisation privées . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai L'employeur . ancienneté:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste

@@ -1,5 +1,5 @@
 contrat salarié . convention collective . sedima . typeRupture:
-  titre: typeRupture
+  titre: Type de rupture du contrat de travail
   question: Pour quelle raison le contrat de travail a-t-il été rompu ?
   cdtn:
     type: liste
@@ -7,6 +7,7 @@ contrat salarié . convention collective . sedima . typeRupture:
       Démission: "'Démission'"
       Licenciement: "'Licenciement'"
       Rupture de la période d'essai: "'Rupture de la période d'essai'"
+      Rupture conventionnelle: "'Rupture conventionnelle'"
 
 contrat salarié . convention collective . sedima . typeRupture Démission:
   applicable si: typeRupture = 'Démission'
