@@ -1,5 +1,5 @@
-import { render, fireEvent, waitFor } from "@testing-library/react";
-import { QuestionnaireWrapper } from "../Components";
+import { fireEvent, render, waitFor } from "@testing-library/react";
+import { QuestionnaireWrapper } from "../QuestionnaireWrapper";
 import { ui } from "./ui";
 
 jest.mock("../service");
@@ -13,26 +13,16 @@ test(`Questionnaire:
   await render(
     <QuestionnaireWrapper
       name="dismissalProcess"
-      title="Quelle est votre situation ?"
       slug="procedure-licenciement"
     />
   );
   // Vérifier l'affichage initial
-  expect(ui.situationTitle.query()).toBeInTheDocument();
   expect(ui.question1.text.query()).toBeInTheDocument();
   expect(ui.response1.text.query()).toBeInTheDocument();
   expect(ui.response2.text.query()).toBeInTheDocument();
-  expect(ui.question1.description.query()).toBeInTheDocument();
-  expect(ui.question1.tooltip.query()).toBeInTheDocument();
+  expect(ui.question1.info.query()).toBeInTheDocument();
   // Vérifier l'affichage des tooltips
-  fireEvent.click(ui.question1.tooltip.get());
-  expect(ui.question1.tooltipText.query()).toBeInTheDocument();
-  fireEvent.click(ui.question1.tooltip.get());
-  expect(ui.question1.tooltipText.query()).not.toBeInTheDocument();
-  fireEvent.click(ui.response1.tooltip.get());
   expect(ui.response1.tooltipText.query()).toBeInTheDocument();
-  fireEvent.click(ui.response1.tooltip.get());
-  expect(ui.response1.tooltipText.query()).not.toBeInTheDocument();
   // Vérifier la navigation
   fireEvent.click(ui.response1.text.get());
   expect(ui.response1.statement.query()).toBeInTheDocument();

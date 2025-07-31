@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@codegouvfr/react-dsfr/Button";
 import { useState } from "react";
 import { FEEDBACK_RESULT } from "./tracking";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -58,50 +57,52 @@ export const NumberedScaleQuestionnaireItem = ({
             id={`${fieldsetId}-legend`}
           >
             {title}
+            <span
+              className={`${fr.cx("fr-text--sm", "fr-mb-1w", "fr-hint-text")} ${desktopLabelStyle}`}
+            >
+              {hint}
+            </span>
           </legend>
         )}
-        <p className={fr.cx("fr-text--sm", "fr-mb-1w")}>
-          <span className={`${fr.cx("fr-hint-text")} ${desktopLabelStyle}`}>
-            {hint}
-          </span>
-        </p>
+
         <div className={scaleContainer}>
-          <div className={labelLeftStyle}>{labels[0]}</div>
-          <div
-            className={fr.cx("fr-btns-group", "fr-btns-group--inline")}
-            role="group"
-            aria-labelledby={title ? `${fieldsetId}-legend` : undefined}
-            style={{ justifyContent: "center" }}
-          >
-            {[
-              Status.ONE,
-              Status.TWO,
-              Status.THREE,
-              Status.FOUR,
-              Status.FIVE,
-            ].map((buttonStatus, index) => (
-              <Button
-                key={buttonStatus}
-                id={`${fieldsetId}-${buttonStatus}`}
-                data-testId={`${dataTestId}-${buttonStatus}`}
-                onClick={() => {
-                  setStatus(buttonStatus);
-                  onChange(values[index]);
-                }}
-                className={`${numberButtonStyle} ${status === buttonStatus ? selectedStyle : ""} ${fr.cx("fr-mb-0")}`}
-                data-testid={`${dataTestId}-${buttonStatus}`}
-                priority="secondary"
-                type="button"
-                aria-pressed={status === buttonStatus}
-                aria-label={`Noter ${index + 1}${
-                  status === buttonStatus ? " (sélectionné)" : ""
-                }`}
-              >
-                {index + 1}
-              </Button>
-            ))}
+          <div className={labelLeftStyle} aria-hidden="true">
+            {labels[0]}
           </div>
-          <div className={labelRightStyle}>{labels[4]}</div>
+          <div className={`${fr.cx("fr-fieldset")} ${containerRadioStyle}`}>
+            <ul className={ul}>
+              {[
+                Status.ONE,
+                Status.TWO,
+                Status.THREE,
+                Status.FOUR,
+                Status.FIVE,
+              ].map((buttonStatus, index) => (
+                <li key={buttonStatus}>
+                  <input
+                    id={`${fieldsetId}-${buttonStatus}`}
+                    data-testId={`${dataTestId}-${buttonStatus}`}
+                    className="fr-sr-only"
+                    type="radio"
+                    onChange={() => {
+                      setStatus(buttonStatus);
+                      onChange(values[index]);
+                    }}
+                    name={values[index]}
+                  />
+                  <label
+                    htmlFor={`${fieldsetId}-${buttonStatus}`}
+                    className={`${numberRadioStyle} ${status === buttonStatus ? radioSelectedStyle : ""}`}
+                  >
+                    {index + 1}
+                  </label>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className={labelRightStyle} aria-hidden="true">
+            {labels[4]}
+          </div>
         </div>
       </fieldset>
       {displayError && (
@@ -111,26 +112,40 @@ export const NumberedScaleQuestionnaireItem = ({
   );
 };
 
-// Styles
-const selectedStyle = css({
-  backgroundColor: "var(--background-action-high-blue-france)!important",
-  color: "var(--text-inverted-blue-france)!important",
-});
-
-const numberButtonStyle = css({
-  width: "35px",
-  height: "35px",
-  margin: "0 0.5rem",
+const numberRadioStyle = css({
+  width: "100%",
+  border: "1px solid var(--background-alt-grey-hover)",
+  padding: "0.5rem 1rem",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  fontSize: "1.25rem",
-  fontWeight: "bold",
-  "@media (max-width: 480px)": {
-    fontSize: "0.9rem",
-    margin: "0 0.1rem",
-    padding: "0",
+  cursor: "pointer",
+  color: "var(--background-flat-blue-france)",
+  fontWeight: 500,
+});
+
+const radioSelectedStyle = css({
+  borderColor: "var(--background-flat-blue-france)",
+  backgroundColor: "var(--background-flat-blue-france)",
+  color: "white",
+});
+
+const ul = css({
+  listStyle: "none!",
+  margin: 0,
+  paddingLeft: 0,
+  width: "100%",
+  "@media (min-width: 48em)": {
+    columns: 5,
   },
+});
+
+const containerRadioStyle = css({
+  width: "100%",
+  position: "initial",
+  justifyContent: "center",
+  marginLeft: "1rem",
+  marginRight: "1rem",
 });
 
 const scaleContainer = css({

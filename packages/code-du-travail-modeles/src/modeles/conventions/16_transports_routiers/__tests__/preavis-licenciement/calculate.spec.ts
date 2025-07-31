@@ -63,10 +63,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849568&cidTexte=KALITEXT000005678909&dateTexte=29990101&categorieLien=id",
         },
       ],
-      expectedNotifications: [
-        "Sous réserve de durées plus longues prévues dans le contrat de travail",
-        "Les ingénieurs et cadres pourront quitter leur emploi après 2 mois de préavis sous réserve d'en avoir informé l'employeur au moins 15 jours à l'avance. Dans ce cas, ils n'auront droit, indépendamment de l'indemnité éventuelle de congédiement, qu'à la rémunération correspondant à leur temps effectif de travail.",
-      ],
+      expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . transports routiers . catégorie professionnelle":
           "'Ingénieurs et Cadres'",
@@ -182,9 +179,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849262&cidTexte=KALITEXT000005678889&dateTexte=29990101&categorieLien=id",
         },
       ],
-      expectedNotifications: [
-        "Les techniciens et agents de haute maîtrise pourront quitter leur emploi après exécution de 1 mois de délaicongé sous réserve d'en avoir informé l'employeur au moins 10 jours à l'avance. Dans ce cas, ils n'auront droit, indépendamment de l'indemnité éventuelle de congédiement, qu'à la rémunération correspondant à leur temps effectif de travail.",
-      ],
+      expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . transports routiers . catégorie professionnelle":
           "'Techniciens et agents de maîtrise TAM'",

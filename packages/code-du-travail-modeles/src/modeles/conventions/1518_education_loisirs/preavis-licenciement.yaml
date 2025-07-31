@@ -31,7 +31,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Article 4.4": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
+    "Article 4.4": https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 5:
   applicable si: groupe = '5'
@@ -41,7 +41,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Article 4.4": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
+    "Article 4.4": https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens . groupe 6:
   applicable si: groupe = '6'
@@ -51,7 +51,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Article 4.4": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
+    "Article 4.4": https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Animateurs, techniciens et professeurs:
   applicable si: catégorie professionnelle = 'Animateurs, techniciens et professeurs'
@@ -74,7 +74,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Article 4.4": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
+    "Article 4.4": https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Animateurs, techniciens et professeurs . niveau B:
   applicable si: niveau = 'B'
@@ -84,7 +84,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Article 4.4": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
+    "Article 4.4": https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
@@ -107,7 +107,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Article 4.4": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
+    "Article 4.4": https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Cadres . groupe 8:
   applicable si: groupe = '8'
@@ -117,7 +117,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: 3 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Article 4.4": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
+    "Article 4.4": https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés:
   applicable si: catégorie professionnelle = 'Ouvriers, Employés'
@@ -153,7 +153,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Article 4.4": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
+    "Article 4.4": https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 2 . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
@@ -163,7 +163,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Article 4.4": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
+    "Article 4.4": https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 3:
   applicable si: groupe = '3'
@@ -186,7 +186,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: 1 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Article 4.4": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
+    "Article 4.4": https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Ouvriers, Employés . groupe 3 . ancienneté Plus de 2 ans:
   applicable si: ancienneté = 'Plus de 2 ans'
@@ -196,4 +196,4 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   valeur: 2 mois
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Article 4.4": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id
+    "Article 4.4": https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177

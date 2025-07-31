@@ -15,9 +15,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026802012&cidTexte=KALITEXT000005673619&dateTexte=20120228",
         },
       ],
-      expectedNotifications: [
-        "Cette durée s'applique aux techniciens et agents de maîtrise ou assimilés.",
-      ],
+      expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . commerces de gros . catégorie professionnelle":
           "'Agents de maîtrise et Techniciens'",

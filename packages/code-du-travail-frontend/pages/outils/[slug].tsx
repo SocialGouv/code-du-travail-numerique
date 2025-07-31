@@ -11,10 +11,7 @@ import Metas from "../../src/common/Metas";
 import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
 import { Layout } from "../../src/layout/Layout";
-import {
-  DismissalProcess,
-  CalculateurIndemniteLicenciement,
-} from "../../src/outils";
+import { CalculateurIndemniteLicenciement } from "../../src/outils";
 import {
   getBySlugTools,
   getBySourceAndSlugItems,
@@ -23,7 +20,6 @@ import {
 import { ElasticTool } from "@socialgouv/cdtn-types";
 
 const toolsBySlug = {
-  "procedure-licenciement": DismissalProcess,
   "indemnite-licenciement": CalculateurIndemniteLicenciement,
 };
 

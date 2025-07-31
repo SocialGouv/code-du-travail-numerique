@@ -28,7 +28,6 @@ contrat salarié . convention collective . bad . catégorie professionnelle Empl
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté Moins de 6 mois . résultat conventionnel:
   valeur: 1 semaine de date à date
-  type: notification
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Titre IV, article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
@@ -39,7 +38,6 @@ contrat salarié . convention collective . bad . catégorie professionnelle Empl
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté 6 mois à 2 ans . résultat conventionnel:
   valeur: 1 mois de date à date
-  type: notification
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Titre IV, article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
@@ -50,7 +48,6 @@ contrat salarié . convention collective . bad . catégorie professionnelle Empl
 
 contrat salarié . convention collective . bad . catégorie professionnelle Employé . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois de date à date
-  type: notification
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Titre IV, article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
@@ -74,7 +71,6 @@ contrat salarié . convention collective . bad . catégorie professionnelle Tech
 
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 1 mois de date à date
-  type: notification
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Titre IV, article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
@@ -85,7 +81,6 @@ contrat salarié . convention collective . bad . catégorie professionnelle Tech
 
 contrat salarié . convention collective . bad . catégorie professionnelle Technicienagent de maîtrise . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 2 mois de date à date
-  type: notification
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Titre IV, article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
@@ -109,7 +104,6 @@ contrat salarié . convention collective . bad . catégorie professionnelle Cadr
 
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté Moins de 2 ans . résultat conventionnel:
   valeur: 2 mois de date à date
-  type: notification
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Titre IV, article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
@@ -120,7 +114,6 @@ contrat salarié . convention collective . bad . catégorie professionnelle Cadr
 
 contrat salarié . convention collective . bad . catégorie professionnelle Cadre . ancienneté Plus de 2 ans . résultat conventionnel:
   valeur: 4 mois de date à date
-  type: notification
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Titre IV, article 26.1": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525
