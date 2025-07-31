@@ -23,6 +23,8 @@ const getTotalAbsenceNonPro = (
   dSortie: Date,
   absencePeriods: Absence[]
 ): number => {
+  let hasBenefitedFromReduction = false;
+  let hasYearLongAbsence = false;
   const absences = absencePeriods.filter(
     (item) => item.motif.key === MotifKeys.maladieNonPro
   );
@@ -30,9 +32,23 @@ const getTotalAbsenceNonPro = (
 
   const absencesBySeniorityYear = accumulateAbsenceByYear(absences, years);
 
-  return absencesBySeniorityYear.reduce((total, item) => {
-    return total + Math.max(item.totalAbsenceInMonth - 6, 0);
+  let totalAbsence = absencesBySeniorityYear.reduce((total, item) => {
+    if (item.totalAbsenceInMonth <= 6 && item.totalAbsenceInMonth > 0) {
+      hasBenefitedFromReduction = true;
+      return total;
+    }
+    if (item.totalAbsenceInMonth > 11.9) {
+      // cela correspond à une absence de 12 mois
+      hasYearLongAbsence = true;
+      return total + Math.round(item.totalAbsenceInMonth);
+    }
+    return total + Math.round(Math.min(item.totalAbsenceInMonth, 6));
   }, 0);
+
+  if (hasYearLongAbsence && !hasBenefitedFromReduction) {
+    totalAbsence -= 6;
+  }
+  return totalAbsence;
 };
 
 export class Seniority1996 extends SeniorityDefault<SupportedCc.default> {
