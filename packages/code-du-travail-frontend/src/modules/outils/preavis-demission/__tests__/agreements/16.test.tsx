@@ -69,7 +69,7 @@ describe("PreavisDemissionSimulator", () => {
       expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
 
       expect(
-        screen.queryAllByText(/Annexe IV, Article 15/)[0]
+        screen.queryAllByText(/Annexe IV, article 15/)[0]
       ).toBeInTheDocument();
     });
   });

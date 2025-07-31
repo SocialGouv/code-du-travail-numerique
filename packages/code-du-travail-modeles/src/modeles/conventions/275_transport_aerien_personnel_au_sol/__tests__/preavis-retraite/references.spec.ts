@@ -17,7 +17,7 @@ const EmployeesReferences = OuvriersReferences;
 
 const TechniciensReferences = [
   {
-    article: "Annexe II article 11",
+    article: "Annexe II Article 11",
     url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872146/?idConteneur=KALICONT000005635872",
   },
 ];
@@ -26,7 +26,7 @@ const AgentDeMaitriseReferences = TechniciensReferences;
 
 const CadresReferences = [
   {
-    article: "Annexe I article 10",
+    article: "Annexe I Article 10",
     url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872089/?idConteneur=KALICONT000005635872",
   },
 ];

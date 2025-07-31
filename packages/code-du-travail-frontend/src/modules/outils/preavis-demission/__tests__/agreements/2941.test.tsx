@@ -62,7 +62,7 @@ describe("PreavisDemissionSimulator", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 27/)[0]
+          screen.queryAllByText(/Titre IV, article 27/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -86,7 +86,7 @@ describe("PreavisDemissionSimulator", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 27/)[0]
+          screen.queryAllByText(/Titre IV, article 27/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -110,7 +110,7 @@ describe("PreavisDemissionSimulator", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 27/)[0]
+          screen.queryAllByText(/Titre IV, article 27/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -148,7 +148,7 @@ describe("PreavisDemissionSimulator", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 27/)[0]
+          screen.queryAllByText(/Titre IV, article 27/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -172,7 +172,7 @@ describe("PreavisDemissionSimulator", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 27/)[0]
+          screen.queryAllByText(/Titre IV, article 27/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -210,7 +210,7 @@ describe("PreavisDemissionSimulator", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 27/)[0]
+          screen.queryAllByText(/Titre IV, article 27/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -234,7 +234,7 @@ describe("PreavisDemissionSimulator", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Titre IV, Article 27/)[0]
+          screen.queryAllByText(/Titre IV, article 27/)[0]
         ).toBeInTheDocument();
       });
     });

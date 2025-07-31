@@ -121,7 +121,7 @@ describe("HeuresRechercheEmploi", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Annexe 1, Article 10/)[0]
+          screen.queryAllByText(/Annexe 1, article 10/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -153,7 +153,7 @@ describe("HeuresRechercheEmploi", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Annexe 3, Article 15/)[0]
+          screen.queryAllByText(/Annexe 3, article 15/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -185,7 +185,7 @@ describe("HeuresRechercheEmploi", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Annexe 3, Article 15/)[0]
+          screen.queryAllByText(/Annexe 3, article 15/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -288,7 +288,7 @@ describe("HeuresRechercheEmploi", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Annexe 1, Article 10/)[0]
+          screen.queryAllByText(/Annexe 1, article 10/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -320,7 +320,7 @@ describe("HeuresRechercheEmploi", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Annexe 3, Article 15/)[0]
+          screen.queryAllByText(/Annexe 3, article 15/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -352,7 +352,7 @@ describe("HeuresRechercheEmploi", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Annexe 3, Article 15/)[0]
+          screen.queryAllByText(/Annexe 3, article 15/)[0]
         ).toBeInTheDocument();
       });
     });

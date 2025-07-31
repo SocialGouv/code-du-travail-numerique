@@ -10,16 +10,12 @@ import { Footer } from "../../src/widgets";
 import {
   AgreementSearch,
   CalculateurIndemniteLicenciement,
-  DismissalProcess,
-  DureePreavisLicenciement,
 } from "../../src/outils";
 import Metas from "../../src/common/Metas";
 import { SITE_URL } from "../../src/config";
 import { getBySlugTools } from "../../src/api";
 
 const toolsBySlug = {
-  "preavis-licenciement": DureePreavisLicenciement,
-  "procedure-licenciement": DismissalProcess,
   "indemnite-licenciement": CalculateurIndemniteLicenciement,
   "convention-collective": AgreementSearch,
 };

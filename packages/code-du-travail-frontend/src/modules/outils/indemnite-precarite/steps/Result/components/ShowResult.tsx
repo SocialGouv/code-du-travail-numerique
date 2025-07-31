@@ -1,6 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import React from "react";
 import { Notification } from "@socialgouv/modeles-social";
+import { formatCurrency } from "src/modules/outils/common/utils/formatCurrency";
 
 type Props = {
   result?: number;
@@ -9,14 +10,6 @@ type Props = {
 
 const ShowResult: React.FC<Props> = ({ result, notifications }: Props) => {
   if (!result) return null;
-
-  const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat("fr-FR", {
-      style: "currency",
-      currency: "EUR",
-      minimumFractionDigits: 2,
-    }).format(amount);
-  };
 
   return (
     <>

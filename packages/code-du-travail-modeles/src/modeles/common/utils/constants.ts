@@ -13,6 +13,7 @@ export type AgreementInfo = {
   preavisDemission: SupportedTypes;
   ruptureConventionnelle: SupportedTypes;
   indemnitePrecarite: SupportedTypes;
+  preavisLicenciement: SupportedTypes;
 };
 
 export const supportedCcn: AgreementInfo[] = ccnSupported;

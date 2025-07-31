@@ -4,6 +4,7 @@ import {
   mergeIndemniteLicenciementModels,
   mergeIndemnitePrecariteModels,
   mergePreavisDemissionModels,
+  mergePreavisLicenciementModels,
   mergePreavisRetraiteModels,
   mergeRuptureConventionnelle,
 } from "../../internal/merger";
@@ -20,6 +21,7 @@ declare global {
   const modelsPreavisDemission: Record<string, any>;
   const modelsRuptureConventionnel: Record<string, any>;
   const modelsIndemnitePrecarite: Record<string, any>;
+  const modelsPreavisLicenciement: Record<string, any>;
   namespace jest {
     interface Matchers<R> {
       toContainTitre: () => R;
@@ -450,5 +452,6 @@ const replaceAll = (string: string, search: string, replace: string) => {
 (global as any).modelsPreavisDemission = mergePreavisDemissionModels();
 (global as any).modelsRuptureConventionnel = mergeRuptureConventionnelle();
 (global as any).modelsIndemnitePrecarite = mergeIndemnitePrecariteModels();
+(global as any).modelsPreavisLicenciement = mergePreavisLicenciementModels();
 
 export default undefined;

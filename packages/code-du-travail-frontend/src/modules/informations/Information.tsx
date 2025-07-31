@@ -11,10 +11,12 @@ import {
   EditoralContentReferenceBloc,
   GraphicContentPart,
 } from "@socialgouv/cdtn-types/build/hasura/editorial-content";
-import { QuestionnaireWrapper } from "./questionnaire";
 import { ContainerInformation } from "../layout/ContainerInformation";
 import { KeysToCamelCase } from "./type";
 import DisplayContent from "../common/DisplayContent";
+import { QuestionnaireWrapper } from "../outils/dismissal-process/questionnaire/QuestionnaireWrapper";
+import { BlueBlock } from "../common/BlueBlock";
+import DismissalProcessIcon from "../outils/dismissal-process/component/DismissalProcessIcon.svg";
 
 type Props = {
   date: string;
@@ -58,17 +60,24 @@ export const Information = ({
           <p className={fr.cx("fr-my-6w")}>Mis à jour le&nbsp;: {date}</p>
 
           {dismissalProcess && (
-            <QuestionnaireWrapper
-              name="dismissalProcess"
-              slug={slug}
+            <BlueBlock
+              id="info-situation"
               title="Quelle est votre situation ?"
+              titleLevel="h2"
+              picto={DismissalProcessIcon}
               className={fr.cx("fr-mb-6w")}
-            ></QuestionnaireWrapper>
+            >
+              <QuestionnaireWrapper
+                name="dismissalProcess"
+                slug={slug}
+                className={fr.cx("fr-ml-md-15v")}
+              ></QuestionnaireWrapper>
+            </BlueBlock>
           )}
         </>
       }
     >
-      <div className={fr.cx("fr-mb-6w")}>
+      <div className={fr.cx("fr-mb-6w")} id="contenu">
         {intro && <DisplayContent content={intro} titleLevel={2} />}
         {contents.length === 1 ? (
           <>

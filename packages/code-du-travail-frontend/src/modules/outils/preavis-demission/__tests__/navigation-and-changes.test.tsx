@@ -267,7 +267,7 @@ describe("PreavisDemissionSimulator - Navigation et changements", () => {
       });
       fireEvent.click(ui.next.get());
 
-      // Vérifier le résultat pour CC 86 (Employés = 1 mois, Article 29)
+      // Vérifier le résultat pour CC 86 (Employés = 1 mois, article 29)
       expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
       expect(screen.queryAllByText(/Article 29/)[0]).toBeInTheDocument();
 
