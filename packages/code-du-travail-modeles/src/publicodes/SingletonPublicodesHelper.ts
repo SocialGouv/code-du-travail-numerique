@@ -4,12 +4,14 @@ import {
   preavisRetraiteModeles,
   ruptureConventionnelleModeles,
   preavisDemissionModeles,
+  preavisLicenciementModeles,
 } from "..";
 import type { PublicodesInstance } from ".";
 import {
   IndemniteLicenciementPublicodes,
   IndemnitePrecaritePublicodes,
   PreavisDemissionPublicodes,
+  PreavisLicenciementPublicodes,
   PreavisRetraitePublicodes,
   PublicodesSimulator,
   RuptureConventionnellePublicodes,
@@ -68,6 +70,10 @@ class SingletonPublicodesHelper<T extends PublicodesSimulator> {
         return new PreavisDemissionPublicodes(rules, idcc);
       case PublicodesSimulator.INDEMNITE_PRECARITE:
         return new IndemnitePrecaritePublicodes(rules, idcc);
+      case PublicodesSimulator.PREAVIS_LICENCIEMENT:
+        return new PreavisLicenciementPublicodes(rules, idcc);
+      case PublicodesSimulator.HEURES_RECHERCHE_EMPLOI:
+        throw new Error("Heures Recherche Emploi simulator not implemented");
       default:
         throw new Error("Simulator not supported");
     }
@@ -87,6 +93,10 @@ class SingletonPublicodesHelper<T extends PublicodesSimulator> {
         return preavisDemissionModeles;
       case PublicodesSimulator.INDEMNITE_PRECARITE:
         return indemnitePrecariteModeles;
+      case PublicodesSimulator.PREAVIS_LICENCIEMENT:
+        return preavisLicenciementModeles;
+      case PublicodesSimulator.HEURES_RECHERCHE_EMPLOI:
+        throw new Error("Heures Recherche Emploi simulator not implemented");
       default:
         throw new Error("Simulator not supported");
     }

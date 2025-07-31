@@ -40,7 +40,7 @@ describe("HeuresRechercheEmploi", () => {
       ).toBeInTheDocument();
 
       expect(
-        screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+        screen.queryAllByText(/Chapitre VI, article 1/)[0]
       ).toBeInTheDocument();
     });
   });
@@ -69,7 +69,7 @@ describe("HeuresRechercheEmploi", () => {
       ).toBeInTheDocument();
 
       expect(
-        screen.queryAllByText(/Chapitre VI, Article 1/)[0]
+        screen.queryAllByText(/Chapitre VI, article 1/)[0]
       ).toBeInTheDocument();
     });
   });
@@ -90,7 +90,7 @@ describe("HeuresRechercheEmploi", () => {
       ).toBeInTheDocument();
 
       expect(
-        screen.queryAllByText(/Chapitre V, Article 3/)[0]
+        screen.queryAllByText(/Chapitre V, article 3/)[0]
       ).toBeInTheDocument();
     });
   });

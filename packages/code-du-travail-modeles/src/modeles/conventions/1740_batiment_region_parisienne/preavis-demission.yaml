@@ -16,7 +16,7 @@ contrat salarié . convention collective . ouvriers bâtiment région parisienne
   valeur: 2 jours
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
-    "article 1.1.9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000005800996&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id
+    "Article 1.1.9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000005800996&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id
 
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . ancienneté Plus de 3 mois:
   applicable si: ancienneté = 'Plus de 3 mois'
@@ -26,4 +26,4 @@ contrat salarié . convention collective . ouvriers bâtiment région parisienne
   valeur: 2 semaines
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
-    "article 1.1.9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000005800996&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id
+    "Article 1.1.9": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000005800996&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id

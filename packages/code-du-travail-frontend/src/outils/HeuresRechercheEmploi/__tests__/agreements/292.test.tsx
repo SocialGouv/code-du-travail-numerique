@@ -57,7 +57,7 @@ describe("HeuresRechercheEmploi", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Avenant Cadres, Article 8/)[0]
+          screen.queryAllByText(/Avenant Cadres, article 8/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -124,7 +124,7 @@ describe("HeuresRechercheEmploi", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Avenant Cadres, Article 8/)[0]
+          screen.queryAllByText(/Avenant Cadres, article 8/)[0]
         ).toBeInTheDocument();
       });
     });

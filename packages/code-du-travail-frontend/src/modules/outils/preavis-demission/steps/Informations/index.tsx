@@ -2,9 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { PreavisDemissionContext, usePreavisDemissionStore } from "../store";
 import { fr } from "@codegouvfr/react-dsfr";
 import { PubliQuestion } from "src/modules/outils/indemnite-depart/steps/Informations/components/PubliQuestion";
-import { Note } from "./components/Note";
-import { eventEmitter } from "src/modules/outils/common/events/emitter";
-import { EventType } from "src/modules/outils/common/events/events";
+import { Note } from "src/modules/outils/preavis-retraite/steps/Informations/components/Note";
 
 const InformationsStepComponent = (): JSX.Element => {
   const store = useContext(PreavisDemissionContext);

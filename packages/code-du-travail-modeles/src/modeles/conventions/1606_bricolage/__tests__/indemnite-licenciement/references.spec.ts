@@ -17,7 +17,7 @@ const ReferencesCadres50 = [
     url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005870734?idConteneur=KALICONT000005635871",
   },
   {
-    article: "Article 10 de l'Annexe Cadres",
+    article: "Article 10 de l'annexe Cadres",
     url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005870788?idConteneur=KALICONT000005635871",
   },
 ];
