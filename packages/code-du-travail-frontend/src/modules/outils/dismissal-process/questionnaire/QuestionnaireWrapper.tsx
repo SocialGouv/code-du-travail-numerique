@@ -1,20 +1,19 @@
+"use client";
 import { Questionnaire } from "./Questionnaire";
-import { withStore, Provider } from "../store";
+import { Provider, withStore } from "./store";
 import { useRef } from "react";
 
 type QuestionnaireWrapperProps = {
   name: string;
   slug: string;
-  title: string;
-  personnalizedTitle?: string;
+  className?: string;
   widgetMode?: boolean;
 };
 
 export const QuestionnaireWrapper = ({
   name,
   slug,
-  title,
-  personnalizedTitle,
+  className,
   widgetMode = false,
 }: QuestionnaireWrapperProps) => {
   const store = useRef(withStore(name)).current;
@@ -22,10 +21,9 @@ export const QuestionnaireWrapper = ({
     <Provider value={store}>
       <Questionnaire
         slug={slug}
-        title={title}
-        personnalizedTitle={personnalizedTitle}
+        className={className}
         widgetMode={widgetMode}
-      ></Questionnaire>
+      />
     </Provider>
   );
 };
