@@ -139,9 +139,7 @@ describe("CalculateurPreavisLicenciement", () => {
     });
 
     it("should display expected answer", () => {
-      expect(
-        screen.queryAllByText(/il n'y a pas de préavis/g)[0]
-      ).toBeInTheDocument();
+      expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
       expect(screen.queryAllByText(/Article 4.4.1.1/)[0]).toBeInTheDocument();
     });
   });
