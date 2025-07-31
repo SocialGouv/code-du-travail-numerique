@@ -23,51 +23,32 @@ const getTotalAbsenceNonPro = (
   dSortie: Date,
   absencePeriods: Absence[]
 ): number => {
+  let hasBenefitedFromReduction = false;
+  let hasYearLongAbsence = false;
   const absences = absencePeriods.filter(
     (item) => item.motif.key === MotifKeys.maladieNonPro
   );
+  const years = splitBySeniorityCalendarYear(dEntree, dSortie);
 
-  let totAbsenceNonPro = 0;
+  const absencesBySeniorityYear = accumulateAbsenceByYear(absences, years);
 
-  for (const absence of absences) {
-    if (absence.durationInMonth) {
-      if (absence.durationInMonth <= 6) {
-        const years = splitBySeniorityCalendarYear(dEntree, dSortie);
-        const absencesBySeniorityYear = accumulateAbsenceByYear(
-          absences,
-          years
-        );
-
-        const totalCountingForSeniority = absencesBySeniorityYear.reduce(
-          (total) => {
-            return total;
-          },
-          0
-        );
-
-        totAbsenceNonPro += totalCountingForSeniority;
-      } else if (absence.durationInMonth > 6) {
-        let alreadyCounted = false;
-        const years = splitBySeniorityCalendarYear(dEntree, dSortie);
-        const absencesBySeniorityYear = accumulateAbsenceByYear(
-          absences,
-          years
-        );
-        absencesBySeniorityYear.forEach((absenceByYear) => {
-          if (
-            absenceByYear.totalAbsenceInMonth > 6 &&
-            !alreadyCounted &&
-            absence.durationInMonth !== undefined
-          ) {
-            alreadyCounted = true;
-            totAbsenceNonPro += Math.max(absence.durationInMonth - 6, 6);
-          }
-        });
-      }
+  let totalAbsence = absencesBySeniorityYear.reduce((total, item) => {
+    if (item.totalAbsenceInMonth <= 6 && item.totalAbsenceInMonth > 0) {
+      hasBenefitedFromReduction = true;
+      return total;
     }
-  }
+    if (item.totalAbsenceInMonth > 11.9) {
+      // cela correspond à une absence de 12 mois
+      hasYearLongAbsence = true;
+      return total + Math.round(item.totalAbsenceInMonth);
+    }
+    return total + Math.round(Math.min(item.totalAbsenceInMonth, 6));
+  }, 0);
 
-  return totAbsenceNonPro;
+  if (hasYearLongAbsence && !hasBenefitedFromReduction) {
+    totalAbsence -= 6;
+  }
+  return totalAbsence;
 };
 
 export class Seniority1996 extends SeniorityDefault<SupportedCc.default> {
