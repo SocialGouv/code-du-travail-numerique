@@ -10,14 +10,12 @@ import { Footer } from "../../src/widgets";
 import {
   AgreementSearch,
   CalculateurIndemniteLicenciement,
-  DismissalProcess,
 } from "../../src/outils";
 import Metas from "../../src/common/Metas";
 import { SITE_URL } from "../../src/config";
 import { getBySlugTools } from "../../src/api";
 
 const toolsBySlug = {
-  "procedure-licenciement": DismissalProcess,
   "indemnite-licenciement": CalculateurIndemniteLicenciement,
   "convention-collective": AgreementSearch,
 };

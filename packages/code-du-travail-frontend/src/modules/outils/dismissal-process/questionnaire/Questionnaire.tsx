@@ -1,22 +1,18 @@
-import styled from "styled-components";
-import { theme } from "@socialgouv/cdtn-ui";
+import { useContext, useEffect, useState } from "react";
 import { Summary } from "./Summary";
 import { Question } from "./Question";
-import { DossierLicenciementContext, useStore } from "../store";
-import { PreviousResponse } from "../type";
-import { useContext, useEffect, useState } from "react";
+import { DossierLicenciementContext, useStore } from "./store";
+import { PreviousResponse } from "./type";
 
 type QuestionnaireProps = {
   slug: string;
-  title: string;
-  personnalizedTitle?: string;
+  className?: string;
   widgetMode: boolean;
 };
 
 export const Questionnaire = ({
   slug,
-  title,
-  personnalizedTitle,
+  className,
   widgetMode,
 }: QuestionnaireProps) => {
   const store = useContext(DossierLicenciementContext);
@@ -36,12 +32,7 @@ export const Questionnaire = ({
     }
   }, [getSlugResponses, slug]);
   return (
-    <div>
-      <StyledTitle>
-        {isPersonnalizedMode(slug) && personnalizedTitle
-          ? personnalizedTitle
-          : title}
-      </StyledTitle>
+    <div className={className}>
       <Summary
         responses={slugResponses ?? previousResponses}
         withLink={!isPersonnalizedMode(slug)}
@@ -50,13 +41,3 @@ export const Questionnaire = ({
     </div>
   );
 };
-
-const { breakpoints } = theme;
-
-const StyledTitle = styled.div`
-  font-weight: 600;
-  font-size: 22px;
-  @media (max-width: ${breakpoints.mobile}) {
-    font-size: 18px;
-  }
-`;
