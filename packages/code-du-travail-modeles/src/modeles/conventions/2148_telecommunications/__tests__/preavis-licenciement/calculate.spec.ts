@@ -68,14 +68,16 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
     },
     {
-      expectedResult: { expectedValue: 0 },
+      expectedResult: { expectedValue: 3, unit: "mois" },
       expectedReferences: [
         {
           article: "Article 4.4.1.1",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000022416125&cidTexte=KALITEXT000005677399&dateTexte=29990101&categorieLien=id",
         },
       ],
-      expectedNotifications: [],
+      expectedNotifications: [
+        "Consultez votre contrat de travail pour connaître la durée exacte du préavis de licenciement applicable. Cette durée ne peut être inférieure à 3 mois.",
+      ],
       situation: {
         "contrat salarié . convention collective . télécommunications . groupe":
           "'Hors classification'",
