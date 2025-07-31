@@ -49,9 +49,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833",
         },
       ],
-      expectedNotifications: [
-        "L'employeur et le salarié peuvent décider d'une durée plus longue.",
-      ],
+      expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle":
           "'Employés, Techniciens ou Agents de maîtrise ETAM'",
@@ -103,9 +101,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000047513833#KALIARTI000047513833",
         },
       ],
-      expectedNotifications: [
-        "L'employeur et le salarié peuvent décider d'une durée plus longue.",
-      ],
+      expectedNotifications: [],
       situation: {
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle":
           "'Ingénieurs, Cadres'",

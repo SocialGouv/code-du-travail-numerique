@@ -12,7 +12,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 4.4",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177",
         },
       ],
       expectedNotifications: [],
@@ -28,7 +28,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 4.4",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177",
         },
       ],
       expectedNotifications: [],
@@ -44,7 +44,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 4.4",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177",
         },
       ],
       expectedNotifications: [],
@@ -60,7 +60,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 4.4",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177",
         },
       ],
       expectedNotifications: [],
@@ -76,7 +76,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 4.4",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177",
         },
       ],
       expectedNotifications: [],
@@ -92,7 +92,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 4.4",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177",
         },
       ],
       expectedNotifications: [],
@@ -108,7 +108,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 4.4",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177",
         },
       ],
       expectedNotifications: [],
@@ -124,7 +124,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 4.4",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177",
         },
       ],
       expectedNotifications: [],
@@ -142,7 +142,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 4.4",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177",
         },
       ],
       expectedNotifications: [],
@@ -160,7 +160,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 4.4",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177",
         },
       ],
       expectedNotifications: [],
@@ -178,7 +178,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 4.4",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=5293A8E5200C94C59F7A37734B347E9F.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000044530995/?idConteneur=KALICONT000005635177",
         },
       ],
       expectedNotifications: [],

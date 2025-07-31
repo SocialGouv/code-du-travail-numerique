@@ -12,7 +12,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 9.1",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=89093E1309DF68E5F62690396DFAA9A2.tplgfr44s_1?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000047518146/?idConteneur=KALICONT000005635435",
         },
       ],
       expectedNotifications: [],
@@ -26,7 +26,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 9.1",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=89093E1309DF68E5F62690396DFAA9A2.tplgfr44s_1?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000047518146/?idConteneur=KALICONT000005635435",
         },
       ],
       expectedNotifications: [],
@@ -42,7 +42,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 9.1",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=89093E1309DF68E5F62690396DFAA9A2.tplgfr44s_1?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000047518146/?idConteneur=KALICONT000005635435",
         },
       ],
       expectedNotifications: [],
@@ -58,7 +58,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 9.1",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=89093E1309DF68E5F62690396DFAA9A2.tplgfr44s_1?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000047518146/?idConteneur=KALICONT000005635435",
         },
       ],
       expectedNotifications: [],
