@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.186.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.185.0...v4.186.0) (2025-07-31)
+
+
+### Bug Fixes
+
+* **accessibility:** focus sur le titre à chaque nouvelle étape du simulateur ([#6661](https://github.com/SocialGouv/code-du-travail-numerique/issues/6661)) ([b5aa826](https://github.com/SocialGouv/code-du-travail-numerique/commit/b5aa82607b438815540522ffee3a7f7e86b7d612))
+* **agreement:** amélioration de la structure HTML pour l'accessibilité ([#6684](https://github.com/SocialGouv/code-du-travail-numerique/issues/6684)) ([2109759](https://github.com/SocialGouv/code-du-travail-numerique/commit/2109759ee60ec69d44a073d02ba6a617b7e74226))
+* **autocomplete:** retrait de la propriété aria-labelledby et correctif sur la propriété for du label ([#6687](https://github.com/SocialGouv/code-du-travail-numerique/issues/6687)) ([a442df8](https://github.com/SocialGouv/code-du-travail-numerique/commit/a442df89ee4bf83eac0c2193a0ac44b91557025d))
+* **contrib:** amélioration de l'accessibilité du formulaire ([#6663](https://github.com/SocialGouv/code-du-travail-numerique/issues/6663)) ([bbf9146](https://github.com/SocialGouv/code-du-travail-numerique/commit/bbf91468062dbc30ad471d443092a26fb016d863))
+* **droit-du-travail:** gestion du focus sur les cartes ([#6667](https://github.com/SocialGouv/code-du-travail-numerique/issues/6667)) ([704a79a](https://github.com/SocialGouv/code-du-travail-numerique/commit/704a79a156c6c63291f1c8f58700c24162bdeefb))
+* **indemnite-licenciement:** correction de l'ancienneté de la 1996 ([#6717](https://github.com/SocialGouv/code-du-travail-numerique/issues/6717)) ([e95a3ac](https://github.com/SocialGouv/code-du-travail-numerique/commit/e95a3ac2f0c8c0f9b829d07662e0de836b8cdc35))
+* performance home ([#6641](https://github.com/SocialGouv/code-du-travail-numerique/issues/6641)) ([0ed33d3](https://github.com/SocialGouv/code-du-travail-numerique/commit/0ed33d3abdee7be3a987bbffbb5e66c8588297d5))
+* **preavis-licenciement:** correction d'un bug sur la 2148 ([#6721](https://github.com/SocialGouv/code-du-travail-numerique/issues/6721)) ([409f1ea](https://github.com/SocialGouv/code-du-travail-numerique/commit/409f1ea4cc19ce3350ced0cb313de7162012c6a4))
+* **rupture-co:** amélioration de l'accessibilité sur la satisfaction ([#6668](https://github.com/SocialGouv/code-du-travail-numerique/issues/6668)) ([0541c78](https://github.com/SocialGouv/code-du-travail-numerique/commit/0541c78fdcc6f26c3f76c3f5c0c441512a89a744))
+* **satisfaction:** amélioration de l'accessibilité sur le formulaire ([#6688](https://github.com/SocialGouv/code-du-travail-numerique/issues/6688)) ([a013cda](https://github.com/SocialGouv/code-du-travail-numerique/commit/a013cda1bb6363174ccf5c7c8e0c45fbfff8ceb8))
+* **search:** gestion du focus sur le "plus de résultat" ([#6664](https://github.com/SocialGouv/code-du-travail-numerique/issues/6664)) ([bdc804d](https://github.com/SocialGouv/code-du-travail-numerique/commit/bdc804d3da5541d7eb499276c097cf9b5b96a038))
+* **stats:** amélioration de la hiérarchie des titres ([#6682](https://github.com/SocialGouv/code-du-travail-numerique/issues/6682)) ([2415b9c](https://github.com/SocialGouv/code-du-travail-numerique/commit/2415b9c8b7e2f240acb731f4a40913be936dd06a))
+* **travail:** ajout d'un indicateur nouvelle fenêtre sur les liens ([#6685](https://github.com/SocialGouv/code-du-travail-numerique/issues/6685)) ([8ca0cfe](https://github.com/SocialGouv/code-du-travail-numerique/commit/8ca0cfe202f09f28ec62e6064a44b6235f14e7f2))
+
+
+### Features
+
+* **indemnite-precarite:** passage en DSFR du simulateur ([#6651](https://github.com/SocialGouv/code-du-travail-numerique/issues/6651)) ([8d3f94a](https://github.com/SocialGouv/code-du-travail-numerique/commit/8d3f94ad930e47b33d57f9bc0c4b4d49fa6291f3))
+* **licenciement:** migration de l'outil comprendre sa procédure de licenciement ([#6716](https://github.com/SocialGouv/code-du-travail-numerique/issues/6716)) ([0720510](https://github.com/SocialGouv/code-du-travail-numerique/commit/072051003b4c1da8fc1e38f4c98cc29c4068e717))
+* **preavis licenciement:** passage du simulateur en dsfr ([#6715](https://github.com/SocialGouv/code-du-travail-numerique/issues/6715)) ([cd07ec4](https://github.com/SocialGouv/code-du-travail-numerique/commit/cd07ec4302cae8bd3176f7bf51f73830bda5bd24))
+* **preavis-demission:** passage en DSFR du simulateur ([#6597](https://github.com/SocialGouv/code-du-travail-numerique/issues/6597)) ([5157292](https://github.com/SocialGouv/code-du-travail-numerique/commit/5157292cbad2bcc3f1c2c50ea928f1f8f5ff100f))
+* upgrade version for react dsfr ([#6611](https://github.com/SocialGouv/code-du-travail-numerique/issues/6611)) ([b7332e6](https://github.com/SocialGouv/code-du-travail-numerique/commit/b7332e68ae1a9e3d7563e11a1bed75a061fbcc66))
+
+
+
+
+
 # [4.185.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.184.0...v4.185.0) (2025-07-03)
 
 

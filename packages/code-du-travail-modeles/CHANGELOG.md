@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.186.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.185.0...v4.186.0) (2025-07-31)
+
+
+### Bug Fixes
+
+* **indemnite-licenciement:** correction de l'ancienneté de la 1996 ([#6717](https://github.com/SocialGouv/code-du-travail-numerique/issues/6717)) ([e95a3ac](https://github.com/SocialGouv/code-du-travail-numerique/commit/e95a3ac2f0c8c0f9b829d07662e0de836b8cdc35))
+* **preavis-licenciement:** correction d'un bug sur la 2148 ([#6721](https://github.com/SocialGouv/code-du-travail-numerique/issues/6721)) ([409f1ea](https://github.com/SocialGouv/code-du-travail-numerique/commit/409f1ea4cc19ce3350ced0cb313de7162012c6a4))
+
+
+### Features
+
+* **indemnite-precarite:** passage en DSFR du simulateur ([#6651](https://github.com/SocialGouv/code-du-travail-numerique/issues/6651)) ([8d3f94a](https://github.com/SocialGouv/code-du-travail-numerique/commit/8d3f94ad930e47b33d57f9bc0c4b4d49fa6291f3))
+* **preavis licenciement:** passage du simulateur en dsfr ([#6715](https://github.com/SocialGouv/code-du-travail-numerique/issues/6715)) ([cd07ec4](https://github.com/SocialGouv/code-du-travail-numerique/commit/cd07ec4302cae8bd3176f7bf51f73830bda5bd24))
+* **preavis-demission:** passage en DSFR du simulateur ([#6597](https://github.com/SocialGouv/code-du-travail-numerique/issues/6597)) ([5157292](https://github.com/SocialGouv/code-du-travail-numerique/commit/5157292cbad2bcc3f1c2c50ea928f1f8f5ff100f))
+
+
+
+
+
 # [4.185.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.184.0...v4.185.0) (2025-07-03)
 
 **Note:** Version bump only for package @socialgouv/modeles-social
