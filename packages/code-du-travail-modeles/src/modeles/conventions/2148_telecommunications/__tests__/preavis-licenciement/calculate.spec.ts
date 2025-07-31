@@ -76,7 +76,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         },
       ],
       expectedNotifications: [
-        "Consultez votre contrat de travail pour connaître la durée exacte du préavis de licenciement applicable.",
+        "Consultez votre contrat de travail pour connaître la durée exacte du préavis de licenciement applicable. Cette durée ne peut être inférieure à 3 mois.",
       ],
       situation: {
         "contrat salarié . convention collective . télécommunications . groupe":
