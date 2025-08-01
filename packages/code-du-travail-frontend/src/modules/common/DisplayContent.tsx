@@ -7,11 +7,10 @@ import parse, {
 } from "html-react-parser";
 import { toUrl, xssWrapper } from "../../lib";
 import Alert from "@codegouvfr/react-dsfr/Alert";
-import { ElementType } from "react";
+import React, { ElementType } from "react";
 import { AccordionWithAnchor } from "./AccordionWithAnchor";
 import { v4 as generateUUID } from "uuid";
 import { fr } from "@codegouvfr/react-dsfr";
-import ImageWrapper from "./ImageWrapper";
 import { Tile } from "@codegouvfr/react-dsfr/Tile";
 import Link from "./Link";
 import { slugify } from "@socialgouv/cdtn-utils";
@@ -290,6 +289,7 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
           const pdfName = domNode.attribs["data-pdf"];
           const pdfSize = domNode.attribs["data-pdf-size"];
           const pictoName = domNode.attribs["data-infographic"];
+          const pictoAlt = domNode.attribs["data-infographic-title"];
           // Remove the img tag. It contains an absolute path. We need to build our own path.
           const firstChild =
             domNode.children.length > 0 ? domNode.children[0] : undefined;
@@ -303,7 +303,11 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
 
           return (
             <div>
-              <ImageWrapper altText={""} src={toUrl(pictoName)} />
+              <img
+                src={toUrl(pictoName)}
+                alt={`alt="infographie ${pictoAlt ?? ""}. Description détaillée ci-après.`}
+                aria-hidden="true"
+              />
               {renderChildren(
                 domNode,
                 true,
