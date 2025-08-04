@@ -23,7 +23,7 @@ export const AgreementSearch = () => {
         onAgreementSelect={(agreement) => {
           if (agreement) {
             emitSelectEvent(
-              `idcc${agreement.id}`,
+              `idcc${agreement.num}`,
               "Trouver sa convention collective"
             );
           }
