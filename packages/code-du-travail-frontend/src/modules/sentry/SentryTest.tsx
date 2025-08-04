@@ -11,6 +11,9 @@ export const SentryTest = () => {
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
+      if (!event.key) {
+        return;
+      }
       const newText = typedText + event.key.toLowerCase();
       setTypedText(newText.slice(-6)); // Keep only last 6 characters
 
