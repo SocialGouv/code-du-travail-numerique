@@ -70,20 +70,11 @@ const ResultStepComponent = () => {
         </p>
       ) : (
         <>
-          {isResultValid ? (
-            <>
-              <ShowResult
-                result={result}
-                notifications={resultNotifications || []}
-              />
-            </>
-          ) : (
-            <p>
-              D’après les éléments saisis, dans votre situation, la convention
-              collective ne prévoit pas d’heures d’absence autorisée pour
-              rechercher un emploi.
-            </p>
-          )}
+          <ShowResult
+            result={result}
+            notifications={resultNotifications || []}
+            isResultValid={isResultValid}
+          />
 
           <Warning isResultValid={isResultValid} />
 

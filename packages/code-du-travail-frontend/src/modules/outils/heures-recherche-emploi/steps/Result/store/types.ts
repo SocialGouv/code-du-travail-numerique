@@ -9,7 +9,6 @@ export type ResultStoreInput = {
   resultNotifications?: Notification[];
   resultReferences?: References[];
   isAgreementSupported: boolean;
-  isRupturePeriodeEssai?: boolean;
   isRuptureConventionnelle?: boolean;
   isResultValid?: boolean;
 };

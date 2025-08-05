@@ -51,17 +51,11 @@ const createResultStore: StoreSliceWrapperHeuresRechercheEmploi<
         state.informationsData.input.publicodesInformations
       );
 
-      const isRupturePeriodeEssai =
-        state.informationsData.input.publicodesInformations.some(
-          (info) =>
-            info.question.name === "Type de rupture du contrat de travail" &&
-            info.info === "'Rupture de la période d'essai'"
-        );
-
       const isRuptureConventionnelle =
         state.informationsData.input.publicodesInformations.some(
           (info) =>
-            info.question.name === "Type de rupture du contrat de travail" &&
+            info.question.rule.titre ===
+              "Type de rupture du contrat de travail" &&
             info.info === "'Rupture conventionnelle'"
         );
 
@@ -81,7 +75,7 @@ const createResultStore: StoreSliceWrapperHeuresRechercheEmploi<
         isResultValid =
           publicodesCalculation.result !== undefined &&
           publicodesCalculation.result.value !== null &&
-          publicodesCalculation.result.value !== "''";
+          publicodesCalculation.result.value !== "";
         result = publicodesCalculation.result;
         resultNotifications = publicodesCalculation.notifications;
         resultReferences = publicodesCalculation.references;
@@ -98,7 +92,6 @@ const createResultStore: StoreSliceWrapperHeuresRechercheEmploi<
           state.resultData.input.resultNotifications = resultNotifications;
           state.resultData.input.resultReferences = resultReferences;
           state.resultData.error.errorPublicodes = errorPublicodes;
-          state.resultData.input.isRupturePeriodeEssai = isRupturePeriodeEssai;
           state.resultData.input.isRuptureConventionnelle =
             isRuptureConventionnelle;
           state.resultData.input.isResultValid = isResultValid;

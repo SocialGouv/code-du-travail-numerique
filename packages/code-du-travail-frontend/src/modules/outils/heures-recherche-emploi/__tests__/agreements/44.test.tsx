@@ -1,4 +1,4 @@
-import { HeuresRechercheEmploi } from "../../index";
+import { CalculateurHeuresRechercheEmploi } from "../../HeuresRechercheEmploiSimulator";
 import { ui } from "../ui";
 import { fireEvent, render, screen } from "@testing-library/react";
 
@@ -18,7 +18,7 @@ Storage.prototype.getItem = jest.fn(
 
 describe("HeuresRechercheEmploi", () => {
   beforeEach(() => {
-    render(<HeuresRechercheEmploi icon={""} title={""} displayTitle={""} />);
+    render(<CalculateurHeuresRechercheEmploi title={""} />);
     fireEvent.click(ui.introduction.startButton.get());
 
     fireEvent.click(ui.next.get());
@@ -26,9 +26,14 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 1| Démission", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("typeRupture"), {
-        target: { value: "1| Démission" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - industries chimiques - typeRupture"
+        ),
+        {
+          target: { value: "'Démission'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -221,8 +226,8 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 7| Rupture de la période d'essai", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("typeRupture"), {
-        target: { value: "7| Rupture de la période d'essai" },
+      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - industries chimiques - typeRupture"), {
+        target: { value: "'Rupture de la période d'essai'" },
       });
       fireEvent.click(ui.next.get());
     });
@@ -505,8 +510,8 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 3| Licenciement", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("typeRupture"), {
-        target: { value: "3| Licenciement" },
+      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - industries chimiques - typeRupture"), {
+        target: { value: "'Licenciement'" },
       });
       fireEvent.click(ui.next.get());
     });

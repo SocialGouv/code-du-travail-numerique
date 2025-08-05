@@ -1,15 +1,30 @@
-import { byTestId, byText } from "testing-library-selector";
-import { ui as uiCommon } from "../../__tests__/ui";
+import { byTestId, byText, byTitle } from "testing-library-selector";
 
 export const ui = {
-  ...uiCommon,
-  typeRupture: {
-    input: byTestId("typeRupture"),
+  introduction: {
+    startButton: byText("Commencer"),
   },
-  agreement3239: {
-    searchResult: byText(/Particuliers employeurs et emploi à domicile/i),
-    categoryProInput: byTestId("criteria.catégorie professionnelle"),
-    durationInput: byTestId("criteria.durée du travail"),
-    seniorityInput: byTestId("criteria.ancienneté"),
+  agreement: {
+    agreement: byText(
+      "Je sais quelle est ma convention collective et je la saisis."
+    ),
+    unknownAgreement: byText(
+      "Je ne sais pas quelle est ma convention collective et je la recherche."
+    ),
+    agreementInput: byTestId("AgreementSearchAutocomplete"),
+    agreementInputConfirm: byText(
+      /Vous avez sélectionné la convention collective/
+    ),
+    agreementCompanyInput: byTestId("enterprise-search-input"),
+    agreementCompanyInputAsk: byText(
+      "Précisez et sélectionnez votre entreprise"
+    ),
+    agreementCompanyInputConfirm: byText(/Vous avez sélectionné l'entreprise/),
   },
+  next: byText("Suivant"),
+  previous: byText("Précédent"),
+  activeStep: byTitle("onglet actif"),
+  warning: byText("Attention"),
+  print: byText("Imprimer le résultat"),
+  viewResultDetail: byText("Voir le détail du calcul"),
 };

@@ -1,5 +1,4 @@
-import { HeuresRechercheEmploi } from "../../index";
-import { ui } from "../ui";
+import { CalculateurHeuresRechercheEmploi } from "../../HeuresRechercheEmploiSimulator";
 import { fireEvent, render, screen } from "@testing-library/react";
 
 jest.spyOn(Storage.prototype, "setItem");
@@ -18,7 +17,7 @@ Storage.prototype.getItem = jest.fn(
 
 describe("HeuresRechercheEmploi", () => {
   beforeEach(() => {
-    render(<HeuresRechercheEmploi icon={""} title={""} displayTitle={""} />);
+    render(<CalculateurHeuresRechercheEmploi title={""} />);
     fireEvent.click(ui.introduction.startButton.get());
 
     fireEvent.click(ui.next.get());
@@ -26,7 +25,7 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 2| Démission ou licenciement", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("typeRupture"), {
+      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - pharmacie - typeRupture"), {
         target: { value: "2| Démission ou licenciement" },
       });
       fireEvent.click(ui.next.get());
@@ -144,8 +143,8 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 7| Rupture de la période d'essai", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("typeRupture"), {
-        target: { value: "7| Rupture de la période d'essai" },
+      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - pharmacie - typeRupture"), {
+        target: { value: "'Rupture de la période d'essai'" },
       });
       fireEvent.click(ui.next.get());
     });
