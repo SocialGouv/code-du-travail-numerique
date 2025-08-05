@@ -1,5 +1,6 @@
 import { CalculateurHeuresRechercheEmploi } from "../../HeuresRechercheEmploiSimulator";
 import { fireEvent, render, screen } from "@testing-library/react";
+import { ui } from "../ui";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -25,18 +26,25 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 1| Démission", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - habillement textiles commerce de détail - typeRupture"), {
-        target: { value: "'Démission'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle"
+        ),
+        {
+          target: { value: "'Démission'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.catégorie professionnelle = 47| Agents de maîtrise et Cadres", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle Agents de maîtrise et Cadres - durée du travail"
+          ),
           {
-            target: { value: "47| Agents de maîtrise et Cadres" },
+            target: { value: "'Agents de maîtrise et Cadres'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -44,9 +52,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du travail = 1| Temps complet", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du travail"), {
-            target: { value: "1| Temps complet" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle Agents de maîtrise et Cadres - durée du travail"
+            ),
+            {
+              target: { value: "'Temps complet'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -71,9 +84,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du travail = 2| Temps partiel", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du travail"), {
-            target: { value: "2| Temps partiel" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle"
+            ),
+            {
+              target: { value: "'Temps partiel'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -100,9 +118,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 16| Employés", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle Employés - durée du travail"
+          ),
           {
-            target: { value: "16| Employés" },
+            target: { value: "'Employés'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -110,9 +130,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du travail = 2| Temps partiel", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du travail"), {
-            target: { value: "2| Temps partiel" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle Employés - durée du travail"
+            ),
+            {
+              target: { value: "'Temps partiel'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -137,9 +162,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du travail = 1| Temps complet", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du travail"), {
-            target: { value: "1| Temps complet" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle"
+            ),
+            {
+              target: { value: "'Temps complet'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -166,18 +196,25 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 3| Licenciement", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - habillement textiles commerce de détail - typeRupture"), {
-        target: { value: "'Licenciement'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Licenciement - catégorie professionnelle"
+        ),
+        {
+          target: { value: "'Licenciement'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.catégorie professionnelle = 47| Agents de maîtrise et Cadres", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Licenciement - catégorie professionnelle Agents de maîtrise et Cadres - durée du travail"
+          ),
           {
-            target: { value: "47| Agents de maîtrise et Cadres" },
+            target: { value: "'Agents de maîtrise et Cadres'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -185,9 +222,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du travail = 1| Temps complet", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du travail"), {
-            target: { value: "1| Temps complet" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle Agents de maîtrise et Cadres - durée du travail"
+            ),
+            {
+              target: { value: "'Temps complet'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -210,9 +252,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du travail = 2| Temps partiel", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du travail"), {
-            target: { value: "2| Temps partiel" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Licenciement - catégorie professionnelle"
+            ),
+            {
+              target: { value: "'Temps partiel'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -239,9 +286,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 16| Employés", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle Employés - durée du travail"
+          ),
           {
-            target: { value: "16| Employés" },
+            target: { value: "'Employés'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -249,9 +298,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du travail = 1| Temps complet", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du travail"), {
-            target: { value: "1| Temps complet" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle Employés - durée du travail"
+            ),
+            {
+              target: { value: "'Temps complet'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -276,9 +330,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du travail = 2| Temps partiel", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du travail"), {
-            target: { value: "2| Temps partiel" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Licenciement - catégorie professionnelle"
+            ),
+            {
+              target: { value: "'Temps partiel'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -305,18 +364,25 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 7| Rupture de la période d'essai", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - habillement textiles commerce de détail - typeRupture"), {
-        target: { value: "'Rupture de la période d'essai'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+        ),
+        {
+          target: { value: "'Rupture de la période d'essai'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.catégorie professionnelle = 47| Agents de maîtrise et Cadres", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Rupture de la période d'essai - catégorie professionnelle Agents de maîtrise et Cadres - durée du travail"
+          ),
           {
-            target: { value: "47| Agents de maîtrise et Cadres" },
+            target: { value: "'Agents de maîtrise et Cadres'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -324,9 +390,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du travail = 1| Temps complet", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du travail"), {
-            target: { value: "1| Temps complet" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle Agents de maîtrise et Cadres - durée du travail"
+            ),
+            {
+              target: { value: "'Temps complet'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -344,9 +415,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du travail = 2| Temps partiel", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du travail"), {
-            target: { value: "2| Temps partiel" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+            ),
+            {
+              target: { value: "'Temps partiel'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -370,9 +446,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 16| Employés", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle Employés - durée du travail"
+          ),
           {
-            target: { value: "16| Employés" },
+            target: { value: "'Employés'" },
           }
         );
         fireEvent.click(ui.next.get());

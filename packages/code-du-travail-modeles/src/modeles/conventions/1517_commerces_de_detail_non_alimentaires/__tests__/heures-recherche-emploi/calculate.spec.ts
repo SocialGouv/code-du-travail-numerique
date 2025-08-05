@@ -13,7 +13,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
       expectedReferences: [
         {
-          article: "Chapitre VI, Article 1",
+          article: "Chapitre VI, article 1",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -31,7 +31,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
       expectedReferences: [
         {
-          article: "Chapitre VI, Article 1",
+          article: "Chapitre VI, article 1",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -51,7 +51,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
       expectedReferences: [
         {
-          article: "Chapitre V, Article 3",
+          article: "Chapitre V, article 3",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026803716&cidTexte=KALITEXT000026803629&dateTexte=20120509",
         },
       ],

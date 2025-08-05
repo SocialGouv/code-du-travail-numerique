@@ -40,9 +40,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 23| Agents de maîtrise", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Démission - catégorie professionnelle"
+          ),
           {
-            target: { value: "23| Agents de maîtrise" },
+            target: { value: "'Agents de maîtrise'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -76,9 +78,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 60| Ingénieurs, Cadres", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Démission - catégorie professionnelle"
+          ),
           {
-            target: { value: "60| Ingénieurs, Cadres" },
+            target: { value: "'Ingénieurs, Cadres'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -112,9 +116,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 6| Ouvriers, Employés", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Démission - catégorie professionnelle"
+          ),
           {
-            target: { value: "6| Ouvriers, Employés" },
+            target: { value: "'Ouvriers, Employés'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -148,9 +154,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 28| Techniciens", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Démission - catégorie professionnelle"
+          ),
           {
-            target: { value: "28| Techniciens" },
+            target: { value: "'Techniciens'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -158,9 +166,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.groupe = 3| De I à III", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.groupe"), {
-            target: { value: "3| De I à III" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Démission - catégorie professionnelle Techniciens - groupe"
+            ),
+            {
+              target: { value: "'De I à III'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -191,9 +204,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.groupe = 6| IV", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.groupe"), {
-            target: { value: "6| IV" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Démission - catégorie professionnelle Techniciens - groupe"
+            ),
+            {
+              target: { value: "'IV'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -226,18 +244,25 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 7| Rupture de la période d'essai", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - industries chimiques - typeRupture"), {
-        target: { value: "'Rupture de la période d'essai'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - industries chimiques - typeRupture"
+        ),
+        {
+          target: { value: "'Rupture de la période d'essai'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.catégorie professionnelle = 23| Agents de maîtrise", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+          ),
           {
-            target: { value: "23| Agents de maîtrise" },
+            target: { value: "'Agents de maîtrise'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -267,9 +292,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 60| Ingénieurs, Cadres", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+          ),
           {
-            target: { value: "60| Ingénieurs, Cadres" },
+            target: { value: "'Ingénieurs, Cadres'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -277,9 +304,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.ancienneté = 5| 1 mois et demi ou moins", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-            target: { value: "5| 1 mois et demi ou moins" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle Ingénieurs, Cadres - ancienneté"
+            ),
+            {
+              target: { value: "'1 mois et demi ou moins'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -300,9 +332,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.ancienneté = 6| Plus de 1 mois et demi", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-            target: { value: "6| Plus de 1 mois et demi" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle Ingénieurs, Cadres - ancienneté"
+            ),
+            {
+              target: { value: "'Plus de 1 mois et demi'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -333,9 +370,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 6| Ouvriers, Employés", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+          ),
           {
-            target: { value: "6| Ouvriers, Employés" },
+            target: { value: "'Ouvriers, Employés'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -343,9 +382,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du préavis = 5| 15 jours", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du préavis"), {
-            target: { value: "5| 15 jours" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle Ouvriers, Employés - durée du préavis"
+            ),
+            {
+              target: { value: "'15 jours'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -370,9 +414,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du préavis = 2| 6 jours", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du préavis"), {
-            target: { value: "2| 6 jours" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle Ouvriers, Employés - durée du préavis"
+            ),
+            {
+              target: { value: "'6 jours'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -399,9 +448,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 28| Techniciens", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+          ),
           {
-            target: { value: "28| Techniciens" },
+            target: { value: "'Techniciens'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -409,17 +460,27 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du préavis = 5| 15 jours", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du préavis"), {
-            target: { value: "5| 15 jours" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle Techniciens - durée du préavis"
+            ),
+            {
+              target: { value: "'15 jours'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
         describe("criteria.groupe = 3| De I à III", () => {
           beforeEach(() => {
-            fireEvent.change(screen.getByTestId("criteria.groupe"), {
-              target: { value: "3| De I à III" },
-            });
+            fireEvent.change(
+              screen.getByTestId(
+                "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle Techniciens - durée du préavis 15 jours - groupe"
+              ),
+              {
+                target: { value: "'De I à III'" },
+              }
+            );
             fireEvent.click(ui.next.get());
           });
 
@@ -444,9 +505,14 @@ describe("HeuresRechercheEmploi", () => {
 
         describe("criteria.groupe = 6| IV", () => {
           beforeEach(() => {
-            fireEvent.change(screen.getByTestId("criteria.groupe"), {
-              target: { value: "6| IV" },
-            });
+            fireEvent.change(
+              screen.getByTestId(
+                "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle Techniciens - durée du préavis 15 jours - groupe"
+              ),
+              {
+                target: { value: "'IV'" },
+              }
+            );
             fireEvent.click(ui.next.get());
           });
 
@@ -472,17 +538,27 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du préavis = 2| 6 jours", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du préavis"), {
-            target: { value: "2| 6 jours" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle Techniciens - durée du préavis"
+            ),
+            {
+              target: { value: "'6 jours'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
         describe("criteria.groupe = 3| De I à III", () => {
           beforeEach(() => {
-            fireEvent.change(screen.getByTestId("criteria.groupe"), {
-              target: { value: "3| De I à III" },
-            });
+            fireEvent.change(
+              screen.getByTestId(
+                "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle Techniciens - durée du préavis 6 jours - groupe"
+              ),
+              {
+                target: { value: "'De I à III'" },
+              }
+            );
             fireEvent.click(ui.next.get());
           });
 
@@ -510,18 +586,25 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 3| Licenciement", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - industries chimiques - typeRupture"), {
-        target: { value: "'Licenciement'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - industries chimiques - typeRupture"
+        ),
+        {
+          target: { value: "'Licenciement'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.catégorie professionnelle = 23| Agents de maîtrise", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "23| Agents de maîtrise" },
+            target: { value: "'Agents de maîtrise'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -555,9 +638,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 60| Ingénieurs, Cadres", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "60| Ingénieurs, Cadres" },
+            target: { value: "'Ingénieurs, Cadres'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -591,9 +676,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 6| Ouvriers, Employés", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "6| Ouvriers, Employés" },
+            target: { value: "'Ouvriers, Employés'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -627,9 +714,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 28| Techniciens", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "28| Techniciens" },
+            target: { value: "'Techniciens'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -637,9 +726,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.groupe = 3| De I à III", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.groupe"), {
-            target: { value: "3| De I à III" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Licenciement - catégorie professionnelle Techniciens - groupe"
+            ),
+            {
+              target: { value: "'De I à III'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -670,9 +764,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.groupe = 6| IV", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.groupe"), {
-            target: { value: "6| IV" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Licenciement - catégorie professionnelle Techniciens - groupe"
+            ),
+            {
+              target: { value: "'IV'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 

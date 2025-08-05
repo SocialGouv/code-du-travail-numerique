@@ -63,7 +63,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article:
-            "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 27.",
+            "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27.",
           url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=A537E2D009FC3FF2B8E6ABC0BF24BA9E.tplgfr28s_1?idSectionTA=KALISCTA000005722247&cidTexte=KALITEXT000005677782&idConvention=KALICONT000005635613&dateTexte=29990101",
         },
       ],
@@ -87,7 +87,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article:
-            "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 27.",
+            "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27.",
           url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=A537E2D009FC3FF2B8E6ABC0BF24BA9E.tplgfr28s_1?idSectionTA=KALISCTA000005722247&cidTexte=KALITEXT000005677782&idConvention=KALICONT000005635613&dateTexte=29990101",
         },
       ],
@@ -207,7 +207,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article:
-            "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 3",
+            "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 3",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4F87518AA6E6EB352BF33937E3AC257A.tplgfr28s_1?idArticle=KALIARTI000005846362&cidTexte=KALITEXT000005677782&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -229,7 +229,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article:
-            "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 3",
+            "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 3",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4F87518AA6E6EB352BF33937E3AC257A.tplgfr28s_1?idArticle=KALIARTI000005846362&cidTexte=KALITEXT000005677782&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -251,7 +251,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article:
-            "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 3",
+            "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 3",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4F87518AA6E6EB352BF33937E3AC257A.tplgfr28s_1?idArticle=KALIARTI000005846362&cidTexte=KALITEXT000005677782&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -299,7 +299,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article:
-            "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 3",
+            "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 3",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4F87518AA6E6EB352BF33937E3AC257A.tplgfr28s_1?idArticle=KALIARTI000005846362&cidTexte=KALITEXT000005677782&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -375,7 +375,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article:
-            "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 27.",
+            "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27.",
           url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=A537E2D009FC3FF2B8E6ABC0BF24BA9E.tplgfr28s_1?idSectionTA=KALISCTA000005722247&cidTexte=KALITEXT000005677782&idConvention=KALICONT000005635613&dateTexte=29990101",
         },
       ],
@@ -399,7 +399,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article:
-            "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, Article 27.",
+            "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27.",
           url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=A537E2D009FC3FF2B8E6ABC0BF24BA9E.tplgfr28s_1?idSectionTA=KALISCTA000005722247&cidTexte=KALITEXT000005677782&idConvention=KALICONT000005635613&dateTexte=29990101",
         },
       ],

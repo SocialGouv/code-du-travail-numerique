@@ -1,5 +1,6 @@
 import { CalculateurHeuresRechercheEmploi } from "../../HeuresRechercheEmploiSimulator";
 import { fireEvent, render, screen } from "@testing-library/react";
+import { ui } from "../ui";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -25,18 +26,25 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 3| Licenciement", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - transport aérien personnel au sol - typeRupture"), {
-        target: { value: "'Licenciement'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Licenciement - catégorie professionnelle"
+        ),
+        {
+          target: { value: "'Licenciement'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.catégorie professionnelle = 23| Agents de maîtrise", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "23| Agents de maîtrise" },
+            target: { value: "'Agents de maîtrise'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -66,9 +74,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 28| Techniciens", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "28| Techniciens" },
+            target: { value: "'Techniciens'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -98,9 +108,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 48| Cadres", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "48| Cadres" },
+            target: { value: "'Cadres'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -128,9 +140,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 16| Employés", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "16| Employés" },
+            target: { value: "'Employés'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -160,9 +174,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 4| Ouvriers", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "4| Ouvriers" },
+            target: { value: "'Ouvriers'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -192,18 +208,25 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 1| Démission", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - transport aérien personnel au sol - typeRupture"), {
-        target: { value: "'Démission'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Démission - catégorie professionnelle"
+        ),
+        {
+          target: { value: "'Démission'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.catégorie professionnelle = 23| Agents de maîtrise", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Démission - catégorie professionnelle"
+          ),
           {
-            target: { value: "23| Agents de maîtrise" },
+            target: { value: "'Agents de maîtrise'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -233,9 +256,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 28| Techniciens", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "28| Techniciens" },
+            target: { value: "'Techniciens'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -265,9 +290,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 48| Cadres", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "48| Cadres" },
+            target: { value: "'Cadres'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -295,9 +322,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 4| Ouvriers", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "4| Ouvriers" },
+            target: { value: "'Ouvriers'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -327,9 +356,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 16| Employés", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "16| Employés" },
+            target: { value: "'Employés'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -359,9 +390,14 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 7| Rupture de la période d'essai", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - transport aérien personnel au sol - typeRupture"), {
-        target: { value: "'Rupture de la période d'essai'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - transport aérien personnel au sol - typeRupture"
+        ),
+        {
+          target: { value: "'Rupture de la période d'essai'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 

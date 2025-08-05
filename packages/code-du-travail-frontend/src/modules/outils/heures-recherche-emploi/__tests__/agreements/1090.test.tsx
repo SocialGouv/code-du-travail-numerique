@@ -1,5 +1,6 @@
 import { CalculateurHeuresRechercheEmploi } from "../../HeuresRechercheEmploiSimulator";
 import { fireEvent, render, screen } from "@testing-library/react";
+import { ui } from "../ui";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -25,18 +26,25 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 1| Démission", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - automobiles - typeRupture"), {
-        target: { value: "'Démission'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - automobiles - typeRupture Démission - catégorie professionnelle"
+        ),
+        {
+          target: { value: "'Démission'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.catégorie professionnelle = 47| Agents de maîtrise et Cadres", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - automobiles - typeRupture Démission - catégorie professionnelle Ouvriers, Employés - durée du travail"
+          ),
           {
-            target: { value: "47| Agents de maîtrise et Cadres" },
+            target: { value: "'Agents de maîtrise et Cadres'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -62,9 +70,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 6| Ouvriers, Employés", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - automobiles - typeRupture Démission - catégorie professionnelle Ouvriers, Employés - durée du travail"
+          ),
           {
-            target: { value: "6| Ouvriers, Employés" },
+            target: { value: "'Ouvriers, Employés'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -72,17 +82,27 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du travail = 1| Temps complet", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du travail"), {
-            target: { value: "1| Temps complet" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - automobiles - typeRupture Démission - catégorie professionnelle Ouvriers, Employés - durée du travail"
+            ),
+            {
+              target: { value: "'Temps complet'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
         describe("criteria.durée du préavis = 6| 2 semaines", () => {
           beforeEach(() => {
-            fireEvent.change(screen.getByTestId("criteria.durée du préavis"), {
-              target: { value: "6| 2 semaines" },
-            });
+            fireEvent.change(
+              screen.getByTestId(
+                "infos.contrat salarié - convention collective - automobiles - typeRupture Démission - catégorie professionnelle"
+              ),
+              {
+                target: { value: "'2 semaines'" },
+              }
+            );
             fireEvent.click(ui.next.get());
           });
 
@@ -105,9 +125,14 @@ describe("HeuresRechercheEmploi", () => {
 
         describe("criteria.durée du préavis = 7| Plus de 2 semaines", () => {
           beforeEach(() => {
-            fireEvent.change(screen.getByTestId("criteria.durée du préavis"), {
-              target: { value: "7| Plus de 2 semaines" },
-            });
+            fireEvent.change(
+              screen.getByTestId(
+                "infos.contrat salarié - convention collective - automobiles - typeRupture"
+              ),
+              {
+                target: { value: "'Plus de 2 semaines'" },
+              }
+            );
             fireEvent.click(ui.next.get());
           });
 
@@ -133,9 +158,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du travail = 2| Temps partiel", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du travail"), {
-            target: { value: "2| Temps partiel" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - automobiles - typeRupture"
+            ),
+            {
+              target: { value: "'Temps partiel'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -162,18 +192,25 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 3| Licenciement", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - automobiles - typeRupture"), {
-        target: { value: "'Licenciement'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - automobiles - typeRupture"
+        ),
+        {
+          target: { value: "'Licenciement'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.catégorie professionnelle = 47| Agents de maîtrise et Cadres", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - automobiles - typeRupture Licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "47| Agents de maîtrise et Cadres" },
+            target: { value: "'Agents de maîtrise et Cadres'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -199,9 +236,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 6| Ouvriers, Employés", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - automobiles - typeRupture Licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "6| Ouvriers, Employés" },
+            target: { value: "'Ouvriers, Employés'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -209,17 +248,27 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du travail = 1| Temps complet", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du travail"), {
-            target: { value: "1| Temps complet" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - automobiles - typeRupture Démission - catégorie professionnelle Ouvriers, Employés - durée du travail"
+            ),
+            {
+              target: { value: "'Temps complet'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
         describe("criteria.durée du préavis = 6| 2 semaines", () => {
           beforeEach(() => {
-            fireEvent.change(screen.getByTestId("criteria.durée du préavis"), {
-              target: { value: "6| 2 semaines" },
-            });
+            fireEvent.change(
+              screen.getByTestId(
+                "infos.contrat salarié - convention collective - automobiles - typeRupture"
+              ),
+              {
+                target: { value: "'2 semaines'" },
+              }
+            );
             fireEvent.click(ui.next.get());
           });
 
@@ -242,9 +291,14 @@ describe("HeuresRechercheEmploi", () => {
 
         describe("criteria.durée du préavis = 7| Plus de 2 semaines", () => {
           beforeEach(() => {
-            fireEvent.change(screen.getByTestId("criteria.durée du préavis"), {
-              target: { value: "7| Plus de 2 semaines" },
-            });
+            fireEvent.change(
+              screen.getByTestId(
+                "infos.contrat salarié - convention collective - automobiles - typeRupture"
+              ),
+              {
+                target: { value: "'Plus de 2 semaines'" },
+              }
+            );
             fireEvent.click(ui.next.get());
           });
 
@@ -270,9 +324,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du travail = 2| Temps partiel", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du travail"), {
-            target: { value: "2| Temps partiel" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - automobiles - typeRupture"
+            ),
+            {
+              target: { value: "'Temps partiel'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -299,9 +358,14 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 7| Rupture de la période d'essai", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - automobiles - typeRupture"), {
-        target: { value: "'Rupture de la période d'essai'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - automobiles - typeRupture"
+        ),
+        {
+          target: { value: "'Rupture de la période d'essai'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 

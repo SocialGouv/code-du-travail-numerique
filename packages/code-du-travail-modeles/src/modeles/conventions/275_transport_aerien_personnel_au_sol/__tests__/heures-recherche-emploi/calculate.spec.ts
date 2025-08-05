@@ -56,7 +56,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: "50 heures par mois", unit: "" },
       expectedReferences: [
         {
-          article: "Annexe 1, Article 10",
+          article: "Annexe 1, article 10",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5A3C02D1A1763C39E0F1713E1FCDCBD.tplgfr24s_2?idArticle=KALIARTI000005872089&cidTexte=KALITEXT000005688165&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -79,7 +79,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
       expectedReferences: [
         {
-          article: "Annexe 3, Article 15",
+          article: "Annexe 3, article 15",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5A3C02D1A1763C39E0F1713E1FCDCBD.tplgfr24s_2?idArticle=KALIARTI000005872211&cidTexte=KALITEXT000005688175&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -102,7 +102,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
       expectedReferences: [
         {
-          article: "Annexe 3, Article 15",
+          article: "Annexe 3, article 15",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5A3C02D1A1763C39E0F1713E1FCDCBD.tplgfr24s_2?idArticle=KALIARTI000005872211&cidTexte=KALITEXT000005688175&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -167,7 +167,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: "50 heures par mois", unit: "" },
       expectedReferences: [
         {
-          article: "Annexe 1, Article 10",
+          article: "Annexe 1, article 10",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5A3C02D1A1763C39E0F1713E1FCDCBD.tplgfr24s_2?idArticle=KALIARTI000005872089&cidTexte=KALITEXT000005688165&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -190,7 +190,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
       expectedReferences: [
         {
-          article: "Annexe 3, Article 15",
+          article: "Annexe 3, article 15",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5A3C02D1A1763C39E0F1713E1FCDCBD.tplgfr24s_2?idArticle=KALIARTI000005872211&cidTexte=KALITEXT000005688175&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -213,7 +213,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
       expectedReferences: [
         {
-          article: "Annexe 3, Article 15",
+          article: "Annexe 3, article 15",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5A3C02D1A1763C39E0F1713E1FCDCBD.tplgfr24s_2?idArticle=KALIARTI000005872211&cidTexte=KALITEXT000005688175&dateTexte=29990101&categorieLien=id",
         },
       ],

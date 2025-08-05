@@ -1,5 +1,6 @@
 import { CalculateurHeuresRechercheEmploi } from "../../HeuresRechercheEmploiSimulator";
 import { fireEvent, render, screen } from "@testing-library/react";
+import { ui } from "../ui";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -25,25 +26,40 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 3| Licenciement", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - éducation loisirs - typeRupture"), {
-        target: { value: "'Licenciement'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture Licenciement - durée du travail"
+        ),
+        {
+          target: { value: "'Licenciement'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.durée du travail = 1| Temps complet", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.durée du travail"), {
-          target: { value: "1| Temps complet" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture Licenciement - durée du travail"
+          ),
+          {
+            target: { value: "'Temps complet'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
       describe("criteria.ancienneté = 24| Moins de 1 an", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-            target: { value: "24| Moins de 1 an" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture Licenciement - durée du travail"
+            ),
+            {
+              target: { value: "'Moins de 1 an'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -68,9 +84,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.ancienneté = 27| Plus de 1 an", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-            target: { value: "27| Plus de 1 an" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture Licenciement - catégorie professionnelle"
+            ),
+            {
+              target: { value: "'Plus de 1 an'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -96,17 +117,27 @@ describe("HeuresRechercheEmploi", () => {
 
     describe("criteria.durée du travail = 2| Temps partiel", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.durée du travail"), {
-          target: { value: "2| Temps partiel" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture Licenciement - catégorie professionnelle"
+          ),
+          {
+            target: { value: "'Temps partiel'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
       describe("criteria.ancienneté = 24| Moins de 1 an", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-            target: { value: "24| Moins de 1 an" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture Licenciement - catégorie professionnelle"
+            ),
+            {
+              target: { value: "'Moins de 1 an'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -133,9 +164,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.ancienneté = 27| Plus de 1 an", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-            target: { value: "27| Plus de 1 an" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture Licenciement - catégorie professionnelle"
+            ),
+            {
+              target: { value: "'Plus de 1 an'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -164,9 +200,14 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 1| Démission", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - éducation loisirs - typeRupture"), {
-        target: { value: "'Démission'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - éducation loisirs - typeRupture"
+        ),
+        {
+          target: { value: "'Démission'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -185,9 +226,14 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 7| Rupture de la période d'essai", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - éducation loisirs - typeRupture"), {
-        target: { value: "'Rupture de la période d'essai'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - éducation loisirs - typeRupture"
+        ),
+        {
+          target: { value: "'Rupture de la période d'essai'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 

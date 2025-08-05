@@ -1,5 +1,6 @@
 import { CalculateurHeuresRechercheEmploi } from "../../HeuresRechercheEmploiSimulator";
 import { fireEvent, render, screen } from "@testing-library/react";
+import { ui } from "../ui";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -25,18 +26,25 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 2| Démission ou licenciement", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - pharmacie - typeRupture"), {
-        target: { value: "2| Démission ou licenciement" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - pharmacie - typeRupture Démission ou licenciement - catégorie professionnelle"
+        ),
+        {
+          target: { value: "'Démission ou licenciement'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.catégorie professionnelle = 48| Cadres", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - pharmacie - typeRupture Démission ou licenciement - catégorie professionnelle Cadres - durée du travail"
+          ),
           {
-            target: { value: "48| Cadres" },
+            target: { value: "'Cadres'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -44,9 +52,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du travail = 2| Temps partiel", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du travail"), {
-            target: { value: "2| Temps partiel" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - pharmacie - typeRupture Démission ou licenciement - catégorie professionnelle Cadres - durée du travail"
+            ),
+            {
+              target: { value: "'Temps partiel'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -75,9 +88,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du travail = 1| Temps complet", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du travail"), {
-            target: { value: "1| Temps complet" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - pharmacie - typeRupture Démission ou licenciement - catégorie professionnelle"
+            ),
+            {
+              target: { value: "'Temps complet'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -106,9 +124,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 38| Non-cadres", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - pharmacie - typeRupture Démission ou licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "38| Non-cadres" },
+            target: { value: "'Non-cadres'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -116,9 +136,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.durée du travail = 1| Temps complet", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.durée du travail"), {
-            target: { value: "1| Temps complet" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - pharmacie - typeRupture Licenciement - durée du travail"
+            ),
+            {
+              target: { value: "'Temps complet'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -143,9 +168,14 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 7| Rupture de la période d'essai", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - pharmacie - typeRupture"), {
-        target: { value: "'Rupture de la période d'essai'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - pharmacie - typeRupture"
+        ),
+        {
+          target: { value: "'Rupture de la période d'essai'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 

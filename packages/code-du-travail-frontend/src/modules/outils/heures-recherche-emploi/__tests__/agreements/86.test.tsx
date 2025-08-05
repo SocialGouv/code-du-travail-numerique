@@ -26,18 +26,25 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 1| Démission", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - publicité française - typeRupture"), {
-        target: { value: "'Démission'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - publicité française - typeRupture"
+        ),
+        {
+          target: { value: "'Démission'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.catégorie professionnelle = 21| Agents de maîtrise et Techniciens", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - publicité française - typeRupture Démission - catégorie professionnelle"
+          ),
           {
-            target: { value: "21| Agents de maîtrise et Techniciens" },
+            target: { value: "'Agents de maîtrise et Techniciens'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -63,9 +70,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 48| Cadres", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - publicité française - typeRupture Démission - catégorie professionnelle"
+          ),
           {
-            target: { value: "48| Cadres" },
+            target: { value: "'Cadres'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -91,9 +100,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 16| Employés", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - publicité française - typeRupture Démission - catégorie professionnelle"
+          ),
           {
-            target: { value: "16| Employés" },
+            target: { value: "'Employés'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -119,18 +130,25 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 3| Licenciement", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - publicité française - typeRupture"), {
-        target: { value: "'Licenciement'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - publicité française - typeRupture"
+        ),
+        {
+          target: { value: "'Licenciement'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.catégorie professionnelle = 21| Agents de maîtrise et Techniciens", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - publicité française - typeRupture Licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "21| Agents de maîtrise et Techniciens" },
+            target: { value: "'Agents de maîtrise et Techniciens'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -156,9 +174,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 48| Cadres", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - publicité française - typeRupture Licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "48| Cadres" },
+            target: { value: "'Cadres'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -184,9 +204,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 16| Employés", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - publicité française - typeRupture Licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "16| Employés" },
+            target: { value: "'Employés'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -194,9 +216,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.ancienneté = 40| 2 ans ou moins", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-            target: { value: "40| 2 ans ou moins" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - publicité française - typeRupture Licenciement - catégorie professionnelle Employés - ancienneté"
+            ),
+            {
+              target: { value: "'2 ans ou moins'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -213,9 +240,14 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.ancienneté = 43| Plus de 2 ans", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-            target: { value: "43| Plus de 2 ans" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - publicité française - typeRupture Licenciement - catégorie professionnelle Employés - ancienneté"
+            ),
+            {
+              target: { value: "'Plus de 2 ans'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
@@ -240,18 +272,25 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 7| Rupture de la période d'essai", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - publicité française - typeRupture"), {
-        target: { value: "'Rupture de la période d'essai'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - publicité française - typeRupture"
+        ),
+        {
+          target: { value: "'Rupture de la période d'essai'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.catégorie professionnelle = 21| Agents de maîtrise et Techniciens", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - publicité française - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+          ),
           {
-            target: { value: "21| Agents de maîtrise et Techniciens" },
+            target: { value: "'Agents de maîtrise et Techniciens'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -261,10 +300,10 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "criteria.initiative de la rupture de la période d'essai"
+              "infos.contrat salarié - convention collective - publicité française - typeRupture Rupture de la période d'essai - catégorie professionnelle Agents de maîtrise et Techniciens - initiative de la rupture de la période d'essai"
             ),
             {
-              target: { value: "1| L'employeur" },
+              target: { value: "'L'employeur'" },
             }
           );
           fireEvent.click(ui.next.get());
@@ -290,10 +329,10 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "criteria.initiative de la rupture de la période d'essai"
+              "infos.contrat salarié - convention collective - publicité française - typeRupture Rupture de la période d'essai - catégorie professionnelle Agents de maîtrise et Techniciens - initiative de la rupture de la période d'essai"
             ),
             {
-              target: { value: "2| Le salarié" },
+              target: { value: "'Le salarié'" },
             }
           );
           fireEvent.click(ui.next.get());
@@ -314,9 +353,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 48| Cadres", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - publicité française - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+          ),
           {
-            target: { value: "48| Cadres" },
+            target: { value: "'Cadres'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -326,10 +367,10 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "criteria.initiative de la rupture de la période d'essai"
+              "infos.contrat salarié - convention collective - publicité française - typeRupture Rupture de la période d'essai - catégorie professionnelle Cadres - initiative de la rupture de la période d'essai"
             ),
             {
-              target: { value: "1| L'employeur" },
+              target: { value: "'L'employeur'" },
             }
           );
           fireEvent.click(ui.next.get());
@@ -355,10 +396,10 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "criteria.initiative de la rupture de la période d'essai"
+              "infos.contrat salarié - convention collective - publicité française - typeRupture Rupture de la période d'essai - catégorie professionnelle Cadres - initiative de la rupture de la période d'essai"
             ),
             {
-              target: { value: "2| Le salarié" },
+              target: { value: "'Le salarié'" },
             }
           );
           fireEvent.click(ui.next.get());
@@ -379,9 +420,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 16| Employés", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - publicité française - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+          ),
           {
-            target: { value: "16| Employés" },
+            target: { value: "'Employés'" },
           }
         );
         fireEvent.click(ui.next.get());

@@ -1,5 +1,6 @@
 import { CalculateurHeuresRechercheEmploi } from "../../HeuresRechercheEmploiSimulator";
 import { fireEvent, render, screen } from "@testing-library/react";
+import { ui } from "../ui";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -25,9 +26,14 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 7| Rupture de la période d'essai", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - métallurgie - typeRupture"), {
-        target: { value: "'Rupture de la période d'essai'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai"
+        ),
+        {
+          target: { value: "'Rupture de la période d'essai'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -38,7 +44,7 @@ describe("HeuresRechercheEmploi", () => {
             "criteria.initiative de la rupture de la période d'essai"
           ),
           {
-            target: { value: "1| L'employeur" },
+            target: { value: "'L'employeur'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -46,17 +52,27 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.forfait jour = 1| Oui", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.forfait jour"), {
-            target: { value: "1| Oui" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+            ),
+            {
+              target: { value: "'Oui'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
         describe("criteria.ancienneté = 48| moins d’un mois", () => {
           beforeEach(() => {
-            fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-              target: { value: "48| moins d’un mois" },
-            });
+            fireEvent.change(
+              screen.getByTestId(
+                "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+              ),
+              {
+                target: { value: "'moins d’un mois'" },
+              }
+            );
             fireEvent.click(ui.next.get());
           });
 
@@ -75,9 +91,14 @@ describe("HeuresRechercheEmploi", () => {
 
         describe("criteria.ancienneté = 49| un mois ou plus", () => {
           beforeEach(() => {
-            fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-              target: { value: "49| un mois ou plus" },
-            });
+            fireEvent.change(
+              screen.getByTestId(
+                "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+              ),
+              {
+                target: { value: "'un mois ou plus'" },
+              }
+            );
             fireEvent.click(ui.next.get());
           });
 
@@ -108,17 +129,27 @@ describe("HeuresRechercheEmploi", () => {
 
       describe("criteria.forfait jour = 2| Non", () => {
         beforeEach(() => {
-          fireEvent.change(screen.getByTestId("criteria.forfait jour"), {
-            target: { value: "2| Non" },
-          });
+          fireEvent.change(
+            screen.getByTestId(
+              "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+            ),
+            {
+              target: { value: "'Non'" },
+            }
+          );
           fireEvent.click(ui.next.get());
         });
 
         describe("criteria.ancienneté = 48| moins d’un mois", () => {
           beforeEach(() => {
-            fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-              target: { value: "48| moins d’un mois" },
-            });
+            fireEvent.change(
+              screen.getByTestId(
+                "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+              ),
+              {
+                target: { value: "'moins d’un mois'" },
+              }
+            );
             fireEvent.click(ui.next.get());
           });
 
@@ -137,9 +168,14 @@ describe("HeuresRechercheEmploi", () => {
 
         describe("criteria.ancienneté = 49| un mois ou plus", () => {
           beforeEach(() => {
-            fireEvent.change(screen.getByTestId("criteria.ancienneté"), {
-              target: { value: "49| un mois ou plus" },
-            });
+            fireEvent.change(
+              screen.getByTestId(
+                "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+              ),
+              {
+                target: { value: "'un mois ou plus'" },
+              }
+            );
             fireEvent.click(ui.next.get());
           });
 
@@ -176,7 +212,7 @@ describe("HeuresRechercheEmploi", () => {
             "criteria.initiative de la rupture de la période d'essai"
           ),
           {
-            target: { value: "2| Le salarié" },
+            target: { value: "'Le salarié'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -201,9 +237,14 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 1| Démission", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - métallurgie - typeRupture"), {
-        target: { value: "'Démission'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - métallurgie - typeRupture"
+        ),
+        {
+          target: { value: "'Démission'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -220,17 +261,27 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 3| Licenciement", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - métallurgie - typeRupture"), {
-        target: { value: "'Licenciement'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - métallurgie - typeRupture Licenciement - catégorie professionnelle"
+        ),
+        {
+          target: { value: "'Licenciement'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.forfait jour = 2| Non", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.forfait jour"), {
-          target: { value: "2| Non" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - métallurgie - typeRupture Licenciement - forfait jour"
+          ),
+          {
+            target: { value: "'Non'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 
@@ -267,9 +318,14 @@ describe("HeuresRechercheEmploi", () => {
 
     describe("criteria.forfait jour = 1| Oui", () => {
       beforeEach(() => {
-        fireEvent.change(screen.getByTestId("criteria.forfait jour"), {
-          target: { value: "1| Oui" },
-        });
+        fireEvent.change(
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - métallurgie - typeRupture Licenciement - forfait jour"
+          ),
+          {
+            target: { value: "'Oui'" },
+          }
+        );
         fireEvent.click(ui.next.get());
       });
 

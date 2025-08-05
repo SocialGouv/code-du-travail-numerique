@@ -1,5 +1,6 @@
 import { CalculateurHeuresRechercheEmploi } from "../../HeuresRechercheEmploiSimulator";
 import { fireEvent, render, screen } from "@testing-library/react";
+import { ui } from "../ui";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -25,18 +26,25 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 7| Rupture de la période d'essai", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - personnel prestation service tertiaire - typeRupture"), {
-        target: { value: "'Rupture de la période d'essai'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - personnel presta service tertiaire - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+        ),
+        {
+          target: { value: "'Rupture de la période d'essai'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
     describe("criteria.catégorie professionnelle = 48| Cadres", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - personnel presta service tertiaire - typeRupture Rupture de la période d'essai - catégorie professionnelle Cadres - initiative de la rupture de la période d'essai"
+          ),
           {
-            target: { value: "48| Cadres" },
+            target: { value: "'Cadres'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -49,7 +57,7 @@ describe("HeuresRechercheEmploi", () => {
               "criteria.initiative de la rupture de la période d'essai"
             ),
             {
-              target: { value: "1| L'employeur" },
+              target: { value: "'L'employeur'" },
             }
           );
           fireEvent.click(ui.next.get());
@@ -79,7 +87,7 @@ describe("HeuresRechercheEmploi", () => {
               "criteria.initiative de la rupture de la période d'essai"
             ),
             {
-              target: { value: "2| Le salarié" },
+              target: { value: "'Le salarié'" },
             }
           );
           fireEvent.click(ui.next.get());
@@ -106,9 +114,11 @@ describe("HeuresRechercheEmploi", () => {
     describe("criteria.catégorie professionnelle = 38| Non-cadres", () => {
       beforeEach(() => {
         fireEvent.change(
-          screen.getByTestId("criteria.catégorie professionnelle"),
+          screen.getByTestId(
+            "infos.contrat salarié - convention collective - personnel prestation service tertiaire - typeRupture Licenciement - catégorie professionnelle"
+          ),
           {
-            target: { value: "38| Non-cadres" },
+            target: { value: "'Non-cadres'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -128,9 +138,14 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 1| Démission", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - personnel prestation service tertiaire - typeRupture"), {
-        target: { value: "'Démission'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - personnel prestation service tertiaire - typeRupture"
+        ),
+        {
+          target: { value: "'Démission'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 
@@ -153,9 +168,14 @@ describe("HeuresRechercheEmploi", () => {
 
   describe("typeRupture = 3| Licenciement", () => {
     beforeEach(() => {
-      fireEvent.change(screen.getByTestId("infos.contrat salarié - convention collective - personnel prestation service tertiaire - typeRupture"), {
-        target: { value: "'Licenciement'" },
-      });
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - personnel prestation service tertiaire - typeRupture"
+        ),
+        {
+          target: { value: "'Licenciement'" },
+        }
+      );
       fireEvent.click(ui.next.get());
     });
 

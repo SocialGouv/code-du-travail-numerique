@@ -7,9 +7,7 @@ import { useRouter } from "next/router";
 
 import { Footer } from "../../src/widgets";
 
-import {
-  CalculateurIndemniteLicenciement,
-} from "../../src/outils";
+import { CalculateurIndemniteLicenciement } from "../../src/outils";
 import Metas from "../../src/common/Metas";
 import { SITE_URL } from "../../src/config";
 import { getBySlugTools } from "../../src/api";
