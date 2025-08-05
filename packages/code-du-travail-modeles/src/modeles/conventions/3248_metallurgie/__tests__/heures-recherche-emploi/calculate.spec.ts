@@ -26,7 +26,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         "contrat salarié . convention collective . métallurgie . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai L'employeur . forfait jour":
           "'Oui'",
         "contrat salarié . convention collective . métallurgie . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai L'employeur . forfait jour Oui . ancienneté":
-          "'moins d'un mois'",
+          "'Moins d'un mois'",
       },
     },
     {
@@ -52,7 +52,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         "contrat salarié . convention collective . métallurgie . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai L'employeur . forfait jour":
           "'Oui'",
         "contrat salarié . convention collective . métallurgie . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai L'employeur . forfait jour Oui . ancienneté":
-          "'un mois ou plus'",
+          "'Un mois ou plus'",
       },
     },
     {
@@ -75,7 +75,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         "contrat salarié . convention collective . métallurgie . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai L'employeur . forfait jour":
           "'Non'",
         "contrat salarié . convention collective . métallurgie . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai L'employeur . forfait jour Non . ancienneté":
-          "'moins d'un mois'",
+          "'Moins d'un mois'",
       },
     },
     {
@@ -98,7 +98,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         "contrat salarié . convention collective . métallurgie . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai L'employeur . forfait jour":
           "'Non'",
         "contrat salarié . convention collective . métallurgie . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai L'employeur . forfait jour Non . ancienneté":
-          "'un mois ou plus'",
+          "'Un mois ou plus'",
       },
     },
     {
@@ -106,8 +106,17 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         expectedValue: "",
         unit: "",
       },
-      expectedReferences: [],
       expectedNotifications: [],
+      expectedReferences: [
+        {
+          article: "Article 70.5.3.1",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314503?idConteneur=KALICONT000046993250#KALIARTI000046314503",
+        },
+        {
+          article: "Article 70.5.3.2",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046314504?idConteneur=KALICONT000046993250#KALIARTI000046314504",
+        },
+      ],
       situation: {
         "contrat salarié . convention collective . métallurgie . typeRupture":
           "'Rupture de la période d'essai'",

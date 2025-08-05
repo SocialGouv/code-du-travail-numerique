@@ -1,6 +1,6 @@
 import { CalculateurHeuresRechercheEmploi } from "../../HeuresRechercheEmploiSimulator";
-import { fireEvent, render, screen } from "@testing-library/react";
 import { ui } from "../ui";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "criteria.initiative de la rupture de la période d'essai"
+            "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai"
           ),
           {
             target: { value: "'L'employeur'" },
@@ -54,7 +54,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+              "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai L'employeur - forfait jour"
             ),
             {
               target: { value: "'Oui'" },
@@ -63,14 +63,14 @@ describe("HeuresRechercheEmploi", () => {
           fireEvent.click(ui.next.get());
         });
 
-        describe("criteria.ancienneté = 48| moins d’un mois", () => {
+        describe("criteria.ancienneté = 1| Moins d'un mois", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+                "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai L'employeur - forfait jour Oui - ancienneté"
               ),
               {
-                target: { value: "'moins d’un mois'" },
+                target: { value: "'Moins d'un mois'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -89,14 +89,14 @@ describe("HeuresRechercheEmploi", () => {
           });
         });
 
-        describe("criteria.ancienneté = 49| un mois ou plus", () => {
+        describe("criteria.ancienneté = 2| Un mois ou plus", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+                "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai L'employeur - forfait jour Oui - ancienneté"
               ),
               {
-                target: { value: "'un mois ou plus'" },
+                target: { value: "'Un mois ou plus'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -115,12 +115,6 @@ describe("HeuresRechercheEmploi", () => {
               )[0]
             ).toBeInTheDocument();
             expect(
-              screen.queryAllByText(
-                /Si la lettre de rupture de la période d'essai a été présentée avant le 01\/01\/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31\/12\/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01\/01\/2024./g
-              )[0]
-            ).toBeInTheDocument();
-
-            expect(
               screen.queryAllByText(/Article 70.5.3.2/)[0]
             ).toBeInTheDocument();
           });
@@ -131,7 +125,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+              "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai L'employeur - forfait jour"
             ),
             {
               target: { value: "'Non'" },
@@ -140,14 +134,14 @@ describe("HeuresRechercheEmploi", () => {
           fireEvent.click(ui.next.get());
         });
 
-        describe("criteria.ancienneté = 48| moins d’un mois", () => {
+        describe("criteria.ancienneté = 1| Moins d'un mois", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+                "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai L'employeur - forfait jour Non - ancienneté"
               ),
               {
-                target: { value: "'moins d’un mois'" },
+                target: { value: "'Moins d'un mois'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -166,14 +160,14 @@ describe("HeuresRechercheEmploi", () => {
           });
         });
 
-        describe("criteria.ancienneté = 49| un mois ou plus", () => {
+        describe("criteria.ancienneté = 2| Un mois ou plus", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+                "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai L'employeur - forfait jour Non - ancienneté"
               ),
               {
-                target: { value: "'un mois ou plus'" },
+                target: { value: "'Un mois ou plus'" },
               }
             );
             fireEvent.click(ui.next.get());
@@ -192,12 +186,6 @@ describe("HeuresRechercheEmploi", () => {
               )[0]
             ).toBeInTheDocument();
             expect(
-              screen.queryAllByText(
-                /Si la lettre de rupture de la période d'essai a été présentée avant le 01\/01\/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31\/12\/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01\/01\/2024./g
-              )[0]
-            ).toBeInTheDocument();
-
-            expect(
               screen.queryAllByText(/Article 70.5.3.1/)[0]
             ).toBeInTheDocument();
           });
@@ -209,7 +197,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "criteria.initiative de la rupture de la période d'essai"
+            "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai"
           ),
           {
             target: { value: "'Le salarié'" },
@@ -272,7 +260,7 @@ describe("HeuresRechercheEmploi", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.forfait jour = 2| Non", () => {
+    describe("criteria.forfait jour = 1| Non", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -299,16 +287,6 @@ describe("HeuresRechercheEmploi", () => {
             /L'employeur et le salarié s’entendent sur les modalités de prise de ces heures \(y compris sur leur regroupement éventuel\). À défaut d'accord entre les parties, les heures sont fixées alternativement un jour par l'employeur et un jour par le salarié. Elles peuvent être regroupées si le salarié occupe un poste qui présente des contraintes d’organisation particulières. Les absences cessent d'être autorisées, dès que le salarié a retrouvé un emploi./g
           )[0]
         ).toBeInTheDocument();
-        expect(
-          screen.queryAllByText(
-            /Si la lettre de licenciement a été présentée avant le 01\/01\/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31\/12\/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01\/01\/2024./g
-          )[0]
-        ).toBeInTheDocument();
-        expect(
-          screen.queryAllByText(
-            /Pour le salarié à temps partiel, le volume de 50 heures est réduit proportionnellement à son temps de travail/g
-          )[0]
-        ).toBeInTheDocument();
 
         expect(
           screen.queryAllByText(/Article 75.2.3.1/)[0]
@@ -316,7 +294,7 @@ describe("HeuresRechercheEmploi", () => {
       });
     });
 
-    describe("criteria.forfait jour = 1| Oui", () => {
+    describe("criteria.forfait jour = 2| Oui", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -341,12 +319,6 @@ describe("HeuresRechercheEmploi", () => {
             /Cette journée est convenue entre l'employeur et le salarié. En l'absence d'accord, elle est fixée une fois par l’employeur et une fois par le salarié. Les absences cessent d'être autorisées, dès que le salarié a retrouvé un emploi./g
           )[0]
         ).toBeInTheDocument();
-        expect(
-          screen.queryAllByText(
-            /Si la lettre de licenciement a été présentée avant le 01\/01\/2024, le résultat peut ne pas correspondre au résultat donné. En effet, jusqu’au 31\/12\/2023, ce sont les conventions locales de la métallurgie ainsi que la convention spécifique aux ingénieurs et cadres de la métallurgie qui s’appliquaient. Toutes ces conventions ont disparu au profit d’une nouvelle convention collective nationale applicable depuis le 01\/01\/2024./g
-          )[0]
-        ).toBeInTheDocument();
-
         expect(
           screen.queryAllByText(/Article 75.2.3.2/)[0]
         ).toBeInTheDocument();

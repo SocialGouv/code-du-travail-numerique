@@ -1,6 +1,6 @@
 import { CalculateurHeuresRechercheEmploi } from "../../HeuresRechercheEmploiSimulator";
-import { fireEvent, render, screen } from "@testing-library/react";
 import { ui } from "../ui";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -69,11 +69,11 @@ describe("HeuresRechercheEmploi", () => {
       });
     });
 
-    describe("criteria.durée du préavis = 6| 2 semaines", () => {
+    describe("criteria.durée du préavis = 2| 2 semaines", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture Démission - catégorie professionnelle"
+            "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture Démission - durée du préavis"
           ),
           {
             target: { value: "'2 semaines'" },
@@ -101,14 +101,14 @@ describe("HeuresRechercheEmploi", () => {
       });
     });
 
-    describe("criteria.durée du préavis = 9| Un mois et plus ", () => {
+    describe("criteria.durée du préavis = 3| Un mois et plus", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture Démission - catégorie professionnelle"
+            "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture Démission - durée du préavis"
           ),
           {
-            target: { value: "'Un mois et plus '" },
+            target: { value: "'Un mois et plus'" },
           }
         );
         fireEvent.click(ui.next.get());
@@ -151,7 +151,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture Licenciement - catégorie professionnelle"
+            "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture Licenciement - durée du préavis"
           ),
           {
             target: { value: "'2 jours'" },
@@ -179,7 +179,7 @@ describe("HeuresRechercheEmploi", () => {
       });
     });
 
-    describe("criteria.durée du préavis = 6| 2 semaines", () => {
+    describe("criteria.durée du préavis = 2| 2 semaines", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
@@ -211,14 +211,14 @@ describe("HeuresRechercheEmploi", () => {
       });
     });
 
-    describe("criteria.durée du préavis = 9| Un mois et plus ", () => {
+    describe("criteria.durée du préavis = 3| Un mois et plus", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
             "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture Licenciement - durée du préavis"
           ),
           {
-            target: { value: "'Un mois et plus '" },
+            target: { value: "'Un mois et plus'" },
           }
         );
         fireEvent.click(ui.next.get());

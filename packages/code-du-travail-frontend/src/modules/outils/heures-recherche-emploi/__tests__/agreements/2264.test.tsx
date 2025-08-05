@@ -1,6 +1,6 @@
 import { CalculateurHeuresRechercheEmploi } from "../../HeuresRechercheEmploiSimulator";
-import { fireEvent, render, screen } from "@testing-library/react";
 import { ui } from "../ui";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "criteria.initiative de la rupture de la période d'essai"
+            "infos.contrat salarié - convention collective - hospitalisation privées - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai"
           ),
           {
             target: { value: "'L'employeur'" },
@@ -50,11 +50,11 @@ describe("HeuresRechercheEmploi", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.ancienneté = 9| 3 mois ou moins", () => {
+      describe("criteria.ancienneté = 1| 3 mois ou moins", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - hospitalisation privées - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+              "infos.contrat salarié - convention collective - hospitalisation privées - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai L'employeur - ancienneté"
             ),
             {
               target: { value: "'3 mois ou moins'" },
@@ -74,11 +74,11 @@ describe("HeuresRechercheEmploi", () => {
         });
       });
 
-      describe("criteria.ancienneté = 13| Plus de 3 mois", () => {
+      describe("criteria.ancienneté = 2| Plus de 3 mois", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - hospitalisation privées - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+              "infos.contrat salarié - convention collective - hospitalisation privées - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai L'employeur - ancienneté"
             ),
             {
               target: { value: "'Plus de 3 mois'" },
@@ -111,7 +111,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "criteria.initiative de la rupture de la période d'essai"
+            "infos.contrat salarié - convention collective - hospitalisation privées - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai"
           ),
           {
             target: { value: "'Le salarié'" },

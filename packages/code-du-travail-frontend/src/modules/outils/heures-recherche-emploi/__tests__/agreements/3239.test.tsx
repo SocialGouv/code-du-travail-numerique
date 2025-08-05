@@ -1,6 +1,6 @@
 import { CalculateurHeuresRechercheEmploi } from "../../HeuresRechercheEmploiSimulator";
-import { fireEvent, render, screen } from "@testing-library/react";
 import { ui } from "../ui";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - particuliers employeurs domicile - typeRupture"
+          "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -37,11 +37,11 @@ describe("HeuresRechercheEmploi", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.catégorie professionnelle = 101| Assistants maternels du particulier employeur", () => {
+    describe("criteria.catégorie professionnelle = 1| Assistants maternels du particulier employeur", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - particuliers employeurs domicile - typeRupture Licenciement - catégorie professionnelle"
+            "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - typeRupture Licenciement - catégorie professionnelle"
           ),
           {
             target: {
@@ -61,11 +61,11 @@ describe("HeuresRechercheEmploi", () => {
       });
     });
 
-    describe("criteria.catégorie professionnelle = 100| Salariés du particulier employeur", () => {
+    describe("criteria.catégorie professionnelle = 2| Salariés du particulier employeur", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - particuliers employeurs domicile - typeRupture Licenciement - catégorie professionnelle"
+            "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - typeRupture Licenciement - catégorie professionnelle"
           ),
           {
             target: { value: "'Salariés du particulier employeur'" },
@@ -74,11 +74,11 @@ describe("HeuresRechercheEmploi", () => {
         fireEvent.click(ui.next.get());
       });
 
-      describe("criteria.durée du travail = 124| Moins de 40 heures par semaine", () => {
+      describe("criteria.durée du travail = 1| Moins de 40 heures par semaine", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - particuliers employeurs domicile - typeRupture Licenciement - durée du travail"
+              "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - typeRupture Licenciement - catégorie professionnelle Salariés du particulier employeur - durée du travail"
             ),
             {
               target: { value: "'Moins de 40 heures par semaine'" },
@@ -87,11 +87,11 @@ describe("HeuresRechercheEmploi", () => {
           fireEvent.click(ui.next.get());
         });
 
-        describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+        describe("criteria.ancienneté = 1| Moins de 2 ans", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - particuliers employeurs domicile - typeRupture Licenciement - ancienneté"
+                "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - typeRupture Licenciement - catégorie professionnelle Salariés du particulier employeur - durée du travail Moins de 40 heures par semaine - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -109,11 +109,11 @@ describe("HeuresRechercheEmploi", () => {
           });
         });
 
-        describe("criteria.ancienneté = 43| 2 ans ou plus", () => {
+        describe("criteria.ancienneté = 2| 2 ans ou plus", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - particuliers employeurs domicile - typeRupture Licenciement - ancienneté"
+                "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - typeRupture Licenciement - catégorie professionnelle Salariés du particulier employeur - durée du travail Moins de 40 heures par semaine - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -132,11 +132,11 @@ describe("HeuresRechercheEmploi", () => {
         });
       });
 
-      describe("criteria.durée du travail = 123| 40 heures ou plus par semaine", () => {
+      describe("criteria.durée du travail = 2| 40 heures ou plus par semaine", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - particuliers employeurs domicile - typeRupture Licenciement - durée du travail"
+              "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - typeRupture Licenciement - catégorie professionnelle Salariés du particulier employeur - durée du travail"
             ),
             {
               target: { value: "'40 heures ou plus par semaine'" },
@@ -145,11 +145,11 @@ describe("HeuresRechercheEmploi", () => {
           fireEvent.click(ui.next.get());
         });
 
-        describe("criteria.ancienneté = 38| Moins de 2 ans", () => {
+        describe("criteria.ancienneté = 1| Moins de 2 ans", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - particuliers employeurs domicile - typeRupture Licenciement - ancienneté"
+                "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - typeRupture Licenciement - catégorie professionnelle Salariés du particulier employeur - durée du travail 40 heures ou plus par semaine - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -172,11 +172,11 @@ describe("HeuresRechercheEmploi", () => {
           });
         });
 
-        describe("criteria.ancienneté = 44| 2 ans ou plus", () => {
+        describe("criteria.ancienneté = 2| 2 ans ou plus", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - particuliers employeurs domicile - typeRupture Licenciement - ancienneté"
+                "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - typeRupture Licenciement - catégorie professionnelle Salariés du particulier employeur - durée du travail 40 heures ou plus par semaine - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },

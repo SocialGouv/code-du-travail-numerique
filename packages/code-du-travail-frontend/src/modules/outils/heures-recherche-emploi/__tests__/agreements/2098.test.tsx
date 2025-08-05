@@ -1,6 +1,6 @@
 import { CalculateurHeuresRechercheEmploi } from "../../HeuresRechercheEmploiSimulator";
-import { fireEvent, render, screen } from "@testing-library/react";
 import { ui } from "../ui";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -37,11 +37,11 @@ describe("HeuresRechercheEmploi", () => {
       fireEvent.click(ui.next.get());
     });
 
-    describe("criteria.catégorie professionnelle = 48| Cadres", () => {
+    describe("criteria.catégorie professionnelle = 1| Cadres", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - personnel presta service tertiaire - typeRupture Rupture de la période d'essai - catégorie professionnelle Cadres - initiative de la rupture de la période d'essai"
+            "infos.contrat salarié - convention collective - personnel presta service tertiaire - typeRupture Rupture de la période d'essai - catégorie professionnelle"
           ),
           {
             target: { value: "'Cadres'" },
@@ -54,7 +54,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "criteria.initiative de la rupture de la période d'essai"
+              "infos.contrat salarié - convention collective - personnel presta service tertiaire - typeRupture Rupture de la période d'essai - catégorie professionnelle Cadres - initiative de la rupture de la période d'essai"
             ),
             {
               target: { value: "'L'employeur'" },
@@ -84,7 +84,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "criteria.initiative de la rupture de la période d'essai"
+              "infos.contrat salarié - convention collective - personnel presta service tertiaire - typeRupture Rupture de la période d'essai - catégorie professionnelle Cadres - initiative de la rupture de la période d'essai"
             ),
             {
               target: { value: "'Le salarié'" },
@@ -111,11 +111,11 @@ describe("HeuresRechercheEmploi", () => {
       });
     });
 
-    describe("criteria.catégorie professionnelle = 38| Non-cadres", () => {
+    describe("criteria.catégorie professionnelle = 2| Non-cadres", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - personnel prestation service tertiaire - typeRupture Licenciement - catégorie professionnelle"
+            "infos.contrat salarié - convention collective - personnel presta service tertiaire - typeRupture Rupture de la période d'essai - catégorie professionnelle"
           ),
           {
             target: { value: "'Non-cadres'" },

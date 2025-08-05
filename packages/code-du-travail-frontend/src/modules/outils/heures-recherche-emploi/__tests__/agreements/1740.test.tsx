@@ -1,6 +1,6 @@
 import { CalculateurHeuresRechercheEmploi } from "../../HeuresRechercheEmploiSimulator";
-import { fireEvent, render, screen } from "@testing-library/react";
 import { ui } from "../ui";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -69,11 +69,11 @@ describe("HeuresRechercheEmploi", () => {
       });
     });
 
-    describe("criteria.durée du préavis = 10| 2 mois", () => {
+    describe("criteria.durée du préavis = 2| 2 mois", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Démission - catégorie professionnelle"
+            "infos.contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Démission - durée du préavis"
           ),
           {
             target: { value: "'2 mois'" },
@@ -101,11 +101,11 @@ describe("HeuresRechercheEmploi", () => {
       });
     });
 
-    describe("criteria.durée du préavis = 6| 2 semaines", () => {
+    describe("criteria.durée du préavis = 3| 2 semaines", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Démission - catégorie professionnelle"
+            "infos.contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Démission - durée du préavis"
           ),
           {
             target: { value: "'2 semaines'" },
@@ -133,11 +133,11 @@ describe("HeuresRechercheEmploi", () => {
       });
     });
 
-    describe("criteria.durée du préavis = 8| Un mois", () => {
+    describe("criteria.durée du préavis = 4| Un mois", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Démission - catégorie professionnelle"
+            "infos.contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Démission - durée du préavis"
           ),
           {
             target: { value: "'Un mois'" },
@@ -211,11 +211,11 @@ describe("HeuresRechercheEmploi", () => {
       });
     });
 
-    describe("criteria.durée du préavis = 10| 2 mois", () => {
+    describe("criteria.durée du préavis = 2| 2 mois", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Licenciement - catégorie professionnelle"
+            "infos.contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Licenciement - durée du préavis"
           ),
           {
             target: { value: "'2 mois'" },
@@ -243,11 +243,11 @@ describe("HeuresRechercheEmploi", () => {
       });
     });
 
-    describe("criteria.durée du préavis = 6| 2 semaines", () => {
+    describe("criteria.durée du préavis = 3| 2 semaines", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Licenciement - catégorie professionnelle"
+            "infos.contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Licenciement - durée du préavis"
           ),
           {
             target: { value: "'2 semaines'" },
@@ -275,11 +275,11 @@ describe("HeuresRechercheEmploi", () => {
       });
     });
 
-    describe("criteria.durée du préavis = 8| Un mois", () => {
+    describe("criteria.durée du préavis = 4| Un mois", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Licenciement - catégorie professionnelle"
+            "infos.contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Licenciement - durée du préavis"
           ),
           {
             target: { value: "'Un mois'" },

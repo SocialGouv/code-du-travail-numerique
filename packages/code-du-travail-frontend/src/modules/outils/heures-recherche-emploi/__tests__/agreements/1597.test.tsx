@@ -1,6 +1,6 @@
 import { CalculateurHeuresRechercheEmploi } from "../../HeuresRechercheEmploiSimulator";
-import { fireEvent, render, screen } from "@testing-library/react";
 import { ui } from "../ui";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -66,11 +66,11 @@ describe("HeuresRechercheEmploi", () => {
       });
     });
 
-    describe("criteria.durée du préavis = 6| 2 semaines", () => {
+    describe("criteria.durée du préavis = 2| 2 semaines", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - batiment ouvriers employés bis - typeRupture Licenciement - catégorie professionnelle"
+            "infos.contrat salarié - convention collective - batiment ouvriers employés bis - typeRupture Licenciement - durée du préavis"
           ),
           {
             target: { value: "'2 semaines'" },
@@ -95,11 +95,11 @@ describe("HeuresRechercheEmploi", () => {
       });
     });
 
-    describe("criteria.durée du préavis = 7| Plus de 2 semaines", () => {
+    describe("criteria.durée du préavis = 3| Plus de 2 semaines", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - batiment ouvriers employés bis - typeRupture Licenciement - catégorie professionnelle"
+            "infos.contrat salarié - convention collective - batiment ouvriers employés bis - typeRupture Licenciement - durée du préavis"
           ),
           {
             target: { value: "'Plus de 2 semaines'" },
@@ -167,11 +167,11 @@ describe("HeuresRechercheEmploi", () => {
       });
     });
 
-    describe("criteria.durée du préavis = 6| 2 semaines", () => {
+    describe("criteria.durée du préavis = 2| 2 semaines", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - batiment ouvriers employés bis - typeRupture Démission - catégorie professionnelle"
+            "infos.contrat salarié - convention collective - batiment ouvriers employés bis - typeRupture Démission - durée du préavis"
           ),
           {
             target: { value: "'2 semaines'" },
@@ -196,11 +196,11 @@ describe("HeuresRechercheEmploi", () => {
       });
     });
 
-    describe("criteria.durée du préavis = 7| Plus de 2 semaines", () => {
+    describe("criteria.durée du préavis = 3| Plus de 2 semaines", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - batiment ouvriers employés bis - typeRupture Démission - catégorie professionnelle"
+            "infos.contrat salarié - convention collective - batiment ouvriers employés bis - typeRupture Démission - durée du préavis"
           ),
           {
             target: { value: "'Plus de 2 semaines'" },
