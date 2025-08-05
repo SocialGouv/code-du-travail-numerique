@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture Démission - durée du préavis"
+          "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -138,7 +138,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture Licenciement - catégorie professionnelle"
+          "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },

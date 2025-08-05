@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture Licenciement - durée du travail"
+          "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -54,7 +54,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture Licenciement - durée du travail"
+              "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture Licenciement - durée du travail Temps complet - ancienneté"
             ),
             {
               target: { value: "'Moins de 1 an'" },
@@ -86,7 +86,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture Licenciement - catégorie professionnelle"
+              "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture Licenciement - durée du travail Temps complet - ancienneté"
             ),
             {
               target: { value: "'Plus de 1 an'" },
@@ -119,7 +119,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture Licenciement - catégorie professionnelle"
+            "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture Licenciement - durée du travail"
           ),
           {
             target: { value: "'Temps partiel'" },
@@ -132,7 +132,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture Licenciement - catégorie professionnelle"
+              "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture Licenciement - durée du travail Temps partiel - ancienneté"
             ),
             {
               target: { value: "'Moins de 1 an'" },
@@ -166,7 +166,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture Licenciement - catégorie professionnelle"
+              "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture Licenciement - durée du travail Temps partiel - ancienneté"
             ),
             {
               target: { value: "'Plus de 1 an'" },
@@ -202,7 +202,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - éducation loisirs - typeRupture"
+          "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -228,7 +228,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - éducation loisirs - typeRupture"
+          "infos.contrat salarié - convention collective - éducation et loisirs - typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

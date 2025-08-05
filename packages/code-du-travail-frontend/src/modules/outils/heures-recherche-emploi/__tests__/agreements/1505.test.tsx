@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces détail fruits légumes - typeRupture"
+          "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -52,7 +52,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces détail fruits légumes - typeRupture"
+          "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -79,7 +79,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces détail fruits légumes - typeRupture"
+          "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

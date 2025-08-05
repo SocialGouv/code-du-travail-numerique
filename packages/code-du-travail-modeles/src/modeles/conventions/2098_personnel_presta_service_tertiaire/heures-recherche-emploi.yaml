@@ -20,7 +20,7 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
     type: liste
     valeurs:
       Cadres: "'Cadres'"
-      Noncadres: "'Noncadres'"
+      Non-cadres: "'Non-cadres'"
 
 contrat salarié . convention collective . personnel presta service tertiaire . typeRupture Rupture de la période d'essai . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
@@ -64,7 +64,7 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
     "Article 2.2": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=EF6F35108FA0CA7290B875B336ECB5AE.tplgfr33s_2?idArticle=KALIARTI000005850602&cidTexte=KALITEXT000005679323&dateTexte=29990101&categorieLien=id
 
 contrat salarié . convention collective . personnel presta service tertiaire . typeRupture Rupture de la période d'essai . catégorie professionnelle Noncadres:
-  applicable si: catégorie professionnelle = 'Noncadres'
+  applicable si: catégorie professionnelle = 'Non-cadres'
   valeur: oui
 
 contrat salarié . convention collective . personnel presta service tertiaire . typeRupture Rupture de la période d'essai . catégorie professionnelle Noncadres . résultat conventionnel:

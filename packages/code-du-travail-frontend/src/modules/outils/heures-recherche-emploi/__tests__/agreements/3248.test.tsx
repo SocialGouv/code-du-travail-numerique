@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai"
+          "infos.contrat salarié - convention collective - métallurgie - typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },
@@ -263,7 +263,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - métallurgie - typeRupture Licenciement - catégorie professionnelle"
+          "infos.contrat salarié - convention collective - métallurgie - typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },

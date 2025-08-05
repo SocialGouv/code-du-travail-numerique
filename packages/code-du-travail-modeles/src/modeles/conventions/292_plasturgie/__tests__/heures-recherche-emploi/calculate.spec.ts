@@ -41,7 +41,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         "contrat salarié . convention collective . plasturgie . typeRupture":
           "'Démission'",
         "contrat salarié . convention collective . plasturgie . typeRupture Démission . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
       },
     },
     {
@@ -79,7 +79,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         "contrat salarié . convention collective . plasturgie . typeRupture":
           "'Licenciement'",
         "contrat salarié . convention collective . plasturgie . typeRupture Licenciement . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
       },
     },
     {

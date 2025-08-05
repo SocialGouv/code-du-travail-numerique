@@ -47,7 +47,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         "contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture":
           "'Démission'",
         "contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Démission . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
       },
     },
     {
@@ -92,7 +92,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         "contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture":
           "'Licenciement'",
         "contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Licenciement . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
       },
     },
     {

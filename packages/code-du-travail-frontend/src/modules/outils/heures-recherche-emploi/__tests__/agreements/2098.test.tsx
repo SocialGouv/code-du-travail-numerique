@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - personnel presta service tertiaire - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+          "infos.contrat salarié - convention collective - personnel presta service tertiaire - typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },
@@ -140,7 +140,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - personnel prestation service tertiaire - typeRupture"
+          "infos.contrat salarié - convention collective - personnel presta service tertiaire - typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -170,7 +170,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - personnel prestation service tertiaire - typeRupture"
+          "infos.contrat salarié - convention collective - personnel presta service tertiaire - typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },

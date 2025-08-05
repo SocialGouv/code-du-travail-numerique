@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle"
+          "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle Agents de maîtrise et Cadres - durée du travail"
+            "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle"
           ),
           {
             target: { value: "'Agents de maîtrise et Cadres'" },
@@ -86,7 +86,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle"
+              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle Agents de maîtrise et Cadres - durée du travail"
             ),
             {
               target: { value: "'Temps partiel'" },
@@ -119,7 +119,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle Employés - durée du travail"
+            "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle"
           ),
           {
             target: { value: "'Employés'" },
@@ -164,7 +164,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle"
+              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle Employés - durée du travail"
             ),
             {
               target: { value: "'Temps complet'" },
@@ -198,7 +198,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Licenciement - catégorie professionnelle"
+          "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -211,7 +211,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Licenciement - catégorie professionnelle Agents de maîtrise et Cadres - durée du travail"
+            "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Licenciement - catégorie professionnelle"
           ),
           {
             target: { value: "'Agents de maîtrise et Cadres'" },
@@ -224,7 +224,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle Agents de maîtrise et Cadres - durée du travail"
+              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Licenciement - catégorie professionnelle Agents de maîtrise et Cadres - durée du travail"
             ),
             {
               target: { value: "'Temps complet'" },
@@ -254,7 +254,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Licenciement - catégorie professionnelle"
+              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Licenciement - catégorie professionnelle Agents de maîtrise et Cadres - durée du travail"
             ),
             {
               target: { value: "'Temps partiel'" },
@@ -287,7 +287,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle Employés - durée du travail"
+            "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Licenciement - catégorie professionnelle"
           ),
           {
             target: { value: "'Employés'" },
@@ -300,7 +300,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle Employés - durée du travail"
+              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Licenciement - catégorie professionnelle Employés - durée du travail"
             ),
             {
               target: { value: "'Temps complet'" },
@@ -332,7 +332,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Licenciement - catégorie professionnelle"
+              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Licenciement - catégorie professionnelle Employés - durée du travail"
             ),
             {
               target: { value: "'Temps partiel'" },
@@ -366,7 +366,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+          "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },
@@ -379,7 +379,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Rupture de la période d'essai - catégorie professionnelle Agents de maîtrise et Cadres - durée du travail"
+            "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Rupture de la période d'essai - catégorie professionnelle"
           ),
           {
             target: { value: "'Agents de maîtrise et Cadres'" },
@@ -392,7 +392,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle Agents de maîtrise et Cadres - durée du travail"
+              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Rupture de la période d'essai - catégorie professionnelle Agents de maîtrise et Cadres - durée du travail"
             ),
             {
               target: { value: "'Temps complet'" },
@@ -417,7 +417,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+              "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Rupture de la période d'essai - catégorie professionnelle Agents de maîtrise et Cadres - durée du travail"
             ),
             {
               target: { value: "'Temps partiel'" },
@@ -447,7 +447,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Démission - catégorie professionnelle Employés - durée du travail"
+            "infos.contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Rupture de la période d'essai - catégorie professionnelle"
           ),
           {
             target: { value: "'Employés'" },

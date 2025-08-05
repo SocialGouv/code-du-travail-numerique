@@ -68,7 +68,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         "contrat salarié . convention collective . pharmacie . typeRupture":
           "'Démission ou licenciement'",
         "contrat salarié . convention collective . pharmacie . typeRupture Démission ou licenciement . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
         "contrat salarié . convention collective . pharmacie . typeRupture Démission ou licenciement . catégorie professionnelle Noncadres . durée du travail":
           "'Temps complet'",
       },

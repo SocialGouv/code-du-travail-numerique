@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - prévention sécurité entreprise - typeRupture"
+          "infos.contrat salarié - convention collective - prevention sécurité entreprise - typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -52,7 +52,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - prévention sécurité entreprise - typeRupture"
+          "infos.contrat salarié - convention collective - prevention sécurité entreprise - typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -82,7 +82,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - prévention sécurité entreprise - typeRupture"
+          "infos.contrat salarié - convention collective - prevention sécurité entreprise - typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

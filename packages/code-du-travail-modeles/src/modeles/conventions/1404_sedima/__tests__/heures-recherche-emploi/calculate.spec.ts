@@ -49,7 +49,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         "contrat salarié . convention collective . sedima . typeRupture":
           "'Démission'",
         "contrat salarié . convention collective . sedima . typeRupture Démission . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
       },
     },
     {
@@ -95,7 +95,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         "contrat salarié . convention collective . sedima . typeRupture":
           "'Licenciement'",
         "contrat salarié . convention collective . sedima . typeRupture Licenciement . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
       },
     },
     {

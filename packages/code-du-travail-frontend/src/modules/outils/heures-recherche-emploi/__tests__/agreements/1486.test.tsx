@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - bureaux études techniques - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai"
+          "infos.contrat salarié - convention collective - bureaux études techniques - typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -58,7 +58,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - bureaux études techniques - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+          "infos.contrat salarié - convention collective - bureaux études techniques - typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },
@@ -71,7 +71,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "criteria.initiative de la rupture de la période d'essai"
+            "infos.contrat salarié - convention collective - bureaux études techniques - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai"
           ),
           {
             target: { value: "'L'employeur'" },
@@ -96,7 +96,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "criteria.initiative de la rupture de la période d'essai"
+            "infos.contrat salarié - convention collective - bureaux études techniques - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai"
           ),
           {
             target: { value: "'Le salarié'" },
@@ -145,6 +145,28 @@ describe("HeuresRechercheEmploi", () => {
       ).toBeInTheDocument();
 
       expect(screen.queryAllByText(/Article 4.3/)[0]).toBeInTheDocument();
+    });
+  });
+
+  describe("typeRupture = 4| Rupture conventionnelle", () => {
+    beforeEach(() => {
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - bureaux études techniques - typeRupture"
+        ),
+        {
+          target: { value: "'Rupture conventionnelle'" },
+        }
+      );
+      fireEvent.click(ui.next.get());
+    });
+
+    it("should display expected answer", () => {
+      expect(
+        screen.queryAllByText(
+          /Il n’y a pas d’heures d’absence autorisée pour rechercher un emploi dans le cas d’une rupture conventionnelle./g
+        )[0]
+      ).toBeInTheDocument();
     });
   });
 });

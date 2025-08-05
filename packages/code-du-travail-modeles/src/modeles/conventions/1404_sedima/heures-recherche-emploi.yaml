@@ -20,7 +20,7 @@ contrat salarié . convention collective . sedima . typeRupture Démission . cat
     type: liste
     valeurs:
       Cadres: "'Cadres'"
-      Noncadres: "'Noncadres'"
+      Non-cadres: "'Non-cadres'"
 
 contrat salarié . convention collective . sedima . typeRupture Démission . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
@@ -37,7 +37,7 @@ contrat salarié . convention collective . sedima . typeRupture Démission . cat
     "Article 6.50.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=31A7E138E4F182F36A64DCE2892A88E4.tplgfr42s_2?idArticle=KALIARTI000026356072&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id
 
 contrat salarié . convention collective . sedima . typeRupture Démission . catégorie professionnelle Noncadres:
-  applicable si: catégorie professionnelle = 'Noncadres'
+  applicable si: catégorie professionnelle = 'Non-cadres'
   valeur: oui
 
 contrat salarié . convention collective . sedima . typeRupture Démission . catégorie professionnelle Noncadres . résultat conventionnel:
@@ -61,7 +61,7 @@ contrat salarié . convention collective . sedima . typeRupture Licenciement . c
     type: liste
     valeurs:
       Cadres: "'Cadres'"
-      Noncadres: "'Noncadres'"
+      Non-cadres: "'Non-cadres'"
 
 contrat salarié . convention collective . sedima . typeRupture Licenciement . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
@@ -78,7 +78,7 @@ contrat salarié . convention collective . sedima . typeRupture Licenciement . c
     "Article 6.50.1": https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=31A7E138E4F182F36A64DCE2892A88E4.tplgfr42s_2?idArticle=KALIARTI000026356072&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id
 
 contrat salarié . convention collective . sedima . typeRupture Licenciement . catégorie professionnelle Noncadres:
-  applicable si: catégorie professionnelle = 'Noncadres'
+  applicable si: catégorie professionnelle = 'Non-cadres'
   valeur: oui
 
 contrat salarié . convention collective . sedima . typeRupture Licenciement . catégorie professionnelle Noncadres . résultat conventionnel:

@@ -19,7 +19,7 @@ contrat salarié . convention collective . pharmacie . typeRupture Démission ou
     type: liste
     valeurs:
       Cadres: "'Cadres'"
-      Noncadres: "'Noncadres'"
+      Non-cadres: "'Non-cadres'"
 
 contrat salarié . convention collective . pharmacie . typeRupture Démission ou licenciement . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
@@ -63,7 +63,7 @@ contrat salarié . convention collective . pharmacie . typeRupture Démission ou
     "Article 6 des dispositions particulières pour les cadres": https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=D6E073ACFE608C0EC96C2F6997BEBF66.tplgfr41s_1?idSectionTA=KALISCTA000005714852&cidTexte=KALITEXT000005671154&idConvention=KALICONT000005635528
 
 contrat salarié . convention collective . pharmacie . typeRupture Démission ou licenciement . catégorie professionnelle Noncadres:
-  applicable si: catégorie professionnelle = 'Noncadres'
+  applicable si: catégorie professionnelle = 'Non-cadres'
   valeur: oui
 
 contrat salarié . convention collective . pharmacie . typeRupture Démission ou licenciement . catégorie professionnelle Noncadres . durée du travail:

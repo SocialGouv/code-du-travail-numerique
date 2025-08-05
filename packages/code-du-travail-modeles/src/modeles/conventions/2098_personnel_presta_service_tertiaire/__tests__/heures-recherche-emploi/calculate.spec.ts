@@ -64,7 +64,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         "contrat salarié . convention collective . personnel presta service tertiaire . typeRupture":
           "'Rupture de la période d'essai'",
         "contrat salarié . convention collective . personnel presta service tertiaire . typeRupture Rupture de la période d'essai . catégorie professionnelle":
-          "'Noncadres'",
+          "'Non-cadres'",
       },
     },
     {

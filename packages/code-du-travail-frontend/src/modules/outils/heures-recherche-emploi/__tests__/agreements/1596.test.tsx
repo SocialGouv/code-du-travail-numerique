@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - batiment ouvriers employés - typeRupture Démission - durée du préavis"
+          "infos.contrat salarié - convention collective - batiment ouvriers employés - typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -129,7 +129,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - batiment ouvriers employés - typeRupture Licenciement - durée du préavis"
+          "infos.contrat salarié - convention collective - batiment ouvriers employés - typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -230,7 +230,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - bâtiment ouvriers employés - typeRupture"
+          "infos.contrat salarié - convention collective - batiment ouvriers employés - typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - hospitalisation privées - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai"
+          "infos.contrat salarié - convention collective - hospitalisation privées - typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },
@@ -160,7 +160,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - hospitalisation privées - typeRupture Licenciement - catégorie professionnelle"
+          "infos.contrat salarié - convention collective - hospitalisation privées - typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
