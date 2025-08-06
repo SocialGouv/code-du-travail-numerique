@@ -20,6 +20,7 @@ export type DefaultSeniorityProps = {
 
 export type DefaultSeniorityRequiredProps = DefaultSeniorityProps & {
   dateNotification: string;
+  dateArretTravail?: string;
 };
 
 export abstract class SeniorityDefault<T extends SupportedCc>
@@ -55,6 +56,9 @@ export abstract class SeniorityDefault<T extends SupportedCc>
         args[
           "contrat salarié . indemnité de licenciement . date de notification"
         ] ?? "",
+      dateArretTravail:
+        args["contrat salarié . indemnité de licenciement . date d'arrêt"] ??
+        undefined,
       dateSortie:
         args["contrat salarié . indemnité de licenciement . date de sortie"] ??
         "",
@@ -72,9 +76,12 @@ export abstract class SeniorityDefault<T extends SupportedCc>
   computeRequiredSeniority({
     dateEntree,
     dateNotification,
+    dateArretTravail,
     absencePeriods = [],
   }: DefaultSeniorityRequiredProps): RequiredSeniorityResult {
-    return this.compute(dateEntree, dateNotification, absencePeriods);
+    // If dateArretTravail exists, use it instead of dateNotification
+    const dateToUse = dateArretTravail || dateNotification;
+    return this.compute(dateEntree, dateToUse, absencePeriods);
   }
 
   protected compute(

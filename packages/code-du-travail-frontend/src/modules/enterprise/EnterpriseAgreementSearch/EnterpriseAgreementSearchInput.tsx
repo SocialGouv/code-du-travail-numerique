@@ -108,13 +108,12 @@ export const EnterpriseAgreementSearchInput = ({
     }
   };
   const getQueries = () => {
-    const jsonString = JSON.stringify(location);
-    const base64String = btoa(jsonString);
-    return search
-      ? `?q=${encodeURIComponent(search)}${
-          jsonString ? `&cp=${base64String}` : ""
-        }`
+    if (!search) return "";
+    const jsonString = location ? JSON.stringify(location) : "";
+    const base64String = jsonString
+      ? btoa(unescape(encodeURIComponent(jsonString)))
       : "";
+    return `?q=${encodeURIComponent(search)}${base64String ? `&cp=${base64String}` : ""}`;
   };
   const onSubmit = async () => {
     if (!search) {
