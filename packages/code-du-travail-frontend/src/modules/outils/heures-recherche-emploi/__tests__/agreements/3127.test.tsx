@@ -71,7 +71,7 @@ describe("HeuresRechercheEmploi", () => {
       ).toBeInTheDocument();
       expect(
         screen.queryAllByText(
-          /Les 4 heures peuvent être prises un jour, comme le souhaite le salarié, ou selon d'autres confitions fixées d'un commun accord entre l'employeur et le salarié./g
+          /Les 4 heures peuvent être prises un jour, comme le souhaite le salarié, ou selon d'autres conditions fixées d'un commun accord entre l'employeur et le salarié./g
         )[0]
       ).toBeInTheDocument();
 

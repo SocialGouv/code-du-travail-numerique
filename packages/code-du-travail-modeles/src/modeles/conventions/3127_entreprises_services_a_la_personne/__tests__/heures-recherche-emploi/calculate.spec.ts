@@ -35,7 +35,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       ],
       expectedNotifications: [
         "",
-        "Les 4 heures peuvent être prises un jour, comme le souhaite le salarié, ou selon d'autres confitions fixées d'un commun accord entre l'employeur et le salarié.",
+        "Les 4 heures peuvent être prises un jour, comme le souhaite le salarié, ou selon d'autres conditions fixées d'un commun accord entre l'employeur et le salarié.",
       ],
       situation: {
         "contrat salarié . convention collective . entreprises de services à la personne . typeRupture":

@@ -50,7 +50,7 @@ contrat salarié . convention collective . hospitalisation privées . typeRuptur
   valeur: oui
 
 contrat salarié . convention collective . hospitalisation privées . typeRupture Rupture de la période d'essai . initiative de la rupture de la période d'essai L'employeur . ancienneté Plus de 3 mois . résultat conventionnel:
-  valeur: "'2 jours, si le préavis (aussi appelé délai de prévenance) est executé'"
+  valeur: "'2 jours, si le préavis (aussi appelé délai de prévenance) est exécuté'"
   type: notification
   description:
     - Le salaire est maintenu.

@@ -30,7 +30,6 @@ contrat salarié . convention collective . sport . typeRupture Démission:
 contrat salarié . convention collective . sport . typeRupture Démission . résultat conventionnel:
   valeur: "''"
   remplace: contrat salarié . convention collective . résultat conventionnel
-  références:
 
 contrat salarié . convention collective . sport . typeRupture Rupture de la période d'essai:
   applicable si: typeRupture = 'Rupture de la période d'essai'

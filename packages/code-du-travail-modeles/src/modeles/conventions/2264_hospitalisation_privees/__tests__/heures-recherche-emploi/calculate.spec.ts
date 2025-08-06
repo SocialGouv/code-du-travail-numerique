@@ -30,7 +30,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     {
       expectedResult: {
         expectedValue:
-          "2 jours, si le préavis (aussi appelé délai de prévenance) est executé",
+          "2 jours, si le préavis (aussi appelé délai de prévenance) est exécuté",
         unit: "",
       },
       expectedReferences: [

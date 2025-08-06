@@ -90,7 +90,7 @@ describe("HeuresRechercheEmploi", () => {
         it("should display expected answer", () => {
           expect(
             screen.queryAllByText(
-              /2 jours, si le préavis \(aussi appelé délai de prévenance\) est executé/g
+              /2 jours, si le préavis \(aussi appelé délai de prévenance\) est exécuté/g
             )[0]
           ).toBeInTheDocument();
           expect(
