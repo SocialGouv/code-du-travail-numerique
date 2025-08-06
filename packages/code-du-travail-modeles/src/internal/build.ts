@@ -53,7 +53,6 @@ function copyJSFile() {
   }
   fse.copySync(`${inDir}/publicodes`, `${outDir}/publicodes`);
   fse.copySync(`${inDir}/modeles`, `${outDir}/modeles`);
-  fse.copySync(`${inDir}/simulators`, `${outDir}/simulators`);
 }
 
 function writeSupportedCCFile() {
