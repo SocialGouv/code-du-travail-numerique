@@ -108,12 +108,20 @@ export const EnterpriseAgreementSearchInput = ({
     }
   };
   const getQueries = () => {
-    if (!search) return "";
     const jsonString = location ? JSON.stringify(location) : "";
     const base64String = jsonString
-      ? btoa(unescape(encodeURIComponent(jsonString)))
+      ? btoa(
+          encodeURIComponent(jsonString).replace(
+            /%([0-9A-F]{2})/g,
+            (match, p1) => String.fromCharCode(parseInt(p1, 16))
+          )
+        )
       : "";
-    return `?q=${encodeURIComponent(search)}${base64String ? `&cp=${base64String}` : ""}`;
+    return (
+      "?q=" +
+      encodeURIComponent(search ?? "") +
+      (base64String ? "&cp=" + base64String : "")
+    );
   };
   const onSubmit = async () => {
     if (!search) {
