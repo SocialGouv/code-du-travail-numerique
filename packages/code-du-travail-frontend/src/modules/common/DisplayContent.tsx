@@ -379,7 +379,12 @@ const DisplayContent = ({
   content,
   titleLevel,
 }: Props): string | JSX.Element | JSX.Element[] => {
-  return <div>{parse(xssWrapper(content), options(titleLevel))}</div>;
+  try {
+    return <div>{parse(xssWrapper(content), options(titleLevel))}</div>;
+  } catch (error) {
+    console.error("Error parsing HTML content:", error);
+    return <div>Une erreur est survenue lors de l'affichage du contenu.</div>;
+  }
 };
 
 export default DisplayContent;
