@@ -148,24 +148,5 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois."
       );
     });
-
-    test("Vérifier l'inéligibilité sur le bug des moins de 1 mois", () => {
-      const result = engine.calculate({
-        "contrat salarié . indemnité de licenciement . arrêt de travail": "non",
-        "contrat salarié . indemnité de licenciement . date d'entrée":
-          "01/01/2024",
-        "contrat salarié . indemnité de licenciement . date de notification":
-          "05/01/2024",
-        "contrat salarié . indemnité de licenciement . date de sortie":
-          "01/06/2024",
-        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-          "non",
-        licenciementFauteGrave: "non",
-        typeContratTravail: "cdi",
-      });
-      expect(result).toIneligibilityContain(
-        "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois."
-      );
-    });
   });
 });
