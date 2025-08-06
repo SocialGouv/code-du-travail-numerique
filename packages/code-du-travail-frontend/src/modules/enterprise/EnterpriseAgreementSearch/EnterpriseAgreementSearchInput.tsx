@@ -113,7 +113,7 @@ export const EnterpriseAgreementSearchInput = ({
       ? btoa(
           encodeURIComponent(jsonString).replace(
             /%([0-9A-F]{2})/g,
-            (match, p1) => String.fromCharCode(parseInt(p1, 16))
+            (_match, p1) => String.fromCharCode(parseInt(p1, 16))
           )
         )
       : "";
