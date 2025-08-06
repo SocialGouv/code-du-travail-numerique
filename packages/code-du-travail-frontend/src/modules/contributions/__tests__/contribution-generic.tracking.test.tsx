@@ -184,7 +184,7 @@ describe("<ContributionGeneric />", () => {
         {
           action: "/contribution/my-contrib",
           category: "cc_select_p1",
-          name: "idcc0016",
+          name: "idcc16",
           value: "",
         },
       ],
