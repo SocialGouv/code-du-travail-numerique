@@ -180,10 +180,16 @@ describe("EnterpriseAgreementSearchInput", () => {
           ui.enterpriseAgreementSearch.resultLines.carrefour.title.get();
         expect(enterpriseCard).toBeInTheDocument();
         // Vérifie que le href contient la query encodée (avec modification, il inclut base64 valide)
-        expect(enterpriseCard.closest("a")).toHaveAttribute(
-          "href",
-          expect.stringContaining("?q=carrefour&cp=") // Vérifie présence de cp encodé
-        );
+        const href = enterpriseCard.closest("a")?.getAttribute("href");
+        expect(href).toContain("?q=carrefour&cp=");
+        // Verify the base64 encoded location can be decoded properly
+        const cpMatch = href?.match(/cp=([^&]+)/);
+        if (cpMatch) {
+          const decoded = JSON.parse(
+            decodeURIComponent(escape(atob(cpMatch[1])))
+          );
+          expect(decoded.city).toBe("Château-Thierry😊");
+        }
       });
     });
   });
