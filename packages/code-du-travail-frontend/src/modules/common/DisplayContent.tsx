@@ -383,7 +383,9 @@ const DisplayContent = ({
     return <div>{parse(xssWrapper(content), options(titleLevel))}</div>;
   } catch (error) {
     console.error("Error parsing HTML content:", error);
-    return <div>Une erreur est survenue lors de l'affichage du contenu.</div>;
+    return (
+      <div>Une erreur est survenue lors de l&apos;affichage du contenu.</div>
+    );
   }
 };
 

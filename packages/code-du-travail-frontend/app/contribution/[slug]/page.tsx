@@ -27,17 +27,12 @@ async function Contribution({ params }) {
 }
 
 const getContribution = async (slug: string) => {
-  try {
-    const contribution = await fetchContributionBySlug(slug);
+  const contribution = await fetchContributionBySlug(slug);
 
-    if (!contribution) {
-      return notFound();
-    }
-    return contribution;
-  } catch (error) {
-    console.error("Error fetching contribution:", error);
-    throw new Error(`Failed to fetch contribution: ${error.message}`);
+  if (!contribution) {
+    return notFound();
   }
+  return contribution;
 };
 
 export default Contribution;
