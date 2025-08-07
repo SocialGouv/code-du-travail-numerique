@@ -15,7 +15,16 @@ export const ContentSP = ({ raw, titleLevel }) => {
       </>
     );
   } catch (error) {
-    console.error("Error parsing contribution content:", error);
-    return <div>Une erreur est survenue lors du chargement du contenu.</div>;
+    console.error(
+      "Error parsing contribution JSON content:",
+      error,
+      "Raw data:",
+      raw
+    );
+    return (
+      <div role="alert">
+        Une erreur est survenue lors du chargement du contenu.
+      </div>
+    );
   }
 };
