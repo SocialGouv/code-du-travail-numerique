@@ -1,3 +1,4 @@
+import { MatomoAgreementEvent } from "src/lib";
 import { sendEvent } from "../utils";
 
 export enum TrackingContributionCategory {
@@ -7,9 +8,6 @@ export enum TrackingContributionCategory {
 }
 
 export enum TrackingAgreementSearchAction {
-  CC_TREATED = "cc_select_traitée",
-  CC_UNTREATED = "cc_select_non_traitée",
-  CC_BLOCK_USER = "user_blocked_info_cc", // Event à émettre lorsqu'un utilisateur bloque l'affichage des informations de la CC et à mettre au niveau des simulateurs manuellement
   CLICK_DISPLAY_AGREEMENT_CONTENT = "click_afficher_les_informations_CC",
   CLICK_DISPLAY_GENERIC_CONTENT = "click_afficher_les_informations_sans_CC",
   CLICK_DISPLAY_GENERAL_CONTENT = "click_afficher_les_informations_générales",
@@ -22,7 +20,7 @@ export const useContributionTracking = () => {
   const emitAgreementTreatedEvent = (idcc: number) => {
     sendEvent({
       category: TrackingContributionCategory.TOOL,
-      action: TrackingAgreementSearchAction.CC_TREATED,
+      action: MatomoAgreementEvent.CC_TREATED,
       name: idcc.toString(),
     });
   };
@@ -30,7 +28,7 @@ export const useContributionTracking = () => {
   const emitAgreementUntreatedEvent = (idcc: number) => {
     sendEvent({
       category: TrackingContributionCategory.TOOL,
-      action: TrackingAgreementSearchAction.CC_UNTREATED,
+      action: MatomoAgreementEvent.CC_UNTREATED,
       name: idcc.toString(),
     });
   };

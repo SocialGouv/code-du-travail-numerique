@@ -15,6 +15,7 @@ import { SimulatorLayout } from "../common/components/SimulatorLayout";
 import StepResult from "./steps/Result";
 import StepInformations from "./steps/Informations";
 import StepAgreement from "./steps/Agreement";
+import { useHeuresRechercheEmploiEventEmitter } from "./events/useHeuresRechercheEmploiEventEmitter";
 
 enum HeuresRechercheEmploiStepName {
   Intro = "start",
@@ -92,6 +93,8 @@ const HeuresRechercheEmploiSimulatorContent = ({
   steps: Step<HeuresRechercheEmploiStepName>[];
 }): JSX.Element => {
   const store = useContext(HeuresRechercheEmploiContext);
+
+  useHeuresRechercheEmploiEventEmitter();
 
   const {
     onNextStepAgreement,
