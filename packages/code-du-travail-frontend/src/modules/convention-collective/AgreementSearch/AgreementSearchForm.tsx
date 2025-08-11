@@ -70,7 +70,7 @@ export const AgreementSearchForm = ({
         <AgreementSearchInput
           onAgreementSelect={(agreement) => {
             if (agreement) {
-              emitSelectEvent(`idcc${agreement.id}`, trackingActionName);
+              emitSelectEvent(`idcc${agreement.num}`, trackingActionName);
             }
             emitClickP1(trackingActionName);
             onAgreementSelect(agreement);

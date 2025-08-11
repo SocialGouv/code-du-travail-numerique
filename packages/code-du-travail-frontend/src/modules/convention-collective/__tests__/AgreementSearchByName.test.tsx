@@ -91,7 +91,7 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
       expect(sendEvent).toHaveBeenCalledWith({
         action: "Trouver sa convention collective",
         category: "cc_select_p1",
-        name: "idcc0016",
+        name: "idcc16",
         value: undefined,
       });
 
