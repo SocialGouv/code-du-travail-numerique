@@ -16,6 +16,10 @@ describe("Test de la fonctionnalité 'calculate'", () => {
           article: "Annexe III, article 5",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517551#KALIARTI000041517551",
         },
+        {
+          article: "Article 3.9",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111907#KALIARTI000039111907",
+        },
       ],
       expectedNotifications: [
         "Le salaire n'est pas maintenu.",
@@ -42,6 +46,10 @@ describe("Test de la fonctionnalité 'calculate'", () => {
           article: "Annexe II, article 5",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517514#KALIARTI000041517514",
         },
+        {
+          article: "Article 3.9",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111907#KALIARTI000039111907",
+        },
       ],
       expectedNotifications: [
         "Le salaire n'est pas maintenu.",
@@ -64,6 +72,10 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         {
           article: "Annexe III, article 5",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517551#KALIARTI000041517551",
+        },
+        {
+          article: "Article 3.9",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111907#KALIARTI000039111907",
         },
       ],
       expectedNotifications: [
@@ -91,6 +103,10 @@ describe("Test de la fonctionnalité 'calculate'", () => {
           article: "Annexe II, article 5",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517514#KALIARTI000041517514",
         },
+        {
+          article: "Article 3.9",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111907#KALIARTI000039111907",
+        },
       ],
       expectedNotifications: [
         "Le salaire est maintenu.",
@@ -117,6 +133,10 @@ describe("Test de la fonctionnalité 'calculate'", () => {
           article: "Annexe II, article 5",
           url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517514#KALIARTI000041517514",
         },
+        {
+          article: "Article 3.9",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111907#KALIARTI000039111907",
+        },
       ],
       expectedNotifications: [],
       situation: {
@@ -134,7 +154,6 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     }) => {
       const result = engine.calculate({
         "contrat salarié . convention collective": "'IDCC2216'",
-
         ...situation,
       });
       expect(result).toResultBeEqual(

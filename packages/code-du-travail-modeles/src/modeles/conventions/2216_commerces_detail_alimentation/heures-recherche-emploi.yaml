@@ -35,6 +35,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe III, article 5": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517551#KALIARTI000041517551
+    "Article 3.9": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111907#KALIARTI000039111907
 
 contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Démission . catégorie professionnelle Noncadres:
   applicable si: catégorie professionnelle = 'Non-cadres'
@@ -50,6 +51,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
   références:
     "Annexe I, article 5": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517480#KALIARTI000041517480
     "Annexe II, article 5": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517514#KALIARTI000041517514
+    "Article 3.9": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111907#KALIARTI000039111907
 
 contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Licenciement:
   applicable si: typeRupture = 'Licenciement'
@@ -77,6 +79,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
     "Annexe III, article 5": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517551#KALIARTI000041517551
+    "Article 3.9": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111907#KALIARTI000039111907
 
 contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Licenciement . catégorie professionnelle Noncadres:
   applicable si: catégorie professionnelle = 'Non-cadres'
@@ -92,6 +95,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
   références:
     "Annexe I, article 5": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517480#KALIARTI000041517480
     "Annexe II, article 5": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517514#KALIARTI000041517514
+    "Article 3.9": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111907#KALIARTI000039111907
 
 contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Rupture de la période d'essai:
   applicable si: typeRupture = 'Rupture de la période d'essai'
@@ -103,3 +107,4 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
   références:
     "Annexe I, article 5": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517480#KALIARTI000041517480
     "Annexe II, article 5": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517514#KALIARTI000041517514
+    "Article 3.9": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111907#KALIARTI000039111907
