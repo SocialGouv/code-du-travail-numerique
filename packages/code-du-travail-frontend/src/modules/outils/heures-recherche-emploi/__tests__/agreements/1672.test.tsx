@@ -40,7 +40,7 @@ describe("HeuresRechercheEmploi", () => {
     it("should display expected answer", () => {
       expect(
         screen.queryAllByText(
-          /le temps et dans les conditions décidées par l'employeur, qui lui accordent des facilités d'absence/g
+          /le temps et dans les conditions décidées par l'employeur, qui lui accorde des facilités d'absence/g
         )[0]
       ).toBeInTheDocument();
       expect(

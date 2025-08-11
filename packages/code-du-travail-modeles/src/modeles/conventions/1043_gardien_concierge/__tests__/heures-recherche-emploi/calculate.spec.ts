@@ -14,7 +14,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 15",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021181025&cidTexte=KALITEXT000021180979&dateTexte=20120924",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000034978432#KALIARTI000034978432",
         },
       ],
       expectedNotifications: [],
@@ -31,7 +31,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 15",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021181025&cidTexte=KALITEXT000021180979&dateTexte=20120924",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000034978432#KALIARTI000034978432",
         },
       ],
       expectedNotifications: [
@@ -51,7 +51,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 15",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021181025&cidTexte=KALITEXT000021180979&dateTexte=20120924",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000034978432#KALIARTI000034978432",
         },
       ],
       expectedNotifications: [],

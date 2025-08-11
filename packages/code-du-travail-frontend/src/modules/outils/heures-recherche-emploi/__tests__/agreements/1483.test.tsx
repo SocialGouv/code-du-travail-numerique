@@ -66,7 +66,7 @@ describe("HeuresRechercheEmploi", () => {
         it("should display expected answer", () => {
           expect(
             screen.queryAllByText(
-              /2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures/g
+              /2 heures par jour ouvré dans une limite de 40 heures./g
             )[0]
           ).toBeInTheDocument();
           expect(
@@ -144,7 +144,7 @@ describe("HeuresRechercheEmploi", () => {
         it("should display expected answer", () => {
           expect(
             screen.queryAllByText(
-              /2 heures par jour ouvré, proportionnellement au temps de travail contractuel du salarié, dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures/g
+              /2 heures par jour ouvré, proportionnellement au temps de travail contractuel du salarié, dans une limite de 40 heures./g
             )[0]
           ).toBeInTheDocument();
           expect(
@@ -176,7 +176,7 @@ describe("HeuresRechercheEmploi", () => {
         it("should display expected answer", () => {
           expect(
             screen.queryAllByText(
-              /2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures/g
+              /2 heures par jour ouvré dans une limite de 40 heures./g
             )[0]
           ).toBeInTheDocument();
           expect(
@@ -312,7 +312,7 @@ describe("HeuresRechercheEmploi", () => {
         it("should display expected answer", () => {
           expect(
             screen.queryAllByText(
-              /2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures/g
+              /2 heures par jour ouvré dans une limite de 40 heures./g
             )[0]
           ).toBeInTheDocument();
           expect(
@@ -344,7 +344,7 @@ describe("HeuresRechercheEmploi", () => {
         it("should display expected answer", () => {
           expect(
             screen.queryAllByText(
-              /2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures/g
+              /2 heures par jour ouvré dans une limite de 40 heures./g
             )[0]
           ).toBeInTheDocument();
           expect(

@@ -8,8 +8,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
   test.each([
     {
       expectedResult: {
-        expectedValue:
-          "2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures",
+        expectedValue: "2 heures par jour ouvré dans une limite de 40 heures.",
         unit: "",
       },
       expectedReferences: [
@@ -59,7 +58,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     {
       expectedResult: {
         expectedValue:
-          "2 heures par jour ouvré, proportionnellement au temps de travail contractuel du salarié, dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures",
+          "2 heures par jour ouvré, proportionnellement au temps de travail contractuel du salarié, dans une limite de 40 heures.",
         unit: "",
       },
       expectedReferences: [
@@ -83,8 +82,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     },
     {
       expectedResult: {
-        expectedValue:
-          "2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures",
+        expectedValue: "2 heures par jour ouvré dans une limite de 40 heures.",
         unit: "",
       },
       expectedReferences: [
@@ -154,8 +152,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     },
     {
       expectedResult: {
-        expectedValue:
-          "2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures",
+        expectedValue: "2 heures par jour ouvré dans une limite de 40 heures.",
         unit: "",
       },
       expectedReferences: [
@@ -179,8 +176,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     },
     {
       expectedResult: {
-        expectedValue:
-          "2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures",
+        expectedValue: "2 heures par jour ouvré dans une limite de 40 heures.",
         unit: "",
       },
       expectedReferences: [

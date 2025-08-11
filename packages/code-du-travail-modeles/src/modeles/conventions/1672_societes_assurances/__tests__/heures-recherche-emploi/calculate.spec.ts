@@ -9,7 +9,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
     {
       expectedResult: {
         expectedValue:
-          "le temps et dans les conditions décidées par l'employeur, qui lui accordent des facilités d'absence",
+          "le temps et dans les conditions décidées par l'employeur, qui lui accorde des facilités d'absence",
         unit: "",
       },
       expectedReferences: [

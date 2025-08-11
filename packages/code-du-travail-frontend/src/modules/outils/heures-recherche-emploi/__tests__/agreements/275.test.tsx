@@ -66,7 +66,7 @@ describe("HeuresRechercheEmploi", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Annexe 2 Article 11/)[0]
+          screen.queryAllByText(/Annexe 2, article 11/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -100,7 +100,7 @@ describe("HeuresRechercheEmploi", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Annexe 2 Article 11/)[0]
+          screen.queryAllByText(/Annexe 2, article 11/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -248,7 +248,7 @@ describe("HeuresRechercheEmploi", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Annexe 2 Article 11/)[0]
+          screen.queryAllByText(/Annexe 2, article 11/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -282,7 +282,7 @@ describe("HeuresRechercheEmploi", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Annexe 2 Article 11/)[0]
+          screen.queryAllByText(/Annexe 2, article 11/)[0]
         ).toBeInTheDocument();
       });
     });

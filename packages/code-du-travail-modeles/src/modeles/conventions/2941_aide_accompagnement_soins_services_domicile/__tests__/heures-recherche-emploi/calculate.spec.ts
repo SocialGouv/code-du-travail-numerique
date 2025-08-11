@@ -15,7 +15,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 27",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392523#KALIARTI000044392523",
         },
       ],
       expectedNotifications: ["Le salaire n'est pas maintenu.", ""],
@@ -33,7 +33,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 26.1",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525#KALIARTI000044392525",
         },
       ],
       expectedNotifications: [

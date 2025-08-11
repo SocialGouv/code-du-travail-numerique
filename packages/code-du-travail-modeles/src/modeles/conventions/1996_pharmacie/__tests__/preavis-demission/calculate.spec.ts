@@ -24,7 +24,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 20 de la convention collective",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005829411&cidTexte=KALITEXT000005671152&dateTexte=20180607",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041761335#KALIARTI000041761335",
         },
       ],
       expectedNotifications: [],

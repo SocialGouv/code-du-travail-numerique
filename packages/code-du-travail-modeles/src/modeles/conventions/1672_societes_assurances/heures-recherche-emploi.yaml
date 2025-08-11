@@ -14,7 +14,7 @@ contrat salarié . convention collective . sociétés d'assurances . typeRupture
   valeur: oui
 
 contrat salarié . convention collective . sociétés d'assurances . typeRupture Démission . résultat conventionnel:
-  valeur: "'le temps et dans les conditions décidées par l'employeur, qui lui accordent des facilités d'absence'"
+  valeur: "'le temps et dans les conditions décidées par l'employeur, qui lui accorde des facilités d'absence'"
   type: notification
   description:
     - Le salaire n'est pas maintenu.

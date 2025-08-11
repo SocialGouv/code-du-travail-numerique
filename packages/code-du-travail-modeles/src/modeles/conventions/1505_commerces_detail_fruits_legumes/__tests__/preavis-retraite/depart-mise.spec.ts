@@ -9,9 +9,9 @@ const ArticleCc = {
   url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562759#KALIARTI000043562759",
 };
 
-const DepartRetraiteCcReferences = [...DepartRetraiteReferences, ArticleCc];
+const DepartRetraiteCcReferences = [...DepartRetraiteReferences, articleCc];
 
-const MiseRetraiteCCReferences = [...MiseRetraiteReferences, ArticleCc];
+const MiseRetraiteCCReferences = [...MiseRetraiteReferences, articleCc];
 
 const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 

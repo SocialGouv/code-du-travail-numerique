@@ -25,8 +25,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 3, unit: "mois" },
       expectedReferences: [
         {
-          article: "Article 7 de l'annexe III",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1586D3FFD3D633068920933FE7AEDD82.tplgfr44s_2?idArticle=KALIARTI000023307118&cidTexte=KALITEXT000005642692&dateTexte=29990101&categorieLien=id",
+          article: "Annexe III, article 5",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517551#KALIARTI000041517551",
         },
       ],
       expectedNotifications: [],

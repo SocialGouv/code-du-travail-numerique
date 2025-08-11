@@ -14,8 +14,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
       expectedReferences: [
         {
-          article: "Article 6 des dispositions particulières pour les cadres",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=D6E073ACFE608C0EC96C2F6997BEBF66.tplgfr41s_1?idSectionTA=KALISCTA000005714852&cidTexte=KALITEXT000005671154&idConvention=KALICONT000005635528",
+          article: "Article 5 des dispositions particulières pour les cadres",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041761360#KALIARTI000041761360",
         },
       ],
       expectedNotifications: [
@@ -35,8 +35,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: "2 heures par jour", unit: "" },
       expectedReferences: [
         {
-          article: "Article 6 des dispositions particulières pour les cadres",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=D6E073ACFE608C0EC96C2F6997BEBF66.tplgfr41s_1?idSectionTA=KALISCTA000005714852&cidTexte=KALITEXT000005671154&idConvention=KALICONT000005635528",
+          article: "Article 5 des dispositions particulières pour les cadres",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041761360#KALIARTI000041761360",
         },
       ],
       expectedNotifications: [
@@ -57,7 +57,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 20",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005829411&cidTexte=KALITEXT000005671152&dateTexte=20180607",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041761335#KALIARTI000041761335",
         },
       ],
       expectedNotifications: [
@@ -81,7 +81,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 19",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=27F4F2F70EACAC6453704FD11023F9A4.tplgfr41s_1?idArticle=KALIARTI000038106390&cidTexte=KALITEXT000005671152&dateTexte=29981231&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041761375#KALIARTI000041761375",
         },
       ],
       expectedNotifications: [],

@@ -40,7 +40,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   valeur: oui
 
 contrat salarié . convention collective . habillement textiles commerce de detail . typeRupture Démission . catégorie professionnelle Agents de maîtrise et Cadres . durée du travail Temps complet . résultat conventionnel:
-  valeur: "'2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures'"
+  valeur: "'2 heures par jour ouvré dans une limite de 40 heures.'"
   type: notification
   description:
     - Le salaire est maintenu.
@@ -81,7 +81,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   valeur: oui
 
 contrat salarié . convention collective . habillement textiles commerce de detail . typeRupture Démission . catégorie professionnelle Employés . durée du travail Temps partiel . résultat conventionnel:
-  valeur: "'2 heures par jour ouvré, proportionnellement au temps de travail contractuel du salarié, dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures'"
+  valeur: "'2 heures par jour ouvré, proportionnellement au temps de travail contractuel du salarié, dans une limite de 40 heures.'"
   type: notification
   description:
     - Le salaire est maintenu.
@@ -95,7 +95,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   valeur: oui
 
 contrat salarié . convention collective . habillement textiles commerce de detail . typeRupture Démission . catégorie professionnelle Employés . durée du travail Temps complet . résultat conventionnel:
-  valeur: "'2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures'"
+  valeur: "'2 heures par jour ouvré dans une limite de 40 heures.'"
   type: notification
   description:
     - Le salaire est maintenu.
@@ -176,7 +176,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   valeur: oui
 
 contrat salarié . convention collective . habillement textiles commerce de detail . typeRupture Licenciement . catégorie professionnelle Employés . durée du travail Temps complet . résultat conventionnel:
-  valeur: "'2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures'"
+  valeur: "'2 heures par jour ouvré dans une limite de 40 heures.'"
   type: notification
   description:
     - Le salaire est maintenu.
@@ -190,7 +190,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   valeur: oui
 
 contrat salarié . convention collective . habillement textiles commerce de detail . typeRupture Licenciement . catégorie professionnelle Employés . durée du travail Temps partiel . résultat conventionnel:
-  valeur: "'2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures'"
+  valeur: "'2 heures par jour ouvré dans une limite de 40 heures.'"
   type: notification
   description:
     - Le salaire est maintenu.

@@ -55,7 +55,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Annexe I, chapitre Ier, article 5",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849372&cidTexte=KALITEXT000005678895&dateTexte=29990101&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000045968978#KALIARTI000045968978",
         },
         {
           article: "Accord du 3 février 2022, article 3",
@@ -77,7 +77,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Annexe I, chapitre Ier, article 5",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849372&cidTexte=KALITEXT000005678895&dateTexte=29990101&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000045968978#KALIARTI000045968978",
         },
       ],
       expectedNotifications: [],

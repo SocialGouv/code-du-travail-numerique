@@ -14,7 +14,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article:
-            "Accord du 27 février 1951 relatif aux employés Annexe II, Article13",
+            "Accord du 27 février 1951 relatif aux employés Annexe II, article13",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849509&cidTexte=KALITEXT000005678903&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -58,7 +58,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         {
           article:
             "Accord du 16 juin 1961 relatifs aux ouvriers - annexe I, article 5",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849372&cidTexte=KALITEXT000005678895&dateTexte=29990101&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000045968978#KALIARTI000045968978",
         },
       ],
       expectedNotifications: [
@@ -130,7 +130,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article:
-            "Accord du 27 février 1951 relatif aux employés Annexe II, Article13",
+            "Accord du 27 février 1951 relatif aux employés Annexe II, article13",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849509&cidTexte=KALITEXT000005678903&dateTexte=29990101&categorieLien=id",
         },
       ],
@@ -174,7 +174,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         {
           article:
             "Accord du 16 juin 1961 relatifs aux ouvriers - annexe I, article 5",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849372&cidTexte=KALITEXT000005678895&dateTexte=29990101&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000045968978#KALIARTI000045968978",
         },
       ],
       expectedNotifications: [
@@ -196,7 +196,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         {
           article:
             "Accord du 16 juin 1961 relatifs aux ouvriers - annexe I, article 5",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849372&cidTexte=KALITEXT000005678895&dateTexte=29990101&categorieLien=id",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000045968978#KALIARTI000045968978",
         },
       ],
       expectedNotifications: [

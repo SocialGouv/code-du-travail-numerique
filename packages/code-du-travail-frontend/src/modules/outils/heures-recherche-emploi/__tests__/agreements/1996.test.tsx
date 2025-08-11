@@ -80,7 +80,7 @@ describe("HeuresRechercheEmploi", () => {
 
           expect(
             screen.queryAllByText(
-              /Article 6 des dispositions particulières pour les cadres/
+              /Article 5 des dispositions particulières pour les cadres/
             )[0]
           ).toBeInTheDocument();
         });
@@ -114,7 +114,7 @@ describe("HeuresRechercheEmploi", () => {
 
           expect(
             screen.queryAllByText(
-              /Article 6 des dispositions particulières pour les cadres/
+              /Article 5 des dispositions particulières pour les cadres/
             )[0]
           ).toBeInTheDocument();
         });

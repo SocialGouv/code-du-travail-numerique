@@ -73,9 +73,7 @@ describe("CalculateurPreavisLicenciement", () => {
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
 
-      expect(
-        screen.queryAllByText(/Article 7 de l'annexe III/)[0]
-      ).toBeInTheDocument();
+      expect(screen.queryAllByText(/Article 5/)[0]).toBeInTheDocument();
     });
   });
 

@@ -14,8 +14,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
       expectedReferences: [
         {
-          article: "Annexe 2 Article 11",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5A3C02D1A1763C39E0F1713E1FCDCBD.tplgfr24s_2?idArticle=KALIARTI000005872146&cidTexte=KALITEXT000005688169&dateTexte=29990101&categorieLien=id",
+          article: "Annexe 2, article 11",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000048654561#KALIARTI000048654561",
         },
       ],
       expectedNotifications: [
@@ -37,8 +37,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
       expectedReferences: [
         {
-          article: "Annexe 2 Article 11",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5A3C02D1A1763C39E0F1713E1FCDCBD.tplgfr24s_2?idArticle=KALIARTI000005872146&cidTexte=KALITEXT000005688169&dateTexte=29990101&categorieLien=id",
+          article: "Annexe 2, article 11",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000048654561#KALIARTI000048654561",
         },
       ],
       expectedNotifications: [
@@ -125,8 +125,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
       expectedReferences: [
         {
-          article: "Annexe 2 Article 11",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5A3C02D1A1763C39E0F1713E1FCDCBD.tplgfr24s_2?idArticle=KALIARTI000005872146&cidTexte=KALITEXT000005688169&dateTexte=29990101&categorieLien=id",
+          article: "Annexe 2, article 11",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000048654561#KALIARTI000048654561",
         },
       ],
       expectedNotifications: [
@@ -148,8 +148,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
       expectedReferences: [
         {
-          article: "Annexe 2 Article 11",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C5A3C02D1A1763C39E0F1713E1FCDCBD.tplgfr24s_2?idArticle=KALIARTI000005872146&cidTexte=KALITEXT000005688169&dateTexte=29990101&categorieLien=id",
+          article: "Annexe 2, article 11",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000048654561#KALIARTI000048654561",
         },
       ],
       expectedNotifications: [

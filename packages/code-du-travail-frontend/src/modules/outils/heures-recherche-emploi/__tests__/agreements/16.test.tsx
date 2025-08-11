@@ -67,7 +67,7 @@ describe("HeuresRechercheEmploi", () => {
 
         expect(
           screen.queryAllByText(
-            /Accord du 27 février 1951 relatif aux employés Annexe II, Article13/
+            /Accord du 27 février 1951 relatif aux employés Annexe II, article13/
           )[0]
         ).toBeInTheDocument();
       });
@@ -275,7 +275,7 @@ describe("HeuresRechercheEmploi", () => {
 
         expect(
           screen.queryAllByText(
-            /Accord du 27 février 1951 relatif aux employés Annexe II, Article13/
+            /Accord du 27 février 1951 relatif aux employés Annexe II, article13/
           )[0]
         ).toBeInTheDocument();
       });
