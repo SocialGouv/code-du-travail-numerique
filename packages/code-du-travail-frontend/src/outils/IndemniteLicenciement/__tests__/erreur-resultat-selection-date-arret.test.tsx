@@ -7,7 +7,7 @@ import { UserAction } from "../../../common";
 jest.mock("../../../conventions/Search/api/agreements.service");
 jest.mock("../../../conventions/Search/api/enterprises.service");
 
-describe("Page salaire: vérification l'affichage du résultat lorsqu'une date d'arrêt est sélectionnée", () => {
+describe("Vérification de l'affichage du résultat lorsqu'une date d'arrêt avec une interval inférieur à 8 mois avec la date de début est sélectionnée", () => {
   test("should show result", async () => {
     const { getByText } = render(
       <CalculateurIndemniteLicenciement
