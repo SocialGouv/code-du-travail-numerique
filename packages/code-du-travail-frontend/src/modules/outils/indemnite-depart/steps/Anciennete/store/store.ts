@@ -124,7 +124,7 @@ const createAncienneteStore: StoreSlice<
           const infos = informationToSituation(
             get().informationsData.input.publicodesInformations
           );
-          const { licenciementInaptitude, arretTravail } =
+          const { licenciementInaptitude, arretTravail, dateArretTravail } =
             get().contratTravailData.input;
           const { dateEntree, dateNotification, dateSortie, absencePeriods } =
             get().ancienneteData.input;
@@ -141,6 +141,7 @@ const createAncienneteStore: StoreSlice<
               licenciementInaptitude,
             "contrat salarié . indemnité de licenciement . arrêt de travail":
               arretTravail,
+            dateArret: dateArretTravail,
             absencePeriods:
               absencePeriods && absencePeriods.length
                 ? JSON.stringify(absencePeriods)

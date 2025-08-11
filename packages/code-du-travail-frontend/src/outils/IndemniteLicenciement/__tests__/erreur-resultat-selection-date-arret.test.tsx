@@ -32,11 +32,7 @@ describe("Page salaire: vérification l'affichage du résultat lorsqu'une date d
 
     userAction.click(ui.seniority.hasAbsence.non.get());
     userAction.click(ui.next.get());
-    userAction.click(ui.salary.hasPartialTime.non.get());
-    userAction.click(ui.salary.hasSameSalary.oui.get());
-    userAction.setInput(ui.salary.sameSalaryValue.get(), "2668");
-    userAction.click(ui.next.get());
     expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
-    expect(ui.result.resultat.get()).toHaveTextContent("26 902,33");
+    expect(ui.result.legalError.title.get()).toBeDefined();
   });
 });

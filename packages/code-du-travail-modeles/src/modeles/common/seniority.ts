@@ -15,6 +15,7 @@ import { parseDate } from "./index";
 export type DefaultSeniorityProps = {
   dateEntree: string;
   dateSortie: string;
+  dateArret?: string;
   absencePeriods?: Absence[];
 };
 
@@ -58,6 +59,7 @@ export abstract class SeniorityDefault<T extends SupportedCc>
       dateSortie:
         args["contrat salarié . indemnité de licenciement . date de sortie"] ??
         "",
+      dateArret: args.dateArret,
     } as SeniorityRequiredProps<T>;
   }
 
@@ -72,9 +74,14 @@ export abstract class SeniorityDefault<T extends SupportedCc>
   computeRequiredSeniority({
     dateEntree,
     dateNotification,
+    dateArret,
     absencePeriods = [],
   }: DefaultSeniorityRequiredProps): RequiredSeniorityResult {
-    return this.compute(dateEntree, dateNotification, absencePeriods);
+    return this.compute(
+      dateEntree,
+      dateArret ?? dateNotification,
+      absencePeriods
+    );
   }
 
   protected compute(

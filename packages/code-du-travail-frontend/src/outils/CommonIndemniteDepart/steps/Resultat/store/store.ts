@@ -142,6 +142,7 @@ const createResultStore: StoreSlice<
           get().ancienneteData.input.dateNotification!,
           get().ancienneteData.input.dateEntree!,
           get().ancienneteData.input.dateSortie!,
+          get().contratTravailData.input.dateArretTravail!,
           get().contratTravailData.input.licenciementInaptitude === "oui",
           get().contratTravailData.input.arretTravail === "oui",
           { ...infos }
