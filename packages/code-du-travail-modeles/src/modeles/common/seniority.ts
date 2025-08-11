@@ -79,7 +79,7 @@ export abstract class SeniorityDefault<T extends SupportedCc>
   }: DefaultSeniorityRequiredProps): RequiredSeniorityResult {
     return this.compute(
       dateEntree,
-      dateArret ?? dateNotification,
+      dateArret || dateNotification,
       absencePeriods
     );
   }

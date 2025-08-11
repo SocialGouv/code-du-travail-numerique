@@ -111,7 +111,7 @@ describe("Arrêt de travail", () => {
       expect(ui.salary.salaries.queryAll()).toHaveLength(8);
     });
 
-    test("should display with the good number of months at the 'Salaires' step", async () => {
+    test("should display with the good number of months at the 'Salaires' step when seniority > 8 month", async () => {
       userAction.click(ui.introduction.startButton.get());
       userAction.click(ui.contract.type.cdi.get());
       userAction.click(ui.contract.fauteGrave.non.get());
