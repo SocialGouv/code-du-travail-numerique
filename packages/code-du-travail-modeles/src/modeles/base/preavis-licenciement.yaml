@@ -1,7 +1,7 @@
 contrat salarié . travailleur handicapé: non
 
 contrat salarié . convention collective . ancienneté légal:
-  titre: ancienneté
+  titre: Ancienneté
   question: Quelle est l'ancienneté du salarié ?
   cdtn:
     type: liste

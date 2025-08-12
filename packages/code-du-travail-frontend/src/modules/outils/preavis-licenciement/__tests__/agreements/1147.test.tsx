@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
 
       expect(
-        screen.queryAllByText(/article 25 de la convention collective/)[0]
+        screen.queryAllByText(/Article 25 de la convention collective/)[0]
       ).toBeInTheDocument();
     });
   });
@@ -87,7 +87,7 @@ describe("CalculateurPreavisLicenciement", () => {
         expect(screen.queryAllByText(/15 jours/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/article 25 de la convention collective/)[0]
+          screen.queryAllByText(/Article 25 de la convention collective/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -109,7 +109,7 @@ describe("CalculateurPreavisLicenciement", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/article 25 de la convention collective/)[0]
+          screen.queryAllByText(/Article 25 de la convention collective/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -131,7 +131,7 @@ describe("CalculateurPreavisLicenciement", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/article 25 de la convention collective/)[0]
+          screen.queryAllByText(/Article 25 de la convention collective/)[0]
         ).toBeInTheDocument();
       });
     });

@@ -7,3 +7,4 @@ export * from "./types";
 export { PreavisDemissionPublicodes } from "./PreavisDemissionPublicodes";
 export { IndemnitePrecaritePublicodes } from "./IndemnitePrecaritePublicodes";
 export { PreavisLicenciementPublicodes } from "./PreavisLicenciementPublicodes";
+export { HeuresRechercheEmploiPublicodes } from "./HeuresRechercheEmploiPublicodes";

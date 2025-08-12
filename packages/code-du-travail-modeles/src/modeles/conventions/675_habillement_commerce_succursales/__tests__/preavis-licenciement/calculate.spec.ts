@@ -25,7 +25,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 3, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 13 de l'avenant « Cadres »",
+          article: "Article 13 de l'avenant « Cadres »",
           url: "https://www.legifrance.gouv.fr/affichIDCC.do?cidTexte=KALITEXT000005679774&idSectionTA=KALISCTA000005752482&idConvention=KALICONT000005635617&dateTexte=29990101",
         },
       ],
