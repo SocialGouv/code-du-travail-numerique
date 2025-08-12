@@ -1,4 +1,5 @@
 import { HeuresRechercheEmploiPublicodes } from "../../../../../publicodes";
+
 const engine = new HeuresRechercheEmploiPublicodes(
   modelsHeuresRechercheEmploi,
   "1996"
@@ -14,8 +15,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       },
       expectedReferences: [
         {
-          article: "Article 5 des dispositions particulières pour les cadres",
-          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041761360#KALIARTI000041761360",
+          article: "Article 20",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041761335#KALIARTI000041761335",
         },
       ],
       expectedNotifications: [
@@ -35,8 +36,8 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: "2 heures par jour", unit: "" },
       expectedReferences: [
         {
-          article: "Article 5 des dispositions particulières pour les cadres",
-          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041761360#KALIARTI000041761360",
+          article: "Article 20",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041761335#KALIARTI000041761335",
         },
       ],
       expectedNotifications: [
