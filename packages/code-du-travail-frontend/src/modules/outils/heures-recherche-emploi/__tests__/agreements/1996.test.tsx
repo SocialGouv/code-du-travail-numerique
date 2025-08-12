@@ -78,11 +78,7 @@ describe("HeuresRechercheEmploi", () => {
             )[0]
           ).toBeInTheDocument();
 
-          expect(
-            screen.queryAllByText(
-              /Article 5 des dispositions particulières pour les cadres/
-            )[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Article 20/)[0]).toBeInTheDocument();
         });
       });
 
@@ -112,11 +108,7 @@ describe("HeuresRechercheEmploi", () => {
             )[0]
           ).toBeInTheDocument();
 
-          expect(
-            screen.queryAllByText(
-              /Article 5 des dispositions particulières pour les cadres/
-            )[0]
-          ).toBeInTheDocument();
+          expect(screen.queryAllByText(/Article 20/)[0]).toBeInTheDocument();
         });
       });
     });

@@ -72,7 +72,7 @@ describe("CalculateurPreavisLicenciement", () => {
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
       expect(
-        screen.queryAllByText(/article 13 de l'avenant « Cadres »/)[0]
+        screen.queryAllByText(/Article 13 de l'avenant « Cadres »/)[0]
       ).toBeInTheDocument();
     });
   });

@@ -132,7 +132,7 @@ describe("HeuresRechercheEmploi", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Annexe 1, article 10/)[0]
+          screen.queryAllByText(/Annexe 2, article 11/)[0]
         ).toBeInTheDocument();
       });
     });
@@ -314,7 +314,7 @@ describe("HeuresRechercheEmploi", () => {
         ).toBeInTheDocument();
 
         expect(
-          screen.queryAllByText(/Annexe 1, article 10/)[0]
+          screen.queryAllByText(/Annexe 2, article 11/)[0]
         ).toBeInTheDocument();
       });
     });

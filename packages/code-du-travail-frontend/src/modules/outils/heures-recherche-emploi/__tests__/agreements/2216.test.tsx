@@ -63,7 +63,9 @@ describe("HeuresRechercheEmploi", () => {
           )[0]
         ).toBeInTheDocument();
 
-        expect(screen.queryAllByText(/Article 5/)[0]).toBeInTheDocument();
+        expect(
+          screen.queryAllByText(/Annexe III, article 5/)[0]
+        ).toBeInTheDocument();
       });
     });
 
@@ -93,7 +95,9 @@ describe("HeuresRechercheEmploi", () => {
           )[0]
         ).toBeInTheDocument();
 
-        expect(screen.queryAllByText(/Article 3.12/)[0]).toBeInTheDocument();
+        expect(
+          screen.queryAllByText(/Annexe I, article 5/)[0]
+        ).toBeInTheDocument();
       });
     });
   });
@@ -139,7 +143,9 @@ describe("HeuresRechercheEmploi", () => {
           )[0]
         ).toBeInTheDocument();
 
-        expect(screen.queryAllByText(/Article 5/)[0]).toBeInTheDocument();
+        expect(
+          screen.queryAllByText(/Annexe III, article 5/)[0]
+        ).toBeInTheDocument();
       });
     });
 
@@ -169,7 +175,9 @@ describe("HeuresRechercheEmploi", () => {
           )[0]
         ).toBeInTheDocument();
 
-        expect(screen.queryAllByText(/Article 3.12/)[0]).toBeInTheDocument();
+        expect(
+          screen.queryAllByText(/Annexe I, article 5/)[0]
+        ).toBeInTheDocument();
       });
     });
   });
@@ -194,7 +202,9 @@ describe("HeuresRechercheEmploi", () => {
         )[0]
       ).toBeInTheDocument();
 
-      expect(screen.queryAllByText(/Article 3.12/)[0]).toBeInTheDocument();
+      expect(
+        screen.queryAllByText(/Annexe I, article 5/)[0]
+      ).toBeInTheDocument();
     });
   });
 });
