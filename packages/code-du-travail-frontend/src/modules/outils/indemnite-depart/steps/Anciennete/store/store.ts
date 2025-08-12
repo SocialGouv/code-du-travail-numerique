@@ -141,7 +141,7 @@ const createAncienneteStore: StoreSlice<
               licenciementInaptitude,
             "contrat salarié . indemnité de licenciement . arrêt de travail":
               arretTravail,
-            dateArret: dateArretTravail,
+            dateArretTravail,
             absencePeriods:
               absencePeriods && absencePeriods.length
                 ? JSON.stringify(absencePeriods)
