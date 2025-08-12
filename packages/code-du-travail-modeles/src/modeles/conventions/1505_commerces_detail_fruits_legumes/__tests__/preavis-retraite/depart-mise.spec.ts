@@ -4,7 +4,7 @@ import {
 } from "../../../../../__test__/common/legal-references";
 import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-const ArticleCc = {
+const articleCc = {
   article: "Article 23.3",
   url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562759#KALIARTI000043562759",
 };
