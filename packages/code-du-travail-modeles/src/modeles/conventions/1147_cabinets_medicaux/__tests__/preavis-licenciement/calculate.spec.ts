@@ -11,7 +11,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 3, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 25 de la convention collective",
+          article: "Article 25 de la convention collective",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B78C466DDE1AAC805D24C90B1D6C1B59.tplgfr38s_2?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id",
         },
       ],
@@ -25,7 +25,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 15, unit: "jours" },
       expectedReferences: [
         {
-          article: "article 25 de la convention collective",
+          article: "Article 25 de la convention collective",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B78C466DDE1AAC805D24C90B1D6C1B59.tplgfr38s_2?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id",
         },
       ],
@@ -41,7 +41,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 1, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 25 de la convention collective",
+          article: "Article 25 de la convention collective",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B78C466DDE1AAC805D24C90B1D6C1B59.tplgfr38s_2?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id",
         },
       ],
@@ -57,7 +57,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedResult: { expectedValue: 2, unit: "mois" },
       expectedReferences: [
         {
-          article: "article 25 de la convention collective",
+          article: "Article 25 de la convention collective",
           url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B78C466DDE1AAC805D24C90B1D6C1B59.tplgfr38s_2?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id",
         },
       ],

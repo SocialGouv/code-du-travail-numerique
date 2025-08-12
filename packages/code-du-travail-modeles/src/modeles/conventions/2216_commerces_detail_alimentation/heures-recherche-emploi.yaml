@@ -1,0 +1,110 @@
+contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture:
+  titre: Type de rupture du contrat de travail
+  question: Pour quelle raison le contrat de travail a-t-il été rompu ?
+  cdtn:
+    type: liste
+    valeurs:
+      Démission: "'Démission'"
+      Licenciement: "'Licenciement'"
+      Rupture de la période d'essai: "'Rupture de la période d'essai'"
+      Rupture conventionnelle: "'Rupture conventionnelle'"
+
+contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Démission:
+  applicable si: typeRupture = 'Démission'
+  valeur: oui
+
+contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Démission . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Cadres: "'Cadres'"
+      Non-cadres: "'Non-cadres'"
+
+contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Démission . catégorie professionnelle Cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
+
+contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Démission . catégorie professionnelle Cadres . résultat conventionnel:
+  valeur: "'2 heures par jour pendant 1 mois'"
+  type: notification
+  description:
+    - Le salaire n'est pas maintenu.
+    - Ces heures sont fixées d'un commun accord entre le salarié et l'employeur. A la demande du salarié, elles peuvent être groupées en fin de semaine ou en fin de mois, compte tenu des nécessités du service. En l'absence d'accord entre l'employeur et le salarié, elles sont fixées un jour par le salarié, et le suivant par la direction, en tenant compte dans la mesure du possible des heures d'ouverture des agences de Pôle emploi.
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    "Annexe III, article 5": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517551#KALIARTI000041517551
+    "Article 3.9": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111907#KALIARTI000039111907
+
+contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Démission . catégorie professionnelle Noncadres:
+  applicable si: catégorie professionnelle = 'Non-cadres'
+  valeur: oui
+
+contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Démission . catégorie professionnelle Noncadres . résultat conventionnel:
+  valeur: "'2 heures par jour pendant 1 mois'"
+  type: notification
+  description:
+    - Le salaire n'est pas maintenu.
+    - Ces heures sont fixées d'un commun accord entre le salarié et l'employeur. A la demande du salarié, elles peuvent être groupées en fin de semaine ou en fin de mois, compte tenu des nécessités du service. En l'absence d'accord entre l'employeur et le salarié, elles sont fixées un jour par le salarié, et le suivant par la direction, en tenant compte dans la mesure du possible des heures d'ouverture des agences de Pôle emploi.
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    "Annexe I, article 5": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517480#KALIARTI000041517480
+    "Annexe II, article 5": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517514#KALIARTI000041517514
+    "Article 3.9": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111907#KALIARTI000039111907
+
+contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Licenciement:
+  applicable si: typeRupture = 'Licenciement'
+  valeur: oui
+
+contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Licenciement . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Cadres: "'Cadres'"
+      Non-cadres: "'Non-cadres'"
+
+contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Licenciement . catégorie professionnelle Cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
+
+contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Licenciement . catégorie professionnelle Cadres . résultat conventionnel:
+  valeur: "'un nombre d'heures égal, chaque mois, à la durée hebdomadaire de travail dans l'établissement'"
+  type: notification
+  description:
+    - Le salaire est maintenu.
+    - La répartition de ces absences se fera en accord avec la direction. Elles pourront être bloquées à la fin de chaque mois.
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    "Annexe III, article 5": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517551#KALIARTI000041517551
+    "Article 3.9": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111907#KALIARTI000039111907
+
+contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Licenciement . catégorie professionnelle Noncadres:
+  applicable si: catégorie professionnelle = 'Non-cadres'
+  valeur: oui
+
+contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Licenciement . catégorie professionnelle Noncadres . résultat conventionnel:
+  valeur: "'2 heures par jour pendant 1 mois'"
+  type: notification
+  description:
+    - Le salaire est maintenu.
+    - Ces heures sont fixées d'un commun accord entre le salarié et l'employeur. A la demande du salarié, elles peuvent être groupées en fin de semaine ou en fin de mois, compte tenu des nécessités du service. En l'absence d'accord entre l'employeur et le salarié, elles sont fixées un jour par le salarié, et le suivant par la direction, en tenant compte dans la mesure du possible des heures d'ouverture des agences de Pôle emploi.
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    "Annexe I, article 5": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517480#KALIARTI000041517480
+    "Annexe II, article 5": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517514#KALIARTI000041517514
+    "Article 3.9": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111907#KALIARTI000039111907
+
+contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Rupture de la période d'essai:
+  applicable si: typeRupture = 'Rupture de la période d'essai'
+  valeur: oui
+
+contrat salarié . convention collective . commerce gros et detail alimentation . typeRupture Rupture de la période d'essai . résultat conventionnel:
+  valeur: "''"
+  remplace: contrat salarié . convention collective . résultat conventionnel
+  références:
+    "Annexe I, article 5": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517480#KALIARTI000041517480
+    "Annexe II, article 5": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517514#KALIARTI000041517514
+    "Article 3.9": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111907#KALIARTI000039111907

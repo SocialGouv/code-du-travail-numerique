@@ -1,0 +1,104 @@
+import { CalculateurHeuresRechercheEmploi } from "../../HeuresRechercheEmploiSimulator";
+import { fireEvent, render, screen } from "@testing-library/react";
+import { ui } from "../ui";
+
+jest.spyOn(Storage.prototype, "setItem");
+Storage.prototype.getItem = jest.fn(
+  () => `
+        {
+          "num": 2148,
+          "shortTitle": "shortTitle",
+          "id": "id",
+          "title": "title",
+          "url": "https://www.url.fr",
+          "slug": "2148"
+        }
+        `
+);
+
+describe("HeuresRechercheEmploi", () => {
+  beforeEach(() => {
+    render(<CalculateurHeuresRechercheEmploi title={""} />);
+    fireEvent.click(ui.introduction.startButton.get());
+
+    fireEvent.click(ui.next.get());
+  });
+
+  describe("typeRupture = 1| Démission", () => {
+    beforeEach(() => {
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - télécommunications - typeRupture"
+        ),
+        {
+          target: { value: "'Démission'" },
+        }
+      );
+      fireEvent.click(ui.next.get());
+    });
+
+    it("should display expected answer", () => {
+      expect(
+        screen.queryAllByText(
+          /D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./g
+        )[0]
+      ).toBeInTheDocument();
+
+      expect(screen.queryAllByText(/Article 4.4.1.1/)[0]).toBeInTheDocument();
+    });
+  });
+
+  describe("typeRupture = 3| Licenciement", () => {
+    beforeEach(() => {
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - télécommunications - typeRupture"
+        ),
+        {
+          target: { value: "'Licenciement'" },
+        }
+      );
+      fireEvent.click(ui.next.get());
+    });
+
+    it("should display expected answer", () => {
+      expect(
+        screen.queryAllByText(/2 heures par jour/g)[0]
+      ).toBeInTheDocument();
+      expect(
+        screen.queryAllByText(/Le salaire est maintenu./g)[0]
+      ).toBeInTheDocument();
+      expect(
+        screen.queryAllByText(
+          /Ces heures sont fixées en accord avec l'employeur. En l'absence d'accord, les heures sont fixées un jour par le salarié et le suivant par l'employeur. L'employeur peut autoriser par écrit le salarié à cumuler ces heures de recherche d'emploi en fin de période de préavis, si les nécessités du service le permettent et dans la limite de la durée effectuée du préavis/g
+        )[0]
+      ).toBeInTheDocument();
+
+      expect(screen.queryAllByText(/Article 4.4.1.1/)[0]).toBeInTheDocument();
+    });
+  });
+
+  describe("typeRupture = 7| Rupture de la période d'essai", () => {
+    beforeEach(() => {
+      fireEvent.change(
+        screen.getByTestId(
+          "infos.contrat salarié - convention collective - télécommunications - typeRupture"
+        ),
+        {
+          target: { value: "'Rupture de la période d'essai'" },
+        }
+      );
+      fireEvent.click(ui.next.get());
+    });
+
+    it("should display expected answer", () => {
+      expect(
+        screen.queryAllByText(
+          /D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi./g
+        )[0]
+      ).toBeInTheDocument();
+
+      expect(screen.queryAllByText(/Article 4.2.3/)[0]).toBeInTheDocument();
+    });
+  });
+});

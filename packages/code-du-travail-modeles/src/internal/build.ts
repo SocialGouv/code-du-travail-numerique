@@ -13,6 +13,7 @@ import {
   mergePreavisRetraiteModels,
   mergeRuptureConventionnelle,
   mergePreavisLicenciementModels,
+  mergeHeuresRechercheEmploiModels,
 } from "./merger";
 
 const inDir = path.resolve(__dirname, "../../bin");
@@ -52,7 +53,6 @@ function copyJSFile() {
   }
   fse.copySync(`${inDir}/publicodes`, `${outDir}/publicodes`);
   fse.copySync(`${inDir}/modeles`, `${outDir}/modeles`);
-  fse.copySync(`${inDir}/simulators`, `${outDir}/simulators`);
 }
 
 function writeSupportedCCFile() {
@@ -88,4 +88,8 @@ writeJsonModel({
 writeJsonModel({
   merger: mergePreavisLicenciementModels,
   outputName: "modeles-preavis-licenciement",
+});
+writeJsonModel({
+  merger: mergeHeuresRechercheEmploiModels,
+  outputName: "modeles-heures-recherche-emploi",
 });

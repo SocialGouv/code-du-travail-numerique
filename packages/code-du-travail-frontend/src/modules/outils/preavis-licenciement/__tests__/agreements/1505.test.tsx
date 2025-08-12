@@ -50,7 +50,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-      expect(screen.queryAllByText(/article 20/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/Article 20/)[0]).toBeInTheDocument();
     });
   });
 
@@ -69,7 +69,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
     it("should display expected answer", () => {
       expect(screen.queryAllByText(/3 mois/g)[0]).toBeInTheDocument();
-      expect(screen.queryAllByText(/article 20/)[0]).toBeInTheDocument();
+      expect(screen.queryAllByText(/Article 20/)[0]).toBeInTheDocument();
     });
   });
 
@@ -101,7 +101,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/1 mois/g)[0]).toBeInTheDocument();
-        expect(screen.queryAllByText(/article 20/)[0]).toBeInTheDocument();
+        expect(screen.queryAllByText(/Article 20/)[0]).toBeInTheDocument();
       });
     });
 
@@ -120,7 +120,7 @@ describe("CalculateurPreavisLicenciement", () => {
 
       it("should display expected answer", () => {
         expect(screen.queryAllByText(/2 mois/g)[0]).toBeInTheDocument();
-        expect(screen.queryAllByText(/article 20/)[0]).toBeInTheDocument();
+        expect(screen.queryAllByText(/Article 20/)[0]).toBeInTheDocument();
       });
     });
   });

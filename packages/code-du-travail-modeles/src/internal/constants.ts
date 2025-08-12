@@ -5,3 +5,4 @@ export const indemnitePrecariteFile = "indemnite-precarite.yaml";
 export const indemniteLicenciementFile = "indemnite-licenciement.yaml";
 export const ruptureConventionnelleFile = "rupture-conventionnelle.yaml";
 export const preavisLicenciementFile = "preavis-licenciement.yaml";
+export const heuresRechercheEmploiFile = "heures-recherche-emploi.yaml";

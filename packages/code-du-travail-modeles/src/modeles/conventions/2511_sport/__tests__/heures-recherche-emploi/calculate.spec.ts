@@ -1,0 +1,80 @@
+import { HeuresRechercheEmploiPublicodes } from "../../../../../publicodes";
+const engine = new HeuresRechercheEmploiPublicodes(
+  modelsHeuresRechercheEmploi,
+  "2511"
+);
+
+describe("Test de la fonctionnalité 'calculate'", () => {
+  test.each([
+    {
+      expectedResult: {
+        expectedValue:
+          "2 heures par jour ouvrable. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
+        unit: "",
+      },
+      expectedReferences: [
+        {
+          article: "Article 4.4.3.5",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000042110557#KALIARTI000042110557",
+        },
+      ],
+      expectedNotifications: [
+        "Le salaire est maintenu.",
+        "Les salariés pourront prendre leurs heures en une seule fois avec l'accord de l'employeur.",
+      ],
+      situation: {
+        "contrat salarié . convention collective . sport . typeRupture":
+          "'Licenciement'",
+      },
+    },
+    {
+      expectedResult: {
+        expectedValue: "",
+        unit: "",
+      },
+      expectedReferences: [],
+      expectedNotifications: [],
+      situation: {
+        "contrat salarié . convention collective . sport . typeRupture":
+          "'Démission'",
+      },
+    },
+    {
+      expectedResult: {
+        expectedValue: "",
+        unit: "",
+      },
+      expectedReferences: [
+        {
+          article: "Article 4.4.3.5",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000042110557#KALIARTI000042110557",
+        },
+      ],
+      expectedNotifications: [],
+      situation: {
+        "contrat salarié . convention collective . sport . typeRupture":
+          "'Rupture de la période d'essai'",
+      },
+    },
+  ])(
+    "%#) Vérifier que le calculate donne le bon résultat pour la situation donnée",
+    ({
+      situation,
+      expectedResult,
+      expectedReferences,
+      expectedNotifications,
+    }) => {
+      const result = engine.calculate({
+        "contrat salarié . convention collective": "'IDCC2511'",
+
+        ...situation,
+      });
+      expect(result).toResultBeEqual(
+        expectedResult.expectedValue,
+        expectedResult.unit
+      );
+      expect(result).toHaveReferencesBeEqual(expectedReferences);
+      expect(result).toContainNotifications(expectedNotifications);
+    }
+  );
+});

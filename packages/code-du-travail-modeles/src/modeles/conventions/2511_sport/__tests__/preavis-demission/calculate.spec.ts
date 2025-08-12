@@ -9,7 +9,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 4.4.1. de la convention collective",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000042110557#KALIARTI000042110557",
         },
       ],
       expectedNotifications: [],
@@ -23,7 +23,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 4.4.1. de la convention collective",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000042110557#KALIARTI000042110557",
         },
       ],
       expectedNotifications: [],
@@ -37,7 +37,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 4.4.1. de la convention collective",
-          url: "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000042110557#KALIARTI000042110557",
         },
       ],
       expectedNotifications: [],

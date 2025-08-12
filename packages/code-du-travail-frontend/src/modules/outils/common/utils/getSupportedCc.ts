@@ -28,6 +28,9 @@ const getSupportedCc = (
     case PublicodesSimulator.PREAVIS_LICENCIEMENT:
       key = "preavisLicenciement";
       break;
+    case PublicodesSimulator.HEURES_RECHERCHE_EMPLOI:
+      key = "heuresRechercheEmploi";
+      break;
     default:
       throw new Error(
         `Unsupported simulator: ${simulator}. Supported simulators are: ${Object.values(

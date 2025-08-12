@@ -16,6 +16,7 @@ import type {
 } from "../modeles";
 import type { IIneligibility } from "../modeles/common/types/ineligibility";
 import type {
+  HeuresRechercheEmploiPublicodes,
   IndemniteLicenciementPublicodes,
   IndemnitePrecaritePublicodes,
   PreavisDemissionPublicodes,
@@ -182,6 +183,10 @@ export type PublicodesPreavisLicenciementResult = {
   unit?: Unit;
 };
 
+export type PublicodesHeuresRechercheEmploiResult = {
+  value: Evaluation<string>;
+};
+
 export type PublicodesPreavisDemissionResult = {
   value: Evaluation<number>;
   unit?: Unit;
@@ -210,9 +215,11 @@ export type PublicodesInstance<T extends PublicodesSimulator> =
           ? PreavisLicenciementPublicodes
           : T extends PublicodesSimulator.PREAVIS_DEMISSION
             ? PreavisDemissionPublicodes
-            : T extends PublicodesSimulator.INDEMNITE_PRECARITE
-              ? IndemnitePrecaritePublicodes
-              : never;
+            : T extends PublicodesSimulator.HEURES_RECHERCHE_EMPLOI
+              ? HeuresRechercheEmploiPublicodes
+              : T extends PublicodesSimulator.INDEMNITE_PRECARITE
+                ? IndemnitePrecaritePublicodes
+                : never;
 
 export interface IndemniteDepartInstance {
   ineligibility: IIneligibility;
