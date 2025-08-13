@@ -362,6 +362,14 @@ export const ui = {
       inaptitudeNonPro: byText("Oui"),
     },
     agreement2216: {
+      licenciementEco: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - commerce gros et detail alimentation - indemnité de licenciement - catégorie professionnelle - licenciement économique - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - commerce gros et detail alimentation - indemnité de licenciement - catégorie professionnelle - licenciement économique - Non"
+        ),
+      },
       proCategory: byTestId(
         "infos.contrat salarié - convention collective - commerce gros et detail alimentation - indemnité de licenciement - catégorie professionnelle"
       ),

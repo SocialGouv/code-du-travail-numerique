@@ -52,9 +52,11 @@ export abstract class SeniorityDefault<T extends SupportedCc>
         args["contrat salarié . indemnité de licenciement . date d'entrée"] ??
         "",
       dateNotification:
+        args.dateArretTravail ??
         args[
           "contrat salarié . indemnité de licenciement . date de notification"
-        ] ?? "",
+        ] ??
+        "",
       dateSortie:
         args["contrat salarié . indemnité de licenciement . date de sortie"] ??
         "",

@@ -4,6 +4,7 @@ export const mapToPublicodesSituationForCalculation = (
   startDate: string,
   notificationDate: string,
   endDate: string,
+  stopDate: string,
   salaryPeriods: SalaryPeriods[],
   inaptitude: boolean,
   longTermDisability: boolean
@@ -14,6 +15,7 @@ export const mapToPublicodesSituationForCalculation = (
     "contrat salarié . indemnité de licenciement . date de notification":
       notificationDate,
     "contrat salarié . indemnité de licenciement . date de sortie": endDate,
+    dateArret: stopDate,
     "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
       inaptitude ? "oui" : "non",
     "contrat salarié . indemnité de licenciement . arrêt de travail":
@@ -46,6 +48,7 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithVa
     notificationDate: string,
     startDate: string,
     endDate: string,
+    stopDate: string,
     inaptitude: boolean,
     longTermDisability: boolean,
     agreementParameters?: Record<string, any>
@@ -72,6 +75,7 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithVa
           startDate,
           notificationDate,
           endDate,
+          stopDate,
           salaryPeriods,
           inaptitude,
           longTermDisability

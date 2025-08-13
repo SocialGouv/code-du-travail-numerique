@@ -111,24 +111,24 @@ describe("Arrêt de travail", () => {
       expect(ui.salary.salaries.queryAll()).toHaveLength(8);
     });
 
-    test("should display with the good number of months at the 'Salaires' step", async () => {
+    test("should display with the good number of months at the 'Salaires' step when seniority > 8 month", async () => {
       userAction.click(ui.introduction.startButton.get());
       userAction.click(ui.contract.type.cdi.get());
       userAction.click(ui.contract.fauteGrave.non.get());
       userAction.click(ui.contract.inaptitude.non.get());
       userAction.click(ui.contract.arretTravail.oui.get());
-      userAction.setInput(ui.contract.dateArretTravail.get(), "01/07/2022");
+      userAction.setInput(ui.contract.dateArretTravail.get(), "01/10/2022");
       userAction.click(ui.next.get());
       userAction.click(ui.agreement.noAgreement.get());
       userAction.click(ui.next.get());
       userAction.setInput(ui.seniority.startDate.get(), "01/01/2022");
-      userAction.setInput(ui.seniority.notificationDate.get(), "01/09/2022");
+      userAction.setInput(ui.seniority.notificationDate.get(), "01/11/2022");
       userAction.setInput(ui.seniority.endDate.get(), "01/12/2022");
       userAction.click(ui.seniority.hasAbsence.non.get());
       userAction.click(ui.next.get());
       userAction.click(ui.salary.hasPartialTime.non.get());
       userAction.click(ui.salary.hasSameSalary.non.get());
-      expect(ui.salary.salaries.queryAll()).toHaveLength(6);
+      expect(ui.salary.salaries.queryAll()).toHaveLength(9);
     });
   });
 });
