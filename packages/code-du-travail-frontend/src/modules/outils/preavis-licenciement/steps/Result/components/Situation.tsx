@@ -2,6 +2,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import React from "react";
 import { PublicodesInformation } from "src/modules/outils/indemnite-depart/steps/Informations/store";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
+import { sanitizePublicodesValue } from "src/modules/outils/common/publicodes";
 
 type Props = {
   isSeriousMisconduct?: boolean;
@@ -25,7 +26,7 @@ const Situation: React.FC<Props> = ({
         {seniority && (
           <li data-testid="situation-seniority">
             Ancienneté selon le code du travail :{" "}
-            <strong>{seniority.replace(/^'|'$/g, "")}</strong>
+            <strong>{sanitizePublicodesValue(seniority)}</strong>
           </li>
         )}
         <li data-testid="situation-serious-misconduct">
@@ -45,18 +46,21 @@ const Situation: React.FC<Props> = ({
               : "Code du travail"}
           </strong>
         </li>
-        {situations.map((info, index) => (
-          <li
-            key={`situation-${info.question.rule.titre}-${index}`}
-            data-testid={`situation-${info.question.rule.titre?.toLowerCase().replace(/\s+/g, "-")}`}
-          >
-            {info.question.rule.titre}&nbsp;:&nbsp;
-            <strong>{info.info?.replace(/^'|'$/g, "")}</strong>
-            {info.question.rule.unité && (
-              <span>&nbsp;{info.question.rule.unité}</span>
-            )}
-          </li>
-        ))}
+        {situations.map((info, index) => {
+          const sanitized = sanitizePublicodesValue(info.info);
+          return (
+            <li
+              key={`situation-${info.question.rule.titre}-${index}`}
+              data-testid={`situation-${info.question.rule.titre?.toLowerCase().replace(/\s+/g, "-")}`}
+            >
+              {info.question.rule.titre}&nbsp;:&nbsp;
+              <strong>{sanitized}</strong>
+              {info.question.rule.unité && (
+                <span>&nbsp;{info.question.rule.unité}</span>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </>
   );

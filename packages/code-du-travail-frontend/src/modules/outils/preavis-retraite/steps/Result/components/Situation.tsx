@@ -5,6 +5,7 @@ import { getSenioritySituationMessage } from "../../../agreements/seniority/mess
 import { AgreementInformation } from "src/modules/outils/indemnite-depart/common";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { publicodesUnitTranslator } from "src/modules/outils/common/publicodes";
+import { sanitizePublicodesValue } from "src/modules/outils/common/publicodes";
 
 type Props = {
   situations: AgreementInformation[];
@@ -45,24 +46,23 @@ const Situation: React.FC<Props> = ({
             Convention collective : <strong>{agreement.shortTitle}</strong>
           </li>
         )}
-        {situations.map((info, index) => (
-          <li
-            key={"agreement-" + index}
-            data-testid={`situation-${info.label}`}
-          >
-            {info.label}&nbsp;:&nbsp;
-            <strong>
-              {info.value.replace(/^'|'$/g, "")}
-              {info.label === "Travailleur handicapé" &&
-                info.value === "'Oui'" && <sup>*</sup>}
-            </strong>
-            &nbsp;
-            {publicodesUnitTranslator(
-              info.value.replace(/&apos;/g, ""),
-              info.unit
-            )}
-          </li>
-        ))}
+        {situations.map((info, index) => {
+          const sanitized = sanitizePublicodesValue(info.value);
+          return (
+            <li
+              key={"agreement-" + index}
+              data-testid={`situation-${info.label}`}
+            >
+              {info.label}&nbsp;:&nbsp;
+              <strong>
+                {sanitized}
+                {info.label === "Travailleur handicapé" &&
+                  sanitized === "Oui" && <sup>*</sup>}
+              </strong>
+              &nbsp;{publicodesUnitTranslator(sanitized, info.unit)}
+            </li>
+          );
+        })}
         {seniorityInMonths && (
           <li key="ancienneté" data-testid="situation-ancienneté">
             Ancienneté du salarié : <strong>{seniorityInMonths} mois</strong>

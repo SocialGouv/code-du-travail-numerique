@@ -1,6 +1,7 @@
 import { Absence, SalaryPeriods } from "@socialgouv/modeles-social";
 import { AgreementInformation } from "../../../common";
 import { publicodesUnitTranslator } from "../../../../common/publicodes";
+import { sanitizePublicodesValue } from "../../../../common/publicodes";
 import AbsenceTable from "./AbsenceTable";
 import {
   generateResultSalaireTempsPlein,
@@ -71,16 +72,16 @@ export default function FilledElements(props: Props) {
             <li>
               <strong>Informations</strong>
               <ul className={fr.cx("fr-ml-2w")}>
-                {props.agreementInformations.map((info, index) => (
-                  <li key={"agreement-" + index}>
-                    {info.label}&nbsp;:&nbsp;{info.value.replace(/^'|'$/g, "")}
-                    &nbsp;
-                    {publicodesUnitTranslator(
-                      info.value.replace(/'/g, ""),
-                      info.unit
-                    )}
-                  </li>
-                ))}
+                {props.agreementInformations.map((info, index) => {
+                  const sanitized = sanitizePublicodesValue(info.value);
+                  return (
+                    <li key={"agreement-" + index}>
+                      {info.label}&nbsp;:&nbsp;{sanitized}
+                      &nbsp;
+                      {publicodesUnitTranslator(sanitized, info.unit)}
+                    </li>
+                  );
+                })}
               </ul>
             </li>
           )}
