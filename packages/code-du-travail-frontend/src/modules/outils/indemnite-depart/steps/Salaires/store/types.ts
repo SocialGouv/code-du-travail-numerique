@@ -1,7 +1,7 @@
 import { StepData } from "../../../store";
 import { OuiNon } from "../../../common/types";
 import { SalaryPeriods } from "@socialgouv/modeles-social";
-import { ValidationResponse } from "src/outils/Components/SimulatorLayout";
+import { ValidationResponse } from "src/modules/outils/common/types";
 
 export type SalairesStoreInput = {
   hasTempsPartiel?: OuiNon;

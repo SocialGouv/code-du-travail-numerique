@@ -8,3 +8,9 @@ export enum ListSimulator {
   HEURES_RECHERCHE_EMPLOI,
   INDEMNITE_PRECARITE,
 }
+
+export enum ValidationResponse {
+  NotValid = "not_valid",
+  NotEligible = "not_eligible",
+  Valid = "valid",
+}

@@ -16,10 +16,10 @@ import {
   removeAgreementFromLocalStorage,
   saveAgreementToLocalStorage,
 } from "src/lib/useLocalStorage";
-import { pushAgreementEvents } from "src/outils/common";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { loadPublicodes } from "src/modules/outils/common/publicodes";
 import isCcFullySupported from "src/modules/outils/common/utils/isCcFullySupported";
+import { pushAgreementEvents } from "src/modules/outils/common/events";
 
 const initialState: Omit<
   CommonAgreementStoreData<PublicodesSimulator>,
