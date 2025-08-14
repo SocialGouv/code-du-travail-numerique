@@ -49,17 +49,15 @@ export const ui = {
     unknownAgreement: byTestId(
       "route - Je ne sais pas quelle est ma convention collective et je la recherche."
     ),
-    agreementInput: byTestId("agreement-search-input"),
+    agreementInput: byTestId("AgreementSearchAutocomplete"),
     agreementInputConfirm: byText(
       /Vous avez sélectionné la convention collective/
     ),
-    agreementCompanyInput: byTestId("agreement-company-search-input"),
+    agreementCompanyInput: byTestId("enterprise-search-input"),
     agreementCompanySearchButton: byTestId("agreement-company-search-button"),
-    agreementCompanyInputAsk: byText(
-      "Précisez et sélectionnez votre entreprise"
-    ),
+    agreementCompanyInputAsk: byText("Précisez votre entreprise"),
     agreementCompanyInputConfirm: byText(/Vous avez sélectionné l'entreprise/),
-    agreementPostalCodeInput: byTestId("agreement-postal-code-search-input"),
+    agreementPostalCodeInput: byTestId("locationSearchAutocomplete"),
     searchItem: {
       agreement16: byText(
         "Transports routiers et activités auxiliaires du transport"
@@ -527,5 +525,4 @@ export const ui = {
   previous: byText("Précédent"),
   activeStep: byTestId("stepper"),
   warning: byText("Attention"),
-  title: byText("Calculer l'indemnité de licenciement"),
 };

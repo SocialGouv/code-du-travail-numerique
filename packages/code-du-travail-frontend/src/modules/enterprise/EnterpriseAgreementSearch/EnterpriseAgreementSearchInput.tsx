@@ -352,6 +352,7 @@ export const EnterpriseAgreementSearchInput = ({
             type="submit"
             iconPosition="right"
             iconId="fr-icon-search-line"
+            data-testid="agreement-company-search-button"
           >
             Rechercher
           </Button>

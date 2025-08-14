@@ -9,8 +9,8 @@ import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
 import { ui } from "../../indemnite-depart/__tests__/ui";
 
-jest.mock("../../../conventions/Search/api/agreements.service");
-jest.mock("../../../conventions/Search/api/enterprises.service");
+jest.mock("../../../../conventions/Search/api/agreements.service");
+jest.mock("../../../../conventions/Search/api/enterprises.service");
 
 describe("Indemnité licenciement - Sélection de CC", () => {
   beforeEach(() => {

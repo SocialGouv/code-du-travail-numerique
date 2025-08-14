@@ -20,42 +20,6 @@ export const ui = {
     noAgreement: byTestId(
       "route - Je ne souhaite pas renseigner ma convention collective (je passe l'étape)."
     ),
-    agreement: byTestId(
-      "route -  Je sais quelle est ma convention collective et je la saisis."
-    ),
-    unknownAgreement: byTestId(
-      "route - Je ne sais pas quelle est ma convention collective et je la recherche."
-    ),
-    agreementInput: byTestId("agreement-search-input"),
-    agreementInputConfirm: byText(
-      /Vous avez sélectionné la convention collective/
-    ),
-    agreementCompanyInput: byTestId("agreement-company-search-input"),
-    agreementCompanySearchButton: byTestId("agreement-company-search-button"),
-    agreementCompanyInputAsk: byText(
-      "Précisez et sélectionnez votre entreprise"
-    ),
-    agreementCompanyInputConfirm: byText(/Vous avez sélectionné l'entreprise/),
-    agreementPostalCodeInput: byTestId("agreement-postal-code-search-input"),
-    searchItem: {
-      agreement16: byText(
-        "Transports routiers et activités auxiliaires du transport"
-      ),
-      agreement3239: byText("Particuliers employeurs et emploi à domicile"),
-      carrefour: byText("CARREFOUR HYPERMARCHES"),
-      bricomanie: byText("BRICOMANIE"),
-    },
-    ccChoice: {
-      commerce: byText(
-        "Commerce de détail et de gros à prédominance alimentaire (IDCC 2216)"
-      ),
-      transport: byText(
-        "Transports routiers et activités auxiliaires du transport (IDCC 0016)"
-      ),
-      bureau: byText(
-        "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils (IDCC 1486)"
-      ),
-    },
   },
   information: {
     agreement16: {
@@ -150,8 +114,4 @@ export const ui = {
     echelon: byTestId("situation-Échelon"),
   },
   next: byText("Suivant"),
-  previous: byText("Précédent"),
-  activeStep: byTitle("onglet actif"),
-  warning: byText("Attention"),
-  title: byText("Calculer l'indemnité de licenciement"),
 };
