@@ -91,6 +91,14 @@ export const Autocomplete = <K,>({
         getRootProps,
         clearSelection,
       }) => {
+        // AJOUT POUR RGAA 8.7 : Calcul du message de statut en français
+        const statusMessage =
+          !loading && isOpen && inputValue
+            ? suggestions.length > 0
+              ? `${suggestions.length} résultat${suggestions.length > 1 ? "s" : ""} trouvé${suggestions.length > 1 ? "s" : ""}.`
+              : "Aucun résultat trouvé."
+            : "";
+
         return (
           <div className={`${searchContainer}`}>
             <Input
@@ -152,6 +160,16 @@ export const Autocomplete = <K,>({
                 root: rootInputCss,
               }}
             />
+            {statusMessage && (
+              <div
+                role="status"
+                aria-live="polite"
+                className={fr.cx("fr-sr-only")}
+                lang="fr"
+              >
+                {statusMessage}
+              </div>
+            )}
             <ul
               {...getMenuProps()}
               className={`${fr.cx("fr-p-0", "fr-m-0")} ${autocompleteListContainer} ${isSearch ? listSearch : ""}`}
@@ -178,7 +196,10 @@ export const Autocomplete = <K,>({
                 : isOpen &&
                   displayNoResult &&
                   !selectedItem && (
-                    <li className={fr.cx("fr-p-3v")}>Aucun résultat</li>
+                    <li className={fr.cx("fr-p-3v")} lang="fr">
+                      {" "}
+                      Aucun résultat
+                    </li>
                   )}
             </ul>
             {isSearch && (
