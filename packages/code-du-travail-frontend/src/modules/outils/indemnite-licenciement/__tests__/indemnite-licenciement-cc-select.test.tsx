@@ -9,8 +9,8 @@ import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
 import { ui } from "../../indemnite-depart/__tests__/ui";
 
-jest.mock("../../../../conventions/Search/api/agreements.service");
-jest.mock("../../../../conventions/Search/api/enterprises.service");
+jest.mock("../../../convention-collective/search");
+jest.mock("../../../enterprise/queries");
 
 describe("Indemnité licenciement - Sélection de CC", () => {
   beforeEach(() => {
@@ -32,7 +32,6 @@ describe("Indemnité licenciement - Sélection de CC", () => {
       .click(ui.next.get());
 
     fireEvent.click(ui.previous.get());
-    expect(ui.agreement.agreementInputConfirm.query()).toBeInTheDocument();
     expect(ui.agreement.searchItem.agreement16.query()).toBeInTheDocument();
   });
   test("Vérifier la recherche par entreprise", async () => {

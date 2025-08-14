@@ -1,4 +1,4 @@
-import { byTestId, byText } from "testing-library-selector";
+import { byDisplayValue, byTestId, byText } from "testing-library-selector";
 
 export const ui = {
   introduction: {
@@ -50,31 +50,30 @@ export const ui = {
       "route - Je ne sais pas quelle est ma convention collective et je la recherche."
     ),
     agreementInput: byTestId("AgreementSearchAutocomplete"),
-    agreementInputConfirm: byText(
-      /Vous avez sélectionné la convention collective/
-    ),
     agreementCompanyInput: byTestId("enterprise-search-input"),
     agreementCompanySearchButton: byTestId("agreement-company-search-button"),
     agreementCompanyInputAsk: byText("Précisez votre entreprise"),
-    agreementCompanyInputConfirm: byText(/Vous avez sélectionné l'entreprise/),
+    agreementCompanyInputConfirm: byText(/Votre entreprise/),
     agreementPostalCodeInput: byTestId("locationSearchAutocomplete"),
     searchItem: {
-      agreement16: byText(
-        "Transports routiers et activités auxiliaires du transport"
+      agreement16: byDisplayValue(
+        "Transports routiers et activités auxiliaires du transport (IDCC 16)"
       ),
-      agreement3239: byText("Particuliers employeurs et emploi à domicile"),
+      agreement3239: byDisplayValue(
+        "Particuliers employeurs et emploi à domicile (IDCC 3239)"
+      ),
       carrefour: byText("CARREFOUR HYPERMARCHES"),
       bricomanie: byText("BRICOMANIE"),
     },
     ccChoice: {
       commerce: byText(
-        "Commerce de détail et de gros à prédominance alimentaire (IDCC 2216)"
+        "Commerce de détail et de gros à prédominance alimentaire IDCC 2216"
       ),
       transport: byText(
-        "Transports routiers et activités auxiliaires du transport (IDCC 0016)"
+        "Transports routiers et activités auxiliaires du transport (IDCC 16)"
       ),
       bureau: byText(
-        "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils (IDCC 1486)"
+        "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils IDCC 1486"
       ),
     },
   },

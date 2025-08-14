@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import React from "react";
 import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
@@ -17,7 +17,7 @@ Storage.prototype.getItem = jest.fn(
 }
 `
 );
-jest.mock("../../../conventions/Search/api/enterprises.service");
+jest.mock("../../../enterprise/queries");
 
 describe("Indemnité licenciement", () => {
   let userAction: UserAction;
@@ -94,9 +94,9 @@ describe("Indemnité licenciement", () => {
       .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
       .click(ui.agreement.unknownAgreement.get())
-      .setInput(ui.agreement.agreementCompanyInput.get(), "bricoman")
-      .click(ui.agreement.agreementCompanySearchButton.get())
+      .setInput(ui.agreement.agreementCompanyInput.get(), "bricomanie")
       .click(ui.agreement.agreementCompanySearchButton.get());
+
     await waitFor(() => {
       userAction.click(ui.agreement.searchItem.bricomanie.get());
     });

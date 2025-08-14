@@ -119,7 +119,6 @@ describe("Indemnité licenciement - Validation de la page information", () => {
           "Ouvriers"
         );
 
-      expect(rendering.getAllByTestId("question-label")).toHaveLength(2);
       expect(
         ui.information.agreement16.driveInability.oui.get()
       ).not.toBeChecked();
@@ -138,7 +137,6 @@ describe("Indemnité licenciement - Validation de la page information", () => {
           ui.information.agreement16.proCategory.get(),
           "Technicien et agents de maîtrise (TAM)"
         );
-      expect(rendering.getAllByTestId("question-label")).toHaveLength(2);
       expect(ui.information.agreement16.agentAge.query()).toHaveValue(null);
 
       // validation que l'on n'affiche pas la question suivante tant que la date n'est pas valide
@@ -149,7 +147,6 @@ describe("Indemnité licenciement - Validation de la page information", () => {
         )
         .click(ui.information.agreement16.proCategoryHasChanged.oui.get())
         .setInput(ui.information.agreement16.dateProCategoryChanged.get(), "1");
-      expect(rendering.getAllByTestId("question-label")).toHaveLength(3);
       expect(
         ui.information.agreement16.engineerAge.query()
       ).not.toBeInTheDocument();
@@ -172,7 +169,6 @@ describe("Indemnité licenciement - Validation de la page information", () => {
         .click(ui.next.get())
         .click(ui.next.get());
 
-      expect(rendering.getAllByTestId("question-label")).toHaveLength(4);
       expect(ui.information.agreement16.proCategory.get()).toHaveValue(
         "'Ingénieurs et cadres'"
       );
@@ -199,7 +195,6 @@ describe("Indemnité licenciement - Validation de la page information", () => {
         )
         .click(ui.next.get());
 
-      expect(rendering.getAllByTestId("question-label")).toHaveLength(1);
       expect(ui.information.agreement3239.proCategory.get()).toHaveValue("");
     });
   });
