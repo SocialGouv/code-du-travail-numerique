@@ -1,6 +1,6 @@
 import React from "react";
 import { RadioQuestion } from "../../../../common/components";
-import { Agreement, AgreementRoute, IndemniteDepartType } from "../../../types";
+import { AgreementRoute } from "../../../types";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { AgreementSearchInput } from "src/modules/convention-collective/AgreementSearch/AgreementSearchInput";
 import { EnterpriseAgreementSearchInput } from "src/modules/enterprise";
@@ -23,6 +23,7 @@ type Props = {
   onInitAgreementPage: CommonAgreementStoreFn["onInitAgreementPage"];
   trackingActionName: string;
   simulator: PublicodesSimulator;
+  showNotSelectedOption: boolean;
 };
 
 export const CommonAgreementStep = ({
@@ -35,34 +36,39 @@ export const CommonAgreementStep = ({
   onInitAgreementPage,
   trackingActionName,
   simulator,
+  showNotSelectedOption,
 }: Required<Props>): JSX.Element => {
   React.useEffect(() => {
     onInitAgreementPage();
   }, [onInitAgreementPage]);
 
+  const questions = [
+    {
+      label: "Je sais quelle est ma convention collective et je la saisis.",
+      value: "agreement" as AgreementRoute,
+      id: "route-agreement",
+    },
+    {
+      label:
+        "Je ne sais pas quelle est ma convention collective et je la recherche.",
+      value: "enterprise" as AgreementRoute,
+      id: "route-enterprise",
+    },
+  ];
+
+  if (showNotSelectedOption) {
+    questions.push({
+      label:
+        "Je ne souhaite pas renseigner ma convention collective (je passe l'étape).",
+      value: "not-selected" as AgreementRoute,
+      id: "route-none",
+    });
+  }
+
   return (
     <>
       <RadioQuestion
-        questions={[
-          {
-            label:
-              "Je sais quelle est ma convention collective et je la saisis.",
-            value: "agreement" as AgreementRoute,
-            id: "route-agreement",
-          },
-          {
-            label:
-              "Je ne sais pas quelle est ma convention collective et je la recherche.",
-            value: "enterprise" as AgreementRoute,
-            id: "route-enterprise",
-          },
-          {
-            label:
-              "Je ne souhaite pas renseigner ma convention collective (je passe l'étape).",
-            value: "not-selected" as AgreementRoute,
-            id: "route-none",
-          },
-        ]}
+        questions={questions}
         name="route"
         label="Quel est le nom de la convention collective applicable&nbsp;?"
         selectedOption={route}
@@ -88,9 +94,7 @@ export const CommonAgreementStep = ({
               agr && selectedAgreementAlert(agr, simulator)
             }
             defaultAgreement={agreement}
-            trackingActionName={
-              trackingActionName ?? IndemniteDepartType.LICENCIEMENT
-            }
+            trackingActionName={trackingActionName}
           />
           {error?.agreement && (
             <Alert
@@ -110,11 +114,11 @@ export const CommonAgreementStep = ({
             selectedAgreementAlert={(agr) =>
               agr && selectedAgreementAlert(agr, simulator)
             }
-            trackingActionName={
-              trackingActionName ?? IndemniteDepartType.LICENCIEMENT
-            }
+            trackingActionName={trackingActionName}
             enterprise={enterprise}
             agreement={agreement}
+            isInSimulator={true}
+            canContinueSimulationIfNoAgreement={showNotSelectedOption}
           />
           {error?.enterprise && (
             <Alert

@@ -48,6 +48,7 @@ const AgreementStep = (): JSX.Element => {
           ? PublicodesSimulator.INDEMNITE_LICENCIEMENT
           : PublicodesSimulator.RUPTURE_CONVENTIONNELLE
       }
+      showNotSelectedOption={true}
     />
   );
 };

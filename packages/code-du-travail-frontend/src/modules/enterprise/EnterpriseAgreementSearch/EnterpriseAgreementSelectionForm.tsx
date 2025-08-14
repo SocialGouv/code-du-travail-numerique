@@ -7,14 +7,15 @@ import { getEnterpriseAgreements } from "./utils";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { useEffect, useRef, useState } from "react";
-import { useEnterpriseAgreementSearchTracking } from "./tracking";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 
 type Props = {
+  isInSimulator?: boolean;
+  canContinueSimulationIfNoAgreement?: boolean;
   enterprise: Omit<Enterprise, "complements">;
   selectedAgreement?: Agreement;
   goBack: () => void;
-  onAgreementSelect?: (agreement: Agreement) => void;
+  onAgreementSelect?: (agreement?: Agreement) => void;
 };
 
 export const EnterpriseAgreementSelectionForm = ({
@@ -22,6 +23,8 @@ export const EnterpriseAgreementSelectionForm = ({
   selectedAgreement,
   goBack,
   onAgreementSelect,
+  canContinueSimulationIfNoAgreement,
+  isInSimulator,
 }: Props) => {
   const [agreement, setAgreement] = useState<Agreement | undefined>(
     selectedAgreement
@@ -88,16 +91,34 @@ export const EnterpriseAgreementSelectionForm = ({
       )}
       {!agreements.length && (
         <Alert
-          severity="info"
-          title={
-            <>
-              <span tabIndex={-1} ref={resultRef}>
-                Aucune convention collective n&apos;a été déclarée pour
-                l&apos;entreprise
-              </span>
-            </>
+          severity={
+            isInSimulator && !canContinueSimulationIfNoAgreement
+              ? "error"
+              : "warning"
           }
-          description="Vous pouvez tout de même poursuivre pour obtenir les informations générales prévues par le code du travail."
+          title={
+            <span tabIndex={-1} ref={resultRef}>
+              Aucune convention collective n&apos;a été déclarée pour
+              l&apos;entreprise
+            </span>
+          }
+          description={
+            isInSimulator ? (
+              <>
+                {canContinueSimulationIfNoAgreement ? (
+                  <span>
+                    Vous pouvez tout de même poursuivre pour obtenir les
+                    informations générales prévues par le code du travail.
+                  </span>
+                ) : (
+                  <span>
+                    Impossible de poursuivre la simulation sans convention
+                    collective.
+                  </span>
+                )}
+              </>
+            ) : undefined
+          }
         />
       )}
     </>

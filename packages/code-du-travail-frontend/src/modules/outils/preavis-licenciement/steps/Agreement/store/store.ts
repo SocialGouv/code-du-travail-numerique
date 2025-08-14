@@ -114,29 +114,40 @@ const createAgreementStore: StoreSliceWrapperPreavisLicenciement<
       );
       applyGenericValidation(get, set, "route", value);
     },
-    onAgreementChange: (agreement: any, enterprise?: any) => {
-      const currentAgreement = get().agreementData.input.agreement;
-      const hasAgreementChanged = currentAgreement?.num !== agreement?.num;
-
-      applyGenericValidation(get, set, "agreement", agreement);
-      saveAgreementToLocalStorage(agreement);
+    onAgreementChange: (agreement, enterprise) => {
       try {
+        const currentAgreement = get().agreementData.input.agreement;
+        const hasAgreementChanged = currentAgreement?.num !== agreement?.num;
+        applyGenericValidation(get, set, "agreement", agreement);
         applyGenericValidation(get, set, "enterprise", enterprise);
-        const idcc = agreement?.num?.toString();
-        set(
-          produce((state: AgreementStoreSlice) => {
-            state.agreementData.publicodes =
-              loadPublicodes<PublicodesSimulator.PREAVIS_LICENCIEMENT>(
-                PublicodesSimulator.PREAVIS_LICENCIEMENT,
-                idcc
-              );
-          })
-        );
-        get().agreementFunction.onSetIsStepHidden();
-        if (hasAgreementChanged) {
-          get().informationsFunction.resetQuestions();
+        if (agreement) {
+          saveAgreementToLocalStorage(agreement);
+          const idcc = agreement.num?.toString();
+          set(
+            produce((state: AgreementStoreSlice) => {
+              state.agreementData.publicodes =
+                loadPublicodes<PublicodesSimulator.PREAVIS_LICENCIEMENT>(
+                  PublicodesSimulator.PREAVIS_LICENCIEMENT,
+                  idcc
+                );
+            })
+          );
+          get().agreementFunction.onSetIsStepHidden();
+          if (hasAgreementChanged) {
+            get().informationsFunction.resetQuestions();
+          }
+          get().informationsFunction.generatePublicodesQuestions();
+        } else {
+          removeAgreementFromLocalStorage();
+          set(
+            produce((state: AgreementStoreSlice) => {
+              state.agreementData.publicodes =
+                loadPublicodes<PublicodesSimulator.PREAVIS_LICENCIEMENT>(
+                  PublicodesSimulator.PREAVIS_LICENCIEMENT
+                );
+            })
+          );
         }
-        get().informationsFunction.generatePublicodesQuestions();
       } catch (e) {
         console.error(e);
         captureException(e);

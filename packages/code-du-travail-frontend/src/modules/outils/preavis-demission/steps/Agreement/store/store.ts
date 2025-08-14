@@ -103,24 +103,34 @@ const createAgreementStore: StoreSliceWrapperPreavisDemission<
       applyGenericValidation(get, set, "route", value);
     },
     onAgreementChange: (agreement, enterprise) => {
-      applyGenericValidation(get, set, "agreement", agreement);
-      if (agreement) {
-        saveAgreementToLocalStorage(agreement);
-      }
       try {
+        applyGenericValidation(get, set, "agreement", agreement);
         applyGenericValidation(get, set, "enterprise", enterprise);
-        const idcc = agreement?.num?.toString();
-        get().informationsFunction.resetQuestions();
-        get().informationsFunction.generatePublicodesQuestions();
-        set(
-          produce((state: AgreementStoreSlice) => {
-            state.agreementData.publicodes =
-              loadPublicodes<PublicodesSimulator.PREAVIS_DEMISSION>(
-                PublicodesSimulator.PREAVIS_DEMISSION,
-                idcc
-              );
-          })
-        );
+        if (agreement) {
+          saveAgreementToLocalStorage(agreement);
+          const idcc = agreement.num?.toString();
+          set(
+            produce((state: AgreementStoreSlice) => {
+              state.agreementData.publicodes =
+                loadPublicodes<PublicodesSimulator.PREAVIS_DEMISSION>(
+                  PublicodesSimulator.PREAVIS_DEMISSION,
+                  idcc
+                );
+            })
+          );
+          get().informationsFunction.resetQuestions();
+          get().informationsFunction.generatePublicodesQuestions();
+        } else {
+          removeAgreementFromLocalStorage();
+          set(
+            produce((state: AgreementStoreSlice) => {
+              state.agreementData.publicodes =
+                loadPublicodes<PublicodesSimulator.PREAVIS_DEMISSION>(
+                  PublicodesSimulator.PREAVIS_DEMISSION
+                );
+            })
+          );
+        }
       } catch (e) {
         console.error(e);
         captureException(e);

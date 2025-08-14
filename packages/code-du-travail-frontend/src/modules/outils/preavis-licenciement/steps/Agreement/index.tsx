@@ -37,6 +37,7 @@ const StepAgreement = (): JSX.Element => {
       onRouteChange={onRouteChange}
       route={route}
       simulator={PublicodesSimulator.PREAVIS_LICENCIEMENT}
+      showNotSelectedOption={true}
     />
   );
 };

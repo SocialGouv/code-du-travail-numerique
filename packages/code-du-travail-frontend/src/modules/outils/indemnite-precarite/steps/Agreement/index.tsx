@@ -37,6 +37,7 @@ const StepAgreement = (): JSX.Element => {
       onRouteChange={onRouteChange}
       route={route}
       simulator={PublicodesSimulator.INDEMNITE_PRECARITE}
+      showNotSelectedOption={true}
     />
   );
 };

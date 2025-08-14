@@ -102,21 +102,32 @@ const createAgreementStore: StoreSliceWrapperIndemnitePrecarite<
       applyGenericValidation(get, set, "route", value);
     },
     onAgreementChange: (agreement, enterprise) => {
-      applyGenericValidation(get, set, "agreement", agreement);
-      saveAgreementToLocalStorage(agreement);
       try {
+        applyGenericValidation(get, set, "agreement", agreement);
         applyGenericValidation(get, set, "enterprise", enterprise);
-        const idcc = agreement?.num?.toString();
-        // Pas besoin de générer les questions publicodes car elles sont maintenant gérées directement
-        set(
-          produce((state: AgreementStoreSlice) => {
-            state.agreementData.publicodes =
-              loadPublicodes<PublicodesSimulator.INDEMNITE_PRECARITE>(
-                PublicodesSimulator.INDEMNITE_PRECARITE,
-                idcc
-              );
-          })
-        );
+        if (agreement) {
+          saveAgreementToLocalStorage(agreement);
+          const idcc = agreement.num?.toString();
+          set(
+            produce((state: AgreementStoreSlice) => {
+              state.agreementData.publicodes =
+                loadPublicodes<PublicodesSimulator.INDEMNITE_PRECARITE>(
+                  PublicodesSimulator.INDEMNITE_PRECARITE,
+                  idcc
+                );
+            })
+          );
+        } else {
+          removeAgreementFromLocalStorage();
+          set(
+            produce((state: AgreementStoreSlice) => {
+              state.agreementData.publicodes =
+                loadPublicodes<PublicodesSimulator.INDEMNITE_PRECARITE>(
+                  PublicodesSimulator.INDEMNITE_PRECARITE
+                );
+            })
+          );
+        }
       } catch (e) {
         console.error(e);
         captureException(e);

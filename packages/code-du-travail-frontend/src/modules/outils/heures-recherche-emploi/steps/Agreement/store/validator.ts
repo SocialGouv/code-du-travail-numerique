@@ -24,12 +24,13 @@ export const validateStep = (state: AgreementStoreInput) => {
     errorPublicodes: state.informationError
       ? "Une erreur liée au moteur de calcul nous empêche de continuer la simulation. Veuillez vérifier les informations saisies ou rafraîchir la page si le problème persiste."
       : undefined,
-    unsupportedAgreement:
-      state.agreement &&
-      !isCcFullySupported(
-        state.agreement?.num,
-        PublicodesSimulator.HEURES_RECHERCHE_EMPLOI
-      )
+    unsupportedAgreement: !state.agreement
+      ? "Si aucune convention collective n'est sélectionnée, vous ne pouvez pas continuer la simulation"
+      : state.agreement &&
+          !isCcFullySupported(
+            state.agreement?.num,
+            PublicodesSimulator.HEURES_RECHERCHE_EMPLOI
+          )
         ? "La simulation ne peut pas se poursuivre avec cette convention collective"
         : undefined,
   };

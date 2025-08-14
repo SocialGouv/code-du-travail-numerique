@@ -102,21 +102,33 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
       applyGenericValidation(get, set, "route", value);
     },
     onAgreementChange: (agreement, enterprise) => {
-      applyGenericValidation(get, set, "agreement", agreement);
-      saveAgreementToLocalStorage(agreement);
       try {
+        applyGenericValidation(get, set, "agreement", agreement);
         applyGenericValidation(get, set, "enterprise", enterprise);
-        const idcc = agreement?.num?.toString();
-        get().informationsFunction.generatePublicodesQuestions();
-        set(
-          produce((state: AgreementStoreSlice) => {
-            state.agreementData.publicodes =
-              loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
-                PublicodesSimulator.PREAVIS_RETRAITE,
-                idcc
-              );
-          })
-        );
+        if (agreement) {
+          saveAgreementToLocalStorage(agreement);
+          const idcc = agreement.num?.toString();
+          set(
+            produce((state: AgreementStoreSlice) => {
+              state.agreementData.publicodes =
+                loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
+                  PublicodesSimulator.PREAVIS_RETRAITE,
+                  idcc
+                );
+            })
+          );
+          get().informationsFunction.generatePublicodesQuestions();
+        } else {
+          removeAgreementFromLocalStorage();
+          set(
+            produce((state: AgreementStoreSlice) => {
+              state.agreementData.publicodes =
+                loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
+                  PublicodesSimulator.PREAVIS_RETRAITE
+                );
+            })
+          );
+        }
       } catch (e) {
         console.error(e);
         captureException(e);
