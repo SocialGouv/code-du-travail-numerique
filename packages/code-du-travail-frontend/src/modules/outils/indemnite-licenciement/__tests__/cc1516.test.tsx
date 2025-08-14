@@ -64,6 +64,14 @@ describe("Indemnité licenciement - CC 1516", () => {
       "4000"
     );
     userAction.setInput(
+      ui.salary.agreementWithNoticeSalary.salaries.getAll()[1],
+      "4000"
+    );
+    userAction.setInput(
+      ui.salary.agreementWithNoticeSalary.salaries.getAll()[2],
+      "4000"
+    );
+    userAction.setInput(
       ui.salary.agreementWithNoticeSalary.primes.getAll()[0],
       "200"
     );

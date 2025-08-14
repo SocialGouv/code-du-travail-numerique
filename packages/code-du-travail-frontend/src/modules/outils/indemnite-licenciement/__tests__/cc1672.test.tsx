@@ -76,6 +76,22 @@ describe("Indemnité licenciement - CC 1672", () => {
       ui.salary.agreementWithNoticeSalary.salaries.getAll()[0],
       "3000"
     );
+    userAction.setInput(
+      ui.salary.agreementWithNoticeSalary.salaries.getAll()[1],
+      "3000"
+    );
+    userAction.setInput(
+      ui.salary.agreementWithNoticeSalary.salaries.getAll()[2],
+      "3000"
+    );
+    userAction.setInput(
+      ui.salary.agreementWithNoticeSalary.salaries.getAll()[3],
+      "3000"
+    );
+    userAction.setInput(
+      ui.salary.agreementWithNoticeSalary.salaries.getAll()[4],
+      "3000"
+    );
 
     userAction.click(ui.next.get());
 

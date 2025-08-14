@@ -56,7 +56,7 @@ describe("Indemnité licenciement - CC 3127", () => {
 
     expect(ui.result.notifications.queryAll()).toHaveLength(1);
     expect(ui.result.notification(0).get()).toHaveTextContent(
-      "Ce montant est exonéré d’impôt sur le revenu et de cotisations sociales sous certaines conditions"
+      "Ce montant est exonéré d'impôt sur le revenu et de cotisations sociales sous certaines conditions"
     );
   });
 });

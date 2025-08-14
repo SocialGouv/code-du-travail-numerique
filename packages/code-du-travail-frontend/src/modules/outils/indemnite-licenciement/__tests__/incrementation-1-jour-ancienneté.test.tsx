@@ -4,9 +4,6 @@ import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
 import { ui } from "../../indemnite-depart/__tests__/ui";
 
-jest.mock("../../../conventions/Search/api/agreements.service");
-jest.mock("../../../conventions/Search/api/enterprises.service");
-
 describe("Page salaire: vérification l'affichage des salaires mensuels", () => {
   test("should show 12 month", async () => {
     const { getByText } = render(

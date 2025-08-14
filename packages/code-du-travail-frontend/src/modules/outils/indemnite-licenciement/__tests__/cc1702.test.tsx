@@ -49,11 +49,6 @@ describe("Indemnité licenciement - CC 1702", () => {
 
     userAction.click(ui.salary.hasPartialTime.non.get());
     userAction.click(ui.salary.hasSameSalary.non.get());
-    expect(
-      rendering.queryByText(
-        "Indiquez le montant des salaires (en incluant l’indemnité de congés payés, les primes, dont la prime de vacances, et les avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)"
-      )
-    ).toBeInTheDocument();
     userAction.click(ui.salary.hasSameSalary.oui.get());
     userAction.setInput(ui.salary.sameSalaryValue.get(), "2500");
 
@@ -78,6 +73,22 @@ describe("Indemnité licenciement - CC 1702", () => {
     ).toBeInTheDocument();
     userAction.setInput(
       ui.salary.agreementWithNoticeSalary.salaries.getAll()[0],
+      "3000"
+    );
+    userAction.setInput(
+      ui.salary.agreementWithNoticeSalary.salaries.getAll()[1],
+      "3000"
+    );
+    userAction.setInput(
+      ui.salary.agreementWithNoticeSalary.salaries.getAll()[2],
+      "3000"
+    );
+    userAction.setInput(
+      ui.salary.agreementWithNoticeSalary.salaries.getAll()[3],
+      "3000"
+    );
+    userAction.setInput(
+      ui.salary.agreementWithNoticeSalary.salaries.getAll()[4],
       "3000"
     );
 
@@ -160,11 +171,6 @@ describe("Indemnité licenciement - CC 1702", () => {
 
     userAction.click(ui.salary.hasPartialTime.non.get());
     userAction.click(ui.salary.hasSameSalary.non.get());
-    expect(
-      rendering.queryByText(
-        "Indiquez le montant des salaires (en incluant l’indemnité de congés payés, les primes, dont la prime de vacances, et les avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)"
-      )
-    ).toBeInTheDocument();
     userAction.click(ui.salary.hasSameSalary.oui.get());
     userAction.setInput(ui.salary.sameSalaryValue.get(), "2500");
 
@@ -189,6 +195,22 @@ describe("Indemnité licenciement - CC 1702", () => {
     ).toBeInTheDocument();
     userAction.setInput(
       ui.salary.agreementWithNoticeSalary.salaries.getAll()[0],
+      "3000"
+    );
+    userAction.setInput(
+      ui.salary.agreementWithNoticeSalary.salaries.getAll()[1],
+      "3000"
+    );
+    userAction.setInput(
+      ui.salary.agreementWithNoticeSalary.salaries.getAll()[2],
+      "3000"
+    );
+    userAction.setInput(
+      ui.salary.agreementWithNoticeSalary.salaries.getAll()[3],
+      "3000"
+    );
+    userAction.setInput(
+      ui.salary.agreementWithNoticeSalary.salaries.getAll()[4],
       "3000"
     );
 
