@@ -8,8 +8,6 @@ import { push } from "@socialgouv/matomo-next";
 jest.mock("@socialgouv/matomo-next", () => ({
   push: jest.fn(),
 }));
-jest.mock("../../../conventions/Search/api/agreements.service");
-jest.mock("../../../conventions/Search/api/enterprises.service");
 
 describe("Indemnité licenciement - Tracking", () => {
   beforeEach(() => {

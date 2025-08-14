@@ -5,9 +5,6 @@ import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimula
 import { ui } from "../../indemnite-depart/__tests__/ui";
 import { byTestId } from "testing-library-selector";
 
-jest.mock("../../../conventions/Search/api/agreements.service");
-jest.mock("../../../conventions/Search/api/enterprises.service");
-
 describe("Page résultat: vérification de la formule affichée", () => {
   let userAction: UserAction;
   describe.each([

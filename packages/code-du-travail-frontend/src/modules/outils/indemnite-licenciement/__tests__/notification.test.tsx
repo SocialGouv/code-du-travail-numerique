@@ -62,7 +62,7 @@ describe("Indemnité licenciement - Affichage de la notification si le légal et
     // La première notification étant celle par défaut, la seconde est celle qu'on souhaite tracker.
     expect(ui.result.notifications.queryAll()).toHaveLength(2);
     expect(ui.result.notification(0).get()).toHaveTextContent(
-      "Ce montant est exonéré d’impôt sur le revenu et de cotisations sociales sous certaines conditions"
+      "Ce montant est exonéré d'impôt sur le revenu et de cotisations sociales sous certaines conditions"
     );
   });
 });
