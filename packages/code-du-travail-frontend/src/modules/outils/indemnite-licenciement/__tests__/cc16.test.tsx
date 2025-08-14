@@ -92,6 +92,17 @@ describe("Indemnité licenciement - CC 16", () => {
 
       userAction
         .setInput(ui.salary.salaries.getAll()[0], "2500")
+        .setInput(ui.salary.salaries.getAll()[1], "2500")
+        .setInput(ui.salary.salaries.getAll()[2], "2500")
+        .setInput(ui.salary.salaries.getAll()[3], "2500")
+        .setInput(ui.salary.salaries.getAll()[4], "2500")
+        .setInput(ui.salary.salaries.getAll()[5], "2500")
+        .setInput(ui.salary.salaries.getAll()[6], "2500")
+        .setInput(ui.salary.salaries.getAll()[7], "2500")
+        .setInput(ui.salary.salaries.getAll()[8], "2500")
+        .setInput(ui.salary.salaries.getAll()[9], "2500")
+        .setInput(ui.salary.salaries.getAll()[10], "2500")
+        .setInput(ui.salary.salaries.getAll()[11], "2500")
         .click(ui.salary.variablePart.oui.get())
         .click(ui.next.get());
 

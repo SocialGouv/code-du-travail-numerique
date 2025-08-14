@@ -42,8 +42,20 @@ describe("Indemnité licenciement - CC 86", () => {
     userAction.click(ui.next.get());
     userAction.click(ui.salary.hasPartialTime.non.get());
     userAction.click(ui.salary.hasSameSalary.non.get());
-    userAction.setInput(ui.salary.salaries.getAll()[0], "2500");
-    userAction.setInput(ui.salary.salaries.getAll()[0], "25000");
+    userAction
+      .setInput(ui.salary.salaries.getAll()[0], "25000")
+      .setInput(ui.salary.salaries.getAll()[1], "25000")
+      .setInput(ui.salary.salaries.getAll()[2], "25000")
+      .setInput(ui.salary.salaries.getAll()[3], "25000")
+      .setInput(ui.salary.salaries.getAll()[4], "25000")
+      .setInput(ui.salary.salaries.getAll()[5], "25000")
+      .setInput(ui.salary.salaries.getAll()[6], "25000")
+      .setInput(ui.salary.salaries.getAll()[7], "25000")
+      .setInput(ui.salary.salaries.getAll()[8], "25000")
+      .setInput(ui.salary.salaries.getAll()[9], "25000")
+      .setInput(ui.salary.salaries.getAll()[10], "25000")
+      .setInput(ui.salary.salaries.getAll()[11], "25000");
+
     userAction.click(ui.next.get());
     expect(ui.result.formula.get()).toHaveTextContent("Formule");
     expect(ui.result.formula.get()).toHaveTextContent(
