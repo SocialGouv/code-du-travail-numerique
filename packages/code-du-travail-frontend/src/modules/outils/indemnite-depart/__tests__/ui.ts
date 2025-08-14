@@ -44,7 +44,7 @@ export const ui = {
       "route - Je ne souhaite pas renseigner ma convention collective (je passe l'étape)."
     ),
     agreement: byTestId(
-      "route -  Je sais quelle est ma convention collective et je la saisis."
+      "route - Je sais quelle est ma convention collective et je la saisis."
     ),
     unknownAgreement: byTestId(
       "route - Je ne sais pas quelle est ma convention collective et je la recherche."

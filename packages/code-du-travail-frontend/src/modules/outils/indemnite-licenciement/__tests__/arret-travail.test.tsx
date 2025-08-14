@@ -1,4 +1,4 @@
-import { render, RenderResult } from "@testing-library/react";
+import { render, RenderResult, waitFor } from "@testing-library/react";
 import React from "react";
 import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
@@ -6,11 +6,11 @@ import { ui } from "../../indemnite-depart/__tests__/ui";
 import { byText } from "testing-library-selector";
 
 describe("Arrêt de travail", () => {
-  let userAction: UserAction;
+  const userAction = new UserAction();
+
   describe("Page contrat de travail: vérification des questions affichées", () => {
     beforeEach(async () => {
       render(<CalculateurIndemniteLicenciement title={""} />);
-      userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
       userAction.click(ui.contract.type.cdi.get());
       userAction.click(ui.contract.fauteGrave.non.get());
