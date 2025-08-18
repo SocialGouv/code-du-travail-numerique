@@ -9,6 +9,9 @@ jest.mock("@socialgouv/matomo-next", () => ({
   push: jest.fn(),
 }));
 
+jest.mock("../../../convention-collective/search");
+jest.mock("../../../enterprise/queries");
+
 describe("Indemnité licenciement - Tracking", () => {
   beforeEach(() => {
     render(
