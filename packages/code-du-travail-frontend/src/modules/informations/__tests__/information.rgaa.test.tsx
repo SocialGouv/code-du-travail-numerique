@@ -37,7 +37,6 @@ describe("Information Component with Infographic", () => {
     //@ts-ignore
     render(<Information {...mockProps} />);
 
-    // Vérifier que l'image de l'infographie est rendue
     const infographicImages = screen.getAllByRole("img", { hidden: true });
     const infographicImage = infographicImages[0];
     expect(infographicImage).toBeInTheDocument();
@@ -46,14 +45,11 @@ describe("Information Component with Infographic", () => {
       expect.stringContaining("test-infographic.png")
     );
 
-    // Simuler le clic pour ouvrir la Lightbox
     infographicImage.click();
 
-    // Vérifier que la Lightbox est rendue avec les bons labels d'accessibilité
     const lightboxTitle = await screen.findByText("La procédure - Infographie");
     expect(lightboxTitle).toBeInTheDocument();
 
-    // Vérifier les labels de la Lightbox
     expect(screen.getByLabelText("Fermer")).toBeInTheDocument();
     expect(screen.getByLabelText("Zoomer")).toBeInTheDocument();
     expect(screen.getByLabelText("Dézoomer")).toBeInTheDocument();

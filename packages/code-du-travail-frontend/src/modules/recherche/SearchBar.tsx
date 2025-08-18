@@ -15,12 +15,11 @@ type SearchBarProps = {
 export const SearchBar = ({ initialValue = "" }: SearchBarProps) => {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null); // Ajout : Ref pour l'input
+  const inputRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState(initialValue);
   const [key, setKey] = useState(0);
   const { emitSearchEvent, emitSuggestionSelectionEvent } = useSearchTracking();
 
-  // Ajout : Focalise l'input quand initialValue change (après navigation/recherche)
   useEffect(() => {
     if (initialValue && inputRef.current) {
       inputRef.current.focus();
@@ -31,7 +30,6 @@ export const SearchBar = ({ initialValue = "" }: SearchBarProps) => {
     if (searchTerm.trim()) {
       emitSearchEvent(searchTerm.trim());
       router.push(`/recherche?q=${encodeURIComponent(searchTerm.trim())}`);
-      // Incrémente la clé pour forcer la réinitialisation du composant Autocomplete
       setKey((prevKey) => prevKey + 1);
     }
   };
@@ -86,7 +84,7 @@ export const SearchBar = ({ initialValue = "" }: SearchBarProps) => {
           }
         }}
         dataTestId="search-bar-input"
-        inputRef={inputRef} // Ajout : Passe la ref à Autocomplete
+        inputRef={inputRef}
       />
     </form>
   );
