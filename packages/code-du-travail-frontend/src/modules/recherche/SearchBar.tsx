@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import * as Sentry from "@sentry/nextjs";
 import { Autocomplete } from "../common/Autocomplete";
@@ -15,9 +15,17 @@ type SearchBarProps = {
 export const SearchBar = ({ initialValue = "" }: SearchBarProps) => {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null); // Ajout : Ref pour l'input
   const [query, setQuery] = useState(initialValue);
   const [key, setKey] = useState(0);
   const { emitSearchEvent, emitSuggestionSelectionEvent } = useSearchTracking();
+
+  // Ajout : Focalise l'input quand initialValue change (après navigation/recherche)
+  useEffect(() => {
+    if (initialValue && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [initialValue]);
 
   const handleSearch = (searchTerm: string) => {
     if (searchTerm.trim()) {
@@ -78,6 +86,7 @@ export const SearchBar = ({ initialValue = "" }: SearchBarProps) => {
           }
         }}
         dataTestId="search-bar-input"
+        inputRef={inputRef} // Ajout : Passe la ref à Autocomplete
       />
     </form>
   );

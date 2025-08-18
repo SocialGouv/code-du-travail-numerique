@@ -4,8 +4,8 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Input, { InputProps } from "@codegouvfr/react-dsfr/Input";
-import Downshift from "downshift";
-import { useState } from "react";
+import Downshift, { DownshiftState, StateChangeOptions } from "downshift";
+import { useState, useRef, MutableRefObject, Ref } from "react";
 import Spinner from "../Spinner.svg";
 import { css } from "@styled-system/css";
 import Link from "../Link";
@@ -24,6 +24,7 @@ export type AutocompleteProps<K> = InputProps & {
   onInputValueChange?: (value: string) => void;
   isSearch?: boolean;
   placeholder?: string;
+  inputRef?: Ref<HTMLInputElement>;
 };
 
 export const Autocomplete = <K,>({
@@ -43,15 +44,34 @@ export const Autocomplete = <K,>({
   displayNoResult,
   isSearch = false,
   placeholder,
+  inputRef: externalInputRef,
 }: AutocompleteProps<K>) => {
   const [loading, setLoading] = useState(false);
-  const [inputRef, setInputRef] = useState<HTMLInputElement | null>();
+  const [inputRef, setInputRef] = useState<HTMLInputElement | null>(null);
   const [suggestions, setSuggestions] = useState<K[]>([]);
+  const isFocusedRef = useRef(false);
+
+  const stateReducer = (
+    state: DownshiftState<K>,
+    changes: StateChangeOptions<K>
+  ) => {
+    switch (changes.type) {
+      case Downshift.stateChangeTypes.blurInput:
+        return {
+          ...changes,
+          inputValue: state.inputValue,
+        };
+      default:
+        return changes;
+    }
+  };
 
   return (
     <Downshift<K>
       initialSelectedItem={defaultValue}
       onInputValueChange={async (value, stateAndHelpers) => {
+        if (!isFocusedRef.current) return;
+
         if (!stateAndHelpers.selectedItem) {
           onInputValueChange?.(value);
 
@@ -78,6 +98,7 @@ export const Autocomplete = <K,>({
         if (lineAsLink && item) redirect(lineAsLink(item));
       }}
       itemToString={displayLabel}
+      stateReducer={stateReducer}
     >
       {({
         getInputProps,
@@ -91,13 +112,21 @@ export const Autocomplete = <K,>({
         getRootProps,
         clearSelection,
       }) => {
-        // AJOUT POUR RGAA 8.7 : Calcul du message de statut en français
         const statusMessage =
           !loading && isOpen && inputValue
             ? suggestions.length > 0
               ? `${suggestions.length} résultat${suggestions.length > 1 ? "s" : ""} trouvé${suggestions.length > 1 ? "s" : ""}.`
               : "Aucun résultat trouvé."
             : "";
+
+        const inputProps = getInputProps({
+          onFocus: (e: React.FocusEvent<HTMLInputElement>) => {
+            isFocusedRef.current = true;
+          },
+          onBlur: (e: React.FocusEvent<HTMLInputElement>) => {
+            isFocusedRef.current = false;
+          },
+        });
 
         return (
           <div className={`${searchContainer}`}>
@@ -144,11 +173,22 @@ export const Autocomplete = <K,>({
                 // @ts-ignore
                 "data-testid": dataTestId,
                 placeholder,
-                ref: setInputRef,
+                ref: (el: HTMLInputElement | null) => {
+                  setInputRef(el);
+                  if (
+                    externalInputRef &&
+                    typeof externalInputRef === "object" &&
+                    "current" in externalInputRef
+                  ) {
+                    (
+                      externalInputRef as MutableRefObject<HTMLInputElement | null>
+                    ).current = el;
+                  }
+                },
                 role: getRootProps().role,
                 "aria-expanded": getRootProps()["aria-expanded"],
-                ...getInputProps(),
-                "aria-labelledby": undefined, // Force aria-labelledby to be empty to avoid duplication with the for on label
+                ...inputProps,
+                "aria-labelledby": undefined,
               }}
               className={`${fr.cx("fr-mb-0")}`}
               hintText={hintText}
