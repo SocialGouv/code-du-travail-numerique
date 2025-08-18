@@ -39,7 +39,17 @@ const InfographicWrapper = ({
         aria-hidden="true"
         className={`${ImageZoom}${className ? ` ${className}` : ""}`}
       />
-      {isOpen && <Lightbox mainSrc={src} onCloseRequest={onClose} />}
+      {isOpen && (
+        <Lightbox
+          mainSrc={src}
+          onCloseRequest={onClose}
+          imageTitle="La procédure - Infographie"
+          closeLabel="Fermer"
+          reactModalProps={{ contentLabel: "La procédure - Infographie" }}
+          zoomInLabel="Zoomer"
+          zoomOutLabel="Dézoomer"
+        />
+      )}
     </>
   );
 };
