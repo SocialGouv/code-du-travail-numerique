@@ -92,7 +92,8 @@ export const CommonAgreementStep = ({
               onAgreementChange(agreement);
             }}
             selectedAgreementAlert={(agr) =>
-              agr && selectedAgreementAlert(agr, simulator)
+              agr &&
+              selectedAgreementAlert(agr, simulator, showNotSelectedOption)
             }
             defaultAgreement={agreement}
             trackingActionName={trackingActionName}
@@ -113,7 +114,8 @@ export const CommonAgreementStep = ({
               onAgreementChange(agr, ent);
             }}
             selectedAgreementAlert={(agr) =>
-              agr && selectedAgreementAlert(agr, simulator)
+              agr &&
+              selectedAgreementAlert(agr, simulator, showNotSelectedOption)
             }
             trackingActionName={trackingActionName}
             enterprise={enterprise}
@@ -143,10 +145,24 @@ export const CommonAgreementStep = ({
 
 const selectedAgreementAlert = (
   agreement: Agreement,
-  simulator: PublicodesSimulator
+  simulator: PublicodesSimulator,
+  showNotSelectedOption: boolean
 ) => {
   const isSupported = isCcFullySupported(agreement.num, simulator);
-  if (!isSupported) {
+  if (!isSupported && !showNotSelectedOption) {
+    return (
+      <>
+        <p>
+          La convention collective sélectionnée n&apos;est pas traitée par nos
+          services.
+        </p>
+        <p>
+          Vous ne pouvez pas poursuivre la simulation avec cette convention
+          collective.
+        </p>
+      </>
+    );
+  } else if (!isSupported) {
     return (
       <>
         <p>
@@ -160,4 +176,5 @@ const selectedAgreementAlert = (
       </>
     );
   }
+  return <></>;
 };
