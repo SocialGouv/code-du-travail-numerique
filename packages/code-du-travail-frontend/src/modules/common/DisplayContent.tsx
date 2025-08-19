@@ -15,6 +15,7 @@ import ImageWrapper from "./ImageWrapper";
 import { Tile } from "@codegouvfr/react-dsfr/Tile";
 import Link from "./Link";
 import { slugify } from "@socialgouv/cdtn-utils";
+import { captureException } from "@sentry/nextjs";
 
 export type numberLevel = 2 | 3 | 4 | 5 | 6;
 
@@ -290,7 +291,6 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
           const pdfName = domNode.attribs["data-pdf"];
           const pdfSize = domNode.attribs["data-pdf-size"];
           const pictoName = domNode.attribs["data-infographic"];
-          // Remove the img tag. It contains an absolute path. We need to build our own path.
           const firstChild =
             domNode.children.length > 0 ? domNode.children[0] : undefined;
           if (
@@ -383,6 +383,7 @@ const DisplayContent = ({
     return <div>{parse(xssWrapper(content), options(titleLevel))}</div>;
   } catch (error) {
     console.error("Error parsing HTML content:", error);
+    captureException(error);
     return (
       <div>Une erreur est survenue lors de l&apos;affichage du contenu.</div>
     );
