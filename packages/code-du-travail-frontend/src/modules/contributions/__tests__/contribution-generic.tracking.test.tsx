@@ -102,9 +102,33 @@ describe("<ContributionGeneric />", () => {
     );
     fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC1388.name.get());
     expect(ui.generic.buttonDisplayInfo.get()).toBeInTheDocument();
-    // expect(sendEvent).toHaveBeenCalledTimes(4);
+    expect(sendEvent).toHaveBeenCalledTimes(7);
     // @ts-ignore
     expect(sendEvent.mock.calls).toEqual([
+      [
+        {
+          action: "/contribution/my-contrib",
+          category: "cc_search",
+          name: '{"query":"1"}',
+          value: "",
+        },
+      ],
+      [
+        {
+          action: "/contribution/my-contrib",
+          category: "cc_search",
+          name: '{"query":"13"}',
+          value: "",
+        },
+      ],
+      [
+        {
+          action: "/contribution/my-contrib",
+          category: "cc_search",
+          name: '{"query":"138"}',
+          value: "",
+        },
+      ],
       [
         {
           action: "/contribution/my-contrib",
@@ -137,7 +161,7 @@ describe("<ContributionGeneric />", () => {
       ],
     ]);
     fireEvent.click(ui.generic.buttonDisplayInfo.get());
-    expect(sendEvent).toHaveBeenCalledTimes(5);
+    expect(sendEvent).toHaveBeenCalledTimes(8);
     expect(sendEvent).toHaveBeenLastCalledWith({
       action: "click_afficher_les_informations_CC",
       category: "contribution",
@@ -168,9 +192,17 @@ describe("<ContributionGeneric />", () => {
       byText(/Transports routiers et activités auxiliaires du transport/).get()
     );
     expect(ccUi.buttonDisplayInfo.query()).toBeInTheDocument();
-    expect(sendEvent).toHaveBeenCalledTimes(4);
+    expect(sendEvent).toHaveBeenCalledTimes(5);
     // @ts-ignore
     expect(sendEvent.mock.calls).toEqual([
+      [
+        {
+          action: "/contribution/my-contrib",
+          category: "cc_search",
+          name: '{"query":"1"}',
+          value: "",
+        },
+      ],
       [
         {
           action: "/contribution/my-contrib",
@@ -203,7 +235,7 @@ describe("<ContributionGeneric />", () => {
       ],
     ]);
     fireEvent.click(ccUi.buttonDisplayInfo.get());
-    expect(sendEvent).toHaveBeenCalledTimes(5);
+    expect(sendEvent).toHaveBeenCalledTimes(6);
     expect(sendEvent).toHaveBeenLastCalledWith({
       action: "click_afficher_les_informations_générales",
       category: "contribution",
