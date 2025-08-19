@@ -46,6 +46,7 @@ export const useSearchTracking = () => {
   );
 
   const emitSearchEvent = useCallback((searchTerm: string) => {
+    console.log("searchTerm", searchTerm);
     if (searchTerm?.trim()) {
       sendEvent({
         category: MatomoSearchCategory.CANDIDATE_RESULTS,

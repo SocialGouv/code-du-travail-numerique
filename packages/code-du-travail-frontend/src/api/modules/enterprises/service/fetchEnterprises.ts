@@ -28,6 +28,7 @@ export const fetchEnterprises = async (
   }&mtm_campaign=cdtn`;
 
   const fetchReq = await fetch(url);
+  console.log("url", url);
   if (!fetchReq.ok) {
     throw new Error(
       `Erreur lors de la récupération des entreprises depuis annuaire-entreprise, code : ${fetchReq.status} (${fetchReq.statusText})`

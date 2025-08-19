@@ -22,6 +22,7 @@ export const HomeSearch = () => {
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.debug("searchTerm", e);
     handleSearch(query);
   };
 

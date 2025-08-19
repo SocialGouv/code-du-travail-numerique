@@ -1,4 +1,5 @@
 import { fireEvent, render, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { sendEvent } from "../../utils";
 import { mockAgreementSearch, ui } from "./ui";
@@ -92,9 +93,8 @@ describe("<ContributionGeneric />", () => {
 
     render(<ContributionGeneric contribution={contribution} />);
     fireEvent.click(ccUi.radio.agreementSearchOption.get());
-    fireEvent.change(ccUi.searchByName.input.get(), {
-      target: { value: "1388" },
-    });
+    await userEvent.click(ccUi.searchByName.input.get());
+    await userEvent.type(ccUi.searchByName.input.get(), "1388");
     await waitFor(() =>
       expect(
         ccUi.searchByName.autocompleteLines.IDCC1388.name.get()
@@ -102,7 +102,7 @@ describe("<ContributionGeneric />", () => {
     );
     fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC1388.name.get());
     expect(ui.generic.buttonDisplayInfo.get()).toBeInTheDocument();
-    expect(sendEvent).toHaveBeenCalledTimes(4);
+    // expect(sendEvent).toHaveBeenCalledTimes(4);
     // @ts-ignore
     expect(sendEvent.mock.calls).toEqual([
       [
@@ -155,9 +155,8 @@ describe("<ContributionGeneric />", () => {
 
     render(<ContributionGeneric contribution={contribution} />);
     fireEvent.click(ccUi.radio.agreementSearchOption.get());
-    fireEvent.change(ccUi.searchByName.input.get(), {
-      target: { value: "16" },
-    });
+    await userEvent.click(ccUi.searchByName.input.get());
+    await userEvent.type(ccUi.searchByName.input.get(), "16");
     await waitFor(() =>
       expect(
         byText(
@@ -217,9 +216,8 @@ describe("<ContributionGeneric />", () => {
 
     render(<ContributionGeneric contribution={contribution} />);
     fireEvent.click(ccUi.radio.enterpriseSearchOption.get());
-    fireEvent.change(ccUi.searchByEnterprise.input.get(), {
-      target: { value: "carrefour" },
-    });
+    await userEvent.click(ccUi.searchByEnterprise.input.get());
+    await userEvent.type(ccUi.searchByEnterprise.input.get(), "carrefour");
     fireEvent.click(ccUi.searchByEnterprise.submitButton.get());
     await waitFor(() => {
       fireEvent.click(
@@ -273,6 +271,7 @@ describe("<ContributionGeneric />", () => {
       ],
     ]);
   });
+
   it("afficher les infos - sans CC", async () => {
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
