@@ -25,7 +25,6 @@ export const getAllAgreementsWithContributions = () => {
 };
 
 export function getAgreementsBySlugs(slugs: string[]) {
-  console.log("TOTO");
   return {
     _source: [
       "title",
@@ -51,7 +50,6 @@ export function getAgreementsBySlugs(slugs: string[]) {
 }
 
 export function getAgreementsByIds(ids: string[]) {
-  console.log("TOTO");
   return {
     _source: [
       "title",
@@ -77,7 +75,6 @@ export function getAgreementsByIds(ids: string[]) {
 }
 
 export const getAgreementBySlug = (slug: string) => {
-  console.log("TOTO");
   return {
     _source: [
       "_id",
