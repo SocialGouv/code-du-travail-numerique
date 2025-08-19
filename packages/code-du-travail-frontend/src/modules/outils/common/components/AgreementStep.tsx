@@ -13,8 +13,6 @@ import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { Agreement } from "../../indemnite-depart/types";
 import isCcFullySupported from "src/modules/outils/common/utils/isCcFullySupported";
 import { fr } from "@codegouvfr/react-dsfr";
-import { useAgreementEventEmitter } from "../events/useAgreementEventEmitter";
-import { eventEmitter, EventType } from "../events";
 
 type Props = {
   error: CommonAgreementStoreError;
@@ -41,7 +39,6 @@ export const CommonAgreementStep = ({
   simulator,
   showNotSelectedOption,
 }: Required<Props>): JSX.Element => {
-  useAgreementEventEmitter();
   React.useEffect(() => {
     onInitAgreementPage();
   }, [onInitAgreementPage]);

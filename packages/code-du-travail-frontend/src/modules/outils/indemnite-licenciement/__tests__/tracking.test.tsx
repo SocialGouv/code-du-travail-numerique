@@ -1,14 +1,16 @@
 import { render, waitFor } from "@testing-library/react";
 import React from "react";
 import { UserAction } from "../../common/utils/UserAction";
-import IndemniteLicenciementSimulator, {
-  CalculateurIndemniteLicenciement,
-} from "../IndemniteLicenciementSimulator";
+import IndemniteLicenciementSimulator from "../IndemniteLicenciementSimulator";
 import { ui } from "../../indemnite-depart/__tests__/ui";
 import { push } from "@socialgouv/matomo-next";
 
 jest.mock("@socialgouv/matomo-next", () => ({
   push: jest.fn(),
+}));
+
+jest.mock("uuid", () => ({
+  v4: jest.fn(() => "test-uuid"),
 }));
 
 jest.mock("../../../convention-collective/search");
@@ -152,6 +154,7 @@ describe("Indemnité licenciement - Tracking", () => {
       "enterprise_search",
       "Indemnité de licenciement",
       JSON.stringify({ query: "carrefour" }),
+      "test-uuid",
     ]);
   });
 
@@ -173,6 +176,7 @@ describe("Indemnité licenciement - Tracking", () => {
       "cc_search",
       "Indemnité de licenciement",
       JSON.stringify({ query: "16" }),
+      "test-uuid",
     ]);
   });
 
