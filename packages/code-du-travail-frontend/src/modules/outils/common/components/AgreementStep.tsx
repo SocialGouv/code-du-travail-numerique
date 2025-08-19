@@ -176,5 +176,5 @@ const selectedAgreementAlert = (
       </>
     );
   }
-  return <></>;
+  return undefined;
 };
