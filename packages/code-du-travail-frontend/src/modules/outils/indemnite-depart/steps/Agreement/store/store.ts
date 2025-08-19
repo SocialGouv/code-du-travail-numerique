@@ -1,15 +1,9 @@
 import { StoreApi } from "zustand";
 import produce from "immer";
 import { validateStep } from "./validator";
-
 import { CommonAgreementStoreData, CommonAgreementStoreSlice } from "./types";
-
 import { PublicodesSimulator, supportedCcn } from "@socialgouv/modeles-social";
-import {
-  AgreementRoute,
-  IndemniteDepartType,
-  StoreSlicePublicodes,
-} from "../../../types";
+import { AgreementRoute, StoreSlicePublicodes } from "../../../types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
 import { getAgreementFromLocalStorage } from "src/modules/common/useLocalStorage";
 import {
@@ -20,7 +14,6 @@ import { ValidationResponse } from "src/modules/outils/common/components/Simulat
 import { loadPublicodes } from "src/modules/outils/common/publicodes";
 import isCcFullySupported from "src/modules/outils/common/utils/isCcFullySupported";
 import { pushAgreementEvents } from "src/modules/outils/common/events";
-import { AgreementStoreSlice } from "../../../agreements";
 import { captureException } from "@sentry/nextjs";
 
 const initialState: Omit<

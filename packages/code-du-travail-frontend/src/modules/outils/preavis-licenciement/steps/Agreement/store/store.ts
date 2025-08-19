@@ -1,6 +1,5 @@
 import { StoreApi } from "zustand";
 import produce from "immer";
-import { push as matopush } from "@socialgouv/matomo-next";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { AgreementStoreInput, AgreementStoreSlice } from "./types";
@@ -12,7 +11,6 @@ import {
   removeAgreementFromLocalStorage,
   saveAgreementToLocalStorage,
 } from "src/modules/common/useLocalStorage";
-import { MatomoBaseEvent, MatomoSearchAgreementCategory } from "src/lib";
 import { loadPublicodes } from "src/modules/outils/common/publicodes";
 import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
 import { pushAgreementEvents } from "../../../../common/events/pushAgreementEvents";
@@ -228,22 +226,6 @@ const createAgreementStore: StoreSliceWrapperPreavisLicenciement<
         })
       );
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
-    },
-    onAgreementSearch: (data: any) => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.AGREEMENT_SEARCH,
-        PublicodesSimulator.PREAVIS_LICENCIEMENT,
-        JSON.stringify(data),
-      ]);
-    },
-    onEnterpriseSearch: (data: any) => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.ENTERPRISE_SEARCH,
-        PublicodesSimulator.PREAVIS_LICENCIEMENT,
-        JSON.stringify(data),
-      ]);
     },
   },
 });

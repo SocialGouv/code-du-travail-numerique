@@ -1,7 +1,9 @@
 import { render, waitFor } from "@testing-library/react";
 import React from "react";
 import { UserAction } from "../../common/utils/UserAction";
-import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
+import IndemniteLicenciementSimulator, {
+  CalculateurIndemniteLicenciement,
+} from "../IndemniteLicenciementSimulator";
 import { ui } from "../../indemnite-depart/__tests__/ui";
 import { push } from "@socialgouv/matomo-next";
 
@@ -15,7 +17,11 @@ jest.mock("../../../enterprise/queries");
 describe("Indemnité licenciement - Tracking", () => {
   beforeEach(() => {
     render(
-      <CalculateurIndemniteLicenciement title={"Indemnité de licenciement"} />
+      <IndemniteLicenciementSimulator
+        title={"Indemnité de licenciement"}
+        displayTitle="Indemnité de licenciement"
+        relatedItems={[]}
+      />
     );
   });
   const userAction = new UserAction();

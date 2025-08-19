@@ -1,6 +1,6 @@
 import React from "react";
-import { RadioQuestion } from "../../../../common/components";
-import { AgreementRoute } from "../../../types";
+import { RadioQuestion } from ".";
+import { AgreementRoute } from "../../indemnite-depart/types";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { AgreementSearchInput } from "src/modules/convention-collective/AgreementSearch/AgreementSearchInput";
 import { EnterpriseAgreementSearchInput } from "src/modules/enterprise";
@@ -8,10 +8,13 @@ import {
   CommonAgreementStoreError,
   CommonAgreementStoreFn,
   CommonAgreementStoreInput,
-} from "../store";
-import { selectedAgreementAlert } from "./selectedAgreementAlert";
-import { fr } from "@codegouvfr/react-dsfr";
+} from "../../indemnite-depart/steps/Agreement/store";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
+import { Agreement } from "../../indemnite-depart/types";
+import isCcFullySupported from "src/modules/outils/common/utils/isCcFullySupported";
+import { fr } from "@codegouvfr/react-dsfr";
+import { useAgreementEventEmitter } from "../events/useAgreementEventEmitter";
+import { eventEmitter, EventType } from "../events";
 
 type Props = {
   error: CommonAgreementStoreError;
@@ -38,6 +41,7 @@ export const CommonAgreementStep = ({
   simulator,
   showNotSelectedOption,
 }: Required<Props>): JSX.Element => {
+  useAgreementEventEmitter();
   React.useEffect(() => {
     onInitAgreementPage();
   }, [onInitAgreementPage]);
@@ -138,4 +142,25 @@ export const CommonAgreementStep = ({
       )}
     </>
   );
+};
+
+const selectedAgreementAlert = (
+  agreement: Agreement,
+  simulator: PublicodesSimulator
+) => {
+  const isSupported = isCcFullySupported(agreement.num, simulator);
+  if (!isSupported) {
+    return (
+      <>
+        <p>
+          La convention collective sélectionnée n&apos;est pas traitée par nos
+          services.
+        </p>
+        <p>
+          Vous pouvez tout de même poursuivre la simulation qui vous fournira un
+          résultat basé sur le code du travail.
+        </p>
+      </>
+    );
+  }
 };

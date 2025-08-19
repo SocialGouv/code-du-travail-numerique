@@ -19,6 +19,7 @@ type Props = {
   defaultAgreement?: Agreement;
   trackingActionName: string;
   level?: 2 | 3;
+  emitSearchQueryEvent?: (query: string) => void;
 };
 
 export const AgreementSearchInput = ({
@@ -29,6 +30,7 @@ export const AgreementSearchInput = ({
   defaultAgreement,
   trackingActionName,
   level,
+  emitSearchQueryEvent,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState(defaultAgreement);
   const [searchState, setSearchState] = useState<
@@ -107,6 +109,7 @@ export const AgreementSearchInput = ({
             onSearch={(query, agreements) => {
               if (query) {
                 emitAgreementSearchInputEvent(query, trackingActionName);
+                emitSearchQueryEvent?.(query);
               }
               if (onSearch) onSearch(query, agreements);
               if (!query) {

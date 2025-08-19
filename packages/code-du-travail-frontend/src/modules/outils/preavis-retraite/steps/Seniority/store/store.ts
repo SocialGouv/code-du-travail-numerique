@@ -43,7 +43,6 @@ const createSeniorityStore: StoreSliceWrapperPreavisRetraite<
           state.seniorityData.error = errorState;
         })
       );
-
       matopush([
         MatomoBaseEvent.TRACK_EVENT,
         MatomoBaseEvent.OUTIL,

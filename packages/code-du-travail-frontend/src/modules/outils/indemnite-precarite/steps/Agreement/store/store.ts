@@ -1,7 +1,5 @@
 import { StoreApi } from "zustand";
 import produce from "immer";
-import { push as matopush } from "@socialgouv/matomo-next";
-
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { AgreementStoreData, AgreementStoreSlice } from "./types";
 import { validateStep } from "./validator";
@@ -12,7 +10,6 @@ import {
   removeAgreementFromLocalStorage,
   saveAgreementToLocalStorage,
 } from "src/modules/common/useLocalStorage";
-import { MatomoBaseEvent, MatomoSearchAgreementCategory } from "src/lib";
 import { loadPublicodes } from "src/modules/outils/common/publicodes";
 import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
@@ -168,22 +165,6 @@ const createAgreementStore: StoreSliceWrapperIndemnitePrecarite<
         })
       );
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
-    },
-    onAgreementSearch: (data) => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.AGREEMENT_SEARCH,
-        PublicodesSimulator.INDEMNITE_PRECARITE,
-        JSON.stringify(data),
-      ]);
-    },
-    onEnterpriseSearch: (data) => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.ENTERPRISE_SEARCH,
-        PublicodesSimulator.INDEMNITE_PRECARITE,
-        JSON.stringify(data),
-      ]);
     },
   },
 });

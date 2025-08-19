@@ -46,8 +46,6 @@ export type AgreementStoreFunction = {
   onSetIsStepHidden: () => void;
   setHasNoEnterpriseSelected: (value: boolean) => void;
   onNextStep: () => ValidationResponse;
-  onAgreementSearch: (data: any) => void;
-  onEnterpriseSearch: (data: any) => void;
 };
 
 export type AgreementStoreSlice = {

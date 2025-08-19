@@ -4,7 +4,6 @@ import { Step, StepChange, ValidationResponse } from "./types";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useSimulatorLayoutTracking } from "./tracking";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
-import { IndemniteDepartStepName } from "../../../indemnite-depart";
 import * as Sentry from "@sentry/nextjs";
 import { scrollToTop } from "../../utils";
 import { css } from "@styled-system/css";
@@ -42,14 +41,9 @@ export const SimulatorLayout = (props: Props<string>) => {
   const stepName = visibleSteps[stepIndex].label;
   const nextStepTitle = visibleSteps[stepIndex + 1]?.label;
 
-  const doNotTriggerMatomo = (stepName: string) =>
-    stepName === IndemniteDepartStepName.Resultat &&
-    simulator === PublicodesSimulator.INDEMNITE_LICENCIEMENT;
-
   useEffect(() => {
     const currentStepName = visibleSteps[stepIndex].name;
     stepperRef.current?.focus();
-    if (doNotTriggerMatomo(currentStepName)) return;
     emitNextPreviousEvent(title, navigationAction === "prev", currentStepName);
   }, [stepIndex]);
 

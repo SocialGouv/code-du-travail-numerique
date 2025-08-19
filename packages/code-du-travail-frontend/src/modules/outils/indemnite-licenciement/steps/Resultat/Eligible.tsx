@@ -110,7 +110,7 @@ export default function Eligible() {
       dottedName: "default notification 1",
       description: (
         <span>
-          Ce montant est exonéré d'impôt sur le revenu et de cotisations
+          Ce montant est exonéré d&apos;impôt sur le revenu et de cotisations
           sociales sous certaines conditions,{" "}
           <Link
             href="/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi#lindemnite-de-licenciement-est-elle-imposable"
@@ -223,7 +223,7 @@ export default function Eligible() {
       />
 
       <p>
-        Pour en savoir plus sur l'indemnité de licenciement et son mode de
+        Pour en savoir plus sur l&apos;indemnité de licenciement et son mode de
         calcul, consultez{" "}
         <Link
           href={`/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi`}

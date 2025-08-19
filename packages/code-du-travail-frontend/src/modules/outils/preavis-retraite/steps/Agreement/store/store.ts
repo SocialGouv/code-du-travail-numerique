@@ -1,7 +1,5 @@
 import { StoreApi } from "zustand";
 import produce from "immer";
-import { push as matopush } from "@socialgouv/matomo-next";
-
 import { PublicodesSimulator, supportedCcn } from "@socialgouv/modeles-social";
 import { StoreSliceWrapperPreavisRetraite } from "../../store";
 import { AgreementStoreData, AgreementStoreSlice } from "./types";
@@ -14,7 +12,6 @@ import {
   removeAgreementFromLocalStorage,
   saveAgreementToLocalStorage,
 } from "src/modules/common/useLocalStorage";
-import { MatomoBaseEvent, MatomoSearchAgreementCategory } from "src/lib";
 import { loadPublicodes } from "src/modules/outils/common/publicodes";
 import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
@@ -170,22 +167,6 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
         })
       );
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
-    },
-    onAgreementSearch: (data) => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.AGREEMENT_SEARCH,
-        PublicodesSimulator.PREAVIS_RETRAITE,
-        JSON.stringify(data),
-      ]);
-    },
-    onEnterpriseSearch: (data) => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.ENTERPRISE_SEARCH,
-        PublicodesSimulator.PREAVIS_RETRAITE,
-        JSON.stringify(data),
-      ]);
     },
   },
 });
