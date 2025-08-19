@@ -5,7 +5,7 @@ import Image from "next/image";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Input, { InputProps } from "@codegouvfr/react-dsfr/Input";
 import Downshift, { DownshiftState, StateChangeOptions } from "downshift";
-import { useState, useRef, MutableRefObject, Ref } from "react";
+import { useState, useRef, MutableRefObject, Ref, useEffect } from "react";
 import Spinner from "../Spinner.svg";
 import { css } from "@styled-system/css";
 import Link from "../Link";
@@ -50,6 +50,12 @@ export const Autocomplete = <K,>({
   const [inputRef, setInputRef] = useState<HTMLInputElement | null>(null);
   const [suggestions, setSuggestions] = useState<K[]>([]);
   const isFocusedRef = useRef(false);
+
+  useEffect(() => {
+    return () => {
+      isFocusedRef.current = false;
+    };
+  }, []);
 
   const stateReducer = (
     state: DownshiftState<K>,
@@ -120,10 +126,10 @@ export const Autocomplete = <K,>({
             : "";
 
         const inputProps = getInputProps({
-          onFocus: (e: React.FocusEvent<HTMLInputElement>) => {
+          onFocus: (_e: React.FocusEvent<HTMLInputElement>) => {
             isFocusedRef.current = true;
           },
-          onBlur: (e: React.FocusEvent<HTMLInputElement>) => {
+          onBlur: (_e: React.FocusEvent<HTMLInputElement>) => {
             isFocusedRef.current = false;
           },
         });
@@ -237,7 +243,6 @@ export const Autocomplete = <K,>({
                   displayNoResult &&
                   !selectedItem && (
                     <li className={fr.cx("fr-p-3v")} lang="fr">
-                      {" "}
                       Aucun résultat
                     </li>
                   )}
