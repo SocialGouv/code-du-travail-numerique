@@ -29,12 +29,12 @@ export const MentionsLegales = () => (
 
     <h2>Hébergement</h2>
     <div className={fr.cx("fr-mb-3w")}>
-      <p>
-        Ce site est hébergé par OVH SAS&nbsp;: <br />
+      <p className={fr.cx("fr-mb-0")}>Ce site est hébergé par OVH SAS&nbsp;:</p>
+      <address>
         2 rue Kellermann <br />
         56100 Roubaix <br />
         France
-      </p>
+      </address>
       <p>
         <strong>
           Le code du logiciel est libre, et peut donc être vérifié et amélioré
