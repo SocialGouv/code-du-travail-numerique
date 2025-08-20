@@ -36,7 +36,7 @@ export const Autocomplete = <K,>({
   lineAsLink,
   search,
   label,
-  state,
+  state: autocompleteState,
   stateRelatedMessage,
   hintText,
   dataTestId,
@@ -61,15 +61,13 @@ export const Autocomplete = <K,>({
     state: DownshiftState<K>,
     changes: StateChangeOptions<K>
   ) => {
-    switch (changes.type) {
-      case Downshift.stateChangeTypes.blurInput:
-        return {
-          ...changes,
-          inputValue: state.inputValue,
-        };
-      default:
-        return changes;
+    if (changes.type === Downshift.stateChangeTypes.blurInput) {
+      return {
+        ...changes,
+        inputValue: state.inputValue,
+      };
     }
+    return changes;
   };
 
   return (
@@ -118,12 +116,17 @@ export const Autocomplete = <K,>({
         getRootProps,
         clearSelection,
       }) => {
-        const statusMessage =
-          !loading && isOpen && inputValue
-            ? suggestions.length > 0
-              ? `${suggestions.length} résultat${suggestions.length > 1 ? "s" : ""} trouvé${suggestions.length > 1 ? "s" : ""}.`
-              : "Aucun résultat trouvé."
-            : "";
+        const getPluralSuffix = (count: number) => (count > 1 ? "s" : "");
+
+        let statusMessage = "";
+        if (!loading && isOpen && inputValue) {
+          if (suggestions.length > 0) {
+            const suffix = getPluralSuffix(suggestions.length);
+            statusMessage = `${suggestions.length} résultat${suffix} trouvé${suffix}.`;
+          } else {
+            statusMessage = "Aucun résultat trouvé.";
+          }
+        }
 
         const inputProps = getInputProps({
           onFocus: (_e: React.FocusEvent<HTMLInputElement>) => {
@@ -199,7 +202,7 @@ export const Autocomplete = <K,>({
               className={`${fr.cx("fr-mb-0")}`}
               hintText={hintText}
               label={label}
-              state={state}
+              state={autocompleteState}
               stateRelatedMessage={stateRelatedMessage}
               classes={{
                 wrap: isSearch ? inputSearchNoMarginTop : undefined,
