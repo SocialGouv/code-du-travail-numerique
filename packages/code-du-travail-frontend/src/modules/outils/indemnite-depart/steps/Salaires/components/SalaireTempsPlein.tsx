@@ -141,24 +141,24 @@ export const SalaireTempsPlein = ({
                           <Input
                             label={`Prime exceptionnelle en € pour le mois ${index + 1}`}
                             hideLabel
-                            nativeInputProps={{
-                              type: "number",
-                              id: `prime.${index}`,
-                              name: `prime.${index}`,
-                              value: sPeriod.prime ?? "",
-                              onChange: (e) =>
-                                onChangeLocalPrimes(index, e.target.value),
-                              onWheel: preventScroll,
-                            }}
+                            nativeInputProps={
+                              {
+                                type: "number",
+                                id: `prime.${index}`,
+                                name: `prime.${index}`,
+                                value: sPeriod.prime ?? "",
+                                onChange: (e) =>
+                                  onChangeLocalPrimes(index, e.target.value),
+                                onWheel: preventScroll,
+                                "data-testid": dataTestidSalaries
+                                  ? "prime-" + dataTestidSalaries
+                                  : "prime-input",
+                              } as any
+                            }
                             state={
                               errorsPrimes[`${index}`] ? "error" : "default"
                             }
                             stateRelatedMessage={errorsPrimes[`${index}`]}
-                            data-testid={
-                              dataTestidSalaries
-                                ? "prime-" + dataTestidSalaries
-                                : "prime-input"
-                            }
                             classes={{
                               nativeInputOrTextArea: defaultInputStyle,
                             }}

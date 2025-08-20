@@ -3,6 +3,7 @@ import React from "react";
 import { AgreementInformation } from "src/modules/outils/indemnite-depart/common";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { publicodesUnitTranslator } from "src/modules/outils/common/publicodes";
+import { sanitizePublicodesValue } from "src/modules/outils/common/publicodes";
 
 type Props = {
   situations: AgreementInformation[];
@@ -22,20 +23,20 @@ const Situation: React.FC<Props> = ({ situations, agreement }) => {
               : "Code du travail"}
           </strong>
         </li>
-        {situations.map((info, index) => (
-          <li
-            key={"agreement-" + index}
-            data-testid={`situation-${info.label}`}
-          >
-            {info.label}&nbsp;:&nbsp;
-            <strong>{info.value.replace(/^'|'$/g, "")}</strong>
-            &nbsp;
-            {publicodesUnitTranslator(
-              info.value.replace(/&apos;/g, ""),
-              info.unit
-            )}
-          </li>
-        ))}
+        {situations.map((info, index) => {
+          const sanitized = sanitizePublicodesValue(info.value);
+          return (
+            <li
+              key={"agreement-" + index}
+              data-testid={`situation-${info.label}`}
+            >
+              {info.label}&nbsp;:&nbsp;
+              <strong>{sanitized}</strong>
+              &nbsp;
+              {publicodesUnitTranslator(sanitized, info.unit)}
+            </li>
+          );
+        })}
       </ul>
     </>
   );

@@ -1,25 +1,8 @@
-import { byTestId, byText, byTitle } from "testing-library-selector";
+import { byTestId, byText } from "testing-library-selector";
 
 export const ui = {
   introduction: {
     startButton: byText("Commencer"),
-  },
-  agreement: {
-    agreement: byText(
-      "Je sais quelle est ma convention collective et je la saisis."
-    ),
-    unknownAgreement: byText(
-      "Je ne sais pas quelle est ma convention collective et je la recherche."
-    ),
-    agreementInput: byTestId("AgreementSearchAutocomplete"),
-    agreementInputConfirm: byText(
-      /Vous avez sélectionné la convention collective/
-    ),
-    agreementCompanyInput: byTestId("enterprise-search-input"),
-    agreementCompanyInputAsk: byText(
-      "Précisez et sélectionnez votre entreprise"
-    ),
-    agreementCompanyInputConfirm: byText(/Vous avez sélectionné l'entreprise/),
   },
   contractType: {
     cdd: byTestId("contractType - Contrat à durée déterminée (CDD)"),
@@ -79,12 +62,4 @@ export const ui = {
     removeSalaire: (index: number) => byTestId(`removeSalaire-${index}`),
   },
   next: byTestId("next-button"),
-  previous: byTestId("previous-button"),
-  activeStep: byTitle("onglet actif"),
-  warning: byTestId("warning-alert"),
-  warningTitle: byTestId("warning-title"),
-  print: byTestId("print-button"),
-  viewResultDetail: byText("Voir le détail du calcul"),
-  result: byTestId("resultat"),
-  noticeDescription: byTestId("notice-description"),
 };

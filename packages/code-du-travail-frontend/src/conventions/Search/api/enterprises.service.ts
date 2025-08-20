@@ -1,8 +1,24 @@
 import debounce from "debounce-promise";
 import { SITE_URL } from "../../../config";
 import { Enterprise as ApiEntreprise } from "../../../api/modules/enterprises/types";
-import { SearchParams } from "../../../outils/common/Agreement/EnterpriseSearch/EntrepriseSearchInput/SearchEnterpriseInput";
-import { Agreement } from "src/modules/outils/indemnite-depart/types";
+
+export type ApiGeoResult = {
+  code: string;
+  nom: string;
+  population: number;
+  codeDepartement: string;
+  codesPostaux: string[];
+  _score?: number;
+};
+
+export type ApiGeoResultWithSelectedPostCode = ApiGeoResult & {
+  selectedPostCode: string[];
+};
+
+export type SearchParams = {
+  query: string;
+  apiGeoResult?: ApiGeoResultWithSelectedPostCode;
+};
 
 export type Enterprise = ApiEntreprise;
 

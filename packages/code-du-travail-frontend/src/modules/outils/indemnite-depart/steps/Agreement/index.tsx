@@ -1,7 +1,7 @@
 import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
 import React from "react";
 import { useContext } from "react";
-import { CommonAgreementStep } from "./components/AgreementStep";
+import { CommonAgreementStep } from "../../../common/components/AgreementStep";
 import { IndemniteDepartType } from "../../types";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
@@ -48,6 +48,7 @@ const AgreementStep = (): JSX.Element => {
           ? PublicodesSimulator.INDEMNITE_LICENCIEMENT
           : PublicodesSimulator.RUPTURE_CONVENTIONNELLE
       }
+      showNotSelectedOption={true}
     />
   );
 };

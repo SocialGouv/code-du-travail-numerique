@@ -1,7 +1,5 @@
 import { StoreApi } from "zustand";
 import produce from "immer";
-import { push as matopush } from "@socialgouv/matomo-next";
-
 import { PublicodesSimulator, supportedCcn } from "@socialgouv/modeles-social";
 import { StoreSliceWrapperPreavisRetraite } from "../../store";
 import { AgreementStoreData, AgreementStoreSlice } from "./types";
@@ -14,7 +12,6 @@ import {
   removeAgreementFromLocalStorage,
   saveAgreementToLocalStorage,
 } from "src/modules/common/useLocalStorage";
-import { MatomoBaseEvent, MatomoSearchAgreementCategory } from "src/lib";
 import { loadPublicodes } from "src/modules/outils/common/publicodes";
 import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
@@ -102,21 +99,33 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
       applyGenericValidation(get, set, "route", value);
     },
     onAgreementChange: (agreement, enterprise) => {
-      applyGenericValidation(get, set, "agreement", agreement);
-      saveAgreementToLocalStorage(agreement);
       try {
+        applyGenericValidation(get, set, "agreement", agreement);
         applyGenericValidation(get, set, "enterprise", enterprise);
-        const idcc = agreement?.num?.toString();
-        get().informationsFunction.generatePublicodesQuestions();
-        set(
-          produce((state: AgreementStoreSlice) => {
-            state.agreementData.publicodes =
-              loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
-                PublicodesSimulator.PREAVIS_RETRAITE,
-                idcc
-              );
-          })
-        );
+        if (agreement) {
+          saveAgreementToLocalStorage(agreement);
+          const idcc = agreement.num?.toString();
+          set(
+            produce((state: AgreementStoreSlice) => {
+              state.agreementData.publicodes =
+                loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
+                  PublicodesSimulator.PREAVIS_RETRAITE,
+                  idcc
+                );
+            })
+          );
+          get().informationsFunction.generatePublicodesQuestions();
+        } else {
+          removeAgreementFromLocalStorage();
+          set(
+            produce((state: AgreementStoreSlice) => {
+              state.agreementData.publicodes =
+                loadPublicodes<PublicodesSimulator.PREAVIS_RETRAITE>(
+                  PublicodesSimulator.PREAVIS_RETRAITE
+                );
+            })
+          );
+        }
       } catch (e) {
         console.error(e);
         captureException(e);
@@ -158,22 +167,6 @@ const createAgreementStore: StoreSliceWrapperPreavisRetraite<
         })
       );
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
-    },
-    onAgreementSearch: (data) => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.AGREEMENT_SEARCH,
-        PublicodesSimulator.PREAVIS_RETRAITE,
-        JSON.stringify(data),
-      ]);
-    },
-    onEnterpriseSearch: (data) => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.ENTERPRISE_SEARCH,
-        PublicodesSimulator.PREAVIS_RETRAITE,
-        JSON.stringify(data),
-      ]);
     },
   },
 });
