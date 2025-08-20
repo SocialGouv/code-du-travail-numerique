@@ -23,7 +23,7 @@ const Situation: React.FC<Props> = ({ remuneration, agreement }) => {
         )}
         <li data-testid="remuneration-input">
           Montant total des salaires renseignés&nbsp;:&nbsp;
-          <strong>{formatCurrency(remuneration)}&nbsp; €</strong>
+          <strong>{formatCurrency(remuneration)}</strong>
         </li>
       </ul>
     </>

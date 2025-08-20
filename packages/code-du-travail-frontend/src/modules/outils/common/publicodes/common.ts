@@ -19,3 +19,8 @@ export function formatRefs(refs: Array<OldReference>): Array<References> {
 export function formatNumberAsString(toBeFormmatted: number): string {
   return isNaN(toBeFormmatted) ? "0" : toBeFormmatted.toString();
 }
+
+export const sanitizePublicodesValue = (raw?: string): string => {
+  if (!raw) return "";
+  return raw.replace(/&apos;/g, "'").replace(/^'|'$/g, "");
+};

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { PreavisDemissionContext, usePreavisDemissionStore } from "../store";
-import { PreavisDemissionAgreementStep } from "./components/PreavisDemissionAgreementStep";
+import { CommonAgreementStep } from "src/modules/outils/common/components/AgreementStep";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 const StepAgreement = (): JSX.Element => {
   const store = useContext(PreavisDemissionContext);
@@ -23,7 +24,7 @@ const StepAgreement = (): JSX.Element => {
   }));
 
   return (
-    <PreavisDemissionAgreementStep
+    <CommonAgreementStep
       agreement={agreement}
       enterprise={enterprise}
       error={error}
@@ -32,6 +33,8 @@ const StepAgreement = (): JSX.Element => {
       onInitAgreementPage={onInitAgreementPage}
       onRouteChange={onRouteChange}
       route={route}
+      simulator={PublicodesSimulator.PREAVIS_DEMISSION}
+      showNotSelectedOption={false}
     />
   );
 };

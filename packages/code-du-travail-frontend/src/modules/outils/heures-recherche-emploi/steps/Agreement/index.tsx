@@ -3,7 +3,8 @@ import {
   HeuresRechercheEmploiContext,
   useHeuresRechercheEmploiStore,
 } from "../store";
-import { HeuresRechercheEmploiAgreementStep } from "./components/HeuresRechercheEmploiAgreementStep";
+import { CommonAgreementStep } from "src/modules/outils/common/components/AgreementStep";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 const StepAgreement = (): JSX.Element => {
   const store = useContext(HeuresRechercheEmploiContext);
@@ -26,7 +27,7 @@ const StepAgreement = (): JSX.Element => {
   }));
 
   return (
-    <HeuresRechercheEmploiAgreementStep
+    <CommonAgreementStep
       agreement={agreement}
       enterprise={enterprise}
       error={error}
@@ -35,6 +36,8 @@ const StepAgreement = (): JSX.Element => {
       onInitAgreementPage={onInitAgreementPage}
       onRouteChange={onRouteChange}
       route={route}
+      simulator={PublicodesSimulator.HEURES_RECHERCHE_EMPLOI}
+      showNotSelectedOption={false}
     />
   );
 };

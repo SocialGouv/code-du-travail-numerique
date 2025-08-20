@@ -18,7 +18,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
     cy.contains("Nous n’avons pas de réponse pour cette convention collective");
     cy.get("button").contains("Suivant").click();
     cy.contains(
-      "La simulation ne peut pas se poursuivre avec cette convention collective"
+      "Vous ne pouvez pas poursuivre la simulation avec cette convention collective."
     );
   });
 

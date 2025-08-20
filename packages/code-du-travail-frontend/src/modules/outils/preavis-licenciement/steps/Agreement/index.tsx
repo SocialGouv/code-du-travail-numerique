@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CommonAgreementStep } from "src/modules/outils/indemnite-depart/steps/Agreement/components/AgreementStep";
+import { CommonAgreementStep } from "src/modules/outils/common/components/AgreementStep";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import {
   PreavisLicenciementContext,
@@ -37,6 +37,7 @@ const StepAgreement = (): JSX.Element => {
       onRouteChange={onRouteChange}
       route={route}
       simulator={PublicodesSimulator.PREAVIS_LICENCIEMENT}
+      showNotSelectedOption={true}
     />
   );
 };

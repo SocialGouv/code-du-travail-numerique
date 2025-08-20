@@ -1,1 +1,0 @@
-export { informationToSituation } from "./informationToSituation";

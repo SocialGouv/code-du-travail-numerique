@@ -34,6 +34,8 @@ type Props = {
   agreement?: Agreement;
   trackingActionName: string;
   level?: 2 | 3;
+  isInSimulator?: boolean;
+  canContinueSimulationIfNoAgreement?: boolean;
 };
 
 export const EnterpriseAgreementSearchInput = ({
@@ -46,6 +48,8 @@ export const EnterpriseAgreementSearchInput = ({
   enterprise,
   agreement,
   level,
+  isInSimulator,
+  canContinueSimulationIfNoAgreement,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState<
     Agreement | undefined
@@ -269,6 +273,8 @@ export const EnterpriseAgreementSearchInput = ({
           }
           onAgreementSelect(agreement, selectedEnterprise);
         }}
+        isInSimulator={isInSimulator}
+        canContinueSimulationIfNoAgreement={canContinueSimulationIfNoAgreement}
       />
     );
   }
@@ -352,6 +358,7 @@ export const EnterpriseAgreementSearchInput = ({
             type="submit"
             iconPosition="right"
             iconId="fr-icon-search-line"
+            data-testid="agreement-company-search-button"
           >
             Rechercher
           </Button>
@@ -434,23 +441,28 @@ export const EnterpriseAgreementSearchInput = ({
                       onClick: (ev) => {
                         ev.preventDefault();
                         setSelectedEnterprise(enterprise);
+                        if (!enterprise) {
+                          emitNoEnterpriseSelectEvent();
+                          return;
+                        }
                         if (enterprise.conventions.length === 1) {
-                          if (enterprise) {
-                            emitSelectEnterpriseEvent(trackingActionName, {
-                              label: enterprise.label,
-                              siren: enterprise.siren,
-                            });
-                            emitSelectEnterpriseAgreementEvent(
-                              `idcc${enterprise.conventions[0].num}`,
-                              trackingActionName
-                            );
-                          } else {
-                            emitNoEnterpriseSelectEvent();
-                          }
+                          emitSelectEnterpriseEvent(trackingActionName, {
+                            label: enterprise.label,
+                            siren: enterprise.siren,
+                          });
+                          emitSelectEnterpriseAgreementEvent(
+                            `idcc${enterprise.conventions[0].num}`,
+                            trackingActionName
+                          );
                           onAgreementSelect(
                             enterprise.conventions[0],
                             enterprise
                           );
+                        } else if (
+                          !enterprise.conventions ||
+                          enterprise.conventions.length === 0
+                        ) {
+                          onAgreementSelect(undefined, enterprise);
                         }
                       },
                     }

@@ -20,7 +20,7 @@ describe("Outil - Préavis de démission", () => {
     );
     cy.get("button").contains("Suivant").click();
     cy.contains(
-      "La simulation ne peut pas se poursuivre avec cette convention collective"
+      "Vous ne pouvez pas poursuivre la simulation avec cette convention collective."
     );
   });
 

@@ -46,8 +46,6 @@ export type AgreementStoreFn = {
     enterprise?: Enterprise
   ) => void;
   onNextStep: () => ValidationResponse;
-  onEnterpriseSearch: (value: AgreementSearchValue) => void;
-  onAgreementSearch: (value: AgreementSearchValue) => void;
   setHasNoEnterpriseSelected: (value: boolean) => void;
 };
 
