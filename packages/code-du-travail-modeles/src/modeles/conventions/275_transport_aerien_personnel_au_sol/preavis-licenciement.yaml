@@ -4,11 +4,11 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   cdtn:
     type: liste
     valeurs:
-      Agents de maîtrise: "'Agents de maîtrise'"
-      Techniciens: "'Techniciens'"
-      Cadres: "'Cadres'"
       Ouvriers: "'Ouvriers'"
       Employés: "'Employés'"
+      Techniciens: "'Techniciens'"
+      Agents de maîtrise: "'Agents de maîtrise'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle Agents de maîtrise:
   applicable si: catégorie professionnelle = 'Agents de maîtrise'

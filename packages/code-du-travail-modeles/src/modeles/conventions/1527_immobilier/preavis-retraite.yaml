@@ -7,10 +7,10 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
     valeurs:
       Employés et ouvriers: "'Employés et ouvriers'"
       Agents de maîtrise: "'Agents de maîtrise'"
-      Cadres non-VRP: "'Cadres non-VRP'"
-      Cadres VRP: "'Cadres VRP'"
       Négociateur non-VRP: "'Négociateur non-VRP'"
       Négociateur VRP: "'Négociateur VRP'"
+      Cadres non-VRP: "'Cadres non-VRP'"
+      Cadres VRP: "'Cadres VRP'"
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle . employés:
   applicable si: catégorie professionnelle = 'Employés et ouvriers'

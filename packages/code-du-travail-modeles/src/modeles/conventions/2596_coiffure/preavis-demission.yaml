@@ -5,11 +5,11 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
   cdtn:
     type: liste
     valeurs:
-      Agents de maîtrise: "'Agents de maîtrise'"
-      Cadres: "'Cadres'"
-      Salariés occupant un emploi de l'esthétique-cosmétique: "'Salariés occupant un emploi de l'esthétique-cosmétique'"
       Salariés occupant un emploi non-technique de la coiffure: "'Salariés occupant un emploi non-technique de la coiffure'"
       Salariés occupant un emploi technique de la coiffure: "'Salariés occupant un emploi technique de la coiffure'"
+      Salariés occupant un emploi de l'esthétique-cosmétique: "'Salariés occupant un emploi de l'esthétique-cosmétique'"
+      Agents de maîtrise: "'Agents de maîtrise'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle Agents de maîtrise:
   applicable si: catégorie professionnelle = 'Agents de maîtrise'

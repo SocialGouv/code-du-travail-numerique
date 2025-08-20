@@ -19,8 +19,8 @@ contrat salarié . convention collective . automobiles . typeRupture Démission 
   cdtn:
     type: liste
     valeurs:
-      Agents de maîtrise et Cadres: "'Agents de maîtrise et Cadres'"
       Ouvriers, Employés: "'Ouvriers, Employés'"
+      Agents de maîtrise et Cadres: "'Agents de maîtrise et Cadres'"
 
 contrat salarié . convention collective . automobiles . typeRupture Démission . catégorie professionnelle Agents de maîtrise et Cadres:
   applicable si: catégorie professionnelle = 'Agents de maîtrise et Cadres'
@@ -114,8 +114,8 @@ contrat salarié . convention collective . automobiles . typeRupture Licenciemen
   cdtn:
     type: liste
     valeurs:
-      Agents de maîtrise et Cadres: "'Agents de maîtrise et Cadres'"
       Ouvriers, Employés: "'Ouvriers, Employés'"
+      Agents de maîtrise et Cadres: "'Agents de maîtrise et Cadres'"
 
 contrat salarié . convention collective . automobiles . typeRupture Licenciement . catégorie professionnelle Agents de maîtrise et Cadres:
   applicable si: catégorie professionnelle = 'Agents de maîtrise et Cadres'

@@ -5,8 +5,8 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   cdtn:
     type: liste
     valeurs:
-      Cadres: "'Cadres'"
       Non-cadres: "'Non-cadres'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . habillement textiles commerce de detail . age:
   applicable si: catégorie professionnelle = 'Cadres'

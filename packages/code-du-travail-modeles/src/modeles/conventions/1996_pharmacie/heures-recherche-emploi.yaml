@@ -18,8 +18,8 @@ contrat salarié . convention collective . pharmacie . typeRupture Démission ou
   cdtn:
     type: liste
     valeurs:
-      Cadres: "'Cadres'"
       Non-cadres: "'Non-cadres'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . pharmacie . typeRupture Démission ou licenciement . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'

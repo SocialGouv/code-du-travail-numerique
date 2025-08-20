@@ -5,9 +5,9 @@ contrat salarié . convention collective . organismes de formation . catégorie 
   cdtn:
     type: liste
     valeurs:
-      Cadres: "'Cadres'"
       Employés: "'Employés'"
       Agents de maîtrise ou techniciens: "'Agents de maîtrise ou techniciens'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . organismes de formation . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'

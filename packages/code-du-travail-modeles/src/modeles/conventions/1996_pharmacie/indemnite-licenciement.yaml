@@ -9,8 +9,8 @@ contrat salarié . convention collective . pharmacie . indemnité de licenciemen
   cdtn:
     type: liste
     valeurs:
-      Cadres: "'Cadres'"
       Non-cadres: "'Non-cadres'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . pharmacie . indemnité de licenciement . nombre d'années jusqu'à dix ans ou moins:
   valeur:

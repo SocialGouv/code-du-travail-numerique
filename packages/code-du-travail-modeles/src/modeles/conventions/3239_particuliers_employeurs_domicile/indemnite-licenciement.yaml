@@ -13,8 +13,8 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
   cdtn:
     type: liste
     valeurs:
-      Assistant maternel: "'Assistant maternel'"
       Salarié du particulier employeur: "'Salarié du particulier employeur'"
+      Assistant maternel: "'Assistant maternel'"
 
 # Assistant maternel
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle:

@@ -19,9 +19,9 @@ contrat salarié . convention collective . publicité française . typeRupture D
   cdtn:
     type: liste
     valeurs:
+      Employés: "'Employés'"
       Agents de maîtrise et Techniciens: "'Agents de maîtrise et Techniciens'"
       Cadres: "'Cadres'"
-      Employés: "'Employés'"
 
 contrat salarié . convention collective . publicité française . typeRupture Démission . catégorie professionnelle Agents de maîtrise et Techniciens:
   applicable si: catégorie professionnelle = 'Agents de maîtrise et Techniciens'
@@ -75,9 +75,9 @@ contrat salarié . convention collective . publicité française . typeRupture L
   cdtn:
     type: liste
     valeurs:
+      Employés: "'Employés'"
       Agents de maîtrise et Techniciens: "'Agents de maîtrise et Techniciens'"
       Cadres: "'Cadres'"
-      Employés: "'Employés'"
 
 contrat salarié . convention collective . publicité française . typeRupture Licenciement . catégorie professionnelle Agents de maîtrise et Techniciens:
   applicable si: catégorie professionnelle = 'Agents de maîtrise et Techniciens'
@@ -154,9 +154,9 @@ contrat salarié . convention collective . publicité française . typeRupture R
   cdtn:
     type: liste
     valeurs:
+      Employés: "'Employés'"
       Agents de maîtrise et Techniciens: "'Agents de maîtrise et Techniciens'"
       Cadres: "'Cadres'"
-      Employés: "'Employés'"
 
 contrat salarié . convention collective . publicité française . typeRupture Rupture de la période d'essai . catégorie professionnelle Agents de maîtrise et Techniciens:
   applicable si: catégorie professionnelle = 'Agents de maîtrise et Techniciens'

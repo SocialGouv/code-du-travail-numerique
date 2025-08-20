@@ -5,9 +5,9 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
   cdtn:
     type: liste
     valeurs:
+      Ouvriers, Employés: "'Ouvriers, Employés'"
       Agents de maîtrise et Techniciens: "'Agents de maîtrise et Techniciens'"
       Cadres: "'Cadres'"
-      Ouvriers, Employés: "'Ouvriers, Employés'"
 
 contrat salarié . convention collective . commerce gros et detail alimentation . catégorie professionnelle Agents de maîtrise et Techniciens:
   applicable si: catégorie professionnelle = 'Agents de maîtrise et Techniciens'

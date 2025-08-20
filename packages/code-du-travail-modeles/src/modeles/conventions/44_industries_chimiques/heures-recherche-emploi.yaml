@@ -19,10 +19,10 @@ contrat salarié . convention collective . industries chimiques . typeRupture D�
   cdtn:
     type: liste
     valeurs:
-      Agents de maîtrise: "'Agents de maîtrise'"
-      Ingénieurs, Cadres: "'Ingénieurs, Cadres'"
       Ouvriers, Employés: "'Ouvriers, Employés'"
       Techniciens: "'Techniciens'"
+      Agents de maîtrise: "'Agents de maîtrise'"
+      Ingénieurs, Cadres: "'Ingénieurs, Cadres'"
 
 contrat salarié . convention collective . industries chimiques . typeRupture Démission . catégorie professionnelle Agents de maîtrise:
   applicable si: catégorie professionnelle = 'Agents de maîtrise'
@@ -117,10 +117,10 @@ contrat salarié . convention collective . industries chimiques . typeRupture Ru
   cdtn:
     type: liste
     valeurs:
-      Agents de maîtrise: "'Agents de maîtrise'"
-      Ingénieurs, Cadres: "'Ingénieurs, Cadres'"
       Ouvriers, Employés: "'Ouvriers, Employés'"
       Techniciens: "'Techniciens'"
+      Agents de maîtrise: "'Agents de maîtrise'"
+      Ingénieurs, Cadres: "'Ingénieurs, Cadres'"
 
 contrat salarié . convention collective . industries chimiques . typeRupture Rupture de la période d'essai . catégorie professionnelle Agents de maîtrise:
   applicable si: catégorie professionnelle = 'Agents de maîtrise'
@@ -304,10 +304,10 @@ contrat salarié . convention collective . industries chimiques . typeRupture Li
   cdtn:
     type: liste
     valeurs:
-      Agents de maîtrise: "'Agents de maîtrise'"
-      Ingénieurs, Cadres: "'Ingénieurs, Cadres'"
       Ouvriers, Employés: "'Ouvriers, Employés'"
       Techniciens: "'Techniciens'"
+      Agents de maîtrise: "'Agents de maîtrise'"
+      Ingénieurs, Cadres: "'Ingénieurs, Cadres'"
 
 contrat salarié . convention collective . industries chimiques . typeRupture Licenciement . catégorie professionnelle Agents de maîtrise:
   applicable si: catégorie professionnelle = 'Agents de maîtrise'

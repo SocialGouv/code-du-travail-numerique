@@ -7,8 +7,8 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
     valeurs:
       Ouvriers: "'Ouvriers'"
       Employés: "'Employés'"
-      Agents de maîtrise: "'Agents de maîtrise'"
       Techniciens: "'Techniciens'"
+      Agents de maîtrise: "'Agents de maîtrise'"
       Cadres: "'Cadres'"
 
 contrat salarié . convention collective . transport aérien personnel au sol . Ouvriers ou Employés:

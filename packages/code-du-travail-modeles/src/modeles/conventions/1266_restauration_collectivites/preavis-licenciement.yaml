@@ -4,9 +4,9 @@ contrat salarié . convention collective . restauration collectivités . catégo
   cdtn:
     type: liste
     valeurs:
-      Cadres: "'Cadres'"
       Employés: "'Employés'"
       Maîtrises: "'Maîtrises'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . restauration collectivités . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'

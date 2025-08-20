@@ -8,9 +8,9 @@ contrat salarié . convention collective . coiffure . indemnité de licenciement
   cdtn:
     type: liste
     valeurs:
+      Emplois non techniques: "'Emplois non techniques'"
       Emplois techniques et de coiffeurs: "'Emplois techniques et de coiffeurs'"
       Emplois de l'esthétique-cosmétique: "'Emplois de l'esthétique-cosmétique'"
-      Emplois non techniques: "'Emplois non techniques'"
       Agents de maîtrise: "'Agents de maîtrise'"
       Cadres: "'Cadres'"
 

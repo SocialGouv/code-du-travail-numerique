@@ -5,10 +5,10 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   cdtn:
     type: liste
     valeurs:
-      Agents de maîtrise et Techniciens: "'Agents de maîtrise et Techniciens'"
-      Animateurs, techniciens et professeurs: "'Animateurs, techniciens et professeurs'"
-      Cadres: "'Cadres'"
       Ouvriers, Employés: "'Ouvriers, Employés'"
+      Agents de maîtrise et Techniciens: "'Agents de maîtrise et Techniciens'"
+      Cadres: "'Cadres'"
+      Animateurs, techniciens et professeurs: "'Animateurs, techniciens et professeurs'"
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle Agents de maîtrise et Techniciens:
   applicable si: catégorie professionnelle = 'Agents de maîtrise et Techniciens'

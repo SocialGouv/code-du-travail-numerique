@@ -4,9 +4,9 @@ contrat salarié . convention collective . automobiles . catégorie professionne
   cdtn:
     type: liste
     valeurs:
+      Ouvriers, Employés: "'Ouvriers, Employés'"
       Agents de maîtrise: "'Agents de maîtrise'"
       Cadres: "'Cadres'"
-      Ouvriers, Employés: "'Ouvriers, Employés'"
 
 contrat salarié . convention collective . automobiles . catégorie professionnelle Agents de maîtrise:
   applicable si: catégorie professionnelle = 'Agents de maîtrise'

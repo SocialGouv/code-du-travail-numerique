@@ -5,9 +5,9 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   cdtn:
     type: liste
     valeurs:
+      Ouvriers et collaborateurs: "'Ouvriers et collaborateurs'"
       Agents de maîtrise et Techniciens: "'Agents de maîtrise et Techniciens'"
       Ingénieurs, Cadres: "'Ingénieurs, Cadres'"
-      Ouvriers et collaborateurs: "'Ouvriers et collaborateurs'"
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle Agents de maîtrise et Techniciens:
   applicable si: catégorie professionnelle = 'Agents de maîtrise et Techniciens'
