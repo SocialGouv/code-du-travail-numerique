@@ -5,10 +5,10 @@ contrat salarié . convention collective . sedima . catégorie professionnelle:
   cdtn:
     type: liste
     valeurs:
+      Ouvriers, Employés niveaux I et II: "'Ouvriers, Employés niveaux I et II'"
+      Ouvriers, Employés niveau III: "'Ouvriers, Employés niveau III'"
       Agents de maîtrise niveau IV et V: "'Agents de maîtrise niveau IV et V'"
       Cadres niveau VI et plus: "'Cadres niveau VI et plus'"
-      Ouvriers, Employés niveau III: "'Ouvriers, Employés niveau III'"
-      Ouvriers, Employés niveaux I et II: "'Ouvriers, Employés niveaux I et II'"
 
 contrat salarié . convention collective . sedima . catégorie professionnelle Agents de maîtrise niveau IV et V:
   applicable si: catégorie professionnelle = 'Agents de maîtrise niveau IV et V'

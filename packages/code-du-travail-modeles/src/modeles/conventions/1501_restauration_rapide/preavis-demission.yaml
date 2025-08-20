@@ -5,10 +5,10 @@ contrat salarié . convention collective . restauration rapide . catégorie prof
   cdtn:
     type: liste
     valeurs:
-      Cadres: "'Cadres'"
+      Ouvriers: "'Ouvriers'"
       Employés: "'Employés'"
       Maîtrises: "'Maîtrises'"
-      Ouvriers: "'Ouvriers'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . restauration rapide . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'

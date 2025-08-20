@@ -6,9 +6,9 @@ contrat salarié . convention collective . entreprises de propreté . catégorie
     type: liste
     valeurs:
       Agents de propreté: "'Agents de propreté'"
-      Cadres: "'Cadres'"
       Employés: "'Employés'"
       Techniciens et agents de maîtrise TAM: "'Techniciens et agents de maîtrise TAM'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle Agents de propreté:
   applicable si: catégorie professionnelle = 'Agents de propreté'

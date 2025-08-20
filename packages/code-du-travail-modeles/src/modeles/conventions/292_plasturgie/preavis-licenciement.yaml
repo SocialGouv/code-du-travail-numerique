@@ -4,8 +4,8 @@ contrat salarié . convention collective . plasturgie . catégorie professionnel
   cdtn:
     type: liste
     valeurs:
-      Cadres: "'Cadres'"
       Collaborateurs: "'Collaborateurs'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . plasturgie . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'

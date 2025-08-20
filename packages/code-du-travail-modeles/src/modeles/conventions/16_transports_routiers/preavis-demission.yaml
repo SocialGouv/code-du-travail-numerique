@@ -5,10 +5,10 @@ contrat salarié . convention collective . transports routiers . catégorie prof
   cdtn:
     type: liste
     valeurs:
-      Employés: "'Employés'"
-      Ingénieurs et Cadres: "'Ingénieurs et Cadres'"
       Ouvriers: "'Ouvriers'"
+      Employés: "'Employés'"
       Techniciens et agents de maîtrise TAM: "'Techniciens et agents de maîtrise TAM'"
+      Ingénieurs et Cadres: "'Ingénieurs et Cadres'"
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle Employés:
   applicable si: catégorie professionnelle = 'Employés'

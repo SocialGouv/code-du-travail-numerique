@@ -6,8 +6,8 @@ contrat salarié . convention collective . banque . catégorie professionnelle:
   cdtn:
     type: liste
     valeurs:
-      Cadres: "'Cadres'"
       Non-cadres: "'Non-cadres'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . banque . licenciement économique:
   non applicable si: contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle = oui

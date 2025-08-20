@@ -6,8 +6,8 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
   cdtn:
     type: liste
     valeurs:
-      Cadres: "'Cadres'"
       Agents de maîtrise, techniciens et assimilés: "'Agents de maîtrise, techniciens et assimilés'"
+      Cadres: "'Cadres'"
       Autres salariés: "'Autres salariés'"
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres:

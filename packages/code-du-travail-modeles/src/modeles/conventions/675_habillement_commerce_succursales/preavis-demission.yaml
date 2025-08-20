@@ -5,9 +5,9 @@ contrat salarié . convention collective . habillement commerce succursales . ca
   cdtn:
     type: liste
     valeurs:
+      Employés: "'Employés'"
       Agents de maîtrise: "'Agents de maîtrise'"
       Cadres: "'Cadres'"
-      Employés: "'Employés'"
 
 contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle Agents de maîtrise:
   applicable si: catégorie professionnelle = 'Agents de maîtrise'

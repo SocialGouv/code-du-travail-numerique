@@ -5,8 +5,8 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   cdtn:
     type: liste
     valeurs:
-      Cadres (Classes 5 à 7): "'Cadres (Classes 5 à 7)'"
       Non-cadres (Classes 1 à 4): "'Non-cadres (Classes 1 à 4)'"
+      Cadres (Classes 5 à 7): "'Cadres (Classes 5 à 7)'"
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres Classes 5 à 7:
   applicable si: catégorie professionnelle = 'Cadres (Classes 5 à 7)'

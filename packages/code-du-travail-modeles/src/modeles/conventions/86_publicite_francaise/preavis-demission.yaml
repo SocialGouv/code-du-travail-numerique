@@ -5,9 +5,9 @@ contrat salarié . convention collective . publicité française . catégorie pr
   cdtn:
     type: liste
     valeurs:
+      Employés: "'Employés'"
       Agents de maîtrise et Techniciens: "'Agents de maîtrise et Techniciens'"
       Cadres: "'Cadres'"
-      Employés: "'Employés'"
 
 contrat salarié . convention collective . publicité française . catégorie professionnelle Agents de maîtrise et Techniciens:
   applicable si: catégorie professionnelle = 'Agents de maîtrise et Techniciens'

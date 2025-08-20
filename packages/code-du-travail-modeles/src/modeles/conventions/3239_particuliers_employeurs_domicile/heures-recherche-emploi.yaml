@@ -17,8 +17,8 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
   cdtn:
     type: liste
     valeurs:
-      Assistants maternels du particulier employeur: "'Assistants maternels du particulier employeur'"
       Salariés du particulier employeur: "'Salariés du particulier employeur'"
+      Assistants maternels du particulier employeur: "'Assistants maternels du particulier employeur'"
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Assistants maternels du particulier employeur:
   applicable si: catégorie professionnelle = 'Assistants maternels du particulier employeur'

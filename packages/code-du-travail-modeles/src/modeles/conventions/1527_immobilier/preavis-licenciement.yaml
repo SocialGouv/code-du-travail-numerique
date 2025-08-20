@@ -4,11 +4,11 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
   cdtn:
     type: liste
     valeurs:
+      Ouvriers, Employés: "'Ouvriers, Employés'"
       Agents de maîtrise: "'Agents de maîtrise'"
-      Cadres: "'Cadres'"
       Négociateur non VRP: "'Négociateur non VRP'"
       Négociateur VRP: "'Négociateur VRP'"
-      Ouvriers, Employés: "'Ouvriers, Employés'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle Agents de maîtrise:
   applicable si: catégorie professionnelle = 'Agents de maîtrise'

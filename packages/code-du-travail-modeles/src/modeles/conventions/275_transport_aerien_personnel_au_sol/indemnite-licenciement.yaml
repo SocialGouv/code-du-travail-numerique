@@ -6,8 +6,8 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
   cdtn:
     type: liste
     valeurs:
-      Cadres: "'Cadres'"
       Non-cadres: "'Non-cadres'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . transport aérien personnel au sol . age:
   titre: Âge du salarié

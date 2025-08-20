@@ -6,8 +6,8 @@ contrat salarié . convention collective . hospitalisation privées . catégorie
   cdtn:
     type: liste
     valeurs:
-      Cadres: "'Cadres'"
       Non-cadres: "'Non-cadres'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle . cadres:
   applicable si: catégorie professionnelle = 'Cadres'

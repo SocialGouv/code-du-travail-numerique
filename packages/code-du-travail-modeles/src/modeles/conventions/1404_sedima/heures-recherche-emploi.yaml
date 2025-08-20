@@ -19,8 +19,8 @@ contrat salarié . convention collective . sedima . typeRupture Démission . cat
   cdtn:
     type: liste
     valeurs:
-      Cadres: "'Cadres'"
       Non-cadres: "'Non-cadres'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . sedima . typeRupture Démission . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
@@ -60,8 +60,8 @@ contrat salarié . convention collective . sedima . typeRupture Licenciement . c
   cdtn:
     type: liste
     valeurs:
-      Cadres: "'Cadres'"
       Non-cadres: "'Non-cadres'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . sedima . typeRupture Licenciement . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'

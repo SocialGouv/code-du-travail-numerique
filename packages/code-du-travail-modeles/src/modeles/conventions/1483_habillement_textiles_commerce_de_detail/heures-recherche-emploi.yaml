@@ -19,8 +19,8 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   cdtn:
     type: liste
     valeurs:
-      Agents de maîtrise et Cadres: "'Agents de maîtrise et Cadres'"
       Employés: "'Employés'"
+      Agents de maîtrise et Cadres: "'Agents de maîtrise et Cadres'"
 
 contrat salarié . convention collective . habillement textiles commerce de detail . typeRupture Démission . catégorie professionnelle Agents de maîtrise et Cadres:
   applicable si: catégorie professionnelle = 'Agents de maîtrise et Cadres'
@@ -114,8 +114,8 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   cdtn:
     type: liste
     valeurs:
-      Agents de maîtrise et Cadres: "'Agents de maîtrise et Cadres'"
       Employés: "'Employés'"
+      Agents de maîtrise et Cadres: "'Agents de maîtrise et Cadres'"
 
 contrat salarié . convention collective . habillement textiles commerce de detail . typeRupture Licenciement . catégorie professionnelle Agents de maîtrise et Cadres:
   applicable si: catégorie professionnelle = 'Agents de maîtrise et Cadres'
@@ -209,8 +209,8 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   cdtn:
     type: liste
     valeurs:
-      Agents de maîtrise et Cadres: "'Agents de maîtrise et Cadres'"
       Employés: "'Employés'"
+      Agents de maîtrise et Cadres: "'Agents de maîtrise et Cadres'"
 
 contrat salarié . convention collective . habillement textiles commerce de detail . typeRupture Rupture de la période d'essai . catégorie professionnelle Agents de maîtrise et Cadres:
   applicable si: catégorie professionnelle = 'Agents de maîtrise et Cadres'

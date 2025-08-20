@@ -67,8 +67,8 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
   cdtn:
     type: liste
     valeurs:
-      Cadres: "'Cadres'"
       Non-Cadres: "'Non-cadres'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . nombre d'années entre 0 et 5 ans:
   somme:

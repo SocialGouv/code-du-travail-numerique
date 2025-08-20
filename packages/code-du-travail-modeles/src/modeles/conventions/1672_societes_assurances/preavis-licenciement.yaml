@@ -4,8 +4,8 @@ contrat salarié . convention collective . sociétés d'assurances . catégorie 
   cdtn:
     type: liste
     valeurs:
-      Cadres: "'Cadres'"
       Non-cadres: "'Non-cadres'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'

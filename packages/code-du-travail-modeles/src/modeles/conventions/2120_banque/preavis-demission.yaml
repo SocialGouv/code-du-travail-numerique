@@ -5,8 +5,8 @@ contrat salarié . convention collective . banque . catégorie professionnelle:
   cdtn:
     type: liste
     valeurs:
-      Cadres: "'Cadres'"
       Techniciens: "'Techniciens'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . banque . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'

@@ -9,8 +9,8 @@ contrat salarié . convention collective . bricolage . catégorie professionnell
   cdtn:
     type: liste
     valeurs:
-      Cadres: "'Cadres'"
       Non-cadres: "'Non-cadres'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . bricolage . indemnité de licenciement . résultat conventionnel base:
   valeur: (2 / 100) * indemnité de licenciement . ancienneté conventionnelle en année * indemnité de licenciement . salaire de référence conventionnel

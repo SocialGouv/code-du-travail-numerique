@@ -9,8 +9,8 @@ contrat salarié . convention collective . plasturgie . indemnité de licencieme
   cdtn:
     type: liste
     valeurs:
-      Cadres (Coefficient 900 et plus): "'Cadres (Coefficient 900 et plus)'"
       Non cadres (Coefficient 700 à 830): "'Non cadres (Coefficient 700 à 830)'"
+      Cadres (Coefficient 900 et plus): "'Cadres (Coefficient 900 et plus)'"
 
 ## Périodes
 contrat salarié . convention collective . plasturgie . indemnité de licenciement . jusqu'à dix ans:

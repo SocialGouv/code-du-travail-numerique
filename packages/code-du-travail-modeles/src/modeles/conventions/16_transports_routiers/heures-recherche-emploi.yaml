@@ -19,10 +19,10 @@ contrat salarié . convention collective . transports routiers . typeRupture Lic
   cdtn:
     type: liste
     valeurs:
-      Employés: "'Employés'"
-      Ingénieurs, Cadres: "'Ingénieurs, Cadres'"
       Ouvriers: "'Ouvriers'"
+      Employés: "'Employés'"
       Techniciens et agents de maîtrise TAM: "'Techniciens et agents de maîtrise TAM'"
+      Ingénieurs, Cadres: "'Ingénieurs, Cadres'"
 
 contrat salarié . convention collective . transports routiers . typeRupture Licenciement . catégorie professionnelle Employés:
   applicable si: catégorie professionnelle = 'Employés'
@@ -117,10 +117,10 @@ contrat salarié . convention collective . transports routiers . typeRupture Dé
   cdtn:
     type: liste
     valeurs:
-      Employés: "'Employés'"
-      Ingénieurs, Cadres: "'Ingénieurs, Cadres'"
       Ouvriers: "'Ouvriers'"
+      Employés: "'Employés'"
       Techniciens et agents de maîtrise TAM: "'Techniciens et agents de maîtrise TAM'"
+      Ingénieurs, Cadres: "'Ingénieurs, Cadres'"
 
 contrat salarié . convention collective . transports routiers . typeRupture Démission . catégorie professionnelle Employés:
   applicable si: catégorie professionnelle = 'Employés'

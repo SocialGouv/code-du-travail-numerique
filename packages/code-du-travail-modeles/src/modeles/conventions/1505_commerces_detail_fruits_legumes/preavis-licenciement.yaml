@@ -4,9 +4,9 @@ contrat salarié . convention collective . commerces de détail fruits et légum
   cdtn:
     type: liste
     valeurs:
+      Employés E1 à E7: "'Employés E1 à E7'"
       Agents de maîtrise AM1 et AM2: "'Agents de maîtrise AM1 et AM2'"
       Cadres C1 et C2: "'Cadres C1 et C2'"
-      Employés E1 à E7: "'Employés E1 à E7'"
 
 contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle Agents de maîtrise AM1 et AM2:
   applicable si: catégorie professionnelle = 'Agents de maîtrise AM1 et AM2'

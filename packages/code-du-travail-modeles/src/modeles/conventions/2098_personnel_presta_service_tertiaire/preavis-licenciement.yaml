@@ -4,9 +4,9 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
   cdtn:
     type: liste
     valeurs:
-      Cadres: "'Cadres'"
       Employés: "'Employés'"
       Techniciens et agents de maîtrise TAM: "'Techniciens et agents de maîtrise TAM'"
+      Cadres: "'Cadres'"
 
 contrat salarié . convention collective . personnel presta service tertiaire . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'

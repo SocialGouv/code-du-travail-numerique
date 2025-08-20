@@ -5,8 +5,8 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
   cdtn:
     type: liste
     valeurs:
-      Salariés occupant un emploi technique de la coiffure: "'Salariés occupant un emploi technique de la coiffure'"
       Salariés occupant un emploi non technique de la coiffure: "'Salariés occupant un emploi non technique de la coiffure'"
+      Salariés occupant un emploi technique de la coiffure: "'Salariés occupant un emploi technique de la coiffure'"
       Salariés occupant un emploi de l'esthétique cosmétique: "'Salariés occupant un emploi de l'esthétique cosmétique'"
       Cadres: "'Cadres'"
       Agents de maîtrise: "'Agents de maîtrise'"
