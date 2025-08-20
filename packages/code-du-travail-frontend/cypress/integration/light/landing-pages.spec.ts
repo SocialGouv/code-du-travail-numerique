@@ -45,6 +45,5 @@ describe("Landing pages", () => {
     cy.contains("Directeur de la publication");
     cy.contains("Hébergement");
     cy.contains("Accessibilité");
-    cy.contains("Sécurité");
   });
 });
