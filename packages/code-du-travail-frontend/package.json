@@ -78,7 +78,6 @@
     "react-final-form-listeners": "^1.0.3",
     "react-image-lightbox": "^5.1.4",
     "react-svg-spinner": "^1.0.4",
-    "react-uid": "^2.3.1",
     "sharp": "^0.33.4",
     "styled-components": "^5.3.6",
     "uuid": "^9.0.0",
