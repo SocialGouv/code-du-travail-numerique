@@ -1,5 +1,6 @@
 import { HomeSearch } from "../Components";
 import { fireEvent, render, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { fetchSuggestResults } from "../../layout/header/fetchSuggestResults";
 import { useSearchTracking } from "../../recherche/tracking";
@@ -44,7 +45,8 @@ describe("<HomeSearch />", () => {
 
     const { getByText, getByTestId } = render(<HomeSearch />);
     const searchInput = getByTestId("search-input");
-    fireEvent.change(searchInput, { target: { value: "congés" } });
+    await userEvent.click(searchInput);
+    await userEvent.type(searchInput, "congés");
 
     await waitFor(() => {
       expect(getByText("congés payés et fractionnement")).toBeInTheDocument();
@@ -75,17 +77,18 @@ describe("<HomeSearch />", () => {
       emitSuggestionSelectionEvent: jest.fn(),
     });
 
-    const { getByTestId } = render(<HomeSearch />);
+    const { getByTestId, getByRole } = render(<HomeSearch />);
     const searchInput = getByTestId("search-input");
     const searchTerm = "licenciement";
 
     // Saisir le terme de recherche
-    fireEvent.change(searchInput, { target: { value: searchTerm } });
+    await userEvent.click(searchInput);
+    await userEvent.type(searchInput, searchTerm);
 
     // Soumettre le formulaire
     const form = searchInput.closest("form");
     expect(form).not.toBeNull();
-    fireEvent.submit(form!);
+    fireEvent.click(getByRole("button", { name: "Lancer la recherche" }));
 
     // Vérifier que emitSearchEvent est appelé avec le bon terme
     expect(emitSearchEventMock).toHaveBeenCalledWith(searchTerm);

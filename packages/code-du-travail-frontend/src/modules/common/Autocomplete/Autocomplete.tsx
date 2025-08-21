@@ -4,8 +4,8 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Input, { InputProps } from "@codegouvfr/react-dsfr/Input";
-import Downshift from "downshift";
-import { useState } from "react";
+import Downshift, { DownshiftState, StateChangeOptions } from "downshift";
+import { useState, useRef, MutableRefObject, Ref, useEffect } from "react";
 import Spinner from "../Spinner.svg";
 import { css } from "@styled-system/css";
 import Link from "../Link";
@@ -24,6 +24,7 @@ export type AutocompleteProps<K> = InputProps & {
   onInputValueChange?: (value: string) => void;
   isSearch?: boolean;
   placeholder?: string;
+  inputRef?: Ref<HTMLInputElement>;
 };
 
 export const Autocomplete = <K,>({
@@ -35,7 +36,7 @@ export const Autocomplete = <K,>({
   lineAsLink,
   search,
   label,
-  state,
+  state: autocompleteState,
   stateRelatedMessage,
   hintText,
   dataTestId,
@@ -43,15 +44,38 @@ export const Autocomplete = <K,>({
   displayNoResult,
   isSearch = false,
   placeholder,
+  inputRef: externalInputRef,
 }: AutocompleteProps<K>) => {
   const [loading, setLoading] = useState(false);
-  const [inputRef, setInputRef] = useState<HTMLInputElement | null>();
+  const [inputRef, setInputRef] = useState<HTMLInputElement | null>(null);
   const [suggestions, setSuggestions] = useState<K[]>([]);
+  const isFocusedRef = useRef(false);
+
+  useEffect(() => {
+    return () => {
+      isFocusedRef.current = false;
+    };
+  }, []);
+
+  const stateReducer = (
+    state: DownshiftState<K>,
+    changes: StateChangeOptions<K>
+  ) => {
+    if (changes.type === Downshift.stateChangeTypes.blurInput) {
+      return {
+        ...changes,
+        inputValue: state.inputValue,
+      };
+    }
+    return changes;
+  };
 
   return (
     <Downshift<K>
       initialSelectedItem={defaultValue}
       onInputValueChange={async (value, stateAndHelpers) => {
+        if (!isFocusedRef.current) return;
+
         if (!stateAndHelpers.selectedItem) {
           onInputValueChange?.(value);
 
@@ -78,6 +102,7 @@ export const Autocomplete = <K,>({
         if (lineAsLink && item) redirect(lineAsLink(item));
       }}
       itemToString={displayLabel}
+      stateReducer={stateReducer}
     >
       {({
         getInputProps,
@@ -91,6 +116,27 @@ export const Autocomplete = <K,>({
         getRootProps,
         clearSelection,
       }) => {
+        const getPluralSuffix = (count: number) => (count > 1 ? "s" : "");
+
+        let statusMessage = "";
+        if (!loading && isOpen && inputValue) {
+          if (suggestions.length > 0) {
+            const suffix = getPluralSuffix(suggestions.length);
+            statusMessage = `${suggestions.length} résultat${suffix} trouvé${suffix}.`;
+          } else {
+            statusMessage = "Aucun résultat trouvé.";
+          }
+        }
+
+        const inputProps = getInputProps({
+          onFocus: (_e: React.FocusEvent<HTMLInputElement>) => {
+            isFocusedRef.current = true;
+          },
+          onBlur: (_e: React.FocusEvent<HTMLInputElement>) => {
+            isFocusedRef.current = false;
+          },
+        });
+
         return (
           <div className={`${searchContainer}`}>
             <Input
@@ -136,22 +182,43 @@ export const Autocomplete = <K,>({
                 // @ts-ignore
                 "data-testid": dataTestId,
                 placeholder,
-                ref: setInputRef,
+                ref: (el: HTMLInputElement | null) => {
+                  setInputRef(el);
+                  if (
+                    externalInputRef &&
+                    typeof externalInputRef === "object" &&
+                    "current" in externalInputRef
+                  ) {
+                    (
+                      externalInputRef as MutableRefObject<HTMLInputElement | null>
+                    ).current = el;
+                  }
+                },
                 role: getRootProps().role,
                 "aria-expanded": getRootProps()["aria-expanded"],
-                ...getInputProps(),
-                "aria-labelledby": undefined, // Force aria-labelledby to be empty to avoid duplication with the for on label
+                ...inputProps,
+                "aria-labelledby": undefined,
               }}
               className={`${fr.cx("fr-mb-0")}`}
               hintText={hintText}
               label={label}
-              state={state}
+              state={autocompleteState}
               stateRelatedMessage={stateRelatedMessage}
               classes={{
                 wrap: isSearch ? inputSearchNoMarginTop : undefined,
                 root: rootInputCss,
               }}
             />
+            {statusMessage && (
+              <div
+                role="status"
+                aria-live="polite"
+                className={fr.cx("fr-sr-only")}
+                lang="fr"
+              >
+                {statusMessage}
+              </div>
+            )}
             <ul
               {...getMenuProps()}
               className={`${fr.cx("fr-p-0", "fr-m-0")} ${autocompleteListContainer} ${isSearch ? listSearch : ""}`}
@@ -178,7 +245,9 @@ export const Autocomplete = <K,>({
                 : isOpen &&
                   displayNoResult &&
                   !selectedItem && (
-                    <li className={fr.cx("fr-p-3v")}>Aucun résultat</li>
+                    <li className={fr.cx("fr-p-3v")} lang="fr">
+                      Aucun résultat
+                    </li>
                   )}
             </ul>
             {isSearch && (
