@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.187.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.186.0...v4.187.0) (2025-08-21)
+
+
+### Bug Fixes
+
+* **simulateurs:** ordonnancement des catégories professionnelles [#6735](https://github.com/SocialGouv/code-du-travail-numerique/issues/6735) ([9a4cfb9](https://github.com/SocialGouv/code-du-travail-numerique/commit/9a4cfb9eda6bd38c29517c5c67a82dc2f2854c3f))
+
+
+### Features
+
+* **heures-recherche-emploi:** passage en DSFR du simulateur ([#6727](https://github.com/SocialGouv/code-du-travail-numerique/issues/6727)) ([fb0a7a4](https://github.com/SocialGouv/code-du-travail-numerique/commit/fb0a7a4ee5043847725d42472cbc0a3eb5d86be2))
+
+
+
+
+
 # [4.186.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.185.0...v4.186.0) (2025-07-31)
 
 

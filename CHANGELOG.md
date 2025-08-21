@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.187.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.186.0...v4.187.0) (2025-08-21)
+
+
+### Bug Fixes
+
+* 6693 correction règle 87 6 Autocomplete ([#6733](https://github.com/SocialGouv/code-du-travail-numerique/issues/6733)) ([7100a83](https://github.com/SocialGouv/code-du-travail-numerique/commit/7100a8370c8969072ee24c90f1112f30e954da54))
+* non latin characters in location search ([#6726](https://github.com/SocialGouv/code-du-travail-numerique/issues/6726)) ([18e0883](https://github.com/SocialGouv/code-du-travail-numerique/commit/18e0883688360e55052ad87ba36bcd89443ed9b3))
+* sentry keydown undefined key ([#6724](https://github.com/SocialGouv/code-du-travail-numerique/issues/6724)) ([8966920](https://github.com/SocialGouv/code-du-travail-numerique/commit/8966920015f3c178f3182ca25f96bcf900dc8b7f))
+* **simulateurs:** ordonnancement des catégories professionnelles [#6735](https://github.com/SocialGouv/code-du-travail-numerique/issues/6735) ([9a4cfb9](https://github.com/SocialGouv/code-du-travail-numerique/commit/9a4cfb9eda6bd38c29517c5c67a82dc2f2854c3f))
+* tracking cc_select_p1 retirer les 00 devant les chiffres ([#6725](https://github.com/SocialGouv/code-du-travail-numerique/issues/6725)) ([a24496b](https://github.com/SocialGouv/code-du-travail-numerique/commit/a24496bdff15dd4f1d280a260fceecaebd9c20f5))
+
+
+### Features
+
+* **heures-recherche-emploi:** passage en DSFR du simulateur ([#6727](https://github.com/SocialGouv/code-du-travail-numerique/issues/6727)) ([fb0a7a4](https://github.com/SocialGouv/code-du-travail-numerique/commit/fb0a7a4ee5043847725d42472cbc0a3eb5d86be2))
+* **indemnite-licenciement:** passage du simulateur en DSFR ([#6734](https://github.com/SocialGouv/code-du-travail-numerique/issues/6734)) ([de6ebf5](https://github.com/SocialGouv/code-du-travail-numerique/commit/de6ebf562f6d530f73137ed60074719890b7e252))
+* maj mentions legales ([#6658](https://github.com/SocialGouv/code-du-travail-numerique/issues/6658)) ([3032067](https://github.com/SocialGouv/code-du-travail-numerique/commit/30320674ac658ad7f148be77a2f5312ba44f3551))
+
+
+
+
+
 # [4.186.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.185.0...v4.186.0) (2025-07-31)
 
 
