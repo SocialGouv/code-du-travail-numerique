@@ -382,9 +382,7 @@ const displayContentParse = ({ content, titleLevel }: Props) => {
   } catch (error) {
     console.error("Error parsing HTML content:", error);
     captureException(error);
-    return (
-      <div>Une erreur est survenue lors de l&apos;affichage du contenu.</div>
-    );
+    return <>Une erreur est survenue lors de l&apos;affichage du contenu.</>;
   }
 };
 
