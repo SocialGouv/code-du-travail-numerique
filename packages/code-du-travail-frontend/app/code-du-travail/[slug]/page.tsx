@@ -1,7 +1,7 @@
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import React from "react";
-import { replaceArticlesRefs } from "../../../src/lib/replaceArticlesRefs";
+import { replaceArticlesRefs } from "../../../src/modules/utils/replaceArticlesRefs";
 import { DsfrLayout } from "../../../src/modules/layout";
 import { notFound } from "next/navigation";
 import {

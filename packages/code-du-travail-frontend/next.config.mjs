@@ -75,7 +75,6 @@ const nextConfig = {
       process.env.NEXT_PUBLIC_APP_ENV === "production"
         ? { properties: ["data-testid"] }
         : false,
-    styledComponents: true,
   },
   eslint: {
     ignoreDuringBuilds: true,

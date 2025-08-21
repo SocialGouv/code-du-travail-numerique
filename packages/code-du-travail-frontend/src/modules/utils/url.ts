@@ -1,4 +1,4 @@
-import { BUCKET_URL, BUCKET_FOLDER } from "../config";
+import { BUCKET_URL, BUCKET_FOLDER } from "../../config";
 
 export const toUrl = (file: string): string => {
   if (!file) return "";

@@ -4,7 +4,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL, WIDGETS_PATH } from "../../config";
 import { getSourceUrlFromPath } from "../../lib";
-import { getStoredConsent } from "../../lib/consent";
+import { getStoredConsent } from "../utils/consent";
 import init, { push } from "@socialgouv/matomo-next";
 
 function MatomoComponent() {
