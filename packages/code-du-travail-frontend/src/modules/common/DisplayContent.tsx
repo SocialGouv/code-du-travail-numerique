@@ -16,7 +16,6 @@ import { Tile } from "@codegouvfr/react-dsfr/Tile";
 import Link from "./Link";
 import { slugify } from "@socialgouv/cdtn-utils";
 import { captureException } from "@sentry/nextjs";
-import { title } from "process";
 
 export type numberLevel = 2 | 3 | 4 | 5 | 6;
 
