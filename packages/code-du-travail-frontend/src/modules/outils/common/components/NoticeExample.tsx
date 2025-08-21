@@ -2,7 +2,7 @@ import React from "react";
 
 import { convertPeriodToHumanDate, Extra, getExtra } from "../utils";
 import { ListSimulator } from "../types";
-import { convertDate, dateToString, Unit } from "src/lib";
+import { convertDate, dateToString, Unit } from "src/modules/utils/date";
 
 const FROM_DATE = new Date("2022-04-05");
 

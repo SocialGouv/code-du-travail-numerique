@@ -1,4 +1,4 @@
-import { deepEqualObject } from "src/lib";
+import { deepEqualObject } from "src/modules/utils/object";
 import { ContratTravailStoreError, ContratTravailStoreInput } from "./types";
 
 const isCDI = (state) => state.typeContratTravail === "cdi";

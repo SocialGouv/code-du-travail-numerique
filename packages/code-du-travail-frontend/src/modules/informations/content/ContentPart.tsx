@@ -26,7 +26,7 @@ export const ContentPart = ({ parts }: Props) => {
           />
         );
       case EditorialContentType.content:
-        return undefined;
+        return <></>;
     }
   });
 };

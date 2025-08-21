@@ -1,5 +1,5 @@
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
-import { deepEqualObject } from "src/lib";
+import { deepEqualObject } from "src/modules/utils/object";
 import { AgreementStoreError, AgreementStoreInput } from "./types";
 import isCcFullySupported from "src/modules/outils/common/utils/isCcFullySupported";
 

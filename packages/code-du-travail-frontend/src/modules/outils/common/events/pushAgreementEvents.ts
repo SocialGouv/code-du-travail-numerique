@@ -1,12 +1,12 @@
 import { push as matopush } from "@socialgouv/matomo-next";
-import {
-  MatomoAgreementEvent,
-  MatomoBaseEvent,
-  MatomoSearchAgreementCategory,
-  MatomoSimulatorEvent,
-} from "src/lib";
 import { Enterprise } from "src/modules/enterprise";
 import { Agreement, AgreementRoute } from "../../indemnite-depart/types";
+import {
+  MatomoSearchAgreementCategory,
+  MatomoBaseEvent,
+  MatomoAgreementEvent,
+  MatomoSimulatorEvent,
+} from "src/modules/analytics";
 
 export interface ConventionCollective {
   route: AgreementRoute;

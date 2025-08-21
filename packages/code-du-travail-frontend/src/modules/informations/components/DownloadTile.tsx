@@ -1,5 +1,5 @@
 import { Tile } from "@codegouvfr/react-dsfr/Tile";
-import { toUrl } from "../../../lib";
+import { toUrl } from "src/modules/utils/url";
 
 export const DownloadTile = ({
   filename,

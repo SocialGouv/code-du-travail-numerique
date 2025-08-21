@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { MatomoActionEvent, MatomoAgreementEvent } from "src/lib";
 import { eventEmitter } from "src/modules/outils/common/events/emitter";
 import { EventType } from "src/modules/outils/common/events/events";
 import { TrackingContributionCategory } from "src/modules/contributions/tracking";
 import { sendEvent } from "src/modules/utils";
+import { MatomoActionEvent, MatomoAgreementEvent } from "src/modules/analytics";
 
 export const usePreavisDemissionEventEmitter = () => {
   useEffect(() => {

@@ -1,9 +1,9 @@
 import ImageWrapper from "../../../common/ImageWrapper";
-import { toUrl } from "../../../../lib";
 import { AccordionWithAnchor } from "src/modules/common/AccordionWithAnchor";
 import { fr } from "@codegouvfr/react-dsfr";
 import { DownloadTile } from "../../components/DownloadTile";
 import DisplayContent, { numberLevel } from "../../../common/DisplayContent";
+import { toUrl } from "src/modules/utils/url";
 
 export type Props = {
   titleLevel: numberLevel;

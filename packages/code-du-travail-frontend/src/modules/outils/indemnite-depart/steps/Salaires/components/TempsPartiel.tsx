@@ -1,6 +1,6 @@
 import { Alert } from "@codegouvfr/react-dsfr/Alert";
 import React from "react";
-import { IndemniteDepartType } from "src/outils/types";
+import { IndemniteDepartType } from "../../../types";
 
 type Props = {
   type: IndemniteDepartType;

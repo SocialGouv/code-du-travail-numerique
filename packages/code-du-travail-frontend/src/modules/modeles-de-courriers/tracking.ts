@@ -1,6 +1,6 @@
 import { push as matopush } from "@socialgouv/matomo-next";
-import { MatomoActionEvent, MatomoBaseEvent } from "../../lib";
 import { useCallback } from "react";
+import { MatomoBaseEvent, MatomoActionEvent } from "../analytics";
 
 export const useModeleEvents = (slug) => {
   return useCallback(() => {

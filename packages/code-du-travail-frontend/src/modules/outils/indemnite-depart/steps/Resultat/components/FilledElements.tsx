@@ -7,10 +7,10 @@ import {
   generateResultSalaireTempsPlein,
   generateResultSameSalary,
 } from "../../../utils/question";
-import { formatToEuro } from "src/common/formatToEuro";
 import { IndemniteDepartType } from "../../../types";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
+import { formatToEuro } from "src/modules/outils/common/utils/formatCurrency";
 
 type SituationItem = {
   text: string;

@@ -1,6 +1,6 @@
 import { push as matopush } from "@socialgouv/matomo-next";
-import { MatomoBaseEvent } from "../../../../lib";
 import { usePathname } from "next/navigation";
+import { MatomoBaseEvent } from "src/modules/analytics";
 
 export enum MatomoNeedMoreInfoEventSecondary {
   CONTACT = "contact",

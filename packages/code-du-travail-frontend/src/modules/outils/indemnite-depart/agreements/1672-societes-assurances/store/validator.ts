@@ -1,6 +1,7 @@
 import produce from "immer";
 import { StoreApi } from "zustand";
-import { deepEqualObject, detectNullOrUndefinedOrNaNInArray } from "src/lib";
+import { detectNullOrUndefinedOrNaNInArray } from "src/modules/utils/array";
+import { deepEqualObject } from "src/modules/utils/object";
 import { MainStore } from "../../../store";
 import {
   Agreement1672StoreError,

@@ -3,9 +3,9 @@ import { Alert } from "@codegouvfr/react-dsfr/Alert";
 import { SalaryPeriods } from "@socialgouv/modeles-social";
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
-import HighlightSalary from "./HighlightSalary";
 import { preventScroll } from "src/modules/outils/common/utils/input";
 import { defaultInputStyle } from "src/modules/outils/common/styles/input";
+import HighlightSalary from "./HighlightSalary";
 
 type Props = {
   title: string;

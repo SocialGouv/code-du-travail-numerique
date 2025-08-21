@@ -7,8 +7,8 @@ const HighlightSalary = ({
 }: {
   agreementNumber?: number;
   salaireTempsPleinMessage?: string;
-}): JSX.Element | undefined => {
-  if (agreementNumber === 3239) return undefined;
+}) => {
+  if (agreementNumber === 3239) return <></>;
   return (
     <div className={fr.cx("fr-highlight", "fr-mb-2w")}>
       {salaireTempsPleinMessage && <p>{salaireTempsPleinMessage}</p>}

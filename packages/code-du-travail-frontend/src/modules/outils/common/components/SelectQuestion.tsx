@@ -1,8 +1,8 @@
 import React from "react";
 import Html from "src/modules/common/Html";
 import { Select } from "@codegouvfr/react-dsfr/Select";
-import { xssWrapper } from "src/lib";
 import { defaultSelectStyle } from "src/modules/outils/common/styles/select";
+import { xssWrapper } from "src/modules/utils/xss";
 
 type Props = {
   name: string;

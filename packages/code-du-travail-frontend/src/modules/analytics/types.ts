@@ -1,4 +1,4 @@
-import { IndemniteDepartType } from "../../outils/types";
+import { IndemniteDepartType } from "../outils/indemnite-depart/types";
 
 export enum MatomoBaseEvent {
   TRACK_EVENT = "trackEvent",

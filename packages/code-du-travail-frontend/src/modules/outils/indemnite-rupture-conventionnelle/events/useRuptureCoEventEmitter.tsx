@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import {
-  MatomoActionEvent,
-  MatomoBaseEvent,
-  MatomoSimulatorEvent,
-} from "src/lib";
 import { EventType, eventEmitter } from "../../common/events";
 import { sendEvent } from "src/modules/utils";
+import {
+  MatomoBaseEvent,
+  MatomoActionEvent,
+  MatomoSimulatorEvent,
+} from "src/modules/analytics";
 
 export const useRuptureCoEventEmitter = () => {
   useEffect(() => {

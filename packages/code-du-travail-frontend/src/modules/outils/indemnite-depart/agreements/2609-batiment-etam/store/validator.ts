@@ -1,6 +1,6 @@
 import produce from "immer";
 import { GetState, SetState } from "zustand";
-import { deepEqualObject } from "src/lib";
+import { deepEqualObject } from "src/modules/utils/object";
 import { MainStore } from "../../../store";
 import { Agreement2609StoreInput, Agreement2609StoreSlice } from "./types";
 import { SalairesStoreInput } from "../../../steps/Salaires/store";

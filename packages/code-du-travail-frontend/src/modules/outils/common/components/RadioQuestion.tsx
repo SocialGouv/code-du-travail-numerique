@@ -1,7 +1,7 @@
 import React from "react";
 import Html from "src/modules/common/Html";
 import { RadioButtons } from "@codegouvfr/react-dsfr/RadioButtons";
-import { xssWrapper } from "src/lib";
+import { xssWrapper } from "src/modules/utils/xss";
 
 type Question = {
   label: string;

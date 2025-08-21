@@ -1,9 +1,9 @@
 "use client";
 import { ReactNode } from "react";
 import { fr } from "@codegouvfr/react-dsfr";
-import { useIframeResizer } from "../../common/hooks";
 import Link from "../common/Link";
 import { LogoLink } from "../common/LogoLink";
+import { useIframeResizer } from "../utils/useIframeResizer";
 
 type Props = {
   children: ReactNode;

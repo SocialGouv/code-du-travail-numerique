@@ -8,7 +8,7 @@ import { getAbsencePeriodsErrors } from "./absencePeriods";
 import { getAbsenceProlongeErrors } from "./absenceProlonge";
 import { getDateArretTravailErrors } from "./dateArretTravail";
 import { ContratTravailStoreInput } from "../../../ContratTravail/store";
-import { deepEqualObject } from "src/lib";
+import { deepEqualObject } from "src/modules/utils/object";
 
 export const validateStep = (
   state: AncienneteStoreInput,
