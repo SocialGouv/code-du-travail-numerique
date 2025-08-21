@@ -10,7 +10,7 @@ import { createElement, ReactNode, useEffect, useRef, useState } from "react";
 import { css } from "@styled-system/css";
 
 import Spinner from "../../common/Spinner.svg";
-import { LocationSearchInput } from "../../Location/LocationSearchInput";
+import { LocationSearchInput } from "./LocationSearchInput";
 import { searchEnterprises } from "../queries";
 import { Enterprise } from "../types";
 import { ApiGeoResult } from "../../Location/searchCities";

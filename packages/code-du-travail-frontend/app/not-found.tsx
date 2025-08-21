@@ -1,6 +1,6 @@
 "use client";
 
-import { NotFound } from "../src/modules/error/NotFound";
+import { NotFound } from "../src/modules/errors/NotFound";
 import { DsfrLayout } from "../src/modules/layout";
 import * as Sentry from "@sentry/nextjs";
 import { Metadata } from "next";

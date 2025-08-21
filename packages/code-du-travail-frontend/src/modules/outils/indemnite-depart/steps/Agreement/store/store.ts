@@ -5,7 +5,7 @@ import { CommonAgreementStoreData, CommonAgreementStoreSlice } from "./types";
 import { PublicodesSimulator, supportedCcn } from "@socialgouv/modeles-social";
 import { AgreementRoute, StoreSlicePublicodes } from "../../../types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
-import { getAgreementFromLocalStorage } from "src/modules/common/useLocalStorage";
+import { getAgreementFromLocalStorage } from "src/modules/utils/useLocalStorage";
 import {
   removeAgreementFromLocalStorage,
   saveAgreementToLocalStorage,

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { UnexpectedError } from "../src/modules/error/UnexpectedError";
+import { UnexpectedError } from "../src/modules/errors/UnexpectedError";
 import { Metadata } from "next";
 import { captureError } from "../src/modules/sentry/error";
 

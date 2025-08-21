@@ -6,6 +6,11 @@ import {
 } from "testing-library-selector";
 
 export const ui = {
+  input: byLabelText(/Code postal ou Ville/, {
+    selector: "input",
+  }),
+  inputCloseBtn: byTestId("locationSearchAutocomplete-autocomplete-close"),
+  AutocompleteItemParis: byText("Paris (75)"),
   enterpriseAgreementSearch: {
     input: byLabelText(/Nom de votre entreprise ou numéro Siren\/Siret/),
     inputLocation: byLabelText("Code postal ou Ville (optionnel)"),

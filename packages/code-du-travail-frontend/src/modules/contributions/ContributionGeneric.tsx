@@ -4,7 +4,7 @@ import { useContributionTracking } from "./tracking";
 import { isAgreementSupported, isAgreementValid } from "./contributionUtils";
 import { ContributionGenericContent } from "./ContributionGenericContent";
 import { Contribution } from "./type";
-import { useLocalStorageForAgreementOnPageLoad } from "../common/useLocalStorage";
+import { useLocalStorageForAgreementOnPageLoad } from "../utils/useLocalStorage";
 import { ContributionGenericAgreementSearch } from "./ContributionGenericAgreementSearch";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";

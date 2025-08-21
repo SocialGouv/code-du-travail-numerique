@@ -2,7 +2,6 @@
 
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { useCallback, useEffect, useState } from "react";
-import { Container } from "@socialgouv/cdtn-ui";
 
 export const SentryTest = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -77,7 +76,7 @@ export const SentryTest = () => {
   if (!isVisible) return null;
   const arrayOfString = ["a", "b", "c"];
   return (
-    <Container>
+    <div>
       <div>
         <Button onClick={triggerError}>Trigger client-side error</Button>
       </div>
@@ -94,6 +93,6 @@ export const SentryTest = () => {
         <Button onClick={triggerServerError}>Trigger server-side error</Button>
       </div>
       {errorEnabled && <div>{arrayOfString}</div>}
-    </Container>
+    </div>
   );
 };

@@ -8,8 +8,8 @@ import produce from "immer";
 import { validateStep } from "./validator";
 import { StoreSliceWrapperPreavisRetraite } from "../../store";
 import { push as matopush } from "@socialgouv/matomo-next";
-import { MatomoBaseEvent, MatomoRetirementEvent } from "src/lib";
 import { ValidationResponse } from "src/modules/outils/common/types";
+import { MatomoBaseEvent, MatomoRetirementEvent } from "src/modules/analytics";
 
 const initialState: SeniorityStoreData = {
   input: {},

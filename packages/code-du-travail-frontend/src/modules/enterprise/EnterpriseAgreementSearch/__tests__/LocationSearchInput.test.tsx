@@ -1,5 +1,5 @@
 import { getByLabelText, render, RenderResult } from "@testing-library/react";
-import { LocationSearchInput } from "../LocationSearchInput";
+import { LocationSearchInput } from "../../enterprise/EnterpriseAgreementSearch/LocationSearchInput";
 import { searchCities } from "../searchCities";
 import { UserAction } from "../../../common";
 import { byLabelText } from "testing-library-selector";
