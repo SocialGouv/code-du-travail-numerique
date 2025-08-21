@@ -16,6 +16,7 @@ import { Tile } from "@codegouvfr/react-dsfr/Tile";
 import Link from "./Link";
 import { slugify } from "@socialgouv/cdtn-utils";
 import { captureException } from "@sentry/nextjs";
+import { title } from "process";
 
 export type numberLevel = 2 | 3 | 4 | 5 | 6;
 
@@ -375,12 +376,10 @@ type Props = {
   content: string;
   titleLevel: numberLevel;
 };
-const DisplayContent = ({
-  content,
-  titleLevel,
-}: Props): string | JSX.Element | JSX.Element[] => {
+
+const displayContentParse = ({ content, titleLevel }: Props) => {
   try {
-    return <div>{parse(xssWrapper(content), options(titleLevel))}</div>;
+    return parse(xssWrapper(content), options(titleLevel));
   } catch (error) {
     console.error("Error parsing HTML content:", error);
     captureException(error);
@@ -388,6 +387,13 @@ const DisplayContent = ({
       <div>Une erreur est survenue lors de l&apos;affichage du contenu.</div>
     );
   }
+};
+
+const DisplayContent = ({
+  content,
+  titleLevel,
+}: Props): string | JSX.Element | JSX.Element[] => {
+  return <div>{displayContentParse({ content, titleLevel })}</div>;
 };
 
 export default DisplayContent;
