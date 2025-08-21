@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import * as Sentry from "@sentry/nextjs";
 import { Autocomplete } from "../common/Autocomplete";
@@ -15,15 +15,21 @@ type SearchBarProps = {
 export const SearchBar = ({ initialValue = "" }: SearchBarProps) => {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState(initialValue);
   const [key, setKey] = useState(0);
   const { emitSearchEvent, emitSuggestionSelectionEvent } = useSearchTracking();
+
+  useEffect(() => {
+    if (initialValue && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [initialValue]);
 
   const handleSearch = (searchTerm: string) => {
     if (searchTerm.trim()) {
       emitSearchEvent(searchTerm.trim());
       router.push(`/recherche?q=${encodeURIComponent(searchTerm.trim())}`);
-      // Incrémente la clé pour forcer la réinitialisation du composant Autocomplete
       setKey((prevKey) => prevKey + 1);
     }
   };
@@ -78,6 +84,7 @@ export const SearchBar = ({ initialValue = "" }: SearchBarProps) => {
           }
         }}
         dataTestId="search-bar-input"
+        inputRef={inputRef}
       />
     </form>
   );

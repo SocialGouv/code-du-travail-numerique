@@ -1,6 +1,7 @@
 import { act, fireEvent, render, RenderResult } from "@testing-library/react";
 import React from "react";
 import { wait } from "@testing-library/user-event/dist/utils";
+import userEvent from "@testing-library/user-event";
 
 import { ContributionLayout } from "../ContributionLayout";
 import { ui } from "./ui";
@@ -124,10 +125,9 @@ describe("<ContributionLayout />", () => {
       );
       fireEvent.click(ccUi.radio.agreementSearchOption.get());
       expect(ui.generic.linkDisplayInfo.query()).toBeInTheDocument();
-      act(() => {
-        fireEvent.change(ccUi.searchByName.input.get(), {
-          target: { value: "16" },
-        });
+      act(async () => {
+        await userEvent.click(ccUi.searchByName.input.get());
+        await userEvent.type(ccUi.searchByName.input.get(), "16");
       });
       await wait();
 
@@ -179,9 +179,8 @@ describe("<ContributionLayout />", () => {
         ])
       );
       fireEvent.click(ccUi.radio.agreementSearchOption.get());
-      fireEvent.change(ccUi.searchByName.input.get(), {
-        target: { value: "1388" },
-      });
+      await userEvent.click(ccUi.searchByName.input.get());
+      await userEvent.type(ccUi.searchByName.input.get(), "1388");
       await wait();
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC1388.name.get());
       expect(ui.generic.linkDisplayInfo.query()).toBeInTheDocument();
@@ -230,9 +229,8 @@ describe("<ContributionLayout />", () => {
       );
       fireEvent.click(ccUi.radio.agreementSearchOption.get());
       expect(ccUi.buttonDisplayInfo.query()).not.toBeInTheDocument();
-      fireEvent.change(ccUi.searchByName.input.get(), {
-        target: { value: "16" },
-      });
+      await userEvent.click(ccUi.searchByName.input.get());
+      await userEvent.type(ccUi.searchByName.input.get(), "16");
       await wait();
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC16.name.get());
 
@@ -266,9 +264,8 @@ describe("<ContributionLayout />", () => {
         ])
       );
       fireEvent.click(ccUi.radio.agreementSearchOption.get());
-      fireEvent.change(ccUi.searchByName.input.get(), {
-        target: { value: "1388" },
-      });
+      await userEvent.click(ccUi.searchByName.input.get());
+      await userEvent.type(ccUi.searchByName.input.get(), "1388");
       await wait();
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC1388.name.get());
       expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
@@ -304,9 +301,8 @@ describe("<ContributionLayout />", () => {
         ])
       );
       fireEvent.click(ccUi.radio.agreementSearchOption.get());
-      fireEvent.change(ccUi.searchByName.input.get(), {
-        target: { value: "29" },
-      });
+      await userEvent.click(ccUi.searchByName.input.get());
+      await userEvent.type(ccUi.searchByName.input.get(), "29");
       await wait();
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC29.name.get());
       expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
