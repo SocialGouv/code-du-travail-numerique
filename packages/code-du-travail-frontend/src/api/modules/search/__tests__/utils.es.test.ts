@@ -1,6 +1,6 @@
 /** @jest-environment node */
 
-import { merge, mergePipe, removeDuplicate } from "../modules/search/utils";
+import { merge, mergePipe, removeDuplicate } from "../utils";
 
 const arr1 = [
   {

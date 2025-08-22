@@ -14,7 +14,7 @@
     "dev:frontend": "lerna run dev --parallel --scope=@cdt/frontend --scope=@socialgouv/modeles-social --stream",
     "dev:simulate-deployment": "NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-preprod.ovh.fabrique.social.gouv.fr yarn workspace @cdt/frontend build && yarn workspace @cdt/frontend start",
     "start": "lerna run start --scope=@cdt/frontend --stream",
-    "test": "npm run test:frontend && npm run test:modeles && npm run test:ui && npm run test:utils",
+    "test": "npm run test:frontend && npm run test:modeles && npm run test:utils",
     "test:modeles": "lerna run test --scope=@socialgouv/modeles-social --stream",
     "test:frontend": "lerna run test:frontend --scope=@cdt/frontend --stream",
     "test:utils": "lerna run test --scope=@socialgouv/cdtn-utils --stream",

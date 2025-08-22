@@ -9,8 +9,7 @@
   "scripts": {
     "dev": "yarn predev && next dev",
     "predev": "react-dsfr update-icons && panda codegen",
-    "lint:js": "next lint --quiet",
-    "lint": "yarn lint:css && next lint",
+    "lint": "next lint",
     "precommit": "lint-staged",
     "start": "next start",
     "tsup": "tsup",
@@ -89,7 +88,6 @@
     "lint-staged": "^15.2.10",
     "mockdate": "^3.0.5",
     "next-router-mock": "^1.0.2",
-    "nextjs-http-supertest": "^1.0.6",
     "postcss": "^8.4.44",
     "prettier": "^3.3.3",
     "sass": "^1.77.8",
