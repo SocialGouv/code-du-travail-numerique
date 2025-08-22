@@ -6,7 +6,7 @@ import { PubliQuestion } from "src/modules/outils/indemnite-depart/steps/Informa
 import { eventEmitter } from "src/modules/outils/common/events/emitter";
 import { EventType } from "src/modules/outils/common/events";
 
-const StepInformations = (): JSX.Element => {
+const StepInformations = () => {
   const store = useContext(PreavisRetraiteContext);
   const { errors, onInformationsChange, informations } =
     usePreavisRetraiteStore(store, (state) => ({

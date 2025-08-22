@@ -63,7 +63,7 @@ export const getBySlugAgreements = async (
   }
 
   return {
-    _id: response.hits.hits[0]._id,
+    _id: response.hits.hits[0]._id!,
     ...response.hits.hits[0]._source,
   };
 };

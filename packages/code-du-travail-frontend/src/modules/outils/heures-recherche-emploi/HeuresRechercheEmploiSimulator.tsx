@@ -91,7 +91,7 @@ const HeuresRechercheEmploiSimulatorContent = ({
 }: {
   title: string;
   steps: Step<HeuresRechercheEmploiStepName>[];
-}): JSX.Element => {
+}) => {
   const store = useContext(HeuresRechercheEmploiContext);
 
   useHeuresRechercheEmploiEventEmitter();

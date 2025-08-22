@@ -7,7 +7,7 @@ type Props = {
   className?: string;
 };
 
-const Html = ({ children, ...props }: Props): JSX.Element => {
+const Html = ({ children, ...props }: Props) => {
   if (props.as === "p") {
     return (
       <p

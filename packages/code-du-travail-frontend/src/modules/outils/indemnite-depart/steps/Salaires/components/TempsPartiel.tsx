@@ -6,7 +6,7 @@ type Props = {
   type: IndemniteDepartType;
 };
 
-const TempsPartiel = ({ type }: Props): JSX.Element => {
+const TempsPartiel = ({ type }: Props) => {
   return (
     <Alert
       title="À noter"

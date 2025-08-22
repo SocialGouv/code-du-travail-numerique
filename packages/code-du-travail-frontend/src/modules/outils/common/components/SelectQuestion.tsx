@@ -24,7 +24,7 @@ export const SelectQuestion = ({
   onChangeSelectedOption,
   selectedOption,
   autoFocus = false,
-}: Props): JSX.Element => {
+}: Props) => {
   const [optionsArray, setOptionsArray] = React.useState<[string, string][]>(
     []
   );

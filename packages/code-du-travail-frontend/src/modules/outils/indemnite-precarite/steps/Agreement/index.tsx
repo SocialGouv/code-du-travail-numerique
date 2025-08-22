@@ -6,7 +6,7 @@ import {
   useIndemnitePrecariteStore,
 } from "../store";
 
-const StepAgreement = (): JSX.Element => {
+const StepAgreement = () => {
   const store = useContext(IndemnitePrecariteContext);
   const {
     error,

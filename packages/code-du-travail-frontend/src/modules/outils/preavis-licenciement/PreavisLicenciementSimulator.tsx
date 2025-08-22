@@ -97,7 +97,7 @@ const PreavisLicenciementSimulatorContent = ({
 }: {
   title: string;
   steps: Step<PreavisLicenciementStepName>[];
-}): JSX.Element => {
+}) => {
   const store = useContext(PreavisLicenciementContext);
 
   const {

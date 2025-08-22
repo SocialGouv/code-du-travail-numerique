@@ -74,7 +74,9 @@ export const AccordionWithAnchor = ({
           key={item.id}
           label={item.title}
           defaultExpanded={item.expended}
-          ref={(el) => (refs.current[item.id] = el)}
+          ref={(el) => {
+            refs.current[item.id] = el;
+          }}
         >
           {item.content}
         </Accordion>

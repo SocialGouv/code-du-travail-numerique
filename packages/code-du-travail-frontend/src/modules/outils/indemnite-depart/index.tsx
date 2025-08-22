@@ -32,7 +32,7 @@ const IndemniteDepartSimulator = ({
   feedbackPopup,
   steps,
   tool,
-}: SimulateurProps): JSX.Element => {
+}: SimulateurProps) => {
   const store = useContext(IndemniteDepartContext);
   const {
     onNextStepContratTravail,
@@ -127,7 +127,7 @@ export const CalculateurIndemnite = ({
   tool,
   steps,
   feedbackPopup,
-}: CalculateurIndemniteProps): JSX.Element => {
+}: CalculateurIndemniteProps) => {
   const store = React.useRef(createIndemniteDepartStore(tool)).current;
 
   return (

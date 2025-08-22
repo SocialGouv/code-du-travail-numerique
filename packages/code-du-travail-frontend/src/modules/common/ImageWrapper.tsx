@@ -12,11 +12,7 @@ type Props = {
   src: string;
 };
 
-const InfographicWrapper = ({
-  altText,
-  src,
-  className,
-}: Props): JSX.Element => {
+const InfographicWrapper = ({ altText, src, className }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [blockScroll, allowScroll] = useScrollBlock();
 

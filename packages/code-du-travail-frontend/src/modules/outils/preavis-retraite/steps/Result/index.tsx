@@ -10,7 +10,7 @@ import ErrorPublicodes from "src/modules/outils/indemnite-depart/steps/Resultat/
 import { PubliReferences } from "src/modules/outils/common/components";
 import { fr } from "@codegouvfr/react-dsfr";
 
-const StepResult = (): JSX.Element => {
+const StepResult = () => {
   const store = useContext(PreavisRetraiteContext);
 
   const {

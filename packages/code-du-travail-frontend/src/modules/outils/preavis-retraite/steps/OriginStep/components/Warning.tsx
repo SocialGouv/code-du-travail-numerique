@@ -2,7 +2,7 @@ import React from "react";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { fr } from "@codegouvfr/react-dsfr";
 
-export const WarningOriginDepart = (): JSX.Element => {
+export const WarningOriginDepart = () => {
   return (
     <Alert
       severity="info"

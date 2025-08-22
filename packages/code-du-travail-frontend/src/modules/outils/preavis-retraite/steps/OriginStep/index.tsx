@@ -3,7 +3,7 @@ import { WarningOriginDepart } from "./components/Warning";
 import { PreavisRetraiteContext, usePreavisRetraiteStore } from "../store";
 import { RadioQuestion } from "src/modules/outils/common/components";
 
-const StepOrigin = (): JSX.Element => {
+const StepOrigin = () => {
   const store = useContext(PreavisRetraiteContext);
 
   const { originDepart, onChangeOriginDepart, errorOriginDepart } =

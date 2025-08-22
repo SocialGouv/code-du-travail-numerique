@@ -14,7 +14,7 @@ type Props = {
   metaDescription: string;
 };
 
-export const Share = ({ title, metaDescription }: Props): JSX.Element => {
+export const Share = ({ title, metaDescription }: Props) => {
   const [isUrlCopied, setUrlCopied] = useState(false);
   const { emitClickShare } = useCommonTracking();
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-const StepIntro = (): JSX.Element => (
+const StepIntro = () => (
   <>
     <p>
       Ce simulateur vous permet de calculer la durée de préavis à respecter en

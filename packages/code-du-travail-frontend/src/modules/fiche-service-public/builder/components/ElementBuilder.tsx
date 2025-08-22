@@ -30,7 +30,7 @@ export const ElementBuilder = ({
 }: {
   data: FicheSPData | FicheSPData[];
   headingLevel?: number;
-}): JSX.Element => {
+}) => {
   // in cases where the parent's "$"/children is undefined while it should not
   // e.g. in a "Texte" element.
   if (!data) return <></>;

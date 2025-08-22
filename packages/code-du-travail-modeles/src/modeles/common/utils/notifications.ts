@@ -1,4 +1,5 @@
 import type Engine from "publicodes";
+import { ReactNode } from "react";
 
 import type {
   NotificationAffichage,
@@ -7,7 +8,7 @@ import type {
 
 export type Notification = {
   dottedName: NotificationRuleNode["dottedName"];
-  description: JSX.Element | NotificationRuleNode["rawNode"]["description"];
+  description: ReactNode | NotificationRuleNode["rawNode"]["description"];
   show: NotificationAffichage;
 };
 

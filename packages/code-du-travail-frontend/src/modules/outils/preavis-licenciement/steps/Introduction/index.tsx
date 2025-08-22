@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const StepIntroduction = (): JSX.Element => (
+const StepIntroduction = () => (
   <>
     <p>
       Ce simulateur permet de calculer la durée du préavis accordée au salarié

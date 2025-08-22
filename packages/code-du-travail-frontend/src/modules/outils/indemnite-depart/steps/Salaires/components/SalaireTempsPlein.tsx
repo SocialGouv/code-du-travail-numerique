@@ -31,7 +31,7 @@ export const SalaireTempsPlein = ({
   autoFocus = false,
   agreementNumber,
   salaireTempsPleinMessage,
-}: Props): JSX.Element => {
+}: Props) => {
   const [errorsSalaries, setErrorsSalaries] = React.useState({});
   const [errorsPrimes, setErrorsPrimes] = React.useState({});
 

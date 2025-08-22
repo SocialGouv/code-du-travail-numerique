@@ -1,5 +1,4 @@
 import { DocumentElasticResult } from "./type";
-import { SearchRequest } from "@elastic/elasticsearch/lib/api/types";
 import { elasticDocumentsIndex, elasticsearchClient } from "../../api/utils";
 
 export const fetchDocument = async <
@@ -7,7 +6,7 @@ export const fetchDocument = async <
   K extends keyof DocumentElasticResult<V>,
 >(
   fields: K[],
-  body: SearchRequest
+  body: any
 ): Promise<DocumentElasticResult<V> | undefined> => {
   const response = await elasticsearchClient.search<V>({
     _source: fields,

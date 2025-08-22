@@ -5,7 +5,7 @@ import { CommonAgreementStep } from "../../../common/components/AgreementStep";
 import { IndemniteDepartType } from "../../types";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
-const AgreementStep = (): JSX.Element => {
+const AgreementStep = () => {
   const store = useContext(IndemniteDepartContext);
   const {
     error,

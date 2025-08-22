@@ -1,6 +1,6 @@
 import React from "react";
 
-const Intro = (): JSX.Element => {
+const Intro = () => {
   return (
     <>
       <p>

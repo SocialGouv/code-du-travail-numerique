@@ -17,7 +17,7 @@ export const QuestionnaireText = ({
   placeholder,
   onChange,
   dataTestId,
-}: QuestionnaireItemProps): JSX.Element => {
+}: QuestionnaireItemProps) => {
   const maxCharacters = 200;
   const [remainingChars, setRemainingChars] = useState(maxCharacters);
   const textareaId = `textarea-feedback`;

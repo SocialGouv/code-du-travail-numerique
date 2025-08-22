@@ -39,7 +39,7 @@ const AbsencePeriod = ({
   showDeleteButton,
   onDeleteAbsence,
   informationData,
-}: Props): JSX.Element => {
+}: Props) => {
   const [shouldAskAbsenceDate, askAbsenceDate] = useState(
     absence
       ? absence.motif?.startAt && absence.motif?.startAt(informationData)

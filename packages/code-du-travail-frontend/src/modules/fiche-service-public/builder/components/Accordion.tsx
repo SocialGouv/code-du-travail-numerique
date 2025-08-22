@@ -35,7 +35,7 @@ export const AccordionWrapper = ({
 }: {
   data: FicheSPDataTextWithChapitre;
   headingLevel: number;
-}): JSX.Element => {
+}) => {
   if (headingLevel >= 2) {
     return (
       <>

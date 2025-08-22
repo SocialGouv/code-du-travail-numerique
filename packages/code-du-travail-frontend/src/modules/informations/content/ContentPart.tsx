@@ -9,7 +9,7 @@ type Props = {
   parts: EditorialContentPart[];
 };
 
-export const ContentPart = ({ parts }: Props): JSX.Element => {
+export const ContentPart = ({ parts }: Props) => {
   return (
     <>
       {parts.map((part, index) => {
