@@ -539,13 +539,13 @@ describe("DisplayContent", () => {
     });
 
     it(`should remove margin space for p in li`, () => {
-      const { getAllByRole } = render(
+      const { container } = render(
         <DisplayContent
           content={`<ul><li><p>Element 1</p><p>Element 2</p></li></ul><p>Element 3</p>`}
           titleLevel={3}
         ></DisplayContent>
       );
-      const allParagraphs = getAllByRole("paragraph");
+      const allParagraphs = container.querySelectorAll("p");
       expect(allParagraphs).toHaveLength(3);
       expect(allParagraphs[0].getAttribute("class")).toContain("fr-mb-0");
       expect(allParagraphs[1].getAttribute("class")).toContain("fr-mb-0");

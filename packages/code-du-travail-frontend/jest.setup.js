@@ -13,6 +13,7 @@ if (typeof window !== "undefined") {
   global.setImmediate = jest.useRealTimers;
   global.TextEncoder = require("util").TextEncoder;
   global.TextDecoder = require("util").TextDecoder;
+  global.ReadableStream = require("stream").Readable;
 }
 
 jest.mock("next/navigation", () => ({
