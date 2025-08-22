@@ -118,8 +118,8 @@ export default function FilledElements(props: Props) {
                   de notre simulateur.
                 </p>
               )}
+              <AbsenceTable absencesPeriods={props.absencesPeriods} />
             </li>
-            <AbsenceTable absencesPeriods={props.absencesPeriods} />
           </ul>
         </li>
         {!props.isStepSalaryHidden && (
