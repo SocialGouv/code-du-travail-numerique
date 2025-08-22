@@ -36,7 +36,7 @@ export class EnterprisesAppController {
       return NextResponse.json(response, {
         status: 200,
         headers: {
-          "Content-Type": "application/json; charset=utf-8",
+          "Content-Type": "application/json",
         },
       });
     } catch (error) {
@@ -47,7 +47,7 @@ export class EnterprisesAppController {
         {
           status: 500,
           headers: {
-            "Content-Type": "application/json; charset=utf-8",
+            "Content-Type": "application/json",
           },
         }
       );

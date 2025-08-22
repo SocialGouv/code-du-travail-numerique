@@ -22,7 +22,7 @@ export class IdccAppController {
       return NextResponse.json(response, {
         status: 200,
         headers: {
-          "Content-Type": "application/json; charset=utf-8",
+          "Content-Type": "application/json",
         },
       });
     } catch (error) {
@@ -32,7 +32,7 @@ export class IdccAppController {
           {
             status: 404,
             headers: {
-              "Content-Type": "application/json; charset=utf-8",
+              "Content-Type": "application/json",
             },
           }
         );
@@ -44,7 +44,7 @@ export class IdccAppController {
           {
             status: 500,
             headers: {
-              "Content-Type": "application/json; charset=utf-8",
+              "Content-Type": "application/json",
             },
           }
         );

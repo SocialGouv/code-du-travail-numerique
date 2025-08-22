@@ -32,7 +32,7 @@ export class SuggestAppController {
       return NextResponse.json(response, {
         status: 200,
         headers: {
-          "Content-Type": "application/json; charset=utf-8",
+          "Content-Type": "application/json",
         },
       });
     } catch (error) {
@@ -42,7 +42,7 @@ export class SuggestAppController {
           {
             status: 404,
             headers: {
-              "Content-Type": "application/json; charset=utf-8",
+              "Content-Type": "application/json",
             },
           }
         );
@@ -54,7 +54,7 @@ export class SuggestAppController {
           {
             status: 500,
             headers: {
-              "Content-Type": "application/json; charset=utf-8",
+              "Content-Type": "application/json",
             },
           }
         );
