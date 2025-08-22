@@ -1,5 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import type { MainNavigationProps } from "@codegouvfr/react-dsfr/src/MainNavigation";
+import type { MainNavigationProps } from "@codegouvfr/react-dsfr/MainNavigation/MainNavigation";
 import { HeaderBrand } from "./HeaderBrand";
 import { HeaderSearch } from "./HeaderSearch";
 import { HeaderNavigation } from "./HeaderNavigation";

@@ -1,31 +1,53 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
 import { getIdccByQuery } from "./service";
 
-export class IdccController {
-  private req: NextApiRequest;
-  private res: NextApiResponse;
+export class IdccAppController {
+  private searchParams: URLSearchParams;
 
-  constructor(req: NextApiRequest, res: NextApiResponse) {
-    this.req = req;
-    this.res = res;
+  constructor(request: Request) {
+    const url = new URL(request.url);
+    this.searchParams = url.searchParams;
   }
 
-  public async get() {
+  public async get(): Promise<NextResponse> {
     try {
-      const { q, size } = this.req.query;
+      const q = this.searchParams.get("q");
+      const size = this.searchParams.get("size");
+
       const response = await getIdccByQuery(
         q as string,
         size ? parseInt(size as string) : undefined
       );
-      this.res.status(200).json(response);
+      return NextResponse.json(response, {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+        },
+      });
     } catch (error) {
       if (error instanceof NotFoundError) {
-        this.res.status(404).json({ message: error.message });
+        return NextResponse.json(
+          { message: error.message },
+          {
+            status: 404,
+            headers: {
+              "Content-Type": "application/json; charset=utf-8",
+            },
+          }
+        );
       } else {
-        this.res.status(500).json({
-          message: DEFAULT_ERROR_500_MESSAGE,
-        });
+        return NextResponse.json(
+          {
+            message: DEFAULT_ERROR_500_MESSAGE,
+          },
+          {
+            status: 500,
+            headers: {
+              "Content-Type": "application/json; charset=utf-8",
+            },
+          }
+        );
       }
     }
   }

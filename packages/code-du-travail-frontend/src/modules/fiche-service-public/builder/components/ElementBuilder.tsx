@@ -30,22 +30,26 @@ export const ElementBuilder = ({
 }: {
   data: FicheSPData | FicheSPData[];
   headingLevel?: number;
-}) => {
+}): JSX.Element => {
   // in cases where the parent's "$"/children is undefined while it should not
   // e.g. in a "Texte" element.
   if (!data) return <></>;
 
   if (Array.isArray(data)) {
-    return data.map((child) => (
-      <ElementBuilder
-        key={generateUUID(child)}
-        data={child}
-        headingLevel={headingLevel}
-      />
-    ));
+    return (
+      <>
+        {data.map((child) => (
+          <ElementBuilder
+            key={generateUUID(child)}
+            data={child}
+            headingLevel={headingLevel}
+          />
+        ))}
+      </>
+    );
   }
   if (data.type === "text") {
-    return data.text;
+    return <>{data.text}</>;
   }
 
   switch (data.name) {
@@ -63,11 +67,14 @@ export const ElementBuilder = ({
       if (ignoreParagraph(data)) {
         return (
           <p>
-            <ElementBuilder data={ignoreParagraph(data)} />
+            <ElementBuilder
+              data={ignoreParagraph(data)}
+              headingLevel={headingLevel}
+            />
           </p>
         );
       }
-      break;
+      return <></>;
     case "LienExterne":
       return <LienExterne data={data} />;
     case "LienExterneCommente":
@@ -148,6 +155,6 @@ export const ElementBuilder = ({
       );
     // Otherwise we simply ignore the element
     default:
-      return null;
+      return <></>;
   }
 };

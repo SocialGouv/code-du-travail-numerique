@@ -1,5 +1,5 @@
 import { SOURCES } from "@socialgouv/cdtn-utils";
-import { Agreement } from "../../../outils/types";
+import { Agreement } from "src/modules/outils/indemnite-depart/types";
 
 export type AgreementResponse = Agreement & {
   contributions?: boolean;

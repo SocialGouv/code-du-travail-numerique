@@ -1,7 +1,7 @@
 "use client";
-import { ApiGeoResult, searchCities } from "../../Location/searchCities";
 import { Autocomplete, AutocompleteProps } from "../../common/Autocomplete";
 import { useState } from "react";
+import { ApiGeoResult, searchCities } from "./searchCities";
 
 type Props = Pick<AutocompleteProps<ApiGeoResult>, "classes"> & {
   onLocationChange?: (location: ApiGeoResult | undefined) => void;

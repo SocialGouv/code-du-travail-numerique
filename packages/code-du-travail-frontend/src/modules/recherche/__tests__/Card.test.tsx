@@ -4,7 +4,7 @@ import { SearchCard } from "../Card";
 import { summarize } from "src/modules/utils";
 
 // Mock des dépendances
-jest.mock("src/modules/utils", () => ({
+jest.mock("../../utils", () => ({
   summarize: jest.fn((text) => `Résumé: ${text}`),
 }));
 

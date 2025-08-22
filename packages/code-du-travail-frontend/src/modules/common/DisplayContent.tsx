@@ -5,7 +5,6 @@ import parse, {
   HTMLReactParserOptions,
   Text,
 } from "html-react-parser";
-import { toUrl, xssWrapper } from "../../lib";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { ElementType } from "react";
 import { AccordionWithAnchor } from "./AccordionWithAnchor";
@@ -16,6 +15,8 @@ import { Tile } from "@codegouvfr/react-dsfr/Tile";
 import Link from "./Link";
 import { slugify } from "@socialgouv/cdtn-utils";
 import { captureException } from "@sentry/nextjs";
+import { toUrl } from "../utils/url";
+import { xssWrapper } from "../utils/xss";
 
 export type numberLevel = 2 | 3 | 4 | 5 | 6;
 

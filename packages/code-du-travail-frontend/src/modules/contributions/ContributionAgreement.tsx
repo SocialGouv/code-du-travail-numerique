@@ -4,9 +4,9 @@ import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
 import { ContributionAgreementContent } from "./ContributionAgreementContent";
 import { Contribution } from "./type";
-import { removeCCNumberFromSlug } from "../common/utils";
 import BlueCard from "../common/BlueCard";
 import Button from "@codegouvfr/react-dsfr/Button";
+import { removeCCNumberFromSlug } from "../utils/removeCCNumberFromSlug";
 
 type Props = {
   contribution: Contribution;

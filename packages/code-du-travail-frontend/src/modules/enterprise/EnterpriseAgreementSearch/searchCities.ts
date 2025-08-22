@@ -1,9 +1,9 @@
-import {
-  API_GEO_MAX_SEARCH_RESULTS,
-  API_GEO_URL,
-  DEBOUNCE_TIME_MS,
-} from "../../config";
 import debounce from "debounce-promise";
+import {
+  API_GEO_URL,
+  API_GEO_MAX_SEARCH_RESULTS,
+  DEBOUNCE_TIME_MS,
+} from "src/config";
 
 export type ApiGeoResult = {
   code: string;

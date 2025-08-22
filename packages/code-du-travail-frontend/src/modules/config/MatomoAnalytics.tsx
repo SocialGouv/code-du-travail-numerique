@@ -3,9 +3,9 @@
 import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL, WIDGETS_PATH } from "../../config";
-import { getSourceUrlFromPath } from "../../lib";
 import { getStoredConsent } from "../utils/consent";
 import init, { push } from "@socialgouv/matomo-next";
+import { getSourceUrlFromPath } from "../utils/url";
 
 function MatomoComponent() {
   const searchParams = useSearchParams();
@@ -99,7 +99,7 @@ function MatomoComponent() {
 }
 
 export const MatomoAnalytics = () => (
-  <Suspense>
+  <Suspense fallback={null}>
     <MatomoComponent />
   </Suspense>
 );

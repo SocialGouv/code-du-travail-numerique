@@ -1,11 +1,11 @@
 import { render } from "@testing-library/react";
-import { UserAction } from "../../../common";
 import React from "react";
 import { AgreementSearch } from "../AgreementSearch";
 import { ui } from "./ui";
 import { wait } from "@testing-library/user-event/dist/utils";
 import { sendEvent } from "../../utils";
 import { byText } from "testing-library-selector";
+import { UserAction } from "src/modules/outils/common/utils/UserAction";
 
 jest.mock("../../utils", () => ({
   sendEvent: jest.fn(),

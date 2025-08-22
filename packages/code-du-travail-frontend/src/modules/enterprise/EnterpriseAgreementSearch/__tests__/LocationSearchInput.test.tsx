@@ -1,11 +1,9 @@
-import { getByLabelText, render, RenderResult } from "@testing-library/react";
-import { LocationSearchInput } from "../../enterprise/EnterpriseAgreementSearch/LocationSearchInput";
+import { render, RenderResult } from "@testing-library/react";
 import { searchCities } from "../searchCities";
-import { UserAction } from "../../../common";
-import { byLabelText } from "testing-library-selector";
-import { screen } from "@testing-library/dom";
 import { wait } from "@testing-library/user-event/dist/utils";
 import { ui } from "./ui";
+import { LocationSearchInput } from "../LocationSearchInput";
+import { UserAction } from "src/modules/outils/common/utils/UserAction";
 
 jest.mock("../searchCities", () => ({
   searchCities: jest.fn(),
