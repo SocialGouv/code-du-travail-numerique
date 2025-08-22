@@ -51,7 +51,7 @@ export const Table = ({
                   {headingRows.map((tr, rowIndex) => (
                     <tr key={rowIndex}>
                       {tr.children.map((th, columnIndex) => (
-                        <th key={columnIndex} {...handleSpan(th)}>
+                        <th key={columnIndex} {...handleSpan(th)} scope="col">
                           {th.children && (
                             <ElementBuilder
                               data={ignoreParagraph(th)}
@@ -69,11 +69,16 @@ export const Table = ({
                   <tr key={rowIndex}>
                     {tr.children.map((td, columnIndex) => {
                       const Cell = isHeaderCell(columnIndex) ? "th" : "td";
+                      const scopeProp = Cell === "th" ? { scope: "row" } : {};
                       if (!td.children) {
-                        return <Cell key={columnIndex} />;
+                        return <Cell key={columnIndex} {...scopeProp} />;
                       }
                       return (
-                        <Cell key={columnIndex} {...handleSpan(td)}>
+                        <Cell
+                          key={columnIndex}
+                          {...handleSpan(td)}
+                          {...scopeProp}
+                        >
                           <ElementBuilder
                             data={ignoreParagraph(td)}
                             headingLevel={headingLevel + 1}

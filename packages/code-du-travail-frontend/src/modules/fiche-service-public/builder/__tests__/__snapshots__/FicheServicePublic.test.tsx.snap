@@ -395,12 +395,14 @@ exports[`<FicheServicePublic /> should render 1`] = `
                             <th
                               colspan="1"
                               rowspan="1"
+                              scope="col"
                             >
                               Ancienneté du salarié
                             </th>
                             <th
                               colspan="1"
                               rowspan="1"
+                              scope="col"
                             >
                               Durée minimale du préavis
                             </th>
@@ -468,12 +470,14 @@ exports[`<FicheServicePublic /> should render 1`] = `
                             <th
                               colspan="1"
                               rowspan="1"
+                              scope="col"
                             >
                               Ancienneté du salarié
                             </th>
                             <th
                               colspan="1"
                               rowspan="1"
+                              scope="col"
                             >
                               Durée minimale du préavis
                             </th>
