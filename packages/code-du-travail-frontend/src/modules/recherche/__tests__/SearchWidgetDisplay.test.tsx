@@ -4,7 +4,7 @@ import { SearchWidgetDisplay } from "../SearchWidgetDisplay";
 import { useSearchTracking, MatomoWidgetEvent } from "../tracking";
 
 // Mock the useIframeResizer hook
-jest.mock("../../../common/hooks", () => ({
+jest.mock("../../utils/useIframeResizer", () => ({
   useIframeResizer: jest.fn(),
 }));
 

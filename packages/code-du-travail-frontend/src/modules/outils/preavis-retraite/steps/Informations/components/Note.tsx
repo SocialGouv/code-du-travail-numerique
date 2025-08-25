@@ -6,7 +6,7 @@ type Props = {
   message: string;
 };
 
-export const Note = ({ message }: Props): JSX.Element => (
+export const Note = ({ message }: Props) => (
   <Alert
     severity="info"
     title="À noter"

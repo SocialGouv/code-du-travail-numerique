@@ -8,7 +8,7 @@ import { AgreementStoreSlice } from "../../Agreement/store";
 import { mapToPublicodesSituationForCalculationHeuresRechercheEmploi } from "src/modules/outils/common/publicodes";
 import { PublicodesInformation } from "src/modules/outils/indemnite-depart/steps/Informations/store";
 import { informationToSituation } from "src/modules/outils/indemnite-depart/steps/Informations/components/utils";
-import { removeDuplicateObject } from "src/lib";
+import { removeDuplicateObject } from "src/modules/utils/array";
 import { isValidField, validateStep } from "./validator";
 import { StoreApi } from "zustand";
 

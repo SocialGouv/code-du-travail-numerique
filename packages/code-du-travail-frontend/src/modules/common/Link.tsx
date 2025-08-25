@@ -10,7 +10,7 @@ type Props = LinkProps & {
   ref?: Ref<HTMLAnchorElement>;
 };
 
-const Link = ({ ...props }: Props): JSX.Element => {
+const Link = ({ ...props }: Props) => {
   if (props.target === "_blank" && props.children) {
     props.title = `${props.title || props.children.toString()} - nouvelle fenêtre`;
   }

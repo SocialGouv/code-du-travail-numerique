@@ -2,7 +2,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import React from "react";
 
-export const List = ({ items }: { items: JSX.Element[] }) => {
+export const List = ({ items }: { items: React.ReactNode[] }) => {
   return (
     <ul className={`${fr.cx("fr-pl-0")} ${ul}`}>
       {items.map((item, index) => {

@@ -30,7 +30,7 @@ export const SmileyQuestionnaireItem = ({
   goodEventValue,
   displayError,
   onChange,
-}: SmileyQuestionnaireItemProps): JSX.Element => {
+}: SmileyQuestionnaireItemProps) => {
   const [status, setStatus] = useState<Status>();
   const fieldsetId = `fieldset-satisfaction`;
 

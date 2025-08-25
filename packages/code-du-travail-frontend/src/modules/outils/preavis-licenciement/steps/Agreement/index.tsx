@@ -6,7 +6,7 @@ import {
   usePreavisLicenciementStore,
 } from "../store";
 
-const StepAgreement = (): JSX.Element => {
+const StepAgreement = () => {
   const store = useContext(PreavisLicenciementContext);
   const {
     error,

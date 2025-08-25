@@ -1,6 +1,5 @@
 import { DsfrLayout } from "../../src/modules/layout";
 import { generateDefaultMetadata } from "../../src/modules/common/metas";
-import { About } from "../../src/modules/a-propos";
 import { Accessibilite } from "../../src/modules/accessibilite";
 
 export const metadata = generateDefaultMetadata({

@@ -4,8 +4,8 @@ import { IndemniteDepartContext, useIndemniteDepartStore } from "../../store";
 import { ErrorPublicodes } from "./components";
 
 type Props = {
-  eligibleComponent?: JSX.Element;
-  ineligibleComponent?: JSX.Element;
+  eligibleComponent?: React.ReactNode;
+  ineligibleComponent?: React.ReactNode;
 };
 
 const StepResult = ({ eligibleComponent, ineligibleComponent }: Props) => {

@@ -7,7 +7,7 @@ import { ContractTypeQuestion, CriteriaQuestions } from "./components";
 import AgreementsInjector from "../../agreements/AgreementsInjector";
 import { IndemnitePrecariteStepName } from "../../types";
 
-const InformationsStepComponent = (): JSX.Element => {
+const InformationsStepComponent = () => {
   const store = useContext(IndemnitePrecariteContext);
   const {
     errors,

@@ -11,7 +11,7 @@ import {
   getStoredConsent,
   saveConsent,
   initConsent,
-} from "../../lib/consent";
+} from "../utils/consent";
 
 // Styles définis séparément
 const modalBody = css({

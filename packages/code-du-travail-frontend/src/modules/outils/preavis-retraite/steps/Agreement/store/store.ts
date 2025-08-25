@@ -11,7 +11,7 @@ import {
   getAgreementFromLocalStorage,
   removeAgreementFromLocalStorage,
   saveAgreementToLocalStorage,
-} from "src/modules/common/useLocalStorage";
+} from "src/modules/utils/useLocalStorage";
 import { loadPublicodes } from "src/modules/outils/common/publicodes";
 import { AgreementRoute } from "src/modules/outils/indemnite-depart/types";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";

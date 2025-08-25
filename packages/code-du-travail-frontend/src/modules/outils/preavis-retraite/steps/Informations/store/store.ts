@@ -11,7 +11,7 @@ import { getSeniorityInMonths } from "../../../agreements/seniority/getSeniority
 import { mapToPublicodesSituationForCalculationPreavisRetraite } from "src/modules/outils/common/publicodes";
 import { PublicodesInformation } from "src/modules/outils/indemnite-depart/steps/Informations/store";
 import { informationToSituation } from "src/modules/outils/indemnite-depart/steps/Informations/components/utils";
-import { removeDuplicateObject } from "src/lib";
+import { removeDuplicateObject } from "src/modules/utils/array";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 
 const initialState: InformationsStoreData = {

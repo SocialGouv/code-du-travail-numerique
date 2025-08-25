@@ -1,7 +1,7 @@
 import { SalaryPeriods } from "@socialgouv/modeles-social";
 import produce from "immer";
 import { StoreApi } from "zustand";
-import { deepMergeArray } from "src/lib";
+import { deepMergeArray } from "src/modules/utils/array";
 import { computeSalaryPeriods } from "../../../common";
 import { AncienneteStoreSlice } from "../../../steps/Anciennete/store";
 import { SalairesStoreSlice } from "../../../steps/Salaires/store";

@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { css } from "@styled-system/css";
 import { PolyfillComponent } from "../config/PolyfillComponent";
 import { Footer } from "./footer";
@@ -5,7 +6,7 @@ import { Header } from "./header";
 import { SkipLinks } from "./SkipLinks";
 
 type Props = {
-  children: React.ReactNode;
+  children: ReactNode;
   container?: "fr-container" | "fr-container--fluid";
 };
 

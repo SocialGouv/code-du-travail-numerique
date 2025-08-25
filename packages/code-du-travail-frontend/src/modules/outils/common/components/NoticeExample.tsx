@@ -2,7 +2,7 @@ import React from "react";
 
 import { convertPeriodToHumanDate, Extra, getExtra } from "../utils";
 import { ListSimulator } from "../types";
-import { convertDate, dateToString, Unit } from "src/lib";
+import { convertDate, dateToString, Unit } from "src/modules/utils/date";
 
 const FROM_DATE = new Date("2022-04-05");
 
@@ -12,7 +12,7 @@ type NoticeExampleProps = {
   simulator: ListSimulator;
   period: string;
   fromDate?: Date;
-  note?: JSX.Element;
+  note?: React.ReactNode;
   idccNumber?: number;
 };
 
@@ -22,7 +22,7 @@ export const NoticeExample = ({
   fromDate = FROM_DATE,
   note,
   idccNumber,
-}: NoticeExampleProps): JSX.Element => {
+}: NoticeExampleProps) => {
   const isCcsWithOneMoreDay =
     idccNumber && CCS_WITH_ONE_MORE_DAY.includes(idccNumber);
   const defaultDayPreavisDemissionMessage = isCcsWithOneMoreDay
@@ -122,7 +122,7 @@ export const NoticeExample = ({
   }
 };
 
-const MorePrecision = ({ extra }: { extra: Extra | null }): JSX.Element => {
+const MorePrecision = ({ extra }: { extra: Extra | null }) => {
   switch (extra) {
     case Extra.OPEN:
       return <PrecisionOpenDay />;
@@ -133,7 +133,7 @@ const MorePrecision = ({ extra }: { extra: Extra | null }): JSX.Element => {
   }
 };
 
-const PrecisionOpenDay = (): JSX.Element => (
+const PrecisionOpenDay = () => (
   <span data-testid="notice-open-day">
     Les jours ouvrés sont les jours effectivement travaillés dans une entreprise
     ou une administration. On en compte 5 par semaine.
@@ -141,7 +141,7 @@ const PrecisionOpenDay = (): JSX.Element => (
   </span>
 );
 
-const PrecisionCalendarDay = (): JSX.Element => (
+const PrecisionCalendarDay = () => (
   <span data-testid="notice-calendar-day">
     Les jours calendaires correspondent à la totalité des jours du calendrier de
     l’année civile, du 1er janvier au 31 décembre, y compris les jours fériés ou
@@ -150,7 +150,7 @@ const PrecisionCalendarDay = (): JSX.Element => (
   </span>
 );
 
-const CommunAccord = (): JSX.Element => (
+const CommunAccord = () => (
   <span data-testid="notice-commun-accord">
     <br />
     L’employeur et le salarié peuvent fixer d’un commun accord une date de

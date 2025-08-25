@@ -1,7 +1,9 @@
+import { ReactNode } from "react";
+
 export type Step<T extends string> = {
   name: T;
   label: string;
-  Component: () => JSX.Element;
+  Component: () => ReactNode;
   options?: {
     isForm?: boolean;
     hasNoMarginBottom?: boolean;

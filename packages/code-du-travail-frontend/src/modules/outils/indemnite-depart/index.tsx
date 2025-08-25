@@ -9,8 +9,8 @@ import { IndemniteDepartType } from "./types";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { Step } from "../common/components/SimulatorLayout/types";
 import { SimulatorLayout } from "../common/components/SimulatorLayout";
-import { EVENT_CATEGORY } from "src/outils/common/Feedback/tracking";
 import { Feedback } from "./feedback";
+import { EVENT_CATEGORY } from "./feedback/tracking";
 
 type SimulateurProps = CalculateurIndemniteProps & {
   title: string;
@@ -32,7 +32,7 @@ const IndemniteDepartSimulator = ({
   feedbackPopup,
   steps,
   tool,
-}: SimulateurProps): JSX.Element => {
+}: SimulateurProps) => {
   const store = useContext(IndemniteDepartContext);
   const {
     onNextStepContratTravail,
@@ -127,7 +127,7 @@ export const CalculateurIndemnite = ({
   tool,
   steps,
   feedbackPopup,
-}: CalculateurIndemniteProps): JSX.Element => {
+}: CalculateurIndemniteProps) => {
   const store = React.useRef(createIndemniteDepartStore(tool)).current;
 
   return (

@@ -1,7 +1,7 @@
 import { render, RenderResult } from "@testing-library/react";
 import React from "react";
 import { ui } from "./ui";
-import { UserAction } from "src/common";
+import { UserAction } from "src/modules/outils/common/utils/UserAction";
 import { sendEvent } from "../../utils";
 import { AgreementSearchIntro } from "../AgreementSearch";
 

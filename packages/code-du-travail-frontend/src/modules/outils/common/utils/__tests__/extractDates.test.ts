@@ -1,4 +1,4 @@
-import { Unit } from "src/lib";
+import { Unit } from "src/modules/utils/date";
 import {
   convertPeriodToHumanDate,
   Extra,

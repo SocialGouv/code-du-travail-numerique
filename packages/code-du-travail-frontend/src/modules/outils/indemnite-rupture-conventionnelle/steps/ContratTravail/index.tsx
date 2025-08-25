@@ -9,7 +9,7 @@ import {
   useIndemniteDepartStore,
 } from "src/modules/outils/indemnite-depart/store";
 
-const StepContratTravail = (): JSX.Element => {
+const StepContratTravail = () => {
   const store = useContext(IndemniteDepartContext);
   const {
     onChangeLicenciementFauteGrave,

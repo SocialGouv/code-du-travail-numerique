@@ -1,6 +1,6 @@
 import produce from "immer";
 import { StoreApi } from "zustand";
-import { deepEqualObject } from "src/lib";
+import { deepEqualObject } from "src/modules/utils/object";
 import { MainStore } from "../../../store";
 import {
   Agreement1527StoreError,

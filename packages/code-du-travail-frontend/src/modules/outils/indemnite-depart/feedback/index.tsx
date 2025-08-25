@@ -11,7 +11,7 @@ type Props = {
   category: EVENT_CATEGORY;
 };
 
-export const Feedback = ({ category }: Props): JSX.Element => {
+export const Feedback = ({ category }: Props) => {
   const [status, setStatus] = useState<
     "questionnaire" | "questionnaireAdvanced" | "questionnaireEnd"
   >();

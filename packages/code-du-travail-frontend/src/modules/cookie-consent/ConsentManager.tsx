@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, lazy, Suspense } from "react";
-import { initConsent } from "../../lib/consent";
+import { initConsent } from "../utils/consent";
 
 const CookieConsentDSFR = lazy(
   () =>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const StepIntro = (): JSX.Element => (
+const StepIntro = () => (
   <>
     <p>
       Ce simulateur permet de calculer le nombre d&apos;heures d&apos;absence

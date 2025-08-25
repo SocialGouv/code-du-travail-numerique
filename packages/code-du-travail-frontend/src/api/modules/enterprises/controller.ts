@@ -1,23 +1,20 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 import { InvalidQueryError } from "../../utils";
 import { fetchEnterprises, populateAgreements } from "./service";
-import { ApiEnterpriseData } from "./types";
-import { ErrorResponse } from "../../types";
 import { captureException } from "@sentry/nextjs";
 
-export class EnterprisesController {
-  private req: NextApiRequest;
-  private res: NextApiResponse<ApiEnterpriseData | ErrorResponse>;
+export class EnterprisesAppController {
+  private searchParams: URLSearchParams;
 
-  constructor(req: NextApiRequest, res: NextApiResponse) {
-    this.req = req;
-    this.res = res;
+  constructor(request: Request) {
+    const url = new URL(request.url);
+    this.searchParams = url.searchParams;
   }
 
-  public async get() {
+  public async get(): Promise<NextResponse> {
     try {
-      const query = this.req.query.q;
-      const postCode = this.req.query.cp;
+      const query = this.searchParams.get("q");
+      const postCode = this.searchParams.get("cp");
 
       if (
         !query ||
@@ -36,11 +33,24 @@ export class EnterprisesController {
       const jsonResponse = await fetchEnterprises(query, postCodeArray);
 
       const response = await populateAgreements(jsonResponse);
-      this.res.status(200).json(response);
+      return NextResponse.json(response, {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
     } catch (error) {
       console.error(error);
       captureException(error);
-      this.res.status(500).json({ message: error.toString() });
+      return NextResponse.json(
+        { message: error.toString() },
+        {
+          status: 500,
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
     }
   }
 }

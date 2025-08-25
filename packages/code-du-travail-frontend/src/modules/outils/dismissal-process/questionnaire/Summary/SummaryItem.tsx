@@ -1,10 +1,10 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Tooltip from "@codegouvfr/react-dsfr/Tooltip";
-import React from "react";
+import React, { ReactNode } from "react";
 
 type SymmaryItemProps = {
-  data: string | JSX.Element;
+  data: string | ReactNode;
   info?: string;
   onClick: () => void;
   noButton?: boolean;

@@ -1,8 +1,8 @@
 import { render } from "@testing-library/react";
 import React from "react";
 import { BesoinPlusInformations } from "..";
-import { UserAction } from "../../../common";
 import { getServiceInfo } from "../data/servicesDeRenseignement";
+import { UserAction } from "src/modules/outils/common/utils/UserAction";
 
 jest.mock("../data/servicesDeRenseignement");
 

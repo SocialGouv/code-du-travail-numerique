@@ -1,3 +1,4 @@
+import { formatToEuro } from "src/modules/outils/common/utils/formatCurrency";
 import {
   getDecryptedValue,
   getDecryptedValueAgreement,
@@ -6,7 +7,6 @@ import {
   ExplanationAgreementResult,
   ExplanationMainResult,
 } from "@socialgouv/modeles-social";
-import { formatToEuro } from "src/common/formatToEuro";
 
 type Props = {
   label: string;

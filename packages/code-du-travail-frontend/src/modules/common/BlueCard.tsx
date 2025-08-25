@@ -6,7 +6,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const BlueCard = ({ children, ...props }: Props): JSX.Element => {
+const BlueCard = ({ children, ...props }: Props) => {
   return (
     <div
       {...props}

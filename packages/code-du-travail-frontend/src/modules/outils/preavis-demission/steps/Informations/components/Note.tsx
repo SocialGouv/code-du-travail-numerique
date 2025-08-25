@@ -5,7 +5,7 @@ type Props = {
   message: string;
 };
 
-export const Note = ({ message }: Props): JSX.Element => {
+export const Note = ({ message }: Props) => {
   return (
     <div className={fr.cx("fr-alert", "fr-alert--warning")}>
       <p className={fr.cx("fr-alert__title")}>Attention</p>

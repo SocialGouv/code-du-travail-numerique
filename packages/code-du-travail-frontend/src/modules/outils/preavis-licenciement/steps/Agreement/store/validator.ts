@@ -1,4 +1,4 @@
-import { deepEqualObject } from "src/lib";
+import { deepEqualObject } from "src/modules/utils/object";
 import { AgreementStoreError, AgreementStoreInput } from "./types";
 
 export const validateAgreementStepWithState = (state: AgreementStoreInput) => {

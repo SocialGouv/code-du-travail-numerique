@@ -7,7 +7,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { ShowResult, Situation, Warning } from "./components";
 import FormulaInterpreter from "src/modules/outils/common/components/FormulaInterpreter";
 
-const ResultStepComponent = (): JSX.Element => {
+const ResultStepComponent = () => {
   const store = useContext(IndemnitePrecariteContext);
   const {
     result,

@@ -1,4 +1,4 @@
-import { convertDate, dateToString, Unit } from "src/lib";
+import { convertDate, dateToString, Unit } from "src/modules/utils/date";
 
 export enum Extra {
   OPEN = "ouvré",

@@ -8,11 +8,7 @@ type Props = {
   dataTestId?: string;
 };
 
-export const Disclaimer = ({
-  title,
-  message,
-  dataTestId,
-}: Props): JSX.Element => (
+export const Disclaimer = ({ title, message, dataTestId }: Props) => (
   <Alert
     severity="info"
     data-testid={dataTestId}

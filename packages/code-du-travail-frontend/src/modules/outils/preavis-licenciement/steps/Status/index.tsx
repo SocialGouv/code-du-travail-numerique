@@ -8,7 +8,7 @@ import {
 } from "../store";
 import { Seniority } from "./store/types";
 
-const StepStatus = (): JSX.Element => {
+const StepStatus = () => {
   const store = useContext(PreavisLicenciementContext);
   const {
     seriousMisconduct,

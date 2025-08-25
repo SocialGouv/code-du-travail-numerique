@@ -1,4 +1,4 @@
-import { MatomoAgreementEvent } from "src/lib";
+import { MatomoAgreementEvent } from "../analytics";
 import { sendEvent } from "../utils";
 
 export enum TrackingContributionCategory {

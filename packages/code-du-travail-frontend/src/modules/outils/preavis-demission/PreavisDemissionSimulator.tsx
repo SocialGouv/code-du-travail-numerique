@@ -90,7 +90,7 @@ const PreavisDemissionSimulatorContent = ({
 }: {
   title: string;
   steps: Step<PreavisDemissionStepName>[];
-}): JSX.Element => {
+}) => {
   const store = useContext(PreavisDemissionContext);
 
   const {

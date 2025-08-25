@@ -29,7 +29,7 @@ jest.mock("next/navigation", () => ({
 }));
 
 // Mock de LocationSearchInput pour simuler la saisie de la localisation
-jest.mock("../../../Location/LocationSearchInput", () => ({
+jest.mock("../LocationSearchInput", () => ({
   LocationSearchInput: ({ onLocationChange, defaultValue }) => (
     <input
       data-testid="location-search-input"

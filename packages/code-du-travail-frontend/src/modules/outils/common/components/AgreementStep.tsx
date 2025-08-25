@@ -38,7 +38,7 @@ export const CommonAgreementStep = ({
   trackingActionName,
   simulator,
   showNotSelectedOption,
-}: Required<Props>): JSX.Element => {
+}: Required<Props>) => {
   React.useEffect(() => {
     onInitAgreementPage();
   }, [onInitAgreementPage]);

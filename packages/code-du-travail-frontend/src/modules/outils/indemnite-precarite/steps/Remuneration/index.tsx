@@ -10,7 +10,7 @@ import {
   SalairesMensuels,
 } from "./components";
 
-const RemunerationStepComponent = (): JSX.Element => {
+const RemunerationStepComponent = () => {
   const store = useContext(IndemnitePrecariteContext);
   const {
     errors,
