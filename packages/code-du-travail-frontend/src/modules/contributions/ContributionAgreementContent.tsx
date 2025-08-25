@@ -58,7 +58,7 @@ export function ContributionAgreementContent({
         {contribution.messageBlock && (
           <div className={fr.cx("fr-alert", "fr-alert--info", "fr-my-6w")}>
             <>
-              <div className={fr.cx("fr-h5")}>Attention</div>
+              <h3 className={fr.cx("fr-h5")}>Attention</h3>
               <Html>{contribution.messageBlock}</Html>
             </>
           </div>

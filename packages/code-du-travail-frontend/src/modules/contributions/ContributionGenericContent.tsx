@@ -64,7 +64,7 @@ export const ContributionGenericContent = forwardRef<
           )}
           {contribution.messageBlock && (
             <div className={fr.cx("fr-alert", "fr-alert--info", "fr-mt-6w")}>
-              <div className={fr.cx("fr-h5")}>Attention</div>
+              <h3 className={fr.cx("fr-h5")}>Attention</h3>
               <Html>{contribution.messageBlock}</Html>
             </div>
           )}
