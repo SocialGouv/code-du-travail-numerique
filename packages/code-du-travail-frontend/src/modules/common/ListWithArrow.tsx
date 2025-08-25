@@ -7,7 +7,7 @@ export const ListWithArrow = ({ items }: { items: React.ReactNode[] }) => {
     <ul className={`${fr.cx("fr-pl-0")} ${ul}`}>
       {items.map((item, index) => {
         return (
-          <li key={index} className={`${fr.cx("fr-pb-2w")} ${li}`}>
+          <li key={`${index}`} className={`${fr.cx("fr-pb-2w")} ${li}`}>
             <span
               className={`${fr.cx("ri-arrow-right-line")} ${css({
                 color: "var(--artwork-minor-blue-cumulus)",

@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { slugify } from "@socialgouv/cdtn-utils";
 import Accordion from "@codegouvfr/react-dsfr/Accordion";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -32,6 +32,13 @@ export const AccordionWithAnchor = ({
     }[]
   >([]);
   const refs = useRef<Record<string, HTMLDivElement | null>>({});
+
+  const setRef = useCallback(
+    (id: string) => (el: HTMLDivElement | null) => {
+      refs.current[id] = el;
+    },
+    []
+  );
 
   useEffect(() => {
     const hash = window.location.hash?.substring(1);
@@ -74,9 +81,7 @@ export const AccordionWithAnchor = ({
           key={item.id}
           label={item.title}
           defaultExpanded={item.expended}
-          ref={(el) => {
-            refs.current[item.id] = el;
-          }}
+          ref={setRef(item.id)}
         >
           {item.content}
         </Accordion>
