@@ -68,16 +68,21 @@ export const Table = ({
                 {rows.map((tr, rowIndex) => (
                   <tr key={rowIndex}>
                     {tr.children.map((td, columnIndex) => {
-                      const Cell = isHeaderCell(columnIndex) ? "th" : "td";
-                      const scopeProp = Cell === "th" ? { scope: "row" } : {};
+                      const isThCell = isHeaderCell(columnIndex);
+                      const Cell = isThCell ? "th" : "td";
                       if (!td.children) {
-                        return <Cell key={columnIndex} {...scopeProp} />;
+                        return (
+                          <Cell
+                            key={columnIndex}
+                            {...(isThCell && { scope: "row" })}
+                          />
+                        );
                       }
                       return (
                         <Cell
                           key={columnIndex}
                           {...handleSpan(td)}
-                          {...scopeProp}
+                          {...(isThCell && { scope: "row" })}
                         >
                           <ElementBuilder
                             data={ignoreParagraph(td)}
