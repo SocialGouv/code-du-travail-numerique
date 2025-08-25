@@ -37,17 +37,13 @@ export const AccordionWrapper = ({
   headingLevel: number;
 }) => {
   if (headingLevel >= 2) {
-    return (
-      <>
-        {data.children.map((child) => (
-          <SectionWithTitle
-            data={child}
-            headingLevel={headingLevel}
-            key={generateUUID(child)}
-          />
-        ))}
-      </>
-    );
+    return data.children.map((child) => (
+      <SectionWithTitle
+        data={child}
+        headingLevel={headingLevel}
+        key={generateUUID(child)}
+      />
+    ));
   }
   const firstIndexOfAccordionItem = data.children.findIndex(isItemOfAccordion);
   const accordionItems = data.children
