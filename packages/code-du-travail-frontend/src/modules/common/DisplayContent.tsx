@@ -390,7 +390,7 @@ const DisplayContent = ({
   content,
   titleLevel,
 }: Props): string | JSX.Element | JSX.Element[] => {
-  return <div>{displayContentParse({ content, titleLevel })}</div>;
+  return <>{displayContentParse({ content, titleLevel })}</>;
 };
 
 export default DisplayContent;
