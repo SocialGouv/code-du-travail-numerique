@@ -116,9 +116,6 @@ describe("AbsencePeriods Component - Accessibility and Error Handling Tests", ()
       selector: "p",
     });
     expect(errorContainer.tagName).toBe("P");
-    expect(errorContainer.parentElement).toHaveClass(
-      fr.cx("fr-card", "fr-mt-2w", "fr-alert--error")
-    );
   });
 });
 

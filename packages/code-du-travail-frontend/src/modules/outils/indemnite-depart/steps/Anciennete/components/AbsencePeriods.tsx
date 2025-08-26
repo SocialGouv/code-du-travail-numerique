@@ -185,7 +185,10 @@ const AbsencePeriods = ({
 
       {error?.global && (
         <div id={errorMessageId}>
-          <div className={fr.cx("fr-alert", "fr-alert--error", "fr-mt-2w")}>
+          <div
+            role="alert"
+            className={fr.cx("fr-alert", "fr-alert--error", "fr-mt-2w")}
+          >
             <p>{error.global}</p>
           </div>
         </div>
