@@ -1,6 +1,6 @@
 import { Select } from "@codegouvfr/react-dsfr/Select";
 import { Input } from "@codegouvfr/react-dsfr/Input";
-import React, { useState } from "react";
+import React, { JSX, useState } from "react";
 import { Motif } from "@socialgouv/modeles-social";
 import { AbsenceWithKey } from "./AbsencePeriods";
 import { Button } from "@codegouvfr/react-dsfr/Button";

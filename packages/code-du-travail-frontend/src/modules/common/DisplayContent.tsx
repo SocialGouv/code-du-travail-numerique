@@ -6,7 +6,7 @@ import parse, {
   Text,
 } from "html-react-parser";
 import Alert from "@codegouvfr/react-dsfr/Alert";
-import { ElementType, ReactNode } from "react";
+import { ElementType, JSX, ReactNode } from "react";
 import { AccordionWithAnchor } from "./AccordionWithAnchor";
 import { v4 as generateUUID } from "uuid";
 import { fr } from "@codegouvfr/react-dsfr";

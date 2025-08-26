@@ -17,7 +17,7 @@ jest.mock("@codegouvfr/react-dsfr/Button", () => ({
 jest.mock("@codegouvfr/react-dsfr/Select", () => ({
   Select: ({ label, nativeSelectProps, children }: any) => (
     <>
-      <label>{label}</label>
+      <label htmlFor={nativeSelectProps.id}>{label}</label>
       <select {...nativeSelectProps}>{children}</select>
     </>
   ),
@@ -25,7 +25,7 @@ jest.mock("@codegouvfr/react-dsfr/Select", () => ({
 jest.mock("@codegouvfr/react-dsfr/Input", () => ({
   Input: ({ label, nativeInputProps, stateRelatedMessage }: any) => (
     <>
-      <label>{label}</label>
+      <label htmlFor={nativeInputProps.id}>{label}</label>
       <input {...nativeInputProps} />
       {stateRelatedMessage && <span>{stateRelatedMessage}</span>}
     </>
@@ -66,7 +66,7 @@ describe("AbsencePeriods Component - Accessibility and Error Handling Tests", ()
   });
 
   test('Adds an empty <div aria-live="polite"> in the source code and generates status message inside it when global error occurs', async () => {
-    const { rerender } = render(
+    const { rerender, container } = render(
       <AbsencePeriods
         onChange={mockOnChange}
         motifs={mockMotifs}
@@ -76,7 +76,10 @@ describe("AbsencePeriods Component - Accessibility and Error Handling Tests", ()
     );
 
     // Initially, the div is empty
-    const politeDiv = screen.getByRole("status", { hidden: true });
+    const politeDiv = container.querySelector(
+      '[aria-live="polite"]'
+    ) as HTMLElement;
+    expect(politeDiv).toBeInTheDocument();
     expect(politeDiv).toHaveAttribute("aria-live", "polite");
     expect(politeDiv).toHaveClass("sr-only");
     expect(politeDiv).toHaveTextContent("");
@@ -109,7 +112,9 @@ describe("AbsencePeriods Component - Accessibility and Error Handling Tests", ()
       />
     );
 
-    const errorContainer = screen.getByText("Global error message");
+    const errorContainer = screen.getByText("Global error message", {
+      selector: "p",
+    });
     expect(errorContainer.tagName).toBe("P");
     expect(errorContainer.parentElement).toHaveClass(
       fr.cx("fr-card", "fr-mt-2w", "fr-alert--error")
