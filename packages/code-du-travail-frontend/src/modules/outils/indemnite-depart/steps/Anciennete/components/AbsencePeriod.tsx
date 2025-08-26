@@ -25,6 +25,8 @@ type Props = {
   absenceDateError?: string;
   showDeleteButton: boolean;
   informationData: Record<string, string | undefined>;
+  autoFocus?: boolean;
+  ariaDescribedby?: string;
 };
 
 const AbsencePeriod = ({
@@ -39,6 +41,8 @@ const AbsencePeriod = ({
   showDeleteButton,
   onDeleteAbsence,
   informationData,
+  autoFocus,
+  ariaDescribedby,
 }: Props): JSX.Element => {
   const [shouldAskAbsenceDate, askAbsenceDate] = useState(
     absence
@@ -98,6 +102,8 @@ const AbsencePeriod = ({
                 onWheel: preventScroll,
                 value: absence?.durationInMonth ?? "",
                 "data-testid": `absence-duree-${index}`,
+                "aria-describedby": ariaDescribedby,
+                autoFocus: autoFocus,
               } as any
             }
             classes={{
@@ -117,6 +123,7 @@ const AbsencePeriod = ({
               error={absenceDateError}
               id={`${index}.dateAbsence`}
               dataTestId={`absence-date-${index}`}
+              autoFocus={false}
             />
           </div>
         )}
