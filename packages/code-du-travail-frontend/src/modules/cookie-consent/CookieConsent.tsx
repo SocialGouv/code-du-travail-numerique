@@ -1,7 +1,7 @@
 "use client";
 
 import { fr } from "@codegouvfr/react-dsfr";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
@@ -14,6 +14,16 @@ import {
 } from "../utils/consent";
 
 // Styles définis séparément
+const modalBody = css({
+  maxHeight: "80vh !important",
+  overflowY: "auto !important",
+});
+
+const modalContent = css({
+  maxHeight: "none !important",
+  overflowY: "visible !important",
+});
+
 const modalFooter = css({
   position: "sticky",
   bottom: 0,
@@ -65,30 +75,37 @@ export const CookieConsentDSFR = () => {
   const [showBanner, setShowBanner] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const pathname = usePathname();
-  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
+  // Don't show cookie consent on widget pages
   const isWidgetPage = pathname?.startsWith("/widgets");
 
+  // Open modal
   const openModal = () => {
     setIsModalOpen(true);
   };
 
+  // Close modal
   const closeModal = () => {
     setIsModalOpen(false);
   };
 
+  // Initialize consent state from local storage
   useEffect(() => {
     const storedConsent = getStoredConsent();
     setConsent(storedConsent);
 
+    // Show banner if no consent has been given yet
     const hasConsented = localStorage.getItem("cdtn-cookie-consent-given");
     if (!hasConsented) {
       setShowBanner(true);
+      // Don't initialize cookies until user has consented
     } else {
+      // User has already made a choice, initialize consent
       initConsent();
     }
   }, []);
 
+  // Handle accepting all cookies
   const handleAcceptAll = () => {
     const newConsent = { matomo: true, sea: true, matomoHeatmap: true };
     setConsent(newConsent);
@@ -97,10 +114,13 @@ export const CookieConsentDSFR = () => {
     closeModal();
     localStorage.setItem("cdtn-cookie-consent-given", "true");
 
+    // Initialize consent after user has made a choice
     initConsent();
   };
 
+  // Handle rejecting all cookies
   const handleRejectAll = () => {
+    // Matomo is mandatory, so it's always true
     const newConsent = { matomo: true, sea: false, matomoHeatmap: false };
     setConsent(newConsent);
     saveConsent(newConsent);
@@ -108,9 +128,11 @@ export const CookieConsentDSFR = () => {
     closeModal();
     localStorage.setItem("cdtn-cookie-consent-given", "true");
 
+    // Initialize consent after user has made a choice
     initConsent();
   };
 
+  // Handle saving custom settings
   const handleSaveSettings = () => {
     saveConsent(consent);
     setShowBanner(false);
@@ -118,20 +140,13 @@ export const CookieConsentDSFR = () => {
     localStorage.setItem("cdtn-cookie-consent-given", "true");
   };
 
+  // Handle checkbox changes
   const handleConsentChange = (type: keyof ConsentType) => {
     setConsent((prev) => ({
       ...prev,
       [type]: !prev[type],
     }));
   };
-
-  useEffect(() => {
-    if (isModalOpen && closeButtonRef.current) {
-      setTimeout(() => {
-        closeButtonRef.current?.focus();
-      }, 100);
-    }
-  }, [isModalOpen]);
 
   return (
     <>
@@ -213,7 +228,6 @@ export const CookieConsentDSFR = () => {
               <div className={`${fr.cx("fr-modal__body")}`}>
                 <div className={fr.cx("fr-modal__header")}>
                   <button
-                    ref={closeButtonRef}
                     className={fr.cx("fr-btn--close", "fr-btn")}
                     title="Fermer la fenêtre modale"
                     aria-controls="cookie-settings-modal"
