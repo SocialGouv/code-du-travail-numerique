@@ -1,7 +1,7 @@
 "use client";
 
 import { fr } from "@codegouvfr/react-dsfr";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
@@ -14,16 +14,6 @@ import {
 } from "../utils/consent";
 
 // Styles définis séparément
-const modalBody = css({
-  maxHeight: "80vh !important",
-  overflowY: "auto !important",
-});
-
-const modalContent = css({
-  maxHeight: "none !important",
-  overflowY: "visible !important",
-});
-
 const modalFooter = css({
   position: "sticky",
   bottom: 0,
@@ -74,19 +64,28 @@ export const CookieConsentDSFR = () => {
   const [consent, setConsent] = useState<ConsentType>(DEFAULT_CONSENT);
   const [showBanner, setShowBanner] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [previousFocus, setPreviousFocus] = useState<Element | null>(null);
   const pathname = usePathname();
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
 
   // Don't show cookie consent on widget pages
   const isWidgetPage = pathname?.startsWith("/widgets");
 
   // Open modal
   const openModal = () => {
+    setPreviousFocus(document.activeElement);
     setIsModalOpen(true);
   };
 
   // Close modal
   const closeModal = () => {
     setIsModalOpen(false);
+    setTimeout(() => {
+      if (previousFocus && (previousFocus as HTMLElement).focus) {
+        (previousFocus as HTMLElement).focus();
+      }
+    }, 0);
   };
 
   // Initialize consent state from local storage
@@ -147,6 +146,52 @@ export const CookieConsentDSFR = () => {
       [type]: !prev[type],
     }));
   };
+
+  // Move focus to close button when modal opens
+  useEffect(() => {
+    if (isModalOpen && closeButtonRef.current) {
+      setTimeout(() => {
+        closeButtonRef.current?.focus();
+      }, 100);
+    }
+  }, [isModalOpen]);
+
+  // Focus trapping
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Tab" || !modalRef.current) {
+        return;
+      }
+
+      const focusableElements = modalRef.current.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusableElements.length === 0) {
+        return;
+      }
+
+      const first = focusableElements[0] as HTMLElement;
+      const last = focusableElements[
+        focusableElements.length - 1
+      ] as HTMLElement;
+
+      if (event.shiftKey && document.activeElement === first) {
+        last.focus();
+        event.preventDefault();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        first.focus();
+        event.preventDefault();
+      }
+    };
+
+    if (isModalOpen) {
+      document.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isModalOpen]);
 
   return (
     <>
@@ -225,9 +270,13 @@ export const CookieConsentDSFR = () => {
         >
           <div className={fr.cx("fr-grid-row", "fr-grid-row--center")}>
             <div className={fr.cx("fr-col-12", "fr-col-md-10", "fr-col-lg-8")}>
-              <div className={`${fr.cx("fr-modal__body")}`}>
+              <div
+                className={`${fr.cx("fr-modal__body")} ${css({})}`}
+                ref={modalRef}
+              >
                 <div className={fr.cx("fr-modal__header")}>
                   <button
+                    ref={closeButtonRef}
                     className={fr.cx("fr-btn--close", "fr-btn")}
                     title="Fermer la fenêtre modale"
                     aria-controls="cookie-settings-modal"
