@@ -2,8 +2,8 @@ import { render } from "@testing-library/react";
 import React from "react";
 
 import { FeedbackContent } from "../FeedbackContent";
-import { UserAction } from "src/common";
 import { ui } from "./ui";
+import { UserAction } from "src/modules/outils/common/utils/UserAction";
 
 describe("<FeedbackContent />", () => {
   it("should match snapshot for positive", () => {

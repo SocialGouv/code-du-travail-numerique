@@ -10,10 +10,9 @@ import { createElement, ReactNode, useEffect, useRef, useState } from "react";
 import { css } from "@styled-system/css";
 
 import Spinner from "../../common/Spinner.svg";
-import { LocationSearchInput } from "../../Location/LocationSearchInput";
+import { LocationSearchInput } from "./LocationSearchInput";
 import { searchEnterprises } from "../queries";
 import { Enterprise } from "../types";
-import { ApiGeoResult } from "../../Location/searchCities";
 import { CardTitleStyle } from "../../convention-collective/style";
 import { EnterpriseAgreementSelectionForm } from "./EnterpriseAgreementSelectionForm";
 import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelectionDetail";
@@ -21,6 +20,7 @@ import { getEnterpriseAgreements } from "./utils";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { scrollToTop } from "src/modules/outils/common/utils";
+import { ApiGeoResult } from "./searchCities";
 
 type Props = {
   widgetMode?: boolean;

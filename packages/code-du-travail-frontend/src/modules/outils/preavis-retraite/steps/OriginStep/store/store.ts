@@ -10,7 +10,7 @@ import { StoreSliceWrapperPreavisRetraite } from "../../store";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { InformationsStoreSlice } from "../../Informations/store";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
-import { MatomoBaseEvent, MatomoRetirementEvent } from "src/lib";
+import { MatomoBaseEvent, MatomoRetirementEvent } from "src/modules/analytics";
 
 const initialState: OriginDepartStoreData = {
   input: {},

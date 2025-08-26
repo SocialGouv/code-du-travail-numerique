@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Html from "src/modules/common/Html";
-import { xssWrapper } from "src/lib";
 import { Input } from "@codegouvfr/react-dsfr/Input";
 import { InputUnit } from "../../indemnite-depart/steps/Informations/components/PubliQuestion";
 import {
@@ -10,6 +9,7 @@ import {
 } from "../utils";
 import { preventScroll } from "src/modules/outils/common/utils/input";
 import { defaultInputStyle } from "../styles/input";
+import { xssWrapper } from "src/modules/utils/xss";
 
 type Props = {
   onChange: (value: string) => void;

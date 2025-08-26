@@ -84,8 +84,6 @@ type Props = {
   children: string;
 };
 
-export const ContentParser = ({
-  children,
-}: Props): string | JSX.Element | JSX.Element[] => {
+export const ContentParser = ({ children }: Props) => {
   return <>{parse(xssWrapper(children), options())}</>;
 };

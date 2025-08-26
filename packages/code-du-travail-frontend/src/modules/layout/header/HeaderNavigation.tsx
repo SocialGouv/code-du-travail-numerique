@@ -1,7 +1,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Link from "../../common/Link";
-import { cx } from "@codegouvfr/react-dsfr/src/tools/cx";
-import type { MainNavigationProps } from "@codegouvfr/react-dsfr/src/MainNavigation";
+import { cx } from "@codegouvfr/react-dsfr/tools/cx";
+import type { MainNavigationProps } from "@codegouvfr/react-dsfr/MainNavigation/MainNavigation";
 
 type HeaderNavigationProps = {
   navigation?: MainNavigationProps.Item.Link[];

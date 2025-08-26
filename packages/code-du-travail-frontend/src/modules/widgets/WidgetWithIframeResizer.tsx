@@ -1,8 +1,8 @@
 "use client";
 
 import { fr } from "@codegouvfr/react-dsfr";
-import { useIframeResizer } from "../../common/hooks";
 import { LogoLink } from "../common/LogoLink";
+import { useIframeResizer } from "../utils/useIframeResizer";
 
 export function WidgetWithIframeResizer({
   children,

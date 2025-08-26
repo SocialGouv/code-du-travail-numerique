@@ -91,7 +91,7 @@ const IndemnitePrecariteSimulatorContent = ({
 }: {
   title: string;
   steps: Step<IndemnitePrecariteStepName>[];
-}): JSX.Element => {
+}) => {
   const store = useContext(IndemnitePrecariteContext);
 
   if (!store) {

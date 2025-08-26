@@ -1,9 +1,3 @@
-import {
-  MatomoAgreementEvent,
-  MatomoBaseEvent,
-  MatomoSearchAgreementCategory,
-  MatomoSimulatorEvent,
-} from "../../../../../lib";
 import { push as matopush } from "@socialgouv/matomo-next";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import {
@@ -11,6 +5,12 @@ import {
   pushAgreementEvents,
 } from "../pushAgreementEvents";
 import { Enterprise } from "src/modules/enterprise";
+import {
+  MatomoBaseEvent,
+  MatomoSearchAgreementCategory,
+  MatomoAgreementEvent,
+  MatomoSimulatorEvent,
+} from "src/modules/analytics";
 
 jest.mock("@socialgouv/matomo-next", () => ({
   push: jest.fn(),

@@ -6,7 +6,7 @@ import {
 } from "@socialgouv/cdtn-utils";
 import { useCallback } from "react";
 import { push as matopush } from "@socialgouv/matomo-next";
-import { MatomoBaseEvent } from "../../lib/matomo/types";
+import { MatomoBaseEvent } from "../analytics/types";
 
 enum MatomoSearchCategory {
   CANDIDATE_RESULTS = "candidateResults",

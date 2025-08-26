@@ -1,4 +1,4 @@
-import { deepEqualObject } from "src/lib";
+import { deepEqualObject } from "src/modules/utils/object";
 import { OriginDepartStoreError, OriginDepartStoreInput } from "./types";
 
 export const validateStep = (state: OriginDepartStoreInput) => {

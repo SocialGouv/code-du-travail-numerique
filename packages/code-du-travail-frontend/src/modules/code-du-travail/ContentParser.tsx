@@ -1,9 +1,7 @@
 import parse, { domToReact } from "html-react-parser";
 import Link from "../common/Link";
 
-export const ContentParser = ({
-  children,
-}): string | JSX.Element | JSX.Element[] => {
+export const ContentParser = ({ children }) => {
   const options = {
     replace: (domNode) => {
       if (

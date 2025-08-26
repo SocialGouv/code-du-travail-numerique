@@ -5,11 +5,11 @@ import { CommonAgreementStoreData, CommonAgreementStoreSlice } from "./types";
 import { PublicodesSimulator, supportedCcn } from "@socialgouv/modeles-social";
 import { AgreementRoute, StoreSlicePublicodes } from "../../../types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
-import { getAgreementFromLocalStorage } from "src/modules/common/useLocalStorage";
 import {
+  getAgreementFromLocalStorage,
   removeAgreementFromLocalStorage,
   saveAgreementToLocalStorage,
-} from "src/lib/useLocalStorage";
+} from "src/modules/utils/useLocalStorage";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { loadPublicodes } from "src/modules/outils/common/publicodes";
 import isCcFullySupported from "src/modules/outils/common/utils/isCcFullySupported";

@@ -14,7 +14,7 @@ import {
   PublicodesSimulator,
 } from "@socialgouv/modeles-social";
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../../common/publicodes";
-import { removeDuplicateObject } from "src/lib";
+import { removeDuplicateObject } from "src/modules/utils/array";
 import { informationToSituation } from "../components/utils";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import * as Sentry from "@sentry/nextjs";

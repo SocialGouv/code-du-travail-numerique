@@ -5,8 +5,10 @@ import { AgreementSearchInput } from "./AgreementSearchInput";
 
 import { useContributionTracking } from "../../contributions/tracking";
 import { EnterpriseAgreementSearchInput } from "../../enterprise";
-import { AgreementRoute } from "../../../outils/common/type/WizardType";
-import { Agreement } from "src/modules/outils/indemnite-depart/types";
+import {
+  Agreement,
+  AgreementRoute,
+} from "src/modules/outils/indemnite-depart/types";
 import { useAgreementSearchTracking } from "../tracking";
 
 type Props = {

@@ -1,7 +1,7 @@
 import { act, render } from "@testing-library/react";
 import React from "react";
 
-import { useLocalStorageForAgreement } from "../useLocalStorage";
+import { useLocalStorageForAgreement } from "../../utils/useLocalStorage";
 
 function renderApp(initialValue) {
   function App() {

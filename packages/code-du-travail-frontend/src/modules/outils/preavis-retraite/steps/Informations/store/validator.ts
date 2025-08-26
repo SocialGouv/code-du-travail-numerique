@@ -2,7 +2,7 @@ import { InformationsStoreError, InformationsStoreInput } from "./types";
 import { RuleType } from "@socialgouv/modeles-social";
 import { OriginDepartStoreInput } from "../../OriginStep/store";
 import { getNote } from "../../../agreements/informations/getNote";
-import { deepEqualObject } from "src/lib";
+import { deepEqualObject } from "src/modules/utils/object";
 import {
   isDate,
   isPositiveNumber,

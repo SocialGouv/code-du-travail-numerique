@@ -6,7 +6,7 @@ import {
 import { PreavisRetraiteContext, usePreavisRetraiteStore } from "../store";
 import { getSeniorityMessageQuestion } from "../../agreements/seniority/messages";
 
-const StepSeniority = (): JSX.Element => {
+const StepSeniority = () => {
   const store = useContext(PreavisRetraiteContext);
 
   const {

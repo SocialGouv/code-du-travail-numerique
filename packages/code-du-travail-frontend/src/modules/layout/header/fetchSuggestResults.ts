@@ -1,4 +1,4 @@
-import pDebounce from "p-debounce";
+import debounce from "debounce-promise";
 import { SITE_URL, SUGGEST_DEBOUNCE_DELAY } from "../../../config";
 
 const fetchSuggestResultsWithoutDebounce = async (
@@ -13,7 +13,7 @@ const fetchSuggestResultsWithoutDebounce = async (
   return response.json();
 };
 
-export const fetchSuggestResults = pDebounce(
+export const fetchSuggestResults = debounce(
   fetchSuggestResultsWithoutDebounce,
   SUGGEST_DEBOUNCE_DELAY
 );

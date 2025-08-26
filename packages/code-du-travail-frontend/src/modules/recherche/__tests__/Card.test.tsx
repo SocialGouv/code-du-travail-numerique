@@ -1,10 +1,10 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { SearchCard } from "../Card";
-import { summarize } from "../../../search/utils";
+import { summarize } from "src/modules/utils";
 
 // Mock des dépendances
-jest.mock("../../../search/utils", () => ({
+jest.mock("../../utils", () => ({
   summarize: jest.fn((text) => `Résumé: ${text}`),
 }));
 

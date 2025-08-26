@@ -26,7 +26,6 @@ Sentry.init({
   dist: process.env.NEXT_PUBLIC_GITHUB_SHA || "dev",
 
   // Performance monitoring and source maps
-  enableTracing: true,
   attachStacktrace: true, // Attach stack traces to all messages
   normalizeDepth: 10, // Increase stack trace depth for better context
   tracesSampleRate: IS_PRODUCTION ? 0.1 : 1.0, // Sample 10% of traces in prod, all in dev
@@ -38,7 +37,6 @@ Sentry.init({
 
   // Error tracking configuration
   sampleRate: 1.0, // Capture all errors
-  autoSessionTracking: true, // Enable automatic session tracking
   sendClientReports: true, // Enable immediate client reports
 
   beforeSend(event) {

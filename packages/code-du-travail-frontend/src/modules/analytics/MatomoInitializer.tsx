@@ -3,8 +3,8 @@
 import { useEffect } from "react";
 import { init, push } from "@socialgouv/matomo-next";
 import { useRouter } from "next/router";
-import { getSourceUrlFromPath } from "../../lib";
 import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL, WIDGETS_PATH } from "../../config";
+import { getSourceUrlFromPath } from "../utils/url";
 
 /**
  * MatomoInitializer - Initialise le tracking Matomo

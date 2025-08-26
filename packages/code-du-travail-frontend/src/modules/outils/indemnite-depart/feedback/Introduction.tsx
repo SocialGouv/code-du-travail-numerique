@@ -6,7 +6,7 @@ type IntroductionProps = {
   onClick: () => void;
 };
 
-export const Introduction = ({ onClick }: IntroductionProps): JSX.Element => {
+export const Introduction = ({ onClick }: IntroductionProps) => {
   return (
     <div className={containerStyle}>
       <h2 className={fr.cx("fr-text--lg", "fr-mb-2w", "fr-text--bold")}>

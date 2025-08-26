@@ -1,4 +1,5 @@
-import { detectNullOrUndefinedOrNaNInArray, deepEqualObject } from "src/lib";
+import { detectNullOrUndefinedOrNaNInArray } from "src/modules/utils/array";
+import { deepEqualObject } from "src/modules/utils/object";
 import { SalairesStoreInput, SalairesStoreError } from "./types";
 
 export const validateStep = (state: SalairesStoreInput) => {

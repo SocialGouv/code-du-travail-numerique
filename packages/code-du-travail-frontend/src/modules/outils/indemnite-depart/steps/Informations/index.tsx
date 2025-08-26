@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { PubliQuestion } from "./components/PubliQuestion";
 import { fr } from "@codegouvfr/react-dsfr";
 
-const InformationsStep = (): JSX.Element => {
+const InformationsStep = () => {
   const store = useContext(IndemniteDepartContext);
   const { errors, onInformationsChange, informations } =
     useIndemniteDepartStore(store, (state) => ({

@@ -3,7 +3,7 @@ import { PreavisDemissionContext, usePreavisDemissionStore } from "../store";
 import { CommonAgreementStep } from "src/modules/outils/common/components/AgreementStep";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
-const StepAgreement = (): JSX.Element => {
+const StepAgreement = () => {
   const store = useContext(PreavisDemissionContext);
   const {
     error,

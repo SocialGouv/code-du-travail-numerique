@@ -1,8 +1,8 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Notification } from "@socialgouv/modeles-social";
 import React from "react";
-import { formatToEuro } from "src/common/formatToEuro";
 import { NoticeNote } from "src/modules/outils/common/components/NoticeNote";
+import { formatToEuro } from "src/modules/outils/common/utils/formatCurrency";
 
 type Props = {
   title: string;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const StepIntroduction = (): JSX.Element => (
+const StepIntroduction = () => (
   <>
     <p>
       Ce simulateur permet d&apos;estimer le montant de l&apos;indemnité de fin

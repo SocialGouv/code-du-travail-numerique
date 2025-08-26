@@ -7,7 +7,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { PubliQuestion } from "src/modules/outils/indemnite-depart/steps/Informations/components/PubliQuestion";
 import { Note } from "../../../preavis-retraite/steps/Informations/components/Note";
 
-const StepInformations = (): JSX.Element => {
+const StepInformations = () => {
   const store = useContext(PreavisLicenciementContext);
   const {
     errors,

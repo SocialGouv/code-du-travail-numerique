@@ -7,7 +7,7 @@ import { DownloadTile } from "./DownloadTile";
 import { CopyButton } from "./CopyButton";
 import "../../../../public/static/modeles.css";
 import { MailElasticDocument } from "@socialgouv/cdtn-types";
-import DisplayContent from "../../common/DisplayContent";
+import DisplayContent from "src/modules/common/DisplayContent";
 
 export type LetterModelContentProps = Pick<
   MailElasticDocument,

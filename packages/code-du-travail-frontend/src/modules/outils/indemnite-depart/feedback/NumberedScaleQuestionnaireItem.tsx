@@ -39,7 +39,7 @@ export const NumberedScaleQuestionnaireItem = ({
   onChange,
   dataTestId,
   hint,
-}: NumberedScaleQuestionnaireItemProps): JSX.Element => {
+}: NumberedScaleQuestionnaireItemProps) => {
   const [status, setStatus] = useState<Status>();
   const fieldsetId = title
     ? `fieldset-${title.toLowerCase().replace(/\s+/g, "-")}`

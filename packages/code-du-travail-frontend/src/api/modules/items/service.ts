@@ -20,7 +20,7 @@ export const getBySourceAndSlugItems = async <Type>(
   const { _id } = item;
 
   const relatedItems = await getRelatedItems({
-    settings: [{ _id }],
+    settings: [{ _id: _id! }],
     slug,
   });
 

@@ -17,11 +17,11 @@ import {
 import { IndemniteDepartStepName } from "../../..";
 import { computeSalaryPeriods } from "../../../common";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
-import { deepMergeArray } from "src/lib";
 import { add } from "date-fns";
 import { StoreSlice } from "../../../types";
 import { dateToString, parse } from "src/modules/outils/common/utils";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
+import { deepMergeArray } from "src/modules/utils/array";
 
 const initialState: SalairesStoreData = {
   input: {

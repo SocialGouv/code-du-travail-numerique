@@ -1,5 +1,5 @@
-import { toUrl } from "../../lib";
 import { Tile } from "@codegouvfr/react-dsfr/Tile";
+import { toUrl } from "../utils/url";
 
 export const Resume = ({
   year,

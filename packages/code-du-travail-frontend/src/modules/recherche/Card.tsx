@@ -2,7 +2,7 @@
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Card } from "@codegouvfr/react-dsfr/Card";
-import { summarize } from "../../search/utils";
+import { summarize } from "../utils";
 
 type SearchCardProps = {
   id?: string;

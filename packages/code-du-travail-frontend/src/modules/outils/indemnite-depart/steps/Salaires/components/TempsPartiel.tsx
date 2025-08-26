@@ -1,12 +1,12 @@
 import { Alert } from "@codegouvfr/react-dsfr/Alert";
 import React from "react";
-import { IndemniteDepartType } from "src/outils/types";
+import { IndemniteDepartType } from "../../../types";
 
 type Props = {
   type: IndemniteDepartType;
 };
 
-const TempsPartiel = ({ type }: Props): JSX.Element => {
+const TempsPartiel = ({ type }: Props) => {
   return (
     <Alert
       title="À noter"

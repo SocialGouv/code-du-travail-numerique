@@ -1,10 +1,10 @@
 import { v4 as generateUUID } from "uuid";
 import { sendEvent } from "../../utils";
-import { ApiGeoResult } from "../../Location/searchCities";
 import {
   TrackingAgreementSearchAction,
   TrackingAgreementSearchCategory,
 } from "../../convention-collective/tracking";
+import { ApiGeoResult } from "./searchCities";
 
 export const useEnterpriseAgreementSearchTracking = () => {
   const emitEnterpriseAgreementSearchInputEvent = (

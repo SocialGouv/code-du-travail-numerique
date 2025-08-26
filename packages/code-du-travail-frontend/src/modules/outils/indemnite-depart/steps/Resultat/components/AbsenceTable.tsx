@@ -5,7 +5,7 @@ type Props = {
   absencesPeriods: Absence[];
 };
 
-const AbsenceTable = ({ absencesPeriods }: Props): JSX.Element => {
+const AbsenceTable = ({ absencesPeriods }: Props) => {
   if (absencesPeriods.length === 0) {
     return <></>;
   }

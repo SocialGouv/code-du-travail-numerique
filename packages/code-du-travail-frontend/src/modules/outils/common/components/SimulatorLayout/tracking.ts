@@ -2,7 +2,7 @@ import {
   MatomoActionEvent,
   MatomoBaseEvent,
   MatomoSimulatorEvent,
-} from "src/lib";
+} from "src/modules/analytics";
 import { sendEvent } from "src/modules/utils";
 
 export const useSimulatorLayoutTracking = () => {

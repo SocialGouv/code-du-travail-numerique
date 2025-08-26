@@ -1,5 +1,5 @@
 import React from "react";
-import { xssWrapper } from "../../lib";
+import { xssWrapper } from "../utils/xss";
 
 type Props = {
   children: string;
@@ -7,7 +7,7 @@ type Props = {
   className?: string;
 };
 
-const Html = ({ children, ...props }: Props): JSX.Element => {
+const Html = ({ children, ...props }: Props) => {
   if (props.as === "p") {
     return (
       <p
