@@ -64,47 +64,31 @@ export const CookieConsentDSFR = () => {
   const [consent, setConsent] = useState<ConsentType>(DEFAULT_CONSENT);
   const [showBanner, setShowBanner] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [previousFocus, setPreviousFocus] = useState<Element | null>(null);
   const pathname = usePathname();
   const closeButtonRef = useRef<HTMLButtonElement>(null);
-  const modalRef = useRef<HTMLDivElement>(null);
 
-  // Don't show cookie consent on widget pages
   const isWidgetPage = pathname?.startsWith("/widgets");
 
-  // Open modal
   const openModal = () => {
-    setPreviousFocus(document.activeElement);
     setIsModalOpen(true);
   };
 
-  // Close modal
   const closeModal = () => {
     setIsModalOpen(false);
-    setTimeout(() => {
-      if (previousFocus && (previousFocus as HTMLElement).focus) {
-        (previousFocus as HTMLElement).focus();
-      }
-    }, 0);
   };
 
-  // Initialize consent state from local storage
   useEffect(() => {
     const storedConsent = getStoredConsent();
     setConsent(storedConsent);
 
-    // Show banner if no consent has been given yet
     const hasConsented = localStorage.getItem("cdtn-cookie-consent-given");
     if (!hasConsented) {
       setShowBanner(true);
-      // Don't initialize cookies until user has consented
     } else {
-      // User has already made a choice, initialize consent
       initConsent();
     }
   }, []);
 
-  // Handle accepting all cookies
   const handleAcceptAll = () => {
     const newConsent = { matomo: true, sea: true, matomoHeatmap: true };
     setConsent(newConsent);
@@ -113,13 +97,10 @@ export const CookieConsentDSFR = () => {
     closeModal();
     localStorage.setItem("cdtn-cookie-consent-given", "true");
 
-    // Initialize consent after user has made a choice
     initConsent();
   };
 
-  // Handle rejecting all cookies
   const handleRejectAll = () => {
-    // Matomo is mandatory, so it's always true
     const newConsent = { matomo: true, sea: false, matomoHeatmap: false };
     setConsent(newConsent);
     saveConsent(newConsent);
@@ -127,11 +108,9 @@ export const CookieConsentDSFR = () => {
     closeModal();
     localStorage.setItem("cdtn-cookie-consent-given", "true");
 
-    // Initialize consent after user has made a choice
     initConsent();
   };
 
-  // Handle saving custom settings
   const handleSaveSettings = () => {
     saveConsent(consent);
     setShowBanner(false);
@@ -139,7 +118,6 @@ export const CookieConsentDSFR = () => {
     localStorage.setItem("cdtn-cookie-consent-given", "true");
   };
 
-  // Handle checkbox changes
   const handleConsentChange = (type: keyof ConsentType) => {
     setConsent((prev) => ({
       ...prev,
@@ -147,50 +125,12 @@ export const CookieConsentDSFR = () => {
     }));
   };
 
-  // Move focus to close button when modal opens
   useEffect(() => {
     if (isModalOpen && closeButtonRef.current) {
       setTimeout(() => {
         closeButtonRef.current?.focus();
       }, 100);
     }
-  }, [isModalOpen]);
-
-  // Focus trapping
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key !== "Tab" || !modalRef.current) {
-        return;
-      }
-
-      const focusableElements = modalRef.current.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      if (focusableElements.length === 0) {
-        return;
-      }
-
-      const first = focusableElements[0] as HTMLElement;
-      const last = focusableElements[
-        focusableElements.length - 1
-      ] as HTMLElement;
-
-      if (event.shiftKey && document.activeElement === first) {
-        last.focus();
-        event.preventDefault();
-      } else if (!event.shiftKey && document.activeElement === last) {
-        first.focus();
-        event.preventDefault();
-      }
-    };
-
-    if (isModalOpen) {
-      document.addEventListener("keydown", handleKeyDown);
-    }
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
   }, [isModalOpen]);
 
   return (
@@ -270,10 +210,7 @@ export const CookieConsentDSFR = () => {
         >
           <div className={fr.cx("fr-grid-row", "fr-grid-row--center")}>
             <div className={fr.cx("fr-col-12", "fr-col-md-10", "fr-col-lg-8")}>
-              <div
-                className={`${fr.cx("fr-modal__body")} ${css({})}`}
-                ref={modalRef}
-              >
+              <div className={`${fr.cx("fr-modal__body")}`}>
                 <div className={fr.cx("fr-modal__header")}>
                   <button
                     ref={closeButtonRef}
