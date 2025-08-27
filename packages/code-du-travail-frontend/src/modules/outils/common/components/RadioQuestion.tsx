@@ -32,16 +32,22 @@ export function RadioQuestion({
   note,
   autoFocus = false,
 }: Props) {
-  const firstRadioRef = useRef<HTMLInputElement>(null);
+  const radioRefs = useRef<(HTMLInputElement | null)[]>([]);
 
-  const onChange = (value: string) => {
+  const onChange = (value: string, index: number) => {
     onChangeSelectedOption(value);
+    // Keep focus on the selected radio button
+    setTimeout(() => {
+      if (radioRefs.current[index]) {
+        radioRefs.current[index]?.focus();
+      }
+    }, 0);
   };
 
   useEffect(() => {
-    if (error && firstRadioRef.current) {
-      firstRadioRef.current.focus();
-      firstRadioRef.current.scrollIntoView({
+    if (error && radioRefs.current[0]) {
+      radioRefs.current[0].focus();
+      radioRefs.current[0].scrollIntoView({
         behavior: "smooth",
         block: "center",
       });
@@ -49,8 +55,8 @@ export function RadioQuestion({
   }, [error]);
 
   useEffect(() => {
-    if (autoFocus && firstRadioRef.current) {
-      firstRadioRef.current.focus();
+    if (autoFocus && radioRefs.current[0]) {
+      radioRefs.current[0].focus();
     }
   }, [autoFocus]);
 
@@ -65,11 +71,13 @@ export function RadioQuestion({
           id: question.id,
           nativeInputProps: {
             checked: selectedOption === question.value,
-            onChange: () => onChange(question.value),
+            onChange: () => onChange(question.value, index),
             autoFocus: autoFocus && index === 0,
             required: true,
             "data-testid": `${name} - ${question.label}`,
-            ref: index === 0 ? firstRadioRef : undefined,
+            ref: (el: HTMLInputElement | null) => {
+              radioRefs.current[index] = el;
+            },
           },
         }))}
         state={error ? "error" : subLabel ? "info" : "default"}
