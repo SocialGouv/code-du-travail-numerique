@@ -5,7 +5,7 @@ jest.mock("next/navigation", () => ({
   usePathname: jest.fn().mockReturnValue("/"),
 }));
 
-jest.mock("../../../lib/consent", () => ({
+jest.mock("../../utils/consent", () => ({
   initConsent: jest.fn(),
   DEFAULT_CONSENT: { matomo: true, sea: false, matomoHeatmap: false },
   getStoredConsent: jest.fn().mockImplementation(() => ({
