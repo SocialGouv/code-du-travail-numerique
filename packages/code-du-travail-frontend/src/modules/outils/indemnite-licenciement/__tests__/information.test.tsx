@@ -18,38 +18,7 @@ Storage.prototype.getItem = jest.fn(
 `
 );
 
-global.fetch = jest.fn(() =>
-  Promise.resolve({
-    ok: true,
-    json: () =>
-      Promise.resolve({
-        hits: {
-          hits: [
-            {
-              _source: {
-                effectif: 1173,
-                highlight: {
-                  searchInfo:
-                    "(anciennement conventions collectives “Assistants maternels du particulier employeur” IDCC 2395 et “Salariés du particulier employeur” IDCC 2111).",
-                  title:
-                    "À noter : les informations données sur cette page sont applicables depuis le 01/01/2022",
-                  content:
-                    "Cette convention collective est entrée en vigueur au 01/01/2022 suite à la fusion des conventions collectives “Salariés du particulier employeur (IDCC 2111)” et “Assistants maternels du particulier employeur (IDCC 2395)” qui étaient applicables jusqu’au 31/12/2021.",
-                },
-                cdtnId: "d825ef1df2",
-                num: 3239,
-                shortTitle: "Particuliers employeurs et emploi à domicile",
-                id: "KALICONT000044594539",
-                title: "Particuliers employeurs et emploi à domicile",
-                slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
-                url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
-              },
-            },
-          ],
-        },
-      }),
-  })
-) as jest.Mock;
+jest.mock("../../../convention-collective/search");
 
 describe("Indemnité licenciement - Validation de la page information", () => {
   describe("parcours avec la convention collective 16 pour valider les erreurs", () => {
@@ -71,15 +40,15 @@ describe("Indemnité licenciement - Validation de la page information", () => {
     });
 
     test(`
-       - validation que la première question est affichée
-       - validation des erreurs sur les champs vides
-       - validation que le champ suivant s'affiche quand on répond à la question
-       - validation que les champs sont retirés quand on revient à une question précédente
-       - validation qu'un champ présent avant soit réinitialisé
-       - validation que l'on peut valider la page quand tous les champs sont saisis
-       - validation que l'on n'affiche pas la question suivante tant que la date n'est pas valide
-       - validation que les infos sont gardées quand on revient sur les étapes précédentes sans changer les infos
-       - validation que les infos sont effacées quand on change de convention collective
+      - validation que la première question est affichée
+      - validation des erreurs sur les champs vides
+      - validation que le champ suivant s'affiche quand on répond à la question
+      - validation que les champs sont retirés quand on revient à une question précédente
+      - validation qu'un champ présent avant soit réinitialisé
+      - validation que l'on peut valider la page quand tous les champs sont saisis
+      - validation que l'on n'affiche pas la question suivante tant que la date n'est pas valide
+      - validation que les infos sont gardées quand on revient sur les étapes précédentes sans changer les infos
+      - validation que les infos sont effacées quand on change de convention collective
     `, async () => {
       // validation que la première question est affichée
       expect(

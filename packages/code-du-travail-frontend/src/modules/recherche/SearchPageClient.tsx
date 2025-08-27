@@ -106,6 +106,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
             className={fr.cx("fr-h4")}
             lang="fr"
             tabIndex={-1}
+            id="search-results-heading"
           >
             {documents.length} résultat{documents.length > 1 ? "s" : ""} de
             recherche pour &quot;{query}&quot;

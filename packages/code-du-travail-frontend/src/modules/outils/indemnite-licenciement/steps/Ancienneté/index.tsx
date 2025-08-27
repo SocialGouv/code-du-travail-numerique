@@ -81,7 +81,6 @@ const StepAnciennete = () => {
       state.informationsData.input.publicodesInformations
     ),
     errorPublicodes: state.ancienneteData.error.errorPublicodes,
-    hasBeenSubmit: state.ancienneteData.hasBeenSubmit,
   }));
 
   const messageMotifsExample = useMemo(
