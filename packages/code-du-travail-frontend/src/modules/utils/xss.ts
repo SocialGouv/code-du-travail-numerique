@@ -20,6 +20,7 @@ const whiteListAttr = [
   "data-pdf",
   "data-pdf-size",
   "data-infographic",
+  "data-infographic-title",
 ];
 
 export const xssWrapper = (text: string): string => {

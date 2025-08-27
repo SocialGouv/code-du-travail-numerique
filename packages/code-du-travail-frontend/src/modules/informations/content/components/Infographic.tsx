@@ -1,4 +1,4 @@
-import ImageWrapper from "../../../common/ImageWrapper";
+import React from "react";
 import { AccordionWithAnchor } from "src/modules/common/AccordionWithAnchor";
 import { fr } from "@codegouvfr/react-dsfr";
 import { DownloadTile } from "../../components/DownloadTile";
@@ -19,13 +19,15 @@ export const Infographic = ({
   titleLevel,
   pdfSize,
   pdfUrl,
+  altText,
   descriptionHtml,
 }: Props) => {
   return (
     <div>
-      <ImageWrapper
-        altText={""}
+      <img
         src={toUrl(imgUrl)}
+        alt={`infographie ${altText}. Description détaillée ci-après.`}
+        aria-hidden="true"
         className={fr.cx("fr-mb-3w")}
       />
       <AccordionWithAnchor

@@ -499,7 +499,7 @@ describe("DisplayContent", () => {
       const { asFragment } = render(
         <DisplayContent
           content={`
-        <div class="infographic" data-pdf="file.pdf" data-pdf-size="3200" data-infographic="file.svg"><img src="https://cdtn-dev-public.s3.gra.io.cloud.ovh.net/draft/default/infographie_test.svg" height="auto" width="500"><div><div class="details" data-type="details"><button type="button"></button><div><summary>Afficher le contenu de l'infographie</summary><div data-type="detailsContent" hidden="hidden"><p>Décrire ici le contenu de l'infographie</p></div></div></div></div></div>`}
+        <div class="infographic" data-pdf="file.pdf" data-pdf-size="3200" data-infographic="file.svg" data-infographic-title="Titre de test"><img src="https://cdtn-dev-public.s3.gra.io.cloud.ovh.net/draft/default/infographie_test.svg" height="auto" width="500"><div><div class="details" data-type="details"><button type="button"></button><div><summary>Afficher le contenu de l'infographie</summary><div data-type="detailsContent" hidden="hidden"><p>Décrire ici le contenu de l'infographie</p></div></div></div></div></div>`}
           titleLevel={3}
         ></DisplayContent>
       );
