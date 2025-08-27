@@ -446,7 +446,9 @@ export const CookieConsentDSFR = () => {
             iconId="fr-icon-settings-5-line"
             title="Gérer les cookies"
             aria-label="Gérer les cookies"
-          />
+          >
+            <span className={fr.cx("fr-sr-only")}>Gérer les cookies</span>
+          </Button>
         </div>
       )}
     </>
