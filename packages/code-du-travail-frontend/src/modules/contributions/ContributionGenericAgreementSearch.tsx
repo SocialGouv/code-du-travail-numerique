@@ -35,21 +35,7 @@ export function ContributionGenericAgreementSearch({
   const router = useRouter();
   const { slug } = contribution;
   const [isValid, setIsValid] = useState(false);
-  const personalizeResponseTitleRef = useRef<HTMLParagraphElement>(null);
 
-  // Focus the title when component mounts (for modifier button action)
-  useEffect(() => {
-    // Check if this component is being shown after clicking "Modifier"
-    const shouldFocusTitle =
-      sessionStorage.getItem("focusPersonalizeTitle") === "true";
-    if (shouldFocusTitle) {
-      setTimeout(() => {
-        personalizeResponseTitleRef.current?.focus();
-        // Clear the flag
-        sessionStorage.removeItem("focusPersonalizeTitle");
-      }, 150);
-    }
-  }, []);
   useEffect(() => {
     setIsValid(isAgreementValid(contribution, selectedAgreement));
   }, [selectedAgreement]);

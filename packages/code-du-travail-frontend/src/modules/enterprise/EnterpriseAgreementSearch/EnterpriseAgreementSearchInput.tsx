@@ -268,6 +268,13 @@ export const EnterpriseAgreementSearchInput = ({
           setSelectedEnterprise(undefined);
           setSelectedAgreement(undefined);
           scrollToTop();
+          // Focus the "Personnalisez la réponse" title directly
+          setTimeout(() => {
+            const personalizeTitle = document.getElementById(
+              "personalize-response-title"
+            );
+            personalizeTitle?.focus();
+          }, 100);
         }}
         onAgreementSelect={(agreement) => {
           setSelectedAgreement(agreement);
