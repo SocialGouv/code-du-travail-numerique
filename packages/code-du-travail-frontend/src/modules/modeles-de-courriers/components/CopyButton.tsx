@@ -2,13 +2,14 @@
 
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { css } from "@styled-system/css";
 import { useModeleEvents } from "../tracking";
 
 export const CopyButton = ({ slug }: { slug: string }) => {
   const [isCopied, setCopied] = useState(false);
   const trackCopy = useModeleEvents(slug);
+  const modelCopiedRef = useRef<HTMLParagraphElement>(null);
 
   const copyContent = () => {
     const elementsByClassName = document?.getElementById("content-to-copy");
@@ -16,6 +17,10 @@ export const CopyButton = ({ slug }: { slug: string }) => {
       navigator?.clipboard?.writeText(elementsByClassName.innerText);
       setCopied(true);
       trackCopy();
+      // Focus the "Modèle copié" message for screen readers
+      setTimeout(() => {
+        modelCopiedRef.current?.focus();
+      }, 100);
     }
   };
 
@@ -33,7 +38,7 @@ export const CopyButton = ({ slug }: { slug: string }) => {
       <div className={`${fr.cx("fr-py-2v")} ${fixHeight}`} aria-live="polite">
         {isCopied && (
           <div>
-            <p>
+            <p ref={modelCopiedRef} tabIndex={-1}>
               <span
                 className={`${fr.cx("ri-check-line")} ${css({
                   color: "var(--text-default-success)",

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -30,6 +30,9 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
   const { emitSearchEvent, emitResultSelectionEvent, emitNextPageEvent } =
     useSearchTracking();
 
+  // Ref for focusing search results heading
+  const searchResultsHeadingRef = useRef<HTMLHeadingElement>(null);
+
   const getSearchParam = useCallback(
     (param: string) => searchParams?.get(param),
     [searchParams]
@@ -45,6 +48,10 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
   useEffect(() => {
     if (query) {
       emitSearchEvent(query);
+      // Focus the search results heading when a search is performed
+      setTimeout(() => {
+        searchResultsHeadingRef.current?.focus();
+      }, 100);
     }
   }, [query, emitSearchEvent]);
 
@@ -63,20 +70,23 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
     setVisibleItems((prev) =>
       Math.min(documents.length, prev + SEARCH_VISIBLE_ITEMS)
     );
+    // Focus on the first newly displayed result's link
     setTimeout(() => {
       const newItem =
         documents.length > previousVisibleItems
           ? documents[previousVisibleItems]
           : undefined;
       if (newItem) {
-        const newItemElement = document.getElementById(
+        const newItemLink = document.getElementById(
           `search-result-${newItem.cdtnId}`
         );
-        if (newItemElement) {
-          newItemElement.focus();
+        if (newItemLink) {
+          // Add tabindex to make it focusable and focus it
+          newItemLink.tabIndex = -1;
+          newItemLink.focus();
         }
       }
-    }, 0);
+    }, 150); // Increased timeout to ensure DOM is updated
   };
 
   return (
@@ -91,8 +101,14 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
 
       {query && (
         <>
-          <h2 className={fr.cx("fr-h4")}>
-            Résultats de recherche pour &quot;{query}&quot;
+          <h2
+            ref={searchResultsHeadingRef}
+            className={fr.cx("fr-h4")}
+            lang="fr"
+            tabIndex={-1}
+          >
+            {documents.length} résultat{documents.length > 1 ? "s" : ""} de
+            recherche pour &quot;{query}&quot;
           </h2>
 
           {documents.length === 0 ? (
@@ -104,7 +120,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                 "fr-mt-3w"
               )}
             >
-              <p>
+              <p lang="fr">
                 Nous n&apos;avons pas trouvé de résultat pour votre recherche.
               </p>
             </div>
@@ -159,15 +175,19 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                 "fr-grid-row--center"
               )}
             >
-              <Button onClick={loadMoreResults} priority="secondary">
-                Plus de résultats
-              </Button>
+              <div lang="fr">
+                <Button onClick={loadMoreResults} priority="secondary">
+                  Plus de résultats
+                </Button>
+              </div>
             </div>
           )}
 
           {codeArticles.length > 0 && (
             <section className={fr.cx("fr-mt-6w")}>
-              <h2 className={fr.cx("fr-h3")}>Articles du code du travail</h2>
+              <h2 className={fr.cx("fr-h3")} lang="fr">
+                Articles du code du travail
+              </h2>
               <div
                 className={fr.cx(
                   "fr-grid-row",
@@ -204,7 +224,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
 
           {themes.length > 0 && (
             <section className={fr.cx("fr-mt-6w")}>
-              <h2 className={fr.cx("fr-h3")}>
+              <h2 className={fr.cx("fr-h3")} lang="fr">
                 Les thèmes suivants peuvent vous intéresser
               </h2>
               <div

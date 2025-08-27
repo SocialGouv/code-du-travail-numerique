@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
@@ -35,6 +35,21 @@ export function ContributionGenericAgreementSearch({
   const router = useRouter();
   const { slug } = contribution;
   const [isValid, setIsValid] = useState(false);
+  const personalizeResponseTitleRef = useRef<HTMLParagraphElement>(null);
+
+  // Focus the title when component mounts (for modifier button action)
+  useEffect(() => {
+    // Check if this component is being shown after clicking "Modifier"
+    const shouldFocusTitle =
+      sessionStorage.getItem("focusPersonalizeTitle") === "true";
+    if (shouldFocusTitle) {
+      setTimeout(() => {
+        personalizeResponseTitleRef.current?.focus();
+        // Clear the flag
+        sessionStorage.removeItem("focusPersonalizeTitle");
+      }, 150);
+    }
+  }, []);
   useEffect(() => {
     setIsValid(isAgreementValid(contribution, selectedAgreement));
   }, [selectedAgreement]);
@@ -86,7 +101,13 @@ export function ContributionGenericAgreementSearch({
           alt=""
           className={fr.cx("fr-unhidden-md", "fr-hidden")}
         />
-        <p className={fr.cx("fr-h3", "fr-mt-1w")} role="heading" aria-level={2}>
+        <p
+          id="personalize-response-title"
+          className={fr.cx("fr-h3", "fr-mt-1w")}
+          role="heading"
+          aria-level={2}
+          tabIndex={-1}
+        >
           Personnalisez la réponse avec votre convention collective
         </p>
       </div>

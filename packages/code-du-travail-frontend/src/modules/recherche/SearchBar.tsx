@@ -20,12 +20,6 @@ export const SearchBar = ({ initialValue = "" }: SearchBarProps) => {
   const [key, setKey] = useState(0);
   const { emitSearchEvent, emitSuggestionSelectionEvent } = useSearchTracking();
 
-  useEffect(() => {
-    if (initialValue && inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [initialValue]);
-
   const handleSearch = (searchTerm: string) => {
     if (searchTerm.trim()) {
       emitSearchEvent(searchTerm.trim());
