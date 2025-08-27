@@ -85,12 +85,12 @@ export function AgreementArticles({ articlesByTheme, containerId }: Props) {
                   className={fr.cx("fr-highlight", "fr-mb-3w")}
                   data-testid="agreement-articles-important-notice"
                 >
-                  <h3
+                  <h4
                     className={fr.cx("fr-h5")}
                     data-testid="agreement-articles-important-title"
                   >
                     Important
-                  </h3>
+                  </h4>
                   <p data-testid="agreement-articles-important-description">
                     Pour que ce thème s&apos;applique à votre situation, il doit
                     être indiqué dans l&apos;article en question qu&apos;un
