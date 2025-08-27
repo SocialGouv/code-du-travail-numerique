@@ -1,4 +1,4 @@
-import React from "react";
+import React, { JSX } from "react";
 import { ElementBuilder } from "./ElementBuilder";
 import { fr } from "@codegouvfr/react-dsfr";
 import { filterOutTitle, getInChildrenByName, getText } from "../utils";
@@ -12,10 +12,14 @@ export const Exemple = ({
   headingLevel: number;
 }) => {
   const title = getInChildrenByName(data, "Titre");
+  const Heading = `h${headingLevel + 2}` as keyof JSX.IntrinsicElements;
   return (
     <div className={fr.cx("fr-highlight", "fr-mb-4w", "fr-ml-0")}>
-      {title && <p className={fr.cx("fr-text--bold")}>{getText(title)}</p>}
-      <ElementBuilder data={filterOutTitle(data)} headingLevel={headingLevel} />
+      {title && <Heading>{getText(title)}</Heading>}
+      <ElementBuilder
+        data={filterOutTitle(data)}
+        headingLevel={headingLevel + 1}
+      />
     </div>
   );
 };
