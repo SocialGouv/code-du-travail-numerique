@@ -587,9 +587,8 @@ exports[`DisplayContent Headings should replace span with class "title" and "sub
 exports[`DisplayContent Infographic should replace div with infographic class to Infographic component 1`] = `
 <div>
   <img
-    alt=""
+    alt="infographie Titre de test. Description détaillée ci-après."
     aria-hidden="true"
-    class="cursor_zoom-in"
     src="bucket.url/preview/default/file.svg"
   />
   <div>

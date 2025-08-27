@@ -2,8 +2,10 @@
 
 exports[`<BrandTop /> should match snapshot 1`] = `
 <div>
-  RÉPUBLIQUE
-  <br />
-  FRANÇAISE
+  <p>
+    RÉPUBLIQUE
+    <br />
+    FRANÇAISE
+  </p>
 </div>
 `;
