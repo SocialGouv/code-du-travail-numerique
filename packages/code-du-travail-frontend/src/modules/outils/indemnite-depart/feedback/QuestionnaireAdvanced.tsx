@@ -3,7 +3,7 @@
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { NumberedScaleQuestionnaireItem } from "./NumberedScaleQuestionnaireItem";
 import { QuestionnaireText } from "./QuestionnaireText";
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef, useState, useEffect, useRef } from "react";
 import {
   EVENT_ACTION,
   EVENT_CATEGORY,
@@ -27,10 +27,100 @@ export const QuestionnaireAdvanced = forwardRef<
   const [statusQuestion, setStatusQuestion] = useState<FEEDBACK_RESULT>();
   const [statusExplanation, setStatusExplanation] = useState<FEEDBACK_RESULT>();
   const [feedbackText, setFeedbackText] = useState<string>();
+  const [displayErrorSimulator, setDisplayErrorSimulator] = useState(false);
+  const [displayErrorQuestion, setDisplayErrorQuestion] = useState(false);
+  const [displayErrorExplanation, setDisplayErrorExplanation] = useState(false);
   const { trackFeedback, trackFeedbackText } = useFeedbackEvents();
+  const formRef = useRef<HTMLFormElement>(null);
+
+  // Focus sur le titre quand le composant est monté
+  useEffect(() => {
+    if (ref && "current" in ref && ref.current) {
+      ref.current.focus();
+    }
+  }, [ref]);
+
+  // Gestion du focus sur les erreurs
+  useEffect(() => {
+    if (
+      displayErrorSimulator ||
+      displayErrorQuestion ||
+      displayErrorExplanation
+    ) {
+      setTimeout(() => {
+        // Focus sur la première erreur dans l'ordre d'apparition
+        if (displayErrorSimulator) {
+          const simulatorField = formRef.current?.querySelector(
+            '[data-testid="simulator"] [aria-invalid="true"]'
+          ) as HTMLElement;
+          if (simulatorField) {
+            simulatorField.focus();
+            return;
+          }
+        }
+
+        if (displayErrorQuestion) {
+          const questionField = formRef.current?.querySelector(
+            '[data-testid="questionClarity"] [aria-invalid="true"]'
+          ) as HTMLElement;
+          if (questionField) {
+            questionField.focus();
+            return;
+          }
+        }
+
+        if (displayErrorExplanation) {
+          const explanationField = formRef.current?.querySelector(
+            '[data-testid="resultClarity"] [aria-invalid="true"]'
+          ) as HTMLElement;
+          if (explanationField) {
+            explanationField.focus();
+            return;
+          }
+        }
+      }, 100);
+    }
+  }, [displayErrorSimulator, displayErrorQuestion, displayErrorExplanation]);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Reset des erreurs
+    setDisplayErrorSimulator(false);
+    setDisplayErrorQuestion(false);
+    setDisplayErrorExplanation(false);
+
+    // Validation : au moins une des trois premières questions doit être remplie
+    const hasAtLeastOneAnswer =
+      statusSimulator || statusQuestion || statusExplanation;
+
+    if (!hasAtLeastOneAnswer) {
+      // Affiche les erreurs sur toutes les questions obligatoires
+      setDisplayErrorSimulator(true);
+      setDisplayErrorQuestion(true);
+      setDisplayErrorExplanation(true);
+      return;
+    }
+
+    // Envoi des données si validation OK
+    if (statusSimulator) {
+      trackFeedback(EVENT_ACTION.EASINESS, statusSimulator, category);
+    }
+    if (statusQuestion) {
+      trackFeedback(EVENT_ACTION.QUESTION_CLARITY, statusQuestion, category);
+    }
+    if (statusExplanation) {
+      trackFeedback(EVENT_ACTION.RESULT_CLARITY, statusExplanation, category);
+    }
+    if (feedbackText && path) {
+      trackFeedbackText(feedbackText, path, category);
+    }
+
+    onClick();
+  };
 
   return (
-    <div>
+    <form ref={formRef} onSubmit={handleSubmit}>
       <h2
         ref={ref}
         tabIndex={-1}
@@ -38,6 +128,9 @@ export const QuestionnaireAdvanced = forwardRef<
       >
         Merci pour votre aide&nbsp;! Pouvez-vous nous en dire plus&nbsp;?
       </h2>
+      <p className={fr.cx("fr-text--sm", "fr-mb-3w")}>
+        Veuillez répondre à au moins une des questions ci-dessous.
+      </p>
       <div>
         <NumberedScaleQuestionnaireItem
           title="Que pensez-vous de l'utilisation du simulateur ?"
@@ -51,10 +144,12 @@ export const QuestionnaireAdvanced = forwardRef<
           labels={["Pas facile du tout", "", "", "", "Très facile"]}
           onChange={(status) => {
             setStatusSimulator(status);
+            setDisplayErrorSimulator(false);
           }}
           hint="Sur une échelle de 1 à 5, 1 n'est pas facile du tout et 5 est
             très facile."
           dataTestId="simulator"
+          displayError={displayErrorSimulator}
         />
         <NumberedScaleQuestionnaireItem
           title="Qu'avez-vous pensé des informations et des instructions fournies ?"
@@ -68,10 +163,12 @@ export const QuestionnaireAdvanced = forwardRef<
           labels={["Pas claires du tout", "", "", "", "Très claires"]}
           onChange={(status) => {
             setStatusQuestion(status);
+            setDisplayErrorQuestion(false);
           }}
           hint="Sur une échelle de 1 à 5, 1 n'est pas clair du tout et 5 est
             très clair."
           dataTestId="questionClarity"
+          displayError={displayErrorQuestion}
         />
         <NumberedScaleQuestionnaireItem
           title="Que pensez-vous des explications du résultat obtenu ?"
@@ -85,10 +182,12 @@ export const QuestionnaireAdvanced = forwardRef<
           labels={["Pas claires du tout", "", "", "", "Très claires"]}
           onChange={(status) => {
             setStatusExplanation(status);
+            setDisplayErrorExplanation(false);
           }}
           hint="Sur une échelle de 1 à 5, 1 n'est pas clair du tout et 5 est
             très clair."
           dataTestId="resultClarity"
+          displayError={displayErrorExplanation}
         />
         <QuestionnaireText
           title="Vous souhaitez nous en dire davantage ?"
@@ -100,35 +199,9 @@ export const QuestionnaireAdvanced = forwardRef<
       <div
         className={fr.cx("fr-btns-group", "fr-btns-group--inline", "fr-mt-2w")}
       >
-        <Button
-          onClick={() => {
-            if (statusSimulator) {
-              trackFeedback(EVENT_ACTION.EASINESS, statusSimulator, category);
-            }
-            if (statusQuestion) {
-              trackFeedback(
-                EVENT_ACTION.QUESTION_CLARITY,
-                statusQuestion,
-                category
-              );
-            }
-            if (statusExplanation) {
-              trackFeedback(
-                EVENT_ACTION.RESULT_CLARITY,
-                statusExplanation,
-                category
-              );
-            }
-            if (feedbackText && path) {
-              trackFeedbackText(feedbackText, path, category);
-            }
-            onClick();
-          }}
-        >
-          Envoyer
-        </Button>
+        <Button type="submit">Envoyer</Button>
       </div>
-    </div>
+    </form>
   );
 });
 

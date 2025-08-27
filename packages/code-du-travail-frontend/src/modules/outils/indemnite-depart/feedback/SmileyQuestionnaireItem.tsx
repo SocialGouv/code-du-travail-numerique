@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FEEDBACK_RESULT } from "./tracking";
 import { fr } from "@codegouvfr/react-dsfr";
 import { BadIcon } from "./icons/BadIcon";
@@ -33,6 +33,17 @@ export const SmileyQuestionnaireItem = ({
 }: SmileyQuestionnaireItemProps) => {
   const [status, setStatus] = useState<Status>();
   const fieldsetId = `fieldset-satisfaction`;
+  const errorId = `${fieldsetId}-error`;
+  const firstRadioRef = useRef<HTMLInputElement>(null);
+
+  // Gestion du focus sur le premier radio en cas d'erreur
+  useEffect(() => {
+    if (displayError && firstRadioRef.current) {
+      setTimeout(() => {
+        firstRadioRef.current?.focus();
+      }, 100);
+    }
+  }, [displayError]);
 
   return (
     <div>
@@ -42,11 +53,14 @@ export const SmileyQuestionnaireItem = ({
       >
         <div className={radioCardStyle}>
           <input
+            ref={firstRadioRef}
             type="radio"
             name={fieldsetId}
             id={`${fieldsetId}-bad`}
             className="fr-radio"
             checked={status === Status.BAD}
+            aria-invalid={displayError ? "true" : undefined}
+            aria-describedby={displayError ? errorId : undefined}
             onChange={() => {
               setStatus(Status.BAD);
               onChange(badEventValue);
@@ -71,6 +85,8 @@ export const SmileyQuestionnaireItem = ({
             id={`${fieldsetId}-average`}
             className="fr-radio"
             checked={status === Status.AVERAGE}
+            aria-invalid={displayError ? "true" : undefined}
+            aria-describedby={displayError ? errorId : undefined}
             onChange={() => {
               setStatus(Status.AVERAGE);
               onChange(averageEventValue);
@@ -95,6 +111,8 @@ export const SmileyQuestionnaireItem = ({
             id={`${fieldsetId}-good`}
             className="fr-radio"
             checked={status === Status.GOOD}
+            aria-invalid={displayError ? "true" : undefined}
+            aria-describedby={displayError ? errorId : undefined}
             onChange={() => {
               setStatus(Status.GOOD);
               onChange(goodEventValue);
@@ -115,7 +133,14 @@ export const SmileyQuestionnaireItem = ({
       </div>
 
       {displayError && (
-        <p className="fr-error-text">Vous devez choisir une des réponses</p>
+        <p
+          id={errorId}
+          className="fr-error-text"
+          role="alert"
+          aria-live="polite"
+        >
+          Vous devez choisir une des réponses
+        </p>
       )}
     </div>
   );

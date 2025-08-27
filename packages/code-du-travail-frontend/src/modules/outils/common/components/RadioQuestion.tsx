@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Html from "src/modules/common/Html";
 import { RadioButtons } from "@codegouvfr/react-dsfr/RadioButtons";
 import { xssWrapper } from "src/modules/utils/xss";
@@ -32,9 +32,27 @@ export function RadioQuestion({
   note,
   autoFocus = false,
 }: Props) {
+  const firstRadioRef = useRef<HTMLInputElement>(null);
+
   const onChange = (value: string) => {
     onChangeSelectedOption(value);
   };
+
+  useEffect(() => {
+    if (error && firstRadioRef.current) {
+      firstRadioRef.current.focus();
+      firstRadioRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  }, [error]);
+
+  useEffect(() => {
+    if (autoFocus && firstRadioRef.current) {
+      firstRadioRef.current.focus();
+    }
+  }, [autoFocus]);
 
   return (
     <div>
@@ -51,6 +69,7 @@ export function RadioQuestion({
             autoFocus: autoFocus && index === 0,
             required: true,
             "data-testid": `${name} - ${question.label}`,
+            ref: index === 0 ? firstRadioRef : undefined,
           },
         }))}
         state={error ? "error" : subLabel ? "info" : "default"}

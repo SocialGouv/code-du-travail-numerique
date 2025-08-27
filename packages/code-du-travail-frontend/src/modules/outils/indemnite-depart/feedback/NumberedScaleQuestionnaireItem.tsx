@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FEEDBACK_RESULT } from "./tracking";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
@@ -44,6 +44,20 @@ export const NumberedScaleQuestionnaireItem = ({
   const fieldsetId = title
     ? `fieldset-${title.toLowerCase().replace(/\s+/g, "-")}`
     : undefined;
+  const errorId = fieldsetId ? `${fieldsetId}-error` : undefined;
+  const errorRef = useRef<HTMLParagraphElement>(null);
+  const firstRadioRef = useRef<HTMLInputElement>(null);
+
+  // Gestion du focus sur l'erreur
+  useEffect(() => {
+    if (displayError) {
+      setTimeout(() => {
+        if (errorRef.current) {
+          errorRef.current.focus();
+        }
+      }, 100);
+    }
+  }, [displayError]);
 
   return (
     <div
@@ -80,15 +94,37 @@ export const NumberedScaleQuestionnaireItem = ({
               ].map((buttonStatus, index) => (
                 <li key={buttonStatus}>
                   <input
+                    ref={index === 0 ? firstRadioRef : undefined}
                     id={`${fieldsetId}-${buttonStatus}`}
                     data-testId={`${dataTestId}-${buttonStatus}`}
                     className="fr-sr-only"
                     type="radio"
+                    aria-invalid={displayError ? "true" : undefined}
+                    aria-describedby={
+                      displayError && errorId ? errorId : undefined
+                    }
                     onChange={() => {
                       setStatus(buttonStatus);
                       onChange(values[index]);
                     }}
-                    name={values[index]}
+                    onFocus={(e) => {
+                      // Force la visibilité du focus sur le label parent
+                      const label = e.target.nextElementSibling as HTMLElement;
+                      if (label) {
+                        label.style.outline =
+                          "2px solid var(--background-flat-blue-france)";
+                        label.style.outlineOffset = "2px";
+                      }
+                    }}
+                    onBlur={(e) => {
+                      // Retire le focus visuel quand on perd le focus
+                      const label = e.target.nextElementSibling as HTMLElement;
+                      if (label && status !== buttonStatus) {
+                        label.style.outline = "";
+                        label.style.outlineOffset = "";
+                      }
+                    }}
+                    name={fieldsetId || `scale-${dataTestId || "default"}`}
                   />
                   <label
                     htmlFor={`${fieldsetId}-${buttonStatus}`}
@@ -106,7 +142,16 @@ export const NumberedScaleQuestionnaireItem = ({
         </div>
       </fieldset>
       {displayError && (
-        <p className="fr-error-text">Vous devez choisir une des réponses</p>
+        <p
+          ref={errorRef}
+          id={errorId}
+          className="fr-error-text"
+          role="alert"
+          aria-live="polite"
+          tabIndex={-1}
+        >
+          Vous devez répondre à au moins une des questions
+        </p>
       )}
     </div>
   );
@@ -122,12 +167,27 @@ const numberRadioStyle = css({
   cursor: "pointer",
   color: "var(--background-flat-blue-france)",
   fontWeight: 500,
+  transition: "all 0.2s ease",
+  "&:hover": {
+    borderColor: "var(--background-flat-blue-france)",
+    backgroundColor: "var(--background-alt-blue-france)",
+  },
+  "&:focus-within": {
+    outline: "2px solid var(--background-flat-blue-france)",
+    outlineOffset: "2px",
+    borderColor: "var(--background-flat-blue-france)",
+    backgroundColor: "var(--background-alt-blue-france)",
+  },
 });
 
 const radioSelectedStyle = css({
   borderColor: "var(--background-flat-blue-france)",
   backgroundColor: "var(--background-flat-blue-france)",
   color: "white",
+  "&:focus-within": {
+    outline: "2px solid var(--background-flat-blue-france)",
+    outlineOffset: "2px",
+  },
 });
 
 const ul = css({
