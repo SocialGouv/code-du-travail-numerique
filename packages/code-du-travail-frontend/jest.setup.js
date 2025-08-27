@@ -14,6 +14,7 @@ if (typeof window !== "undefined") {
   global.TextEncoder = require("util").TextEncoder;
   global.TextDecoder = require("util").TextDecoder;
   global.ReadableStream = require("stream").Readable;
+  Element.prototype.scrollIntoView = jest.fn();
 }
 
 jest.mock("next/navigation", () => ({
