@@ -21,6 +21,7 @@ export const SummaryItem = ({
     <li className={!noButton ? fr.cx("fr-text--bold") : undefined}>
       {data}
       {info && <Tooltip title={info} kind="hover" />}
+      <br />
       {!noButton && (
         <Button
           size="small"
@@ -29,7 +30,7 @@ export const SummaryItem = ({
           iconId="fr-icon-arrow-go-back-line"
           onClick={onClick}
           data-testid={`modify-${data}`}
-          className={fr.cx("fr-mt-1w", "fr-mb-3w", "fr-ml-1w")}
+          className={fr.cx("fr-mt-1w", "fr-mb-3w")}
         >
           Modifier
         </Button>
