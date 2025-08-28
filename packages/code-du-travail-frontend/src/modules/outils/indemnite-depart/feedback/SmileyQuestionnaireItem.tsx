@@ -46,7 +46,11 @@ export const SmileyQuestionnaireItem = ({
   }, [displayError]);
 
   return (
-    <div>
+    <fieldset
+      aria-invalid={displayError ? "true" : undefined}
+      aria-describedby={displayError ? errorId : undefined}
+    >
+      <legend className={srOnlyStyle}>Évaluation de satisfaction</legend>
       <div
         className={fr.cx("fr-btns-group", "fr-btns-group--inline")}
         style={{ justifyContent: "center", gap: "1rem" }}
@@ -59,7 +63,6 @@ export const SmileyQuestionnaireItem = ({
             id={`${fieldsetId}-bad`}
             className="fr-radio"
             checked={status === Status.BAD}
-            aria-invalid={displayError ? "true" : undefined}
             aria-describedby={displayError ? errorId : undefined}
             onChange={() => {
               setStatus(Status.BAD);
@@ -85,7 +88,6 @@ export const SmileyQuestionnaireItem = ({
             id={`${fieldsetId}-average`}
             className="fr-radio"
             checked={status === Status.AVERAGE}
-            aria-invalid={displayError ? "true" : undefined}
             aria-describedby={displayError ? errorId : undefined}
             onChange={() => {
               setStatus(Status.AVERAGE);
@@ -111,7 +113,6 @@ export const SmileyQuestionnaireItem = ({
             id={`${fieldsetId}-good`}
             className="fr-radio"
             checked={status === Status.GOOD}
-            aria-invalid={displayError ? "true" : undefined}
             aria-describedby={displayError ? errorId : undefined}
             onChange={() => {
               setStatus(Status.GOOD);
@@ -142,7 +143,7 @@ export const SmileyQuestionnaireItem = ({
           Vous devez choisir une des réponses
         </p>
       )}
-    </div>
+    </fieldset>
   );
 };
 
@@ -196,4 +197,17 @@ const radioTextStyle = css({
   "@media (max-width: 480px)": {
     fontSize: "0.875rem",
   },
+});
+
+// Visually hidden but accessible to screen readers
+const srOnlyStyle = css({
+  position: "absolute !important",
+  width: "1px !important",
+  height: "1px !important",
+  padding: "0 !important",
+  margin: "-1px !important",
+  overflow: "hidden !important",
+  clip: "rect(0, 0, 0, 0) !important",
+  whiteSpace: "nowrap !important",
+  border: "0 !important",
 });
