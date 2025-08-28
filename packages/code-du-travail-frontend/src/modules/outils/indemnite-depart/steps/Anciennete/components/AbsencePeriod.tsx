@@ -62,106 +62,84 @@ const AbsencePeriod = ({
         >
           Absence {index + 1}
         </legend>
-        <div
-          className="fr-grid-row fr-grid-row--gutters"
-          style={{ display: "flex", alignItems: "flex-end" }}
-        >
+        <div className={fr.cx("fr-fieldset__content")}>
           <div
-            className={fr.cx(
-              "fr-fieldset__element",
-              "fr-col-12",
-              "fr-col-md-3"
-            )}
+            className="fr-grid-row fr-grid-row--gutters"
+            style={{ display: "flex", alignItems: "flex-end" }}
           >
-            <Select
-              label="Motif"
-              nativeSelectProps={
-                {
-                  id: `${index}.type`,
-                  onChange: (e) => selectMotif(absence.key, e.target.value),
-                  value: absence?.motif?.label,
-                  "data-testid": `absence-motif-${index}`,
-                } as any
-              }
-              className={defaultSelectStyle}
-            >
-              {motifs.map(({ label }) => (
-                <option key={label} value={label}>
-                  {label}
-                </option>
-              ))}
-            </Select>
-          </div>
-          <div
-            className={fr.cx(
-              "fr-fieldset__element",
-              "fr-col-12",
-              "fr-col-md-3"
-            )}
-          >
-            <Input
-              label="Durée (en mois)"
-              state={durationError ? "error" : "default"}
-              stateRelatedMessage={durationError}
-              nativeInputProps={
-                {
-                  id: `${index}.duration`,
-                  type: "number",
-                  step: "1",
-                  pattern: "[0-9]*",
-                  inputMode: "numeric",
-                  onChange: (e) =>
-                    onSetDurationDate(absence.key, handleNumberInput(e)),
-                  onWheel: preventScroll,
-                  value: absence?.durationInMonth ?? "",
-                  "data-testid": `absence-duree-${index}`,
-                } as any
-              }
-              classes={{
-                nativeInputOrTextArea: defaultInputStyle,
-              }}
-            />
-          </div>
-          {shouldAskAbsenceDate && (
-            <div
-              className={fr.cx(
-                "fr-fieldset__element",
-                "fr-col-12",
-                "fr-col-md-3"
-              )}
-            >
-              <TextQuestion
-                label="Date de début de l'absence"
-                inputType="date"
-                value={absence?.startedAt ?? ""}
-                onChange={(value) => {
-                  onSetAbsenceDate(absence.key, value);
+            <div className={`fr-col-12 fr-col-md-3`}>
+              <Select
+                label="Motif"
+                nativeSelectProps={
+                  {
+                    id: `${index}.type`,
+                    onChange: (e) => selectMotif(absence.key, e.target.value),
+                    value: absence?.motif?.label,
+                    "data-testid": `absence-motif-${index}`,
+                  } as any
+                }
+                className={defaultSelectStyle}
+              >
+                {motifs.map(({ label }) => (
+                  <option key={label} value={label}>
+                    {label}
+                  </option>
+                ))}
+              </Select>
+            </div>
+            <div className={`fr-col-12 fr-col-md-3`}>
+              <Input
+                label="Durée (en mois)"
+                state={durationError ? "error" : "default"}
+                stateRelatedMessage={durationError}
+                nativeInputProps={
+                  {
+                    id: `${index}.duration`,
+                    type: "number",
+                    step: "1",
+                    pattern: "[0-9]*",
+                    inputMode: "numeric",
+                    onChange: (e) =>
+                      onSetDurationDate(absence.key, handleNumberInput(e)),
+                    onWheel: preventScroll,
+                    value: absence?.durationInMonth ?? "",
+                    "data-testid": `absence-duree-${index}`,
+                  } as any
+                }
+                classes={{
+                  nativeInputOrTextArea: defaultInputStyle,
                 }}
-                error={absenceDateError}
-                id={`${index}.dateAbsence`}
-                dataTestId={`absence-date-${index}`}
               />
             </div>
-          )}
-          {showDeleteButton && (
-            <div
-              className={fr.cx(
-                "fr-fieldset__element",
-                "fr-col-12",
-                "fr-col-md-3"
-              )}
-            >
-              <Button
-                onClick={() => onDeleteAbsence(absence.key)}
-                priority="secondary"
-                size="small"
-                iconPosition="right"
-                iconId="ri-delete-bin-line"
-              >
-                Supprimer
-              </Button>
-            </div>
-          )}
+            {shouldAskAbsenceDate && (
+              <div className="fr-col-12 fr-col-md-3">
+                <TextQuestion
+                  label="Date de début de l'absence"
+                  inputType="date"
+                  value={absence?.startedAt ?? ""}
+                  onChange={(value) => {
+                    onSetAbsenceDate(absence.key, value);
+                  }}
+                  error={absenceDateError}
+                  id={`${index}.dateAbsence`}
+                  dataTestId={`absence-date-${index}`}
+                />
+              </div>
+            )}
+            {showDeleteButton && (
+              <div className="fr-col-12 fr-col-md-3">
+                <Button
+                  onClick={() => onDeleteAbsence(absence.key)}
+                  priority="secondary"
+                  size="small"
+                  iconPosition="right"
+                  iconId="ri-delete-bin-line"
+                >
+                  Supprimer
+                </Button>
+              </div>
+            )}
+          </div>
         </div>
       </fieldset>
     </div>
