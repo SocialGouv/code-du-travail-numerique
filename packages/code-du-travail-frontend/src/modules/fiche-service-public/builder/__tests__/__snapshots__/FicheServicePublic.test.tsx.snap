@@ -5,11 +5,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
   <div
     class="fr-alert fr-alert--warning fr-mb-2w"
   >
-    <p
-      class="fr-text--bold"
-    >
+    <h2>
       Abandon de poste et démission
-    </p>
+    </h2>
     <p
       class="fr-text--xs fr-pb-2w"
     >
@@ -300,11 +298,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
               <div
                 class="fr-alert fr-alert--warning fr-mb-2w"
               >
-                <p
-                  class="fr-text--bold"
-                >
+                <h4>
                   Attention
-                </p>
+                </h4>
                 <p>
                   Des 
                   dispositions conventionnelles
@@ -1250,11 +1246,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
               <div
                 class="fr-alert fr-alert--warning fr-mb-2w"
               >
-                <p
-                  class="fr-text--bold"
-                >
+                <h4>
                   Attention
-                </p>
+                </h4>
                 <p>
                   Des 
                   dispositions conventionnelles
@@ -1970,11 +1964,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
               <div
                 class="fr-alert fr-alert--warning fr-mb-2w"
               >
-                <p
-                  class="fr-text--bold"
-                >
+                <h4>
                   Attention
-                </p>
+                </h4>
                 <p>
                   Des 
                   dispositions conventionnelles

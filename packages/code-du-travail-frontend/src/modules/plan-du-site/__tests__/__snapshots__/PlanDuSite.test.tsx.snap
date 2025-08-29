@@ -33,7 +33,7 @@ exports[`<SiteMap /> should match snapshot 1`] = `
         class="fr-mb-4w"
       >
         <div
-          aria-level="3"
+          aria-level="2"
           class="fr-text--lead fr-text--bold"
           role="heading"
         >
@@ -75,7 +75,7 @@ exports[`<SiteMap /> should match snapshot 1`] = `
         class="fr-mb-4w"
       >
         <div
-          aria-level="3"
+          aria-level="2"
           class="fr-text--lead fr-text--bold"
           role="heading"
         >
@@ -117,7 +117,7 @@ exports[`<SiteMap /> should match snapshot 1`] = `
         class="fr-mb-4w"
       >
         <div
-          aria-level="3"
+          aria-level="2"
           class="fr-text--lead fr-text--bold fr-mb-3w"
           role="heading"
         >
@@ -155,7 +155,7 @@ exports[`<SiteMap /> should match snapshot 1`] = `
         class="fr-mb-4w"
       >
         <div
-          aria-level="3"
+          aria-level="2"
           class="fr-text--lead fr-text--bold"
           role="heading"
         >
@@ -197,7 +197,7 @@ exports[`<SiteMap /> should match snapshot 1`] = `
         class="fr-mb-4w"
       >
         <div
-          aria-level="3"
+          aria-level="2"
           class="fr-text--lead fr-text--bold"
           role="heading"
         >
@@ -239,7 +239,7 @@ exports[`<SiteMap /> should match snapshot 1`] = `
         class="fr-mb-4w"
       >
         <div
-          aria-level="3"
+          aria-level="2"
           class="fr-text--lead fr-text--bold"
           role="heading"
         >
