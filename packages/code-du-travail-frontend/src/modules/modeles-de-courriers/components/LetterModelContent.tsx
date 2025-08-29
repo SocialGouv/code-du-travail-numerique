@@ -30,9 +30,9 @@ export const LetterModelContent = ({
     <>
       <p className={fr.cx("fr-mb-6w")}>Mis à jour le&nbsp;: {date}</p>
       {intro && (
-        <div className={`${fr.cx("fr-highlight", "fr-mb-6w")}`}>
+        <p className={`${fr.cx("fr-highlight", "fr-mb-6w")}`}>
           <DisplayContent content={intro} titleLevel={2} />
-        </div>
+        </p>
       )}
       <div className={fr.cx("fr-hidden-md")}>
         <div className={fr.cx("fr-mb-6w")}>

@@ -66,9 +66,9 @@ export const NumberedScaleQuestionnaireItem = ({
         )}
 
         <div className={scaleContainer}>
-          <div className={labelLeftStyle} aria-hidden="true">
+          <p className={labelLeftStyle} aria-hidden="true">
             {labels[0]}
-          </div>
+          </p>
           <div className={`${fr.cx("fr-fieldset")} ${containerRadioStyle}`}>
             <ul className={ul}>
               {[
@@ -100,9 +100,12 @@ export const NumberedScaleQuestionnaireItem = ({
               ))}
             </ul>
           </div>
-          <div className={labelRightStyle} aria-hidden="true">
+          <p
+            className={`${labelRightStyle} ${fr.cx("fr-ml-2w")}`}
+            aria-hidden="true"
+          >
             {labels[4]}
-          </div>
+          </p>
         </div>
       </fieldset>
       {displayError && (

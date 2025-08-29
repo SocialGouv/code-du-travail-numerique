@@ -1,6 +1,6 @@
 import { Select } from "@codegouvfr/react-dsfr/Select";
 import { Input } from "@codegouvfr/react-dsfr/Input";
-import React, { useState } from "react";
+import React, { JSX, useState } from "react";
 import { Motif } from "@socialgouv/modeles-social";
 import { AbsenceWithKey } from "./AbsencePeriods";
 import { Button } from "@codegouvfr/react-dsfr/Button";
@@ -25,6 +25,8 @@ type Props = {
   absenceDateError?: string;
   showDeleteButton: boolean;
   informationData: Record<string, string | undefined>;
+  autoFocus?: boolean;
+  ariaDescribedby?: string;
 };
 
 const AbsencePeriod = ({
@@ -39,7 +41,9 @@ const AbsencePeriod = ({
   showDeleteButton,
   onDeleteAbsence,
   informationData,
-}: Props) => {
+  autoFocus,
+  ariaDescribedby,
+}: Props): JSX.Element => {
   const [shouldAskAbsenceDate, askAbsenceDate] = useState(
     absence
       ? absence.motif?.startAt && absence.motif?.startAt(informationData)
@@ -98,6 +102,8 @@ const AbsencePeriod = ({
                 onWheel: preventScroll,
                 value: absence?.durationInMonth ?? "",
                 "data-testid": `absence-duree-${index}`,
+                "aria-describedby": ariaDescribedby,
+                autoFocus: autoFocus,
               } as any
             }
             classes={{
@@ -117,6 +123,7 @@ const AbsencePeriod = ({
               error={absenceDateError}
               id={`${index}.dateAbsence`}
               dataTestId={`absence-date-${index}`}
+              autoFocus={false}
             />
           </div>
         )}

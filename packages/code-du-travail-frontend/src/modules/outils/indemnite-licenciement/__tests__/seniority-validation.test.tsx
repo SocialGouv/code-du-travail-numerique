@@ -1,4 +1,4 @@
-import { render, RenderResult } from "@testing-library/react";
+import { render, RenderResult, screen } from "@testing-library/react";
 import React from "react";
 import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
@@ -128,9 +128,9 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       // validation de l'erreur quand on a des périodes d'absence mais que l'on a pas saisi le motif de l'absence
       userAction.click(ui.seniority.hasAbsence.oui.get());
 
-      expect(
-        rendering.queryByText("Vous devez renseigner à minima une absence")
-      ).toBeInTheDocument();
+      expect(rendering.getByRole("alert").querySelector("p")).toHaveTextContent(
+        "Vous devez renseigner à minima une absence"
+      );
       expect(
         rendering.queryByText("Date de début de l'absence")
       ).toBeInTheDocument();

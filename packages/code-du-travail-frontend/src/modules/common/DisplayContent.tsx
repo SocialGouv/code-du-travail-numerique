@@ -6,7 +6,7 @@ import parse, {
   Text,
 } from "html-react-parser";
 import Alert from "@codegouvfr/react-dsfr/Alert";
-import React, { ElementType, ReactNode } from "react";
+import React, { ElementType, JSX } from "react";
 import { AccordionWithAnchor } from "./AccordionWithAnchor";
 import { v4 as generateUUID } from "uuid";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -382,7 +382,10 @@ type Props = {
   titleLevel: numberLevel;
 };
 
-const displayContentParse = ({ content, titleLevel }: Props) => {
+const DisplayContent = ({
+  content,
+  titleLevel,
+}: Props): string | JSX.Element | JSX.Element[] => {
   try {
     return parse(xssWrapper(content), options(titleLevel));
   } catch (error) {
@@ -390,10 +393,6 @@ const displayContentParse = ({ content, titleLevel }: Props) => {
     captureException(error);
     return <>Une erreur est survenue lors de l&apos;affichage du contenu.</>;
   }
-};
-
-const DisplayContent = ({ content, titleLevel }: Props) => {
-  return <div>{displayContentParse({ content, titleLevel })}</div>;
 };
 
 export default DisplayContent;

@@ -1,7 +1,9 @@
 export const BrandTop = () => (
   <>
-    RÉPUBLIQUE
-    <br />
-    FRANÇAISE
+    <p>
+      RÉPUBLIQUE
+      <br />
+      FRANÇAISE
+    </p>
   </>
 );
