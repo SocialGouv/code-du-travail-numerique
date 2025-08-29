@@ -398,7 +398,7 @@ export const CookieConsentDSFR = () => {
                         onClick={handleRejectAll}
                         priority="tertiary"
                         className={responsiveButton}
-                        aria-label="Tout refuser les cookies"
+                        aria-label="Refuser tous les cookies"
                       >
                         Tout refuser
                       </Button>
@@ -408,7 +408,7 @@ export const CookieConsentDSFR = () => {
                         onClick={handleAcceptAll}
                         priority="secondary"
                         className={responsiveButton}
-                        aria-label="Tout accepter les cookies"
+                        aria-label="Accepter tous les cookies"
                       >
                         Tout accepter
                       </Button>

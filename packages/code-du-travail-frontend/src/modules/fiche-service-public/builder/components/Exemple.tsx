@@ -12,7 +12,8 @@ export const Exemple = ({
   headingLevel: number;
 }) => {
   const title = getInChildrenByName(data, "Titre");
-  const Heading = `h${headingLevel + 2}` as keyof JSX.IntrinsicElements;
+  const headingNum = Math.min(headingLevel + 2, 6);
+  const Heading = `h${headingNum}` as keyof JSX.IntrinsicElements;
   return (
     <div className={fr.cx("fr-highlight", "fr-mb-4w", "fr-ml-0")}>
       {title && <Heading>{getText(title)}</Heading>}
