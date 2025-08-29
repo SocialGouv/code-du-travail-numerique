@@ -36,6 +36,7 @@ type Props = {
   level?: 2 | 3;
   isInSimulator?: boolean;
   canContinueSimulationIfNoAgreement?: boolean;
+  onBackToPersonalize?: () => void;
 };
 
 export const EnterpriseAgreementSearchInput = ({
@@ -50,6 +51,7 @@ export const EnterpriseAgreementSearchInput = ({
   level,
   isInSimulator,
   canContinueSimulationIfNoAgreement,
+  onBackToPersonalize,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState<
     Agreement | undefined
@@ -235,13 +237,12 @@ export const EnterpriseAgreementSearchInput = ({
                 ) {
                   setSelectedEnterprise(undefined);
                 }
-                // Focus the "Personnalisez la réponse" title directly
-                setTimeout(() => {
-                  const personalizeTitle = document.getElementById(
-                    "personalize-response-title"
-                  );
-                  personalizeTitle?.focus();
-                }, 100);
+                // Focus the "Personnalisez la réponse" title via callback
+                if (onBackToPersonalize) {
+                  setTimeout(() => {
+                    onBackToPersonalize();
+                  }, 100);
+                }
               }}
             >
               Modifier
@@ -268,13 +269,12 @@ export const EnterpriseAgreementSearchInput = ({
           setSelectedEnterprise(undefined);
           setSelectedAgreement(undefined);
           scrollToTop();
-          // Focus the "Personnalisez la réponse" title directly
-          setTimeout(() => {
-            const personalizeTitle = document.getElementById(
-              "personalize-response-title"
-            );
-            personalizeTitle?.focus();
-          }, 100);
+          // Focus the "Personnalisez la réponse" title via callback
+          if (onBackToPersonalize) {
+            setTimeout(() => {
+              onBackToPersonalize();
+            }, 100);
+          }
         }}
         onAgreementSelect={(agreement) => {
           setSelectedAgreement(agreement);

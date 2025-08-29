@@ -104,6 +104,12 @@ export function ContributionGenericAgreementSearch({
           defaultAgreement={selectedAgreement}
           trackingActionName={trackingActionName}
           level={3}
+          onBackToPersonalize={() => {
+            const personalizeTitle = document.getElementById(
+              "personalize-response-title"
+            );
+            personalizeTitle?.focus();
+          }}
         />
         {((contribution.isNoCDT && isValid) || !contribution.isNoCDT) && (
           <Button
