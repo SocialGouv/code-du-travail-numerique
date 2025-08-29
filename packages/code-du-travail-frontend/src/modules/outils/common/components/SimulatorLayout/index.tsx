@@ -181,7 +181,6 @@ export const SimulatorLayout = (props: Props<string>) => {
             priority="primary"
             iconId="ri-arrow-right-line"
             iconPosition="right"
-            disabled={validator?.isStepValid === false}
             nativeButtonProps={{
               "aria-disabled": validator?.isStepValid === false,
             }}

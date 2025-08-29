@@ -43,8 +43,9 @@ describe("SimulateurPreavisLicenciement - Sans Convention Collective", () => {
         screen.getByText("Pas de préavis en cas de faute grave")
       ).toBeInTheDocument();
 
-      // Le bouton suivant reste désactivé pour faute grave
-      expect(ui.next.get()).toBeDisabled();
+      // Le bouton suivant reste activé mais avec l'accessibilité indiquant désactivé
+      expect(ui.next.get()).toBeEnabled();
+      expect(ui.next.get()).toHaveAttribute("aria-disabled", "true");
     });
 
     it("Scénario licenciement sans faute grave - salarié handicapé", () => {
