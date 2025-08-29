@@ -1,5 +1,5 @@
 import { Absence, Motif } from "@socialgouv/modeles-social";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useMemo } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { Alert } from "@codegouvfr/react-dsfr/Alert";
 
@@ -56,9 +56,10 @@ const AbsencePeriods = ({
   );
 
   const addButtonRef = useRef<HTMLButtonElement>(null);
-  const absenceRefs = useRef<
-    Map<string, React.RefObject<HTMLParagraphElement | null>>
-  >(new Map());
+  const absenceRefs = useMemo(
+    () => new Map<string, React.RefObject<HTMLParagraphElement | null>>(),
+    []
+  );
 
   useEffect(() => {
     if (absences.length != localAbsences.length) {
@@ -84,7 +85,7 @@ const AbsencePeriods = ({
 
     // Focus on the newly added absence title
     setTimeout(() => {
-      const newAbsenceRef = absenceRefs.current.get(newKey);
+      const newAbsenceRef = absenceRefs.get(newKey);
       if (newAbsenceRef?.current) {
         newAbsenceRef.current.focus();
       }
@@ -97,7 +98,7 @@ const AbsencePeriods = ({
     onChange(newAbsences);
 
     // Remove the ref for the deleted absence
-    absenceRefs.current.delete(key);
+    absenceRefs.delete(key);
 
     // Focus on the "add absence" button
     setTimeout(() => {
@@ -162,13 +163,13 @@ const AbsencePeriods = ({
 
       {localAbsences.map((value, index) => {
         // Create or get the ref for this absence
-        if (!absenceRefs.current.has(value.key)) {
-          absenceRefs.current.set(
+        if (!absenceRefs.has(value.key)) {
+          absenceRefs.set(
             value.key,
             React.createRef<HTMLParagraphElement | null>()
           );
         }
-        const absenceRef = absenceRefs.current.get(value.key);
+        const absenceRef = absenceRefs.get(value.key);
 
         return (
           <AbsencePeriod

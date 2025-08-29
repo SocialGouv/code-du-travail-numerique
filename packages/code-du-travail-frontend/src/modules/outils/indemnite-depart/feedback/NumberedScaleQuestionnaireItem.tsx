@@ -159,7 +159,8 @@ export const NumberedScaleQuestionnaireItem = ({
 
 const numberRadioStyle = css({
   width: "100%",
-  border: "1px solid var(--background-alt-grey-hover)",
+  border: "1px solid",
+  borderColor: "var(--background-alt-grey-hover)",
   padding: "0.5rem 1rem",
   display: "flex",
   justifyContent: "center",
@@ -172,7 +173,7 @@ const numberRadioStyle = css({
     borderColor: "var(--background-flat-blue-france)",
     backgroundColor: "var(--background-alt-blue-france)",
   },
-  "&:focus-within": {
+  "&:focus": {
     outline: "2px solid var(--background-flat-blue-france)",
     outlineOffset: "2px",
     borderColor: "var(--background-flat-blue-france)",
@@ -184,7 +185,11 @@ const radioSelectedStyle = css({
   borderColor: "var(--background-flat-blue-france)",
   backgroundColor: "var(--background-flat-blue-france)",
   color: "white",
-  "&:focus-within": {
+  "&:hover": {
+    borderColor: "var(--background-flat-blue-france)",
+    backgroundColor: "var(--background-alt-blue-france)",
+  },
+  "&:focus": {
     outline: "2px solid var(--background-flat-blue-france)",
     outlineOffset: "2px",
   },

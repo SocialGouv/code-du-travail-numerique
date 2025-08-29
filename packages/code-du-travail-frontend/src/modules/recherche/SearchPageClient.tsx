@@ -81,9 +81,12 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
           `search-result-${newItem.cdtnId}`
         );
         if (newItemLink) {
-          // Add tabindex to make it focusable and focus it
-          newItemLink.tabIndex = -1;
-          newItemLink.focus();
+          const focusable = newItemLink.querySelector(
+            'a,button,[tabindex]:not([tabindex="-1"])'
+          );
+          if (focusable) {
+            (focusable as HTMLElement).focus();
+          }
         }
       }
     }, 150); // Increased timeout to ensure DOM is updated

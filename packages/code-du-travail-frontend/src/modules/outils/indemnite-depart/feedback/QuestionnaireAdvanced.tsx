@@ -40,6 +40,18 @@ export const QuestionnaireAdvanced = forwardRef<
     }
   }, [ref]);
 
+  // Helper function to focus on error field by testid
+  const focusErrorField = (testid: string): boolean => {
+    const errorField = formRef.current?.querySelector(
+      `[data-testid="${testid}"] [aria-invalid="true"]`
+    ) as HTMLElement;
+    if (errorField) {
+      errorField.focus();
+      return true;
+    }
+    return false;
+  };
+
   // Gestion du focus sur les erreurs
   useEffect(() => {
     if (
@@ -49,34 +61,14 @@ export const QuestionnaireAdvanced = forwardRef<
     ) {
       setTimeout(() => {
         // Focus sur la première erreur dans l'ordre d'apparition
-        if (displayErrorSimulator) {
-          const simulatorField = formRef.current?.querySelector(
-            '[data-testid="simulator"] [aria-invalid="true"]'
-          ) as HTMLElement;
-          if (simulatorField) {
-            simulatorField.focus();
-            return;
-          }
+        if (displayErrorSimulator && focusErrorField("simulator")) {
+          return;
         }
-
-        if (displayErrorQuestion) {
-          const questionField = formRef.current?.querySelector(
-            '[data-testid="questionClarity"] [aria-invalid="true"]'
-          ) as HTMLElement;
-          if (questionField) {
-            questionField.focus();
-            return;
-          }
+        if (displayErrorQuestion && focusErrorField("questionClarity")) {
+          return;
         }
-
-        if (displayErrorExplanation) {
-          const explanationField = formRef.current?.querySelector(
-            '[data-testid="resultClarity"] [aria-invalid="true"]'
-          ) as HTMLElement;
-          if (explanationField) {
-            explanationField.focus();
-            return;
-          }
+        if (displayErrorExplanation && focusErrorField("resultClarity")) {
+          return;
         }
       }, 100);
     }
