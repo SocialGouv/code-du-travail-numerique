@@ -54,24 +54,18 @@ export const QuestionnaireAdvanced = forwardRef<
 
   // Gestion du focus sur les erreurs
   useEffect(() => {
-    if (
-      displayErrorSimulator ||
-      displayErrorQuestion ||
-      displayErrorExplanation
-    ) {
-      setTimeout(() => {
-        // Focus sur la première erreur dans l'ordre d'apparition
-        if (displayErrorSimulator && focusErrorField("simulator")) {
-          return;
-        }
-        if (displayErrorQuestion && focusErrorField("questionClarity")) {
-          return;
-        }
-        if (displayErrorExplanation && focusErrorField("resultClarity")) {
-          return;
-        }
-      }, 100);
-    }
+    setTimeout(() => {
+      // Focus sur la première erreur dans l'ordre d'apparition
+      if (displayErrorSimulator && focusErrorField("simulator")) {
+        return;
+      }
+      if (displayErrorQuestion && focusErrorField("questionClarity")) {
+        return;
+      }
+      if (displayErrorExplanation && focusErrorField("resultClarity")) {
+        return;
+      }
+    }, 100);
   }, [displayErrorSimulator, displayErrorQuestion, displayErrorExplanation]);
 
   const handleSubmit = (e: React.FormEvent) => {
