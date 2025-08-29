@@ -99,7 +99,6 @@ export const NumberedScaleQuestionnaireItem = ({
                     data-testId={`${dataTestId}-${buttonStatus}`}
                     className="fr-sr-only"
                     type="radio"
-                    aria-invalid={displayError ? "true" : undefined}
                     aria-describedby={
                       displayError && errorId ? errorId : undefined
                     }
@@ -107,28 +106,11 @@ export const NumberedScaleQuestionnaireItem = ({
                       setStatus(buttonStatus);
                       onChange(values[index]);
                     }}
-                    onFocus={(e) => {
-                      // Force la visibilité du focus sur le label parent
-                      const label = e.target.nextElementSibling as HTMLElement;
-                      if (label) {
-                        label.style.outline =
-                          "2px solid var(--background-flat-blue-france)";
-                        label.style.outlineOffset = "2px";
-                      }
-                    }}
-                    onBlur={(e) => {
-                      // Retire le focus visuel quand on perd le focus
-                      const label = e.target.nextElementSibling as HTMLElement;
-                      if (label && status !== buttonStatus) {
-                        label.style.outline = "";
-                        label.style.outlineOffset = "";
-                      }
-                    }}
                     name={fieldsetId || `scale-${dataTestId || "default"}`}
                   />
                   <label
                     htmlFor={`${fieldsetId}-${buttonStatus}`}
-                    className={`${numberRadioStyle} ${status === buttonStatus ? radioSelectedStyle : ""}`}
+                    className={`${numberRadioStyle} ${radioFocusStyle} ${status === buttonStatus ? radioSelectedStyle : ""}`}
                   >
                     {index + 1}
                   </label>
@@ -178,6 +160,14 @@ const numberRadioStyle = css({
     outlineOffset: "2px",
     borderColor: "var(--background-flat-blue-france)",
     backgroundColor: "var(--background-alt-blue-france)",
+  },
+});
+
+const radioFocusStyle = css({
+  "input:focus + &": {
+    outline: "2px solid var(--background-flat-blue-france)",
+    outlineOffset: "2px",
+    borderColor: "var(--background-flat-blue-france)",
   },
 });
 
