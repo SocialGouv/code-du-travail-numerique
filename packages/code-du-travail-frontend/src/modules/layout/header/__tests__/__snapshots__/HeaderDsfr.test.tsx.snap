@@ -43,9 +43,10 @@ exports[`<Header /> should match snapshot 1`] = `
               >
                 <a
                   href="/"
+                  title="Accueil - Code du travail numérique ministère du Travail"
                 >
                   <img
-                    alt="Accueil - Code du travail numérique, Ministère du Travail"
+                    alt=""
                     class="fr-responsive-img max-w_9.0625rem"
                     data-nimg="1"
                     decoding="async"
