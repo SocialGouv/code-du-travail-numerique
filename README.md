@@ -4,12 +4,11 @@
 
 - Consulter le [site internet code.travail.gouv.fr](https://code.travail.gouv.fr)
 - À propos du code du travail numérique : [https://code.travail.gouv.fr/a-propos](https://code.travail.gouv.fr/a-propos)
-- L'[histoire du projet](https://incubateur.social.gouv.fr/startups/code-du-travail-numerique)
 
 ## Contributions
 
 - Pour remonter un problème à l'équipe, envoyez un email à [codedutravailnumerique@travail.gouv.fr](mailto:codedutravailnumerique@travail.gouv.fr).
-- Pour remonter un bug technique, [ouvrez un ticket](https://github.com/SocialGouv/code-du-travail-numerique/issues/new/choose).
+- Pour remonter un bug technique, [ouvrez un ticket](https://github.com/SocialGouv/code-du-travail-numerique/issues/new).
 
 ## Développement
 
@@ -21,7 +20,7 @@ yarn
 yarn build
 ```
 
-### Testing
+### Tests
 
 ```sh
 yarn test:frontend # To run frontend tests
@@ -32,22 +31,22 @@ TEST_MODE=heavy-and-light yarn test:e2e:ui # To run e2e test with Cypress UI
 
 ## Packages
 
-| Package                                                         | description                                                                  |
-| --------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| [code-du-travail-frontend](./packages/code-du-travail-frontend) | Application Next.js                                                          |
-| [code-du-travail-modeles](./packages/code-du-travail-modeles)   | Implémentation [publicodes](https://publi.codes) des conventions collectives |
+| Package                                                         | description                                                                    |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| [code-du-travail-frontend](./packages/code-du-travail-frontend) | Application Next.js                                                            |
+| [code-du-travail-modeles](./packages/code-du-travail-modeles)   | Implémentation [publicodes](https://publi.codes) des conventions collectives   |
+| [code-du-travail-utils](./packages/code-du-travail-utils)       | Utilitaires partagés entre les différents projets du code du travail numérique |
 
 ### code-du-travail-frontend
 
-Pour lancer l'application en se basant sur l'API de pre-production :
-
 ```sh
-cp packages/code-du-travail-frontend/.env.sample packages/code-du-travail-frontend/.env # Puis setter les bonnes variables
+# Pour lancer l'application en se basant sur l'API de pre-production :
+cp packages/code-du-travail-frontend/.env.sample packages/code-du-travail-frontend/.env # Setter les bonnes variables
 yarn dev:frontend
-NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn ELASTICSEARCH_URL=http://localhost:9200 yarn workspace @cdt/frontend dev # Pour lancer l'application en se basant sur un container docker en local
-```
 
-Notre bibliothèque de composants UI est disponible en démo [ici](https://socialgouv.github.io/code-du-travail-numerique/).
+# Pour lancer l'application en se basant sur un container docker en local
+NEXT_PUBLIC_ES_INDEX_PREFIX=cdtn ELASTICSEARCH_URL=http://localhost:9200 yarn workspace @cdt/frontend dev
+```
 
 ### code-du-travail-modeles
 
@@ -65,7 +64,3 @@ Une classe `MergeModele` dans le dossier `src/utils` permet de fusionner l'ensem
 
 Enfin le dossier `src/__test__` contient les tests permettant de valider les règles dans le modèle YAML.
 Le but étant de pouvoir fonctionner en mode TDD pour rédiger nos règles.
-
-## License
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FSocialGouv%2Fcode-du-travail-numerique.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FSocialGouv%2Fcode-du-travail-numerique?ref=badge_large)

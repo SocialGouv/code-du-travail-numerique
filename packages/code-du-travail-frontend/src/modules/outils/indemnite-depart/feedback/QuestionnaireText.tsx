@@ -1,7 +1,6 @@
 "use client";
 
 import { Input } from "@codegouvfr/react-dsfr/Input";
-import { fr } from "@codegouvfr/react-dsfr";
 import { useState } from "react";
 
 type QuestionnaireItemProps = {
@@ -9,18 +8,17 @@ type QuestionnaireItemProps = {
   title: string;
   placeholder?: string;
   onChange: (text: string) => void;
-  dataTestId?: string;
+  id: string;
 };
 
 export const QuestionnaireText = ({
   title,
   placeholder,
   onChange,
-  dataTestId,
+  id,
 }: QuestionnaireItemProps) => {
   const maxCharacters = 200;
   const [remainingChars, setRemainingChars] = useState(maxCharacters);
-  const textareaId = `textarea-feedback`;
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const currentLength = e.target.value.length;
@@ -35,11 +33,10 @@ export const QuestionnaireText = ({
         textArea
         nativeTextAreaProps={
           {
-            id: textareaId,
+            id: id,
             onChange: handleChange,
             maxLength: maxCharacters,
-            "aria-describedby": `${textareaId}-hint ${textareaId}-remaining`,
-            "data-testid": dataTestId,
+            "aria-describedby": `${id}-hint ${id}-remaining`,
           } as any
         }
         hintText={placeholder}

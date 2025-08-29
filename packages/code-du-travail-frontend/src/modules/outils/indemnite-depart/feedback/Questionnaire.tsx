@@ -2,7 +2,7 @@
 
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { SmileyQuestionnaireItem } from "./SmileyQuestionnaireItem";
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef, useState, useEffect, useRef } from "react";
 import {
   EVENT_ACTION,
   EVENT_CATEGORY,
@@ -21,6 +21,28 @@ export const Questionnaire = forwardRef<HTMLHeadingElement, QuestionnaireProps>(
     const [status, setStatus] = useState<FEEDBACK_RESULT>();
     const [displayError, setDisplayError] = useState(false);
     const { trackFeedback } = useFeedbackEvents();
+
+    // Focus sur le message d'erreur ou le premier radio button quand l'erreur apparaît
+    useEffect(() => {
+      if (displayError) {
+        setTimeout(() => {
+          const errorElement = document.getElementById(
+            "fieldset-satisfaction-error"
+          );
+          const firstRadio = document.querySelector(
+            "#fieldset-satisfaction-bad"
+          ) as HTMLInputElement;
+
+          if (errorElement) {
+            // Focus sur le message d'erreur s'il existe
+            errorElement.focus();
+          } else if (firstRadio) {
+            // Sinon focus sur le premier radio button
+            firstRadio.focus();
+          }
+        }, 100);
+      }
+    }, [displayError]);
 
     return (
       <form

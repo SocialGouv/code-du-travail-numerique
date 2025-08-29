@@ -24,6 +24,7 @@ describe("Outil - Indemnité de licenciement", () => {
     cy.contains("Oui").click();
     cy.get("[id='0.duration']").type("1");
     cy.contains("Ajouter une absence").click();
+    cy.contains("Absence 2").should("be.focused");
     cy.get("[id='1.duration']").type("1");
     cy.contains("Suivant").click();
 

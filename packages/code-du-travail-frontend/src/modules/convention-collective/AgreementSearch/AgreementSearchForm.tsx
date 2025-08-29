@@ -19,6 +19,7 @@ type Props = {
   defaultAgreement?: Agreement;
   trackingActionName: string;
   level?: 2 | 3;
+  onBackToPersonalize?: () => void;
 };
 
 export const AgreementSearchForm = ({
@@ -27,6 +28,7 @@ export const AgreementSearchForm = ({
   defaultAgreement,
   trackingActionName,
   level,
+  onBackToPersonalize,
 }: Props) => {
   const [selectedRoute, setSelectedRoute] = useState<
     AgreementRoute | undefined
@@ -92,6 +94,7 @@ export const AgreementSearchForm = ({
           selectedAgreementAlert={selectedAgreementAlert}
           trackingActionName={trackingActionName}
           level={level}
+          onBackToPersonalize={onBackToPersonalize}
         />
       )}
     </>

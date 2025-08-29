@@ -34,6 +34,35 @@ export const SalaireTempsPlein = ({
 }: Props) => {
   const [errorsSalaries, setErrorsSalaries] = React.useState({});
   const [errorsPrimes, setErrorsPrimes] = React.useState({});
+  const salaryInputRefs = React.useRef<(HTMLInputElement | null)[]>([]);
+  const primeInputRefs = React.useRef<(HTMLInputElement | null)[]>([]);
+
+  const hasError = (index: number, value: any, errorState: any) => {
+    return (
+      errorState[`${index}`] ||
+      (error && (value === undefined || value === null || value === ""))
+    );
+  };
+
+  React.useEffect(() => {
+    // Focus sur le premier champ de salaire avec erreur (validation ou vide)
+    const firstSalaryErrorIndex = salaryPeriods.findIndex((sPeriod, index) =>
+      hasError(index, sPeriod.value, errorsSalaries)
+    );
+    if (firstSalaryErrorIndex !== -1) {
+      salaryInputRefs.current[firstSalaryErrorIndex]?.focus();
+      return;
+    }
+
+    // Focus sur le premier champ de prime avec erreur (validation seulement, les primes peuvent être vides)
+    const firstPrimeErrorIndex = Object.keys(errorsPrimes).find(
+      (key) => errorsPrimes[key]
+    );
+    if (firstPrimeErrorIndex !== undefined) {
+      const index = parseInt(firstPrimeErrorIndex);
+      primeInputRefs.current[index]?.focus();
+    }
+  }, [errorsSalaries, errorsPrimes, salaryPeriods, error]);
 
   const onChangeSalaries = (index: number, value: string) => {
     const salary = parseFloat(value);
@@ -125,12 +154,24 @@ export const SalaireTempsPlein = ({
                               onWheel: preventScroll,
                               "data-testid":
                                 dataTestidSalaries ?? "salary-input",
+                              ref: (el) =>
+                                (salaryInputRefs.current[index] = el),
                             } as any
                           }
                           state={
-                            errorsSalaries[`${index}`] ? "error" : "default"
+                            hasError(index, sPeriod.value, errorsSalaries)
+                              ? "error"
+                              : "default"
                           }
-                          stateRelatedMessage={errorsSalaries[`${index}`]}
+                          stateRelatedMessage={
+                            errorsSalaries[`${index}`] ||
+                            (error &&
+                              (sPeriod.value === undefined ||
+                                sPeriod.value === null))
+                              ? errorsSalaries[`${index}`] ||
+                                "Ce champ est requis"
+                              : undefined
+                          }
                           classes={{
                             nativeInputOrTextArea: defaultInputStyle,
                           }}
@@ -153,6 +194,8 @@ export const SalaireTempsPlein = ({
                                 "data-testid": dataTestidSalaries
                                   ? "prime-" + dataTestidSalaries
                                   : "prime-input",
+                                ref: (el) =>
+                                  (primeInputRefs.current[index] = el),
                               } as any
                             }
                             state={

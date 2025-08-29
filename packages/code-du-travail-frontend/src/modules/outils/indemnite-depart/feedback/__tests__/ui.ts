@@ -45,7 +45,7 @@ export const ui = {
       title: byText(/Vous souhaitez nous en dire davantage \?/),
       input: byTestId("more-input"),
     },
-    requiredError: byText("Vous devez choisir une des réponses"),
+    requiredError: byText("Vous devez répondre à au moins une des questions"),
   },
   questionnaireEnd: {
     title: byText(/Merci pour votre aide !/),

@@ -1,5 +1,5 @@
 import { Absence, Motif } from "@socialgouv/modeles-social";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useMemo } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { Alert } from "@codegouvfr/react-dsfr/Alert";
 
@@ -55,6 +55,12 @@ const AbsencePeriods = ({
     mapAbsences(absences, motifs[0])
   );
 
+  const addButtonRef = useRef<HTMLButtonElement>(null);
+  const absenceRefs = useMemo(
+    () => new Map<string, React.RefObject<HTMLParagraphElement | null>>(),
+    []
+  );
+
   useEffect(() => {
     if (absences.length != localAbsences.length) {
       const newAbsence = mapAbsences(absences, motifs[0]);
@@ -65,22 +71,39 @@ const AbsencePeriods = ({
   const [errorsInput, setErrorsInput] = React.useState({});
 
   const onAddButtonClick = () => {
+    const newKey = generateUniqueKey();
     const newAbsences: AbsenceWithKey[] = [
       ...localAbsences,
       {
-        key: generateUniqueKey(),
+        key: newKey,
         motif: motifs[0],
         durationInMonth: undefined,
       },
     ];
     setLocalAbsences(newAbsences);
     onChange(newAbsences);
+
+    // Focus on the newly added absence title
+    setTimeout(() => {
+      const newAbsenceRef = absenceRefs.get(newKey);
+      if (newAbsenceRef?.current) {
+        newAbsenceRef.current.focus();
+      }
+    }, 100);
   };
 
   const onDeleteButtonClick = (key: string) => {
     const newAbsences = localAbsences.filter((absence) => absence.key !== key);
     setLocalAbsences(newAbsences);
     onChange(newAbsences);
+
+    // Remove the ref for the deleted absence
+    absenceRefs.delete(key);
+
+    // Focus on the "add absence" button
+    setTimeout(() => {
+      addButtonRef.current?.focus();
+    }, 100);
   };
 
   const onSetDurationDate = (key: string, value: string) => {
@@ -138,29 +161,44 @@ const AbsencePeriods = ({
         <Html className={fr.cx("fr-highlight")}>{messageMotifExample}</Html>
       )}
 
-      {localAbsences.map((value, index) => (
-        <AbsencePeriod
-          key={value.key}
-          index={index}
-          onSelectMotif={onSelectMotif}
-          onSetDurationDate={onSetDurationDate}
-          onSetAbsenceDate={onSetAbsenceDate}
-          onDeleteAbsence={onDeleteButtonClick}
-          motifs={motifs}
-          showDeleteButton={localAbsences.length > 1}
-          durationError={
-            errorsInput[`${index}`] ??
-            (error?.absences ? error.absences[index].errorDuration : undefined)
-          }
-          absenceDateError={
-            error?.absences ? error.absences[index].errorDate : undefined
-          }
-          absence={value}
-          informationData={informationData}
-        />
-      ))}
+      {localAbsences.map((value, index) => {
+        // Create or get the ref for this absence
+        if (!absenceRefs.has(value.key)) {
+          absenceRefs.set(
+            value.key,
+            React.createRef<HTMLParagraphElement | null>()
+          );
+        }
+        const absenceRef = absenceRefs.get(value.key);
+
+        return (
+          <AbsencePeriod
+            key={value.key}
+            index={index}
+            onSelectMotif={onSelectMotif}
+            onSetDurationDate={onSetDurationDate}
+            onSetAbsenceDate={onSetAbsenceDate}
+            onDeleteAbsence={onDeleteButtonClick}
+            motifs={motifs}
+            showDeleteButton={localAbsences.length > 1}
+            durationError={
+              errorsInput[`${index}`] ??
+              (error?.absences
+                ? error.absences[index].errorDuration
+                : undefined)
+            }
+            absenceDateError={
+              error?.absences ? error.absences[index].errorDate : undefined
+            }
+            absence={value}
+            informationData={informationData}
+            absenceRef={absenceRef}
+          />
+        );
+      })}
 
       <Button
+        ref={addButtonRef}
         onClick={onAddButtonClick}
         priority="secondary"
         className="fr-mt-2w"

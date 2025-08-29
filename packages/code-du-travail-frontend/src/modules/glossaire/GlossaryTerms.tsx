@@ -19,7 +19,7 @@ export const GlossaryTerms = ({ letters }: GlossaryTermsProps) => {
 
         return (
           <div key={letter} className={fr.cx("fr-col-12", "fr-mb-4w")}>
-            <h2 className={fr.cx("fr-mb-2w")} id={letter}>
+            <h2 className={fr.cx("fr-mb-2w")} id={letter} tabIndex={-1}>
               {letter}
             </h2>
             <ListWithArrow
