@@ -36,6 +36,8 @@ export function RadioQuestion({
     onChangeSelectedOption(value);
   };
 
+  const errorId = `${name}-error`; // ID explicite pour le message d'erreur
+
   return (
     <div>
       <RadioButtons
@@ -51,25 +53,26 @@ export function RadioQuestion({
             autoFocus: autoFocus && index === 0,
             required: true,
             "data-testid": `${name} - ${question.label}`,
+            "aria-describedby": error ? errorId : undefined,
           },
         }))}
         state={error ? "error" : subLabel ? "info" : "default"}
         stateRelatedMessage={
           error ? (
-            <span
+            <p
+              id={errorId}
+              role="alert"
               dangerouslySetInnerHTML={{
                 __html: xssWrapper(error),
               }}
             />
-          ) : (
-            subLabel && (
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: xssWrapper(subLabel),
-                }}
-              />
-            )
-          )
+          ) : subLabel ? (
+            <span
+              dangerouslySetInnerHTML={{
+                __html: xssWrapper(subLabel),
+              }}
+            />
+          ) : undefined
         }
       />
       {note && <i>{note}</i>}

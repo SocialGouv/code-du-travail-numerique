@@ -68,6 +68,8 @@ export function TextQuestion({
       ? convertFrToISODate(localValue)
       : localValue;
 
+  const errorId = `${id}-error`;
+
   return (
     <Input
       label={<Html as="span">{label}</Html>}
@@ -99,17 +101,21 @@ export function TextQuestion({
           ref: (ref: HTMLInputElement) => setInputRef(ref),
           "data-testid": dataTestId,
           onWheel: preventScroll,
+          "aria-invalid": error ? "true" : undefined,
+          "aria-describedby": error ? errorId : undefined,
         } as any
       }
       state={error ? "error" : subLabel ? "info" : "default"}
       stateRelatedMessage={
         error ? (
-          <span dangerouslySetInnerHTML={{ __html: xssWrapper(error) }} />
-        ) : (
-          subLabel && (
-            <span dangerouslySetInnerHTML={{ __html: xssWrapper(subLabel) }} />
-          )
-        )
+          <p
+            id={errorId}
+            role="alert"
+            dangerouslySetInnerHTML={{ __html: xssWrapper(error) }}
+          />
+        ) : subLabel ? (
+          <span dangerouslySetInnerHTML={{ __html: xssWrapper(subLabel) }} />
+        ) : undefined
       }
       classes={{
         nativeInputOrTextArea: defaultInputStyle,
