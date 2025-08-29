@@ -26,7 +26,7 @@ export type NumberedScaleQuestionnaireItemProps = {
   title?: string;
   displayError?: boolean;
   onChange: (status: FEEDBACK_RESULT) => void;
-  dataTestId?: string;
+  id?: string;
   hint?: string;
 };
 
@@ -37,7 +37,7 @@ export const NumberedScaleQuestionnaireItem = ({
   title,
   displayError,
   onChange,
-  dataTestId,
+  id,
   hint,
 }: NumberedScaleQuestionnaireItemProps) => {
   const [status, setStatus] = useState<Status>();
@@ -62,7 +62,7 @@ export const NumberedScaleQuestionnaireItem = ({
   return (
     <div
       className={`${fr.cx("fr-ml-1w", "fr-mb-2w")} ${scaleContainer}`}
-      data-testid={dataTestId}
+      id={id}
     >
       <fieldset className={fr.cx("fr-fieldset")} id={fieldsetId}>
         {title && (
@@ -96,7 +96,6 @@ export const NumberedScaleQuestionnaireItem = ({
                   <input
                     ref={index === 0 ? firstRadioRef : undefined}
                     id={`${fieldsetId}-${buttonStatus}`}
-                    data-testId={`${dataTestId}-${buttonStatus}`}
                     className="fr-sr-only"
                     type="radio"
                     aria-describedby={
@@ -106,7 +105,7 @@ export const NumberedScaleQuestionnaireItem = ({
                       setStatus(buttonStatus);
                       onChange(values[index]);
                     }}
-                    name={fieldsetId || `scale-${dataTestId || "default"}`}
+                    name={fieldsetId || `scale-${id || "default"}`}
                   />
                   <label
                     htmlFor={`${fieldsetId}-${buttonStatus}`}

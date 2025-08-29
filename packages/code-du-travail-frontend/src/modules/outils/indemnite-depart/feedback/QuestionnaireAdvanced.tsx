@@ -40,10 +40,10 @@ export const QuestionnaireAdvanced = forwardRef<
     }
   }, [ref]);
 
-  // Helper function to focus on error field by testid
-  const focusErrorField = (testid: string): boolean => {
+  // Helper function to focus on error field by id
+  const focusErrorField = (id: string): boolean => {
     const errorField = formRef.current?.querySelector(
-      `[data-testid="${testid}"] [aria-invalid="true"]`
+      `[id="${id}"] [aria-invalid="true"]`
     ) as HTMLElement;
     if (errorField) {
       errorField.focus();
@@ -140,7 +140,7 @@ export const QuestionnaireAdvanced = forwardRef<
           }}
           hint="Sur une échelle de 1 à 5, 1 n'est pas facile du tout et 5 est
             très facile."
-          dataTestId="simulator"
+          id="simulator"
           displayError={displayErrorSimulator}
         />
         <NumberedScaleQuestionnaireItem
@@ -159,7 +159,7 @@ export const QuestionnaireAdvanced = forwardRef<
           }}
           hint="Sur une échelle de 1 à 5, 1 n'est pas clair du tout et 5 est
             très clair."
-          dataTestId="questionClarity"
+          id="questionClarity"
           displayError={displayErrorQuestion}
         />
         <NumberedScaleQuestionnaireItem
@@ -178,14 +178,14 @@ export const QuestionnaireAdvanced = forwardRef<
           }}
           hint="Sur une échelle de 1 à 5, 1 n'est pas clair du tout et 5 est
             très clair."
-          dataTestId="resultClarity"
+          id="resultClarity"
           displayError={displayErrorExplanation}
         />
         <QuestionnaireText
           title="Vous souhaitez nous en dire davantage ?"
           placeholder="Exemple: la question sur la date de début du contrat n'est pas claire"
           onChange={setFeedbackText}
-          dataTestId="more-input"
+          id="more-input"
         />
       </div>
       <div
