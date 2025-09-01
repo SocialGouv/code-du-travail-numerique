@@ -11,6 +11,10 @@ const Intro = () => {
         Vous aurez besoin d’informations telles que les dates d’entrée et de
         sortie de l’entreprise et le montant des derniers salaires.
       </p>
+      <p>
+        La saisie des champs est obligatoire sur l&apos;ensemble des étapes sauf
+        mention contraire.
+      </p>
     </>
   );
 };

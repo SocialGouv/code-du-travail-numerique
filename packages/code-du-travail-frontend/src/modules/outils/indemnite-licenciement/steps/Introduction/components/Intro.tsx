@@ -12,6 +12,10 @@ const Intro = () => {
         sortie de l’entreprise, la date de notification du licenciement et le
         montant des derniers salaires.
       </p>
+      <p>
+        La saisie des champs est obligatoire sur l&apos;ensemble des étapes sauf
+        mention contraire.
+      </p>
     </>
   );
 };
