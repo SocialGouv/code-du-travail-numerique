@@ -121,11 +121,13 @@ const AbsencePeriods = ({
     onChange(newAbsences);
   };
 
+  const describedBy = error?.global ? "absences-error" : undefined;
+
   return (
-    <div>
-      <label className={fr.cx("fr-text--bold", "fr-text--lg")}>
+    <fieldset aria-describedby={describedBy}>
+      <legend className={fr.cx("fr-text--bold", "fr-text--lg")}>
         Quels sont le motif et la durée de ces absences prolongées&nbsp;?
-      </label>
+      </legend>
       <p className={fr.cx("fr-mt-2w")}>
         Veuillez créer une ligne différente pour chaque période d&apos;absence
         de plus d&apos;un mois même si vous avez été absent plusieurs fois pour
@@ -171,9 +173,14 @@ const AbsencePeriods = ({
       </Button>
 
       {error?.global && (
-        <Alert title={error.global} severity="error" className="fr-mt-2w" />
+        <Alert
+          id="absences-error"
+          title={error.global}
+          severity="error"
+          className="fr-mt-2w"
+        />
       )}
-    </div>
+    </fieldset>
   );
 };
 
