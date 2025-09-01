@@ -37,15 +37,14 @@ export function RadioQuestion({
   };
 
   const errorId = `${name}-error`; // ID explicite pour le message d'erreur
+  const hintId = `${name}-help`; // ID pour le message d'aide
 
   return (
     <div>
       <RadioButtons
         legend={<Html as="p">{label}</Html>}
         options={questions.map((question, index) => ({
-          name,
           label: question.label,
-          value: question.value,
           id: question.id,
           nativeInputProps: {
             checked: selectedOption === question.value,
@@ -68,12 +67,14 @@ export function RadioQuestion({
             />
           ) : subLabel ? (
             <span
+              id={hintId}
               dangerouslySetInnerHTML={{
                 __html: xssWrapper(subLabel),
               }}
             />
           ) : undefined
         }
+        aria-describedby={subLabel ? hintId : undefined}
       />
       {note && <i>{note}</i>}
     </div>
