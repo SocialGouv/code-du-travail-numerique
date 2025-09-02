@@ -2,7 +2,7 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { Enterprise } from "../types";
-import Card from "@codegouvfr/react-dsfr/Card";
+import Card from "./Card";
 import { css } from "@styled-system/css";
 import { useSearchParams } from "next/navigation";
 import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelectionDetail";
