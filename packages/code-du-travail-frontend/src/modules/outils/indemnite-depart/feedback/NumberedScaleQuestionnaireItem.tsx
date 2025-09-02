@@ -23,7 +23,7 @@ export type NumberedScaleQuestionnaireItemProps = {
     FEEDBACK_RESULT,
   ];
   labels: [string, string, string, string, string];
-  title?: string;
+  title: string;
   displayError?: boolean;
   onChange: (status: FEEDBACK_RESULT) => void;
   id?: string;
@@ -41,10 +41,8 @@ export const NumberedScaleQuestionnaireItem = ({
   hint,
 }: NumberedScaleQuestionnaireItemProps) => {
   const [status, setStatus] = useState<Status>();
-  const fieldsetId = title
-    ? `fieldset-${title.toLowerCase().replace(/\s+/g, "-")}`
-    : undefined;
-  const errorId = fieldsetId ? `${fieldsetId}-error` : undefined;
+  const fieldsetId = `fieldset-${title.toLowerCase().replace(/\s+/g, "-")}`;
+  const errorId = `${fieldsetId}-error`;
   const errorRef = useRef<HTMLParagraphElement>(null);
   const firstRadioRef = useRef<HTMLInputElement>(null);
 
@@ -65,19 +63,17 @@ export const NumberedScaleQuestionnaireItem = ({
       id={id}
     >
       <fieldset className={fr.cx("fr-fieldset")} id={fieldsetId}>
-        {title && (
-          <legend
-            className={fr.cx("fr-mb-2v", "fr-label")}
-            id={`${fieldsetId}-legend`}
+        <legend
+          className={fr.cx("fr-mb-2v", "fr-label")}
+          id={`${fieldsetId}-legend`}
+        >
+          {title}
+          <span
+            className={`${fr.cx("fr-text--sm", "fr-mb-1w", "fr-hint-text")} ${desktopLabelStyle}`}
           >
-            {title}
-            <span
-              className={`${fr.cx("fr-text--sm", "fr-mb-1w", "fr-hint-text")} ${desktopLabelStyle}`}
-            >
-              {hint}
-            </span>
-          </legend>
-        )}
+            {hint}
+          </span>
+        </legend>
 
         <div className={scaleContainer}>
           <div className={labelLeftStyle} aria-hidden="true">
@@ -98,14 +94,12 @@ export const NumberedScaleQuestionnaireItem = ({
                     id={`${fieldsetId}-${buttonStatus}`}
                     className="fr-sr-only"
                     type="radio"
-                    aria-describedby={
-                      displayError && errorId ? errorId : undefined
-                    }
+                    aria-describedby={displayError ? errorId : undefined}
                     onChange={() => {
                       setStatus(buttonStatus);
                       onChange(values[index]);
                     }}
-                    name={fieldsetId || `scale-${id || "default"}`}
+                    name={fieldsetId}
                     data-testid={`${id}-${buttonStatus}`}
                   />
                   <label
