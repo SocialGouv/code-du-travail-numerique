@@ -91,8 +91,44 @@ export const Card: React.FC<CardProps> = ({
     );
   };
 
+  const handleCardClick = (event: React.MouseEvent) => {
+    // Ne pas déclencher si on clique directement sur le lien/bouton
+    if ((event.target as HTMLElement).closest("a, button")) {
+      return;
+    }
+
+    if (linkProps) {
+      if (linkProps.href) {
+        // Comportement de lien
+        const isExternal =
+          linkProps.href.startsWith("http") || linkProps.target === "_blank";
+        if (linkProps.onClick) {
+          linkProps.onClick(event);
+        }
+
+        if (isExternal || linkProps.href === "#") {
+          if (linkProps.target === "_blank") {
+            window.open(linkProps.href, "_blank");
+          } else {
+            window.location.href = linkProps.href;
+          }
+        } else {
+          // Navigation interne avec Next.js
+          window.location.href = linkProps.href;
+        }
+      } else if (linkProps.onClick) {
+        // Comportement de bouton
+        linkProps.onClick(event);
+      }
+    }
+  };
+
   return (
-    <div className={rootClasses}>
+    <div
+      className={rootClasses}
+      onClick={linkProps ? handleCardClick : undefined}
+      style={{ cursor: linkProps ? "pointer" : "default" }}
+    >
       <div className="fr-card__body">
         <div className={cx("fr-card__content", classes.content)}>
           <HtmlTitleTag className={cx("fr-card__title", classes.title)}>
