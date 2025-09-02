@@ -36,8 +36,8 @@ export function RadioQuestion({
     onChangeSelectedOption(value);
   };
 
-  const errorId = `${name}-error`; // ID explicite pour le message d'erreur
-  const hintId = `${name}-help`; // ID pour le message d'aide
+  const errorId = `${name}-error`;
+  const hintId = `${name}-help`;
 
   return (
     <div>
