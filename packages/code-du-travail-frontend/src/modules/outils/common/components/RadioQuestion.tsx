@@ -52,7 +52,11 @@ export function RadioQuestion({
             autoFocus: autoFocus && index === 0,
             required: true,
             "data-testid": `${name} - ${question.label}`,
-            "aria-describedby": error ? errorId : undefined,
+            "aria-describedby": error
+              ? errorId
+              : subLabel
+                ? `${name}-help`
+                : undefined,
           },
         }))}
         state={error ? "error" : subLabel ? "info" : "default"}

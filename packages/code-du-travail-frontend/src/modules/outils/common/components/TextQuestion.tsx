@@ -114,7 +114,10 @@ export function TextQuestion({
             dangerouslySetInnerHTML={{ __html: xssWrapper(error) }}
           />
         ) : subLabel ? (
-          <span dangerouslySetInnerHTML={{ __html: xssWrapper(subLabel) }} />
+          <span
+            id={`${id}-help`}
+            dangerouslySetInnerHTML={{ __html: xssWrapper(subLabel) }}
+          />
         ) : undefined
       }
       classes={{
