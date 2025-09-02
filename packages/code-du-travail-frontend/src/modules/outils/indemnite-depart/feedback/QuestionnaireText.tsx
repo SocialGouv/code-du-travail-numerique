@@ -37,6 +37,7 @@ export const QuestionnaireText = ({
             onChange: handleChange,
             maxLength: maxCharacters,
             "aria-describedby": `${id}-hint ${id}-remaining`,
+            "data-testid": `${id}`,
           } as any
         }
         hintText={placeholder}

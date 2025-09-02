@@ -48,12 +48,12 @@ export const NumberedScaleQuestionnaireItem = ({
   const errorRef = useRef<HTMLParagraphElement>(null);
   const firstRadioRef = useRef<HTMLInputElement>(null);
 
-  // Gestion du focus sur l'erreur
+  // Gestion du focus sur le premier radio button en cas d'erreur
   useEffect(() => {
     if (displayError) {
       setTimeout(() => {
-        if (errorRef.current) {
-          errorRef.current.focus();
+        if (firstRadioRef.current) {
+          firstRadioRef.current.focus();
         }
       }, 100);
     }
@@ -106,6 +106,7 @@ export const NumberedScaleQuestionnaireItem = ({
                       onChange(values[index]);
                     }}
                     name={fieldsetId || `scale-${id || "default"}`}
+                    data-testid={`${id}-${buttonStatus}`}
                   />
                   <label
                     htmlFor={`${fieldsetId}-${buttonStatus}`}
