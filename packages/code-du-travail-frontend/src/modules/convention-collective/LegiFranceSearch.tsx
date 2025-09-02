@@ -27,7 +27,7 @@ export function LegiFranceSearch({ idcc, shortTitle }: Props) {
         <h2 data-testid="agreement-search-title">
           Recherche dans la convention collective
         </h2>
-        <p data-testid="agreement-search-description">
+        <p id="search-description" data-testid="agreement-search-description">
           Recherchez par mots clés dans le texte de la convention collective sur
           le site Légifrance.
         </p>
@@ -55,6 +55,7 @@ export function LegiFranceSearch({ idcc, shortTitle }: Props) {
                 value: query,
                 placeholder: "Rechercher sur Légifrance",
                 "data-testid": "agreement-search-input",
+                "aria-describedby": "search-description",
               } as any
             }
             className={`${fr.cx("fr-mb-0")} ${inputStyle}`}
@@ -117,8 +118,8 @@ export function LegiFranceSearch({ idcc, shortTitle }: Props) {
           <Button
             type="submit"
             iconId="fr-icon-search-line"
-            title="Lancer une recherche"
-            aria-label="Recherchez dans la convention collective"
+            title="Lancer la recherche dans la convention collective sur Légifrance (nouvelle fenêtre)"
+            aria-label="Lancer la recherche dans la convention collective sur Légifrance (nouvelle fenêtre)"
             data-testid="agreement-search-button"
           >
             Rechercher
