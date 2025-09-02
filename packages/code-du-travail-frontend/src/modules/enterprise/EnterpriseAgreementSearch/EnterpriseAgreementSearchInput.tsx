@@ -5,7 +5,8 @@ import Button from "@codegouvfr/react-dsfr/Button";
 import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import Alert from "@codegouvfr/react-dsfr/Alert";
-import { Card } from "@codegouvfr/react-dsfr/Card";
+import { Card as DsfrCard } from "@codegouvfr/react-dsfr/Card";
+import Card from "./Card";
 import { createElement, ReactNode, useEffect, useRef, useState } from "react";
 import { css } from "@styled-system/css";
 
@@ -215,7 +216,7 @@ export const EnterpriseAgreementSearchInput = ({
             "fr-grid-row--gutters"
           )}
         >
-          <Card
+          <DsfrCard
             title={`${selectedAgreement.shortTitle} IDCC ${selectedAgreement.id}`}
             size="small"
             className={fr.cx("fr-col-10")}
@@ -460,7 +461,6 @@ export const EnterpriseAgreementSearchInput = ({
                       },
                     }
                   : {
-                      href: "",
                       onClick: (ev) => {
                         ev.preventDefault();
                         setSelectedEnterprise(enterprise);
@@ -534,7 +534,6 @@ export const EnterpriseAgreementSearchInput = ({
                   },
                 }
               : {
-                  href: "",
                   onClick: (ev) => {
                     ev.preventDefault();
                     const assMatAgreement = {
