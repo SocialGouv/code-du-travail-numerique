@@ -6,7 +6,7 @@ import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { Card as DsfrCard } from "@codegouvfr/react-dsfr/Card";
-import Card from "./Card";
+import { EnterpriseCard } from "./Card";
 import { createElement, ReactNode, useEffect, useRef, useState } from "react";
 import { css } from "@styled-system/css";
 
@@ -444,7 +444,7 @@ export const EnterpriseAgreementSearchInput = ({
         {!!enterprises?.length &&
           !loading &&
           enterprises?.map((enterprise, index) => (
-            <Card
+            <EnterpriseCard
               key={enterprise.label + index}
               className={fr.cx("fr-mt-2w")}
               border
@@ -520,7 +520,7 @@ export const EnterpriseAgreementSearchInput = ({
           Votre recherche concerne les assistants maternels, employés de
           maison&nbsp;?
         </div>
-        <Card
+        <EnterpriseCard
           border
           enlargeLink
           titleAs={level === 2 ? "h3" : "h4"}
