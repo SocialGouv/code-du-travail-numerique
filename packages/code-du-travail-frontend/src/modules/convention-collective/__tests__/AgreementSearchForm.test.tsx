@@ -129,7 +129,7 @@ describe("<PageContribution />", () => {
       enterpriseUi.enterpriseAgreementSearch.resultLines.carrefour.title.query()
     ).toBeInTheDocument();
     userAction.click(
-      enterpriseUi.enterpriseAgreementSearch.resultLines.carrefour.link.get()
+      enterpriseUi.enterpriseAgreementSearch.resultLines.carrefour.title.get()
     );
     expect(sendEvent).toHaveBeenCalledWith({
       action: "Trouver sa convention collective",
@@ -175,7 +175,7 @@ describe("<PageContribution />", () => {
       enterpriseUi.enterpriseAgreementSearch.resultLines.bnp.title.query()
     ).toBeInTheDocument();
     userAction.click(
-      enterpriseUi.enterpriseAgreementSearch.resultLines.bnp.link.get()
+      enterpriseUi.enterpriseAgreementSearch.resultLines.bnp.title.get()
     );
     userAction.click(
       enterpriseUi.enterpriseAgreementSearch.resultLines.bnp.ccList.idcc2120.get()
