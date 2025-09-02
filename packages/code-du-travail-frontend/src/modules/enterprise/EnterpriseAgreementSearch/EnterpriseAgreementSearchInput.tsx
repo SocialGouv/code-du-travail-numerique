@@ -6,7 +6,7 @@ import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { Card as DsfrCard } from "@codegouvfr/react-dsfr/Card";
-import { EnterpriseCard } from "./Card";
+import { EnterpriseCard } from "./EnterpriseCard";
 import { createElement, ReactNode, useEffect, useRef, useState } from "react";
 import { css } from "@styled-system/css";
 
