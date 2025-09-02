@@ -203,6 +203,7 @@ export const EnterpriseAgreementSearchInput = ({
           ref={selectedConventionTitleRef}
           className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}
           tabIndex={-1}
+          id={`selected-convention`}
         >
           Vous avez sélectionné la convention collective
         </p>
@@ -244,6 +245,9 @@ export const EnterpriseAgreementSearchInput = ({
                   }, 100);
                 }
               }}
+              aria-label="Modifier l'entreprise sélectionnée"
+              title="Modifier l'entreprise sélectionnée"
+              aria-describedby={`selected-convention`}
             >
               Modifier
             </Button>

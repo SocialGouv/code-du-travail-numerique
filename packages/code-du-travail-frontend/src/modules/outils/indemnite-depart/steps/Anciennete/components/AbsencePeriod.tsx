@@ -62,6 +62,7 @@ const AbsencePeriod = ({
         className={fr.cx("fr-text--bold", "fr-mb-1w")}
         ref={absenceRef}
         tabIndex={-1}
+        id={"absence-period-" + index}
       >
         Absence {index + 1}
       </p>
@@ -138,6 +139,9 @@ const AbsencePeriod = ({
               size="small"
               iconPosition="right"
               iconId="ri-delete-bin-line"
+              title={`Supprimer la période d'absence ${index + 1}`}
+              aria-label={`Supprimer la période d'absence ${index + 1}`}
+              aria-describedby={"absence-period-" + index}
             >
               Supprimer
             </Button>
