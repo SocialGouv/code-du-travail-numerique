@@ -38,6 +38,18 @@ export const EnterpriseCard: React.FC<CardProps> = ({
   linkProps,
   classes = {},
 }) => {
+  const handleCardClick = (event: React.MouseEvent) => {
+    // Ne pas déclencher si on clique directement sur le lien/bouton
+    if ((event.target as HTMLElement).closest("a, button")) {
+      return;
+    }
+
+    // Si c'est un bouton (pas de href), déclencher l'action
+    if (linkProps && !linkProps.href && linkProps.onClick) {
+      linkProps.onClick(event);
+    }
+  };
+
   return (
     <div
       className={cx(
@@ -59,6 +71,10 @@ export const EnterpriseCard: React.FC<CardProps> = ({
         classes.root,
         className
       )}
+      onClick={linkProps && !linkProps.href ? handleCardClick : undefined}
+      style={{
+        cursor: linkProps ? "pointer" : "default",
+      }}
     >
       <div className={fr.cx("fr-card__body")}>
         <div className={cx(fr.cx("fr-card__content"), classes.content)}>
