@@ -62,7 +62,7 @@ export function RadioQuestion({
         state={error ? "error" : subLabel ? "info" : "default"}
         stateRelatedMessage={
           error ? (
-            <p
+            <span
               id={errorId}
               role="alert"
               dangerouslySetInnerHTML={{
