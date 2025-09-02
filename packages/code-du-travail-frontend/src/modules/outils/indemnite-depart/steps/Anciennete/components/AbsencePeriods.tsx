@@ -175,9 +175,10 @@ const AbsencePeriods = ({
       {error?.global && (
         <Alert
           id="absences-error"
-          title={error.global}
+          description={error.global}
           severity="error"
           className="fr-mt-2w"
+          small
         />
       )}
     </fieldset>
