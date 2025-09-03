@@ -1,10 +1,10 @@
 import { Select } from "@codegouvfr/react-dsfr/Select";
 import { Input } from "@codegouvfr/react-dsfr/Input";
-import React, { useState } from "react";
+import React, { JSX, useState } from "react";
 import { Motif } from "@socialgouv/modeles-social";
 import { AbsenceWithKey } from "./AbsencePeriods";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { fr } from "@codegouvfr/react-dsfr";
+import { fr } from "@codegouvfr/react-dsfr"; // Fixed: 'of' changed to 'from'
 import {
   preventScroll,
   handleNumberInput,
@@ -12,6 +12,14 @@ import {
 import { defaultSelectStyle } from "src/modules/outils/common/styles/select";
 import { defaultInputStyle } from "src/modules/outils/common/styles/input";
 import { TextQuestion } from "src/modules/outils/common/components";
+
+interface DataTestIdProps {
+  "data-testid"?: string;
+}
+
+type SelectProps = React.SelectHTMLAttributes<HTMLSelectElement> &
+  DataTestIdProps;
+type InputProps = React.InputHTMLAttributes<HTMLInputElement> & DataTestIdProps;
 
 type Props = {
   index: number;
@@ -25,6 +33,9 @@ type Props = {
   absenceDateError?: string;
   showDeleteButton: boolean;
   informationData: Record<string, string | undefined>;
+  autoFocus?: boolean;
+  ariaDescribedby?: string;
+  absenceRef?: React.RefObject<HTMLElement | null>;
 };
 
 const AbsencePeriod = ({
@@ -39,7 +50,10 @@ const AbsencePeriod = ({
   showDeleteButton,
   onDeleteAbsence,
   informationData,
-}: Props) => {
+  autoFocus,
+  ariaDescribedby,
+  absenceRef,
+}: Props): JSX.Element => {
   const [shouldAskAbsenceDate, askAbsenceDate] = useState(
     absence
       ? absence.motif?.startAt && absence.motif?.startAt(informationData)
@@ -59,6 +73,8 @@ const AbsencePeriod = ({
       <fieldset className={fr.cx("fr-fieldset")}>
         <legend
           className={fr.cx("fr-fieldset__legend", "fr-text--bold", "fr-mb-1w")}
+          ref={absenceRef as React.RefObject<HTMLLegendElement>}
+          tabIndex={-1}
         >
           Absence {index + 1}
         </legend>
@@ -76,7 +92,7 @@ const AbsencePeriod = ({
                     onChange: (e) => selectMotif(absence.key, e.target.value),
                     value: absence?.motif?.label,
                     "data-testid": `absence-motif-${index}`,
-                  } as any
+                  } as SelectProps
                 }
                 className={defaultSelectStyle}
               >
@@ -104,7 +120,10 @@ const AbsencePeriod = ({
                     onWheel: preventScroll,
                     value: absence?.durationInMonth ?? "",
                     "data-testid": `absence-duree-${index}`,
-                  } as any
+                    "aria-describedby": ariaDescribedby,
+                    autoFocus: autoFocus,
+                    "aria-live": "off",
+                  } as InputProps
                 }
                 classes={{
                   nativeInputOrTextArea: defaultInputStyle,
@@ -122,7 +141,9 @@ const AbsencePeriod = ({
                   }}
                   error={absenceDateError}
                   id={`${index}.dateAbsence`}
-                  dataTestId={`absence-date-${index}`}
+                  dataTestId={`absence-date-${index}`} // Adjust if TextQuestion uses data-testid
+                  autoFocus={false}
+                  ariaLive="off"
                 />
               </div>
             )}

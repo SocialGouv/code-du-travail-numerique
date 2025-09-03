@@ -1,7 +1,6 @@
 import { Absence, Motif } from "@socialgouv/modeles-social";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useMemo } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { Alert } from "@codegouvfr/react-dsfr/Alert";
 
 import AbsencePeriod from "./AbsencePeriod";
 import type { AncienneteAbsenceStoreError } from "../store";
@@ -54,6 +53,14 @@ const AbsencePeriods = ({
   const [localAbsences, setLocalAbsences] = React.useState<AbsenceWithKey[]>(
     mapAbsences(absences, motifs[0])
   );
+  const errorMessageId = "absence-total-error";
+  const statusMessageRef = useRef<HTMLDivElement>(null);
+
+  const addButtonRef = useRef<HTMLButtonElement>(null);
+  const absenceRefs = useMemo(
+    () => new Map<string, React.RefObject<HTMLParagraphElement | null>>(),
+    []
+  );
 
   useEffect(() => {
     if (absences.length != localAbsences.length) {
@@ -62,25 +69,51 @@ const AbsencePeriods = ({
     }
   }, [absences]);
 
+  // Update the status message when there's a global error
+  useEffect(() => {
+    if (error?.global && statusMessageRef.current) {
+      statusMessageRef.current.textContent = error.global;
+    } else if (statusMessageRef.current) {
+      statusMessageRef.current.textContent = "";
+    }
+  }, [error?.global]);
+
   const [errorsInput, setErrorsInput] = React.useState({});
 
   const onAddButtonClick = () => {
+    const newKey = generateUniqueKey();
     const newAbsences: AbsenceWithKey[] = [
       ...localAbsences,
       {
-        key: generateUniqueKey(),
+        key: newKey,
         motif: motifs[0],
         durationInMonth: undefined,
       },
     ];
     setLocalAbsences(newAbsences);
     onChange(newAbsences);
+
+    // Focus on the newly added absence title
+    setTimeout(() => {
+      const newAbsenceRef = absenceRefs.get(newKey);
+      if (newAbsenceRef?.current) {
+        newAbsenceRef.current.focus();
+      }
+    }, 100);
   };
 
   const onDeleteButtonClick = (key: string) => {
     const newAbsences = localAbsences.filter((absence) => absence.key !== key);
     setLocalAbsences(newAbsences);
     onChange(newAbsences);
+
+    // Remove the ref for the deleted absence
+    absenceRefs.delete(key);
+
+    // Focus on the "add absence" button
+    setTimeout(() => {
+      addButtonRef.current?.focus();
+    }, 100);
   };
 
   const onSetDurationDate = (key: string, value: string) => {
@@ -123,6 +156,7 @@ const AbsencePeriods = ({
 
   return (
     <div>
+      <div aria-live="polite" className="sr-only" ref={statusMessageRef} />
       <h3 className={fr.cx("fr-text--lg", "fr-mb-0")}>
         Quels sont le motif et la durée de ces absences prolongées&nbsp;?
       </h3>
@@ -138,29 +172,46 @@ const AbsencePeriods = ({
         <Html className={fr.cx("fr-highlight")}>{messageMotifExample}</Html>
       )}
 
-      {localAbsences.map((value, index) => (
-        <AbsencePeriod
-          key={value.key}
-          index={index}
-          onSelectMotif={onSelectMotif}
-          onSetDurationDate={onSetDurationDate}
-          onSetAbsenceDate={onSetAbsenceDate}
-          onDeleteAbsence={onDeleteButtonClick}
-          motifs={motifs}
-          showDeleteButton={localAbsences.length > 1}
-          durationError={
-            errorsInput[`${index}`] ??
-            (error?.absences ? error.absences[index].errorDuration : undefined)
-          }
-          absenceDateError={
-            error?.absences ? error.absences[index].errorDate : undefined
-          }
-          absence={value}
-          informationData={informationData}
-        />
-      ))}
+      {localAbsences.map((value, index) => {
+        // Create or get the ref for this absence
+        if (!absenceRefs.has(value.key)) {
+          absenceRefs.set(
+            value.key,
+            React.createRef<HTMLParagraphElement | null>()
+          );
+        }
+        const absenceRef = absenceRefs.get(value.key);
+
+        return (
+          <AbsencePeriod
+            key={value.key}
+            index={index}
+            onSelectMotif={onSelectMotif}
+            onSetDurationDate={onSetDurationDate}
+            onSetAbsenceDate={onSetAbsenceDate}
+            onDeleteAbsence={onDeleteButtonClick}
+            motifs={motifs}
+            showDeleteButton={localAbsences.length > 1}
+            durationError={
+              errorsInput[`${index}`] ??
+              (error?.absences
+                ? error.absences[index].errorDuration
+                : undefined)
+            }
+            absenceDateError={
+              error?.absences ? error.absences[index].errorDate : undefined
+            }
+            absence={value}
+            informationData={informationData}
+            absenceRef={absenceRef}
+            autoFocus={index === 0 && !!error?.global}
+            ariaDescribedby={error?.global ? errorMessageId : undefined}
+          />
+        );
+      })}
 
       <Button
+        ref={addButtonRef}
         onClick={onAddButtonClick}
         priority="secondary"
         className="fr-mt-2w"
@@ -171,7 +222,14 @@ const AbsencePeriods = ({
       </Button>
 
       {error?.global && (
-        <Alert title={error.global} severity="error" className="fr-mt-2w" />
+        <div id={errorMessageId}>
+          <div
+            role="alert"
+            className={fr.cx("fr-alert", "fr-alert--error", "fr-mt-2w")}
+          >
+            <p>{error.global}</p>
+          </div>
+        </div>
       )}
     </div>
   );

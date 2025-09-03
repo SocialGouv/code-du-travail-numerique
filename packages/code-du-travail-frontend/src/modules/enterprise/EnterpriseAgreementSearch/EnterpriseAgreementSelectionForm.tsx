@@ -30,11 +30,6 @@ export const EnterpriseAgreementSelectionForm = ({
     selectedAgreement
   );
   const agreements = getEnterpriseAgreements(enterprise.conventions);
-  const resultRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    resultRef.current?.focus();
-  }, []);
 
   return (
     <>
@@ -79,12 +74,9 @@ export const EnterpriseAgreementSelectionForm = ({
         <Alert
           severity="info"
           title={
-            <>
-              <span tabIndex={-1} ref={resultRef}>
-                Nous n&apos;avons pas de réponse pour cette convention
-                collective
-              </span>
-            </>
+            <span>
+              Nous n&apos;avons pas de réponse pour cette convention collective
+            </span>
           }
           description="Vous pouvez tout de même poursuivre pour obtenir les informations générales prévues par le code du travail."
         />
@@ -97,10 +89,10 @@ export const EnterpriseAgreementSelectionForm = ({
               : "warning"
           }
           title={
-            <span tabIndex={-1} ref={resultRef}>
+            <>
               Aucune convention collective n&apos;a été déclarée pour
               l&apos;entreprise
-            </span>
+            </>
           }
           description={
             isInSimulator ? (

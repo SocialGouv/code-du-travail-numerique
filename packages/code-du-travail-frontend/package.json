@@ -1,6 +1,6 @@
 {
   "name": "@cdt/frontend",
-  "version": "4.187.0",
+  "version": "4.187.1",
   "description": "Code du travail frontend",
   "private": true,
   "homepage": "https://code-du-travail.beta.gouv.fr/",
@@ -58,7 +58,6 @@
     "publicodes": "1.0.0-beta.60",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-image-lightbox": "^5.1.4",
     "sharp": "^0.33.4",
     "uuid": "^9.0.0",
     "xss": "^1.0.10",

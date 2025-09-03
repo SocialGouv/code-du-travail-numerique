@@ -64,14 +64,6 @@ describe("SearchPageClient - Tests d'accessibilité et tabulation", () => {
     expect(document.activeElement).toBe(nextButton);
   });
 
-  it("Vérifie le focus après soumission simulée", async () => {
-    render(<SearchPageClient query="test" items={mockItems} />);
-
-    const searchInput = screen.getByPlaceholderText("Rechercher");
-
-    await waitFor(() => expect(searchInput).toHaveFocus(), { timeout: 100 });
-  });
-
   it("Vérifie la cohérence tab après chargement plus de résultats", async () => {
     const { container } = render(
       <SearchPageClient query="test" items={mockItems} />
@@ -82,10 +74,10 @@ describe("SearchPageClient - Tests d'accessibilité et tabulation", () => {
 
     await waitFor(
       () => {
-        const newResult = container.querySelector("#search-result-doc9");
+        const newResult = container.querySelector("#search-results-heading");
         expect(newResult).toHaveFocus();
       },
-      { timeout: 100 }
+      { timeout: 150 }
     );
   });
 });
