@@ -211,11 +211,29 @@ export const CookieConsentDSFR = () => {
                   ref={personalizeButtonRef}
                   onClick={openModal}
                   priority="tertiary"
+                  nativeButtonProps={{
+                    "aria-label":
+                      "Personnaliser les préférences en matière de cookies",
+                  }}
                 >
                   Personnaliser
                 </Button>
-                <Button onClick={handleRejectAll}>Tout refuser</Button>
-                <Button onClick={handleAcceptAll}>Tout accepter</Button>
+                <Button
+                  onClick={handleRejectAll}
+                  nativeButtonProps={{
+                    "aria-label": "Tout refuser - Refuser tous les cookies",
+                  }}
+                >
+                  Tout refuser
+                </Button>
+                <Button
+                  onClick={handleAcceptAll}
+                  nativeButtonProps={{
+                    "aria-label": "Tout accepter - Accepter tous les cookies",
+                  }}
+                >
+                  Tout accepter
+                </Button>
               </div>
             </div>
           </div>
