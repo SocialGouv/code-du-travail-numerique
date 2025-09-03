@@ -13,6 +13,7 @@ import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { Agreement } from "../../indemnite-depart/types";
 import isCcFullySupported from "src/modules/outils/common/utils/isCcFullySupported";
 import { fr } from "@codegouvfr/react-dsfr";
+import { AccessibleAlert } from "./AccessibleAlert";
 
 type Props = {
   error: CommonAgreementStoreError;
@@ -78,7 +79,7 @@ export const CommonAgreementStep = ({
         subLabel="Vous pouvez trouver le nom de votre convention collective sur votre bulletin de paie"
       />
       {route === "not-selected" && (
-        <Alert
+        <AccessibleAlert
           severity="warning"
           title="Attention"
           description="Vous pouvez passer cette étape et poursuivre la simulation qui vous fournira un résultat basé sur le code du travail. Nous vous recommandons de renseigner votre convention collective qui peut prévoir un résultat plus favorable que celui défini par le code du travail."
@@ -99,11 +100,14 @@ export const CommonAgreementStep = ({
             trackingActionName={trackingActionName}
           />
           {error?.agreement && (
-            <Alert
-              title={error.agreement}
-              severity="error"
-              className={fr.cx("fr-mt-2w")}
-            />
+            <div className={fr.cx("fr-mt-2w")}>
+              <AccessibleAlert
+                title="Attention"
+                severity="error"
+                description={error.agreement}
+                autoFocus
+              />
+            </div>
           )}
         </>
       )}
@@ -124,20 +128,26 @@ export const CommonAgreementStep = ({
             canContinueSimulationIfNoAgreement={showNotSelectedOption}
           />
           {error?.enterprise && (
-            <Alert
-              title={error.enterprise}
-              severity="error"
-              className={fr.cx("fr-mt-2w")}
-            />
+            <div className={fr.cx("fr-mt-2w")}>
+              <AccessibleAlert
+                title="Attention"
+                severity="error"
+                description={error.enterprise}
+                autoFocus
+              />
+            </div>
           )}
         </>
       )}
       {error?.errorPublicodes && (
-        <Alert
-          title={error.errorPublicodes}
-          severity="error"
-          className={fr.cx("fr-mt-2w")}
-        />
+        <div className={fr.cx("fr-mt-2w")}>
+          <AccessibleAlert
+            title="Attention"
+            severity="error"
+            description={error.errorPublicodes}
+            autoFocus
+          />
+        </div>
       )}
     </>
   );

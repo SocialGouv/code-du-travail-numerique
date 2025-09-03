@@ -107,7 +107,6 @@ const AbsencePeriod = ({
                 onWheel: preventScroll,
                 value: absence?.durationInMonth ?? "",
                 "data-testid": `absence-duree-${index}`,
-                "aria-live": "off",
               } as any
             }
             classes={{

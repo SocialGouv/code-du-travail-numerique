@@ -1,10 +1,8 @@
 import React, { useContext } from "react";
 import { PreavisRetraiteContext, usePreavisRetraiteStore } from "../store";
-import { Note } from "./components/Note";
 import { fr } from "@codegouvfr/react-dsfr";
 import { PubliQuestion } from "src/modules/outils/indemnite-depart/steps/Informations/components/PubliQuestion";
-import { eventEmitter } from "src/modules/outils/common/events/emitter";
-import { EventType } from "src/modules/outils/common/events";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 const StepInformations = () => {
   const store = useContext(PreavisRetraiteContext);
@@ -39,9 +37,25 @@ const StepInformations = () => {
         );
       })}
       {errors.errorPublicodes && (
-        <p className={fr.cx("fr-error-text")}>{errors.errorPublicodes}</p>
+        <div className={fr.cx("fr-mt-2w")}>
+          <AccessibleAlert
+            title="Attention"
+            severity="error"
+            description={errors.errorPublicodes}
+            autoFocus
+          />
+        </div>
       )}
-      {errors.errorNote && <Note message={errors.errorNote} />}
+      {errors.errorNote && (
+        <div className={fr.cx("fr-mt-2w")}>
+          <AccessibleAlert
+            title="À noter"
+            severity="info"
+            description={errors.errorNote}
+            data-testid="alert-note"
+          />
+        </div>
+      )}
     </>
   );
 };
