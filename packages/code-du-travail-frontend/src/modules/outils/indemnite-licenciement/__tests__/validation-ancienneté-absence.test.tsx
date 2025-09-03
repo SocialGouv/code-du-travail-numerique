@@ -6,7 +6,7 @@ import { ui } from "../../indemnite-depart/__tests__/ui";
 
 describe("Page ancienneté: vérification validation lorsque absence > ancienneté", () => {
   test("should show 12 month", async () => {
-    const { getByText } = render(
+    const { getByRole } = render(
       <CalculateurIndemniteLicenciement title={""} />
     );
     const userAction = new UserAction();
@@ -23,10 +23,8 @@ describe("Page ancienneté: vérification validation lorsque absence > anciennet
     userAction.click(ui.seniority.hasAbsence.oui.get());
     userAction.setInput(ui.seniority.absences.duration(0).get(), "1");
     userAction.click(ui.next.get());
-    expect(
-      getByText(
-        /La durée totale des absences doit être inférieure ou égale à l'ancienneté/
-      )
-    ).toBeInTheDocument();
+    expect(getByRole("alert").querySelector("p")).toHaveTextContent(
+      /La durée totale des absences doit être inférieure ou égale à l'ancienneté/
+    );
   });
 });

@@ -1,7 +1,6 @@
 import { Absence, Motif } from "@socialgouv/modeles-social";
 import React, { useEffect, useRef, useMemo } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { Alert } from "@codegouvfr/react-dsfr/Alert";
 
 import AbsencePeriod from "./AbsencePeriod";
 import type { AncienneteAbsenceStoreError } from "../store";
@@ -54,6 +53,8 @@ const AbsencePeriods = ({
   const [localAbsences, setLocalAbsences] = React.useState<AbsenceWithKey[]>(
     mapAbsences(absences, motifs[0])
   );
+  const errorMessageId = "absence-total-error";
+  const statusMessageRef = useRef<HTMLDivElement>(null);
 
   const addButtonRef = useRef<HTMLButtonElement>(null);
   const absenceRefs = useMemo(
@@ -67,6 +68,15 @@ const AbsencePeriods = ({
       setLocalAbsences(newAbsence);
     }
   }, [absences]);
+
+  // Update the status message when there's a global error
+  useEffect(() => {
+    if (error?.global && statusMessageRef.current) {
+      statusMessageRef.current.textContent = error.global;
+    } else if (statusMessageRef.current) {
+      statusMessageRef.current.textContent = "";
+    }
+  }, [error?.global]);
 
   const [errorsInput, setErrorsInput] = React.useState({});
 
@@ -146,6 +156,7 @@ const AbsencePeriods = ({
 
   return (
     <div>
+      <div aria-live="polite" className="sr-only" ref={statusMessageRef} />
       <label className={fr.cx("fr-text--bold", "fr-text--lg")}>
         Quels sont le motif et la durée de ces absences prolongées&nbsp;?
       </label>
@@ -193,6 +204,8 @@ const AbsencePeriods = ({
             absence={value}
             informationData={informationData}
             absenceRef={absenceRef}
+            autoFocus={index === 0 && !!error?.global}
+            ariaDescribedby={error?.global ? errorMessageId : undefined}
           />
         );
       })}
@@ -209,7 +222,14 @@ const AbsencePeriods = ({
       </Button>
 
       {error?.global && (
-        <Alert title={error.global} severity="error" className="fr-mt-2w" />
+        <div id={errorMessageId}>
+          <div
+            role="alert"
+            className={fr.cx("fr-alert", "fr-alert--error", "fr-mt-2w")}
+          >
+            <p>{error.global}</p>
+          </div>
+        </div>
       )}
     </div>
   );
