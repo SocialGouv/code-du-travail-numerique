@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.187.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.187.0...v4.187.1) (2025-08-28)
+
+
+### Bug Fixes
+
+* **accessibilité:** ajout d'un texte alt sur les infographies ([#6722](https://github.com/SocialGouv/code-du-travail-numerique/issues/6722)) ([a606b33](https://github.com/SocialGouv/code-du-travail-numerique/commit/a606b335951259bca0bf81f8ec9417fd64c5636d))
+* contenu non visible au techno d assistance sur gestion des cookies ([#6736](https://github.com/SocialGouv/code-du-travail-numerique/issues/6736)) ([f562249](https://github.com/SocialGouv/code-du-travail-numerique/commit/f56224942779c065f605287263bdd057b8a9869b))
+* échec de tests suite au clean du projet ([a79fe2c](https://github.com/SocialGouv/code-du-travail-numerique/commit/a79fe2cfe5192df47c3f582ae8c50d4e47ff7107))
+* rc result move table inside li ([#6737](https://github.com/SocialGouv/code-du-travail-numerique/issues/6737)) ([faffab2](https://github.com/SocialGouv/code-du-travail-numerique/commit/faffab253cb5cc1a794fe938197a0cd52dc0849f))
+* service public tableau scope ([#6739](https://github.com/SocialGouv/code-du-travail-numerique/issues/6739)) ([59a5e2b](https://github.com/SocialGouv/code-du-travail-numerique/commit/59a5e2ba652e8fd2b30d214110fbf8ce12cccc81))
+
+
+
+
+
 # [4.187.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.186.0...v4.187.0) (2025-08-21)
 
 

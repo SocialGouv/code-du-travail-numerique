@@ -27,6 +27,7 @@ type Props = {
   informationData: Record<string, string | undefined>;
   autoFocus?: boolean;
   ariaDescribedby?: string;
+  absenceRef?: React.RefObject<HTMLParagraphElement | null>;
 };
 
 const AbsencePeriod = ({
@@ -43,6 +44,7 @@ const AbsencePeriod = ({
   informationData,
   autoFocus,
   ariaDescribedby,
+  absenceRef,
 }: Props): JSX.Element => {
   const [shouldAskAbsenceDate, askAbsenceDate] = useState(
     absence
@@ -60,7 +62,13 @@ const AbsencePeriod = ({
 
   return (
     <div className="fr-mt-4w" key={absence?.key}>
-      <p className={fr.cx("fr-text--bold", "fr-mb-1w")}>Absence {index + 1}</p>
+      <p
+        className={fr.cx("fr-text--bold", "fr-mb-1w")}
+        ref={absenceRef}
+        tabIndex={-1}
+      >
+        Absence {index + 1}
+      </p>
       <div
         className="fr-grid-row fr-grid-row--gutters"
         style={{ display: "flex", alignItems: "flex-end" }}
@@ -104,6 +112,7 @@ const AbsencePeriod = ({
                 "data-testid": `absence-duree-${index}`,
                 "aria-describedby": ariaDescribedby,
                 autoFocus: autoFocus,
+                "aria-live": "off",
               } as any
             }
             classes={{
@@ -124,6 +133,7 @@ const AbsencePeriod = ({
               id={`${index}.dateAbsence`}
               dataTestId={`absence-date-${index}`}
               autoFocus={false}
+              ariaLive="off"
             />
           </div>
         )}

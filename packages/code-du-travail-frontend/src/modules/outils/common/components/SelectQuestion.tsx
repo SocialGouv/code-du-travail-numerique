@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Html from "src/modules/common/Html";
 import { Select } from "@codegouvfr/react-dsfr/Select";
 import { defaultSelectStyle } from "src/modules/outils/common/styles/select";
@@ -28,6 +28,7 @@ export const SelectQuestion = ({
   const [optionsArray, setOptionsArray] = React.useState<[string, string][]>(
     []
   );
+  const selectRef = useRef<HTMLSelectElement>(null);
 
   React.useEffect(() => {
     if (!Array.isArray(options)) {
@@ -36,6 +37,22 @@ export const SelectQuestion = ({
       setOptionsArray(options);
     }
   }, [options]);
+
+  useEffect(() => {
+    if (error && selectRef.current) {
+      selectRef.current.focus();
+      selectRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  }, [error]);
+
+  useEffect(() => {
+    if (autoFocus && selectRef.current) {
+      selectRef.current.focus();
+    }
+  }, [autoFocus]);
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     onChangeSelectedOption(event.target.value);
@@ -52,6 +69,7 @@ export const SelectQuestion = ({
           autoFocus,
           required: true,
           "data-testid": name,
+          ref: selectRef,
         } as any
       }
       state={error ? "error" : subLabel ? "info" : "default"}

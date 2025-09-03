@@ -1,7 +1,7 @@
 "use client";
 
 import { fr } from "@codegouvfr/react-dsfr";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
@@ -12,17 +12,6 @@ import {
   saveConsent,
   initConsent,
 } from "../utils/consent";
-
-// Styles définis séparément
-const modalBody = css({
-  maxHeight: "80vh !important",
-  overflowY: "auto !important",
-});
-
-const modalContent = css({
-  maxHeight: "none !important",
-  overflowY: "visible !important",
-});
 
 const modalFooter = css({
   position: "sticky",
@@ -76,11 +65,19 @@ export const CookieConsentDSFR = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const pathname = usePathname();
 
+  // Refs for focus management
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const triggerElementRef = useRef<HTMLElement | null>(null);
+  const personalizeButtonRef = useRef<HTMLButtonElement>(null);
+  const manageButtonRef = useRef<HTMLButtonElement>(null);
+
   // Don't show cookie consent on widget pages
   const isWidgetPage = pathname?.startsWith("/widgets");
 
   // Open modal
   const openModal = () => {
+    // Store the current active element (the one that triggered the modal)
+    triggerElementRef.current = document.activeElement as HTMLElement;
     setIsModalOpen(true);
   };
 
@@ -104,6 +101,23 @@ export const CookieConsentDSFR = () => {
       initConsent();
     }
   }, []);
+
+  // Focus management when modal opens/closes
+  useEffect(() => {
+    if (isModalOpen) {
+      // When modal opens, focus the close button
+      setTimeout(() => {
+        closeButtonRef.current?.focus();
+      }, 100); // Small delay to ensure modal is rendered
+    } else {
+      // When modal closes, return focus to the trigger element
+      if (triggerElementRef.current) {
+        setTimeout(() => {
+          triggerElementRef.current?.focus();
+        }, 100); // Small delay to ensure modal transition is complete
+      }
+    }
+  }, [isModalOpen]);
 
   // Handle accepting all cookies
   const handleAcceptAll = () => {
@@ -193,7 +207,11 @@ export const CookieConsentDSFR = () => {
                   "fr-grid-row--right"
                 )}
               >
-                <Button onClick={openModal} priority="tertiary">
+                <Button
+                  ref={personalizeButtonRef}
+                  onClick={openModal}
+                  priority="tertiary"
+                >
                   Personnaliser
                 </Button>
                 <Button onClick={handleRejectAll}>Tout refuser</Button>
@@ -228,6 +246,7 @@ export const CookieConsentDSFR = () => {
               <div className={`${fr.cx("fr-modal__body")}`}>
                 <div className={fr.cx("fr-modal__header")}>
                   <button
+                    ref={closeButtonRef}
                     className={fr.cx("fr-btn--close", "fr-btn")}
                     title="Fermer la fenêtre modale"
                     aria-controls="cookie-settings-modal"
@@ -420,13 +439,16 @@ export const CookieConsentDSFR = () => {
       {!isWidgetPage && !showBanner && (
         <div className={manageButton}>
           <Button
+            ref={manageButtonRef}
             size="small"
             priority="tertiary"
             onClick={openModal}
             iconId="fr-icon-settings-5-line"
             title="Gérer les cookies"
             aria-label="Gérer les cookies"
-          />
+          >
+            <span className={fr.cx("fr-sr-only")}>Gérer les cookies</span>
+          </Button>
         </div>
       )}
     </>

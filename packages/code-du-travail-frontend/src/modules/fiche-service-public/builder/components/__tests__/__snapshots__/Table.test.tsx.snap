@@ -23,18 +23,21 @@ exports[`<Table /> should render with th, td, colspan etc. 1`] = `
                 <th
                   colspan="1"
                   rowspan="1"
+                  scope="col"
                 >
                   Vous êtes né :
                 </th>
                 <th
                   colspan="1"
                   rowspan="1"
+                  scope="col"
                 >
                   Vous pouvez partir en retraite à partir de :
                 </th>
                 <th
                   colspan="1"
                   rowspan="1"
+                  scope="col"
                 >
                   Nombre de trimestres exigé pour avoir le taux plein
                 </th>
