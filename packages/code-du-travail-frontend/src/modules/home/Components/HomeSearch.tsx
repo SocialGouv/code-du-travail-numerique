@@ -77,7 +77,9 @@ export const HomeSearch = () => {
           iconId="fr-icon-search-line"
           iconPosition="right"
           priority="primary"
-          aria-label="Lancer la recherche"
+          nativeButtonProps={{
+            "aria-label": "Lancer la recherche",
+          }}
           className={buttonStyle}
           type="submit"
         >
