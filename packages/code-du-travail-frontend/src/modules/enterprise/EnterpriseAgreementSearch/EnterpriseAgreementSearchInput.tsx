@@ -246,9 +246,11 @@ export const EnterpriseAgreementSearchInput = ({
                   }, 100);
                 }
               }}
-              aria-label="Modifier l'entreprise sélectionnée"
-              title="Modifier l'entreprise sélectionnée"
-              aria-describedby={`selected-convention`}
+              nativeButtonProps={{
+                "aria-describedby": `selected-convention`,
+                "aria-label": "Modifier la convention collective sélectionnée",
+                title: "Modifier la convention collective sélectionnée",
+              }}
             >
               Modifier
             </Button>

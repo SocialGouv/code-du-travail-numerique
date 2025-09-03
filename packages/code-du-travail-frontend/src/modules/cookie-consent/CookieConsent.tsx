@@ -405,7 +405,10 @@ export const CookieConsentDSFR = () => {
                         onClick={handleRejectAll}
                         priority="tertiary"
                         className={responsiveButton}
-                        aria-label="Tout refuser - Refuser tous les cookies optionnels"
+                        nativeButtonProps={{
+                          "aria-label":
+                            "Tout refuser - Refuser tous les cookies optionnels",
+                        }}
                       >
                         Tout refuser
                       </Button>
@@ -415,7 +418,10 @@ export const CookieConsentDSFR = () => {
                         onClick={handleAcceptAll}
                         priority="secondary"
                         className={responsiveButton}
-                        aria-label="Tout accepter - Accepter tous les cookies"
+                        nativeButtonProps={{
+                          "aria-label":
+                            "Tout accepter - Accepter tous les cookies",
+                        }}
                       >
                         Tout accepter
                       </Button>
@@ -425,7 +431,10 @@ export const CookieConsentDSFR = () => {
                         onClick={handleSaveSettings}
                         priority="primary"
                         className={responsiveButton}
-                        aria-label="Enregistrer les préférences de cookies"
+                        nativeButtonProps={{
+                          "aria-label":
+                            "Enregistrer les préférences de cookies",
+                        }}
                       >
                         Enregistrer
                       </Button>
@@ -447,8 +456,10 @@ export const CookieConsentDSFR = () => {
             priority="tertiary"
             onClick={openModal}
             iconId="fr-icon-settings-5-line"
-            title="Gérer les cookies"
-            aria-label="Gérer les cookies"
+            nativeButtonProps={{
+              title: "Ouvrir les paramètres des cookies",
+              "aria-label": "Ouvrir les paramètres des cookies",
+            }}
           >
             <span className={fr.cx("fr-sr-only")}>Gérer les cookies</span>
           </Button>

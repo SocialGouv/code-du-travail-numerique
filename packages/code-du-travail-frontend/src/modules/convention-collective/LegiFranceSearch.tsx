@@ -118,9 +118,13 @@ export function LegiFranceSearch({ idcc, shortTitle }: Props) {
           <Button
             type="submit"
             iconId="fr-icon-search-line"
-            title="Lancer la recherche dans la convention collective sur Légifrance (nouvelle fenêtre)"
-            aria-label="Lancer la recherche dans la convention collective sur Légifrance (nouvelle fenêtre)"
-            data-testid="agreement-search-button"
+            nativeButtonProps={{
+              title:
+                "Lancer la recherche dans la convention collective sur Légifrance (nouvelle fenêtre)",
+              "aria-label":
+                "Lancer la recherche dans la convention collective sur Légifrance (nouvelle fenêtre)",
+              "data-testid": "agreement-search-button",
+            }}
           >
             Rechercher
           </Button>

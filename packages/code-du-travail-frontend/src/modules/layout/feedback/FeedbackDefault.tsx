@@ -20,7 +20,9 @@ export const FeedbackDefault = (props: Props) => {
           priority="secondary"
           className={fr.cx("fr-mr-2w")}
           onClick={props.onClickNo}
-          aria-describedby="feedback-title"
+          nativeButtonProps={{
+            "aria-describedby": "feedback-title",
+          }}
         >
           Non
         </Button>
@@ -28,7 +30,9 @@ export const FeedbackDefault = (props: Props) => {
           type="button"
           priority="secondary"
           onClick={props.onClickYes}
-          aria-describedby="feedback-title"
+          nativeButtonProps={{
+            "aria-describedby": "feedback-title",
+          }}
         >
           Oui
         </Button>

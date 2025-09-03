@@ -138,9 +138,11 @@ const AbsencePeriod = ({
               size="small"
               iconPosition="right"
               iconId="ri-delete-bin-line"
-              title={`Supprimer la période d'absence ${index + 1}`}
-              aria-label={`Supprimer la période d'absence ${index + 1}`}
-              aria-describedby={"absence-period-" + index}
+              nativeButtonProps={{
+                title: `Supprimer la période d'absence ${index + 1}`,
+                "aria-label": `Supprimer la période d'absence ${index + 1}`,
+                "aria-describedby": `absence-period-${index}`,
+              }}
             >
               Supprimer
             </Button>
