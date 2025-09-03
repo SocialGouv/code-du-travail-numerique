@@ -17,7 +17,13 @@ type Props<T extends string> = {
   footerComponent?: React.ReactNode;
 };
 
-export const SimulatorLayout = (props: Props<string>) => {
+export const SimulatorLayout = ({
+  steps,
+  title,
+  onStepChange,
+  hiddenStep,
+  footerComponent,
+}: Props<string>) => {
   const { emitPrintEvent, emitNextPreviousEvent } =
     useSimulatorLayoutTracking();
   const [navigationAction, setNavigationAction] = useState<
@@ -25,10 +31,10 @@ export const SimulatorLayout = (props: Props<string>) => {
   >("none");
   const stepperRef = useRef<HTMLDivElement>(null);
   const [stepIndex, setStepIndex] = useState(0);
-  const { steps, title, onStepChange, hiddenStep, simulator } = props;
   const [lastIneligibleStep, setLastIneligibleStep] = useState<
     number | undefined
   >();
+  const [simulationDate, setSimulationDate] = useState<string>("");
 
   const visibleSteps = useMemo(
     () =>
@@ -46,6 +52,18 @@ export const SimulatorLayout = (props: Props<string>) => {
     stepperRef.current?.focus();
     emitNextPreviousEvent(title, navigationAction === "prev", currentStepName);
   }, [stepIndex]);
+
+  useEffect(() => {
+    setSimulationDate(
+      new Date().toLocaleDateString("fr-FR", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      })
+    );
+  }, []);
 
   const onNextStep = () => {
     const nextStepIndex = stepIndex + 1;
@@ -147,16 +165,7 @@ export const SimulatorLayout = (props: Props<string>) => {
         </div>
       </div>
 
-      <div className={printOnlyDate}>
-        Simulé le{" "}
-        {new Date().toLocaleDateString("fr-FR", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-          hour: "2-digit",
-          minute: "2-digit",
-        })}
-      </div>
+      <div className={printOnlyDate}>Simulé le {simulationDate}</div>
 
       <div>
         <Step />
@@ -204,7 +213,7 @@ export const SimulatorLayout = (props: Props<string>) => {
           </Button>
         )}
       </div>
-      {props.footerComponent}
+      {footerComponent}
     </div>
   );
 };
