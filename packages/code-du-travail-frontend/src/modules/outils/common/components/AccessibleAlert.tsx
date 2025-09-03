@@ -7,6 +7,7 @@ type Props = {
   severity: "error" | "warning" | "info";
   autoFocus?: boolean;
   ["data-testid"]?: string;
+  id?: string;
 };
 
 export const AccessibleAlert = ({
@@ -15,6 +16,7 @@ export const AccessibleAlert = ({
   severity,
   autoFocus,
   ["data-testid"]: dataTestId,
+  id,
 }: Props) => {
   const alertRef = useRef<HTMLDivElement>(null);
 
@@ -27,6 +29,7 @@ export const AccessibleAlert = ({
   return (
     <div
       ref={alertRef}
+      id={id}
       className={fr.cx("fr-alert", `fr-alert--${severity}`)}
       tabIndex={autoFocus ? -1 : undefined}
       aria-live="polite"

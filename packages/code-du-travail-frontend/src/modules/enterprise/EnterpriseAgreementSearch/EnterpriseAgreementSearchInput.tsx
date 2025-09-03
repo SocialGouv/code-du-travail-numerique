@@ -5,7 +5,6 @@ import Button from "@codegouvfr/react-dsfr/Button";
 import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import Alert from "@codegouvfr/react-dsfr/Alert";
-import { Card as DsfrCard } from "@codegouvfr/react-dsfr/Card";
 import { EnterpriseCard } from "./EnterpriseCard";
 import { createElement, ReactNode, useEffect, useRef, useState } from "react";
 import { css } from "@styled-system/css";
@@ -200,14 +199,14 @@ export const EnterpriseAgreementSearchInput = ({
           <EnterpriseAgreementSelectionDetail enterprise={selectedEnterprise} />
         )}
 
-        <p
+        <h3
           ref={selectedConventionTitleRef}
           className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}
           tabIndex={-1}
           id={`selected-convention`}
         >
           Vous avez sélectionné la convention collective
-        </p>
+        </h3>
         <div
           className={fr.cx(
             "fr-my-2w",
@@ -216,16 +215,15 @@ export const EnterpriseAgreementSearchInput = ({
             "fr-grid-row--gutters"
           )}
         >
-          <DsfrCard
-            title={`${selectedAgreement.shortTitle} IDCC ${selectedAgreement.id}`}
-            size="small"
-            className={fr.cx("fr-col-10")}
-            classes={{
-              content: fr.cx("fr-py-1w"),
-              start: fr.cx("fr-m-0"),
-              end: fr.cx("fr-p-0", "fr-m-0"),
-            }}
-          />
+          <div className={fr.cx("fr-card", "fr-card--sm", "fr-col-10")}>
+            <div className={fr.cx("fr-card__body")}>
+              <div className={fr.cx("fr-card__content", "fr-py-1w")}>
+                <p className={fr.cx("fr-card__title")}>
+                  {`${selectedAgreement.shortTitle} IDCC ${selectedAgreement.id}`}
+                </p>
+              </div>
+            </div>
+          </div>
           <div className={fr.cx("fr-col")}>
             <Button
               iconId="fr-icon-arrow-go-back-fill"

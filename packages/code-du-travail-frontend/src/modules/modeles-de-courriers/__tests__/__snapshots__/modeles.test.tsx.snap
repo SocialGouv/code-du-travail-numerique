@@ -58,13 +58,11 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
         Mis à jour le : 
         12/02/2020
       </p>
-      <div
+      <p
         class="fr-highlight fr-mb-6w"
       >
-        <div>
-          Ceci est mon intro
-        </div>
-      </div>
+        Ceci est mon intro
+      </p>
       <div
         class="fr-hidden-md"
       >
