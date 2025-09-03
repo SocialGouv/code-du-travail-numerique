@@ -35,6 +35,7 @@ export const AccessibleAlert = ({
       aria-live="polite"
       aria-atomic="true"
       data-testid={dataTestId}
+      role="alert"
     >
       <h3 className={fr.cx("fr-alert__title")}>{title}</h3>
       {typeof description === "string" ? <p>{description}</p> : description}
