@@ -49,7 +49,9 @@ export const SimulatorLayout = ({
 
   useEffect(() => {
     const currentStepName = visibleSteps[stepIndex].name;
-    stepperRef.current?.focus();
+    if (navigationAction !== "none") {
+      stepperRef.current?.focus();
+    }
     emitNextPreviousEvent(title, navigationAction === "prev", currentStepName);
   }, [stepIndex]);
 
