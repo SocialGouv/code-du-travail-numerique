@@ -24,7 +24,17 @@ export const Feedback = ({ category }: Props) => {
   useEffect(() => {
     switch (status) {
       case "questionnaire":
-        refQuestionnaire.current?.focus();
+        // Focus immédiatement sur le premier élément interactif (premier radio button)
+        setTimeout(() => {
+          const firstRadio = document.querySelector(
+            "#fieldset-satisfaction-bad"
+          ) as HTMLInputElement;
+          if (firstRadio) {
+            firstRadio.focus();
+          } else {
+            refQuestionnaire.current?.focus();
+          }
+        }, 100);
         break;
       case "questionnaireAdvanced":
         refQuestionnaireAdvanced.current?.focus();

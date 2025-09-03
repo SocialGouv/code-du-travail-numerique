@@ -35,6 +35,7 @@ export function ContributionGenericAgreementSearch({
   const router = useRouter();
   const { slug } = contribution;
   const [isValid, setIsValid] = useState(false);
+
   useEffect(() => {
     setIsValid(isAgreementValid(contribution, selectedAgreement));
   }, [selectedAgreement]);
@@ -86,7 +87,13 @@ export function ContributionGenericAgreementSearch({
           alt=""
           className={fr.cx("fr-unhidden-md", "fr-hidden")}
         />
-        <p className={fr.cx("fr-h3", "fr-mt-1w")} role="heading" aria-level={2}>
+        <p
+          id="personalize-response-title"
+          className={fr.cx("fr-h3", "fr-mt-1w")}
+          role="heading"
+          aria-level={2}
+          tabIndex={-1}
+        >
           Personnalisez la réponse avec votre convention collective
         </p>
       </div>
@@ -97,6 +104,12 @@ export function ContributionGenericAgreementSearch({
           defaultAgreement={selectedAgreement}
           trackingActionName={trackingActionName}
           level={3}
+          onBackToPersonalize={() => {
+            const personalizeTitle = document.getElementById(
+              "personalize-response-title"
+            );
+            personalizeTitle?.focus();
+          }}
         />
         {((contribution.isNoCDT && isValid) || !contribution.isNoCDT) && (
           <Button

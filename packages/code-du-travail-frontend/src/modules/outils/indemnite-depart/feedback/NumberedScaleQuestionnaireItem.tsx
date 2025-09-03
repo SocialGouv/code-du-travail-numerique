@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FEEDBACK_RESULT } from "./tracking";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
@@ -23,10 +23,10 @@ export type NumberedScaleQuestionnaireItemProps = {
     FEEDBACK_RESULT,
   ];
   labels: [string, string, string, string, string];
-  title?: string;
+  title: string;
   displayError?: boolean;
   onChange: (status: FEEDBACK_RESULT) => void;
-  dataTestId?: string;
+  id?: string;
   hint?: string;
 };
 
@@ -37,33 +37,43 @@ export const NumberedScaleQuestionnaireItem = ({
   title,
   displayError,
   onChange,
-  dataTestId,
+  id,
   hint,
 }: NumberedScaleQuestionnaireItemProps) => {
   const [status, setStatus] = useState<Status>();
-  const fieldsetId = title
-    ? `fieldset-${title.toLowerCase().replace(/\s+/g, "-")}`
-    : undefined;
+  const fieldsetId = `fieldset-${title.toLowerCase().replace(/\s+/g, "-")}`;
+  const errorId = `${fieldsetId}-error`;
+  const errorRef = useRef<HTMLParagraphElement>(null);
+  const firstRadioRef = useRef<HTMLInputElement>(null);
+
+  // Gestion du focus sur le premier radio button en cas d'erreur
+  useEffect(() => {
+    if (displayError) {
+      setTimeout(() => {
+        if (firstRadioRef.current) {
+          firstRadioRef.current.focus();
+        }
+      }, 100);
+    }
+  }, [displayError]);
 
   return (
     <div
       className={`${fr.cx("fr-ml-1w", "fr-mb-2w")} ${scaleContainer}`}
-      data-testid={dataTestId}
+      id={id}
     >
       <fieldset className={fr.cx("fr-fieldset")} id={fieldsetId}>
-        {title && (
-          <legend
-            className={fr.cx("fr-mb-2v", "fr-label")}
-            id={`${fieldsetId}-legend`}
+        <legend
+          className={fr.cx("fr-mb-2v", "fr-label")}
+          id={`${fieldsetId}-legend`}
+        >
+          {title}
+          <span
+            className={`${fr.cx("fr-text--sm", "fr-mb-1w", "fr-hint-text")} ${desktopLabelStyle}`}
           >
-            {title}
-            <span
-              className={`${fr.cx("fr-text--sm", "fr-mb-1w", "fr-hint-text")} ${desktopLabelStyle}`}
-            >
-              {hint}
-            </span>
-          </legend>
-        )}
+            {hint}
+          </span>
+        </legend>
 
         <div className={scaleContainer}>
           <div className={labelLeftStyle} aria-hidden="true">
@@ -80,19 +90,21 @@ export const NumberedScaleQuestionnaireItem = ({
               ].map((buttonStatus, index) => (
                 <li key={buttonStatus}>
                   <input
+                    ref={index === 0 ? firstRadioRef : undefined}
                     id={`${fieldsetId}-${buttonStatus}`}
-                    data-testId={`${dataTestId}-${buttonStatus}`}
                     className="fr-sr-only"
                     type="radio"
+                    aria-describedby={displayError ? errorId : undefined}
                     onChange={() => {
                       setStatus(buttonStatus);
                       onChange(values[index]);
                     }}
-                    name={values[index]}
+                    name={fieldsetId}
+                    data-testid={`${id}-${buttonStatus}`}
                   />
                   <label
                     htmlFor={`${fieldsetId}-${buttonStatus}`}
-                    className={`${numberRadioStyle} ${status === buttonStatus ? radioSelectedStyle : ""}`}
+                    className={`${numberRadioStyle} ${radioFocusStyle} ${status === buttonStatus ? radioSelectedStyle : ""}`}
                   >
                     {index + 1}
                   </label>
@@ -106,7 +118,16 @@ export const NumberedScaleQuestionnaireItem = ({
         </div>
       </fieldset>
       {displayError && (
-        <p className="fr-error-text">Vous devez choisir une des réponses</p>
+        <p
+          ref={errorRef}
+          id={errorId}
+          className="fr-error-text"
+          role="alert"
+          aria-live="polite"
+          tabIndex={-1}
+        >
+          Vous devez répondre à au moins une des questions
+        </p>
       )}
     </div>
   );
@@ -114,7 +135,8 @@ export const NumberedScaleQuestionnaireItem = ({
 
 const numberRadioStyle = css({
   width: "100%",
-  border: "1px solid var(--background-alt-grey-hover)",
+  border: "1px solid",
+  borderColor: "var(--background-alt-grey-hover)",
   padding: "0.5rem 1rem",
   display: "flex",
   justifyContent: "center",
@@ -122,12 +144,39 @@ const numberRadioStyle = css({
   cursor: "pointer",
   color: "var(--background-flat-blue-france)",
   fontWeight: 500,
+  transition: "all 0.2s ease",
+  "&:hover": {
+    borderColor: "var(--background-flat-blue-france)",
+    backgroundColor: "var(--background-alt-blue-france)",
+  },
+  "&:focus": {
+    outline: "2px solid var(--background-flat-blue-france)",
+    outlineOffset: "2px",
+    borderColor: "var(--background-flat-blue-france)",
+    backgroundColor: "var(--background-alt-blue-france)",
+  },
+});
+
+const radioFocusStyle = css({
+  "input:focus + &": {
+    outline: "2px solid var(--background-flat-blue-france)",
+    outlineOffset: "2px",
+    borderColor: "var(--background-flat-blue-france)",
+  },
 });
 
 const radioSelectedStyle = css({
   borderColor: "var(--background-flat-blue-france)",
   backgroundColor: "var(--background-flat-blue-france)",
   color: "white",
+  "&:hover": {
+    borderColor: "var(--background-flat-blue-france)",
+    backgroundColor: "var(--background-alt-blue-france)",
+  },
+  "&:focus": {
+    outline: "2px solid var(--background-flat-blue-france)",
+    outlineOffset: "2px",
+  },
 });
 
 const ul = css({

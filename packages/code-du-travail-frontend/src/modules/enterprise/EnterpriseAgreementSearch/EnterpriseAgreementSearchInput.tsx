@@ -36,6 +36,7 @@ type Props = {
   level?: 2 | 3;
   isInSimulator?: boolean;
   canContinueSimulationIfNoAgreement?: boolean;
+  onBackToPersonalize?: () => void;
 };
 
 export const EnterpriseAgreementSearchInput = ({
@@ -50,6 +51,7 @@ export const EnterpriseAgreementSearchInput = ({
   level,
   isInSimulator,
   canContinueSimulationIfNoAgreement,
+  onBackToPersonalize,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState<
     Agreement | undefined
@@ -76,6 +78,7 @@ export const EnterpriseAgreementSearchInput = ({
   >(enterprise);
   const [error, setError] = useState("");
   const resultRef = useRef<HTMLHeadingElement>(null);
+  const selectedConventionTitleRef = useRef<HTMLParagraphElement>(null);
 
   const getStateMessage = () => {
     switch (searchState) {
@@ -196,7 +199,11 @@ export const EnterpriseAgreementSearchInput = ({
           <EnterpriseAgreementSelectionDetail enterprise={selectedEnterprise} />
         )}
 
-        <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
+        <p
+          ref={selectedConventionTitleRef}
+          className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}
+          tabIndex={-1}
+        >
           Vous avez sélectionné la convention collective
         </p>
         <div
@@ -230,6 +237,12 @@ export const EnterpriseAgreementSearchInput = ({
                 ) {
                   setSelectedEnterprise(undefined);
                 }
+                // Focus the "Personnalisez la réponse" title via callback
+                if (onBackToPersonalize) {
+                  setTimeout(() => {
+                    onBackToPersonalize();
+                  }, 100);
+                }
               }}
             >
               Modifier
@@ -256,6 +269,12 @@ export const EnterpriseAgreementSearchInput = ({
           setSelectedEnterprise(undefined);
           setSelectedAgreement(undefined);
           scrollToTop();
+          // Focus the "Personnalisez la réponse" title via callback
+          if (onBackToPersonalize) {
+            setTimeout(() => {
+              onBackToPersonalize();
+            }, 100);
+          }
         }}
         onAgreementSelect={(agreement) => {
           setSelectedAgreement(agreement);
@@ -527,6 +546,10 @@ export const EnterpriseAgreementSearchInput = ({
                     setSelectedAgreement(assMatAgreement);
                     emitNoEnterpriseSelectEvent();
                     onAgreementSelect(assMatAgreement);
+                    // Focus the "Vous avez sélectionné la convention collective" title after action
+                    setTimeout(() => {
+                      selectedConventionTitleRef.current?.focus();
+                    }, 100);
                   },
                 }
           }
