@@ -273,9 +273,11 @@ exports[`<Footer /> should match snapshot 1`] = `
             <div
               class="fr-logo"
             >
-              RÉPUBLIQUE
-              <br />
-              FRANÇAISE
+              <p>
+                RÉPUBLIQUE
+                <br />
+                FRANÇAISE
+              </p>
             </div>
           </div>
           <div

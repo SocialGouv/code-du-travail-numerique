@@ -36,6 +36,7 @@ type Props = {
   level?: 2 | 3;
   isInSimulator?: boolean;
   canContinueSimulationIfNoAgreement?: boolean;
+  onBackToPersonalize?: () => void;
 };
 
 export const EnterpriseAgreementSearchInput = ({
@@ -50,6 +51,7 @@ export const EnterpriseAgreementSearchInput = ({
   level,
   isInSimulator,
   canContinueSimulationIfNoAgreement,
+  onBackToPersonalize,
 }: Props) => {
   const [selectedAgreement, setSelectedAgreement] = useState<
     Agreement | undefined
@@ -76,6 +78,7 @@ export const EnterpriseAgreementSearchInput = ({
   >(enterprise);
   const [error, setError] = useState("");
   const resultRef = useRef<HTMLHeadingElement>(null);
+  const selectedConventionTitleRef = useRef<HTMLParagraphElement>(null);
 
   const getStateMessage = () => {
     switch (searchState) {
@@ -196,9 +199,13 @@ export const EnterpriseAgreementSearchInput = ({
           <EnterpriseAgreementSelectionDetail enterprise={selectedEnterprise} />
         )}
 
-        <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
+        <h3
+          ref={selectedConventionTitleRef}
+          className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}
+          tabIndex={-1}
+        >
           Vous avez sélectionné la convention collective
-        </p>
+        </h3>
         <div
           className={fr.cx(
             "fr-my-2w",
@@ -207,16 +214,15 @@ export const EnterpriseAgreementSearchInput = ({
             "fr-grid-row--gutters"
           )}
         >
-          <Card
-            title={`${selectedAgreement.shortTitle} IDCC ${selectedAgreement.id}`}
-            size="small"
-            className={fr.cx("fr-col-10")}
-            classes={{
-              content: fr.cx("fr-py-1w"),
-              start: fr.cx("fr-m-0"),
-              end: fr.cx("fr-p-0", "fr-m-0"),
-            }}
-          />
+          <div className={fr.cx("fr-card", "fr-card--sm", "fr-col-10")}>
+            <div className={fr.cx("fr-card__body")}>
+              <div className={fr.cx("fr-card__content", "fr-py-1w")}>
+                <p className={fr.cx("fr-card__title")}>
+                  {`${selectedAgreement.shortTitle} IDCC ${selectedAgreement.id}`}
+                </p>
+              </div>
+            </div>
+          </div>
           <div className={fr.cx("fr-col")}>
             <Button
               iconId="fr-icon-arrow-go-back-fill"
@@ -229,6 +235,12 @@ export const EnterpriseAgreementSearchInput = ({
                   selectedEnterprise?.conventions.length < 2
                 ) {
                   setSelectedEnterprise(undefined);
+                }
+                // Focus the "Personnalisez la réponse" title via callback
+                if (onBackToPersonalize) {
+                  setTimeout(() => {
+                    onBackToPersonalize();
+                  }, 100);
                 }
               }}
             >
@@ -256,6 +268,12 @@ export const EnterpriseAgreementSearchInput = ({
           setSelectedEnterprise(undefined);
           setSelectedAgreement(undefined);
           scrollToTop();
+          // Focus the "Personnalisez la réponse" title via callback
+          if (onBackToPersonalize) {
+            setTimeout(() => {
+              onBackToPersonalize();
+            }, 100);
+          }
         }}
         onAgreementSelect={(agreement) => {
           setSelectedAgreement(agreement);
@@ -527,6 +545,10 @@ export const EnterpriseAgreementSearchInput = ({
                     setSelectedAgreement(assMatAgreement);
                     emitNoEnterpriseSelectEvent();
                     onAgreementSelect(assMatAgreement);
+                    // Focus the "Vous avez sélectionné la convention collective" title after action
+                    setTimeout(() => {
+                      selectedConventionTitleRef.current?.focus();
+                    }, 100);
                   },
                 }
           }

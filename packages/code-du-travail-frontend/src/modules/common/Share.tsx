@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { usePathname } from "next/navigation";
 import { SITE_URL } from "../../config";
@@ -17,10 +17,15 @@ type Props = {
 export const Share = ({ title, metaDescription }: Props) => {
   const [isUrlCopied, setUrlCopied] = useState(false);
   const { emitClickShare } = useCommonTracking();
+  const linkCopiedRef = useRef<HTMLParagraphElement>(null);
 
   const currentPageUrl = (SITE_URL + usePathname()) as string;
   const copylink = () => {
     navigator?.clipboard?.writeText(currentPageUrl);
+    // Focus the "Lien copié" message for screen readers
+    setTimeout(() => {
+      linkCopiedRef.current?.focus();
+    }, 100);
   };
 
   return (
@@ -126,7 +131,7 @@ export const Share = ({ title, metaDescription }: Props) => {
         </li>
         <li>
           {isUrlCopied ? (
-            <p className={fr.cx("fr-mt-1w")}>
+            <p ref={linkCopiedRef} className={fr.cx("fr-mt-1w")} tabIndex={-1}>
               <span
                 className={`${fr.cx("ri-check-line")} ${css({
                   color: "var(--text-default-success)",

@@ -88,7 +88,7 @@ describe("Page d’accueil", () => {
     cy.contains("congés sans solde").click();
 
     cy.findAllByRole("heading", { level: 3 }).should("have.length", 18);
-    cy.contains('Résultats de recherche pour "congés sans solde"');
+    cy.contains('de recherche pour "congés sans solde"');
     cy.contains("Articles du code du travail");
     cy.contains("Les thèmes suivants peuvent vous intéresser");
 

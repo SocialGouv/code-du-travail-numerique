@@ -23,6 +23,7 @@ type Props = {
   dataTestId?: string;
   autoFocus?: boolean;
   unit?: InputUnit;
+  ariaLive?: "polite" | "assertive" | "off";
 };
 
 export function TextQuestion({
@@ -37,6 +38,7 @@ export function TextQuestion({
   dataTestId,
   unit,
   autoFocus = false,
+  ariaLive = "polite",
 }: Props) {
   const [inputRef, setInputRef] = useState<HTMLInputElement>();
   const [localValue, setLocalValue] = useState(value || "");
@@ -46,10 +48,20 @@ export function TextQuestion({
   }, [value]);
 
   useEffect(() => {
-    if (inputRef && error && autoFocus) {
+    if (inputRef && error) {
+      inputRef?.focus();
+      inputRef?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  }, [inputRef, error]);
+
+  useEffect(() => {
+    if (inputRef && autoFocus) {
       inputRef?.focus();
     }
-  }, [inputRef, error, autoFocus]);
+  }, [inputRef, autoFocus]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = event.target.value;
@@ -69,6 +81,15 @@ export function TextQuestion({
       : localValue;
 
   const errorId = `${id}-error`;
+
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      const messagesGroup = document.getElementById(`${id}-messages-group`);
+      if (messagesGroup) {
+        messagesGroup.setAttribute("aria-live", ariaLive);
+      }
+    }
+  }, [id, ariaLive]);
 
   return (
     <Input
