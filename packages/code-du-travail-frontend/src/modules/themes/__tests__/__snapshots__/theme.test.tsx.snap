@@ -8,11 +8,11 @@ exports[`<ThemeModel /> affiche un thème 1`] = `
     <nav
       aria-label="vous êtes ici :"
       class="fr-breadcrumb fr-mb-2v"
-      id="fr-breadcrumb-:r6:"
+      id="fr-breadcrumb-«r6»"
       role="navigation"
     >
       <button
-        aria-controls="breadcrumb-:r7:"
+        aria-controls="breadcrumb-«r7»"
         aria-expanded="false"
         class="fr-breadcrumb__button"
       >
@@ -20,7 +20,7 @@ exports[`<ThemeModel /> affiche un thème 1`] = `
       </button>
       <div
         class="fr-collapse"
-        id="breadcrumb-:r7:"
+        id="breadcrumb-«r7»"
       >
         <ol
           class="fr-breadcrumb__list"
@@ -75,7 +75,7 @@ exports[`<ThemeModel /> affiche un thème 1`] = `
           <a
             class="fr-btn fr-btn--secondary fr-btn--lg ta_center"
             href="/themes/children1_1"
-            id="fr-button-:r8:"
+            id="fr-button-«r8»"
           >
             children 1
           </a>
@@ -86,7 +86,7 @@ exports[`<ThemeModel /> affiche un thème 1`] = `
           <a
             class="fr-btn fr-btn--secondary fr-btn--lg ta_center"
             href="/themes/children1_2"
-            id="fr-button-:r9:"
+            id="fr-button-«r9»"
           >
             children 2
           </a>
@@ -100,7 +100,7 @@ exports[`<ThemeModel /> affiche un thème 1`] = `
         >
           <div
             class="fr-card fr-enlarge-link fr-card--horizontal"
-            id="fr-card-:ra:"
+            id="fr-card-«ra»"
           >
             <div
               class="fr-card__body"
@@ -138,7 +138,7 @@ exports[`<ThemeModel /> affiche un thème 1`] = `
         >
           <div
             class="fr-card fr-enlarge-link fr-card--horizontal"
-            id="fr-card-:rb:"
+            id="fr-card-«rb»"
           >
             <div
               class="fr-card__body"

@@ -7,12 +7,13 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 type SearchPageProps = {
-  searchParams: { query?: string };
+  searchParams: Promise<{ query?: string }>;
 };
 
-export async function generateMetadata({
-  searchParams,
-}: SearchPageProps): Promise<Metadata> {
+export async function generateMetadata(
+  props: SearchPageProps
+): Promise<Metadata> {
+  const searchParams = await props.searchParams;
   const query = searchParams.query || "";
 
   return {
@@ -25,7 +26,8 @@ export async function generateMetadata({
   };
 }
 
-export default async function SearchPage({ searchParams }: SearchPageProps) {
+export default async function SearchPage(props: SearchPageProps) {
+  const searchParams = await props.searchParams;
   const query = searchParams.query || "";
 
   let items = { articles: [], documents: [], themes: [] };

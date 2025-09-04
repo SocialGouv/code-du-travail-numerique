@@ -1,4 +1,4 @@
-import {SearchController} from "../../../src/api";
+import { SearchController } from "../../../src/api";
 
 export const dynamic = "force-dynamic";
 
