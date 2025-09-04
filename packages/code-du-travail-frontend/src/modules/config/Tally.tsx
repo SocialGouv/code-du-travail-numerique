@@ -60,6 +60,28 @@ const TallyWidgetComponent = ({ id }: Props): React.ReactNode => {
             transform: rotate(0deg);
           }
         }
+
+        /* Mobile responsive styles for Tally popup */
+        @media (max-width: 768px) {
+          .tally-popup-iframe,
+          iframe[src*="tally.so"] {
+            width: 100vw !important;
+            max-width: 100vw !important;
+            height: 95vh !important;
+            max-height: 95vh !important;
+            left: 0 !important;
+            top: 5vh !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            border-radius: 8px !important;
+            position: fixed !important;
+            z-index: 999999 !important;
+          }
+
+          .tally-popup-overlay {
+            background-color: rgba(0, 0, 0, 0.8) !important;
+          }
+        }
       `}</style>
 
       <Script id="tally-js" src="https://tally.so/widgets/embed.js" />
@@ -68,6 +90,7 @@ const TallyWidgetComponent = ({ id }: Props): React.ReactNode => {
         data-tally-open={id}
         data-tally-width="500"
         data-tally-overlay="1"
+        data-tally-auto-resize="true"
         aria-label="Donner votre avis"
         aria-haspopup="dialog"
         aria-expanded="false"
@@ -111,6 +134,21 @@ const buttonSuggestionStyles = css({
   backgroundColor: "hsl(220deg, calc(100% - 34%), 33%)!",
   "@media (min-width: 1200px)": {
     animation: "moveLeftAndRight 30s ease-in-out infinite 5s",
+  },
+  "@media (max-width: 768px)": {
+    top: "8rem",
+    right: "-9rem",
+    width: "12rem",
+    height: "3.5rem",
+    fontSize: "13px",
+    animation: "none",
+  },
+  "@media (max-width: 480px)": {
+    top: "6rem",
+    right: "-8.5rem",
+    width: "11rem",
+    height: "3.2rem",
+    fontSize: "12px",
   },
 });
 
