@@ -11,7 +11,7 @@ import { ENV } from "../../config";
 import { SentryTest } from "../sentry";
 import { ConsentManager } from "../cookie-consent";
 import { usePathname } from "next/navigation";
-import { Tally } from "../tally/Tally";
+import { Tally } from "./Tally";
 
 type Props = {
   children: React.ReactNode;
