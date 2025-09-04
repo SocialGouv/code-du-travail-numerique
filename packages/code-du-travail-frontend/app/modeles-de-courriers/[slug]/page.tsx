@@ -9,7 +9,8 @@ import {
 import { notFound } from "next/navigation";
 import { fetchRelatedItems } from "../../../src/modules/documents";
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const { title, type, metaDescription, meta_title } = await getModel(
     params.slug,
     ["title", "meta_title", "type", "metaDescription"]
@@ -23,7 +24,8 @@ export async function generateMetadata({ params }) {
   });
 }
 
-async function ModeleCourrier({ params }) {
+async function ModeleCourrier(props) {
+  const params = await props.params;
   const { title, ...model } = await getModel(params.slug, [
     "breadcrumbs",
     "title",

@@ -21,11 +21,10 @@ const getModelesList = async () => {
     ?.sort((a, b) => a.label.localeCompare(b.label));
 };
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>;
 }) {
+  const params = await props.params;
   const widget = integrationData[params.slug];
   if (!widget) {
     return {};
@@ -37,11 +36,10 @@ export async function generateMetadata({
   });
 }
 
-export default async function IntegrationDetailPage({
-  params,
-}: {
-  params: { slug: string };
+export default async function IntegrationDetailPage(props: {
+  params: Promise<{ slug: string }>;
 }) {
+  const params = await props.params;
   if (!keys.includes(params.slug)) {
     notFound();
   }
@@ -50,7 +48,7 @@ export default async function IntegrationDetailPage({
   const { isModele } = widget;
   const selectOptions = isModele ? await getModelesList() : null;
 
-  const headersList = headers();
+  const headersList = await headers();
   const host = headersList.get("host") || "";
   const protocol =
     headersList.get("x-forwarded-proto")?.split(",")[0] || "https";

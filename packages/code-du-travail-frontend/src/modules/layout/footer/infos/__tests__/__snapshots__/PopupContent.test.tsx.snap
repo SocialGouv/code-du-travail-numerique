@@ -32,7 +32,7 @@ exports[`<PopupContent /> should match snapshot 1`] = `
   >
     <label
       class="fr-label"
-      for="input-:r0:"
+      for="input-«r0»"
     >
       Saisissez le numéro de votre département
     </label>
@@ -41,20 +41,20 @@ exports[`<PopupContent /> should match snapshot 1`] = `
     >
       <input
         class="fr-input w_fit-content! min-w_282px! [&::-webkit-outer-spin-button,_&::-webkit-inner-spin-button]:-webkit-appearance_none [&::-webkit-outer-spin-button,_&::-webkit-inner-spin-button]:m_0 [&[type=number]]:ap_textfield"
-        id="input-:r0:"
+        id="input-«r0»"
         maxlength="3"
         type="text"
       />
       <button
         class="fr-btn fr-icon-search-line"
-        id="fr-button-:r1:"
+        id="fr-button-«r1»"
         title="Lancer la recherche par numéro de département"
       />
     </div>
     <div
       aria-live="polite"
       class="fr-messages-group"
-      id="input-:r0:-messages-group"
+      id="input-«r0»-messages-group"
     />
   </div>
   <div

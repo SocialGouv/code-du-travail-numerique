@@ -26,10 +26,10 @@ exports[`Image should display image and caption 1`] = `
       class="fr-accordion__title"
     >
       <button
-        aria-controls="fr-accordion-:r0:-collapse"
+        aria-controls="fr-accordion-«r0»-collapse"
         aria-expanded="false"
         class="fr-accordion__btn"
-        id="fr-accordion-:r0:__toggle-btn"
+        id="fr-accordion-«r0»__toggle-btn"
         type="button"
       >
         Voir en détail
@@ -37,7 +37,7 @@ exports[`Image should display image and caption 1`] = `
     </h4>
     <div
       class="fr-collapse"
-      id="fr-accordion-:r0:-collapse"
+      id="fr-accordion-«r0»-collapse"
     >
       <p>
         Comment calculer un délai quand il y a un jour férié ?

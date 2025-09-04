@@ -1,5 +1,5 @@
-import { render, screen, waitFor } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { fireEvent, render, screen } from "@testing-library/react";
+
 import { HeaderSearch } from "../HeaderSearch"; // Assurez-vous que le chemin est correct
 import { fetchSuggestResults } from "../fetchSuggestResults"; // Import pour le mock
 
@@ -22,16 +22,18 @@ describe("HeaderSearch Component - Accessibility Status Message in Autocomplete"
     render(<HeaderSearch onSearchSubmit={mockOnSearchSubmit} />);
 
     const input = screen.getByPlaceholderText("Recherchez sur le site");
-    await userEvent.type(input, "test");
+    fireEvent.input(input, { target: { value: "test" } });
 
-    await waitFor(() => {
-      const statusElement = screen.getByRole("status");
-      expect(statusElement).toBeInTheDocument();
-      expect(statusElement).toHaveAttribute("lang", "fr");
-      expect(statusElement).toHaveAttribute("aria-live", "polite");
-      expect(statusElement).toHaveClass("fr-sr-only");
-      expect(statusElement).toHaveTextContent("3 résultats trouvés.");
-    });
+    const statusElement = await screen.findByRole("status");
+
+    expect(statusElement).toBeInTheDocument();
+    expect(statusElement).toHaveAttribute("lang", "fr");
+    expect(statusElement).toHaveAttribute("aria-live", "polite");
+    expect(statusElement).toHaveClass("fr-sr-only");
+    console.log(">>> HIT before screen.debug");
+
+    screen.debug();
+    expect(statusElement).toHaveTextContent("3 résultats trouvés.");
   });
 
   it("affiche le message de statut accessible pour un seul résultat en français avec lang='fr'", async () => {
@@ -40,14 +42,12 @@ describe("HeaderSearch Component - Accessibility Status Message in Autocomplete"
     render(<HeaderSearch onSearchSubmit={mockOnSearchSubmit} />);
 
     const input = screen.getByPlaceholderText("Recherchez sur le site");
-    await userEvent.type(input, "test");
+    fireEvent.input(input, { target: { value: "test" } });
 
-    await waitFor(() => {
-      const statusElement = screen.getByRole("status");
-      expect(statusElement).toBeInTheDocument();
-      expect(statusElement).toHaveAttribute("lang", "fr");
-      expect(statusElement).toHaveTextContent("1 résultat trouvé.");
-    });
+    const statusElement = await screen.findByRole("status");
+    expect(statusElement).toBeInTheDocument();
+    expect(statusElement).toHaveAttribute("lang", "fr");
+    expect(statusElement).toHaveTextContent("1 résultat trouvé.");
   });
 
   it("affiche le message de statut accessible pour aucun résultat en français avec lang='fr'", async () => {
@@ -56,14 +56,12 @@ describe("HeaderSearch Component - Accessibility Status Message in Autocomplete"
     render(<HeaderSearch onSearchSubmit={mockOnSearchSubmit} />);
 
     const input = screen.getByPlaceholderText("Recherchez sur le site");
-    await userEvent.type(input, "test");
+    fireEvent.input(input, { target: { value: "test" } });
 
-    await waitFor(() => {
-      const statusElement = screen.getByRole("status");
-      expect(statusElement).toBeInTheDocument();
-      expect(statusElement).toHaveAttribute("lang", "fr");
-      expect(statusElement).toHaveTextContent("Aucun résultat trouvé.");
-    });
+    const statusElement = await screen.findByRole("status");
+    expect(statusElement).toBeInTheDocument();
+    expect(statusElement).toHaveAttribute("lang", "fr");
+    expect(statusElement).toHaveTextContent("Aucun résultat trouvé.");
   });
 
   it("n'affiche pas de message de statut si aucune saisie n'est effectuée", () => {

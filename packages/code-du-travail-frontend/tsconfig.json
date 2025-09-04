@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -22,8 +26,11 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@styled-system/*": ["./src/styled-system/*"]
-    }
+      "@styled-system/*": [
+        "./src/styled-system/*"
+      ]
+    },
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
@@ -32,5 +39,8 @@
     ".next/types/**/*.ts",
     "./global.d.ts"
   ],
-  "exclude": ["node_modules/**/*", "cypress"]
+  "exclude": [
+    "node_modules/**/*",
+    "cypress"
+  ]
 }

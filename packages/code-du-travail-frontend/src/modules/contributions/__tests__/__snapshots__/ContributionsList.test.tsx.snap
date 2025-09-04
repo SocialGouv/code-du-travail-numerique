@@ -8,11 +8,11 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
     <nav
       aria-label="vous êtes ici :"
       class="fr-breadcrumb fr-mb-2v"
-      id="fr-breadcrumb-:r0:"
+      id="fr-breadcrumb-«r0»"
       role="navigation"
     >
       <button
-        aria-controls="breadcrumb-:r1:"
+        aria-controls="breadcrumb-«r1»"
         aria-expanded="false"
         class="fr-breadcrumb__button"
       >
@@ -20,7 +20,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
       </button>
       <div
         class="fr-collapse"
-        id="breadcrumb-:r1:"
+        id="breadcrumb-«r1»"
       >
         <ol
           class="fr-breadcrumb__list"
@@ -60,18 +60,18 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
       </p>
       <div
         class="fr-select-group fr-mt-6w max-w_500px"
-        id="fr-select-group-:r2:"
+        id="fr-select-group-«r2»"
       >
         <label
           class="fr-label"
-          for="select-:r3:"
+          for="select-«r3»"
         >
           Sélectionnez un thème
         </label>
         <select
           aria-describedby=""
           class="fr-select"
-          id="select-:r3:"
+          id="select-«r3»"
         >
           <option
             value=""
@@ -92,7 +92,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
         <div
           aria-live="polite"
           class="fr-messages-group"
-          id="select-:r3:-messages-group"
+          id="select-«r3»-messages-group"
         />
       </div>
       <h2
@@ -108,7 +108,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
         >
           <div
             class="fr-card fr-enlarge-link fr-card--horizontal"
-            id="fr-card-:r5:"
+            id="fr-card-«r5»"
           >
             <div
               class="fr-card__body"
@@ -146,7 +146,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
         >
           <div
             class="fr-card fr-enlarge-link fr-card--horizontal"
-            id="fr-card-:r6:"
+            id="fr-card-«r6»"
           >
             <div
               class="fr-card__body"
@@ -193,7 +193,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
         >
           <div
             class="fr-card fr-enlarge-link fr-card--horizontal"
-            id="fr-card-:r7:"
+            id="fr-card-«r7»"
           >
             <div
               class="fr-card__body"

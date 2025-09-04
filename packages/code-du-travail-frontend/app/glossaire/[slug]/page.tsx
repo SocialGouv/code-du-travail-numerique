@@ -6,7 +6,8 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { GlossaryTermDetail } from "src/modules/glossaire/GlossaryTermDetail";
 import { fetchGlossary } from "../../../src/modules/glossaire/queries";
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const glossary = await fetchGlossary();
   const term = glossary.find((term) => params.slug === term.slug);
 
@@ -21,7 +22,8 @@ export async function generateMetadata({ params }) {
   });
 }
 
-async function GlossaryTermPage({ params }) {
+async function GlossaryTermPage(props) {
+  const params = await props.params;
   const glossary = await fetchGlossary();
   const term = glossary.find((term) => params.slug === term.slug);
 

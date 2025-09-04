@@ -8,7 +8,8 @@ import { AgreementContainer } from "src/modules/convention-collective/AgreementC
 import { fetchRelatedItems } from "src/modules/documents";
 import { SOURCES } from "@socialgouv/cdtn-utils";
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const agreement = await getBySlugAgreements(params.slug);
 
   return generateDefaultMetadata({
@@ -19,7 +20,8 @@ export async function generateMetadata({ params }) {
   });
 }
 
-async function Page({ params }) {
+async function Page(props) {
+  const params = await props.params;
   const agreement = await getAgreement(params.slug);
   const relatedItems = await fetchRelatedItems(
     { _id: agreement._id },

@@ -10,7 +10,8 @@ import { EnterpriseAgreementSelectionLink } from "../../../../../src/modules/ent
 import { searchEnterprises } from "../../../../../src/modules/enterprise/queries";
 import { SITE_URL } from "../../../../../src/config";
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const { title, description } = await getTool();
 
   return generateDefaultMetadata({
@@ -21,7 +22,8 @@ export async function generateMetadata({ params }) {
   });
 }
 
-async function AgreementSelectionPage({ params }) {
+async function AgreementSelectionPage(props) {
+  const params = await props.params;
   const [enterprise] = await searchEnterprises({
     query: params.slug,
   });
