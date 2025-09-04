@@ -4,7 +4,7 @@ import React, { JSX, useState } from "react";
 import { Motif } from "@socialgouv/modeles-social";
 import { AbsenceWithKey } from "./AbsencePeriods";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { fr } from "@codegouvfr/react-dsfr"; // Fixed: 'of' changed to 'from'
+import { fr } from "@codegouvfr/react-dsfr";
 import {
   preventScroll,
   handleNumberInput,
