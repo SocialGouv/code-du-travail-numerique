@@ -205,7 +205,7 @@ const AbsencePeriods = ({
             absence={value}
             informationData={informationData}
             absenceRef={absenceRef}
-            autoFocus={index === 0}
+            autoFocus={index === 0 && !!error?.global}
             ariaDescribedby={error?.global ? errorMessageId : undefined}
           />
         );

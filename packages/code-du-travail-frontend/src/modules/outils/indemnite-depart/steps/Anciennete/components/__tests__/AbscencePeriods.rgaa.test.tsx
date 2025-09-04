@@ -60,138 +60,140 @@ const mockAbsences: AbsenceWithKey[] = [];
 const mockInformationData = {};
 const mockOnChange = jest.fn();
 
-describe("AbsencePeriods Component - Accessibility and Error Handling Tests", () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
+describe("AbsencePeriods Component", () => {
+  describe("AbsencePeriods Component - Accessibility and Error Handling Tests", () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
 
-  test('Adds an empty <div aria-live="polite"> in the source code and generates status message inside it when global error occurs', async () => {
-    const { rerender, container } = render(
-      <AbsencePeriods
-        onChange={mockOnChange}
-        motifs={mockMotifs}
-        absences={mockAbsences}
-        informationData={mockInformationData}
-      />
-    );
+    test('Adds an empty <div aria-live="polite"> in the source code and generates status message inside it when global error occurs', async () => {
+      const { rerender, container } = render(
+        <AbsencePeriods
+          onChange={mockOnChange}
+          motifs={mockMotifs}
+          absences={mockAbsences}
+          informationData={mockInformationData}
+        />
+      );
 
-    // Initially, the div is empty
-    const politeDiv = container.querySelector(
-      '[aria-live="polite"]'
-    ) as HTMLElement;
-    expect(politeDiv).toBeInTheDocument();
-    expect(politeDiv).toHaveAttribute("aria-live", "polite");
-    expect(politeDiv).toHaveClass("sr-only");
-    expect(politeDiv).toHaveTextContent("");
+      // Initially, the div is empty
+      const politeDiv = container.querySelector(
+        '[aria-live="polite"]'
+      ) as HTMLElement;
+      expect(politeDiv).toBeInTheDocument();
+      expect(politeDiv).toHaveAttribute("aria-live", "polite");
+      expect(politeDiv).toHaveClass("sr-only");
+      expect(politeDiv).toHaveTextContent("");
 
-    // Rerender with global error
-    rerender(
-      <AbsencePeriods
-        onChange={mockOnChange}
-        motifs={mockMotifs}
-        absences={mockAbsences}
-        informationData={mockInformationData}
-        error={{ global: "Global error message" }}
-      />
-    );
+      // Rerender with global error
+      rerender(
+        <AbsencePeriods
+          onChange={mockOnChange}
+          motifs={mockMotifs}
+          absences={mockAbsences}
+          informationData={mockInformationData}
+          error={{ global: "Global error message" }}
+        />
+      );
 
-    // Wait for useEffect to update textContent
-    await waitFor(() => {
-      expect(politeDiv).toHaveTextContent("Global error message");
+      // Wait for useEffect to update textContent
+      await waitFor(() => {
+        expect(politeDiv).toHaveTextContent("Global error message");
+      });
+    });
+
+    test("Displays global error message in a <p> inside the error container", () => {
+      render(
+        <AbsencePeriods
+          onChange={mockOnChange}
+          motifs={mockMotifs}
+          absences={mockAbsences}
+          informationData={mockInformationData}
+          error={{ global: "Global error message" }}
+        />
+      );
+
+      const errorContainer = screen.getByText("Global error message", {
+        selector: "p",
+      });
+      expect(errorContainer.tagName).toBe("P");
     });
   });
 
-  test("Displays global error message in a <p> inside the error container", () => {
-    render(
-      <AbsencePeriods
-        onChange={mockOnChange}
-        motifs={mockMotifs}
-        absences={mockAbsences}
-        informationData={mockInformationData}
-        error={{ global: "Global error message" }}
-      />
-    );
-
-    const errorContainer = screen.getByText("Global error message", {
-      selector: "p",
+  describe("AbsencePeriod Component - Accessibility and Error Handling Tests", () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
     });
-    expect(errorContainer.tagName).toBe("P");
-  });
-});
 
-describe("AbsencePeriod Component - Accessibility and Error Handling Tests", () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
+    test("Replaces <h3> with <p> for absence title", () => {
+      render(
+        <AbsencePeriod
+          index={0}
+          onSelectMotif={jest.fn()}
+          onSetDurationDate={jest.fn()}
+          onSetAbsenceDate={jest.fn()}
+          onDeleteAbsence={jest.fn()}
+          motifs={mockMotifs}
+          absence={{
+            key: "test-key",
+            motif: mockMotifs[0],
+            durationInMonth: undefined,
+          }}
+          showDeleteButton={false}
+          informationData={mockInformationData}
+        />
+      );
 
-  test("Replaces <h3> with <p> for absence title", () => {
-    render(
-      <AbsencePeriod
-        index={0}
-        onSelectMotif={jest.fn()}
-        onSetDurationDate={jest.fn()}
-        onSetAbsenceDate={jest.fn()}
-        onDeleteAbsence={jest.fn()}
-        motifs={mockMotifs}
-        absence={{
-          key: "test-key",
-          motif: mockMotifs[0],
-          durationInMonth: undefined,
-        }}
-        showDeleteButton={false}
-        informationData={mockInformationData}
-      />
-    );
+      const titleElement = screen.getByText("Absence 1");
+      expect(titleElement.tagName).toBe("P");
+      expect(titleElement).toHaveClass(fr.cx("fr-text--bold", "fr-mb-1w"));
+    });
 
-    const titleElement = screen.getByText("Absence 1");
-    expect(titleElement.tagName).toBe("P");
-    expect(titleElement).toHaveClass(fr.cx("fr-text--bold", "fr-mb-1w"));
-  });
+    test("Adds aria-describedby to the duration field when error is present", () => {
+      render(
+        <AbsencePeriods
+          onChange={mockOnChange}
+          motifs={mockMotifs}
+          absences={mockAbsences}
+          informationData={mockInformationData}
+          error={{ global: "Global error" }}
+        />
+      );
 
-  test("Adds aria-describedby to the duration field when error is present", () => {
-    render(
-      <AbsencePeriods
-        onChange={mockOnChange}
-        motifs={mockMotifs}
-        absences={mockAbsences}
-        informationData={mockInformationData}
-        error={{ global: "Global error" }}
-      />
-    );
+      const durationInput = screen.getByLabelText("Durée (en mois)");
+      expect(durationInput).toHaveAttribute(
+        "aria-describedby",
+        "absence-total-error"
+      );
+    });
 
-    const durationInput = screen.getByLabelText("Durée (en mois)");
-    expect(durationInput).toHaveAttribute(
-      "aria-describedby",
-      "absence-total-error"
-    );
-  });
+    test("Sets focus on the duration field of the first absence when global error is present", () => {
+      render(
+        <AbsencePeriods
+          onChange={mockOnChange}
+          motifs={mockMotifs}
+          absences={mockAbsences}
+          informationData={mockInformationData}
+          error={{ global: "Global error" }}
+        />
+      );
 
-  test("Sets focus on the duration field of the first absence when global error is present", () => {
-    render(
-      <AbsencePeriods
-        onChange={mockOnChange}
-        motifs={mockMotifs}
-        absences={mockAbsences}
-        informationData={mockInformationData}
-        error={{ global: "Global error" }}
-      />
-    );
+      const durationInput = screen.getByLabelText("Durée (en mois)");
+      expect(durationInput).toHaveFocus();
+    });
 
-    const durationInput = screen.getByLabelText("Durée (en mois)");
-    expect(durationInput).toHaveFocus();
-  });
+    test("Does not set focus when no global error", () => {
+      render(
+        <AbsencePeriods
+          onChange={mockOnChange}
+          motifs={mockMotifs}
+          absences={mockAbsences}
+          informationData={mockInformationData}
+        />
+      );
 
-  test("Does not set focus when no global error", () => {
-    render(
-      <AbsencePeriods
-        onChange={mockOnChange}
-        motifs={mockMotifs}
-        absences={mockAbsences}
-        informationData={mockInformationData}
-      />
-    );
-
-    const durationInput = screen.getByLabelText("Durée (en mois)");
-    expect(durationInput).not.toHaveFocus();
+      const durationInput = screen.getByLabelText("Durée (en mois)");
+      expect(durationInput).not.toHaveFocus();
+    });
   });
 });
