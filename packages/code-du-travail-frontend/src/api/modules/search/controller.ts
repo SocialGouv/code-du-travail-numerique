@@ -1,32 +1,52 @@
-import { NextApiRequest, NextApiResponse } from "next";
 import { DEFAULT_ERROR_500_MESSAGE, NotFoundError } from "../../utils";
 import { searchWithQuery } from "./service";
+import { NextResponse } from "next/server";
 
 export class SearchController {
-  private req: NextApiRequest;
-  private res: NextApiResponse;
+  private searchParams: URLSearchParams;
 
-  constructor(req: NextApiRequest, res: NextApiResponse) {
-    this.req = req;
-    this.res = res;
+  constructor(request: Request) {
+    const url = new URL(request.url);
+    this.searchParams = url.searchParams;
   }
 
   public async get() {
     try {
-      const { q, skipSavedResults, size } = this.req.query;
+      const q = this.searchParams.get("q");
+      const skipSavedResults = this.searchParams.get("skipSavedResults");
+      const size = this.searchParams.get("size");
       const response = await searchWithQuery(
         q as string,
         skipSavedResults === "" ? true : false,
         size ? parseInt(size as string) : undefined
       );
-      this.res.status(200).json(response);
+      return NextResponse.json(response, {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
     } catch (error) {
       if (error instanceof NotFoundError) {
-        this.res.status(404).json({ message: error.message });
+        return NextResponse.json(
+          { message: error.message },
+          {
+            status: 404,
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
       } else {
-        this.res.status(500).json({
-          message: DEFAULT_ERROR_500_MESSAGE,
-        });
+        return NextResponse.json(
+          { message: DEFAULT_ERROR_500_MESSAGE },
+          {
+            status: 500,
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
       }
     }
   }
