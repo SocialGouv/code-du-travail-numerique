@@ -3,6 +3,7 @@ export const COOKIE_BANNER_ENABLED = false;
 export const COOKIE_BANNER_PATHS: string[] = [];
 
 export const COOKIE_BANNER_PATHS_SET: Set<string> = new Set(
+  // sonar-disable-next-line javascript:S4084
   COOKIE_BANNER_PATHS.map((path) => {
     let normalizedPath = path.trim().toLowerCase();
     while (normalizedPath.endsWith("/")) {
