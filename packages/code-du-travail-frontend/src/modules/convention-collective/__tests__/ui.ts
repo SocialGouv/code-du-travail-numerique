@@ -92,9 +92,7 @@ export const ui = {
         }),
       },
     },
-    noEnterprise: byRole("link", {
-      name: "Particuliers employeurs et emploi à domicile",
-    }),
+    noEnterprise: byText("Particuliers employeurs et emploi à domicile"),
     errorNotFound: {
       error: byText(/Aucune entreprise n'a été trouvée\./),
       info: byText(/Vous ne trouvez pas votre entreprise \?/),

@@ -38,6 +38,11 @@ export const EnterpriseAgreementSelectionForm = ({
         iconId="fr-icon-arrow-go-back-fill"
         onClick={goBack}
         priority="secondary"
+        nativeButtonProps={{
+          "data-testid": "modify-enterprise-button",
+          "aria-label": "Modifier l'entreprise sélectionnée",
+          title: "Modifier l'entreprise sélectionnée",
+        }}
       >
         Modifier
       </Button>
