@@ -32,7 +32,6 @@ const StepInformations = () => {
             error={
               errors.errorInformations[info.question.rule.nom] ?? undefined
             }
-            autoFocus={index === 0}
           />
         );
       })}

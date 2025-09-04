@@ -57,7 +57,14 @@ const InformationsStepComponent = () => {
         </p>
       )}
       {errors.errorPublicodes && (
-        <p className={fr.cx("fr-error-text")}>{errors.errorPublicodes}</p>
+        <div className={fr.cx("fr-mt-2w")}>
+          <AccessibleAlert
+            title="Attention"
+            severity="error"
+            description={errors.errorPublicodes}
+            autoFocus
+          />
+        </div>
       )}
       {errors.errorNote && (
         <div className={fr.cx("fr-mt-2w")}>

@@ -34,7 +34,6 @@ const StepOrigin = () => {
         selectedOption={originDepart}
         onChangeSelectedOption={onChangeOriginDepart}
         error={errorOriginDepart}
-        autoFocus
       />
       {originDepart === "mise-retraite" && (
         <div className={fr.cx("fr-mt-2w")}>
