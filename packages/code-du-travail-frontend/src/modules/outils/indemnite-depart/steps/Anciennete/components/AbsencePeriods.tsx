@@ -229,6 +229,7 @@ const AbsencePeriods = ({
             title="Attention"
             description={error.global}
             severity="error"
+            autoFocus
           />
         </div>
       )}
