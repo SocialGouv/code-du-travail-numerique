@@ -1,16 +1,11 @@
 "use client";
 
-import React, { useEffect, useState, lazy, Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import Script from "next/script";
 import { css } from "@styled-system/css";
 
-const TallyWidget = lazy(
-  () =>
-    new Promise<{
-      default: typeof TallyWidgetComponent;
-    }>((resolve) =>
-      setTimeout(() => resolve({ default: TallyWidgetComponent }), 1000)
-    )
+const TallyWidget = lazy(() =>
+  Promise.resolve({ default: TallyWidgetComponent })
 );
 
 type Props = {
@@ -90,20 +85,6 @@ const TallyWidgetComponent = ({ id }: Props): React.ReactNode => {
 };
 
 export const Tally = ({ id }: Props): React.ReactNode => {
-  const [shouldRender, setShouldRender] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShouldRender(true);
-    }, 1500);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (!shouldRender) {
-    return null;
-  }
-
   return (
     <Suspense fallback={null}>
       <TallyWidget id={id} />
