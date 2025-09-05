@@ -228,18 +228,18 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
               <h2 className={fr.cx("fr-h3")} lang="fr">
                 Les thèmes suivants peuvent vous intéresser
               </h2>
-              <div
+              <ul
                 className={fr.cx(
                   "fr-grid-row",
                   "fr-grid-row--gutters",
                   "fr-grid-row--center",
-                  "fr-mt-3w"
+                  "fr-mt-3w",
+                  "fr-raw-list"
                 )}
               >
-                {themes.map((theme, index) => {
-                  return (
+                {themes.map((theme, index) => (
+                  <li key={index} className={fr.cx("fr-mr-2w", "fr-mb-2w")}>
                     <Button
-                      key={index}
                       linkProps={{
                         href: generateSearchLink(
                           theme.source,
@@ -255,13 +255,12 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                           ),
                       }}
                       priority="secondary"
-                      className={fr.cx("fr-mr-2w", "fr-mb-2w")}
                     >
                       {theme.title}
                     </Button>
-                  );
-                })}
-              </div>
+                  </li>
+                ))}
+              </ul>
             </section>
           )}
         </>
