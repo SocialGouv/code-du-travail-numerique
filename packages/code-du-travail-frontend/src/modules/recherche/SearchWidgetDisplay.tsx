@@ -38,7 +38,7 @@ export const SearchWidgetDisplay: React.FC = () => {
     <div className={`${containerStyles} ${fr.cx("fr-p-2w")}`}>
       <div className={fr.cx("fr-mb-3w")}>
         <Link
-          title="Le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail."
+          title="Le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail. - nouvelle fenêtre"
           href="/"
           target="_blank"
           className={logoLinkStyles}

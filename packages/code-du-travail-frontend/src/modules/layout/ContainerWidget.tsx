@@ -25,7 +25,11 @@ export const ContainerWidget = ({ children }: Props) => {
         )}
       >
         <div className={fr.cx("fr-col-md-10", "fr-col-sm-8", "fr-col-6")}>
-          <Link href="/politique-confidentialite" target="_blank">
+          <Link
+            href="/politique-confidentialite"
+            target="_blank"
+            title="Politique de confidentialité - nouvelle fenêtre"
+          >
             Politique de confidentialité
           </Link>
         </div>

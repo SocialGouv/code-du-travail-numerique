@@ -24,7 +24,12 @@ export const OuSAdresser = ({
   if (ressourceWeb) {
     const url = ressourceWeb.attributes.URL;
     content = (
-      <Link href={url} rel="noopener noreferrer" target="_blank">
+      <Link
+        href={url}
+        rel="noopener noreferrer"
+        target="_blank"
+        title={`${url} - nouvelle fenêtre`}
+      >
         {label}
       </Link>
     );

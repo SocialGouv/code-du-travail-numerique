@@ -40,7 +40,12 @@ export const LienExterne = ({ data }: { data: FicheSPDataLienExterne }) => {
   const url = cleanUrl(data.attributes.URL);
   const label = getText(data);
   return (
-    <Link href={url} rel="noopener noreferrer" target="_blank">
+    <Link
+      href={url}
+      rel="noopener noreferrer"
+      target="_blank"
+      title={`${url} - nouvelle fenêtre`}
+    >
       {label}
     </Link>
   );

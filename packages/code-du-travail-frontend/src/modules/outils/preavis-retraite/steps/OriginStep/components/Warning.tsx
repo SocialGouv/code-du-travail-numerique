@@ -18,6 +18,8 @@ export const WarningOriginDepart = () => {
           <a
             href="/fiche-service-public/un-employeur-peut-il-mettre-doffice-un-salarie-a-la-retraite"
             target="_blank"
+            rel="noopener noreferrer"
+            title="L'employeur peut-il mettre d'office un salarié à la retraite - nouvelle fenêtre"
           >
             L&apos;employeur peut-il mettre d&apos;office un salarié à la
             retraite ?

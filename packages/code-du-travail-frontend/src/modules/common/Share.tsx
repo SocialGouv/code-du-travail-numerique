@@ -99,7 +99,7 @@ export const Share = ({ title, metaDescription }: Props) => {
               "fr-btn--tertiary",
               "ri-mail-line"
             )} ${blueCumulus}`}
-            title="Envoyer par email"
+            title="Envoyer par courriel"
             rel="noopener external"
             href={`mailto:?subject=${encodeURIComponent(
               `A lire sur le Code du travail numérique : ${title}`

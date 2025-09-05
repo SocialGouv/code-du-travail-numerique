@@ -54,7 +54,13 @@ export const ContributionGenericContent = forwardRef<
               <ListWithArrow
                 items={contribution.references.map(({ title, url }) => {
                   return (
-                    <Link key={title} href={url} target="_blank">
+                    <Link
+                      key={title}
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title={`${url} - nouvelle fenêtre`}
+                    >
                       {title}
                     </Link>
                   );

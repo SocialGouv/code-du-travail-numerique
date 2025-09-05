@@ -43,6 +43,7 @@ export const PrivacyPolicy = () => {
             <Link
               href="https://us.ovhcloud.com/legal/data-processing-agreement"
               target="_blank"
+              title="l'accord de traitement des données d'OVH - nouvelle fenêtre"
             >
               https://us.ovhcloud.com/legal/data-processing-agreement
             </Link>
@@ -68,7 +69,11 @@ export const PrivacyPolicy = () => {
           </li>
           <li>
             <strong>Garanties :</strong>{" "}
-            <Link href="https://fr.matomo.org/privacy-policy/" target="_blank">
+            <Link
+              href="https://fr.matomo.org/privacy-policy/"
+              target="_blank"
+              title="la politique de confidentialité de Matomo - nouvelle fenêtre"
+            >
               https://fr.matomo.org/privacy-policy/
             </Link>
           </li>
@@ -94,7 +99,11 @@ export const PrivacyPolicy = () => {
           </li>
           <li>
             <strong>Garanties :</strong>{" "}
-            <Link href="https://fr.matomo.org/privacy-policy/" target="_blank">
+            <Link
+              href="https://fr.matomo.org/privacy-policy/"
+              target="_blank"
+              title="la politique de confidentialité de Matomo - nouvelle fenêtre"
+            >
               https://fr.matomo.org/privacy-policy/
             </Link>
           </li>
@@ -120,6 +129,7 @@ export const PrivacyPolicy = () => {
             <Link
               href="https://policies.google.com/privacy?hl=fr"
               target="_blank"
+              title="la politique de confidentialité de Google - nouvelle fenêtre"
             >
               https://policies.google.com/privacy?hl=fr
             </Link>
@@ -164,6 +174,7 @@ export const PrivacyPolicy = () => {
             <Link
               target="_blank"
               href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi"
+              title="Cookies et traceurs : que dit la loi ? - nouvelle fenêtre"
             >
               Cookies et traceurs : que dit la loi ?
             </Link>
@@ -172,6 +183,7 @@ export const PrivacyPolicy = () => {
             <Link
               target="_blank"
               href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser"
+              title="Cookies : les outils pour les maîtriser - nouvelle fenêtre"
             >
               Cookies : les outils pour les maîtriser
             </Link>

@@ -114,7 +114,7 @@ export function AgreementArticles({ articlesByTheme, containerId }: Props) {
                       href={`https://legifrance.gouv.fr/conv_coll/id/${article.id}/?idConteneur=${containerId}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      title={`Article ${article.title} : ${article.section}`}
+                      title={`Article ${article.title} : ${article.section} - nouvelle fenêtre`}
                       data-testid={`agreement-article-link-${article.id}`}
                     >
                       <strong
