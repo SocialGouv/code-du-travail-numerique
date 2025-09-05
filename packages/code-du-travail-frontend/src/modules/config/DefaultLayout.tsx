@@ -11,6 +11,7 @@ import { ENV } from "../../config";
 import { SentryTest } from "../sentry";
 import { ConsentManager } from "../cookie-consent";
 import { usePathname } from "next/navigation";
+import { Tally } from "./Tally";
 
 type Props = {
   children: React.ReactNode;
@@ -61,6 +62,7 @@ export default function DefaultLayout({
         >
           {children}
           {!isWidgetPage && <ConsentManager />}
+          <Tally id={"3E2Ypo"} />
         </DsfrProvider>
         <MatomoAnalytics />
         {ENV === "development" && <SentryTest />}
