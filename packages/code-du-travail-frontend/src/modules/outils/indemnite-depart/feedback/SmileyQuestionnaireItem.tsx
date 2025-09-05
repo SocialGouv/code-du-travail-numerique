@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, ReactNode } from "react";
 import { FEEDBACK_RESULT } from "./tracking";
 import { fr } from "@codegouvfr/react-dsfr";
 import { BadIcon } from "./icons/BadIcon";
@@ -21,6 +21,8 @@ export type SmileyQuestionnaireItemProps = {
   goodEventValue: FEEDBACK_RESULT;
   displayError?: boolean;
   onChange: (status: FEEDBACK_RESULT) => void;
+  topComponent: ReactNode;
+  bottomComponent: ReactNode;
 };
 
 // Component for smiley feedback (3 options)
@@ -30,6 +32,8 @@ export const SmileyQuestionnaireItem = ({
   goodEventValue,
   displayError,
   onChange,
+  topComponent,
+  bottomComponent,
 }: SmileyQuestionnaireItemProps) => {
   const [status, setStatus] = useState<Status>();
   const fieldsetId = `fieldset-satisfaction`;
@@ -47,89 +51,99 @@ export const SmileyQuestionnaireItem = ({
 
   return (
     <div>
-      <div
+      <fieldset
         aria-invalid={displayError ? "true" : undefined}
         aria-describedby={displayError ? errorId : undefined}
-        className={fr.cx("fr-btns-group", "fr-btns-group--inline")}
-        style={{ justifyContent: "center", gap: "1rem" }}
       >
-        <div className={radioCardStyle}>
-          <input
-            ref={firstRadioRef}
-            type="radio"
-            name={fieldsetId}
-            id={`${fieldsetId}-bad`}
-            className="fr-radio"
-            checked={status === Status.BAD}
-            aria-describedby={displayError ? errorId : undefined}
-            onChange={() => {
-              setStatus(Status.BAD);
-              onChange(badEventValue);
-            }}
-          />
-          <label htmlFor={`${fieldsetId}-bad`} className={radioLabelStyle}>
-            <div className={radioContentStyle}>
-              <BadIcon
-                width={"32px"}
-                isActive={status === Status.BAD}
-                aria-hidden="true"
-                focusable="false"
-              />
-              <span className={radioTextStyle}>Pas bien</span>
-            </div>
-          </label>
+        {topComponent}
+        <legend className={fr.cx("fr-sr-only")}>
+          Évaluation de satisfaction
+        </legend>
+        <div
+          className={fr.cx("fr-btns-group", "fr-btns-group--inline")}
+          style={{ justifyContent: "center", gap: "1rem" }}
+        >
+          <div className={radioCardStyle}>
+            <input
+              ref={firstRadioRef}
+              type="radio"
+              name={fieldsetId}
+              id={`${fieldsetId}-bad`}
+              className="fr-radio"
+              checked={status === Status.BAD}
+              aria-describedby={displayError ? errorId : undefined}
+              onChange={() => {
+                setStatus(Status.BAD);
+                onChange(badEventValue);
+              }}
+            />
+            <label htmlFor={`${fieldsetId}-bad`} className={radioLabelStyle}>
+              <div className={radioContentStyle}>
+                <BadIcon
+                  width={"32px"}
+                  isActive={status === Status.BAD}
+                  aria-hidden="true"
+                  focusable="false"
+                />
+                <span className={radioTextStyle}>Pas bien</span>
+              </div>
+            </label>
+          </div>
+          <div className={radioCardStyle}>
+            <input
+              type="radio"
+              name={fieldsetId}
+              id={`${fieldsetId}-average`}
+              className="fr-radio"
+              checked={status === Status.AVERAGE}
+              aria-describedby={displayError ? errorId : undefined}
+              onChange={() => {
+                setStatus(Status.AVERAGE);
+                onChange(averageEventValue);
+              }}
+            />
+            <label
+              htmlFor={`${fieldsetId}-average`}
+              className={radioLabelStyle}
+            >
+              <div className={radioContentStyle}>
+                <MediumIcon
+                  width={"32px"}
+                  isActive={status === Status.AVERAGE}
+                  aria-hidden="true"
+                  focusable="false"
+                />
+                <span className={radioTextStyle}>Moyen</span>
+              </div>
+            </label>
+          </div>
+          <div className={radioCardStyle}>
+            <input
+              type="radio"
+              name={fieldsetId}
+              id={`${fieldsetId}-good`}
+              className="fr-radio"
+              checked={status === Status.GOOD}
+              aria-describedby={displayError ? errorId : undefined}
+              onChange={() => {
+                setStatus(Status.GOOD);
+                onChange(goodEventValue);
+              }}
+            />
+            <label htmlFor={`${fieldsetId}-good`} className={radioLabelStyle}>
+              <div className={radioContentStyle}>
+                <GoodIcon
+                  width={"32px"}
+                  isActive={status === Status.GOOD}
+                  aria-hidden="true"
+                  focusable="false"
+                />
+                <span className={radioTextStyle}>Très bien</span>
+              </div>
+            </label>
+          </div>
         </div>
-        <div className={radioCardStyle}>
-          <input
-            type="radio"
-            name={fieldsetId}
-            id={`${fieldsetId}-average`}
-            className="fr-radio"
-            checked={status === Status.AVERAGE}
-            aria-describedby={displayError ? errorId : undefined}
-            onChange={() => {
-              setStatus(Status.AVERAGE);
-              onChange(averageEventValue);
-            }}
-          />
-          <label htmlFor={`${fieldsetId}-average`} className={radioLabelStyle}>
-            <div className={radioContentStyle}>
-              <MediumIcon
-                width={"32px"}
-                isActive={status === Status.AVERAGE}
-                aria-hidden="true"
-                focusable="false"
-              />
-              <span className={radioTextStyle}>Moyen</span>
-            </div>
-          </label>
-        </div>
-        <div className={radioCardStyle}>
-          <input
-            type="radio"
-            name={fieldsetId}
-            id={`${fieldsetId}-good`}
-            className="fr-radio"
-            checked={status === Status.GOOD}
-            aria-describedby={displayError ? errorId : undefined}
-            onChange={() => {
-              setStatus(Status.GOOD);
-              onChange(goodEventValue);
-            }}
-          />
-          <label htmlFor={`${fieldsetId}-good`} className={radioLabelStyle}>
-            <div className={radioContentStyle}>
-              <GoodIcon
-                width={"32px"}
-                isActive={status === Status.GOOD}
-                aria-hidden="true"
-                focusable="false"
-              />
-              <span className={radioTextStyle}>Très bien</span>
-            </div>
-          </label>
-        </div>
-      </div>
+      </fieldset>
 
       {displayError && (
         <p
@@ -141,6 +155,8 @@ export const SmileyQuestionnaireItem = ({
           Vous devez choisir une des réponses
         </p>
       )}
+
+      {bottomComponent}
     </div>
   );
 };
