@@ -16,7 +16,7 @@ type QuestionnaireProps = {
   category: EVENT_CATEGORY;
 };
 
-export const Questionnaire = forwardRef<HTMLHeadingElement, QuestionnaireProps>(
+export const Questionnaire = forwardRef<HTMLLegendElement, QuestionnaireProps>(
   ({ onClick, category }, ref): React.ReactElement => {
     const [status, setStatus] = useState<FEEDBACK_RESULT>();
     const [displayError, setDisplayError] = useState(false);
@@ -57,14 +57,17 @@ export const Questionnaire = forwardRef<HTMLHeadingElement, QuestionnaireProps>(
         }}
       >
         <fieldset>
-          <legend>
-            <h2
-              ref={ref}
-              tabIndex={-1}
-              className={fr.cx("fr-text--lg", "fr-mb-2w", "fr-text--bold")}
-            >
-              Comment s&apos;est passée cette simulation pour vous ?
-            </h2>
+          <legend
+            ref={ref}
+            role="heading"
+            aria-level={2}
+            tabIndex={-1}
+            className={fr.cx("fr-text--lg", "fr-mb-2w", "fr-text--bold")}
+          >
+            Comment s&apos;est passée cette simulation pour vous ?
+            <span className={fr.cx("fr-sr-only")}>
+              - Évaluation de satisfaction
+            </span>
           </legend>
           <SmileyQuestionnaireItem
             badEventValue={FEEDBACK_RESULT.NOT_GOOD}

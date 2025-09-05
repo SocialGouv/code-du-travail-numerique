@@ -46,12 +46,10 @@ export const SmileyQuestionnaireItem = ({
   }, [displayError]);
 
   return (
-    <fieldset
-      aria-invalid={displayError ? "true" : undefined}
-      aria-describedby={displayError ? errorId : undefined}
-    >
-      <legend className={srOnlyStyle}>Évaluation de satisfaction</legend>
+    <div>
       <div
+        aria-invalid={displayError ? "true" : undefined}
+        aria-describedby={displayError ? errorId : undefined}
         className={fr.cx("fr-btns-group", "fr-btns-group--inline")}
         style={{ justifyContent: "center", gap: "1rem" }}
       >
@@ -143,7 +141,7 @@ export const SmileyQuestionnaireItem = ({
           Vous devez choisir une des réponses
         </p>
       )}
-    </fieldset>
+    </div>
   );
 };
 
@@ -197,17 +195,4 @@ const radioTextStyle = css({
   "@media (max-width: 480px)": {
     fontSize: "0.875rem",
   },
-});
-
-// Visually hidden but accessible to screen readers
-const srOnlyStyle = css({
-  position: "absolute !important",
-  width: "1px !important",
-  height: "1px !important",
-  padding: "0 !important",
-  margin: "-1px !important",
-  overflow: "hidden !important",
-  clip: "rect(0, 0, 0, 0) !important",
-  whiteSpace: "nowrap !important",
-  border: "0 !important",
 });

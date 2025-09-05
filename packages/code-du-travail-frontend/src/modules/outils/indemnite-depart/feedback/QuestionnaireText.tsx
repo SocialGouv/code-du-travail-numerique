@@ -27,23 +27,21 @@ export const QuestionnaireText = ({
   };
 
   return (
-    <div>
-      <Input
-        label={title}
-        textArea
-        nativeTextAreaProps={
-          {
-            id: id,
-            onChange: handleChange,
-            maxLength: maxCharacters,
-            "aria-describedby": `${id}-hint ${id}-remaining`,
-            "data-testid": `${id}`,
-          } as any
-        }
-        hintText={placeholder}
-        state="info"
-        stateRelatedMessage={`${remainingChars} caractères restants`}
-      />
-    </div>
+    <Input
+      label={title}
+      textArea
+      nativeTextAreaProps={
+        {
+          id: id,
+          onChange: handleChange,
+          maxLength: maxCharacters,
+          "aria-describedby": `${id}-hint ${id}-remaining`,
+          "data-testid": `${id}`,
+        } as any
+      }
+      hintText={placeholder}
+      state="info"
+      stateRelatedMessage={`${remainingChars} caractères restants`}
+    />
   );
 };
