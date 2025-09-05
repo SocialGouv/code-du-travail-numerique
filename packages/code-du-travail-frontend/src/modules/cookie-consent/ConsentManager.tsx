@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, lazy, Suspense } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { initConsent } from "../utils/consent";
 
 const CookieConsentDSFR = lazy(
@@ -15,21 +15,9 @@ const CookieConsentDSFR = lazy(
 );
 
 export const ConsentManager = () => {
-  // const [shouldRender, setShouldRender] = useState(false);
-
   useEffect(() => {
     initConsent();
-
-    // const timer = setTimeout(() => {
-    //   setShouldRender(true);
-    // }, 1500);
-
-    // return () => clearTimeout(timer);
   }, []);
-
-  // if (!shouldRender) {
-  //   return null;
-  // }
 
   return (
     <Suspense fallback={null}>
