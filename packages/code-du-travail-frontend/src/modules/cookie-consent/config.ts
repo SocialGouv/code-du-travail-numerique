@@ -3,13 +3,15 @@ export const COOKIE_BANNER_ENABLED = false;
 export const COOKIE_BANNER_PATHS: string[] = [];
 
 export const COOKIE_BANNER_PATHS_SET: Set<string> = new Set(
-  COOKIE_BANNER_PATHS.map((path) => {
-    let normalizedPath = path.trim().toLowerCase();
-    while (normalizedPath.endsWith("/")) {
-      normalizedPath = normalizedPath.slice(0, -1);
-    }
-    return normalizedPath;
-  })
+  COOKIE_BANNER_PATHS.length > 0
+    ? COOKIE_BANNER_PATHS.map((path) => {
+        let normalizedPath = path.trim().toLowerCase();
+        while (normalizedPath.endsWith("/")) {
+          normalizedPath = normalizedPath.slice(0, -1);
+        }
+        return normalizedPath;
+      })
+    : []
 );
 
 export const shouldShowCookieBanner = (pathname: string): boolean => {
