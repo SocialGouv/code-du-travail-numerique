@@ -16,7 +16,7 @@ type QuestionnaireProps = {
   category: EVENT_CATEGORY;
 };
 
-export const Questionnaire = forwardRef<HTMLLegendElement, QuestionnaireProps>(
+export const Questionnaire = forwardRef<HTMLHeadingElement, QuestionnaireProps>(
   ({ onClick, category }, ref): React.ReactElement => {
     const [status, setStatus] = useState<FEEDBACK_RESULT>();
     const [displayError, setDisplayError] = useState(false);
@@ -57,18 +57,16 @@ export const Questionnaire = forwardRef<HTMLLegendElement, QuestionnaireProps>(
         }}
       >
         <fieldset>
-          <legend
+          <legend className={fr.cx("fr-sr-only")}>
+            Évaluation de satisfaction
+          </legend>
+          <h2
             ref={ref}
-            role="heading"
-            aria-level={2}
             tabIndex={-1}
             className={fr.cx("fr-text--lg", "fr-mb-2w", "fr-text--bold")}
           >
             Comment s&apos;est passée cette simulation pour vous ?
-            <span className={fr.cx("fr-sr-only")}>
-              - Évaluation de satisfaction
-            </span>
-          </legend>
+          </h2>
           <SmileyQuestionnaireItem
             badEventValue={FEEDBACK_RESULT.NOT_GOOD}
             averageEventValue={FEEDBACK_RESULT.AVERAGE}
