@@ -145,7 +145,7 @@ const buttonSuggestionStyles = css({
   },
   "@media (max-width: 480px)": {
     top: "6rem",
-    right: "-8.5rem",
+    right: "-7rem",
     width: "11rem",
     height: "3.2rem",
     fontSize: "12px",
