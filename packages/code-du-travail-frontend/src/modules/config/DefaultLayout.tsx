@@ -10,6 +10,7 @@ import { StartDsfrLight } from "./StartDsfrLight";
 import { ENV } from "../../config";
 import { SentryTest } from "../sentry";
 import { ConsentManager } from "../cookie-consent";
+import { shouldShowCookieBanner } from "../cookie-consent/config";
 import { usePathname } from "next/navigation";
 import { Tally } from "./Tally";
 
@@ -30,8 +31,8 @@ export default function DefaultLayout({
   defaultColorScheme,
 }: Props) {
   const lang = "fr";
-  const pathname = usePathname();
-  const isWidgetPage = pathname?.startsWith("/widgets");
+  const pathname = usePathname() || "";
+  const showCookieBanner = shouldShowCookieBanner(pathname);
 
   return (
     <html {...getHtmlAttributes({ lang })}>
@@ -61,7 +62,7 @@ export default function DefaultLayout({
           defaultColorScheme={defaultColorScheme}
         >
           {children}
-          {!isWidgetPage && <ConsentManager />}
+          {showCookieBanner && <ConsentManager />}
           <Tally id={"3E2Ypo"} />
         </DsfrProvider>
         <MatomoAnalytics />
