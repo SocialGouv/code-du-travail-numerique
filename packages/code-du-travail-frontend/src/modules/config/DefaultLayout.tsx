@@ -33,6 +33,7 @@ export default function DefaultLayout({
   const lang = "fr";
   const pathname = usePathname() || "";
   const showCookieBanner = shouldShowCookieBanner(pathname);
+  const showTally = !pathname.startsWith("/widgets");
 
   return (
     <html {...getHtmlAttributes({ lang })}>
@@ -63,7 +64,7 @@ export default function DefaultLayout({
         >
           {children}
           {showCookieBanner && <ConsentManager />}
-          <Tally id={"3E2Ypo"} />
+          {showTally && <Tally id={"3E2Ypo"} />}
         </DsfrProvider>
         <MatomoAnalytics />
         {ENV === "development" && <SentryTest />}
