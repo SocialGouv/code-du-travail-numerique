@@ -224,31 +224,31 @@ const Hierarchy = () => {
               <div className={fr.cx("fr-alert", "fr-alert--info", "fr-my-3w")}>
                 <p>
                   Ce principe ne s&apos;applique pas dans{" "}
-                  <a
-                    href="#"
+                  <button
+                    className={fr.cx("fr-link")}
                     onClick={(e) => {
                       e.preventDefault();
                       modal13Matieres.open();
                     }}
                     ref={ref13Matieres}
                   >
-                    13 matières
-                  </a>{" "}
-                  où la loi reconnaît la primauté à la convention collective de
-                  branche et{" "}
-                  <a
-                    href="#"
+                    13 matières où la loi reconnaît la primauté à la convention
+                    collective de branche
+                  </button>{" "}
+                  et{" "}
+                  <button
+                    className={fr.cx("fr-link")}
                     onClick={(e) => {
                       e.preventDefault();
                       modal4Matieres.open();
                     }}
                     ref={ref4Matieres}
                   >
-                    4 matières
-                  </a>{" "}
-                  où la branche elle-même peut reconnaître sa primauté, sauf si
-                  l&apos;accord d&apos;entreprise a des garanties au moins
-                  équivalentes.
+                    4 matières où la branche elle-même peut reconnaître sa
+                    primauté
+                  </button>{" "}
+                  , sauf si l&apos;accord d&apos;entreprise a des garanties au
+                  moins équivalentes.
                 </p>
               </div>
 
