@@ -17,8 +17,8 @@ const modal4Matieres = createModal({
 });
 
 const Hierarchy = () => {
-  const ref13Matieres = React.useRef<HTMLAnchorElement | null>(null);
-  const ref4Matieres = React.useRef<HTMLAnchorElement | null>(null);
+  const ref13Matieres = React.useRef<HTMLButtonElement | null>(null);
+  const ref4Matieres = React.useRef<HTMLButtonElement | null>(null);
   useIsModalOpen(modal13Matieres, {
     onConceal: () => {
       ref13Matieres?.current?.focus();
