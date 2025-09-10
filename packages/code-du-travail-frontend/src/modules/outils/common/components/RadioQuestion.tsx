@@ -44,6 +44,9 @@ export function RadioQuestion({
     }, 0);
   };
 
+  const errorId = `${name}-error`;
+  const hintId = `${name}-help`;
+
   useEffect(() => {
     if (error && radioRefs.current[0]) {
       radioRefs.current[0].focus();
@@ -65,9 +68,7 @@ export function RadioQuestion({
       <RadioButtons
         legend={<Html as="p">{label}</Html>}
         options={questions.map((question, index) => ({
-          name,
           label: question.label,
-          value: question.value,
           id: question.id,
           nativeInputProps: {
             checked: selectedOption === question.value,
@@ -78,26 +79,33 @@ export function RadioQuestion({
             ref: (el: HTMLInputElement | null) => {
               radioRefs.current[index] = el;
             },
+            "aria-describedby": error
+              ? errorId
+              : subLabel
+                ? `${name}-help`
+                : undefined,
           },
         }))}
         state={error ? "error" : subLabel ? "info" : "default"}
         stateRelatedMessage={
           error ? (
             <span
+              id={errorId}
+              role="alert"
               dangerouslySetInnerHTML={{
                 __html: xssWrapper(error),
               }}
             />
-          ) : (
-            subLabel && (
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: xssWrapper(subLabel),
-                }}
-              />
-            )
-          )
+          ) : subLabel ? (
+            <span
+              id={hintId}
+              dangerouslySetInnerHTML={{
+                __html: xssWrapper(subLabel),
+              }}
+            />
+          ) : undefined
         }
+        aria-describedby={subLabel ? hintId : undefined}
       />
       {note && <i>{note}</i>}
     </div>
