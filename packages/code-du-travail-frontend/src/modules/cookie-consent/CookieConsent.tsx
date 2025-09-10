@@ -456,8 +456,10 @@ export const CookieConsentDSFR = () => {
             priority="tertiary"
             onClick={openModal}
             iconId="fr-icon-settings-5-line"
-            title="Gérer les cookies"
-            aria-label="Gérer les cookies"
+            nativeButtonProps={{
+              title: "Ouvrir les paramètres des cookies",
+              "aria-label": "Ouvrir les paramètres des cookies",
+            }}
           >
             <span className={fr.cx("fr-sr-only")}>Gérer les cookies</span>
           </Button>

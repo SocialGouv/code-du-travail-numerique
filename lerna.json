@@ -7,6 +7,6 @@
     }
   },
   "npmClient": "yarn",
-  "version": "4.187.1",
+  "version": "4.188.0",
   "$schema": "node_modules/lerna/schemas/lerna-schema.json"
 }

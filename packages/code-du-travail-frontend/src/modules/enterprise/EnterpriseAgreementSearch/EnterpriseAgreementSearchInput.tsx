@@ -5,7 +5,7 @@ import Button from "@codegouvfr/react-dsfr/Button";
 import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import Alert from "@codegouvfr/react-dsfr/Alert";
-import { Card } from "@codegouvfr/react-dsfr/Card";
+import { EnterpriseCard } from "./EnterpriseCard";
 import { createElement, ReactNode, useEffect, useRef, useState } from "react";
 import { css } from "@styled-system/css";
 
@@ -203,6 +203,7 @@ export const EnterpriseAgreementSearchInput = ({
           ref={selectedConventionTitleRef}
           className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}
           tabIndex={-1}
+          id={`selected-convention`}
         >
           Vous avez sélectionné la convention collective
         </h3>
@@ -242,6 +243,11 @@ export const EnterpriseAgreementSearchInput = ({
                     onBackToPersonalize();
                   }, 100);
                 }
+              }}
+              nativeButtonProps={{
+                "aria-describedby": `selected-convention`,
+                "aria-label": "Modifier la convention collective sélectionnée",
+                title: "Modifier la convention collective sélectionnée",
               }}
             >
               Modifier
@@ -438,7 +444,7 @@ export const EnterpriseAgreementSearchInput = ({
         {!!enterprises?.length &&
           !loading &&
           enterprises?.map((enterprise, index) => (
-            <Card
+            <EnterpriseCard
               key={enterprise.label + index}
               className={fr.cx("fr-mt-2w")}
               border
@@ -455,7 +461,6 @@ export const EnterpriseAgreementSearchInput = ({
                       },
                     }
                   : {
-                      href: "",
                       onClick: (ev) => {
                         ev.preventDefault();
                         setSelectedEnterprise(enterprise);
@@ -515,7 +520,7 @@ export const EnterpriseAgreementSearchInput = ({
           Votre recherche concerne les assistants maternels, employés de
           maison&nbsp;?
         </div>
-        <Card
+        <EnterpriseCard
           border
           enlargeLink
           titleAs={level === 2 ? "h3" : "h4"}
@@ -529,7 +534,6 @@ export const EnterpriseAgreementSearchInput = ({
                   },
                 }
               : {
-                  href: "",
                   onClick: (ev) => {
                     ev.preventDefault();
                     const assMatAgreement = {

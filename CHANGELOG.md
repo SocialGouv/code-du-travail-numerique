@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.188.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.187.2...v4.188.0) (2025-09-08)
+
+
+### Bug Fixes
+
+* **accessibilite:** amélioration de la gestion des `<Cards/>` dans la page contribution et des `aria-label` au seins des button (règle 7.1) ([#6788](https://github.com/SocialGouv/code-du-travail-numerique/issues/6788)) ([fff4440](https://github.com/SocialGouv/code-du-travail-numerique/commit/fff4440ca73686fbd63ff1ab5b17fa4eecd9eae8))
+
+
+### Features
+
+* disable cookie banner ([#6796](https://github.com/SocialGouv/code-du-travail-numerique/issues/6796)) ([65201ac](https://github.com/SocialGouv/code-du-travail-numerique/commit/65201ac8fbec6ddcbec9d722e18b02ed41865024))
+* **tally:** ajout du formulaire de satisfaction suite au changement en DSFR ([#6797](https://github.com/SocialGouv/code-du-travail-numerique/issues/6797)) ([57f4930](https://github.com/SocialGouv/code-du-travail-numerique/commit/57f4930884f7926e6f328a350d5546ba2ab2f0da))
+
+
+
+
+
+## [4.187.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.187.1...v4.187.2) (2025-09-04)
+
+
+### Bug Fixes
+
+* 6702 règle 89-7 ([#6741](https://github.com/SocialGouv/code-du-travail-numerique/issues/6741)) ([5d30e23](https://github.com/SocialGouv/code-du-travail-numerique/commit/5d30e23e8ac9f8d682a635e8be027c600fad6e5f))
+* **accessibilite:** amélioration de la gestion des focus (règle 12.8) ([#6772](https://github.com/SocialGouv/code-du-travail-numerique/issues/6772)) ([5348578](https://github.com/SocialGouv/code-du-travail-numerique/commit/5348578bebc4bc0f88a4833610dd76a9eff5f0ed))
+* **hydratation:** correction sur l'ensemble des simulateurs d'une date qui était généré côté client et serveur [#6789](https://github.com/SocialGouv/code-du-travail-numerique/issues/6789) ([a74e22f](https://github.com/SocialGouv/code-du-travail-numerique/commit/a74e22fb412c5373329dc2f20811f32ff52f2c3b))
+* **outils:** ne pas focus le titre sur la première étape ([#6792](https://github.com/SocialGouv/code-du-travail-numerique/issues/6792)) ([7d375eb](https://github.com/SocialGouv/code-du-travail-numerique/commit/7d375ebe24ce26b49e7b8b47b9e62ff0a7ddc567))
+
+
+
+
+
 ## [4.187.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.187.0...v4.187.1) (2025-08-28)
 
 

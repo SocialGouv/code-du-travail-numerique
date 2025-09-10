@@ -75,6 +75,7 @@ const AbsencePeriod = ({
           className={fr.cx("fr-fieldset__legend", "fr-text--bold", "fr-mb-1w")}
           ref={absenceRef as React.RefObject<HTMLLegendElement>}
           tabIndex={-1}
+          id={"absence-period-" + index}
         >
           Absence {index + 1}
         </legend>
@@ -155,6 +156,11 @@ const AbsencePeriod = ({
                   size="small"
                   iconPosition="right"
                   iconId="ri-delete-bin-line"
+                  nativeButtonProps={{
+                    title: `Supprimer la période d'absence ${index + 1}`,
+                    "aria-label": `Supprimer la période d'absence ${index + 1}`,
+                    "aria-describedby": `absence-period-${index}`,
+                  }}
                 >
                   Supprimer
                 </Button>

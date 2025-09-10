@@ -22,6 +22,7 @@ export const EnterpriseAgreementSelectionDetail = ({ enterprise }: Props) => {
         className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}
         ref={titleRef}
         tabIndex={-1}
+        id={"your-enterprise"}
       >
         Votre entreprise
       </p>
