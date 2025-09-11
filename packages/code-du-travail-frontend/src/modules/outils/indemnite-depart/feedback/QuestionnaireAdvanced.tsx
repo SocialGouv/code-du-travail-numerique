@@ -106,7 +106,7 @@ export const QuestionnaireAdvanced = forwardRef<
   };
 
   return (
-    <form ref={formRef} onSubmit={handleSubmit}>
+    <div>
       <h2
         ref={ref}
         tabIndex={-1}
@@ -117,7 +117,7 @@ export const QuestionnaireAdvanced = forwardRef<
       <p className={fr.cx("fr-text--sm", "fr-mb-3w")}>
         Veuillez répondre à au moins une des questions ci-dessous.
       </p>
-      <div>
+      <form ref={formRef} onSubmit={handleSubmit}>
         <NumberedScaleQuestionnaireItem
           title="Que pensez-vous de l'utilisation du simulateur ?"
           values={[
@@ -181,13 +181,17 @@ export const QuestionnaireAdvanced = forwardRef<
           onChange={setFeedbackText}
           id="more-input"
         />
-      </div>
-      <div
-        className={fr.cx("fr-btns-group", "fr-btns-group--inline", "fr-mt-2w")}
-      >
-        <Button type="submit">Envoyer</Button>
-      </div>
-    </form>
+        <div
+          className={fr.cx(
+            "fr-btns-group",
+            "fr-btns-group--inline",
+            "fr-mt-2w"
+          )}
+        >
+          <Button type="submit">Envoyer</Button>
+        </div>
+      </form>
+    </div>
   );
 });
 

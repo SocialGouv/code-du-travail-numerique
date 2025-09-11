@@ -45,27 +45,25 @@ export const Questionnaire = forwardRef<HTMLHeadingElement, QuestionnaireProps>(
     }, [displayError]);
 
     return (
-      <form
-        onSubmit={(e) => {
-          if (!status) {
-            setDisplayError(true);
-            e.preventDefault();
-          } else {
-            trackFeedback(EVENT_ACTION.GLOBAL, status, category);
-            onClick();
-          }
-        }}
-      >
-        <fieldset>
-          <legend>
-            <h2
-              ref={ref}
-              tabIndex={-1}
-              className={fr.cx("fr-text--lg", "fr-mb-2w", "fr-text--bold")}
-            >
-              Comment s&apos;est passée cette simulation pour vous ?
-            </h2>
-          </legend>
+      <div>
+        <h2
+          ref={ref}
+          tabIndex={-1}
+          className={fr.cx("fr-text--lg", "fr-mb-2w", "fr-text--bold")}
+        >
+          Comment s&apos;est passée cette simulation pour vous ?
+        </h2>
+        <form
+          onSubmit={(e) => {
+            if (!status) {
+              setDisplayError(true);
+              e.preventDefault();
+            } else {
+              trackFeedback(EVENT_ACTION.GLOBAL, status, category);
+              onClick();
+            }
+          }}
+        >
           <SmileyQuestionnaireItem
             badEventValue={FEEDBACK_RESULT.NOT_GOOD}
             averageEventValue={FEEDBACK_RESULT.AVERAGE}
@@ -76,23 +74,23 @@ export const Questionnaire = forwardRef<HTMLHeadingElement, QuestionnaireProps>(
             }}
             displayError={displayError}
           />
-        </fieldset>
-        <div
-          className={fr.cx(
-            "fr-btns-group",
-            "fr-btns-group--inline",
-            "fr-mt-2w"
-          )}
-        >
-          <Button
-            priority="secondary"
-            type="submit"
-            nativeButtonProps={{ "aria-disabled": displayError }}
+          <div
+            className={fr.cx(
+              "fr-btns-group",
+              "fr-btns-group--inline",
+              "fr-mt-2w"
+            )}
           >
-            Envoyer
-          </Button>
-        </div>
-      </form>
+            <Button
+              priority="secondary"
+              type="submit"
+              nativeButtonProps={{ "aria-disabled": displayError }}
+            >
+              Envoyer
+            </Button>
+          </div>
+        </form>
+      </div>
     );
   }
 );
