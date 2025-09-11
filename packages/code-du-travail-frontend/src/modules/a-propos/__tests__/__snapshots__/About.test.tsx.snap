@@ -42,10 +42,11 @@ exports[`<About /> should match snapshot 1`] = `
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=F175675A5AF37BD5745391E7C64C2FAB.tplgfr41s_3?cidTexte=JORFTEXT000035607388&idArticle=LEGIARTI000036762196&dateTexte=20191129&categorieLien=id#LEGIARTI000036762196"
           rel="noopener noreferrer"
           target="_blank"
-          title="les ordonnances sur le renforcement du dialogue social de 2017. - nouvelle fenêtre"
+          title="les ordonnances sur le renforcement du dialogue social de 2017 - nouvelle fenêtre - nouvelle fenêtre"
         >
-          les ordonnances sur le renforcement du dialogue social de 2017.
+          les ordonnances sur le renforcement du dialogue social de 2017
         </a>
+        .
       </p>
       <h3>
         À qui ce service s’adresse-t-il ?
@@ -99,7 +100,7 @@ exports[`<About /> should match snapshot 1`] = `
           href="https://travail-emploi.gouv.fr/"
           rel="noopener noreferrer"
           target="_blank"
-          title="le ministère du Travail - nouvelle fenêtre"
+          title="le ministère du Travail - nouvelle fenêtre - nouvelle fenêtre"
         >
           le ministère du Travail
         </a>
@@ -109,7 +110,7 @@ exports[`<About /> should match snapshot 1`] = `
           href="https://www.fabrique.social.gouv.fr/"
           rel="noopener noreferrer"
           target="_blank"
-          title="la fabrique des Ministères sociaux - nouvelle fenêtre"
+          title="la fabrique des Ministères sociaux - nouvelle fenêtre - nouvelle fenêtre"
         >
           la fabrique des Ministères sociaux
         </a>
@@ -120,7 +121,7 @@ exports[`<About /> should match snapshot 1`] = `
           href="https://beta.gouv.fr/"
           rel="noopener noreferrer"
           target="_blank"
-          title="le site beta.gouv - nouvelle fenêtre"
+          title="le site beta.gouv - nouvelle fenêtre - nouvelle fenêtre"
         >
           beta.gouv.fr
         </a>

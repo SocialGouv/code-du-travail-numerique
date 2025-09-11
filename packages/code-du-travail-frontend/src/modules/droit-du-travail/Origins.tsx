@@ -32,6 +32,7 @@ const Origins = () => (
                 href="https://www.ilo.org/global/lang--fr/index.htm"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="l'Organisation internationale du travail - nouvelle fenêtre"
               >
                 l&apos;Organisation internationale du travail
               </a>{" "}
@@ -52,6 +53,7 @@ const Origins = () => (
                   href="https://www.ilo.org/dyn/normlex/fr/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:C158"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="la Convention n°158 de l'OIT sur le licenciement - nouvelle fenêtre"
                 >
                   la Convention n°158 de l&apos;OIT sur le licenciement
                 </a>
@@ -69,6 +71,7 @@ const Origins = () => (
                   href="https://www.ohchr.org/fr/professionalinterest/pages/ccpr.aspx"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="Le Pacte international relatif aux droits civils et politiques de 1966 - nouvelle fenêtre"
                 >
                   Le Pacte international relatif aux droits civils et politiques
                   de 1966
@@ -78,6 +81,7 @@ const Origins = () => (
                   href="https://www.ohchr.org/FR/ProfessionalInterest/Pages/CESCR.aspx"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="le Pacte international relatif aux droits économiques, sociaux et culturels de 1966 - nouvelle fenêtre"
                 >
                   le Pacte international relatif aux droits économiques, sociaux
                   et culturels de 1966
@@ -100,6 +104,7 @@ const Origins = () => (
                 href="https://europa.eu/european-union/index_fr"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="l'Union Européenne - nouvelle fenêtre"
               >
                 l&apos;Union Européenne
               </a>{" "}
@@ -108,6 +113,7 @@ const Origins = () => (
                 href="https://www.coe.int/fr/"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="le Conseil de l'Europe - nouvelle fenêtre"
               >
                 le Conseil de l&apos;Europe
               </a>
@@ -126,6 +132,7 @@ const Origins = () => (
                   href="https://www.etuc.org/fr"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="la Confédération européenne des syndicats (CES) - nouvelle fenêtre"
                 >
                   la Confédération européenne des syndicats (CES)
                 </a>
@@ -134,6 +141,7 @@ const Origins = () => (
                   href="https://www.businesseurope.eu/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="Business Europe - nouvelle fenêtre"
                 >
                   Business Europe
                 </a>{" "}
@@ -142,6 +150,7 @@ const Origins = () => (
                   href="https://sgieurope.org/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="le Centre européen des entreprises à participation publique - nouvelle fenêtre"
                 >
                   le Centre européen des entreprises à participation publique
                 </a>{" "}
@@ -159,6 +168,7 @@ const Origins = () => (
                   href="https://www.echr.coe.int/Pages/home.aspx?p=basictexts&c=fre"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="La Convention européenne de sauvegarde des droits de l'Homme et des libertés fondamentales - nouvelle fenêtre"
                 >
                   La Convention européenne de sauvegarde des droits de
                   l&apos;Homme et des libertés fondamentales
@@ -172,6 +182,7 @@ const Origins = () => (
                   href="https://www.coe.int/en/web/european-social-charter"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="La Charte sociale européenne - nouvelle fenêtre"
                 >
                   La Charte sociale européenne
                 </a>{" "}
@@ -194,6 +205,7 @@ const Origins = () => (
                 href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="la Constitution du 4 octobre 1958 - nouvelle fenêtre"
               >
                 la Constitution du 4 octobre 1958
               </a>{" "}
@@ -208,6 +220,7 @@ const Origins = () => (
                 href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/declaration-des-droits-de-l-homme-et-du-citoyen-de-1789"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="la Déclaration des Droits de l'Homme et du Citoyen de 1789 - nouvelle fenêtre"
               >
                 la Déclaration des Droits de l&apos;Homme et du Citoyen de 1789
               </a>
@@ -216,6 +229,7 @@ const Origins = () => (
                 href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/preambule-de-la-constitution-du-27-octobre-1946"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="le Préambule de la Constitution du 27 octobre 1946 - nouvelle fenêtre"
               >
                 le Préambule de la Constitution du 27 octobre 1946
               </a>{" "}
@@ -224,6 +238,7 @@ const Origins = () => (
                 href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/charte-de-l-environnement-de-2004"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="la Charte de l'environnement de 2004 - nouvelle fenêtre"
               >
                 la Charte de l&apos;environnement de 2004
               </a>

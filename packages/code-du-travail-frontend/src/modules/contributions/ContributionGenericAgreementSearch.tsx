@@ -54,7 +54,12 @@ export function ContributionGenericAgreementSearch({
             d&apos;identifier si cette règle s&apos;applique ou non au sein de
             votre entreprise. Vous pouvez toutefois consulter la convention
             collective{" "}
-            <Link target="_blank" href={agreement.url}>
+            <Link
+              target="_blank"
+              href={agreement.url}
+              rel="noopener noreferrer"
+              title="Lien vers la convention collective - nouvelle fenêtre"
+            >
               ici
             </Link>{" "}
             dans le cas où elle s&apos;applique à votre situation.
@@ -66,7 +71,12 @@ export function ContributionGenericAgreementSearch({
             Nous vous invitons à consulter votre convention collective qui peut
             prévoir une réponse. Vous pouvez consulter votre convention
             collective{" "}
-            <Link target="_blank" href={agreement.url}>
+            <Link
+              target="_blank"
+              href={agreement.url}
+              rel="noopener noreferrer"
+              title="Lien vers la convention collective - nouvelle fenêtre"
+            >
               ici
             </Link>
             .

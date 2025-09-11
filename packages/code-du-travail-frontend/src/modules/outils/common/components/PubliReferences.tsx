@@ -20,7 +20,12 @@ export const PubliReferences: React.FC<Props> = ({
             .filter(({ article }) => article !== null)
             .map(({ article, url }, id) => (
               <li key={`${url}-${id}`} data-testid={`source-${id}`}>
-                <Link href={url} target="_blank" rel="noopener noreferrer">
+                <Link
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={`${url} - nouvelle fenêtre`}
+                >
                   {article}
                 </Link>
               </li>

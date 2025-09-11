@@ -115,6 +115,8 @@ export default function Eligible() {
           <Link
             href="/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi#lindemnite-de-licenciement-est-elle-imposable"
             target="_blank"
+            rel="noopener noreferrer"
+            title="L'indemnité de licenciement est-elle imposable - nouvelle fenêtre"
           >
             en savoir plus
           </Link>

@@ -6,7 +6,7 @@ export const LogoLink = () => {
   return (
     <>
       <Link
-        title="Code du travail numérique, Ministère du Travail"
+        title="Code du travail numérique, Ministère du Travail - nouvelle fenêtre"
         href="/"
         target="_blank"
         className={noTarget}

@@ -43,6 +43,8 @@ export const MentionsLegales = () => (
           <a
             href="https://github.com/SocialGouv/code-du-travail-numerique"
             target="_blank"
+            rel="noopener noreferrer"
+            title="Le code du logiciel - nouvelle fenêtre"
           >
             https://github.com/SocialGouv/code-du-travail-numerique
           </a>

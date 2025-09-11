@@ -40,7 +40,13 @@ export function ContributionAgreementContent({
               items={contribution.references.map(({ title, url }) => {
                 if (!url) return <></>;
                 return (
-                  <Link key={title} href={url} target="_blank">
+                  <Link
+                    key={title}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={`${title} - nouvelle fenêtre`}
+                  >
                     {title}
                   </Link>
                 );

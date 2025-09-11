@@ -72,7 +72,12 @@ export function PopupContent() {
         }}
       />
       {result && (
-        <Link className={fr.cx("fr-link")} href={result.url} target="_blank">
+        <Link
+          className={fr.cx("fr-link")}
+          href={result.url}
+          target="_blank"
+          title={`Ouvrir ${result.url} - nouvelle fenêtre`}
+        >
           {result.url}
         </Link>
       )}

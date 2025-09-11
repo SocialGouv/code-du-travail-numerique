@@ -118,6 +118,7 @@ export const BesoinPlusInformations = () => {
             target="_blank"
             data-testid="result-search-service"
             ref={setLinkRef}
+            title={`${result.url} - nouvelle fenêtre`}
           >
             {result.url}
           </Link>

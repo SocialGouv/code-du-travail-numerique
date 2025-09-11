@@ -30,6 +30,7 @@ export const FooterBottom = () => (
           className={fr.cx("fr-footer__bottom-link")}
           target="_blank"
           rel="noopener noreferrer"
+          title="Contribuer sur Github - nouvelle fenêtre"
         >
           Contribuer sur Github
         </Link>
@@ -48,6 +49,7 @@ export const FooterBottom = () => (
           href="https://github.com/etalab/licence-ouverte/blob/master/LO.md"
           target="_blank"
           rel="noopener noreferrer"
+          title="licence etalab-2.0 - nouvelle fenêtre"
         >
           licence etalab-2.0
         </Link>

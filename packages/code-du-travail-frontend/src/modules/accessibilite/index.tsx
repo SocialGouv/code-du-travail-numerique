@@ -124,6 +124,7 @@ export const Accessibilite = () => {
             href="https://validator.w3.org"
             rel="noopener noreferrer"
             target="_blank"
+            title="Lien vers le validateur w3c - nouvelle fenêtre"
           >
             Validateur w3c
           </Link>
@@ -247,6 +248,7 @@ export const Accessibilite = () => {
             href="https://formulaire.defenseurdesdroits.fr/code/afficher.php?ETAPE=accueil_2016"
             target="_blank"
             rel="noopener noreferrer"
+            title="Écrire un message au Défenseur des droits - nouvelle fenêtre"
           >
             Écrire un message au Défenseur des droits
           </Link>
@@ -256,6 +258,7 @@ export const Accessibilite = () => {
             href="https://www.defenseurdesdroits.fr/carte-des-delegues"
             target="_blank"
             rel="noopener noreferrer"
+            title="Contacter le délégué du Défenseur des droits dans votre région - nouvelle fenêtre"
           >
             Contacter le délégué du Défenseur des droits dans votre région
           </Link>
@@ -277,6 +280,7 @@ export const Accessibilite = () => {
           href="https://accessibilite.numerique.gouv.fr/"
           target="_blank"
           rel="noopener noreferrer"
+          title="accessibilite.numerique.gouv.fr - nouvelle fenêtre"
         >
           https://accessibilite.numerique.gouv.fr
         </Link>

@@ -23,7 +23,12 @@ const ReferenceJuridiques: React.FC<ReferenceJuridiquesProps> = ({
       <ul>
         {references.map((ref, index) => (
           <li key={index}>
-            <a href={ref.url} target="_blank" rel="noopener noreferrer">
+            <a
+              href={ref.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={`${ref.url} - nouvelle fenêtre`}
+            >
               {ref.article}
             </a>
           </li>
