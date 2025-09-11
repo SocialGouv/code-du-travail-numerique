@@ -11,6 +11,10 @@ const StepIntroduction = () => (
       Les montants des salaires perçus pourraient être utiles pour réaliser
       cette simulation.
     </p>
+    <p>
+      La saisie des champs est obligatoire sur l&apos;ensemble des étapes sauf
+      mention contraire.
+    </p>
   </>
 );
 
