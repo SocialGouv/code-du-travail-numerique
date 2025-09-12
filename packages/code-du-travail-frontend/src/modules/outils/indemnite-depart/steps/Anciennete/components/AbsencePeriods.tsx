@@ -1,6 +1,7 @@
 import { Absence, Motif } from "@socialgouv/modeles-social";
 import React, { useEffect, useRef, useMemo } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
+import { Alert } from "@codegouvfr/react-dsfr/Alert";
 
 import AbsencePeriod from "./AbsencePeriod";
 import type { AncienneteAbsenceStoreError } from "../store";
@@ -54,7 +55,7 @@ const AbsencePeriods = ({
   const [localAbsences, setLocalAbsences] = React.useState<AbsenceWithKey[]>(
     mapAbsences(absences, motifs[0])
   );
-  const errorMessageId = "absence-total-error";
+  const errorMessageId = "absences-error";
   const statusMessageRef = useRef<HTMLDivElement>(null);
 
   const addButtonRef = useRef<HTMLButtonElement>(null);
@@ -155,12 +156,14 @@ const AbsencePeriods = ({
     onChange(newAbsences);
   };
 
+  const describedBy = error?.global ? "absences-error" : undefined;
+
   return (
-    <div>
+    <fieldset aria-describedby={describedBy}>
       <div aria-live="polite" className="sr-only" ref={statusMessageRef} />
-      <label className={fr.cx("fr-text--bold", "fr-text--lg")}>
+      <legend className={fr.cx("fr-text--bold", "fr-text--lg")}>
         Quels sont le motif et la durée de ces absences prolongées&nbsp;?
-      </label>
+      </legend>
       <p className={fr.cx("fr-mt-2w")}>
         Veuillez créer une ligne différente pour chaque période d&apos;absence
         de plus d&apos;un mois même si vous avez été absent plusieurs fois pour
@@ -233,7 +236,7 @@ const AbsencePeriods = ({
           />
         </div>
       )}
-    </div>
+    </fieldset>
   );
 };
 

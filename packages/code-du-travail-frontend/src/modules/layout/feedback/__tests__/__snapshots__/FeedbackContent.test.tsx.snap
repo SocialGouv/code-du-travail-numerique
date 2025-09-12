@@ -111,6 +111,7 @@ exports[`<FeedbackContent /> should match snapshot for negative 1`] = `
       Faire une suggestion pour améliorer cette page
     </label>
     <textarea
+      aria-describedby="suggestion-help"
       class="fr-input"
       id="input-:r4:"
     />
@@ -125,6 +126,7 @@ exports[`<FeedbackContent /> should match snapshot for negative 1`] = `
     aria-live="polite"
     class="fr-info-text fr-mt-0 fr-mb-3w"
     data-testid="characterInfo"
+    id="suggestion-help"
     role="status"
   >
     500 caractères restants
@@ -157,6 +159,7 @@ exports[`<FeedbackContent /> should match snapshot for positive 1`] = `
       Faire une suggestion pour améliorer cette page
     </label>
     <textarea
+      aria-describedby="suggestion-help"
       class="fr-input"
       id="input-:r0:"
     />
@@ -171,6 +174,7 @@ exports[`<FeedbackContent /> should match snapshot for positive 1`] = `
     aria-live="polite"
     class="fr-info-text fr-mt-0 fr-mb-3w"
     data-testid="characterInfo"
+    id="suggestion-help"
     role="status"
   >
     500 caractères restants

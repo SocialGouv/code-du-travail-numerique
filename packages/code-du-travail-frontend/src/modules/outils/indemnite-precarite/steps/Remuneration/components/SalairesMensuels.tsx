@@ -106,7 +106,8 @@ export const SalairesMensuels: React.FC<Props> = ({
 
       <p className={fr.cx("fr-text--light", "fr-text--sm")}>
         Majorations, indemnités, primes et accessoires compris sauf les
-        remboursements de frais et l&apos;indemnité de congés payés.
+        remboursements de frais et l&apos;indemnité compensatrice de congés
+        payés.
       </p>
     </div>
   );

@@ -163,8 +163,8 @@ describe("AbsencePeriods Component", () => {
       const durationInput = screen.getByLabelText("Durée (en mois)");
       expect(durationInput).toHaveAttribute(
         "aria-describedby",
-        "absence-total-error"
-      );
+        "absences-error");
+
     });
 
     test("Sets focus on the duration field of the first absence when global error is present", () => {
