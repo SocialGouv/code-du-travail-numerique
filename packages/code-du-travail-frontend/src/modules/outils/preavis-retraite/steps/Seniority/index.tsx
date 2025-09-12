@@ -48,7 +48,6 @@ const StepSeniority = () => {
         selectedOption={moreThanXYears}
         onChangeSelectedOption={onChangeMoreThanXYears}
         error={errorMoreThanXYears}
-        autoFocus
         subLabel="L'ancienneté du salarié est habituellement mentionnée sur le bulletin de salaire."
       />
       {moreThanXYears === "non" && (

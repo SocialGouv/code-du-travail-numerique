@@ -7,6 +7,7 @@ import AbsencePeriod from "./AbsencePeriod";
 import type { AncienneteAbsenceStoreError } from "../store";
 import { fr } from "@codegouvfr/react-dsfr";
 import Html from "src/modules/common/Html";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 type Props = {
   onChange: (absences: Absence[]) => void;
@@ -225,13 +226,15 @@ const AbsencePeriods = ({
       </Button>
 
       {error?.global && (
-        <Alert
-          id={errorMessageId}
-          description={error.global}
-          severity="error"
-          className="fr-mt-2w"
-          small
-        />
+        <div className={fr.cx("fr-mt-2w")}>
+          <AccessibleAlert
+            id={errorMessageId}
+            title="Attention"
+            description={error.global}
+            severity="error"
+            autoFocus
+          />
+        </div>
       )}
     </fieldset>
   );

@@ -133,7 +133,6 @@ const AbsencePeriod = ({
               error={absenceDateError}
               id={`${index}.dateAbsence`}
               dataTestId={`absence-date-${index}`}
-              autoFocus={false}
               ariaLive="off"
             />
           </div>

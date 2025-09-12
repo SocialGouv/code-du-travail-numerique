@@ -3,7 +3,6 @@ import React from "react";
 
 import { FeedbackContent } from "../FeedbackContent";
 import { ui } from "./ui";
-import { UserAction } from "src/modules/outils/common/utils/UserAction";
 
 describe("<FeedbackContent />", () => {
   it("should match snapshot for positive", () => {
@@ -22,13 +21,7 @@ describe("<FeedbackContent />", () => {
 
   it("should warn politely on certain threshold", () => {
     render(<FeedbackContent onSubmit={jest.fn} type="positive" />);
-    const userAction = new UserAction();
     expect(ui.characterInfo.get()).toHaveAttribute("aria-atomic");
-    userAction.setInput(ui.input.get(), "a".repeat(99));
-    expect(ui.characterInfo.get()).toHaveAttribute("aria-live", "off");
-    userAction.setInput(ui.input.get(), "a".repeat(100));
     expect(ui.characterInfo.get()).toHaveAttribute("aria-live", "polite");
-    userAction.setInput(ui.input.get(), "a".repeat(101));
-    expect(ui.characterInfo.get()).toHaveAttribute("aria-live", "off");
   });
 });

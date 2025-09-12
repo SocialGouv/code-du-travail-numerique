@@ -153,12 +153,9 @@ export const FeedbackContent = (props: Props) => {
           "fr-mt-0",
           "fr-mb-3w"
         )}
-        aria-live={
-          charactersCountThresholds.indexOf(remainingCharacters) !== -1
-            ? "polite"
-            : "off"
-        }
-        aria-atomic
+        aria-live="polite"
+        aria-atomic="true"
+        role="status"
         data-testid="characterInfo"
       >
         {`${remainingCharacters} caractère${

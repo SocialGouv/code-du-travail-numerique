@@ -5,6 +5,7 @@ import { Button } from "@codegouvfr/react-dsfr/Button";
 import { SalaryEntry } from "../store/types";
 import { defaultInputStyle } from "src/modules/outils/common/styles/input";
 import { css } from "@styled-system/css";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 interface Props {
   salaires: SalaryEntry[];
@@ -47,8 +48,13 @@ export const SalairesMensuels: React.FC<Props> = ({
       </h4>
 
       {error && (
-        <div className={fr.cx("fr-alert", "fr-alert--error", "fr-mb-2w")}>
-          <p>{error}</p>
+        <div className={fr.cx("fr-mb-2w")}>
+          <AccessibleAlert
+            title="Attention"
+            description={error}
+            severity="error"
+            autoFocus
+          />
         </div>
       )}
 

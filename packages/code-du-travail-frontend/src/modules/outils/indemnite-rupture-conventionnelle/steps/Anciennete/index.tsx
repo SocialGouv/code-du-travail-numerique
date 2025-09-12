@@ -5,6 +5,7 @@ import {
   RadioQuestion,
   TextQuestion,
 } from "src/modules/outils/common/components";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 import { getMotifExampleMessage } from "src/modules/outils/indemnite-depart/agreements";
 import { AbsencePeriods } from "src/modules/outils/indemnite-depart/steps/Anciennete";
 import { informationToSituation } from "src/modules/outils/indemnite-depart/steps/Informations/components/utils";
@@ -120,11 +121,14 @@ const StepAnciennete = () => {
         />
       )}
       {errorPublicodes && (
-        <Alert
-          title={errorPublicodes}
-          severity="error"
-          className={fr.cx("fr-mt-2w")}
-        />
+        <div className={fr.cx("fr-mt-2w")}>
+          <AccessibleAlert
+            title="Erreur"
+            description={errorPublicodes}
+            severity="error"
+            autoFocus
+          />
+        </div>
       )}
     </>
   );

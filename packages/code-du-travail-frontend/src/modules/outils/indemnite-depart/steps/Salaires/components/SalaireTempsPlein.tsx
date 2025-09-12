@@ -6,6 +6,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { preventScroll } from "src/modules/outils/common/utils/input";
 import { defaultInputStyle } from "src/modules/outils/common/styles/input";
 import HighlightSalary from "./HighlightSalary";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 type Props = {
   title: string;
@@ -217,12 +218,14 @@ export const SalaireTempsPlein = ({
         </div>
       </div>
       {error && (
-        <Alert
-          severity="error"
-          title="Erreur"
-          description={error}
-          className={fr.cx("fr-mt-2w")}
-        />
+        <div className={fr.cx("fr-mt-2w")}>
+          <AccessibleAlert
+            title="Attention"
+            description={error}
+            severity="error"
+            autoFocus
+          />
+        </div>
       )}
       {note && <p className={fr.cx("fr-text--sm", "fr-mt-2w")}>{note}</p>}
     </div>
