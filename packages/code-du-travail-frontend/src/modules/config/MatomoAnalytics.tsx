@@ -1,17 +1,45 @@
 "use client";
 
 import { usePathname, useSearchParams } from "next/navigation";
-import { Suspense, useEffect, useState } from "react";
+import {
+  createContext,
+  PropsWithChildren,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL, WIDGETS_PATH } from "../../config";
 import { getStoredConsent } from "../utils/consent";
 import init, { push } from "@socialgouv/matomo-next";
 import { getSourceUrlFromPath } from "../utils/url";
+import {
+  ABTesting,
+  ABTestingConfig,
+  ABTestVariant,
+} from "./matomo/ABTestingConstant";
 
-function MatomoComponent() {
+export type ABTest = { abTest: ABTesting; variant: ABTestVariant };
+
+type ABTestingContextType = {
+  abTest: ABTest;
+};
+
+const ABTestingContext = createContext<ABTestingContextType>({
+  abTest: {
+    abTest: ABTesting.SEARCH,
+    variant: ABTestVariant.NATURAL,
+  },
+});
+
+export const MatomoProvider = ({ children }: PropsWithChildren) => {
   const searchParams = useSearchParams();
   const searchParamsString = searchParams?.toString();
   const path = usePathname();
   const [previousPath, setPreviousPath] = useState<string | null>(null);
+  const [abTest, setABTest] = useState<ABTest>({
+    abTest: ABTesting.SEARCH,
+    variant: ABTestVariant.NATURAL,
+  });
 
   useEffect(() => {
     init({
@@ -74,6 +102,9 @@ function MatomoComponent() {
 
   useEffect(() => {
     if (path && !isExcludedUrl(path, [WIDGETS_PATH])) {
+      // enable A/B Testing
+      initABTesting();
+
       let [pathname] = path.split("?");
       pathname = pathname.replace(/#.*/, "");
 
@@ -95,14 +126,25 @@ function MatomoComponent() {
     }
   }, [path, searchParamsString]);
 
-  return null;
-}
+  const initABTesting = () => {
+    if (!window._paq) return;
+    window._paq.push([
+      "AbTesting::create",
+      ABTestingConfig((test: ABTesting, variant: ABTestVariant) => {
+        setABTest({
+          abTest: test,
+          variant,
+        });
+      }),
+    ]);
+  };
 
-export const MatomoAnalytics = () => (
-  <Suspense fallback={null}>
-    <MatomoComponent />
-  </Suspense>
-);
+  return (
+    <ABTestingContext.Provider value={{ abTest }}>
+      {children}
+    </ABTestingContext.Provider>
+  );
+};
 
 const startsWith = (str: string, needle: string) => {
   return str.substring(0, needle.length) === needle;
@@ -117,3 +159,5 @@ const isExcludedUrl = (url: string, patterns: RegExp[]): boolean => {
   });
   return excluded;
 };
+
+export const useABTesting = () => useContext(ABTestingContext);

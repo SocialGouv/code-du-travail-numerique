@@ -22,6 +22,7 @@ interface Window {
         | string[]
         | number
         | string
+        | Record<string, unknown>
         | null
         | undefined
       )[][]
@@ -36,6 +37,7 @@ declare namespace NodeJS {
           | string[]
           | number
           | string
+          | Record<string, unknown>
           | null
           | undefined
         )[][]
