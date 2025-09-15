@@ -20,6 +20,10 @@ const StepIntroduction = () => (
       </Link>
       .
     </p>
+    <p>
+      La saisie des champs est obligatoire sur l&apos;ensemble des étapes sauf
+      mention contraire.
+    </p>
   </>
 );
 
