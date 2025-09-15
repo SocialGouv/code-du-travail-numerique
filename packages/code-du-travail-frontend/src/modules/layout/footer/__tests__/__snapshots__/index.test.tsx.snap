@@ -294,7 +294,7 @@ exports[`<Footer /> should match snapshot 1`] = `
                   href="https://travail-emploi.gouv.fr"
                   rel="noopener noreferrer"
                   target="_blank"
-                  title="travail-emploi.gouv.fr - nouvelle fenêtre - nouvelle fenêtre"
+                  title="travail-emploi.gouv.fr - nouvelle fenêtre"
                 >
                   travail-emploi.gouv.fr
                 </a>
@@ -307,7 +307,7 @@ exports[`<Footer /> should match snapshot 1`] = `
                   href="https://info.gouv.fr"
                   rel="noopener noreferrer"
                   target="_blank"
-                  title="info.gouv.fr - nouvelle fenêtre - nouvelle fenêtre"
+                  title="info.gouv.fr - nouvelle fenêtre"
                 >
                   info.gouv.fr
                 </a>
@@ -320,7 +320,7 @@ exports[`<Footer /> should match snapshot 1`] = `
                   href="https://service-public.fr"
                   rel="noopener noreferrer"
                   target="_blank"
-                  title="service-public.fr - nouvelle fenêtre - nouvelle fenêtre"
+                  title="service-public.fr - nouvelle fenêtre"
                 >
                   service-public.fr
                 </a>
@@ -333,7 +333,7 @@ exports[`<Footer /> should match snapshot 1`] = `
                   href="https://legifrance.gouv.fr"
                   rel="noopener noreferrer"
                   target="_blank"
-                  title="legifrance.gouv.fr - nouvelle fenêtre - nouvelle fenêtre"
+                  title="legifrance.gouv.fr - nouvelle fenêtre"
                 >
                   legifrance.gouv.fr
                 </a>
@@ -346,7 +346,7 @@ exports[`<Footer /> should match snapshot 1`] = `
                   href="https://data.gouv.fr"
                   rel="noopener noreferrer"
                   target="_blank"
-                  title="data.gouv.fr - nouvelle fenêtre - nouvelle fenêtre"
+                  title="data.gouv.fr - nouvelle fenêtre"
                 >
                   data.gouv.fr
                 </a>
@@ -398,7 +398,7 @@ exports[`<Footer /> should match snapshot 1`] = `
                 href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vvX.Y.Z"
                 rel="noopener noreferrer"
                 target="_blank"
-                title="Contribuer sur Github - nouvelle fenêtre - nouvelle fenêtre"
+                title="Contribuer sur Github - nouvelle fenêtre"
               >
                 Contribuer sur Github
               </a>
@@ -424,7 +424,7 @@ exports[`<Footer /> should match snapshot 1`] = `
                 href="https://github.com/etalab/licence-ouverte/blob/master/LO.md"
                 rel="noopener noreferrer"
                 target="_blank"
-                title="licence etalab-2.0 - nouvelle fenêtre - nouvelle fenêtre"
+                title="licence etalab-2.0 - nouvelle fenêtre"
               >
                 licence etalab-2.0
               </a>

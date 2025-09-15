@@ -153,7 +153,7 @@ exports[`<Accessibilite /> should match snapshot 1`] = `
             href="https://validator.w3.org"
             rel="noopener noreferrer"
             target="_blank"
-            title="Lien vers le validateur w3c - nouvelle fenêtre - nouvelle fenêtre"
+            title="Lien vers le validateur w3c - nouvelle fenêtre"
           >
             Validateur w3c
           </a>
@@ -331,7 +331,7 @@ exports[`<Accessibilite /> should match snapshot 1`] = `
             href="https://formulaire.defenseurdesdroits.fr/code/afficher.php?ETAPE=accueil_2016"
             rel="noopener noreferrer"
             target="_blank"
-            title="Écrire un message au Défenseur des droits - nouvelle fenêtre - nouvelle fenêtre"
+            title="Écrire un message au Défenseur des droits - nouvelle fenêtre"
           >
             Écrire un message au Défenseur des droits
           </a>
@@ -341,7 +341,7 @@ exports[`<Accessibilite /> should match snapshot 1`] = `
             href="https://www.defenseurdesdroits.fr/carte-des-delegues"
             rel="noopener noreferrer"
             target="_blank"
-            title="Contacter le délégué du Défenseur des droits dans votre région - nouvelle fenêtre - nouvelle fenêtre"
+            title="Contacter le délégué du Défenseur des droits dans votre région - nouvelle fenêtre"
           >
             Contacter le délégué du Défenseur des droits dans votre région
           </a>
@@ -366,7 +366,7 @@ exports[`<Accessibilite /> should match snapshot 1`] = `
           href="https://accessibilite.numerique.gouv.fr/"
           rel="noopener noreferrer"
           target="_blank"
-          title="accessibilite.numerique.gouv.fr - nouvelle fenêtre - nouvelle fenêtre"
+          title="accessibilite.numerique.gouv.fr - nouvelle fenêtre"
         >
           https://accessibilite.numerique.gouv.fr
         </a>
