@@ -10,6 +10,10 @@ const StepIntro = () => (
       Des informations disponibles sur le bulletin de salaire pourraient être
       utiles pour réaliser cette simulation.
     </p>
+    <p>
+      La saisie des champs est obligatoire sur l&apos;ensemble des étapes sauf
+      mention contraire.
+    </p>
   </>
 );
 

@@ -128,9 +128,11 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       // validation de l'erreur quand on a des périodes d'absence mais que l'on a pas saisi le motif de l'absence
       userAction.click(ui.seniority.hasAbsence.oui.get());
 
-      expect(rendering.getByRole("alert").querySelector("p")).toHaveTextContent(
-        "Vous devez renseigner à minima une absence"
-      );
+      expect(
+        screen.getByText("Vous devez renseigner à minima une absence", {
+          selector: ".sr-only",
+        })
+      ).toBeInTheDocument();
       expect(
         rendering.queryByText("Date de début de l'absence")
       ).toBeInTheDocument();
