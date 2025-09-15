@@ -93,7 +93,7 @@ export const Share = ({ title, metaDescription }: Props) => {
           </Link>
         </li>
         <li>
-          <a
+          <Link
             className={`${fr.cx(
               "fr-btn",
               "fr-btn--tertiary",
@@ -109,7 +109,7 @@ export const Share = ({ title, metaDescription }: Props) => {
             }}
           >
             Courriel
-          </a>
+          </Link>
         </li>
         <li>
           <Link
