@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { Alert } from "@codegouvfr/react-dsfr/Alert";
-import Link from "next/link";
 import { RadioQuestion, SelectQuestion } from "../../../common/components";
 import {
   PreavisLicenciementContext,
   usePreavisLicenciementStore,
 } from "../store";
 import { Seniority } from "./store/types";
+import Link from "src/modules/common/Link";
 
 const StepStatus = () => {
   const store = useContext(PreavisLicenciementContext);

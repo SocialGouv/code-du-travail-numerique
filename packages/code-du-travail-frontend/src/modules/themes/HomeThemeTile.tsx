@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "../common/Link";
 
 type Props = {
   title: string;
@@ -9,7 +10,7 @@ type Props = {
 export const HomeThemeTile = (props: Props) => (
   <div className="fr-tile fr-enlarge-link fr-tile--no-icon fr-tile--sm">
     <p className="fr-tile__title">
-      <a href={props.link}>{props.title}</a>
+      <Link href={props.link}>{props.title}</Link>
     </p>
 
     <div className="fr-tile__img">

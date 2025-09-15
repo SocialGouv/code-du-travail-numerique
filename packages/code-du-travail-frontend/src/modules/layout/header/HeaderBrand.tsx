@@ -1,6 +1,7 @@
 import { css } from "@styled-system/css";
 import { fr } from "@codegouvfr/react-dsfr";
 import Image from "next/image";
+import Link from "src/modules/common/Link";
 
 export const HeaderBrand = () => {
   return (
@@ -15,7 +16,7 @@ export const HeaderBrand = () => {
           <p className={fr.cx("fr-sr-only")}>Liberté égalité fraternité</p>
         </div>
         <div className={fr.cx("fr-header__operator")}>
-          <a href="/">
+          <Link href="/">
             <Image
               className={`${fr.cx("fr-responsive-img")} ${Logo}`}
               src="/static/assets/img/logo.svg"
@@ -24,7 +25,7 @@ export const HeaderBrand = () => {
               height={50}
               priority
             />
-          </a>
+          </Link>
         </div>
         <div className={fr.cx("fr-header__navbar")}>
           <button

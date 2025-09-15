@@ -6,8 +6,8 @@ import { css } from "@styled-system/css";
 import { useSearchTracking, MatomoWidgetEvent } from "./tracking";
 import Image from "next/image";
 import Button from "@codegouvfr/react-dsfr/Button";
-import Link from "next/link";
 import { useIframeResizer } from "../utils/useIframeResizer";
+import Link from "../common/Link";
 
 export const SearchWidgetDisplay: React.FC = () => {
   const { emitSearchEvent, emitWidgetEvent } = useSearchTracking();
@@ -38,7 +38,7 @@ export const SearchWidgetDisplay: React.FC = () => {
     <div className={`${containerStyles} ${fr.cx("fr-p-2w")}`}>
       <div className={fr.cx("fr-mb-3w")}>
         <Link
-          title="Le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail. - nouvelle fenêtre"
+          title="Le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail."
           href="/"
           target="_blank"
           className={logoLinkStyles}

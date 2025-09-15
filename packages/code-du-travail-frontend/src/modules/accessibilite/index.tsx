@@ -124,7 +124,7 @@ export const Accessibilite = () => {
             href="https://validator.w3.org"
             rel="noopener noreferrer"
             target="_blank"
-            title="Lien vers le validateur w3c - nouvelle fenêtre"
+            title="Lien vers le validateur w3c"
           >
             Validateur w3c
           </Link>
@@ -226,12 +226,12 @@ export const Accessibilite = () => {
       </p>
       <p>
         E-mail&nbsp;:{" "}
-        <a
+        <Link
           href="mailto:codedutravailnumérique@travail.gouv.fr"
           title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
         >
           codedutravailnumerique@travail.gouv.fr
-        </a>
+        </Link>
       </p>
       <p>Nous essayons de répondre le plus rapidement possible.</p>
       <h2>Voies de recours</h2>
@@ -248,7 +248,7 @@ export const Accessibilite = () => {
             href="https://formulaire.defenseurdesdroits.fr/code/afficher.php?ETAPE=accueil_2016"
             target="_blank"
             rel="noopener noreferrer"
-            title="Écrire un message au Défenseur des droits - nouvelle fenêtre"
+            title="Écrire un message au Défenseur des droits"
           >
             Écrire un message au Défenseur des droits
           </Link>
@@ -258,7 +258,7 @@ export const Accessibilite = () => {
             href="https://www.defenseurdesdroits.fr/carte-des-delegues"
             target="_blank"
             rel="noopener noreferrer"
-            title="Contacter le délégué du Défenseur des droits dans votre région - nouvelle fenêtre"
+            title="Contacter le délégué du Défenseur des droits dans votre région"
           >
             Contacter le délégué du Défenseur des droits dans votre région
           </Link>
@@ -280,7 +280,7 @@ export const Accessibilite = () => {
           href="https://accessibilite.numerique.gouv.fr/"
           target="_blank"
           rel="noopener noreferrer"
-          title="accessibilite.numerique.gouv.fr - nouvelle fenêtre"
+          title="accessibilite.numerique.gouv.fr"
         >
           https://accessibilite.numerique.gouv.fr
         </Link>

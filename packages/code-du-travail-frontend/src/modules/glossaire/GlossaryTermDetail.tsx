@@ -1,10 +1,10 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import Link from "next/link";
 import React from "react";
 import { Container } from "../layout/Container";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { ContainerWithBreadcrumbs } from "../layout/ContainerWithBreadcrumbs";
 import { List } from "../common/List";
+import Link from "../common/Link";
 
 type GlossaryTermDetailProps = {
   term: string;
@@ -46,7 +46,7 @@ export const GlossaryTermDetail = ({
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    title={`${url} - nouvelle fenêtre`}
+                    title={url}
                   >
                     {url}
                   </Link>

@@ -12,17 +12,20 @@ export const FooterBottom = () => (
         </Link>
       </li>
       <li className={fr.cx("fr-footer__bottom-item")}>
-        <a href="/mentions-legales" className={fr.cx("fr-footer__bottom-link")}>
+        <Link
+          href="/mentions-legales"
+          className={fr.cx("fr-footer__bottom-link")}
+        >
           Mentions légales
-        </a>
+        </Link>
       </li>
       <li className={fr.cx("fr-footer__bottom-item")}>
-        <a
+        <Link
           href="/politique-confidentialite"
           className={fr.cx("fr-footer__bottom-link")}
         >
           Politique de confidentialité
-        </a>
+        </Link>
       </li>
       <li className={fr.cx("fr-footer__bottom-item")}>
         <Link
@@ -30,15 +33,15 @@ export const FooterBottom = () => (
           className={fr.cx("fr-footer__bottom-link")}
           target="_blank"
           rel="noopener noreferrer"
-          title="Contribuer sur Github - nouvelle fenêtre"
+          title="Contribuer sur Github"
         >
           Contribuer sur Github
         </Link>
       </li>
       <li className={fr.cx("fr-footer__bottom-item")}>
-        <a href="/plan-du-site" className={fr.cx("fr-footer__bottom-link")}>
+        <Link href="/plan-du-site" className={fr.cx("fr-footer__bottom-link")}>
           Plan du site
-        </a>
+        </Link>
       </li>
     </ul>
     <div className={fr.cx("fr-footer__bottom-copy")}>
@@ -49,7 +52,7 @@ export const FooterBottom = () => (
           href="https://github.com/etalab/licence-ouverte/blob/master/LO.md"
           target="_blank"
           rel="noopener noreferrer"
-          title="licence etalab-2.0 - nouvelle fenêtre"
+          title="licence etalab-2.0"
         >
           licence etalab-2.0
         </Link>

@@ -63,7 +63,7 @@ const Eligible = () => {
             href="/fiche-service-public/comment-calculer-lindemnite-specifique-de-rupture-conventionnelle#lindemnite-de-rupture-conventionnelle-est-elle-imposable"
             target="_blank"
             rel="noopener noreferrer"
-            title="L'indemnité de rupture conventionnelle est-elle imposable - nouvelle fenêtre"
+            title="L'indemnité de rupture conventionnelle est-elle imposable ?"
           >
             en savoir plus
           </Link>

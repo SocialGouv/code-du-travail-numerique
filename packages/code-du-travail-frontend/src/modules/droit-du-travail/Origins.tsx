@@ -2,6 +2,7 @@ import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
 import ExpandableCard from "./ExpandableCard";
+import Link from "../common/Link";
 
 const Origins = () => (
   <div className={container}>
@@ -28,14 +29,14 @@ const Origins = () => (
           >
             <p>
               Le droit du travail en France est influencé par les textes de{" "}
-              <a
+              <Link
                 href="https://www.ilo.org/global/lang--fr/index.htm"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="l'Organisation internationale du travail - nouvelle fenêtre"
+                title="l'Organisation internationale du travail"
               >
                 l&apos;Organisation internationale du travail
-              </a>{" "}
+              </Link>{" "}
               (OIT), agence des Nations Unies pour le monde du travail.
               L&apos;OIT rédige des recommandations et des conventions.
             </p>
@@ -49,14 +50,14 @@ const Origins = () => (
             <p>
               <strong>
                 Exemple de convention&nbsp;:{" "}
-                <a
+                <Link
                   href="https://www.ilo.org/dyn/normlex/fr/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:C158"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="la Convention n°158 de l'OIT sur le licenciement - nouvelle fenêtre"
+                  title="la Convention n°158 de l'OIT sur le licenciement"
                 >
                   la Convention n°158 de l&apos;OIT sur le licenciement
-                </a>
+                </Link>
                 .
               </strong>
             </p>
@@ -67,25 +68,25 @@ const Origins = () => (
             <p>
               <strong>
                 Exemples&nbsp;:{" "}
-                <a
+                <Link
                   href="https://www.ohchr.org/fr/professionalinterest/pages/ccpr.aspx"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="Le Pacte international relatif aux droits civils et politiques de 1966 - nouvelle fenêtre"
+                  title="Le Pacte international relatif aux droits civils et politiques de 1966"
                 >
                   Le Pacte international relatif aux droits civils et politiques
                   de 1966
-                </a>{" "}
+                </Link>{" "}
                 et{" "}
-                <a
+                <Link
                   href="https://www.ohchr.org/FR/ProfessionalInterest/Pages/CESCR.aspx"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="le Pacte international relatif aux droits économiques, sociaux et culturels de 1966 - nouvelle fenêtre"
+                  title="le Pacte international relatif aux droits économiques, sociaux et culturels de 1966"
                 >
                   le Pacte international relatif aux droits économiques, sociaux
                   et culturels de 1966
-                </a>
+                </Link>
                 .
               </strong>
             </p>
@@ -100,23 +101,23 @@ const Origins = () => (
           >
             <p>
               Le droit du travail français est influencé par{" "}
-              <a
+              <Link
                 href="https://europa.eu/european-union/index_fr"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="l'Union Européenne - nouvelle fenêtre"
+                title="l'Union Européenne"
               >
                 l&apos;Union Européenne
-              </a>{" "}
+              </Link>{" "}
               et par{" "}
-              <a
+              <Link
                 href="https://www.coe.int/fr/"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="le Conseil de l'Europe - nouvelle fenêtre"
+                title="le Conseil de l'Europe"
               >
                 le Conseil de l&apos;Europe
-              </a>
+              </Link>
               .
             </p>
             <p>
@@ -128,32 +129,32 @@ const Origins = () => (
               <li>des directives</li>
               <li>
                 des accords collectifs européens négociés par{" "}
-                <a
+                <Link
                   href="https://www.etuc.org/fr"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="la Confédération européenne des syndicats (CES) - nouvelle fenêtre"
+                  title="la Confédération européenne des syndicats (CES)"
                 >
                   la Confédération européenne des syndicats (CES)
-                </a>
+                </Link>
                 ,{" "}
-                <a
+                <Link
                   href="https://www.businesseurope.eu/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="Business Europe - nouvelle fenêtre"
+                  title="Business Europe"
                 >
                   Business Europe
-                </a>{" "}
+                </Link>{" "}
                 et{" "}
-                <a
+                <Link
                   href="https://sgieurope.org/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="le Centre européen des entreprises à participation publique - nouvelle fenêtre"
+                  title="le Centre européen des entreprises à participation publique"
                 >
                   le Centre européen des entreprises à participation publique
-                </a>{" "}
+                </Link>{" "}
                 (CEEP)
               </li>
             </ul>
@@ -164,28 +165,28 @@ const Origins = () => (
             </p>
             <ul>
               <li>
-                <a
+                <Link
                   href="https://www.echr.coe.int/Pages/home.aspx?p=basictexts&c=fre"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="La Convention européenne de sauvegarde des droits de l'Homme et des libertés fondamentales - nouvelle fenêtre"
+                  title="La Convention européenne de sauvegarde des droits de l'Homme et des libertés fondamentales"
                 >
                   La Convention européenne de sauvegarde des droits de
                   l&apos;Homme et des libertés fondamentales
-                </a>{" "}
+                </Link>{" "}
                 qui évoque des droits civils et politiques comme par exemple la
                 liberté syndicale, l&apos;interdiction du travail forcé, des
                 discriminations, le respect de la vie privée et familiale.
               </li>
               <li>
-                <a
+                <Link
                   href="https://www.coe.int/en/web/european-social-charter"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="La Charte sociale européenne - nouvelle fenêtre"
+                  title="La Charte sociale européenne"
                 >
                   La Charte sociale européenne
-                </a>{" "}
+                </Link>{" "}
                 qui concerne les droits sociaux et économiques dans les domaines
                 notamment de l&apos;emploi et des conditions de travail.
               </li>
@@ -201,14 +202,14 @@ const Origins = () => (
           >
             <p>
               Texte le plus important du système juridique français,{" "}
-              <a
+              <Link
                 href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="la Constitution du 4 octobre 1958 - nouvelle fenêtre"
+                title="la Constitution du 4 octobre 1958"
               >
                 la Constitution du 4 octobre 1958
-              </a>{" "}
+              </Link>{" "}
               est le texte fondateur de la Vème République. La Constitution a
               pour objectif d&apos;organiser les pouvoirs publics, de définir
               leur rôle et leurs relations entre eux.
@@ -216,32 +217,32 @@ const Origins = () => (
             <p>
               Dans son préambule la Constitution de 1958 renvoie explicitement à
               3 autres textes fondamentaux&nbsp;:{" "}
-              <a
+              <Link
                 href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/declaration-des-droits-de-l-homme-et-du-citoyen-de-1789"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="la Déclaration des Droits de l'Homme et du Citoyen de 1789 - nouvelle fenêtre"
+                title="la Déclaration des Droits de l'Homme et du Citoyen de 1789"
               >
                 la Déclaration des Droits de l&apos;Homme et du Citoyen de 1789
-              </a>
+              </Link>
               ,{" "}
-              <a
+              <Link
                 href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/preambule-de-la-constitution-du-27-octobre-1946"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="le Préambule de la Constitution du 27 octobre 1946 - nouvelle fenêtre"
+                title="le Préambule de la Constitution du 27 octobre 1946"
               >
                 le Préambule de la Constitution du 27 octobre 1946
-              </a>{" "}
+              </Link>{" "}
               et{" "}
-              <a
+              <Link
                 href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/charte-de-l-environnement-de-2004"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="la Charte de l'environnement de 2004 - nouvelle fenêtre"
+                title="la Charte de l'environnement de 2004"
               >
                 la Charte de l&apos;environnement de 2004
-              </a>
+              </Link>
               .
             </p>
             <p>

@@ -58,7 +58,7 @@ export function ContributionGenericAgreementSearch({
               target="_blank"
               href={agreement.url}
               rel="noopener noreferrer"
-              title="Lien vers la convention collective - nouvelle fenêtre"
+              title="Lien vers la convention collective"
             >
               ici
             </Link>{" "}
@@ -75,7 +75,7 @@ export function ContributionGenericAgreementSearch({
               target="_blank"
               href={agreement.url}
               rel="noopener noreferrer"
-              title="Lien vers la convention collective - nouvelle fenêtre"
+              title="Lien vers la convention collective"
             >
               ici
             </Link>

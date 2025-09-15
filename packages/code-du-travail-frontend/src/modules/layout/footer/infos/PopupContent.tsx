@@ -37,14 +37,14 @@ export function PopupContent() {
   return (
     <>
       <h2 className={fr.cx("fr-h5")}>Contact téléphonique</h2>
-      <a href="tel:+33806000126" onClick={onClickLinkPhoneNumber}>
+      <Link href="tel:+33806000126" onClick={onClickLinkPhoneNumber}>
         <Image
           src="/static/assets/img/srdt.svg"
           alt="Contactez les services de renseignements au droit du travail au 0800 026 080"
           width={350}
           height={100}
         />
-      </a>
+      </Link>
       <h2 className={fr.cx("fr-h5", "fr-mt-3w")}>
         Contact par email et prise de rendez-vous
       </h2>
@@ -76,7 +76,7 @@ export function PopupContent() {
           className={fr.cx("fr-link")}
           href={result.url}
           target="_blank"
-          title={`Ouvrir ${result.url} - nouvelle fenêtre`}
+          title={`Ouvrir ${result.url}`}
         >
           {result.url}
         </Link>

@@ -1,9 +1,9 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import Link from "next/link";
 import React from "react";
 import { GlossaryByLetter } from "./types";
 import { ListWithArrow } from "../common/ListWithArrow";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
+import Link from "../common/Link";
 
 type GlossaryTermsProps = {
   letters: GlossaryByLetter;

@@ -39,7 +39,7 @@ export function ArticleCodeDuTravail({
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          title={`Code du travail - nouvelle fenêtre`}
+          title={`Code du travail`}
         >
           Code du travail
         </Link>{" "}

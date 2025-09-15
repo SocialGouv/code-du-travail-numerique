@@ -17,7 +17,7 @@ export const SourceData = ({ source, updatedAt }: Props) => (
       href={source.url}
       target="_blank"
       rel="noopener noreferrer"
-      title={`${source.url} - nouvelle fenêtre`}
+      title={source.url}
     >
       {source.name}
     </Link>

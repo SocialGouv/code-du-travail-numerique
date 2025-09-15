@@ -59,7 +59,7 @@ export const ContributionGenericContent = forwardRef<
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      title={`${url} - nouvelle fenêtre`}
+                      title={`${url}`}
                     >
                       {title}
                     </Link>

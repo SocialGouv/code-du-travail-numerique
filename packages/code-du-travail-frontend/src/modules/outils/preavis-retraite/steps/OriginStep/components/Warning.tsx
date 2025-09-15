@@ -1,6 +1,7 @@
 import React from "react";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { fr } from "@codegouvfr/react-dsfr";
+import Link from "src/modules/common/Link";
 
 export const WarningOriginDepart = () => {
   return (
@@ -15,15 +16,15 @@ export const WarningOriginDepart = () => {
           informé son salarié.
           <br />
           Plus d&apos;info&nbsp;:{" "}
-          <a
+          <Link
             href="/fiche-service-public/un-employeur-peut-il-mettre-doffice-un-salarie-a-la-retraite"
             target="_blank"
             rel="noopener noreferrer"
-            title="L'employeur peut-il mettre d'office un salarié à la retraite - nouvelle fenêtre"
+            title="L'employeur peut-il mettre d'office un salarié à la retraite"
           >
             L&apos;employeur peut-il mettre d&apos;office un salarié à la
             retraite ?
-          </a>
+          </Link>
         </>
       }
     />

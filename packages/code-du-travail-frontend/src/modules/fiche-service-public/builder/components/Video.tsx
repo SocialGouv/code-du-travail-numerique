@@ -12,7 +12,7 @@ export const Video = ({ data }: { data: FicheSPDataVideo }) => {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      title={`Lien vers la vidéo - nouvelle fenêtre`}
+      title={`Lien vers la vidéo`}
     >
       Cliquez ici pour voir la vidéo {title}
     </Link>

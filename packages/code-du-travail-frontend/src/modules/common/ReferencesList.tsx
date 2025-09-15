@@ -33,7 +33,7 @@ export const ReferenceList = ({
               href={ref.url}
               target="_blank"
               rel="noopener noreferrer"
-              title={`${ref.url} - nouvelle fenêtre`}
+              title={`${ref.url}`}
             >{`Convention collective: ${ref.title}`}</Link>
           );
       }

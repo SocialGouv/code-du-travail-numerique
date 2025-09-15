@@ -32,7 +32,7 @@ export const About = () => {
         La décision de créer le Code du travail numérique a donc été prise et
         inscrite dans{" "}
         <Link
-          title="les ordonnances sur le renforcement du dialogue social de 2017 - nouvelle fenêtre"
+          title="les ordonnances sur le renforcement du dialogue social de 2017"
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=F175675A5AF37BD5745391E7C64C2FAB.tplgfr41s_3?cidTexte=JORFTEXT000035607388&idArticle=LEGIARTI000036762196&dateTexte=20191129&categorieLien=id#LEGIARTI000036762196"
@@ -87,7 +87,7 @@ export const About = () => {
       <p>
         Le Code du travail numérique est un service public initié par{" "}
         <Link
-          title="le ministère du Travail - nouvelle fenêtre"
+          title="le ministère du Travail"
           target="_blank"
           rel="noopener noreferrer"
           href="https://travail-emploi.gouv.fr/"
@@ -96,7 +96,7 @@ export const About = () => {
         </Link>
         , conçu et développé au sein de{" "}
         <Link
-          title="la fabrique des Ministères sociaux - nouvelle fenêtre"
+          title="la fabrique des Ministères sociaux"
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.fabrique.social.gouv.fr/"
@@ -105,7 +105,7 @@ export const About = () => {
         </Link>{" "}
         en partenariat avec la communauté{" "}
         <Link
-          title="le site beta.gouv - nouvelle fenêtre"
+          title="le site beta.gouv"
           target="_blank"
           rel="noopener noreferrer"
           href="https://beta.gouv.fr/"
