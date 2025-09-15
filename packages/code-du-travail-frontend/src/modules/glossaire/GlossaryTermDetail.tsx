@@ -46,7 +46,7 @@ export const GlossaryTermDetail = ({
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    title={url}
+                    title={`Ouvrir la source : ${url}`}
                   >
                     {url}
                   </Link>

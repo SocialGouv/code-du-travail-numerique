@@ -24,7 +24,7 @@ export const PubliReferences: React.FC<Props> = ({
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  title={url}
+                  title={article}
                 >
                   {article}
                 </Link>

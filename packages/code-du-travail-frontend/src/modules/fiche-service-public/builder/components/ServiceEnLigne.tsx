@@ -24,7 +24,7 @@ export const ServiceEnLigne = ({
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        title={url}
+        title={title}
       >
         {title}
       </Link>

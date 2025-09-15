@@ -118,7 +118,7 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
               href="mailto:contact@fiva.fr"
               rel="noopener noreferrer"
               target="_blank"
-              title="mailto:contact@fiva.fr - nouvelle fenêtre"
+              title="contact@fiva.fr - nouvelle fenêtre"
             >
               contact@fiva.fr
             </a>

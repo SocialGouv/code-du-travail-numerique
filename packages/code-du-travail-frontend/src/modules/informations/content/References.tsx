@@ -19,7 +19,7 @@ export const References = ({ label, links }: Props) => {
         items={links.map(({ title, url }) => {
           if (!url) return <></>;
           return (
-            <Link key={title} href={url} target="_blank" title={url}>
+            <Link key={title} href={url} target="_blank" title={title}>
               {title}
             </Link>
           );

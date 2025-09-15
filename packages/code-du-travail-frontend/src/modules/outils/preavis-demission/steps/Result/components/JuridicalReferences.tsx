@@ -26,7 +26,7 @@ const JuridicalReferences: React.FC<Props> = ({
               href={ref.url}
               target="_blank"
               rel="noopener noreferrer"
-              title={ref.url}
+              title={ref.article}
             >
               {ref.article}
             </Link>
