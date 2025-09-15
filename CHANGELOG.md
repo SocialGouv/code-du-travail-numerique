@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.188.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.187.2...v4.188.0) (2025-09-08)
+
+
+### Bug Fixes
+
+* **accessibilite:** amélioration de la gestion des `<Cards/>` dans la page contribution et des `aria-label` au seins des button (règle 7.1) ([#6788](https://github.com/SocialGouv/code-du-travail-numerique/issues/6788)) ([fff4440](https://github.com/SocialGouv/code-du-travail-numerique/commit/fff4440ca73686fbd63ff1ab5b17fa4eecd9eae8))
+
+
+### Features
+
+* disable cookie banner ([#6796](https://github.com/SocialGouv/code-du-travail-numerique/issues/6796)) ([65201ac](https://github.com/SocialGouv/code-du-travail-numerique/commit/65201ac8fbec6ddcbec9d722e18b02ed41865024))
+* **tally:** ajout du formulaire de satisfaction suite au changement en DSFR ([#6797](https://github.com/SocialGouv/code-du-travail-numerique/issues/6797)) ([57f4930](https://github.com/SocialGouv/code-du-travail-numerique/commit/57f4930884f7926e6f328a350d5546ba2ab2f0da))
+
+
+
+
+
 ## [4.187.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.187.1...v4.187.2) (2025-09-04)
 
 
