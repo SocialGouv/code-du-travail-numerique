@@ -32,10 +32,10 @@ export const AccessibleAlert = ({
       id={id}
       className={fr.cx("fr-alert", `fr-alert--${severity}`)}
       tabIndex={autoFocus ? -1 : undefined}
-      aria-live="polite"
+      aria-live="assertive"
       aria-atomic="true"
+      // role="alert" pas utile si le aria-live="assertive" et aria-atomic="true" est présent
       data-testid={dataTestId}
-      role="alert"
     >
       <h3 className={fr.cx("fr-alert__title")}>{title}</h3>
       {typeof description === "string" ? <p>{description}</p> : description}
