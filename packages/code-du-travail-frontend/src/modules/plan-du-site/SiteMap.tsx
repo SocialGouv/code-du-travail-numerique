@@ -28,7 +28,7 @@ const SiteMapSection = ({
   title,
   url,
   detail,
-  headingLevel = 3,
+  headingLevel = 2,
 }: SectionProps) => (
   <div className={fr.cx("fr-mb-4w")}>
     {url ? (

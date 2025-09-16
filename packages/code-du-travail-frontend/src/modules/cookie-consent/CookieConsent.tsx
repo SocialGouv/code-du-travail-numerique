@@ -178,9 +178,7 @@ export const CookieConsentDSFR = () => {
         >
           <div className={fr.cx("fr-grid-row")}>
             <div className={fr.cx("fr-col-12")}>
-              <p className={fr.cx("fr-mb-1w")}>
-                <strong>Ce site utilise des cookies</strong>
-              </p>
+              <h2 className={fr.cx("fr-mb-1w")}>Ce site utilise des cookies</h2>
               <p className={fr.cx("fr-mb-3w")}>
                 Nous utilisons des cookies pour mesurer l&apos;audience et pour
                 le suivi des campagnes publicitaires. Les cookies de mesure
@@ -212,26 +210,19 @@ export const CookieConsentDSFR = () => {
                   ref={personalizeButtonRef}
                   onClick={openModal}
                   priority="tertiary"
-                  nativeButtonProps={{
-                    "aria-label":
-                      "Personnaliser les préférences en matière de cookies",
-                  }}
+                  aria-label="Personnaliser les cookies"
                 >
                   Personnaliser
                 </Button>
                 <Button
                   onClick={handleRejectAll}
-                  nativeButtonProps={{
-                    "aria-label": "Tout refuser - Refuser tous les cookies",
-                  }}
+                  aria-label="Refuser les cookies"
                 >
                   Tout refuser
                 </Button>
                 <Button
                   onClick={handleAcceptAll}
-                  nativeButtonProps={{
-                    "aria-label": "Tout accepter - Accepter tous les cookies",
-                  }}
+                  aria-label="Accepter les cookies"
                 >
                   Tout accepter
                 </Button>
@@ -276,12 +267,12 @@ export const CookieConsentDSFR = () => {
                 </div>
                 <div className={`${fr.cx("fr-modal__content")}`}>
                   <div className={fr.cx("fr-modal__title")}>
-                    <div
+                    <h1
                       className={fr.cx("fr-h3")}
                       id="cookie-settings-modal-title"
                     >
                       Paramètres des cookies
-                    </div>
+                    </h1>
                   </div>
 
                   <p className={fr.cx("fr-mt-2w")}>
@@ -424,10 +415,7 @@ export const CookieConsentDSFR = () => {
                         onClick={handleRejectAll}
                         priority="tertiary"
                         className={responsiveButton}
-                        nativeButtonProps={{
-                          "aria-label":
-                            "Tout refuser - Refuser tous les cookies optionnels",
-                        }}
+                        aria-label="Refuser tous les cookies"
                       >
                         Tout refuser
                       </Button>
@@ -437,10 +425,7 @@ export const CookieConsentDSFR = () => {
                         onClick={handleAcceptAll}
                         priority="secondary"
                         className={responsiveButton}
-                        nativeButtonProps={{
-                          "aria-label":
-                            "Tout accepter - Accepter tous les cookies",
-                        }}
+                        aria-label="Accepter tous les cookies"
                       >
                         Tout accepter
                       </Button>
@@ -450,10 +435,7 @@ export const CookieConsentDSFR = () => {
                         onClick={handleSaveSettings}
                         priority="primary"
                         className={responsiveButton}
-                        nativeButtonProps={{
-                          "aria-label":
-                            "Enregistrer les préférences de cookies",
-                        }}
+                        aria-label="Enregistrer les paramètres des cookies"
                       >
                         Enregistrer
                       </Button>
