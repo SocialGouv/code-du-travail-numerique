@@ -123,11 +123,10 @@ exports[`<FeedbackContent /> should match snapshot for negative 1`] = `
   </div>
   <p
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="off"
     class="fr-info-text fr-mt-0 fr-mb-3w"
     data-testid="characterInfo"
     id="suggestion-help"
-    role="status"
   >
     500 caractères restants
   </p>
@@ -171,11 +170,10 @@ exports[`<FeedbackContent /> should match snapshot for positive 1`] = `
   </div>
   <p
     aria-atomic="true"
-    aria-live="polite"
+    aria-live="off"
     class="fr-info-text fr-mt-0 fr-mb-3w"
     data-testid="characterInfo"
     id="suggestion-help"
-    role="status"
   >
     500 caractères restants
   </p>
