@@ -4,7 +4,6 @@ import { filterOutTitle, getTitleInChildren } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
 import Title from "./Title";
 import { FicheSPDataBlocCas, FicheSPDataListeSituations } from "../type";
-import { css } from "@styled-system/css";
 
 export const Tabulator = ({
   data,
