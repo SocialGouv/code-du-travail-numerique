@@ -45,7 +45,6 @@ export function ContributionAgreementContent({
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    title={`${title}`}
                   >
                     {title}
                   </Link>
