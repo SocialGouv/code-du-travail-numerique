@@ -35,11 +35,7 @@ export function ArticleCodeDuTravail({
 
       <p>
         Source&nbsp;:{" "}
-        <Link
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href={url} target="_blank" rel="noopener noreferrer">
           Code du travail
         </Link>{" "}
         - Mis à jour le&nbsp;: {date}

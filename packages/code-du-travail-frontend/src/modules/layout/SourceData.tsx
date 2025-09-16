@@ -13,11 +13,7 @@ type Props = {
 export const SourceData = ({ source, updatedAt }: Props) => (
   <p>
     Source&nbsp;:{" "}
-    <Link
-      href={source.url}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <Link href={source.url} target="_blank" rel="noopener noreferrer">
       {source.name}
     </Link>
     {/*
