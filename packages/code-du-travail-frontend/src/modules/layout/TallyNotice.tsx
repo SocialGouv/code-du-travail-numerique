@@ -2,7 +2,12 @@
 
 import Script from "next/script";
 
-export const TallyNotice = ({ onClose, id }) => {
+type TallyNoticeProps = {
+  onClose: () => void;
+  id: string;
+};
+
+export const TallyNotice = ({ onClose, id }: TallyNoticeProps) => {
   return (
     <>
       <Script id="tally-js" src="https://tally.so/widgets/embed.js" />
