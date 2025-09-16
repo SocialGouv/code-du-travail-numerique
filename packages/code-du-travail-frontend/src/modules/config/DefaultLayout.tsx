@@ -12,7 +12,6 @@ import { SentryTest } from "../sentry";
 import { ConsentManager } from "../cookie-consent";
 import { shouldShowCookieBanner } from "../cookie-consent/config";
 import { usePathname } from "next/navigation";
-import { Tally } from "./Tally";
 
 type Props = {
   children: React.ReactNode;
@@ -33,7 +32,6 @@ export default function DefaultLayout({
   const lang = "fr";
   const pathname = usePathname() || "";
   const showCookieBanner = shouldShowCookieBanner(pathname);
-  const showTally = !pathname.startsWith("/widgets");
 
   return (
     <html {...getHtmlAttributes({ lang })}>
@@ -64,7 +62,6 @@ export default function DefaultLayout({
         >
           {children}
           {showCookieBanner && <ConsentManager />}
-          {showTally && <Tally id={"3E2Ypo"} />}
         </DsfrProvider>
         <MatomoAnalytics />
         {ENV === "development" && <SentryTest />}
