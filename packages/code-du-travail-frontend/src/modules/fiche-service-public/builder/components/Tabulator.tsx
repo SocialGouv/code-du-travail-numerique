@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { filterOutTitle, getTitleInChildren } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
 import Title from "./Title";
@@ -13,8 +13,6 @@ export const Tabulator = ({
   data: FicheSPDataBlocCas | FicheSPDataListeSituations;
   headingLevel: number;
 }) => {
-  const [activeTab, setActiveTab] = useState(0);
-
   // Prepare tabs data
   const tabs = data.children.map((tab) => {
     const title = getTitleInChildren(tab);
@@ -34,25 +32,19 @@ export const Tabulator = ({
     };
   });
 
-  // Define container styles
-  const tabsContainerStyle = css({
-    position: "relative",
-  });
-
   return (
-    <div className={tabsContainerStyle}>
-      <div className={`fr-tabs fr-mb-4w`} data-fr-js-tabs="true">
+    <div>
+      <div className="fr-tabs fr-mb-4w" data-fr-js-tabs="true">
         <ul className="fr-tabs__list" role="tablist">
           {tabs.map((tab, index) => (
             <li role="presentation" key={`tab-${index}`}>
               <button
                 id={`tab-${index}`}
-                className={`fr-tabs__tab fr-tabs__tab--icon-left ${index === activeTab ? "fr-tabs__tab--active" : ""}`}
-                tabIndex={index === activeTab ? 0 : -1}
+                className={`fr-tabs__tab fr-tabs__tab--icon-left ${index === 0 ? "fr-tabs__tab--active" : ""}`}
+                tabIndex={index === 0 ? 0 : -1}
                 role="tab"
-                aria-selected={index === activeTab}
+                aria-selected={index === 0}
                 aria-controls={`panel-${index}`}
-                onClick={() => setActiveTab(index)}
               >
                 {tab.label}
               </button>
@@ -64,7 +56,7 @@ export const Tabulator = ({
           <div
             key={`panel-${index}`}
             id={`panel-${index}`}
-            className={`fr-tabs__panel ${index === activeTab ? "fr-tabs__panel--selected" : ""}`}
+            className={`fr-tabs__panel ${index === 0 ? "fr-tabs__panel--selected" : ""}`}
             role="tabpanel"
             aria-labelledby={`tab-${index}`}
             tabIndex={0}
