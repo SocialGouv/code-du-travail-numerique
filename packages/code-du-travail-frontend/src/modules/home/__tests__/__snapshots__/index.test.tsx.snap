@@ -54,7 +54,12 @@ exports[`<Home /> should match snapshot 1`] = `
                         for="downshift-0-input"
                         id="downshift-0-label"
                       >
-                        Recherchez par mots-clés
+                        Rechercher par mots-clés
+                        <span
+                          class="fr-sr-only"
+                        >
+                          , la sélection d'une option charge une nouvelle page
+                        </span>
                         <span
                           class="fr-hint-text"
                         >

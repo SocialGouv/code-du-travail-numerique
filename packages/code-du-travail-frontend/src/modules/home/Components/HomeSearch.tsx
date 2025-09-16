@@ -59,7 +59,14 @@ export const HomeSearch = () => {
       <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
         <Autocomplete<string>
           hintText="par exemple : congés payés, durée de préavis"
-          label={<>Recherchez par mots-clés</>}
+          label={
+            <>
+              Rechercher par mots-clés
+              <span className={fr.cx("fr-sr-only")}>
+                , la sélection d&apos;une option charge une nouvelle page
+              </span>
+            </>
+          }
           displayLabel={(item) => item ?? ""}
           onInputValueChange={(value) => {
             if (value) {

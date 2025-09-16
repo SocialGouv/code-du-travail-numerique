@@ -119,12 +119,7 @@ exports[`<Header /> should match snapshot 1`] = `
                         for="downshift-0-input"
                         id="downshift-0-label"
                       >
-                        Rechercher sur le site
-                        <span
-                          class="fr-sr-only"
-                        >
-                          , la sélection d'une option charge une nouvelle page
-                        </span>
+                        Rechercher sur le site , la sélection d'une option charge une nouvelle page
                       </label>
                       <div
                         class="fr-input-wrap fr-input-wrap--addon mt_0!"

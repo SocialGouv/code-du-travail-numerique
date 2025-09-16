@@ -39,12 +39,7 @@ export const HeaderSearch = ({ onSearchSubmit }: HeaderSearchProps) => {
           >
             <Autocomplete<string>
               label={
-                <>
-                  Rechercher sur le site
-                  <span className={fr.cx("fr-sr-only")}>
-                    , la sélection d&apos;une option charge une nouvelle page
-                  </span>
-                </>
+                "Rechercher sur le site , la sélection d'une option charge une nouvelle page"
               }
               placeholder="Rechercher sur le site"
               isSearch
