@@ -145,7 +145,7 @@ describe("AbsencePeriods Component", () => {
       );
 
       const titleElement = screen.getByText("Absence 1");
-      expect(titleElement.tagName).toBe("P");
+      expect(titleElement.tagName).toBe("LEGEND");
       expect(titleElement).toHaveClass(fr.cx("fr-text--bold", "fr-mb-1w"));
     });
 
@@ -195,5 +195,79 @@ describe("AbsencePeriods Component", () => {
       const durationInput = screen.getByLabelText("Durée (en mois)");
       expect(durationInput).not.toHaveFocus();
     });
+  });
+});
+
+describe("AbsencePeriod Component - Accessibility and Error Handling Tests", () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  test("Replaces <h3> with <p> for absence title", () => {
+    render(
+      <AbsencePeriod
+        index={0}
+        onSelectMotif={jest.fn()}
+        onSetDurationDate={jest.fn()}
+        onSetAbsenceDate={jest.fn()}
+        onDeleteAbsence={jest.fn()}
+        motifs={mockMotifs}
+        absence={{
+          key: "test-key",
+          motif: mockMotifs[0],
+          durationInMonth: undefined,
+        }}
+        showDeleteButton={false}
+        informationData={mockInformationData}
+      />
+    );
+
+    const titleElement = screen.getByText("Absence 1");
+    expect(titleElement.tagName).toBe("LEGEND");
+    expect(titleElement).toHaveClass(fr.cx("fr-text--bold", "fr-mb-1w"));
+  });
+
+  test("Adds aria-describedby to the duration field when error is present", () => {
+    render(
+      <AbsencePeriods
+        onChange={mockOnChange}
+        motifs={mockMotifs}
+        absences={mockAbsences}
+        informationData={mockInformationData}
+        error={{ global: "Global error" }}
+      />
+    );
+
+    const durationInput = screen.getByLabelText("Durée (en mois)");
+    expect(durationInput).toHaveAttribute("aria-describedby", "absences-error");
+  });
+
+  test("Sets focus on the duration field of the first absence when global error is present", () => {
+    render(
+      <AbsencePeriods
+        onChange={mockOnChange}
+        motifs={mockMotifs}
+        absences={mockAbsences}
+        informationData={mockInformationData}
+        error={{ global: "Global error" }}
+      />
+    );
+
+    const durationInput = screen.getByLabelText("Durée (en mois)");
+    expect(durationInput).toHaveFocus();
+  });
+
+  test("Does not set focus when no global error", () => {
+    render(
+      <AbsencePeriods
+        onChange={mockOnChange}
+        motifs={mockMotifs}
+        absences={mockAbsences}
+        informationData={mockInformationData}
+      />
+    );
+
+    const durationInput = screen.getByLabelText("Durée (en mois)");
+    expect(durationInput).not.toHaveFocus();
   });
 });
