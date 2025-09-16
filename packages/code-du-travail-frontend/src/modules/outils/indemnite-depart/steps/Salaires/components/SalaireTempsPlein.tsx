@@ -5,13 +5,14 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { preventScroll } from "src/modules/outils/common/utils/input";
 import { defaultInputStyle } from "src/modules/outils/common/styles/input";
 import HighlightSalary from "./HighlightSalary";
-import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
+import { SalaryFieldError } from "../store/types";
 
 type Props = {
   title: string;
   salaryPeriods: SalaryPeriods[];
   onSalariesChange: (salaries: SalaryPeriods[]) => void;
-  error?: string;
+  errorSalaryPeriods?: Record<string, SalaryFieldError | null>;
+  errorPrimeSalaryPeriods?: Record<string, SalaryFieldError | null>;
   note?: string;
   dataTestidSalaries?: string;
   noPrime?: boolean;
@@ -23,7 +24,8 @@ type Props = {
 export const SalaireTempsPlein = ({
   salaryPeriods,
   onSalariesChange,
-  error,
+  errorSalaryPeriods,
+  errorPrimeSalaryPeriods,
   title,
   note,
   dataTestidSalaries,
@@ -32,55 +34,39 @@ export const SalaireTempsPlein = ({
   agreementNumber,
   salaireTempsPleinMessage,
 }: Props) => {
-  const [errorsSalaries, setErrorsSalaries] = React.useState({});
-  const [errorsPrimes, setErrorsPrimes] = React.useState({});
   const salaryInputRefs = React.useRef<(HTMLInputElement | null)[]>([]);
   const primeInputRefs = React.useRef<(HTMLInputElement | null)[]>([]);
 
-  const hasError = (index: number, value: any, errorState: any) => {
-    return (
-      errorState[`${index}`] ||
-      (error && (value === undefined || value === null || value === ""))
-    );
-  };
-
   React.useEffect(() => {
-    // Focus sur le premier champ de salaire avec erreur (validation ou vide)
-    const firstSalaryErrorIndex = salaryPeriods.findIndex((sPeriod, index) =>
-      hasError(index, sPeriod.value, errorsSalaries)
+    const firstSalaryErrorIndex = salaryPeriods.findIndex(
+      (_, index) =>
+        errorSalaryPeriods &&
+        errorSalaryPeriods[`${index}`] !== null &&
+        errorSalaryPeriods[`${index}`] !== undefined
     );
     if (firstSalaryErrorIndex !== -1) {
       salaryInputRefs.current[firstSalaryErrorIndex]?.focus();
       return;
     }
 
-    // Focus sur le premier champ de prime avec erreur (validation seulement, les primes peuvent être vides)
-    const firstPrimeErrorIndex = Object.keys(errorsPrimes).find(
-      (key) => errorsPrimes[key]
-    );
+    // Focus sur le premier champ de prime avec erreur
+    const firstPrimeErrorIndex = errorPrimeSalaryPeriods
+      ? Object.keys(errorPrimeSalaryPeriods).find(
+          (key) =>
+            errorPrimeSalaryPeriods[key] !== null &&
+            errorPrimeSalaryPeriods[key] !== undefined
+        )
+      : undefined;
+
     if (firstPrimeErrorIndex !== undefined) {
       const index = parseInt(firstPrimeErrorIndex);
       primeInputRefs.current[index]?.focus();
     }
-  }, [errorsSalaries, errorsPrimes, salaryPeriods, error]);
+  }, [errorSalaryPeriods, errorPrimeSalaryPeriods, salaryPeriods]);
 
   const onChangeSalaries = (index: number, value: string) => {
     const salary = parseFloat(value);
-    if (isNaN(salary) && value.length > 0) {
-      setErrorsSalaries({
-        ...errorsSalaries,
-        [`${index}`]: "Veuillez entrer un nombre",
-      });
-      return;
-    } else {
-      setErrorsSalaries({
-        ...errorsSalaries,
-        [`${index}`]: undefined,
-      });
-    }
-    let newLocalSalaries: SalaryPeriods[];
-
-    newLocalSalaries = salaryPeriods.map((p, i) =>
+    const newLocalSalaries: SalaryPeriods[] = salaryPeriods.map((p, i) =>
       i === index ? { ...p, value: salary } : p
     );
     onSalariesChange(newLocalSalaries);
@@ -88,18 +74,6 @@ export const SalaireTempsPlein = ({
 
   const onChangeLocalPrimes = (index: number, value: string) => {
     const prime = value.length > 0 ? parseFloat(value) : undefined;
-    if (prime && isNaN(prime)) {
-      setErrorsPrimes({
-        ...errorsPrimes,
-        [`${index}`]: "Veuillez entrer un nombre",
-      });
-      return;
-    } else {
-      setErrorsPrimes({
-        ...errorsPrimes,
-        [`${index}`]: undefined,
-      });
-    }
     const newLocalSalaries = salaryPeriods.map((p, i) =>
       i === index
         ? prime
@@ -159,18 +133,15 @@ export const SalaireTempsPlein = ({
                             } as any
                           }
                           state={
-                            hasError(index, sPeriod.value, errorsSalaries)
+                            errorSalaryPeriods &&
+                            errorSalaryPeriods[`${index}`] !== null
                               ? "error"
                               : "default"
                           }
                           stateRelatedMessage={
-                            errorsSalaries[`${index}`] ||
-                            (error &&
-                              (sPeriod.value === undefined ||
-                                sPeriod.value === null))
-                              ? errorsSalaries[`${index}`] ||
-                                "Ce champ est requis"
-                              : undefined
+                            errorSalaryPeriods && errorSalaryPeriods[`${index}`]
+                              ? errorSalaryPeriods[`${index}`]?.message
+                              : ""
                           }
                           classes={{
                             nativeInputOrTextArea: defaultInputStyle,
@@ -199,9 +170,17 @@ export const SalaireTempsPlein = ({
                               } as any
                             }
                             state={
-                              errorsPrimes[`${index}`] ? "error" : "default"
+                              errorPrimeSalaryPeriods &&
+                              errorPrimeSalaryPeriods[`${index}`] !== null
+                                ? "error"
+                                : "default"
                             }
-                            stateRelatedMessage={errorsPrimes[`${index}`]}
+                            stateRelatedMessage={
+                              errorPrimeSalaryPeriods &&
+                              errorPrimeSalaryPeriods[`${index}`]
+                                ? errorPrimeSalaryPeriods[`${index}`]?.message
+                                : ""
+                            }
                             classes={{
                               nativeInputOrTextArea: defaultInputStyle,
                             }}
@@ -216,14 +195,7 @@ export const SalaireTempsPlein = ({
           </div>
         </div>
       </div>
-      {error && (
-        <AccessibleAlert
-          title="Attention"
-          description={error}
-          severity="error"
-          className={["fr-mt-2w"]}
-        />
-      )}
+
       {note && <p className={fr.cx("fr-text--sm", "fr-mt-2w")}>{note}</p>}
     </div>
   );

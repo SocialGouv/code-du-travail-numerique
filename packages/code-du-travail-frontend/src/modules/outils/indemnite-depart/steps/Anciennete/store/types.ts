@@ -18,7 +18,6 @@ export type AncienneteStoreError = {
   errorAbsenceProlonge?: string;
   errorDateEntree?: string;
   errorAbsencePeriods?: {
-    global?: string;
     absences?: AncienneteAbsenceStoreError[];
   };
   errorEligibility?: string;

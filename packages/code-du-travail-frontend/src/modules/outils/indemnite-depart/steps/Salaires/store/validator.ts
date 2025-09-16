@@ -1,8 +1,150 @@
-import { detectNullOrUndefinedOrNaNInArray } from "src/modules/utils/array";
 import { deepEqualObject } from "src/modules/utils/object";
-import { SalairesStoreInput, SalairesStoreError } from "./types";
+import {
+  SalairesStoreInput,
+  SalairesStoreError,
+  SalaryErrorType,
+  SalaryFieldError,
+} from "./types";
+
+// Export des types pour réutilisation dans les agreements
+export type { SalaryErrorType, SalaryFieldError };
+
+export const validateSalaryField = (
+  value: string,
+  isRequired: boolean = true
+): SalaryFieldError | null => {
+  // Si le champ n'est pas requis et vide, c'est valide
+  if (!isRequired && (!value || value.trim() === "")) {
+    return null;
+  }
+
+  // Si le champ est requis et vide
+  if (isRequired && (!value || value.trim() === "")) {
+    return {
+      type: SalaryErrorType.REQUIRED,
+      message: "Ce champ est requis",
+    };
+  }
+
+  // Validation du format numérique
+  const numericValue = parseFloat(value);
+  if (isNaN(numericValue)) {
+    return {
+      type: SalaryErrorType.INVALID_NUMBER,
+      message: "Veuillez entrer un nombre",
+    };
+  }
+
+  // Validation valeur négative
+  if (numericValue < 0) {
+    return {
+      type: SalaryErrorType.NEGATIVE_VALUE,
+      message: "La valeur ne peut pas être négative",
+    };
+  }
+
+  // Validation valeur zéro (pour les salaires requis)
+  if (isRequired && numericValue === 0) {
+    return {
+      type: SalaryErrorType.ZERO_VALUE,
+      message: "Vous devez saisir un montant supérieur à zéro",
+    };
+  }
+
+  return null;
+};
+
+export const validateSalaryPeriods = (
+  salaryPeriods: SalairesStoreInput["salaryPeriods"]
+): Record<string, SalaryFieldError | null> => {
+  const errors: Record<string, SalaryFieldError | null> = {};
+
+  salaryPeriods.forEach((period, index) => {
+    const valueStr = period.value?.toString() || "";
+    const validationError = validateSalaryField(valueStr, true);
+    errors[index.toString()] = validationError;
+  });
+
+  return errors;
+};
+
+export const validatePrimePeriods = (
+  salaryPeriods: SalairesStoreInput["salaryPeriods"]
+): Record<string, SalaryFieldError | null> => {
+  const errors: Record<string, SalaryFieldError | null> = {};
+
+  // Validation des primes uniquement pour les 3 premiers mois
+  salaryPeriods.slice(0, 3).forEach((period, index) => {
+    if (period.prime !== undefined) {
+      const primeStr = period.prime.toString();
+      const validationError = validateSalaryField(primeStr, false); // Les primes ne sont pas requises
+      errors[index.toString()] = validationError;
+    } else {
+      errors[index.toString()] = null;
+    }
+  });
+
+  return errors;
+};
+
+// Fonctions utilitaires pour les erreurs
+export const getErrorMessage = (error: SalaryFieldError | null): string => {
+  return error?.message || "";
+};
+
+export const hasErrorType = (
+  error: SalaryFieldError | null,
+  type: SalaryErrorType
+): boolean => {
+  return error?.type === type;
+};
+
+export const hasError = (
+  index: number,
+  value: number | string | undefined,
+  errors?: Record<string, SalaryFieldError | null>
+): boolean => {
+  if (!errors) return false;
+  const error = errors[index.toString()];
+  return error !== null && error !== undefined;
+};
+
+export const hasPrimeError = (
+  index: number,
+  value: number | undefined,
+  errors?: Record<string, SalaryFieldError | null>
+): boolean => {
+  if (!errors) return false;
+  const error = errors[index.toString()];
+  return error !== null && error !== undefined;
+};
 
 export const validateStep = (state: SalairesStoreInput) => {
+  let errorSalaryPeriods: Record<string, SalaryFieldError | null> | undefined =
+    undefined;
+  let errorPrimes: Record<string, SalaryFieldError | null> | undefined =
+    undefined;
+
+  if (state.hasTempsPartiel === "non" && state.hasSameSalary === "non") {
+    // Validation des salaires
+    errorSalaryPeriods = validateSalaryPeriods(state.salaryPeriods);
+    const hasSalaryErrors = Object.values(errorSalaryPeriods).some(
+      (error) => error !== null
+    );
+    if (!hasSalaryErrors) {
+      errorSalaryPeriods = undefined;
+    }
+
+    // Validation des primes
+    errorPrimes = validatePrimePeriods(state.salaryPeriods);
+    const hasPrimeErrors = Object.values(errorPrimes).some(
+      (error) => error !== null
+    );
+    if (!hasPrimeErrors) {
+      errorPrimes = undefined;
+    }
+  }
+
   const errorState: SalairesStoreError = {
     errorHasTempsPartiel: !state.hasTempsPartiel
       ? "Vous devez répondre à cette question"
@@ -26,17 +168,8 @@ export const validateStep = (state: SalairesStoreInput) => {
               parseFloat(state.salary!) <= 0
             ? "Vous devez saisir un montant supérieur à zéro"
             : undefined,
-    errorSalaryPeriods:
-      state.hasTempsPartiel === "non" &&
-      state.hasSameSalary === "non" &&
-      (state.salaryPeriods.length === 0 ||
-        detectNullOrUndefinedOrNaNInArray(state.salaryPeriods))
-        ? "Vous devez compléter l'ensemble des champs"
-        : state.hasTempsPartiel === "non" &&
-            state.hasSameSalary === "non" &&
-            sumSalaryPeriods(state.salaryPeriods) <= 0
-          ? "Vous devez saisir un montant supérieur à zéro"
-          : undefined,
+    errorSalaryPeriods,
+    errorPrimes,
   };
 
   return {
@@ -46,19 +179,8 @@ export const validateStep = (state: SalairesStoreInput) => {
       errorSalary: undefined,
       errorTempsPartiel: false,
       errorSalaryPeriods: undefined,
+      errorPrimes: undefined,
     }),
     errorState,
   };
-};
-
-const sumSalaryPeriods = (
-  salaryPeriods: SalairesStoreInput["salaryPeriods"]
-) => {
-  const sum = salaryPeriods.reduce((acc, curr) => {
-    if (curr.value !== undefined) {
-      return acc + curr.value;
-    }
-    return acc;
-  }, 0);
-  return sum;
 };

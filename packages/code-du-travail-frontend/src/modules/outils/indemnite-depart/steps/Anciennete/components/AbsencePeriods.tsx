@@ -5,7 +5,6 @@ import AbsencePeriod from "./AbsencePeriod";
 import type { AncienneteAbsenceStoreError } from "../store";
 import { fr } from "@codegouvfr/react-dsfr";
 import Html from "src/modules/common/Html";
-import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 type Props = {
   onChange: (absences: Absence[]) => void;
@@ -13,7 +12,6 @@ type Props = {
   absences: Absence[];
   informationData: Record<string, string | undefined>;
   error?: {
-    global?: string;
     absences?: AncienneteAbsenceStoreError[];
   };
   messageMotifExample?: string;
@@ -53,7 +51,6 @@ const AbsencePeriods = ({
   const [localAbsences, setLocalAbsences] = React.useState<AbsenceWithKey[]>(
     mapAbsences(absences, motifs[0])
   );
-  const errorMessageId = "absences-error";
   const statusMessageRef = useRef<HTMLDivElement>(null);
 
   const addButtonRef = useRef<HTMLButtonElement>(null);
@@ -68,15 +65,6 @@ const AbsencePeriods = ({
       setLocalAbsences(newAbsence);
     }
   }, [absences]);
-
-  // Update the status message when there's a global error
-  useEffect(() => {
-    if (error?.global && statusMessageRef.current) {
-      statusMessageRef.current.textContent = error.global;
-    } else if (statusMessageRef.current) {
-      statusMessageRef.current.textContent = "";
-    }
-  }, [error?.global]);
 
   const [errorsInput, setErrorsInput] = React.useState({});
 
@@ -154,10 +142,8 @@ const AbsencePeriods = ({
     onChange(newAbsences);
   };
 
-  const describedBy = error?.global ? "absences-error" : undefined;
-
   return (
-    <fieldset aria-describedby={describedBy}>
+    <fieldset>
       <div aria-live="polite" className="sr-only" ref={statusMessageRef} />
       <legend className={fr.cx("fr-text--bold", "fr-text--lg")}>
         Quels sont le motif et la durée de ces absences prolongées&nbsp;?
@@ -206,8 +192,6 @@ const AbsencePeriods = ({
             absence={value}
             informationData={informationData}
             absenceRef={absenceRef}
-            autoFocus={index === 0}
-            ariaDescribedby={error?.global ? errorMessageId : undefined}
           />
         );
       })}
@@ -222,17 +206,6 @@ const AbsencePeriods = ({
       >
         Ajouter une absence
       </Button>
-
-      {error?.global && (
-        <div className={fr.cx("fr-mt-2w")}>
-          <AccessibleAlert
-            id={errorMessageId}
-            title="Attention"
-            description={error.global}
-            severity="error"
-          />
-        </div>
-      )}
     </fieldset>
   );
 };

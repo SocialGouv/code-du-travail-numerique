@@ -11,13 +11,25 @@ export type SalairesStoreInput = {
   showHasTempsPartiel: boolean;
 };
 
+export enum SalaryErrorType {
+  REQUIRED = "REQUIRED",
+  INVALID_NUMBER = "INVALID_NUMBER",
+  NEGATIVE_VALUE = "NEGATIVE_VALUE",
+  ZERO_VALUE = "ZERO_VALUE",
+}
+
+export type SalaryFieldError = {
+  type: SalaryErrorType;
+  message: string;
+};
+
 export type SalairesStoreError = {
   errorHasTempsPartiel?: string;
   errorHasSameSalary?: string;
   errorSalary?: string;
   errorTempsPartiel?: boolean;
-  errorSalaryPeriods?: string;
-  errorPrimes?: string;
+  errorSalaryPeriods?: Record<string, SalaryFieldError | null>;
+  errorPrimes?: Record<string, SalaryFieldError | null>;
 };
 
 export type SalairesStoreData = StepData<

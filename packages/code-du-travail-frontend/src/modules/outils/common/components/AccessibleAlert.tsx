@@ -29,12 +29,18 @@ export const AccessibleAlert = ({
         "fr-alert--sm": small,
       })}
       aria-live={
-        severity === "info" || severity === "warning" ? "polite" : "assertive"
+        severity === "warning"
+          ? "polite"
+          : severity === "error"
+            ? "assertive"
+            : "off"
       }
       aria-atomic="true"
       data-testid={dataTestId}
     >
-      <TitleTag className={fr.cx("fr-alert__title")}>{title}</TitleTag>
+      {title && (
+        <TitleTag className={fr.cx("fr-alert__title")}>{title}</TitleTag>
+      )}
       {typeof description === "string" ? <p>{description}</p> : description}
     </div>
   );

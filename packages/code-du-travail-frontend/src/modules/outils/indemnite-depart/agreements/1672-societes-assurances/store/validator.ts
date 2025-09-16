@@ -1,7 +1,7 @@
 import produce from "immer";
 import { StoreApi } from "zustand";
-import { detectNullOrUndefinedOrNaNInArray } from "src/modules/utils/array";
 import { deepEqualObject } from "src/modules/utils/object";
+import { validateSalaryPeriods } from "../../../steps/Salaires/store/validator";
 import { MainStore } from "../../../store";
 import {
   Agreement1672StoreError,
@@ -38,9 +38,8 @@ export const validateStep = (state: Agreement1672StoreInput) => {
         ? "Vous devez répondre à cette question"
         : undefined,
       errorNoticeSalaryPeriods:
-        state.hasReceivedSalaries === "oui" &&
-        detectNullOrUndefinedOrNaNInArray(noticeSalaryPeriods)
-          ? "Vous devez compléter l'ensemble des champs"
+        state.hasReceivedSalaries === "oui"
+          ? validateSalaryPeriods(noticeSalaryPeriods)
           : undefined,
     };
   }

@@ -1,6 +1,6 @@
 import { Select } from "@codegouvfr/react-dsfr/Select";
 import { Input } from "@codegouvfr/react-dsfr/Input";
-import React, { JSX, useState } from "react";
+import React, { JSX, useState, useEffect, useRef } from "react";
 import { Motif } from "@socialgouv/modeles-social";
 import { AbsenceWithKey } from "./AbsencePeriods";
 import { Button } from "@codegouvfr/react-dsfr/Button";
@@ -33,8 +33,6 @@ type Props = {
   absenceDateError?: string;
   showDeleteButton: boolean;
   informationData: Record<string, string | undefined>;
-  autoFocus?: boolean;
-  ariaDescribedby?: string;
   absenceRef?: React.RefObject<HTMLElement | null>;
 };
 
@@ -50,8 +48,6 @@ const AbsencePeriod = ({
   showDeleteButton,
   onDeleteAbsence,
   informationData,
-  autoFocus,
-  ariaDescribedby,
   absenceRef,
 }: Props): JSX.Element => {
   const [shouldAskAbsenceDate, askAbsenceDate] = useState(
@@ -61,6 +57,19 @@ const AbsencePeriod = ({
           motifs[0].startAt &&
           motifs[0].startAt(informationData)
   );
+
+  useEffect(() => {
+    if (durationError) {
+      const durationInput = document.getElementById(`${index}.duration`);
+      if (durationInput) {
+        durationInput.focus();
+        durationInput.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }
+    }
+  }, [durationError, index]);
 
   const selectMotif = (key: string, value: string) => {
     const motif = motifs.find((motif) => motif.label === value);
@@ -121,8 +130,6 @@ const AbsencePeriod = ({
                     onWheel: preventScroll,
                     value: absence?.durationInMonth ?? "",
                     "data-testid": `absence-duree-${index}`,
-                    "aria-describedby": ariaDescribedby,
-                    autoFocus: autoFocus,
                     "aria-live": "off",
                   } as InputProps
                 }
@@ -142,7 +149,7 @@ const AbsencePeriod = ({
                   }}
                   error={absenceDateError}
                   id={`${index}.dateAbsence`}
-                  dataTestId={`absence-date-${index}`} // Adjust if TextQuestion uses data-testid
+                  dataTestId={`absence-date-${index}`}
                   ariaLive="off"
                 />
               </div>

@@ -23,7 +23,6 @@ export const getAbsencePeriodsErrors = (
     information.publicodesInformations
   );
 
-  // Check all absences
   if (state.hasAbsenceProlonge === "oui") {
     let totalMonthAbsence = 0;
     const absenceErrors: AncienneteAbsenceStoreError[] =
@@ -67,7 +66,11 @@ export const getAbsencePeriodsErrors = (
       });
     if (absenceErrors.length === 0) {
       errors.errorAbsencePeriods = {
-        global: "Vous devez renseigner à minima une absence",
+        absences: [
+          {
+            errorDuration: "Veuillez renseigner à minima une absence",
+          },
+        ],
       };
     } else if (
       absenceErrors.filter(
@@ -80,7 +83,9 @@ export const getAbsencePeriodsErrors = (
       };
     } else if (totalMonth < totalMonthAbsence) {
       errors.errorAbsencePeriods = {
-        global: `La durée totale des absences (${totalMonthAbsence} mois) ne peut pas être supérieure à la durée totale du contrat (${totalMonth} mois)`,
+        absences: state.absencePeriods.map(() => ({
+          errorDuration: `La durée totale des absences (${totalMonthAbsence} mois) ne peut pas être supérieure à la durée totale du contrat (${totalMonth} mois)`,
+        })),
       };
     } else {
       errors.errorAbsencePeriods = undefined;
