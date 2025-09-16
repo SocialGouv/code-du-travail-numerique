@@ -9,10 +9,12 @@ export const TallyNotice = ({ onClose, id }) => {
       <div className="fr-notice fr-notice--info">
         <div className="fr-container">
           <div className="fr-notice__content fr-grid-row fr-grid-row--middle">
-            <p className="fr-notice__title fr-col-11">
-              Donnez votre avis pour améliorer le site
+            <div className="fr-col-10 fr-grid-row fr-grid-row--middle">
+              <p className="fr-notice__title">
+                Donnez votre avis pour améliorer le site
+              </p>
               <button
-                className="fr-btn fr-btn--tertiary fr-ml-2w"
+                className="fr-btn fr-btn--primary fr-ml-md-2w"
                 data-tally-open={id}
                 data-tally-width="500"
                 data-tally-overlay="1"
@@ -23,10 +25,10 @@ export const TallyNotice = ({ onClose, id }) => {
               >
                 Répondre
               </button>
-            </p>
+            </div>
 
             <button
-              className={`fr-btn--close fr-btn fr-col-1`}
+              className={`fr-btn--close fr-btn fr-col-md-2`}
               title="Fermer la notice"
               onClick={onClose}
               aria-label="Fermer la notice"
