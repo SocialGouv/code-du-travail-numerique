@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { Alert } from "@codegouvfr/react-dsfr/Alert";
 import Link from "next/link";
 import { RadioQuestion, SelectQuestion } from "../../../common/components";
 import {

@@ -3,8 +3,8 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Input from "@codegouvfr/react-dsfr/Input";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { push as matopush } from "@socialgouv/matomo-next";
-import Alert from "@codegouvfr/react-dsfr/Alert";
 import { css } from "@styled-system/css";
+import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
 
 type Props = {
   idcc: string;
@@ -131,10 +131,10 @@ export function LegiFranceSearch({ idcc, shortTitle }: Props) {
         </div>
       </form>
 
-      <Alert
+      <AccessibleAlert
         severity="info"
         small
-        className={fr.cx("fr-mb-0")}
+        className={["fr-mb-0"]}
         description="Selon le thème, un accord collectif d'entreprise peut prévoir des règles différentes par rapport à la convention collective."
         data-testid="agreement-search-alert"
       />

@@ -48,14 +48,12 @@ export const SalairesMensuels: React.FC<Props> = ({
       </h4>
 
       {error && (
-        <div className={fr.cx("fr-mb-2w")}>
-          <AccessibleAlert
-            title="Attention"
-            description={error}
-            severity="error"
-            autoFocus
-          />
-        </div>
+        <AccessibleAlert
+          title="Attention"
+          description={error}
+          severity="error"
+          className={["fr-mb-2w"]}
+        />
       )}
 
       {salaires.map((salaire, index) => (

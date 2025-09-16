@@ -4,7 +4,6 @@ import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
 } from "src/modules/outils/indemnite-depart/store";
-import Alert from "@codegouvfr/react-dsfr/Alert";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 export default function Ineligible() {

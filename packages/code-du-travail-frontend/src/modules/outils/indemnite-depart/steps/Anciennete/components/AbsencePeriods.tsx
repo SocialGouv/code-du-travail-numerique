@@ -1,8 +1,6 @@
 import { Absence, Motif } from "@socialgouv/modeles-social";
 import React, { useEffect, useRef, useMemo } from "react";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { Alert } from "@codegouvfr/react-dsfr/Alert";
-
 import AbsencePeriod from "./AbsencePeriod";
 import type { AncienneteAbsenceStoreError } from "../store";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -208,7 +206,7 @@ const AbsencePeriods = ({
             absence={value}
             informationData={informationData}
             absenceRef={absenceRef}
-            autoFocus={index === 0 && !!error?.global}
+            autoFocus={index === 0}
             ariaDescribedby={error?.global ? errorMessageId : undefined}
           />
         );
@@ -232,7 +230,6 @@ const AbsencePeriods = ({
             title="Attention"
             description={error.global}
             severity="error"
-            autoFocus
           />
         </div>
       )}

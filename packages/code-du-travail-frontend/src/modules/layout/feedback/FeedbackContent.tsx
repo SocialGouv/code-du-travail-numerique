@@ -136,18 +136,23 @@ export const FeedbackContent = (props: Props) => {
         </>
       )}
       <Input
-        label="Faire une suggestion pour améliorer cette page"
+        label={
+          <>
+            Faire une suggestion pour améliorer cette page{" "}
+            <span className={fr.cx("fr-sr-only")}>
+              (500 caractères maximum)
+            </span>
+          </>
+        }
         textArea
         nativeTextAreaProps={{
           onChange: onInputSuggestion,
           value: suggestion,
-          "aria-describedby": "suggestion-help",
         }}
         state={hasSuggestionError ? "error" : "default"}
         stateRelatedMessage={errorMessageSuggestion}
       />
       <p
-        id="suggestion-help"
         className={fr.cx(
           remainingCharacters === 0 ? "fr-error-text" : "fr-info-text",
           "fr-mt-0",

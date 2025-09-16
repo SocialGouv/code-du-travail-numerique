@@ -1,7 +1,6 @@
 import React from "react";
 import { RadioQuestion } from ".";
 import { AgreementRoute } from "../../indemnite-depart/types";
-import Alert from "@codegouvfr/react-dsfr/Alert";
 import { AgreementSearchInput } from "src/modules/convention-collective/AgreementSearch/AgreementSearchInput";
 import { EnterpriseAgreementSearchInput } from "src/modules/enterprise";
 import {
@@ -100,14 +99,12 @@ export const CommonAgreementStep = ({
             trackingActionName={trackingActionName}
           />
           {error?.agreement && (
-            <div className={fr.cx("fr-mt-2w")}>
-              <AccessibleAlert
-                title="Attention"
-                severity="error"
-                description={error.agreement}
-                autoFocus
-              />
-            </div>
+            <AccessibleAlert
+              title="Attention"
+              severity="error"
+              description={error.agreement}
+              className={["fr-mt-2w"]}
+            />
           )}
         </>
       )}
@@ -128,26 +125,22 @@ export const CommonAgreementStep = ({
             canContinueSimulationIfNoAgreement={showNotSelectedOption}
           />
           {error?.enterprise && (
-            <div className={fr.cx("fr-mt-2w")}>
-              <AccessibleAlert
-                title="Attention"
-                severity="error"
-                description={error.enterprise}
-                autoFocus
-              />
-            </div>
+            <AccessibleAlert
+              title="Attention"
+              severity="error"
+              description={error.enterprise}
+              className={["fr-mt-2w"]}
+            />
           )}
         </>
       )}
       {error?.errorPublicodes && (
-        <div className={fr.cx("fr-mt-2w")}>
-          <AccessibleAlert
-            title="Attention"
-            severity="error"
-            description={error.errorPublicodes}
-            autoFocus
-          />
-        </div>
+        <AccessibleAlert
+          title="Attention"
+          severity="error"
+          description={error.errorPublicodes}
+          className={["fr-mt-2w"]}
+        />
       )}
     </>
   );

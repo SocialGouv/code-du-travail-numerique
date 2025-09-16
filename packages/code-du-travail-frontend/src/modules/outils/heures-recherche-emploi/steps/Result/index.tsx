@@ -42,14 +42,12 @@ const ResultStepComponent = () => {
 
   if (errorPublicodes) {
     return (
-      <div className={fr.cx("fr-col-md-8", "fr-col-12", "fr-mb-6w")}>
-        <AccessibleAlert
-          title="Attention"
-          description="Une erreur est survenue lors du calcul. Veuillez réessayer."
-          severity="error"
-          autoFocus
-        />
-      </div>
+      <AccessibleAlert
+        title="Attention"
+        description="Une erreur est survenue lors du calcul. Veuillez réessayer."
+        severity="error"
+        className={["fr-mb-2w"]}
+      />
     );
   }
 

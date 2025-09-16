@@ -80,8 +80,7 @@ export const getAbsencePeriodsErrors = (
       };
     } else if (totalMonth < totalMonthAbsence) {
       errors.errorAbsencePeriods = {
-        global:
-          "La durée totale des absences doit être inférieure ou égale à l'ancienneté",
+        global: `La durée totale des absences (${totalMonthAbsence} mois) ne peut pas être supérieure à la durée totale du contrat (${totalMonth} mois)`,
       };
     } else {
       errors.errorAbsencePeriods = undefined;

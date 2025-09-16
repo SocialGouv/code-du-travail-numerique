@@ -1,5 +1,4 @@
 import { Input } from "@codegouvfr/react-dsfr/Input";
-import { Alert } from "@codegouvfr/react-dsfr/Alert";
 import { SalaryPeriods } from "@socialgouv/modeles-social";
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -218,14 +217,12 @@ export const SalaireTempsPlein = ({
         </div>
       </div>
       {error && (
-        <div className={fr.cx("fr-mt-2w")}>
-          <AccessibleAlert
-            title="Attention"
-            description={error}
-            severity="error"
-            autoFocus
-          />
-        </div>
+        <AccessibleAlert
+          title="Attention"
+          description={error}
+          severity="error"
+          className={["fr-mt-2w"]}
+        />
       )}
       {note && <p className={fr.cx("fr-text--sm", "fr-mt-2w")}>{note}</p>}
     </div>

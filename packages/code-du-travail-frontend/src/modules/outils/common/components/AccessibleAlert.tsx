@@ -1,43 +1,40 @@
-import { fr } from "@codegouvfr/react-dsfr";
-import { ReactNode, useEffect, useRef } from "react";
+import { fr, FrCxArg } from "@codegouvfr/react-dsfr";
+import { ReactNode } from "react";
 
 type Props = {
   title?: string;
   description: string | ReactNode;
   severity: "error" | "warning" | "info";
-  autoFocus?: boolean;
   ["data-testid"]?: string;
   id?: string;
+  className?: FrCxArg[];
+  titleAs?: "h2" | "h3" | "h4" | "h5" | "h6";
+  small?: boolean;
 };
 
 export const AccessibleAlert = ({
   title,
   description,
   severity,
-  autoFocus,
   ["data-testid"]: dataTestId,
   id,
+  className,
+  titleAs: TitleTag = "h3",
+  small = false,
 }: Props) => {
-  const alertRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (autoFocus && alertRef.current) {
-      alertRef.current.focus();
-    }
-  }, [autoFocus]);
-
   return (
     <div
-      ref={alertRef}
       id={id}
-      className={fr.cx("fr-alert", `fr-alert--${severity}`)}
-      tabIndex={autoFocus ? -1 : undefined}
-      aria-live="assertive"
+      className={fr.cx("fr-alert", `fr-alert--${severity}`, className, {
+        "fr-alert--sm": small,
+      })}
+      aria-live={
+        severity === "info" || severity === "warning" ? "polite" : "assertive"
+      }
       aria-atomic="true"
-      // role="alert" pas utile si le aria-live="assertive" et aria-atomic="true" est présent
       data-testid={dataTestId}
     >
-      <h3 className={fr.cx("fr-alert__title")}>{title}</h3>
+      <TitleTag className={fr.cx("fr-alert__title")}>{title}</TitleTag>
       {typeof description === "string" ? <p>{description}</p> : description}
     </div>
   );

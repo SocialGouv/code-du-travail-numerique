@@ -1,5 +1,3 @@
-import { fr } from "@codegouvfr/react-dsfr";
-import Alert from "@codegouvfr/react-dsfr/Alert";
 import React, { useContext, useEffect, useMemo } from "react";
 import {
   RadioQuestion,
@@ -170,14 +168,12 @@ const StepAnciennete = () => {
         />
       )}
       {errorPublicodes && (
-        <div className={fr.cx("fr-mt-2w")}>
-          <AccessibleAlert
-            title="Attention"
-            description={errorPublicodes}
-            severity="error"
-            autoFocus
-          />
-        </div>
+        <AccessibleAlert
+          title="Attention"
+          description={errorPublicodes}
+          severity="error"
+          className={["fr-mt-2w"]}
+        />
       )}
     </>
   );

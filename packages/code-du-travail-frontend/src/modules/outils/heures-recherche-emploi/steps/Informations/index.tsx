@@ -63,14 +63,13 @@ const InformationsStepComponent = () => {
         <p className={fr.cx("fr-error-text")}>{errors.errorPublicodes}</p>
       )}
       {errors.errorNote && (
-        <div className={fr.cx("fr-mt-2w")}>
-          <AccessibleAlert
-            title="À noter"
-            severity="info"
-            description={errors.errorNote}
-            data-testid="alert-note"
-          />
-        </div>
+        <AccessibleAlert
+          title="À noter"
+          severity="info"
+          description={errors.errorNote}
+          data-testid="alert-note"
+          className={["fr-mt-2w"]}
+        />
       )}
     </>
   );
