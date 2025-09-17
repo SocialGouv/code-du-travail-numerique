@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { PreavisRetraiteContext, usePreavisRetraiteStore } from "../store";
 import { RadioQuestion } from "src/modules/outils/common/components";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
-import { fr } from "@codegouvfr/react-dsfr";
 
 const StepOrigin = () => {
   const store = useContext(PreavisRetraiteContext);
