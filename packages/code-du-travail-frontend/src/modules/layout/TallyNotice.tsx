@@ -9,12 +9,12 @@ import { useState, useEffect } from "react";
 type TallyNoticeProps = { onClose: () => void; id: string };
 
 export const TallyNotice = ({ onClose, id }: TallyNoticeProps) => {
-  const [isNoticeVisible, setIsNoticeVisible] = useState(true);
+  const [isNoticeVisible, setIsNoticeVisible] = useState(false);
 
   useEffect(() => {
     const isClosed = localStorage.getItem("tallyNoticeClosed");
-    if (isClosed === "true") {
-      setIsNoticeVisible(false);
+    if (!isClosed || isClosed === "false") {
+      setIsNoticeVisible(true);
     }
   }, []);
 
