@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@codegouvfr/react-dsfr/Button";
 import Script from "next/script";
 
 type TallyNoticeProps = { onClose: () => void; id: string };
@@ -34,20 +35,18 @@ export const TallyNotice = ({ onClose, id }: TallyNoticeProps) => {
             Répondre
           </button>
 
-          <button
-            className="fr-btn--close fr-btn fr-col-md-2"
-            title="Fermer la notice"
+          <Button
+            iconId="fr-icon-close-line"
             onClick={onClose}
-            aria-label="Fermer la notice"
+            priority="tertiary no outline"
+            title="Fermer la notice"
             style={{
               position: "absolute",
-              top: "0.5rem",
+              top: "0rem",
               right: "1rem",
               zIndex: 10,
             }}
-          >
-            ×
-          </button>
+          />
         </div>
       </div>
     </>
