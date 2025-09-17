@@ -4,10 +4,30 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Script from "next/script";
 import { css } from "@styled-system/css";
+import { useState, useEffect } from "react";
 
 type TallyNoticeProps = { onClose: () => void; id: string };
 
 export const TallyNotice = ({ onClose, id }: TallyNoticeProps) => {
+  const [isNoticeVisible, setIsNoticeVisible] = useState(true);
+
+  useEffect(() => {
+    const isClosed = localStorage.getItem("tallyNoticeClosed");
+    if (isClosed === "true") {
+      setIsNoticeVisible(false);
+    }
+  }, []);
+
+  const handleClose = () => {
+    localStorage.setItem("tallyNoticeClosed", "true");
+    setIsNoticeVisible(false);
+    onClose();
+  };
+
+  if (!isNoticeVisible) {
+    return null;
+  }
+
   return (
     <>
       <Script id="tally-js" src="https://tally.so/widgets/embed.js" />
@@ -54,7 +74,7 @@ export const TallyNotice = ({ onClose, id }: TallyNoticeProps) => {
 
           <Button
             iconId="fr-icon-close-line"
-            onClick={onClose}
+            onClick={handleClose}
             priority="tertiary no outline"
             title="Fermer la notice"
             className={closeButtonStyles}
