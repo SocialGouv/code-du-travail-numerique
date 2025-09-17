@@ -6,19 +6,16 @@ import {
   SalaryFieldError,
 } from "./types";
 
-// Export des types pour réutilisation dans les agreements
 export type { SalaryErrorType, SalaryFieldError };
 
 export const validateSalaryField = (
   value: string,
   isRequired: boolean = true
 ): SalaryFieldError | null => {
-  // Si le champ n'est pas requis et vide, c'est valide
   if (!isRequired && (!value || value.trim() === "")) {
     return null;
   }
 
-  // Si le champ est requis et vide
   if (isRequired && (!value || value.trim() === "")) {
     return {
       type: SalaryErrorType.REQUIRED,
@@ -26,7 +23,6 @@ export const validateSalaryField = (
     };
   }
 
-  // Validation du format numérique
   const numericValue = parseFloat(value);
   if (isNaN(numericValue)) {
     return {
@@ -35,7 +31,6 @@ export const validateSalaryField = (
     };
   }
 
-  // Validation valeur négative
   if (numericValue < 0) {
     return {
       type: SalaryErrorType.NEGATIVE_VALUE,
@@ -43,7 +38,6 @@ export const validateSalaryField = (
     };
   }
 
-  // Validation valeur zéro (pour les salaires requis)
   if (isRequired && numericValue === 0) {
     return {
       type: SalaryErrorType.ZERO_VALUE,

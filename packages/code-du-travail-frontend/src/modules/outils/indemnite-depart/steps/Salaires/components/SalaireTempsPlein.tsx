@@ -36,31 +36,49 @@ export const SalaireTempsPlein = ({
 }: Props) => {
   const salaryInputRefs = React.useRef<(HTMLInputElement | null)[]>([]);
   const primeInputRefs = React.useRef<(HTMLInputElement | null)[]>([]);
+  const hasFocusedRef = React.useRef(false);
 
   React.useEffect(() => {
-    const firstSalaryErrorIndex = salaryPeriods.findIndex(
-      (_, index) =>
-        errorSalaryPeriods &&
-        errorSalaryPeriods[`${index}`] !== null &&
-        errorSalaryPeriods[`${index}`] !== undefined
-    );
-    if (firstSalaryErrorIndex !== -1) {
-      salaryInputRefs.current[firstSalaryErrorIndex]?.focus();
-      return;
-    }
+    if (!hasFocusedRef.current) {
+      const firstSalaryErrorIndex = salaryPeriods.findIndex(
+        (_, index) =>
+          errorSalaryPeriods &&
+          errorSalaryPeriods[`${index}`] !== null &&
+          errorSalaryPeriods[`${index}`] !== undefined
+      );
 
-    // Focus sur le premier champ de prime avec erreur
-    const firstPrimeErrorIndex = errorPrimeSalaryPeriods
-      ? Object.keys(errorPrimeSalaryPeriods).find(
-          (key) =>
-            errorPrimeSalaryPeriods[key] !== null &&
-            errorPrimeSalaryPeriods[key] !== undefined
-        )
-      : undefined;
+      if (
+        firstSalaryErrorIndex !== -1 &&
+        salaryInputRefs.current[firstSalaryErrorIndex]
+      ) {
+        salaryInputRefs.current[firstSalaryErrorIndex]?.focus();
+        salaryInputRefs.current[firstSalaryErrorIndex]?.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+        hasFocusedRef.current = true;
+        return;
+      }
 
-    if (firstPrimeErrorIndex !== undefined) {
-      const index = parseInt(firstPrimeErrorIndex);
-      primeInputRefs.current[index]?.focus();
+      const firstPrimeErrorIndex = errorPrimeSalaryPeriods
+        ? Object.keys(errorPrimeSalaryPeriods).find(
+            (key) =>
+              errorPrimeSalaryPeriods[key] !== null &&
+              errorPrimeSalaryPeriods[key] !== undefined
+          )
+        : undefined;
+
+      if (firstPrimeErrorIndex !== undefined) {
+        const index = parseInt(firstPrimeErrorIndex);
+        if (primeInputRefs.current[index]) {
+          primeInputRefs.current[index]?.focus();
+          primeInputRefs.current[index]?.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+          hasFocusedRef.current = true;
+        }
+      }
     }
   }, [errorSalaryPeriods, errorPrimeSalaryPeriods, salaryPeriods]);
 

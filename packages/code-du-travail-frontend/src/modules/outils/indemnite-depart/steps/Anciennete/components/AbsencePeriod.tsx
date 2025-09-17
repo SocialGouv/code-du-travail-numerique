@@ -58,18 +58,30 @@ const AbsencePeriod = ({
           motifs[0].startAt(informationData)
   );
 
+  const durationInputRef = useRef<HTMLInputElement>(null);
+  const dateInputRef = useRef<HTMLInputElement>(null);
+  const hasFocusedRef = useRef(false);
+
   useEffect(() => {
-    if (durationError) {
-      const durationInput = document.getElementById(`${index}.duration`);
-      if (durationInput) {
-        durationInput.focus();
-        durationInput.scrollIntoView({
+    if (!hasFocusedRef.current) {
+      // Priorité: erreur de durée d'abord, puis erreur de date
+      if (durationError && durationInputRef.current) {
+        durationInputRef.current.focus();
+        durationInputRef.current.scrollIntoView({
           behavior: "smooth",
           block: "center",
         });
+        hasFocusedRef.current = true;
+      } else if (absenceDateError && dateInputRef.current) {
+        dateInputRef.current.focus();
+        dateInputRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+        hasFocusedRef.current = true;
       }
     }
-  }, [durationError, index]);
+  }, [durationError, absenceDateError]);
 
   const selectMotif = (key: string, value: string) => {
     const motif = motifs.find((motif) => motif.label === value);
@@ -123,6 +135,7 @@ const AbsencePeriod = ({
                     id: `${index}.duration`,
                     type: "number",
                     step: "1",
+                    min: "1",
                     pattern: "[0-9]*",
                     inputMode: "numeric",
                     onChange: (e) =>
@@ -131,6 +144,7 @@ const AbsencePeriod = ({
                     value: absence?.durationInMonth ?? "",
                     "data-testid": `absence-duree-${index}`,
                     "aria-live": "off",
+                    ref: durationInputRef,
                   } as InputProps
                 }
                 classes={{
