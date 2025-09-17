@@ -22,6 +22,13 @@ export const validateAgreement44 = (
 };
 
 export const validateStep = (state: Agreement44StoreInput) => {
+  const salaryErrors = validateSalaryPeriods(
+    state.lastMonthSalary ? [state.lastMonthSalary] : []
+  );
+  const hasSalaryErrors = Object.values(salaryErrors).some(
+    (error) => error !== null
+  );
+
   const errorState = {
     errorHasVariablePay:
       state.showVariablePay && !state.hasVariablePay
@@ -37,9 +44,9 @@ export const validateStep = (state: Agreement44StoreInput) => {
       state.showVariablePay &&
       state.showKnowingLastSalary &&
       state.showLastMonthSalary
-        ? validateSalaryPeriods(
-            state.lastMonthSalary ? [state.lastMonthSalary] : []
-          )
+        ? hasSalaryErrors
+          ? salaryErrors
+          : undefined
         : undefined,
   };
 

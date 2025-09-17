@@ -86,18 +86,14 @@ describe("Indemnité licenciement - Step salaire", () => {
 
       // vérification que l'on affiche un message d'erreur si l'on n'a pas saisi les salaires
       userAction.click(ui.next.get());
-      expect(
-        screen.queryByText("Vous devez compléter l'ensemble des champs")
-      ).toBeInTheDocument();
+      expect(screen.queryByText("Ce champ est requis")).toBeInTheDocument();
 
       // vérification que les primes ne sont pas obligatoires
       ui.salary.salaries.getAll().forEach((input) => {
         userAction.setInput(input, "1000");
       });
       userAction.click(ui.next.get());
-      expect(
-        screen.queryByText("Vous devez compléter l'ensemble des champs")
-      ).not.toBeInTheDocument();
+      expect(screen.queryByText("Ce champ est requis")).not.toBeInTheDocument();
       expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
       expect(ui.result.salaryTableRows.getAll().length).toBe(12);
       expect(ui.result.salaryTableRows.getAll()[0]).toHaveTextContent(

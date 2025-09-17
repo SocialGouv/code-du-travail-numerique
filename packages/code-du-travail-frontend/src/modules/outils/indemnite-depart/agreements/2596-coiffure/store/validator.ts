@@ -33,13 +33,20 @@ export const validateStep = (state: Agreement2596StoreInput) => {
   const noticeSalaryPeriods = state.noticeSalaryPeriods ?? [];
 
   if (noticeSalaryPeriods.length > 0) {
+    const salaryErrors = validateSalaryPeriods(noticeSalaryPeriods);
+    const hasSalaryErrors = Object.values(salaryErrors).some(
+      (error) => error !== null
+    );
+
     errorState = {
       errorHasReceivedSalaries: !state.hasReceivedSalaries
         ? "Vous devez répondre à cette question"
         : undefined,
       errorNoticeSalaryPeriods:
         state.hasReceivedSalaries === "oui"
-          ? validateSalaryPeriods(noticeSalaryPeriods)
+          ? hasSalaryErrors
+            ? salaryErrors
+            : undefined
           : undefined,
     };
   }
