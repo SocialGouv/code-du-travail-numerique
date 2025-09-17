@@ -62,7 +62,7 @@ export const TallyNotice = ({ onClose, id }: TallyNoticeProps) => {
               "fr-text--middle"
             )} ${respondButtonStyles}`}
             data-tally-open={id}
-            data-tally-width="500"
+            data-tally-width="700"
             data-tally-overlay="1"
             data-tally-auto-resize="true"
             aria-label="Ouvrir le formulaire d'avis"
