@@ -144,7 +144,7 @@ describe("AbsencePeriod Component - Accessibility and Error Handling Tests", () 
     );
 
     const titleElement = screen.getByText("Absence 1");
-    expect(titleElement.tagName).toBe("P");
+    expect(titleElement.tagName).toBe("LEGEND");
     expect(titleElement).toHaveClass(fr.cx("fr-text--bold", "fr-mb-1w"));
   });
 
