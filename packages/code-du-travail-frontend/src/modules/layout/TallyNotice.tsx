@@ -96,7 +96,7 @@ const respondButtonStyles = css({
 
 const closeButtonStyles = css({
   position: "absolute",
-  top: "0rem",
+  top: "0.25rem",
   right: "1rem",
   zIndex: 10,
 });
