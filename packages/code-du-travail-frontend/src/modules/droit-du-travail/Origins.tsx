@@ -160,7 +160,6 @@ const Origins = () => (
                   href="https://www.echr.coe.int/Pages/home.aspx?p=basictexts&c=fre"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="La Convention européenne de sauvegarde des droits de l'Homme et des libertés fondamentales"
                 >
                   La Convention européenne de sauvegarde des droits de
                   l&apos;Homme et des libertés fondamentales
