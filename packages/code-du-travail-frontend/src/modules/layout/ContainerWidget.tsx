@@ -28,7 +28,6 @@ export const ContainerWidget = ({ children }: Props) => {
           <Link
             href="/politique-confidentialite"
             target="_blank"
-            title="Politique de confidentialité"
           >
             Politique de confidentialité
           </Link>
