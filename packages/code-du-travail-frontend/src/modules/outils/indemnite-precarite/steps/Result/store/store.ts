@@ -104,8 +104,11 @@ const createResultStore: StoreSliceWrapperIndemnitePrecarite<
       } catch (e) {
         errorPublicodes = true;
         console.error("Error in publicodes calculation:", e);
-        console.error(`La situation est ${JSON.stringify(situation)}`);
-        Sentry.captureException(e);
+        Sentry.captureException(e, {
+          extra: {
+            situation: situation,
+          },
+        });
       }
 
       set(
