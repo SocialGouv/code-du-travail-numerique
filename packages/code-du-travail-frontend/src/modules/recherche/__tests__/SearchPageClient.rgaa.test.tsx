@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import { SearchPageClient } from "../SearchPageClient";
 
 jest.mock("next/navigation", () => ({
-  useSearchParams: () => new URLSearchParams("q=test"),
+  useSearchParams: () => new URLSearchParams("query=test"),
   useRouter: () => ({
     push: jest.fn(),
   }),

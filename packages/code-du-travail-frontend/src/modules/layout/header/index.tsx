@@ -9,7 +9,7 @@ export const Header = () => {
 
   const onSearchSubmit = (text: string) => {
     if (text !== "") {
-      router.push(`/recherche?q=${encodeURIComponent(text)}`);
+      router.push(`/recherche?query=${encodeURIComponent(text)}`);
     }
   };
 

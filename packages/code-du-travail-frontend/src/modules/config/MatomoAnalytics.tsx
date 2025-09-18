@@ -116,7 +116,7 @@ export const MatomoProvider = ({ children }: PropsWithChildren) => {
       push(["deleteCustomVariables", "page"]);
       setPreviousPath(pathname);
 
-      const query = searchParams?.get("q");
+      const query = searchParams?.get("query");
       push(["setDocumentTitle", document.title]);
       if (startsWith(path, "/recherche") || startsWith(path, "/search")) {
         push(["trackSiteSearch", query ?? ""]);

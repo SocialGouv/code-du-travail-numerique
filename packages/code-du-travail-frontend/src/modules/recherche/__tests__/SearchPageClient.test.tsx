@@ -7,7 +7,7 @@ import { SOURCES } from "@socialgouv/cdtn-utils";
 // Mock the Next.js navigation hooks
 jest.mock("next/navigation", () => ({
   useSearchParams: () => ({
-    get: jest.fn((param) => (param === "q" ? "test query" : null)),
+    get: jest.fn((param) => (param === "query" ? "test query" : null)),
   }),
   useRouter: () => ({
     push: jest.fn(),
