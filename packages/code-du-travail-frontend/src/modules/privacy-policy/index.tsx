@@ -183,7 +183,6 @@ export const PrivacyPolicy = () => {
             <Link
               target="_blank"
               href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser"
-              title="Cookies : les outils pour les maîtriser"
             >
               Cookies : les outils pour les maîtriser
             </Link>
