@@ -5,7 +5,7 @@ describe("Outil - Trouver sa convention collective", () => {
     cy.canonicalUrlEqual("/outils/convention-collective");
     cy.titleAndMetaDescriptionEqual(
       "Simulateur - Trouver sa convention collective - Code du travail numérique",
-      "Rechercher une convention collective par Entreprise, SIRET, Nom ou numéro IDCC"
+      "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC"
     );
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Trouver sa convention collective")
