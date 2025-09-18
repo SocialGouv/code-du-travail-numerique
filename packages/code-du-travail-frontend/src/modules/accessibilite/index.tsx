@@ -248,7 +248,6 @@ export const Accessibilite = () => {
             href="https://formulaire.defenseurdesdroits.fr/code/afficher.php?ETAPE=accueil_2016"
             target="_blank"
             rel="noopener noreferrer"
-            title="Écrire un message au Défenseur des droits"
           >
             Écrire un message au Défenseur des droits
           </Link>
