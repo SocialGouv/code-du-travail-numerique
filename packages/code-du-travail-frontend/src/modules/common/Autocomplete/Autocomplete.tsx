@@ -5,14 +5,7 @@ import Image from "next/image";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Input, { InputProps } from "@codegouvfr/react-dsfr/Input";
 import Downshift, { DownshiftState, StateChangeOptions } from "downshift";
-import {
-  useState,
-  useRef,
-  MutableRefObject,
-  Ref,
-  useEffect,
-  ReactNode,
-} from "react";
+import { useState, useRef, MutableRefObject, Ref, useEffect } from "react";
 import Spinner from "../Spinner.svg";
 import { css } from "@styled-system/css";
 import Link from "../Link";
