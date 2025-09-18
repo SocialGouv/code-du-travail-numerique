@@ -174,7 +174,6 @@ export const PrivacyPolicy = () => {
             <Link
               target="_blank"
               href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi"
-              title="Cookies et traceurs : que dit la loi ?"
             >
               Cookies et traceurs : que dit la loi ?
             </Link>
