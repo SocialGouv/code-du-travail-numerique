@@ -53,7 +53,6 @@ export async function generateStaticParams(): Promise<PageParams[]> {
       error
     );
 
-    // Return empty array to enable ISR fallback
     return [];
   }
 }
