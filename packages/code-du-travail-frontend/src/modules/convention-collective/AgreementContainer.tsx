@@ -50,7 +50,6 @@ export function AgreementContainer({ agreement, relatedItems }: Props) {
         className={fr.cx("fr-link")}
         data-testid="agreement-legifrance-link"
         rel="noopener noreferrer"
-        title="Lien vers Légifrance"
       >
         Retrouvez l&apos;intégralité de la convention collective sur Légifrance
       </Link>
