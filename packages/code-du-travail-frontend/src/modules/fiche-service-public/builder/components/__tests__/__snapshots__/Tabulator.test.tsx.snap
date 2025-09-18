@@ -2,9 +2,7 @@
 
 exports[`<Tabulator /> should render 1`] = `
 <div>
-  <div
-    class="pos_relative"
-  >
+  <div>
     <div
       class="fr-tabs fr-mb-4w"
       data-fr-js-tabs="true"

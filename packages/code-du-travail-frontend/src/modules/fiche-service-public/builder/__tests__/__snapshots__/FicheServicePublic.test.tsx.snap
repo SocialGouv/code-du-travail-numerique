@@ -50,9 +50,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
     CDD
      ou en intérim, des dispositions spécifiques de rupture anticipée du contrat de travail sont prévues. Nous vous présentons les informations à connaître.
   </p>
-  <div
-    class="pos_relative"
-  >
+  <div>
     <div
       class="fr-tabs fr-mb-4w"
       data-fr-js-tabs="true"
