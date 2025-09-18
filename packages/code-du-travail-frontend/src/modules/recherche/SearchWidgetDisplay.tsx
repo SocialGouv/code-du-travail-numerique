@@ -6,8 +6,8 @@ import { css } from "@styled-system/css";
 import { useSearchTracking, MatomoWidgetEvent } from "./tracking";
 import Image from "next/image";
 import Button from "@codegouvfr/react-dsfr/Button";
-import Link from "next/link";
 import { useIframeResizer } from "../utils/useIframeResizer";
+import Link from "../common/Link";
 
 export const SearchWidgetDisplay: React.FC = () => {
   const { emitSearchEvent, emitWidgetEvent } = useSearchTracking();

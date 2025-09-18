@@ -19,8 +19,8 @@ import { IndemniteDepartStepName } from "src/modules/outils/indemnite-depart";
 import { IndemniteDepartType } from "src/modules/outils/indemnite-depart/types";
 import { AgreementsInjector } from "src/modules/outils/indemnite-depart/agreements";
 import { getForMoreInfoMessage, getResultMessage } from "./utils";
-import Link from "next/link";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
+import Link from "src/modules/common/Link";
 
 export default function Eligible() {
   const store = useContext(IndemniteDepartContext);
@@ -113,6 +113,8 @@ export default function Eligible() {
           <Link
             href="/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi#lindemnite-de-licenciement-est-elle-imposable"
             target="_blank"
+            rel="noopener noreferrer"
+            title="L'indemnité de licenciement est-elle imposable ?"
           >
             en savoir plus
           </Link>

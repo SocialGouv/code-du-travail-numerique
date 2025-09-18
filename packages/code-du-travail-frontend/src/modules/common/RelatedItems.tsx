@@ -7,6 +7,7 @@ import { ListWithArrow } from "./ListWithArrow";
 import { useCommonTracking } from "./tracking";
 import { RelatedItem } from "../documents";
 import { css } from "@styled-system/css";
+import Link from "./Link";
 
 export const RelatedItems = ({
   relatedItems = [],
@@ -34,7 +35,7 @@ export const RelatedItems = ({
               <ListWithArrow
                 items={items.map(({ source, title, url }) => {
                   return (
-                    <a
+                    <Link
                       key={url}
                       href={url}
                       onClick={() =>
@@ -45,7 +46,7 @@ export const RelatedItems = ({
                       }
                     >
                       {title}
-                    </a>
+                    </Link>
                   );
                 })}
               />

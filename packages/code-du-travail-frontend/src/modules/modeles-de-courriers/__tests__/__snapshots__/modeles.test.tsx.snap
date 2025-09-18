@@ -376,7 +376,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
               class="fr-btn fr-btn--tertiary ri-mail-line before:c_var(--artwork-minor-blue-cumulus)"
               href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Mon%20modele&body=ma%20m%C3%A9ta%20description%0A%0Ahttp%3A%2F%2Fapi.urlundefined"
               rel="noopener external"
-              title="Envoyer par email"
+              title="Envoyer par courriel"
             >
               Courriel
             </a>

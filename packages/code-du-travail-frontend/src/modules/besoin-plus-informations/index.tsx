@@ -61,14 +61,14 @@ export const BesoinPlusInformations = () => {
       <section className={fr.cx("fr-mb-6w")}>
         <h2 className={fr.cx("fr-h5", "fr-mb-2w")}>Contact téléphonique</h2>
 
-        <a href="tel:+33806000126" onClick={onClickLinkPhoneNumber}>
+        <Link href="tel:+33806000126" onClick={onClickLinkPhoneNumber}>
           <Image
             src="/static/assets/img/srdt.svg"
             alt="Contactez les services de renseignements au droit du travail au 0806 000 126, service gratuit en plus du prix d'un appel"
             width={350}
             height={100}
           />
-        </a>
+        </Link>
       </section>
       <section className={fr.cx("fr-mb-6w")}>
         <h2 className={fr.cx("fr-h5", "fr-mb-2w")}>
@@ -118,6 +118,7 @@ export const BesoinPlusInformations = () => {
             target="_blank"
             data-testid="result-search-service"
             ref={setLinkRef}
+            title="Consulter le site des renseignements du département indiqué"
           >
             {result.url}
           </Link>

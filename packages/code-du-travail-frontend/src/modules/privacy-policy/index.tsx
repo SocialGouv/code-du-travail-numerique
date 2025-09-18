@@ -43,6 +43,7 @@ export const PrivacyPolicy = () => {
             <Link
               href="https://us.ovhcloud.com/legal/data-processing-agreement"
               target="_blank"
+              title="l'accord de traitement des données d'OVH"
             >
               https://us.ovhcloud.com/legal/data-processing-agreement
             </Link>
@@ -68,7 +69,11 @@ export const PrivacyPolicy = () => {
           </li>
           <li>
             <strong>Garanties :</strong>{" "}
-            <Link href="https://fr.matomo.org/privacy-policy/" target="_blank">
+            <Link
+              href="https://fr.matomo.org/privacy-policy/"
+              target="_blank"
+              title="la politique de confidentialité de Matomo"
+            >
               https://fr.matomo.org/privacy-policy/
             </Link>
           </li>
@@ -94,7 +99,11 @@ export const PrivacyPolicy = () => {
           </li>
           <li>
             <strong>Garanties :</strong>{" "}
-            <Link href="https://fr.matomo.org/privacy-policy/" target="_blank">
+            <Link
+              href="https://fr.matomo.org/privacy-policy/"
+              target="_blank"
+              title="la politique de confidentialité de Matomo"
+            >
               https://fr.matomo.org/privacy-policy/
             </Link>
           </li>
@@ -120,6 +129,7 @@ export const PrivacyPolicy = () => {
             <Link
               href="https://policies.google.com/privacy?hl=fr"
               target="_blank"
+              title="la politique de confidentialité de Google"
             >
               https://policies.google.com/privacy?hl=fr
             </Link>

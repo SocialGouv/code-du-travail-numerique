@@ -55,7 +55,7 @@ describe("<ReferenceList />", () => {
     ).toHaveAttribute("target", "_blank");
     expect(
       getByText("Convention collective: Article yyy du JO")
-    ).toHaveAttribute("rel", "noreferer noopener");
+    ).toHaveAttribute("rel", "noopener noreferrer");
 
     expect(getByText("Convention collective: CCN metallurgie").tagName).toEqual(
       "A"
@@ -70,7 +70,7 @@ describe("<ReferenceList />", () => {
     );
     expect(getByText("Convention collective: CCN metallurgie")).toHaveAttribute(
       "rel",
-      "noreferer noopener"
+      "noopener noreferrer"
     );
 
     expect(getByText("Convention collective: automobile").tagName).toEqual("A");

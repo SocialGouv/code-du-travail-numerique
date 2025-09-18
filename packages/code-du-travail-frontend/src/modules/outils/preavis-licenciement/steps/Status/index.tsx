@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import Link from "next/link";
 import { RadioQuestion, SelectQuestion } from "../../../common/components";
 import {
   PreavisLicenciementContext,
@@ -7,6 +6,7 @@ import {
 } from "../store";
 import { Seniority } from "./store/types";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
+import Link from "src/modules/common/Link";
 
 const StepStatus = () => {
   const store = useContext(PreavisLicenciementContext);

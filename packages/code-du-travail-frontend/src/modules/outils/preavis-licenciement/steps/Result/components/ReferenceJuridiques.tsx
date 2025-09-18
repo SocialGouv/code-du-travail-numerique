@@ -1,5 +1,6 @@
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
+import Link from "src/modules/common/Link";
 
 interface ReferenceJuridique {
   article: string;
@@ -23,9 +24,9 @@ const ReferenceJuridiques: React.FC<ReferenceJuridiquesProps> = ({
       <ul>
         {references.map((ref, index) => (
           <li key={index}>
-            <a href={ref.url} target="_blank" rel="noopener noreferrer">
+            <Link href={ref.url} target="_blank" rel="noopener noreferrer">
               {ref.article}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

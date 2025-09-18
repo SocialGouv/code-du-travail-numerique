@@ -93,13 +93,13 @@ export const Share = ({ title, metaDescription }: Props) => {
           </Link>
         </li>
         <li>
-          <a
+          <Link
             className={`${fr.cx(
               "fr-btn",
               "fr-btn--tertiary",
               "ri-mail-line"
             )} ${blueCumulus}`}
-            title="Envoyer par email"
+            title="Envoyer par courriel"
             rel="noopener external"
             href={`mailto:?subject=${encodeURIComponent(
               `A lire sur le Code du travail numérique : ${title}`
@@ -109,7 +109,7 @@ export const Share = ({ title, metaDescription }: Props) => {
             }}
           >
             Courriel
-          </a>
+          </Link>
         </li>
         <li>
           <Link

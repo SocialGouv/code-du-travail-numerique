@@ -12,17 +12,20 @@ export const FooterBottom = () => (
         </Link>
       </li>
       <li className={fr.cx("fr-footer__bottom-item")}>
-        <a href="/mentions-legales" className={fr.cx("fr-footer__bottom-link")}>
+        <Link
+          href="/mentions-legales"
+          className={fr.cx("fr-footer__bottom-link")}
+        >
           Mentions légales
-        </a>
+        </Link>
       </li>
       <li className={fr.cx("fr-footer__bottom-item")}>
-        <a
+        <Link
           href="/politique-confidentialite"
           className={fr.cx("fr-footer__bottom-link")}
         >
           Politique de confidentialité
-        </a>
+        </Link>
       </li>
       <li className={fr.cx("fr-footer__bottom-item")}>
         <Link
@@ -35,9 +38,9 @@ export const FooterBottom = () => (
         </Link>
       </li>
       <li className={fr.cx("fr-footer__bottom-item")}>
-        <a href="/plan-du-site" className={fr.cx("fr-footer__bottom-link")}>
+        <Link href="/plan-du-site" className={fr.cx("fr-footer__bottom-link")}>
           Plan du site
-        </a>
+        </Link>
       </li>
     </ul>
     <div className={fr.cx("fr-footer__bottom-copy")}>

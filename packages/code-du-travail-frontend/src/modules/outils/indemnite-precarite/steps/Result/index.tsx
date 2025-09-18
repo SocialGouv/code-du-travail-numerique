@@ -7,6 +7,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { ShowResult, Situation, Warning } from "./components";
 import FormulaInterpreter from "src/modules/outils/common/components/FormulaInterpreter";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
+import Link from "src/modules/common/Link";
 
 const ResultStepComponent = () => {
   const store = useContext(IndemnitePrecariteContext);
@@ -66,9 +67,9 @@ const ResultStepComponent = () => {
           <ul>
             {resultReferences.map((ref, index) => (
               <li key={index}>
-                <a href={ref.url} target="_blank" rel="noopener noreferrer">
+                <Link href={ref.url} target="_blank" rel="noopener noreferrer">
                   {ref.article}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
