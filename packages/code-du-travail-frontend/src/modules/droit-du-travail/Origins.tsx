@@ -225,7 +225,6 @@ const Origins = () => (
                 href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/charte-de-l-environnement-de-2004"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="la Charte de l'environnement de 2004"
               >
                 la Charte de l&apos;environnement de 2004
               </Link>
