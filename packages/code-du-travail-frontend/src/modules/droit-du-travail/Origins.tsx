@@ -127,7 +127,6 @@ const Origins = () => (
                   href="https://www.etuc.org/fr"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="la Confédération européenne des syndicats (CES)"
                 >
                   la Confédération européenne des syndicats (CES)
                 </Link>
