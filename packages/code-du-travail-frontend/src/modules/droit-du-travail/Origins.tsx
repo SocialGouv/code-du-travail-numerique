@@ -101,7 +101,6 @@ const Origins = () => (
                 href="https://europa.eu/european-union/index_fr"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="l'Union Européenne"
               >
                 l&apos;Union Européenne
               </Link>{" "}
