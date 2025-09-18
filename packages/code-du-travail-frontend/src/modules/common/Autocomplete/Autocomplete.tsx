@@ -32,7 +32,6 @@ export type AutocompleteProps<K> = InputProps & {
   isSearch?: boolean;
   placeholder?: string;
   inputRef?: Ref<HTMLInputElement>;
-  label?: ReactNode;
 };
 
 export const Autocomplete = <K,>({
