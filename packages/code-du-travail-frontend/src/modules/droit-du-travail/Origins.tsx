@@ -143,7 +143,6 @@ const Origins = () => (
                   href="https://sgieurope.org/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="le Centre européen des entreprises à participation publique"
                 >
                   le Centre européen des entreprises à participation publique
                 </Link>{" "}
