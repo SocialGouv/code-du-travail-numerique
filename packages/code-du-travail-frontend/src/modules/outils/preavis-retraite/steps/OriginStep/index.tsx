@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { WarningOriginDepart } from "./components/Warning";
 import { PreavisRetraiteContext, usePreavisRetraiteStore } from "../store";
 import { RadioQuestion } from "src/modules/outils/common/components";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 const StepOrigin = () => {
   const store = useContext(PreavisRetraiteContext);
@@ -33,9 +33,30 @@ const StepOrigin = () => {
         selectedOption={originDepart}
         onChangeSelectedOption={onChangeOriginDepart}
         error={errorOriginDepart}
-        autoFocus
       />
-      {originDepart === "mise-retraite" && <WarningOriginDepart />}
+      {originDepart === "mise-retraite" && (
+        <AccessibleAlert
+          severity="info"
+          title="À noter"
+          data-testid="warning-origin-depart"
+          className={["fr-mt-2w"]}
+          description={
+            <>
+              L&apos;employeur qui décide une mise à la retraite doit en avoir
+              informé son salarié.
+              <br />
+              Plus d&apos;info&nbsp;:{" "}
+              <a
+                href="/fiche-service-public/un-employeur-peut-il-mettre-doffice-un-salarie-a-la-retraite"
+                target="_blank"
+              >
+                L&apos;employeur peut-il mettre d&apos;office un salarié à la
+                retraite ?
+              </a>
+            </>
+          }
+        />
+      )}
     </>
   );
 };

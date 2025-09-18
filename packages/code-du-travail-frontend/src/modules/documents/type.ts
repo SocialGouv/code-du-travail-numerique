@@ -23,7 +23,6 @@ export type RelatedItem = Pick<DocumentElastic, "title"> & {
   url: string;
 };
 
-// @TODO : utiliser LinkedContent dans cdtn-types une fois le package publié
 export type LinkedContent = Pick<DocumentElastic, "title"> & {
   source: Source;
   slug: string;

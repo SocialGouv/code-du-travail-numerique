@@ -75,7 +75,7 @@ export default function Agreement1516() {
               } salaire${S()} (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ`}
               onSalariesChange={onSalariesChange}
               salaryPeriods={noticeSalaryPeriods}
-              error={errorNoticeSalaryPeriods}
+              errorSalaryPeriods={errorNoticeSalaryPeriods}
               dataTestidSalaries="notice-salary"
               agreementNumber={1516}
             />

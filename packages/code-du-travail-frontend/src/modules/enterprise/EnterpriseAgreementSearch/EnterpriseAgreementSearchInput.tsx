@@ -4,7 +4,6 @@ import Image from "next/image";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Input from "@codegouvfr/react-dsfr/Input";
 import Badge from "@codegouvfr/react-dsfr/Badge";
-import Alert from "@codegouvfr/react-dsfr/Alert";
 import { EnterpriseCard } from "./EnterpriseCard";
 import { createElement, ReactNode, useEffect, useRef, useState } from "react";
 import { css } from "@styled-system/css";
@@ -21,6 +20,7 @@ import { useEnterpriseAgreementSearchTracking } from "./tracking";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
 import { scrollToTop } from "src/modules/outils/common/utils";
 import { ApiGeoResult } from "./searchCities";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 type Props = {
   widgetMode?: boolean;
@@ -256,8 +256,8 @@ export const EnterpriseAgreementSearchInput = ({
         </div>
 
         {selectedAgreement && selectedAgreementAlert?.(selectedAgreement) && (
-          <Alert
-            className={fr.cx("fr-mt-2w")}
+          <AccessibleAlert
+            className={["fr-mt-2w"]}
             title="Nous n’avons pas de réponse pour cette convention collective"
             description={selectedAgreementAlert(selectedAgreement)}
             severity="warning"
@@ -415,9 +415,9 @@ export const EnterpriseAgreementSearchInput = ({
             </div>
           )}
           {searchState === "notFoundSearch" && (
-            <Alert
+            <AccessibleAlert
               title="Vous ne trouvez pas votre entreprise&nbsp;?"
-              as={`h${(level ?? 2) + 1}` as "h3" | "h4"}
+              titleAs={`h${(level ?? 2) + 1}` as "h3" | "h4"}
               description={
                 <>
                   <p>Il peut y avoir plusieurs explications à cela&nbsp;:</p>

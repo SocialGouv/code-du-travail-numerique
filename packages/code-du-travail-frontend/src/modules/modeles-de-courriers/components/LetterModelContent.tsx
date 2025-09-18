@@ -2,12 +2,12 @@ import { fr } from "@codegouvfr/react-dsfr";
 import Html from "../../common/Html";
 import { css } from "@styled-system/css";
 import { getDisclaimer } from "../helpers";
-import { Alert } from "@codegouvfr/react-dsfr/Alert";
 import { DownloadTile } from "./DownloadTile";
 import { CopyButton } from "./CopyButton";
 import "../../../../public/static/modeles.css";
 import { MailElasticDocument } from "@socialgouv/cdtn-types";
 import DisplayContent from "src/modules/common/DisplayContent";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 export type LetterModelContentProps = Pick<
   MailElasticDocument,
@@ -51,10 +51,9 @@ export const LetterModelContent = ({
       >
         <Html>{html}</Html>
       </div>
-      <Alert
-        className={fr.cx("fr-mb-6w")}
+      <AccessibleAlert
+        className={["fr-mb-6w"]}
         description={getDisclaimer(slug)}
-        closable={false}
         severity="info"
         small
       />

@@ -1,6 +1,6 @@
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
-import Alert from "@codegouvfr/react-dsfr/Alert";
+import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
 
 const Introduction = () => (
   <div className={fr.cx("fr-grid-row", "fr-grid-row--center")}>
@@ -28,9 +28,9 @@ const Introduction = () => (
         Le droit du travail est un droit en constante évolution car il comprend
         des enjeux sociaux, économiques et politiques forts.
       </p>
-      <Alert
+      <AccessibleAlert
         severity="info"
-        className={fr.cx("fr-mt-4w")}
+        className={["fr-mt-4w"]}
         title="Le droit du travail, ce n'est pas..."
         description="Le droit du travail ne concerne pas les travailleurs qui sont soumis au droit public (par exemple, les fonctionnaires), les travailleurs indépendants (artisan, commerçant, professions libérales…), les bénévoles et les dirigeants d’entreprise."
       />

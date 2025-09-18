@@ -1,7 +1,7 @@
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { SearchWidgetDisplay } from "../SearchWidgetDisplay";
-import { useSearchTracking, MatomoWidgetEvent } from "../tracking";
+import { MatomoWidgetEvent, useSearchTracking } from "../tracking";
 
 // Mock the useIframeResizer hook
 jest.mock("../../utils/useIframeResizer", () => ({
@@ -83,7 +83,7 @@ describe("SearchWidgetDisplay", () => {
     HTMLFormElement.prototype.querySelector = jest
       .fn()
       .mockImplementation((selector) => {
-        if (selector === 'input[name="q"]') {
+        if (selector === 'input[name="query"]') {
           return { value: "" };
         }
         return null;
@@ -125,7 +125,7 @@ describe("SearchWidgetDisplay", () => {
     HTMLFormElement.prototype.querySelector = jest
       .fn()
       .mockImplementation((selector) => {
-        if (selector === 'input[name="q"]') {
+        if (selector === 'input[name="query"]') {
           return { value: "test query" };
         }
         return null;
@@ -159,7 +159,7 @@ describe("SearchWidgetDisplay", () => {
     HTMLFormElement.prototype.querySelector = jest
       .fn()
       .mockImplementation((selector) => {
-        if (selector === 'input[name="q"]') {
+        if (selector === 'input[name="query"]') {
           return { value: "" };
         }
         return null;
@@ -217,7 +217,7 @@ describe("SearchWidgetDisplay", () => {
     HTMLFormElement.prototype.querySelector = jest
       .fn()
       .mockImplementation((selector) => {
-        if (selector === 'input[name="q"]') {
+        if (selector === 'input[name="query"]') {
           return { value: "  test query  " };
         }
         return null;

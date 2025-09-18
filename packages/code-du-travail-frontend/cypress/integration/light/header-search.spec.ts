@@ -23,7 +23,7 @@ describe("Header Search", () => {
     cy.get("@searchInput").type("{enter}");
 
     // Vérifier que l'URL a été mise à jour correctement
-    cy.url().should("include", "/recherche?q=cong%C3%A9");
+    cy.url().should("include", "/recherche?query=cong%C3%A9");
 
     // Vérifier que la page de résultats de recherche est affichée
     cy.contains("h1", "Recherche").should("exist");
@@ -46,11 +46,13 @@ describe("Header Search", () => {
     cy.get(".fr-header__search button[type='submit']").dblclick();
 
     // Vérifier que l'URL a été mise à jour correctement
-    cy.url().should("include", "/recherche?q=cong%C3%A9");
+    cy.url().should("include", "/recherche?query=cong%C3%A9");
 
     // Vérifier que la page de résultats de recherche est affichée
     cy.contains("h1", "Recherche").should("exist");
   });
+  /*
+  // TODO Désactivé pour l'AB Testing, à remettre en place ensuite.
   it("should show 'retraite' in autocomplete suggestions when typing 'rét'", () => {
     // Ouvrir le modal de recherche dans l'en-tête
     cy.get(".fr-header__tools").click();
@@ -74,4 +76,5 @@ describe("Header Search", () => {
       .contains("retraite", { matchCase: false })
       .should("be.visible");
   });
+   */
 });
