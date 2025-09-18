@@ -94,7 +94,6 @@ export const About = () => {
         </Link>
         , conçu et développé au sein de{" "}
         <Link
-          title="la fabrique des Ministères sociaux"
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.fabrique.social.gouv.fr/"
