@@ -33,7 +33,6 @@ const Origins = () => (
                 href="https://www.ilo.org/global/lang--fr/index.htm"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="l'Organisation internationale du travail"
               >
                 l&apos;Organisation internationale du travail
               </Link>{" "}
