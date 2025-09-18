@@ -257,7 +257,6 @@ export const Accessibilite = () => {
             href="https://www.defenseurdesdroits.fr/carte-des-delegues"
             target="_blank"
             rel="noopener noreferrer"
-            title="Contacter le délégué du Défenseur des droits dans votre région"
           >
             Contacter le délégué du Défenseur des droits dans votre région
           </Link>
