@@ -12,6 +12,7 @@ import { FicheMinistereTravail } from "../../../src/modules/fiche-ministere-trav
 import { fetchRelatedItems } from "../../../src/modules/documents";
 import { RelatedItem } from "../../../src/modules/documents/type";
 import { ElasticFicheTravailEmploiSection } from "@socialgouv/cdtn-types";
+import { REVALIDATE_TIME } from "src/config";
 
 interface PageParams {
   slug: string;
@@ -37,6 +38,9 @@ interface FichePageData {
   ficheData: FicheData;
   relatedItems: { items: RelatedItem[]; title: string }[];
 }
+
+export const dynamic = "force-static";
+export const revalidate = REVALIDATE_TIME;
 
 export async function generateStaticParams(): Promise<PageParams[]> {
   try {

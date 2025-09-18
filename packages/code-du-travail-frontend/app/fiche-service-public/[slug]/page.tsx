@@ -13,6 +13,7 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { FicheServicePublicContainer } from "../../../src/modules/fiche-service-public/FicheServicePublicContainer";
 import { RelatedItem } from "../../../src/modules/documents/type";
 import { FicheSPData } from "../../../src/modules/fiche-service-public/builder/type";
+import { REVALIDATE_TIME } from "src/config";
 
 interface PageParams {
   slug: string;
@@ -37,6 +38,9 @@ interface FichePageData {
   ficheData: FicheData;
   relatedItems: { items: RelatedItem[]; title: string }[];
 }
+
+export const dynamic = "force-static";
+export const revalidate = REVALIDATE_TIME;
 
 export async function generateStaticParams(): Promise<PageParams[]> {
   try {

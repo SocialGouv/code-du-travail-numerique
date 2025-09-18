@@ -4,7 +4,6 @@ import { getStatsService } from "../../src/api";
 import { generateDefaultMetadata } from "../../src/modules/common/metas";
 
 export const dynamic = "force-static";
-
 export const revalidate = 86400;
 
 export const metadata = generateDefaultMetadata({
