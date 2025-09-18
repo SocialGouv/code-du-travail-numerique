@@ -20,7 +20,6 @@ export const FooterContent = () => (
             href={`https://${domain}`}
             target="_blank"
             rel="noopener noreferrer"
-            title={domain}
           >
             {domain}
           </Link>
