@@ -209,7 +209,6 @@ const Origins = () => (
                 href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/declaration-des-droits-de-l-homme-et-du-citoyen-de-1789"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="la Déclaration des Droits de l'Homme et du Citoyen de 1789"
               >
                 la Déclaration des Droits de l&apos;Homme et du Citoyen de 1789
               </Link>
