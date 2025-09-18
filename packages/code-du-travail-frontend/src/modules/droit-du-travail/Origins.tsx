@@ -195,7 +195,6 @@ const Origins = () => (
                 href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="la Constitution du 4 octobre 1958"
               >
                 la Constitution du 4 octobre 1958
               </Link>{" "}
