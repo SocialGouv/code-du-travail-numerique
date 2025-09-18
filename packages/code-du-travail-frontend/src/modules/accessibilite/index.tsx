@@ -280,7 +280,7 @@ export const Accessibilite = () => {
           href="https://accessibilite.numerique.gouv.fr/"
           target="_blank"
           rel="noopener noreferrer"
-          title="accessibilite.numerique.gouv.fr"
+          title="Lien vers le référentiel général d’amélioration de l’accessibilité"
         >
           https://accessibilite.numerique.gouv.fr
         </Link>
