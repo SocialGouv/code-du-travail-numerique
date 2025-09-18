@@ -32,7 +32,6 @@ export const About = () => {
         La décision de créer le Code du travail numérique a donc été prise et
         inscrite dans{" "}
         <Link
-          title="les ordonnances sur le renforcement du dialogue social de 2017"
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=F175675A5AF37BD5745391E7C64C2FAB.tplgfr41s_3?cidTexte=JORFTEXT000035607388&idArticle=LEGIARTI000036762196&dateTexte=20191129&categorieLien=id#LEGIARTI000036762196"
