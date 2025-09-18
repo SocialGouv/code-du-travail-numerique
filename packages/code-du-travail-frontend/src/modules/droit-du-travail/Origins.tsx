@@ -70,7 +70,6 @@ const Origins = () => (
                   href="https://www.ohchr.org/fr/professionalinterest/pages/ccpr.aspx"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="Le Pacte international relatif aux droits civils et politiques de 1966"
                 >
                   Le Pacte international relatif aux droits civils et politiques
                   de 1966
