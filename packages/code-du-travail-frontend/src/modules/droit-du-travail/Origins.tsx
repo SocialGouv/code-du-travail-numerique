@@ -79,7 +79,6 @@ const Origins = () => (
                   href="https://www.ohchr.org/FR/ProfessionalInterest/Pages/CESCR.aspx"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="le Pacte international relatif aux droits économiques, sociaux et culturels de 1966"
                 >
                   le Pacte international relatif aux droits économiques, sociaux
                   et culturels de 1966
