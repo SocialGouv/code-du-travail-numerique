@@ -33,7 +33,6 @@ export const FooterBottom = () => (
           className={fr.cx("fr-footer__bottom-link")}
           target="_blank"
           rel="noopener noreferrer"
-          title="Contribuer sur Github"
         >
           Contribuer sur Github
         </Link>
