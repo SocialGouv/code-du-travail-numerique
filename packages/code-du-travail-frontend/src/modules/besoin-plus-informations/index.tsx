@@ -118,7 +118,7 @@ export const BesoinPlusInformations = () => {
             target="_blank"
             data-testid="result-search-service"
             ref={setLinkRef}
-            title="Consulter le site des renseignements du département XX"
+            title="Consulter le site des renseignements du département indiqué"
           >
             {result.url}
           </Link>
