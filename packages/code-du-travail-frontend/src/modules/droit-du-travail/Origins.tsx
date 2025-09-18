@@ -217,7 +217,6 @@ const Origins = () => (
                 href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/preambule-de-la-constitution-du-27-octobre-1946"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="le Préambule de la Constitution du 27 octobre 1946"
               >
                 le Préambule de la Constitution du 27 octobre 1946
               </Link>{" "}
