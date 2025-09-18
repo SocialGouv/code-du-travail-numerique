@@ -173,7 +173,6 @@ const Origins = () => (
                   href="https://www.coe.int/en/web/european-social-charter"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="La Charte sociale européenne"
                 >
                   La Charte sociale européenne
                 </Link>{" "}
