@@ -135,7 +135,6 @@ const Origins = () => (
                   href="https://www.businesseurope.eu/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="Business Europe"
                 >
                   Business Europe
                 </Link>{" "}
