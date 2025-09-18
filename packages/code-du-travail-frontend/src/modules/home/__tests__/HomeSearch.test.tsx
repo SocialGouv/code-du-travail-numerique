@@ -21,6 +21,8 @@ describe("<HomeSearch />", () => {
     jest.clearAllMocks();
   });
 
+  /*
+  TODO Désactivé pour l'AB Testing, à remettre en place ensuite.
   it("should show suggestions and send event tracking", async () => {
     const suggestions = [
       "congés payés et fractionnement",
@@ -61,7 +63,7 @@ describe("<HomeSearch />", () => {
 
     fireEvent.click(congesSansSolde);
     expect(mockRouterPush).toHaveBeenCalledWith(
-      "/recherche?q=cong%C3%A9s%20sans%20solde"
+      "/recherche?query=cong%C3%A9s%20sans%20solde"
     );
     expect(emitSuggestionSelectionEventMock).toHaveBeenCalledWith(
       "congés",
@@ -69,6 +71,7 @@ describe("<HomeSearch />", () => {
       suggestions
     );
   });
+   */
 
   it("should emit search event when form is submitted", async () => {
     const emitSearchEventMock = jest.fn();
@@ -95,7 +98,7 @@ describe("<HomeSearch />", () => {
 
     // Vérifier que la navigation est effectuée vers la bonne URL
     expect(mockRouterPush).toHaveBeenCalledWith(
-      `/recherche?q=${encodeURIComponent(searchTerm)}`
+      `/recherche?query=${encodeURIComponent(searchTerm)}`
     );
   });
 });

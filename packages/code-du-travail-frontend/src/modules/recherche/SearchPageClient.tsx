@@ -39,9 +39,9 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
   );
 
   useEffect(() => {
-    const q = getSearchParam("q");
-    if (q) {
-      setQuery(q);
+    const query = getSearchParam("query");
+    if (query) {
+      setQuery(query);
     }
   }, [getSearchParam]);
 
@@ -148,12 +148,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                           ? item.breadcrumbs[item.breadcrumbs.length - 1].label
                           : item.source
                     }
-                    link={generateSearchLink(
-                      item.source,
-                      item.slug,
-                      query,
-                      item.url
-                    )}
+                    link={generateSearchLink(item.source, item.slug, item.url)}
                     onClick={() =>
                       emitResultSelectionEvent(
                         item.source,
@@ -202,11 +197,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                       key={`${article.source}-${article.slug}`}
                       title={article.slug}
                       description={article.description || ""}
-                      link={generateSearchLink(
-                        article.source,
-                        article.slug,
-                        query
-                      )}
+                      link={generateSearchLink(article.source, article.slug)}
                       onClick={() =>
                         emitResultSelectionEvent(
                           article.source,
@@ -241,11 +232,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
                   <li key={index} className={fr.cx("fr-mr-2w", "fr-mb-2w")}>
                     <Button
                       linkProps={{
-                        href: generateSearchLink(
-                          theme.source,
-                          theme.slug,
-                          query
-                        ),
+                        href: generateSearchLink(theme.source, theme.slug),
                         onClick: () =>
                           emitResultSelectionEvent(
                             theme.source,

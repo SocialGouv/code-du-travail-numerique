@@ -1,23 +1,19 @@
 "use client";
 
 import React, { useState } from "react";
-import * as Sentry from "@sentry/nextjs";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { css } from "@styled-system/css";
-import { fetchSuggestResults } from "../../layout/header/fetchSuggestResults";
-import { Autocomplete } from "../../common/Autocomplete";
-import { SUGGEST_MAX_RESULTS } from "../../../config";
 import { useRouter } from "next/navigation";
 import { useSearchTracking } from "src/modules/recherche/tracking";
 import { useABTesting } from "../../config/MatomoAnalytics";
 import { ABTestVariant } from "../../config/matomo/ABTestingConstant";
+import Input from "@codegouvfr/react-dsfr/Input";
 
 export const HomeSearch = () => {
   const [query, setQuery] = useState("");
-  const [suggestions, setSuggestions] = useState<string[]>([]);
   const router = useRouter();
-  const { emitSearchEvent, emitSuggestionSelectionEvent } = useSearchTracking();
+  const { emitSearchEvent } = useSearchTracking();
 
   const handleSearch = (searchTerm: string) => {
     emitSearchEvent(searchTerm.trim());
@@ -29,35 +25,26 @@ export const HomeSearch = () => {
     handleSearch(query);
   };
 
-  const search = async (inputValue: string) => {
-    const results = await fetchSuggestResults(inputValue).then((items) =>
-      items.slice(0, SUGGEST_MAX_RESULTS)
-    );
-    setSuggestions(results);
-    return results;
-  };
-
-  const onError = (error: string) => {
-    Sentry.captureMessage(
-      "Échec lors de la récupération des suggestions - " + error
-    );
-  };
-
-  const onSelectedItemChange = (value: string | undefined) => {
-    if (value) {
-      emitSuggestionSelectionEvent(query, value, suggestions);
-      handleSearch(value);
-    }
-  };
-
   const { abTest } = useABTesting();
 
   const label =
     abTest.variant == ABTestVariant.NEUTRAL
-      ? "Recherche neutre"
+      ? "Que cherchez-vous ?"
       : abTest.variant == ABTestVariant.NATURAL
-        ? "Que recherchez-vous ?"
+        ? "Que souhaitez-vous savoir ?"
         : "Recherchez par mots-clés";
+
+  const example =
+    abTest.variant == ABTestVariant.NEUTRAL
+      ? "Exemple : congés payés, Quelle durée du préavis pour un licenciement ?"
+      : abTest.variant == ABTestVariant.NATURAL
+        ? "par exemple : Comment sont comptés les congés pendant les arrêts maladies ?"
+        : "par exemple : congés payés, durée de préavis";
+
+  const colField =
+    abTest.variant == ABTestVariant.NATURAL ? "fr-col-md-9" : "fr-col-md-8";
+  const colButton =
+    abTest.variant == ABTestVariant.NATURAL ? "fr-col-md-3" : "fr-col-md-4";
 
   return (
     <form
@@ -69,23 +56,26 @@ export const HomeSearch = () => {
       role="search"
       onSubmit={onSubmit}
     >
-      <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
-        <Autocomplete<string>
-          hintText="par exemple : congés payés, durée de préavis"
+      <div className={fr.cx("fr-col-12", colField)}>
+        <Input
+          hintText={example}
           label={<>{label}</>}
-          displayLabel={(item) => item ?? ""}
-          onInputValueChange={(value) => {
-            if (value) {
-              setQuery(value);
-            }
+          nativeInputProps={{
+            type: "text",
+            // @ts-ignore
+            "data-testid": "search-input",
+            "aria-labelledby": undefined,
+            onChange: (e) => {
+              setQuery(e.target.value);
+            },
           }}
-          onChange={onSelectedItemChange}
-          search={search}
-          onError={onError}
-          dataTestId={"search-input"}
+          className={`${fr.cx("fr-mb-0")}`}
+          classes={{
+            root: rootInputCss,
+          }}
         />
       </div>
-      <div className={fr.cx("fr-col-12", "fr-col-md-4")}>
+      <div className={fr.cx("fr-col-12", colButton)}>
         <Button
           iconId="fr-icon-search-line"
           iconPosition="right"
@@ -108,4 +98,8 @@ const buttonStyle = css({
     width: "100%!",
     justifyContent: "center!",
   },
+});
+
+const rootInputCss = css({
+  width: "100%",
 });
