@@ -16,10 +16,7 @@ export const HeaderBrand = () => {
           <p className={fr.cx("fr-sr-only")}>Liberté égalité fraternité</p>
         </div>
         <div className={fr.cx("fr-header__operator")}>
-          <Link
-            href="/"
-            title="Accueil - Code du travail numérique, Ministère du Travail"
-          >
+          <Link href="/">
             <Image
               className={`${fr.cx("fr-responsive-img")} ${Logo}`}
               src="/static/assets/img/logo.svg"
