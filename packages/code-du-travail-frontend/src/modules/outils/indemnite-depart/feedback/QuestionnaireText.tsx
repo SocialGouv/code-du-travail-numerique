@@ -1,7 +1,6 @@
 "use client";
 
 import { fr } from "@codegouvfr/react-dsfr";
-import { Input } from "@codegouvfr/react-dsfr/Input";
 import { useState } from "react";
 
 type QuestionnaireItemProps = {
@@ -21,6 +20,8 @@ export const QuestionnaireText = ({
   const maxCharacters = 200;
   const [remainingChars, setRemainingChars] = useState(maxCharacters);
 
+  const charactersCountThresholds = [100, 50, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const currentLength = e.target.value.length;
     setRemainingChars(maxCharacters - currentLength);
@@ -29,26 +30,28 @@ export const QuestionnaireText = ({
 
   return (
     <div>
-      <Input
-        label={title}
-        textArea
-        nativeTextAreaProps={
-          {
-            id: id,
-            onChange: handleChange,
-            maxLength: maxCharacters,
-            "aria-describedby": `${id}-hint ${id}-remaining`,
-            "data-testid": `${id}`,
-          } as any
-        }
-        hintText={placeholder}
+      <label htmlFor={id} className={fr.cx("fr-label")}>
+        {title}
+        {placeholder && <span className="fr-hint-text">{placeholder}</span>}
+      </label>
+      <textarea
+        id={id}
+        className={fr.cx("fr-input")}
+        maxLength={maxCharacters}
+        aria-describedby={`${id}-remaining`}
+        data-testid={id}
+        onChange={handleChange}
       />
       <p
         id={`${id}-remaining`}
-        className={fr.cx("fr-sr-only")}
-        aria-live="polite"
+        aria-live={
+          charactersCountThresholds.indexOf(remainingChars) !== -1
+            ? "polite"
+            : "off"
+        }
         aria-atomic="true"
         role="status"
+        className="fr-info-text"
       >
         {`${remainingChars} caractère${
           remainingChars > 1 ? "s" : ""
