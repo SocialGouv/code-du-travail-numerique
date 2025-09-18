@@ -1,5 +1,6 @@
 "use client";
 
+import { fr } from "@codegouvfr/react-dsfr";
 import { Input } from "@codegouvfr/react-dsfr/Input";
 import { useState } from "react";
 
@@ -41,9 +42,18 @@ export const QuestionnaireText = ({
           } as any
         }
         hintText={placeholder}
-        state="info"
-        stateRelatedMessage={`${remainingChars} caractères restants`}
       />
+      <p
+        id={`${id}-remaining`}
+        className={fr.cx("fr-sr-only")}
+        aria-live="polite"
+        aria-atomic="true"
+        role="status"
+      >
+        {`${remainingChars} caractère${
+          remainingChars > 1 ? "s" : ""
+        } restant${remainingChars > 1 ? "s" : ""}`}
+      </p>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { SalaryPeriods } from "@socialgouv/modeles-social";
 import { OuiNon } from "../../../common";
 import { StepData } from "../../../store";
+import { SalaryFieldError } from "../../../steps/Salaires/store/validator";
 
 export type Agreement44StoreInput = {
   showVariablePay?: boolean;
@@ -15,7 +16,7 @@ export type Agreement44StoreInput = {
 export type Agreement44StoreError = {
   errorHasVariablePay?: string;
   errorKnowingLastSalary?: string;
-  errorLastMonthSalary?: string;
+  errorLastMonthSalary?: Record<string, SalaryFieldError | null>;
 };
 
 export type Agreement44StoreData = StepData<

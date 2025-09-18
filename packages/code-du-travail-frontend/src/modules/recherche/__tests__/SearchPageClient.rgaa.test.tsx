@@ -74,7 +74,7 @@ describe("SearchPageClient - Tests d'accessibilité et tabulation", () => {
 
     await waitFor(
       () => {
-        const newResult = container.querySelector("#search-results-heading");
+        const newResult = container.querySelector("#search-result-doc9");
         expect(newResult).toHaveFocus();
       },
       { timeout: 150 }

@@ -10,6 +10,7 @@ import {
 } from "src/modules/outils/preavis-demission/steps/Result/components";
 import ShowResult from "./components/ShowResult";
 import Warning from "./components/Warning";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 const ResultStepComponent = () => {
   const store = useContext(HeuresRechercheEmploiContext);
@@ -41,12 +42,12 @@ const ResultStepComponent = () => {
 
   if (errorPublicodes) {
     return (
-      <div className={fr.cx("fr-col-md-8", "fr-col-12", "fr-mb-6w")}>
-        <div className={fr.cx("fr-alert", "fr-alert--error")}>
-          <h3 className={fr.cx("fr-alert__title")}>Erreur de calcul</h3>
-          <p>Une erreur est survenue lors du calcul. Veuillez réessayer.</p>
-        </div>
-      </div>
+      <AccessibleAlert
+        title="Attention"
+        description="Une erreur est survenue lors du calcul. Veuillez réessayer."
+        severity="error"
+        className={["fr-mb-2w"]}
+      />
     );
   }
 

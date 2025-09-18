@@ -1,8 +1,8 @@
 import React from "react";
 
 import { WarningType } from "../utils/types";
-import Alert from "@codegouvfr/react-dsfr/Alert";
 import { fr } from "@codegouvfr/react-dsfr";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 type Props = {
   type?: WarningType;
@@ -17,11 +17,11 @@ export const titrePreavis =
 
 const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
   return (
-    <Alert
+    <AccessibleAlert
       severity="info"
       title={hasNotice ? titreFavorable : titrePreavis}
       data-testid="notice-warning"
-      className={fr.cx("fr-my-3w")}
+      className={["fr-my-3w"]}
       description={
         <>
           {type === WarningType.noNoticeWithAgreement ? (
@@ -48,10 +48,10 @@ const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
               <p data-testid="notice-warning-description">
                 Un accord collectif d&apos;entreprise, le contrat de travail ou
                 un usage peut prévoir une durée de préavis
-                <sup>(1)</sup> ou une condition d&apos;ancienneté<sup>(2)</sup>{" "}
-                plus favorable pour le salarié. Dans ce cas, c&apos;est cette
-                durée ou cette ancienneté plus favorable qui s&apos;applique au
-                salarié.
+                <sup>(1)</sup> ou une condition d&apos;ancienneté
+                <sup>(2)</sup> plus favorable pour le salarié. Dans ce cas,
+                c&apos;est cette durée ou cette ancienneté plus favorable qui
+                s&apos;applique au salarié.
               </p>
 
               <p>
@@ -69,10 +69,10 @@ const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
               <p data-testid="notice-warning-description">
                 Un accord collectif d&apos;entreprise, le contrat de travail ou
                 un usage peut prévoir une durée de préavis
-                <sup>(1)</sup> ou une condition d&apos;ancienneté<sup>(2)</sup>{" "}
-                plus favorable pour le salarié. Dans ce cas, c&apos;est cette
-                durée ou cette ancienneté plus favorable qui s&apos;applique au
-                salarié.
+                <sup>(1)</sup> ou une condition d&apos;ancienneté
+                <sup>(2)</sup> plus favorable pour le salarié. Dans ce cas,
+                c&apos;est cette durée ou cette ancienneté plus favorable qui
+                s&apos;applique au salarié.
               </p>
 
               <p>
@@ -134,10 +134,10 @@ const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
               <p data-testid="notice-warning-description">
                 Le contrat de travail ou un usage peut prévoir une durée de
                 préavis
-                <sup>(1)</sup> ou une condition d&apos;ancienneté<sup>(2)</sup>{" "}
-                plus favorable pour le salarié. Dans ce cas, c&apos;est cette
-                durée ou cette ancienneté plus favorable qui s&apos;applique au
-                salarié.
+                <sup>(1)</sup> ou une condition d&apos;ancienneté
+                <sup>(2)</sup> plus favorable pour le salarié. Dans ce cas,
+                c&apos;est cette durée ou cette ancienneté plus favorable qui
+                s&apos;applique au salarié.
               </p>
               <p>
                 <sup>(1)</sup>&nbsp;durée de préavis plus favorable pour le
@@ -154,10 +154,10 @@ const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
               <p data-testid="notice-warning-description">
                 Le contrat de travail ou un usage peut prévoir une durée de
                 préavis
-                <sup>(1)</sup> ou une condition d&apos;ancienneté<sup>(2)</sup>{" "}
-                plus favorable pour le salarié. Dans ce cas, c&apos;est cette
-                durée ou cette ancienneté plus favorable qui s&apos;applique au
-                salarié.
+                <sup>(1)</sup> ou une condition d&apos;ancienneté
+                <sup>(2)</sup> plus favorable pour le salarié. Dans ce cas,
+                c&apos;est cette durée ou cette ancienneté plus favorable qui
+                s&apos;applique au salarié.
               </p>
               <p>
                 <sup>(1)</sup>&nbsp;durée de préavis plus favorable pour le
