@@ -109,7 +109,6 @@ const Origins = () => (
                 href="https://www.coe.int/fr/"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="le Conseil de l'Europe"
               >
                 le Conseil de l&apos;Europe
               </Link>
