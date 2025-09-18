@@ -1,9 +1,13 @@
-import { ReactNode } from "react";
+"use client";
+
+import { ReactNode, useState } from "react";
 import { css } from "@styled-system/css";
 import { PolyfillComponent } from "../config/PolyfillComponent";
 import { Footer } from "./footer";
 import { Header } from "./header";
 import { SkipLinks } from "./SkipLinks";
+import { TallyNotice } from "./TallyNotice"; // Importez le composant Notice
+import { usePathname } from "next/navigation";
 
 type Props = {
   children: ReactNode;
@@ -11,11 +15,17 @@ type Props = {
 };
 
 export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
+  const [isNoticeVisible, setIsNoticeVisible] = useState(true);
+  const pathname = usePathname() || "";
+  const showTally = !pathname.startsWith("/widgets");
   return (
     <>
       <PolyfillComponent />
       <SkipLinks />
       <Header />
+      {showTally && isNoticeVisible && (
+        <TallyNotice onClose={() => setIsNoticeVisible(false)} id="3E2Ypo" />
+      )}
       <main className={`${container} ${printStyle}`} id="main" role="main">
         {children}
       </main>
