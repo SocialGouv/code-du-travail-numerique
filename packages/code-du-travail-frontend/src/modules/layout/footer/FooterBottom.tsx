@@ -52,7 +52,6 @@ export const FooterBottom = () => (
           href="https://github.com/etalab/licence-ouverte/blob/master/LO.md"
           target="_blank"
           rel="noopener noreferrer"
-          title="licence etalab-2.0"
         >
           licence etalab-2.0
         </Link>
