@@ -53,7 +53,6 @@ const Origins = () => (
                   href="https://www.ilo.org/dyn/normlex/fr/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:C158"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="la Convention n°158 de l'OIT sur le licenciement"
                 >
                   la Convention n°158 de l&apos;OIT sur le licenciement
                 </Link>
