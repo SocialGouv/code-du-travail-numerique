@@ -87,7 +87,6 @@ export const About = () => {
       <p>
         Le Code du travail numérique est un service public initié par{" "}
         <Link
-          title="le ministère du Travail"
           target="_blank"
           rel="noopener noreferrer"
           href="https://travail-emploi.gouv.fr/"
