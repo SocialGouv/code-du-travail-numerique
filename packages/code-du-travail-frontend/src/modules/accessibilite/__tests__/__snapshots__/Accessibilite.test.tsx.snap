@@ -366,7 +366,7 @@ exports[`<Accessibilite /> should match snapshot 1`] = `
           href="https://accessibilite.numerique.gouv.fr/"
           rel="noopener noreferrer"
           target="_blank"
-          title="accessibilite.numerique.gouv.fr - nouvelle fenêtre"
+          title="Lien vers le référentiel général d’amélioration de l’accessibilité - nouvelle fenêtre"
         >
           https://accessibilite.numerique.gouv.fr
         </a>
