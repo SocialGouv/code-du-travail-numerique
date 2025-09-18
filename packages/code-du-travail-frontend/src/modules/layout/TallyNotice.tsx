@@ -71,16 +71,15 @@ export const TallyNotice = ({ onClose, id }: TallyNoticeProps) => {
           >
             Répondre
           </button>
-
           <Button
             iconId="fr-icon-close-line"
             onClick={handleClose}
             priority="tertiary no outline"
             title="Fermer la notice"
             className={closeButtonStyles}
-          >
-            <span className={fr.cx("fr-sr-only")}>Fermer la notice</span>
-          </Button>
+            size="small"
+            nativeButtonProps={{ "aria-label": "Fermer la notice" }}
+          ></Button>
         </div>
       </div>
     </>
