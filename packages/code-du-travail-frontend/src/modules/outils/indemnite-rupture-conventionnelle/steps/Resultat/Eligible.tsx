@@ -18,12 +18,10 @@ import {
 import { IndemniteDepartType } from "src/modules/outils/indemnite-depart/types";
 import { AgreementsInjector } from "src/modules/outils/indemnite-depart/agreements";
 import { IndemniteDepartStepName } from "src/modules/outils/indemnite-depart";
-import {
-  Disclaimer,
-  PubliReferences,
-} from "src/modules/outils/common/components";
+import { PubliReferences } from "src/modules/outils/common/components";
 import Link from "src/modules/common/Link";
 import { fr } from "@codegouvfr/react-dsfr";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 const Eligible = () => {
   const store = useContext(IndemniteDepartContext);
@@ -81,10 +79,11 @@ const Eligible = () => {
         resultMessage={getResultMessage(informationData)}
       />
       {!result.agreementHasNoBetterAllowance && result.infoWarning && (
-        <Disclaimer
+        <AccessibleAlert
           title={result.infoWarning.title}
-          message={result.infoWarning.message}
-          dataTestId="eligible-cc-disclaimer"
+          description={result.infoWarning.message}
+          data-testid="eligible-cc-disclaimer"
+          severity="info"
         />
       )}
       <h2>Détail du calcul</h2>

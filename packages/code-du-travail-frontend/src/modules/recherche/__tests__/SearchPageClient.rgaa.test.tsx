@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import { SearchPageClient } from "../SearchPageClient";
 
 jest.mock("next/navigation", () => ({
-  useSearchParams: () => new URLSearchParams("q=test"),
+  useSearchParams: () => new URLSearchParams("query=test"),
   useRouter: () => ({
     push: jest.fn(),
   }),
@@ -74,7 +74,7 @@ describe("SearchPageClient - Tests d'accessibilité et tabulation", () => {
 
     await waitFor(
       () => {
-        const newResult = container.querySelector("#search-results-heading");
+        const newResult = container.querySelector("#search-result-doc9");
         expect(newResult).toHaveFocus();
       },
       { timeout: 150 }

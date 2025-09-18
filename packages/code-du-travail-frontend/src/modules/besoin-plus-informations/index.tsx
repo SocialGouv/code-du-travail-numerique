@@ -7,13 +7,13 @@ import { useNeedMoreInfoEvents } from "../layout/footer/infos/tracking";
 import Image from "next/image";
 import { Input } from "@codegouvfr/react-dsfr/Input";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { Alert } from "@codegouvfr/react-dsfr/Alert";
 import {
   getServiceInfo,
   ServiceRenseignement,
 } from "./data/servicesDeRenseignement";
 import Link from "../common/Link";
 import { defaultInputStyle } from "../outils/common/styles/input";
+import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
 
 export const BesoinPlusInformations = () => {
   const [department, setDepartment] = useState<string>("");
@@ -124,7 +124,7 @@ export const BesoinPlusInformations = () => {
           </Link>
         )}
       </section>
-      <Alert
+      <AccessibleAlert
         severity={"info"}
         small
         description={
@@ -149,7 +149,7 @@ export const BesoinPlusInformations = () => {
             </ul>
           </>
         }
-      ></Alert>
+      />
     </Container>
   );
 };

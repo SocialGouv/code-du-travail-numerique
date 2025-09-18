@@ -23,7 +23,7 @@ export const SearchBar = ({ initialValue = "" }: SearchBarProps) => {
   const handleSearch = (searchTerm: string) => {
     if (searchTerm.trim()) {
       emitSearchEvent(searchTerm.trim());
-      router.push(`/recherche?q=${encodeURIComponent(searchTerm.trim())}`);
+      router.push(`/recherche?query=${encodeURIComponent(searchTerm.trim())}`);
       setKey((prevKey) => prevKey + 1);
     }
   };

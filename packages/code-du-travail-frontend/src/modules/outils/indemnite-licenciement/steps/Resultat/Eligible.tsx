@@ -3,10 +3,7 @@ import {
   getSupportedAgreement,
 } from "@socialgouv/modeles-social";
 import React, { useContext } from "react";
-import {
-  Disclaimer,
-  PubliReferences,
-} from "src/modules/outils/common/components";
+import { PubliReferences } from "src/modules/outils/common/components";
 import {
   DecryptResult,
   FilledElements,
@@ -22,6 +19,7 @@ import { IndemniteDepartStepName } from "src/modules/outils/indemnite-depart";
 import { IndemniteDepartType } from "src/modules/outils/indemnite-depart/types";
 import { AgreementsInjector } from "src/modules/outils/indemnite-depart/agreements";
 import { getForMoreInfoMessage, getResultMessage } from "./utils";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 import Link from "src/modules/common/Link";
 
 export default function Eligible() {
@@ -134,10 +132,11 @@ export default function Eligible() {
         resultMessage={getResultMessage(informationData)}
       />
       {!agreementHasNoBetterAllowance && infoWarning && (
-        <Disclaimer
+        <AccessibleAlert
           title={infoWarning.title}
-          message={infoWarning.message}
-          dataTestId="eligible-cc-disclaimer"
+          description={infoWarning.message}
+          data-testid="eligible-cc-disclaimer"
+          severity="info"
         />
       )}
       <h2>Détail du calcul</h2>

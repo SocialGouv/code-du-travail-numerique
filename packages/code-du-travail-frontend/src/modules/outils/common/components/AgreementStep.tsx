@@ -1,7 +1,6 @@
 import React from "react";
 import { RadioQuestion } from ".";
 import { AgreementRoute } from "../../indemnite-depart/types";
-import Alert from "@codegouvfr/react-dsfr/Alert";
 import { AgreementSearchInput } from "src/modules/convention-collective/AgreementSearch/AgreementSearchInput";
 import { EnterpriseAgreementSearchInput } from "src/modules/enterprise";
 import {
@@ -13,6 +12,7 @@ import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import { Agreement } from "../../indemnite-depart/types";
 import isCcFullySupported from "src/modules/outils/common/utils/isCcFullySupported";
 import { fr } from "@codegouvfr/react-dsfr";
+import { AccessibleAlert } from "./AccessibleAlert";
 
 type Props = {
   error: CommonAgreementStoreError;
@@ -78,7 +78,7 @@ export const CommonAgreementStep = ({
         subLabel="Vous pouvez trouver le nom de votre convention collective sur votre bulletin de paie"
       />
       {route === "not-selected" && (
-        <Alert
+        <AccessibleAlert
           severity="warning"
           title="Attention"
           description="Vous pouvez passer cette étape et poursuivre la simulation qui vous fournira un résultat basé sur le code du travail. Nous vous recommandons de renseigner votre convention collective qui peut prévoir un résultat plus favorable que celui défini par le code du travail."
@@ -99,10 +99,11 @@ export const CommonAgreementStep = ({
             trackingActionName={trackingActionName}
           />
           {error?.agreement && (
-            <Alert
-              title={error.agreement}
+            <AccessibleAlert
+              title="Attention"
               severity="error"
-              className={fr.cx("fr-mt-2w")}
+              description={error.agreement}
+              className={["fr-mt-2w"]}
             />
           )}
         </>
@@ -124,19 +125,21 @@ export const CommonAgreementStep = ({
             canContinueSimulationIfNoAgreement={showNotSelectedOption}
           />
           {error?.enterprise && (
-            <Alert
-              title={error.enterprise}
+            <AccessibleAlert
+              title="Attention"
               severity="error"
-              className={fr.cx("fr-mt-2w")}
+              description={error.enterprise}
+              className={["fr-mt-2w"]}
             />
           )}
         </>
       )}
       {error?.errorPublicodes && (
-        <Alert
-          title={error.errorPublicodes}
+        <AccessibleAlert
+          title="Attention"
           severity="error"
-          className={fr.cx("fr-mt-2w")}
+          description={error.errorPublicodes}
+          className={["fr-mt-2w"]}
         />
       )}
     </>
