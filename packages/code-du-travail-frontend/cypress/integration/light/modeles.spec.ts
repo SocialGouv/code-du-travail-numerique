@@ -28,7 +28,7 @@ describe("Modèles de documents", () => {
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Bienvenue sur le Code du travail numérique")
       .click();
-    cy.selectByLabel("Recherchez par mots-clés").as("home-searchbar");
+    cy.selectByLabel("Rechercher par mots-clés").as("home-searchbar");
 
     cy.get("@home-searchbar").type("modele rupture contrat periode d'essai");
 

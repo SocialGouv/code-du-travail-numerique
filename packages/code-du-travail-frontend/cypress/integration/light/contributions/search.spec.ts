@@ -4,7 +4,7 @@ describe("Contributions", () => {
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Bienvenue sur le Code du travail numérique")
       .click();
-    cy.selectByLabel("Recherchez par mots-clés").type("durée maximale CDD");
+    cy.selectByLabel("Rechercher par mots-clés").type("durée maximale CDD");
     cy.get("button[aria-label='Lancer la recherche']")
       .contains("Rechercher")
       .click();

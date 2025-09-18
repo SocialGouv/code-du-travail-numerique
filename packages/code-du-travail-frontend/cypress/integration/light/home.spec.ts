@@ -19,7 +19,7 @@ describe("Page d’accueil", () => {
         "Obtenez les réponses à vos questions sur le droit du travail."
       );
 
-    cy.contains("Recherchez par mots-clés");
+    cy.contains("Rechercher par mots-clés");
     cy.get("button[aria-label='Lancer la recherche']").contains("Rechercher");
 
     cy.findAllByRole("heading", {
@@ -73,7 +73,7 @@ describe("Page d’accueil", () => {
       .should("have.text", "Bienvenue sur le Code du travail numérique")
       .click();
 
-    cy.selectByLabel("Recherchez par mots-clés").type("congés");
+    cy.selectByLabel("Rechercher par mots-clés").type("congés");
 
     cy.get('ul[role="listbox"]').should("be.visible");
     cy.get('ul[role="listbox"] li').should("have.length", 5);

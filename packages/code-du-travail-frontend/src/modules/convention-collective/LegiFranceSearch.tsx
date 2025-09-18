@@ -28,7 +28,7 @@ export function LegiFranceSearch({ idcc, shortTitle }: Props) {
           Recherche dans la convention collective
         </h2>
         <p id="search-description" data-testid="agreement-search-description">
-          Recherchez par mots clés dans le texte de la convention collective sur
+          Rechercher par mots clés dans le texte de la convention collective sur
           le site Légifrance.
         </p>
       </div>
@@ -43,7 +43,7 @@ export function LegiFranceSearch({ idcc, shortTitle }: Props) {
       >
         <div className={fr.cx("fr-search-bar", "fr-col-md-8", "fr-col-12")}>
           <Input
-            label="Recherchez dans la convention collective sur Légifrance"
+            label="Rechercher dans la convention collective sur Légifrance"
             hideLabel
             nativeInputProps={
               {
