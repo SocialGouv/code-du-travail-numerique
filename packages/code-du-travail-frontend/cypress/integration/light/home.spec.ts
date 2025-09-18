@@ -19,7 +19,8 @@ describe("Page d’accueil", () => {
         "Obtenez les réponses à vos questions sur le droit du travail."
       );
 
-    cy.contains("Rechercher par mots-clés");
+    // TODO A remettre après l'A/B Testing
+    // cy.contains("Recherchez par mots-clés");
     cy.get("button[aria-label='Lancer la recherche']").contains("Rechercher");
 
     cy.findAllByRole("heading", {
@@ -67,13 +68,15 @@ describe("Page d’accueil", () => {
     cy.contains("Conflits au travail et contrôle de la réglementation");
   });
 
+  /*
+  // TODO Désactivé pour l'AB Testing, à remettre en place ensuite.
   it("Devrait afficher les suggestions quand on cherche un mot", () => {
     cy.visit("/");
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Bienvenue sur le Code du travail numérique")
       .click();
 
-    cy.selectByLabel("Rechercher par mots-clés").type("congés");
+    cy.selectByLabel("Recherchez par mots-clés").type("congés");
 
     cy.get('ul[role="listbox"]').should("be.visible");
     cy.get('ul[role="listbox"] li').should("have.length", 5);
@@ -95,4 +98,5 @@ describe("Page d’accueil", () => {
     cy.get("button").contains("Plus de résultats").click();
     cy.findAllByRole("heading", { level: 3 }).should("have.length", 26);
   });
+   */
 });

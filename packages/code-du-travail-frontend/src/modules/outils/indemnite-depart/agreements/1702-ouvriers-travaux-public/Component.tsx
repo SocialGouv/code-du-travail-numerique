@@ -73,7 +73,7 @@ export default function Agreement1702() {
               } salaire${S()} (en incluant l’indemnité de congés payés, les primes, dont la prime de vacances, et les avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)`}
               onSalariesChange={onSalariesChange}
               salaryPeriods={noticeSalaryPeriods}
-              error={errorNoticeSalaryPeriods}
+              errorSalaryPeriods={errorNoticeSalaryPeriods}
               dataTestidSalaries="notice-salary"
               agreementNumber={1702}
             />

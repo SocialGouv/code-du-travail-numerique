@@ -99,7 +99,7 @@ export default function Agreement44() {
             onChangeLastMonthSalary(salaryPeriods[0]);
           }}
           salaryPeriods={lastMonthSalary ? [lastMonthSalary] : []}
-          error={errorLastMonthSalary}
+          errorSalaryPeriods={errorLastMonthSalary}
           dataTestidSalaries="last-month-salary"
           agreementNumber={44}
         />

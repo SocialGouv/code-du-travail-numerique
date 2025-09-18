@@ -5,14 +5,13 @@ import { DsfrProviderBase as DsfrProvider } from "@codegouvfr/react-dsfr/next-ap
 import { createGetHtmlAttributes } from "@codegouvfr/react-dsfr/next-app-router/getHtmlAttributes";
 import { DefaultColorScheme } from "@codegouvfr/react-dsfr/next-app-router";
 import Link from "../common/Link";
-import { MatomoAnalytics } from "./MatomoAnalytics";
+import { MatomoProvider } from "./MatomoAnalytics";
 import { StartDsfrLight } from "./StartDsfrLight";
 import { ENV } from "../../config";
 import { SentryTest } from "../sentry";
 import { ConsentManager } from "../cookie-consent";
 import { shouldShowCookieBanner } from "../cookie-consent/config";
 import { usePathname } from "next/navigation";
-import { Tally } from "./Tally";
 
 type Props = {
   children: React.ReactNode;
@@ -33,42 +32,42 @@ export default function DefaultLayout({
   const lang = "fr";
   const pathname = usePathname() || "";
   const showCookieBanner = shouldShowCookieBanner(pathname);
-  const showTally = !pathname.startsWith("/widgets");
 
   return (
-    <html {...getHtmlAttributes({ lang })}>
-      <head>
-        <StartDsfrLight />
-        <DsfrHead
-          Link={Link}
-          preloadFonts={[
-            //"Marianne-Light",
-            //"Marianne-Light_Italic",
-            "Marianne-Regular",
-            //"Marianne-Regular_Italic",
-            "Marianne-Medium",
-            //"Marianne-Medium_Italic",
-            "Marianne-Bold",
-            //"Marianne-Bold_Italic",
-            //"Spectral-Regular",
-            //"Spectral-ExtraBold"
-          ]}
-          nonce={nonce}
-        />
-      </head>
-      <body>
-        <DsfrProvider
-          lang={lang}
-          Link={Link}
-          defaultColorScheme={defaultColorScheme}
-        >
-          {children}
-          {showCookieBanner && <ConsentManager />}
-          {showTally && <Tally id={"3E2Ypo"} />}
-        </DsfrProvider>
-        <MatomoAnalytics />
-        {ENV === "development" && <SentryTest />}
-      </body>
-    </html>
+    <MatomoProvider>
+      <html {...getHtmlAttributes({ lang })}>
+        <head>
+          <StartDsfrLight />
+          <DsfrHead
+            Link={Link}
+            preloadFonts={[
+              //"Marianne-Light",
+              //"Marianne-Light_Italic",
+              "Marianne-Regular",
+              //"Marianne-Regular_Italic",
+              "Marianne-Medium",
+              //"Marianne-Medium_Italic",
+              "Marianne-Bold",
+              //"Marianne-Bold_Italic",
+              //"Spectral-Regular",
+              //"Spectral-ExtraBold"
+            ]}
+            nonce={nonce}
+          />
+        </head>
+        <body>
+          <DsfrProvider
+            lang={lang}
+            Link={Link}
+            defaultColorScheme={defaultColorScheme}
+          >
+            {children}
+            {showCookieBanner && <ConsentManager />}
+          </DsfrProvider>
+
+          {ENV === "development" && <SentryTest />}
+        </body>
+      </html>
+    </MatomoProvider>
   );
 }

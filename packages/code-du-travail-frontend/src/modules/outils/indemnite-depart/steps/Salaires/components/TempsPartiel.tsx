@@ -1,6 +1,6 @@
-import { Alert } from "@codegouvfr/react-dsfr/Alert";
 import React from "react";
 import { IndemniteDepartType } from "../../../types";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 type Props = {
   type: IndemniteDepartType;
@@ -8,7 +8,7 @@ type Props = {
 
 const TempsPartiel = ({ type }: Props) => {
   return (
-    <Alert
+    <AccessibleAlert
       title="À noter"
       severity="info"
       description={

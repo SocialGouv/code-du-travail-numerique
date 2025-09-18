@@ -1,8 +1,8 @@
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { RadioButtons } from "@codegouvfr/react-dsfr/RadioButtons";
-import Alert from "@codegouvfr/react-dsfr/Alert";
 import { InformationsStoreInput, InformationsStoreError } from "../store/types";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 interface Props {
   input: InformationsStoreInput;
@@ -46,11 +46,11 @@ export const CTTQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
 
       {/* Alerte pour les contrats saisonniers ou d'usage */}
       {input.cttFormation === false && (
-        <Alert
+        <AccessibleAlert
           severity="warning"
           title="Attention"
           description="S'il s'agit d'un contrat de travail temporaire saisonnier ou d'usage, un accord d'entreprise ou d'établissement peut dispenser l'entreprise de travail temporaire (l'entreprise d'intérim) de verser la prime de précarité."
-          className={fr.cx("fr-mb-3w")}
+          className={["fr-mb-3w"]}
         />
       )}
 

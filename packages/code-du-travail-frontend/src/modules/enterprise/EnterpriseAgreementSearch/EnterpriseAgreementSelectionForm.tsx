@@ -5,9 +5,9 @@ import RadioButtons from "@codegouvfr/react-dsfr/RadioButtons";
 import { EnterpriseAgreementSelectionDetail } from "./EnterpriseAgreementSelectionDetail";
 import { getEnterpriseAgreements } from "./utils";
 import Button from "@codegouvfr/react-dsfr/Button";
-import Alert from "@codegouvfr/react-dsfr/Alert";
 import { useEffect, useRef, useState } from "react";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 type Props = {
   isInSimulator?: boolean;
@@ -76,28 +76,21 @@ export const EnterpriseAgreementSelectionForm = ({
         }))}
       />
       {agreement && !agreement.contributions && (
-        <Alert
+        <AccessibleAlert
           severity="info"
-          title={
-            <span>
-              Nous n&apos;avons pas de réponse pour cette convention collective
-            </span>
-          }
+          title={"Nous n'avons pas de réponse pour cette convention collective"}
           description="Vous pouvez tout de même poursuivre pour obtenir les informations générales prévues par le code du travail."
         />
       )}
       {!agreements.length && (
-        <Alert
+        <AccessibleAlert
           severity={
             isInSimulator && !canContinueSimulationIfNoAgreement
               ? "error"
               : "warning"
           }
           title={
-            <>
-              Aucune convention collective n&apos;a été déclarée pour
-              l&apos;entreprise
-            </>
+            "Aucune convention collective n'a été déclarée pour l'entreprise"
           }
           description={
             isInSimulator ? (

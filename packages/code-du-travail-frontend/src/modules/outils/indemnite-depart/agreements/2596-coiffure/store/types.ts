@@ -1,6 +1,7 @@
 import { SalaryPeriods } from "@socialgouv/modeles-social";
 import { OuiNon } from "../../../common";
 import { StepData } from "../../../store";
+import type { SalaryFieldError } from "../../../steps/Salaires/store/validator";
 
 export type Agreement2596StoreInput = {
   hasReceivedSalaries?: OuiNon;
@@ -9,7 +10,7 @@ export type Agreement2596StoreInput = {
 
 export type Agreement2596StoreError = {
   errorHasReceivedSalaries?: string;
-  errorNoticeSalaryPeriods?: string;
+  errorNoticeSalaryPeriods?: Record<string, SalaryFieldError | null>;
 };
 
 export type Agreement2596StoreData = StepData<

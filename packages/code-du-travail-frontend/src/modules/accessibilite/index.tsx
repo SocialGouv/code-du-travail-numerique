@@ -181,8 +181,8 @@ export const Accessibilite = () => {
         </li>
         <li>
           Page recherche :{" "}
-          <Link href="https://code.travail.gouv.fr/recherche?q=cong%C3%A9s+pay%C3%A9s">
-            https://code.travail.gouv.fr/recherche?q=cong%C3%A9s+pay%C3%A9s
+          <Link href="https://code.travail.gouv.fr/recherche?query=cong%C3%A9s+pay%C3%A9s">
+            https://code.travail.gouv.fr/recherche?query=cong%C3%A9s+pay%C3%A9s
           </Link>
         </li>
         <li>

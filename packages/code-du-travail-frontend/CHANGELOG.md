@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.189.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.188.0...v4.189.0) (2025-09-18)
+
+
+### Bug Fixes
+
+* 6703 correction règle 91 12 ([#6775](https://github.com/SocialGouv/code-du-travail-numerique/issues/6775)) ([d556ddc](https://github.com/SocialGouv/code-du-travail-numerique/commit/d556ddc11cd8d93e4ce835fdc06bd86f5e64c462))
+* 6711 correction règle 1110 6 ([#6783](https://github.com/SocialGouv/code-du-travail-numerique/issues/6783)) ([161c971](https://github.com/SocialGouv/code-du-travail-numerique/commit/161c971eb2711e71e171b5ddbad87a788303f445))
+* retirer le questionnaire des pages widgets ([#6806](https://github.com/SocialGouv/code-du-travail-numerique/issues/6806)) ([6b8aeb2](https://github.com/SocialGouv/code-du-travail-numerique/commit/6b8aeb290fa995ee14bc32756abd5fc561e81fcd))
+* rgaa conversion lien a en bouton sur page droit du travail ([#6804](https://github.com/SocialGouv/code-du-travail-numerique/issues/6804)) ([7c7adf6](https://github.com/SocialGouv/code-du-travail-numerique/commit/7c7adf60c63eb4c4faf78e64c58a158ed7b84ed4))
+* rgaa set button list in search page ([#6801](https://github.com/SocialGouv/code-du-travail-numerique/issues/6801)) ([e4d2240](https://github.com/SocialGouv/code-du-travail-numerique/commit/e4d224044c5a90b46f05fe004e0548da25f535f3))
+
+
+### Features
+
+* ajout du bandeau tally ([#6821](https://github.com/SocialGouv/code-du-travail-numerique/issues/6821)) ([6f8ce6d](https://github.com/SocialGouv/code-du-travail-numerique/commit/6f8ce6ddab17a93cb9aaae1b3106c2d95abf64b3))
+
+
+
+
+
 # [4.188.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.187.2...v4.188.0) (2025-09-08)
 
 
