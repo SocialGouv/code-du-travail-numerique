@@ -19,7 +19,7 @@ export const HeaderSearch = ({ onSearchSubmit }: HeaderSearchProps) => {
   const label =
     abTest.variant === ABTestVariant.NATURAL
       ? "Que souhaitez-vous savoir ?"
-      : "Recherchez sur le site";
+      : "Rechercher sur le site";
 
   return (
     <div className={fr.cx("fr-header__tools")}>
