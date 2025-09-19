@@ -15,10 +15,10 @@ exports[`<Tabulator /> should render 1`] = `
           role="presentation"
         >
           <button
-            aria-controls="panel-f53ae9e6-a61d-46dc-824d-b1916f2e8096-0"
+            aria-controls="panel-2c4f443d-da0d-4c39-8f08-203b00a49b75-0"
             aria-selected="true"
             class="fr-tabs__tab fr-tabs__tab--icon-left fr-tabs__tab--active"
-            id="tab-f53ae9e6-a61d-46dc-824d-b1916f2e8096-0"
+            id="tab-2c4f443d-da0d-4c39-8f08-203b00a49b75-0"
             role="tab"
           >
             CDI
@@ -28,10 +28,10 @@ exports[`<Tabulator /> should render 1`] = `
           role="presentation"
         >
           <button
-            aria-controls="panel-f53ae9e6-a61d-46dc-824d-b1916f2e8096-1"
+            aria-controls="panel-2c4f443d-da0d-4c39-8f08-203b00a49b75-1"
             aria-selected="false"
             class="fr-tabs__tab fr-tabs__tab--icon-left "
-            id="tab-f53ae9e6-a61d-46dc-824d-b1916f2e8096-1"
+            id="tab-2c4f443d-da0d-4c39-8f08-203b00a49b75-1"
             role="tab"
           >
             CDD
@@ -39,9 +39,9 @@ exports[`<Tabulator /> should render 1`] = `
         </li>
       </ul>
       <div
-        aria-labelledby="tab-f53ae9e6-a61d-46dc-824d-b1916f2e8096-0"
+        aria-labelledby="tab-2c4f443d-da0d-4c39-8f08-203b00a49b75-0"
         class="fr-tabs__panel fr-tabs__panel--selected"
-        id="panel-f53ae9e6-a61d-46dc-824d-b1916f2e8096-0"
+        id="panel-2c4f443d-da0d-4c39-8f08-203b00a49b75-0"
         role="tabpanel"
       >
         <h4
@@ -57,9 +57,9 @@ exports[`<Tabulator /> should render 1`] = `
         </p>
       </div>
       <div
-        aria-labelledby="tab-f53ae9e6-a61d-46dc-824d-b1916f2e8096-1"
+        aria-labelledby="tab-2c4f443d-da0d-4c39-8f08-203b00a49b75-1"
         class="fr-tabs__panel "
-        id="panel-f53ae9e6-a61d-46dc-824d-b1916f2e8096-1"
+        id="panel-2c4f443d-da0d-4c39-8f08-203b00a49b75-1"
         role="tabpanel"
       >
         <h4
