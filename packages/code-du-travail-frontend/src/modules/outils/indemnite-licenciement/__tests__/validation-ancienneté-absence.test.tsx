@@ -25,8 +25,7 @@ describe("Page ancienneté: vérification validation lorsque absence > anciennet
     userAction.click(ui.next.get());
     expect(
       getByText(
-        "La durée totale des absences doit être inférieure ou égale à l'ancienneté",
-        { selector: ".sr-only" }
+        "La durée totale des absences (13 mois) ne peut pas être supérieure à la durée totale du contrat (12 mois)"
       )
     ).toBeInTheDocument();
   });

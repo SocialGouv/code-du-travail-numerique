@@ -68,9 +68,9 @@ export function AgreementArticles({ articlesByTheme, containerId }: Props) {
           d&apos;entreprise ne peut prévoir de règles différentes.
         </p>
         <p>
-          Sources : <a href="/code-du-travail/l2253-1">Article L2253-1</a>,{" "}
-          <a href="/code-du-travail/l2253-2">Article L2253-2</a>,{" "}
-          <a href="/code-du-travail/l2253-3">Article L2253-3</a>
+          Sources : <Link href="/code-du-travail/l2253-1">Article L2253-1</Link>
+          , <Link href="/code-du-travail/l2253-2">Article L2253-2</Link>,{" "}
+          <Link href="/code-du-travail/l2253-3">Article L2253-3</Link>
         </p>
       </div>
 

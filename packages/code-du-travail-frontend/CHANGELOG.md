@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.190.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.189.0...v4.190.0) (2025-09-18)
+
+
+### Bug Fixes
+
+* **accessibilite:** ajout d'un titre sur les liens qui redirige vers l'extérieur dans un nouvel onglet (règle 6.1) ([#6799](https://github.com/SocialGouv/code-du-travail-numerique/issues/6799)) ([d5a800a](https://github.com/SocialGouv/code-du-travail-numerique/commit/d5a800a6bfba3215ad49c0a5607f79c77d77e8fb))
+* **accessibilite:** modification des labels des champs recherches pour l'ouverture de lien externe (règle 7.4) ([#6800](https://github.com/SocialGouv/code-du-travail-numerique/issues/6800)) ([815e634](https://github.com/SocialGouv/code-du-travail-numerique/commit/815e634e9756f3e7b789b1abd4eee70225d6a278))
+* **accessibilite:** restitution des messages d'erreur à l'utilisateur (règle 7.5) ([#6790](https://github.com/SocialGouv/code-du-travail-numerique/issues/6790)) ([9ab5e26](https://github.com/SocialGouv/code-du-travail-numerique/commit/9ab5e2612d00ec02fd5c9874d4508934802d634d))
+* **accessibilite:** utilisation de fieldset dans le formulaire "Votre avis nous intéresse" (règle 11.6) ([#6798](https://github.com/SocialGouv/code-du-travail-numerique/issues/6798)) ([728a1d1](https://github.com/SocialGouv/code-du-travail-numerique/commit/728a1d1cb6a6ebb37fd834b0f3cbde5d36944639))
+* bug affichage onglet fiche sp ([#6817](https://github.com/SocialGouv/code-du-travail-numerique/issues/6817)) ([ae3c3d2](https://github.com/SocialGouv/code-du-travail-numerique/commit/ae3c3d2ba902a2e2f306921e59c6c1c8b878b020))
+
+
+### Features
+
+* ajout de l'a/b testing via matomo ([#6813](https://github.com/SocialGouv/code-du-travail-numerique/issues/6813)) ([093f874](https://github.com/SocialGouv/code-du-travail-numerique/commit/093f874266ab5d87c82d407e87b29d3508fd5d2f))
+* ajout de log dans simu preca ([#6824](https://github.com/SocialGouv/code-du-travail-numerique/issues/6824)) ([45f2ace](https://github.com/SocialGouv/code-du-travail-numerique/commit/45f2ace9d4d274910e441ebe3480c895b518fc89))
+
+
+
+
+
+# [4.189.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.188.0...v4.189.0) (2025-09-18)
+
+
+### Bug Fixes
+
+* 6703 correction règle 91 12 ([#6775](https://github.com/SocialGouv/code-du-travail-numerique/issues/6775)) ([d556ddc](https://github.com/SocialGouv/code-du-travail-numerique/commit/d556ddc11cd8d93e4ce835fdc06bd86f5e64c462))
+* 6711 correction règle 1110 6 ([#6783](https://github.com/SocialGouv/code-du-travail-numerique/issues/6783)) ([161c971](https://github.com/SocialGouv/code-du-travail-numerique/commit/161c971eb2711e71e171b5ddbad87a788303f445))
+* retirer le questionnaire des pages widgets ([#6806](https://github.com/SocialGouv/code-du-travail-numerique/issues/6806)) ([6b8aeb2](https://github.com/SocialGouv/code-du-travail-numerique/commit/6b8aeb290fa995ee14bc32756abd5fc561e81fcd))
+* rgaa conversion lien a en bouton sur page droit du travail ([#6804](https://github.com/SocialGouv/code-du-travail-numerique/issues/6804)) ([7c7adf6](https://github.com/SocialGouv/code-du-travail-numerique/commit/7c7adf60c63eb4c4faf78e64c58a158ed7b84ed4))
+* rgaa set button list in search page ([#6801](https://github.com/SocialGouv/code-du-travail-numerique/issues/6801)) ([e4d2240](https://github.com/SocialGouv/code-du-travail-numerique/commit/e4d224044c5a90b46f05fe004e0548da25f535f3))
+
+
+### Features
+
+* ajout du bandeau tally ([#6821](https://github.com/SocialGouv/code-du-travail-numerique/issues/6821)) ([6f8ce6d](https://github.com/SocialGouv/code-du-travail-numerique/commit/6f8ce6ddab17a93cb9aaae1b3106c2d95abf64b3))
+
+
+
+
+
 # [4.188.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.187.2...v4.188.0) (2025-09-08)
 
 

@@ -14,17 +14,17 @@ export const ReferenceList = ({
       switch (ref.type) {
         case SOURCES.CDT:
           return (
-            <a
+            <Link
               key={ref.slug + ref.title}
               href={`/${getRouteBySource(SOURCES.CDT)}/${ref.slug}`}
-            >{`Article ${ref.title} du Code du travail`}</a>
+            >{`Article ${ref.title} du Code du travail`}</Link>
           );
         case SOURCES.CCN:
           return (
-            <a
+            <Link
               key={ref.slug + ref.title}
               href={`/${getRouteBySource(SOURCES.CCN)}/${ref.slug}`}
-            >{`Convention collective: ${ref.title}`}</a>
+            >{`Convention collective: ${ref.title}`}</Link>
           );
         case SOURCES.EXTERNALS:
           return (
@@ -32,7 +32,7 @@ export const ReferenceList = ({
               key={ref.url + ref.title}
               href={ref.url}
               target="_blank"
-              rel="noreferer noopener"
+              rel="noopener noreferrer"
             >{`Convention collective: ${ref.title}`}</Link>
           );
       }

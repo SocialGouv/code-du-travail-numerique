@@ -2,6 +2,7 @@ import produce from "immer";
 import { StoreApi } from "zustand";
 import { deepEqualObject } from "src/modules/utils/object";
 import { MainStore } from "../../../store";
+import { validateSalaryPeriods } from "../../../steps/Salaires/store/validator";
 import { Agreement44StoreInput, Agreement44StoreSlice } from "./types";
 
 export const validateAgreement44 = (
@@ -21,25 +22,24 @@ export const validateAgreement44 = (
 };
 
 export const validateStep = (state: Agreement44StoreInput) => {
+  const salaryErrors = validateSalaryPeriods(
+    state.lastMonthSalary ? [state.lastMonthSalary] : []
+  );
+  const hasSalaryErrors = Object.values(salaryErrors).some(
+    (error) => error !== null
+  );
+
   const errorState = {
     errorHasVariablePay:
       state.showVariablePay && !state.hasVariablePay
         ? "Vous devez répondre à cette question"
         : undefined,
     errorKnowingLastSalary:
-      state.showVariablePay &&
-      state.showKnowingLastSalary &&
-      !state.knowingLastSalary
+      state.showKnowingLastSalary && !state.knowingLastSalary
         ? "Vous devez répondre à cette question"
         : undefined,
     errorLastMonthSalary:
-      state.showVariablePay &&
-      state.showKnowingLastSalary &&
-      state.showLastMonthSalary &&
-      (!state.lastMonthSalary ||
-        (state.lastMonthSalary && !state.lastMonthSalary.value))
-        ? "Vous devez répondre à cette question"
-        : undefined,
+      state.showLastMonthSalary && hasSalaryErrors ? salaryErrors : undefined,
   };
 
   return {

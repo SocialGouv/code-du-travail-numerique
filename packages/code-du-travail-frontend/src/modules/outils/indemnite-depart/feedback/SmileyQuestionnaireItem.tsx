@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, ReactNode } from "react";
 import { FEEDBACK_RESULT } from "./tracking";
 import { fr } from "@codegouvfr/react-dsfr";
 import { BadIcon } from "./icons/BadIcon";
@@ -50,7 +50,9 @@ export const SmileyQuestionnaireItem = ({
       aria-invalid={displayError ? "true" : undefined}
       aria-describedby={displayError ? errorId : undefined}
     >
-      <legend className={srOnlyStyle}>Évaluation de satisfaction</legend>
+      <legend className={fr.cx("fr-sr-only")}>
+        Évaluation de satisfaction
+      </legend>
       <div
         className={fr.cx("fr-btns-group", "fr-btns-group--inline")}
         style={{ justifyContent: "center", gap: "1rem" }}
@@ -132,7 +134,6 @@ export const SmileyQuestionnaireItem = ({
           </label>
         </div>
       </div>
-
       {displayError && (
         <p
           id={errorId}
@@ -197,17 +198,4 @@ const radioTextStyle = css({
   "@media (max-width: 480px)": {
     fontSize: "0.875rem",
   },
-});
-
-// Visually hidden but accessible to screen readers
-const srOnlyStyle = css({
-  position: "absolute !important",
-  width: "1px !important",
-  height: "1px !important",
-  padding: "0 !important",
-  margin: "-1px !important",
-  overflow: "hidden !important",
-  clip: "rect(0, 0, 0, 0) !important",
-  whiteSpace: "nowrap !important",
-  border: "0 !important",
 });

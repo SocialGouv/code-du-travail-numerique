@@ -7,6 +7,7 @@ import React, { useEffect, useState } from "react";
 import { IntegrationInstructions } from "./IntegrationInstructions";
 import { IntegrationTracking } from "./IntegrationTracking";
 import { IntegrationDetailContentProps } from "./types";
+import Link from "../common/Link";
 
 export const IntegrationDetailContent = ({
   description,
@@ -108,7 +109,7 @@ export const IntegrationDetailContent = ({
         className={fr.cx("fr-mb-4w")}
         data-testid="integration-detail-preview"
       >
-        <a href={escape(`${host}${parsedUrl}`)}>{shortTitle}</a>
+        <Link href={escape(`${host}${parsedUrl}`)}>{shortTitle}</Link>
       </div>
 
       <hr className={fr.cx("fr-hr", "fr-my-4w")} />
@@ -130,9 +131,9 @@ export const IntegrationDetailContent = ({
       <p className={fr.cx("fr-mb-0")}>
         En cas de difficulté, nous vous invitons à nous contacter à
         l&apos;adresse suivante&nbsp;:{" "}
-        <a href="mailto:codedutravailnumerique@travail.gouv.fr">
+        <Link href="mailto:codedutravailnumerique@travail.gouv.fr">
           codedutravailnumerique@travail.gouv.fr
-        </a>
+        </Link>
       </p>
     </>
   );

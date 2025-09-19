@@ -1,5 +1,6 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import React from "react";
+import Link from "src/modules/common/Link";
 
 interface FooterLink {
   href: string;
@@ -17,9 +18,9 @@ export const FooterList = ({ title, links }: FooterListProps) => (
     <ul className={fr.cx("fr-footer__top-list")}>
       {links.map((link, index) => (
         <li key={index}>
-          <a href={link.href} className={fr.cx("fr-footer__top-link")}>
+          <Link href={link.href} className={fr.cx("fr-footer__top-link")}>
             {link.label}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>

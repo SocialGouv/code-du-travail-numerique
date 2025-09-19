@@ -12,6 +12,7 @@ import {
   saveConsent,
   initConsent,
 } from "../utils/consent";
+import Link from "../common/Link";
 
 const modalFooter = css({
   position: "sticky",
@@ -280,12 +281,12 @@ export const CookieConsentDSFR = () => {
                     d&apos;accepter ou de refuser les cookies de suivi des
                     campagnes publicitaires. Pour plus d&apos;informations, vous
                     pouvez consulter notre{" "}
-                    <a
+                    <Link
                       href="/politique-confidentialite"
                       className={fr.cx("fr-link")}
                     >
                       politique de confidentialité
-                    </a>
+                    </Link>
                     .
                   </p>
 

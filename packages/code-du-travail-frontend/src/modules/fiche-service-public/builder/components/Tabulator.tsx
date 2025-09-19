@@ -10,11 +10,9 @@ import { css } from "@styled-system/css";
 export const Tabulator = ({
   data,
   headingLevel,
-  defaultTabIndex = 0,
 }: {
   data: FicheSPDataBlocCas | FicheSPDataListeSituations;
   headingLevel: number;
-  defaultTabIndex?: number;
 }) => {
   const uniquePrefix = useMemo(() => generateUUID(), []);
 
@@ -36,8 +34,6 @@ export const Tabulator = ({
     };
   });
 
-  const validTabIndex = Math.max(0, Math.min(defaultTabIndex, tabs.length - 1));
-
   return (
     <div className={css({})}>
       <div className="fr-tabs fr-mb-4w" data-fr-js-tabs="true">
@@ -46,10 +42,8 @@ export const Tabulator = ({
             <li role="presentation" key={`tab-${uniquePrefix}-${index}`}>
               <button
                 id={`tab-${uniquePrefix}-${index}`}
-                className={`fr-tabs__tab fr-tabs__tab--icon-left ${index === validTabIndex ? "fr-tabs__tab--active" : ""}`}
-                tabIndex={index === validTabIndex ? 0 : -1}
+                className={`fr-tabs__tab fr-tabs__tab--icon-left ${index === 0 ? "fr-tabs__tab--active" : ""}`}
                 role="tab"
-                aria-selected={index === validTabIndex}
                 aria-controls={`panel-${uniquePrefix}-${index}`}
               >
                 {tab.label}
@@ -62,10 +56,9 @@ export const Tabulator = ({
           <div
             key={`panel-${uniquePrefix}-${index}`}
             id={`panel-${uniquePrefix}-${index}`}
-            className={`fr-tabs__panel ${index === validTabIndex ? "fr-tabs__panel--selected" : ""}`}
+            className={`fr-tabs__panel ${index === 0 ? "fr-tabs__panel--selected" : ""}`}
             role="tabpanel"
             aria-labelledby={`tab-${uniquePrefix}-${index}`}
-            tabIndex={0}
           >
             {tab.content}
           </div>

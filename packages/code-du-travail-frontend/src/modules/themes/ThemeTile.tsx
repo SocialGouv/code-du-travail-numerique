@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css } from "@styled-system/css";
+import Link from "../common/Link";
 
 type Props = {
   title: string;
@@ -12,7 +13,7 @@ type Props = {
 export const ThemeTile = ({ title, iconName, link, subThemes }: Props) => (
   <div className={`${fr.cx("fr-tile", "fr-enlarge-link")}`}>
     <p className={fr.cx("fr-tile__title")}>
-      <a href={link}>{title}</a>
+      <Link href={link}>{title}</Link>
     </p>
     <p className={`${fr.cx("fr-tile__detail", "fr-mb-4w")} ${centerDetail}`}>
       {subThemes.slice(0, 3).join(" • ")}

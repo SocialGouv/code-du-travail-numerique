@@ -72,7 +72,7 @@ export default function Agreement1740() {
               salaireTempsPleinMessage={`Indiquez le montant ${
                 hasMoreThanOneNoticeSalary ? "des" : "du"
               } salaire${S()} (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ`}
-              error={errorNoticeSalaryPeriods}
+              errorSalaryPeriods={errorNoticeSalaryPeriods}
               dataTestidSalaries="notice-salary"
               agreementNumber={1740}
             />

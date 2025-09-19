@@ -38,7 +38,9 @@ export const HeaderSearch = ({ onSearchSubmit }: HeaderSearchProps) => {
             }}
           >
             <Autocomplete<string>
-              label="Rechercher sur le site"
+              label={
+                "Recherchez sur le site, la sélection d'une option charge une nouvelle page"
+              }
               placeholder="Rechercher sur le site"
               isSearch
               displayLabel={(data) => data ?? ""}

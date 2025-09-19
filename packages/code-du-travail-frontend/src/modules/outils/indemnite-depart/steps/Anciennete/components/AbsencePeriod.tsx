@@ -1,6 +1,6 @@
 import { Select } from "@codegouvfr/react-dsfr/Select";
 import { Input } from "@codegouvfr/react-dsfr/Input";
-import React, { JSX, useState } from "react";
+import React, { JSX, useState, useEffect, useRef } from "react";
 import { Motif } from "@socialgouv/modeles-social";
 import { AbsenceWithKey } from "./AbsencePeriods";
 import { Button } from "@codegouvfr/react-dsfr/Button";
@@ -33,8 +33,6 @@ type Props = {
   absenceDateError?: string;
   showDeleteButton: boolean;
   informationData: Record<string, string | undefined>;
-  autoFocus?: boolean;
-  ariaDescribedby?: string;
   absenceRef?: React.RefObject<HTMLElement | null>;
 };
 
@@ -50,8 +48,6 @@ const AbsencePeriod = ({
   showDeleteButton,
   onDeleteAbsence,
   informationData,
-  autoFocus,
-  ariaDescribedby,
   absenceRef,
 }: Props): JSX.Element => {
   const [shouldAskAbsenceDate, askAbsenceDate] = useState(
@@ -61,6 +57,31 @@ const AbsencePeriod = ({
           motifs[0].startAt &&
           motifs[0].startAt(informationData)
   );
+
+  const durationInputRef = useRef<HTMLInputElement>(null);
+  const dateInputRef = useRef<HTMLInputElement>(null);
+  const hasFocusedRef = useRef(false);
+
+  useEffect(() => {
+    if (!hasFocusedRef.current) {
+      // Priorité: erreur de durée d'abord, puis erreur de date
+      if (durationError && durationInputRef.current) {
+        durationInputRef.current.focus();
+        durationInputRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+        hasFocusedRef.current = true;
+      } else if (absenceDateError && dateInputRef.current) {
+        dateInputRef.current.focus();
+        dateInputRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+        hasFocusedRef.current = true;
+      }
+    }
+  }, [durationError, absenceDateError]);
 
   const selectMotif = (key: string, value: string) => {
     const motif = motifs.find((motif) => motif.label === value);
@@ -114,6 +135,7 @@ const AbsencePeriod = ({
                     id: `${index}.duration`,
                     type: "number",
                     step: "1",
+                    min: "1",
                     pattern: "[0-9]*",
                     inputMode: "numeric",
                     onChange: (e) =>
@@ -121,9 +143,8 @@ const AbsencePeriod = ({
                     onWheel: preventScroll,
                     value: absence?.durationInMonth ?? "",
                     "data-testid": `absence-duree-${index}`,
-                    "aria-describedby": ariaDescribedby,
-                    autoFocus: autoFocus,
                     "aria-live": "off",
+                    ref: durationInputRef,
                   } as InputProps
                 }
                 classes={{
@@ -142,8 +163,7 @@ const AbsencePeriod = ({
                   }}
                   error={absenceDateError}
                   id={`${index}.dateAbsence`}
-                  dataTestId={`absence-date-${index}`} // Adjust if TextQuestion uses data-testid
-                  autoFocus={false}
+                  dataTestId={`absence-date-${index}`}
                   ariaLive="off"
                 />
               </div>

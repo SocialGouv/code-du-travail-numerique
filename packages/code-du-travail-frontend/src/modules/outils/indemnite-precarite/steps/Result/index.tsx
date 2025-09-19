@@ -6,6 +6,8 @@ import {
 import { fr } from "@codegouvfr/react-dsfr";
 import { ShowResult, Situation, Warning } from "./components";
 import FormulaInterpreter from "src/modules/outils/common/components/FormulaInterpreter";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
+import Link from "src/modules/common/Link";
 
 const ResultStepComponent = () => {
   const store = useContext(IndemnitePrecariteContext);
@@ -37,12 +39,12 @@ const ResultStepComponent = () => {
 
   if (calculationError) {
     return (
-      <div className={fr.cx("fr-col-md-8", "fr-col-12", "fr-mb-3w")}>
-        <div className={fr.cx("fr-alert", "fr-alert--error")}>
-          <h3 className={fr.cx("fr-alert__title")}>Erreur de calcul</h3>
-          <p>Une erreur est survenue lors du calcul. Veuillez réessayer.</p>
-        </div>
-      </div>
+      <AccessibleAlert
+        title="Attention"
+        description="Une erreur est survenue lors du calcul. Veuillez réessayer."
+        severity="error"
+        className={["fr-mb-2w"]}
+      />
     );
   }
 
@@ -65,9 +67,9 @@ const ResultStepComponent = () => {
           <ul>
             {resultReferences.map((ref, index) => (
               <li key={index}>
-                <a href={ref.url} target="_blank" rel="noopener noreferrer">
+                <Link href={ref.url} target="_blank" rel="noopener noreferrer">
                   {ref.article}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

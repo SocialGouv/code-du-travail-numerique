@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
-import { Alert } from "@codegouvfr/react-dsfr/Alert";
-import Link from "next/link";
 import { RadioQuestion, SelectQuestion } from "../../../common/components";
 import {
   PreavisLicenciementContext,
   usePreavisLicenciementStore,
 } from "../store";
 import { Seniority } from "./store/types";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
+import Link from "src/modules/common/Link";
 
 const StepStatus = () => {
   const store = useContext(PreavisLicenciementContext);
@@ -59,11 +59,11 @@ const StepStatus = () => {
       />
 
       {seriousMisconduct === true && (
-        <Alert
+        <AccessibleAlert
           severity="warning"
           title="Pas de préavis en cas de faute grave"
           description={
-            <>
+            <p>
               Dans le cas d&apos;un licenciement pour faute grave ou lourde, il
               n&apos;y a pas d&apos;obligation de respecter un préavis. Vous
               pouvez trouver plus d&apos;informations sur le préavis de
@@ -72,7 +72,7 @@ const StepStatus = () => {
                 cette fiche
               </Link>
               .
-            </>
+            </p>
           }
         />
       )}

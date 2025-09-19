@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import * as Sentry from "@sentry/nextjs";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -8,6 +10,8 @@ import { Autocomplete } from "../../common/Autocomplete";
 import { SUGGEST_MAX_RESULTS } from "../../../config";
 import { useRouter } from "next/navigation";
 import { useSearchTracking } from "src/modules/recherche/tracking";
+import { useABTesting } from "../../config/MatomoAnalytics";
+import { ABTestVariant } from "../../config/matomo/ABTestingConstant";
 
 export const HomeSearch = () => {
   const [query, setQuery] = useState("");
@@ -17,7 +21,7 @@ export const HomeSearch = () => {
 
   const handleSearch = (searchTerm: string) => {
     emitSearchEvent(searchTerm.trim());
-    router.push(`/recherche?q=${encodeURIComponent(searchTerm.trim())}`);
+    router.push(`/recherche?query=${encodeURIComponent(searchTerm.trim())}`);
   };
 
   const onSubmit = (e: React.FormEvent) => {
@@ -46,6 +50,15 @@ export const HomeSearch = () => {
     }
   };
 
+  const { abTest } = useABTesting();
+
+  const label =
+    abTest.variant == ABTestVariant.NEUTRAL
+      ? "Recherche neutre"
+      : abTest.variant == ABTestVariant.NATURAL
+        ? "Que recherchez-vous ?"
+        : "Recherchez par mots-clés";
+
   return (
     <form
       className={fr.cx(
@@ -59,7 +72,14 @@ export const HomeSearch = () => {
       <div className={fr.cx("fr-col-12", "fr-col-md-8")}>
         <Autocomplete<string>
           hintText="par exemple : congés payés, durée de préavis"
-          label={<>Recherchez par mots-clés</>}
+          label={
+            <>
+              {label}{" "}
+              <span className={fr.cx("fr-sr-only")}>
+                , la sélection d&apos;une option charge une nouvelle page
+              </span>
+            </>
+          }
           displayLabel={(item) => item ?? ""}
           onInputValueChange={(value) => {
             if (value) {

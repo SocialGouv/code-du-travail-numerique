@@ -297,9 +297,12 @@ describe("Ancienneté store", () => {
       }
     );
     expect(result.isValid).toBe(false);
-    expect(result.errorState.errorAbsencePeriods?.absences).toStrictEqual(
-      undefined
-    );
+    expect(result.errorState.errorAbsencePeriods?.absences).toStrictEqual([
+      {
+        errorDuration:
+          "La durée totale des absences (2 mois) ne peut pas être supérieure à la durée totale du contrat (-10 mois)",
+      },
+    ]);
   });
 
   it("date de notification invalide", () => {

@@ -5,7 +5,6 @@ import parse, {
   HTMLReactParserOptions,
   Text,
 } from "html-react-parser";
-import Alert from "@codegouvfr/react-dsfr/Alert";
 import React, { ElementType, JSX } from "react";
 import { AccordionWithAnchor } from "./AccordionWithAnchor";
 import { v4 as generateUUID } from "uuid";
@@ -16,6 +15,7 @@ import { slugify } from "@socialgouv/cdtn-utils";
 import { captureException } from "@sentry/nextjs";
 import { toUrl } from "../utils/url";
 import { xssWrapper } from "../utils/xss";
+import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
 
 export type numberLevel = 2 | 3 | 4 | 5 | 6;
 
@@ -279,12 +279,12 @@ const options = (titleLevel: numberLevel): HTMLReactParserOptions => {
         }
         if (domNode.name === "div" && domNode.attribs.class === "alert") {
           return (
-            <Alert
+            <AccessibleAlert
               severity="info"
               small
               description={renderChildren(domNode, true, options(titleLevel))}
-              className={fr.cx("fr-mt-2w", "fr-pb-2w")}
-            ></Alert>
+              className={["fr-mt-2w", "fr-pb-2w"]}
+            />
           );
         }
         if (domNode.name === "div" && domNode.attribs.class === "infographic") {

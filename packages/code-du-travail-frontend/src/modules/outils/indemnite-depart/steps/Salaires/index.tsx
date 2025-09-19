@@ -38,6 +38,7 @@ const StepSalaires = ({ type }: Props) => {
     showHasTempsPartiel,
     initShowHasTempsPartiel,
     isAgreementSupported,
+    errorPrimeSalaryPeriods,
   } = useIndemniteDepartStore(store, (state) => ({
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     onChangeHasTempsPartiel: state.salairesFunction.onChangeHasTempsPartiel,
@@ -45,6 +46,7 @@ const StepSalaires = ({ type }: Props) => {
     salaryPeriods: state.salairesData.input.salaryPeriods,
     onSalariesChange: state.salairesFunction.onSalariesChange,
     errorSalaryPeriods: state.salairesData.error.errorSalaryPeriods,
+    errorPrimeSalaryPeriods: state.salairesData.error.errorPrimes,
     initFieldSalaries: state.salairesFunction.initFieldSalaries,
     agreement: state.agreementData.input.agreement,
     hasSameSalary: state.salairesData.input.hasSameSalary,
@@ -143,7 +145,8 @@ const StepSalaires = ({ type }: Props) => {
               )}
               onSalariesChange={onSalariesChange}
               salaryPeriods={salaryPeriods}
-              error={errorSalaryPeriods}
+              errorSalaryPeriods={errorSalaryPeriods}
+              errorPrimeSalaryPeriods={errorPrimeSalaryPeriods}
               agreementNumber={agreement?.num}
             />
           )}

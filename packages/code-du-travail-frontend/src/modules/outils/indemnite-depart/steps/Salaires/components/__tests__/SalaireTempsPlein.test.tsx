@@ -10,7 +10,6 @@ describe("<SalaireTempsPlein />", () => {
           title="Yo"
           onSalariesChange={jest.fn()}
           salaryPeriods={[]}
-          error={undefined}
         />
       )
     ).toBeTruthy();
@@ -83,23 +82,5 @@ describe("<SalaireTempsPlein />", () => {
     expect(input1).toBeTruthy();
     fireEvent.change(input1, { target: { value: "6000" } });
     expect(initObject[0].prime).toBe(6000);
-  });
-
-  it("should render error", () => {
-    const { getByText } = render(
-      <SalaireTempsPlein
-        title="Yo"
-        onSalariesChange={jest.fn()}
-        salaryPeriods={[
-          {
-            month: "janvier",
-            value: 2000,
-          },
-        ]}
-        error={"Ceci est une erreur"}
-      />
-    );
-
-    expect(getByText(/Ceci est une erreur/)).toBeInTheDocument();
   });
 });

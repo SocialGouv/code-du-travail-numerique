@@ -63,7 +63,9 @@ exports[`<MentionsLegales /> should match snapshot 1`] = `
             <br />
             <a
               href="https://github.com/SocialGouv/code-du-travail-numerique"
+              rel="noopener noreferrer"
               target="_blank"
+              title="Le code du logiciel - nouvelle fenêtre"
             >
               https://github.com/SocialGouv/code-du-travail-numerique
             </a>
