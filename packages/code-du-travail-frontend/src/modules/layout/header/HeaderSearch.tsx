@@ -41,7 +41,7 @@ export const HeaderSearch = ({ onSearchSubmit }: HeaderSearchProps) => {
               label={
                 "Recherchez sur le site, la sélection d'une option charge une nouvelle page"
               }
-              placeholder="Rechercher sur le site"
+              placeholder="Recherchez sur le site"
               isSearch
               displayLabel={(data) => data ?? ""}
               search={async (input) => {
