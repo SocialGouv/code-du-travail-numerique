@@ -63,12 +63,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
           role="presentation"
         >
           <button
-            aria-controls="panel-0"
+            aria-controls="panel-123456789-0"
             aria-selected="true"
             class="fr-tabs__tab fr-tabs__tab--icon-left fr-tabs__tab--active"
-            id="tab-0"
+            id="tab-123456789-0"
             role="tab"
-            tabindex="0"
           >
             CDI
           </button>
@@ -77,12 +76,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
           role="presentation"
         >
           <button
-            aria-controls="panel-1"
+            aria-controls="panel-123456789-1"
             aria-selected="false"
             class="fr-tabs__tab fr-tabs__tab--icon-left "
-            id="tab-1"
+            id="tab-123456789-1"
             role="tab"
-            tabindex="-1"
           >
             CDD
           </button>
@@ -91,23 +89,21 @@ exports[`<FicheServicePublic /> should render 1`] = `
           role="presentation"
         >
           <button
-            aria-controls="panel-2"
+            aria-controls="panel-123456789-2"
             aria-selected="false"
             class="fr-tabs__tab fr-tabs__tab--icon-left "
-            id="tab-2"
+            id="tab-123456789-2"
             role="tab"
-            tabindex="-1"
           >
             Intérim
           </button>
         </li>
       </ul>
       <div
-        aria-labelledby="tab-0"
+        aria-labelledby="tab-123456789-0"
         class="fr-tabs__panel fr-tabs__panel--selected"
-        id="panel-0"
+        id="panel-123456789-0"
         role="tabpanel"
-        tabindex="0"
       >
         <h2
           class="fr-sr-only"
@@ -1032,11 +1028,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
         </div>
       </div>
       <div
-        aria-labelledby="tab-1"
+        aria-labelledby="tab-123456789-1"
         class="fr-tabs__panel "
-        id="panel-1"
+        id="panel-123456789-1"
         role="tabpanel"
-        tabindex="0"
       >
         <h2
           class="fr-sr-only"
@@ -1773,11 +1768,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
         </div>
       </div>
       <div
-        aria-labelledby="tab-2"
+        aria-labelledby="tab-123456789-2"
         class="fr-tabs__panel "
-        id="panel-2"
+        id="panel-123456789-2"
         role="tabpanel"
-        tabindex="0"
       >
         <h2
           class="fr-sr-only"

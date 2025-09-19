@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+import React, { useMemo } from "react";
+import { v4 as generateUUID } from "uuid";
 import { filterOutTitle, getTitleInChildren } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
 import Title from "./Title";
@@ -12,7 +13,8 @@ export const Tabulator = ({
   data: FicheSPDataBlocCas | FicheSPDataListeSituations;
   headingLevel: number;
 }) => {
-  // Prepare tabs data
+  const uniquePrefix = useMemo(() => generateUUID(), []);
+
   const tabs = data.children.map((tab) => {
     const title = getTitleInChildren(tab);
     return {
@@ -36,14 +38,13 @@ export const Tabulator = ({
       <div className="fr-tabs fr-mb-4w" data-fr-js-tabs="true">
         <ul className="fr-tabs__list" role="tablist">
           {tabs.map((tab, index) => (
-            <li role="presentation" key={`tab-${index}`}>
+            <li role="presentation" key={`tab-${uniquePrefix}-${index}`}>
               <button
-                id={`tab-${index}`}
+                id={`tab-${uniquePrefix}-${index}`}
                 className={`fr-tabs__tab fr-tabs__tab--icon-left ${index === 0 ? "fr-tabs__tab--active" : ""}`}
-                tabIndex={index === 0 ? 0 : -1}
                 role="tab"
                 aria-selected={index === 0}
-                aria-controls={`panel-${index}`}
+                aria-controls={`panel-${uniquePrefix}-${index}`}
               >
                 {tab.label}
               </button>
@@ -53,12 +54,11 @@ export const Tabulator = ({
 
         {tabs.map((tab, index) => (
           <div
-            key={`panel-${index}`}
-            id={`panel-${index}`}
+            key={`panel-${uniquePrefix}-${index}`}
+            id={`panel-${uniquePrefix}-${index}`}
             className={`fr-tabs__panel ${index === 0 ? "fr-tabs__panel--selected" : ""}`}
             role="tabpanel"
-            aria-labelledby={`tab-${index}`}
-            tabIndex={0}
+            aria-labelledby={`tab-${uniquePrefix}-${index}`}
           >
             {tab.content}
           </div>
