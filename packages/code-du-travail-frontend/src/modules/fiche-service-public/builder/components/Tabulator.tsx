@@ -44,6 +44,7 @@ export const Tabulator = ({
                 id={`tab-${uniquePrefix}-${index}`}
                 className={`fr-tabs__tab fr-tabs__tab--icon-left ${index === 0 ? "fr-tabs__tab--active" : ""}`}
                 role="tab"
+                aria-selected={index === 0}
                 aria-controls={`panel-${uniquePrefix}-${index}`}
               >
                 {tab.label}
