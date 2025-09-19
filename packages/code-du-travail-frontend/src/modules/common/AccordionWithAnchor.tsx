@@ -22,7 +22,7 @@ export const AccordionWithAnchor = ({
   titleAs = "h2",
 }: Props): React.ReactElement => {
   const path = useRouter();
-  const [anchor, setAnchor] = useState<string | null>();
+  const [anchor, setAnchor] = useState<string | null>(null);
   const [itemsWithId, setItemsToDisplay] = useState<
     {
       id: string;
@@ -31,6 +31,7 @@ export const AccordionWithAnchor = ({
       content: React.ReactElement;
     }[]
   >([]);
+  const [isClient, setIsClient] = useState(false);
   const refs = useRef<Record<string, HTMLDivElement | null>>({});
 
   const setRef = useCallback(
@@ -40,30 +41,54 @@ export const AccordionWithAnchor = ({
     []
   );
 
+  // Initialize items with consistent state for SSR/SSG
   useEffect(() => {
-    const hash = window.location.hash?.substring(1);
-    setAnchor(hash);
+    setIsClient(true);
+
     if (items.length && !itemsWithId.length) {
-      const itemsWithId = items.map(({ id, ...item }) => {
+      // First, initialize items with no expanded state to match SSR
+      const initialItems = items.map(({ id, ...item }) => {
         const idDefaulted = id ?? slugify(item.title);
         return {
           ...item,
           id: idDefaulted,
-          expended: hash === idDefaulted,
+          expended: false, // Always false initially for SSR consistency
         };
       });
 
-      setItemsToDisplay(itemsWithId);
+      setItemsToDisplay(initialItems);
     }
-  }, [path]);
+  }, [items.length]);
 
+  // Handle hash-based expansion only after client-side hydration
+  useEffect(() => {
+    if (!isClient || !itemsWithId.length) return;
+
+    const hash = window.location.hash?.substring(1);
+    if (hash) {
+      setAnchor(hash);
+
+      // Update items to expand the one matching the hash
+      setItemsToDisplay((prevItems) =>
+        prevItems.map((item) => ({
+          ...item,
+          expended: item.id === hash,
+        }))
+      );
+    }
+  }, [isClient, itemsWithId.length, path]);
+
+  // Handle scrolling to anchor
   useEffect(() => {
     if (anchor && refs.current[anchor]) {
-      refs.current[anchor]?.scrollIntoView({
-        behavior: "smooth",
-      });
+      // Small delay to ensure DOM is updated after expansion
+      setTimeout(() => {
+        refs.current[anchor]?.scrollIntoView({
+          behavior: "smooth",
+        });
+      }, 100);
     }
-  }, [refs.current, anchor]);
+  }, [anchor]);
 
   if (items.length === 0) {
     return <></>;
