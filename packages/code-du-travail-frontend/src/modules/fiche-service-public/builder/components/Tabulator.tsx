@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useMemo } from "react";
 import { v4 as generateUUID } from "uuid";
 import { filterOutTitle, getTitleInChildren } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
@@ -16,7 +16,7 @@ export const Tabulator = ({
   headingLevel: number;
   defaultTabIndex?: number;
 }) => {
-  const uniquePrefix = generateUUID();
+  const uniquePrefix = useMemo(() => generateUUID(), []);
 
   const tabs = data.children.map((tab) => {
     const title = getTitleInChildren(tab);
