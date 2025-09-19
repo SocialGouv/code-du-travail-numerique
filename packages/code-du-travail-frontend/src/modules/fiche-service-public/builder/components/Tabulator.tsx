@@ -4,13 +4,16 @@ import { filterOutTitle, getTitleInChildren } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
 import Title from "./Title";
 import { FicheSPDataBlocCas, FicheSPDataListeSituations } from "../type";
+import { css } from "@styled-system/css";
 
 export const Tabulator = ({
   data,
   headingLevel,
+  defaultTabIndex = 0,
 }: {
   data: FicheSPDataBlocCas | FicheSPDataListeSituations;
   headingLevel: number;
+  defaultTabIndex?: number;
 }) => {
   // Prepare tabs data
   const tabs = data.children.map((tab) => {
@@ -32,17 +35,17 @@ export const Tabulator = ({
   });
 
   return (
-    <div>
+    <div className={css({})}>
       <div className="fr-tabs fr-mb-4w" data-fr-js-tabs="true">
         <ul className="fr-tabs__list" role="tablist">
           {tabs.map((tab, index) => (
             <li role="presentation" key={`tab-${index}`}>
               <button
                 id={`tab-${index}`}
-                className={`fr-tabs__tab fr-tabs__tab--icon-left ${index === 0 ? "fr-tabs__tab--active" : ""}`}
-                tabIndex={index === 0 ? 0 : -1}
+                className={`fr-tabs__tab fr-tabs__tab--icon-left ${index === defaultTabIndex ? "fr-tabs__tab--active" : ""}`}
+                tabIndex={index === defaultTabIndex ? 0 : -1}
                 role="tab"
-                aria-selected={index === 0}
+                aria-selected={index === defaultTabIndex}
                 aria-controls={`panel-${index}`}
               >
                 {tab.label}
@@ -55,7 +58,7 @@ export const Tabulator = ({
           <div
             key={`panel-${index}`}
             id={`panel-${index}`}
-            className={`fr-tabs__panel ${index === 0 ? "fr-tabs__panel--selected" : ""}`}
+            className={`fr-tabs__panel ${index === defaultTabIndex ? "fr-tabs__panel--selected" : ""}`}
             role="tabpanel"
             aria-labelledby={`tab-${index}`}
             tabIndex={0}
