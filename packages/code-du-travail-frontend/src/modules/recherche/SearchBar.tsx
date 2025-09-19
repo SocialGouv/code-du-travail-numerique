@@ -59,8 +59,8 @@ export const SearchBar = ({ initialValue = "" }: SearchBarProps) => {
     <form role="search" onSubmit={handleSubmit} ref={formRef}>
       <Autocomplete<string>
         key={key}
-        label="Rechercher"
-        placeholder="Rechercher"
+        label="Recherchez sur le site, la sélection d'une option charge une nouvelle page"
+        placeholder="Recherchez sur le site"
         isSearch
         displayLabel={(data) => data ?? ""}
         search={search}

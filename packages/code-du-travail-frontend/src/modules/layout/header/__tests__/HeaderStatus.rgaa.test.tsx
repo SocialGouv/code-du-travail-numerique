@@ -21,7 +21,7 @@ describe("HeaderSearch Component - Accessibility Status Message in Autocomplete"
 
     render(<HeaderSearch onSearchSubmit={mockOnSearchSubmit} />);
 
-    const input = screen.getByPlaceholderText("Rechercher sur le site");
+    const input = screen.getByPlaceholderText("Recherchez sur le site");
     await userEvent.type(input, "test");
 
     await waitFor(() => {
@@ -39,7 +39,7 @@ describe("HeaderSearch Component - Accessibility Status Message in Autocomplete"
 
     render(<HeaderSearch onSearchSubmit={mockOnSearchSubmit} />);
 
-    const input = screen.getByPlaceholderText("Rechercher sur le site");
+    const input = screen.getByPlaceholderText("Recherchez sur le site");
     await userEvent.type(input, "test");
 
     await waitFor(() => {
@@ -55,7 +55,7 @@ describe("HeaderSearch Component - Accessibility Status Message in Autocomplete"
 
     render(<HeaderSearch onSearchSubmit={mockOnSearchSubmit} />);
 
-    const input = screen.getByPlaceholderText("Rechercher sur le site");
+    const input = screen.getByPlaceholderText("Recherchez sur le site");
     await userEvent.type(input, "test");
 
     await waitFor(() => {

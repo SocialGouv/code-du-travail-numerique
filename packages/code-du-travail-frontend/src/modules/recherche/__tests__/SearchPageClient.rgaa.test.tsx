@@ -50,10 +50,13 @@ describe("SearchPageClient - Tests d'accessibilité et tabulation", () => {
       .getByRole("search")
       .querySelectorAll('input, button, a, [tabindex]:not([tabindex="-1"])');
 
-    expect(tabbableElements[0]).toHaveAttribute("placeholder", "Rechercher");
+    expect(tabbableElements[0]).toHaveAttribute(
+      "placeholder",
+      "Recherchez sur le site"
+    );
     expect(tabbableElements[1]).toHaveTextContent("Rechercher");
 
-    const searchInput = screen.getByPlaceholderText("Rechercher");
+    const searchInput = screen.getByPlaceholderText("Recherchez sur le site");
     await userEvent.type(searchInput, "test");
 
     fireEvent.blur(searchInput);
