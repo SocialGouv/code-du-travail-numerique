@@ -21,12 +21,12 @@ export const AccordionWithAnchor = ({
   items,
   titleAs = "h2",
 }: Props): React.ReactElement => {
-  const path = useRouter();
+  const router = useRouter();
   const [anchor, setAnchor] = useState<string | null>(null);
   const [itemsWithId, setItemsToDisplay] = useState<
     {
       id: string;
-      expended: boolean;
+      expanded: boolean;
       title: string;
       content: React.ReactElement;
     }[]
@@ -52,19 +52,21 @@ export const AccordionWithAnchor = ({
         return {
           ...item,
           id: idDefaulted,
-          expended: false, // Always false initially for SSR consistency
+          expanded: false, // Always false initially for SSR consistency
         };
       });
 
       setItemsToDisplay(initialItems);
     }
-  }, [items.length]);
+  }, [items.length, itemsWithId.length]);
 
   // Handle hash-based expansion only after client-side hydration
   useEffect(() => {
     if (!isClient || !itemsWithId.length) return;
 
-    const hash = window.location.hash?.substring(1);
+    // Safe access to window object
+    const hash =
+      typeof window !== "undefined" ? window.location.hash?.substring(1) : null;
     if (hash) {
       setAnchor(hash);
 
@@ -72,11 +74,11 @@ export const AccordionWithAnchor = ({
       setItemsToDisplay((prevItems) =>
         prevItems.map((item) => ({
           ...item,
-          expended: item.id === hash,
+          expanded: item.id === hash,
         }))
       );
     }
-  }, [isClient, itemsWithId.length, path]);
+  }, [isClient, itemsWithId.length]);
 
   // Handle scrolling to anchor
   useEffect(() => {
@@ -105,7 +107,7 @@ export const AccordionWithAnchor = ({
           id={item.id}
           key={item.id}
           label={item.title}
-          defaultExpanded={item.expended}
+          defaultExpanded={item.expanded}
           ref={setRef(item.id)}
         >
           {item.content}
