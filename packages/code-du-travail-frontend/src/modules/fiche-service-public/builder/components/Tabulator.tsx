@@ -5,7 +5,6 @@ import { filterOutTitle, getTitleInChildren } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
 import Title from "./Title";
 import { FicheSPDataBlocCas, FicheSPDataListeSituations } from "../type";
-import { css } from "@styled-system/css";
 
 export const Tabulator = ({
   data,
@@ -35,7 +34,7 @@ export const Tabulator = ({
   });
 
   return (
-    <div className={css({})}>
+    <div>
       <div className="fr-tabs fr-mb-4w" data-fr-js-tabs="true">
         <ul className="fr-tabs__list" role="tablist">
           {tabs.map((tab, index) => (
