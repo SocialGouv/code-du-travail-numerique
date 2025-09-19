@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { v4 as generateUUID } from "uuid";
 import { filterOutTitle, getTitleInChildren } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
 import Title from "./Title";
@@ -15,7 +16,8 @@ export const Tabulator = ({
   headingLevel: number;
   defaultTabIndex?: number;
 }) => {
-  // Prepare tabs data
+  const uniquePrefix = generateUUID();
+
   const tabs = data.children.map((tab) => {
     const title = getTitleInChildren(tab);
     return {
@@ -34,19 +36,21 @@ export const Tabulator = ({
     };
   });
 
+  const validTabIndex = Math.max(0, Math.min(defaultTabIndex, tabs.length - 1));
+
   return (
     <div className={css({})}>
       <div className="fr-tabs fr-mb-4w" data-fr-js-tabs="true">
         <ul className="fr-tabs__list" role="tablist">
           {tabs.map((tab, index) => (
-            <li role="presentation" key={`tab-${index}`}>
+            <li role="presentation" key={`tab-${uniquePrefix}-${index}`}>
               <button
-                id={`tab-${index}`}
-                className={`fr-tabs__tab fr-tabs__tab--icon-left ${index === defaultTabIndex ? "fr-tabs__tab--active" : ""}`}
-                tabIndex={index === defaultTabIndex ? 0 : -1}
+                id={`tab-${uniquePrefix}-${index}`}
+                className={`fr-tabs__tab fr-tabs__tab--icon-left ${index === validTabIndex ? "fr-tabs__tab--active" : ""}`}
+                tabIndex={index === validTabIndex ? 0 : -1}
                 role="tab"
-                aria-selected={index === defaultTabIndex}
-                aria-controls={`panel-${index}`}
+                aria-selected={index === validTabIndex}
+                aria-controls={`panel-${uniquePrefix}-${index}`}
               >
                 {tab.label}
               </button>
@@ -56,11 +60,11 @@ export const Tabulator = ({
 
         {tabs.map((tab, index) => (
           <div
-            key={`panel-${index}`}
-            id={`panel-${index}`}
-            className={`fr-tabs__panel ${index === defaultTabIndex ? "fr-tabs__panel--selected" : ""}`}
+            key={`panel-${uniquePrefix}-${index}`}
+            id={`panel-${uniquePrefix}-${index}`}
+            className={`fr-tabs__panel ${index === validTabIndex ? "fr-tabs__panel--selected" : ""}`}
             role="tabpanel"
-            aria-labelledby={`tab-${index}`}
+            aria-labelledby={`tab-${uniquePrefix}-${index}`}
             tabIndex={0}
           >
             {tab.content}
