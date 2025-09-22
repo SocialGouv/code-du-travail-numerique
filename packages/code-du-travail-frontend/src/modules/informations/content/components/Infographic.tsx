@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { AccordionWithAnchor } from "src/modules/common/AccordionWithAnchor";
 import { fr } from "@codegouvfr/react-dsfr";

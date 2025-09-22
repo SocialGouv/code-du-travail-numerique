@@ -75,7 +75,16 @@ export const AccordionWithAnchor = ({
       data-fr-group="false"
     >
       {itemsWithId.map((item) => (
-        <p key={item.id}>{item.content}</p>
+        <Accordion
+          titleAs={titleAs}
+          id={item.id}
+          key={item.id}
+          label={item.title}
+          defaultExpanded={item.expended}
+          ref={setRef(item.id)}
+        >
+          {item.content}
+        </Accordion>
       ))}
     </div>
   );
