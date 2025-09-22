@@ -1,7 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { slugify } from "@socialgouv/cdtn-utils";
 import Accordion from "@codegouvfr/react-dsfr/Accordion";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -21,41 +20,12 @@ export const AccordionWithAnchor = ({
   items,
   titleAs = "h2",
 }: Props): React.ReactElement => {
-  const path = useRouter();
-  const [anchor, setAnchor] = useState<string | null>();
-  const [itemsWithId, setItemsToDisplay] = useState<
-    {
-      id: string;
-      expended: boolean;
-      title: string;
-      content: React.ReactElement;
-    }[]
-  >([]);
-  const refs = useRef<Record<string, HTMLDivElement | null>>({});
-
-  const setRef = useCallback(
-    (id: string) => (el: HTMLDivElement | null) => {
-      refs.current[id] = el;
-    },
-    []
-  );
+  const [anchor, setAnchor] = useState<string | null>(null);
+  const refs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
   useEffect(() => {
-    const hash = window.location.hash?.substring(1);
-    setAnchor(hash);
-    if (items.length && !itemsWithId.length) {
-      const itemsWithId = items.map(({ id, ...item }) => {
-        const idDefaulted = id ?? slugify(item.title);
-        return {
-          ...item,
-          id: idDefaulted,
-          expended: hash === idDefaulted,
-        };
-      });
-
-      setItemsToDisplay(itemsWithId);
-    }
-  }, [path]);
+    setAnchor(window.location.hash?.substring(1) || null);
+  }, []);
 
   useEffect(() => {
     if (anchor && refs.current[anchor]) {
@@ -63,29 +33,32 @@ export const AccordionWithAnchor = ({
         behavior: "smooth",
       });
     }
-  }, [refs.current, anchor]);
-
-  if (items.length === 0) {
-    return <></>;
-  }
+  }, [anchor]);
 
   return (
     <div
       className={`${fr.cx("fr-accordions-group")}${className ? ` ${className}` : ""}`}
       data-fr-group="false"
     >
-      {itemsWithId.map((item) => (
-        <Accordion
-          titleAs={titleAs}
-          id={item.id}
-          key={item.id}
-          label={item.title}
-          defaultExpanded={item.expended}
-          ref={setRef(item.id)}
-        >
-          {item.content}
-        </Accordion>
-      ))}
+      {items.map((item) => {
+        const itemId = item.id ?? slugify(item.title);
+        return (
+          <Accordion
+            titleAs={titleAs}
+            id={item.id}
+            key={item.id}
+            label={item.title}
+            defaultExpanded={itemId === anchor}
+            ref={(el) => {
+              if (el) {
+                refs.current[itemId] = el;
+              }
+            }}
+          >
+            {item.content}
+          </Accordion>
+        );
+      })}
     </div>
   );
 };
