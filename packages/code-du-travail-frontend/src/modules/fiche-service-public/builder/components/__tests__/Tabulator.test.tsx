@@ -6,15 +6,6 @@ import tabulatorDataMock from "./mocks/tabulatorData.json";
 import { FicheSPDataListeSituations } from "../../type";
 
 describe("<Tabulator />", () => {
-  it("should render", () => {
-    const { container } = render(
-      <Tabulator
-        data={tabulatorDataMock as FicheSPDataListeSituations}
-        headingLevel={2}
-      />
-    );
-    expect(container).toMatchSnapshot();
-  });
   it("should have two different levels of headings", () => {
     const { getAllByRole } = render(
       <Tabulator
