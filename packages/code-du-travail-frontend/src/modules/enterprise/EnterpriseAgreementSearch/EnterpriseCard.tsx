@@ -1,7 +1,7 @@
 import React, { type ReactNode } from "react";
-import Link from "next/link";
 import { fr } from "@codegouvfr/react-dsfr";
 import { css, cx } from "@styled-system/css";
+import Link from "src/modules/common/Link";
 
 export type CardProps = {
   className?: string;
@@ -128,9 +128,9 @@ const LinkComponent = ({
 
   if (isExternal || href === "#") {
     return (
-      <a href={href} target={target} onClick={onClick}>
+      <Link href={href} target={target} onClick={onClick}>
         {children}
-      </a>
+      </Link>
     );
   }
 

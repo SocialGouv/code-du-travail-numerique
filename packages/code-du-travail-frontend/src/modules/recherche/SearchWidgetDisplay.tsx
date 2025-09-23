@@ -6,8 +6,8 @@ import { css } from "@styled-system/css";
 import { useSearchTracking, MatomoWidgetEvent } from "./tracking";
 import Image from "next/image";
 import Button from "@codegouvfr/react-dsfr/Button";
-import Link from "next/link";
 import { useIframeResizer } from "../utils/useIframeResizer";
+import Link from "../common/Link";
 
 export const SearchWidgetDisplay: React.FC = () => {
   const { emitSearchEvent, emitWidgetEvent } = useSearchTracking();
@@ -16,7 +16,7 @@ export const SearchWidgetDisplay: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
-    const input = form.querySelector('input[name="q"]') as HTMLInputElement;
+    const input = form.querySelector('input[name="query"]') as HTMLInputElement;
     const query = input?.value?.trim();
 
     emitWidgetEvent(MatomoWidgetEvent.SUBMIT_SEARCH);
@@ -63,7 +63,7 @@ export const SearchWidgetDisplay: React.FC = () => {
 
         <div className={searchContainerStyles}>
           <input
-            name="q"
+            name="query"
             autoComplete="off"
             type="text"
             id="cdtn-search"

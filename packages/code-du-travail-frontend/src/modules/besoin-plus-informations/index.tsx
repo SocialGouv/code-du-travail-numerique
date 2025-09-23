@@ -7,13 +7,13 @@ import { useNeedMoreInfoEvents } from "../layout/footer/infos/tracking";
 import Image from "next/image";
 import { Input } from "@codegouvfr/react-dsfr/Input";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { Alert } from "@codegouvfr/react-dsfr/Alert";
 import {
   getServiceInfo,
   ServiceRenseignement,
 } from "./data/servicesDeRenseignement";
 import Link from "../common/Link";
 import { defaultInputStyle } from "../outils/common/styles/input";
+import { AccessibleAlert } from "../outils/common/components/AccessibleAlert";
 
 export const BesoinPlusInformations = () => {
   const [department, setDepartment] = useState<string>("");
@@ -61,14 +61,14 @@ export const BesoinPlusInformations = () => {
       <section className={fr.cx("fr-mb-6w")}>
         <h2 className={fr.cx("fr-h5", "fr-mb-2w")}>Contact téléphonique</h2>
 
-        <a href="tel:+33806000126" onClick={onClickLinkPhoneNumber}>
+        <Link href="tel:+33806000126" onClick={onClickLinkPhoneNumber}>
           <Image
             src="/static/assets/img/srdt.svg"
             alt="Contactez les services de renseignements au droit du travail au 0806 000 126, service gratuit en plus du prix d'un appel"
             width={350}
             height={100}
           />
-        </a>
+        </Link>
       </section>
       <section className={fr.cx("fr-mb-6w")}>
         <h2 className={fr.cx("fr-h5", "fr-mb-2w")}>
@@ -118,12 +118,13 @@ export const BesoinPlusInformations = () => {
             target="_blank"
             data-testid="result-search-service"
             ref={setLinkRef}
+            title="Consulter le site des renseignements du département indiqué"
           >
             {result.url}
           </Link>
         )}
       </section>
-      <Alert
+      <AccessibleAlert
         severity={"info"}
         small
         description={
@@ -148,7 +149,7 @@ export const BesoinPlusInformations = () => {
             </ul>
           </>
         }
-      ></Alert>
+      />
     </Container>
   );
 };

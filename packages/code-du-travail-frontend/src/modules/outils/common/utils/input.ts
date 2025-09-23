@@ -1,6 +1,10 @@
 export const preventScroll = (e: React.WheelEvent) => {
-  e.preventDefault();
-  (e.currentTarget as HTMLElement).blur();
+  if (
+    e.currentTarget instanceof HTMLElement &&
+    document.activeElement === e.currentTarget
+  ) {
+    e.currentTarget.blur();
+  }
 };
 
 export const handleNumberInput = (e: React.ChangeEvent<HTMLInputElement>) => {

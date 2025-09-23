@@ -5,6 +5,7 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { ElasticAgreement } from "@socialgouv/cdtn-types";
 import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
 import { fr } from "@codegouvfr/react-dsfr";
+import Link from "../common/Link";
 
 type Props = {
   answers: ElasticAgreement["answers"];
@@ -36,12 +37,12 @@ export function FrequentQuestions({ answers }: Props) {
             <ul id={`frequent-questions-list-${index}`}>
               {group.answers.map((item) => (
                 <li key={item.slug} data-testid="frequent-question-item">
-                  <a
+                  <Link
                     href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${item.slug}`}
                     data-testid={`frequent-question-link-${item.slug}`}
                   >
                     {item.question}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

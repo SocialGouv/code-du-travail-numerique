@@ -1,6 +1,5 @@
 "use client";
 import { fr } from "@codegouvfr/react-dsfr";
-import Alert from "@codegouvfr/react-dsfr/Alert";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { createElement, ReactNode, useState } from "react";
 
@@ -8,6 +7,7 @@ import { Autocomplete } from "../../common/Autocomplete";
 import { searchAgreement } from "../search";
 import { useAgreementSearchTracking } from "../tracking";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 type Props = {
   onSearch?: (query: string, value?: Agreement[]) => void;
@@ -129,9 +129,9 @@ export const AgreementSearchInput = ({
           />
         </div>
         {searchState === "notFoundSearch" && (
-          <Alert
-            className={fr.cx("fr-mt-2w")}
-            as={`h${(level ?? 2) + 1}` as "h3" | "h4"}
+          <AccessibleAlert
+            className={["fr-mt-2w"]}
+            titleAs={`h${(level ?? 2) + 1}` as "h3" | "h4"}
             title="Vous ne trouvez pas votre convention collective&nbsp;?"
             description={
               <>
@@ -158,8 +158,8 @@ export const AgreementSearchInput = ({
           />
         )}
         {selectedAgreement && selectedAgreementAlert?.(selectedAgreement) && (
-          <Alert
-            className={fr.cx("fr-mt-2w")}
+          <AccessibleAlert
+            className={["fr-mt-2w"]}
             title="Nous n’avons pas de réponse pour cette convention collective"
             description={selectedAgreementAlert(selectedAgreement)}
             severity="warning"

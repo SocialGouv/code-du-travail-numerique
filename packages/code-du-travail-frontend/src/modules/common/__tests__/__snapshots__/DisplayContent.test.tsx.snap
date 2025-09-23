@@ -532,19 +532,18 @@ exports[`DisplayContent Alerts should replace div with alert class in li compone
       </p>
       <br />
       <div
-        class="fr-alert fr-alert--info fr-alert--sm fr-mt-2w fr-pb-2w"
-        id="fr-alert-:rh:"
+        aria-atomic="true"
+        aria-live="off"
+        class="fr-alert fr-alert--info fr-mt-2w fr-pb-2w fr-alert--sm"
       >
-        <div>
-          <p
-            class="fr-mt-2w"
-          >
-            <strong>
-              Attention : 
-            </strong>
-            En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.
-          </p>
-        </div>
+        <p
+          class="fr-mt-2w"
+        >
+          <strong>
+            Attention : 
+          </strong>
+          En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.
+        </p>
       </div>
     </li>
   </ul>
@@ -553,19 +552,18 @@ exports[`DisplayContent Alerts should replace div with alert class in li compone
 
 exports[`DisplayContent Alerts should replace div with alert class to Alert component 1`] = `
 <div
-  class="fr-alert fr-alert--info fr-alert--sm fr-mt-2w fr-pb-2w"
-  id="fr-alert-:rg:"
+  aria-atomic="true"
+  aria-live="off"
+  class="fr-alert fr-alert--info fr-mt-2w fr-pb-2w fr-alert--sm"
 >
-  <div>
-    <p
-      class="fr-mt-2w"
-    >
-      <strong>
-        Attention : 
-      </strong>
-      En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.
-    </p>
-  </div>
+  <p
+    class="fr-mt-2w"
+  >
+    <strong>
+      Attention : 
+    </strong>
+    En l’absence d’écrit, l’employeur peut être condamné à une amende de 3.750 € ou 7.500 € en cas de récidive.
+  </p>
 </div>
 `;
 
@@ -612,7 +610,7 @@ exports[`DisplayContent Infographic should replace div with infographic class to
   </div>
   <div
     class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--download"
-    id="fr-tile-:ri:"
+    id="fr-tile-:rg:"
   >
     <div
       class="fr-tile__body"

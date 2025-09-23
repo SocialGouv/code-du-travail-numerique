@@ -1,6 +1,7 @@
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { References } from "@socialgouv/modeles-social";
+import Link from "src/modules/common/Link";
 
 type Props = {
   references: References[];
@@ -21,9 +22,9 @@ const JuridicalReferences: React.FC<Props> = ({
       <ul>
         {references.map((ref, index) => (
           <li key={index}>
-            <a href={ref.url} target="_blank" rel="noopener noreferrer">
+            <Link href={ref.url} target="_blank" rel="noopener noreferrer">
               {ref.article}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

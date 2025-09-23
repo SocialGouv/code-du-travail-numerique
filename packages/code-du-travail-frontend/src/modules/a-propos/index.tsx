@@ -36,8 +36,9 @@ export const About = () => {
           rel="noopener noreferrer"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=F175675A5AF37BD5745391E7C64C2FAB.tplgfr41s_3?cidTexte=JORFTEXT000035607388&idArticle=LEGIARTI000036762196&dateTexte=20191129&categorieLien=id#LEGIARTI000036762196"
         >
-          les ordonnances sur le renforcement du dialogue social de 2017.
+          les ordonnances sur le renforcement du dialogue social de 2017
         </Link>
+        .
       </p>
       <h3>À qui ce service s’adresse-t-il&nbsp;?</h3>
       <p>

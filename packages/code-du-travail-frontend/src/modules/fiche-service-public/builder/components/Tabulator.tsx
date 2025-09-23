@@ -1,10 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useMemo } from "react";
+import { v4 as generateUUID } from "uuid";
 import { filterOutTitle, getTitleInChildren } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
 import Title from "./Title";
 import { FicheSPDataBlocCas, FicheSPDataListeSituations } from "../type";
-import { css } from "@styled-system/css";
 
 export const Tabulator = ({
   data,
@@ -13,9 +13,8 @@ export const Tabulator = ({
   data: FicheSPDataBlocCas | FicheSPDataListeSituations;
   headingLevel: number;
 }) => {
-  const [activeTab, setActiveTab] = useState(0);
+  const uniquePrefix = useMemo(() => generateUUID(), []);
 
-  // Prepare tabs data
   const tabs = data.children.map((tab) => {
     const title = getTitleInChildren(tab);
     return {
@@ -34,25 +33,18 @@ export const Tabulator = ({
     };
   });
 
-  // Define container styles
-  const tabsContainerStyle = css({
-    position: "relative",
-  });
-
   return (
-    <div className={tabsContainerStyle}>
-      <div className={`fr-tabs fr-mb-4w`} data-fr-js-tabs="true">
+    <div>
+      <div className="fr-tabs fr-mb-4w" data-fr-js-tabs="true">
         <ul className="fr-tabs__list" role="tablist">
           {tabs.map((tab, index) => (
-            <li role="presentation" key={`tab-${index}`}>
+            <li role="presentation" key={`tab-${uniquePrefix}-${index}`}>
               <button
-                id={`tab-${index}`}
-                className={`fr-tabs__tab fr-tabs__tab--icon-left ${index === activeTab ? "fr-tabs__tab--active" : ""}`}
-                tabIndex={index === activeTab ? 0 : -1}
+                id={`tab-${uniquePrefix}-${index}`}
+                className={`fr-tabs__tab fr-tabs__tab--icon-left ${index === 0 ? "fr-tabs__tab--active" : ""}`}
                 role="tab"
-                aria-selected={index === activeTab}
-                aria-controls={`panel-${index}`}
-                onClick={() => setActiveTab(index)}
+                aria-selected={index === 0}
+                aria-controls={`panel-${uniquePrefix}-${index}`}
               >
                 {tab.label}
               </button>
@@ -62,12 +54,11 @@ export const Tabulator = ({
 
         {tabs.map((tab, index) => (
           <div
-            key={`panel-${index}`}
-            id={`panel-${index}`}
-            className={`fr-tabs__panel ${index === activeTab ? "fr-tabs__panel--selected" : ""}`}
+            key={`panel-${uniquePrefix}-${index}`}
+            id={`panel-${uniquePrefix}-${index}`}
+            className={`fr-tabs__panel ${index === 0 ? "fr-tabs__panel--selected" : ""}`}
             role="tabpanel"
-            aria-labelledby={`tab-${index}`}
-            tabIndex={0}
+            aria-labelledby={`tab-${uniquePrefix}-${index}`}
           >
             {tab.content}
           </div>

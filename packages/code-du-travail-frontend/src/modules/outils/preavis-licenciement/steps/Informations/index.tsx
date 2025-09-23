@@ -5,7 +5,7 @@ import {
 } from "../store";
 import { fr } from "@codegouvfr/react-dsfr";
 import { PubliQuestion } from "src/modules/outils/indemnite-depart/steps/Informations/components/PubliQuestion";
-import { Note } from "../../../preavis-retraite/steps/Informations/components/Note";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 const StepInformations = () => {
   const store = useContext(PreavisLicenciementContext);
@@ -62,7 +62,15 @@ const StepInformations = () => {
       {errors.errorPublicodes && (
         <p className={fr.cx("fr-error-text")}>{errors.errorPublicodes}</p>
       )}
-      {errors.errorNote && <Note message={errors.errorNote} />}
+      {errors.errorNote && (
+        <AccessibleAlert
+          title="À noter"
+          severity="info"
+          description={errors.errorNote}
+          data-testid="alert-note"
+          className={["fr-mt-2w"]}
+        />
+      )}
     </>
   );
 };
