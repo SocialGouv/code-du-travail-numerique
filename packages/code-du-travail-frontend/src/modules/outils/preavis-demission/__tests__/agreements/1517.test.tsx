@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau"
         ),
         {
           target: { value: "'I'" },
@@ -56,7 +56,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau"
         ),
         {
           target: { value: "'II'" },
@@ -78,7 +78,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau"
         ),
         {
           target: { value: "'III'" },
@@ -100,7 +100,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau"
         ),
         {
           target: { value: "'IV'" },
@@ -122,7 +122,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau"
         ),
         {
           target: { value: "'V'" },
@@ -144,7 +144,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau"
         ),
         {
           target: { value: "'VI'" },
@@ -166,7 +166,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau"
         ),
         {
           target: { value: "'VII'" },
@@ -188,7 +188,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau"
         ),
         {
           target: { value: "'VIII'" },
@@ -210,7 +210,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau"
         ),
         {
           target: { value: "'IX'" },

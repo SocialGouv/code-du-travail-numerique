@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - télécommunications - groupe"
+          "infos-contrat-salarié-convention-collective-télécommunications-groupe"
         ),
         {
           target: { value: "'A et B'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - télécommunications - groupe A et B - ancienneté"
+            "infos-contrat-salarié-convention-collective-télécommunications-groupe-A-et-B-ancienneté"
           ),
           {
             target: { value: "'2 ans ou moins'" },
@@ -71,7 +71,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - télécommunications - groupe A et B - ancienneté"
+            "infos-contrat-salarié-convention-collective-télécommunications-groupe-A-et-B-ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -91,7 +91,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - télécommunications - groupe"
+          "infos-contrat-salarié-convention-collective-télécommunications-groupe"
         ),
         {
           target: { value: "'C et D'" },
@@ -110,7 +110,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - télécommunications - groupe"
+          "infos-contrat-salarié-convention-collective-télécommunications-groupe"
         ),
         {
           target: { value: "'E, F et G'" },
@@ -129,7 +129,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - télécommunications - groupe"
+          "infos-contrat-salarié-convention-collective-télécommunications-groupe"
         ),
         {
           target: { value: "'Hors classification'" },

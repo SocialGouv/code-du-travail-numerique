@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - bureaux études techniques - typeRupture"
+          "infos-contrat-salarié-convention-collective-bureaux-études-techniques-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -58,7 +58,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - bureaux études techniques - typeRupture"
+          "infos-contrat-salarié-convention-collective-bureaux-études-techniques-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },
@@ -122,7 +122,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - bureaux études techniques - typeRupture"
+          "infos-contrat-salarié-convention-collective-bureaux-études-techniques-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -152,7 +152,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - bureaux études techniques - typeRupture"
+          "infos-contrat-salarié-convention-collective-bureaux-études-techniques-typeRupture"
         ),
         {
           target: { value: "'Rupture conventionnelle'" },

@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de gros - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-commerces-de-gros-catégorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise et Techniciens'" },
@@ -58,7 +58,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de gros - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-commerces-de-gros-catégorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -77,7 +77,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de gros - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-commerces-de-gros-catégorie-professionnelle"
         ),
         {
           target: { value: "'Ouvriers, Employés'" },
@@ -90,7 +90,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de gros - catégorie professionnelle Ouvriers, Employés - motif de rupture"
+            "infos-contrat-salarié-convention-collective-commerces-de-gros-catégorie-professionnelle-Ouvriers,-Employés-motif-de-rupture"
           ),
           {
             target: { value: "'Autre motif hors faute grave ou lourde'" },
@@ -103,7 +103,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - commerces de gros - catégorie professionnelle Ouvriers, Employés - motif de rupture Autre motif hors faute grave ou lourde - ancienneté"
+              "infos-contrat-salarié-convention-collective-commerces-de-gros-catégorie-professionnelle-Ouvriers,-Employés-motif-de-rupture-Autre-motif-hors-faute-grave-ou-lourde-ancienneté"
             ),
             {
               target: { value: "'2 ans ou moins'" },
@@ -122,7 +122,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - commerces de gros - catégorie professionnelle Ouvriers, Employés - motif de rupture Autre motif hors faute grave ou lourde - ancienneté"
+              "infos-contrat-salarié-convention-collective-commerces-de-gros-catégorie-professionnelle-Ouvriers,-Employés-motif-de-rupture-Autre-motif-hors-faute-grave-ou-lourde-ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -142,7 +142,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de gros - catégorie professionnelle Ouvriers, Employés - motif de rupture"
+            "infos-contrat-salarié-convention-collective-commerces-de-gros-catégorie-professionnelle-Ouvriers,-Employés-motif-de-rupture"
           ),
           {
             target: { value: "'Motif économique'" },

@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - publicité française - typeRupture"
+          "infos-contrat-salarié-convention-collective-publicité-française-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - publicité française - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-publicité-française-typeRupture-Démission-catégorie-professionnelle"
           ),
           {
             target: { value: "'Agents de maîtrise et Techniciens'" },
@@ -71,7 +71,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - publicité française - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-publicité-française-typeRupture-Démission-catégorie-professionnelle"
           ),
           {
             target: { value: "'Cadres'" },
@@ -101,7 +101,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - publicité française - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-publicité-française-typeRupture-Démission-catégorie-professionnelle"
           ),
           {
             target: { value: "'Employés'" },
@@ -132,7 +132,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - publicité française - typeRupture"
+          "infos-contrat-salarié-convention-collective-publicité-française-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -145,7 +145,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - publicité française - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-publicité-française-typeRupture-Licenciement-catégorie-professionnelle"
           ),
           {
             target: { value: "'Agents de maîtrise et Techniciens'" },
@@ -175,7 +175,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - publicité française - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-publicité-française-typeRupture-Licenciement-catégorie-professionnelle"
           ),
           {
             target: { value: "'Cadres'" },
@@ -205,7 +205,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - publicité française - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-publicité-française-typeRupture-Licenciement-catégorie-professionnelle"
           ),
           {
             target: { value: "'Employés'" },
@@ -218,7 +218,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - publicité française - typeRupture Licenciement - catégorie professionnelle Employés - ancienneté"
+              "infos-contrat-salarié-convention-collective-publicité-française-typeRupture-Licenciement-catégorie-professionnelle-Employés-ancienneté"
             ),
             {
               target: { value: "'2 ans ou moins'" },
@@ -242,7 +242,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - publicité française - typeRupture Licenciement - catégorie professionnelle Employés - ancienneté"
+              "infos-contrat-salarié-convention-collective-publicité-française-typeRupture-Licenciement-catégorie-professionnelle-Employés-ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -274,7 +274,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - publicité française - typeRupture"
+          "infos-contrat-salarié-convention-collective-publicité-française-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

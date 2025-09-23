@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-coiffure-catégorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise'" },
@@ -54,7 +54,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-coiffure-catégorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -74,7 +74,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-coiffure-catégorie-professionnelle"
         ),
         {
           target: {
@@ -130,7 +130,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-coiffure-catégorie-professionnelle"
         ),
         {
           target: {
@@ -145,7 +145,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure - ancienneté"
+            "infos-contrat-salarié-convention-collective-coiffure-catégorie-professionnelle-Salariés-occupant-un-emploi-nontechnique-de-la-coiffure-ancienneté"
           ),
           {
             target: { value: "'6 mois ou moins'" },
@@ -165,7 +165,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure - ancienneté"
+            "infos-contrat-salarié-convention-collective-coiffure-catégorie-professionnelle-Salariés-occupant-un-emploi-nontechnique-de-la-coiffure-ancienneté"
           ),
           {
             target: { value: "'Plus de 6 mois'" },
@@ -186,7 +186,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-coiffure-catégorie-professionnelle"
         ),
         {
           target: {
@@ -201,7 +201,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi technique de la coiffure - ancienneté"
+            "infos-contrat-salarié-convention-collective-coiffure-catégorie-professionnelle-Salariés-occupant-un-emploi-technique-de-la-coiffure-ancienneté"
           ),
           {
             target: { value: "'6 mois ou moins'" },
@@ -221,7 +221,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi technique de la coiffure - ancienneté"
+            "infos-contrat-salarié-convention-collective-coiffure-catégorie-professionnelle-Salariés-occupant-un-emploi-technique-de-la-coiffure-ancienneté"
           ),
           {
             target: { value: "'Plus de 6 mois'" },

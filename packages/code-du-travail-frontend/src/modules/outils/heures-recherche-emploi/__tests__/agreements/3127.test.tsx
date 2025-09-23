@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - entreprises de services à la personne - typeRupture"
+          "infos-contrat-salarié-convention-collective-entreprises-de-services-à-la-personne-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -56,7 +56,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - entreprises de services à la personne - typeRupture"
+          "infos-contrat-salarié-convention-collective-entreprises-de-services-à-la-personne-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -87,7 +87,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - entreprises de services à la personne - typeRupture"
+          "infos-contrat-salarié-convention-collective-entreprises-de-services-à-la-personne-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

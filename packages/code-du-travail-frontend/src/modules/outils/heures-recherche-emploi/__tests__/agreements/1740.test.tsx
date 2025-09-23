@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture"
+          "infos-contrat-salarié-convention-collective-ouvriers-bâtiment-région-parisienne-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Démission - durée du préavis"
+            "infos-contrat-salarié-convention-collective-ouvriers-bâtiment-région-parisienne-typeRupture-Démission-durée-du-préavis"
           ),
           {
             target: { value: "'2 jours'" },
@@ -73,7 +73,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Démission - durée du préavis"
+            "infos-contrat-salarié-convention-collective-ouvriers-bâtiment-région-parisienne-typeRupture-Démission-durée-du-préavis"
           ),
           {
             target: { value: "'2 mois'" },
@@ -105,7 +105,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Démission - durée du préavis"
+            "infos-contrat-salarié-convention-collective-ouvriers-bâtiment-région-parisienne-typeRupture-Démission-durée-du-préavis"
           ),
           {
             target: { value: "'2 semaines'" },
@@ -137,7 +137,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Démission - durée du préavis"
+            "infos-contrat-salarié-convention-collective-ouvriers-bâtiment-région-parisienne-typeRupture-Démission-durée-du-préavis"
           ),
           {
             target: { value: "'Un mois'" },
@@ -170,7 +170,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture"
+          "infos-contrat-salarié-convention-collective-ouvriers-bâtiment-région-parisienne-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -183,7 +183,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Licenciement - durée du préavis"
+            "infos-contrat-salarié-convention-collective-ouvriers-bâtiment-région-parisienne-typeRupture-Licenciement-durée-du-préavis"
           ),
           {
             target: { value: "'2 jours'" },
@@ -215,7 +215,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Licenciement - durée du préavis"
+            "infos-contrat-salarié-convention-collective-ouvriers-bâtiment-région-parisienne-typeRupture-Licenciement-durée-du-préavis"
           ),
           {
             target: { value: "'2 mois'" },
@@ -247,7 +247,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Licenciement - durée du préavis"
+            "infos-contrat-salarié-convention-collective-ouvriers-bâtiment-région-parisienne-typeRupture-Licenciement-durée-du-préavis"
           ),
           {
             target: { value: "'2 semaines'" },
@@ -279,7 +279,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture Licenciement - durée du préavis"
+            "infos-contrat-salarié-convention-collective-ouvriers-bâtiment-région-parisienne-typeRupture-Licenciement-durée-du-préavis"
           ),
           {
             target: { value: "'Un mois'" },
@@ -312,7 +312,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - ouvriers bâtiment région parisienne - typeRupture"
+          "infos-contrat-salarié-convention-collective-ouvriers-bâtiment-région-parisienne-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

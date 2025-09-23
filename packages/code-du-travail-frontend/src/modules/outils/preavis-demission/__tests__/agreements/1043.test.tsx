@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - gardien concierge - logement"
+          "infos-contrat-salarié-convention-collective-gardien-concierge-logement"
         ),
         {
           target: { value: "'Non-logé'" },
@@ -47,7 +47,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - gardien concierge - logement - Non-logé - coefficient"
+            "infos-contrat-salarié-convention-collective-gardien-concierge-logement-Non-logé-coefficient"
           ),
           {
             target: { value: "'Inférieur ou égal à 602'" },
@@ -67,7 +67,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - gardien concierge - logement - Non-logé - coefficient"
+            "infos-contrat-salarié-convention-collective-gardien-concierge-logement-Non-logé-coefficient"
           ),
           {
             target: { value: "'Supérieur à 602'" },
@@ -88,7 +88,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - gardien concierge - logement"
+          "infos-contrat-salarié-convention-collective-gardien-concierge-logement"
         ),
         {
           target: { value: "'Logé'" },

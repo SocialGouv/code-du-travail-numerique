@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - habillement textiles commerce de detail - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-habillement-textiles-commerce-de-detail-catégorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise'" },
@@ -61,7 +61,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - habillement textiles commerce de detail - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-habillement-textiles-commerce-de-detail-catégorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -83,7 +83,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - habillement textiles commerce de detail - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-habillement-textiles-commerce-de-detail-catégorie-professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -96,7 +96,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - habillement textiles commerce de detail - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarié-convention-collective-habillement-textiles-commerce-de-detail-catégorie-professionnelle-Employés-ancienneté"
           ),
           {
             target: { value: "'6 mois ou moins'" },
@@ -118,7 +118,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - habillement textiles commerce de detail - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarié-convention-collective-habillement-textiles-commerce-de-detail-catégorie-professionnelle-Employés-ancienneté"
           ),
           {
             target: { value: "'Plus de 6 mois à 2 ans'" },
@@ -140,7 +140,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - habillement textiles commerce de detail - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarié-convention-collective-habillement-textiles-commerce-de-detail-catégorie-professionnelle-Employés-ancienneté"
           ),
           {
             target: { value: "'2 ans ou plus'" },

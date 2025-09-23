@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-catégorie-professionnelle"
         ),
         {
           target: { value: "'Salariés du particulier employeur'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle Salariés du particulier employeur - ancienneté"
+            "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-catégorie-professionnelle-Salariés-du-particulier-employeur-ancienneté"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -76,7 +76,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle Salariés du particulier employeur - ancienneté"
+            "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-catégorie-professionnelle-Salariés-du-particulier-employeur-ancienneté"
           ),
           {
             target: { value: "'6 mois à 2 ans'" },
@@ -100,7 +100,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle Salariés du particulier employeur - ancienneté"
+            "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-catégorie-professionnelle-Salariés-du-particulier-employeur-ancienneté"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -125,7 +125,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-catégorie-professionnelle"
         ),
         {
           target: {
@@ -140,7 +140,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle Assistants maternels du particulier employeur - ancienneté"
+            "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-catégorie-professionnelle-Assistants-maternels-du-particulier-employeur-ancienneté"
           ),
           {
             target: { value: "'Enfant accueilli depuis moins de 3 mois'" },
@@ -173,7 +173,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle Assistants maternels du particulier employeur - ancienneté"
+            "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-catégorie-professionnelle-Assistants-maternels-du-particulier-employeur-ancienneté"
           ),
           {
             target: { value: "'Enfant accueilli de 3 mois à moins d'un an'" },
@@ -206,7 +206,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle Assistants maternels du particulier employeur - ancienneté"
+            "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-catégorie-professionnelle-Assistants-maternels-du-particulier-employeur-ancienneté"
           ),
           {
             target: { value: "'Enfant accueilli depuis 1 an et plus'" },

@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-cabinets-médicaux-catégorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -61,7 +61,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-cabinets-médicaux-catégorie-professionnelle"
         ),
         {
           target: { value: "'Non-cadres'" },
@@ -74,7 +74,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle Noncadres - ancienneté"
+            "infos-contrat-salarié-convention-collective-cabinets-médicaux-catégorie-professionnelle-Noncadres-ancienneté"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -96,7 +96,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle Noncadres - ancienneté"
+            "infos-contrat-salarié-convention-collective-cabinets-médicaux-catégorie-professionnelle-Noncadres-ancienneté"
           ),
           {
             target: { value: "'6 mois à 2 ans'" },
@@ -118,7 +118,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle Noncadres - ancienneté"
+            "infos-contrat-salarié-convention-collective-cabinets-médicaux-catégorie-professionnelle-Noncadres-ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },

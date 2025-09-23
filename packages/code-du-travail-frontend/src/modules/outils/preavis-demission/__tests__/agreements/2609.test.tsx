@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - batiment etam - ancienneté"
+          "infos-contrat-salarié-convention-collective-batiment-etam-ancienneté"
         ),
         {
           target: { value: "'Moins de 2 ans'" },
@@ -54,7 +54,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - batiment etam - ancienneté"
+          "infos-contrat-salarié-convention-collective-batiment-etam-ancienneté"
         ),
         {
           target: { value: "'2 ans ou plus'" },

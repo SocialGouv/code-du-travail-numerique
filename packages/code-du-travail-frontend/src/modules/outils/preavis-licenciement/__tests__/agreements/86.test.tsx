@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - publicité française - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-publicité-française-catégorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise et Techniciens'" },
@@ -58,7 +58,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - publicité française - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-publicité-française-catégorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -77,7 +77,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - publicité française - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-publicité-française-catégorie-professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -90,7 +90,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - publicité française - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarié-convention-collective-publicité-française-catégorie-professionnelle-Employés-ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -109,7 +109,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - publicité française - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarié-convention-collective-publicité-française-catégorie-professionnelle-Employés-ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },

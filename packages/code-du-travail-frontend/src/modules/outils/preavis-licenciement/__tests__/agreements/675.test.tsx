@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-habillement-commerce-succursales-catégorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise'" },
@@ -60,7 +60,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-habillement-commerce-succursales-catégorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -81,7 +81,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-habillement-commerce-succursales-catégorie-professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -94,7 +94,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarié-convention-collective-habillement-commerce-succursales-catégorie-professionnelle-Employés-ancienneté"
           ),
           {
             target: { value: "'Moins de 1 mois'" },
@@ -115,7 +115,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarié-convention-collective-habillement-commerce-succursales-catégorie-professionnelle-Employés-ancienneté"
           ),
           {
             target: { value: "'1 mois à moins de 6 mois'" },
@@ -134,7 +134,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarié-convention-collective-habillement-commerce-succursales-catégorie-professionnelle-Employés-ancienneté"
           ),
           {
             target: { value: "'6 mois à moins de 2 ans'" },
@@ -153,7 +153,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - habillement commerce succursales - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarié-convention-collective-habillement-commerce-succursales-catégorie-professionnelle-Employés-ancienneté"
           ),
           {
             target: { value: "'2 ans ou plus'" },

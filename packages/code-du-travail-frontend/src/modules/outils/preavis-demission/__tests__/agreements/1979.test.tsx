@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-hotels-cafes-restaurants-catégorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise'" },
@@ -47,7 +47,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle Agents de maîtrise - ancienneté"
+            "infos-contrat-salarié-convention-collective-hotels-cafes-restaurants-catégorie-professionnelle-Agents-de-maîtrise-ancienneté"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -69,7 +69,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle Agents de maîtrise - ancienneté"
+            "infos-contrat-salarié-convention-collective-hotels-cafes-restaurants-catégorie-professionnelle-Agents-de-maîtrise-ancienneté"
           ),
           {
             target: { value: "'6 mois à 2 ans'" },
@@ -91,7 +91,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle Agents de maîtrise - ancienneté"
+            "infos-contrat-salarié-convention-collective-hotels-cafes-restaurants-catégorie-professionnelle-Agents-de-maîtrise-ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -114,7 +114,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-hotels-cafes-restaurants-catégorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -127,7 +127,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle Cadres - ancienneté"
+            "infos-contrat-salarié-convention-collective-hotels-cafes-restaurants-catégorie-professionnelle-Cadres-ancienneté"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -149,7 +149,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle Cadres - ancienneté"
+            "infos-contrat-salarié-convention-collective-hotels-cafes-restaurants-catégorie-professionnelle-Cadres-ancienneté"
           ),
           {
             target: { value: "'Plus de 6 mois'" },
@@ -172,7 +172,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-hotels-cafes-restaurants-catégorie-professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -185,7 +185,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarié-convention-collective-hotels-cafes-restaurants-catégorie-professionnelle-Employés-ancienneté"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -207,7 +207,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarié-convention-collective-hotels-cafes-restaurants-catégorie-professionnelle-Employés-ancienneté"
           ),
           {
             target: { value: "'6 mois à 2 ans'" },
@@ -229,7 +229,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarié-convention-collective-hotels-cafes-restaurants-catégorie-professionnelle-Employés-ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },

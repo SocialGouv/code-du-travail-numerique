@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau"
         ),
         {
           target: { value: "'I'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau I - ancienneté"
+            "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau-I-ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -73,7 +73,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau I - ancienneté"
+            "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau-I-ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -95,7 +95,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau"
         ),
         {
           target: { value: "'II'" },
@@ -108,7 +108,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau II - ancienneté"
+            "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau-II-ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -129,7 +129,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau II - ancienneté"
+            "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau-II-ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -151,7 +151,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau"
         ),
         {
           target: { value: "'III'" },
@@ -164,7 +164,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau III - ancienneté"
+            "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau-III-ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -185,7 +185,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau III - ancienneté"
+            "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau-III-ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -207,7 +207,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau"
         ),
         {
           target: { value: "'IV'" },
@@ -220,7 +220,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau IV - ancienneté"
+            "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau-IV-ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -241,7 +241,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau IV - ancienneté"
+            "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau-IV-ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -263,7 +263,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau"
         ),
         {
           target: { value: "'V'" },
@@ -276,7 +276,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau V - ancienneté"
+            "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau-V-ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -297,7 +297,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau V - ancienneté"
+            "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau-V-ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -319,7 +319,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau"
         ),
         {
           target: { value: "'VI'" },
@@ -332,7 +332,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau VI - ancienneté"
+            "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau-VI-ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -353,7 +353,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau VI - ancienneté"
+            "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau-VI-ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -375,7 +375,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau"
         ),
         {
           target: { value: "'VII'" },
@@ -388,7 +388,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau VII - ancienneté"
+            "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau-VII-ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -409,7 +409,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau VII - ancienneté"
+            "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau-VII-ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -431,7 +431,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau"
         ),
         {
           target: { value: "'VIII'" },
@@ -444,7 +444,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau VIII - ancienneté"
+            "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau-VIII-ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -465,7 +465,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau VIII - ancienneté"
+            "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau-VIII-ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -487,7 +487,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau"
+          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau"
         ),
         {
           target: { value: "'IX'" },
@@ -500,7 +500,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau IX - ancienneté"
+            "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau-IX-ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -521,7 +521,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - commerces de detail non alimentaires - niveau IX - ancienneté"
+            "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-niveau-IX-ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },

@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - boulangerie patisserie - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-boulangerie-patisserie-catégorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -58,7 +58,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - boulangerie patisserie - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-boulangerie-patisserie-catégorie-professionnelle"
         ),
         {
           target: {
@@ -74,7 +74,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - boulangerie patisserie - catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services - ancienneté"
+            "infos-contrat-salarié-convention-collective-boulangerie-patisserie-catégorie-professionnelle-Personnel-de-fabrication,-personnel-de-vente-et-personnel-de-services-ancienneté"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -96,7 +96,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - boulangerie patisserie - catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services - ancienneté"
+            "infos-contrat-salarié-convention-collective-boulangerie-patisserie-catégorie-professionnelle-Personnel-de-fabrication,-personnel-de-vente-et-personnel-de-services-ancienneté"
           ),
           {
             target: { value: "'Plus de 6 mois'" },

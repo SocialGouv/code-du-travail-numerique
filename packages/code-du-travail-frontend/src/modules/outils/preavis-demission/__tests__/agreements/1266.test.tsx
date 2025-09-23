@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - restauration collectivités - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-restauration-collectivités-catégorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -54,7 +54,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - restauration collectivités - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-restauration-collectivités-catégorie-professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -67,7 +67,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - restauration collectivités - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarié-convention-collective-restauration-collectivités-catégorie-professionnelle-Employés-ancienneté"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -87,7 +87,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - restauration collectivités - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarié-convention-collective-restauration-collectivités-catégorie-professionnelle-Employés-ancienneté"
           ),
           {
             target: { value: "'6 mois à 2 ans'" },
@@ -107,7 +107,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - restauration collectivités - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarié-convention-collective-restauration-collectivités-catégorie-professionnelle-Employés-ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -128,7 +128,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - restauration collectivités - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-restauration-collectivités-catégorie-professionnelle"
         ),
         {
           target: { value: "'Maîtrises'" },
@@ -141,7 +141,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - restauration collectivités - catégorie professionnelle Maîtrises - ancienneté"
+            "infos-contrat-salarié-convention-collective-restauration-collectivités-catégorie-professionnelle-Maîtrises-ancienneté"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -161,7 +161,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - restauration collectivités - catégorie professionnelle Maîtrises - ancienneté"
+            "infos-contrat-salarié-convention-collective-restauration-collectivités-catégorie-professionnelle-Maîtrises-ancienneté"
           ),
           {
             target: { value: "'6 mois à 2 ans'" },
@@ -181,7 +181,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - restauration collectivités - catégorie professionnelle Maîtrises - ancienneté"
+            "infos-contrat-salarié-convention-collective-restauration-collectivités-catégorie-professionnelle-Maîtrises-ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },

@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - boulangerie patisserie - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-boulangerie-patisserie-catégorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - boulangerie patisserie - catégorie professionnelle Cadres - ancienneté"
+            "infos-contrat-salarié-convention-collective-boulangerie-patisserie-catégorie-professionnelle-Cadres-ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -75,7 +75,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - boulangerie patisserie - catégorie professionnelle Cadres - ancienneté"
+            "infos-contrat-salarié-convention-collective-boulangerie-patisserie-catégorie-professionnelle-Cadres-ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -99,7 +99,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - boulangerie patisserie - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-boulangerie-patisserie-catégorie-professionnelle"
         ),
         {
           target: {
@@ -115,7 +115,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - boulangerie patisserie - catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services - ancienneté"
+            "infos-contrat-salarié-convention-collective-boulangerie-patisserie-catégorie-professionnelle-Personnel-de-fabrication,-personnel-de-vente-et-personnel-de-services-ancienneté"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -134,7 +134,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - boulangerie patisserie - catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services - ancienneté"
+            "infos-contrat-salarié-convention-collective-boulangerie-patisserie-catégorie-professionnelle-Personnel-de-fabrication,-personnel-de-vente-et-personnel-de-services-ancienneté"
           ),
           {
             target: { value: "'Plus de 6 mois à moins de 2 ans'" },
@@ -153,7 +153,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - boulangerie patisserie - catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services - ancienneté"
+            "infos-contrat-salarié-convention-collective-boulangerie-patisserie-catégorie-professionnelle-Personnel-de-fabrication,-personnel-de-vente-et-personnel-de-services-ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },

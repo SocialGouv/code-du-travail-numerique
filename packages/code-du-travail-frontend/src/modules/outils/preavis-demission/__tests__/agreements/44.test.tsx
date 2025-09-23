@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-industries-chimiques-catégorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise et Techniciens'" },
@@ -47,7 +47,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise et Techniciens - coefficient"
+            "infos-contrat-salarié-convention-collective-industries-chimiques-catégorie-professionnelle-Agents-de-maîtrise-et-Techniciens-coefficient"
           ),
           {
             target: { value: "'Inférieur à 275'" },
@@ -69,7 +69,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise et Techniciens - coefficient"
+            "infos-contrat-salarié-convention-collective-industries-chimiques-catégorie-professionnelle-Agents-de-maîtrise-et-Techniciens-coefficient"
           ),
           {
             target: { value: "'Supérieur à 275 inclus'" },
@@ -92,7 +92,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-industries-chimiques-catégorie-professionnelle"
         ),
         {
           target: { value: "'Ingénieurs, Cadres'" },
@@ -114,7 +114,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-industries-chimiques-catégorie-professionnelle"
         ),
         {
           target: { value: "'Ouvriers et collaborateurs'" },
@@ -127,7 +127,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers et collaborateurs - coefficient"
+            "infos-contrat-salarié-convention-collective-industries-chimiques-catégorie-professionnelle-Ouvriers-et-collaborateurs-coefficient"
           ),
           {
             target: { value: "'Inférieur à 160'" },
@@ -149,7 +149,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers et collaborateurs - coefficient"
+            "infos-contrat-salarié-convention-collective-industries-chimiques-catégorie-professionnelle-Ouvriers-et-collaborateurs-coefficient"
           ),
           {
             target: { value: "'Entre 160 inclus et 175'" },
@@ -171,7 +171,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers et collaborateurs - coefficient"
+            "infos-contrat-salarié-convention-collective-industries-chimiques-catégorie-professionnelle-Ouvriers-et-collaborateurs-coefficient"
           ),
           {
             target: { value: "'190 et plus'" },

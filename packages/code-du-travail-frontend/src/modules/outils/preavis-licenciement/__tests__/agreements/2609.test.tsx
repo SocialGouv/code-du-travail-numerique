@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - batiment etam - âge"
+          "infos-contrat-salarié-convention-collective-batiment-etam-âge"
         ),
         {
           target: { value: "'Moins de 55 ans'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - batiment etam - âge Moins de 55 ans - ancienneté"
+            "infos-contrat-salarié-convention-collective-batiment-etam-âge-Moins-de-55-ans-ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -72,7 +72,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - batiment etam - âge Moins de 55 ans - ancienneté"
+            "infos-contrat-salarié-convention-collective-batiment-etam-âge-Moins-de-55-ans-ancienneté"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -93,7 +93,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - batiment etam - âge"
+          "infos-contrat-salarié-convention-collective-batiment-etam-âge"
         ),
         {
           target: { value: "'Plus de 55 ans'" },
@@ -106,7 +106,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - batiment etam - âge Plus de 55 ans - ancienneté"
+            "infos-contrat-salarié-convention-collective-batiment-etam-âge-Plus-de-55-ans-ancienneté"
           ),
           {
             target: { value: "'Au moins 15 ans d'ancienneté'" },
@@ -126,7 +126,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - batiment etam - âge Plus de 55 ans - ancienneté"
+            "infos-contrat-salarié-convention-collective-batiment-etam-âge-Plus-de-55-ans-ancienneté"
           ),
           {
             target: { value: "'Moins de 15 ans d'ancienneté'" },

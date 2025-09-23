@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - ouvriers bâtiment région parisienne - ancienneté"
+          "infos-contrat-salarié-convention-collective-ouvriers-bâtiment-région-parisienne-ancienneté"
         ),
         {
           target: {
@@ -61,7 +61,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - ouvriers bâtiment région parisienne - ancienneté"
+          "infos-contrat-salarié-convention-collective-ouvriers-bâtiment-région-parisienne-ancienneté"
         ),
         {
           target: { value: "'De 3 à 6 mois'" },
@@ -81,7 +81,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - ouvriers bâtiment région parisienne - ancienneté"
+          "infos-contrat-salarié-convention-collective-ouvriers-bâtiment-région-parisienne-ancienneté"
         ),
         {
           target: { value: "'6 mois à 2 ans'" },
@@ -101,7 +101,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - ouvriers bâtiment région parisienne - ancienneté"
+          "infos-contrat-salarié-convention-collective-ouvriers-bâtiment-région-parisienne-ancienneté"
         ),
         {
           target: { value: "'Plus de 2 ans'" },

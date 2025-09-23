@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - industries chimiques - typeRupture"
+          "infos-contrat-salarié-convention-collective-industries-chimiques-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - industries chimiques - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-industries-chimiques-typeRupture-Démission-catégorie-professionnelle"
           ),
           {
             target: { value: "'Agents de maîtrise'" },
@@ -79,7 +79,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - industries chimiques - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-industries-chimiques-typeRupture-Démission-catégorie-professionnelle"
           ),
           {
             target: { value: "'Ingénieurs, Cadres'" },
@@ -117,7 +117,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - industries chimiques - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-industries-chimiques-typeRupture-Démission-catégorie-professionnelle"
           ),
           {
             target: { value: "'Ouvriers, Employés'" },
@@ -155,7 +155,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - industries chimiques - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-industries-chimiques-typeRupture-Démission-catégorie-professionnelle"
           ),
           {
             target: { value: "'Techniciens'" },
@@ -168,7 +168,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - industries chimiques - typeRupture Démission - catégorie professionnelle Techniciens - groupe"
+              "infos-contrat-salarié-convention-collective-industries-chimiques-typeRupture-Démission-catégorie-professionnelle-Techniciens-groupe"
             ),
             {
               target: { value: "'De I à III'" },
@@ -206,7 +206,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - industries chimiques - typeRupture Démission - catégorie professionnelle Techniciens - groupe"
+              "infos-contrat-salarié-convention-collective-industries-chimiques-typeRupture-Démission-catégorie-professionnelle-Techniciens-groupe"
             ),
             {
               target: { value: "'IV'" },
@@ -246,7 +246,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - industries chimiques - typeRupture"
+          "infos-contrat-salarié-convention-collective-industries-chimiques-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },
@@ -588,7 +588,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - industries chimiques - typeRupture"
+          "infos-contrat-salarié-convention-collective-industries-chimiques-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -601,7 +601,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - industries chimiques - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-industries-chimiques-typeRupture-Licenciement-catégorie-professionnelle"
           ),
           {
             target: { value: "'Agents de maîtrise'" },
@@ -639,7 +639,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - industries chimiques - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-industries-chimiques-typeRupture-Licenciement-catégorie-professionnelle"
           ),
           {
             target: { value: "'Ingénieurs, Cadres'" },
@@ -677,7 +677,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - industries chimiques - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-industries-chimiques-typeRupture-Licenciement-catégorie-professionnelle"
           ),
           {
             target: { value: "'Ouvriers, Employés'" },
@@ -715,7 +715,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - industries chimiques - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-industries-chimiques-typeRupture-Licenciement-catégorie-professionnelle"
           ),
           {
             target: { value: "'Techniciens'" },
@@ -728,7 +728,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - industries chimiques - typeRupture Licenciement - catégorie professionnelle Techniciens - groupe"
+              "infos-contrat-salarié-convention-collective-industries-chimiques-typeRupture-Licenciement-catégorie-professionnelle-Techniciens-groupe"
             ),
             {
               target: { value: "'De I à III'" },
@@ -766,7 +766,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - industries chimiques - typeRupture Licenciement - catégorie professionnelle Techniciens - groupe"
+              "infos-contrat-salarié-convention-collective-industries-chimiques-typeRupture-Licenciement-catégorie-professionnelle-Techniciens-groupe"
             ),
             {
               target: { value: "'IV'" },

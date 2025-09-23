@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail"
+          "infos-contrat-salarié-convention-collective-industrie-pharmaceutique-conclusion-contrat-travail"
         ),
         {
           target: {
@@ -54,7 +54,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 - groupe"
+            "infos-contrat-salarié-convention-collective-industrie-pharmaceutique-conclusion-contrat-travail-Contrat-de-travail-conclu-avant-le-1er-juillet-2009-groupe"
           ),
           {
             target: { value: "'1 à 3'" },
@@ -73,7 +73,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 - groupe"
+            "infos-contrat-salarié-convention-collective-industrie-pharmaceutique-conclusion-contrat-travail-Contrat-de-travail-conclu-avant-le-1er-juillet-2009-groupe"
           ),
           {
             target: { value: "'4'" },
@@ -92,7 +92,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 - groupe"
+            "infos-contrat-salarié-convention-collective-industrie-pharmaceutique-conclusion-contrat-travail-Contrat-de-travail-conclu-avant-le-1er-juillet-2009-groupe"
           ),
           {
             target: { value: "'5 et suivants'" },
@@ -112,7 +112,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail"
+          "infos-contrat-salarié-convention-collective-industrie-pharmaceutique-conclusion-contrat-travail"
         ),
         {
           target: {
@@ -127,7 +127,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 - groupe"
+            "infos-contrat-salarié-convention-collective-industrie-pharmaceutique-conclusion-contrat-travail-Contrat-de-travail-conclu-après-le-1er-juillet-2009-groupe"
           ),
           {
             target: { value: "'1 à 3'" },
@@ -146,7 +146,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 - groupe"
+            "infos-contrat-salarié-convention-collective-industrie-pharmaceutique-conclusion-contrat-travail-Contrat-de-travail-conclu-après-le-1er-juillet-2009-groupe"
           ),
           {
             target: { value: "'4 à 6'" },
@@ -165,7 +165,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 - groupe"
+            "infos-contrat-salarié-convention-collective-industrie-pharmaceutique-conclusion-contrat-travail-Contrat-de-travail-conclu-après-le-1er-juillet-2009-groupe"
           ),
           {
             target: { value: "'6 et suivants'" },

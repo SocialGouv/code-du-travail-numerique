@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-entreprises-de-propreté-catégorie-professionnelle"
         ),
         {
           target: { value: "'Agents de propreté'" },
@@ -47,7 +47,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Agents de propreté - ancienneté"
+            "infos-contrat-salarié-convention-collective-entreprises-de-propreté-catégorie-professionnelle-Agents-de-propreté-ancienneté"
           ),
           {
             target: { value: "'Moins de 1 mois'" },
@@ -71,7 +71,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Agents de propreté - ancienneté"
+            "infos-contrat-salarié-convention-collective-entreprises-de-propreté-catégorie-professionnelle-Agents-de-propreté-ancienneté"
           ),
           {
             target: { value: "'1 mois à 6 mois'" },
@@ -93,7 +93,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Agents de propreté - ancienneté"
+            "infos-contrat-salarié-convention-collective-entreprises-de-propreté-catégorie-professionnelle-Agents-de-propreté-ancienneté"
           ),
           {
             target: { value: "'Plus de 6 mois'" },
@@ -116,7 +116,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-entreprises-de-propreté-catégorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -138,7 +138,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-entreprises-de-propreté-catégorie-professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -160,7 +160,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-entreprises-de-propreté-catégorie-professionnelle"
         ),
         {
           target: { value: "'Techniciens et agents de maîtrise TAM'" },
@@ -173,7 +173,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Techniciens et agents de maîtrise TAM - ancienneté"
+            "infos-contrat-salarié-convention-collective-entreprises-de-propreté-catégorie-professionnelle-Techniciens-et-agents-de-maîtrise-TAM-ancienneté"
           ),
           {
             target: { value: "'2 mois à 2 ans'" },
@@ -195,7 +195,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Techniciens et agents de maîtrise TAM - ancienneté"
+            "infos-contrat-salarié-convention-collective-entreprises-de-propreté-catégorie-professionnelle-Techniciens-et-agents-de-maîtrise-TAM-ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },

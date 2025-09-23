@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-catégorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise'" },
@@ -56,7 +56,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-catégorie-professionnelle"
         ),
         {
           target: { value: "'Techniciens'" },
@@ -78,7 +78,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-catégorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -100,7 +100,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-catégorie-professionnelle"
         ),
         {
           target: { value: "'Ouvriers'" },
@@ -122,7 +122,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
+          "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-catégorie-professionnelle"
         ),
         {
           target: { value: "'Employés'" },

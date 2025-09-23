@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - plasturgie - typeRupture"
+          "infos-contrat-salarié-convention-collective-plasturgie-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - plasturgie - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-plasturgie-typeRupture-Démission-catégorie-professionnelle"
           ),
           {
             target: { value: "'Cadres'" },
@@ -73,7 +73,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - plasturgie - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-plasturgie-typeRupture-Démission-catégorie-professionnelle"
           ),
           {
             target: { value: "'Non-cadres'" },
@@ -104,7 +104,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - plasturgie - typeRupture"
+          "infos-contrat-salarié-convention-collective-plasturgie-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -117,7 +117,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - plasturgie - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-plasturgie-typeRupture-Licenciement-catégorie-professionnelle"
           ),
           {
             target: { value: "'Cadres'" },
@@ -149,7 +149,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - plasturgie - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-plasturgie-typeRupture-Licenciement-catégorie-professionnelle"
           ),
           {
             target: { value: "'Non-cadres'" },
@@ -180,7 +180,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - plasturgie - typeRupture"
+          "infos-contrat-salarié-convention-collective-plasturgie-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

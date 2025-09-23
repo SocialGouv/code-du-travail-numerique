@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - transport aérien personnel au sol - typeRupture"
+          "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-typeRupture-Licenciement-catégorie-professionnelle"
           ),
           {
             target: { value: "'Agents de maîtrise'" },
@@ -75,7 +75,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-typeRupture-Licenciement-catégorie-professionnelle"
           ),
           {
             target: { value: "'Techniciens'" },
@@ -109,7 +109,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-typeRupture-Licenciement-catégorie-professionnelle"
           ),
           {
             target: { value: "'Cadres'" },
@@ -141,7 +141,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-typeRupture-Licenciement-catégorie-professionnelle"
           ),
           {
             target: { value: "'Employés'" },
@@ -175,7 +175,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-typeRupture-Licenciement-catégorie-professionnelle"
           ),
           {
             target: { value: "'Ouvriers'" },
@@ -210,7 +210,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - transport aérien personnel au sol - typeRupture"
+          "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -223,7 +223,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-typeRupture-Démission-catégorie-professionnelle"
           ),
           {
             target: { value: "'Agents de maîtrise'" },
@@ -257,7 +257,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-typeRupture-Démission-catégorie-professionnelle"
           ),
           {
             target: { value: "'Techniciens'" },
@@ -291,7 +291,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-typeRupture-Démission-catégorie-professionnelle"
           ),
           {
             target: { value: "'Cadres'" },
@@ -323,7 +323,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-typeRupture-Démission-catégorie-professionnelle"
           ),
           {
             target: { value: "'Ouvriers'" },
@@ -357,7 +357,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - transport aérien personnel au sol - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-typeRupture-Démission-catégorie-professionnelle"
           ),
           {
             target: { value: "'Employés'" },
@@ -392,7 +392,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat salarié - convention collective - transport aérien personnel au sol - typeRupture"
+          "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

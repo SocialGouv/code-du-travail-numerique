@@ -16,7 +16,7 @@ describe("Page résultat: vérification de la formule affichée", () => {
       ccNum: 2264,
       ccTitle: "Hospitalisation privée",
       select:
-        "infos-contrat salarié - convention collective - hospitalisation privées - indemnité de licenciement - catégorie professionnelle",
+        "infos-contrat-salarié-convention-collective-hospitalisation-privées-indemnité-de-licenciement-catégorie-professionnelle",
       selectOption: "Non-cadres",
       expectedA1: "A1 : Années d'ancienneté de 10 ans ou moins (10 ans)",
       expectedA2:
@@ -32,7 +32,7 @@ describe("Page résultat: vérification de la formule affichée", () => {
       ccNum: 2596,
       ccTitle: "Coiffure",
       select:
-        "infos-contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle",
+        "infos-contrat-salarié-convention-collective-coiffure-indemnité-de-licenciement-catégorie-professionnelle",
       selectOption: "Cadres",
       expectedA1: "A1 : Ancienneté de 10 ans ou moins (10 ans)",
       expectedA2:
@@ -48,7 +48,7 @@ describe("Page résultat: vérification de la formule affichée", () => {
       ccNum: 2596,
       ccTitle: "Coiffure",
       select:
-        "infos-contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle",
+        "infos-contrat-salarié-convention-collective-coiffure-indemnité-de-licenciement-catégorie-professionnelle",
       selectOption: "Cadres",
       expectedA1: "A : Ancienneté totale (1 an)",
       expectedA2: "A : Ancienneté totale (1 an)",
@@ -62,7 +62,7 @@ describe("Page résultat: vérification de la formule affichée", () => {
       ccNum: 2596,
       ccTitle: "Coiffure",
       select:
-        "infos-contrat salarié - convention collective - coiffure - indemnité de licenciement - catégorie professionnelle",
+        "infos-contrat-salarié-convention-collective-coiffure-indemnité-de-licenciement-catégorie-professionnelle",
       selectOption: "Cadres",
       expectedA1: "A : Ancienneté totale (≈ 0.17 an : valeur arrondie)",
       expectedA2: "A : Ancienneté totale (≈ 0.17 an : valeur arrondie)",
