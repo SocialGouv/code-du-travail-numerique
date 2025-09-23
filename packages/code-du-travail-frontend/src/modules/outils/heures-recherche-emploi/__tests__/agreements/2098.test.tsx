@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - personnel presta service tertiaire - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-personnel-presta-service-tertiaire-typeRupture-Rupture-de-la-période-d'essai-catégorie-professionnelle"
           ),
           {
             target: { value: "'Cadres'" },
@@ -54,7 +54,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - personnel presta service tertiaire - typeRupture Rupture de la période d'essai - catégorie professionnelle Cadres - initiative de la rupture de la période d'essai"
+              "infos-contrat-salarié-convention-collective-personnel-presta-service-tertiaire-typeRupture-Rupture-de-la-période-d'essai-catégorie-professionnelle-Cadres-initiative-de-la-rupture-de-la-période-d'essai"
             ),
             {
               target: { value: "'L'employeur'" },
@@ -84,7 +84,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - personnel presta service tertiaire - typeRupture Rupture de la période d'essai - catégorie professionnelle Cadres - initiative de la rupture de la période d'essai"
+              "infos-contrat-salarié-convention-collective-personnel-presta-service-tertiaire-typeRupture-Rupture-de-la-période-d'essai-catégorie-professionnelle-Cadres-initiative-de-la-rupture-de-la-période-d'essai"
             ),
             {
               target: { value: "'Le salarié'" },
@@ -115,7 +115,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - personnel presta service tertiaire - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-personnel-presta-service-tertiaire-typeRupture-Rupture-de-la-période-d'essai-catégorie-professionnelle"
           ),
           {
             target: { value: "'Non-cadres'" },

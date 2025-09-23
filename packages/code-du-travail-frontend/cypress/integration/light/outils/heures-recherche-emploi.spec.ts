@@ -42,7 +42,7 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
 
     cy.contains("Pour quelle raison le contrat de travail a-t-il été rompu ?");
     cy.get(
-      '[id="input-infos-contrat salarié - convention collective - boulangerie patisserie - typeRupture"]'
+      '[id="input-infos-contrat-salarié-convention-collective-boulangerie-patisserie-typeRupture"]'
     ).select("Licenciement");
     cy.get("button").contains("Suivant").click();
 
@@ -88,11 +88,11 @@ describe("Outil - Heures d'absence pour rechercher un emploi", () => {
 
     cy.contains("Pour quelle raison le contrat de travail a-t-il été rompu ?");
     cy.get(
-      '[id="input-infos-contrat salarié - convention collective - comptables - typeRupture"]'
+      '[id="input-infos-contrat-salarié-convention-collective-comptables-typeRupture"]'
     ).select("Démission");
     cy.contains("Quelle est l'ancienneté du salarié ?");
     cy.get(
-      '[id="input-infos-contrat salarié - convention collective - comptables - typeRupture Démission - ancienneté"]'
+      '[id="input-infos-contrat-salarié-convention-collective-comptables-typeRupture-Démission-ancienneté"]'
     ).select("Au moins 5 ans");
 
     cy.get("button").contains("Suivant").click();

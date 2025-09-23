@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - hospitalisation privées - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai"
+            "infos-contrat-salarié-convention-collective-hospitalisation-privées-typeRupture-Rupture-de-la-période-d'essai-initiative-de-la-rupture-de-la-période-d'essai"
           ),
           {
             target: { value: "'L'employeur'" },
@@ -54,7 +54,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - hospitalisation privées - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai L'employeur - ancienneté"
+              "infos-contrat-salarié-convention-collective-hospitalisation-privées-typeRupture-Rupture-de-la-période-d'essai-initiative-de-la-rupture-de-la-période-d'essai-L'employeur-ancienneté"
             ),
             {
               target: { value: "'3 mois ou moins'" },
@@ -78,7 +78,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - hospitalisation privées - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai L'employeur - ancienneté"
+              "infos-contrat-salarié-convention-collective-hospitalisation-privées-typeRupture-Rupture-de-la-période-d'essai-initiative-de-la-rupture-de-la-période-d'essai-L'employeur-ancienneté"
             ),
             {
               target: { value: "'Plus de 3 mois'" },
@@ -111,7 +111,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - hospitalisation privées - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai"
+            "infos-contrat-salarié-convention-collective-hospitalisation-privées-typeRupture-Rupture-de-la-période-d'essai-initiative-de-la-rupture-de-la-période-d'essai"
           ),
           {
             target: { value: "'Le salarié'" },

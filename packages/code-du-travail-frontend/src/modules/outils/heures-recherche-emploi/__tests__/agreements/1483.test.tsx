@@ -379,7 +379,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-habillement-textiles-commerce-de-detail-typeRupture-Rupture-de-la-période-d'essai-catégorie-professionnelle"
           ),
           {
             target: { value: "'Agents de maîtrise et Cadres'" },
@@ -392,7 +392,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Rupture de la période d'essai - catégorie professionnelle Agents de maîtrise et Cadres - durée du travail"
+              "infos-contrat-salarié-convention-collective-habillement-textiles-commerce-de-detail-typeRupture-Rupture-de-la-période-d'essai-catégorie-professionnelle-Agents-de-maîtrise-et-Cadres-durée-du-travail"
             ),
             {
               target: { value: "'Temps complet'" },
@@ -417,7 +417,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Rupture de la période d'essai - catégorie professionnelle Agents de maîtrise et Cadres - durée du travail"
+              "infos-contrat-salarié-convention-collective-habillement-textiles-commerce-de-detail-typeRupture-Rupture-de-la-période-d'essai-catégorie-professionnelle-Agents-de-maîtrise-et-Cadres-durée-du-travail"
             ),
             {
               target: { value: "'Temps partiel'" },
@@ -447,7 +447,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - habillement textiles commerce de detail - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+            "infos-contrat-salarié-convention-collective-habillement-textiles-commerce-de-detail-typeRupture-Rupture-de-la-période-d'essai-catégorie-professionnelle"
           ),
           {
             target: { value: "'Employés'" },

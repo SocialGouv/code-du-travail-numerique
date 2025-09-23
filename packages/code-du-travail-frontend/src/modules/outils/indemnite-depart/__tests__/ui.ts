@@ -252,18 +252,18 @@ export const ui = {
     },
     agreement1672: {
       proCategory: byTestId(
-        "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle"
+        "infos-contrat-salarié-convention-collective-sociétés-d'assurances-catégorie-professionnelle"
       ),
       nonCadreAvant: {
         oui: byTestId(
-          "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle - cadres - avant non cadres - Oui"
+          "infos-contrat-salarié-convention-collective-sociétés-d'assurances-catégorie-professionnelle-cadres-avant-non-cadres-Oui"
         ),
       },
       dateDebutCadre: byTestId(
-        "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle - cadres - date du statut cadre"
+        "infos-contrat-salarié-convention-collective-sociétés-d'assurances-catégorie-professionnelle-cadres-date-du-statut-cadre"
       ),
       age: byTestId(
-        "infos-contrat salarié - convention collective - sociétés d'assurances - age"
+        "infos-contrat-salarié-convention-collective-sociétés-d'assurances-age"
       ),
     },
     agreement1702: {

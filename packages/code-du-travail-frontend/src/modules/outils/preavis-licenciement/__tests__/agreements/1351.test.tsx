@@ -55,7 +55,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau"
+            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau"
           ),
           {
             target: { value: "'I'" },
@@ -68,7 +68,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau I - ancienneté"
+              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-I-ancienneté"
             ),
             {
               target: { value: "'Moins de 15 jours'" },
@@ -89,7 +89,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau I - ancienneté"
+              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-I-ancienneté"
             ),
             {
               target: { value: "'15 jours à 1 mois'" },
@@ -108,7 +108,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau I - ancienneté"
+              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-I-ancienneté"
             ),
             {
               target: { value: "'Plus de 1 mois à 2 mois'" },
@@ -129,7 +129,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau I - ancienneté"
+              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-I-ancienneté"
             ),
             {
               target: { value: "'Plus de 2 mois à 6 mois'" },
@@ -150,7 +150,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau I - ancienneté"
+              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-I-ancienneté"
             ),
             {
               target: { value: "'Plus de 6 mois à 2 ans'" },
@@ -169,7 +169,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau I - ancienneté"
+              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-I-ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -189,7 +189,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau"
+            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau"
           ),
           {
             target: { value: "'II'" },
@@ -202,7 +202,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau II - ancienneté"
+              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-II-ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -222,7 +222,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau"
+            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau"
           ),
           {
             target: { value: "'III'" },
@@ -235,7 +235,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau III - ancienneté"
+              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-III-ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -255,7 +255,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau"
+            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau"
           ),
           {
             target: { value: "'IV'" },
@@ -268,7 +268,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau IV - ancienneté"
+              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-IV-ancienneté"
             ),
             {
               target: { value: "'Plus de 2 mois à 6 mois'" },
@@ -289,7 +289,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau IV - ancienneté"
+              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-IV-ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -309,7 +309,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau"
+            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau"
           ),
           {
             target: { value: "'V'" },
@@ -322,7 +322,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau V - ancienneté"
+              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-V-ancienneté"
             ),
             {
               target: { value: "'Plus de 2 mois à 6 mois'" },
@@ -343,7 +343,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle Agents d'exploitation, employés administratifs et techniciens - niveau V - ancienneté"
+              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-V-ancienneté"
             ),
             {
               target: { value: "'Plus de 2 ans'" },

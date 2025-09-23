@@ -89,7 +89,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique - ancienneté"
+            "infos-contrat-salarié-convention-collective-coiffure-catégorie-professionnelle-Salariés-occupant-un-emploi-de-l'esthétiquecosmétique-ancienneté"
           ),
           {
             target: { value: "'6 mois ou moins'" },
@@ -109,7 +109,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique - ancienneté"
+            "infos-contrat-salarié-convention-collective-coiffure-catégorie-professionnelle-Salariés-occupant-un-emploi-de-l'esthétiquecosmétique-ancienneté"
           ),
           {
             target: { value: "'Plus de 6 mois'" },

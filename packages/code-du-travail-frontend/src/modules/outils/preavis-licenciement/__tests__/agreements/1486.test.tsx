@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle Chargés d'enquête intermittents - ancienneté"
+            "infos-contrat-salarié-convention-collective-bureaux-études-techniques-catégorie-professionnelle-Chargés-d'enquête-intermittents-ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -73,7 +73,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle Chargés d'enquête intermittents - ancienneté"
+            "infos-contrat-salarié-convention-collective-bureaux-études-techniques-catégorie-professionnelle-Chargés-d'enquête-intermittents-ancienneté"
           ),
           {
             target: { value: "'2 ans ou plus'" },
