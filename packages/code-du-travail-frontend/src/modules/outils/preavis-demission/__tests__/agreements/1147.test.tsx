@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -56,7 +56,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle"
         ),
         {
           target: { value: "'Non-cadres'" },
@@ -69,7 +69,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle Non-cadres - ancienneté"
+            "infos-contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle Non-cadres - ancienneté"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -91,7 +91,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle Non-cadres - ancienneté"
+            "infos-contrat salarié - convention collective - cabinets médicaux - catégorie professionnelle Non-cadres - ancienneté"
           ),
           {
             target: { value: "'6 mois et plus'" },

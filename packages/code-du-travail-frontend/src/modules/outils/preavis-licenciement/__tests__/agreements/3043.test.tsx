@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle"
         ),
         {
           target: { value: "'Agents de propreté'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Agents de propreté - ancienneté"
+            "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Agents de propreté - ancienneté"
           ),
           {
             target: { value: "'Moins de 1 mois'" },
@@ -73,7 +73,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Agents de propreté - ancienneté"
+            "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Agents de propreté - ancienneté"
           ),
           {
             target: { value: "'1 mois à moins de 6 mois'" },
@@ -92,7 +92,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Agents de propreté - ancienneté"
+            "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Agents de propreté - ancienneté"
           ),
           {
             target: { value: "'6 mois à 2 ans'" },
@@ -111,7 +111,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Agents de propreté - ancienneté"
+            "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Agents de propreté - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -131,7 +131,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -150,7 +150,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -163,7 +163,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Employés - ancienneté"
           ),
           {
             target: { value: "'Moins de 1 mois'" },
@@ -184,7 +184,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Employés - ancienneté"
           ),
           {
             target: { value: "'1 mois à 2 ans'" },
@@ -203,7 +203,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Employés - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -223,7 +223,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle"
         ),
         {
           target: { value: "'Techniciens et agents de maîtrise TAM'" },
@@ -236,7 +236,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Techniciens et agents de maîtrise TAM - ancienneté"
+            "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Techniciens et agents de maîtrise TAM - ancienneté"
           ),
           {
             target: { value: "'2 mois à 2 ans'" },
@@ -255,7 +255,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Techniciens et agents de maîtrise TAM - ancienneté"
+            "infos-contrat salarié - convention collective - entreprises de propreté - catégorie professionnelle Techniciens et agents de maîtrise TAM - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },

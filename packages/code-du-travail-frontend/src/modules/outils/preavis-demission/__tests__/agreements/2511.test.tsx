@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - sport - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - sport - catégorie professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -56,7 +56,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - sport - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - sport - catégorie professionnelle"
         ),
         {
           target: { value: "'Ouvriers, Employés'" },
@@ -78,7 +78,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - sport - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - sport - catégorie professionnelle"
         ),
         {
           target: { value: "'Techniciens et agents de maîtrise TAM'" },

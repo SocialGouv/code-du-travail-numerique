@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Cadres - classe"
+            "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Cadres - classe"
           ),
           {
             target: { value: "'5'" },
@@ -75,7 +75,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Cadres - classe"
+            "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Cadres - classe"
           ),
           {
             target: { value: "'6'" },
@@ -98,7 +98,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Cadres - classe"
+            "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Cadres - classe"
           ),
           {
             target: { value: "'7'" },
@@ -122,7 +122,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle"
         ),
         {
           target: { value: "'Non-cadres'" },
@@ -135,7 +135,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe"
+            "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe"
           ),
           {
             target: { value: "'1'" },
@@ -148,7 +148,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 1 - ancienneté"
+              "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 1 - ancienneté"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -167,7 +167,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 1 - ancienneté"
+              "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 1 - ancienneté"
             ),
             {
               target: { value: "'2 ans ou plus'" },
@@ -187,7 +187,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe"
+            "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe"
           ),
           {
             target: { value: "'2'" },
@@ -200,7 +200,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 2 - ancienneté"
+              "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 2 - ancienneté"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -219,7 +219,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 2 - ancienneté"
+              "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 2 - ancienneté"
             ),
             {
               target: { value: "'2 ans ou plus'" },
@@ -239,7 +239,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe"
+            "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe"
           ),
           {
             target: { value: "'3'" },
@@ -252,7 +252,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 3 - ancienneté"
+              "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 3 - ancienneté"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -271,7 +271,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 3 - ancienneté"
+              "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 3 - ancienneté"
             ),
             {
               target: { value: "'2 ans ou plus'" },
@@ -291,7 +291,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe"
+            "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe"
           ),
           {
             target: { value: "'4'" },
@@ -304,7 +304,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 4 - ancienneté"
+              "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 4 - ancienneté"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -323,7 +323,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 4 - ancienneté"
+              "infos-contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle Noncadres - classe 4 - ancienneté"
             ),
             {
               target: { value: "'2 ans ou plus'" },

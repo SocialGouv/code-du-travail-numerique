@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -56,7 +56,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle"
         ),
         {
           target: { value: "'Ingénieurs et Cadres'" },
@@ -78,7 +78,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle"
         ),
         {
           target: { value: "'Ouvriers'" },
@@ -91,7 +91,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Ouvriers - personnel de conduite"
+            "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle Ouvriers - personnel de conduite"
           ),
           {
             target: { value: "'Oui'" },
@@ -113,7 +113,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Ouvriers - personnel de conduite"
+            "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle Ouvriers - personnel de conduite"
           ),
           {
             target: { value: "'Non'" },
@@ -126,7 +126,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Ouvriers - personnel de conduite Non - personnels des entreprises de transport routier de marchandises"
+              "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle Ouvriers - personnel de conduite Non - personnels des entreprises de transport routier de marchandises"
             ),
             {
               target: { value: "'Oui'" },
@@ -151,7 +151,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Ouvriers - personnel de conduite Non - personnels des entreprises de transport routier de marchandises"
+              "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle Ouvriers - personnel de conduite Non - personnels des entreprises de transport routier de marchandises"
             ),
             {
               target: { value: "'Non'" },
@@ -175,7 +175,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle"
         ),
         {
           target: { value: "'Techniciens et agents de maîtrise TAM'" },
@@ -188,7 +188,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe"
+            "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe"
           ),
           {
             target: { value: "'1 à 5'" },
@@ -210,7 +210,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe"
+            "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe"
           ),
           {
             target: { value: "'6 à 8'" },

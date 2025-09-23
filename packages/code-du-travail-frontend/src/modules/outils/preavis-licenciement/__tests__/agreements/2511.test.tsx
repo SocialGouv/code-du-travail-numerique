@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - sport - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - sport - catégorie professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -58,7 +58,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - sport - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - sport - catégorie professionnelle"
         ),
         {
           target: { value: "'Non-cadres'" },
@@ -71,7 +71,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sport - catégorie professionnelle Noncadres - ancienneté"
+            "infos-contrat salarié - convention collective - sport - catégorie professionnelle Noncadres - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -90,7 +90,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sport - catégorie professionnelle Noncadres - ancienneté"
+            "infos-contrat salarié - convention collective - sport - catégorie professionnelle Noncadres - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },

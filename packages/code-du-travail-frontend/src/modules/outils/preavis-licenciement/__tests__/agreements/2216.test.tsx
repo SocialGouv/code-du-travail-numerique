@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerce gros et detail alimentation - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - commerce gros et detail alimentation - catégorie professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise'" },
@@ -61,7 +61,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerce gros et detail alimentation - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - commerce gros et detail alimentation - catégorie professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -83,7 +83,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerce gros et detail alimentation - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - commerce gros et detail alimentation - catégorie professionnelle"
         ),
         {
           target: { value: "'Ouvriers, Employés'" },
@@ -96,7 +96,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerce gros et detail alimentation - catégorie professionnelle Ouvriers, Employés - ancienneté"
+            "infos-contrat salarié - convention collective - commerce gros et detail alimentation - catégorie professionnelle Ouvriers, Employés - ancienneté"
           ),
           {
             target: { value: "'Moins de 1 mois'" },
@@ -120,7 +120,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerce gros et detail alimentation - catégorie professionnelle Ouvriers, Employés - ancienneté"
+            "infos-contrat salarié - convention collective - commerce gros et detail alimentation - catégorie professionnelle Ouvriers, Employés - ancienneté"
           ),
           {
             target: { value: "'1 mois à 2 ans'" },
@@ -142,7 +142,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerce gros et detail alimentation - catégorie professionnelle Ouvriers, Employés - ancienneté"
+            "infos-contrat salarié - convention collective - commerce gros et detail alimentation - catégorie professionnelle Ouvriers, Employés - ancienneté"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -165,7 +165,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerce gros et detail alimentation - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - commerce gros et detail alimentation - catégorie professionnelle"
         ),
         {
           target: { value: "'Techniciens'" },

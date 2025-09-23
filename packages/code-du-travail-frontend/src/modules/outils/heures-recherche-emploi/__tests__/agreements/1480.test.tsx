@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - journalisme - typeRupture"
+          "infos-contrat salarié - convention collective - journalisme - typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -60,7 +60,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - journalisme - typeRupture"
+          "infos-contrat salarié - convention collective - journalisme - typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },

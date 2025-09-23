@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - métallurgie - groupe"
+          "infos-contrat salarié - convention collective - métallurgie - groupe"
         ),
         {
           target: { value: "'A ou B'" },
@@ -60,7 +60,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - métallurgie - groupe"
+          "infos-contrat salarié - convention collective - métallurgie - groupe"
         ),
         {
           target: { value: "'C'" },
@@ -86,7 +86,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - métallurgie - groupe"
+          "infos-contrat salarié - convention collective - métallurgie - groupe"
         ),
         {
           target: { value: "'D ou E'" },
@@ -112,7 +112,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - métallurgie - groupe"
+          "infos-contrat salarié - convention collective - métallurgie - groupe"
         ),
         {
           target: { value: "'F, G, H ou I'" },

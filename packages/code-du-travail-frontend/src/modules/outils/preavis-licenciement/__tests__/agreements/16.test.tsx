@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle Employés - ancienneté"
           ),
           {
             target: { value: "'Moins de 1 mois'" },
@@ -75,7 +75,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle Employés - ancienneté"
           ),
           {
             target: { value: "'1 mois à moins de 2 ans'" },
@@ -96,7 +96,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle Employés - ancienneté"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -118,7 +118,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle"
         ),
         {
           target: { value: "'Ingénieurs et Cadres'" },
@@ -139,7 +139,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle"
         ),
         {
           target: { value: "'Ouvriers'" },
@@ -152,7 +152,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Ouvriers - ancienneté"
+            "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle Ouvriers - ancienneté"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -173,7 +173,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Ouvriers - ancienneté"
+            "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle Ouvriers - ancienneté"
           ),
           {
             target: { value: "'6 mois à 2 ans'" },
@@ -194,7 +194,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Ouvriers - ancienneté"
+            "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle Ouvriers - ancienneté"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -216,7 +216,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle"
         ),
         {
           target: { value: "'Techniciens et agents de maîtrise TAM'" },
@@ -229,7 +229,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe"
+            "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe"
           ),
           {
             target: { value: "'1 à 5'" },
@@ -242,7 +242,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe 1 à 5 - ancienneté"
+              "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe 1 à 5 - ancienneté"
             ),
             {
               target: { value: "'Moins de 1 mois'" },
@@ -265,7 +265,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe 1 à 5 - ancienneté"
+              "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe 1 à 5 - ancienneté"
             ),
             {
               target: { value: "'1 mois à moins de 2 ans'" },
@@ -286,7 +286,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe 1 à 5 - ancienneté"
+              "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe 1 à 5 - ancienneté"
             ),
             {
               target: { value: "'2 ans ou plus'" },
@@ -308,7 +308,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe"
+            "infos-contrat salarié - convention collective - transports routiers - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe"
           ),
           {
             target: { value: "'6 à 8'" },

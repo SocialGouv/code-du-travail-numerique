@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerce gros et detail alimentation - typeRupture"
+          "infos-contrat salarié - convention collective - commerce gros et detail alimentation - typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerce gros et detail alimentation - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat salarié - convention collective - commerce gros et detail alimentation - typeRupture Démission - catégorie professionnelle"
           ),
           {
             target: { value: "'Cadres'" },
@@ -73,7 +73,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerce gros et detail alimentation - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat salarié - convention collective - commerce gros et detail alimentation - typeRupture Démission - catégorie professionnelle"
           ),
           {
             target: { value: "'Non-cadres'" },
@@ -106,7 +106,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerce gros et detail alimentation - typeRupture"
+          "infos-contrat salarié - convention collective - commerce gros et detail alimentation - typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -119,7 +119,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerce gros et detail alimentation - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat salarié - convention collective - commerce gros et detail alimentation - typeRupture Licenciement - catégorie professionnelle"
           ),
           {
             target: { value: "'Cadres'" },
@@ -153,7 +153,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerce gros et detail alimentation - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat salarié - convention collective - commerce gros et detail alimentation - typeRupture Licenciement - catégorie professionnelle"
           ),
           {
             target: { value: "'Non-cadres'" },
@@ -186,7 +186,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerce gros et detail alimentation - typeRupture"
+          "infos-contrat salarié - convention collective - commerce gros et detail alimentation - typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

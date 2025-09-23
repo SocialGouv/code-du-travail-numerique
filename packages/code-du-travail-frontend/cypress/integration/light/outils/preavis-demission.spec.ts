@@ -45,14 +45,14 @@ describe("Outil - Préavis de démission", () => {
     // Informations
     cy.contains("Quelle est la catégorie professionnelle du salarié");
     cy.get(
-      '[id="input-infos.contrat salarié - convention collective - boulangerie patisserie - catégorie professionnelle"]'
+      '[id="input-infos-contrat salarié - convention collective - boulangerie patisserie - catégorie professionnelle"]'
     ).select(
       "Personnel de fabrication, personnel de vente et personnel de services"
     );
 
     cy.contains("Quelle est l'ancienneté du salarié");
     cy.get(
-      '[id="input-infos.contrat salarié - convention collective - boulangerie patisserie - catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services - ancienneté"]'
+      '[id="input-infos-contrat salarié - convention collective - boulangerie patisserie - catégorie professionnelle Personnel de fabrication, personnel de vente et personnel de services - ancienneté"]'
     ).select("Plus de 6 mois");
     cy.get("button").contains("Suivant").click();
 

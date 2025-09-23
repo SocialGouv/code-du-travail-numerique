@@ -33,7 +33,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - batiment ouvriers employés bis - ancienneté"
+          "infos-contrat salarié - convention collective - batiment ouvriers employés bis - ancienneté"
         ),
         {
           target: {
@@ -55,7 +55,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - batiment ouvriers employés bis - ancienneté"
+          "infos-contrat salarié - convention collective - batiment ouvriers employés bis - ancienneté"
         ),
         {
           target: { value: "'Plus de 3 mois'" },

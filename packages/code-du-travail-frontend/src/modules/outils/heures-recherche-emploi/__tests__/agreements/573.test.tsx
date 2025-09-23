@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces de gros - typeRupture"
+          "infos-contrat salarié - convention collective - commerces de gros - typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -52,7 +52,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces de gros - typeRupture"
+          "infos-contrat salarié - convention collective - commerces de gros - typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -84,7 +84,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces de gros - typeRupture"
+          "infos-contrat salarié - convention collective - commerces de gros - typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

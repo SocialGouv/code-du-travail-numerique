@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - entreprises de services à la personne - ancienneté"
+          "infos-contrat salarié - convention collective - entreprises de services à la personne - ancienneté"
         ),
         {
           target: { value: "'6 mois à 2 ans'" },
@@ -58,7 +58,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - entreprises de services à la personne - ancienneté"
+          "infos-contrat salarié - convention collective - entreprises de services à la personne - ancienneté"
         ),
         {
           target: { value: "'Plus de 2 ans'" },

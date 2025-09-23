@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - sedima - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - sedima - catégorie professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise niveau IV et V'" },
@@ -56,7 +56,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - sedima - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - sedima - catégorie professionnelle"
         ),
         {
           target: { value: "'Cadres niveau VI et plus'" },
@@ -78,7 +78,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - sedima - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - sedima - catégorie professionnelle"
         ),
         {
           target: { value: "'Ouvriers, Employés niveau III'" },
@@ -91,7 +91,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sedima - catégorie professionnelle Ouvriers, Employés niveau III - niveau"
+            "infos-contrat salarié - convention collective - sedima - catégorie professionnelle Ouvriers, Employés niveau III - niveau"
           ),
           {
             target: { value: "'III'" },
@@ -114,7 +114,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - sedima - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - sedima - catégorie professionnelle"
         ),
         {
           target: { value: "'Ouvriers, Employés niveaux I et II'" },
@@ -127,7 +127,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - sedima - catégorie professionnelle Ouvriers, Employés niveaux I et II - niveau"
+            "infos-contrat salarié - convention collective - sedima - catégorie professionnelle Ouvriers, Employés niveaux I et II - niveau"
           ),
           {
             target: { value: "'I à II'" },

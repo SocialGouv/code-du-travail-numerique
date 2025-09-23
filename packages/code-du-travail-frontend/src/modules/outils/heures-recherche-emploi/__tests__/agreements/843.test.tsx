@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - boulangerie patisserie - typeRupture"
+          "infos-contrat salarié - convention collective - boulangerie patisserie - typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -52,7 +52,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - boulangerie patisserie - typeRupture"
+          "infos-contrat salarié - convention collective - boulangerie patisserie - typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -86,7 +86,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - boulangerie patisserie - typeRupture"
+          "infos-contrat salarié - convention collective - boulangerie patisserie - typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

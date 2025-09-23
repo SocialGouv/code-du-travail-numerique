@@ -118,7 +118,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
         const detail = engine.getRule(key);
         return {
           indice: value,
-          name: key.replace(/ \. /g, " - "),
+          name: key.replace(/\./g, " ").replace(/\s+/g, "-"),
           rawNode: detail.rawNode,
         };
       })

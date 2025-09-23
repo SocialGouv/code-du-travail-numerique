@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle"
         ),
         {
           target: { value: "'Chargés d'enquête intermittents'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle Chargés d'enquête intermittents - ancienneté"
+            "infos-contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle Chargés d'enquête intermittents - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -73,7 +73,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle Chargés d'enquête intermittents - ancienneté"
+            "infos-contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle Chargés d'enquête intermittents - ancienneté"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -95,7 +95,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle"
         ),
         {
           target: {
@@ -110,7 +110,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM - coefficient"
+            "infos-contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM - coefficient"
           ),
           {
             target: { value: "'de 240 à 355'" },
@@ -123,7 +123,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM - coefficient de 240 à 355 - ancienneté"
+              "infos-contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM - coefficient de 240 à 355 - ancienneté"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -142,7 +142,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM - coefficient de 240 à 355 - ancienneté"
+              "infos-contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM - coefficient de 240 à 355 - ancienneté"
             ),
             {
               target: { value: "'2 ans ou plus'" },
@@ -162,7 +162,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM - coefficient"
+            "infos-contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle Employés, Techniciens ou Agents de maîtrise ETAM - coefficient"
           ),
           {
             target: { value: "'De 400 à 500'" },
@@ -182,7 +182,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - bureaux études techniques - catégorie professionnelle"
         ),
         {
           target: { value: "'Ingénieurs, Cadres'" },

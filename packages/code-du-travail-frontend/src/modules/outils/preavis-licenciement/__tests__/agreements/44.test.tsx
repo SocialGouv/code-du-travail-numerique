@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe"
+            "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe"
           ),
           {
             target: { value: "'IV'" },
@@ -65,7 +65,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe IV - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe IV - coefficient"
             ),
             {
               target: { value: "'Inférieur à 275'" },
@@ -86,7 +86,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe IV - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Agents de maîtrise - groupe IV - coefficient"
             ),
             {
               target: { value: "'Supérieur à 275 inclus'" },
@@ -109,7 +109,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -122,7 +122,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe"
+            "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe"
           ),
           {
             target: { value: "'I'" },
@@ -135,7 +135,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe I - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe I - coefficient"
             ),
             {
               target: { value: "'Inférieur à 190'" },
@@ -148,7 +148,7 @@ describe("CalculateurPreavisLicenciement", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe I - coefficient Inférieur à 190 - ancienneté"
+                "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe I - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -169,7 +169,7 @@ describe("CalculateurPreavisLicenciement", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe I - coefficient Inférieur à 190 - ancienneté"
+                "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe I - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -191,7 +191,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe I - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe I - coefficient"
             ),
             {
               target: { value: "'190 et plus'" },
@@ -213,7 +213,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe"
+            "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe"
           ),
           {
             target: { value: "'II'" },
@@ -226,7 +226,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe II - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe II - coefficient"
             ),
             {
               target: { value: "'Inférieur à 190'" },
@@ -239,7 +239,7 @@ describe("CalculateurPreavisLicenciement", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe II - coefficient Inférieur à 190 - ancienneté"
+                "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe II - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -260,7 +260,7 @@ describe("CalculateurPreavisLicenciement", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe II - coefficient Inférieur à 190 - ancienneté"
+                "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe II - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -282,7 +282,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe II - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe II - coefficient"
             ),
             {
               target: { value: "'190 et plus'" },
@@ -304,7 +304,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe"
+            "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe"
           ),
           {
             target: { value: "'III'" },
@@ -317,7 +317,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe III - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe III - coefficient"
             ),
             {
               target: { value: "'Inférieur à 190'" },
@@ -330,7 +330,7 @@ describe("CalculateurPreavisLicenciement", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe III - coefficient Inférieur à 190 - ancienneté"
+                "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe III - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -351,7 +351,7 @@ describe("CalculateurPreavisLicenciement", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe III - coefficient Inférieur à 190 - ancienneté"
+                "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe III - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -373,7 +373,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe III - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Employés - groupe III - coefficient"
             ),
             {
               target: { value: "'190 et plus'" },
@@ -396,7 +396,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle"
         ),
         {
           target: { value: "'Ingénieurs, Cadres'" },
@@ -409,7 +409,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ingénieurs, Cadres - groupe"
+            "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ingénieurs, Cadres - groupe"
           ),
           {
             target: { value: "'V'" },
@@ -431,7 +431,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle"
         ),
         {
           target: { value: "'Ouvriers'" },
@@ -444,7 +444,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe"
+            "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe"
           ),
           {
             target: { value: "'I'" },
@@ -457,7 +457,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe I - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe I - coefficient"
             ),
             {
               target: { value: "'Inférieur à 190'" },
@@ -470,7 +470,7 @@ describe("CalculateurPreavisLicenciement", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe I - coefficient Inférieur à 190 - ancienneté"
+                "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe I - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -491,7 +491,7 @@ describe("CalculateurPreavisLicenciement", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe I - coefficient Inférieur à 190 - ancienneté"
+                "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe I - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -513,7 +513,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe I - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe I - coefficient"
             ),
             {
               target: { value: "'190 et plus'" },
@@ -535,7 +535,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe"
+            "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe"
           ),
           {
             target: { value: "'II'" },
@@ -548,7 +548,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe II - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe II - coefficient"
             ),
             {
               target: { value: "'Inférieur à 190'" },
@@ -561,7 +561,7 @@ describe("CalculateurPreavisLicenciement", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe II - coefficient Inférieur à 190 - ancienneté"
+                "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe II - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -582,7 +582,7 @@ describe("CalculateurPreavisLicenciement", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe II - coefficient Inférieur à 190 - ancienneté"
+                "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe II - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -604,7 +604,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe II - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe II - coefficient"
             ),
             {
               target: { value: "'190 et plus'" },
@@ -626,7 +626,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe"
+            "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe"
           ),
           {
             target: { value: "'III'" },
@@ -639,7 +639,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe III - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe III - coefficient"
             ),
             {
               target: { value: "'Inférieur à 190'" },
@@ -652,7 +652,7 @@ describe("CalculateurPreavisLicenciement", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe III - coefficient Inférieur à 190 - ancienneté"
+                "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe III - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -673,7 +673,7 @@ describe("CalculateurPreavisLicenciement", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe III - coefficient Inférieur à 190 - ancienneté"
+                "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe III - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -695,7 +695,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe III - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Ouvriers - groupe III - coefficient"
             ),
             {
               target: { value: "'190 et plus'" },
@@ -718,7 +718,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle"
         ),
         {
           target: { value: "'Techniciens'" },
@@ -731,7 +731,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe"
+            "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe"
           ),
           {
             target: { value: "'I'" },
@@ -744,7 +744,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe I - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe I - coefficient"
             ),
             {
               target: { value: "'Inférieur à 190'" },
@@ -757,7 +757,7 @@ describe("CalculateurPreavisLicenciement", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe I - coefficient Inférieur à 190 - ancienneté"
+                "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe I - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -778,7 +778,7 @@ describe("CalculateurPreavisLicenciement", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe I - coefficient Inférieur à 190 - ancienneté"
+                "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe I - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -800,7 +800,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe I - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe I - coefficient"
             ),
             {
               target: { value: "'190 et plus'" },
@@ -822,7 +822,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe"
+            "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe"
           ),
           {
             target: { value: "'II'" },
@@ -835,7 +835,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe II - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe II - coefficient"
             ),
             {
               target: { value: "'Inférieur à 190'" },
@@ -848,7 +848,7 @@ describe("CalculateurPreavisLicenciement", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe II - coefficient Inférieur à 190 - ancienneté"
+                "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe II - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -869,7 +869,7 @@ describe("CalculateurPreavisLicenciement", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe II - coefficient Inférieur à 190 - ancienneté"
+                "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe II - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -891,7 +891,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe II - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe II - coefficient"
             ),
             {
               target: { value: "'190 et plus'" },
@@ -913,7 +913,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe"
+            "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe"
           ),
           {
             target: { value: "'III'" },
@@ -926,7 +926,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe III - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe III - coefficient"
             ),
             {
               target: { value: "'Inférieur à 190'" },
@@ -939,7 +939,7 @@ describe("CalculateurPreavisLicenciement", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe III - coefficient Inférieur à 190 - ancienneté"
+                "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe III - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -960,7 +960,7 @@ describe("CalculateurPreavisLicenciement", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe III - coefficient Inférieur à 190 - ancienneté"
+                "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe III - coefficient Inférieur à 190 - ancienneté"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -982,7 +982,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe III - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe III - coefficient"
             ),
             {
               target: { value: "'190 et plus'" },
@@ -1004,7 +1004,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe"
+            "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe"
           ),
           {
             target: { value: "'IV'" },
@@ -1017,7 +1017,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe IV - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe IV - coefficient"
             ),
             {
               target: { value: "'Inférieur à 275'" },
@@ -1038,7 +1038,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe IV - coefficient"
+              "infos-contrat salarié - convention collective - industries chimiques - catégorie professionnelle Techniciens - groupe IV - coefficient"
             ),
             {
               target: { value: "'Supérieur à 275 inclus'" },

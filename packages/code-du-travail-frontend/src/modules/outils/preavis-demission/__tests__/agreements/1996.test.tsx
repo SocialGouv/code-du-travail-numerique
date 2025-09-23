@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - pharmacie - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - pharmacie - catégorie professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -58,7 +58,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - pharmacie - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - pharmacie - catégorie professionnelle"
         ),
         {
           target: { value: "'Non-cadres'" },

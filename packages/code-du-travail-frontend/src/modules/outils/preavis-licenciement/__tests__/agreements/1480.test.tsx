@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - journalisme - ancienneté"
+          "infos-contrat salarié - convention collective - journalisme - ancienneté"
         ),
         {
           target: { value: "'Moins de 2 ans'" },
@@ -59,7 +59,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - journalisme - ancienneté"
+          "infos-contrat salarié - convention collective - journalisme - ancienneté"
         ),
         {
           target: { value: "'2 ans ou plus'" },

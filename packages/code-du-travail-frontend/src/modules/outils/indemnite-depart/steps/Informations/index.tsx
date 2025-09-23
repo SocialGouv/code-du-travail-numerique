@@ -18,7 +18,7 @@ const InformationsStep = () => {
         return (
           <PubliQuestion
             key={info.id}
-            name={"infos." + info.question.name}
+            name={"infos-" + info.question.name}
             rule={info.question.rule}
             value={info.info}
             onChange={(v: any) => {

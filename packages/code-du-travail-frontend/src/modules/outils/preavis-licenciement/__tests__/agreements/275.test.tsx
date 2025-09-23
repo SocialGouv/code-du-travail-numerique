@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle Agents de maîtrise - ancienneté"
+            "infos-contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle Agents de maîtrise - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -73,7 +73,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle Agents de maîtrise - ancienneté"
+            "infos-contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle Agents de maîtrise - ancienneté"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -95,7 +95,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
         ),
         {
           target: { value: "'Techniciens'" },
@@ -108,7 +108,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle Techniciens - ancienneté"
+            "infos-contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle Techniciens - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -129,7 +129,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle Techniciens - ancienneté"
+            "infos-contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle Techniciens - ancienneté"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -151,7 +151,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -172,7 +172,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
         ),
         {
           target: { value: "'Ouvriers'" },
@@ -185,7 +185,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle Ouvriers - ancienneté"
+            "infos-contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle Ouvriers - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -206,7 +206,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle Ouvriers - ancienneté"
+            "infos-contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle Ouvriers - ancienneté"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -228,7 +228,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -241,7 +241,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle Employés - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -262,7 +262,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat salarié - convention collective - transport aérien personnel au sol - catégorie professionnelle Employés - ancienneté"
           ),
           {
             target: { value: "'2 ans ou plus'" },

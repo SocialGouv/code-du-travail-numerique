@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - comptables - typeRupture"
+          "infos-contrat salarié - convention collective - comptables - typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - comptables - typeRupture Démission - ancienneté"
+            "infos-contrat salarié - convention collective - comptables - typeRupture Démission - ancienneté"
           ),
           {
             target: { value: "'Au moins 5 ans'" },
@@ -73,7 +73,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - comptables - typeRupture Démission - ancienneté"
+            "infos-contrat salarié - convention collective - comptables - typeRupture Démission - ancienneté"
           ),
           {
             target: { value: "'Moins de 5 ans'" },
@@ -106,7 +106,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - comptables - typeRupture"
+          "infos-contrat salarié - convention collective - comptables - typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -136,7 +136,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - comptables - typeRupture"
+          "infos-contrat salarié - convention collective - comptables - typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

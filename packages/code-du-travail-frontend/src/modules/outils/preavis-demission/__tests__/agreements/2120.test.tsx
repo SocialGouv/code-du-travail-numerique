@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - banque - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - banque - catégorie professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -56,7 +56,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - banque - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - banque - catégorie professionnelle"
         ),
         {
           target: { value: "'Techniciens'" },

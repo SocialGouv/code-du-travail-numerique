@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -54,7 +54,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
         ),
         {
           target: { value: "'Cadres dirigeants'" },
@@ -74,7 +74,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
         ),
         {
           target: { value: "'Cadres supérieurs'" },
@@ -94,7 +94,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -107,7 +107,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Employés - ancienneté"
           ),
           {
             target: { value: "'6 mois ou moins'" },
@@ -127,7 +127,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Employés - ancienneté"
           ),
           {
             target: { value: "'Plus de 6 mois'" },
@@ -148,7 +148,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
         ),
         {
           target: { value: "'Techniciens et agents de maîtrise TAM'" },
@@ -161,7 +161,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Techniciens et agents de maîtrise TAM - ancienneté"
+            "infos-contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Techniciens et agents de maîtrise TAM - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -181,7 +181,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Techniciens et agents de maîtrise TAM - ancienneté"
+            "infos-contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Techniciens et agents de maîtrise TAM - ancienneté"
           ),
           {
             target: { value: "'2 ans ou plus'" },

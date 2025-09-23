@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - bad - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - bad - catégorie professionnelle"
         ),
         {
           target: { value: "'Employé'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bad - catégorie professionnelle Employé - ancienneté"
+            "infos-contrat salarié - convention collective - bad - catégorie professionnelle Employé - ancienneté"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -75,7 +75,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bad - catégorie professionnelle Employé - ancienneté"
+            "infos-contrat salarié - convention collective - bad - catégorie professionnelle Employé - ancienneté"
           ),
           {
             target: { value: "'6 mois à 2 ans'" },
@@ -98,7 +98,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bad - catégorie professionnelle Employé - ancienneté"
+            "infos-contrat salarié - convention collective - bad - catégorie professionnelle Employé - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -122,7 +122,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - bad - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - bad - catégorie professionnelle"
         ),
         {
           target: { value: "'Technicien-agent de maîtrise'" },
@@ -135,7 +135,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bad - catégorie professionnelle Technicienagent de maîtrise - ancienneté"
+            "infos-contrat salarié - convention collective - bad - catégorie professionnelle Technicienagent de maîtrise - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -158,7 +158,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bad - catégorie professionnelle Technicienagent de maîtrise - ancienneté"
+            "infos-contrat salarié - convention collective - bad - catégorie professionnelle Technicienagent de maîtrise - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -182,7 +182,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - bad - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - bad - catégorie professionnelle"
         ),
         {
           target: { value: "'Cadre'" },
@@ -195,7 +195,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bad - catégorie professionnelle Cadre - ancienneté"
+            "infos-contrat salarié - convention collective - bad - catégorie professionnelle Cadre - ancienneté"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -218,7 +218,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bad - catégorie professionnelle Cadre - ancienneté"
+            "infos-contrat salarié - convention collective - bad - catégorie professionnelle Cadre - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },

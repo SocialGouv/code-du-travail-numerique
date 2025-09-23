@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise'" },
@@ -58,7 +58,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -77,7 +77,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle"
         ),
         {
           target: {
@@ -92,7 +92,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique - ancienneté"
+            "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique - ancienneté"
           ),
           {
             target: { value: "'6 mois ou moins'" },
@@ -111,7 +111,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique - ancienneté"
+            "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique - ancienneté"
           ),
           {
             target: { value: "'6 mois à 2 ans'" },
@@ -130,7 +130,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique - ancienneté"
+            "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi de l'esthétiquecosmétique - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -150,7 +150,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle"
         ),
         {
           target: {
@@ -165,7 +165,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure - ancienneté"
+            "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure - ancienneté"
           ),
           {
             target: { value: "'6 mois ou moins'" },
@@ -184,7 +184,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure - ancienneté"
+            "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure - ancienneté"
           ),
           {
             target: { value: "'6 mois à 2 ans'" },
@@ -203,7 +203,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure - ancienneté"
+            "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi nontechnique de la coiffure - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -223,7 +223,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle"
+          "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle"
         ),
         {
           target: {
@@ -238,7 +238,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi technique de la coiffure - ancienneté"
+            "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi technique de la coiffure - ancienneté"
           ),
           {
             target: { value: "'6 mois ou moins'" },
@@ -257,7 +257,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi technique de la coiffure - ancienneté"
+            "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi technique de la coiffure - ancienneté"
           ),
           {
             target: { value: "'6 mois à 2 ans'" },
@@ -276,7 +276,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi technique de la coiffure - ancienneté"
+            "infos-contrat salarié - convention collective - coiffure - catégorie professionnelle Salariés occupant un emploi technique de la coiffure - ancienneté"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
