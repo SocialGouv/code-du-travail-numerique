@@ -57,8 +57,6 @@ export function middleware(request: NextRequest) {
 
     return response;
   }
-
-  const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
   const ContentSecurityPolicy = `
     default-src 'self';
     img-src 'self' https://travail-emploi.gouv.fr https://www.service-public.fr ${BUCKET_URL} https://matomo.fabrique.social.gouv.fr https://www.googletagmanager.com https://ad.doubleclick.net data:;
@@ -81,7 +79,6 @@ export function middleware(request: NextRequest) {
 
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-url", request.nextUrl.pathname);
-  requestHeaders.set("x-nonce", nonce);
   requestHeaders.set(
     "Content-Security-Policy",
     contentSecurityPolicyHeaderValue

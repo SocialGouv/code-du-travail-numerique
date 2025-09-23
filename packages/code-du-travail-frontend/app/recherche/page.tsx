@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { searchWithQuery } from "../../src/api";
 import { SearchPageClient } from "../../src/modules/recherche";
 import { DsfrLayout } from "src/modules/layout";
+import { Suspense } from "react";
 
 export const dynamic = "force-dynamic";
 
@@ -35,7 +36,9 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
 
   return (
     <DsfrLayout>
-      <SearchPageClient query={query} items={items} />
+      <Suspense fallback={<div>Chargement...</div>}>
+        <SearchPageClient query={query} items={items} />
+      </Suspense>
     </DsfrLayout>
   );
 }

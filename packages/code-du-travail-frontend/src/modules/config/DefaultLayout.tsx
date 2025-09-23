@@ -12,10 +12,10 @@ import { SentryTest } from "../sentry";
 import { ConsentManager } from "../cookie-consent";
 import { shouldShowCookieBanner } from "../cookie-consent/config";
 import { usePathname } from "next/navigation";
+import { Suspense } from "react";
 
 type Props = {
   children: React.ReactNode;
-  nonce: string | undefined;
   defaultColorScheme: DefaultColorScheme;
 };
 
@@ -24,50 +24,54 @@ const { getHtmlAttributes } = createGetHtmlAttributes({
   defaultColorScheme: "light",
 });
 
-export default function DefaultLayout({
-  children,
-  nonce,
-  defaultColorScheme,
-}: Props) {
-  const lang = "fr";
+// Component that uses usePathname wrapped in Suspense boundary
+function CookieBannerWrapper() {
   const pathname = usePathname() || "";
   const showCookieBanner = shouldShowCookieBanner(pathname);
+  return showCookieBanner ? <ConsentManager /> : null;
+}
+
+export default function DefaultLayout({ children, defaultColorScheme }: Props) {
+  const lang = "fr";
 
   return (
-    <MatomoProvider>
-      <html {...getHtmlAttributes({ lang })}>
-        <head>
-          <StartDsfrLight />
-          <DsfrHead
-            Link={Link}
-            preloadFonts={[
-              //"Marianne-Light",
-              //"Marianne-Light_Italic",
-              "Marianne-Regular",
-              //"Marianne-Regular_Italic",
-              "Marianne-Medium",
-              //"Marianne-Medium_Italic",
-              "Marianne-Bold",
-              //"Marianne-Bold_Italic",
-              //"Spectral-Regular",
-              //"Spectral-ExtraBold"
-            ]}
-            nonce={nonce}
-          />
-        </head>
-        <body>
-          <DsfrProvider
-            lang={lang}
-            Link={Link}
-            defaultColorScheme={defaultColorScheme}
-          >
-            {children}
-            {showCookieBanner && <ConsentManager />}
-          </DsfrProvider>
+    <Suspense fallback={null}>
+      <MatomoProvider>
+        <html {...getHtmlAttributes({ lang })}>
+          <head>
+            <StartDsfrLight />
+            <DsfrHead
+              Link={Link}
+              preloadFonts={[
+                //"Marianne-Light",
+                //"Marianne-Light_Italic",
+                "Marianne-Regular",
+                //"Marianne-Regular_Italic",
+                "Marianne-Medium",
+                //"Marianne-Medium_Italic",
+                "Marianne-Bold",
+                //"Marianne-Bold_Italic",
+                //"Spectral-Regular",
+                //"Spectral-ExtraBold"
+              ]}
+            />
+          </head>
+          <body>
+            <DsfrProvider
+              lang={lang}
+              Link={Link}
+              defaultColorScheme={defaultColorScheme}
+            >
+              {children}
+              <Suspense fallback={null}>
+                <CookieBannerWrapper />
+              </Suspense>
+            </DsfrProvider>
 
-          {ENV === "development" && <SentryTest />}
-        </body>
-      </html>
-    </MatomoProvider>
+            {ENV === "development" && <SentryTest />}
+          </body>
+        </html>
+      </MatomoProvider>
+    </Suspense>
   );
 }

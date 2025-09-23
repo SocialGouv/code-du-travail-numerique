@@ -7,6 +7,7 @@ import {
   useContext,
   useEffect,
   useState,
+  Suspense,
 } from "react";
 import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL, WIDGETS_PATH } from "../../config";
 import { getStoredConsent } from "../utils/consent";
@@ -31,7 +32,8 @@ const ABTestingContext = createContext<ABTestingContextType>({
   },
 });
 
-export const MatomoProvider = ({ children }: PropsWithChildren) => {
+// Internal component that uses navigation hooks
+const MatomoTracker = ({ children }: PropsWithChildren) => {
   const searchParams = useSearchParams();
   const searchParamsString = searchParams?.toString();
   const path = usePathname();
@@ -143,6 +145,15 @@ export const MatomoProvider = ({ children }: PropsWithChildren) => {
     <ABTestingContext.Provider value={{ abTest }}>
       {children}
     </ABTestingContext.Provider>
+  );
+};
+
+// Main provider component that wraps the tracker in Suspense
+export const MatomoProvider = ({ children }: PropsWithChildren) => {
+  return (
+    <Suspense fallback={null}>
+      <MatomoTracker>{children}</MatomoTracker>
+    </Suspense>
   );
 };
 

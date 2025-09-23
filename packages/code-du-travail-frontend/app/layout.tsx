@@ -1,7 +1,6 @@
 import "./globals.css";
 import { Metadata } from "next/types";
 import { SITE_URL } from "../src/config";
-import { headers } from "next/headers";
 import DefaultLayout from "../src/modules/config/DefaultLayout";
 
 export const metadata: Metadata = {
@@ -22,12 +21,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const headersData = headers();
-  const nonce = headersData.get("x-nonce") ?? undefined;
-
-  return (
-    <DefaultLayout nonce={nonce} defaultColorScheme={"light"}>
-      {children}
-    </DefaultLayout>
-  );
+  return <DefaultLayout defaultColorScheme={"light"}>{children}</DefaultLayout>;
 }
