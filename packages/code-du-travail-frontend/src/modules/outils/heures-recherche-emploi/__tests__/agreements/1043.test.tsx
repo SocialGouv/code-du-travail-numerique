@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-gardien-concierge-typeRupture"
+          "infos-contrat-salarie-convention-collective-gardien-concierge-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -52,7 +52,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-gardien-concierge-typeRupture"
+          "infos-contrat-salarie-convention-collective-gardien-concierge-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -84,7 +84,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-gardien-concierge-typeRupture"
+          "infos-contrat-salarie-convention-collective-gardien-concierge-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

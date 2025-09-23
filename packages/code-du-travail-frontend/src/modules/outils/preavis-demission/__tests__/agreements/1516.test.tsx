@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-organismes-de-formation-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-organismes-de-formation-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -54,7 +54,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-organismes-de-formation-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-organismes-de-formation-categorie-professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -67,7 +67,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-organismes-de-formation-catégorie-professionnelle-Employés-ancienneté"
+            "infos-contrat-salarie-convention-collective-organismes-de-formation-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'2 ans ou moins'" },
@@ -87,7 +87,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-organismes-de-formation-catégorie-professionnelle-Employés-ancienneté"
+            "infos-contrat-salarie-convention-collective-organismes-de-formation-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -108,7 +108,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-organismes-de-formation-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-organismes-de-formation-categorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise ou techniciens'" },

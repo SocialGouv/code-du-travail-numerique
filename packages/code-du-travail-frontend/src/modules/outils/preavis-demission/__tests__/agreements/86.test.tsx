@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-publicité-française-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-publicite-francaise-categorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise et Techniciens'" },
@@ -54,7 +54,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-publicité-française-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-publicite-francaise-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -74,7 +74,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-publicité-française-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-publicite-francaise-categorie-professionnelle"
         ),
         {
           target: { value: "'Employés'" },

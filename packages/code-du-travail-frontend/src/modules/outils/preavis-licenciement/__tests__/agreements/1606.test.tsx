@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-bricolage-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-bricolage-categorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-bricolage-catégorie-professionnelle-Agents-de-maîtrise-ancienneté"
+            "infos-contrat-salarie-convention-collective-bricolage-categorie-professionnelle-Agents-de-maitrise-anciennete"
           ),
           {
             target: { value: "'Entre 2 et 6 mois'" },
@@ -74,7 +74,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-bricolage-catégorie-professionnelle-Agents-de-maîtrise-ancienneté"
+            "infos-contrat-salarie-convention-collective-bricolage-categorie-professionnelle-Agents-de-maitrise-anciennete"
           ),
           {
             target: { value: "'Plus de 6 mois'" },
@@ -97,7 +97,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-bricolage-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-bricolage-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -110,7 +110,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-bricolage-catégorie-professionnelle-Cadres-ancienneté"
+            "infos-contrat-salarie-convention-collective-bricolage-categorie-professionnelle-Cadres-anciennete"
           ),
           {
             target: { value: "'De 3 à 6 mois'" },
@@ -132,7 +132,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-bricolage-catégorie-professionnelle-Cadres-ancienneté"
+            "infos-contrat-salarie-convention-collective-bricolage-categorie-professionnelle-Cadres-anciennete"
           ),
           {
             target: { value: "'Plus de 6 mois'" },
@@ -155,7 +155,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-bricolage-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-bricolage-categorie-professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -168,7 +168,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-bricolage-catégorie-professionnelle-Employés-ancienneté"
+            "infos-contrat-salarie-convention-collective-bricolage-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'Moins de 1 mois'" },
@@ -190,7 +190,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-bricolage-catégorie-professionnelle-Employés-ancienneté"
+            "infos-contrat-salarie-convention-collective-bricolage-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'1 mois à moins de 6 mois'" },
@@ -210,7 +210,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-bricolage-catégorie-professionnelle-Employés-ancienneté"
+            "infos-contrat-salarie-convention-collective-bricolage-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'6 mois à 2 ans'" },
@@ -230,7 +230,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-bricolage-catégorie-professionnelle-Employés-ancienneté"
+            "infos-contrat-salarie-convention-collective-bricolage-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'Plus de 2 ans'" },

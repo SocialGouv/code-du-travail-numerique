@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-commerces-de-gros-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-commerces-de-gros-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -54,7 +54,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-commerces-de-gros-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-commerces-de-gros-categorie-professionnelle"
         ),
         {
           target: { value: "'Ouvriers, Employés'" },
@@ -74,7 +74,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-commerces-de-gros-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-commerces-de-gros-categorie-professionnelle"
         ),
         {
           target: { value: "'Techniciens et agents de maîtrise TAM'" },

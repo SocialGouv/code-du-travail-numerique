@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-categorie-professionnelle"
         ),
         {
           target: { value: "'Salariés du particulier employeur'" },
@@ -47,7 +47,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-catégorie-professionnelle-Salariés-du-particulier-employeur-ancienneté"
+            "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-categorie-professionnelle-Salaries-du-particulier-employeur-anciennete"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -69,7 +69,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-catégorie-professionnelle-Salariés-du-particulier-employeur-ancienneté"
+            "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-categorie-professionnelle-Salaries-du-particulier-employeur-anciennete"
           ),
           {
             target: { value: "'6 mois à 2 ans'" },
@@ -91,7 +91,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-catégorie-professionnelle-Salariés-du-particulier-employeur-ancienneté"
+            "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-categorie-professionnelle-Salaries-du-particulier-employeur-anciennete"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -114,7 +114,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-categorie-professionnelle"
         ),
         {
           target: {
@@ -129,7 +129,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-catégorie-professionnelle-Assistants-maternels-du-particulier-employeur-ancienneté"
+            "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-categorie-professionnelle-Assistants-maternels-du-particulier-employeur-anciennete"
           ),
           {
             target: { value: "'Enfant accueilli depuis moins de 3 mois'" },
@@ -158,7 +158,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-catégorie-professionnelle-Assistants-maternels-du-particulier-employeur-ancienneté"
+            "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-categorie-professionnelle-Assistants-maternels-du-particulier-employeur-anciennete"
           ),
           {
             target: { value: "'Enfant accueilli de 3 mois à moins d'un an'" },
@@ -187,7 +187,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-catégorie-professionnelle-Assistants-maternels-du-particulier-employeur-ancienneté"
+            "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-categorie-professionnelle-Assistants-maternels-du-particulier-employeur-anciennete"
           ),
           {
             target: { value: "'Enfant accueilli depuis 1 an et plus'" },

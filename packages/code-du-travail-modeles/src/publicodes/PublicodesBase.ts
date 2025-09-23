@@ -109,6 +109,10 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     return situation;
   }
 
+  private removeAccents(str: string): string {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  }
+
   private buildMissingArgs(
     engine: Engine,
     missingArgs: Record<string, number>
@@ -118,7 +122,9 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
         const detail = engine.getRule(key);
         return {
           indice: value,
-          name: key.replace(/\./g, " ").replace(/\s+/g, "-"),
+          name: this.removeAccents(
+            key.replace(/\./g, " ").replace(/\s+/g, "-")
+          ),
           rawNode: detail.rawNode,
         };
       })

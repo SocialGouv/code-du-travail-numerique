@@ -69,7 +69,7 @@ describe("PreavisDemissionSimulator - Navigation et changements", () => {
 
       // Sélectionner une catégorie professionnelle
       const categorySelect = screen.getByTestId(
-        "infos-contrat-salarié-convention-collective-publicité-française-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-publicite-francaise-categorie-professionnelle"
       );
       fireEvent.change(categorySelect, {
         target: { value: "'Employés'" },
@@ -123,7 +123,7 @@ describe("PreavisDemissionSimulator - Navigation et changements", () => {
 
       // Première sélection : Employés
       const categorySelect = screen.getByTestId(
-        "infos-contrat-salarié-convention-collective-publicité-française-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-publicite-francaise-categorie-professionnelle"
       );
       fireEvent.change(categorySelect, {
         target: { value: "'Employés'" },
@@ -176,7 +176,7 @@ describe("PreavisDemissionSimulator - Navigation et changements", () => {
       fireEvent.click(ui.next.get());
 
       const categorySelect = screen.getByTestId(
-        "infos-contrat-salarié-convention-collective-publicité-française-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-publicite-francaise-categorie-professionnelle"
       );
 
       // Première sélection : Employés
@@ -260,7 +260,7 @@ describe("PreavisDemissionSimulator - Navigation et changements", () => {
 
       // Sélectionner Employés pour CC 86
       const categorySelect86 = screen.getByTestId(
-        "infos-contrat-salarié-convention-collective-publicité-française-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-publicite-francaise-categorie-professionnelle"
       );
       fireEvent.change(categorySelect86, {
         target: { value: "'Employés'" },
@@ -302,7 +302,7 @@ describe("PreavisDemissionSimulator - Navigation et changements", () => {
 
       // Sélectionner Employés pour CC 16
       const categorySelect16 = screen.getByTestId(
-        "infos-contrat-salarié-convention-collective-transports-routiers-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-transports-routiers-categorie-professionnelle"
       );
       fireEvent.change(categorySelect16, {
         target: { value: "'Employés'" },
@@ -349,7 +349,7 @@ describe("PreavisDemissionSimulator - Navigation et changements", () => {
 
       // Sélectionner "Ouvriers" pour avoir des sous-questions
       const categorySelect = screen.getByTestId(
-        "infos-contrat-salarié-convention-collective-transports-routiers-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-transports-routiers-categorie-professionnelle"
       );
       fireEvent.change(categorySelect, {
         target: { value: "'Ouvriers'" },
@@ -357,7 +357,7 @@ describe("PreavisDemissionSimulator - Navigation et changements", () => {
 
       // Première sous-question : personnel de conduite = Oui
       const conductionSelect = screen.getByTestId(
-        "infos-contrat-salarié-convention-collective-transports-routiers-catégorie-professionnelle-Ouvriers-personnel-de-conduite"
+        "infos-contrat-salarie-convention-collective-transports-routiers-categorie-professionnelle-Ouvriers-personnel-de-conduite"
       );
       fireEvent.change(conductionSelect, {
         target: { value: "'Oui'" },
@@ -379,7 +379,7 @@ describe("PreavisDemissionSimulator - Navigation et changements", () => {
       // Attendre que la nouvelle sous-question apparaisse
       waitFor(() => {
         const marchandisesSelect = screen.queryByTestId(
-          "infos-contrat-salarié-convention-collective-transports-routiers-catégorie-professionnelle-Ouvriers-personnel-de-conduite-Non-personnels-des-entreprises-de-transport-routier-de-marchandises"
+          "infos-contrat-salarie-convention-collective-transports-routiers-categorie-professionnelle-Ouvriers-personnel-de-conduite-Non-personnels-des-entreprises-de-transport-routier-de-marchandises"
         );
         if (marchandisesSelect) {
           fireEvent.change(marchandisesSelect, {

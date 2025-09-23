@@ -80,293 +80,293 @@ export const ui = {
   information: {
     agreement16: {
       proCategory: byTestId(
-        "infos-contrat-salarié-convention-collective-transports-routiers-indemnité-de-licenciement-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-categorie-professionnelle"
       ),
       proCategoryHasChanged: {
         oui: byTestId(
-          "infos-contrat-salarié-convention-collective-transports-routiers-indemnité-de-licenciement-catégorie-professionnelle-Ingénieurs-et-cadres-avant-employé-ou-technicien-Oui"
+          "infos-contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-categorie-professionnelle-Ingenieurs-et-cadres-avant-employe-ou-technicien-Oui"
         ),
         non: byTestId(
-          "infos-contrat-salarié-convention-collective-transports-routiers-indemnité-de-licenciement-catégorie-professionnelle-Ingénieurs-et-cadres-avant-employé-ou-technicien-Non"
+          "infos-contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-categorie-professionnelle-Ingenieurs-et-cadres-avant-employe-ou-technicien-Non"
         ),
       },
       dateProCategoryChanged: byTestId(
-        "infos-contrat-salarié-convention-collective-transports-routiers-indemnité-de-licenciement-catégorie-professionnelle-Ingénieurs-et-cadres-date-du-statut-cadre"
+        "infos-contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-categorie-professionnelle-Ingenieurs-et-cadres-date-du-statut-cadre"
       ),
       engineerAge: byTestId(
-        "infos-contrat-salarié-convention-collective-transports-routiers-indemnité-de-licenciement-catégorie-professionnelle-Ingénieurs-et-cadres-age"
+        "infos-contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-categorie-professionnelle-Ingenieurs-et-cadres-age"
       ),
       ruptureEngineerAge: byTestId(
-        "infos-contrat-salarié-convention-collective-transports-routiers-rupture-conventionnelle-cadre-age"
+        "infos-contrat-salarie-convention-collective-transports-routiers-rupture-conventionnelle-cadre-age"
       ),
       employeeAge: byTestId(
-        "infos-contrat-salarié-convention-collective-transports-routiers-indemnité-de-licenciement-age"
+        "infos-contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-age"
       ),
       agentAge: byTestId(
-        "infos-contrat-salarié-convention-collective-transports-routiers-indemnité-de-licenciement-age"
+        "infos-contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-age"
       ),
       workerAge: byTestId(
-        "infos-contrat-salarié-convention-collective-transports-routiers-indemnité-de-licenciement-catégorie-professionnelle-Ouvriers-autres-licenciement-age"
+        "infos-contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-categorie-professionnelle-Ouvriers-autres-licenciement-age"
       ),
       driveInability: {
         oui: byTestId(
-          "infos-contrat-salarié-convention-collective-transports-routiers-indemnité-de-licenciement-catégorie-professionnelle-Ouvriers-incapacité-de-conduite-Oui"
+          "infos-contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-categorie-professionnelle-Ouvriers-incapacite-de-conduite-Oui"
         ),
         non: byTestId(
-          "infos-contrat-salarié-convention-collective-transports-routiers-indemnité-de-licenciement-catégorie-professionnelle-Ouvriers-incapacité-de-conduite-Non"
+          "infos-contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-categorie-professionnelle-Ouvriers-incapacite-de-conduite-Non"
         ),
       },
     },
     agreement3239: {
       proCategory: byTestId(
-        "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-indemnité-de-licenciement-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-indemnite-de-licenciement-categorie-professionnelle"
       ),
       radioCongeMatRupture: byText(
         "La rupture du contrat de travail fait-elle suite à la suspension, à la modification ou au retrait de l'agrément de l'assistant maternel ?"
       ),
       congeMatSuspension: {
         oui: byTestId(
-          "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-indemnité-de-licenciement-catégorie-professionnelle-assistante-maternelle-type-de-licenciement-Oui"
+          "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-indemnite-de-licenciement-categorie-professionnelle-assistante-maternelle-type-de-licenciement-Oui"
         ),
         non: byTestId(
-          "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-indemnité-de-licenciement-catégorie-professionnelle-assistante-maternelle-type-de-licenciement-Non"
+          "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-indemnite-de-licenciement-categorie-professionnelle-assistante-maternelle-type-de-licenciement-Non"
         ),
       },
       salaryInput: byTestId(
-        "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-indemnité-de-licenciement-catégorie-professionnelle-assistante-maternelle-type-de-licenciement-autres-total-salaires"
+        "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-indemnite-de-licenciement-categorie-professionnelle-assistante-maternelle-type-de-licenciement-autres-total-salaires"
       ),
     },
     agreement413: {
       proCategory: byTestId(
-        "infos-contrat-salarié-convention-collective-établissement-handicap-indemnité-de-licenciement-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-etablissement-handicap-indemnite-de-licenciement-categorie-professionnelle"
       ),
     },
     agreement675: {
       proCategory: byTestId(
-        "infos-contrat-salarié-convention-collective-habillement-commerce-succursales-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-habillement-commerce-succursales-categorie-professionnelle"
       ),
     },
     agreement44: {
       proCategory: byTestId(
-        "infos-contrat-salarié-convention-collective-industries-chimiques-indemnité-de-licenciement-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-industries-chimiques-indemnite-de-licenciement-categorie-professionnelle"
       ),
       age: byTestId(
-        "infos-contrat-salarié-convention-collective-industries-chimiques-indemnité-de-licenciement-catégorie-professionnelle-age"
+        "infos-contrat-salarie-convention-collective-industries-chimiques-indemnite-de-licenciement-categorie-professionnelle-age"
       ),
       ruptureAge: byTestId(
-        "infos-contrat-salarié-convention-collective-industries-chimiques-rupture-conventionnelle-age"
+        "infos-contrat-salarie-convention-collective-industries-chimiques-rupture-conventionnelle-age"
       ),
     },
     agreement2609: {
       age: byTestId(
-        "infos-contrat-salarié-convention-collective-batiment-etam-indemnité-de-licenciement-age-à-la-fin-de-son-préavis"
+        "infos-contrat-salarie-convention-collective-batiment-etam-indemnite-de-licenciement-age-a-la-fin-de-son-preavis"
       ),
     },
     agreement2596: {
       proCategory: byTestId(
-        "infos-contrat-salarié-convention-collective-coiffure-indemnité-de-licenciement-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-coiffure-indemnite-de-licenciement-categorie-professionnelle"
       ),
     },
     agreement1404: {
       cdiOperation: {
         oui: byTestId(
-          "infos-contrat-salarié-convention-collective-sedima-question-cdi-opération-Oui"
+          "infos-contrat-salarie-convention-collective-sedima-question-cdi-operation-Oui"
         ),
         non: byTestId(
-          "infos-contrat-salarié-convention-collective-sedima-question-cdi-opération-Non"
+          "infos-contrat-salarie-convention-collective-sedima-question-cdi-operation-Non"
         ),
       },
       duree: byTestId(
-        "infos-contrat-salarié-convention-collective-sedima-cdi-opération-durée"
+        "infos-contrat-salarie-convention-collective-sedima-cdi-operation-duree"
       ),
       salary1: byTestId(
-        "infos-contrat-salarié-convention-collective-sedima-cdi-opération-plus-de-6-mois-salaires-1e-année"
+        "infos-contrat-salarie-convention-collective-sedima-cdi-operation-plus-de-6-mois-salaires-1e-annee"
       ),
       salary2: byTestId(
-        "infos-contrat-salarié-convention-collective-sedima-cdi-opération-plus-de-6-mois-salaires-2e-année"
+        "infos-contrat-salarie-convention-collective-sedima-cdi-operation-plus-de-6-mois-salaires-2e-annee"
       ),
       salary3: byTestId(
-        "infos-contrat-salarié-convention-collective-sedima-cdi-opération-plus-de-6-mois-salaires-3e-année-et-plus"
+        "infos-contrat-salarie-convention-collective-sedima-cdi-operation-plus-de-6-mois-salaires-3e-annee-et-plus"
       ),
       trial: {
         oui: byTestId(
-          "infos-contrat-salarié-convention-collective-sedima-cdi-opération-moins-de-6-mois-question-période-essai-Oui"
+          "infos-contrat-salarie-convention-collective-sedima-cdi-operation-moins-de-6-mois-question-periode-essai-Oui"
         ),
         non: byTestId(
-          "infos-contrat-salarié-convention-collective-sedima-cdi-opération-moins-de-6-mois-question-période-essai-Non"
+          "infos-contrat-salarie-convention-collective-sedima-cdi-operation-moins-de-6-mois-question-periode-essai-Non"
         ),
       },
       salaryTotal: byTestId(
-        "infos-contrat-salarié-convention-collective-sedima-cdi-opération-moins-de-6-mois-salaires-total"
+        "infos-contrat-salarie-convention-collective-sedima-cdi-operation-moins-de-6-mois-salaires-total"
       ),
     },
     agreement2148: {
       age: byTestId(
-        "infos-contrat-salarié-convention-collective-télécommunications-age"
+        "infos-contrat-salarie-convention-collective-telecommunications-age"
       ),
     },
     agreement1486: {
       proCategory: byTestId(
-        "infos-contrat-salarié-convention-collective-bureaux-études-techniques-indemnité-de-licenciement-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-bureaux-etudes-techniques-indemnite-de-licenciement-categorie-professionnelle"
       ),
       refus: {
         oui: byTestId(
-          "infos-contrat-salarié-convention-collective-bureaux-études-techniques-indemnité-de-licenciement-type-de-licenciement-Oui"
+          "infos-contrat-salarie-convention-collective-bureaux-etudes-techniques-indemnite-de-licenciement-type-de-licenciement-Oui"
         ),
         non: byTestId(
-          "infos-contrat-salarié-convention-collective-bureaux-études-techniques-indemnité-de-licenciement-type-de-licenciement-Non"
+          "infos-contrat-salarie-convention-collective-bureaux-etudes-techniques-indemnite-de-licenciement-type-de-licenciement-Non"
         ),
       },
     },
     agreement573: {
       proCategory: byTestId(
-        "infos-contrat-salarié-convention-collective-commerces-de-gros-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-commerces-de-gros-categorie-professionnelle"
       ),
       eco: {
         oui: byTestId(
-          "infos-contrat-salarié-convention-collective-commerces-de-gros-catégorie-professionnelle-agents-licenciement-économique-question-Oui"
+          "infos-contrat-salarie-convention-collective-commerces-de-gros-categorie-professionnelle-agents-licenciement-economique-question-Oui"
         ),
         non: byTestId(
-          "infos-contrat-salarié-convention-collective-commerces-de-gros-catégorie-professionnelle-agents-licenciement-économique-question-Non"
+          "infos-contrat-salarie-convention-collective-commerces-de-gros-categorie-professionnelle-agents-licenciement-economique-question-Non"
         ),
       },
       age: byTestId(
-        "infos-contrat-salarié-convention-collective-commerces-de-gros-catégorie-professionnelle-agents-licenciement-économique-age"
+        "infos-contrat-salarie-convention-collective-commerces-de-gros-categorie-professionnelle-agents-licenciement-economique-age"
       ),
       ageRupture: byTestId(
-        "infos-contrat-salarié-convention-collective-commerces-de-gros-rupture-conventionnelle-licenciement-économique-agents-age"
+        "infos-contrat-salarie-convention-collective-commerces-de-gros-rupture-conventionnelle-licenciement-economique-agents-age"
       ),
     },
     agreement2120: {
       proCategory: byTestId(
-        "infos-contrat-salarié-convention-collective-banque-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-banque-categorie-professionnelle"
       ),
       eco: {
         oui: byTestId(
-          "infos-contrat-salarié-convention-collective-banque-licenciement-économique-Oui"
+          "infos-contrat-salarie-convention-collective-banque-licenciement-economique-Oui"
         ),
         non: byTestId(
-          "infos-contrat-salarié-convention-collective-banque-licenciement-économique-Non"
+          "infos-contrat-salarie-convention-collective-banque-licenciement-economique-Non"
         ),
       },
     },
     agreement1672: {
       proCategory: byTestId(
-        "infos-contrat-salarié-convention-collective-sociétés-d'assurances-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-societes-d'assurances-categorie-professionnelle"
       ),
       nonCadreAvant: {
         oui: byTestId(
-          "infos-contrat-salarié-convention-collective-sociétés-d'assurances-catégorie-professionnelle-cadres-avant-non-cadres-Oui"
+          "infos-contrat-salarie-convention-collective-societes-d'assurances-categorie-professionnelle-cadres-avant-non-cadres-Oui"
         ),
       },
       dateDebutCadre: byTestId(
-        "infos-contrat-salarié-convention-collective-sociétés-d'assurances-catégorie-professionnelle-cadres-date-du-statut-cadre"
+        "infos-contrat-salarie-convention-collective-societes-d'assurances-categorie-professionnelle-cadres-date-du-statut-cadre"
       ),
       age: byTestId(
-        "infos-contrat-salarié-convention-collective-sociétés-d'assurances-age"
+        "infos-contrat-salarie-convention-collective-societes-d'assurances-age"
       ),
     },
     agreement1702: {
       motif: {
         oui: byTestId(
-          "infos-contrat-salarié-convention-collective-ouvriers-travaux-public-indemnité-de-licenciement-licenciement-économique-Oui"
+          "infos-contrat-salarie-convention-collective-ouvriers-travaux-public-indemnite-de-licenciement-licenciement-economique-Oui"
         ),
         non: byTestId(
-          "infos-contrat-salarié-convention-collective-ouvriers-travaux-public-indemnité-de-licenciement-licenciement-économique-Non"
+          "infos-contrat-salarie-convention-collective-ouvriers-travaux-public-indemnite-de-licenciement-licenciement-economique-Non"
         ),
       },
       age: byTestId(
-        "infos-contrat-salarié-convention-collective-ouvriers-travaux-public-indemnité-de-licenciement-age"
+        "infos-contrat-salarie-convention-collective-ouvriers-travaux-public-indemnite-de-licenciement-age"
       ),
       ruptureAge: byTestId(
-        "infos-contrat-salarié-convention-collective-ouvriers-travaux-public-rupture-conventionnelle-age"
+        "infos-contrat-salarie-convention-collective-ouvriers-travaux-public-rupture-conventionnelle-age"
       ),
     },
     agreement3248: {
       proCategory: byTestId(
-        "infos-contrat-salarié-convention-collective-métallurgie-indemnité-de-licenciement-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle"
       ),
       dayContract: {
         oui: byTestId(
-          "infos-contrat-salarié-convention-collective-métallurgie-indemnité-de-licenciement-catégorie-professionnelle-ABCDE-forfait-jour-Oui"
+          "infos-contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-ABCDE-forfait-jour-Oui"
         ),
         non: byTestId(
-          "infos-contrat-salarié-convention-collective-métallurgie-indemnité-de-licenciement-catégorie-professionnelle-ABCDE-forfait-jour-Non"
+          "infos-contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-ABCDE-forfait-jour-Non"
         ),
       },
       alwaysDayContract: {
         oui: byTestId(
-          "infos-contrat-salarié-convention-collective-métallurgie-indemnité-de-licenciement-catégorie-professionnelle-ABCDE-toujours-au-forfait-jour-Oui"
+          "infos-contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-ABCDE-toujours-au-forfait-jour-Oui"
         ),
         non: byTestId(
-          "infos-contrat-salarié-convention-collective-métallurgie-indemnité-de-licenciement-catégorie-professionnelle-ABCDE-toujours-au-forfait-jour-Non"
+          "infos-contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-ABCDE-toujours-au-forfait-jour-Non"
         ),
       },
       dateDayContract: byTestId(
-        "infos-contrat-salarié-convention-collective-métallurgie-indemnité-de-licenciement-catégorie-professionnelle-ABCDE-forfait-jour-date"
+        "infos-contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-ABCDE-forfait-jour-date"
       ),
       hasBeenCadre: {
         oui: byTestId(
-          "infos-contrat-salarié-convention-collective-métallurgie-indemnité-de-licenciement-catégorie-professionnelle-ABCDE-avant-cadre-Oui"
+          "infos-contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-ABCDE-avant-cadre-Oui"
         ),
         non: byTestId(
-          "infos-contrat-salarié-convention-collective-métallurgie-indemnité-de-licenciement-catégorie-professionnelle-ABCDE-avant-cadre-Non"
+          "infos-contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-ABCDE-avant-cadre-Non"
         ),
       },
       age: byTestId(
-        "infos-contrat-salarié-convention-collective-métallurgie-indemnité-de-licenciement-catégorie-professionnelle-FGHI-age"
+        "infos-contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-FGHI-age"
       ),
       retirementRight: {
         oui: byTestId(
-          "infos-contrat-salarié-convention-collective-métallurgie-indemnité-de-licenciement-catégorie-professionnelle-FGHI-remplit-conditions-pour-la-retraite-Oui"
+          "infos-contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-FGHI-remplit-conditions-pour-la-retraite-Oui"
         ),
         non: byTestId(
-          "infos-contrat-salarié-convention-collective-métallurgie-indemnité-de-licenciement-catégorie-professionnelle-FGHI-remplit-conditions-pour-la-retraite-Non"
+          "infos-contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-FGHI-remplit-conditions-pour-la-retraite-Non"
         ),
       },
       absencesProlongesRepetes: {
         oui: byTestId(
-          "infos-contrat-salarié-convention-collective-métallurgie-indemnité-de-licenciement-licenciement-pour-motif-absence-prolongée-ou-répétées-Oui"
+          "infos-contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-licenciement-pour-motif-absence-prolongee-ou-repetees-Oui"
         ),
         non: byTestId(
-          "infos-contrat-salarié-convention-collective-métallurgie-indemnité-de-licenciement-licenciement-pour-motif-absence-prolongée-ou-répétées-Non"
+          "infos-contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-licenciement-pour-motif-absence-prolongee-ou-repetees-Non"
         ),
       },
     },
     agreement29: {
       proCategory: byTestId(
-        "infos-contrat-salarié-convention-collective-hospitalisation-privée-à-but-non-lucratif-indemnité-de-licenciement-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-hospitalisation-privee-a-but-non-lucratif-indemnite-de-licenciement-categorie-professionnelle"
       ),
     },
     agreement1501: {
       proCategory: byTestId(
-        "infos-contrat-salarié-convention-collective-restauration-rapide-indemnité-de-licenciement-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-restauration-rapide-indemnite-de-licenciement-categorie-professionnelle"
       ),
       age: byTestId(
-        "infos-contrat-salarié-convention-collective-restauration-rapide-indemnité-de-licenciement-licenciement-économique-age"
+        "infos-contrat-salarie-convention-collective-restauration-rapide-indemnite-de-licenciement-licenciement-economique-age"
       ),
       ruptureAge: byTestId(
-        "infos-contrat-salarié-convention-collective-restauration-rapide-rupture-conventionnelle-age"
+        "infos-contrat-salarie-convention-collective-restauration-rapide-rupture-conventionnelle-age"
       ),
     },
     agreement2098: {
       proCategory: byTestId(
-        "infos-contrat-salarié-convention-collective-personnel-presta-service-tertiaire-autre-licenciement-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-personnel-presta-service-tertiaire-autre-licenciement-categorie-professionnelle"
       ),
       age: byTestId(
-        "infos-contrat-salarié-convention-collective-personnel-presta-service-tertiaire-rupture-conventionnelle-cadre-age"
+        "infos-contrat-salarie-convention-collective-personnel-presta-service-tertiaire-rupture-conventionnelle-cadre-age"
       ),
       inaptitudeNonPro: byText("Oui"),
     },
     agreement2216: {
       proCategory: byTestId(
-        "infos-contrat-salarié-convention-collective-commerce-gros-et-detail-alimentation-indemnité-de-licenciement-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-commerce-gros-et-detail-alimentation-indemnite-de-licenciement-categorie-professionnelle"
       ),
       age: byTestId(
-        "infos-contrat-salarié-convention-collective-commerce-gros-et-detail-alimentation-indemnité-de-licenciement-catégorie-professionnelle-licenciement-économique-age"
+        "infos-contrat-salarie-convention-collective-commerce-gros-et-detail-alimentation-indemnite-de-licenciement-categorie-professionnelle-licenciement-economique-age"
       ),
       ruptureAge: byTestId(
-        "infos-contrat-salarié-convention-collective-commerce-gros-et-detail-alimentation-rupture-conventionnelle-licenciement-économique-age"
+        "infos-contrat-salarie-convention-collective-commerce-gros-et-detail-alimentation-rupture-conventionnelle-licenciement-economique-age"
       ),
     },
   },

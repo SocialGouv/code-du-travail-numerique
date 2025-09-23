@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-éducation-et-loisirs-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-education-et-loisirs-categorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise et Techniciens'" },
@@ -47,7 +47,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-éducation-et-loisirs-catégorie-professionnelle-Agents-de-maîtrise-et-Techniciens-groupe"
+            "infos-contrat-salarie-convention-collective-education-et-loisirs-categorie-professionnelle-Agents-de-maitrise-et-Techniciens-groupe"
           ),
           {
             target: { value: "'4'" },
@@ -67,7 +67,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-éducation-et-loisirs-catégorie-professionnelle-Agents-de-maîtrise-et-Techniciens-groupe"
+            "infos-contrat-salarie-convention-collective-education-et-loisirs-categorie-professionnelle-Agents-de-maitrise-et-Techniciens-groupe"
           ),
           {
             target: { value: "'5'" },
@@ -87,7 +87,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-éducation-et-loisirs-catégorie-professionnelle-Agents-de-maîtrise-et-Techniciens-groupe"
+            "infos-contrat-salarie-convention-collective-education-et-loisirs-categorie-professionnelle-Agents-de-maitrise-et-Techniciens-groupe"
           ),
           {
             target: { value: "'6'" },
@@ -108,7 +108,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-éducation-et-loisirs-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-education-et-loisirs-categorie-professionnelle"
         ),
         {
           target: { value: "'Animateurs, techniciens et professeurs'" },
@@ -121,7 +121,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-éducation-et-loisirs-catégorie-professionnelle-Animateurs,-techniciens-et-professeurs-niveau"
+            "infos-contrat-salarie-convention-collective-education-et-loisirs-categorie-professionnelle-Animateurs,-techniciens-et-professeurs-niveau"
           ),
           {
             target: { value: "'A'" },
@@ -141,7 +141,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-éducation-et-loisirs-catégorie-professionnelle-Animateurs,-techniciens-et-professeurs-niveau"
+            "infos-contrat-salarie-convention-collective-education-et-loisirs-categorie-professionnelle-Animateurs,-techniciens-et-professeurs-niveau"
           ),
           {
             target: { value: "'B'" },
@@ -162,7 +162,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-éducation-et-loisirs-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-education-et-loisirs-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -175,7 +175,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-éducation-et-loisirs-catégorie-professionnelle-Cadres-groupe"
+            "infos-contrat-salarie-convention-collective-education-et-loisirs-categorie-professionnelle-Cadres-groupe"
           ),
           {
             target: { value: "'7'" },
@@ -195,7 +195,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-éducation-et-loisirs-catégorie-professionnelle-Cadres-groupe"
+            "infos-contrat-salarie-convention-collective-education-et-loisirs-categorie-professionnelle-Cadres-groupe"
           ),
           {
             target: { value: "'8'" },
@@ -216,7 +216,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-éducation-et-loisirs-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-education-et-loisirs-categorie-professionnelle"
         ),
         {
           target: { value: "'Ouvriers, Employés'" },
@@ -229,7 +229,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-éducation-et-loisirs-catégorie-professionnelle-Ouvriers,-Employés-groupe"
+            "infos-contrat-salarie-convention-collective-education-et-loisirs-categorie-professionnelle-Ouvriers,-Employes-groupe"
           ),
           {
             target: { value: "'2'" },
@@ -249,7 +249,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-éducation-et-loisirs-catégorie-professionnelle-Ouvriers,-Employés-groupe"
+            "infos-contrat-salarie-convention-collective-education-et-loisirs-categorie-professionnelle-Ouvriers,-Employes-groupe"
           ),
           {
             target: { value: "'3'" },

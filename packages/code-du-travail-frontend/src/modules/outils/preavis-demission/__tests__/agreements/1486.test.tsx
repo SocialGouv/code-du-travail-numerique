@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-bureaux-études-techniques-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-bureaux-etudes-techniques-categorie-professionnelle"
         ),
         {
           target: { value: "'Chargés d'enquête intermittents'" },
@@ -58,7 +58,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-bureaux-études-techniques-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-bureaux-etudes-techniques-categorie-professionnelle"
         ),
         {
           target: {
@@ -73,7 +73,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-bureaux-études-techniques-catégorie-professionnelle-Employés,-Techniciens-ou-Agents-de-maîtrise-ETAM-coefficient"
+            "infos-contrat-salarie-convention-collective-bureaux-etudes-techniques-categorie-professionnelle-Employes,-Techniciens-ou-Agents-de-maitrise-ETAM-coefficient"
           ),
           {
             target: { value: "'De 240 à 355'" },
@@ -86,7 +86,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-bureaux-études-techniques-catégorie-professionnelle-Employés,-Techniciens-ou-Agents-de-maîtrise-ETAM-coefficient-de-240-à-355-ancienneté"
+              "infos-contrat-salarie-convention-collective-bureaux-etudes-techniques-categorie-professionnelle-Employes,-Techniciens-ou-Agents-de-maitrise-ETAM-coefficient-de-240-a-355-anciennete"
             ),
             {
               target: { value: "'2 ans ou moins'" },
@@ -108,7 +108,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-bureaux-études-techniques-catégorie-professionnelle-Employés,-Techniciens-ou-Agents-de-maîtrise-ETAM-coefficient-de-240-à-355-ancienneté"
+              "infos-contrat-salarie-convention-collective-bureaux-etudes-techniques-categorie-professionnelle-Employes,-Techniciens-ou-Agents-de-maitrise-ETAM-coefficient-de-240-a-355-anciennete"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -131,7 +131,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-bureaux-études-techniques-catégorie-professionnelle-Employés,-Techniciens-ou-Agents-de-maîtrise-ETAM-coefficient"
+            "infos-contrat-salarie-convention-collective-bureaux-etudes-techniques-categorie-professionnelle-Employes,-Techniciens-ou-Agents-de-maitrise-ETAM-coefficient"
           ),
           {
             target: { value: "'De 400 à 500'" },
@@ -144,7 +144,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-bureaux-études-techniques-catégorie-professionnelle-Employés,-Techniciens-ou-Agents-de-maîtrise-ETAM-coefficient-De-400-à-500-ancienneté"
+              "infos-contrat-salarie-convention-collective-bureaux-etudes-techniques-categorie-professionnelle-Employes,-Techniciens-ou-Agents-de-maitrise-ETAM-coefficient-De-400-a-500-anciennete"
             ),
             {
               target: { value: "'2 ans ou moins'" },
@@ -166,7 +166,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-bureaux-études-techniques-catégorie-professionnelle-Employés,-Techniciens-ou-Agents-de-maîtrise-ETAM-coefficient-De-400-à-500-ancienneté"
+              "infos-contrat-salarie-convention-collective-bureaux-etudes-techniques-categorie-professionnelle-Employes,-Techniciens-ou-Agents-de-maitrise-ETAM-coefficient-De-400-a-500-anciennete"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -190,7 +190,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-bureaux-études-techniques-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-bureaux-etudes-techniques-categorie-professionnelle"
         ),
         {
           target: { value: "'Ingénieurs, Cadres'" },

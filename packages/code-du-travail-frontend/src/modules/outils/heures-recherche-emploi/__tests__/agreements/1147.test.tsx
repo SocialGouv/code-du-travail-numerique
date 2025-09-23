@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-cabinets-médicaux-typeRupture"
+          "infos-contrat-salarie-convention-collective-cabinets-medicaux-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -52,7 +52,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-cabinets-médicaux-typeRupture"
+          "infos-contrat-salarie-convention-collective-cabinets-medicaux-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -82,7 +82,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-cabinets-médicaux-typeRupture"
+          "infos-contrat-salarie-convention-collective-cabinets-medicaux-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

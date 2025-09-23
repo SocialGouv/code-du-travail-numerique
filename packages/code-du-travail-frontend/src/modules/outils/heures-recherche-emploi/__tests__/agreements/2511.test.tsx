@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-sport-typeRupture"
+          "infos-contrat-salarie-convention-collective-sport-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -60,7 +60,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-sport-typeRupture"
+          "infos-contrat-salarie-convention-collective-sport-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -82,7 +82,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-sport-typeRupture"
+          "infos-contrat-salarie-convention-collective-sport-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

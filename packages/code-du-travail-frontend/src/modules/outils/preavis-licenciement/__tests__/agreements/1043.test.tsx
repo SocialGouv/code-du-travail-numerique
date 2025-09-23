@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-gardien-concierge-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-gardien-concierge-categorie-professionnelle"
         ),
         {
           target: { value: "'A'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-gardien-concierge-catégorie-professionnelle-A-ancienneté"
+            "infos-contrat-salarie-convention-collective-gardien-concierge-categorie-professionnelle-A-anciennete"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -72,7 +72,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-gardien-concierge-catégorie-professionnelle-A-ancienneté"
+            "infos-contrat-salarie-convention-collective-gardien-concierge-categorie-professionnelle-A-anciennete"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -93,7 +93,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-gardien-concierge-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-gardien-concierge-categorie-professionnelle"
         ),
         {
           target: { value: "'B'" },

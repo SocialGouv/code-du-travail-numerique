@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-commerce-gros-et-detail-alimentation-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-commerce-gros-et-detail-alimentation-categorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise et Techniciens'" },
@@ -56,7 +56,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-commerce-gros-et-detail-alimentation-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-commerce-gros-et-detail-alimentation-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -78,7 +78,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-commerce-gros-et-detail-alimentation-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-commerce-gros-et-detail-alimentation-categorie-professionnelle"
         ),
         {
           target: { value: "'Ouvriers, Employés'" },

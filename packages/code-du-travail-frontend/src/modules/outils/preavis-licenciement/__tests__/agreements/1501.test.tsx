@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-restauration-rapide-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-restauration-rapide-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -58,7 +58,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-restauration-rapide-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-restauration-rapide-categorie-professionnelle"
         ),
         {
           target: { value: "'Maîtrises'" },
@@ -71,7 +71,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-restauration-rapide-catégorie-professionnelle-Maîtrises-ancienneté"
+            "infos-contrat-salarie-convention-collective-restauration-rapide-categorie-professionnelle-Maitrises-anciennete"
           ),
           {
             target: { value: "'2 ans ou moins'" },
@@ -90,7 +90,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-restauration-rapide-catégorie-professionnelle-Maîtrises-ancienneté"
+            "infos-contrat-salarie-convention-collective-restauration-rapide-categorie-professionnelle-Maitrises-anciennete"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -110,7 +110,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-restauration-rapide-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-restauration-rapide-categorie-professionnelle"
         ),
         {
           target: { value: "'Ouvriers, Employés'" },
@@ -123,7 +123,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-restauration-rapide-catégorie-professionnelle-Ouvriers,-Employés-ancienneté"
+            "infos-contrat-salarie-convention-collective-restauration-rapide-categorie-professionnelle-Ouvriers,-Employes-anciennete"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -142,7 +142,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-restauration-rapide-catégorie-professionnelle-Ouvriers,-Employés-ancienneté"
+            "infos-contrat-salarie-convention-collective-restauration-rapide-categorie-professionnelle-Ouvriers,-Employes-anciennete"
           ),
           {
             target: { value: "'6 mois à 2 ans'" },
@@ -161,7 +161,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-restauration-rapide-catégorie-professionnelle-Ouvriers,-Employés-ancienneté"
+            "infos-contrat-salarie-convention-collective-restauration-rapide-categorie-professionnelle-Ouvriers,-Employes-anciennete"
           ),
           {
             target: { value: "'Plus de 2 ans'" },

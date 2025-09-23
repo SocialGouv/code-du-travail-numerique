@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-personnel-presta-service-tertiaire-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-personnel-presta-service-tertiaire-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -59,7 +59,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-personnel-presta-service-tertiaire-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-personnel-presta-service-tertiaire-categorie-professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -72,7 +72,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-personnel-presta-service-tertiaire-catégorie-professionnelle-Employés-ancienneté"
+            "infos-contrat-salarie-convention-collective-personnel-presta-service-tertiaire-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'2 ans ou moins'" },
@@ -92,7 +92,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-personnel-presta-service-tertiaire-catégorie-professionnelle-Employés-ancienneté"
+            "infos-contrat-salarie-convention-collective-personnel-presta-service-tertiaire-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -113,7 +113,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-personnel-presta-service-tertiaire-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-personnel-presta-service-tertiaire-categorie-professionnelle"
         ),
         {
           target: { value: "'Techniciens et agents de maîtrise TAM'" },

@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-sociétés-d'assurances-typeRupture"
+          "infos-contrat-salarie-convention-collective-societes-d'assurances-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -60,7 +60,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-sociétés-d'assurances-typeRupture"
+          "infos-contrat-salarie-convention-collective-societes-d'assurances-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -90,7 +90,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-sociétés-d'assurances-typeRupture"
+          "infos-contrat-salarie-convention-collective-societes-d'assurances-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

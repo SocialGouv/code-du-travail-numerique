@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-comptables-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-comptables-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -58,7 +58,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-comptables-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-comptables-categorie-professionnelle"
         ),
         {
           target: { value: "'Employés'" },

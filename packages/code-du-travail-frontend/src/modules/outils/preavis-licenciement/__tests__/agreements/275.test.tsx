@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-transport-aerien-personnel-au-sol-categorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-catégorie-professionnelle-Agents-de-maîtrise-ancienneté"
+            "infos-contrat-salarie-convention-collective-transport-aerien-personnel-au-sol-categorie-professionnelle-Agents-de-maitrise-anciennete"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -73,7 +73,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-catégorie-professionnelle-Agents-de-maîtrise-ancienneté"
+            "infos-contrat-salarie-convention-collective-transport-aerien-personnel-au-sol-categorie-professionnelle-Agents-de-maitrise-anciennete"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -95,7 +95,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-transport-aerien-personnel-au-sol-categorie-professionnelle"
         ),
         {
           target: { value: "'Techniciens'" },
@@ -108,7 +108,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-catégorie-professionnelle-Techniciens-ancienneté"
+            "infos-contrat-salarie-convention-collective-transport-aerien-personnel-au-sol-categorie-professionnelle-Techniciens-anciennete"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -129,7 +129,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-catégorie-professionnelle-Techniciens-ancienneté"
+            "infos-contrat-salarie-convention-collective-transport-aerien-personnel-au-sol-categorie-professionnelle-Techniciens-anciennete"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -151,7 +151,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-transport-aerien-personnel-au-sol-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -172,7 +172,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-transport-aerien-personnel-au-sol-categorie-professionnelle"
         ),
         {
           target: { value: "'Ouvriers'" },
@@ -185,7 +185,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-catégorie-professionnelle-Ouvriers-ancienneté"
+            "infos-contrat-salarie-convention-collective-transport-aerien-personnel-au-sol-categorie-professionnelle-Ouvriers-anciennete"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -206,7 +206,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-catégorie-professionnelle-Ouvriers-ancienneté"
+            "infos-contrat-salarie-convention-collective-transport-aerien-personnel-au-sol-categorie-professionnelle-Ouvriers-anciennete"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -228,7 +228,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-transport-aerien-personnel-au-sol-categorie-professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -241,7 +241,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-catégorie-professionnelle-Employés-ancienneté"
+            "infos-contrat-salarie-convention-collective-transport-aerien-personnel-au-sol-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -262,7 +262,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-transport-aérien-personnel-au-sol-catégorie-professionnelle-Employés-ancienneté"
+            "infos-contrat-salarie-convention-collective-transport-aerien-personnel-au-sol-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'2 ans ou plus'" },

@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-immobilier-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-immobilier-categorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise'" },
@@ -47,7 +47,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-immobilier-catégorie-professionnelle-Agents-de-maîtrise-ancienneté"
+            "infos-contrat-salarie-convention-collective-immobilier-categorie-professionnelle-Agents-de-maitrise-anciennete"
           ),
           {
             target: { value: "'Moins de 1 an'" },
@@ -67,7 +67,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-immobilier-catégorie-professionnelle-Agents-de-maîtrise-ancienneté"
+            "infos-contrat-salarie-convention-collective-immobilier-categorie-professionnelle-Agents-de-maitrise-anciennete"
           ),
           {
             target: { value: "'Au moins 1 an'" },
@@ -88,7 +88,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-immobilier-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-immobilier-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres non-VRP'" },
@@ -108,7 +108,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-immobilier-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-immobilier-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres VRP'" },
@@ -121,7 +121,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-immobilier-catégorie-professionnelle-Cadres-VRP-ancienneté"
+            "infos-contrat-salarie-convention-collective-immobilier-categorie-professionnelle-Cadres-VRP-anciennete"
           ),
           {
             target: { value: "'Moins de 1 an'" },
@@ -141,7 +141,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-immobilier-catégorie-professionnelle-Cadres-VRP-ancienneté"
+            "infos-contrat-salarie-convention-collective-immobilier-categorie-professionnelle-Cadres-VRP-anciennete"
           ),
           {
             target: { value: "'Au moins 1 an'" },
@@ -162,7 +162,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-immobilier-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-immobilier-categorie-professionnelle"
         ),
         {
           target: { value: "'Négociateur non-VRP'" },
@@ -175,7 +175,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-immobilier-catégorie-professionnelle-Négociateur-non-VRP-ancienneté"
+            "infos-contrat-salarie-convention-collective-immobilier-categorie-professionnelle-Negociateur-non-VRP-anciennete"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -195,7 +195,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-immobilier-catégorie-professionnelle-Négociateur-non-VRP-ancienneté"
+            "infos-contrat-salarie-convention-collective-immobilier-categorie-professionnelle-Negociateur-non-VRP-anciennete"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -216,7 +216,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-immobilier-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-immobilier-categorie-professionnelle"
         ),
         {
           target: { value: "'Négociateur VRP'" },
@@ -229,7 +229,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-immobilier-catégorie-professionnelle-Négociateur-VRP-ancienneté"
+            "infos-contrat-salarie-convention-collective-immobilier-categorie-professionnelle-Negociateur-VRP-anciennete"
           ),
           {
             target: { value: "'Moins de 1 an'" },
@@ -249,7 +249,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-immobilier-catégorie-professionnelle-Négociateur-VRP-ancienneté"
+            "infos-contrat-salarie-convention-collective-immobilier-categorie-professionnelle-Negociateur-VRP-anciennete"
           ),
           {
             target: { value: "'1 an à moins de 2 ans'" },
@@ -269,7 +269,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-immobilier-catégorie-professionnelle-Négociateur-VRP-ancienneté"
+            "infos-contrat-salarie-convention-collective-immobilier-categorie-professionnelle-Negociateur-VRP-anciennete"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -290,7 +290,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-immobilier-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-immobilier-categorie-professionnelle"
         ),
         {
           target: { value: "'Ouvriers, Employés'" },
@@ -303,7 +303,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-immobilier-catégorie-professionnelle-Ouvriers,-Employés-ancienneté"
+            "infos-contrat-salarie-convention-collective-immobilier-categorie-professionnelle-Ouvriers,-Employes-anciennete"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -323,7 +323,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-immobilier-catégorie-professionnelle-Ouvriers,-Employés-ancienneté"
+            "infos-contrat-salarie-convention-collective-immobilier-categorie-professionnelle-Ouvriers,-Employes-anciennete"
           ),
           {
             target: { value: "'2 ans ou plus'" },

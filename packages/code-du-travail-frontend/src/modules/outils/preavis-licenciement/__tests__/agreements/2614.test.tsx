@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-travaux-publics-âge"
+          "infos-contrat-salarie-convention-collective-travaux-publics-age"
         ),
         {
           target: { value: "'Moins de 55 ans'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-travaux-publics-âge-Moins-de-55-ans-ancienneté"
+            "infos-contrat-salarie-convention-collective-travaux-publics-age-Moins-de-55-ans-anciennete"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -74,7 +74,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-travaux-publics-âge-Moins-de-55-ans-ancienneté"
+            "infos-contrat-salarie-convention-collective-travaux-publics-age-Moins-de-55-ans-anciennete"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -97,7 +97,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-travaux-publics-âge"
+          "infos-contrat-salarie-convention-collective-travaux-publics-age"
         ),
         {
           target: { value: "'55 ans et plus'" },
@@ -110,7 +110,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-travaux-publics-âge-55-ans-et-plus-ancienneté"
+            "infos-contrat-salarie-convention-collective-travaux-publics-age-55-ans-et-plus-anciennete"
           ),
           {
             target: { value: "'Au moins 15 ans d'ancienneté'" },
@@ -132,7 +132,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-travaux-publics-âge-55-ans-et-plus-ancienneté"
+            "infos-contrat-salarie-convention-collective-travaux-publics-age-55-ans-et-plus-anciennete"
           ),
           {
             target: { value: "'Moins de 15 ans d'ancienneté'" },

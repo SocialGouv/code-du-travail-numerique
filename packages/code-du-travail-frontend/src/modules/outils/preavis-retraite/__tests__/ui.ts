@@ -27,7 +27,7 @@ export const ui = {
         "Quelle est la catégorie professionnelle du salarié ?"
       ),
       categoryAnswers: byTestId(
-        "infos-contrat-salarié-convention-collective-transports-routiers-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-transports-routiers-categorie-professionnelle"
       ),
     },
     agreement1090: {
@@ -35,11 +35,11 @@ export const ui = {
         "Quelle est la catégorie professionnelle du salarié ?"
       ),
       categoryAnswers: byTestId(
-        "infos-contrat-salarié-convention-collective-automobiles-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle"
       ),
       echelonQuestion: byText("Quel est l'échelon du salarié ?"),
       echelonAnswers: byTestId(
-        "infos-contrat-salarié-convention-collective-automobiles-catégorie-professionnelle-ouvriers-échelon"
+        "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle-ouvriers-echelon"
       ),
     },
     agreement2264: {
@@ -47,7 +47,7 @@ export const ui = {
         "Quelle est la catégorie professionnelle du salarié ?"
       ),
       categoryAnswers: byTestId(
-        "infos-contrat-salarié-convention-collective-hospitalisation-privées-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-hospitalisation-privees-categorie-professionnelle"
       ),
     },
     agreement3239: {
@@ -55,7 +55,7 @@ export const ui = {
         "Quelle est la catégorie professionnelle du salarié ?"
       ),
       categoryAnswers: byTestId(
-        "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-catégorie-professionnelle"
+        "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-categorie-professionnelle"
       ),
       alert: byTestId("alert-note"),
     },
@@ -63,12 +63,8 @@ export const ui = {
       question: byText(
         "Le salarié concerné est-il reconnu en tant que travailleur handicapé ?"
       ),
-      answerNon: byTestId(
-        "infos-contrat-salarié-travailleur-handicapé-Non"
-      ),
-      answerOui: byTestId(
-        "infos-contrat-salarié-travailleur-handicapé-Oui"
-      ),
+      answerNon: byTestId("infos-contrat-salarie-travailleur-handicape-Non"),
+      answerOui: byTestId("infos-contrat-salarie-travailleur-handicape-Oui"),
     },
   },
   seniority: {

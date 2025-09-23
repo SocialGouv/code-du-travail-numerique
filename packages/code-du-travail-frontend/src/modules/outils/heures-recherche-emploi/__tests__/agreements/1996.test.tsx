@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-pharmacie-typeRupture"
+          "infos-contrat-salarie-convention-collective-pharmacie-typeRupture"
         ),
         {
           target: { value: "'Démission ou licenciement'" },
@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-pharmacie-typeRupture-Démission-ou-licenciement-catégorie-professionnelle"
+            "infos-contrat-salarie-convention-collective-pharmacie-typeRupture-Demission-ou-licenciement-categorie-professionnelle"
           ),
           {
             target: { value: "'Cadres'" },
@@ -54,7 +54,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-pharmacie-typeRupture-Démission-ou-licenciement-catégorie-professionnelle-Cadres-durée-du-travail"
+              "infos-contrat-salarie-convention-collective-pharmacie-typeRupture-Demission-ou-licenciement-categorie-professionnelle-Cadres-duree-du-travail"
             ),
             {
               target: { value: "'Temps partiel'" },
@@ -86,7 +86,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-pharmacie-typeRupture-Démission-ou-licenciement-catégorie-professionnelle-Cadres-durée-du-travail"
+              "infos-contrat-salarie-convention-collective-pharmacie-typeRupture-Demission-ou-licenciement-categorie-professionnelle-Cadres-duree-du-travail"
             ),
             {
               target: { value: "'Temps complet'" },
@@ -117,7 +117,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-pharmacie-typeRupture-Démission-ou-licenciement-catégorie-professionnelle"
+            "infos-contrat-salarie-convention-collective-pharmacie-typeRupture-Demission-ou-licenciement-categorie-professionnelle"
           ),
           {
             target: { value: "'Non-cadres'" },
@@ -130,7 +130,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-pharmacie-typeRupture-Démission-ou-licenciement-catégorie-professionnelle-Noncadres-durée-du-travail"
+              "infos-contrat-salarie-convention-collective-pharmacie-typeRupture-Demission-ou-licenciement-categorie-professionnelle-Noncadres-duree-du-travail"
             ),
             {
               target: { value: "'Temps complet'" },
@@ -162,7 +162,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-pharmacie-typeRupture"
+          "infos-contrat-salarie-convention-collective-pharmacie-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

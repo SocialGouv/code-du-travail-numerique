@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-ouvriers-travaux-public-ancienneté"
+          "infos-contrat-salarie-convention-collective-ouvriers-travaux-public-anciennete"
         ),
         {
           target: {
@@ -56,7 +56,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-ouvriers-travaux-public-ancienneté"
+          "infos-contrat-salarie-convention-collective-ouvriers-travaux-public-anciennete"
         ),
         {
           target: { value: "'Plus de 3 mois'" },

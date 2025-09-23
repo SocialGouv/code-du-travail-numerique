@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-typeRupture"
+          "infos-contrat-salarie-convention-collective-commerces-de-detail-non-alimentaires-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -54,7 +54,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-typeRupture"
+          "infos-contrat-salarie-convention-collective-commerces-de-detail-non-alimentaires-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -88,7 +88,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-commerces-de-detail-non-alimentaires-typeRupture"
+          "infos-contrat-salarie-convention-collective-commerces-de-detail-non-alimentaires-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

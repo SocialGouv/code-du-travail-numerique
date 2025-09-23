@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-entreprises-de-propreté-typeRupture"
+          "infos-contrat-salarie-convention-collective-entreprises-de-proprete-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -60,7 +60,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-entreprises-de-propreté-typeRupture"
+          "infos-contrat-salarie-convention-collective-entreprises-de-proprete-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -92,7 +92,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-entreprises-de-propreté-typeRupture"
+          "infos-contrat-salarie-convention-collective-entreprises-de-proprete-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

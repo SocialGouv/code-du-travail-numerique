@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-typeRupture"
+          "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-typeRupture-Licenciement-catégorie-professionnelle"
+            "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-typeRupture-Licenciement-categorie-professionnelle"
           ),
           {
             target: {
@@ -65,7 +65,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-typeRupture-Licenciement-catégorie-professionnelle"
+            "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-typeRupture-Licenciement-categorie-professionnelle"
           ),
           {
             target: { value: "'Salariés du particulier employeur'" },
@@ -78,7 +78,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-typeRupture-Licenciement-catégorie-professionnelle-Salariés-du-particulier-employeur-durée-du-travail"
+              "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-typeRupture-Licenciement-categorie-professionnelle-Salaries-du-particulier-employeur-duree-du-travail"
             ),
             {
               target: { value: "'Moins de 40 heures par semaine'" },
@@ -91,7 +91,7 @@ describe("HeuresRechercheEmploi", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-typeRupture-Licenciement-catégorie-professionnelle-Salariés-du-particulier-employeur-durée-du-travail-Moins-de-40-heures-par-semaine-ancienneté"
+                "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-typeRupture-Licenciement-categorie-professionnelle-Salaries-du-particulier-employeur-duree-du-travail-Moins-de-40-heures-par-semaine-anciennete"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -113,7 +113,7 @@ describe("HeuresRechercheEmploi", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-typeRupture-Licenciement-catégorie-professionnelle-Salariés-du-particulier-employeur-durée-du-travail-Moins-de-40-heures-par-semaine-ancienneté"
+                "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-typeRupture-Licenciement-categorie-professionnelle-Salaries-du-particulier-employeur-duree-du-travail-Moins-de-40-heures-par-semaine-anciennete"
               ),
               {
                 target: { value: "'2 ans ou plus'" },
@@ -136,7 +136,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-typeRupture-Licenciement-catégorie-professionnelle-Salariés-du-particulier-employeur-durée-du-travail"
+              "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-typeRupture-Licenciement-categorie-professionnelle-Salaries-du-particulier-employeur-duree-du-travail"
             ),
             {
               target: { value: "'40 heures ou plus par semaine'" },
@@ -149,7 +149,7 @@ describe("HeuresRechercheEmploi", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-typeRupture-Licenciement-catégorie-professionnelle-Salariés-du-particulier-employeur-durée-du-travail-40-heures-ou-plus-par-semaine-ancienneté"
+                "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-typeRupture-Licenciement-categorie-professionnelle-Salaries-du-particulier-employeur-duree-du-travail-40-heures-ou-plus-par-semaine-anciennete"
               ),
               {
                 target: { value: "'Moins de 2 ans'" },
@@ -176,7 +176,7 @@ describe("HeuresRechercheEmploi", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos-contrat-salarié-convention-collective-particuliers-employeurs-et-emploi-à-domicile-typeRupture-Licenciement-catégorie-professionnelle-Salariés-du-particulier-employeur-durée-du-travail-40-heures-ou-plus-par-semaine-ancienneté"
+                "infos-contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-typeRupture-Licenciement-categorie-professionnelle-Salaries-du-particulier-employeur-duree-du-travail-40-heures-ou-plus-par-semaine-anciennete"
               ),
               {
                 target: { value: "'2 ans ou plus'" },

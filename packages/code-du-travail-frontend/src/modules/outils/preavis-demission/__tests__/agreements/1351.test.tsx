@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle"
         ),
         {
           target: {
@@ -50,7 +50,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau"
+            "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau"
           ),
           {
             target: { value: "'I'" },
@@ -63,7 +63,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-I-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-I-anciennete"
             ),
             {
               target: { value: "'Moins de 15 jours'" },
@@ -89,7 +89,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-I-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-I-anciennete"
             ),
             {
               target: { value: "'15 jours à 1 mois'" },
@@ -113,7 +113,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-I-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-I-anciennete"
             ),
             {
               target: { value: "'Plus de 1 mois à 2 mois'" },
@@ -139,7 +139,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-I-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-I-anciennete"
             ),
             {
               target: { value: "'Plus de 2 mois à 6 mois'" },
@@ -165,7 +165,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-I-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-I-anciennete"
             ),
             {
               target: { value: "'Plus de 6 mois à 2 ans'" },
@@ -189,7 +189,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-I-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-I-anciennete"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -214,7 +214,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau"
+            "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau"
           ),
           {
             target: { value: "'II'" },
@@ -227,7 +227,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-II-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-II-anciennete"
             ),
             {
               target: { value: "'Moins de 15 jours'" },
@@ -253,7 +253,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-II-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-II-anciennete"
             ),
             {
               target: { value: "'15 jours à 1 mois'" },
@@ -277,7 +277,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-II-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-II-anciennete"
             ),
             {
               target: { value: "'Plus de 1 mois à 2 mois'" },
@@ -303,7 +303,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-II-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-II-anciennete"
             ),
             {
               target: { value: "'Plus de 2 mois à 6 mois'" },
@@ -329,7 +329,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-II-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-II-anciennete"
             ),
             {
               target: { value: "'Plus de 6 mois à 2 ans'" },
@@ -353,7 +353,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-II-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-II-anciennete"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -378,7 +378,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau"
+            "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau"
           ),
           {
             target: { value: "'III'" },
@@ -391,7 +391,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-III-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-III-anciennete"
             ),
             {
               target: { value: "'Moins de 15 jours'" },
@@ -417,7 +417,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-III-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-III-anciennete"
             ),
             {
               target: { value: "'15 jours à 1 mois'" },
@@ -441,7 +441,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-III-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-III-anciennete"
             ),
             {
               target: { value: "'Plus de 1 mois à 2 mois'" },
@@ -467,7 +467,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-III-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-III-anciennete"
             ),
             {
               target: { value: "'Plus de 2 mois à 6 mois'" },
@@ -493,7 +493,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-III-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-III-anciennete"
             ),
             {
               target: { value: "'Plus de 6 mois à 2 ans'" },
@@ -517,7 +517,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-III-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-III-anciennete"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -542,7 +542,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau"
+            "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau"
           ),
           {
             target: { value: "'IV'" },
@@ -555,7 +555,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-IV-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-IV-anciennete"
             ),
             {
               target: { value: "'15 jours à 1 mois'" },
@@ -579,7 +579,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-IV-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-IV-anciennete"
             ),
             {
               target: { value: "'Plus de 1 mois à 2 mois'" },
@@ -605,7 +605,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-IV-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-IV-anciennete"
             ),
             {
               target: { value: "'Plus de 2 mois à 6 mois'" },
@@ -631,7 +631,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-IV-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-IV-anciennete"
             ),
             {
               target: { value: "'Plus de 6 mois à 2 ans'" },
@@ -655,7 +655,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-IV-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-IV-anciennete"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -680,7 +680,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau"
+            "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau"
           ),
           {
             target: { value: "'V'" },
@@ -693,7 +693,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-V-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-V-anciennete"
             ),
             {
               target: { value: "'15 jours à 1 mois'" },
@@ -717,7 +717,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-V-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-V-anciennete"
             ),
             {
               target: { value: "'Plus de 1 mois à 2 mois'" },
@@ -743,7 +743,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-V-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-V-anciennete"
             ),
             {
               target: { value: "'Plus de 2 mois à 6 mois'" },
@@ -769,7 +769,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-V-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-V-anciennete"
             ),
             {
               target: { value: "'Plus de 6 mois à 2 ans'" },
@@ -793,7 +793,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-d'exploitation,-employés-administratifs-et-techniciens-niveau-V-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-d'exploitation,-employes-administratifs-et-techniciens-niveau-V-anciennete"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -819,7 +819,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise'" },
@@ -832,7 +832,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau"
+            "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau"
           ),
           {
             target: { value: "'I'" },
@@ -845,7 +845,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-I-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-I-anciennete"
             ),
             {
               target: { value: "'15 jours à 2 mois'" },
@@ -867,7 +867,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-I-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-I-anciennete"
             ),
             {
               target: { value: "'Plus de 2 mois à 3 mois'" },
@@ -889,7 +889,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-I-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-I-anciennete"
             ),
             {
               target: { value: "'Plus de 3 mois à 6 mois'" },
@@ -911,7 +911,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-I-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-I-anciennete"
             ),
             {
               target: { value: "'Plus de 6 mois à 2 ans'" },
@@ -933,7 +933,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-I-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-I-anciennete"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -956,7 +956,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau"
+            "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau"
           ),
           {
             target: { value: "'II'" },
@@ -969,7 +969,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-II-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-II-anciennete"
             ),
             {
               target: { value: "'15 jours à 2 mois'" },
@@ -991,7 +991,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-II-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-II-anciennete"
             ),
             {
               target: { value: "'Plus de 2 mois à 3 mois'" },
@@ -1013,7 +1013,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-II-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-II-anciennete"
             ),
             {
               target: { value: "'Plus de 3 mois à 6 mois'" },
@@ -1035,7 +1035,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-II-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-II-anciennete"
             ),
             {
               target: { value: "'Plus de 6 mois à 2 ans'" },
@@ -1057,7 +1057,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-II-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-II-anciennete"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -1080,7 +1080,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau"
+            "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau"
           ),
           {
             target: { value: "'III'" },
@@ -1093,7 +1093,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-III-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-III-anciennete"
             ),
             {
               target: { value: "'15 jours à 2 mois'" },
@@ -1115,7 +1115,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-III-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-III-anciennete"
             ),
             {
               target: { value: "'Plus de 2 mois à 3 mois'" },
@@ -1137,7 +1137,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-III-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-III-anciennete"
             ),
             {
               target: { value: "'Plus de 3 mois à 6 mois'" },
@@ -1159,7 +1159,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-III-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-III-anciennete"
             ),
             {
               target: { value: "'Plus de 6 mois à 2 ans'" },
@@ -1181,7 +1181,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-III-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-III-anciennete"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -1204,7 +1204,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau"
+            "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau"
           ),
           {
             target: { value: "'IV'" },
@@ -1217,7 +1217,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-IV-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-IV-anciennete"
             ),
             {
               target: { value: "'15 jours à 2 mois'" },
@@ -1239,7 +1239,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-IV-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-IV-anciennete"
             ),
             {
               target: { value: "'Plus de 2 mois à 3 mois'" },
@@ -1261,7 +1261,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-IV-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-IV-anciennete"
             ),
             {
               target: { value: "'Plus de 3 mois à 6 mois'" },
@@ -1283,7 +1283,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-IV-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-IV-anciennete"
             ),
             {
               target: { value: "'Plus de 6 mois à 2 ans'" },
@@ -1305,7 +1305,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-IV-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-IV-anciennete"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -1328,7 +1328,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau"
+            "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau"
           ),
           {
             target: { value: "'V'" },
@@ -1341,7 +1341,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-V-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-V-anciennete"
             ),
             {
               target: { value: "'15 jours à 2 mois'" },
@@ -1363,7 +1363,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-V-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-V-anciennete"
             ),
             {
               target: { value: "'Plus de 2 mois à 3 mois'" },
@@ -1385,7 +1385,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-V-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-V-anciennete"
             ),
             {
               target: { value: "'Plus de 3 mois à 6 mois'" },
@@ -1407,7 +1407,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-V-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-V-anciennete"
             ),
             {
               target: { value: "'Plus de 6 mois à 2 ans'" },
@@ -1429,7 +1429,7 @@ describe("PreavisDemissionSimulator", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Agents-de-maîtrise-niveau-V-ancienneté"
+              "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Agents-de-maitrise-niveau-V-anciennete"
             ),
             {
               target: { value: "'Plus de 2 ans'" },
@@ -1453,7 +1453,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -1466,7 +1466,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Cadres-ancienneté"
+            "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Cadres-anciennete"
           ),
           {
             target: { value: "'15 jours à 1 mois'" },
@@ -1490,7 +1490,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Cadres-ancienneté"
+            "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Cadres-anciennete"
           ),
           {
             target: { value: "'Plus de 1 mois à 3 mois'" },
@@ -1514,7 +1514,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Cadres-ancienneté"
+            "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Cadres-anciennete"
           ),
           {
             target: { value: "'Plus de 3 mois à 6 mois'" },
@@ -1536,7 +1536,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Cadres-ancienneté"
+            "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Cadres-anciennete"
           ),
           {
             target: { value: "'Plus de 6 mois à 1 an'" },
@@ -1558,7 +1558,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-prevention-sécurité-entreprise-catégorie-professionnelle-Cadres-ancienneté"
+            "infos-contrat-salarie-convention-collective-prevention-securite-entreprise-categorie-professionnelle-Cadres-anciennete"
           ),
           {
             target: { value: "'Plus de 1 an'" },

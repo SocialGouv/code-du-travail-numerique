@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-habillement-textiles-commerce-de-detail-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-habillement-textiles-commerce-de-detail-categorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise'" },
@@ -58,7 +58,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-habillement-textiles-commerce-de-detail-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-habillement-textiles-commerce-de-detail-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -82,7 +82,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos-contrat-salarié-convention-collective-habillement-textiles-commerce-de-detail-catégorie-professionnelle"
+          "infos-contrat-salarie-convention-collective-habillement-textiles-commerce-de-detail-categorie-professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -95,7 +95,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-habillement-textiles-commerce-de-detail-catégorie-professionnelle-Employés-ancienneté"
+            "infos-contrat-salarie-convention-collective-habillement-textiles-commerce-de-detail-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -119,7 +119,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos-contrat-salarié-convention-collective-habillement-textiles-commerce-de-detail-catégorie-professionnelle-Employés-ancienneté"
+            "infos-contrat-salarie-convention-collective-habillement-textiles-commerce-de-detail-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'Plus de 6 mois'" },
