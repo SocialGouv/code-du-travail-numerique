@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { filterOutTitle, getTitleInChildren } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
