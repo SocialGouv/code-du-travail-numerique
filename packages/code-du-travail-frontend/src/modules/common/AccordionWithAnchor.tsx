@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { slugify } from "@socialgouv/cdtn-utils";
 import { fr } from "@codegouvfr/react-dsfr";
-import BaseAccordion from "./BaseAccordion";
+import Accordion from "@codegouvfr/react-dsfr/Accordion";
 
 export type Props = {
   className?: string;
@@ -43,7 +43,7 @@ export const AccordionWithAnchor = ({
       {items.map((item) => {
         const itemId = item.id ?? slugify(item.title);
         return (
-          <BaseAccordion
+          <Accordion
             titleAs={titleAs}
             id={item.id}
             key={itemId}
@@ -56,7 +56,7 @@ export const AccordionWithAnchor = ({
             }}
           >
             {item.content}
-          </BaseAccordion>
+          </Accordion>
         );
       })}
     </div>
