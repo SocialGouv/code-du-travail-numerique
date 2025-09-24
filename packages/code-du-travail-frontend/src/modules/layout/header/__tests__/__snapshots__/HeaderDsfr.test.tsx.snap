@@ -116,21 +116,21 @@ exports[`<Header /> should match snapshot 1`] = `
                     >
                       <label
                         class="fr-label fr-sr-only"
-                        for="input-:r0:"
+                        for="input-«r0»"
                       >
                         Que souhaitez-vous savoir ?
                       </label>
                       <input
                         class="fr-input mt_0!"
                         data-testid="search-input"
-                        id="input-:r0:"
+                        id="input-«r0»"
                         placeholder="Que souhaitez-vous savoir ?"
                         type="text"
                       />
                       <div
                         aria-live="polite"
                         class="fr-messages-group"
-                        id="input-:r0:-messages-group"
+                        id="input-«r0»-messages-group"
                       />
                     </div>
                     <button

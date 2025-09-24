@@ -48,7 +48,7 @@ exports[`<Home /> should match snapshot 1`] = `
                   >
                     <label
                       class="fr-label"
-                      for="input-:r0:"
+                      for="input-«r0»"
                     >
                       Que souhaitez-vous savoir ?
                       <span
@@ -60,13 +60,13 @@ exports[`<Home /> should match snapshot 1`] = `
                     <input
                       class="fr-input"
                       data-testid="search-input"
-                      id="input-:r0:"
+                      id="input-«r0»"
                       type="text"
                     />
                     <div
                       aria-live="polite"
                       class="fr-messages-group"
-                      id="input-:r0:-messages-group"
+                      id="input-«r0»-messages-group"
                     />
                   </div>
                 </div>
