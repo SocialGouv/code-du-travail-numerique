@@ -73,7 +73,7 @@ describe("PreavisRetraitePublicodes::class", () => {
   it("doit retourner l'information manquante sur l'ancienneté", () => {
     expect(publicodes.data.missingArgs).toHaveLength(1);
     expect(publicodes.data.missingArgs[0].name).toBe(
-      "contrat salarié - ancienneté"
+      "contrat-salarie-anciennete"
     );
   });
   it("ne doit pas retourner de résultat", () => {

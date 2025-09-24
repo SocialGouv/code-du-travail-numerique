@@ -23,7 +23,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
     );
 
     expect(missingArgs).toHaveNextMissingRule(
-      "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle"
+      "contrat-salarie-convention-collective-habillement-commerce-succursales-categorie-professionnelle"
     );
   });
 });

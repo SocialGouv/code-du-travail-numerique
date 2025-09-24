@@ -15,7 +15,7 @@ describe("CC 1404 - Affiche les questions", () => {
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
     expect(getFirstMissing(result.missingArgs)).toEqual(
-      "contrat salarié . convention collective . sedima . question cdi opération"
+      "contrat-salarie-convention-collective-sedima-question-cdi-operation"
     );
   });
 
@@ -29,7 +29,7 @@ describe("CC 1404 - Affiche les questions", () => {
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
     expect(getFirstMissing(result.missingArgs)).toEqual(
-      "contrat salarié . convention collective . sedima . cdi opération . durée"
+      "contrat-salarie-convention-collective-sedima-cdi-operation-duree"
     );
   });
 
@@ -45,7 +45,7 @@ describe("CC 1404 - Affiche les questions", () => {
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
     expect(getFirstMissing(result.missingArgs)).toEqual(
-      "contrat salarié . convention collective . sedima . cdi opération . moins de 6 mois . question période essai"
+      "contrat-salarie-convention-collective-sedima-cdi-operation-moins-de-6-mois-question-periode-essai"
     );
   });
 
@@ -63,7 +63,7 @@ describe("CC 1404 - Affiche les questions", () => {
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
     expect(getFirstMissing(result.missingArgs)).toEqual(
-      "contrat salarié . convention collective . sedima . cdi opération . moins de 6 mois . salaires total"
+      "contrat-salarie-convention-collective-sedima-cdi-operation-moins-de-6-mois-salaires-total"
     );
   });
 
@@ -79,7 +79,7 @@ describe("CC 1404 - Affiche les questions", () => {
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
     expect(getFirstMissing(result.missingArgs)).toEqual(
-      "contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 1e année"
+      "contrat-salarie-convention-collective-sedima-cdi-operation-plus-de-6-mois-salaires-1e-annee"
     );
   });
 
@@ -97,7 +97,7 @@ describe("CC 1404 - Affiche les questions", () => {
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
     expect(getFirstMissing(result.missingArgs)).toEqual(
-      "contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 2e année"
+      "contrat-salarie-convention-collective-sedima-cdi-operation-plus-de-6-mois-salaires-2e-annee"
     );
   });
 
@@ -117,7 +117,7 @@ describe("CC 1404 - Affiche les questions", () => {
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
     expect(getFirstMissing(result.missingArgs)).toEqual(
-      "contrat salarié . convention collective . sedima . cdi opération . plus de 6 mois . salaires 3e année et plus"
+      "contrat-salarie-convention-collective-sedima-cdi-operation-plus-de-6-mois-salaires-3e-annee-et-plus"
     );
   });
 });

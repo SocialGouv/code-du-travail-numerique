@@ -14,7 +14,7 @@ describe("Gestion des licenciements pour la CC675", () => {
 
     const result = engine.calculate(input);
     expect(result).toNextMissingRuleBeEqual(
-      "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle"
+      "contrat-salarie-convention-collective-habillement-commerce-succursales-categorie-professionnelle"
     );
   });
 
@@ -36,7 +36,7 @@ describe("Gestion des licenciements pour la CC675", () => {
 
     const result = engine.calculate(input);
     expect(result).toNextMissingRuleBeEqual(
-      "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . cadres . autres licenciement . age"
+      "contrat-salarie-convention-collective-habillement-commerce-succursales-indemnite-de-licenciement-cadres-autres-licenciement-age"
     );
   });
 
@@ -60,7 +60,7 @@ describe("Gestion des licenciements pour la CC675", () => {
 
     const result = engine.calculate(input);
     expect(result).toNextMissingRuleBeEqual(
-      "contrat salarié . convention collective . habillement commerce succursales . indemnité de licenciement . agents . autres licenciement . age"
+      "contrat-salarie-convention-collective-habillement-commerce-succursales-indemnite-de-licenciement-agents-autres-licenciement-age"
     );
   });
 

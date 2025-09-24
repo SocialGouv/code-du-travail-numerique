@@ -14,7 +14,7 @@ describe("Gestion des licenciements pour la CC 1996", () => {
 
       const result = engine.calculate(input);
       expect(result).toNextMissingRuleBeEqual(
-        "contrat salarié . convention collective . pharmacie . indemnité de licenciement . catégorie professionnelle"
+        "contrat-salarie-convention-collective-pharmacie-indemnite-de-licenciement-categorie-professionnelle"
       );
     });
 

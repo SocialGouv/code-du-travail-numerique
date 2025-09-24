@@ -24,7 +24,7 @@ describe("CC 16", () => {
 
     it("doit demander en premier la catégorie", () => {
       expect(result.missingArgs).toHaveNextMissingRule(
-        "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle"
+        "contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-categorie-professionnelle"
       );
     });
 
@@ -42,7 +42,7 @@ describe("CC 16", () => {
 
       it("doit demander si il a été TAM ou employés avant", () => {
         expect(result.missingArgs).toHaveNextMissingRule(
-          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien"
+          "contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-categorie-professionnelle-Ingenieurs-et-cadres-avant-employe-ou-technicien"
         );
       });
 
@@ -62,7 +62,7 @@ describe("CC 16", () => {
 
         it("doit demander la date du changement de status", () => {
           expect(result.missingArgs).toHaveNextMissingRule(
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . date du statut cadre"
+            "contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-categorie-professionnelle-Ingenieurs-et-cadres-date-du-statut-cadre"
           );
         });
 
@@ -84,7 +84,7 @@ describe("CC 16", () => {
 
           it("doit demander son age", () => {
             expect(result.missingArgs).toHaveNextMissingRule(
-              "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . age"
+              "contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-categorie-professionnelle-Ingenieurs-et-cadres-age"
             );
             expect(result.missingArgs).toHaveNextMissingQuestion(
               "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
@@ -112,7 +112,7 @@ describe("CC 16", () => {
 
           it("doit demander si il a le droit à la retraite", () => {
             expect(result.missingArgs).toHaveNextMissingRule(
-              "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . droit à la retraite au titre du régime en vigueur dans l'entreprise"
+              "contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-categorie-professionnelle-Ingenieurs-et-cadres-droit-a-la-retraite-au-titre-du-regime-en-vigueur-dans-l'entreprise"
             );
           });
         });
@@ -157,7 +157,7 @@ describe("CC 16", () => {
 
         it("doit demander son age", () => {
           expect(result.missingArgs).toHaveNextMissingRule(
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . age"
+            "contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-categorie-professionnelle-Ingenieurs-et-cadres-age"
           );
           expect(result.missingArgs).toHaveNextMissingQuestion(
             "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
@@ -182,7 +182,7 @@ describe("CC 16", () => {
 
           it("doit demander si il a le droit à la retraite", () => {
             expect(result.missingArgs).toHaveNextMissingRule(
-              "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . droit à la retraite au titre du régime en vigueur dans l'entreprise"
+              "contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-categorie-professionnelle-Ingenieurs-et-cadres-droit-a-la-retraite-au-titre-du-regime-en-vigueur-dans-l'entreprise"
             );
           });
         });
@@ -226,7 +226,7 @@ describe("CC 16", () => {
 
       it("doit demander son age", () => {
         expect(result.missingArgs).toHaveNextMissingRule(
-          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . age"
+          "contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-categorie-professionnelle-Ouvriers-autres-licenciement-age"
         );
         expect(result.missingArgs).toHaveNextMissingQuestion(
           "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
@@ -248,7 +248,7 @@ describe("CC 16", () => {
 
       it("doit demander son age", () => {
         expect(result.missingArgs).toHaveNextMissingRule(
-          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age"
+          "contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-age"
         );
         expect(result.missingArgs).toHaveNextMissingQuestion(
           "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"

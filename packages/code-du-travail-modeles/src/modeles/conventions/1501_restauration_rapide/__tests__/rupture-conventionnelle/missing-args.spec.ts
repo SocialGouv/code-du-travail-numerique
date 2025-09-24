@@ -15,7 +15,7 @@ describe("CC 1501 - Wording question sur la rupture conventionnelle", () => {
 
     const result = engine.calculate(input);
     expect(result).toNextMissingRuleBeEqual(
-      "contrat salarié . convention collective . restauration rapide . rupture conventionnelle . age"
+      "contrat-salarie-convention-collective-restauration-rapide-rupture-conventionnelle-age"
     );
     expect(result).toNextMissingQuestionBeEqual(
       "Quel est l'âge du salarié à la date de la rupture du contrat de travail&nbsp;?"

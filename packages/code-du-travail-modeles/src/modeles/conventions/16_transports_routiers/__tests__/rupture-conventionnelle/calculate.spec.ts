@@ -17,7 +17,7 @@ describe("Gestion des multiples types de licenciement pour la CC 16", () => {
 
       const result = engine.calculate(input);
       expect(result).toNextMissingRuleBeEqual(
-        "contrat salarié . convention collective . transports routiers . rupture conventionnelle . ouvrier age"
+        "contrat-salarie-convention-collective-transports-routiers-rupture-conventionnelle-ouvrier-age"
       );
     });
 
@@ -47,7 +47,7 @@ describe("Gestion des multiples types de licenciement pour la CC 16", () => {
 
       const result = engine.calculate(input);
       expect(result).toNextMissingRuleBeEqual(
-        "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise"
+        "contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-categorie-professionnelle-Ouvriers-autres-licenciement-droit-a-la-retraite-au-titre-du-regime-en-vigueur-dans-l'entreprise"
       );
     });
   });

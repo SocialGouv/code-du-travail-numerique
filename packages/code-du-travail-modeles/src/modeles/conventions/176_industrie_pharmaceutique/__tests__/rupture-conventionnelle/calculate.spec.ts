@@ -14,7 +14,7 @@ describe("Gestion de la rupture co pour la CC 176", () => {
 
       const result = engine.calculate(input);
       expect(result).toNextMissingRuleBeEqual(
-        "contrat salarié . convention collective . industrie pharmaceutique . rupture conventionnelle . cadre age"
+        "contrat-salarie-convention-collective-industrie-pharmaceutique-rupture-conventionnelle-cadre-age"
       );
     });
 

@@ -15,7 +15,7 @@ describe("CC 3239 - Affiche les questions", () => {
       "contrat salarié . convention collective . résultat conventionnel"
     );
     expect(getFirstMissing(result.missingArgs)).toEqual(
-      "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture"
+      "contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-typeRupture"
     );
   });
 
@@ -29,7 +29,7 @@ describe("CC 3239 - Affiche les questions", () => {
       "contrat salarié . convention collective . résultat conventionnel"
     );
     expect(getFirstMissing(result.missingArgs)).toEqual(
-      "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle"
+      "contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-typeRupture-Licenciement-categorie-professionnelle"
     );
   });
 
@@ -59,7 +59,7 @@ describe("CC 3239 - Affiche les questions", () => {
       "contrat salarié . convention collective . résultat conventionnel"
     );
     expect(getFirstMissing(result.missingArgs)).toEqual(
-      "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail"
+      "contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-typeRupture-Licenciement-categorie-professionnelle-Salaries-du-particulier-employeur-duree-du-travail"
     );
   });
 
@@ -77,7 +77,7 @@ describe("CC 3239 - Affiche les questions", () => {
       "contrat salarié . convention collective . résultat conventionnel"
     );
     expect(getFirstMissing(result.missingArgs)).toEqual(
-      "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail Moins de 40 heures par semaine . ancienneté"
+      "contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-typeRupture-Licenciement-categorie-professionnelle-Salaries-du-particulier-employeur-duree-du-travail-Moins-de-40-heures-par-semaine-anciennete"
     );
   });
 
@@ -131,7 +131,7 @@ describe("CC 3239 - Affiche les questions", () => {
       "contrat salarié . convention collective . résultat conventionnel"
     );
     expect(getFirstMissing(result.missingArgs)).toEqual(
-      "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . typeRupture Licenciement . catégorie professionnelle Salariés du particulier employeur . durée du travail 40 heures ou plus par semaine . ancienneté"
+      "contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-typeRupture-Licenciement-categorie-professionnelle-Salaries-du-particulier-employeur-duree-du-travail-40-heures-ou-plus-par-semaine-anciennete"
     );
   });
 
