@@ -6,7 +6,7 @@ export const ui = {
   },
   agreement: {
     skipAgreement: byTestId(
-      "route-Je-ne-souhaite-pas-renseigner-ma-convention-collective-(je-passe-l'etape)-"
+      "route-Je ne souhaite pas renseigner ma convention collective (je passe l'étape)."
     ),
   },
   situation: {

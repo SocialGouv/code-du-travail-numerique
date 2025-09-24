@@ -45,7 +45,7 @@ export const createAgreement44StoreSalaires: StoreSlice<
         get().informationsData.input.publicodesInformations.find(
           (item) =>
             item.question.name ===
-            "contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
+            "contrat-salarie-convention-collective-industries-chimiques-indemnite-de-licenciement-categorie-professionnelle"
         )?.info;
       const ancienneteInput = get().ancienneteData.input;
       const dateArretTravail = get().contratTravailData.input.dateArretTravail;
@@ -113,7 +113,7 @@ export const createAgreement44StoreSalaires: StoreSlice<
         get().informationsData.input.publicodesInformations.find(
           (item) =>
             item.question.name ===
-            "contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
+            "contrat-salarie-convention-collective-industries-chimiques-indemnite-de-licenciement-categorie-professionnelle"
         )?.info;
       const ancienneteInput = get().ancienneteData.input;
       const sameDateNotificationDateSortie =

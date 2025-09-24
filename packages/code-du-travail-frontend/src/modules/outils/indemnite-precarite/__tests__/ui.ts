@@ -5,9 +5,9 @@ export const ui = {
     startButton: byText("Commencer"),
   },
   contractType: {
-    cdd: byTestId("contractType-Contrat-a-duree-determinee-(CDD)"),
+    cdd: byTestId("contractType - Contrat à durée déterminée (CDD)"),
     ctt: byTestId(
-      "contractType-Contrat-de-travail-temporaire-(Contrat-d-intérim)"
+      "contractType - Contrat de travail temporaire (Contrat d'intérim)"
     ),
   },
   cddType: byTestId("cddType"),

@@ -120,8 +120,6 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
   describe("Groupe A,B,C,D,E (cadre)", () => {
     test("Calcul de base", () => {
       const result = engine.calculate({
-        "contrat salarié - convention collective - métallurgie - indemnité de licenciement - licenciement pour motif absence prolongée ou répétées":
-          "'Non'",
         "contrat salarié . convention collective": "'IDCC3248'",
         "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
           "'A, B, C, D ou E'",
@@ -157,8 +155,6 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
   describe("Groupe A,B,C,D,E (forfait jour - cadre)", () => {
     test("Calcul de base", () => {
       const result = engine.calculate({
-        "contrat salarié - convention collective - métallurgie - indemnité de licenciement - licenciement pour motif absence prolongée ou répétées":
-          "'Non'",
         "contrat salarié . convention collective": "'IDCC3248'",
         "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
           "'A, B, C, D ou E'",
@@ -192,8 +188,6 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
   describe("Groupe FGHI", () => {
     test("Calcul de base", () => {
       const result = engine.calculate({
-        "contrat salarié - convention collective - métallurgie - indemnité de licenciement - licenciement pour motif absence prolongée ou répétées":
-          "'Non'",
         "contrat salarié . convention collective": "'IDCC3248'",
         "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
           "'F, G, H ou I'",
@@ -218,8 +212,6 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
 
     test("Calcul sans le minimum requis", () => {
       const result = engine.calculate({
-        "contrat salarié - convention collective - métallurgie - indemnité de licenciement - licenciement pour motif absence prolongée ou répétées":
-          "'Non'",
         "contrat salarié . convention collective": "'IDCC3248'",
         "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
           "'F, G, H ou I'",

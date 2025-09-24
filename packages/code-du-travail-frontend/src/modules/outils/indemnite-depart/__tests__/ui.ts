@@ -8,9 +8,9 @@ export const ui = {
     type: {
       alert: byText("indemnité de précarité (nouvelle fenêtre)"),
       question: byText("Quel est le type du contrat de travail ?"),
-      cdi: byTestId("typeContratTravail-Contrat-a-duree-indeterminee-(CDI)"),
+      cdi: byTestId("typeContratTravail-Contrat à durée indéterminée (CDI)"),
       cdd: byTestId(
-        "typeContratTravail-Contrat-a-duree-determinee-(CDD)-ou-contrat-d'interim"
+        "typeContratTravail-Contrat à durée déterminée (CDD) ou contrat d'intérim"
       ),
     },
     fauteGrave: {
@@ -41,13 +41,13 @@ export const ui = {
   },
   agreement: {
     noAgreement: byTestId(
-      "route-Je-ne-souhaite-pas-renseigner-ma-convention-collective-(je-passe-l'etape)-"
+      "route-Je ne souhaite pas renseigner ma convention collective (je passe l'étape)."
     ),
     agreement: byTestId(
-      "route-Je-sais-quelle-est-ma-convention-collective-et-je-la-saisis-"
+      "route-Je sais quelle est ma convention collective et je la saisis."
     ),
     unknownAgreement: byTestId(
-      "route-Je-ne-sais-pas-quelle-est-ma-convention-collective-et-je-la-recherche-"
+      "route-Je ne sais pas quelle est ma convention collective et je la recherche."
     ),
     agreementInput: byTestId("AgreementSearchAutocomplete"),
     agreementCompanyInput: byTestId("enterprise-search-input"),

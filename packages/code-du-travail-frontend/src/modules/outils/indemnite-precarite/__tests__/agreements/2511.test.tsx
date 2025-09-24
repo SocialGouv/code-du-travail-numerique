@@ -42,7 +42,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
       describe("criteria.hasCdiRenewal = non", () => {
         beforeEach(() => {
-          fireEvent.click(screen.getByTestId("hasCdiRenewal - Non"));
+          fireEvent.click(screen.getByTestId("hasCdiRenewal-Non"));
           fireEvent.click(ui.next.get());
         });
 

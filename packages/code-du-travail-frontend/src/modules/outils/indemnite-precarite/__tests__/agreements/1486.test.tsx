@@ -80,7 +80,7 @@ describe("SimulateurIndemnitePrecarite", () => {
 
       describe("criteria.hasCdiProposal = non", () => {
         beforeEach(() => {
-          fireEvent.click(screen.getByTestId("hasCdiProposal - Non"));
+          fireEvent.click(screen.getByTestId("hasCdiProposal-Non"));
           fireEvent.click(ui.next.get());
         });
 

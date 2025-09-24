@@ -24,7 +24,7 @@ export const CDDQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
                 value: "true",
                 checked: input.finContratPeriodeDessai === true,
                 onChange: () => onChange("finContratPeriodeDessai", true),
-                "data-testid": "finContratPeriodeDessai - Oui",
+                "data-testid": "finContratPeriodeDessai-Oui",
               } as any,
             },
             {
@@ -33,7 +33,7 @@ export const CDDQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
                 value: "false",
                 checked: input.finContratPeriodeDessai === false,
                 onChange: () => onChange("finContratPeriodeDessai", false),
-                "data-testid": "finContratPeriodeDessai - Non",
+                "data-testid": "finContratPeriodeDessai-Non",
               } as any,
             },
           ]}
@@ -55,7 +55,7 @@ export const CDDQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
                 value: "true",
                 checked: input.propositionCDIFindeContrat === true,
                 onChange: () => onChange("propositionCDIFindeContrat", true),
-                "data-testid": "propositionCDIFindeContrat - Oui",
+                "data-testid": "propositionCDIFindeContrat-Oui",
               } as any,
             },
             {
@@ -64,7 +64,7 @@ export const CDDQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
                 value: "false",
                 checked: input.propositionCDIFindeContrat === false,
                 onChange: () => onChange("propositionCDIFindeContrat", false),
-                "data-testid": "propositionCDIFindeContrat - Non",
+                "data-testid": "propositionCDIFindeContrat-Non",
               } as any,
             },
           ]}
@@ -87,7 +87,7 @@ export const CDDQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
                   value: "true",
                   checked: input.refusCDIFindeContrat === true,
                   onChange: () => onChange("refusCDIFindeContrat", true),
-                  "data-testid": "refusCDIFindeContrat - Oui",
+                  "data-testid": "refusCDIFindeContrat-Oui",
                 } as any,
               },
               {
@@ -96,7 +96,7 @@ export const CDDQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
                   value: "false",
                   checked: input.refusCDIFindeContrat === false,
                   onChange: () => onChange("refusCDIFindeContrat", false),
-                  "data-testid": "refusCDIFindeContrat - Non",
+                  "data-testid": "refusCDIFindeContrat-Non",
                 } as any,
               },
             ]}
@@ -119,7 +119,7 @@ export const CDDQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
                 value: "true",
                 checked: input.interruptionFauteGrave === true,
                 onChange: () => onChange("interruptionFauteGrave", true),
-                "data-testid": "interruptionFauteGrave - Oui",
+                "data-testid": "interruptionFauteGrave-Oui",
               } as any,
             },
             {
@@ -128,7 +128,7 @@ export const CDDQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
                 value: "false",
                 checked: input.interruptionFauteGrave === false,
                 onChange: () => onChange("interruptionFauteGrave", false),
-                "data-testid": "interruptionFauteGrave - Non",
+                "data-testid": "interruptionFauteGrave-Non",
               } as any,
             },
           ]}
@@ -150,7 +150,7 @@ export const CDDQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
                 value: "true",
                 checked: input.refusRenouvellementAuto === true,
                 onChange: () => onChange("refusRenouvellementAuto", true),
-                "data-testid": "refusRenouvellementAuto - Oui",
+                "data-testid": "refusRenouvellementAuto-Oui",
               } as any,
             },
             {
@@ -159,7 +159,7 @@ export const CDDQuestions: React.FC<Props> = ({ input, onChange, errors }) => {
                 value: "false",
                 checked: input.refusRenouvellementAuto === false,
                 onChange: () => onChange("refusRenouvellementAuto", false),
-                "data-testid": "refusRenouvellementAuto - Non",
+                "data-testid": "refusRenouvellementAuto-Non",
               } as any,
             },
           ]}

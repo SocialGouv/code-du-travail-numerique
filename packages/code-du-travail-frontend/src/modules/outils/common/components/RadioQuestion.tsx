@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import Html from "src/modules/common/Html";
 import { RadioButtons } from "@codegouvfr/react-dsfr/RadioButtons";
 import { xssWrapper } from "src/modules/utils/xss";
-import { formatRuleName } from "../utils/formatId";
 
 type Question = {
   label: string;
@@ -76,7 +75,7 @@ export function RadioQuestion({
             onChange: () => onChange(question.value, index),
             autoFocus: autoFocus && index === 0,
             required: true,
-            "data-testid": formatRuleName(`${name}-${question.label}`),
+            "data-testid": `${name}-${question.label}`,
             ref: (el: HTMLInputElement | null) => {
               radioRefs.current[index] = el;
             },

@@ -8,17 +8,17 @@ export const ui = {
     originDepart: {
       question: byText("Qui est à l'origine du départ en retraite ?"),
       depart: byTestId(
-        "orginDepart-Le-salarié-décide-lui-même-de-partir-à-la-retraite"
+        "originDepart-Le salarié décide lui-même de partir à la retraite"
       ),
       mise: byTestId(
-        "originDepart-L'employeur-decide-de-mettre-le-salarie-a-la-retraite"
+        "originDepart-L'employeur décide de mettre le salarié à la retraite"
       ),
     },
     alert: byTestId("warning-origin-depart"),
   },
   agreement: {
     noAgreement: byTestId(
-      "route-Je-ne-souhaite-pas-renseigner-ma-convention-collective-(je-passe-l'etape)-"
+      "route-Je ne souhaite pas renseigner ma convention collective (je passe l'étape)."
     ),
   },
   information: {

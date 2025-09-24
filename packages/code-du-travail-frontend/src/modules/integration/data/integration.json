@@ -78,7 +78,7 @@
     "metaDescription": "Intégrer l’outil d'indemnité de précarité du Code du travail numérique sur votre site grâce à un module (widget).",
     "title": "Intégrer l’outil de calcul de l'indemnité de précarité du Code du travail numérique",
     "description": [
-      "Vous pouvez intégrer l’outil de calcul de l'indemnité de précarité du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de calculer le montant de l’indemnité de fin de contrat ou de fin de mission (dite “prime de précarité”) d’un salarié en CDD ou en contrat d'intérim. Afin de personnaliser le résultat, l’utilisateur pourra, s’il le souhaite, renseigner ou rechercher (à partir du nom de l’entreprise) sa convention collective."
+      "Vous pouvez intégrer l’outil de calcul de l'indemnité de précarité du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de calculer le montant de l’indemnité de fin de contrat ou de fin de mission (dite “prime de précarité”) d’un salarié en CDD ou en contrat d’intérim. Afin de personnaliser le résultat, l’utilisateur pourra, s’il le souhaite, renseigner ou rechercher (à partir du nom de l’entreprise) sa convention collective."
     ],
     "shortTitle": "Indemnité de précarité",
     "shortDescription": "Estimez le montant de l'indemnité de fin de CDD ou intérim",
