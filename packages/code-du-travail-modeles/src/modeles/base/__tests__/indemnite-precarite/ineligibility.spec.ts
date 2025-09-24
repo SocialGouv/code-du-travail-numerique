@@ -74,7 +74,7 @@ describe("Test de la fonctionnalité inéligibilité du 'calculate'", () => {
         "contrat salarié . propositionCDIFinContrat": "oui",
       },
       expectedIneligibility:
-        "Le salarié en contrat de travail temporaire (contrat d’intérim) qui est immédiatement embauché en CDI au sein de l’entreprise dans laquelle il effectuait sa mission n’a pas le droit à une prime de précarité.",
+        "Le salarié en contrat de travail temporaire (contrat d'intérim) qui est immédiatement embauché en CDI au sein de l’entreprise dans laquelle il effectuait sa mission n’a pas le droit à une prime de précarité.",
     },
     {
       situation: {
@@ -82,7 +82,7 @@ describe("Test de la fonctionnalité inéligibilité du 'calculate'", () => {
         "contrat salarié . refusSouplesse": "oui",
       },
       expectedIneligibility:
-        "Le salarié en contrat d’intérim qui refuse la mise en œuvre de la souplesse prévue dans son contrat n’a pas le droit à une prime de précarité.",
+        "Le salarié en contrat d'intérim qui refuse la mise en œuvre de la souplesse prévue dans son contrat n’a pas le droit à une prime de précarité.",
     },
   ])(
     "Vérifier l'inéligibilité pour: $situation",

@@ -8,17 +8,17 @@ export const ui = {
     originDepart: {
       question: byText("Qui est à l'origine du départ en retraite ?"),
       depart: byTestId(
-        "originDepart - Le salarié décide lui-même de partir à la retraite"
+        "orginDepart-Le-salarié-décide-lui-même-de-partir-à-la-retraite"
       ),
       mise: byTestId(
-        "originDepart - L'employeur décide de mettre le salarié à la retraite"
+        "originDepart-L'employeur-decide-de-mettre-le-salarie-a-la-retraite"
       ),
     },
     alert: byTestId("warning-origin-depart"),
   },
   agreement: {
     noAgreement: byTestId(
-      "route - Je ne souhaite pas renseigner ma convention collective (je passe l'étape)."
+      "route-Je-ne-souhaite-pas-renseigner-ma-convention-collective-(je-passe-l'etape)-"
     ),
   },
   information: {
@@ -75,8 +75,8 @@ export const ui = {
       questionAvec5ans: byText(
         "Le salarié a-t-il plus de 5 ans d'ancienneté dans l'entreprise (5 ans + 1 jour) ?"
       ),
-      answerNon: byTestId("moreThanXYears - Non"),
-      answerOui: byTestId("moreThanXYears - Oui"),
+      answerNon: byTestId("moreThanXYears-Non"),
+      answerOui: byTestId("moreThanXYears-Oui"),
     },
     seniorityInMonths: {
       question: byText(

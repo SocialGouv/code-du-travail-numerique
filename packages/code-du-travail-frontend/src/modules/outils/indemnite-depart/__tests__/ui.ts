@@ -8,9 +8,9 @@ export const ui = {
     type: {
       alert: byText("indemnité de précarité (nouvelle fenêtre)"),
       question: byText("Quel est le type du contrat de travail ?"),
-      cdi: byTestId("typeContratTravail - Contrat à durée indéterminée (CDI)"),
+      cdi: byTestId("typeContratTravail-Contrat-a-duree-indeterminee-(CDI)"),
       cdd: byTestId(
-        "typeContratTravail - Contrat à durée déterminée (CDD) ou contrat d’intérim"
+        "typeContratTravail-Contrat-a-duree-determinee-(CDD)-ou-contrat-d'interim"
       ),
     },
     fauteGrave: {
@@ -20,34 +20,34 @@ export const ui = {
       question: byText(
         "Le licenciement est-il dû à une faute grave (ou lourde) ?"
       ),
-      oui: byTestId("licenciementFauteGrave - Oui"),
-      non: byTestId("licenciementFauteGrave - Non"),
+      oui: byTestId("licenciementFauteGrave-Oui"),
+      non: byTestId("licenciementFauteGrave-Non"),
     },
     inaptitude: {
       question: byText(
         "Le licenciement fait-il suite à une inaptitude professionnelle (suite à un accident du travail ou une maladie professionnelle reconnue) ?"
       ),
-      oui: byTestId("licenciementInaptitude - Oui"),
-      non: byTestId("licenciementInaptitude - Non"),
+      oui: byTestId("licenciementInaptitude-Oui"),
+      non: byTestId("licenciementInaptitude-Non"),
     },
     arretTravail: {
       question: byText(
         "Le salarié est-il en arrêt de travail au moment du licenciement ?"
       ),
-      oui: byTestId("licenciementArretTravail - Oui"),
-      non: byTestId("licenciementArretTravail - Non"),
+      oui: byTestId("licenciementArretTravail-Oui"),
+      non: byTestId("licenciementArretTravail-Non"),
     },
     dateArretTravail: byTestId("date-arret-travail"),
   },
   agreement: {
     noAgreement: byTestId(
-      "route - Je ne souhaite pas renseigner ma convention collective (je passe l'étape)."
+      "route-Je-ne-souhaite-pas-renseigner-ma-convention-collective-(je-passe-l'etape)-"
     ),
     agreement: byTestId(
-      "route - Je sais quelle est ma convention collective et je la saisis."
+      "route-Je-sais-quelle-est-ma-convention-collective-et-je-la-saisis-"
     ),
     unknownAgreement: byTestId(
-      "route - Je ne sais pas quelle est ma convention collective et je la recherche."
+      "route-Je-ne-sais-pas-quelle-est-ma-convention-collective-et-je-la-recherche-"
     ),
     agreementInput: byTestId("AgreementSearchAutocomplete"),
     agreementCompanyInput: byTestId("enterprise-search-input"),
@@ -375,8 +375,8 @@ export const ui = {
     notificationDate: byTestId("date-notification"),
     endDate: byTestId("date-sortie"),
     hasAbsence: {
-      oui: byTestId("hasAbsenceProlonge - Oui"),
-      non: byTestId("hasAbsenceProlonge - Non"),
+      oui: byTestId("hasAbsenceProlonge-Oui"),
+      non: byTestId("hasAbsenceProlonge-Non"),
     },
     absences: {
       motifs: byTestId(/absence-motif-[0-9]/),
@@ -390,46 +390,46 @@ export const ui = {
   },
   salary: {
     hasPartialTime: {
-      oui: byTestId("hasTempsPartiel - Oui"),
-      non: byTestId("hasTempsPartiel - Non"),
+      oui: byTestId("hasTempsPartiel-Oui"),
+      non: byTestId("hasTempsPartiel-Non"),
     },
     hasSameSalary: {
-      oui: byTestId("hasSameSalary - Oui"),
-      non: byTestId("hasSameSalary - Non"),
+      oui: byTestId("hasSameSalary-Oui"),
+      non: byTestId("hasSameSalary-Non"),
     },
     sameSalaryValue: byTestId("same-salary-value"),
     variablePart: {
-      oui: byTestId("hasVariablePay - Oui"),
-      non: byTestId("hasVariablePay - Non"),
+      oui: byTestId("hasVariablePay-Oui"),
+      non: byTestId("hasVariablePay-Non"),
     },
     salaries: byTestId("salary-input"),
     primes: byTestId("prime-input"),
     agreement44: {
       knowingLastSalary: {
-        oui: byTestId("knowingLastSalary - Oui"),
-        non: byTestId("knowingLastSalary - Non"),
+        oui: byTestId("knowingLastSalary-Oui"),
+        non: byTestId("knowingLastSalary-Non"),
       },
       salaries: byTestId("last-month-salary"),
       primes: byTestId("prime-last-month-salary"),
     },
     agreement29: {
       hasSiwMonthBestSalary: {
-        oui: byTestId("hasSixBestSalaries - Oui"),
-        non: byTestId("hasSixBestSalaries - Non"),
+        oui: byTestId("hasSixBestSalaries-Oui"),
+        non: byTestId("hasSixBestSalaries-Non"),
       },
     },
     agreementWithNoticeSalary: {
       knowingLastSalary: {
-        oui: byTestId("hasReceivedSalaries - Oui"),
-        non: byTestId("hasReceivedSalaries - Non"),
+        oui: byTestId("hasReceivedSalaries-Oui"),
+        non: byTestId("hasReceivedSalaries-Non"),
       },
       salaries: byTestId("notice-salary"),
       primes: byTestId("prime-notice-salary"),
     },
     agreement1517: {
       hasContractSalary: {
-        oui: byTestId("hasContractSalary - Oui"),
-        non: byTestId("hasContractSalary - Non"),
+        oui: byTestId("hasContractSalary-Oui"),
+        non: byTestId("hasContractSalary-Non"),
       },
     },
     agreement2120: {
