@@ -1,4 +1,4 @@
-import { fireEvent, render, waitFor } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { sendEvent } from "../../utils";
@@ -247,15 +247,17 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
     render(<ContributionGeneric contribution={contribution} />);
-    fireEvent.click(ccUi.radio.enterpriseSearchOption.get());
+    await userEvent.click(ccUi.radio.enterpriseSearchOption.get());
     await userEvent.click(ccUi.searchByEnterprise.input.get());
     await userEvent.type(ccUi.searchByEnterprise.input.get(), "carrefour");
-    fireEvent.click(ccUi.searchByEnterprise.submitButton.get());
+    await userEvent.click(ccUi.searchByEnterprise.submitButton.get());
+    screen.debug(undefined, 1000000);
     await waitFor(() => {
       fireEvent.click(
         ccUi.searchByEnterprise.resultLines.carrefour.title.get()
       );
     });
+
     expect(
       byText(/Vous avez sélectionné la convention collective/).query()
     ).toBeInTheDocument();

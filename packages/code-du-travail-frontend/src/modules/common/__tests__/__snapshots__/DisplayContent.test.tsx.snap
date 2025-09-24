@@ -610,7 +610,7 @@ exports[`DisplayContent Infographic should replace div with infographic class to
   </div>
   <div
     class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--download"
-    id="fr-tile-:rg:"
+    id="fr-tile-«rg»"
   >
     <div
       class="fr-tile__body"
