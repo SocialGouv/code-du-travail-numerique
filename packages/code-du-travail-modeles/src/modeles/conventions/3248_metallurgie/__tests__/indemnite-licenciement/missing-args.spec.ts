@@ -29,7 +29,7 @@ describe("Ordre des questions pour la CC 3248", () => {
 
     it("doit demander en premier la catégorie", () => {
       expect(result.missingArgs).toHaveNextMissingRule(
-        "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle"
+        "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle"
       );
     });
 
@@ -47,7 +47,7 @@ describe("Ordre des questions pour la CC 3248", () => {
 
       it("doit demander si il a été au forfait jour", () => {
         expect(result.missingArgs).toHaveNextMissingRule(
-          "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour"
+          "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-ABCDE-forfait-jour"
         );
       });
 
@@ -67,7 +67,7 @@ describe("Ordre des questions pour la CC 3248", () => {
 
         it("doit demander si il a toujours été au forfait jour", () => {
           expect(result.missingArgs).toHaveNextMissingRule(
-            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . toujours au forfait jour"
+            "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-ABCDE-toujours-au-forfait-jour"
           );
         });
 
@@ -89,7 +89,7 @@ describe("Ordre des questions pour la CC 3248", () => {
 
           it("doit demander la date du passage au forfait jour", () => {
             expect(result.missingArgs).toHaveNextMissingRule(
-              "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour . date"
+              "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-ABCDE-forfait-jour-date"
             );
           });
           describe("si il a renseigné une date", () => {
@@ -112,7 +112,7 @@ describe("Ordre des questions pour la CC 3248", () => {
 
             it("doit demander si il était cadre", () => {
               expect(result.missingArgs).toHaveNextMissingRule(
-                "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre"
+                "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-ABCDE-avant-cadre"
               );
             });
 
@@ -136,7 +136,7 @@ describe("Ordre des questions pour la CC 3248", () => {
 
               it("doit demander s'il a été licencié pour absences répétées ou prolongées", () => {
                 expect(result.missingArgs).toHaveNextMissingRule(
-                  "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées"
+                  "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-licenciement-pour-motif-absence-prolongee-ou-repetees"
                 );
               });
 
@@ -162,7 +162,7 @@ describe("Ordre des questions pour la CC 3248", () => {
 
                 it("doit demander la durée", () => {
                   expect(result.missingArgs).toHaveNextMissingRule(
-                    "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées durée"
+                    "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-licenciement-pour-motif-absence-prolongee-ou-repetees-duree"
                   );
                 });
 
@@ -240,7 +240,7 @@ describe("Ordre des questions pour la CC 3248", () => {
 
           it("doit demander si il était cadre", () => {
             expect(result.missingArgs).toHaveNextMissingRule(
-              "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre"
+              "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-ABCDE-avant-cadre"
             );
           });
         });
@@ -262,7 +262,7 @@ describe("Ordre des questions pour la CC 3248", () => {
 
         it("doit demander s'il a été classé cadre antérieurement", () => {
           expect(result.missingArgs).toHaveNextMissingRule(
-            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre"
+            "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-ABCDE-avant-cadre"
           );
         });
       });
@@ -282,7 +282,7 @@ describe("Ordre des questions pour la CC 3248", () => {
 
       it("doit demander son age", () => {
         expect(result.missingArgs).toHaveNextMissingRule(
-          "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . age"
+          "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-FGHI-age"
         );
 
         expect(result.missingArgs).toHaveNextMissingQuestion(
@@ -306,7 +306,7 @@ describe("Ordre des questions pour la CC 3248", () => {
 
         it("doit demander s'il remplit les conditions pour partir à la retraite", () => {
           expect(result.missingArgs).toHaveNextMissingRule(
-            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . remplit conditions pour la retraite"
+            "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-FGHI-remplit-conditions-pour-la-retraite"
           );
         });
       });
@@ -327,7 +327,7 @@ describe("Ordre des questions pour la CC 3248", () => {
 
         it("doit demander si il a été licencié pour absences répétées ou prolongées", () => {
           expect(result.missingArgs).toHaveNextMissingRule(
-            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées"
+            "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-licenciement-pour-motif-absence-prolongee-ou-repetees"
           );
         });
 
@@ -370,7 +370,7 @@ describe("Ordre des questions pour la CC 3248", () => {
 
           it("doit demander la durée", () => {
             expect(result.missingArgs).toHaveNextMissingRule(
-              "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées durée"
+              "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-licenciement-pour-motif-absence-prolongee-ou-repetees-duree"
             );
           });
         });

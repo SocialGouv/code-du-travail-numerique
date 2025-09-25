@@ -24,7 +24,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
 
     it("doit demander en premier le type de licenciement catégorie", () => {
       expect(result.missingArgs).toHaveNextMissingRule(
-        "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle"
+        "contrat-salarie-convention-collective-bureaux-etudes-techniques-indemnite-de-licenciement-categorie-professionnelle"
       );
     });
 
@@ -42,7 +42,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
 
       it("doit demander la catégorie professionnelle", () => {
         expect(result.missingArgs).toHaveNextMissingRule(
-          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement"
+          "contrat-salarie-convention-collective-bureaux-etudes-techniques-indemnite-de-licenciement-type-de-licenciement"
         );
       });
 

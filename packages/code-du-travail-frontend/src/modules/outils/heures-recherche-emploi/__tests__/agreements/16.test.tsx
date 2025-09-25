@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - transports routiers - typeRupture"
+          "infos-contrat-salarie-convention-collective-transports-routiers-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-transports-routiers-typeRupture-Licenciement-categorie-professionnelle"
           ),
           {
             target: { value: "'Employés'" },
@@ -77,7 +77,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-transports-routiers-typeRupture-Licenciement-categorie-professionnelle"
           ),
           {
             target: { value: "'Ingénieurs, Cadres'" },
@@ -113,7 +113,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-transports-routiers-typeRupture-Licenciement-categorie-professionnelle"
           ),
           {
             target: { value: "'Ouvriers'" },
@@ -149,7 +149,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-transports-routiers-typeRupture-Licenciement-categorie-professionnelle"
           ),
           {
             target: { value: "'Techniciens et agents de maîtrise TAM'" },
@@ -162,7 +162,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - transports routiers - typeRupture Licenciement - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe"
+              "infos-contrat-salarie-convention-collective-transports-routiers-typeRupture-Licenciement-categorie-professionnelle-Techniciens-et-agents-de-maitrise-TAM-groupe"
             ),
             {
               target: { value: "'1 à 5'" },
@@ -198,7 +198,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - transports routiers - typeRupture Licenciement - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe"
+              "infos-contrat-salarie-convention-collective-transports-routiers-typeRupture-Licenciement-categorie-professionnelle-Techniciens-et-agents-de-maitrise-TAM-groupe"
             ),
             {
               target: { value: "'6 à 8'" },
@@ -236,7 +236,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - transports routiers - typeRupture"
+          "infos-contrat-salarie-convention-collective-transports-routiers-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -249,7 +249,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-transports-routiers-typeRupture-Demission-categorie-professionnelle"
           ),
           {
             target: { value: "'Employés'" },
@@ -285,7 +285,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-transports-routiers-typeRupture-Demission-categorie-professionnelle"
           ),
           {
             target: { value: "'Ingénieurs, Cadres'" },
@@ -321,7 +321,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-transports-routiers-typeRupture-Demission-categorie-professionnelle"
           ),
           {
             target: { value: "'Ouvriers'" },
@@ -334,7 +334,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - transports routiers - typeRupture Démission - catégorie professionnelle Ouvriers - personnels des entreprises de transport routier de marchandises"
+              "infos-contrat-salarie-convention-collective-transports-routiers-typeRupture-Demission-categorie-professionnelle-Ouvriers-personnels-des-entreprises-de-transport-routier-de-marchandises"
             ),
             {
               target: { value: "'Oui'" },
@@ -368,7 +368,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - transports routiers - typeRupture Démission - catégorie professionnelle Ouvriers - personnels des entreprises de transport routier de marchandises"
+              "infos-contrat-salarie-convention-collective-transports-routiers-typeRupture-Demission-categorie-professionnelle-Ouvriers-personnels-des-entreprises-de-transport-routier-de-marchandises"
             ),
             {
               target: { value: "'Non'" },
@@ -405,7 +405,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - transports routiers - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-transports-routiers-typeRupture-Demission-categorie-professionnelle"
           ),
           {
             target: { value: "'Techniciens et agents de maîtrise TAM'" },
@@ -418,7 +418,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - transports routiers - typeRupture Démission - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe"
+              "infos-contrat-salarie-convention-collective-transports-routiers-typeRupture-Demission-categorie-professionnelle-Techniciens-et-agents-de-maitrise-TAM-groupe"
             ),
             {
               target: { value: "'1 à 5'" },
@@ -454,7 +454,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - transports routiers - typeRupture Démission - catégorie professionnelle Techniciens et agents de maîtrise TAM - groupe"
+              "infos-contrat-salarie-convention-collective-transports-routiers-typeRupture-Demission-categorie-professionnelle-Techniciens-et-agents-de-maitrise-TAM-groupe"
             ),
             {
               target: { value: "'6 à 8'" },
@@ -492,7 +492,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - transports routiers - typeRupture"
+          "infos-contrat-salarie-convention-collective-transports-routiers-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

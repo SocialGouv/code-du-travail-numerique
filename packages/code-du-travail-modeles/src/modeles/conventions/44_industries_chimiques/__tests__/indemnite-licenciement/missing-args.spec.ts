@@ -55,7 +55,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
             salary,
         });
         expect(result).toNextMissingRuleBeEqual(
-          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . age"
+          "contrat-salarie-convention-collective-industries-chimiques-indemnite-de-licenciement-categorie-professionnelle-age"
         );
         expect(result).toNextMissingQuestionBeEqual(
           "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
@@ -82,7 +82,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
       });
 
       expect(result).toNextMissingRuleBeEqual(
-        "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle"
+        "contrat-salarie-convention-collective-industries-chimiques-indemnite-de-licenciement-categorie-professionnelle"
       );
     });
   });

@@ -75,7 +75,7 @@ export function RadioQuestion({
             onChange: () => onChange(question.value, index),
             autoFocus: autoFocus && index === 0,
             required: true,
-            "data-testid": `${name} - ${question.label}`,
+            "data-testid": `${name}-${question.label}`,
             ref: (el: HTMLInputElement | null) => {
               radioRefs.current[index] = el;
             },

@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - bad - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-bad-categorie-professionnelle"
         ),
         {
           target: { value: "'Employé'" },
@@ -47,7 +47,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bad - catégorie professionnelle Employé - ancienneté"
+            "infos-contrat-salarie-convention-collective-bad-categorie-professionnelle-Employe-anciennete"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -71,7 +71,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bad - catégorie professionnelle Employé - ancienneté"
+            "infos-contrat-salarie-convention-collective-bad-categorie-professionnelle-Employe-anciennete"
           ),
           {
             target: { value: "'6 mois à 2 ans'" },
@@ -95,7 +95,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bad - catégorie professionnelle Employé - ancienneté"
+            "infos-contrat-salarie-convention-collective-bad-categorie-professionnelle-Employe-anciennete"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -120,7 +120,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - bad - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-bad-categorie-professionnelle"
         ),
         {
           target: { value: "'Technicien-agent de maîtrise'" },
@@ -133,7 +133,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bad - catégorie professionnelle Technicienagent de maîtrise - ancienneté"
+            "infos-contrat-salarie-convention-collective-bad-categorie-professionnelle-Technicienagent-de-maitrise-anciennete"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -157,7 +157,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bad - catégorie professionnelle Technicienagent de maîtrise - ancienneté"
+            "infos-contrat-salarie-convention-collective-bad-categorie-professionnelle-Technicienagent-de-maitrise-anciennete"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -182,7 +182,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - bad - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-bad-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadre'" },
@@ -195,7 +195,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bad - catégorie professionnelle Cadre - ancienneté"
+            "infos-contrat-salarie-convention-collective-bad-categorie-professionnelle-Cadre-anciennete"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -219,7 +219,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - bad - catégorie professionnelle Cadre - ancienneté"
+            "infos-contrat-salarie-convention-collective-bad-categorie-professionnelle-Cadre-anciennete"
           ),
           {
             target: { value: "'Plus de 2 ans'" },

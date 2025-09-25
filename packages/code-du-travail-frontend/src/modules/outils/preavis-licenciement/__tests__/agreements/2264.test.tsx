@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-hospitalisation-privees-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -58,7 +58,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-hospitalisation-privees-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres dirigeants'" },
@@ -77,7 +77,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-hospitalisation-privees-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres supérieurs'" },
@@ -96,7 +96,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-hospitalisation-privees-categorie-professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -109,7 +109,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarie-convention-collective-hospitalisation-privees-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -128,7 +128,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarie-convention-collective-hospitalisation-privees-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'2 ans ou plus'" },
@@ -148,7 +148,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-hospitalisation-privees-categorie-professionnelle"
         ),
         {
           target: { value: "'Techniciens et agents de maîtrise TAM'" },
@@ -161,7 +161,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Techniciens et agents de maîtrise TAM - ancienneté"
+            "infos-contrat-salarie-convention-collective-hospitalisation-privees-categorie-professionnelle-Techniciens-et-agents-de-maitrise-TAM-anciennete"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -180,7 +180,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hospitalisation privées - catégorie professionnelle Techniciens et agents de maîtrise TAM - ancienneté"
+            "infos-contrat-salarie-convention-collective-hospitalisation-privees-categorie-professionnelle-Techniciens-et-agents-de-maitrise-TAM-anciennete"
           ),
           {
             target: { value: "'2 ans ou plus'" },

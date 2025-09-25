@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-restauration-rapide-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -54,7 +54,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-restauration-rapide-categorie-professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -67,7 +67,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarie-convention-collective-restauration-rapide-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -87,7 +87,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarie-convention-collective-restauration-rapide-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'6 mois à 2 ans'" },
@@ -107,7 +107,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarie-convention-collective-restauration-rapide-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -128,7 +128,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-restauration-rapide-categorie-professionnelle"
         ),
         {
           target: { value: "'Maîtrises'" },
@@ -141,7 +141,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle Maîtrises - ancienneté"
+            "infos-contrat-salarie-convention-collective-restauration-rapide-categorie-professionnelle-Maitrises-anciennete"
           ),
           {
             target: { value: "'2 ans ou moins'" },
@@ -161,7 +161,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle Maîtrises - ancienneté"
+            "infos-contrat-salarie-convention-collective-restauration-rapide-categorie-professionnelle-Maitrises-anciennete"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -182,7 +182,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-restauration-rapide-categorie-professionnelle"
         ),
         {
           target: { value: "'Ouvriers'" },
@@ -195,7 +195,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle Ouvriers - ancienneté"
+            "infos-contrat-salarie-convention-collective-restauration-rapide-categorie-professionnelle-Ouvriers-anciennete"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -215,7 +215,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - restauration rapide - catégorie professionnelle Ouvriers - ancienneté"
+            "infos-contrat-salarie-convention-collective-restauration-rapide-categorie-professionnelle-Ouvriers-anciennete"
           ),
           {
             target: { value: "'6 mois et plus'" },

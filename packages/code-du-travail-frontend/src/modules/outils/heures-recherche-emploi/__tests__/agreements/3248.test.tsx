@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - métallurgie - typeRupture"
+          "infos-contrat-salarie-convention-collective-metallurgie-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },
@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai"
+            "infos-contrat-salarie-convention-collective-metallurgie-typeRupture-Rupture-de-la-periode-d'essai-initiative-de-la-rupture-de-la-periode-d'essai"
           ),
           {
             target: { value: "'L'employeur'" },
@@ -54,7 +54,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai L'employeur - forfait jour"
+              "infos-contrat-salarie-convention-collective-metallurgie-typeRupture-Rupture-de-la-periode-d'essai-initiative-de-la-rupture-de-la-periode-d'essai-L'employeur-forfait-jour"
             ),
             {
               target: { value: "'Oui'" },
@@ -67,7 +67,7 @@ describe("HeuresRechercheEmploi", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai L'employeur - forfait jour Oui - ancienneté"
+                "infos-contrat-salarie-convention-collective-metallurgie-typeRupture-Rupture-de-la-periode-d'essai-initiative-de-la-rupture-de-la-periode-d'essai-L'employeur-forfait-jour-Oui-anciennete"
               ),
               {
                 target: { value: "'Moins d'un mois'" },
@@ -93,7 +93,7 @@ describe("HeuresRechercheEmploi", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai L'employeur - forfait jour Oui - ancienneté"
+                "infos-contrat-salarie-convention-collective-metallurgie-typeRupture-Rupture-de-la-periode-d'essai-initiative-de-la-rupture-de-la-periode-d'essai-L'employeur-forfait-jour-Oui-anciennete"
               ),
               {
                 target: { value: "'Un mois ou plus'" },
@@ -125,7 +125,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai L'employeur - forfait jour"
+              "infos-contrat-salarie-convention-collective-metallurgie-typeRupture-Rupture-de-la-periode-d'essai-initiative-de-la-rupture-de-la-periode-d'essai-L'employeur-forfait-jour"
             ),
             {
               target: { value: "'Non'" },
@@ -138,7 +138,7 @@ describe("HeuresRechercheEmploi", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai L'employeur - forfait jour Non - ancienneté"
+                "infos-contrat-salarie-convention-collective-metallurgie-typeRupture-Rupture-de-la-periode-d'essai-initiative-de-la-rupture-de-la-periode-d'essai-L'employeur-forfait-jour-Non-anciennete"
               ),
               {
                 target: { value: "'Moins d'un mois'" },
@@ -164,7 +164,7 @@ describe("HeuresRechercheEmploi", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai L'employeur - forfait jour Non - ancienneté"
+                "infos-contrat-salarie-convention-collective-metallurgie-typeRupture-Rupture-de-la-periode-d'essai-initiative-de-la-rupture-de-la-periode-d'essai-L'employeur-forfait-jour-Non-anciennete"
               ),
               {
                 target: { value: "'Un mois ou plus'" },
@@ -197,7 +197,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - métallurgie - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai"
+            "infos-contrat-salarie-convention-collective-metallurgie-typeRupture-Rupture-de-la-periode-d'essai-initiative-de-la-rupture-de-la-periode-d'essai"
           ),
           {
             target: { value: "'Le salarié'" },
@@ -227,7 +227,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - métallurgie - typeRupture"
+          "infos-contrat-salarie-convention-collective-metallurgie-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -251,7 +251,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - métallurgie - typeRupture"
+          "infos-contrat-salarie-convention-collective-metallurgie-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -264,7 +264,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - métallurgie - typeRupture Licenciement - forfait jour"
+            "infos-contrat-salarie-convention-collective-metallurgie-typeRupture-Licenciement-forfait-jour"
           ),
           {
             target: { value: "'Non'" },
@@ -298,7 +298,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - métallurgie - typeRupture Licenciement - forfait jour"
+            "infos-contrat-salarie-convention-collective-metallurgie-typeRupture-Licenciement-forfait-jour"
           ),
           {
             target: { value: "'Oui'" },

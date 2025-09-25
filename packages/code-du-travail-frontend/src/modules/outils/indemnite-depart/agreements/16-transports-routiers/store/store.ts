@@ -35,7 +35,7 @@ export const createAgreement16StoreSalaires: StoreSlice<
         get().informationsData.input.publicodesInformations.find(
           (item) =>
             item.question.name ===
-            "contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle"
+            "contrat-salarie-convention-collective-transports-routiers-indemnite-de-licenciement-categorie-professionnelle"
         )?.info;
       set(
         produce((state: Agreement16StoreSlice) => {

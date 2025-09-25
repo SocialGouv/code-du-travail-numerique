@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture"
+          "infos-contrat-salarie-convention-collective-ouvriers-travaux-public-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture Démission - durée du préavis"
+            "infos-contrat-salarie-convention-collective-ouvriers-travaux-public-typeRupture-Demission-duree-du-preavis"
           ),
           {
             target: { value: "'2 jours'" },
@@ -73,7 +73,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture Démission - durée du préavis"
+            "infos-contrat-salarie-convention-collective-ouvriers-travaux-public-typeRupture-Demission-duree-du-preavis"
           ),
           {
             target: { value: "'2 semaines'" },
@@ -105,7 +105,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture Démission - durée du préavis"
+            "infos-contrat-salarie-convention-collective-ouvriers-travaux-public-typeRupture-Demission-duree-du-preavis"
           ),
           {
             target: { value: "'Un mois et plus'" },
@@ -138,7 +138,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture"
+          "infos-contrat-salarie-convention-collective-ouvriers-travaux-public-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -151,7 +151,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture Licenciement - durée du préavis"
+            "infos-contrat-salarie-convention-collective-ouvriers-travaux-public-typeRupture-Licenciement-duree-du-preavis"
           ),
           {
             target: { value: "'2 jours'" },
@@ -183,7 +183,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture Licenciement - durée du préavis"
+            "infos-contrat-salarie-convention-collective-ouvriers-travaux-public-typeRupture-Licenciement-duree-du-preavis"
           ),
           {
             target: { value: "'2 semaines'" },
@@ -215,7 +215,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture Licenciement - durée du préavis"
+            "infos-contrat-salarie-convention-collective-ouvriers-travaux-public-typeRupture-Licenciement-duree-du-preavis"
           ),
           {
             target: { value: "'Un mois et plus'" },
@@ -248,7 +248,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - ouvriers travaux public - typeRupture"
+          "infos-contrat-salarie-convention-collective-ouvriers-travaux-public-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

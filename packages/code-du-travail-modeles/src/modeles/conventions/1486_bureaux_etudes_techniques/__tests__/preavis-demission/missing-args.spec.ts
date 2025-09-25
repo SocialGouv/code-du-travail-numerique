@@ -21,7 +21,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
 
     it("doit demander en premier la catégorie professionnelle", () => {
       expect(result.missingArgs).toHaveNextMissingRule(
-        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle"
+        "contrat-salarie-convention-collective-bureaux-etudes-techniques-categorie-professionnelle"
       );
     });
 
@@ -39,7 +39,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
 
       it("doit demander le coefficient hiérarchique", () => {
         expect(result.missingArgs).toHaveNextMissingRule(
-          "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient"
+          "contrat-salarie-convention-collective-bureaux-etudes-techniques-categorie-professionnelle-Employes,-Techniciens-ou-Agents-de-maitrise-ETAM-coefficient"
         );
       });
 
@@ -59,7 +59,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
 
         it("doit demander l'ancienneté", () => {
           expect(result.missingArgs).toHaveNextMissingRule(
-            "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient de 240 à 355 . ancienneté"
+            "contrat-salarie-convention-collective-bureaux-etudes-techniques-categorie-professionnelle-Employes,-Techniciens-ou-Agents-de-maitrise-ETAM-coefficient-de-240-a-355-anciennete"
           );
         });
 
@@ -122,7 +122,7 @@ describe("Validation de l'ordre des questions : CC 1486", () => {
 
         it("doit demander l'ancienneté", () => {
           expect(result.missingArgs).toHaveNextMissingRule(
-            "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM . coefficient De 400 à 500 . ancienneté"
+            "contrat-salarie-convention-collective-bureaux-etudes-techniques-categorie-professionnelle-Employes,-Techniciens-ou-Agents-de-maitrise-ETAM-coefficient-De-400-a-500-anciennete"
           );
         });
 

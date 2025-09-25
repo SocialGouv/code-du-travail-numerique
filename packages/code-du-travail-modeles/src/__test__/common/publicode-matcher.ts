@@ -209,11 +209,10 @@ expect.extend({
         pass: rule === null,
       };
     }
-    const nextRule = replaceAll(missingVars[0].name, " - ", " . ");
     return {
       message: () =>
-        `Expected next question to be "${rule}" but received "${nextRule}"`,
-      pass: nextRule === rule,
+        `Expected next question to be "${rule}" but received "${missingVars[0].name}"`,
+      pass: missingVars[0].name === rule,
     };
   },
   toHaveReferencesBeEqual(

@@ -18,7 +18,7 @@ describe("Gestion des multiples types de licenciement pour la CC 573", () => {
 
       const result = engine.calculate(input);
       expect(result).toNextMissingRuleBeEqual(
-        "contrat salarié . convention collective . commerces de gros . rupture conventionnelle . licenciement économique agents age"
+        "contrat-salarie-convention-collective-commerces-de-gros-rupture-conventionnelle-licenciement-economique-agents-age"
       );
     });
 

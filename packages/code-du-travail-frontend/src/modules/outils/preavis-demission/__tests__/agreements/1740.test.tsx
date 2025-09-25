@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - ouvriers bâtiment région parisienne - ancienneté"
+          "infos-contrat-salarie-convention-collective-ouvriers-batiment-region-parisienne-anciennete"
         ),
         {
           target: {
@@ -56,7 +56,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - ouvriers bâtiment région parisienne - ancienneté"
+          "infos-contrat-salarie-convention-collective-ouvriers-batiment-region-parisienne-anciennete"
         ),
         {
           target: { value: "'Plus de 3 mois'" },

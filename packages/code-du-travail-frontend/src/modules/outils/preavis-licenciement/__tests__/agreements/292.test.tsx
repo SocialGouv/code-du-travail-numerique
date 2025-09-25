@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - plasturgie - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-plasturgie-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -60,7 +60,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - plasturgie - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-plasturgie-categorie-professionnelle"
         ),
         {
           target: { value: "'Collaborateurs'" },
@@ -73,7 +73,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - plasturgie - catégorie professionnelle Collaborateurs - coefficient"
+            "infos-contrat-salarie-convention-collective-plasturgie-categorie-professionnelle-Collaborateurs-coefficient"
           ),
           {
             target: { value: "'700 à 750'" },
@@ -86,7 +86,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - plasturgie - catégorie professionnelle Collaborateurs - coefficient 700 à 750 - ancienneté"
+              "infos-contrat-salarie-convention-collective-plasturgie-categorie-professionnelle-Collaborateurs-coefficient-700-a-750-anciennete"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -107,7 +107,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - plasturgie - catégorie professionnelle Collaborateurs - coefficient 700 à 750 - ancienneté"
+              "infos-contrat-salarie-convention-collective-plasturgie-categorie-professionnelle-Collaborateurs-coefficient-700-a-750-anciennete"
             ),
             {
               target: { value: "'2 ans ou plus'" },
@@ -129,7 +129,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - plasturgie - catégorie professionnelle Collaborateurs - coefficient"
+            "infos-contrat-salarie-convention-collective-plasturgie-categorie-professionnelle-Collaborateurs-coefficient"
           ),
           {
             target: { value: "'800 à 830 inclus'" },

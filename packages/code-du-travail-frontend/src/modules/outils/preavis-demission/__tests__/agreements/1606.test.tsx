@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - bricolage - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-bricolage-categorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise'" },
@@ -56,7 +56,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - bricolage - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-bricolage-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -78,7 +78,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - bricolage - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-bricolage-categorie-professionnelle"
         ),
         {
           target: { value: "'Employés'" },

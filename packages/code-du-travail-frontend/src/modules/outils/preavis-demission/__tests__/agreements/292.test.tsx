@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - plasturgie - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-plasturgie-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -56,7 +56,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - plasturgie - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-plasturgie-categorie-professionnelle"
         ),
         {
           target: { value: "'Collaborateurs'" },
@@ -69,7 +69,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - plasturgie - catégorie professionnelle Collaborateurs - coefficient"
+            "infos-contrat-salarie-convention-collective-plasturgie-categorie-professionnelle-Collaborateurs-coefficient"
           ),
           {
             target: { value: "'700 à 750'" },
@@ -89,7 +89,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - plasturgie - catégorie professionnelle Collaborateurs - coefficient"
+            "infos-contrat-salarie-convention-collective-plasturgie-categorie-professionnelle-Collaborateurs-coefficient"
           ),
           {
             target: { value: "'800 à 830 inclus'" },

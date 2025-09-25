@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail"
+          "infos-contrat-salarie-convention-collective-industrie-pharmaceutique-conclusion-contrat-travail"
         ),
         {
           target: {
@@ -49,7 +49,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 - groupe"
+            "infos-contrat-salarie-convention-collective-industrie-pharmaceutique-conclusion-contrat-travail-Contrat-de-travail-conclu-avant-le-1er-juillet-2009-groupe"
           ),
           {
             target: { value: "'1 à 3'" },
@@ -69,7 +69,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 - groupe"
+            "infos-contrat-salarie-convention-collective-industrie-pharmaceutique-conclusion-contrat-travail-Contrat-de-travail-conclu-avant-le-1er-juillet-2009-groupe"
           ),
           {
             target: { value: "'4'" },
@@ -89,7 +89,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu avant le 1er juillet 2009 - groupe"
+            "infos-contrat-salarie-convention-collective-industrie-pharmaceutique-conclusion-contrat-travail-Contrat-de-travail-conclu-avant-le-1er-juillet-2009-groupe"
           ),
           {
             target: { value: "'5 et suivants'" },
@@ -110,7 +110,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail"
+          "infos-contrat-salarie-convention-collective-industrie-pharmaceutique-conclusion-contrat-travail"
         ),
         {
           target: {
@@ -125,7 +125,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 - groupe"
+            "infos-contrat-salarie-convention-collective-industrie-pharmaceutique-conclusion-contrat-travail-Contrat-de-travail-conclu-apres-le-1er-juillet-2009-groupe"
           ),
           {
             target: { value: "'1 à 3'" },
@@ -145,7 +145,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 - groupe"
+            "infos-contrat-salarie-convention-collective-industrie-pharmaceutique-conclusion-contrat-travail-Contrat-de-travail-conclu-apres-le-1er-juillet-2009-groupe"
           ),
           {
             target: { value: "'4 à 5'" },
@@ -165,7 +165,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industrie pharmaceutique - conclusion contrat travail Contrat de travail conclu après le 1er juillet 2009 - groupe"
+            "infos-contrat-salarie-convention-collective-industrie-pharmaceutique-conclusion-contrat-travail-Contrat-de-travail-conclu-apres-le-1er-juillet-2009-groupe"
           ),
           {
             target: { value: "'6 et suivants'" },

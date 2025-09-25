@@ -14,7 +14,7 @@ describe("Gestion des licenciements pour la CC 1501", () => {
 
       const result = engine.calculate(input);
       expect(result).toNextMissingRuleBeEqual(
-        "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle"
+        "contrat-salarie-convention-collective-restauration-rapide-indemnite-de-licenciement-categorie-professionnelle"
       );
     });
 
@@ -26,7 +26,7 @@ describe("Gestion des licenciements pour la CC 1501", () => {
 
       const result = engine.calculate(input);
       expect(result).toNextMissingRuleBeEqual(
-        "contrat salarié . convention collective . restauration rapide . rupture conventionnelle . age"
+        "contrat-salarie-convention-collective-restauration-rapide-rupture-conventionnelle-age"
       );
     });
 

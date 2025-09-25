@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - hospitalisation privées - typeRupture"
+          "infos-contrat-salarie-convention-collective-hospitalisation-privees-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },
@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hospitalisation privées - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai"
+            "infos-contrat-salarie-convention-collective-hospitalisation-privees-typeRupture-Rupture-de-la-periode-d'essai-initiative-de-la-rupture-de-la-periode-d'essai"
           ),
           {
             target: { value: "'L'employeur'" },
@@ -54,7 +54,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - hospitalisation privées - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai L'employeur - ancienneté"
+              "infos-contrat-salarie-convention-collective-hospitalisation-privees-typeRupture-Rupture-de-la-periode-d'essai-initiative-de-la-rupture-de-la-periode-d'essai-L'employeur-anciennete"
             ),
             {
               target: { value: "'3 mois ou moins'" },
@@ -78,7 +78,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - hospitalisation privées - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai L'employeur - ancienneté"
+              "infos-contrat-salarie-convention-collective-hospitalisation-privees-typeRupture-Rupture-de-la-periode-d'essai-initiative-de-la-rupture-de-la-periode-d'essai-L'employeur-anciennete"
             ),
             {
               target: { value: "'Plus de 3 mois'" },
@@ -111,7 +111,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hospitalisation privées - typeRupture Rupture de la période d'essai - initiative de la rupture de la période d'essai"
+            "infos-contrat-salarie-convention-collective-hospitalisation-privees-typeRupture-Rupture-de-la-periode-d'essai-initiative-de-la-rupture-de-la-periode-d'essai"
           ),
           {
             target: { value: "'Le salarié'" },
@@ -136,7 +136,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - hospitalisation privées - typeRupture"
+          "infos-contrat-salarie-convention-collective-hospitalisation-privees-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -160,7 +160,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - hospitalisation privées - typeRupture"
+          "infos-contrat-salarie-convention-collective-hospitalisation-privees-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -173,7 +173,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hospitalisation privées - typeRupture Licenciement - durée du travail"
+            "infos-contrat-salarie-convention-collective-hospitalisation-privees-typeRupture-Licenciement-duree-du-travail"
           ),
           {
             target: { value: "'Temps complet'" },
@@ -205,7 +205,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hospitalisation privées - typeRupture Licenciement - durée du travail"
+            "infos-contrat-salarie-convention-collective-hospitalisation-privees-typeRupture-Licenciement-duree-du-travail"
           ),
           {
             target: { value: "'Temps partiel'" },

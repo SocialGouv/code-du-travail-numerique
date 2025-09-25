@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Agents de maîtrise - échelon"
+            "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle-Agents-de-maitrise-echelon"
           ),
           {
             target: { value: "'De 17 à 19'" },
@@ -72,7 +72,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Agents de maîtrise - échelon"
+            "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle-Agents-de-maitrise-echelon"
           ),
           {
             target: { value: "'De 20 à 25'" },
@@ -93,7 +93,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -113,7 +113,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle"
         ),
         {
           target: { value: "'Ouvriers, Employés'" },
@@ -126,7 +126,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Ouvriers, Employés - échelon"
+            "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle-Ouvriers,-Employes-echelon"
           ),
           {
             target: { value: "'1 et 2'" },
@@ -139,7 +139,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Ouvriers, Employés - échelon 1 et 2 - ancienneté"
+              "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle-Ouvriers,-Employes-echelon-1-et-2-anciennete"
             ),
             {
               target: { value: "'Moins de 6 mois'" },
@@ -159,7 +159,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Ouvriers, Employés - échelon 1 et 2 - ancienneté"
+              "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle-Ouvriers,-Employes-echelon-1-et-2-anciennete"
             ),
             {
               target: { value: "'6 mois à 2 ans'" },
@@ -179,7 +179,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Ouvriers, Employés - échelon 1 et 2 - ancienneté"
+              "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle-Ouvriers,-Employes-echelon-1-et-2-anciennete"
             ),
             {
               target: { value: "'2 ans ou plus'" },
@@ -200,7 +200,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Ouvriers, Employés - échelon"
+            "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle-Ouvriers,-Employes-echelon"
           ),
           {
             target: { value: "'De 3 à 12'" },
@@ -213,7 +213,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Ouvriers, Employés - échelon De 3 à 12 - ancienneté"
+              "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle-Ouvriers,-Employes-echelon-De-3-a-12-anciennete"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -233,7 +233,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Ouvriers, Employés - échelon De 3 à 12 - ancienneté"
+              "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle-Ouvriers,-Employes-echelon-De-3-a-12-anciennete"
             ),
             {
               target: { value: "'2 ans ou plus'" },

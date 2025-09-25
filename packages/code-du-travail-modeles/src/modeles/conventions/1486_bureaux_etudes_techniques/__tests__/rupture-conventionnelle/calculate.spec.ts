@@ -14,7 +14,7 @@ describe("Rupture conventionnelle pour la CC 1486", () => {
 
       const result = engine.calculate(input);
       expect(result).toNextMissingRuleBeEqual(
-        "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . catégorie professionnelle"
+        "contrat-salarie-convention-collective-bureaux-etudes-techniques-indemnite-de-licenciement-categorie-professionnelle"
       );
     });
 

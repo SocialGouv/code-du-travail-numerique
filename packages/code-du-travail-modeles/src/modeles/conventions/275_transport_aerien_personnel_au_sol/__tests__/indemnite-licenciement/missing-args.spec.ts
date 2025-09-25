@@ -71,7 +71,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
       expect(missingArgs).toHaveNextMissingRule(
-        "contrat salarié . convention collective . transport aérien personnel au sol . age"
+        "contrat-salarie-convention-collective-transport-aerien-personnel-au-sol-age"
       );
       expect(missingArgs).toHaveNextMissingQuestion(
         "Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?"
@@ -96,7 +96,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
       expect(missingArgs).toHaveNextMissingRule(
-        "contrat salarié . convention collective . transport aérien personnel au sol . age"
+        "contrat-salarie-convention-collective-transport-aerien-personnel-au-sol-age"
       );
       expect(missingArgs).toHaveNextMissingQuestion(
         "Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?"
@@ -121,7 +121,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
       expect(missingArgs).toHaveNextMissingRule(
-        "contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle"
+        "contrat-salarie-convention-collective-transport-aerien-personnel-au-sol-categorie-professionnelle"
       );
     });
 
@@ -141,7 +141,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
       expect(missingArgs).toHaveNextMissingRule(
-        "contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle"
+        "contrat-salarie-convention-collective-transport-aerien-personnel-au-sol-categorie-professionnelle"
       );
     });
   });
@@ -165,7 +165,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
       expect(missingArgs).toHaveNextMissingRule(
-        "contrat salarié . convention collective . transport aérien personnel au sol . age"
+        "contrat-salarie-convention-collective-transport-aerien-personnel-au-sol-age"
       );
       expect(missingArgs).toHaveNextMissingQuestion(
         "Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?"
@@ -190,7 +190,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
       expect(missingArgs).toHaveNextMissingRule(
-        "contrat salarié . convention collective . transport aérien personnel au sol . age"
+        "contrat-salarie-convention-collective-transport-aerien-personnel-au-sol-age"
       );
       expect(missingArgs).toHaveNextMissingQuestion(
         "Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?"

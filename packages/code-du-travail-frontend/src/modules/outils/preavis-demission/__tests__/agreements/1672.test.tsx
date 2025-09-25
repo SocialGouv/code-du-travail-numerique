@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-societes-d'assurances-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres (Classes 5 à 7)'" },
@@ -58,7 +58,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - sociétés d'assurances - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-societes-d'assurances-categorie-professionnelle"
         ),
         {
           target: { value: "'Non-cadres (Classes 1 à 4)'" },

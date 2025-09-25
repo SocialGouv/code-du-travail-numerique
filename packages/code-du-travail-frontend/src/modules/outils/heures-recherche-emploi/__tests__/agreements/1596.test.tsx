@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - batiment ouvriers employés - typeRupture"
+          "infos-contrat-salarie-convention-collective-batiment-ouvriers-employes-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - batiment ouvriers employés - typeRupture Démission - durée du préavis"
+            "infos-contrat-salarie-convention-collective-batiment-ouvriers-employes-typeRupture-Demission-duree-du-preavis"
           ),
           {
             target: { value: "'2 jours'" },
@@ -70,7 +70,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - batiment ouvriers employés - typeRupture Démission - durée du préavis"
+            "infos-contrat-salarie-convention-collective-batiment-ouvriers-employes-typeRupture-Demission-duree-du-preavis"
           ),
           {
             target: { value: "'2 semaines'" },
@@ -99,7 +99,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - batiment ouvriers employés - typeRupture Démission - durée du préavis"
+            "infos-contrat-salarie-convention-collective-batiment-ouvriers-employes-typeRupture-Demission-duree-du-preavis"
           ),
           {
             target: { value: "'Plus de 2 semaines'" },
@@ -129,7 +129,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - batiment ouvriers employés - typeRupture"
+          "infos-contrat-salarie-convention-collective-batiment-ouvriers-employes-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -142,7 +142,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - batiment ouvriers employés - typeRupture Licenciement - durée du préavis"
+            "infos-contrat-salarie-convention-collective-batiment-ouvriers-employes-typeRupture-Licenciement-duree-du-preavis"
           ),
           {
             target: { value: "'2 jours'" },
@@ -171,7 +171,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - batiment ouvriers employés - typeRupture Licenciement - durée du préavis"
+            "infos-contrat-salarie-convention-collective-batiment-ouvriers-employes-typeRupture-Licenciement-duree-du-preavis"
           ),
           {
             target: { value: "'2 semaines'" },
@@ -200,7 +200,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - batiment ouvriers employés - typeRupture Licenciement - durée du préavis"
+            "infos-contrat-salarie-convention-collective-batiment-ouvriers-employes-typeRupture-Licenciement-duree-du-preavis"
           ),
           {
             target: { value: "'Plus de 2 semaines'" },
@@ -230,7 +230,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - batiment ouvriers employés - typeRupture"
+          "infos-contrat-salarie-convention-collective-batiment-ouvriers-employes-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

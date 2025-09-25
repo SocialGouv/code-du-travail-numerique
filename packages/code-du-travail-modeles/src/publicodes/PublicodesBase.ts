@@ -109,6 +109,14 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     return situation;
   }
 
+  protected formatRuleName(ruleName: string): string {
+    return ruleName
+      .replace(/\./g, " ")
+      .replace(/\s+/g, "-")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+  }
+
   private buildMissingArgs(
     engine: Engine,
     missingArgs: Record<string, number>
@@ -118,7 +126,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
         const detail = engine.getRule(key);
         return {
           indice: value,
-          name: key.replace(/ \. /g, " - "),
+          name: this.formatRuleName(key),
           rawNode: detail.rawNode,
         };
       })

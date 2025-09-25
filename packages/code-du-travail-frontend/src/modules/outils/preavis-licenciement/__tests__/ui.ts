@@ -6,14 +6,14 @@ export const ui = {
   },
   agreement: {
     skipAgreement: byTestId(
-      "route - Je ne souhaite pas renseigner ma convention collective (je passe l'étape)."
+      "route-Je ne souhaite pas renseigner ma convention collective (je passe l'étape)."
     ),
   },
   situation: {
-    fauteGraveOui: byTestId("seriousMisconduct - Oui"),
-    fauteGraveNon: byTestId("seriousMisconduct - Non"),
-    handicapOui: byTestId("disabledWorker - Oui"),
-    handicapNon: byTestId("disabledWorker - Non"),
+    fauteGraveOui: byTestId("seriousMisconduct-Oui"),
+    fauteGraveNon: byTestId("seriousMisconduct-Non"),
+    handicapOui: byTestId("disabledWorker-Oui"),
+    handicapNon: byTestId("disabledWorker-Non"),
     seniority: byTestId("seniority"),
   },
   next: byTestId("next-button"),

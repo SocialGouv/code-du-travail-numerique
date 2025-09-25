@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - automobiles - typeRupture"
+          "infos-contrat-salarie-convention-collective-automobiles-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - automobiles - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-automobiles-typeRupture-Demission-categorie-professionnelle"
           ),
           {
             target: { value: "'Agents de maîtrise et Cadres'" },
@@ -71,7 +71,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - automobiles - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-automobiles-typeRupture-Demission-categorie-professionnelle"
           ),
           {
             target: { value: "'Ouvriers, Employés'" },
@@ -84,7 +84,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - automobiles - typeRupture Démission - catégorie professionnelle Ouvriers, Employés - durée du travail"
+              "infos-contrat-salarie-convention-collective-automobiles-typeRupture-Demission-categorie-professionnelle-Ouvriers,-Employes-duree-du-travail"
             ),
             {
               target: { value: "'Temps complet'" },
@@ -97,7 +97,7 @@ describe("HeuresRechercheEmploi", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - automobiles - typeRupture Démission - catégorie professionnelle Ouvriers, Employés - durée du travail Temps complet - durée du préavis"
+                "infos-contrat-salarie-convention-collective-automobiles-typeRupture-Demission-categorie-professionnelle-Ouvriers,-Employes-duree-du-travail-Temps-complet-duree-du-preavis"
               ),
               {
                 target: { value: "'2 semaines'" },
@@ -127,7 +127,7 @@ describe("HeuresRechercheEmploi", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - automobiles - typeRupture Démission - catégorie professionnelle Ouvriers, Employés - durée du travail Temps complet - durée du préavis"
+                "infos-contrat-salarie-convention-collective-automobiles-typeRupture-Demission-categorie-professionnelle-Ouvriers,-Employes-duree-du-travail-Temps-complet-duree-du-preavis"
               ),
               {
                 target: { value: "'Plus de 2 semaines'" },
@@ -160,7 +160,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - automobiles - typeRupture Démission - catégorie professionnelle Ouvriers, Employés - durée du travail"
+              "infos-contrat-salarie-convention-collective-automobiles-typeRupture-Demission-categorie-professionnelle-Ouvriers,-Employes-duree-du-travail"
             ),
             {
               target: { value: "'Temps partiel'" },
@@ -194,7 +194,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - automobiles - typeRupture"
+          "infos-contrat-salarie-convention-collective-automobiles-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -207,7 +207,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - automobiles - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-automobiles-typeRupture-Licenciement-categorie-professionnelle"
           ),
           {
             target: { value: "'Agents de maîtrise et Cadres'" },
@@ -237,7 +237,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - automobiles - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-automobiles-typeRupture-Licenciement-categorie-professionnelle"
           ),
           {
             target: { value: "'Ouvriers, Employés'" },
@@ -250,7 +250,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - automobiles - typeRupture Licenciement - catégorie professionnelle Ouvriers, Employés - durée du travail"
+              "infos-contrat-salarie-convention-collective-automobiles-typeRupture-Licenciement-categorie-professionnelle-Ouvriers,-Employes-duree-du-travail"
             ),
             {
               target: { value: "'Temps complet'" },
@@ -263,7 +263,7 @@ describe("HeuresRechercheEmploi", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - automobiles - typeRupture Licenciement - catégorie professionnelle Ouvriers, Employés - durée du travail Temps complet - durée du préavis"
+                "infos-contrat-salarie-convention-collective-automobiles-typeRupture-Licenciement-categorie-professionnelle-Ouvriers,-Employes-duree-du-travail-Temps-complet-duree-du-preavis"
               ),
               {
                 target: { value: "'2 semaines'" },
@@ -293,7 +293,7 @@ describe("HeuresRechercheEmploi", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - automobiles - typeRupture Licenciement - catégorie professionnelle Ouvriers, Employés - durée du travail Temps complet - durée du préavis"
+                "infos-contrat-salarie-convention-collective-automobiles-typeRupture-Licenciement-categorie-professionnelle-Ouvriers,-Employes-duree-du-travail-Temps-complet-duree-du-preavis"
               ),
               {
                 target: { value: "'Plus de 2 semaines'" },
@@ -326,7 +326,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - automobiles - typeRupture Licenciement - catégorie professionnelle Ouvriers, Employés - durée du travail"
+              "infos-contrat-salarie-convention-collective-automobiles-typeRupture-Licenciement-categorie-professionnelle-Ouvriers,-Employes-duree-du-travail"
             ),
             {
               target: { value: "'Temps partiel'" },
@@ -360,7 +360,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - automobiles - typeRupture"
+          "infos-contrat-salarie-convention-collective-automobiles-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },

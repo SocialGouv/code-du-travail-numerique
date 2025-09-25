@@ -43,11 +43,9 @@ describe("Outil - Préavis de retraite", () => {
     cy.contains("Quel est le nom de la convention collective applicable ?");
     cy.get("button").contains("Suivant").click();
     cy.contains("Vous devez répondre à cette question");
-    cy.get(
-      'label:contains("Je ne souhaite pas renseigner ma convention collective (je passe l\'étape)")'
-    )
-      .first()
-      .click();
+    cy.contains(
+      "Je ne souhaite pas renseigner ma convention collective (je passe l'étape)."
+    ).click();
     cy.contains("Vous devez répondre à cette question").should("not.exist");
     cy.contains("Attention");
     cy.contains(

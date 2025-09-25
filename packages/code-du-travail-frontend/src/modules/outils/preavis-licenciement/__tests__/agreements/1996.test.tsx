@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - pharmacie - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-pharmacie-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -62,7 +62,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - pharmacie - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-pharmacie-categorie-professionnelle"
         ),
         {
           target: { value: "'Non-cadres'" },
@@ -75,7 +75,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - pharmacie - catégorie professionnelle Noncadres - ancienneté"
+            "infos-contrat-salarie-convention-collective-pharmacie-categorie-professionnelle-Noncadres-anciennete"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -96,7 +96,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - pharmacie - catégorie professionnelle Noncadres - ancienneté"
+            "infos-contrat-salarie-convention-collective-pharmacie-categorie-professionnelle-Noncadres-anciennete"
           ),
           {
             target: { value: "'2 ans ou plus'" },

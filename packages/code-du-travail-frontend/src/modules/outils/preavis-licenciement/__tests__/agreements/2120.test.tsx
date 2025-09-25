@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - banque - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-banque-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -61,7 +61,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - banque - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-banque-categorie-professionnelle"
         ),
         {
           target: { value: "'Techniciens'" },
@@ -74,7 +74,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - banque - catégorie professionnelle Techniciens - ancienneté"
+            "infos-contrat-salarie-convention-collective-banque-categorie-professionnelle-Techniciens-anciennete"
           ),
           {
             target: { value: "'Moins de 2 ans'" },
@@ -96,7 +96,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - banque - catégorie professionnelle Techniciens - ancienneté"
+            "infos-contrat-salarie-convention-collective-banque-categorie-professionnelle-Techniciens-anciennete"
           ),
           {
             target: { value: "'2 ans ou plus'" },

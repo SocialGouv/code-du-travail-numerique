@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-hotels-cafes-restaurants-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle Cadres - ancienneté"
+            "infos-contrat-salarie-convention-collective-hotels-cafes-restaurants-categorie-professionnelle-Cadres-anciennete"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -72,7 +72,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle Cadres - ancienneté"
+            "infos-contrat-salarie-convention-collective-hotels-cafes-restaurants-categorie-professionnelle-Cadres-anciennete"
           ),
           {
             target: { value: "'6 mois à moins de 2 ans'" },
@@ -92,7 +92,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle Cadres - ancienneté"
+            "infos-contrat-salarie-convention-collective-hotels-cafes-restaurants-categorie-professionnelle-Cadres-anciennete"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -113,7 +113,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-hotels-cafes-restaurants-categorie-professionnelle"
         ),
         {
           target: { value: "'Employés'" },
@@ -126,7 +126,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarie-convention-collective-hotels-cafes-restaurants-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -146,7 +146,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarie-convention-collective-hotels-cafes-restaurants-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'6 mois à moins de 2 ans'" },
@@ -166,7 +166,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle Employés - ancienneté"
+            "infos-contrat-salarie-convention-collective-hotels-cafes-restaurants-categorie-professionnelle-Employes-anciennete"
           ),
           {
             target: { value: "'Plus de 2 ans'" },
@@ -187,7 +187,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-hotels-cafes-restaurants-categorie-professionnelle"
         ),
         {
           target: { value: "'Maîtrises'" },
@@ -200,7 +200,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle Maîtrises - ancienneté"
+            "infos-contrat-salarie-convention-collective-hotels-cafes-restaurants-categorie-professionnelle-Maitrises-anciennete"
           ),
           {
             target: { value: "'Moins de 6 mois'" },
@@ -220,7 +220,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle Maîtrises - ancienneté"
+            "infos-contrat-salarie-convention-collective-hotels-cafes-restaurants-categorie-professionnelle-Maitrises-anciennete"
           ),
           {
             target: { value: "'6 mois à moins de 2 ans'" },
@@ -240,7 +240,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - hotels cafes restaurants - catégorie professionnelle Maîtrises - ancienneté"
+            "infos-contrat-salarie-convention-collective-hotels-cafes-restaurants-categorie-professionnelle-Maitrises-anciennete"
           ),
           {
             target: { value: "'Plus de 2 ans'" },

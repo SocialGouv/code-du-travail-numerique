@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise'" },
@@ -47,7 +47,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Agents de maîtrise - échelon"
+            "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle-Agents-de-maitrise-echelon"
           ),
           {
             target: { value: "'De 17 à 19'" },
@@ -69,7 +69,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Agents de maîtrise - échelon"
+            "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle-Agents-de-maitrise-echelon"
           ),
           {
             target: { value: "'De 20 à 25'" },
@@ -92,7 +92,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -114,7 +114,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle"
         ),
         {
           target: { value: "'Ouvriers, Employés'" },
@@ -127,7 +127,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Ouvriers, Employés - échelon"
+            "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle-Ouvriers,-Employes-echelon"
           ),
           {
             target: { value: "'1 et 2'" },
@@ -149,7 +149,7 @@ describe("PreavisDemissionSimulator", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - automobiles - catégorie professionnelle Ouvriers, Employés - échelon"
+            "infos-contrat-salarie-convention-collective-automobiles-categorie-professionnelle-Ouvriers,-Employes-echelon"
           ),
           {
             target: { value: "'De 3 à 12'" },

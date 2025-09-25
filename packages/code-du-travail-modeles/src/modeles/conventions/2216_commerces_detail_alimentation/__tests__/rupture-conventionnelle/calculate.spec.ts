@@ -17,7 +17,7 @@ describe("Un seul type de licenciement pour la CC 2216", () => {
 
     const result = engine.calculate(input);
     expect(result).toNextMissingRuleBeEqual(
-      "contrat salarié . convention collective . commerce gros et detail alimentation . rupture conventionnelle . licenciement économique age"
+      "contrat-salarie-convention-collective-commerce-gros-et-detail-alimentation-rupture-conventionnelle-licenciement-economique-age"
     );
   });
 

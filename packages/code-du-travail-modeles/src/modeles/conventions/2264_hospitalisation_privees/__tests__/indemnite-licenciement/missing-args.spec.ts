@@ -19,10 +19,9 @@ describe("Missing args pour la CC 2264", () => {
       },
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
-    const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
-    expect(keys).toEqual([
-      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle",
-    ]);
+    expect(missingArgs).toHaveNextMissingRule(
+      "contrat-salarie-convention-collective-hospitalisation-privees-indemnite-de-licenciement-categorie-professionnelle"
+    );
   });
   test("Non cadre durant une période", () => {
     const { missingArgs } = engine.setSituation(
@@ -39,10 +38,9 @@ describe("Missing args pour la CC 2264", () => {
       },
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
-    const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
-    expect(keys).toEqual([
-      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période",
-    ]);
+    expect(missingArgs).toHaveNextMissingRule(
+      "contrat-salarie-convention-collective-hospitalisation-privees-indemnite-de-licenciement-categorie-professionnelle-cadre-non-cadre-durant-une-periode"
+    );
   });
 
   test("Non cadre", () => {
@@ -80,10 +78,10 @@ describe("Missing args pour la CC 2264", () => {
       },
       "contrat salarié . indemnité de licenciement . résultat conventionnel"
     );
-    const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
-    expect(keys).toEqual([
-      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif",
-    ]);
+
+    expect(missingArgs).toHaveNextMissingRule(
+      "contrat-salarie-convention-collective-hospitalisation-privees-indemnite-de-licenciement-categorie-professionnelle-cadre-non-cadre-durant-une-periode-temps-effectif"
+    );
   });
   test("Aucune variable", () => {
     const { missingArgs } = engine.setSituation(

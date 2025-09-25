@@ -14,7 +14,7 @@ describe("Gestion des licenciements pour la CC 2098", () => {
 
       const result = engine.calculate(input);
       expect(result).toNextMissingRuleBeEqual(
-        "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle"
+        "contrat-salarie-convention-collective-personnel-presta-service-tertiaire-autre-licenciement-categorie-professionnelle"
       );
     });
 
@@ -36,7 +36,7 @@ describe("Gestion des licenciements pour la CC 2098", () => {
 
       const result = engine.calculate(input);
       expect(result).toNextMissingRuleBeEqual(
-        "contrat salarié . convention collective . personnel presta service tertiaire . rupture conventionnelle . cadre age"
+        "contrat-salarie-convention-collective-personnel-presta-service-tertiaire-rupture-conventionnelle-cadre-age"
       );
     });
 

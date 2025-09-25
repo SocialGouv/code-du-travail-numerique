@@ -34,7 +34,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - comptables - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-comptables-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres'" },
@@ -54,7 +54,7 @@ describe("PreavisDemissionSimulator", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - comptables - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-comptables-categorie-professionnelle"
         ),
         {
           target: { value: "'Employés'" },

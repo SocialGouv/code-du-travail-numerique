@@ -9,7 +9,7 @@ export const getNote = (
     publicodesInformations.find(
       (info) =>
         info.question.name ===
-        "contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle"
+        "contrat-salarie-convention-collective-particuliers-employeurs-et-emploi-a-domicile-categorie-professionnelle"
     )?.info === "'Assistants maternels du particulier employeur'" &&
     typeDepart === "mise-retraite"
   ) {

@@ -15,7 +15,7 @@ describe("Un seul type de licenciement pour la CC 2120", () => {
 
     const result = engine.calculate(input);
     expect(result).toNextMissingRuleBeEqual(
-      "contrat salarié . convention collective . banque . catégorie professionnelle"
+      "contrat-salarie-convention-collective-banque-categorie-professionnelle"
     );
   });
 

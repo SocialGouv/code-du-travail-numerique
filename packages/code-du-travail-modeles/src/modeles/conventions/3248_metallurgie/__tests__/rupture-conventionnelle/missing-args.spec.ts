@@ -29,7 +29,7 @@ describe("CC 3248 - Ordre des questions pour la rupture conventionnelle", () => 
 
     it("doit demander en premier la catégorie", () => {
       expect(result.missingArgs).toHaveNextMissingRule(
-        "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle"
+        "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle"
       );
     });
 
@@ -47,7 +47,7 @@ describe("CC 3248 - Ordre des questions pour la rupture conventionnelle", () => 
 
       it("doit demander si il a été au forfait jour", () => {
         expect(result.missingArgs).toHaveNextMissingRule(
-          "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour"
+          "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-ABCDE-forfait-jour"
         );
       });
 
@@ -67,7 +67,7 @@ describe("CC 3248 - Ordre des questions pour la rupture conventionnelle", () => 
 
         it("doit demander si il a toujours été au forfait jour", () => {
           expect(result.missingArgs).toHaveNextMissingRule(
-            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . toujours au forfait jour"
+            "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-ABCDE-toujours-au-forfait-jour"
           );
         });
 
@@ -89,7 +89,7 @@ describe("CC 3248 - Ordre des questions pour la rupture conventionnelle", () => 
 
           it("doit demander la date du passage au forfait jour", () => {
             expect(result.missingArgs).toHaveNextMissingRule(
-              "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . forfait jour . date"
+              "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-ABCDE-forfait-jour-date"
             );
           });
           describe("si il a renseigné une date", () => {
@@ -112,7 +112,7 @@ describe("CC 3248 - Ordre des questions pour la rupture conventionnelle", () => 
 
             it("doit demander si il était cadre", () => {
               expect(result.missingArgs).toHaveNextMissingRule(
-                "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre"
+                "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-ABCDE-avant-cadre"
               );
             });
 
@@ -159,7 +159,7 @@ describe("CC 3248 - Ordre des questions pour la rupture conventionnelle", () => 
 
           it("doit demander si il était cadre", () => {
             expect(result.missingArgs).toHaveNextMissingRule(
-              "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre"
+              "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-ABCDE-avant-cadre"
             );
           });
         });
@@ -181,7 +181,7 @@ describe("CC 3248 - Ordre des questions pour la rupture conventionnelle", () => 
 
         it("doit demander s'il a été classé cadre antérieurement", () => {
           expect(result.missingArgs).toHaveNextMissingRule(
-            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . ABCDE . avant cadre"
+            "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-ABCDE-avant-cadre"
           );
         });
       });
@@ -201,7 +201,7 @@ describe("CC 3248 - Ordre des questions pour la rupture conventionnelle", () => 
 
       it("doit demander son age", () => {
         expect(result.missingArgs).toHaveNextMissingRule(
-          "contrat salarié . convention collective . métallurgie . rupture conventionnelle . age"
+          "contrat-salarie-convention-collective-metallurgie-rupture-conventionnelle-age"
         );
 
         expect(result.missingArgs).toHaveNextMissingQuestion(
@@ -225,7 +225,7 @@ describe("CC 3248 - Ordre des questions pour la rupture conventionnelle", () => 
 
         it("doit demander s'il remplit les conditions pour partir à la retraite", () => {
           expect(result.missingArgs).toHaveNextMissingRule(
-            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . remplit conditions pour la retraite"
+            "contrat-salarie-convention-collective-metallurgie-indemnite-de-licenciement-categorie-professionnelle-FGHI-remplit-conditions-pour-la-retraite"
           );
         });
       });

@@ -58,7 +58,7 @@ const StepContratTravail = () => {
             id: "cdi",
           },
           {
-            label: "Contrat à durée déterminée (CDD) ou contrat d’intérim",
+            label: "Contrat à durée déterminée (CDD) ou contrat d'intérim",
             value: "cdd",
             id: "cdd",
           },

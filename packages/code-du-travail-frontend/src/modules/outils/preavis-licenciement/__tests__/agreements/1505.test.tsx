@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-commerces-de-detail-fruits-et-legumes-categorie-professionnelle"
         ),
         {
           target: { value: "'Agents de maîtrise AM1 et AM2'" },
@@ -58,7 +58,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-commerces-de-detail-fruits-et-legumes-categorie-professionnelle"
         ),
         {
           target: { value: "'Cadres C1 et C2'" },
@@ -77,7 +77,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - catégorie professionnelle"
+          "infos-contrat-salarie-convention-collective-commerces-de-detail-fruits-et-legumes-categorie-professionnelle"
         ),
         {
           target: { value: "'Employés E1 à E7'" },
@@ -90,7 +90,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - catégorie professionnelle Employés E1 à E7 - ancienneté"
+            "infos-contrat-salarie-convention-collective-commerces-de-detail-fruits-et-legumes-categorie-professionnelle-Employes-E1-a-E7-anciennete"
           ),
           {
             target: { value: "'2 ans ou moins'" },
@@ -109,7 +109,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - commerces de détail fruits et légumes - catégorie professionnelle Employés E1 à E7 - ancienneté"
+            "infos-contrat-salarie-convention-collective-commerces-de-detail-fruits-et-legumes-categorie-professionnelle-Employes-E1-a-E7-anciennete"
           ),
           {
             target: { value: "'Plus de 2 ans'" },

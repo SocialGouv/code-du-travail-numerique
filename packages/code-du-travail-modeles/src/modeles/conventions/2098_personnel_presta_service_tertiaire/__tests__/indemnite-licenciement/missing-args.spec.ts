@@ -22,7 +22,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
     );
 
     expect(missingArgs).toHaveNextMissingRule(
-      "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle"
+      "contrat-salarie-convention-collective-personnel-presta-service-tertiaire-inaptitude-suite-a-un-accident-non-professionnelle"
     );
   });
 
@@ -44,7 +44,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
     );
 
     expect(missingArgs).toHaveNextMissingRule(
-      "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle"
+      "contrat-salarie-convention-collective-personnel-presta-service-tertiaire-autre-licenciement-categorie-professionnelle"
     );
   });
 
@@ -68,7 +68,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
     );
 
     expect(missingArgs).toHaveNextMissingRule(
-      "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . age"
+      "contrat-salarie-convention-collective-personnel-presta-service-tertiaire-autre-licenciement-cadres-age"
     );
     expect(missingArgs).toHaveNextMissingQuestion(
       "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"

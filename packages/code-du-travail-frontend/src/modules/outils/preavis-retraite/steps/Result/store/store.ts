@@ -52,7 +52,7 @@ const createResultStore: StoreSliceWrapperPreavisRetraite<
       const hasHandicap =
         get().informationsData.input.publicodesInformations.find(
           (v) =>
-            v.question.name === "contrat salarié - travailleur handicapé" &&
+            v.question.name === "contrat-salarie-travailleur-handicape" &&
             v.info === "'Oui'"
         ) !== undefined;
 

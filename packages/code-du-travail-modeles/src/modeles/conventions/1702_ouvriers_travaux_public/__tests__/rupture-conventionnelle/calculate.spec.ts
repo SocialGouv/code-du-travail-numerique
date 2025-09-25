@@ -15,7 +15,7 @@ describe("Un seul type de licenciement pour la CC 1702", () => {
 
     const result = engine.calculate(input);
     expect(result).toNextMissingRuleBeEqual(
-      "contrat salarié . convention collective . ouvriers travaux public . rupture conventionnelle . age"
+      "contrat-salarie-convention-collective-ouvriers-travaux-public-rupture-conventionnelle-age"
     );
   });
 

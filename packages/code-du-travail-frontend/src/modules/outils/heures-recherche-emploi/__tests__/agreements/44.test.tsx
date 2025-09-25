@@ -28,7 +28,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - industries chimiques - typeRupture"
+          "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture"
         ),
         {
           target: { value: "'Démission'" },
@@ -41,7 +41,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Demission-categorie-professionnelle"
           ),
           {
             target: { value: "'Agents de maîtrise'" },
@@ -79,7 +79,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Demission-categorie-professionnelle"
           ),
           {
             target: { value: "'Ingénieurs, Cadres'" },
@@ -117,7 +117,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Demission-categorie-professionnelle"
           ),
           {
             target: { value: "'Ouvriers, Employés'" },
@@ -155,7 +155,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Démission - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Demission-categorie-professionnelle"
           ),
           {
             target: { value: "'Techniciens'" },
@@ -168,7 +168,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Démission - catégorie professionnelle Techniciens - groupe"
+              "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Demission-categorie-professionnelle-Techniciens-groupe"
             ),
             {
               target: { value: "'De I à III'" },
@@ -206,7 +206,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Démission - catégorie professionnelle Techniciens - groupe"
+              "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Demission-categorie-professionnelle-Techniciens-groupe"
             ),
             {
               target: { value: "'IV'" },
@@ -246,7 +246,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - industries chimiques - typeRupture"
+          "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture"
         ),
         {
           target: { value: "'Rupture de la période d'essai'" },
@@ -259,7 +259,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Rupture-de-la-periode-d'essai-categorie-professionnelle"
           ),
           {
             target: { value: "'Agents de maîtrise'" },
@@ -293,7 +293,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Rupture-de-la-periode-d'essai-categorie-professionnelle"
           ),
           {
             target: { value: "'Ingénieurs, Cadres'" },
@@ -306,7 +306,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle Ingénieurs, Cadres - ancienneté"
+              "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Rupture-de-la-periode-d'essai-categorie-professionnelle-Ingenieurs,-Cadres-anciennete"
             ),
             {
               target: { value: "'1 mois et demi ou moins'" },
@@ -334,7 +334,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle Ingénieurs, Cadres - ancienneté"
+              "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Rupture-de-la-periode-d'essai-categorie-professionnelle-Ingenieurs,-Cadres-anciennete"
             ),
             {
               target: { value: "'Plus de 1 mois et demi'" },
@@ -371,7 +371,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Rupture-de-la-periode-d'essai-categorie-professionnelle"
           ),
           {
             target: { value: "'Ouvriers, Employés'" },
@@ -384,7 +384,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle Ouvriers, Employés - durée du préavis"
+              "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Rupture-de-la-periode-d'essai-categorie-professionnelle-Ouvriers,-Employes-duree-du-preavis"
             ),
             {
               target: { value: "'15 jours'" },
@@ -416,7 +416,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle Ouvriers, Employés - durée du préavis"
+              "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Rupture-de-la-periode-d'essai-categorie-professionnelle-Ouvriers,-Employes-duree-du-preavis"
             ),
             {
               target: { value: "'6 jours'" },
@@ -449,7 +449,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Rupture-de-la-periode-d'essai-categorie-professionnelle"
           ),
           {
             target: { value: "'Techniciens'" },
@@ -462,7 +462,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle Techniciens - durée du préavis"
+              "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Rupture-de-la-periode-d'essai-categorie-professionnelle-Techniciens-duree-du-preavis"
             ),
             {
               target: { value: "'15 jours'" },
@@ -475,7 +475,7 @@ describe("HeuresRechercheEmploi", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle Techniciens - durée du préavis 15 jours - groupe"
+                "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Rupture-de-la-periode-d'essai-categorie-professionnelle-Techniciens-duree-du-preavis-15-jours-groupe"
               ),
               {
                 target: { value: "'De I à III'" },
@@ -507,7 +507,7 @@ describe("HeuresRechercheEmploi", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle Techniciens - durée du préavis 15 jours - groupe"
+                "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Rupture-de-la-periode-d'essai-categorie-professionnelle-Techniciens-duree-du-preavis-15-jours-groupe"
               ),
               {
                 target: { value: "'IV'" },
@@ -540,7 +540,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle Techniciens - durée du préavis"
+              "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Rupture-de-la-periode-d'essai-categorie-professionnelle-Techniciens-duree-du-preavis"
             ),
             {
               target: { value: "'6 jours'" },
@@ -553,7 +553,7 @@ describe("HeuresRechercheEmploi", () => {
           beforeEach(() => {
             fireEvent.change(
               screen.getByTestId(
-                "infos.contrat salarié - convention collective - industries chimiques - typeRupture Rupture de la période d'essai - catégorie professionnelle Techniciens - durée du préavis 6 jours - groupe"
+                "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Rupture-de-la-periode-d'essai-categorie-professionnelle-Techniciens-duree-du-preavis-6-jours-groupe"
               ),
               {
                 target: { value: "'De I à III'" },
@@ -588,7 +588,7 @@ describe("HeuresRechercheEmploi", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - industries chimiques - typeRupture"
+          "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture"
         ),
         {
           target: { value: "'Licenciement'" },
@@ -601,7 +601,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Licenciement-categorie-professionnelle"
           ),
           {
             target: { value: "'Agents de maîtrise'" },
@@ -639,7 +639,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Licenciement-categorie-professionnelle"
           ),
           {
             target: { value: "'Ingénieurs, Cadres'" },
@@ -677,7 +677,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Licenciement-categorie-professionnelle"
           ),
           {
             target: { value: "'Ouvriers, Employés'" },
@@ -715,7 +715,7 @@ describe("HeuresRechercheEmploi", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - industries chimiques - typeRupture Licenciement - catégorie professionnelle"
+            "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Licenciement-categorie-professionnelle"
           ),
           {
             target: { value: "'Techniciens'" },
@@ -728,7 +728,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Licenciement - catégorie professionnelle Techniciens - groupe"
+              "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Licenciement-categorie-professionnelle-Techniciens-groupe"
             ),
             {
               target: { value: "'De I à III'" },
@@ -766,7 +766,7 @@ describe("HeuresRechercheEmploi", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - industries chimiques - typeRupture Licenciement - catégorie professionnelle Techniciens - groupe"
+              "infos-contrat-salarie-convention-collective-industries-chimiques-typeRupture-Licenciement-categorie-professionnelle-Techniciens-groupe"
             ),
             {
               target: { value: "'IV'" },

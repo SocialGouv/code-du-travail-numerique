@@ -39,7 +39,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - métallurgie - âge"
+          "infos-contrat-salarie-convention-collective-metallurgie-age"
         ),
         {
           target: { value: "'Moins de 50 ans'" },
@@ -52,7 +52,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - métallurgie - âge Moins de 50 ans - position"
+            "infos-contrat-salarie-convention-collective-metallurgie-age-Moins-de-50-ans-position"
           ),
           {
             target: { value: "'A, B, C ou D'" },
@@ -65,7 +65,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge Moins de 50 ans - position A, B, C ou D - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-Moins-de-50-ans-position-A,-B,-C-ou-D-anciennete"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -86,7 +86,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge Moins de 50 ans - position A, B, C ou D - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-Moins-de-50-ans-position-A,-B,-C-ou-D-anciennete"
             ),
             {
               target: { value: "'2 ans ou plus'" },
@@ -108,7 +108,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - métallurgie - âge Moins de 50 ans - position"
+            "infos-contrat-salarie-convention-collective-metallurgie-age-Moins-de-50-ans-position"
           ),
           {
             target: { value: "'E'" },
@@ -121,7 +121,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge Moins de 50 ans - position E - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-Moins-de-50-ans-position-E-anciennete"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -142,7 +142,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge Moins de 50 ans - position E - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-Moins-de-50-ans-position-E-anciennete"
             ),
             {
               target: { value: "'Entre 2 ans et moins de 3 ans'" },
@@ -163,7 +163,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge Moins de 50 ans - position E - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-Moins-de-50-ans-position-E-anciennete"
             ),
             {
               target: { value: "'3 ans ou plus'" },
@@ -185,7 +185,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - métallurgie - âge Moins de 50 ans - position"
+            "infos-contrat-salarie-convention-collective-metallurgie-age-Moins-de-50-ans-position"
           ),
           {
             target: { value: "'F, G, H ou I'" },
@@ -198,7 +198,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge Moins de 50 ans - position F, G, H ou I - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-Moins-de-50-ans-position-F,-G,-H-ou-I-anciennete"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -219,7 +219,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge Moins de 50 ans - position F, G, H ou I - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-Moins-de-50-ans-position-F,-G,-H-ou-I-anciennete"
             ),
             {
               target: { value: "'Entre 2 ans et moins de 3 ans'" },
@@ -240,7 +240,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge Moins de 50 ans - position F, G, H ou I - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-Moins-de-50-ans-position-F,-G,-H-ou-I-anciennete"
             ),
             {
               target: { value: "'Entre 3 ans et moins de 5 ans'" },
@@ -261,7 +261,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge Moins de 50 ans - position F, G, H ou I - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-Moins-de-50-ans-position-F,-G,-H-ou-I-anciennete"
             ),
             {
               target: { value: "'5 ans ou plus'" },
@@ -284,7 +284,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - métallurgie - âge"
+          "infos-contrat-salarie-convention-collective-metallurgie-age"
         ),
         {
           target: { value: "'50 ans à 55 ans'" },
@@ -297,7 +297,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - métallurgie - âge 50 ans à 55 ans - position"
+            "infos-contrat-salarie-convention-collective-metallurgie-age-50-ans-a-55-ans-position"
           ),
           {
             target: { value: "'A, B, C ou D'" },
@@ -310,7 +310,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge 50 ans à 55 ans - position A, B, C ou D - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-50-ans-a-55-ans-position-A,-B,-C-ou-D-anciennete"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -331,7 +331,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge 50 ans à 55 ans - position A, B, C ou D - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-50-ans-a-55-ans-position-A,-B,-C-ou-D-anciennete"
             ),
             {
               target: { value: "'2 ans ou plus'" },
@@ -353,7 +353,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - métallurgie - âge 50 ans à 55 ans - position"
+            "infos-contrat-salarie-convention-collective-metallurgie-age-50-ans-a-55-ans-position"
           ),
           {
             target: { value: "'F, G, H ou I'" },
@@ -366,7 +366,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge 50 ans à 55 ans - position F, G, H ou I - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-50-ans-a-55-ans-position-F,-G,-H-ou-I-anciennete"
             ),
             {
               target: { value: "'Entre 3 ans et moins de 5 ans'" },
@@ -387,7 +387,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge 50 ans à 55 ans - position F, G, H ou I - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-50-ans-a-55-ans-position-F,-G,-H-ou-I-anciennete"
             ),
             {
               target: { value: "'5 ans ou plus'" },
@@ -410,7 +410,7 @@ describe("CalculateurPreavisLicenciement", () => {
     beforeEach(() => {
       fireEvent.change(
         screen.getByTestId(
-          "infos.contrat salarié - convention collective - métallurgie - âge"
+          "infos-contrat-salarie-convention-collective-metallurgie-age"
         ),
         {
           target: { value: "'55 ans et plus'" },
@@ -423,7 +423,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - métallurgie - âge 55 ans et plus - position"
+            "infos-contrat-salarie-convention-collective-metallurgie-age-55-ans-et-plus-position"
           ),
           {
             target: { value: "'A, B, C ou D'" },
@@ -436,7 +436,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge 55 ans et plus - position A, B, C ou D - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-55-ans-et-plus-position-A,-B,-C-ou-D-anciennete"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -457,7 +457,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge 55 ans et plus - position A, B, C ou D - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-55-ans-et-plus-position-A,-B,-C-ou-D-anciennete"
             ),
             {
               target: { value: "'2 ans ou plus'" },
@@ -479,7 +479,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - métallurgie - âge 55 ans et plus - position"
+            "infos-contrat-salarie-convention-collective-metallurgie-age-55-ans-et-plus-position"
           ),
           {
             target: { value: "'E'" },
@@ -492,7 +492,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge 55 ans et plus - position E - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-55-ans-et-plus-position-E-anciennete"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -513,7 +513,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge 55 ans et plus - position E - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-55-ans-et-plus-position-E-anciennete"
             ),
             {
               target: { value: "'Entre 2 ans et moins de 3 ans'" },
@@ -534,7 +534,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge 55 ans et plus - position E - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-55-ans-et-plus-position-E-anciennete"
             ),
             {
               target: { value: "'3 ans ou plus'" },
@@ -556,7 +556,7 @@ describe("CalculateurPreavisLicenciement", () => {
       beforeEach(() => {
         fireEvent.change(
           screen.getByTestId(
-            "infos.contrat salarié - convention collective - métallurgie - âge 55 ans et plus - position"
+            "infos-contrat-salarie-convention-collective-metallurgie-age-55-ans-et-plus-position"
           ),
           {
             target: { value: "'F, G, H ou I'" },
@@ -569,7 +569,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge 55 ans et plus - position F, G, H ou I - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-55-ans-et-plus-position-F,-G,-H-ou-I-anciennete"
             ),
             {
               target: { value: "'Moins de 2 ans'" },
@@ -590,7 +590,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge 55 ans et plus - position F, G, H ou I - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-55-ans-et-plus-position-F,-G,-H-ou-I-anciennete"
             ),
             {
               target: { value: "'Entre 2 ans et moins de 3 ans'" },
@@ -611,7 +611,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge 55 ans et plus - position F, G, H ou I - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-55-ans-et-plus-position-F,-G,-H-ou-I-anciennete"
             ),
             {
               target: { value: "'Entre 3 ans et moins de 5 ans'" },
@@ -632,7 +632,7 @@ describe("CalculateurPreavisLicenciement", () => {
         beforeEach(() => {
           fireEvent.change(
             screen.getByTestId(
-              "infos.contrat salarié - convention collective - métallurgie - âge 55 ans et plus - position F, G, H ou I - ancienneté"
+              "infos-contrat-salarie-convention-collective-metallurgie-age-55-ans-et-plus-position-F,-G,-H-ou-I-anciennete"
             ),
             {
               target: { value: "'5 ans ou plus'" },

@@ -24,7 +24,7 @@ describe("Validation de l'ordre des questions : CC 1672", () => {
 
     it("doit demander en premier la catégorie", () => {
       expect(result.missingArgs).toHaveNextMissingRule(
-        "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle"
+        "contrat-salarie-convention-collective-societes-d'assurances-categorie-professionnelle"
       );
     });
 
@@ -42,7 +42,7 @@ describe("Validation de l'ordre des questions : CC 1672", () => {
 
       it("doit demander si il a été non cadres avant", () => {
         expect(result.missingArgs).toHaveNextMissingRule(
-          "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . avant non cadres"
+          "contrat-salarie-convention-collective-societes-d'assurances-categorie-professionnelle-cadres-avant-non-cadres"
         );
       });
 
@@ -62,7 +62,7 @@ describe("Validation de l'ordre des questions : CC 1672", () => {
 
         it("doit demander la date du changement de status", () => {
           expect(result.missingArgs).toHaveNextMissingRule(
-            "contrat salarié . convention collective . sociétés d'assurances . catégorie professionnelle . cadres . date du statut cadre"
+            "contrat-salarie-convention-collective-societes-d'assurances-categorie-professionnelle-cadres-date-du-statut-cadre"
           );
         });
 
@@ -84,7 +84,7 @@ describe("Validation de l'ordre des questions : CC 1672", () => {
 
           it("doit demander son age", () => {
             expect(result.missingArgs).toHaveNextMissingRule(
-              "contrat salarié . convention collective . sociétés d'assurances . age"
+              "contrat-salarie-convention-collective-societes-d'assurances-age"
             );
             expect(result.missingArgs).toHaveNextMissingQuestion(
               "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
@@ -132,7 +132,7 @@ describe("Validation de l'ordre des questions : CC 1672", () => {
 
         it("doit demander son age", () => {
           expect(result.missingArgs).toHaveNextMissingRule(
-            "contrat salarié . convention collective . sociétés d'assurances . age"
+            "contrat-salarie-convention-collective-societes-d'assurances-age"
           );
           expect(result.missingArgs).toHaveNextMissingQuestion(
             "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?"
