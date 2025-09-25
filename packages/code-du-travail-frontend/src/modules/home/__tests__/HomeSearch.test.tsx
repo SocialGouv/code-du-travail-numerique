@@ -21,8 +21,6 @@ describe("<HomeSearch />", () => {
     jest.clearAllMocks();
   });
 
-  /*
-  TODO Désactivé pour l'AB Testing, à remettre en place ensuite.
   it("should show suggestions and send event tracking", async () => {
     const suggestions = [
       "congés payés et fractionnement",
@@ -71,7 +69,6 @@ describe("<HomeSearch />", () => {
       suggestions
     );
   });
-   */
 
   it("should emit search event when form is submitted", async () => {
     const emitSearchEventMock = jest.fn();

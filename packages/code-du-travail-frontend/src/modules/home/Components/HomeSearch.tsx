@@ -10,8 +10,6 @@ import { Autocomplete } from "../../common/Autocomplete";
 import { SUGGEST_MAX_RESULTS } from "../../../config";
 import { useRouter } from "next/navigation";
 import { useSearchTracking } from "src/modules/recherche/tracking";
-import { useABTesting } from "../../config/MatomoAnalytics";
-import { ABTestVariant } from "../../config/matomo/ABTestingConstant";
 
 export const HomeSearch = () => {
   const [query, setQuery] = useState("");
@@ -50,15 +48,6 @@ export const HomeSearch = () => {
     }
   };
 
-  const { abTest } = useABTesting();
-
-  const label =
-    abTest.variant == ABTestVariant.NEUTRAL
-      ? "Recherche neutre"
-      : abTest.variant == ABTestVariant.NATURAL
-        ? "Que recherchez-vous ?"
-        : "Recherchez par mots-clés";
-
   return (
     <form
       className={fr.cx(
@@ -74,7 +63,7 @@ export const HomeSearch = () => {
           hintText="par exemple : congés payés, durée de préavis"
           label={
             <>
-              {label}{" "}
+              Recherchez par mots-clés
               <span className={fr.cx("fr-sr-only")}>
                 , la sélection d&apos;une option charge une nouvelle page
               </span>

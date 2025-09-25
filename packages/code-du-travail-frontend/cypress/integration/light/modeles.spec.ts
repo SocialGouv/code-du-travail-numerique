@@ -29,9 +29,7 @@ describe("Modèles de documents", () => {
       .should("have.text", "Bienvenue sur le Code du travail numérique")
       .click();
 
-    // TODO à remettre en place après l'A/B Testing
-    // cy.selectByLabel("Recherchez par mots-clés")
-    cy.get('[data-testid="search-input"]').eq(1).as("home-searchbar");
+    cy.selectByLabel("Recherchez par mots-clés").as("home-searchbar");
 
     cy.get("@home-searchbar").type("modele rupture contrat periode d'essai");
 

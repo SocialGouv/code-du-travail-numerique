@@ -1,45 +1,17 @@
 "use client";
 
 import { usePathname, useSearchParams } from "next/navigation";
-import {
-  createContext,
-  PropsWithChildren,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import { Suspense, useEffect, useState } from "react";
 import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL, WIDGETS_PATH } from "../../config";
 import { getStoredConsent } from "../utils/consent";
 import init, { push } from "@socialgouv/matomo-next";
 import { getSourceUrlFromPath } from "../utils/url";
-import {
-  ABTesting,
-  ABTestingConfig,
-  ABTestVariant,
-} from "./matomo/ABTestingConstant";
 
-export type ABTest = { abTest: ABTesting; variant: ABTestVariant };
-
-type ABTestingContextType = {
-  abTest: ABTest;
-};
-
-const ABTestingContext = createContext<ABTestingContextType>({
-  abTest: {
-    abTest: ABTesting.SEARCH,
-    variant: ABTestVariant.NATURAL,
-  },
-});
-
-export const MatomoProvider = ({ children }: PropsWithChildren) => {
+function MatomoComponent() {
   const searchParams = useSearchParams();
   const searchParamsString = searchParams?.toString();
   const path = usePathname();
   const [previousPath, setPreviousPath] = useState<string | null>(null);
-  const [abTest, setABTest] = useState<ABTest>({
-    abTest: ABTesting.SEARCH,
-    variant: ABTestVariant.NATURAL,
-  });
 
   useEffect(() => {
     init({
@@ -102,9 +74,6 @@ export const MatomoProvider = ({ children }: PropsWithChildren) => {
 
   useEffect(() => {
     if (path && !isExcludedUrl(path, [WIDGETS_PATH])) {
-      // enable A/B Testing
-      initABTesting();
-
       let [pathname] = path.split("?");
       pathname = pathname.replace(/#.*/, "");
 
@@ -116,7 +85,7 @@ export const MatomoProvider = ({ children }: PropsWithChildren) => {
       push(["deleteCustomVariables", "page"]);
       setPreviousPath(pathname);
 
-      const query = searchParams?.get("query");
+      const query = searchParams?.get("q");
       push(["setDocumentTitle", document.title]);
       if (startsWith(path, "/recherche") || startsWith(path, "/search")) {
         push(["trackSiteSearch", query ?? ""]);
@@ -126,25 +95,14 @@ export const MatomoProvider = ({ children }: PropsWithChildren) => {
     }
   }, [path, searchParamsString]);
 
-  const initABTesting = () => {
-    if (!window._paq) return;
-    window._paq.push([
-      "AbTesting::create",
-      ABTestingConfig((test: ABTesting, variant: ABTestVariant) => {
-        setABTest({
-          abTest: test,
-          variant,
-        });
-      }),
-    ]);
-  };
+  return null;
+}
 
-  return (
-    <ABTestingContext.Provider value={{ abTest }}>
-      {children}
-    </ABTestingContext.Provider>
-  );
-};
+export const MatomoAnalytics = () => (
+  <Suspense fallback={null}>
+    <MatomoComponent />
+  </Suspense>
+);
 
 const startsWith = (str: string, needle: string) => {
   return str.substring(0, needle.length) === needle;
@@ -159,5 +117,3 @@ const isExcludedUrl = (url: string, patterns: RegExp[]): boolean => {
   });
   return excluded;
 };
-
-export const useABTesting = () => useContext(ABTestingContext);
