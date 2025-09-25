@@ -28,8 +28,8 @@ function mockFetch(data: any[]) {
   });
 }
 
-describe("AgreementSearch - Find CC by name", () => {
-  describe("Autocomplete functionality", () => {
+describe("Trouver sa CC - recherche par nom de CC", () => {
+  describe("Test de l'autocomplete", () => {
     let userAction: UserAction;
 
     beforeEach(() => {
@@ -40,7 +40,7 @@ describe("AgreementSearch - Find CC by name", () => {
     afterEach(() => {
       jest.clearAllMocks();
     });
-    it("should display and clear error messages correctly", async () => {
+    it("Vérifier l'affichage des erreurs", async () => {
       mockFetch([]);
       render(<AgreementSearch />);
       userAction.setInput(ui.searchByName.input.get(), "cccc");
@@ -56,7 +56,7 @@ describe("AgreementSearch - Find CC by name", () => {
         ui.searchByName.errorNotFound.info.query()
       ).not.toBeInTheDocument();
     });
-    it("should handle navigation and analytics events correctly", async () => {
+    it("Vérifier la navigation", async () => {
       mockFetch([
         {
           _source: {
@@ -108,7 +108,7 @@ describe("AgreementSearch - Find CC by name", () => {
       });
     });
 
-    it("should show info message when input has less than 2 characters", async () => {
+    it("Vérifier l'affichage des infos si moins 2 caractères", async () => {
       mockFetch([]);
       render(<AgreementSearch />);
       userAction.setInput(ui.searchByName.input.get(), "cc");
@@ -119,7 +119,7 @@ describe("AgreementSearch - Find CC by name", () => {
       expect(ui.searchByName.infoNotFound.query()).not.toBeInTheDocument();
     });
 
-    it("should display error message for invalid NAF codes", async () => {
+    it("Vérifier l'affichage du message d'erreur pour les mauvais code Naf", async () => {
       render(<AgreementSearch />);
       userAction.setInput(ui.searchByName.input.get(), "1234A");
       await waitFor(() => {
@@ -132,7 +132,7 @@ describe("AgreementSearch - Find CC by name", () => {
       });
     });
 
-    it("should display error message for invalid IDCC format", async () => {
+    it("Vérifier l'affichage du message d'erreur concernant du format du code", async () => {
       render(<AgreementSearch />);
       userAction.setInput(ui.searchByName.input.get(), "12345366");
 
