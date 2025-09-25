@@ -23,12 +23,7 @@ describe("<AccordionWithAnchor />", () => {
   });
 
   test("anchor is handle correctly", () => {
-    Object.defineProperty(window, "location", {
-      writable: true,
-      value: {
-        hash: "#title-2",
-      },
-    });
+    (window as any).location.hash = "#title-2";
     const scrollIntoViewMock = jest.fn();
     Element.prototype.scrollIntoView = scrollIntoViewMock;
 

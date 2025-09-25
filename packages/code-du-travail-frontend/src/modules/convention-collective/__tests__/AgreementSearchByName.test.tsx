@@ -138,10 +138,10 @@ describe("AgreementSearch - Find CC by name", () => {
 
       await waitFor(() => {
         expect(
-          byText(/Numéro d'identification \(IDCC\) incorrect./).get()
+          byText(/Numéro d’identification \(IDCC\) incorrect./).get()
             .textContent
         ).toEqual(
-          "Numéro d'identification (IDCC) incorrect. Ce numéro est composé de 4 chiffres uniquement."
+          "Numéro d’identification (IDCC) incorrect. Ce numéro est composé de 4 chiffres uniquement."
         );
       });
     });
