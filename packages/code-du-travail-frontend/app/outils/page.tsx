@@ -1,6 +1,6 @@
 import { DsfrLayout } from "../../src/modules/layout";
 import { generateDefaultMetadata } from "../../src/modules/common/metas";
-import { REVALIDATE_TIME, SITE_URL } from "../../src/config";
+import { SITE_URL } from "../../src/config";
 import { ToolsList } from "../../src/modules/outils/page-principale/ToolsList";
 import { notFound } from "next/navigation";
 import { fetchExternalTools, fetchTools } from "../../src/modules/outils";
@@ -13,9 +13,6 @@ export const metadata = generateDefaultMetadata({
   path: "/outils",
   overrideCanonical: `${SITE_URL}/outils`,
 });
-
-export const dynamic = "force-static";
-export const revalidate = REVALIDATE_TIME;
 
 export type ToolItem = Pick<
   ElasticTool,
