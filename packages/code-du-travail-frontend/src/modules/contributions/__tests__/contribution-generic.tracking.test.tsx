@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { sendEvent } from "../../utils";
@@ -7,7 +7,7 @@ import { ui as ccUi } from "../../convention-collective/__tests__/ui";
 import { byText } from "testing-library-selector";
 import { ContributionGeneric } from "../ContributionGeneric";
 import { Contribution } from "../type";
-import { searchEnterprises } from "../../enterprise/queries";
+import { searchEnterprises } from "../../enterprise";
 
 beforeEach(() => {
   localStorage.clear();
@@ -251,7 +251,6 @@ describe("<ContributionGeneric />", () => {
     await userEvent.click(ccUi.searchByEnterprise.input.get());
     await userEvent.type(ccUi.searchByEnterprise.input.get(), "carrefour");
     await userEvent.click(ccUi.searchByEnterprise.submitButton.get());
-    screen.debug(undefined, 1000000);
     await waitFor(() => {
       fireEvent.click(
         ccUi.searchByEnterprise.resultLines.carrefour.title.get()

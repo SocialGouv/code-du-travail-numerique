@@ -164,12 +164,6 @@ describe("<ContributionLayout />", () => {
         name: "16",
       });
     });
-  });
-  describe("base 2", () => {
-    beforeEach(async () => {
-      window.localStorage.clear();
-      rendering = render(<ContributionLayout contribution={contribution} />);
-    });
 
     it("should display correctly when a non-treated agreement is selected", async () => {
       (searchAgreement as jest.Mock).mockImplementation(() =>

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`<Share /> renders 1`] = `
 <div>
@@ -74,7 +74,7 @@ exports[`<Share /> renders 1`] = `
       <li>
         <button
           class="fr-btn fr-btn--tertiary ri-links-line fr-btn--icon-left before:c_var(--artwork-minor-blue-cumulus)"
-          id="fr-button-«r0»"
+          id="fr-button-:r0:"
           title="Copier le lien"
         >
           Lien de copie

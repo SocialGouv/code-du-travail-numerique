@@ -1,15 +1,15 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`<LetterModel /> affiche un modèle de document 1`] = `
 <div>
   <nav
     aria-label="vous êtes ici :"
     class="fr-breadcrumb fr-mb-2w fr-mt-2w"
-    id="fr-breadcrumb-«r0»"
+    id="fr-breadcrumb-:r0:"
     role="navigation"
   >
     <button
-      aria-controls="breadcrumb-«r1»"
+      aria-controls="breadcrumb-:r1:"
       aria-expanded="false"
       class="fr-breadcrumb__button"
     >
@@ -17,7 +17,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
     </button>
     <div
       class="fr-collapse"
-      id="breadcrumb-«r1»"
+      id="breadcrumb-:r1:"
     >
       <ol
         class="fr-breadcrumb__list"
@@ -71,7 +71,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
         >
           <div
             class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--download"
-            id="fr-tile-«r2»"
+            id="fr-tile-:r2:"
           >
             <div
               class="fr-tile__body"
@@ -121,7 +121,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
         <button
           class="fr-btn fr-btn--secondary fr-icon-clipboard-line fr-btn--icon-left w_100%! jc_center"
           data-testid="copy-button"
-          id="fr-button-«r3»"
+          id="fr-button-:r3:"
         >
           Copier le modèle
         </button>
@@ -155,7 +155,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
         <button
           class="fr-btn fr-btn--secondary fr-icon-clipboard-line fr-btn--icon-left w_100%! jc_center"
           data-testid="copy-button"
-          id="fr-button-«r4»"
+          id="fr-button-:r4:"
         >
           Copier le modèle
         </button>
@@ -169,7 +169,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
       >
         <div
           class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--download"
-          id="fr-tile-«r5»"
+          id="fr-tile-:r5:"
         >
           <div
             class="fr-tile__body"
@@ -236,7 +236,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
             <button
               aria-describedby="feedback-title"
               class="fr-btn fr-btn--secondary fr-mr-2w"
-              id="fr-button-«r6»"
+              id="fr-button-:r6:"
               type="button"
             >
               Non
@@ -244,7 +244,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
             <button
               aria-describedby="feedback-title"
               class="fr-btn fr-btn--secondary"
-              id="fr-button-«r7»"
+              id="fr-button-:r7:"
               type="button"
             >
               Oui
@@ -264,7 +264,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
         >
           <div
             class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--download"
-            id="fr-tile-«r8»"
+            id="fr-tile-:r8:"
           >
             <div
               class="fr-tile__body"
@@ -314,7 +314,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
         <button
           class="fr-btn fr-btn--secondary fr-icon-clipboard-line fr-btn--icon-left w_100%! jc_center"
           data-testid="copy-button"
-          id="fr-button-«r9»"
+          id="fr-button-:r9:"
         >
           Copier le modèle
         </button>
@@ -395,7 +395,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
           <li>
             <button
               class="fr-btn fr-btn--tertiary ri-links-line fr-btn--icon-left before:c_var(--artwork-minor-blue-cumulus)"
-              id="fr-button-«ra»"
+              id="fr-button-:ra:"
               title="Copier le lien"
             >
               Lien de copie

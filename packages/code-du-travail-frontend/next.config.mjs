@@ -59,6 +59,8 @@ const sentrySdkConfig = {
 };
 
 const nextConfig = {
+  // Issue with meta rendering : https://github.com/vercel/next.js/issues/79313
+  htmlLimitedBots: /.*/,
   poweredByHeader: false,
   compiler: {
     reactRemoveProperties:

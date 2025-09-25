@@ -30,7 +30,7 @@ const ExpandableCard = ({
   };
 
   return (
-    <div className={cardContainer(backgroundColor, showBottomTab)} id={id}>
+    <div className={cardContainer(backgroundColor)} id={id}>
       <button
         onClick={toggleExpand}
         className={cardButton}
@@ -89,9 +89,9 @@ const ExpandableCard = ({
 
 export default ExpandableCard;
 
-const cardContainer = (backgroundColor?: string, showBottomTab?: boolean) =>
+const cardContainer = (backgroundColor?: string) =>
   css({
-    background: backgroundColor || "var(--background-alt-blue-cumulus)",
+    background: backgroundColor ?? "var(--background-alt-blue-cumulus)",
     height: "fit-content",
     transition: "all 0.3s ease",
     position: "relative",
