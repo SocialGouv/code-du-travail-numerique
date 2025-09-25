@@ -119,6 +119,8 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
       }) => {
         const { missingArgs, result } = engine.setSituation(
           {
+            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées":
+              "'Non'",
             "contrat salarié . convention collective": "'IDCC3248'",
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
               "'A, B, C, D ou E'",
@@ -333,6 +335,8 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
       }) => {
         const { missingArgs, result } = engine.setSituation(
           {
+            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées":
+              "'Non'",
             "contrat salarié . convention collective": "'IDCC3248'",
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
               "'A, B, C, D ou E'",
@@ -424,6 +428,8 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
       }) => {
         const { missingArgs, result } = engine.setSituation(
           {
+            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées":
+              "'Non'",
             "contrat salarié . convention collective": "'IDCC3248'",
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
               "'A, B, C, D ou E'",
@@ -524,6 +530,8 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
       }) => {
         const { missingArgs, result } = engine.setSituation(
           {
+            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées":
+              "'Non'",
             "contrat salarié . convention collective": "'IDCC3248'",
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
               "'A, B, C, D ou E'",
@@ -883,6 +891,8 @@ describe("Calcul de l'indemnité de licenciement pour CC 3248", () => {
       }) => {
         const { missingArgs, result } = engine.setSituation(
           {
+            "contrat salarié . convention collective . métallurgie . indemnité de licenciement . licenciement pour motif absence prolongée ou répétées":
+              "'Non'",
             "contrat salarié . convention collective": "'IDCC3248'",
             "contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle":
               "'F, G, H ou I'",
