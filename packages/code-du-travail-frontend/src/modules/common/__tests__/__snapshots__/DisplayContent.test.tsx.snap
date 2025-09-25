@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`DisplayContent Accordions should not fail if no summary tag 1`] = `
 <div>
@@ -610,7 +610,7 @@ exports[`DisplayContent Infographic should replace div with infographic class to
   </div>
   <div
     class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--download"
-    id="fr-tile-«rg»"
+    id="fr-tile-:rg:"
   >
     <div
       class="fr-tile__body"

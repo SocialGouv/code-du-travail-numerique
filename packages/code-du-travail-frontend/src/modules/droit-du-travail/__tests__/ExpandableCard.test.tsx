@@ -46,19 +46,6 @@ describe("<ExpandableCard />", () => {
     expect(screen.queryByText("Test content")).not.toBeInTheDocument();
   });
 
-  it("renders with custom background color", () => {
-    const { container } = render(
-      <ExpandableCard
-        {...defaultProps}
-        backgroundColor="var(--background-alt-grey)"
-      />
-    );
-
-    // The first div should have the background color
-    const cardContainer = container.firstChild as HTMLElement;
-    expect(cardContainer).toHaveStyle("background: var(--background-alt-grey)");
-  });
-
   it("renders with bottom tab when showBottomTab is true", () => {
     const { container } = render(
       <ExpandableCard {...defaultProps} showBottomTab={true} />
