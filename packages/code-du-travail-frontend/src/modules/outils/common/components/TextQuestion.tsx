@@ -131,7 +131,6 @@ export function TextQuestion({
         error ? (
           <span
             id={errorId}
-            role="alert"
             dangerouslySetInnerHTML={{ __html: xssWrapper(error) }}
           />
         ) : subLabel ? (

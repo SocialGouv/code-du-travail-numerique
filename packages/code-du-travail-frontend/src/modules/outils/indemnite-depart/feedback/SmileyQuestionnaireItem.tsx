@@ -135,12 +135,7 @@ export const SmileyQuestionnaireItem = ({
         </div>
       </div>
       {displayError && (
-        <p
-          id={errorId}
-          className="fr-error-text"
-          role="alert"
-          aria-live="polite"
-        >
+        <p id={errorId} className="fr-error-text">
           Vous devez choisir une des réponses
         </p>
       )}
