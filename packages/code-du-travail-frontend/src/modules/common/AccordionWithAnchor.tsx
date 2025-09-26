@@ -12,7 +12,7 @@ export type Props = {
   items: {
     id?: string;
     title: string;
-    content: React.ReactElement;
+    content: React.ReactElement<any>;
   }[];
 };
 
@@ -20,7 +20,7 @@ export const AccordionWithAnchor = ({
   className,
   items,
   titleAs = "h2",
-}: Props): React.ReactElement => {
+}: Props): React.ReactElement<any> => {
   const path = useRouter();
   const [anchor, setAnchor] = useState<string | null>();
   const [itemsWithId, setItemsToDisplay] = useState<
@@ -28,7 +28,7 @@ export const AccordionWithAnchor = ({
       id: string;
       expended: boolean;
       title: string;
-      content: React.ReactElement;
+      content: React.ReactElement<any>;
     }[]
   >([]);
   const refs = useRef<Record<string, HTMLDivElement | null>>({});

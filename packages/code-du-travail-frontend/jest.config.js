@@ -15,7 +15,7 @@ const customJestConfig = {
     "<rootDir>/cypress/",
   ],
   testTimeout: 20000,
-  silent: true,
+  silent: false,
 };
 
 module.exports = createJestConfig(customJestConfig);

@@ -17,7 +17,7 @@ type QuestionnaireProps = {
 };
 
 export const Questionnaire = forwardRef<HTMLHeadingElement, QuestionnaireProps>(
-  ({ onClick, category }, ref): React.ReactElement => {
+  ({ onClick, category }, ref): React.ReactElement<any> => {
     const [status, setStatus] = useState<FEEDBACK_RESULT>();
     const [displayError, setDisplayError] = useState(false);
     const { trackFeedback } = useFeedbackEvents();

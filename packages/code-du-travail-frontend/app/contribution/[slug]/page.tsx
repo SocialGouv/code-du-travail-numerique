@@ -7,7 +7,8 @@ import {
   fetchContributionBySlug,
 } from "../../../src/modules/contributions";
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const { metas } = await getContribution(params.slug);
 
   return generateDefaultMetadata({
@@ -17,7 +18,8 @@ export async function generateMetadata({ params }) {
   });
 }
 
-async function Contribution({ params }) {
+async function Contribution(props) {
+  const params = await props.params;
   const contribution = await getContribution(params.slug);
   return (
     <DsfrLayout>

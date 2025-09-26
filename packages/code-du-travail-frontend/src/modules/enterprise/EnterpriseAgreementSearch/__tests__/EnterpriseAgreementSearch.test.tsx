@@ -1,8 +1,7 @@
-import { render } from "@testing-library/react";
+import { render, waitFor } from "@testing-library/react";
 import React from "react";
 import { EnterpriseAgreementSearch } from "../EnterpriseAgreementSearch";
 import { ui } from "./ui";
-import { wait } from "@testing-library/user-event/dist/utils";
 import { searchEnterprises } from "../../queries";
 import { sendEvent } from "../../../utils";
 import { UserAction } from "src/modules/outils/common/utils/UserAction";
@@ -69,7 +68,9 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
         "carrefour"
       );
       userAction.click(ui.enterpriseAgreementSearch.submitButton.get());
-      await wait();
+      await waitFor(() => {
+        expect(sendEvent).toHaveBeenCalledTimes(1);
+      });
       expect(sendEvent).toHaveBeenCalledTimes(1);
       expect(sendEvent).toHaveBeenCalledWith({
         action: "Trouver sa convention collective",
@@ -139,13 +140,14 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
         "recherche"
       );
       userAction.click(ui.enterpriseAgreementSearch.submitButton.get());
-      await wait();
-      expect(
-        ui.enterpriseAgreementSearch.errorNotFound.error.query()
-      ).toBeInTheDocument();
-      expect(
-        ui.enterpriseAgreementSearch.errorNotFound.info.query()
-      ).toBeInTheDocument();
+      await waitFor(() => {
+        expect(
+          ui.enterpriseAgreementSearch.errorNotFound.error.query()
+        ).toBeInTheDocument();
+        expect(
+          ui.enterpriseAgreementSearch.errorNotFound.info.query()
+        ).toBeInTheDocument();
+      });
     });
 
     it("Vérifier l'affichage de la recherche en mode widget", async () => {
@@ -188,25 +190,26 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
         "carrefour"
       );
       userAction.click(ui.enterpriseAgreementSearch.submitButton.get());
-      await wait();
-      expect(
-        ui.enterpriseAgreementSearch.resultLines.carrefour.title.query()
-      ).toBeInTheDocument();
-      expect(
-        ui.enterpriseAgreementSearch.resultLines.carrefour.link.query()
-      ).toHaveAttribute(
-        "href",
-        "/widgets/convention-collective/entreprise/345130488?q=carrefour"
-      );
-      expect(
-        ui.enterpriseAgreementSearch.childminder.link.query()
-      ).toHaveAttribute(
-        "href",
-        "/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile"
-      );
-      expect(
-        ui.enterpriseAgreementSearch.childminder.link.query()
-      ).toHaveAttribute("target", "_blank");
+      await waitFor(() => {
+        expect(
+          ui.enterpriseAgreementSearch.resultLines.carrefour.title.query()
+        ).toBeInTheDocument();
+        expect(
+          ui.enterpriseAgreementSearch.resultLines.carrefour.link.query()
+        ).toHaveAttribute(
+          "href",
+          "/widgets/convention-collective/entreprise/345130488?q=carrefour"
+        );
+        expect(
+          ui.enterpriseAgreementSearch.childminder.link.query()
+        ).toHaveAttribute(
+          "href",
+          "/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile"
+        );
+        expect(
+          ui.enterpriseAgreementSearch.childminder.link.query()
+        ).toHaveAttribute("target", "_blank");
+      });
     });
   });
 });

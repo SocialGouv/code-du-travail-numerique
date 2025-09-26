@@ -21,7 +21,7 @@ type QuestionnaireAdvancedProps = {
 export const QuestionnaireAdvanced = forwardRef<
   HTMLHeadingElement,
   QuestionnaireAdvancedProps
->(({ onClick, category }, ref): React.ReactElement => {
+>(({ onClick, category }, ref): React.ReactElement<any> => {
   const path = usePathname();
   const [statusSimulator, setStatusSimulator] = useState<FEEDBACK_RESULT>();
   const [statusQuestion, setStatusQuestion] = useState<FEEDBACK_RESULT>();
