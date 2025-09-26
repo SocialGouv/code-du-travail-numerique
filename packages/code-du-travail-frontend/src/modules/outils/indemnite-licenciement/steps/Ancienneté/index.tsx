@@ -1,3 +1,4 @@
+import { fr } from "@codegouvfr/react-dsfr";
 import React, { useContext, useEffect, useMemo } from "react";
 import {
   RadioQuestion,
@@ -11,28 +12,6 @@ import {
   IndemniteDepartContext,
   useIndemniteDepartStore,
 } from "src/modules/outils/indemnite-depart/store";
-
-// Import des composants UI spécifiques pour les titres de sections
-const SectionTitle = ({
-  hasSmallMarginTop,
-  children,
-}: {
-  hasSmallMarginTop?: boolean;
-  children: React.ReactNode;
-}) => <h3 className={hasSmallMarginTop ? "fr-mt-2w" : ""}>{children}</h3>;
-
-const SectionTitleWithTooltip = ({
-  name,
-  tooltip,
-}: {
-  name: string;
-  tooltip: { content: React.ReactNode };
-}) => (
-  <div>
-    <h3>{name}</h3>
-    <div className="tooltip-content">{tooltip.content}</div>
-  </div>
-);
 
 const StepAnciennete = () => {
   const store = useContext(IndemniteDepartContext);
@@ -93,80 +72,75 @@ const StepAnciennete = () => {
 
   return (
     <>
-      <SectionTitle hasSmallMarginTop>
-        Dates de début et de fin de contrat
-      </SectionTitle>
-      <TextQuestion
-        label="Quelle est la date de début du contrat de travail&nbsp;?"
-        inputType="date"
-        value={dateEntree}
-        onChange={onChangeDateEntree}
-        error={errorDateEntree}
-        id="dateEntree"
-        dataTestId={"date-entree"}
-      />
-      <TextQuestion
-        label="Quelle est la date de notification du licenciement&nbsp;?"
-        inputType="date"
-        value={dateNotification}
-        onChange={onChangeDateNotification}
-        error={errorDateNotification}
-        id="dateNotification"
-        dataTestId={"date-notification"}
-      />
-      <TextQuestion
-        label="Quelle est la date de fin du préavis de licenciement (date de fin du contrat)&nbsp;?"
-        inputType="date"
-        value={dateSortie}
-        onChange={onChangeDateSortie}
-        error={errorDateSortie}
-        id="dateSortie"
-        dataTestId={"date-sortie"}
-        subLabel="En cas de dispense de préavis à l'initiative de l'employeur, ou si le licenciement intervient à la suite d'un avis d'inaptitude non professionnelle, indiquer la date de fin du préavis « théorique » non effectué."
-      />
-      <SectionTitleWithTooltip
-        name="Période d'absence prolongée"
-        tooltip={{
-          content: (
-            <p>
-              Pour rendre la saisie de l&apos;outil plus simple, les absences de
-              moins d&apos;un mois ne sont pas comptabilisées. Or, ces absences
-              peuvent impacter l&apos;ancienneté et donner ainsi lieu à un
-              montant d&apos;indemnité inférieur à celui calculé par notre
-              simulateur.
-            </p>
-          ),
-        }}
-      />
-      <RadioQuestion
-        questions={[
-          {
-            label: "Oui",
-            value: "oui",
-            id: "hasAbsenceProlonge-oui",
-          },
-          {
-            label: "Non",
-            value: "non",
-            id: "hasAbsenceProlonge-non",
-          },
-        ]}
-        name="hasAbsenceProlonge"
-        label="Y a-t-il eu des absences de plus d'un mois durant le contrat de travail&nbsp;?"
-        selectedOption={hasAbsenceProlonge}
-        onChangeSelectedOption={onChangeHasAbsenceProlonge}
-        error={errorAbsenceProlonge}
-      />
-      {hasAbsenceProlonge === "oui" && (
-        <AbsencePeriods
-          onChange={onChangeAbsencePeriods}
-          motifs={motifs}
-          absences={absencePeriods}
-          error={errorAbsencePeriods}
-          informationData={informationData}
-          messageMotifExample={messageMotifsExample}
+      <div className={fr.cx("fr-mt-2w")}>
+        <h3>Dates de début et de fin de contrat</h3>
+        <TextQuestion
+          label="Quelle est la date de début du contrat de travail&nbsp;?"
+          inputType="date"
+          value={dateEntree}
+          onChange={onChangeDateEntree}
+          error={errorDateEntree}
+          id="dateEntree"
+          dataTestId={"date-entree"}
         />
-      )}
+        <TextQuestion
+          label="Quelle est la date de notification du licenciement&nbsp;?"
+          inputType="date"
+          value={dateNotification}
+          onChange={onChangeDateNotification}
+          error={errorDateNotification}
+          id="dateNotification"
+          dataTestId={"date-notification"}
+        />
+        <TextQuestion
+          label="Quelle est la date de fin du préavis de licenciement (date de fin du contrat)&nbsp;?"
+          inputType="date"
+          value={dateSortie}
+          onChange={onChangeDateSortie}
+          error={errorDateSortie}
+          id="dateSortie"
+          dataTestId={"date-sortie"}
+          subLabel="En cas de dispense de préavis à l'initiative de l'employeur, ou si le licenciement intervient à la suite d'un avis d'inaptitude non professionnelle, indiquer la date de fin du préavis « théorique » non effectué."
+        />
+      </div>
+      <div className={fr.cx("fr-mt-2w")}>
+        <h3>Période d&apos;absence prolongée</h3>
+        <p>
+          Pour rendre la saisie de l&apos;outil plus simple, les absences de
+          moins d&apos;un mois ne sont pas comptabilisées. Or, ces absences
+          peuvent impacter l&apos;ancienneté et donner ainsi lieu à un montant
+          d&apos;indemnité inférieur à celui calculé par notre simulateur.
+        </p>
+        <RadioQuestion
+          questions={[
+            {
+              label: "Oui",
+              value: "oui",
+              id: "hasAbsenceProlonge-oui",
+            },
+            {
+              label: "Non",
+              value: "non",
+              id: "hasAbsenceProlonge-non",
+            },
+          ]}
+          name="hasAbsenceProlonge"
+          label="Y a-t-il eu des absences de plus d'un mois durant le contrat de travail&nbsp;?"
+          selectedOption={hasAbsenceProlonge}
+          onChangeSelectedOption={onChangeHasAbsenceProlonge}
+          error={errorAbsenceProlonge}
+        />
+        {hasAbsenceProlonge === "oui" && (
+          <AbsencePeriods
+            onChange={onChangeAbsencePeriods}
+            motifs={motifs}
+            absences={absencePeriods}
+            error={errorAbsencePeriods}
+            informationData={informationData}
+            messageMotifExample={messageMotifsExample}
+          />
+        )}
+      </div>
       {errorPublicodes && (
         <AccessibleAlert
           title="Attention"

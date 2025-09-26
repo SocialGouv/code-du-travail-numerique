@@ -103,8 +103,8 @@ export const SalaireTempsPlein = ({
   };
 
   return (
-    <div>
-      <p className={fr.cx("fr-text--bold")}>{title}</p>
+    <fieldset>
+      <legend className={fr.cx("fr-text--bold", "fr-mb-2w")}>{title}</legend>
       <HighlightSalary
         agreementNumber={agreementNumber}
         salaireTempsPleinMessage={
@@ -215,7 +215,7 @@ export const SalaireTempsPlein = ({
       </div>
 
       {note && <p className={fr.cx("fr-text--sm", "fr-mt-2w")}>{note}</p>}
-    </div>
+    </fieldset>
   );
 };
 
