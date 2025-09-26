@@ -21,21 +21,6 @@ export async function generateMetadata({ params }) {
   });
 }
 
-export async function generateStaticParams() {
-  try {
-    const glossary = await fetchGlossary();
-    return glossary.map((term) => ({
-      slug: term.slug,
-    }));
-  } catch (error) {
-    console.error(
-      "Erreur lors de la récupération du glossaire pour les pages statiques:",
-      error
-    );
-    return [];
-  }
-}
-
 async function GlossaryTermPage({ params }) {
   const glossary = await fetchGlossary();
   const term = glossary.find((term) => params.slug === term.slug);
