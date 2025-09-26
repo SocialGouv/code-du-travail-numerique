@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.191.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.190.0...v4.191.0) (2025-09-26)
+
+
+### Bug Fixes
+
+* **accessibilité:** correction des `id` générés par le modeles sur les simulateurs ([#6835](https://github.com/SocialGouv/code-du-travail-numerique/issues/6835)) ([43e3499](https://github.com/SocialGouv/code-du-travail-numerique/commit/43e3499e589e3185527dbeb79a84b25098b3c422))
+* **accessibilité:** modification du contraste au niveau de la popup de cookies (règle 3.2) ([845a7fd](https://github.com/SocialGouv/code-du-travail-numerique/commit/845a7fdf3259079b20d9b0ed942accff3c11503b))
+* **matomo:** utilisation de la heatmap uniquement si le `CookieBanner` est présent ([#6844](https://github.com/SocialGouv/code-du-travail-numerique/issues/6844)) ([f5cd34e](https://github.com/SocialGouv/code-du-travail-numerique/commit/f5cd34e81337832c70da2e15e36853fdaf9dccc0))
+* onglet fiche sp impacter par autres onglets ([#6826](https://github.com/SocialGouv/code-du-travail-numerique/issues/6826)) ([4cde6dc](https://github.com/SocialGouv/code-du-travail-numerique/commit/4cde6dc943f09793f6981826787c86b2fe27bd45))
+* perte des visites sur les pages glossaire, la page outil et stats ([#6839](https://github.com/SocialGouv/code-du-travail-numerique/issues/6839)) ([e329a64](https://github.com/SocialGouv/code-du-travail-numerique/commit/e329a648a7eac32ccbca8218b27346ac18a4749e))
+* url renseignement en erreur ([#6828](https://github.com/SocialGouv/code-du-travail-numerique/issues/6828)) ([e993c71](https://github.com/SocialGouv/code-du-travail-numerique/commit/e993c7172655266c83dd4d2b4ac62aa1e75dd42b))
+* **wording:** synchronisation orthographique ([#6827](https://github.com/SocialGouv/code-du-travail-numerique/issues/6827)) ([3195a36](https://github.com/SocialGouv/code-du-travail-numerique/commit/3195a36899ffd741591708e1f150e93c754aada0))
+
+
+### Features
+
+* retrait du code pour l'AB Testing ([#6842](https://github.com/SocialGouv/code-du-travail-numerique/issues/6842)) ([ec1dbe2](https://github.com/SocialGouv/code-du-travail-numerique/commit/ec1dbe2787f5fb931334350bbf7134ffc42b1ce5))
+
+
+
+
+
 # [4.190.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.189.0...v4.190.0) (2025-09-18)
 
 
