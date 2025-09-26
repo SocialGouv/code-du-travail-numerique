@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.192.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.191.0...v4.192.0) (2025-09-26)
+
+
+### Bug Fixes
+
+* **accessibilité:** ajout d'un fieldset sur les champs complexes (règle 11.5) [#6845](https://github.com/SocialGouv/code-du-travail-numerique/issues/6845) ([28acfc3](https://github.com/SocialGouv/code-du-travail-numerique/commit/28acfc3d4f7beaec6aa373f37de621d41ff276f5))
+
+
+### Features
+
+* perte du referrer sur matomo ([#6843](https://github.com/SocialGouv/code-du-travail-numerique/issues/6843)) ([9c3373a](https://github.com/SocialGouv/code-du-travail-numerique/commit/9c3373ae52b1ceae9112c7f85e5ddfbc2558caa9))
+
+
+
+
+
 # [4.191.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.190.0...v4.191.0) (2025-09-26)
 
 
