@@ -28,6 +28,7 @@ export type NumberedScaleQuestionnaireItemProps = {
   onChange: (status: FEEDBACK_RESULT) => void;
   id?: string;
   hint?: string;
+  shouldFocusOnError?: boolean;
 };
 
 // Component for numbered scale feedback (1-5)
@@ -39,6 +40,7 @@ export const NumberedScaleQuestionnaireItem = ({
   onChange,
   id,
   hint,
+  shouldFocusOnError,
 }: NumberedScaleQuestionnaireItemProps) => {
   const [status, setStatus] = useState<Status>();
   const fieldsetId = `fieldset-${title.toLowerCase().replace(/\s+/g, "-")}`;
@@ -50,12 +52,12 @@ export const NumberedScaleQuestionnaireItem = ({
   useEffect(() => {
     if (displayError) {
       setTimeout(() => {
-        if (firstRadioRef.current) {
+        if (firstRadioRef.current && shouldFocusOnError) {
           firstRadioRef.current.focus();
         }
       }, 100);
     }
-  }, [displayError]);
+  }, [displayError, shouldFocusOnError]);
 
   return (
     <div
@@ -121,14 +123,7 @@ export const NumberedScaleQuestionnaireItem = ({
         </div>
       </fieldset>
       {displayError && (
-        <p
-          ref={errorRef}
-          id={errorId}
-          className="fr-error-text"
-          role="alert"
-          aria-live="polite"
-          tabIndex={-1}
-        >
+        <p ref={errorRef} id={errorId} className="fr-error-text" tabIndex={-1}>
           Vous devez répondre à au moins une des questions
         </p>
       )}

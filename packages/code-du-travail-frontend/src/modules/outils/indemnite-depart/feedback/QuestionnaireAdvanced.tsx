@@ -136,6 +136,7 @@ export const QuestionnaireAdvanced = forwardRef<
             très facile."
           id="simulator"
           displayError={displayErrorSimulator}
+          shouldFocusOnError
         />
         <NumberedScaleQuestionnaireItem
           title="Qu'avez-vous pensé des informations et des instructions fournies ?"
