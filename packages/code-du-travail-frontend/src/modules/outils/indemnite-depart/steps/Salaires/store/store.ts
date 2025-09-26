@@ -18,7 +18,7 @@ import { IndemniteDepartStepName } from "../../..";
 import { computeSalaryPeriods } from "../../../common";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { add } from "date-fns";
-import { StoreSlice } from "../../../types";
+import { IndemniteDepartType, StoreSlice } from "../../../types";
 import { dateToString, parse } from "src/modules/outils/common/utils";
 import { ValidationResponse } from "src/modules/outils/common/components/SimulatorLayout/types";
 import { deepMergeArray } from "src/modules/utils/array";
@@ -38,7 +38,7 @@ const createSalairesStore: StoreSlice<
   AncienneteStoreSlice &
     ContratTravailStoreSlice &
     CommonAgreementStoreSlice<PublicodesSimulator.INDEMNITE_LICENCIEMENT>
-> = (set, get) => ({
+> = (set, get, { type }) => ({
   salairesData: { ...initialState },
   salairesFunction: {
     initFieldSalaries: () => {
@@ -46,8 +46,9 @@ const createSalairesStore: StoreSlice<
       const contratTravailInput = get().contratTravailData.input;
       const dateNotification = add(
         parse(
-          contratTravailInput.dateArretTravail ??
-            ancienneteInput.dateNotification!
+          (type === IndemniteDepartType.LICENCIEMENT
+            ? contratTravailInput.dateArretTravail
+            : undefined) ?? ancienneteInput.dateNotification!
         ),
         {
           days: 1,
