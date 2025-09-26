@@ -319,7 +319,7 @@ export const CookieConsentDSFR = () => {
                           >
                             Mesure d&apos;audience - Obligatoire
                           </label>
-                          <p className={fr.cx("fr-hint-text")}>
+                          <p className={fr.cx("fr-info-text")}>
                             Ces cookies nous permettent d&apos;établir des
                             statistiques de fréquentation de notre site et
                             d&apos;améliorer ses performances.
@@ -357,7 +357,7 @@ export const CookieConsentDSFR = () => {
                           >
                             Suivi des campagnes publicitaires
                           </label>
-                          <p className={fr.cx("fr-hint-text")}>
+                          <p className={fr.cx("fr-info-text")}>
                             Ces cookies nous permettent de suivre
                             l&apos;efficacité de nos campagnes publicitaires sur
                             les moteurs de recherche.
@@ -397,7 +397,7 @@ export const CookieConsentDSFR = () => {
                           >
                             Carte des chaleurs
                           </label>
-                          <p className={fr.cx("fr-hint-text")}>
+                          <p className={fr.cx("fr-info-text")}>
                             Cette fonctionnalité nous permet de visualiser
                             comment les utilisateurs interagissent avec notre
                             site (clics, mouvements de souris) pour améliorer
