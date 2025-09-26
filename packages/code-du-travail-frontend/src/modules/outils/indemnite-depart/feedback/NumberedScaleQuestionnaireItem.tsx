@@ -123,7 +123,7 @@ export const NumberedScaleQuestionnaireItem = ({
         </div>
       </fieldset>
       {displayError && (
-        <p ref={errorRef} id={errorId} className="fr-error-text" tabIndex={-1}>
+        <p ref={errorRef} id={errorId} className="fr-error-text">
           Vous devez répondre à au moins une des questions
         </p>
       )}
