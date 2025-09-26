@@ -1,6 +1,14 @@
 import { byTestId, byText } from "testing-library-selector";
 
 export const ui = {
+  error: {
+    contractType: byText(
+      "Ce type de contrat ne permet pas au salarié d'avoir droit à une prime de précarité."
+    ),
+    calculation: byText(
+      "Une erreur est survenue lors du calcul. Veuillez réessayer."
+    ),
+  },
   introduction: {
     startButton: byText("Commencer"),
   },
@@ -60,6 +68,11 @@ export const ui = {
     salaireMensuel: (index: number) => byTestId(`salaireMensuel-${index}`),
     addSalaire: byTestId("addSalaire"),
     removeSalaire: (index: number) => byTestId(`removeSalaire-${index}`),
+  },
+  result: {
+    presentation: byText(
+      "À partir des éléments que vous avez saisis, le montant de votre indemnité est estimé à"
+    ),
   },
   next: byTestId("next-button"),
 };
