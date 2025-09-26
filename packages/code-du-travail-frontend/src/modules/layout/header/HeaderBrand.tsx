@@ -23,7 +23,7 @@ export const HeaderBrand = () => {
             <Image
               className={`${fr.cx("fr-responsive-img")} ${Logo}`}
               src="/static/assets/img/logo.svg"
-              alt="Accueil - Code du travail numérique, Ministère du Travail"
+              alt=""
               width={145}
               height={50}
               priority
