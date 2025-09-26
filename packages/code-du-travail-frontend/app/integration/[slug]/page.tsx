@@ -21,12 +21,6 @@ const getModelesList = async () => {
     ?.sort((a, b) => a.label.localeCompare(b.label));
 };
 
-export async function generateStaticParams() {
-  return keys.map((slug) => ({
-    slug,
-  }));
-}
-
 export async function generateMetadata({
   params,
 }: {

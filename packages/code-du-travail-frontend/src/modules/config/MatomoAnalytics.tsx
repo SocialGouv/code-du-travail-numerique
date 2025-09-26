@@ -7,7 +7,15 @@ import { getStoredConsent } from "../utils/consent";
 import init, { push } from "@socialgouv/matomo-next";
 import { getSourceUrlFromPath } from "../utils/url";
 
-function MatomoComponent() {
+type MatomoComponentProps = {
+  hasMatomoHeatmapEnabled: boolean;
+  hasHeartBeatTimerEnabled: boolean;
+};
+
+function MatomoComponent({
+  hasMatomoHeatmapEnabled,
+  hasHeartBeatTimerEnabled,
+}: MatomoComponentProps) {
   const searchParams = useSearchParams();
   const searchParamsString = searchParams?.toString();
   const path = usePathname();
@@ -33,7 +41,7 @@ function MatomoComponent() {
     const consent = getStoredConsent();
     console.log("Consent for Matomo Heatmap:", consent.matomoHeatmap);
 
-    if (consent.matomoHeatmap) {
+    if (consent.matomoHeatmap && hasMatomoHeatmapEnabled) {
       // Charger tracker.min.js explicitement
       const script = document.createElement("script");
       script.src = `${PIWIK_URL}/plugins/HeatmapSessionRecording/tracker.min.js`;
@@ -67,7 +75,7 @@ function MatomoComponent() {
       };
     }
 
-    if (consent.matomo) {
+    if (consent.matomo && hasHeartBeatTimerEnabled) {
       push(["enableHeartBeatTimer"]);
     }
   }, []);
@@ -98,9 +106,18 @@ function MatomoComponent() {
   return null;
 }
 
-export const MatomoAnalytics = () => (
+type MatomoAnalyticsProps = {
+  hasCookieBannerEnabled: boolean;
+};
+
+export const MatomoAnalytics = ({
+  hasCookieBannerEnabled,
+}: MatomoAnalyticsProps) => (
   <Suspense fallback={null}>
-    <MatomoComponent />
+    <MatomoComponent
+      hasHeartBeatTimerEnabled={hasCookieBannerEnabled}
+      hasMatomoHeatmapEnabled={hasCookieBannerEnabled}
+    />
   </Suspense>
 );
 

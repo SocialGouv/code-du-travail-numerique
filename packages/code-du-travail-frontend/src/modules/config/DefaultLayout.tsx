@@ -63,7 +63,7 @@ export default function DefaultLayout({
           {children}
           {showCookieBanner && <ConsentManager />}
         </DsfrProvider>
-        <MatomoAnalytics />
+        <MatomoAnalytics hasCookieBannerEnabled={showCookieBanner} />
         {ENV === "development" && <SentryTest />}
       </body>
     </html>
