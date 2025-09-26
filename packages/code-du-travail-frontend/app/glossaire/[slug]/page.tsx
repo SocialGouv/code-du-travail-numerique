@@ -3,12 +3,8 @@ import { DsfrLayout } from "../../../src/modules/layout";
 
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { REVALIDATE_TIME } from "../../../src/config";
 import { GlossaryTermDetail } from "src/modules/glossaire/GlossaryTermDetail";
 import { fetchGlossary } from "../../../src/modules/glossaire/queries";
-
-export const dynamic = "force-static";
-export const revalidate = REVALIDATE_TIME;
 
 export async function generateMetadata({ params }) {
   const glossary = await fetchGlossary();
