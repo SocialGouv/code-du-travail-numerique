@@ -2,10 +2,9 @@
 
 import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
-import { PIWIK_SITE_ID, PIWIK_URL, SITE_URL, WIDGETS_PATH } from "../../config";
+import { PIWIK_SITE_ID, PIWIK_URL, WIDGETS_PATH } from "../../config";
 import { getStoredConsent } from "../utils/consent";
 import init, { push } from "@socialgouv/matomo-next";
-import { getSourceUrlFromPath } from "../utils/url";
 
 type MatomoComponentProps = {
   hasMatomoHeatmapEnabled: boolean;
@@ -26,8 +25,7 @@ function MatomoComponent({
       siteId: PIWIK_SITE_ID,
       url: PIWIK_URL,
       onInitialization: () => {
-        const referrerUrl =
-          document?.referrer || getSourceUrlFromPath(SITE_URL + path);
+        const referrerUrl = document?.referrer || searchParams.get("src_url");
         if (referrerUrl) {
           push(["setReferrerUrl", referrerUrl]);
         }
