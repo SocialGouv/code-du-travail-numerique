@@ -5,6 +5,7 @@ import { Suspense, useEffect, useState } from "react";
 import { PIWIK_SITE_ID, PIWIK_URL, WIDGETS_PATH } from "../../config";
 import { getStoredConsent } from "../utils/consent";
 import init, { push } from "@socialgouv/matomo-next";
+import Script from "next/script";
 
 type MatomoComponentProps = {
   hasMatomoHeatmapEnabled: boolean;
@@ -19,8 +20,10 @@ function MatomoComponent({
   const searchParamsString = searchParams?.toString();
   const path = usePathname();
   const [previousPath, setPreviousPath] = useState<string | null>(null);
+  const [hasBeenInit, setInit] = useState(false);
 
   useEffect(() => {
+    console.log(`[INIT] TrackPageview(${window.location.pathname})`);
     init({
       siteId: PIWIK_SITE_ID,
       url: PIWIK_URL,
@@ -36,6 +39,7 @@ function MatomoComponent({
       excludeUrlsPatterns: [WIDGETS_PATH],
     });
 
+    setInit(true);
     const consent = getStoredConsent();
     console.log("Consent for Matomo Heatmap:", consent.matomoHeatmap);
 
@@ -79,6 +83,11 @@ function MatomoComponent({
   }, []);
 
   useEffect(() => {
+    console.log(
+      "[PATH CHANGE] Has been init: ",
+      hasBeenInit,
+      `(${previousPath} <-> ${path})`
+    );
     if (path && !isExcludedUrl(path, [WIDGETS_PATH])) {
       let [pathname] = path.split("?");
       pathname = pathname.replace(/#.*/, "");
@@ -91,15 +100,22 @@ function MatomoComponent({
       push(["deleteCustomVariables", "page"]);
       setPreviousPath(pathname);
 
-      const query = searchParams?.get("q");
+      const query = searchParams?.get("query");
       push(["setDocumentTitle", document.title]);
-      if (startsWith(path, "/recherche") || startsWith(path, "/search")) {
-        push(["trackSiteSearch", query ?? ""]);
+
+      if (!hasBeenInit || previousPath !== pathname) {
+        if (startsWith(path, "/recherche") || startsWith(path, "/search")) {
+          console.log("[PATH CHANGE] trackSiteSearch:", pathname, previousPath);
+          push(["trackSiteSearch", query ?? ""]);
+        } else {
+          console.log("[PATH CHANGE] TrackPageview:", pathname, previousPath);
+          push(["trackPageView"]);
+        }
       } else {
-        push(["trackPageView"]);
+        console.log("[PATH NOT CHANGE] TrackPageview:", pathname, previousPath);
       }
     }
-  }, [path, searchParamsString]);
+  }, [path, searchParamsString, init]);
 
   return null;
 }
@@ -112,6 +128,23 @@ export const MatomoAnalytics = ({
   hasCookieBannerEnabled,
 }: MatomoAnalyticsProps) => (
   <Suspense fallback={null}>
+    <Script id="matomo">
+      {`
+                  var _paq = window._paq = window._paq || [];
+                  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+                  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+                  _paq.push(["setCookieDomain", "*.nosgestesclimat.fr"]);
+                  _paq.push(['setCookieSameSite', 'None']);
+                  _paq.push(['enableLinkTracking']);
+                  (function() {
+                    var u="${PIWIK_URL}/";
+                    _paq.push(['setTrackerUrl', u+'matomo.php']);
+                    _paq.push(['setSiteId', '${PIWIK_SITE_ID}']);
+                    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+                  })();
+                `}
+    </Script>
     <MatomoComponent
       hasHeartBeatTimerEnabled={hasCookieBannerEnabled}
       hasMatomoHeatmapEnabled={hasCookieBannerEnabled}
