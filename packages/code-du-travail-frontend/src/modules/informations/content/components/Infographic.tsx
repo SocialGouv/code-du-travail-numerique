@@ -48,7 +48,11 @@ export const Infographic = ({
           },
         ]}
       />
-      <DownloadTile filename={pdfUrl} filesize={pdfSize} />
+      <DownloadTile
+        filename={pdfUrl}
+        filesize={pdfSize}
+        titleAs={`h${titleLevel}`}
+      />
     </div>
   );
 };
