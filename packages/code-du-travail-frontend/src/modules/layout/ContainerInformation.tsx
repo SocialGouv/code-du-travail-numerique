@@ -73,7 +73,7 @@ export const ContainerInformation = ({
                 <DownloadTile
                   filename={infography.fileUrl}
                   filesize={infography.size}
-                  titleAs={"h2"}
+                  titleAs={"h3"}
                 />
               </div>
             </div>
