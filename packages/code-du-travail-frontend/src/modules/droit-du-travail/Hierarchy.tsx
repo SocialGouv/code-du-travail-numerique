@@ -5,6 +5,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { createModal } from "@codegouvfr/react-dsfr/Modal";
 import ExpandableCard from "./ExpandableCard";
 import { useIsModalOpen } from "@codegouvfr/react-dsfr/Modal/useIsModalOpen";
+import { css } from "@styled-system/css";
 
 const modal13Matieres = createModal({
   id: "modal-13-matieres",
@@ -225,7 +226,7 @@ const Hierarchy = () => {
                 <p>
                   Ce principe ne s&apos;applique pas dans{" "}
                   <button
-                    className={fr.cx("fr-link")}
+                    className={`${fr.cx("fr-link")} ${buttonStyle}`}
                     onClick={(e) => {
                       e.preventDefault();
                       modal13Matieres.open();
@@ -237,7 +238,7 @@ const Hierarchy = () => {
                   </button>{" "}
                   et{" "}
                   <button
-                    className={fr.cx("fr-link")}
+                    className={`${fr.cx("fr-link")} ${buttonStyle}`}
                     onClick={(e) => {
                       e.preventDefault();
                       modal4Matieres.open();
@@ -401,5 +402,9 @@ const Hierarchy = () => {
     </div>
   );
 };
+
+const buttonStyle = css({
+  textDecoration: "underline !important",
+});
 
 export default Hierarchy;
