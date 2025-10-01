@@ -101,10 +101,11 @@ describe("<Information />", () => {
     );
     expect(getByText("Quelle est votre situation ?")).toBeInTheDocument();
     const heading2 = getAllByRole("heading", { level: 2 });
-    expect(heading2).toHaveLength(7);
+    const heading3 = getByRole("heading", { level: 3, name: /Télécharger/ });
+    expect(heading2).toHaveLength(6);
     expect(heading2[0]).toHaveTextContent("Quelle est votre situation ?");
     expect(heading2[1]).toHaveTextContent("La procédure");
-    expect(heading2[2]).toHaveTextContent("Télécharger l'infographie");
+    expect(heading3).toHaveTextContent("Télécharger l'infographie");
     const lists = getAllByRole("list");
     expect(lists).toHaveLength(5);
     // On vérifie la bonne génération des modèles et outils liés
