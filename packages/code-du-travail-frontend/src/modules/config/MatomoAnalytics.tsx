@@ -43,6 +43,7 @@ function MatomoComponent({
           push(["setCookieSameSite", "None"]);
         }
       },
+      searchParams: searchParams.toString(),
     });
   }, [
     pathname,
