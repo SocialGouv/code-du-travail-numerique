@@ -33,7 +33,8 @@ describe("Fiches SP", () => {
       raw: {
         attributes: {
           ID: "F2614",
-          spUrl: "https://www.service-public.fr/particuliers/vosdroits/F2614",
+          spUrl:
+            "https://www.service-public.gouv.fr/particuliers/vosdroits/F2614",
           type: "Fiche Question-réponse",
           "xmlns:dc": "http://purl.org/dc/elements/1.1/",
           "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
@@ -183,7 +184,7 @@ describe("Fiches SP", () => {
           {
             children: [
               {
-                text: "https://www.service-public.fr/a-propos/mentions-legales",
+                text: "https://www.service-public.gouv.fr/a-propos/mentions-legales",
                 type: "text",
               },
             ],
@@ -213,7 +214,7 @@ describe("Fiches SP", () => {
           {
             children: [
               {
-                text: "www.service-public.fr",
+                text: "www.service-public.gouv.fr",
                 type: "text",
               },
             ],
@@ -763,7 +764,7 @@ describe("Fiches SP", () => {
       referencedTexts: [],
       slug: "arret-maladie-pendant-le-preavis-quelles-consequences",
       title: "Arrêt maladie pendant le préavis : quelles conséquences ?",
-      url: "https://www.service-public.fr/particuliers/vosdroits/F2614",
+      url: "https://www.service-public.gouv.fr/particuliers/vosdroits/F2614",
     });
   });
 });

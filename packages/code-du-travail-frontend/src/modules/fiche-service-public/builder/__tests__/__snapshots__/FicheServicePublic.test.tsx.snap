@@ -281,7 +281,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
               <div>
                 <a
                   class="fr-btn fr-btn--secondary fr-mb-4w"
-                  href="https://www.service-public.fr/simulateur/calcul/Demission"
+                  href="https://www.service-public.gouv.fr/simulateur/calcul/Demission"
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Lettre de démission du salarié - nouvelle fenêtre"
@@ -1228,7 +1228,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
               <div>
                 <a
                   class="fr-btn fr-btn--secondary fr-mb-4w"
-                  href="https://www.service-public.fr/simulateur/calcul/Demission"
+                  href="https://www.service-public.gouv.fr/simulateur/calcul/Demission"
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Lettre de démission du salarié - nouvelle fenêtre"
@@ -1945,7 +1945,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
               <div>
                 <a
                   class="fr-btn fr-btn--secondary fr-mb-4w"
-                  href="https://www.service-public.fr/simulateur/calcul/Demission"
+                  href="https://www.service-public.gouv.fr/simulateur/calcul/Demission"
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Lettre de démission du salarié - nouvelle fenêtre"
@@ -2444,7 +2444,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
   <div>
     <a
       class="fr-btn fr-btn--secondary fr-mb-4w"
-      href="https://www.service-public.fr/simulateur/calcul/Demission"
+      href="https://www.service-public.gouv.fr/simulateur/calcul/Demission"
       rel="noopener noreferrer"
       target="_blank"
       title="Lettre de démission du salarié - nouvelle fenêtre"

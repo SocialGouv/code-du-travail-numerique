@@ -297,7 +297,7 @@ exports[`Search searchWithQuery 1`] = `
       "slug": "certificat-de-travail",
       "source": "fiches_service_public",
       "title": "Certificat de travail",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F87",
     },
   ],
   "themes": [
