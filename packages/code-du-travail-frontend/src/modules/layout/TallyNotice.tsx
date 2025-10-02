@@ -6,28 +6,9 @@ import Script from "next/script";
 import { css } from "@styled-system/css";
 import { useState, useEffect } from "react";
 
-type TallyNoticeProps = { onClose: () => void; id: string };
+type TallyNoticeProps = { id: string };
 
-export const TallyNotice = ({ onClose, id }: TallyNoticeProps) => {
-  const [isNoticeVisible, setIsNoticeVisible] = useState(false);
-
-  useEffect(() => {
-    const isClosed = localStorage.getItem("tallyNoticeClosed");
-    if (!isClosed || isClosed === "false") {
-      setIsNoticeVisible(true);
-    }
-  }, []);
-
-  const handleClose = () => {
-    localStorage.setItem("tallyNoticeClosed", "true");
-    setIsNoticeVisible(false);
-    onClose();
-  };
-
-  if (!isNoticeVisible) {
-    return null;
-  }
-
+export const TallyNotice = ({ id }: TallyNoticeProps) => {
   return (
     <>
       <Script id="tally-js" src="https://tally.so/widgets/embed.js" />
@@ -71,15 +52,6 @@ export const TallyNotice = ({ onClose, id }: TallyNoticeProps) => {
           >
             Répondre
           </button>
-          <Button
-            iconId="fr-icon-close-line"
-            onClick={handleClose}
-            priority="tertiary no outline"
-            title="Fermer la notice"
-            className={closeButtonStyles}
-            size="small"
-            nativeButtonProps={{ "aria-label": "Fermer la notice" }}
-          ></Button>
         </div>
       </div>
     </>
