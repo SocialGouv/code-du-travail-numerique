@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.193.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.193.0...v4.193.1) (2025-10-02)
+
+
+### Bug Fixes
+
+* **analytics:** utilisation du mot clé query pour les recherches ([a5eccf8](https://github.com/SocialGouv/code-du-travail-numerique/commit/a5eccf8c97f79f85029ddffe0047e01e1a045323))
+
+
+
+
+
 # [4.193.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.192.0...v4.193.0) (2025-10-02)
 
 
