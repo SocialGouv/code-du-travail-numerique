@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.193.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.192.0...v4.193.0) (2025-10-02)
+
+
+### Bug Fixes
+
+* **accessibilité:** ajout d'un role sur le footer ([#6847](https://github.com/SocialGouv/code-du-travail-numerique/issues/6847)) ([76695d8](https://github.com/SocialGouv/code-du-travail-numerique/commit/76695d809c28e1c54639cc480e1224f5faf8eeb6))
+* **accessibilité:** ajout du correctif sur l'underline pour la page droit-du-travail pour le nom ([8642170](https://github.com/SocialGouv/code-du-travail-numerique/commit/8642170ce0f3c86b60a77897166e30c3e997d7bd))
+* **accessibilité:** correction des retours sur la gestion des focus (règle 12.8) ([#6848](https://github.com/SocialGouv/code-du-travail-numerique/issues/6848)) ([e808113](https://github.com/SocialGouv/code-du-travail-numerique/commit/e80811382e8deea120615df9701524dfb4ffa904))
+* **accessibilité:** fichiers PDF en téléchargement non accessible sur la page statistique (règle 13.3) ([#6852](https://github.com/SocialGouv/code-du-travail-numerique/issues/6852)) ([71f6f7d](https://github.com/SocialGouv/code-du-travail-numerique/commit/71f6f7d1ecfc29837459b5bfa5601b630621de2e))
+* **accessibilité:** mauvais `hn` sur le titre des infographies ([#6853](https://github.com/SocialGouv/code-du-travail-numerique/issues/6853)) ([df463c1](https://github.com/SocialGouv/code-du-travail-numerique/commit/df463c1cb5db2d82a883c733abd661f24fbd46aa))
+
+
+### Features
+
+* **questionnaire:** retrait de la croix pour fermer le bandeau ([150dd01](https://github.com/SocialGouv/code-du-travail-numerique/commit/150dd018dd9f29279125c1f06368e6ded92dedba))
+
+
+
+
+
 # [4.192.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.191.0...v4.192.0) (2025-09-26)
 
 
