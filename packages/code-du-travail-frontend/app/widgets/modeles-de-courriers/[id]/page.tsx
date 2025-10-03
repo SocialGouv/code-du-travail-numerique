@@ -8,7 +8,8 @@ import { generateDefaultMetadata } from "../../../../src/modules/common/metas";
 import { SITE_URL } from "../../../../src/config";
 import { notFound } from "next/navigation";
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const { title, type, metaDescription, meta_title, slug } = await getModel(
     params.id,
     ["title", "meta_title", "type", "metaDescription", "slug"]
@@ -23,7 +24,8 @@ export async function generateMetadata({ params }) {
   });
 }
 
-async function WidgetModel({ params }) {
+async function WidgetModel(props) {
+  const params = await props.params;
   const { title, ...model } = await getModel(params.id, [
     "title",
     "date",

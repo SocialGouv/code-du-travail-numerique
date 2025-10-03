@@ -59,6 +59,8 @@ const sentrySdkConfig = {
 };
 
 const nextConfig = {
+  // Issue with meta rendering : https://github.com/vercel/next.js/issues/79313
+  htmlLimitedBots: /.*/,
   poweredByHeader: false,
   compiler: {
     reactRemoveProperties:
@@ -70,9 +72,6 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   staticPageGenerationTimeout: 60 * 5, // 5 minutes
-  experimental: {
-    instrumentationHook: true,
-  },
   webpack: (config, { dev, isServer }) => {
     config.module.rules.push({
       test: /\.woff2$/,

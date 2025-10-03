@@ -1,6 +1,11 @@
-import { act, fireEvent, render, RenderResult } from "@testing-library/react";
+import {
+  act,
+  fireEvent,
+  render,
+  RenderResult,
+  waitFor,
+} from "@testing-library/react";
 import React from "react";
-import { wait } from "@testing-library/user-event/dist/utils";
 import userEvent from "@testing-library/user-event";
 
 import { ContributionLayout } from "../ContributionLayout";
@@ -98,6 +103,20 @@ describe("<ContributionLayout />", () => {
       window.localStorage.clear();
       rendering = render(<ContributionLayout contribution={contribution} />);
     });
+    it("should display correctly when a selecting agreement 3239", async () => {
+      fireEvent.click(ccUi.radio.enterpriseSearchOption.get());
+      fireEvent.click(ccUi.searchByEnterprise.noEnterprise.get());
+
+      fireEvent.click(ccUi.buttonDisplayInfo.get());
+      expect(pushMock).toHaveBeenCalledTimes(1);
+      expect(pushMock).toHaveBeenCalledWith("/contribution/3239-slug");
+      expect(sendEvent).toHaveBeenCalledWith({
+        action: "cc_select_traitée",
+        category: "outil",
+        name: "3239",
+      });
+    });
+
     it("should display correctly when no agreement is selected", async () => {
       fireEvent.click(ccUi.radio.agreementSearchOption.get());
       expect(ccUi.buttonDisplayInfo.query()).toBeInTheDocument();
@@ -125,11 +144,10 @@ describe("<ContributionLayout />", () => {
       );
       fireEvent.click(ccUi.radio.agreementSearchOption.get());
       expect(ui.generic.linkDisplayInfo.query()).toBeInTheDocument();
-      act(async () => {
-        await userEvent.click(ccUi.searchByName.input.get());
-        await userEvent.type(ccUi.searchByName.input.get(), "16");
-      });
-      await wait();
+      await userEvent.click(ccUi.searchByName.input.get());
+      await userEvent.type(ccUi.searchByName.input.get(), "16");
+
+      await waitFor(() => {});
 
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC16.name.get());
 
@@ -144,20 +162,6 @@ describe("<ContributionLayout />", () => {
         action: "cc_select_traitée",
         category: "outil",
         name: "16",
-      });
-    });
-
-    it("should display correctly when a selecting agreement 3239", async () => {
-      fireEvent.click(ccUi.radio.enterpriseSearchOption.get());
-      fireEvent.click(ccUi.searchByEnterprise.noEnterprise.get());
-
-      fireEvent.click(ccUi.buttonDisplayInfo.get());
-      expect(pushMock).toHaveBeenCalledTimes(1);
-      expect(pushMock).toHaveBeenCalledWith("/contribution/3239-slug");
-      expect(sendEvent).toHaveBeenCalledWith({
-        action: "cc_select_traitée",
-        category: "outil",
-        name: "3239",
       });
     });
 
@@ -181,7 +185,8 @@ describe("<ContributionLayout />", () => {
       fireEvent.click(ccUi.radio.agreementSearchOption.get());
       await userEvent.click(ccUi.searchByName.input.get());
       await userEvent.type(ccUi.searchByName.input.get(), "1388");
-      await wait();
+
+      await ccUi.searchByName.autocompleteLines.IDCC1388.name.find();
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC1388.name.get());
       expect(ui.generic.linkDisplayInfo.query()).toBeInTheDocument();
 
@@ -231,7 +236,7 @@ describe("<ContributionLayout />", () => {
       expect(ccUi.buttonDisplayInfo.query()).not.toBeInTheDocument();
       await userEvent.click(ccUi.searchByName.input.get());
       await userEvent.type(ccUi.searchByName.input.get(), "16");
-      await wait();
+      await waitFor(() => {});
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC16.name.get());
 
       fireEvent.click(ccUi.buttonDisplayInfo.get());
@@ -266,7 +271,7 @@ describe("<ContributionLayout />", () => {
       fireEvent.click(ccUi.radio.agreementSearchOption.get());
       await userEvent.click(ccUi.searchByName.input.get());
       await userEvent.type(ccUi.searchByName.input.get(), "1388");
-      await wait();
+      await waitFor(() => {});
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC1388.name.get());
       expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
       expect(ccUi.buttonDisplayInfo.query()).not.toBeInTheDocument();
@@ -303,7 +308,7 @@ describe("<ContributionLayout />", () => {
       fireEvent.click(ccUi.radio.agreementSearchOption.get());
       await userEvent.click(ccUi.searchByName.input.get());
       await userEvent.type(ccUi.searchByName.input.get(), "29");
-      await wait();
+      await waitFor(() => {});
       fireEvent.click(ccUi.searchByName.autocompleteLines.IDCC29.name.get());
       expect(ui.generic.linkDisplayInfo.query()).not.toBeInTheDocument();
       expect(ccUi.buttonDisplayInfo.query()).not.toBeInTheDocument();

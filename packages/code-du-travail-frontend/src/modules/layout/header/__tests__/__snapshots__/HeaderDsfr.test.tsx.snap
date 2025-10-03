@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`<Header /> should match snapshot 1`] = `
 <div>
@@ -49,7 +49,6 @@ exports[`<Header /> should match snapshot 1`] = `
                     class="fr-responsive-img max-w_9.0625rem"
                     data-nimg="1"
                     decoding="async"
-                    fetchpriority="high"
                     height="50"
                     src="/static/assets/img/logo.svg"
                     style="color: transparent;"

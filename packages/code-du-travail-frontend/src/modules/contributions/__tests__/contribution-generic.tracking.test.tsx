@@ -7,7 +7,7 @@ import { ui as ccUi } from "../../convention-collective/__tests__/ui";
 import { byText } from "testing-library-selector";
 import { ContributionGeneric } from "../ContributionGeneric";
 import { Contribution } from "../type";
-import { searchEnterprises } from "../../enterprise/queries";
+import { searchEnterprises } from "../../enterprise";
 
 beforeEach(() => {
   localStorage.clear();
@@ -247,15 +247,16 @@ describe("<ContributionGeneric />", () => {
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
     render(<ContributionGeneric contribution={contribution} />);
-    fireEvent.click(ccUi.radio.enterpriseSearchOption.get());
+    await userEvent.click(ccUi.radio.enterpriseSearchOption.get());
     await userEvent.click(ccUi.searchByEnterprise.input.get());
     await userEvent.type(ccUi.searchByEnterprise.input.get(), "carrefour");
-    fireEvent.click(ccUi.searchByEnterprise.submitButton.get());
+    await userEvent.click(ccUi.searchByEnterprise.submitButton.get());
     await waitFor(() => {
       fireEvent.click(
         ccUi.searchByEnterprise.resultLines.carrefour.title.get()
       );
     });
+
     expect(
       byText(/Vous avez sélectionné la convention collective/).query()
     ).toBeInTheDocument();

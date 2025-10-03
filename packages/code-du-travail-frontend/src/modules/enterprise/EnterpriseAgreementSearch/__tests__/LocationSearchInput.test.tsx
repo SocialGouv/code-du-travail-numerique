@@ -1,6 +1,5 @@
-import { render, RenderResult } from "@testing-library/react";
+import { render, RenderResult, waitFor } from "@testing-library/react";
 import { searchCities } from "../searchCities";
-import { wait } from "@testing-library/user-event/dist/utils";
 import { ui } from "./ui";
 import { LocationSearchInput } from "../LocationSearchInput";
 import { UserAction } from "src/modules/outils/common/utils/UserAction";
@@ -53,11 +52,12 @@ describe("LocationSearchInput", () => {
     );
     userAction = new UserAction();
     userAction.setInput(ui.input.get(), "paris");
-    await wait();
-    expect(ui.AutocompleteItemParis.query()).toBeInTheDocument();
-    expect(ui.input.get()).toHaveValue("paris");
-    userAction.click(ui.inputCloseBtn.get());
-    expect(ui.input.get()).toHaveValue("");
-    expect(ui.AutocompleteItemParis.query()).not.toBeInTheDocument();
+    await waitFor(() => {
+      expect(ui.AutocompleteItemParis.query()).toBeInTheDocument();
+      expect(ui.input.get()).toHaveValue("paris");
+      userAction.click(ui.inputCloseBtn.get());
+      expect(ui.input.get()).toHaveValue("");
+      expect(ui.AutocompleteItemParis.query()).not.toBeInTheDocument();
+    });
   });
 });

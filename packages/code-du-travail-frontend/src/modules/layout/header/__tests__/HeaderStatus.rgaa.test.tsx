@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import { HeaderSearch } from "../HeaderSearch"; // Assurez-vous que le chemin est correct
 import { fetchSuggestResults } from "../fetchSuggestResults"; // Import pour le mock
+import userEvent from "@testing-library/user-event";
 
 jest.mock("../fetchSuggestResults");
 
