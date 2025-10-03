@@ -24,16 +24,18 @@ function MatomoComponent({
     init({
       siteId: PIWIK_SITE_ID,
       url: PIWIK_URL,
+      isAppRouter: true,
       pathname,
+      searchParams,
       excludeUrlsPatterns: [WIDGETS_PATH],
       enableHeatmapSessionRecording:
         consent.matomoHeatmap && hasMatomoHeatmapEnabled,
+      enableHeartBeatTimer: consent.matomo && hasHeartBeatTimerEnabled,
       heatmapConfig: {
         captureKeystrokes: false,
         captureVisibleContentOnly: false,
         debug: true,
       },
-      enableHeartBeatTimer: consent.matomo && hasHeartBeatTimerEnabled,
       onInitialization: () => {
         const referrerUrl = document?.referrer || searchParams.get("src_url");
         if (referrerUrl) {
@@ -43,7 +45,6 @@ function MatomoComponent({
           push(["setCookieSameSite", "None"]);
         }
       },
-      searchParams: searchParams.toString(),
     });
   }, [
     pathname,
