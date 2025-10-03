@@ -13,14 +13,14 @@ describe("Fiche Service public", () => {
       .should("have.prop", "href")
       .and(
         "equal",
-        "https://www.service-public.gouv.fr/particuliers/vosdroits/F2301"
+        "https://www.service-public.fr/particuliers/vosdroits/F2301"
       );
 
     cy.contains("a", "Fiche service-public.gouv.fr")
       .should("have.attr", "href")
       .and(
         "contain",
-        "https://www.service-public.gouv.fr/particuliers/vosdroits/F2301"
+        "https://www.service-public.fr/particuliers/vosdroits/F2301"
       );
     cy.get("body").should("contain", "01/11/2024");
     cy.get("h2").first().should("contain", "Salaire");
