@@ -30,7 +30,7 @@ describe("<LienExterne />", () => {
       type: "element",
       name: "LienExterne",
       attributes: {
-        URL: "https://code.travail.gouv.fr/outils/indemnite-licenciement?src_url=https://service-public.fr/particuliers/vosdroits/F987",
+        URL: "https://code.travail.gouv.fr/outils/indemnite-licenciement?src_url=https://service-public.gouv.fr/particuliers/vosdroits/F987",
       },
       children: [
         {
@@ -55,7 +55,7 @@ describe("cleanUrl", () => {
   it("retourne l'url sans query params si code.travail.gouv.fr", () => {
     expect(
       cleanUrl(
-        "https://code.travail.gouv.fr/outils/indemnite-licenciement?src_url=https://service-public.fr/particuliers/vosdroits/F987"
+        "https://code.travail.gouv.fr/outils/indemnite-licenciement?src_url=https://service-public.gouv.fr/particuliers/vosdroits/F987"
       )
     ).toEqual("https://code.travail.gouv.fr/outils/indemnite-licenciement");
   });

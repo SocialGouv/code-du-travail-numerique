@@ -47,7 +47,7 @@ const ficheSPData = {
   referencedTexts: [ref],
   slug: "arret-maladie-pendant-le-preavis-quelles-consequences",
   title: "Fiche SP title",
-  url: "https://www.service-public.fr/particuliers/vosdroits/F2614",
+  url: "https://www.service-public.gouv.fr/particuliers/vosdroits/F2614",
 };
 
 describe("Content fiche SP", () => {
@@ -60,9 +60,9 @@ describe("Content fiche SP", () => {
       "Fiche SP title"
     );
     expect(getByText(/Mis à jour le/)).toHaveTextContent("09/10/2019");
-    expect(getByText(/Fiche service-public.fr/)).toHaveAttribute(
+    expect(getByText(/Fiche service-public.gouv.fr/)).toHaveAttribute(
       "href",
-      "https://www.service-public.fr/particuliers/vosdroits/F2614"
+      "https://www.service-public.gouv.fr/particuliers/vosdroits/F2614"
     );
     expect(
       getByText(/Santé, sécurité et conditions de travail/)

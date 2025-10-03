@@ -40,7 +40,10 @@ export function ContributionLayout({ contribution }: Props) {
       <div className={fr.cx("fr-mt-6w")}>
         {isFicheSP ? (
           <SourceData
-            source={{ url: contribution.url, name: "Fiche service-public.fr" }}
+            source={{
+              url: contribution.url,
+              name: "Fiche service-public.gouv.fr",
+            }}
             updatedAt={date}
           />
         ) : (

@@ -16,7 +16,7 @@ describe("Fiche Service public", () => {
         "https://www.service-public.fr/particuliers/vosdroits/F2301"
       );
 
-    cy.contains("a", "Fiche service-public.fr")
+    cy.contains("a", "Fiche service-public.gouv.fr")
       .should("have.attr", "href")
       .and(
         "contain",

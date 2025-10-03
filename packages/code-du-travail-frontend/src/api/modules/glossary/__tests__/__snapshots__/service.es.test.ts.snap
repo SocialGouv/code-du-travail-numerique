@@ -6,7 +6,7 @@ exports[`Glossary getGlossary 1`] = `
     "abbreviations": [],
     "definition": "<p>Mesure d'urgence prise par précaution.</p>",
     "references": [
-      "https://www.service-public.fr/particuliers/glossaire/R37450",
+      "https://www.service-public.gouv.fr/particuliers/glossaire/R37450",
     ],
     "slug": "a-titre-conservatoire",
     "title": "A titre conservatoire",

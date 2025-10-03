@@ -44,7 +44,7 @@ export function FicheServicePublicContainer({
       <h1 className={fr.cx("fr-mb-6w")}>{title}</h1>
 
       <SourceData
-        source={{ url, name: "Fiche service-public.fr" }}
+        source={{ url, name: "Fiche service-public.gouv.fr" }}
         updatedAt={date}
       />
 

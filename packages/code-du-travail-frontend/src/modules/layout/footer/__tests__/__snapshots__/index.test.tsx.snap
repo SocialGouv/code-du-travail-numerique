@@ -318,12 +318,12 @@ exports[`<Footer /> should match snapshot 1`] = `
               >
                 <a
                   class="fr-footer__content-link"
-                  href="https://service-public.fr"
+                  href="https://service-public.gouv.fr"
                   rel="noopener noreferrer"
                   target="_blank"
-                  title="service-public.fr - nouvelle fenêtre"
+                  title="service-public.gouv.fr - nouvelle fenêtre"
                 >
-                  service-public.fr
+                  service-public.gouv.fr
                 </a>
               </li>
               <li
