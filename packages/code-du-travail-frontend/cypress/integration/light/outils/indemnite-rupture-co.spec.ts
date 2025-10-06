@@ -38,7 +38,7 @@ describe("Outil - Indemnité de rupture conventionnelle", () => {
       "À partir des éléments que vous avez saisis, l’indemnité de rupture conventionnelle est estimée à :"
     );
     cy.get("p strong").should("contain", formatToEuro(7111.11));
-    cy.get("h3").should(
+    cy.get("h4").should(
       "contain",
       "Attention il peut exister un montant plus favorable"
     );
