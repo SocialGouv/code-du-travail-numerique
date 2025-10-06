@@ -58,6 +58,9 @@ export const SelectQuestion = ({
     onChangeSelectedOption(event.target.value);
   };
 
+  const errorId = `${name}-error`;
+  const hintId = `${name}-help`;
+
   return (
     <Select
       label={<Html as="span">{label}</Html>}
@@ -73,9 +76,11 @@ export const SelectQuestion = ({
         } as any
       }
       state={error ? "error" : subLabel ? "info" : "default"}
+      aria-describedby={error ? errorId : subLabel ? hintId : undefined}
       stateRelatedMessage={
         error ? (
           <span
+            id={errorId}
             dangerouslySetInnerHTML={{
               __html: xssWrapper(error),
             }}
@@ -83,6 +88,7 @@ export const SelectQuestion = ({
         ) : (
           subLabel && (
             <span
+              id={hintId}
               dangerouslySetInnerHTML={{
                 __html: xssWrapper(subLabel),
               }}

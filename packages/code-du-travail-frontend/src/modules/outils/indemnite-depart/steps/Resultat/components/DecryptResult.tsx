@@ -23,7 +23,7 @@ export default function DecryptResult(props: Props) {
   );
   return (
     <>
-      <h3>Résultat décrypté</h3>
+      <h4>Résultat décrypté</h4>
       <p>
         Montant prévu par le code du travail&nbsp;:&nbsp;
         <strong

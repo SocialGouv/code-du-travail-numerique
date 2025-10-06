@@ -7,7 +7,7 @@ type Props = {
 export default function ErrorPublicodes(props: Props) {
   return (
     <div>
-      <h2>{props.title}</h2>
+      <h3>{props.title}</h3>
       <p>
         Nous n&apos;avons pas pu calculer votre indemnité de licenciement, en
         raison d&apos;une erreur liée à notre moteur de calcul. Veuillez

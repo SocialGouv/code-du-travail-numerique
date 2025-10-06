@@ -106,6 +106,7 @@ describe("<PageContribution />", () => {
       <AgreementSearchForm
         trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
         onAgreementSelect={() => {}}
+        level={2}
       />
     );
     (searchEnterprises as jest.Mock).mockImplementation(() =>
@@ -152,6 +153,7 @@ describe("<PageContribution />", () => {
       <AgreementSearchForm
         trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
         onAgreementSelect={() => {}}
+        level={2}
       />
     );
     (searchEnterprises as jest.Mock).mockImplementation(() =>
@@ -211,6 +213,7 @@ describe("<PageContribution />", () => {
       <AgreementSearchForm
         trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
         onAgreementSelect={() => {}}
+        level={2}
       />
     );
     userAction = new UserAction();

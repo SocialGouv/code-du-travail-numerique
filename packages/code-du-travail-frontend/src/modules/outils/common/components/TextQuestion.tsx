@@ -81,6 +81,7 @@ export function TextQuestion({
       : localValue;
 
   const errorId = `${id}-error`;
+  const hintId = `${id}-help`;
 
   useEffect(() => {
     if (typeof document !== "undefined") {
@@ -123,10 +124,10 @@ export function TextQuestion({
           "data-testid": dataTestId,
           onWheel: preventScroll,
           "aria-invalid": error ? "true" : undefined,
-          "aria-describedby": error ? errorId : undefined,
         } as any
       }
       state={error ? "error" : subLabel ? "info" : "default"}
+      aria-describedby={error ? errorId : subLabel ? hintId : undefined}
       stateRelatedMessage={
         error ? (
           <span
@@ -135,7 +136,7 @@ export function TextQuestion({
           />
         ) : subLabel ? (
           <span
-            id={`${id}-help`}
+            id={hintId}
             dangerouslySetInnerHTML={{ __html: xssWrapper(subLabel) }}
           />
         ) : undefined
