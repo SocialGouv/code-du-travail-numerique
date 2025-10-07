@@ -4,7 +4,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense, useEffect } from "react";
 import { PIWIK_SITE_ID, PIWIK_URL, WIDGETS_PATH } from "../../config";
 import { getStoredConsent } from "../utils/consent";
-import init, { push } from "@socialgouv/matomo-next";
+import { initAppRouter, push } from "@socialgouv/matomo-next";
 
 type MatomoComponentProps = {
   hasMatomoHeatmapEnabled: boolean;
@@ -21,10 +21,9 @@ function MatomoComponent({
   useEffect(() => {
     const consent = getStoredConsent();
 
-    init({
+    initAppRouter({
       siteId: PIWIK_SITE_ID,
       url: PIWIK_URL,
-      isAppRouter: true,
       pathname,
       searchParams,
       excludeUrlsPatterns: [WIDGETS_PATH],
@@ -34,7 +33,6 @@ function MatomoComponent({
       heatmapConfig: {
         captureKeystrokes: false,
         captureVisibleContentOnly: false,
-        debug: true,
       },
       onInitialization: () => {
         const referrerUrl = document?.referrer || searchParams.get("src_url");

@@ -420,7 +420,7 @@ __metadata:
     "@socialgouv/cdtn-elasticsearch": ^2.44.2
     "@socialgouv/cdtn-types": ^2.57.0
     "@socialgouv/cdtn-utils": "workspace:^"
-    "@socialgouv/matomo-next": "github:maxgfr/matomo-next#maxgfr/feat-ajout-heartbate"
+    "@socialgouv/matomo-next": 1.10.0-alpha.1
     "@socialgouv/modeles-social": "workspace:^"
     "@testing-library/cypress": ^10.0.2
     "@testing-library/dom": ^8.11.3
@@ -4102,12 +4102,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@socialgouv/matomo-next@github:maxgfr/matomo-next#maxgfr/feat-ajout-heartbate":
-  version: 1.9.2
-  resolution: "@socialgouv/matomo-next@https://github.com/maxgfr/matomo-next.git#commit=3ada829729cd1f41465061aa8dba1bd885de8acd"
+"@socialgouv/matomo-next@npm:1.10.0-alpha.1":
+  version: 1.10.0-alpha.1
+  resolution: "@socialgouv/matomo-next@npm:1.10.0-alpha.1"
   peerDependencies:
     next: ">= 9.5.5"
-  checksum: 872cc2d80a9ede5778cc853e60558d5f5403d1b43bb8db4565e401bacfda4a8a0e3642cd54d58f1d12b0515fabf5c499d0f8c3825e220b21f012bca3a9385cae
+  checksum: 4bbce3e48991a3ebb7453b36aaa3fe3466ec5b17aa266b3a29b183d7c8687b9d619a15a28ed1f2bfe044b177dae82a3aac722b759fef57f0956149bf30384acb
   languageName: node
   linkType: hard
 
