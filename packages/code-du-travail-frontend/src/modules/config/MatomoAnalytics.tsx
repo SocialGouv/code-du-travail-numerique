@@ -92,8 +92,10 @@ function MatomoComponent({
       setPreviousPath(pathname);
 
       const query = searchParams?.get("query");
+      console.log("Query = ", query);
       push(["setDocumentTitle", document.title]);
       if (startsWith(path, "/recherche") || startsWith(path, "/search")) {
+        console.log("trackSiteSearch with query : ", query);
         push(["trackSiteSearch", query ?? ""]);
       } else {
         push(["trackPageView"]);
