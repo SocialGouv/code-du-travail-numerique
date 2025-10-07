@@ -33,7 +33,7 @@ type Props = {
   enterprise?: Enterprise;
   agreement?: Agreement;
   trackingActionName: string;
-  level?: 2 | 3;
+  level: 2 | 3;
   isInSimulator?: boolean;
   canContinueSimulationIfNoAgreement?: boolean;
   onBackToPersonalize?: () => void;

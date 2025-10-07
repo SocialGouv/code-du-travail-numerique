@@ -67,6 +67,7 @@ describe("EnterpriseAgreementSearchInput", () => {
         <EnterpriseAgreementSearchInput
           onAgreementSelect={() => {}}
           trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+          level={2}
         />
       );
     });
@@ -133,6 +134,7 @@ describe("EnterpriseAgreementSearchInput", () => {
       rendering = render(
         <EnterpriseAgreementSearchInput
           trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+          level={2}
         />
       );
     });
