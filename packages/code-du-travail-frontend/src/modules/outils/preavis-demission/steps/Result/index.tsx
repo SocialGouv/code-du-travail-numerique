@@ -37,7 +37,7 @@ const ResultStepComponent = () => {
     return (
       <AccessibleAlert
         title="Attention"
-        description="Une erreur est survenue lors du calcul. Veuillez réessayer."
+        description="Une erreur est survenue lors du calcul. Veuillez vérifier les informations saisies ou rafraîchir la page si le problème persiste."
         severity="error"
         className={["fr-mb-2w"]}
       />

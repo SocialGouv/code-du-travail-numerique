@@ -20,7 +20,7 @@ const ReferenceJuridiques: React.FC<ReferenceJuridiquesProps> = ({
 
   return (
     <div className={fr.cx("fr-mt-4w")}>
-      <h3 className={fr.cx("fr-h5")}>Références juridiques</h3>
+      <h4 className={fr.cx("fr-h5")}>Références juridiques</h4>
       <ul>
         {references.map((ref, index) => (
           <li key={index}>

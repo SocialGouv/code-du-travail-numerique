@@ -41,9 +41,9 @@ const DecryptedResult: React.FC<Props> = ({
   );
   return (
     <>
-      <h3 className={fr.cx("fr-h5", "fr-mt-2w", "fr-mb-2w")}>
+      <h4 className={fr.cx("fr-h5", "fr-mt-2w", "fr-mb-2w")}>
         Le résultat décrypté
-      </h3>
+      </h4>
       <p>
         Durée prévue par le code du travail (durée légale)&nbsp;:&nbsp;
         <ShowResult

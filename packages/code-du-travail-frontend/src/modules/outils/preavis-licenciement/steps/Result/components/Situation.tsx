@@ -21,7 +21,7 @@ const Situation: React.FC<Props> = ({
 }) => {
   return (
     <>
-      <h3 className={fr.cx("fr-h5", "fr-mb-0")}>Les éléments saisis</h3>
+      <h4 className={fr.cx("fr-h5", "fr-mb-0")}>Les éléments saisis</h4>
       <ul>
         {seniority && (
           <li data-testid="situation-seniority">

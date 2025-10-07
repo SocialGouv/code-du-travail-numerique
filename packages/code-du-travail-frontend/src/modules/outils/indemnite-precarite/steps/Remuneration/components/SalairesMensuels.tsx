@@ -42,10 +42,10 @@ export const SalairesMensuels: React.FC<Props> = ({
 
   return (
     <div className={fr.cx("fr-mb-3w")}>
-      <h4 className={fr.cx("fr-h6", "fr-mb-2w")}>
+      <h3 className={fr.cx("fr-h6", "fr-mb-2w")}>
         Quels sont les salaires mensuels bruts perçus durant le contrat de
         travail ?
-      </h4>
+      </h3>
 
       {error && (
         <AccessibleAlert
