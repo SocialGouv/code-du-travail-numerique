@@ -64,7 +64,7 @@
     "zustand": "^4.3.6"
   },
   "devDependencies": {
-    "@pandacss/dev": "^0.45.2",
+    "@pandacss/dev": "^0.54.0",
     "@testing-library/cypress": "^10.0.2",
     "@testing-library/dom": "^8.11.3",
     "@testing-library/jest-dom": "^5.16.5",
@@ -73,7 +73,7 @@
     "@types/cors": "^2.8.13",
     "@types/debounce-promise": "^3.1.4",
     "@types/jest": "^29.5.12",
-    "@types/react": "19.1.10",
+    "@types/react": "19.2.2",
     "@types/xml2js": "^0.4.14",
     "cypress": "^13.13.2",
     "cypress-html-validate": "^6.1.0",
