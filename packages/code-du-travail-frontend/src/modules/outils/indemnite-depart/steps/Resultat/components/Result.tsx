@@ -19,7 +19,7 @@ export default function Result({
 }: Props) {
   return (
     <div className={fr.cx("fr-mb-2w")}>
-      <h3>{title}</h3>
+      <h3 className={fr.cx("fr-h2")}>{title}</h3>
       <p className={fr.cx("fr-mb-1w")}>
         {resultMessage}
         <br />

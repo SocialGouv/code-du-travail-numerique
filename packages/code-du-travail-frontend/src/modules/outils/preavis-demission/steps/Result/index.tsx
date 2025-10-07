@@ -65,7 +65,7 @@ const ResultStepComponent = () => {
 
       <Warning />
 
-      <h2 className={fr.cx("fr-h4", "fr-mt-4w")}>Détail du calcul</h2>
+      <h3 className={fr.cx("fr-h4", "fr-mt-4w")}>Détail du calcul</h3>
       <Situation situations={situationsForDisplay} agreement={agreement} />
 
       <JuridicalReferences references={resultReferences || []} />
