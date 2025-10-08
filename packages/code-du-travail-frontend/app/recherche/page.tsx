@@ -3,6 +3,9 @@ import { searchWithQuery } from "../../src/api";
 import { SearchPageClient } from "../../src/modules/recherche";
 import { DsfrLayout } from "src/modules/layout";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 type SearchPageProps = {
   searchParams: { query?: string };
 };
