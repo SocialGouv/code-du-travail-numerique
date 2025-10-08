@@ -16,6 +16,7 @@ type Props = {
   selectedAgreement?: Agreement;
   goBack: () => void;
   onAgreementSelect?: (agreement?: Agreement) => void;
+  level: 2 | 3;
 };
 
 export const EnterpriseAgreementSelectionForm = ({
@@ -25,6 +26,7 @@ export const EnterpriseAgreementSelectionForm = ({
   onAgreementSelect,
   canContinueSimulationIfNoAgreement,
   isInSimulator,
+  level,
 }: Props) => {
   const [agreement, setAgreement] = useState<Agreement | undefined>(
     selectedAgreement
@@ -33,7 +35,10 @@ export const EnterpriseAgreementSelectionForm = ({
 
   return (
     <>
-      <EnterpriseAgreementSelectionDetail enterprise={enterprise} />
+      <EnterpriseAgreementSelectionDetail
+        enterprise={enterprise}
+        level={level}
+      />
       <Button
         iconId="fr-icon-arrow-go-back-fill"
         onClick={goBack}

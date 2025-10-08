@@ -79,6 +79,8 @@ export const EnterpriseAgreementSearchInput = ({
   const [error, setError] = useState("");
   const resultRef = useRef<HTMLHeadingElement>(null);
   const selectedConventionTitleRef = useRef<HTMLParagraphElement>(null);
+  const TitleTag = `h${level}` as "h2" | "h3";
+  const SubtitleTag = `h${level + 1}` as "h3" | "h4";
 
   const getStateMessage = () => {
     switch (searchState) {
@@ -196,17 +198,20 @@ export const EnterpriseAgreementSearchInput = ({
     return (
       <>
         {selectedEnterprise && (
-          <EnterpriseAgreementSelectionDetail enterprise={selectedEnterprise} />
+          <EnterpriseAgreementSelectionDetail
+            enterprise={selectedEnterprise}
+            level={level}
+          />
         )}
 
-        <h3
+        <TitleTag
           ref={selectedConventionTitleRef}
           className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}
           tabIndex={-1}
           id={`selected-convention`}
         >
           Vous avez sélectionné la convention collective
-        </h3>
+        </TitleTag>
         <div
           className={fr.cx(
             "fr-my-2w",
@@ -270,6 +275,7 @@ export const EnterpriseAgreementSearchInput = ({
       <EnterpriseAgreementSelectionForm
         enterprise={selectedEnterprise}
         selectedAgreement={selectedAgreement}
+        level={level}
         goBack={() => {
           setSelectedEnterprise(undefined);
           setSelectedAgreement(undefined);
@@ -305,7 +311,7 @@ export const EnterpriseAgreementSearchInput = ({
   return (
     <>
       {createElement(
-        `h${level ?? 2}`,
+        `h${level}`,
         {
           className: fr.cx("fr-h4", "fr-my-2w"),
         },
@@ -392,17 +398,17 @@ export const EnterpriseAgreementSearchInput = ({
       <div>
         <div className={fr.cx("fr-mt-2w")}>
           {enterprises && enterprises.length > 0 && !loading && (
-            <h2
+            <TitleTag
               className={fr.cx("fr-h5")}
               tabIndex={-1}
               ref={resultRef}
-              data-testid={"result-title"}
+              data-testid="result-title"
             >
               {enterprises.length}
               {enterprises.length > 1
                 ? " entreprises trouvées"
                 : " entreprise trouvée"}
-            </h2>
+            </TitleTag>
           )}
           {loading && (
             <div className={fr.cx("fr-grid-row")}>
@@ -417,7 +423,7 @@ export const EnterpriseAgreementSearchInput = ({
           {searchState === "notFoundSearch" && (
             <AccessibleAlert
               title="Vous ne trouvez pas votre entreprise&nbsp;?"
-              titleAs={`h${(level ?? 2) + 1}` as "h3" | "h4"}
+              titleAs={`h${level + 1}` as "h3" | "h4"}
               description={
                 <>
                   <p>Il peut y avoir plusieurs explications à cela&nbsp;:</p>
@@ -447,6 +453,7 @@ export const EnterpriseAgreementSearchInput = ({
             <EnterpriseCard
               key={enterprise.label + index}
               className={fr.cx("fr-mt-2w")}
+              titleAs={`h${level + 1}` as "h3" | "h4"}
               border
               enlargeLink
               linkProps={
@@ -510,7 +517,7 @@ export const EnterpriseAgreementSearchInput = ({
       <div>
         <div
           role="heading"
-          aria-level={level ?? 2}
+          aria-level={level}
           className={fr.cx(
             "fr-text--bold",
             !loading ? "fr-mt-5w" : "fr-mt-2w",
@@ -523,7 +530,7 @@ export const EnterpriseAgreementSearchInput = ({
         <EnterpriseCard
           border
           enlargeLink
-          titleAs={level === 2 ? "h3" : "h4"}
+          titleAs={`h${level + 1}` as "h3" | "h4"}
           linkProps={
             !onAgreementSelect
               ? {
