@@ -1,6 +1,5 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import React from "react";
-import { wait } from "@testing-library/user-event/dist/utils";
 import { searchEnterprises } from "../../enterprise";
 import { TrackingAgreementSearchAction } from "../tracking";
 import { ui } from "./ui";
@@ -119,12 +118,13 @@ describe("<PageContribution />", () => {
       "carrefour"
     );
     userAction.click(enterpriseUi.enterpriseAgreementSearch.submitButton.get());
-    await wait();
-    expect(sendEvent).toHaveBeenCalledWith({
-      action: "Trouver sa convention collective",
-      category: "enterprise_search",
-      name: '{"query":"carrefour"}',
-      value: "",
+    await waitFor(() => {
+      expect(sendEvent).toHaveBeenCalledWith({
+        action: "Trouver sa convention collective",
+        category: "enterprise_search",
+        name: '{"query":"carrefour"}',
+        value: "",
+      });
     });
     expect(
       enterpriseUi.enterpriseAgreementSearch.resultLines.carrefour.title.query()
@@ -166,12 +166,13 @@ describe("<PageContribution />", () => {
       "bnp"
     );
     userAction.click(enterpriseUi.enterpriseAgreementSearch.submitButton.get());
-    await wait();
-    expect(sendEvent).toHaveBeenCalledWith({
-      action: "Trouver sa convention collective",
-      category: "enterprise_search",
-      name: '{"query":"bnp"}',
-      value: "",
+    await waitFor(() => {
+      expect(sendEvent).toHaveBeenCalledWith({
+        action: "Trouver sa convention collective",
+        category: "enterprise_search",
+        name: '{"query":"bnp"}',
+        value: "",
+      });
     });
     expect(
       enterpriseUi.enterpriseAgreementSearch.resultLines.bnp.title.query()

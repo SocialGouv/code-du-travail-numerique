@@ -1,8 +1,8 @@
-import { render } from "@testing-library/react";
+import { render, waitFor } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import React from "react";
 import { AgreementSearch } from "../AgreementSearch";
 import { ui } from "./ui";
-import { wait } from "@testing-library/user-event/dist/utils";
 import { sendEvent } from "../../utils";
 import { byText } from "testing-library-selector";
 import { UserAction } from "src/modules/outils/common/utils/UserAction";
@@ -21,7 +21,7 @@ jest.mock("next/navigation", () => ({
   redirect: jest.fn(),
 }));
 
-function mockFetch(data) {
+function mockFetch(data: any[]) {
   (fetch as any).mockResolvedValue({
     json: jest.fn().mockResolvedValue({ hits: { hits: data } }),
     ok: true,
@@ -31,17 +31,23 @@ function mockFetch(data) {
 describe("Trouver sa CC - recherche par nom de CC", () => {
   describe("Test de l'autocomplete", () => {
     let userAction: UserAction;
+
     beforeEach(() => {
       jest.resetAllMocks();
+      userAction = new UserAction();
+    });
+
+    afterEach(() => {
+      jest.clearAllMocks();
     });
     it("Vérifier l'affichage des erreurs", async () => {
       mockFetch([]);
       render(<AgreementSearch />);
-      userAction = new UserAction();
       userAction.setInput(ui.searchByName.input.get(), "cccc");
-      await wait(300);
-      expect(ui.searchByName.errorNotFound.error.query()).toBeInTheDocument();
-      expect(ui.searchByName.errorNotFound.info.query()).toBeInTheDocument();
+      await waitFor(() => {
+        expect(ui.searchByName.errorNotFound.error.query()).toBeInTheDocument();
+        expect(ui.searchByName.errorNotFound.info.query()).toBeInTheDocument();
+      });
       userAction.click(ui.searchByName.inputCloseBtn.get());
       expect(
         ui.searchByName.errorNotFound.error.query()
@@ -67,16 +73,15 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
       ]);
 
       render(<AgreementSearch />);
-      userAction = new UserAction();
       userAction.setInput(ui.searchByName.input.get(), "16");
-      await wait(300);
-      expect(sendEvent).toHaveBeenCalledWith({
-        action: "Trouver sa convention collective",
-        category: "cc_search",
-        name: '{"query":"16"}',
-        value: undefined,
+      await waitFor(() => {
+        expect(sendEvent).toHaveBeenCalledWith({
+          action: "Trouver sa convention collective",
+          category: "cc_search",
+          name: '{"query":"16"}',
+          value: undefined,
+        });
       });
-
       expect(
         ui.searchByName.autocompleteLines.IDCC16.name.query()
       ).toBeInTheDocument();
@@ -106,36 +111,39 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
     it("Vérifier l'affichage des infos si moins 2 caractères", async () => {
       mockFetch([]);
       render(<AgreementSearch />);
-      userAction = new UserAction();
       userAction.setInput(ui.searchByName.input.get(), "cc");
-      await wait(300);
-      expect(ui.searchByName.infoNotFound.query()).toBeInTheDocument();
+      await waitFor(() => {
+        expect(ui.searchByName.infoNotFound.query()).toBeInTheDocument();
+      });
       userAction.click(ui.searchByName.inputCloseBtn.get());
       expect(ui.searchByName.infoNotFound.query()).not.toBeInTheDocument();
     });
 
     it("Vérifier l'affichage du message d'erreur pour les mauvais code Naf", async () => {
       render(<AgreementSearch />);
-      userAction = new UserAction();
       userAction.setInput(ui.searchByName.input.get(), "1234A");
-      await wait(300);
-      expect(
-        byText(/Numéro d’identification \(IDCC\) incorrect./).get().textContent
-      ).toEqual(
-        "Numéro d’identification (IDCC) incorrect. Il semblerait que vous ayez saisi un code APE (Activité Principale Exercée) ou NAF (Nomenclature des Activités Françaises) et dont l’objectif est d’identifier l’activité principale de l’entreprise."
-      );
+      await waitFor(() => {
+        expect(
+          byText(/Numéro d’identification \(IDCC\) incorrect./).get()
+            .textContent
+        ).toEqual(
+          "Numéro d’identification (IDCC) incorrect. Il semblerait que vous ayez saisi un code APE (Activité Principale Exercée) ou NAF (Nomenclature des Activités Françaises) et dont l’objectif est d’identifier l’activité principale de l’entreprise."
+        );
+      });
     });
 
     it("Vérifier l'affichage du message d'erreur concernant du format du code", async () => {
       render(<AgreementSearch />);
-      userAction = new UserAction();
       userAction.setInput(ui.searchByName.input.get(), "12345366");
-      await wait(300);
-      expect(
-        byText(/Numéro d’identification \(IDCC\) incorrect./).get().textContent
-      ).toEqual(
-        "Numéro d’identification (IDCC) incorrect. Ce numéro est composé de 4 chiffres uniquement."
-      );
+
+      await waitFor(() => {
+        expect(
+          byText(/Numéro d’identification \(IDCC\) incorrect./).get()
+            .textContent
+        ).toEqual(
+          "Numéro d’identification (IDCC) incorrect. Ce numéro est composé de 4 chiffres uniquement."
+        );
+      });
     });
   });
 });

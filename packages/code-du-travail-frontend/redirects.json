@@ -2,7 +2,7 @@
   {
     "destination": "/themes/:slug",
     "permanent": true,
-    "source": "/themes/(\\d{1,}-):slug"
+    "source": "/themes/:id(\\d{1,})-:slug"
   },
   {
     "destination": "/api/health",

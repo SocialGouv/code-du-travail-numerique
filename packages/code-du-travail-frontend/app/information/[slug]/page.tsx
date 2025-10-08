@@ -10,7 +10,8 @@ import {
 } from "src/modules/informations";
 import { fetchRelatedItems } from "src/modules/documents";
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const information = await fetchInformation(params.slug, [
     "title",
     "metaDescription",
@@ -27,7 +28,8 @@ export async function generateMetadata({ params }) {
   });
 }
 
-async function InformationPage({ params }) {
+async function InformationPage(props) {
+  const params = await props.params;
   const data = await getInformation(params.slug);
 
   if (!data) {

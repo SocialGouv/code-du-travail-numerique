@@ -5,7 +5,8 @@ import { notFound } from "next/navigation";
 import { fetchTheme } from "../../../src/modules/themes";
 import { ThemeModel } from "../../../src/modules/themes/ThemeModel";
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const { title, metaDescription } = await getTheme(params.slug, [
     "title",
     "metaDescription",
@@ -18,7 +19,8 @@ export async function generateMetadata({ params }) {
   });
 }
 
-async function Theme({ params }) {
+async function Theme(props) {
+  const params = await props.params;
   const theme = await getTheme(params.slug, [
     "breadcrumbs",
     "title",
