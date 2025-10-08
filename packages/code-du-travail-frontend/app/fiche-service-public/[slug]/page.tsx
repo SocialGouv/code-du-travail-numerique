@@ -7,7 +7,8 @@ import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
 import { FicheServicePublicContainer } from "../../../src/modules/fiche-service-public/FicheServicePublicContainer";
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const { title, description, url } = await getFiche(params.slug);
 
   return generateDefaultMetadata({
@@ -18,7 +19,8 @@ export async function generateMetadata({ params }) {
   });
 }
 
-async function Fiche({ params }) {
+async function Fiche(props) {
+  const params = await props.params;
   const {
     _id,
     breadcrumbs,

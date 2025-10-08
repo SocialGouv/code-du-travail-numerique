@@ -1,9 +1,4 @@
-import {
-  render,
-  fireEvent,
-  RenderResult,
-  waitFor,
-} from "@testing-library/react";
+import { render, fireEvent, waitFor } from "@testing-library/react";
 import React from "react";
 import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";

@@ -23,7 +23,8 @@
     "baseUrl": ".",
     "paths": {
       "@styled-system/*": ["./src/styled-system/*"]
-    }
+    },
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",

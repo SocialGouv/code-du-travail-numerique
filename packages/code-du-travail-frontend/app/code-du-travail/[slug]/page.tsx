@@ -11,7 +11,8 @@ import {
 import { generateDefaultMetadata } from "../../../src/modules/common/metas";
 import { fetchRelatedItems } from "../../../src/modules/documents";
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const { title, description } = await getArticle(params.slug);
 
   return generateDefaultMetadata({
@@ -21,7 +22,8 @@ export async function generateMetadata({ params }) {
   });
 }
 
-async function Fiche({ params }) {
+async function Fiche(props) {
+  const params = await props.params;
   const { _id, title, description, dateDebut, html, url, notaHtml } =
     await getArticle(params.slug);
   const relatedItems = await fetchRelatedItems({ _id }, params.slug);
