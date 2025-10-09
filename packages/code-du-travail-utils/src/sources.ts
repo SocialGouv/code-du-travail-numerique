@@ -45,7 +45,7 @@ export const labelBySource = {
   [SOURCES.EXTERNALS]: "Outils externes",
   [SOURCES.LABOUR_LAW]: "Le droit du travail",
   [SOURCES.LETTERS]: "Modèles de documents",
-  [SOURCES.SHEET_SP]: "service-public.fr",
+  [SOURCES.SHEET_SP]: "service-public.gouv.fr",
   [SOURCES.SHEET_MT]: "Ministère du Travail",
   [SOURCES.SHEET_MT_PAGE]: "Ministère du Travail",
   [SOURCES.THEMATIC_FILES]: "Dossiers",
