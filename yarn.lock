@@ -420,7 +420,7 @@ __metadata:
     "@socialgouv/cdtn-elasticsearch": ^2.44.2
     "@socialgouv/cdtn-types": ^2.57.0
     "@socialgouv/cdtn-utils": "workspace:^"
-    "@socialgouv/matomo-next": 1.10.0-alpha.1
+    "@socialgouv/matomo-next": 1.10.0-alpha.2
     "@socialgouv/modeles-social": "workspace:^"
     "@testing-library/cypress": ^10.0.2
     "@testing-library/dom": ^8.11.3
@@ -4102,12 +4102,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@socialgouv/matomo-next@npm:1.10.0-alpha.1":
-  version: 1.10.0-alpha.1
-  resolution: "@socialgouv/matomo-next@npm:1.10.0-alpha.1"
+"@socialgouv/matomo-next@npm:1.10.0-alpha.2":
+  version: 1.10.0-alpha.2
+  resolution: "@socialgouv/matomo-next@npm:1.10.0-alpha.2"
   peerDependencies:
     next: ">= 9.5.5"
-  checksum: 4bbce3e48991a3ebb7453b36aaa3fe3466ec5b17aa266b3a29b183d7c8687b9d619a15a28ed1f2bfe044b177dae82a3aac722b759fef57f0956149bf30384acb
+  checksum: e33fcfac69236381a2666aff05a08c226b84cd555462dd1b912977656f4500b154fa7c0772f663e09848ae4cfbc08e363636843f3fc806a8f43b988dfdb1a565
   languageName: node
   linkType: hard
 
