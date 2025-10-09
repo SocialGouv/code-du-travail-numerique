@@ -6,7 +6,8 @@ import { fetchFicheMT } from "../../../src/modules/fiche-ministere-travail/queri
 import { FicheMinistereTravail } from "../../../src/modules/fiche-ministere-travail/ficheMinistereTravail";
 import { fetchRelatedItems } from "../../../src/modules/documents";
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const { title, description, url } = await getFiche(params.slug);
 
   return generateDefaultMetadata({
@@ -16,7 +17,8 @@ export async function generateMetadata({ params }) {
   });
 }
 
-async function Fiche({ params }) {
+async function Fiche(props) {
+  const params = await props.params;
   const {
     _id,
     title,

@@ -3,7 +3,7 @@ import { css } from "@styled-system/css";
 import React, { forwardRef } from "react";
 
 export const QuestionnaireEnd = forwardRef<HTMLHeadingElement>(
-  (_, ref): React.ReactElement => {
+  (_, ref): React.ReactElement<any> => {
     return (
       <div className={containerStyle}>
         <h2
