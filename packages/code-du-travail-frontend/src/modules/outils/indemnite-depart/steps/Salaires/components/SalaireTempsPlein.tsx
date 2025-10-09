@@ -6,6 +6,8 @@ import { preventScroll } from "src/modules/outils/common/utils/input";
 import { defaultInputStyle } from "src/modules/outils/common/styles/input";
 import HighlightSalary from "./HighlightSalary";
 import { SalaryFieldError } from "../store/types";
+import { css } from "@styled-system/css";
+import SalaireTempsPleinMobile from "./SalaireTempsPleinMobile";
 
 type Props = {
   title: string;
@@ -112,7 +114,8 @@ export const SalaireTempsPlein = ({
           "Indiquez le montant des salaires (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)"
         }
       />
-      <div className={fr.cx("fr-mt-3w", "fr-table")}>
+
+      <div className={`${responsiveStyles} ${fr.cx("fr-mt-3w", "fr-table")}`}>
         <div className={fr.cx("fr-table__wrapper")}>
           <div className={fr.cx("fr-table__container")}>
             <div className={fr.cx("fr-table__content")}>
@@ -214,9 +217,29 @@ export const SalaireTempsPlein = ({
         </div>
       </div>
 
+      <SalaireTempsPleinMobile
+        salaryPeriods={salaryPeriods}
+        onChangeSalaries={onChangeSalaries}
+        onChangeLocalPrimes={onChangeLocalPrimes}
+        errorSalaryPeriods={errorSalaryPeriods}
+        errorPrimeSalaryPeriods={errorPrimeSalaryPeriods}
+        dataTestidSalaries={dataTestidSalaries}
+        noPrime={noPrime}
+        autoFocus={autoFocus}
+        salaryInputRefs={salaryInputRefs}
+        primeInputRefs={primeInputRefs}
+      />
+
       {note && <p className={fr.cx("fr-text--sm", "fr-mt-2w")}>{note}</p>}
     </fieldset>
   );
 };
+
+const responsiveStyles = css({
+  display: "block",
+  "@media (max-width: 768px)": {
+    display: "none",
+  },
+});
 
 export default SalaireTempsPlein;
