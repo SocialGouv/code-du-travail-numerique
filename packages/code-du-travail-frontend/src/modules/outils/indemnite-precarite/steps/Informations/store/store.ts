@@ -61,6 +61,14 @@ const createInformationsStore: StoreSliceWrapperIndemnitePrecarite<
     onContractTypeChange: (contractType: ContractType) => {
       set(
         produce((state: InformationsStoreSlice & AgreementStoreSlice) => {
+          // If switching to CTT, reset cddType in criteria
+          if (contractType === "CTT") {
+            state.informationsData.input.criteria = {
+              ...state.informationsData.input.criteria,
+              cddType: undefined,
+            };
+          }
+
           // Reset questions CDD
           state.informationsData.input.finContratPeriodeDessai = undefined;
           state.informationsData.input.propositionCDIFindeContrat = undefined;

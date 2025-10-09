@@ -38,15 +38,7 @@ const InformationsStepComponent = () => {
       {/* Question sur le type de contrat */}
       <ContractTypeQuestion
         value={contractType}
-        onChange={(contractType) => {
-          if (contractType === "CTT") {
-            onCriteriaChange({
-              ...criteria,
-              cddType: undefined,
-            });
-          }
-          onContractTypeChange(contractType);
-        }}
+        onChange={onContractTypeChange}
         error={errors.contractType}
       />
 
