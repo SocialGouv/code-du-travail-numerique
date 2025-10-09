@@ -6,8 +6,8 @@ import { preventScroll } from "src/modules/outils/common/utils/input";
 import { defaultInputStyle } from "src/modules/outils/common/styles/input";
 import HighlightSalary from "./HighlightSalary";
 import { SalaryFieldError } from "../store/types";
-import { css } from "@styled-system/css";
 import SalaireTempsPleinMobile from "./SalaireTempsPleinMobile";
+import { useBreakpoints } from "src/modules/common/useBreakpoints";
 
 type Props = {
   title: string;
@@ -39,6 +39,8 @@ export const SalaireTempsPlein = ({
   const salaryInputRefs = React.useRef<(HTMLInputElement | null)[]>([]);
   const primeInputRefs = React.useRef<(HTMLInputElement | null)[]>([]);
   const hasFocusedRef = React.useRef(false);
+  const { isBelow } = useBreakpoints();
+  const isMobile = isBelow("md");
 
   React.useEffect(() => {
     if (!hasFocusedRef.current) {
@@ -115,91 +117,55 @@ export const SalaireTempsPlein = ({
         }
       />
 
-      <div className={`${responsiveStyles} ${fr.cx("fr-mt-3w", "fr-table")}`}>
-        <div className={fr.cx("fr-table__wrapper")}>
-          <div className={fr.cx("fr-table__container")}>
-            <div className={fr.cx("fr-table__content")}>
-              <table>
-                <thead>
-                  <tr>
-                    <th scope="col">Mois</th>
-                    <th scope="col">
-                      Salaire mensuel brut primes incluses (en €)
-                    </th>
-                    {!noPrime && <th scope="col">Total des primes (en €)</th>}
-                  </tr>
-                </thead>
-                <tbody>
-                  {salaryPeriods.map((sPeriod, index) => (
-                    <tr key={index}>
-                      <td>{sPeriod.month}</td>
-                      <td>
-                        <Input
-                          label={`Salaire mensuel brut en € pour le mois ${index + 1}`}
-                          hideLabel
-                          nativeInputProps={
-                            {
-                              type: "number",
-                              id: `salary.${index}`,
-                              name: `salary.${index}`,
-                              value: sPeriod.value ?? "",
-                              onChange: (e) =>
-                                onChangeSalaries(index, e.target.value),
-                              autoFocus: autoFocus ? index === 0 : false,
-                              onWheel: preventScroll,
-                              "data-testid":
-                                dataTestidSalaries ?? "salary-input",
-                              ref: (el) =>
-                                (salaryInputRefs.current[index] = el),
-                            } as any
-                          }
-                          state={
-                            errorSalaryPeriods &&
-                            errorSalaryPeriods[`${index}`] !== null
-                              ? "error"
-                              : "default"
-                          }
-                          stateRelatedMessage={
-                            errorSalaryPeriods && errorSalaryPeriods[`${index}`]
-                              ? errorSalaryPeriods[`${index}`]?.message
-                              : ""
-                          }
-                          classes={{
-                            nativeInputOrTextArea: defaultInputStyle,
-                          }}
-                        />
-                      </td>
-                      {!noPrime && index < 3 && (
+      {!isMobile ? (
+        <div className={fr.cx("fr-mt-3w", "fr-table")}>
+          <div className={fr.cx("fr-table__wrapper")}>
+            <div className={fr.cx("fr-table__container")}>
+              <div className={fr.cx("fr-table__content")}>
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">Mois</th>
+                      <th scope="col">
+                        Salaire mensuel brut primes incluses (en €)
+                      </th>
+                      {!noPrime && <th scope="col">Total des primes (en €)</th>}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {salaryPeriods.map((sPeriod, index) => (
+                      <tr key={index}>
+                        <td>{sPeriod.month}</td>
                         <td>
                           <Input
-                            label={`Prime exceptionnelle en € pour le mois ${index + 1}`}
+                            label={`Salaire mensuel brut en € pour le mois ${index + 1}`}
                             hideLabel
                             nativeInputProps={
                               {
                                 type: "number",
-                                id: `prime.${index}`,
-                                name: `prime.${index}`,
-                                value: sPeriod.prime ?? "",
+                                id: `salary.${index}`,
+                                name: `salary.${index}`,
+                                value: sPeriod.value ?? "",
                                 onChange: (e) =>
-                                  onChangeLocalPrimes(index, e.target.value),
+                                  onChangeSalaries(index, e.target.value),
+                                autoFocus: autoFocus ? index === 0 : false,
                                 onWheel: preventScroll,
-                                "data-testid": dataTestidSalaries
-                                  ? "prime-" + dataTestidSalaries
-                                  : "prime-input",
+                                "data-testid":
+                                  dataTestidSalaries ?? "salary-input",
                                 ref: (el) =>
-                                  (primeInputRefs.current[index] = el),
+                                  (salaryInputRefs.current[index] = el),
                               } as any
                             }
                             state={
-                              errorPrimeSalaryPeriods &&
-                              errorPrimeSalaryPeriods[`${index}`] !== null
+                              errorSalaryPeriods &&
+                              errorSalaryPeriods[`${index}`] !== null
                                 ? "error"
                                 : "default"
                             }
                             stateRelatedMessage={
-                              errorPrimeSalaryPeriods &&
-                              errorPrimeSalaryPeriods[`${index}`]
-                                ? errorPrimeSalaryPeriods[`${index}`]?.message
+                              errorSalaryPeriods &&
+                              errorSalaryPeriods[`${index}`]
+                                ? errorSalaryPeriods[`${index}`]?.message
                                 : ""
                             }
                             classes={{
@@ -207,39 +173,71 @@ export const SalaireTempsPlein = ({
                             }}
                           />
                         </td>
-                      )}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+                        {!noPrime && index < 3 && (
+                          <td>
+                            <Input
+                              label={`Prime exceptionnelle en € pour le mois ${index + 1}`}
+                              hideLabel
+                              nativeInputProps={
+                                {
+                                  type: "number",
+                                  id: `prime.${index}`,
+                                  name: `prime.${index}`,
+                                  value: sPeriod.prime ?? "",
+                                  onChange: (e) =>
+                                    onChangeLocalPrimes(index, e.target.value),
+                                  onWheel: preventScroll,
+                                  "data-testid": dataTestidSalaries
+                                    ? "prime-" + dataTestidSalaries
+                                    : "prime-input",
+                                  ref: (el) =>
+                                    (primeInputRefs.current[index] = el),
+                                } as any
+                              }
+                              state={
+                                errorPrimeSalaryPeriods &&
+                                errorPrimeSalaryPeriods[`${index}`] !== null
+                                  ? "error"
+                                  : "default"
+                              }
+                              stateRelatedMessage={
+                                errorPrimeSalaryPeriods &&
+                                errorPrimeSalaryPeriods[`${index}`]
+                                  ? errorPrimeSalaryPeriods[`${index}`]?.message
+                                  : ""
+                              }
+                              classes={{
+                                nativeInputOrTextArea: defaultInputStyle,
+                              }}
+                            />
+                          </td>
+                        )}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <SalaireTempsPleinMobile
-        salaryPeriods={salaryPeriods}
-        onChangeSalaries={onChangeSalaries}
-        onChangeLocalPrimes={onChangeLocalPrimes}
-        errorSalaryPeriods={errorSalaryPeriods}
-        errorPrimeSalaryPeriods={errorPrimeSalaryPeriods}
-        dataTestidSalaries={dataTestidSalaries}
-        noPrime={noPrime}
-        autoFocus={autoFocus}
-        salaryInputRefs={salaryInputRefs}
-        primeInputRefs={primeInputRefs}
-      />
+      ) : (
+        <SalaireTempsPleinMobile
+          salaryPeriods={salaryPeriods}
+          onChangeSalaries={onChangeSalaries}
+          onChangeLocalPrimes={onChangeLocalPrimes}
+          errorSalaryPeriods={errorSalaryPeriods}
+          errorPrimeSalaryPeriods={errorPrimeSalaryPeriods}
+          dataTestidSalaries={dataTestidSalaries}
+          noPrime={noPrime}
+          autoFocus={autoFocus}
+          salaryInputRefs={salaryInputRefs}
+          primeInputRefs={primeInputRefs}
+        />
+      )}
 
       {note && <p className={fr.cx("fr-text--sm", "fr-mt-2w")}>{note}</p>}
     </fieldset>
   );
 };
-
-const responsiveStyles = css({
-  display: "block",
-  "@media (max-width: 768px)": {
-    display: "none",
-  },
-});
 
 export default SalaireTempsPlein;

@@ -5,7 +5,6 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { preventScroll } from "src/modules/outils/common/utils/input";
 import { defaultInputStyle } from "src/modules/outils/common/styles/input";
 import { SalaryFieldError } from "../store/types";
-import { css } from "@styled-system/css";
 
 type Props = {
   salaryPeriods: SalaryPeriods[];
@@ -33,7 +32,7 @@ export const SalaireTempsPleinMobile = ({
   primeInputRefs,
 }: Props) => {
   return (
-    <div className={`${mobileStyles} ${fr.cx("fr-mt-3w")}`}>
+    <div className={fr.cx("fr-mt-3w")}>
       {salaryPeriods.map((sPeriod, index) => (
         <div key={index} className={fr.cx("fr-p-3w", "fr-mb-2w")}>
           <p className={fr.cx("fr-text--bold", "fr-mb-2w", "fr-text--lg")}>
@@ -111,12 +110,5 @@ export const SalaireTempsPleinMobile = ({
     </div>
   );
 };
-
-const mobileStyles = css({
-  display: "none",
-  "@media (max-width: 768px)": {
-    display: "block",
-  },
-});
 
 export default SalaireTempsPleinMobile;
