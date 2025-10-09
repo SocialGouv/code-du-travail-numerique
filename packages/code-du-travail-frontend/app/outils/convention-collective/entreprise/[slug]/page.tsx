@@ -40,7 +40,7 @@ async function AgreementSelectionPage(props) {
         relatedItems={agreementRelatedItems}
         description={tool.description}
       >
-        <EnterpriseAgreementSelectionLink enterprise={enterprise} />
+        <EnterpriseAgreementSelectionLink enterprise={enterprise} level={2} />
       </FindAgreementLayout>
     </DsfrLayout>
   );

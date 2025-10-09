@@ -29,7 +29,11 @@ async function AgreementSelectionPage(props) {
   });
   return (
     <FindAgreementWidgetLayout>
-      <EnterpriseAgreementSelectionLink enterprise={enterprise} widgetMode />
+      <EnterpriseAgreementSelectionLink
+        enterprise={enterprise}
+        widgetMode
+        level={2}
+      />
     </FindAgreementWidgetLayout>
   );
 }

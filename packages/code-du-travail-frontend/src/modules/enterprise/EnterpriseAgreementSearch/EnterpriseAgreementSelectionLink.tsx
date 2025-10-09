@@ -16,12 +16,14 @@ type Props = {
   enterprise: Omit<Enterprise, "complements">;
   widgetMode?: boolean;
   onAgreementSelect?: (agreement: Agreement) => void;
+  level: 2 | 3;
 };
 
 export const EnterpriseAgreementSelectionLink = ({
   enterprise,
   widgetMode = false,
   onAgreementSelect,
+  level,
 }: Props) => {
   const searchParams = useSearchParams();
   const { emitSelectEnterpriseAgreementEvent } =
@@ -29,7 +31,10 @@ export const EnterpriseAgreementSelectionLink = ({
   const agreementPlurial = enterprise.conventions.length > 1 ? "s" : "";
   return (
     <>
-      <EnterpriseAgreementSelectionDetail enterprise={enterprise} />
+      <EnterpriseAgreementSelectionDetail
+        enterprise={enterprise}
+        level={level}
+      />
       {enterprise.conventions.length > 0 && (
         <p className={fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0")}>
           {enterprise.conventions.length} convention

@@ -12,6 +12,7 @@ import {
 import { defaultSelectStyle } from "src/modules/outils/common/styles/select";
 import { defaultInputStyle } from "src/modules/outils/common/styles/input";
 import { TextQuestion } from "src/modules/outils/common/components";
+import { css } from "@styled-system/css";
 
 interface DataTestIdProps {
   "data-testid"?: string;
@@ -101,11 +102,8 @@ const AbsencePeriod = ({
           Absence {index + 1}
         </legend>
         <div className={fr.cx("fr-fieldset__content")}>
-          <div
-            className="fr-grid-row fr-grid-row--gutters"
-            style={{ display: "flex", alignItems: "flex-end" }}
-          >
-            <div className={`fr-col-12 fr-col-md-3`}>
+          <div className={containerStyle}>
+            <div className={itemStyle}>
               <Select
                 label="Motif"
                 nativeSelectProps={
@@ -125,7 +123,7 @@ const AbsencePeriod = ({
                 ))}
               </Select>
             </div>
-            <div className={`fr-col-12 fr-col-md-3`}>
+            <div className={itemStyle}>
               <Input
                 label="Durée (en mois)"
                 state={durationError ? "error" : "default"}
@@ -153,7 +151,7 @@ const AbsencePeriod = ({
               />
             </div>
             {shouldAskAbsenceDate && (
-              <div className="fr-col-12 fr-col-md-3">
+              <div className={itemStyle}>
                 <TextQuestion
                   label="Date de début de l'absence"
                   inputType="date"
@@ -169,7 +167,7 @@ const AbsencePeriod = ({
               </div>
             )}
             {showDeleteButton && (
-              <div className="fr-col-12 fr-col-md-3">
+              <div className={itemStyle}>
                 <Button
                   onClick={() => onDeleteAbsence(absence.key)}
                   priority="secondary"
@@ -192,5 +190,17 @@ const AbsencePeriod = ({
     </div>
   );
 };
+
+const containerStyle = css({
+  display: "flex",
+  alignItems: "flex-end",
+  flexWrap: "wrap",
+  gap: "1rem",
+});
+
+const itemStyle = css({
+  flex: "0 1 auto",
+  minWidth: "200px",
+});
 
 export default AbsencePeriod;

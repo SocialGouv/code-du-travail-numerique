@@ -55,7 +55,7 @@ const ResultStepComponent = () => {
     return (
       <AccessibleAlert
         title="Attention"
-        description="Une erreur est survenue lors du calcul. Veuillez réessayer."
+        description="Une erreur est survenue lors du calcul. Veuillez vérifier les informations saisies ou rafraîchir la page si le problème persiste."
         severity="error"
         className={["fr-mb-2w"]}
       />
@@ -76,7 +76,7 @@ const ResultStepComponent = () => {
 
       <Warning ccn={agreement} resultExplanation={resultExplanation} />
 
-      <h2 className={fr.cx("fr-h4", "fr-mt-4w")}>Détail du calcul</h2>
+      <h3 className={fr.cx("fr-h4", "fr-mt-4w")}>Détail du calcul</h3>
       <DecryptedResult
         legalResult={publicodesLegalResult}
         agreementResult={publicodesAgreementResult}

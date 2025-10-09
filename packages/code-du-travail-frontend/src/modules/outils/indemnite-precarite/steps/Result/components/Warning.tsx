@@ -17,9 +17,9 @@ const Warning: React.FC<Props> = ({ agreement, isAgreementSupported }) => {
       className={fr.cx("fr-mt-4w", "fr-alert", "fr-alert--info")}
       data-testid="warning-alert"
     >
-      <h3 className={fr.cx("fr-alert__title")} data-testid="warning-title">
+      <h4 className={fr.cx("fr-alert__title")} data-testid="warning-title">
         Attention il peut exister un montant plus favorable
-      </h3>
+      </h4>
       <p>
         {agreement && agreement.num > 0 ? (
           <>

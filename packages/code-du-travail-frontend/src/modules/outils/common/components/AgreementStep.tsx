@@ -97,6 +97,7 @@ export const CommonAgreementStep = ({
             }
             defaultAgreement={agreement}
             trackingActionName={trackingActionName}
+            level={3}
           />
           {error?.agreement && (
             <AccessibleAlert
@@ -123,6 +124,7 @@ export const CommonAgreementStep = ({
             agreement={agreement}
             isInSimulator={true}
             canContinueSimulationIfNoAgreement={showNotSelectedOption}
+            level={3}
           />
           {error?.enterprise && (
             <AccessibleAlert

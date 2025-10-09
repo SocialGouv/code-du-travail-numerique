@@ -18,7 +18,7 @@ type Props = {
   ) => NonNullable<ReactNode> | undefined;
   defaultAgreement?: Agreement;
   trackingActionName: string;
-  level?: 2 | 3;
+  level: 2 | 3;
   emitSearchQueryEvent?: (query: string) => void;
 };
 
@@ -71,7 +71,7 @@ export const AgreementSearchInput = ({
   return (
     <>
       {createElement(
-        `h${level ?? 2}`,
+        `h${level}`,
         {
           className: fr.cx("fr-h4", "fr-mt-2w", "fr-mb-0"),
         },
@@ -131,7 +131,7 @@ export const AgreementSearchInput = ({
         {searchState === "notFoundSearch" && (
           <AccessibleAlert
             className={["fr-mt-2w"]}
-            titleAs={`h${(level ?? 2) + 1}` as "h3" | "h4"}
+            titleAs={`h${level + 1}` as "h3" | "h4"}
             title="Vous ne trouvez pas votre convention collective&nbsp;?"
             description={
               <>

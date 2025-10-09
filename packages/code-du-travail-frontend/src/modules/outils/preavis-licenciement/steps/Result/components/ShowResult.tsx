@@ -29,7 +29,7 @@ const ShowResult: React.FC<Props> = ({
 
   return (
     <>
-      <h2 className={fr.cx("fr-mt-3w")}>Préavis de licenciement</h2>
+      <h3 className={fr.cx("fr-mt-3w", "fr-h2")}>Préavis de licenciement</h3>
       <p className={fr.cx("fr-mb-3w", "fr-pr-md-2v")}>
         À partir des éléments que vous avez saisis
         {result.value != null && result.value > 0

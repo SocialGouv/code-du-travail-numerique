@@ -18,7 +18,7 @@ type Props = {
   ) => NonNullable<ReactNode> | undefined;
   defaultAgreement?: Agreement;
   trackingActionName: string;
-  level?: 2 | 3;
+  level: 2 | 3;
   onBackToPersonalize?: () => void;
 };
 

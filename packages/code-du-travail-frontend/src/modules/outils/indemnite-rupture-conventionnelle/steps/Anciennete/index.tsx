@@ -1,3 +1,4 @@
+import { fr } from "@codegouvfr/react-dsfr";
 import React, { useContext, useEffect, useMemo } from "react";
 import {
   RadioQuestion,
@@ -67,65 +68,71 @@ const StepAnciennete = () => {
 
   return (
     <>
-      <TextQuestion
-        label="Quelle est la date de début du contrat de travail&nbsp;?"
-        inputType="date"
-        value={dateEntree}
-        onChange={onChangeDateEntree}
-        error={errorDateEntree}
-        id="dateEntree"
-        dataTestId={"date-entree"}
-      />
-      <TextQuestion
-        label="Quelle est la date de fin du contrat de travail&nbsp;?"
-        inputType="date"
-        value={dateSortie}
-        onChange={(value) => {
-          onChangeDateNotification(value);
-          onChangeDateSortie(value);
-        }}
-        error={errorDateSortie}
-        id="dateSortie"
-        dataTestId={"date-sortie"}
-        subLabel="La date de rupture du contrat est indiquée dans la convention de rupture. Dans tous les cas, elle ne peut intervenir avant la fin du délai laissé à l’administration pour valider la rupture conventionnelle."
-      />
-      <RadioQuestion
-        questions={[
-          {
-            label: "Oui",
-            value: "oui",
-            id: "hasAbsenceProlonge-oui",
-          },
-          {
-            label: "Non",
-            value: "non",
-            id: "hasAbsenceProlonge-non",
-          },
-        ]}
-        name="hasAbsenceProlonge"
-        label="Y a-t-il eu des absences de plus d’un mois durant le contrat de travail&nbsp;?"
-        selectedOption={hasAbsenceProlonge}
-        onChangeSelectedOption={onChangeHasAbsenceProlonge}
-        error={errorAbsenceProlonge}
-      />
-      {hasAbsenceProlonge === "oui" && (
-        <AbsencePeriods
-          onChange={onChangeAbsencePeriods}
-          motifs={motifs}
-          absences={absencePeriods}
-          error={errorAbsencePeriods}
-          informationData={informationData}
-          messageMotifExample={messageMotifExample}
+      <div className={fr.cx("fr-mt-2w")}>
+        <h3>Dates de début et de fin de contrat</h3>
+        <TextQuestion
+          label="Quelle est la date de début du contrat de travail&nbsp;?"
+          inputType="date"
+          value={dateEntree}
+          onChange={onChangeDateEntree}
+          error={errorDateEntree}
+          id="dateEntree"
+          dataTestId={"date-entree"}
         />
-      )}
-      {errorPublicodes && (
-        <AccessibleAlert
-          title="Erreur"
-          description={errorPublicodes}
-          severity="error"
-          className={["fr-mt-2w"]}
+        <TextQuestion
+          label="Quelle est la date de fin du contrat de travail&nbsp;?"
+          inputType="date"
+          value={dateSortie}
+          onChange={(value) => {
+            onChangeDateNotification(value);
+            onChangeDateSortie(value);
+          }}
+          error={errorDateSortie}
+          id="dateSortie"
+          dataTestId={"date-sortie"}
+          subLabel="La date de rupture du contrat est indiquée dans la convention de rupture. Dans tous les cas, elle ne peut intervenir avant la fin du délai laissé à l’administration pour valider la rupture conventionnelle."
         />
-      )}
+      </div>
+      <div className={fr.cx("fr-mt-2w")}>
+        <h3>Période d&apos;absence prolongée</h3>
+        <RadioQuestion
+          questions={[
+            {
+              label: "Oui",
+              value: "oui",
+              id: "hasAbsenceProlonge-oui",
+            },
+            {
+              label: "Non",
+              value: "non",
+              id: "hasAbsenceProlonge-non",
+            },
+          ]}
+          name="hasAbsenceProlonge"
+          label="Y a-t-il eu des absences de plus d’un mois durant le contrat de travail&nbsp;?"
+          selectedOption={hasAbsenceProlonge}
+          onChangeSelectedOption={onChangeHasAbsenceProlonge}
+          error={errorAbsenceProlonge}
+        />
+        {hasAbsenceProlonge === "oui" && (
+          <AbsencePeriods
+            onChange={onChangeAbsencePeriods}
+            motifs={motifs}
+            absences={absencePeriods}
+            error={errorAbsencePeriods}
+            informationData={informationData}
+            messageMotifExample={messageMotifExample}
+          />
+        )}
+        {errorPublicodes && (
+          <AccessibleAlert
+            title="Erreur"
+            description={errorPublicodes}
+            severity="error"
+            className={["fr-mt-2w"]}
+          />
+        )}
+      </div>
     </>
   );
 };

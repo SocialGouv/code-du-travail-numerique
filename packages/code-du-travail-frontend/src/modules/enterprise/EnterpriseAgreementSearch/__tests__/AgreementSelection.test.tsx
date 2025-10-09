@@ -49,7 +49,12 @@ const defaultEnterprise = {
 describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
   let userAction: UserAction;
   it("Vérifier l'affichage de la selection", async () => {
-    render(<EnterpriseAgreementSelectionLink enterprise={defaultEnterprise} />);
+    render(
+      <EnterpriseAgreementSelectionLink
+        enterprise={defaultEnterprise}
+        level={2}
+      />
+    );
     userAction = new UserAction();
     expect(
       ui.enterpriseAgreementSelection.carrefour.title.query()
@@ -98,6 +103,7 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
             },
           ],
         }}
+        level={2}
       />
     );
     expect(
@@ -121,6 +127,7 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
             },
           ],
         }}
+        level={2}
       />
     );
     expect(
@@ -136,6 +143,7 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
       <EnterpriseAgreementSelectionLink
         enterprise={defaultEnterprise}
         widgetMode
+        level={2}
       />
     );
     expect(

@@ -28,10 +28,10 @@ const ShowResult: React.FC<Props> = ({
   if (!result) return null;
   return (
     <>
-      <h2 className={fr.cx("fr-mt-3w")}>
+      <h3 className={fr.cx("fr-mt-3w", "fr-h2")}>
         Préavis de {type === "depart-retraite" ? "départ" : "mise"} à la
         retraite
-      </h2>
+      </h3>
       <p className={fr.cx("fr-mb-3w", "fr-pr-md-2v")}>
         À partir des éléments que vous avez saisis
         {result.value > 0

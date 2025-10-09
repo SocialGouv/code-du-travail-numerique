@@ -79,14 +79,10 @@ export function RadioQuestion({
             ref: (el: HTMLInputElement | null) => {
               radioRefs.current[index] = el;
             },
-            "aria-describedby": error
-              ? errorId
-              : subLabel
-                ? `${name}-help`
-                : undefined,
           },
         }))}
         state={error ? "error" : subLabel ? "info" : "default"}
+        aria-describedby={error ? errorId : subLabel ? hintId : undefined}
         stateRelatedMessage={
           error ? (
             <span
@@ -104,7 +100,6 @@ export function RadioQuestion({
             />
           ) : undefined
         }
-        aria-describedby={subLabel ? hintId : undefined}
       />
       {note && <i>{note}</i>}
     </div>

@@ -28,6 +28,7 @@ export const AgreementSearch = () => {
             );
           }
         }}
+        level={2}
       />
       <div className={fr.cx("fr-mt-2w", "fr-grid-row")}>
         <Button

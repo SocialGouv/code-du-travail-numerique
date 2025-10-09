@@ -5,10 +5,15 @@ import { useEffect, useRef } from "react";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;
+  level: 2 | 3;
 };
 
-export const EnterpriseAgreementSelectionDetail = ({ enterprise }: Props) => {
+export const EnterpriseAgreementSelectionDetail = ({
+  enterprise,
+  level,
+}: Props) => {
   const titleRef = useRef<HTMLParagraphElement>(null);
+  const TitleTag = `h${level}` as "h2" | "h3";
   useEffect(() => {
     setTimeout(() => {
       titleRef?.current?.focus();
@@ -26,9 +31,9 @@ export const EnterpriseAgreementSelectionDetail = ({ enterprise }: Props) => {
       >
         Votre entreprise
       </p>
-      <h2 className={fr.cx("fr-h6", "fr-m-0", "fr-mt-2w")}>
+      <TitleTag className={fr.cx("fr-h6", "fr-m-0", "fr-mt-2w")}>
         {enterprise.label}
-      </h2>
+      </TitleTag>
       {enterprise.activitePrincipale && (
         <p className={fr.cx("fr-m-0")}>
           Activité&nbsp;: {enterprise.activitePrincipale}

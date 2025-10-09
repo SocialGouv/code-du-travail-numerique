@@ -23,6 +23,7 @@ export const EnterpriseAgreementSearch = ({ widgetMode = false }: Props) => {
         defaultSearch={defaultSearch}
         defaultLocation={defaultLocation}
         trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+        level={2}
       />
       {!widgetMode && (
         <div className={fr.cx("fr-mt-2w")}>

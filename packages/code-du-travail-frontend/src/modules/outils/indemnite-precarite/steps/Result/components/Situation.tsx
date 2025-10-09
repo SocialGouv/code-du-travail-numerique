@@ -11,7 +11,7 @@ type Props = {
 const Situation: React.FC<Props> = ({ remuneration, agreement }) => {
   return (
     <>
-      <h3 className={fr.cx("fr-h5", "fr-mb-0")}>Les éléments saisis</h3>
+      <h4 className={fr.cx("fr-h5", "fr-mb-0")}>Les éléments saisis</h4>
       <ul>
         {agreement && (
           <li data-testid="situation-convention-collective">

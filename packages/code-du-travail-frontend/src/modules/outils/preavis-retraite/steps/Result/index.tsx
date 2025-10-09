@@ -6,9 +6,9 @@ import DecryptedResult from "./components/DecryptedResult";
 import ShowResult from "./components/ShowResult";
 import { NoticeUsed } from "./utils/types";
 import Situation from "./components/Situation";
-import ErrorPublicodes from "src/modules/outils/indemnite-depart/steps/Resultat/components/ErrorPublicodes";
 import { PubliReferences } from "src/modules/outils/common/components";
 import { fr } from "@codegouvfr/react-dsfr";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 const StepResult = () => {
   const store = useContext(PreavisRetraiteContext);
@@ -59,7 +59,14 @@ const StepResult = () => {
   }, []);
 
   if (errorPublicodes) {
-    return <ErrorPublicodes title={"Préavis"} />;
+    return (
+      <AccessibleAlert
+        title="Attention"
+        description="Une erreur est survenue lors du calcul. Veuillez vérifier les informations saisies ou rafraîchir la page si le problème persiste."
+        severity="error"
+        className={["fr-mb-2w"]}
+      />
+    );
   }
 
   return (
@@ -80,7 +87,7 @@ const StepResult = () => {
           isAgreementSupported
         )}
       />
-      <h2 className={fr.cx("fr-h4")}>Détail du calcul</h2>
+      <h3 className={fr.cx("fr-h4")}>Détail du calcul</h3>
       <Situation
         agreement={agreement}
         isAgreementSupported={isAgreementSupported}
