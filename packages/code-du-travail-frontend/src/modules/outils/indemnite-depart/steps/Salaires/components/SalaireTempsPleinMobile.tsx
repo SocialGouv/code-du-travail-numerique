@@ -16,8 +16,8 @@ type Props = {
   dataTestidSalaries?: string;
   noPrime?: boolean;
   autoFocus?: boolean;
-  salaryInputRefs: React.MutableRefObject<(HTMLInputElement | null)[]>;
-  primeInputRefs: React.MutableRefObject<(HTMLInputElement | null)[]>;
+  salaryInputRefs: React.RefObject<(HTMLInputElement | null)[]>;
+  primeInputRefs: React.RefObject<(HTMLInputElement | null)[]>;
 };
 
 export const SalaireTempsPleinMobile = ({
