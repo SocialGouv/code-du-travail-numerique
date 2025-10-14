@@ -7,7 +7,7 @@
     "ID": "F2883",
     "type": "Fiche d'information conditionnée",
     "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
-    "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F2883"
+    "spUrl": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2883"
   },
   "children": [
     {
@@ -156,7 +156,7 @@
       "children": [
         {
           "type": "text",
-          "text": "https://www.service-public.fr/a-propos/mentions-legales"
+          "text": "https://www.service-public.gouv.fr/a-propos/mentions-legales"
         }
       ]
     },
@@ -186,7 +186,7 @@
       "children": [
         {
           "type": "text",
-          "text": "www.service-public.fr"
+          "text": "www.service-public.gouv.fr"
         }
       ]
     },
@@ -1146,7 +1146,7 @@
                       "name": "ServiceEnLigne",
                       "attributes": {
                         "ID": "R32161",
-                        "URL": "https://www.service-public.fr/simulateur/calcul/Demission",
+                        "URL": "https://www.service-public.gouv.fr/simulateur/calcul/Demission",
                         "type": "Modèle de document"
                       },
                       "children": [
@@ -1926,7 +1926,7 @@
                               "name": "ServiceEnLigne",
                               "attributes": {
                                 "ID": "R63883",
-                                "URL": "https://code.travail.gouv.fr/outils/preavis-demission?src_url=https://service-public.fr/particuliers/vosdroits/F2883",
+                                "URL": "https://code.travail.gouv.fr/outils/preavis-demission?src_url=https://service-public.gouv.fr/particuliers/vosdroits/F2883",
                                 "type": "Téléservice"
                               },
                               "children": [
@@ -3681,7 +3681,7 @@
                       "name": "ServiceEnLigne",
                       "attributes": {
                         "ID": "R32161",
-                        "URL": "https://www.service-public.fr/simulateur/calcul/Demission",
+                        "URL": "https://www.service-public.gouv.fr/simulateur/calcul/Demission",
                         "type": "Modèle de document"
                       },
                       "children": [
@@ -5544,7 +5544,7 @@
                       "name": "ServiceEnLigne",
                       "attributes": {
                         "ID": "R32161",
-                        "URL": "https://www.service-public.fr/simulateur/calcul/Demission",
+                        "URL": "https://www.service-public.gouv.fr/simulateur/calcul/Demission",
                         "type": "Modèle de document"
                       },
                       "children": [
@@ -6927,7 +6927,7 @@
       "name": "ServiceEnLigne",
       "attributes": {
         "ID": "R32161",
-        "URL": "https://www.service-public.fr/simulateur/calcul/Demission",
+        "URL": "https://www.service-public.gouv.fr/simulateur/calcul/Demission",
         "type": "Modèle de document"
       },
       "children": [
@@ -6961,7 +6961,7 @@
       "name": "ServiceEnLigne",
       "attributes": {
         "ID": "R63883",
-        "URL": "https://code.travail.gouv.fr/outils/preavis-demission?src_url=https://service-public.fr/particuliers/vosdroits/F2883",
+        "URL": "https://code.travail.gouv.fr/outils/preavis-demission?src_url=https://service-public.gouv.fr/particuliers/vosdroits/F2883",
         "type": "Téléservice"
       },
       "children": [

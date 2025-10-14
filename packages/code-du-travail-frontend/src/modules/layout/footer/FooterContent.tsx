@@ -5,7 +5,7 @@ import Link from "../../common/Link";
 const DOMAINS = [
   "travail-emploi.gouv.fr",
   "info.gouv.fr",
-  "service-public.fr",
+  "service-public.gouv.fr",
   "legifrance.gouv.fr",
   "data.gouv.fr",
 ];

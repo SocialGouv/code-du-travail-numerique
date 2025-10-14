@@ -8,7 +8,7 @@ exports[`Image should display image and caption 1`] = `
   >
     <img
       alt="Comment calculer un délai quand il y a un jour férié ?"
-      src="https://www.service-public.fr/webapp/images/vdd/extralarge/I4596.jpg"
+      src="https://www.service-public.gouv.fr/webapp/images/vdd/extralarge/I4596.jpg"
     />
     <figcaption
       class="fr-text--sm"

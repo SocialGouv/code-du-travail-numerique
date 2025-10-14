@@ -35,7 +35,7 @@ export const ImageComponent = ({
     <>
       <figure role="group" aria-label={legendText}>
         <img
-          src={`https://www.service-public.fr/webapp/images/vdd/extralarge/${name}`}
+          src={`https://www.service-public.gouv.fr/webapp/images/vdd/extralarge/${name}`}
           alt={legendText}
         />
         <figcaption className={fr.cx("fr-text--sm")}>

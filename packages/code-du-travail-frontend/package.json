@@ -43,7 +43,7 @@
     "@socialgouv/cdtn-elasticsearch": "^2.44.2",
     "@socialgouv/cdtn-types": "^2.57.0",
     "@socialgouv/cdtn-utils": "workspace:^",
-    "@socialgouv/matomo-next": "^1.9.2",
+    "@socialgouv/matomo-next": "1.10.0-alpha.2",
     "@socialgouv/modeles-social": "workspace:^",
     "date-fns": "^2.22.1",
     "debounce-promise": "^3.1.2",
