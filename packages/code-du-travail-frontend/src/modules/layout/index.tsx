@@ -6,7 +6,6 @@ import { PolyfillComponent } from "../config/PolyfillComponent";
 import { Footer } from "./footer";
 import { Header } from "./header";
 import { SkipLinks } from "./SkipLinks";
-import { usePathname } from "next/navigation";
 
 type Props = {
   children: ReactNode;
@@ -14,7 +13,6 @@ type Props = {
 };
 
 export const DsfrLayout = ({ children, container = "fr-container" }: Props) => {
-  const pathname = usePathname() || "";
   return (
     <>
       <PolyfillComponent />
