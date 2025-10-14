@@ -62,7 +62,7 @@ export function middleware(request: NextRequest) {
   const ContentSecurityPolicy = `
     default-src 'self';
     img-src 'self' https://travail-emploi.gouv.fr https://www.service-public.gouv.fr ${BUCKET_URL} https://matomo.fabrique.social.gouv.fr https://www.googletagmanager.com https://ad.doubleclick.net data:;
-    script-src 'self' 'nonce-${nonce}' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr https://tally.so https://www.googletagmanager.com ${
+    script-src 'self' 'nonce-${nonce}' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr https://www.googletagmanager.com ${
       process.env.NEXT_PUBLIC_APP_ENV !== "production" ? "'unsafe-eval'" : ""
     };
     style-src 'self' 'unsafe-inline';
@@ -70,8 +70,8 @@ export function middleware(request: NextRequest) {
     object-src 'none';
     base-uri 'self';
     form-action 'self';
-    frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr https://tally.so https://www.googletagmanager.com *.dailymotion.com https://*.doubleclick.net;
-    connect-src 'self' https://geo.api.gouv.fr https://sentry2.fabrique.social.gouv.fr https://matomo.fabrique.social.gouv.fr https://tally.so https://www.googletagmanager.com https://www.google.com;
+    frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr https://www.googletagmanager.com *.dailymotion.com https://*.doubleclick.net;
+    connect-src 'self' https://geo.api.gouv.fr https://sentry2.fabrique.social.gouv.fr https://matomo.fabrique.social.gouv.fr https://www.googletagmanager.com https://www.google.com;
     worker-src 'self' blob:;
     upgrade-insecure-requests;
   `;
