@@ -1,4 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
+import { useState } from "react";
 import Link from "../../common/Link";
 import type { NavigationMenu } from "./HeaderDsfr";
 
@@ -14,13 +15,20 @@ export const NavigationMenuDropdown = ({
   currentPath,
 }: NavigationMenuDropdownProps) => {
   const { isActive = false, text, menuLinks } = item;
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleToggle = () => {
+    setIsExpanded(!isExpanded);
+  };
 
   return (
     <li className={fr.cx("fr-nav__item")} data-fr-js-navigation-item="true">
       <button
         className={fr.cx("fr-nav__btn")}
-        aria-expanded="false"
+        aria-expanded={isExpanded}
+        aria-haspopup="menu"
         aria-controls={`fr-header-menu-${index}`}
+        onClick={handleToggle}
         {...(isActive && { ["aria-current"]: "true" })}
       >
         {text}
