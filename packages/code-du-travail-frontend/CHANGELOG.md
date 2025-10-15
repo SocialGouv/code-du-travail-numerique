@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.194.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.193.2...v4.194.0) (2025-10-15)
+
+
+### Bug Fixes
+
+* 6820 simu precarite   erreur dineligibilite ([#6834](https://github.com/SocialGouv/code-du-travail-numerique/issues/6834)) ([35dd5db](https://github.com/SocialGouv/code-du-travail-numerique/commit/35dd5db5f47a3bc12834c84e1c05b34a66f02160))
+* **naming:** remplacement de `service-public.fr` par `service-public.gouv.fr` ([#6868](https://github.com/SocialGouv/code-du-travail-numerique/issues/6868)) ([f93c118](https://github.com/SocialGouv/code-du-travail-numerique/commit/f93c118b55731e771d42cbd63123e9a919648c86))
+* **rupture-conventionnelle:** correction de retours rgaa (`hn` sur l'ensemble des pages ; responsive sur le composant `Absence` ; `aria-describedby` sur les radios buttons) ([#6875](https://github.com/SocialGouv/code-du-travail-numerique/issues/6875)) ([6cb8b20](https://github.com/SocialGouv/code-du-travail-numerique/commit/6cb8b20954a910671053ed9003e901a0764bd351))
+* **tally:** suppression du bandeau de la campagne des retours utilisateurs ([#6885](https://github.com/SocialGouv/code-du-travail-numerique/issues/6885)) ([9c9060e](https://github.com/SocialGouv/code-du-travail-numerique/commit/9c9060ee4e3ba4ab73cd51db8b635adf714152c0))
+
+
+### Features
+
+* **matomo:** upgrade to the latest version which support `app` folder ([#6863](https://github.com/SocialGouv/code-du-travail-numerique/issues/6863)) ([70e16c6](https://github.com/SocialGouv/code-du-travail-numerique/commit/70e16c6876b266affef1f848e16a5d94f6683427))
+
+
+
+
+
 ## [4.193.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.193.1...v4.193.2) (2025-10-08)
 
 

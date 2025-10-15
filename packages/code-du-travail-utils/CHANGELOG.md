@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.194.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.193.2...v4.194.0) (2025-10-15)
+
+
+### Bug Fixes
+
+* **naming:** remplacement de `service-public.fr` par `service-public.gouv.fr` ([#6868](https://github.com/SocialGouv/code-du-travail-numerique/issues/6868)) ([f93c118](https://github.com/SocialGouv/code-du-travail-numerique/commit/f93c118b55731e771d42cbd63123e9a919648c86))
+
+
+
+
+
 ## [4.193.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.193.1...v4.193.2) (2025-10-08)
 
 **Note:** Version bump only for package @socialgouv/cdtn-utils
