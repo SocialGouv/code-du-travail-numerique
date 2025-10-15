@@ -1,4 +1,4 @@
-ARG NODE_VERSION=20.3.1-alpine
+ARG NODE_VERSION=24.10.0-alpine
 # dist
 FROM node:$NODE_VERSION AS dist
 
@@ -54,7 +54,7 @@ ENV NEXT_PUBLIC_BRANCH_NAME_SLUG=$NEXT_PUBLIC_BRANCH_NAME_SLUG
 
 # Enable source map generation during build
 ENV GENERATE_SOURCEMAP=true \
-    NODE_ENV=production
+  NODE_ENV=production
 
 RUN --mount=type=secret,id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN \
   --mount=type=secret,id=ELASTICSEARCH_TOKEN_API,env=ELASTICSEARCH_TOKEN_API \

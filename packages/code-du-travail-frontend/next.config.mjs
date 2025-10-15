@@ -1,5 +1,8 @@
 import { withSentryConfig } from "@sentry/nextjs";
-import MappingReplacement from "./redirects.json" assert { type: "json" };
+
+const MappingReplacement = await import("./redirects.json", {
+  with: { type: "json" },
+});
 
 const sentryConfig = {
   // Sentry webpack plugin options
@@ -130,7 +133,7 @@ const moduleExports = {
   },
 
   async redirects() {
-    return MappingReplacement;
+    return MappingReplacement.default;
   },
 };
 

@@ -46,7 +46,7 @@
     "packages/*"
   ],
   "engines": {
-    "node": ">= v20"
+    "node": ">= v24"
   },
   "version": "0.0.0",
   "packageManager": "yarn@3.8.7"
