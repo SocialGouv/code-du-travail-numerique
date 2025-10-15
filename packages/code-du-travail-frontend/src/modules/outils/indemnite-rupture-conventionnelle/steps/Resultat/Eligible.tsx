@@ -81,12 +81,13 @@ const Eligible = () => {
       {!result.agreementHasNoBetterAllowance && result.infoWarning && (
         <AccessibleAlert
           title={result.infoWarning.title}
+          titleAs="h4"
           description={result.infoWarning.message}
           data-testid="eligible-cc-disclaimer"
           severity="info"
         />
       )}
-      <h2>Détail du calcul</h2>
+      <h3 className={fr.cx("fr-mt-2w")}>Détail du calcul</h3>
       <FilledElements
         type={IndemniteDepartType.RUPTURE_CONVENTIONNELLE}
         contractTravail={[

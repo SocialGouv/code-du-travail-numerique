@@ -5,6 +5,7 @@ import {
   useIndemniteDepartStore,
 } from "src/modules/outils/indemnite-depart/store";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
+import { fr } from "@codegouvfr/react-dsfr";
 
 export default function Ineligible() {
   const store = useContext(IndemniteDepartContext);
@@ -17,7 +18,7 @@ export default function Ineligible() {
     }));
   return (
     <>
-      <h2>Indemnité de rupture conventionnelle</h2>
+      <h3 className={fr.cx("fr-h2")}>Indemnité de rupture conventionnelle</h3>
       <p>
         Il n&apos;y a pas d&apos;indemnité de rupture conventionnelle dans cette
         situation

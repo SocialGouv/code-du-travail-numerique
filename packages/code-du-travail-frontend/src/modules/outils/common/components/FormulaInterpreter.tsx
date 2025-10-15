@@ -11,7 +11,7 @@ export default function FormulaInterpreter(props: Props) {
     <>
       {props.formula.explanations.length > 0 && (
         <div data-testid="formula">
-          <h3>Formule</h3>
+          <h4>Formule</h4>
           <MathFormula formula={props.formula.formula} />
           {props.formula.explanations.map((explanation, index) => (
             <p key={"explanation-" + index}>{explanation}</p>

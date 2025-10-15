@@ -18,6 +18,7 @@ export const titrePreavis =
 const WarningResult: React.FC<Props> = ({ type, hasNotice }) => {
   return (
     <AccessibleAlert
+      titleAs="h4"
       severity="info"
       title={hasNotice ? titreFavorable : titrePreavis}
       data-testid="notice-warning"

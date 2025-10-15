@@ -18,9 +18,9 @@ const ShowResult: React.FC<Props> = ({
 }: Props) => {
   return (
     <>
-      <h2 className={fr.cx("fr-h5", "fr-mt-4w")}>
+      <h3 className={fr.cx("fr-h5", "fr-mt-4w")}>
         Nombre d&apos;heures d&apos;absence autorisée pour rechercher un emploi
-      </h2>
+      </h3>
       {isResultValid ? (
         <>
           <p className={fr.cx("fr-mb-3w", "fr-pr-md-2v")}>
@@ -43,17 +43,17 @@ const ShowResult: React.FC<Props> = ({
         <>
           {notifications[0].description[0] && (
             <>
-              <h2 className={fr.cx("fr-h5", "fr-mt-4w")}>
+              <h3 className={fr.cx("fr-h5", "fr-mt-4w")}>
                 Rémunération pendant les heures d&apos;absence autorisée
-              </h2>
+              </h3>
               <p>{notifications[0].description[0]}</p>
             </>
           )}
           {notifications[0].description[1] && (
             <>
-              <h2 className={fr.cx("fr-h5", "fr-mt-4w")}>
+              <h3 className={fr.cx("fr-h5", "fr-mt-4w")}>
                 Conditions d&apos;utilisation
-              </h2>
+              </h3>
               <p>{notifications[0].description[1]}</p>
             </>
           )}

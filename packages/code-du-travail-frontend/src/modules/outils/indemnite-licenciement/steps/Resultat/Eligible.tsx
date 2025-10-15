@@ -21,6 +21,7 @@ import { AgreementsInjector } from "src/modules/outils/indemnite-depart/agreemen
 import { getForMoreInfoMessage, getResultMessage } from "./utils";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 import Link from "src/modules/common/Link";
+import { fr } from "@codegouvfr/react-dsfr";
 
 export default function Eligible() {
   const store = useContext(IndemniteDepartContext);
@@ -124,7 +125,7 @@ export default function Eligible() {
   ];
 
   return (
-    <>
+    <div className={fr.cx("fr-col-md-8", "fr-col-12")}>
       <Result
         title="Indemnité de licenciement"
         maxResult={result?.value?.toString() ?? ""}
@@ -133,13 +134,14 @@ export default function Eligible() {
       />
       {!agreementHasNoBetterAllowance && infoWarning && (
         <AccessibleAlert
+          titleAs="h4"
           title={infoWarning.title}
           description={infoWarning.message}
           data-testid="eligible-cc-disclaimer"
           severity="info"
         />
       )}
-      <h2>Détail du calcul</h2>
+      <h3 className={fr.cx("fr-mt-2w")}>Détail du calcul</h3>
       <FilledElements
         type={IndemniteDepartType.LICENCIEMENT}
         contractTravail={[
@@ -235,6 +237,6 @@ export default function Eligible() {
         .
       </p>
       <i>{getForMoreInfoMessage(isAgreementBetter, agreement?.num)}</i>
-    </>
+    </div>
   );
 }

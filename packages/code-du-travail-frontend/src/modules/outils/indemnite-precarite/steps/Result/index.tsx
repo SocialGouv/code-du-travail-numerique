@@ -7,7 +7,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { ShowResult, Situation, Warning } from "./components";
 import FormulaInterpreter from "src/modules/outils/common/components/FormulaInterpreter";
 import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
-import Link from "src/modules/common/Link";
+import ReferenceJuridiques from "src/modules/outils/preavis-licenciement/steps/Result/components/ReferenceJuridiques";
 
 const ResultStepComponent = () => {
   const store = useContext(IndemnitePrecariteContext);
@@ -41,7 +41,7 @@ const ResultStepComponent = () => {
     return (
       <AccessibleAlert
         title="Attention"
-        description="Une erreur est survenue lors du calcul. Veuillez réessayer."
+        description="Une erreur est survenue lors du calcul. Veuillez vérifier les informations saisies ou rafraîchir la page si le problème persiste."
         severity="error"
         className={["fr-mb-2w"]}
       />
@@ -57,24 +57,10 @@ const ResultStepComponent = () => {
         isAgreementSupported={isAgreementSupported || false}
       />
 
-      <h2 className={fr.cx("fr-h4", "fr-mt-4w")}>Détail du calcul</h2>
+      <h3 className={fr.cx("fr-h4", "fr-mt-4w")}>Détail du calcul</h3>
       <Situation agreement={agreement} remuneration={totalSalary ?? 0} />
       <FormulaInterpreter formula={resultFormula} />
-
-      {resultReferences && resultReferences.length > 0 && (
-        <div className={fr.cx("fr-mt-4w")}>
-          <h3 className={fr.cx("fr-h5")}>Références juridiques</h3>
-          <ul>
-            {resultReferences.map((ref, index) => (
-              <li key={index}>
-                <Link href={ref.url} target="_blank" rel="noopener noreferrer">
-                  {ref.article}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <ReferenceJuridiques references={resultReferences || []} />
     </div>
   );
 };

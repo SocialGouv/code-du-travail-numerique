@@ -14,7 +14,7 @@ export const PubliReferences: React.FC<Props> = ({
   <>
     {references && references.length > 0 && (
       <>
-        <h3 className={classNameTitle}>Sources</h3>
+        <h4 className={classNameTitle}>Sources</h4>
         <ul data-testid="sources">
           {references
             .filter(({ article }) => article !== null)
