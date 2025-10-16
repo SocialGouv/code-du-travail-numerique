@@ -11,7 +11,7 @@ type Props = {
 
 export const HeaderDsfr = ({ navigation, onSearchSubmit }: Props) => {
   return (
-    <header role="banner" id="fr-header" className={fr.cx("fr-header")}>
+    <header role="banner" className={fr.cx("fr-header")}>
       <div className={fr.cx("fr-header__body")}>
         <div className={fr.cx("fr-container")}>
           <div className={fr.cx("fr-header__body-row")}>

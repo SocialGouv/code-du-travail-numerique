@@ -1,0 +1,44 @@
+/* header-navigation.css */
+
+/* Conteneur du sous-menu */
+.sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border-radius: 0.25rem;
+  padding: 0.5rem 0;
+  z-index: 1000;
+  min-width: 200px;
+  display: none; /* caché par défaut */
+}
+
+/* Lien dans le sous-menu */
+.sub-item-link {
+  display: block;
+  padding: 0.25rem 1rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  transition: background 0.2s;
+}
+
+.sub-item-link:hover {
+  background-color: #f0f0f0;
+}
+
+/* Toggle icône */
+.sub-menu-toggle {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+/* Affiche le sous-menu si actif */
+.sub-menu.open {
+  display: block;
+}
