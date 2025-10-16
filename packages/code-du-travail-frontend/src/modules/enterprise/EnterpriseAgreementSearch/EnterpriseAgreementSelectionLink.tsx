@@ -11,6 +11,7 @@ import { CardTitleStyle } from "../../convention-collective/style";
 import { useEnterpriseAgreementSearchTracking } from "./tracking";
 import { TrackingAgreementSearchAction } from "../../convention-collective/tracking";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
+import { AccessibleAlert } from "src/modules/outils/common/components/AccessibleAlert";
 
 type Props = {
   enterprise: Omit<Enterprise, "complements">;
@@ -42,6 +43,13 @@ export const EnterpriseAgreementSelectionLink = ({
           {agreementPlurial} trouvée
           {agreementPlurial}&nbsp;:
         </p>
+      )}
+      {enterprise.conventions.length === 0 && (
+        <AccessibleAlert
+          title="Votre entreprise n'a pas renseigné de convention collective"
+          description="Pour plus d'informations, veuillez vous rapprocher de votre entreprise."
+          severity="info"
+        />
       )}
       {getEnterpriseAgreements(enterprise.conventions).map(
         ({ disabled, description, ...agreement }) => {

@@ -156,4 +156,33 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
       ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
     ).toHaveAttribute("target", "_blank");
   });
+
+  it("Vérifier l'affichage quand aucune convention collective n'est renseignée", async () => {
+    const { getByText } = render(
+      <EnterpriseAgreementSelectionLink
+        enterprise={{
+          ...defaultEnterprise,
+          conventions: [],
+        }}
+        level={2}
+      />
+    );
+
+    expect(
+      getByText("Votre entreprise n'a pas renseigné de convention collective")
+    ).toBeInTheDocument();
+    expect(
+      getByText(
+        "Pour plus d'informations, veuillez vous rapprocher de votre entreprise."
+      )
+    ).toBeInTheDocument();
+
+    expect(
+      ui.enterpriseAgreementSelection.agreement.IDCC2216.link.query()
+    ).not.toBeInTheDocument();
+
+    expect(
+      ui.enterpriseAgreementSearch.buttonPrevious.query()
+    ).toBeInTheDocument();
+  });
 });

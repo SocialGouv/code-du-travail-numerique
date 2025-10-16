@@ -564,7 +564,7 @@ export const EnterpriseAgreementSearchInput = ({
                 }
           }
           title="Particuliers employeurs et emploi à domicile"
-          desc="Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective"
+          desc="Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective."
           size="small"
           classes={{
             title: CardSmallTitleStyle,
