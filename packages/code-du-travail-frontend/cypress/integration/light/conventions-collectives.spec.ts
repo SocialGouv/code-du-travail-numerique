@@ -8,7 +8,7 @@ describe("Conventions collectives", () => {
       );
 
       cy.get("#fr-header-main-navigation a")
-        .contains("Votre convention collective")
+        .contains("Conventions collectives")
         .click();
 
       cy.urlEqual("/convention-collective");
