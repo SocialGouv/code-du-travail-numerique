@@ -90,7 +90,7 @@ COPY --from=dist --chown=1000:1000 /dep/node_modules /app/node_modules
 
 RUN mkdir -p /app/packages/code-du-travail-frontend/.next/cache/images && chown -R 1000:1000 /app/packages/code-du-travail-frontend/.next
 
-CMD [ "yarn", "workspace", "@cdt/frontend", "start"]
+CMD [ "npm", "run", "start:production"]
 
 ARG NEXT_PUBLIC_SENTRY_URL
 ARG NEXT_PUBLIC_SENTRY_ORG
