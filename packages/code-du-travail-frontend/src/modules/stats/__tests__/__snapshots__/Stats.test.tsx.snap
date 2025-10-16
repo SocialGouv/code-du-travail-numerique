@@ -134,6 +134,65 @@ exports[`<Stats /> should match snapshot 1`] = `
       >
         Statistiques d’utilisation depuis le 01/01/2020
       </p>
+      <h2
+        class="fr-mt-6w fr-h3"
+      >
+        Bilans annuels
+      </h2>
+      <div
+        class="fr-mt-6w fr-grid-row fr-grid-row--gutters"
+      >
+        <div
+          class="fr-col-12 fr-col-lg-3"
+        >
+          <div
+            class="fr-tile fr-enlarge-link fr-tile--vertical fr-tile--sm fr-tile--download"
+            id="fr-tile-:r4:"
+          >
+            <div
+              class="fr-tile__body"
+            >
+              <div
+                class="fr-tile__content"
+              >
+                <h3
+                  class="fr-tile__title"
+                >
+                  <a
+                    aria-disabled="false"
+                    class=""
+                    href="bucket.url/preview/default/cdtn_bilan_2024.pdf"
+                  >
+                    Télécharger le bilan annuel de l’année 2024
+                  </a>
+                </h3>
+                <div
+                  class="fr-tile__detail"
+                >
+                  <p>
+                    Format PDF - 
+                    1
+                    Mo
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="fr-tile__header"
+            >
+              <div
+                class="fr-tile__img"
+              >
+                <img
+                  alt=""
+                  class="fr-responsive-img"
+                  src="/static/assets/img/modeles-de-courriers-download.svg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
