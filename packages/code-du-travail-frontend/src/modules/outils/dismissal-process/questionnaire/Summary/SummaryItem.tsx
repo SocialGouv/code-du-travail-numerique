@@ -9,6 +9,7 @@ type SymmaryItemProps = {
   onClick: () => void;
   noButton?: boolean;
   noCheck?: boolean;
+  as: "li" | "p";
 };
 
 export const SummaryItem = ({
@@ -16,27 +17,55 @@ export const SummaryItem = ({
   info,
   onClick,
   noButton = false,
+  as = "li",
 }: SymmaryItemProps) => {
   return (
-    <li className={!noButton ? fr.cx("fr-text--bold") : undefined}>
-      {data}
-      {info && <Tooltip title={info} kind="hover" />}
-      {!noButton && (
-        <>
-          <br />
-          <Button
-            size="small"
-            priority="secondary"
-            iconPosition="right"
-            iconId="fr-icon-arrow-go-back-line"
-            onClick={onClick}
-            data-testid={`modify-${data}`}
-            className={fr.cx("fr-mt-1w", "fr-mb-3w")}
-          >
-            Modifier
-          </Button>
-        </>
+    <>
+      {as === "p" ? (
+        <div className={fr.cx("fr-mt-2v")}>
+          <p className={!noButton ? fr.cx("fr-text--bold") : undefined}>
+            {data}
+            {info && <Tooltip title={info} kind="hover" />}
+          </p>
+          {!noButton && (
+            <>
+              <br />
+              <Button
+                size="small"
+                priority="secondary"
+                iconPosition="right"
+                iconId="fr-icon-arrow-go-back-line"
+                onClick={onClick}
+                data-testid={`modify-${data}`}
+                className={fr.cx("fr-mt-1w", "fr-mb-3w")}
+              >
+                Modifier
+              </Button>
+            </>
+          )}
+        </div>
+      ) : (
+        <li className={!noButton ? fr.cx("fr-text--bold") : undefined}>
+          {data}
+          {info && <Tooltip title={info} kind="hover" />}
+          {!noButton && (
+            <>
+              <br />
+              <Button
+                size="small"
+                priority="secondary"
+                iconPosition="right"
+                iconId="fr-icon-arrow-go-back-line"
+                onClick={onClick}
+                data-testid={`modify-${data}`}
+                className={fr.cx("fr-mt-1w", "fr-mb-3w")}
+              >
+                Modifier
+              </Button>
+            </>
+          )}
+        </li>
       )}
-    </li>
+    </>
   );
 };

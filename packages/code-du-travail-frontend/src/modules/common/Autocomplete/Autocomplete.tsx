@@ -73,6 +73,37 @@ export const Autocomplete = <K,>({
   return (
     <Downshift<K>
       initialSelectedItem={defaultValue}
+      getA11yStatusMessage={({
+        highlightedIndex,
+        inputValue,
+        isOpen,
+        resultCount,
+        selectedItem,
+      }) => {
+        if (!isOpen) {
+          return selectedItem
+            ? `${displayLabel(selectedItem)} sélectionné`
+            : "";
+        }
+
+        if (!inputValue) {
+          return "";
+        }
+
+        if (resultCount === 0) {
+          return "Aucun résultat disponible";
+        }
+
+        const resultatText =
+          resultCount === 1 ? "résultat est" : "résultats sont";
+        const baseMessage = `${resultCount} ${resultatText} disponible${resultCount > 1 ? "s" : ""}`;
+
+        if (highlightedIndex !== null && highlightedIndex >= 0) {
+          return `${baseMessage}. Utilisez les flèches haut et bas pour naviguer.`;
+        }
+
+        return baseMessage;
+      }}
       onInputValueChange={async (value, stateAndHelpers) => {
         if (!isFocusedRef.current) return;
 

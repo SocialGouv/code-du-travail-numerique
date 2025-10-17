@@ -7,6 +7,7 @@ import { Contribution } from "./type";
 import BlueCard from "../common/BlueCard";
 import Button from "@codegouvfr/react-dsfr/Button";
 import { removeCCNumberFromSlug } from "../utils/removeCCNumberFromSlug";
+import { useRouter } from "next/navigation";
 
 type Props = {
   contribution: Contribution;
@@ -14,6 +15,7 @@ type Props = {
 
 export function ContributionAgreement({ contribution }: Props) {
   const { slug, relatedItems } = contribution;
+  const { push } = useRouter();
 
   return (
     <>
@@ -31,9 +33,10 @@ export function ContributionAgreement({ contribution }: Props) {
           </div>
         </div>
         <Button
+          title="Modifier la convention collective sélectionnée"
           className={fr.cx("fr-mt-2w")}
-          linkProps={{
-            href: `/contribution/${removeCCNumberFromSlug(slug)}`,
+          onClick={() => {
+            push(`/contribution/${removeCCNumberFromSlug(slug)}`);
           }}
           priority="secondary"
           iconId="fr-icon-arrow-go-back-line"

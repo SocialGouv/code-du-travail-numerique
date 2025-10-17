@@ -1123,11 +1123,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
               <div
                 class="fr-alert fr-alert--info fr-mb-4w"
               >
-                <p
-                  class="fr-text--bold"
-                >
+                <h4>
                   À noter
-                </p>
+                </h4>
                 <p>
                   si vous mettez fin à votre CDD après la période d'essai et en dehors des cas autorisés, vous pouvez être condamné par le juge à verser à votre employeur des 
                   dommages et intérêts
@@ -1313,11 +1311,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
               <div
                 class="fr-alert fr-alert--info fr-mb-4w"
               >
-                <p
-                  class="fr-text--bold"
-                >
+                <h4>
                   Exemple
-                </p>
+                </h4>
                 <p>
                   Si votre CDD prévoyait 8 semaines de travail, le préavis est de 8 jours ouvrés.
                 </p>
@@ -1840,11 +1836,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
               <div
                 class="fr-alert fr-alert--info fr-mb-4w"
               >
-                <p
-                  class="fr-text--bold"
-                >
+                <h4>
                   À noter
-                </p>
+                </h4>
                 <p>
                   si vous mettez fin à votre mission d'intérim après la période d'essai et en dehors des cas autorisés, vous pouvez être condamné par le juge à verser à votre employeur des 
                   dommages et intérêts

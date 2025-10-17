@@ -5,11 +5,9 @@ exports[`<ANoter /> affiche un encart à noter (alert) 1`] = `
   <div
     class="fr-alert fr-alert--info fr-mb-4w"
   >
-    <p
-      class="fr-text--bold"
-    >
+    <h2>
       À savoir
-    </p>
+    </h2>
     <p>
       le préavis commence à courir à compter de la notification à l'employeur de votre démission.
     </p>

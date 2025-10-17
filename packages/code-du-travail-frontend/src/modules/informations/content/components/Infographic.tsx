@@ -27,7 +27,6 @@ export const Infographic = ({
       <img
         src={toUrl(imgUrl)}
         alt={`infographie ${altText}. Description détaillée ci-après.`}
-        aria-hidden="true"
         className={fr.cx("fr-mb-3w")}
       />
       <AccordionWithAnchor
