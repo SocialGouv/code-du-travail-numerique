@@ -186,7 +186,7 @@ const AbsencePeriods = ({
           return hasDurationError || hasDateError;
         });
 
-        const shouldPassRef = index === firstErrorIndex;
+        const shouldFocusOnError = index === firstErrorIndex;
 
         return (
           <AbsencePeriod
@@ -202,7 +202,8 @@ const AbsencePeriods = ({
             absenceDateError={absenceDateError}
             absence={value}
             informationData={informationData}
-            absenceRef={shouldPassRef ? absenceRef : undefined}
+            absenceRef={absenceRef}
+            shouldFocusOnError={shouldFocusOnError}
           />
         );
       })}
