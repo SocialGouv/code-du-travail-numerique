@@ -84,7 +84,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
           newItemLink.focus();
         }
       }
-    }, 150); // Increased timeout to ensure DOM is updated
+    }, 350);
   };
 
   return (
