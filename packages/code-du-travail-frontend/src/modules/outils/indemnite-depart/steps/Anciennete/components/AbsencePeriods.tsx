@@ -163,7 +163,6 @@ const AbsencePeriods = ({
       )}
 
       {localAbsences.map((value, index) => {
-        // Create or get the ref for this absence
         if (!absenceRefs.has(value.key)) {
           absenceRefs.set(
             value.key,
@@ -171,6 +170,23 @@ const AbsencePeriods = ({
           );
         }
         const absenceRef = absenceRefs.get(value.key);
+
+        const durationError =
+          errorsInput[`${index}`] ??
+          (error?.absences ? error.absences[index].errorDuration : undefined);
+        const absenceDateError = error?.absences
+          ? error.absences[index].errorDate
+          : undefined;
+
+        const firstErrorIndex = localAbsences.findIndex((_, idx) => {
+          const hasDurationError =
+            errorsInput[`${idx}`] ||
+            (error?.absences && error.absences[idx].errorDuration);
+          const hasDateError = error?.absences && error.absences[idx].errorDate;
+          return hasDurationError || hasDateError;
+        });
+
+        const shouldPassRef = index === firstErrorIndex;
 
         return (
           <AbsencePeriod
@@ -182,18 +198,11 @@ const AbsencePeriods = ({
             onDeleteAbsence={onDeleteButtonClick}
             motifs={motifs}
             showDeleteButton={localAbsences.length > 1}
-            durationError={
-              errorsInput[`${index}`] ??
-              (error?.absences
-                ? error.absences[index].errorDuration
-                : undefined)
-            }
-            absenceDateError={
-              error?.absences ? error.absences[index].errorDate : undefined
-            }
+            durationError={durationError}
+            absenceDateError={absenceDateError}
             absence={value}
             informationData={informationData}
-            absenceRef={absenceRef}
+            absenceRef={shouldPassRef ? absenceRef : undefined}
           />
         );
       })}
