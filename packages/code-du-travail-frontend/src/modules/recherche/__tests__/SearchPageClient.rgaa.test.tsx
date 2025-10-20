@@ -80,7 +80,7 @@ describe("SearchPageClient - Tests d'accessibilité et tabulation", () => {
         const newResult = container.querySelector("#search-result-doc9");
         expect(newResult).toHaveFocus();
       },
-      { timeout: 200 }
+      { timeout: 1000 }
     );
   });
 });

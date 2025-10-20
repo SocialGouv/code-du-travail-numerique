@@ -35,6 +35,7 @@ type Props = {
   showDeleteButton: boolean;
   informationData: Record<string, string | undefined>;
   absenceRef?: React.RefObject<HTMLElement | null>;
+  shouldFocusOnError?: boolean;
 };
 
 const AbsencePeriod = ({
@@ -50,6 +51,7 @@ const AbsencePeriod = ({
   onDeleteAbsence,
   informationData,
   absenceRef,
+  shouldFocusOnError = false,
 }: Props): JSX.Element => {
   const [shouldAskAbsenceDate, askAbsenceDate] = useState(
     absence
@@ -64,7 +66,7 @@ const AbsencePeriod = ({
   const hasFocusedRef = useRef(false);
 
   useEffect(() => {
-    if (!hasFocusedRef.current) {
+    if (!hasFocusedRef.current && shouldFocusOnError) {
       // Priorité: erreur de durée d'abord, puis erreur de date
       if (durationError && durationInputRef.current) {
         durationInputRef.current.focus();
@@ -82,7 +84,7 @@ const AbsencePeriod = ({
         hasFocusedRef.current = true;
       }
     }
-  }, [durationError, absenceDateError]);
+  }, [durationError, absenceDateError, shouldFocusOnError]);
 
   const selectMotif = (key: string, value: string) => {
     const motif = motifs.find((motif) => motif.label === value);

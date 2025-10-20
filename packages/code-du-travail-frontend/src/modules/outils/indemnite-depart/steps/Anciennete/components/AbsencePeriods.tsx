@@ -145,8 +145,10 @@ const AbsencePeriods = ({
   return (
     <fieldset>
       <div aria-live="polite" className="sr-only" ref={statusMessageRef} />
-      <legend className={fr.cx("fr-text--bold", "fr-text--lg")}>
-        Quels sont le motif et la durée de ces absences prolongées&nbsp;?
+      <legend>
+        <h4 className={fr.cx("fr-text--bold", "fr-text--lg")}>
+          Quels sont le motif et la durée de ces absences prolongées&nbsp;?
+        </h4>
       </legend>
       <p className={fr.cx("fr-mt-2w")}>
         Veuillez créer une ligne différente pour chaque période d&apos;absence
@@ -161,7 +163,6 @@ const AbsencePeriods = ({
       )}
 
       {localAbsences.map((value, index) => {
-        // Create or get the ref for this absence
         if (!absenceRefs.has(value.key)) {
           absenceRefs.set(
             value.key,
@@ -169,6 +170,23 @@ const AbsencePeriods = ({
           );
         }
         const absenceRef = absenceRefs.get(value.key);
+
+        const durationError =
+          errorsInput[`${index}`] ??
+          (error?.absences ? error.absences[index].errorDuration : undefined);
+        const absenceDateError = error?.absences
+          ? error.absences[index].errorDate
+          : undefined;
+
+        const firstErrorIndex = localAbsences.findIndex((_, idx) => {
+          const hasDurationError =
+            errorsInput[`${idx}`] ||
+            (error?.absences && error.absences[idx].errorDuration);
+          const hasDateError = error?.absences && error.absences[idx].errorDate;
+          return hasDurationError || hasDateError;
+        });
+
+        const shouldFocusOnError = index === firstErrorIndex;
 
         return (
           <AbsencePeriod
@@ -180,18 +198,12 @@ const AbsencePeriods = ({
             onDeleteAbsence={onDeleteButtonClick}
             motifs={motifs}
             showDeleteButton={localAbsences.length > 1}
-            durationError={
-              errorsInput[`${index}`] ??
-              (error?.absences
-                ? error.absences[index].errorDuration
-                : undefined)
-            }
-            absenceDateError={
-              error?.absences ? error.absences[index].errorDate : undefined
-            }
+            durationError={durationError}
+            absenceDateError={absenceDateError}
             absence={value}
             informationData={informationData}
             absenceRef={absenceRef}
+            shouldFocusOnError={shouldFocusOnError}
           />
         );
       })}
