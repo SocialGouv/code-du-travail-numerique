@@ -34,6 +34,7 @@ function MatomoComponent({
         captureKeystrokes: false,
         captureVisibleContentOnly: false,
       },
+      searchKeyword: "query",
       onInitialization: () => {
         const referrerUrl = document?.referrer || searchParams.get("src_url");
         if (referrerUrl) {
