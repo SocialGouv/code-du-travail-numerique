@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.195.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.195.0...v4.195.1) (2025-10-21)
+
+
+### Bug Fixes
+
+* **actions:** versioning via le .node-version ([#6896](https://github.com/SocialGouv/code-du-travail-numerique/issues/6896)) ([3940837](https://github.com/SocialGouv/code-du-travail-numerique/commit/3940837af724b570c6739a5b5e4ea1bd6399be26))
+* **autocomplete:** utilisation d'un `id` spécifique pour un champ ([#6897](https://github.com/SocialGouv/code-du-travail-numerique/issues/6897)) ([b979f15](https://github.com/SocialGouv/code-du-travail-numerique/commit/b979f1534ac8a343ea1d52a705bcbbf37aba9593))
+
+
+
+
+
 # [4.195.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.194.0...v4.195.0) (2025-10-21)
 
 
