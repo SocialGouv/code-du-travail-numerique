@@ -518,7 +518,7 @@ __metadata:
     "@socialgouv/cdtn-elasticsearch": ^2.44.2
     "@socialgouv/cdtn-types": ^2.57.0
     "@socialgouv/cdtn-utils": "workspace:^"
-    "@socialgouv/matomo-next": 1.10.0-alpha.2
+    "@socialgouv/matomo-next": 1.10.0
     "@socialgouv/modeles-social": "workspace:^"
     "@testing-library/cypress": ^10.1.0
     "@testing-library/dom": ^8.11.3
@@ -532,7 +532,7 @@ __metadata:
     "@types/react-dom": ^19.1.9
     "@types/xml2js": ^0.4.14
     "@typescript-eslint/parser": ^8.42.0
-    cypress: ^15.3.0
+    cypress: ^15.4.0
     cypress-html-validate: ^8.1.0
     cypress-iframe: ^1.0.1
     cypress-real-events: ^1.15.0
@@ -4504,12 +4504,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@socialgouv/matomo-next@npm:1.10.0-alpha.2":
-  version: 1.10.0-alpha.2
-  resolution: "@socialgouv/matomo-next@npm:1.10.0-alpha.2"
+"@socialgouv/matomo-next@npm:1.10.0":
+  version: 1.10.0
+  resolution: "@socialgouv/matomo-next@npm:1.10.0"
   peerDependencies:
     next: ">= 9.5.5"
-  checksum: e33fcfac69236381a2666aff05a08c226b84cd555462dd1b912977656f4500b154fa7c0772f663e09848ae4cfbc08e363636843f3fc806a8f43b988dfdb1a565
+  checksum: bf3c5c3008677d42d775a6be996c485af65981c53dadd372a60111eaa7faad9b31d5ca71d0b419d7283d304b531c49ac12ca38ad97b28e6b037707bd6098896a
   languageName: node
   linkType: hard
 
@@ -7757,9 +7757,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:^15.3.0":
-  version: 15.3.0
-  resolution: "cypress@npm:15.3.0"
+"cypress@npm:^15.4.0":
+  version: 15.4.0
+  resolution: "cypress@npm:15.4.0"
   dependencies:
     "@cypress/request": ^3.0.9
     "@cypress/xvfb": ^1.2.4
@@ -7806,7 +7806,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: d21523672c17ab657b839399c54cf13b393b29c8fa71e241d98d9e2cb9136ec8e12fc737428ee2004dcdfb938bbe34dc7721a8376c6b2421dcecfb35fd9dbc5b
+  checksum: a0d08f85f1dc02205f56331c5dd502828a22e1e0e05d4b48f6e88bc3a7a586d70bc40fec017ad31f8e25a9f93384de918392ccee340c36f075c31783a85bfee8
   languageName: node
   linkType: hard
 

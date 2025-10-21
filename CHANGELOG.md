@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.195.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.194.0...v4.195.0) (2025-10-21)
+
+
+### Bug Fixes
+
+* **accessibilité:** dernier retours sur différentes pages ([#6893](https://github.com/SocialGouv/code-du-travail-numerique/issues/6893)) ([9468ad2](https://github.com/SocialGouv/code-du-travail-numerique/commit/9468ad2e4a817f4df190002ec275ba119078c023))
+* **convention-collective:** ajout de clarté sur les messages en cas de conventions collectives non supportées ([#6886](https://github.com/SocialGouv/code-du-travail-numerique/issues/6886)) ([a476de1](https://github.com/SocialGouv/code-du-travail-numerique/commit/a476de16c5b36e009f988efd6852b951a7b04524))
+* **matomo:** utilisation du mot query dans la recherche ([#6895](https://github.com/SocialGouv/code-du-travail-numerique/issues/6895)) ([fc0f856](https://github.com/SocialGouv/code-du-travail-numerique/commit/fc0f85619e1047bf3cf4f90db38f59cc7cfac88c))
+
+
+### Features
+
+* **node:** upgrade to version 24 ([#6888](https://github.com/SocialGouv/code-du-travail-numerique/issues/6888)) ([f99633b](https://github.com/SocialGouv/code-du-travail-numerique/commit/f99633b82f2f1dc1d333290931b7d85298f9f16d))
+
+
+
+
+
 # [4.194.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.193.2...v4.194.0) (2025-10-15)
 
 

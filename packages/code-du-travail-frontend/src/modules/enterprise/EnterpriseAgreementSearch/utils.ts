@@ -16,11 +16,11 @@ export const getEnterpriseAgreements = (agreements: Agreement[]) => {
       disabled = true;
     } else if (!slug) {
       description =
-        "Cette convention collective déclarée par l’entreprise n’est pas reconnue par notre site";
+        "Ce code indique qu’aucune convention collective n’a été renseignée par l'entreprise. Pour savoir si une convention est tout de même appliquée, consultez votre bulletin de paie ou interrogez votre employeur.";
       disabled = true;
     } else {
       description =
-        "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective";
+        "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le Ministère du travail concernant cette convention collective.";
     }
     return {
       ...agreement,

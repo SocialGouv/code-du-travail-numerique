@@ -22,27 +22,44 @@ export const Summary = ({
   const displayableResponses = responses.filter(({ text }) => !!text);
   return (
     <div>
-      <ul>
-        {displayableResponses.map(({ text, info }, index) => {
-          return (
-            text && (
-              <SummaryItem
-                key={index}
-                data={text}
-                info={info}
-                onClick={async () => {
-                  if (currentSlug !== toolSlug) {
-                    await router.push(`/outils/${toolSlug}`);
-                  }
-                  goTo(index);
-                }}
-                noButton={withLink}
-                noCheck={withLink && displayableResponses.length === 1}
-              />
-            )
-          );
-        })}
-      </ul>
+      {displayableResponses.length === 1 ? (
+        <SummaryItem
+          as="p"
+          data={displayableResponses[0].text!}
+          info={displayableResponses[0].info}
+          onClick={async () => {
+            if (currentSlug !== toolSlug) {
+              await router.push(`/outils/${toolSlug}`);
+            }
+            goTo(0);
+          }}
+          noButton={withLink}
+          noCheck={withLink && displayableResponses.length === 1}
+        />
+      ) : (
+        <ul>
+          {displayableResponses.map(({ text, info }, index) => {
+            return (
+              text && (
+                <SummaryItem
+                  as="li"
+                  key={index}
+                  data={text}
+                  info={info}
+                  onClick={async () => {
+                    if (currentSlug !== toolSlug) {
+                      await router.push(`/outils/${toolSlug}`);
+                    }
+                    goTo(index);
+                  }}
+                  noButton={withLink}
+                  noCheck={withLink && displayableResponses.length === 1}
+                />
+              )
+            );
+          })}
+        </ul>
+      )}
       {withLink && (
         <Button
           onClick={() => {
