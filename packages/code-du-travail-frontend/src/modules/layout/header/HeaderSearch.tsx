@@ -38,6 +38,7 @@ export const HeaderSearch = ({ onSearchSubmit }: HeaderSearchProps) => {
             }}
           >
             <Autocomplete<string>
+              id="fr-header-search-input"
               label={
                 "Recherchez sur le site, la sélection d'une option charge une nouvelle page"
               }
