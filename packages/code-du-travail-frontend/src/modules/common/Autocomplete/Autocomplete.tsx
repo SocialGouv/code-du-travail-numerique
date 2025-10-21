@@ -25,6 +25,7 @@ export type AutocompleteProps<K> = InputProps & {
   isSearch?: boolean;
   placeholder?: string;
   inputRef?: Ref<HTMLInputElement>;
+  id?: string;
 };
 
 export const Autocomplete = <K,>({
@@ -44,6 +45,7 @@ export const Autocomplete = <K,>({
   displayNoResult,
   isSearch = false,
   placeholder,
+  id,
   inputRef: externalInputRef,
 }: AutocompleteProps<K>) => {
   const [loading, setLoading] = useState(false);
@@ -166,12 +168,18 @@ export const Autocomplete = <K,>({
           onBlur: (_e: React.FocusEvent<HTMLInputElement>) => {
             isFocusedRef.current = false;
           },
+          ...(id ? { id } : {}),
         });
+
+        const labelProps = {
+          ...getLabelProps(),
+          ...(id ? { htmlFor: id } : {}),
+        };
 
         return (
           <div className={`${searchContainer}`}>
             <Input
-              nativeLabelProps={getLabelProps()}
+              nativeLabelProps={labelProps}
               hideLabel={isSearch}
               addon={
                 <>

@@ -115,7 +115,7 @@ exports[`<Header /> should match snapshot 1`] = `
                     >
                       <label
                         class="fr-label fr-sr-only"
-                        for="downshift-0-input"
+                        for="fr-header-search-input"
                         id="downshift-0-label"
                       >
                         Recherchez sur le site, la sélection d'une option charge une nouvelle page
@@ -128,7 +128,7 @@ exports[`<Header /> should match snapshot 1`] = `
                           aria-expanded="false"
                           autocomplete="off"
                           class="fr-input"
-                          id="downshift-0-input"
+                          id="fr-header-search-input"
                           placeholder="Recherchez sur le site"
                           role="combobox"
                           type="text"
@@ -141,7 +141,7 @@ exports[`<Header /> should match snapshot 1`] = `
                       <div
                         aria-live="polite"
                         class="fr-messages-group"
-                        id="downshift-0-input-messages-group"
+                        id="fr-header-search-input-messages-group"
                       />
                     </div>
                     <ul
