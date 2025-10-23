@@ -6,7 +6,6 @@ export const getDocsCountQuery = () => ({
       terms: {
         exclude: [
           SOURCES.SHEET_MT_PAGE,
-          SOURCES.VERSIONS,
           SOURCES.HIGHLIGHTS,
           SOURCES.PREQUALIFIED,
         ],
