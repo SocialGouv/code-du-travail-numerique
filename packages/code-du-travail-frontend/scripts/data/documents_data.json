@@ -6391,11 +6391,5 @@
     "text": "Rupture conventionnelle : les étapes de la procédure et les délais",
     "title": "Rupture conventionnelle : les étapes de la procédure et les délais",
     "intro": "<p>Lorsque l’employeur et le salarié conviennent de rompre le contrat de travail à durée indéterminée (CDI) qui les lie dans le cadre d’une rupture conventionnelle, la procédure spécifique suivante doit être respectée.</p>\n<p><strong>À noter :</strong>  Le code du travail numérique propose un <a href=\"https://code.travail.gouv.fr/outils/indemnite-rupture-conventionnelle\">simulateur d’indemnité de rupture conventionnelle</a></p>"
-  },
-  {
-    "source": "versions",
-    "data": {
-      "@socialgouv/package-a": "^0.4.2"
-    }
   }
 ]

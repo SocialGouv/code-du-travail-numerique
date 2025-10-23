@@ -16,7 +16,6 @@ export const SOURCES = {
   THEMES: "themes",
   TOOLS: "outils",
   INFOGRAPHICS: "infographies",
-  VERSIONS: "versions",
 } as const;
 
 export const routeBySource = {
@@ -79,4 +78,4 @@ export type SourceValues = (typeof labelBySource)[SourceKeys];
 export type Routes = typeof routeBySource;
 export type RouteKeys = keyof Routes;
 export type RouteValues = Routes[SourceKeys];
-export type SourceRoute = Exclude<SourceValues, "versions">;
+export type SourceRoute = SourceValues;
