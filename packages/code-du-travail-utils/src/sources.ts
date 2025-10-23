@@ -15,6 +15,7 @@ export const SOURCES = {
   THEMATIC_FILES: "dossiers",
   THEMES: "themes",
   TOOLS: "outils",
+  INFOGRAPHICS: "infographies",
   VERSIONS: "versions",
 } as const;
 
@@ -35,6 +36,7 @@ export const routeBySource = {
   [SOURCES.TOOLS]: "outils",
   [SOURCES.HIGHLIGHTS]: "highlights",
   [SOURCES.PREQUALIFIED]: "prequalified",
+  [SOURCES.INFOGRAPHICS]: "infographies",
 } as const;
 
 export const labelBySource = {
@@ -54,6 +56,7 @@ export const labelBySource = {
   [SOURCES.HIGHLIGHTS]: "À la une",
   [SOURCES.PREQUALIFIED]: "Requêtes préqualifiées",
   [SOURCES.GLOSSARY]: "Glossaire",
+  [SOURCES.INFOGRAPHICS]: "Infographies",
 } as const;
 
 export const getLabelBySource = (src: keyof typeof labelBySource) =>
