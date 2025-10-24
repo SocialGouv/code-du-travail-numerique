@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useContributionTracking } from "./tracking";
 import { isAgreementSupported, isAgreementValid } from "./contributionUtils";
 import { ContributionGenericContent } from "./ContributionGenericContent";
@@ -14,6 +14,8 @@ type Props = {
 };
 
 export function ContributionGeneric({ contribution }: Props) {
+  const [hash, setHash] = useState("");
+  const personalizeTitleRef = useRef<HTMLParagraphElement>(null);
   const getTitle = () => `/contribution/${slug}`;
   const { slug, isNoCDT, relatedItems } = contribution;
 
@@ -38,9 +40,22 @@ export function ContributionGeneric({ contribution }: Props) {
     }, 100);
   };
 
+  useEffect(() => {
+    setHash(window.location.hash);
+  }, []);
+
+  useEffect(() => {
+    if (hash === "#retour") {
+      setTimeout(() => {
+        personalizeTitleRef?.current?.focus();
+      }, 100);
+    }
+  }, [hash]);
+
   return (
     <>
       <ContributionGenericAgreementSearch
+        personalizeTitleRef={personalizeTitleRef}
         contribution={contribution}
         onAgreementSelect={(agreement) => {
           setSelectedAgreement(agreement);

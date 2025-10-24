@@ -23,6 +23,7 @@ type Props = {
   contribution: Contribution;
   selectedAgreement?: Agreement;
   trackingActionName: string;
+  personalizeTitleRef: React.RefObject<HTMLParagraphElement | null>;
 };
 
 export function ContributionGenericAgreementSearch({
@@ -31,6 +32,7 @@ export function ContributionGenericAgreementSearch({
   onDisplayClick,
   selectedAgreement,
   trackingActionName,
+  personalizeTitleRef,
 }: Props) {
   const router = useRouter();
   const { slug } = contribution;
@@ -98,6 +100,7 @@ export function ContributionGenericAgreementSearch({
           className={fr.cx("fr-unhidden-md", "fr-hidden")}
         />
         <p
+          ref={personalizeTitleRef}
           id="personalize-response-title"
           className={fr.cx("fr-h3", "fr-mt-1w")}
           role="heading"
