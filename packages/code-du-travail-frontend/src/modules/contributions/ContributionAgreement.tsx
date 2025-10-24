@@ -36,7 +36,7 @@ export function ContributionAgreement({ contribution }: Props) {
           title="Modifier la convention collective sélectionnée"
           className={fr.cx("fr-mt-2w")}
           onClick={() => {
-            push(`/contribution/${removeCCNumberFromSlug(slug)}`);
+            push(`/contribution/${removeCCNumberFromSlug(slug)}#retour`);
           }}
           priority="secondary"
           iconId="fr-icon-arrow-go-back-line"
