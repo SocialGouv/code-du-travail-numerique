@@ -208,34 +208,319 @@ exports[`<Header /> should match snapshot 1`] = `
               class="fr-nav__item"
               data-fr-js-navigation-item="true"
             >
-              <a
-                class="fr-nav__link"
-                href="/outils"
+              <button
+                aria-controls="fr-header-menu-0"
+                aria-expanded="false"
+                aria-haspopup="menu"
+                class="fr-nav__btn"
               >
-                Boîte à outils
-              </a>
+                Code du travail
+              </button>
+              <div
+                class="fr-collapse fr-menu"
+                id="fr-header-menu-0"
+              >
+                <ul
+                  class="fr-menu__list"
+                >
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/droit-du-travail"
+                    >
+                      Comprendre le droit du travail
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/glossaire"
+                    >
+                      Glossaire
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li
               class="fr-nav__item"
               data-fr-js-navigation-item="true"
             >
-              <a
-                class="fr-nav__link"
-                href="/modeles-de-courriers"
+              <button
+                aria-controls="fr-header-menu-1"
+                aria-expanded="false"
+                aria-haspopup="menu"
+                class="fr-nav__btn"
+              >
+                Simulateurs
+              </button>
+              <div
+                class="fr-collapse fr-menu"
+                id="fr-header-menu-1"
+              >
+                <ul
+                  class="fr-menu__list"
+                >
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/outils"
+                    >
+                      Voir tous les simulateurs
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/outils/indemnite-rupture-conventionnelle"
+                    >
+                      Indemnité de rupture conventionnelle
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/outils/indemnite-licenciement"
+                    >
+                      Indemnité de licenciement
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/outils/indemnite-precarite"
+                    >
+                      Indemnité de précarité
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/outils/simulateur-embauche"
+                    >
+                      Salaire brut/net
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/outils/preavis-demission"
+                    >
+                      Préavis de démission
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li
+              class="fr-nav__item"
+              data-fr-js-navigation-item="true"
+            >
+              <button
+                aria-controls="fr-header-menu-2"
+                aria-expanded="false"
+                aria-haspopup="menu"
+                class="fr-nav__btn"
               >
                 Modèles de documents
-              </a>
+              </button>
+              <div
+                class="fr-collapse fr-menu"
+                id="fr-header-menu-2"
+              >
+                <ul
+                  class="fr-menu__list"
+                >
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/modeles-de-courriers"
+                    >
+                      Voir tous les modèles par thème
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/modeles-de-courriers/lettre-de-demission"
+                    >
+                      Lettre de démission
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/modeles-de-courriers/attestation-de-travail"
+                    >
+                      Attestation de travail
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"
+                    >
+                      Rupture du contrat en période d'essai par le salarié
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li
               class="fr-nav__item"
               data-fr-js-navigation-item="true"
             >
-              <a
-                class="fr-nav__link"
-                href="/contribution"
+              <button
+                aria-controls="fr-header-menu-3"
+                aria-expanded="false"
+                aria-haspopup="menu"
+                class="fr-nav__btn"
               >
-                Vos fiches pratiques
-              </a>
+                Fiches pratiques
+              </button>
+              <div
+                class="fr-collapse fr-menu"
+                id="fr-header-menu-3"
+              >
+                <ul
+                  class="fr-menu__list"
+                >
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/contribution"
+                    >
+                      Voir toutes les fiches par thème
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/contribution/les-conges-pour-evenements-familiaux"
+                    >
+                      Congés pour événements familiaux
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
+                    >
+                      Maintien du salaire en cas d'arrêt maladie
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/contribution/a-quelles-indemnites-peut-pretendre-un-salarie-qui-part-a-la-retraite"
+                    >
+                      Indemnités de départ à la retraite
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li
+              class="fr-nav__item"
+              data-fr-js-navigation-item="true"
+            >
+              <button
+                aria-controls="fr-header-menu-4"
+                aria-expanded="false"
+                aria-haspopup="menu"
+                class="fr-nav__btn"
+              >
+                Par thème
+              </button>
+              <div
+                class="fr-collapse fr-menu"
+                id="fr-header-menu-4"
+              >
+                <ul
+                  class="fr-menu__list"
+                >
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/themes"
+                    >
+                      Voir tous les thèmes
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/themes/embauche-et-contrat-de-travail"
+                    >
+                      Embauche et contrat de travail
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/themes/salaire-et-remuneration"
+                    >
+                      Salaire et Rémunération
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/themes/temps-de-travail"
+                    >
+                      Temps de travail
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/themes/conges-et-repos"
+                    >
+                      Congés et repos
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/themes/emploi-et-formation-professionnelle"
+                    >
+                      Emploi et formation professionnelle
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/themes/sante-securite-et-conditions-de-travail"
+                    >
+                      Santé, sécurité et conditions de travail
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/themes/representation-du-personnel-et-negociation-collective"
+                    >
+                      Représentation du personnel et négociation collective
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/themes/depart-de-lentreprise"
+                    >
+                      Départ de l'entreprise
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/themes/conflits-au-travail-et-controle-de-la-reglementation"
+                    >
+                      Conflits au travail et contrôle de la réglementation
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li
               class="fr-nav__item"
@@ -245,18 +530,7 @@ exports[`<Header /> should match snapshot 1`] = `
                 class="fr-nav__link"
                 href="/convention-collective"
               >
-                Votre convention collective
-              </a>
-            </li>
-            <li
-              class="fr-nav__item"
-              data-fr-js-navigation-item="true"
-            >
-              <a
-                class="fr-nav__link"
-                href="/themes"
-              >
-                Thèmes
+                Conventions collectives
               </a>
             </li>
           </ul>

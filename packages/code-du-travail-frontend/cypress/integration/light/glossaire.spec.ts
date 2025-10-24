@@ -11,7 +11,8 @@ describe("Glossaire", () => {
     cy.contains("Définition");
     cy.contains("Sources");
 
-    cy.contains("Glossaire").click();
+    cy.get("#fr-header-main-navigation").contains("Code du travail").click();
+    cy.get("#fr-header-main-navigation").contains("Glossaire").click();
 
     cy.contains(
       "Les définitions de ce glossaire, disponibles en surbrillance dans les textes des réponses"
