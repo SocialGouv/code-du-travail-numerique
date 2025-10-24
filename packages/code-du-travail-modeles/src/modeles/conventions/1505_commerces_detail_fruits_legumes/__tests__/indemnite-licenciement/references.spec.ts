@@ -26,7 +26,7 @@ describe("Vérification des références juridiques pour la CC 1505", () => {
         },
         {
           article: "Article 42.5.2",
-          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562840?idConteneur=KALICONT000005635421&origin=list#KALIARTI0000435628400",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562840?idConteneur=KALICONT000005635421&origin=list#KALIARTI000043562840",
         },
       ])
     );
