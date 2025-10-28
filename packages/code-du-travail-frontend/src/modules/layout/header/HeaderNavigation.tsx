@@ -1,13 +1,18 @@
 import { fr } from "@codegouvfr/react-dsfr";
-import Link from "../../common/Link";
-import { cx } from "@codegouvfr/react-dsfr/tools/cx";
-import type { MainNavigationProps } from "@codegouvfr/react-dsfr/MainNavigation/MainNavigation";
+import type { NavigationItem } from "./HeaderDsfr";
+import { hasMenuLinks } from "./HeaderDsfr";
+import { NavigationMenuDropdown } from "./NavigationMenuDropdown";
+import { NavigationLinkItem } from "./NavigationLinkItem";
 
 type HeaderNavigationProps = {
-  navigation?: MainNavigationProps.Item.Link[];
+  navigation?: NavigationItem[];
+  currentPath: string;
 };
 
-export const HeaderNavigation = ({ navigation }: HeaderNavigationProps) => {
+export const HeaderNavigation = ({
+  navigation,
+  currentPath,
+}: HeaderNavigationProps) => {
   return (
     <div
       className={fr.cx("fr-header__menu", "fr-modal")}
@@ -36,22 +41,19 @@ export const HeaderNavigation = ({ navigation }: HeaderNavigationProps) => {
           data-fr-js-navigation="true"
         >
           <ul className={fr.cx("fr-nav__list")}>
-            {navigation?.map(({ isActive = false, linkProps, text }, index) => (
-              <li
-                key={index}
-                className={fr.cx("fr-nav__item")}
-                data-fr-js-navigation-item="true"
-              >
-                <Link
-                  className={cx(fr.cx("fr-nav__link"), linkProps.className)}
-                  {...(linkProps as {})}
-                  href={linkProps.href ?? ""}
-                  {...(isActive && { ["aria-current"]: "page" })}
-                >
-                  {text}
-                </Link>
-              </li>
-            ))}
+            {navigation?.map((item, index) => {
+              if (hasMenuLinks(item)) {
+                return (
+                  <NavigationMenuDropdown
+                    key={index}
+                    item={item}
+                    index={index}
+                    currentPath={currentPath}
+                  />
+                );
+              }
+              return <NavigationLinkItem key={index} item={item} />;
+            })}
           </ul>
         </nav>
       </div>
