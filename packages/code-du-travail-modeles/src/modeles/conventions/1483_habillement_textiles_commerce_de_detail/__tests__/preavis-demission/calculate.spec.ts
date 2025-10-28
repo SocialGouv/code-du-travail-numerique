@@ -9,7 +9,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 9 du Chapitre II de la convention collective",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005750625&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005840302#KALIARTI000005840302",
         },
       ],
       expectedNotifications: [],
@@ -23,7 +23,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 9 du Chapitre II de la convention collective",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005750625&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005840302#KALIARTI000005840302",
         },
       ],
       expectedNotifications: [],
@@ -37,7 +37,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 14 du Chapitre Ier de la convention collective",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005761249&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005840260#KALIARTI000005840260",
         },
       ],
       expectedNotifications: [],
@@ -53,7 +53,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 14 du Chapitre Ier de la convention collective",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005761249&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005840260#KALIARTI000005840260",
         },
       ],
       expectedNotifications: [],

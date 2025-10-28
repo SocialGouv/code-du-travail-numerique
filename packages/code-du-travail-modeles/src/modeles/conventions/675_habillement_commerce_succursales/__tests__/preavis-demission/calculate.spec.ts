@@ -10,7 +10,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         {
           article:
             "Article 9 de l'avenant Maîtrise Convention collective nationale du 30 juin 1972",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005752473&cidTexte=KALITEXT000005679768&idConvention=KALICONT000005635617&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851119#KALIARTI000005851119",
         },
       ],
       expectedNotifications: [],
@@ -25,7 +25,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         {
           article:
             "Article 13 de l'avenant Cadres Convention collective nationale du 30 juin 1972",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005752482&cidTexte=KALITEXT000005679774&idConvention=KALICONT000005635617&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851144#KALIARTI000005851144",
         },
       ],
       expectedNotifications: [],
@@ -39,7 +39,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 38 de la convention collective",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=087F78E34949639D3C28EC165BE5AB3A.tplgfr32s_2?idSectionTA=KALISCTA000005723965&cidTexte=KALITEXT000005679762&idConvention=KALICONT000005635617",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851078#KALIARTI000005851078",
         },
       ],
       expectedNotifications: [],
@@ -55,7 +55,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 38 de la convention collective",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=087F78E34949639D3C28EC165BE5AB3A.tplgfr32s_2?idSectionTA=KALISCTA000005723965&cidTexte=KALITEXT000005679762&idConvention=KALICONT000005635617",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851078#KALIARTI000005851078",
         },
       ],
       expectedNotifications: [],
@@ -71,7 +71,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 38 de la convention collective",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=087F78E34949639D3C28EC165BE5AB3A.tplgfr32s_2?idSectionTA=KALISCTA000005723965&cidTexte=KALITEXT000005679762&idConvention=KALICONT000005635617",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851078#KALIARTI000005851078",
         },
       ],
       expectedNotifications: [],

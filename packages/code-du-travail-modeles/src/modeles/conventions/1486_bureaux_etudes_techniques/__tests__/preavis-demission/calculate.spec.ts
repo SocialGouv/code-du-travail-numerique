@@ -9,7 +9,7 @@ describe("Test de la fonctionnalité 'calculate' pour la CC 1486 - Préavis de d
       expectedReferences: [
         {
           article: "Article 21 de l'annexe relative aux enquêteurs",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005761991&cidTexte=KALITEXT000005679885&idConvention=KALICONT000005635173&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851319#KALIARTI000005851319",
         },
       ],
       expectedNotifications: [],

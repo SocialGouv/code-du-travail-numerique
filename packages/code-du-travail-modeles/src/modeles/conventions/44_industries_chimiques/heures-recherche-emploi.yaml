@@ -64,7 +64,7 @@ contrat salarié . convention collective . industries chimiques . typeRupture D�
     - Le salarié a automatiquement droit à ces heures d'absence. Elles seront fixées un jour par le salarié et un jour par l'employeur. Si l'employeur et le salarié trouvent un accord, ces heures pourront être groupées en partie ou en totalité.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27.": https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=A537E2D009FC3FF2B8E6ABC0BF24BA9E.tplgfr28s_1?idSectionTA=KALISCTA000005722247&cidTexte=KALITEXT000005677782&idConvention=KALICONT000005635613&dateTexte=29990101
+    "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27.": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846394#KALIARTI000005846394
 
 contrat salarié . convention collective . industries chimiques . typeRupture Démission . catégorie professionnelle Techniciens:
   applicable si: catégorie professionnelle = 'Techniciens'
@@ -91,7 +91,7 @@ contrat salarié . convention collective . industries chimiques . typeRupture D�
     - Le salarié a automatiquement droit à ces heures d'absence. Elles seront fixées un jour par le salarié et un jour par l'employeur. Si l'employeur et le salarié trouvent un accord, ces heures pourront être groupées en partie ou en totalité.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27.": https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=A537E2D009FC3FF2B8E6ABC0BF24BA9E.tplgfr28s_1?idSectionTA=KALISCTA000005722247&cidTexte=KALITEXT000005677782&idConvention=KALICONT000005635613&dateTexte=29990101
+    "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27.": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846394#KALIARTI000005846394
 
 contrat salarié . convention collective . industries chimiques . typeRupture Démission . catégorie professionnelle Techniciens . groupe IV:
   applicable si: groupe = 'IV'
@@ -349,7 +349,7 @@ contrat salarié . convention collective . industries chimiques . typeRupture Li
     - Le salarié a automatiquement droit à ces heures d'absence. Elles seront fixées un jour par le salarié et un jour par l'employeur. Si l'employeur et le salarié trouvent un accord, ces heures pourront être groupées en partie ou en totalité.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27.": https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=A537E2D009FC3FF2B8E6ABC0BF24BA9E.tplgfr28s_1?idSectionTA=KALISCTA000005722247&cidTexte=KALITEXT000005677782&idConvention=KALICONT000005635613&dateTexte=29990101
+    "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27.": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846394#KALIARTI000005846394
 
 contrat salarié . convention collective . industries chimiques . typeRupture Licenciement . catégorie professionnelle Techniciens:
   applicable si: catégorie professionnelle = 'Techniciens'
@@ -376,7 +376,7 @@ contrat salarié . convention collective . industries chimiques . typeRupture Li
     - Le salarié a automatiquement droit à ces heures d'absence. Elles seront fixées un jour par le salarié et un jour par l'employeur. Si l'employeur et le salarié trouvent un accord, ces heures pourront être groupées en partie ou en totalité.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27.": https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=A537E2D009FC3FF2B8E6ABC0BF24BA9E.tplgfr28s_1?idSectionTA=KALISCTA000005722247&cidTexte=KALITEXT000005677782&idConvention=KALICONT000005635613&dateTexte=29990101
+    "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27.": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846394#KALIARTI000005846394
 
 contrat salarié . convention collective . industries chimiques . typeRupture Licenciement . catégorie professionnelle Techniciens . groupe IV:
   applicable si: groupe = 'IV'

@@ -14,7 +14,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 30",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=E5B5B8F059E9188492430B0C2B630256.tplgfr29s_3?idSectionTA=KALISCTA000005758006&cidTexte=KALITEXT000005678018&idConvention=KALICONT000005635780&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005784453#KALIARTI000005784453",
         },
       ],
       expectedNotifications: [],
@@ -32,7 +32,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 30",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=E5B5B8F059E9188492430B0C2B630256.tplgfr29s_3?idSectionTA=KALISCTA000005758006&cidTexte=KALITEXT000005678018&idConvention=KALICONT000005635780&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005784453#KALIARTI000005784453",
         },
       ],
       expectedNotifications: [

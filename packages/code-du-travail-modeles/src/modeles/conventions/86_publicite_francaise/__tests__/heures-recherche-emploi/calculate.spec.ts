@@ -152,7 +152,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 33",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005753582&cidTexte=KALITEXT000005682357&idConvention=KALICONT000005635630&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022438635#KALIARTI000022438635",
         },
       ],
       expectedNotifications: [
@@ -176,7 +176,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 33",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005753582&cidTexte=KALITEXT000005682357&idConvention=KALICONT000005635630&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022438635#KALIARTI000022438635",
         },
       ],
       expectedNotifications: [],
@@ -198,7 +198,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 53",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005753602&cidTexte=KALITEXT000005682357&idConvention=KALICONT000005635630&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022438638#KALIARTI000022438638",
         },
       ],
       expectedNotifications: [
@@ -222,7 +222,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 53",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005753602&cidTexte=KALITEXT000005682357&idConvention=KALICONT000005635630&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022438638#KALIARTI000022438638",
         },
       ],
       expectedNotifications: [],
