@@ -4,8 +4,9 @@ describe("Contributions", () => {
     cy.findByRole("heading", { level: 1 })
       .should("have.text", "Bienvenue sur le Code du travail numérique")
       .click();
+    cy.get("#fr-header-main-navigation").contains("Fiches pratiques").click();
     cy.get("#fr-header-main-navigation")
-      .contains("Vos fiches pratiques")
+      .contains("Voir toutes les fiches par thème")
       .click();
     cy.isIndexable();
     cy.urlEqual("/contribution");

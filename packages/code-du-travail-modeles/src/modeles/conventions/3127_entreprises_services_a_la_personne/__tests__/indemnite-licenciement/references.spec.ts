@@ -8,7 +8,7 @@ const engine = new IndemniteLicenciementPublicodes(
 const References = [
   {
     article: "Partie II, Chapitre 4, section 1, article 1.2",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000027029046/?idConteneur=KALICONT000027084096",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000027034201#KALIARTI000027034201",
   },
 ];
 

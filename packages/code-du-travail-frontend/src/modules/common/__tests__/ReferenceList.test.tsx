@@ -44,31 +44,24 @@ describe("<ReferenceList />", () => {
       "/code-du-travail/l2323-4"
     );
 
-    expect(
-      getByText("Convention collective: Article yyy du JO").tagName
-    ).toEqual("A");
-    expect(
-      getByText("Convention collective: Article yyy du JO")
-    ).toHaveAttribute("href", "https://article.jo/yyy");
-    expect(
-      getByText("Convention collective: Article yyy du JO")
-    ).toHaveAttribute("target", "_blank");
-    expect(
-      getByText("Convention collective: Article yyy du JO")
-    ).toHaveAttribute("rel", "noopener noreferrer");
-
-    expect(getByText("Convention collective: CCN metallurgie").tagName).toEqual(
-      "A"
+    expect(getByText("Article yyy du JO").tagName).toEqual("A");
+    expect(getByText("Article yyy du JO")).toHaveAttribute(
+      "href",
+      "https://article.jo/yyy"
     );
-    expect(getByText("Convention collective: CCN metallurgie")).toHaveAttribute(
+    expect(getByText("Article yyy du JO")).toHaveAttribute("target", "_blank");
+    expect(getByText("Article yyy du JO")).toHaveAttribute(
+      "rel",
+      "noopener noreferrer"
+    );
+
+    expect(getByText("CCN metallurgie").tagName).toEqual("A");
+    expect(getByText("CCN metallurgie")).toHaveAttribute(
       "href",
       "https://legifrance/ccn-metallurgie"
     );
-    expect(getByText("Convention collective: CCN metallurgie")).toHaveAttribute(
-      "target",
-      "_blank"
-    );
-    expect(getByText("Convention collective: CCN metallurgie")).toHaveAttribute(
+    expect(getByText("CCN metallurgie")).toHaveAttribute("target", "_blank");
+    expect(getByText("CCN metallurgie")).toHaveAttribute(
       "rel",
       "noopener noreferrer"
     );

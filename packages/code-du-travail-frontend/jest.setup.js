@@ -24,7 +24,10 @@ jest.mock("next/navigation", () => ({
     const path = router.query;
     return new URLSearchParams(path);
   },
-  usePathname: jest.fn(),
+  usePathname: jest.fn(() => "/"),
+  useRouter: jest.fn(() => ({
+    push: jest.fn(),
+  })),
 }));
 
 jest.mock("@sentry/nextjs", () => ({

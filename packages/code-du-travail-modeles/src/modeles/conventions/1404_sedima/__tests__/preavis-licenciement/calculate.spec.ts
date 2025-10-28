@@ -12,7 +12,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 6-50",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=E3E2CB82609A11A3A91CD84710E32F3C.tplgfr42s_2?idSectionTA=KALISCTA000026355935&cidTexte=KALITEXT000026355879&idConvention=KALICONT000005635653&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026356071#KALIARTI000026356071",
         },
       ],
       expectedNotifications: [],

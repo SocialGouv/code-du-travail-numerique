@@ -16,7 +16,7 @@ contrat salarié . convention collective . boulangerie patisserie . mise à la r
   applicable si: ancienneté < 6 mois
   valeur: 7 jour
   références:
-    Article 32: https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732933/?idConteneur=KALICONT000005635886
+    Article 32: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005873153#KALIARTI000005873153
 
 contrat salarié . convention collective . boulangerie patisserie . départ à la retraite:
   remplace: contrat salarié . préavis de retraite collective
@@ -30,7 +30,7 @@ contrat salarié . convention collective . boulangerie patisserie . départ à l
         plafond: 24 mois
       - montant: 6 mois
   références:
-    Article 34.2: https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732935/?idConteneur=KALICONT000005635886
+    Article 34.2: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000051716753#KALIARTI000051716753
 
 contrat salarié . convention collective . boulangerie patisserie . départ à la retraite . une semaine:
   applicable si: ancienneté < 6 mois

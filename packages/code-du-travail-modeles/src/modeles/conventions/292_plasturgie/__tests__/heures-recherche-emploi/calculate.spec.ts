@@ -11,7 +11,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Avenant Cadres, article 8",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do?cidTexte=KALITEXT000005682082&idSectionTA=KALISCTA000005726361&idConvention=KALICONT000005635856&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005856728#KALIARTI000005856728",
         },
       ],
       expectedNotifications: [
@@ -49,7 +49,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Avenant Cadres, article 8",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do?cidTexte=KALITEXT000005682082&idSectionTA=KALISCTA000005726361&idConvention=KALICONT000005635856&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005856728#KALIARTI000005856728",
         },
       ],
       expectedNotifications: [

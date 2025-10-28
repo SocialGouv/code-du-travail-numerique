@@ -18,7 +18,7 @@ contrat salarié . convention collective . bureaux études techniques . catégor
   unité: mois
   remplace: contrat salarié . préavis de démission . résultat conventionnel
   références:
-    Article 21 de l'annexe relative aux enquêteurs: https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005761991&cidTexte=KALITEXT000005679885&idConvention=KALICONT000005635173&dateTexte=29990101
+    Article 21 de l'annexe relative aux enquêteurs: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851319#KALIARTI000005851319
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle . Employés, Techniciens ou Agents de maîtrise ETAM:
   applicable si: contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle = 'Employés, Techniciens ou Agents de maîtrise ETAM'

@@ -12,7 +12,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 9 de l'avenant « Maîtrise »",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005752473&cidTexte=KALITEXT000005679768&idConvention=KALICONT000005635617&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851119#KALIARTI000005851119",
         },
       ],
       expectedNotifications: [],
@@ -26,7 +26,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 13 de l'avenant « Cadres »",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do?cidTexte=KALITEXT000005679774&idSectionTA=KALISCTA000005752482&idConvention=KALICONT000005635617&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851144#KALIARTI000005851144",
         },
       ],
       expectedNotifications: [],
@@ -40,7 +40,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 38",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=42225D4AAFE4AE3882C5685E66B8B640.tpdjo02v_2?idSectionTA=KALISCTA000005723965&cidTexte=KALITEXT000005679762&idConvention=KALICONT000005635617",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851078#KALIARTI000005851078",
         },
       ],
       expectedNotifications: [],
@@ -56,7 +56,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 38",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=42225D4AAFE4AE3882C5685E66B8B640.tpdjo02v_2?idSectionTA=KALISCTA000005723965&cidTexte=KALITEXT000005679762&idConvention=KALICONT000005635617",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851078#KALIARTI000005851078",
         },
       ],
       expectedNotifications: [],
@@ -72,7 +72,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 38",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=42225D4AAFE4AE3882C5685E66B8B640.tpdjo02v_2?idSectionTA=KALISCTA000005723965&cidTexte=KALITEXT000005679762&idConvention=KALICONT000005635617",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851078#KALIARTI000005851078",
         },
       ],
       expectedNotifications: [],
@@ -88,7 +88,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 38",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=42225D4AAFE4AE3882C5685E66B8B640.tpdjo02v_2?idSectionTA=KALISCTA000005723965&cidTexte=KALITEXT000005679762&idConvention=KALICONT000005635617",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851078#KALIARTI000005851078",
         },
       ],
       expectedNotifications: [],
