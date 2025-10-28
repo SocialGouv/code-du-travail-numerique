@@ -182,7 +182,7 @@ contrat salarié . convention collective . publicité française . typeRupture R
     - L'employeur et le salarié peuvent décider de cumuler ces heures sur 1 semaine ou sur 1 mois. Ce cumul sera appliqué pour les salariés en forfait jours.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Article 33": https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005753582&cidTexte=KALITEXT000005682357&idConvention=KALICONT000005635630&dateTexte=29990101
+    "Article 33": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022438635#KALIARTI000022438635
 
 contrat salarié . convention collective . publicité française . typeRupture Rupture de la période d'essai . catégorie professionnelle Agents de maîtrise et Techniciens . initiative de la rupture de la période d'essai Le salarié:
   applicable si: initiative de la rupture de la période d'essai = 'Le salarié'
@@ -192,7 +192,7 @@ contrat salarié . convention collective . publicité française . typeRupture R
   valeur: "''"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Article 33": https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005753582&cidTexte=KALITEXT000005682357&idConvention=KALICONT000005635630&dateTexte=29990101
+    "Article 33": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022438635#KALIARTI000022438635
 
 contrat salarié . convention collective . publicité française . typeRupture Rupture de la période d'essai . catégorie professionnelle Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
@@ -218,7 +218,7 @@ contrat salarié . convention collective . publicité française . typeRupture R
     - L'employeur et le salarié peuvent décider ensemble de cumuler ces heures sur 1 semaine ou sur 1 mois. Ce cumul sera appliqué pour les salariés en forfait jours.
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Article 53": https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005753602&cidTexte=KALITEXT000005682357&idConvention=KALICONT000005635630&dateTexte=29990101
+    "Article 53": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022438638#KALIARTI000022438638
 
 contrat salarié . convention collective . publicité française . typeRupture Rupture de la période d'essai . catégorie professionnelle Cadres . initiative de la rupture de la période d'essai Le salarié:
   applicable si: initiative de la rupture de la période d'essai = 'Le salarié'
@@ -228,7 +228,7 @@ contrat salarié . convention collective . publicité française . typeRupture R
   valeur: "''"
   remplace: contrat salarié . convention collective . résultat conventionnel
   références:
-    "Article 53": https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005753602&cidTexte=KALITEXT000005682357&idConvention=KALICONT000005635630&dateTexte=29990101
+    "Article 53": https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022438638#KALIARTI000022438638
 
 contrat salarié . convention collective . publicité française . typeRupture Rupture de la période d'essai . catégorie professionnelle Employés:
   applicable si: catégorie professionnelle = 'Employés'

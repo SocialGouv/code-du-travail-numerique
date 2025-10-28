@@ -15,7 +15,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 91 b)",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=E0FA42F1D98C3A5E305111F72B4DD513.tpdjo06v_1?idSectionTA=KALISCTA000005765066&cidTexte=KALITEXT000005654646&idConvention=KALICONT000005635918",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005792102#KALIARTI000005792102",
         },
       ],
       expectedNotifications: [
@@ -32,7 +32,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 91 b)",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=E0FA42F1D98C3A5E305111F72B4DD513.tpdjo06v_1?idSectionTA=KALISCTA000005765066&cidTexte=KALITEXT000005654646&idConvention=KALICONT000005635918",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005792102#KALIARTI000005792102",
         },
       ],
       expectedNotifications: [

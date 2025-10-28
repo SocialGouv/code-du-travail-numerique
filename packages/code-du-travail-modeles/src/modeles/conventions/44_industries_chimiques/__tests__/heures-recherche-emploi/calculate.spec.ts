@@ -64,7 +64,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         {
           article:
             "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27.",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=A537E2D009FC3FF2B8E6ABC0BF24BA9E.tplgfr28s_1?idSectionTA=KALISCTA000005722247&cidTexte=KALITEXT000005677782&idConvention=KALICONT000005635613&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846394#KALIARTI000005846394",
         },
       ],
       expectedNotifications: [
@@ -88,7 +88,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         {
           article:
             "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27.",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=A537E2D009FC3FF2B8E6ABC0BF24BA9E.tplgfr28s_1?idSectionTA=KALISCTA000005722247&cidTexte=KALITEXT000005677782&idConvention=KALICONT000005635613&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846394#KALIARTI000005846394",
         },
       ],
       expectedNotifications: [
@@ -376,7 +376,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         {
           article:
             "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27.",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=A537E2D009FC3FF2B8E6ABC0BF24BA9E.tplgfr28s_1?idSectionTA=KALISCTA000005722247&cidTexte=KALITEXT000005677782&idConvention=KALICONT000005635613&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846394#KALIARTI000005846394",
         },
       ],
       expectedNotifications: [
@@ -400,7 +400,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         {
           article:
             "Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs, article 27.",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=A537E2D009FC3FF2B8E6ABC0BF24BA9E.tplgfr28s_1?idSectionTA=KALISCTA000005722247&cidTexte=KALITEXT000005677782&idConvention=KALICONT000005635613&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846394#KALIARTI000005846394",
         },
       ],
       expectedNotifications: [
