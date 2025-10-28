@@ -22,9 +22,9 @@ exports[`<ReferenceList /> should render 1`] = `
           href="https://article.jo/yyy"
           rel="noopener noreferrer"
           target="_blank"
-          title="Convention collective: Article yyy du JO - nouvelle fenêtre"
+          title="Article yyy du JO - nouvelle fenêtre"
         >
-          Convention collective: Article yyy du JO
+          Article yyy du JO
         </a>
       </p>
     </li>
@@ -36,9 +36,9 @@ exports[`<ReferenceList /> should render 1`] = `
           href="https://legifrance/ccn-metallurgie"
           rel="noopener noreferrer"
           target="_blank"
-          title="Convention collective: CCN metallurgie - nouvelle fenêtre"
+          title="CCN metallurgie - nouvelle fenêtre"
         >
-          Convention collective: CCN metallurgie
+          CCN metallurgie
         </a>
       </p>
     </li>

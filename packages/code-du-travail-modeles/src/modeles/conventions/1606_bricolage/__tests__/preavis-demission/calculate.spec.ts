@@ -23,7 +23,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: 'Article 8 de l\'annexe "cadres"',
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=087F78E34949639D3C28EC165BE5AB3A.tplgfr32s_2?idSectionTA=KALISCTA000005731919&cidTexte=KALITEXT000005687530&idConvention=KALICONT000005635871",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005870786#KALIARTI000005870786",
         },
       ],
       expectedNotifications: [],
@@ -37,7 +37,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 9.1 de la convention collective",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000024633414&cidTexte=KALITEXT000005687520&idConvention=KALICONT000005635871&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005870732#KALIARTI000005870732",
         },
       ],
       expectedNotifications: [],

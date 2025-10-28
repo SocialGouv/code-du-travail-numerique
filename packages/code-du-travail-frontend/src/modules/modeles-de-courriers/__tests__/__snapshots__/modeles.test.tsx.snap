@@ -341,7 +341,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
           <li>
             <a
               class="fr-btn fr-btn--tertiary fr-btn--facebook before:c_var(--artwork-minor-blue-cumulus)"
-              href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fapi.urlundefined&quote=Mon%20modele"
+              href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fapi.url%2F&quote=Mon%20modele"
               rel="noopener noreferrer"
               target="_blank"
               title="Partager sur Facebook - nouvelle fenêtre"
@@ -352,7 +352,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
           <li>
             <a
               class="fr-btn fr-btn--tertiary fr-btn--twitter-x before:c_var(--artwork-minor-blue-cumulus)"
-              href="https://x.com/intent/post?text=Mon%20modele%20%3A%20http%3A%2F%2Fapi.urlundefined"
+              href="https://x.com/intent/post?text=Mon%20modele%20%3A%20http%3A%2F%2Fapi.url%2F"
               rel="noopener noreferrer"
               target="_blank"
               title="Partager sur X (anciennement Twitter) - nouvelle fenêtre"
@@ -363,7 +363,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
           <li>
             <a
               class="fr-btn fr-btn--tertiary fr-btn--linkedin before:c_var(--artwork-minor-blue-cumulus)"
-              href="https://www.linkedin.com/shareArticle?mini=true&title=Mon%20modele&url=http%3A%2F%2Fapi.urlundefined"
+              href="https://www.linkedin.com/shareArticle?mini=true&title=Mon%20modele&url=http%3A%2F%2Fapi.url%2F"
               rel="noopener noreferrer"
               target="_blank"
               title="Partager sur LinkedIn - nouvelle fenêtre"
@@ -374,7 +374,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
           <li>
             <a
               class="fr-btn fr-btn--tertiary ri-mail-line before:c_var(--artwork-minor-blue-cumulus)"
-              href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Mon%20modele&body=ma%20m%C3%A9ta%20description%0A%0Ahttp%3A%2F%2Fapi.urlundefined"
+              href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Mon%20modele&body=ma%20m%C3%A9ta%20description%0A%0Ahttp%3A%2F%2Fapi.url%2F"
               rel="noopener external"
               title="Envoyer par courriel"
             >
@@ -384,7 +384,7 @@ exports[`<LetterModel /> affiche un modèle de document 1`] = `
           <li>
             <a
               class="fr-btn fr-btn--tertiary ri-whatsapp-line before:c_var(--artwork-minor-blue-cumulus)"
-              href="https://wa.me/?text=Mon%20modele%20%3A%20http%3A%2F%2Fapi.urlundefined"
+              href="https://wa.me/?text=Mon%20modele%20%3A%20http%3A%2F%2Fapi.url%2F"
               rel="noopener noreferrer"
               target="_blank"
               title="Envoyer par Whatsapp - nouvelle fenêtre"

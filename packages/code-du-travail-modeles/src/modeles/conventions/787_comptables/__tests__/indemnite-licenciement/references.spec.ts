@@ -8,7 +8,7 @@ const engine = new IndemniteLicenciementPublicodes(
 const References = [
   {
     article: "Article 6.2.1",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005719412/?idConteneur=KALICONT000005635826",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000051345600#KALIARTI000051345600",
   },
 ];
 

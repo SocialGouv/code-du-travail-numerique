@@ -10,7 +10,7 @@ describe("Vérification des références juridiques pour la CC 275", () => {
     const references = [
       {
         article: "Article 20",
-        url: "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732500/?idConteneur=KALICONT000005635872",
+        url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000050302351#KALIARTI000050302351",
       },
       {
         article: "Article 35",
@@ -95,7 +95,7 @@ describe("Vérification des références juridiques pour la CC 275", () => {
     const references = [
       {
         article: "Article 20",
-        url: "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732500/?idConteneur=KALICONT000005635872",
+        url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000050302351#KALIARTI000050302351",
       },
       {
         article: "Article 35",

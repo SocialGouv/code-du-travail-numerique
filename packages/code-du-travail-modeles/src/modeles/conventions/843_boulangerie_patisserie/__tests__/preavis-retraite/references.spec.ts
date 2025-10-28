@@ -10,7 +10,7 @@ const DepartRetraite = [
   ...DepartRetraiteReferences,
   {
     article: "Article 34.2",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732935/?idConteneur=KALICONT000005635886",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000051716753#KALIARTI000051716753",
   },
 ];
 
@@ -34,7 +34,7 @@ const MiseRetraiteMoins6Mois = [
   ...MiseRetraite,
   {
     article: "Article 32",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732933/?idConteneur=KALICONT000005635886",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005873153#KALIARTI000005873153",
   },
 ];
 

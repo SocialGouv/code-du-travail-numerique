@@ -10,7 +10,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         {
           article:
             'Article II. 6 de l\'accord relatif aux dispositions particulières " Cadres "',
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=B48AED9DB5F1742E99768AF572DBFEF2.tpdjo13v_1?idSectionTA=KALISCTA000026688794&cidTexte=KALITEXT000005654666&idConvention=KALICONT000005635918",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026688804#KALIARTI000026688804",
         },
       ],
       expectedNotifications: [],
@@ -24,7 +24,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
       expectedReferences: [
         {
           article: "Article 91 a) de la convention collective",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=E0FA42F1D98C3A5E305111F72B4DD513.tpdjo06v_1?idSectionTA=KALISCTA000005765066&cidTexte=KALITEXT000005654646&idConvention=KALICONT000005635918",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005792102#KALIARTI000005792102",
         },
       ],
       expectedNotifications: [],

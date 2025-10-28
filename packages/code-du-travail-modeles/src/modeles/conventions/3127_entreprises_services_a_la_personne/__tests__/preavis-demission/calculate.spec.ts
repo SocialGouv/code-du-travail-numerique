@@ -10,7 +10,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         {
           article:
             "Article 2 de la section 1 du Chapitre 4 de la Partie II de la convention collective",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=3429E84F009E9522894D791FC4F0085E.tplgfr25s_1?idSectionTA=KALISCTA000027029046&cidTexte=KALITEXT000026943196&idConvention=KALICONT000027084096&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000027034201#KALIARTI000027034201",
         },
       ],
       expectedNotifications: [],
@@ -25,7 +25,7 @@ describe("Test de la fonctionnalité 'calculate'", () => {
         {
           article:
             "Article 2 de la section 1 du Chapitre 4 de la Partie II de la convention collective",
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=3429E84F009E9522894D791FC4F0085E.tplgfr25s_1?idSectionTA=KALISCTA000027029046&cidTexte=KALITEXT000026943196&idConvention=KALICONT000027084096&dateTexte=29990101",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000027034201#KALIARTI000027034201",
         },
       ],
       expectedNotifications: [],
