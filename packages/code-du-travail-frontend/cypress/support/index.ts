@@ -1,4 +1,4 @@
-/* eslint-disable */
+ 
 
 // ***********************************************************
 // This example support/index.js is processed and
