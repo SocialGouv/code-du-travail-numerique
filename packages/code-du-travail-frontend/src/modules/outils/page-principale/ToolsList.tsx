@@ -17,7 +17,7 @@ export const ToolsList = ({ tools, externalTools }: ToolsListProps) => {
         Liste des simulateurs et des services
       </h1>
 
-      <h2 id="tools" className={fr.cx("fr-mt-0", "fr-mb-6w")}>
+      <h2 id="tools" className={fr.cx("fr-mt-0", "fr-mb-6w", "fr-h1")}>
         Simulateurs
       </h2>
 
