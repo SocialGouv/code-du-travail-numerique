@@ -526,7 +526,7 @@ __metadata:
     "@pandacss/dev": ^1.2.0
     "@sentry/nextjs": 10.9.0
     "@socialgouv/cdtn-elasticsearch": ^2.44.2
-    "@socialgouv/cdtn-types": ^2.57.0
+    "@socialgouv/cdtn-types": ^2.59.0
     "@socialgouv/cdtn-utils": "workspace:^"
     "@socialgouv/matomo-next": 1.10.0
     "@socialgouv/modeles-social": "workspace:^"
@@ -4483,10 +4483,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@socialgouv/cdtn-types@npm:^2.57.0":
-  version: 2.58.1
-  resolution: "@socialgouv/cdtn-types@npm:2.58.1"
-  checksum: f2f13090b23671afda4a8dcbf2f3a60712329ed687bef47870b2ed18277fa6c8dee177e72bc49d4abc25ffac3b26fc66615e1bc0fdefcd6092ba433e5b6f6497
+"@socialgouv/cdtn-types@npm:^2.59.0":
+  version: 2.59.0
+  resolution: "@socialgouv/cdtn-types@npm:2.59.0"
+  checksum: 5fee568b4084671ba600012534f9d4e20ad45000b390f7b5b4684b2299cb8a9bc0ffa14ea3ff8e57787b8036b9b0cc1dc812f0c0e484ca5c99be03cc16cf9c26
   languageName: node
   linkType: hard
 
