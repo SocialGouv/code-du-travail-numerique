@@ -29,16 +29,10 @@ describe("ToolsList", () => {
     );
 
     // Vérifier le titre
-    expect(getByRole("heading", { level: 1 })).toHaveTextContent(
-      "Liste des simulateurs et des services"
-    );
+    expect(getByRole("heading", { level: 1 })).toHaveTextContent("Simulateurs");
 
-    const subtitleLevel = getAllByRole("heading", { level: 2 });
-    expect(subtitleLevel.length).toBe(2);
-
-    // Vérifier que les simulateurs CDTN sont rendus
-    const toolTiles = getAllByRole("heading", { level: 3 });
-    expect(toolTiles.length).toBe(2);
+    const toolTiles = getAllByRole("heading", { level: 2 });
+    expect(toolTiles.length).toBe(3);
 
     // Vérifier les titres des simulateurs
     expect(toolTiles[0]).toHaveTextContent("Simulator 1");

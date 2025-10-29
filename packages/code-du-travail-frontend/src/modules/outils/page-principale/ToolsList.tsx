@@ -13,13 +13,9 @@ type ToolsListProps = {
 export const ToolsList = ({ tools, externalTools }: ToolsListProps) => {
   return (
     <ContainerWithBreadcrumbs currentPage="Simulateurs" breadcrumbs={[]}>
-      <h1 className={fr.cx("fr-sr-only")}>
-        Liste des simulateurs et des services
-      </h1>
-
-      <h2 id="tools" className={fr.cx("fr-mt-0", "fr-mb-6w", "fr-h1")}>
+      <h1 id="tools" className={fr.cx("fr-mt-0", "fr-mb-6w")}>
         Simulateurs
-      </h2>
+      </h1>
 
       <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mb-2w")}>
         {tools.map(({ id, description, metaDescription, icon, title, url }) => (
@@ -39,7 +35,7 @@ export const ToolsList = ({ tools, externalTools }: ToolsListProps) => {
               iconName={icon}
               link={url}
               isExternal={false}
-              level="h3"
+              level="h2"
             />
           </div>
         ))}
