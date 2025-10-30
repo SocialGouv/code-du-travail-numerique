@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.197.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.196.1...v4.197.0) (2025-10-30)
+
+
+### Bug Fixes
+
+* **accessibilite:** modification de la page suite à l'audit ([#6905](https://github.com/SocialGouv/code-du-travail-numerique/issues/6905)) ([fb7b869](https://github.com/SocialGouv/code-du-travail-numerique/commit/fb7b869cc0bdc4dfd4ea3cacc28753cd449b6952))
+* **indemnite-licenciement:** mise à jour des références légales ([#6909](https://github.com/SocialGouv/code-du-travail-numerique/issues/6909)) ([2f87be6](https://github.com/SocialGouv/code-du-travail-numerique/commit/2f87be6d3f38ede3f3a1950bdb528f74be03b3cc))
+* **outils:** Ajout de deux sections distinctes sur la page listant les outils ([#6907](https://github.com/SocialGouv/code-du-travail-numerique/issues/6907)) ([57e9a1b](https://github.com/SocialGouv/code-du-travail-numerique/commit/57e9a1bd04e8fa239e8057db5600213bbaebedcf))
+* **références:** ne pas afficher le Convention collective : pour les références external ([#6904](https://github.com/SocialGouv/code-du-travail-numerique/issues/6904)) ([82d5849](https://github.com/SocialGouv/code-du-travail-numerique/commit/82d5849b28058c28953bb788a78236cba7b19b2d))
+* **simulateurs:** corrections de références juridiques ([#6900](https://github.com/SocialGouv/code-du-travail-numerique/issues/6900)) ([8cd4218](https://github.com/SocialGouv/code-du-travail-numerique/commit/8cd4218d952326fbf2991d4e6fa78f767bd08351))
+
+
+### Features
+
+* **menu:** ajout des sous-sections sur le menu ([#6887](https://github.com/SocialGouv/code-du-travail-numerique/issues/6887)) ([1c93c3d](https://github.com/SocialGouv/code-du-travail-numerique/commit/1c93c3d4974e4eca257f3648bb64d2dbbf847241))
+
+
+
+
+
 ## [4.196.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.196.0...v4.196.1) (2025-10-24)
 
 
