@@ -87,11 +87,15 @@ contrat salarié . indemnité de licenciement . résultat légal:
   unité: €
   arrondi: 2 décimales
   références:
-    Article L. 1234-9 à L. 1234-11: https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006195623/#LEGISCTA000006195623
-    Art. R. 1234-1 à R. 1234-5: https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000018483186/#LEGISCTA000018537572
-    Art. L. 1226-7: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000023272293
-    Art. L. 1225-54: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000018764621
-    Art. L. 1225-65: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038219280
+    Article L1234-9: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035644154
+    Article L1234-10: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901123
+    Article L1234-11: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901124
+    Article R1234-1: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035644687
+    Article R1234-2: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035644692
+    Article R1234-4: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035644695
+    Article L1226-7: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000023272293
+    Article L1225-54: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000018764621
+    Article L1225-65: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038219280
 
 contrat salarié . indemnité de licenciement . résultat légal inaptitude:
   applicable si: inaptitude suite à un accident ou maladie professionnelle = oui
