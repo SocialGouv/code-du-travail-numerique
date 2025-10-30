@@ -51,7 +51,10 @@ describe("Vérification des références juridiques pour Indemnité légale de l
       });
       const result = engine.getReferences();
 
-      expect(result).toHaveLength(6);
+      expect(result).toHaveLength(
+        IndemniteLicenciementReferences.length +
+          IndemniteLicenciementInaptitudeReferences.length
+      );
       expect(result).toEqual(expectedReferences);
     }
   );

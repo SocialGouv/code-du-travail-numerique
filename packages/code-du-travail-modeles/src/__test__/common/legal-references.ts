@@ -22,23 +22,39 @@ export const DepartRetraiteReferences = [
 
 export const IndemniteLicenciementReferences = [
   {
-    article: "Article L. 1234-9 à L. 1234-11",
-    url: "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006195623/#LEGISCTA000006195623",
+    article: "Article L1234-9",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035644154",
   },
   {
-    article: "Art. R. 1234-1 à R. 1234-5",
-    url: "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000018483186/#LEGISCTA000018537572",
+    article: "Article L1234-10",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901123",
   },
   {
-    article: "Art. L. 1226-7",
+    article: "Article L1234-11",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901124",
+  },
+  {
+    article: "Article R1234-1",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035644687",
+  },
+  {
+    article: "Article R1234-2",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035644692",
+  },
+  {
+    article: "Article R1234-4",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035644695",
+  },
+  {
+    article: "Article L1226-7",
     url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000023272293",
   },
   {
-    article: "Art. L. 1225-54",
+    article: "Article L1225-54",
     url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000018764621",
   },
   {
-    article: "Art. L. 1225-65",
+    article: "Article L1225-65",
     url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038219280",
   },
 ];
