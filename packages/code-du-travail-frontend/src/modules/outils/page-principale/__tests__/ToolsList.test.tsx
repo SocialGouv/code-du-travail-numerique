@@ -24,14 +24,15 @@ describe("ToolsList", () => {
       } as ToolItem,
     ];
 
-    const { getByRole, getAllByRole } = render(<ToolsList tools={tools} />);
+    const { getByRole, getAllByRole } = render(
+      <ToolsList tools={tools} externalTools={[]} />
+    );
 
     // Vérifier le titre
     expect(getByRole("heading", { level: 1 })).toHaveTextContent("Simulateurs");
 
-    // Vérifier que les simulateurs CDTN sont rendus
     const toolTiles = getAllByRole("heading", { level: 2 });
-    expect(toolTiles.length).toBe(2);
+    expect(toolTiles.length).toBe(3);
 
     // Vérifier les titres des simulateurs
     expect(toolTiles[0]).toHaveTextContent("Simulator 1");
@@ -67,7 +68,9 @@ describe("ToolsList", () => {
       } as ToolItem,
     ];
 
-    const { queryByText } = render(<ToolsList tools={tools} />);
+    const { queryByText } = render(
+      <ToolsList tools={tools} externalTools={[]} />
+    );
 
     expect(queryByText("Description")).toBeInTheDocument();
     expect(queryByText("Second Meta Description")).toBeInTheDocument();

@@ -19,20 +19,22 @@ export type ToolItem = Pick<
   "id" | "description" | "metaDescription" | "icon" | "title"
 > & {
   url: string;
-  isExternal: boolean;
 };
 
 async function OutilsPage() {
-  const tools = await getTools();
+  const { tools, externalTools } = await getTools();
 
   return (
     <DsfrLayout>
-      <ToolsList tools={tools} />
+      <ToolsList tools={tools} externalTools={externalTools} />
     </DsfrLayout>
   );
 }
 
-const getTools = async (): Promise<ToolItem[]> => {
+const getTools = async (): Promise<{
+  tools: ToolItem[];
+  externalTools: ToolItem[];
+}> => {
   const tools = await fetchTools([
     "slug",
     "id",
@@ -55,13 +57,13 @@ const getTools = async (): Promise<ToolItem[]> => {
     return notFound();
   }
 
-  return tools
-    .map((tool) => ({
+  return {
+    tools: tools.map((tool) => ({
       ...tool,
       url: `/outils/${tool.slug}`,
-      isExternal: false,
-    }))
-    .concat(externalTools.map((tool) => ({ ...tool, isExternal: true })));
+    })),
+    externalTools,
+  };
 };
 
 export default OutilsPage;
