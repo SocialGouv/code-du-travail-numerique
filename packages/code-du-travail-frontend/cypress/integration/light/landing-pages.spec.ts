@@ -28,7 +28,9 @@ describe("Landing pages", () => {
       "Déclaration d'accessibilité"
     );
     cy.contains("État de conformité");
-    cy.contains("[75%] des critères du RGAA version 4.1 sont respectés");
+    cy.contains(
+      "Le site Internet code.travail.gouv.fr (« Code du travail numérique ») est en totale conformité avec le référentiel général d'amélioration de l'accessibilité."
+    );
   });
 
   it("je vois la page droit du travail", () => {
