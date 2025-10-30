@@ -53,10 +53,6 @@ export const Accessibilite = () => {
       </ul>
 
       <h2>Contenus non accessibles</h2>
-      <p>
-        Les contenus listés ci-dessous ne sont pas accessibles pour les raisons
-        suivantes :
-      </p>
       <h3>Contenus non soumis à l&apos;obligation d&apos;accessibilité</h3>
       <ul className="fr-mb-2w">
         <li>
