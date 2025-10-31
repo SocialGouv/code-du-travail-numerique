@@ -1,13 +1,8 @@
 "use client";
 
-import { fr } from "@codegouvfr/react-dsfr";
-import React, { useState, useCallback, useMemo } from "react";
-import { ContainerList } from "../layout/ContainerList";
-import { css } from "@styled-system/css";
-import Card from "@codegouvfr/react-dsfr/Card";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { summarize } from "../utils";
-import Select from "@codegouvfr/react-dsfr/Select";
+import React, { useState, useCallback, useMemo, useRef } from "react";
+import { ContainerWithNav } from "../layout/ContainerWithNav";
+import { ContributionSection } from "./ContributionSection";
 
 type ContributionItem = {
   title: string;
@@ -22,112 +17,105 @@ type ContributionsData = {
 
 type Props = {
   contribs: ContributionsData;
-  themes: string[];
 };
 
-export const ContributionsList = ({
-  contribs: initialContribs,
-  themes: initialThemes,
-}: Props) => {
-  const [selectedTheme, setTheme] = useState<string>("");
+const popularContributionSlugs = [
+  "en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire",
+  "les-conges-pour-evenements-familiaux",
+  "a-quelles-indemnites-peut-pretendre-un-salarie-qui-part-a-la-retraite",
+  "quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur",
+  "quelle-est-la-duree-du-preavis-en-cas-de-demission",
+  "le-preavis-de-demission-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi",
+];
 
-  const themes = useMemo(
-    () => initialThemes ?? Object.keys(initialContribs),
-    [initialThemes, initialContribs]
+export const ContributionsList = ({ contribs: initialContribs }: Props) => {
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(
+    new Set()
+  );
+  const firstHiddenItemRefs = useRef<{ [key: string]: HTMLLIElement | null }>(
+    {}
   );
 
-  const documents = useMemo(
-    () =>
-      selectedTheme === ""
-        ? initialContribs
-        : { [selectedTheme]: initialContribs[selectedTheme] },
-    [selectedTheme, initialContribs]
-  );
+  const documents = useMemo(() => initialContribs, [initialContribs]);
 
-  const handleThemeChange = useCallback(
-    (event: React.ChangeEvent<HTMLSelectElement>) => {
-      setTheme(event.target.value);
+  const popularContributions = useMemo(() => {
+    const allContribs: ContributionItem[] = [];
+    Object.values(initialContribs).forEach((themeContribs) => {
+      allContribs.push(...themeContribs);
+    });
+
+    return popularContributionSlugs
+      .map((slug) => allContribs.find((contrib) => contrib.slug === slug))
+      .filter((contrib): contrib is ContributionItem => contrib !== undefined);
+  }, [initialContribs]);
+
+  const toggleSection = useCallback((sectionId: string) => {
+    setExpandedSections((prev) => {
+      const newSet = new Set(prev);
+      if (newSet.has(sectionId)) {
+        newSet.delete(sectionId);
+      } else {
+        newSet.add(sectionId);
+        setTimeout(() => {
+          const firstHiddenItem = firstHiddenItemRefs.current[sectionId];
+          if (firstHiddenItem) {
+            const link = firstHiddenItem.querySelector("a");
+            link?.focus();
+          }
+        }, 100);
+      }
+      return newSet;
+    });
+  }, []);
+
+  const handleFirstHiddenItemRef = useCallback(
+    (sectionId: string, el: HTMLLIElement | null) => {
+      firstHiddenItemRefs.current[sectionId] = el;
     },
     []
   );
 
+  const sidebarSections = useMemo(() => {
+    return [
+      { id: "contenus-populaires", label: "Contenus populaires" },
+      ...Object.keys(documents).map((theme) => ({
+        id: theme.toLowerCase().replace(/\s+/g, "-"),
+        label: theme,
+      })),
+    ];
+  }, [documents]);
+
   return (
-    <ContainerList title="Vos fiches pratiques" segments={[]}>
-      <h1 id="contributions" className={fr.cx("fr-mt-0", "fr-mb-6w")}>
-        Vos fiches pratiques
-      </h1>
-
-      <p className={fr.cx("fr-text--md")}>
-        Obtenez une réponse personnalisée selon votre convention collective
-      </p>
-
-      <Select
-        className={`${fr.cx("fr-mt-6w")} ${list}`}
-        label="Sélectionnez un thème"
-        nativeSelectProps={{
-          onChange: handleThemeChange,
-          value: selectedTheme,
-        }}
-      >
-        <option value="">Tous les thèmes</option>
-        {themes.map((theme) => (
-          <option key={theme} value={theme}>
-            {theme}
-          </option>
-        ))}
-      </Select>
+    <ContainerWithNav
+      title="Vos fiches pratiques"
+      description="Obtenez une réponse personnalisée selon votre convention collective"
+      sidebarSections={sidebarSections}
+      breadcrumbSegments={[]}
+    >
+      <ContributionSection
+        sectionId="contenus-populaires"
+        title="Contenus populaires"
+        items={popularContributions}
+        isExpanded={expandedSections.has("contenus-populaires")}
+        onToggle={toggleSection}
+        firstHiddenItemRef={handleFirstHiddenItemRef}
+        icon="/static/assets/img/star.svg"
+      />
 
       {Object.keys(documents).map((theme) => {
+        const sectionId = theme.toLowerCase().replace(/\s+/g, "-");
         return (
-          <React.Fragment key={theme}>
-            <h2 className={fr.cx("fr-mt-6w", "fr-h3")}>{theme}</h2>
-            <ul
-              className={`${fr.cx(
-                "fr-grid-row",
-                "fr-grid-row--gutters",
-                "fr-grid-row--left"
-              )}`}
-            >
-              {documents[theme].map((item) => (
-                <li
-                  key={item.slug}
-                  className={`${fr.cx(
-                    "fr-col-12",
-                    "fr-col-sm-12",
-                    "fr-col-md-6",
-                    "fr-col-lg-6"
-                  )} ${li}`}
-                >
-                  <Card
-                    border
-                    desc={summarize(item.description)}
-                    horizontal
-                    linkProps={{
-                      href: `/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${item.slug}`,
-                    }}
-                    size="medium"
-                    title={item.title}
-                    titleAs="h3"
-                    enlargeLink
-                    classes={{
-                      // Hack: start div is render and take some place
-                      start: fr.cx("fr-hidden"),
-                    }}
-                  />
-                </li>
-              ))}
-            </ul>
-          </React.Fragment>
+          <ContributionSection
+            key={sectionId}
+            sectionId={sectionId}
+            title={theme}
+            items={documents[theme]}
+            isExpanded={expandedSections.has(sectionId)}
+            onToggle={toggleSection}
+            firstHiddenItemRef={handleFirstHiddenItemRef}
+          />
         );
       })}
-    </ContainerList>
+    </ContainerWithNav>
   );
 };
-
-const li = css({
-  listStyle: "none!",
-});
-
-const list = css({
-  maxWidth: "500px",
-});

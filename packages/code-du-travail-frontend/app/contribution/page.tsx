@@ -11,11 +11,11 @@ export const metadata = generateDefaultMetadata({
 });
 
 async function Index() {
-  const { documents, themes } = await getContributions();
+  const { documents } = await getContributions();
 
   return (
     <DsfrLayout>
-      <ContributionsList contribs={documents} themes={themes} />
+      <ContributionsList contribs={documents} />
     </DsfrLayout>
   );
 }
