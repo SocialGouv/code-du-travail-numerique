@@ -23,19 +23,14 @@ type ContributionsData = {
 };
 
 type Props = {
-  contribs: ContributionsData;
+  contributions: ContributionsData;
+  popularContributionSlugs: string[];
 };
 
-const popularContributionSlugs = [
-  "en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire",
-  "les-conges-pour-evenements-familiaux",
-  "a-quelles-indemnites-peut-pretendre-un-salarie-qui-part-a-la-retraite",
-  "quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur",
-  "quelle-est-la-duree-du-preavis-en-cas-de-demission",
-  "le-preavis-de-demission-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi",
-];
-
-export const ContributionsList = ({ contribs: initialContribs }: Props) => {
+export const ContributionsList = ({
+  contributions: initialContribs,
+  popularContributionSlugs,
+}: Props) => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(
     new Set()
   );
