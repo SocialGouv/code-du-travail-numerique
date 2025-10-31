@@ -1,8 +1,15 @@
 "use client";
 
-import React, { useState, useCallback, useMemo, useRef } from "react";
+import React, {
+  useState,
+  useCallback,
+  useMemo,
+  useRef,
+  useEffect,
+} from "react";
 import { ContainerWithNav } from "../layout/ContainerWithNav";
 import { ContributionSection } from "./ContributionSection";
+import { cleanHash } from "../utils";
 
 type ContributionItem = {
   title: string;
@@ -35,6 +42,7 @@ export const ContributionsList = ({ contribs: initialContribs }: Props) => {
   const firstHiddenItemRefs = useRef<{ [key: string]: HTMLLIElement | null }>(
     {}
   );
+  const sectionRefs = useRef<{ [key: string]: HTMLHeadingElement | null }>({});
 
   const documents = useMemo(() => initialContribs, [initialContribs]);
 
@@ -75,11 +83,36 @@ export const ContributionsList = ({ contribs: initialContribs }: Props) => {
     []
   );
 
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = cleanHash(window.location.hash);
+      if (hash && sectionRefs.current[hash]) {
+        const heading = sectionRefs.current[hash];
+        if (heading) {
+          setTimeout(() => {
+            heading.scrollIntoView({ behavior: "smooth", block: "start" });
+            setTimeout(() => {
+              heading.focus({ preventScroll: true });
+            }, 300);
+          }, 100);
+        }
+      }
+    };
+
+    handleHashChange();
+
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
+
   const sidebarSections = useMemo(() => {
     return [
       { id: "contenus-populaires", label: "Contenus populaires" },
       ...Object.keys(documents).map((theme) => ({
-        id: theme.toLowerCase().replace(/\s+/g, "-"),
+        id: cleanHash(theme),
         label: theme,
       })),
     ];
@@ -93,6 +126,9 @@ export const ContributionsList = ({ contribs: initialContribs }: Props) => {
       breadcrumbSegments={[]}
     >
       <ContributionSection
+        ref={(el) => {
+          sectionRefs.current["contenus-populaires"] = el;
+        }}
         sectionId="contenus-populaires"
         title="Contenus populaires"
         items={popularContributions}
@@ -103,10 +139,13 @@ export const ContributionsList = ({ contribs: initialContribs }: Props) => {
       />
 
       {Object.keys(documents).map((theme) => {
-        const sectionId = theme.toLowerCase().replace(/\s+/g, "-");
+        const sectionId = cleanHash(theme);
         return (
           <ContributionSection
             key={sectionId}
+            ref={(el) => {
+              sectionRefs.current[sectionId] = el;
+            }}
             sectionId={sectionId}
             title={theme}
             items={documents[theme]}

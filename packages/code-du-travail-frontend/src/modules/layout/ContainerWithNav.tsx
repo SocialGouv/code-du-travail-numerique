@@ -1,8 +1,9 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { Breadcrumb, BreadcrumbProps } from "@codegouvfr/react-dsfr/Breadcrumb";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { SummaryNavigation } from "./SummaryNavigation";
 import { css } from "@styled-system/css";
+import { useBreakpoints } from "../common/useBreakpoints";
 
 type SidebarSection = {
   id: string;
@@ -13,8 +14,8 @@ type Props = {
   title: string;
   description?: string;
   children: ReactNode;
-  sidebarSections?: SidebarSection[];
-  breadcrumbSegments?: BreadcrumbProps["segments"];
+  sidebarSections: SidebarSection[];
+  breadcrumbSegments: BreadcrumbProps["segments"];
 };
 
 export const ContainerWithNav = ({
@@ -24,6 +25,13 @@ export const ContainerWithNav = ({
   sidebarSections = [],
   breadcrumbSegments = [],
 }: Props) => {
+  const { isBelow } = useBreakpoints();
+  const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
+
+  useEffect(() => {
+    setIsMobileOrTablet(isBelow("lg"));
+  }, [isBelow]);
+
   return (
     <div className={fr.cx("fr-grid-row")}>
       <Breadcrumb
@@ -37,30 +45,31 @@ export const ContainerWithNav = ({
 
       <div className={fr.cx("fr-col-12", "fr-mb-4w", "fr-mb-md-12w")}>
         <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
-          {sidebarSections.length > 0 && (
-            <div className={fr.cx("fr-col-12", "fr-col-md-3", "fr-mb-4w")}>
-              <div className={stickySidebarStyles}>
-                <SummaryNavigation sections={sidebarSections} />
-              </div>
-            </div>
-          )}
-
           <div
-            className={fr.cx(
-              "fr-col-12",
-              sidebarSections.length > 0 ? "fr-col-md-9" : "fr-col-md-12",
-              "fr-mb-4w",
-              "fr-mb-md-12w"
-            )}
+            className={`${fr.cx("fr-col-12", "fr-col-lg-9", "fr-col-offset-lg-3")} ${relativeContainerStyles}`}
           >
-            <h1 id="main-content" className={fr.cx("fr-mt-0", "fr-mb-4w")}>
+            <h1 id="main-content" className={fr.cx("fr-mt-0", "fr-mb-3w")}>
               {title}
             </h1>
 
             {description && (
-              <p className={fr.cx("fr-text--lead", "fr-mb-6w")}>
+              <p className={fr.cx("fr-text--lead", "fr-mb-3w")}>
                 {description}
               </p>
+            )}
+
+            {isMobileOrTablet && (
+              <div id="summary-navigation" className={fr.cx("fr-mb-3w")}>
+                <SummaryNavigation sections={sidebarSections} />
+              </div>
+            )}
+
+            {!isMobileOrTablet && (
+              <div id="summary-navigation" className={absoluteContainerStyles}>
+                <div className={stickySidebarStyles}>
+                  <SummaryNavigation sections={sidebarSections} />
+                </div>
+              </div>
             )}
 
             {children}
@@ -70,6 +79,17 @@ export const ContainerWithNav = ({
     </div>
   );
 };
+
+const relativeContainerStyles = css({
+  position: "relative",
+});
+
+const absoluteContainerStyles = css({
+  position: "absolute",
+  height: "100%",
+  width: "300px",
+  left: "-330px",
+});
 
 const stickySidebarStyles = css({
   position: "sticky",
