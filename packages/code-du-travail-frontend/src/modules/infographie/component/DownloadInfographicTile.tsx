@@ -1,14 +1,13 @@
 import { Tile } from "@codegouvfr/react-dsfr/Tile";
-import { toUrl } from "src/modules/utils/url";
-import { formatFileSize } from "../../utils";
+import { formatFileSize, toUrl } from "../../utils";
 
-export const DownloadTile = ({
-  filename,
-  filesize,
+export const DownloadInfographicTile = ({
+  pdfFilename,
+  pdfSizeOctet,
   titleAs = "h2",
 }: {
-  filename: string;
-  filesize: string;
+  pdfFilename: string;
+  pdfSizeOctet: string;
   titleAs?: "h2" | "h3" | "h4" | "h5" | "h6";
 }) => {
   return (
@@ -19,10 +18,10 @@ export const DownloadTile = ({
       imageUrl={`/static/assets/img/modeles-de-courriers-download.svg`}
       title={`Télécharger l'infographie`}
       titleAs={titleAs}
-      detail={<p>Format PDF - {formatFileSize(filesize)}</p>}
+      detail={<p>Format PDF - {formatFileSize(pdfSizeOctet)}</p>}
       imageAlt={""}
       linkProps={{
-        href: toUrl(filename),
+        href: toUrl(pdfFilename),
       }}
     />
   );

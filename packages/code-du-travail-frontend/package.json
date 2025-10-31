@@ -41,7 +41,7 @@
     "@opentelemetry/instrumentation-net": "^0.47.0",
     "@sentry/nextjs": "10.9.0",
     "@socialgouv/cdtn-elasticsearch": "^2.44.2",
-    "@socialgouv/cdtn-types": "^2.57.0",
+    "@socialgouv/cdtn-types": "^2.59.0",
     "@socialgouv/cdtn-utils": "workspace:^",
     "@socialgouv/matomo-next": "1.10.0",
     "@socialgouv/modeles-social": "workspace:^",
