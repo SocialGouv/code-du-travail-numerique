@@ -30,7 +30,7 @@ export default async function SearchPage(props: SearchPageProps) {
   const searchParams = await props.searchParams;
   const query = searchParams.query || "";
 
-  let items = { articles: [], documents: [], themes: [] };
+  let items = { articles: [], documents: [], themes: [], structured_query:[] };
 
   if (query) {
     items = (await searchWithQuery(query, false, undefined)) as any;

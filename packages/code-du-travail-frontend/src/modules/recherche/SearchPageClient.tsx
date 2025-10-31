@@ -18,6 +18,7 @@ type SearchPageClientProps = {
     documents: any[];
     themes: any[];
     articles: any[];
+    structured_query: { label: string; details: string }[];
   };
 };
 
@@ -55,7 +56,7 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
     }
   }, [query, emitSearchEvent]);
 
-  const { documents, themes, articles } = items;
+  const { documents, themes, articles, structured_query } = items;
 
   const codeArticles = articles.filter(
     (item) => item.source === SOURCES.CDT && item.slug
@@ -99,6 +100,23 @@ export const SearchPageClient: React.FC<SearchPageClientProps> = ({
 
       {query && (
         <>
+          <section className={fr.cx("fr-mb-8w", "fr-mt-6w")}>
+            <h2 className={fr.cx("fr-h3")} lang="fr">
+              🔍 🔍 🔍 🔍
+            </h2>
+            <ul className={fr.cx("fr-mt-3w", "fr-raw-list")}>
+              {structured_query.map(({ label, details }, index) => (
+                <SearchCard
+                  id={index.toString()}
+                  title={details}
+                  description={""}
+                  category={label}
+                  link={""}
+                />
+              ))}
+            </ul>
+          </section>
+
           <h2
             ref={searchResultsHeadingRef}
             className={fr.cx("fr-h4")}
