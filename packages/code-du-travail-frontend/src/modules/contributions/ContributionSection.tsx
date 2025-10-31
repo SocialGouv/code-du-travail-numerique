@@ -64,6 +64,7 @@ export const ContributionSection = forwardRef<
           {displayedItems.map((item, index) => (
             <li
               key={item.slug}
+              aria-live="polite"
               ref={(el) => {
                 if (hasMoreThan6 && index === 6) {
                   firstHiddenItemRef(sectionId, el);
@@ -105,6 +106,9 @@ export const ContributionSection = forwardRef<
               }
               iconPosition="right"
               onClick={() => onToggle(sectionId)}
+              aria-expanded={isExpanded}
+              aria-controls={`${sectionId}-items`}
+              aria-label={`${isExpanded ? "Masquer" : "Afficher tous"} les contenus de ${title}`}
             >
               {isExpanded ? "Masquer" : "Tout afficher"}
             </Button>

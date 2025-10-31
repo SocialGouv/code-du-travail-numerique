@@ -150,6 +150,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
               class="fr-grid-row fr-grid-row--gutters fr-grid-row--left"
             >
               <li
+                aria-live="polite"
                 class="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-6 li-s_none!"
               >
                 <div
@@ -188,6 +189,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
                 </div>
               </li>
               <li
+                aria-live="polite"
                 class="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-6 li-s_none!"
               >
                 <div
@@ -241,6 +243,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
               class="fr-grid-row fr-grid-row--gutters fr-grid-row--left"
             >
               <li
+                aria-live="polite"
                 class="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-6 li-s_none!"
               >
                 <div
