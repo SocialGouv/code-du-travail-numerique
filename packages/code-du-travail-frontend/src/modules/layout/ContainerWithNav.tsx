@@ -29,7 +29,7 @@ export const ContainerWithNav = ({
   const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
 
   useEffect(() => {
-    setIsMobileOrTablet(isBelow("lg"));
+    setIsMobileOrTablet(isBelow("xl"));
   }, [isBelow]);
 
   return (
@@ -46,7 +46,7 @@ export const ContainerWithNav = ({
       <div className={fr.cx("fr-col-12", "fr-mb-4w", "fr-mb-md-12w")}>
         <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters")}>
           <div
-            className={`${fr.cx("fr-col-12", "fr-col-lg-9", "fr-col-offset-lg-3")} ${relativeContainerStyles}`}
+            className={`${fr.cx("fr-col-12", "fr-col-xl-9", "fr-col-offset-xl-3")} ${relativeContainerStyles}`}
           >
             <h1 id="main-content" className={fr.cx("fr-mt-0", "fr-mb-3w")}>
               {title}
@@ -59,13 +59,13 @@ export const ContainerWithNav = ({
             )}
 
             {isMobileOrTablet && (
-              <div id="summary-navigation" className={fr.cx("fr-mb-3w")}>
+              <div className={fr.cx("fr-mb-3w")}>
                 <SummaryNavigation sections={sidebarSections} />
               </div>
             )}
 
             {!isMobileOrTablet && (
-              <div id="summary-navigation" className={absoluteContainerStyles}>
+              <div className={absoluteContainerStyles}>
                 <div className={stickySidebarStyles}>
                   <SummaryNavigation sections={sidebarSections} />
                 </div>

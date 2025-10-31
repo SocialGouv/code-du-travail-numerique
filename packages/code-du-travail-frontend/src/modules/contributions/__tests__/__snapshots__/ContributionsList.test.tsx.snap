@@ -51,7 +51,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
         class="fr-grid-row fr-grid-row--gutters"
       >
         <div
-          class="fr-col-12 fr-col-lg-9 fr-col-offset-lg-3 pos_relative"
+          class="fr-col-12 fr-col-xl-9 fr-col-offset-xl-3 pos_relative"
         >
           <h1
             class="fr-mt-0 fr-mb-3w"
@@ -65,51 +65,46 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
             Obtenez une réponse personnalisée selon votre convention collective
           </p>
           <div
-            class="pos_absolute h_100% w_300px left_-330px"
-            id="summary-navigation"
+            class="fr-mb-3w"
           >
-            <div
-              class="pos_sticky top_4rem max-h_calc(100vh_-_4rem) ov-y_auto"
+            <nav
+              aria-labelledby="fr-summary-title-main"
+              class="fr-summary"
+              role="navigation"
             >
-              <nav
-                aria-labelledby="fr-summary-title-main"
-                class="fr-summary"
-                role="navigation"
+              <h2
+                class="fr-summary__title"
+                id="fr-summary-title-main"
               >
-                <h2
-                  class="fr-summary__title"
-                  id="fr-summary-title-main"
-                >
-                  Résumé
-                </h2>
-                <ol>
-                  <li>
-                    <a
-                      class="fr-summary__link"
-                      href="#contenus-populaires"
-                    >
-                      Contenus populaires
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="fr-summary__link"
-                      href="#conges-et-repos"
-                    >
-                      Congés et repos
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="fr-summary__link"
-                      href="#embauche-et-contrat"
-                    >
-                      Embauche et contrat
-                    </a>
-                  </li>
-                </ol>
-              </nav>
-            </div>
+                Résumé
+              </h2>
+              <ol>
+                <li>
+                  <a
+                    class="fr-summary__link"
+                    href="#contenus-populaires"
+                  >
+                    Contenus populaires
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="fr-summary__link"
+                    href="#conges-et-repos"
+                  >
+                    Congés et repos
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="fr-summary__link"
+                    href="#embauche-et-contrat"
+                  >
+                    Embauche et contrat
+                  </a>
+                </li>
+              </ol>
+            </nav>
           </div>
           <section
             class="fr-mt-6w"
@@ -133,7 +128,9 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
               Contenus populaires
             </h2>
             <ul
+              aria-live="polite"
               class="fr-grid-row fr-grid-row--gutters fr-grid-row--left"
+              id="contenus-populaires-items"
             />
           </section>
           <section
@@ -147,10 +144,11 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
               Congés et repos
             </h2>
             <ul
+              aria-live="polite"
               class="fr-grid-row fr-grid-row--gutters fr-grid-row--left"
+              id="conges-et-repos-items"
             >
               <li
-                aria-live="polite"
                 class="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-6 li-s_none!"
               >
                 <div
@@ -189,7 +187,6 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
                 </div>
               </li>
               <li
-                aria-live="polite"
                 class="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-6 li-s_none!"
               >
                 <div
@@ -240,10 +237,11 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
               Embauche et contrat
             </h2>
             <ul
+              aria-live="polite"
               class="fr-grid-row fr-grid-row--gutters fr-grid-row--left"
+              id="embauche-et-contrat-items"
             >
               <li
-                aria-live="polite"
                 class="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-6 li-s_none!"
               >
                 <div

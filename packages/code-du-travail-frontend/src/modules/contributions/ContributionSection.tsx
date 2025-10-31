@@ -7,6 +7,8 @@ import { summarize } from "../utils";
 import Button from "@codegouvfr/react-dsfr/Button";
 import Image from "next/image";
 
+const INITIAL_ITEMS_DISPLAY_COUNT = 6;
+
 type ContributionItem = {
   title: string;
   description: string;
@@ -32,9 +34,11 @@ export const ContributionSection = forwardRef<
     { sectionId, title, items, isExpanded, onToggle, firstHiddenItemRef, icon },
     ref
   ) => {
-    const hasMoreThan6 = items.length > 6;
+    const hasMoreThanN = items.length > INITIAL_ITEMS_DISPLAY_COUNT;
     const displayedItems =
-      hasMoreThan6 && !isExpanded ? items.slice(0, 6) : items;
+      hasMoreThanN && !isExpanded
+        ? items.slice(0, INITIAL_ITEMS_DISPLAY_COUNT)
+        : items;
 
     return (
       <section id={sectionId} className={fr.cx("fr-mt-6w")}>
@@ -55,6 +59,8 @@ export const ContributionSection = forwardRef<
           {title}
         </h2>
         <ul
+          id={`${sectionId}-items`}
+          aria-live="polite"
           className={`${fr.cx(
             "fr-grid-row",
             "fr-grid-row--gutters",
@@ -64,9 +70,8 @@ export const ContributionSection = forwardRef<
           {displayedItems.map((item, index) => (
             <li
               key={item.slug}
-              aria-live="polite"
               ref={(el) => {
-                if (hasMoreThan6 && index === 6) {
+                if (hasMoreThanN && index === INITIAL_ITEMS_DISPLAY_COUNT) {
                   firstHiddenItemRef(sectionId, el);
                 }
               }}
@@ -95,7 +100,7 @@ export const ContributionSection = forwardRef<
             </li>
           ))}
         </ul>
-        {hasMoreThan6 && (
+        {hasMoreThanN && (
           <div className={fr.cx("fr-mt-4w")}>
             <Button
               priority="secondary"
