@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⏬ Checkout code repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: 📌 Extract metadata (tags, labels) for Docker
         id: meta
