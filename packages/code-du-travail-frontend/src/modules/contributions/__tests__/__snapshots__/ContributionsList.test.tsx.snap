@@ -47,186 +47,241 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
     <div
       class="fr-col-12 fr-mb-4w fr-mb-md-12w"
     >
-      <h1
-        class="fr-mt-0 fr-mb-6w"
-        id="contributions"
-      >
-        Vos fiches pratiques
-      </h1>
-      <p
-        class="fr-text--md"
-      >
-        Obtenez une réponse personnalisée selon votre convention collective
-      </p>
       <div
-        class="fr-select-group fr-mt-6w max-w_500px"
-        id="fr-select-group-:r2:"
+        class="fr-grid-row fr-grid-row--gutters"
       >
-        <label
-          class="fr-label"
-          for="select-:r3:"
-        >
-          Sélectionnez un thème
-        </label>
-        <select
-          aria-describedby=""
-          class="fr-select"
-          id="select-:r3:"
-        >
-          <option
-            value=""
-          >
-            Tous les thèmes
-          </option>
-          <option
-            value="Congés et repos"
-          >
-            Congés et repos
-          </option>
-          <option
-            value="Embauche et contrat"
-          >
-            Embauche et contrat
-          </option>
-        </select>
         <div
-          aria-live="polite"
-          class="fr-messages-group"
-          id="select-:r3:-messages-group"
-        />
+          class="fr-col-12 fr-col-lg-9 fr-col-offset-lg-3 pos_relative"
+        >
+          <h1
+            class="fr-mt-0 fr-mb-3w"
+            id="main-content"
+          >
+            Vos fiches pratiques
+          </h1>
+          <p
+            class="fr-text--lead fr-mb-3w"
+          >
+            Obtenez une réponse personnalisée selon votre convention collective
+          </p>
+          <div
+            class="pos_absolute h_100% w_300px left_-330px"
+            id="summary-navigation"
+          >
+            <div
+              class="pos_sticky top_4rem max-h_calc(100vh_-_4rem) ov-y_auto"
+            >
+              <nav
+                aria-labelledby="fr-summary-title-main"
+                class="fr-summary"
+                role="navigation"
+              >
+                <h2
+                  class="fr-summary__title"
+                  id="fr-summary-title-main"
+                >
+                  Résumé
+                </h2>
+                <ol>
+                  <li>
+                    <a
+                      class="fr-summary__link"
+                      href="#contenus-populaires"
+                    >
+                      Contenus populaires
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-summary__link"
+                      href="#conges-et-repos"
+                    >
+                      Congés et repos
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-summary__link"
+                      href="#embauche-et-contrat"
+                    >
+                      Embauche et contrat
+                    </a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <section
+            class="fr-mt-6w"
+            id="contenus-populaires"
+          >
+            <h2
+              class="fr-h3 fr-mb-4w d_flex ai_center gap_0.5rem ring_none [&:focus]:ring_2px_solid_var(--border-active-blue-france) [&:focus]:ring-o_4px [&:focus]:bdr_4px"
+              tabindex="-1"
+            >
+              <img
+                alt=""
+                class="flex-sh_0"
+                data-nimg="1"
+                decoding="async"
+                height="35"
+                loading="lazy"
+                src="/static/assets/img/star.svg"
+                style="color: transparent;"
+                width="35"
+              />
+              Contenus populaires
+            </h2>
+            <ul
+              class="fr-grid-row fr-grid-row--gutters fr-grid-row--left"
+            />
+          </section>
+          <section
+            class="fr-mt-6w"
+            id="conges-et-repos"
+          >
+            <h2
+              class="fr-h3 fr-mb-4w d_flex ai_center gap_0.5rem ring_none [&:focus]:ring_2px_solid_var(--border-active-blue-france) [&:focus]:ring-o_4px [&:focus]:bdr_4px"
+              tabindex="-1"
+            >
+              Congés et repos
+            </h2>
+            <ul
+              class="fr-grid-row fr-grid-row--gutters fr-grid-row--left"
+            >
+              <li
+                class="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-6 li-s_none!"
+              >
+                <div
+                  class="fr-card fr-enlarge-link fr-card--horizontal"
+                  id="fr-card-:r2:"
+                >
+                  <div
+                    class="fr-card__body"
+                  >
+                    <div
+                      class="fr-card__content"
+                    >
+                      <h3
+                        class="fr-card__title"
+                      >
+                        <a
+                          class=""
+                          href="/contribution/conges-payes"
+                        >
+                          Congés payés
+                        </a>
+                      </h3>
+                      <p
+                        class="fr-card__desc"
+                      >
+                        Tout savoir sur les congés payés
+                      </p>
+                      <div
+                        class="fr-card__start fr-hidden"
+                      />
+                      <div
+                        class="fr-card__end"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-6 li-s_none!"
+              >
+                <div
+                  class="fr-card fr-enlarge-link fr-card--horizontal"
+                  id="fr-card-:r3:"
+                >
+                  <div
+                    class="fr-card__body"
+                  >
+                    <div
+                      class="fr-card__content"
+                    >
+                      <h3
+                        class="fr-card__title"
+                      >
+                        <a
+                          class=""
+                          href="/contribution/jours-feries"
+                        >
+                          Jours fériés
+                        </a>
+                      </h3>
+                      <p
+                        class="fr-card__desc"
+                      >
+                        Informations sur les jours fériés
+                      </p>
+                      <div
+                        class="fr-card__start fr-hidden"
+                      />
+                      <div
+                        class="fr-card__end"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section
+            class="fr-mt-6w"
+            id="embauche-et-contrat"
+          >
+            <h2
+              class="fr-h3 fr-mb-4w d_flex ai_center gap_0.5rem ring_none [&:focus]:ring_2px_solid_var(--border-active-blue-france) [&:focus]:ring-o_4px [&:focus]:bdr_4px"
+              tabindex="-1"
+            >
+              Embauche et contrat
+            </h2>
+            <ul
+              class="fr-grid-row fr-grid-row--gutters fr-grid-row--left"
+            >
+              <li
+                class="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-6 li-s_none!"
+              >
+                <div
+                  class="fr-card fr-enlarge-link fr-card--horizontal"
+                  id="fr-card-:r4:"
+                >
+                  <div
+                    class="fr-card__body"
+                  >
+                    <div
+                      class="fr-card__content"
+                    >
+                      <h3
+                        class="fr-card__title"
+                      >
+                        <a
+                          class=""
+                          href="/contribution/periode-essai"
+                        >
+                          Période d'essai
+                        </a>
+                      </h3>
+                      <p
+                        class="fr-card__desc"
+                      >
+                        Tout savoir sur la période d'essai
+                      </p>
+                      <div
+                        class="fr-card__start fr-hidden"
+                      />
+                      <div
+                        class="fr-card__end"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
       </div>
-      <h2
-        class="fr-mt-6w fr-h3"
-      >
-        Congés et repos
-      </h2>
-      <ul
-        class="fr-grid-row fr-grid-row--gutters fr-grid-row--left"
-      >
-        <li
-          class="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-6 li-s_none!"
-        >
-          <div
-            class="fr-card fr-enlarge-link fr-card--horizontal"
-            id="fr-card-:r5:"
-          >
-            <div
-              class="fr-card__body"
-            >
-              <div
-                class="fr-card__content"
-              >
-                <h3
-                  class="fr-card__title"
-                >
-                  <a
-                    class=""
-                    href="/contribution/conges-payes"
-                  >
-                    Congés payés
-                  </a>
-                </h3>
-                <p
-                  class="fr-card__desc"
-                >
-                  Tout savoir sur les congés payés
-                </p>
-                <div
-                  class="fr-card__start fr-hidden"
-                />
-                <div
-                  class="fr-card__end"
-                />
-              </div>
-            </div>
-          </div>
-        </li>
-        <li
-          class="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-6 li-s_none!"
-        >
-          <div
-            class="fr-card fr-enlarge-link fr-card--horizontal"
-            id="fr-card-:r6:"
-          >
-            <div
-              class="fr-card__body"
-            >
-              <div
-                class="fr-card__content"
-              >
-                <h3
-                  class="fr-card__title"
-                >
-                  <a
-                    class=""
-                    href="/contribution/jours-feries"
-                  >
-                    Jours fériés
-                  </a>
-                </h3>
-                <p
-                  class="fr-card__desc"
-                >
-                  Informations sur les jours fériés
-                </p>
-                <div
-                  class="fr-card__start fr-hidden"
-                />
-                <div
-                  class="fr-card__end"
-                />
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-      <h2
-        class="fr-mt-6w fr-h3"
-      >
-        Embauche et contrat
-      </h2>
-      <ul
-        class="fr-grid-row fr-grid-row--gutters fr-grid-row--left"
-      >
-        <li
-          class="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-6 li-s_none!"
-        >
-          <div
-            class="fr-card fr-enlarge-link fr-card--horizontal"
-            id="fr-card-:r7:"
-          >
-            <div
-              class="fr-card__body"
-            >
-              <div
-                class="fr-card__content"
-              >
-                <h3
-                  class="fr-card__title"
-                >
-                  <a
-                    class=""
-                    href="/contribution/periode-essai"
-                  >
-                    Période d'essai
-                  </a>
-                </h3>
-                <p
-                  class="fr-card__desc"
-                >
-                  Tout savoir sur la période d'essai
-                </p>
-                <div
-                  class="fr-card__start fr-hidden"
-                />
-                <div
-                  class="fr-card__end"
-                />
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
     </div>
   </div>
 </div>
