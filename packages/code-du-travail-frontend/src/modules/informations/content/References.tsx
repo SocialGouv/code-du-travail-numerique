@@ -10,11 +10,12 @@ export type Props = {
     title: string;
     url: string;
   }[];
+  titleAs?: `h${2 | 3 | 4 | 5 | 6}`;
 };
 
-export const References = ({ label, links }: Props) => {
+export const References = ({ label, links, titleAs }: Props) => {
   return (
-    <Accordion label={label} className={fr.cx("fr-mt-6w")}>
+    <Accordion label={label} className={fr.cx("fr-mt-6w")} titleAs={titleAs}>
       <ListWithArrow
         items={links.map(({ title, url }) => {
           if (!url) return <></>;
