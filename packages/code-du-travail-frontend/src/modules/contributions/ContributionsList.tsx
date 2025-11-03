@@ -10,6 +10,7 @@ import React, {
 import { ContainerWithNav } from "../layout/ContainerWithNav";
 import { ContributionSection } from "./ContributionSection";
 import { cleanHash } from "../utils";
+import { fr } from "@codegouvfr/react-dsfr";
 
 type ContributionItem = {
   title: string;
@@ -64,6 +65,7 @@ export const ContributionsList = ({
           if (firstHiddenItem) {
             const link = firstHiddenItem.querySelector("a");
             link?.focus();
+            link?.scrollIntoView({ behavior: "smooth", block: "start" });
           }
         }, 100);
       }
@@ -115,7 +117,7 @@ export const ContributionsList = ({
 
   return (
     <ContainerWithNav
-      title="Vos fiches pratiques"
+      title="Fiches pratiques"
       description="Obtenez une réponse personnalisée selon votre convention collective"
       sidebarSections={sidebarSections}
       breadcrumbSegments={[]}
@@ -147,6 +149,7 @@ export const ContributionsList = ({
             isExpanded={expandedSections.has(sectionId)}
             onToggle={toggleSection}
             firstHiddenItemRef={handleFirstHiddenItemRef}
+            className={fr.cx("fr-mt-3w")}
           />
         );
       })}

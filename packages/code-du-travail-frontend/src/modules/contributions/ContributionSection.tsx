@@ -24,6 +24,7 @@ type ContributionSectionProps = {
   onToggle: (sectionId: string) => void;
   firstHiddenItemRef: (sectionId: string, el: HTMLLIElement | null) => void;
   icon?: string;
+  className?: string;
 };
 
 export const ContributionSection = forwardRef<
@@ -31,7 +32,16 @@ export const ContributionSection = forwardRef<
   ContributionSectionProps
 >(
   (
-    { sectionId, title, items, isExpanded, onToggle, firstHiddenItemRef, icon },
+    {
+      sectionId,
+      title,
+      items,
+      isExpanded,
+      className,
+      onToggle,
+      firstHiddenItemRef,
+      icon,
+    },
     ref
   ) => {
     const hasMoreThanN = items.length > INITIAL_ITEMS_DISPLAY_COUNT;
@@ -41,11 +51,11 @@ export const ContributionSection = forwardRef<
         : items;
 
     return (
-      <section id={sectionId} className={fr.cx("fr-mt-6w")}>
+      <section id={sectionId} className={className}>
         <h2
           ref={ref}
           tabIndex={-1}
-          className={`${fr.cx("fr-h3", "fr-mb-4w")} ${titleWithIcon} ${focusableTitle}`}
+          className={`${fr.cx("fr-h3", "fr-mb-3w")} ${titleWithIcon} ${focusableTitle}`}
         >
           {icon && (
             <Image
