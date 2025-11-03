@@ -152,6 +152,7 @@ const iconStyles = css({
 
 const focusableTitle = css({
   outline: "none",
+  scrollMarginTop: "4rem",
   "&:focus": {
     outline: "2px solid var(--border-active-blue-france)",
     outlineOffset: "4px",

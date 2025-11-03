@@ -86,11 +86,11 @@ export const ContributionsList = ({
       if (hash && sectionRefs.current[hash]) {
         const heading = sectionRefs.current[hash];
         if (heading) {
+          const offsetTop =
+            heading.getBoundingClientRect().top + window.scrollY - 64;
+          window.scrollTo({ top: offsetTop, behavior: "smooth" });
           setTimeout(() => {
-            heading.scrollIntoView({ behavior: "smooth", block: "start" });
-            setTimeout(() => {
-              heading.focus({ preventScroll: true });
-            }, 300);
+            heading.focus({ preventScroll: true });
           }, 100);
         }
       }
