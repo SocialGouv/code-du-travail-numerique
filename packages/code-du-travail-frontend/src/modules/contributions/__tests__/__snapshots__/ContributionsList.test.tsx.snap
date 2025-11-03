@@ -3,7 +3,7 @@
 exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
 <div>
   <div
-    class="fr-grid-row"
+    class="fr-grid-row fr-mb-12w"
   >
     <nav
       aria-label="vous êtes ici :"
@@ -38,34 +38,38 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
               aria-current="page"
               class="fr-breadcrumb__link"
             >
-              Vos fiches pratiques
+              Fiches pratiques
             </a>
           </li>
         </ol>
       </div>
     </nav>
     <div
-      class="fr-col-12 fr-mb-4w fr-mb-md-12w"
+      class="fr-col-12"
     >
+      <div
+        class="fr-mb-5w"
+      >
+        <h1
+          class="fr-mt-0 fr-mb-3w"
+          id="main-content"
+        >
+          Fiches pratiques
+        </h1>
+        <p
+          class="fr-text--lead fr-mb-3w"
+        >
+          Obtenez une réponse personnalisée selon votre convention collective
+        </p>
+      </div>
       <div
         class="fr-grid-row fr-grid-row--gutters"
       >
         <div
-          class="fr-col-12 fr-col-xl-9 fr-col-offset-xl-3 pos_relative"
+          class="fr-col-12 fr-col-xl-3"
         >
-          <h1
-            class="fr-mt-0 fr-mb-3w"
-            id="main-content"
-          >
-            Vos fiches pratiques
-          </h1>
-          <p
-            class="fr-text--lead fr-mb-3w"
-          >
-            Obtenez une réponse personnalisée selon votre convention collective
-          </p>
           <div
-            class="fr-mb-3w"
+            class="xl:pos_sticky xl:top_64px xl:max-h_calc(100vh_-_64px) xl:ov-y_auto"
           >
             <nav
               aria-labelledby="fr-summary-title-main"
@@ -106,12 +110,15 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
               </ol>
             </nav>
           </div>
+        </div>
+        <div
+          class="fr-col-12 fr-col-xl-9"
+        >
           <section
-            class="fr-mt-6w"
             id="contenus-populaires"
           >
             <h2
-              class="fr-h3 fr-mb-4w d_flex ai_center gap_0.5rem ring_none [&:focus]:ring_2px_solid_var(--border-active-blue-france) [&:focus]:ring-o_4px [&:focus]:bdr_4px"
+              class="fr-h3 fr-mb-3w d_flex ai_center gap_0.5rem ring_none scr-mt_64px [&:focus]:ring_2px_solid_var(--border-active-blue-france) [&:focus]:ring-o_4px [&:focus]:bdr_4px"
               tabindex="-1"
             >
               <img
@@ -134,11 +141,11 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
             />
           </section>
           <section
-            class="fr-mt-6w"
+            class="fr-mt-3w"
             id="conges-et-repos"
           >
             <h2
-              class="fr-h3 fr-mb-4w d_flex ai_center gap_0.5rem ring_none [&:focus]:ring_2px_solid_var(--border-active-blue-france) [&:focus]:ring-o_4px [&:focus]:bdr_4px"
+              class="fr-h3 fr-mb-3w d_flex ai_center gap_0.5rem ring_none scr-mt_64px [&:focus]:ring_2px_solid_var(--border-active-blue-france) [&:focus]:ring-o_4px [&:focus]:bdr_4px"
               tabindex="-1"
             >
               Congés et repos
@@ -227,11 +234,11 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
             </ul>
           </section>
           <section
-            class="fr-mt-6w"
+            class="fr-mt-3w"
             id="embauche-et-contrat"
           >
             <h2
-              class="fr-h3 fr-mb-4w d_flex ai_center gap_0.5rem ring_none [&:focus]:ring_2px_solid_var(--border-active-blue-france) [&:focus]:ring-o_4px [&:focus]:bdr_4px"
+              class="fr-h3 fr-mb-3w d_flex ai_center gap_0.5rem ring_none scr-mt_64px [&:focus]:ring_2px_solid_var(--border-active-blue-france) [&:focus]:ring-o_4px [&:focus]:bdr_4px"
               tabindex="-1"
             >
               Embauche et contrat

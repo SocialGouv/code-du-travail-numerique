@@ -28,6 +28,8 @@ type Props = {
   popularContributionSlugs: string[];
 };
 
+const SCROLL_DELAY_MS = 100;
+
 export const ContributionsList = ({
   contributions: initialContribs,
   popularContributionSlugs,
@@ -39,6 +41,7 @@ export const ContributionsList = ({
     {}
   );
   const sectionRefs = useRef<{ [key: string]: HTMLHeadingElement | null }>({});
+  const buttonRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
 
   const documents = useMemo(() => initialContribs, [initialContribs]);
 
@@ -58,6 +61,17 @@ export const ContributionsList = ({
       const newSet = new Set(prev);
       if (newSet.has(sectionId)) {
         newSet.delete(sectionId);
+        setTimeout(() => {
+          const button = buttonRefs.current[sectionId];
+          if (button) {
+            const offsetTop =
+              button.getBoundingClientRect().top + window.scrollY - 64; // 4rem = 64px
+            window.scrollTo({ top: offsetTop, behavior: "smooth" });
+            setTimeout(() => {
+              button.focus({ preventScroll: true });
+            }, SCROLL_DELAY_MS);
+          }
+        }, SCROLL_DELAY_MS);
       } else {
         newSet.add(sectionId);
         setTimeout(() => {
@@ -67,7 +81,7 @@ export const ContributionsList = ({
             link?.focus();
             link?.scrollIntoView({ behavior: "smooth", block: "start" });
           }
-        }, 100);
+        }, SCROLL_DELAY_MS);
       }
       return newSet;
     });
@@ -76,6 +90,13 @@ export const ContributionsList = ({
   const handleFirstHiddenItemRef = useCallback(
     (sectionId: string, el: HTMLLIElement | null) => {
       firstHiddenItemRefs.current[sectionId] = el;
+    },
+    []
+  );
+
+  const handleButtonRef = useCallback(
+    (sectionId: string, el: HTMLButtonElement | null) => {
+      buttonRefs.current[sectionId] = el;
     },
     []
   );
@@ -91,7 +112,7 @@ export const ContributionsList = ({
           window.scrollTo({ top: offsetTop, behavior: "smooth" });
           setTimeout(() => {
             heading.focus({ preventScroll: true });
-          }, 100);
+          }, SCROLL_DELAY_MS);
         }
       }
     };
@@ -132,6 +153,7 @@ export const ContributionsList = ({
         isExpanded={expandedSections.has("contenus-populaires")}
         onToggle={toggleSection}
         firstHiddenItemRef={handleFirstHiddenItemRef}
+        buttonRef={handleButtonRef}
         icon="/static/assets/img/star.svg"
       />
 
@@ -149,6 +171,7 @@ export const ContributionsList = ({
             isExpanded={expandedSections.has(sectionId)}
             onToggle={toggleSection}
             firstHiddenItemRef={handleFirstHiddenItemRef}
+            buttonRef={handleButtonRef}
             className={fr.cx("fr-mt-3w")}
           />
         );

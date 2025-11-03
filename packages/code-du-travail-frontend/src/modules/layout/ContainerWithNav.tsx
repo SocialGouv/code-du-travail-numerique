@@ -58,7 +58,7 @@ export const ContainerWithNav = ({
 
 const stickySidebarStyles = css({
   position: { xl: "sticky" },
-  top: { xl: "4rem" },
-  maxHeight: { xl: "calc(100vh - 4rem)" },
+  top: { xl: "64px" },
+  maxHeight: { xl: "calc(100vh - 64px)" },
   overflowY: { xl: "auto" },
 });

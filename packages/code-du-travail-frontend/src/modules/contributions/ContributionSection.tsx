@@ -23,6 +23,7 @@ type ContributionSectionProps = {
   isExpanded: boolean;
   onToggle: (sectionId: string) => void;
   firstHiddenItemRef: (sectionId: string, el: HTMLLIElement | null) => void;
+  buttonRef: (sectionId: string, el: HTMLButtonElement | null) => void;
   icon?: string;
   className?: string;
 };
@@ -40,6 +41,7 @@ export const ContributionSection = forwardRef<
       className,
       onToggle,
       firstHiddenItemRef,
+      buttonRef,
       icon,
     },
     ref
@@ -113,6 +115,7 @@ export const ContributionSection = forwardRef<
         {hasMoreThanN && (
           <div className={fr.cx("fr-mt-4w")}>
             <Button
+              ref={(el) => buttonRef(sectionId, el)}
               priority="secondary"
               iconId={
                 isExpanded
@@ -152,7 +155,7 @@ const iconStyles = css({
 
 const focusableTitle = css({
   outline: "none",
-  scrollMarginTop: "4rem",
+  scrollMarginTop: "64px",
   "&:focus": {
     outline: "2px solid var(--border-active-blue-france)",
     outlineOffset: "4px",
