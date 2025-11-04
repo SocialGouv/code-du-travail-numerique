@@ -54,10 +54,10 @@
     "katex": "^0.16.21",
     "lodash.deburr": "^4.1.0",
     "memoizee": "^0.4.15",
-    "next": "15.5.4",
+    "next": "16.0.1",
     "publicodes": "1.0.0-beta.60",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "sharp": "^0.33.4",
     "uuid": "^9.0.0",
     "xss": "^1.0.10",
@@ -75,8 +75,8 @@
     "@types/cors": "^2.8.13",
     "@types/debounce-promise": "^3.1.4",
     "@types/jest": "^30.0.0",
-    "@types/react": "^19.1.13",
-    "@types/react-dom": "^19.1.9",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.1",
     "@types/xml2js": "^0.4.14",
     "@typescript-eslint/parser": "^8.42.0",
     "cypress": "^15.4.0",
@@ -99,10 +99,7 @@
     "supertest": "^6.3.3",
     "testing-library-selector": "0.3.1",
     "tsup": "^8.3.5",
-    "typescript": "^5.5.4",
+    "typescript": "^5.9.3",
     "xml2js": "^0.6.2"
-  },
-  "resolutions": {
-    "@types/react": "19.1.12"
   }
 }

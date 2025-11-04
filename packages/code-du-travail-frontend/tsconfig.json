@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -10,7 +14,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "forceConsistentCasingInFileNames": true,
     "strictNullChecks": true,
@@ -22,7 +26,9 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@styled-system/*": ["./src/styled-system/*"]
+      "@styled-system/*": [
+        "./src/styled-system/*"
+      ]
     },
     "target": "ES2017"
   },
@@ -31,7 +37,11 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "./global.d.ts"
+    "./global.d.ts",
+    ".next/dev/types/**/*.ts"
   ],
-  "exclude": ["node_modules/**/*", "cypress"]
+  "exclude": [
+    "node_modules/**/*",
+    "cypress"
+  ]
 }

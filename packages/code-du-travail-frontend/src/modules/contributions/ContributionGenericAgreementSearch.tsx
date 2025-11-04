@@ -23,7 +23,7 @@ type Props = {
   contribution: Contribution;
   selectedAgreement?: Agreement;
   trackingActionName: string;
-  personalizeTitleRef: React.RefObject<HTMLParagraphElement | null>;
+  personalizeTitleRef: React.RefObject<HTMLParagraphElement>;
 };
 
 export function ContributionGenericAgreementSearch({
