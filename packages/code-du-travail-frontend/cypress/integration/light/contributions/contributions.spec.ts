@@ -12,10 +12,10 @@ describe("Contributions", () => {
     cy.urlEqual("/contribution");
     cy.canonicalUrlEqual("/contribution");
     cy.titleAndMetaDescriptionEqual(
-      "Vos fiches pratiques - Code du travail numérique",
+      "Fiches pratiques - Code du travail numérique",
       "Obtenez une réponse personnalisée selon votre convention collective"
     );
-    cy.get("h1").should("have.text", "Vos fiches pratiques");
+    cy.get("h1").should("have.text", "Fiches pratiques");
     cy.get("body").should(
       "contain",
       "Obtenez une réponse personnalisée selon votre convention collective"

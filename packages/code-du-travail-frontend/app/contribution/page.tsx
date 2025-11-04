@@ -4,7 +4,7 @@ import { ContributionsList } from "../../src/modules/contributions";
 import { getGenericContributionsGroupByThemes } from "../../src/api";
 
 export const metadata = generateDefaultMetadata({
-  title: "Vos fiches pratiques",
+  title: "Fiches pratiques",
   description:
     "Obtenez une réponse personnalisée selon votre convention collective",
   path: "/contribution",
