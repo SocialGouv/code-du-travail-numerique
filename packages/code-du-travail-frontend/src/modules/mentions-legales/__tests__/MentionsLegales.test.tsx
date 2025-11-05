@@ -4,9 +4,7 @@ import { MentionsLegales } from "..";
 
 describe("<MentionsLegales />", () => {
   it("should match snapshot", () => {
-    const { container } = render(<MentionsLegales />, {
-      legacyRoot: true,
-    });
+    const { container } = render(<MentionsLegales />);
     expect(container).toMatchSnapshot();
   });
 });

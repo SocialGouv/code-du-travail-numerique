@@ -67,9 +67,7 @@ describe("<ContributionLayout />", () => {
     pushMock.mockClear();
   });
   it("should render title only if generic", () => {
-    rendering = render(<ContributionLayout contribution={contribution} />, {
-      legacyRoot: true,
-    });
+    rendering = render(<ContributionLayout contribution={contribution} />);
     const titreH1 = rendering.getByRole("heading", { level: 1 });
     expect(titreH1.textContent).toBe(
       "La période d’essai peut-elle être renouvelée ?"
@@ -103,9 +101,7 @@ describe("<ContributionLayout />", () => {
   describe("base", () => {
     beforeEach(async () => {
       window.localStorage.clear();
-      rendering = render(<ContributionLayout contribution={contribution} />, {
-        legacyRoot: true,
-      });
+      rendering = render(<ContributionLayout contribution={contribution} />);
     });
     it("should display correctly when a selecting agreement 3239", async () => {
       fireEvent.click(ccUi.radio.enterpriseSearchOption.get());

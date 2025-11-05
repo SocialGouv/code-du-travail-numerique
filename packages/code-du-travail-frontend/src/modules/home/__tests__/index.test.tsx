@@ -56,9 +56,7 @@ const mockData: HomePageProps = {
 
 describe("<Home />", () => {
   it("should match snapshot", () => {
-    const { container } = render(<Home {...mockData} />, {
-      legacyRoot: true,
-    });
+    const { container } = render(<Home {...mockData} />);
     expect(container).toMatchSnapshot();
   });
 });

@@ -40,9 +40,7 @@ describe("<LienExterne />", () => {
       ],
     };
 
-    const { getByText } = render(<LienExterne data={data} />, {
-      legacyRoot: true,
-    });
+    const { getByText } = render(<LienExterne data={data} />);
     expect(getByText("formulaire")).toHaveAttribute(
       "href",
       "https://code.travail.gouv.fr/outils/indemnite-licenciement"

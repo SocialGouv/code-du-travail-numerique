@@ -44,9 +44,7 @@ const mockItems = {
 
 describe("SearchPageClient - Tests d'accessibilité et tabulation", () => {
   it("Vérifie l'ordre de tabulation logique dans le DOM rendu", async () => {
-    render(<SearchPageClient query="test" items={mockItems} />, {
-      legacyRoot: true,
-    });
+    render(<SearchPageClient query="test" items={mockItems} />);
 
     const tabbableElements = screen
       .getByRole("search")

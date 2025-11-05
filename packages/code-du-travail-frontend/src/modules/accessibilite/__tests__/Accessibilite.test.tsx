@@ -4,9 +4,7 @@ import { Accessibilite } from "..";
 
 describe("<Accessibilite />", () => {
   it("should match snapshot", () => {
-    const { container } = render(<Accessibilite />, {
-      legacyRoot: true,
-    });
+    const { container } = render(<Accessibilite />);
     expect(container).toMatchSnapshot();
   });
 });

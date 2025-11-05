@@ -23,9 +23,7 @@ describe("Indemnité licenciement - CC 3248", () => {
     let rendering: RenderResult;
     let userAction: UserAction;
     beforeEach(() => {
-      rendering = render(<CalculateurIndemniteLicenciement title={""} />, {
-        legacyRoot: true,
-      });
+      rendering = render(<CalculateurIndemniteLicenciement title={""} />);
       userAction = new UserAction();
       userAction
         .click(ui.introduction.startButton.get())

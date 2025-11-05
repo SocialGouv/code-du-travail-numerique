@@ -21,9 +21,7 @@ Storage.prototype.getItem = jest.fn(
 describe(`Tests des erreurs d'éligibilité`, () => {
   let userAction = new UserAction();
   beforeEach(() => {
-    render(<CalculateurIndemniteLicenciement title={""} />, {
-      legacyRoot: true,
-    });
+    render(<CalculateurIndemniteLicenciement title={""} />);
     userAction.click(ui.introduction.startButton.get());
   });
 

@@ -28,16 +28,12 @@ jest.mock("../../common/AccordionWithAnchor", () => ({
 
 describe("FrequentQuestions", () => {
   it("should render nothing when answers is undefined", () => {
-    const { container } = render(<FrequentQuestions answers={[]} />, {
-      legacyRoot: true,
-    });
+    const { container } = render(<FrequentQuestions answers={[]} />);
     expect(container).toBeEmptyDOMElement();
   });
 
   it("should render nothing when answers is empty", () => {
-    const { container } = render(<FrequentQuestions answers={[]} />, {
-      legacyRoot: true,
-    });
+    const { container } = render(<FrequentQuestions answers={[]} />);
     expect(container).toBeEmptyDOMElement();
   });
 
@@ -73,9 +69,7 @@ describe("FrequentQuestions", () => {
       },
     ];
 
-    render(<FrequentQuestions answers={answers} />, {
-      legacyRoot: true,
-    });
+    render(<FrequentQuestions answers={answers} />);
 
     // Test that the container is rendered
     expect(

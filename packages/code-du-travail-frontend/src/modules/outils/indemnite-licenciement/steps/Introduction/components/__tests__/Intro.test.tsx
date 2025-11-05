@@ -4,8 +4,6 @@ import Intro from "../Intro";
 
 describe("<Intro />", () => {
   it("should render", () => {
-    expect(render(<Intro />, {
-      legacyRoot: true,
-    })).toBeTruthy();
+    expect(render(<Intro />)).toBeTruthy();
   });
 });

@@ -9,9 +9,7 @@ test(`Questionnaire
   - Vérifier l'affichage des tooltips
   - Vérifier le non affichage des questions
 `, async () => {
-  await render(<QuestionnaireWrapper name="dismissalProcess" slug="Slug12" />, {
-    legacyRoot: true,
-  });
+  await render(<QuestionnaireWrapper name="dismissalProcess" slug="Slug12" />);
   // Vérifier l'affichage du résumé en mode non personnalisé
   expect(ui.response12.neutralStatement.query()).toBeInTheDocument();
   expect(ui.button.changeProcedure.query()).toBeInTheDocument();

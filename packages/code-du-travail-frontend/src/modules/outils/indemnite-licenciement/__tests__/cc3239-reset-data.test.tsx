@@ -22,9 +22,7 @@ Storage.prototype.getItem = jest.fn(
 describe("Indemnité licenciement - CC 3239 - changement de convention collective", () => {
   let userAction: UserAction;
   beforeEach(async () => {
-    render(<CalculateurIndemniteLicenciement title={""} />, {
-      legacyRoot: true,
-    });
+    render(<CalculateurIndemniteLicenciement title={""} />);
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
     userAction.click(ui.contract.type.cdi.get());

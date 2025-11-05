@@ -13,9 +13,7 @@ describe("LocationSearchInput", () => {
   let userAction: UserAction;
   beforeEach(() => {
     jest.resetAllMocks();
-    rendering = render(<LocationSearchInput />, {
-      legacyRoot: true,
-    });
+    rendering = render(<LocationSearchInput />);
   });
   it("Vérifier le déroulement de la liste de ville et sa fermeture", async () => {
     (searchCities as jest.Mock).mockImplementation(() =>

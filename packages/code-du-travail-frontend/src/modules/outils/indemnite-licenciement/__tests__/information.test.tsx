@@ -24,9 +24,7 @@ describe("Indemnité licenciement - Validation de la page information", () => {
     let userAction: UserAction;
     let container: RenderResult;
     beforeEach(async () => {
-      container = render(<CalculateurIndemniteLicenciement title={""} />, {
-        legacyRoot: true,
-      });
+      container = render(<CalculateurIndemniteLicenciement title={""} />);
       userAction = new UserAction();
       userAction
         .click(ui.introduction.startButton.get())

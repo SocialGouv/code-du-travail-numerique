@@ -104,7 +104,7 @@ exports[`<Home /> should match snapshot 1`] = `
                   <button
                     aria-label="Lancer la recherche"
                     class="fr-btn fr-icon-search-line fr-btn--icon-right mdDown:w_100%! mdDown:jc_center!"
-                    id="fr-button-:r1:"
+                    id="fr-button-_r_1_"
                     type="submit"
                   >
                     Rechercher
@@ -149,7 +149,7 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-card fr-enlarge-link fr-card--horizontal"
-                id="fr-card-:r2:"
+                id="fr-card-_r_2_"
               >
                 <div
                   class="fr-card__body"
@@ -220,7 +220,7 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-tile fr-enlarge-link fr-tile--vertical"
-                id="fr-tile-:r3:"
+                id="fr-tile-_r_3_"
               >
                 <div
                   class="fr-tile__body"
@@ -272,7 +272,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/outils"
-              id="fr-button-:r4:"
+              id="fr-button-_r_4_"
             >
               Voir tous les outils
             </a>
@@ -301,7 +301,7 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-card fr-enlarge-link fr-card--horizontal"
-                id="fr-card-:r5:"
+                id="fr-card-_r_5_"
               >
                 <div
                   class="fr-card__body"
@@ -353,7 +353,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/modeles-de-courriers"
-              id="fr-button-:r6:"
+              id="fr-button-_r_6_"
             >
               Voir tous les modèles de documents
             </a>
@@ -382,7 +382,7 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-card fr-enlarge-link fr-card--horizontal"
-                id="fr-card-:r7:"
+                id="fr-card-_r_7_"
               >
                 <div
                   class="fr-card__body"
@@ -434,7 +434,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/contribution"
-              id="fr-button-:r8:"
+              id="fr-button-_r_8_"
             >
               Voir toutes les fiches pratiques
             </a>
@@ -464,7 +464,7 @@ exports[`<Home /> should match snapshot 1`] = `
             >
               <div
                 class="fr-card fr-enlarge-link fr-card--horizontal"
-                id="fr-card-:r9:"
+                id="fr-card-_r_9_"
               >
                 <div
                   class="fr-card__body"
@@ -516,7 +516,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/convention-collective"
-              id="fr-button-:ra:"
+              id="fr-button-_r_a_"
             >
               Voir toutes les conventions collectives
             </a>
@@ -593,7 +593,7 @@ exports[`<Home /> should match snapshot 1`] = `
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
               href="/themes"
-              id="fr-button-:rb:"
+              id="fr-button-_r_b_"
             >
               Voir tous les thèmes
             </a>

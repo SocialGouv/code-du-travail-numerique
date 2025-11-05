@@ -23,10 +23,7 @@ describe("Indemnité licenciement - Tracking", () => {
         title={"Indemnité de licenciement"}
         displayTitle="Indemnité de licenciement"
         relatedItems={[]}
-      />,
-      {
-        legacyRoot: true,
-      }
+      />
     );
   });
   const userAction = new UserAction();

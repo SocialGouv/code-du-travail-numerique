@@ -82,18 +82,14 @@ describe("SearchPageClient", () => {
   };
 
   it("should emit search event when mounted with a query", () => {
-    render(<SearchPageClient query="test query" items={mockItems} />, {
-      legacyRoot: true,
-    });
+    render(<SearchPageClient query="test query" items={mockItems} />);
 
     // Check that emitSearchEvent was called with the query
     expect(mockEmitSearchEvent).toHaveBeenCalledWith("test query");
   });
 
   it("should emit result selection event when a search result is clicked", () => {
-    render(<SearchPageClient query="test query" items={mockItems} />, {
-      legacyRoot: true,
-    });
+    render(<SearchPageClient query="test query" items={mockItems} />);
 
     // Find and click the first search card link
     const firstCard = screen.getByRole("link", { name: "Document 1" });
@@ -140,9 +136,7 @@ describe("SearchPageClient", () => {
   });
 
   it("should emit result selection event when a theme button is clicked", () => {
-    render(<SearchPageClient query="test query" items={mockItems} />, {
-      legacyRoot: true,
-    });
+    render(<SearchPageClient query="test query" items={mockItems} />);
 
     // Find and click the theme link (styled as a button)
     const themeButton = screen.getByRole("link", { name: "Theme 1" });
@@ -158,9 +152,7 @@ describe("SearchPageClient", () => {
   });
 
   it("should emit result selection event when a code article is clicked", () => {
-    render(<SearchPageClient query="test query" items={mockItems} />, {
-      legacyRoot: true,
-    });
+    render(<SearchPageClient query="test query" items={mockItems} />);
 
     // Find and click the code article link
     const codeArticle = screen.getByRole("link", { name: "article-1" });

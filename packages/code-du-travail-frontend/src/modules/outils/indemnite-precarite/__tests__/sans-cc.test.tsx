@@ -14,9 +14,7 @@ beforeEach(() => {
     writable: true,
   });
 
-  render(<CalculateurIndemnitePrecarite title="Test Indemnité de Précarité" />, {
-    legacyRoot: true,
-  });
+  render(<CalculateurIndemnitePrecarite title="Test Indemnité de Précarité" />);
 
   fireEvent.click(ui.introduction.startButton.get());
 

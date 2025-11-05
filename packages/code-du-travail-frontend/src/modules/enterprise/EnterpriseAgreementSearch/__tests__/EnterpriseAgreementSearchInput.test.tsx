@@ -68,8 +68,7 @@ describe("EnterpriseAgreementSearchInput", () => {
           onAgreementSelect={() => {}}
           trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
           level={2}
-        />,
-        { legacyRoot: true }
+        />
       );
     });
 
@@ -136,8 +135,7 @@ describe("EnterpriseAgreementSearchInput", () => {
         <EnterpriseAgreementSearchInput
           trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
           level={2}
-        />,
-        { legacyRoot: true }
+        />
       );
     });
 

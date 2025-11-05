@@ -8,11 +8,11 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
     <nav
       aria-label="vous êtes ici :"
       class="fr-breadcrumb fr-mb-2w fr-mt-2w"
-      id="fr-breadcrumb-:r0:"
+      id="fr-breadcrumb-_r_0_"
       role="navigation"
     >
       <button
-        aria-controls="breadcrumb-:r1:"
+        aria-controls="breadcrumb-_r_1_"
         aria-expanded="false"
         class="fr-breadcrumb__button"
       >
@@ -20,7 +20,7 @@ exports[`<DroitDuTravailWrapper /> renders correctly 1`] = `
       </button>
       <div
         class="fr-collapse"
-        id="breadcrumb-:r1:"
+        id="breadcrumb-_r_1_"
       >
         <ol
           class="fr-breadcrumb__list"

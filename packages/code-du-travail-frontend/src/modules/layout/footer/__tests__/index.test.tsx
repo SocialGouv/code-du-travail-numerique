@@ -4,9 +4,7 @@ import { Footer } from "..";
 
 describe("<Footer />", () => {
   it("should match snapshot", () => {
-    const { container } = render(<Footer />, {
-      legacyRoot: true,
-    });
+    const { container } = render(<Footer />);
     expect(container).toMatchSnapshot();
   });
 });

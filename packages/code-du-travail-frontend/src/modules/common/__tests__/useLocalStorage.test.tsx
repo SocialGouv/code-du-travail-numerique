@@ -16,9 +16,7 @@ function renderApp(initialValue) {
     );
   }
 
-  return render(<App />, {
-    legacyRoot: true,
-  });
+  return render(<App />);
 }
 
 describe("useLocalStorageForAgreement", () => {

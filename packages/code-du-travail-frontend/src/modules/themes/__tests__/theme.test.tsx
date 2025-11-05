@@ -77,9 +77,7 @@ const dataThemeWithExternalRef = {
 
 describe("<ThemeModel />", () => {
   it("validation du contenu de la page d'un thème", () => {
-    const { container } = render(<ThemeModel theme={dataTheme} />, {
-      legacyRoot: true,
-    });
+    const { container } = render(<ThemeModel theme={dataTheme} />);
     const subThemesList = getAllByRole(container, "list")[1];
     const subThemes = getAllByRole(subThemesList, "listitem");
     expect(subThemes).toHaveLength(2);
@@ -110,9 +108,7 @@ describe("<ThemeModel />", () => {
   });
 
   it("affiche un thème", () => {
-    const { container } = render(<ThemeModel theme={dataTheme} />, {
-      legacyRoot: true,
-    });
+    const { container } = render(<ThemeModel theme={dataTheme} />);
     expect(container).toMatchSnapshot();
   });
 

@@ -10,9 +10,7 @@ test(`
   - Vérifier l'affichage de la question faute grave
   - Vérifier l'affichage de la question inaptitude
 `, async () => {
-  await render(<CalculateurIndemniteLicenciement title={""} />, {
-    legacyRoot: true,
-  });
+  await render(<CalculateurIndemniteLicenciement title={""} />);
   const userAction = new UserAction();
 
   // Vérifier l'affichage de l'intro

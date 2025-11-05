@@ -10,9 +10,7 @@ describe("Arrêt de travail", () => {
 
   describe("Page contrat de travail: vérification des questions affichées", () => {
     beforeEach(async () => {
-      render(<CalculateurIndemniteLicenciement title={""} />, {
-        legacyRoot: true,
-      });
+      render(<CalculateurIndemniteLicenciement title={""} />);
       userAction.click(ui.introduction.startButton.get());
       userAction.click(ui.contract.type.cdi.get());
       userAction.click(ui.contract.fauteGrave.non.get());
@@ -79,9 +77,7 @@ describe("Arrêt de travail", () => {
 
   describe("Page salaires: vérification de la liste affichée", () => {
     beforeEach(async () => {
-      render(<CalculateurIndemniteLicenciement title={""} />, {
-        legacyRoot: true,
-      });
+      render(<CalculateurIndemniteLicenciement title={""} />);
     });
 
     test("should display with the good number of months at the 'Salaires' step if no inaptitude", async () => {

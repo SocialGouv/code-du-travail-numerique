@@ -10,9 +10,7 @@ describe("<ExpandableCard />", () => {
   };
 
   it("renders correctly with default props", () => {
-    const { container } = render(<ExpandableCard {...defaultProps} />, {
-      legacyRoot: true,
-    });
+    const { container } = render(<ExpandableCard {...defaultProps} />);
     expect(screen.getByText("Test Title")).toBeInTheDocument();
     expect(container.querySelector("img")).toHaveAttribute(
       "src",
@@ -22,16 +20,12 @@ describe("<ExpandableCard />", () => {
   });
 
   it("does not show content when initially rendered", () => {
-    render(<ExpandableCard {...defaultProps} />, {
-      legacyRoot: true,
-    });
+    render(<ExpandableCard {...defaultProps} />);
     expect(screen.queryByText("Test content")).not.toBeInTheDocument();
   });
 
   it("shows content when expanded", () => {
-    render(<ExpandableCard {...defaultProps} />, {
-      legacyRoot: true,
-    });
+    render(<ExpandableCard {...defaultProps} />);
 
     // Click the button to expand
     fireEvent.click(screen.getByRole("button"));
@@ -41,9 +35,7 @@ describe("<ExpandableCard />", () => {
   });
 
   it("hides content when collapsed after being expanded", () => {
-    render(<ExpandableCard {...defaultProps} />, {
-      legacyRoot: true,
-    });
+    render(<ExpandableCard {...defaultProps} />);
 
     // Click to expand
     fireEvent.click(screen.getByRole("button"));

@@ -27,10 +27,7 @@ describe("Indemnité licenciement - CC 2216", () => {
         displayTitle="Simulateur d'indemnité de rupture conventionnelle"
         relatedItems={[]}
         title="Simulateur d'indemnité de rupture conventionnelle"
-      />,
-      {
-        legacyRoot: true,
-      }
+      />
     );
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());

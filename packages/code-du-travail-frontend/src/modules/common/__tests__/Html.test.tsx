@@ -5,9 +5,7 @@ import Html from "../Html";
 
 describe("<Html />", () => {
   it("should render", () => {
-    const { container } = render(<Html>{"<strong>Hello</strong> World"}</Html>, {
-      legacyRoot: true,
-    });
+    const { container } = render(<Html>{"<strong>Hello</strong> World"}</Html>);
     expect(container).toMatchSnapshot();
   });
 });

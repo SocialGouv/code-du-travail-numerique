@@ -18,9 +18,7 @@ describe("LegiFranceSearch", () => {
   });
 
   it("should render the search form", () => {
-    render(<LegiFranceSearch {...props} />, {
-      legacyRoot: true,
-    });
+    render(<LegiFranceSearch {...props} />);
 
     expect(
       screen.getByTestId("agreement-search-container")
@@ -34,9 +32,7 @@ describe("LegiFranceSearch", () => {
   });
 
   it("should update query state when input changes", () => {
-    render(<LegiFranceSearch {...props} />, {
-      legacyRoot: true,
-    });
+    render(<LegiFranceSearch {...props} />);
 
     const input = screen.getByTestId("agreement-search-input");
     fireEvent.change(input, { target: { value: "test query" } });
@@ -45,9 +41,7 @@ describe("LegiFranceSearch", () => {
   });
 
   it("should track search when form is submitted", () => {
-    render(<LegiFranceSearch {...props} />, {
-      legacyRoot: true,
-    });
+    render(<LegiFranceSearch {...props} />);
 
     const input = screen.getByTestId("agreement-search-input");
     const form = screen.getByTestId("agreement-search-form");
@@ -64,9 +58,7 @@ describe("LegiFranceSearch", () => {
   });
 
   it("should have correct hidden inputs with values", () => {
-    render(<LegiFranceSearch {...props} />, {
-      legacyRoot: true,
-    });
+    render(<LegiFranceSearch {...props} />);
 
     // Check the idcc input
     expect(screen.getByTestId("agreement-search-idcc")).toHaveAttribute(

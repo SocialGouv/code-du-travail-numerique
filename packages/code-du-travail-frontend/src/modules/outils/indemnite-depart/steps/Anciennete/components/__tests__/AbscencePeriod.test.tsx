@@ -29,10 +29,7 @@ describe("<AbsencePeriod />", () => {
           onDeleteAbsence={() => {}}
           informationData={{}}
           absence={absence}
-        />,
-        {
-          legacyRoot: true,
-        }
+        />
       )
     ).toBeTruthy();
   });
@@ -49,10 +46,7 @@ describe("<AbsencePeriod />", () => {
         onDeleteAbsence={() => {}}
         informationData={{}}
         absence={absence}
-      />,
-      {
-        legacyRoot: true,
-      }
+      />
     );
     expect(getAllByRole("option").length).toBe(sampleMotifs.length);
     // Motif 1 doit être sélectionné par défaut
@@ -80,10 +74,7 @@ describe("<AbsencePeriod />", () => {
         onDeleteAbsence={() => {}}
         informationData={{}}
         absence={absence}
-      />,
-      {
-        legacyRoot: true,
-      }
+      />
     );
     expect(
       queryByRole("button", { name: /supprimer/i })
@@ -102,10 +93,7 @@ describe("<AbsencePeriod />", () => {
         onDeleteAbsence={() => {}}
         informationData={{}}
         absence={absence}
-      />,
-      {
-        legacyRoot: true,
-      }
+      />
     );
     expect(getByRole("button", { name: /supprimer/i })).toBeInTheDocument();
   });
@@ -125,10 +113,7 @@ describe("<AbsencePeriod />", () => {
           ...absence,
           motif: motif1,
         }}
-      />,
-      {
-        legacyRoot: true,
-      }
+      />
     );
 
     await userEvent.selectOptions(
@@ -155,8 +140,7 @@ describe("<AbsencePeriod />", () => {
           startedAt: "01/01/2021",
         }}
         informationData={{}}
-      />,
-      { legacyRoot: true }
+      />
     );
     expect(
       (

@@ -4,9 +4,7 @@ import { NeedMoreInfo } from "../index";
 
 describe("<NeedMoreInfo />", () => {
   it("should match snapshot", () => {
-    const { container } = render(<NeedMoreInfo />, {
-      legacyRoot: true,
-    });
+    const { container } = render(<NeedMoreInfo />);
     expect(container).toMatchSnapshot();
   });
 });

@@ -23,9 +23,7 @@ Storage.prototype.getItem = jest.fn(
 describe("Indemnité licenciement - CC 86", () => {
   let userAction: UserAction;
   beforeEach(() => {
-    render(<CalculateurIndemniteLicenciement title={""} />, {
-      legacyRoot: true,
-    });
+    render(<CalculateurIndemniteLicenciement title={""} />);
     userAction = new UserAction();
   });
 

@@ -40,9 +40,7 @@ const dataThemes = [
 
 describe("<Themes />", () => {
   it("affiche la liste des thèmes principaux", () => {
-    const { container } = render(<Themes themes={dataThemes} />, {
-      legacyRoot: true,
-    });
+    const { container } = render(<Themes themes={dataThemes} />);
     const themesList = getAllByRole(container, "list")[1];
     const themes = getAllByRole(themesList, "listitem");
     expect(themes).toHaveLength(2);

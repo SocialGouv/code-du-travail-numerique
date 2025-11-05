@@ -23,9 +23,7 @@ describe("Indemnité licenciement", () => {
   let userAction: UserAction;
   describe("parcours avec la convention collective 2596 pour tester le cas où il n'y a pas d'indemnité conventionnel", () => {
     beforeEach(async () => {
-      render(<CalculateurIndemniteLicenciement title={""} />, {
-        legacyRoot: true,
-      });
+      render(<CalculateurIndemniteLicenciement title={""} />);
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
       userAction.click(ui.contract.type.cdi.get());
@@ -86,9 +84,7 @@ describe("Indemnité licenciement", () => {
     });
   });
   test(`Le résultat doit être légal si la convention collective a été retirée de la sélection`, async () => {
-    render(<CalculateurIndemniteLicenciement title={""} />, {
-      legacyRoot: true,
-    });
+    render(<CalculateurIndemniteLicenciement title={""} />);
     userAction = new UserAction();
     userAction
       .click(ui.introduction.startButton.get())

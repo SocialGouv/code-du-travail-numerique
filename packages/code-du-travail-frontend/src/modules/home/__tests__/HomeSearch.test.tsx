@@ -43,9 +43,7 @@ describe("<HomeSearch />", () => {
       emitSuggestionSelectionEvent: emitSuggestionSelectionEventMock,
     });
 
-    const { getByText, getByTestId } = render(<HomeSearch />, {
-      legacyRoot: true,
-    });
+    const { getByText, getByTestId } = render(<HomeSearch />);
     const searchInput = getByTestId("search-input");
     await userEvent.click(searchInput);
     await userEvent.type(searchInput, "congés");
@@ -79,9 +77,7 @@ describe("<HomeSearch />", () => {
       emitSuggestionSelectionEvent: jest.fn(),
     });
 
-    const { getByTestId, getByRole } = render(<HomeSearch />, {
-      legacyRoot: true,
-    });
+    const { getByTestId, getByRole } = render(<HomeSearch />);
     const searchInput = getByTestId("search-input");
     const searchTerm = "licenciement";
 

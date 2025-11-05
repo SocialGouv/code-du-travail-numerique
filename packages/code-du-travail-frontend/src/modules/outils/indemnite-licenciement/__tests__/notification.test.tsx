@@ -23,9 +23,7 @@ describe("Indemnité licenciement - Affichage de la notification si le légal et
   let rendering: RenderResult;
   let userAction: UserAction;
   beforeEach(() => {
-    rendering = render(<CalculateurIndemniteLicenciement title={""} />, {
-      legacyRoot: true,
-    });
+    rendering = render(<CalculateurIndemniteLicenciement title={""} />);
   });
 
   test("Pour la CC 2511, les formules du légal et du conventionnel sont identiques", () => {
