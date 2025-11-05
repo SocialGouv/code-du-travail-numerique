@@ -52,13 +52,12 @@ describe("LocationSearchInput", () => {
     );
     userAction = new UserAction();
     userAction.setInput(ui.input.get(), "paris");
-    userAction.setInput(ui.input.get(), "paris");
-
-    const parisItem = await ui.AutocompleteItemParis.find(); // remplace waitFor
-    expect(parisItem).toBeInTheDocument();
-
-    userAction.click(ui.inputCloseBtn.get());
-    expect(ui.input.get()).toHaveValue("");
-    expect(ui.AutocompleteItemParis.query()).not.toBeInTheDocument();
+    await waitFor(() => {
+      expect(ui.AutocompleteItemParis.query()).toBeInTheDocument();
+      expect(ui.input.get()).toHaveValue("paris");
+      userAction.click(ui.inputCloseBtn.get());
+      expect(ui.input.get()).toHaveValue("");
+      expect(ui.AutocompleteItemParis.query()).not.toBeInTheDocument();
+    });
   });
 });
