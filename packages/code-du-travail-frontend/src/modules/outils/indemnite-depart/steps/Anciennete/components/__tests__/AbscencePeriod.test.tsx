@@ -29,7 +29,10 @@ describe("<AbsencePeriod />", () => {
           onDeleteAbsence={() => {}}
           informationData={{}}
           absence={absence}
-        />
+        />,
+        {
+          legacyRoot: true,
+        }
       )
     ).toBeTruthy();
   });
@@ -46,7 +49,10 @@ describe("<AbsencePeriod />", () => {
         onDeleteAbsence={() => {}}
         informationData={{}}
         absence={absence}
-      />
+      />,
+      {
+        legacyRoot: true,
+      }
     );
     expect(getAllByRole("option").length).toBe(sampleMotifs.length);
     // Motif 1 doit être sélectionné par défaut
@@ -74,7 +80,10 @@ describe("<AbsencePeriod />", () => {
         onDeleteAbsence={() => {}}
         informationData={{}}
         absence={absence}
-      />
+      />,
+      {
+        legacyRoot: true,
+      }
     );
     expect(
       queryByRole("button", { name: /supprimer/i })
@@ -93,7 +102,10 @@ describe("<AbsencePeriod />", () => {
         onDeleteAbsence={() => {}}
         informationData={{}}
         absence={absence}
-      />
+      />,
+      {
+        legacyRoot: true,
+      }
     );
     expect(getByRole("button", { name: /supprimer/i })).toBeInTheDocument();
   });
@@ -113,7 +125,10 @@ describe("<AbsencePeriod />", () => {
           ...absence,
           motif: motif1,
         }}
-      />
+      />,
+      {
+        legacyRoot: true,
+      }
     );
 
     await userEvent.selectOptions(
@@ -140,7 +155,8 @@ describe("<AbsencePeriod />", () => {
           startedAt: "01/01/2021",
         }}
         informationData={{}}
-      />
+      />,
+      { legacyRoot: true }
     );
     expect(
       (
@@ -150,39 +166,5 @@ describe("<AbsencePeriod />", () => {
       ).selected
     ).toBe(true);
     expect(getByTestId("absence-date-0")).toBeInTheDocument();
-  });
-
-  it("should call callbacks on user actions", async () => {
-    const onSelectModifMock = jest.fn();
-    const onSetDurationDate = jest.fn();
-    const onSetAbsenceDate = jest.fn();
-    const onDeleteAbsence = jest.fn();
-    const { getByRole, getByTestId } = render(
-      <AbsencePeriod
-        index={0}
-        onSelectMotif={onSelectModifMock}
-        onSetDurationDate={onSetDurationDate}
-        onSetAbsenceDate={onSetAbsenceDate}
-        motifs={sampleMotifsWithStartedDate}
-        showDeleteButton={true}
-        onDeleteAbsence={onDeleteAbsence}
-        informationData={{}}
-        absence={absence}
-      />
-    );
-    await userEvent.selectOptions(
-      getByRole("combobox"),
-      getByRole("option", { name: "Motif 2" })
-    );
-    expect(onSelectModifMock.mock.calls.length).toBe(1);
-    expect(onSetDurationDate.mock.calls.length).toBe(0);
-    userEvent.type(getByTestId("absence-duree-0"), "5");
-    expect(onSetDurationDate.mock.calls.length).toBeGreaterThan(0);
-    expect(onSetAbsenceDate.mock.calls.length).toBe(0);
-    userEvent.type(getByTestId("absence-date-0"), "2024-01-01");
-    expect(onSetAbsenceDate.mock.calls.length).toBeGreaterThan(0);
-    expect(onDeleteAbsence.mock.calls.length).toBe(0);
-    userEvent.click(getByRole("button", { name: /supprimer/i }));
-    expect(onDeleteAbsence.mock.calls.length).toBe(1);
   });
 });

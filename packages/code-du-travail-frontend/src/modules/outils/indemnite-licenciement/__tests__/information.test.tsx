@@ -69,7 +69,7 @@ describe("Indemnité licenciement - Validation de la page information", () => {
       );
       expect(
         container.queryByText(
-          "Avant d'être cadre, le salarié a-t-il été employé, technicien ou agent de maîtrise dans l'entreprise ?"
+          "Avant d'être cadre, le salarié a-t-il été employé, technicien ou agent de maîtrise dans l’entreprise ?"
         )
       ).toBeInTheDocument();
       expect(

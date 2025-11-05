@@ -106,7 +106,8 @@ describe("<PageContribution />", () => {
         trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
         onAgreementSelect={() => {}}
         level={2}
-      />
+      />,
+      { legacyRoot: true }
     );
     (searchEnterprises as jest.Mock).mockImplementation(() =>
       Promise.resolve([enterprise1CC])
@@ -154,7 +155,8 @@ describe("<PageContribution />", () => {
         trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
         onAgreementSelect={() => {}}
         level={2}
-      />
+      />,
+      { legacyRoot: true }
     );
     (searchEnterprises as jest.Mock).mockImplementation(() =>
       Promise.resolve([enterpriseMoreCC])
@@ -215,7 +217,8 @@ describe("<PageContribution />", () => {
         trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
         onAgreementSelect={() => {}}
         level={2}
-      />
+      />,
+      { legacyRoot: true }
     );
     userAction = new UserAction();
     userAction.click(ui.radio.enterpriseSearchOption.get());

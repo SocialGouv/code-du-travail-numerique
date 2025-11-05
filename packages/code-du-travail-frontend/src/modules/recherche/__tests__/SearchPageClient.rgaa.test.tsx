@@ -61,7 +61,7 @@ describe("SearchPageClient - Tests d'accessibilité et tabulation", () => {
     const searchInput = screen.getByPlaceholderText("Recherchez sur le site");
     await userEvent.type(searchInput, "test");
 
-    fireEvent.blur(searchInput);
+    fireEvent.blur(searchInput, { delay: 300 });
     expect(searchInput).toHaveValue("test");
 
     const nextButton = screen.getByTitle("Rechercher");
