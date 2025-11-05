@@ -1,5 +1,4 @@
 import { render, waitFor, RenderResult } from "@testing-library/react";
-import React from "react";
 import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
 import { ui } from "../../indemnite-depart/__tests__/ui";
@@ -22,10 +21,12 @@ jest.mock("../../../convention-collective/search");
 
 describe("Indemnité licenciement - Validation de la page information", () => {
   describe("parcours avec la convention collective 16 pour valider les erreurs", () => {
-    let rendering: RenderResult;
     let userAction: UserAction;
+    let container: RenderResult;
     beforeEach(async () => {
-      rendering = await render(<CalculateurIndemniteLicenciement title={""} />);
+      container = render(<CalculateurIndemniteLicenciement title={""} />, {
+        legacyRoot: true,
+      });
       userAction = new UserAction();
       userAction
         .click(ui.introduction.startButton.get())
@@ -52,7 +53,7 @@ describe("Indemnité licenciement - Validation de la page information", () => {
     `, async () => {
       // validation que la première question est affichée
       expect(
-        rendering.queryByText(
+        container.queryByText(
           "Quelle est la catégorie professionnelle du salarié ?"
         )
       ).toBeInTheDocument();
@@ -60,19 +61,19 @@ describe("Indemnité licenciement - Validation de la page information", () => {
       // validation des erreurs sur les champs vides
       userAction.click(ui.next.get());
       expect(
-        rendering.queryByText("Vous devez répondre à cette question")
+        container.queryByText("Vous devez répondre à cette question")
       ).toBeInTheDocument();
-      userAction.changeInputList(
+      await userAction.changeInputList(
         ui.information.agreement16.proCategory.get(),
         "Ingénieurs et cadres"
       );
       expect(
-        rendering.queryByText(
-          "Avant d'être cadre, le salarié a-t-il été employé, technicien ou agent de maîtrise dans l’entreprise ?"
+        container.queryByText(
+          "Avant d'être cadre, le salarié a-t-il été employé, technicien ou agent de maîtrise dans l'entreprise ?"
         )
       ).toBeInTheDocument();
       expect(
-        rendering.queryAllByText("Vous devez répondre à cette question")
+        container.queryAllByText("Vous devez répondre à cette question")
       ).toHaveLength(1);
 
       // validation que les champs sont retirés quand on revient à une question précédente
@@ -82,11 +83,11 @@ describe("Indemnité licenciement - Validation de la page information", () => {
           ui.information.agreement16.dateProCategoryChanged.get(),
           "01/01/2010"
         )
-        .setInput(ui.information.agreement16.engineerAge.get(), "38")
-        .changeInputList(
-          ui.information.agreement16.proCategory.get(),
-          "Ouvriers"
-        );
+        .setInput(ui.information.agreement16.engineerAge.get(), "38");
+      await userAction.changeInputList(
+        ui.information.agreement16.proCategory.get(),
+        "Ouvriers"
+      );
 
       expect(
         ui.information.agreement16.driveInability.oui.get()
@@ -96,24 +97,23 @@ describe("Indemnité licenciement - Validation de la page information", () => {
       ).not.toBeChecked();
 
       // validation qu'un champ présent avant soit réinitialisé
-      userAction
-        .changeInputList(
-          ui.information.agreement16.proCategory.get(),
-          "Employés"
-        )
-        .setInput(ui.information.agreement16.employeeAge.get(), "55")
-        .changeInputList(
-          ui.information.agreement16.proCategory.get(),
-          "Technicien et agents de maîtrise (TAM)"
-        );
+      await userAction.changeInputList(
+        ui.information.agreement16.proCategory.get(),
+        "Employés"
+      );
+      userAction.setInput(ui.information.agreement16.employeeAge.get(), "55");
+      await userAction.changeInputList(
+        ui.information.agreement16.proCategory.get(),
+        "Technicien et agents de maîtrise (TAM)"
+      );
       expect(ui.information.agreement16.agentAge.query()).toHaveValue(null);
 
       // validation que l'on n'affiche pas la question suivante tant que la date n'est pas valide
+      await userAction.changeInputList(
+        ui.information.agreement16.proCategory.get(),
+        "Ingénieurs et cadres"
+      );
       userAction
-        .changeInputList(
-          ui.information.agreement16.proCategory.get(),
-          "Ingénieurs et cadres"
-        )
         .click(ui.information.agreement16.proCategoryHasChanged.oui.get())
         .setInput(ui.information.agreement16.dateProCategoryChanged.get(), "1");
       expect(
@@ -157,7 +157,7 @@ describe("Indemnité licenciement - Validation de la page information", () => {
         .setInput(ui.agreement.agreementInput.get(), "3239")
         .click(
           await waitFor(() =>
-            rendering.getByText(
+            container.getByText(
               "Particuliers employeurs et emploi à domicile (IDCC 3239)"
             )
           )

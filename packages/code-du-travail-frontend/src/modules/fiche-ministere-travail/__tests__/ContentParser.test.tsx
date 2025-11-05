@@ -56,14 +56,18 @@ describe("Fiche MT content parser", () => {
   test("Should keep accordion Button", () => {
     const src =
       '<button class="fr-accordion__btn" aria-expanded="false" aria-controls="accordion-467706029" type="button" data-fr-js-collapse-button="true"> Retranscription textuelle </button>';
-    const { container } = render(<ContentParser>{src}</ContentParser>);
+    const { container } = render(<ContentParser>{src}</ContentParser>, {
+      legacyRoot: true,
+    });
     expect(container.innerHTML).toBe(src);
   });
 
   test("Should keep accordion Button but remove js injection", () => {
     const src =
       '<button class="fr-accordion__btn" onClick="() => { alert("xss"); }" onBlur="() => { alert("xss"); }" onmouseover="() => { alert("xss"); }" aria-expanded="false" aria-controls="accordion-467706029" type="button" data-fr-js-collapse-button="true"> Retranscription textuelle </button>';
-    const { container } = render(<ContentParser>{src}</ContentParser>);
+    const { container } = render(<ContentParser>{src}</ContentParser>, {
+      legacyRoot: true,
+    });
     expect(container.innerHTML).toBe(
       `<button class="fr-accordion__btn" aria-expanded="false" aria-controls="accordion-467706029" type="button" data-fr-js-collapse-button="true"> Retranscription textuelle </button>`
     );
@@ -72,7 +76,9 @@ describe("Fiche MT content parser", () => {
   test("Should remove time", () => {
     const src =
       '<p class="fr-card__detail">Date de mise à jour le <time datetime="2024-10-09T12:00:00Z">9 octobre 2024</time></p>';
-    const { container } = render(<ContentParser>{src}</ContentParser>);
+    const { container } = render(<ContentParser>{src}</ContentParser>, {
+      legacyRoot: true,
+    });
     expect(container.innerHTML).toBe(
       `<p class="fr-card__detail">Date de mise à jour le 9 octobre 2024</p>`
     );
@@ -80,7 +86,9 @@ describe("Fiche MT content parser", () => {
 
   test("Should work with strong + link inside p", () => {
     const src = `<p>La qualification de «&nbsp;démission&nbsp;» est réservée à la rupture, à l’initiative du salarié, de son contrat de travail à durée indéterminée. <strong>Les salariés en CDD peuvent mettre fin par anticipation, à leur contrat de travail dans certaines situations</strong> <a href="/le-contrat-duree-determinee-cdd" data-entity-type="node" data-entity-uuid="d223707a-504b-4740-8a97-618ce94b1175" data-entity-substitution="canonical" title="Le contrat à durée déterminée (CDD)">limitativement énumérées</a>.</p>`;
-    const { container } = render(<ContentParser>{src}</ContentParser>);
+    const { container } = render(<ContentParser>{src}</ContentParser>, {
+      legacyRoot: true,
+    });
     expect(container.innerHTML).toBe(
       `<p>La qualification de «&nbsp;démission&nbsp;» est réservée à la rupture, à l’initiative du salarié, de son contrat de travail à durée indéterminée. <strong>Les salariés en CDD peuvent mettre fin par anticipation, à leur contrat de travail dans certaines situations</strong> <a href=\"/le-contrat-duree-determinee-cdd\" title=\"Le contrat à durée déterminée (CDD) - nouvelle fenêtre\">limitativement énumérées</a>.</p>`
     );
@@ -88,7 +96,9 @@ describe("Fiche MT content parser", () => {
 
   test("Should work with ul", () => {
     const src = `<ul><li><span><strong>À</strong></span><strong> sa demande et après acceptation de l'employeur</strong> (un écrit est conseillé). Dans ce cas, l'indemnité de préavis n'est pas due&nbsp;;</li><li><span><strong>À</strong> </span><strong>la seule initiative de l’employeu</strong>r. Celui-ci doit néanmoins verser l’indemnité de préavis.</li></ul>`;
-    const { container } = render(<ContentParser>{src}</ContentParser>);
+    const { container } = render(<ContentParser>{src}</ContentParser>, {
+      legacyRoot: true,
+    });
     expect(container.innerHTML).toBe(
       `<ul><li><span><strong>À</strong></span><strong> sa demande et après acceptation de l'employeur</strong> (un écrit est conseillé). Dans ce cas, l'indemnité de préavis n'est pas due&nbsp;;</li><li><span><strong>À</strong> </span><strong>la seule initiative de l’employeu</strong>r. Celui-ci doit néanmoins verser l’indemnité de préavis.</li></ul>`
     );
@@ -96,7 +106,9 @@ describe("Fiche MT content parser", () => {
 
   test("Should add nouvelle fenêtre on link", () => {
     const src = `<p><a href="/le-contrat-duree-determinee-cdd" data-entity-type="node" data-entity-uuid="d223707a-504b-4740-8a97-618ce94b1175" data-entity-substitution="canonical" title="Le contrat à durée déterminée (CDD)">limitativement énumérées</a>.</p>`;
-    const { container } = render(<ContentParser>{src}</ContentParser>);
+    const { container } = render(<ContentParser>{src}</ContentParser>, {
+      legacyRoot: true,
+    });
     expect(container.innerHTML).toBe(
       `<p><a href=\"/le-contrat-duree-determinee-cdd\" title=\"Le contrat à durée déterminée (CDD) - nouvelle fenêtre\">limitativement énumérées</a>.</p>`
     );
@@ -104,7 +116,9 @@ describe("Fiche MT content parser", () => {
 
   test("Should have only one nouvelle fenêtre on link if already set", () => {
     const src = `<p><a href="/le-contrat-duree-determinee-cdd" data-entity-type="node" data-entity-uuid="d223707a-504b-4740-8a97-618ce94b1175" data-entity-substitution="canonical" title="Le contrat à durée déterminée (CDD) - nouvelle fenêtre">limitativement énumérées</a>.</p>`;
-    const { container } = render(<ContentParser>{src}</ContentParser>);
+    const { container } = render(<ContentParser>{src}</ContentParser>, {
+      legacyRoot: true,
+    });
     expect(container.innerHTML).toBe(
       `<p><a href=\"/le-contrat-duree-determinee-cdd\" title=\"Le contrat à durée déterminée (CDD) - nouvelle fenêtre\">limitativement énumérées</a>.</p>`
     );

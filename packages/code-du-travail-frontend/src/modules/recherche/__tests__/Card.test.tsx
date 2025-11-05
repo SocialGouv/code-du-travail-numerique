@@ -21,7 +21,9 @@ describe("<SearchCard />", () => {
   });
 
   it("should render with required props", () => {
-    render(<SearchCard {...defaultProps} />);
+    render(<SearchCard {...defaultProps} />, {
+      legacyRoot: true,
+    });
 
     expect(screen.getByText("Titre du document")).toBeInTheDocument();
     expect(
@@ -35,13 +37,17 @@ describe("<SearchCard />", () => {
   });
 
   it("should render with category", () => {
-    render(<SearchCard {...defaultProps} category="Catégorie Test" />);
+    render(<SearchCard {...defaultProps} category="Catégorie Test" />, {
+      legacyRoot: true,
+    });
 
     expect(screen.getByText("Catégorie Test")).toBeInTheDocument();
   });
 
   it("should not render category when not provided", () => {
-    render(<SearchCard {...defaultProps} />);
+    render(<SearchCard {...defaultProps} />, {
+      legacyRoot: true,
+    });
 
     // Vérifier qu'aucun élément avec la classe fr-tag n'est présent
     const tagElements = document.querySelectorAll(".fr-tag");
@@ -50,7 +56,9 @@ describe("<SearchCard />", () => {
 
   it("should call onClick when clicked", () => {
     const mockOnClick = jest.fn();
-    render(<SearchCard {...defaultProps} onClick={mockOnClick} />);
+    render(<SearchCard {...defaultProps} onClick={mockOnClick} />, {
+      legacyRoot: true,
+    });
 
     const link = screen.getByRole("link");
     fireEvent.click(link);
@@ -59,13 +67,17 @@ describe("<SearchCard />", () => {
   });
 
   it("should use summarize function for description", () => {
-    render(<SearchCard {...defaultProps} />);
+    render(<SearchCard {...defaultProps} />, {
+      legacyRoot: true,
+    });
 
     expect(summarize).toHaveBeenCalledWith(defaultProps.description);
   });
 
   it("should render in a grid column", () => {
-    const { container } = render(<SearchCard {...defaultProps} />);
+    const { container } = render(<SearchCard {...defaultProps} />, {
+      legacyRoot: true,
+    });
 
     // Vérifier que la carte est dans une colonne de grille
     const gridColumn = container.querySelector(".fr-col-12.fr-col-md-6");
@@ -73,7 +85,9 @@ describe("<SearchCard />", () => {
   });
 
   it("should pass horizontal prop to Card component", () => {
-    render(<SearchCard {...defaultProps} />);
+    render(<SearchCard {...defaultProps} />, {
+      legacyRoot: true,
+    });
 
     const card = screen.getByRole("link").closest(".fr-card");
     expect(card).toHaveClass("fr-card--horizontal");

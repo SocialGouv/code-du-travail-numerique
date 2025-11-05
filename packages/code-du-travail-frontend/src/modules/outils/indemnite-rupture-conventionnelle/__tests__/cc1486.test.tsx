@@ -27,7 +27,10 @@ describe("Indemnité licenciement - CC 1486", () => {
         displayTitle="Simulateur d'indemnité de rupture conventionnelle"
         relatedItems={[]}
         title="Simulateur d'indemnité de rupture conventionnelle"
-      />
+      />,
+      {
+        legacyRoot: true,
+      }
     );
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
@@ -37,8 +40,8 @@ describe("Indemnité licenciement - CC 1486", () => {
     userAction.click(ui.next.get());
   });
 
-  test(`Vérifier l'enchainement de question à l'étape information`, () => {
-    userAction.changeInputList(
+  test(`Vérifier l'enchainement de question à l'étape information`, async () => {
+    await userAction.changeInputList(
       ui.information.agreement1486.proCategory.get(),
       "'Ingénieurs et cadres'"
     );

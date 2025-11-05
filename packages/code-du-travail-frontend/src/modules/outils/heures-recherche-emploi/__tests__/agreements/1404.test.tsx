@@ -18,7 +18,9 @@ Storage.prototype.getItem = jest.fn(
 
 describe("HeuresRechercheEmploi", () => {
   beforeEach(() => {
-    render(<CalculateurHeuresRechercheEmploi title={""} />);
+    render(<CalculateurHeuresRechercheEmploi title={""} />, {
+      legacyRoot: true,
+    });
     fireEvent.click(ui.introduction.startButton.get());
 
     fireEvent.click(ui.next.get());

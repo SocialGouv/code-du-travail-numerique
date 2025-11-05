@@ -26,7 +26,9 @@ test(`Questionnaire
     },
     true
   );
-  await render(<QuestionnaireWrapper name="dismissalProcess" slug="Slug12" />);
+  await render(<QuestionnaireWrapper name="dismissalProcess" slug="Slug12" />, {
+    legacyRoot: true,
+  });
   expect(ui.response1.statement.query()).toBeInTheDocument();
   expect(ui.response12.statement.query()).toBeInTheDocument();
   expect(ui.question1.text.query()).not.toBeInTheDocument();

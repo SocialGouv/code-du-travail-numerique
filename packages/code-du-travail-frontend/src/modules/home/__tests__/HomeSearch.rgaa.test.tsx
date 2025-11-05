@@ -30,7 +30,9 @@ describe("HomeSearch Component - Accessibility Status Message in Autocomplete", 
       "Résultat 3",
     ]);
 
-    render(<HomeSearch />);
+    render(<HomeSearch />, {
+      legacyRoot: true,
+    });
 
     const input = screen.getByRole("combobox");
     await userEvent.type(input, "test");
@@ -48,7 +50,9 @@ describe("HomeSearch Component - Accessibility Status Message in Autocomplete", 
   it("affiche le message de statut accessible pour un seul résultat en français avec lang='fr'", async () => {
     (fetchSuggestResults as jest.Mock).mockResolvedValue(["Résultat unique"]);
 
-    render(<HomeSearch />);
+    render(<HomeSearch />, {
+      legacyRoot: true,
+    });
 
     const input = screen.getByRole("combobox");
     await userEvent.type(input, "test");
@@ -64,7 +68,9 @@ describe("HomeSearch Component - Accessibility Status Message in Autocomplete", 
   it("affiche le message de statut accessible pour aucun résultat en français avec lang='fr'", async () => {
     (fetchSuggestResults as jest.Mock).mockResolvedValue([]);
 
-    render(<HomeSearch />);
+    render(<HomeSearch />, {
+      legacyRoot: true,
+    });
 
     const input = screen.getByRole("combobox");
     await userEvent.type(input, "test");
@@ -78,7 +84,9 @@ describe("HomeSearch Component - Accessibility Status Message in Autocomplete", 
   });
 
   it("n'affiche pas de message de statut si aucune saisie n'est effectuée", () => {
-    render(<HomeSearch />);
+    render(<HomeSearch />, {
+      legacyRoot: true,
+    });
 
     const statusElements = screen.queryAllByRole("status");
     expect(statusElements).toHaveLength(0); // Pas de statut initial

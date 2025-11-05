@@ -21,7 +21,9 @@ describe("<FeedbackContent />", () => {
   });
 
   it("should warn politely on certain threshold", () => {
-    render(<FeedbackContent onSubmit={jest.fn} type="positive" />);
+    render(<FeedbackContent onSubmit={jest.fn} type="positive" />, {
+      legacyRoot: true,
+    });
     const userAction = new UserAction();
     expect(ui.characterInfo.get()).toHaveAttribute("aria-atomic");
     userAction.setInput(ui.input.get(), "a".repeat(99));

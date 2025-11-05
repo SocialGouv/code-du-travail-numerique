@@ -4,7 +4,9 @@ import { PopupContent } from "../PopupContent";
 
 describe("<PopupContent />", () => {
   it("should match snapshot", () => {
-    const { container } = render(<PopupContent />);
+    const { container } = render(<PopupContent />, {
+      legacyRoot: true,
+    });
     expect(container).toMatchSnapshot();
   });
 });

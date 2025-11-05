@@ -91,7 +91,9 @@ describe("<ContributionGeneric />", () => {
     });
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
-    render(<ContributionGeneric contribution={contribution} />);
+    render(<ContributionGeneric contribution={contribution} />, {
+      legacyRoot: true,
+    });
     fireEvent.click(ccUi.radio.agreementSearchOption.get());
     await userEvent.click(ccUi.searchByName.input.get());
     await userEvent.type(ccUi.searchByName.input.get(), "1388");
@@ -177,7 +179,9 @@ describe("<ContributionGeneric />", () => {
     });
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
-    render(<ContributionGeneric contribution={contribution} />);
+    render(<ContributionGeneric contribution={contribution} />, {
+      legacyRoot: true,
+    });
     fireEvent.click(ccUi.radio.agreementSearchOption.get());
     await userEvent.click(ccUi.searchByName.input.get());
     await userEvent.type(ccUi.searchByName.input.get(), "16");
@@ -246,7 +250,9 @@ describe("<ContributionGeneric />", () => {
   it("je ne connais pas ma CC", async () => {
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
-    render(<ContributionGeneric contribution={contribution} />);
+    render(<ContributionGeneric contribution={contribution} />, {
+      legacyRoot: true,
+    });
     await userEvent.click(ccUi.radio.enterpriseSearchOption.get());
     await userEvent.click(ccUi.searchByEnterprise.input.get());
     await userEvent.type(ccUi.searchByEnterprise.input.get(), "carrefour");
@@ -308,7 +314,9 @@ describe("<ContributionGeneric />", () => {
   it("afficher les infos - sans CC", async () => {
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
-    render(<ContributionGeneric contribution={contribution} />);
+    render(<ContributionGeneric contribution={contribution} />, {
+      legacyRoot: true,
+    });
     expect(ui.generic.buttonDisplayInfo.get()).toBeInTheDocument();
     fireEvent.click(ui.generic.buttonDisplayInfo.get());
     expect(sendEvent).toHaveBeenCalledTimes(1);
@@ -322,7 +330,9 @@ describe("<ContributionGeneric />", () => {
   it("voir les infos générales", () => {
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
-    render(<ContributionGeneric contribution={contribution} />);
+    render(<ContributionGeneric contribution={contribution} />, {
+      legacyRoot: true,
+    });
 
     fireEvent.click(ui.generic.linkDisplayInfo.get());
 

@@ -11,7 +11,9 @@ describe("Indemnité licenciement - Step salaire", () => {
   let userAction: UserAction;
   describe("validation de la step salaire", () => {
     beforeEach(() => {
-      render(<CalculateurIndemniteLicenciement title={""} />);
+      render(<CalculateurIndemniteLicenciement title={""} />, {
+        legacyRoot: true,
+      });
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
       userAction.click(ui.contract.type.cdi.get());

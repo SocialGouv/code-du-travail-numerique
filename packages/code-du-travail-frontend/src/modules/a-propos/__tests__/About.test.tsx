@@ -4,7 +4,9 @@ import { About } from "..";
 
 describe("<About />", () => {
   it("should match snapshot", () => {
-    const { container } = render(<About />);
+    const { container } = render(<About />, {
+      legacyRoot: true,
+    });
     expect(container).toMatchSnapshot();
   });
 });

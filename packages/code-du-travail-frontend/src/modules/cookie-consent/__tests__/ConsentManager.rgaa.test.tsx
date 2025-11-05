@@ -31,7 +31,9 @@ describe("ConsentManager with manage cookies button", () => {
   });
 
   it("renders the manage cookies button with visually hidden text for accessibility", async () => {
-    render(<ConsentManager />);
+    render(<ConsentManager />, {
+      legacyRoot: true,
+    });
 
     await act(async () => {
       jest.advanceTimersByTime(1500);

@@ -4,7 +4,9 @@ import { BrandTop } from "../BrandTop";
 
 describe("<BrandTop />", () => {
   it("should match snapshot", () => {
-    const { container } = render(<BrandTop />);
+    const { container } = render(<BrandTop />, {
+      legacyRoot: true,
+    });
     expect(container).toMatchSnapshot();
   });
 });

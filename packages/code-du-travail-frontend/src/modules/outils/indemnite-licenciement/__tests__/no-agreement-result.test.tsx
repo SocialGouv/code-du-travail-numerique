@@ -22,8 +22,10 @@ jest.mock("../../../enterprise/queries");
 describe("Indemnité licenciement", () => {
   let userAction: UserAction;
   describe("parcours avec la convention collective 2596 pour tester le cas où il n'y a pas d'indemnité conventionnel", () => {
-    beforeEach(() => {
-      render(<CalculateurIndemniteLicenciement title={""} />);
+    beforeEach(async () => {
+      render(<CalculateurIndemniteLicenciement title={""} />, {
+        legacyRoot: true,
+      });
       userAction = new UserAction();
       userAction.click(ui.introduction.startButton.get());
       userAction.click(ui.contract.type.cdi.get());
@@ -32,22 +34,22 @@ describe("Indemnité licenciement", () => {
       userAction.click(ui.contract.arretTravail.non.get());
       userAction.click(ui.next.get());
       userAction.click(ui.next.get());
+      await userAction.changeInputList(
+        ui.information.agreement1486.proCategory.get(),
+        "Chargés d'enquête intermittents"
+      );
       userAction
-        .changeInputList(
-          ui.information.agreement1486.proCategory.get(),
-          "Chargés d'enquête intermittents"
-        )
         .click(ui.information.agreement1486.refus.non.get())
         .click(ui.next.get())
-
         .setInput(ui.seniority.startDate.get(), "01/10/2023")
         .setInput(ui.seniority.notificationDate.get(), "01/06/2024")
         .setInput(ui.seniority.endDate.get(), "01/06/2024")
-        .click(ui.seniority.hasAbsence.oui.get())
-        .changeInputList(
-          ui.seniority.absences.motif(0).get(),
-          "Absence pour maladie non professionnelle"
-        )
+        .click(ui.seniority.hasAbsence.oui.get());
+      await userAction.changeInputList(
+        ui.seniority.absences.motif(0).get(),
+        "Absence pour maladie non professionnelle"
+      );
+      userAction
         .setInput(ui.seniority.absences.duration(0).get(), "3")
         .click(ui.next.get())
         .click(ui.salary.hasPartialTime.non.get());
@@ -84,7 +86,9 @@ describe("Indemnité licenciement", () => {
     });
   });
   test(`Le résultat doit être légal si la convention collective a été retirée de la sélection`, async () => {
-    render(<CalculateurIndemniteLicenciement title={""} />);
+    render(<CalculateurIndemniteLicenciement title={""} />, {
+      legacyRoot: true,
+    });
     userAction = new UserAction();
     userAction
       .click(ui.introduction.startButton.get())

@@ -32,7 +32,7 @@ describe("Indemnité licenciement - CC 3239", () => {
     userAction.click(ui.next.get());
   });
   test("vérifier l'ineligibilite des ass mat en cas de suspension", async () => {
-    userAction.changeInputList(
+    await userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
       "'Assistant maternel'"
     );
@@ -49,7 +49,7 @@ describe("Indemnité licenciement - CC 3239", () => {
     ).not.toBeInTheDocument();
   });
   test("vérifier l'ineligibilite des ass mat pour ancienneté < 9mois", async () => {
-    userAction.changeInputList(
+    await userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
       "'Assistant maternel'"
     );
@@ -72,7 +72,7 @@ describe("Indemnité licenciement - CC 3239", () => {
     ).toBeInTheDocument();
   });
   test("vérifier l'eligibilite des autres salariés pour ancienneté compris entre 8 et 9 mois", async () => {
-    userAction.changeInputList(
+    await userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
       "'Salarié du particulier employeur'"
     );
@@ -88,7 +88,7 @@ describe("Indemnité licenciement - CC 3239", () => {
     expect(ui.result.formula.get()).toHaveTextContent("Formule");
   });
   test("vérifier l'ineligibilite des autres salariés pour ancienneté < 8mois", async () => {
-    userAction.changeInputList(
+    await userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
       "'Salarié du particulier employeur'"
     );
@@ -127,7 +127,7 @@ describe("Indemnité licenciement - CC 3239", () => {
   });
 
   test("vérifier qu'on a pas la question sur le temps partiel en tant que salarié du particulier employeur", async () => {
-    userAction.changeInputList(
+    await userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
       "'Salarié du particulier employeur'"
     );
@@ -145,7 +145,7 @@ describe("Indemnité licenciement - CC 3239", () => {
   });
 
   test("vérifier qu'on affiche pas la notif sur le congé parental", async () => {
-    userAction.changeInputList(
+    await userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
       "'Assistant maternel'"
     );
@@ -166,7 +166,7 @@ describe("Indemnité licenciement - CC 3239", () => {
   });
 
   test("vérifier le calcul pour un salarié du particulier employeur", async () => {
-    userAction.changeInputList(
+    await userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
       "'Salarié du particulier employeur'"
     );
@@ -196,7 +196,7 @@ describe("Indemnité licenciement - CC 3239", () => {
   });
 
   test("vérifier le calcul pour un assistant maternelle", async () => {
-    userAction.changeInputList(
+    await userAction.changeInputList(
       ui.information.agreement3239.proCategory.get(),
       "'Assistant maternel'"
     );

@@ -66,7 +66,7 @@ describe("<LetterModels />", () => {
     expect(themeOptions[2]).toHaveTextContent("Thème B");
     expect(container).toMatchSnapshot();
   });
-  it("filtre sur le thème sélectionné", () => {
+  it("filtre sur le thème sélectionné", async () => {
     const { getAllByRole, getByLabelText } = render(
       <LetterModels modeles={modeles} />
     );
@@ -82,7 +82,7 @@ describe("<LetterModels />", () => {
     expect(documents[2]).toHaveTextContent("Modele BA");
 
     const selectThemes = getByLabelText("Sélectionnez un thème");
-    userEvent.selectOptions(selectThemes, "Thème B");
+    await userEvent.selectOptions(selectThemes, "Thème B");
     const themesFiltered = getAllByRole("heading", { level: 2 });
     expect(themesFiltered).toHaveLength(1);
     expect(themesFiltered[0]).toHaveTextContent("Thème B");

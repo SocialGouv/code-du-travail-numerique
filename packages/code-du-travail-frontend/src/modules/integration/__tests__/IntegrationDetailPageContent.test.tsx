@@ -22,7 +22,9 @@ describe("IntegrationDetailPageContent", () => {
   };
 
   it("should render the breadcrumb", () => {
-    render(<IntegrationDetailPageContent {...defaultProps} />);
+    render(<IntegrationDetailPageContent {...defaultProps} />, {
+      legacyRoot: true,
+    });
 
     const homeLink = screen.getByText("Accueil");
     const integrationLink = screen.getByText(
@@ -34,7 +36,9 @@ describe("IntegrationDetailPageContent", () => {
   });
 
   it("should render breadcrumb with correct links", () => {
-    render(<IntegrationDetailPageContent {...defaultProps} />);
+    render(<IntegrationDetailPageContent {...defaultProps} />, {
+      legacyRoot: true,
+    });
 
     const homeLink = screen.getByText("Accueil").closest("a");
     const integrationLink = screen
@@ -46,7 +50,9 @@ describe("IntegrationDetailPageContent", () => {
   });
 
   it("should render the IntegrationDetailContent with correct props", () => {
-    render(<IntegrationDetailPageContent {...defaultProps} />);
+    render(<IntegrationDetailPageContent {...defaultProps} />, {
+      legacyRoot: true,
+    });
 
     const title = screen.getByTestId("integration-detail-title");
     expect(title).toHaveTextContent("Test Widget Title");
@@ -98,7 +104,9 @@ describe("IntegrationDetailPageContent", () => {
   });
 
   it("should use ContainerList layout", () => {
-    render(<IntegrationDetailPageContent {...defaultProps} />);
+    render(<IntegrationDetailPageContent {...defaultProps} />, {
+      legacyRoot: true,
+    });
 
     const nav = screen.getByRole("navigation");
     expect(nav).toBeInTheDocument();

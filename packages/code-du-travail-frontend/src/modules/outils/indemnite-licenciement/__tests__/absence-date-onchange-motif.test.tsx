@@ -23,7 +23,9 @@ describe("Indemnité licenciement", () => {
     let rendering: RenderResult;
     let userAction: UserAction;
     beforeEach(() => {
-      rendering = render(<CalculateurIndemniteLicenciement title={""} />);
+      rendering = render(<CalculateurIndemniteLicenciement title={""} />, {
+        legacyRoot: true,
+      });
       userAction = new UserAction();
       userAction
         .click(ui.introduction.startButton.get())
@@ -42,14 +44,14 @@ describe("Indemnité licenciement", () => {
      - vérification que la date de l'absence saisie apparait dans l'écran résultat
      - vérification que la date de l'absence n'est plus présente pour un autre motif
      - vérification que la date de l'absence n'apparait plus dans l'écran résultat
-    `, () => {
+    `, async () => {
       // vérification que la date de l'absence est présente pour le motif Absence pour maladie non pro
       userAction
         .setInput(ui.seniority.startDate.get(), "01/01/2000")
         .setInput(ui.seniority.notificationDate.get(), "01/01/2022")
         .setInput(ui.seniority.endDate.get(), "01/03/2022")
-        .click(ui.seniority.hasAbsence.oui.get())
-        .changeInputList(
+        .click(ui.seniority.hasAbsence.oui.get());
+        await userAction.changeInputList(
           ui.seniority.absences.motif(0).get(),
           "Absence pour maladie non professionnelle"
         );
@@ -77,8 +79,8 @@ describe("Indemnité licenciement", () => {
       // vérification que la date de l'absence n'est plus présente pour un autre motif
       userAction
         .click(ui.previous.get())
-        .click(ui.previous.get())
-        .changeInputList(
+        .click(ui.previous.get());
+        await userAction.changeInputList(
           ui.seniority.absences.motif(0).get(),
           "Congés sans solde"
         );

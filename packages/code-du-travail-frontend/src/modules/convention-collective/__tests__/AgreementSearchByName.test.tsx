@@ -42,7 +42,9 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
     });
     it("Vérifier l'affichage des erreurs", async () => {
       mockFetch([]);
-      render(<AgreementSearch />);
+      render(<AgreementSearch />, {
+        legacyRoot: true,
+      });
       userAction.setInput(ui.searchByName.input.get(), "cccc");
       await waitFor(() => {
         expect(ui.searchByName.errorNotFound.error.query()).toBeInTheDocument();
@@ -72,7 +74,9 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
         },
       ]);
 
-      render(<AgreementSearch />);
+      render(<AgreementSearch />, {
+        legacyRoot: true,
+      });
       userAction.setInput(ui.searchByName.input.get(), "16");
       await waitFor(() => {
         expect(sendEvent).toHaveBeenCalledWith({
@@ -110,7 +114,9 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
 
     it("Vérifier l'affichage des infos si moins 2 caractères", async () => {
       mockFetch([]);
-      render(<AgreementSearch />);
+      render(<AgreementSearch />, {
+        legacyRoot: true,
+      });
       userAction.setInput(ui.searchByName.input.get(), "cc");
       await waitFor(() => {
         expect(ui.searchByName.infoNotFound.query()).toBeInTheDocument();
@@ -120,7 +126,9 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
     });
 
     it("Vérifier l'affichage du message d'erreur pour les mauvais code Naf", async () => {
-      render(<AgreementSearch />);
+      render(<AgreementSearch />, {
+        legacyRoot: true,
+      });
       userAction.setInput(ui.searchByName.input.get(), "1234A");
       await waitFor(() => {
         expect(
@@ -133,7 +141,9 @@ describe("Trouver sa CC - recherche par nom de CC", () => {
     });
 
     it("Vérifier l'affichage du message d'erreur concernant du format du code", async () => {
-      render(<AgreementSearch />);
+      render(<AgreementSearch />, {
+        legacyRoot: true,
+      });
       userAction.setInput(ui.searchByName.input.get(), "12345366");
 
       await waitFor(() => {

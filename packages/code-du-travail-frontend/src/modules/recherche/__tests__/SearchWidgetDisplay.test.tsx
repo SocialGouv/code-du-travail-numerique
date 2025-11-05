@@ -42,7 +42,9 @@ describe("SearchWidgetDisplay", () => {
   });
 
   it("should render the search widget correctly", () => {
-    render(<SearchWidgetDisplay />);
+    render(<SearchWidgetDisplay />, {
+      legacyRoot: true,
+    });
 
     // Check that the logo is rendered
     expect(
@@ -59,7 +61,9 @@ describe("SearchWidgetDisplay", () => {
   });
 
   it("should emit widget event and post message when logo is clicked", () => {
-    render(<SearchWidgetDisplay />);
+    render(<SearchWidgetDisplay />, {
+      legacyRoot: true,
+    });
 
     // Find and click the logo
     const logo = screen.getByAltText("Code du travail numérique");
@@ -89,7 +93,9 @@ describe("SearchWidgetDisplay", () => {
         return null;
       });
 
-    const { container } = render(<SearchWidgetDisplay />);
+    const { container } = render(<SearchWidgetDisplay />, {
+      legacyRoot: true,
+    });
 
     // Find the form
     const form = container.querySelector("form");
@@ -131,7 +137,9 @@ describe("SearchWidgetDisplay", () => {
         return null;
       });
 
-    const { container } = render(<SearchWidgetDisplay />);
+    const { container } = render(<SearchWidgetDisplay />, {
+      legacyRoot: true,
+    });
 
     // Find the form
     const form = container.querySelector("form");
@@ -165,7 +173,9 @@ describe("SearchWidgetDisplay", () => {
         return null;
       });
 
-    const { container } = render(<SearchWidgetDisplay />);
+    const { container } = render(<SearchWidgetDisplay />, {
+      legacyRoot: true,
+    });
 
     // Find the form
     const form = container.querySelector("form");
@@ -193,7 +203,9 @@ describe("SearchWidgetDisplay", () => {
       .spyOn(HTMLFormElement.prototype, "submit")
       .mockImplementation(() => {});
 
-    const { container } = render(<SearchWidgetDisplay />);
+    const { container } = render(<SearchWidgetDisplay />, {
+      legacyRoot: true,
+    });
 
     // Find the input and type a search query
     const input = screen.getByPlaceholderText("Période d'essai");
@@ -223,7 +235,9 @@ describe("SearchWidgetDisplay", () => {
         return null;
       });
 
-    const { container } = render(<SearchWidgetDisplay />);
+    const { container } = render(<SearchWidgetDisplay />, {
+      legacyRoot: true,
+    });
 
     // Find the form
     const form = container.querySelector("form");

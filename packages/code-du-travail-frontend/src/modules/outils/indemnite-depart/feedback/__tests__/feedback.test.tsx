@@ -12,7 +12,9 @@ jest.mock("@socialgouv/matomo-next", () => {
 
 describe("Etant donné un composant Feedback", () => {
   beforeEach(() => {
-    render(<Feedback category={EVENT_CATEGORY.indemniteLicenciement} />);
+    render(<Feedback category={EVENT_CATEGORY.indemniteLicenciement} />, {
+      legacyRoot: true,
+    });
   });
   test("Vérification que l'introduction s'affiche", () => {
     expect(ui.introduction.title.query()).toBeInTheDocument();

@@ -20,7 +20,9 @@ describe("Trouver sa CC - intro", () => {
     jest.resetAllMocks();
   });
   it("Vérifier le tracking à l'arrivée", async () => {
-    rendering = render(<AgreementSearchIntro />);
+    rendering = render(<AgreementSearchIntro />, {
+      legacyRoot: true,
+    });
     expect(sendEvent).toHaveBeenLastCalledWith({
       action: "view_step_Trouver sa convention collective",
       category: "outil",
@@ -28,7 +30,9 @@ describe("Trouver sa CC - intro", () => {
     });
   });
   it("Vérifier le tracking vers recherche CC", async () => {
-    rendering = render(<AgreementSearchIntro />);
+    rendering = render(<AgreementSearchIntro />, {
+      legacyRoot: true,
+    });
     userAction = new UserAction();
     userAction.click(ui.searchAgreementIntro.buttonSearchAgreement.get());
     expect(sendEvent).toHaveBeenLastCalledWith({
@@ -39,7 +43,9 @@ describe("Trouver sa CC - intro", () => {
   });
 
   it("Vérifier le tracking vers recherche entreprise", async () => {
-    rendering = render(<AgreementSearchIntro />);
+    rendering = render(<AgreementSearchIntro />, {
+      legacyRoot: true,
+    });
     userAction = new UserAction();
     userAction.click(ui.searchAgreementIntro.buttonSearchEnterprise.get());
     expect(sendEvent).toHaveBeenLastCalledWith({

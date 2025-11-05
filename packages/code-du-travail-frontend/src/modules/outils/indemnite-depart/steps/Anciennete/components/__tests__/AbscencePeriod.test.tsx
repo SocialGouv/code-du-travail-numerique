@@ -98,7 +98,7 @@ describe("<AbsencePeriod />", () => {
     expect(getByRole("button", { name: /supprimer/i })).toBeInTheDocument();
   });
 
-  it("should show the absence date field when user selected Motif 2", () => {
+  it("should show the absence date field when user selected Motif 2", async () => {
     const { getByRole, getByTestId } = render(
       <AbsencePeriod
         index={0}
@@ -116,7 +116,7 @@ describe("<AbsencePeriod />", () => {
       />
     );
 
-    userEvent.selectOptions(
+    await userEvent.selectOptions(
       getByRole("combobox"),
       getByRole("option", { name: "Motif 2" })
     );
@@ -152,7 +152,7 @@ describe("<AbsencePeriod />", () => {
     expect(getByTestId("absence-date-0")).toBeInTheDocument();
   });
 
-  it("should call callbacks on user actions", () => {
+  it("should call callbacks on user actions", async () => {
     const onSelectModifMock = jest.fn();
     const onSetDurationDate = jest.fn();
     const onSetAbsenceDate = jest.fn();
@@ -170,7 +170,7 @@ describe("<AbsencePeriod />", () => {
         absence={absence}
       />
     );
-    userEvent.selectOptions(
+    await userEvent.selectOptions(
       getByRole("combobox"),
       getByRole("option", { name: "Motif 2" })
     );

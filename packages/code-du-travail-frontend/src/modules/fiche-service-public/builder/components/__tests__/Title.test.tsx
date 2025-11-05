@@ -4,11 +4,15 @@ import Title from "../Title";
 
 describe("<Title />", () => {
   it("should render a H{x} whose {x} is headingLevel + 2", () => {
-    const { getByText } = render(<Title level={2}>Hello</Title>);
+    const { getByText } = render(<Title level={2}>Hello</Title>, {
+      legacyRoot: true,
+    });
     expect(getByText("Hello").tagName).toEqual("H4");
   });
   it("heading should default to H6", () => {
-    const { getByText } = render(<Title level={10}>Hello</Title>);
+    const { getByText } = render(<Title level={10}>Hello</Title>, {
+      legacyRoot: true,
+    });
     expect(getByText("Hello").tagName).toEqual("H6");
   });
 });

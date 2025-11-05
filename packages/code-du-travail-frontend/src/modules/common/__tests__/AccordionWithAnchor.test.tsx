@@ -11,7 +11,9 @@ const sampleItems = [
 ];
 describe("<AccordionWithAnchor />", () => {
   test("if no items", () => {
-    const { container } = render(<AccordionWithAnchor items={[]} />);
+    const { container } = render(<AccordionWithAnchor items={[]} />, {
+      legacyRoot: true,
+    });
     expect(container).toMatchInlineSnapshot(`<div />`);
   });
 
@@ -27,7 +29,9 @@ describe("<AccordionWithAnchor />", () => {
     const scrollIntoViewMock = jest.fn();
     Element.prototype.scrollIntoView = scrollIntoViewMock;
 
-    const { getByText } = render(<AccordionWithAnchor items={sampleItems} />);
+    const { getByText } = render(<AccordionWithAnchor items={sampleItems} />, {
+      legacyRoot: true,
+    });
 
     // On a bien le bon accordéon déplié
     const title1Button = getByText("Title 1");

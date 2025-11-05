@@ -59,15 +59,16 @@ describe("Indemnité licenciement - CC 2941", () => {
     );
   });
 
-  test(`Rupture conventionnelle avec des absences`, () => {
+  test(`Rupture conventionnelle avec des absences`, async () => {
     userAction
       .setInput(ui.seniority.startDate.get(), "01/01/2000")
       .setInput(ui.seniority.endDate.get(), "01/01/2025")
-      .click(ui.seniority.hasAbsence.oui.get())
-      .changeInputList(
-        ui.seniority.absences.motif(0).get(),
-        "Absence pour maladie non professionnelle"
-      )
+      .click(ui.seniority.hasAbsence.oui.get());
+    await userAction.changeInputList(
+      ui.seniority.absences.motif(0).get(),
+      "Absence pour maladie non professionnelle"
+    );
+    userAction
       .setInput(ui.seniority.absences.duration(0).get(), "6")
       .setInput(ui.seniority.absences.date(0).get(), "01/01/2025")
       .click(ui.next.get())

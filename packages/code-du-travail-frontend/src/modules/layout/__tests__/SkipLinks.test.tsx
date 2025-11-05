@@ -4,7 +4,9 @@ import { SkipLinks } from "../SkipLinks";
 
 describe("<SkipLinks />", () => {
   it("should match snapshot", () => {
-    const { container } = render(<SkipLinks />);
+    const { container } = render(<SkipLinks />, {
+      legacyRoot: true,
+    });
     expect(container).toMatchSnapshot();
   });
 });

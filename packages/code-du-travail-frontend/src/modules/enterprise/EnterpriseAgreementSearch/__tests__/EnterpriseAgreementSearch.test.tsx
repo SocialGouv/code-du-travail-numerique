@@ -58,7 +58,9 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
       jest.resetAllMocks();
     });
     it("Vérifier l'affichage de la recherche", async () => {
-      render(<EnterpriseAgreementSearch />);
+      render(<EnterpriseAgreementSearch />, {
+        legacyRoot: true,
+      });
       (searchEnterprises as jest.Mock).mockImplementation(() =>
         Promise.resolve([enterprise])
       );
@@ -130,7 +132,9 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
     });
 
     it("Vérifier l'affichage de l'erreur si aucun résultat", async () => {
-      render(<EnterpriseAgreementSearch />);
+      render(<EnterpriseAgreementSearch />, {
+        legacyRoot: true,
+      });
       (searchEnterprises as jest.Mock).mockImplementation(() =>
         Promise.resolve([])
       );
@@ -151,7 +155,9 @@ describe("Trouver sa CC - recherche par nom d'entreprise CC", () => {
     });
 
     it("Vérifier l'affichage de la recherche en mode widget", async () => {
-      render(<EnterpriseAgreementSearch widgetMode />);
+      render(<EnterpriseAgreementSearch widgetMode />, {
+        legacyRoot: true,
+      });
       (searchEnterprises as jest.Mock).mockImplementation(() =>
         Promise.resolve([
           {

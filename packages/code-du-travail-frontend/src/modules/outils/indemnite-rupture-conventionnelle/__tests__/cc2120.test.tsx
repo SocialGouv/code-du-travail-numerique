@@ -41,9 +41,13 @@ describe("Rupture Co - CC 2120", () => {
       .click(ui.next.get());
   });
 
-  test(`Verification du processus`, () => {
+  test(`Verification du processus`, async () => {
+    await userAction.changeInputList(
+      ui.information.agreement2120.proCategory.get(),
+      "Cadres"
+    );
+
     userAction
-      .changeInputList(ui.information.agreement2120.proCategory.get(), "Cadres")
       .click(ui.next.get())
       .setInput(ui.seniority.startDate.get(), "01/01/1980")
       .setInput(ui.seniority.endDate.get(), "01/03/2024")
@@ -64,9 +68,12 @@ describe("Rupture Co - CC 2120", () => {
     expect(ui.result.notifications.queryAll()).toHaveLength(1);
   });
 
-  test(`affiche une notif si absence pour maladie non pro`, () => {
+  test(`affiche une notif si absence pour maladie non pro`, async () => {
+    await userAction.changeInputList(
+      ui.information.agreement2120.proCategory.get(),
+      "Cadres"
+    );
     userAction
-      .changeInputList(ui.information.agreement2120.proCategory.get(), "Cadres")
       .click(ui.next.get())
       .setInput(ui.seniority.startDate.get(), "01/01/1980")
       .setInput(ui.seniority.endDate.get(), "01/03/2024")

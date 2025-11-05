@@ -49,17 +49,23 @@ const items = [
 
 describe("<RelatedItems />", () => {
   test("if no items", () => {
-    const { container } = render(<RelatedItems relatedItems={[]} />);
+    const { container } = render(<RelatedItems relatedItems={[]} />, {
+      legacyRoot: true,
+    });
     expect(container).toMatchInlineSnapshot(`<div />`);
   });
   test("should render", () => {
-    const { container } = render(<RelatedItems relatedItems={items} />);
+    const { container } = render(<RelatedItems relatedItems={items} />, {
+      legacyRoot: true,
+    });
     expect(container).toMatchSnapshot();
   });
 
   it("should track related items clicks for internal link", async () => {
     jest.resetAllMocks();
-    const { getByText } = render(<RelatedItems relatedItems={items} />);
+    const { getByText } = render(<RelatedItems relatedItems={items} />, {
+      legacyRoot: true,
+    });
     getByText(/événements familiaux/).click();
 
     expect(matopush).toHaveBeenCalledWith([
@@ -70,7 +76,9 @@ describe("<RelatedItems />", () => {
   });
   it("should track related items clicks for external link", async () => {
     jest.resetAllMocks();
-    const { getByText } = render(<RelatedItems relatedItems={items} />);
+    const { getByText } = render(<RelatedItems relatedItems={items} />, {
+      legacyRoot: true,
+    });
     getByText(/événements familiaux/).click();
 
     expect(matopush).toHaveBeenCalledWith([

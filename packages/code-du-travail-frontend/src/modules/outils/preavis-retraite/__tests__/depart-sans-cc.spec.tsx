@@ -6,7 +6,9 @@ import { render } from "@testing-library/react";
 
 test(`Départ à la retraite sans sélection de CC
 `, async () => {
-  await render(<CalculateurPreavisRetraite title="Préavis de retraite" />);
+  await render(<CalculateurPreavisRetraite title="Préavis de retraite" />, {
+    legacyRoot: true,
+  });
   const userAction = new UserAction();
 
   expect(ui.introduction.startButton.query()).toBeInTheDocument();

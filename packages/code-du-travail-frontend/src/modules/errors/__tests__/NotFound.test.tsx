@@ -4,7 +4,9 @@ import { NotFound } from "../NotFound";
 
 describe("<NotFound />", () => {
   it("should match snapshot", () => {
-    const { container } = render(<NotFound />);
+    const { container } = render(<NotFound />, {
+      legacyRoot: true,
+    });
     expect(container).toMatchSnapshot();
   });
 });

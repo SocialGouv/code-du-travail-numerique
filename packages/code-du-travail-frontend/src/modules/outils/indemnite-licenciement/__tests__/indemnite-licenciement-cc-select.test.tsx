@@ -9,7 +9,9 @@ jest.mock("../../../enterprise/queries");
 
 describe("Indemnité licenciement - Sélection de CC", () => {
   beforeEach(() => {
-    render(<CalculateurIndemniteLicenciement title={""} />);
+    render(<CalculateurIndemniteLicenciement title={""} />, {
+      legacyRoot: true,
+    });
     fireEvent.click(ui.introduction.startButton.get());
     fireEvent.click(ui.contract.type.cdi.get());
     fireEvent.click(ui.contract.fauteGrave.non.get());

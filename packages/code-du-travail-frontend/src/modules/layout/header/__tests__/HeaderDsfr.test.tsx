@@ -5,7 +5,9 @@ import { Header } from "..";
 
 describe("<Header />", () => {
   it("should match snapshot", () => {
-    const { container } = render(<Header />);
+    const { container } = render(<Header />, {
+      legacyRoot: true,
+    });
     expect(container).toMatchSnapshot();
   });
 });

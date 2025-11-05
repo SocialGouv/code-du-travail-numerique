@@ -4,7 +4,9 @@ import DroitDuTravailWrapper from "../DroitDuTravailWrapper";
 
 describe("<DroitDuTravailWrapper />", () => {
   it("renders correctly", () => {
-    const { container } = render(<DroitDuTravailWrapper />);
+    const { container } = render(<DroitDuTravailWrapper />, {
+      legacyRoot: true,
+    });
     expect(container).toMatchSnapshot();
   });
 });

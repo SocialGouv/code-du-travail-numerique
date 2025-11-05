@@ -53,7 +53,7 @@ describe("<ContributionsList />", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("filtre sur le thème sélectionné", () => {
+  it("filtre sur le thème sélectionné", async () => {
     const { getAllByRole, getByLabelText } = render(
       <ContributionsList contribs={contribs} themes={themes} />
     );
@@ -69,7 +69,7 @@ describe("<ContributionsList />", () => {
     expect(documents[2]).toHaveTextContent("Période d'essai");
 
     const selectThemes = getByLabelText("Sélectionnez un thème");
-    userEvent.selectOptions(selectThemes, "Embauche et contrat");
+    await userEvent.selectOptions(selectThemes, "Embauche et contrat");
     const themeHeadingsFiltered = getAllByRole("heading", { level: 2 });
     expect(themeHeadingsFiltered).toHaveLength(1);
     expect(themeHeadingsFiltered[0]).toHaveTextContent("Embauche et contrat");

@@ -19,7 +19,9 @@ describe("HeaderSearch Component - Accessibility Status Message in Autocomplete"
       "Résultat 3",
     ]);
 
-    render(<HeaderSearch onSearchSubmit={mockOnSearchSubmit} />);
+    render(<HeaderSearch onSearchSubmit={mockOnSearchSubmit} />, {
+      legacyRoot: true,
+    });
 
     const input = screen.getByPlaceholderText("Recherchez sur le site");
     await userEvent.type(input, "test");
@@ -37,7 +39,9 @@ describe("HeaderSearch Component - Accessibility Status Message in Autocomplete"
   it("affiche le message de statut accessible pour un seul résultat en français avec lang='fr'", async () => {
     (fetchSuggestResults as jest.Mock).mockResolvedValue(["Résultat unique"]);
 
-    render(<HeaderSearch onSearchSubmit={mockOnSearchSubmit} />);
+    render(<HeaderSearch onSearchSubmit={mockOnSearchSubmit} />, {
+      legacyRoot: true,
+    });
 
     const input = screen.getByPlaceholderText("Recherchez sur le site");
     await userEvent.type(input, "test");
@@ -53,7 +57,9 @@ describe("HeaderSearch Component - Accessibility Status Message in Autocomplete"
   it("affiche le message de statut accessible pour aucun résultat en français avec lang='fr'", async () => {
     (fetchSuggestResults as jest.Mock).mockResolvedValue([]);
 
-    render(<HeaderSearch onSearchSubmit={mockOnSearchSubmit} />);
+    render(<HeaderSearch onSearchSubmit={mockOnSearchSubmit} />, {
+      legacyRoot: true,
+    });
 
     const input = screen.getByPlaceholderText("Recherchez sur le site");
     await userEvent.type(input, "test");
@@ -67,7 +73,9 @@ describe("HeaderSearch Component - Accessibility Status Message in Autocomplete"
   });
 
   it("n'affiche pas de message de statut si aucune saisie n'est effectuée", () => {
-    render(<HeaderSearch onSearchSubmit={mockOnSearchSubmit} />);
+    render(<HeaderSearch onSearchSubmit={mockOnSearchSubmit} />, {
+      legacyRoot: true,
+    });
 
     const statusElements = screen.queryAllByRole("status");
     expect(statusElements).toHaveLength(0);

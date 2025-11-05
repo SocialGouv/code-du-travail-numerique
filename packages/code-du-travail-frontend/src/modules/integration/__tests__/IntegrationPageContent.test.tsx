@@ -16,7 +16,9 @@ jest.mock("../data", () => ({
 
 describe("IntegrationPageContent", () => {
   it("should render the title", () => {
-    render(<IntegrationPageContent />);
+    render(<IntegrationPageContent />, {
+      legacyRoot: true,
+    });
 
     const title = screen.getByTestId("integration-page-title");
     expect(title).toBeInTheDocument();
@@ -26,7 +28,9 @@ describe("IntegrationPageContent", () => {
   });
 
   it("should render the description", () => {
-    render(<IntegrationPageContent />);
+    render(<IntegrationPageContent />, {
+      legacyRoot: true,
+    });
 
     const description = screen.getByTestId("integration-page-description");
     expect(description).toBeInTheDocument();
@@ -36,7 +40,9 @@ describe("IntegrationPageContent", () => {
   });
 
   it("should render integration cards", () => {
-    render(<IntegrationPageContent />);
+    render(<IntegrationPageContent />, {
+      legacyRoot: true,
+    });
 
     const motorCard = screen.getByTestId("integration-card-moteur-recherche");
     const modelsCard = screen.getByTestId(

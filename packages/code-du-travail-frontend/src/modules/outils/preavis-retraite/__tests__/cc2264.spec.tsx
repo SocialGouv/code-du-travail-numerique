@@ -36,7 +36,7 @@ test(`5 ans minimum pour la question pour la CC 2264`, async () => {
   expect(
     ui.information.agreement2264.categoryQuestion.query()
   ).toBeInTheDocument();
-  userAction.changeInputList(
+  await userAction.changeInputList(
     ui.information.agreement2264.categoryAnswers.get(),
     "Non-cadres"
   );

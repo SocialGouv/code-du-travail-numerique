@@ -82,7 +82,9 @@ describe("Table Component", () => {
   } as FicheSPDataTableau;
 
   it('adds scope="row" to th elements in tbody', () => {
-    render(<Table data={mockData} headingLevel={1} />);
+    render(<Table data={mockData} headingLevel={1} />, {
+      legacyRoot: true,
+    });
 
     // Find th in tbody (row header)
     const rowHeader = screen.getByRole("rowheader", { name: /Row Header/i });

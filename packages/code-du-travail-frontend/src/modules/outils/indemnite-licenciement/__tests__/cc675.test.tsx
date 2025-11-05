@@ -21,7 +21,7 @@ Storage.prototype.getItem = jest.fn(
 
 describe("Indemnité licenciement - CC 675", () => {
   let userAction: UserAction;
-  test("cas spécifique", () => {
+  test("cas spécifique", async () => {
     render(<CalculateurIndemniteLicenciement title={""} />);
     userAction = new UserAction();
     userAction.click(ui.introduction.startButton.get());
@@ -33,7 +33,7 @@ describe("Indemnité licenciement - CC 675", () => {
     userAction.click(ui.next.get());
     userAction.click(ui.next.get());
     userAction.click(ui.next.get());
-    userAction.changeInputList(
+    await userAction.changeInputList(
       ui.information.agreement675.proCategory.get(),
       "'Employés'"
     );

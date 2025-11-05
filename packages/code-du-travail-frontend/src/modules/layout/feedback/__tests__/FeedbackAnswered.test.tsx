@@ -5,7 +5,9 @@ import { FeedbackAnswered } from "../FeedbackAnswered";
 
 describe("<FeedbackAnswered />", () => {
   it("should match snapshot", () => {
-    const { container } = render(<FeedbackAnswered />);
+    const { container } = render(<FeedbackAnswered />, {
+      legacyRoot: true,
+    });
     expect(container).toMatchSnapshot();
   });
 });

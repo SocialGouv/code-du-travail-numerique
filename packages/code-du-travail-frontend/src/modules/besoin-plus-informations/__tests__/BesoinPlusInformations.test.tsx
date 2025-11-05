@@ -20,7 +20,9 @@ describe("<BesoinPlusInformations />", () => {
   });
 
   it("doit trouver la DREETs à partir de son code postal", () => {
-    const { getByTestId, getByLabelText } = render(<BesoinPlusInformations />);
+    const { getByTestId, getByLabelText } = render(<BesoinPlusInformations />, {
+      legacyRoot: true,
+    });
     const userAction = new UserAction();
     userAction.setInput(
       getByLabelText("Saisissez le numéro de votre département"),

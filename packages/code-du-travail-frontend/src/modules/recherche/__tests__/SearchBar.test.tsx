@@ -79,7 +79,9 @@ describe("SearchBar", () => {
   });
 
   it("should emit search event when form is submitted", async () => {
-    render(<SearchBar />);
+    render(<SearchBar />, {
+      legacyRoot: true,
+    });
 
     // Find the input and type a search query
     const input = screen.getByTestId("search-bar-input");
@@ -96,7 +98,9 @@ describe("SearchBar", () => {
   });
 
   it("should emit suggestion selection event when a suggestion is selected", async () => {
-    render(<SearchBar />);
+    render(<SearchBar />, {
+      legacyRoot: true,
+    });
 
     // Find the input and type a search query
     const input = screen.getByTestId("search-bar-input");
@@ -128,7 +132,9 @@ describe("SearchBar", () => {
     // Spy on console.error
     const consoleErrorSpy = jest.spyOn(console, "error").mockImplementation();
 
-    render(<SearchBar />);
+    render(<SearchBar />, {
+      legacyRoot: true,
+    });
 
     // Click the button to simulate getting suggestions
     const getSuggestionsButton = screen.getByTestId("get-suggestions");
@@ -144,7 +150,9 @@ describe("SearchBar", () => {
   });
 
   it("should initialize with the provided initial value", () => {
-    render(<SearchBar initialValue="initial query" />);
+    render(<SearchBar initialValue="initial query" />, {
+      legacyRoot: true,
+    });
 
     // Submit the form without changing the input
     const form = screen.getByRole("search");

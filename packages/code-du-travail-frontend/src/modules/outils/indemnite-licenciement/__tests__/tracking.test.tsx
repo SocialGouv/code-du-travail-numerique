@@ -23,12 +23,15 @@ describe("Indemnité licenciement - Tracking", () => {
         title={"Indemnité de licenciement"}
         displayTitle="Indemnité de licenciement"
         relatedItems={[]}
-      />
+      />,
+      {
+        legacyRoot: true,
+      }
     );
   });
   const userAction = new UserAction();
 
-  test("vérifier le tracking sur la navigation", () => {
+  test("vérifier le tracking sur la navigation", async () => {
     jest.spyOn(Storage.prototype, "setItem");
     Storage.prototype.getItem = jest.fn(
       () =>
@@ -59,7 +62,7 @@ describe("Indemnité licenciement - Tracking", () => {
       `view_step_Indemnité de licenciement`,
       "infos",
     ]);
-    userAction.changeInputList(
+    await userAction.changeInputList(
       ui.information.agreement16.proCategory.get(),
       "Ingénieurs et cadres"
     );
