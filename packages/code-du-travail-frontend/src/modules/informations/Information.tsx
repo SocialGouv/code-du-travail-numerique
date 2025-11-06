@@ -114,7 +114,12 @@ export const Information = ({
         )}
 
         {references?.map((item) => (
-          <References key={item.label} label={item.label} links={item.links} />
+          <References
+            key={item.label}
+            label={item.label}
+            links={item.links}
+            titleAs="h2"
+          />
         ))}
       </div>
     </ContainerInformation>
