@@ -15,18 +15,9 @@ jest.mock("uuid", () => ({
   v4: jest.fn(() => ""),
 }));
 
-global.fetch = jest.fn();
-
 jest.mock("next/navigation", () => ({
   redirect: jest.fn(),
 }));
-
-function mockFetch(data: any[]) {
-  (fetch as any).mockResolvedValue({
-    json: jest.fn().mockResolvedValue({ hits: { hits: data } }),
-    ok: true,
-  });
-}
 
 describe("Trouver sa CC - recherche par nom de CC", () => {
   describe("Test de l'autocomplete", () => {
