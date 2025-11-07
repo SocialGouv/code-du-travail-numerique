@@ -4,6 +4,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { DownloadInfographicTile } from "./DownloadInfographicTile";
 import DisplayContent, { numberLevel } from "../../common/DisplayContent";
 import { toUrl } from "src/modules/utils";
+import { css } from "@styled-system/css";
 
 export type Props = {
   titleLevel: numberLevel;
@@ -27,7 +28,7 @@ export const InfographicElement = ({
       <img
         src={toUrl(svgFilename)}
         alt={`infographie ${title}. Description détaillée ci-après.`}
-        className={fr.cx("fr-mb-3w")}
+        className={`${fr.cx("fr-mb-3w")} ${infographieImage}`}
       />
       <AccordionWithAnchor
         className={fr.cx("fr-mb-5w")}
@@ -55,3 +56,8 @@ export const InfographicElement = ({
     </div>
   );
 };
+
+const infographieImage = css({
+  display: "block",
+  marginInline: "auto",
+});

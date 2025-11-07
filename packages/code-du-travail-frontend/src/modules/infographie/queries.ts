@@ -42,6 +42,7 @@ export const format = ({
   pdfFilesizeOctet,
   transcription,
   breadcrumbs,
+  references,
 }: Pick<
   InfographicElasticDocument,
   | "breadcrumbs"
@@ -54,6 +55,7 @@ export const format = ({
   | "description"
   | "meta_description"
   | "transcription"
+  | "references"
 >): Infographic => ({
   title,
   meta_title,
@@ -67,4 +69,5 @@ export const format = ({
   },
   transcription,
   breadcrumbs,
+  references,
 });
