@@ -21,3 +21,5 @@ lerna-debug.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+*.tsbuildinfo
+next-env.d.ts

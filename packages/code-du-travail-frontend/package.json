@@ -79,6 +79,7 @@
     "@types/react-dom": "19.2.0",
     "@types/xml2js": "^0.4.14",
     "@typescript-eslint/parser": "^8.42.0",
+    "babel-plugin-react-compiler": "^1.0.0",
     "cypress": "^15.4.0",
     "cypress-html-validate": "^8.1.0",
     "cypress-iframe": "^1.0.1",

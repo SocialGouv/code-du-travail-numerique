@@ -49,10 +49,10 @@ describe("Indemnité licenciement", () => {
         .setInput(ui.seniority.notificationDate.get(), "01/01/2022")
         .setInput(ui.seniority.endDate.get(), "01/03/2022")
         .click(ui.seniority.hasAbsence.oui.get());
-        await userAction.changeInputList(
-          ui.seniority.absences.motif(0).get(),
-          "Absence pour maladie non professionnelle"
-        );
+      await userAction.changeInputList(
+        ui.seniority.absences.motif(0).get(),
+        "Absence pour maladie non professionnelle"
+      );
 
       expect(ui.seniority.absences.date(0).query()).toBeInTheDocument();
 
@@ -75,13 +75,11 @@ describe("Indemnité licenciement", () => {
       expect(rendering.queryByText("01/01/2015")).toBeInTheDocument();
 
       // vérification que la date de l'absence n'est plus présente pour un autre motif
-      userAction
-        .click(ui.previous.get())
-        .click(ui.previous.get());
-        await userAction.changeInputList(
-          ui.seniority.absences.motif(0).get(),
-          "Congés sans solde"
-        );
+      userAction.click(ui.previous.get()).click(ui.previous.get());
+      await userAction.changeInputList(
+        ui.seniority.absences.motif(0).get(),
+        "Congés sans solde"
+      );
 
       expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
       expect(
