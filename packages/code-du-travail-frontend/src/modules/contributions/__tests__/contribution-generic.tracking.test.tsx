@@ -1,14 +1,11 @@
 import { fireEvent, render, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import React from "react";
 import { sendEvent } from "../../utils";
 import { mockAgreementSearch, ui } from "./ui";
 import { ui as ccUi } from "../../convention-collective/__tests__/ui";
 import { byText } from "testing-library-selector";
 import { ContributionGeneric } from "../ContributionGeneric";
 import { Contribution } from "../type";
-import { searchEnterprises } from "../../enterprise";
-import { legacyRender } from "src/modules/utils/legacyRender";
 
 beforeEach(() => {
   localStorage.clear();
@@ -34,9 +31,10 @@ jest.mock("next/navigation", () => ({
 jest.mock("../../convention-collective/search", () => ({
   searchAgreement: jest.fn(),
 }));
-jest.mock("../../enterprise/queries", () => ({
-  searchEnterprises: jest.fn(),
-}));
+
+jest.mock(
+  "../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSearchInput"
+);
 
 describe("<ContributionGeneric />", () => {
   beforeEach(() => {
@@ -66,24 +64,6 @@ describe("<ContributionGeneric />", () => {
     },
   } as Partial<Contribution> as any;
 
-  (searchEnterprises as jest.Mock).mockImplementation(() =>
-    Promise.resolve([
-      {
-        label: "CARREFOUR PROXIMITE FRANCE (SHOPI-8 A HUIT)",
-        siren: "345130488",
-        address: "ZI ROUTE DE PARIS 14120 MONDEVILLE",
-        conventions: [
-          {
-            id: "2216",
-            contributions: true,
-            num: 2216,
-            shortTitle:
-              "Commerce de détail et de gros à prédominance alimentaire",
-          },
-        ],
-      },
-    ])
-  );
   it("je connais ma CC - cc traité", async () => {
     mockAgreementSearch({
       num: 1388,
@@ -247,7 +227,7 @@ describe("<ContributionGeneric />", () => {
   it("je ne connais pas ma CC", async () => {
     expect(sendEvent).toHaveBeenCalledTimes(0);
 
-    legacyRender(<ContributionGeneric contribution={contribution} />);
+    render(<ContributionGeneric contribution={contribution} />);
     await userEvent.click(ccUi.radio.enterpriseSearchOption.get());
     await userEvent.click(ccUi.searchByEnterprise.input.get());
     await userEvent.type(ccUi.searchByEnterprise.input.get(), "carrefour");

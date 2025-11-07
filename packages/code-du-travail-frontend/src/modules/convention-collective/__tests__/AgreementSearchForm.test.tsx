@@ -26,6 +26,10 @@ jest.mock("next/navigation", () => ({
   usePathname: jest.fn(),
 }));
 
+jest.mock(
+  "../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSearchInput"
+);
+
 const enterprise1CC = {
   activitePrincipale:
     "Location-bail de propriété intellectuelle et de produits similaires, à l’exception des œuvres soumises à copyright",
