@@ -17,7 +17,9 @@ Storage.prototype.getItem = jest.fn(
 }
 `
 );
-jest.mock("../../../enterprise/queries");
+jest.mock(
+  "../../../enterprise/EnterpriseAgreementSearch/EnterpriseAgreementSearchInput"
+);
 
 describe("Indemnité licenciement", () => {
   let userAction: UserAction;

@@ -2,6 +2,7 @@ import { render, waitFor, RenderResult } from "@testing-library/react";
 import { UserAction } from "../../common/utils/UserAction";
 import { CalculateurIndemniteLicenciement } from "../IndemniteLicenciementSimulator";
 import { ui } from "../../indemnite-depart/__tests__/ui";
+import { AgreementSearchInput } from "src/modules/convention-collective/AgreementSearch/AgreementSearchInput";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -17,7 +18,9 @@ Storage.prototype.getItem = jest.fn(
 `
 );
 
-jest.mock("../../../convention-collective/search");
+jest.mock(
+  "../../../convention-collective/AgreementSearch/AgreementSearchInput"
+);
 
 describe("Indemnité licenciement - Validation de la page information", () => {
   describe("parcours avec la convention collective 16 pour valider les erreurs", () => {

@@ -28,109 +28,70 @@ jest.mock(
 describe("<PageContribution />", () => {
   let userAction: UserAction;
 
-  //TODO: enable when fixing tracking on enterprise search
-  // it("should track when searching by enterprise name", async () => {
-  //   render(
-  //     <AgreementSearchForm
-  //       trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
-  //       onAgreementSelect={() => {}}
-  //       level={2}
-  //     />
-  //   );
-  //   userAction = new UserAction();
-  //   userAction.click(ui.radio.enterpriseSearchOption.get());
-  //   userAction.setInput(
-  //     enterpriseUi.enterpriseAgreementSearch.input.get(),
-  //     "carrefour"
-  //   );
-  //   userAction.click(enterpriseUi.enterpriseAgreementSearch.submitButton.get());
-  //   await waitFor(() => {
-  //     expect(sendEvent).toHaveBeenCalledWith({
-  //       action: "Trouver sa convention collective",
-  //       category: "enterprise_search",
-  //       name: '{"query":"carrefour"}',
-  //       value: "",
-  //     });
-  //   });
-  //   expect(
-  //     enterpriseUi.enterpriseAgreementSearch.resultLines.carrefour.title.query()
-  //   ).toBeInTheDocument();
-  //   userAction.click(
-  //     enterpriseUi.enterpriseAgreementSearch.resultLines.carrefour.title.get()
-  //   );
-  //   expect(sendEvent).toHaveBeenCalledWith({
-  //     action: "Trouver sa convention collective",
-  //     category: "cc_select_p2",
-  //     name: "idcc2216",
-  //     value: "",
-  //   });
-  //   expect(sendEvent).toHaveBeenCalledWith({
-  //     action: "Trouver sa convention collective",
-  //     category: "enterprise_select",
-  //     name: JSON.stringify({
-  //       label: "CARREFOUR PROXIMITE FRANCE (SHOPI-8 A HUIT)",
-  //       siren: "345130488",
-  //     }),
-  //   });
-  // });
+  it("should track when searching by enterprise name", async () => {
+    render(
+      <AgreementSearchForm
+        trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+        onAgreementSelect={() => {}}
+        level={2}
+      />
+    );
+    userAction = new UserAction();
+    userAction.click(ui.radio.enterpriseSearchOption.get());
+    userAction.setInput(
+      enterpriseUi.enterpriseAgreementSearch.input.get(),
+      "carrefour"
+    );
+    userAction.click(enterpriseUi.enterpriseAgreementSearch.submitButton.get());
+    await waitFor(() => {
+      expect(sendEvent).toHaveBeenCalledWith({
+        action: "Trouver sa convention collective",
+        category: "enterprise_search",
+        name: '{"query":"carrefour"}',
+        value: "",
+      });
+    });
+    expect(
+      enterpriseUi.enterpriseAgreementSearch.resultLines.carrefour.title.query()
+    ).toBeInTheDocument();
+    userAction.click(
+      enterpriseUi.enterpriseAgreementSearch.resultLines.carrefour.title.get()
+    );
+  });
 
-  // it("should track when searching by enterprise with multiple agreements", async () => {
-  //   render(
-  //     <AgreementSearchForm
-  //       trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
-  //       onAgreementSelect={() => {}}
-  //       level={2}
-  //     />
-  //   );
-  //   userAction = new UserAction();
-  //   userAction.click(ui.radio.enterpriseSearchOption.get());
-  //   userAction.setInput(
-  //     enterpriseUi.enterpriseAgreementSearch.input.get(),
-  //     "bnp"
-  //   );
-  //   userAction.click(enterpriseUi.enterpriseAgreementSearch.submitButton.get());
-  //   await waitFor(() => {
-  //     expect(sendEvent).toHaveBeenCalledWith({
-  //       action: "Trouver sa convention collective",
-  //       category: "enterprise_search",
-  //       name: '{"query":"bnp"}',
-  //       value: "",
-  //     });
-  //   });
-  //   expect(
-  //     enterpriseUi.enterpriseAgreementSearch.resultLines.bnp.title.query()
-  //   ).toBeInTheDocument();
-  //   userAction.click(
-  //     enterpriseUi.enterpriseAgreementSearch.resultLines.bnp.title.get()
-  //   );
-  //   userAction.click(
-  //     enterpriseUi.enterpriseAgreementSearch.resultLines.bnp.ccList.idcc2120.get()
-  //   );
-  //   expect(sendEvent).toHaveBeenCalledWith({
-  //     action: "Trouver sa convention collective",
-  //     category: "cc_select_p2",
-  //     name: "idcc2120",
-  //     value: "",
-  //   });
-  //   expect(sendEvent).toHaveBeenCalledWith({
-  //     action: "Trouver sa convention collective",
-  //     category: "enterprise_select",
-  //     name: JSON.stringify({
-  //       label: "BNP PARIBAS (HELLO BANK!)",
-  //       siren: "662042449",
-  //     }),
-  //     value: "",
-  //   });
-  //   expect(
-  //     enterpriseUi.enterpriseAgreementSearch.errorNotFound.notTreated.query()
-  //   ).not.toBeInTheDocument();
-  //   userAction.click(
-  //     enterpriseUi.enterpriseAgreementSearch.resultLines.bnp.ccList.idcc9999.get()
-  //   );
-  //   expect(
-  //     enterpriseUi.enterpriseAgreementSearch.errorNotFound.notTreated.query()
-  //   ).toBeInTheDocument();
-  // });
+  it("should track when searching by enterprise with multiple agreements", async () => {
+    render(
+      <AgreementSearchForm
+        trackingActionName={TrackingAgreementSearchAction.AGREEMENT_SEARCH}
+        onAgreementSelect={() => {}}
+        level={2}
+      />
+    );
+    userAction = new UserAction();
+    userAction.click(ui.radio.enterpriseSearchOption.get());
+    userAction.setInput(
+      enterpriseUi.enterpriseAgreementSearch.input.get(),
+      "bnp"
+    );
+    userAction.click(enterpriseUi.enterpriseAgreementSearch.submitButton.get());
+    await waitFor(() => {
+      expect(sendEvent).toHaveBeenCalledWith({
+        action: "Trouver sa convention collective",
+        category: "enterprise_search",
+        name: '{"query":"bnp"}',
+        value: "",
+      });
+    });
+    expect(
+      enterpriseUi.enterpriseAgreementSearch.resultLines.bnp.title.query()
+    ).toBeInTheDocument();
+    userAction.click(
+      enterpriseUi.enterpriseAgreementSearch.resultLines.bnp.title.get()
+    );
+    userAction.click(
+      enterpriseUi.enterpriseAgreementSearch.resultLines.bnp.ccList.idcc2120.get()
+    );
+  });
 
   it("should track when selecting agreement 3239", () => {
     render(

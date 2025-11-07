@@ -324,6 +324,12 @@ export const EnterpriseAgreementSearchInput = ({
   if (onAgreementSelect && selectedAgreement) {
     return (
       <div data-testid="selected-agreement">
+        {selectedEnterprise && (
+          <div data-testid="enterprise-detail">
+            <h2>Votre entreprise</h2>
+            <p>{selectedEnterprise.label}</p>
+          </div>
+        )}
         <p>Vous avez sélectionné la convention collective</p>
         <div>{`${selectedAgreement.shortTitle} IDCC ${selectedAgreement.id}`}</div>
       </div>
@@ -364,6 +370,7 @@ export const EnterpriseAgreementSearchInput = ({
 
   return (
     <div data-testid="enterprise-agreement-search-input-mock">
+      <h2 className="fr-h4 fr-my-2w">Précisez votre entreprise</h2>
       <label htmlFor="enterprise-search-input">
         Nom de votre entreprise ou numéro Siren/Siret (obligatoire)
       </label>
@@ -373,6 +380,12 @@ export const EnterpriseAgreementSearchInput = ({
         data-testid="enterprise-search-input"
         value={search || ""}
         onChange={(e) => setSearch(e.target.value)}
+      />
+      <input
+        type="text"
+        id="locationSearchAutocomplete"
+        data-testid="locationSearchAutocomplete"
+        placeholder="Code postal (optionnel)"
       />
       <button
         data-testid="agreement-company-search-button"
