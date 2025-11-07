@@ -531,7 +531,7 @@ __metadata:
     cypress-real-events: ^1.15.0
     date-fns: ^2.22.1
     debounce-promise: ^3.1.2
-    downshift: ^9.0.6
+    downshift: ^9.0.10
     eslint: ^9.34.0
     eslint-config-flat-gitignore: ^2.1.0
     eslint-config-next: 15.5.2
@@ -8198,7 +8198,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"downshift@npm:^9.0.6":
+"downshift@npm:^9.0.10":
   version: 9.0.10
   resolution: "downshift@npm:9.0.10"
   dependencies:
