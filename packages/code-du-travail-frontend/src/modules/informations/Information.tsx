@@ -4,7 +4,7 @@ import {
 } from "@socialgouv/cdtn-types";
 import { fr } from "@codegouvfr/react-dsfr";
 import { AccordionWithAnchor } from "../common/AccordionWithAnchor";
-import { ContentPart, References } from "./content";
+import { ContentPart } from "./content";
 import React from "react";
 import { RelatedItem } from "../documents";
 import {
@@ -17,6 +17,7 @@ import DisplayContent from "../common/DisplayContent";
 import { QuestionnaireWrapper } from "../outils/dismissal-process/questionnaire/QuestionnaireWrapper";
 import { BlueBlock } from "../common/BlueBlock";
 import DismissalProcessIcon from "../outils/dismissal-process/component/DismissalProcessIcon.svg";
+import { ReferencesAccordion } from "../common";
 
 type Props = {
   date: string;
@@ -84,7 +85,7 @@ export const Information = ({
             <h2>{contents[0].title}</h2>
             <ContentPart parts={contents[0].blocks} />
             {contents[0].references?.map((item) => (
-              <References
+              <ReferencesAccordion
                 key={item.label}
                 label={item.label}
                 links={item.links}
@@ -100,7 +101,7 @@ export const Information = ({
                 <>
                   <ContentPart parts={item.blocks} />
                   {item.references?.map((item) => (
-                    <References
+                    <ReferencesAccordion
                       key={item.label}
                       label={item.label}
                       links={item.links}

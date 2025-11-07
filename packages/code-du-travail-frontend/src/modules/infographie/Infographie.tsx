@@ -4,6 +4,7 @@ import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { DownloadInfographicTile, InfographicElement } from "./component";
 import DisplayContent from "../common/DisplayContent";
+import { ReferencesAccordion } from "../common";
 
 type Params = {
   infographic: Infographic;
@@ -40,6 +41,13 @@ export const Infographie = ({ infographic }: Params) => {
         pdfSizeOctet={infographic.pdf.sizeOctet}
         descriptionHtml={infographic.transcription}
       />
+
+      {infographic.references && infographic.references.length > 0 && (
+        <ReferencesAccordion
+          label="Références juridiques"
+          links={infographic.references}
+        />
+      )}
     </ContainerSimulatorLight>
   );
 };

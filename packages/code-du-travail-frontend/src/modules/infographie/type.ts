@@ -8,6 +8,7 @@ export type Infographic = Pick<
   | "meta_description"
   | "date"
   | "transcription"
+  | "references"
 > & {
   svgFilename: string;
   pdf: {

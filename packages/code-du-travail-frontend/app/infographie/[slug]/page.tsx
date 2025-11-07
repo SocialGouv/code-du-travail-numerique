@@ -56,6 +56,7 @@ const getInfographic = async (slug: string): Promise<Infographic> => {
     "pdfFilesizeOctet",
     "transcription",
     "breadcrumbs",
+    "references",
   ]);
 
   if (!infographic) {
