@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { Agreement } from "src/modules/outils/indemnite-depart/types";
+import { isLocalStorageAvailable } from "./storage";
 
 export const STORAGE_KEY_AGREEMENT = "convention";
 
@@ -42,16 +43,16 @@ export function useLocalStorageForAgreement(
 }
 
 export const saveAgreementToLocalStorage = (agreement?: Agreement | null) => {
+  if (!isLocalStorageAvailable()) return;
+
   try {
-    if (window?.localStorage) {
-      if (agreement) {
-        window.localStorage.setItem(
-          STORAGE_KEY_AGREEMENT,
-          JSON.stringify(agreement)
-        );
-      } else {
-        window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
-      }
+    if (agreement) {
+      window.localStorage.setItem(
+        STORAGE_KEY_AGREEMENT,
+        JSON.stringify(agreement)
+      );
+    } else {
+      window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
     }
   } catch (e) {
     console.error(e);
@@ -59,21 +60,21 @@ export const saveAgreementToLocalStorage = (agreement?: Agreement | null) => {
 };
 
 export const getAgreementFromLocalStorage = (): Agreement | undefined => {
+  if (!isLocalStorageAvailable()) return;
+
   try {
-    if (window?.localStorage) {
-      const data = window.localStorage.getItem(STORAGE_KEY_AGREEMENT);
-      return data ? JSON.parse(data) : undefined;
-    }
+    const data = window.localStorage.getItem(STORAGE_KEY_AGREEMENT);
+    return data ? JSON.parse(data) : undefined;
   } catch (e) {
     console.error(e);
   }
 };
 
 export const removeAgreementFromLocalStorage = () => {
+  if (!isLocalStorageAvailable()) return;
+
   try {
-    if (window?.localStorage) {
-      window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
-    }
+    window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
   } catch (e) {
     console.error(e);
   }
