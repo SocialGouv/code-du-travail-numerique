@@ -11,16 +11,6 @@ export enum MatomoBaseEvent {
   SELECT_RESULT = "selectResult",
 }
 
-export enum MatomoBaseAction {
-  SELECT = "select",
-  CLICK = "click",
-  VIEW = "view",
-}
-
-export enum MatomoSimulatorNameEvent {
-  FIND_AGREEMENT = "Trouver sa convention collective",
-}
-
 export enum MatomoSearchAgreementCategory {
   AGREEMENT_SEARCH_HELP = "cc_search_help",
   ENTERPRISE_SELECT = "enterprise_select",
@@ -32,22 +22,6 @@ export enum MatomoSearchAgreementCategory {
   ENTERPRISE_SEARCH = "enterprise_search",
   AGREEMENT_SEARCH = "cc_search",
   AGREEMENT_SEARCH_TYPE_OF_USERS = "cc_search_type_of_users",
-}
-
-export enum MatomoHeaderEvent {
-  CLICK_BOITE_A_OUTILS = "click_boite_a_outils",
-  CLICK_MODELE_DE_DOCUMENTS = "click_modele_de_documents",
-  CLICK_FICHES_PRATIQUES = "click_fiches_pratiques",
-  CLICK_CONVENTION_COLLECTIVE = "click_convention_collective",
-  CLICK_THEMES = "click_themes",
-}
-
-export enum MatomoHomeEvent {
-  CLICK_VOIR_TOUS_LES_OUTILS = "click_voir_tous_les_outils",
-  CLICK_VOIR_TOUS_LES_MODELES = "Click_voir_tous_modeles_de_documents",
-  CLICK_VOIR_TOUTES_LES_FICHES = "click_voir_toutes_les_fiches_pratiques",
-  CLICK_VOIR_TOUTES_LES_CONVENTIONS_COLLECTIVES = "click_voir_toutes_les_conventions_collectives",
-  CLICK_VOIR_TOUTES_LES_THEMES = "click_voir_tous_les_themes",
 }
 
 export enum MatomoSimulatorEvent {
@@ -97,51 +71,3 @@ export enum MatomoActionEvent {
   CLICK_PREVIOUS = "click_previous",
   TYPE_CTRL_C = "type_CTRL_C",
 }
-
-type Mapping = Array<{
-  helpEvent: MatomoSimulatorEvent;
-  questionLabels: Array<string>;
-  selectEvent?: MatomoSimulatorEvent;
-}>;
-
-export const MatomoMapping: Mapping = [
-  {
-    helpEvent: MatomoSimulatorEvent.CLICK_HELP_ANCIENNETE,
-    questionLabels: ["ancienneté"],
-  },
-  {
-    helpEvent: MatomoSimulatorEvent.CLICK_HELP_CAT_PRO,
-    questionLabels: ["catégorie professionnelle"],
-    selectEvent: MatomoSimulatorEvent.SELECT_CAT_PRO,
-  },
-  {
-    helpEvent: MatomoSimulatorEvent.CLICK_HELP_ECHELON,
-    questionLabels: ["échelon"],
-    selectEvent: MatomoSimulatorEvent.SELECT_ECHELON,
-  },
-  {
-    helpEvent: MatomoSimulatorEvent.CLICK_HELP_GROUPE,
-    questionLabels: ["groupe"],
-    selectEvent: MatomoSimulatorEvent.SELECT_GROUPE,
-  },
-  {
-    helpEvent: MatomoSimulatorEvent.CLICK_HELP_NIVEAU,
-    questionLabels: ["niveau"],
-    selectEvent: MatomoSimulatorEvent.SELECT_NIVEAU,
-  },
-  {
-    helpEvent: MatomoSimulatorEvent.CLICK_HELP_CLASSE,
-    questionLabels: ["classe"],
-    selectEvent: MatomoSimulatorEvent.SELECT_CLASSE,
-  },
-  {
-    helpEvent: MatomoSimulatorEvent.CLICK_HELP_POSITION,
-    questionLabels: ["position"],
-    selectEvent: MatomoSimulatorEvent.SELECT_POSITION,
-  },
-  {
-    helpEvent: MatomoSimulatorEvent.CLICK_HELP_COEFFICIENT,
-    questionLabels: ["coefficient"],
-    selectEvent: MatomoSimulatorEvent.SELECT_COEFFICIENT,
-  },
-];
