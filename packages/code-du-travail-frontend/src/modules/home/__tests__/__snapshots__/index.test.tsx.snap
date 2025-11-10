@@ -131,70 +131,412 @@ exports[`<Home /> should match snapshot 1`] = `
         </div>
       </div>
       <div
-        id="home-highlights"
+        class="fr-container fr-my-8w"
+        id="home-comprendre-le-droit-du-travail"
       >
+        <h2>
+          Comprendre le droit du travail
+        </h2>
         <div
-          class="fr-my-8w fr-container"
+          class="fr-grid-row fr-grid-row-md--gutters"
         >
-          <h2
-            class="fr-mb-3v"
-          >
-            À la une
-          </h2>
           <div
-            class="fr-grid-row fr-grid-row--gutters fr-grid-row--right"
+            class="fr-col-12 fr-col-md-6"
+          >
+            <p
+              class="fr-text--lg fr-text--bold"
+            >
+              Le droit du travail est l'ensemble des règles juridiques applicables aux relations entre employeurs privés et salariés, à l'occasion du travail.
+            </p>
+            <p
+              class="fr-text--lg"
+            >
+              Le droit du travail organise les relations professionnelles de travail entre l'employeur et le salarié individuellement et la collectivité des salariés.
+            </p>
+          </div>
+          <div
+            class="fr-col-12 fr-col-md-6"
+          >
+            <p
+              class="fr-text--lg"
+            >
+              Il encadre de nombreux domaines tels que le contrat de travail, la rémunération, la durée du travail, les congés, la discipline, le licenciement, l'emploi, la formation, la sécurité et la santé au travail, la négociation collective, la grève et la représentation du personnel.
+            </p>
+            <p
+              class="fr-text--lg"
+            >
+              Le droit du travail est un droit en constante évolution car il comprend des enjeux sociaux, économiques et politiques forts.
+            </p>
+          </div>
+        </div>
+        <h3
+          class="fr-mb-3w"
+        >
+          La hiérarchie des textes
+        </h3>
+        <p
+          class="fr-text--lg fr-mb-4w"
+        >
+          Le principe général en droit du travail est le suivant : lorsqu'il existe plusieurs textes sur un même sujet, c'est le texte le plus favorable au salarié qui s'applique. Ce principe continue à s'appliquer en droit du travail mais il connaît quelques exceptions.
+        </p>
+        <ul
+          class="fr-grid-row fr-grid-row--gutters li-s_none! p_0 m_0"
+        >
+          <li
+            class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
           >
             <div
-              class="fr-col-12 fr-col-md-6 fr-col-lg-6"
+              class="d_flex ai_center h_80px md:h_100px lg:h_120px"
             >
               <div
-                class="fr-card fr-enlarge-link fr-card--horizontal"
-                id="fr-card-:r2:"
+                class="h_100% flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr-tl_8px bdr-bl_8px bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1) trs_all_0.3s_ease"
               >
                 <div
-                  class="fr-card__body"
+                  class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
                 >
                   <div
-                    class="fr-card__content"
+                    class="d_flex ai_center jc_center flex-sh_0"
                   >
-                    <h3
-                      class="fr-card__title"
-                    >
-                      <a
-                        class=""
-                        href="https://example.com/highlight"
-                      >
-                        Highlight Title
-                      </a>
-                    </h3>
-                    <p
-                      class="fr-card__desc"
-                    >
-                      Highlight description
-                    </p>
-                    <div
-                      class="fr-card__start fr-mb-2w"
-                    >
-                      <p
-                        class="fr-tag fr-tag--sm"
-                      >
-                        light
-                      </p>
-                    </div>
-                    <div
-                      class="fr-card__end fr-text--xs"
-                    >
-                      <p
-                        class="fr-m-0 fr-text--xs"
-                      >
-                        Consulter
-                      </p>
-                    </div>
+                    <img
+                      alt=""
+                      class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
+                      data-nimg="1"
+                      decoding="async"
+                      height="56"
+                      loading="lazy"
+                      src="/static/assets/icons/droit-du-travail/texte-internationaux.svg"
+                      style="color: transparent;"
+                      width="56"
+                    />
                   </div>
+                  <h4
+                    class="fr-mb-0 fr-ml-2w fr-text--md fr-text--bold c_var(--text-action-high-blue-france)!"
+                  >
+                    Les textes internationaux
+                  </h4>
                 </div>
               </div>
+              <div
+                class="w_30px flex-sh_0 h_100% filter_drop-shadow(2px_2px_4px_rgba(0,_0,_0,_0.025)) trs_all_0.3s_ease"
+              >
+                <div
+                  class="w_100% h_100% cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                />
+              </div>
             </div>
-          </div>
+          </li>
+          <li
+            class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
+          >
+            <div
+              class="d_flex ai_center h_80px md:h_100px lg:h_120px"
+            >
+              <div
+                class="h_100% flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr-tl_8px bdr-bl_8px bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1) trs_all_0.3s_ease"
+              >
+                <div
+                  class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
+                >
+                  <div
+                    class="d_flex ai_center jc_center flex-sh_0"
+                  >
+                    <img
+                      alt=""
+                      class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
+                      data-nimg="1"
+                      decoding="async"
+                      height="56"
+                      loading="lazy"
+                      src="/static/assets/icons/droit-du-travail/texte-europeens.svg"
+                      style="color: transparent;"
+                      width="56"
+                    />
+                  </div>
+                  <h4
+                    class="fr-mb-0 fr-ml-2w fr-text--md fr-text--bold c_var(--text-action-high-blue-france)!"
+                  >
+                    Les textes européens
+                  </h4>
+                </div>
+              </div>
+              <div
+                class="w_30px flex-sh_0 h_100% filter_drop-shadow(2px_2px_4px_rgba(0,_0,_0,_0.025)) trs_all_0.3s_ease"
+              >
+                <div
+                  class="w_100% h_100% cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                />
+              </div>
+            </div>
+          </li>
+          <li
+            class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
+          >
+            <div
+              class="d_flex ai_center h_80px md:h_100px lg:h_120px"
+            >
+              <div
+                class="h_100% flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr-tl_8px bdr-bl_8px bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1) trs_all_0.3s_ease"
+              >
+                <div
+                  class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
+                >
+                  <div
+                    class="d_flex ai_center jc_center flex-sh_0"
+                  >
+                    <img
+                      alt=""
+                      class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
+                      data-nimg="1"
+                      decoding="async"
+                      height="56"
+                      loading="lazy"
+                      src="/static/assets/icons/droit-du-travail/constitution-francaise.svg"
+                      style="color: transparent;"
+                      width="56"
+                    />
+                  </div>
+                  <h4
+                    class="fr-mb-0 fr-ml-2w fr-text--md fr-text--bold c_var(--text-action-high-blue-france)!"
+                  >
+                    La Constitution française
+                  </h4>
+                </div>
+              </div>
+              <div
+                class="w_30px flex-sh_0 h_100% filter_drop-shadow(2px_2px_4px_rgba(0,_0,_0,_0.025)) trs_all_0.3s_ease"
+              >
+                <div
+                  class="w_100% h_100% cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                />
+              </div>
+            </div>
+          </li>
+          <li
+            class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
+          >
+            <div
+              class="d_flex ai_center h_80px md:h_100px lg:h_120px"
+            >
+              <div
+                class="h_100% flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr-tl_8px bdr-bl_8px bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1) trs_all_0.3s_ease"
+              >
+                <div
+                  class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
+                >
+                  <div
+                    class="d_flex ai_center jc_center flex-sh_0"
+                  >
+                    <img
+                      alt=""
+                      class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
+                      data-nimg="1"
+                      decoding="async"
+                      height="56"
+                      loading="lazy"
+                      src="/static/assets/icons/droit-du-travail/lois.svg"
+                      style="color: transparent;"
+                      width="56"
+                    />
+                  </div>
+                  <h4
+                    class="fr-mb-0 fr-ml-2w fr-text--md fr-text--bold c_var(--text-action-high-blue-france)!"
+                  >
+                    Lois, ordonnances et décrets (Code du travail)
+                  </h4>
+                </div>
+              </div>
+              <div
+                class="w_30px flex-sh_0 h_100% filter_drop-shadow(2px_2px_4px_rgba(0,_0,_0,_0.025)) trs_all_0.3s_ease"
+              >
+                <div
+                  class="w_100% h_100% cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                />
+              </div>
+            </div>
+          </li>
+          <li
+            class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
+          >
+            <div
+              class="d_flex ai_center h_80px md:h_100px lg:h_120px"
+            >
+              <div
+                class="h_100% flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr-tl_8px bdr-bl_8px bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1) trs_all_0.3s_ease"
+              >
+                <div
+                  class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
+                >
+                  <div
+                    class="d_flex ai_center jc_center flex-sh_0"
+                  >
+                    <img
+                      alt=""
+                      class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
+                      data-nimg="1"
+                      decoding="async"
+                      height="56"
+                      loading="lazy"
+                      src="/static/assets/icons/droit-du-travail/conventions-collectives.svg"
+                      style="color: transparent;"
+                      width="56"
+                    />
+                  </div>
+                  <h4
+                    class="fr-mb-0 fr-ml-2w fr-text--md fr-text--bold c_var(--text-action-high-blue-france)!"
+                  >
+                    Les conventions et accords collectifs
+                  </h4>
+                </div>
+              </div>
+              <div
+                class="w_30px flex-sh_0 h_100% filter_drop-shadow(2px_2px_4px_rgba(0,_0,_0,_0.025)) trs_all_0.3s_ease"
+              >
+                <div
+                  class="w_100% h_100% cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                />
+              </div>
+            </div>
+          </li>
+          <li
+            class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
+          >
+            <div
+              class="d_flex ai_center h_80px md:h_100px lg:h_120px"
+            >
+              <div
+                class="h_100% flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr-tl_8px bdr-bl_8px bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1) trs_all_0.3s_ease"
+              >
+                <div
+                  class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
+                >
+                  <div
+                    class="d_flex ai_center jc_center flex-sh_0"
+                  >
+                    <img
+                      alt=""
+                      class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
+                      data-nimg="1"
+                      decoding="async"
+                      height="56"
+                      loading="lazy"
+                      src="/static/assets/icons/droit-du-travail/usage-unilateraux.svg"
+                      style="color: transparent;"
+                      width="56"
+                    />
+                  </div>
+                  <h4
+                    class="fr-mb-0 fr-ml-2w fr-text--md fr-text--bold c_var(--text-action-high-blue-france)!"
+                  >
+                    Les usages et les engagements unilatéraux
+                  </h4>
+                </div>
+              </div>
+              <div
+                class="w_30px flex-sh_0 h_100% filter_drop-shadow(2px_2px_4px_rgba(0,_0,_0,_0.025)) trs_all_0.3s_ease"
+              >
+                <div
+                  class="w_100% h_100% cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                />
+              </div>
+            </div>
+          </li>
+          <li
+            class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
+          >
+            <div
+              class="d_flex ai_center h_80px md:h_100px lg:h_120px"
+            >
+              <div
+                class="h_100% flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr-tl_8px bdr-bl_8px bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1) trs_all_0.3s_ease"
+              >
+                <div
+                  class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
+                >
+                  <div
+                    class="d_flex ai_center jc_center flex-sh_0"
+                  >
+                    <img
+                      alt=""
+                      class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
+                      data-nimg="1"
+                      decoding="async"
+                      height="56"
+                      loading="lazy"
+                      src="/static/assets/icons/droit-du-travail/reglement-interieur-entreprise.svg"
+                      style="color: transparent;"
+                      width="56"
+                    />
+                  </div>
+                  <h4
+                    class="fr-mb-0 fr-ml-2w fr-text--md fr-text--bold c_var(--text-action-high-blue-france)!"
+                  >
+                    Le règlement intérieur de l'entreprise
+                  </h4>
+                </div>
+              </div>
+              <div
+                class="w_30px flex-sh_0 h_100% filter_drop-shadow(2px_2px_4px_rgba(0,_0,_0,_0.025)) trs_all_0.3s_ease"
+              >
+                <div
+                  class="w_100% h_100% cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                />
+              </div>
+            </div>
+          </li>
+          <li
+            class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
+          >
+            <div
+              class="d_flex ai_center h_80px md:h_100px lg:h_120px"
+            >
+              <div
+                class="h_100% flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr-tl_8px bdr-bl_8px bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1) trs_all_0.3s_ease"
+              >
+                <div
+                  class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
+                >
+                  <div
+                    class="d_flex ai_center jc_center flex-sh_0"
+                  >
+                    <img
+                      alt=""
+                      class="w_40px md:w_48px lg:w_56px h_40px md:h_48px lg:h_56px"
+                      data-nimg="1"
+                      decoding="async"
+                      height="56"
+                      loading="lazy"
+                      src="/static/assets/icons/droit-du-travail/contrat-travail.svg"
+                      style="color: transparent;"
+                      width="56"
+                    />
+                  </div>
+                  <h4
+                    class="fr-mb-0 fr-ml-2w fr-text--md fr-text--bold c_var(--text-action-high-blue-france)!"
+                  >
+                    Le contrat de travail
+                  </h4>
+                </div>
+              </div>
+              <div
+                class="w_30px flex-sh_0 h_100% filter_drop-shadow(2px_2px_4px_rgba(0,_0,_0,_0.025)) trs_all_0.3s_ease"
+              >
+                <div
+                  class="w_100% h_100% cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                />
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div
+          class="fr-mt-3w d_flex jc_center"
+        >
+          <a
+            class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
+            href="/droit-du-travail"
+            id="fr-button-:r2:"
+          >
+            Comprendre le droit du travail
+          </a>
         </div>
       </div>
       <div
