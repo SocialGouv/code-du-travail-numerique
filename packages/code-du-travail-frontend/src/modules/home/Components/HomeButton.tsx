@@ -9,7 +9,7 @@ type Props = {
 };
 
 export const HomeButton = (props: Props) => (
-  <div className={`${fr.cx("fr-mt-3w")} ${buttonContainer}`}>
+  <div className={`${fr.cx("fr-mt-5w")} ${buttonContainer}`}>
     <Button
       linkProps={{
         href: props.buttonLink,

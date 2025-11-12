@@ -21,15 +21,13 @@ export const CardWithArrow = ({ title, iconSrc }: Props) => {
               className={iconStyle}
             />
           </div>
-          <h4
-            className={`${fr.cx("fr-mb-0", "fr-ml-2w", "fr-text--md", "fr-text--bold")} ${titleStyle}`}
-          >
+          <h4 className={fr.cx("fr-mb-0", "fr-ml-2w", "fr-text--md")}>
             {title}
           </h4>
         </div>
       </div>
-      <div className={rightContainer}>
-        <div className={rightArrow} />
+      <div className={arrowContainer}>
+        <div className={arrow} />
       </div>
     </div>
   );
@@ -37,24 +35,24 @@ export const CardWithArrow = ({ title, iconSrc }: Props) => {
 
 const wrapper = css({
   display: "flex",
-  alignItems: "center",
-  height: { base: "80px", md: "100px", lg: "120px" },
+  flexDirection: { base: "column", md: "row" },
+  alignItems: { base: "center", md: "center" },
+  height: { base: "auto", md: "88px" },
+  width: "100%",
 });
 
 const cardContainer = css({
-  height: "100%",
-  flex: "1",
+  height: { base: "88px", md: "100%" },
+  width: { base: "100%", md: "auto" },
+  flex: { base: "none", md: "1" },
   minWidth: "0",
   overflow: "hidden",
   background: "var(--background-default-grey)",
-  borderTopLeftRadius: "8px",
-  borderBottomLeftRadius: "8px",
+  borderRadius: { base: "8px", md: "0" },
+  borderTopLeftRadius: { base: "8px", md: "8px" },
+  borderBottomLeftRadius: { base: "8px", md: "8px" },
   boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
   transition: "all 0.3s ease",
-});
-
-const titleStyle = css({
-  color: "var(--text-action-high-blue-france)!",
 });
 
 const cardHeader = css({
@@ -75,17 +73,20 @@ const iconStyle = css({
   height: { base: "40px", md: "48px", lg: "56px" },
 });
 
-const rightContainer = css({
+const arrowContainer = css({
   width: "30px",
+  height: { base: "15px", md: "100%" },
   flexShrink: "0",
-  height: "100%",
-  filter: "drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.025))",
+  filter: "drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1))",
   transition: "all 0.3s ease",
 });
 
-const rightArrow = css({
+const arrow = css({
   width: "100%",
   height: "100%",
-  clipPath: "polygon(0% 0%, 0% 100%, 100% 50%)",
+  clipPath: {
+    base: "polygon(0% 0%, 100% 0%, 50% 100%)", // Bottom arrow for mobile
+    md: "polygon(0% 0%, 0% 100%, 100% 50%)", // Right arrow for desktop
+  },
   background: "var(--background-default-grey)",
 });
