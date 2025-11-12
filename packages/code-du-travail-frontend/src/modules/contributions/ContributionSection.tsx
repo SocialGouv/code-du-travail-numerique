@@ -126,7 +126,7 @@ export const ContributionSection = forwardRef<
               onClick={() => onToggle(sectionId)}
               aria-expanded={isExpanded}
               aria-controls={`${sectionId}-items`}
-              aria-label={`${isExpanded ? "Masquer" : "Afficher tous"} les contenus de ${title}`}
+              aria-label={`${isExpanded ? "Masquer" : "Tout afficher"} les contenus de ${title}`}
             >
               {isExpanded ? "Masquer" : "Tout afficher"}
             </Button>
