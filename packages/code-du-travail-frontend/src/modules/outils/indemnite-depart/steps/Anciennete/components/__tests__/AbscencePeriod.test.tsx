@@ -151,4 +151,38 @@ describe("<AbsencePeriod />", () => {
     ).toBe(true);
     expect(getByTestId("absence-date-0")).toBeInTheDocument();
   });
+
+  it("should call callbacks on user actions", async () => {
+    const onSelectModifMock = jest.fn();
+    const onSetDurationDate = jest.fn();
+    const onSetAbsenceDate = jest.fn();
+    const onDeleteAbsence = jest.fn();
+    const { getByRole, getByTestId } = render(
+      <AbsencePeriod
+        index={0}
+        onSelectMotif={onSelectModifMock}
+        onSetDurationDate={onSetDurationDate}
+        onSetAbsenceDate={onSetAbsenceDate}
+        motifs={sampleMotifsWithStartedDate}
+        showDeleteButton={true}
+        onDeleteAbsence={onDeleteAbsence}
+        informationData={{}}
+        absence={absence}
+      />
+    );
+    await userEvent.selectOptions(
+      getByRole("combobox"),
+      getByRole("option", { name: "Motif 2" })
+    );
+    expect(onSelectModifMock.mock.calls.length).toBe(1);
+    expect(onSetDurationDate.mock.calls.length).toBe(0);
+    await userEvent.type(getByTestId("absence-duree-0"), "5");
+    expect(onSetDurationDate.mock.calls.length).toBeGreaterThan(0);
+    expect(onSetAbsenceDate.mock.calls.length).toBe(0);
+    await userEvent.type(getByTestId("absence-date-0"), "2024-01-01");
+    expect(onSetAbsenceDate.mock.calls.length).toBeGreaterThan(0);
+    expect(onDeleteAbsence.mock.calls.length).toBe(0);
+    await userEvent.click(getByRole("button", { name: /supprimer/i }));
+    expect(onDeleteAbsence.mock.calls.length).toBe(1);
+  });
 });
