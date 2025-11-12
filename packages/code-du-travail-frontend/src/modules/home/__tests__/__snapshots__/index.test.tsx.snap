@@ -113,7 +113,7 @@ exports[`<Home /> should match snapshot 1`] = `
               </form>
             </div>
             <div
-              class="fr-col-md-5 fr-col-12"
+              class="fr-col-md-5 fr-col-12 fr-hidden fr-unhidden-md"
             >
               <img
                 alt=""
@@ -186,10 +186,10 @@ exports[`<Home /> should match snapshot 1`] = `
             class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
           >
             <div
-              class="d_flex ai_center h_80px md:h_100px lg:h_120px"
+              class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
             >
               <div
-                class="h_100% flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr-tl_8px bdr-bl_8px bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1) trs_all_0.3s_ease"
+                class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px trs_all_0.3s_ease"
               >
                 <div
                   class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
@@ -210,17 +210,17 @@ exports[`<Home /> should match snapshot 1`] = `
                     />
                   </div>
                   <h4
-                    class="fr-mb-0 fr-ml-2w fr-text--md fr-text--bold c_var(--text-action-high-blue-france)!"
+                    class="fr-mb-0 fr-ml-2w fr-text--md"
                   >
                     Les textes internationaux
                   </h4>
                 </div>
               </div>
               <div
-                class="w_30px flex-sh_0 h_100% filter_drop-shadow(2px_2px_4px_rgba(0,_0,_0,_0.025)) trs_all_0.3s_ease"
+                class="w_60px md:w_30px h_15px md:h_100% flex-sh_0 trs_all_0.3s_ease"
               >
                 <div
-                  class="w_100% h_100% cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                  class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
                 />
               </div>
             </div>
@@ -229,10 +229,10 @@ exports[`<Home /> should match snapshot 1`] = `
             class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
           >
             <div
-              class="d_flex ai_center h_80px md:h_100px lg:h_120px"
+              class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
             >
               <div
-                class="h_100% flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr-tl_8px bdr-bl_8px bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1) trs_all_0.3s_ease"
+                class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px trs_all_0.3s_ease"
               >
                 <div
                   class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
@@ -253,17 +253,17 @@ exports[`<Home /> should match snapshot 1`] = `
                     />
                   </div>
                   <h4
-                    class="fr-mb-0 fr-ml-2w fr-text--md fr-text--bold c_var(--text-action-high-blue-france)!"
+                    class="fr-mb-0 fr-ml-2w fr-text--md"
                   >
                     Les textes européens
                   </h4>
                 </div>
               </div>
               <div
-                class="w_30px flex-sh_0 h_100% filter_drop-shadow(2px_2px_4px_rgba(0,_0,_0,_0.025)) trs_all_0.3s_ease"
+                class="w_60px md:w_30px h_15px md:h_100% flex-sh_0 trs_all_0.3s_ease"
               >
                 <div
-                  class="w_100% h_100% cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                  class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
                 />
               </div>
             </div>
@@ -272,10 +272,10 @@ exports[`<Home /> should match snapshot 1`] = `
             class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
           >
             <div
-              class="d_flex ai_center h_80px md:h_100px lg:h_120px"
+              class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
             >
               <div
-                class="h_100% flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr-tl_8px bdr-bl_8px bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1) trs_all_0.3s_ease"
+                class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px trs_all_0.3s_ease"
               >
                 <div
                   class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
@@ -296,17 +296,17 @@ exports[`<Home /> should match snapshot 1`] = `
                     />
                   </div>
                   <h4
-                    class="fr-mb-0 fr-ml-2w fr-text--md fr-text--bold c_var(--text-action-high-blue-france)!"
+                    class="fr-mb-0 fr-ml-2w fr-text--md"
                   >
                     La Constitution française
                   </h4>
                 </div>
               </div>
               <div
-                class="w_30px flex-sh_0 h_100% filter_drop-shadow(2px_2px_4px_rgba(0,_0,_0,_0.025)) trs_all_0.3s_ease"
+                class="w_60px md:w_30px h_15px md:h_100% flex-sh_0 trs_all_0.3s_ease"
               >
                 <div
-                  class="w_100% h_100% cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                  class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
                 />
               </div>
             </div>
@@ -315,10 +315,10 @@ exports[`<Home /> should match snapshot 1`] = `
             class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
           >
             <div
-              class="d_flex ai_center h_80px md:h_100px lg:h_120px"
+              class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
             >
               <div
-                class="h_100% flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr-tl_8px bdr-bl_8px bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1) trs_all_0.3s_ease"
+                class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px trs_all_0.3s_ease"
               >
                 <div
                   class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
@@ -339,17 +339,17 @@ exports[`<Home /> should match snapshot 1`] = `
                     />
                   </div>
                   <h4
-                    class="fr-mb-0 fr-ml-2w fr-text--md fr-text--bold c_var(--text-action-high-blue-france)!"
+                    class="fr-mb-0 fr-ml-2w fr-text--md"
                   >
                     Lois, ordonnances et décrets (Code du travail)
                   </h4>
                 </div>
               </div>
               <div
-                class="w_30px flex-sh_0 h_100% filter_drop-shadow(2px_2px_4px_rgba(0,_0,_0,_0.025)) trs_all_0.3s_ease"
+                class="w_60px md:w_30px h_15px md:h_100% flex-sh_0 trs_all_0.3s_ease"
               >
                 <div
-                  class="w_100% h_100% cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                  class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
                 />
               </div>
             </div>
@@ -358,10 +358,10 @@ exports[`<Home /> should match snapshot 1`] = `
             class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
           >
             <div
-              class="d_flex ai_center h_80px md:h_100px lg:h_120px"
+              class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
             >
               <div
-                class="h_100% flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr-tl_8px bdr-bl_8px bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1) trs_all_0.3s_ease"
+                class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px trs_all_0.3s_ease"
               >
                 <div
                   class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
@@ -382,17 +382,17 @@ exports[`<Home /> should match snapshot 1`] = `
                     />
                   </div>
                   <h4
-                    class="fr-mb-0 fr-ml-2w fr-text--md fr-text--bold c_var(--text-action-high-blue-france)!"
+                    class="fr-mb-0 fr-ml-2w fr-text--md"
                   >
                     Les conventions et accords collectifs
                   </h4>
                 </div>
               </div>
               <div
-                class="w_30px flex-sh_0 h_100% filter_drop-shadow(2px_2px_4px_rgba(0,_0,_0,_0.025)) trs_all_0.3s_ease"
+                class="w_60px md:w_30px h_15px md:h_100% flex-sh_0 trs_all_0.3s_ease"
               >
                 <div
-                  class="w_100% h_100% cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                  class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
                 />
               </div>
             </div>
@@ -401,10 +401,10 @@ exports[`<Home /> should match snapshot 1`] = `
             class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
           >
             <div
-              class="d_flex ai_center h_80px md:h_100px lg:h_120px"
+              class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
             >
               <div
-                class="h_100% flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr-tl_8px bdr-bl_8px bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1) trs_all_0.3s_ease"
+                class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px trs_all_0.3s_ease"
               >
                 <div
                   class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
@@ -425,17 +425,17 @@ exports[`<Home /> should match snapshot 1`] = `
                     />
                   </div>
                   <h4
-                    class="fr-mb-0 fr-ml-2w fr-text--md fr-text--bold c_var(--text-action-high-blue-france)!"
+                    class="fr-mb-0 fr-ml-2w fr-text--md"
                   >
                     Les usages et les engagements unilatéraux
                   </h4>
                 </div>
               </div>
               <div
-                class="w_30px flex-sh_0 h_100% filter_drop-shadow(2px_2px_4px_rgba(0,_0,_0,_0.025)) trs_all_0.3s_ease"
+                class="w_60px md:w_30px h_15px md:h_100% flex-sh_0 trs_all_0.3s_ease"
               >
                 <div
-                  class="w_100% h_100% cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                  class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
                 />
               </div>
             </div>
@@ -444,10 +444,10 @@ exports[`<Home /> should match snapshot 1`] = `
             class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
           >
             <div
-              class="d_flex ai_center h_80px md:h_100px lg:h_120px"
+              class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
             >
               <div
-                class="h_100% flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr-tl_8px bdr-bl_8px bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1) trs_all_0.3s_ease"
+                class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px trs_all_0.3s_ease"
               >
                 <div
                   class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
@@ -468,17 +468,17 @@ exports[`<Home /> should match snapshot 1`] = `
                     />
                   </div>
                   <h4
-                    class="fr-mb-0 fr-ml-2w fr-text--md fr-text--bold c_var(--text-action-high-blue-france)!"
+                    class="fr-mb-0 fr-ml-2w fr-text--md"
                   >
                     Le règlement intérieur de l'entreprise
                   </h4>
                 </div>
               </div>
               <div
-                class="w_30px flex-sh_0 h_100% filter_drop-shadow(2px_2px_4px_rgba(0,_0,_0,_0.025)) trs_all_0.3s_ease"
+                class="w_60px md:w_30px h_15px md:h_100% flex-sh_0 trs_all_0.3s_ease"
               >
                 <div
-                  class="w_100% h_100% cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                  class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
                 />
               </div>
             </div>
@@ -487,10 +487,10 @@ exports[`<Home /> should match snapshot 1`] = `
             class="fr-col-12 fr-col-md-6 fr-col-lg-4 fr-col-xl-3"
           >
             <div
-              class="d_flex ai_center h_80px md:h_100px lg:h_120px"
+              class="d_flex flex-d_column md:flex-d_row ai_center md:ai_center h_auto md:h_88px w_100% filter_drop-shadow(0_2px_8px_rgba(0,_0,_0,_0.1))"
             >
               <div
-                class="h_100% flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr-tl_8px bdr-bl_8px bx-sh_0_2px_8px_rgba(0,_0,_0,_0.1) trs_all_0.3s_ease"
+                class="h_88px md:h_100% w_100% md:w_auto flex_none md:flex_1 min-w_0 ov_hidden bg_var(--background-default-grey) bdr_8px md:bdr_0 bdr-tl_8px md:bdr-tl_8px bdr-bl_8px md:bdr-bl_8px trs_all_0.3s_ease"
               >
                 <div
                   class="fr-py-4w fr-px-2w d_flex ai_center h_100%"
@@ -511,24 +511,24 @@ exports[`<Home /> should match snapshot 1`] = `
                     />
                   </div>
                   <h4
-                    class="fr-mb-0 fr-ml-2w fr-text--md fr-text--bold c_var(--text-action-high-blue-france)!"
+                    class="fr-mb-0 fr-ml-2w fr-text--md"
                   >
                     Le contrat de travail
                   </h4>
                 </div>
               </div>
               <div
-                class="w_30px flex-sh_0 h_100% filter_drop-shadow(2px_2px_4px_rgba(0,_0,_0,_0.025)) trs_all_0.3s_ease"
+                class="w_60px md:w_30px h_15px md:h_100% flex-sh_0 trs_all_0.3s_ease"
               >
                 <div
-                  class="w_100% h_100% cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
+                  class="w_100% h_100% cp-path_polygon(0%_0%,_100%_0%,_50%_100%) md:cp-path_polygon(0%_0%,_0%_100%,_100%_50%) bg_var(--background-default-grey)"
                 />
               </div>
             </div>
           </li>
         </ul>
         <div
-          class="fr-mt-3w d_flex jc_center"
+          class="fr-mt-5w d_flex jc_center"
         >
           <a
             class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
@@ -609,7 +609,7 @@ exports[`<Home /> should match snapshot 1`] = `
             </div>
           </div>
           <div
-            class="fr-mt-3w d_flex jc_center"
+            class="fr-mt-5w d_flex jc_center"
           >
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
@@ -690,7 +690,7 @@ exports[`<Home /> should match snapshot 1`] = `
             </div>
           </div>
           <div
-            class="fr-mt-3w d_flex jc_center"
+            class="fr-mt-5w d_flex jc_center"
           >
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
@@ -771,7 +771,7 @@ exports[`<Home /> should match snapshot 1`] = `
             </div>
           </div>
           <div
-            class="fr-mt-3w d_flex jc_center"
+            class="fr-mt-5w d_flex jc_center"
           >
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
@@ -853,7 +853,7 @@ exports[`<Home /> should match snapshot 1`] = `
             </div>
           </div>
           <div
-            class="fr-mt-3w d_flex jc_center"
+            class="fr-mt-5w d_flex jc_center"
           >
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"
@@ -930,7 +930,7 @@ exports[`<Home /> should match snapshot 1`] = `
             </li>
           </ul>
           <div
-            class="fr-mt-3w d_flex jc_center"
+            class="fr-mt-5w d_flex jc_center"
           >
             <a
               class="fr-btn fr-btn--secondary fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right"

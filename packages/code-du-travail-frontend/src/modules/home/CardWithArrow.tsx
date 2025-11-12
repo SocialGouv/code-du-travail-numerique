@@ -39,6 +39,7 @@ const wrapper = css({
   alignItems: { base: "center", md: "center" },
   height: { base: "auto", md: "88px" },
   width: "100%",
+  filter: "drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1))",
 });
 
 const cardContainer = css({
@@ -51,7 +52,6 @@ const cardContainer = css({
   borderRadius: { base: "8px", md: "0" },
   borderTopLeftRadius: { base: "8px", md: "8px" },
   borderBottomLeftRadius: { base: "8px", md: "8px" },
-  boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
   transition: "all 0.3s ease",
 });
 
@@ -74,10 +74,9 @@ const iconStyle = css({
 });
 
 const arrowContainer = css({
-  width: "30px",
+  width: { base: "60px", md: "30px" },
   height: { base: "15px", md: "100%" },
   flexShrink: "0",
-  filter: "drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1))",
   transition: "all 0.3s ease",
 });
 
@@ -85,8 +84,8 @@ const arrow = css({
   width: "100%",
   height: "100%",
   clipPath: {
-    base: "polygon(0% 0%, 100% 0%, 50% 100%)", // Bottom arrow for mobile
-    md: "polygon(0% 0%, 0% 100%, 100% 50%)", // Right arrow for desktop
+    base: "polygon(0% 0%, 100% 0%, 50% 100%)",
+    md: "polygon(0% 0%, 0% 100%, 100% 50%)",
   },
   background: "var(--background-default-grey)",
 });

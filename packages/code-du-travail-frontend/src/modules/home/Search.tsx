@@ -29,7 +29,14 @@ export const Search = () => {
             </h2>
             <HomeSearch />
           </div>
-          <div className={fr.cx("fr-col-md-5", "fr-col-12")}>
+          <div
+            className={fr.cx(
+              "fr-col-md-5",
+              "fr-col-12",
+              "fr-hidden",
+              "fr-unhidden-md"
+            )}
+          >
             <Image
               src={IllustrationHomePrincipal}
               alt=""
