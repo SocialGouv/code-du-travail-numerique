@@ -160,7 +160,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
               >
                 <div
                   class="fr-card fr-enlarge-link fr-card--horizontal"
-                  id="fr-card-:r2:"
+                  id="fr-card-_r_2_"
                 >
                   <div
                     class="fr-card__body"
@@ -198,7 +198,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
               >
                 <div
                   class="fr-card fr-enlarge-link fr-card--horizontal"
-                  id="fr-card-:r3:"
+                  id="fr-card-_r_3_"
                 >
                   <div
                     class="fr-card__body"
@@ -253,7 +253,7 @@ exports[`<ContributionsList /> affiche la liste des fiches pratiques 1`] = `
               >
                 <div
                   class="fr-card fr-enlarge-link fr-card--horizontal"
-                  id="fr-card-:r4:"
+                  id="fr-card-_r_4_"
                 >
                   <div
                     class="fr-card__body"
