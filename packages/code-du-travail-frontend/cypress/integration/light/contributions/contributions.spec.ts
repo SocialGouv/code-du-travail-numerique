@@ -12,21 +12,27 @@ describe("Contributions", () => {
     cy.urlEqual("/contribution");
     cy.canonicalUrlEqual("/contribution");
     cy.titleAndMetaDescriptionEqual(
-      "Vos fiches pratiques - Code du travail numérique",
+      "Fiches pratiques - Code du travail numérique",
       "Obtenez une réponse personnalisée selon votre convention collective"
     );
-    cy.get("h1").should("have.text", "Vos fiches pratiques");
+    cy.get("h1").should("have.text", "Fiches pratiques");
     cy.get("body").should(
       "contain",
       "Obtenez une réponse personnalisée selon votre convention collective"
     );
-    cy.findAllByRole("heading", { level: 2 }).should("have.length", 7);
+    cy.findAllByRole("heading", { level: 2 }).should("have.length", 9);
+    cy.findAllByRole("heading", { level: 2 }).eq(0).should("contain", "Résumé");
     cy.findAllByRole("heading", { level: 2 })
-      .first()
+      .eq(1)
+      .should("contain", "Contenus populaires");
+    cy.findAllByRole("heading", { level: 2 })
+      .eq(2)
       .should("contain", "Embauche et contrat de travail");
     cy.findAllByRole("heading", { level: 3 }).should("have.length.at.least", 1);
     cy.findAllByRole("heading", { level: 3 }).first().click();
-    cy.urlEqual("/contribution/la-periode-dessai-peut-elle-etre-renouvelee");
+    cy.urlEqual(
+      "/contribution/en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
+    );
   });
   it("je vois une page contribution", () => {
     cy.visit("/contribution/la-periode-dessai-peut-elle-etre-renouvelee");

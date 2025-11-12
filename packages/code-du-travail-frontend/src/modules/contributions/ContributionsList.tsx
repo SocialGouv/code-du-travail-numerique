@@ -1,13 +1,16 @@
 "use client";
 
+import React, {
+  useState,
+  useCallback,
+  useMemo,
+  useRef,
+  useEffect,
+} from "react";
+import { ContainerWithNav } from "../layout/ContainerWithNav";
+import { ContributionSection } from "./ContributionSection";
+import { cleanHash } from "../utils";
 import { fr } from "@codegouvfr/react-dsfr";
-import React, { useState, useCallback, useMemo } from "react";
-import { ContainerList } from "../layout/ContainerList";
-import { css } from "@styled-system/css";
-import Card from "@codegouvfr/react-dsfr/Card";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-utils";
-import { summarize } from "../utils";
-import Select from "@codegouvfr/react-dsfr/Select";
 
 type ContributionItem = {
   title: string;
@@ -21,113 +24,158 @@ type ContributionsData = {
 };
 
 type Props = {
-  contribs: ContributionsData;
-  themes: string[];
+  contributions: ContributionsData;
+  popularContributionSlugs: string[];
 };
 
+const SCROLL_DELAY_MS = 100;
+
 export const ContributionsList = ({
-  contribs: initialContribs,
-  themes: initialThemes,
+  contributions: initialContribs,
+  popularContributionSlugs,
 }: Props) => {
-  const [selectedTheme, setTheme] = useState<string>("");
-
-  const themes = useMemo(
-    () => initialThemes ?? Object.keys(initialContribs),
-    [initialThemes, initialContribs]
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(
+    new Set()
   );
-
-  const documents = useMemo(
-    () =>
-      selectedTheme === ""
-        ? initialContribs
-        : { [selectedTheme]: initialContribs[selectedTheme] },
-    [selectedTheme, initialContribs]
+  const firstHiddenItemRefs = useRef<{ [key: string]: HTMLLIElement | null }>(
+    {}
   );
+  const sectionRefs = useRef<{ [key: string]: HTMLHeadingElement | null }>({});
+  const buttonRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
 
-  const handleThemeChange = useCallback(
-    (event: React.ChangeEvent<HTMLSelectElement>) => {
-      setTheme(event.target.value);
+  const documents = useMemo(() => initialContribs, [initialContribs]);
+
+  const popularContributions = useMemo(() => {
+    const allContribs: ContributionItem[] = [];
+    Object.values(initialContribs).forEach((themeContribs) => {
+      allContribs.push(...themeContribs);
+    });
+
+    return popularContributionSlugs
+      .map((slug) => allContribs.find((contrib) => contrib.slug === slug))
+      .filter((contrib): contrib is ContributionItem => contrib !== undefined);
+  }, [initialContribs]);
+
+  const toggleSection = useCallback((sectionId: string) => {
+    setExpandedSections((prev) => {
+      const newSet = new Set(prev);
+      if (newSet.has(sectionId)) {
+        newSet.delete(sectionId);
+        setTimeout(() => {
+          const button = buttonRefs.current[sectionId];
+          if (button) {
+            const offsetTop =
+              button.getBoundingClientRect().top + window.scrollY - 64; // 4rem = 64px
+            window.scrollTo({ top: offsetTop, behavior: "smooth" });
+            setTimeout(() => {
+              button.focus({ preventScroll: true });
+            }, SCROLL_DELAY_MS);
+          }
+        }, SCROLL_DELAY_MS);
+      } else {
+        newSet.add(sectionId);
+        setTimeout(() => {
+          const firstHiddenItem = firstHiddenItemRefs.current[sectionId];
+          if (firstHiddenItem) {
+            const link = firstHiddenItem.querySelector("a");
+            link?.focus();
+            link?.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }, SCROLL_DELAY_MS);
+      }
+      return newSet;
+    });
+  }, []);
+
+  const handleFirstHiddenItemRef = useCallback(
+    (sectionId: string, el: HTMLLIElement | null) => {
+      firstHiddenItemRefs.current[sectionId] = el;
     },
     []
   );
 
+  const handleButtonRef = useCallback(
+    (sectionId: string, el: HTMLButtonElement | null) => {
+      buttonRefs.current[sectionId] = el;
+    },
+    []
+  );
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = cleanHash(window.location.hash);
+      if (hash && sectionRefs.current[hash]) {
+        const heading = sectionRefs.current[hash];
+        if (heading) {
+          const offsetTop =
+            heading.getBoundingClientRect().top + window.scrollY - 64;
+          window.scrollTo({ top: offsetTop, behavior: "smooth" });
+          setTimeout(() => {
+            heading.focus({ preventScroll: true });
+          }, SCROLL_DELAY_MS);
+        }
+      }
+    };
+
+    handleHashChange();
+
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
+
+  const sidebarSections = useMemo(() => {
+    return [
+      { id: "contenus-populaires", label: "Contenus populaires" },
+      ...Object.keys(documents).map((theme) => ({
+        id: cleanHash(theme),
+        label: theme,
+      })),
+    ];
+  }, [documents]);
+
   return (
-    <ContainerList title="Vos fiches pratiques" segments={[]}>
-      <h1 id="contributions" className={fr.cx("fr-mt-0", "fr-mb-6w")}>
-        Vos fiches pratiques
-      </h1>
-
-      <p className={fr.cx("fr-text--md")}>
-        Obtenez une réponse personnalisée selon votre convention collective
-      </p>
-
-      <Select
-        className={`${fr.cx("fr-mt-6w")} ${list}`}
-        label="Sélectionnez un thème"
-        nativeSelectProps={{
-          onChange: handleThemeChange,
-          value: selectedTheme,
+    <ContainerWithNav
+      title="Fiches pratiques"
+      description="Obtenez une réponse personnalisée selon votre convention collective"
+      sidebarSections={sidebarSections}
+      breadcrumbSegments={[]}
+    >
+      <ContributionSection
+        ref={(el) => {
+          sectionRefs.current["contenus-populaires"] = el;
         }}
-      >
-        <option value="">Tous les thèmes</option>
-        {themes.map((theme) => (
-          <option key={theme} value={theme}>
-            {theme}
-          </option>
-        ))}
-      </Select>
+        sectionId="contenus-populaires"
+        title="Contenus populaires"
+        items={popularContributions}
+        isExpanded={expandedSections.has("contenus-populaires")}
+        onToggle={toggleSection}
+        firstHiddenItemRef={handleFirstHiddenItemRef}
+        buttonRef={handleButtonRef}
+        icon="/static/assets/img/star.svg"
+      />
 
       {Object.keys(documents).map((theme) => {
+        const sectionId = cleanHash(theme);
         return (
-          <React.Fragment key={theme}>
-            <h2 className={fr.cx("fr-mt-6w", "fr-h3")}>{theme}</h2>
-            <ul
-              className={`${fr.cx(
-                "fr-grid-row",
-                "fr-grid-row--gutters",
-                "fr-grid-row--left"
-              )}`}
-            >
-              {documents[theme].map((item) => (
-                <li
-                  key={item.slug}
-                  className={`${fr.cx(
-                    "fr-col-12",
-                    "fr-col-sm-12",
-                    "fr-col-md-6",
-                    "fr-col-lg-6"
-                  )} ${li}`}
-                >
-                  <Card
-                    border
-                    desc={summarize(item.description)}
-                    horizontal
-                    linkProps={{
-                      href: `/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${item.slug}`,
-                    }}
-                    size="medium"
-                    title={item.title}
-                    titleAs="h3"
-                    enlargeLink
-                    classes={{
-                      // Hack: start div is render and take some place
-                      start: fr.cx("fr-hidden"),
-                    }}
-                  />
-                </li>
-              ))}
-            </ul>
-          </React.Fragment>
+          <ContributionSection
+            key={sectionId}
+            ref={(el) => {
+              sectionRefs.current[sectionId] = el;
+            }}
+            sectionId={sectionId}
+            title={theme}
+            items={documents[theme]}
+            isExpanded={expandedSections.has(sectionId)}
+            onToggle={toggleSection}
+            firstHiddenItemRef={handleFirstHiddenItemRef}
+            buttonRef={handleButtonRef}
+            className={fr.cx("fr-mt-3w")}
+          />
         );
       })}
-    </ContainerList>
+    </ContainerWithNav>
   );
 };
-
-const li = css({
-  listStyle: "none!",
-});
-
-const list = css({
-  maxWidth: "500px",
-});
