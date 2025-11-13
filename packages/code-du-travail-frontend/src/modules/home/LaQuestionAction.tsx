@@ -2,15 +2,14 @@
 
 import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
-import Link from "next/link";
-import { HomeButton, QuestionAnswers, QuestionBubble } from "./Components";
-import { MatomoHomeEvent, useHomeTracking } from "./tracking";
+import { QuestionAnswers, QuestionBubble } from "./Components";
+import { useHomeTracking } from "./tracking";
 import { css } from "@styled-system/css";
 import Image from "next/image";
+import Link from "../common/Link";
 
 export const LaQuestionAction = () => {
-  const { emitQuestionActionEvent, emitHomeClickButtonEvent } =
-    useHomeTracking();
+  const { emitQuestionActionEvent } = useHomeTracking();
 
   const ruptureConventionnelleAnswers = [
     {
@@ -36,7 +35,14 @@ export const LaQuestionAction = () => {
       content: (
         <p className={fr.cx("fr-mb-0")}>
           La synthèse dans{" "}
-          <Link href="#" onClick={() => emitQuestionActionEvent("#")}>
+          <Link
+            href="/information/rupture-conventionnelle-individuelle-la-procedure-en-details"
+            onClick={() =>
+              emitQuestionActionEvent(
+                "/information/rupture-conventionnelle-individuelle-la-procedure-en-details"
+              )
+            }
+          >
             cette infographie
           </Link>
         </p>
@@ -213,16 +219,6 @@ export const LaQuestionAction = () => {
             </div>
           </div>
         </div>
-
-        <HomeButton
-          buttonLink="/"
-          buttonText="Parcourir les questions"
-          onButtonClick={() => {
-            emitHomeClickButtonEvent(
-              MatomoHomeEvent.CLICK_PARCOURIR_LES_QUESTIONS
-            );
-          }}
-        />
       </div>
     </div>
   );

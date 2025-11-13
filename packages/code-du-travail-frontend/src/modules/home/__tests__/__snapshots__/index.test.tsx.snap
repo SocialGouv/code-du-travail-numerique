@@ -120,9 +120,7 @@ exports[`<Home /> should match snapshot 1`] = `
                 data-nimg="1"
                 decoding="async"
                 height="331"
-                sizes="(max-width: 768px) 378px, 486px"
-                src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+                src="/static/assets/icons/home/illustration-principale.svg"
                 style="color: transparent; width: 100%; height: auto;"
                 width="486"
               />
@@ -540,11 +538,379 @@ exports[`<Home /> should match snapshot 1`] = `
         </div>
       </div>
       <div
-        class="bg_var(--background-alt-blue-cumulus)"
+        class="bg_var(--background-alt-blue-cumulus) fr-py-8w"
+        id="home-de-la-question-a-laction"
+      >
+        <div
+          class="fr-container pos_relative"
+        >
+          <h2>
+            De la question à l'action
+          </h2>
+          <div
+            class="pos_relative d_flex flex-d_column"
+          >
+            <div
+              class="fr-grid-row fr-grid-row-md--gutters fr-mb-3w"
+            >
+              <div
+                class="fr-col-12 fr-col-md-6"
+              >
+                <div
+                  class="pos_relative w_100%"
+                >
+                  <svg
+                    class="pos_absolute top_0 left_0 w_100% h_100% z_0"
+                    fill="none"
+                    preserveAspectRatio="none"
+                    viewBox="0 0 504 176"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 16.8C6 12.3196 6 10.0794 6.87195 8.36808C7.63893 6.86278 8.86278 5.63893 10.3681 4.87195C12.0794 4 14.3196 4 18.8 4H485.2C489.68 4 491.921 4 493.632 4.87195C495.137 5.63893 496.361 6.86278 497.128 8.36808C498 10.0794 498 12.3196 498 16.8V117.976C498 122.457 498 124.697 497.128 126.408C496.361 127.914 495.137 129.137 493.632 129.904C491.921 130.776 489.68 130.776 485.2 130.776H97.6712C96.0979 130.776 95.3112 130.776 94.5553 130.923C93.8846 131.054 93.2332 131.269 92.6173 131.565C91.9232 131.899 91.2921 132.368 90.0299 133.308L54.6909 159.604C48.0123 164.574 44.673 167.059 43.2496 167.459C37.5384 169.066 32.1269 164.115 33.2205 158.284C33.4931 156.83 35.672 153.284 40.0297 146.191C41.746 143.397 42.6041 142.001 42.9058 140.911C44.0756 136.685 41.626 132.305 37.4132 131.09C36.3266 130.776 34.6874 130.776 31.4088 130.776H18.8C14.3196 130.776 12.0794 130.776 10.3681 129.904C8.86278 129.137 7.63893 127.914 6.87195 126.408C6 124.697 6 122.457 6 117.976V16.8Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M18.7998 5H485.2C487.457 5 489.089 5.00058 490.373 5.10547C491.645 5.2094 492.487 5.41061 493.178 5.7627C494.495 6.43381 495.566 7.50513 496.237 8.82227C496.589 9.51338 496.791 10.355 496.895 11.627C496.999 12.9108 497 14.5432 497 16.7998V117.977C497 120.233 496.999 121.866 496.895 123.149C496.791 124.421 496.589 125.263 496.237 125.954C495.566 127.271 494.495 128.343 493.178 129.014C492.487 129.366 491.645 129.567 490.373 129.671C489.089 129.776 487.457 129.776 485.2 129.776H97.6709C96.1355 129.776 95.2364 129.772 94.3643 129.941C93.6098 130.088 92.8774 130.331 92.1846 130.664C91.3837 131.049 90.6645 131.588 89.4326 132.505L54.0938 158.802C50.7492 161.291 48.2593 163.144 46.4268 164.426C45.5107 165.067 44.7737 165.554 44.1875 165.902C43.5858 166.26 43.2027 166.434 42.9785 166.497C37.9813 167.902 33.2463 163.57 34.2031 158.468C34.2461 158.239 34.3858 157.842 34.6885 157.211C34.9834 156.596 35.403 155.82 35.96 154.851C37.0744 152.912 38.6993 150.266 40.8818 146.714C41.7353 145.325 42.392 144.257 42.8711 143.4C43.3478 142.548 43.6854 141.841 43.8691 141.178C45.1852 136.424 42.4298 131.496 37.6904 130.129C37.0288 129.938 36.2501 129.856 35.2744 129.816C34.2937 129.776 33.0397 129.776 31.4092 129.776H18.7998C16.5432 129.776 14.9108 129.776 13.627 129.671C12.355 129.567 11.5134 129.366 10.8223 129.014C9.50513 128.343 8.43381 127.271 7.7627 125.954C7.41061 125.263 7.2094 124.421 7.10547 123.149C7.00058 121.866 7 120.233 7 117.977V16.7998C7 14.5432 7.00058 12.9108 7.10547 11.627C7.2094 10.355 7.41061 9.51338 7.7627 8.82227C8.43381 7.50513 9.50513 6.43381 10.8223 5.7627C11.5134 5.41061 12.355 5.2094 13.627 5.10547C14.9108 5.00058 16.5432 5 18.7998 5Z"
+                      stroke="#4A9DF7"
+                      stroke-width="2"
+                    />
+                  </svg>
+                  <div
+                    class="pos_relative z_1 p_2rem pb_3.5rem"
+                  >
+                    <p
+                      class="c_var(--text-default-grey) mb_0px! fr-text--md fr-text--bold"
+                    >
+                      Je souhaite demander une rupture conventionnelle. Qu'est ce que je dois savoir ? Comment je dois procéder ?
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="fr-col-12 fr-col-md-6"
+              >
+                <div>
+                  <h3
+                    class="fr-text--lg"
+                  >
+                    Les réponses à votre question
+                  </h3>
+                  <div
+                    class="d_flex flex-d_column gap_1.5rem"
+                  >
+                    <div
+                      class="d_flex ai_center"
+                    >
+                      <div
+                        class="d_flex ai_center jc_center fr-mr-2w"
+                      >
+                        <img
+                          alt=""
+                          data-nimg="1"
+                          decoding="async"
+                          height="56"
+                          loading="lazy"
+                          src="/static/assets/icons/home/step.svg"
+                          style="color: transparent;"
+                          width="56"
+                        />
+                      </div>
+                      <p
+                        class="fr-mb-0"
+                      >
+                        Découvrez
+                         
+                        <a
+                          href="/information/rupture-conventionnelle-individuelle-la-procedure-en-details"
+                        >
+                          les étapes de la procédure
+                        </a>
+                      </p>
+                    </div>
+                    <div
+                      class="d_flex ai_center"
+                    >
+                      <div
+                        class="d_flex ai_center jc_center fr-mr-2w"
+                      >
+                        <img
+                          alt=""
+                          data-nimg="1"
+                          decoding="async"
+                          height="56"
+                          loading="lazy"
+                          src="/static/assets/icons/home/infographie.svg"
+                          style="color: transparent;"
+                          width="56"
+                        />
+                      </div>
+                      <p
+                        class="fr-mb-0"
+                      >
+                        La synthèse dans
+                         
+                        <a
+                          href="/information/rupture-conventionnelle-individuelle-la-procedure-en-details"
+                        >
+                          cette infographie
+                        </a>
+                      </p>
+                    </div>
+                    <div
+                      class="d_flex ai_center"
+                    >
+                      <div
+                        class="d_flex ai_center jc_center fr-mr-2w"
+                      >
+                        <img
+                          alt=""
+                          data-nimg="1"
+                          decoding="async"
+                          height="56"
+                          loading="lazy"
+                          src="/static/assets/icons/home/simulator.svg"
+                          style="color: transparent;"
+                          width="56"
+                        />
+                      </div>
+                      <p
+                        class="fr-mb-0"
+                      >
+                        Simulez votre
+                         
+                        <a
+                          href="outils/indemnite-rupture-conventionnelle"
+                        >
+                          indemnité de rupture conventionnelle
+                        </a>
+                      </p>
+                    </div>
+                    <div
+                      class="d_flex ai_center"
+                    >
+                      <div
+                        class="d_flex ai_center jc_center fr-mr-2w"
+                      >
+                        <img
+                          alt=""
+                          data-nimg="1"
+                          decoding="async"
+                          height="56"
+                          loading="lazy"
+                          src="/static/assets/icons/home/letter.svg"
+                          style="color: transparent;"
+                          width="56"
+                        />
+                      </div>
+                      <p
+                        class="fr-mb-0"
+                      >
+                        Retrouvez
+                         
+                        <a
+                          href="/modeles-de-courriers/demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle"
+                        >
+                          le modèle de courrier
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="d_flex jc_center ai_center md:pos_absolute md:left_22% md:top_32% md:trf_translate(-50%,_-50%) md:m_0 md:z_1 fr-mb-3w fr-hidden fr-unhidden-md"
+            >
+              <img
+                alt=""
+                class="w_100% h_auto md:w_280px lg:w_320px"
+                data-nimg="1"
+                decoding="async"
+                height="250"
+                loading="lazy"
+                src="/static/assets/icons/home/illustration-questions.svg"
+                style="color: transparent;"
+                width="350"
+              />
+            </div>
+            <div
+              class="fr-grid-row fr-grid-row-md--gutters fr-mb-3w"
+            >
+              <div
+                class="fr-col-12 fr-col-md-6"
+              >
+                <div
+                  class="pos_relative w_100%"
+                >
+                  <svg
+                    class="pos_absolute top_0 left_0 w_100% h_100% z_0"
+                    fill="none"
+                    preserveAspectRatio="none"
+                    viewBox="0 0 504 176"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 16.8C6 12.3196 6 10.0794 6.87195 8.36808C7.63893 6.86278 8.86278 5.63893 10.3681 4.87195C12.0794 4 14.3196 4 18.8 4H485.2C489.68 4 491.921 4 493.632 4.87195C495.137 5.63893 496.361 6.86278 497.128 8.36808C498 10.0794 498 12.3196 498 16.8V117.976C498 122.457 498 124.697 497.128 126.408C496.361 127.914 495.137 129.137 493.632 129.904C491.921 130.776 489.68 130.776 485.2 130.776H97.6712C96.0979 130.776 95.3112 130.776 94.5553 130.923C93.8846 131.054 93.2332 131.269 92.6173 131.565C91.9232 131.899 91.2921 132.368 90.0299 133.308L54.6909 159.604C48.0123 164.574 44.673 167.059 43.2496 167.459C37.5384 169.066 32.1269 164.115 33.2205 158.284C33.4931 156.83 35.672 153.284 40.0297 146.191C41.746 143.397 42.6041 142.001 42.9058 140.911C44.0756 136.685 41.626 132.305 37.4132 131.09C36.3266 130.776 34.6874 130.776 31.4088 130.776H18.8C14.3196 130.776 12.0794 130.776 10.3681 129.904C8.86278 129.137 7.63893 127.914 6.87195 126.408C6 124.697 6 122.457 6 117.976V16.8Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M18.7998 5H485.2C487.457 5 489.089 5.00058 490.373 5.10547C491.645 5.2094 492.487 5.41061 493.178 5.7627C494.495 6.43381 495.566 7.50513 496.237 8.82227C496.589 9.51338 496.791 10.355 496.895 11.627C496.999 12.9108 497 14.5432 497 16.7998V117.977C497 120.233 496.999 121.866 496.895 123.149C496.791 124.421 496.589 125.263 496.237 125.954C495.566 127.271 494.495 128.343 493.178 129.014C492.487 129.366 491.645 129.567 490.373 129.671C489.089 129.776 487.457 129.776 485.2 129.776H97.6709C96.1355 129.776 95.2364 129.772 94.3643 129.941C93.6098 130.088 92.8774 130.331 92.1846 130.664C91.3837 131.049 90.6645 131.588 89.4326 132.505L54.0938 158.802C50.7492 161.291 48.2593 163.144 46.4268 164.426C45.5107 165.067 44.7737 165.554 44.1875 165.902C43.5858 166.26 43.2027 166.434 42.9785 166.497C37.9813 167.902 33.2463 163.57 34.2031 158.468C34.2461 158.239 34.3858 157.842 34.6885 157.211C34.9834 156.596 35.403 155.82 35.96 154.851C37.0744 152.912 38.6993 150.266 40.8818 146.714C41.7353 145.325 42.392 144.257 42.8711 143.4C43.3478 142.548 43.6854 141.841 43.8691 141.178C45.1852 136.424 42.4298 131.496 37.6904 130.129C37.0288 129.938 36.2501 129.856 35.2744 129.816C34.2937 129.776 33.0397 129.776 31.4092 129.776H18.7998C16.5432 129.776 14.9108 129.776 13.627 129.671C12.355 129.567 11.5134 129.366 10.8223 129.014C9.50513 128.343 8.43381 127.271 7.7627 125.954C7.41061 125.263 7.2094 124.421 7.10547 123.149C7.00058 121.866 7 120.233 7 117.977V16.7998C7 14.5432 7.00058 12.9108 7.10547 11.627C7.2094 10.355 7.41061 9.51338 7.7627 8.82227C8.43381 7.50513 9.50513 6.43381 10.8223 5.7627C11.5134 5.41061 12.355 5.2094 13.627 5.10547C14.9108 5.00058 16.5432 5 18.7998 5Z"
+                      stroke="#4A9DF7"
+                      stroke-width="2"
+                    />
+                  </svg>
+                  <div
+                    class="pos_relative z_1 p_2rem pb_3.5rem"
+                  >
+                    <p
+                      class="c_var(--text-default-grey) mb_0px! fr-text--md fr-text--bold"
+                    >
+                      Je souhaite embaucher mon premier salarié en CDI. Quelles sont les formalités obligatoires ? Comment écrire le contrat de travail ?
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="fr-col-12 fr-col-md-6"
+              >
+                <div>
+                  <h3
+                    class="fr-text--lg"
+                  >
+                    Les réponses à votre question
+                  </h3>
+                  <div
+                    class="d_flex flex-d_column gap_1.5rem"
+                  >
+                    <div
+                      class="d_flex ai_center"
+                    >
+                      <div
+                        class="d_flex ai_center jc_center fr-mr-2w"
+                      >
+                        <img
+                          alt=""
+                          data-nimg="1"
+                          decoding="async"
+                          height="56"
+                          loading="lazy"
+                          src="/static/assets/icons/home/step.svg"
+                          style="color: transparent;"
+                          width="56"
+                        />
+                      </div>
+                      <p
+                        class="fr-mb-0"
+                      >
+                        Découvrez
+                         
+                        <a
+                          href="/fiche-service-public/procedure-et-formalites-dembauche-dun-salarie-du-secteur-prive"
+                        >
+                          les principales obligations et formalités
+                        </a>
+                      </p>
+                    </div>
+                    <div
+                      class="d_flex ai_center"
+                    >
+                      <div
+                        class="d_flex ai_center jc_center fr-mr-2w"
+                      >
+                        <img
+                          alt=""
+                          data-nimg="1"
+                          decoding="async"
+                          height="56"
+                          loading="lazy"
+                          src="/static/assets/icons/home/simulator.svg"
+                          style="color: transparent;"
+                          width="56"
+                        />
+                      </div>
+                      <p
+                        class="fr-mb-0"
+                      >
+                        Simulez
+                         
+                        <a
+                          href="/outils/simulateur-embauche"
+                        >
+                          le coût de l'embauche
+                        </a>
+                      </p>
+                    </div>
+                    <div
+                      class="d_flex ai_center"
+                    >
+                      <div
+                        class="d_flex ai_center jc_center fr-mr-2w"
+                      >
+                        <img
+                          alt=""
+                          data-nimg="1"
+                          decoding="async"
+                          height="56"
+                          loading="lazy"
+                          src="/static/assets/icons/home/letter.svg"
+                          style="color: transparent;"
+                          width="56"
+                        />
+                      </div>
+                      <p
+                        class="fr-mb-0"
+                      >
+                        Retrouvez la
+                         
+                        <a
+                          href="/modeles-de-courriers/promesse-dembauche"
+                        >
+                          promesse d'embauche
+                        </a>
+                      </p>
+                    </div>
+                    <div
+                      class="d_flex ai_center"
+                    >
+                      <div
+                        class="d_flex ai_center jc_center fr-mr-2w"
+                      >
+                        <img
+                          alt=""
+                          data-nimg="1"
+                          decoding="async"
+                          height="56"
+                          loading="lazy"
+                          src="/static/assets/icons/home/step.svg"
+                          style="color: transparent;"
+                          width="56"
+                        />
+                      </div>
+                      <p
+                        class="fr-mb-0"
+                      >
+                        Vérifiez également
+                         
+                        <a
+                          href="/contribution/quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
+                        >
+                          la durée de la période d'essai
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
         id="home-outils"
       >
         <div
-          class="fr-my-8w fr-container fr-py-6w"
+          class="fr-my-8w fr-container"
         >
           <h2>
             Boîte à outils
@@ -622,10 +988,11 @@ exports[`<Home /> should match snapshot 1`] = `
         </div>
       </div>
       <div
+        class="bg_var(--background-alt-blue-cumulus)"
         id="home-modeles-de-courriers"
       >
         <div
-          class="fr-my-8w fr-container"
+          class="fr-my-8w fr-container fr-py-6w"
         >
           <h2>
             Modèles de documents
@@ -891,8 +1258,7 @@ exports[`<Home /> should match snapshot 1`] = `
                 decoding="async"
                 height="233"
                 loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=828&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=828&q=75 2x"
+                src="/static/assets/icons/home/themes.svg"
                 style="color: transparent;"
                 width="384"
               />
