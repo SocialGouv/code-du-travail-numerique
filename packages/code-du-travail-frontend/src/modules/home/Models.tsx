@@ -13,6 +13,7 @@ export const Models = ({ items }: Props) => {
   return (
     <SectionContainer
       sectionId="home-modeles-de-courriers"
+      isTint
       title="Modèles de documents"
       subtitle="Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail"
       footerNode={

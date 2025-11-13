@@ -4,7 +4,7 @@ import React from "react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { HomeButton } from "./Components";
 import { MatomoHomeEvent, useHomeTracking } from "./tracking";
-import { CardWithArrow } from "./CardWithArrow";
+import { CardWithArrow } from "./Components/CardWithArrow";
 import { css } from "@styled-system/css";
 
 const hierarchyItems = [
