@@ -12,6 +12,7 @@ import {
   saveConsent,
   initConsent,
 } from "../utils/consent";
+import { safeGetItem, safeSetItem } from "../utils/storage";
 import Link from "../common/Link";
 
 const modalFooter = css({
@@ -93,7 +94,7 @@ export const CookieConsentDSFR = () => {
     setConsent(storedConsent);
 
     // Show banner if no consent has been given yet
-    const hasConsented = localStorage.getItem("cdtn-cookie-consent-given");
+    const hasConsented = safeGetItem("cdtn-cookie-consent-given");
     if (!hasConsented) {
       setShowBanner(true);
       // Don't initialize cookies until user has consented
@@ -127,7 +128,7 @@ export const CookieConsentDSFR = () => {
     saveConsent(newConsent);
     setShowBanner(false);
     closeModal();
-    localStorage.setItem("cdtn-cookie-consent-given", "true");
+    safeSetItem("cdtn-cookie-consent-given", "true");
 
     // Initialize consent after user has made a choice
     initConsent();
@@ -141,7 +142,7 @@ export const CookieConsentDSFR = () => {
     saveConsent(newConsent);
     setShowBanner(false);
     closeModal();
-    localStorage.setItem("cdtn-cookie-consent-given", "true");
+    safeSetItem("cdtn-cookie-consent-given", "true");
 
     // Initialize consent after user has made a choice
     initConsent();
@@ -152,7 +153,7 @@ export const CookieConsentDSFR = () => {
     saveConsent(consent);
     setShowBanner(false);
     closeModal();
-    localStorage.setItem("cdtn-cookie-consent-given", "true");
+    safeSetItem("cdtn-cookie-consent-given", "true");
   };
 
   // Handle checkbox changes
