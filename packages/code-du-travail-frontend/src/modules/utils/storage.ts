@@ -6,9 +6,6 @@ export function isLocalStorageAvailable(): boolean {
     window.localStorage.removeItem(testKey);
     return true;
   } catch {
-    try {
-      window.localStorage?.removeItem("__storage_test__");
-    } catch {}
     return false;
   }
 }
