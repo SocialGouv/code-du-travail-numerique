@@ -1,5 +1,4 @@
 // Consent management service for tracking tools
-import { isLocalStorageAvailable } from "./storage";
 
 // Consent types
 export type ConsentType = {
@@ -20,15 +19,12 @@ export const DEFAULT_CONSENT: ConsentType = {
 
 // Get consent from local storage
 export const getStoredConsent = (): ConsentType => {
-  if (typeof window === "undefined" || !isLocalStorageAvailable())
-    return DEFAULT_CONSENT;
+  if (typeof window === "undefined") return DEFAULT_CONSENT;
 
   try {
-    const storedConsent = window.localStorage.getItem(CONSENT_STORAGE_KEY);
+    const storedConsent = localStorage.getItem(CONSENT_STORAGE_KEY);
     // Check if user has explicitly consented
-    const hasConsented = window.localStorage.getItem(
-      "cdtn-cookie-consent-given"
-    );
+    const hasConsented = localStorage.getItem("cdtn-cookie-consent-given");
 
     if (!hasConsented) {
       return {
@@ -48,15 +44,12 @@ export const getStoredConsent = (): ConsentType => {
 
 // Save consent to local storage
 export const saveConsent = (consent: ConsentType): void => {
-  if (typeof window === "undefined" || !isLocalStorageAvailable()) return;
+  if (typeof window === "undefined") return;
 
   try {
     // Ensure Matomo is always enabled (mandatory), but respect user choice for matomoHeatmap
     const finalConsent = { ...consent, matomo: true };
-    window.localStorage.setItem(
-      CONSENT_STORAGE_KEY,
-      JSON.stringify(finalConsent)
-    );
+    localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(finalConsent));
     applyConsent(finalConsent);
   } catch (e) {
     console.error("Error saving consent to localStorage:", e);
