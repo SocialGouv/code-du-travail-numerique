@@ -1,5 +1,6 @@
 import { render } from "@testing-library/react";
-import { ContributionsList } from "../ContributionsList";
+import { ListLayout } from "../ListLayout";
+import { SOURCES } from "@socialgouv/cdtn-utils";
 
 const contribs = {
   "Congés et repos": [
@@ -35,12 +36,15 @@ const contribs = {
   ],
 };
 
-describe("<ContributionsList />", () => {
-  it("affiche la liste des fiches pratiques", () => {
+describe("<ListLayout />", () => {
+  it("affiche la liste des contenus", () => {
     const { container, getAllByRole } = render(
-      <ContributionsList
-        contributions={contribs}
-        popularContributionSlugs={[]}
+      <ListLayout
+        source={SOURCES.CONTRIBUTIONS}
+        title={""}
+        description={""}
+        data={contribs}
+        popularSlugs={[]}
       />
     );
     const headingsH2 = getAllByRole("heading", { level: 2 });

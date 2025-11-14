@@ -1,38 +1,45 @@
 "use client";
 
 import React, {
-  useState,
   useCallback,
+  useEffect,
   useMemo,
   useRef,
-  useEffect,
+  useState,
 } from "react";
-import { ContainerWithNav } from "../layout/ContainerWithNav";
-import { ContributionSection } from "./ContributionSection";
-import { cleanHash } from "../utils";
+import { ContainerWithNav } from "../ContainerWithNav";
+import { Section } from "./component/Section";
+import { cleanHash } from "../../utils";
 import { fr } from "@codegouvfr/react-dsfr";
+import { SourceKeys } from "@socialgouv/cdtn-utils";
 
-type ContributionItem = {
+type Item = {
   title: string;
   description: string;
   slug: string;
   source: string;
 };
 
-type ContributionsData = {
-  [theme: string]: ContributionItem[];
+type Data = {
+  [theme: string]: Item[];
 };
 
 type Props = {
-  contributions: ContributionsData;
-  popularContributionSlugs: string[];
+  title: string;
+  description: string;
+  source: SourceKeys;
+  data: Data;
+  popularSlugs: string[];
 };
 
 const SCROLL_DELAY_MS = 100;
 
-export const ContributionsList = ({
-  contributions: initialContribs,
-  popularContributionSlugs,
+export const ListLayout = ({
+  title,
+  description,
+  source,
+  data: initialData,
+  popularSlugs,
 }: Props) => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(
     new Set()
@@ -43,18 +50,18 @@ export const ContributionsList = ({
   const sectionRefs = useRef<{ [key: string]: HTMLHeadingElement | null }>({});
   const buttonRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
 
-  const documents = useMemo(() => initialContribs, [initialContribs]);
+  const documents = useMemo(() => initialData, [initialData]);
 
-  const popularContributions = useMemo(() => {
-    const allContribs: ContributionItem[] = [];
-    Object.values(initialContribs).forEach((themeContribs) => {
-      allContribs.push(...themeContribs);
+  const popularItems = useMemo(() => {
+    const allItems: Item[] = [];
+    Object.values(initialData).forEach((theme) => {
+      allItems.push(...theme);
     });
 
-    return popularContributionSlugs
-      .map((slug) => allContribs.find((contrib) => contrib.slug === slug))
-      .filter((contrib): contrib is ContributionItem => contrib !== undefined);
-  }, [initialContribs]);
+    return popularSlugs
+      .map((slug) => allItems.find((item) => item.slug === slug))
+      .filter((item): item is Item => item !== undefined);
+  }, [initialData]);
 
   const toggleSection = useCallback((sectionId: string) => {
     setExpandedSections((prev) => {
@@ -138,18 +145,19 @@ export const ContributionsList = ({
 
   return (
     <ContainerWithNav
-      title="Fiches pratiques"
-      description="Obtenez une réponse personnalisée selon votre convention collective"
+      title={title}
+      description={description}
       sidebarSections={sidebarSections}
       breadcrumbSegments={[]}
     >
-      <ContributionSection
+      <Section
+        source={source}
         ref={(el) => {
           sectionRefs.current["contenus-populaires"] = el;
         }}
         sectionId="contenus-populaires"
         title="Contenus populaires"
-        items={popularContributions}
+        items={popularItems}
         isExpanded={expandedSections.has("contenus-populaires")}
         onToggle={toggleSection}
         firstHiddenItemRef={handleFirstHiddenItemRef}
@@ -160,7 +168,8 @@ export const ContributionsList = ({
       {Object.keys(documents).map((theme) => {
         const sectionId = cleanHash(theme);
         return (
-          <ContributionSection
+          <Section
+            source={source}
             key={sectionId}
             ref={(el) => {
               sectionRefs.current[sectionId] = el;
