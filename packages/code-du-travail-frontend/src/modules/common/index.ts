@@ -1,1 +1,1 @@
-export * from "./ReferencesAccordion";
+export * from "./References";

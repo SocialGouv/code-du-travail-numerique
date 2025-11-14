@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import { Infographie } from "../Infographie";
+import { Infographic } from "../type";
 
 describe("infographie", () => {
   afterEach(() => {
@@ -8,7 +9,8 @@ describe("infographie", () => {
   });
 
   it("rend une page infographie", async () => {
-    const infographic = {
+    const infographic: Infographic = {
+      references: [],
       date: "14/08/2024",
       meta_title: "Meta titre de l'infographie",
       description: "Description de l'infographie",
@@ -20,6 +22,7 @@ describe("infographie", () => {
       transcription: "Transcription de l'infographie",
       meta_description: "Meta description del 'infographie'",
       breadcrumbs: [],
+      relatedItems: [],
       title: "Titre de la description",
     };
 
