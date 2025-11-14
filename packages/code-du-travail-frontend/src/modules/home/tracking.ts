@@ -10,6 +10,7 @@ export enum MatomoHomeEvent {
   CLICK_VOIR_TOUTES_LES_FICHES = "click_voir_toutes_les_fiches_pratiques",
   CLICK_VOIR_TOUTES_LES_CONVENTIONS_COLLECTIVES = "click_voir_toutes_les_conventions_collectives",
   CLICK_VOIR_TOUTES_LES_THEMES = "click_voir_tous_les_themes",
+  CLICK_COMPRENDRE_DROIT_DU_TRAVAIL = "click_comprendre_le_droit_du_travail",
 }
 
 export const useHomeTracking = () => {

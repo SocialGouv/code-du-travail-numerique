@@ -26,9 +26,7 @@ describe("Page d’accueil", () => {
       level: 2,
     })
       .eq(1)
-      .should("have.text", "À la une");
-
-    cy.get("#home-highlights").find("a").should("have.length", 4);
+      .should("have.text", "Comprendre le droit du travail");
 
     cy.contains("Voir tous les outils").should("have.attr", "href", "/outils");
     cy.get("#home-outils").find("a").should("have.length", 5);
