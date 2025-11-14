@@ -7,6 +7,7 @@ import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import * as Sentry from "@sentry/nextjs";
 import { scrollToTop } from "../../utils";
 import { css } from "@styled-system/css";
+import { AccessibleAlert } from "../AccessibleAlert";
 
 type Props<T extends string> = {
   title: string;
@@ -35,6 +36,7 @@ export const SimulatorLayout = ({
     number | undefined
   >();
   const [simulationDate, setSimulationDate] = useState<string>("");
+  const [printError, setPrintError] = useState<boolean>(false);
 
   const visibleSteps = useMemo(
     () =>
@@ -127,9 +129,14 @@ export const SimulatorLayout = ({
     try {
       emitPrintEvent(title);
       window.print();
+      setPrintError(false);
     } catch (e) {
       console.error(e);
-      Sentry.captureException(e);
+      if (e.message?.includes("webkit.messageHandlers.print")) {
+        setPrintError(true);
+      } else {
+        Sentry.captureException(e);
+      }
     }
   };
 
@@ -213,6 +220,15 @@ export const SimulatorLayout = ({
           >
             Imprimer le résultat
           </Button>
+        )}
+      </div>
+      <div className={fr.cx("fr-grid-row")}>
+        {printError && (
+          <AccessibleAlert
+            title="Une erreur est survenue"
+            description="L'impression ne semble pas disponible sur votre appareil."
+            severity="error"
+          />
         )}
       </div>
       {footerComponent}
