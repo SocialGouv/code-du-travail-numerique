@@ -34,12 +34,12 @@ describe("Indemnité licenciement - CC 2120", () => {
       .click(ui.next.get())
       .click(ui.next.get());
   });
-  test(`Cas nominal`, () => {
+  test(`Cas nominal`, async () => {
+    await userAction.changeInputList(
+      ui.information.agreement2120.proCategory.get(),
+      "Non-cadres"
+    );
     userAction
-      .changeInputList(
-        ui.information.agreement2120.proCategory.get(),
-        "Non-cadres"
-      )
       .click(ui.information.agreement2120.eco.oui.get())
       .click(ui.next.get())
 

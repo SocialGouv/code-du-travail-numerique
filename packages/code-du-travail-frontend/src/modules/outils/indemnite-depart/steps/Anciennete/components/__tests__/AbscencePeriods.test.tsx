@@ -20,7 +20,7 @@ describe("<AbsencePeriods />", () => {
     ).toBeTruthy();
   });
 
-  it("should add a new absence line with absences and select one", () => {
+  it("should add a new absence line with absences and select one", async () => {
     const { getByText, getAllByRole } = render(
       <AbsencePeriods
         onChange={jest.fn()}
@@ -32,7 +32,7 @@ describe("<AbsencePeriods />", () => {
       />
     );
     expect(getAllByRole("option").length).toBe(2);
-    userEvent.click(getByText("Ajouter une absence"));
+    await userEvent.click(getByText("Ajouter une absence"));
     expect(getAllByRole("option").length).toBe(4);
   });
 

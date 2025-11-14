@@ -51,7 +51,11 @@ export const SalaireTempsPleinMobile = ({
                 autoFocus: autoFocus ? index === 0 : false,
                 onWheel: preventScroll,
                 "data-testid": dataTestidSalaries ?? "salary-input",
-                ref: (el) => (salaryInputRefs.current[index] = el),
+                ref: (el) => {
+                  if (salaryInputRefs.current) {
+                    salaryInputRefs.current[index] = el;
+                  }
+                },
                 "aria-describedby": `salary-mobile-${index}-desc`,
               } as any
             }
@@ -85,7 +89,11 @@ export const SalaireTempsPleinMobile = ({
                   "data-testid": dataTestidSalaries
                     ? "prime-" + dataTestidSalaries
                     : "prime-input",
-                  ref: (el) => (primeInputRefs.current[index] = el),
+                  ref: (el) => {
+                    if (primeInputRefs.current) {
+                      primeInputRefs.current[index] = el;
+                    }
+                  },
                   "aria-describedby": `prime-mobile-${index}-desc`,
                 } as any
               }

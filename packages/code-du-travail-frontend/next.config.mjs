@@ -71,6 +71,7 @@ const nextConfig = {
         ? { properties: ["data-testid"] }
         : false,
   },
+  reactCompiler: true,
   eslint: {
     ignoreDuringBuilds: true,
   },

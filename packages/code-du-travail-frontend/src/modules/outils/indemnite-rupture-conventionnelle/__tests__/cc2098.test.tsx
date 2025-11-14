@@ -37,8 +37,8 @@ describe("Indemnité licenciement - CC 2098", () => {
     userAction.click(ui.next.get());
   });
 
-  test(`Vérifier l'enchainement de question à l'étape information`, () => {
-    userAction.changeInputList(
+  test(`Vérifier l'enchainement de question à l'étape information`, async () => {
+    await userAction.changeInputList(
       ui.information.agreement2098.proCategory.get(),
       "'Cadres'"
     );

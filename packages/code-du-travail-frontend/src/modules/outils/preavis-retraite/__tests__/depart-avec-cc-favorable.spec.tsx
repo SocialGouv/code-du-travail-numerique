@@ -36,14 +36,14 @@ test(`Départ à la retraite avec une CC plus favorable
   expect(
     ui.information.agreement1090.categoryQuestion.query()
   ).toBeInTheDocument();
-  userAction.changeInputList(
+  await userAction.changeInputList(
     ui.information.agreement1090.categoryAnswers.get(),
     "Ouvriers, Employés"
   );
   expect(
     ui.information.agreement1090.echelonQuestion.query()
   ).toBeInTheDocument();
-  userAction.changeInputList(
+  await userAction.changeInputList(
     ui.information.agreement1090.echelonAnswers.get(),
     "1 et 2"
   );

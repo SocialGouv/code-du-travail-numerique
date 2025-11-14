@@ -101,7 +101,7 @@ describe("Page résultat: vérification de la formule affichée", () => {
         userAction.click(ui.next.get());
         userAction.click(ui.next.get());
 
-        userAction.changeInputList(byTestId(select).get(), selectOption);
+        await userAction.changeInputList(byTestId(select).get(), selectOption);
         userAction.click(ui.next.get());
         userAction.setInput(ui.seniority.startDate.get(), startDate);
         userAction.setInput(ui.seniority.notificationDate.get(), notifDate);

@@ -37,7 +37,7 @@ exports[`<Footer /> should match snapshot 1`] = `
               <a
                 class="fr-btn fr-btn--secondary fr-icon-chat-3-line fr-btn--icon-right"
                 href="/besoin-plus-informations"
-                id="fr-button-:r0:"
+                id="fr-button-_r_0_"
               >
                 Trouver les services près de chez moi
               </a>

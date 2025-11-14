@@ -34,8 +34,8 @@ describe("Indemnité licenciement - CC 1672", () => {
       .click(ui.next.get())
       .click(ui.next.get());
   });
-  test(`Cas nominal`, () => {
-    userAction.changeInputList(
+  test(`Cas nominal`, async () => {
+    await userAction.changeInputList(
       ui.information.agreement1672.proCategory.get(),
       "Non-cadres (Classes 1 à 4)"
     );
@@ -112,7 +112,7 @@ describe("Indemnité licenciement - CC 1672", () => {
     expect(ui.result.resultat.get()).toHaveTextContent("2 760,42 €");
     expect(ui.result.resultTableRows.queryAll().length).toBe(0);
   });
-  test(`Cas avec arrêt de travail`, () => {
+  test(`Cas avec arrêt de travail`, async () => {
     userAction
       .click(ui.previous.get())
       .click(ui.previous.get())
@@ -121,7 +121,7 @@ describe("Indemnité licenciement - CC 1672", () => {
     userAction.setInput(ui.contract.dateArretTravail.get(), "01/01/2022");
     userAction.click(ui.next.get()).click(ui.next.get());
 
-    userAction.changeInputList(
+    await userAction.changeInputList(
       ui.information.agreement1672.proCategory.get(),
       "Non-cadres (Classes 1 à 4)"
     );
@@ -145,12 +145,12 @@ describe("Indemnité licenciement - CC 1672", () => {
     ).not.toBeInTheDocument();
   });
 
-  test(`Cas spécifique`, () => {
+  test(`Cas spécifique`, async () => {
+    await userAction.changeInputList(
+      ui.information.agreement1672.proCategory.get(),
+      "Cadres (Classes 5 à 7)"
+    );
     userAction
-      .changeInputList(
-        ui.information.agreement1672.proCategory.get(),
-        "Cadres (Classes 5 à 7)"
-      )
       .click(ui.information.agreement1672.nonCadreAvant.oui.get())
       .setInput(ui.information.agreement1672.dateDebutCadre.get(), "01/01/1999")
       .setInput(ui.information.agreement1672.age.get(), "52")

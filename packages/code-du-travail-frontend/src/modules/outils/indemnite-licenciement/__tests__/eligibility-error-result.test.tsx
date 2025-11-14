@@ -55,18 +55,19 @@ describe(`Tests des erreurs d'éligibilité`, () => {
     expect(ui.result.infoWarning.message.mayBeCC.query()).toBeInTheDocument();
   });
 
-  test("Vérifier l'affichage de l'erreur ancienneté < 8 mois", () => {
+  test("Vérifier l'affichage de l'erreur ancienneté < 8 mois", async () => {
     userAction
       .click(ui.contract.type.cdi.get())
       .click(ui.contract.fauteGrave.non.get())
       .click(ui.contract.inaptitude.non.get())
       .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
-      .click(ui.next.get())
-      .changeInputList(
-        ui.information.agreement16.proCategory.get(),
-        "Ingénieurs et cadres"
-      )
+      .click(ui.next.get());
+    await userAction.changeInputList(
+      ui.information.agreement16.proCategory.get(),
+      "Ingénieurs et cadres"
+    );
+    userAction
       .click(ui.information.agreement16.proCategoryHasChanged.oui.get())
       .setInput(
         ui.information.agreement16.dateProCategoryChanged.get(),
@@ -89,18 +90,19 @@ describe(`Tests des erreurs d'éligibilité`, () => {
     ).toBeInTheDocument();
   });
 
-  test("Vérifier l'affichage de l'erreur ancienneté < 8 mois quand on revient changer la date de notification", () => {
+  test("Vérifier l'affichage de l'erreur ancienneté < 8 mois quand on revient changer la date de notification", async () => {
     userAction
       .click(ui.contract.type.cdi.get())
       .click(ui.contract.fauteGrave.non.get())
       .click(ui.contract.inaptitude.non.get())
       .click(ui.contract.arretTravail.non.get())
       .click(ui.next.get())
-      .click(ui.next.get())
-      .changeInputList(
-        ui.information.agreement16.proCategory.get(),
-        "Ingénieurs et cadres"
-      )
+      .click(ui.next.get());
+    await userAction.changeInputList(
+      ui.information.agreement16.proCategory.get(),
+      "Ingénieurs et cadres"
+    );
+    userAction
       .click(ui.information.agreement16.proCategoryHasChanged.non.get())
       .setInput(ui.information.agreement16.engineerAge.get(), "38")
       .click(ui.next.get())
